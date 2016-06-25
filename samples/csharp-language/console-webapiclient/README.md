@@ -1,16 +1,15 @@
-C# Delegates and EVents Sample
+C# REST Client Sample
 ================
 
-This sample is created during the [Delegates and Events topic](https://docs.microsoft.com/dotnet/languages/csharp/delegates-and-events.html)
+This sample is created during the [REST client tutorial](https://docs.microsoft.com/dotnet/tutorials/getting-started-with-csharp/console-webapiclient.html)
 for learning C# features. Please see that topic for detailed steps on the code
 for this sample.
 
 Key Features
 ------------
 
-This sample demonstrates defining delegate types, creating
-lambda expressions that map to delegates, and using single and
-using multicast delegates.
+This sample demonstrates making HTTP requests to a web server, using `async`
+and `await`, converting JSON objects into C# objects, and terminal output.
 
 Build and Run
 -------------

@@ -1,16 +1,15 @@
-C# Delegates and EVents Sample
+C# LINQ Sample
 ================
 
-This sample is created during the [Delegates and Events topic](https://docs.microsoft.com/dotnet/languages/csharp/delegates-and-events.html)
+This sample is created during the [Working with LINQ tutorial](https://docs.microsoft.com/dotnet/tutorials/getting-started-with-csharp/working-with-linq.html)
 for learning C# features. Please see that topic for detailed steps on the code
 for this sample.
 
 Key Features
 ------------
 
-This sample demonstrates defining delegate types, creating
-lambda expressions that map to delegates, and using single and
-using multicast delegates.
+This sample demonstrates querying data sources and processing them using
+Language Integrated Query (LINQ) in C#.
 
 Build and Run
 -------------

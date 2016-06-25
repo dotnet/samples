@@ -1,16 +1,14 @@
-C# Delegates and EVents Sample
+C# Console Application Sample
 ================
 
-This sample is created during the [Delegates and Events topic](https://docs.microsoft.com/dotnet/languages/csharp/delegates-and-events.html)
+This sample is created during the [Console Application Tutorial](https://docs.microsoft.com/dotnet/tutorials/getting-started-with-csharp/console-teleprompter.html)
 for learning C# features. Please see that topic for detailed steps on the code
 for this sample.
 
 Key Features
 ------------
 
-This sample demonstrates defining delegate types, creating
-lambda expressions that map to delegates, and using single and
-using multicast delegates.
+This sample demonstrates File I/O, async features, and terminal input and output. 
 
 Build and Run
 -------------
