@@ -1,5 +1,4 @@
 using System;
-using System.Globalization;
 
 public class StringInterpolation
 {
@@ -64,18 +63,17 @@ public class StringInterpolation
         double speedOfLight = 299792.458;
         FormattableString message = $"The speed of light is {speedOfLight:N3} km/s.";
         
-        CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo("nl-NL");
+        System.Globalization.CultureInfo.CurrentCulture = System.Globalization.CultureInfo.GetCultureInfo("nl-NL");
         string messageInCurrentCulture = message.ToString();
 
-        CultureInfo specificCulture = CultureInfo.GetCultureInfo("en-IN");
+        var specificCulture = System.Globalization.CultureInfo.GetCultureInfo("en-IN");
         string messageInSpecificCulture = message.ToString(specificCulture);
 
         string messageInInvariantCulture = FormattableString.Invariant(message);
 
-        const int CultureOutputAlignment = -10;
-        Console.WriteLine($"{CultureInfo.CurrentCulture,CultureOutputAlignment} {messageInCurrentCulture}");
-        Console.WriteLine($"{specificCulture,CultureOutputAlignment} {messageInSpecificCulture}");
-        Console.WriteLine($"{"Invariant",CultureOutputAlignment} {messageInInvariantCulture}");
+        Console.WriteLine($"{System.Globalization.CultureInfo.CurrentCulture,-10} {messageInCurrentCulture}");
+        Console.WriteLine($"{specificCulture,-10} {messageInSpecificCulture}");
+        Console.WriteLine($"{"Invariant",-10} {messageInInvariantCulture}");
         // Expected output is:
         // nl-NL      The speed of light is 299.792,458 km/s.
         // en-IN      The speed of light is 2,99,792.458 km/s.
