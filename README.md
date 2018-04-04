@@ -7,13 +7,11 @@ to the organization of the docs for .NET.
 
 Some of the articles will have more than one sample associated with them. 
 
-The readme.md file for each sample will refer to the article so that
-you can read more about the concepts covered in each sample.
-
 There are two classes of code in this repository:
 
 - **Snippets** represent small focused examples that demonstrate one feature or syntax. These should be no more than a single screen of code.
-- **Samples** represent programs that demonstrate application or library scenarios. These samples are typically larger than snippets, and often use more than one technology, feature, or toolkit.
+- **Samples** represent programs that demonstrate application or library scenarios. These samples are typically larger than snippets, and often use more than one technology, feature, or toolkit. The readme.md file for each sample will refer to the article so that
+you can read more about the concepts covered in each sample.
 
 Both samples and snippets should be buildable projects. Those projects should build and
 run on the widest set of platforms possible for the given sample. In practice, that means building .NET Core based console applications where possible. Samples that are specific to the web or a UI framework should add those tools as needed. Examples include web applications, mobile apps, WPF or WinForms apps and so on.
