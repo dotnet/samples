@@ -37,7 +37,7 @@
             // <Snippet2>                      
             var store = new NumberStore();
             Console.WriteLine($"Original sequence: {store.ToString()}");
-            int number = 1024;
+            int number = 16;
             ref var value = ref store.FindNumber(number);
             value *= 2;
             Console.WriteLine($"New sequence:      {store.ToString()}");

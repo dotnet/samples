@@ -11,13 +11,11 @@
         public ref int FindNumber(int target)
         {
             ref int returnVal = ref numbers[0];
-            for (int ctr = 0; ctr < numbers.Length; ctr++)
+            var ctr = numbers.Length - 1;
+            while ((ctr > 0) && numbers[ctr] >= target)
             {
-                if (numbers[ctr] >= target)
-                {
-                    returnVal = ref numbers[ctr];
-                    break;
-                }
+                returnVal = ref numbers[ctr];
+                ctr--;
             }
             return ref returnVal;
         }
