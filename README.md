@@ -1,6 +1,6 @@
-# .NET Core Samples
+# .NET Samples
 
-This folder contains all the sample code that is part of any topic under
+This repo contains all the sample code that is part of any topic under
 the .NET documentation. There are several different projects that
 are organized in sub-folders. These sub-folders are organized similar
 to the organization of the docs for .NET.
@@ -10,12 +10,14 @@ Some of the articles will have more than one sample associated with them.
 The readme.md file for each sample will refer to the article so that
 you can read more about the concepts covered in each sample.
 
-There are two classes of samples in this repository:
+There are two classes of code in this repository:
 
 - **Samples** represent programs that demonstrate apoplication or library scenarios. These samples are typically larger, and often use more than one technology, feature, or toolkit.
 - **Snippets** represent small focused examples that demonstrate one feature or syntax. These should be no more than a single screen of code.
 
-In both cases, we verify the samples in our CI system.
+We are working toward having a CI system in place for all samples and snippets. 
+When you make any updates to samples, make sure each update is part of a buildable
+project. Ideally, add tests for correctness on samples as well.
 
 ## Snippets
 
@@ -24,7 +26,7 @@ Snippets are extracted from small programs that include the snippet. Snippets ar
 ## Building a sample
 
 You build any .NET core sample using the .NET Core CLI. You can download the CLI from
-[the .NET Core home page](http://microsoft.com/net/core). Then, execute
+[the .NET Core SDK download page](https://www.microsoft.com/net/download). Then, execute
 these commands from the CLI in the directory of any sample:
 
 ```
@@ -43,7 +45,8 @@ any platform supported by .NET Core. There are a few samples that are
 specific to Visual Studio and require Visual Studio 2017 or later. In 
 addition, some samples show platform specific features and will require 
 a specific platform. Other samples and snippets require the .NET Framework
-and will run on Windows platforms, and will need Visual Studio to build.
+and will run on Windows platforms, and will need the Developer Pack for
+the target Framework version.
 
 ## Creating new samples
 
