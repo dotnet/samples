@@ -12,8 +12,8 @@ you can read more about the concepts covered in each sample.
 
 There are two classes of code in this repository:
 
-- **Samples** represent programs that demonstrate apoplication or library scenarios. These samples are typically larger, and often use more than one technology, feature, or toolkit.
 - **Snippets** represent small focused examples that demonstrate one feature or syntax. These should be no more than a single screen of code.
+- **Samples** represent programs that demonstrate application or library scenarios. These samples are typically larger than snippets, and often use more than one technology, feature, or toolkit.
 
 Both samples and snippets should be buildable projects. Those projects should build and
 run on the widest set of platforms possible for the given sample. In practice, that means building .NET Core based console applications where possible. Samples that are specific to the web or a UI framework should add those tools as needed. Examples include web applications, mobile apps, WPF or WinForms apps and so on.
@@ -23,12 +23,11 @@ project. Ideally, add tests for correctness on samples as well.
 
 ## Snippets
 
-Snippets are extracted from small programs that include the snippet. Snippets are all located in the top level **/snippets** folder. While snippets are small blcoks of code, we want to move toward snippets that are part of buildable sample projects.
+Snippets are extracted from small programs that include the snippet. Snippets are all located in the top level **/snippets** folder. While snippets are small blocks of code, we want to move toward snippets that are part of buildable sample projects.
 
 ## Building a sample
 
-You build any .NET core sample using the .NET Core CLI. The .NET Core CLI is installed with
-[the .NET Core SDK](https://www.microsoft.com/net/download). Then, execute
+You build any .NET Core sample using the .NET Core CLI, which can be installed with [the .NET Core SDK](https://www.microsoft.com/net/download). Then, execute
 these commands from the CLI in the directory of any sample:
 
 ```
