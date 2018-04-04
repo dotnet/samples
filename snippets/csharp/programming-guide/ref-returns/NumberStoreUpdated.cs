@@ -20,15 +20,7 @@
             return ref returnVal;
         }
 
-        public override string ToString()
-        {
-            string retval = "";
-            for (int ctr = 0; ctr < numbers.Length; ctr++)
-            {
-                retval += $"{numbers[ctr]} ";
-            }
-            return retval.Trim();
-        }
+        public override string ToString() => string.Join(" ", numbers);
     }
     // </Snippet1>
 
