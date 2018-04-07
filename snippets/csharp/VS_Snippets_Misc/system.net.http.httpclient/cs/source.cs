@@ -8,8 +8,7 @@ class HttpClient_Example
 {
 // <Snippet1>
    static async Task Main()
-	 {
-   
+   {
       // Create a New HttpClient object.
       HttpClient client = new HttpClient();
     

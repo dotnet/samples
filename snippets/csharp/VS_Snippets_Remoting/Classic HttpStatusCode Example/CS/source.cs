@@ -5,22 +5,21 @@ using System.Web.UI;
 
 public class Page1: Page
 {
- private void Page_Load(Object sender, EventArgs e)
- {
+    private void Page_Load(Object sender, EventArgs e)
+    {
 // <Snippet1>
- HttpWebRequest httpReq = (HttpWebRequest)WebRequest.Create("http://www.contoso.com");
- httpReq.AllowAutoRedirect = false;
+        HttpWebRequest httpReq = (HttpWebRequest)WebRequest.Create("http://www.contoso.com");
+        httpReq.AllowAutoRedirect = false;
  
- HttpWebResponse httpRes = (HttpWebResponse)httpReq.GetResponse();
+        HttpWebResponse httpRes = (HttpWebResponse)httpReq.GetResponse();
  
- if (httpRes.StatusCode==HttpStatusCode.Moved) 
- {
-    // Code for moved resources goes here.
- }
+        if (httpRes.StatusCode==HttpStatusCode.Moved) 
+        {
+            // Code for moved resources goes here.
+        }
 
- // Close the response.
- httpRes.Close();
-   
+        // Close the response.
+        httpRes.Close();
 // </Snippet1>
- }
+    }
 }

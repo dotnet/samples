@@ -7,31 +7,30 @@ using System.Web.Services;
 
 public class Form1: Form
 {
- public void Method(Uri myUri)
- {
+    public void Method(Uri myUri)
+    {
 // <Snippet1>
-ServicePointManager.CertificatePolicy = new MyCertificatePolicy();
+        ServicePointManager.CertificatePolicy = new MyCertificatePolicy();
  
-       // Create the request and receive the response
-       try
-       {
-       WebRequest myRequest = WebRequest.Create(myUri);
-       WebResponse myResponse = myRequest.GetResponse();
-       ProcessResponse(myResponse);
-       myResponse.Close();
-       }
-       // Catch any exceptions
-       catch(WebException e)
-       {
-       if (e.Status == WebExceptionStatus.TrustFailure)
-       {
-       // Code for handling security certificate problems goes here.
-       }
-       // Other exception handling goes here
-       }
-   
+        // Create the request and receive the response
+        try
+        {
+            WebRequest myRequest = WebRequest.Create(myUri);
+            WebResponse myResponse = myRequest.GetResponse();
+            ProcessResponse(myResponse);
+            myResponse.Close();
+        }
+        // Catch any exceptions
+        catch (WebException e)
+        {
+            if (e.Status == WebExceptionStatus.TrustFailure)
+            {
+                // Code for handling security certificate problems goes here.
+            }
+            // Other exception handling goes here
+        }
 // </Snippet1>
- }
+    }
 
     // Method added so sample will compile
     public void ProcessResponse(WebResponse resp)
