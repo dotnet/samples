@@ -7,7 +7,7 @@ class HttpClientHandler_Example
 {
 // <Snippet1>
    static async void Main()
-	 {
+   {
       // Create an HttpClientHandler object and set to use default credentials
       HttpClientHandler handler = new HttpClientHandler();
       handler.UseDefaultCredentials = true;
@@ -24,17 +24,17 @@ class HttpClientHandler_Example
 
          string responseBody = await response.Content.ReadAsStringAsync();
          Console.WriteLine(responseBody);
-       }  
-       catch(HttpRequestException e)
-       {
+      }  
+      catch(HttpRequestException e)
+      {
           Console.WriteLine("\nException Caught!");	
           Console.WriteLine("Message :{0} ",e.Message);
-       }
+      }
 
-       // Need to call dispose on the HttpClient and HttpClientHandler objects 
-       // when done using them, so the app doesn't leak resources
-       handler.Dispose(true);
-       client.Dispose(true);
+      // Need to call dispose on the HttpClient and HttpClientHandler objects 
+      // when done using them, so the app doesn't leak resources
+      handler.Dispose(true);
+      client.Dispose(true);
    }
 // </Snippet1>			
 }
