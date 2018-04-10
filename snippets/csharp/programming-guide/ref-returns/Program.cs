@@ -1,5 +1,3 @@
-// #error version
-
 namespace UseRefReturns
 {
     using static System.Console;
