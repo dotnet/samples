@@ -16,7 +16,7 @@ Module Example
             Console.WriteLine("Converted '{0}' to {1}.", value, number)
          Else
             Console.WriteLine("Attempted conversion of '{0}' failed.", 
-                              If(value ,"<null>"))
+                              If(value Is Nothing, "<null>", value))
          End If     
       Next
    End Sub
