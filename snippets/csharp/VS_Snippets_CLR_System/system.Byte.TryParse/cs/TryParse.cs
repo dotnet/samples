@@ -5,21 +5,10 @@ public class ByteConversion
 {
    public static void Main()
    {
-      var byteStrings = new string[] 
-      {
-          null,
-          string.Empty,
-          "1024",
-          "100.1",
-          "100",
-          "+100",
-          "-100",
-          "000000000000000100",
-          "00,100",
-          "   20   ",
-          "FF",
-          "0x1F"
-      };
+      string[] byteStrings = { null, string.Empty, "1024",
+                               "100.1", "100", "+100", "-100",
+                               "000000000000000100", "00,100",
+                               "   20   ", "FF", "0x1F" };
 
       foreach (var byteString in byteStrings)
       {
@@ -39,7 +28,7 @@ public class ByteConversion
       else
       {
          Console.WriteLine("Attempted conversion of '{0}' failed.", 
-                           stringToConvert ?? "");
+                           stringToConvert);
       }
    }    
 }
