@@ -4,53 +4,25 @@ Option Strict On
 ' <Snippet1>
 Module ByteConversion
    Public Sub Main()
-      Dim byteString As String = Nothing
-      CallTryParse(byteString)
-      
-      byteString = String.Empty
-      CallTryParse(byteString)
-      
-      byteString = "1024"
-      CallTryParse(byteString)
-      
-      byteString = "100.1"
-      CallTryParse(byteString)
-      
-      byteString = "100"
-      CallTryParse(byteString)
-      
-      byteString = "+100"
-      CallTryParse(byteString)
-      
-      byteString = "-100"
-      CallTryParse(byteString)
-      
-      byteString = "000000000000000100"
-      CallTryParse(byteString)
-      
-      byteString = "00,100"      
-      CallTryParse(byteString)
-      
-      byteString = "   20   "
-      CallTryParse(byteString)
-      
-      byteString = "FF"
-      CallTryParse(byteString)
-      
-      byteString = "0x1F"
-      CallTryParse(byteString)
+      Dim byteStrings() As String = { Nothing, String.Empty, "1024", 
+                                    "100.1", "100", "+100", "-100",
+                                    "000000000000000100", "00,100",
+                                    "   20   ", "FF", "0x1F"}
+
+      For Each byteString As String In byteStrings
+        CallTryParse(byteString)
+      Next
    End Sub
    
    Private Sub CallTryParse(stringToConvert As String)  
       Dim byteValue As Byte
-      Dim result As Boolean = Byte.TryParse(stringToConvert, byteValue)
-      If result Then
+      Dim success As Boolean = Byte.TryParse(stringToConvert, byteValue)
+      If success Then
          Console.WriteLine("Converted '{0}' to {1}", _
                         stringToConvert, byteValue)
       Else
-         If stringToConvert Is Nothing Then stringToConvert = ""
          Console.WriteLine("Attempted conversion of '{0}' failed.", _
-                           stringToConvert.ToString())
+                           stringToConvert)
       End If                        
    End Sub
 End Module
