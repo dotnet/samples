@@ -11,8 +11,8 @@ Module Example
       For Each value In values
          Dim number As Integer
     
-         Dim result As Boolean = Int32.TryParse(value, number)
-         If result Then
+         Dim success As Boolean = Int32.TryParse(value, number)
+         If success Then
             Console.WriteLine("Converted '{0}' to {1}.", value, number)
          Else
             Console.WriteLine("Attempted conversion of '{0}' failed.", 
