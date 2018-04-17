@@ -17,13 +17,11 @@ namespace TeleprompterConsole
             }
         }
 
-        public bool Done => done;
-        
-        private bool done;
+        public bool Done { get; private set; }
 
         public void SetDone()
         {
-            done = true;    
+            Done = true;
         }
     }
 }

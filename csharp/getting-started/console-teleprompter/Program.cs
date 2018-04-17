@@ -24,10 +24,10 @@ namespace TeleprompterConsole
         private static async Task ShowTeleprompter(TelePrompterConfig config)
         {
             var words = ReadFrom("SampleQuotes.txt");
-            foreach (var line in words)
+            foreach (var word in words)
             {
-                Console.Write(line);
-                if (!string.IsNullOrWhiteSpace(line))
+                Console.Write(word);
+                if (!string.IsNullOrWhiteSpace(word))
                 {
                     await Task.Delay(config.DelayInMilliseconds);
                 }

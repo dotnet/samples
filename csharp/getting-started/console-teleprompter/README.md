@@ -13,12 +13,6 @@ This sample demonstrates File I/O, async features, and terminal input and output
 Build and Run
 -------------
 
-To build and run the sample, type the following two commands:
+To build and run the sample, type the following command:
 
-`dotnet restore`
 `dotnet run`
-
-`dotnet restore` restores the dependencies for this sample.
-`dotnet run` builds the sample and runs the output assembly.
-
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
