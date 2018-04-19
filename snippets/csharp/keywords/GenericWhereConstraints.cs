@@ -41,9 +41,7 @@ namespace keywords
     // </Snippet5>
 
     // <Snippet6>
-    public interface IMyInterface
-    {
-    }
+    public interface IMyInterface { }
 
     namespace CodeExample
     {
