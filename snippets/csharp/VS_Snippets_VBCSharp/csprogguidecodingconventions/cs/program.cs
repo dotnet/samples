@@ -57,7 +57,7 @@ namespace Coding_Conventions_Examples
             int n = 0;
 
             //<snippet6>
-            string displayName = nameList[n].LastName + ", " + nameList[n].FirstName;
+            string displayName = $"{nameList[n].LastName}, {nameList[n].FirstName}";
             //</snippet6>
 
             Console.WriteLine("{0}, {1}", nameList[n].LastName, nameList[n].FirstName);
