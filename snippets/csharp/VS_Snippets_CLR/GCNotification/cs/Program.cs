@@ -168,7 +168,7 @@ namespace GCNotify
                     GCNotificationStatus status = GC.WaitForFullGCComplete();
                     if (status == GCNotificationStatus.Succeeded)
                     {
-                        Console.WriteLine("GC Notifiction raised.");
+                        Console.WriteLine("GC Notification raised.");
                         OnFullGCCompleteEndNotify();
                     }
                     else if (status == GCNotificationStatus.Canceled)
