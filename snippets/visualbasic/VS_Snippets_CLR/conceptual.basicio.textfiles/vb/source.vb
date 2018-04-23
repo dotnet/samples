@@ -38,7 +38,7 @@ Class WriteTextFiles
         Dim mydocpath As String = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
 
         ' Write the string array to a new file named "WriteLines.txt".
-        Using outputFile As New StreamWriter(mydocpath & Convert.ToString("\WriteLines.txt"))
+        Using outputFile As New StreamWriter(Path.Combine(mydocpath,Convert.ToString("\WriteLines.txt")))
             For Each line As String In lines
                 outputFile.WriteLine(line)
             Next
@@ -54,7 +54,7 @@ Class WriteTextFiles
             Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
 
         ' Append text to an existing file named "WriteLines.txt".
-        Using outputFile As New StreamWriter(mydocpath & Convert.ToString("\WriteLines.txt"), True)
+Using outputFile As New StreamWriter(Path.Combine(mydocpath,Convert.ToString("\WriteLines.txt")), True)
             outputFile.WriteLine("Fourth Line")
         End Using
         ' </SnippetAppendText>
@@ -67,7 +67,7 @@ Class WriteTextFiles
         Dim mydocpath As String = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
 
         ' Write the text asynchronously to a new file named "WriteTextAsync.txt".
-        Using outputFile As New StreamWriter(mydocpath & Convert.ToString("\WriteTextAsync.txt"))
+Using outputFile As New StreamWriter(Path.Combine(mydocpath,Convert.ToString("\WriteTextAsync.txt")))
             Await outputFile.WriteAsync(text)
         End Using
     End Sub
@@ -82,13 +82,13 @@ Class WriteTextFiles
         Dim mydocpath As String = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
 
         ' Write the text to a new file named "WriteFile.txt".
-        File.WriteAllText(mydocpath & Convert.ToString("\WriteFile.txt"), text)
+File.WriteAllText(Path.Combine(mydocpath,Convert.ToString("\WriteFile.txt")), text)
 
         ' Create a string array with the additional lines of text
         Dim lines() As String = {"New line 1", "New line 2"}
 
         ' Append new lines of text to the file
-        File.AppendAllLines(mydocpath & Convert.ToString("\WriteFile.txt"), lines)
+File.AppendAllLines(Path.Combine(mydocpath,Convert.ToString("\WriteFile.txt")), lines)
         ' </SnippetWriteFile>
 
     End Sub
