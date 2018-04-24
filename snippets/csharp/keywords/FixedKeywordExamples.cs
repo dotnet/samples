@@ -61,16 +61,6 @@ namespace keywords
             // The following assignment is not valid, because str[0] is a char, 
             // which is a value, not a variable.
             //fixed (char* p = &str[0]) { /*...*/ } 
-
-            // You can initialize a pointer by using the address of a variable, such
-            // as point.x or arr[5].
-            fixed (int* p1 = &point.x)
-            {
-                fixed (double* p2 = &arr[5])
-                {
-                    // Do something with p1 and p2.
-                }
-            }
             // </Snippet2>
         }
 
@@ -193,7 +183,14 @@ namespace keywords
                 {
                     *charPtr = 'A';
                 }
+                // Access safely through the index:
+                char c = myC.myBuffer.fixedBuffer[0];
+                Console.WriteLine(c);
+                // modify through the index:
+                myC.myBuffer.fixedBuffer[0] = 'B';
+                Console.WriteLine(myC.myBuffer.fixedBuffer[0]);
             }
+
         }
         // </Snippet7>
 
@@ -228,16 +225,10 @@ namespace keywords
             // collection.
             fixed (byte* pSource = source, pTarget = target)
             {
-                // Set the starting points in source and target for the copying.
-                byte* ps = pSource + sourceOffset;
-                byte* pt = pTarget + targetOffset;
-
                 // Copy the specified number of bytes from source to target.
                 for (int i = 0; i < count; i++)
                 {
-                    *pt = *ps;
-                    pt++;
-                    ps++;
+                    pTarget[targetOffset + i] = pSource[sourceOffset + i];
                 }
             }
         }
