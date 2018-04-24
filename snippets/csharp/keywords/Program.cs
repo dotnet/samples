@@ -7,6 +7,7 @@ namespace keywords
         static void Main(string[] args)
         {
             StackAllocExamples.Examples();
+            GenericWhereConstraints.Examples();
         }
     }
 }
