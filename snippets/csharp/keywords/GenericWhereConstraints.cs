@@ -9,7 +9,7 @@ namespace keywords
 {
     // <Snippet1>
     public class AGenericClass<T> where T : IComparable { }
-    // </Snippet1
+    // </Snippet1>
 
     // <SNippet2>
     public class UsingEnum<T> where T : System.Enum { }
@@ -59,7 +59,7 @@ namespace keywords
     {
         // <Snippet7>
         public void MyMethod<T>(T t) where T : IMyInterface { }
-        // <Snippet7>
+        // </Snippet7>
 
         // <Snippet8>
         delegate T MyDelegate<T>() where T : new();
@@ -124,7 +124,7 @@ namespace keywords
             return t;
         }
     }
-    // <Snippet9>
+    // </Snippet9>
 
     public interface IEmployee
     {
