@@ -29,7 +29,7 @@ namespace WpfApplication
 
             // Open a streamwriter to a new text file named "UserInputFile.txt"and write the contents of 
             // the stringbuilder to it.
-            using (StreamWriter outfile = new StreamWriter(mydocpath + @"\UserInputFile.txt", true))
+            using (StreamWriter outfile = new StreamWriter(Path.Combine(mydocpath,"UserInputFile.txt"), true))
             {
                 await outfile.WriteAsync(sb.ToString());
             }
