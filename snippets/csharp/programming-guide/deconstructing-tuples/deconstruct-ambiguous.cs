@@ -21,7 +21,7 @@ public class Person
          age--;
    }
 
-   public void Deconstruct(out string lname, out string fname, out string mname, decimal income)
+   public void Deconstruct(out string lname, out string fname, out string mname, out decimal income)
    {
       fname = FirstName;
       mname = MiddleName;
