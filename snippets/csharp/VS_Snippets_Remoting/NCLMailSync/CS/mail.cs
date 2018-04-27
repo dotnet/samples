@@ -30,14 +30,7 @@ namespace Examples.SmptExamples.Sync
 			// Credentials are necessary if the server requires the client 
 			// to authenticate before it will send email on the client's behalf.
 			client.Credentials = CredentialCache.DefaultNetworkCredentials;
-
-      try {
-			  client.Send(message);
-      }
-			catch (Exception ex) {
-			  Console.WriteLine("Exception caught in CreateTestMessage1(): {0}", 
-                    ex.ToString() );
-      }              
+            client.Send(message);
 		}
 		// </snippet1>
 
@@ -78,14 +71,7 @@ namespace Examples.SmptExamples.Sync
 			// Credentials are necessary if the server requires the client 
 			// to authenticate before it will send email on the client's behalf.
 			client.Credentials = CredentialCache.DefaultNetworkCredentials;
-
-      try {
-			  client.Send(message);
-			}  
-			catch (Exception ex) {
-			  Console.WriteLine("Exception caught in CreateTimeoutTestMessage(): {0}", 
-                    ex.ToString() );			  
-		  }
+            client.Send(message);
 		}
 		//</snippet3>
 
@@ -102,13 +88,7 @@ namespace Examples.SmptExamples.Sync
 			SmtpClient client = new SmtpClient();
 			Console.WriteLine("Sending an email message to {0} at {1} by using the SMTP host={2}.",
 				to.User, to.Host, client.Host);
-      try {
-			  client.Send(message);
-			}
-			catch (Exception ex) {
-			  Console.WriteLine("Exception caught in CreateTestMessage3(): {0}", 
-                    ex.ToString() );			  
-		  }
+            client.Send(message);
 		}
 		//</snippet4>
 
