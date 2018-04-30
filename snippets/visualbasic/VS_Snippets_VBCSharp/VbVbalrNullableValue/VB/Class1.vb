@@ -55,14 +55,14 @@ Module Module1
         Dim m As Integer = 3
         Dim n? As Integer = 2
 
-        ' The comparison evaluated is 3>2, but compare1 is inferred to be of 
+        ' The comparison evaluated is 3 > 2, but compare1 is inferred to be of 
         ' type Boolean?.
         Dim compare1 = m > n
         ' The values summed are 3 and 2, but sum1 is inferred to be of type Integer?.
         Dim sum1 = m + n
 
         ' The following line displays: 3 * 2 * 5 * True
-        Console.WriteLine(m & " * " & n & " * " & sum1 & " * " & compare1)
+        Console.WriteLine($"{m} * {n} * {sum1} * {compare1}")
         '</Snippet7>
 
         '<Snippet8>
@@ -73,8 +73,8 @@ Module Module1
         Dim sum2 = m + n
 
         ' Because the values of n, compare2, and sum2 are all Nothing, the
-        ' following line displays 3 * * *
-        Console.WriteLine(m & " * " & n & " * " & sum2 & " * " & compare2)
+        ' following line displays: 3 * <null> * <null> * <null>
+        Console.WriteLine($"{m} * {If(n, "<null>")} * {If(sum2, "<null>")} * {If(compare2, "<null>")}")
         '</Snippet8>
     End Sub
 End Module
