@@ -1,6 +1,9 @@
 Option Explicit On
 Option Strict On
 
+Imports System.Drawing
+Imports System.Windows.Forms
+
 Class Class03c4556dfe0b45eb9e173de9a1424912
     ' 03c4556d-fe0b-45eb-9e17-3de9a1424912
     ' How to: Treat Forms as Objects
@@ -623,6 +626,9 @@ Class Class57be4229e5254926a8a000616896116f
     ' 57be4229-e525-4926-a8a0-00616896116f
     ' How to: Use the New Keyword
 
+    Class Form1 : Inherits Form
+    End Class
+
     Public Sub Method47()
         ' <snippet117>
         Dim Button1 As System.Windows.Forms.Button
@@ -1081,7 +1087,7 @@ Class Classd2f774502bf24b1eb95fdbc7878f2777
         Dim A As New Object
         Dim B As New Object
         ' <snippet89>
-        If Not A Is B Then
+        If A IsNot B Then
             ' </snippet89>
         End If
     End Sub
@@ -1313,6 +1319,8 @@ Class Classdfc8debaf5b34d1da9377cb826446fc5
         Public Overridable Function CalculateShipping( 
             ByVal Dist As Double, 
             ByVal Rate As Double) As Double
+
+            Return Dist * Rate
         End Function
     End Class
 
