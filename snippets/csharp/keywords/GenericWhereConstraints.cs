@@ -8,7 +8,7 @@ using static keywords.UnmanagedExtensions;
 namespace keywords
 {
     // <Snippet1>
-    public class AGenericClass<T> where T : IComparable { }
+    public class AGenericClass<T> where T : IComparable<T> { }
     // </Snippet1>
 
     // <SNippet2>
@@ -33,7 +33,7 @@ namespace keywords
     // </Snippet4>
 
     // <Snippet5>
-    public class MyGenericClass<T> where T : IComparable, new()
+    public class MyGenericClass<T> where T : IComparable<T>, new()
     {
         // The following line is not possible without new() constraint:
         T item = new T();
@@ -46,15 +46,13 @@ namespace keywords
     namespace CodeExample
     {
         class Dictionary<TKey, TVal>
-            where TKey : IComparable, IEnumerable
+            where TKey : IComparable<TKey>
             where TVal : IMyInterface
         {
-            public void Add(TKey key, TVal val)
-            {
-            }
+            public void Add(TKey key, TVal val) { }
         }
-        // </Snippet6>
     }
+    // </Snippet6>
     public class Container
     {
         // <Snippet7>
