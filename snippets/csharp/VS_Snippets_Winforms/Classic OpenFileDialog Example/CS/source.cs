@@ -1,41 +1,39 @@
-using System;
 using System.IO;
-using System.Data;
 using System.Windows.Forms;
 
-public class Form1: Form
+namespace WindowsFormsApp1
 {
-    protected TextBox textBox1;
- 
-//<Snippet1>
-    private void button1_Click(object sender, System.EventArgs e)
+    public partial class Form1 : Form
     {
-        Stream myStream = null;
-        OpenFileDialog openFileDialog1 = new OpenFileDialog();
- 
-        openFileDialog1.InitialDirectory = "c:\\" ;
-        openFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*" ;
-        openFileDialog1.FilterIndex = 2 ;
-        openFileDialog1.RestoreDirectory = true ;
-
-        if(openFileDialog1.ShowDialog() == DialogResult.OK)
+        public Form1()
         {
-            try
+            InitializeComponent();
+        }
+
+        //<Snippet1>
+        private void button1_Click(object sender, System.EventArgs e)
+        {
+            string fileName = null;
+
+            using (OpenFileDialog openFileDialog1 = new OpenFileDialog())
             {
-                if ((myStream = openFileDialog1.OpenFile()) != null)
+                openFileDialog1.InitialDirectory = "c:\\";
+                openFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                openFileDialog1.FilterIndex = 2;
+                openFileDialog1.RestoreDirectory = true;
+
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    using (myStream)
-                    {
-                        // Insert code to read the stream here.
-                    }
+                    fileName = openFileDialog1.FileName;                    
                 }
             }
-            catch (Exception ex)
+
+            if (fileName != null)
             {
-                MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
+                //Do something with the file, for example read text from it
+                string text = File.ReadAllText(fileName);
             }
         }
+        //</Snippet1>
     }
-        
-//</Snippet1>
 }
