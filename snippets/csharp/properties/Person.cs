@@ -218,6 +218,22 @@ namespace properties
     namespace VersionFourteen
     {
         // <Snippet14>
+        public class Person
+        {
+            public string FirstName { get; set; }
+
+            public string LastName { get; set; }
+
+            [field:NonSerialized]
+            public int Id { get; set; }
+
+            public string FullName => $"{FirstName} {LastName}";
+        }
+        // </Snippet14>
+    }
+    namespace VersionFifteen
+    {
+        // <Snippet15>
         public class Person : INotifyPropertyChanged
         {
             public string FirstName
@@ -240,6 +256,6 @@ namespace properties
             public event PropertyChangedEventHandler PropertyChanged;
             // remaining implementation removed from listing
         }
-        // </Snippet14>
+        // </Snippet15>
     }
 }

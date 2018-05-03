@@ -1,6 +1,9 @@
 ﻿using System;
+// <Snippet3>
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+// </Snippet3>
+
 
 namespace serialization
 {
@@ -8,32 +11,41 @@ namespace serialization
     {
         static void Main(string[] args)
         {
-            // <Snippet3?
+            // <Snippet4>
             const string FileName = @"../../../SavedLoan.bin";
-            // </Snippet3>
+            // </Snippet4>
 
-            // <Snippet2>
+            // <Snippet1>
             Loan TestLoan = new Loan(10000.0, 0.075, 36, "Neil Black");
-            // </Snippet2>
+            // </Snippet1>
 
+            // <Snippet5>
             if (File.Exists(FileName))
             {
                 Console.WriteLine("Reading saved file");
                 Stream openFileStream = File.OpenRead(FileName);
                 BinaryFormatter deserializer = new BinaryFormatter();
                 TestLoan = (Loan)deserializer.Deserialize(openFileStream);
+                TestLoan.TimeLastLoaded = DateTime.Now;
                 openFileStream.Close();
             }
-            TestLoan.PropertyChanged += (_, __) => Console.WriteLine("New customer value");
+            // </Snippet5>
+
+            // <Snippet2>
+            TestLoan.PropertyChanged += (_, __) => Console.WriteLine($"New customer value: {TestLoan.Customer}");
 
             TestLoan.Customer = "Henry Clay";
-            TestLoan.Term--;
-            Console.WriteLine(TestLoan.Term);
+            Console.WriteLine(TestLoan.InterestRate);
+            TestLoan.InterestRate = 7.1;
+            Console.WriteLine(TestLoan.InterestRate);
+            // </Snippet2>
+
+            // <Snippet6>
             Stream SaveFileStream = File.Create(FileName);
             BinaryFormatter serializer = new BinaryFormatter();
             serializer.Serialize(SaveFileStream, TestLoan);
             SaveFileStream.Close();
-
+            // </SNippet6>
 
         }
     }

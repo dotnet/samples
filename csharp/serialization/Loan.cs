@@ -5,12 +5,20 @@ using System.Text;
 
 namespace serialization
 {
+    // <Snippet2>
     [Serializable()]
+    // </Snippet2>
     // <Snippet1>
    public class Loan : INotifyPropertyChanged
     {
         public double LoanAmount { get; set; }
         public double InterestRate { get; set; }
+
+        // <Snippet4>
+        [field:NonSerialized()]
+        public DateTime TimeLastLoaded { get; set; }
+        // </Snippet4>
+
         public int Term { get; set; }
 
         private string customer;
@@ -25,8 +33,10 @@ namespace serialization
             }
         }
 
+        // <Snippet3>
         [field: NonSerialized()]
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        // </Snippet3>
 
         public Loan(double loanAmount,
                     double interestRate,
