@@ -45,7 +45,7 @@ namespace serialization
             BinaryFormatter serializer = new BinaryFormatter();
             serializer.Serialize(SaveFileStream, TestLoan);
             SaveFileStream.Close();
-            // </SNippet6>
+            // </Snippet6>
 
         }
     }
