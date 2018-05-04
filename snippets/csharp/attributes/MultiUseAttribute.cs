@@ -14,5 +14,5 @@ namespace attributes
 
     [MultiUse, MultiUse]
     class Class2 { }
-    // </Snippet2>
+    // </Snippet1>
 }
