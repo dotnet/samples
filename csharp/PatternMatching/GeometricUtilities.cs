@@ -118,7 +118,7 @@ namespace PatternMatching
                 case Circle c:
                     return c.Radius * c.Radius * Math.PI;
                 case Triangle t:
-                    return t.Base * t.Height * 2;
+                    return t.Base * t.Height / 2;
                 case Rectangle r:
                     return r.Length * r.Height;
                 default:
@@ -145,7 +145,7 @@ namespace PatternMatching
                 case Circle c:
                     return c.Radius * c.Radius * Math.PI;
                 case Triangle t:
-                    return t.Base * t.Height * 2;
+                    return t.Base * t.Height / 2;
                 case Rectangle r:
                     return r.Length * r.Height;
                 case null:
