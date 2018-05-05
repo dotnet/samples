@@ -31,11 +31,12 @@ namespace PatternMatching
         {
             if (shape is Square)
             {
-                var s = shape as Square;
+                var s = (Square)shape;
                 return s.Side * s.Side;
-            } else if (shape is Circle)
+            } 
+            else if (shape is Circle)
             {
-                var c = shape as Circle;
+                var c = (Circle)shape;
                 return c.Radius * c.Radius * Math.PI;
             }
             // elided
