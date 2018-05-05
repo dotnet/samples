@@ -68,7 +68,7 @@ To create a sample:
 2. Write the topic that explains the concepts demonstrated in your sample (example: `docs/standard/linq/where-clause.md`) 
 3. Write your sample (example: `WhereClause-Sample1.cs`)
 4. Create a Program.cs with a Main entry point that calls your samples. If there is already one there, add the call to your sample:
-  ```csharp
+    ```csharp
     public class Program
     {
         public void Main(string[] args)
@@ -79,20 +79,20 @@ To create a sample:
             WhereClause1.MethodSyntaxExample();
         }
     }
-  ```
-  To build and run your sample...
+    ```
+To build and run your sample:
 
 
 5. Go to the sample folder and Build to check for errors.
 
- ```
+    ```
     dotnet build
- ```
+    ```
 7. Run!
 
- ```
+    ```
     dotnet run
- ```
+    ```
 
 8. Add a readme.md to the root directory of your sample.
     - This should include a brief description of the code, and refer people to the article that references the sample.
