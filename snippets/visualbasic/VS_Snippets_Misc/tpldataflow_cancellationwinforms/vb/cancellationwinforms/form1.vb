@@ -82,11 +82,10 @@ Namespace CancellationWinForms
             New ExecutionDataflowBlockOptions With {.CancellationToken = cancellationSource.Token,
                                                     .MaxDegreeOfParallelism = 2 })
 
-            ' Connect the two nodes of the pipeline.             
-            startWork.LinkTo(completeWork)
-            ' When the first node completes, set the second node also to 
-            ' the completed state.
-            startWork.Completion.ContinueWith(Sub() completeWork.Complete())
+            ' Connect the two nodes of the pipeline. When the first node completes,
+            ' set the second node also to the completed state.
+            startWork.LinkTo(
+               completeWork, New DataflowLinkOptions With {.PropagateCompletion = true})
 
             ' Create the dataflow action blocks that increment and decrement
             ' progress bars.
