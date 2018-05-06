@@ -90,9 +90,8 @@ namespace ConsoleApplication
     {
         // if the below attribute was uncommented, it would cause a compiler error
         // [MyAttributeForClassAndStructOnly]
-        public Foo() {
-
-        }
+        public Foo() 
+        { }
     }
     // </AttributeUsageExample2>
 
@@ -101,19 +100,21 @@ namespace ConsoleApplication
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public void ExecutePropertyChanged([CallerMemberName] string propertyName = null)
+        public void RaisePropertyChanged([CallerMemberName] string propertyName = null)
         {
-            if(PropertyChanged != null)
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         private string _name;
-        public string Name {
+        public string Name 
+        {
             get { return _name;}
-            set {
-                if(value != _name) {
+            set 
+            {
+                if (value != _name) 
+                {
                     _name = value;
-                    ExecutePropertyChanged();   // notice that "Name" is not needed here explicitly
+                    RaisePropertyChanged();   // notice that "Name" is not needed here explicitly
                 }
             }
         }
