@@ -3,6 +3,7 @@
 ' How to: Handle Exceptions in Parallel Loops
 
 Imports System.Collections.Concurrent
+Imports System.Collections.Generic
 Imports System.Threading.Tasks
 
 Module ExceptionsInLoops
@@ -18,14 +19,18 @@ Module ExceptionsInLoops
         Try
             ProcessDataInParallel(data)
         Catch ae As AggregateException
+            Dim ignoredExceptions As New List(Of Exception)
             ' This is where you can choose which exceptions to handle.
-            For Each ex As Exception In ae.InnerExceptions
+            For Each ex As Exception In ae.Flatten().InnerExceptions
                 If (TypeOf (ex) Is ArgumentException) Then
                     Console.WriteLine(ex.Message)
                 Else
-                    Throw ex
+                    ignoredExceptions.Add(ex)
                 End If
             Next
+            If ignoredExceptions.Count > 0 Then
+                Throw New AggregateException(ignoredExceptions)
+            End If
         End Try
         Console.WriteLine("Press any key to exit.")
         Console.ReadKey()
@@ -39,8 +44,8 @@ Module ExceptionsInLoops
         Parallel.ForEach(Of Byte)(data, Sub(d)
                                             Try
                                                 ' Cause a few exceptions, but not too many.
-                                                If d < &H3 Then
-                                                    Throw New ArgumentException(String.Format("value is {0:x}. Element must be greater than &H3", d))
+                                                If d < 3 Then
+                                                    Throw New ArgumentException($"Value is {d}. Value must be greater than or equal to 3")
                                                 Else
                                                     Console.Write(d & " ")
                                                 End If
@@ -49,7 +54,7 @@ Module ExceptionsInLoops
                                                 exceptions.Enqueue(ex)
                                             End Try
                                         End Sub)
-
+        Console.WriteLine()
         ' Throw the exceptions here after the loop completes.
         If exceptions.Count > 0 Then
             Throw New AggregateException(exceptions)
