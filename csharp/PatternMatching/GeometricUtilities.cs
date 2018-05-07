@@ -31,11 +31,12 @@ namespace PatternMatching
         {
             if (shape is Square)
             {
-                var s = shape as Square;
+                var s = (Square)shape;
                 return s.Side * s.Side;
-            } else if (shape is Circle)
+            } 
+            else if (shape is Circle)
             {
-                var c = shape as Circle;
+                var c = (Circle)shape;
                 return c.Radius * c.Radius * Math.PI;
             }
             // elided
@@ -118,7 +119,7 @@ namespace PatternMatching
                 case Circle c:
                     return c.Radius * c.Radius * Math.PI;
                 case Triangle t:
-                    return t.Base * t.Height * 2;
+                    return t.Base * t.Height / 2;
                 case Rectangle r:
                     return r.Length * r.Height;
                 default:
@@ -145,7 +146,7 @@ namespace PatternMatching
                 case Circle c:
                     return c.Radius * c.Radius * Math.PI;
                 case Triangle t:
-                    return t.Base * t.Height * 2;
+                    return t.Base * t.Height / 2;
                 case Rectangle r:
                     return r.Length * r.Height;
                 case null:
