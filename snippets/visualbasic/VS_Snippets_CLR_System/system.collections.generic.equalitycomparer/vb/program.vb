@@ -93,12 +93,8 @@ Class BoxSameDimensions : Inherits EqualityComparer(Of Box)
            Return False
         End If
 
-        If b1.Height = b2.Height AndAlso b1.Length = b2.Length _
-                                 AndAlso b1.Width = b2.Width Then
-            Return True
-        Else
-            Return False
-        End If
+        Return (b1.Height = b2.Height AndAlso b1.Length = b2.Length _
+                                      AndAlso b1.Width = b2.Width)
     End Function
 
     Public Overloads Overrides Function GetHashCode(ByVal bx As Box) As Integer
@@ -116,12 +112,8 @@ Class BoxSameVolume : Inherits EqualityComparer(Of Box)
            Return False
         End If
 
-        If b1.Height * b1.Width * b1.Length = _
-                                b2.Height * b2.Width * b2.Length Then
-            Return True
-        Else
-            Return False
-        End If
+        Return (b1.Height * b1.Width * b1.Length = _
+                b2.Height * b2.Width * b2.Length)
     End Function
 
     Public Overloads Overrides Function GetHashCode(ByVal bx As Box) As Integer
