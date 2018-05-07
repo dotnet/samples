@@ -28,7 +28,7 @@ namespace serialization
             set
             {
                 customer = value;
-                PropertyChanged(this,
+                PropertyChanged?.Invoke(this,
                   new PropertyChangedEventArgs(nameof(Customer)));
             }
         }
