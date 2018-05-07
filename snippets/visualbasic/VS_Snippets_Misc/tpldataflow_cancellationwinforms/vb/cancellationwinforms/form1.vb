@@ -65,7 +65,8 @@ Namespace CancellationWinForms
                 decrementProgress.Post(toolStripProgressBar1)
                 incrementProgress.Post(toolStripProgressBar2)
                 Return workItem
-            End Function, New ExecutionDataflowBlockOptions With {.CancellationToken = cancellationSource.Token})
+            End Function,
+            New ExecutionDataflowBlockOptions With {.CancellationToken = cancellationSource.Token})
 
             ' Create the second, and final, node in the pipeline. 
             completeWork = New ActionBlock(Of WorkItem)(Sub(workItem)
@@ -77,22 +78,29 @@ Namespace CancellationWinForms
                workItem.DoWork(1000)
                decrementProgress.Post(toolStripProgressBar2)
                incrementProgress.Post(toolStripProgressBar3)
-            End Sub, New ExecutionDataflowBlockOptions With { .CancellationToken = cancellationSource.Token, .MaxDegreeOfParallelism = 2 })
+            End Sub,
+            New ExecutionDataflowBlockOptions With {.CancellationToken = cancellationSource.Token,
+                                                    .MaxDegreeOfParallelism = 2 })
 
-            ' Connect the two nodes of the pipeline.             
-            startWork.LinkTo(completeWork)
-            ' When the first node completes, set the second node also to 
-            ' the completed state.
-            startWork.Completion.ContinueWith(Sub() completeWork.Complete())
+            ' Connect the two nodes of the pipeline. When the first node completes,
+            ' set the second node also to the completed state.
+            startWork.LinkTo(
+               completeWork, New DataflowLinkOptions With {.PropagateCompletion = true})
 
             ' Create the dataflow action blocks that increment and decrement
             ' progress bars.
             ' These blocks use the task scheduler that is associated with
             ' the UI thread.
 
-         incrementProgress = New ActionBlock(Of ToolStripProgressBar)(Function(progressBar) Math.Max(Interlocked.Increment(progressBar.Value), progressBar.Value - 1), New ExecutionDataflowBlockOptions With {.CancellationToken = cancellationSource.Token, .TaskScheduler = uiTaskScheduler})
+            incrementProgress = New ActionBlock(Of ToolStripProgressBar)(
+               Sub(progressBar) progressBar.Value += 1,
+               New ExecutionDataflowBlockOptions With {.CancellationToken = cancellationSource.Token,
+                                                       .TaskScheduler = uiTaskScheduler})
 
-            decrementProgress = New ActionBlock(Of ToolStripProgressBar)(Function(progressBar) Math.Max(Interlocked.Decrement(progressBar.Value), progressBar.Value), New ExecutionDataflowBlockOptions With {.CancellationToken = cancellationSource.Token, .TaskScheduler = uiTaskScheduler})
+            decrementProgress = New ActionBlock(Of ToolStripProgressBar)(
+               Sub(progressBar) progressBar.Value -= 1,
+               New ExecutionDataflowBlockOptions With {.CancellationToken = cancellationSource.Token,
+                                                       .TaskScheduler = uiTaskScheduler})
 
         End Sub
         ' </snippet4>
