@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Microsoft.ML.Runtime.Api;
+﻿using Microsoft.ML.Runtime.Api;
 
 namespace SentimentAnalysis
 {
@@ -11,6 +8,7 @@ namespace SentimentAnalysis
         public string SentimentText;
         [Column(ordinal: "1", name: "Label")]
         public float Sentiment;
+
     }
 
     public class SentimentPrediction
