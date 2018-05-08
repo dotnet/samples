@@ -2,6 +2,7 @@
 {
     static class TestTrips
     {
+        // <Snippet1>
         internal static readonly TaxiTrip Trip1 = new TaxiTrip
         {
             vendor_id = "VTS",
@@ -11,5 +12,6 @@
             payment_type = "CSH",
             fare_amount = 0 // predict it. actual = 29.5
         };
+        // <Snippet2>
     }
 }

@@ -1,7 +1,10 @@
-﻿using Microsoft.ML.Runtime.Api;
+﻿// <Snippet1>
+using Microsoft.ML.Runtime.Api;
+// </Snippet1>
 
 namespace TaxiFarePrediction
 {
+    // <Snippet2>
     public class TaxiTrip
     {
         [Column(ordinal: "0")]
@@ -19,10 +22,13 @@ namespace TaxiFarePrediction
         [Column(ordinal: "6")]
         public float fare_amount;
     }
+    // </Snippet2>
 
+    // <Snippet3>
     public class TaxiTripFarePrediction
     {
         [ColumnName("Score")]
         public float fare_amount;
     }
+    // </Snippet3>
 }
