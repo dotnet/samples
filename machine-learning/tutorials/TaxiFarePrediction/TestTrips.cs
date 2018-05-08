@@ -12,6 +12,6 @@
             payment_type = "CSH",
             fare_amount = 0 // predict it. actual = 29.5
         };
-        // <Snippet2>
+        // </Snippet1>
     }
 }
