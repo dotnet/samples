@@ -8,12 +8,13 @@ namespace CustomSequence
     {
         private static IEnumerable<T> Combine<T>(this IEnumerable<T> first, IEnumerable<T> second, Func<T, T, T> func)
         {
-            var e1 = first.GetEnumerator();
-            var e2 = second.GetEnumerator();
-
-            while (e1.MoveNext() && e2.MoveNext())
+            using (IEnumerator<T> e1 = first.GetEnumerator(),
+                                  e2 = second.GetEnumerator())
             {
-                yield return func(e1.Current, e2.Current);
+                while (e1.MoveNext() && e2.MoveNext())
+                {
+                    yield return func(e1.Current, e2.Current);
+                }
             }
         }
 
