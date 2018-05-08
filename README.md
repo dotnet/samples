@@ -83,17 +83,17 @@ To create a sample:
 To build and run your sample:
 
 
-5. Go to the sample folder and Build to check for errors.
+1. Go to the sample folder and Build to check for errors.
 
     ```
     dotnet build
     ```
-7. Run!
+2. Run!
 
     ```
     dotnet run
     ```
 
-8. Add a readme.md to the root directory of your sample.
+3. Add a readme.md to the root directory of your sample.
     - This should include a brief description of the code, and refer people to the article that references the sample.
 
