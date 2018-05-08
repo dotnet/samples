@@ -8,6 +8,7 @@ Public Module BrotliExample
         Using decompressionStream As New BrotliStream(toDecompress, CompressionMode.Decompress)
             decompressionStream.CopyTo(decompressedStream)
         End Using
+        decompressedStream.Position = 0
         Return decompressedStream
     End Function
     ' </Snippet1>

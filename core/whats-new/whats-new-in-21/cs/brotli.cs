@@ -12,6 +12,7 @@ public static class BrotliExample
         {
             decompressionStream.CopyTo(decompressedStream);
         }
+        decompressedStream.Position = 0;
         return decompressedStream;
     }
     // </Snippet1>
