@@ -89,17 +89,18 @@ namespace TPL_Exceptions
             {
                 ProcessDataInParallel(data);
             }
-
             catch (AggregateException ae)
             {
+                var ignoredExceptions = new List<Exception>();
                 // This is where you can choose which exceptions to handle.
-                foreach (var ex in ae.InnerExceptions)
+                foreach (var ex in ae.Flatten().InnerExceptions)
                 {
                     if (ex is ArgumentException)
                         Console.WriteLine(ex.Message);
                     else
-                        throw ex;
+                        ignoredExceptions.Add(ex);
                 }
+                if (ignoredExceptions.Count > 0) throw new AggregateException(ignoredExceptions);
             }
 
             Console.WriteLine("Press any key to exit.");
@@ -117,14 +118,18 @@ namespace TPL_Exceptions
                 try
                 {
                     // Cause a few exceptions, but not too many.
-                    if (d < 0x3)
-                        throw new ArgumentException(String.Format("value is {0:x}. Elements must be greater than 0x3.", d));
+                    if (d < 3)
+                        throw new ArgumentException($"Value is {d}. Value must be greater than or equal to 3.");
                     else
                         Console.Write(d + " ");
                 }
                 // Store the exception and continue with the loop.                    
-                catch (Exception e) { exceptions.Enqueue(e); }
+                catch (Exception e)
+                {
+                    exceptions.Enqueue(e);
+                }
             });
+            Console.WriteLine();
 
             // Throw the exceptions here after the loop completes.
             if (exceptions.Count > 0) throw new AggregateException(exceptions);
