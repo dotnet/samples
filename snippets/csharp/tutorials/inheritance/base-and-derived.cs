@@ -72,8 +72,8 @@ public abstract class Publication
       
       int currentYear = DateTime.Now.Year;
       if (copyrightDate < currentYear - 10 || copyrightDate > currentYear + 2)
-         throw new ArgumentOutOfRangeException($"The copyright year must be between {currentYear -10} and {currentYear + 1}");
-            CopyrightDate = copyrightDate;      
+         throw new ArgumentOutOfRangeException($"The copyright year must be between {currentYear - 10} and {currentYear + 1}");
+      CopyrightDate = copyrightDate;      
    }
 
    public override string ToString() => Title;
