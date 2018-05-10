@@ -52,9 +52,9 @@ namespace keywords
                 1,  5,  10, 10, 5,  1
             };
 
-            Span<int> RowSix = new Span<int>(PascalsTriangle, 10, 5);
+            Span<int> RowFive = new Span<int>(PascalsTriangle, 10, 5);
 
-            fixed (int* ptrToRow = RowSix)
+            fixed (int* ptrToRow = RowFive)
             {
                 // Use the numbers 1, 5, 10, 10, 5, 1
             }
