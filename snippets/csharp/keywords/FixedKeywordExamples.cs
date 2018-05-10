@@ -56,7 +56,13 @@ namespace keywords
 
             fixed (int* ptrToRow = RowFive)
             {
-                // Use the numbers 1, 5, 10, 10, 5, 1
+                // Sum the numbers 1,4,6,4,1
+                var sum = 0;
+                for (int i = 0; i < RowFive.Length; i++)
+                {
+                    sum += *(ptrToRow + i);
+                }
+                Console.WriteLine(sum);
             }
         }
         // </SnippetFixedSpan>
