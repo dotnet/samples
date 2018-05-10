@@ -1,38 +1,13 @@
-'<Snippet1>
-' New example (user feedback bug 23592) GlennHa 1/4/06
-Imports System
 Imports System.Reflection
 Imports System.Reflection.Emit
 
 Public Class Example
 
-    ' The type used for this code example is the System.Timers.Timer 
-    ' class. The Timer object is stored in a variable of type object,
-    ' and all code that accesses the Timer does so late-bound. This
-    ' is because the scenario in which you might use the AddEVentHander
-    ' method is when you load the type after the program is already
-    ' compiled, when it is not possible to use the Visual Basic
-    ' AddHandler syntax to hook up the event. (Note that there is no 
-    ' "Imports" statement for the System.Timers namespace.)
-    '
     Private Shared timer As Object
     
     Public Shared Sub Main() 
-        ' Get the assembly that contains the Timer type (Sytem.dll). 
-        ' The following code uses the fact that System.dll has the
-        ' same public key as mscorlib.dll to construct a string
-        ' representing the full assembly name. 
-        Dim fullName As String = ""
-        For Each assem As [Assembly] In AppDomain.CurrentDomain.GetAssemblies()
-            If assem.GetName().Name = "mscorlib" Then
-                fullName = assem.FullName
-            End If
-        Next
-        Dim sys As [Assembly] = [Assembly].Load("System" & fullName.Substring(fullName.IndexOf(",")))
-
-        ' Get a Type object representing the Timer type.
-        Dim t As Type = sys.GetType("System.Timers.Timer")
-        
+        ' Get the Timer type.
+        Dim t As Type = GetType(System.Timers.Timer)
         ' Create an instance of the Timer type.
         timer = Activator.CreateInstance(t)
         
@@ -70,13 +45,12 @@ Public Class Example
         ' will be run but not saved. An assembly must have at 
         ' least one module, which in this case contains a single
         ' type. The only purpose of this type is to contain the 
-        ' event handler method. (In the .NET Framework version 
-        ' 2.0 you can use dynamic methods, which are simpler 
-        ' because there is no need to create an assembly, module,
-        ' or type.)
+        ' event handler method. (You can alsso use dynamic methods, 
+        ' which are simpler because there is no need to create an 
+        ' assembly, module, or type.)
         Dim aName As New AssemblyName()
         aName.Name = "DynamicTypes"
-        Dim ab As AssemblyBuilder = AppDomain.CurrentDomain.DefineDynamicAssembly(aName, AssemblyBuilderAccess.Run)
+        Dim ab As AssemblyBuilder = AssemblyBuilder.DefineDynamicAssembly(aName, AssemblyBuilderAccess.Run)
         Dim mb As ModuleBuilder = ab.DefineDynamicModule(aName.Name)
         Dim tb As TypeBuilder = mb.DefineType("Handler", TypeAttributes.Class Or TypeAttributes.Public)
         
@@ -121,10 +95,9 @@ Public Class Example
     
     End Sub 
 End Class 
-' This code example produces output similar to the following:
-'
-'Press the Enter key to end the program.
-'Timer's Elapsed event is raised.
-'Timer's Elapsed event is raised.
-'Timer's Elapsed event is raised.
-'</Snippet1>
+' This example produces output similar to the following:
+'      Press the Enter key to end the program.
+'      Timer's Elapsed event is raised.
+'      Timer's Elapsed event is raised.
+'      Timer's Elapsed event is raised.
+
