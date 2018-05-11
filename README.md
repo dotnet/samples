@@ -96,4 +96,3 @@ To build and run your sample:
 
 3. Add a readme.md to the root directory of your sample.
     - This should include a brief description of the code, and refer people to the article that references the sample.
-
