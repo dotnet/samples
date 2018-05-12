@@ -1,128 +1,96 @@
-﻿// <Snippet1>
-using System;
+﻿using System;
 using System.Collections.Generic;
 
-class Program
+static class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        BoxEqDimensions bxd = new BoxEqDimensions();
-        BoxEqVolume bxv = new BoxEqVolume();
+        Box redBox = new Box(8, 8, 4);
+        Box blueBox = new Box(6, 8, 4);
+        Box greenBox = new Box(4, 8, 8);
 
-        Dictionary<Box, string> boxesByDim = new Dictionary<Box, string>(bxd);
-        Dictionary<Box, string> boxesByVol = new Dictionary<Box, string>(bxv);
+        var boxes = new CustomCollection<Box>(new[] { redBox, blueBox, greenBox });
 
-        try
-        {
-            Box redBox = new Box(8, 8, 4);
-            Box blueBox = new Box(6, 8, 4);
-            Box greenBox = new Box(4, 8, 8);
+        var foundByDimension = boxes.FindFirst(greenBox);
 
-            Console.WriteLine("Adding boxes by Dimension");
+        Console.WriteLine($"Found box {foundByDimension} by dimension.");
 
-            boxesByDim.Add(redBox, "red");
-            boxesByDim.Add(blueBox, "blue");
-            boxesByDim.Add(greenBox, "green");
+        var foundByVolume = boxes.FindFirst(greenBox, new BoxEqVolume());
 
-            PrintBoxCollection(boxesByDim);
-
-            Console.WriteLine("\nAdding boxes by Volume");
-
-            boxesByVol.Add(redBox, "red");
-            boxesByVol.Add(blueBox, "blue");
-            boxesByVol.Add(greenBox, "green");
-
-            PrintBoxCollection(boxesByVol);
-        }
-        catch (ArgumentException argEx)
-        {
-            Console.WriteLine(argEx.Message);
-        }
-    }
-    private static void PrintBoxCollection(Dictionary<Box,string> boxes)
-    {
-        foreach (KeyValuePair<Box, string> kvp in boxes)
-        {
-            Console.WriteLine("{0} x {1} x {2} - {3}", kvp.Key.Height.ToString(),
-                                                       kvp.Key.Length.ToString(),
-                                                       kvp.Key.Width.ToString(), kvp.Value);
-        }
+        Console.WriteLine($"Found box {foundByVolume} by volume.");
     }
 }
 
-public class BoxEqDimensions : EqualityComparer<Box>
+public class CustomCollection<T>
 {
-    public override int GetHashCode(Box bx)
+    private IEnumerable<T> items;
+
+    public CustomCollection(IEnumerable<T> items) => this.items = items;
+
+    public T FindFirst(T itemToFind, IEqualityComparer<T> comparer = null)
     {
-        int hCode = bx.Height ^ bx.Length ^ bx.Width;
-        return hCode.GetHashCode();
-    }
-    
-    public override bool Equals(Box b1, Box b2)
-    {
-        return EqualityComparer<Box>.Default.Equals(b1, b2);
+        comparer = comparer ?? EqualityComparer<T>.Default;
+
+        foreach (var item in items)
+        {
+            if (comparer.Equals(item, itemToFind))
+            {
+                return item;
+            }
+        }
+
+        throw new InvalidOperationException("No macthing item found.");
     }
 }
-
 
 public class BoxEqVolume : EqualityComparer<Box>
 {
-    public override int GetHashCode(Box bx)
-    {
-        int hCode = bx.Height ^ bx.Length ^ bx.Width;
-        return hCode.GetHashCode();
-    }
-
     public override bool Equals(Box b1, Box b2)
     {
-        if (b1.Height * b1.Width * b1.Length ==
-            b2.Height * b2.Width * b2.Length)
-        {
+        if (b1 == b2)
             return true;
-        }
-        else
-        {
+
+        if (b1 == null || b2 == null)
             return false;
-        }
+
+        return b1.Volume == b2.Volume;
     }
+
+    public override int GetHashCode(Box box) => box.Volume.GetHashCode();
 }
 
 public class Box : IEquatable<Box>
 {
-
-    public Box(int h, int l, int w)
+    public Box(int height, int length, int width)
     {
-        this.Height = h;
-        this.Length = l;
-        this.Width = w;
+        this.Height = height;
+        this.Length = length;
+        this.Width = width;
     }
-    public int Height { get; set; }
-    public int Length { get; set; }
-    public int Width { get; set; }
+
+    public int Height { get; }
+    public int Length { get; }
+    public int Width { get; }
+
+    public int Volume => Height * Length * Width;
 
     public bool Equals(Box other)
     {
-        if (this.Height == other.Height & this.Length == other.Length
-            & this.Width == other.Width)
-        {
-            return true;
-        }
-        else
-        {
+        if (other == null)
             return false;
-        }
+
+        return this.Height == other.Height && this.Length == other.Length
+            && this.Width == other.Width;
     }
+
+    public override bool Equals(object obj) => Equals(obj as Box);
+    public override int GetHashCode() => (Height, Length, Width).GetHashCode();
+
+    public override string ToString() => $"{Height} x {Length} x {Width}";
 }
 
 /* This example produces the following output:
  * 
-   Adding boxes by Dimension
-    8 x 8 x 4 - red
-    6 x 8 x 4 - blue
-    4 x 8 x 8 - green
-
-    Adding boxes by Volume
-    An item with the same key has already been added.
- * 
- */ 
-// </Snippet1>
+    Found box 4 x 8 x 8 by dimension.
+    Found box 8 x 8 x 4 by volume.
+ */
