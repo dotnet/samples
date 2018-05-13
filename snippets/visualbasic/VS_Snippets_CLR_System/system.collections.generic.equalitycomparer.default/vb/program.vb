@@ -1,5 +1,6 @@
 Imports System
 Imports System.Collections.Generic
+Imports System.Runtime.CompilerServices
 
 Public Class Example
     Public Shared Sub Main()
@@ -7,13 +8,15 @@ Public Class Example
         Dim blueBox As New Box(6, 8, 4)
         Dim greenBox As New Box(4, 8, 8)
 
-        Dim boxes = New CustomCollection(Of Box)(New Box() { redBox, blueBox, greenBox })
+        Dim boxes = New Box() { redBox, blueBox, greenBox }
 
-        Dim foundByDimension = boxes.FindFirst(greenBox)
+        Dim boxToFind = New Box(4, 8, 8)
+
+        Dim foundByDimension = boxes.FindFirst(boxToFind)
 
         Console.WriteLine($"Found box {foundByDimension} by dimension.")
 
-        Dim foundByVolume = boxes.FindFirst(greenBox, New BoxEqVolume())
+        Dim foundByVolume = boxes.FindFirst(boxToFind, New BoxEqVolume())
 
         Console.WriteLine($"Found box {foundByVolume} by volume.")
     End Sub
@@ -25,25 +28,22 @@ Public Class Example
     End Sub
 End Class
 
-Public Class CustomCollection(Of T)
-    Private items As IEnumerable(Of T)
+Public Module CollectionExtensions
+    <Extension()> 
+    Public Function FindFirst(Of T)(
+        collection As IEnumerable(Of T), itemToFind As T, Optional comparer As IEqualityComparer(Of T) = Nothing)
 
-    Public Sub New(items As IEnumerable(Of T))
-        Me.items = items
-    End Sub
-
-    Public Function FindFirst(itemToFind As T, Optional comparer As IEqualityComparer(Of T) = Nothing)
         comparer = If(comparer, EqualityComparer(Of T).Default)
 
-        For Each item In items
+        For Each item In collection
             If comparer.Equals(item, itemToFind)
                 Return item
             End IF
         Next
 
-        Throw New InvalidOperationException("No macthing item found.")
+        Throw New InvalidOperationException("No matching item found.")
     End Function
-End Class
+End Module
 
 Public Class BoxEqVolume
     Inherits EqualityComparer(Of Box)
