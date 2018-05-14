@@ -1,41 +1,15 @@
-//<Snippet1>
-// New example (user feedback bug 23592) GlennHa 1/4/06
 using System;
 using System.Reflection;
 using System.Reflection.Emit;
 
 public class Example
 {
-    // The type used for this code example is the System.Timers.Timer 
-    // class. The Timer object is stored in a variable of type object,
-    // and all code that accesses the Timer does so late-bound. This
-    // is because the scenario in which you might use the AddEVentHander
-    // method is when you load the type after the program is already
-    // compiled, when it is not possible to use the C# += syntax to
-    // hook up the event. (Note that there is no "using" statement
-    // for the System.Timers namespace.)
-    //
     private static object timer;
 
     public static void Main()
     {
-        // Get the assembly that contains the Timer type (Sytem.dll). 
-        // The following code uses the fact that System.dll has the
-        // same public key as mscorlib.dll to construct a string
-        // representing the full assembly name. 
-        string fullName = "";
-        foreach (Assembly assem in AppDomain.CurrentDomain.GetAssemblies())
-        {
-            if (assem.GetName().Name == "mscorlib")
-            {
-                fullName = assem.FullName;
-            }
-        }
-        Assembly sys = Assembly.Load("System" + fullName.Substring(fullName.IndexOf(",")));
-
-        // Get a Type object representing the Timer type.
-        Type t = sys.GetType("System.Timers.Timer");
-
+        // Get the Timer type.
+        Type t = typeof(System.Timers.Timer);
         // Create an instance of the Timer type.
         timer = Activator.CreateInstance(t);
 
@@ -67,13 +41,13 @@ public class Example
         // will be run but not saved. An assembly must have at 
         // least one module, which in this case contains a single
         // type. The only purpose of this type is to contain the 
-        // event handler method. (In the .NET Framework version 
-        // 2.0 you can use dynamic methods, which are simpler 
-        // because there is no need to create an assembly, module,
-        // or type.)
+        // event handler method. (You can use also dynamic methods, 
+        // which are simpler because there is no need to create an 
+        // assembly, module, or type.)
+        //
         AssemblyName aName = new AssemblyName();
         aName.Name = "DynamicTypes";
-        AssemblyBuilder ab = AppDomain.CurrentDomain.DefineDynamicAssembly(aName, AssemblyBuilderAccess.Run);
+        AssemblyBuilder ab = AssemblyBuilder.DefineDynamicAssembly(aName, AssemblyBuilderAccess.Run);
         ModuleBuilder mb = ab.DefineDynamicModule(aName.Name);
         TypeBuilder tb = mb.DefineType("Handler", TypeAttributes.Class | TypeAttributes.Public);
 
@@ -118,11 +92,11 @@ public class Example
         Console.ReadLine();
     }
 }
-/* This code example produces output similar to the following:
+/* This example produces output similar to the following:
 
 Press the Enter key to end the program.
 Timer's Elapsed event is raised.
 Timer's Elapsed event is raised.
 Timer's Elapsed event is raised.
- */
-//</Snippet1>
+*/
+
