@@ -8,6 +8,7 @@ type Point3D =
     end
 
 // In Point2D, two immutable values are defined.
+// It also has a member which computes a distance between itself and another Point2D.
 // Point2D has an explicit constructor.
 // You can create zero-initialized instances of Point2D, or you can
 // pass in arguments to initialize the values.
