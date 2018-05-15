@@ -115,7 +115,7 @@ namespace TupleEquality
             : left.Equals(right);
 
         public static bool operator !=(Person left, Person right) => !(left == right);
-        public override int GetHashCode() => $"{LastName}{FirstName}".GetHashCode();
+        public override int GetHashCode() => (LastName, FirstName).GetHashCode();
         // </SnippetEqualityTests>
 
     }
