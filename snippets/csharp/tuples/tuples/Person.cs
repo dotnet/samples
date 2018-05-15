@@ -60,9 +60,9 @@ namespace TupleEquality
             Person sample = new Person("Bill", "Wagner");
 
             Console.WriteLine("Starting Equality Tests");
-            Console.WriteLine($"nill equals nil: {nil == nil}");
-            Console.WriteLine($"nill equals blank: {nil == blank}");
-            Console.WriteLine($"nill equals sample: {nil == sample}");
+            Console.WriteLine($"nil equals nil: {nil == nil}");
+            Console.WriteLine($"nil equals blank: {nil == blank}");
+            Console.WriteLine($"nil equals sample: {nil == sample}");
 
             Console.WriteLine($"blank equals nil: {blank == nil}");
             Console.WriteLine($"blank equals blank: {blank == blank}");
@@ -72,9 +72,9 @@ namespace TupleEquality
             Console.WriteLine($"sample equals blank: {sample == blank}");
             Console.WriteLine($"sample equals sanple: {sample == sample}");
 
-            Console.WriteLine($"nill not equals nil: {nil != nil}");
-            Console.WriteLine($"nill not equals blank: {nil != blank}");
-            Console.WriteLine($"nill not equals sample: {nil != sample}");
+            Console.WriteLine($"nil not equals nil: {nil != nil}");
+            Console.WriteLine($"nil not equals blank: {nil != blank}");
+            Console.WriteLine($"nil not equals sample: {nil != sample}");
 
             Console.WriteLine($"blank not equals nil: {blank != nil}");
             Console.WriteLine($"blank not equals blank: {blank != blank}");
