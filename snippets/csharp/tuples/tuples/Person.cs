@@ -48,3 +48,41 @@ namespace tuples
     }
     #endregion
 }
+
+namespace TupleEquality
+{
+    public class Person
+    {
+        public string FirstName { get; }
+        public string LastName { get; }
+
+        public Person(string first, string last)
+        {
+            FirstName = first;
+            LastName = last;
+        }
+
+        public void Deconstruct(out string firstName, out string lastName)
+        {
+            firstName = FirstName;
+            lastName = LastName;
+        }
+
+        public static bool operator ==(Person left, Person right) 
+        {
+
+            if (left == null) return (right == null);
+            if (right == null) return false; // left can't be null here
+            return (left.FirstName, left.LastName) == (right.FirstName, right.LastName);
+        }
+
+        public static bool operator !=(Person left, Person right)
+        {
+            if (left == null) return (right != null);
+            if (right == null) return true; // left can't be null here
+            return (left.FirstName, left.LastName) != (right.FirstName, right.LastName);
+        }
+
+    }
+
+}
