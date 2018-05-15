@@ -1,130 +1,110 @@
-'<Snippet1>
-Imports System
-Imports System.Collections
 Imports System.Collections.Generic
+Imports System.Runtime.CompilerServices
 
 Public Class Example
     Public Shared Sub Main()
-        Dim bxd As New BoxEqDimensions()
-        Dim bxv As New BoxEqVolume()
+        Dim redBox As New Box(8, 8, 4)
+        Dim blueBox As New Box(6, 8, 4)
+        Dim greenBox As New Box(4, 8, 8)
 
-        Dim boxesByDim As New Dictionary(Of Box, String)(bxd)
-        Dim boxesByVol As New Dictionary(Of Box, String)(bxv)
+        Dim boxes As Box() = { redBox, blueBox, greenBox }
 
-        Try
-            Dim redBox As New Box(8, 8, 4)
-            Dim blueBox As New Box(6, 8, 4)
-            Dim greenBox As New Box(4, 8, 8)
+        Dim boxToFind As New Box(4, 8, 8)
 
-            Console.WriteLine("Adding boxes by Dimension")
+        Dim foundByDimension = boxes.FindFirst(boxToFind)
 
-            boxesByDim.Add(redBox, "red")
-            boxesByDim.Add(blueBox, "blue")
-            boxesByDim.Add(greenBox, "green")
+        Console.WriteLine($"Found box {foundByDimension} by dimension.")
 
-            PrintBoxCollection(boxesByDim)
+        Dim foundByVolume = boxes.FindFirst(boxToFind, New BoxEqVolume())
 
-            Console.WriteLine(vbLf & "Adding boxes by Volume")
-
-            boxesByDim.Add(redBox, "red")
-            boxesByDim.Add(blueBox, "blue")
-            boxesByDim.Add(greenBox, "green")
-
-
-
-            PrintBoxCollection(boxesByVol)
-        Catch argEx As ArgumentException
-            Console.WriteLine(argEx.Message)
-        End Try
+        Console.WriteLine($"Found box {foundByVolume} by volume.")
     End Sub
-    Private Shared Sub PrintBoxCollection(ByVal boxes As Dictionary(Of Box, String))
+
+    Private Shared Sub PrintBoxCollection(boxes As Dictionary(Of Box, String))
         For Each kvp As KeyValuePair(Of Box, String) In boxes
-            Console.WriteLine("{0} x {1} x {2} - {3}", kvp.Key.Height.ToString(), kvp.Key.Length.ToString(), kvp.Key.Width.ToString(), kvp.Value)
+            Console.WriteLine($"{kvp.Key.Height} x {kvp.Key.Length} x {kvp.Key.Width} - {kvp.Value}")
         Next
     End Sub
 End Class
-Public Class BoxEqDimensions
-    Inherits EqualityComparer(Of Box)
-    Public Overloads Overrides Function GetHashCode(ByVal bx As Box) As Integer
-        Dim hCode As Integer = bx.Height Xor bx.Length Xor bx.Width
-        Return hCode.GetHashCode()
-    End Function
 
-    Public Overloads Overrides Function Equals(ByVal b1 As Box, ByVal b2 As Box) As Boolean
-        Return EqualityComparer(Of Box).[Default].Equals(b1, b2)
-    End Function
-End Class
+Public Module CollectionExtensions
+    <Extension()> 
+    Public Function FindFirst(Of T)(
+        collection As IEnumerable(Of T), itemToFind As T, Optional comparer As IEqualityComparer(Of T) = Nothing)
 
+        comparer = If(comparer, EqualityComparer(Of T).Default)
+
+        For Each item In collection
+            If comparer.Equals(item, itemToFind)
+                Return item
+            End IF
+        Next
+
+        Throw New InvalidOperationException("No matching item found.")
+    End Function
+End Module
 
 Public Class BoxEqVolume
     Inherits EqualityComparer(Of Box)
-    Public Overloads Overrides Function GetHashCode(ByVal bx As Box) As Integer
-        Dim hCode As Integer = bx.Height Xor bx.Length Xor bx.Width
-        Return hCode.GetHashCode()
+
+    Public Overrides Function GetHashCode(box As Box) As Integer
+        Return box.Volume.GetHashCode()
     End Function
 
-    Public Overloads Overrides Function Equals(ByVal b1 As Box, ByVal b2 As Box) As Boolean
-        If b1.Height * b1.Width * b1.Length = b2.Height * b2.Width * b2.Length Then
+    Public Overrides Function Equals(b1 As Box, b2 As Box) As Boolean
+        If b1 Is b2 Then
             Return True
-        Else
+        End If
+
+        If b1 Is Nothing OrElse b2 Is Nothing Then
             Return False
         End If
+
+        Return b1.Volume = b2.Volume
     End Function
 End Class
 
 Public Class Box
     Implements IEquatable(Of Box)
 
-    Public Sub New(ByVal h As Integer, ByVal l As Integer, ByVal w As Integer)
-        Me.Height = h
-        Me.Length = l
-        Me.Width = w
+    Public Sub New(height As Integer, length As Integer, width As Integer)
+        Me.Height = height
+        Me.Length = length
+        Me.Width = width
     End Sub
-    Private _Height As Integer
-    Public Property Height() As Integer
+
+    Public ReadOnly Property Height() As Integer
+    Public ReadOnly Property Length() As Integer
+    Public ReadOnly Property Width() As Integer
+
+    Public ReadOnly Property Volume() As Integer
         Get
-            Return _Height
+            Return Height * Length * Width
         End Get
-        Set(ByVal value As Integer)
-            _Height = value
-        End Set
-    End Property
-    Private _Length As Integer
-    Public Property Length() As Integer
-        Get
-            Return _Length
-        End Get
-        Set(ByVal value As Integer)
-            _Length = value
-        End Set
-    End Property
-    Private _Width As Integer
-    Public Property Width() As Integer
-        Get
-            Return _Width
-        End Get
-        Set(ByVal value As Integer)
-            _Width = value
-        End Set
     End Property
 
-    Public Overloads Function Equals(ByVal other As Box) As Boolean Implements IEquatable(Of Box).Equals
-
-        If Me.Height = other.Height And Me.Length = other.Length And Me.Width = other.Width Then
-            Return True
-        Else
+    Public Overloads Function Equals(other As Box) As Boolean Implements IEquatable(Of Box).Equals
+        If other Is Nothing Then
             Return False
         End If
+
+        Return Me.Height = other.Height AndAlso Me.Length = other.Length AndAlso
+            Me.Width = other.Width
+    End Function
+
+    Public Overrides Function Equals(other As Object) As Boolean
+        Return Equals(TryCast(other, Box))
+    End Function
+
+    Public Overrides Function GetHashCode() As Integer
+        Return (Height, Length, Width).GetHashCode()
+    End Function
+
+    Public Overrides Function ToString() As String
+        Return $"{Height} x {Length} x {Width}"
     End Function
 End Class
 ' This example produces the following output:
 '  
-' Adding boxes by Dimension
-' 8 x 8 x 4 - red
-' 6 x 8 x 4 - blue
-' 4 x 8 x 8 - green
-'
-' Adding boxes by Volume
-' An item with the same key has already been added.
-' 
-' </Snippet1>
+' Found box 4 x 8 x 8 by dimension.
+' Found box 8 x 8 x 4 by volume.
