@@ -14,7 +14,7 @@ namespace tuples
 
             AssignmentStatements();
 
-            var sample = new List<double>{ 2.0, 4.0, 6.0, 8.0 };
+            var sample = new List<double> { 2.0, 4.0, 6.0, 8.0 };
 
             Console.WriteLine(StatisticsVersionOne.StandardDeviation(sample));
 
@@ -43,6 +43,69 @@ namespace tuples
 
             FunWithProjections();
 
+            // Declare different members and tuples:
+
+            SimpleTupleEquality();
+            NullableTupleEquality();
+            MemberConversions();
+            MemberNameConversions();
+
+            TupleEquality.Tests.EqualityTests();
+        }
+
+        private static void SimpleTupleEquality()
+        {
+            // <SnippetEquality>
+            var left = (a: 5, b: 10);
+            var right = (a: 5, b: 10);
+            Console.WriteLine(left == right); // displays 'true'
+            // </SnippetEquality>
+        }
+
+        private static void NullableTupleEquality()
+        {
+            // <SnippetNullableEquality>
+            var left = (a: 5, b: 10);
+            var right = (a: 5, b: 10);
+            (int a, int b)? nullableTuple = right;
+            Console.WriteLine(left == nullableTuple); // Also true
+            // </SnippetNullableEquality>
+        }
+
+        private static void MemberConversions()
+        {
+            // <SnippetMemberConversions>
+            // lifted conversions
+            var left = (a: 5, b: 10);
+            (int? a, int? b) nullableMembers = (5, 10);
+            Console.WriteLine(left == nullableMembers); // Also true
+
+            // converted type of left is (long, long)
+            (long a, long b) longTuple = (5, 10);
+            Console.WriteLine(left == longTuple); // Also true
+
+            // comparisons performed on (long, long) tuples
+            (long a, int b) longFirst = (5, 10);
+            (int a, long b) longSecond = (5, 10);
+            Console.WriteLine(longFirst == longSecond); // Also true
+            // </SnippetMemberConversions>
+        }
+
+        private static void MemberNameConversions()
+        { 
+            // <SnippetMemberNames>
+            (int a, string b) pair = (1, "Hello");
+            (int z, string y) another = (1, "Hello");
+            Console.WriteLine(pair == another); // true. Member names don't participate.
+            Console.WriteLine(pair == (z: 1, y: "Hello")); // warning: literal contains different member names
+            // </SnippetMemberNames>
+
+            //<SnippetNestedTuples>
+            (int, (int, int)) nestedTuple = (1, (2, 3));
+            Console.WriteLine(nestedTuple == (1, (2, 3)) );
+            // </SnippetNestedTuples>
+
+            // Value based equality tests (Person)
         }
 
         private static void FunWithProjections()
@@ -72,7 +135,7 @@ namespace tuples
             Console.WriteLine(projections.Item2);
             // Accessing the third field:
             Console.WriteLine(projections.Item3);
-            // There is no semantic name 'Item`.
+            // There is no semantic name 'Item1`.
 
             var pt1 = (X: 3, Y: 0);
             var pt2 = (X: 3, Y: 4);
