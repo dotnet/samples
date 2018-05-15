@@ -1,4 +1,3 @@
-Imports System
 Imports System.Collections.Generic
 Imports System.Runtime.CompilerServices
 
@@ -8,9 +7,9 @@ Public Class Example
         Dim blueBox As New Box(6, 8, 4)
         Dim greenBox As New Box(4, 8, 8)
 
-        Dim boxes = New Box() { redBox, blueBox, greenBox }
+        Dim boxes As Box() = { redBox, blueBox, greenBox }
 
-        Dim boxToFind = New Box(4, 8, 8)
+        Dim boxToFind As New Box(4, 8, 8)
 
         Dim foundByDimension = boxes.FindFirst(boxToFind)
 
