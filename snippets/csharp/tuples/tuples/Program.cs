@@ -14,7 +14,7 @@ namespace tuples
 
             AssignmentStatements();
 
-            var sample = new List<double>{ 2.0, 4.0, 6.0, 8.0 };
+            var sample = new List<double> { 2.0, 4.0, 6.0, 8.0 };
 
             Console.WriteLine(StatisticsVersionOne.StandardDeviation(sample));
 
@@ -45,20 +45,38 @@ namespace tuples
 
             // Declare different members and tuples:
 
+            SimpleTupleEquality();
+            NullableTupleEquality();
+            MemberConversions();
+            MemberNameConversions();
 
+            TupleEquality.Tests.EqualityTests();
+        }
+
+        private static void SimpleTupleEquality()
+        {
             // <SnippetEquality>
             var left = (a: 5, b: 10);
             var right = (a: 5, b: 10);
             Console.WriteLine(left == right); // displays 'true'
             // </SnippetEquality>
+        }
 
+        private static void NullableTupleEquality()
+        {
             // <SnippetNullableEquality>
+            var left = (a: 5, b: 10);
+            var right = (a: 5, b: 10);
             (int a, int b)? nullableTuple = right;
             Console.WriteLine(left == nullableTuple); // Also true
             // </SnippetNullableEquality>
+        }
 
+        private static void MemberConversions()
+        {
             // <SnippetMemberConversions>
             // lifted conversions
+            var left = (a: 5, b: 10);
             (int? a, int? b) nullableMembers = (5, 10);
             Console.WriteLine(left == nullableMembers); // Also true
 
@@ -71,7 +89,10 @@ namespace tuples
             (int a, long b) longSecond = (5, 10);
             Console.WriteLine(longFirst == longSecond); // Also true
             // </SnippetMemberConversions>
+        }
 
+        private static void MemberNameConversions()
+        { 
             // <SnippetMemberNames>
             (int a, string b) pair = (1, "Hello");
             (int z, string y) another = (1, "Hello");
