@@ -64,7 +64,7 @@ namespace TaxiFarePrediction
             PredictionModel<TaxiTrip, TaxiTripFarePrediction> model = pipeline.Train<TaxiTrip, TaxiTripFarePrediction>();
             // </Snippet4>
             // <Snippet5>
-            await model.WriteAsync(ModelPath);
+            await model.WriteAsync(_modelpath);
             return model;
             // </Snippet5>
         }
