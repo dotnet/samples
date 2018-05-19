@@ -29,8 +29,6 @@ class BaseClass : IDisposable
          //
       }
       
-      // Free any unmanaged objects here.
-      //
       disposed = true;
    }
 }

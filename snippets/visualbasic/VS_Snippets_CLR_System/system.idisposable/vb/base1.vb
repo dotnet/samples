@@ -28,8 +28,6 @@ Class BaseClass : Implements IDisposable
          '
       End If
       
-      ' Free any unmanaged objects here.
-      '
       disposed = True
    End Sub
 End Class
