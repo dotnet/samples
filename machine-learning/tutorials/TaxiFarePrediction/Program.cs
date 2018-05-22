@@ -16,7 +16,7 @@ namespace TaxiFarePrediction
         // <Snippet2>
         const string _datapath = @".\Data\taxi-fare-train.csv";
         const string _testdatapath = @".\Data\taxi-fare-test.csv";
-        const string _modelpath = @".\Models\Model.zip";
+        const string _modelpath = @".\Data\Model.zip";
         // </Snippet2>
 
         // <Snippet8>
