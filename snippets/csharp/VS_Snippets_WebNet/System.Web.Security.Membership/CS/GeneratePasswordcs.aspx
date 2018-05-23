@@ -7,13 +7,12 @@
 
 public void CreateUser_OnClick(object sender, EventArgs args)
 {
-  // Generate a new 12-character password with 1 non-alphanumeric character.
+  // Generate a new 12-character password with at least 1 non-alphanumeric character.
   string password = Membership.GeneratePassword(12, 1);
 
   try
   {
     // Create new user.
-
     MembershipUser newUser = Membership.CreateUser(UsernameTextbox.Text, password, 
                                                    EmailTextbox.Text);
 
