@@ -1,5 +1,5 @@
-﻿// <Snippet1>
-using System;
+﻿using System;
+// <Snippet1>
 using Microsoft.ML.Models;
 using Microsoft.ML.Trainers;
 using Microsoft.ML.Transforms;
@@ -14,9 +14,9 @@ namespace TaxiFarePrediction
     class Program
     {
         // <Snippet2>
-        const string DataPath = @"..\..\..\Data\taxi-fare-train.csv";
-        const string TestDataPath = @"..\..\..\Data\taxi-fare-test.csv";
-        const string ModelPath = @"..\..\..\Models\Model.zip";
+        const string _datapath = @".\Data\taxi-fare-train.csv";
+        const string _testdatapath = @".\Data\taxi-fare-test.csv";
+        const string _modelpath = @".\Data\Model.zip";
         // </Snippet2>
 
         // <Snippet8>
@@ -45,7 +45,7 @@ namespace TaxiFarePrediction
             // <Snippet3>
             var pipeline = new LearningPipeline
             {
-                new TextLoader<TaxiTrip>(DataPath, useHeader: true, separator: ","),
+                new TextLoader<TaxiTrip>(_datapath, useHeader: true, separator: ","),
                 new ColumnCopier(("fare_amount", "Label")),
                 new CategoricalOneHotVectorizer("vendor_id",
                                              "rate_code",
@@ -64,17 +64,15 @@ namespace TaxiFarePrediction
             PredictionModel<TaxiTrip, TaxiTripFarePrediction> model = pipeline.Train<TaxiTrip, TaxiTripFarePrediction>();
             // </Snippet4>
             // <Snippet5>
-            await model.WriteAsync(ModelPath);
+            await model.WriteAsync(_modelpath);
             return model;
             // </Snippet5>
         }
 
-        // <Snippet11>
         private static void Evaluate(PredictionModel<TaxiTrip, TaxiTripFarePrediction> model)
-        // </Snippet11>
         {
             // <Snippet12>
-            var testData = new TextLoader<TaxiTrip>(TestDataPath, useHeader: true, separator: ",");
+            var testData = new TextLoader<TaxiTrip>(_testdatapath, useHeader: true, separator: ",");
             // </Snippet12>
 
             // <Snippet13>

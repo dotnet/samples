@@ -1,5 +1,5 @@
-﻿// <Snippet1>
-using System;
+﻿using System;
+// <Snippet1>
 using Microsoft.ML.Models;
 using Microsoft.ML.Runtime;
 using Microsoft.ML.Runtime.Api;
@@ -15,8 +15,8 @@ namespace SentimentAnalysis
     class Program
     {
         // <Snippet2>
-        const string _dataPath = @"..\..\data\sentiment labelled sentences\imdb_labelled.txt";
-        const string _testDataPath = @"..\..\data\sentiment labelled sentences\yelp_labelled.txt";
+        const string _dataPath = @".\Data\imdb_labelled.txt";
+        const string _testDataPath = @".\Data\yelp_labelled.txt";
         // </Snippet2>
 
         static void Main(string[] args)
@@ -29,42 +29,40 @@ namespace SentimentAnalysis
             // </Snippet17>
         }
 
-        // <Snippet4>
         public static PredictionModel<SentimentData, SentimentPrediction> TrainAndPredict()
-        // </Snippet4>
         {
-            // LearningPipeline allows us to add steps in order to keep everything together 
+            // LearningPipeline allows you to add steps in order to keep everything together 
             // during the learning process.  
             // <Snippet5>
             var pipeline = new LearningPipeline();
             // </Snippet5>
 
             // The TextLoader loads a dataset with comments and corresponding postive or negative sentiment. 
-            // When you create a loader you specify the schema by passing a class to the loader containing
-            // all the column names and their types. This will be used to create the model, and train it. 
+            // When you create a loader, you specify the schema by passing a class to the loader containing
+            // all the column names and their types. This is used to create the model, and train it. 
             // <Snippet6>
             pipeline.Add(new TextLoader<SentimentData>(_dataPath, useHeader: false, separator: "tab"));
             // </Snippet6>
 
-            // TextFeaturizer is a transform that will be used to featurize an input column. 
+            // TextFeaturizer is a transform that is used to featurize an input column. 
             // This is used to format and clean the data.
             // <Snippet7>
             pipeline.Add(new TextFeaturizer("Features", "SentimentText"));
             //</Snippet7>
 
-            //add a FastTreeBinaryClassifier, the decision tree learner for this project, and 
-            //three hyperparameters to be used for tuning decision tree performance 
+            // Adds a FastTreeBinaryClassifier, the decision tree learner for this project, and 
+            // three hyperparameters to be used for tuning decision tree performance.
             // <Snippet8>
             pipeline.Add(new FastTreeBinaryClassifier() { NumLeaves = 5, NumTrees = 5, MinDocumentsInLeafs = 2 });
             // </Snippet8>
 
-            // We train our pipeline based on the dataset that has been loaded, transformed 
+            // Train the pipeline based on the dataset that has been loaded, transformed.
             // <Snippet9>
             PredictionModel<SentimentData, SentimentPrediction> model = 
                 pipeline.Train<SentimentData, SentimentPrediction>();
             // </Snippet9>
 
-            //add some comments to test the trained model's predictions
+            // Adds some comments to test the trained model's predictions.
             // <Snippet10>
             IEnumerable<SentimentData> sentiments = new[]
              {
@@ -86,7 +84,7 @@ namespace SentimentAnalysis
             };
             // </Snippet10>
 
-            // Now that we have a model, use that to predict the positive 
+            // Now that you have a model, use that to predict the positive 
             // or negative sentiment of the comment data.
             // <Snippet11>
             IEnumerable<SentimentPrediction> predictions = model.Predict(sentiments);
@@ -98,7 +96,7 @@ namespace SentimentAnalysis
             Console.WriteLine("---------------------");
             // </Snippet12>
 
-            // Build pairs of (sentiment, prediction)
+            // Builds pairs of (sentiment, prediction)
             // <Snippet13>
             var sentimentsAndPredictions = sentiments.Zip(predictions, (sentiment, prediction) => (sentiment, prediction));
             // </Snippet13>
@@ -111,33 +109,32 @@ namespace SentimentAnalysis
             Console.WriteLine();
             // </Snippet14>
 
-            //return the model we trained to use for evaluation
+            // Returns the model we trained to use for evaluation.
             // <Snippet15>
             return model;
             // </Snippet15>
         }
-        // <Snippet16>
+
         public static void Evaluate(PredictionModel<SentimentData, SentimentPrediction> model)
-        // </Snippet16>
         {
-            // Evaluate
+            // Evaluates.
             // <Snippet18>
             var testData = new TextLoader<SentimentData>(_testDataPath, useHeader: false, separator: "tab");
             // </Snippet18>
 
             // BinaryClassificationEvaluator computes the quality metrics for the PredictionModel
-            //using the specified data set.
+            // using the specified data set.
             // <Snippet19>
             var evaluator = new BinaryClassificationEvaluator();
             // </Snippet19>
 
-            // BinaryClassificationMetrics contains the overall metrics computed by binary classification evaluators
+            // BinaryClassificationMetrics contains the overall metrics computed by binary classification evaluators.
             // <Snippet20>
             BinaryClassificationMetrics metrics = evaluator.Evaluate(model, testData);
             // </Snippet20>
 
-            // The Accuracy metric gets the accuracy of a classifier which is the proportion 
-            //of correct predictions in the test set.
+            // The Accuracy metric gets the accuracy of a classifier, which is the proportion 
+            // of correct predictions in the test set.
 
             // The Auc metric gets the area under the ROC curve.
             // The area under the ROC curve is equal to the probability that the classifier ranks
@@ -147,7 +144,6 @@ namespace SentimentAnalysis
             // The F1Score metric gets the classifier's F1 score.
             // The F1 score is the harmonic mean of precision and recall:
             //  2 * precision * recall / (precision + recall).
-
 
             // <Snippet21>
             Console.WriteLine();
