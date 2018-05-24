@@ -15,8 +15,8 @@ namespace SentimentAnalysis
     class Program
     {
         // <Snippet2>
-        const string _dataPath = @".\Data\imdb_labelled.txt";
-        const string _testDataPath = @".\Data\yelp_labelled.txt";
+        const string _dataPath = @".\Data\wikipedia-detox-250-line-data.tsv";
+        const string _testDataPath = @".\Data\wikipedia-detox-250-line-test.tsv";
         // </Snippet2>
 
         static void Main(string[] args)
@@ -41,7 +41,7 @@ namespace SentimentAnalysis
             // When you create a loader, you specify the schema by passing a class to the loader containing
             // all the column names and their types. This is used to create the model, and train it. 
             // <Snippet6>
-            pipeline.Add(new TextLoader<SentimentData>(_dataPath, useHeader: false, separator: "tab"));
+            pipeline.Add(new TextLoader<SentimentData>(_dataPath, useHeader: true, separator: "tab"));
             // </Snippet6>
 
             // TextFeaturizer is a transform that is used to featurize an input column. 
@@ -65,21 +65,14 @@ namespace SentimentAnalysis
             // Adds some comments to test the trained model's predictions.
             // <Snippet10>
             IEnumerable<SentimentData> sentiments = new[]
-             {
+            {
                 new SentimentData
                 {
-                    SentimentText = "Contoso's 11 is a wonderful experience",
-                    Sentiment = 0
+                    SentimentText = "Please refrain from adding nonsense to Wikipedia."
                 },
                 new SentimentData
                 {
-                    SentimentText = "The acting in this movie is very bad",
-                    Sentiment = 0
-                },
-                new SentimentData
-                {
-                    SentimentText = "Joe versus the Volcano Coffee Company is a great film.",
-                    Sentiment = 0
+                    SentimentText = "He is the best, and the article should say that."
                 }
             };
             // </Snippet10>
@@ -119,7 +112,7 @@ namespace SentimentAnalysis
         {
             // Evaluates.
             // <Snippet18>
-            var testData = new TextLoader<SentimentData>(_testDataPath, useHeader: false, separator: "tab");
+            var testData = new TextLoader<SentimentData>(_testDataPath, useHeader: true, separator: "tab");
             // </Snippet18>
 
             // BinaryClassificationEvaluator computes the quality metrics for the PredictionModel
