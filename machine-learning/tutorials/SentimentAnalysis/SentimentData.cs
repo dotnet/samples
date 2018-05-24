@@ -7,10 +7,10 @@ namespace SentimentAnalysis
     // <Snippet2>
     public class SentimentData
     {
-        [Column(ordinal: "0")]
-        public string SentimentText;
-        [Column(ordinal: "1", name: "Label")]
+        [Column(ordinal: "0", name: "Label")]
         public float Sentiment;
+        [Column(ordinal: "1")]
+        public string SentimentText;
     }
 
     public class SentimentPrediction
