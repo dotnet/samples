@@ -6,12 +6,11 @@
 <script runat="server">
 
 Public Sub CreateUser_OnClick(sender As Object, args As EventArgs)
-  ' Create a new 12-character password with 1 non-alphanumeric character.
+  ' Generate a new 12-character password with at least 1 non-alphanumeric character.
   Dim password As String = Membership.GeneratePassword(12, 1)
 
   Try
     ' Create new user.
-
     Dim newUser As MembershipUser = Membership.CreateUser(UsernameTextbox.Text, password, _
                                                           EmailTextbox.Text)
 

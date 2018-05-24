@@ -22,13 +22,11 @@ namespace TaxiFarePrediction
         [Column(ordinal: "6")]
         public float fare_amount;
     }
-    // </Snippet2>
 
-    // <Snippet3>
     public class TaxiTripFarePrediction
     {
         [ColumnName("Score")]
         public float fare_amount;
     }
-    // </Snippet3>
+    // </Snippet2>
 }
