@@ -4,7 +4,7 @@ WORKDIR /app
 
 # copy csproj and restore as distinct layers
 
-COPY WeatherMicroservice.csproj .
+COPY WeatherMicroService.csproj .
 RUN dotnet restore
 
 # copy and build everything else
@@ -14,4 +14,4 @@ COPY . .
 # RUN dotnet restore
 RUN dotnet publish -c Release -o out
 
-ENTRYPOINT ["dotnet", "out/WeatherMicroservice.dll", "--server.urls", "http://0.0.0.0:5000"]
+ENTRYPOINT ["dotnet", "out/WeatherMicroService.dll", "--server.urls", "http://0.0.0.0:5000"]
