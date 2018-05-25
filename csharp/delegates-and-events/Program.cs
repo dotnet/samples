@@ -4,15 +4,21 @@ namespace DelegatesAndEvents
 {
     public class Program
     {
+        // <SnippetLogToConsole>
         public static void LogToConsole(string message)
         {
             Console.Error.WriteLine(message);
         }
+        // </SnippetLogToConsole>
 
         public static void Main(string[] args)
         {
+            // <SnippetConnectDelegate>
             Logger.WriteMessage += LogToConsole;
+            // </SnippetConnectDelegate>
+            // <SnippetFileLogger>
             var file = new FileLogger("log.txt");
+            // </SnippetFileLogger>
             
             Logger.LogMessage(Severity.Warning, "Console", "This is a warning message");
             
