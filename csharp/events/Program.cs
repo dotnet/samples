@@ -15,27 +15,33 @@ namespace EventSampleCode
             var lister = new FileSearcher();
             int filesFound = 0;
 
+            // <SnippetDeclareEventHandler>
             EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
             {
                 Console.WriteLine(eventArgs.FoundFile);
                 filesFound++;
-                //eventArgs.CancelRequested = true;
             };
 
             lister.FileFound += onFileFound;
+            // </SnippetDeclareEventHandler>
 
+            // <SnippetSearch>
             lister.DirectoryChanged += (sender, eventArgs) =>
             {
                 Console.Write($"Entering '{eventArgs.CurrentSearchDirectory}'.");
                 Console.WriteLine($" {eventArgs.CompletedDirs} of {eventArgs.TotalDirs} completed...");
             };
+            // </SnippetSearch>
 
             lister.Search(".", "*.dll", true);
 
+            // <SnippetRemoveHandler>
             lister.FileFound -= onFileFound;
+            // </SnippetRemoveHandler>
         }
     }
 
+    // <SnippetEventArgs>
     public class FileFoundArgs : EventArgs
     {
         public string FoundFile { get; }
@@ -46,7 +52,9 @@ namespace EventSampleCode
             FoundFile = fileName;
         }
     }
+    // </SnippetEventArg>
 
+    // <SnippetSearchDirEventArgs>
     internal struct SearchDirectoryArgs 
     {
         internal string CurrentSearchDirectory { get; }
@@ -60,16 +68,23 @@ namespace EventSampleCode
             CompletedDirs = completedDirs;
         }
     }
+    // </SnippetSearchDirEventArgs>
+
     public class FileSearcher
     {
+        // <SnippetDeclareEvent>
         public event EventHandler<FileFoundArgs> FileFound;
+        // </SnippetDeclareEvent>
+        // <SnippetDeclareSearchEvent>
         internal event EventHandler<SearchDirectoryArgs> DirectoryChanged
         {
             add { directoryChanged += value; }
             remove { directoryChanged -= value; }
         }
         private EventHandler<SearchDirectoryArgs> directoryChanged;
+        // </SnippetDeclareSearchEvent>
 
+        // <SnippetFinalImplementation>
         public void Search(string directory, string searchPattern, bool searchSubDirs = false)
         {
             if (searchSubDirs)
@@ -105,5 +120,38 @@ namespace EventSampleCode
                     break;
             }
         }
+        // </SnippetFinalImplementation>
     }
+}
+
+namespace VersionOne
+{
+    // <SnippetEventArgsV1>
+    public class FileFoundArgs : EventArgs
+    {
+        public string FoundFile { get; }
+        public bool CancelRequested { get; set; }
+
+        public FileFoundArgs(string fileName)
+        {
+            FoundFile = fileName;
+        }
+    }
+    // </SnippetEventArgV1>
+
+    // <SnippetFileSearcherV1>
+    public class FileSearcher
+    {
+        public event EventHandler<FileFoundArgs> FileFound;
+
+        public void Search(string directory, string searchPattern)
+        {
+            foreach (var file in Directory.EnumerateFiles(directory, searchPattern))
+            {
+                FileFound?.Invoke(this, new FileFoundArgs(file));
+            }
+        }
+    }
+    // </SnippetFileSearcherV1>
+
 }
