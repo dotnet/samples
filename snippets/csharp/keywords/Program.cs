@@ -12,6 +12,8 @@ namespace keywords
             GenericWhereConstraints.Examples();
             Console.WriteLine("=================    Fixed Memory Examples ======================");
             FixedKeywordExamples.Examples();
+            Console.WriteLine("=================    Iteration Keywords Examples ======================");
+            IterationKeywordsExamples.Examples();
         }
     }
 }

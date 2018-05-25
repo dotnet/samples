@@ -4,6 +4,7 @@ namespace DelegatesAndEvents
 {
     
     // Logger implementation two
+    // <SnippetSeverity>
     public enum Severity
     {
         Verbose,
@@ -13,7 +14,9 @@ namespace DelegatesAndEvents
         Error,
         Critical
     }
+    // </SnippetSeverity>
 
+    // <SnippetLoggerFinal>
     public static class Logger
     {
         public static Action<string> WriteMessage;
@@ -26,11 +29,42 @@ namespace DelegatesAndEvents
                 return;
                 
             var outputMsg = $"{DateTime.Now}\t{s}\t{component}\t{msg}";
-            // Assumes that the WriteMessage delegate must not be null:
             WriteMessage(outputMsg);
-            // Alternative invoke syntax, for when the delegate
-            // may not have any methods attached:
-            WriteMessage?.Invoke(outputMsg);
         }
     }
+    // </SnippetLoggerFinal>
+}
+
+namespace ImplementationOne
+{
+    // <SnippetFirstImplementation>
+    public static class Logger
+    {
+        public static Action<string> WriteMessage;
+
+        public static void LogMessage(string msg)
+        {
+            WriteMessage(msg);
+        }
+    }
+    // </SnippetFirstImplementation>
+
+}
+
+namespace ImplementationTwo
+{
+    using DelegatesAndEvents;
+
+    // <SnippetLoggerTwo>
+    public static class Logger
+    {
+        public static Action<string> WriteMessage;
+
+        public static void LogMessage(Severity s, string component, string msg)
+        {
+            var outputMsg = $"{DateTime.Now}\t{s}\t{component}\t{msg}";
+            WriteMessage(outputMsg);
+        }
+    }
+    // </SnippetLoggerTwo>
 }

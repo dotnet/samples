@@ -144,12 +144,15 @@ namespace keywords
     { }
     // </Snippet12>
 
-    // <Snippet13>
-    public class List<T>
+    namespace ListExample
     {
-        public void Add<U>(List<U> items) where U : T {/*...*/}
+        // <Snippet13>
+        public class List<T>
+        {
+            public void Add<U>(List<U> items) where U : T {/*...*/}
+        }
+        // </Snippet13>
     }
-    // </Snippet13>
 
     // <Snippet14>
     //Type parameter V is used as a type constraint.
