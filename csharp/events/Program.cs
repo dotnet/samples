@@ -52,7 +52,7 @@ namespace EventSampleCode
             FoundFile = fileName;
         }
     }
-    // </SnippetEventArg>
+    // </SnippetEventArgs>
 
     // <SnippetSearchDirEventArgs>
     internal struct SearchDirectoryArgs 
@@ -137,7 +137,7 @@ namespace VersionOne
             FoundFile = fileName;
         }
     }
-    // </SnippetEventArgV1>
+    // </SnippetEventArgsV1>
 
     // <SnippetFileSearcherV1>
     public class FileSearcher
