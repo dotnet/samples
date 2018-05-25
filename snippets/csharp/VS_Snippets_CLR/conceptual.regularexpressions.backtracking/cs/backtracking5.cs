@@ -8,7 +8,7 @@ public class Example
    public static void Main()
    {
       Stopwatch sw;
-      string input = "aaaaaaaaaaaaaaaaaaaa";
+      string input = "test@contoso.com";
       bool result;
       
       string pattern = @"^[0-9A-Z]([-.\w]*[0-9A-Z])?@";
