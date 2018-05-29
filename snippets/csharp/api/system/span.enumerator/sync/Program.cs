@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Threading;
+using System.Threading.Tasks;
 
 class Program
 {
@@ -10,19 +10,14 @@ class Program
         new Random(42).NextBytes(_array);
         Span<byte> span = _array;
 
-        Thread thread = new Thread(delegate ()
-        {
-           ClearContents();
-        });
-
-        thread.Start();
+        Task.Run( () => ClearContents() );
 
         EnumerateSpan(span);
     }
 
     public static void ClearContents()
     {
-        Thread.Sleep(20);
+        Task.Delay(20).Wait();
         lock (_array)
         {
            Array.Clear(_array, 0, _array.Length);
@@ -37,7 +32,7 @@ class Program
             foreach (byte element in span)
             {
                 Console.WriteLine(element);
-                Thread.Sleep(10);
+                Task.Delay(10).Wait();
             }
         }
     }
