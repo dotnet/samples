@@ -9,6 +9,8 @@ namespace keywords
         {
             ForeachWithIEnumerable();
             ForeachWithSpan();
+            WhileLoopExample();
+            DoLoopExample();
         }
 
         private static void ForeachWithIEnumerable()
@@ -35,6 +37,30 @@ namespace keywords
             }
             Console.WriteLine();
             // </Snippet2>
+        }
+
+        private static void WhileLoopExample()
+        {
+            // <Snippet3>
+            int n = 0;
+            while (n < 5)
+            {
+                Console.WriteLine(n);
+                n++;
+            }
+            // </Snippet3>
+        }
+
+        private static void DoLoopExample()
+        {
+            // <Snippet4>
+            int n = 0;
+            do 
+            {
+                Console.WriteLine(n);
+                n++;
+            } while (n < 5);
+            // </Snippet4>
         }
     }
 }
