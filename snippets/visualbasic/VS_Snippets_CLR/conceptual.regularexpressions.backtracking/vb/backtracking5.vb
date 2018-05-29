@@ -8,7 +8,7 @@ Imports System.Text.RegularExpressions
 Module Example
    Public Sub Main()
       Dim sw As Stopwatch
-      Dim input As String = "aaaaaaaaaaaaaaaaaaaa"
+      Dim input As String = "test@contoso.com"
       Dim result As Boolean
       
       Dim pattern As String = "^[0-9A-Z]([-.\w]*[0-9A-Z])?@"
