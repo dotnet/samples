@@ -1,5 +1,5 @@
 // Labels are separated by semicolons when defined on the same line.
-type Point = { x: float; y: float; z: float; }
+type Point = { X: float; Y: float; Z: float; }
 
 // You can define labels on their own line with a semicolon.
 type Customer = 
