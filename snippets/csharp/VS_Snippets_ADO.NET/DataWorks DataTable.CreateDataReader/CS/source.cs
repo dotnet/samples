@@ -5,13 +5,14 @@ using System.Data;
 
 class Program
 {
+    // <Snippet1>
     static void Main()
     {
         TestCreateDataReader(GetCustomers());
         Console.WriteLine("Press any key to continue.");
         Console.ReadKey();
     }
-    // <Snippet1>
+    
     private static void TestCreateDataReader(DataTable dt)
     {
         // Given a DataTable, retrieve a DataTableReader
