@@ -11,7 +11,7 @@ using System.Threading;
 
 //# Connections: The maximum number of connections the server will accept simultaneously.
 //Receive Size in Bytes: The buffer size used by the server for each receive operation.  
-//Address family: The address family of the socket the server will use to listen for incoming connections.  Supported values are ‘ipv4’ and ‘ipv6’.
+//Address family: The address family of the socket the server will use to listen for incoming connections.  Supported values are â€˜ipv4â€™ and â€˜ipv6â€™.
 //Local Port Number: The port the server will bind to.
 
 //Example: AsyncSocketServer.exe 500 1024 ipv4 8000
@@ -391,11 +391,12 @@ namespace AsyncSocketSample
 
             // decrement the counter keeping track of the total number of clients connected to the server
             Interlocked.Decrement(ref m_numConnectedSockets);
-            m_maxNumberAcceptedClients.Release();
-            Console.WriteLine("A client has been disconnected from the server. There are {0} clients connected to the server", m_numConnectedSockets);
-
+            
             // Free the SocketAsyncEventArg so they can be reused by another client
             m_readWritePool.Push(e);
+            
+            m_maxNumberAcceptedClients.Release();
+            Console.WriteLine("A client has been disconnected from the server. There are {0} clients connected to the server", m_numConnectedSockets);
         }
 
     }    
