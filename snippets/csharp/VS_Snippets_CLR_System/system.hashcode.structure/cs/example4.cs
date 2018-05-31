@@ -6,10 +6,7 @@ public struct Path : IEquatable<Path>
 {
     public IReadOnlyList<string> Segments { get; }
 
-    public Path(params string[] segments)
-    {
-        Segments = segments;
-    }
+    public Path(params string[] segments) => Segments = segments;
 
     public override bool Equals(object obj) => obj is Path o && Equals(o);
 
@@ -17,7 +14,6 @@ public struct Path : IEquatable<Path>
     {
         if (ReferenceEquals(Segments, other.Segments)) return true;
         if (Segments is null || other.Segments is null) return false;
-
         if (Segments.Count != other.Segments.Count) return false;
 
         for (var i = 0; i < Segments.Count; i++)
@@ -33,11 +29,8 @@ public struct Path : IEquatable<Path>
     {
         var hash = new HashCode();
 
-        if (Segments != null)
-        {
-            for (var i = 0; i < Segments.Count; i++)
-                PlatformUtils.AddPath(ref hash, Segments[i]);
-        }
+        for (var i = 0; i < Segments?.Count; i++)
+            PlatformUtils.AddPath(ref hash, Segments[i]);
 
         return hash.ToHashCode();
     }

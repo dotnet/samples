@@ -27,11 +27,9 @@ Public Structure Path
     Public Overrides Function GetHashCode() As Integer
         Dim hash As HashCode = New HashCode()
 
-        If Segments IsNot Nothing Then
-            For i As Integer = 0 To Segments.Count - 1
-                hash.Add(Segments(i))
-            Next
-        End If
+        For i As Integer = 0 To Segments?.Count - 1
+            hash.Add(Segments(i))
+        Next
 
         Return hash.ToHashCode()
     End Function
@@ -48,7 +46,7 @@ Module Program
         }
         Console.WriteLine($"Item count: {hashSet.Count}.")
     End Sub
-    
+
 End Module
 ' The example displays the following output:
 ' Item count: 2.

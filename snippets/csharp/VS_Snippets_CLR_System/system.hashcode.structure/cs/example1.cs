@@ -7,11 +7,7 @@ public struct OrderOrderLine : IEquatable<OrderOrderLine>
     public int OrderId { get; }
     public int OrderLineId { get; }
 
-    public OrderOrderLine(int orderId, int orderLineId)
-    {
-        OrderId = orderId;
-        OrderLineId = orderLineId;
-    }
+    public OrderOrderLine(int orderId, int orderLineId) => (OrderId, OrderLineId) = (orderId, orderLineId);
 
     public override bool Equals(object obj) => obj is OrderOrderLine o && Equals(o);
 
