@@ -13,7 +13,7 @@ Module Module1
         '        Dim db As New Northwnd("c:\northwnd.mdf")
         ' <Snippet1>
         ' DataContext takes a connection string.
-        Dim db As New DataContext("…\Northwnd.mdf")
+        Dim db As New DataContext("…\Northwind.mdf")
 
         ' Get a typed table to run queries.
         Dim Customers As Table(Of Customer) = db.GetTable(Of Customer)()
