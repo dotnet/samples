@@ -6,13 +6,13 @@ Imports System.Data
 
 Module Module1
 
+' <Snippet1>
   Sub Main()
     TestCreateDataReader(GetCustomers())
     Console.WriteLine("Press any key to continue.")
     Console.ReadKey()
   End Sub
 
-' <Snippet1>
   Private Sub TestCreateDataReader(ByVal dt As DataTable)
     ' Given a DataTable, retrieve a DataTableReader
     ' allowing access to all the tables's data:
