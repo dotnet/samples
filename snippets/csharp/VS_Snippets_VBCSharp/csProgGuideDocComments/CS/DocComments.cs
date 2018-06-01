@@ -477,7 +477,7 @@ namespace Wrap15
     public class TestClass : TestInterface
     {
         /// <summary>
-        /// Store for the name property.
+        /// Store for the Name property.
         /// </summary>
         private string _name = null;
 
@@ -523,7 +523,7 @@ namespace Wrap15
         /// Some other method.
         /// </summary>
         /// <returns>
-        /// Return results are described through the returns tag.
+        /// Return values are described through the returns tag.
         /// </returns>
         /// <seealso cref="SomeMethod(string)">
         /// Notice the use of the cref attribute to reference a specific method.
