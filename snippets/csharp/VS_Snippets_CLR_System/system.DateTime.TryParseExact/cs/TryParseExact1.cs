@@ -61,7 +61,7 @@ public class Example
       else
          Console.WriteLine("'{0}' is not in an acceptable format.", dateString);
            
-      // Parse a string represengting UTC.
+      // Parse a string representing UTC.
       dateString = "2008-06-11T16:11:20.0904778Z";
       if (DateTime.TryParseExact(dateString, "o", CultureInfo.InvariantCulture, 
                                      DateTimeStyles.None, out dateValue))
