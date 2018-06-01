@@ -22,7 +22,7 @@ namespace cs_test20730build
 
             // <Snippet1>
 // DataContext takes a connection string. 
-DataContext db = new DataContext(@"c:\Northwnd.mdf");
+DataContext db = new DataContext(@"c:\Northwind.mdf");
 
 // Get a typed table to run queries.
 Table<Customer> Customers = db.GetTable<Customer>();
