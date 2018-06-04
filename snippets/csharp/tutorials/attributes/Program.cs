@@ -130,6 +130,7 @@ namespace ConsoleApplication
     }
     // </AttributeGothca1>
 
+
     // <AttributeGotcha2>
     [Gotcha(new Foo(), "test")] // does not compile
     public class AttributeFail
