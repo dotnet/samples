@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 // <Snippet1>
 using Microsoft.ML.Models;
 using Microsoft.ML.Runtime;
@@ -8,6 +8,7 @@ using Microsoft.ML.Transforms;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.ML;
+using System.Threading.Tasks;
 // </Snippet1>
 
 namespace SentimentAnalysis
@@ -17,19 +18,25 @@ namespace SentimentAnalysis
         // <Snippet2>
         const string _dataPath = @".\Data\wikipedia-detox-250-line-data.tsv";
         const string _testDataPath = @".\Data\wikipedia-detox-250-line-test.tsv";
+        const string _modelpath = @".\Data\Model.zip";
         // </Snippet2>
 
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             // <Snippet3>
-            var model = TrainAndPredict();
+            var model = await Train();
             // </Snippet3>
-            // <Snippet17>
+
+            // <Snippet12>
             Evaluate(model);
+            // </Snippet12>
+            
+            // <Snippet17>
+            Predict(model);
             // </Snippet17>
         }
 
-        public static PredictionModel<SentimentData, SentimentPrediction> TrainAndPredict()
+        public static async Task<PredictionModel<SentimentData, SentimentPrediction>> Train()
         {
             // LearningPipeline allows you to add steps in order to keep everything together 
             // during the learning process.  
@@ -58,73 +65,38 @@ namespace SentimentAnalysis
 
             // Train the pipeline based on the dataset that has been loaded, transformed.
             // <Snippet9>
-            PredictionModel<SentimentData, SentimentPrediction> model = 
+            PredictionModel<SentimentData, SentimentPrediction> model =
                 pipeline.Train<SentimentData, SentimentPrediction>();
             // </Snippet9>
 
-            // Adds some comments to test the trained model's predictions.
+            // Saves the model we trained to a zip file.
             // <Snippet10>
-            IEnumerable<SentimentData> sentiments = new[]
-            {
-                new SentimentData
-                {
-                    SentimentText = "Please refrain from adding nonsense to Wikipedia."
-                },
-                new SentimentData
-                {
-                    SentimentText = "He is the best, and the article should say that."
-                }
-            };
+            await model.WriteAsync(_modelpath);
             // </Snippet10>
 
-            // Now that you have a model, use that to predict the positive 
-            // or negative sentiment of the comment data.
-            // <Snippet11>
-            IEnumerable<SentimentPrediction> predictions = model.Predict(sentiments);
-            // </Snippet11>
-
-            // <Snippet12>
-            Console.WriteLine();
-            Console.WriteLine("Sentiment Predictions");
-            Console.WriteLine("---------------------");
-            // </Snippet12>
-
-            // Builds pairs of (sentiment, prediction)
-            // <Snippet13>
-            var sentimentsAndPredictions = sentiments.Zip(predictions, (sentiment, prediction) => (sentiment, prediction));
-            // </Snippet13>
-
-            // <Snippet14>
-            foreach (var item in sentimentsAndPredictions)
-            {
-                Console.WriteLine($"Sentiment: {item.sentiment.SentimentText} | Prediction: {(item.prediction.Sentiment ? "Positive" : "Negative")}");
-            }
-            Console.WriteLine();
-            // </Snippet14>
-
             // Returns the model we trained to use for evaluation.
-            // <Snippet15>
+            // <Snippet11>
             return model;
-            // </Snippet15>
+            // </Snippet11>
         }
 
         public static void Evaluate(PredictionModel<SentimentData, SentimentPrediction> model)
         {
             // Evaluates.
-            // <Snippet18>
+            // <Snippet13>
             var testData = new TextLoader<SentimentData>(_testDataPath, useHeader: true, separator: "tab");
-            // </Snippet18>
+            // </Snippet13>
 
             // BinaryClassificationEvaluator computes the quality metrics for the PredictionModel
             // using the specified data set.
-            // <Snippet19>
+            // <Snippet14>
             var evaluator = new BinaryClassificationEvaluator();
-            // </Snippet19>
+            // </Snippet14>
 
             // BinaryClassificationMetrics contains the overall metrics computed by binary classification evaluators.
-            // <Snippet20>
+            // <Snippet15>
             BinaryClassificationMetrics metrics = evaluator.Evaluate(model, testData);
-            // </Snippet20>
+            // </Snippet15>
 
             // The Accuracy metric gets the accuracy of a classifier, which is the proportion 
             // of correct predictions in the test set.
@@ -138,14 +110,57 @@ namespace SentimentAnalysis
             // The F1 score is the harmonic mean of precision and recall:
             //  2 * precision * recall / (precision + recall).
 
-            // <Snippet21>
+            // <Snippet16>
             Console.WriteLine();
             Console.WriteLine("PredictionModel quality metrics evaluation");
             Console.WriteLine("------------------------------------------");
             Console.WriteLine($"Accuracy: {metrics.Accuracy:P2}");
             Console.WriteLine($"Auc: {metrics.Auc:P2}");
             Console.WriteLine($"F1Score: {metrics.F1Score:P2}");
+            // </Snippet16>
+        }
+
+        public static void Predict(PredictionModel<SentimentData, SentimentPrediction> model)
+        {
+            // Adds some comments to test the trained model's predictions.
+            // <Snippet18>
+            IEnumerable<SentimentData> sentiments = new[]
+            {
+                new SentimentData
+                {
+                    SentimentText = "Please refrain from adding nonsense to Wikipedia."
+                },
+                new SentimentData
+                {
+                    SentimentText = "He is the best, and the article should say that."
+                }
+            };
+            // </Snippet18>
+
+            // Use the model to predict the positive 
+            // or negative sentiment of the comment data.
+            // <Snippet19>
+            IEnumerable<SentimentPrediction> predictions = model.Predict(sentiments);
+            // </Snippet19>
+
+            // <Snippet20>
+            Console.WriteLine();
+            Console.WriteLine("Sentiment Predictions");
+            Console.WriteLine("---------------------");
+            // </Snippet20>
+
+            // Builds pairs of (sentiment, prediction)
+            // <Snippet21>
+            var sentimentsAndPredictions = sentiments.Zip(predictions, (sentiment, prediction) => (sentiment, prediction));
             // </Snippet21>
+
+            // <Snippet22>
+            foreach (var item in sentimentsAndPredictions)
+            {
+                Console.WriteLine($"Sentiment: {item.sentiment.SentimentText} | Prediction: {(item.prediction.Sentiment ? "Positive" : "Negative")}");
+            }
+            Console.WriteLine();
+            // </Snippet22>          
         }
     }
 }
