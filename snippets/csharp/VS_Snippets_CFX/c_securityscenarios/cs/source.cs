@@ -714,7 +714,7 @@ namespace SecuredUsingMessageWithWindowsClient
         {
             //<snippet18>
             // Create the binding.
-            WSHttpBinding myBinding = new WSHttpBinding();
+            NetTcpBinding myBinding = new NetTcpBinding();
             myBinding.Security.Mode = SecurityMode.Message;
             myBinding.Security.Message.ClientCredentialType =
                 MessageCredentialType.Windows;

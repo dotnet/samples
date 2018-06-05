@@ -592,7 +592,7 @@ Namespace SecuredUsingMessageWithWindowsClient
             binding.Security.Message.ClientCredentialType = MessageCredentialType.Windows
             
             ' Create the URI for the endpoint.
-            Dim netTcpUri As New Uri("net.tcp://localhost:8006/Calculator")
+            Dim netTcpUri As New Uri("net.tcp://localhost:8008/Calculator")
             
             ' Crate the service host and add an endpoint.
             Dim myServiceHost As New ServiceHost(GetType(ServiceModel.Calculator), netTcpUri)
@@ -613,12 +613,12 @@ Namespace SecuredUsingMessageWithWindowsClient
         Private Sub ClientRun() 
             '<snippet18>
             ' Create the binding.
-            Dim myBinding As New WSHttpBinding()
+            Dim myBinding As New NetTcpBinding()
             myBinding.Security.Mode = SecurityMode.Message
             myBinding.Security.Message.ClientCredentialType = MessageCredentialType.Windows
             
             ' Create the endpoint address. 
-            Dim ea As New EndpointAddress("http://localhost:90/Calculator")
+            Dim ea As New EndpointAddress("net.tcp://machineName:8008/Calculator")
             
             ' Create the client. 
             Dim cc As New CalculatorClient(myBinding, ea)
