@@ -21,7 +21,7 @@ namespace ConsoleApplication1
             // is the directory separator char. 
             // Without this, a malicious zip file could try to traverse outside of the expected
             // extraction path.
-            if (extractPath[extractPath.Length - 1] != Path.DirectorySeparatorChar)
+            if (!extractPath.EndsWith(Path.DirectorySeparatorChar))
                 extractPath += Path.DirectorySeparatorChar;
 
             using (ZipArchive archive = ZipFile.OpenRead(zipPath))
