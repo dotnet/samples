@@ -8,6 +8,7 @@ using Microsoft.ML.Transforms;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.ML;
+using Microsoft.ML.Data;
 using System.Threading.Tasks;
 // </Snippet1>
 
@@ -48,7 +49,7 @@ namespace SentimentAnalysis
             // When you create a loader, you specify the schema by passing a class to the loader containing
             // all the column names and their types. This is used to create the model, and train it. 
             // <Snippet6>
-            pipeline.Add(new TextLoader<SentimentData>(_dataPath, useHeader: true, separator: "tab"));
+            pipeline.Add(new TextLoader(_dataPath).CreateFrom<SentimentData>());
             // </Snippet6>
 
             // TextFeaturizer is a transform that is used to featurize an input column. 
@@ -84,7 +85,7 @@ namespace SentimentAnalysis
         {
             // Evaluates.
             // <Snippet13>
-            var testData = new TextLoader<SentimentData>(_testDataPath, useHeader: true, separator: "tab");
+            var testData = new TextLoader(_testDataPath).CreateFrom<SentimentData>();
             // </Snippet13>
 
             // BinaryClassificationEvaluator computes the quality metrics for the PredictionModel
