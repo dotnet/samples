@@ -1,9 +1,10 @@
 ﻿using System;
 // <Snippet1>
+using Microsoft.ML;
+using Microsoft.ML.Data;
 using Microsoft.ML.Models;
 using Microsoft.ML.Trainers;
 using Microsoft.ML.Transforms;
-using Microsoft.ML;
 // </Snippet1>
 // <Snippet9>
 using System.Threading.Tasks;
@@ -45,7 +46,7 @@ namespace TaxiFarePrediction
             // <Snippet3>
             var pipeline = new LearningPipeline
             {
-                new TextLoader<TaxiTrip>(_datapath, useHeader: true, separator: ","),
+                new TextLoader(_datapath).CreateFrom<TaxiTrip>(useHeader: true, separator: ','),
                 new ColumnCopier(("fare_amount", "Label")),
                 new CategoricalOneHotVectorizer("vendor_id",
                                              "rate_code",
@@ -72,7 +73,7 @@ namespace TaxiFarePrediction
         private static void Evaluate(PredictionModel<TaxiTrip, TaxiTripFarePrediction> model)
         {
             // <Snippet12>
-            var testData = new TextLoader<TaxiTrip>(_testdatapath, useHeader: true, separator: ",");
+            var testData = new TextLoader(_datapath).CreateFrom<TaxiTrip>(useHeader: true, separator: ',');
             // </Snippet12>
 
             // <Snippet13>
