@@ -1,9 +1,10 @@
 ﻿using System;
 // <Snippet1>
+using Microsoft.ML;
+using Microsoft.ML.Data;
 using Microsoft.ML.Models;
 using Microsoft.ML.Trainers;
 using Microsoft.ML.Transforms;
-using Microsoft.ML;
 // </Snippet1>
 // <Snippet9>
 using System.Threading.Tasks;
@@ -34,7 +35,7 @@ namespace TaxiFarePrediction
 
             // <Snippet16>
             var prediction = model.Predict(TestTrips.Trip1);
-            Console.WriteLine("Predicted fare: {0}, actual fare: 29.5", prediction.fare_amount);
+            Console.WriteLine("Predicted fare: {0}, actual fare: 29.5", prediction.FareAmount);
             // </Snippet16>
         }
 
@@ -45,17 +46,18 @@ namespace TaxiFarePrediction
             // <Snippet3>
             var pipeline = new LearningPipeline
             {
-                new TextLoader<TaxiTrip>(_datapath, useHeader: true, separator: ","),
-                new ColumnCopier(("fare_amount", "Label")),
-                new CategoricalOneHotVectorizer("vendor_id",
-                                             "rate_code",
-                                             "payment_type"),
+                new TextLoader(_datapath).CreateFrom<TaxiTrip>(separator: ','),
+                new ColumnCopier(("FareAmount", "Label")),
+                
+                new CategoricalOneHotVectorizer("VendorId",
+                    "RateCode",
+                    "PaymentType"),
                 new ColumnConcatenator("Features",
-                                                "vendor_id",
-                                                "rate_code",
-                                                "passenger_count",
-                                                "trip_distance",
-                                                "payment_type"),
+                    "VendorId",
+                    "RateCode",
+                    "PassengerCount",
+                    "TripDistance",
+                    "PaymentType"),
                 new FastTreeRegressor()
             };
             // </Snippet3>
@@ -72,7 +74,7 @@ namespace TaxiFarePrediction
         private static void Evaluate(PredictionModel<TaxiTrip, TaxiTripFarePrediction> model)
         {
             // <Snippet12>
-            var testData = new TextLoader<TaxiTrip>(_testdatapath, useHeader: true, separator: ",");
+            var testData = new TextLoader(_datapath).CreateFrom<TaxiTrip>(useHeader: true, separator: ',');
             // </Snippet12>
 
             // <Snippet13>
