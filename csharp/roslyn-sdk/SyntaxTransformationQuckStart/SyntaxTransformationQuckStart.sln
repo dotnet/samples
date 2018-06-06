@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27729.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConstructionCS", "ConstructionCS\ConstructionCS.csproj", "{6664C501-ACEC-4501-A5D3-D560330EB028}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransformationCS", "TransformationCS\TransformationCS.csproj", "{A52FC7BE-F712-4615-95E6-A8F4C723AA0D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6664C501-ACEC-4501-A5D3-D560330EB028}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6664C501-ACEC-4501-A5D3-D560330EB028}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6664C501-ACEC-4501-A5D3-D560330EB028}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6664C501-ACEC-4501-A5D3-D560330EB028}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A52FC7BE-F712-4615-95E6-A8F4C723AA0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A52FC7BE-F712-4615-95E6-A8F4C723AA0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A52FC7BE-F712-4615-95E6-A8F4C723AA0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A52FC7BE-F712-4615-95E6-A8F4C723AA0D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7D99F54E-A42E-429C-9445-22F93EC83D21}
+	EndGlobalSection
+EndGlobal
