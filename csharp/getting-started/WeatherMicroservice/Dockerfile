@@ -1,17 +1,16 @@
-FROM microsoft/dotnet:1.1-sdk-msbuild
-
+FROM microsoft/dotnet:2.1-sdk AS build
 WORKDIR /app
 
-# copy csproj and restore as distinct layers
-
-COPY WeatherMicroService.csproj .
+# Copy csproj and restore as distinct layers
+COPY *.csproj ./
 RUN dotnet restore
 
-# copy and build everything else
-
-COPY . .
-
-# RUN dotnet restore
+# Copy everything else and build
+COPY . ./
 RUN dotnet publish -c Release -o out
 
-ENTRYPOINT ["dotnet", "out/WeatherMicroService.dll", "--server.urls", "http://0.0.0.0:5000"]
+# Build runtime image
+FROM microsoft/dotnet:2.1-aspnetcore-runtime
+WORKDIR /app
+COPY --from=build /app/out .
+ENTRYPOINT ["dotnet", "WeatherMicroservice.dll"]

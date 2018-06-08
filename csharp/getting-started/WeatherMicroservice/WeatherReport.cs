@@ -5,7 +5,7 @@ namespace WeatherMicroservice
 #region WeatherReport
     public class WeatherReport
     {
-        private static readonly string[] PossibleConditions = new string[]
+        private static readonly string[] PossibleConditions =
         {
             "Sunny",
             "Mostly Sunny",
@@ -20,17 +20,17 @@ namespace WeatherMicroservice
         {
             var generator = new Random((int)(latitude + longitude) + daysInFuture);
 
-            HiTemperature = generator.Next(40, 100);
-            LoTemperature = generator.Next(0, HiTemperature);
-            AverageWindSpeed = generator.Next(0, 45);
-            Conditions = PossibleConditions[generator.Next(0, PossibleConditions.Length - 1)];
+            HighTemperatureFahrenheit = generator.Next(40, 100);
+            LowTemperatureFahrenheit = generator.Next(0, HighTemperatureFahrenheit);
+            AverageWindSpeedMph = generator.Next(0, 45);
+            Condition = PossibleConditions[generator.Next(0, PossibleConditions.Length - 1)];
         }
 #endregion
 
-        public int HiTemperature { get; }
-        public int LoTemperature { get; }
-        public int AverageWindSpeed { get; }
-        public string Conditions { get; }
+        public int HighTemperatureFahrenheit { get; }
+        public int LowTemperatureFahrenheit { get; }
+        public int AverageWindSpeedMph { get; }
+        public string Condition { get; }
     }
 #endregion
 }
