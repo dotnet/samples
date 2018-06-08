@@ -14,7 +14,7 @@ namespace ConstructionCS
     class Program
     {
         // <SnippetDeclareSampleCode>
-        private const string SampleCode = 
+        private const string sampleCode = 
 @"using System;
 using System.Collections;
 using System.Linq;
@@ -52,7 +52,7 @@ namespace HelloWorld
             // </SnippetCreateFullNamespace>
 
             // <SnippetCreateParseTree>
-            SyntaxTree tree = CSharpSyntaxTree.ParseText(SampleCode);
+            SyntaxTree tree = CSharpSyntaxTree.ParseText(sampleCode);
             var root = (CompilationUnitSyntax)tree.GetRoot();
             // </SnippetCreateParseTree>
 
