@@ -105,7 +105,7 @@ namespace RijndaelManaged_Example
                 rijAlg.Key = Key;
                 rijAlg.IV = IV;
 
-                // Create a decrytor to perform the stream transform.
+                // Create a decryptor to perform the stream transform.
                 ICryptoTransform decryptor = rijAlg.CreateDecryptor(rijAlg.Key, rijAlg.IV);
 
                 // Create the streams used for decryption.
@@ -115,7 +115,6 @@ namespace RijndaelManaged_Example
                     {
                         using (StreamReader srDecrypt = new StreamReader(csDecrypt))
                         {
-
                             // Read the decrypted bytes from the decrypting stream
                             // and place them in a string.
                             plaintext = srDecrypt.ReadToEnd();
