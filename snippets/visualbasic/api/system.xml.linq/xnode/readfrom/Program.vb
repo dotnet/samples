@@ -10,6 +10,7 @@ Module Program
         Using reader As XmlReader = XmlReader.Create(uri)
             reader.MoveToContent()
 
+            ' Parse the file and return each of the nodes.
             While Not reader.EOF
 
                 If reader.NodeType = XmlNodeType.Element AndAlso reader.Name = "Child" Then

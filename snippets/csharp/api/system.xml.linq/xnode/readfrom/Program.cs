@@ -11,7 +11,8 @@ class Program
         using (XmlReader reader = XmlReader.Create(uri))
         {
             reader.MoveToContent();
-            // Parse the file and display each of the nodes.
+            
+            // Parse the file and return each of the nodes.
             while (!reader.EOF)
             {
                 if (reader.NodeType == XmlNodeType.Element && reader.Name == "Child")
