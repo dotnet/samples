@@ -54,7 +54,7 @@ Class AesExample
             aesAlg.Key = Key
             aesAlg.IV = IV
 
-            ' Create an encrytor to perform the stream transform.
+            ' Create anencryptor to perform the stream transform.
             Dim encryptor As ICryptoTransform = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV)
             ' Create the streams used for encryption.
             Using msEncrypt As New MemoryStream()
