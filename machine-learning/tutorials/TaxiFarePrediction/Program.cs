@@ -46,7 +46,7 @@ namespace TaxiFarePrediction
             // <Snippet3>
             var pipeline = new LearningPipeline
             {
-                new TextLoader(_datapath).CreateFrom<TaxiTrip>(separator: ','),
+                new TextLoader(_datapath).CreateFrom<TaxiTrip>(useHeader: true, separator: ','),
                 new ColumnCopier(("FareAmount", "Label")),
                 new CategoricalOneHotVectorizer(
                     "VendorId",
