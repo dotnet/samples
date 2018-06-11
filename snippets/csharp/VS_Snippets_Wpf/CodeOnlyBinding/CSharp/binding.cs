@@ -26,16 +26,16 @@ namespace SDKSample
       switch(fe.Name)
       {
         case "Clear":
-        //<SnippetClearBinding>
+          //<SnippetClearBinding>
           BindingOperations.ClearBinding(myText, TextBlock.TextProperty);
-        //</SnippetClearBinding>
+          //</SnippetClearBinding>
           break;
 
         case "Refresh":
 
             BindingOperations.ClearBinding(myText, TextBlock.TextProperty);
-           //<Snippet1>
-           // Make a new source.
+            //<Snippet1>
+            // Make a new source.
             MyData myDataObject = new MyData(DateTime.Now);      
             Binding myBinding = new Binding("MyDataProperty");
             myBinding.Source = myDataObject;
