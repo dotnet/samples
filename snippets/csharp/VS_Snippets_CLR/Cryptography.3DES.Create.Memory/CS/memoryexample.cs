@@ -59,7 +59,7 @@ namespace AesManaged_Examples
                 AesManagedAlg.Key = Key;
                 AesManagedAlg.IV = IV;
 
-                // Create anencryptor to perform the stream transform.
+                // Create an encryptor to perform the stream transform.
                 ICryptoTransform encryptor = AesManagedAlg.CreateEncryptor(AesManagedAlg.Key, AesManagedAlg.IV);
 
                 // Create the streams used for encryption.

@@ -55,7 +55,7 @@ namespace TripleDESCryptoServiceProvider_Example
                 tdsAlg.Key = Key;
                 tdsAlg.IV = IV;
 
-                // Create anencryptor to perform the stream transform.
+                // Create an encryptor to perform the stream transform.
                 ICryptoTransform encryptor = tdsAlg.CreateEncryptor(tdsAlg.Key, tdsAlg.IV);
 
                 // Create the streams used for encryption.
@@ -102,7 +102,7 @@ namespace TripleDESCryptoServiceProvider_Example
                 tdsAlg.Key = Key;
                 tdsAlg.IV = IV;
 
-                // Create anencryptor to perform the stream transform.
+                // Create an encryptor to perform the stream transform.
                 ICryptoTransform decryptor = tdsAlg.CreateDecryptor(tdsAlg.Key, tdsAlg.IV);
 
                 // Create the streams used for decryption.
