@@ -46,6 +46,7 @@ Class TripleDESCryptoServiceProviderExample
             Throw New ArgumentNullException("Key")
         End If
         Dim encrypted() As Byte
+        
         ' Create an TripleDESCryptoServiceProvider object
         ' with the specified key and IV.
         Using tdsAlg As New TripleDESCryptoServiceProvider()
@@ -53,13 +54,12 @@ Class TripleDESCryptoServiceProviderExample
             tdsAlg.Key = Key
             tdsAlg.IV = IV
 
-            ' Create a decrytor to perform the stream transform.
+            ' Create an encryptor to perform the stream transform.
             Dim encryptor As ICryptoTransform = tdsAlg.CreateEncryptor(tdsAlg.Key, tdsAlg.IV)
             ' Create the streams used for encryption.
             Using msEncrypt As New MemoryStream()
                 Using csEncrypt As New CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write)
                     Using swEncrypt As New StreamWriter(csEncrypt)
-
                         'Write all data to the stream.
                         swEncrypt.Write(plainText)
                     End Using
@@ -96,7 +96,7 @@ Class TripleDESCryptoServiceProviderExample
             tdsAlg.Key = Key
             tdsAlg.IV = IV
 
-            ' Create a decrytor to perform the stream transform.
+            ' Create a decryptor to perform the stream transform.
             Dim decryptor As ICryptoTransform = tdsAlg.CreateDecryptor(tdsAlg.Key, tdsAlg.IV)
 
             ' Create the streams used for decryption.
@@ -105,7 +105,6 @@ Class TripleDESCryptoServiceProviderExample
                 Using csDecrypt As New CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read)
 
                     Using srDecrypt As New StreamReader(csDecrypt)
-
 
                         ' Read the decrypted bytes from the decrypting stream
                         ' and place them in a string.

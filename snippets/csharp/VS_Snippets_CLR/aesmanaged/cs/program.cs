@@ -48,6 +48,7 @@ namespace Aes_Example
             if (IV == null || IV.Length <= 0)
                 throw new ArgumentNullException("IV");
             byte[] encrypted;
+            
             // Create an AesManaged object
             // with the specified key and IV.
             using (AesManaged aesAlg = new AesManaged())
@@ -55,7 +56,7 @@ namespace Aes_Example
                 aesAlg.Key = Key;
                 aesAlg.IV = IV;
 
-                // Create a decrytor to perform the stream transform.
+                // Create an encryptor to perform the stream transform.
                 ICryptoTransform encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
 
                 // Create the streams used for encryption.
@@ -65,7 +66,6 @@ namespace Aes_Example
                     {
                         using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
                         {
-
                             //Write all data to the stream.
                             swEncrypt.Write(plainText);
                         }
@@ -103,7 +103,7 @@ namespace Aes_Example
                 aesAlg.Key = Key;
                 aesAlg.IV = IV;
 
-                // Create a decrytor to perform the stream transform.
+                // Create a decryptor to perform the stream transform.
                 ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
 
                 // Create the streams used for decryption.

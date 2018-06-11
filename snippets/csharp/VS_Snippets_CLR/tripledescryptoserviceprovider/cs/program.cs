@@ -47,6 +47,7 @@ namespace TripleDESCryptoServiceProvider_Example
             if (IV == null || IV.Length <= 0)
                 throw new ArgumentNullException("Key");
             byte[] encrypted;
+            
             // Create an TripleDESCryptoServiceProvider object
             // with the specified key and IV.
             using (TripleDESCryptoServiceProvider tdsAlg = new TripleDESCryptoServiceProvider())
@@ -54,7 +55,7 @@ namespace TripleDESCryptoServiceProvider_Example
                 tdsAlg.Key = Key;
                 tdsAlg.IV = IV;
 
-                // Create a decrytor to perform the stream transform.
+                // Create an encryptor to perform the stream transform.
                 ICryptoTransform encryptor = tdsAlg.CreateEncryptor(tdsAlg.Key, tdsAlg.IV);
 
                 // Create the streams used for encryption.
@@ -64,7 +65,6 @@ namespace TripleDESCryptoServiceProvider_Example
                     {
                         using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
                         {
-
                             //Write all data to the stream.
                             swEncrypt.Write(plainText);
                         }
@@ -102,7 +102,7 @@ namespace TripleDESCryptoServiceProvider_Example
                 tdsAlg.Key = Key;
                 tdsAlg.IV = IV;
 
-                // Create a decrytor to perform the stream transform.
+                // Create an encryptor to perform the stream transform.
                 ICryptoTransform decryptor = tdsAlg.CreateDecryptor(tdsAlg.Key, tdsAlg.IV);
 
                 // Create the streams used for decryption.
