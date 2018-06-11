@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+  <Child Key="01">
+    <GrandChild>aaa</GrandChild>
+  </Child>
+  <Child Key="02">
+    <GrandChild>bbb</GrandChild>
+  </Child>
+  <Child Key="03">
+    <GrandChild>ccc</GrandChild>
+  </Child>
+</Root>
