@@ -46,6 +46,7 @@ Class AesExample
             Throw New ArgumentNullException("IV")
         End If
         Dim encrypted() As Byte
+        
         ' Create an AesCryptoServiceProvider object
         ' with the specified key and IV.
         Using aesAlg As New AesCryptoServiceProvider()
@@ -53,7 +54,7 @@ Class AesExample
             aesAlg.Key = Key
             aesAlg.IV = IV
 
-            ' Create a decrytor to perform the stream transform.
+            ' Create an encryptor to perform the stream transform.
             Dim encryptor As ICryptoTransform = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV)
 
             ' Create the streams used for encryption.
@@ -97,7 +98,7 @@ Class AesExample
             aesAlg.Key = Key
             aesAlg.IV = IV
 
-            ' Create a decrytor to perform the stream transform.
+            ' Create a decryptor to perform the stream transform.
             Dim decryptor As ICryptoTransform = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV)
 
             ' Create the streams used for decryption.

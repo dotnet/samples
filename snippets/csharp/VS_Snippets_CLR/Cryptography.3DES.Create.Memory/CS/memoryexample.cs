@@ -59,7 +59,7 @@ namespace AesManaged_Examples
                 AesManagedAlg.Key = Key;
                 AesManagedAlg.IV = IV;
 
-                // Create a decrytor to perform the stream transform.
+                // Create an encryptor to perform the stream transform.
                 ICryptoTransform encryptor = AesManagedAlg.CreateEncryptor(AesManagedAlg.Key, AesManagedAlg.IV);
 
                 // Create the streams used for encryption.
@@ -69,7 +69,6 @@ namespace AesManaged_Examples
                     {
                         using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
                         {
-
                             //Write all data to the stream.
                             swEncrypt.Write(plainText);
                             retVal = msEncrypt.ToArray();
@@ -104,7 +103,7 @@ namespace AesManaged_Examples
                 AesManagedAlg.Key = Key;
                 AesManagedAlg.IV = IV;
 
-                // Create a decrytor to perform the stream transform.
+                // Create a decryptor to perform the stream transform.
                 ICryptoTransform decryptor = AesManagedAlg.CreateDecryptor(AesManagedAlg.Key, AesManagedAlg.IV);
 
                 // Create the streams used for decryption.

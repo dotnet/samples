@@ -18,9 +18,11 @@ Class MyApp
             Case "Refresh"
                 BindingOperations.ClearBinding(Me.myText, TextBlock.TextProperty)
                 '<Snippet1>
+                ' Make a new source.
                 Dim data1 As New MyData(DateTime.Now)
                 Dim binding1 As New Binding("MyDataProperty")
                 binding1.Source = data1
+                ' Bind the new data source to the myText TextBlock control's Text dependency property.
                 Me.myText.SetBinding(TextBlock.TextProperty, binding1)
                 '</Snippet1>
         End Select

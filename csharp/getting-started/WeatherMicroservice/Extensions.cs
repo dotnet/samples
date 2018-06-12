@@ -5,14 +5,13 @@ namespace WeatherMicroservice
     {
         public static double? TryParse(this string input)
         {
-            double result;
-            if (double.TryParse(input, out result))
+            if (double.TryParse(input, out var result))
             {
                 return result;
             }
             else
             {
-                return default(double?);
+                return null;
             }
         }
     }

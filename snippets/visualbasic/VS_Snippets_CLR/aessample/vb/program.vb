@@ -46,6 +46,7 @@ Class AesExample
             Throw New ArgumentNullException("IV")
         End If
         Dim encrypted() As Byte
+        
         ' Create an Aes object
         ' with the specified key and IV.
         Using aesAlg As Aes = Aes.Create()
@@ -53,13 +54,12 @@ Class AesExample
             aesAlg.Key = Key
             aesAlg.IV = IV
 
-            ' Create a decrytor to perform the stream transform.
+            ' Create an encryptor to perform the stream transform.
             Dim encryptor As ICryptoTransform = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV)
             ' Create the streams used for encryption.
             Using msEncrypt As New MemoryStream()
                 Using csEncrypt As New CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write)
                     Using swEncrypt As New StreamWriter(csEncrypt)
-
                         'Write all data to the stream.
                         swEncrypt.Write(plainText)
                     End Using
@@ -96,7 +96,7 @@ Class AesExample
             aesAlg.Key = Key
             aesAlg.IV = IV
 
-            ' Create a decrytor to perform the stream transform.
+            ' Create a decryptor to perform the stream transform.
             Dim decryptor As ICryptoTransform = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV)
 
             ' Create the streams used for decryption.

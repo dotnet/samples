@@ -89,7 +89,7 @@ class Program
         //excluding duplicates.
 
         IEnumerable<ProductA> union =
-          store1.Union(store2);
+          store1.Union(store2, new ProductComparer());
 
         foreach (var product in union)
             Console.WriteLine(product.Name + " " + product.Code);
