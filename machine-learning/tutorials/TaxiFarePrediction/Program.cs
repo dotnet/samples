@@ -34,7 +34,7 @@ namespace TaxiFarePrediction
             // </Snippet10>
 
             // <Snippet16>
-            var prediction = model.Predict(TestTrips.Trip1);
+            TaxiTripFarePrediction prediction = model.Predict(TestTrips.Trip1);
             Console.WriteLine("Predicted fare: {0}, actual fare: 29.5", prediction.FareAmount);
             // </Snippet16>
         }
@@ -46,13 +46,14 @@ namespace TaxiFarePrediction
             // <Snippet3>
             var pipeline = new LearningPipeline
             {
-                new TextLoader(_datapath).CreateFrom<TaxiTrip>(separator: ','),
+                new TextLoader(_datapath).CreateFrom<TaxiTrip>(useHeader: true, separator: ','),
                 new ColumnCopier(("FareAmount", "Label")),
-                
-                new CategoricalOneHotVectorizer("VendorId",
+                new CategoricalOneHotVectorizer(
+                    "VendorId",
                     "RateCode",
                     "PaymentType"),
-                new ColumnConcatenator("Features",
+                new ColumnConcatenator(
+                    "Features",
                     "VendorId",
                     "RateCode",
                     "PassengerCount",
@@ -74,7 +75,7 @@ namespace TaxiFarePrediction
         private static void Evaluate(PredictionModel<TaxiTrip, TaxiTripFarePrediction> model)
         {
             // <Snippet12>
-            var testData = new TextLoader(_datapath).CreateFrom<TaxiTrip>(useHeader: true, separator: ',');
+            var testData = new TextLoader(_testdatapath).CreateFrom<TaxiTrip>(useHeader: true, separator: ',');
             // </Snippet12>
 
             // <Snippet13>
@@ -83,11 +84,10 @@ namespace TaxiFarePrediction
             // </Snippet13>
 
             // <Snippet14>
-            // Rms should be around 2.795276
-            Console.WriteLine("Rms=" + metrics.Rms);
+            Console.WriteLine($"Rms = {metrics.Rms}");
             // </Snippet14>
             // <Snippet15>
-            Console.WriteLine("RSquared = " + metrics.RSquared);
+            Console.WriteLine($"RSquared = {metrics.RSquared}");
             // </Snippet15>
         }
     }
