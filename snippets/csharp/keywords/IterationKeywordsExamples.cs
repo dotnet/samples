@@ -11,6 +11,8 @@ namespace keywords
             ForeachWithSpan();
             WhileLoopExample();
             DoLoopExample();
+            TypicalForLoopExample();
+            ForLoopWithSeveralStatementsInSectionsExample();
         }
 
         private static void ForeachWithIEnumerable()
@@ -61,6 +63,38 @@ namespace keywords
                 n++;
             } while (n < 5);
             // </Snippet4>
+        }
+
+        private static void TypicalForLoopExample()
+        {
+            // <Snippet5>
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine(i);
+            }
+            // </Snippet5>
+        }
+
+        private static void ForLoopWithSeveralStatementsInSectionsExample()
+        {
+            // <Snippet6>
+            int i;
+            int j = 10;
+            for (i = 0, Console.WriteLine($"Start: i={i}, j={j}"); i < j; i++, j--, Console.WriteLine($"Step: i={i}, j={j}"))
+            {
+                // Body of the loop.
+            }
+            // </Snippet6>
+        }
+
+        private static void InfiniteForLoopExample()
+        {
+            // <Snippet7>
+            for ( ; ; )
+            {
+                // Body of the loop.
+            }
+            // </Snippet7>
         }
     }
 }

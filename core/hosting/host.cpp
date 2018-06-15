@@ -59,7 +59,7 @@ int wmain(int argc, wchar_t* argv[])
 	// at the last path delimiter (\)
 	wchar_t targetAppPath[MAX_PATH];
 	wcscpy_s(targetAppPath, targetApp);
-	size_t i = wcslen(targetAppPath - 1);
+	size_t i = wcslen(targetAppPath) - 1;
 	while (i >= 0 && targetAppPath[i] != L'\\') i--;
 	targetAppPath[i] = L'\0';
 
