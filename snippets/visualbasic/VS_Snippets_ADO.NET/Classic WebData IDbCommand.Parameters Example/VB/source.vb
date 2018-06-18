@@ -23,10 +23,9 @@ Module Module1
         command.Parameters.AddRange(params)
 
         Dim message As String = ""
-        Dim i As Integer
-        For i = 0 To command.Parameters.Count - 1
+        For i As Integer = 0 To command.Parameters.Count - 1
             message += command.Parameters(i).ToString() & ControlChars.Cr
-        Next i
+        Next 
 
         Console.WriteLine(message)
     End Sub
