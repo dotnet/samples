@@ -20,18 +20,12 @@ Module Module1
            "SELECT CustomerID, CompanyName FROM Customers " _
            & "WHERE Country = @Country AND City = @City"
         command.UpdatedRowSource = UpdateRowSource.Both
-        command.Parameters.Add(params)
-
-        Dim j As Integer
-        For j = 0 To command.Parameters.Count - 1
-            command.Parameters.Add(params(j))
-        Next j
+        command.Parameters.AddRange(params)
 
         Dim message As String = ""
-        Dim i As Integer
-        For i = 0 To command.Parameters.Count - 1
+        For i As Integer = 0 To command.Parameters.Count - 1
             message += command.Parameters(i).ToString() & ControlChars.Cr
-        Next i
+        Next 
 
         Console.WriteLine(message)
     End Sub
