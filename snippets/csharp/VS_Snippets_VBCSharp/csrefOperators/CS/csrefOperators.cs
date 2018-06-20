@@ -265,7 +265,7 @@ namespace ConsoleApplication1
     //</snippet14>
 
     //<snippet15>
-    // compile with: /unsafe
+    // compile with: -unsafe
 
     struct Point
     {

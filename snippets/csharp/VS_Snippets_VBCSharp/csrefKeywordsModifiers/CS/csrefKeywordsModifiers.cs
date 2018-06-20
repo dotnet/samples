@@ -647,7 +647,7 @@ class MainClass : Employee4
 //</snippet21>
 
     //<snippet22>
-    // compile with: /unsafe
+    // compile with: -unsafe
 
     class UnsafeTest
     {

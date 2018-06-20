@@ -2,7 +2,7 @@
 namespace Wrap1
 {
     //<Snippet1>
-    // compile with: /doc:DocFileName.xml 
+    // compile with: -doc:DocFileName.xml 
 
     /// text for class TestClass
     public class TestClass
@@ -33,7 +33,7 @@ namespace Wrap1
 namespace Wrap2
 {
     //<Snippet2>
-    // compile with: /doc:DocFileName.xml 
+    // compile with: -doc:DocFileName.xml 
 
     /// text for class TestClass
     public class TestClass
@@ -57,7 +57,7 @@ namespace Wrap2
 //-----------------------------------------------------------------------------
 //<Snippet3>
 // Save this file as CRefTest.cs
-// Compile with: csc CRefTest.cs /doc:Results.xml 
+// Compile with: csc CRefTest.cs -doc:Results.xml 
 
 namespace TestNamespace
 {
@@ -136,7 +136,7 @@ namespace TestNamespace
 
 namespace Wrap3
 {
-    // compile with: /doc:DocFileName.xml 
+    // compile with: -doc:DocFileName.xml 
 
     /// text for class TestClass
     public class TestClass
@@ -172,7 +172,7 @@ namespace Wrap3
 namespace Wrap4
 {
     //<Snippet4>
-    // compile with: /doc:DocFileName.xml 
+    // compile with: -doc:DocFileName.xml 
 
     /// Comment for class
     public class EClass : System.Exception
@@ -202,7 +202,7 @@ namespace Wrap4
 namespace Wrap5
 {
     //<Snippet5>
-    // compile with: /doc:DocFileName.xml 
+    // compile with: -doc:DocFileName.xml 
 
     /// <include file='xml_include_tag.doc' path='MyDocs/MyMembers[@name="test"]/*' />
     class Test
@@ -229,7 +229,7 @@ namespace Wrap5
 namespace Wrap6
 {
     //<Snippet6>
-    // compile with: /doc:DocFileName.xml 
+    // compile with: -doc:DocFileName.xml 
 
     /// text for class TestClass
     public class TestClass
@@ -256,7 +256,7 @@ namespace Wrap6
 namespace Wrap7
 {
     //<Snippet7>
-    // compile with: /doc:DocFileName.xml 
+    // compile with: -doc:DocFileName.xml 
 
     /// text for class TestClass
     public class TestClass
@@ -281,7 +281,7 @@ namespace Wrap7
 namespace Wrap8
 {
     //<Snippet8>
-    // compile with: /doc:DocFileName.xml 
+    // compile with: -doc:DocFileName.xml 
 
     class TestClass
     {
@@ -302,7 +302,7 @@ namespace Wrap8
 namespace Wrap9
 {
     //<Snippet9>
-    // compile with: /doc:DocFileName.xml 
+    // compile with: -doc:DocFileName.xml 
 
     /// <summary>
     /// You may have some primary information about this class.
@@ -325,7 +325,7 @@ namespace Wrap9
 namespace Wrap10
 {
     //<Snippet10>
-    // compile with: /doc:DocFileName.xml 
+    // compile with: -doc:DocFileName.xml 
 
     /// text for class TestClass
     public class TestClass
@@ -349,7 +349,7 @@ namespace Wrap10
 namespace Wrap11
 {
     //<Snippet11>
-    // compile with: /doc:DocFileName.xml 
+    // compile with: -doc:DocFileName.xml 
 
     // the following cref shows how to specify the reference, such that,
     // the compiler will resolve the reference
@@ -378,7 +378,7 @@ namespace Wrap11
 namespace Wrap12
 {
     //<Snippet12>
-    // compile with: /doc:DocFileName.xml 
+    // compile with: -doc:DocFileName.xml 
 
     /// text for class TestClass
     public class TestClass
@@ -404,7 +404,7 @@ namespace Wrap12
 namespace Wrap13
 {
     //<Snippet13>
-    // compile with: /doc:DocFileName.xml 
+    // compile with: -doc:DocFileName.xml 
 
     /// comment for class
     public class TestClass
@@ -426,7 +426,7 @@ namespace Wrap13
 namespace Wrap14
 {
     //<Snippet14>
-    // compile with: /doc:DocFileName.xml 
+    // compile with: -doc:DocFileName.xml 
 
     /// text for class Employee
     public class Employee
@@ -465,7 +465,7 @@ namespace Wrap14
 namespace Wrap15
 {
     //<Snippet15>
-    // If compiling from the command line, compile with: /doc:YourFileName.xml
+    // If compiling from the command line, compile with: -doc:YourFileName.xml
 
     /// <summary>
     /// Class level summary documentation goes here.
