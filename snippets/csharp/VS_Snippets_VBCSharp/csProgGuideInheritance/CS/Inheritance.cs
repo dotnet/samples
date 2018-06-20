@@ -39,7 +39,7 @@ class TestPaint : System.Windows.Forms.Form
 
 
 //<Snippet1>
-// compile with: csc /target:library abstractshape.cs
+// compile with: csc -target:library abstractshape.cs
 public abstract class Shape
 {
     private string name;
@@ -78,7 +78,7 @@ public abstract class Shape
 
 
 //<Snippet2>
-// compile with: csc /target:library /reference:abstractshape.dll shapes.cs
+// compile with: csc -target:library -reference:abstractshape.dll shapes.cs
 public class Square : Shape
 {
     private int side;
@@ -144,7 +144,7 @@ public class Rectangle : Shape
 
 
 //<Snippet3>
-// compile with: csc /reference:abstractshape.dll;shapes.dll shapetest.cs
+// compile with: csc -reference:abstractshape.dll;shapes.dll shapetest.cs
 class TestClass
 {
     static void Main()
@@ -490,7 +490,7 @@ public abstract class A
 namespace WrapD
 {
     //<Snippet15>
-    // compile with: /target:library
+    // compile with: -target:library
     public class D
     {
         public virtual void DoWork(int i)

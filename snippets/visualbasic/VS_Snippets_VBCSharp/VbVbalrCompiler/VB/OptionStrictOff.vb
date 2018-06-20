@@ -4,7 +4,7 @@ Option Explicit On
 
 ' <snippet48>
 ' t2.vb
-' Compile with vbc /addmodule:t1.netmodule t2.vb.
+' Compile with vbc -addmodule:t1.netmodule t2.vb.
 Option Strict Off
 
 Namespace NetmoduleTest
@@ -21,7 +21,7 @@ End Namespace
 
 ' <snippet47>
 ' t1.vb
-' Compile with vbc /target:module t1.vb.
+' Compile with vbc -target:module t1.vb.
 ' Outputs t1.netmodule.
 
 Public Class TestClass
@@ -84,7 +84,7 @@ Namespace Classdb7cfa59c315401ca59b0daf355343d6
 
     Namespace namespace36
         ' <snippet36>
-        ' compile with: /target:library
+        ' compile with: -target:library
         Module Module1
             ' valid with or without /netcf
             Declare Sub DllSub Lib "SomeLib.dll" ()

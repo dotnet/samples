@@ -1,5 +1,5 @@
 
-// compile with: /r:system.dll /r:system.windows.forms.dll
+// compile with: -r:system.dll -r:system.windows.forms.dll
 using System.Windows.Forms;
 using System;
 
