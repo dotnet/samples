@@ -1,15 +1,15 @@
-using System;
 // <Snippet1>
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.ML;
+using Microsoft.ML.Data;
 using Microsoft.ML.Models;
-using Microsoft.ML.Runtime;
 using Microsoft.ML.Runtime.Api;
 using Microsoft.ML.Trainers;
 using Microsoft.ML.Transforms;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.ML;
-using Microsoft.ML.Data;
-using System.Threading.Tasks;
 // </Snippet1>
 
 namespace SentimentAnalysis
@@ -17,9 +17,9 @@ namespace SentimentAnalysis
     class Program
     {
         // <Snippet2>
-        const string _dataPath = @".\Data\wikipedia-detox-250-line-data.tsv";
-        const string _testDataPath = @".\Data\wikipedia-detox-250-line-test.tsv";
-        const string _modelpath = @".\Data\Model.zip";
+        static readonly string _dataPath = Path.Combine(Environment.CurrentDirectory, "Data", "wikipedia-detox-250-line-data.tsv");
+        static readonly string _testDataPath = Path.Combine(Environment.CurrentDirectory, "Data", "wikipedia-detox-250-line-test.tsv");
+        static readonly string _modelpath = Path.Combine(Environment.CurrentDirectory, "Data", "Model.zip");
         // </Snippet2>
 
         static async Task Main(string[] args)
