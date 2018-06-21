@@ -14,6 +14,8 @@ namespace keywords
             FixedKeywordExamples.Examples();
             Console.WriteLine("=================    Iteration Keywords Examples ======================");
             IterationKeywordsExamples.Examples();
+            Console.WriteLine("=================    readonly Keyword Examples ======================");
+            ReadonlyKeywordExamples.Examples();
         }
     }
 }
