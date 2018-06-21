@@ -4,7 +4,7 @@ using System.Text;
 
 namespace keywords
 {
-    // <SnippetReadonlyField
+    // <SnippetReadonlyField>
     class Age
     {
         readonly int year;
@@ -79,7 +79,7 @@ namespace keywords
         // <SnippetReadonlyReturn>
         private static readonly Point origin = new Point(0, 0);
         public static ref readonly Point Origin => ref origin;
-        // </SnippetReaodnlyReturn>
+        // </SnippetReadonlyReturn>
 
         private static void ReadonlyRefReturns()
         {
