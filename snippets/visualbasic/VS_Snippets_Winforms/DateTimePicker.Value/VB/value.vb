@@ -1,5 +1,5 @@
 
-' compile with: /r:system.dll /r:system.windows.forms.dll
+' compile with: -r:system.dll -r:system.windows.forms.dll
 Imports System.Windows.Forms
 Imports System
 
