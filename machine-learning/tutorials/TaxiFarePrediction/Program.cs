@@ -1,4 +1,7 @@
-﻿using System;
+﻿// <Snippet17>
+using System;
+using System.IO;
+// </Snippet17>
 // <Snippet1>
 using Microsoft.ML;
 using Microsoft.ML.Data;
@@ -15,9 +18,9 @@ namespace TaxiFarePrediction
     class Program
     {
         // <Snippet2>
-        const string _datapath = @".\Data\taxi-fare-train.csv";
-        const string _testdatapath = @".\Data\taxi-fare-test.csv";
-        const string _modelpath = @".\Data\Model.zip";
+        static readonly string _datapath = Path.Combine(Environment.CurrentDirectory, "Data", "taxi-fare-train.csv");
+        static readonly string _testdatapath = Path.Combine(Environment.CurrentDirectory, "Data", "taxi-fare-test.csv");
+        static readonly string _modelpath = Path.Combine(Environment.CurrentDirectory, "Data", "Model.zip");
         // </Snippet2>
 
         // <Snippet8>
