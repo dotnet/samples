@@ -9,9 +9,4 @@ public class Example
    }
 }
 // The example displays the following output:
-//      9.0%
-//      '9'
-//      \9\
-//
-//      9.0%
-//      \9\
+//      123.8K
