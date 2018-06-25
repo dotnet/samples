@@ -182,7 +182,7 @@ namespace csrefKeywordsModifiers
     //<snippet5>       
     public class ConstTest 
     {
-        class SampleClass 
+        class SampleClass
         {
             public int x;
             public int y;
@@ -196,19 +196,19 @@ namespace csrefKeywordsModifiers
             }
         }
 
-        static void Main() 
+        static void Main()
         {
-            SampleClass mC = new SampleClass(11, 22);   
+            SampleClass mC = new SampleClass(11, 22);
             Console.WriteLine("x = {0}, y = {1}", mC.x, mC.y);
             Console.WriteLine("c1 = {0}, c2 = {1}", 
-                              SampleClass.c1, SampleClass.c2 );
+                              SampleClass.c1, SampleClass.c2);
         }
     }
     /* Output
         x = 11, y = 22
         c1 = 5, c2 = 10
-     */
-     //</snippet5>
+    */
+    //</snippet5>
 
     //<snippet6>
     public class SealedTest
