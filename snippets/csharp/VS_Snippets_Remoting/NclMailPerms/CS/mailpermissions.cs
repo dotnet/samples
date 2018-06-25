@@ -7,7 +7,7 @@ using System.Net.Mail;
 using System.Net.Mime;
 
 
-namespace Examples.SmptExamples.Permissions
+namespace Examples.SmtpExamples.Permissions
 {
 
     public class Test

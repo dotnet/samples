@@ -8,7 +8,7 @@ Imports System.Net.Mail
 Imports System.Net.Mime
 Imports System.Threading
 Imports System.ComponentModel
-Namespace Examples.SmptExamples.Async
+Namespace Examples.SmtpExamples.Async
     Public Class SimpleAsynchronousExample
         Private Shared mailSent As Boolean = False
         Private Shared Sub SendCompletedCallback(ByVal sender As Object, ByVal e As AsyncCompletedEventArgs)
