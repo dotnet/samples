@@ -8,7 +8,7 @@ using System.Net.Mail;
 using System.Net.Mime;
 using System.Threading;
 using System.ComponentModel;
-namespace Examples.SmptExamples.Async
+namespace Examples.SmtpExamples.Async
 {
     public class SimpleAsynchronousExample
     {
