@@ -8,7 +8,7 @@ using System.Collections;
 using System.Collections.Specialized;
 using System.IO;
 using System.Text;
-namespace Examples.SmptExamples.Sync
+namespace Examples.SmtpExamples.Sync
 {
 
 	public class CtorExamples
