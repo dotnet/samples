@@ -19,24 +19,24 @@ Module Example
    
    Private Sub InstantiateStringBuilder()
       ' <Snippet1>
-      Dim MyStringBuilder As New StringBuilder("Hello World!")
+      Dim myStringBuilder As New StringBuilder("Hello World!")
       ' </Snippet1>
    End Sub
    
    Private Sub InstantiateWithCapacity()
       ' <Snippet2>
-      Dim MyStringBuilder As New StringBuilder("Hello World!", 25) 
+      Dim myStringBuilder As New StringBuilder("Hello World!", 25) 
       ' </Snippet2>
       ' <Snippet3>
-      MyStringBuilder.Capacity = 25
+      myStringBuilder.Capacity = 25
       ' </Snippet3>
    End Sub
    
    Private Sub Appending()
       ' <Snippet4>
-      Dim MyStringBuilder As New StringBuilder("Hello World!")
-      MyStringBuilder.Append(" What a beautiful day.")
-      Console.WriteLine(MyStringBuilder)
+      Dim myStringBuilder As New StringBuilder("Hello World!")
+      myStringBuilder.Append(" What a beautiful day.")
+      Console.WriteLine(myStringBuilder)
       ' The example displays the following output:
       '       Hello World! What a beautiful day.
       ' </Snippet4>
@@ -45,9 +45,9 @@ Module Example
    Private Sub AppendingFormat()
       ' <Snippet5>
       Dim MyInt As Integer = 25
-      Dim MyStringBuilder As New StringBuilder("Your total is ")
-      MyStringBuilder.AppendFormat("{0:C} ", MyInt)
-      Console.WriteLine(MyStringBuilder)
+      Dim myStringBuilder As New StringBuilder("Your total is ")
+      myStringBuilder.AppendFormat("{0:C} ", MyInt)
+      Console.WriteLine(myStringBuilder)
       ' The example displays the following output:
       '     Your total is $25.00  
       ' </Snippet5>
@@ -55,9 +55,9 @@ Module Example
 
    Private Sub Inserting()
       ' <Snippet6>
-      Dim MyStringBuilder As New StringBuilder("Hello World!")
-      MyStringBuilder.Insert(6, "Beautiful ")
-      Console.WriteLine(MyStringBuilder)
+      Dim myStringBuilder As New StringBuilder("Hello World!")
+      myStringBuilder.Insert(6, "Beautiful ")
+      Console.WriteLine(myStringBuilder)
       ' The example displays the following output:
       '      Hello Beautiful World!
       ' </Snippet6>
@@ -65,9 +65,9 @@ Module Example
 
    Private Sub Removing()
       ' <Snippet7>
-      Dim MyStringBuilder As New StringBuilder("Hello World!")
-      MyStringBuilder.Remove(5, 7)
-      Console.WriteLine(MyStringBuilder)
+      Dim myStringBuilder As New StringBuilder("Hello World!")
+      myStringBuilder.Remove(5, 7)
+      Console.WriteLine(myStringBuilder)
       ' The example displays the following output:
       '       Hello
       ' </Snippet7>
@@ -75,9 +75,9 @@ Module Example
    
    Private Sub Replacing()
       ' <Snippet8>
-      Dim MyStringBuilder As New StringBuilder("Hello World!")
-      MyStringBuilder.Replace("!"c, "?"c)
-      Console.WriteLine(MyStringBuilder)
+      Dim myStringBuilder As New StringBuilder("Hello World!")
+      myStringBuilder.Replace("!"c, "?"c)
+      Console.WriteLine(myStringBuilder)
       ' The example displays the following output:
       '       Hello World?
       ' </Snippet8>
