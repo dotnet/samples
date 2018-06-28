@@ -22,26 +22,26 @@ private:
     static void InstantiateStringBuilder()
     {
         // <Snippet1>
-        StringBuilder^ MyStringBuilder = gcnew StringBuilder("Hello World!");
+        StringBuilder^ myStringBuilder = gcnew StringBuilder("Hello World!");
         // </Snippet1>
     }
 
     static void InstantiateWithCapacity()
     {
         // <Snippet2>
-        StringBuilder^ MyStringBuilder = gcnew StringBuilder("Hello World!", 25);
+        StringBuilder^ myStringBuilder = gcnew StringBuilder("Hello World!", 25);
         // </Snippet2>
         // <Snippet3>
-        MyStringBuilder->Capacity = 25;
+        myStringBuilder->Capacity = 25;
         // </Snippet3>
     }
 
     static void Appending()
     {
         // <Snippet4>
-        StringBuilder^ MyStringBuilder = gcnew StringBuilder("Hello World!");
-        MyStringBuilder->Append(" What a beautiful day.");
-        Console::WriteLine(MyStringBuilder);
+        StringBuilder^ myStringBuilder = gcnew StringBuilder("Hello World!");
+        myStringBuilder->Append(" What a beautiful day.");
+        Console::WriteLine(myStringBuilder);
         // The example displays the following output:
         //       Hello World! What a beautiful day.
         // </Snippet4>
@@ -51,9 +51,9 @@ private:
     {
         // <Snippet5>
         int MyInt = 25;
-        StringBuilder^ MyStringBuilder = gcnew StringBuilder("Your total is ");
-        MyStringBuilder->AppendFormat("{0:C} ", MyInt);
-        Console::WriteLine(MyStringBuilder);
+        StringBuilder^ myStringBuilder = gcnew StringBuilder("Your total is ");
+        myStringBuilder->AppendFormat("{0:C} ", MyInt);
+        Console::WriteLine(myStringBuilder);
         // The example displays the following output:
         //       Your total is $25.00
         // </Snippet5>
@@ -62,9 +62,9 @@ private:
     static void Inserting()
     {
         // <Snippet6>
-        StringBuilder^ MyStringBuilder = gcnew StringBuilder("Hello World!");
-        MyStringBuilder->Insert(6,"Beautiful ");
-        Console::WriteLine(MyStringBuilder);
+        StringBuilder^ myStringBuilder = gcnew StringBuilder("Hello World!");
+        myStringBuilder->Insert(6,"Beautiful ");
+        Console::WriteLine(myStringBuilder);
         // The example displays the following output:
         //       Hello Beautiful World!
         // </Snippet6>
@@ -73,9 +73,9 @@ private:
     static void Removing()
     {
         // <Snippet7>
-        StringBuilder^ MyStringBuilder = gcnew StringBuilder("Hello World!");
-        MyStringBuilder->Remove(5,7);
-        Console::WriteLine(MyStringBuilder);
+        StringBuilder^ myStringBuilder = gcnew StringBuilder("Hello World!");
+        myStringBuilder->Remove(5,7);
+        Console::WriteLine(myStringBuilder);
         // The example displays the following output:
         //       Hello
         // </Snippet7>
@@ -84,9 +84,9 @@ private:
     static void Replacing()
     {
         // <Snippet8>
-        StringBuilder^ MyStringBuilder = gcnew StringBuilder("Hello World!");
-        MyStringBuilder->Replace('!', '?');
-        Console::WriteLine(MyStringBuilder);
+        StringBuilder^ myStringBuilder = gcnew StringBuilder("Hello World!");
+        myStringBuilder->Replace('!', '?');
+        Console::WriteLine(myStringBuilder);
         // The example displays the following output:
         //       Hello World?
         // </Snippet8>

@@ -20,26 +20,26 @@ public class Example
    private static void InstantiateStringBuilder()
    {
       // <Snippet1>
-      StringBuilder MyStringBuilder = new StringBuilder("Hello World!");
+      StringBuilder myStringBuilder = new StringBuilder("Hello World!");
       // </Snippet1>
    }
 
    private static void InstantiateWithCapacity()
    {
       // <Snippet2>
-      StringBuilder MyStringBuilder = new StringBuilder("Hello World!", 25);  
+      StringBuilder myStringBuilder = new StringBuilder("Hello World!", 25);  
       // </Snippet2>
       // <Snippet3>
-      MyStringBuilder.Capacity = 25;
+      myStringBuilder.Capacity = 25;
       // </Snippet3>
    }
 
    private static void Appending()
    {
       // <Snippet4>
-      StringBuilder MyStringBuilder = new StringBuilder("Hello World!");
-      MyStringBuilder.Append(" What a beautiful day.");
-      Console.WriteLine(MyStringBuilder);
+      StringBuilder myStringBuilder = new StringBuilder("Hello World!");
+      myStringBuilder.Append(" What a beautiful day.");
+      Console.WriteLine(myStringBuilder);
       // The example displays the following output:
       //       Hello World! What a beautiful day.
       // </Snippet4>
@@ -49,9 +49,9 @@ public class Example
    {
       // <Snippet5>
       int MyInt = 25; 
-      StringBuilder MyStringBuilder = new StringBuilder("Your total is ");
-      MyStringBuilder.AppendFormat("{0:C} ", MyInt);
-      Console.WriteLine(MyStringBuilder);
+      StringBuilder myStringBuilder = new StringBuilder("Your total is ");
+      myStringBuilder.AppendFormat("{0:C} ", MyInt);
+      Console.WriteLine(myStringBuilder);
       // The example displays the following output:
       //       Your total is $25.00      
       // </Snippet5>
@@ -60,9 +60,9 @@ public class Example
    private static void Inserting()
    {
       // <Snippet6>
-      StringBuilder MyStringBuilder = new StringBuilder("Hello World!");
-      MyStringBuilder.Insert(6,"Beautiful ");
-      Console.WriteLine(MyStringBuilder);
+      StringBuilder myStringBuilder = new StringBuilder("Hello World!");
+      myStringBuilder.Insert(6,"Beautiful ");
+      Console.WriteLine(myStringBuilder);
       // The example displays the following output:
       //       Hello Beautiful World!
       // </Snippet6>
@@ -71,9 +71,9 @@ public class Example
    private static void Removing()
    {
       // <Snippet7>
-      StringBuilder MyStringBuilder = new StringBuilder("Hello World!");
-      MyStringBuilder.Remove(5,7);
-      Console.WriteLine(MyStringBuilder);
+      StringBuilder myStringBuilder = new StringBuilder("Hello World!");
+      myStringBuilder.Remove(5,7);
+      Console.WriteLine(myStringBuilder);
       // The example displays the following output:
       //       Hello
       // </Snippet7>
@@ -82,9 +82,9 @@ public class Example
    private static void Replacing()
    {
       // <Snippet8>
-      StringBuilder MyStringBuilder = new StringBuilder("Hello World!");
-      MyStringBuilder.Replace('!', '?');
-      Console.WriteLine(MyStringBuilder);
+      StringBuilder myStringBuilder = new StringBuilder("Hello World!");
+      myStringBuilder.Replace('!', '?');
+      Console.WriteLine(myStringBuilder);
       // The example displays the following output:
       //       Hello World?
       // </Snippet8>
