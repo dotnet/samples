@@ -48,10 +48,16 @@ namespace keywords
             Span<int> storage = stackalloc int[10];
             int num = 0;
             foreach (ref int item in storage)
+            {
                 item = num++;
+            }
 
             foreach (ref readonly var item in storage)
-                Console.WriteLine(item);
+            {
+                Console.Write($"{item} ");
+            }
+            // Output:
+            // 0 1 2 3 4 5 6 7 8 9
             // </SnippetRefSpan>
 
         }
