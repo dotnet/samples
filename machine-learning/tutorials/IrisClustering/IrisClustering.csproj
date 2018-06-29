@@ -19,7 +19,7 @@
 
   <ItemGroup>
     <None Update="Data\iris.data">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
