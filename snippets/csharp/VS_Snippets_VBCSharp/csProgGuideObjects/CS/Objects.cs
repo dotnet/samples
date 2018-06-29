@@ -1805,6 +1805,8 @@ namespace RainyDay
         ReferenceEquals(strA, strB) = True
         strA = "Goodbye world!" strB = "Hello world!"
         After strA changes, ReferenceEquals(strA, strB) = False
+        ReferenceEquals(stringC, strB) = False
+        stringC == strB = True
     */
 
     //</Snippet90>  
