@@ -9,6 +9,7 @@ namespace keywords
         {
             ForeachWithIEnumerable();
             ForeachWithSpan();
+            ForeachWithRefSpan();
             WhileLoopExample();
             DoLoopExample();
             TypicalForLoopExample();
@@ -39,6 +40,20 @@ namespace keywords
             }
             Console.WriteLine();
             // </Snippet2>
+        }
+
+        private static void ForeachWithRefSpan()
+        {
+            // <SnippetRefSpan>
+            Span<int> storage = stackalloc int[10];
+            int num = 0;
+            foreach (ref int item in storage)
+                item = num++;
+
+            foreach (ref readonly var item in storage)
+                Console.WriteLine(item);
+            // </SnippetRefSpan>
+
         }
 
         private static void WhileLoopExample()
