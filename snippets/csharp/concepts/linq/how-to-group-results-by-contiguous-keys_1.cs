@@ -248,7 +248,7 @@ namespace ChunkIt
             // foreach loop is required to access the elements in each "chunk".
             foreach (var item in query)
             {
-                Console.WriteLine("Group key = {0}", item.Key);
+                Console.WriteLine($"Group key = {item.Key}");
                 foreach (var inner in item)
                 {
                     Console.WriteLine($"\t{inner.Value}");
