@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using System;
+using System.Net.Http;
 
 namespace NewStyle
 {
@@ -7,15 +8,21 @@ namespace NewStyle
     {
         // <ExceptionFilter>
         public static async Task<string> MakeRequest()
-        { 
-            var client = new System.Net.Http.HttpClient();
-            var streamTask = client.GetStringAsync("https://localHost:10000");
-            try {
-                var responseText = await streamTask;
-                return responseText;
-            } catch (System.Net.Http.HttpRequestException e) when (e.Message.Contains("301"))
+        {
+            WebRequestHandler webRequestHandler = new WebRequestHandler();
+            webRequestHandler.AllowAutoRedirect = false;
+            using (HttpClient client = new HttpClient(webRequestHandler))
             {
-                return "Site Moved";
+                var stringTask = client.GetStringAsync("https://docs.microsoft.com/en-us/dotnet/about/");
+                try
+                {
+                    var responseText = await stringTask;
+                    return responseText;
+                }
+                catch (System.Net.Http.HttpRequestException e) when (e.Message.Contains("301"))
+                {
+                    return "Site Moved";
+                }
             }
         }
         // </ExceptionFilter>
