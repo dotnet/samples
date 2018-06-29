@@ -15,7 +15,7 @@
                 Console.WriteLine($"Key: {studentGroup.Key * 10}"); 
                 foreach (var item in studentGroup)
                 {
-                    Console.WriteLine("\t{item.LastName}, {item.FirstName}");
+                    Console.WriteLine($"\t{item.LastName}, {item.FirstName}");
                 }
             }            
         }

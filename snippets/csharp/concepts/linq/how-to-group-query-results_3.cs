@@ -12,7 +12,7 @@
                 // Nested foreach is required to access group items.
                 foreach (var student in studentGroup)
                 {
-                    Console.WriteLine("\t{student.LastName}, {student.FirstName}");
+                    Console.WriteLine($"\t{student.LastName}, {student.FirstName}");
                 }
             }           
         }
