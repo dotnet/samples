@@ -19,7 +19,7 @@
                     Console.WriteLine($"\tNames that begin with: {innerGroup.Key}");
                     foreach (var innerGroupElement in innerGroup)
                     {
-                        Console.WriteLine("\t\t{innerGroupElement.LastName} {innerGroupElement.FirstName}");
+                        Console.WriteLine($"\t\t{innerGroupElement.LastName} {innerGroupElement.FirstName}");
                     }
                 }
             }

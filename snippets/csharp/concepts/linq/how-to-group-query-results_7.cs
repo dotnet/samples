@@ -1,6 +1,5 @@
         public void GroupByCompositeKey()
         {
-
             var queryHighScoreGroups =
                 from student in students
                 group student by new { FirstLetter = student.LastName[0], 
@@ -12,13 +11,14 @@
             foreach (var scoreGroup in queryHighScoreGroups)
             {
                 string s = scoreGroup.Key.Score == true ? "more than" : "less than";
-                ($"Name starts with {scoreGroup.Key.FirstLetter} who scored {s} 85");
+                Console.WriteLine($"Name starts with {scoreGroup.Key.FirstLetter} who scored {s} 85");
                 foreach (var item in scoreGroup)
                 {
                     Console.WriteLine($"\t{item.FirstName} {item.LastName}");
                 }
             }
         }
+        
         /* Output:
             Group and order by a compound key:
             Name starts with A who scored more than 85
