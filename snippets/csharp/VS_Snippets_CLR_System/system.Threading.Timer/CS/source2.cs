@@ -1,22 +1,45 @@
 // <snippet2>
 using System;
 using System.Threading;
+using System.Threading.Tasks;
 
-public class Example
+class Program
 {
-    private static Timer ticker;
+    private static Timer timer;
 
-    public static void TimerMethod(object state)
+    static void Main(string[] args)
     {
-        Console.Write(".");
+        var timerState = new TimerState
+        {
+            Counter = 1,
+        };
+
+        timer = new Timer(
+            callback: new TimerCallback(TimerTask),
+            state: timerState,
+            dueTime: 1000,
+            period: 1000);
+
+        while (timerState.Counter < 10)
+        {
+            Task.Delay(1000).Wait();
+        }
+
+        timer.Dispose();
+        Console.WriteLine($"{DateTime.Now:HH:mm:ss.fff}: done.");
     }
 
-    public static void Main()
+    private static void TimerTask(object timerState)
     {
-        ticker = new Timer(TimerMethod, null, 1000, 1000);
+        Console.WriteLine($"{DateTime.Now:HH:mm:ss.fff}: starting a new callback.");
 
-        Console.WriteLine("Press the Enter key to end the program.");
-        Console.ReadLine();
+        var state = timerState as TimerState;
+        Interlocked.Increment(ref state.Counter);
+    }
+
+    class TimerState
+    {
+        public int Counter;
     }
 }
 // </snippet2>
