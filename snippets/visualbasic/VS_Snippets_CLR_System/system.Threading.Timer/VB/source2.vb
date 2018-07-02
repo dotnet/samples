@@ -8,11 +8,11 @@ Module Program
     Sub Main(args As String())
 
         Dim StateObj As New TimerState
-        StateObj.Counter = 1
+        StateObj.Counter = 0
 
-        Timer = New Timer(New TimerCallback(AddressOf TimerTask), StateObj, 1000, 1000)
+        Timer = New Timer(New TimerCallback(AddressOf TimerTask), StateObj, 1000, 2000)
 
-        While StateObj.Counter < 10
+        While StateObj.Counter <= 10
             Task.Delay(1000).Wait()
         End While
 

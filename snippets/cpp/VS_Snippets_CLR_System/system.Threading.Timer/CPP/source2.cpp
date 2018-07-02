@@ -26,10 +26,10 @@ public:
 	{
 		TimerCallback^ tcb = gcnew TimerCallback(&TimerTask);
 		TimerState^ state = gcnew TimerState();
-		state->counter = 1;
-		timer = gcnew Timer(tcb, state, 1000, 1000);
+		state->counter = 0;
+		timer = gcnew Timer(tcb, state, 1000, 2000);
 
-		while (state->counter < 10)
+		while (state->counter <= 10)
 		{
 			Thread::Sleep(1000);
 		}
