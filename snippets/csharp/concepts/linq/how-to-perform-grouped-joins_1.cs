@@ -40,10 +40,10 @@
             foreach (var v in query)
             {
                 // Output the owner's name.
-                Console.WriteLine("{0}:", v.OwnerName);
+                Console.WriteLine($"{v.OwnerName}:");
                 // Output each of the owner's pet's names.
                 foreach (Pet pet in v.Pets)
-                    Console.WriteLine("  {0}", pet.Name);
+                    Console.WriteLine($"  {pet.Name}");
             }
         }
 
