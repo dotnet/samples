@@ -17,9 +17,9 @@ namespace UriTemplateTableSnippets
             Uri prefix = new Uri("http://localhost/");
 
             //Create a series of templates
-            UriTemplate weatherByCity  = new UriTemplate("weather/ state}/ city}");
-            UriTemplate weatherByCountry = new UriTemplate("weather/ country}/ village}");       
-            UriTemplate weatherByState = new UriTemplate("weather/ state}");
+            UriTemplate weatherByCity  = new UriTemplate("weather/{state}/{city}");
+            UriTemplate weatherByCountry = new UriTemplate("weather/{country}/{village}");       
+            UriTemplate weatherByState = new UriTemplate("weather/{state}");
             UriTemplate traffic = new UriTemplate("traffic/*");
             UriTemplate wildcard = new UriTemplate("*");
 
@@ -37,7 +37,7 @@ namespace UriTemplateTableSnippets
             Console.WriteLine("KeyValuePairs:");
             foreach (KeyValuePair<UriTemplate, Object> keyPair in table.KeyValuePairs)
             {
-                Console.WriteLine("     0},  1}", keyPair.Key, keyPair.Value);
+                Console.WriteLine($"{keyPair.Key}, {keyPair.Value}");
             }
 
             Console.WriteLine();
@@ -52,7 +52,7 @@ namespace UriTemplateTableSnippets
                 Console.WriteLine("Matching templates:");
                 foreach (UriTemplateMatch match in results)
                 {
-                    Console.WriteLine("    0}", match.Template);
+                    Console.WriteLine(match.Template);
                 }
             }
             // </Snippet0>
