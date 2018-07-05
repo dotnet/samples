@@ -8,8 +8,8 @@ namespace keywords
         public static void Examples()
         {
             ForeachWithIEnumerable();
-            ForeachWithSpan();
-            ForeachWithRefSpan();
+            IterateSpanExample.Main();
+            ForeachRefExample.Main();
             WhileLoopExample();
             DoLoopExample();
             TypicalForLoopExample();
@@ -28,38 +28,6 @@ namespace keywords
             }
             Console.WriteLine($"Number of elements: {count}");
             // </Snippet1>
-        }
-
-        private static void ForeachWithSpan()
-        {
-            // <Snippet2>
-            Span<int> numbers = new int[] { 3, 14, 15, 92, 6 };
-            foreach (int number in numbers)
-            {
-                Console.Write($"{number} ");
-            }
-            Console.WriteLine();
-            // </Snippet2>
-        }
-
-        private static void ForeachWithRefSpan()
-        {
-            // <SnippetRefSpan>
-            Span<int> storage = stackalloc int[10];
-            int num = 0;
-            foreach (ref int item in storage)
-            {
-                item = num++;
-            }
-
-            foreach (ref readonly var item in storage)
-            {
-                Console.Write($"{item} ");
-            }
-            // Output:
-            // 0 1 2 3 4 5 6 7 8 9
-            // </SnippetRefSpan>
-
         }
 
         private static void WhileLoopExample()
@@ -117,5 +85,48 @@ namespace keywords
             }
             // </Snippet7>
         }
+
+        // We want snippets to be interactive.
+        // To make snippets with Span<T> (which is ref struct) interactive,
+        // the example code must be the part of a non-async Main method and
+        // the complete program source must be included into the snippet.
+        // Thus, such snippets below.
+
+        // <Snippet2>
+        public class IterateSpanExample
+        {
+            public static void Main()
+            {
+                Span<int> numbers = new int[] { 3, 14, 15, 92, 6 };
+                foreach (int number in numbers)
+                {
+                    Console.Write($"{number} ");
+                }
+                Console.WriteLine();
+            }
+        }
+        // </Snippet2>
+
+        // <SnippetRefSpan>
+        public class ForeachRefExample
+        {
+            public static void Main()
+            {
+                Span<int> storage = stackalloc int[10];
+                int num = 0;
+                foreach (ref int item in storage)
+                {
+                    item = num++;
+                }
+
+                foreach (ref readonly var item in storage)
+                {
+                    Console.Write($"{item} ");
+                }
+                // Output:
+                // 0 1 2 3 4 5 6 7 8 9
+            }
+        }
+        // </SnippetRefSpan>
     }
 }
