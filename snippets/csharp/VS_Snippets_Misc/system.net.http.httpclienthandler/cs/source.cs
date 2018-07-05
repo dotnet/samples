@@ -6,7 +6,7 @@ using System.Net.Http;
 class HttpClientHandler_Example
 {
 // <Snippet1>
-   static async void Main()
+   static async Task Main()
    {
       // Create an HttpClientHandler object and set to use default credentials
       HttpClientHandler handler = new HttpClientHandler();
