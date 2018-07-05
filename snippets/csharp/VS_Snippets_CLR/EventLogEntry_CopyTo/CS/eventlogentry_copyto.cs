@@ -17,8 +17,6 @@ class EventLogEntryCollection_Item
 {
     public static void Main()
     {
-        try
-        {
             string myLogName = "MyNewLog";
             // Check if the source exists.
             if (!EventLog.SourceExists("MySource"))
@@ -75,11 +73,6 @@ class EventLogEntryCollection_Item
                    + myEventLogEntry.TimeGenerated);
             }
             // </Snippet2>
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine("Exception:{0}", e.Message);
-        }
     }
 }
 // </Snippet1>

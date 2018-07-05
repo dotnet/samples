@@ -35,8 +35,6 @@ public class MemberInfo_GetCustomAttributes_IsDefined
 {
     public static void Main()
     {
-        try
-        {
             // Get the type of MyClass1.
             Type myType = typeof(MyClass1);
             // Get the members associated with MyClass1.
@@ -57,11 +55,6 @@ public class MemberInfo_GetCustomAttributes_IsDefined
                             ((MyAttribute)myAttributes[j]).Name);
                 }
             }
-        }
-        catch(Exception e)
-        {
-            Console.WriteLine("An exception occurred: {0}", e.Message);
-        }
     }
 }
 // </Snippet1>

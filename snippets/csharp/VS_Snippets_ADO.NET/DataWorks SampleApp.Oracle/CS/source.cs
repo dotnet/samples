@@ -12,28 +12,22 @@ class Program
         string queryString =
             "SELECT CUSTOMER_ID, NAME FROM DEMO.CUSTOMER";
         using (OracleConnection connection =
-                   new OracleConnection(connectionString))
+            new OracleConnection(connectionString))
         {
             OracleCommand command = connection.CreateCommand();
             command.CommandText = queryString;
+            
+            connection.Open();
 
-            try
+            OracleDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
             {
-                connection.Open();
-
-                OracleDataReader reader = command.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    Console.WriteLine("\t{0}\t{1}",
-                        reader[0], reader[1]);
-                }
-                reader.Close();
+                Console.WriteLine("\t{0}\t{1}",
+                    reader[0], reader[1]);
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+
+            reader.Close();
         }
     }
 }

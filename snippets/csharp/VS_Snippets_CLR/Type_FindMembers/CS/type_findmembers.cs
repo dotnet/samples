@@ -9,8 +9,7 @@ class MyFindMembersClass
         Object objTest = new Object();
         Type objType = objTest.GetType ();
         MemberInfo[] arrayMemberInfo;
-        try
-        {
+        
             //Find all static or public methods in the Object class that match the specified name.
             arrayMemberInfo = objType.FindMembers(MemberTypes.Method,
                 BindingFlags.Public | BindingFlags.Static| BindingFlags.Instance,
@@ -18,12 +17,7 @@ class MyFindMembersClass
                 "ReferenceEquals");
 
             for(int index=0;index < arrayMemberInfo.Length ;index++)
-                Console.WriteLine ("Result of FindMembers -\t"+ arrayMemberInfo[index].ToString() +"\n");                 
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine ("Exception : " + e.ToString() );            
-        }           
+                Console.WriteLine ("Result of FindMembers -\t"+ arrayMemberInfo[index].ToString() +"\n");
     }
     public static bool DelegateToSearchCriteria(MemberInfo objMemberInfo, Object objSearch)
     {

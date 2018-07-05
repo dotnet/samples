@@ -18,8 +18,6 @@ public class InstallerCollection_AddRange1
 {
    public static void Main()
    {
-      try
-      {
 // <Snippet1>
          ArrayList myInstallers =new ArrayList();
          TransactedInstaller myTransactedInstaller = new TransactedInstaller();
@@ -51,10 +49,6 @@ public class InstallerCollection_AddRange1
 
          // Install an assembly.
          myTransactedInstaller.Install(new Hashtable());
-      }
-      catch(Exception e)
-      {
-         Console.WriteLine("Exception raised : {0}", e.Message);
-      }
+     
    }  
 }

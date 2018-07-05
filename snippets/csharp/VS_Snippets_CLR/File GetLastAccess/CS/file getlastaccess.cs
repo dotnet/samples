@@ -6,8 +6,6 @@ class Test
 {
     public static void Main() 
     {
-        try 
-        {
             string path = @"c:\Temp\MyTest.txt";
 
             if (!File.Exists(path)) 
@@ -24,12 +22,6 @@ class Test
             File.SetLastAccessTime(path, DateTime.Now);
             dt = File.GetLastAccessTime(path);
             Console.WriteLine("The last access time for this file was {0}.", dt);
-        } 
-
-        catch (Exception e) 
-        {
-            Console.WriteLine("The process failed: {0}", e.ToString());
-        }
     }
 }
 // </Snippet1>

@@ -6,8 +6,6 @@ class Test
 {
     public static void Main() 
     {
-        try 
-        {
             // Get the creation time of a well-known directory.
             DateTime dt = Directory.GetCreationTime(Environment.CurrentDirectory);
 
@@ -28,11 +26,6 @@ class Test
             {
                 Console.WriteLine("This directory was created on {0}", dt);
             }
-        } 
-        catch (Exception e) 
-        {
-            Console.WriteLine("The process failed: {0}", e.ToString());
-        }
     }
 }
 // </Snippet1>

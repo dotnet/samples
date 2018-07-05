@@ -6,8 +6,6 @@ class Test
 {
     public static void Main() 
     {
-        try 
-        {
             DirectoryInfo di = new DirectoryInfo(@"c:\");
 
             // Get only subdirectories that contain the letter "p."
@@ -19,11 +17,6 @@ class Test
                 Console.WriteLine("The number of files in {0} is {1}", diNext, 
                     diNext.GetFiles().Length);
             }
-        } 
-        catch (Exception e) 
-        {
-            Console.WriteLine("The process failed: {0}", e.ToString());
-        }
     }
 }
 // </Snippet1>

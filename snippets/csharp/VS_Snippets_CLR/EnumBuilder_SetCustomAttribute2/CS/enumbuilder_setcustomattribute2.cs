@@ -36,8 +36,6 @@ class MyApplication
    
    public static void Main()
    {
-      try
-      {
          CreateCallee(Thread.GetDomain());
          object[] myAttributesArray = myEnumBuilder.GetCustomAttributes(true);
 
@@ -51,11 +49,6 @@ class MyApplication
                                        ((MyAttribute)myAttributesArray[index]).myBoolValue);
             }
          }
-      }
-      catch(Exception e)
-      {
-         Console.WriteLine("The following exception is raised:" +e.Message);
-      }
    }
 
    private static void CreateCallee(AppDomain domain)

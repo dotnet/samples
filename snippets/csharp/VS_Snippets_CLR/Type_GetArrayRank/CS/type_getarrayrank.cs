@@ -19,12 +19,6 @@ class MyArrayRankSample
             Console.WriteLine("Source: " + e.Source);
             Console.WriteLine("Message: " + e.Message);
         }
-        catch(Exception e)
-        {
-            Console.WriteLine("Exception raised.");
-            Console.WriteLine("Source: " + e.Source);
-            Console.WriteLine("Message: " + e.Message);
-        }      
     }
 }
 // </Snippet1>

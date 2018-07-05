@@ -22,8 +22,7 @@ class MyInterfaceClass
         Type objType = hashtableObj.GetType();
         MethodInfo[] arrayMethodInfo;
         MemberInfo[] arrayMemberInfo;
-        try
-        {   
+           
             // Get the methods implemented in 'IDeserializationCallback' interface.
             arrayMethodInfo =objType.GetInterface("IDeserializationCallback").GetMethods();
             Console.WriteLine ("\nMethods of 'IDeserializationCallback' Interface :");
@@ -41,12 +40,7 @@ class MyInterfaceClass
             arrayMemberInfo = interfaceMappingObj.InterfaceMethods;
             Console.WriteLine ("\nHashtable class Implements the following IDictionary Interface methods :");
             foreach(MemberInfo memberInfo in arrayMemberInfo)
-               Console.WriteLine (memberInfo); 
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine ("Exception : " + e.ToString());            
-        }                 
+               Console.WriteLine (memberInfo);
     }
 // </Snippet3>
 // </Snippet2>   

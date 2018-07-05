@@ -48,10 +48,5 @@ class AssemblyInstaller_Example
       catch( ArgumentException )
       {
       }
-      catch( Exception e )
-      {
-         Console.WriteLine( e.Message );
-      }
-
    }
 }

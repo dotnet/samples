@@ -68,12 +68,6 @@ public class Test
             WriteObject(@"DataMemberAttributeExample.xml");
             ReadObject(@"DataMemberAttributeExample.xml");
         }
-        catch (Exception exc)
-        {
-            Console.WriteLine(
-            "The serialization operation failed: {0} StackTrace: {1}",
-            exc.Message, exc.StackTrace);
-        }
         finally
         {
             Console.WriteLine("Press <Enter> to exit....");

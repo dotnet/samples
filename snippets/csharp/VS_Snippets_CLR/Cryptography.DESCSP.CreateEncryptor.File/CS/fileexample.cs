@@ -9,8 +9,6 @@ class DESCSPSample
 
     static void Main()
     {
-        try
-        {
             // Create a new DESCryptoServiceProvider object
             // to generate a key and initialization vector (IV).
             DESCryptoServiceProvider DESalg = new DESCryptoServiceProvider();
@@ -27,12 +25,6 @@ class DESCSPSample
             
             // Display the decrypted string to the console.
             Console.WriteLine(Final);
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e.Message);
-        }
-       
     }
 
     public static void EncryptTextToFile(String Data, String FileName, byte[] Key, byte[] IV)

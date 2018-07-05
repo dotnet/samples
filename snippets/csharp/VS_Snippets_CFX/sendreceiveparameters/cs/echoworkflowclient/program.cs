@@ -19,15 +19,10 @@ namespace Microsoft.Samples.WorkflowServicesSamples.EchoWorkflowClient
         static void Main(string[] args)
         {
             CreateClientWorkflow();
-            try
-            {
-                WorkflowInvoker.Invoke(workflow);
-                Console.WriteLine("Workflow completed successfully.");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Workflow completed with {0}: {1}.", e.GetType().FullName, e.Message);
-            }
+            
+            WorkflowInvoker.Invoke(workflow);
+            Console.WriteLine("Workflow completed successfully.");
+            
             Console.WriteLine("To exit press ENTER.");
             Console.ReadLine();
         }

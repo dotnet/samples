@@ -9,8 +9,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        try
-        {
             // Create an XmlDocument object.
             // <snippet2>
             XmlDocument xmlDoc = new XmlDocument();
@@ -32,13 +30,6 @@ class Program
             Console.WriteLine("Decrypted XML:");
             Console.WriteLine();
             Console.WriteLine(xmlDoc.OuterXml);
-
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e.Message);
-        }
-
     }
 
     public static void Decrypt(XmlDocument Doc)

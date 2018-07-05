@@ -52,17 +52,10 @@ static class Program
         IntPtr iPtr = new IntPtr(0);
 
         // Call the SHAutoComplete function using exceptions.
-        try
-        {
-            Console.WriteLine("Calling the SHAutoComplete method with the PreserveSig field set to false.");
+        Console.WriteLine("Calling the SHAutoComplete method with the PreserveSig field set to false.");
 
-            Win32.SHAutoComplete(iPtr, Win32.SHAutoCompleteFlags.SHACF_DEFAULT);
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine("Exception handled: " + e.Message);
-        }
-
+        Win32.SHAutoComplete(iPtr, Win32.SHAutoCompleteFlags.SHACF_DEFAULT);
+        
         Console.WriteLine("Calling the SHAutoComplete method with the PreserveSig field set to true.");
 
         // Call the SHAutoComplete function using HRESULTS.

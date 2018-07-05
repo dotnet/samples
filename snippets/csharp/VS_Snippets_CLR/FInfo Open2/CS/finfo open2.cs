@@ -33,16 +33,8 @@ class Test
                 Console.WriteLine(temp.GetString(b));
             }
 
-            try 
-            {
-                //Try to write to the file.
-                fs.Write(b,0,b.Length);
-            } 
-            catch (Exception e) 
-            {
-                Console.WriteLine("Writing was disallowed, as expected: {0}",
-                    e.ToString());
-            }
+            //Try to write to the file.
+            fs.Write(b,0,b.Length);
         }
     }
 }

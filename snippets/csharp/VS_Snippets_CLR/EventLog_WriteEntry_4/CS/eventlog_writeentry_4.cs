@@ -13,8 +13,6 @@ class EventLog_WriteEntry_4
 {
    public static void Main()
    {
-      try
-      {
 // <Snippet1>
          // Create the source, if it does not already exist.
          if(!EventLog.SourceExists("MySource"))
@@ -40,10 +38,5 @@ class EventLog_WriteEntry_4
          EventLog.WriteEntry("MySource",myMessage,
             myEventLogEntryType, myApplicationEventId);
 // </Snippet1>
-      }
-      catch(Exception e)
-      {
-         Console.WriteLine("Exception:{0}",e.Message);
-      }
    }
 }

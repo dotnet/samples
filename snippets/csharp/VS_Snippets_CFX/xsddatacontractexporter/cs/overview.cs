@@ -12,10 +12,6 @@ public class Program
         {
             ExportXSD();
         }
-        catch (Exception exc)
-        {
-            Console.WriteLine("Message: {0} StackTrace:{1}", exc.Message, exc.StackTrace);
-        }
         finally
         {
             Console.ReadLine();

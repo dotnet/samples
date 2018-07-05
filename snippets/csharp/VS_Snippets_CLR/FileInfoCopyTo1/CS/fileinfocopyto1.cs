@@ -6,8 +6,6 @@ public class CopyToTest
 {
     public static void Main() 
     {
-        try
-        {
             // Create a reference to a file, which might or might not exist.
             // If it does not exist, it is not yet created.
             FileInfo fi = new FileInfo("temp.txt");
@@ -29,11 +27,6 @@ public class CopyToTest
             Console.WriteLine("{0}This is the information in the second file:", Environment.NewLine);
             while (sr.Peek() != -1)
                 Console.WriteLine(sr.ReadLine());
-        }
-        catch(Exception e)
-        {
-            Console.WriteLine(e.Message);
-        }
     }
 }
 //This code produces output similar to the following; 

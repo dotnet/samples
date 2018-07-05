@@ -17,8 +17,6 @@ public class FieldInfo_FieldHandle
         // Get the type of MyClass.
         Type myType = typeof(MyClass);
 
-        try
-        {
             // Get the field information of MyField.
             FieldInfo myFieldInfo = myType.GetField("MyField", BindingFlags.Public 
                 | BindingFlags.Instance);
@@ -35,11 +33,6 @@ public class FieldInfo_FieldHandle
             {
                 Console.WriteLine("The myFieldInfo object is null.");
             }
-        }  
-        catch(Exception e)
-        {
-            Console.WriteLine("Exception: {0}", e.Message);
-        }
     }
 
     public static void DisplayFieldHandle(RuntimeFieldHandle myFieldHandle)

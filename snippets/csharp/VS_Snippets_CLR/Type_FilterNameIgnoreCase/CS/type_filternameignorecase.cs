@@ -27,10 +27,6 @@ public class MyFilterNameIgnoreCaseSample
         catch(SecurityException e)
         {
             Console.Write("SecurityException : " + e.Message); 
-        }   
-        catch(Exception e)
-        {
-            Console.Write("Exception : " + e.Message); 
         }
     }
 }

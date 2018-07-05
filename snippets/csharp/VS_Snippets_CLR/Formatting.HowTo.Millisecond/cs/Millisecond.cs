@@ -9,8 +9,6 @@ public class MillisecondDisplay
    {
       string dateString = "7/16/2008 8:32:45.126 AM";
       
-      try
-      {
          DateTime dateValue = DateTime.Parse(dateString);
          DateTimeOffset dateOffsetValue = DateTimeOffset.Parse(dateString);
    
@@ -35,11 +33,6 @@ public class MillisecondDisplay
                            dateValue.ToString(fullPattern));
          Console.WriteLine("Modified full date time pattern: {0}",
                            dateOffsetValue.ToString(fullPattern));
-      }
-      catch (FormatException)
-      {
-         Console.WriteLine("Unable to convert {0} to a date.", dateString);
-      }
    }
 }
 // The example displays the following output if the current culture is en-US:

@@ -54,16 +54,8 @@ namespace Example
 
         static void Main()
         {
-            try
-            {
-                Test t = new Test();
-                t.Run();
-            }
-            catch (System.Exception exc)
-            {
-                Console.WriteLine(exc.Message);
-                Console.ReadLine();
-            }
+            Test t = new Test();
+            t.Run();
         }
     }
     [ServiceContract]

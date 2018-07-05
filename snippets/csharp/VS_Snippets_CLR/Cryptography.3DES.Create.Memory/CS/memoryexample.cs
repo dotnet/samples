@@ -8,9 +8,6 @@ namespace AesManaged_Examples
     {
         public static void Main()
         {
-            try
-            {
-
                 string original = "Here is some data to encrypt!";
 
                 // Create a new instance of the AesCryptoServiceProvider
@@ -29,12 +26,6 @@ namespace AesManaged_Examples
                     Console.WriteLine("Original:   {0}", original);
                     Console.WriteLine("Round Trip: {0}", roundtrip);
                 }
-
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error: {0}", e.Message);
-            }
         }
 
         static byte[] encryptStringToBytes_AesManaged(string plainText, byte[] Key, byte[] IV)

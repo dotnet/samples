@@ -9,8 +9,6 @@ class DESSample
 
     static void Main()
     {
-        try
-        {
             // Create a new DES object to generate a key
             // and initialization vector (IV).
             DES DESalg = DES.Create();
@@ -27,12 +25,6 @@ class DESSample
             
             // Display the decrypted string to the console.
             Console.WriteLine(Final);
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e.Message);
-        }
-       
     }
 
     public static void EncryptTextToFile(String Data, String FileName, byte[] Key, byte[] IV)

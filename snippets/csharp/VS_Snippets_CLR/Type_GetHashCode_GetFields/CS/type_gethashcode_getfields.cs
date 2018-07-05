@@ -30,12 +30,6 @@ class FieldsSample
         {
             Console.WriteLine("An exception occurred.");
             Console.WriteLine("Message: "+e.Message);
-        }
-        catch(Exception e)
-        {
-            Console.WriteLine("An exception occurred.");
-            Console.WriteLine("Message: "+e.Message);
-
         }		
     }
 }	

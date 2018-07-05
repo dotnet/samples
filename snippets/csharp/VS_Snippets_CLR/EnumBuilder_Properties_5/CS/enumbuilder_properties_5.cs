@@ -32,8 +32,6 @@ public class MyEnumBuilderSample
    
    public static void Main()
    {
-      try
-      {
          CreateCallee(Thread.GetDomain(), AssemblyBuilderAccess.Save);
          Type[] myTypeArray = myModuleBuilder.GetTypes();
          foreach(Type myType in myTypeArray)
@@ -54,10 +52,6 @@ public class MyEnumBuilderSample
       catch(NotSupportedException ex)
       {
          Console.WriteLine("The following is the exception is raised: " + ex.Message);
-      }
-      catch(Exception e)
-      {
-         Console.WriteLine("The following is the exception raised: " + e.Message);
       }
    }
 

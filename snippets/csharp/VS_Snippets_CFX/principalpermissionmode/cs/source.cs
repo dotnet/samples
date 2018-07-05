@@ -193,17 +193,8 @@ namespace CustomMode
     {
         public static void Main()
         {
-            try
-            {
-                ShowPrincipalPermissionModeCustom ppwm = new ShowPrincipalPermissionModeCustom();
-                ppwm.Run();
-
-            }
-            catch (Exception exc)
-            {
-                Console.WriteLine("Error: {0}", exc.Message);
-                Console.ReadLine();
-            }
+            ShowPrincipalPermissionModeCustom ppwm = new ShowPrincipalPermissionModeCustom();
+            ppwm.Run();
         }
     }
 

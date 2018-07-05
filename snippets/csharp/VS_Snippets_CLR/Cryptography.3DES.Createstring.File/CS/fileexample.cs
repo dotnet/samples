@@ -9,8 +9,6 @@ class TripleDESSample
 
     static void Main()
     {
-        try
-        {
             // Create a new TripleDES object to generate a key 
             // and initialization vector (IV).  Specify one 
             // of the recognized simple names for this 
@@ -29,12 +27,6 @@ class TripleDESSample
             
             // Display the decrypted string to the console.
             Console.WriteLine(Final);
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e.Message);
-        }
-       
     }
 
     public static void EncryptTextToFile(String Data, String FileName, byte[] Key, byte[] IV)

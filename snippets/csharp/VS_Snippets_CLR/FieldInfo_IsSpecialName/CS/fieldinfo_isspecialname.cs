@@ -8,8 +8,6 @@ class FieldInfo_IsSpecialName
 {
     public static void Main()
     {     
-        try
-        {
             // Get the type handle of a specified class.
             Type myType = typeof(ViewTechnology);
          
@@ -26,11 +24,6 @@ class FieldInfo_IsSpecialName
                         myField[i].Name);
                 }
             }
-        }
-        catch(Exception e)
-        {
-            Console.WriteLine("Exception : {0} " , e.Message);
-        }
     }
 }
 // </Snippet1>

@@ -39,8 +39,6 @@ class MyApplication
 
    public static void Main()
    {
-      try
-      {
          CreateCallee(Thread.GetDomain());
          if(myEnumBuilder.IsDefined(typeof(MyAttribute),false))
          {
@@ -62,12 +60,6 @@ class MyApplication
          {
             Console.WriteLine("Custom Attributes are not set for the EnumBuilder");
          }
-      }
-      catch(Exception e)
-      {
-         Console.WriteLine("The following exception is raised:" +e.Message);
-      }
-
   }
 
    private static void CreateCallee(AppDomain domain)

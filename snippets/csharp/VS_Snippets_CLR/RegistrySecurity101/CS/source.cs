@@ -20,12 +20,6 @@ public class Example
             // ArgumentException is thrown if the key does not exist. In
             // this case, there is no reason to display a message.
         }
-        catch (Exception ex)
-        {
-            Console.WriteLine("Unable to delete the example key: {0}", ex);
-            return;
-        }
-
         string user = Environment.UserDomainName + "\\" + Environment.UserName;
 
         RegistrySecurity rs = new RegistrySecurity();
@@ -108,15 +102,8 @@ public class Example
         Console.WriteLine("\r\nPress Enter to delete the example key.");
         Console.ReadLine();
 
-        try
-        {
-            rk.DeleteSubKey("RegistryRightsExample");
-            Console.WriteLine("Example key was deleted.");
-        }
-        catch(Exception ex)
-        {
-            Console.WriteLine("Unable to delete the example key: {0}", ex);
-        }
+        rk.DeleteSubKey("RegistryRightsExample");
+        Console.WriteLine("Example key was deleted.");
 
         rk.Close();
     }

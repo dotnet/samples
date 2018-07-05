@@ -101,10 +101,6 @@ namespace Microsoft.Samples.WorkflowServicesSamples.EchoWorkflowService
                 Console.WriteLine("To terminate press ENTER");
                 Console.ReadLine();
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Service terminated with exception {0}", ex.ToString());
-            }
             finally
             {
                 host.Close();

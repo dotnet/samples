@@ -6,15 +6,9 @@ public class ProcessFile
 {
     public static void Main()
     {
-        try
+        using (StreamReader sr = File.OpenText("data.txt"))
         {
-            StreamReader sr = File.OpenText("data.txt");
             Console.WriteLine("The first line of this file is {0}", sr.ReadLine());
-	    sr.Close();
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine("An error occurred: '{0}'", e);
         }
     }
 }

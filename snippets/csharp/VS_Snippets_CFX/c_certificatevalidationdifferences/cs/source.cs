@@ -16,21 +16,11 @@ public class Test
 {
     public static void Main()
     {
-        try
-        {
-            Test t = new Test();
-            t.Run();
-        }
-        catch (Exception exc)
-        {
-            Console.WriteLine("Message: {0}", exc.Message);
-            Console.ReadLine();
-        }
-        finally
-        {
-            Console.WriteLine("\n \n Done");
-            Console.ReadLine();
-        }
+        Test t = new Test();
+        t.Run();
+        
+        Console.WriteLine("\n \n Done");
+        Console.ReadLine();
     }
     private void Run()
     {

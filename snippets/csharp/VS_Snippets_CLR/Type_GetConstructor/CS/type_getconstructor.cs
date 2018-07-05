@@ -11,8 +11,6 @@ public class MyClass1
 
     public static void Main()
     {
-        try
-        {
             Type myType = typeof(MyClass1);
             Type[] types = new Type[1];
             types[0] = typeof(int);
@@ -29,13 +27,6 @@ public class MyClass1
                 Console.WriteLine("The constructor of MyClass1 that takes an integer " +
                     "as a parameter is not available."); 
             }
-        }
-        catch(Exception e)
-        {
-            Console.WriteLine("Exception caught.");
-            Console.WriteLine("Source: " + e.Source);
-            Console.WriteLine("Message: " + e.Message);
-        }
     }
 }
 // </Snippet1>

@@ -8,8 +8,6 @@ namespace FileSystemExample
     {
         public static void Main()
         {
-            try
-            {
                 string OriginalFile = "test.xml";
                 string FileToReplace = "test2.xml";
                 string BackUpOfFileToReplace = "test2.xml.bac";
@@ -21,12 +19,7 @@ namespace FileSystemExample
                 ReplaceFile(OriginalFile, FileToReplace, BackUpOfFileToReplace);
 
                 Console.WriteLine("Done");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-            }
-
+            
             Console.ReadLine();
         }
 

@@ -62,10 +62,6 @@ namespace TypeCodeNamespace
                 Console.WriteLine(e.Message);
             }
 // </Snippet4>
-            catch(Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
         }
     }
 }

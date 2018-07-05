@@ -7,8 +7,6 @@ class Program
 {
     static void Main()
     {
-        try
-        {
             string connectString =
                 "Server=(local);" +
                 "Integrated Security=true";
@@ -28,11 +26,6 @@ class Program
             }
             Console.WriteLine("Press any key to finish.");
             Console.ReadLine();
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex.Message);
-        }
     }
 }
 // </Snippet1>

@@ -82,10 +82,6 @@ public class Client
     {
       Console.WriteLine("There was a communication problem. " + commProblem.Message);
     }
-    catch (Exception e)
-    {
-      Console.WriteLine("There was an exception: " + e.Message);
-    }
   }
 
   public static void Main()

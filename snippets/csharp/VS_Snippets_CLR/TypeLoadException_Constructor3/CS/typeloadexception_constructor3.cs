@@ -24,10 +24,6 @@ public class TypeLoadException_Constructor3
       {
          Console.WriteLine ("TypeLoadException: \n\tError Message = " + e.Message);
          Console.WriteLine ("TypeLoadException: \n\tInnerException Message = " + e.InnerException.Message );
-      }  
-      catch (Exception e)
-      {
-         Console.WriteLine ("Exception: \n\tError Message = " + e.Message);
       }
    }
 }

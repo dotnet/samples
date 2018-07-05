@@ -11,9 +11,6 @@ class MainWindowTitleClass
 {
    public static void Main()
    {
-      try
-      {
-
          // Create an instance of process component.
          Process myProcess = new Process();
          // Create an instance of 'myProcessStartInfo'.
@@ -28,12 +25,6 @@ class MainWindowTitleClass
 
          myProcess.CloseMainWindow();
          myProcess.Close();
-      }
-      catch(Exception e)
-      {
-         Console.Write(" Message : " + e.Message);
-      }
-    
    }
 }
 

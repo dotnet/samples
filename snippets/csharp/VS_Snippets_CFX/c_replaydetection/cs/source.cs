@@ -16,14 +16,7 @@ namespace Replay
 
         static void Main()
         {
-            try
-            {
-                Test t = new Test();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            Test t = new Test();
         }
 
         //<snippet1>

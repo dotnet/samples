@@ -11,8 +11,6 @@ class MyInt16_Equals
 {
      public static void Main()
      {
-         try
-         {
 // <Snippet1>            
             Int16 myVariable1 = 20;
             Int16 myVariable2 = 20;
@@ -31,12 +29,7 @@ class MyInt16_Equals
                Console.WriteLine( "\nStructures 'myVariable1' and "+
                      "'myVariable2' are not equal");
             
-// </Snippet1>            
-         }
-         catch(Exception e)
-         {
-            Console.WriteLine("Exception :{0}", e.Message);
-         }
+// </Snippet1>
      }
 }
 

@@ -24,8 +24,6 @@ public class InstallerCollection_Remove
 {
    public static void Main()
    {
-      try
-      {
 // <Snippet1>
 // <Snippet2>
 // <Snippet3>
@@ -77,10 +75,5 @@ public class InstallerCollection_Remove
 
          // Install an assembly.
          myTransactedInstaller.Install(new Hashtable());
-      }
-      catch(Exception e)
-      {
-         Console.WriteLine("Exception raised : {0}", e.Message);
-      }
    }
 }

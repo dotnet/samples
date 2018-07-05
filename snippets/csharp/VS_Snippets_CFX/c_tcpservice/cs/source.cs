@@ -21,11 +21,6 @@ namespace TcpService
                 Console.WriteLine(iexc.Message);
                 Console.ReadLine();
             }
-            catch (System.Exception exc)
-            {
-                Console.WriteLine(exc.Message);
-                Console.ReadLine();
-            }
         }
 
         private void TcpTransportCert()
@@ -80,11 +75,6 @@ namespace TcpService
             {
                 Console.WriteLine("A commmunication error occurred: {0}", ce.Message);
                 Console.WriteLine();
-            }
-            catch (System.Exception exc)
-            {
-                Console.WriteLine("An unforseen error occurred: {0}", exc.Message);
-                Console.ReadLine();
             }
             //</snippet1>
         }
@@ -145,12 +135,6 @@ namespace TcpService
                 Console.WriteLine("A commmunication error occurred: {0}", ce.Message);
                 Console.WriteLine();
             }
-            catch (System.Exception exc)
-            {
-                Console.WriteLine("An unforseen error occurred: {0}", exc.Message);
-                Console.ReadLine();
-            }
-
             //</snippet2>
         }
 
@@ -188,11 +172,6 @@ namespace TcpService
                 Console.WriteLine("A commmunication error occurred: {0}", ce.Message);
                 Console.WriteLine();
             }
-            catch (System.Exception exc)
-            {
-                Console.WriteLine("An unforseen error occurred: {0}", exc.Message);
-                Console.ReadLine();
-            }
             //</snippet3>
         }
         private void RunClient()
@@ -229,11 +208,6 @@ namespace TcpService
                 Console.WriteLine(adExc.Message);
                 Console.ReadLine();
             }
-            catch (System.Exception exc)
-            {
-                Console.WriteLine(exc.Message);
-                Console.ReadLine();
-            }          
             //</snippet4>
         }
 

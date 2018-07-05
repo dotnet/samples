@@ -32,8 +32,6 @@ public class InstallerCollection_Add
       AssemblyInstaller myAssemblyInstaller;
       InstallContext myInstallContext;
 
-      try
-      {
          for(int i = 0; i < args.Length; i++)
          {
             // Process the arguments.
@@ -95,10 +93,6 @@ public class InstallerCollection_Add
             myTransactedInstaller.Install(new Hashtable());
          else
             myTransactedInstaller.Uninstall(null);
-      }
-      catch(Exception e)
-      {
-         Console.WriteLine(" Exception raised : {0}", e.Message);
       }
    }
 

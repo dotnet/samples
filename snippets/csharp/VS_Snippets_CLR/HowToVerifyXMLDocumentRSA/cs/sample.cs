@@ -9,8 +9,6 @@ public class VerifyXML
 
     public static void Main(String[] args)
     {
-        try
-        {
             // Create a new CspParameters object to specify
             // a key container.
             // <snippet2>
@@ -47,10 +45,6 @@ public class VerifyXML
                 Console.WriteLine("The XML signature is not valid.");
             }
 
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e.Message);
         }
     }
 

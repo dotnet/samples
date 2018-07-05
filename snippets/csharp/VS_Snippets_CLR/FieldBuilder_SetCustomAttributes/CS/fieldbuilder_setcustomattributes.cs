@@ -93,8 +93,6 @@ namespace MySample
       }
       public static void Main()
       {
-         try
-         {
             Type myCustomClass = CreateCallee(Thread.GetDomain());
             // Construct an instance of a type.
             Object myObject = Activator.CreateInstance(myCustomClass);
@@ -123,11 +121,6 @@ namespace MySample
                   }
                }
             }
-         }
-         catch (Exception e)
-         {
-            Console.WriteLine("Exception Caught "+e.Message);
-         }
       }
    }
 }

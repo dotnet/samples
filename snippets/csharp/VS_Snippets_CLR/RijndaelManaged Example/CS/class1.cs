@@ -9,9 +9,6 @@ namespace RijndaelManaged_Example
     {
         public static void Main()
         {
-            try
-            {
-
                 string original = "Here is some data to encrypt!";
 
                 // Create a new instance of the RijndaelManaged
@@ -32,12 +29,6 @@ namespace RijndaelManaged_Example
                     Console.WriteLine("Original:   {0}", original);
                     Console.WriteLine("Round Trip: {0}", roundtrip);
                 }
-
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error: {0}", e.Message);
-            }
         }
         //<Snippet2>
         static byte[] EncryptStringToBytes(string plainText, byte[] Key, byte[] IV)

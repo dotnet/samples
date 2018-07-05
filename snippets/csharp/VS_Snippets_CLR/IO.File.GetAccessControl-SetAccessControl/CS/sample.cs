@@ -9,8 +9,6 @@ namespace FileSystemExample
     {
         public static void Main()
         {
-            try
-            {
                 string fileName = "test.xml";
 
                 Console.WriteLine("Adding access control entry for "
@@ -28,11 +26,6 @@ namespace FileSystemExample
                     FileSystemRights.ReadData, AccessControlType.Allow);
 
                 Console.WriteLine("Done.");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-            }
         }
 
         // Adds an ACL entry on the specified file for the specified account.

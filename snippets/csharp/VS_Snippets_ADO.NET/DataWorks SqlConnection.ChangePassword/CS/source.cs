@@ -7,14 +7,8 @@ class Program
 {
     static void Main()
     {
-        try
-        {
-            DemonstrateChangePassword();
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine("Error: " + ex.Message);
-        }
+        DemonstrateChangePassword();
+        
         Console.WriteLine("Press ENTER to continue...");
         Console.ReadLine();
     }

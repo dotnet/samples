@@ -8,8 +8,6 @@ namespace FileSystemExample
     {
         public static void Main()
         {
-            try
-            {
                 // originalFile and fileToReplace must contain the path to files that already exist in the  
                 // file system. backUpOfFileToReplace is created during the execution of the Replace method.
 
@@ -31,12 +29,7 @@ namespace FileSystemExample
                 {
                     Console.WriteLine("Either the file {0} or {1} doesn't " + "exist.", originalFile, fileToReplace);
                 }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-
+            
             Console.ReadLine();
         }
 

@@ -12,8 +12,6 @@ class EventLog_Exists_1
 {
    public static void Main()
    {
-      try
-      {
 // <Snippet1>
          string myLog = "myNewLog";
          if (EventLog.Exists(myLog))
@@ -25,10 +23,5 @@ class EventLog_Exists_1
             Console.WriteLine("Log '"+myLog+"' does not exist.");
          }
 // </Snippet1>
-      }
-      catch(Exception e)
-      {
-         Console.WriteLine("Exception:"+ e.Message);
-      }
    }
 }

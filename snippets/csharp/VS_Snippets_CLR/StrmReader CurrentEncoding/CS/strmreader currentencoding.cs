@@ -10,8 +10,6 @@ class Test
     {
         string path = @"c:\temp\MyTest.txt";
 
-        try 
-        {
             if (File.Exists(path)) 
             {
                 File.Delete(path);
@@ -38,11 +36,6 @@ class Test
                 Console.WriteLine("The encoding used was {0}.", sr.CurrentEncoding);
                 Console.WriteLine();
             }
-        } 
-        catch (Exception e) 
-        {
-            Console.WriteLine("The process failed: {0}", e.ToString());
-        }
     }
 }
 // </Snippet1>

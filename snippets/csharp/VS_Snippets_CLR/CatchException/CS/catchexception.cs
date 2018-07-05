@@ -14,10 +14,6 @@ class ExceptionTestClass
          {
             Console.WriteLine("ArithmeticException Handler: {0}", e.ToString());
          }
-         catch (Exception e) 
-         {
-            Console.WriteLine("Generic Exception Handler: {0}", e.ToString());
-         }
    }	
 }
 /*
