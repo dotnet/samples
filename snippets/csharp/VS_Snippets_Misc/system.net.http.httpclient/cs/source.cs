@@ -2,11 +2,12 @@ using System;
 using System.IO;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 
 class HttpClient_Example
 {
 // <Snippet1>
-   static async void Main()
+   static async Task Main()
 	 {
    
       // Create a New HttpClient object.
