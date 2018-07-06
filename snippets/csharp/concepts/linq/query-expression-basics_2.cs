@@ -2,4 +2,4 @@
                 from score in scores
                 where score > 80
                 orderby score descending
-                select String.Format("The score is {0}", score);
+                select $"The score is {score}";

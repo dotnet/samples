@@ -2,32 +2,45 @@
 using namespace System;
 using namespace System::Threading;
 
-public ref class Example
+ref class TimerState
+{
+public:
+	int counter;
+};
+
+ref class Example
 {
 private:
-    static Timer^ ticker;
+	static Timer^ timer;
 
 public:
-    static void TimerMethod(Object^ state)
-    {
-        Console::Write(".");
-    }
+	static void TimerTask(Object^ state)
+	{
+		Console::WriteLine("{0:HH:mm:ss.fff}: starting a new callback.", DateTime::Now);
 
-    static void Main()
-    {
-        TimerCallback^ tcb =
-           gcnew TimerCallback(&TimerMethod);
+		TimerState^ timerState = dynamic_cast<TimerState^>(state);
+		Interlocked::Increment(timerState->counter);
+	}
 
-        ticker = gcnew Timer(tcb, nullptr, 1000, 1000);
+	static void Main()
+	{
+		TimerCallback^ tcb = gcnew TimerCallback(&TimerTask);
+		TimerState^ state = gcnew TimerState();
+		state->counter = 0;
+		timer = gcnew Timer(tcb, state, 1000, 2000);
 
-        Console::WriteLine("Press the Enter key to end the program.");
-        Console::ReadLine();
-    }
+		while (state->counter <= 10)
+		{
+			Thread::Sleep(1000);
+		}
+
+		timer->~Timer();
+		Console::WriteLine("{0:HH:mm:ss.fff}: done.", DateTime::Now);
+	}
 };
 
 int main()
 {
-    Example::Main();
+	Example::Main();
 }
-
 // </snippet2>

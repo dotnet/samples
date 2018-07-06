@@ -33,7 +33,7 @@
                 default:
                     break;
             }
-            Console.WriteLine("The following students are at level {0}", year.ToString());
+            Console.WriteLine($"The following students are at level {year}");
             foreach (Student name in studentQuery)
             {
                 Console.WriteLine($"{name.LastName}: {name.ID}");
