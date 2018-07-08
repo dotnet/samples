@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace PatternMatching
 {
     #region 01_ShapeDefinitions
-    public struct Square
+    public class Square
     {
         public double Side { get; }
 
@@ -16,7 +16,7 @@ namespace PatternMatching
             Side = side;
         }
     }
-    public struct Circle
+    public class Circle
     {
         public double Radius { get; }
 
@@ -25,7 +25,7 @@ namespace PatternMatching
             Radius = radius;
         }
     }
-    public struct Rectangle
+    public class Rectangle
     {
         public double Length { get; }
         public double Height { get; }
@@ -36,7 +36,7 @@ namespace PatternMatching
             Height = height;
         }
     }
-    public struct Triangle
+    public class Triangle
     {
         public double Base { get; }
         public double Height { get; }
