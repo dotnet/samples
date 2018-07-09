@@ -12,13 +12,13 @@ public class Example
    private static async Task<string> ShowTodaysInfo()
    {
       // <Snippet1>
-      var infoTask = GetLeisureHours();
+      var integerTask = GetLeisureHours();
       
       // You can do other work that does not rely on integerTask before awaiting.
       
       string ret = $"Today is {DateTime.Today:D}\n" +
                    "Today's hours of leisure: " +
-                   $"{await infoTask}";
+                   $"{await integerTask}";
       // </Snippet1>
       return ret;
    }
