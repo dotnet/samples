@@ -304,13 +304,14 @@ namespace PLINQ_Samples
         using System.Linq;
         using System.Threading;
         using System.Threading.Tasks;
+        using static System.Console;
 
         class Program
         {
             static void Main(string[] args)
             {
                 int[] source = Enumerable.Range(1, 10000000).ToArray();
-                CancellationTokenSource cts = new CancellationTokenSource();
+                var cts = new CancellationTokenSource();
 
                 // Start a new asynchronous task that will cancel the 
                 // operation from another thread. Typically you would call
@@ -318,49 +319,51 @@ namespace PLINQ_Samples
                 // user interface event.
                 Task.Factory.StartNew(() =>
                 {
-                    UserClicksTheCancelButton(cs);
+                    UserClicksTheCancelButton(cts);
                 });
 
                 int[] results = null;
-                try {
+                try
+                {
                     results = (from num in source.AsParallel().WithCancellation(cts.Token)
                                where num % 3 == 0
                                orderby num descending
                                select num).ToArray();
-
                 }
-                catch (OperationCanceledException e) {
-                    Console.WriteLine(e.Message);
+                catch (OperationCanceledException e)
+                {
+                    WriteLine(e.Message);
                 }
-                catch (AggregateException ae) {
+                catch (AggregateException ae)
+                {
                     if (ae.InnerExceptions != null)
                     {
                         foreach (Exception e in ae.InnerExceptions)
-                            Console.WriteLine(e.Message);
+                            WriteLine(e.Message);
                     }
                 }
-                finally {
+                finally
+                {
                    cts.Dispose();
                 }
 
                 if (results != null)
                 {
                     foreach (var v in results)
-                        Console.WriteLine(v);
+                        WriteLine(v);
                 }
-                Console.WriteLine();
-                Console.ReadKey();
-
+                WriteLine();
+                ReadKey();
             }
 
-            static void UserClicksTheCancelButton(CancellationTokenSource cs)
+            static void UserClicksTheCancelButton(CancellationTokenSource cts)
             {
                 // Wait between 150 and 500 ms, then cancel.
                 // Adjust these values if necessary to make
                 // cancellation fire while query is still executing.
                 Random rand = new Random();
-                Thread.Sleep(rand.Next(150, 350));
-                cs.Cancel();
+                Thread.Sleep(rand.Next(150, 500));
+                cts.Cancel();
             }
         }
     }
@@ -373,15 +376,14 @@ namespace PLINQ_Samples
         using System.Linq;
         using System.Threading;
         using System.Threading.Tasks;
+        using static System.Console;
 
         class Program
         {
             static void Main(string[] args)
             {
-
-
                 int[] source = Enumerable.Range(1, 10000000).ToArray();
-                CancellationTokenSource cts = new CancellationTokenSource();
+                var cts = new CancellationTokenSource();
 
                 // Start a new asynchronous task that will cancel the 
                 // operation from another thread. Typically you would call
@@ -393,34 +395,36 @@ namespace PLINQ_Samples
                 });
 
                 double[] results = null;
-                try {
+                try
+                {
                     results = (from num in source.AsParallel().WithCancellation(cts.Token)
                                where num % 3 == 0
-                               select Function(num, cs.Token)).ToArray();
-
+                               select Function(num, cts.Token)).ToArray();
                 }
-                catch (OperationCanceledException e) {
-                    Console.WriteLine(e.Message);
+                catch (OperationCanceledException e)
+                {
+                    WriteLine(e.Message);
                 }
                 catch (AggregateException ae)
+                {
                     if (ae.InnerExceptions != null)
                     {
                         foreach (Exception e in ae.InnerExceptions)
-                            Console.WriteLine(e.Message);
+                            WriteLine(e.Message);
                     }
                 }
-                finally {
+                finally
+                {
                     cts.Dispose();
                 }
 
                 if (results != null)
                 {
                     foreach (var v in results)
-                        Console.WriteLine(v);
+                        WriteLine(v);
                 }
-                Console.WriteLine();
-                Console.ReadKey();
-
+                WriteLine();
+                ReadKey();
             }
 
             // A toy method to simulate work.
@@ -441,16 +445,16 @@ namespace PLINQ_Samples
                 return Math.Sqrt(n);
             }
 
-            static void UserClicksTheCancelButton(CancellationTokenSource cs)
+            static void UserClicksTheCancelButton(CancellationTokenSource cts)
             {
                 // Wait between 150 and 500 ms, then cancel.
                 // Adjust these values if necessary to make
                 // cancellation fire while query is still executing.
                 Random rand = new Random();
-                Thread.Sleep(rand.Next(150, 350));
-                Console.WriteLine("Press 'c' to cancel");
-                if (Console.ReadKey().KeyChar == 'c')
-                    cs.Cancel();
+                Thread.Sleep(rand.Next(150, 500));
+                WriteLine("Press 'c' to cancel");
+                if (ReadKey().KeyChar == 'c')
+                    cts.Cancel();
             }
         }
     }
