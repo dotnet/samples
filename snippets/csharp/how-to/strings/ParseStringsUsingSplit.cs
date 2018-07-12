@@ -31,7 +31,7 @@ namespace HowToStrings
         private static void SplitWords()
         {
             // <Snippet1>
-            string phrase = "The quick brown fox jumped over the lazy dog.";
+            string phrase = "The quick brown fox jumps over the lazy dog.";
             string[] words = phrase.Split(' ');
 
             foreach (var word in words)
@@ -44,7 +44,7 @@ namespace HowToStrings
         private static void SplitWordsWithRepeatedSeparators()
         {
             // <Snippet2>
-            string phrase = "The quick brown    fox     jumped over the lazy dog.";
+            string phrase = "The quick brown    fox     jumps over the lazy dog.";
             string[] words = phrase.Split(' ');
 
             foreach (var word in words)

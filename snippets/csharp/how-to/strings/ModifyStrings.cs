@@ -112,7 +112,7 @@ namespace HowToStrings
         private static void ReplaceCharArray()
         {
             // <Snippet6>
-            string phrase = "The quick brown fox jumped over the fence";
+            string phrase = "The quick brown fox jumps over the fence";
             Console.WriteLine(phrase);
 
             char[] phraseAsChars = phrase.ToCharArray();

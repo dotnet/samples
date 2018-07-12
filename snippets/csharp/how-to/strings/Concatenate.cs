@@ -81,7 +81,7 @@ namespace HowToStrings
         private static void UsingConcatAndJoin()
         {
             // <Snippet5>
-            string[] words = { "The", "quick", "brown", "fox", "jumped", "over", "the", "lazy", "dog." };
+            string[] words = { "The", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog." };
 
             var unreadablePhrase = string.Concat(words);
             System.Console.WriteLine(unreadablePhrase);
@@ -94,7 +94,7 @@ namespace HowToStrings
         private static void UsingAggregate()
         {
             // <Snippet6>
-            string[] words = { "The", "quick", "brown", "fox", "jumped", "over", "the", "lazy", "dog." };
+            string[] words = { "The", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog." };
 
             var phrase = words.Aggregate((partialPhrase, word) =>$"{partialPhrase} {word}");
             System.Console.WriteLine(phrase);
