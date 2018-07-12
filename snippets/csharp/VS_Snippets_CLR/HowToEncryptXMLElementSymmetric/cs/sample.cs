@@ -41,10 +41,6 @@ namespace CSCrypto
 
 				
 			}
-			catch (Exception e)
-			{
-				Console.WriteLine(e.Message);
-			}
 			finally
 			{
 				// Clear the key.

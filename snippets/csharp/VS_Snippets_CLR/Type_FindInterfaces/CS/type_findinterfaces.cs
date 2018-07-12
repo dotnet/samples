@@ -46,10 +46,6 @@ public class MyFindInterfacesSample
         {
             Console.WriteLine("TargetInvocationException: " + e.Message);
         }
-        catch(Exception e)
-        {
-            Console.WriteLine("Exception: " + e.Message);
-        }
     }
       
     public static bool MyInterfaceFilter(Type typeObj,Object criteriaObj)

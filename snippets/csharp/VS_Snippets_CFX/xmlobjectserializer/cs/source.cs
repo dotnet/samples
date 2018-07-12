@@ -80,12 +80,6 @@ namespace Example
                 Console.WriteLine(qExc.Message);
                 Console.ReadLine();
             }
-            catch (Exception exc)
-            {
-                Console.WriteLine(exc.Message);
-                Console.WriteLine(exc.ToString());
-                Console.ReadLine();
-            }
         }
         //</snippet1>
     }

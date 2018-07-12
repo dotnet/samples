@@ -41,10 +41,6 @@ public class MyClass1
         {
             Console.WriteLine("SecurityException: " + e.Message);
         }
-        catch(Exception e)
-        {
-            Console.WriteLine("Exception: " + e.Message);
-        }
     }
 }
 // </Snippet1>

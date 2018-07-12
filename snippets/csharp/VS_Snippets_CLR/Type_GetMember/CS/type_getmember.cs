@@ -33,12 +33,6 @@ public class MyMemberSample
             Console.WriteLine("Source: " + e.Source);
             Console.WriteLine("Message: " + e.Message);
         }
-        catch(Exception e)
-        {
-            Console.WriteLine("Exception occurred.");
-            Console.WriteLine("Source: " + e.Source);
-            Console.WriteLine("Message: " + e.Message);
-        }
     }
 
     public void GetMemberInfo()

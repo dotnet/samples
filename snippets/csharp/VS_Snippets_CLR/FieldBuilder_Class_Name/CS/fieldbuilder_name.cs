@@ -68,8 +68,6 @@ public class FieldBuilder_Sample
    [PermissionSetAttribute(SecurityAction.Demand, Name="FullTrust")]
    public static void Main()
    {
-      try
-      {
          Type myType = CreateType(Thread.GetDomain());
          // Create an instance of the "HelloWorld" class.
          Object helloWorld = Activator.CreateInstance(myType, new Object[] { "HelloWorld" });
@@ -77,11 +75,6 @@ public class FieldBuilder_Sample
          Object myObject  = myType.InvokeMember("MyMethod",
                         BindingFlags.InvokeMethod, null, helloWorld, null);
          Console.WriteLine("MyClass.MyMethod returned: \"" + myObject + "\"");
-      }
-      catch( Exception e)
-      {
-         Console.WriteLine("Exception Caught "+e.Message);
-      }
   }
 }
 // </Snippet1>

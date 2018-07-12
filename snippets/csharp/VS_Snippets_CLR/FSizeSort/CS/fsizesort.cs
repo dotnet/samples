@@ -11,8 +11,6 @@ class DirectoryFileCount
 
     static void Main()
     {
-        try
-        {
             Console.WriteLine("Enter the path to a directory:");
 
             string directory = Console.ReadLine();
@@ -37,17 +35,6 @@ class DirectoryFileCount
             // Display the results to the console. 
             Console.WriteLine("Directories: {0}", directories);
             Console.WriteLine("Files: {0}", files);
-
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e.Message);
-        }
-        finally
-        {
-
-            Console.ReadLine();
-        }
     }
 
     static void ListDirectoriesAndFiles(FileSystemInfo[] FSInfo)

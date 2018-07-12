@@ -9,30 +9,23 @@ class Program
 {
     static void Main()
     {
-        try
-        {
-            string connectString =
-                "Data Source=OracleDemo;User ID=Mary;Password=*****";
+        string connectString =
+            "Data Source=OracleDemo;User ID=Mary;Password=*****";
 
-            OracleConnectionStringBuilder builder = new OracleConnectionStringBuilder(connectString);
-            Console.WriteLine("Original: " + builder.ConnectionString);
+        OracleConnectionStringBuilder builder = new OracleConnectionStringBuilder(connectString);
+        Console.WriteLine("Original: " + builder.ConnectionString);
 
-            // Use the Remove method
-            // in order to reset the user ID and password back to their
-            // default (empty string) values. 
-            builder.Remove("User ID");
-            builder.Remove("Password");
+        // Use the Remove method
+        // in order to reset the user ID and password back to their
+        // default (empty string) values. 
+        builder.Remove("User ID");
+        builder.Remove("Password");
 
-            // Turn on integrated security.
-            builder.IntegratedSecurity = true;
+        // Turn on integrated security.
+        builder.IntegratedSecurity = true;
 
-            Console.WriteLine("Modified: " + builder.ConnectionString);
+        Console.WriteLine("Modified: " + builder.ConnectionString);
 
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex.Message);
-        }
         Console.WriteLine("Press any key to finish.");
         Console.ReadLine();
     }

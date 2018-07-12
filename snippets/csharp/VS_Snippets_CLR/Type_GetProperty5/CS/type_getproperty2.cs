@@ -21,8 +21,6 @@ public class MyTypeClass
 {
     public static void Main()
     {
-        try
-        {
             Type myType=typeof(MyPropertyClass);
             Type[] myTypeArray = new Type[2];
             // Create an instance of the Type array representing the number, order 
@@ -35,11 +33,6 @@ public class MyTypeClass
                 typeof(int),myTypeArray,null);
             Console.WriteLine(myType.FullName + "." + myPropertyInfo.Name + 
                 " has a property type of " + myPropertyInfo.PropertyType);
-         }
-        catch(Exception ex)
-        {
-            Console.WriteLine("An exception occurred " + ex.Message);
-        }
     }
 }
 // </Snippet1>

@@ -9,8 +9,6 @@ class Test
         // Specify the directory you want to manipulate.
         string path = @"c:\MyDir";
 
-        try 
-        {
             // Determine whether the directory exists.
             if (Directory.Exists(path)) 
             {
@@ -25,12 +23,6 @@ class Test
             // Delete the directory.
             di.Delete();
             Console.WriteLine("The directory was deleted successfully.");
-        } 
-        catch (Exception e) 
-        {
-            Console.WriteLine("The process failed: {0}", e.ToString());
-        } 
-        finally {}
     }
 }
 // </Snippet1>

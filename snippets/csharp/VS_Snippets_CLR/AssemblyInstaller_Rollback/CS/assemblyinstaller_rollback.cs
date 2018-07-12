@@ -23,8 +23,6 @@ class AssemblyInstaller_Example
 
       Console.WriteLine( "" );
 
-      try
-      {
 // <Snippet2>
          // Create an object of the 'AssemblyInstaller' class.
          AssemblyInstaller myAssemblyInstaller = new AssemblyInstaller();
@@ -54,10 +52,5 @@ class AssemblyInstaller_Example
       catch( ArgumentException )
       {
       }
-      catch( Exception e )
-      {
-         Console.WriteLine( e.Message );
-      }
-
    }
 }

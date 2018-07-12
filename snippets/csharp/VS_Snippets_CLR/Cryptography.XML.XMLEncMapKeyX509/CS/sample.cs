@@ -14,17 +14,9 @@ class Program
         XmlDocument xmlDoc = new XmlDocument();
 
         // Load an XML file into the XmlDocument object.
-        try
-        {
-            xmlDoc.PreserveWhitespace = true;
-            xmlDoc.Load("test.xml");
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e.Message);
-            return;
-        }
-
+        xmlDoc.PreserveWhitespace = true;
+        xmlDoc.Load("test.xml");
+        
         // Create a new X509Certificate2 object by loading
         // an X.509 certificate file.  To use XML encryption 
         // with an X.509 certificate, use an X509Certificate2 

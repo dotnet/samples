@@ -16,9 +16,6 @@ class GetProcessesByNameClass
 {
    public static void Main(string[] args)
    {
-      try
-      {
-
          Console.Write("Create notepad processes on remote computer \n");
          Console.Write("Enter remote computer name : ");
          string remoteMachineName = Console.ReadLine();
@@ -31,16 +28,6 @@ class GetProcessesByNameClass
             Console.Write("Process Name : " + myProcess.ProcessName + "  Process ID : "
                + myProcess.Id + "  MachineName : " + myProcess.MachineName + "\n");
          }
-
-      }
-      catch(SystemException e)
-      {
-         Console.Write("Caught Exception .... : " + e.Message);
-      }
-      catch(Exception e)
-      {
-         Console.Write("Caught Exception .... : " + e.Message);
-      }
    }
 }
 // </Snippet1> 

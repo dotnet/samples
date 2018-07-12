@@ -13,16 +13,9 @@ class Program
         XmlDocument xmlDoc = new XmlDocument();
 
         // Load an XML file into the XmlDocument object.
-        try
-        {
-            xmlDoc.PreserveWhitespace = true;
-            xmlDoc.Load("test.xml");
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e.Message);
-        }
-
+        xmlDoc.PreserveWhitespace = true;
+        xmlDoc.Load("test.xml");
+        
         // Create a new TripleDES key. 
         TripleDESCryptoServiceProvider tDESkey = new TripleDESCryptoServiceProvider();
 

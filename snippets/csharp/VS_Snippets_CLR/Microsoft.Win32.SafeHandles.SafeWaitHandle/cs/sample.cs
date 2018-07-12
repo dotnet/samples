@@ -20,10 +20,6 @@ class SafeHandlesExample
 
 
         }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-        }
         finally
         {
             uMutex.Release();

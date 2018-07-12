@@ -23,8 +23,6 @@ class MyInstallClass
 
       Console.WriteLine( "" );
 
-      try
-      {
          // Set the commandline argument array for 'logfile'.
          string[] myString = new string[ 1 ];
          myString[ 0 ] = "/logFile=example.log";
@@ -47,12 +45,7 @@ class MyInstallClass
 
          // Commit the 'MyAssembly_Install' assembly.
          myAssemblyInstaller.Commit( mySavedState );
-      }
-      catch( Exception )
-      {
-      }
-
-
+      
    }
 }
 // </Snippet2>

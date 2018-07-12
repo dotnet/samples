@@ -44,8 +44,7 @@ class Sample
     UInt64   z1 = 11,    z2 = 11;
 //
     Console.WriteLine(msg, nl);
-    try 
-        {
+    
 // The second and third Show method call parameters are automatically boxed because
 // the second and third Show method declaration arguments expect type Object.
 
@@ -69,11 +68,6 @@ class Sample
         Show("UInt16:   ", x1, x2, x1.CompareTo(x2), x1.CompareTo((Object)x2));
         Show("UInt32:   ", y1, y2, y1.CompareTo(y2), y1.CompareTo((Object)y2));
         Show("UInt64:   ", z1, z2, z1.CompareTo(z2), z1.CompareTo((Object)z2));
-        }
-    catch (Exception e)
-        {
-        Console.WriteLine(e);
-        }
     }
 
     public static void Show(string caption, Object var1, Object var2, 

@@ -9,14 +9,7 @@ namespace FromFileTime
 		{			
 			System.Console.WriteLine("Enter a file's path");
 			string filePath = System.Console.ReadLine();
-			System.IO.FileInfo fInfo;
-			try {
-				fInfo = new System.IO.FileInfo(filePath);
-			}
-			catch {
-				System.Console.WriteLine("Error opening {0}", filePath);
-				return;
-			}
+		    System.IO.FileInfo fInfo = new System.IO.FileInfo(filePath);
 			long fileTime = System.Convert.ToInt64(fInfo.CreationTime.ToFileTime());
 			Class1 theApp = new Class1();
 			System.TimeSpan fileAge = theApp.FileAge(fileTime);

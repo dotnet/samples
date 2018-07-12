@@ -19,8 +19,6 @@ public class InstallerCollection_Item
 {
    public static void Main()
    {
-      try
-      {
 // <Snippet1>
          TransactedInstaller myTransactedInstaller = new TransactedInstaller();
          AssemblyInstaller myAssemblyInstaller;
@@ -59,10 +57,5 @@ public class InstallerCollection_Item
 
          // Install an assembly .
          myTransactedInstaller.Install(new Hashtable());
-      }
-      catch(Exception e)
-      {
-         Console.WriteLine("Exception raised : {0}", e.Message);
-      }
    }  
 }

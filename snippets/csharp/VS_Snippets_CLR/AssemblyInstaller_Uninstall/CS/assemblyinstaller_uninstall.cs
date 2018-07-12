@@ -54,9 +54,5 @@ class MyInstallClass
       catch( ArgumentException )
       {
       }
-      catch( Exception myException )
-      {
-         Console.WriteLine( myException.Message );
-      }
    }
 }

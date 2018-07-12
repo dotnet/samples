@@ -4,8 +4,6 @@ class MainApp
 {
     public static void Main()
     {
-        try
-        {
             // Use the ProgID HKEY_CLASSES_ROOT\DirControl.DirList.1.
             string myString1 ="DIRECT.ddPalette.3"; 
             // Use a nonexistent ProgID WrongProgID.
@@ -16,13 +14,6 @@ class MainApp
             // Throw an exception because the ProgID is invalid and the throwOnError  
             // parameter is set to True.
             Type myType2 =Type.GetTypeFromProgID(myString2,true);
-        }
-        catch(Exception e)
-        {
-            Console.WriteLine("An exception occurred.");
-            Console.WriteLine("Source: {0}", e.Source);
-            Console.WriteLine("Message: {0}", e.Message);
-        }
     }
 }
 // </Snippet1>

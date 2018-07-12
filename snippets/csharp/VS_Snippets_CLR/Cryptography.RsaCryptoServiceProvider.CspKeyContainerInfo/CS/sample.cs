@@ -71,10 +71,6 @@ public class CspKeyContainerInfoExample
 
 
         }
-        catch (Exception e)
-        {
-            Console.WriteLine(e.ToString());
-        }
         finally
         {
             // Clear the key.

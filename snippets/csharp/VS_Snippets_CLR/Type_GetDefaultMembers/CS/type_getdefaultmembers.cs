@@ -17,8 +17,6 @@ public class MyClass
     }
     public static void Main()
     {
-        try
-        {
             Type  myType = typeof(MyClass);
             MemberInfo[] memberInfoArray = myType.GetDefaultMembers();
             if (memberInfoArray.Length > 0)
@@ -40,10 +38,6 @@ public class MyClass
         catch(IOException e)
         {
             Console.WriteLine("IOException: " + e.Message);
-        }
-        catch(Exception e)
-        {
-            Console.WriteLine("Exception: " + e.Message);
         }
     }
 }

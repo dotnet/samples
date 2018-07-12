@@ -9,8 +9,6 @@ class Test
     {
         string path = @"c:\temp\MyTest.txt";
 
-        try 
-        {
             if (File.Exists(path)) 
             {
                 File.Delete(path);
@@ -29,11 +27,6 @@ class Test
                 //This allows you to do one Read operation.
                 Console.WriteLine(sr.ReadToEnd());
             }
-        } 
-        catch (Exception e) 
-        {
-            Console.WriteLine("The process failed: {0}", e.ToString());
-        }
     }
 }
 // </Snippet1>

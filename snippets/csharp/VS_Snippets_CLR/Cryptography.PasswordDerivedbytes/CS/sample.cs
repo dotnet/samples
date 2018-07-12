@@ -37,10 +37,6 @@ public class PasswordDerivedBytesExample
 
             Console.WriteLine("Operation complete.");
         }
-        catch (Exception e)
-        {
-            Console.WriteLine(e.Message);
-        }
         finally
         {
             // Clear the buffers

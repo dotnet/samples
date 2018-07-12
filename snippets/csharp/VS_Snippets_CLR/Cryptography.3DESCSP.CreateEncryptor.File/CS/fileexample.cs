@@ -9,8 +9,6 @@ class TrippleDESCSPSample
 
     static void Main()
     {
-        try
-        {
             // Create a new TripleDESCryptoServiceProvider object
             // to generate a key and initialization vector (IV).
             TripleDESCryptoServiceProvider tDESalg = new TripleDESCryptoServiceProvider();
@@ -27,12 +25,6 @@ class TrippleDESCSPSample
             
             // Display the decrypted string to the console.
             Console.WriteLine(Final);
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e.Message);
-        }
-       
     }
 
     public static void EncryptTextToFile(String Data, String FileName, byte[] Key, byte[] IV)

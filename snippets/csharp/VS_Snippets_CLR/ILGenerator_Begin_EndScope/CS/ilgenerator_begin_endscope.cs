@@ -22,8 +22,6 @@ public class ILGenerator_Begin_EndScope
    [PermissionSetAttribute(SecurityAction.Demand, Name="FullTrust")]
    public static void Main()
    {
-      try
-      {
 // <Snippet2>
 // <Snippet3>
          // Get the current AppDomain.
@@ -93,10 +91,6 @@ public class ILGenerator_Begin_EndScope
          // Invoke 'MyDynamicMethod' method of 'MyDynamicClass'.
          Object myObject2 = myType1.InvokeMember("MyDynamicMethod",
                            BindingFlags.InvokeMethod, null, myObject1, null);
-      }
-      catch(Exception e)
-      {
-         Console.WriteLine("Exception: {0}", e.Message ); 
       }
    }
 }

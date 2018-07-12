@@ -7,8 +7,6 @@ class Program
 {
     static void Main()
     {
-        try
-        {
             string connectString =
                 "Data Source=(local);User ID=ab;Password=MyPassword;" +
                 "Initial Catalog=AdventureWorks";
@@ -38,13 +36,7 @@ class Program
                 // Now use the open connection.
                 Console.WriteLine("Database = " + connection.Database);
             }
-
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex.Message);
-        }
-
+        
         Console.WriteLine("Press any key to finish.");
         Console.ReadLine();
     }

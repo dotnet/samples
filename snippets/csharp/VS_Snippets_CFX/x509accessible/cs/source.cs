@@ -11,17 +11,7 @@ namespace BasicAuthentication
     {
         static void Main()
         {
-            try
-            {
-
-                MessageSecuritWithKerberosAuth.MyService.Run();
-            }
-            catch (System.Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                //Console.WriteLine(ex.InnerException.Message);
-                Console.ReadLine();
-            }
+            MessageSecuritWithKerberosAuth.MyService.Run();
         }
 
         public static void Run()

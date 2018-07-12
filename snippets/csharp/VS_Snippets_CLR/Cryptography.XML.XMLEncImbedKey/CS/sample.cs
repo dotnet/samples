@@ -13,16 +13,8 @@ class Program
         XmlDocument xmlDoc = new XmlDocument();
 
         // Load an XML file into the XmlDocument object.
-        try
-        {
-            xmlDoc.PreserveWhitespace = true;
-            xmlDoc.Load("test.xml");
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e.Message);
-            return;
-        }
+        xmlDoc.PreserveWhitespace = true;
+        xmlDoc.Load("test.xml");
 
         // Create a new RSA key.  This key will encrypt a symmetric key,
         // which will then be imbedded in the XML document.  
@@ -49,10 +41,6 @@ class Program
             Console.WriteLine("Decrypted XML:");
             Console.WriteLine();
             Console.WriteLine(xmlDoc.OuterXml);
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e.Message);
         }
         finally
         {

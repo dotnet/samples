@@ -30,10 +30,6 @@ class MyEventExample
             Console.WriteLine("An exception occurred.");
             Console.WriteLine("Message :"+e.Message);
         }
-        catch(Exception e)
-        {
-            Console.WriteLine("The following exception was raised : {0}",e.Message);
-        }
     }
 }
 // </Snippet1>

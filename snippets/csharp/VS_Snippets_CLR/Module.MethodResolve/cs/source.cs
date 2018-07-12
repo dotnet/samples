@@ -91,16 +91,9 @@ namespace ResolveMethodExample
 
             // The overload that doesn't specify generic context throws an exception
             // because there is insufficient context to resolve the token.
-            try 
-            { 
-                miResolved2 = (MethodInfo) mod.ResolveMethod((int)Tokens.Case1);
-            } 
-            catch (Exception ex) 
-            { 
-                Console.WriteLine("{0}: {1}", ex.GetType(), ex.Message); 
-            }
-
-
+             
+            miResolved2 = (MethodInfo) mod.ResolveMethod((int)Tokens.Case1);
+            
             // Case 2: A non-generic method call that is dependent on its generic context.
             //
             // Create and display a MethodInfo representing the MemberRef of the 

@@ -56,10 +56,6 @@ public class HashDirectory
         {
             Console.WriteLine("Error: The directory specified could not be found.");
         }
-        catch (IOException)
-        {
-            Console.WriteLine("Error: A file in the directory could not be accessed.");
-        }
     }
     // Print the byte array in a readable format.
     public static void PrintByteArray(byte[] array)

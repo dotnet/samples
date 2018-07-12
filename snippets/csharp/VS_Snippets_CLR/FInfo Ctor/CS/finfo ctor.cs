@@ -31,8 +31,6 @@ class Test
             }
         }
 
-        try 
-        {
             string path2 = path + "temp";
             FileInfo fi2 = new FileInfo(path2);
 
@@ -46,12 +44,6 @@ class Test
             //Delete the newly created file.
             fi2.Delete();
             Console.WriteLine("{0} was successfully deleted.", path2);
-
-        } 
-        catch (Exception e) 
-        {
-            Console.WriteLine("The process failed: {0}", e.ToString());
-        }
     }
 }
 //This code produces output similar to the following; 

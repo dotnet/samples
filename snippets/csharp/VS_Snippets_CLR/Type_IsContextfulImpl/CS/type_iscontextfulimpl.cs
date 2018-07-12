@@ -26,8 +26,6 @@ public class MyTypeDemoClass
 {
     public static void Main()
     {
-        try
-        {
             MyTypeDelegatorClass myType;
             Console.WriteLine ("Check whether MyContextBoundClass can be hosted in a context.");
             // Check whether MyContextBoundClass is contextful.
@@ -50,12 +48,7 @@ public class MyTypeDemoClass
             else
             {
                 Console.WriteLine(typeof(MyTypeDemoClass) + " cannot be hosted in a context.");
-            }
-        }
-        catch( Exception e )
-        {
-            Console.WriteLine("Exception: {0}", e.Message);
-        }
+            }        
     }
 }
 // This class demonstrates IsContextfulImpl.

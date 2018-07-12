@@ -16,8 +16,6 @@ class MySample
 {
     public static void Main()
     {
-        try
-        {
             EventLog myNewLog = new EventLog();
             myNewLog.Log = "MyNewLog";
             myNewLog.Source = "MySource";
@@ -41,11 +39,6 @@ class MySample
             EntryWrittenEventArgs myEntryEventArgs =
                                  new EntryWrittenEventArgs(entry);
             MyOnEntry(myNewLog, myEntryEventArgs);
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine("Exception Raised" + e.Message);
-        }
     }
     // <Snippet2>
     protected static void MyOnEntry(Object source, EntryWrittenEventArgs e)

@@ -21,8 +21,6 @@ class MyEventLogEntryType
 {
     public static void Main()
     {
-        try
-        {
             EventLog myEventLog;
             string mySource = null;
             string myLog = null;
@@ -97,11 +95,6 @@ class MyEventLogEntryType
                + "is successfully written into event log.",
                myEventLog.Log, myID);
             // </Snippet2>
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine("Exception: {0}", e.Message);
-        }
     }
 }
 // </Snippet1>

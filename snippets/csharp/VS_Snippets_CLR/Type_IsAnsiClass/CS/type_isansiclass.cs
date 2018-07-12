@@ -9,8 +9,6 @@ public class MyType_IsAnsiClass
 {
     public static void Main()
     {
-        try
-        {
             MyClass myObject = new MyClass();
             // Get the type of the 'MyClass'.
             Type myType = typeof(MyClass);
@@ -19,11 +17,6 @@ public class MyType_IsAnsiClass
             Console.WriteLine( "\nChecking for the AnsiClass attribute for a field.\n"); 
             // Get and display the name, field, and the AnsiClass attribute.
             Console.WriteLine("Name of Class: {0} \nValue of Field: {1} \nIsAnsiClass = {2}", myType.FullName, myFieldInfo.GetValue(myObject), myType.IsAnsiClass);
-        }
-        catch(Exception e)
-        {
-            Console.WriteLine("Exception: {0}",e.Message);
-        }
     }
 }
 // </Snippet1>

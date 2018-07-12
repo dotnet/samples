@@ -9,9 +9,6 @@ class Test
     {
         string path = @"c:\temp\MyTest.txt";
 
-        try
-        {
-
             // Delete the file if it exists.
             if (File.Exists(path))
             {
@@ -40,12 +37,6 @@ class Test
                     Console.WriteLine(s);
                 }
             }
-        }
-
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex.ToString());
-        }
     }
 }
 // </Snippet1>

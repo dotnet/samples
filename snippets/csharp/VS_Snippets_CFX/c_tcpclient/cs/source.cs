@@ -31,13 +31,6 @@ namespace Microsoft.Security.Samples
             {
                 Console.WriteLine("Message: {0}", exc.Message);
             }
-            catch (Exception exc)
-            {
-                Console.WriteLine(exc.Message);
-                Console.WriteLine(exc.InnerException.Message);
-                Console.ReadLine();
-            }
-
         }
 
         private void NetTcpSecurityWindows()

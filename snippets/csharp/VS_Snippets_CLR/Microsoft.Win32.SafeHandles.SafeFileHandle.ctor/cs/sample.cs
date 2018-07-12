@@ -9,20 +9,9 @@ class SafeHandlesExample
 
     static void Main()
     {
-        try
-        {
+        UnmanagedFileLoader loader = new UnmanagedFileLoader("example.xml");
 
-            UnmanagedFileLoader loader = new UnmanagedFileLoader("example.xml");
-
-
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-        }
         Console.ReadLine();
-
-
     }
 }
 

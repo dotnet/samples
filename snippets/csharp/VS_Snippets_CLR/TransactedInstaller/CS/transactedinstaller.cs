@@ -37,8 +37,6 @@ public class TransactedInstaller_Example
       AssemblyInstaller myAssemblyInstaller;
       InstallContext myInstallContext;
 
-      try
-      {
          for(int i = 0; i < args.Length; i++)
          {
             // Process the arguments.
@@ -101,11 +99,7 @@ public class TransactedInstaller_Example
             myTransactedInstaller.Install(new Hashtable());
          else
             myTransactedInstaller.Uninstall(null);
-      }
-      catch(Exception e)
-      {
-         Console.WriteLine("\nException raised : {0}", e.Message);
-      }  
+        
 // </Snippet4>
 // </Snippet3>
 // </Snippet2>

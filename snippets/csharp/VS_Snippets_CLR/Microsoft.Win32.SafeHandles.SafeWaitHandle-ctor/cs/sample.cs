@@ -16,13 +16,6 @@ class SafeHandlesExample
 
             uMutex.Create();
             Console.WriteLine("Mutex created. Press Enter to release it.");
-            Console.ReadLine();
-
-
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
         }
         finally
         {

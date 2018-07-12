@@ -20,16 +20,8 @@ namespace Samples
     {
         static void Main()
         {
-            try
-            {
-                Test t = new Test();
-                t.CreateSecurityBindingElement();
-            }
-            catch (System.Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                Console.ReadLine();
-            }
+            Test t = new Test();
+            t.CreateSecurityBindingElement();
         }
 
         private SecurityBindingElement CreateSecurityBindingElement()

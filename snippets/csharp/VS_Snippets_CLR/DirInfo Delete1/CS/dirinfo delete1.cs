@@ -9,8 +9,6 @@ class Test
         // Specify the directories you want to manipulate.
         DirectoryInfo di1 = new DirectoryInfo(@"c:\MyDir");
 
-        try 
-        {
             // Create the directories.
             di1.Create();
             di1.CreateSubdirectory("temp");
@@ -19,12 +17,6 @@ class Test
             Console.WriteLine("I am about to attempt to delete {0}", di1.Name);
             di1.Delete();
             Console.WriteLine("The Delete operation was successful, which was unexpected.");
-        } 
-        catch (Exception) 
-        {
-            Console.WriteLine("The Delete operation failed as expected.");
-        } 
-        finally {}
     }
 }
 // </Snippet1>

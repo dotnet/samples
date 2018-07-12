@@ -9,8 +9,6 @@ public class SignXML
 
     public static void Main(String[] args)
     {
-        try
-        {
             // Create a new CspParameters object to specify
             // a key container.
             // <snippet2>
@@ -41,14 +39,6 @@ public class SignXML
             // <snippet13>
             xmlDoc.Save("test.xml");
             // </snippet13>
-
-
-
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e.Message);
-        }
     }
 
 

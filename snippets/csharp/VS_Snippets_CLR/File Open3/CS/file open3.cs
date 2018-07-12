@@ -33,18 +33,10 @@ class Test
                 Console.WriteLine(temp.GetString(b));
             }
 
-            try 
+            // Try to get another handle to the same file.
+            using (FileStream fs2 = File.Open(path, FileMode.Open)) 
             {
-                // Try to get another handle to the same file.
-                using (FileStream fs2 = File.Open(path, FileMode.Open)) 
-                {
-                    // Do some task here.
-                }
-            } 
-            catch (Exception e) 
-            {
-                Console.Write("Opening the file twice is disallowed.");
-                Console.WriteLine(", as expected: {0}", e.ToString());
+                // Do some task here.
             }
         }
     }

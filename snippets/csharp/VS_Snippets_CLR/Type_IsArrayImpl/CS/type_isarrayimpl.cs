@@ -26,8 +26,6 @@ public class Type_IsArrayImpl
 {
     public static void Main()
     {
-        try
-        {
             int myInt = 0 ; 
             // Create an instance of an array element.
             int[] myArray = new int[5];
@@ -45,11 +43,6 @@ public class Type_IsArrayImpl
                 Console.WriteLine("The type of myInt is {0}.", myType.myElementType);
             else
                 Console.WriteLine("myInt is not an array.");
-        }
-        catch( Exception e )
-        {
-            Console.WriteLine("Exception: {0}", e.Message );
-        }
     }
 }
 // </Snippet1>

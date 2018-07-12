@@ -31,14 +31,8 @@ class Program
         // by the particular incompatibility:
         table = GetIntegerTable();
         reader = new DataTableReader(GetStringTable());
-        try
-        {
-            table.Load(reader);
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex.GetType().Name + ":" + ex.Message);
-        }
+
+        table.Load(reader);
 
         Console.WriteLine(" ============================= ");
         Console.WriteLine(

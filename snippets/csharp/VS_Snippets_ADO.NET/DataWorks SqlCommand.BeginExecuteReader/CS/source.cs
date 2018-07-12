@@ -66,12 +66,6 @@ class Class1
             {
                 Console.WriteLine("Error: {0}", ex.Message);
             }
-            catch (Exception ex)
-            {
-                // You might want to pass these errors
-                // back out to the caller.
-                Console.WriteLine("Error: {0}", ex.Message);
-            }
         }
     }
 

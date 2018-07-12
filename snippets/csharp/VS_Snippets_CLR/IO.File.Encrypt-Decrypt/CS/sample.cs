@@ -9,8 +9,6 @@ namespace FileSystemExample
     {
         public static void Main()
         {
-            try
-            {
                 string FileName = "test.xml";
 
                 Console.WriteLine("Encrypt " + FileName);
@@ -24,12 +22,7 @@ namespace FileSystemExample
                 RemoveEncryption(FileName);
 
                 Console.WriteLine("Done");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-            }
-
+            
             Console.ReadLine();
         }
 

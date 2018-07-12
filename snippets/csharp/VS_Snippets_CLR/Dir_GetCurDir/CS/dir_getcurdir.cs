@@ -6,8 +6,6 @@ class Test
 {
     public static void Main() 
     {
-        try 
-        {
             // Get the current directory.
             string path = Directory.GetCurrentDirectory();
             string target = @"c:\temp";
@@ -27,11 +25,6 @@ class Test
             {
                 Console.WriteLine("You are not in the temp directory.");
             }
-        } 
-        catch (Exception e) 
-        {
-            Console.WriteLine("The process failed: {0}", e.ToString());
-        }
     }
 }
 // </Snippet1>

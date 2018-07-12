@@ -13,9 +13,6 @@ public class MemoryProtectionSample
 
     public static void Run()
     {
-        try
-        {
-
             ///////////////////////////////
             //
             // Memory Encryption - ProtectedMemory
@@ -75,14 +72,6 @@ public class MemoryProtectionSample
             fStream.Close();
 
             Console.WriteLine("Decrypted data: " + UnicodeEncoding.ASCII.GetString(decryptData));
-
-
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine("ERROR: " + e.Message);
-        }
-
     }
 
 

@@ -21,10 +21,6 @@ namespace XsdContractImporterExample
                 CompileCode(ccu, "Person.cs");
                 CompileCode(ccu, "Person.vb");
             }
-            catch (Exception exc)
-            {
-                Console.WriteLine("{0}: {1}", exc.Message, exc.StackTrace);
-            }
             finally
             {
                 Console.WriteLine("Press <Enter> to end....");

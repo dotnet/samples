@@ -17,8 +17,6 @@ namespace ServiceControllerSample
       [STAThread]
       static void Main()
       {
-         try 
-         {
             // This is a simple interface for exercising the snippet code.
             Console.WriteLine("Service options:");
             Console.WriteLine("  1. Ensure the Alerter service is started");
@@ -63,13 +61,6 @@ namespace ServiceControllerSample
                   // Quit if input was any other key.
                   break;
             }
-
-         }
-         catch (Exception e)
-         {
-            Console.WriteLine("Exception:");
-            Console.WriteLine(e);
-         }
       }
 
       private static void CheckAlerterServiceStarted()

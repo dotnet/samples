@@ -51,10 +51,6 @@ namespace InteropSample
          {
             Console.WriteLine("TypeLoadException : " + e.Message);
          }
-         catch(Exception e)
-         {
-            Console.WriteLine("Exception : " + e.Message);
-         }
       }
    }
 // </Snippet3>

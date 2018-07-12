@@ -9,8 +9,6 @@ namespace FileSystemExample
     {
         public static void Main()
         {
-            try
-            {
                 string FileName = "test.xml";
 
                 Console.WriteLine("Adding access control entry for " + FileName);
@@ -24,13 +22,8 @@ namespace FileSystemExample
                 RemoveFileAuditRule(FileName, @"MYDOMAIN\MyAccount", FileSystemRights.ReadData, AuditFlags.Failure);
 
                 Console.WriteLine("Done.");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-            }
-
-            Console.ReadLine();
+            
+                Console.ReadLine();
         }
 
         // Adds an ACL entry on the specified file for the specified account.

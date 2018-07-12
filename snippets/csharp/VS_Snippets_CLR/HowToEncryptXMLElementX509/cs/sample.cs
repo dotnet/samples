@@ -9,8 +9,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        try
-        {
             // Create an XmlDocument object.
             // <snippet7>
             XmlDocument xmlDoc = new XmlDocument();
@@ -71,13 +69,6 @@ class Program
             Console.WriteLine("Encrypted XML:");
             Console.WriteLine();
             Console.WriteLine(xmlDoc.OuterXml);
-
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e.Message);
-        }
-
     }
 
     public static void Encrypt(XmlDocument Doc, string ElementToEncrypt, X509Certificate2 Cert)

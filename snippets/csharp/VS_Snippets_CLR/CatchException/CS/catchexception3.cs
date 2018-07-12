@@ -17,10 +17,6 @@ public class ProcessFile
             Console.WriteLine("[Data File Missing] {0}", e);
         }
         //</snippet5>
-        catch (Exception e)
-        {
-            Console.WriteLine("An error occurred: '{0}'", e);
-        }
     }
 }
 //</snippet4>

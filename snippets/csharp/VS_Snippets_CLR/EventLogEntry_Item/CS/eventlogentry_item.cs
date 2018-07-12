@@ -20,8 +20,6 @@ class EventLogEntryCollection_Item
 {
     public static void Main()
     {
-        try
-        {
             string myLogName = "MyNewLog";
             // Check if the source exists.
             if (!EventLog.SourceExists("MySource"))
@@ -63,10 +61,5 @@ class EventLogEntryCollection_Item
             }
             // </Snippet2>
             // </Snippet1>
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine("Exception Caught!" + e.Message);
-        }
     }
 }

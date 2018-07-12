@@ -17,8 +17,6 @@ class EventLog_WriteEntry_5
 {
    public static void Main()   
    {
-      try
-      {
 // <Snippet1>
          // Create the source, if it does not already exist.
          string myLogName = "myNewLog";
@@ -56,12 +54,7 @@ class EventLog_WriteEntry_5
          Console.WriteLine("Writing to EventLog.. ");
          myEventLog.WriteEntry(myMessage,myEventLogEntryType, 
             myApplicatinEventId, myApplicatinCategoryId, myRawData);
-// </Snippet1>        
-      }
-      catch(Exception e)
-      {
-         Console.WriteLine("Exception:{0}",e.Message);
-      }
+// </Snippet1>
    }
 }
 

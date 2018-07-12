@@ -21,8 +21,6 @@ class PortCollection_Item
 {
    public static void Main()
    {
-      try
-      {
 // <Snippet1>
 // <Snippet2>
 // <Snippet3>
@@ -77,10 +75,5 @@ class PortCollection_Item
 // </Snippet2>
 // </Snippet1>
          }
-      }
-      catch(Exception ex)
-      {
-         Console.WriteLine("Exception: " + ex.Message);
-      }
    }
 }

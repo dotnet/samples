@@ -8,9 +8,7 @@ namespace FileSystemExample
     class FileExample
     {
         public static void Main()
-        {
-            try
-            {
+        {   
                 string FileName = @"c:\MyTest.txt";
 
                 Console.WriteLine("Encrypt " + FileName);
@@ -24,11 +22,6 @@ namespace FileSystemExample
                 RemoveEncryption(FileName);
 
                 Console.WriteLine("Done");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-            }
         }
 
         public static void AddEncryption(string FileName)

@@ -12,8 +12,6 @@ class Program
     {
         // Takes the executable file name without the
         // .config extension.
-        try
-        {
             // Open the configuration file and retrieve 
             // the connectionStrings section.
             Configuration config = ConfigurationManager.
@@ -39,11 +37,6 @@ class Program
 
             Console.WriteLine("Protected={0}",
                 section.SectionInformation.IsProtected);
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex.Message);
-        }
     }
     // </Snippet1>
 }

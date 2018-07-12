@@ -17,8 +17,6 @@ public class MethodBuilderClass
 {
    public static void Main()
    {
-      try
-      {
          // Get the current AppDomain.
          AppDomain myAppDomain = AppDomain.CurrentDomain;
          AssemblyName myAssemblyName = new AssemblyName();
@@ -64,11 +62,6 @@ public class MethodBuilderClass
                                     myMethodBuilder.Attributes);
          Console.WriteLine("\nThe Signature of 'MyDynamicMethod' is : \n"
                                     + myMethodBuilder.Signature);
-      }
-      catch(Exception e)
-      {
-         Console.WriteLine("Exception :{0}", e.Message);
-      }
    }
 }
 // </Snippet1>

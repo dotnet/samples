@@ -71,8 +71,6 @@ public class FieldBuilder_Sample
    [PermissionSetAttribute(SecurityAction.Demand, Name="FullTrust")]
    public static void Main()
    {
-      try
-      {
          Type myType = CreateType(Thread.GetDomain());
          Type myClass2 = myType.Module.GetType("MyClass2"); 
          object myParam2 = Activator.CreateInstance(myClass2);
@@ -81,11 +79,6 @@ public class FieldBuilder_Sample
          Object myObject  = myType.InvokeMember("OpenFile",BindingFlags.Public | 
             BindingFlags.InvokeMethod | BindingFlags.Static,null,null,myArgs);
          Console.WriteLine("MyClass.OpenFile method returned: \"{0}\"", myObject);
-      }
-      catch(Exception e)
-      {
-         Console.WriteLine("Exception Caught "+e.Message);
-      }
    }
 
 }

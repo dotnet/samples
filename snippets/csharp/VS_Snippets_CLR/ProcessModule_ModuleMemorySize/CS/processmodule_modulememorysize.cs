@@ -12,8 +12,6 @@ class MyProcessModuleClass
 {
    public static void Main()
    {
-      try
-      {
 // <Snippet1>
          Process myProcess = new Process();
          // Get the process start information of notepad.
@@ -42,11 +40,6 @@ class MyProcessModuleClass
             +myProcessModule.ModuleMemorySize); 
           myProcess.CloseMainWindow();
 // </Snippet1>
-      }
-      catch(Exception e)
-      {
-         Console.WriteLine("Exception : "+ e.Message);
-      }
    }
 }
 

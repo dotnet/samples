@@ -44,8 +44,6 @@ namespace InteropSample
    {
       public static void Main()
       {
-         try
-         {
             Bool bPointInRect = 0;
             Rect myRect = new Rect();
             myRect.left = 10;
@@ -60,11 +58,6 @@ namespace InteropSample
                Console.WriteLine("Point lies within the Rect");
             else
                Console.WriteLine("Point did not lie within the Rect");
-         }
-         catch(Exception e)
-         {
-            Console.WriteLine("Exception : " + e.Message);
-         }
       }
    }
 // </Snippet2>

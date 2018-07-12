@@ -38,8 +38,6 @@ public class Type_HasElementTypeImpl
 {
     public static void Main()
     {
-        try
-        {
             int myInt = 0 ; 
             int[] myArray = new int[5];
             MyTypeDelegator myType = new MyTypeDelegator(myArray.GetType());
@@ -55,11 +53,6 @@ public class Type_HasElementTypeImpl
                 Console.WriteLine("The type of myInt is {0}.", myType.myElementType);
             else
                 Console.WriteLine("myInt is not an array, pointer, or reference type.");
-        }
-        catch( Exception e )
-        {
-            Console.WriteLine("Exception: {0}", e.Message);
-        }
     }
 }
 // </Snippet1>

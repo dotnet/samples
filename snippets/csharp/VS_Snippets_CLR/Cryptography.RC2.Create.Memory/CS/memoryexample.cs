@@ -8,8 +8,6 @@ class RC2Sample
 {
     static void Main()
     {
-        try
-        {
             // Create a new RC2 object to generate a key
             // and initialization vector (IV).
             RC2 RC2alg = RC2.Create();
@@ -25,12 +23,6 @@ class RC2Sample
             
             // Display the decrypted string to the console.
             Console.WriteLine(Final);
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e.Message);
-        }
-       
     }
 
     public static byte[] EncryptTextToMemory(string Data,  byte[] Key, byte[] IV)

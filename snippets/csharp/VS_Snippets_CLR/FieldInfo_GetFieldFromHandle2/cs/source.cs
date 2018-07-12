@@ -23,15 +23,9 @@ public class Example
         // field handle requires the type handle of the constructed
         // generic type. An exception is thrown if the type is not
         // included.
-        try
-        {
-            FieldInfo f1 = FieldInfo.GetFieldFromHandle(rfh);
-        }
-        catch(Exception ex)
-        {
-            Console.WriteLine("{0}: {1}", ex.GetType().Name, ex.Message);
-        }
-
+        
+        FieldInfo f1 = FieldInfo.GetFieldFromHandle(rfh);
+        
         // To get the FieldInfo for a field on a generic type, use the
         // overload that specifies the type handle.
         FieldInfo fi = FieldInfo.GetFieldFromHandle(rfh, rth);

@@ -9,8 +9,6 @@ namespace FileSystemExample
     {
         public static void Main()
         {
-            try
-            {
                 string DirectoryName = "TestDirectory";
 
                 Console.WriteLine("Adding access control entry for " + DirectoryName);
@@ -24,12 +22,7 @@ namespace FileSystemExample
                 RemoveDirectorySecurity(DirectoryName, @"MYDOMAIN\MyAccount", FileSystemRights.ReadData, AccessControlType.Allow);
 
                 Console.WriteLine("Done.");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-            }
-
+         
             Console.ReadLine();
         }
 

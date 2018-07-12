@@ -30,12 +30,6 @@ namespace Example
                 Console.ReadLine();
                 
             }
-              catch (Exception exc)
-            {
-                Console.WriteLine(exc.Message);
-                Console.WriteLine(exc.ToString() );
-                Console.ReadLine();
-            }
         }
 
         private void Run()

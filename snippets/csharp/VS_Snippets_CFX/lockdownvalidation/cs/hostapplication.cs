@@ -15,15 +15,8 @@ namespace Microsoft.WCF.Documentation
     static void Main()
     {
       HostApplication app = new HostApplication();
-      try
-      {
+      
       app.Run();
-      }
-      catch(Exception ex)
-      {
-        Console.WriteLine(ex);
-        Console.Read();
-      }
     }
 
     private void Run()

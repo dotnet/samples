@@ -9,8 +9,6 @@ class Test
         // Specify the directories you want to manipulate.
         DirectoryInfo di = new DirectoryInfo(@"c:\MyDir");
 
-        try 
-        {
             // Determine whether the directory exists.
             if (di.Exists) 
             {
@@ -26,13 +24,6 @@ class Test
             // Delete the directory.
             di.Delete();
             Console.WriteLine("The directory was deleted successfully.");
-
-        } 
-        catch (Exception e) 
-        {
-            Console.WriteLine("The process failed: {0}", e.ToString());
-        } 
-        finally {}
     }
 }
 // </Snippet1>

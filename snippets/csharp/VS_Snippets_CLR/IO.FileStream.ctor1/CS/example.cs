@@ -10,8 +10,6 @@ namespace FileSystemExample
     {
         public static void Main()
         {
-            try
-            {
                 // Create a file and write data to it.
 
                 // Create an array of bytes.
@@ -50,12 +48,7 @@ namespace FileSystemExample
                 Console.WriteLine(Encoding.ASCII.GetString(readBytes));
 
                 Console.WriteLine("Done writing and reading data.");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-            }
-
+            
             Console.ReadLine();
         }
     }

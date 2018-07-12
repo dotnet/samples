@@ -8,8 +8,7 @@ class Test
     public static void Main() 
     {
         string path = @"c:\temp\MyTest.txt";
-        try 
-        {
+        
             if (File.Exists(path)) 
             {
                 File.Delete(path);
@@ -30,11 +29,6 @@ class Test
                     Console.WriteLine(sr.ReadLine());
                 }
             }
-        } 
-        catch (Exception e) 
-        {
-            Console.WriteLine("The process failed: {0}", e.ToString());
-        }
     }
 }
 // </Snippet1>

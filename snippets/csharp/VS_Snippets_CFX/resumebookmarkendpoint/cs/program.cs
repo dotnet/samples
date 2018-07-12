@@ -32,10 +32,6 @@ namespace Microsoft.Samples.WF.ResumeBookmarkEndpoint
                 Console.WriteLine("Press return to exit ...");
                 Console.ReadLine();
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex);
-            }
             finally
             {
                 if (host != null)

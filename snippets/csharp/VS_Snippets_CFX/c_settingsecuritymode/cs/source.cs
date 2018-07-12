@@ -9,18 +9,9 @@ namespace Samples
     {
         public static void Main()
         {
-            try
-            {
-                Test t = new Test();
-                //t.TcpMessageWithCredentialWindows();
-                t.AllConfig();
-            }
-            catch (System.Exception exc)
-            {
-                Console.WriteLine(exc.Message);
-                Console.ReadLine();
-            }
-            
+            Test t = new Test();
+            //t.TcpMessageWithCredentialWindows();
+            t.AllConfig();
         }
         private void AllConfig()
         {

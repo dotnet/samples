@@ -23,8 +23,6 @@ class FieldInfo_IsPrivate
 {
     public static void Main()
     {
-        try
-        {
             // Gets the type of MyClass.
             Type myType = typeof(MyClass);
 
@@ -42,11 +40,6 @@ class FieldInfo_IsPrivate
                 else
                     Console.WriteLine("{0} is not a private field.", myFields[i].Name);
             }
-        }
-        catch(Exception e)
-        {
-            Console.WriteLine("Exception : {0} " , e.Message);
-        }
     }
 }
 // </Snippet1>

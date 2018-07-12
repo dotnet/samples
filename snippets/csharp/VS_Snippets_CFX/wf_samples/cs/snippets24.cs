@@ -1230,10 +1230,6 @@ namespace WF_Snippets
 
                     waitHandle.WaitOne();
                 }
-                catch (Exception e)
-                {
-                    Console.WriteLine("Exception \n\t Source: {0} \n\t Message: {1}", e.Source, e.Message);
-                }
                 finally
                 {
                     workflowRuntime.StopRuntime();

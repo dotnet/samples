@@ -8,8 +8,7 @@ class Test
     {
         string path = @"c:\temp\MyTest.txt";
         string path2 = @"c:\temp2\MyTest.txt";
-        try 
-        {
+        
             if (!File.Exists(path)) 
             {
                 // This statement ensures that the file is created,
@@ -33,13 +32,7 @@ class Test
             else 
             {
                 Console.WriteLine("The original file no longer exists, which is expected.");
-            }			
-
-        } 
-        catch (Exception e) 
-        {
-            Console.WriteLine("The process failed: {0}", e.ToString());
-        }
+            }
     }
 }
 // </Snippet1>
