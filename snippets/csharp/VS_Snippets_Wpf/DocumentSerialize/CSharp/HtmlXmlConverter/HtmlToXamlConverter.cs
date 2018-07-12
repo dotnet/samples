@@ -481,7 +481,7 @@ namespace SdkSample
             }
 
             // Add the Paragraph to the parent
-            // If only whitespaces and commens have been encountered,
+            // If only white spaces and commens have been encountered,
             // then we have nothing to add in implicit paragraph; forget it.
             if (xamlParagraph.FirstChild != null)
             {

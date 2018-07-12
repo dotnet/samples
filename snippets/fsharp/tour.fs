@@ -120,7 +120,7 @@ module BasicFunctions =
 
     /// Conditionals use if/then/elif/else.
     ///
-    /// Note that F# uses whitespace indentation-aware syntax, similar to languages like Python.
+    /// Note that F# uses white space indentation-aware syntax, similar to languages like Python.
     let sampleFunction3 x = 
         if x < 100.0 then 
             2.0*x*x - x/5.0 + 3.0

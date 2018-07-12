@@ -23,7 +23,7 @@ namespace String_Example
             // Create a string that will be trimmed.
             string pathWhitespace = "c:/temp/  ";
 
-            // Trim whitespaces by passing null.
+            // Trim white spaces by passing null.
             string trimmedWhiteSpace = pathWhitespace.TrimEnd(null);
 
             Console.WriteLine("The trimmed value is: {0}.", trimmedWhiteSpace);

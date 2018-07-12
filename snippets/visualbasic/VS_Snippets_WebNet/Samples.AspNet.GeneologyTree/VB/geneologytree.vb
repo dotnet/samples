@@ -166,7 +166,7 @@ Namespace Samples.AspNet.VB.Controls
                 Else
                     writer.WriteLine("")
 
-                    ' Some very basic whitespace formatting.
+                    ' Some very basic white-space formatting.
                     ' The implicit conversion to an Integer is fine, as 
                     ' a general estimate is acceptable for this 
                     ' simple example.

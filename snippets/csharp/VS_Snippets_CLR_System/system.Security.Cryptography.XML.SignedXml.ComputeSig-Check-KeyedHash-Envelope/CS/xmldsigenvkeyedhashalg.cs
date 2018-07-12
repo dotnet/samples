@@ -108,7 +108,7 @@ public class SignVerifyEnvelope
         // Create a new XML document.
         XmlDocument xmlDocument = new XmlDocument();
 
-        // Format using whitespaces.
+        // Format using white spaces.
         xmlDocument.PreserveWhitespace = true;
 
         // Load the passed XML file into the document. 

@@ -19,7 +19,7 @@ Class XmlLicenseTransformExample
         Dim xmlDocument As New XmlDocument()
         Dim nsManager As New XmlNamespaceManager(xmlDocument.NameTable)
 
-        ' Format using whitespaces.
+        ' Format using white spaces.
         xmlDocument.PreserveWhitespace = True
 
         ' Load the passed XML file into the document. 

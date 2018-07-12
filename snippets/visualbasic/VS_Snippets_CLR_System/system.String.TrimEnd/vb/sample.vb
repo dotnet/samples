@@ -20,7 +20,7 @@ Module Application
         ' Create a string that will be trimmed.
         Dim pathWhitespace As String = "c:/temp/  "
 
-        ' Trim whitespaces by passing Nothing.
+        ' Trim white spaces by passing Nothing.
         Dim trimmedWhiteSpace As String = pathWhitespace.TrimEnd(Nothing)
 
         Console.WriteLine("The trimmed value is: {0}.", trimmedWhiteSpace)

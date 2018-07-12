@@ -7,7 +7,7 @@ public class Example
    public static void Main()
    {
       string input = "This is   text with   far  too   much   " + 
-                     "whitespace.";
+                     "white space.";
       string pattern = "\\s+";
       string replacement = " ";
       Regex rgx = new Regex(pattern);
@@ -18,6 +18,6 @@ public class Example
    }
 }
 // The example displays the following output:
-//       Original String: This is   text with   far  too   much   whitespace.
-//       Replacement String: This is text with far too much whitespace.
+//       Original String: This is   text with   far  too   much   white space.
+//       Replacement String: This is text with far too much white space.
 // </Snippet5>

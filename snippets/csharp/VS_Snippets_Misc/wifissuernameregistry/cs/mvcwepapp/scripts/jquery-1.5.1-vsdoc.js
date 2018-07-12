@@ -71,11 +71,11 @@ var jQuery = function( selector, context ) {
 	// Is it a simple selector
 	isSimple = /^.[^:#\[\.,]*$/,
 
-	// Check if a string has a non-whitespace character in it
+	// Check if a string has a non-white-space character in it
 	rnotwhite = /\S/,
 	rwhite = /\s/,
 
-	// Used for trimming whitespace
+	// Used for trimming white space
 	trimLeft = /^\s+/,
 	trimRight = /\s+$/,
 
@@ -753,7 +753,7 @@ jQuery.extend({
 			return null;
 		}
 
-		// Make sure leading/trailing whitespace is removed (IE can't handle it)
+		// Make sure leading/trailing white space is removed (IE can't handle it)
 		data = jQuery.trim( data );
 		
 		// Make sure the incoming data is actual JSON
@@ -1234,7 +1234,7 @@ return (window.jQuery = window.$ = jQuery);
 	//	}
 
 	jQuery.support = {
-		// IE strips leading whitespace when .innerHTML is used
+		// IE strips leading white space when .innerHTML is used
 		leadingWhitespace: false,
 
 		// Make sure that tbody elements aren't automatically inserted
@@ -6496,7 +6496,7 @@ jQuery.extend({
 				// Fix "XHTML"-style tags in all browsers
 				elem = elem.replace(rxhtmlTag, "<$1></$2>");
 
-				// Trim whitespace, otherwise indexOf won't work as expected
+				// Trim white space, otherwise indexOf won't work as expected
 				var tag = (rtagName.exec( elem ) || ["", ""])[1].toLowerCase(),
 					wrap = wrapMap[ tag ] || wrapMap._default,
 					depth = wrap[0],

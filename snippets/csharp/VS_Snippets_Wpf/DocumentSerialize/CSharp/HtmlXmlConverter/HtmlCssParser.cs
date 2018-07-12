@@ -199,7 +199,7 @@ namespace SdkSample
         //
         // .................................................................
 
-        // Skips whitespaces in style values
+        // Skips white spaces in style values
         private static void ParseWhiteSpace(string styleValue, ref int nextIndex)
         {
             while (nextIndex < styleValue.Length && Char.IsWhiteSpace(styleValue[nextIndex]))
