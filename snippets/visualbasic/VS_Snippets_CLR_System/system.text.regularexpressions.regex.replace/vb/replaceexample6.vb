@@ -7,7 +7,7 @@ Imports System.Text.RegularExpressions
 Module Example
    Public Sub Main()
       Dim input As String = "This is   text with   far  too   much   " + _
-                            "whitespace."
+                            "white space."
       Dim pattern As String = "\s+"
       Dim replacement As String = " "
       Dim result As String = Regex.Replace(input, pattern, replacement)
@@ -17,6 +17,6 @@ Module Example
    End Sub
 End Module
 ' The example displays the following output:
-'          Original String: This is   text with   far  too   much   whitespace.
-'          Replacement String: This is text with far too much whitespace.
+'          Original String: This is   text with   far  too   much   white space.
+'          Replacement String: This is text with far too much white space.
 ' </Snippet6>

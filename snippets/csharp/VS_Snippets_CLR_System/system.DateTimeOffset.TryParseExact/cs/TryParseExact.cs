@@ -29,7 +29,7 @@ public class Class1
          Console.WriteLine("'{0}' is not in the correct format.", dateString);
       
       // Parse date-only value with leading white space.
-      // Should return False because only trailing whitespace is  
+      // Should return False because only trailing white space is  
       // specified in method call.
       dateString = " 06/15/2008";
       if (DateTimeOffset.TryParseExact(dateString, format, provider, 

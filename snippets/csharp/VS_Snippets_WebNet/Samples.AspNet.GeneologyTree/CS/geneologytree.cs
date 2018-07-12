@@ -152,7 +152,7 @@ namespace Samples.AspNet.CS.Controls {
                 }
                 else {
                     writer.WriteLine("");
-                    // Some very basic whitespace formatting
+                    // Some very basic white-space formatting
                     int halfLine = currentTextLen / 2;
                     for (int i=0;i<halfLine;i++) {
                         writer.Write(' ');

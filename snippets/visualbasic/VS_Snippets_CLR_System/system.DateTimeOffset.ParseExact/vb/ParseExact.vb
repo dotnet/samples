@@ -87,7 +87,7 @@ Module modMain
       End Try 
       
       ' Parse date-only value with leading white space.
-      ' Should throw a FormatException because only trailing whitespace is  
+      ' Should throw a FormatException because only trailing white space is  
       ' specified in method call.
       dateString = " 06/15/2008"
       Try

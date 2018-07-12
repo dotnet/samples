@@ -73,7 +73,7 @@ Boolean VerifyXmlFile( String^ Name, KeyedHashAlgorithm^ Key )
    // Create a new XML document.
    XmlDocument^ xmlDocument = gcnew XmlDocument;
    
-   // Format using whitespaces.
+   // Format using white spaces.
    xmlDocument->PreserveWhitespace = true;
    
    // Load the passed XML file into the document. 

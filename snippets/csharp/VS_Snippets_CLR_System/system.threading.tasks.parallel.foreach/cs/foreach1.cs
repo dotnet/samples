@@ -30,7 +30,7 @@ public class Example
                                                    } );
       Console.WriteLine("Total characters:      {0,10:N0}", text.Length);
       Console.WriteLine("Total vowels:          {0,10:N0}", nVowels);
-      Console.WriteLine("Total non-whitespace:  {0,10:N0}", nNonWhiteSpace);
+      Console.WriteLine("Total non-white-space:  {0,10:N0}", nNonWhiteSpace);
    }
 
    private static async Task<String> ReadCharacters(String fn)
@@ -45,5 +45,5 @@ public class Example
 // The example displays output like the following:
 //       Total characters:         198,548
 //       Total vowels:              58,421
-//       Total non-whitespace:     159,461
+//       Total non-white-space:     159,461
 // </Snippet1>

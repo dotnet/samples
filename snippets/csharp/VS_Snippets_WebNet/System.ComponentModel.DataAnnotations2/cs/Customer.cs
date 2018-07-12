@@ -45,7 +45,7 @@ public class CustomerMetaData {
 \D Matches a non-digit [^0-9] 
 \w Matches a word character, alphanumeric [a-zA-Z0-9] 
 \W Matches a non-word character, non-alphanumeric    [^a-zA-Z0-9] 
-\s Matches a whitespace character [ \t\r\n\f] 
-\S Matches a non-whitespace character [^ \t\r\n\f] 
+\s Matches a white-space character [ \t\r\n\f] 
+\S Matches a non-white-space character [^ \t\r\n\f] 
 
 */

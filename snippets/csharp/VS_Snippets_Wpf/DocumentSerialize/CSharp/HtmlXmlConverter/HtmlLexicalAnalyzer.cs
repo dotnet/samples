@@ -18,7 +18,7 @@ namespace SdkSample
 {
     /// <summary>
     /// lexical analyzer class
-    /// recognizes tokens as groups of characters separated by arbitrary amounts of whitespace
+    /// recognizes tokens as groups of characters separated by arbitrary amounts of white space
     /// also classifies tokens according to type
     /// </summary>
     internal class HtmlLexicalAnalyzer
@@ -91,13 +91,13 @@ namespace SdkSample
 
                     // advance
                     this.GetNextCharacter();
-                    _ignoreNextWhitespace = false; // Whitespaces after closing tags are significant
+                    _ignoreNextWhitespace = false; // White spaces after closing tags are significant
                 }
                 else
                 {
                     _nextTokenType = HtmlTokenType.OpeningTagStart;
                     _nextToken.Append("<");
-                    _ignoreNextWhitespace = true; // Whitespaces after opening tags are insignificant
+                    _ignoreNextWhitespace = true; // White spaces after opening tags are insignificant
                 }
             }
             else if (this.IsAtDirectiveStart)
@@ -135,17 +135,17 @@ namespace SdkSample
                     {
                         if (this.NextCharacter <= ' ')
                         {
-                            // TODO: Respect xml:preserve or its equivalents for whitespace processing
+                            // TODO: Respect xml:preserve or its equivalents for white-space processing
                             if (_ignoreNextWhitespace)
                             {
-                                // Ignore repeated whitespaces
+                                // Ignore repeated white spaces
                             }
                             else
                             {
-                                // Treat any control character sequence as one whitespace
+                                // Treat any control character sequence as one white space
                                 _nextToken.Append(' ');
                             }
-                            _ignoreNextWhitespace = true; // and keep ignoring the following whitespaces
+                            _ignoreNextWhitespace = true; // and keep ignoring the following white spaces
                         }
                         else
                         {
@@ -188,7 +188,7 @@ namespace SdkSample
                 _nextToken.Append("/>");
                 this.GetNextCharacter();
                 this.GetNextCharacter();
-                _ignoreNextWhitespace = false; // Whitespace after no-scope tags are sifnificant
+                _ignoreNextWhitespace = false; // White space after no-scope tags are significant
             }
             else if (IsGoodForNameStart(this.NextCharacter))
             {
@@ -441,8 +441,8 @@ namespace SdkSample
         }
 
         /// <summary>
-        /// skips whitespace in the input string
-        /// leaves the first non-whitespace character available in the NextCharacter property
+        /// skips white space in the input string
+        /// leaves the first non-white-space character available in the NextCharacter property
         /// this may be the end-of-file character, it performs no checking 
         /// </summary>
         private void SkipWhiteSpace()

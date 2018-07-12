@@ -19,7 +19,7 @@ namespace XMLDSIGExample
             XmlDocument xmlDocument = new XmlDocument();
             XmlNamespaceManager nsManager = new XmlNamespaceManager(xmlDocument.NameTable);
 
-            // Format using whitespaces.
+            // Format using white spaces.
             xmlDocument.PreserveWhitespace = true;
 
             // Load the passed XML file into the document. 
