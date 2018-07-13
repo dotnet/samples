@@ -245,7 +245,11 @@ namespace CompositeImages
                      count++;
                   }
                }
-
+               
+               //prevent divide by zero in bottom right pixelless corner
+               if (count == 0)
+                   break;
+                   
                unsafe
                {
                   // Compute the average of each color component.
