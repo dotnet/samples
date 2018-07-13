@@ -30,7 +30,7 @@ Module modMain
       End If 
       
       ' Parse date-only value with leading white space.
-      ' Should return False because only trailing whitespace is  
+      ' Should return False because only trailing white space is  
       ' specified in method call.
       dateString = " 06/15/2008"
       If DateTimeOffset.TryParseExact(dateString, format, provider, _

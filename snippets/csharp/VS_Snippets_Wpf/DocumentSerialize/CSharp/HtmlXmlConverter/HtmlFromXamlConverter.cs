@@ -538,7 +538,7 @@ namespace SdkSample
 					    {
 						    return true;
 					    }
-					    // ignore insignificant whitespace
+					    // ignore insignificant white space
 					    break;
 
 				    case XmlNodeType.EndEntity:

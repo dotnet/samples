@@ -41,10 +41,10 @@ var jQuery = function( selector, context ) {
 	// (both of which we optimize for)
 	quickExpr = /^(?:[^<]*(<[\w\W]+>)[^>]*$|#([\w\-]+)$)/,
 
-	// Check if a string has a non-whitespace character in it
+	// Check if a string has a non-white-space character in it
 	rnotwhite = /\S/,
 
-	// Used for trimming whitespace
+	// Used for trimming white space
 	trimLeft = /^\s+/,
 	trimRight = /\s+$/,
 
@@ -540,7 +540,7 @@ jQuery.extend({
 			return null;
 		}
 
-		// Make sure leading/trailing whitespace is removed (IE can't handle it)
+		// Make sure leading/trailing white space is removed (IE can't handle it)
 		data = jQuery.trim( data );
 
 		// Make sure the incoming data is actual JSON
@@ -1114,7 +1114,7 @@ return jQuery;
 	}
 
 	jQuery.support = {
-		// IE strips leading whitespace when .innerHTML is used
+		// IE strips leading white space when .innerHTML is used
 		leadingWhitespace: div.firstChild.nodeType === 3,
 
 		// Make sure that tbody elements aren't automatically inserted
@@ -5583,7 +5583,7 @@ jQuery.extend({
 				// Fix "XHTML"-style tags in all browsers
 				elem = elem.replace(rxhtmlTag, "<$1></$2>");
 
-				// Trim whitespace, otherwise indexOf won't work as expected
+				// Trim white space, otherwise indexOf won't work as expected
 				var tag = (rtagName.exec( elem ) || ["", ""])[1].toLowerCase(),
 					wrap = wrapMap[ tag ] || wrapMap._default,
 					depth = wrap[0],
@@ -5618,7 +5618,7 @@ jQuery.extend({
 
 				}
 
-				// IE completely kills leading whitespace when innerHTML is used
+				// IE completely kills leading white space when innerHTML is used
 				if ( !jQuery.support.leadingWhitespace && rleadingWhitespace.test( elem ) ) {
 					div.insertBefore( context.createTextNode( rleadingWhitespace.exec(elem)[0] ), div.firstChild );
 				}

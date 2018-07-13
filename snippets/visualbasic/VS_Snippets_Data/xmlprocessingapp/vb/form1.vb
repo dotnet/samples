@@ -21,7 +21,7 @@ Public Class Form1
 
     '************************************************************************************
     '
-    ' Load Xml from file. Keep whitespaces and newlines.
+    ' Load Xml from file. Keep white spaces and newlines.
     ' Then, call a method to populate a tree view control with the elements of the XML.
     '
     '************************************************************************************

@@ -102,7 +102,7 @@ Public Class SignVerifyEnvelope
       ' Create a new XML document.
       Dim xmlDocument As New XmlDocument()
       
-      ' Format using whitespaces.
+      ' Format using white spaces.
       xmlDocument.PreserveWhitespace = True
       
       ' Load the passed XML file into the document. 

@@ -80,7 +80,7 @@ var
 	// Used for matching numbers
 	core_pnum = /[+-]?(?:\d*\.|)\d+(?:[eE][+-]?\d+|)/.source,
 
-	// Used for splitting on whitespace
+	// Used for splitting on white space
 	core_rnotwhite = /\S+/g,
 
 	// Make sure we trim BOM and NBSP (here's looking at you, Safari 5.0 and IE)
@@ -570,7 +570,7 @@ jQuery.extend({
 
 		if ( typeof data === "string" ) {
 
-			// Make sure leading/trailing whitespace is removed (IE can't handle it)
+			// Make sure leading/trailing white space is removed (IE can't handle it)
 			data = jQuery.trim( data );
 
 			if ( data ) {
@@ -1089,7 +1089,7 @@ var i,
 
 	// Regular expressions
 
-	// Whitespace characters http://www.w3.org/TR/css3-selectors/#whitespace
+	// White-space characters http://www.w3.org/TR/css3-selectors/#whitespace
 	whitespace = "[\\x20\\t\\r\\n\\f]",
 	// http://www.w3.org/TR/css3-syntax/#characters
 	characterEncoding = "(?:\\\\.|[\\w-]|[^\\x00-\\xa0])+",
@@ -1111,7 +1111,7 @@ var i,
 	//   needing tokenize in the PSEUDO preFilter
 	pseudos = ":(" + characterEncoding + ")(?:\\(((['\"])((?:\\\\.|[^\\\\])*?)\\3|((?:\\\\.|[^\\\\()[\\]]|" + attributes.replace( 3, 8 ) + ")*)|.*)\\)|)",
 
-	// Leading and non-escaped trailing whitespace, capturing some non-whitespace characters preceding the latter
+	// Leading and non-escaped trailing white space, capturing some non-white-space characters preceding the latter
 	rtrim = new RegExp( "^" + whitespace + "+|((?:^|[^\\\\])(?:\\\\.)*)" + whitespace + "+$", "g" ),
 
 	rcomma = new RegExp( "^" + whitespace + "*," + whitespace + "*" ),
@@ -3356,7 +3356,7 @@ jQuery.support = (function( support ) {
 	// Test setAttribute on camelCase class. If it works, we need attrFixes when doing get/setAttribute (ie6/7)
 	support.getSetAttribute = div.className !== "t";
 
-	// IE strips leading whitespace when .innerHTML is used
+	// IE strips leading white space when .innerHTML is used
 	support.leadingWhitespace = div.firstChild.nodeType === 3;
 
 	// Make sure that tbody elements aren't automatically inserted
@@ -6588,7 +6588,7 @@ jQuery.extend({
 						tmp = tmp.lastChild;
 					}
 
-					// Manually add leading whitespace removed by IE
+					// Manually add leading white space removed by IE
 					if ( !jQuery.support.leadingWhitespace && rleadingWhitespace.test( elem ) ) {
 						nodes.push( context.createTextNode( rleadingWhitespace.exec( elem )[0] ) );
 					}

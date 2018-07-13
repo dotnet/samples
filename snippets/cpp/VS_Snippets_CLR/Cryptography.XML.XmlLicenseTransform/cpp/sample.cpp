@@ -15,7 +15,7 @@ void CheckSignatureWithEncryptedGrant(
     XmlNamespaceManager^ namespaceManager =
         gcnew XmlNamespaceManager(sourceDocument->NameTable);
 
-    // Format using whitespaces.
+    // Format using white spaces.
     sourceDocument->PreserveWhitespace = true;
 
     // Load the passed XML file into the document.

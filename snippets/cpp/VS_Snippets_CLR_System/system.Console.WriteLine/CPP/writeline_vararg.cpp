@@ -11,7 +11,7 @@ void main()
    
    Console::WriteLine("The string '{0}' consists of:" +
                       "{4}{1} characters{4}{2} letters{4}" +
-                      "{3} whitespace characters", 
+                      "{3} white-space characters", 
                       value, value->Length, CountLetters(value), 
                       CountWhitespace(value), Environment::NewLine);
 }
@@ -39,5 +39,5 @@ int CountWhitespace(String^ value)
 //    The string 'This is a test string.' consists of:
 //    22 characters
 //    17 letters
-//    4 whitespace characters
+//    4 white-space characters
 // </Snippet5>

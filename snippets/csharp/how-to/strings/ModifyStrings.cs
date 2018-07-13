@@ -48,7 +48,7 @@ namespace HowToStrings
         private static void TrimWhitespace()
         {
             // <Snippet3>
-            // Remove trailing and leading whitespace.
+            // Remove trailing and leading white space.
             string source = "    I'm wider than I need to be.      ";
             // Store the results in a new string variable.
             var trimmedResult = source.Trim();
@@ -112,7 +112,7 @@ namespace HowToStrings
         private static void ReplaceCharArray()
         {
             // <Snippet6>
-            string phrase = "The quick brown fox jumped over the fence";
+            string phrase = "The quick brown fox jumps over the fence";
             Console.WriteLine(phrase);
 
             char[] phraseAsChars = phrase.ToCharArray();

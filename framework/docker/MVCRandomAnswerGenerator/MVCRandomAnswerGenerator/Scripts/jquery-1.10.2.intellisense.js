@@ -399,7 +399,7 @@ intellisense.annotate(jQuery, {
   },
   'trim': function() {
     /// <signature>
-    ///   <summary>Remove the whitespace from the beginning and end of a string.</summary>
+    ///   <summary>Remove the white space from the beginning and end of a string.</summary>
     ///   <param name="str" type="String">The string to trim.</param>
     ///   <returns type="String" />
     /// </signature>
