@@ -5,7 +5,7 @@ Imports System.AddIn.Pipeline
 Namespace CalculatorContracts
 
     ' <Snippet2>
-    ' The AddInContractAttribute identifes this pipeline segment as a
+    ' The AddInContractAttribute identifies this pipeline segment as a
     ' contract.
     <AddInContract()> _
     Public Interface ICalc1Contract
