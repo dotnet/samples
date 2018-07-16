@@ -227,7 +227,7 @@ namespace csrefKeywordsModifiers
     public class SampleEventArgs
     {
         public SampleEventArgs(string s) { Text = s; }
-        public String Text {get; private set;} // readonly
+        public String Text { get; } // readonly
     }
     public class Publisher
     {
