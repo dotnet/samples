@@ -13,7 +13,7 @@ Public Class SamplesArray
       myArr(1) = "quick"
       myArr(2) = "brown"
       myArr(3) = "fox"
-      myArr(4) = "jumped"
+      myArr(4) = "jumps"
       myArr(5) = "over"
       myArr(6) = "the"
       myArr(7) = "lazy"
@@ -40,7 +40,7 @@ End Class 'SamplesArray
 '[1] quick
 '[2] brown
 '[3] fox
-'[4] jumped
+'[4] jumps
 '[5] over
 '[6] the
 '[7] lazy

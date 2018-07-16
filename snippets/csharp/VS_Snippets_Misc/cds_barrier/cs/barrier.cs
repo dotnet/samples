@@ -11,9 +11,9 @@ namespace BarrierSimple
 {
     class Program
     {
-        static string[] words1 = new string[] { "brown",  "jumped", "the", "fox", "quick"};
+        static string[] words1 = new string[] { "brown",  "jumps", "the", "fox", "quick"};
         static string[] words2 = new string[] { "dog", "lazy","the","over"};
-        static string solution = "the quick brown fox jumped over the lazy dog.";
+        static string solution = "the quick brown fox jumps over the lazy dog.";
 
         static bool success = false;
         static Barrier barrier = new Barrier(2, (b) =>

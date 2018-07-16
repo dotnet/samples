@@ -76,7 +76,7 @@ Namespace WindowsApplication1
 			Dim drawingContext As DrawingContext = myTextDisplay.Open()
 
 			' Update the text store.
-			customTextSource.Text = "The quick red fox jumped over the lazy brown dog."
+			customTextSource.Text = "The quick red fox jumps over the lazy brown dog."
 
 			' Create a TextFormatter object.
 			Dim formatter As TextFormatter = TextFormatter.Create()

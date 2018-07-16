@@ -12,7 +12,7 @@ int main()
    myAL->Add( "quick" );
    myAL->Add( "brown" );
    myAL->Add( "fox" );
-   myAL->Add( "jumped" );
+   myAL->Add( "jumps" );
    myAL->Add( "over" );
    myAL->Add( "the" );
    myAL->Add( "lazy" );
@@ -54,8 +54,8 @@ void PrintValues( IEnumerable^ myList, char mySeparator )
  This code produces the following output.
  
  Index 0 through 4 contains:
-         The     quick   brown   fox     jumped
+         The     quick   brown   fox     jumps
  Index 0 through 4 now contains:
-         The     big     gray    wolf    jumped
+         The     big     gray    wolf    jumps
  */
 // </Snippet1>

@@ -14,7 +14,7 @@ public class SamplesArrayList  {
       myAL.Add( "quick" );
       myAL.Add( "brown" );
       myAL.Add( "fox" );
-      myAL.Add( "jumped" );
+      myAL.Add( "jumps" );
       myAL.Add( "over" );
       myAL.Add( "the" );
       myAL.Add( "lazy" );
@@ -56,7 +56,7 @@ The ArrayList contains the following values:
         [1]:    quick
         [2]:    brown
         [3]:    fox
-        [4]:    jumped
+        [4]:    jumps
         [5]:    over
         [6]:    the
         [7]:    lazy
@@ -67,7 +67,7 @@ The string array contains the following values:
         [1]:    quick
         [2]:    brown
         [3]:    fox
-        [4]:    jumped
+        [4]:    jumps
         [5]:    over
         [6]:    the
         [7]:    lazy

@@ -25,7 +25,7 @@ namespace Extension_Methods_Simple
     {
         static void Main(string[] args)
         {
-            string s = "The quick brown fox jumped over the lazy dog.";
+            string s = "The quick brown fox jumps over the lazy dog.";
             //  Call the method as if it were an 
             //  instance method on the type. Note that the first
             //  parameter is not specified by the calling code.

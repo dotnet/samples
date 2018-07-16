@@ -17,7 +17,7 @@ int main()
    mySourceList->Add( 5, "barn" );
    
    // Creates and initializes the one-dimensional target Array.
-   array<String^>^tempArray = {"The","quick","brown","fox","jumped","over","the","lazy","dog"};
+   array<String^>^tempArray = {"The","quick","brown","fox","jumps","over","the","lazy","dog"};
    array<DictionaryEntry>^myTargetArray = gcnew array<DictionaryEntry>(15);
    int i = 0;
    IEnumerator^ myEnum = tempArray->GetEnumerator();
@@ -52,8 +52,8 @@ void PrintValues( array<DictionaryEntry>^ myArr, Char mySeparator )
 This code produces the following output.
  
 The target Array contains the following (before and after copying):
- The quick brown fox jumped over the lazy dog      
- The quick brown fox jumped over three napping cats in the barn
+ The quick brown fox jumps over the lazy dog      
+ The quick brown fox jumps over three napping cats in the barn
 
 */
 // </Snippet1>

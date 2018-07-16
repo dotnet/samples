@@ -29,7 +29,7 @@ int main()
    mySL->Add( "3a", "the" );
    mySL->Add( "3b", "lazy" );
    mySL->Add( "2a", "fox" );
-   mySL->Add( "2b", "jumped" );
+   mySL->Add( "2b", "jumps" );
    
    // Displays the SortedList.
    Console::WriteLine( "The SortedList initially contains the following:" );
@@ -59,7 +59,7 @@ The SortedList initially contains the following:
         1b:     quick
         1c:     brown
         2a:     fox
-        2b:     jumped
+        2b:     jumps
         2c:     over
         3a:     the
         3b:     lazy
@@ -71,7 +71,7 @@ After removing "lazy":
         1b:     quick
         1c:     brown
         2a:     fox
-        2b:     jumped
+        2b:     jumps
         2c:     over
         3a:     the
         3c:     dog
@@ -82,7 +82,7 @@ After removing the element at index 5:
         1b:     quick
         1c:     brown
         2a:     fox
-        2b:     jumped
+        2b:     jumps
         3a:     the
         3c:     dog
 */

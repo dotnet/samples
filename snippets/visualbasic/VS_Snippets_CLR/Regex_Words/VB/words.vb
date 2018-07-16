@@ -15,7 +15,7 @@ Public Module Test
 ' </Snippet1>
 
         ' Define a test string.        
-        Dim text As String = "The the quick brown fox  fox jumped over the lazy dog dog."
+        Dim text As String = "The the quick brown fox  fox jumps over the lazy dog dog."
         
 ' <Snippet2>
         ' Find matches.
@@ -42,7 +42,7 @@ Public Module Test
 End Module
 ' The example produces the following output to the console:
 '       3 matches found in:
-'          The the quick brown fox  fox jumped over the lazy dog dog.
+'          The the quick brown fox  fox jumps over the lazy dog dog.
 '       'The' repeated at positions 0 and 4
 '       'fox' repeated at positions 20 and 25
 '       'dog' repeated at positions 50 and 54

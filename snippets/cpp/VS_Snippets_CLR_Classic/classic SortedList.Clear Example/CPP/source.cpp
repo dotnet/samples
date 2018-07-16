@@ -25,7 +25,7 @@ int main()
    mySL->Add( "two", "quick" );
    mySL->Add( "three", "brown" );
    mySL->Add( "four", "fox" );
-   mySL->Add( "five", "jumped" );
+   mySL->Add( "five", "jumps" );
    
    // Displays the count, capacity and values of the SortedList.
    Console::WriteLine(  "Initially," );
@@ -73,7 +73,7 @@ Initially,
    Capacity : 16
    Values:
         -KEY-   -VALUE-
-        five:   jumped
+        five:   jumps
         four:   fox
         one:    The
         three:  brown
@@ -84,7 +84,7 @@ After TrimToSize,
    Capacity : 5
    Values:
         -KEY-   -VALUE-
-        five:   jumped
+        five:   jumps
         four:   fox
         one:    The
         three:  brown

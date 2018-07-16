@@ -13,7 +13,7 @@ Public Class SamplesArrayList
         myAL.Add("quick")
         myAL.Add("brown")
         myAL.Add("fox")
-        myAL.Add("jumped")
+        myAL.Add("jumps")
         
         ' Displays the count, capacity and values of the ArrayList.
         Console.WriteLine("Initially,")
@@ -68,11 +68,11 @@ End Class
 ' Initially,
 '    Count    : 5
 '    Capacity : 16
-'    Values:    The    quick    brown    fox    jumped
+'    Values:    The    quick    brown    fox    jumps
 ' After TrimToSize,
 '    Count    : 5
 '    Capacity : 5
-'    Values:    The    quick    brown    fox    jumped
+'    Values:    The    quick    brown    fox    jumps
 ' After Clear,
 '    Count    : 0
 '    Capacity : 5
