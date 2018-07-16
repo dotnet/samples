@@ -6,7 +6,7 @@ Imports Calc1Contract.CalculatorContracts
 Namespace CalcAddInSideAdapters
 
     ' <Snippet2>
-    ' The AddInAdapterAttribute identifes this class as the add-in-side 
+    ' The AddInAdapterAttribute identifies this class as the add-in-side 
     ' adapter pipeline segment.
     <AddInAdapter()> _
     Public Class CalculatorViewToContractAddInSideAdapter
