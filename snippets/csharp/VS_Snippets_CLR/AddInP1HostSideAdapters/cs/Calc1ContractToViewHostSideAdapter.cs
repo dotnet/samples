@@ -6,7 +6,7 @@ using CalculatorContracts;
 namespace CalcHostSideAdapters 
 {
     // <Snippet2>
-    // The HostAdapterAttribute identifes this class as the host-side adapter
+    // The HostAdapterAttribute identifies this class as the host-side adapter
     // pipeline segment.
     [HostAdapterAttribute()]
     public class CalculatorContractToViewHostSideAdapter : ICalculator 
