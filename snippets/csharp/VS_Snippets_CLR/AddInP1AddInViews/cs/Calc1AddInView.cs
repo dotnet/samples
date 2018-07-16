@@ -4,7 +4,7 @@ using System.AddIn.Pipeline;
 namespace CalcAddInViews 
 {
     // <Snippet2>
-    // The AddInBaseAttribute identifes this interface as the basis for
+    // The AddInBaseAttribute identifies this interface as the basis for
     // the add-in view pipeline segment.
     [AddInBase()]
     public interface ICalculator 
