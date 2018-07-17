@@ -31,6 +31,7 @@
     {
         public static void Main(string[] args)
         {
+            // <SnippetReadAttributes>
             Type widgetType = typeof(Widget);
 
             //Gets every HelpAttribute defined for the Widget type
@@ -54,6 +55,7 @@
             }
 
             Console.ReadLine();
+            // </SnippetReadAttributes>
         }
     }
 }
