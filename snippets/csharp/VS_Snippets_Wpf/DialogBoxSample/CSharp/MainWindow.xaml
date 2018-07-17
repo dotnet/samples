@@ -46,7 +46,7 @@
       AcceptsReturn="True" 
       AcceptsTab="True" 
       BorderThickness="0" >
-      The quick brown fox jumped over the lazy old brown dog.
+      The quick brown fox jumps over the lazy old brown dog.
     </TextBox>
 
   </DockPanel>

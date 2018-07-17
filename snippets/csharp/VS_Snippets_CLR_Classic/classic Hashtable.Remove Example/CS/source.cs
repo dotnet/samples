@@ -11,7 +11,7 @@
        myHT.Add( "1b", "quick" );
        myHT.Add( "1c", "brown" );
        myHT.Add( "2a", "fox" );
-       myHT.Add( "2b", "jumped" );
+       myHT.Add( "2b", "jumps" );
        myHT.Add( "2c", "over" );
        myHT.Add( "3a", "the" );
        myHT.Add( "3b", "lazy" );
@@ -45,7 +45,7 @@
  The Hashtable initially contains the following:
      2c:    over
      3a:    the
-     2b:    jumped
+     2b:    jumps
      3b:    lazy
      1b:    quick
      3c:    dog
@@ -56,7 +56,7 @@
  After removing "lazy":
      2c:    over
      3a:    the
-     2b:    jumped
+     2b:    jumps
      1b:    quick
      3c:    dog
      2a:    fox

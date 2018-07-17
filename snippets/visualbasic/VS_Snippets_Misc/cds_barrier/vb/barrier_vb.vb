@@ -8,9 +8,9 @@ Imports System.Threading.Tasks
 
 
     Class Program
-        Shared words1() = New String() {"brown", "jumped", "the", "fox", "quick"}
+        Shared words1() = New String() {"brown", "jumps", "the", "fox", "quick"}
         Shared words2() = New String() {"dog", "lazy", "the", "over"}
-        Shared solution = "the quick brown fox jumped over the lazy dog."
+        Shared solution = "the quick brown fox jumps over the lazy dog."
 
         Shared success = False
         Shared barrier = New Barrier(2, Sub(b)

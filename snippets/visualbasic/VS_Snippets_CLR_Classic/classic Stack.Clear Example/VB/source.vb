@@ -13,7 +13,7 @@ Public Class SamplesStack
         myStack.Push("quick")
         myStack.Push("brown")
         myStack.Push("fox")
-        myStack.Push("jumped")
+        myStack.Push("jumps")
         
         ' Displays the count and values of the Stack.
         Console.WriteLine("Initially,")
@@ -47,7 +47,7 @@ End Class
 ' 
 ' Initially,
 '    Count    : 5
-'    Values:    jumped    fox    brown    quick    The
+'    Values:    jumps    fox    brown    quick    The
 ' After Clear,
 '    Count    : 0
 '    Values:

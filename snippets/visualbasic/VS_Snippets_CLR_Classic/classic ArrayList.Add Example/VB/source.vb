@@ -16,7 +16,7 @@ Public Class SamplesArrayList
         
         ' Creates and initializes a new Queue.
         Dim myQueue As New Queue()
-        myQueue.Enqueue("jumped")
+        myQueue.Enqueue("jumps")
         myQueue.Enqueue("over")
         myQueue.Enqueue("the")
         myQueue.Enqueue("lazy")
@@ -52,7 +52,7 @@ End Class
 ' The ArrayList initially contains the following:
 '     The    quick    brown    fox
 ' The Queue initially contains the following:
-'     jumped    over    the    lazy    dog
+'     jumps    over    the    lazy    dog
 ' The ArrayList now contains the following:
-'     The    quick    brown    fox    jumped    over    the    lazy    dog 
+'     The    quick    brown    fox    jumps    over    the    lazy    dog 
 ' </Snippet1>

@@ -14,7 +14,7 @@ public class Test
           RegexOptions.Compiled);
 
         // Define a test string.        
-        string text = "The the quick brown fox  fox jumped over the lazy dog dog.";
+        string text = "The the quick brown fox  fox jumps over the lazy dog dog.";
         
         // Find matches using case-insensitive regular expression.
         MatchCollection matches = rxInsensitive.Matches(text);
@@ -56,13 +56,13 @@ public class Test
 }
 // The example produces the following output to the console:
 //       3 matches found in:
-//          The the quick brown fox  fox jumped over the lazy dog dog.
+//          The the quick brown fox  fox jumps over the lazy dog dog.
 //       'The' repeated at positions 0 and 4
 //       'fox' repeated at positions 20 and 25
 //       'dog' repeated at positions 50 and 54
 //       
 //       2 matches found in:
-//          The the quick brown fox  fox jumped over the lazy dog dog.
+//          The the quick brown fox  fox jumps over the lazy dog dog.
 //       'fox' repeated at positions 20 and 25
 //       'dog' repeated at positions 50 and 54
 // </Snippet1>

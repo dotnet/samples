@@ -11,7 +11,7 @@
        myQ.Enqueue( "quick" );
        myQ.Enqueue( "brown" );
        myQ.Enqueue( "fox" );
-       myQ.Enqueue( "jumped" );
+       myQ.Enqueue( "jumps" );
 
        // Displays the count and values of the Queue.
        Console.WriteLine( "Initially," );
@@ -43,7 +43,7 @@
  
  Initially,
     Count    : 5
-    Values:    The    quick    brown    fox    jumped
+    Values:    The    quick    brown    fox    jumps
  After Clear,
     Count    : 0
     Values:

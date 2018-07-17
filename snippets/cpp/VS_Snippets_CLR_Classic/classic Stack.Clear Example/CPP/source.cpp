@@ -12,7 +12,7 @@ int main()
    myStack->Push( "quick" );
    myStack->Push( "brown" );
    myStack->Push( "fox" );
-   myStack->Push( "jumped" );
+   myStack->Push( "jumps" );
    
    // Displays the count and values of the Stack.
    Console::WriteLine( "Initially," );
@@ -47,7 +47,7 @@ void PrintValues( IEnumerable^ myCollection )
  
  Initially,
     Count    : 5
-    Values:    jumped    fox    brown    quick    The
+    Values:    jumps    fox    brown    quick    The
  After Clear,
     Count    : 0
     Values:

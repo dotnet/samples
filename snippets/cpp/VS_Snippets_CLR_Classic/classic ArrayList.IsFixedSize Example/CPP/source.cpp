@@ -12,7 +12,7 @@ int main()
    myAL->Add( "quick" );
    myAL->Add( "brown" );
    myAL->Add( "fox" );
-   myAL->Add( "jumped" );
+   myAL->Add( "jumps" );
    myAL->Add( "over" );
    myAL->Add( "the" );
    myAL->Add( "lazy" );
@@ -104,17 +104,17 @@ void PrintValues( IEnumerable^ myList, char mySeparator )
  myFixedSizeAL has a fixed size.
 
  Initially,
- Standard  : The quick brown fox jumped over the lazy dog
- Fixed size: The quick brown fox jumped over the lazy dog
+ Standard  : The quick brown fox jumps over the lazy dog
+ Fixed size: The quick brown fox jumps over the lazy dog
  After Sort,
- Standard  : brown dog fox jumped lazy over quick the The
- Fixed size: brown dog fox jumped lazy over quick the The
+ Standard  : brown dog fox jumps lazy over quick the The
+ Fixed size: brown dog fox jumps lazy over quick the The
  After Reverse,
- Standard  : The the quick over lazy jumped fox dog brown
- Fixed size: The the quick over lazy jumped fox dog brown
+ Standard  : The the quick over lazy jumps fox dog brown
+ Fixed size: The the quick over lazy jumps fox dog brown
  After adding to the standard ArrayList,
- Standard  : The the quick over lazy jumped fox dog brown AddMe
- Fixed size: The the quick over lazy jumped fox dog brown AddMe
+ Standard  : The the quick over lazy jumps fox dog brown AddMe
+ Fixed size: The the quick over lazy jumps fox dog brown AddMe
 
  Exception: System.NotSupportedException: Collection was of a fixed size.
     at System.Collections.FixedSizeArrayList.Add(Object obj)

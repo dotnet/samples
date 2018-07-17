@@ -21,7 +21,7 @@ int main()
    myTargetArray[ 1 ] = "quick";
    myTargetArray[ 2 ] = "brown";
    myTargetArray[ 3 ] = "fox";
-   myTargetArray[ 4 ] = "jumped";
+   myTargetArray[ 4 ] = "jumps";
    myTargetArray[ 5 ] = "over";
    myTargetArray[ 6 ] = "the";
    myTargetArray[ 7 ] = "lazy";
@@ -61,9 +61,9 @@ void PrintValues( array<String^>^myArr, char mySeparator )
  This code produces the following output.
  
  The target Array contains the following (before and after copying):
-  The quick brown fox jumped over the lazy dog
-  The quick brown fox jumped over the napping dog
-  The quick brown fox jumped over three napping cats in the barn
+  The quick brown fox jumps over the lazy dog
+  The quick brown fox jumps over the napping dog
+  The quick brown fox jumps over three napping cats in the barn
   three napping cats in the barn three napping cats in the barn
 
  */
