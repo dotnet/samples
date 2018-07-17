@@ -4,7 +4,7 @@ Imports System.AddIn.Pipeline
 Namespace CalcAddInViews
 
     ' <Snippet2>
-    ' The AddInBaseAttribute identifes this interface as the basis for the
+    ' The AddInBaseAttribute identifies this interface as the basis for the
     ' add-in view pipeline segment.
     <AddInBaseAttribute()> _
     Public Interface ICalculator

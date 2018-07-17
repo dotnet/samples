@@ -6,7 +6,7 @@ using CalculatorContracts;
 namespace CalcAddInSideAdapters 
 {
     // <Snippet2>
-    // The AddInAdapterAttribute identifes this class as the add-in-side adapter
+    // The AddInAdapterAttribute identifies this class as the add-in-side adapter
     // pipeline segment.
     [AddInAdapter()]
     public class CalculatorViewToContractAddInSideAdapter :
