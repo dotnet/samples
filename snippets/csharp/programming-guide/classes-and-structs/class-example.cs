@@ -1,44 +1,46 @@
-    public class Person
+using System;
+
+public class Person
+{
+    // Constructor that takes no arguments:
+    public Person()
     {
-        // Constructor that takes no arguments:
-        public Person()
-        {
-            Name = "unknown";
-        }
-
-        // Constructor that takes one argument:
-        public Person(string name)
-        {
-            Name = name;
-        }
-
-        // Auto-implemented readonly property:
-        public string Name { get; }
-
-        // Method that overrides the base class (System.Object) implementation.
-        public override string ToString()
-        {
-            return Name.ToString();
-        }
+        Name = "unknown";
     }
-    class TestPerson
+
+    // Constructor that takes one argument:
+    public Person(string name)
     {
-        static void Main()
-        {
-            // Call the constructor that has no parameters.
-            var person1 = new Person();
-            Console.WriteLine(person1.Name);
-
-            // Call the constructor that has one parameter.
-            var person2 = new Person("Sarah Jones");
-            Console.WriteLine(person2.Name);
-            // OR use ToString method to get string representation of the person2 instance:
-            Console.WriteLine(person2.ToString());
-
-            Console.WriteLine("Press any key to exit.");
-            Console.ReadKey();
-        }
+        Name = name;
     }
+
+    // Auto-implemented readonly property:
+    public string Name { get; }
+
+    // Method that overrides the base class (System.Object) implementation.
+    public override string ToString()
+    {
+        return Name;
+    }
+}
+class TestPerson
+{
+    static void Main()
+    {
+        // Call the constructor that has no parameters.
+        var person1 = new Person();
+        Console.WriteLine(person1.Name);
+
+        // Call the constructor that has one parameter.
+        var person2 = new Person("Sarah Jones");
+        Console.WriteLine(person2.Name);
+        // OR use ToString method to get string representation of the person2 instance:
+        Console.WriteLine(person2);
+
+        Console.WriteLine("Press any key to exit.");
+        Console.ReadKey();
+    }
+}
 // Output:
 // unknown
 // Sarah Jones
