@@ -24,10 +24,10 @@ Public Class Example
         sentence.AddLast(mark1)
         ' </Snippet3>
         Display(sentence, "Test 2: Move first node to be last node:")
-        ' Change the last node be 'yesterday'.
+        ' Change the last node be 'later'.
         sentence.RemoveLast()
-        sentence.AddLast("yesterday")
-        Display(sentence, "Test 3: Change the last node to 'yesterday':")
+        sentence.AddLast("later")
+        Display(sentence, "Test 3: Change the last node to 'later':")
         ' <Snippet4>
         ' Move the last node to be the first node.
         mark1 = sentence.Last
@@ -162,10 +162,10 @@ End Class
 'today the fox jumps over the dog 
 'Test 2: Move first node to be last node:
 'the fox jumps over the dog today 
-'Test 3: Change the last node to 'yesterday':
-'the fox jumps over the dog yesterday 
+'Test 3: Change the last node to 'later':
+'the fox jumps over the dog later 
 'Test 4: Move last node to be first node:
-'yesterday the fox jumps over the dog 
+'later the fox jumps over the dog 
 'Test 5: Indicate last occurence of 'the':
 'the fox jumps over (the) dog
 'Test 6: Add 'lazy' and 'old' after 'the':
