@@ -34,7 +34,7 @@ class TestPerson
         // Call the constructor that has one parameter.
         var person2 = new Person("Sarah Jones");
         Console.WriteLine(person2.Name);
-        // OR use ToString method to get string representation of the person2 instance:
+        // Get the string representation of the person2 instance.
         Console.WriteLine(person2);
 
         Console.WriteLine("Press any key to exit.");
