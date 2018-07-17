@@ -6,7 +6,7 @@ int main()
 {
    String^ animal1 = "fox";
    String^ animal2 = "dog";
-   String^ strTarget = String::Format( "The {0} jumped over the {1}.", animal1, animal2 );
+   String^ strTarget = String::Format( "The {0} jumps over the {1}.", animal1, animal2 );
    Console::WriteLine( "The original string is:{0}{1}{0}", Environment::NewLine, strTarget );
    Console::Write( "Enter an adjective (or group of adjectives) to describe the {0}: ==> ", animal1 );
    String^ adj1 = Console::ReadLine();
@@ -20,11 +20,11 @@ int main()
 }
 // Output from the example might appear as follows:
 //       The original string is:
-//       The fox jumped over the dog.
+//       The fox jumps over the dog.
 //       
 //       Enter an adjective (or group of adjectives) to describe the fox: ==> bold
 //       Enter an adjective (or group of adjectives) to describe the dog: ==> lazy
 //       
 //       The final string is:
-//       The bold fox jumped over the lazy dog.
+//       The bold fox jumps over the lazy dog.
 // </Snippet1>

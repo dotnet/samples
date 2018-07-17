@@ -26,7 +26,7 @@ void main1()
    myTargetArray->SetValue( "quick", 1 );
    myTargetArray->SetValue( "brown", 2 );
    myTargetArray->SetValue( "fox", 3 );
-   myTargetArray->SetValue( "jumped", 4 );
+   myTargetArray->SetValue( "jumps", 4 );
    myTargetArray->SetValue( "over", 5 );
    myTargetArray->SetValue( "the", 6 );
    myTargetArray->SetValue( "lazy", 7 );
