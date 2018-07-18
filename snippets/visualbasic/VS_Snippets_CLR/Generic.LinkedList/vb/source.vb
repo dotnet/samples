@@ -8,10 +8,10 @@ Public Class Example
         ' <Snippet2>
         ' Create the link list.
         Dim words() As String = {"the", "fox", _
-            "jumped", "over", "the", "dog"}
+            "jumps", "over", "the", "dog"}
         Dim sentence As New LinkedList(Of String)(words)
-        Console.WriteLine("sentence.Contains(""jumped"") = {0}", _
-            sentence.Contains("jumped"))
+        Console.WriteLine("sentence.Contains(""jumps"") = {0}", _
+            sentence.Contains("jumps"))
         ' </Snippet2>
         Display(sentence, "The linked list values:")
         ' Add the word 'today' to the beginning of the linked list.
@@ -24,10 +24,10 @@ Public Class Example
         sentence.AddLast(mark1)
         ' </Snippet3>
         Display(sentence, "Test 2: Move first node to be last node:")
-        ' Change the last node be 'yesterday'.
+        ' Change the last node be 'later'.
         sentence.RemoveLast()
-        sentence.AddLast("yesterday")
-        Display(sentence, "Test 3: Change the last node to 'yesterday':")
+        sentence.AddLast("later")
+        Display(sentence, "Test 3: Change the last node to 'later':")
         ' <Snippet4>
         ' Move the last node to be the first node.
         mark1 = sentence.Last
@@ -114,7 +114,7 @@ Public Class Example
         ' Release all the nodes.
         sentence.Clear()
         Console.WriteLine()
-        Console.WriteLine("Test 17: Clear linked list. Contains 'jumped' = {0}", sentence.Contains("jumped"))
+        Console.WriteLine("Test 17: Clear linked list. Contains 'jumps' = {0}", sentence.Contains("jumps"))
         '</Snippet11>
         Console.ReadLine()
     End Sub
@@ -157,48 +157,48 @@ End Class
 'This code example produces the following output:
 '
 'The linked list values:
-'the fox jumped over the dog 
+'the fox jumps over the dog 
 'Test 1: Add 'today' to beginning of the list:
-'today the fox jumped over the dog 
+'today the fox jumps over the dog 
 'Test 2: Move first node to be last node:
-'the fox jumped over the dog today 
-'Test 3: Change the last node to 'yesterday':
-'the fox jumped over the dog yesterday 
+'the fox jumps over the dog today 
+'Test 3: Change the last node to 'later':
+'the fox jumps over the dog later 
 'Test 4: Move last node to be first node:
-'yesterday the fox jumped over the dog 
+'later the fox jumps over the dog 
 'Test 5: Indicate last occurence of 'the':
-'the fox jumped over (the) dog
+'the fox jumps over (the) dog
 'Test 6: Add 'lazy' and 'old' after 'the':
-'the fox jumped over (the) lazy old dog
+'the fox jumps over (the) lazy old dog
 'Test 7: Indicate the 'fox' node:
-'the (fox) jumped over the lazy old dog
+'the (fox) jumps over the lazy old dog
 'Test 8: Add 'quick' and 'brown' before 'fox':
-'the quick brown (fox) jumped over the lazy old dog
+'the quick brown (fox) jumps over the lazy old dog
 'Test 9: Indicate the 'dog' node:
-'the quick brown fox jumped over the lazy old (dog)
+'the quick brown fox jumps over the lazy old (dog)
 'Test 10: Throw exception by adding node (fox) already in the list:
 'Exception message: The LinkedList node belongs a LinkedList.
 'Test 11: Move a referenced node (fox) before the current node (dog):
-'the quick brown jumped over the lazy old fox (dog)
+'the quick brown jumps over the lazy old fox (dog)
 'Test 12: Remove current node (dog) and attempt to indicate it:
 'Node 'dog' is not in the list.
 'Test 13: Add node removed in test 11 after a referenced node (brown):
-'the quick brown (dog) jumped over the lazy old fox
+'the quick brown (dog) jumps over the lazy old fox
 'Test 14: Remove node that has the value 'old':
-'the quick brown dog jumped over the lazy fox 
+'the quick brown dog jumps over the lazy fox 
 'Test 15: Remove last node, cast to ICollection, and add 'rhinoceros':
-'the quick brown dog jumped over the lazy rhinoceros 
+'the quick brown dog jumps over the lazy rhinoceros 
 'Test 16: Copy the list to an array:
 'the
 'quick
 'brown
 'dog
-'jumped
+'jumps
 'over
 'the
 'lazy
 'rhinoceros
-'Test 17: Clear linked list. Contains 'jumped' = False
+'Test 17: Clear linked list. Contains 'jumps' = False
 '
 ' </Snippet1>
 

@@ -7,6 +7,6 @@ let rot13 c =
         else
             char (((int c + 13 - lowerZero) % 26) + lowerZero)
     else c
-let test = "The quick sly fox jumped over the lazy brown dog."
+let test = "The quick sly fox jumps over the lazy brown dog."
 printfn "%s" test
 printfn "%s" <| (String.map rot13 test)

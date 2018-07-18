@@ -65,7 +65,7 @@
         FontWeight="{Binding ElementName=fontWeightListBox,Path=SelectedItem}"
         FontSize="{Binding ElementName=fontSizeListBox,Path=SelectedItem}"
         FontFamily="{Binding ElementName=fontFamilyListBox,Path=SelectedItem}">
-        The quick brown fox jumped over the lazy old brown dog.
+        The quick brown fox jumps over the lazy old brown dog.
       </TextBlock>
     </GroupBox>
 

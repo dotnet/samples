@@ -21,7 +21,7 @@ Public Class SamplesStack
         myTargetArray.SetValue("quick", 1)
         myTargetArray.SetValue("brown", 2)
         myTargetArray.SetValue("fox", 3)
-        myTargetArray.SetValue("jumped", 4)
+        myTargetArray.SetValue("jumps", 4)
         myTargetArray.SetValue("over", 5)
         myTargetArray.SetValue("the", 6)
         myTargetArray.SetValue("lazy", 7)
@@ -63,8 +63,8 @@ End Class
 ' This code produces the following output.
 '
 ' The target Array contains the following (before and after copying):
-'  The quick brown fox jumped over the lazy dog
-'  The quick brown fox jumped over three napping cats in the barn
+'  The quick brown fox jumps over the lazy dog
+'  The quick brown fox jumps over three napping cats in the barn
 ' The new standard array contains the following:
 '  three napping cats in the barn 
 

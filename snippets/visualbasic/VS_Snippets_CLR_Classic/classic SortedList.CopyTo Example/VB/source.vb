@@ -16,7 +16,7 @@ Public Class SamplesSortedList
       mySourceList.Add(5, "barn")
 
       ' Creates and initializes the one-dimensional target Array.
-      Dim tempArray() As String = {"The", "quick", "brown", "fox", "jumped", "over", "the", "lazy", "dog"}
+      Dim tempArray() As String = {"The", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"}
       Dim myTargetArray(14) As DictionaryEntry
       Dim i As Integer = 0
       Dim s As String
@@ -53,7 +53,7 @@ End Class 'SamplesSortedList
 'This code produces the following output.
 ' 
 'The target Array contains the following (before and after copying):
-' The quick brown fox jumped over the lazy dog      
-' The quick brown fox jumped over three napping cats in the barn
+' The quick brown fox jumps over the lazy dog      
+' The quick brown fox jumps over three napping cats in the barn
 
 ' </Snippet1>

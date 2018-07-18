@@ -5,4 +5,4 @@ let writetofile2 filename obj =
         file1.WriteLine("{0}", obj.ToString() )
     )
 
-writetofile2 "abc2.txt" "The quick sly fox jumped over the lazy brown dog."
+writetofile2 "abc2.txt" "The quick sly fox jumps over the lazy brown dog."

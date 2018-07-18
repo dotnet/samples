@@ -8,7 +8,7 @@
        // Creates and initializes a new SortedList.
        SortedList mySL = new SortedList();
        mySL.Add( 1.3, "fox" );
-       mySL.Add( 1.4, "jumped" );
+       mySL.Add( 1.4, "jumps" );
        mySL.Add( 1.5, "over" );
        mySL.Add( 1.2, "brown" );
        mySL.Add( 1.1, "quick" );
@@ -42,7 +42,7 @@
      1.1    quick
      1.2    brown
      1.3    fox
-     1.4    jumped
+     1.4    jumps
      1.5    over
      1.6    the
      1.7    lazy

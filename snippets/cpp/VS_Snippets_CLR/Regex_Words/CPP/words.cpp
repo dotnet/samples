@@ -11,7 +11,7 @@ int main()
    // </snippet1>
 
    // Define a test string.        
-   String^ text = "The the quick brown fox  fox jumped over the lazy dog dog.";
+   String^ text = "The the quick brown fox  fox jumps over the lazy dog dog.";
 
    // <snippet2>
    // Find matches.

@@ -23,7 +23,7 @@ public class SamplesArrayList  {
       myAL.Add( "QUICK" );
       myAL.Add( "BROWN" );
       myAL.Add( "FOX" );
-      myAL.Add( "jumped" );
+      myAL.Add( "jumps" );
       myAL.Add( "over" );
       myAL.Add( "the" );
       myAL.Add( "lazy" );
@@ -63,7 +63,7 @@ The ArrayList initially contains the following values:
         [1]:    QUICK
         [2]:    BROWN
         [3]:    FOX
-        [4]:    jumped
+        [4]:    jumps
         [5]:    over
         [6]:    the
         [7]:    lazy
@@ -74,7 +74,7 @@ After sorting from index 1 to index 3 with the default comparer:
         [1]:    BROWN
         [2]:    FOX
         [3]:    QUICK
-        [4]:    jumped
+        [4]:    jumps
         [5]:    over
         [6]:    the
         [7]:    lazy
@@ -85,7 +85,7 @@ After sorting from index 1 to index 3 with the reverse case-insensitive comparer
         [1]:    QUICK
         [2]:    FOX
         [3]:    BROWN
-        [4]:    jumped
+        [4]:    jumps
         [5]:    over
         [6]:    the
         [7]:    lazy

@@ -9,7 +9,7 @@
       <TextBox Name="textToFormat"
         Width="600" Height="150" AcceptsReturn="True" 
         TextWrapping="WrapWithOverflow">
-        The quick red fox jumped over the lazy brown dog.
+        The quick red fox jumps over the lazy brown dog.
       </TextBox>
 
       <Border Width="600" Height="400" Margin="5">

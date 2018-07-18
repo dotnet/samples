@@ -11,7 +11,7 @@
        myHT.Add( "two", "quick" );
        myHT.Add( "three", "brown" );
        myHT.Add( "four", "fox" );
-       myHT.Add( "five", "jumped" );
+       myHT.Add( "five", "jumps" );
  
        // Displays the count and values of the Hashtable.
        Console.WriteLine( "Initially," );
@@ -50,7 +50,7 @@
          two:    quick
          three:  brown
          four:   fox
-         five:   jumped
+         five:   jumps
          one:    The
 
  After Clear,

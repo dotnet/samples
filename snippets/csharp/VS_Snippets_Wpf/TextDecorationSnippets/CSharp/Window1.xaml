@@ -22,7 +22,7 @@
     <!-- Use a Red pen for the underline text decoration -->
     <TextBlock
       FontSize="36" >
-      jumped over
+      jumps over
       <TextBlock.TextDecorations>
         <TextDecorationCollection>
           <TextDecoration 
@@ -78,7 +78,7 @@
       Name="TextBlock2" 
       TextDecorations="Underline"
       FontSize="36" >
-      jumped over
+      jumps over
     </TextBlock>
 
     <!-- Use a linear gradient pen for the underline text decoration. -->

@@ -16,7 +16,7 @@
        myTargetArray[1] = "quick";
        myTargetArray[2] = "brown";
        myTargetArray[3] = "fox";
-       myTargetArray[4] = "jumped";
+       myTargetArray[4] = "jumps";
        myTargetArray[5] = "over";
        myTargetArray[6] = "the";
        myTargetArray[7] = "lazy";
@@ -51,11 +51,11 @@
  This code produces the following output.
  
  The target Array contains the following before:
-  The quick brown fox jumped over the lazy dog
+  The quick brown fox jumps over the lazy dog
  After copying the keys, starting at index 6:
-  The quick brown fox jumped over B A dog
+  The quick brown fox jumps over B A dog
  After copying the values, starting at index 6:
-  The quick brown fox jumped over valueB valueA dog
+  The quick brown fox jumps over valueB valueA dog
 
  */ 
 // </Snippet1>
