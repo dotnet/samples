@@ -11,9 +11,7 @@ public class Person : IEquatable<Person>
    public Person(string lastName, string ssn)
    {
       if (Regex.IsMatch(ssn, @"\d{9}"))
-         uniqueSsn = String.Format("{0}-{1}-{2}", ssn.Substring(0, 3),
-                                                  ssn.Substring(3, 2),
-                                                  ssn.Substring(5, 4));
+        uniqueSsn = $"{ssn.Substring(0, 3)}-{ssn.Substring(3, 2)}-{ssn.Substring(5, 4)}";
       else if (Regex.IsMatch(ssn, @"\d{3}-\d{2}-\d{4}"))
          uniqueSsn = ssn;
       else
