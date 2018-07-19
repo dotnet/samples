@@ -11,15 +11,12 @@ Public Class Person : Implements IEquatable(Of Person)
    
    Public Sub New(lastName As String, ssn As String)
       If Regex.IsMatch(ssn, "\d{9}") Then
-         uniqueSsn = String.Format("{0}-(1}-{2}", ssn.Substring(0, 3), _
-                                                  ssn.Substring(3, 2), _
-                                                  ssn.Substring(5, 4))
+         uniqueSsn = $"{ssn.Substring(0, 3)}-{ssn.Substring(3, 2)}-{ssn.Substring(5, 4)}"
       ElseIf Regex.IsMatch(ssn, "\d{3}-\d{2}-\d{4}") Then
          uniqueSsn = ssn
       Else 
          Throw New FormatException("The social security number has an invalid format.")
       End If
-      Me.uniqueSsn = ssn
       Me.LastName = lastName
    End Sub
    
