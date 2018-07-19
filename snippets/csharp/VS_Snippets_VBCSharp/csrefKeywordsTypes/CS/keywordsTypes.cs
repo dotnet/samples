@@ -432,7 +432,7 @@ namespace csrefKeywordsMethodParams
 
        static void Main()
        {
-          Point p = new Point(2, 3);
+          IPoint p = new Point(2, 3);
           Console.Write("My Point: ");
           PrintPoint(p);
        }
