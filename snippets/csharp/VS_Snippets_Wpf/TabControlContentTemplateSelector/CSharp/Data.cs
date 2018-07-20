@@ -1,3 +1,4 @@
+//<Snippet1>
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -72,7 +73,7 @@ namespace TabControlContentTemplateSelector
             }
         }
     }
-
+    //</Snippet1>
     // Create a collection of Person objects.
     public class People : ObservableCollection<Person>
     {

@@ -1,3 +1,4 @@
+'<Snippet1>
 Imports System
 Imports System.ComponentModel
 
@@ -63,4 +64,4 @@ Public Class Person
     Private _hometown As String
     Private _lastname As String
 End Class
-
+'</Snippet1>
