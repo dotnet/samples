@@ -19,7 +19,7 @@ public class OrderedItem
     // A custom method used to calculate price per item.
     public void Calculate()
     {
-      LineTotal = UnitPrice * Quantity;
+        LineTotal = UnitPrice * Quantity;
     }
 }
  
