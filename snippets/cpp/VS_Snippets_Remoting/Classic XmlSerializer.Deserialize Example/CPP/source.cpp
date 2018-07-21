@@ -13,26 +13,26 @@ public ref class OrderedItem
 {
 public:
 
-   [XmlElement(Namespace="http://www.cpandl.com")]
-   String^ ItemName;
+    [XmlElement(Namespace="http://www.cpandl.com")]
+    String^ ItemName;
 
-   [XmlElement(Namespace="http://www.cpandl.com")]
-   String^ Description;
+    [XmlElement(Namespace="http://www.cpandl.com")]
+    String^ Description;
 
-   [XmlElement(Namespace="http://www.cohowinery.com")]
-   Decimal UnitPrice;
+    [XmlElement(Namespace="http://www.cohowinery.com")]
+    Decimal UnitPrice;
 
-   [XmlElement(Namespace="http://www.cpandl.com")]
-   int Quantity;
+    [XmlElement(Namespace="http://www.cpandl.com")]
+    int Quantity;
 
-   [XmlElement(Namespace="http://www.cohowinery.com")]
-   Decimal LineTotal;
+    [XmlElement(Namespace="http://www.cohowinery.com")]
+    Decimal LineTotal;
 
-   // A custom method used to calculate price per item.
-   void Calculate()
-   {
-      LineTotal = UnitPrice * Quantity;
-   }
+    // A custom method used to calculate price per item.
+    void Calculate()
+    {
+        LineTotal = UnitPrice * Quantity;
+    }
 };
 
 void DeserializeObject(String^ filename)
@@ -64,7 +64,7 @@ void DeserializeObject(String^ filename)
 
 int main()
 {
-   // Read a purchase order.
-   DeserializeObject( "simple.xml" );
+    // Read a purchase order.
+    DeserializeObject( "simple.xml" );
 }
 // </Snippet1>
