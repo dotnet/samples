@@ -26,32 +26,31 @@ namespace MakeConst.Test
         public void TestMethod2()
         {
             var test = @"
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using System.Diagnostics;
+using System;
 
-    namespace ConsoleApplication1
+namespace MakeConstTest
+{
+    class Program
     {
-        class TypeName
-        {   
+        static void Main(string[] args)
+        {
+            int i = 1;
         }
-    }";
+    }
+}";
             var expected = new DiagnosticResult
             {
                 Id = "MakeConst",
-                Message = String.Format("Type name '{0}' contains lowercase letters", "TypeName"),
+                Message = "can be made constant",
                 Severity = DiagnosticSeverity.Warning,
                 Locations =
                     new[] {
-                            new DiagnosticResultLocation("Test0.cs", 11, 15)
+                            new DiagnosticResultLocation("Test0.cs", 10, 13)
                         }
             };
 
             VerifyCSharpDiagnostic(test, expected);
-
+            /*
             var fixtest = @"
     using System;
     using System.Collections.Generic;
@@ -67,6 +66,7 @@ namespace MakeConst.Test
         }
     }";
             VerifyCSharpFix(test, fixtest);
+            */
         }
 
         protected override CodeFixProvider GetCSharpCodeFixProvider()
