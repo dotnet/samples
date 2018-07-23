@@ -27,36 +27,37 @@ public class OrderedItem
 public class Test
 {
    public static void Main()
-   {
-      Test t = new Test();
-      // Read a purchase order.
-      t.DeserializeObject("simple.xml");
-   }
-   private void DeserializeObject(string filename)
-   {   
-      Console.WriteLine("Reading with TextReader");
+    {
+        Test t = new Test();
+        // Read a purchase order.
+        t.DeserializeObject("simple.xml");
+    }
 
-      // Create an instance of the XmlSerializer specifying type.
-      XmlSerializer serializer = 
-      new XmlSerializer(typeof(OrderedItem));
+    private void DeserializeObject(string filename)
+    {   
+        Console.WriteLine("Reading with TextReader");
 
-      // Create a TextReader to read the file. 
-      FileStream fs = new FileStream(filename, FileMode.OpenOrCreate);
-      TextReader reader = new StreamReader(fs);
+        // Create an instance of the XmlSerializer specifying type.
+        XmlSerializer serializer = 
+        new XmlSerializer(typeof(OrderedItem));
+
+        // Create a TextReader to read the file. 
+        FileStream fs = new FileStream(filename, FileMode.OpenOrCreate);
+        TextReader reader = new StreamReader(fs);
       
-      // Declare an object variable of the type to be deserialized.
-      OrderedItem i;
+        // Declare an object variable of the type to be deserialized.
+        OrderedItem i;
 
-      // Use the Deserialize method to restore the object's state.
-      i = (OrderedItem) serializer.Deserialize(reader);
+        // Use the Deserialize method to restore the object's state.
+        i = (OrderedItem) serializer.Deserialize(reader);
 
-      // Write out the properties of the object.
-      Console.Write(
-      i.ItemName + "\t" +
-      i.Description + "\t" +
-      i.UnitPrice + "\t" +
-      i.Quantity + "\t" +
-      i.LineTotal);
-   }
+        // Write out the properties of the object.
+        Console.Write(
+            i.ItemName + "\t" +
+            i.Description + "\t" +
+            i.UnitPrice + "\t" +
+            i.Quantity + "\t" +
+            i.LineTotal);
+    }
 }
 // </Snippet1>
