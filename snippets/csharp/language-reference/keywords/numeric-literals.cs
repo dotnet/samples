@@ -67,10 +67,10 @@ public class Example
    {
       // <SnippetByteS>
       byte byteValue4 = 0b1100_1001;
-      Console.WriteLine(byteValue3);
+      Console.WriteLine(byteValue4);
 
       byte byteValue5 = 0b_1100_1001;
-      Console.WriteLine(byteValue3);       // C# 7.2 onwards
+      Console.WriteLine(byteValue5);       // C# 7.2 onwards
       // The example displays the following output:
       //          201
       //          201
