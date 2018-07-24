@@ -40,7 +40,7 @@ namespace keywords
             z = p3;
         }
 
-        public static void Usage()
+        static void Main()
         {
             SampleClass p1 = new SampleClass(11, 21, 32);   // OK
             Console.WriteLine($"p1: x={p1.x}, y={p1.y}, z={p1.z}");
