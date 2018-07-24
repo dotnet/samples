@@ -8,17 +8,22 @@ namespace UnitTestingBestPractices
 
         public int Add(string numbers)
         {
-            if (numbers == null)
+            if (string.IsNullOrEmpty(numbers))
             {
-                throw new ArgumentNullException(nameof(numbers));
+                throw new ArgumentException(nameof(numbers));
             }
 
+            int result;
             if (numbers.Contains(","))
             {
-                return HandleMultipleNumbers(numbers);
+                result = HandleMultipleNumbers(numbers);
+            }
+            else
+            {
+                result = HandleSingleNumber(numbers);
             }
 
-            return HandleSingleNumber(numbers);
+            return ValidateResult(result);
         }
 
         private static int HandleMultipleNumbers(string numbers)
@@ -31,9 +36,7 @@ namespace UnitTestingBestPractices
                 sum += HandleSingleNumber(number);
             }
 
-            ValidateResult(sum);
-
-            return sum;
+            return ValidateResult(sum);
         }
 
         private static int HandleSingleNumber(string number)
@@ -41,12 +44,14 @@ namespace UnitTestingBestPractices
             return int.Parse(number);
         }
 
-        private static void ValidateResult(int sum)
+        private static int ValidateResult(int sum)
         {
             if (sum > MAXIMUM_RESULT)
             {
                 throw new OverflowException();
             }
+
+            return sum;
         }
     }
 }
