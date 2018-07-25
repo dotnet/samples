@@ -28,9 +28,9 @@ namespace UnitTestingBestPractices
 
         private static int HandleMultipleNumbers(string numbers)
         {
-            var numbersArray = numbers.Split(',');
             var sum = 0;
 
+            var numbersArray = numbers.Split(',');
             foreach (var number in numbersArray)
             {
                 sum += HandleSingleNumber(number);

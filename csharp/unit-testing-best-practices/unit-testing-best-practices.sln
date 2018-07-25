@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "unit-testing-best-practices", "unit-testing-best-practices\unit-testing-best-practices.csproj", "{EB6EF801-FD91-406D-B73E-26A4C82C50B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "unit-testing-best-practices", "unit-testing-best-practices\unit-testing-best-practices.csproj", "{EB6EF801-FD91-406D-B73E-26A4C82C50B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "unit-testing-best-practices-better-tests", "unit-testing-best-practices-better-tests\unit-testing-best-practices-better-tests.csproj", "{2B59F5D9-7A09-47AE-92A6-3BEE6C2A5E47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "unit-testing-best-practices-before", "before\unit-testing-best-practices-before.csproj", "{02DF0374-F085-450D-A101-B331D7FD4F8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "unit-testing-best-practices-bad-tests", "unit-testing-best-practices-bad-tests\unit-testing-best-practices-bad-tests.csproj", "{1853DD71-5442-49FB-814C-269D2C7E3DDA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "unit-testing-best-practices-after", "after\unit-testing-best-practices-after.csproj", "{D2D57ADA-A913-4CED-9722-6195BC1B7189}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,14 @@ Global
 		{EB6EF801-FD91-406D-B73E-26A4C82C50B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB6EF801-FD91-406D-B73E-26A4C82C50B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB6EF801-FD91-406D-B73E-26A4C82C50B8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2B59F5D9-7A09-47AE-92A6-3BEE6C2A5E47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2B59F5D9-7A09-47AE-92A6-3BEE6C2A5E47}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2B59F5D9-7A09-47AE-92A6-3BEE6C2A5E47}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2B59F5D9-7A09-47AE-92A6-3BEE6C2A5E47}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1853DD71-5442-49FB-814C-269D2C7E3DDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1853DD71-5442-49FB-814C-269D2C7E3DDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1853DD71-5442-49FB-814C-269D2C7E3DDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1853DD71-5442-49FB-814C-269D2C7E3DDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02DF0374-F085-450D-A101-B331D7FD4F8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02DF0374-F085-450D-A101-B331D7FD4F8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02DF0374-F085-450D-A101-B331D7FD4F8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02DF0374-F085-450D-A101-B331D7FD4F8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2D57ADA-A913-4CED-9722-6195BC1B7189}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2D57ADA-A913-4CED-9722-6195BC1B7189}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2D57ADA-A913-4CED-9722-6195BC1B7189}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2D57ADA-A913-4CED-9722-6195BC1B7189}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

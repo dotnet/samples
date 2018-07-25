@@ -2,7 +2,7 @@ using System;
 using UnitTestingBestPractices;
 using Xunit;
 
-namespace UnitTestingBestPracticesBadTests
+namespace UnitTestingBestPracticesBefore
 {
     public class StringCalculatorTests
     {
