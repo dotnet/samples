@@ -43,6 +43,11 @@ namespace MakeConst
                 return;
             }
 
+            // <SnippetBugs>
+            var variableTypeName = localDeclaration.Declaration.Type;
+            var variableType = context.SemanticModel.GetTypeInfo(variableTypeName).ConvertedType;
+            // </SnippetBugs>
+
             // Ensure that all variables in the local declaration have initializers that
             // are assigned with constant values.
             foreach (var variable in localDeclaration.Declaration.Variables)
@@ -58,8 +63,37 @@ namespace MakeConst
                 {
                     return;
                 }
+
+                // <SnippetEnsureConvertible>
+                // Ensure that the initializer value can be converted to the type of the
+                // local declaration without a user-defined conversion.
+                var conversion = context.SemanticModel.ClassifyConversion(initializer.Value, variableType);
+                if (!conversion.Exists || conversion.IsUserDefined)
+                {
+                    return;
+                }
+                // </SnippetEnsureConvertible>
+
+                // <SnippetSpecialCase>
+                // Special cases:
+                //  * If the constant value is a string, the type of the local declaration
+                //    must be System.String.
+                //  * If the constant value is null, the type of the local declaration must
+                //    be a reference type.
+                if (constantValue.Value is string)
+                {
+                    if (variableType.SpecialType != SpecialType.System_String)
+                    {
+                        return;
+                    }
+                }
+                else if (variableType.IsReferenceType && constantValue.Value != null)
+                {
+                    return;
+                }
+                // </SnippetSpecialCase>
             }
-            
+
             // Perform data flow analysis on the local declaration.
             var dataFlowAnalysis = context.SemanticModel.AnalyzeDataFlow(localDeclaration);
 
