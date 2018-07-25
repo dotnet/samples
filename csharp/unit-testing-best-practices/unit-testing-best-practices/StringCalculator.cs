@@ -8,7 +8,7 @@ namespace UnitTestingBestPractices
 
         public int Add(string numbers)
         {
-            if (string.IsNullOrEmpty(numbers))
+            if (numbers == null)
             {
                 throw new ArgumentException(nameof(numbers));
             }
@@ -41,7 +41,18 @@ namespace UnitTestingBestPractices
 
         private static int HandleSingleNumber(string number)
         {
-            return int.Parse(number);
+            if (number == string.Empty)
+            {
+                return 0;
+            }
+
+            var result = int.TryParse(number, out var parsedNumber);
+            if (result == false)
+            {
+                 throw new ArgumentException(nameof(number));
+            }
+
+            return parsedNumber;
         }
 
         private static int ValidateResult(int sum)

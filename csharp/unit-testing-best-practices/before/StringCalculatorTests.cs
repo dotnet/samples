@@ -6,27 +6,39 @@ namespace UnitTestingBestPracticesBefore
 {
     public class StringCalculatorTests
     {
-        // <SnippetSetup>
+        // <SnippetBeforeSetup>
         private readonly StringCalculator stringCalculator;
         public StringCalculatorTests()
         {
             stringCalculator = new StringCalculator();
         }
-        // </SnippetSetup>
+        // </SnippetBeforeSetup>
 
-        // <SnippetPoorTestCase>
+        // <SnippetBeforeNaming>
         [Fact]
         public void Test_Single()
+        {
+            var stringCalculator = new StringCalculator();
+
+            var actual = stringCalculator.Add("0");
+
+            Assert.Equal(0, actual);
+        }
+        // </SnippetBeforeNaming>
+
+        // <SnippetBeforeArranging>
+        [Fact]
+        public void Add_EmptyString_ReturnsZero()
         {
             // Arrange
             var stringCalculator = new StringCalculator();
 
             // Assert
-            Assert.Equal(0, stringCalculator.Add("0"));
+            Assert.Equal(0, stringCalculator.Add(""));
         }
-        // </SnippetPoorTestCase>
+        // </SnippetBeforeArranging>
 
-        // <SnippetNotMinimallyPassing>
+        // <SnippetBeforeMinimallyPassing>
         [Fact]
         public void Add_SingleNumber_ReturnsSameNumber()
         {
@@ -36,9 +48,9 @@ namespace UnitTestingBestPracticesBefore
 
             Assert.Equal(42, actual);
         }
-        // </SnippetNotMinimallyPassing>
+        // </SnippetBeforeMinimallyPassing>
 
-        // <SnippetUsingSetupVariable>
+        // <SnippetBeforeHelperMethod>
         [Fact]
         public void Add_TwoNumbers_ReturnsSumOfNumbers()
         {
@@ -46,6 +58,7 @@ namespace UnitTestingBestPracticesBefore
 
             Assert.Equal(1, result);
         }
+        // </SnippetBeforeHelperMethod>
 
         [Fact]
         public void Add_ThreeNumbers_ReturnsSumOfNumbers()
@@ -54,7 +67,6 @@ namespace UnitTestingBestPracticesBefore
 
             Assert.Equal(3, result);
         }
-        // </SnippetUsingSetupVariable>
 
         // <SnippetLogicInTests>
         [Fact]
@@ -64,21 +76,21 @@ namespace UnitTestingBestPracticesBefore
             var expected = 0;
             var testCases = new[]
             {
-                "0,0",
-                "0,1",
-                "1,1",
-                "1,2"
+                "0,0,0",
+                "0,1,2",
+                "1,2,3"
             };
 
             foreach (var test in testCases)
             {
-                Assert.Equal(expected++, stringCalculator.Add(test));
+                Assert.Equal(expected, stringCalculator.Add(test));
+                expected += 3;
             }
 
         }
         // </SnippetLogicInTests>
 
-        // <SnippetMagicString>
+        // <SnippetBeforeMagicString>
         [Fact]
         public void Add_BigNumber_ThrowsException()
         {
@@ -88,15 +100,15 @@ namespace UnitTestingBestPracticesBefore
 
             Assert.Throws<OverflowException>(actual);
         }
-        // </SnippetMagicString>
+        // </SnippetBeforeMagicString>
 
-        // <SnippetMultipleAsserts>
+        // <SnippetBeforeMultipleAsserts>
         [Fact]
-        public void Add_EdgeCases_ThrowsCorrectExceptions()
+        public void Add_EdgeCases_ThrowsArgumentExceptions()
         {
             Assert.Throws<ArgumentException>(() => stringCalculator.Add(null));
-            Assert.Throws<OverflowException>(() => stringCalculator.Add("1001"));
+            Assert.Throws<ArgumentException>(() => stringCalculator.Add("a"));
         }
-        // </SnippetMultipleAsserts>
+        // </SnippetBeforeMultipleAsserts>
     }
 }

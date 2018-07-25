@@ -6,7 +6,7 @@ namespace UnitTestingBestPracticesAfter
 {
     public class StringCalculatorTests
     {
-        // <SnippetGoodTestCase>
+        // <SnippetAfterNamingAndMinimallyPassing>
         [Fact]
         public void Add_SingleNumber_ReturnsSameNumber()
         {
@@ -16,29 +16,48 @@ namespace UnitTestingBestPracticesAfter
 
             Assert.Equal(0, actual);
         }
-        // </SnippetGoodTestCase>
+        // </SnippetAfterNamingAndMinimallyPassing>
 
+        // <SnippetAfterArranging>
+        [Fact]
+        public void Add_EmptyString_ReturnsZero()
+        {
+            var stringCalculator = new StringCalculator();
+
+            var actual = stringCalculator.Add("");
+
+            Assert.Equal(0, actual);
+        }
+        // </SnippetAfterArranging>
+
+        // <SnippetAfterHelperMethod>
         [Fact]
         public void Add_TwoNumbers_ReturnsSumOfNumbers()
         {
-            var stringCalculator = new StringCalculator();
+            var stringCalculator = CreateDefaultStringCalcualtor();
 
             var actual = stringCalculator.Add("0,1");
 
             Assert.Equal(1, actual);
         }
+        // </SnippetAfterHelperMethod>
 
-        [Fact]
-        public void Add_MultipleNumbers_ReturnsSumOfNumbers()
+        // <SnippetAfterTestLogic>
+        [Theory]
+        [InlineData("0,0,0", 0)]
+        [InlineData("0,1,2", 3)]
+        [InlineData("1,2,3", 6)]
+        public void Add_MultipleNumbers_ReturnsSumOfNumbers(string input, int expected)
         {
             var stringCalculator = new StringCalculator();
 
-            var actual = stringCalculator.Add("0,1,2");
+            var actual = stringCalculator.Add(input);
 
-            Assert.Equal(3, actual);
+            Assert.Equal(expected, actual);
         }
+        // </SnippetAfterTestLogic>
 
-        // <SnippetNoMagicStrings>
+        // <SnippetAfterMagicString>
         [Fact]
         void Add_MaximumSumResult_ThrowsOverflowException()
         {
@@ -49,13 +68,13 @@ namespace UnitTestingBestPracticesAfter
 
             Assert.Throws<OverflowException>(actual);
         }
-        // </SnippetNoMagicStrings>
+        // </SnippetAfterMagicString>
 
-        // <SnippetNoMultipleAsserts>
+        // <SnippetAfterMultipleAsserts>
         [Theory]
         [InlineData(null)]
-        [InlineData("")]
-        public void Add_NullOrEmpty_ThrowsArgumentException(string input)
+        [InlineData("a")]
+        public void Add_InputNullOrAlphabetic_ThrowsArgumentException(string input)
         {
             var stringCalculator = new StringCalculator();
 
@@ -63,6 +82,13 @@ namespace UnitTestingBestPracticesAfter
 
             Assert.Throws<ArgumentException>(actual);
         }
-        // </SnippetNoMultipleAsserts>
+        // </SnippetAfterMultipleAsserts>
+
+        // <SnippetAfterSetup>
+        private StringCalculator CreateDefaultStringCalcualtor()
+        {
+            return new StringCalculator();
+        }
+        // </SnippetAfterSetup>
     }
 }
