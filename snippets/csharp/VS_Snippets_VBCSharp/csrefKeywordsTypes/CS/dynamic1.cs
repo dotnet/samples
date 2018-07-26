@@ -72,7 +72,7 @@ namespace DynamicSnippets
         // Results:
         // 20
         // Example string.
-        // 2/17/2009 9:12:00 AM
+        // 7/25/2018 12:00:00 AM
         //</Snippet23>
 
         static void ExamplesMethod()
