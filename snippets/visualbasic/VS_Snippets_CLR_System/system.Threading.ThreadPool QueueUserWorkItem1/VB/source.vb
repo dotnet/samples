@@ -1,59 +1,78 @@
 '<Snippet1>
-' This example shows how to create an object containing task
-' information, and pass that object to a task queued for
-' execution by the thread pool.
-Imports System
 Imports System.Threading
-' TaskInfo holds state information for a task that will be
-' executed by a ThreadPool thread.
-Public Class TaskInfo
-    ' State information for the task.  These members
-    ' can be implemented as read-only properties, read/write
-    ' properties with validation, and so on, as required.
-    Public Boilerplate As String
-    Public Value As Integer
 
-    ' Public constructor provides an easy way to supply all
-    ' the information needed for the task.
-    Public Sub New(text As String, number As Integer)
-        Boilerplate = text
-        Value = number
+Public Class Fibonacci
+    Private _doneEvent As ManualResetEvent
+
+    Public Sub New(n As Integer, doneEvent As ManualResetEvent)
+        Me.N = n
+        _doneEvent = doneEvent
     End Sub
+
+    Public ReadOnly Property N As Integer
+    Public Property FibOfN As Integer
+
+    Public Sub ThreadPoolCallback(threadContext As Object)
+        Dim threadIndex As Integer = CType(threadContext, Integer)
+        Console.WriteLine($"Thread {threadIndex} started...")
+        FibOfN = Calculate(N)
+        Console.WriteLine($"Thread {threadIndex} result calculated...")
+        _doneEvent.Set()
+    End Sub
+
+    Public Function Calculate(n As Integer) As Integer
+        If (n <= 1) Then
+            Return n
+        End If
+        Return Calculate(n - 1) + Calculate(n - 2)
+    End Function
 End Class
 
-Public Class Example
+Public Class ThreadPoolExample
 
-    <MTAThread> _
+    <MTAThread>
     Public Shared Sub Main()
-        ' Create an object containing the information needed
-        ' for the task.
-        Dim ti As New TaskInfo("This report displays the number {0}.", 42)
 
-        ' Queue the task and data.
-        ThreadPool.QueueUserWorkItem( _
-                New WaitCallback(AddressOf ThreadProc), ti)
-        
-        Console.WriteLine("Main thread does some work, then sleeps.")
+        Const FibonacciCalculations As Integer = 5
 
-        ' If you comment out the Sleep, the main thread exits before
-        ' the ThreadPool task has a chance to run.  ThreadPool uses 
-        ' background threads, which do not keep the application 
-        ' running.  (This is a simple example of a race condition.)
-        Thread.Sleep(1000)
+        Dim doneEvents(FibonacciCalculations - 1) As ManualResetEvent
+        Dim fibArray(FibonacciCalculations - 1) As Fibonacci
+        Dim rand As Random = New Random()
 
-        Console.WriteLine("Main thread exits.")
-    End Sub
+        Console.WriteLine($"Launching {FibonacciCalculations} tasks...")
 
-    ' The thread procedure performs the independent task, in this case
-    ' formatting and printing a very simple report.
-    '
-    Shared Sub ThreadProc(stateInfo As Object)
-        Dim ti As TaskInfo = CType(stateInfo, TaskInfo)
-        Console.WriteLine(ti.Boilerplate, ti.Value)
+        For i As Integer = 0 To FibonacciCalculations - 1
+            doneEvents(i) = New ManualResetEvent(False)
+            Dim f As Fibonacci = New Fibonacci(rand.Next(20, 40), doneEvents(i))
+            fibArray(i) = f
+            ThreadPool.QueueUserWorkItem(AddressOf f.ThreadPoolCallback, i)
+        Next
+
+        WaitHandle.WaitAll(doneEvents)
+        Console.WriteLine("All calculations are complete.")
+
+        For i As Integer = 0 To FibonacciCalculations - 1
+            Dim f As Fibonacci = fibArray(i)
+            Console.WriteLine($"Fibonacci({f.N}) = {f.FibOfN}")
+        Next
     End Sub
 End Class
-' The example displays output like the following:
-'        Main thread does some work, then sleeps.
-'        This report displays the number 42.
-'        Main thread exits.
+' Output is similar to
+' Launching 5 tasks...
+' Thread 1 started...
+' Thread 2 started...
+' Thread 3 started...
+' Thread 4 started...
+' Thread 0 started...
+' Thread 4 result calculated...
+' Thread 2 result calculated...
+' Thread 3 result calculated...
+' Thread 0 result calculated...
+' Thread 1 result calculated...
+' All calculations are complete.
+' Fibonacci(37) = 24157817
+' Fibonacci(38) = 39088169
+' Fibonacci(29) = 514229
+' Fibonacci(32) = 2178309
+' Fibonacci(23) = 28657
 '</Snippet1>

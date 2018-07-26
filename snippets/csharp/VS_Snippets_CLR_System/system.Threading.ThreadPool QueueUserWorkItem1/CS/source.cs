@@ -1,60 +1,85 @@
 //<Snippet1>
-// This example shows how to create an object containing task
-// information, and pass that object to a task queued for
-// execution by the thread pool.
 using System;
 using System.Threading;
 
-// TaskInfo holds state information for a task that will be
-// executed by a ThreadPool thread.
-public class TaskInfo 
-    {
-    // State information for the task.  These members
-    // can be implemented as read-only properties, read/write
-    // properties with validation, and so on, as required.
-    public string Boilerplate;
-    public int Value;
+public class Fibonacci
+{
+    private ManualResetEvent _doneEvent;
 
-    // Public constructor provides an easy way to supply all
-    // the information needed for the task.
-    public TaskInfo(string text, int number) {
-        Boilerplate = text;
-        Value = number;
+    public Fibonacci(int n, ManualResetEvent doneEvent)
+    {
+        N = n;
+        _doneEvent = doneEvent;
+    }
+
+    public int N { get; }
+
+    public int FibOfN { get; private set; }
+
+    public void ThreadPoolCallback(Object threadContext)
+    {
+        int threadIndex = (int)threadContext;
+        Console.WriteLine($"Thread {threadIndex} started...");
+        FibOfN = Calculate(N);
+        Console.WriteLine($"Thread {threadIndex} result calculated...");
+        _doneEvent.Set();
+    }
+
+    public int Calculate(int n)
+    {
+        if (n <= 1)
+        {
+            return n;
+        }
+        return Calculate(n - 1) + Calculate(n - 2);
     }
 }
 
-public class Example {
-    public static void Main()
+public class ThreadPoolExample
+{
+    static void Main()
     {
-        // Create an object containing the information needed
-        // for the task.
-        TaskInfo ti = new TaskInfo("This report displays the number {0}.", 42);
+        const int FibonacciCalculations = 5;
 
-        // Queue the task and data.
-        ThreadPool.QueueUserWorkItem(new WaitCallback(ThreadProc), ti);
+        var doneEvents = new ManualResetEvent[FibonacciCalculations];
+        var fibArray = new Fibonacci[FibonacciCalculations];
+        var rand = new Random();
 
-        Console.WriteLine("Main thread does some work, then sleeps.");
+        Console.WriteLine($"Launching {FibonacciCalculations} tasks...");
+        for (int i = 0; i < FibonacciCalculations; i++)
+        {
+            doneEvents[i] = new ManualResetEvent(false);
+            var f = new Fibonacci(rand.Next(20, 40), doneEvents[i]);
+            fibArray[i] = f;
+            ThreadPool.QueueUserWorkItem(f.ThreadPoolCallback, i);
+        }
 
-        // If you comment out the Sleep, the main thread exits before
-        // the ThreadPool task has a chance to run.  ThreadPool uses 
-        // background threads, which do not keep the application 
-        // running.  (This is a simple example of a race condition.)
-        Thread.Sleep(1000);
+        WaitHandle.WaitAll(doneEvents);
+        Console.WriteLine("All calculations are complete.");
 
-        Console.WriteLine("Main thread exits.");
-    }
-
-    // The thread procedure performs the independent task, in this case
-    // formatting and printing a very simple report.
-    //
-    static void ThreadProc(Object stateInfo) 
-    {
-        TaskInfo ti = (TaskInfo) stateInfo;
-        Console.WriteLine(ti.Boilerplate, ti.Value); 
+        for (int i = 0; i < FibonacciCalculations; i++)
+        {
+            Fibonacci f = fibArray[i];
+            Console.WriteLine($"Fibonacci({f.N}) = {f.FibOfN}");
+        }
     }
 }
-// The example displays output like the following:
-//       Main thread does some work, then sleeps.
-//       This report displays the number 42.
-//       Main thread exits.
+// The output is similar to:
+// Launching 5 tasks...
+// Thread 3 started...
+// Thread 4 started...
+// Thread 2 started...
+// Thread 1 started...
+// Thread 0 started...
+// Thread 2 result calculated...
+// Thread 3 result calculated...
+// Thread 4 result calculated...
+// Thread 1 result calculated...
+// Thread 0 result calculated...
+// All calculations are complete.
+// Fibonacci(35) = 9227465
+// Fibonacci(27) = 196418
+// Fibonacci(25) = 75025
+// Fibonacci(25) = 75025
+// Fibonacci(27) = 196418
 //</Snippet1>
