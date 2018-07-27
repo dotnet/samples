@@ -2,7 +2,7 @@ using System;
 
 class NullableExample
 {
-  static void Main()
+  static void Run()
   {
       int? num = null;
 
