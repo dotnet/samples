@@ -6,23 +6,27 @@ namespace nullable_types
     {
         internal static void Examples()
         {
-            AccessValueOfNullableType();
+            GetValueOfNullableType();
             ComparisonOperators();
-            NullCoalescingOperator();
         }
 
         private static void DeclareAndAssign()
         {
             // <Snippet1>
-            int? i = 10;
             double? pi = 3.14;
             char? letter = 'a';
-            int?[] arr = new int?[10];
+
+            int m2 = 10;
+            int? m = m2;
+
             bool? flag = null;
+            
+            // Array of nullable type:
+            int?[] arr = new int?[10];
             // </Snippet1>
         }
 
-        private static void AccessValueOfNullableType()
+        private static void GetValueOfNullableType()
         {
             // <Snippet2>
             int? x = 10;
@@ -47,22 +51,23 @@ namespace nullable_types
                 Console.WriteLine("y is undefined");
             }
             // </Snippet3>
+
+            // <Snippet4>
+            int? c = null;
+
+            // d = c, if c is not null, d = -1 if c is null.
+            int d = c ?? -1;
+            Console.WriteLine($"d is {d}");
+            // </Snippet4>
         }
 
-        private static void Conversions()
+        private static void ExplicitCast()
         {
-            // <Snippet4>
+            // <Snippet5>
             int? n = null;
 
-            //int m1 = n;      // Doesn't compile.
-            int n2 = (int)n;   // Compiles, but throws an exception if n is null.
-            int n3 = n.Value;  // Compiles, but throws an exception if n is null.
-            // </Snippet4>
-
-            // <Snippet5>
-            int? m;
-            int m2 = 10;
-            m = m2;  // Implicit conversion.
+            //int m1 = n;    // Doesn't compile.
+            int n2 = (int)n; // Compiles, but throws an exception if n is null.
             // </Snippet5>
         }
 
@@ -118,17 +123,6 @@ namespace nullable_types
             // num1 != num2 is true!
             // num1 == num2 is true if the value of each is null
             // </Snippet7>
-        }
-
-        private static void NullCoalescingOperator()
-        {
-            // <Snippet8>
-            int? c = null;
-
-            // d = c, unless c is null, in which case d = -1.
-            int d = c ?? -1;
-            Console.WriteLine($"d is {d}");
-            // </Snippet8>
         }
     }
 }
