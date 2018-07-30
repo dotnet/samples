@@ -37,7 +37,7 @@ namespace nullable_types
             }
             else
             {
-                Console.WriteLine("x is undefined");
+                Console.WriteLine("x does not have a value");
             }
             // </Snippet2>
 
@@ -49,7 +49,7 @@ namespace nullable_types
             }
             else
             {
-                Console.WriteLine("y is undefined");
+                Console.WriteLine("y does not have a value");
             }
             // </Snippet3>
 
@@ -61,7 +61,7 @@ namespace nullable_types
             }
             else
             {
-                Console.WriteLine("z is undefined");
+                Console.WriteLine("z does not have a value");
             }
             // </Snippet4>
         }
