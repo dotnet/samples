@@ -6,7 +6,8 @@ namespace nullable_types
     {
         internal static void Examples()
         {
-            GetValueOfNullableType();
+            ExamineValueOfNullableType();
+            UseNullCoalescingOperator();
             ComparisonOperators();
         }
 
@@ -26,7 +27,7 @@ namespace nullable_types
             // </Snippet1>
         }
 
-        private static void GetValueOfNullableType()
+        private static void ExamineValueOfNullableType()
         {
             // <Snippet2>
             int? x = 10;
@@ -53,27 +54,42 @@ namespace nullable_types
             // </Snippet3>
 
             // <Snippet4>
+            int? z = 42;
+            if (z is int zValue)
+            {
+                Console.WriteLine($"z is {zValue}");
+            }
+            else
+            {
+                Console.WriteLine("z is undefined");
+            }
+            // </Snippet4>
+        }
+
+        private static void UseNullCoalescingOperator()
+        {
+            // <Snippet5>
             int? c = null;
 
             // d = c, if c is not null, d = -1 if c is null.
             int d = c ?? -1;
             Console.WriteLine($"d is {d}");
-            // </Snippet4>
+            // </Snippet5>
         }
 
         private static void ExplicitCast()
         {
-            // <Snippet5>
+            // <Snippet6>
             int? n = null;
 
             //int m1 = n;    // Doesn't compile.
             int n2 = (int)n; // Compiles, but throws an exception if n is null.
-            // </Snippet5>
+            // </Snippet6>
         }
 
         private static void Operators()
         {
-            // <Snippet6>
+            // <Snippet7>
             int? a = 10;
             int? b = null;
             int? c = 10;
@@ -81,12 +97,12 @@ namespace nullable_types
             a++;        // a is 11.
             a = a * c;  // a is 110.
             a = a + b;  // a is null.
-            // </Snippet6>
+            // </Snippet7>
         }
 
         private static void ComparisonOperators()
         {
-            // <Snippet7>
+            // <Snippet8>
             int? num1 = 10;
             int? num2 = null;
             if (num1 >= num2)
@@ -122,7 +138,7 @@ namespace nullable_types
             // num1 < num2 is false (but num1 >= num2 also is false)
             // num1 != num2 is true!
             // num1 == num2 is true if the value of each is null
-            // </Snippet7>
+            // </Snippet8>
         }
     }
 }
