@@ -1,22 +1,38 @@
 // <Snippet4>
+// Assembly FirstAssembly
 using System;
 using System.Reflection;
+using System.Runtime.CompilerServices;
+namespace FirstAssembly {
+public class InFirstAssembly {
+  public static void Main () {
+     FistMethod ();
+     SecondAssembly.InSecondAssembly.OtherMethod ();
+  }
 
-public class Example
-{
-   public static void Main()
-   {
-      // Instantiate a target object.
-      int integer1 = 0;
-      // Set the Type instance to the target class type.
-      Type type1 = integer1.GetType();
-      // Instantiate an Assembly class to the assembly housing the Integer type.
-      Assembly sampleAssembly = Assembly.GetAssembly(integer1.GetType());
-      // Display the name of the assembly that is calling the method.
-      Console.WriteLine("GetCallingAssembly = " + Assembly.GetCallingAssembly().FullName);
-   }
+  [MethodImpl(MethodImplOptions.NoInlining)]
+  public static void FirstMethod () {
+    Console.WriteLine ("FirstMethod called from: " + Assembly.GetCallingAssembly ().FullName);
+  }
 }
-// The example displays output like the following:
-//    GetCallingAssembly = Example, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+}
+
+// Assembly SecondAssembly
+using System;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+
+namespace SecondAssembly {
+class InSecondAssembly () {
+  [MethodImpl (MethodImplOptions.NoInlining)]
+  public static void OtherMethod () {
+    Console.WriteLine ("OtherMehod executing assembly: " + Assembly.GetExecutingAssembly ().FullName);
+    Console.WriteLine ("OtherMethod called from: " + Assembly.GetCallingAssembly ().FullName);
+  }
+}
+// The example produces output like the following:
+// "FirstMethod called from: FirstAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+// "OtherMethod executing assembly: SecondAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+// "OtherMethod called from: FirstAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
 // </Snippet4>
 
