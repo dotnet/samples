@@ -25,7 +25,7 @@ namespace PatternMatching
             Radius = radius;
         }
     }
-    public class Rectangle
+    public struct Rectangle
     {
         public double Length { get; }
         public double Height { get; }
