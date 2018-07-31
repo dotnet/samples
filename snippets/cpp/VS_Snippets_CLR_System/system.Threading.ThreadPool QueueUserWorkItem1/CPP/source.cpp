@@ -1,69 +1,103 @@
-
 //<Snippet1>
-// This example shows how to create an Object* containing task
-// information, and pass that Object* to a task queued for
-// execution by the thread pool.
 using namespace System;
 using namespace System::Threading;
 
-// TaskInfo holds state information for a task that will be
-// executed by a ThreadPool thread.
-public ref class TaskInfo
+public ref class Fibonacci
 {
+private:
+	ManualResetEvent^ _doneEvent;
+
+	int Calculate(int n)
+	{
+		if (n <= 1)
+		{
+			return n;
+		}
+		return Calculate(n - 1) + Calculate(n - 2);
+	}
+
 public:
+	
+	int ID;
+	int N;
+	int FibOfN;
 
-   // State information for the task.  These members
-   // can be implemented as read-only properties, read/write
-   // properties with validation, and so on, as required.
-   String^ Boilerplate;
-   int Value;
+	Fibonacci(int id, int n, ManualResetEvent^ doneEvent)
+	{
+		ID = id;
+		N = n;
+		_doneEvent = doneEvent;
+	}
 
-   // Public constructor provides an easy way to supply all
-   // the information needed for the task.
-   TaskInfo( String^ text, int number )
-   {
-      Boilerplate = text;
-      Value = number;
-   }
+	void Calculate()
+	{
+		FibOfN = Calculate(N);
+	}
 
+	void SetDone()
+	{
+		_doneEvent->Set();
+	}
 };
 
 public ref struct Example
 {
 public:
 
-   // The thread procedure performs the independent task, in this case
-   // formatting and printing a very simple report.
-   //
-   static void ThreadProc( Object^ stateInfo )
-   {
-      TaskInfo^ ti = dynamic_cast<TaskInfo^>(stateInfo);
-      Console::WriteLine( ti->Boilerplate, ti->Value );
-   }
-
+	static void ThreadProc(Object^ stateInfo)
+	{
+		Fibonacci^ f = dynamic_cast<Fibonacci^>(stateInfo);
+		Console::WriteLine("Thread {0} started...", f->ID);
+		f->Calculate();
+		Console::WriteLine("Thread {0} result calculated...", f->ID);
+		f->SetDone();
+	}
 };
+
 
 void main()
 {
-   
-   // Create an object containing the information needed
-   // for the task.
-   TaskInfo^ ti = gcnew TaskInfo( "This report displays the number {0}.",42 );
-   
-   // Queue the task and data.
-   ThreadPool::QueueUserWorkItem( gcnew WaitCallback( Example::ThreadProc ), ti );
+	const int FibonacciCalculations = 5;
 
-   Console::WriteLine( "Main thread does some work, then sleeps." );
-      
-   // If you comment out the Sleep, the main thread exits before
-   // the ThreadPool task has a chance to run.  ThreadPool uses 
-   // background threads, which do not keep the application 
-   // running.  (This is a simple example of a race condition.)
-   Thread::Sleep( 1000 );
-   Console::WriteLine( "Main thread exits." );
+	array<ManualResetEvent^>^ doneEvents = gcnew array<ManualResetEvent^>(FibonacciCalculations);
+	array<Fibonacci^>^ fibArray = gcnew array<Fibonacci^>(FibonacciCalculations);
+	Random^ rand = gcnew Random();
+
+	Console::WriteLine("Launching {0} tasks...", FibonacciCalculations);
+
+	for (int i = 0; i < FibonacciCalculations; i++)
+	{
+		doneEvents[i] = gcnew ManualResetEvent(false);
+		Fibonacci^ f = gcnew Fibonacci(i, rand->Next(20, 40), doneEvents[i]);
+		fibArray[i] = f;
+		ThreadPool::QueueUserWorkItem(gcnew WaitCallback(Example::ThreadProc), f);
+	}
+
+	WaitHandle::WaitAll(doneEvents);
+	Console::WriteLine("All calculations are complete.");
+
+	for (int i = 0; i < FibonacciCalculations; i++)
+	{
+		Fibonacci^ f = fibArray[i];
+		Console::WriteLine("Fibonacci({0}) = {1}", f->N, f->FibOfN);
+	}
 }
-// The example displays output like the following:
-//       Main thread does some work, then sleeps.
-//       This report displays the number 42.
-//       Main thread exits.
+// Output is similar to:
+// Launching 5 tasks...
+// Thread 3 started...
+// Thread 2 started...
+// Thread 1 started...
+// Thread 0 started...
+// Thread 4 started...
+// Thread 4 result calculated...
+// Thread 1 result calculated...
+// Thread 2 result calculated...
+// Thread 0 result calculated...
+// Thread 3 result calculated...
+// All calculations are complete.
+// Fibonacci(30) = 832040
+// Fibonacci(24) = 46368
+// Fibonacci(26) = 121393
+// Fibonacci(36) = 14930352
+// Fibonacci(20) = 6765
 //</Snippet1>
