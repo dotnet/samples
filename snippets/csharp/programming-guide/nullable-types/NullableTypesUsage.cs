@@ -155,6 +155,9 @@ namespace nullable_types
             {
                 Console.WriteLine($"aNullableBoxed is boxed int: {aValue}");
             }
+            // Output:
+            // Value of aNullable: 41
+            // aNullableBoxed is boxed int: 41
             // </Snippet9>
         }
     }
