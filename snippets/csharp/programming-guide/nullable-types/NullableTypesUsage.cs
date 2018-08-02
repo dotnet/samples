@@ -9,6 +9,7 @@ namespace nullable_types
             ExamineValueOfNullableType();
             UseNullCoalescingOperator();
             ComparisonOperators();
+            BoxingAndUnboxing();
         }
 
         private static void DeclareAndAssign()
@@ -139,6 +140,22 @@ namespace nullable_types
             // num1 != num2 is true!
             // num1 == num2 is true if the value of each is null
             // </Snippet8>
+        }
+
+        private static void BoxingAndUnboxing()
+        {
+            // <Snippet9>
+            int a = 41;
+            object aBoxed = a;
+            int? aNullable = (int?)aBoxed;
+            Console.WriteLine($"Value of aNullable: {aNullable}");
+
+            object aNullableBoxed = aNullable;
+            if (aNullableBoxed is int aValue)
+            {
+                Console.WriteLine($"aNullableBoxed is boxed int: {aValue}");
+            }
+            // </Snippet9>
         }
     }
 }
