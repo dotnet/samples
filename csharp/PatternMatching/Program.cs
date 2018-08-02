@@ -44,7 +44,7 @@ namespace PatternMatching
                 case "large-circle":
                     return new Circle(12);
 
-                case var o when (o?.Trim()?.Length ?? 0) == 0:
+                case var o when (o?.Trim().Length ?? 0) == 0:
                     // white space
                     return null;
                 default:
