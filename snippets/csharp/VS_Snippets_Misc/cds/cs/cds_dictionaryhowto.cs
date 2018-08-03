@@ -204,7 +204,7 @@ namespace DictionaryHowTo
                                                 retrievedValue.RecentHighTemperatures);
                 
                 // Replace the old value with the new value.
-                if (!cities.TryUpdate(searchKey, retrievedValue, newValue))
+                if (!cities.TryUpdate(searchKey, newValue, retrievedValue))
                 {
                     //The data was not updated. Log error, throw exception, etc.
                     Console.WriteLine("Could not update {0}", retrievedValue.Name);
@@ -216,7 +216,7 @@ namespace DictionaryHowTo
                 // the data. Another option is to add a default value here and 
                 // update with real data later on some other thread.
                 CityInfo newValue = GetDataForCity(searchKey);
-                if( cities.TryAdd(searchKey, newValue))
+                if(cities.TryAdd(searchKey, newValue))
                 {
                     // use the data
                     Console.Write("Most recent high temperatures for {0} are: ", newValue.Name);
