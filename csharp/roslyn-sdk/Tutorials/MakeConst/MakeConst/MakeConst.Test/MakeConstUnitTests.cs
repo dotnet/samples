@@ -13,17 +13,9 @@ namespace MakeConst.Test
     {
 
         //No diagnostics expected to show up
+        // <SnippetAlreadyConst>
         [TestMethod]
-        public void TestMethod1()
-        {
-            var test = @"";
-
-            VerifyCSharpDiagnostic(test);
-        }
-
-        //Diagnostic and CodeFix both triggered and checked for
-        [TestMethod]
-        public void TestMethod2()
+        public void WhenNodeIsAlreadyConstantNoDiagnosticsAreReported()
         {
             var test = @"
 using System;
@@ -34,7 +26,123 @@ namespace MakeConstTest
     {
         static void Main(string[] args)
         {
-            int i = 1;
+            const int i = 0;
+            Console.WriteLine(i);
+        }
+    }
+}";
+
+            VerifyCSharpDiagnostic(test);
+        }
+        // </SnippetAlreadyConst>
+
+        // <SnippetCantBeConst>
+        [TestMethod]
+        public void WhenNodeHasNoInitializerNoDiagnosticsAreReported()
+        {
+            var test = @"
+using System;
+
+namespace MakeConstTest
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i;
+            i = 0;
+            Console.WriteLine(i);
+        }
+    }
+}";
+
+            VerifyCSharpDiagnostic(test);
+        }
+
+        [TestMethod]
+        public void WhenNodeInitializerIsntConstantNoDiagnosticsAreReported()
+        {
+            var test = @"
+using System;
+
+namespace MakeConstTest
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i = DateTime.Now.DayOfYear;
+            Console.WriteLine(i);
+        }
+    }
+}";
+
+            VerifyCSharpDiagnostic(test);
+        }
+        // </SnippetCantBeConst>
+
+        // <SnippetMultipleDeclarations>
+        [TestMethod]
+        public void WhenNodeHasMultipleDeclarationsAlltNoDiagnosticsAreReported()
+        {
+            var test = @"
+using System;
+
+namespace MakeConstTest
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i = 0, j = DateTime.Now.DayOfYear;
+            Console.WriteLine(i, j);
+        }
+    }
+}";
+
+            VerifyCSharpDiagnostic(test);
+        }
+        // </SnippetMultipleDeclarations>
+
+        // <SnippetVariableChangesValue>
+        [TestMethod]
+        public void WhenVariablesAreAssignedNoDiagnosticsAreReported()
+        {
+            var test = @"
+using System;
+
+namespace MakeConstTest
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i = 0;
+            Console.WriteLine(i++);
+        }
+    }
+}";
+
+            VerifyCSharpDiagnostic(test);
+        }
+        // </SnippetVariableChangesValue>
+
+        //Diagnostic and CodeFix both triggered and checked for
+        // <SnippetTestMethodIntConstantV1>
+        [TestMethod]
+        public void WhenLocalIntCouldBeConstantAnalyzerReportsOneDiagnostic()
+        {
+            var test = @"
+using System;
+
+namespace MakeConstTest
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i = 0;
+            Console.WriteLine(i);
         }
     }
 }";
@@ -50,6 +158,40 @@ namespace MakeConstTest
             };
 
             VerifyCSharpDiagnostic(test, expected);
+        }
+        // </SnippetTestMethodIntConstantV1>
+
+        [TestMethod]
+        public void WhenLocalIntCouldBeConstantAnalyzerReportsOneDiagnosticWithFix()
+        {
+            var test = @"
+using System;
+
+namespace MakeConstTest
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i = 0;
+            Console.WriteLine(i);
+        }
+    }
+}";
+            var expected = new DiagnosticResult
+            {
+                Id = "MakeConst",
+                Message = "can be made constant",
+                Severity = DiagnosticSeverity.Warning,
+                Locations =
+                    new[] {
+                            new DiagnosticResultLocation("Test0.cs", 10, 13)
+                        }
+            };
+
+            VerifyCSharpDiagnostic(test, expected);
+
+            // <SnippetTestMethodIntConstantFix>
             var fixtest = @"
 using System;
 
@@ -59,15 +201,18 @@ namespace MakeConstTest
     {
         static void Main(string[] args)
         {
-            const int i = 1;
+            const int i = 0;
+            Console.WriteLine(i);
         }
     }
 }";
             VerifyCSharpFix(test, fixtest);
+            // </SnippetTestMethodIntConstantFix>
         }
 
+        // <SnippetAssignStringToInt>
         [TestMethod]
-        public void TestMethod3()
+        public void WhenDeclarationIsInvalidNoDiagnosticIsReported()
         {
             var test = @"
 using System;
@@ -84,9 +229,11 @@ namespace MakeConstTest
 }";
             VerifyCSharpDiagnostic(test);
         }
+        // </SnippetAssignStringToInt>
 
+        // <SnippetNoReferenceTypes>
         [TestMethod]
-        public void TestMethod4()
+        public void WhenReferenceTypeIsntStringNoDiagnosticIsRaised()
         {
             var test = @"
 using System;
@@ -105,7 +252,7 @@ namespace MakeConstTest
         }
 
         [TestMethod]
-        public void TestMethod5()
+        public void W()
         {
             var test = @"
 using System;
@@ -147,10 +294,12 @@ namespace MakeConstTest
 }";
             VerifyCSharpFix(test, fixtest);
         }
+        // </SnippetNoReferenceTypes>
 
 
+        // <SnippetReplaceVarDeclarationWithConst>
         [TestMethod]
-        public void TestMethod6()
+        public void WhenDeclarationUsesVarConstDeclarationHasType()
         {
             var test = @"
 using System;
@@ -192,8 +341,9 @@ namespace MakeConstTest
 }";
             VerifyCSharpFix(test, fixtest);
         }
+        // </SnippetReplaceVarDeclarationWithConst>
 
-             
+
 
         protected override CodeFixProvider GetCSharpCodeFixProvider()
         {

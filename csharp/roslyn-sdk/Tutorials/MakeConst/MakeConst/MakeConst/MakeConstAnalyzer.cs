@@ -43,10 +43,10 @@ namespace MakeConst
                 return;
             }
 
-            // <SnippetBugs>
+            // <SnippetGetTypeInfo>
             var variableTypeName = localDeclaration.Declaration.Type;
             var variableType = context.SemanticModel.GetTypeInfo(variableTypeName).ConvertedType;
-            // </SnippetBugs>
+            // </SnippetGetTypeInfo>
 
             // Ensure that all variables in the local declaration have initializers that
             // are assigned with constant values.
@@ -94,6 +94,7 @@ namespace MakeConst
                 // </SnippetSpecialCase>
             }
 
+            //<SnippetFlowAnalysis>
             // Perform data flow analysis on the local declaration.
             var dataFlowAnalysis = context.SemanticModel.AnalyzeDataFlow(localDeclaration);
 
@@ -107,8 +108,11 @@ namespace MakeConst
                     return;
                 }
             }
+            //</SnippetFlowAnalysis>
 
+            // <SnippetReportDiagnostic>
             context.ReportDiagnostic(Diagnostic.Create(Rule, context.Node.GetLocation()));
+            // </SnippetReportDiagnostic>
         }
     }
 }
