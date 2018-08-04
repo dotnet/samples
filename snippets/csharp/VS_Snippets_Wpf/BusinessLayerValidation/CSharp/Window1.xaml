@@ -21,7 +21,7 @@
 
     <StackPanel Margin="20">
         <TextBlock>Enter your age:</TextBlock>
-<!--<SnippetBoundTextBox>-->
+
         <TextBox Style="{StaticResource textBoxInError}">
             <TextBox.Text>
                 <!--By setting ValidatesOnExceptions to True, it checks for exceptions
@@ -40,7 +40,7 @@
                 </Binding>
             </TextBox.Text>
         </TextBox>
-<!--</SnippetBoundTextBox>-->
+
         <TextBlock>Mouse-over to see the validation error message.</TextBlock>
     </StackPanel>
 </Window>
