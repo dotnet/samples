@@ -14,6 +14,6 @@ Module Example
    End Sub
 End Module
 ' The example displays the following output:
-'       gray wolf
+'       gray wolf 
 '       grey wall.
 ' </Snippet1>
