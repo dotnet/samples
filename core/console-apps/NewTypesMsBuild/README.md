@@ -8,7 +8,7 @@ This sample builds a program and an associated unit test assembly. Using this sa
 
 ## Build and run
 
-To build and run the sample, change to the *src/NewTypesMsBuild* directory and execute the following two commands:
+To build and run the sample, change to the *src/NewTypes* directory and execute the following two commands:
 
 ```console
 dotnet restore
