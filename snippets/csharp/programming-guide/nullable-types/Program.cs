@@ -7,6 +7,7 @@ namespace nullable_types
         static void Main(string[] args)
         {
             NullableTypesUsage.Examples();
+            IdentifyNullableType.Examples();
         }
     }
 }
