@@ -23,7 +23,7 @@ void main()
    // Get the number of dimensions.                               
    int rank = integers2d->Rank;  
    Console::WriteLine("Number of dimensions: {0}", rank);      
-   for (int ctr = 0; ctr < integers2d->Rank - 1; ctr++)
+   for (int ctr = 0; ctr < rank; ctr++)
      Console::WriteLine("   Dimension {0}: from {1} to {2}",
                         ctr, integers2d->GetLowerBound(ctr),
                         integers2d->GetUpperBound(ctr));

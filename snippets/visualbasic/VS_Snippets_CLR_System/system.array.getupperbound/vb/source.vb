@@ -21,7 +21,7 @@ Public Module Example
         ' Get the number of dimensions.                               
         Dim rank As Integer = integers2d.Rank  
         Console.WriteLine("Number of dimensions: {0}", rank)      
-        For ctr As Integer = 0 To integers2d.Rank - 1
+        For ctr As Integer = 0 To rank - 1
            Console.WriteLine("   Dimension {0}: from {1} to {2}",
                              ctr, integers2d.GetLowerBound(ctr),
                              integers2d.GetUpperBound(ctr))
