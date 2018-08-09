@@ -12,12 +12,8 @@ namespace MakeConst.Test
     public class UnitTest : CodeFixVerifier
     {
 
-        //No diagnostics expected to show up
-        // <SnippetAlreadyConst>
-        [TestMethod]
-        public void WhenNodeIsAlreadyConstantNoDiagnosticsAreReported()
-        {
-            var test = @"
+        // This section contains code to analyze where no diagnostic should e reported
+private const string AlreadyConst = @"
 using System;
 
 namespace MakeConstTest
@@ -32,15 +28,7 @@ namespace MakeConstTest
     }
 }";
 
-            VerifyCSharpDiagnostic(test);
-        }
-        // </SnippetAlreadyConst>
-
-        // <SnippetCantBeConst>
-        [TestMethod]
-        public void WhenNodeHasNoInitializerNoDiagnosticsAreReported()
-        {
-            var test = @"
+private const string NoInitializer = @"
 using System;
 
 namespace MakeConstTest
@@ -56,13 +44,7 @@ namespace MakeConstTest
     }
 }";
 
-            VerifyCSharpDiagnostic(test);
-        }
-
-        [TestMethod]
-        public void WhenNodeInitializerIsntConstantNoDiagnosticsAreReported()
-        {
-            var test = @"
+private const string InitializerNotConstant = @"
 using System;
 
 namespace MakeConstTest
@@ -77,15 +59,7 @@ namespace MakeConstTest
     }
 }";
 
-            VerifyCSharpDiagnostic(test);
-        }
-        // </SnippetCantBeConst>
-
-        // <SnippetMultipleDeclarations>
-        [TestMethod]
-        public void WhenNodeHasMultipleDeclarationsAlltNoDiagnosticsAreReported()
-        {
-            var test = @"
+private const string MultipleInitializers = @"
 using System;
 
 namespace MakeConstTest
@@ -100,15 +74,7 @@ namespace MakeConstTest
     }
 }";
 
-            VerifyCSharpDiagnostic(test);
-        }
-        // </SnippetMultipleDeclarations>
-
-        // <SnippetVariableChangesValue>
-        [TestMethod]
-        public void WhenVariablesAreAssignedNoDiagnosticsAreReported()
-        {
-            var test = @"
+private const string VariableAssigned = @"
 using System;
 
 namespace MakeConstTest
@@ -123,16 +89,38 @@ namespace MakeConstTest
     }
 }";
 
-            VerifyCSharpDiagnostic(test);
-        }
-        // </SnippetVariableChangesValue>
+private const string ReferenceTypeIsntString = @"
+using System;
 
-        //Diagnostic and CodeFix both triggered and checked for
-        // <SnippetTestMethodIntConstantV1>
-        [TestMethod]
-        public void WhenLocalIntCouldBeConstantAnalyzerReportsOneDiagnostic()
+namespace MakeConstTest
+{
+    class Program
+    {
+        static void Main(string[] args)
         {
-            var test = @"
+            object s = ""abc"";
+        }
+    }
+}";
+
+private const string DeclarationIsInvalid = @"
+using System;
+
+namespace MakeConstTest
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int x = ""abc"";
+        }
+    }
+}";
+
+// This section contains code to analyze where the diagnostic should trigger,
+// followed by the code after the fix has been applied.
+
+private const string LocalIntCouldBeConstant = @"
 using System;
 
 namespace MakeConstTest
@@ -146,53 +134,8 @@ namespace MakeConstTest
         }
     }
 }";
-            var expected = new DiagnosticResult
-            {
-                Id = "MakeConst",
-                Message = "can be made constant",
-                Severity = DiagnosticSeverity.Warning,
-                Locations =
-                    new[] {
-                            new DiagnosticResultLocation("Test0.cs", 10, 13)
-                        }
-            };
 
-            VerifyCSharpDiagnostic(test, expected);
-        }
-        // </SnippetTestMethodIntConstantV1>
-
-        [TestMethod]
-        public void WhenLocalIntCouldBeConstantAnalyzerReportsOneDiagnosticWithFix()
-        {
-            var test = @"
-using System;
-
-namespace MakeConstTest
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            int i = 0;
-            Console.WriteLine(i);
-        }
-    }
-}";
-            var expected = new DiagnosticResult
-            {
-                Id = "MakeConst",
-                Message = "can be made constant",
-                Severity = DiagnosticSeverity.Warning,
-                Locations =
-                    new[] {
-                            new DiagnosticResultLocation("Test0.cs", 10, 13)
-                        }
-            };
-
-            VerifyCSharpDiagnostic(test, expected);
-
-            // <SnippetTestMethodIntConstantFix>
-            var fixtest = @"
+private const string LocalIntCouldBeConstantFixed = @"
 using System;
 
 namespace MakeConstTest
@@ -206,55 +149,8 @@ namespace MakeConstTest
         }
     }
 }";
-            VerifyCSharpFix(test, fixtest);
-            // </SnippetTestMethodIntConstantFix>
-        }
 
-        // <SnippetAssignStringToInt>
-        [TestMethod]
-        public void WhenDeclarationIsInvalidNoDiagnosticIsReported()
-        {
-            var test = @"
-using System;
-
-namespace MakeConstTest
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            int x = ""abc"";
-        }
-    }
-}";
-            VerifyCSharpDiagnostic(test);
-        }
-        // </SnippetAssignStringToInt>
-
-        // <SnippetNoReferenceTypes>
-        [TestMethod]
-        public void WhenReferenceTypeIsntStringNoDiagnosticIsRaised()
-        {
-            var test = @"
-using System;
-
-namespace MakeConstTest
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            object s = ""abc"";
-        }
-    }
-}";
-            VerifyCSharpDiagnostic(test);
-        }
-
-        [TestMethod]
-        public void W()
-        {
-            var test = @"
+private const string ConstantIsString = @"
 using System;
 
 namespace MakeConstTest
@@ -267,19 +163,8 @@ namespace MakeConstTest
         }
     }
 }";
-            var expected = new DiagnosticResult
-            {
-                Id = "MakeConst",
-                Message = "can be made constant",
-                Severity = DiagnosticSeverity.Warning,
-                Locations =
-                    new[] {
-                            new DiagnosticResultLocation("Test0.cs", 10, 13)
-                        }
-            };
 
-            VerifyCSharpDiagnostic(test, expected);
-            var fixtest = @"
+private const string ConstantIsStringFixed = @"
 using System;
 
 namespace MakeConstTest
@@ -292,16 +177,8 @@ namespace MakeConstTest
         }
     }
 }";
-            VerifyCSharpFix(test, fixtest);
-        }
-        // </SnippetNoReferenceTypes>
 
-
-        // <SnippetReplaceVarDeclarationWithConst>
-        [TestMethod]
-        public void WhenDeclarationUsesVarConstDeclarationHasType()
-        {
-            var test = @"
+        private const string DeclarationUsesVar = @"
 using System;
 
 namespace MakeConstTest
@@ -314,19 +191,7 @@ namespace MakeConstTest
         }
     }
 }";
-            var expected = new DiagnosticResult
-            {
-                Id = "MakeConst",
-                Message = "can be made constant",
-                Severity = DiagnosticSeverity.Warning,
-                Locations =
-                    new[] {
-                            new DiagnosticResultLocation("Test0.cs", 10, 13)
-                        }
-            };
-
-            VerifyCSharpDiagnostic(test, expected);
-            var fixtest = @"
+        private const string DeclarationUsesVarFixedHasType = @"
 using System;
 
 namespace MakeConstTest
@@ -339,11 +204,72 @@ namespace MakeConstTest
         }
     }
 }";
-            VerifyCSharpFix(test, fixtest);
+
+        //No diagnostics expected to show up
+        // <SnippetAlreadyConst>
+        [DataTestMethod]
+        [DataRow(AlreadyConst),
+         DataRow(NoInitializer),
+         DataRow(InitializerNotConstant),
+         DataRow(MultipleInitializers),
+         DataRow(VariableAssigned),
+         DataRow(DeclarationIsInvalid),
+         DataRow(ReferenceTypeIsntString)]
+        public void WhenTestCodeIsValidNoDiagnosticIsTriggered(string testCode)
+        {
+            VerifyCSharpDiagnostic(testCode);
         }
-        // </SnippetReplaceVarDeclarationWithConst>
+        // </SnippetAlreadyConst>
 
 
+        //Diagnostic and CodeFix both triggered and checked for
+        // <SnippetTestMethodIntConstantV1>
+        [DataTestMethod]
+        [DataRow(LocalIntCouldBeConstant, 10, 13),
+         DataRow(ConstantIsString, 10, 13),
+         DataRow(DeclarationUsesVar, 10, 13)]
+        public void WhenDeclarationCouldBeConstDiagnosticIsRaised(string test, int line, int column)
+        {
+            var expected = new DiagnosticResult
+            {
+                Id = MakeConstAnalyzer.DiagnosticId,
+                Message = "can be made constant",
+                Severity = DiagnosticSeverity.Warning,
+                Locations =
+                    new[] {
+                            new DiagnosticResultLocation("Test0.cs", line, column)
+                        }
+            };
+
+            VerifyCSharpDiagnostic(test, expected);
+        }
+        // </SnippetTestMethodIntConstantV1>
+
+        [DataTestMethod]
+        [DataRow(LocalIntCouldBeConstant, LocalIntCouldBeConstantFixed, 10, 13),
+         DataRow(ConstantIsString, ConstantIsStringFixed, 10, 13),
+         DataRow(DeclarationUsesVar, DeclarationUsesVarFixedHasType, 10, 13)]
+        public void WhenDiagosticIsRaisedFixUpdatesCode(
+            string test,
+            string fixTest,
+            int line,
+            int column)
+        {
+            var expected = new DiagnosticResult
+            {
+                Id = MakeConstAnalyzer.DiagnosticId,
+                Message = "can be made constant",
+                Severity = DiagnosticSeverity.Warning,
+                Locations =
+                    new[] {
+                            new DiagnosticResultLocation("Test0.cs", line, column)
+                        }
+            };
+
+            VerifyCSharpDiagnostic(test, expected);
+
+            VerifyCSharpFix(test, fixTest);
+        }
 
         protected override CodeFixProvider GetCSharpCodeFixProvider()
         {
