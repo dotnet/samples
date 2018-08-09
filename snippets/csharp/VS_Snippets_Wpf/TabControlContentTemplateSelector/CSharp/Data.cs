@@ -9,7 +9,7 @@ namespace TabControlContentTemplateSelector
 {
     // Create a class that represents a person.  
     // This class contains a person's first name, last name, 
-    // and home town.
+    // and hometown.
     public class Person : INotifyPropertyChanged
     {
         private string firstname;

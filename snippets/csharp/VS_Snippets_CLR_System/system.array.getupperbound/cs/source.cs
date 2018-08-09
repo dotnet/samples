@@ -10,12 +10,11 @@ public class Example
       // Get the upper and lower bound of the array.
       int upper = integers.GetUpperBound(0);
       int lower = integers.GetLowerBound(0);
-      Console.WriteLine("Elements from index {0} to {1}:", lower, upper);
+      Console.WriteLine($"Elements from index {lower} to {upper}:");
       // Iterate the array.
       for (int ctr = lower; ctr <= upper; ctr++)
-        Console.Write("{0}{1}{2}", ctr == lower ? "   " : "", 
-                                  integers[ctr], 
-                                  ctr < upper ? ", " : Environment.NewLine);
+        Console.Write($"{(ctr == lower ?"   " : "")}{integers[ctr]}" +
+                      $"{(ctr < upper ? ", " : Environment.NewLine)}");
 
       Console.WriteLine();
       
@@ -24,11 +23,10 @@ public class Example
                            {6, 36}, {7, 49}, {8, 64}, {9, 81} }; 
       // Get the number of dimensions.                               
       int rank = integers2d.Rank;  
-      Console.WriteLine("Number of dimensions: {0}", rank);      
-      for (int ctr = 0; ctr < integers2d.Rank - 1; ctr++)
-        Console.WriteLine("   Dimension {0}: from {1} to {2}",
-                          ctr, integers2d.GetLowerBound(ctr),
-                          integers2d.GetUpperBound(ctr));
+      Console.WriteLine($"Number of dimensions: {rank}");      
+      for (int ctr = 0; ctr < rank; ctr++)
+        Console.WriteLine($"   Dimension {ctr}: " + 
+                          $"from {integers2d.GetLowerBound(ctr)} to {integers2d.GetUpperBound(ctr)}");
 
       // Iterate the 2-dimensional array and display its values.
       Console.WriteLine("   Values of array elements:");
@@ -36,8 +34,8 @@ public class Example
            outer++)
         for (int inner = integers2d.GetLowerBound(1); inner <= integers2d.GetUpperBound(1);
              inner++)
-           Console.WriteLine("      {3}{0}, {1}{4} = {2}", outer, inner,
-                             integers2d.GetValue(outer, inner), "{", "}");
+           Console.WriteLine($"      {'\u007b'}{outer}, {inner}{'\u007d'} = " +
+                             $"{integers2d.GetValue(outer, inner)}");
 
    }
 }
