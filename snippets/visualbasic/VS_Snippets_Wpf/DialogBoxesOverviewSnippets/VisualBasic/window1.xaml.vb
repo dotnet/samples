@@ -69,7 +69,7 @@ Namespace VisualBasic
             ' Configure save file dialog box
             Dim dlg As New Microsoft.Win32.SaveFileDialog()
             dlg.FileName = "Document" ' Default file name
-            dlg.DefaultExt = ".text" ' Default file extension
+            dlg.DefaultExt = ".txt" ' Default file extension
             dlg.Filter = "Text documents (.txt)|*.txt" ' Filter files by extension
 
             ' Show save file dialog box
