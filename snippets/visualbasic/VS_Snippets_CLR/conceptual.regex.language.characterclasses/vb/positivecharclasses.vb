@@ -9,11 +9,11 @@ Module Example
       Dim input As String = "The gray wolf jumped over the grey wall."
       Dim matches As MatchCollection = Regex.Matches(input, pattern)
       For Each match As Match In matches
-         Console.WriteLine(match.Value)
+         Console.WriteLine($"'{match.Value}'")
       Next
    End Sub
 End Module
 ' The example displays the following output:
-'       gray wolf 
-'       grey wall.
+'       'gray wolf '
+'       'grey wall.'
 ' </Snippet1>
