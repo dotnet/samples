@@ -10,10 +10,10 @@ public class Example
       string input = "The gray wolf jumped over the grey wall.";
       MatchCollection matches = Regex.Matches(input, pattern);
       foreach (Match match in matches)
-         Console.WriteLine(match.Value);
+         Console.WriteLine($"'{match.Value}'");
    }
 }
 // The example displays the following output:
-//       gray wolf
-//       grey wall.
+//       'gray wolf '
+//       'grey wall.'
 // </Snippet1>      

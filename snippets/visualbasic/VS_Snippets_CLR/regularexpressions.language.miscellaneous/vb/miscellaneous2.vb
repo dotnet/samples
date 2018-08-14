@@ -6,7 +6,7 @@ Imports System.Text.RegularExpressions
 
 Module Example
    Public Sub Main()
-      Dim pattern As String = "\b((?# case sensitive comparison)D\w+)\s(?ixn)((?#case insensitive comparison)d\w+)\b"
+      Dim pattern As String = "\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b"
       Dim rgx As New Regex(pattern)
       Dim input As String = "double dare double Double a Drooling dog The Dreaded Deep"
 
@@ -23,7 +23,7 @@ Module Example
    End Sub
 End Module
 ' The example displays the following output:
-'    Pattern: \b((?# case sensitive comparison)D\w+)\s(?ixn)((?#case insensitive comp
+'    Pattern: \b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comp
 '    arison)d\w+)\b
 '    Drooling dog
 '       Group 1: Drooling

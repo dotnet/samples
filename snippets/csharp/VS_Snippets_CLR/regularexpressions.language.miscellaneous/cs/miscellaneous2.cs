@@ -6,7 +6,7 @@ public class Example
 {
    public static void Main()
    {
-      string pattern = @"\b((?# case sensitive comparison)D\w+)\s(?ixn)((?#case insensitive comparison)d\w+)\b";
+      string pattern = @"\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b";
       Regex rgx = new Regex(pattern);
       string input = "double dare double Double a Drooling dog The Dreaded Deep";
 
@@ -24,7 +24,7 @@ public class Example
    }
 }
 // The example displays the following output:
-//    Pattern: \b((?# case sensitive comparison)D\w+)\s(?ixn)((?#case insensitive comp
+//    Pattern: \b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comp
 //    arison)d\w+)\b
 //    Drooling dog
 //       Group 1: Drooling
