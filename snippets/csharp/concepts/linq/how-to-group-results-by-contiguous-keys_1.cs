@@ -75,6 +75,7 @@ namespace ChunkIt
                 public readonly TSource Value;
                 public ChunkItem Next = null;
             }
+
             // The value that is used to determine matching elements
             private readonly TKey key;
 
@@ -200,10 +201,7 @@ namespace ChunkIt
                 }
             }
 
-            System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()  => GetEnumerator();
-            {
-                return GetEnumerator();
-            }
+            System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() => GetEnumerator();
         }
     }
 
@@ -224,26 +222,25 @@ namespace ChunkIt
         // on different threads.
         static IEnumerable<IGrouping<string, KeyValPair>> query;
 
-
         static void Main(string[] args)
         {
             // Initialize the source sequence with an array initializer.
             list = new[]
-        {
-            new KeyValPair{ Key = "A", Value = "We" },
-            new KeyValPair{ Key = "A", Value = "Think" },
-            new KeyValPair{ Key = "A", Value = "That" },
-            new KeyValPair{ Key = "B", Value = "Linq" },
-            new KeyValPair{ Key = "C", Value = "Is" },
-            new KeyValPair{ Key = "A", Value = "Really" },
-            new KeyValPair{ Key = "B", Value = "Cool" },
-            new KeyValPair{ Key = "B", Value = "!" }
-        };
+            {
+                new KeyValPair{ Key = "A", Value = "We" },
+                new KeyValPair{ Key = "A", Value = "think" },
+                new KeyValPair{ Key = "A", Value = "that" },
+                new KeyValPair{ Key = "B", Value = "Linq" },
+                new KeyValPair{ Key = "C", Value = "is" },
+                new KeyValPair{ Key = "A", Value = "really" },
+                new KeyValPair{ Key = "B", Value = "cool" },
+                new KeyValPair{ Key = "B", Value = "!" }
+            };
 
             // Create the query by using our user-defined query operator.
             query = list.ChunkBy(p => p.Key);
 
-            
+
             // ChunkBy returns IGrouping objects, therefore a nested
             // foreach loop is required to access the elements in each "chunk".
             foreach (var item in query)
@@ -257,7 +254,6 @@ namespace ChunkIt
 
             Console.WriteLine("Press any key to exit");
             Console.ReadKey();
-        }       
-
-     }
+        }
+    }
 }
