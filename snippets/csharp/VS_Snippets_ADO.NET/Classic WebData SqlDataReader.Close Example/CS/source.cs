@@ -38,7 +38,7 @@ class Program
                     // Call Close when done reading.
                    reader.Close();
                 }
-        }
+            }
         }
     }
     // </Snippet1>
