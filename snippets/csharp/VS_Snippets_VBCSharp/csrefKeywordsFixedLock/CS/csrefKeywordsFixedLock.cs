@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -202,6 +202,10 @@ namespace csrefKeywordsFixedLock
             {
                 threads[i].Start();
             }
+            
+            //block main thread until all other threads have ran to completion.
+            foreach (var t in threads)
+                t.Join();            
         }
     }
 
