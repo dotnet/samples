@@ -56,9 +56,9 @@ namespace nullable_types
 
             // <Snippet4>
             int? z = 42;
-            if (z is int zValue)
+            if (z is int valueOfZ)
             {
-                Console.WriteLine($"z is {zValue}");
+                Console.WriteLine($"z is {valueOfZ}");
             }
             else
             {
@@ -151,9 +151,9 @@ namespace nullable_types
             Console.WriteLine($"Value of aNullable: {aNullable}");
 
             object aNullableBoxed = aNullable;
-            if (aNullableBoxed is int aValue)
+            if (aNullableBoxed is int valueOfA)
             {
-                Console.WriteLine($"aNullableBoxed is boxed int: {aValue}");
+                Console.WriteLine($"aNullableBoxed is boxed int: {valueOfA}");
             }
             // Output:
             // Value of aNullable: 41
