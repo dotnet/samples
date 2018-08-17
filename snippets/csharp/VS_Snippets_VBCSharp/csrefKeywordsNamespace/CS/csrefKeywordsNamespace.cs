@@ -10,7 +10,7 @@ namespace SampleNamespace
 {
     class SampleClass { }
 
-    interface SampleInterface { }
+    interface ISampleInterface { }
 
     struct SampleStruct { }
 
