@@ -24,7 +24,7 @@ namespace HostingAxInWpf
                 new System.Windows.Forms.Integration.WindowsFormsHost();
 
             // Create the ActiveX control.
-            AxWMPLib.AxWindowsMediaPlayer axWmp = new AxWMPLib.AxWindowsMediaPlayer();
+            WmpAxLib.AxWindowsMediaPlayer axWmp = new WmpAxLib.AxWindowsMediaPlayer();
 
             // Assign the ActiveX control as the host control's child.
             host.Child = axWmp;
