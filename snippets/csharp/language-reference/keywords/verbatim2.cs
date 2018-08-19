@@ -23,7 +23,7 @@ public class InfoAttribute : Attribute
    }
 }
 
-[@Info("A simple executable.")]
+[Info("A simple executable.")] // Prepend '@' to 'Info' to avoid compiler error CS1614.
 public class Example
 {
    [InfoAttribute("The entry point.")]
