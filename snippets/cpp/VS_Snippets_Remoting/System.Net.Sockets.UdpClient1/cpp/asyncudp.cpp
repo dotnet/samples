@@ -9,6 +9,10 @@ using namespace System::Threading;
 
 public ref class UdpClientExample
 {
+    //<snippet1>
+private:
+    static int listenPort = 13000;
+
 public:
     value struct UdpState
     {
@@ -17,11 +21,6 @@ public:
         IPEndPoint^ ipEndPoint;
     };
 
-private:
-    static int listenPort = 13000;
-
-    //<snippet1>
-public:
     static bool isMessageReceived;
 
     static void ReceiveCallback(IAsyncResult^ asyncResult)
