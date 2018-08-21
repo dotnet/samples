@@ -61,7 +61,7 @@ class BoxEqualityComparer : IEqualityComparer<Box>
     {
         if (b2 == null && b1 == null)
            return true;
-        else if (b1 == null | b2 == null)
+        else if (b1 == null || b2 == null)
            return false;
         else if(b1.Height == b2.Height && b1.Length == b2.Length
                             && b1.Width == b2.Width)
