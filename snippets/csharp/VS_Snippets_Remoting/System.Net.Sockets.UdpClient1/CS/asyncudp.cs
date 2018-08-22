@@ -77,12 +77,13 @@ class MyUdpClient
 
     UdpClient u = new UdpClient();
 
+//<snippet1>
   public struct UdpState
   {
     public UdpClient u;
     public IPEndPoint e;
   }
-//<snippet1>
+
   public static bool messageReceived = false;
 
   public static void ReceiveCallback(IAsyncResult ar)

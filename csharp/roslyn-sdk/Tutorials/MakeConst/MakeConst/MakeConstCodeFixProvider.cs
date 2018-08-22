@@ -72,7 +72,6 @@ namespace MakeConst
             var constToken = SyntaxFactory.Token(leadingTrivia, SyntaxKind.ConstKeyword, SyntaxFactory.TriviaList(SyntaxFactory.ElasticMarker));
             // </SnippetCreateConstToken>
 
-
             // Insert the const token into the modifiers list, creating a new modifiers list.
             var newModifiers = trimmedLocal.Modifiers.Insert(0, constToken);
 

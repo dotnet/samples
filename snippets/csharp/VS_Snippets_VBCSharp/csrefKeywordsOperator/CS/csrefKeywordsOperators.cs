@@ -6,7 +6,6 @@ using System.Text;
 namespace KeywordsUberProject
 {
     //<snippet1>
-    
     class csrefKeywordsOperators
     {
         class Base
@@ -90,7 +89,6 @@ namespace KeywordsUberProject
         }
     }
     // Output: no
-
     //</snippet3>
 
     //<snippet4>
@@ -151,7 +149,6 @@ namespace KeywordsUberProject
             return new T();
         }
     }
-
    //</snippet5>
 
     //<snippet6>
@@ -159,7 +156,6 @@ namespace KeywordsUberProject
         where T : IComparable, new()
     {
     }
-
     //</snippet6>
 
     //<snippet7>
@@ -332,7 +328,6 @@ namespace KeywordsUberProject
         The size of int is 4.
         The size of long is 8.
     */
-
     //</snippet11>
     }
 

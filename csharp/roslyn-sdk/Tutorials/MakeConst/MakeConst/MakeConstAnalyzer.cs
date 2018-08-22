@@ -38,15 +38,14 @@ namespace MakeConst
         {
             var localDeclaration = (LocalDeclarationStatementSyntax)context.Node;
 
+            // does not have const
             if (localDeclaration.Modifiers.Any(SyntaxKind.ConstKeyword))
             {
                 return;
             }
 
-            // <SnippetGetTypeInfo>
             var variableTypeName = localDeclaration.Declaration.Type;
             var variableType = context.SemanticModel.GetTypeInfo(variableTypeName).ConvertedType;
-            // </SnippetGetTypeInfo>
 
             // Ensure that all variables in the local declaration have initializers that
             // are assigned with constant values.
@@ -64,7 +63,6 @@ namespace MakeConst
                     return;
                 }
 
-                // <SnippetEnsureConvertible>
                 // Ensure that the initializer value can be converted to the type of the
                 // local declaration without a user-defined conversion.
                 var conversion = context.SemanticModel.ClassifyConversion(initializer.Value, variableType);
@@ -72,9 +70,7 @@ namespace MakeConst
                 {
                     return;
                 }
-                // </SnippetEnsureConvertible>
 
-                // <SnippetSpecialCase>
                 // Special cases:
                 //  * If the constant value is a string, the type of the local declaration
                 //    must be System.String.
@@ -91,28 +87,23 @@ namespace MakeConst
                 {
                     return;
                 }
-                // </SnippetSpecialCase>
             }
 
-            //<SnippetFlowAnalysis>
             // Perform data flow analysis on the local declaration.
             var dataFlowAnalysis = context.SemanticModel.AnalyzeDataFlow(localDeclaration);
 
-            // Retrieve the local symbol for each variable in the local declaration
-            // and ensure that it is not written outside of the data flow analysis region.
             foreach (var variable in localDeclaration.Declaration.Variables)
             {
+                // Retrieve the local symbol for each variable in the local declaration
+                // and ensure that it is not written outside of the data flow analysis region.
                 var variableSymbol = context.SemanticModel.GetDeclaredSymbol(variable);
                 if (dataFlowAnalysis.WrittenOutside.Contains(variableSymbol))
                 {
                     return;
                 }
             }
-            //</SnippetFlowAnalysis>
 
-            // <SnippetReportDiagnostic>
             context.ReportDiagnostic(Diagnostic.Create(Rule, context.Node.GetLocation()));
-            // </SnippetReportDiagnostic>
         }
     }
 }
