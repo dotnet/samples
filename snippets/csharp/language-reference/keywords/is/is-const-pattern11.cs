@@ -8,18 +8,28 @@ class Program
         object o = null;
 
         if (o is null)
-            Console.WriteLine("'is' constant pattern 'null' check : True");
+        {
+            Console.WriteLine("o does not have a value");
+        }
+        else
+        {
+            Console.WriteLine($"o is {o}");
+        }
         
-        if (object.ReferenceEquals(o, null))
-            Console.WriteLine("object.ReferenceEqual 'null' check : True");
+        int? x = 10;
 
-        if (o == null)
-            Console.WriteLine("Equality operator (==) 'null' check : True");
+        if (x is null)
+        {
+            Console.WriteLine("x does not have a value");
+        }
+        else
+        {
+            Console.WriteLine($"x is {x.Value}");
+        }
     }
 
     // The example displays the following output:
-    //  'is' constant pattern 'null' check : True
-    //  object.ReferenceEqual 'null' check : True
-    //  Equality operator (==) 'null' check : True
+    //  o does not have a value
+    //  x is 10
 }
 // </Snippet11>
