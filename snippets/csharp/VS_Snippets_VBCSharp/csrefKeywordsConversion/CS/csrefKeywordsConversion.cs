@@ -6,42 +6,36 @@ using System.Text;
 namespace csrefKeywordsConversion
 {
     //<snippet1>
-    
     class Celsius
     {
         public Celsius(float temp)
         {
-            degrees = temp;
+            Degrees = temp;
         }
+        
+        public float Degrees { get; }
+        
         public static explicit operator Fahrenheit(Celsius c)
         {
-            return new Fahrenheit((9.0f / 5.0f) * c.degrees + 32);
+            return new Fahrenheit((9.0f / 5.0f) * c.Degrees + 32);
         }
-        public float Degrees
-        {
-            get { return degrees; }
-        }
-        private float degrees;
     }
 
     class Fahrenheit
     {
         public Fahrenheit(float temp)
         {
-            degrees = temp;
+            Degrees = temp;
         }
+        
+        public float Degrees { get; }
+        
         //<snippet2>
-        // Must be defined inside a class called Fahrenheit:
         public static explicit operator Celsius(Fahrenheit fahr)
         {
-            return new Celsius((5.0f / 9.0f) * (fahr.degrees - 32));
+            return new Celsius((5.0f / 9.0f) * (fahr.Degrees - 32));
         }
         //</snippet2>
-        public float Degrees
-        {
-            get { return degrees; }
-        }
-        private float degrees;
     }
 
     class MainClass
@@ -50,13 +44,13 @@ namespace csrefKeywordsConversion
         {
             //<snippet3>            
             Fahrenheit fahr = new Fahrenheit(100.0f);
-            Console.Write("{0} Fahrenheit", fahr.Degrees);
+            Console.Write($"{fahr.Degrees} Fahrenheit");
             Celsius c = (Celsius)fahr;
             //</snippet3>
 
-            Console.Write(" = {0} Celsius", c.Degrees);
+            Console.Write($" = {c.Degrees} Celsius");
             Fahrenheit fahr2 = (Fahrenheit)c;
-            Console.WriteLine(" = {0} Fahrenheit", fahr2.Degrees);
+            Console.WriteLine($" = {fahr2.Degrees} Fahrenheit");
         }
     }
     // Output:
@@ -189,10 +183,5 @@ namespace csrefKeywordsConversion
     Output
     0.880952380952381
     */
-
     //</snippet6>
-
-
-
-
 }
