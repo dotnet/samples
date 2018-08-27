@@ -72,8 +72,8 @@
                 <DataGrid ItemsSource="{Binding XPath=Expense}" ColumnHeaderStyle="{StaticResource columnHeaderStyle}" AutoGenerateColumns="False" RowHeaderWidth="0" >
                    
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="ExpenseType" Binding="{Binding XPath=@ExpenseType}"  />
-                        <DataGridTextColumn Header="Amount" Binding="{Binding XPath=@ExpenseAmount}" />
+                        <DataGridTemplateColumn Header="ExpenseType" CellTemplate="{StaticResource typeItemTemplate}" />
+                        <DataGridTemplateColumn Header="Amount" CellTemplate="{StaticResource amountItemTemplate}" />
                     </DataGrid.Columns>
                     
                 </DataGrid>
