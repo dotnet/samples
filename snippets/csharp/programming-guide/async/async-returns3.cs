@@ -36,14 +36,14 @@ public class AsyncVoidExample
 
     private static void Button_Clicked_1(object sender, EventArgs e)
     {
-        Console.WriteLine("   Hanlder 1 is starting...");
+        Console.WriteLine("   Handler 1 is starting...");
         Task.Delay(100).Wait();
         Console.WriteLine("   Handler 1 is done.");
     }
 
     private static async void Button_Clicked_2_Async(object sender, EventArgs e)
     {
-        Console.WriteLine("   Hanlder 2 is starting...");
+        Console.WriteLine("   Handler 2 is starting...");
         Task.Delay(100).Wait();
         Console.WriteLine("   Handler 2 is about to go async...");
         await Task.Delay(500);
@@ -53,7 +53,7 @@ public class AsyncVoidExample
 
     private static void Button_Clicked_3(object sender, EventArgs e)
     {
-        Console.WriteLine("   Hanlder 3 is starting...");
+        Console.WriteLine("   Handler 3 is starting...");
         Task.Delay(100).Wait();
         Console.WriteLine("   Handler 3 is done.");
     }
@@ -62,11 +62,11 @@ public class AsyncVoidExample
 // Expected output:
 // About to click a button...
 // Somebody has clicked a button. Let's raise the event...
-//    Hanlder 1 is starting...
+//    Handler 1 is starting...
 //    Handler 1 is done.
-//    Hanlder 2 is starting...
+//    Handler 2 is starting...
 //    Handler 2 is about to go async...
-//    Hanlder 3 is starting...
+//    Handler 3 is starting...
 //    Handler 3 is done.
 // All listeners are notified.
 // Button's Click method returned.
