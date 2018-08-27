@@ -1,53 +1,73 @@
 using System;
 using System.Threading.Tasks;
 
-public class Counter
+public class NaiveButton
 {
-   private int threshold = 0;
-   private int iterations = 0;
-   private int ctr = 0;
+    public event EventHandler Clicked;
 
-   event EventHandler<EventArgs> ThresholdReached;
-
-   public Counter(int threshold)
-   {
-      this.threshold = threshold;
-      ThresholdReached += thresholdReachedEvent;
-   }
-
-   public async Task<int> StartCounting(int limit)
-   {
-      iterations = 1;
-      for (int index = 0; index <= limit; index++) {
-         if (ctr == threshold)
-            thresholdReachedEvent(this, EventArgs.Empty);
-         ctr++;
-         await Task.Delay(500);
-      }
-      int retval = ctr + (iterations - 1) * threshold;
-      Console.WriteLine($"On iteration {iterations}, reached {limit}");
-      return retval;    
-   }
-
-   async void thresholdReachedEvent(object sender, EventArgs e)
-   {
-       Console.WriteLine($"Reached {ctr}. Resetting...");
-       await Task.Delay(1000);
-       ctr = 0;
-       iterations++;
-   }
+    public void Click()
+    {
+        Console.WriteLine("Somebody has clicked a button. Let's raise the event...");
+        Clicked?.Invoke(this, EventArgs.Empty);
+        Console.WriteLine("All listeners are notified.");
+    }
 }
 
-public class Example
+public class AsyncVoidExample
 {
-   public static void Main()
-   {
-      RunCounter().Wait();
-   }
+    static TaskCompletionSource<bool> tcs;
 
-   private static async Task RunCounter()
-   {
-      var count = new Counter(5);
-      await count.StartCounting(8);
-   }
+    static async Task Main()
+    {
+        tcs = new TaskCompletionSource<bool>();
+        var secondHandlerFinished = tcs.Task;
+
+        var button = new NaiveButton();
+        button.Clicked += Button_Clicked_1;
+        button.Clicked += Button_Clicked_2_Async;
+        button.Clicked += Button_Clicked_3;
+
+        Console.WriteLine("About to click a button...");
+        button.Click();
+        Console.WriteLine("Button's Click method returned.");
+
+        await secondHandlerFinished;
+    }
+
+    private static void Button_Clicked_1(object sender, EventArgs e)
+    {
+        Console.WriteLine("   Hanlder 1 is starting...");
+        Task.Delay(100).Wait();
+        Console.WriteLine("   Handler 1 is done.");
+    }
+
+    private static async void Button_Clicked_2_Async(object sender, EventArgs e)
+    {
+        Console.WriteLine("   Hanlder 2 is starting...");
+        Task.Delay(100).Wait();
+        Console.WriteLine("   Handler 2 is about to go async...");
+        await Task.Delay(500);
+        Console.WriteLine("   Handler 2 is done.");
+        tcs.SetResult(true);
+    }
+
+    private static void Button_Clicked_3(object sender, EventArgs e)
+    {
+        Console.WriteLine("   Hanlder 3 is starting...");
+        Task.Delay(100).Wait();
+        Console.WriteLine("   Handler 3 is done.");
+    }
 }
+
+// Expected output:
+// About to click a button...
+// Somebody has clicked a button. Let's raise the event...
+//    Hanlder 1 is starting...
+//    Handler 1 is done.
+//    Hanlder 2 is starting...
+//    Handler 2 is about to go async...
+//    Hanlder 3 is starting...
+//    Handler 3 is done.
+// All listeners are notified.
+// Button's Click method returned.
+//    Handler 2 is done.
