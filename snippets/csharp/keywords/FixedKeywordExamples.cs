@@ -157,7 +157,7 @@ namespace keywords
                     Console.WriteLine(*p2);
                     Console.WriteLine("--------");
                     Console.WriteLine(*p);
-                    // Deferencing p and incrementing changes the value of a[0] ...
+                    // Dereferencing p and incrementing changes the value of a[0] ...
                     *p += 1;
                     Console.WriteLine(*p);
                     *p += 1;
@@ -168,16 +168,18 @@ namespace keywords
             Console.WriteLine("--------");
             Console.WriteLine(a[0]);
 
-            // Output:
-            //10
-            //20
-            //30
-            //--------
-            //10
-            //11
-            //12
-            //--------
-            //12
+            /*
+            Output:
+            10
+            20
+            30
+            --------
+            10
+            11
+            12
+            --------
+            12
+            */
             // </Snippet5>
         }
 
