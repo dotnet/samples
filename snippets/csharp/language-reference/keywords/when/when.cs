@@ -57,15 +57,15 @@ public class Example
          case Shape shape when shape.Area == 0:
             Console.WriteLine($"The shape: {shape.GetType().Name} with no dimensions");
             break;
-         case Rectangle r when r.Area > 0:
-            Console.WriteLine("Information about the rectangle:");
-            Console.WriteLine($"   Dimensions: {r.Length} x {r.Width}");
-            Console.WriteLine($"   Area: {r.Area}");
-            break;
          case Square sq when sq.Area > 0:
             Console.WriteLine("Information about the square:");
             Console.WriteLine($"   Length of a side: {sq.Side}");
             Console.WriteLine($"   Area: {sq.Area}");
+            break;
+         case Rectangle r when r.Area > 0:
+            Console.WriteLine("Information about the rectangle:");
+            Console.WriteLine($"   Dimensions: {r.Length} x {r.Width}");
+            Console.WriteLine($"   Area: {r.Area}");
             break;
          case Shape shape:
             Console.WriteLine($"A {shape.GetType().Name} shape");
@@ -80,8 +80,8 @@ public class Example
    }
 }
 // The example displays the following output:
-//       Information about the rectangle:
-//          Dimensions: 10 x 10
+//       Information about the square:
+//          Length of a side: 10
 //          Area: 100
 //       Information about the rectangle:
 //          Dimensions: 5 x 7
