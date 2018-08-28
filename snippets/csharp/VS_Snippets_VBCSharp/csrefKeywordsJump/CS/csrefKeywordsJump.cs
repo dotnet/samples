@@ -75,7 +75,6 @@ namespace csrefKeywordsJump
     //</snippet2>
 
     //<snippet3>
-
     class ContinueTest
     {
         static void Main()
@@ -146,7 +145,6 @@ namespace csrefKeywordsJump
     Please insert 50 cents.
     Thank you for your business.
     */
-
     //</snippet4>
 
     //<snippet5>
@@ -228,9 +226,7 @@ namespace csrefKeywordsJump
         }
     }
     // Output: The area is 78.54
-
     //</snippet6>
-
 
     //<Snippet7>
     class BreakInNestedLoops
