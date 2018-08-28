@@ -21,7 +21,7 @@ public class LabeledPoint
     {
         X = x;
         Y = y;
-        this.Label = label;
+        Label = label;
     }
 
     public static LabeledPoint MovePoint(LabeledPoint source, 
