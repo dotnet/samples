@@ -17,7 +17,7 @@ public class Sample {
         // It is possible to supply a prefix for this node, and specify a qualified namespace.
         XmlNode newElem;
         newElem = doc.CreateNode(XmlNodeType.Element, "g", "ISBN", "https://global.ISBN/list");
-        newElem.InnerText = "ABC12345";
+        newElem.InnerText = "1-861001-57-5";
 
         // Add the new element to the document
         XmlElement root = doc.DocumentElement;
