@@ -1,7 +1,7 @@
 //<snippet14>
 using System;
 
-public class EmployeeListNotFoundException: Exception
+public class EmployeeListNotFoundException : Exception
 {
     public EmployeeListNotFoundException()
     {
