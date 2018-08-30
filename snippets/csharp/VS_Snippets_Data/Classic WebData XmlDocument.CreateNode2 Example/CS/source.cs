@@ -27,7 +27,7 @@ public class Sample {
         Console.WriteLine(doc.OuterXml);
 
         //Output: 
-        // <book><title>Oberon's Legacy</title><price>5.95</price><g:ISBN xmlns:g="https://global.ISBN/list">ABC12345</g:ISBN></book>
+        // <book><title>Oberon's Legacy</title><price>5.95</price><g:ISBN xmlns:g="https://global.ISBN/list">1-861001-57-5</g:ISBN></book>
    }
  }
 // </Snippet1>
