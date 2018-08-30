@@ -12,13 +12,18 @@ int main()
    
    // Create a new element node.
    XmlNode^ newElem;
-   newElem = doc->CreateNode( XmlNodeType::Element, "pages", "" );
-   newElem->InnerText = "290";
-   Console::WriteLine( "Add the new element to the document..." );
+   newElem = doc->CreateNode( XmlNodeType::Element, "g" , "ISBN" , "https://global.ISBN/list" );
+   newElem->InnerText = "1-861001-57-5";
+    
+   // Add the new element to the document
    XmlElement^ root = doc->DocumentElement;
    root->AppendChild( newElem );
-   Console::WriteLine( "Display the modified XML document..." );
+    
+   // Display the modified XML document
    Console::WriteLine( doc->OuterXml );
+    
+    // Output:
+    // <book><title>Oberon's Legacy</title><price>5.95</price><g:ISBN xmlns:g="https://global.ISBN/list">1-861001-57-5</g:ISBN></book>
 }
 
 // </Snippet1>
