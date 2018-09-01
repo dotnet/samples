@@ -13,7 +13,7 @@ public class Automobile
 
         if (model == null)
            throw new ArgumentNullException("The model cannot be null.");
-        else if (String.IsNullOrWhiteSpace(make))
+        else if (String.IsNullOrWhiteSpace(model))
            throw new ArgumentException("model cannot be an empty string or have space characters only.");
         Model = model;
 
