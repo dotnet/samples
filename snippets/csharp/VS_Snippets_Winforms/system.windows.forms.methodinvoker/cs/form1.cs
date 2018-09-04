@@ -16,7 +16,7 @@ namespace _454942_CS_MethodInvoker
         {
             // Don't do anything if the form's handle hasn't been created 
             // or the form has been disposed.
-            if (!this.IsHandleCreated || !this.IsDisposed) return;
+            if (!this.IsHandleCreated || this.IsDisposed) return;
             
             // Invoke an anonymous method on the thread of the form.
             this.Invoke((MethodInvoker) delegate
