@@ -7,7 +7,7 @@ class Example
    public static void Main()
    {
       // Define a string with a variety of character categories.
-      String s = "The red car drove down the narrow, secluded road.";
+      String s = "The red car drove down the long, narrow, secluded road.";
       // Determine the category of each character.
       foreach (var ch in s)
          Console.WriteLine("'{0}': {1}", ch, Char.GetUnicodeCategory(ch)); 
