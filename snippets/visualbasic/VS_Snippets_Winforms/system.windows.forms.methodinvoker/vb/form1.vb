@@ -14,7 +14,7 @@ Partial Public Class Form1
     Sub ShowTime(ByVal x As Object)
         ' Don't do anything if the form's handle hasn't been created 
         ' or the form has been disposed.
-        If (Not Me.IsHandleCreated And Not Me.IsDisposed) Then Return
+        If (Not Me.IsHandleCreated Or Me.IsDisposed) Then Return
 
         ' Create the method invoker.
         ' The method body shows the current time in the forms title bar.
