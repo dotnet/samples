@@ -56,5 +56,5 @@ namespace patternmatching
             }
         }
     }
-    // <SnippetPatternMatchingIs>
+    // </SnippetPatternMatchingIs>
 }
