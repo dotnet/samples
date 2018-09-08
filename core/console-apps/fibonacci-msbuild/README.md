@@ -13,13 +13,8 @@ This is the basic Hello World sample. It demonstrates the basics of the environm
 Build and Run
 -------------
 
-To build and run the sample, type the following two commands:
+To build and run the sample, type the following command:
 
-`dotnet restore`
 `dotnet run`
 
-`dotnet restore` ([see note](#dotnet-restore-note)) restores the dependencies for this sample.
-`dotnet run` builds the sample and runs the output assembly.
-
-<a name="dotnet-restore-note"></a>
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+`dotnet run` builds the sample and runs the output assembly. It implicitly calls `dotnet restore` on .NET Core 2.0 and later versions. If you're using a .NET Core 1.x SDK, you first have to call `dotnet restore` yourself.
