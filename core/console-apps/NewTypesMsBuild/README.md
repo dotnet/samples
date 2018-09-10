@@ -8,26 +8,22 @@ This sample builds a program and an associated unit test assembly. Using this sa
 
 ## Build and run
 
-To build and run the sample, change to the *src/NewTypes* directory and execute the following two commands:
+To build and run the sample, change to the *src/NewTypes* directory and execute the following command:
 
 ```console
-dotnet restore
 dotnet run
 ```
 
-`dotnet restore` ([see note](#dotnet-restore-note)) restores the dependencies of the sample. `dotnet run` builds the sample and runs the output executable. 
+`dotnet restore` ([see note](#dotnet-restore-note)) restores the dependencies of the sample. `dotnet run` builds the sample and runs the output executable. It implicitly runs `dotnet restore` to restore the dependencies of the sample. If you're using .NET Core 1.0 or .NET Core 1.1 instead of .NET Core 2.0 or a later version, you have to run `dotnet restore` yourself.
 
-To run the tests, change to the *test/NewTypesTests* directory and execute the following three commands:
+To run the tests, change to the *test/NewTypesTests* directory and execute the following two commands:
 
 ```console
-dotnet restore
 dotnet build
 dotnet test
 ```
 
 `dotnet test` runs the configured tests.
 
-Note that you must run `dotnet restore` ([see note](#dotnet-restore-note)) in the *src/NewTypesMsBuild* directory before you can run the tests. `dotnet build` will follow the dependency on the `NewTypesMsBuild` project and build both the app and unit tests projects, but it won't restore NuGet packages.
+`dotnet build` will follow the dependency on the `NewTypesMsBuild` project and build both the app and unit tests projects. It implicitly runs `dotnet restore` on .NET Core 2.0 and later versions. If you're using .NET Core 1.0 or .NET Core 1.1, you first have to run `dotnet restore` yourself. 
 
-<a name="dotnet-restore-note"></a>
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

@@ -14,13 +14,10 @@ results to the initial Fibonacci sample.
 Build and Run
 -------------
 
-To build and run the sample, type the following two commands:
+To build and run the sample, type the following command:
 
-`dotnet restore`
+To build and run the sample, type the following command:
+
 `dotnet run`
 
-`dotnet restore` ([see note](#dotnet-restore-note)) restores the dependencies for this sample.
-`dotnet run` builds the sample and runs the output assembly.
-
-<a name="dotnet-restore-note"></a>
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+`dotnet run` builds the sample and runs the output assembly. It implicitly calls `dotnet restore` on .NET Core 2.0 and later versions. If you're using a .NET Core 1.x SDK, you first have to call `dotnet restore` yourself.
