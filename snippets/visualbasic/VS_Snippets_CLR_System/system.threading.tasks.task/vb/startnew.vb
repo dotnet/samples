@@ -16,7 +16,7 @@ Module Example
 
         ' Construct a started task
         Dim t2 As Task = Task.Factory.StartNew(action, "beta")
-        ' Block the main thread to demonstate that t2 is executing
+        ' Block the main thread to demonstrate that t2 is executing
         t2.Wait()
 
         ' Launch t1 
