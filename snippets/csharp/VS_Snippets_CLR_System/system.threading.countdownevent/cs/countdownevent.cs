@@ -60,7 +60,7 @@ class Example
         {
            cts.Dispose();
         }
-        // It's good for to release a CountdownEvent when you're done with it.
+        // It's good to release a CountdownEvent when you're done with it.
         cde.Dispose();
     }
 }
