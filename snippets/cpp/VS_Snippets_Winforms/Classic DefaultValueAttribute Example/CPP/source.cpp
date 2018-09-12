@@ -1,5 +1,3 @@
-
-
 #using <System.Windows.Forms.dll>
 #using <System.Drawing.dll>
 #using <System.dll>
@@ -9,11 +7,12 @@ using namespace System;
 using namespace System::Data;
 using namespace System::ComponentModel;
 using namespace System::Windows::Forms;
+
 public ref class Form1: public Form
 {
    // <Snippet1>
 private:
-   bool myVal;
+   bool _myVal;
 
 public:
    [DefaultValue(false)]
@@ -21,12 +20,12 @@ public:
    {
       bool get()
       {
-         return myVal;
+         return _myVal;
       }
 
       void set( bool value )
       {
-         myVal = value;
+         _myVal = value;
       }
    }
    // </Snippet1>
