@@ -1,5 +1,4 @@
-﻿using static System.Console;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -49,14 +48,14 @@ namespace new_in_7
             var p = new Point(3.14, 2.71);
             (double X, double Y) = p;
             #endregion
-            WriteLine(X);
-            WriteLine(Y);
+            Console.WriteLine(X);
+            Console.WriteLine(Y);
 
             #region 13_DeconstructNames
             (double horizontalDistance, double verticalDistance) = p;
             #endregion
-            WriteLine(horizontalDistance);
-            WriteLine(verticalDistance);
+            Console.WriteLine(horizontalDistance);
+            Console.WriteLine(verticalDistance);
 
             int[,] matrix = new int[10, 10];
             for (int x = 0; x < 10; x++)
@@ -118,13 +117,13 @@ namespace new_in_7
             #region 09_CallingTupleMethod
             var range = Range(numbers);
             #endregion
-            WriteLine(range);
+            Console.WriteLine(range);
 
             #region 10_CallingWithDeconstructor
             (int max, int min) = Range(numbers);
             #endregion
-            WriteLine(max);
-            WriteLine(min);
+            Console.WriteLine(max);
+            Console.WriteLine(min);
         }
 
         #region 08_TupleReturningMethod
@@ -166,22 +165,22 @@ namespace new_in_7
             var input = "1234";
             #region 01_OutVariableDeclarations
             if (int.TryParse(input, out int result))
-                WriteLine(result);
+                Console.WriteLine(result);
             else
-                WriteLine("Could not parse input");
+                Console.WriteLine("Could not parse input");
             #endregion
             #region 02_OutVarVariableDeclarations
             if (int.TryParse(input, out var answer))
-                WriteLine(answer);
+                Console.WriteLine(answer);
             else
-                WriteLine("Could not parse input");
+                Console.WriteLine("Could not parse input");
             #endregion
             #region 03_OutVariableOldStyle
             int numericResult;
             if (int.TryParse(input, out numericResult))
-                WriteLine(numericResult);
+                Console.WriteLine(numericResult);
             else
-                WriteLine("Could not parse input");
+                Console.WriteLine("Could not parse input");
 
             #endregion
         }
