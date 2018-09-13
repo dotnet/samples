@@ -18,6 +18,7 @@ class Program
    {
         if (path is null) {
             Console.WriteLine("You did not supply a file path.");
+            return;
         }
 
         try {
