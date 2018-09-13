@@ -23,7 +23,8 @@ public class InfoAttribute : Attribute
    }
 }
 
-[@Info("A simple executable.")]
+[Info("A simple executable.")] // Generates compiler error CS1614. Ambiguous Info and InfoAttribute. 
+// Prepend '@' to select 'Info'. Specify the full name 'InfoAttribute' to select it.
 public class Example
 {
    [InfoAttribute("The entry point.")]
