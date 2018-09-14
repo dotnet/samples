@@ -19,7 +19,7 @@ class Example
 
         // Construct a started task
         Task t2 = Task.Factory.StartNew(action, "beta");
-        // Block the main thread to demonstate that t2 is executing
+        // Block the main thread to demonstrate that t2 is executing
         t2.Wait();
 
         // Launch t1 
