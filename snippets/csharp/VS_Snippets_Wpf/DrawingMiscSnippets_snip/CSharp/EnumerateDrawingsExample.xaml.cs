@@ -22,8 +22,8 @@ namespace SDKSample
         //<SnippetGraphicsMMRetrieveDrawings>
         public void RetrieveDrawing(Visual v)
         {
-            DrawingGroup dGroup = VisualTreeHelper.GetDrawing(v);
-            EnumDrawingGroup(dGroup);
+            DrawingGroup drawingGroup = VisualTreeHelper.GetDrawing(v);
+            EnumDrawingGroup(drawingGroup);
         }
 
         // Enumerate the drawings in the DrawingGroup.
