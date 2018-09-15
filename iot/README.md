@@ -2,7 +2,7 @@
 
 .NET Core can be used to build applications for [IoT](https://en.wikipedia.org/wiki/Internet_of_things) devices and scenarios. For the purposes of this discussion, we will consider IoT applications to be an application that runs on a device that can interact with sensors or displays that require the use of [GPIO pins](https://en.wikipedia.org/wiki/General-purpose_input/output), serial ports or similar hardware.
 
-The following samples demonstrate how to use .NET Core for IoT applications. You need to use at least [.NET Core 2.1](https://www.microsoft.com/net/download/archives) if you are using an ARM32 device. You need to use [.NET Core 3.0 for ARM64](https://github.com/dotnet/announcements/issues/82).
+The following samples demonstrate how to use .NET Core for IoT applications. You need to use at least [.NET Core 2.1](https://www.microsoft.com/net/download/archives) if you are using an ARM32 device. You need to use [.NET Core 3.0](https://github.com/dotnet/announcements/issues/82) for ARM64.
 
 * [Blinking LED](led-blink/README.md)
 * [Trimpot (potentiometer)](trimpot/README.md)
