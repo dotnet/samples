@@ -4,7 +4,7 @@
       WindowTitle="Drawing Misc Snippets">
     <StackPanel>
 
-        <Button Content="Enumerate" Click="retrieveDrawings" />
+        <Button Content="Enumerate" Click="EnumerateButton_OnClick" />
 
         <Border Name="MainBorder"
                 BorderBrush="Black" BorderThickness="1" Margin="20">

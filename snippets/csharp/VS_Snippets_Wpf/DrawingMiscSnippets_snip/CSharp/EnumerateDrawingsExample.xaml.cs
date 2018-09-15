@@ -18,7 +18,7 @@ namespace SDKSample
             InitializeComponent();
         }
 
-        private void retrieveDrawings(object sender, RoutedEventArgs e)
+        private void EnumerateButton_OnClick(object sender, RoutedEventArgs e)
         {
             RetrieveDrawing(MainBorder);
         }
@@ -63,7 +63,8 @@ namespace SDKSample
              }
          }
          //</SnippetGraphicsMMRetrieveDrawings>
-     }
+     
+    }
     
 
 }
