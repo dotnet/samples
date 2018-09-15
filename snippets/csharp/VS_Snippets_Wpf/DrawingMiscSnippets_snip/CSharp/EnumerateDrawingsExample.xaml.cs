@@ -35,23 +35,23 @@ namespace SDKSample
             foreach (Drawing drawing in dc)
             {
                 // If the drawing is a DrawingGroup, call the function recursively.
-                if (drawing.GetType() == typeof(DrawingGroup))
+                if (drawing is DrawingGroup @group)
                 {
-                    EnumDrawingGroup((DrawingGroup)drawing);
+                    EnumDrawingGroup(@group);
                 }
-                else if (drawing.GetType() == typeof(GeometryDrawing))
+                else if (drawing is GeometryDrawing)
                 {
                     // Perform action based on drawing type.  
                 }
-                else if (drawing.GetType() == typeof(ImageDrawing))
+                else if (drawing is ImageDrawing)
                 {
                     // Perform action based on drawing type.
                 }
-                else if (drawing.GetType() == typeof(GlyphRunDrawing))
+                else if (drawing is GlyphRunDrawing)
                 {
                     // Perform action based on drawing type.
                 }
-                else if (drawing.GetType() == typeof(VideoDrawing))
+                else if (drawing is VideoDrawing)
                 {
                     // Perform action based on drawing type.
                 }
