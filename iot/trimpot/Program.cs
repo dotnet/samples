@@ -9,30 +9,6 @@ namespace led_pwm
     {
         static void Main(string[] args)
         {
-         BitBang();   
-        }
-
-        static void SPI()
-        {
-            var SPICLK = 18;
-            var SPIMISO = 23;
-            var SPIMOSI = 24;
-            var SPICS = 25;
-
-            var ss = new SpiConnectionSettings(18,25);
-            var s = new UnixSpiDevice(ss);
-            
-            while (true)
-            {
-                var b = s.Read8();
-                Console.WriteLine("Read: {b}");
-            }
-
-
-        }
-
-        static void BitBang()
-        {
             var SPICLK = 18;
             var SPIMISO = 23;
             var SPIMOSI = 24;
