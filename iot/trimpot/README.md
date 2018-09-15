@@ -7,3 +7,5 @@ This [sample](Program.cs) is based on [Analog Inputs for Raspberry Pi Using the 
 The following [fritzing diagram](rpi-trimpot.fzz) demonstrates how you should wire your device in order to run the [sample C# code](Program.cs) for this sample. It uses the 3.3v, GND and GPIO 18, 23, 24 and 25 pins.
 
 ![Rasperry Pi Breadboard diagram](rpi-trimpot_bb.png)
+
+See [Using .NET Core for IoT Scenarios](../README.md) for more samples.

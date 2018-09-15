@@ -7,3 +7,5 @@ This [sample](Program.cs) demonstrates the most basic usage of the .NET Core GPI
 The following [fritzing diagram](rpi-led.fzz) demonstrates how you should wire your device in order to run the [sample C# code](Program.cs) for this sample. It uses the GND and GPIO 17 pins on the Raspberry Pi.
 
 ![Rasperry Pi Breadboard diagram](rpi-led_bb.png)
+
+See [Using .NET Core for IoT Scenarios](../README.md) for more samples.

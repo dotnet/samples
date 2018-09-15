@@ -7,6 +7,10 @@ The following samples demonstrate how to use .NET Core for IoT applications. You
 * [Blinking LED](led-blink/README.md)
 * [Trimpot (potentiometer)](trimpot/README.md)
 
+Each example includes sample code and a diagram of the required wiring. The wiring diagrams use [Fritzing](http://fritzing.org/home/), like the following example.
+
+![Rasperry Pi Breadboard diagram](led-blink/rpi-led_bb.png)
+
 Many of these samples use the [Raspberry Pi](https://www.raspberrypi.org/), however, .NET Core can be used for other devices. A [Raspberry Pi Starter Pack](https://www.adafruit.com/product/3058) contains enough electronics to get started on many projects.
 
 You will need a basic understanding of using breadboards. [How to Use a Breadboard](https://www.youtube.com/watch?v=6WReFkfrUIk) and [Collin's Lab: Breadboards & Perfboards](https://www.youtube.com/watch?v=w0c3t0fJhXU) are good videos that will help you learn what you need to know in a few minutes.
