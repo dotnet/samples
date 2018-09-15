@@ -4,33 +4,33 @@ Imports System.ComponentModel
 Imports System.Windows.Forms
 
 
-
 Public Class Form1
     Inherits Form
     ' <Snippet1>
-    
-    Private MyVar as Boolean = False
-    <DefaultValue(False)> _
+
+    Private _myVar As Boolean = False
+
+    <DefaultValue(False)>
     Public Property MyProperty() As Boolean
         Get
-            Return MyVar
+            Return _myVar
         End Get
         Set
-            MyVar = Value
-        End Set 
+            _myVar = Value
+        End Set
     End Property
 
     ' </Snippet1>
     Protected Sub Method()
         ' <Snippet2>
         ' Gets the attributes for the property.
-        Dim attributes As AttributeCollection = _
-            TypeDescriptor.GetProperties(Me)("MyProperty").Attributes
-        
+        Dim attributes As AttributeCollection =
+                TypeDescriptor.GetProperties(Me)("MyProperty").Attributes
+
         ' Prints the default value by retrieving the DefaultValueAttribute
         ' from the AttributeCollection. 
-        Dim myAttribute As DefaultValueAttribute = _
-            CType(attributes(GetType(DefaultValueAttribute)), DefaultValueAttribute)
+        Dim myAttribute As DefaultValueAttribute =
+                CType(attributes(GetType(DefaultValueAttribute)), DefaultValueAttribute)
         Console.WriteLine(("The default value is: " & myAttribute.Value.ToString()))
         ' </Snippet2>
     End Sub 'Method 
