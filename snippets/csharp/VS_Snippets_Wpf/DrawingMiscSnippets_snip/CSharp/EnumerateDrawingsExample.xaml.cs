@@ -35,9 +35,9 @@ namespace SDKSample
             foreach (Drawing drawing in dc)
             {
                 // If the drawing is a DrawingGroup, call the function recursively.
-                if (drawing is DrawingGroup @group)
+                if (drawing is DrawingGroup group)
                 {
-                    EnumDrawingGroup(@group);
+                    EnumDrawingGroup(group);
                 }
                 else if (drawing is GeometryDrawing)
                 {
