@@ -2,73 +2,63 @@
 using System;
 using System.IO;
 using System.Security.Cryptography;
-using System.Windows.Forms;
 
 public class HashDirectory
 {
-
-    [STAThreadAttribute]
     public static void Main(String[] args)
     {
-        string directory = "";
         if (args.Length < 1)
         {
-            FolderBrowserDialog fbd = new FolderBrowserDialog();
-            DialogResult dr = fbd.ShowDialog();
-            if (dr == DialogResult.OK)
-                directory = fbd.SelectedPath;
-            else
-            {
-                Console.WriteLine("No directory selected.");
-                return;
-            }
+            Console.WriteLine("No directory selected.");
+            return;
         }
-        else
-            directory = args[0];
-        try
+
+        string directory = args[0];
+        if (Directory.Exists(directory))
         {
             // Create a DirectoryInfo object representing the specified directory.
-            DirectoryInfo dir = new DirectoryInfo(directory);
+           var dir = new DirectoryInfo(directory);
             // Get the FileInfo objects for every file in the directory.
             FileInfo[] files = dir.GetFiles();
             // Initialize a SHA256 hash object.
             SHA256 mySHA256 = SHA256Managed.Create();
            
-            byte[] hashValue;
             // Compute and print the hash values for each file in directory.
-            foreach (FileInfo fInfo in files)
+            foreach (var fInfo in files)
             {
-                // Create a fileStream for the file.
-                FileStream fileStream = fInfo.Open(FileMode.Open);
-                // Be sure it's positioned to the beginning of the stream.
-                fileStream.Position = 0;
-                // Compute the hash of the fileStream.
-                hashValue = mySHA256.ComputeHash(fileStream);
-                // Write the name of the file to the Console.
-                Console.Write(fInfo.Name + ": ");
-                // Write the hash value to the Console.
-                PrintByteArray(hashValue);
-                // Close the file.
-                fileStream.Close();
+                try { 
+                    // Create a fileStream for the file.
+                    FileStream fileStream = fInfo.Open(FileMode.Open);
+                    // Be sure it's positioned to the beginning of the stream.
+                    fileStream.Position = 0;
+                    // Compute the hash of the fileStream.
+                    var hashValue = mySHA256.ComputeHash(fileStream);
+                    // Write the name and hash value of the file to the console.
+                    Console.Write($"{fInfo.Name}: ");
+                    PrintByteArray(hashValue);
+                    // Close the file.
+                    fileStream.Close();
+                }
+                catch (IOException e) {
+                    Console.WriteLine($"I/O Exception: {e.Message}");
+                }
+                catch (UnauthorizedAccessException e) {
+                    Console.WriteLine($"Access Exception: {e.Message}");
+                }
             }
-            return;
         }
-        catch (DirectoryNotFoundException)
+        else
         {
-            Console.WriteLine("Error: The directory specified could not be found.");
-        }
-        catch (IOException)
-        {
-            Console.WriteLine("Error: A file in the directory could not be accessed.");
+            Console.WriteLine("The directory specified could not be found.");
         }
     }
-    // Print the byte array in a readable format.
+
+    // Display the byte array in a readable format.
     public static void PrintByteArray(byte[] array)
     {
-        int i;
-        for (i = 0; i < array.Length; i++)
+        for (int i = 0; i < array.Length; i++)
         {
-            Console.Write(String.Format("{0:X2}", array[i]));
+            Console.Write($"{array[i]:X2}");
             if ((i % 4) == 3) Console.Write(" ");
         }
         Console.WriteLine();
