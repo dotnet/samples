@@ -9,7 +9,10 @@ namespace trimpot
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!!!");
+            Console.WriteLine("Hello Trimpot!");
+
+            // This code should be uncommented to enable accessing
+            // the MCP3008 via SPI
             /* 
             var connection = new SpiConnectionSettings(0,0);
             connection.ClockFrequency = 1000000;
@@ -17,10 +20,15 @@ namespace trimpot
             var spi = new UnixSpiDevice(connection);
 
             var mcp = new Mcp3008(spi);
-*/
+            */
+
+            // This code should be uncommented to enable accessing
+            // the MCP3008 via GPIO (via bit banging)
+
+            /* 
             GpioController controller = new GpioController(PinNumberingScheme.Gpio);
             var mcp = new Mcp3008(controller, 18, 23, 24, 25);
-
+            */
 
             while (true)
             {
