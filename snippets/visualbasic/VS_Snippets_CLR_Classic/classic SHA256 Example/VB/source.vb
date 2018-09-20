@@ -2,68 +2,60 @@
 Imports System
 Imports System.IO
 Imports System.Security.Cryptography
-Imports System.Windows.Forms
 
-Public Class HashDirectory
+Public Module HashDirectory
 
-    Public Shared Sub Main(ByVal args() As String)
-        Dim directory As String
+    Public Sub Main(ByVal args() As String)
         If args.Length < 1 Then
-            Dim fdb As New FolderBrowserDialog
-            Dim dr As DialogResult = fdb.ShowDialog()
-            If (dr = DialogResult.OK) Then
-                directory = fdb.SelectedPath
-            Else
-                Console.WriteLine("No directory selected")
-                Return
-            End If
-        Else
-            directory = args(0)
+            Console.WriteLine("No directory selected")
+            Return
         End If
-        Try
+
+        Dim targetDirectory As String = args(0)
+        If Directory.Exists(targetDirectory) Then
             ' Create a DirectoryInfo object representing the specified directory.
-            Dim dir As New DirectoryInfo(directory)
+            Dim dir As New DirectoryInfo(targetDirectory)
             ' Get the FileInfo objects for every file in the directory.
             Dim files As FileInfo() = dir.GetFiles()
             ' Initialize a SHA256 hash object.
-            Dim mySHA256 As SHA256 = SHA256Managed.Create()
-            Dim hashValue() As Byte
-            ' Compute and print the hash values for each file in directory.
-            Dim fInfo As FileInfo
-            For Each fInfo In files
-                ' Create a fileStream for the file.
-                Dim fileStream As FileStream = fInfo.Open(FileMode.Open)
-                ' Be sure it's positioned to the beginning of the stream.
-                fileStream.Position = 0
-                ' Compute the hash of the fileStream.
-                hashValue = mySHA256.ComputeHash(fileStream)
-                ' Write the name of the file to the Console.
-                Console.Write(fInfo.Name + ": ")
-                ' Write the hash value to the Console.
-                PrintByteArray(hashValue)
-                ' Close the file.
-                fileStream.Close()
-            Next fInfo
-            Return
-        Catch DExc As DirectoryNotFoundException
-            Console.WriteLine("Error: The directory specified could not be found.")
-        Catch IOExc As IOException
-            Console.WriteLine("Error: A file in the directory could not be accessed.")
-        End Try
-
+            Using mySHA256 As SHA256 = SHA256.Create()
+                ' Compute and print the hash values for each file in directory.
+                For Each fInfo  As FileInfo In files
+                    Try
+                        ' Create a fileStream for the file.
+                        Dim fileStream = fInfo.Open(FileMode.Open)
+                        ' Be sure it's positioned to the beginning of the stream.
+                        fileStream.Position = 0
+                        ' Compute the hash of the fileStream.
+                        Dim hashValue() As Byte = mySHA256.ComputeHash(fileStream)
+                        ' Write the name of the file to the Console.
+                        Console.Write(fInfo.Name + ": ")
+                        ' Write the hash value to the Console.
+                        PrintByteArray(hashValue)
+                        ' Close the file.
+                        fileStream.Close()
+                    Catch e As IOException
+                        Console.WriteLine($"I/O Exception: {e.Message}")
+                    Catch e As UnauthorizedAccessException 
+                        Console.WriteLine($"Access Exception: {e.Message}")
+                    End Try    
+                Next 
+            End Using
+        Else
+           Console.WriteLine("The directory specified could not be found.")
+        End If
     End Sub
 
     ' Print the byte array in a readable format.
-    Public Shared Sub PrintByteArray(ByVal array() As Byte)
-        Dim i As Integer
-        For i = 0 To array.Length - 1
-            Console.Write(String.Format("{0:X2}", array(i)))
+    Public Sub PrintByteArray(array() As Byte)
+        For i As Integer = 0 To array.Length - 1
+            Console.Write($"{array(i):X2}")
             If i Mod 4 = 3 Then
                 Console.Write(" ")
             End If
-        Next i
+        Next 
         Console.WriteLine()
 
-    End Sub 'PrintByteArray
-End Class
+    End Sub 
+End Module
 '</Snippet1>
