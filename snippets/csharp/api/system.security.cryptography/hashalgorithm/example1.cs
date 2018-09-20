@@ -2,20 +2,20 @@ using System;
 using System.Security.Cryptography;
 using System.Text;
 
-class Program
+public class Program
 {
-    static void Main()
+    public static void Main()
     {
         string source = "Hello World!";
-        using (SHA256 sha256Hash = SHA256Managed.Create())
+        using (SHA256 sha256Hash = SHA256.Create())
         {
-            string hash = GetSHA256Hash(sha256Hash, source);
+            string hash = GetHash(sha256Hash, source);
 
             Console.WriteLine($"The SHA256 hash of {source} is: {hash}.");
 
             Console.WriteLine("Verifying the hash...");
 
-            if (VerifySHA256Hash(sha256Hash, source, hash))
+            if (VerifyHash(sha256Hash, source, hash))
             {
                 Console.WriteLine("The hashes are the same.");
             }
@@ -26,11 +26,11 @@ class Program
         }
     }
 
-    static string GetSHA256Hash(SHA256 sha256Hash, string input)
+    private static string GetHash(HashAlgorithm hashAlgorithm, string input)
     {
 
         // Convert the input string to a byte array and compute the hash.
-        var data = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
+        byte[] data = hashAlgorithm.ComputeHash(Encoding.UTF8.GetBytes(input));
 
         // Create a new Stringbuilder to collect the bytes
         // and create a string.
@@ -48,13 +48,13 @@ class Program
     }
 
     // Verify a hash against a string.
-    static bool VerifySHA256Hash(SHA256 sha256Hash, string input, string hash)
+    private static bool VerifyHash(HashAlgorithm hashAlgorithm, string input, string hash)
     {
         // Hash the input.
-        var hashOfInput = GetSHA256Hash(sha256Hash, input);
+        var hashOfInput = GetHash(hashAlgorithm, input);
 
         // Create a StringComparer an compare the hashes.
-        var comparer = StringComparer.OrdinalIgnoreCase;
+        StringComparer comparer = StringComparer.OrdinalIgnoreCase;
 
         return comparer.Compare(hashOfInput, hash) == 0;
     }
