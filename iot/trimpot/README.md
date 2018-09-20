@@ -21,6 +21,16 @@ The following pin layout can be used (also shown in a [fritzing diagram](rpi-tri
 
 ![Raspberry Pi Breadboard diagram](rpi-trimpot_spi.png)
 
+The [following code](https://github.com/dotnet/samples/blob/iot/iot/trimpot/Program.cs#L17-L22) in [Program.cs](Program.cs) should be used:
+
+```csharp
+var connection = new SpiConnectionSettings(0,0);
+connection.ClockFrequency = 1000000;
+connection.Mode = SpiMode.Mode0;
+var spi = new UnixSpiDevice(connection);
+var mcp = new Mcp3008(spi);
+```
+
 ## Accessing the MCP3008 via GPIO
 
 You can also access the MCP3008 via GPIO pins, implementing SPI manually. This method is referred to as [bit-banging](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface#Example_of_bit-banging_the_master_protocol).
@@ -39,6 +49,13 @@ The following pin layout can be used:
 * MCP3008 CS/SHDN to RPi pin 25
 
 ![Raspberry Pi Breadboard diagram](rpi-trimpot_gpio.png)
+
+The [following code](https://github.com/dotnet/samples/blob/iot/iot/trimpot/Program.cs#L29-L30) in [Program.cs](Program.cs) should be used:
+
+```csharp
+GpioController controller = new GpioController(PinNumberingScheme.Gpio);
+var mcp = new Mcp3008(controller, 18, 23, 24, 25);
+```
 
 ## References
 
