@@ -36,7 +36,7 @@ Class DnsPermissionExample
             ' Create a SecurityElement instacnce .
             Dim securityElementObj As New SecurityElement("IPermission")
             ' Add attributes and values of the SecurityElement instance corresponding to
-            ' teh permission instance.
+            ' the permission instance.
             securityElementObj.AddAttribute("version", "1")
             securityElementObj.AddAttribute("Unrestricted", "true")
             securityElementObj.AddAttribute("class", "System.Net.DnsPermission")
