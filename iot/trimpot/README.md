@@ -8,6 +8,16 @@ The Rasperry Pi cannot read analog values directly so relies on an analog to dig
 
 The Raspberry Pi 3 has two sets of SPI pins, only one of which is needed to access the the MCP3008. You need to [enable the SPI interface on the Raspberry Pi](https://www.raspberrypi-spy.co.uk/2014/08/enabling-the-spi-interface-on-the-raspberry-pi/) since it is not enabled by default.
 
+You can use the [following code](https://github.com/dotnet/samples/blob/iot/iot/trimpot/Program.cs#L17-L22) to access the MCP3008 via SPI:
+
+```csharp
+var connection = new SpiConnectionSettings(0,0);
+connection.ClockFrequency = 1000000;
+connection.Mode = SpiMode.Mode0;
+var spi = new UnixSpiDevice(connection);
+var mcp = new Mcp3008(spi);
+```
+
 The following pin layout can be used (also shown in a [fritzing diagram](rpi-trimpot-spi.fzz)):
 
 * MCP3008 VDD to RPi 3.3V
@@ -21,23 +31,19 @@ The following pin layout can be used (also shown in a [fritzing diagram](rpi-tri
 
 ![Raspberry Pi Breadboard diagram](rpi-trimpot_spi.png)
 
-The [following code](https://github.com/dotnet/samples/blob/iot/iot/trimpot/Program.cs#L17-L22) in [Program.cs](Program.cs) should be used:
-
-```csharp
-var connection = new SpiConnectionSettings(0,0);
-connection.ClockFrequency = 1000000;
-connection.Mode = SpiMode.Mode0;
-var spi = new UnixSpiDevice(connection);
-var mcp = new Mcp3008(spi);
-```
 
 ## Accessing the MCP3008 via GPIO
 
 You can also access the MCP3008 via GPIO pins, implementing SPI manually. This method is referred to as [bit-banging](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface#Example_of_bit-banging_the_master_protocol).
 
-The following pin layout can be used (also shown in a [fritzing diagram](rpi-trimpot-gpio.fzz)):
+You can use the [following code](https://github.com/dotnet/samples/blob/iot/iot/trimpot/Program.cs#L29-L30) to access the MCP3008 via GPIO:
 
-The following pin layout can be used:
+```csharp
+GpioController controller = new GpioController(PinNumberingScheme.Gpio);
+var mcp = new Mcp3008(controller, 18, 23, 24, 25);
+```
+
+The following pin layout can be used (also shown in a [fritzing diagram](rpi-trimpot-gpio.fzz)):
 
 * MCP3008 VDD to RPi 3.3V
 * MCP3008 VREF to RPi 3.3V
@@ -50,12 +56,6 @@ The following pin layout can be used:
 
 ![Raspberry Pi Breadboard diagram](rpi-trimpot_gpio.png)
 
-The [following code](https://github.com/dotnet/samples/blob/iot/iot/trimpot/Program.cs#L29-L30) in [Program.cs](Program.cs) should be used:
-
-```csharp
-GpioController controller = new GpioController(PinNumberingScheme.Gpio);
-var mcp = new Mcp3008(controller, 18, 23, 24, 25);
-```
 
 ## References
 
