@@ -81,7 +81,7 @@
           <!--</SnippetGVCHControlTemplateStart>-->
             <Grid>
               <DockPanel Background="{TemplateBinding Background}">
-                <!-- Hightlight at bottom -->
+                <!-- Highlight at bottom -->
                 <Border x:Name="HighlightBorder"
                         DockPanel.Dock="Bottom"
                         Background="{StaticResource 

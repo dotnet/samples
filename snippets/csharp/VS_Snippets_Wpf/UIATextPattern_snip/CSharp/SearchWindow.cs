@@ -183,7 +183,7 @@ namespace SDKSample
                 _txtSearchResult.Margin = new Thickness(0, 10, 0, 20);
 
                 _txtHighlighted = new TextBlock();
-                _txtHighlighted.Text = "Currently hightlighted:";
+                _txtHighlighted.Text = "Currently highlighted:";
 
                 _txtHighlightResult = new TextBlock();
                 _txtHighlightResult.Text = "";
@@ -412,7 +412,7 @@ namespace SDKSample
         {
             TextPatternRange[] currentSelection = targetTextPattern.GetSelection();
             string selectionText = currentSelection[0].GetText(-1);
-            _txtHighlighted.Text = "Currently hightlighted: (" + selectionText.Length.ToString() + " chars)\n";
+            _txtHighlighted.Text = "Currently highlighted: (" + selectionText.Length.ToString() + " chars)\n";
 
             Object oAttribute = currentSelection[0].GetAttributeValue(TextPattern.FontNameAttribute);
             if (oAttribute == TextPattern.MixedAttributeValue)

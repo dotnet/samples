@@ -45,7 +45,7 @@
         <Label>20</Label>
       </StackPanel>
 
-      <!-- Bold, Italic, and Hightlight property settings -->
+      <!-- Bold, Italic, and Highlight property settings -->
       <StackPanel Margin="3">
         <Label FontWeight="Bold">Properties: </Label>
         <CheckBox Name="showItalic" Content="Italic" />
