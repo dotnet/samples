@@ -29,5 +29,12 @@ int main()
    elem->InnerXml = "Text containing <markup/>.";
    Console::WriteLine( elem->OuterXml );
 }
-
+// This example produces the following results:
+//
+// Display the InnerText of the element...
+// some textmore text
+// Display the InnerXml of the element...
+// some text<child />more text
+// <elem>Text containing &lt;markup/&gt; will have char(&lt;) and char(&gt;) escaped.</elem>
+// <elem>Text containing <markup />.</elem>
 // </Snippet1>
