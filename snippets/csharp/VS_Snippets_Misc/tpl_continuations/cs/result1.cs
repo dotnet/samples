@@ -21,6 +21,7 @@ public class Example
                                                 Console.WriteLine("And how are you this fine {0}?",
                                                                   antecedent.Result); },
                               TaskContinuationOptions.OnlyOnRanToCompletion);
+      c.Wait();
    }
 }
 // The example displays output like the following:

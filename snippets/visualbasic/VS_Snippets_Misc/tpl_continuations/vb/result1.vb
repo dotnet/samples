@@ -26,6 +26,7 @@ Module Example
                                  Console.WriteLine("And how are you this fine {0}?",
                                                    antecedent.Result)
                               End Sub, TaskContinuationOptions.OnlyOnRanToCompletion)
+      c.Wait()
    End Sub
 End Module
 ' The example displays output like the following:

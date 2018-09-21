@@ -11,6 +11,7 @@ public class Example
 
       // Execute the continuation when the antecedent finishes.
       Task continuation = taskA.ContinueWith( antecedent => Console.WriteLine("Today is {0}.", antecedent.Result) );
+      continuation.Wait();
    }
 }
 // The example displays output like the following output:
