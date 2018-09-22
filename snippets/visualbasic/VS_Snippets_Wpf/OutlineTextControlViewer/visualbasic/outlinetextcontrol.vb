@@ -64,7 +64,7 @@ Namespace OutlineText
 			' Build the geometry object that represents the text.
 			_textGeometry = formattedText.BuildGeometry(New Point(0, 0))
 
-			' Build the geometry object that represents the text hightlight.
+			' Build the geometry object that represents the text highlight.
 			If Highlight = True Then
 				_textHighLightGeometry = formattedText.BuildHighlightGeometry(New Point(0, 0))
 			End If
@@ -160,7 +160,7 @@ Namespace OutlineText
 		End Property
 
 		''' <summary>
-		''' Identifies the Hightlight dependency property.
+		''' Identifies the Highlight dependency property.
 		''' </summary>
 		Public Shared ReadOnly HighlightProperty As DependencyProperty = DependencyProperty.Register("Highlight", GetType(Boolean), GetType(OutlineTextControl), New FrameworkPropertyMetadata(False, FrameworkPropertyMetadataOptions.AffectsRender, New PropertyChangedCallback(AddressOf OnOutlineTextInvalidated), Nothing))
 
@@ -183,7 +183,7 @@ Namespace OutlineText
 		Public Shared ReadOnly ItalicProperty As DependencyProperty = DependencyProperty.Register("Italic", GetType(Boolean), GetType(OutlineTextControl), New FrameworkPropertyMetadata(False, FrameworkPropertyMetadataOptions.AffectsRender, New PropertyChangedCallback(AddressOf OnOutlineTextInvalidated), Nothing))
 
 		''' <summary>
-		''' Specifies the brush to use for the stroke and optional hightlight of the formatted text.
+		''' Specifies the brush to use for the stroke and optional highlight of the formatted text.
 		''' </summary>
 		Public Property Stroke() As Brush
 			Get
