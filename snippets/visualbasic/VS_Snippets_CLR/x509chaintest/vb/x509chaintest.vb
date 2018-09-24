@@ -4,8 +4,6 @@ Imports System.Security.Cryptography
 Imports System.Security.Cryptography.X509Certificates
 Imports System.IO
 
-
-
 Class TestX509Chain
 
     Shared Sub Main(ByVal args() As String)
@@ -26,12 +24,13 @@ Class TestX509Chain
         Dim certificate As X509Certificate2 = collection(0)
         X509Certificate2UI.DisplayCertificate(certificate)
         '</SNIPPET2>
+
         '<SNIPPET3>
         'Output chain information of the selected certificate.
         Dim ch As New X509Chain()
+        ch.ChainPolicy.RevocationMode = X509RevocationMode.Online
         ch.Build(certificate)
         Console.WriteLine("Chain Information")
-        ch.ChainPolicy.RevocationMode = X509RevocationMode.Online
         Console.WriteLine("Chain revocation flag: {0}", ch.ChainPolicy.RevocationFlag)
         Console.WriteLine("Chain revocation mode: {0}", ch.ChainPolicy.RevocationMode)
         Console.WriteLine("Chain verification flag: {0}", ch.ChainPolicy.VerificationFlags)
@@ -40,6 +39,7 @@ Class TestX509Chain
         Console.WriteLine("Chain application policy count: {0}", ch.ChainPolicy.ApplicationPolicy.Count)
         Console.WriteLine("Chain certificate policy count: {0} {1}", ch.ChainPolicy.CertificatePolicy.Count, Environment.NewLine)
         '</SNIPPET3>
+
         '<SNIPPET4>
         'Output chain element information.
         Console.WriteLine("Chain Element Information")
