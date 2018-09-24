@@ -18,7 +18,7 @@ namespace nullable_types
             Console.WriteLine($"int? is {(IsNullable(typeof(int?)) ? "nullable" : "non nullable")} type");
             Console.WriteLine($"int is {(IsNullable(typeof(int)) ? "nullable" : "non nullable")} type");
 
-            bool IsNullable(Type type) => type.IsGenericType && type.GetGenericTypeDefinition() == typeof(Nullable<>);
+            bool IsNullable(Type type) => Nullable.GetUnderlyingType(type) != null;
 
             // Output:
             // int? is nullable type
@@ -70,7 +70,7 @@ namespace nullable_types
             bool IsOfNullableType<T>(T o)
             {
                 var type = typeof(T);
-                return type.IsGenericType && type.GetGenericTypeDefinition() == typeof(Nullable<>);
+                return Nullable.GetUnderlyingType(type) != null;
             }
             
             // Output:
