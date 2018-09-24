@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 public class Example
 {
-   public static void Main()
+   public static async Task Main()
    {
       var t = Task.Run( () => { DateTime dat = DateTime.Now;
                                 if (dat == DateTime.MinValue)
@@ -16,12 +16,11 @@ public class Example
                                    return "afternoon";
                                 else
                                    return "morning"; });
-      var c = t.ContinueWith( (antecedent) => { Console.WriteLine("Good {0}!",
+      await t.ContinueWith( (antecedent) => { Console.WriteLine("Good {0}!",
                                                                   antecedent.Result);
                                                 Console.WriteLine("And how are you this fine {0}?",
                                                                   antecedent.Result); },
                               TaskContinuationOptions.OnlyOnRanToCompletion);
-      c.Wait();
    }
 }
 // The example displays output like the following:
