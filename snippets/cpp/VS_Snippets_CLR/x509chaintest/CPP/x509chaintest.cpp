@@ -1,5 +1,3 @@
-
-
 //<SNIPPET1>
 #using <System.dll>
 #using <System.Security.dll>
@@ -32,9 +30,9 @@ int main()
    //<SNIPPET3>
    //Output chain information of the selected certificate.
    X509Chain ^ ch = gcnew X509Chain;
+   ch->ChainPolicy->RevocationMode = X509RevocationMode::Online;
    ch->Build( certificate );
    Console::WriteLine( "Chain Information" );
-   ch->ChainPolicy->RevocationMode = X509RevocationMode::Online;
    Console::WriteLine( "Chain revocation flag: {0}", ch->ChainPolicy->RevocationFlag );
    Console::WriteLine( "Chain revocation mode: {0}", ch->ChainPolicy->RevocationMode );
    Console::WriteLine( "Chain verification flag: {0}", ch->ChainPolicy->VerificationFlags );
