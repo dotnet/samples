@@ -10,6 +10,7 @@ Module Example
       Dim continuation As Task = taskA.ContinueWith(Sub(antecedent)
                                                        Console.WriteLine("Today is {0}.", antecedent.Result)
                                                     End Sub)
+      continuation.Wait()
    End Sub
 End Module
 ' The example displays output like the following output:
