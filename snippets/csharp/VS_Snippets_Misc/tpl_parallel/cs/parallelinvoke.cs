@@ -13,8 +13,8 @@ namespace ParallelTasks
     {
         static void Main()
         {
-            // Retrieve Darwin's "Origin of the Species" from Gutenberg.org.
-            string[] words = CreateWordArray(@"http://www.gutenberg.org/files/2009/2009.txt");
+            // Retrieve Goncharov's "Oblomov" from Gutenberg.org.
+            string[] words = CreateWordArray(@"http://www.gutenberg.org/files/54700/54700-0.txt");
 
             #region ParallelTasks
             // Perform three tasks in parallel on the source array
@@ -33,7 +33,7 @@ namespace ParallelTasks
                              () =>
                              {
                                  Console.WriteLine("Begin third task...");
-                                 GetCountForWord(words, "species");
+                                 GetCountForWord(words, "sleep");
                              } //close third Action
                          ); //close parallel.invoke
 
@@ -51,8 +51,7 @@ namespace ParallelTasks
                            where word.ToUpper().Contains(term.ToUpper())
                            select word;
 
-            Console.WriteLine(@"Task 3 -- The word ""{0}"" occurs {1} times.",
-                term, findWord.Count());
+            Console.WriteLine($@"Task 3 -- The word ""{term}"" occurs {findWord.Count()} times.");
         }
 
         private static void GetMostCommonWords(string[] words)
@@ -80,15 +79,14 @@ namespace ParallelTasks
                                orderby w.Length descending
                                select w).First();
 
-            Console.WriteLine("Task 1 -- The longest word is {0}", longestWord);
+            Console.WriteLine($"Task 1 -- The longest word is {longestWord}.");
             return longestWord;
         }
-
 
         // An http request performed synchronously for simplicity.
         static string[] CreateWordArray(string uri)
         {
-            Console.WriteLine("Retrieving from {0}", uri);
+            Console.WriteLine($"Retrieving from {uri}");
 
             // Download a web page the easy way.
             string s = new WebClient().DownloadString(uri);
@@ -100,31 +98,28 @@ namespace ParallelTasks
         }
         #endregion
     }
-
-    /* Output (May vary on each execution):
-        Retrieving from http://www.gutenberg.org/dirs/etext99/otoos610.txt
-        Response stream received.
-        Begin first task...
-        Begin second task...
-        Task 2 -- The most common words are:
-          species
-          selection
-          varieties
-          natural
-          animals
-          between
-          different
-          distinct
-          several
-          conditions
-
-        Begin third task...
-        Task 1 -- The longest word is characteristically
-        Task 3 -- The word "species" occurs 1927 times.
-        Returned from Parallel.Invoke
-        Press any key to exit  
-     */
 }
+//        The example displays output like the following:
+//              Retrieving from http://www.gutenberg.org/files/54700/54700-0.txt
+//              Begin first task...
+//              Begin second task...
+//              Begin third task...
+//              Task 2 -- The most common words are:
+//              Oblomov
+//              himself
+//              Schtoltz
+//              Gutenberg
+//              Project
+//              another
+//              thought
+//              Oblomov's
+//              nothing
+//              replied
+//       
+//              Task 1 -- The longest word is incomprehensible.
+//              Task 3 -- The word "sleep" occurs 57 times.
+//              Returned from Parallel.Invoke
+//              Press any key to exit
 // </snippet06>
 
 
