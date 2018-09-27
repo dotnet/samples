@@ -158,7 +158,7 @@ namespace SentimentAnalysis
             // <Snippet22>
             foreach (var item in sentimentsAndPredictions)
             {
-                Console.WriteLine($"Sentiment: {item.sentiment.SentimentText} | Prediction: {(item.prediction.Sentiment ? "Positive" : "Negative")}");
+                Console.WriteLine($"Sentiment: {item.sentiment.SentimentText} | Prediction: {(item.prediction.Sentiment ? "Negative" : "Positive")}");
             }
             Console.WriteLine();
             // </Snippet22>          
