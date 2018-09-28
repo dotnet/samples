@@ -14,13 +14,13 @@ The following samples demonstrate various scenarios:
 
 These samples use the [System.Devices.Gpio](https://dotnet.myget.org/feed/dotnet-corefxlab/package/nuget/System.Devices.Gpio) library. It will be supported on Linux and Windows IoT Core. At present, the library works on Linux. The library is currently in early preview, based on [source in dotnet/corefxlab](https://github.com/dotnet/corefxlab/tree/master/src/System.Devices.Gpio). 
 
-There are many libraries that are important beyond GPIO, I2C and related fundamental protocols. We are working on a plan where the .NET Team and the community can work together to build up a shared repository of implementations.S 
+There are many libraries that are important beyond GPIO, I2C and related fundamental protocols. We are working on a plan where the .NET Team and the community can work together to build up a shared repository of implementations.
 
 ## Breadboard layouts
 
-The samples expect the device pins to be connected in particular way to function, typically on a breadboard. Each example includes a [Fritzing](http://fritzing.org/home/) diagram of the required breadboard layout, such as the following one (taken from the [Blinking LED](led-blink/README.md) sample). 
+The samples expect the device pins to be connected in particular way to function, typically on a breadboard. Each example includes a [Fritzing](http://fritzing.org/home/) diagram of the required breadboard layout, such as the following one (taken from the [More blinking lights](led-more-blinking-lights/README.md) sample). 
 
-![Rasperry Pi Breadboard diagram](led-blink/rpi-led_bb.png)
+![Rasperry Pi Breadboard diagram](led-more-blinking-lights/rpi-more-blinking-lights_bb.png)
 
 ## Requirements
 

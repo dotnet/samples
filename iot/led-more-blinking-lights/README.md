@@ -7,7 +7,7 @@ This [sample](Program.cs) demonstrates blinking multiple LED on different schedu
 This sample demonstrates how to use five different elements together, three LEDs, a potentiometer and a button. There is no one specific code element to call out here. Each element is controlled in a different way. You will find that different algorithms were needed to control LED timing than in the [Blink an LED](../led-blink/README.md) example. In particular, this sample implements the following:
 
 * Different lighting schedules for different LEDs using the [TimeEnvelope](TimeEnvelope.cs) type.
-* Integrating a factor in the lighting schedule based on the value returned from the potentiometer, implemented in the [Volume](Volume.cs) type.
+* Integrating a factor in the lighting schedule based on the value returned from the potentiometer, implemented in the [Volume  ](Volume.cs) type.
 
 ## Breadboard layout
 
