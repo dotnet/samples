@@ -51,7 +51,7 @@ End Module
 ' and neither file1.txt nor file2.txt exist, it displays the
 ' following output:
 '     Error information written to ViewTextFile.Err.txt
-' and writes the following text to ViewFileText.Err.txt:
+' and writes the following text to ViewTextFile.Err.txt:
 '     'file1.txt' does not exist.
 '     'file2.txt' does not exist.
 ' </Snippet1>
