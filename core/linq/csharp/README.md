@@ -56,6 +56,12 @@ ordering
 
 Sort sequences.
 
+partitioning
+---------
+
+Dividing an input sequence into two parts without rearranging
+them and then returning one of the parts.
+
 projection
 ---------
 
