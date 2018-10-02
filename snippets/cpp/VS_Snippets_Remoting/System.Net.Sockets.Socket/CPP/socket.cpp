@@ -74,6 +74,8 @@ String^ SocketSendReceive( String^ server, int port )
       strRetPage = String::Concat( strRetPage, Encoding::ASCII->GetString( bytesReceived, 0, bytes ) );
    }
    while ( bytes > 0 );
+   
+   s->Dispose();
 
    return strRetPage;
 }
