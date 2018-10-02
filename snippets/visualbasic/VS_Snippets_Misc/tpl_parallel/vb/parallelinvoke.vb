@@ -1,13 +1,8 @@
 ﻿'<snippet06>
-' How to: Use Parallel.Invoke to Execute Parallel Operations
-Option Explicit On
-Option Strict On
-
-Imports System.Threading.Tasks
 Imports System.Net
+Imports System.Threading.Tasks
 
 Module ParallelTasks
-
     Sub Main()
         ' Retrieve Goncharov's "Oblomov" from Gutenberg.org.
         Dim words As String() = CreateWordArray("http://www.gutenberg.org/files/54700/54700-0.txt")
