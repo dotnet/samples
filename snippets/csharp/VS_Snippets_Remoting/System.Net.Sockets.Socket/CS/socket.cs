@@ -57,24 +57,25 @@ public class GetSocket
         Byte[] bytesReceived = new Byte[256];
        
         // Create a socket connection with the specified server and port.
-        Socket s = ConnectSocket(server, port);
+        using(Socket s = ConnectSocket(server, port)) {
 
-        if (s == null)
-            return ("Connection failed");
-      
-        // Send request to the server.
-        s.Send(bytesSent, bytesSent.Length, 0);  
+            if (s == null)
+                return ("Connection failed");
         
-        // Receive the server home page content.
-        int bytes = 0;
-        string page = "Default HTML page on " + server + ":\r\n";
+            // Send request to the server.
+            s.Send(bytesSent, bytesSent.Length, 0);  
+            
+            // Receive the server home page content.
+            int bytes = 0;
+            string page = "Default HTML page on " + server + ":\r\n";
 
-        // The following will block until the page is transmitted.
-        do {
-            bytes = s.Receive(bytesReceived, bytesReceived.Length, 0);
-            page = page + Encoding.ASCII.GetString(bytesReceived, 0, bytes);
+            // The following will block until the page is transmitted.
+            do {
+                bytes = s.Receive(bytesReceived, bytesReceived.Length, 0);
+                page = page + Encoding.ASCII.GetString(bytesReceived, 0, bytes);
+            }
+            while (bytes > 0);
         }
-        while (bytes > 0);
         
         return page;
     }
