@@ -18,7 +18,7 @@ End Class
 
 Class ThreadData
 
-    <ThreadStaticAttribute> _
+    <ThreadStatic> _
     Shared threadSpecificData As Integer
 
     Shared Sub ThreadStaticDemo()

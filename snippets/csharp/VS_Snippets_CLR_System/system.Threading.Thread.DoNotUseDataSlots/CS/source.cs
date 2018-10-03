@@ -16,7 +16,7 @@ class Test
 
 class ThreadData
 {
-    [ThreadStaticAttribute]
+    [ThreadStatic]
     static int threadSpecificData;
 
     public static void ThreadStaticDemo()
