@@ -9,6 +9,7 @@ using Microsoft.ML.Legacy.Models;
 using Microsoft.ML.Legacy.Data;
 using Microsoft.ML.Legacy.Transforms;
 using Microsoft.ML.Legacy.Trainers;
+using Microsoft.ML.Runtime.Api;
 // </Snippet1>
 
 namespace SentimentAnalysis
