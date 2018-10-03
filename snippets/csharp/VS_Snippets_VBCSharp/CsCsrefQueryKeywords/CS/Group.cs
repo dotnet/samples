@@ -175,7 +175,7 @@ namespace Group
             var studentQuery =
                 from student in students
                 let avg = (int)student.Scores.Average()
-                group student by (avg == 0 ? 0 : avg / 10) into g
+                group student by (avg / 10) into g
                 orderby g.Key
                 select g;            
 
