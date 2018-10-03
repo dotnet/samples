@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.ML.Runtime.Api;
 using Microsoft.ML.Legacy;
 using Microsoft.ML.Legacy.Models;
 using Microsoft.ML.Legacy.Data;
