@@ -61,7 +61,7 @@ namespace SentimentAnalysis
             // Adds a FastTreeBinaryClassifier, the decision tree learner for this project, and 
             // three hyperparameters to be used for tuning decision tree performance.
             // <Snippet8>
-            pipeline.Add(new FastTreeBinaryClassifier() { NumLeaves = 5, NumTrees = 5, MinDocumentsInLeafs = 2 });
+            pipeline.Add(new FastTreeBinaryClassifier() { NumLeaves = 50, NumTrees = 50, MinDocumentsInLeafs = 20 });
             // </Snippet8>
 
             // Train the pipeline based on the dataset that has been loaded, transformed.
