@@ -3,11 +3,11 @@ using System;
 using System.IO;
 // </Snippet17>
 // <Snippet1>
-using Microsoft.ML;
-using Microsoft.ML.Data;
-using Microsoft.ML.Models;
-using Microsoft.ML.Trainers;
-using Microsoft.ML.Transforms;
+using Microsoft.ML.Legacy;
+using Microsoft.ML.Legacy.Data;
+using Microsoft.ML.Legacy.Models;
+using Microsoft.ML.Legacy.Trainers;
+using Microsoft.ML.Legacy.Transforms;
 // </Snippet1>
 // <Snippet9>
 using System.Threading.Tasks;
