@@ -24,7 +24,7 @@ class Example
             Console.WriteLine($"You entered a number less than {Int32.MinValue:N0} or greater than {Int32.MaxValue:N0}.");
         }
         finally {
-            owner.Dispose();
+            owner?.Dispose();
         }
     }
 
