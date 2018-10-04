@@ -2,7 +2,7 @@
 
 This repo contains all the sample code that is part of any topic under
 the .NET documentation. There are several different projects that
-are organized in sub-folders. These sub-folders are organized similar
+are organized in sub-folders. These sub-folders are organized similarly
 to the organization of the docs for .NET.
 
 Some of the articles will have more than one sample associated with them. 
@@ -51,7 +51,7 @@ the target Framework version.
 
 If you wish to add a code sample:
 
-1. Your sample **must be part of a buildable project**. Where possible, the projects should build on all platforms suppported by .NET Core. Exceptions to this are samples that demonstrate a platform specific feature or platform specific tool.
+1. Your sample **must be part of a buildable project**. Where possible, the projects should build on all platforms supported by .NET Core. Exceptions to this are samples that demonstrate a platform specific feature or platform specific tool.
 3. Your sample should conform to the [corefx coding style](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/coding-style.md) to maintain consistency.
 	- Additionally, we prefer the use of `static` methods rather than instance methods when demonstrating something that doesn't require instantiating a new object.
 4. If your sample builds a standalone package, you must include the runtimes used by our CI build system, in addition to any runtimes used by your sample:

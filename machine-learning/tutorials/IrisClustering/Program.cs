@@ -6,10 +6,10 @@ using System.IO;
 using System.Threading.Tasks;
 // </Snippet12>
 // <Snippet3>
-using Microsoft.ML;
-using Microsoft.ML.Data;
-using Microsoft.ML.Trainers;
-using Microsoft.ML.Transforms;
+using Microsoft.ML.Legacy;
+using Microsoft.ML.Legacy.Data;
+using Microsoft.ML.Legacy.Trainers;
+using Microsoft.ML.Legacy.Transforms;
 // </Snippet3>
 
 namespace IrisClustering

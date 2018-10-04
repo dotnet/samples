@@ -6,7 +6,7 @@ using namespace System::Threading;
 ref class ThreadData
 {
 private:
-   [ThreadStaticAttribute]
+   [ThreadStatic]
    static int threadSpecificData;
 
 public:
