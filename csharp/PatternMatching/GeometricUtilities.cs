@@ -35,7 +35,6 @@ namespace PatternMatching
             } 
             if (shape is Circle c)
             {
-                var c = (Circle)shape;
                 return c.Radius * c.Radius * Math.PI;
             }
             // elided
