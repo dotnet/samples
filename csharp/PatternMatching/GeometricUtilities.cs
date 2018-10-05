@@ -21,7 +21,7 @@ namespace PatternMatching
                 case 2:
                     return $"Two elements: {parts[0]}, {parts[1]}";
                 default:
-                    return $"Many elements. Too many to write";
+                    return "Many elements. Too many to write";
             }
         }
         #endregion
@@ -34,7 +34,7 @@ namespace PatternMatching
                 var s = (Square)shape;
                 return s.Side * s.Side;
             } 
-            else if (shape is Circle)
+            if (shape is Circle)
             {
                 var c = (Circle)shape;
                 return c.Radius * c.Radius * Math.PI;
@@ -51,9 +51,9 @@ namespace PatternMatching
         {
             if (shape is Square s)
                 return s.Side * s.Side;
-            else if (shape is Circle c)
+            if (shape is Circle c)
                 return c.Radius * c.Radius * Math.PI;
-            else if (shape is Rectangle r)
+            if (shape is Rectangle r)
                 return r.Height * r.Length;
             // elided
             throw new ArgumentException(
