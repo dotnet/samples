@@ -27,9 +27,9 @@
           <TextBlock Name="tBlock13"/>
         </StackPanel>
 
-        <Button Name="btn1" Click="scrollTrue">Enable Content Scrolling</Button>
+        <Button Name="btnEnableContentScrolling" Click="scrollTrue">Enable Content Scrolling</Button>
         <!-- <Snippet1> -->
-        <ScrollViewer Name="sv1" CanContentScroll="False" ScrollChanged="sChanged">
+        <ScrollViewer Name="svrContent" CanContentScroll="False" ScrollChanged="sChanged">
 
           <FlowDocument FontFamily="Arial" PageWidth="400">
             <Paragraph>

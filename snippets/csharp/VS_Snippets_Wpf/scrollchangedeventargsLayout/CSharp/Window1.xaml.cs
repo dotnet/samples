@@ -14,17 +14,17 @@ namespace ScrollChangedEventArgs_layout
         // <Snippet4>
         private void scrollTrue(object sender, RoutedEventArgs e)
         {
-            sv1.CanContentScroll = true;
-            sv1.Height = 600;
+            svrContent.CanContentScroll = true;
+            svrContent.Height = 600;
             myStackPanel.Visibility = Visibility.Visible;
-            btn1.Visibility = Visibility.Collapsed;
+            btnEnableContentScrolling.Visibility = Visibility.Collapsed;
         }
         //</Snippet4>
 
         // <Snippet3>
         private void sChanged(object sender, ScrollChangedEventArgs e)
         {
-            if (sv1.CanContentScroll == true)
+            if (svrContent.CanContentScroll == true)
             {
                 tBlock1.Foreground = System.Windows.Media.Brushes.Red;
                 tBlock1.Text = "ScrollChangedEvent just Occurred";
