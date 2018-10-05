@@ -1,5 +1,4 @@
-﻿// <Snippet1>
-using System;
+﻿using System;
 using System.Buffers;
 using System.IO;
 using System.Threading.Tasks;
@@ -12,8 +11,9 @@ public class Example
     {
         // Run in the background so that we don't block the main thread while performing IO.
         Task.Run(() => {
-             StreamWriter sw = File.AppendText(@".\input-numbers.dat");
-            sw.WriteLine(message);
+            string defensiveCopy = message.ToString();
+            StreamWriter sw = File.AppendText(@".\input-numbers.dat");
+            sw.WriteLine(defensiveCopy);
             sw.Flush();
         });
     }
@@ -46,10 +46,3 @@ public class Example
         return length;    
     }
 }
-// </Snippet1>
-
-// Possible implementation of Log:
-    // private static void Log(ReadOnlyMemory<char> message)
-    // {
-    //     Console.WriteLine(message);
-    // }   
