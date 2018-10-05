@@ -29,12 +29,14 @@ namespace PatternMatching
         #region 02_ClassicIsExpression
         public static double ComputeArea(object shape)
         {
-            if (shape is Square s)
+            if (shape is Square)
             {
+                var s = (Square)shape;
                 return s.Side * s.Side;
             } 
-            if (shape is Circle c)
+            if (shape is Circle)
             {
+                var c = (Circle)shape;
                 return c.Radius * c.Radius * Math.PI;
             }
             // elided
