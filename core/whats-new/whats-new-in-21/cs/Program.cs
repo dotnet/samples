@@ -13,6 +13,8 @@ class Program
         var part = new Span<int>(numbers, start: 10, length: 10);
         foreach (var value in part)
             Console.Write($"{value}  ");
+
+        Console.ReadLine();
     }
 }
 // The example displays the following output:
