@@ -1,5 +1,4 @@
-﻿// <Snippet1>
-using System;
+﻿using System;
 using System.Buffers;
 using System.IO;
 using System.Threading.Tasks;
@@ -47,10 +46,5 @@ public class Example
         return length;    
     }
 }
-// </Snippet1>
 
-// Possible implementation of Log:
-    // private static void Log(ReadOnlyMemory<char> message)
-    // {
-    //     Console.WriteLine(message);
-    // }   
+/
