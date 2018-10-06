@@ -1,6 +1,7 @@
 ﻿//<snippet1>
 using System;
 using System.Collections.Concurrent;
+using System.Threading;
 
 class ConcurrentBagDemo
 {
@@ -13,23 +14,36 @@ class ConcurrentBagDemo
     {
         // Construct and populate the ConcurrentBag
         ConcurrentBag<int> cb = new ConcurrentBag<int>();
-        cb.Add(1);
-        cb.Add(2);
-        cb.Add(3);
+
+        // Add to ConcurrentBag from two different threads
+        Thread addOne = new Thread(() => cb.Add(1));
+        Thread addTwo = new Thread(() => cb.Add(2));
+        addOne.Start();
+        addTwo.Start();
+
+        // Wait for both threads to complete
+        addOne.Join();
+        addTwo.Join();
 
         // Consume the items in the bag
+        int itemsInBag = 0;
         int item;
         while (!cb.IsEmpty)
         {
             if (cb.TryTake(out item))
+            {
                 Console.WriteLine(item);
-            else
-                Console.WriteLine("TryTake failed for non-empty bag");
+                itemsInBag++;
+            }
         }
 
-        // Bag should be empty at this point
+        Console.WriteLine($"There were {itemsInBag} items in the bag");
+
+        // Checks the bag for an item
+        // The bag should be empty and this should not print anything
         if (cb.TryPeek(out item))
-            Console.WriteLine("TryPeek succeeded for empty bag!");
+            Console.WriteLine("Found an item in the bag when it should be empty");
+
     }
 
 }
