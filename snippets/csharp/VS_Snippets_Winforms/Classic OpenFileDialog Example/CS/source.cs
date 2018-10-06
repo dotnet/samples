@@ -11,29 +11,32 @@ namespace WindowsFormsApp1
         }
 
         //<Snippet1>
-        private void button1_Click(object sender, System.EventArgs e)
-        {
-            string fileName = null;
+        var fileContent = string.Empty;
+            var filePath = string.Empty;
 
-            using (OpenFileDialog openFileDialog1 = new OpenFileDialog())
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                openFileDialog1.InitialDirectory = "c:\\";
-                openFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
-                openFileDialog1.FilterIndex = 2;
-                openFileDialog1.RestoreDirectory = true;
+                openFileDialog.InitialDirectory = "c:\\";
+                openFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                openFileDialog.FilterIndex = 2;
+                openFileDialog.RestoreDirectory = true;
 
-                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    fileName = openFileDialog1.FileName;                    
+                    //Get the path of specified file
+                    filePath = openFileDialog.FileName;
+
+                    //Read the contents of the file into a stream
+                    var fileStream = openFileDialog.OpenFile();
+                    
+                    using (StreamReader reader = new StreamReader(fileStream))
+                    {
+                        fileContent = reader.ReadToEnd();
+                    }
                 }
             }
 
-            if (fileName != null)
-            {
-                //Do something with the file, for example read text from it
-                string text = File.ReadAllText(fileName);
-            }
-        }
+            MessageBox.Show(fileContent, "File Content at path: " + filePath, MessageBoxButtons.OK);
         //</Snippet1>
     }
 }
