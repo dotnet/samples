@@ -5,113 +5,138 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-class CS_Ranges
+class Example
 {
-        // Demonstrates:
-        //      ConcurrentStack<T>.PushRange();
-        //      ConcurrentStack<T>.TryPopRange();
-        //      ConcurrentStack<T>.IsEmpty;
-        static void Main ()
+    // Demonstrates:
+    //      ConcurrentStack<T>.PushRange();
+    //      ConcurrentStack<T>.TryPopRange();
+    static void Main()
+    {
+        int numParallelTasks = 4;
+        int numItems = 1000;
+        var stack = new ConcurrentStack<int>();
+
+        // Push a range of values onto the stack concurrently
+        Task.WaitAll(Enumerable.Range(0, numParallelTasks).Select(i => Task.Factory.StartNew((state) =>
         {
-            int errorCount = 0;
-
-            // Construct a ConcurrentStack
-            ConcurrentStack<int> cs = new ConcurrentStack<int>();
-
-            // Push some consecutively numbered ranges
-            cs.PushRange(new int[] { 1, 2, 3, 4, 5, 6, 7 });
-            cs.PushRange(new int[] { 8, 9, 10 });
-            cs.PushRange(new int[] { 11, 12, 13, 14 });
-            cs.PushRange(new int[] { 15, 16, 17, 18, 19, 20 });
-            cs.PushRange(new int[] { 21, 22 });
-            cs.PushRange(new int[] { 23, 24, 25, 26, 27, 28, 29, 30 });
-
-            // Now read them back, 3 at a time, concurrently
-            Parallel.For(0, 10, i =>
+            // state = i * numItems
+            int index = (int)state;
+            int[] array = new int[numItems];
+            for (int j = 0; j < numItems; j++)
             {
-                int[] range = new int[3];
-                if (cs.TryPopRange(range) != 3)
-                {
-                    Console.WriteLine("CS: TryPopRange failed unexpectedly");
-                    Interlocked.Increment(ref errorCount);
-                }
-
-                // Each range should be consecutive integers, if the range was extracted atomically
-                // And it should be reverse of the original order...
-                if (!range.Skip(1).SequenceEqual(range.Take(range.Length - 1).Select(x => x - 1)))
-                {
-                    Console.WriteLine("CS: Expected consecutive ranges.  range[0]={0}, range[1]={1}", range[0], range[1]);
-                    Interlocked.Increment(ref errorCount);
-                }
-            });
-
-            // We should have emptied the thing
-            if (!cs.IsEmpty)
-            {
-                Console.WriteLine("CS: Expected IsEmpty to be true after emptying");
-                errorCount++;
+                array[j] = index + j;
             }
 
-            if (errorCount == 0) Console.WriteLine("  OK!");
+            Console.WriteLine($"Pushing an array of ints from {array[0]} to {array[numItems - 1]}");
+            stack.PushRange(array);
+        }, i * numItems, CancellationToken.None, TaskCreationOptions.DenyChildAttach, TaskScheduler.Default)).ToArray());
+
+
+        int numTotalElements = 4 * numItems;
+        int[] resultBuffer = new int[numTotalElements];
+        Task.WaitAll(Enumerable.Range(0, numParallelTasks).Select(i => Task.Factory.StartNew(obj =>
+        {
+            int index = (int)obj;
+            int result = stack.TryPopRange(resultBuffer, index, numItems);
+
+            Console.WriteLine($"TryPopRange expected {numItems}, got {result}.");
+
+        }, i * numItems, CancellationToken.None, TaskCreationOptions.LongRunning, TaskScheduler.Default)).ToArray());
+
+        for (int i = 0; i < numParallelTasks; i++)
+        {
+            // Create a sequence we expect to see from the stack taking the last number of the range we inserted
+            var expected = Enumerable.Range(resultBuffer[i*numItems + numItems - 1], numItems);
+
+            // Take the range we inserted, reverse it, and compare to the expected sequence
+            var areEqual = expected.SequenceEqual(resultBuffer.Skip(i * numItems).Take(numItems).Reverse());
+            if (areEqual)
+            {
+                Console.WriteLine($"Expected a range of {expected.First()} to {expected.Last()}. Got {resultBuffer[i * numItems + numItems - 1]} to {resultBuffer[i * numItems]}");
+            }
+            else
+            {
+                Console.WriteLine($"Unexpected consecutive ranges.");
+            }   
         }
+    }
 }
-    //</snippet1>
+//</snippet1>
 
 //<snippet2>
-class CS_Singles
+using System;
+using System.Collections.Concurrent;
+using System.Threading.Tasks;
+
+class Example
 {
-        // Demonstrates:
-        //      ConcurrentStack<T>.Push();
-        //      ConcurrentStack<T>.TryPeek();
-        //      ConcurrentStack<T>.TryPop();
-        //      ConcurrentStack<T>.Clear();
-        //      ConcurrentStack<T>.IsEmpty;
-        static void Main ()
+    // Demonstrates:
+    //      ConcurrentStack<T>.Push();
+    //      ConcurrentStack<T>.TryPeek();
+    //      ConcurrentStack<T>.TryPop();
+    //      ConcurrentStack<T>.Clear();
+    //      ConcurrentStack<T>.IsEmpty;
+    static void Main()
+    {
+        int items = 10000;
+
+        ConcurrentStack<int> stack = new ConcurrentStack<int>();
+
+        // Create an action to push items onto the stack
+        Action pusher = () =>
         {
-            int errorCount = 0;
-
-            // Construct a ConcurrentStack
-            ConcurrentStack<int> cs = new ConcurrentStack<int>();
-
-            // Push some elements onto the stack
-            cs.Push(1);
-            cs.Push(2);
-
-            int result;
-
-            // Peek at the top of the stack
-            if (!cs.TryPeek(out result))
+            for (int i = 0; i < items; i++)
             {
-                Console.WriteLine("CS: TryPeek() failed when it should have succeeded");
-                errorCount++;
+                stack.Push(i);
             }
-            else if (result != 2)
-            {
-                Console.WriteLine("CS: TryPeek() saw {0} instead of 2", result);
-                errorCount++;
-            }
+        };
 
-            // Pop a number off of the stack
-            if (!cs.TryPop(out result))
-            {
-                Console.WriteLine("CS: TryPop() failed when it should have succeeded");
-                errorCount++;
-            }
-            else if (result != 2)
-            {
-                Console.WriteLine("CS: TryPop() saw {0} instead of 2", result);
-                errorCount++;
-            }
+        // Run the action once
+        pusher();
 
-            // Clear the stack, and verify that it is empty
-            cs.Clear();
-            if (!cs.IsEmpty)
-            {
-                Console.WriteLine("CS: IsEmpty not true after Clear()");
-                errorCount++;
-            }
-
-            if (errorCount == 0) Console.WriteLine("  OK!");
+        if (stack.TryPeek(out int result))
+        {
+            Console.WriteLine($"TryPeek() saw {result} on top of the stack.");
         }
+        else
+        {
+            Console.WriteLine("Could not peek most recently added number.");
+        }
+
+        // Empty the stack
+        stack.Clear();
+
+        if (stack.IsEmpty)
+        {
+            Console.WriteLine("Cleared the stack.");
+        }
+
+        // Create an action to push and pop items
+        Action pushAndPop = () =>
+        {
+            Console.WriteLine($"Task started on {Task.CurrentId}");
+
+            int item;
+            for (int i = 0; i < items; i++)
+                stack.Push(i);
+            for (int i = 0; i < items; i++)
+                stack.TryPop(out item);
+
+            Console.WriteLine($"Task ended on {Task.CurrentId}");
+        };
+
+        // Spin up five concurrent tasks of the action
+        var tasks = new Task[5];
+        for (int i = 0; i < tasks.Length; i++)
+            tasks[i] = Task.Factory.StartNew(pushAndPop);
+
+        // Wait for all the tasks to finish up
+        Task.WaitAll(tasks);
+
+        if (!stack.IsEmpty)
+        {
+            Console.WriteLine("Did not take all the items off the stack");
+        }
+    }
 }
 //</snippet2>

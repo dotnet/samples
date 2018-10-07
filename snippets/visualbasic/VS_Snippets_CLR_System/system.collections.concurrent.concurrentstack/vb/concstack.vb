@@ -1,107 +1,119 @@
 ﻿'<snippet1>
-
 Imports System.Collections.Concurrent
 Imports System.Threading
-Imports System.Threading.Tasks
 
-Class CS_Ranges
+Class Example
     ' Demonstrates:
-    ' ConcurrentStack<T>.PushRange();
-    ' ConcurrentStack<T>.TryPopRange();
-    ' ConcurrentStack<T>.IsEmpty;
+    '   ConcurrentStack<T>.PushRange();
+    '   ConcurrentStack<T>.TryPopRange();
     Shared Sub Main()
-        Dim errorCount As Integer = 0
+        Dim numParallelTasks As Integer = 4
+        Dim numItems As Integer = 1000
+        Dim stack = New ConcurrentStack(Of Integer)()
 
-        ' Construct a ConcurrentStack
-        Dim cs As New ConcurrentStack(Of Integer)()
+        ' Push a range of values onto the stack concurrently
+        Task.WaitAll(Enumerable.Range(0, numParallelTasks).[Select](
+                     Function(i) Task.Factory.StartNew(
+                        Function(state)
+                            Dim index As Integer = CInt(state)
+                            Dim array As Integer() = New Integer(numItems - 1) {}
 
-        ' Push some consecutively numbered ranges
-        cs.PushRange(New Integer() {1, 2, 3, 4, 5, 6, 7})
-        cs.PushRange(New Integer() {8, 9, 10})
-        cs.PushRange(New Integer() {11, 12, 13, 14})
-        cs.PushRange(New Integer() {15, 16, 17, 18, 19, 20})
-        cs.PushRange(New Integer() {21, 22})
-        cs.PushRange(New Integer() {23, 24, 25, 26, 27, 28, 29, 30})
+                            For j As Integer = 0 To numItems - 1
+                                array(j) = index + j
+                            Next
 
-        ' Now read them back, 3 at a time, concurrently
-        Parallel.For(0, 10,
-                       Sub(i)
-                           Dim range As Integer() = New Integer(2) {}
-                           If cs.TryPopRange(range) <> 3 Then
-                               Console.WriteLine("CS: TryPopRange failed unexpectedly")
-                               Interlocked.Increment(errorCount)
-                           End If
+                            Console.WriteLine($"Pushing an array of ints from {array(0)} to {array(numItems - 1)}")
+                            stack.PushRange(array)
+                        End Function, i * numItems, CancellationToken.None, TaskCreationOptions.DenyChildAttach, TaskScheduler.[Default])).ToArray())
 
-                           ' Each range should be consecutive integers, if the range was extracted atomically
-                           ' And it should be reverse of the original order...
-                           If Not range.Skip(1).SequenceEqual(range.Take(range.Length - 1).[Select](Function(x) x - 1)) Then
-                               Console.WriteLine("CS: Expected consecutive ranges. range[0]={0}, range[1]={1}", range(0), range(1))
-                               Interlocked.Increment(errorCount)
-                           End If
-                       End Sub)
 
-        ' We should have emptied the thing
-        If Not cs.IsEmpty Then
-            Console.WriteLine("CS: Expected IsEmpty to be true after emptying")
-            errorCount += 1
-        End If
+        Dim numTotalElements As Integer = 4 * numItems
+        Dim resultBuffer As Integer() = New Integer(numTotalElements - 1) {}
+        Task.WaitAll(Enumerable.Range(0, numParallelTasks).[Select](
+                     Function(i) Task.Factory.StartNew(
+                        Function(obj)
+                            Dim index As Integer = CInt(obj)
+                            Dim result As Integer = stack.TryPopRange(resultBuffer, index, numItems)
+                            Console.WriteLine($"TryPopRange expected {numItems}, got {result}.")
+                        End Function, i * numItems, CancellationToken.None, TaskCreationOptions.LongRunning, TaskScheduler.[Default])).ToArray())
 
-        If errorCount = 0 Then
-            Console.WriteLine(" OK!")
-        End If
+        For i As Integer = 0 To numParallelTasks - 1
+            ' Create a sequence we expect to see from the stack taking the last number of the range we inserted
+            Dim expected = Enumerable.Range(resultBuffer(i * numItems + numItems - 1), numItems)
+
+            ' Take the range we inserted, reverse it, and compare to the expected sequence
+            Dim areEqual = expected.SequenceEqual(resultBuffer.Skip(i * numItems).Take(numItems).Reverse())
+
+            If areEqual Then
+                Console.WriteLine($"Expected a range of {expected.First()} to {expected.Last()}. Got {resultBuffer(i * numItems + numItems - 1)} to {resultBuffer(i * numItems)}")
+            Else
+                Console.WriteLine($"Unexpected consecutive ranges.")
+            End If
+        Next
     End Sub
 End Class
 '</snippet1>
 
 '<snippet2>
-' Imports System.Collections.Concurrent
-Class CS_Singles
+Imports System.Collections.Concurrent
 
-    ' Demonstrates:
-    ' ConcurrentStack<T>.Push();
-    ' ConcurrentStack<T>.TryPeek();
-    ' ConcurrentStack<T>.TryPop();
-    ' ConcurrentStack<T>.Clear();
-    ' ConcurrentStack<T>.IsEmpty;
+Class Example
     Shared Sub Main()
-        Dim errorCount As Integer = 0
+        Dim items As Integer = 10000
+        Dim stack As ConcurrentStack(Of Integer) = New ConcurrentStack(Of Integer)()
 
-        ' Construct a ConcurrentStack
-        Dim cs As New ConcurrentStack(Of Integer)()
+        ' Create an action to push items onto the stack
+        Dim pusher As Action = Function()
+                                   For i As Integer = 0 To items - 1
+                                       stack.Push(i)
+                                   Next
+                               End Function
 
-        ' Push some elements onto the stack
-        cs.Push(1)
-        cs.Push(2)
+        ' Run the action once
+        pusher()
 
-        Dim result As Integer
+        Dim result As Integer = Nothing
 
-        ' Peek at the top of the stack
-        If Not cs.TryPeek(result) Then
-            Console.WriteLine("CS: TryPeek() failed when it should have succeeded")
-            errorCount += 1
-        ElseIf result <> 2 Then
-            Console.WriteLine("CS: TryPeek() saw {0} instead of 2", result)
-            errorCount += 1
+        If stack.TryPeek(result) Then
+            Console.WriteLine($"TryPeek() saw {result} on top of the stack.")
+        Else
+            Console.WriteLine("Could not peek most recently added number.")
         End If
 
-        ' Pop a number off of the stack
-        If Not cs.TryPop(result) Then
-            Console.WriteLine("CS: TryPop() failed when it should have succeeded")
-            errorCount += 1
-        ElseIf result <> 2 Then
-            Console.WriteLine("CS: TryPop() saw {0} instead of 2", result)
-            errorCount += 1
+        ' Empty the stack
+        stack.Clear()
+
+        If stack.IsEmpty Then
+            Console.WriteLine("Cleared the stack.")
         End If
 
-        ' Clear the stack, and verify that it is empty
-        cs.Clear()
-        If Not cs.IsEmpty Then
-            Console.WriteLine("CS: IsEmpty not true after Clear()")
-            errorCount += 1
-        End If
+        ' Create an action to push and pop items
+        Dim pushAndPop As Action = Function()
+                                       Console.WriteLine($"Task started on {Task.CurrentId}")
+                                       Dim item As Integer
 
-        If errorCount = 0 Then
-            Console.WriteLine(" OK!")
+                                       For i As Integer = 0 To items - 1
+                                           stack.Push(i)
+                                       Next
+
+                                       For i As Integer = 0 To items - 1
+                                           stack.TryPop(item)
+                                       Next
+
+                                       Console.WriteLine($"Task ended on {Task.CurrentId}")
+                                   End Function
+
+        ' Spin up five concurrent tasks of the action
+        Dim tasks = New Task(4) {}
+        For i As Integer = 0 To tasks.Length - 1
+            tasks(i) = Task.Factory.StartNew(pushAndPop)
+        Next
+
+        ' Wait for all the tasks to finish up
+        Task.WaitAll(tasks)
+
+        If Not stack.IsEmpty Then
+            Console.WriteLine("Did not take all the items off the stack")
         End If
     End Sub
 End Class
