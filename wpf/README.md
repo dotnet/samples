@@ -41,19 +41,19 @@ dotnet run --no-build
 
 >We recommend running the [APIPort tool](https://github.com/Microsoft/dotnet-apiport-ui/releases) first to determine if there are any APIs your application depends on that will be missing with .NET Core. 
 
-There is no tooling available to help with project migration. In order to migrate your WinForms application, you will create a new project and manually port all of the elements defined in your original project. You will notice the new project is based on the simplified project format, and not everything will be migrated. 
+There is no tooling available to help with project migration. In order to migrate your WPF application, you will create a new project and manually port all of the elements defined in your original project. You will notice the new project is based on the simplified project format, and not everything will be migrated. 
 
 ### Migrate the head project
 Ideally you should migrate all projects in your solution to target .NET Core 3.0 and/or .NET Standard 2.0. The first step to migrate will be to retarget the application's entry point (i.e. 'head' project) and mantain your existing references.
 
 1. Start from a working Solution. You must be able to open the solution in Visual Studio and double check that you can build and run without any issues.
 2. If your solution also has server side projects, such as ASP.NET, we recommend splitting your solution into different server and client solutions. For this effort, work with the client solution only. 
-3. Add a new .NET Core 3.0 Windows Forms project to the solution. Adding this project to a sibling folder to your existing 'head' project will make it easier to port references later (using relative paths to other projects or assemblies in the solution)
+3. Add a [new .NET Core 3.0 WPF project](#creating-new-.net-core-3.0-wpf-applications) to the solution. Adding this project to a sibling folder to your existing 'head' project will make it easier to port references later (using relative paths to other projects or assemblies in the solution)
 4.  If your 'head' project uses NuGet packages, you must add the same NuGet packages to the new project. The new SDK-Style projects only support the PackageReference format for adding NuGet package references. If your existing project is using `packages.config`, you must migrate to the new format. You can use the Migrator Tool described [here](https://docs.microsoft.com/en-us/nuget/reference/migrate-packages-config-to-package-reference) to automate this process.
 6. Copy the `PackageReference` elements generated in the previous step from the original project into the new project's .csproj file.
 7. Copy the `ProjectReference` elements from the original project. Note: The new project format does not use the `Name` and `ProjectGuid` elements so you can safely delete those.
 8. At this point it's a good idea to try and restore/build to make sure all dependencies are properly configured.
-9. Copy the project files from the .NET Framework WinForms project to the new .NET Core 3.0 WinForms project. 
+9. Copy the project files from the .NET Framework WPF project to the new .NET Core 3.0 WPF project. 
     * C# files (files with the `.cs.` extension) are included by default in the .csproj.
     * XAML files need to be included using the `<Page />` element. Remember that globbing is allowed, so you can add all XAML files from a given folder with a single `<Page Include=Views\*.xaml />` element.
     * Other project elements like `EmbeddedResources` can also use globbing.
@@ -84,5 +84,4 @@ Visual Studio does not yet support designers and custom tools for .NET desktop d
 * If you want to reuse the ServiceReference created by Visual Studio you might get the error `System.PlatformNotSupportedException: 'Configuration files are not supported.'`. This error requires a code change to specify the binding and endpoint address in the service client constructor.
  
 ## Known Issues
-**Launching a .NET Core 3.0 WinForms application on a device with a touch screen will fail with '.NET Core Host has stopped working'**
-* Workaround: [Disable your touchscreen](https://support.microsoft.com/en-us/help/4028019/windows-enable-and-disable-your-touchscreen-in-windows-10), or use a device without a touchscreen.
+Coming soon!
