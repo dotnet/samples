@@ -9,6 +9,11 @@ If you're new to .NET Core, here are a few resources to help you understand the 
 ## Quality disclaimer
 .NET Core 3 support for desktop development is not yet in preview. There are early daily builds available supporting WinForms and WPF. You will likely encounter missing tools, bugs, and unexpected behavior. We do not recommend using this SDK and tools for building applications for production scenarios. We do recommend using this SDK and tools to evaluate your how easy it will be to migrate your existing applications, or if you're just interested in trying out the latest upcoming Windows development technology.
 
+## Samples in this repo
+| Sample Name | Descirption |
+| ----------- | ----------- |
+| [Hello World - shared source](helloworld-sharedsource) | This sample shows you how to share source between a .NET Framework WinForms application and a .NET Core WinForms application. Use this to get the full .NET Framework tooling experience while still building for .NET Core. |
+
 ## Getting Started
 
 ### Prerequisites and getting the tools
@@ -21,7 +26,7 @@ Install the latest [.NET Core 3.0 SDK daily build](https://dotnetcli.blob.core.w
 ### Analyzing your applications for .NET Core 3.0 readiness
 If you want to first understand your existing applications readiness for targeting .NET Core 3.0, you can run the .NET Portability Analyzer using the instructions [here](https://blogs.msdn.microsoft.com/dotnet/2018/08/08/are-your-windows-forms-and-wpf-applications-ready-for-net-core-3-0/). This will produce a report that will show you API compatibility for each assembly that your application depends on.
 
-### Creating .NET Core 3.0 WinForms applications
+### Creating new .NET Core 3.0 WinForms applications
 To create a new application you can use the `dotnet new` command, using the new templates for WinForms.
 
 In your favorite console run:
@@ -31,11 +36,6 @@ cd MyWinFormsApp
 dotnet build
 dotnet run
 ```
-
-## Samples in this repo
-| Sample Name | Descirption |
-| ----------- | ----------- |
-| [Hello World - shared source](helloworld-sharedsource) | This sample shows you how to share source between a .NET Framework WinForms application and a .NET Core WinForms application. Use this to get the full .NET Framework tooling experience while still building for .NET Core. |
 
 ### Porting existing applications
 
