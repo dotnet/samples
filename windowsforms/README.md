@@ -37,13 +37,13 @@ dotnet build
 dotnet run
 ```
 
-### Porting existing applications
+## Porting existing applications
 
 >We recommend running the [APIPort tool](https://github.com/Microsoft/dotnet-apiport-ui/releases) first to determine if there are any APIs your application depends on that will be missing with .NET Core. 
 
 There is no tooling available to help with project migration. In order to migrate your WinForms application, you will create a new project and manually port all of the elements defined in your original project. You will notice the new project is based on the simplified project format, and not everything will be migrated. 
 
-#### Migrate the head project
+### Migrate the head project
 Ideally you should migrate all projects in your solution to target .NET Core 3.0 and/or .NET Standard 2.0. The first step to migrate will be to retarget the application's entry point (i.e. 'head' project) and mantain your existing references.
 
 1. Start from a working Solution. You must be able to open the solution in Visual Studio and double check that you can build and run without any issues.
@@ -58,7 +58,7 @@ Ideally you should migrate all projects in your solution to target .NET Core 3.0
     * XAML files need to be included using the `<Page />` element. Remember that globbing is allowed, so you can add all XAML files from a given folder with a single `<Page Include=Views\*.xaml />` element.
     * Other project elements like `EmbeddedResources` can also use globbing.
 
-#### Migration tips
+### Migration tips
 
 **Configure Assembly File generation**
 
