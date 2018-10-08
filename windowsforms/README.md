@@ -53,29 +53,30 @@ Ideally you should migrate all projects in your solution to target .NET Core 3.0
 6. Copy the `PackageReference` elements generated in the previous step from the original project into the new project's .csproj file.
 7. Copy the `ProjectReference` elements from the original project. Note: The new project format does not use the `Name` and `ProjectGuid` elements so you can safely delete those.
 8. At this point it's a good idea to try and restore/build to make sure all dependencies are properly configured.
-9. Copy the project files from the .NET Framework WinForms project to the new .NET Core 3.0 WinForms project. 
+9. [Link the files](#link-files-from-the-old-project) from your existing .NET Framework WinForms project to the .NET Core 3.0 WinForms project.
+10. **Optional** If you have difficulties with compiler linking, you can copy the project files from the .NET Framework WinForms project to the new .NET Core 3.0 WinForms project. 
     * C# files (files with the `.cs.` extension) are included by default in the .csproj.
     * Other project elements like `EmbeddedResources` can also use globbing.
 
 ### Migration tips
 
-**Configure Assembly File generation**
+#### Configure Assembly File generation
 
 Most existing projects include an `AssemblyInfo.cs` file in the Properties folder. The new project style uses a different approach and generate the same assembly attributes as part of the build process. To disable that behavior you can add the property:
 ```xml
 <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 ```
-**Include the Windows.Compatibility Pack**
+#### Include the Windows.Compatibility Pack
 Not every framework assembly is available in the .NET Core base class library. Windows applications like WinForms and WPF could have dependencies that are not available in .NET Core or .NET Standard. Adding a reference to the [Windows Compatibilty Pack](https://docs.microsoft.com/en-us/dotnet/core/porting/windows-compat-pack) will help reduce missing assembly dependencies as it includes several types that might be needed by your application.
 
 ```cmd
 dotnet add package Microsoft.Windows.Compatibility
 ```
-**Link Files from the old Project**
+#### Link Files from the old project
 
 Visual Studio does not yet support designers and custom tools for .NET desktop development. You can keep your files in the original project and link the generated files to the new project by using the link attribute in the project elements, e.g. `<Compile Link="" />`. See the [sample](helloworld-sharedsource) in this repo for an example of this.
 
-**Migrating WCF Clients**
+#### Migrating WCF Clients
 
 .NET Core has its own implementation of `System.ServiceModel` with some differences:
 * It's available as NuGet packages (also included in the Windows Compatiblity Pack)
