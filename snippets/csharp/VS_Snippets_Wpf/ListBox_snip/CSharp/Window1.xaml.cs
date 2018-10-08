@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
@@ -13,8 +14,13 @@ namespace ListBox_Index
 {
     public partial class Window1 : Window
     {
+        public List<string> ScrollIntoViewItems { get; }
+
         public Window1()
         {
+            this.DataContext = this;
+            ScrollIntoViewItems = new List<string>(Enumerable.Range(0, 20).Select(i => $"Item {i}"));
+            
             InitializeComponent();
         }
 
@@ -76,5 +82,14 @@ namespace ListBox_Index
             }
         }
         //</SnippetListBoxItemsIsSelected2>
+
+        //<SnippetListBoxScrollIntoView>
+        private void ScrollIntoView(object sender, RoutedEventArgs e)
+        {
+            var index = cbScrollIntoView.SelectedIndex;
+            var item = lbScrollIntoView.Items.GetItemAt(index);
+            lbScrollIntoView.ScrollIntoView(item);
+        }
+        //</SnippetListBoxScrollIntoView>
     }
 }   

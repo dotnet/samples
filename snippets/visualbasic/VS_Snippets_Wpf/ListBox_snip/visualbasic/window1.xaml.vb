@@ -1,5 +1,6 @@
 Imports System
 Imports System.ComponentModel
+Imports System.Linq
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Documents
@@ -12,7 +13,12 @@ Imports System.Collections.Specialized
 Namespace ListBox_Index
 	Partial Public Class Window1
 		Inherits Window
+
+		Public ReadOnly Property ScrollIntoViewItems As List(Of String)
+
 		Public Sub New()
+			Me.DataContext = Me
+        	ScrollIntoViewItems = New List(Of String)(Enumerable.Range(0, 20).[Select](Function(i) $"Item {i}"))
 			InitializeComponent()
 		End Sub
 
@@ -64,5 +70,13 @@ Namespace ListBox_Index
 			End If
 		End Sub
 		'</SnippetListBoxItemsIsSelected2>
+
+		'<SnippetListBoxScrollIntoView>
+        Private Sub ScrollIntoView(ByVal sender As Object, ByVal e As RoutedEventArgs)
+            Dim index = cbScrollIntoView.SelectedIndex
+            Dim item = lbScrollIntoView.Items.GetItemAt(index)
+            lbScrollIntoView.ScrollIntoView(item)
+        End Sub
+        '</SnippetListBoxScrollIntoView>
 	End Class
 End Namespace
