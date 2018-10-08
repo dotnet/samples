@@ -55,7 +55,6 @@ Ideally you should migrate all projects in your solution to target .NET Core 3.0
 8. At this point it's a good idea to try and restore/build to make sure all dependencies are properly configured.
 9. Copy the project files from the .NET Framework WinForms project to the new .NET Core 3.0 WinForms project. 
     * C# files (files with the `.cs.` extension) are included by default in the .csproj.
-    * XAML files need to be included using the `<Page />` element. Remember that globbing is allowed, so you can add all XAML files from a given folder with a single `<Page Include=Views\*.xaml />` element.
     * Other project elements like `EmbeddedResources` can also use globbing.
 
 ### Migration tips
