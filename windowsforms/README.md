@@ -10,7 +10,7 @@ If you're new to .NET Core, here are a few resources to help you understand the 
 .NET Core 3 support for desktop development is not yet in preview. There are early daily builds available supporting WinForms and WPF. You will likely encounter missing tools, bugs, and unexpected behavior. We do not recommend using this SDK and tools for building applications for production scenarios. We do recommend using this SDK and tools to evaluate your how easy it will be to migrate your existing applications, or if you're just interested in trying out the latest upcoming Windows development technology.
 
 ## Samples in this repo
-| Sample Name | Descirption |
+| Sample Name | Description |
 | ----------- | ----------- |
 | [Hello World - shared source](helloworld-sharedsource) | This sample shows you how to share source between a .NET Framework WinForms application and a .NET Core WinForms application. Use this to get the full .NET Framework tooling experience while still building for .NET Core. |
 
