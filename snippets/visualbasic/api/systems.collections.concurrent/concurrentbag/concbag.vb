@@ -42,8 +42,6 @@ Module ConcurrentBagDemo
         If cb.TryPeek(unexpectedItem) Then
             Console.WriteLine("Found an item in the bag when it should be empty")
         End If
-
-        Console.ReadLine()
     End Sub
 End Module
 '</snippet1>
