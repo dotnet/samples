@@ -1,5 +1,6 @@
 Imports System
 Imports System.ComponentModel
+Imports System.Collections.Generic
 Imports System.Linq
 Imports System.Windows
 Imports System.Windows.Controls
@@ -18,7 +19,7 @@ Namespace ListBox_Index
 
 		Public Sub New()
 			Me.DataContext = Me
-        	ScrollIntoViewItems = New List(Of String)(Enumerable.Range(0, 20).[Select](Function(i) $"Item {i}"))
+			ScrollIntoViewItems = New List(Of String)(Enumerable.Range(0, 20).[Select](Function(i) $"Item {i}"))
 			InitializeComponent()
 		End Sub
 

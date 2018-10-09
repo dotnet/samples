@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Windows;
@@ -20,7 +21,7 @@ namespace ListBox_Index
         {
             this.DataContext = this;
             ScrollIntoViewItems = new List<string>(Enumerable.Range(0, 20).Select(i => $"Item {i}"));
-            
+
             InitializeComponent();
         }
 
@@ -92,4 +93,4 @@ namespace ListBox_Index
         }
         //</SnippetListBoxScrollIntoView>
     }
-}   
+}
