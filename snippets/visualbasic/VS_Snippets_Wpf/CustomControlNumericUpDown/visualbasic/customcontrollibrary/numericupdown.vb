@@ -10,7 +10,8 @@ Imports System.Diagnostics
 Namespace CustomControlLibrary
 	Public Partial Class NumericUpDown
 		Inherits Control
-
+' <snippetstaticctorofcustomclasscommontasks>
+' </snippetstaticctorofcustomclasscommontasks>
 		Public Sub New()
 			MyBase.New()
 			updateValueString()
@@ -401,6 +402,8 @@ Namespace CustomControlLibrary
 			Get
 				Return CType(MyBase.Owner, NumericUpDown)
 			End Get
-		End Property
+		   End Property
+	' <snippetclose>
 	End Class
+	' </snippetclose>
 End Namespace
