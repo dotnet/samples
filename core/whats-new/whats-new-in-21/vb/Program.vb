@@ -11,8 +11,6 @@
         For Each value In part.Span
             Console.Write($"{value}  ")
         Next
-
-        Console.ReadLine()
     End Sub
 End Module
 ' The example displays the following output:
