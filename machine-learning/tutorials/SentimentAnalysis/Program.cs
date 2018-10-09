@@ -49,7 +49,7 @@ namespace SentimentAnalysis
             // When you create a loader, you specify the schema by passing a class to the loader containing
             // all the column names and their types. This is used to create the model, and train it. 
             // <Snippet6>
-            pipeline.Add(new TextLoader(_dataPath).CreateFrom<SentimentData>());
+            pipeline.Add(new TextLoader(_dataPath).CreateFrom<SentimentData>(useHeader: true));
             // </Snippet6>
 
             // TextFeaturizer is a transform that is used to featurize an input column. 
@@ -85,7 +85,7 @@ namespace SentimentAnalysis
         {
             // Evaluates.
             // <Snippet13>
-            var testData = new TextLoader(_testDataPath).CreateFrom<SentimentData>();
+            var testData = new TextLoader(_testDataPath).CreateFrom<SentimentData>(useHeader: true);
             // </Snippet13>
 
             // BinaryClassificationEvaluator computes the quality metrics for the PredictionModel
