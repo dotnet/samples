@@ -10,21 +10,8 @@ using System.Diagnostics;
 
 namespace CustomControlLibrary
 {
-    //<SnippetStaticCtorOfCustomClassCommonTasks>
-    public class NumericUpDown : Control
+    public partial class NumericUpDown : Control
     {
-        static NumericUpDown()
-        {
-            InitializeCommands();
-
-            // Listen to MouseLeftButtonDown event to determine if slide should move focus to itself
-            EventManager.RegisterClassHandler(typeof(NumericUpDown), 
-                Mouse.MouseDownEvent, new MouseButtonEventHandler(NumericUpDown.OnMouseLeftButtonDown), true);
-
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(NumericUpDown), new FrameworkPropertyMetadata(typeof(NumericUpDown)));
-        }
-        //</SnippetStaticCtorOfCustomClassCommonTasks>
-
         public NumericUpDown()
             : base()
         {

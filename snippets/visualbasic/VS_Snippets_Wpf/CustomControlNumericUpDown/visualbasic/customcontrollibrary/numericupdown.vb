@@ -1,5 +1,3 @@
-Imports Microsoft.VisualBasic
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Input
@@ -10,18 +8,8 @@ Imports System.Globalization
 Imports System.Diagnostics
 
 Namespace CustomControlLibrary
-	'<SnippetStaticCtorOfCustomClassCommonTasks>
-	Public Class NumericUpDown
+	Public Partial Class NumericUpDown
 		Inherits Control
-		Shared Sub New()
-			InitializeCommands()
-
-			' Listen to MouseLeftButtonDown event to determine if slide should move focus to itself
-			EventManager.RegisterClassHandler(GetType(NumericUpDown), Mouse.MouseDownEvent, New MouseButtonEventHandler(AddressOf NumericUpDown.OnMouseLeftButtonDown), True)
-
-			DefaultStyleKeyProperty.OverrideMetadata(GetType(NumericUpDown), New FrameworkPropertyMetadata(GetType(NumericUpDown)))
-		End Sub
-		'</SnippetStaticCtorOfCustomClassCommonTasks>
 
 		Public Sub New()
 			MyBase.New()
@@ -414,7 +402,5 @@ Namespace CustomControlLibrary
 				Return CType(MyBase.Owner, NumericUpDown)
 			End Get
 		End Property
-	'<SnippetClose>
 	End Class
-	'</SnippetClose>
 End Namespace
