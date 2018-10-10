@@ -9,23 +9,18 @@ using System.Configuration;
         // <Snippet2>
         static void DisplayAppSettings()
         {
-
             try
             {
-                // <Snippet3>
-
-                AppSettingsReader reader = new AppSettingsReader();
-
-                // </Snippet3>
+                var reader = new AppSettingsReader();
 
                 NameValueCollection appSettings = ConfigurationManager.AppSettings;
 
                 for (int i = 0; i < appSettings.Count; i++)
                 {
-                    Console.WriteLine("Key : {0} Value: {1}",
-                      appSettings.GetKey(i), appSettings[i]);
+                    string key = appSettings.GetKey(i);
+                    string value = (string)reader.GetValue(key, typeof(string));
+                    Console.WriteLine("Key : {0} Value: {1}", key, value);
                 }
-
             }
             catch (ConfigurationErrorsException e)
             {
