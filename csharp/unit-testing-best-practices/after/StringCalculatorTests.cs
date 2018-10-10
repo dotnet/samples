@@ -34,7 +34,7 @@ namespace UnitTestingBestPracticesAfter
         [Fact]
         public void Add_TwoNumbers_ReturnsSumOfNumbers()
         {
-            var stringCalculator = CreateDefaultStringCalcualtor();
+            var stringCalculator = CreateDefaultStringCalculator();
 
             var actual = stringCalculator.Add("0,1");
 
@@ -85,7 +85,7 @@ namespace UnitTestingBestPracticesAfter
         // </SnippetAfterMultipleAsserts>
 
         // <SnippetAfterSetup>
-        private StringCalculator CreateDefaultStringCalcualtor()
+        private StringCalculator CreateDefaultStringCalculator()
         {
             return new StringCalculator();
         }
