@@ -83,6 +83,8 @@ Visual Studio does not yet support designers and custom tools for .NET desktop d
 * Review if your application uses some of the [unsupported features](https://github.com/dotnet/wcf/blob/master/release-notes/SupportedFeatures-v2.1.0.md).
 * If you want to reuse the ServiceReference created by Visual Studio you might get the error `System.PlatformNotSupportedException: 'Configuration files are not supported.'`. This error requires a code change to specify the binding and endpoint address in the service client constructor.
  
-## Known Issues
-**Launching a .NET Core 3.0 WinForms application on a device with a touch screen will fail with '.NET Core Host has stopped working'**
-* Workaround: [Disable your touchscreen](https://support.microsoft.com/en-us/help/4028019/windows-enable-and-disable-your-touchscreen-in-windows-10), or use a device without a touchscreen.
+## Filing Issues and Getting Help
+You can file WinForms and WPF related issues in the [dotnet/core repo](https://github.com/dotnet/core/issues). If you are trying out WPF or WinForms development on top of .NET Core 3.0 and get stuck or have questions, please reach out to netcore3modernize@microsoft.com. 
+
+### Known Issues
+Take a look at the issues filed with the [WinForms area tag](https://github.com/dotnet/core/labels/area-winforms).
