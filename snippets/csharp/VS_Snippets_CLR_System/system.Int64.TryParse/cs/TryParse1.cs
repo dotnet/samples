@@ -17,9 +17,8 @@ public class StringParsing
 
    private static void TryToParse(string value)
    {
-      long number;
-      bool result = Int64.TryParse(value, out number);
-      if (result)
+      bool success = Int64.TryParse(value, out long number);
+      if (success)
       {
          Console.WriteLine("Converted '{0}' to {1}.", value, number);         
       }
