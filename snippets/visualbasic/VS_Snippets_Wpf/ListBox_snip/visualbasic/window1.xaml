@@ -15,6 +15,7 @@
       <RowDefinition/>
       <RowDefinition/>
       <RowDefinition/>
+      <RowDefinition/>
     </Grid.RowDefinitions>
     <TextBlock Margin="10,10,0,5" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" 
           TextWrapping="WrapWithOverflow" FontSize="20">
@@ -61,5 +62,12 @@
       <Label Name="label2"/>
     </StackPanel>
 
+    <ListBox Name="lbScrollIntoView" Margin="10,0,0,5" Grid.Column="0" Grid.Row="5" Height="75" VerticalAlignment="Top" 
+             ItemsSource="{Binding ScrollIntoViewItems}"/>
+
+    <StackPanel Margin="10,0,0,0" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="5">
+      <ComboBox Name="cbScrollIntoView" ItemsSource="{Binding ScrollIntoViewItems}" SelectedIndex="0" Margin="5"/>
+      <Button Content="Scroll Into View" Height="30"  Click="ScrollIntoView" Margin="5"/>
+    </StackPanel>
   </Grid>
 </Window>
