@@ -10,7 +10,7 @@ namespace Examples.System.Net
     public class ServicePointExample
     {
         // Pass in the name of the Web page to retrieve.
-        public static void Main (string[] args)
+        public static void Main(string[] args)
         {
             string page;
             if (args == null || args.Length == 0 || args[0].Length == 0)
@@ -22,7 +22,7 @@ namespace Examples.System.Net
                 page = args[0];
             }
             // Create the request.
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create (page);
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(page);
             // Get the service point that handles the request's socket connection.
             ServicePoint point = request.ServicePoint;
             // Set the receive buffer size on the underlying socket.
@@ -30,11 +30,11 @@ namespace Examples.System.Net
             // Set the connection lease timeout to infinite.
             point.ConnectionLeaseTimeout = Timeout.Infinite;
             // Send the request.
-            HttpWebResponse response = (HttpWebResponse)request.GetResponse ();
-            Stream responseStream = response.GetResponseStream ();
-            StreamReader s = new StreamReader (responseStream);
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            Stream responseStream = response.GetResponseStream();
+            StreamReader s = new StreamReader(responseStream);
             // Display the response.
-            Console.WriteLine (s.ReadToEnd ());
+            Console.WriteLine(s.ReadToEnd());
             s.Close();
             responseStream.Close();
             response.Close();
