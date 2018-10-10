@@ -9,16 +9,14 @@ Class UsingAppSettingsReader
     Private Shared Sub DisplayAppSettings()
 
         Try
-            ' <Snippet3>
-
-            Dim reader As New System.Configuration.AppSettingsReader()
-
-            ' </Snippet3>
+            Dim reader As New AppSettingsReader()
 
             Dim appSettings As NameValueCollection = ConfigurationManager.AppSettings
 
             For i As Integer = 0 To appSettings.Count - 1
-                Console.WriteLine("Key : {0} Value: {1}", appSettings.GetKey(i), appSettings(i))
+                Dim key As String = appSettings.GetKey(i)
+                Dim value As String = reader.GetValue(key, GetType(String))
+                Console.WriteLine("Key : {0} Value: {1}", key, value)
             Next i
 
         Catch e As ConfigurationErrorsException
