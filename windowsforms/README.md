@@ -60,9 +60,9 @@ Ideally you should migrate all projects in your solution to target .NET Core 3.0
 
 ### Migration tips
 
-#### Configure Assembly File generation
+#### Configure assembly file generation
 
-Most existing projects include an `AssemblyInfo.cs` file in the Properties folder. The new project style uses a different approach and generate the same assembly attributes as part of the build process. To disable that behavior you can add the property:
+Most existing projects include an `AssemblyInfo.cs` file in the Properties folder. The new project style uses a different approach and generates the same assembly attributes as part of the build process. To disable that behavior you can add the property:
 ```xml
 <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 ```
