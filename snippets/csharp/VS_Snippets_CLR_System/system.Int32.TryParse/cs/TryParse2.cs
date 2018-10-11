@@ -61,7 +61,6 @@ public class StringParsing
 
    private static void CallTryParse(string stringToConvert, NumberStyles styles)
    {
-      int number;
       CultureInfo provider;
       
       // If currency symbol is allowed, use en-US culture.
@@ -70,9 +69,9 @@ public class StringParsing
       else
          provider = CultureInfo.InvariantCulture;
             
-      bool result = Int32.TryParse(stringToConvert, styles, 
-                                   provider, out number);
-      if (result)
+      bool success = Int32.TryParse(stringToConvert, styles, 
+                                   provider, out int number);
+      if (success)
          Console.WriteLine("Converted '{0}' to {1}.", stringToConvert, number);
       else
          Console.WriteLine("Attempted conversion of '{0}' failed.", 

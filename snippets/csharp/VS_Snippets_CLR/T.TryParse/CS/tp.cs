@@ -16,7 +16,7 @@ class Sample
 {
     public static void Main() 
     {
-    bool     result;
+    bool     success;
     CultureInfo ci;
     string   nl = Environment.NewLine;
     string   msg1 = 
@@ -53,91 +53,91 @@ class Sample
 // DateTime
   // TryParse:
     // Assume current culture is en-US, and dates of the form: MMDDYYYY.
-    result = DateTime.TryParse("7/4/2004 12:34:56", out datetimeVal);
-    Show(result, "DateTime #1", datetimeVal.ToString());
+    success = DateTime.TryParse("7/4/2004 12:34:56", out datetimeVal);
+    Show(success, "DateTime #1", datetimeVal.ToString());
 
     // Use fr-FR culture, and dates of the form: DDMMYYYY.
     ci = new CultureInfo("fr-FR");
-    result = DateTime.TryParse("4/7/2004 12:34:56", 
+    success = DateTime.TryParse("4/7/2004 12:34:56", 
              ci, DateTimeStyles.None, out datetimeVal);
-    Show(result, "DateTime #2", datetimeVal.ToString());
+    Show(success, "DateTime #2", datetimeVal.ToString());
 
   // TryParseExact:
     // Use fr-FR culture. The format, "G", is short date and long time.
-    result = DateTime.TryParseExact("04/07/2004 12:34:56", "G", 
+    success = DateTime.TryParseExact("04/07/2004 12:34:56", "G", 
              ci, DateTimeStyles.None, out datetimeVal);
-    Show(result, "DateTime #3", datetimeVal.ToString());
+    Show(success, "DateTime #3", datetimeVal.ToString());
 
     // Assume en-US culture.
     string[] dateFormats = {"f", "F", "g", "G"};
-    result = DateTime.TryParseExact("7/4/2004 12:34:56 PM", 
+    success = DateTime.TryParseExact("7/4/2004 12:34:56 PM", 
              dateFormats, null, DateTimeStyles.None, 
              out datetimeVal);
-    Show(result, "DateTime #4", datetimeVal.ToString());
+    Show(success, "DateTime #4", datetimeVal.ToString());
 
     Console.WriteLine();
 // Boolean
-    result = Boolean.TryParse("true", out booleanVal);
-    Show(result, "Boolean", booleanVal.ToString());
+    success = Boolean.TryParse("true", out booleanVal);
+    Show(success, "Boolean", booleanVal.ToString());
 // Char
-    result = Char.TryParse("A", out charVal);
-    Show(result, "Char", charVal.ToString());
+    success = Char.TryParse("A", out charVal);
+    Show(success, "Char", charVal.ToString());
 
 // Numeric types:
     Console.WriteLine(msg3, nl);
 // Byte
-    result = Byte.TryParse("1", NumberStyles.Integer, null, out byteVal);
-    Show(result, "Byte", byteVal.ToString());
+    success = Byte.TryParse("1", NumberStyles.Integer, null, out byteVal);
+    Show(success, "Byte", byteVal.ToString());
 // Int16
-    result = Int16.TryParse("-2", NumberStyles.Integer, null, out int16Val);
-    Show(result, "Int16", int16Val.ToString());
+    success = Int16.TryParse("-2", NumberStyles.Integer, null, out int16Val);
+    Show(success, "Int16", int16Val.ToString());
 // Int32
-    result = Int32.TryParse("3", NumberStyles.Integer, null, out int32Val);
-    Show(result, "Int32", int32Val.ToString());
+    success = Int32.TryParse("3", NumberStyles.Integer, null, out int32Val);
+    Show(success, "Int32", int32Val.ToString());
 // Int64
-    result = Int64.TryParse("4", NumberStyles.Integer, null, out int64Val);
-    Show(result, "Int64", int64Val.ToString());
+    success = Int64.TryParse("4", NumberStyles.Integer, null, out int64Val);
+    Show(success, "Int64", int64Val.ToString());
 // Decimal
-    result = Decimal.TryParse("-5.5", NumberStyles.Number, null, out decimalVal);
-    Show(result, "Decimal", decimalVal.ToString());
+    success = Decimal.TryParse("-5.5", NumberStyles.Number, null, out decimalVal);
+    Show(success, "Decimal", decimalVal.ToString());
 // Single
-    result = Single.TryParse("6.6", 
+    success = Single.TryParse("6.6", 
              (NumberStyles.Float | NumberStyles.AllowThousands), 
              null, out singleVal);
-    Show(result, "Single", singleVal.ToString());
+    Show(success, "Single", singleVal.ToString());
 // Double
-    result = Double.TryParse("-7", 
+    success = Double.TryParse("-7", 
              (NumberStyles.Float | NumberStyles.AllowThousands), 
              null, out doubleVal);
-    Show(result, "Double", doubleVal.ToString());
+    Show(success, "Double", doubleVal.ToString());
 
 // Use the simple Double.TryParse overload, but specify an invalid value.
 
-    result = Double.TryParse("abc", out doubleVal);
-    Show(result, "Double #2", doubleVal.ToString());
+    success = Double.TryParse("abc", out doubleVal);
+    Show(success, "Double #2", doubleVal.ToString());
 //
     Console.WriteLine(msg4, nl);
 // SByte
-    result = SByte.TryParse("-8", NumberStyles.Integer, null, out sbyteVal);
-    Show(result, "SByte", sbyteVal.ToString());
+    success = SByte.TryParse("-8", NumberStyles.Integer, null, out sbyteVal);
+    Show(success, "SByte", sbyteVal.ToString());
 // UInt16
-    result = UInt16.TryParse("9", NumberStyles.Integer, null, out uint16Val);
-    Show(result, "UInt16", uint16Val.ToString());
+    success = UInt16.TryParse("9", NumberStyles.Integer, null, out uint16Val);
+    Show(success, "UInt16", uint16Val.ToString());
 // UInt32
-    result = UInt32.TryParse("10", NumberStyles.Integer, null, out uint32Val);
-    Show(result, "UInt32", uint32Val.ToString());
+    success = UInt32.TryParse("10", NumberStyles.Integer, null, out uint32Val);
+    Show(success, "UInt32", uint32Val.ToString());
 // UInt64
-    result = UInt64.TryParse("11", NumberStyles.Integer, null, out uint64Val);
-    Show(result, "UInt64", uint64Val.ToString());
+    success = UInt64.TryParse("11", NumberStyles.Integer, null, out uint64Val);
+    Show(success, "UInt64", uint64Val.ToString());
     }
 
-    protected static void Show(bool parseResult, string typeName, 
+    protected static void Show(bool parseSuccess, string typeName, 
                                string parseValue)
     {
     string msgSuccess = "Parse for {0} = {1}";
     string msgFailure = "** Parse for {0} failed. Invalid input.";
 //
-    if (parseResult == true)
+    if (parseSuccess == true)
         Console.WriteLine(msgSuccess, typeName, parseValue);
     else
         Console.WriteLine(msgFailure, typeName);
