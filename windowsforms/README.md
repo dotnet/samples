@@ -23,8 +23,8 @@ Install Visual Studio 2017 Update 15.8 or higher from [https://visualstudio.micr
 Install the latest [.NET Core 3.0 SDK daily build](https://dotnetcli.blob.core.windows.net/dotnet/Sdk/master/dotnet-sdk-latest-win-x64.exe) available in the [dotnet/code-sdk repo](https://github.com/dotnet/core-sdk).
 
 
-### Analyzing your applications for .NET Core 3.0 readiness
-If you want to first understand your existing applications readiness for targeting .NET Core 3.0, you can run the .NET Portability Analyzer using the instructions [here](https://blogs.msdn.microsoft.com/dotnet/2018/08/08/are-your-windows-forms-and-wpf-applications-ready-for-net-core-3-0/). This will produce a report that will show you API compatibility for each assembly that your application depends on.
+### Analyzing your application's for .NET Core 3.0 readiness
+If you want to first understand your existing applications readiness for targeting .NET Core 3.0, you can run the .NET Portability Analyzer using the download link and instructions [here](https://blogs.msdn.microsoft.com/dotnet/2018/08/08/are-your-windows-forms-and-wpf-applications-ready-for-net-core-3-0/). This will produce a report that shows you API compatibility for each assembly that your application depends on.
 
 ### Creating new .NET Core 3.0 WinForms applications
 To create a new application you can use the `dotnet new` command, using the new templates for WinForms.
@@ -39,19 +39,19 @@ dotnet run
 
 ## Porting existing applications
 
->We recommend running the [APIPort tool](https://github.com/Microsoft/dotnet-apiport-ui/releases) first to determine if there are any APIs your application depends on that will be missing with .NET Core. 
+>We recommend running the [APIPort tool](https://github.com/Microsoft/dotnet-apiport-ui/releases) first to determine if there are any APIs your application depends on that are missing with .NET Core. 
 
-There is no tooling available to help with project migration. In order to migrate your WinForms application, you will create a new project and manually port all of the elements defined in your original project. You will notice the new project is based on the simplified project format, and not everything will be migrated. 
+There is no tooling available to help with project migration. In order to migrate your WinForms application, you will create a new project and manually port all of the elements defined in your original project. You will notice the new project is based on the simplified project format, and not everything is migrated. 
 
 ### Migrate the head project
 Ideally you should migrate all projects in your solution to target .NET Core 3.0 and/or .NET Standard 2.0. The first step to migrate will be to retarget the application's entry point (i.e. 'head' project) and mantain your existing references.
 
 1. Start from a working Solution. You must be able to open the solution in Visual Studio and double check that you can build and run without any issues.
-2. If your solution also has server side projects, such as ASP.NET, we recommend splitting your solution into different server and client solutions. For this effort, work with the client solution only. 
+2. If your solution also has server-side projects, such as ASP.NET, we recommend splitting your solution into different server and client solutions. For this effort, work with the client solution only. 
 3. Add a new .NET Core 3.0 Windows Forms project to the solution. Adding this project to a sibling folder to your existing 'head' project will make it easier to port references later (using relative paths to other projects or assemblies in the solution)
-4.  If your 'head' project uses NuGet packages, you must add the same NuGet packages to the new project. The new SDK-Style projects only support the PackageReference format for adding NuGet package references. If your existing project is using `packages.config`, you must migrate to the new format. You can use the Migrator Tool described [here](https://docs.microsoft.com/en-us/nuget/reference/migrate-packages-config-to-package-reference) to automate this process.
+4.  If your 'head' project uses NuGet packages, you must add the same NuGet packages to the new project. The new SDK-Style projects only support the PackageReference format for adding NuGet package references. If your existing project uses `packages.config`, you must migrate to the new format. You can use the Migrator Tool described [here](https://docs.microsoft.com/en-us/nuget/reference/migrate-packages-config-to-package-reference) to automate this process.
 6. Copy the `PackageReference` elements generated in the previous step from the original project into the new project's .csproj file.
-7. Copy the `ProjectReference` elements from the original project. Note: The new project format does not use the `Name` and `ProjectGuid` elements so you can safely delete those.
+7. Copy the `ProjectReference` elements from the original project. Note: The new project format does not use the `Name` and `ProjectGuid` elements, so you can safely delete those.
 8. At this point it's a good idea to try and restore/build to make sure all dependencies are properly configured.
 9. [Link the files](#link-files-from-the-old-project) from your existing .NET Framework WinForms project to the .NET Core 3.0 WinForms project.
 10. **Optional** If you have difficulties with compiler linking, you can copy the project files from the .NET Framework WinForms project to the new .NET Core 3.0 WinForms project. 
@@ -74,17 +74,17 @@ dotnet add package Microsoft.Windows.Compatibility
 ```
 #### Link Files from the old project
 
-Visual Studio does not yet support designers and custom tools for .NET desktop development. You can keep your files in the original project and link the generated files to the new project by using the link attribute in the project elements, e.g. `<Compile Link="" />`. See the [sample](helloworld-sharedsource) in this repo for an example of this.
+Visual Studio does not yet support designers and custom tools for .NET Core desktop development. You can keep your files in the original project and link the generated files to the new project by using the link attribute in the project elements, e.g. `<Compile Link="" />`. See the [sample](helloworld-sharedsource) in this repo for an example of this.
 
-#### Migrating WCF Clients
+#### Migrating WCF clients
 
 .NET Core has its own implementation of `System.ServiceModel` with some differences:
-* It's available as NuGet packages (also included in the Windows Compatiblity Pack)
-* Review if your application uses some of the [unsupported features](https://github.com/dotnet/wcf/blob/master/release-notes/SupportedFeatures-v2.1.0.md).
-* If you want to reuse the ServiceReference created by Visual Studio you might get the error `System.PlatformNotSupportedException: 'Configuration files are not supported.'`. This error requires a code change to specify the binding and endpoint address in the service client constructor.
+* It's available as NuGet packages (also included in the Windows Compatiblity Pack).
+* There are [unsupported features](https://github.com/dotnet/wcf/blob/master/release-notes/SupportedFeatures-v2.1.0.md) that you should review.
+* The binding and endpoint address must be specified in the service client constructor. Otherwise, if you reuse the ServiceReference created by Visual Studio, you may get the following error: `System.PlatformNotSupportedException: 'Configuration files are not supported.'`
  
-## Filing Issues and Getting Help
+## Filing issues and getting help
 You can file WinForms and WPF related issues in the [dotnet/core repo](https://github.com/dotnet/core/issues). If you are trying out WPF or WinForms development on top of .NET Core 3.0 and get stuck or have questions, please reach out to netcore3modernize@microsoft.com. 
 
-### Known Issues
+### Known issues
 Take a look at the issues filed with the [WinForms area tag](https://github.com/dotnet/core/labels/area-winforms).
