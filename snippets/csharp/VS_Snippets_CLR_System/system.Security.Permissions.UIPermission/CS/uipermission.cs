@@ -89,29 +89,18 @@ public class UIPermissionDemo
         UIPermission uiPerm1 = new UIPermission(UIPermissionWindow.SafeTopLevelWindows);
         UIPermission uiPerm2 = new UIPermission(UIPermissionWindow.SafeSubWindows);
         UIPermission p3 = (UIPermission)uiPerm1.Union(uiPerm2);
-        try
-        {
-            if (p3 != null)
-            {
-                Console.WriteLine("The union of " + uiPerm1.Window.ToString() +
-                    " and \n\t" + uiPerm2.Window.ToString() + " is \n\t"
-                    + p3.Window.ToString() + "\n");
-
-            }
-            else
-            {
-                Console.WriteLine("The union of " + uiPerm1.Window.ToString() +
-                    " and \n\t" + uiPerm2.Window.ToString() + " is null.\n");
-            }
-        }
-        catch (SystemException e)
+        if (p3 != null)
         {
             Console.WriteLine("The union of " + uiPerm1.Window.ToString() +
-                    " and \n\t" + uiPerm2.Window.ToString() + " failed.");
+                " and \n\t" + uiPerm2.Window.ToString() + " is \n\t"
+                + p3.Window.ToString() + "\n");
 
-            Console.WriteLine(e.Message);
         }
-
+        else
+        {
+            Console.WriteLine("The union of " + uiPerm1.Window.ToString() +
+                " and \n\t" + uiPerm2.Window.ToString() + " is null.\n");
+        }
     }
     // </Snippet3>
     // <Snippet4>
