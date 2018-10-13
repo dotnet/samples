@@ -55,29 +55,18 @@ public class ZoneIdentityPermissionDemo
         ZoneIdentityPermission zoneIdPerm1 = new ZoneIdentityPermission(SecurityZone.Intranet);
         ZoneIdentityPermission zoneIdPerm2 = new ZoneIdentityPermission(SecurityZone.MyComputer);
         ZoneIdentityPermission p3 = (ZoneIdentityPermission)zoneIdPerm1.Union(zoneIdPerm2);
-        try
-        {
-            if (p3 != null)
-            {
-                Console.WriteLine("The union of " + zoneIdPerm1.SecurityZone.ToString() +
-                    " and \n\t" + zoneIdPerm2.SecurityZone.ToString() + " is \n\t"
-                    + p3.SecurityZone.ToString() + "\n");
-
-            }
-            else
-            {
-                Console.WriteLine("The union of " + zoneIdPerm1.SecurityZone.ToString() +
-                    " and \n\t" + zoneIdPerm2.SecurityZone.ToString() + " is null.\n");
-            }
-        }
-        catch (SystemException e)
+        if (p3 != null)
         {
             Console.WriteLine("The union of " + zoneIdPerm1.SecurityZone.ToString() +
-                    " and \n\t" + zoneIdPerm2.SecurityZone.ToString() + " failed.");
+                " and \n\t" + zoneIdPerm2.SecurityZone.ToString() + " is \n\t"
+                + p3.SecurityZone.ToString() + "\n");
 
-            Console.WriteLine(e.Message);
         }
-
+        else
+        {
+            Console.WriteLine("The union of " + zoneIdPerm1.SecurityZone.ToString() +
+                " and \n\t" + zoneIdPerm2.SecurityZone.ToString() + " is null.\n");
+        }
     }
     // </Snippet3>
     // <Snippet4>
