@@ -228,22 +228,15 @@ namespace InterfaceSample
 		{
 			LibraryContainer cntrExmpl = new LibraryContainer();
 
-			try
-			{
-				BookComponent book1 = new BookComponent("Wizard's First Rule", "Terry Gooodkind");
-				cntrExmpl.Add(book1, "0812548051");
-				BookComponent book2 = new BookComponent("Stone of Tears", "Terry Gooodkind");
-				cntrExmpl.Add(book2, "0812548094");
-				BookComponent book3 = new BookComponent("Blood of the Fold", "Terry Gooodkind");
-				cntrExmpl.Add(book3, "0812551478");
-				BookComponent book4 = new BookComponent("The Soul of the Fire", "Terry Gooodkind");
-				//This will generate exception because the ISBN already exists in the container.
-				cntrExmpl.Add(book4, "0812551478");
-			}
-			catch(SystemException e)
-			{
-				Console.WriteLine("Error description: " + e.Message);
-			}
+			BookComponent book1 = new BookComponent("Wizard's First Rule", "Terry Gooodkind");
+			cntrExmpl.Add(book1, "0812548051");
+			BookComponent book2 = new BookComponent("Stone of Tears", "Terry Gooodkind");
+			cntrExmpl.Add(book2, "0812548094");
+			BookComponent book3 = new BookComponent("Blood of the Fold", "Terry Gooodkind");
+			cntrExmpl.Add(book3, "0812551478");
+			BookComponent book4 = new BookComponent("The Soul of the Fire", "Terry Gooodkind");
+			//This will generate exception because the ISBN already exists in the container.
+			cntrExmpl.Add(book4, "0812551478");
 
 			ComponentCollection datalist =cntrExmpl.Components;
 			IEnumerator denum = datalist.GetEnumerator();

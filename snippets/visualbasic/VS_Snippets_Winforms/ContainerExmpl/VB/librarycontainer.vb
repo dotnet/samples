@@ -197,19 +197,15 @@ Class LibraryContainer
     Public Shared Sub Main()
         Dim cntrExmpl As LibraryContainer = New LibraryContainer()
 
-        Try
-            Dim book1 As BookComponent = New BookComponent("Wizard's First Rule", "Terry Gooodkind")
-            cntrExmpl.Add(book1, "0812548051")
-            Dim book2 As BookComponent = New BookComponent("Stone of Tears", "Terry Gooodkind")
-            cntrExmpl.Add(book2, "0812548094")
-            Dim book3 As BookComponent = New BookComponent("Blood of the Fold", "Terry Gooodkind")
-            cntrExmpl.Add(book3, "0812551478")
-            Dim book4 As BookComponent = New BookComponent("The Soul of the Fire", "Terry Gooodkind")
-            'This will generate an exception, because the ISBN already exists in the container.
-            cntrExmpl.Add(book4, "0812551478")
-        Catch e As SystemException
-            Console.WriteLine("Error description: " + e.Message)
-        End Try
+        Dim book1 As BookComponent = New BookComponent("Wizard's First Rule", "Terry Gooodkind")
+        cntrExmpl.Add(book1, "0812548051")
+        Dim book2 As BookComponent = New BookComponent("Stone of Tears", "Terry Gooodkind")
+        cntrExmpl.Add(book2, "0812548094")
+        Dim book3 As BookComponent = New BookComponent("Blood of the Fold", "Terry Gooodkind")
+        cntrExmpl.Add(book3, "0812551478")
+        Dim book4 As BookComponent = New BookComponent("The Soul of the Fire", "Terry Gooodkind")
+        'This will generate an exception, because the ISBN already exists in the container.
+        cntrExmpl.Add(book4, "0812551478")
 
         Dim datalist As ComponentCollection = cntrExmpl.Components
         Dim denum As IEnumerator = datalist.GetEnumerator()
