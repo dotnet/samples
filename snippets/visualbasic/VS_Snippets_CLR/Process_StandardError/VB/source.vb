@@ -35,28 +35,20 @@ Namespace Process_StandardError
       End Sub 'Main
 
       Public Shared Sub GetStandardError(args() As String)
-         Try
 ' <Snippet1>
-            Dim myProcess As New Process()
-            Dim myProcessStartInfo As New ProcessStartInfo("net ", "use " + args(1))
+         Dim myProcess As New Process()
+         Dim myProcessStartInfo As New ProcessStartInfo("net ", "use " + args(1))
 
-            myProcessStartInfo.UseShellExecute = False
-            myProcessStartInfo.RedirectStandardError = True
-            myProcess.StartInfo = myProcessStartInfo
-            myProcess.Start()
+         myProcessStartInfo.UseShellExecute = False
+         myProcessStartInfo.RedirectStandardError = True
+         myProcess.StartInfo = myProcessStartInfo
+         myProcess.Start()
 
-            Dim myStreamReader As StreamReader = myProcess.StandardError
-            ' Read the standard error of net.exe and write it on to console.
-            Console.WriteLine(myStreamReader.ReadLine())
-            myProcess.Close()
+         Dim myStreamReader As StreamReader = myProcess.StandardError
+         ' Read the standard error of net.exe and write it on to console.
+         Console.WriteLine(myStreamReader.ReadLine())
+         myProcess.Close()
 ' </Snippet1>
-         Catch e As Win32Exception
-            Console.WriteLine(e.Message)
-         Catch e As SystemException
-            Console.WriteLine(e.Message)
-         Catch e As Exception
-            Console.WriteLine(e.Message)
-         End Try
       End Sub 'GetStandardError
    End Class 'Class1
 End Namespace 'Process_StandardError

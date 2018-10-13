@@ -16,35 +16,20 @@ using namespace System::IO;
 
 void GetStandardError( array<String^>^args )
 {
-   try
-   {
 // <Snippet1>
-      Process^ myProcess = gcnew Process;
-      ProcessStartInfo^ myProcessStartInfo = gcnew ProcessStartInfo( "net ",String::Concat( "use ", args[ 0 ] ) );
+   Process^ myProcess = gcnew Process;
+   ProcessStartInfo^ myProcessStartInfo = gcnew ProcessStartInfo( "net ",String::Concat( "use ", args[ 0 ] ) );
 
-      myProcessStartInfo->UseShellExecute = false;
-      myProcessStartInfo->RedirectStandardError = true;
-      myProcess->StartInfo = myProcessStartInfo;
-      myProcess->Start();
+   myProcessStartInfo->UseShellExecute = false;
+   myProcessStartInfo->RedirectStandardError = true;
+   myProcess->StartInfo = myProcessStartInfo;
+   myProcess->Start();
 
-      StreamReader^ myStreamReader = myProcess->StandardError;
-      // Read the standard error of net.exe and write it on to console.
-      Console::WriteLine( myStreamReader->ReadLine() );
-      myProcess->Close();
+   StreamReader^ myStreamReader = myProcess->StandardError;
+   // Read the standard error of net.exe and write it on to console.
+   Console::WriteLine( myStreamReader->ReadLine() );
+   myProcess->Close();
 // </Snippet1>
-   }
-   catch ( Win32Exception^ e ) 
-   {
-      Console::WriteLine( e->Message );
-   }
-   catch ( SystemException^ e ) 
-   {
-      Console::WriteLine( e->Message );
-   }
-   catch ( Exception^ e ) 
-   {
-      Console::WriteLine( e->Message );
-   }
 }
 
 void main( int argc, char *argv[] )
