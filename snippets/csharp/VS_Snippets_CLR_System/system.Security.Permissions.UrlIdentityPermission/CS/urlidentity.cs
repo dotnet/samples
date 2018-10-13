@@ -51,29 +51,17 @@ public class UrlIdentityPermissionDemo
         UrlIdentityPermission permIdPerm1 = new UrlIdentityPermission("http://www.fourthcoffee.com/process/");
         UrlIdentityPermission permIdPerm2 = new UrlIdentityPermission("http://www.fourthcoffee.com/*");
         UrlIdentityPermission p3 = (UrlIdentityPermission)permIdPerm1.Union(permIdPerm2);
-        try
-        {
-            if (p3 != null)
-            {
-                Console.WriteLine("The union of " + permIdPerm1.Url +
-                    " and \n\t" + permIdPerm2.Url + " is \n\t"
-                    + p3.Url + "\n");
-
-            }
-            else
-            {
-                Console.WriteLine("The union of " + permIdPerm1.Url +
-                    " and \n\t" + permIdPerm2.Url + " is null.\n");
-            }
-        }
-        catch (SystemException e)
+        if (p3 != null)
         {
             Console.WriteLine("The union of " + permIdPerm1.Url +
-                    " and \n\t" + permIdPerm2.Url + " failed.");
-
-            Console.WriteLine(e.Message);
+                " and \n\t" + permIdPerm2.Url + " is \n\t"
+                + p3.Url + "\n");
         }
-
+        else
+        {
+            Console.WriteLine("The union of " + permIdPerm1.Url +
+                " and \n\t" + permIdPerm2.Url + " is null.\n");
+        }
     }
     // </Snippet3>
     // <Snippet4>
