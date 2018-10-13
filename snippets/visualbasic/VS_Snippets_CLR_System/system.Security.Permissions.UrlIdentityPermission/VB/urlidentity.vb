@@ -46,18 +46,12 @@ Public Class UrlIdentityPermissionDemo
         Dim permIdPerm1 As New UrlIdentityPermission("http://www.fourthcoffee.com/process/")
         Dim permIdPerm2 As New UrlIdentityPermission("http://www.fourthcoffee.com/*")
         Dim p3 As UrlIdentityPermission = CType(permIdPerm1.Union(permIdPerm2), UrlIdentityPermission)
-        Try
-            If Not (p3 Is Nothing) Then
-                Console.WriteLine("The union of " + permIdPerm1.Url + " and " + vbLf + vbTab + permIdPerm2.Url + " is " + vbLf + vbTab + p3.Url + vbLf)
+        If Not (p3 Is Nothing) Then
+            Console.WriteLine("The union of " + permIdPerm1.Url + " and " + vbLf + vbTab + permIdPerm2.Url + " is " + vbLf + vbTab + p3.Url + vbLf)
 
-            Else
-                Console.WriteLine("The union of " + permIdPerm1.Url + " and " + vbLf + vbTab + permIdPerm2.Url + " is null." + vbLf)
-            End If
-        Catch e As SystemException
-            Console.WriteLine("The union of " + permIdPerm1.Url + " and " + vbLf + vbTab + permIdPerm2.Url + " failed.")
-
-            Console.WriteLine(e.Message)
-        End Try
+        Else
+            Console.WriteLine("The union of " + permIdPerm1.Url + " and " + vbLf + vbTab + permIdPerm2.Url + " is null." + vbLf)
+        End If
 
     End Sub 'UnionDemo
 

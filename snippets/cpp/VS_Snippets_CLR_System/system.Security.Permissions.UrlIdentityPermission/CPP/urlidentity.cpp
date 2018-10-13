@@ -49,21 +49,11 @@ void UnionDemo()
     UrlIdentityPermission ^ permIdPerm1 = gcnew UrlIdentityPermission("http://www.fourthcoffee.com/process/");
     UrlIdentityPermission ^ permIdPerm2 = gcnew UrlIdentityPermission("http://www.fourthcoffee.com/*");
     UrlIdentityPermission ^ p3 = (UrlIdentityPermission^)permIdPerm1->Union(permIdPerm2);
-    try
-        {
-        if (p3 != nullptr)
-              Console::WriteLine("The union of " + permIdPerm1->Url +
-                " and \n\t" + permIdPerm2->Url + " is \n\t" + p3->Url + "\n");
-        else  Console::WriteLine("The union of " + permIdPerm1->Url +
-                " and \n\t" + permIdPerm2->Url + " is null.\n");
-        }
-    catch (SystemException ^ e)
-        {
-        Console::WriteLine("The union of " + permIdPerm1->Url +
-                " and \n\t" + permIdPerm2->Url + " failed.");
-        Console::WriteLine(e->Message);
-        }
-
+    if (p3 != nullptr)
+            Console::WriteLine("The union of " + permIdPerm1->Url +
+            " and \n\t" + permIdPerm2->Url + " is \n\t" + p3->Url + "\n");
+    else  Console::WriteLine("The union of " + permIdPerm1->Url +
+            " and \n\t" + permIdPerm2->Url + " is null.\n");
 }
 // </Snippet3>
 
