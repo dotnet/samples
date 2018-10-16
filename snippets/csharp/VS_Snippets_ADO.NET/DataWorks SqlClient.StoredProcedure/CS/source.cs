@@ -11,7 +11,7 @@ class Program
         Console.ReadLine();
     }
     // <Snippet1>
-    static void GetSalesByCategory(string connectionString, 
+    static void GetSalesByCategory(string connectionString,
         string categoryName)
     {
         using (SqlConnection connection = new SqlConnection(connectionString))
@@ -34,22 +34,23 @@ class Program
 
             // Open the connection and execute the reader.
             connection.Open();
-            SqlDataReader reader = command.ExecuteReader();
-
-            if (reader.HasRows)
+            using (SqlDataReader reader = command.ExecuteReader())
             {
-                while (reader.Read())
+                if (reader.HasRows)
                 {
-                    Console.WriteLine("{0}: {1:C}", reader[0], reader[1]);
+                    while (reader.Read())
+                    {
+                        Console.WriteLine("{0}: {1:C}", reader[0], reader[1]);
+                    }
                 }
+                else
+                {
+                    Console.WriteLine("No rows found.");
+                }
+                reader.Close();
             }
-            else
-            {
-                Console.WriteLine("No rows found.");
-            }
-            reader.Close();
         }
     }
     // </Snippet1>
- 
+
 }
