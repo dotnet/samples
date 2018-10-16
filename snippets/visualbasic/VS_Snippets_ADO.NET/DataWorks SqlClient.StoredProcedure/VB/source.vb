@@ -32,16 +32,17 @@ Class Program
 
             ' Open the connection and execute the reader.
             connection.Open()
-            Dim reader As SqlDataReader = command.ExecuteReader()
+            Using reader As SqlDataReader = command.ExecuteReader()
 
-            If reader.HasRows Then
-                Do While reader.Read()
-                    Console.WriteLine("{0}: {1:C}", _
-                      reader(0), reader(1))
-                Loop
-            Else
-                Console.WriteLine("No rows returned.")
-            End If
+                If reader.HasRows Then
+                    Do While reader.Read()
+                        Console.WriteLine("{0}: {1:C}", _
+                          reader(0), reader(1))
+                    Loop
+                Else
+                    Console.WriteLine("No rows returned.")
+                End If
+            End Using
         End Using
     End Sub
     '</Snippet1>
