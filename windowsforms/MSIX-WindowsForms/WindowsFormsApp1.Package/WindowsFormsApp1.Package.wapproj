@@ -41,10 +41,10 @@
     <PackageCertificateKeyFile>WindowsFormsApp1.Package_TemporaryKey.pfx</PackageCertificateKeyFile>
     <GenerateAppInstallerFile>True</GenerateAppInstallerFile>
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
-    <AppInstallerUri>http://github.com/rido-min/releases</AppInstallerUri>
+    <AppInstallerUri>https://github.com/rido-min/samples/releases/download/msix0</AppInstallerUri>
     <AppInstallerUpdateFrequency>1</AppInstallerUpdateFrequency>
     <AppInstallerCheckForUpdateFrequency>OnApplicationRun</AppInstallerCheckForUpdateFrequency>
-      <EntryPointProjectUniqueName>..\CoreWinFormsApp1\CoreWinFormsApp1.csproj</EntryPointProjectUniqueName>
+    <EntryPointProjectUniqueName>..\CoreWinFormsApp1\CoreWinFormsApp1.csproj</EntryPointProjectUniqueName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <AppxBundle>Never</AppxBundle>
