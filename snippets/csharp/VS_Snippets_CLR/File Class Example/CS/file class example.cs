@@ -21,7 +21,7 @@ class Test
         // Open the file to read from.
         using (StreamReader sr = File.OpenText(path))
         {
-            string s = "";
+            string s;
             while ((s = sr.ReadLine()) != null)
             {
                 Console.WriteLine(s);
