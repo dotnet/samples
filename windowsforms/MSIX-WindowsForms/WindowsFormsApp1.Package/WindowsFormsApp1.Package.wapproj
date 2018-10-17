@@ -35,13 +35,13 @@
   <Import Project="$(WapProjPath)\Microsoft.DesktopBridge.props" />
   <PropertyGroup>
     <ProjectGuid>fa0d80ab-4fc9-40d6-aa5f-e50044ed2c5c</ProjectGuid>
-    <TargetPlatformVersion>10.0.17134.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.17134.0</TargetPlatformMinVersion>
+    <TargetPlatformVersion>10.0.17763.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
     <PackageCertificateKeyFile>WindowsFormsApp1.Package_TemporaryKey.pfx</PackageCertificateKeyFile>
     <GenerateAppInstallerFile>True</GenerateAppInstallerFile>
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
-    <AppInstallerUri>https://github.com/rido-min/samples/releases/download/msix0</AppInstallerUri>
+    <AppInstallerUri>https://github.com/rido-min/samples/releases/download/v0.0.1</AppInstallerUri>
     <AppInstallerUpdateFrequency>1</AppInstallerUpdateFrequency>
     <AppInstallerCheckForUpdateFrequency>OnApplicationRun</AppInstallerCheckForUpdateFrequency>
     <EntryPointProjectUniqueName>..\CoreWinFormsApp1\CoreWinFormsApp1.csproj</EntryPointProjectUniqueName>
@@ -79,6 +79,7 @@
   <Import Project="$(WapProjPath)\Microsoft.DesktopBridge.targets" />
   <PropertyGroup>
     <PackageOutputGroups>@(PackageOutputGroups);__GetPublishItems</PackageOutputGroups>
+    <PackageCertificateThumbprint>B07E5869864E1B93816CCA76C55E5F60F0A95F59</PackageCertificateThumbprint>
   </PropertyGroup>
   <Target Name="_ValidateAppReferenceItems" />
   <Target Name="_FixEntryPoint" AfterTargets="_ConvertItems">
