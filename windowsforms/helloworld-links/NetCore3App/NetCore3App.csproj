@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\FullFxApp\Form1.cs" Link="Form1.cs" />
+    <Compile Include="..\FullFxApp\Form1.Designer.cs" Link="Form1.Designer.cs" />
+    <Compile Include="..\FullFxApp\Program.cs" Link="Program.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.DesktopUI" />
+  </ItemGroup>
+
+</Project>
