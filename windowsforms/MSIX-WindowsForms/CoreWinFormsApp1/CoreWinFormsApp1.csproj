@@ -26,6 +26,5 @@
       <_PublishItem Include="$(ProjectDepsFilePath)" TargetPath="$(ProjectDepsFileName)" />
       <_PublishItem Include="$(ProjectRuntimeConfigFilePath)" TargetPath="$(ProjectRuntimeConfigFileName)" />
     </ItemGroup>
-
   </Target>
 </Project>
