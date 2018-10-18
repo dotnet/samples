@@ -14,7 +14,7 @@ There are two classes of code in this repository:
 you can read more about the concepts covered in each sample.
 
 Both samples and snippets should be buildable projects. Those projects should build and
-run on the widest set of platforms possible for the given sample. In practice, that means building .NET Core based console applications where possible. Samples that are specific to the web or a UI framework should add those tools as needed. Examples include web applications, mobile apps, WPF or WinForms apps and so on.
+run on the widest set of platforms possible for the given sample. In practice, that means building .NET Core-based console applications where possible. Samples that are specific to the web or a UI framework should add those tools as needed. Examples include web applications, mobile apps, WPF or WinForms apps, and so on.
 
 We are working toward having a CI system in place for all code. When you make any updates to samples, make sure each update is part of a buildable
 project. Ideally, add tests for correctness on samples as well.
@@ -23,9 +23,9 @@ project. Ideally, add tests for correctness on samples as well.
 
 Snippets are extracted from small programs that include the snippet. Snippets are all located in the top level **/snippets** folder. While snippets are small blocks of code, we want to move toward snippets that are part of buildable sample projects.
 
-## Building a sample
+## Building a snippet or sample 
 
-You build any .NET Core sample using the .NET Core CLI, which can be installed with [the .NET Core SDK](https://www.microsoft.com/net/download). Then, execute
+You build any .NET Core snippet or sample using the .NET Core CLI, which can be installed with [the .NET Core SDK](https://www.microsoft.com/net/download). Then, execute
 these commands from the CLI in the directory of any sample:
 
 ```
@@ -47,13 +47,18 @@ a specific platform. Other samples and snippets require the .NET Framework
 and will run on Windows platforms, and will need the Developer Pack for
 the target Framework version.
 
-## Creating new samples
+## Creating new samples or snippets
 
 If you wish to add a code sample:
 
 1. Your sample **must be part of a buildable project**. Where possible, the projects should build on all platforms supported by .NET Core. Exceptions to this are samples that demonstrate a platform specific feature or platform specific tool.
-3. Your sample should conform to the [corefx coding style](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/coding-style.md) to maintain consistency.
+
+2. Your sample should conform to the [corefx coding style](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/coding-style.md) to maintain consistency.
+
 	- Additionally, we prefer the use of `static` methods rather than instance methods when demonstrating something that doesn't require instantiating a new object.
+
+3. Your sample should include **appropriate exception handling**. It should handle all exceptions that are likely to be thrown in the context of the sample. For example, a sample that calls the [Console.ReadLine](https://docs.microsoft.com/dotnet/api/system.console.readline) method to retrieve user input should use appropriate exception handling when the input string is passed as an argument to a method. Similarly, if your sample expects a method all to fail, the resulting exception must be handled. Always handle the specific exceptions thrown by the method, rather than base class exceptions such as [Exception](https://docs.microsoft.com/dotnet/api/system.exception) or [SystemException](https://docs.microsoft.com/dotnet/api/system.systemexception).
+
 4. If your sample builds a standalone package, you must include the runtimes used by our CI build system, in addition to any runtimes used by your sample:
     - `win7-x64`
     - `win8-x64`
