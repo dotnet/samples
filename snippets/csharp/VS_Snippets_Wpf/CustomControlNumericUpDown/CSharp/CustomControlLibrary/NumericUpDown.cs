@@ -12,8 +12,6 @@ namespace CustomControlLibrary
 {
     public partial class NumericUpDown : Control
     {
-// <staticctorofcustomclasscommontasks>
-// </staticctorofcustomclasscommontasks>
         public NumericUpDown()
             : base()
         {
