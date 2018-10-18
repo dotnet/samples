@@ -45,6 +45,10 @@ class GetProcessesByNameClass
         {
             Console.WriteLine($"The value \'{remoteMachineName}\' is an invalid remote computer name.");
         }
+        catch (InvalidOperationException)
+        {
+            Console.WriteLine("Unable to get process information on the remote computer.");
+        }
         catch (PlatformNotSupportedException)
         {
             Console.WriteLine(
