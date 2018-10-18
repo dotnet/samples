@@ -6,7 +6,46 @@ This sample shows how to use the Windows Packaging Project to package a WinForms
 
 To use the Windows Packaging Project (wapproj) you need to install the Universal Windows workload in Visual Studio.
 
-To produce `MSIX` packages you must have the **Windows 10 Octobe 2018 SDK** (aka 10.0.17763), otherwise the generated package will have the `APPX` extension.
+To produce `MSIX` packages you must have the **Windows 10 October 2018 SDK** (aka 10.0.17763), otherwise the generated package will have the `APPX` extension.
 
-To install MSIX packages you need  the **Windows 10 Octobe 2018 Update**.
+To install MSIX packages you need  the **Windows 10 October 2018 Update**
 
+## Customize the Packaging Project
+
+Currently, the packaging project does not support .NET Core applications, as a workaround we updated the project files to call the `publish` target to produce a self-contained app, and fix the manifest entry point. 
+
+In the .NET core csproj add:
+
+```xml
+ <Target Name="__GetPublishItems" DependsOnTargets="ComputeFilesToPublish" Returns="@(_PublishItem)">
+    <ItemGroup>
+      <_PublishItem Include="@(ResolvedFileToPublish->'%(FullPath)')" TargetPath="%(ResolvedFileToPublish.RelativePath)" OutputGroup="__GetPublishItems" />
+      <_PublishItem Include="$(ProjectDepsFilePath)" TargetPath="$(ProjectDepsFileName)" />
+      <_PublishItem Include="$(ProjectRuntimeConfigFilePath)" TargetPath="$(ProjectRuntimeConfigFileName)" />
+    </ItemGroup>
+  </Target>
+```
+
+In the wapproj modify the project `ProjectReference` element:
+```xml
+ <ItemGroup>
+    <ProjectReference Include="..\CoreWinFormsApp1\CoreWinFormsApp1.csproj" SkipGetTargetFrameworkProperties="true" Properties="RuntimeIdentifier=win-x86;SelfContained=true" />
+  </ItemGroup>
+```
+
+And add the targets:
+```xml
+  <PropertyGroup>
+    <PackageOutputGroups>@(PackageOutputGroups);__GetPublishItems</PackageOutputGroups>    
+  </PropertyGroup>
+
+  <Target Name="_ValidateAppReferenceItems" />
+  <Target Name="_FixEntryPoint" AfterTargets="_ConvertItems">
+    <PropertyGroup>
+      <EntryPointExe>CoreWinFormsApp1\CoreWinFormsApp1.exe</EntryPointExe>
+    </PropertyGroup>
+  </Target>
+  <Target Name="PublishReferences" BeforeTargets="ExpandProjectReferences">
+    <MSBuild Projects="@(ProjectReference->'%(FullPath)')" BuildInParallel="$(BuildInParallel)" Targets="Publish" />
+  </Target>
+```

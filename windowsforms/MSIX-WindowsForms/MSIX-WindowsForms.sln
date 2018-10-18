@@ -9,6 +9,11 @@ Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "WindowsFormsApp1.Package", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreWinFormsApp1", "CoreWinFormsApp1\CoreWinFormsApp1.csproj", "{BF70C62C-99B5-47C5-B527-A4AD1338723E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C3AFF30C-502F-4A5B-BF49-785A9F4C4089}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
