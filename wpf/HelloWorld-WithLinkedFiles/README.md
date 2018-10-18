@@ -7,12 +7,12 @@ To share source code you can use the `Link` attribute in most of the project ele
 
 ```xml
 <ItemGroup>
-    <ApplicationDefinition Include="..\HelloWorldNetFx\App.xaml" Link="App.xaml" />
-    <Compile Include="..\HelloWorldNetFx\App.xaml.cs" Link="App.xaml.cs" />
-  </ItemGroup>
+  <ApplicationDefinition Include="..\HelloWorldNetFx\App.xaml" Link="App.xaml" />
+  <Compile Include="..\HelloWorldNetFx\App.xaml.cs" Link="App.xaml.cs" />
+</ItemGroup>
 
-  <ItemGroup>
-    <Page Include="..\HelloWorldNetFx\MainWindow.xaml" Link="MainWindow.xaml" />      
-    <Compile Include="..\HelloWorldNetFx\MainWindow.xaml.cs" Link="MainWindow.xaml.cs" />
-  </ItemGroup>
+<ItemGroup>
+  <Compile Include="..\HelloWorldNetFx\**\*.cs" />
+  <Page Include="..\HelloWorldNetFx\**\*.xaml" Exclude="@(ApplicationDefinition)" />      
+</ItemGroup>
 ```
