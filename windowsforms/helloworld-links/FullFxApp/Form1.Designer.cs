@@ -1,4 +1,4 @@
-﻿namespace FullFxApp
+﻿namespace HelloWorld
 {
     partial class Form1
     {

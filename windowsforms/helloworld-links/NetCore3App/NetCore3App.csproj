@@ -3,12 +3,12 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
+    <AssemblyName>HelloWorld</AssemblyName>
+    <RootNamespace>HelloWorld</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\FullFxApp\Form1.cs" Link="Form1.cs" />
-    <Compile Include="..\FullFxApp\Form1.Designer.cs" Link="Form1.Designer.cs" />
-    <Compile Include="..\FullFxApp\Program.cs" Link="Program.cs" />
+    <Compile Include="..\FullFxApp\*.cs" />
   </ItemGroup>
 
   <ItemGroup>

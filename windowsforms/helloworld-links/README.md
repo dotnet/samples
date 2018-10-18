@@ -6,9 +6,7 @@ To link files between two project this sample uses the the `Link` attribute.
 
 ```xml
 <ItemGroup>
-    <Compile Include="..\FullFxApp\Form1.cs" Link="Form1.cs" />
-    <Compile Include="..\FullFxApp\Form1.Designer.cs" Link="Form1.Designer.cs" />
-    <Compile Include="..\FullFxApp\Program.cs" Link="Program.cs" />
+    <Compile Include="..\FullFxApp\*.cs" />
   </ItemGroup>
 ```
 
