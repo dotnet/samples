@@ -86,4 +86,7 @@
   <Target Name="PublishReferences" BeforeTargets="ExpandProjectReferences">
     <MSBuild Projects="@(ProjectReference->'%(FullPath)')" BuildInParallel="$(BuildInParallel)" Targets="Publish" />
   </Target>
+  <PropertyGroup>
+    <DebuggerType>CoreClr</DebuggerType>
+  </PropertyGroup>
 </Project>
