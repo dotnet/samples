@@ -13,7 +13,7 @@ namespace TextUtils
                 return 0;
             }
 
-            //Convert the string into an array of words  
+            // Convert the string into an array of words.
             var source = inputString.Split(new char[] { '.', '?', '!', ' ', ';', ':', ',' },
                                            StringSplitOptions.RemoveEmptyEntries);
 
