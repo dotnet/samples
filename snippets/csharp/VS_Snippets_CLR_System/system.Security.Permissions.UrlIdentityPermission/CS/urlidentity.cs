@@ -9,7 +9,6 @@ public class UrlIdentityPermissionDemo
     {
         IsSubsetOfDemo();
         CopyDemo();
-        UnionDemo();
         IntersectDemo();
         ToFromXmlDemo();
     }
@@ -40,27 +39,6 @@ public class UrlIdentityPermissionDemo
         {
             Console.WriteLine(permIdPerm2.Url + " is not a subset of " + permIdPerm1.Url);
 
-        }
-    }
-    // </Snippet2>
-    // <Snippet3>
-    // Union creates a new permission that is the union of the current permission
-    // and the specified permission.
-    private static void UnionDemo()
-    {
-        UrlIdentityPermission permIdPerm1 = new UrlIdentityPermission("http://www.fourthcoffee.com/process/");
-        UrlIdentityPermission permIdPerm2 = new UrlIdentityPermission("http://www.fourthcoffee.com/*");
-        UrlIdentityPermission p3 = (UrlIdentityPermission)permIdPerm1.Union(permIdPerm2);
-        if (p3 != null)
-        {
-            Console.WriteLine("The union of " + permIdPerm1.Url +
-                " and \n\t" + permIdPerm2.Url + " is \n\t"
-                + p3.Url + "\n");
-        }
-        else
-        {
-            Console.WriteLine("The union of " + permIdPerm1.Url +
-                " and \n\t" + permIdPerm2.Url + " is null.\n");
         }
     }
     // </Snippet3>

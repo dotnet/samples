@@ -10,7 +10,6 @@ Public Class UrlIdentityPermissionDemo
     Public Shared Sub Main(ByVal args() As String)
         IsSubsetOfDemo()
         CopyDemo()
-        UnionDemo()
         IntersectDemo()
         ToFromXmlDemo()
 
@@ -37,23 +36,6 @@ Public Class UrlIdentityPermissionDemo
         End If
 
     End Sub 'IsSubsetOfDemo
-
-    ' </Snippet2>
-    ' <Snippet3>
-    ' Union creates a new permission that is the union of the current permission
-    ' and the specified permission.
-    Private Shared Sub UnionDemo()
-        Dim permIdPerm1 As New UrlIdentityPermission("http://www.fourthcoffee.com/process/")
-        Dim permIdPerm2 As New UrlIdentityPermission("http://www.fourthcoffee.com/*")
-        Dim p3 As UrlIdentityPermission = CType(permIdPerm1.Union(permIdPerm2), UrlIdentityPermission)
-        If Not (p3 Is Nothing) Then
-            Console.WriteLine("The union of " + permIdPerm1.Url + " and " + vbLf + vbTab + permIdPerm2.Url + " is " + vbLf + vbTab + p3.Url + vbLf)
-
-        Else
-            Console.WriteLine("The union of " + permIdPerm1.Url + " and " + vbLf + vbTab + permIdPerm2.Url + " is null." + vbLf)
-        End If
-
-    End Sub 'UnionDemo
 
     ' </Snippet3>
     ' <Snippet4>
