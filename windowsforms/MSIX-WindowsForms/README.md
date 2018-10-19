@@ -1,20 +1,20 @@
 # MSIX Windows Forms Core Application
 
-This sample shows how to use the Windows Packaging Project to package a WinForms application running on Core.
+This sample shows how to use the Windows Packaging Project to package a WinForms application running on .NET Core 3.0.
 
 ## Pre-requisites
 
 To use the Windows Packaging Project (wapproj) you need to install the Universal Windows workload in Visual Studio.
 
-To produce `MSIX` packages you must have the **Windows 10 October 2018 SDK** (aka 10.0.17763), otherwise the generated package will have the `APPX` extension.
+To produce `MSIX` packages, you must have the **Windows 10 October 2018 SDK** (aka 10.0.17763): otherwise, the generated package will have the `APPX` extension.
 
-To install MSIX packages you need  the **Windows 10 October 2018 Update**
+To install MSIX packages you need the **Windows 10 October 2018 Update**
 
 ## Customize the Packaging Project
 
-Currently, the packaging project does not support .NET Core applications, as a workaround we updated the project files to call the `publish` target to produce a self-contained app, and fix the manifest entry point. 
+Currently, the packaging project does not support .NET Core applications. As a workaround, we updated the project files to call the `publish` target to produce a self-contained app, and to fix the manifest entry point. 
 
-In the .NET core csproj add:
+In the .NET Core csproj file add:
 
 ```xml
  <Target Name="__GetPublishItems" DependsOnTargets="ComputeFilesToPublish" Returns="@(_PublishItem)">
@@ -26,7 +26,7 @@ In the .NET core csproj add:
   </Target>
 ```
 
-In the wapproj modify the project `ProjectReference` element:
+In the .wapproj file modify the `ProjectReference` element:
 ```xml
  <ItemGroup>
     <ProjectReference Include="..\CoreWinFormsApp1\CoreWinFormsApp1.csproj" SkipGetTargetFrameworkProperties="true" Properties="RuntimeIdentifier=win-x86;SelfContained=true" />
