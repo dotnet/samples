@@ -336,7 +336,7 @@ public class Example
 
    private static void AssignULongWithSeparator()
    {
-      // <SnippetIntULong>
+      // <SnippetULongS>
       ulong ulongValue1 = 7_934_076_125;
       Console.WriteLine(ulongValue1);
 
