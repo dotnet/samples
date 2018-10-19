@@ -150,7 +150,7 @@ Class LibraryContainer
             curObj = CType(m_bookList(i), IComponent)
             If curObj.Site IsNot Nothing Then
                 If (curObj.Site.Name.Equals(ISNDNNum)) Then
-                    Throw New SystemException("The ISBN number already exists in the container")
+                    Throw New ArgumentException("The ISBN number already exists in the container")
                 End If
             End If
         Next i
@@ -197,15 +197,19 @@ Class LibraryContainer
     Public Shared Sub Main()
         Dim cntrExmpl As LibraryContainer = New LibraryContainer()
 
-        Dim book1 As BookComponent = New BookComponent("Wizard's First Rule", "Terry Gooodkind")
-        cntrExmpl.Add(book1, "0812548051")
-        Dim book2 As BookComponent = New BookComponent("Stone of Tears", "Terry Gooodkind")
-        cntrExmpl.Add(book2, "0812548094")
-        Dim book3 As BookComponent = New BookComponent("Blood of the Fold", "Terry Gooodkind")
-        cntrExmpl.Add(book3, "0812551478")
-        Dim book4 As BookComponent = New BookComponent("The Soul of the Fire", "Terry Gooodkind")
-        'This will generate an exception, because the ISBN already exists in the container.
-        cntrExmpl.Add(book4, "0812551478")
+        Try
+            Dim book1 As BookComponent = New BookComponent("Wizard's First Rule", "Terry Gooodkind")
+            cntrExmpl.Add(book1, "0812548051")
+            Dim book2 As BookComponent = New BookComponent("Stone of Tears", "Terry Gooodkind")
+            cntrExmpl.Add(book2, "0812548094")
+            Dim book3 As BookComponent = New BookComponent("Blood of the Fold", "Terry Gooodkind")
+            cntrExmpl.Add(book3, "0812551478")
+            Dim book4 As BookComponent = New BookComponent("The Soul of the Fire", "Terry Gooodkind")
+            'This will generate an exception, because the ISBN already exists in the container.
+            cntrExmpl.Add(book4, "0812551478")
+        Catch e As ArgumentException
+            Console.WriteLine("Unable to add books: " + e.Message)
+        End Try
 
         Dim datalist As ComponentCollection = cntrExmpl.Components
         Dim denum As IEnumerator = datalist.GetEnumerator()
