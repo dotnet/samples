@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 public class Example
 {
-   public static void Main()
+   public static async Task Main()
    {
       var tasks = new List<Task>();
       Random rnd = new Random();
@@ -27,7 +27,7 @@ public class Example
          t.Start();
          tasks.Add(t);
       }
-      Task.WaitAll(tasks.ToArray());
+      await Task.WhenAll(tasks.ToArray());
    }
 }
 // The example displays output like the following:
