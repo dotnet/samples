@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 public class Example
 {
-   public static void Main()
+   public static async Task Main()
    {
       string pattern = @"\p{P}*\s+";
       string[] titles = { "Sister Carrie", "The Financier" };
@@ -42,7 +42,7 @@ public class Example
          foreach (var t in tasks)
             t.Start();
       
-        Task.WaitAll(tasks);
+        await Task.WhenAll(tasks);
   
         Console.WriteLine("Word Counts:\n");
         for (int ctr = 0; ctr < titles.Length; ctr++)
