@@ -7,7 +7,7 @@ public class Example
 {
    private const int segmentSize = 10;
    
-   public static void Main()
+   public static async Task Main()
    {
       List<Task> tasks = new List<Task>();
 
@@ -28,7 +28,7 @@ public class Example
                                    } ));
       }
       try {
-         Task.WaitAll(tasks.ToArray());
+         await Task.WhenAll(tasks.ToArray());
          int elementsShown = 0;
          foreach (var value in arr) {
             Console.Write("{0,3} ", value);

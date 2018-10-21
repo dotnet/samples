@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 class BlockingCollectionDemo
 {
-    static void Main()
+    static async Task Main()
     {
-        AddTakeDemo.BC_AddTakeCompleteAdding();
+        await AddTakeDemo.BC_AddTakeCompleteAdding();
         TryTakeDemo.BC_TryTake();
         FromToAnyDemo.BC_FromToAny();
-        ConsumingEnumerableDemo.BC_GetConsumingEnumerable();
+        await ConsumingEnumerableDemo.BC_GetConsumingEnumerable();
         Console.WriteLine("Press any key to exit.");
         Console.ReadKey();
     }
@@ -25,7 +25,7 @@ class AddTakeDemo
     //      BlockingCollection<T>.Add()
     //      BlockingCollection<T>.Take()
     //      BlockingCollection<T>.CompleteAdding()
-    public static void BC_AddTakeCompleteAdding()
+    public static async Task BC_AddTakeCompleteAdding()
     {
         using (BlockingCollection<int> bc = new BlockingCollection<int>())
         {
@@ -55,7 +55,7 @@ class AddTakeDemo
                     }
                 }))
 
-                    Task.WaitAll(t1, t2);
+                    await Task.WhenAll(t1, t2);
             }
         }
     }
@@ -143,12 +143,12 @@ class ConsumingEnumerableDemo
         {
 
             // Kick off a producer task
-            Task.Factory.StartNew(() =>
+            Task.Factory.StartNew(async () =>
             {
                 for (int i = 0; i < 10; i++)
                 {
                     bc.Add(i);
-                    Thread.Sleep(100); // sleep 100 ms between adds
+                    await Task.Delay(100); // sleep 100 ms between adds
                 }
 
                 // Need to do this to keep foreach below from hanging

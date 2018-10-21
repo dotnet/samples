@@ -37,9 +37,9 @@ class Example
                           expectedValue, _asyncLocalString.Value, _threadLocalString.Value);
     }
 
-    static void Main(string[] args)
+    static async Task Main(string[] args)
     {
-        AsyncMethodA().Wait();
+        await AsyncMethodA();
     }
 }
 // The example displays the following output:

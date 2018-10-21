@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 class Example
 {
-    static void Main()
+    static async Task Main()
     {
         // Initialize a queue and a CountdownEvent
         ConcurrentQueue<int> queue = new ConcurrentQueue<int>(Enumerable.Range(0, 10000));
@@ -33,7 +33,7 @@ class Example
 
         // Proper form is to wait for the tasks to complete, even if you that their work
         // is done already.
-        Task.WaitAll(t1, t2);
+        await Task.WhenAll(t1, t2);
 
         // Resetting will cause the CountdownEvent to un-set, and resets InitialCount/CurrentCount
         // to the specified value

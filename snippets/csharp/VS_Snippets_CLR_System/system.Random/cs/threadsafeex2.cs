@@ -20,14 +20,14 @@ public class Example
       source = new CancellationTokenSource();
    } 
 
-   public static void Main()
+   public static async Task Main()
    {
       Example ex = new Example();
       Thread.CurrentThread.Name = "Main";
-      ex.Execute();
+      await ex.Execute();
    }
 
-   private void Execute()
+   private Task Execute()
    {   
       List<Task> tasks = new List<Task>();
       
@@ -76,7 +76,7 @@ public class Example
          token));
       }
       try {
-         Task.WaitAll(tasks.ToArray());
+         await Task.WhenAll(tasks.ToArray());
          Console.WriteLine("\nTotal random numbers generated: {0:N0}", totalCount);
          Console.WriteLine("Total sum of all random numbers: {0:N2}", totalValue);
          Console.WriteLine("Random number mean: {0:N4}", totalValue/totalCount);
