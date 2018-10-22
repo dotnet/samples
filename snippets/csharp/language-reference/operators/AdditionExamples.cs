@@ -25,16 +25,16 @@ namespace operators
         {
             // <SnippetAddStrings>
             Console.WriteLine("Forgot" + "whitespace");
-            Console.WriteLine("Probably, the oldest constant: " + Math.PI);
+            Console.WriteLine("Probably the oldest constant: " + Math.PI);
             // Output:
             // Forgotwhitespace
-            // Probably, the oldest constant: 3.14159265358979
+            // Probably the oldest constant: 3.14159265358979
             // </SnippetAddStrings>
 
             // <SnippetUseStringInterpolation>
-            Console.WriteLine($"Probably, the oldest constant: {Math.PI:F2}");
+            Console.WriteLine($"Probably the oldest constant: {Math.PI:F2}");
             // Output:
-            // Probably, the oldest constant: 3.14
+            // Probably the oldest constant: 3.14
             // </SnippetUseStringInterpolation>
         }
 
