@@ -1,4 +1,5 @@
 '<snippet1>
+Imports System
 Imports System.Text.RegularExpressions
 
 Module RegExSample
@@ -16,13 +17,13 @@ Module RegExSample
     Sub Main()
         Dim text As String = "four score and seven years ago"
 
-        System.Console.WriteLine("text=[" & text & "]")
+        Console.WriteLine($"text=[{text}]")
 
         Dim rx As New Regex("\w+")
 
         Dim result As String = rx.Replace(text, AddressOf RegExSample.CapText)
 
-        System.Console.WriteLine("result=[" & result & "]")
+        Console.WriteLine($"result=[{result}]")
     End Sub
 End Module
 ' The example displays the following output:
