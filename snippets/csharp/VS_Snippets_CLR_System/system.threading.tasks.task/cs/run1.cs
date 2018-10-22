@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 
 public class Example
 {
-   public static void Main()
+   public static async Task Main()
    {
-      Task t = Task.Run( () => {
+      await Task.Run( () => {
                                   // Just loop.
                                   int ctr = 0;
                                   for (ctr = 0; ctr <= 1000000; ctr++)
@@ -14,7 +14,6 @@ public class Example
                                   Console.WriteLine("Finished {0} loop iterations",
                                                     ctr);
                                } );
-      t.Wait();
    }
 }
 // The example displays the following output:
