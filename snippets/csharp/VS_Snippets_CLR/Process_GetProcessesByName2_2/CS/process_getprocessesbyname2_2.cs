@@ -14,34 +14,49 @@ using System.Diagnostics;
 
 class GetProcessesByNameClass
 {
-   public static void Main(string[] args)
-   {
-      try
-      {
+    public static void Main(string[] args)
+    {
+        Console.Write("Create notepad processes on remote computer \n");
+        Console.Write("Enter remote computer name : ");
+        string remoteMachineName = Console.ReadLine();
 
-         Console.Write("Create notepad processes on remote computer \n");
-         Console.Write("Enter remote computer name : ");
-         string remoteMachineName = Console.ReadLine();
-         // Get all notepad processess into Process array.
-         Process[] myProcesses = Process.GetProcessesByName("notepad",remoteMachineName);
-         if(myProcesses.Length == 0)
-            Console.WriteLine("Could not find notepad processes on remote computer.");
-         foreach(Process myProcess in myProcesses)
-         {
-            Console.Write("Process Name : " + myProcess.ProcessName + "  Process ID : "
-               + myProcess.Id + "  MachineName : " + myProcess.MachineName + "\n");
-         }
+        if (remoteMachineName == null)
+        {
+            // Prepend a new line to prevent it from being on the same line as the prompt.
+            Console.WriteLine(Environment.NewLine + "You have to enter a remote computer name.");
+            return;
+        }
 
-      }
-      catch(SystemException e)
-      {
-         Console.Write("Caught Exception .... : " + e.Message);
-      }
-      catch(Exception e)
-      {
-         Console.Write("Caught Exception .... : " + e.Message);
-      }
-   }
+        try
+        {
+            // Get all notepad processess into Process array.
+            Process[] myProcesses = Process.GetProcessesByName("notepad", remoteMachineName);
+
+            if (myProcesses.Length == 0)
+                Console.WriteLine("Could not find notepad processes on remote computer.");
+
+            foreach (Process myProcess in myProcesses)
+            {
+                Console.Write("Process Name : " + myProcess.ProcessName + "  Process ID : "
+                + myProcess.Id + "  MachineName : " + myProcess.MachineName + "\n");
+            }
+        }
+        catch (ArgumentException)
+        {
+            Console.WriteLine($"The value \'{remoteMachineName}\' is an invalid remote computer name.");
+        }
+        catch (InvalidOperationException)
+        {
+            Console.WriteLine("Unable to get process information on the remote computer.");
+        }
+        catch (PlatformNotSupportedException)
+        {
+            Console.WriteLine(
+                "Finding notepad processes on remote computers " +
+                "is not supported on this operating system.");
+        }
+
+    }
 }
 // </Snippet1> 
 // </Snippet2> 

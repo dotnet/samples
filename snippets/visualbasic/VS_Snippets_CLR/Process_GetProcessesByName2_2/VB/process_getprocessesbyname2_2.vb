@@ -19,29 +19,39 @@ Class GetProcessesByNameClass
    End Sub
 
    Public Overloads Shared Sub Main(ByVal args() As String)
-      Try
+      Console.Writeline("Create notepad processes on remote computer")
+      Console.Write("Enter remote computer name : ")
+      Dim remoteMachineName As String = Console.ReadLine()
 
-         Console.Writeline("Create notepad processes on remote computer")
-         Console.Write("Enter remote computer name : ")
-         Dim remoteMachineName As String = Console.ReadLine()
-         ' Get all notepad processess into Process array.
-         Dim myProcesses As Process() = Process.GetProcessesByName _
-                                             ("notepad", remoteMachineName)
-         If myProcesses.Length = 0 Then
+      If remoteMachineName Is Nothing Then
+         ' Prepend a new line to prevent it from being on the same line as the prompt.
+         Console.WriteLine(Environment.NewLine + "You have to enter a remote computer name.")
+         Return
+      End If
+
+      Try 
+        ' Get all notepad processess into Process array.
+        Dim myProcesses As Process() = Process.GetProcessesByName _
+                                            ("notepad", remoteMachineName)
+        If myProcesses.Length = 0 Then
             Console.WriteLine("Could not find notepad processes on remote computer.")
-         End If
-         Dim myProcess As Process
-         For Each myProcess In myProcesses
+        End If
+        Dim myProcess As Process
+        For Each myProcess In myProcesses
             Console.WriteLine("Process Name : " & myProcess.ProcessName & _
-                          "  Process ID : " & myProcess.Id & _
-                          "  MachineName : " & myProcess.MachineName)
-         Next myProcess
-
-      Catch e As SystemException
-         Console.Write("Caught Exception .... : " & e.Message)
-      Catch e As Exception
-         Console.Write("Caught Exception .... : " & e.Message)
-      End Try
+                        "  Process ID : " & myProcess.Id & _
+                        "  MachineName : " & myProcess.MachineName)
+        Catch e As ArgumentException 
+            Console.WriteLine("The value '" & remoteMachineName & "' is an invalid remote computer name.")
+        Catch e As PlatformNotSupportedException
+            Console.WriteLine(
+                "Finding notepad processes on remote computers " &
+                "is not supported on this operating system.");
+        Catch e As InvalidOperationException
+            Console.WriteLine("Unable to get process information on the remote computer.")
+      End Try 
+     
+      Next myProcess
    End Sub 'Main
 End Class 'GetProcessesByNameClass
 ' </Snippet1>

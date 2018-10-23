@@ -7,7 +7,6 @@ using namespace System::Runtime::InteropServices;
 
 void IsSubsetOfDemo();          // Forward references
 void CopyDemo();
-void UnionDemo();
 void IntersectDemo();
 void ToFromXmlDemo();
 
@@ -15,7 +14,6 @@ void main()
 {
     IsSubsetOfDemo();
     CopyDemo();
-    UnionDemo();
     IntersectDemo();
     ToFromXmlDemo();
 
@@ -40,32 +38,6 @@ void IsSubsetOfDemo()
     else  Console::WriteLine(permIdPerm2->Url + " is not a subset of " + permIdPerm1->Url);
 }
 // </Snippet2>
-
-// <Snippet3>
-// Union creates a gcnew permission that is the union of the current permission
-// and the specified permission.
-void UnionDemo()
-{
-    UrlIdentityPermission ^ permIdPerm1 = gcnew UrlIdentityPermission("http://www.fourthcoffee.com/process/");
-    UrlIdentityPermission ^ permIdPerm2 = gcnew UrlIdentityPermission("http://www.fourthcoffee.com/*");
-    UrlIdentityPermission ^ p3 = (UrlIdentityPermission^)permIdPerm1->Union(permIdPerm2);
-    try
-        {
-        if (p3 != nullptr)
-              Console::WriteLine("The union of " + permIdPerm1->Url +
-                " and \n\t" + permIdPerm2->Url + " is \n\t" + p3->Url + "\n");
-        else  Console::WriteLine("The union of " + permIdPerm1->Url +
-                " and \n\t" + permIdPerm2->Url + " is null.\n");
-        }
-    catch (SystemException ^ e)
-        {
-        Console::WriteLine("The union of " + permIdPerm1->Url +
-                " and \n\t" + permIdPerm2->Url + " failed.");
-        Console::WriteLine(e->Message);
-        }
-
-}
-// </Snippet3>
 
 // <Snippet4>
 // Intersect creates and returns a gcnew permission that is the intersection of the

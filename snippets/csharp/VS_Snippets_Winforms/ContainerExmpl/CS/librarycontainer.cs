@@ -181,7 +181,7 @@ namespace InterfaceSample
 				if(curObj.Site != null)
 				{
 					if(curObj.Site.Name.Equals(ISNDNNum))
-						throw new SystemException("The ISBN number already exists in the container"); 
+						throw new ArgumentException("The ISBN number already exists in the container"); 
 				}
 			}
 
@@ -228,7 +228,7 @@ namespace InterfaceSample
 		{
 			LibraryContainer cntrExmpl = new LibraryContainer();
 
-			try
+			try 
 			{
 				BookComponent book1 = new BookComponent("Wizard's First Rule", "Terry Gooodkind");
 				cntrExmpl.Add(book1, "0812548051");
@@ -240,9 +240,9 @@ namespace InterfaceSample
 				//This will generate exception because the ISBN already exists in the container.
 				cntrExmpl.Add(book4, "0812551478");
 			}
-			catch(SystemException e)
+			catch (ArgumentException e)
 			{
-				Console.WriteLine("Error description: " + e.Message);
+				Console.WriteLine("Unable to add books: " + e.Message);
 			}
 
 			ComponentCollection datalist =cntrExmpl.Components;

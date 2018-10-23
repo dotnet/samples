@@ -47,18 +47,12 @@ Public Class ZoneIdentityPermissionDemo
         Dim zoneIdPerm1 As New ZoneIdentityPermission(SecurityZone.Intranet)
         Dim zoneIdPerm2 As New ZoneIdentityPermission(SecurityZone.MyComputer)
         Dim p3 As ZoneIdentityPermission = CType(zoneIdPerm1.Union(zoneIdPerm2), ZoneIdentityPermission)
-        Try
-            If Not (p3 Is Nothing) Then
-                Console.WriteLine("The union of " + zoneIdPerm1.SecurityZone.ToString() + " and " + vbLf + vbTab + zoneIdPerm2.SecurityZone.ToString() + " is " + vbLf + vbTab + p3.SecurityZone.ToString() + vbLf)
+        If Not (p3 Is Nothing) Then
+            Console.WriteLine("The union of " + zoneIdPerm1.SecurityZone.ToString() + " and " + vbLf + vbTab + zoneIdPerm2.SecurityZone.ToString() + " is " + vbLf + vbTab + p3.SecurityZone.ToString() + vbLf)
 
-            Else
-                Console.WriteLine("The union of " + zoneIdPerm1.SecurityZone.ToString() + " and " + vbLf + vbTab + zoneIdPerm2.SecurityZone.ToString() + " is null." + vbLf)
-            End If
-        Catch e As SystemException
-            Console.WriteLine("The union of " + zoneIdPerm1.SecurityZone.ToString() + " and " + vbLf + vbTab + zoneIdPerm2.SecurityZone.ToString() + " failed.")
-
-            Console.WriteLine(e.Message)
-        End Try
+        Else
+            Console.WriteLine("The union of " + zoneIdPerm1.SecurityZone.ToString() + " and " + vbLf + vbTab + zoneIdPerm2.SecurityZone.ToString() + " is null." + vbLf)
+        End If
 
     End Sub 'UnionDemo
 
