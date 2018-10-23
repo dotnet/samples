@@ -7,7 +7,7 @@ To access Win10 APIs you need to have the Windows SDK installed. You can add it 
 
 ## Configure the reference in your project
 
-You can add reference the winmd by using the `Add Reference` dialog or editing your `.csproj` file:
+You can reference the winmd by using the `Add Reference` dialog or adding the following to your `.csproj` file:
 
 ```xml
   <ItemGroup>
