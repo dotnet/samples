@@ -11,7 +11,7 @@ class Example
     //      ConcurrentStack<T>.TryPop();
     //      ConcurrentStack<T>.Clear();
     //      ConcurrentStack<T>.IsEmpty;
-    static void Main()
+    static async Task Main()
     {
         int items = 10000;
 
@@ -66,7 +66,7 @@ class Example
             tasks[i] = Task.Factory.StartNew(pushAndPop);
 
         // Wait for all the tasks to finish up
-        Task.WaitAll(tasks);
+        await Task.WhenAll(tasks);
 
         if (!stack.IsEmpty)
         {

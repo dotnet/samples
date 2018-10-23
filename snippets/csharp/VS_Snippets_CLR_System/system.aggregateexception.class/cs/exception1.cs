@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 class Example
 {
-   static void Main(string[] args)
+   static async Task Main(string[] args)
    {
       // Get a folder path whose directories should throw an UnauthorizedAccessException.
       string path = Directory.GetParent(
@@ -18,7 +18,7 @@ class Example
       // Use this line to throw an exception that is not handled.
       // Task task1 = Task.Factory.StartNew(() => { throw new IndexOutOfRangeException(); } );
       try {
-          task1.Wait();
+          await task1;
       }
       catch (AggregateException ae) {
           ae.Handle((x) =>

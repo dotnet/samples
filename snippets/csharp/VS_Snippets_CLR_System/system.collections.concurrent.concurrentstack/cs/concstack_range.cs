@@ -10,14 +10,14 @@ class Example
     // Demonstrates:
     //      ConcurrentStack<T>.PushRange();
     //      ConcurrentStack<T>.TryPopRange();
-    static void Main()
+    static async Task Main()
     {
         int numParallelTasks = 4;
         int numItems = 1000;
         var stack = new ConcurrentStack<int>();
 
         // Push a range of values onto the stack concurrently
-        Task.WaitAll(Enumerable.Range(0, numParallelTasks).Select(i => Task.Factory.StartNew((state) =>
+        await Task.WhenAll(Enumerable.Range(0, numParallelTasks).Select(i => Task.Factory.StartNew((state) =>
         {
             // state = i * numItems
             int index = (int)state;
@@ -34,7 +34,7 @@ class Example
 
         int numTotalElements = 4 * numItems;
         int[] resultBuffer = new int[numTotalElements];
-        Task.WaitAll(Enumerable.Range(0, numParallelTasks).Select(i => Task.Factory.StartNew(obj =>
+        await Task.WhenAll(Enumerable.Range(0, numParallelTasks).Select(i => Task.Factory.StartNew(obj =>
         {
             int index = (int)obj;
             int result = stack.TryPopRange(resultBuffer, index, numItems);

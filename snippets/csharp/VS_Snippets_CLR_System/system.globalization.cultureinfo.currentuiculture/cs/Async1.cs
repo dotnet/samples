@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 public class Example
 {
-   public static void Main()
+   public static async Task Main()
    {
       var tasks = new List<Task>();
       Console.WriteLine("The current UI culture is {0}", 
@@ -30,7 +30,7 @@ public class Example
                                                  Thread.CurrentThread.CurrentUICulture.Name);
                             } ));                     
 
-      Task.WaitAll(tasks.ToArray());
+      await Task.WhenAll(tasks.ToArray());
    }
 }
 // The example displays output like the following:
