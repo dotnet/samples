@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 public class Example
 {
-   public static void Main()
+   public static async Task Main()
    {
       var list = new ConcurrentBag<string>();
       string[] dirNames = { ".", ".." };
@@ -19,7 +19,7 @@ public class Example
          tasks.Add(t);
          t.Start();
       }
-      Task.WaitAll(tasks.ToArray());
+      await Task.WhenAll(tasks.ToArray());
       foreach (Task t in tasks)
          Console.WriteLine("Task {0} Status: {1}", t.Id, t.Status);
          
