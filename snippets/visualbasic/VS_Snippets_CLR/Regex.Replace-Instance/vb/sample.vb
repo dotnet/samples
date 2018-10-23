@@ -1,5 +1,4 @@
 '<snippet1>
-Imports System
 Imports System.Text.RegularExpressions
 
 Module RegExSample
