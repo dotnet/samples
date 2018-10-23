@@ -7,8 +7,8 @@ class Sample
 {
     public static void Main()
     {
-        String str;
-        String nl = Environment.NewLine;
+        string str;
+        string nl = Environment.NewLine;
         //
         Console.WriteLine();
         Console.WriteLine("-- Environment members --");
@@ -16,7 +16,7 @@ class Sample
         //  Invoke this sample with an arbitrary set of command line arguments.
         Console.WriteLine("CommandLine: {0}", Environment.CommandLine);
 
-        String[] arguments = Environment.GetCommandLineArgs();
+        string[] arguments = Environment.GetCommandLineArgs();
         Console.WriteLine("GetCommandLineArgs: {0}", String.Join(", ", arguments));
 
         //  <-- Keep this information secure! -->
@@ -56,7 +56,7 @@ class Sample
         //  No example for Exit(exitCode) because doing so would terminate this example.
 
         //  <-- Keep this information secure! -->
-        String query = "My system drive is %SystemDrive% and my system root is %SystemRoot%";
+        string query = "My system drive is %SystemDrive% and my system root is %SystemRoot%";
         str = Environment.ExpandEnvironmentVariables(query);
         Console.WriteLine("ExpandEnvironmentVariables: {0}  {1}", nl, str);
 
@@ -73,7 +73,7 @@ class Sample
         Console.WriteLine("GetFolderPath: {0}",
                      Environment.GetFolderPath(Environment.SpecialFolder.System));
 
-        String[] drives = Environment.GetLogicalDrives();
+        string[] drives = Environment.GetLogicalDrives();
         Console.WriteLine("GetLogicalDrives: {0}", String.Join(", ", drives));
     }
 }
