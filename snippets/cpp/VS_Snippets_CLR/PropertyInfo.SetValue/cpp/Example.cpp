@@ -51,8 +51,8 @@ public:
         {
             if (value == nullptr)
             {
-                throw gcnew ApplicationException( 
-                    "IndexedInstanceProperty value can be the empty string, but it cannot be null.");
+                throw gcnew ArgumentNullException( 
+                    "IndexedInstanceProperty value can be an empty string, but it cannot be null.");
             }
             else
             {

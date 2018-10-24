@@ -56,7 +56,7 @@ class Example
         {
             if (value == null)
             {
-                throw new ApplicationException("IndexedInstanceProperty value can be the empty string, but it cannot be Nothing.");
+                throw new ArgumentNullException("IndexedInstanceProperty value can be an empty string, but it cannot be null.");
             }
             else
             {
