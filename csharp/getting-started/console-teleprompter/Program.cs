@@ -45,6 +45,8 @@ namespace TeleprompterConsole
                         config.UpdateDelay(-10);
                     else if (key.KeyChar == '<')
                         config.UpdateDelay(10);
+                    else if (key.KeyChar == 'X' || key.KeyChar == 'x')
+                        config.SetDone();
                 } while (!config.Done);
             };
             await Task.Run(work);
