@@ -8,23 +8,19 @@ Imports System.Security.AccessControl
 Module FileExample
 
     Sub Main()
-        Try
-            Dim FileName As String = "test.xml"
+        Dim FileName As String = "test.xml"
 
-            Console.WriteLine("Adding access control entry for " + FileName)
+        Console.WriteLine("Adding access control entry for " + FileName)
 
-            ' Add the access control entry to the file.
-            AddFileAuditRule(FileName, "MYDOMAIN\MyAccount", FileSystemRights.ReadData, AuditFlags.Failure)
+        ' Add the access control entry to the file.
+        AddFileAuditRule(FileName, "MYDOMAIN\MyAccount", FileSystemRights.ReadData, AuditFlags.Failure)
 
-            Console.WriteLine("Removing access control entry from " + FileName)
+        Console.WriteLine("Removing access control entry from " + FileName)
 
-            ' Remove the access control entry from the file.
-            RemoveFileAuditRule(FileName, "MYDOMAIN\MyAccount", FileSystemRights.ReadData, AuditFlags.Failure)
+        ' Remove the access control entry from the file.
+        RemoveFileAuditRule(FileName, "MYDOMAIN\MyAccount", FileSystemRights.ReadData, AuditFlags.Failure)
 
-            Console.WriteLine("Done.")
-        Catch e As Exception
-            Console.WriteLine(e)
-        End Try
+        Console.WriteLine("Done.")
 
         Console.ReadLine()
 

@@ -9,26 +9,19 @@ namespace FileSystemExample
     {
         public static void Main()
         {
-            try
-            {
-                string FileName = "test.xml";
+            string FileName = "test.xml";
 
-                Console.WriteLine("Adding access control entry for " + FileName);
+            Console.WriteLine("Adding access control entry for " + FileName);
 
-                // Add the access control entry to the file.
-                AddFileAuditRule(FileName, @"MYDOMAIN\MyAccount", FileSystemRights.ReadData, AuditFlags.Failure);
+            // Add the access control entry to the file.
+            AddFileAuditRule(FileName, @"MYDOMAIN\MyAccount", FileSystemRights.ReadData, AuditFlags.Failure);
 
-                Console.WriteLine("Removing access control entry from " + FileName);
+            Console.WriteLine("Removing access control entry from " + FileName);
 
-                // Remove the access control entry from the file.
-                RemoveFileAuditRule(FileName, @"MYDOMAIN\MyAccount", FileSystemRights.ReadData, AuditFlags.Failure);
+            // Remove the access control entry from the file.
+            RemoveFileAuditRule(FileName, @"MYDOMAIN\MyAccount", FileSystemRights.ReadData, AuditFlags.Failure);
 
-                Console.WriteLine("Done.");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-            }
+            Console.WriteLine("Done.");
 
             Console.ReadLine();
         }
