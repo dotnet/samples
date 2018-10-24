@@ -8,29 +8,22 @@ Imports System.Security.Cryptography
 Class AesExample
 
     Public Shared Sub Main()
-        Try
+        Dim original As String = "Here is some data to encrypt!"
 
-            Dim original As String = "Here is some data to encrypt!"
+        ' Create a new instance of the Aes
+        ' class.  This generates a new key and initialization 
+        ' vector (IV).
+        Using myAes As Aes = Aes.Create()
+            ' Encrypt the string to an array of bytes.
+            Dim encrypted As Byte() = EncryptStringToBytes_Aes(original, myAes.Key, myAes.IV)
 
-            ' Create a new instance of the Aes
-            ' class.  This generates a new key and initialization 
-            ' vector (IV).
-            Using myAes As Aes = Aes.Create()
+            ' Decrypt the bytes to a string.
+            Dim roundtrip As String = DecryptStringFromBytes_Aes(encrypted, myAes.Key, myAes.IV)
 
-                ' Encrypt the string to an array of bytes.
-                Dim encrypted As Byte() = EncryptStringToBytes_Aes(original, myAes.Key, myAes.IV)
-
-                ' Decrypt the bytes to a string.
-                Dim roundtrip As String = DecryptStringFromBytes_Aes(encrypted, myAes.Key, myAes.IV)
-
-                'Display the original data and the decrypted data.
-                Console.WriteLine("Original:   {0}", original)
-                Console.WriteLine("Round Trip: {0}", roundtrip)
-            End Using
-        Catch e As Exception
-            Console.WriteLine("Error: {0}", e.Message)
-        End Try
-
+            'Display the original data and the decrypted data.
+            Console.WriteLine("Original:   {0}", original)
+            Console.WriteLine("Round Trip: {0}", roundtrip)
+        End Using
     End Sub 'Main
 
     '<Snippet2>
