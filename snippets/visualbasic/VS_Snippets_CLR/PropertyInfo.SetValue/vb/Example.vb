@@ -36,8 +36,8 @@ Class Example
         End Get
         Set
             If Value Is Nothing Then
-                Throw New ApplicationException( _
-                    "IndexedInstanceProperty value can be the empty string, but it cannot be Nothing.")
+                Throw New ArgumentNullException( _
+                    "IndexedInstanceProperty value can be an empty string, but it cannot be Nothing.")
             Else
                 If _indexedInstanceProperty.ContainsKey(key) Then
                     _indexedInstanceProperty(key) = Value

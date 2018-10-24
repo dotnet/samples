@@ -85,10 +85,6 @@ class Program
         {
             writer.WriteLine("TransactionAbortedException Message: {0}", ex.Message);
         }
-        catch (ApplicationException ex)
-        {
-            writer.WriteLine("ApplicationException Message: {0}", ex.Message);
-        }
 
         // Display messages.
         Console.WriteLine(writer.ToString());

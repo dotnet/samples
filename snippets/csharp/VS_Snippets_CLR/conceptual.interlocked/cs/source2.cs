@@ -42,7 +42,7 @@ public class ClassB
                 // was already assigned, and CompareExchange did not
                 // replace the original value. Throw an exception to
                 // indicate that an error occurred.
-                throw new ApplicationException("ClassA was already set.");
+                throw new InvalidOperationException("ClassA was already set.");
             }
         }
     }

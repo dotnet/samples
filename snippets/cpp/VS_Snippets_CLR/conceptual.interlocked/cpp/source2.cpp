@@ -44,7 +44,7 @@ public:
                 // was already assigned, and CompareExchange did not
                 // replace the original value. Throw an exception to
                 // indicate that an error occurred.
-                throw gcnew ApplicationException("ClassA was already set.");
+                throw gcnew InvalidOperationException("ClassA was already set.");
             }
         }
     }
