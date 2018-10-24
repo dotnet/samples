@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 public class Example
 {
-   public static void Main()
+   public static async Task Main()
    {
       var tokenSource = new CancellationTokenSource();
       var token = tokenSource.Token;
@@ -32,7 +32,7 @@ public class Example
       t.Start();
       tokenSource.Cancel();
       try {
-         t.Wait(); 
+         await t; 
          Console.WriteLine("Retrieved information for {0} files.", files.Count);
       }
       catch (AggregateException e) {

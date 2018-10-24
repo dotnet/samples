@@ -1,6 +1,6 @@
 using System;
 
-namespace reference_semantics
+namespace SafeEfficientCode
 {
     public struct Point3D
     {

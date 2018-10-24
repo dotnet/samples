@@ -59,37 +59,6 @@ namespace OrderbyClause
     */
     //</snippet20>
 
-
-    //<snippet21> //NOT USED. MERGED INTO SNIPPET20
-    //class OrderbySample2
-    //{
-    //    static void Main()
-    //    {            
-    //        // Create the data source.
-    //        string[] words2 = { "cherry", "apple", "blueberry" };
-
-    //        // Create the query.
-    //        IEnumerable<string> sortedWords2 =
-    //            from w in words2
-    //            orderby w descending
-    //            select w;
-
-    //        // Execute the query.
-    //        foreach (string s in sortedWords2)
-    //        {
-    //            Console.Write(s + " ");
-    //        }
-
-    //        // Keep the console window open in debug mode
-    //        Console.WriteLine("Press any key to exit.");
-    //        Console.ReadKey();           
-    //    }
-
-    //}
-    // Output : cherry, blueberry, apple
-    //</snippet21>
-
-
     //<snippet22>
     class OrderbySample2
     {

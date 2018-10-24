@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 public class Example
 {
-   public static void Main()
+   public static async Task Main()
    {
       Encoding enc = Encoding.Unicode;
       String value = "This is a string to persist.";
@@ -17,7 +17,7 @@ public class Example
                                      FileAccess.Write);
       Task t = fs.WriteAsync(enc.GetPreamble(), 0, enc.GetPreamble().Length);
       Task t2 = t.ContinueWith( (a) => fs.WriteAsync(bytes, 0, bytes.Length) ); 
-      t2.Wait();
+      await t2;
       fs.Close();
    }
 }

@@ -21,13 +21,13 @@ class RegExSample
     {
         string text = "four score and seven years ago";
 
-        System.Console.WriteLine("text=[" + text + "]");
+        Console.WriteLine($"text=[{text}]");
 
         Regex rx = new Regex(@"\w+");
 
         string result = rx.Replace(text, new MatchEvaluator(RegExSample.CapText));
-        
-        System.Console.WriteLine("result=[" + result + "]");
+
+        Console.WriteLine($"result=[{result}]");
     }
 }
 // The example displays the following output:

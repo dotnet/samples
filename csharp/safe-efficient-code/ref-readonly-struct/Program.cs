@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace reference_semantics
+namespace SafeEfficientCode
 {
     class Program
     {
@@ -59,9 +59,10 @@ namespace reference_semantics
 
             return Math.Sqrt(xDifference * xDifference + yDifference * yDifference + zDifference * zDifference);
         }
-#endregion
+        #endregion
 
 
+        #region ReadOnlyInArgument
         private static double CalculateDistance3(in ReadonlyPoint3D point1, in ReadonlyPoint3D point2 = default)
         {
             double xDifference = point1.X - point2.X;
@@ -70,5 +71,6 @@ namespace reference_semantics
 
             return Math.Sqrt(xDifference * xDifference + yDifference * yDifference + zDifference * zDifference);
         }
+        #endregion
     }
 }

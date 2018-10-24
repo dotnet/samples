@@ -291,7 +291,7 @@ Public Module Example
    End Sub
 
    Private Sub AssignULongWithSeparator()
-      ' <SnippetIntULong>
+      ' <SnippetULongS>
       Dim ulongValue1 As ULong = 7_934_076_125
       Console.WriteLine(ulongValue1)
       

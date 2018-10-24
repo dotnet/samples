@@ -150,7 +150,7 @@ Class LibraryContainer
             curObj = CType(m_bookList(i), IComponent)
             If curObj.Site IsNot Nothing Then
                 If (curObj.Site.Name.Equals(ISNDNNum)) Then
-                    Throw New SystemException("The ISBN number already exists in the container")
+                    Throw New ArgumentException("The ISBN number already exists in the container")
                 End If
             End If
         Next i
@@ -207,8 +207,8 @@ Class LibraryContainer
             Dim book4 As BookComponent = New BookComponent("The Soul of the Fire", "Terry Gooodkind")
             'This will generate an exception, because the ISBN already exists in the container.
             cntrExmpl.Add(book4, "0812551478")
-        Catch e As SystemException
-            Console.WriteLine("Error description: " + e.Message)
+        Catch e As ArgumentException
+            Console.WriteLine("Unable to add books: " + e.Message)
         End Try
 
         Dim datalist As ComponentCollection = cntrExmpl.Components

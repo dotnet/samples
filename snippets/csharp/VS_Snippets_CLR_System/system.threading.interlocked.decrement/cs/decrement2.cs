@@ -16,7 +16,7 @@ public class Example
    static int totalMidpoint = 0;
    static int midpointCount = 50000;
 
-   public static void Main()
+   public static async Task Main()
    {
       List<Task> tasks = new List<Task>();
 
@@ -48,7 +48,7 @@ public class Example
                                      Console.WriteLine(s); 
                                    } ));
 
-      Task.WaitAll(tasks.ToArray());
+      await Task.WhenAll(tasks.ToArray());
 
       Console.WriteLine();
       Console.WriteLine("Total midpoint values:  {0,10:N0} ({1:P3})",

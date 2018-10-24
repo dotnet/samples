@@ -8,6 +8,11 @@ namespace operators
         {
             Console.WriteLine("============== Remainder operator examples =============");
             RemainderExamples.Examples();
+            Console.WriteLine();
+
+            Console.WriteLine("============== Addition operator examples =============");
+            AdditionExamples.Examples();
+            Console.WriteLine();
         }
     }
 }

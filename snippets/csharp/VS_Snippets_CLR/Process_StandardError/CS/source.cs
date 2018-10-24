@@ -33,35 +33,20 @@ namespace Process_StandardError
 
       public static void GetStandardError(string[] args)
       {
-         try
-         {
 // <Snippet1>
-            Process myProcess = new Process();
-            ProcessStartInfo myProcessStartInfo = new ProcessStartInfo("net ","use "+ args[0]);
+         Process myProcess = new Process();
+         ProcessStartInfo myProcessStartInfo = new ProcessStartInfo("net ","use "+ args[0]);
 
-            myProcessStartInfo.UseShellExecute = false;
-            myProcessStartInfo.RedirectStandardError = true;
-            myProcess.StartInfo = myProcessStartInfo;
-            myProcess.Start();
+         myProcessStartInfo.UseShellExecute = false;
+         myProcessStartInfo.RedirectStandardError = true;
+         myProcess.StartInfo = myProcessStartInfo;
+         myProcess.Start();
 
-            StreamReader myStreamReader = myProcess.StandardError;
-            // Read the standard error of net.exe and write it on to console.
-            Console.WriteLine( myStreamReader.ReadLine());
-            myProcess.Close();
+         StreamReader myStreamReader = myProcess.StandardError;
+         // Read the standard error of net.exe and write it on to console.
+         Console.WriteLine( myStreamReader.ReadLine());
+         myProcess.Close();
 // </Snippet1>
-         }
-         catch( Win32Exception e)
-         {
-            Console.WriteLine(e.Message);
-         }
-         catch( SystemException e)
-         {
-            Console.WriteLine(e.Message);
-         }
-         catch( Exception e)
-         {
-            Console.WriteLine(e.Message);
-         }
       }
    }
 }
