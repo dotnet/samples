@@ -9,19 +9,30 @@ namespace FileSystemExample
     {
         public static void Main()
         {
-            string FileName = "test.xml";
+            try 
+            {
+                string FileName = "test.xml";
 
-            Console.WriteLine("Adding access control entry for " + FileName);
+                Console.WriteLine("Adding access control entry for " + FileName);
 
-            // Add the access control entry to the file.
-            AddFileAuditRule(FileName, @"MYDOMAIN\MyAccount", FileSystemRights.ReadData, AuditFlags.Failure);
+                // Add the access control entry to the file.
+                AddFileAuditRule(FileName, @"MYDOMAIN\MyAccount", FileSystemRights.ReadData, AuditFlags.Failure);
 
-            Console.WriteLine("Removing access control entry from " + FileName);
+                Console.WriteLine("Removing access control entry from " + FileName);
 
-            // Remove the access control entry from the file.
-            RemoveFileAuditRule(FileName, @"MYDOMAIN\MyAccount", FileSystemRights.ReadData, AuditFlags.Failure);
+                // Remove the access control entry from the file.
+                RemoveFileAuditRule(FileName, @"MYDOMAIN\MyAccount", FileSystemRights.ReadData, AuditFlags.Failure);
 
-            Console.WriteLine("Done.");
+                Console.WriteLine("Done.");
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("Unable to open the file: " + e.Message);
+            }
+            catch (PrivilegeNotHeldException e)
+            {
+                Console.WriteLine("The current account does not have the correct privileges: " + e.Message);
+            }
 
             Console.ReadLine();
         }

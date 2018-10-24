@@ -8,19 +8,25 @@ Imports System.Security.AccessControl
 Module FileExample
 
     Sub Main()
-        Dim FileName As String = "test.xml"
+        Try
+            Dim FileName As String = "test.xml"
 
-        Console.WriteLine("Adding access control entry for " + FileName)
+            Console.WriteLine("Adding access control entry for " + FileName)
 
-        ' Add the access control entry to the file.
-        AddFileAuditRule(FileName, "MYDOMAIN\MyAccount", FileSystemRights.ReadData, AuditFlags.Failure)
+            ' Add the access control entry to the file.
+            AddFileAuditRule(FileName, "MYDOMAIN\MyAccount", FileSystemRights.ReadData, AuditFlags.Failure)
 
-        Console.WriteLine("Removing access control entry from " + FileName)
+            Console.WriteLine("Removing access control entry from " + FileName)
 
-        ' Remove the access control entry from the file.
-        RemoveFileAuditRule(FileName, "MYDOMAIN\MyAccount", FileSystemRights.ReadData, AuditFlags.Failure)
+            ' Remove the access control entry from the file.
+            RemoveFileAuditRule(FileName, "MYDOMAIN\MyAccount", FileSystemRights.ReadData, AuditFlags.Failure)
 
-        Console.WriteLine("Done.")
+            Console.WriteLine("Done.")
+        Catch e As IOException
+            Console.WriteLine("Unable to open the file: " & e.Message)
+        Catch e As PrivilegeNotHeldException
+            Console.WriteLine("The current account does not have the correct privileges: " & e.Message)
+        End Try
 
         Console.ReadLine()
 
