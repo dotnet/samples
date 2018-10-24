@@ -31,11 +31,8 @@ Using the developer command prompt installed with Visual Studio, run:
 ```cmd
 dotnet new wpf -o MyWPFApp
 cd MyWPFApp
-msbuild /restore
-dotnet run --no-build
+dotnet run
 ```
-
->Note: WPF on top of .NET Core 3.0 currently requires MSBuild to the build the application (as opposed to .NET Build). You can use the developer command prompt or the MSBuild version installed with Visual Studio. 
 
 ## Porting existing applications
 
