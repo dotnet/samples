@@ -18,7 +18,7 @@ Coming soon!
 
 Install Visual Studio 2017 Update 15.8 or higher from [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/), selecting the **.NET desktop development** workload with the options: **.NET Framwork 4.7.2 development tools** and **.NET Core 2.1 development tools**. 
 
-Install the latest [.NET Core 3.0 SDK daily build](https://dotnetcli.blob.core.windows.net/dotnet/Sdk/master/dotnet-sdk-latest-win-x64.exe) available in the [dotnet/code-sdk repo](https://github.com/dotnet/core-sdk).
+Install the latest [.NET Core 3.0 SDK daily build](https://aka.ms/netcore3sdk) available in the [dotnet/code-sdk repo](https://github.com/dotnet/core-sdk).
 
 
 ### Analyzing your applications for .NET Core 3.0 readiness
