@@ -36,7 +36,7 @@ Public Class ClassB
                 ' was already assigned, and CompareExchange did not
                 ' replace the original value. Throw an exception to
                 ' indicate that an error occurred.
-                Throw New ApplicationException("ClassA was already set.")
+                Throw New InvalidOperationException("ClassA was already set.")
             End If
         End Set
     End Property

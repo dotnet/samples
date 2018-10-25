@@ -74,8 +74,6 @@ Module Module1
             End Using
         Catch ex As TransactionAbortedException
             writer.WriteLine("TransactionAbortedException Message: {0}", ex.Message)
-        Catch ex As ApplicationException
-            writer.WriteLine("ApplicationException Message: {0}", ex.Message)
         End Try
 
         ' Display messages.
