@@ -290,31 +290,23 @@ Module modMain
 
    Private Sub Subtract1()
       ' <Snippet13>
-      Dim firstDate As New DateTimeOffset(#3/25/2008 6:00PM#, _
+      Dim firstDate As New DateTimeOffset(#10/25/2018 6:00PM#, _
                                           New TimeSpan(-7, 0, 0))
-      Dim secondDate As New DateTimeOffset(#3/25/2008 6:00PM#, _
+      Dim secondDate As New DateTimeOffset(#10/25/2018 6:00PM#, _
                                            New TimeSpan(-5, 0, 0))
-      Dim thirdDate As New DateTimeOffset(#2/28/2008 9:00AM#, _
+      Dim thirdDate As New DateTimeOffset(#9/28/2018 9:00AM#, _
                                           New TimeSpan(-7, 0, 0))
       Dim difference As TimeSpan
       
       difference = firstDate.Subtract(secondDate)
-      Console.WriteLine("({0}) - ({1}): {2} days, {3}:{4:d2}", _
-                        firstDate.ToString(), _
-                        secondDate.ToString(), _
-                        difference.Days, _
-                        difference.Hours, _
-                        difference.Minutes)      
+      Console.WriteLine($"({firstDate}) - ({secondDate}): {difference.Days} days, {difference.Hours}:{difference.Minutes:d2}")
+
       difference = firstDate.Subtract(thirdDate)
-      Console.WriteLine("({0}) - ({1}): {2} days, {3}:{4:d2}", _
-                        firstDate.ToString(), _
-                        secondDate.ToString(), _
-                        difference.Days, _
-                        difference.Hours, _
-                        difference.Minutes) 
+      Console.WriteLine($"({firstDate}) - ({thirdDate}): {difference.Days} days, {difference.Hours}:{difference.Minutes:d2}")
+
       ' The example produces the following output:
-      '    (3/25/2008 6:00:00 PM -07:00) - (3/25/2008 6:00:00 PM -05:00): 0 days, 2:00
-      '    (3/25/2008 6:00:00 PM -07:00) - (3/25/2008 6:00:00 PM -05:00): 26 days, 9:00                                 
+      '    (10/25/2018 6:00:00 PM -07:00) - (10/25/2018 6:00:00 PM -05:00): 0 days, 2:00
+      '    (10/25/2018 6:00:00 PM -07:00) - (9/28/2018 9:00:00 AM -07:00): 27 days, 9:00
       ' </Snippet13>   
    End Sub
 
