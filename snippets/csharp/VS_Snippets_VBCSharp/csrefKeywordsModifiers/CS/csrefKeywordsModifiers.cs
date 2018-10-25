@@ -8,12 +8,12 @@ using System.Runtime.InteropServices;
 
 namespace csrefKeywordsModifiers
 {
-    //<snippet1>
-    
+    //<snippet1>    
     abstract class ShapesClass
     {
         abstract public int Area();
     }
+    
     class Square : ShapesClass
     {
         int side = 0;
@@ -93,7 +93,6 @@ namespace csrefKeywordsModifiers
     }
     // Output: x = 111, y = 161
     //</snippet3>
-
 }
 //<snippet4>
 
@@ -164,12 +163,9 @@ namespace AccessibilityDomainNamespace
             // Error CS0122: inaccessible outside M2:
             //    T1.M2.privateInt = 3;
 
-
-
             // Keep the console open in debug mode.
             System.Console.WriteLine("Press any key to exit.");
             System.Console.ReadKey();
-
         }
     }
 }
@@ -221,12 +217,12 @@ namespace csrefKeywordsModifiers
     //</snippet6>
 
     //<snippet7>
-
     public class SampleEventArgs
     {
         public SampleEventArgs(string s) { Text = s; }
         public String Text { get; } // readonly
     }
+    
     public class Publisher
     {
         // Declare the delegate (if using non-generic pattern).
@@ -244,7 +240,6 @@ namespace csrefKeywordsModifiers
                 SampleEvent(this, new SampleEventArgs("Hello"));
         }
     }
-
     //</snippet7>
 
     //<snippet8>
@@ -496,15 +491,17 @@ namespace csrefKeywordsModifiers
         protected virtual void F() { Console.WriteLine("X.F"); }
         protected virtual void F2() { Console.WriteLine("X.F2"); }
     }
+    
     class Y : X
     {
         sealed protected override void F() { Console.WriteLine("Y.F"); }
         protected override void F2() { Console.WriteLine("Y.F2"); }
     }
+    
     class Z : Y
     {
         // Attempting to override F causes compiler error CS0239.
-        // protected override void F() { Console.WriteLine("C.F"); }
+        // protected override void F() { Console.WriteLine("Z.F"); }
 
         // Overriding F2 is allowed.
         protected override void F2() { Console.WriteLine("Z.F2"); }
