@@ -13,6 +13,10 @@ namespace operators
             Console.WriteLine("============== Addition operator examples =============");
             AdditionExamples.Examples();
             Console.WriteLine();
+
+            Console.WriteLine("============== & operator examples =============");
+            AndOperatorExamples.Examples();
+            Console.WriteLine();
         }
     }
 }
