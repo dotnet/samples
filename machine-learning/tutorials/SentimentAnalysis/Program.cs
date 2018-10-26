@@ -6,7 +6,6 @@ using Microsoft.ML.Runtime.Learners;
 using Microsoft.ML.Runtime.Data;
 using Microsoft.ML.Core.Data;
 using Microsoft.ML;
-
 // </Snippet1>
 
 namespace SentimentAnalysis
@@ -32,7 +31,7 @@ namespace SentimentAnalysis
             // </Snippet12>
 
             // <Snippet17>
-            PredictWithModelLoadedFromFile(model, sent);
+            PredictWithModelLoadedFromFile(sent);
             // </Snippet17>
         }
 
@@ -86,7 +85,8 @@ namespace SentimentAnalysis
             Console.WriteLine("=============== End of training ===============");
             Console.WriteLine();
             // </Snippet9>
-
+            // Save model to .ZIP file
+            SaveModelAsFile(_mlContext, model);
             // Returns the model we trained to use for evaluation.
             // <Snippet11>
             return model;
@@ -146,14 +146,14 @@ namespace SentimentAnalysis
             Console.WriteLine($"F1Score: {metrics.F1Score:P2}");
             Console.WriteLine("=============== End of model evaluation ===============");
 
-            var predictionFunct = model.MakePredictionFunction<SentimentData, SentimentPrediction>(_mlContext);
+            var predictionFunction = model.MakePredictionFunction<SentimentData, SentimentPrediction>(_mlContext);
 
             SentimentData sampleStatement = new SentimentData
             {
                 SentimentText = "This is a very rude movie"
             };
 
-            var resultprediction = predictionFunct.Predict(sampleStatement);
+            var resultprediction = predictionFunction.Predict(sampleStatement);
 
             Console.WriteLine();
             Console.WriteLine("=============== Test of model with a sample ===============");
@@ -164,7 +164,9 @@ namespace SentimentAnalysis
             return sampleStatement;
         }
 
-        public static void PredictWithModelLoadedFromFile(ITransformer loadedModel, SentimentData sentimentData)
+        //public static void PredictWithModelLoadedFromFile(ITransformer loadedModel, SentimentData sentimentData)
+        public static void PredictWithModelLoadedFromFile(SentimentData sentimentData)
+
         {
             // Adds some comments to test the trained model's predictions.
             // <Snippet18>
@@ -184,19 +186,20 @@ namespace SentimentAnalysis
             // </Snippet18>
             //ISSUE: Load model -  currently throws "Corrupt Model"
 
-            //ITransformer loadedModel;
-            //using (var stream = new FileStream(_modelPath, FileMode.Open, FileAccess.Read, FileShare.Read))
-            //{
-            //    loadedModel = TransformerChain.LoadFrom(_mlContext, stream);
-            //}
+            ITransformer loadedModel;
+            using (var stream = new FileStream(_modelPath, FileMode.Open, FileAccess.Read, FileShare.Read))
+            {
+                loadedModel = TransformerChain.LoadFrom(_mlContext, stream);
+            }
 
             // <Snippet19>
             // Create prediction engine
-           // var predictions = loadedModel.Transform(sentimentData);
-            var engine = loadedModel.MakePredictionFunction<SentimentData, SentimentPrediction>(_mlContext);
+            // var predictions = loadedModel.Transform(sentimentData);
+         
+            var predictionFunction = loadedModel.MakePredictionFunction<SentimentData, SentimentPrediction>(_mlContext);
 
             // Use the model to predict whether comment data is toxic (1) or not (0).
-            var predictionFromLoaded = engine.Predict(sentimentData);
+            var predictionFromLoaded = predictionFunction.Predict(sentimentData);
             // </Snippet19>
 
             // <Snippet20>
