@@ -303,32 +303,23 @@ public class Class1
    private static void Subtract1()
    {
       // <Snippet13>
-      DateTimeOffset firstDate = new DateTimeOffset(2008, 3, 25, 18, 0, 0, 
+      DateTimeOffset firstDate = new DateTimeOffset(2018, 10, 25, 18, 0, 0, 
                                                     new TimeSpan(-7, 0, 0));
-      DateTimeOffset secondDate = new DateTimeOffset(2008, 3, 25, 18, 0, 0, 
+      DateTimeOffset secondDate = new DateTimeOffset(2018, 10, 25, 18, 0, 0, 
                                                      new TimeSpan(-5, 0, 0));
-      DateTimeOffset thirdDate = new DateTimeOffset(2008, 2, 28, 9, 0, 0, 
+      DateTimeOffset thirdDate = new DateTimeOffset(2018, 9, 28, 9, 0, 0, 
                                                     new TimeSpan(-7, 0, 0));
       TimeSpan difference;
       
       difference = firstDate.Subtract(secondDate);
-      Console.WriteLine("({0}) - ({1}): {2} days, {3}:{4:d2}", 
-                        firstDate.ToString(), 
-                        secondDate.ToString(), 
-                        difference.Days, 
-                        difference.Hours, 
-                        difference.Minutes);      
-      
+      Console.WriteLine($"({firstDate}) - ({secondDate}): {difference.Days} days, {difference.Hours}:{difference.Minutes:d2}");
+
       difference = firstDate.Subtract(thirdDate);
-      Console.WriteLine("({0}) - ({1}): {2} days, {3}:{4:d2}", 
-                        firstDate.ToString(), 
-                        secondDate.ToString(), 
-                        difference.Days, 
-                        difference.Hours, 
-                        difference.Minutes); 
+      Console.WriteLine($"({firstDate}) - ({thirdDate}): {difference.Days} days, {difference.Hours}:{difference.Minutes:d2}");
+      
       // The example produces the following output:
-      //    (3/25/2008 6:00:00 PM -07:00) - (3/25/2008 6:00:00 PM -05:00): 0 days, 2:00
-      //    (3/25/2008 6:00:00 PM -07:00) - (3/25/2008 6:00:00 PM -05:00): 26 days, 9:00                                 
+      //    (10/25/2018 6:00:00 PM -07:00) - (10/25/2018 6:00:00 PM -05:00): 0 days, 2:00
+      //    (10/25/2018 6:00:00 PM -07:00) - (9/28/2018 9:00:00 AM -07:00): 27 days, 9:00
       // </Snippet13>   
    }
 
