@@ -88,7 +88,7 @@ To create a sample:
 To build and run your sample:
 
 
-1. Go to the sample folder and Build to check for errors.
+1. Go to the sample folder and Build to check for errors:
 
     ```
     dotnet build
