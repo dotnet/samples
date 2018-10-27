@@ -6,9 +6,21 @@ namespace operators
     {
         public static void Examples()
         {
+            IntegerOperands();
             BooleanOperands();
-            IntegralOperands();
             AndAssignment();
+        }
+
+        private static void IntegerOperands()
+        {
+            // <SnippetIntegerOperands>
+            byte a = 0b_1111_1000;
+            byte b = 0b_1001_1111;
+            int c = a & b;
+            Console.WriteLine(Convert.ToString(c, toBase: 2));
+            // Output:
+            // 10011000
+            // </SnippetIntegerOperands>
         }
 
         private static void BooleanOperands()
@@ -19,18 +31,6 @@ namespace operators
             Console.WriteLine(test);   // output: False
             Console.WriteLine(i);      // output: 1
             // </SnippetBooleanOperands>
-        }
-
-        private static void IntegralOperands()
-        {
-            // <SnippetIntegralOperands>
-            byte a = 0b_1111_1000;
-            byte b = 0b_1001_1111;
-            int c = a & b;
-            Console.WriteLine(Convert.ToString(c, toBase: 2));
-            // Output:
-            // 10011000
-            // </SnippetIntegralOperands>
         }
 
         private static void AndAssignment()
