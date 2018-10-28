@@ -55,7 +55,7 @@ namespace EventSampleCode
     // </SnippetEventArgs>
 
     // <SnippetSearchDirEventArgs>
-    internal struct SearchDirectoryArgs 
+    internal class SearchDirectoryArgs : EventArgs
     {
         internal string CurrentSearchDirectory { get; }
         internal int TotalDirs { get; }
