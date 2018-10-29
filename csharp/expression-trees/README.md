@@ -10,7 +10,7 @@ Key Features
 
 This sample demonstrates creating expression trees, parsing expression
 trees, and understanding the relationship between expression trees and
-the code you write everyday in C#.
+the code you write every day in C#.
 
 Build and Run
 -------------
