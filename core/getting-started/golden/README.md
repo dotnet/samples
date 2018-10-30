@@ -27,7 +27,7 @@ type the following two commands:
 Next, change to the `app` directory and run those same
 two commands again.
 
-After that, type this command to run the executable:
+After that, type this command:
 
 `dotnet run`
 

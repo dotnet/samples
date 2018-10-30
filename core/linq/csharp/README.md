@@ -90,7 +90,7 @@ and `Union`.
 
 Build and Run
 =============
-.
+
 To build and run the sample, type the following two commands in any of the subdirectories:
 
 `dotnet restore`
