@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 class Example
 {
-   static void Main()
+   static async Task Main()
    {
       string[] args = Environment.GetCommandLineArgs();
       if (args.Length < 2)
@@ -15,7 +15,7 @@ class Example
       // Don't pass the executable file name
       var uris = args.Skip(1).ToArray();
 
-      long characters = GetPageLengthsAsync(uris).Result;
+      long characters = await GetPageLengthsAsync(uris);
       Console.WriteLine($"{uris.Length} pages, {characters:N0} characters");
    }
 
