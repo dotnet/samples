@@ -6,16 +6,20 @@ namespace operators
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("============== Remainder operator examples =============");
+            Console.WriteLine("============== % operator examples =============");
             RemainderExamples.Examples();
             Console.WriteLine();
 
-            Console.WriteLine("============== Addition operator examples =============");
+            Console.WriteLine("============== + operator examples =============");
             AdditionExamples.Examples();
             Console.WriteLine();
 
             Console.WriteLine("============== & operator examples =============");
             AndOperatorExamples.Examples();
+            Console.WriteLine();
+
+            Console.WriteLine("============== = operator examples =============");
+            AssignmentExamples.Examples();
             Console.WriteLine();
         }
     }
