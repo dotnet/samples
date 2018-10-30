@@ -15,3 +15,8 @@ type Connection(?rate0 : int, ?duplex0 : DuplexType, ?parity0 : bool) =
 let conn1 = Connection(duplex0 = Full)
 let conn2 = Connection(duplex0 = Half)
 let conn3 = Connection(300, Half, true)
+let conn4 = Connection(?duplex0 = None)
+let conn5 = Connection(?duplex0 = Some(Full))
+
+let optionalDuplexValue : option<DuplexType> = Some(Half)
+let conn6 = Connection(?duplex0 = optionalDuplexValue)
