@@ -20,11 +20,13 @@ class Example
       var client = new HttpClient();
       long pageLengths = 0;
 
-      for (int ctr = 1; ctr < args.Length; ctr++) {
-         var uri = new Uri(Uri.EscapeUriString(args[ctr]));
+      foreach (var arg in args)
+      {
+         var uri = new Uri(Uri.EscapeUriString(arg));
          string pageContents = await client.GetStringAsync(uri);
          Interlocked.Add(ref pageLengths, pageContents.Length);
       }
+      
       return pageLengths;
    }
 }
