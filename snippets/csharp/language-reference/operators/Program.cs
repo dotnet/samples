@@ -17,6 +17,10 @@ namespace operators
             Console.WriteLine("============== & operator examples =============");
             AndOperatorExamples.Examples();
             Console.WriteLine();
+
+            Console.WriteLine("============== ?: operator examples =============");
+            ConditionalExamples.Examples();
+            Console.WriteLine();
         }
     }
 }
