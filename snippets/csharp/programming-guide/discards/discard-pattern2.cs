@@ -21,7 +21,7 @@ public class Example
          Console.Write("A null object reference: ");
          Console.WriteLine("Its use could result in a NullReferenceException");
       }
-      else
+      else if (obj is var _)
          Console.WriteLine($"Some object type without format information");
    }
 }
