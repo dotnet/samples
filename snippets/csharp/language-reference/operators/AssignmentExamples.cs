@@ -7,10 +7,10 @@ namespace operators
     {
         public static void Examples()
         {
-            CombinedExample();
+            VariablePropertyIndexerExample();
         }
 
-        private static void CombinedExample()
+        private static void VariablePropertyIndexerExample()
         {
             // <SnippetAssignments>
             var numbers = new List<double>() { 1.0, 2.0, 3.0 };
@@ -22,11 +22,11 @@ namespace operators
             // 4
             // 100
 
-            double originalFirst = numbers[0];
-            int newFirst = 5;
-            numbers[0] = newFirst;
-
-            Console.WriteLine(originalFirst);
+            int newFirstElement;
+            double originalFirstElement = numbers[0];
+            newFirstElement = 5;
+            numbers[0] = newFirstElement;
+            Console.WriteLine(originalFirstElement);
             Console.WriteLine(numbers[0]);
             // Output:
             // 1
