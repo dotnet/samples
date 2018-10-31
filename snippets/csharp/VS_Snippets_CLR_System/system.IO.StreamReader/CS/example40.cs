@@ -6,12 +6,12 @@ namespace ConsoleApplication
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main()
         {
-            ReadCharacters();
+            await ReadCharacters();
         }
 
-        static async void ReadCharacters()
+        static async Task ReadCharacters()
         {
             String result;
             using (StreamReader reader = File.OpenText("existingfile.txt"))
