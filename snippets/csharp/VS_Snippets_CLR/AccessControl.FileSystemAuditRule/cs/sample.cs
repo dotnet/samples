@@ -9,7 +9,7 @@ namespace FileSystemExample
     {
         public static void Main()
         {
-            try
+            try 
             {
                 string FileName = "test.xml";
 
@@ -25,9 +25,13 @@ namespace FileSystemExample
 
                 Console.WriteLine("Done.");
             }
-            catch (Exception e)
+            catch (IOException e)
             {
-                Console.WriteLine(e);
+                Console.WriteLine("Unable to open the file: " + e.Message);
+            }
+            catch (PrivilegeNotHeldException e)
+            {
+                Console.WriteLine("The current account does not have the correct privileges: " + e.Message);
             }
 
             Console.ReadLine();

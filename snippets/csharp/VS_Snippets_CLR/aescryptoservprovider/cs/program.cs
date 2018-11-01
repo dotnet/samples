@@ -9,32 +9,22 @@ namespace Aes_Example
     {
         public static void Main()
         {
-            try
+            string original = "Here is some data to encrypt!";
+
+            // Create a new instance of the AesCryptoServiceProvider
+            // class.  This generates a new key and initialization 
+            // vector (IV).
+            using (AesCryptoServiceProvider myAes = new AesCryptoServiceProvider())
             {
+                // Encrypt the string to an array of bytes.
+                byte[] encrypted = EncryptStringToBytes_Aes(original, myAes.Key, myAes.IV);
 
-                string original = "Here is some data to encrypt!";
+                // Decrypt the bytes to a string.
+                string roundtrip = DecryptStringFromBytes_Aes(encrypted, myAes.Key, myAes.IV);
 
-                // Create a new instance of the AesCryptoServiceProvider
-                // class.  This generates a new key and initialization 
-                // vector (IV).
-                using (AesCryptoServiceProvider myAes = new AesCryptoServiceProvider())
-                {
-
-                    // Encrypt the string to an array of bytes.
-                    byte[] encrypted = EncryptStringToBytes_Aes(original, myAes.Key, myAes.IV);
-
-                    // Decrypt the bytes to a string.
-                    string roundtrip = DecryptStringFromBytes_Aes(encrypted, myAes.Key, myAes.IV);
-
-                    //Display the original data and the decrypted data.
-                    Console.WriteLine("Original:   {0}", original);
-                    Console.WriteLine("Round Trip: {0}", roundtrip);
-                }
-
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error: {0}", e.Message);
+                //Display the original data and the decrypted data.
+                Console.WriteLine("Original:   {0}", original);
+                Console.WriteLine("Round Trip: {0}", roundtrip);
             }
         }
         //<Snippet2>
@@ -73,7 +63,6 @@ namespace Aes_Example
                     }
                 }
             }
-
 
             // Return the encrypted bytes from the memory stream.
             return encrypted;
