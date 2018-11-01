@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 
 class Example
 {
-    public static void Main()
+    static async Task Main()
     {
-        ReadAndDisplayFilesAsync();
+        await ReadAndDisplayFilesAsync();
     }
 
-    private async static void ReadAndDisplayFilesAsync()
+    static async Task ReadAndDisplayFilesAsync()
     {
         String filename = "TestFile1.txt";
         Char[] buffer;
