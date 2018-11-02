@@ -1,5 +1,4 @@
 '<snippet1>
-Imports System
 Imports System.IO
 Imports System.Security.AccessControl
 
@@ -22,8 +21,10 @@ Module FileExample
             RemoveFileAuditRule(FileName, "MYDOMAIN\MyAccount", FileSystemRights.ReadData, AuditFlags.Failure)
 
             Console.WriteLine("Done.")
-        Catch e As Exception
-            Console.WriteLine(e)
+        Catch e As IOException
+            Console.WriteLine("Unable to open the file: " & e.Message)
+        Catch e As PrivilegeNotHeldException
+            Console.WriteLine("The current account does not have the correct privileges: " & e.Message)
         End Try
 
         Console.ReadLine()
