@@ -7,8 +7,8 @@ class Sample
     public static void Main()
     {
         // Get and enumerate all cultures.
-        CultureInfo[] allCultures = CultureInfo.GetCultures(CultureTypes.AllCultures);
-        foreach (CultureInfo ci in allCultures)
+        var allCultures = CultureInfo.GetCultures(CultureTypes.AllCultures);
+        foreach (var ci in allCultures)
         {
             // Display the name of each culture.
             Console.Write($"{ci.EnglishName} ({ci.Name}): ");
