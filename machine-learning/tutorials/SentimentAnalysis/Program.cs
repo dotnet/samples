@@ -119,8 +119,7 @@ namespace SentimentAnalysis
             // BinaryClassificationContext.Evaluate returns a BinaryClassificationEvaluator.CalibratedResult
             // that contains the computed overall metrics.
             // <Snippet14>
-            var binClassificationCtx = new BinaryClassificationContext(mlContext);
-            var metrics = binClassificationCtx.Evaluate(predictions, "Label");
+            var metrics = mlContext.BinaryClassification.Evaluate(predictions, "Label");
             // </Snippet14>
 
             // The Accuracy metric gets the accuracy of a classifier, which is the proportion 
@@ -154,13 +153,14 @@ namespace SentimentAnalysis
             {
                 SentimentText = "This is a very rude movie"
             };
+
             var resultprediction = predictionFunction.Predict(sampleStatement);
 
             Console.WriteLine();
             Console.WriteLine("=============== Prediction Test of model with a single sample and test dataset ===============");
 
             Console.WriteLine();
-            Console.WriteLine($"Sentiment: {sampleStatement.SentimentText} | Prediction: {(Convert.ToBoolean(resultprediction.Prediction) ? "Toxic" : "Not Toxic")} sentiment | Probability: {resultprediction.Probability} ");
+            Console.WriteLine($"Sentiment: {sampleStatement.SentimentText} | Prediction: {(Convert.ToBoolean(resultprediction.Prediction) ? "Toxic" : "Not Toxic")} | Probability: {resultprediction.Probability} ");
             Console.WriteLine("=============== End of Predictions ===============");
             Console.WriteLine();
         }
