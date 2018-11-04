@@ -22,12 +22,16 @@ namespace operators
             AssignmentExamples.Examples();
             Console.WriteLine();
             
-            Console.WriteLine("============== ?: operator examples =============");
+            Console.WriteLine("============== ?: operator examples ============");
             ConditionalExamples.Examples();
             Console.WriteLine();
 
             Console.WriteLine("============== ~ operator examples =============");
             BitwiseComplementExamples.Examples();
+            Console.WriteLine();
+
+            Console.WriteLine("============== && and || operator examples =====");
+            ConditionalLogicalOperatorsExamples.Examples();
             Console.WriteLine();
         }
     }
