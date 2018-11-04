@@ -54,16 +54,21 @@ namespace SentimentAnalysis
             // </Snippet5>
 
             // <Snippet11>
-               Evaluate(mlContext, model);
+            Evaluate(mlContext, model);
             // </Snippet11>
-
+            
+            // <Snippet16>
             Predict(mlContext, model);
+            // </Snippet16>
 
+            // <Snippet21>
             IterateModel(mlContext);
+            // </Snippet21>
 
-            // <Snippet17>
+            // <Snippet25>
             PredictWithModelLoadedFromFile(mlContext);
-            // </Snippet17>
+            // <Snippet25>
+
             Console.WriteLine();
             Console.WriteLine("=============== End of process ===============");
         }
@@ -111,6 +116,7 @@ namespace SentimentAnalysis
             IDataView dataView = _textLoader.Read(new MultiFileSource(_testDataPath));
             // </Snippet12>
 
+            //Take the data in, make transformations, output the data. 
             // <Snippet13>
             Console.WriteLine("=============== Evaluating Model accuracy with Test data===============");
             var predictions = model.Transform(dataView);
@@ -134,7 +140,7 @@ namespace SentimentAnalysis
             // The F1 score is the harmonic mean of precision and recall:
             //  2 * precision * recall / (precision + recall).
 
-            // <Snippet16>
+            // <Snippet15>
             Console.WriteLine();
             Console.WriteLine("Model quality metrics evaluation");
             Console.WriteLine("--------------------------------");
@@ -142,20 +148,26 @@ namespace SentimentAnalysis
             Console.WriteLine($"Auc: {metrics.Auc:P2}");
             Console.WriteLine($"F1Score: {metrics.F1Score:P2}");
             Console.WriteLine("=============== End of model evaluation ===============");
-            //</Snippet16>
+            //</Snippet15>
         }
 
         private static void Predict(MLContext mlContext, ITransformer model)
         {
+            // <Snippet17>
             var predictionFunction = model.MakePredictionFunction<SentimentData, SentimentPrediction>(mlContext);
+            // </Snippet17>
 
+            // <Snippet18>
             SentimentData sampleStatement = new SentimentData
             {
                 SentimentText = "This is a very rude movie"
             };
+            // </Snippet18>
 
+            // <Snippet19>
             var resultprediction = predictionFunction.Predict(sampleStatement);
-
+            // </Snippet19>
+            // <Snippet20>
             Console.WriteLine();
             Console.WriteLine("=============== Prediction Test of model with a single sample and test dataset ===============");
 
@@ -163,30 +175,30 @@ namespace SentimentAnalysis
             Console.WriteLine($"Sentiment: {sampleStatement.SentimentText} | Prediction: {(Convert.ToBoolean(resultprediction.Prediction) ? "Toxic" : "Not Toxic")} | Probability: {resultprediction.Probability} ");
             Console.WriteLine("=============== End of Predictions ===============");
             Console.WriteLine();
+            // </Snippet20>
         }
 
         private static void IterateModel(MLContext mlContext)
         {
-            // <Snippet9>
-            Console.WriteLine("=============== New iteration of Model ===============");
             
+            Console.WriteLine("=============== New iteration of Model ===============");
+
             // Create and train the model based on the dataset with combined training and test data.
+            // <Snippet22>
             var newModel = Train(mlContext, _allDataPath);
+            // </Snippet22>
             Console.WriteLine();
 
             // Save the new model to .ZIP file
+            // <Snippet23>
             SaveModelAsFile(mlContext, newModel);
-            // <Snippet11>
-
-            // </Snippet16>
+            // </Snippet23>
         }
 
         public static void PredictWithModelLoadedFromFile(MLContext mlContext)
-
         {
             // Adds some comments to test the trained model's predictions.
-            // <Snippet18>
-
+            // <Snippet26>
             IEnumerable<SentimentData> sentiments = new[]
             {
                 new SentimentData
@@ -198,53 +210,59 @@ namespace SentimentAnalysis
                     SentimentText = "He is the best, and the article should say that."
                 }
             };
-            // </Snippet18>
+            // </Snippet26>
 
+            // <Snippet27>
             ITransformer loadedModel;
             using (var stream = new FileStream(_modelPath, FileMode.Open, FileAccess.Read, FileShare.Read))
             {
                 loadedModel = TransformerChain.LoadFrom(mlContext, stream);
             }
+            // </Snippet27>
 
-            // <Snippet19>
+            // <Snippet28>
             // Create prediction engine
             var sentimentStreamingDataView = mlContext.CreateStreamingDataView(sentiments);
             var predictions = loadedModel.Transform(sentimentStreamingDataView);
             
             // Use the model to predict whether comment data is toxic (1) or nice (0).
             var predictedResults = predictions.AsEnumerable<SentimentPrediction>(mlContext, reuseRowObject: false);
-            // </Snippet19>
+            // </Snippet28>
 
-            // <Snippet20>
+            // <Snippet29>
             Console.WriteLine();
 
             Console.WriteLine("=============== Prediction Test of loaded model with a multiple samples ===============");
-            // </Snippet20>
+            // </Snippet29>
+
             Console.WriteLine();
+
             // Builds pairs of (sentiment, prediction)
-            // <Snippet21>
+            // <Snippet30>
             var sentimentsAndPredictions = sentiments.Zip(predictedResults, (sentiment, prediction) => (sentiment, prediction));
-            // </Snippet21>
-            //}
-            // <Snippet22>
+            // </Snippet30>
+
+            // <Snippet31>
             foreach (var item in sentimentsAndPredictions)
             {
                 Console.WriteLine($"Sentiment: {item.sentiment.SentimentText} | Prediction: {(Convert.ToBoolean(item.prediction.Prediction) ? "Not Toxic" : "Toxic")} | Probability: {item.prediction.Probability} ");
             }
             Console.WriteLine("=============== End of predictions ===============");
 
-            // </Snippet22>          
+            // </Snippet31>          
         }
 
         // Saves the model we trained to a zip file.
-        // <Snippet10>
+
         private static void SaveModelAsFile(MLContext mlContext, ITransformer model)
         {
+            // <Snippet24> 
             using (var fs = new FileStream(_modelPath, FileMode.Create, FileAccess.Write, FileShare.Write))
                 model.SaveTo(mlContext, fs);
+            // </Snippet24>
 
             Console.WriteLine("The model is saved to {0}", _modelPath);
         }
-        // </Snippet10>
+        
     }
 }
