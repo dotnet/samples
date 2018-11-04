@@ -1,13 +1,13 @@
 // <Snippet1>
 using System;
-using System.IO;
 using System.Collections.Generic;
-using Microsoft.ML.Runtime.Learners;
-using Microsoft.ML.Runtime.Data;
-using Microsoft.ML.Runtime.Api;
-using Microsoft.ML.Core.Data;
-using Microsoft.ML;
+using System.IO;
 using System.Linq;
+using Microsoft.ML;
+using Microsoft.ML.Core.Data;
+using Microsoft.ML.Runtime.Api;
+using Microsoft.ML.Runtime.Data;
+using Microsoft.ML.Transforms.Text;
 // </Snippet1>
 
 namespace SentimentAnalysis
@@ -17,9 +17,9 @@ namespace SentimentAnalysis
         // <Snippet2>
         static readonly string _trainDataPath = Path.Combine(Environment.CurrentDirectory, "Data", "wikipedia-detox-250-line-data.tsv");
         static readonly string _testDataPath = Path.Combine(Environment.CurrentDirectory, "Data", "wikipedia-detox-250-line-test.tsv");
-        static readonly string _allDataPath = Path.Combine(Environment.CurrentDirectory, "Data", "wikipedia-detox-250-all.tsv");
+        static readonly string _allDataPath = Path.Combine(Environment.CurrentDirectory, "Data", "wikipedia-detox-250-line-all.tsv");
         static readonly string _modelPath = Path.Combine(Environment.CurrentDirectory, "Data", "Model.zip");
-        static TextLoader _reader;
+        static TextLoader _textLoader;
         // </Snippet2>
 
         static void Main(string[] args)
@@ -28,32 +28,34 @@ namespace SentimentAnalysis
             // during the learning process.  
             //Create ML Context with seed for repeatable/deterministic results
             // <Snippet3>
-            LocalEnvironment mlContext = new LocalEnvironment(seed: 0);
+            MLContext mlContext = new MLContext(seed: 0);
             // </Snippet3>
+
             // The TextLoader loads a dataset with comments and corresponding postive or negative sentiment. 
             // When you create a loader, you specify the schema by passing a class to the loader containing
             // all the column names and their types. This is used to create the model, and train it. 
             // Initialize our TextLoader
             // <Snippet4>
-            _reader = new TextLoader(mlContext,
-                            new TextLoader.Arguments()
-                            {
-                                Separator = "tab",
-                                HasHeader = true,
-                                Column = new[]
-                                {
-                                                    new TextLoader.Column("Label", DataKind.Bool, 0),
-                                                    new TextLoader.Column("SentimentText", DataKind.Text, 1)
-                                }
-                            });
+            _textLoader = mlContext.Data.TextReader(new TextLoader.Arguments()
+                                                {
+                                                    Separator = "tab",
+                                                    HasHeader = true,
+                                                    Column = new[]
+                                                                {
+                                                                  new TextLoader.Column("Label", DataKind.Bool, 0),
+                                                                  new TextLoader.Column("SentimentText", DataKind.Text, 1)
+                                                                }
+                                                }
+            );
             // </Snippet4>
+
             // <Snippet5>
             var model = Train(mlContext, _trainDataPath);
             // </Snippet5>
 
-            // <Snippet12>
+            // <Snippet11>
                Evaluate(mlContext, model);
-            // </Snippet12>
+            // </Snippet11>
 
             Predict(mlContext, model);
 
@@ -66,69 +68,60 @@ namespace SentimentAnalysis
             Console.WriteLine("=============== End of process ===============");
         }
 
-        public static ITransformer Train(LocalEnvironment mlContext, string dataPath)
+        public static ITransformer Train(MLContext mlContext, string dataPath)
         {
-
-            // <Snippet5>
-
-            // </Snippet5>
+            //Note that this case, loading your training data from a file, 
+            //is the easiest way to get started, but ML.NET also allows you 
+            //to load data from databases or in-memory collections.
             // <Snippet6>
-
-            IDataView dataView =_reader.Read(new MultiFileSource(dataPath));
+            IDataView dataView =_textLoader.Read(new MultiFileSource(dataPath));
             // </Snippet6>
 
             // Create a flexible pipeline (composed by a chain of estimators) for creating/training the model.
             // This is used to format and clean the data.  
-
-            // <Snippet7>
             // Convert the text column to numeric vectors (Features column) 
-            var pipeline = new TextTransform(mlContext, "SentimentText", "Features") 
-            //</Snippet7>
-            //</Snippet7>
-            // Adds a LinearClassificationTrainer, the decision tree learner for this project            
-            // <Snippet8>
+            // <Snippet7>
+            var pipeline = new TextFeaturizingEstimator(mlContext,"SentimentText", "Features")
+             //</Snippet7>
 
-                .Append(new LinearClassificationTrainer(mlContext, new LinearClassificationTrainer.Arguments(),
-                                                         "Features",
-                                                         "Label"));                                                                          
+            // Adds a FastTreeBinaryClassificationTrainer, the decision tree learner for this project  
+            // <Snippet8> 
+                    .Append(mlContext.BinaryClassification.Trainers.FastTree(label: "Label", features: "Features", numLeaves: 50, numTrees: 50, minDatapointsInLeafs: 20));
             // </Snippet8>
 
-
+            // Create and train the model based on the dataset that has been loaded, transformed.
             // <Snippet9>
             Console.WriteLine("=============== Create and Train the Model ===============");
-            // Create and train the model based on the dataset that has been loaded, transformed.
             var model = pipeline.Fit(dataView);
-
             Console.WriteLine("=============== End of training ===============");
             Console.WriteLine();
-
             // </Snippet9>
+
             // Returns the model we trained to use for evaluation.
-            // <Snippet11>
+            // <Snippet10>
             return model;
-            // </Snippet11>
+            // </Snippet10>
         }
 
-        public static void Evaluate(LocalEnvironment mlContext, ITransformer model)
+        public static void Evaluate(MLContext mlContext, ITransformer model)
         {
             // Evaluate the model and show accuracy stats
-            // <Snippet13>
-
             // Load evaluation/test data
-            IDataView dataView = _reader.Read(new MultiFileSource(_testDataPath));
-            // </Snippet13>
+            // <Snippet12>
+            IDataView dataView = _textLoader.Read(new MultiFileSource(_testDataPath));
+            // </Snippet12>
 
-            // <Snippet14>
+            // <Snippet13>
             Console.WriteLine("=============== Evaluating Model accuracy with Test data===============");
             var predictions = model.Transform(dataView);
-            // </Snippet14>
+            // </Snippet13>
 
             // BinaryClassificationContext.Evaluate returns a BinaryClassificationEvaluator.CalibratedResult
             // that contains the computed overall metrics.
-            // <Snippet15>
+            // <Snippet14>
             var binClassificationCtx = new BinaryClassificationContext(mlContext);
             var metrics = binClassificationCtx.Evaluate(predictions, "Label");
-            // </Snippet15>
+            // </Snippet14>
 
             // The Accuracy metric gets the accuracy of a classifier, which is the proportion 
             // of correct predictions in the test set.
@@ -150,9 +143,10 @@ namespace SentimentAnalysis
             Console.WriteLine($"Auc: {metrics.Auc:P2}");
             Console.WriteLine($"F1Score: {metrics.F1Score:P2}");
             Console.WriteLine("=============== End of model evaluation ===============");
+            //</Snippet16>
         }
 
-        private static void Predict(LocalEnvironment mlContext, ITransformer model)
+        private static void Predict(MLContext mlContext, ITransformer model)
         {
             var predictionFunction = model.MakePredictionFunction<SentimentData, SentimentPrediction>(mlContext);
 
@@ -171,7 +165,7 @@ namespace SentimentAnalysis
             Console.WriteLine();
         }
 
-        private static void IterateModel(LocalEnvironment mlContext)
+        private static void IterateModel(MLContext mlContext)
         {
             // <Snippet9>
             Console.WriteLine("=============== New iteration of Model ===============");
@@ -187,7 +181,7 @@ namespace SentimentAnalysis
             // </Snippet16>
         }
 
-        public static void PredictWithModelLoadedFromFile(LocalEnvironment mlContext)
+        public static void PredictWithModelLoadedFromFile(MLContext mlContext)
 
         {
             // Adds some comments to test the trained model's predictions.
@@ -201,7 +195,7 @@ namespace SentimentAnalysis
                 },
                 new SentimentData
                 {
-                    SentimentText = "I love this article"
+                    SentimentText = "He is the best, and the article should say that."
                 }
             };
             // </Snippet18>
@@ -235,7 +229,7 @@ namespace SentimentAnalysis
             // <Snippet22>
             foreach (var item in sentimentsAndPredictions)
             {
-                Console.WriteLine($"Sentiment: {item.sentiment.SentimentText} | Prediction: {(Convert.ToBoolean(item.prediction.Prediction) ? "Toxic" : "Nice")} | Probability: {item.prediction.Probability} ");
+                Console.WriteLine($"Sentiment: {item.sentiment.SentimentText} | Prediction: {(Convert.ToBoolean(item.prediction.Prediction) ? "Not Toxic" : "Toxic")} | Probability: {item.prediction.Probability} ");
             }
             Console.WriteLine("=============== End of predictions ===============");
 
@@ -244,7 +238,7 @@ namespace SentimentAnalysis
 
         // Saves the model we trained to a zip file.
         // <Snippet10>
-        private static void SaveModelAsFile(LocalEnvironment mlContext, ITransformer model)
+        private static void SaveModelAsFile(MLContext mlContext, ITransformer model)
         {
             using (var fs = new FileStream(_modelPath, FileMode.Create, FileAccess.Write, FileShare.Write))
                 model.SaveTo(mlContext, fs);
