@@ -62,7 +62,7 @@ namespace SentimentAnalysis
             // </Snippet16>
 
             // <Snippet21>
-            IterateModel(mlContext);
+            TrainFinalModel(mlContext);
             // </Snippet21>
 
             // <Snippet25>
@@ -178,7 +178,7 @@ namespace SentimentAnalysis
             // </Snippet20>
         }
 
-        private static void IterateModel(MLContext mlContext)
+        private static void TrainFinalModel(MLContext mlContext)
         {
             
             Console.WriteLine("=============== New iteration of Model ===============");
