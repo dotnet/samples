@@ -1,72 +1,38 @@
 '<snippet1>
-' This example demonstrates the CultureTypes enumeration 
-' and the CultureInfo.CultureTypes property.
-
-Imports System
 Imports System.Globalization
 
 Module Module1
     Public Sub Main()
-
-        ' Create a table of most culture types. 
-        Dim mostCultureTypes() As CultureTypes = { _
-                CultureTypes.NeutralCultures, _
-                CultureTypes.SpecificCultures, _
-                CultureTypes.InstalledWin32Cultures, _
-                CultureTypes.UserCustomCulture, _
-                CultureTypes.ReplacementCultures, _
-                CultureTypes.FrameworkCultures, _
-                CultureTypes.WindowsOnlyCultures}
-        Dim allCultures() As CultureInfo
-        Dim combo As CultureTypes
-
         ' Get and enumerate all cultures.
-        allCultures = CultureInfo.GetCultures(CultureTypes.AllCultures)
-        Dim ci As CultureInfo
-        For Each ci In allCultures
+        Dim allCultures = CultureInfo.GetCultures(CultureTypes.AllCultures)
+         For Each ci In allCultures
             ' Display the name of each culture.
-            Console.WriteLine("Culture: {0}", ci.Name)
-
-            ' Get the culture types of each culture. 
-            combo = ci.CultureTypes
-
-            ' Display the name of each culture type flag that is set.
-            Console.Write("  ")
-            Dim ct As CultureTypes
-            For Each ct In mostCultureTypes
-                If 0 <> (ct And combo) Then
-                    Console.Write("{0} ", ct)
-                End If
-            Next ct
+            Console.Write($"{ci.EnglishName} ({ci.Name}): ")
+            ' Indicate the culture type. 
+            If ci.CultureTypes.HasFlag(CultureTypes.NeutralCultures) Then
+               Console.Write(" NeutralCulture")
+            End If   
+            If ci.CultureTypes.HasFlag(CultureTypes.SpecificCultures) Then
+               Console.Write(" SpecificCulture")
+            End If   
             Console.WriteLine()
-        Next ci
-
-    End Sub 'Main 
+        Next
+    End Sub  
 End Module
-
-'The following is a portion of the results produced by this code example.
-'.
-'.
-'.
-'Culture: tg
-'  NeutralCultures InstalledWin32Cultures 
-'Culture: ta
-'  NeutralCultures InstalledWin32Cultures FrameworkCultures 
-'Culture: te
-'  NeutralCultures InstalledWin32Cultures FrameworkCultures 
-'Culture: syr
-'  NeutralCultures InstalledWin32Cultures FrameworkCultures 
-'Culture: tg-Cyrl-TJ
-'  SpecificCultures InstalledWin32Cultures 
-'Culture: ta-IN
-'  SpecificCultures InstalledWin32Cultures FrameworkCultures 
-'Culture: te-IN
-'  SpecificCultures InstalledWin32Cultures FrameworkCultures 
-'Culture: syr-SY
-'  SpecificCultures InstalledWin32Cultures FrameworkCultures 
-'Culture: tg-Cyrl
-'  NeutralCultures InstalledWin32Cultures 
-'.
-'.
-'.
+' The following is a portion of the output from this example.
+'            Tajik (tg):  NeutralCulture
+'            Tajik (Cyrillic) (tg-Cyrl):  NeutralCulture
+'            Tajik (Cyrillic, Tajikistan) (tg-Cyrl-TJ):  SpecificCulture
+'            Thai (th):  NeutralCulture
+'            Thai (Thailand) (th-TH):  SpecificCulture
+'            Tigrinya (ti):  NeutralCulture
+'            Tigrinya (Eritrea) (ti-ER):  SpecificCulture
+'            Tigrinya (Ethiopia) (ti-ET):  SpecificCulture
+'            Tigre (tig):  NeutralCulture
+'            Tigre (Eritrea) (tig-ER):  SpecificCulture
+'            Turkmen (tk):  NeutralCulture
+'            Turkmen (Turkmenistan) (tk-TM):  SpecificCulture
+'            Setswana (tn):  NeutralCulture
+'            Setswana (Botswana) (tn-BW):  SpecificCulture
+'            Setswana (South Africa) (tn-ZA):  SpecificCulture
 ' </snippet1>
