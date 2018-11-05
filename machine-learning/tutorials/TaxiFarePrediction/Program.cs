@@ -22,14 +22,15 @@ namespace TaxiFarePrediction
         static TextLoader _textLoader;
         // </Snippet2>
 
-        // <Snippet8>
         static void Main(string[] args)
-        // </Snippet8>
         {
             Console.WriteLine(Environment.CurrentDirectory);
 
+            // <Snippet3>
             MLContext mlContext = new MLContext(seed: 0);
+            // </Snippet3>
 
+            // <Snippet4>
             _textLoader = mlContext.Data.TextReader(new TextLoader.Arguments()
             {
                 Separator = ",",
@@ -46,91 +47,104 @@ namespace TaxiFarePrediction
                             }
             }
             );
+            // </Snippet4>
+
+            // <Snippet5>
+            var model = Train(mlContext, _trainDataPath);
+            // </Snippet5>
+
+            // <Snippet14>
+            Evaluate(mlContext, model);
+            // </Snippet14>
+
+            // <Snippet19>
+            TestSinglePrediction(mlContext);
+            // </Snippet19>
+        }
+        
+        public static ITransformer Train(MLContext mlContext, string dataPath)
+        {
+            // <Snippet6>
+            IDataView dataView = _textLoader.Read(new MultiFileSource(dataPath));
+            // </Snippet6>
 
             // <Snippet7>
-            var model = Train(mlContext, _trainDataPath);
-            // </Snippet7>
-
-            // <Snippet10>
-            Evaluate(mlContext, model);
-            // </Snippet10>
-
-            // <Snippet16>
-            TestSinglePrediction(mlContext);
-            // </Snippet16>
-        }
-
-        // <Snippet6>
-        public static ITransformer Train(MLContext mlContext, string dataPath)
-        // </Snippet6>
-        {
-            // <Snippet3>
-            IDataView dataView = _textLoader.Read(new MultiFileSource(dataPath));
-
             var pipeline = new CopyColumnsEstimator(mlContext, "FareAmount", "Label")
+            // </Snippet7>
+                    // <Snippet8>
                     .Append(new OneHotEncodingEstimator(mlContext, "VendorId"))
                     .Append(new OneHotEncodingEstimator(mlContext, "RateCode"))
                     .Append(new OneHotEncodingEstimator(mlContext, "PaymentType"))
-                    .Append(new NormalizingEstimator(mlContext, "PassengerCount", mode: NormalizingEstimator.NormalizerMode.MeanVariance))
-                    .Append(new NormalizingEstimator(mlContext, "TripTime", mode: NormalizingEstimator.NormalizerMode.MeanVariance))
-                    .Append(new NormalizingEstimator(mlContext, "TripDistance", mode: NormalizingEstimator.NormalizerMode.MeanVariance))
+                    // </Snippet8>
+                    // <Snippet9>
                     .Append(new ColumnConcatenatingEstimator(mlContext, "Features", "VendorId", "RateCode", "PassengerCount", "TripTime", "TripDistance", "PaymentType"))
-                    .Append(mlContext.Regression.Trainers.StochasticDualCoordinateAscent("Label", "Features"));
-            // </Snippet3>
+                    // </Snippet9>
+                    // <Snippet10>
+                    .Append(mlContext.Regression.Trainers.FastTree("Label", "Features"));
+                    // </Snippet10>
+
 
             Console.WriteLine("=============== Create and Train the Model ===============");
             
-            // <Snippet4>
+            // <Snippet11>
             var model = pipeline.Fit(dataView);
-            // </Snippet4>
+            // </Snippet11>
+
             Console.WriteLine("=============== End of training ===============");
             Console.WriteLine();
-            // <Snippet5>
+            // <Snippet12>
             SaveModelAsFile(mlContext, model);
             return model;
-            // </Snippet5>
+            // </Snippet12>
         }
 
         private static void Evaluate(MLContext mlContext, ITransformer model)
         {
-            // <Snippet12>
-            IDataView dataView = _textLoader.Read(new MultiFileSource(_testDataPath));
-            // </Snippet12>
-
-            // <Snippet13>
-            var predictions = model.Transform(dataView);
-            var metrics = mlContext.Regression.Evaluate(predictions, "Label", "Score");
-            // </Snippet13>
-
             // <Snippet14>
+            IDataView dataView = _textLoader.Read(new MultiFileSource(_testDataPath));
+            // </Snippet14>
+
+            // <Snippet15>
+            var predictions = model.Transform(dataView);
+            // </Snippet15>
+            // <Snippet16>
+            var metrics = mlContext.Regression.Evaluate(predictions, "Label", "Score");
+            // </Snippet16>
+
             Console.WriteLine();
             Console.WriteLine($"*************************************************");
             Console.WriteLine($"*       Model quality metrics evaluation         ");
             Console.WriteLine($"*------------------------------------------------");
+            // <Snippet17>
             Console.WriteLine($"*       R2 Score:      {metrics.RSquared:0.##}");
+            // </Snippet17>
+            // <Snippet18>
             Console.WriteLine($"*       RMS loss:      {metrics.Rms:#.##}");
-            Console.WriteLine($"*       Absolute loss: {metrics.L1:#.##}");
-            Console.WriteLine($"*       Squared loss:  {metrics.L2:#.##}");
+            // </Snippet18>
             Console.WriteLine($"*************************************************");
-            // </Snippet14>
+
         }
 
         private static void TestSinglePrediction(MLContext mlContext)
         {
+            //load the model
+            // <Snippet20>
             ITransformer loadedModel;
             using (var stream = new FileStream(_modelPath, FileMode.Open, FileAccess.Read, FileShare.Read))
             {
-                loadedModel = TransformerChain.LoadFrom(mlContext, stream);
+                loadedModel = TransformerChain.(mlContext, stream);
             }
+            // </Snippet20>
 
             //Prediction test
             // Create prediction engine and make prediction.
+            // <Snippet21>
             var engine = loadedModel.MakePredictionFunction<TaxiTrip, TaxiTripFarePrediction>(mlContext);
-
+            // </Snippet21>
             //Sample: 
             //vendor_id,rate_code,passenger_count,trip_time_in_secs,trip_distance,payment_type,fare_amount
             //VTS,1,1,1140,3.75,CRD,15.5
-
+            // <Snippet22>
             var taxiTripSample = new TaxiTrip()
             {
                 VendorId = "VTS",
@@ -141,19 +155,23 @@ namespace TaxiFarePrediction
                 PaymentType = "CRD",
                 FareAmount = 0 // To predict. Actual/Observed = 15.5
             };
-
+            // </Snippet22>
+            // <Snippet23>
             var prediction = engine.Predict(taxiTripSample);
+            // </Snippet23>
+            // <Snippet24>
             Console.WriteLine($"**********************************************************************");
             Console.WriteLine($"Predicted fare: {prediction.FareAmount:0.####}, actual fare: 29.5");
             Console.WriteLine($"**********************************************************************");
+            // </Snippet24>
         }
 
         private static void SaveModelAsFile(MLContext mlContext, ITransformer model)
         {
-            // <Snippet24> 
+            // <Snippet13> 
             using (var fs = new FileStream(_modelPath, FileMode.Create, FileAccess.Write, FileShare.Write))
                 model.SaveTo(mlContext, fs);
-            // </Snippet24>
+            // </Snippet13>
 
             Console.WriteLine("The model is saved to {0}", _modelPath);
         }
