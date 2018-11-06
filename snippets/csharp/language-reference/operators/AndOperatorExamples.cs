@@ -26,10 +26,17 @@ namespace operators
         private static void BooleanOperands()
         {
             // <SnippetBooleanOperands>
-            int i = 0;
-            bool test = false & (++i == 1);
-            Console.WriteLine(test);   // output: False
-            Console.WriteLine(i);      // output: 1
+            bool SecondOperand() 
+            {
+                Console.WriteLine("Second operand is evaluated.");
+                return true;
+            }
+            
+            bool test = false & SecondOperand();
+            Console.WriteLine(test);
+            // Output:
+            // Second operand is evaluated.
+            // False
             // </SnippetBooleanOperands>
         }
 
