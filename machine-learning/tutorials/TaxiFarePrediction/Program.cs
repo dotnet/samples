@@ -132,7 +132,7 @@ namespace TaxiFarePrediction
             ITransformer loadedModel;
             using (var stream = new FileStream(_modelPath, FileMode.Open, FileAccess.Read, FileShare.Read))
             {
-                loadedModel = TransformerChain.(mlContext, stream);
+                loadedModel = TransformerChain.LoadFrom(mlContext, stream);
             }
             // </Snippet20>
 
@@ -161,7 +161,7 @@ namespace TaxiFarePrediction
             // </Snippet23>
             // <Snippet24>
             Console.WriteLine($"**********************************************************************");
-            Console.WriteLine($"Predicted fare: {prediction.FareAmount:0.####}, actual fare: 29.5");
+            Console.WriteLine($"Predicted fare: {prediction.FareAmount:0.####}, actual fare: 15.5");
             Console.WriteLine($"**********************************************************************");
             // </Snippet24>
         }
