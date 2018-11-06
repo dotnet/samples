@@ -14,9 +14,9 @@ namespace operators
         private static void IntegerOperands()
         {
             // <SnippetIntegerOperands>
-            byte a = 0b_1111_1000;
-            byte b = 0b_1001_1111;
-            int c = a & b;
+            uint a = 0b_1111_1000;
+            uint b = 0b_1001_1111;
+            uint c = a & b;
             Console.WriteLine(Convert.ToString(c, toBase: 2));
             // Output:
             // 10011000
