@@ -5,19 +5,20 @@ class Program
 {
     static void Main()
     {
-string[] filenames = { @"c:\temp\test-file.txt", 
-       @"\\127.0.0.1\c$\temp\test-file.txt",
-       @"\\LOCALHOST\c$\temp\test-file.txt", 
-       @"\\.\c:\temp\test-file.txt",
-       @"\\?\c:\temp\test-file.txt",
-       @"\\.\UNC\LOCALHOST\c$\temp\test-file.txt",
-       @"\\127.0.0.1\c$\temp\test-file.txt" };
+        string[] filenames = {
+            @"c:\temp\test-file.txt",
+            @"\\127.0.0.1\c$\temp\test-file.txt",
+            @"\\LOCALHOST\c$\temp\test-file.txt",
+            @"\\.\c:\temp\test-file.txt",
+            @"\\?\c:\temp\test-file.txt",
+            @"\\.\UNC\LOCALHOST\c$\temp\test-file.txt",
+            @"\\127.0.0.1\c$\temp\test-file.txt" };
 
-foreach (var filename in filenames)
-{
-   FileInfo fi = new FileInfo(filename);    
-   Console.WriteLine($"file {fi.Name}: {fi.Length:N0} bytes");
-}
+        foreach (var filename in filenames)
+        {
+            FileInfo fi = new FileInfo(filename);
+            Console.WriteLine($"file {fi.Name}: {fi.Length:N0} bytes");
+        }
     }
 }
 // The example displays output like the following:
