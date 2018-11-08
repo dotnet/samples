@@ -1,125 +1,64 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{9FED9E6C-4128-4355-9487-74F1B7107CF2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
     <RootNamespace>CSWinFormDataGridView</RootNamespace>
     <AssemblyName>CSWinFormDataGridView</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
+
+    <!-- Don't automatically generate assembly info attributes
+         found in AssemblyInfo.cs. This property is useful for 
+         applications ported from NetFx, which may have used
+         AssemblyInfo.cs -->
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>..\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>..\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Xml.Linq">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Data.DataSetExtensions">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
+    <FrameworkReference Include="Microsoft.DesktopUI" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.5.1" />
   </ItemGroup>
+
+  <!-- By default, all .cs and .resx files in the current
+       directory or descendant directories will be included.
+       Optionally, they can be updated as demonstrated here
+       so that dependent files will appear as expected in
+       Visual Studio's solution explorer. -->
   <ItemGroup>
-    <Compile Include="CustomDataGridViewColumn\MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CustomDataGridViewColumn\MainForm.Designer.cs">
+    <Compile Update="CustomDataGridViewColumn\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomDataGridViewColumn\MaskedTextBoxCell.cs" />
-    <Compile Include="CustomDataGridViewColumn\MaskedTextBoxColumn.cs" />
-    <Compile Include="CustomDataGridViewColumn\MaskedTextBoxEditingControl.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="JustInTimeDataLoading\Cache.cs" />
-    <Compile Include="DataGridViewPaging\MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DataGridViewPaging\MainForm.Designer.cs">
+    <Compile Update="DataGridViewPaging\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditingControlHosting\MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EditingControlHosting\MainForm.Designer.cs">
+    <Compile Update="EditingControlHosting\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="JustInTimeDataLoading\MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="JustInTimeDataLoading\MainForm.Designer.cs">
+    <Compile Update="JustInTimeDataLoading\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MultipleLayeredColumnHeader\MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MultipleLayeredColumnHeader\MainForm.Designer.cs">
+    <Compile Update="MultipleLayeredColumnHeader\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CustomDataGridViewColumn\MainForm.resx">
+    <EmbeddedResource Update="CustomDataGridViewColumn\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DataGridViewPaging\MainForm.resx">
+    <EmbeddedResource Update="DataGridViewPaging\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditingControlHosting\MainForm.resx">
+    <EmbeddedResource Update="EditingControlHosting\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="JustInTimeDataLoading\MainForm.resx">
+    <EmbeddedResource Update="JustInTimeDataLoading\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MultipleLayeredColumnHeader\MainForm.resx">
+    <EmbeddedResource Update="MultipleLayeredColumnHeader\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
+    <Compile Update="Properties\Resources.Designer.cs">
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
   </ItemGroup>
+
   <ItemGroup>
     <Content Include="CustomDataGridViewColumn\ReadMe.txt" />
     <Content Include="DataGridViewPaging\ReadMe.txt" />
@@ -127,12 +66,5 @@
     <Content Include="JustInTimeDataLoading\ReadMe.txt" />
     <Content Include="MultipleLayeredColumnHeader\ReadMe.txt" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+
 </Project>
