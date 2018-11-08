@@ -57,9 +57,9 @@ namespace TaxiFarePrediction
             Evaluate(mlContext, model);
             // </Snippet14>
 
-            // <Snippet19>
+            // <Snippet20>
             TestSinglePrediction(mlContext);
-            // </Snippet19>
+            // </Snippet20>
         }
         
         public static ITransformer Train(MLContext mlContext, string dataPath)
@@ -100,27 +100,27 @@ namespace TaxiFarePrediction
 
         private static void Evaluate(MLContext mlContext, ITransformer model)
         {
-            // <Snippet14>
-            IDataView dataView = _textLoader.Read(new MultiFileSource(_testDataPath));
-            // </Snippet14>
-
             // <Snippet15>
-            var predictions = model.Transform(dataView);
+            IDataView dataView = _textLoader.Read(_testDataPath);
             // </Snippet15>
+
             // <Snippet16>
-            var metrics = mlContext.Regression.Evaluate(predictions, "Label", "Score");
+            var predictions = model.Transform(dataView);
             // </Snippet16>
+            // <Snippet17>
+            var metrics = mlContext.Regression.Evaluate(predictions, "Label", "Score");
+            // </Snippet17>
 
             Console.WriteLine();
             Console.WriteLine($"*************************************************");
             Console.WriteLine($"*       Model quality metrics evaluation         ");
             Console.WriteLine($"*------------------------------------------------");
-            // <Snippet17>
-            Console.WriteLine($"*       R2 Score:      {metrics.RSquared:0.##}");
-            // </Snippet17>
             // <Snippet18>
-            Console.WriteLine($"*       RMS loss:      {metrics.Rms:#.##}");
+            Console.WriteLine($"*       R2 Score:      {metrics.RSquared:0.##}");
             // </Snippet18>
+            // <Snippet19>
+            Console.WriteLine($"*       RMS loss:      {metrics.Rms:#.##}");
+            // </Snippet19>
             Console.WriteLine($"*************************************************");
 
         }
@@ -128,23 +128,23 @@ namespace TaxiFarePrediction
         private static void TestSinglePrediction(MLContext mlContext)
         {
             //load the model
-            // <Snippet20>
+            // <Snippet21>
             ITransformer loadedModel;
             using (var stream = new FileStream(_modelPath, FileMode.Open, FileAccess.Read, FileShare.Read))
             {
                 loadedModel = mlContext.Model.Load(stream);
             }
-            // </Snippet20>
+            // </Snippet21>
 
             //Prediction test
             // Create prediction function and make prediction.
-            // <Snippet21>
+            // <Snippet22>
             var predictionFunction = loadedModel.MakePredictionFunction<TaxiTrip, TaxiTripFarePrediction>(mlContext);
-            // </Snippet21>
+            // </Snippet22>
             //Sample: 
             //vendor_id,rate_code,passenger_count,trip_time_in_secs,trip_distance,payment_type,fare_amount
             //VTS,1,1,1140,3.75,CRD,15.5
-            // <Snippet22>
+            // <Snippet23>
             var taxiTripSample = new TaxiTrip()
             {
                 VendorId = "VTS",
@@ -155,15 +155,15 @@ namespace TaxiFarePrediction
                 PaymentType = "CRD",
                 FareAmount = 0 // To predict. Actual/Observed = 15.5
             };
-            // </Snippet22>
-            // <Snippet23>
-            var prediction = predictionFunction.Predict(taxiTripSample);
             // </Snippet23>
             // <Snippet24>
+            var prediction = predictionFunction.Predict(taxiTripSample);
+            // </Snippet24>
+            // <Snippet25>
             Console.WriteLine($"**********************************************************************");
             Console.WriteLine($"Predicted fare: {prediction.FareAmount:0.####}, actual fare: 15.5");
             Console.WriteLine($"**********************************************************************");
-            // </Snippet24>
+            // </Snippet25>
         }
 
         private static void SaveModelAsFile(MLContext mlContext, ITransformer model)
