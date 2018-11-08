@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/67b74b86-a273-4ad7-9ed5-0f97276412eaCombined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Complete Matching Game tutorial sample</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+            <link href="description/librarydescription.css" rel="Stylesheet" type="text/css" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Complete Matching Game tutorial sample</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Controls, C#, Windows Forms, Visual Basic .NET, Visual C Sharp .NET
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Controls, Visual Studio Editor, Windows Forms, Visual Basic .NET, Windows Forms Controls, Visual C Sharp .NET
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">1/21/2014</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Complete-Matching-Game-4cffddba">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<div class="content">
+<div>
+<div class="topic">
+<div class="majorTitle">Visual Studio 2012</div>
+<h1 class="title">Tutorial 3: Create a Matching Game</h1>
+<div id="mainSection">
+<div id="mainBody">
+<div class="introduction">
+<p>In this tutorial, you build a matching game, where the player must match pairs of hidden icons. You learn how to:</p>
+<ul>
+<li>
+<p>Store objects, such as icons, in a <strong>List</strong> object.</p>
+</li><li>
+<p>Use a <span><span class="input">foreach</span></span> loop in Visual C# or a
+<span><span class="input">For Each</span></span> loop in Visual Basic to iterate through items in a list.</p>
+</li><li>
+<p>Keep track of a form's state by using reference variables.</p>
+</li><li>
+<p>Build an event handler to respond to events that you can use with multiple objects.</p>
+</li><li>
+<p>Make a timer that counts down and then fires an event exactly once after being started.</p>
+</li></ul>
+<p>When you finish this tutorial, your program will look like the following picture.</p>
+<div class="caption">Game that you create in this tutorial</div>
+<br>
+<img id="Express_FinishedGame" alt="Game that you create in this tutorial" src="http://i.msdn.microsoft.com/en-us/library/dd553235.Express_FinishedGame(v=vs.120).png" title="Game that you create in this tutorial">
+<p>To download a completed version of the sample, see <a href="http://code.msdn.microsoft.com/Complete-Matching-Game-4cffddba">
+Complete Matching Game tutorial sample</a>.</p>
+<div class="alert">
+<table>
+<tbody>
+<tr>
+<th align="left"><img id="alert_note" alt="Note" src="http://i.msdn.microsoft.com/en-us/library/dd553235.alert_note(v=vs.120).gif" title="Note"><strong>Note</strong></th>
+</tr>
+<tr>
+<td>
+<p>In this tutorial, both Visual C# and Visual Basic are covered, so focus on information specific to the programming language that you're using.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>If you get stuck or have programming questions, try posting your question on one of the MSDN forums. See
+<span><a href="http://social.msdn.microsoft.com/forums/en-us/home?forum=vbgeneral">Visual Basic Forum</a></span> and
+<span><a href="http://social.msdn.microsoft.com/forums/en-us/home?forum=csharpgeneral">Visual C# Forum</a></span>. Also, there are great, free video learning resources available to you. To learn more about programming in Visual Basic, see
+<span><a href="http://channel9.msdn.com/series/visual-basic-development-for-absolute-beginners">Visual Basic Fundamentals: Development for Absolute Beginners</a></span>. To learn more about programming in Visual C#, see
+<span><a href="http://channel9.msdn.com/series/c-sharp-fundamentals-development-for-absolute-beginners">C# Fundamentals: Development for Absolute Beginners</a></span>.</p>
+</div>
+<div class="LW_CollapsibleArea_Container">
+<div class="LW_CollapsibleArea_TitleDiv"><span class="LW_CollapsibleArea_Title">Related Topics</span>
+<div class="LW_CollapsibleArea_HrDiv">
+<hr class="LW_CollapsibleArea_Hr">
+</div>
+</div>
+<a id="sectionToggle0"></a>
+<div class="caption"></div>
+<div class="tableSection">
+<table>
+<tbody>
+<tr>
+<th>
+<p>Title</p>
+</th>
+<th>
+<p>Description</p>
+</th>
+</tr>
+<tr>
+<td>
+<p><span><a href="http://msdn.microsoft.com/en-us/library/dd553233.aspx">Step 1: Create a Project and Add a Table to Your Form</a></span></p>
+</td>
+<td>
+<p>Begin by creating the project and adding a <span class="input">TableLayoutPanel</span> control to keep the controls aligned properly.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span><a href="http://msdn.microsoft.com/en-us/library/dd553237.aspx">Step 2: Add a Random Object and a List of Icons</a></span></p>
+</td>
+<td>
+<p>Add a <strong>Random</strong> object and a <strong>List</strong> object, to create a list of icons.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span><a href="http://msdn.microsoft.com/en-us/library/dd553230.aspx">Step 3: Assign a Random Icon to Each Label</a></span></p>
+</td>
+<td>
+<p>Assign the icons randomly to the <span class="input">Label</span> controls, so that each game is different.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span><a href="http://msdn.microsoft.com/en-us/library/dd553231.aspx">Step 4: Add a Click Event Handler to Each Label</a></span></p>
+</td>
+<td>
+<p>Add a Click event handler that changes the color of the label that is clicked.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span><a href="http://msdn.microsoft.com/en-us/library/dd553238.aspx">Step 5: Add Label References</a></span></p>
+</td>
+<td>
+<p>Add reference variables to keep track of which labels are clicked. </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span><a href="http://msdn.microsoft.com/en-us/library/dd553229.aspx">Step 6: Add a Timer</a></span></p>
+</td>
+<td>
+<p>Add a timer to the form to keep track of the time that has passed in the game.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span><a href="http://msdn.microsoft.com/en-us/library/dd553234.aspx">Step 7: Keep Pairs Visible</a></span></p>
+</td>
+<td>
+<p>Keep pairs of icons visible, if a matching pair is selected.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span><a href="http://msdn.microsoft.com/en-us/library/dd553236.aspx">Step 8: Add a Method to Verify Whether the Player Won</a></span></p>
+</td>
+<td>
+<p>Add a <strong>CheckForWinner()</strong> method to verify whether the player won.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span><a href="http://msdn.microsoft.com/en-us/library/dd553232.aspx">Step 9: Try Other Features</a></span></p>
+</td>
+<td>
+<p>Try other features, such as changing icons and colors, adding a grid, and adding sounds. Try making the board bigger and adjusting the timer.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+    </div>
+</body>
+</html>
