@@ -64,6 +64,7 @@ namespace SentimentAnalysis
             PredictWithModelLoadedFromFile(mlContext);
             // </Snippet25>
 
+
             Console.WriteLine();
             Console.WriteLine("=============== End of process ===============");
         }
