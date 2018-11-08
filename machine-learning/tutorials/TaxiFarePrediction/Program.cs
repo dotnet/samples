@@ -65,22 +65,22 @@ namespace TaxiFarePrediction
         public static ITransformer Train(MLContext mlContext, string dataPath)
         {
             // <Snippet6>
-            IDataView dataView = _textLoader.Read(new MultiFileSource(dataPath));
+            IDataView dataView = _textLoader.Read(dataPath);
             // </Snippet6>
 
             // <Snippet7>
-            var pipeline = new CopyColumnsEstimator(mlContext, "FareAmount", "Label")
+            var pipeline = mlContext.Transforms.CopyColumns("FareAmount", "Label")
             // </Snippet7>
                     // <Snippet8>
-                    .Append(new OneHotEncodingEstimator(mlContext, "VendorId"))
-                    .Append(new OneHotEncodingEstimator(mlContext, "RateCode"))
-                    .Append(new OneHotEncodingEstimator(mlContext, "PaymentType"))
+                    .Append(mlContext.Transforms.Categorical.OneHotEncoding("VendorId"))
+                    .Append(mlContext.Transforms.Categorical.OneHotEncoding("RateCode"))
+                    .Append(mlContext.Transforms.Categorical.OneHotEncoding("PaymentType"))
                     // </Snippet8>
                     // <Snippet9>
-                    .Append(new ColumnConcatenatingEstimator(mlContext, "Features", "VendorId", "RateCode", "PassengerCount", "TripTime", "TripDistance", "PaymentType"))
+                    .Append(mlContext.Transforms.Concatenate("Features", "VendorId", "RateCode", "PassengerCount", "TripTime", "TripDistance", "PaymentType"))
                     // </Snippet9>
                     // <Snippet10>
-                    .Append(mlContext.Regression.Trainers.FastTree("Label", "Features"));
+                    .Append(mlContext.Regression.Trainers.FastTree());
                     // </Snippet10>
 
 
@@ -132,14 +132,14 @@ namespace TaxiFarePrediction
             ITransformer loadedModel;
             using (var stream = new FileStream(_modelPath, FileMode.Open, FileAccess.Read, FileShare.Read))
             {
-                loadedModel = TransformerChain.LoadFrom(mlContext, stream);
+                loadedModel = mlContext.Model.Load(stream);
             }
             // </Snippet20>
 
             //Prediction test
-            // Create prediction engine and make prediction.
+            // Create prediction function and make prediction.
             // <Snippet21>
-            var engine = loadedModel.MakePredictionFunction<TaxiTrip, TaxiTripFarePrediction>(mlContext);
+            var predictionFunction = loadedModel.MakePredictionFunction<TaxiTrip, TaxiTripFarePrediction>(mlContext);
             // </Snippet21>
             //Sample: 
             //vendor_id,rate_code,passenger_count,trip_time_in_secs,trip_distance,payment_type,fare_amount
@@ -157,7 +157,7 @@ namespace TaxiFarePrediction
             };
             // </Snippet22>
             // <Snippet23>
-            var prediction = engine.Predict(taxiTripSample);
+            var prediction = predictionFunction.Predict(taxiTripSample);
             // </Snippet23>
             // <Snippet24>
             Console.WriteLine($"**********************************************************************");
@@ -169,8 +169,8 @@ namespace TaxiFarePrediction
         private static void SaveModelAsFile(MLContext mlContext, ITransformer model)
         {
             // <Snippet13> 
-            using (var fs = new FileStream(_modelPath, FileMode.Create, FileAccess.Write, FileShare.Write))
-                model.SaveTo(mlContext, fs);
+            using (var fileStream = new FileStream(_modelPath, FileMode.Create, FileAccess.Write, FileShare.Write))
+                mlContext.Model.Save(model, fileStream);
             // </Snippet13>
 
             Console.WriteLine("The model is saved to {0}", _modelPath);
