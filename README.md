@@ -28,7 +28,7 @@ Snippets are extracted from small programs that include the snippet. Snippets ar
 You build any .NET Core snippet or sample using the .NET Core CLI, which can be installed with [the .NET Core SDK](https://www.microsoft.com/net/download). Then, execute
 these commands from the CLI in the directory of any sample:
 
-```
+```console
 dotnet build
 dotnet run
 ```
@@ -88,17 +88,18 @@ To create a sample:
 To build and run your sample:
 
 
-1. Go to the sample folder and Build to check for errors:
+1. Go to the sample folder and build to check for errors:
 
-    ```
+    ```console
     dotnet build
     ```
-2. Run!
+2. Run your sample:
 
-    ```
+    ```console
     dotnet run
     ```
 
-3. Add a readme.md to the root directory of your sample.
-    - This should include a brief description of the code, and refer people to the article that references the sample.
+3. Add a readme.md to the root directory of your sample. 
+
+  This should include a brief description of the code, and refer people to the article that references the sample.
 
