@@ -20,3 +20,7 @@ to setup the NorthView sample database and make sure that the connection
 strings in those scenarios are updated to match where the sample database 
 is deployed (possibly replacing `localhost` with `(LocalDb)\MSSQLLocalDB`, 
 for example).
+
+![Screenshot with paging](images/screenshot1.png)
+
+![Screenshot with layered column header](images/screenshot2.png)
