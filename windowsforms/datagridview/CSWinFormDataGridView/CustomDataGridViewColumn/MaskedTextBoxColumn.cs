@@ -4,13 +4,6 @@
 * Copyright (c) Microsoft Corporation.
 * 
 * This sample demonstrates how to create a custom DataGridView column.
-* 
-* This source is subject to the Microsoft Public License.
-* See http://www.microsoft.com/opensource/licenses.mspx#Ms-PL.
-* All other rights reserved.
-* 
-* History:
-* * 6/05/2009 3:00 PM Zhi-Xin Ye Created
 \**********************************************************************************/
 
 #region Using directives

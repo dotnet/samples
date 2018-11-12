@@ -6,13 +6,6 @@
 * This sample demonstrates how to use virtual mode in the DataGridView control 
 * with a data cache that loads data from a server only when it is needed. 
 * This kind of data loading is called "Just-in-time data loading". 
-* 
-* This source is subject to the Microsoft Public License.
-* See http://www.microsoft.com/opensource/licenses.mspx#Ms-PL.
-* All other rights reserved.
-* 
-* History:
-* * 6/10/2009 3:00 PM Zhi-Xin Ye Created
 \**********************************************************************************/
 
 #region Using directives
