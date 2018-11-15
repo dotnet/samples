@@ -1,33 +1,35 @@
 // <Snippet6>
 using System;
-namespace LibraryContractsAddInAdapters {
 
-public class BookInfoAddInAdapter
+namespace LibraryContractsAddInAdapters 
 {
-    internal static LibraryContractsBase.BookInfo ContractToViewAdapter(Library.IBookInfoContract contract)
+    public class BookInfoAddInAdapter
     {
-        if (!System.Runtime.Remoting.RemotingServices.IsObjectOutOfAppDomain(contract) &&
-            (contract.GetType().Equals(typeof(BookInfoViewToContractAddInAdapter))))
+        internal static LibraryContractsBase.BookInfo ContractToViewAdapter(Library.IBookInfoContract contract)
         {
-            return ((BookInfoViewToContractAddInAdapter)(contract)).GetSourceView();
-        }
-        else {
-            return new BookInfoContractToViewAddInAdapter(contract);
+            if (!System.Runtime.Remoting.RemotingServices.IsObjectOutOfAppDomain(contract) &&
+                (contract.GetType().Equals(typeof(BookInfoViewToContractAddInAdapter))))
+            {
+                return ((BookInfoViewToContractAddInAdapter)(contract)).GetSourceView();
+            }
+            else 
+            {
+                return new BookInfoContractToViewAddInAdapter(contract);
+            }
         }
 
-    }
-
-    internal static Library.IBookInfoContract ViewToContractAdapter(LibraryContractsBase.BookInfo view)
-    {
-        if (!System.Runtime.Remoting.RemotingServices.IsObjectOutOfAppDomain(view) &&
-            (view.GetType().Equals(typeof(BookInfoContractToViewAddInAdapter))))
+        internal static Library.IBookInfoContract ViewToContractAdapter(LibraryContractsBase.BookInfo view)
         {
-            return ((BookInfoContractToViewAddInAdapter)(view)).GetSourceContract();
-        }
-        else {
-            return new BookInfoViewToContractAddInAdapter(view);
+            if (!System.Runtime.Remoting.RemotingServices.IsObjectOutOfAppDomain(view) &&
+                (view.GetType().Equals(typeof(BookInfoContractToViewAddInAdapter))))
+            {
+                return ((BookInfoContractToViewAddInAdapter)(view)).GetSourceContract();
+            }
+            else 
+            {
+                return new BookInfoViewToContractAddInAdapter(view);
+            }
         }
     }
-}
 }
 // </Snippet6>
