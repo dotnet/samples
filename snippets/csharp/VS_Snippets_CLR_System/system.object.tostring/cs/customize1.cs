@@ -10,14 +10,14 @@ public class CList<T> : List<T>
    public CList() : base()
    {}
 
-   public override String ToString()
+   public override string ToString()
    {
-      String retVal = String.Empty;
+      string retVal = string.Empty;
       foreach (T item in this) {
-         if (String.IsNullOrEmpty(retVal))
+         if (string.IsNullOrEmpty(retVal))
             retVal += item.ToString();
          else
-            retVal += String.Format(", {0}", item);
+            retVal += string.Format(", {0}", item);
       }
       return retVal;
    }

@@ -4,12 +4,12 @@ using System;
 public class Automobile
 {
    private int _doors;
-   private String _cylinders;
+   private string _cylinders;
    private int _year;
-   private String _model;
+   private string _model;
 
-   public Automobile(String model, int year , int doors,
-                     String cylinders)
+   public Automobile(string model, int year , int doors,
+                     string cylinders)
    {
       _model = model;
       _year = year;
@@ -20,40 +20,40 @@ public class Automobile
    public int Doors
    { get { return _doors; } }
 
-   public String Model
+   public string Model
    { get { return _model; } }
 
    public int Year
    { get { return _year; } }
 
-   public String Cylinders
+   public string Cylinders
    { get { return _cylinders; } }
 
-   public override String ToString()
+   public override string ToString()
    {
       return ToString("G");
    }
 
-   public String ToString(String fmt)
+   public string ToString(string fmt)
    {
-      if (String.IsNullOrEmpty(fmt))
+      if (string.IsNullOrEmpty(fmt))
          fmt = "G";
 
       switch (fmt.ToUpperInvariant())
       {
          case "G":
-            return String.Format("{0} {1}", _year, _model);
+            return string.Format("{0} {1}", _year, _model);
          case "D":
-            return String.Format("{0} {1}, {2} dr.",
+            return string.Format("{0} {1}, {2} dr.",
                                  _year, _model, _doors);
          case "C":
-            return String.Format("{0} {1}, {2}",
+            return string.Format("{0} {1}, {2}",
                                  _year, _model, _cylinders);
          case "A":
-            return String.Format("{0} {1}, {2} dr. {3}",
+            return string.Format("{0} {1}, {2} dr. {3}",
                                  _year, _model, _doors, _cylinders);
          default:
-            String msg = String.Format("'{0}' is an invalid format string",
+            string msg = string.Format("'{0}' is an invalid format string",
                                        fmt);
             throw new ArgumentException(msg);
       }
