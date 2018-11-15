@@ -92,6 +92,25 @@ namespace csrefKeywordsAccess
     */
     //</snippet2>
 
+    namespace Example1 //for redefinition of Employee
+    {
+        //<snippet4>
+        public class Employee
+        {
+            private string alias;
+            private string name;
+
+            public Employee(string name, string alias)
+            {
+                // Use this to qualify the members of the class 
+                // instead of the constructor parameters.
+                this.name = name;
+                this.alias = alias;
+            }
+        }
+        //</snippet4>
+    }
+
     namespace Example2 //for redefinition of Employee
     {
         //<snippet3>
@@ -102,14 +121,13 @@ namespace csrefKeywordsAccess
             private decimal salary = 3000.00m;
 
             // Constructor:
-            //<snippet4>            
             public Employee(string name, string alias)
             {
                 // Use this to qualify the fields, name and alias:
                 this.name = name;
                 this.alias = alias;
             }
-            //</snippet4>
+
             // Printing method:
             public void printEmployee()
             {

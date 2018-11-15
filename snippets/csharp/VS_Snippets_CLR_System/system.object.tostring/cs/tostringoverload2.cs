@@ -6,7 +6,7 @@ public class Example
 {
    public static void Main()
    {
-      String[] cultureNames = { "en-US", "en-GB", "fr-FR",
+      string[] cultureNames = { "en-US", "en-GB", "fr-FR",
                                 "hr-HR", "ja-JP" };
       Decimal value = 1603.49m;
       foreach (var cultureName in cultureNames) {
