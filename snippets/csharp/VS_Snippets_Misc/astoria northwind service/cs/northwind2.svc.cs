@@ -71,7 +71,7 @@ namespace NorthwindDataService
 
             //    Order_Detail item = (Order_Detail)entity;
 
-            //    item.Discount = (float)0.5;
+            //    item.Discount = 0.5f;
 
             //    this.CurrentDataSource.SaveChanges();
 

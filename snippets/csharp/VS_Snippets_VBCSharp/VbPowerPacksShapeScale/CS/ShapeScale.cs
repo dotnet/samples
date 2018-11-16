@@ -27,7 +27,7 @@ namespace VbPowerPacksShapeScaleCS
             }
             else
             {
-                ovalShape1.Scale(new SizeF((float)0.5, ((float)0.333)));
+                ovalShape1.Scale(new SizeF(0.5f, 0.333f));
                 state = false;
             }
         }
