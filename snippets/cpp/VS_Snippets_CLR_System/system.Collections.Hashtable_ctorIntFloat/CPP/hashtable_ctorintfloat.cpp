@@ -52,14 +52,14 @@ public:
 	static void Main()
 	{
         // Create a hash table using the default comparer.
-        Hashtable^ myHT1 = gcnew Hashtable(3, (float).8);
+        Hashtable^ myHT1 = gcnew Hashtable(3, .8f);
         myHT1->Add("FIRST", "Hello");
         myHT1->Add("SECOND", "World");
         myHT1->Add("THIRD", "!");
 
         // Create a hash table using the specified IEqualityComparer that uses
         // the CaseInsensitiveComparer.DefaultInvariant to determine equality.
-        Hashtable^ myHT2 = gcnew Hashtable(3, (float).8, gcnew myCultureComparer());
+        Hashtable^ myHT2 = gcnew Hashtable(3, .8f, gcnew myCultureComparer());
         myHT2->Add("FIRST", "Hello");
         myHT2->Add("SECOND", "World");
         myHT2->Add("THIRD", "!");
@@ -68,7 +68,7 @@ public:
         // the Turkish culture (tr-TR) where "I" is not the uppercase
         // version of "i".
         CultureInfo^ myCul = gcnew CultureInfo("tr-TR");
-        Hashtable^ myHT3 = gcnew Hashtable(3, (float).8, gcnew myCultureComparer(myCul));
+        Hashtable^ myHT3 = gcnew Hashtable(3, .8f, gcnew myCultureComparer(myCul));
         myHT3->Add("FIRST", "Hello");
         myHT3->Add("SECOND", "World");
         myHT3->Add("THIRD", "!");
