@@ -1,11 +1,11 @@
 // String Interpolation
-string f = "Jupiter";
-string l = "Hammon";
-int brn = 1711;
-int pub = 1761;
+string firstName = "Jupiter";
+string lastName = "Hammon";
+int yearBorn = 1711;
+int firstPublished = 1761;
 // Variable
-Console.WriteLine($"{f} {l} was an African American poet born in {brn}.");
+Console.WriteLine($"{firstName} {lastName} was an African American poet born in {yearBorn}.");
 // Simple expression
-Console.WriteLine($"He was first published in {pub} at the age of {pub - brn}.");
+Console.WriteLine($"He was first published in {firstPublished} at the age of {firstPublished - yearBorn}.");
 // Complex Expression
-Console.WriteLine($"He'd be over {Math.Round((2018d - brn) / 100d, 0) * 100d} years old today.");                
+Console.WriteLine($"He'd be over {Math.Round((2018d - yearBorn) / 100d) * 100d} years old today.");                
