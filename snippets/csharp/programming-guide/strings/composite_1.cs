@@ -2,7 +2,7 @@
 string phillisFirst = "Phillis";
 string phillisLast = "Wheatley";
 int phillisBorn = 1753;
-int phillisPub = 177
+int phillisPub = 1773;
 // Variables
 Console.WriteLine("{0} {1} was an African American poet born in {2}.", phillisFirst, phillisLast, phillisBorn);
 // Simple expression
