@@ -1,9 +1,11 @@
-string name = "Mark";
-var date = DateTime.Now;
-
-// Composite formatting:
-Console.WriteLine("Hello, {0}! Today is {1}, it's {2:HH:mm} now.", name, date.DayOfWeek, date);
-// String interpolation:
-Console.WriteLine($"Hello, {name}! Today is {date.DayOfWeek}, it's {date:HH:mm} now.");
-// Both calls produce the same output that is similar to:
-// Hello, Mark! Today is Wednesday, it's 19:40 now.
+// String Interpolation
+string f = "Jupiter";
+string l = "Hammon";
+int brn = 1711;
+int pub = 1761;
+// Variable
+Console.WriteLine($"{f} {l} was an African American poet born in {brn}.");
+// Simple expression
+Console.WriteLine($"He was first published in {pub} at the age of {pub - brn}.");
+// Complex Expression
+Console.WriteLine($"He'd be over {Math.Round((2018d - brn) / 100d, 0) * 100d} years old today.");                
