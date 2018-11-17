@@ -16,7 +16,7 @@ namespace StringCompare
             // Jupiter Hammon was an African American poet born in 1711.
             // He was first published in 1761 at the age of 50.
             // He'd be over 300 years old today. 
-            // <SnippetStringInterpolation>
+            // </SnippetStringInterpolation>
             
             System.Console.WriteLine();
             
@@ -27,10 +27,10 @@ namespace StringCompare
             Console.WriteLine("She'd be over {0} years old today.", Math.Round((2018d - pw.born) / 100d) * 100d);
 
             // Output:
-            //Phillis Wheatley was an African American poet born in 1753.
-            //She was first published in 1773 at the age of 20.
-            //She'd be over 300 years old today.
-            // <SnippetStringFormat>
+            // Phillis Wheatley was an African American poet born in 1753.
+            // She was first published in 1773 at the age of 20.
+            // She'd be over 300 years old today.
+            // </SnippetStringFormat>
         }
     }
 }
