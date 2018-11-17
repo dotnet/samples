@@ -59,16 +59,16 @@ public:
 	   mySL->Add( "THIRD", "!" );
 	   
 	   // Create a hash table using the default hash code provider and the default comparer.
-	   Hashtable^ myHT1 = gcnew Hashtable( mySL,(float).8 );
+	   Hashtable^ myHT1 = gcnew Hashtable( mySL, .8f );
 	   
 	   // Create a hash table using the specified case-insensitive hash code provider and case-insensitive comparer.
-	   Hashtable^ myHT2 = gcnew Hashtable( mySL,(float).8,gcnew myCultureComparer() );
+	   Hashtable^ myHT2 = gcnew Hashtable( mySL, .8f, gcnew myCultureComparer() );
 	   
 	   // Create a hash table using the specified KeyComparer.
 	   // The KeyComparer uses a case-insensitive hash code provider and a case-insensitive comparer,
 	   // which are based on the Turkish culture (tr-TR), where "I" is not the uppercase version of "i".
 	   CultureInfo^ myCul = gcnew CultureInfo( "tr-TR" );
-	   Hashtable^ myHT3 = gcnew Hashtable( mySL,(float).8, gcnew myCultureComparer( myCul ) );
+	   Hashtable^ myHT3 = gcnew Hashtable( mySL, .8f, gcnew myCultureComparer( myCul ) );
 	   
 	   // Search for a key in each hash table.
 	   Console::WriteLine( "first is in myHT1: {0}", myHT1->ContainsKey( "first" ) );
