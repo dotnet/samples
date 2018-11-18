@@ -46,7 +46,7 @@ public class Example
         fs.Read(bytes, 0, (int)fs.Length);
         fs.Close();
 
-        String decodedString = unicode.GetString(encodedBytes);
+        String decodedString = unicode.GetString(bytes);
         Console.WriteLine("Decoded bytes:");
         Console.WriteLine(decodedString);
    }
