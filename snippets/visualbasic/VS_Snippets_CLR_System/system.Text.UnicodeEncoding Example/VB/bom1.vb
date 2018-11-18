@@ -45,7 +45,7 @@ Class Example
         fs.Read(bytes, 0, fs.Length)
         fs.Close()
 
-        Dim decodedString As String = unicode.GetString(encodedBytes)
+        Dim decodedString As String = unicode.GetString(bytes)
         Console.WriteLine("Decoded bytes:")
         Console.WriteLine(decodedString)
     End Sub
