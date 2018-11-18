@@ -45,7 +45,7 @@ public class Example
         fs.Read(bytes, 0, (int)fs.Length);
         fs.Close();
 
-        String decodedString = enc.GetString(encodedBytes);
+        String decodedString = enc.GetString(bytes);
         Console.WriteLine("Decoded bytes from binary file:");
         Console.WriteLine(decodedString);
     }
