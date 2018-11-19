@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace operators
 {
@@ -8,38 +6,62 @@ namespace operators
     {
         public static void Examples()
         {
+            ConditionalRefExpressions();
             ConditionalValueExpressions();
+            ComparisonWithIf();
         }
 
-        static void ConditionalRefExpressions()
+        private static void ConditionalRefExpressions()
         {
             // <SnippetConditionalRef>
             var smallArray = new int[] { 1, 2, 3, 4, 5 };
             var largeArray = new int[] { 10, 20, 30, 40, 50 };
 
-            int index= new Random().Next(0, 9);
+            int index = 7;
             ref int refValue = ref ((index < 5) ? ref smallArray[index] : ref largeArray[index - 5]);
-            Console.WriteLine(refValue);
+            refValue = 0;
+
+            index = 2;
+            ((index < 5) ? ref smallArray[index] : ref largeArray[index - 5]) = 100;
+
+            Console.WriteLine(string.Join(" ", smallArray));
+            Console.WriteLine(string.Join(" ", largeArray));
+            // Output:
+            // 1 2 100 4 5
+            // 10 20 0 40 50
             // </SnippetConditionalRef>
         }
 
-
-        static void ConditionalValueExpressions()
+        private static void ConditionalValueExpressions()
         {
             // <SnippetConditionalValue>
-            double sinc(double x) =>
-                x != 0.0 ? Math.Sin(x) / x : 1.0;
+            double sinc(double x) => x != 0.0 ? Math.Sin(x) / x : 1;
 
-            Console.WriteLine(sinc(0.2));
             Console.WriteLine(sinc(0.1));
             Console.WriteLine(sinc(0.0));
-            /*
-            Output:
-            0.993346653975306
-            0.998334166468282
-            1
-            */
+            // Output:
+            // 0.998334166468282
+            // 1
             // </SnippetConditionalValue>
+        }
+
+        private static void ComparisonWithIf()
+        {
+            // <SnippetCompareWithIf>
+            int input = new Random().Next(-5, 5);
+            
+            string classify;
+            if (input >= 0)
+            {
+                classify = "nonnegative";
+            }
+            else
+            {
+                classify = "negative";
+            }
+
+            classify = (input >= 0) ? "nonnegative" : "negative";
+            // </SnippetCompareWithIf>
         }
     }
 }
