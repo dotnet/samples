@@ -31,11 +31,11 @@ Public Class GenericCollection
 
     End Sub 
 
-End Class 
+End Class
 
 'This code produces the following output.
 '
-'The first item in the list is <null>.
+'The first item in the list is red.
 'The last item in the list is orange.
 'The LinkedList contains:
 '   red

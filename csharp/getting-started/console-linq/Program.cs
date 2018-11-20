@@ -48,7 +48,7 @@ namespace LinqFaroShuffle
         {
             var startingDeck = (from s in Suits().LogQuery("Suit Generation")
                                 from r in Ranks().LogQuery("Value Generation")
-                                select new PlayingCard(s, r))
+                                select new { Suit = s, Rank = r })
                                 .LogQuery("Starting Deck")
                                 .ToArray();
 
