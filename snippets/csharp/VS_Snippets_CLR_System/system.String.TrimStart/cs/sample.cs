@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class TrimExample
 {
-   // <Snippet2>
+   // <Snippet3>
    public static void Main()
    {
       string[] lines= {"using System;",
@@ -42,9 +42,9 @@ public class TrimExample
    //    After call to StripComments:
    //       This code displays a simple greeting
    //       to the console.
-   // </Snippet2>
+   // </Snippet3>
    
-   // <Snippet1>
+   // <Snippet2>
    public static string[] StripComments(string[] lines)
    { 
       List<string> lineList = new List<string>();
@@ -55,6 +55,22 @@ public class TrimExample
       }
       return lineList.ToArray();
    }   
+   // </Snippet2>
+
+   // <Snippet1>
+   public static void Main(string[] args)
+   {
+	string lineWithLeadingSpaces = "   Hello World!";
+		
+	Console.WriteLine($"This line has leading spaces: {lineWithLeadingSpaces}");
+	// This line has leading spaces:    Hello World!
+	
+	// Apply String.TrimStart to the variable in question
+	string lineAfterTrimStart = lineWithLeadingSpaces.TrimStart(' ');
+	
+	Console.WriteLine($"This is the result after calling TrimStart: {lineAfterTrimStart}");
+	// This is the result after calling TrimStart: Hello World!    
+   }
    // </Snippet1>
 }
 

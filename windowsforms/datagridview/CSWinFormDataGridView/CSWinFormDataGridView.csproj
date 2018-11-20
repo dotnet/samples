@@ -1,0 +1,70 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <RootNamespace>CSWinFormDataGridView</RootNamespace>
+    <AssemblyName>CSWinFormDataGridView</AssemblyName>
+
+    <!-- Don't automatically generate assembly info attributes
+         found in AssemblyInfo.cs. This property is useful for 
+         applications ported from NetFx, which may have used
+         AssemblyInfo.cs -->
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.DesktopUI" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.5.1" />
+  </ItemGroup>
+
+  <!-- By default, all .cs and .resx files in the current
+       directory or descendant directories will be included.
+       Optionally, they can be updated as demonstrated here
+       so that dependent files will appear as expected in
+       Visual Studio's solution explorer. -->
+  <ItemGroup>
+    <Compile Update="CustomDataGridViewColumn\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Update="DataGridViewPaging\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Update="EditingControlHosting\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Update="JustInTimeDataLoading\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Update="MultipleLayeredColumnHeader\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="CustomDataGridViewColumn\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="DataGridViewPaging\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="EditingControlHosting\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="JustInTimeDataLoading\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MultipleLayeredColumnHeader\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="CustomDataGridViewColumn\ReadMe.txt" />
+    <Content Include="DataGridViewPaging\ReadMe.txt" />
+    <Content Include="EditingControlHosting\ReadMe.txt" />
+    <Content Include="JustInTimeDataLoading\ReadMe.txt" />
+    <Content Include="MultipleLayeredColumnHeader\ReadMe.txt" />
+  </ItemGroup>
+
+</Project>

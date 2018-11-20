@@ -33,7 +33,7 @@ public:
         // </Snippet3>
         Display(sentence, "Test 2: Move first node to be last node:");
 
-        // Change the last node be 'yesterday'.
+        // Change the last node to 'yesterday'.
         sentence->RemoveLast();
         sentence->AddLast("yesterday");
         Display(sentence, "Test 3: Change the last node to 'yesterday':");
@@ -48,7 +48,7 @@ public:
 
 
         // <Snippet12>
-        // Indicate, by using parentheisis, the last occurence of 'the'.
+        // Indicate the last occurence of 'the'.
         sentence->RemoveFirst();
         LinkedListNode<String^>^ current = sentence->FindLast("the");
         // </Snippet12>

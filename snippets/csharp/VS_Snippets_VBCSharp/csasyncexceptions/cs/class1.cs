@@ -70,7 +70,6 @@ namespace winformcs
         //   Exception Message: canceled
         //   Task IsCanceled: True
         //   Task IsFaulted:  False
-
         //</Snippet2>
 
 

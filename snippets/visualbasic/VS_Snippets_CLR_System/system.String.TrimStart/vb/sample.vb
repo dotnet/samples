@@ -4,7 +4,7 @@ Option Strict On
 Imports System.Collections.Generic
 
 Public Class TrimExample
-   ' <Snippet2>
+   ' <Snippet3>
    Public Shared Sub Main()
       Dim lines() As String = {"Public Module HelloWorld", _
                                "   Public Sub Main()", _
@@ -36,8 +36,8 @@ Public Class TrimExample
    '    Code after call to StripComments:
    '       This code displays a simple greeting
    '       to the console.   
-   ' </Snippet2>
-   ' <Snippet1>
+   ' </Snippet3>
+   ' <Snippet2>
    Public Shared Function StripComments(lines() As String) As String()
       Dim lineList As New List(Of String)
       For Each line As String In lines
@@ -47,6 +47,21 @@ Public Class TrimExample
       Next
       Return lineList.ToArray()
    End Function   
-   ' </Snippet1>   
+   ' </Snippet2>
+   ' <Snippet1>
+   Public Sub Main()
+      Dim lineWithLeadingSpaces = "   Hello World!"
+      Dim lineAfterTrimStart = String.Empty
+
+      Console.WriteLine($"This line has leading spaces: {lineWithLeadingSpaces}")
+      ' This line has leading spaces:   Hello World!
+
+      ' Apply String.TrimStart to the variable in question
+      lineAfterTrimStart = lineWithLeadingSpaces.TrimStart(" "c)
+
+      Console.WriteLine($"This is the result after calling TrimStart: {lineAfterTrimStart}")
+      ' This is the result after calling TrimStart: Hello World!
+    End Sub
+   '</Snippet1>   
 End Class
 

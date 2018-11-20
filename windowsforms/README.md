@@ -13,6 +13,8 @@ If you're new to .NET Core, here are a few resources to help you understand the 
 | Sample Name | Description |
 | ----------- | ----------- |
 | [Hello World - shared source](helloworld-sharedsource) | This sample shows you how to share source between a .NET Framework WinForms application and a .NET Core WinForms application. Use this to get the full .NET Framework tooling experience while still building for .NET Core. |
+| [Matching Game](matching-game) | This sample demonstrates simple event handling and timers in a .NET Core 3 WinForms application |
+| [DataGridView Sample](datagridview) | This sample demonstrates DataGridView usage in .NET Core 3 |
 
 ## Getting Started
 
@@ -49,7 +51,7 @@ Ideally you should migrate all projects in your solution to target .NET Core 3.0
 1. Start from a working Solution. You must be able to open the solution in Visual Studio and double check that you can build and run without any issues.
 2. If your solution also has server-side projects, such as ASP.NET, we recommend splitting your solution into different server and client solutions. For this effort, work with the client solution only. 
 3. Add a new .NET Core 3.0 Windows Forms project to the solution. Adding this project to a sibling folder to your existing 'head' project will make it easier to port references later (using relative paths to other projects or assemblies in the solution)
-4.  If your 'head' project uses NuGet packages, you must add the same NuGet packages to the new project. The new SDK-Style projects only support the PackageReference format for adding NuGet package references. If your existing project uses `packages.config`, you must migrate to the new format. You can use the Migrator Tool described [here](https://docs.microsoft.com/en-us/nuget/reference/migrate-packages-config-to-package-reference) to automate this process.
+4.  If your 'head' project uses NuGet packages, you must add the same NuGet packages to the new project. The new SDK-Style projects only support the PackageReference format for adding NuGet package references. If your existing project uses `packages.config`, you must migrate to the new format. You can use the Migrator Tool described [here](https://docs.microsoft.com/nuget/reference/migrate-packages-config-to-package-reference) to automate this process.
 6. Copy the `PackageReference` elements generated in the previous step from the original project into the new project's .csproj file.
 7. Copy the `ProjectReference` elements from the original project. Note: The new project format does not use the `Name` and `ProjectGuid` elements, so you can safely delete those.
 8. At this point it's a good idea to try and restore/build to make sure all dependencies are properly configured.
@@ -67,7 +69,7 @@ Most existing projects include an `AssemblyInfo.cs` file in the Properties folde
 <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 ```
 #### Include the Windows.Compatibility Pack
-Not every framework assembly is available in the .NET Core base class library. Windows applications like WinForms and WPF could have dependencies that are not available in .NET Core or .NET Standard. Adding a reference to the [Windows Compatibilty Pack](https://docs.microsoft.com/en-us/dotnet/core/porting/windows-compat-pack) will help reduce missing assembly dependencies as it includes several types that might be needed by your application.
+Not every framework assembly is available in the .NET Core base class library. Windows applications like WinForms and WPF could have dependencies that are not available in .NET Core or .NET Standard. Adding a reference to the [Windows Compatibilty Pack](https://docs.microsoft.com/dotnet/core/porting/windows-compat-pack) will help reduce missing assembly dependencies as it includes several types that might be needed by your application.
 
 ```cmd
 dotnet add package Microsoft.Windows.Compatibility

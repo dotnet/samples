@@ -45,7 +45,7 @@ Class Example
         fs.Read(bytes, 0, fs.Length)
         fs.Close()
 
-        Dim decodedString As String = enc.GetString(encodedBytes)
+        Dim decodedString As String = enc.GetString(bytes)
         Console.WriteLine("Decoded bytes from binary file:")
         Console.WriteLine(decodedString)
     End Sub

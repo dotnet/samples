@@ -4,29 +4,29 @@ using System.Collections.Generic;
 
 public static class StringExtensions
 {
-   public static String ToString2<T>(this List<T> l)
+   public static string ToString2<T>(this List<T> l)
    {
-      String retVal = String.Empty;
+      string retVal = string.Empty;
       foreach (T item in l)
-         retVal += String.Format("{0}{1}", String.IsNullOrEmpty(retVal) ?
+         retVal += string.Format("{0}{1}", string.IsNullOrEmpty(retVal) ?
                                                      "" : ", ",
                                   item);
-      return String.IsNullOrEmpty(retVal) ? "{}" : "{ " + retVal + " }";
+      return string.IsNullOrEmpty(retVal) ? "{}" : "{ " + retVal + " }";
    }
 
-   public static String ToString<T>(this List<T> l, String fmt)
+   public static string ToString<T>(this List<T> l, string fmt)
    {
-      String retVal = String.Empty;
+      string retVal = string.Empty;
       foreach (T item in l) {
          IFormattable ifmt = item as IFormattable;
          if (ifmt != null)
-            retVal += String.Format("{0}{1}",
-                                    String.IsNullOrEmpty(retVal) ?
+            retVal += string.Format("{0}{1}",
+                                    string.IsNullOrEmpty(retVal) ?
                                        "" : ", ", ifmt.ToString(fmt, null));
          else
             retVal += ToString2(l);
       }
-      return String.IsNullOrEmpty(retVal) ? "{}" : "{ " + retVal + " }";
+      return string.IsNullOrEmpty(retVal) ? "{}" : "{ " + retVal + " }";
    }
 }
 

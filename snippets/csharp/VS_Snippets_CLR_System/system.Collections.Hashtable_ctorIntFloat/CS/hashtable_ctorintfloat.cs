@@ -47,14 +47,14 @@ public class SamplesHashtable
     {
 
         // Create a hash table using the default comparer.
-        Hashtable myHT1 = new Hashtable(3, (float).8);
+        Hashtable myHT1 = new Hashtable(3, .8f);
         myHT1.Add("FIRST", "Hello");
         myHT1.Add("SECOND", "World");
         myHT1.Add("THIRD", "!");
 
         // Create a hash table using the specified IEqualityComparer that uses
         // the CaseInsensitiveComparer.DefaultInvariant to determine equality.
-        Hashtable myHT2 = new Hashtable(3, (float).8, new myCultureComparer());
+        Hashtable myHT2 = new Hashtable(3, .8f, new myCultureComparer());
         myHT2.Add("FIRST", "Hello");
         myHT2.Add("SECOND", "World");
         myHT2.Add("THIRD", "!");
@@ -63,8 +63,7 @@ public class SamplesHashtable
         // the Turkish culture (tr-TR) where "I" is not the uppercase
         // version of "i".
         CultureInfo myCul = new CultureInfo("tr-TR");
-        Hashtable myHT3 = new Hashtable(3, (float).8, 
-            new myCultureComparer(myCul));
+        Hashtable myHT3 = new Hashtable(3, .8f, new myCultureComparer(myCul));
 
         myHT3.Add("FIRST", "Hello");
         myHT3.Add("SECOND", "World");
