@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSWinFormGraphics", "CSWinFormGraphics\CSWinFormGraphics.csproj", "{841B2F5C-71B0-4937-A2FA-FDDE64119056}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormGraphics", "WinFormGraphics\WinFormGraphics.csproj", "{841B2F5C-71B0-4937-A2FA-FDDE64119056}"
 EndProject
 Global
 	

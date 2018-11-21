@@ -41,7 +41,7 @@ using System.Drawing.Drawing2D;
 #endregion
 
 
-namespace CSWinFormGraphics
+namespace WinFormGraphics
 {
     public partial class MainForm : Form
     {

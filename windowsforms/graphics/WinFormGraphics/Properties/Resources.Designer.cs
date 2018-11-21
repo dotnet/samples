@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CSWinFormGraphics.Properties {
+namespace WinFormGraphics.Properties {
     using System;
     
     

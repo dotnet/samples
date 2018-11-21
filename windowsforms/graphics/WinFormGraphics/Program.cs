@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace CSWinFormGraphics
+namespace WinFormGraphics
 {
     static class Program
     {

@@ -1,4 +1,4 @@
-﻿namespace CSWinFormGraphics
+﻿namespace WinFormGraphics
 {
     partial class MainForm
     {

@@ -8,8 +8,8 @@
     <ProjectGuid>{841B2F5C-71B0-4937-A2FA-FDDE64119056}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CSWinFormGraphics</RootNamespace>
-    <AssemblyName>CSWinFormGraphics</AssemblyName>
+    <RootNamespace>WinFormGraphics</RootNamespace>
+    <AssemblyName>WinFormGraphics</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
