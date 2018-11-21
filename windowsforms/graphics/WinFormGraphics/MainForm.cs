@@ -1,6 +1,6 @@
 ﻿/************************************* Module Header **************************************\
 * Module Name:  MainForm.cs
-* Project:      CSWinFormGraphics
+* Project:      WinFormGraphics
 * Copyright (c) Microsoft Corporation.
 * 
 * The Graphics sample demonstrates the fundamentals of GDI+ programming. 
@@ -24,17 +24,12 @@
 * 5. Draw A Ellipse With Gradient Brush.
 *    Demonstrates how to draw a shape with gradient effect.
 * 
-* This source is subject to the Microsoft Public License.
-* See http://www.microsoft.com/en-us/openness/resources/licenses.aspx#MPL.
-* All other rights reserved.
-* 
 * THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND,
 * EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED
 * WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE.
 * ***************************************************************************/
 
 #region Using directives
-using System;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
