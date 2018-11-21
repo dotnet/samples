@@ -1,8 +1,8 @@
 # Windows Forms Graphics Demo
 
-## Introduction
+This Windows Forms sample was ported to .NET Core from [a previous .NET Framework 4.5 sample](https://code.msdn.microsoft.com/windowsdesktop/CSWinFormGraphics-4572a5f0).
 
-The Graphics sample demonstrates the fundamentals of GDI+ programming used from Windows Forms APIs. GDI+ allows you to create graphics, draw text, and manipulate graphical images as objects. GDI+ is designed to offer performance as well as ease of use. You can use GDI+ to render graphical images on Windows Forms and controls. GDI+ has fully replaced GDI, and is now the only way to render graphics programmatically in Windows Forms applications.
+This sample demonstrates the fundamentals of GDI+ programming with Windows Forms Graphics APIs. GDI+ allows you to create graphics, draw text, and manipulate graphical images as objects. GDI+ is designed to offer performance as well as ease of use. You can use GDI+ to render graphical images on Windows Forms and controls.
 
 In this sample, there are 5 examples:
 
