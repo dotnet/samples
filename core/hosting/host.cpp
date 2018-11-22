@@ -290,17 +290,6 @@ int wmain(int argc, wchar_t* argv[])
 	// Platform resource roots are paths to probe in for resource assemblies (in culture-specific sub-directories)
 	wchar_t platformResourceRoots[MAX_PATH * 50];
 	wcscpy_s(platformResourceRoots, appPaths);
-
-
-	// AppDomainCompatSwitch
-	// Specifies compatibility behavior for the app domain. This indicates which compatibility
-	// quirks to apply if an assembly doesn't have an explicit Target Framework Moniker. If a TFM is
-	// present on an assembly, the runtime will always attempt to use quirks appropriate to the version
-	// of the TFM.
-	// 
-	// Typically the latest behavior is desired, but some hosts may want to default to older Silverlight
-	// or Windows Phone behaviors for compatibility reasons.
-	wchar_t* appDomainCompatSwitch = L"UseLatestBehaviorWhenTFMNotSpecified";
 	// </Snippet6>
 
 
@@ -317,8 +306,7 @@ int wmain(int argc, wchar_t* argv[])
 		L"APP_PATHS",
 		L"APP_NI_PATHS",
 		L"NATIVE_DLL_SEARCH_DIRECTORIES",
-		L"PLATFORM_RESOURCE_ROOTS",
-		L"AppDomainCompatSwitch"
+		L"PLATFORM_RESOURCE_ROOTS"
 	};
 
 	// Property values which were constructed in step 5
@@ -327,8 +315,7 @@ int wmain(int argc, wchar_t* argv[])
 		appPaths,
 		appNiPaths,
 		nativeDllSearchDirectories,
-		platformResourceRoots,
-		appDomainCompatSwitch
+		platformResourceRoots
 	};
 
 	// Create the AppDomain
