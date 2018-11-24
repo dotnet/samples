@@ -1,11 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Drawing;
 
 //<snippet1>
-
 namespace SampleNamespace
 {
     class SampleClass { }
@@ -18,7 +17,7 @@ namespace SampleNamespace
 
     delegate void SampleDelegate(int i);
 
-    namespace SampleNamespace.Nested
+    namespace Nested
     {
         class SampleClass2 { }
     }
