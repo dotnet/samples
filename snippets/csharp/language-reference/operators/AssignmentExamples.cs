@@ -8,6 +8,7 @@ namespace operators
         public static void Examples()
         {
             VariablePropertyIndexerExample();
+            RefAssignmentExample();
         }
 
         private static void VariablePropertyIndexerExample()
@@ -32,6 +33,28 @@ namespace operators
             // 1
             // 5
             // </SnippetAssignments>
+        }
+
+        private static void RefAssignmentExample()
+        {
+            // <SnippetRefAssignment>
+            void Display(double[] s) => Console.WriteLine(string.Join(" ", s));
+            
+            double[] arr = { 0.0, 0.0, 0.0 };
+            Display(arr);
+
+            ref double arrayElement = ref arr[0];
+            arrayElement = 3.0;
+            Display(arr);
+
+            arrayElement = ref arr[arr.Length - 1];
+            arrayElement = 5.0;
+            Display(arr);
+            // Output:
+            // 0 0 0
+            // 3 0 0
+            // 3 0 5
+            // </SnippetRefAssignment>
         }
     }
 }
