@@ -15,6 +15,7 @@ If you're new to .NET Core, here are a few resources to help you understand the 
 | [Hello World - shared source](helloworld-sharedsource) | This sample shows you how to share source between a .NET Framework WinForms application and a .NET Core WinForms application. Use this to get the full .NET Framework tooling experience while still building for .NET Core. |
 | [Matching Game](matching-game) | This sample demonstrates simple event handling and timers in a .NET Core 3 WinForms application |
 | [DataGridView Sample](datagridview) | This sample demonstrates DataGridView usage in .NET Core 3 |
+| [Graphics Sample](graphics) | This sample demonstrates using GDI+ APIs via the Graphics type in .NET Core 3 |
 
 ## Getting Started
 
