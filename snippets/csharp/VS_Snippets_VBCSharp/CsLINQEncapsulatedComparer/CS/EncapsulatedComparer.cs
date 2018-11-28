@@ -71,7 +71,7 @@ class Program
         // that have duplicates in the second array.
         
         IEnumerable<ProductA> duplicates =
-            store1.Intersect(store2, new ProductComparer());
+            store1.Intersect(store2);
 
         foreach (var product in duplicates)
             Console.WriteLine(product.Name + " " + product.Code);
@@ -89,7 +89,7 @@ class Program
         //excluding duplicates.
 
         IEnumerable<ProductA> union =
-          store1.Union(store2, new ProductComparer());
+          store1.Union(store2);
 
         foreach (var product in union)
             Console.WriteLine(product.Name + " " + product.Code);
@@ -151,7 +151,6 @@ class Program
           orange 4
           lemon 12
         */
-
         //</Snippet7>
 
         //SEQUENCEEQUAL
@@ -173,42 +172,27 @@ class Program
             
             Equal? True
         */
-
         //</Snippet8>
         Console.ReadLine();
 
     }
 
 //<Snippet9>
-public class ProductA
-{ 
+public class ProductA: IEquatable<ProductA>
+{
     public string Name { get; set; }
     public int Code { get; set; }
-}
 
-public class ProductComparer : IEqualityComparer<ProductA>
-{
-
-    public bool Equals(ProductA x, ProductA y)
+    public bool Equals(ProductA other)
     {
-        //Check whether the objects are the same object. 
-        if (Object.ReferenceEquals(x, y)) return true;
+        if (other is null)
+            return false;
 
-        //Check whether the products' properties are equal. 
-        return x != null && y != null && x.Code.Equals(y.Code) && x.Name.Equals(y.Name);
+        return this.Name == other.Name && this.Code == other.Code;
     }
 
-    public int GetHashCode(ProductA obj)
-    {
-        //Get hash code for the Name field if it is not null. 
-        int hashProductName = obj.Name == null ? 0 : obj.Name.GetHashCode();
-
-        //Get hash code for the Code field. 
-        int hashProductCode = obj.Code.GetHashCode();
-
-        //Calculate the hash code for the product. 
-        return hashProductName ^ hashProductCode;
-    }
+    public override bool Equals(object obj) => Equals(obj as ProductA);
+    public override int GetHashCode() => (Name, Code).GetHashCode();
 }
 //</Snippet9>
 

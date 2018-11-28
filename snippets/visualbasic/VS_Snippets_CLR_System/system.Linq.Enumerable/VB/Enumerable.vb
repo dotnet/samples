@@ -28,7 +28,6 @@ Namespace SequenceExamples
         ' This code produces the following output:
         '
         ' dog lazy the over jumps fox brown quick the
-
         ' </Snippet1>
 
         ' <Snippet2>
@@ -49,7 +48,6 @@ Namespace SequenceExamples
         ' This code produces the following output:
         '
         'The number of even integers is 6
-
         ' </Snippet2>
 
         ' <Snippet3>
@@ -71,7 +69,6 @@ Namespace SequenceExamples
         ' This code produces the following output:
         '
         ' The fruit with the longest name is PASSIONFRUIT
-
         ' </Snippet3>
 #End Region
 
@@ -102,7 +99,6 @@ Namespace SequenceExamples
             ' This code produces the following output:
             '
             ' Not all pet names start with 'B'.
-
             ' </Snippet4>
         End Class
 
@@ -170,7 +166,6 @@ Namespace SequenceExamples
                 ' This code produces the following output:
                 '
                 ' The list is not empty.
-
                 ' </Snippet5>
             End Sub
 
@@ -245,7 +240,6 @@ Namespace SequenceExamples
             ' This code produces the following output:
             '
             ' There are unvaccinated animals over age 1.
-
             ' </Snippet6>
         End Class
 
@@ -301,7 +295,6 @@ Namespace SequenceExamples
         ' query1 has been created.
         '
         ' query2 has been created.
-
         ' </Snippet108>
 #End Region
 
@@ -320,7 +313,6 @@ Namespace SequenceExamples
             ' This code produces the following output:
             '
             ' The average grade is 77.6
-
             ' </Snippet8>
         End Sub
 
@@ -338,7 +330,6 @@ Namespace SequenceExamples
             ' This code produces the following output:
             '
             ' The average is 133282081426.333
-
             ' </Snippet12>
         End Sub
 
@@ -358,7 +349,6 @@ Namespace SequenceExamples
             ' This code produces the following output:
             '
             ' The average is 99948748093
-
             ' </Snippet16>
         End Sub
 
@@ -377,7 +367,6 @@ Namespace SequenceExamples
             ' This code produces the following output:
             '
             ' The average string length is 6.5
-
             ' </Snippet18>
         End Sub
 
@@ -473,7 +462,6 @@ Namespace SequenceExamples
             ' Bounder
             ' Snoopy
             ' Fido
-
             ' </Snippet20>
 
             Sub ConcatEx2()
@@ -506,7 +494,6 @@ Namespace SequenceExamples
                 ' Bounder
                 ' Snoopy
                 ' Fido
-
                 ' </Snippet112>
             End Sub
         End Class
@@ -533,7 +520,6 @@ Namespace SequenceExamples
             ' This code produces the following output:
             '
             ' The array does contain mango
-
             ' </Snippet21>
         End Sub
 #End Region
@@ -556,7 +542,6 @@ Namespace SequenceExamples
             ' This code produces the following output:
             '
             ' There are 6 fruits in the collection.
-
             ' </Snippet22>
         End Sub
 
@@ -589,7 +574,6 @@ Namespace SequenceExamples
             ' This code produces the following output:
             '
             ' There are 2 unvaccinated animals.
-
             ' </Snippet23>
         End Class
 
@@ -625,7 +609,6 @@ Namespace SequenceExamples
             ' Barley
             ' Boots
             ' Whiskers
-
             ' </Snippet24>
         End Class
 
@@ -646,7 +629,6 @@ Namespace SequenceExamples
             ' This code produces the following output:
             '
             ' 0
-
             ' </Snippet25>
         End Sub
 
@@ -698,7 +680,6 @@ Namespace SequenceExamples
             ' Name: Whiskers
             '
             ' Name: Default Pet
-
             ' </Snippet26>
         End Class
 
@@ -729,7 +710,6 @@ Namespace SequenceExamples
             ' 46
             ' 55
             ' 17
-
             ' </Snippet27>
         End Sub
 #End Region
@@ -752,7 +732,6 @@ Namespace SequenceExamples
             ' This code produces the following output:
             '
             ' The name chosen at random is Ito, Shu
-
             ' </Snippet28>
         End Sub
 #End Region
@@ -777,7 +756,6 @@ Namespace SequenceExamples
             ' This code produces the following output:
             '
             ' The name chosen at index 20 is [THERE IS NO NAME AT THIS INDEX]
-
             ' </Snippet29>
         End Sub
 #End Region
@@ -831,7 +809,6 @@ Namespace SequenceExamples
             ' Hoeing, Helge
             ' Potra, Cristina
             ' Iallo, Lucio
-
             ' </Snippet31>
         End Sub
 #End Region
@@ -862,7 +839,6 @@ Namespace SequenceExamples
             ' 2.3
             ' 2.4
             ' 2.5
-
             ' </Snippet34>
         End Sub
 #End Region
@@ -883,7 +859,6 @@ Namespace SequenceExamples
             ' This code produces the following output:
             '
             ' 9
-
             ' </Snippet35>
         End Sub
 
@@ -902,7 +877,6 @@ Namespace SequenceExamples
             ' This code produces the following output:
             '
             ' 92
-
             ' </Snippet36>
         End Sub
 #End Region
@@ -923,7 +897,6 @@ Namespace SequenceExamples
             ' This code produces the following output:
             '
             ' 0
-
             ' </Snippet37>
         End Sub
 
@@ -954,7 +927,6 @@ Namespace SequenceExamples
             ' The first long name is Andersen, Henriette Thaulow
             '
             ' There is not a name longer than 30 characters.
-
             ' </Snippet38>
         End Sub
 
@@ -977,7 +949,6 @@ Namespace SequenceExamples
             '
             ' The value of the firstMonth1 variable is 1
             ' The value of the firstMonth2 variable is 1
-
             ' </Snippet126>
         End Sub
 #End Region
@@ -1030,7 +1001,6 @@ Namespace SequenceExamples
             '   Daisy
             ' 1
             '   Whiskers
-
             ' </Snippet39>
 
             ' Uses query expression syntax.
@@ -1136,7 +1106,6 @@ Namespace SequenceExamples
             ' Number of pets in this age group: 1
             ' Minimum age: 1.5
             ' Maximum age: 1.5
-
             ' </Snippet15>
 
         End Class
@@ -1199,7 +1168,6 @@ Namespace SequenceExamples
             ' Number of pets in this age group: 1
             ' Minimum age: 1.5
             ' Maximum age: 1.5
-
             ' </Snippet125>
         End Class
 
@@ -1267,7 +1235,6 @@ Namespace SequenceExamples
             '   Boots
             ' Weiss, Charlotte
             '   Whiskers
-
             ' </Snippet40>
         End Class
 
@@ -1295,7 +1262,6 @@ Namespace SequenceExamples
             '
             ' 26
             ' 30
-
             ' </Snippet41>
         End Sub
 #End Region
@@ -1351,7 +1317,6 @@ Namespace SequenceExamples
             ' Adams, Terry - Barley
             ' Adams, Terry - Boots
             ' Weiss, Charlotte - Whiskers
-
             ' </Snippet42>
 
         End Class
@@ -1374,7 +1339,6 @@ Namespace SequenceExamples
             ' This code produces the following output:
             '
             ' 19
-
             ' </Snippet43>
         End Sub
 
@@ -1394,7 +1358,6 @@ Namespace SequenceExamples
             ' This code produces the following output:
             '
             ' 87
-
             ' </Snippet44>
         End Sub
 #End Region
@@ -1417,7 +1380,6 @@ Namespace SequenceExamples
             ' This code produces the following output:
             '
             ' <string is Nothing or empty>
-
             ' </Snippet45>
         End Sub
 
@@ -1449,7 +1411,6 @@ Namespace SequenceExamples
             '
             ' The last number that rounds to 50 is 50.2
             ' The last number that rounds to 40 is [DOES NOT EXIST]
-
             ' </Snippet46>
         End Sub
 
@@ -1472,7 +1433,6 @@ Namespace SequenceExamples
             '
             ' The value of the lastDay1 variable is 1
             ' The value of the lastDay2 variable is 1
-
             ' </Snippet127>
         End Sub
 #End Region
@@ -1493,7 +1453,6 @@ Namespace SequenceExamples
             ' This code produces the following output:
             '
             ' There are 6 fruits in the collection.
-
             ' </Snippet47>
         End Sub
 
@@ -1524,7 +1483,6 @@ Namespace SequenceExamples
             ' This code produces the following output:
             '
             ' There are 2 animals over age 3
-
             ' </Snippet48>
         End Class
 
@@ -1546,7 +1504,6 @@ Namespace SequenceExamples
             ' This code produces the following output:
             '
             ' The largest number is 4294967296
-
             ' </Snippet52>
         End Sub
 
@@ -1565,7 +1522,6 @@ Namespace SequenceExamples
             ' This code produces the following output:
             '
             ' The largest number is 1.5E+104
-
             ' </Snippet54>
         End Sub
 
@@ -1616,7 +1572,6 @@ Namespace SequenceExamples
             ' This code produces the following output:
             '
             ' The 'maximum' animal is Barley
-
             ' </Snippet57>
         End Class
 
@@ -1649,7 +1604,6 @@ Namespace SequenceExamples
             ' This code produces the following output:
             '
             ' The maximum pet age plus name length is 14
-
             ' </Snippet58>
         End Class
 
@@ -1670,7 +1624,6 @@ Namespace SequenceExamples
             ' This code produces the following output:
             '
             ' The smallest number is -2E+103
-
             ' </Snippet60>
         End Sub
 
@@ -1685,7 +1638,6 @@ Namespace SequenceExamples
             ' This code produces the following output:
             '
             ' The lowest grade is 37
-
             ' </Snippet63>
         End Sub
 
@@ -1736,7 +1688,6 @@ Namespace SequenceExamples
             ' This code produces the following output:
             '
             ' The 'minimum' pet is Whiskers
-
             ' </Snippet67>
         End Class
 
@@ -1767,7 +1718,6 @@ Namespace SequenceExamples
             ' This code produces the following output:
             '
             ' The youngest pet is age 1
-
             ' </Snippet68>
         End Class
 
@@ -1821,7 +1771,6 @@ Namespace SequenceExamples
             ' Mango
             ' Orange
             ' Banana
-
             ' </Snippet69>
         End Sub
 #End Region
@@ -1857,7 +1806,6 @@ Namespace SequenceExamples
         ' Whiskers - 1
         ' Boots - 4
         ' Barley - 8
-
         ' </Snippet70>
 
         ' <Snippet140>
@@ -2008,7 +1956,6 @@ Namespace SequenceExamples
         ' 6.3
         ' 1.3
         ' 6.2
-
         ' </Snippet71>
 #End Region
 
@@ -2040,7 +1987,6 @@ Namespace SequenceExamples
             ' 64
             ' 81
             ' 100
-
             ' </Snippet72>
         End Sub
 #End Region
@@ -2077,7 +2023,6 @@ Namespace SequenceExamples
             ' I like programming.
             ' I like programming.
             ' I like programming.
-
             ' </Snippet73>
         End Sub
 #End Region
@@ -2105,8 +2050,7 @@ Namespace SequenceExamples
 
             ' This code produces the following output:
             '
-            ' E L P P a 
-
+            ' E L P P a
             ' </Snippet74>
         End Sub
 #End Region
@@ -2139,7 +2083,6 @@ Namespace SequenceExamples
             ' 64
             ' 81
             ' 100
-
             ' </Snippet75>
         End Sub
 
@@ -2173,7 +2116,6 @@ Namespace SequenceExamples
             ' { index = 3, Str = ora }
             ' { index = 4, Str = pass }
             ' { index = 5, Str = grape }
-
             ' </Snippet76>
         End Sub
 #End Region
@@ -2241,7 +2183,6 @@ Namespace SequenceExamples
             ' Sugar
             ' Scratches
             ' Diesel
-
             ' </Snippet77>
         End Class
 
@@ -2330,7 +2271,6 @@ Namespace SequenceExamples
             ' Owner=Higa, Pet=Sam
             ' Owner=Ashkenazi, Pet=Sugar
             ' Owner=Price, Pet=Scratches
-
             ' </Snippet124>
         End Class
 
@@ -2366,7 +2306,6 @@ Namespace SequenceExamples
             ' This code produces the following output:
             '
             ' The lists are equal.
-
             ' </Snippet32>
         End Class
 
@@ -2396,7 +2335,6 @@ Namespace SequenceExamples
                 ' This code produces the following output:
                 '
                 ' The lists are not equal.
-
                 ' </Snippet33>
             End Sub
         End Class
@@ -2436,7 +2374,6 @@ Namespace SequenceExamples
             '
             ' First query: orange
             ' Second query: The collection does not contain exactly one element.
-
             ' </Snippet80>
         End Sub
 
@@ -2472,7 +2409,6 @@ Namespace SequenceExamples
             '
             ' First query: passionfruit
             ' Second query: There is not EXACTLY ONE element whose length is > 15.
-
             ' </Snippet82>
         End Sub
 #End Region
@@ -2508,7 +2444,6 @@ Namespace SequenceExamples
             '
             ' First array: orange
             ' Second array: No single item found
-
             ' </Snippet84>
         End Sub
 
@@ -2540,7 +2475,6 @@ Namespace SequenceExamples
             '
             ' First array: passionfruit
             ' Second array: No single item found
-
             ' </Snippet86>
         End Sub
 
@@ -2563,7 +2497,6 @@ Namespace SequenceExamples
 
             ' The value of the pageNumber1 variable is 1
             ' The value of the pageNumber2 variable is 1
-
             ' </Snippet128>
         End Sub
 #End Region
@@ -2595,7 +2528,6 @@ Namespace SequenceExamples
             ' 70
             ' 59
             ' 56
-
             ' </Snippet87>
         End Sub
 #End Region
@@ -2626,7 +2558,6 @@ Namespace SequenceExamples
             ' 70
             ' 59
             ' 56
-
             ' </Snippet88>
         End Sub
 
@@ -2654,7 +2585,6 @@ Namespace SequenceExamples
             ' 4000
             ' 1500
             ' 5500
-
             ' </Snippet89>
         End Sub
 #End Region
@@ -2687,7 +2617,6 @@ Namespace SequenceExamples
             ' This code produces the following output:
             '
             ' The total weight of the packages is: 83.7
-
             ' </Snippet98>
         End Class
 
@@ -2706,7 +2635,6 @@ Namespace SequenceExamples
             ' This code produces the following output:
             '
             ' The sum of the numbers is 635.13
-
             ' </Snippet120>
         End Sub
 
@@ -2725,7 +2653,6 @@ Namespace SequenceExamples
             ' This code produces the following output:
             '
             ' Total points earned: 311.39
-
             ' </Snippet121>
         End Sub
 #End Region
@@ -2757,7 +2684,6 @@ Namespace SequenceExamples
             ' 98
             ' 92
             ' 85
-
             ' </Snippet99>
         End Sub
 #End Region
@@ -2787,7 +2713,6 @@ Namespace SequenceExamples
             ' apple
             ' banana
             ' mango
-
             ' </Snippet100>
         End Sub
 
@@ -2820,7 +2745,6 @@ Namespace SequenceExamples
             ' mango
             ' orange
             ' blueberry
-
             ' </Snippet101>
         End Sub
 #End Region
@@ -2857,7 +2781,6 @@ Namespace SequenceExamples
             ' blueberry
             ' raspberry
             ' passionfruit
-
             ' </Snippet102>
         End Sub
 #End Region
@@ -2905,7 +2828,6 @@ Namespace SequenceExamples
         ' ORANGE
         ' baNanA
         ' BAnana
-
         ' </Snippet103>
 #End Region
 
@@ -2946,7 +2868,6 @@ Namespace SequenceExamples
             ' Lucerne Publishing
             ' Wingtip Toys
             ' Adventure Works
-
             ' </Snippet104>
         End Class
 
@@ -2996,7 +2917,6 @@ Namespace SequenceExamples
             ' Key 89112755: Lucerne Publishing, 18.7 pounds
             ' Key 299456122: Wingtip Toys, 6 pounds
             ' Key 4665518773: Adventure Works, 33.8 pounds
-
             ' </Snippet105>
         End Class
 
@@ -3034,7 +2954,6 @@ Namespace SequenceExamples
             ' 9
             ' 5
             ' 10
-
             ' </Snippet106>
         End Sub
 #End Region
@@ -3109,7 +3028,6 @@ Namespace SequenceExamples
         ' Packages from Company names that start with 'C':
         ' Coho Vineyard 89453312
         ' Contoso Pharmaceuticals 670053128
-
         ' </Snippet107>
 #End Region
 
@@ -3141,7 +3059,6 @@ Namespace SequenceExamples
             ' 4 
             ' 1 
             ' 0 
-
             ' </Snippet109>
         End Sub
 #End Region
@@ -3171,7 +3088,6 @@ Namespace SequenceExamples
             ' apple
             ' mango
             ' grape
-
             ' </Snippet110>
         End Sub
 
@@ -3198,7 +3114,6 @@ Namespace SequenceExamples
             ' 20
             ' 15
             ' 40
-
             ' </Snippet111>
         End Sub
 #End Region
