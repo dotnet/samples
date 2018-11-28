@@ -35,12 +35,25 @@ Public Class Product
         Return hashProductName Xor hashProductCode
     End Function
 End Class
-
 '</Snippet1>
 
 Module Module1
 
     Sub Main()
+
+        ' This snippet is different than #2 by using ProductA (not Product).
+        ' Some samples here need to use ProductA in conjunction with
+        ' ProductComparer, which implements IEqualityComparer (not IEquatable).
+        '<Snippet10>
+        Dim store1() As ProductA = 
+            {New Product With {.Name = "apple", .Code = 9}, 
+             New Product With {.Name = "orange", .Code = 4}}
+
+        Dim store2() As ProductA = 
+            {New Product With {.Name = "apple", .Code = 9}, 
+             New Product With {.Name = "lemon", .Code = 12}}
+        '</Snippet10>
+
         ' <Snippet2>
         Dim store1() As Product = 
             {New Product With {.Name = "apple", .Code = 9}, 
@@ -137,15 +150,14 @@ Module Module1
 
         ' This code produces the following output:
         '
+        ' apple 9
         ' orange 4
         ' lemon 12
-
         ' </Snippet7>
 
         ' SEQUENCEEQUAL
 
         ' <Snippet8>
-
         Dim storeA() As Product = 
             {New Product With {.Name = "apple", .Code = 9}, 
              New Product With {.Name = "orange", .Code = 4}}
@@ -165,6 +177,28 @@ Module Module1
 
         Console.ReadLine()
 
-
     End Sub
 End Module
+
+' <Snippet9>
+Public Class ProductA
+    Inherits IEquatable(Of ProductA)
+
+    Public Property Name As String
+    Public Property Code As Integer
+
+    Public Function Equals(ByVal other As ProductA) As Boolean
+        If other Is Nothing Then Return False
+        Return Me.Name = other.Name AndAlso Me.Code = other.Code
+    End Function
+
+    Public Overrides Function Equals(ByVal obj As Object) As Boolean
+        Return Equals(TryCast(obj, ProductA))
+    End Function
+
+    Public Overrides Function GetHashCode() As Integer
+        Return (Name, Code).GetHashCode()
+    End Function
+
+End Class
+' </Snippet9>
