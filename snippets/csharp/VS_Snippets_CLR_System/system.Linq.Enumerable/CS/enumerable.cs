@@ -31,8 +31,7 @@ namespace SequenceExamples
 
             // This code produces the following output:
             //
-            // dog lazy the over jumps fox brown quick the 
-
+            // dog lazy the over jumps fox brown quick the
             // </Snippet1>
         }
         static void AggregateEx2()
@@ -48,8 +47,7 @@ namespace SequenceExamples
 
             // This code produces the following output:
             //
-            // The number of even integers is: 6 
-
+            // The number of even integers is: 6
             // </Snippet2>
         }
         static void AggregateEx3()
@@ -71,8 +69,7 @@ namespace SequenceExamples
 
             // This code produces the following output:
             //
-            // The fruit with the longest name is PASSIONFRUIT. 
-
+            // The fruit with the longest name is PASSIONFRUIT.
             // </Snippet3>
         }
         #endregion
@@ -106,8 +103,7 @@ namespace SequenceExamples
 
             // This code produces the following output:
             //
-            //  Not all pet names start with 'B'. 
-
+            //  Not all pet names start with 'B'.
             // </Snippet4>
         }
 
@@ -176,8 +172,7 @@ namespace SequenceExamples
 
                 // This code produces the following output:
                 //
-                // The list is not empty. 
-
+                // The list is not empty.
                 // </Snippet5>
             }
 
@@ -258,8 +253,7 @@ namespace SequenceExamples
 
             // This code produces the following output:
             //
-            //  There are unvaccinated animals over age one. 
-
+            //  There are unvaccinated animals over age one.
             // </Snippet6>
         }
         #endregion
@@ -308,7 +302,6 @@ namespace SequenceExamples
         // query1 has been created.
         //
         // query2 has been created.
-
         // </Snippet108> 
         #endregion
 
@@ -324,8 +317,7 @@ namespace SequenceExamples
 
             // This code produces the following output:
             //
-            // The average grade is 77.6. 
-
+            // The average grade is 77.6.
             // </Snippet8>
         }
 
@@ -340,8 +332,7 @@ namespace SequenceExamples
 
             // This code produces the following output:
             //
-            // The average is 133282081426.333. 
-
+            // The average is 133282081426.333.
             // </Snippet12>
         }
 
@@ -356,8 +347,7 @@ namespace SequenceExamples
 
             // This code produces the following output:
             //
-            // The average is 99948748093. 
-
+            // The average is 99948748093.
             // </Snippet16>
         }
 
@@ -372,8 +362,7 @@ namespace SequenceExamples
 
             // This code produces the following output:
             //
-            // The average string length is 6.5. 
-
+            // The average string length is 6.5.
             // </Snippet18>
         }
         #endregion
@@ -456,7 +445,6 @@ namespace SequenceExamples
             // Bounder
             // Snoopy
             // Fido
-
             // </Snippet20>
 
             public static void ConcatEx2()
@@ -482,7 +470,6 @@ namespace SequenceExamples
                 // Bounder
                 // Snoopy
                 // Fido
-
                 // </Snippet112>
             }
         }
@@ -505,8 +492,7 @@ namespace SequenceExamples
 
             // This code produces the following output:
             //
-            // The array does contain 'mango'. 
-
+            // The array does contain 'mango'.
             // </Snippet21>
         }
         #endregion
@@ -533,8 +519,7 @@ namespace SequenceExamples
 
             // This code produces the following output:
             //
-            // There are 6 fruits in the collection. 
-
+            // There are 6 fruits in the collection.
             // </Snippet22>
         }
 
@@ -568,7 +553,6 @@ namespace SequenceExamples
             // This code produces the following output:
             //
             // There are 2 unvaccinated animals.
-
             // </Snippet23>
         }
         #endregion
@@ -603,7 +587,6 @@ namespace SequenceExamples
              Boots
              Whiskers
             */
-
             // </Snippet24>
         }
 
@@ -622,7 +605,6 @@ namespace SequenceExamples
             
              0
             */
-
             // </Snippet25>
         }
 
@@ -666,7 +648,6 @@ namespace SequenceExamples
 
              Name: Default Pet
             */
-
             // </Snippet26>
         }
         #endregion
@@ -695,7 +676,6 @@ namespace SequenceExamples
              55
              17
             */
-
             // </Snippet27>
         }
         #endregion
@@ -719,7 +699,6 @@ namespace SequenceExamples
             
              The name chosen at random is 'Ito, Shu'.
             */
-
             // </Snippet28>
         }
         #endregion
@@ -746,7 +725,6 @@ namespace SequenceExamples
             
              The name chosen at index 20 is '<no name at this index>'.
             */
-
             // </Snippet29>
         }
         #endregion
@@ -794,7 +772,6 @@ namespace SequenceExamples
              Potra, Cristina
              Iallo, Lucio
             */
-
             // </Snippet31>
         }
         #endregion
@@ -820,7 +797,6 @@ namespace SequenceExamples
              2.4
              2.5
             */
-
             // </Snippet34>
         }
         #endregion
@@ -841,7 +817,6 @@ namespace SequenceExamples
             
              9
             */
-
             // </Snippet35>
         }
 
@@ -860,7 +835,6 @@ namespace SequenceExamples
             
              92
             */
-
             // </Snippet36>
         }
         #endregion
@@ -878,7 +852,6 @@ namespace SequenceExamples
             
              0
             */
-
             // </Snippet37>
         }
 
@@ -905,7 +878,6 @@ namespace SequenceExamples
              The first long name is 'Andersen, Henriette Thaulow'.
              There is not a name longer than 30 characters.
             */
-
             // </Snippet38>
         }
 
@@ -932,7 +904,6 @@ namespace SequenceExamples
              The value of the firstMonth1 variable is 1
              The value of the firstMonth2 variable is 1
             */
-
             // </Snippet126>
         }
         #endregion
@@ -985,7 +956,6 @@ namespace SequenceExamples
              1
                Whiskers
             */
-
             // </Snippet39>
 
             // Uses query expression syntax.
@@ -1079,7 +1049,6 @@ namespace SequenceExamples
                     Maximum age: 1.5
                 */
             }
-
             // </Snippet15>
         }
 
@@ -1144,7 +1113,6 @@ namespace SequenceExamples
                     Maximum age: 1.5
                 */
             }
-
             // </Snippet125>
         }
         #endregion
@@ -1215,7 +1183,6 @@ namespace SequenceExamples
              Weiss, Charlotte:
                Whiskers
             */
-
             // </Snippet40>
 
             // Uses query syntax.
@@ -1276,7 +1243,6 @@ namespace SequenceExamples
              26
              30
             */
-
             // </Snippet41>
         }
         #endregion
@@ -1337,7 +1303,6 @@ namespace SequenceExamples
              Adams, Terry - Boots
              Weiss, Charlotte - Whiskers
             */
-
             // </Snippet42>
         }
         #endregion
@@ -1358,7 +1323,6 @@ namespace SequenceExamples
             
              19
             */
-
             // </Snippet43>
         }
 
@@ -1377,7 +1341,6 @@ namespace SequenceExamples
             
              87
             */
-
             // </Snippet44>
         }
         #endregion
@@ -1396,7 +1359,6 @@ namespace SequenceExamples
             
              <string is null or empty>
             */
-
             // </Snippet45>
         }
 
@@ -1421,7 +1383,6 @@ namespace SequenceExamples
              The last number that rounds to 50 is 50.2.
              The last number that rounds to 40 is <DOES NOT EXIST>.
             */
-
             // </Snippet46>
         }
 
@@ -1468,7 +1429,6 @@ namespace SequenceExamples
             
              There are 6 fruits in the collection.
             */
-
             // </Snippet47>
         }
 
@@ -1499,7 +1459,6 @@ namespace SequenceExamples
             
              There are 2 animals over age 3.
             */
-
             // </Snippet48>
         }
         #endregion
@@ -1519,7 +1478,6 @@ namespace SequenceExamples
             
              The largest number is 4294967296.
             */
-
             // </Snippet52>
         }
 
@@ -1537,7 +1495,6 @@ namespace SequenceExamples
             
              The largest number is 1.5E+104.
             */
-
             // </Snippet54>
         }
 
@@ -1593,7 +1550,6 @@ namespace SequenceExamples
             
              The 'maximum' animal is Barley.
             */
-
             // </Snippet57>
         }
 
@@ -1624,7 +1580,6 @@ namespace SequenceExamples
             
              The maximum pet age plus name length is 14.
             */
-
             // </Snippet58>
         }
 
@@ -1645,7 +1600,6 @@ namespace SequenceExamples
             
              The smallest number is -2E+103.
             */
-
             // </Snippet60>
         }
 
@@ -1663,7 +1617,6 @@ namespace SequenceExamples
             
              The lowest grade is 37.
             */
-
             // </Snippet63>
         }
 
@@ -1715,7 +1668,6 @@ namespace SequenceExamples
             
              The 'minimum' animal is Whiskers.
             */
-
             // </Snippet67>
         }
 
@@ -1744,7 +1696,6 @@ namespace SequenceExamples
             
              The youngest animal is age 1.  
             */
-
             // </Snippet68>
         }
         #endregion
@@ -1792,7 +1743,6 @@ namespace SequenceExamples
             // Mango
             // Orange
             // Banana
-
             // </Snippet69>
         }
         #endregion
@@ -1828,7 +1778,6 @@ namespace SequenceExamples
              Boots - 4
              Barley - 8
             */
-
             // </Snippet70>
         }
 
@@ -1989,7 +1938,6 @@ namespace SequenceExamples
              1.3
              6.2
             */
-
             // </Snippet71>
         }
         #endregion
@@ -2021,7 +1969,6 @@ namespace SequenceExamples
              81
              100
             */
-
             // </Snippet72>
         }
         #endregion
@@ -2057,7 +2004,6 @@ namespace SequenceExamples
              I like programming.
              I like programming.
             */
-
             // </Snippet73>
         }
         #endregion
@@ -2081,7 +2027,6 @@ namespace SequenceExamples
             
              e l p p a
             */
-
             // </Snippet74>
         }
         #endregion
@@ -2111,7 +2056,6 @@ namespace SequenceExamples
              81
              100
             */
-
             // </Snippet75>
         }
 
@@ -2140,7 +2084,6 @@ namespace SequenceExamples
              {index=4, str=pass}
              {index=5, str=grape}
             */
-
             // </Snippet76>
         }
         #endregion
@@ -2219,7 +2162,6 @@ namespace SequenceExamples
              Scratches
              Diesel
             */
-
             // </Snippet77>
         }
 
@@ -2266,7 +2208,6 @@ namespace SequenceExamples
             // 2Scratches
             // 2Diesel
             // 3Dusty
-
             // </Snippet78>
         }
 
@@ -2317,7 +2258,6 @@ namespace SequenceExamples
             // {Owner=Higa, Pet=Sam}
             // {Owner=Ashkenazi, Pet=Sugar}
             // {Owner=Price, Pet=Scratches}
-
             // </Snippet124>
         }
         #endregion
@@ -2353,7 +2293,6 @@ namespace SequenceExamples
             
              The lists are equal.
             */
-
             // </Snippet32>
         }
 
@@ -2387,7 +2326,6 @@ namespace SequenceExamples
             
              The lists are not equal.
             */
-
             // </Snippet33>
         }
         #endregion
@@ -2407,7 +2345,6 @@ namespace SequenceExamples
             
              orange
             */
-
             // </Snippet79>
 
             // <Snippet80>
@@ -2430,7 +2367,6 @@ namespace SequenceExamples
             
              The collection does not contain exactly one element.
             */
-
             // </Snippet80>
         }
 
@@ -2452,7 +2388,6 @@ namespace SequenceExamples
             
              passionfruit
             */
-
             // </Snippet81>
 
             // <Snippet82>
@@ -2474,7 +2409,6 @@ namespace SequenceExamples
             //
             // The collection does not contain exactly  
             // one element whose length is greater than 15.
-
             // </Snippet82>
         }
         #endregion
@@ -2494,7 +2428,6 @@ namespace SequenceExamples
             
              orange
             */
-
             // </Snippet83>
 
             // <Snippet84>
@@ -2510,7 +2443,6 @@ namespace SequenceExamples
             
              No such string!
             */
-
             // </Snippet84>
         }
 
@@ -2529,7 +2461,6 @@ namespace SequenceExamples
             
              passionfruit
             */
-
             // </Snippet85>
 
             // <Snippet86>
@@ -2544,7 +2475,6 @@ namespace SequenceExamples
             
              No such string!
             */
-
             // </Snippet86>
         }
 
@@ -2571,7 +2501,6 @@ namespace SequenceExamples
              The value of the pageNumber1 variable is 1
              The value of the pageNumber2 variable is 1
             */
-
             // </Snippet128>
         }
         #endregion
@@ -2600,7 +2529,6 @@ namespace SequenceExamples
              59
              56
             */
-
             // </Snippet87>
         }
         #endregion
@@ -2630,7 +2558,6 @@ namespace SequenceExamples
              59
              56
             */
-
             // </Snippet88>
         }
 
@@ -2655,7 +2582,6 @@ namespace SequenceExamples
              1500
              5500
             */
-
             // </Snippet89>
         }
         #endregion
@@ -2689,7 +2615,6 @@ namespace SequenceExamples
             
              The total weight of the packages is: 83.7
             */
-
             // </Snippet98>
         }
 
@@ -2707,7 +2632,6 @@ namespace SequenceExamples
             
              The sum of the numbers is 635.13.
             */
-
             // </Snippet120>
         }
 
@@ -2725,7 +2649,6 @@ namespace SequenceExamples
             
              Total points earned: 311.39
             */
-
             // </Snippet121>
         }
 
@@ -2753,7 +2676,6 @@ namespace SequenceExamples
              92
              85
             */
-
             // </Snippet99>
         }
         #endregion
@@ -2780,7 +2702,6 @@ namespace SequenceExamples
              banana
              mango
             */
-
             // </Snippet100>
         }
 
@@ -2808,7 +2729,6 @@ namespace SequenceExamples
              orange
              blueberry
             */
-
             // </Snippet101>
         }
         #endregion
@@ -2843,7 +2763,6 @@ namespace SequenceExamples
                 raspberry
                 passionfruit
             */
-
             // </Snippet102>
         }
         #endregion
@@ -2890,7 +2809,6 @@ namespace SequenceExamples
                 baNanA
                 BAnana
             */
-
             // </Snippet103>
         }
         #endregion
@@ -2930,7 +2848,6 @@ namespace SequenceExamples
              Wingtip Toys
              Adventure Works
             */
-
             // </Snippet104>
         }
         #endregion
@@ -2979,7 +2896,6 @@ namespace SequenceExamples
              Key 299456122: Wingtip Toys, 6 pounds
              Key 4665518773: Adventure Works, 33.8 pounds
             */
-
             // </Snippet105>
         }
         #endregion
@@ -3010,7 +2926,6 @@ namespace SequenceExamples
              5
              10
             */
-
             // </Snippet106>
         }
         #endregion
@@ -3076,7 +2991,6 @@ namespace SequenceExamples
                  Wingtip Toys 299456122
                  Wide World Importers 4665518773
             */
-
             // </Snippet107>
         }
         #endregion
@@ -3100,7 +3014,6 @@ namespace SequenceExamples
             
              5 3 9 7 8 6 4 1 0
             */
-
             // </Snippet109>
 
             Console.WriteLine();
@@ -3128,7 +3041,6 @@ namespace SequenceExamples
              mango
              grape
             */
-
             // </Snippet110>
         }
 
@@ -3152,7 +3064,6 @@ namespace SequenceExamples
              15
              40
             */
-
             // </Snippet111>
         }
         #endregion
@@ -3174,7 +3085,6 @@ namespace SequenceExamples
             // 1 one
             // 2 two
             // 3 three
-
             // </Snippet200>
         }
         #endregion
