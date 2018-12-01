@@ -11,7 +11,7 @@ Demonstrates how to consume Office PIAs in the .NET Core 3.0 Preview 1 timeframe
 - Embedding of Interop types (i.e. [No-PIA](https://docs.microsoft.com/en-us/dotnet/framework/interop/type-equivalence-and-embedded-interop-types)).
 - Support for the [`IDispatch`](https://docs.microsoft.com/en-us/windows/desktop/winauto/idispatch-interface) interface.
 
-**Note** Adding COM references to .NET Core projects from Visual Studio is not currently supported. The work around is to create a .NET Framework project, add the COM references, and then copy the relevant `COMReference` elements in the project. See `ExcelDemo.csproj` for further details.
+**Note** Adding COM references to .NET Core projects from Visual Studio is not currently supported. The workaround is to create a .NET Framework project, add the COM references, and then copy the relevant `COMReference` elements in the project. See `ExcelDemo.csproj` for further details.
 
 Build and Run
 -------------
