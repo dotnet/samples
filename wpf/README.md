@@ -13,7 +13,7 @@ If you're new to .NET Core, here are a few resources to help you understand the 
 Coming soon!
 
 ## Additional Samples
-Please visit [WPF Samples](https://www.github.com/Microsoft/wpf-samples) repo for additional WPF Samples that have been updated to target .NET Core 3.0. 
+See [WPF Samples](https://www.github.com/Microsoft/wpf-samples) repo for additional WPF samples that have been updated to target .NET Core 3.0. 
 
 ## Getting Started
 
