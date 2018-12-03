@@ -6,7 +6,7 @@ This is the basic Excel demo sample in .NET Core. It is designed to work with .N
 Key Features
 ------------
 
-Demonstrates how to consume Office PIAs in the .NET Core 3.0 Preview 1 timeframe.
+Demonstrates how to consume Office Primary Interop Assemblies (PIA) with .NET Core 3.0 Preview 1.
 
 - Embedding of Interop types (i.e. [No-PIA](https://docs.microsoft.com/en-us/dotnet/framework/interop/type-equivalence-and-embedded-interop-types)).
 - Support for the [`IDispatch`](https://docs.microsoft.com/en-us/windows/desktop/winauto/idispatch-interface) interface.
