@@ -15,6 +15,9 @@ namespace ReaderSample
 
         public static void Main(string[] args)
         {
+            // The JSON data used for the samples was borrowed from https://github.com/Hipo/university-domains-list
+            // under the MIT License (MIT).
+
             string outputMessage = SyncFileExample("world_universities_and_domains.json");
             Console.WriteLine("Reading JSON from file, sync: " + outputMessage);
 
