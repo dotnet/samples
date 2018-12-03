@@ -105,6 +105,7 @@ namespace ReaderSample
 
         public static async Task<(int count, int total)> ReadJsonFromStreamUsingSpan(Stream stream)
         {
+            // Assumes all JSON strings in the payload are small (say < 500 bytes)
             var _buffer = new byte[1_024];
             int count = 0;
             int total = 0;
@@ -122,6 +123,9 @@ namespace ReaderSample
                 bool isFinalBlock = dataSize == 0;
                 (state, partialCount, partialTotalCount) = PartialCountUniversityOf(_buffer.AsSpan(0, dataSize), isFinalBlock, ref foundName, state);
 
+                // Based on your scenario and input data, you may need to grow your _buffer here
+                // It's possible that leftOver == dataSize (if a JSON token is too large)
+                // so you need to resize and read more than 1_024 bytes.
                 leftOver = dataSize - (int)state.BytesConsumed;
                 if (leftOver != 0)
                 {
