@@ -1,7 +1,7 @@
 Excel Demo
 ================
 
-This is the basic Excel demo sample in .NET Core. It is designed to work with .NET Core 3.0 and beyond. The code example is a modification of the existing Office example of how to use [C# for Excel automation](https://support.microsoft.com/en-us/help/302084/how-to-automate-microsoft-excel-from-microsoft-visual-c-net).
+This is a basic Excel demo sample in .NET Core. It is designed to work with .NET Core 3.0. It is based on the [How to automate Microsoft Excel from Microsoft Visual C#.NET](https://support.microsoft.com/en-us/help/302084/how-to-automate-microsoft-excel-from-microsoft-visual-c-net) sample for .NET Framework.
 
 Key Features
 ------------
