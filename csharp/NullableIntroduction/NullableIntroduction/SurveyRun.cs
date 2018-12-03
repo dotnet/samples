@@ -7,18 +7,19 @@ namespace NullableIntroduction
     public class SurveyRun
     {
         private List<SurveyQuestion> surveyQuestions = new List<SurveyQuestion>();
-        private List<SurveyResponse>? respondents;
 
-        // snippet
+        // <SnippetRunReport>
         public IEnumerable<SurveyResponse> AllParticipants => (respondents ?? Enumerable.Empty<SurveyResponse>());
         public ICollection<SurveyQuestion> Questions => surveyQuestions;
         public SurveyQuestion GetQuestion(int index) => surveyQuestions[index];
-        // end
+        // </SnippetRunReport>
 
         public void AddQuestion(QuestionType type, string question) =>
             AddQuestion(new SurveyQuestion(type, question));
         public void AddQuestion(SurveyQuestion surveyQuestion) => surveyQuestions.Add(surveyQuestion);
 
+        // <SnippetPerformSurvey>
+        private List<SurveyResponse>? respondents;
         public void PerformSurvey(int numberOfRespondents)
         {
             int repondentsConsenting = 0;
@@ -31,5 +32,6 @@ namespace NullableIntroduction
                 respondents.Add(respondent);
             }
         }
+        // </SnippetPerformSurvey>
     }
 }

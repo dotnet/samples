@@ -7,16 +7,21 @@ namespace NullableIntroduction
 {
     public class SurveyResponse
     {
+        // <SnippetRandom>
         private static readonly Random randomGenerator = new Random();
         public static SurveyResponse GetRandomId() => new SurveyResponse(randomGenerator.Next());
+        // </SnippetRandom>
 
         public int Id { get; }
 
+        // <SnippetSurveyStatus>
         public bool AnsweredSurvey => surveyResponses != null;
-        public string Answer(int index) => surveyResponses.GetValueOrDefault(index, "No answer");
+        public string Answer(int index) => surveyResponses.GetValueOrDefault(index, "No answer")!;
+        // </SnippetSurveyStatus>
 
         public SurveyResponse(int id) => Id = id;
 
+        // <SnippetAnswerSurvey>
         private Dictionary<int, string>? surveyResponses;
         public bool AnswerSurvey(IEnumerable<SurveyQuestion> questions)
         {
@@ -65,5 +70,6 @@ namespace NullableIntroduction
                     return "Red. No, Green. Wait.. Blue... AAARGGGGGHHH!";
             }
         }
+        // </SnippetAnswerSurvey>
     }
 }
