@@ -13,7 +13,7 @@ namespace ReaderSample
         private static readonly byte[] s_nameUtf8 = Encoding.UTF8.GetBytes("name");
         private static readonly byte[] s_universityOfUtf8 = Encoding.UTF8.GetBytes("University of");
 
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             // The JSON data used for the samples was borrowed from https://github.com/Hipo/university-domains-list
             // under the MIT License (MIT).
@@ -21,9 +21,9 @@ namespace ReaderSample
             string outputMessage = SyncFileExample("world_universities_and_domains.json");
             Console.WriteLine("Reading JSON from file, sync: " + outputMessage);
 
-            outputMessage = AsyncWebExample(@"http://universities.hipolabs.com/search?country=United%20States").GetAwaiter().GetResult();
+            outputMessage = await AsyncWebExample(@"http://universities.hipolabs.com/search?country=United%20States");
             Console.WriteLine("Reading JSON from web, async: " + outputMessage);
-            outputMessage = AsyncWebExample(@"http://universities.hipolabs.com/search?", worldWide: true).GetAwaiter().GetResult();
+            outputMessage = await AsyncWebExample(@"http://universities.hipolabs.com/search?", worldWide: true);
             Console.WriteLine("Reading JSON from web, async: " + outputMessage);
         }
 
@@ -118,7 +118,8 @@ namespace ReaderSample
 
             while (true)
             {
-                int dataLength = await stream.ReadAsync(_buffer, leftOver, _buffer.Length - leftOver);
+                // The Memory<byte> ReadAsync overload returns ValueTask which is allocation-free
+                int dataLength = await stream.ReadAsync(_buffer.AsMemory(leftOver, _buffer.Length - leftOver));
                 int dataSize = dataLength + leftOver;
                 bool isFinalBlock = dataSize == 0;
                 (state, partialCount, partialTotalCount) = PartialCountUniversityOf(_buffer.AsSpan(0, dataSize), isFinalBlock, ref foundName, state);
