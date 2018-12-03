@@ -6,7 +6,8 @@
   </PropertyGroup>
   
   <!--
-    The 'COMReference' tags below were copied from a .NET Framework project that were inserted by Visual Studio.
+    The following 'COMReference' items were copied from a .NET Framework project. They were added by using the Visual Studio COM References window. See https://docs.microsoft.com/en-us/visualstudio/ide/managing-references-in-a-project?view=vs-2017.
+
     Observe the 'EmbedInteropTypes' tag value.
     See https://docs.microsoft.com/en-us/visualstudio/msbuild/common-msbuild-project-items?view=vs-2017#comreference
   -->
