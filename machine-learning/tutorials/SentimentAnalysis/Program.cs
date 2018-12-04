@@ -87,7 +87,7 @@ namespace SentimentAnalysis
 
             // Adds a FastTreeBinaryClassificationTrainer, the decision tree learner for this project  
             // <Snippet8> 
-                    .Append(mlContext.BinaryClassification.Trainers.FastTree(numLeaves: 50, numTrees: 50, minDatapointsInLeafs: 20));
+                    .Append(mlContext.BinaryClassification.Trainers.FastTree(numLeaves: 50, numTrees: 50, minDatapointsInLeaves: 20));
             // </Snippet8>
 
             // Create and train the model based on the dataset that has been loaded, transformed.

@@ -111,9 +111,7 @@ namespace usingstatement
             }
             // font2 is still in scope
             // but the method call throws an exception
-            float f = font2.GetHeight(); 
-
-
+            float f = font2.GetHeight();
             //</snippet7>
     }
 }
