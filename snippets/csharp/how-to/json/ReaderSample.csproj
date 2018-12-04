@@ -6,9 +6,4 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
-    <PackageReference Include="System.IO.Pipelines" Version="4.5.2" />
-  </ItemGroup>
-
 </Project>
