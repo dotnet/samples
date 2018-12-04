@@ -13,7 +13,7 @@ public struct LaunchStatus
         this.status = status;
     }
 
-    public static bool operator true(LaunchStatus x) => x == Green;
+    public static bool operator true(LaunchStatus x) => x == Green || x == Yellow;
     public static bool operator false(LaunchStatus x) => x == Red;
 
     public static LaunchStatus operator &(LaunchStatus x, LaunchStatus y)
@@ -21,6 +21,11 @@ public struct LaunchStatus
         if (x == Red || y == Red || (x == Yellow && y == Yellow))
         {
             return Red;
+        }
+
+        if (x == Yellow || y == Yellow)
+        {
+            return Yellow;
         }
 
         return Green;
