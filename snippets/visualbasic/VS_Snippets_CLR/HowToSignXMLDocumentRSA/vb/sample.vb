@@ -33,24 +33,21 @@ Module SignXML
             ' <snippet13>
             xmlDoc.Save("test.xml")
             ' </snippet13>
-
-
         Catch e As Exception
             Console.WriteLine(e.Message)
         End Try
-
     End Sub
 
     ' Sign an XML file. 
     ' This document cannot be verified unless the verifying 
     ' code has the key with which it was signed.
-    Sub SignXml(ByVal xmlDoc As XmlDocument, ByVal key As RSA)
+    Sub SignXml(ByVal xmlDoc As XmlDocument, ByVal rsaKey As RSA)
         ' Check arguments.
         If xmlDoc Is Nothing Then
-            Throw New ArgumentException("xmlDoc")
+            Throw New ArgumentException(NameOf(xmlDoc))
         End If
-        If key Is Nothing Then
-            Throw New ArgumentException("key")
+        If rsaKey Is Nothing Then
+            Throw New ArgumentException(NameOf(rsaKey))
         End If
         ' Create a SignedXml object.
         ' <snippet5>
@@ -58,7 +55,7 @@ Module SignXML
         ' </snippet5>
         ' Add the key to the SignedXml document.
         ' <snippet6>
-        signedXml.SigningKey = key
+        signedXml.SigningKey = rsaKey
         ' </snippet6>
         ' <snippet7>
         ' Create a reference to be signed.
