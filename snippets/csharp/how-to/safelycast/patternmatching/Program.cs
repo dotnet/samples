@@ -25,15 +25,13 @@ namespace patternmatching
 
             TestForMammals(g);
 
-            // Use the as operator to test
-            // an incompatible type.
             SuperNova sn = new SuperNova();
             TestForMammals(sn);
         }
 
         static void FeedMammals(Animal a)
         {
-            // Use the is operator to verify the type.
+            // Use the is operator to verify the type
             // before performing a cast.
             if (a is Mammal m)
             {
@@ -43,7 +41,7 @@ namespace patternmatching
 
         static void TestForMammals(object o)
         {
-            // Use the as operator and test for null
+            // Alternatively, use the as operator and test for null
             // before referencing the variable.
             if (o is Mammal m)
             {
