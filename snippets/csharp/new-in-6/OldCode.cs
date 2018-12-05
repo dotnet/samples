@@ -30,11 +30,13 @@ namespace OldStyle
 
 namespace ReadOnlyOldStyle
 {
+    // <Student>
     public class Student
     {
         // <ClassicReadOnlyAutoProperty>
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
+        public ICollection<double> Grades { get; private set; }
         // </ClassicReadOnlyAutoProperty>
 
         // <Construction>
@@ -42,7 +44,9 @@ namespace ReadOnlyOldStyle
         {
             FirstName = firstName;
             LastName = lastName;
+            Grades = new List<double>();
         }
         // </Construction>
     }
+    // </Student>
 }
