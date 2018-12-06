@@ -6,7 +6,6 @@ using System.Xml;
 
 public class SignXML
 {
-
     public static void Main(String[] args)
     {
         try
@@ -41,9 +40,6 @@ public class SignXML
             // <snippet13>
             xmlDoc.Save("test.xml");
             // </snippet13>
-
-
-
         }
         catch (Exception e)
         {
@@ -51,17 +47,16 @@ public class SignXML
         }
     }
 
-
     // Sign an XML file. 
     // This document cannot be verified unless the verifying 
     // code has the key with which it was signed.
-    public static void SignXml(XmlDocument xmlDoc, RSA key)
+    public static void SignXml(XmlDocument xmlDoc, RSA rsaKey)
     {
         // Check arguments.
         if (xmlDoc == null)
-            throw new ArgumentException("xmlDoc");
-        if (key == null)
-            throw new ArgumentException("key");
+            throw new ArgumentException(nameof(xmlDoc));
+        if (rsaKey == null)
+            throw new ArgumentException(nameof(rsaKey));
 
         // Create a SignedXml object.
         // <snippet5>
@@ -70,7 +65,7 @@ public class SignXML
 
         // Add the key to the SignedXml document.
         // <snippet6>
-        signedXml.SigningKey = key;
+        signedXml.SigningKey = rsaKey;
         // </snippet6>
 
         // <snippet7>
@@ -105,7 +100,6 @@ public class SignXML
         // <snippet12>
         xmlDoc.DocumentElement.AppendChild(xmlDoc.ImportNode(xmlDigitalSignature, true));
         // </snippet12>
-
     }
 }
 // </snippet1>
