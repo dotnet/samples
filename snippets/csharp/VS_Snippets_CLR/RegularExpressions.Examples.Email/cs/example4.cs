@@ -7,16 +7,19 @@ public class RegexUtilities
 {
     public static bool IsValidEmail(string email)
     {
-        if (string.IsNullOrEmpty(email))
+        if (string.IsNullOrWhitespace(email))
             return false;
 
-        // Use IdnMapping class to convert Unicode domain names.
         try
         {
+            // Normalize the domain
+            email = Regex.Replace(email, @"(@)(.+)$", DomainMapper,
+                                  RegexOptions.None, TimeSpan.FromMilliseconds(200));
+
             // Examines the domain part of the email and normalizes it.
             string DomainMapper(Match match)
             {
-                // IdnMapping class with default property values.
+                // Use IdnMapping class to convert Unicode domain names.
                 var idn = new IdnMapping();
 
                 // Pull out and process domain name (throws ArgumentException on invalid)
@@ -24,17 +27,12 @@ public class RegexUtilities
 
                 return match.Groups[1].Value + domainName;
             }
-
-            // Normalize the domain
-            email = Regex.Replace(email, @"(@)(.+)$", DomainMapper,
-                                  RegexOptions.None, TimeSpan.FromMilliseconds(200));
         }
         catch (Exception e) when (e is RegexMatchTimeoutException || e is ArgumentException)
         {
             return false;
         }
 
-        // Return true if email is valid
         try
         {
             return Regex.IsMatch(email,
@@ -51,25 +49,28 @@ public class RegexUtilities
 // </Snippet7>
 
 // <Snippet8>
-public class Application
+class Program
 {
-   public static void Main()
-   {
-      string[] emailAddresses = { "david.jones@proseware.com", "d.j@server1.proseware.com",
-                                  "jones@ms1.proseware.com", "j.@server1.proseware.com",
-                                  "j@proseware.com9", "js#internal@proseware.com",
-                                  "j_9@[129.126.118.1]", "j..s@proseware.com",
-                                  "js*@proseware.com", "js@proseware..com",
-                                  "js@proseware.com9", "j.s@server1.proseware.com",
-                                   "\"j\\\"s\\\"\"@proseware.com", "js@contoso.中国" };
+    static void Main(string[] args)
+    {
+        string[] emailAddresses = { "david.jones@proseware.com", "d.j@server1.proseware.com",
+                                    "jones@ms1.proseware.com", "j.@server1.proseware.com",
+                                    "j@proseware.com9", "js#internal@proseware.com",
+                                    "j_9@[129.126.118.1]", "j..s@proseware.com",
+                                    "js*@proseware.com", "js@proseware..com",
+                                    "js@proseware.com9", "j.s@server1.proseware.com",
+                                    "\"j\\\"s\\\"\"@proseware.com", "js@contoso.中国" };
 
-      foreach (var emailAddress in emailAddresses) {
-         if (RegexUtilities.IsValidEmail(emailAddress))
-            Console.WriteLine("Valid: {0}", emailAddress);
-         else
-            Console.WriteLine("Invalid: {0}", emailAddress);
-      }                                            
-   }
+        foreach (var emailAddress in emailAddresses)
+        {
+            if (RegexUtilities.IsValidEmail(emailAddress))
+                Console.WriteLine($"Valid:   {emailAddress}");
+            else
+                Console.WriteLine($"Invalid: {emailAddress}");
+        }
+
+        Console.ReadKey();
+    }
 }
 // The example displays the following output:
 //       Valid: david.jones@proseware.com
