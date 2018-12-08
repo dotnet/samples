@@ -1,9 +1,10 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Wpf">
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <AssemblyName>HelloWorld</AssemblyName>
+    <UseWPF>true</UseWPF>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,10 +15,6 @@
   <ItemGroup>
     <Page Include="..\HelloWorldNetFx\MainWindow.xaml" Link="MainWindow.xaml" />
     <Compile Include="..\HelloWorldNetFx\MainWindow.xaml.cs" Link="MainWindow.xaml.cs" />
-  </ItemGroup>
-  
-  <ItemGroup>
-    <FrameworkReference Include="Microsoft.DesktopUI" />
   </ItemGroup>
 
 </Project>
