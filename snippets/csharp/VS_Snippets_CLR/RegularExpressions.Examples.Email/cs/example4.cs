@@ -28,7 +28,11 @@ public class RegexUtilities
                 return match.Groups[1].Value + domainName;
             }
         }
-        catch (Exception e) when (e is RegexMatchTimeoutException || e is ArgumentException)
+        catch (RegexMatchTimeoutException e)
+        {
+            return false;
+        }
+        catch (ArgumentException e)
         {
             return false;
         }
