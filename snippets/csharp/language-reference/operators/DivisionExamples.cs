@@ -29,7 +29,7 @@ namespace operators
 
             int a = 13;
             int b = 5;
-            Console.WriteLine(a / (double)b);  // output: 2.6
+            Console.WriteLine((double)a / b);  // output: 2.6
             // </SnippetIntegerAsFloatingPoint>
         }
 
