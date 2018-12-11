@@ -29,14 +29,7 @@ namespace HowToStrings
             string root2 = @"C:\Users";
 
             bool result = root.Equals(root2);
-            int comparison = root.CompareTo(root2);
             Console.WriteLine($"Ordinal comparison: <{root}> and <{root2}> are {(result ? "equal." : "not equal.")}");
-            if (comparison < 0)
-                Console.WriteLine($"<{root}> is less than <{root2}>");
-            else if (comparison > 0)
-                Console.WriteLine($"<{root}> is greater than <{root2}>");
-            else
-                Console.WriteLine($"<{root}> and <{root2}> are equivalent in order");
 
             result = root.Equals(root2, StringComparison.Ordinal);
             Console.WriteLine($"Ordinal comparison: <{root}> and <{root2}> are {(result ? "equal." : "not equal.")}");
@@ -53,7 +46,7 @@ namespace HowToStrings
 
             bool result = root.Equals(root2, StringComparison.OrdinalIgnoreCase);
             bool areEqual = String.Equals(root, root2, StringComparison.OrdinalIgnoreCase);
-            int comparison = String.Compare(root, root2, ignoreCase: true);
+            int comparison = String.Compare(root, root2, comparisonType: StringComparison.OrdinalIgnoreCase);
 
             Console.WriteLine($"Ordinal ignore case: <{root}> and <{root2}> are {(result ? "equal." : "not equal.")}");
             Console.WriteLine($"Ordinal static ignore case: <{root}> and <{root2}> are {(areEqual ? "equal." : "not equal.")}");
@@ -118,15 +111,15 @@ namespace HowToStrings
 
             // For culture-sensitive comparisons, use the String.Compare 
             // overload that takes a StringComparison value.
-            int i = String.Compare(first, second, en, System.Globalization.CompareOptions.IgnoreNonSpace);
+            int i = String.Compare(first, second, en, System.Globalization.CompareOptions.None);
             Console.WriteLine($"Comparing in {en.Name} returns {i}.");
 
             var de = new System.Globalization.CultureInfo("de-DE");
-            i = String.Compare(first, second, de, System.Globalization.CompareOptions.IgnoreNonSpace);
+            i = String.Compare(first, second, de, System.Globalization.CompareOptions.None);
             Console.WriteLine($"Comparing in {de.Name} returns {i}.");
 
             bool b = String.Equals(first, second, StringComparison.CurrentCulture);
-            Console.WriteLine($"The two strings {(b == true ? "are" : "are not")} equal.");
+            Console.WriteLine($"The two strings {(b ? "are" : "are not")} equal.");
 
             string word = "coop";
             string words = "co-op";
@@ -137,7 +130,7 @@ namespace HowToStrings
             showComparison(words, other, en);
             void showComparison(string one, string two, System.Globalization.CultureInfo culture)
             {
-                int compareLinguistic = String.Compare(one, two, en, System.Globalization.CompareOptions.IgnoreNonSpace);
+                int compareLinguistic = String.Compare(one, two, en, System.Globalization.CompareOptions.None);
                 int compareOrdinal = String.Compare(one, two, StringComparison.Ordinal);
                 if (compareLinguistic < 0)
                     Console.WriteLine($"<{one}> is less than <{two}> using en-US culture");
