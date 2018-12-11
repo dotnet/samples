@@ -7,7 +7,7 @@ If you're new to .NET Core, here are a few resources to help you understand the 
 * [Video: Modernizing Desktop Apps on Windows 10 with .NET Core 3.0 and much more](https://channel9.msdn.com/events/Build/2018/BRK3501?term=scott%20hunter&pubDate=year&lang-en=true)
 
 ## Quality disclaimer
-.NET Core 3 support for desktop development is not yet in preview. There are early daily builds available supporting WinForms and WPF. You will likely encounter missing tools, bugs, and unexpected behavior. We do not recommend using this SDK and tools for building applications for production scenarios. We do recommend using this SDK and tools to evaluate your how easy it will be to migrate your existing applications, or if you're just interested in trying out the latest upcoming Windows development technology.
+.NET Core 3 support for desktop development is still in preview. You will likely encounter missing tools, bugs, and unexpected behavior. We do not recommend using this SDK and tools for building applications for production scenarios. We do recommend using this SDK and tools to evaluate how easy it will be to migrate your existing applications, or if you're just interested in trying out the latest upcoming Windows development technology.
 
 ## Samples in this repo
 Coming soon!
@@ -18,7 +18,7 @@ Coming soon!
 
 Install Visual Studio 2017 Update 15.8 or higher from [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/), selecting the **.NET desktop development** workload with the options: **.NET Framwork 4.7.2 development tools** and **.NET Core 2.1 development tools**.
 
-Install the latest [.NET Core 3.0 SDK daily build](https://aka.ms/netcore3sdk) available in the [dotnet/code-sdk repo](https://github.com/dotnet/core-sdk).
+Install either the [preview build](https://dotnet.microsoft.com/download/dotnet-core/3.0) of the .NET Core 3.0 SDK or the latest daily build available in the [dotnet/code-sdk repo](https://github.com/dotnet/core-sdk).
 
 
 ### Analyzing your applications for .NET Core 3.0 readiness
