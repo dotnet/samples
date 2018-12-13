@@ -45,10 +45,10 @@ namespace operators
             // </SnippetStringEquality>
         }
 
-        // Rationale for the next snippet.
+        // Rationale for the structure of the next snippet.
         // A method cannot contain a class definition. Thus, a standard way to include snippet doesn't work.
         // We want snippets to be interactive. Thus, the whole snippet has a structure of the console program.
-        // (Running the code without the ReferenceTypesEquality class doesn't produce any output.)
+        // (Running the code without the ReferenceTypesEquality class doesn't produce any output in the interactive Output control.)
 
         // <SnippetReferenceTypesEquality>
         public class ReferenceTypesEquality
