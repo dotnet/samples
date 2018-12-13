@@ -13,7 +13,7 @@ namespace operators
             StringEquality();
 
             Console.WriteLine("Reference types:");
-            ReferenceTypeEquality.Main();
+            ReferenceTypesEquality.Main();
 
             Console.WriteLine("Non equality:");
             NonEquality();
@@ -40,7 +40,7 @@ namespace operators
             string s2 = "HeLLo!";
             Console.WriteLine(s1 == s2.ToLower());  // output: True
 
-            string s3 = "hello! ";
+            string s3 = "Hello!";
             Console.WriteLine(s1 == s3);  // output: False
             // </SnippetStringEquality>
         }
@@ -48,10 +48,10 @@ namespace operators
         // Rationale for the next snippet.
         // A method cannot contain a class definition. Thus, a standard way to include snippet doesn't work.
         // We want snippets to be interactive. Thus, the whole snippet has a structure of the console program.
-        // (Running the code without the ReferenceTypeEquality class doesn't produce any output.)
+        // (Running the code without the ReferenceTypesEquality class doesn't produce any output.)
 
-        // <SnippetReferencyTypeEquality>
-        public class ReferenceTypeEquality
+        // <SnippetReferenceTypesEquality>
+        public class ReferenceTypesEquality
         {
             public class MyClass
             {
@@ -69,7 +69,7 @@ namespace operators
                 Console.WriteLine(a == c);  // output: True
             }
         }
-        // </SnippetReferencyTypeEquality>
+        // </SnippetReferenceTypesEquality>
 
         private static void NonEquality()
         {
