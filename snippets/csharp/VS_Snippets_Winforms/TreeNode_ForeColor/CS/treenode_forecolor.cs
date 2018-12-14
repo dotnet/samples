@@ -179,9 +179,9 @@ private void myCheckBox_CheckedChanged(object sender, System.EventArgs e)
    }
    else
    {
-      // If the check box is not cheked, collapse the first tree node.
+      // If the check box is not checked, collapse the first tree node.
       myTreeView.Nodes[0].FirstNode.Collapse();
-      MessageBox.Show("The first and last  node of CutomerList root node is collapsed");
+      MessageBox.Show("The first node of CustomerList root node is collapsed");
    }
 }
 // </Snippet1>
@@ -198,9 +198,9 @@ private void myButton_Click(object sender, System.EventArgs e)
      (decimal)myTreeView.GetNodeCount(true)) * 100;
 
    // Display the tree node path and the number of child nodes it and the tree view have.
-   MessageBox.Show("The '" + myTreeView.SelectedNode.FullPath + "' node has " 
-     + myNodeCount.ToString() + " child nodes.\nThat is " 
-     + string.Format("{0:###.##}", myChildPercentage) 
+   MessageBox.Show("The '" + myTreeView.SelectedNode.FullPath + "' node has "
+     + myNodeCount.ToString() + " child nodes.\nThat is "
+     + string.Format("{0:###.##}", myChildPercentage)
      + "% of the total tree nodes in the tree view control.");
 }
 // </Snippet2>
