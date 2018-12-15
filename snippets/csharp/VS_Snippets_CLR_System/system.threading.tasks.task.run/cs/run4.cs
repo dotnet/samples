@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 public class Example
 {
-   public static void Main()
+   public static async Task Main()
    {
       var tokenSource = new CancellationTokenSource();
       var token = tokenSource.Token;
@@ -30,9 +30,10 @@ public class Example
                                  }
                               }
                         , token);
+      await Task.Yield();
       tokenSource.Cancel();
       try {
-         t.Wait(); 
+         await t;
          Console.WriteLine("Retrieved information for {0} files.", files.Count);
       }
       catch (AggregateException e) {
@@ -50,6 +51,8 @@ public class Example
 // The example displays the following output:
 //       Exception messages:
 //          TaskCanceledException: A task was canceled.
+//          TaskCanceledException: A task was canceled.
+//          ...
 //       
 //       Task status: Canceled
 // </Snippet4>
