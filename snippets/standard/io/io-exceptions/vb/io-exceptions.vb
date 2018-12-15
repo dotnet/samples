@@ -13,7 +13,7 @@ Module Program
    Function OpenStream(path As String) As StreamWriter
         If path is Nothing Then
             Console.WriteLine("You did not supply a file path.")
-                Return Nothing
+            Return Nothing
         End If
 
         Try
