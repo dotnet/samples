@@ -1,5 +1,3 @@
-
-
 //<Snippet1>
 #using <System.dll>
 #using <System.Drawing.dll>
@@ -24,7 +22,6 @@ public:
 
 };
 
-
 // A simple form that represents a window in our application
 public ref class AppForm1: public System::Windows::Forms::Form
 {
@@ -37,25 +34,24 @@ public:
 
 };
 
-
 //<Snippet2>
 // The class that handles the creation of the application windows
 ref class MyApplicationContext: public ApplicationContext
 {
 private:
-   int formCount;
-   AppForm1^ form1;
-   AppForm2^ form2;
-   System::Drawing::Rectangle form1Position;
-   System::Drawing::Rectangle form2Position;
-   FileStream^ userData;
+   int _formCount;
+   AppForm1^ _form1;
+   AppForm2^ _form2;
+   System::Drawing::Rectangle _form1Position;
+   System::Drawing::Rectangle _form2Position;
+   FileStream^ _userData;
 
 public:
 
    //<Snippet5>
    MyApplicationContext()
    {
-      formCount = 0;
+      _formCount = 0;
       
       // Handle the ApplicationExit event to know when the application is exiting.
       Application::ApplicationExit += gcnew EventHandler( this, &MyApplicationContext::OnApplicationExit );
@@ -63,7 +59,7 @@ public:
       {
          
          // Create a file that the application will store user specific data in.
-         userData = gcnew FileStream( String::Concat( Application::UserAppDataPath, "\\appdata.txt" ),FileMode::OpenOrCreate );
+         _userData = gcnew FileStream( String::Concat( Application::UserAppDataPath, "\\appdata.txt" ),FileMode::OpenOrCreate );
       }
       catch ( IOException^ e ) 
       {
@@ -78,14 +74,14 @@ public:
       
       // Create both application forms and handle the Closed event
       // to know when both forms are closed.
-      form1 = gcnew AppForm1;
-      form1->Closed += gcnew EventHandler( this, &MyApplicationContext::OnFormClosed );
-      form1->Closing += gcnew CancelEventHandler( this, &MyApplicationContext::OnFormClosing );
-      formCount++;
-      form2 = gcnew AppForm2;
-      form2->Closed += gcnew EventHandler( this, &MyApplicationContext::OnFormClosed );
-      form2->Closing += gcnew CancelEventHandler( this, &MyApplicationContext::OnFormClosing );
-      formCount++;
+      _form1 = gcnew AppForm1;
+      _form1->Closed += gcnew EventHandler( this, &MyApplicationContext::OnFormClosed );
+      _form1->Closing += gcnew CancelEventHandler( this, &MyApplicationContext::OnFormClosing );
+      _formCount++;
+      _form2 = gcnew AppForm2;
+      _form2->Closed += gcnew EventHandler( this, &MyApplicationContext::OnFormClosed );
+      _form2->Closing += gcnew CancelEventHandler( this, &MyApplicationContext::OnFormClosing );
+      _formCount++;
       
       // Get the form positions based upon the user specific data.
       if ( ReadFormDataFromFile() )
@@ -93,16 +89,16 @@ public:
          
          // If the data was read from the file, set the form
          // positions manually.
-         form1->StartPosition = FormStartPosition::Manual;
-         form2->StartPosition = FormStartPosition::Manual;
-         form1->Bounds = form1Position;
-         form2->Bounds = form2Position;
+         _form1->StartPosition = FormStartPosition::Manual;
+         _form2->StartPosition = FormStartPosition::Manual;
+         _form1->Bounds = _form1Position;
+         _form2->Bounds = _form2Position;
       }
 
       
       // Show both forms.
-      form1->Show();
-      form2->Show();
+      _form1->Show();
+      _form2->Show();
    }
 
    void OnApplicationExit( Object^ /*sender*/, EventArgs^ /*e*/ )
@@ -115,14 +111,13 @@ public:
       {
          
          // Ignore any errors that might occur while closing the file handle.
-         userData->Close();
+         _userData->Close();
       }
       catch ( Exception^ ) 
       {
       }
 
    }
-
 
 private:
 
@@ -133,12 +128,11 @@ private:
       // When a form is closing, remember the form position so it
       // can be saved in the user data file.
       if ( dynamic_cast<AppForm1^>(sender) != nullptr )
-            form1Position = (dynamic_cast<Form^>(sender))->Bounds;
+            _form1Position = (dynamic_cast<Form^>(sender))->Bounds;
       else
       if ( dynamic_cast<AppForm1^>(sender) != nullptr )
-            form2Position = (dynamic_cast<Form^>(sender))->Bounds;
+            _form2Position = (dynamic_cast<Form^>(sender))->Bounds;
    }
-
 
    //<Snippet3>
    void OnFormClosed( Object^ /*sender*/, EventArgs^ /*e*/ )
@@ -147,13 +141,12 @@ private:
       // When a form is closed, decrement the count of open forms.
       // When the count gets to 0, exit the app by calling
       // ExitThread().
-      formCount--;
-      if ( formCount == 0 )
+      _formCount--;
+      if ( _formCount == 0 )
       {
          ExitThread();
       }
    }
-
 
    //</Snippet3>
    bool WriteFormDataToFile()
@@ -162,17 +155,17 @@ private:
       // Write the form positions to the file.
       UTF8Encoding^ encoding = gcnew UTF8Encoding;
       RectangleConverter^ rectConv = gcnew RectangleConverter;
-      String^ form1pos = rectConv->ConvertToString( form1Position );
-      String^ form2pos = rectConv->ConvertToString( form2Position );
+      String^ form1pos = rectConv->ConvertToString( _form1Position );
+      String^ form2pos = rectConv->ConvertToString( _form2Position );
       array<Byte>^dataToWrite = encoding->GetBytes( String::Concat( "~", form1pos, "~", form2pos ) );
       try
       {
          
          // Set the write position to the start of the file and write
-         userData->Seek( 0, SeekOrigin::Begin );
-         userData->Write( dataToWrite, 0, dataToWrite->Length );
-         userData->Flush();
-         userData->SetLength( dataToWrite->Length );
+         _userData->Seek( 0, SeekOrigin::Begin );
+         _userData->Write( dataToWrite, 0, dataToWrite->Length );
+         _userData->Flush();
+         _userData->SetLength( dataToWrite->Length );
          return true;
       }
       catch ( Exception^ ) 
@@ -190,15 +183,15 @@ private:
       // Read the form positions from the file.
       UTF8Encoding^ encoding = gcnew UTF8Encoding;
       String^ data;
-      if ( userData->Length != 0 )
+      if ( _userData->Length != 0 )
       {
-         array<Byte>^dataToRead = gcnew array<Byte>(userData->Length);
+         array<Byte>^dataToRead = gcnew array<Byte>(_userData->Length);
          try
          {
             
             // Set the read position to the start of the file and read.
-            userData->Seek( 0, SeekOrigin::Begin );
-            userData->Read( dataToRead, 0, dataToRead->Length );
+            _userData->Seek( 0, SeekOrigin::Begin );
+            _userData->Read( dataToRead, 0, dataToRead->Length );
          }
          catch ( IOException^ e ) 
          {
@@ -207,7 +200,6 @@ private:
             // An error occurred while attempt to read, return false.
             return false;
          }
-
          
          // Parse out the data to get the window rectangles
          data = encoding->GetString( dataToRead );
@@ -217,9 +209,9 @@ private:
             // Convert the String* data to rectangles
             RectangleConverter^ rectConv = gcnew RectangleConverter;
             String^ form1pos = data->Substring( 1, data->IndexOf( "~", 1 ) - 1 );
-            form1Position =  *safe_cast<Rectangle^>(rectConv->ConvertFromString( form1pos ));
+            _form1Position =  *safe_cast<Rectangle^>(rectConv->ConvertFromString( form1pos ));
             String^ form2pos = data->Substring( data->IndexOf( "~", 1 ) + 1 );
-            form2Position =  *safe_cast<Rectangle^>(rectConv->ConvertFromString( form2pos ));
+            _form2Position =  *safe_cast<Rectangle^>(rectConv->ConvertFromString( form2pos ));
             return true;
          }
          catch ( Exception^ ) 
@@ -229,7 +221,6 @@ private:
             // Return false to use default values.
             return false;
          }
-
       }
       else
       {
@@ -238,13 +229,10 @@ private:
          return false;
       }
    }
-
 };
-
-
 //</Snippet2>
-//<Snippet4>
 
+//<Snippet4>
 [STAThread]
 int main()
 {
@@ -257,6 +245,5 @@ int main()
    // all forms are closed.
    Application::Run( context );
 }
-
 //</Snippet4>
 //</Snippet1>
