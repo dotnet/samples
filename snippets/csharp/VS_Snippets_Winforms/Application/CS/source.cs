@@ -141,8 +141,8 @@ namespace MyApplication
             UTF8Encoding encoding = new UTF8Encoding();
 
             RectangleConverter rectConv = new RectangleConverter();
-            String form1pos = rectConv.ConvertToString(_form1Position);
-            String form2pos = rectConv.ConvertToString(_form2Position);
+            string form1pos = rectConv.ConvertToString(_form1Position);
+            string form2pos = rectConv.ConvertToString(_form2Position);
 
             byte[] dataToWrite = encoding.GetBytes("~" + form1pos + "~" + form2pos);
 
@@ -169,11 +169,11 @@ namespace MyApplication
         {
             // Read the form positions from the file.
             UTF8Encoding encoding = new UTF8Encoding();
-            String data;
+            string data;
 
             if (_userData.Length != 0)
             {
-                byte[] dataToRead = new Byte[_userData.Length];
+                byte[] dataToRead = new byte[_userData.Length];
 
                 try
                 {
@@ -184,7 +184,7 @@ namespace MyApplication
                 }
                 catch (IOException e)
                 {
-                    String errorInfo = e.ToString();
+                    string errorInfo = e.ToString();
                     // An error occurred while attempt to read, return false.
                     return false;
                 }
@@ -196,11 +196,11 @@ namespace MyApplication
                 {
                     // Convert the string data to rectangles
                     RectangleConverter rectConv = new RectangleConverter();
-                    String form1pos = data.Substring(1, data.IndexOf("~", 1) - 1);
+                    string form1pos = data.Substring(1, data.IndexOf("~", 1) - 1);
 
                     _form1Position = (Rectangle)rectConv.ConvertFromString(form1pos);
 
-                    String form2pos = data.Substring(data.IndexOf("~", 1) + 1);
+                    string form2pos = data.Substring(data.IndexOf("~", 1) + 1);
                     _form2Position = (Rectangle)rectConv.ConvertFromString(form2pos);
 
                     return true;
