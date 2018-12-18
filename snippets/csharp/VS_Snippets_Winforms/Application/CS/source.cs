@@ -33,19 +33,19 @@ namespace MyApplication
     class MyApplicationContext : ApplicationContext
     {
 
-        private int formCount;
-        private AppForm1 form1;
-        private AppForm2 form2;
+        private int _formCount;
+        private AppForm1 _form1;
+        private AppForm2 _form2;
 
-        private Rectangle form1Position;
-        private Rectangle form2Position;
+        private Rectangle _form1Position;
+        private Rectangle _form2Position;
 
-        private FileStream userData;
+        private FileStream _userData;
 
         //<Snippet5>
         private MyApplicationContext()
         {
-            formCount = 0;
+            _formCount = 0;
 
             // Handle the ApplicationExit event to know when the application is exiting.
             Application.ApplicationExit += new EventHandler(this.OnApplicationExit);
@@ -53,7 +53,7 @@ namespace MyApplication
             try
             {
                 // Create a file that the application will store user specific data in.
-                userData = new FileStream(Application.UserAppDataPath + "\\appdata.txt", FileMode.OpenOrCreate);
+                _userData = new FileStream(Application.UserAppDataPath + "\\appdata.txt", FileMode.OpenOrCreate);
 
             }
             catch (IOException e)
@@ -68,31 +68,31 @@ namespace MyApplication
 
             // Create both application forms and handle the Closed event
             // to know when both forms are closed.
-            form1 = new AppForm1();
-            form1.Closed += new EventHandler(OnFormClosed);
-            form1.Closing += new CancelEventHandler(OnFormClosing);
-            formCount++;
+            _form1 = new AppForm1();
+            _form1.Closed += new EventHandler(OnFormClosed);
+            _form1.Closing += new CancelEventHandler(OnFormClosing);
+            _formCount++;
 
-            form2 = new AppForm2();
-            form2.Closed += new EventHandler(OnFormClosed);
-            form2.Closing += new CancelEventHandler(OnFormClosing);
-            formCount++;
+            _form2 = new AppForm2();
+            _form2.Closed += new EventHandler(OnFormClosed);
+            _form2.Closing += new CancelEventHandler(OnFormClosing);
+            _formCount++;
 
             // Get the form positions based upon the user specific data.
             if (ReadFormDataFromFile())
             {
                 // If the data was read from the file, set the form
                 // positions manually.
-                form1.StartPosition = FormStartPosition.Manual;
-                form2.StartPosition = FormStartPosition.Manual;
+                _form1.StartPosition = FormStartPosition.Manual;
+                _form2.StartPosition = FormStartPosition.Manual;
 
-                form1.Bounds = form1Position;
-                form2.Bounds = form2Position;
+                _form1.Bounds = _form1Position;
+                _form2.Bounds = _form2Position;
             }
 
             // Show both forms.
-            form1.Show();
-            form2.Show();
+            _form1.Show();
+            _form2.Show();
         }
 
         private void OnApplicationExit(object sender, EventArgs e)
@@ -104,7 +104,7 @@ namespace MyApplication
             try
             {
                 // Ignore any errors that might occur while closing the file handle.
-                userData.Close();
+                _userData.Close();
             }
             catch { }
         }
@@ -115,9 +115,9 @@ namespace MyApplication
             // When a form is closing, remember the form position so it
             // can be saved in the user data file.
             if (sender is AppForm1)
-                form1Position = ((Form)sender).Bounds;
+                _form1Position = ((Form)sender).Bounds;
             else if (sender is AppForm2)
-                form2Position = ((Form)sender).Bounds;
+                _form2Position = ((Form)sender).Bounds;
         }
 
         //<Snippet3>
@@ -127,8 +127,8 @@ namespace MyApplication
 
             // When the count gets to 0, exit the app by calling
             // ExitThread().
-            formCount--;
-            if (formCount == 0)
+            _formCount--;
+            if (_formCount == 0)
             {
                 ExitThread();
             }
@@ -141,19 +141,19 @@ namespace MyApplication
             UTF8Encoding encoding = new UTF8Encoding();
 
             RectangleConverter rectConv = new RectangleConverter();
-            String form1pos = rectConv.ConvertToString(form1Position);
-            String form2pos = rectConv.ConvertToString(form2Position);
+            String form1pos = rectConv.ConvertToString(_form1Position);
+            String form2pos = rectConv.ConvertToString(_form2Position);
 
             byte[] dataToWrite = encoding.GetBytes("~" + form1pos + "~" + form2pos);
 
             try
             {
                 // Set the write position to the start of the file and write
-                userData.Seek(0, SeekOrigin.Begin);
-                userData.Write(dataToWrite, 0, dataToWrite.Length);
-                userData.Flush();
+                _userData.Seek(0, SeekOrigin.Begin);
+                _userData.Write(dataToWrite, 0, dataToWrite.Length);
+                _userData.Flush();
 
-                userData.SetLength(dataToWrite.Length);
+                _userData.SetLength(dataToWrite.Length);
                 return true;
 
             }
@@ -171,15 +171,15 @@ namespace MyApplication
             UTF8Encoding encoding = new UTF8Encoding();
             String data;
 
-            if (userData.Length != 0)
+            if (_userData.Length != 0)
             {
-                byte[] dataToRead = new Byte[userData.Length];
+                byte[] dataToRead = new Byte[_userData.Length];
 
                 try
                 {
                     // Set the read position to the start of the file and read.
-                    userData.Seek(0, SeekOrigin.Begin);
-                    userData.Read(dataToRead, 0, dataToRead.Length);
+                    _userData.Seek(0, SeekOrigin.Begin);
+                    _userData.Read(dataToRead, 0, dataToRead.Length);
 
                 }
                 catch (IOException e)
@@ -198,10 +198,10 @@ namespace MyApplication
                     RectangleConverter rectConv = new RectangleConverter();
                     String form1pos = data.Substring(1, data.IndexOf("~", 1) - 1);
 
-                    form1Position = (Rectangle)rectConv.ConvertFromString(form1pos);
+                    _form1Position = (Rectangle)rectConv.ConvertFromString(form1pos);
 
                     String form2pos = data.Substring(data.IndexOf("~", 1) + 1);
-                    form2Position = (Rectangle)rectConv.ConvertFromString(form2pos);
+                    _form2Position = (Rectangle)rectConv.ConvertFromString(form2pos);
 
                     return true;
 
