@@ -20,6 +20,7 @@ public class Sample
     Console.WriteLine("\t namespaceURI=" + elem.NamespaceURI);
   }
 }
+
 // This code produces the following output.
 // bk:ISBN = 1-861001-57-5  namespaceURI=urn:samples
    // </Snippet1>
