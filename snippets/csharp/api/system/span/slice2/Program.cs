@@ -12,7 +12,7 @@ class Program
     private static int GetContentLength(ReadOnlySpan<char> span)
     {
         var slice = span.Slice(16);
-	return Int32.Parse(slice);	
+	    return Int32.Parse(slice);	
     }
 }
 // Output:
