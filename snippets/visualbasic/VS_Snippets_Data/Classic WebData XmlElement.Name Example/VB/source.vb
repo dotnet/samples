@@ -18,8 +18,10 @@ public class Sample
     elem = CType(doc.DocumentElement.ChildNodes.Item(0),XmlElement) 
     Console.Write("{0} = {1}", elem.Name, elem.InnerText)
     Console.WriteLine("  namespaceURI=" + elem.NamespaceURI)
-
   end sub
 end class
+
+' This code produces the following output.
+' bk:ISBN = 1-861001-57-5  namespaceURI=urn:samples
    ' </Snippet1>
 
