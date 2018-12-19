@@ -18,8 +18,9 @@ public class Sample
     XmlElement elem = (XmlElement) doc.DocumentElement.FirstChild;
     Console.Write("{0} = {1}", elem.Name, elem.InnerText);
     Console.WriteLine("\t namespaceURI=" + elem.NamespaceURI);
-
   }
 }
+// This code produces the following output.
+// bk:ISBN = 1-861001-57-5  namespaceURI=urn:samples
    // </Snippet1>
 
