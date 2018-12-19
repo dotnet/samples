@@ -39,30 +39,30 @@ End Class
 Public Class MyApplicationContext
     Inherits ApplicationContext
 
-    Private formCount As Integer
-    Private form1 As AppForm1
-    Private form2 As AppForm2
+    Private _formCount As Integer
+    Private _form1 As AppForm1
+    Private _form2 As AppForm2
 
-    Private form1Position As Rectangle
-    Private form2Position As Rectangle
+    Private _form1Position As Rectangle
+    Private _form2Position As Rectangle
 
-    Private userData As FileStream
+    Private _userData As FileStream
 
     '<Snippet5>
     Public Sub New()
         MyBase.New()
-        formCount = 0
+        _formCount = 0
 
         ' Handle the ApplicationExit event to know when the application is exiting.
         AddHandler Application.ApplicationExit, AddressOf OnApplicationExit
 
         Try
             ' Create a file that the application will store user specific data in.
-            userData = New FileStream(Application.UserAppDataPath + "\appdata.txt", FileMode.OpenOrCreate)
+            _userData = New FileStream(Application.UserAppDataPath + "\appdata.txt", FileMode.OpenOrCreate)
 
         Catch e As IOException
             ' Inform the user that an error occurred.
-            MessageBox.Show("An error occurred while attempting to show the application." + _
+            MessageBox.Show("An error occurred while attempting to show the application." +
                             "The error is:" + e.ToString())
 
             ' Exit the current thread instead of showing the windows.
@@ -71,30 +71,30 @@ Public Class MyApplicationContext
 
         ' Create both application forms and handle the Closed event
         ' to know when both forms are closed.
-        form1 = New AppForm1()
-        AddHandler form1.Closed, AddressOf OnFormClosed
-        AddHandler form1.Closing, AddressOf OnFormClosing
-        formCount = formCount + 1
+        _form1 = New AppForm1()
+        AddHandler _form1.Closed, AddressOf OnFormClosed
+        AddHandler _form1.Closing, AddressOf OnFormClosing
+        _formCount = _formCount + 1
 
-        form2 = New AppForm2()
-        AddHandler form2.Closed, AddressOf OnFormClosed
-        AddHandler form2.Closing, AddressOf OnFormClosing
-        formCount = formCount + 1
+        _form2 = New AppForm2()
+        AddHandler _form2.Closed, AddressOf OnFormClosed
+        AddHandler _form2.Closing, AddressOf OnFormClosing
+        _formCount = _formCount + 1
 
         ' Get the form positions based upon the user specific data.
         If (ReadFormDataFromFile()) Then
             ' If the data was read from the file, set the form
             ' positions manually.
-            form1.StartPosition = FormStartPosition.Manual
-            form2.StartPosition = FormStartPosition.Manual
+            _form1.StartPosition = FormStartPosition.Manual
+            _form2.StartPosition = FormStartPosition.Manual
 
-            form1.Bounds = form1Position
-            form2.Bounds = form2Position
+            _form1.Bounds = _form1Position
+            _form2.Bounds = _form2Position
         End If
 
         ' Show both forms.
-        form1.Show()
-        form2.Show()
+        _form1.Show()
+        _form2.Show()
     End Sub
 
     Private Sub OnApplicationExit(ByVal sender As Object, ByVal e As EventArgs)
@@ -104,7 +104,7 @@ Public Class MyApplicationContext
 
         Try
             ' Ignore any errors that might occur while closing the file handle.
-            userData.Close()
+            _userData.Close()
         Catch
         End Try
     End Sub
@@ -114,20 +114,20 @@ Public Class MyApplicationContext
         ' When a form is closing, remember the form position so it
         ' can be saved in the user data file.
         If TypeOf sender Is AppForm1 Then
-            form1Position = CType(sender, Form).Bounds
+            _form1Position = CType(sender, Form).Bounds
         ElseIf TypeOf sender Is AppForm2 Then
-            form2Position = CType(sender, Form).Bounds
+            _form2Position = CType(sender, Form).Bounds
         End If
     End Sub
-    
+
     '<Snippet3>
     Private Sub OnFormClosed(ByVal sender As Object, ByVal e As EventArgs)
         ' When a form is closed, decrement the count of open forms.
 
         ' When the count gets to 0, exit the app by calling
         ' ExitThread().
-        formCount = formCount - 1
-        If (formCount = 0) Then
+        _formCount = _formCount - 1
+        If (_formCount = 0) Then
             ExitThread()
         End If
     End Sub
@@ -138,18 +138,18 @@ Public Class MyApplicationContext
         Dim encoding As UTF8Encoding = New UTF8Encoding()
 
         Dim rectConv As RectangleConverter = New RectangleConverter()
-        Dim form1pos As String = rectConv.ConvertToString(form1Position)
-        Dim form2pos As String = rectConv.ConvertToString(form2Position)
+        Dim form1pos As String = rectConv.ConvertToString(_form1Position)
+        Dim form2pos As String = rectConv.ConvertToString(_form2Position)
 
         Dim dataToWrite As Byte() = encoding.GetBytes("~" + form1pos + "~" + form2pos)
 
         Try
             ' Set the write position to the start of the file and write
-            userData.Seek(0, SeekOrigin.Begin)
-            userData.Write(dataToWrite, 0, dataToWrite.Length)
-            userData.Flush()
+            _userData.Seek(0, SeekOrigin.Begin)
+            _userData.Write(dataToWrite, 0, dataToWrite.Length)
+            _userData.Flush()
 
-            userData.SetLength(dataToWrite.Length)
+            _userData.SetLength(dataToWrite.Length)
             Return True
 
         Catch
@@ -164,13 +164,13 @@ Public Class MyApplicationContext
         Dim encoding As UTF8Encoding = New UTF8Encoding()
         Dim data As String
 
-        If (userData.Length <> 0) Then
-            Dim dataToRead(userData.Length) As Byte
+        If (_userData.Length <> 0) Then
+            Dim dataToRead(_userData.Length) As Byte
 
             Try
                 ' Set the read position to the start of the file and read.
-                userData.Seek(0, SeekOrigin.Begin)
-                userData.Read(dataToRead, 0, dataToRead.Length)
+                _userData.Seek(0, SeekOrigin.Begin)
+                _userData.Read(dataToRead, 0, dataToRead.Length)
 
             Catch e As IOException
                 Dim errorInfo As String = e.ToString()
@@ -186,10 +186,10 @@ Public Class MyApplicationContext
                 Dim rectConv As RectangleConverter = New RectangleConverter()
                 Dim form1pos As String = data.Substring(1, data.IndexOf("~", 1) - 1)
 
-                form1Position = CType(rectConv.ConvertFromString(form1pos), Rectangle)
+                _form1Position = CType(rectConv.ConvertFromString(form1pos), Rectangle)
 
                 Dim form2pos As String = data.Substring(data.IndexOf("~", 1) + 1)
-                form2Position = CType(rectConv.ConvertFromString(form2pos), Rectangle)
+                _form2Position = CType(rectConv.ConvertFromString(form2pos), Rectangle)
 
                 Return True
 
@@ -223,4 +223,3 @@ End Module
 '</Snippet4>
 '</Snippet2>
 '</Snippet1>
-
