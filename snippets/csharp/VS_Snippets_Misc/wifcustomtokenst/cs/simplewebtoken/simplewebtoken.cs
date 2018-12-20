@@ -28,18 +28,18 @@ namespace SimpleWebToken
 
         NameValueCollection _properties;
         //</Snippet3>
-        string _serilaizedToken;
+        string _serializedToken;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SimpleWebToken"/> class.
-        /// This is internal contructor is only called from the <see cref="SimpleWebTokenHandler"/> when reading a token received from the wire.
+        /// This is internal constructor is only called from the <see cref="SimpleWebTokenHandler"/> when reading a token received from the wire.
         /// </summary>
         /// <param name="properties">The collection represents all the key value pairs in the token.</param>
         /// <param name="serializedToken">The serialized form of the token.</param>
         internal SimpleWebToken( NameValueCollection properties, string serializedToken )
             : this(properties)
         {
-            _serilaizedToken = serializedToken;            
+            _serializedToken = serializedToken;
         }
 
         /// <summary>
@@ -158,7 +158,7 @@ namespace SimpleWebToken
         {
             get
             {
-                return _serilaizedToken;
+                return _serializedToken;
             }
         }
 
