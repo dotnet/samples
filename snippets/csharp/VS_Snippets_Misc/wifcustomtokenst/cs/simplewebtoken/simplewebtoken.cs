@@ -28,24 +28,24 @@ namespace SimpleWebToken
 
         NameValueCollection _properties;
         //</Snippet3>
-        string _serilaizedToken;
+        string _serializedToken;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SimpleWebToken"/> class.
-        /// This is internal contructor is only called from the <see cref="SimpleWebTokenHandler"/> when reading a token received from the wire.
+        /// This is an internal constructor that is only called from the <see cref="SimpleWebTokenHandler"/> when reading a token received from the wire.
         /// </summary>
-        /// <param name="properties">The collection represents all the key value pairs in the token.</param>
+        /// <param name="properties">The collection representing all the key value pairs in the token.</param>
         /// <param name="serializedToken">The serialized form of the token.</param>
         internal SimpleWebToken( NameValueCollection properties, string serializedToken )
             : this(properties)
         {
-            _serilaizedToken = serializedToken;            
+            _serializedToken = serializedToken;
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SimpleWebToken"/> class.
         /// </summary>
-        /// <param name="properties">The collection represents all the key value pairs in the token.</param>
+        /// <param name="properties">The collection representing all the key value pairs in the token.</param>
         public SimpleWebToken( NameValueCollection properties )
         {
             if ( properties == null )
@@ -103,7 +103,7 @@ namespace SimpleWebToken
         /// <summary>
         /// Gets the time when the token expires.
         /// </summary>
-        /// <value>The time upto which the token is valid.</value>
+        /// <value>The time up to which the token is valid.</value>
         public override DateTime ValidTo
         {
             get
@@ -158,7 +158,7 @@ namespace SimpleWebToken
         {
             get
             {
-                return _serilaizedToken;
+                return _serializedToken;
             }
         }
 
@@ -173,7 +173,7 @@ namespace SimpleWebToken
 
         //<Snippet8>
         /// <summary>
-        /// Convert the time in seconds to a <see cref="DateTime"/> object based on the base time 
+        /// Converts the time in seconds to a <see cref="DateTime"/> object based on the base time 
         /// defined by the Simple Web Token.
         /// </summary>
         /// <param name="expiryTime">The time in seconds.</param>
