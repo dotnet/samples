@@ -1,18 +1,16 @@
 .NET Core Hosting Sample
 ==================================
 
-This sample demonstrates a very simple .NET Core host using the `ICLRRuntimeHost2` interface in mscoree.h. It is part of the [.NET Core hosting tutorial](https://docs.microsoft.com/dotnet/core/tutorials/netcore-hosting). Please see that topic for a more detailed explanation of this sample.
+This sample demonstrates a very simple .NET Core host using the `ICLRRuntimeHost2` interface in mscoree.h. It is part of the [.NET Core hosting tutorial](https://docs.microsoft.com/dotnet/core/tutorials/netcore-hosting). Please see that topic for a more detailed explanation of this sample. There are also alternative hosting APIs (in [CoreClrHost.h](https://github.com/dotnet/coreclr/blob/master/src/coreclr/hosts/inc/coreclrhost.h)) that may be easier to use demonstrated in the [HostWithCoreClrHost folder](../HostWithCoreClrHost) of this repository. 
 
 About .NET Core Hosts
 ---------------------
 
 .NET Core applications are always run by a host. In most cases, the default dotnet.exe host is used.
 
-It is possible to create your own host, though, to enable starting and running .NET Core code from a native application, or to enable a high degree of control over how the runtime operates.
+It is possible to create your own host, though, to enable starting and running .NET Core code from a native application, or to enable a high degree of control over how the runtime operates. More complex, real-world hosts can be found in the [dotnet/coreclr](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts) repository.
 
-This sample only builds for Windows currently, but the same approach can be used to host .NET Core on Linux or Mac. There are also [alternative hosting APIs](https://github.com/dotnet/coreclr/blob/master/src/coreclr/hosts/inc/coreclrhost.h) that may be easier to use demonstrated in the [HostWithCoreClrHost folder](../HostWithCoreClrHost) of this repository. This sample shows how to use the `ICLRRuntimeHost2` interface.
-
-More complex, real-world hosts can be found in the [dotnet/coreclr](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts) repository.
+This sample only builds for Windows currently, but the same approach can be used to host .NET Core on Linux or Mac.
 
 Build and Run
 -------------
