@@ -137,13 +137,13 @@ int main(int argc, char* argv[])
         tpaList.c_str(),
         runtimePath
     };
-    // </Snippet3A>
+    // </Snippet3>
 
     //
     // STEP 4: Start the CoreCLR runtime
     //
 
-    // <Snippet4>
+    // <Snippet3>
     void* hostHandle;
     unsigned int domainId;
 
@@ -244,7 +244,7 @@ int main(int argc, char* argv[])
 
 #if WINDOWS
 // Win32 directory search for .dll files
-// <Snippet3>
+// <Snippet7>
 void BuildTpaList(const char* directory, const char* extension, std::string& tpaList)
 {
     std::string searchPath(directory);
@@ -277,7 +277,7 @@ void BuildTpaList(const char* directory, const char* extension, std::string& tpa
         FindClose(fileHandle);
     }
 }
-// </Snippet3>
+// </Snippet7>
 #elif LINUX
 // POSIX directory search for .dll files
 void BuildTpaList(const char* directory, const char* extension, std::string& tpaList)
