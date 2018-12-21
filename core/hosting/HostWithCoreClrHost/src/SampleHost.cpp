@@ -178,7 +178,7 @@ int main(int argc, char* argv[])
     hr = createManagedDelegate(
             hostHandle, 
             domainId,
-            "ManagedLibrary",
+            "ManagedLibrary, Version=1.0.0.0",
             "ManagedLibrary.ManagedWorker",
             "DoWork",
             (void**)&managedDelegate);
