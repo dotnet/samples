@@ -45,6 +45,10 @@ namespace operators
             Console.WriteLine("============== == and != operator examples =====");
             EqualityAndNonEqualityExamples.Examples();
             Console.WriteLine();
+
+            Console.WriteLine("======= >, <, >=, and <= operator examples =====");
+            GreaterAndLessOperatorsExamples.Examples();
+            Console.WriteLine();
         }
     }
 }
