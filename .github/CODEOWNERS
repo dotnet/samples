@@ -17,6 +17,9 @@
 # C# samples:
 /csharp/**  @BillWagner
 
+# ML.NET samples:
+/machine-learning/**  @JRAlexander
+
 #### Snippets (under samples)
 # C++ snippets
 /snippets/cpp/** @rpetrusha
