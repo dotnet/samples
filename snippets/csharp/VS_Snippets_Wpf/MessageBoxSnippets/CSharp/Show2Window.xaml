@@ -3,7 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     Title="CSharp" Height="300" Width="300"
     >
-	<Button Click="showMessageBoxButton_Click">
+    <Button Click="ShowMessageBoxButton_Click">
 		Show MessageBox
 	</Button>
 </Window>

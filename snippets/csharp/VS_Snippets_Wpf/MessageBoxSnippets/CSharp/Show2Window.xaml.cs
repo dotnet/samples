@@ -13,7 +13,7 @@ namespace CSharp
         }
 
         //<SnippetMessageBoxShow2CODE>
-        void showMessageBoxButton_Click(object sender, RoutedEventArgs e)
+        private void ShowMessageBoxButton_Click(object sender, RoutedEventArgs e)
         {
             // Configure message box
             string message = "Message text";
