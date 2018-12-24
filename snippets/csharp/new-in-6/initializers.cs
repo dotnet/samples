@@ -5,11 +5,11 @@ namespace Initializers
     public class Examples
     {
         // <ListInitializer>
-        private List<string> messages = new List<string> 
+        private Dictionary<int, string> messages = new Dictionary<int, string>
         {
-            "Page not Found",
-            "Page moved, but left a forwarding address.",
-            "The web server can't come out to play today."
+            { 404, "Page not Found"},
+            { 302, "Page moved, but left a forwarding address."},
+            { 500, "The web server can't come out to play today."}
         };
         // </ListInitializer>
 
