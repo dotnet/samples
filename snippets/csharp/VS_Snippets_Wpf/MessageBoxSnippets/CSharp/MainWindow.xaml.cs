@@ -13,29 +13,29 @@ namespace CSharp
             InitializeComponent();
         }
 
-        void Show1(object sender, RoutedEventArgs e)
+        private void Show1(object sender, RoutedEventArgs e)
         {
-            (new Show1Window()).ShowDialog();
+            new Show1Window().ShowDialog();
         }
-        void Show2(object sender, RoutedEventArgs e)
+        private void Show2(object sender, RoutedEventArgs e)
         {
-            (new Show2Window()).ShowDialog();
+            new Show2Window().ShowDialog();
         }
-        void Show3(object sender, RoutedEventArgs e)
+        private void Show3(object sender, RoutedEventArgs e)
         {
-            (new Show3Window()).ShowDialog();
+            new Show3Window().ShowDialog();
         }
-        void Show4(object sender, RoutedEventArgs e)
+        private void Show4(object sender, RoutedEventArgs e)
         {
-            (new Show4Window()).ShowDialog();
+            new Show4Window().ShowDialog();
         }
-        void Show5(object sender, RoutedEventArgs e)
+        private void Show5(object sender, RoutedEventArgs e)
         {
-            (new Show5Window()).ShowDialog();
+            new Show5Window().ShowDialog();
         }
-        void Show6(object sender, RoutedEventArgs e)
+        private void Show6(object sender, RoutedEventArgs e)
         {
-            (new Show6Window()).ShowDialog();
+            new Show6Window().ShowDialog();
         }
     }
 }
