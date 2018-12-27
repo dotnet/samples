@@ -20,8 +20,7 @@ class WriteTextFiles
         // Example 3: Shows how to write  
         // a simple string asynchronously
         // to a text file using StreamWriter
-        string text = "This is a sentence.";
-        WriteTextAsync(text);
+        WriteTextAsync();
 
         // Example 4: Shows how to write synchronously
         // to a text file using File and then
@@ -29,6 +28,7 @@ class WriteTextFiles
         WriteFile();
     }
 
+    // Example 1: Write line by line to a new text file with StreamWriter
     static void WriteLineByLine()
     {
         // Create a string array with the lines of text
@@ -46,6 +46,7 @@ class WriteTextFiles
 
     }
 
+    // Example 2: Append a line to a text file with StreamWriter
     static void AppendTextSW()
     {
         // Set a variable to the My Documents path.
@@ -58,17 +59,19 @@ class WriteTextFiles
 
     }
 
-    static async void WriteTextAsync(string text)
+    // Example 3: Write text asynchronously with StreamWriter
+    static async void WriteTextAsync()
     {
         // Set a variable to the My Documents path.
         string mydocpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
-        // Write the text asynchronously to a new file named "WriteTextAsync.txt".
+        // Write the specified text asynchronously to a new file named "WriteTextAsync.txt".
         using (StreamWriter outputFile = new StreamWriter(Path.Combine(mydocpath,"WriteTextAsync.txt"))) {
-            await outputFile.WriteAsync(text);
+            await outputFile.WriteAsync("This is a sentence.");
         }
     }
 
+    // Example 4: Write and append text using File
     static void WriteFile()
     {
         // Create a string array with the lines of text
