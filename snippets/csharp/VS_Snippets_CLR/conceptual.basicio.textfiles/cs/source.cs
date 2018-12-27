@@ -8,30 +8,29 @@ class WriteTextFiles
     static void Main(string[] args)
     {
 
-        // Example 1: shows how to write synchronously
+        // Example 1: Shows how to write synchronously
         // to a text file using StreamWriter
         // line by line
         WriteLineByLine();
 
-        // Example 2: Appending text to
+        // Example 2: Shows how to append text to
         // an existing file using StreamWriter
         AppendTextSW();
 
-        // Example 3: shows how to write a 
+        // Example 3: Shows how to write  
         // a simple string asynchronously
         // to a text file using StreamWriter
         string text = "This is a sentence.";
         WriteTextAsync(text);
 
-        // Example 4: shows how to write synchronously
+        // Example 4: Shows how to write synchronously
         // to a text file using File and then
-        // adding additional lines 
+        // add additional lines 
         WriteFile();
     }
 
     static void WriteLineByLine()
     {
-        // <SnippetWriteLine>
         // Create a string array with the lines of text
         string[] lines = { "First line", "Second line", "Third line" };
 
@@ -44,13 +43,11 @@ class WriteTextFiles
             foreach (string line in lines)
                 outputFile.WriteLine(line);
         }
-        // </SnippetWriteLine>
 
     }
 
     static void AppendTextSW()
     {
-        // <SnippetAppendText>
         // Set a variable to the My Documents path.
         string mydocpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
@@ -58,11 +55,9 @@ class WriteTextFiles
         using (StreamWriter outputFile = new StreamWriter(Path.Combine(mydocpath,"WriteLines.txt"), true)) {
             outputFile.WriteLine("Fourth Line");
         }
-        // </SnippetAppendText>
 
     }
 
-    // <SnippetWriteAsync>
     static async void WriteTextAsync(string text)
     {
         // Set a variable to the My Documents path.
@@ -73,11 +68,9 @@ class WriteTextFiles
             await outputFile.WriteAsync(text);
         }
     }
-    // </SnippetWriteAsync>
 
     static void WriteFile()
     {
-        // <SnippetWriteFile>
         // Create a string array with the lines of text
         string text = "First line" + Environment.NewLine;
 
@@ -92,7 +85,6 @@ class WriteTextFiles
 
         // Append new lines of text to the file
         File.AppendAllLines(Path.Combine(mydocpath,"WriteFile.txt"), lines);
-        // </SnippetWriteFile>
 
     }
 
