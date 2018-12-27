@@ -10,17 +10,17 @@ namespace CsCsrefProgrammingObjects
     // but as the framework already includes a POINT structure, this was troublesome
     //-----------------------------------------------------------------------------
     // 05/06/05 Per mblome
-    // Yes, use CoOrds instead of Point everywhere
+    // Yes, use Coords instead of Point everywhere
     //-----------------------------------------------------------------------------
 
 
     //-----------------------------------------------------------------------------
     //<Snippet1>
-    public struct CoOrds
+    public struct Coords
     {
         public int x, y;
 
-        public CoOrds(int p1, int p2)
+        public Coords(int p1, int p2)
         {
             x = p1;
             y = p2;
@@ -32,19 +32,19 @@ namespace CsCsrefProgrammingObjects
     //-----------------------------------------------------------------------------
     //<Snippet2>
     // Declare and initialize struct objects.
-    class TestCoOrds
+    class TestCoords
     {
         static void Main()
         {
             // Initialize:   
-            CoOrds coords1 = new CoOrds();
-            CoOrds coords2 = new CoOrds(10, 10);
+            Coords coords1 = new Coords();
+            Coords coords2 = new Coords(10, 10);
 
             // Display results:
-            Console.Write("CoOrds 1: ");
+            Console.Write("Coords 1: ");
             Console.WriteLine("x = {0}, y = {1}", coords1.x, coords1.y);
 
-            Console.Write("CoOrds 2: ");
+            Console.Write("Coords 2: ");
             Console.WriteLine("x = {0}, y = {1}", coords2.x, coords2.y);
 
             // Keep the console window open in debug mode.
@@ -53,8 +53,8 @@ namespace CsCsrefProgrammingObjects
         }
     }
     /* Output:
-        CoOrds 1: x = 0, y = 0
-        CoOrds 2: x = 10, y = 10
+        Coords 1: x = 0, y = 0
+        Coords 2: x = 10, y = 10
     */
     //</Snippet2>
 
@@ -62,19 +62,19 @@ namespace CsCsrefProgrammingObjects
     //-----------------------------------------------------------------------------
     //<Snippet3>
     // Declare a struct object without "new."
-    class TestCoOrdsNoNew
+    class TestCoordsNoNew
     {
         static void Main()
         {
             // Declare an object:
-            CoOrds coords1;
+            Coords coords1;
 
             // Initialize:
             coords1.x = 10;
             coords1.y = 20;
 
             // Display results:
-            Console.Write("CoOrds 1: ");
+            Console.Write("Coords 1: ");
             Console.WriteLine("x = {0}, y = {1}", coords1.x, coords1.y);
 
             // Keep the console window open in debug mode.
@@ -82,20 +82,20 @@ namespace CsCsrefProgrammingObjects
             Console.ReadKey();
         }
     }
-    // Output: CoOrds 1: x = 10, y = 20
+    // Output: Coords 1: x = 10, y = 20
     //</Snippet3>
 
 
     //-----------------------------------------------------------------------------
-    namespace WrapCoOrds
+    namespace WrapCoords
     {
         //<Snippet4>
-        class CoOrds
+        class Coords
         {
             public int x, y;
 
             // Default constructor:
-            public CoOrds()
+            public Coords()
             {
                 x = 0;
                 y = 0;
@@ -103,7 +103,7 @@ namespace CsCsrefProgrammingObjects
 
             //<Snippet76>
             // A constructor with two arguments:
-            public CoOrds(int x, int y)
+            public Coords(int x, int y)
             {
                 this.x = x;
                 this.y = y;
@@ -122,34 +122,34 @@ namespace CsCsrefProgrammingObjects
             static void Main()
             {
                 //<Snippet77>
-                CoOrds p1 = new CoOrds();
-                CoOrds p2 = new CoOrds(5, 3);
+                Coords p1 = new Coords();
+                Coords p2 = new Coords(5, 3);
                 //</Snippet77>
 
                 // Display the results using the overriden ToString method:
-                Console.WriteLine("CoOrds #1 at {0}", p1);
-                Console.WriteLine("CoOrds #2 at {0}", p2);
+                Console.WriteLine("Coords #1 at {0}", p1);
+                Console.WriteLine("Coords #2 at {0}", p2);
                 Console.ReadKey();
             }
         }
         /* Output:
-         CoOrds #1 at (0,0)
-         CoOrds #2 at (5,3)        
+         Coords #1 at (0,0)
+         Coords #2 at (5,3)        
         */
         //</Snippet4>
     }
 
 
     //-----------------------------------------------------------------------------
-    namespace WrapCoOrdsDefaultConstructorOnly
+    namespace WrapCoordsDefaultConstructorOnly
     {
         //<Snippet5>
-        class CoOrds
+        class Coords
         {
             public int x, y;
 
             // constructor
-            public CoOrds()
+            public Coords()
             {
                 x = 0;
                 y = 0;
@@ -178,13 +178,13 @@ namespace CsCsrefProgrammingObjects
             }
             //</Snippet6>
         }
-        class CoOrds
+        class Coords
         {
-            public CoOrds(int x, int y)
+            public Coords(int x, int y)
             {
             }
             //<Snippet7>
-            public CoOrds()
+            public Coords()
                 : this(0, 20)
             {
             }
@@ -580,43 +580,43 @@ class TestPerson
 
 
     //-----------------------------------------------------------------------------
-    namespace WrapCoOrds2
+    namespace WrapCoords2
     {
         //<Snippet17>
-        public partial class CoOrds
+        public partial class Coords
         {
             private int x;
             private int y;
 
-            public CoOrds(int x, int y)
+            public Coords(int x, int y)
             {
                 this.x = x;
                 this.y = y;
             }
         }
 
-        public partial class CoOrds
+        public partial class Coords
         {
-            public void PrintCoOrds()
+            public void PrintCoords()
             {
-                Console.WriteLine("CoOrds: {0},{1}", x, y);
+                Console.WriteLine("Coords: {0},{1}", x, y);
             }
 
         }
 
-        class TestCoOrds
+        class TestCoords
         {
             static void Main()
             {
-                CoOrds myCoOrds = new CoOrds(10, 15);
-                myCoOrds.PrintCoOrds();
+                Coords myCoords = new Coords(10, 15);
+                myCoords.PrintCoords();
 
                 // Keep the console window open in debug mode.
                 Console.WriteLine("Press any key to exit.");
                 Console.ReadKey();
             }
         }
-        // Output: CoOrds: 10,15
+        // Output: Coords: 10,15
         //</Snippet17>
     }
 
