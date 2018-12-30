@@ -26,7 +26,6 @@ class PrintProcessClass
                 myProcess.EnableRaisingEvents = true;
                 myProcess.Exited += new EventHandler(myProcess_Exited);
                 myProcess.Start();
-
             }
             catch (Exception ex)
             {

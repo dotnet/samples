@@ -49,7 +49,7 @@ namespace ProcessStandardInputSample
                         numLines++;
                         myStreamWriter.WriteLine(inputText);
                     }
-                } while (inputText.Length != 0);
+                } while (inputText.Length > 0);
 
                 // Write a report header to the console.
                 if (numLines > 0)

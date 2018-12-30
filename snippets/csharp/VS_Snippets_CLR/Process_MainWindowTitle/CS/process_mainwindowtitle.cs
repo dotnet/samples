@@ -35,5 +35,4 @@ class MainWindowTitleClass
         }
     }
 }
-
 // </Snippet1>
