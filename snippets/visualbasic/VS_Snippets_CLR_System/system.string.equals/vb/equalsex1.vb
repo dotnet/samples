@@ -7,7 +7,7 @@ Module Example
       
       Dim word As String = "File"
       Dim others() As String = { word.ToLower(), word, word.ToUpper(), _
-                                 "fıle" }
+                                 "Fıle" }
       For Each other As String In others
          If word.Equals(other) Then 
             Console.WriteLine("{0} = {1}", word, other)
@@ -21,6 +21,6 @@ End Module
 '       File ≠ file
 '       File = File
 '       File ≠ FILE
-'       File ≠ fıle
+'       File ≠ Fıle
 ' </Snippet2>
 
