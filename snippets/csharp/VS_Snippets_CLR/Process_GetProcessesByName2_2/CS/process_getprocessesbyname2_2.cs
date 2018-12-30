@@ -38,7 +38,7 @@ class GetProcessesByNameClass
             foreach (Process myProcess in myProcesses)
             {
                 Console.Write("Process Name : " + myProcess.ProcessName + "  Process ID : "
-                + myProcess.Id + "  MachineName : " + myProcess.MachineName + "\n");
+                    + myProcess.Id + "  MachineName : " + myProcess.MachineName + "\n");
             }
         }
         catch (ArgumentException)
@@ -55,7 +55,6 @@ class GetProcessesByNameClass
                 "Finding notepad processes on remote computers " +
                 "is not supported on this operating system.");
         }
-
     }
 }
 // </Snippet1> 
