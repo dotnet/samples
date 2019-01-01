@@ -13,20 +13,15 @@ namespace ProcessSample
     {
         public static void Main()
         {
-
             // Define variables to track the peak
             // memory usage of the process.
             long peakPagedMem = 0,
                 peakWorkingSet = 0,
                 peakVirtualMem = 0;
 
-            Process myProcess = null;
-
-            try
+            // Start the process.
+            using (Process myProcess = Process.Start("NotePad.exe"))
             {
-                // Start the process.
-                myProcess = Process.Start("NotePad.exe");
-
                 // Display the process statistics until
                 // the user closes the program.
                 do
@@ -40,7 +35,7 @@ namespace ProcessSample
 
                         // Display current process statistics.
 
-                        Console.WriteLine("{0} -", myProcess.ToString());
+                        Console.WriteLine($"{myProcess} -");
                         Console.WriteLine("-------------------------------------");
 
                         Console.WriteLine("  physical memory usage: {0}",
@@ -89,17 +84,8 @@ namespace ProcessSample
                     peakPagedMem);
                 Console.WriteLine("Peak virtual memory usage of the process: {0}",
                     peakVirtualMem);
-
-            }
-            finally
-            {
-                if (myProcess != null)
-                {
-                    myProcess.Close();
-                }
             }
         }
-
     }
 }
 // </Snippet1>
