@@ -39,8 +39,8 @@ class GetProcessesByNameClass
             {
                 Console.WriteLine(
                     $"Process Name: {myProcess.ProcessName}\n" +
-                    $"Process ID:   {myProcess.Id}\n" +
-                    $"MachineName:  {myProcess.MachineName}");
+                    $"Process ID  : {myProcess.Id}\n" +
+                    $"MachineName : {myProcess.MachineName}");
             }
         }
         catch (ArgumentException)
