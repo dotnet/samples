@@ -16,7 +16,7 @@ class GetProcessesByNameClass
 {
     public static void Main(string[] args)
     {
-        Console.Write("Create notepad processes on remote computer \n");
+        Console.WriteLine("Create notepad processes on remote computer");
         Console.Write("Enter remote computer name : ");
         string remoteMachineName = Console.ReadLine();
 
@@ -37,8 +37,10 @@ class GetProcessesByNameClass
 
             foreach (Process myProcess in myProcesses)
             {
-                Console.Write("Process Name : " + myProcess.ProcessName + "  Process ID : "
-                    + myProcess.Id + "  MachineName : " + myProcess.MachineName + "\n");
+                Console.WriteLine(
+                    $"Process Name: {myProcess.ProcessName}\n" +
+                    $"Process ID:   {myProcess.Id}\n" +
+                    $"MachineName:  {myProcess.MachineName}");
             }
         }
         catch (ArgumentException)

@@ -42,6 +42,7 @@ class PrintProcessClass
                 {
                     break;
                 }
+                
                 Thread.Sleep(SLEEP_AMOUNT);
             }
         }
@@ -51,8 +52,10 @@ class PrintProcessClass
     private void myProcess_Exited(object sender, System.EventArgs e)
     {
         eventHandled = true;
-        Console.WriteLine("Exit time:    {0}\r\n" +
-            "Exit code:    {1}\r\nElapsed time: {2}", myProcess.ExitTime, myProcess.ExitCode, elapsedTime);
+        Console.WriteLine(
+            $"Exit time:    {myProcess.ExitTime}\r\n" +
+            $"Exit code:    {myProcess.ExitCode}\r\n" +
+            $"Elapsed time: {elapsedTime}");
     }
 
     public static void Main(string[] args)
