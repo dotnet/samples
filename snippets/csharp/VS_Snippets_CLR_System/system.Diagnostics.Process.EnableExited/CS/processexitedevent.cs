@@ -29,21 +29,21 @@ class PrintProcessClass
             }
             catch (Exception ex)
             {
-                Console.WriteLine("An error occurred trying to print \"{0}\":" + "\n" + ex.Message, fileName);
+                Console.WriteLine($"An error occurred trying to print \"{fileName}\":\n{ex.Message}");
                 return;
             }
 
             // Wait for Exited event, but not more than 30 seconds.
-            const int SLEEP_AMOUNT = 100;
+            const int SleepAmount = 100;
             while (!eventHandled)
             {
-                elapsedTime += SLEEP_AMOUNT;
+                elapsedTime += SleepAmount;
                 if (elapsedTime > 30000)
                 {
                     break;
                 }
                 
-                Thread.Sleep(SLEEP_AMOUNT);
+                Thread.Sleep(SleepAmount);
             }
         }
     }
@@ -53,8 +53,8 @@ class PrintProcessClass
     {
         eventHandled = true;
         Console.WriteLine(
-            $"Exit time:    {myProcess.ExitTime}\r\n" +
-            $"Exit code:    {myProcess.ExitCode}\r\n" +
+            $"Exit time:    {myProcess.ExitTime}\n" +
+            $"Exit code:    {myProcess.ExitCode}\n" +
             $"Elapsed time: {elapsedTime}");
     }
 
