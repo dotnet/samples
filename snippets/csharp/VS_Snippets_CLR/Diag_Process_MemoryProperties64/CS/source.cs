@@ -38,22 +38,14 @@ namespace ProcessSample
                         Console.WriteLine($"{myProcess} -");
                         Console.WriteLine("-------------------------------------");
 
-                        Console.WriteLine("  physical memory usage: {0}",
-                            myProcess.WorkingSet64);
-                        Console.WriteLine("  base priority: {0}",
-                            myProcess.BasePriority);
-                        Console.WriteLine("  priority class: {0}",
-                            myProcess.PriorityClass);
-                        Console.WriteLine("  user processor time: {0}",
-                            myProcess.UserProcessorTime);
-                        Console.WriteLine("  privileged processor time: {0}",
-                            myProcess.PrivilegedProcessorTime);
-                        Console.WriteLine("  total processor time: {0}",
-                            myProcess.TotalProcessorTime);
-                        Console.WriteLine("  PagedSystemMemorySize64: {0}",
-                            myProcess.PagedSystemMemorySize64);
-                        Console.WriteLine("  PagedMemorySize64: {0}",
-                           myProcess.PagedMemorySize64);
+                        Console.WriteLine($"  Physical memory usage:     {myProcess.WorkingSet64}");
+                        Console.WriteLine($"  Base priority:             {myProcess.BasePriority}");
+                        Console.WriteLine($"  Priority class:            {myProcess.PriorityClass}");
+                        Console.WriteLine($"  User processor time:       {myProcess.UserProcessorTime}");
+                        Console.WriteLine($"  Privileged processor time: {myProcess.PrivilegedProcessorTime}");
+                        Console.WriteLine($"  Total processor time:      {myProcess.TotalProcessorTime}");
+                        Console.WriteLine($"  Paged system memory size:  {myProcess.PagedSystemMemorySize64}");
+                        Console.WriteLine($"  Paged memory size:         {myProcess.PagedMemorySize64}");
 
                         // Update the values for the overall peak memory statistics.
                         peakPagedMem = myProcess.PeakPagedMemorySize64;
@@ -74,16 +66,12 @@ namespace ProcessSample
 
 
                 Console.WriteLine();
-                Console.WriteLine("Process exit code: {0}",
-                    myProcess.ExitCode);
+                Console.WriteLine($"Process exit code: {myProcess.ExitCode}");
 
                 // Display peak memory statistics for the process.
-                Console.WriteLine("Peak physical memory usage of the process: {0}",
-                    peakWorkingSet);
-                Console.WriteLine("Peak paged memory usage of the process: {0}",
-                    peakPagedMem);
-                Console.WriteLine("Peak virtual memory usage of the process: {0}",
-                    peakVirtualMem);
+                Console.WriteLine($"Peak physical memory usage: {peakWorkingSet}");
+                Console.WriteLine($"Peak paged memory usage:    {peakPagedMem}");
+                Console.WriteLine($"Peak virtual memory usage:  {peakVirtualMem}");
             }
         }
     }
