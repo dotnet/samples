@@ -31,13 +31,13 @@ namespace ProcessSample
                     {
                         Console.WriteLine();
 
-                        Console.WriteLine($"Physical memory usage    : {myProcess.WorkingSet}");
-                        Console.WriteLine($"Base priority            : {myProcess.BasePriority}");
-                        Console.WriteLine($"Priority class           : {myProcess.PriorityClass}");
-                        Console.WriteLine($"User processor time      : {myProcess.UserProcessorTime}");
-                        Console.WriteLine($"Privileged processor time: {myProcess.PrivilegedProcessorTime}");
-                        Console.WriteLine($"Total processor time     : {myProcess.TotalProcessorTime}");
-                        Console.WriteLine($"Process's Name           : {myProcess}");
+                        Console.WriteLine($"Physical memory usage     : {myProcess.WorkingSet}");
+                        Console.WriteLine($"Base priority             : {myProcess.BasePriority}");
+                        Console.WriteLine($"Priority class            : {myProcess.PriorityClass}");
+                        Console.WriteLine($"User processor time       : {myProcess.UserProcessorTime}");
+                        Console.WriteLine($"Privileged processor time : {myProcess.PrivilegedProcessorTime}");
+                        Console.WriteLine($"Total processor time      : {myProcess.TotalProcessorTime}");
+                        Console.WriteLine($"Process's Name            : {myProcess}");
                         Console.WriteLine("-------------------------------------");
 
                         if (myProcess.Responding)
