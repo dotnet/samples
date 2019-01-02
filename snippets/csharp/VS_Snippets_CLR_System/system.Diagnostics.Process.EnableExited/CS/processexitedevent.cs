@@ -53,9 +53,9 @@ class PrintProcessClass
     {
         eventHandled = true;
         Console.WriteLine(
-            $"Exit time   : {myProcess.ExitTime}\n" +
-            $"Exit code   : {myProcess.ExitCode}\n" +
-            $"Elapsed time: {elapsedTime}");
+            $"Exit time    : {myProcess.ExitTime}\n" +
+            $"Exit code    : {myProcess.ExitCode}\n" +
+            $"Elapsed time : {elapsedTime}");
     }
 
     public static void Main(string[] args)
