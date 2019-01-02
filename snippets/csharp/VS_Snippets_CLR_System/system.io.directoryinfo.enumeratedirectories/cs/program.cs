@@ -6,7 +6,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        DirectoryInfo diTop = new DirectoryInfo(@"d:\");
+        // Set a variable to the My Documents path.
+        string mydocpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+        DirectoryInfo diTop = new DirectoryInfo(@mydocpath);
         try
         {
             foreach (var fi in diTop.EnumerateFiles())
@@ -66,4 +69,3 @@ class Program
     }
 }
 // </Snippet1>
-
