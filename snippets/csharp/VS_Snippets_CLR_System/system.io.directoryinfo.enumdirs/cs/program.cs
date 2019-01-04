@@ -14,7 +14,7 @@ namespace EnumDir
         // Set a variable to the My Documents path.
         string mydocpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
-        DirectoryInfo dirPrograms = new DirectoryInfo(@mydocpath);
+        DirectoryInfo dirPrograms = new DirectoryInfo(mydocpath);
         DateTime StartOf2009 = new DateTime(2009, 01, 01);
 
 var dirs = from dir in dirPrograms.EnumerateDirectories()

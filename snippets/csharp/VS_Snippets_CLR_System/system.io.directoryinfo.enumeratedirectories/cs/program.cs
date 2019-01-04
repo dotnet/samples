@@ -9,7 +9,7 @@ class Program
         // Set a variable to the My Documents path.
         string mydocpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
-        DirectoryInfo diTop = new DirectoryInfo(@mydocpath);
+        DirectoryInfo diTop = new DirectoryInfo(mydocpath);
         try
         {
             foreach (var fi in diTop.EnumerateFiles())

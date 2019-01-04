@@ -9,11 +9,11 @@ class Program
     {
         try
         {
-    // Set a variable to the My Documents path.
-    string mydocpath =
-    Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            // Set a variable to the My Documents path.
+            string mydocpath =
+            Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
-           var files = from file in Directory.EnumerateFiles(@mydocpath, "*.txt", SearchOption.AllDirectories)
+           var files = from file in Directory.EnumerateFiles(mydocpath, "*.txt", SearchOption.AllDirectories)
                         from line in File.ReadLines(file)
                         where line.Contains("Microsoft")
                         select new
