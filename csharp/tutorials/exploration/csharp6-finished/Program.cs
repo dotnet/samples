@@ -27,7 +27,7 @@ public class Person
 
     // <SnippetStringInterpolation>
     public override string ToString() => $"{FirstName} {LastName}";
-    public string AllCaps() => $"{FirstName.ToUpper()} {LastName.ToUpper()}";
+    public string AllCaps() => ToString().ToUpper();
     // </SnippetStringInterpolation>
 }
 
