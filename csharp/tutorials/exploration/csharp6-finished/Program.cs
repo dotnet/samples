@@ -37,8 +37,8 @@ public class Program
     {
         // <SnippetInterpolationMain>
         var p = new Person("Bill", "Wagner");
-        WriteLine($"The name, in all caps {p.AllCaps()}");
-        WriteLine($"The name is {p}");
+        WriteLine($"The name, in all caps: {p.AllCaps()}");
+        WriteLine($"The name is: {p}");
         // </SnippetInterpolationMain>
         // <SnippetPhrases>
         var phrase = "the quick brown fox jumps over the lazy dog";

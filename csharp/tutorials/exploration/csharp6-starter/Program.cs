@@ -29,7 +29,7 @@ public class Program
     public static void Main()
     {
         var p = new Person("Bill", "Wagner");
-        Console.WriteLine("The name, in all caps " + p.AllCaps());
-        Console.WriteLine("The name " + p);
+        Console.WriteLine("The name, in all caps: " + p.AllCaps());
+        Console.WriteLine("The name: " + p);
     }
 }

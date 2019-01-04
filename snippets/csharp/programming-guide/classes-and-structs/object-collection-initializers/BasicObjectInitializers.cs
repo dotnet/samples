@@ -14,6 +14,15 @@ namespace object_collection_initializers
             // Auto-implemented properties.
             public int Age { get; set; }
             public string Name { get; set; }
+
+            public Cat()
+            {
+            }
+
+            public Cat(string name)
+            {
+                this.Name = name;
+            }
         }
         // </SnippetCatDeclaration>
 
@@ -41,6 +50,7 @@ namespace object_collection_initializers
         {
             // <SnippetObjectPropertyInitialization>
             Cat cat = new Cat { Age = 10, Name = "Fluffy" };
+            Cat sameCat = new Cat("Fluffy"){ Age = 10 };
             // </SnippetObjectPropertyInitialization>
 
             // <SnippetMatrixInitialization>
@@ -111,9 +121,9 @@ namespace object_collection_initializers
     }
 
     // The following code consolidates examples from the topic.
+    // <SnippetFullExample>
     public class InitializationSample
     {
-        // <SnippetFullExample>
         public class Cat
         {
             // Auto-implemented properties.
@@ -124,6 +134,7 @@ namespace object_collection_initializers
         public static void Main()
         {
             Cat cat = new Cat { Age = 10, Name = "Fluffy" };
+            Cat sameCat = new Cat("Fluffy"){ Age = 10 };
 
             List<Cat> cats = new List<Cat>
             {
@@ -159,18 +170,18 @@ namespace object_collection_initializers
         //Furrytail
         //Peaches
         //List element has null value.
-        // </SnippetFullExample>
     }
+    // </SnippetFullExample>
 
+    // <SnippetFullListExample>
     public class FullExample
     { 
-        // <SnippetFullListExample>
         class FormattedAddresses : IEnumerable<string>
         {
             private List<string> internalList = new List<string>();
             public IEnumerator<string> GetEnumerator() => internalList.GetEnumerator();
 
-            IEnumerator IEnumerable.GetEnumerator() => internalList.GetEnumerator();
+            System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() => internalList.GetEnumerator();
 
             public void Add(string firstname, string lastname, 
                 string street, string city, 
@@ -210,8 +221,8 @@ namespace object_collection_initializers
             456 Street
             Topeka, KS 00000
          */
-        // </SnippetFullListExample>
     }
+    // </SnippetFullListExample>
 
     // <SnippetFullDictionaryInitializer>
     public class DictionaryExample
@@ -222,7 +233,7 @@ namespace object_collection_initializers
 
             public IEnumerator<KeyValuePair<TKey, List<TValue>>> GetEnumerator() => internalDictionary.GetEnumerator();
 
-            IEnumerator IEnumerable.GetEnumerator() => internalDictionary.GetEnumerator();
+            System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() => internalDictionary.GetEnumerator();
 
             public List<TValue> this[TKey key]
             {
@@ -340,7 +351,6 @@ namespace object_collection_initializers
             Debbie
             Jesse
          */
-        // </SnippetFullDictionaryInitializer>
-
     }
+    // </SnippetFullDictionaryInitializer>
 }
