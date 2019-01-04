@@ -27,7 +27,7 @@ public class Person
 
     // <SnippetStringInterpolation>
     public override string ToString() => $"{FirstName} {LastName}";
-    public string AllCaps() => $"{FirstName.ToUpper()} {LastName.ToUpper()}";
+    public string AllCaps() => ToString().ToUpper();
     // </SnippetStringInterpolation>
 }
 
@@ -37,8 +37,8 @@ public class Program
     {
         // <SnippetInterpolationMain>
         var p = new Person("Bill", "Wagner");
-        WriteLine($"The name, in all caps {p.AllCaps()}");
-        WriteLine($"The name is {p}");
+        WriteLine($"The name, in all caps: {p.AllCaps()}");
+        WriteLine($"The name is: {p}");
         // </SnippetInterpolationMain>
         // <SnippetPhrases>
         var phrase = "the quick brown fox jumps over the lazy dog";
