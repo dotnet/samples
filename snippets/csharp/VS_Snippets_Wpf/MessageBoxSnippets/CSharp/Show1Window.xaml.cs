@@ -1,21 +1,25 @@
 using System;
 using System.Windows;
 
-namespace CSharp {
+namespace CSharp
+{
 
-  public partial class Show1Window : Window {
+    public partial class Show1Window : Window
+    {
 
-    public Show1Window() {
-      InitializeComponent();
+        public Show1Window()
+        {
+            InitializeComponent();
+        }
+
+        //<SnippetMessageBoxShow1CODE>
+        private void ShowMessageBoxButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Configure message box
+            string message = "Hello, MessageBox!";
+            // Show message box
+            MessageBoxResult result = MessageBox.Show(message);
+        }
+        //</SnippetMessageBoxShow1CODE>
     }
-    
-    //<SnippetMessageBoxShow1CODE>
-    void showMessageBoxButton_Click(object sender, RoutedEventArgs e) {
-      // Configure message box
-      string message = "Hello, MessageBox!";
-      // Show message box
-      MessageBoxResult result = MessageBox.Show(message);
-    }
-    //</SnippetMessageBoxShow1CODE>
-  }
 }

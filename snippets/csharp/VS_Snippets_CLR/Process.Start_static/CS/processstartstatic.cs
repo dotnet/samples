@@ -16,7 +16,7 @@ namespace MyProcessSample
             // Display the contents of the favorites folder in the browser.
             Process.Start(myFavoritesPath);
         }
-        
+
         // Opens urls and .html documents using Internet Explorer.
         void OpenWithArguments()
         {
@@ -135,9 +135,9 @@ namespace StartArgs
 
             for (var i = 0; i < args.Length; i++)
             {
-                Console.WriteLine("[" + i + "] = " + args[i]);
+                Console.WriteLine($"[{i}] = {args[i]}");
             }
-            
+
             Console.WriteLine("\nPress any key to exit");
             Console.ReadLine();
         }
