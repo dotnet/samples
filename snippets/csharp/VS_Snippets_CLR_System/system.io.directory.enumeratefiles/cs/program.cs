@@ -9,11 +9,11 @@ class Program
     {
         try
         {
-    // Set a variable to the My Documents path.
-    string mydocpath =
-    Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            // Set a variable to the My Documents path.
+            string docPath =
+            Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
-           var files = from file in Directory.EnumerateFiles(@mydocpath, "*.txt", SearchOption.AllDirectories)
+            var files = from file in Directory.EnumerateFiles(docPath, "*.txt", SearchOption.AllDirectories)
                         from line in File.ReadLines(file)
                         where line.Contains("Microsoft")
                         select new
@@ -26,7 +26,7 @@ class Program
             {
                 Console.WriteLine("{0}\t{1}", f.File, f.Line);
             }
-			Console.WriteLine("{0} files found.", files.Count().ToString());
+            Console.WriteLine("{0} files found.", files.Count().ToString());
         }
         catch (UnauthorizedAccessException UAEx)
         {

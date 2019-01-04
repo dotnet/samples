@@ -11,23 +11,23 @@ namespace EnumDir
     {
         static void Main(string[] args)
         {
-        // Set a variable to the My Documents path.
-        string mydocpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            // Set a variable to the My Documents path.
+            string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
-        DirectoryInfo dirPrograms = new DirectoryInfo(@mydocpath);
-        DateTime StartOf2009 = new DateTime(2009, 01, 01);
+            DirectoryInfo dirPrograms = new DirectoryInfo(docPath);
+            DateTime StartOf2009 = new DateTime(2009, 01, 01);
 
-var dirs = from dir in dirPrograms.EnumerateDirectories()
-            where dir.CreationTimeUtc > StartOf2009
-            select new
+            var dirs = from dir in dirPrograms.EnumerateDirectories()
+                where dir.CreationTimeUtc > StartOf2009
+                select new
+                {
+                    ProgDir = dir,
+                };
+
+            foreach (var di in dirs)
             {
-                ProgDir = dir,
-            };
-
-foreach (var di in dirs)
-{
-    Console.WriteLine("{0}", di.ProgDir.Name);
-}
+                Console.WriteLine("{0}", di.ProgDir.Name);
+            }
 
         }
     }

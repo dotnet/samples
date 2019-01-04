@@ -11,9 +11,9 @@ class Program
         try
         {
             // Set a variable to the My Documents path.
-            string mydocpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
-            List<string> dirs = new List<string>(Directory.EnumerateDirectories(mydocpath));
+            List<string> dirs = new List<string>(Directory.EnumerateDirectories(docPath));
                     
             foreach (var dir in dirs)
             {
