@@ -10,6 +10,7 @@ class Program
         string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
         DirectoryInfo diTop = new DirectoryInfo(docPath);
+
         try
         {
             foreach (var fi in diTop.EnumerateFiles())
