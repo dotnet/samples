@@ -31,6 +31,8 @@ class WriteTextFiles
     // Example 1: Write line by line to a new text file with StreamWriter
     static void WriteLineByLine()
     {
+        // <SnippetWriteLine>
+        
         // Create a string array with the lines of text
         string[] lines = { "First line", "Second line", "Third line" };
 
@@ -43,12 +45,14 @@ class WriteTextFiles
             foreach (string line in lines)
                 outputFile.WriteLine(line);
         }
-
+        // </SnippetWriteLine>
     }
 
     // Example 2: Append a line to a text file with StreamWriter
     static void AppendTextSW()
     {
+        // <SnippetAppendText>
+        
         // Set a variable to the My Documents path.
         string mydocpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
@@ -56,12 +60,14 @@ class WriteTextFiles
         using (StreamWriter outputFile = new StreamWriter(Path.Combine(mydocpath,"WriteLines.txt"), true)) {
             outputFile.WriteLine("Fourth Line");
         }
-
+        // </SnippetAppendText>
     }
 
     // Example 3: Write text asynchronously with StreamWriter
     static async void WriteTextAsync()
     {
+        // <SnippetWriteAsync>
+        
         // Set a variable to the My Documents path.
         string mydocpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
@@ -69,11 +75,14 @@ class WriteTextFiles
         using (StreamWriter outputFile = new StreamWriter(Path.Combine(mydocpath,"WriteTextAsync.txt"))) {
             await outputFile.WriteAsync("This is a sentence.");
         }
+        // </SnippetWriteAsync>
     }
 
     // Example 4: Write and append text using File
     static void WriteFile()
     {
+        // <SnippetWriteFile>
+        
         // Create a string array with the lines of text
         string text = "First line" + Environment.NewLine;
 
@@ -88,7 +97,8 @@ class WriteTextFiles
 
         // Append new lines of text to the file
         File.AppendAllLines(Path.Combine(mydocpath,"WriteFile.txt"), lines);
-
+        
+        // </SnippetWriteFile>
     }
 
 }
