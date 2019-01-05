@@ -46,7 +46,17 @@ namespace csrefKeywordsModifiers
         }
         //</snippet2>
 
+    class More_Square : Square
+    {
+        // Area method is overridden again to show
+        // it is possible to override the virtual method
+        // in derived classes.
+        public override int Area()
+        {
+            return side * side;
+        }
     }
+    
     // Output: Area of the square = 144
     //</snippet1>
 
