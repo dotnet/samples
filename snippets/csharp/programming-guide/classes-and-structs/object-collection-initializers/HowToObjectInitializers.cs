@@ -4,9 +4,9 @@ using System.Text;
 
 namespace object_collection_initializers
 {
+    // <SnippetHowToObjectInitializers>
     public class HowToObjectInitializers
     {
-        // <SnippetHowToObjectInitializers>
         public static void Main()
         {
             // Declare a StudentName by using the constructor that has two parameters.
@@ -76,7 +76,7 @@ namespace object_collection_initializers
 
             public override string ToString() => FirstName + "  " + ID;
         }
-        // </SnippetHowToObjectInitializers>
     }
+    // </SnippetHowToObjectInitializers>
 }
 

@@ -5,9 +5,9 @@ using System.Text;
 
 namespace object_collection_initializers
 {
+    // <SnippetHowToDictionaryInitializer>
     public class HowToDictionaryInitializer
     {
-        // <SnippetHowToDictionaryInitializer>
         class StudentName
         {
             public string FirstName { get; set; }
@@ -26,7 +26,7 @@ namespace object_collection_initializers
 
             foreach(var index in Enumerable.Range(111, 3))
             {
-                Console.WriteLine($"Student {index} is {students[index].FirstName} {students[index].FirstName}");
+                Console.WriteLine($"Student {index} is {students[index].FirstName} {students[index].LastName}");
             }
 
             Dictionary<int, StudentName> students2 = new Dictionary<int, StudentName>()
@@ -38,9 +38,9 @@ namespace object_collection_initializers
 
             foreach (var index in Enumerable.Range(111, 3))
             {
-                Console.WriteLine($"Student {index} is {students[index].FirstName} {students[index].FirstName}");
+                Console.WriteLine($"Student {index} is {students[index].FirstName} {students[index].LastName}");
             }
         }
-        // </SnippetHowToDictionaryInitializer>
     }
+    // </SnippetHowToDictionaryInitializer>
 }
