@@ -1,3 +1,6 @@
+# This script builds the sample for x64 Linux. 
+# It assumes that both the dotnet CLI and g++ compiler are available on the path.
+
 SCRIPTPATH=$(readlink -f "$0")
 BASEDIR=$(dirname $SCRIPTPATH)
 SRCDIR=${BASEDIR}/src

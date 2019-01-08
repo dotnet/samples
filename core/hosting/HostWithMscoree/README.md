@@ -1,7 +1,7 @@
 .NET Core Hosting Sample
 ==================================
 
-This sample demonstrates a very simple .NET Core host using the `ICLRRuntimeHost2` interface in mscoree.h. It is part of the [.NET Core hosting tutorial](https://docs.microsoft.com/dotnet/core/tutorials/netcore-hosting). Please see that topic for a more detailed explanation of this sample. There are also alternative hosting APIs (in [CoreClrHost.h](https://github.com/dotnet/coreclr/blob/master/src/coreclr/hosts/inc/coreclrhost.h)) that may be easier to use demonstrated in the [HostWithCoreClrHost folder](../HostWithCoreClrHost) of this repository. 
+This sample demonstrates a very simple .NET Core host using the `ICLRRuntimeHost2` interface in mscoree.h. It is part of the [.NET Core hosting tutorial](https://docs.microsoft.com/dotnet/core/tutorials/netcore-hosting). Please see that topic for a more detailed explanation of this sample. There are also alternative hosting APIs (in [CoreClrHost.h](https://github.com/dotnet/coreclr/blob/master/src/coreclr/hosts/inc/coreclrhost.h)) that may be easier to use. They are demonstrated in the [HostWithCoreClrHost folder](../HostWithCoreClrHost) of this repository. 
 
 About .NET Core Hosts
 ---------------------
@@ -19,7 +19,7 @@ To build this sample, just use msbuild: `msbuild.exe SampleHost.vcxproj`. Be sur
 
 To run the host, you will need a .NET Core-targeted app to run with it.
 
-1. Build a simple .NET Core app (like 'hello world') as a [self-contained](https://docs.microsoft.com/dotnet/core/deploying/#self-contained-deployments-scd) app (since this host looks for coreclr.dll next to the target app) and publish it.
+1. Build a simple .NET Core app (like 'hello world') and publish it as a [self-contained](https://docs.microsoft.com/dotnet/core/deploying/#self-contained-deployments-scd) app (since this host looks for coreclr.dll next to the target app).
 2. Run the SampleHost.exe built previously and pass the path to your app's published dll as a command line argument.
 
 The sample host should start the .NET Core runtime and execute your app.

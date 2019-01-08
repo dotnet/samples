@@ -26,7 +26,7 @@
 
 // Function pointer types for the managed call and callback
 typedef int (*report_callback_ptr)(int progress);
-typedef const char* (*doWork_ptr)(const char* jobName, int iterations, int dataSize, double* data, report_callback_ptr callbackFunction);
+typedef char* (*doWork_ptr)(const char* jobName, int iterations, int dataSize, double* data, report_callback_ptr callbackFunction);
 
 void BuildTpaList(const char* directory, const char* extension, std::string& tpaList);
 int ReportProgressCallback(int progress);
@@ -113,21 +113,21 @@ int main(int argc, char* argv[])
     }
 
     //
-    // STEP 3: Construct AppDomain properties used when starting the runtime
+    // STEP 3: Construct properties used when starting the runtime
     //
 
     // Construct the trusted platform assemblies (TPA) list
     // This is the list of assemblies that .NET Core can load as
-    // trusted system assemblies (similar to the .NET Framework GAC).
+    // trusted system assemblies.
     // For this host (as with most), assemblies next to CoreCLR will 
     // be included in the TPA list
     std::string tpaList;
     BuildTpaList(runtimePath, ".dll", tpaList);
 
-    // <Snippet3A>
+    // <Snippet3>
     // Define CoreCLR properties
     const char* propertyKeys[] = {
-        "TRUSTED_PLATFORM_ASSEMBLIES",      // Trusted assemblies (like the GAC)
+        "TRUSTED_PLATFORM_ASSEMBLIES",      // Trusted assemblies
         "APP_PATHS",                        // Directories to probe for application assemblies
         // "APP_NI_PATHS",                     // Directories to probe for application native images (not used in this sample)
         // "NATIVE_DLL_SEARCH_DIRECTORIES",    // Directories to probe for native dlls (not used in this sample)
@@ -143,14 +143,14 @@ int main(int argc, char* argv[])
     // STEP 4: Start the CoreCLR runtime
     //
 
-    // <Snippet3>
+    // <Snippet4>
     void* hostHandle;
     unsigned int domainId;
 
     // This function both starts the .NET Core runtime and creates
-    // the default AppDomain
+    // the default (and only) AppDomain
     int hr = initializeCoreClr(
-                    runtimePath,        // AppDomain base path
+                    runtimePath,        // App base path
                     "SampleHost",       // AppDomain friendly name
                     sizeof(propertyKeys) / sizeof(char*),   // Property count
                     propertyKeys,       // Property names
@@ -161,7 +161,7 @@ int main(int argc, char* argv[])
 
     if (hr >= 0)
     {
-        printf("CoreCLR started; AppDomain %d created\n", domainId);
+        printf("CoreCLR started\n");
     }
     else
     {
@@ -170,7 +170,7 @@ int main(int argc, char* argv[])
     }                  
 
     //
-    // STEP 5: Create delegate to managed code
+    // STEP 5: Create delegate to managed code and invoke it
     //
 
     // <Snippet5>
@@ -194,10 +194,6 @@ int main(int argc, char* argv[])
         return -1;
     }    
 
-    //
-    // STEP 5.2: Invoking managed delegate
-    //
-
     // Create sample data for the double[] argument of the managed method to be called
     double data[4];
     data[0] = 0; 
@@ -206,9 +202,16 @@ int main(int argc, char* argv[])
     data[3] = 0.75;
 
     // Invoke the managed delegate and write the returned string to the console
-    const char* ret = managedDelegate("Test job", 5, sizeof(data) / sizeof(double), data, ReportProgressCallback);
+    char* ret = managedDelegate("Test job", 5, sizeof(data) / sizeof(double), data, ReportProgressCallback);
 
     printf("Managed code returned: %s\n", ret);
+
+    // Strings returned to native code must be freed by the native code
+#if WINDOWS
+    CoTaskMemFree(ret);
+#elif LINUX
+    free(ret);
+#endif
 
     //
     // STEP 6: Shutdown CoreCLR
@@ -247,6 +250,12 @@ int main(int argc, char* argv[])
 // <Snippet7>
 void BuildTpaList(const char* directory, const char* extension, std::string& tpaList)
 {
+    // This will add all files with a .dll extension to the TPA list. 
+    // This will include unmanaged assemblies (coreclr.dll, for example) that don't
+    // belong on the TPA list. In a real host, only managed assemblies that the host
+    // expects to load should be included. Having extra unmanaged assemblies doesn't
+    // cause anything to fail, though, so this function just enumerates all dll's in
+    // order to keep this sample concise.
     std::string searchPath(directory);
     searchPath.append(FS_SEPERATOR);
     searchPath.append("*");
