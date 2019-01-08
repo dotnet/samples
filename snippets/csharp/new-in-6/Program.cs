@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
-using static NewStyle.ExceptionExtensions;
 
 namespace NewInCSharp6
 {
@@ -33,60 +32,7 @@ namespace NewInCSharp6
             test.Grades.Add(3.5);
             test.Grades.Add(1.0);
             test.Grades.Add(1.0);
-            
-            Console.WriteLine(test.GetAllGrades());
         }
-
-        // <LogException>
-        public void MethodThatFailsSometimes()
-        {
-            try {
-                PerformFailingOperation();
-            } catch (Exception e) when (e.LogException())
-            {
-                // This is never reached!
-            }
-        } 
-        // </LogException>
-        
-        // <LogExceptionRecovery>
-        public void MethodThatFailsButHasRecoveryPath()
-        {
-            try {
-                PerformFailingOperation();
-            } catch (Exception e) when (e.LogException())
-            {
-                // This is never reached!
-            }
-            catch (RecoverableException ex)
-            {
-                Console.WriteLine(ex.ToString());
-                // This can still catch the more specific
-                // exception because the exception filter
-                // above always returns false.
-                // Perform recovery here 
-            }
-        }
-        // </LogExceptionRecovery>
-
-        // <LogExceptionDebugger>
-        public void MethodThatFailsWhenDebuggerIsNotAttached()
-        {
-            try {
-                PerformFailingOperation();
-            } catch (Exception e) when (e.LogException())
-            {
-                // This is never reached!
-            }
-            catch (RecoverableException ex) when (!System.Diagnostics.Debugger.IsAttached)
-            {
-                Console.WriteLine(ex.ToString());
-                // Only catch exceptions when a debugger is not attached.
-                // Otherwise, this should stop in the debugger. 
-            }
-        }
-        // </LogExceptionDebugger>
-
 
         private void PerformFailingOperation() {}
     }
