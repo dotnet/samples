@@ -21,7 +21,13 @@
 #define FS_SEPERATOR "/"
 #define PATH_DELIMITER ":"
 #define MAX_PATH PATH_MAX
-#define CORECLR_FILE_NAME "libcoreclr.so"
+    #if OSX
+    // For OSX, use Linux defines except that the CoreCLR runtime
+    // library has a different name
+    #define CORECLR_FILE_NAME "libcoreclr.dylib"
+    #else
+    #define CORECLR_FILE_NAME "libcoreclr.so"
+    #endif
 #endif
 
 // Function pointer types for the managed call and callback
