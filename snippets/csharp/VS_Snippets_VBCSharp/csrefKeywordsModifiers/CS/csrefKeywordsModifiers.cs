@@ -716,12 +716,12 @@ namespace csrefKeywordsModifiers
         static void Main()
         {
             double r = 3.0, h = 5.0;
-            Shape t = new Shape(r, h);
+            Shape p = new Shape(r, h);
             Circle c = new Circle(r);
             Sphere s = new Sphere(r);
             Cylinder l = new Cylinder(r, h);
             // Display results:
-            Console.WriteLine("Area of Shape   = {0:F2}", t.Area());
+            Console.WriteLine("Area of Shape    = {0:F2}", p.Area());
             Console.WriteLine("Area of Circle   = {0:F2}", c.Area());
             Console.WriteLine("Area of Sphere   = {0:F2}", s.Area());
             Console.WriteLine("Area of Cylinder = {0:F2}", l.Area());
