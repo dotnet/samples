@@ -12,6 +12,9 @@ If you're new to .NET Core, here are a few resources to help you understand the 
 ## Samples in this repo
 Coming soon!
 
+## Additional Samples
+See [WPF Samples](https://www.github.com/Microsoft/wpf-samples) repo for additional WPF samples that have been updated to target .NET Core 3.0. 
+
 ## Getting Started
 
 ### Prerequisites and getting the tools
