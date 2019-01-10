@@ -26,8 +26,6 @@ namespace Group
                 group student by student.Last[0];
             //</snippet10>
 
-
-            
             // This query could be easily modified to group by the entire last name.
             //<Snippet11>
             // Group students by the first letter of their last name
@@ -39,7 +37,6 @@ namespace Group
                 select g;
             //</snippet11>
             Console.WriteLine("The SimpleGroup method produces this output:\r\n");
-
             
            //<snippet12>
            // Iterate group items with a nested foreach. This IGrouping encapsulates
@@ -56,10 +53,9 @@ namespace Group
             }
             //</snippet12>           
 
-            
             //<Snippet13>
-           // Same as previous example except we use the entire last name as a key.
-           // Query variable is an IEnumerable<IGrouping<string, Student>>
+            // Same as previous example except we use the entire last name as a key.
+            // Query variable is an IEnumerable<IGrouping<string, Student>>
             var studentQuery3 =
                 from student in students
                 group student by student.Last;

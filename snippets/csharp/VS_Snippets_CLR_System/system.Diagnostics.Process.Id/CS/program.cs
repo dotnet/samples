@@ -22,31 +22,34 @@ class ProcessDemo
             Console.WriteLine(localByName[i - 1].Id.ToString());
             i -= 1;
         }
-        Process chosen;
+        
         i = localByName.Length;
         while (i > 0)
         {
             Console.WriteLine("Enter a process Id to kill the process");
             string id = Console.ReadLine();
-            if (id == "")
+            if (id == string.Empty)
                 break;
+
             try
             {
-                chosen = Process.GetProcessById(Int32.Parse(id));
+                using (Process chosen = Process.GetProcessById(Int32.Parse(id)))
+                {
+                    if (chosen.ProcessName == "notepad")
+                    {
+                        chosen.Kill();
+                        chosen.WaitForExit();
+                    }
+                }
             }
             catch (Exception e)
             {
                 Console.WriteLine("Incorrect entry.");
                 continue;
             }
-            if (chosen.ProcessName == "notepad")
-            {
-                chosen.Kill();
-                chosen.WaitForExit();
-            }
+            
             i -= 1;
         }
-
     }
 }
 //</Snippet1>

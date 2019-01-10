@@ -221,7 +221,7 @@ class AddressOfOperator
 
 
 //<Snippet10>
-struct CoOrds
+struct Coords
 {
     public int x;
     public int y;
@@ -231,11 +231,11 @@ class AccessMembers
 {
     static void Main() 
     {
-        CoOrds home;
+        Coords home;
 
         unsafe 
         {
-            CoOrds* p = &home;
+            Coords* p = &home;
             p->x = 25;
             p->y = 12;
 
