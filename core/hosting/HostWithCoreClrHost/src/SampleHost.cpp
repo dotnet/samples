@@ -132,16 +132,15 @@ int main(int argc, char* argv[])
 
     // <Snippet3>
     // Define CoreCLR properties
+    // Other properties related to assembly loading are common here,
+    // but for this simple sample, TRUSTED_PLATFORM_ASSEMBLIES is all
+    // that is needed. Check hosting documentation for other common properties.
     const char* propertyKeys[] = {
-        "TRUSTED_PLATFORM_ASSEMBLIES",      // Trusted assemblies
-        "APP_PATHS",                        // Directories to probe for application assemblies
-        // "APP_NI_PATHS",                     // Directories to probe for application native images (not used in this sample)
-        // "NATIVE_DLL_SEARCH_DIRECTORIES",    // Directories to probe for native dlls (not used in this sample)
+        "TRUSTED_PLATFORM_ASSEMBLIES"      // Trusted assemblies
     };
 
     const char* propertyValues[] = {
-        tpaList.c_str(),
-        runtimePath
+        tpaList.c_str()
     };
     // </Snippet3>
 
