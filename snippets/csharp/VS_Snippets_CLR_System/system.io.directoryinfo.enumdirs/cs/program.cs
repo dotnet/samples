@@ -1,4 +1,5 @@
-﻿using System;
+﻿// <Snippet1>
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,23 +11,25 @@ namespace EnumDir
     {
         static void Main(string[] args)
         {
-// <Snippet1>
-DirectoryInfo dirPrograms = new DirectoryInfo(@"c:\program files");
-DateTime StartOf2009 = new DateTime(2009, 01, 01);
+            // Set a variable to the My Documents path.
+            string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
-var dirs = from dir in dirPrograms.EnumerateDirectories()
-            where dir.CreationTimeUtc < StartOf2009
-            select new
+            DirectoryInfo dirPrograms = new DirectoryInfo(docPath);
+            DateTime StartOf2009 = new DateTime(2009, 01, 01);
+
+            var dirs = from dir in dirPrograms.EnumerateDirectories()
+                where dir.CreationTimeUtc > StartOf2009
+                select new
+                {
+                    ProgDir = dir,
+                };
+
+            foreach (var di in dirs)
             {
-                ProgDir = dir,
-            };
-
-foreach (var di in dirs)
-{
-    Console.WriteLine("{0}", di.ProgDir.Name);
-}
-// </Snippet1>
+                Console.WriteLine("{0}", di.ProgDir.Name);
+            }
 
         }
     }
 }
+// </Snippet1>
