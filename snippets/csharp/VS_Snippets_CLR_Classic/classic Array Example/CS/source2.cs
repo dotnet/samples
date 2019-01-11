@@ -43,11 +43,11 @@ public class ExampleClass
 
 public class DummyColl
 {
-    public ArrayList myObj;
+    public ArrayList MyObj { get; }
 
     public DummyColl()
     {
-        myObj = new ArrayList(0);
+        MyObj = new ArrayList(0);
     }
 }
 
@@ -69,9 +69,9 @@ public class Path2
     public static void Dummy(DummyColl obj)
     {
         // <snippet5>
-        for (int i = 0; i < obj.myObj.Count; i++)
+        for (int i = 0; i < obj.MyObj.Count; i++)
         {
-            DoSomething(obj.myObj[i]);
+            DoSomething(obj.MyObj[i]);
         }
         // </snippet5>
     }
