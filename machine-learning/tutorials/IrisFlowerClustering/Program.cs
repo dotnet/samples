@@ -5,7 +5,7 @@ using System.IO;
 
 // <SnippetMLUsings>
 using Microsoft.ML;
-using Microsoft.ML.Runtime.Data;
+using Microsoft.ML.Data;
 // </SnippetMLUsings>
 
 namespace IrisFlowerClustering
@@ -24,7 +24,7 @@ namespace IrisFlowerClustering
             // </SnippetCreateContext>
 
             // <SnippetSetupTextLoader>
-            TextLoader textLoader = mlContext.Data.TextReader(new TextLoader.Arguments()
+            TextLoader textLoader = mlContext.Data.CreateTextReader(new TextLoader.Arguments()
             {
                 Separator = ",",
                 HasHeader = false,
@@ -61,7 +61,7 @@ namespace IrisFlowerClustering
             // </SnippetSaveModel>
 
             // <SnippetPredictor>
-            var predictor = model.MakePredictionFunction<IrisData, ClusterPrediction>(mlContext);
+            var predictor = model.CreatePredictionEngine<IrisData, ClusterPrediction>(mlContext);
             // </SnippetPredictor>
 
             // <SnippetPredictionExample>
