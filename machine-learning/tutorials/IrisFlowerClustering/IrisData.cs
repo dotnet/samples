@@ -1,5 +1,5 @@
 ﻿// <SnippetUsings>
-using Microsoft.ML.Runtime.Api;
+using Microsoft.ML.Data;
 // </SnippetUsings>
 
 namespace IrisFlowerClustering
