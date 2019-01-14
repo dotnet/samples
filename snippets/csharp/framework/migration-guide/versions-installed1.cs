@@ -34,16 +34,16 @@ public static class VersionTest
 
                     // Get the installation flag, or an empty string if there is none.
                     var install = versionKey.GetValue("Install", "").ToString();
-                    if (install == "") // No install info; it must be in a child subkey.
+                    if (string.IsNullOrEmpty(install)) // No install info; it must be in a child subkey.
                         Console.WriteLine($"{versionKeyName}  {name}");
                     else
                     {
-                        if (sp != "" && install == "1")
+                        if (!(string.IsNullOrEmpty(sp)) && install == "1")
                         {
                             Console.WriteLine($"{versionKeyName}  {name}  SP{sp}");
                         }
                     }
-                    if (name != "")
+                    if (! string.IsNullOrEmpty(name))
                     {
                         continue;
                     }
@@ -51,15 +51,15 @@ public static class VersionTest
                     {
                         RegistryKey subKey = versionKey.OpenSubKey(subKeyName);
                         name = (string)subKey.GetValue("Version", "");
-                        if (name != "")
+                        if (! string.IsNullOrEmpty(name))
                             sp = subKey.GetValue("SP", "").ToString();
                         
                         install = subKey.GetValue("Install", "").ToString();
-                        if (install == "") //No install info; it must be later.
+                        if (string.IsNullOrEmpty(install)) //No install info; it must be later.
                             Console.WriteLine($"{versionKeyName}  {name}");
                         else
                         {
-                            if (sp != "" && install == "1")
+                            if (!(string.IsNullOrEmpty(sp )) && install == "1")
                             {
                                 Console.WriteLine($"{subKeyName}  {name}  SP{sp}");
                             }

@@ -23,27 +23,27 @@ Public Module VersionTest
                     Dim sp = versionKey.GetValue("SP", "").ToString()
                    
                     Dim install = versionKey.GetValue("Install", "").ToString()
-                    If install = "" Then  ' No install info; it must be in a child subkey.
+                    If String.IsNullOrEmpty(install) Then  ' No install info; it must be in a child subkey.
                         Console.WriteLine($"{versionKeyName}  {name}")
                     Else
-                        If sp <> "" AndAlso install = "1" Then
+                        If Not String.IsNullOrEmpty(sp) AndAlso install = "1" Then
                             Console.WriteLine($"{versionKeyName}  {name}  SP{sp}")
                         End If
                     End If
-                    If name <> "" Then
+                    If Not String.IsNullOrEmpty(name) Then
                         Continue For
                     End If
                     For Each subKeyName In versionKey.GetSubKeyNames()
                         Dim subKey As RegistryKey = versionKey.OpenSubKey(subKeyName)
                         name = DirectCast(subKey.GetValue("Version", ""), String)
-                        If name <> "" Then
+                        If Not String.IsNullOrEmpty(name) Then
                             sp = subKey.GetValue("SP", "").ToString()
                         End If
                         install = subKey.GetValue("Install", "").ToString()
-                        If install = "" Then  ' No install info; it must be later.
+                        If String.IsNullOrEmpty(install) Then  ' No install info; it must be later.
                             Console.WriteLine($"{versionKeyName}  {name}")
                         Else
-                            If sp <> "" AndAlso install = "1" Then
+                            If Not String.IsNullOrEmpty(sp) AndAlso install = "1" Then
                                 Console.WriteLine($"{subKeyName}  {name}  SP{sp}")
                             ElseIf install = "1" Then
                                 Console.WriteLine($"  {subKeyName}  {name}")
