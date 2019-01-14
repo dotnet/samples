@@ -59,10 +59,10 @@ public class VerifyXML
 
     // Verify the signature of an XML file against an asymmetric 
     // algorithm and return the result.
-    public static Boolean VerifyXml(XmlDocument Doc, RSA Key)
+    public static Boolean VerifyXml(XmlDocument xmlDoc, RSA Key)
     {
         // Check arguments.
-        if (Doc == null)
+        if (xmlDoc == null)
             throw new ArgumentException("Doc");
         if (Key == null)
             throw new ArgumentException("Key");
@@ -70,13 +70,13 @@ public class VerifyXML
         // Create a new SignedXml object and pass it
         // the XML document class.
         // <snippet5>
-        SignedXml signedXml = new SignedXml(Doc);
+        SignedXml signedXml = new SignedXml(xmlDoc);
         // </snippet5>
 
         // Find the "Signature" node and create a new
         // XmlNodeList object.
         // <snippet6>
-        XmlNodeList nodeList = Doc.GetElementsByTagName("Signature");
+        XmlNodeList nodeList = xmlDoc.GetElementsByTagName("Signature");
         // </snippet6>
 
         // Throw an exception if no signature was found.
