@@ -63,7 +63,7 @@ public class VerifyXML
     {
         // Check arguments.
         if (xmlDoc == null)
-            throw new ArgumentException("Doc");
+             throw new ArgumentException("xmlDoc");
         if (Key == null)
             throw new ArgumentException("Key");
 
