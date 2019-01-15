@@ -5,8 +5,7 @@ using System.IO;
 using System.Linq;
 using Microsoft.ML;
 using Microsoft.ML.Core.Data;
-using Microsoft.ML.Runtime.Api;
-using Microsoft.ML.Runtime.Data;
+using Microsoft.ML.Data;
 using Microsoft.ML.Transforms.Text;
 // </Snippet1>
 
@@ -35,7 +34,7 @@ namespace SentimentAnalysis
             // all the column names and their types. This is used to create the model, and train it. 
             // Initialize our TextLoader
             // <Snippet4>
-            _textLoader = mlContext.Data.TextReader(new TextLoader.Arguments()
+            _textLoader = mlContext.Data.CreateTextReader(new TextLoader.Arguments()
                                                 {
                                                     Separator = "tab",
                                                     HasHeader = true,
@@ -155,7 +154,7 @@ namespace SentimentAnalysis
         private static void Predict(MLContext mlContext, ITransformer model)
         {
             // <Snippet17>
-            var predictionFunction = model.MakePredictionFunction<SentimentData, SentimentPrediction>(mlContext);
+            var predictionFunction = model.CreatePredictionEngine<SentimentData, SentimentPrediction>(mlContext);
             // </Snippet17>
 
             // <Snippet18>
