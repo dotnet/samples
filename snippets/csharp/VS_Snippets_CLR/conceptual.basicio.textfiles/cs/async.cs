@@ -1,14 +1,10 @@
 using System;
 using System.IO;
+using System.Threading.Tasks;
 
 class Program
 {
-    static void Main(string[] args)
-    {
-        WriteTextAsync();
-    }
-
-    static async void WriteTextAsync()
+    static async Task Main()
     {
         // Set a variable to the Documents path.
         string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);

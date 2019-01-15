@@ -5,11 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        WriteText();
-    }
-
-    static void WriteText()
-    {
+    
         // Create a string array with the lines of text
         string[] lines = { "First line", "Second line", "Third line" };
 
