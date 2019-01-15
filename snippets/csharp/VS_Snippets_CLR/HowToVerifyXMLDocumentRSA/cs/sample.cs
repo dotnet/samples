@@ -54,18 +54,15 @@ public class VerifyXML
         }
     }
 
-
-    
-
     // Verify the signature of an XML file against an asymmetric 
     // algorithm and return the result.
-    public static Boolean VerifyXml(XmlDocument xmlDoc, RSA Key)
+    public static Boolean VerifyXml(XmlDocument xmlDoc, RSA key)
     {
         // Check arguments.
         if (xmlDoc == null)
              throw new ArgumentException("xmlDoc");
-        if (Key == null)
-            throw new ArgumentException("Key");
+        if (key == null)
+            throw new ArgumentException("key");
 
         // Create a new SignedXml object and pass it
         // the XML document class.
@@ -100,7 +97,7 @@ public class VerifyXML
 
         // Check the signature and return the result.
         // <snippet8>
-        return signedXml.CheckSignature(Key);
+        return signedXml.CheckSignature(key);
         // </snippet8>
     }
 }

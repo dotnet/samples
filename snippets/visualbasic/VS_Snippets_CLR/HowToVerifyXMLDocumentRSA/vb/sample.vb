@@ -44,13 +44,13 @@ Module VerifyXML
 
     ' Verify the signature of an XML file against an asymmetric 
     ' algorithm and return the result.
-    Function VerifyXml(ByVal xmlDoc As XmlDocument, ByVal Key As RSA) As [Boolean]
+    Function VerifyXml(ByVal xmlDoc As XmlDocument, ByVal key As RSA) As [Boolean]
         ' Check arguments.
         If xmlDoc Is Nothing Then
-            Throw New ArgumentException("Doc")
+            Throw New ArgumentException("xmlDoc")
         End If
-        If Key Is Nothing Then
-            Throw New ArgumentException("Key")
+        If key Is Nothing Then
+            Throw New ArgumentException("key")
         End If
         ' Create a new SignedXml object and pass it
         ' the XML document class.
@@ -80,7 +80,7 @@ Module VerifyXML
         ' </snippet7>
         ' Check the signature and return the result.
         ' <snippet8>
-        Return signedXml.CheckSignature(Key)
+        Return signedXml.CheckSignature(key)
         ' </snippet8>
     End Function
 End Module
