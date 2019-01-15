@@ -101,7 +101,7 @@ namespace BrushesIntroduction
             //
             DrawingBrush tileBrushWithFlipYTiling = new DrawingBrush();
             tileBrushWithFlipYTiling.Drawing = triangleDrawing;
-            tileBrushWithFlipYTiling.TileMode = TileMode.FlipX;
+            tileBrushWithFlipYTiling.TileMode = TileMode.FlipY;
 
             // Specify the brush's Viewport.
             tileBrushWithFlipYTiling.Viewport = new Rect(0, 0, 0.5, 0.5);

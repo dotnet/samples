@@ -101,7 +101,7 @@ Namespace BrushesIntroduction
 			'
 			Dim tileBrushWithFlipYTiling As New DrawingBrush()
 			tileBrushWithFlipYTiling.Drawing = triangleDrawing
-			tileBrushWithFlipYTiling.TileMode = TileMode.FlipX
+			tileBrushWithFlipYTiling.TileMode = TileMode.FlipY
 
 			' Specify the brush's Viewport.
 			tileBrushWithFlipYTiling.Viewport = New Rect(0, 0, 0.5, 0.5)
