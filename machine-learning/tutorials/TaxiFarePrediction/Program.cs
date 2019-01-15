@@ -3,8 +3,7 @@ using System;
 using System.IO;
 using Microsoft.ML;
 using Microsoft.ML.Core.Data;
-using Microsoft.ML.Runtime.Api;
-using Microsoft.ML.Runtime.Data;
+using Microsoft.ML.Data;
 using Microsoft.ML.Transforms;
 using Microsoft.ML.Transforms.Categorical;
 using Microsoft.ML.Transforms.Normalizers;
@@ -31,7 +30,7 @@ namespace TaxiFarePrediction
             // </Snippet3>
 
             // <Snippet4>
-            _textLoader = mlContext.Data.TextReader(new TextLoader.Arguments()
+            _textLoader = mlContext.Data.CreateTextReader(new TextLoader.Arguments()
             {
                 Separator = ",",
                 HasHeader = true,
@@ -139,7 +138,7 @@ namespace TaxiFarePrediction
             //Prediction test
             // Create prediction function and make prediction.
             // <Snippet22>
-            var predictionFunction = loadedModel.MakePredictionFunction<TaxiTrip, TaxiTripFarePrediction>(mlContext);
+            var predictionFunction = loadedModel.CreatePredictionEngine<TaxiTrip, TaxiTripFarePrediction>(mlContext);
             // </Snippet22>
             //Sample: 
             //vendor_id,rate_code,passenger_count,trip_time_in_secs,trip_distance,payment_type,fare_amount
