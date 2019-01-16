@@ -7,10 +7,10 @@ class Program
     {
 
         // Set a variable to the Documents path.
-        string docpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
         // Append text to an existing file named "WriteLines.txt".
-        using (StreamWriter outputFile = new StreamWriter(Path.Combine(docpath, "WriteLines.txt"), true))
+        using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, "WriteLines.txt"), true))
         {
             outputFile.WriteLine("Fourth Line");
         }
