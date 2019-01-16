@@ -367,7 +367,7 @@ int wmain(int argc, wchar_t* argv[])
 	//  void *pfnDelegate = NULL;
 	//  hr = runtimeHost->CreateDelegate(
 	//	  domainId,
-	//	  L"HW, Version=1.0.0.0, Culture=neutral",	// Target managed assembly
+	//	  L"HW, Version=1.0.0.0, Culture=neutral",	// Target managed assembly name (https://docs.microsoft.com/dotnet/framework/app-domains/assembly-names)
 	//	  L"ConsoleApplication.Program",				// Target managed type
 	//	  L"Main",									// Target entry point (static method)
 	//	  (INT_PTR*)&pfnDelegate);
@@ -409,5 +409,14 @@ HMODULE LoadCoreCLR(const wchar_t* directoryPath)
 	// <Snippet2>
 	HMODULE ret = LoadLibraryExW(coreDllPath, NULL, 0);
 	// </Snippet2>
+
+    if (!ret)
+    {
+        // This logging is likely too verbose for many scenarios, but is useful
+        // when getting started with the hosting APIs.
+        DWORD errorCode = GetLastError();
+        wprintf(L"CoreCLR not loaded from %s. LoadLibrary error code: %d\n", coreDllPath, errorCode);
+    }
+
 	return ret;
 }
