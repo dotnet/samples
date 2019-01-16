@@ -190,12 +190,12 @@ int wmain(int argc, wchar_t* argv[])
 	// A common pattern is to include any assemblies next to CoreCLR.dll as platform assemblies.
 	// More sophisticated hosts may also include their own Framework extensions (such as AppDomain managers)
 	// in this list.
-	int tpaSize = 100 * MAX_PATH; // Starting size for our TPA (Trusted Platform Assemblies) list
+	size_t tpaSize = 100 * MAX_PATH; // Starting size for our TPA (Trusted Platform Assemblies) list
 	wchar_t* trustedPlatformAssemblies = new wchar_t[tpaSize];
 	trustedPlatformAssemblies[0] = L'\0';
 
 	// Extensions to probe for when finding TPA list files
-	wchar_t *tpaExtensions[] = {
+	const wchar_t *tpaExtensions[] = {
 		L"*.dll",
 		L"*.exe",
 		L"*.winmd"
