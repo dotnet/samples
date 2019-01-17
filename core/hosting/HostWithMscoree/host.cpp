@@ -59,9 +59,16 @@ int wmain(int argc, wchar_t* argv[])
 	// at the last path delimiter (\)
 	wchar_t targetAppPath[MAX_PATH];
 	wcscpy_s(targetAppPath, targetApp);
-	size_t i = wcslen(targetAppPath) - 1;
-	while (i >= 0 && targetAppPath[i] != L'\\') i--;
-	targetAppPath[i] = L'\0';
+
+    // Walk the string backwards looking for '\'
+	size_t i = wcsnlen(targetAppPath, MAX_PATH);
+	while (i > 0 && targetAppPath[i - 1] != L'\\') i--;
+
+    // Replace the first '\' found (if any) with \0
+    if (i > 0)
+    {
+        targetAppPath[i - 1] = L'\0';
+    }
 
 
 
@@ -190,12 +197,12 @@ int wmain(int argc, wchar_t* argv[])
 	// A common pattern is to include any assemblies next to CoreCLR.dll as platform assemblies.
 	// More sophisticated hosts may also include their own Framework extensions (such as AppDomain managers)
 	// in this list.
-	int tpaSize = 100 * MAX_PATH; // Starting size for our TPA (Trusted Platform Assemblies) list
+	size_t tpaSize = 100 * MAX_PATH; // Starting size for our TPA (Trusted Platform Assemblies) list
 	wchar_t* trustedPlatformAssemblies = new wchar_t[tpaSize];
 	trustedPlatformAssemblies[0] = L'\0';
 
 	// Extensions to probe for when finding TPA list files
-	wchar_t *tpaExtensions[] = {
+	const wchar_t *tpaExtensions[] = {
 		L"*.dll",
 		L"*.exe",
 		L"*.winmd"
@@ -227,7 +234,7 @@ int wmain(int argc, wchar_t* argv[])
 				wcscat_s(pathToAdd, MAX_PATH, findData.cFileName);
 
 				// Check to see if TPA list needs expanded
-				if (wcslen(pathToAdd) + (3) + wcslen(trustedPlatformAssemblies) >= tpaSize)
+				if (wcsnlen(pathToAdd, MAX_PATH) + (3) + wcsnlen(trustedPlatformAssemblies, tpaSize) >= tpaSize)
 				{
 					// Expand, if needed
 					tpaSize *= 2;
@@ -367,7 +374,7 @@ int wmain(int argc, wchar_t* argv[])
 	//  void *pfnDelegate = NULL;
 	//  hr = runtimeHost->CreateDelegate(
 	//	  domainId,
-	//	  L"HW, Version=1.0.0.0, Culture=neutral",	// Target managed assembly
+	//	  L"HW, Version=1.0.0.0, Culture=neutral",	// Target managed assembly name (https://docs.microsoft.com/dotnet/framework/app-domains/assembly-names)
 	//	  L"ConsoleApplication.Program",				// Target managed type
 	//	  L"Main",									// Target entry point (static method)
 	//	  (INT_PTR*)&pfnDelegate);
@@ -409,5 +416,14 @@ HMODULE LoadCoreCLR(const wchar_t* directoryPath)
 	// <Snippet2>
 	HMODULE ret = LoadLibraryExW(coreDllPath, NULL, 0);
 	// </Snippet2>
+
+    if (!ret)
+    {
+        // This logging is likely too verbose for many scenarios, but is useful
+        // when getting started with the hosting APIs.
+        DWORD errorCode = GetLastError();
+        wprintf(L"CoreCLR not loaded from %s. LoadLibrary error code: %d\n", coreDllPath, errorCode);
+    }
+
 	return ret;
 }

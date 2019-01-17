@@ -49,6 +49,14 @@ namespace operators
             Console.WriteLine("======= >, <, >=, and <= operator examples =====");
             GreaterAndLessOperatorsExamples.Examples();
             Console.WriteLine();
+
+            Console.WriteLine("============== [] operator examples ============");
+            IndexOperatorExamples.Examples();
+            Console.WriteLine();
+
+            Console.WriteLine("============== () operator examples ============");
+            InvocationOperatorExamples.Examples();
+            Console.WriteLine();
         }
     }
 }

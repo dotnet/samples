@@ -5,7 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Create a string array with the lines of text
+        // Create a string with a line of text.
         string text = "First line" + Environment.NewLine;
 
         // Set a variable to the Documents path.

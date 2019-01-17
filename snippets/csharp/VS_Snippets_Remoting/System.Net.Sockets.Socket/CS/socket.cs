@@ -55,7 +55,8 @@ public class GetSocket
             "\r\nConnection: Close\r\n\r\n";
         Byte[] bytesSent = Encoding.ASCII.GetBytes(request);
         Byte[] bytesReceived = new Byte[256];
-       
+        string page = "";
+        
         // Create a socket connection with the specified server and port.
         using(Socket s = ConnectSocket(server, port)) {
 
@@ -67,7 +68,7 @@ public class GetSocket
             
             // Receive the server home page content.
             int bytes = 0;
-            string page = "Default HTML page on " + server + ":\r\n";
+            page = "Default HTML page on " + server + ":\r\n";
 
             // The following will block until the page is transmitted.
             do {
