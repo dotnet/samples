@@ -20,12 +20,12 @@ class Program
                     // Display each file over 10 MB;
                     if (fi.Length > 10000000)
                     {
-                        Console.WriteLine("{0}\t\t{1}", fi.FullName, fi.Length.ToString("N0"));
+                        Console.WriteLine($"{fi.FullName}\t\t{fi.Length.ToString("NO")}");
                     }
                 }
-                catch (UnauthorizedAccessException UnAuthTop)
+                catch (UnauthorizedAccessException unAuthTop)
                 {
-                    Console.WriteLine("{0}", UnAuthTop.Message);
+                    Console.WriteLine($"{unAuthTop.Message}");
                 }
             }
             
@@ -40,32 +40,32 @@ class Program
                             // Display each file over 10 MB;
                             if (fi.Length > 10000000)
                             {
-                                Console.WriteLine("{0}\t\t{1}",  fi.FullName, fi.Length.ToString("N0"));
+                                Console.WriteLine($"{fi.FullName}\t\t{fi.Length.ToString("NO")}");
                             }
                         }
-                        catch (UnauthorizedAccessException UnAuthFile)
+                        catch (UnauthorizedAccessException unAuthFile)
                         {
-                            Console.WriteLine("UnAuthFile: {0}", UnAuthFile.Message);
+                            Console.WriteLine($"unAuthFile: {unAuthFile.Message}");
                         }
                     }
                 }
-                catch (UnauthorizedAccessException UnAuthSubDir)
+                catch (UnauthorizedAccessException unAuthSubDir)
                 {
-                    Console.WriteLine("UnAuthSubDir: {0}", UnAuthSubDir.Message);
+                    Console.WriteLine($"unAuthSubDir: {unAuthSubDir.Message}");
                 }
             }
         }
-        catch (DirectoryNotFoundException DirNotFound)
+        catch (DirectoryNotFoundException dirNotFound)
         {
-            Console.WriteLine("{0}", DirNotFound.Message);
+            Console.WriteLine($"{dirNotFound.Message}");
         }
-        catch (UnauthorizedAccessException UnAuthDir)
+        catch (UnauthorizedAccessException unAuthDir)
         {
-            Console.WriteLine("UnAuthDir: {0}", UnAuthDir.Message);
+            Console.WriteLine($"unAuthDir: {unAuthDir.Message}");
         }
-        catch (PathTooLongException LongPath)
+        catch (PathTooLongException longPath)
         {
-            Console.WriteLine("{0}", LongPath.Message);
+            Console.WriteLine($"{longPath.Message}");
         }
     }
 }

@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 
 class Program
 {
@@ -17,9 +16,9 @@ class Program
                     
             foreach (var dir in dirs)
             {
-                Console.WriteLine("{0}", dir.Substring(dir.LastIndexOf("\\") + 1));
+                Console.WriteLine($"{dir.Substring(dir.LastIndexOf("\\") + 1)}");
             }
-            Console.WriteLine("{0} directories found.",  dirs.Count);
+            Console.WriteLine($"{dirs.Count} directories found.");
         }
         catch (UnauthorizedAccessException UAEx)
         {

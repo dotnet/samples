@@ -24,17 +24,17 @@ class Program
 
             foreach (var f in files)
             {
-                Console.WriteLine("{0}\t{1}", f.File, f.Line);
+                Console.WriteLine($"{f.File}\t{f.Line}");
             }
-            Console.WriteLine("{0} files found.", files.Count().ToString());
+            Console.WriteLine($"{files.Count} files found.");
         }
-        catch (UnauthorizedAccessException UAEx)
+        catch (UnauthorizedAccessException uAEx)
         {
-            Console.WriteLine(UAEx.Message);
+            Console.WriteLine(uAEx.Message);
         }
-        catch (PathTooLongException PathEx)
+        catch (PathTooLongException pathEx)
         {
-            Console.WriteLine(PathEx.Message);
+            Console.WriteLine(pathEx.Message);
         }
     }
 }
