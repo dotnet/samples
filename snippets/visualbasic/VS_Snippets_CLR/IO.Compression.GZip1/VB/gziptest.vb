@@ -1,9 +1,10 @@
 ' <Snippet1>
 Imports System.IO
 Imports System.IO.Compression
+
 Module Module1
 
-    Private directoryPath As String = "c:\temp"
+    Private directoryPath As String = ".\temp"
     Public Sub Main()
         Dim directorySelected As New DirectoryInfo(directoryPath)
         Compress(directorySelected)

@@ -1,13 +1,12 @@
 ' <snippet1>
-Imports System.IO
 Imports System.IO.Compression
 
 Module Module1
 
     Sub Main()
-        Dim startPath As String = "c:\example\start"
-        Dim zipPath As String = "c:\example\result.zip"
-        Dim extractPath As String = "c:\example\extract"
+        Dim startPath As String = ".\start"
+        Dim zipPath As String = ".\result.zip"
+        Dim extractPath As String = ".\extract"
 
         ZipFile.CreateFromDirectory(startPath, zipPath)
 
