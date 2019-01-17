@@ -1,5 +1,5 @@
 ﻿// <Snippet1>
-using Microsoft.ML.Runtime.Api;
+using Microsoft.ML.Data;
 // </Snippet1>
 
 namespace TaxiFarePrediction

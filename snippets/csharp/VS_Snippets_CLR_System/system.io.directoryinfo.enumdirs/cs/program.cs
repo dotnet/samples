@@ -22,9 +22,10 @@ namespace EnumDir
 
             foreach (var di in dirs)
             {
-                Console.WriteLine("{0}", di.ProgDir.Name);
+                Console.WriteLine($"{di.ProgDir.Name}");
             }
 
         }
     }
 }
+// </Snippet1>

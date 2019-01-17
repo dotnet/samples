@@ -26,7 +26,7 @@ class Program
             {
                 Console.WriteLine($"{f.File}\t{f.Line}");
             }
-            Console.WriteLine($"{files.Count} files found.");
+            Console.WriteLine($"{files.Count().ToString()} files found.");
         }
         catch (UnauthorizedAccessException uAEx)
         {

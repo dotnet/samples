@@ -27,24 +27,6 @@ namespace NewStyle
         }
         // </ExceptionFilter>
 
-        // <HandleNotChanged>
-        public static async Task<string> MakeRequestWithNotModifiedSupport()
-        { 
-            var client = new System.Net.Http.HttpClient();
-            var streamTask = client.GetStringAsync("https://localHost:10000");
-            try {
-                var responseText = await streamTask;
-                return responseText;
-            } catch (System.Net.Http.HttpRequestException e) when (e.Message.Contains("301"))
-            {
-                return "Site Moved";
-            } catch (System.Net.Http.HttpRequestException e) when (e.Message.Contains("304"))
-            {
-                return "Use the Cache";
-            }
-        }
-        // </HandleNotChanged>
-        
         // <AwaitFinally>
         public static async Task<string> MakeRequestAndLogFailures()
         { 

@@ -4,9 +4,9 @@ using System.Text;
 
 namespace object_collection_initializers
 {
+    // <SnippetHowToIndexInitializer>
     public class HowToIndexInitializer
     {
-        // <SnippetHowToIndexInitializer>
         public class BaseballTeam
         {
             private string[] players = new string[9];
@@ -39,7 +39,7 @@ namespace object_collection_initializers
 
             Console.WriteLine(team["2B"]);
         }
-        // </SnippetHowToIndexInitializer>
     }
+    // </SnippetHowToIndexInitializer>
 }
 

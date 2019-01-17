@@ -5,8 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Diagnostics;
 
-
-
 namespace ConsoleApplication1
 {
 
@@ -100,7 +98,6 @@ namespace ConsoleApplication1
     Output:
     -1
     */
-
     //</snippet6>
 
     // !
@@ -163,7 +160,6 @@ namespace ConsoleApplication1
     0.6
     -1.2
     */
-
     //</snippet9>
 
     // |=
@@ -185,7 +181,6 @@ namespace ConsoleApplication1
     0x0000000e
     True
     */
-
     //</snippet10>
 
     //<snippet11>
@@ -327,7 +322,6 @@ namespace ConsoleApplication1
             System.Console.WriteLine("hello");
             //</snippet20>
         }
-
     }
 
     //<snippet21>
@@ -552,7 +546,6 @@ namespace ConsoleApplication1
     Bitwise result: 1010
     Bitwise result: 11000111
     */
-
     //</snippet30>
 
 
@@ -1096,7 +1089,7 @@ namespace ConsoleApplication1
             int? x = null;
 
             // Set y to the value of x if x is NOT null; otherwise,
-            // if x = null, set y to -1.
+            // if x == null, set y to -1.
             int y = x ?? -1;
 
             // Assign i to return value of the method if the method's result
