@@ -61,7 +61,7 @@ int wmain(int argc, wchar_t* argv[])
 	wcscpy_s(targetAppPath, targetApp);
 
     // Walk the string backwards looking for '\'
-	size_t i = wcslen(targetAppPath);
+	size_t i = wcsnlen(targetAppPath, MAX_PATH);
 	while (i > 0 && targetAppPath[i - 1] != L'\\') i--;
 
     // Replace the first '\' found (if any) with \0
@@ -234,7 +234,7 @@ int wmain(int argc, wchar_t* argv[])
 				wcscat_s(pathToAdd, MAX_PATH, findData.cFileName);
 
 				// Check to see if TPA list needs expanded
-				if (wcslen(pathToAdd) + (3) + wcslen(trustedPlatformAssemblies) >= tpaSize)
+				if (wcsnlen(pathToAdd, MAX_PATH) + (3) + wcsnlen(trustedPlatformAssemblies, tpaSize) >= tpaSize)
 				{
 					// Expand, if needed
 					tpaSize *= 2;
