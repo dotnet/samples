@@ -19,7 +19,7 @@ class Program
         // is the directory separator char. 
         // Without this, a malicious zip file could try to traverse outside of the expected
         // extraction path.
-        if (!extractPath.EndsWith(Path.DirectorySeparatorChar.ToString()))
+        if (!extractPath.EndsWith(Path.DirectorySeparatorChar.ToString(), StringComparison.Ordinal))
             extractPath += Path.DirectorySeparatorChar;
 
         using (ZipArchive archive = ZipFile.OpenRead(zipPath))

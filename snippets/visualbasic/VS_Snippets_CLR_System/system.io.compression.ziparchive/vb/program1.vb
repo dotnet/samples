@@ -17,7 +17,7 @@ Module Module1
         ' is the directory separator char. 
         ' Without this, a malicious zip file could try to traverse outside of the expected
         ' extraction path.
-        If Not extractPath.EndsWith(Path.DirectorySeparatorChar.ToString()) Then
+        If Not extractPath.EndsWith(Path.DirectorySeparatorChar.ToString(), StringComparison.Ordinal) Then
             extractPath += Path.DirectorySeparatorChar
         End If
 
