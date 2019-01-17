@@ -16,3 +16,5 @@ class Program
         }
     }
 }
+// The example adds the following line to the contents of "WriteLines.txt":
+// Fourth Line
