@@ -1,8 +1,7 @@
 ﻿<Window 
     x:Class="CSharp.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    >
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 	<StackPanel>
 		<Button Click="Show1">Show1</Button>
 		<Button Click="Show2">Show2</Button>

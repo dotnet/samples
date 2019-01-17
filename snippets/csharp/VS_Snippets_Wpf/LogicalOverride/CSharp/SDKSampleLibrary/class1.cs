@@ -6,33 +6,40 @@ using System.Collections;
 
 namespace SDKSample
 {
-//<SnippetSingletonPanel>
+    //<SnippetSingletonPanel>
     public class SingletonPanel : StackPanel
     {
         //private UIElementCollection _children; 
         private FrameworkElement _child;
 
-        public SingletonPanel() {
+        public SingletonPanel()
+        {
 
         }
 
         public FrameworkElement SingleChild
         {
 
-            get { return _child;}
+            get { return _child; }
             set
             {
-                if (value==null) {
-                     RemoveLogicalChild(_child);
-                } else {             
-                     if (_child==null) {
-                         _child = value;
-                     } else {
-                         // raise an exception?
-                         MessageBox.Show("Needs to be a single element");
-                     }
+                if (value == null)
+                {
+                    RemoveLogicalChild(_child);
                 }
-            } 
+                else
+                {
+                    if (_child == null)
+                    {
+                        _child = value;
+                    }
+                    else
+                    {
+                        // raise an exception?
+                        MessageBox.Show("Needs to be a single element");
+                    }
+                }
+            }
         }
         public void SetSingleChild(object child)
         {
@@ -54,20 +61,21 @@ namespace SDKSample
         }
 
         public new void RemoveLogicalChild(object child)
-
         {
             _child = null;
             this.Children.Clear();
         }
         protected override IEnumerator LogicalChildren
         {
-           get {
-           // cheat, make a list with one member and return the enumerator
-           ArrayList _list = new ArrayList();
-           _list.Add(_child);
-           return (IEnumerator) _list.GetEnumerator();}
+            get
+            {
+                // cheat, make a list with one member and return the enumerator
+                ArrayList _list = new ArrayList();
+                _list.Add(_child);
+                return (IEnumerator)_list.GetEnumerator();
+            }
         }
     }
-//</SnippetSingletonPanel>
+    //</SnippetSingletonPanel>
 }
 

@@ -7,7 +7,7 @@ public class RegexUtilities
 {
     public static bool IsValidEmail(string email)
     {
-        if (string.IsNullOrWhitespace(email))
+        if (string.IsNullOrWhiteSpace(email))
             return false;
 
         try

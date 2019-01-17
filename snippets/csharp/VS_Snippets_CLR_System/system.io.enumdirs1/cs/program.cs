@@ -10,9 +10,10 @@ class Program
     {
         try
         {
-            string dirPath = @"\\archives\2009\reports";
+            // Set a variable to the My Documents path.
+            string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
-            List<string> dirs = new List<string>(Directory.EnumerateDirectories(dirPath));
+            List<string> dirs = new List<string>(Directory.EnumerateDirectories(docPath));
                     
             foreach (var dir in dirs)
             {
