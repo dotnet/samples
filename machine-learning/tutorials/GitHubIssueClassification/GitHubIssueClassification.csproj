@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.ML" Version="0.9.0-preview-27304-4" />
+    <PackageReference Include="Microsoft.ML" Version="0.9.0" />
   </ItemGroup>
 
   <ItemGroup>
