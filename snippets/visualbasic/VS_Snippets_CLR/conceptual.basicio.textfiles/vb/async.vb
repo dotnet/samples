@@ -1,10 +1,11 @@
-Imports System
 Imports System.IO
 
-Class WriteTextAsync
+Public Module Example
+    Public Sub Main()
+        WriteTextAsync()
+    End Sub
 
-    Public Shared Async Sub Main()
-
+    Async Sub WriteTextAsync()
         ' Set a variable to the Documents path.
         Dim docPath As String = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
 
@@ -13,5 +14,7 @@ Class WriteTextAsync
             Await outputFile.WriteAsync("This is a sentence.")
         End Using
     End Sub
+End Module
 
-End Class
+' The example creates a file named "WriteTextAsync.txt" with the following contents:
+' This is a sentence.
