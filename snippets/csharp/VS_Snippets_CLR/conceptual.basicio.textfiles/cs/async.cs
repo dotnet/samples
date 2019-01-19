@@ -16,3 +16,5 @@ class Program
         }
     }
 }
+// The example creates a file named "WriteTextAsync.txt" with the following contents:
+// This is a sentence.

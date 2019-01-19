@@ -180,6 +180,9 @@ int main(int argc, char* argv[])
 
     // <Snippet5>
     doWork_ptr managedDelegate;    
+
+    // The assembly name passed in the third parameter is a managed assembly name
+    // as described at https://docs.microsoft.com/dotnet/framework/app-domains/assembly-names
     hr = createManagedDelegate(
             hostHandle, 
             domainId,
