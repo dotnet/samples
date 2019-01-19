@@ -32,7 +32,7 @@ namespace GitHubIssueClassification
         {
             // Create MLContext to be shared across the model creation workflow objects 
             // Set a random seed for repeatable/deterministic results across multiple trainings.
-            // </SnippetCreateMLContext>
+            // <SnippetCreateMLContext>
             _mlContext = new MLContext(seed: 0);
             // </SnippetCreateMLContext>
 
@@ -46,10 +46,6 @@ namespace GitHubIssueClassification
             // </SnippetLoadTrainData>
 
             Console.WriteLine($"=============== Finished Loading Dataset  ===============");
-            
-            // <SnippetSplitData>
-            //   var (trainData, testData) = _mlContext.MulticlassClassification.TrainTestSplit(_trainingDataView, testFraction: 0.1);
-            // </SnippetSplitData>
 
             // <SnippetCallProcessData>
             var pipeline = ProcessData();
