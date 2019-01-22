@@ -16,17 +16,17 @@ class Program
                     
             foreach (var dir in dirs)
             {
-                Console.WriteLine($"{dir.Substring(dir.LastIndexOf("\\") + 1)}");
+                Console.WriteLine($"{dir.Substring(dir.LastIndexOf(Path.DirectorySeparatorChar) + 1)}");
             }
             Console.WriteLine($"{dirs.Count} directories found.");
         }
-        catch (UnauthorizedAccessException UAEx)
+        catch (UnauthorizedAccessException ex)
         {
-            Console.WriteLine(UAEx.Message);
+            Console.WriteLine(ex.Message);
         }
-        catch (PathTooLongException PathEx)
+        catch (PathTooLongException ex)
         {
-            Console.WriteLine(PathEx.Message);
+            Console.WriteLine(ex.Message);
         }
     }
 }

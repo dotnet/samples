@@ -11,13 +11,13 @@ Module Module1
             Dim dirs As List(Of String) = New List(Of String)(Directory.EnumerateDirectories(dirPath))
 
             For Each folder In dirs
-                Console.WriteLine($"{dir.Substring(dir.LastIndexOf("\\") + 1)}")
+                Console.WriteLine($"{dir.Substring(dir.LastIndexOf(Path.DirectorySeparatorChar) + 1)}")
             Next
             Console.WriteLine($"{dirs.Count} directories found.")
-        Catch uAEx As UnauthorizedAccessException
-            Console.WriteLine(uAEx.Message)
-        Catch pathEx As PathTooLongException
-            Console.WriteLine(pathEx.Message)
+        Catch ex As UnauthorizedAccessException
+            Console.WriteLine(ex.Message)
+        Catch ex As PathTooLongException
+            Console.WriteLine(ex.Message)
         End Try
 
     End Sub
