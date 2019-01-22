@@ -35,9 +35,8 @@ public class Program
 
                         }
                     }
-                    FileInfo info = new FileInfo(directoryPath + "\\" + fileToCompress.Name + ".gz");
-                    Console.WriteLine("Compressed {0} from {1} to {2} bytes.",
-                    fileToCompress.Name, fileToCompress.Length.ToString(), info.Length.ToString());
+                    FileInfo info = new FileInfo(directoryPath + Path.DirectorySeparatorChar + fileToCompress.Name + ".gz");
+                    Console.WriteLine($"Compressed {fileToCompress.Name} from {fileToCompress.Length.ToString()} to {info.Length.ToString()} bytes.");
                 }
 
             }
