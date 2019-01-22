@@ -21,3 +21,8 @@ class Program
         File.AppendAllLines(Path.Combine(docPath, "WriteFile.txt"), lines);
     }
 }
+// The example creates a file named "WriteFile.txt" with the contents:
+// First line
+// And then appends the following contents:
+// New line 1
+// New line 2

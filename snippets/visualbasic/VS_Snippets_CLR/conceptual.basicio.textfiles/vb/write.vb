@@ -1,4 +1,3 @@
-Imports System
 Imports System.IO
 
 Class WriteText
@@ -21,3 +20,8 @@ Class WriteText
     End Sub
 
 End Class
+
+' The example creates a file named "WriteLines.txt" with the following contents:
+' First line
+' Second line
+' Third line
