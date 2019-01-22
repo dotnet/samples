@@ -24,9 +24,8 @@ Module Module1
                             originalFileStream.CopyTo(compressionStream)
                         End Using
                     End Using
-                    Dim info As New FileInfo(directoryPath & "\" & fileToCompress.Name & ".gz")
-                    Console.WriteLine("Compressed {0} from {1} to {2} bytes.", fileToCompress.Name,
-                                      fileToCompress.Length.ToString(), info.Length.ToString())
+                    Dim info As New FileInfo(directoryPath & Path.DirectorySeparatorChar & fileToCompress.Name & ".gz")
+                    Console.WriteLine($"Compressed {fileToCompress.Name} from {fileToCompress.Length.ToString()} to {info.Length.ToString()} bytes.")
 
                 End If
             End Using
