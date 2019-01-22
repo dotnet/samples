@@ -15,9 +15,9 @@ namespace ProcessSample
         {
             // Define variables to track the peak
             // memory usage of the process.
-            long peakPagedMem = 0,
-                peakWorkingSet = 0,
-                peakVirtualMem = 0;
+            long peakPagedMem   = 0,
+                 peakWorkingSet = 0,
+                 peakVirtualMem = 0;
 
             // Start the process.
             using (Process myProcess = Process.Start("NotePad.exe"))
@@ -48,7 +48,7 @@ namespace ProcessSample
                         Console.WriteLine($"  Paged memory size         : {myProcess.PagedMemorySize64}");
 
                         // Update the values for the overall peak memory statistics.
-                        peakPagedMem = myProcess.PeakPagedMemorySize64;
+                        peakPagedMem   = myProcess.PeakPagedMemorySize64;
                         peakVirtualMem = myProcess.PeakVirtualMemorySize64;
                         peakWorkingSet = myProcess.PeakWorkingSet64;
 
@@ -66,12 +66,12 @@ namespace ProcessSample
 
 
                 Console.WriteLine();
-                Console.WriteLine($"Process exit code: {myProcess.ExitCode}");
+                Console.WriteLine($"  Process exit code         : {myProcess.ExitCode}");
 
                 // Display peak memory statistics for the process.
-                Console.WriteLine($"Peak physical memory usage: {peakWorkingSet}");
-                Console.WriteLine($"Peak paged memory usage:    {peakPagedMem}");
-                Console.WriteLine($"Peak virtual memory usage:  {peakVirtualMem}");
+                Console.WriteLine($"  Peak physical memory usage: {peakWorkingSet}");
+                Console.WriteLine($"  Peak paged memory usage   : {peakPagedMem}");
+                Console.WriteLine($"  Peak virtual memory usage : {peakVirtualMem}");
             }
         }
     }

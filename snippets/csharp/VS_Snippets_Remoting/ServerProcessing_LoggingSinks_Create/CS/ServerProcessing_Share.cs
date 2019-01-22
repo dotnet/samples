@@ -10,13 +10,13 @@ public class MyHelloService : MarshalByRefObject
    public MyHelloService() 
    {
       myInstances++;
-      Console.WriteLine("");
-      Console.WriteLine("MyHelloService activated - instance # {0}.", myInstances);
+      Console.WriteLine();
+      Console.WriteLine($"MyHelloService activated - instance # {myInstances}.");
    }
 
    public String HelloMethod(String myString)
    {
-      Console.WriteLine("HelloMethod called on MyHelloService instance {0}.", myInstances);
-      return "Hi there " + myString + ".";
+      Console.WriteLine($"HelloMethod called on MyHelloService instance {myInstances}.");
+      return $"Hi there {myString}.";
    }
 }

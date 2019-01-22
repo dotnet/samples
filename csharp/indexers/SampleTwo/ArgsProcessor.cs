@@ -29,9 +29,8 @@ namespace IndexersSamples.SampleTwo
         {
             get
             {
-                Action action;
                 Action defaultAction = () => {} ;
-                return argsActions.TryGetValue(s, out action) ? action : defaultAction;
+                return argsActions.TryGetValue(s, out Action action) ? action : defaultAction;
             }
         }
 

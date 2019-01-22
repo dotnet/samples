@@ -1,7 +1,6 @@
-// System::Diagnostics::Process::Refresh
-// System::Diagnostics::Process::HasExited
-// System::Diagnostics::Process::Close
-// System::Diagnostics::Process::CloseMainWindow
+// System.Diagnostics.Process.Refresh
+// System.Diagnostics.Process.HasExited
+// System.Diagnostics.Process.CloseMainWindow
 
 // The following example starts an instance of Notepad. It then
 // retrieves the physical memory usage of the associated process at
