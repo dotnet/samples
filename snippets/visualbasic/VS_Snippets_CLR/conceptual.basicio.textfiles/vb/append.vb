@@ -1,4 +1,3 @@
-Imports System
 Imports System.IO
 
 Class AppendText
@@ -17,3 +16,6 @@ Class AppendText
     End Sub
 
 End Class
+
+' The example adds the following line to the contents of "WriteLines.txt":
+' Fourth Line

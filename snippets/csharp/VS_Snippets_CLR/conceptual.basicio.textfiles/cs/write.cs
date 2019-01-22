@@ -21,3 +21,7 @@ class Program
         }
     }
 }
+// The example creates a file named "WriteLines.txt" with the following contents:
+// First line
+// Second line
+// Third line
