@@ -41,7 +41,7 @@ Module Module1
             Using decompressedFileStream As FileStream = File.Create(newFileName)
                 Using decompressionStream As GZipStream = New GZipStream(originalFileStream, CompressionMode.Decompress)
                     decompressionStream.CopyTo(decompressedFileStream)
-                    Console.WriteLine("Decompressed: {0}", fileToDecompress.Name)
+                    Console.WriteLine($"Decompressed: {fileToDecompress.Name}")
                 End Using
             End Using
         End Using
