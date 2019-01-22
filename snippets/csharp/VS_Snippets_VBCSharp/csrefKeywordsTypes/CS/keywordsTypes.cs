@@ -190,7 +190,7 @@ namespace csrefKeywordsMethodParams
     class DelegateTest
     {
         // Regular method that matches signature:
-        static double Foo(double input)
+        static double DoubleAmount(double input)
         {
             return input * 2;
         }
@@ -198,7 +198,7 @@ namespace csrefKeywordsMethodParams
         static void Main()
         {
             // Instantiate delegate with named method:
-            MathAction ma = Foo;
+            MathAction ma = DoubleAmount;
 
             // Invoke delegate ma:
             double multByTwo = ma(4.5);
