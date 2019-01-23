@@ -1,5 +1,4 @@
 ' <Snippet3>
-Imports System
 Imports System.IO
 
 Class Test
@@ -12,7 +11,7 @@ Class Test
                 line = sr.ReadToEnd()
                 Console.WriteLine(line)
             End Using
-        Catch e As Exception
+        Catch e As IOException
             Console.WriteLine("The file could not be read:")
             Console.WriteLine(e.Message)
         End Try
