@@ -1,22 +1,18 @@
 // <snippet1>
 using System;
-using System.IO;
 using System.IO.Compression;
 
-namespace ConsoleApplication
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            string startPath = @"c:\example\start";
-            string zipPath = @"c:\example\result.zip";
-            string extractPath = @"c:\example\extract";
+        string startPath = @".\start";
+        string zipPath = @".\result.zip";
+        string extractPath = @".\extract";
 
-            ZipFile.CreateFromDirectory(startPath, zipPath);
+        ZipFile.CreateFromDirectory(startPath, zipPath);
 
-            ZipFile.ExtractToDirectory(zipPath, extractPath);
-        }
+        ZipFile.ExtractToDirectory(zipPath, extractPath);
     }
 }
 // </snippet1>
