@@ -6,12 +6,10 @@
     StartupUri="MainWindow.xaml" 
     Startup="App_Startup" 
     Exit="App_Exit">
-	<!--</SnippetPersistRestoreAppScopePropertiesXAML1>-->
 	<!--<SnippetSetApplicationScopeResourceXAML>-->
 	<Application.Resources>
 		<SolidColorBrush x:Key="ApplicationScopeResource" Color="White"></SolidColorBrush>
 	</Application.Resources>
 	<!--</SnippetSetApplicationScopeResourceXAML>-->
-	<!--<SnippetPersistRestoreAppScopePropertiesXAML2>-->
 </Application>
-<!--</SnippetPersistRestoreAppScopePropertiesXAML2>-->
+<!--</SnippetPersistRestoreAppScopePropertiesXAML1>-->

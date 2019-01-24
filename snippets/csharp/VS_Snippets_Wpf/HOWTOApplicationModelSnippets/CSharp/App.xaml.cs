@@ -10,15 +10,12 @@ namespace SDKSample
     {
         string filename = "App.txt";
 
-        //</SnippetPersistAppScopePropertiesCODEBEHIND1>
-        //</SnippetPersistRestoreAppScopePropertiesCODEBEHIND1>
         public App()
         {
             // Initialize application-scope property
             this.Properties["NumberOfAppSessions"] = 0;
         }
 
-        //<SnippetPersistRestoreAppScopePropertiesCODEBEHIND2>
         private void App_Startup(object sender, StartupEventArgs e)
         {
             // Restore application-scope property from isolated storage
@@ -41,12 +38,9 @@ namespace SDKSample
                 // Handle when file is not found in isolated storage:
                 // * When the first application session
                 // * When file has been deleted
-                //</SnippetPersistRestoreAppScopePropertiesCODEBEHIND2>
-                //<SnippetPersistRestoreAppScopePropertiesCODEBEHIND3>
             }
         }
 
-        //<SnippetPersistAppScopePropertiesCODEBEHIND2>
         private void App_Exit(object sender, ExitEventArgs e)
         {
             // Persist application-scope property to isolated storage
@@ -63,5 +57,5 @@ namespace SDKSample
         }
     }
 }
-//</SnippetPersistAppScopePropertiesCODEBEHIND2>
-//</SnippetPersistRestoreAppScopePropertiesCODEBEHIND3>
+//</SnippetPersistAppScopePropertiesCODEBEHIND1>
+//</SnippetPersistRestoreAppScopePropertiesCODEBEHIND1>
