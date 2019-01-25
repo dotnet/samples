@@ -1,5 +1,3 @@
-//<SnippetPersistRestoreAppScopePropertiesCODEBEHIND1>
-//<SnippetPersistAppScopePropertiesCODEBEHIND1>
 using System.Windows;
 using System.IO;
 using System.IO.IsolatedStorage;
@@ -57,5 +55,3 @@ namespace SDKSample
         }
     }
 }
-//</SnippetPersistAppScopePropertiesCODEBEHIND1>
-//</SnippetPersistRestoreAppScopePropertiesCODEBEHIND1>

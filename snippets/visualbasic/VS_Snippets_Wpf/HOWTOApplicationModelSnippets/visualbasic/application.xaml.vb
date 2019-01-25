@@ -1,5 +1,3 @@
-'<SnippetPersistRestoreAppScopePropertiesCODEBEHIND1>
-'<SnippetPersistAppScopePropertiesCODEBEHIND1>
 Imports System.IO
 Imports System.IO.IsolatedStorage
 
@@ -47,5 +45,3 @@ Namespace SDKSample
 		End Sub
 	End Class
 End Namespace
-'</SnippetPersistAppScopePropertiesCODEBEHIND1>
-'</SnippetPersistRestoreAppScopePropertiesCODEBEHIND1>
