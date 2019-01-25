@@ -132,7 +132,7 @@ namespace GitHubIssueClassification
 
             // <SnippetOutputPrediction>
             Console.WriteLine($"=============== Single Prediction just-trained-model - Result: {prediction.Area} ===============");
-            // <SnippetOutputPrediction>
+            // </SnippetOutputPrediction>
 
             // Save the new model to .ZIP file
             // <SnippetCallSaveModel>
