@@ -21,12 +21,12 @@ namespace WpfApp2
                 using (StreamReader sr = new StreamReader("TestFile.txt"))
                 {
                     string line = await sr.ReadToEndAsync();
-                    Console.WriteLine(line);
+                    ResultBlock.Text = line;
                 }
             }
             catch (FileNotFoundException ex)
             {
-                Console.WriteLine(ex.Message);
+                ResultBlock.Text = ex.Message;
             }
         }
     }

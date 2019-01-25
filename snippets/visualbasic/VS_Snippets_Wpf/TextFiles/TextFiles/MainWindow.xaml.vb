@@ -1,9 +1,17 @@
-' <snippet6>
-Imports System.IO
+﻿Imports System.IO
 Imports System.Windows
 
-Class MainWindow
-    Private Async Sub ReadFileButton_Click(sender As Object, e As RoutedEventArgs)
+''' <summary>
+''' Interaction logic for MainWindow.xaml
+''' </summary>
+
+Partial Public Class MainWindow
+    Inherits Window
+    Public Sub New()
+        InitializeComponent()
+    End Sub
+
+    Private Async Sub MainWindow_Loaded(sender As Object, e As RoutedEventArgs)
         Try
             Using sr As StreamReader = New StreamReader("TestFile.txt")
                 Dim line = Await sr.ReadToEndAsync()
@@ -14,4 +22,3 @@ Class MainWindow
         End Try
     End Sub
 End Class
-' </snippet6>

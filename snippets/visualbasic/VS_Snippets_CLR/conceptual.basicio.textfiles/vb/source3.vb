@@ -6,9 +6,8 @@ Class Test
         Try
             ' Open the file using a stream reader.
             Using sr As New StreamReader("TestFile.txt")
-                Dim line As String
                 ' Read the stream to a string and write the string to the console.
-                line = sr.ReadToEnd()
+                Dim line = sr.ReadToEnd()
                 Console.WriteLine(line)
             End Using
         Catch e As IOException
