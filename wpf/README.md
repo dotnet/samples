@@ -76,7 +76,7 @@ dotnet add package Microsoft.Windows.Compatibility
 ```
 **Link Files from the old Project**
 
-Visual Studio does not yet support designers and custom tools for .NET desktop development. You can keep your files in the original project and link the generated files to the new project by using the link attribute in the project elements, e.g. `<Compile Link="" />`. See the [sample](helloworld-sharedsource) in this repo for an example of this.
+Visual Studio does not yet support designers and custom tools for .NET desktop development. You can keep your files in the original project and link the generated files to the new project by using the link attribute in the project elements, e.g. `<Compile Link="" />`. See the [sample](HelloWorld-WithLinkedFiles) in this repo for an example of this.
 
 **Migrating WCF Clients**
 

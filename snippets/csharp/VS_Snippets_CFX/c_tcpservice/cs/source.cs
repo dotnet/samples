@@ -62,7 +62,7 @@ namespace TcpService
             // does not have to be issued by a trusted authority, but can be issued
             // by a peer if it is in the Trusted People store. Do not use this setting
             // for production code. The default is PeerTrust, which specifies that 
-            // the certificate must originate from a trusted certifiate authority.
+            // the certificate must originate from a trusted certificate authority.
 
             // sh.Credentials.ClientCertificate.Authentication.CertificateValidationMode =
             // X509CertificateValidationMode.PeerOrChainTrust;
@@ -78,12 +78,12 @@ namespace TcpService
             }
             catch (CommunicationException ce)
             {
-                Console.WriteLine("A commmunication error occurred: {0}", ce.Message);
+                Console.WriteLine("A communication error occurred: {0}", ce.Message);
                 Console.WriteLine();
             }
             catch (System.Exception exc)
             {
-                Console.WriteLine("An unforseen error occurred: {0}", exc.Message);
+                Console.WriteLine("An unforeseen error occurred: {0}", exc.Message);
                 Console.ReadLine();
             }
             //</snippet1>
@@ -142,12 +142,12 @@ namespace TcpService
             }
             catch (CommunicationException ce)
             {
-                Console.WriteLine("A commmunication error occurred: {0}", ce.Message);
+                Console.WriteLine("A communication error occurred: {0}", ce.Message);
                 Console.WriteLine();
             }
             catch (System.Exception exc)
             {
-                Console.WriteLine("An unforseen error occurred: {0}", exc.Message);
+                Console.WriteLine("An unforeseen error occurred: {0}", exc.Message);
                 Console.ReadLine();
             }
 
@@ -185,12 +185,12 @@ namespace TcpService
             }
             catch (CommunicationException ce)
             {
-                Console.WriteLine("A commmunication error occurred: {0}", ce.Message);
+                Console.WriteLine("A communication error occurred: {0}", ce.Message);
                 Console.WriteLine();
             }
             catch (System.Exception exc)
             {
-                Console.WriteLine("An unforseen error occurred: {0}", exc.Message);
+                Console.WriteLine("An unforeseen error occurred: {0}", exc.Message);
                 Console.ReadLine();
             }
             //</snippet3>
