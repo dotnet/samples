@@ -1,4 +1,3 @@
-//<SnippetAppDefAugCODE1>
 using System;
 using System.Windows;
 
@@ -23,9 +22,7 @@ namespace SDKSample
 
         public void InitializeComponent()
         {
-            //</SnippetAppDefAugCODE1>
-            //<SnippetAppDefAugCODE2>
+            // Initialization code goes here.
         }
     }
 }
-//</SnippetAppDefAugCODE2>
