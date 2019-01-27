@@ -1,4 +1,4 @@
-ports System.Windows
+Imports System.Windows
 Imports System.Windows.Threading
 
 Namespace SDKSample
