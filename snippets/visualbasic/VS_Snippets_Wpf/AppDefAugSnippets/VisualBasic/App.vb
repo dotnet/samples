@@ -1,7 +1,3 @@
-'<SnippetAppDefAugCODE1>
-
-Imports Microsoft.VisualBasic
-Imports System
 Imports System.Windows
 
 Namespace SDKSample
@@ -23,9 +19,7 @@ Namespace SDKSample
 		End Sub
 
 		Public Sub InitializeComponent()
-			'</SnippetAppDefAugCODE1>
-			'<SnippetAppDefAugCODE2>
+			' Initialization code goes here.	
 		End Sub
 	End Class
 End Namespace
-'</SnippetAppDefAugCODE2>
