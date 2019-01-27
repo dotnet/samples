@@ -1,4 +1,4 @@
-// This is kind of a ripoff of 'process_synchronizingobject.cs' for use as a znippet
+// This is kind of a ripoff of 'process_synchronizingobject.cs' for use as a snippet
 // for the remarks section.
 
 using System;
@@ -10,23 +10,23 @@ namespace SynchronizingObjectTest
     public class SyncForm : Form
     {
         private System.ComponentModel.Container components = null;
-        private Process process1;
 
         public SyncForm()
         {
             InitializeComponent();
         }
 
-        protected override void Dispose( bool disposing )
+        protected override void Dispose(bool disposing)
         {
-            if( disposing )
+            if (disposing)
             {
                 if (components != null)
                 {
                     components.Dispose();
                 }
             }
-            base.Dispose( disposing );
+
+            base.Dispose(disposing);
         }
 
         #region Windows Form Designer generated code
@@ -81,30 +81,31 @@ namespace SynchronizingObjectTest
             this.button1.Hide();
             this.label1.Show();
 
-            process1 = new Process();
-            ProcessStartInfo process1StartInfo= new ProcessStartInfo("notepad");
+            using (var process1 = new Process())
+            {
+                ProcessStartInfo process1StartInfo = new ProcessStartInfo("notepad");
 
-            // <Snippet2>
-            this.process1.StartInfo.Domain = "";
-            this.process1.StartInfo.LoadUserProfile = false;
-            this.process1.StartInfo.Password = null;
-            this.process1.StartInfo.StandardErrorEncoding = null;
-            this.process1.StartInfo.StandardOutputEncoding = null;
-            this.process1.StartInfo.UserName = "";
-            this.process1.SynchronizingObject = this;
-            // </Snippet2>
+                // <Snippet2>
+                process1.StartInfo.Domain = "";
+                process1.StartInfo.LoadUserProfile = false;
+                process1.StartInfo.Password = null;
+                process1.StartInfo.StandardErrorEncoding = null;
+                process1.StartInfo.StandardOutputEncoding = null;
+                process1.StartInfo.UserName = "";
+                process1.SynchronizingObject = this;
+                // </Snippet2>
 
-            // Set method handling the exited event to be called
-            process1.Exited += new EventHandler(TheProcessExited);
-            // Set 'EnableRaisingEvents' to true, to raise 'Exited' event when process is terminated.
-            process1.EnableRaisingEvents = true;
+                // Set method handling the exited event to be called
+                process1.Exited += new EventHandler(TheProcessExited);
+                // Set 'EnableRaisingEvents' to true, to raise 'Exited' event when process is terminated.
+                process1.EnableRaisingEvents = true;
 
-            this.Refresh();
-            process1.StartInfo = process1StartInfo;
-            process1.Start();
+                this.Refresh();
+                process1.StartInfo = process1StartInfo;
+                process1.Start();
 
-            process1.WaitForExit();
-            process1.Close();
+                process1.WaitForExit();
+            }
         }
 
         private void TheProcessExited(Object source, EventArgs e)
