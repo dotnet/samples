@@ -81,7 +81,7 @@ namespace SynchronizingObjectTest
             this.button1.Hide();
             this.label1.Show();
 
-            using (var process1 = new Process())
+            using (Process process1 = new Process())
             {
                 ProcessStartInfo process1StartInfo = new ProcessStartInfo("notepad");
 
