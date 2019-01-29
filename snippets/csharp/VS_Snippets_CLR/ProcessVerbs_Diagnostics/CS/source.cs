@@ -59,37 +59,40 @@ class ProcessInformation
                 }
                 // </Snippet4>
 
-                using (var newProcess = new Process())
+                var newProcess = new Process();
+                newProcess.StartInfo = startInfo;
+                try
                 {
-                    newProcess.StartInfo = startInfo;
-                    try
-                    {
-                        newProcess.Start();
+                    newProcess.Start();
 
-                        Console.WriteLine($"{newProcess.ProcessName} for file {fileName} " +
-                                          $"started successfully with verb '{startInfo.Verb}'!");
-                    }
-                    catch (Win32Exception e)
-                    {
-                        Console.WriteLine("  Win32Exception caught!");
-                        Console.WriteLine($"  Win32 error = {e.Message}");
-                    }
-                    catch (InvalidOperationException)
-                    {
-                        // Catch this exception if the process exits quickly, 
-                        // and the properties are not accessible.
-                        Console.WriteLine($"Unable to start '{fileName}' with verb {verbToUse}");
-                    }
+                    Console.WriteLine($"{newProcess.ProcessName} for file {fileName} " +
+                                      $"started successfully with verb '{startInfo.Verb}'!");
                 }
-            }
-            else
-            {
+                catch (Win32Exception e)
                 {
-                    Console.WriteLine("You did not enter a number.");
+                    Console.WriteLine("  Win32Exception caught!");
+                    Console.WriteLine($"  Win32 error = {e.Message}");
+                }
+                catch (InvalidOperationException)
+                {
+                    // Catch this exception if the process exits quickly, 
+                    // and the properties are not accessible.
+                    Console.WriteLine($"Unable to start '{fileName}' with verb {verbToUse}");
+                }
+                finally
+                {
+                    newProcess.Dispose();
                 }
             }
         }
+        else
+        {
+            {
+                Console.WriteLine("You did not enter a number.");
+            }
+        }
     }
+}
 }
 // </Snippet3>
 // </Snippet1>

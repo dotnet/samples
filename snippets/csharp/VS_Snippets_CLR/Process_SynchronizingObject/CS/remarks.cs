@@ -96,7 +96,7 @@ namespace SynchronizingObjectTest
                 // </Snippet2>
 
                 // Set method handling the exited event to be called
-                process1.Exited += new EventHandler(TheProcessExited);
+                process1.Exited += TheProcessExited;
                 // Set 'EnableRaisingEvents' to true, to raise 'Exited' event when process is terminated.
                 process1.EnableRaisingEvents = true;
 

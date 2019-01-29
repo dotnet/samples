@@ -11,7 +11,7 @@ public class Watcher
     }
 
     [PermissionSet(SecurityAction.Demand, Name = "FullTrust")]
-    public static void Run()
+    private static void Run()
     {
         string[] args = Environment.GetCommandLineArgs();
 
@@ -28,25 +28,27 @@ public class Watcher
         {
             watcher.Path = args[1];
 
-            /* Watch for changes in LastAccess and LastWrite times, and
-               the renaming of files or directories. */
-            watcher.NotifyFilter = NotifyFilters.LastAccess | NotifyFilters.LastWrite
-               | NotifyFilters.FileName | NotifyFilters.DirectoryName;
+            // Watch for changes in LastAccess and LastWrite times, and
+            // the renaming of files or directories.
+            watcher.NotifyFilter = NotifyFilters.LastAccess
+                                 | NotifyFilters.LastWrite
+                                 | NotifyFilters.FileName
+                                 | NotifyFilters.DirectoryName;
 
             // Only watch text files.
             watcher.Filter = "*.txt";
 
             // Add event handlers.
-            watcher.Changed += new FileSystemEventHandler(OnChanged);
-            watcher.Created += new FileSystemEventHandler(OnChanged);
-            watcher.Deleted += new FileSystemEventHandler(OnChanged);
-            watcher.Renamed += new RenamedEventHandler(OnRenamed);
+            watcher.Changed += OnChanged;
+            watcher.Created += OnChanged;
+            watcher.Deleted += OnChanged;
+            watcher.Renamed += OnRenamed;
 
             // Begin watching.
             watcher.EnableRaisingEvents = true;
 
             // Wait for the user to quit the program.
-            Console.WriteLine("Press \'q\' to quit the sample.");
+            Console.WriteLine("Press 'q' to quit the sample.");
             while (Console.Read() != 'q') ;
         }
     }

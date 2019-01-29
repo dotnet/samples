@@ -6,7 +6,7 @@
 // The following example uses the sort command to sort a list
 // of input text lines, and displays the sorted list to the console. 
 
-//<Snippet1>
+// <Snippet1>
 // Define the namespaces used by this sample.
 using System;
 using System.Text;
@@ -38,10 +38,10 @@ namespace ProcessAsyncStreamSamples
             // Redirect the standard output of the sort command.  
             // This stream is read asynchronously using an event handler.
             sortProcess.StartInfo.RedirectStandardOutput = true;
-            sortOutput = new StringBuilder("");
+            sortOutput = new StringBuilder();
 
             // Set our event handler to asynchronously read the sort output.
-            sortProcess.OutputDataReceived += new DataReceivedEventHandler(SortOutputHandler);
+            sortProcess.OutputDataReceived += SortOutputHandler;
 
             // Redirect standard input as well.  This stream
             // is used synchronously.
@@ -128,7 +128,8 @@ namespace ProcessAsyncStreamSamples
             }
             catch (InvalidOperationException e)
             {
-                Console.WriteLine($"Exception: {e}");
+                Console.WriteLine("Exception:");
+                Console.WriteLine(e);
             }
         }
     }
