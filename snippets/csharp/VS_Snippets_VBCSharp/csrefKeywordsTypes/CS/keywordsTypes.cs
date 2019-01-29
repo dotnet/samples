@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -39,7 +39,6 @@ namespace csrefKeywordsMethodParams
     */
     //</snippet1>
 
-
     class Test2
     {
 
@@ -61,9 +60,6 @@ namespace csrefKeywordsMethodParams
                 Console.Write("The value of x is nonzero.");
             }
             //</snippet3>
-        
-        
-        
         }
     
     }
@@ -194,7 +190,7 @@ namespace csrefKeywordsMethodParams
     class DelegateTest
     {
         // Regular method that matches signature:
-        static double Double(double input)
+        static double DoubleAmount(double input)
         {
             return input * 2;
         }
@@ -202,7 +198,7 @@ namespace csrefKeywordsMethodParams
         static void Main()
         {
             // Instantiate delegate with named method:
-            MathAction ma = Double;
+            MathAction ma = DoubleAmount;
 
             // Invoke delegate ma:
             double multByTwo = ma(4.5);
@@ -248,7 +244,6 @@ namespace csrefKeywordsMethodParams
     //</snippet9>
 
     //<snippet10>
-
     public class EnumTest
     {
         enum Day { Sun, Mon, Tue, Wed, Thu, Fri, Sat };
@@ -440,8 +435,6 @@ namespace csrefKeywordsMethodParams
     // Output: My Point: x=2, y=3
     //</snippet15>
 
-   
-
 //<snippet16>
 class ObjectTest
 {
@@ -489,9 +482,6 @@ class MainClass2
      */
 //</snippet17>
 
-    
-
-
     class VarTest
     {
         #region compilation only
@@ -505,11 +495,9 @@ class MainClass2
         #endregion
         static void Main()
         {
-
-
             List<Customer> customers = new List<Customer>();
             //<snippet18>
-            // Example #1: var is optional because
+            // Example #1: var is optional when
             // the select clause specifies a string
             string[] words = { "apple", "strawberry", "grape", "peach", "banana" };
             var wordQuery = from word in words
@@ -538,9 +526,6 @@ class MainClass2
             //</snippet18>
         }
     }
-
-
-
     
     class CharTest
     {
@@ -562,12 +547,4 @@ class MainClass2
             //</snippet19>
         }
     }
-    
-
-
-
-
-
-
-
 }

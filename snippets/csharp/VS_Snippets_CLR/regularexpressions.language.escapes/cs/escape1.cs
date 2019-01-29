@@ -21,7 +21,7 @@ public class Example
                                             match.Groups[2].Value);
    }
 }
-// The example displyas the following output:
+// The example displays the following output:
 //       Population of the World's Largest Cities, 2009
 //       
 //       City                 Population

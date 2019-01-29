@@ -39,17 +39,17 @@ Public Class MyTreeNode_FirstNode
    Private WithEvents myContextMenu As ContextMenu
    Private WithEvents myMenuItem As MenuItem
    Private mySelectedNode As TreeNode
-   
-   
+
+
    Public Sub New()
       InitializeComponent()
       FillMyTreeView()
    End Sub 'New
-   
+
    ' ArrayList object to hold the 'Customer' objects.
    Private myCustomerArrayList As New ArrayList()
-   
-   
+
+
    Private Sub FillMyTreeView()
       ' Add customers to the ArrayList of 'Customer' objects.
       Dim iIndex As Integer
@@ -64,14 +64,14 @@ Public Class MyTreeNode_FirstNode
             myCustomer1.CustomerOrders.Add(New Order("Order" + jIndex.ToString()))
          Next jIndex
       Next myCustomer1
-      
+
       ' Suppress repainting the TreeView until it is fully created.
       myTreeView.BeginUpdate()
       ' Clear the TreeView each time the method is called.
       myTreeView.Nodes.Clear()
       Dim myMainNode As New TreeNode("CustomerList")
       myTreeView.Nodes.Add(myMainNode)
-      
+
       ' Add a root treenode for each 'Customer' in the ArrayList.
       Dim myCustomer2 As Customer
       For Each myCustomer2 In  myCustomerArrayList
@@ -84,7 +84,7 @@ Public Class MyTreeNode_FirstNode
             myTreeView.Nodes(0).Nodes(myCustomerArrayList.IndexOf(myCustomer2)).Nodes.Add(New TreeNode(myOrder1.OrderID))
          Next myOrder1
       Next myCustomer2
-      
+
       ' Reset the cursor back to the default for all controls.
       Cursor.Current = Cursors.Default
       ' Begin repainting the TreeView.
@@ -93,7 +93,7 @@ Public Class MyTreeNode_FirstNode
          myTreeView.Nodes(0).Expand()
       End If
    End Sub 'FillMyTreeView
-    
+
    Private Sub InitializeComponent()
       Me.myMenuItem = New MenuItem()
       Me.myCheckBox = New CheckBox()
@@ -104,22 +104,22 @@ Public Class MyTreeNode_FirstNode
       Me.myGroupBox = New GroupBox()
       Me.myGroupBox.SuspendLayout()
       Me.SuspendLayout()
-      
+
       Me.myMenuItem.Checked = True
       Me.myMenuItem.DefaultItem = True
       Me.myMenuItem.Index = 0
       Me.myMenuItem.Text = "Edit"
-      
+
       Me.myCheckBox.Location = New System.Drawing.Point(24, 24)
       Me.myCheckBox.Name = "myCheckBox"
       Me.myCheckBox.TabIndex = 0
       Me.myCheckBox.Text = "Expand All"
-      
+
       Me.myButton.Location = New System.Drawing.Point(136, 24)
       Me.myButton.Name = "myCheckBox2"
       Me.myButton.TabIndex = 1
       Me.myButton.Text = "Child Nodes"
-      
+
       Me.myTreeView.ContextMenu = Me.myContextMenu
       Me.myTreeView.ImageIndex = - 1
       Me.myTreeView.LabelEdit = True
@@ -128,10 +128,10 @@ Public Class MyTreeNode_FirstNode
       Me.myTreeView.SelectedImageIndex = - 1
       Me.myTreeView.Size = New System.Drawing.Size(280, 152)
       Me.myTreeView.TabIndex = 0
-      
+
       Me.myContextMenu.MenuItems.AddRange(New MenuItem() {Me.myMenuItem})
-      
-      
+
+
       Me.myGroupBox.Controls.AddRange(New Control() {Me.myButton, Me.myCheckBox})
       Me.myGroupBox.Location = New System.Drawing.Point(8, 168)
       Me.myGroupBox.Name = "myGroupBox"
@@ -139,7 +139,7 @@ Public Class MyTreeNode_FirstNode
       Me.myGroupBox.TabIndex = 1
       Me.myGroupBox.TabStop = False
       Me.myGroupBox.Text = "myGroupBox"
-      
+
       Me.ClientSize = New System.Drawing.Size(292, 273)
       Me.Controls.AddRange(New Control() {Me.myGroupBox, Me.myTreeView})
       Me.Name = "Form1"
@@ -147,13 +147,13 @@ Public Class MyTreeNode_FirstNode
       Me.myGroupBox.ResumeLayout(False)
       Me.ResumeLayout(False)
    End Sub 'InitializeComponent
-    
-   
+
+
    Shared Sub Main()
       Application.Run(New MyTreeNode_FirstNode())
    End Sub 'Main
-   
-   
+
+
 ' <Snippet1>
 Private Sub myCheckBox_CheckedChanged(ByVal sender As Object, _
    ByVal e As System.EventArgs) Handles myCheckBox.CheckedChanged
@@ -161,9 +161,9 @@ Private Sub myCheckBox_CheckedChanged(ByVal sender As Object, _
    If myCheckBox.Checked = True Then
       myTreeView.ExpandAll()
    Else
-      ' If the check box is not cheked, collapse the first tree node.
+      ' If the check box is not checked, collapse the first tree node.
       myTreeView.Nodes(0).FirstNode.Collapse()
-      MessageBox.Show("The first and last node of CutomerList root node is collapsed")
+      MessageBox.Show("The first node of CustomerList root node is collapsed")
    End If
 End Sub
 ' </Snippet1>
@@ -239,18 +239,18 @@ End Class 'MyTreeNode_FirstNode
 Public Class Customer
    Public CustomerOrders As ArrayList
    Public CustomerName As String
-   
+
    Public Sub New(myName As String)
       CustomerName = myName
       CustomerOrders = New ArrayList()
    End Sub 'New
 End Class 'Customer
- 
+
 
 
 Public Class Order
    Public OrderID As String
-   
+
    Public Sub New(myOrderID As String)
       Me.OrderID = myOrderID
    End Sub 'New

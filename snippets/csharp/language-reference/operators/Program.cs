@@ -37,6 +37,30 @@ namespace operators
             Console.WriteLine("============== -- and ++ operator examples =====");
             DecrementAndIncrementExamples.Examples();
             Console.WriteLine();
+
+            Console.WriteLine("============== / operator examples =============");
+            DivisionExamples.Examples();
+            Console.WriteLine();
+
+            Console.WriteLine("============== == and != operator examples =====");
+            EqualityAndNonEqualityExamples.Examples();
+            Console.WriteLine();
+
+            Console.WriteLine("======= >, <, >=, and <= operator examples =====");
+            GreaterAndLessOperatorsExamples.Examples();
+            Console.WriteLine();
+
+            Console.WriteLine("============== [] operator examples ============");
+            IndexOperatorExamples.Examples();
+            Console.WriteLine();
+
+            Console.WriteLine("============== () operator examples ============");
+            InvocationOperatorExamples.Examples();
+            Console.WriteLine();
+
+            Console.WriteLine("============== => operator examples ============");
+            LambdaOperatorExamples.Examples();
+            Console.WriteLine();
         }
     }
 }

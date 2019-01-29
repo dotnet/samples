@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 
 class Program
 {
@@ -10,23 +9,24 @@ class Program
     {
         try
         {
-            string dirPath = @"\\archives\2009\reports";
+            // Set a variable to the My Documents path.
+            string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
-            List<string> dirs = new List<string>(Directory.EnumerateDirectories(dirPath));
+            List<string> dirs = new List<string>(Directory.EnumerateDirectories(docPath));
                     
             foreach (var dir in dirs)
             {
-                Console.WriteLine("{0}", dir.Substring(dir.LastIndexOf("\\") + 1));
+                Console.WriteLine($"{dir.Substring(dir.LastIndexOf(Path.DirectorySeparatorChar) + 1)}");
             }
-            Console.WriteLine("{0} directories found.",  dirs.Count);
+            Console.WriteLine($"{dirs.Count} directories found.");
         }
-        catch (UnauthorizedAccessException UAEx)
+        catch (UnauthorizedAccessException ex)
         {
-            Console.WriteLine(UAEx.Message);
+            Console.WriteLine(ex.Message);
         }
-        catch (PathTooLongException PathEx)
+        catch (PathTooLongException ex)
         {
-            Console.WriteLine(PathEx.Message);
+            Console.WriteLine(ex.Message);
         }
     }
 }

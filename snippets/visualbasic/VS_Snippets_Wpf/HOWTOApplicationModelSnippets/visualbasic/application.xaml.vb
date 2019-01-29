@@ -1,5 +1,3 @@
-'<SnippetPersistRestoreAppScopePropertiesCODEBEHIND1>
-'<SnippetPersistAppScopePropertiesCODEBEHIND1>
 Imports System.IO
 Imports System.IO.IsolatedStorage
 
@@ -8,14 +6,11 @@ Namespace SDKSample
 		Inherits Application
 		Private filename As String = "App.txt"
 
-		'</SnippetPersistAppScopePropertiesCODEBEHIND1>
-		'</SnippetPersistRestoreAppScopePropertiesCODEBEHIND1>
 		Public Sub New()
 			' Initialize application-scope property
 			Me.Properties("NumberOfAppSessions") = 0
 		End Sub
 
-		'<SnippetPersistRestoreAppScopePropertiesCODEBEHIND2>
 		Private Sub App_Startup(ByVal sender As Object, ByVal e As StartupEventArgs)
 			' Restore application-scope property from isolated storage
 			Dim storage As IsolatedStorageFile = IsolatedStorageFile.GetUserStoreForDomain()
@@ -33,12 +28,9 @@ Namespace SDKSample
 				' Handle when file is not found in isolated storage:
 				' * When the first application session
 				' * When file has been deleted
-				'</SnippetPersistRestoreAppScopePropertiesCODEBEHIND2>
-				'<SnippetPersistRestoreAppScopePropertiesCODEBEHIND3>
 			End Try
 		End Sub
 
-		'<SnippetPersistAppScopePropertiesCODEBEHIND2>
 		Private Sub App_Exit(ByVal sender As Object, ByVal e As ExitEventArgs)
 			' Persist application-scope property to isolated storage
 			Dim storage As IsolatedStorageFile = IsolatedStorageFile.GetUserStoreForDomain()
@@ -53,5 +45,3 @@ Namespace SDKSample
 		End Sub
 	End Class
 End Namespace
-'</SnippetPersistAppScopePropertiesCODEBEHIND2>
-'</SnippetPersistRestoreAppScopePropertiesCODEBEHIND3>

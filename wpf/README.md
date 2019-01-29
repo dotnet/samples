@@ -12,11 +12,14 @@ If you're new to .NET Core, here are a few resources to help you understand the 
 ## Samples in this repo
 Coming soon!
 
+## Additional Samples
+See [WPF Samples](https://www.github.com/Microsoft/wpf-samples) repo for additional WPF samples that have been updated to target .NET Core 3.0. 
+
 ## Getting Started
 
 ### Prerequisites and getting the tools
 
-Install Visual Studio 2017 Update 15.8 or higher from [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/), selecting the **.NET desktop development** workload with the options: **.NET Framwork 4.7.2 development tools** and **.NET Core 2.1 development tools**.
+Install Visual Studio 2019 preview from [https://visualstudio.microsoft.com/vs/preview](https://visualstudio.microsoft.com/vs/preview), selecting the **.NET desktop development** workload with the options: **.NET Framwork 4.7.2 development tools** and **.NET Core 2.2 development tools**. 
 
 Install either the [preview build](https://dotnet.microsoft.com/download/dotnet-core/3.0) of the .NET Core 3.0 SDK or the latest daily build available in the [dotnet/code-sdk repo](https://github.com/dotnet/core-sdk).
 

@@ -82,7 +82,7 @@ public:
 private:
    void FillMyTreeView()
    {
-      
+
       // Add customers to the ArrayList of 'Customer' objects.
       for ( int iIndex = 1; iIndex <= 10; iIndex++ )
       {
@@ -100,15 +100,15 @@ private:
          }
       }
 
-      
+
       // Suppress repainting the TreeView until it is fully created.
       myTreeView->BeginUpdate();
-      
+
       // Clear the TreeView each time the method is called.
       myTreeView->Nodes->Clear();
       TreeNode^ myMainNode = gcnew TreeNode( "CustomerList" );
       myTreeView->Nodes->Add( myMainNode );
-      
+
       // Add a root treenode for each 'Customer' in the ArrayList.
       while ( myEnum->MoveNext() )
       {
@@ -116,7 +116,7 @@ private:
          TreeNode^ myTreeNode1 = gcnew TreeNode( myCustomer2->CustomerName );
          myTreeNode1->ForeColor = Color::Orange;
          myTreeView->Nodes[ 0 ]->Nodes->Add( myTreeNode1 );
-         
+
          // Add a child for each 'Order' in the current 'Customer'.
          IEnumerator^ myEnum = myCustomer2->CustomerOrders->GetEnumerator();
          while ( myEnum->MoveNext() )
@@ -126,10 +126,10 @@ private:
          }
       }
 
-      
+
       // Reset the cursor back to the default for all controls.
       ::Cursor::Current = Cursors::Default;
-      
+
       // Begin repainting the TreeView.
       myTreeView->EndUpdate();
       if ( myTreeView->Nodes[ 0 ]->IsExpanded == false )
@@ -194,7 +194,7 @@ private:
    // <Snippet1>
    void myCheckBox_CheckedChanged( Object^ /*sender*/, System::EventArgs^ /*e*/ )
    {
-      
+
       // If the check box is checked, expand all the tree nodes.
       if ( myCheckBox->Checked == true )
       {
@@ -202,10 +202,10 @@ private:
       }
       else
       {
-         
-         // If the check box is not cheked, collapse the first tree node.
+
+         // If the check box is not checked, collapse the first tree node.
          myTreeView->Nodes[ 0 ]->FirstNode->Collapse();
-         MessageBox::Show( "The first and last  node of CutomerList root node is collapsed" );
+         MessageBox::Show( "The first node of CustomerList root node is collapsed" );
       }
    }
    // </Snippet1>
@@ -213,14 +213,14 @@ private:
    // <Snippet2>
    void myButton_Click( Object^ /*sender*/, System::EventArgs^ /*e*/ )
    {
-      
+
       // Set the tree view's PathSeparator property.
       myTreeView->PathSeparator = ".";
-      
+
       // Get the count of the child tree nodes contained in the SelectedNode.
       int myNodeCount = myTreeView->SelectedNode->GetNodeCount( true );
       Decimal myChildPercentage = ((Decimal)myNodeCount / (Decimal)myTreeView->GetNodeCount( true )) * 100;
-      
+
       // Display the tree node path and the number of child nodes it and the tree view have.
       MessageBox::Show( String::Concat( "The '", myTreeView->SelectedNode->FullPath, "' node has ", myNodeCount, " child nodes.\nThat is ", String::Format( "{0:###.##}", myChildPercentage ), "% of the total tree nodes in the tree view control." ) );
    }
@@ -258,13 +258,13 @@ private:
             array<Char>^temp3 = {'@','->',',','!'};
             if ( e->Label->IndexOfAny( temp3 ) == -1 )
             {
-               
+
                // Stop editing without cancelling the label change.
                e->Node->EndEdit( false );
             }
             else
             {
-               
+
                // Cancel the label edit action, place it in edit mode.
                e->CancelEdit = true;
                MessageBox::Show( "Invalid tree node label.\n The invalid characters are: '@', '.', ', ', '!'", "Node Label Edit" );
@@ -273,7 +273,7 @@ private:
          }
          else
          {
-            
+
             // Cancel the label edit action, place it in edit mode.
             e->CancelEdit = true;
             MessageBox::Show( "Invalid tree node label. The label cannot be blank", "Node Label Edit" );

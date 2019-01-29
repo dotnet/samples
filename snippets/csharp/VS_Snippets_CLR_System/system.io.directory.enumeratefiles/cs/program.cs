@@ -9,7 +9,11 @@ class Program
     {
         try
         {
-            var files = from file in Directory.EnumerateFiles(@"c:\", "*.txt", SearchOption.AllDirectories)
+            // Set a variable to the My Documents path.
+            string docPath =
+            Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+            var files = from file in Directory.EnumerateFiles(docPath, "*.txt", SearchOption.AllDirectories)
                         from line in File.ReadLines(file)
                         where line.Contains("Microsoft")
                         select new
@@ -20,17 +24,17 @@ class Program
 
             foreach (var f in files)
             {
-                Console.WriteLine("{0}\t{1}", f.File, f.Line);
+                Console.WriteLine($"{f.File}\t{f.Line}");
             }
-			Console.WriteLine("{0} files found.", files.Count().ToString());
+            Console.WriteLine($"{files.Count().ToString()} files found.");
         }
-        catch (UnauthorizedAccessException UAEx)
+        catch (UnauthorizedAccessException uAEx)
         {
-            Console.WriteLine(UAEx.Message);
+            Console.WriteLine(uAEx.Message);
         }
-        catch (PathTooLongException PathEx)
+        catch (PathTooLongException pathEx)
         {
-            Console.WriteLine(PathEx.Message);
+            Console.WriteLine(pathEx.Message);
         }
     }
 }

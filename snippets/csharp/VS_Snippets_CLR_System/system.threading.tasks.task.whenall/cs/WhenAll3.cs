@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 public class Example
 {
-   public static void Main()
+   public static async Task Main()
    {
       int failed = 0;
       var tasks = new List<Task>();
@@ -35,7 +35,7 @@ public class Example
       }
       Task t = Task.WhenAll(tasks.ToArray());
       try {
-         t.Wait();
+         await t;
       }
       catch {}   
 

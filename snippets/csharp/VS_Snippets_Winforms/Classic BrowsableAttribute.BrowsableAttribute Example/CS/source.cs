@@ -3,20 +3,23 @@ using System.Data;
 using System.ComponentModel;
 using System.Windows.Forms;
 
-public class Form1: Form
+public class Form1 : Form
 {
- protected TextBox textBox1;
-// <Snippet1>
-[Browsable(true)]
- public int MyProperty {
-    get {
-       // Insert code here.
-       return 0;
+    protected TextBox textBox1;
+    // <Snippet1>
+    [Browsable(true)]
+    public int MyProperty
+    {
+        get
+        {
+            // Insert code here.
+            return 0;
+        }
+        set
+        {
+            // Insert code here.
+        }
     }
-    set {
-       // Insert code here.
-    }
- }
-    
-// </Snippet1>
+
+    // </Snippet1>
 }

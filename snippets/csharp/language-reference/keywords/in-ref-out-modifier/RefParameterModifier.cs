@@ -40,6 +40,16 @@ namespace InRefOutModifier
             public int ItemID { get; set; }
         }
 
+        private static void ChangeByReference(ref Product itemRef)
+        {
+            // Change the address that is stored in the itemRef parameter.   
+            itemRef = new Product("Stapler", 99999);
+
+            // You can change the value of one of the properties of
+            // itemRef. The change happens to item in Main as well.
+            itemRef.ItemID = 12345;
+        }
+
         private static void ModifyProductsByReference()
         {
             // Declare an instance of Product and display its initial values.
@@ -52,16 +62,11 @@ namespace InRefOutModifier
             System.Console.WriteLine("Back in Main.  Name: {0}, ID: {1}\n",
                 item.ItemName, item.ItemID);
         }
-
-        private static void ChangeByReference(ref Product itemRef)
-        {
-            // Change the address that is stored in the itemRef parameter.   
-            itemRef = new Product("Stapler", 99999);
-
-            // You can change the value of one of the properties of
-            // itemRef. The change happens to item in Main as well.
-            itemRef.ItemID = 12345;
-        }
+        
+        // This method displays the following output:
+        // Original values in Main.  Name: Fasteners, ID: 54321
+        // Back in Main.  Name: Stapler, ID: 12345        
+        
         // </Snippet3>
 
         private static void BookCollectionExample()
