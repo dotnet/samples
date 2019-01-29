@@ -6,7 +6,7 @@
 // The following example uses the sort command to sort a list
 // of input text lines, and displays the sorted list to the console. 
 
-//<Snippet1>
+// <Snippet1>
 // Define the namespaces used by this sample.
 using System;
 using System.Text;
@@ -22,32 +22,31 @@ namespace ProcessAsyncStreamSamples
         // Define static variables shared by class methods.
         private static StringBuilder sortOutput = null;
         private static int numOutputLines = 0;
-      
+
         public static void SortInputListText()
         {
             // Initialize the process and its StartInfo properties.
             // The sort command is a console application that
             // reads and sorts text input.
 
-            Process sortProcess;
-            sortProcess = new Process();
+            Process sortProcess = new Process();
             sortProcess.StartInfo.FileName = "Sort.exe";
-            
+
             // Set UseShellExecute to false for redirection.
             sortProcess.StartInfo.UseShellExecute = false;
 
             // Redirect the standard output of the sort command.  
             // This stream is read asynchronously using an event handler.
             sortProcess.StartInfo.RedirectStandardOutput = true;
-            sortOutput = new StringBuilder("");
+            sortOutput = new StringBuilder();
 
             // Set our event handler to asynchronously read the sort output.
-            sortProcess.OutputDataReceived += new DataReceivedEventHandler(SortOutputHandler);
+            sortProcess.OutputDataReceived += SortOutputHandler;
 
             // Redirect standard input as well.  This stream
             // is used synchronously.
             sortProcess.StartInfo.RedirectStandardInput = true;
-  
+
             // Start the process.
             sortProcess.Start();
 
@@ -63,14 +62,14 @@ namespace ProcessAsyncStreamSamples
 
             String inputText;
             int numInputLines = 0;
-            do 
+            do
             {
                 Console.WriteLine("Enter a text line (or press the Enter key to stop):");
-            
+
                 inputText = Console.ReadLine();
                 if (!String.IsNullOrEmpty(inputText))
                 {
-                    numInputLines ++;
+                    numInputLines++;
                     sortStreamWriter.WriteLine(inputText);
                 }
             }
@@ -87,12 +86,11 @@ namespace ProcessAsyncStreamSamples
             if (numOutputLines > 0)
             {
                 // Write the formatted and sorted output to the console.
-                Console.WriteLine(" Sort results = {0} sorted text line(s) ", 
-                    numOutputLines);
+                Console.WriteLine($" Sort results = {numOutputLines} sorted text line(s) ");
                 Console.WriteLine("----------");
                 Console.WriteLine(sortOutput);
             }
-            else 
+            else
             {
                 Console.WriteLine(" No input lines were sorted.");
             }
@@ -100,17 +98,17 @@ namespace ProcessAsyncStreamSamples
             sortProcess.Close();
         }
 
-        private static void SortOutputHandler(object sendingProcess, 
+        private static void SortOutputHandler(object sendingProcess,
             DataReceivedEventArgs outLine)
         {
             // Collect the sort command output.
             if (!String.IsNullOrEmpty(outLine.Data))
             {
                 numOutputLines++;
-    
+
                 // Add the text to the collected output.
-                sortOutput.Append(Environment.NewLine + 
-                    "[" + numOutputLines.ToString() + "] - " + outLine.Data);
+                sortOutput.Append(Environment.NewLine +
+                    $"[{numOutputLines}] - {outLine.Data}");
             }
         }
     }
@@ -124,14 +122,14 @@ namespace ProcessAsyncStreamSamples
         /// The main entry point for the application.
         static void Main()
         {
-            try 
+            try
             {
                 SortOutputRedirection.SortInputListText();
             }
             catch (InvalidOperationException e)
             {
                 Console.WriteLine("Exception:");
-                Console.WriteLine(e.ToString());
+                Console.WriteLine(e);
             }
         }
     }
