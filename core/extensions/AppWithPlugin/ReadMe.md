@@ -6,7 +6,7 @@ This sample demonstrates how to create an app with a plugin architecture, using 
 
 Without using `AssemblyDependencyResolver`, it is extremely difficult to correctly load plugins that have their own dependencies.
 
-By using `AssemblyDependencyResolver` along with a custom `AssemblyLoadContext`, an application can load plugins such that each plugin's dependencies are loaded from the correct location and one plugin's dependencies will not conflict with another. This sample includes plugins that have conflicting dependencies, and plugins that rely on satellite assemblies.
+By using `AssemblyDependencyResolver` along with a custom `AssemblyLoadContext`, an application can load plugins so that each plugin's dependencies are loaded from the correct location, and one plugin's dependencies will not conflict with another. This sample includes plugins that have conflicting dependencies and plugins that rely on satellite assemblies.
 
 ## Build and Run
 
