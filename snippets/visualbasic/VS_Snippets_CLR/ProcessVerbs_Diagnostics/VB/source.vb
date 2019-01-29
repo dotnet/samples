@@ -51,20 +51,19 @@ Module ProcessInformation
                 End If
                 ' </Snippet4>
 
-                Dim newProcess As New Process
-                newProcess.StartInfo = startInfo
                 Try
-                    newProcess.Start()
+                    Using newProcess As New Process
+                        newProcess.StartInfo = startInfo
+                        newProcess.Start()
 
-                    Console.WriteLine($"{newProcess.ProcessName} for file {fileName} " +
-                                      $"started successfully with verb '{startInfo.Verb}'!")
+                        Console.WriteLine($"{newProcess.ProcessName} for file {fileName} " +
+                                          $"started successfully with verb '{startInfo.Verb}'!")
+                    End Using
                 Catch e As Win32Exception
                     Console.WriteLine("  Win32Exception caught!")
                     Console.WriteLine($"  Win32 error = {e.Message}")
                 Catch e As InvalidOperationException
                     Console.WriteLine($"Unable to start '{fileName}' with verb {verbToUse}")
-                Finally
-                    newProcess.Dispose()
                 End Try
             Else
                 Console.WriteLine("You did not enter a number.")

@@ -59,14 +59,16 @@ class ProcessInformation
                 }
                 // </Snippet4>
 
-                var newProcess = new Process();
-                newProcess.StartInfo = startInfo;
                 try
                 {
-                    newProcess.Start();
+                    using (var newProcess = new Process())
+                    {
+                        newProcess.StartInfo = startInfo;
+                        newProcess.Start();
 
-                    Console.WriteLine($"{newProcess.ProcessName} for file {fileName} " +
-                                      $"started successfully with verb '{startInfo.Verb}'!");
+                        Console.WriteLine($"{newProcess.ProcessName} for file {fileName} " +
+                                          $"started successfully with verb '{startInfo.Verb}'!");
+                    }
                 }
                 catch (Win32Exception e)
                 {
@@ -79,10 +81,6 @@ class ProcessInformation
                     // and the properties are not accessible.
                     Console.WriteLine($"Unable to start '{fileName}' with verb {verbToUse}");
                 }
-                finally
-                {
-                    newProcess.Dispose();
-                }
             }
         }
         else
@@ -92,7 +90,6 @@ class ProcessInformation
             }
         }
     }
-}
 }
 // </Snippet3>
 // </Snippet1>
