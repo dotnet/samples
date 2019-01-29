@@ -1,30 +1,32 @@
 // <snippet6>
 using System;
-using System.Windows;
 using System.IO;
+using System.Windows;
 
-namespace WpfApplication
+namespace WpfApp2
 {
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
         }
-
         private async void ReadFileButton_Click(object sender, RoutedEventArgs e)
         {
             try
             {
                 using (StreamReader sr = new StreamReader("TestFile.txt"))
                 {
-                    String line = await sr.ReadToEndAsync();
+                    string line = await sr.ReadToEndAsync();
                     ResultBlock.Text = line;
                 }
             }
-            catch (Exception ex)
+            catch (FileNotFoundException ex)
             {
-                ResultBlock.Text = "Could not read the file";
+                ResultBlock.Text = ex.Message;
             }
         }
     }

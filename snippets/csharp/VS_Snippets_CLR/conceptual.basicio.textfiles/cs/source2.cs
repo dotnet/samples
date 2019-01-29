@@ -21,10 +21,9 @@ class DirAppend
     public static void Log(string logMessage, TextWriter w)
     {
         w.Write("\r\nLog Entry : ");
-        w.WriteLine("{0} {1}", DateTime.Now.ToLongTimeString(),
-            DateTime.Now.ToLongDateString());
+        w.WriteLine($"{DateTime.Now.ToLongTimeString()} {DateTime.Now.ToLongDateString()}");
         w.WriteLine("  :");
-        w.WriteLine("  :{0}", logMessage);
+        w.WriteLine($"  :{logMessage}");
         w.WriteLine ("-------------------------------");
     }
 
@@ -37,4 +36,18 @@ class DirAppend
         }
     }
 }
+// The example creates a file named "log.txt" and writes the following lines to it,
+// or appends them to the existing "log.txt" file:
+
+// Log Entry : <current long time string> <current long date string>
+//  :
+//  :Test1
+// -------------------------------
+
+// Log Entry : <current long time string> <current long date string>
+//  :
+//  :Test2
+// -------------------------------
+
+// It then writes the contents of "log.txt" to the console.
 // </Snippet2>

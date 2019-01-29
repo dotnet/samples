@@ -10,7 +10,7 @@ public class CompBuf
     {
         if (!File.Exists(FILE_NAME))
         {
-            Console.WriteLine("{0} does not exist!", FILE_NAME);
+            Console.WriteLine($"{FILE_NAME} does not exist!");
             return;
         }
         FileStream fsIn = new FileStream(FILE_NAME, FileMode.Open,
