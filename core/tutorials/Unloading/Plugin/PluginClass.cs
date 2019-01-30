@@ -7,19 +7,16 @@ namespace Plugin
 {
     public class PluginClass : Interface
     {
-        static GCHandle pluginHandle;
-
         public static Interface GetInterface()
         {
             PluginClass plugin = new PluginClass();
 
-            // We create the GC handle just to demonstrate how we can do necessary cleanup before
-            // unloading. Creating a normal GC handle for the plugin instance would prevent unloading
-            // from succeeding.
-            pluginHandle = GCHandle.Alloc(plugin);
-
-            // So we register handler for the Unloading event of the context that we are running in and 
-            // free the GC handle in there.
+            // We register handler for the Unloading event of the context that we are running in 
+            // so that we can perform cleanup of stuff that would otherwise prevent unloading
+            // (Like freeing GCHandles for objects of types loaded into the unloadable AssemblyLoadContext,
+            // terminating threads running code in assemblies loaded into the unloadable AssemblyLoadContext,
+            // etc.)
+            // NOTE: this is optional and likely not required for basic scenarios
             Assembly currentAssembly = Assembly.GetExecutingAssembly();
             AssemblyLoadContext currentContext = AssemblyLoadContext.GetLoadContext(currentAssembly);
             currentContext.Unloading += OnPluginUnloadingRequested;
@@ -29,8 +26,7 @@ namespace Plugin
 
         private static void OnPluginUnloadingRequested(AssemblyLoadContext obj)
         {
-            // Free the GC handle so that the unload can succeed
-            pluginHandle.Free();
+            Console.WriteLine("Cleanup of stuff preventing unloading");
         }
 
         // Plugin interface methods implementation
