@@ -235,9 +235,9 @@ namespace Coding_Conventions_Examples
 
             //<snippet25>
             //<snippet28>
-            var seattleCustomers = from customers in customers
+            var seattleCustomers = from customer in customers
                                    //</snippet28>
-                                   where customers.City == "Seattle"
+                                   where customer.City == "Seattle"
                                    select customers.Name;
             //</snippet25>
 
