@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
-    <RootNamespace>Company.ConsoleApplication1</RootNamespace>
+    <RootNamespace>WPF_WinRT_Core</RootNamespace>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 

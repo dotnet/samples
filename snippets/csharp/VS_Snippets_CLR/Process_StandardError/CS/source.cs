@@ -14,39 +14,41 @@ using System.IO;
 
 namespace Process_StandardError
 {
-   class Class1
-   {
-      static void Main(string[] args)
-      {
-         if (args.Length <1) 
-         {
-            Console.WriteLine("\nThis requires a machine name as a parameter which is not on the network.");
-            Console.WriteLine("\nUsage:");
-            Console.WriteLine("Process_StandardError <\\\\machine name>");
-         }
-         else
-         {
-            GetStandardError(args);
-         }
-         return;
-      }
+    class Class1
+    {
+        static void Main(string[] args)
+        {
+            if (args.Length < 1)
+            {
+                Console.WriteLine("\nThis requires a machine name as a parameter which is not on the network.");
+                Console.WriteLine("\nUsage:");
+                Console.WriteLine("Process_StandardError <\\\\machine name>");
+            }
+            else
+            {
+                GetStandardError(args);
+            }
 
-      public static void GetStandardError(string[] args)
-      {
-// <Snippet1>
-         Process myProcess = new Process();
-         ProcessStartInfo myProcessStartInfo = new ProcessStartInfo("net ","use "+ args[0]);
+            return;
+        }
 
-         myProcessStartInfo.UseShellExecute = false;
-         myProcessStartInfo.RedirectStandardError = true;
-         myProcess.StartInfo = myProcessStartInfo;
-         myProcess.Start();
+        public static void GetStandardError(string[] args)
+        {
+            // <Snippet1>
+            using (Process myProcess = new Process())
+            {
+                ProcessStartInfo myProcessStartInfo = new ProcessStartInfo("net ", "use " + args[0]);
 
-         StreamReader myStreamReader = myProcess.StandardError;
-         // Read the standard error of net.exe and write it on to console.
-         Console.WriteLine( myStreamReader.ReadLine());
-         myProcess.Close();
-// </Snippet1>
-      }
-   }
+                myProcessStartInfo.UseShellExecute = false;
+                myProcessStartInfo.RedirectStandardError = true;
+                myProcess.StartInfo = myProcessStartInfo;
+                myProcess.Start();
+
+                StreamReader myStreamReader = myProcess.StandardError;
+                // Read the standard error of net.exe and write it on to console.
+                Console.WriteLine(myStreamReader.ReadLine());
+            }
+            // </Snippet1>
+        }
+    }
 }

@@ -1,5 +1,5 @@
-//<Snippet1>
-//<Snippet3>
+// <Snippet1>
+// <Snippet3>
 using System;
 using System.ComponentModel;
 using System.IO;
@@ -17,13 +17,13 @@ class ProcessInformation
         openFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
         openFileDialog1.FilterIndex = 2;
         openFileDialog1.RestoreDirectory = true;
-        openFileDialog1.CheckFileExists = true; 
+        openFileDialog1.CheckFileExists = true;
 
         if (openFileDialog1.ShowDialog() == DialogResult.OK)
         {
             var fileName = openFileDialog1.FileName;
 
-            //<Snippet4>
+            // <Snippet4>
             int i = 0;
             var startInfo = new ProcessStartInfo(fileName);
 
@@ -37,13 +37,13 @@ class ProcessInformation
             Console.Write("Select the index of the verb: ");
             var indexInput = Console.ReadLine();
             int index;
-            if (Int32.TryParse(indexInput, out index))  
+            if (Int32.TryParse(indexInput, out index))
             {
-                if (index < 0 || index >= i) 
+                if (index < 0 || index >= i)
                 {
                     Console.WriteLine("Invalid index value.");
                     return;
-                } 
+                }
 
                 var verbToUse = startInfo.Verbs[index];
 
@@ -57,16 +57,18 @@ class ProcessInformation
                     var arguments = Console.ReadLine();
                     startInfo.Arguments = arguments;
                 }
-                //</Snippet4>
+                // </Snippet4>
 
-                var newProcess = new Process();
-                newProcess.StartInfo = startInfo;
                 try
                 {
-                    newProcess.Start();
+                    using (var newProcess = new Process())
+                    {
+                        newProcess.StartInfo = startInfo;
+                        newProcess.Start();
 
-                    Console.WriteLine($"{newProcess.ProcessName} for file {fileName} " + 
-                                      $"started successfully with verb '{startInfo.Verb}'!");
+                        Console.WriteLine($"{newProcess.ProcessName} for file {fileName} " +
+                                          $"started successfully with verb '{startInfo.Verb}'!");
+                    }
                 }
                 catch (Win32Exception e)
                 {
@@ -79,15 +81,15 @@ class ProcessInformation
                     // and the properties are not accessible.
                     Console.WriteLine($"Unable to start '{fileName}' with verb {verbToUse}");
                 }
-            }    
-            else
+            }
+        }
+        else
+        {
             {
-                {
-                    Console.WriteLine("You did not enter a number.");
-                }
+                Console.WriteLine("You did not enter a number.");
             }
         }
     }
 }
 // </Snippet3>
-//</Snippet1>
+// </Snippet1>

@@ -1,5 +1,4 @@
 '<snippet7>
-Imports System
 Imports System.IO
 
 Class MyStream
@@ -7,7 +6,7 @@ Class MyStream
 
     Public Shared Sub Main()
         If File.Exists(FILE_NAME) Then
-            Console.WriteLine("{0} already exists!", FILE_NAME)
+            Console.WriteLine($"{FILE_NAME} already exists!")
             Return
         End If
 
@@ -28,4 +27,8 @@ Class MyStream
         End Using
     End Sub
 End Class
+
+' The example creates a file named "Test.data" and writes the integers 0 through 10 to it in binary format.
+' It then writes the contents of Test.data to the console with each integer on a separate line.
+
 '</snippet7>

@@ -15,7 +15,7 @@ class Test
                 Console.WriteLine(line);
             }
         }
-        catch (Exception e)
+        catch (IOException e)
         {
             Console.WriteLine("The file could not be read:");
             Console.WriteLine(e.Message);

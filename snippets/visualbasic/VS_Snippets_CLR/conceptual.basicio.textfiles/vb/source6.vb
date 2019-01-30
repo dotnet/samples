@@ -1,5 +1,6 @@
 ' <snippet6>
 Imports System.IO
+Imports System.Windows
 
 Class MainWindow
     Private Async Sub ReadFileButton_Click(sender As Object, e As RoutedEventArgs)
@@ -8,8 +9,8 @@ Class MainWindow
                 Dim line = Await sr.ReadToEndAsync()
                 ResultBlock.Text = line
             End Using
-        Catch
-            ResultBlock.Text = "Could not read the file"
+        Catch ex As FileNotFoundException
+            ResultBlock.Text = ex.Message
         End Try
     End Sub
 End Class
