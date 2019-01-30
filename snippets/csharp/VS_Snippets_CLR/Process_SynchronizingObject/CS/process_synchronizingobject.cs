@@ -32,6 +32,7 @@ namespace ProcessSynchronizingObject
                     components.Dispose();
                 }
             }
+            
             base.Dispose(disposing);
         }
 
