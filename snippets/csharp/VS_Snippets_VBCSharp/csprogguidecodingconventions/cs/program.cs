@@ -235,10 +235,10 @@ namespace Coding_Conventions_Examples
 
             //<snippet25>
             //<snippet28>
-            var seattleCustomers = from cust in customers
+            var seattleCustomers = from customers in customers
                                    //</snippet28>
-                                   where cust.City == "Seattle"
-                                   select cust.Name;
+                                   where customers.City == "Seattle"
+                                   select customers.Name;
             //</snippet25>
 
             //<snippet26>
