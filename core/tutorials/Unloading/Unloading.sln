@@ -1,13 +1,14 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28112.50
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28516.95
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Host", "Host\Host.csproj", "{7C1BDD5C-0167-4682-B67B-4D1AFB874F09}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Host", "Host\Host.csproj", "{7C1BDD5C-0167-4682-B67B-4D1AFB874F09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin", "Plugin\Plugin.csproj", "{89ED8F97-E90B-453E-9086-130FAC5B99A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plugin", "Plugin\Plugin.csproj", "{89ED8F97-E90B-453E-9086-130FAC5B99A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interface", "Interface\Interface.csproj", "{C9BCDE8B-51BA-40A6-B7A1-186F6C6B6CCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interface", "Interface\Interface.csproj", "{C9BCDE8B-51BA-40A6-B7A1-186F6C6B6CCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginDependency", "PluginDependency\PluginDependency.csproj", "{0DFE9D18-D6B3-4097-AF87-D06B1B9DB4FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +28,10 @@ Global
 		{C9BCDE8B-51BA-40A6-B7A1-186F6C6B6CCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9BCDE8B-51BA-40A6-B7A1-186F6C6B6CCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9BCDE8B-51BA-40A6-B7A1-186F6C6B6CCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DFE9D18-D6B3-4097-AF87-D06B1B9DB4FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DFE9D18-D6B3-4097-AF87-D06B1B9DB4FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DFE9D18-D6B3-4097-AF87-D06B1B9DB4FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DFE9D18-D6B3-4097-AF87-D06B1B9DB4FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

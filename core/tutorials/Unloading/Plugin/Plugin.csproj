@@ -5,7 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Interface\Interface.csproj" />
+    <ProjectReference Include="..\Interface\Interface.csproj">
+      <Private>false</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\PluginDependency\PluginDependency.csproj" />
   </ItemGroup>
 
 </Project>

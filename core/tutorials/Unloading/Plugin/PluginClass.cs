@@ -26,7 +26,7 @@ namespace Plugin
 
         private static void OnPluginUnloadingRequested(AssemblyLoadContext obj)
         {
-            Console.WriteLine("Cleanup of stuff preventing unloading");
+            PluginDependency.Logger.LogMessage("Cleanup of stuff preventing unloading");
         }
 
         // Plugin interface methods implementation

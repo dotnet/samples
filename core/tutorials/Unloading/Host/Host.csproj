@@ -7,7 +7,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Interface\Interface.csproj" />
-    <ProjectReference Include="..\Plugin\Plugin.csproj" />
   </ItemGroup>
 
 </Project>
