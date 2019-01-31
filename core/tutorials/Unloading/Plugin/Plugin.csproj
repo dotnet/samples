@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Interface\Interface.csproj">
+      <!--The Private property below ensures that the binary output of the Interface project won't be copied into the binary output location of the Plugin project-->
+      <Private>false</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\PluginDependency\PluginDependency.csproj" />
+  </ItemGroup>
+
+</Project>
