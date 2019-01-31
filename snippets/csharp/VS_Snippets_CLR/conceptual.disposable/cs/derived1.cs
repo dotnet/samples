@@ -61,7 +61,7 @@ public class DisposableStreamResource2 : DisposableStreamResource
       // Release any unmanaged resources not wrapped by safe handles here.
       
       // Call the base class implementation.
-      base.Dispose(true);
+      base.Dispose(disposing);
    }
 }
 // </Snippet10>
