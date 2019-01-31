@@ -15,7 +15,5 @@ By using `AssemblyDependencyResolver` along with a custom `AssemblyLoadContext`,
    - The AppWithPlugin project does not contain any references to the plugin projects, so you need to build the solution.
 3. Go to the AppWithPlugin directory and use `dotnet run` to run the app.
     - You should see the app output a list of installed commands.
-4. In the AppWithPlugin directory, use `dotnet run commandName` where `commandName` is one of the names that was outputted in the previous step.
-   - You should see the app run the supplied command.
-5. In the AppWithPlugin directory, use `dotnet run commandName1 commandName2` where `commandName1` and `commandName2` are names that were output in step 3. Note that you can run as many commands as you want at once.
+4. In the AppWithPlugin directory, use `dotnet run commandName [commandName2...]` where `commandName1` and `commandName2` and so on are names that were output in step 3. Note that you can run as many commands as you want at once.
    - You should see the app run the supplied commands, even when the commands have conflicting dependencies.
