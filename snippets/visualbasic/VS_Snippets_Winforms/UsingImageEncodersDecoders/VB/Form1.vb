@@ -150,7 +150,7 @@ Public Class Form1
     '<snippet6>
     Private Function GetEncoder(ByVal format As ImageFormat) As ImageCodecInfo
 
-        Dim codecs As ImageCodecInfo() = ImageCodecInfo.GetImageDecoders()
+        Dim codecs As ImageCodecInfo() = ImageCodecInfo.GetImageEncoders()
 
         Dim codec As ImageCodecInfo
         For Each codec In codecs
