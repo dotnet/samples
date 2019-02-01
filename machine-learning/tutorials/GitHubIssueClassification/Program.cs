@@ -1,4 +1,4 @@
-﻿// <SnippetAddUsings>
+// <SnippetAddUsings>
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -32,7 +32,7 @@ namespace GitHubIssueClassification
         {
             // Create MLContext to be shared across the model creation workflow objects 
             // Set a random seed for repeatable/deterministic results across multiple trainings.
-            // <SnippetCreateMLContext>
+            // </SnippetCreateMLContext>
             _mlContext = new MLContext(seed: 0);
             // </SnippetCreateMLContext>
 
@@ -46,6 +46,10 @@ namespace GitHubIssueClassification
             // </SnippetLoadTrainData>
 
             Console.WriteLine($"=============== Finished Loading Dataset  ===============");
+            
+            // <SnippetSplitData>
+            //   var (trainData, testData) = _mlContext.MulticlassClassification.TrainTestSplit(_trainingDataView, testFraction: 0.1);
+            // </SnippetSplitData>
 
             // <SnippetCallProcessData>
             var pipeline = ProcessData();
@@ -116,9 +120,9 @@ namespace GitHubIssueClassification
             Console.WriteLine($"=============== Single Prediction just-trained-model ===============");
 
             // Create prediction engine related to the loaded trained model
-            // <SnippetCreatePredictionEngine>
+            // <SnippetCreatePredictionEngine1>
             _predEngine = _trainedModel.CreatePredictionEngine<GitHubIssue, IssuePrediction>(_mlContext);
-            // </SnippetCreatePredictionEngine>
+            // </SnippetCreatePredictionEngine1>
             // <SnippetCreateTestIssue1> 
             GitHubIssue issue = new GitHubIssue() {
                 Title = "WebSockets communication is slow in my machine",
@@ -132,27 +136,12 @@ namespace GitHubIssueClassification
 
             // <SnippetOutputPrediction>
             Console.WriteLine($"=============== Single Prediction just-trained-model - Result: {prediction.Area} ===============");
-            // </SnippetOutputPrediction>
-
-            // Save the new model to .ZIP file
-            // <SnippetCallSaveModel>
-            SaveModelAsFile(_mlContext, _trainedModel);
-            // </SnippetCallSaveModel>
+            // <SnippetOutputPrediction>
 
             // <SnippetReturnModel>
             return trainingPipeline;
             // </SnippetReturnModel>
 
-        }
-
-        private static void SaveModelAsFile(MLContext mlContext, ITransformer model)
-        {
-            // <SnippetSaveModel> 
-            using (var fs = new FileStream(_modelPath, FileMode.Create, FileAccess.Write, FileShare.Write))
-                mlContext.Model.Save(model, fs);
-            // </SnippetSaveModel>
-
-            Console.WriteLine("The model is saved to {0}", _modelPath);
         }
 
         public static void Evaluate()
@@ -181,6 +170,12 @@ namespace GitHubIssueClassification
             Console.WriteLine($"*       LogLossReduction: {testMetrics.LogLossReduction:#.###}");
             Console.WriteLine($"*************************************************************************************************************");
             // </SnippetDisplayMetrics>
+
+            // Save the new model to .ZIP file
+            // <SnippetCallSaveModel>
+            SaveModelAsFile(_mlContext, _trainedModel);
+            // </SnippetCallSaveModel>
+
         }
 
         public static void PredictIssue()
@@ -210,6 +205,16 @@ namespace GitHubIssueClassification
             Console.WriteLine($"=============== Single Prediction - Result: {prediction.Area} ===============");
             // </SnippetDisplayResults>
 
+        }
+
+        private static void SaveModelAsFile(MLContext mlContext, ITransformer model)
+        {
+            // <SnippetSaveModel> 
+            using (var fs = new FileStream(_modelPath, FileMode.Create, FileAccess.Write, FileShare.Write))
+                mlContext.Model.Save(model, fs);
+            // </SnippetSaveModel>
+
+            Console.WriteLine("The model is saved to {0}", _modelPath);
         }
 
     }
