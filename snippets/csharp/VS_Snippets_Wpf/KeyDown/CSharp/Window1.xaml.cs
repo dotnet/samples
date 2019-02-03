@@ -20,7 +20,7 @@ namespace WCSamples
         //<SnippetKeyDownSample>
         private void OnKeyDownHandler(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Return)
+            if (e.KeyCode == Key.Return)
             {
                 textBlock1.Text = "You Entered: " + textBox1.Text;
             }

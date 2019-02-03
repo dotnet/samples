@@ -14,7 +14,7 @@ Namespace WCSamples
         End Sub
         '<SnippetKeyDownSample>
         Private Sub OnKeyDownHandler(ByVal sender As Object, ByVal e As KeyEventArgs)
-            If (e.Key = Key.Return) Then
+            If (e.KeyCode = Key.Return) Then
                 textBlock1.Text = "You Entered: " + textBox1.Text
             End If
         End Sub
