@@ -32,7 +32,7 @@ namespace GitHubIssueClassification
         {
             // Create MLContext to be shared across the model creation workflow objects 
             // Set a random seed for repeatable/deterministic results across multiple trainings.
-            // </SnippetCreateMLContext>
+            // <SnippetCreateMLContext>
             _mlContext = new MLContext(seed: 0);
             // </SnippetCreateMLContext>
 
