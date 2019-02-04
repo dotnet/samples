@@ -16,7 +16,10 @@ class CQ_EnqueueDequeuePeek
       ConcurrentQueue<int> cq = new ConcurrentQueue<int>();
 
       // Populate the queue.
-      for (int i = 0; i < 10000; i++) cq.Enqueue(i);
+      for (int i = 0; i < 10000; i++)
+      {
+          cq.Enqueue(i);
+      }
 
       // Peek at the first element.
       int result;
