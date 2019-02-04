@@ -136,7 +136,7 @@ namespace GitHubIssueClassification
 
             // <SnippetOutputPrediction>
             Console.WriteLine($"=============== Single Prediction just-trained-model - Result: {prediction.Area} ===============");
-            // <SnippetOutputPrediction>
+            // </SnippetOutputPrediction>
 
             // <SnippetReturnModel>
             return trainingPipeline;
