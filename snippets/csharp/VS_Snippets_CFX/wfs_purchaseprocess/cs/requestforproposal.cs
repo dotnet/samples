@@ -72,7 +72,7 @@ namespace Microsoft.Samples.WF.PurchaseProcess
             string ret = string.Empty;                
             foreach (Vendor vendor in this.InvitedVendors)
             {
-                if (ret != string.Empty)
+                if (!string.IsNullOrEmpty(ret))
                     ret += ",";
 
                 ret += vendor.Name;

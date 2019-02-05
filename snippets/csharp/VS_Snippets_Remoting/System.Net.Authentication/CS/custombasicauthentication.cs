@@ -90,7 +90,7 @@ namespace Mssc.Services.Authentication
         req.Method = "GET";
         
         // Define the request credentials according to the user's input.
-        if (domain == String.Empty)
+        if (string.IsNullOrEmpty(domain))
           req.Credentials = new NetworkCredential(username, password);
         else
           // If the user does not specify the Internet resource domain, this usually
@@ -254,7 +254,7 @@ namespace Mssc.Services.Authentication
       // whether the authorization type is Basic.
 
       if (tempChallenge.IndexOf("BASIC") != -1)
-        if (domain != String.Empty)
+        if (!string.IsNullOrEmpty(domain))
           if (tempChallenge.IndexOf(domain.ToUpper()) != -1)
             challengePasses = true;
           else

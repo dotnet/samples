@@ -110,7 +110,7 @@ namespace ListBoxFindStringEx2
       private void FindMyString(string searchString)
       {
          // Ensure we have a proper string to search for.
-         if (searchString != string.Empty)
+         if (!string.IsNullOrEmpty(searchString))
          {
             // Find the item in the list and store the index to the item.
             int index = listBox1.FindString(searchString);

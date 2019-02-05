@@ -4018,7 +4018,7 @@ namespace ObjectServicesConceptsCS
                             orderToCheck.Comment);
 
                         // If the validation method returns a problem string, raise an error.
-                        if (textNotAllowed != string.Empty)
+                        if (!string.IsNullOrEmpty(textNotAllowed))
                         {
                             throw new ArgumentException(String.Format("Changes cannot be "
                                 + "saved because the {0} '{1}' object contains a "
@@ -4071,7 +4071,7 @@ namespace ObjectServicesConceptsCS
                         orderToCheck.Comment);
 
                     // If the validation method returns a problem string, raise an error.
-                    if (textNotAllowed != string.Empty)
+                    if (!string.IsNullOrEmpty(textNotAllowed))
                     {
                         throw new ArgumentException(String.Format("Changes cannot be "
                             + "saved because the {0} '{1}' object contains a "

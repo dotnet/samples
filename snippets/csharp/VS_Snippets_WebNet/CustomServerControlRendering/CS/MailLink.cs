@@ -79,7 +79,7 @@ namespace Samples.AspNet.CS.Controls
 
         protected override void RenderContents(HtmlTextWriter writer)
         {
-            if (Text == String.Empty)
+            if (string.IsNullOrEmpty(Text))
             {
                 Text = Email;
             }

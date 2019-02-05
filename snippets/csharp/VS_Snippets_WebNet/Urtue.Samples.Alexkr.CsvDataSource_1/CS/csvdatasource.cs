@@ -147,7 +147,7 @@ namespace Samples.AspNet.CS.Controls {
                 data.AcceptChanges();
                 DataView dataView = new DataView(data);
 // <Snippet7>
-                if (selectArgs.SortExpression != String.Empty) {
+                if (!string.IsNullOrEmpty(selectArgs.SortExpression)) {
                     dataView.Sort = selectArgs.SortExpression;
                 }
 // </Snippet7>
