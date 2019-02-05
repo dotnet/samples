@@ -64,7 +64,7 @@ namespace Samples.AspNet.CS.Controls
 
     private void submit_Click(object sender, EventArgs e)
     {
-      if (input.Text != String.Empty)
+      if (!string.IsNullOrEmpty(input.Text))
       {
         zipCodeText = Page.Server.HtmlEncode(input.Text);
         input.Text = String.Empty;

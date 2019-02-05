@@ -103,7 +103,7 @@ namespace ControlEnterEventEx
         private void textBox1_Enter(object sender, System.EventArgs e)
         {
             // If the TextBox contains text, change its foreground and background colors.
-            if (textBox1.Text != String.Empty)
+            if (!string.IsNullOrEmpty(textBox1.Text))
             {
                 textBox1.ForeColor = Color.Red;
                 textBox1.BackColor = Color.Black;

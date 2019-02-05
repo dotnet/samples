@@ -35,7 +35,7 @@ public class Sample
             {
                 if (reader.IsStartElement())
                 {
-                    if (reader.Prefix == String.Empty)
+                    if (string.IsNullOrEmpty(reader.Prefix))
                         Console.WriteLine("<{0}>", reader.LocalName);
                     else
                     {

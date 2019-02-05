@@ -3023,7 +3023,7 @@ namespace WorkflowApplicationExample
         {
             string name = BookmarkName.Get(context);
 
-            if (name == string.Empty)
+            if (string.IsNullOrEmpty(name))
             {
                 throw new ArgumentException("BookmarkName cannot be an Empty string.",
                     "BookmarkName");

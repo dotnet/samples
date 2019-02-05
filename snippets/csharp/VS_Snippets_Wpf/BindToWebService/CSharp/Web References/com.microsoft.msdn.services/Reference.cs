@@ -161,8 +161,7 @@ namespace BindtoContentService.com.microsoft.msdn.services {
         }
         
         private bool IsLocalFileSystemWebService(string url) {
-            if (((url == null) 
-                        || (url == string.Empty))) {
+            if (string.IsNullOrEmpty(url)) {
                 return false;
             }
             System.Uri wsUri = new System.Uri(url);

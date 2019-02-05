@@ -71,7 +71,7 @@ namespace Samples.AspNet.CS.Controls
     private void submit_Click(object sender, EventArgs e)
     {
       // Update the label string.
-      if (input.Text != String.Empty)
+      if (!string.IsNullOrEmpty(input.Text))
       {
         _contentText = input.Text + @"<br />";
         input.Text = String.Empty;
