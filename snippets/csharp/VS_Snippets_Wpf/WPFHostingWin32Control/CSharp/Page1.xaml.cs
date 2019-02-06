@@ -39,7 +39,7 @@ namespace WPF_Hosting_Win32_Control
 //<SnippetAppendDeleteText>
     private void AppendText(object sender, EventArgs args)
     {
-      if (txtAppend.Text != string.Empty)
+      if (!string.IsNullOrEmpty(txtAppend.Text))
       {
         SendMessage(hwndListBox, LB_ADDSTRING, IntPtr.Zero, txtAppend.Text);
       }

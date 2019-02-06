@@ -28,7 +28,7 @@ class ProcessDemo
         {
             Console.WriteLine("Enter a process Id to kill the process");
             string id = Console.ReadLine();
-            if (id == string.Empty)
+            if (string.IsNullOrEmpty(id))
                 break;
 
             try

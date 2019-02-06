@@ -794,7 +794,7 @@ namespace csrefKeywordsModifiers
             }
             set
             {
-                if (value != String.Empty)
+                if (!string.IsNullOrEmpty(value))
                 {
                     name = value;
                 }

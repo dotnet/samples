@@ -283,7 +283,7 @@ class UsingConfigurationCollectionElement
             UserMenu();
             Console.Write("> ");
             selection = Console.ReadLine();
-            if (selection != string.Empty)
+            if (!string.IsNullOrEmpty(selection))
                 break;
         }
 

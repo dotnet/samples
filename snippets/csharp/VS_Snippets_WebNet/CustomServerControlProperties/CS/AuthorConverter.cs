@@ -93,7 +93,7 @@ namespace Samples.AspNet.CS.Controls
 
                 Author auth = (Author)value;
 
-                if (auth.MiddleName != String.Empty)
+                if (!string.IsNullOrEmpty(auth.MiddleName))
                 {
                     return String.Format("{0} {1} {2}",
                         auth.FirstName,
