@@ -4,11 +4,15 @@ Imports System.IO
 Public Class ProcessFile
     Public Shared Sub Main()
         Try
-            Dim sr As StreamReader = File.OpenText("data.txt")
-            Console.WriteLine("The first line of this file is {0}", sr.ReadLine())
-	        sr.Close()
-        Catch e As Exception
-            Console.WriteLine("An error occurred: '{0}'", e)
+            Using sr As StreamReader = File.OpenText("data.txt")
+                Console.WriteLine($"The first line of this file is {sr.ReadLine()}")
+            End Using
+        Catch e As FileNotFoundException
+            Console.WriteLine($"The file was not found: '{e}'")
+        Catch e As DirectoryNotFoundException
+            Console.WriteLine($"The directory was not found: '{e}'")
+        Catch e As IOException
+            Console.WriteLine($"The file could not be opened: '{e}'")
         End Try
     End Sub
 End Class
