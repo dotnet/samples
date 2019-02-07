@@ -375,7 +375,7 @@ namespace CsCsrefProgrammingObjects
         // Private Constructor:
         private NLog() { }
 
-        public static double e = Math.E;  //2.71828...
+        public static double E = Math.E;  //2.71828...
     }
     //</Snippet11>
 
@@ -1260,10 +1260,11 @@ class TestPerson
     //<Snippet53>
     public class Taxi
     {
-        public bool isInitialized;
+        public bool IsInitialized;
+
         public Taxi()
         {
-            isInitialized = true;
+            IsInitialized = true;
         }
     }
 
@@ -1272,7 +1273,7 @@ class TestPerson
         static void Main()
         {
             Taxi t = new Taxi();
-            Console.WriteLine(t.isInitialized);
+            Console.WriteLine(t.IsInitialized);
         }
     }
     //</Snippet53>
@@ -1284,18 +1285,18 @@ class TestPerson
         //<Snippet54>
         public class Employee
         {
-            public int salary;
+            public int Salary;
 
             //<Snippet60>
             public Employee(int annualSalary)
             {
-                salary = annualSalary;
+                Salary = annualSalary;
             }
             //</Snippet60>
 
             public Employee(int weeklySalary, int numberOfWeeks)
             {
-                salary = weeklySalary * numberOfWeeks;
+                Salary = weeklySalary * numberOfWeeks;
             }
         }
         //</Snippet54>
@@ -1342,9 +1343,9 @@ class TestPerson
             public class Manager : Employee
             {
                 //<Snippet58>
-                public Manager(int initialdata)
+                public Manager(int initialData)
                 {
-                    //Add further instructions here.
+                    // Add additional code here.
                 }
                 //</Snippet58>
             }
@@ -1359,10 +1360,10 @@ class TestPerson
             public class Manager : Employee
             {
                 //<Snippet57>
-                public Manager(int initialdata)
+                public Manager(int initialData)
                     : base()
                 {
-                    //Add further instructions here.
+                    // Add additional code here.
                 }
                 //</Snippet57>
             }
