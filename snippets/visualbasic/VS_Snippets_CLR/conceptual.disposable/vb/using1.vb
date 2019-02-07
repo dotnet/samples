@@ -15,7 +15,6 @@ Module Example
             ' Process characters read.
             '
          Loop
-         s.Close()
       End Using
    End Sub
 End Module

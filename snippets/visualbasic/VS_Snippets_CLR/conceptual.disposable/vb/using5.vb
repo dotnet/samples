@@ -11,7 +11,6 @@ Module Example
       Try 
          sr = New StreamReader("file1.txt")
          Dim contents As String = sr.ReadToEnd()
-         sr.Close()
          Console.WriteLine("The file has {0} text elements.", 
                            New StringInfo(contents).LengthInTextElements)    
       Catch e As FileNotFoundException

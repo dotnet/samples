@@ -11,7 +11,6 @@ public class Example
       try {
          sr = new StreamReader("file1.txt");
          String contents = sr.ReadToEnd();
-         sr.Close();
          Console.WriteLine("The file has {0} text elements.", 
                            new StringInfo(contents).LengthInTextElements);    
       }      
