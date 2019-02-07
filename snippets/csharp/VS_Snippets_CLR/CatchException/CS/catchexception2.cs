@@ -10,7 +10,7 @@ public class ProcessFile
         {
             StreamReader sr = File.OpenText("data.txt");
             Console.WriteLine("The first line of this file is {0}", sr.ReadLine());
-	    sr.Close();
+	        sr.Close();
         }
         catch (Exception e)
         {

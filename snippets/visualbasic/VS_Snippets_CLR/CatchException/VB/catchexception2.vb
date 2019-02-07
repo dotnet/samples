@@ -1,5 +1,4 @@
 '<snippet3>
-Imports System
 Imports System.IO
 
 Public Class ProcessFile
@@ -7,7 +6,7 @@ Public Class ProcessFile
         Try
             Dim sr As StreamReader = File.OpenText("data.txt")
             Console.WriteLine("The first line of this file is {0}", sr.ReadLine())
-	    sr.Close()
+	        sr.Close()
         Catch e As Exception
             Console.WriteLine("An error occurred: '{0}'", e)
         End Try
