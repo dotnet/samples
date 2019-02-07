@@ -10,7 +10,7 @@ public class Example
       StreamReader sr = null;
       try {
          sr = new StreamReader("file1.txt");
-         String c();
+         String contents = sr.ReadToEnd();
          Console.WriteLine("The file has {0} text elements.", 
                            new StringInfo(contents).LengthInTextElements);    
       }      
