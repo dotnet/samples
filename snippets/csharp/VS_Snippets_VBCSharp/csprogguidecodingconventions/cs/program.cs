@@ -1,9 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Coding_Conventions_Examples
@@ -235,10 +234,10 @@ namespace Coding_Conventions_Examples
 
             //<snippet25>
             //<snippet28>
-            var seattleCustomers = from cust in customers
+            var seattleCustomers = from customer in customers
                                    //</snippet28>
-                                   where cust.City == "Seattle"
-                                   select cust.Name;
+                                   where customer.City == "Seattle"
+                                   select customer.Name;
             //</snippet25>
 
             //<snippet26>
@@ -250,31 +249,31 @@ namespace Coding_Conventions_Examples
 
             //<snippet27>
             var localDistributors2 =
-                from cust in customers
-                join dist in distributors on cust.City equals dist.City
-                select new { CustomerName = cust.Name, DistributorID = dist.ID };
+                from customer in customers
+                join distributor in distributors on customer.City equals distributor.City
+                select new { CustomerName = customer.Name, DistributorID = distributor.ID };
             //</snippet27>
 
             //<snippet29>
-            var seattleCustomers2 = from cust in customers
-                                    where cust.City == "Seattle"
-                                    orderby cust.Name
-                                    select cust;
+            var seattleCustomers2 = from customer in customers
+                                    where customer.City == "Seattle"
+                                    orderby customer.Name
+                                    select customer;
             //</snippet29>
 
             // #30 is in class CompoundFrom
 
 
             var customerDistributorNames =
-                from cust in customers
-                join dist in distributors on cust.City equals dist.City
-                select new { CustomerName = cust.Name, DistributorID = dist.ID };
+                from customer in customers
+                join distributor in distributors on customer.City equals distributor.City
+                select new { CustomerName = customer.Name, DistributorID = distributor.ID };
 
             var customerDistributorNames2 =
-                from cust in customers
-                from dist in distributors
-                where cust.City == dist.City
-                select new { CustomerName = cust.Name, DistributorID = dist.ID };
+                from customer in customers
+                from distributor in distributors
+                where customer.City == distributor.City
+                select new { CustomerName = customer.Name, DistributorID = distributor.ID };
 
             foreach (var c in customerDistributorNames)
             {
