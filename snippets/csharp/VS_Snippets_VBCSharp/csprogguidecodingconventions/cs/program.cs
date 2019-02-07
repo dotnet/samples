@@ -1,9 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Coding_Conventions_Examples
@@ -251,7 +250,7 @@ namespace Coding_Conventions_Examples
             //<snippet27>
             var localDistributors2 =
                 from customer in customers
-                join distributor in distributors on cust.City equals dist.City
+                join distributor in distributors on customer.City equals distributor.City
                 select new { CustomerName = customer.Name, DistributorID = distributor.ID };
             //</snippet27>
 
@@ -259,7 +258,7 @@ namespace Coding_Conventions_Examples
             var seattleCustomers2 = from customer in customers
                                     where customer.City == "Seattle"
                                     orderby customer.Name
-                                    select cust;
+                                    select customer;
             //</snippet29>
 
             // #30 is in class CompoundFrom
