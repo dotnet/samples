@@ -10,16 +10,20 @@ using SimpleFeedReader.ViewModels;
 
 namespace SimpleFeedReader.Services
 {
+#nullable enable
     public class NewsService
     {
         private readonly IMapper _mapper;
 
+        // <SnippetServiceConstructor>
         public NewsService(IMapper mapper)
         {
             _mapper = mapper;
         }
+        // </SnippetServiceConstructor>
 
-        public async Task<List<NewsStoryViewModel>> GetNews(string feedUrl)
+        // <SnippetGetNewsFinished>
+        public async Task<IEnumerable<NewsStoryViewModel>> GetNews(string feedUrl)
         {
             var news = new List<NewsStoryViewModel>();
             var feedUri = new Uri(feedUrl);
@@ -54,10 +58,14 @@ namespace SimpleFeedReader.Services
                 }
             }
 
-            return news.OrderByDescending(story => story.Published).ToList();
+            return news.OrderByDescending(story => story.Published);
         }
+        // <SnippetGetNewsFinished>
     }
+#nullable restore
 
+    // <SnippetConfigureAutoMapper>
+#nullable enable
     public class NewsStoryProfile : Profile
     {
         public NewsStoryProfile()
@@ -65,7 +73,11 @@ namespace SimpleFeedReader.Services
             // Create the AutoMapper mapping profile between the 2 objects.
             // ISyndicationItem.Id maps to NewsStoryViewModel.Uri.
             CreateMap<ISyndicationItem, NewsStoryViewModel>()
-                .ForMember(dest => dest.Uri, opts => opts.MapFrom(src => src.Id));
+                .ForCtorParam("published", opt => opt.MapFrom(src => src.Published))
+                .ForCtorParam("title", opt => opt.MapFrom(src => src.Title))
+                .ForCtorParam("uri", opt => opt.MapFrom(src => src.Id));
         }
+        // </SnippetConfigureAutoMapper>
     }
+#nullable restore
 }

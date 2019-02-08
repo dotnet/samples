@@ -9,6 +9,7 @@ using SimpleFeedReader.ViewModels;
 
 namespace SimpleFeedReader.Pages
 {
+#nullable enable
     public class IndexModel : PageModel
     {
         private readonly NewsService _newsService;
@@ -18,9 +19,13 @@ namespace SimpleFeedReader.Pages
             _newsService = newsService;
         }
 
-        public string ErrorText { get; private set; }
+        // <SnippetUpdateErrorText>
+        public string? ErrorText { get; private set; }
+        // </SnippetUpdateErrorText>
 
-        public List<NewsStoryViewModel> NewsItems { get; private set; }
+        // <SnippetInitializeNewsItems>
+        public List<NewsStoryViewModel> NewsItems { get; } = new List<NewsStoryViewModel>();
+        // </SnippetInitializeNewsItems>
 
         public async Task OnGet()
         {
@@ -30,7 +35,9 @@ namespace SimpleFeedReader.Pages
             {
                 try
                 {
-                    NewsItems = await _newsService.GetNews(feedUrl);
+                    // <SnippetAddRange>
+                    NewsItems.AddRange(await _newsService.GetNews(feedUrl));
+                    // </SnippetAddRange>
                 }
                 catch (UriFormatException)
                 {
@@ -62,4 +69,5 @@ namespace SimpleFeedReader.Pages
             }
         }
     }
+#nullable restore
 }
