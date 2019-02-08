@@ -17,7 +17,6 @@ With s As New StreamReader("File1.txt")
             ' Process characters read.
             '
          Loop
-         s.Close()
       Finally
          If s IsNot Nothing Then DirectCast(s, IDisposable).Dispose()
       End Try

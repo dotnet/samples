@@ -17,7 +17,6 @@ public class Example
                // Process characters read.
                //   
             }
-            s.Close();
          }
          finally {
             if (s != null)
