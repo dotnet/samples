@@ -92,7 +92,7 @@ namespace Samples.AspNet.CS.Controls
 
                 StateManagedAuthor auth = (StateManagedAuthor)value;
 
-                if (auth.MiddleName != String.Empty)
+                if (!string.IsNullOrEmpty(auth.MiddleName))
                 {
                     return String.Format("{0} {1} {2}",
                         auth.FirstName,

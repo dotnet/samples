@@ -18,8 +18,6 @@ public class Example
             // Process characters read.
             //
          }
-         version1.Close();
-         version2.Close();
       }
    }
 }

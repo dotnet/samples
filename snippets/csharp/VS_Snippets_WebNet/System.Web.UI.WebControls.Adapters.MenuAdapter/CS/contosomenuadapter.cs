@@ -88,7 +88,7 @@ namespace Contoso
         //<Snippet6>
         protected override void OnPreRender(EventArgs e)
         {
-            if (menuPath != String.Empty)
+            if (!string.IsNullOrEmpty(menuPath))
             {
                 Control menuNav = this.Control.FindControl("contosoMenuNav");
                 if (menuNav != null)

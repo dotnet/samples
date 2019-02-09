@@ -5,7 +5,7 @@ Imports System.IO.Compression
 Module Module1
 
     Sub Main()
-        Dim zipPath As String = "c:\example\start.zip"
+        Dim zipPath As String = ".\result.zip"
 
         Console.WriteLine("Provide path where to extract the zip file:")
         Dim extractPath As String = Console.ReadLine()
@@ -17,7 +17,7 @@ Module Module1
         ' is the directory separator char. 
         ' Without this, a malicious zip file could try to traverse outside of the expected
         ' extraction path.
-        If Not extractPath.EndsWith(Path.DirectorySeparatorChar) Then
+        If Not extractPath.EndsWith(Path.DirectorySeparatorChar.ToString(), StringComparison.Ordinal) Then
             extractPath += Path.DirectorySeparatorChar
         End If
 

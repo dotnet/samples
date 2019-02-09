@@ -15,7 +15,6 @@ public class Example
             // Process characters read.
             //   
          }
-         s.Close();    
       }
 
    }

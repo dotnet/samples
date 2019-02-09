@@ -1,5 +1,4 @@
 '<snippet21>
-Imports System
 Imports System.IO
 
 Public Class ReadBuf
@@ -7,7 +6,7 @@ Public Class ReadBuf
 
     Public Shared Sub Main()
         If Not File.Exists(FILE_NAME) Then
-            Console.WriteLine("{0} does not exist.", FILE_NAME)
+            Console.WriteLine($"{FILE_NAME} does not exist.")
             Return
         End If
         Dim f As New FileStream(FILE_NAME, FileMode.Open, _

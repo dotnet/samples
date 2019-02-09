@@ -41,7 +41,7 @@ namespace UnitTestingBestPractices
 
         private static int HandleSingleNumber(string number)
         {
-            if (number == string.Empty)
+            if (string.IsNullOrEmpty(number))
             {
                 return 0;
             }

@@ -1,5 +1,4 @@
 ' <Snippet2>
-Imports System
 Imports System.IO
 
 Class DirAppend
@@ -16,10 +15,9 @@ Class DirAppend
 
     Public Shared Sub Log(logMessage As String, w As TextWriter)
         w.Write(vbCrLf + "Log Entry : ")
-        w.WriteLine("{0} {1}", DateTime.Now.ToLongTimeString(), _
-            DateTime.Now.ToLongDateString())
+        w.WriteLine($"{DateTime.Now.ToLongTimeString()} {DateTime.Now.ToLongDateString()}")
         w.WriteLine("  :")
-        w.WriteLine("  :{0}", logMessage)
+        w.WriteLine($"  :{logMessage}")
         w.WriteLine ("-------------------------------")
     End Sub
 
@@ -32,4 +30,19 @@ Class DirAppend
         End While
     End Sub
 End Class
+
+' The example creates a file named "log.txt" and writes the following lines to it,
+' or appends them to the existing "log.txt" file:
+
+' Log Entry : <current long time string> <current long date string>
+'  :
+'  :Test1
+' -------------------------------
+
+' Log Entry : <current long time string> <current long date string>
+'  :
+'  :Test2
+' -------------------------------
+
+' It then writes the contents of "log.txt" to the console.
 ' </Snippet2>

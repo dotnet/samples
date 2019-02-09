@@ -1,0 +1,1 @@
+﻿App.xaml.vb: ~/docs/framework/wpf/app-development/application-management-overview.md

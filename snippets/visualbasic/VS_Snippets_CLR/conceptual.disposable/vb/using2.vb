@@ -18,7 +18,6 @@ Module Example
             ' Process characters read.
             '
          Loop
-         s.Close()
       Finally
          ' If non-null, call the object's Dispose method.
          If s IsNot Nothing

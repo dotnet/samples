@@ -15,40 +15,35 @@ Imports Microsoft.VisualBasic
 
 Namespace Process_StandardError
 
-   Class Class1
+    Class Class1
 
-      ' Entry point which delegates to C-style main Private Function
-      Public Overloads Shared Sub Main()
-         Main(System.Environment.GetCommandLineArgs())
-      End Sub
+        Shared Sub Main(args() As String)
+            If args.Length < 1 Then
+                Console.WriteLine(ControlChars.Newline +
+                    "This requires a machine name as a parameter which is not on the network.")
+                Console.WriteLine(ControlChars.Newline + "Usage:")
+                Console.WriteLine("Process_StandardError <\\machine name>")
+            Else
+                GetStandardError(args)
+            End If
+            Return
+        End Sub 'Main
 
-      Overloads Shared Sub Main(args() As String)
-         If args.Length < 2 Then
-            Console.WriteLine(ControlChars.Newline + _
-            "This requires a machine name as a parameter which is not on the network.")
-            Console.WriteLine(ControlChars.Newline + "Usage:")
-            Console.WriteLine("Process_StandardError <\\machine name>")
-         Else
-            GetStandardError(args)
-         End If
-         Return
-      End Sub 'Main
+        Public Shared Sub GetStandardError(args() As String)
+            ' <Snippet1>
+            Using myProcess As New Process()
+                Dim myProcessStartInfo As New ProcessStartInfo("net ", "use " + args(0))
 
-      Public Shared Sub GetStandardError(args() As String)
-' <Snippet1>
-         Dim myProcess As New Process()
-         Dim myProcessStartInfo As New ProcessStartInfo("net ", "use " + args(1))
+                myProcessStartInfo.UseShellExecute = False
+                myProcessStartInfo.RedirectStandardError = True
+                myProcess.StartInfo = myProcessStartInfo
+                myProcess.Start()
 
-         myProcessStartInfo.UseShellExecute = False
-         myProcessStartInfo.RedirectStandardError = True
-         myProcess.StartInfo = myProcessStartInfo
-         myProcess.Start()
-
-         Dim myStreamReader As StreamReader = myProcess.StandardError
-         ' Read the standard error of net.exe and write it on to console.
-         Console.WriteLine(myStreamReader.ReadLine())
-         myProcess.Close()
-' </Snippet1>
-      End Sub 'GetStandardError
-   End Class 'Class1
+                Dim myStreamReader As StreamReader = myProcess.StandardError
+                ' Read the standard error of net.exe and write it on to console.
+                Console.WriteLine(myStreamReader.ReadLine())
+            End Using
+            ' </Snippet1>
+        End Sub 'GetStandardError
+    End Class 'Class1
 End Namespace 'Process_StandardError

@@ -56,7 +56,7 @@ Public Class DisposableStreamResource2 : Inherits DisposableStreamResource
       ' Release any unmanaged resources not wrapped by safe handles here.
       
       ' Call the base class implementation.
-      MyBase.Dispose(True)
+      MyBase.Dispose(disposing)
    End Sub
 End Class
 ' </Snippet10>

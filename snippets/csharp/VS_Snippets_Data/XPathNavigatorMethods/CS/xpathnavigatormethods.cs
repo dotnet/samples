@@ -633,7 +633,7 @@ class XPathNavigatorMethods
         switch (navigator.NodeType)
         {
             case XPathNodeType.Element:
-                if (navigator.Prefix == String.Empty)
+                if (string.IsNullOrEmpty(navigator.Prefix))
                     Console.WriteLine("<{0}>", navigator.LocalName);
                 else
                     Console.Write("<{0}:{1}>", navigator.Prefix, navigator.LocalName);

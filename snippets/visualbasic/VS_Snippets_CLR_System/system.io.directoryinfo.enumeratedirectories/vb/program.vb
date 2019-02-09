@@ -1,10 +1,10 @@
 '<Snippet1>
-Imports System
 Imports System.IO
 
 Class Program
     Public Shared Sub Main(ByVal args As String())
-        Dim diTop As New DirectoryInfo("d:\")
+        Dim dirPath As String = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
+        Dim diTop As New DirectoryInfo(dirPath)
         Try
             For Each fi In diTop.EnumerateFiles()
                 Try
@@ -12,8 +12,8 @@ Class Program
                     If fi.Length > 10000000 Then
                         Console.WriteLine("{0}" & vbTab & vbTab & "{1}", fi.FullName, fi.Length.ToString("N0"))
                     End If
-                Catch UnAuthTop As UnauthorizedAccessException
-                    Console.WriteLine("{0}", UnAuthTop.Message)
+                Catch unAuthTop As UnauthorizedAccessException
+                    Console.WriteLine($"{unAuthTop.Message}")
                 End Try
             Next
 
@@ -26,20 +26,20 @@ Class Program
                                 Console.WriteLine("{0}" & vbTab &
                                 vbTab & "{1}", fi.FullName, fi.Length.ToString("N0"))
                             End If
-                        Catch UnAuthFile As UnauthorizedAccessException
-                            Console.WriteLine("UnAuthFile: {0}", UnAuthFile.Message)
+                        Catch unAuthFile As UnauthorizedAccessException
+                            Console.WriteLine($"unAuthFile: {unAuthFile.Message}")
                         End Try
                     Next
-                Catch UnAuthSubDir As UnauthorizedAccessException
-                    Console.WriteLine("UnAuthSubDir: {0}", UnAuthSubDir.Message)
+                Catch unAuthSubDir As UnauthorizedAccessException
+                    Console.WriteLine($"unAuthSubDir: {unAuthSubDir.Message}")
                 End Try
             Next
-        Catch DirNotFound As DirectoryNotFoundException
-            Console.WriteLine("{0}", DirNotFound.Message)
-        Catch UnAuthDir As UnauthorizedAccessException
-            Console.WriteLine("UnAuthDir: {0}", UnAuthDir.Message)
-        Catch LongPath As PathTooLongException
-            Console.WriteLine("{0}", LongPath.Message)
+        Catch dirNotFound As DirectoryNotFoundException
+            Console.WriteLine($"{dirNotFound.Message}")
+        Catch unAuthDir As UnauthorizedAccessException
+            Console.WriteLine($"unAuthDir: {unAuthDir.Message}")
+        Catch longPath As PathTooLongException
+            Console.WriteLine($"{longPath.Message}")
         End Try
     End Sub
 End Class
