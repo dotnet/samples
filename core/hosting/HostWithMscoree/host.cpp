@@ -331,7 +331,7 @@ int wmain(int argc, wchar_t* argv[])
         appDomainFlags,
         NULL,							// Optional AppDomain manager assembly name
         NULL,							// Optional AppDomain manager type (including namespace)
-        sizeof(propertyKeys)/sizeof(wchar_t*),
+        sizeof(propertyKeys) / sizeof(wchar_t*),
         propertyKeys,
         propertyValues,
         &domainId);

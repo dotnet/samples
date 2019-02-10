@@ -28,7 +28,7 @@ namespace ManagedLibrary
             [MarshalAs(UnmanagedType.LPStr)] string jobName,
             int iterations,
             int dataSize,
-            [MarshalAs(UnmanagedType.LPArray, SizeParamIndex=2)] double[] data,
+            [MarshalAs(UnmanagedType.LPArray, SizeParamIndex = 2)] double[] data,
             ReportProgressFunction reportProgressFunction)
         {
             for (int i = 1; i <= iterations; i++)

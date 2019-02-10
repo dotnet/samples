@@ -245,7 +245,7 @@ int main(int argc, char* argv[])
         printf("Failed to free coreclr.dll\n");
     }
 #elif LINUX
-    if(dlclose(coreClr))
+    if (dlclose(coreClr))
     {
         printf("Failed to free libcoreclr.so\n");
     }
