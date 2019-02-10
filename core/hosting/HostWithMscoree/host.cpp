@@ -22,7 +22,7 @@ HMODULE LoadCoreCLR(const wchar_t* directoryPath);
 
 // Function pointer type to be used if this sample is modified to use CreateDelegate to
 // call into a static managed method (with signature void (string[])). This would be
-// an alternative to using the ICLRRuntimeHost2::ExecuteAssembly helper function which
+// an alternative to using the ICLRRuntimeHost4::ExecuteAssembly helper function which
 // loads and executes a managed assembly's entry point directly.
 typedef void (STDMETHODCALLTYPE MainMethodFp)(LPWSTR* args);
 
@@ -111,11 +111,11 @@ int wmain(int argc, wchar_t* argv[])
 
 
 	//
-	// STEP 3: Get ICLRRuntimeHost2 instance
+	// STEP 3: Get ICLRRuntimeHost4 instance
 	//
 
 	// <Snippet3>
-	ICLRRuntimeHost2* runtimeHost;
+	ICLRRuntimeHost4* runtimeHost;
 
 	FnGetCLRRuntimeHost pfnGetCLRRuntimeHost =
 		(FnGetCLRRuntimeHost)::GetProcAddress(coreCLRModule, "GetCLRRuntimeHost");
@@ -127,12 +127,12 @@ int wmain(int argc, wchar_t* argv[])
 	}
 
 	// Get the hosting interface
-	HRESULT hr = pfnGetCLRRuntimeHost(IID_ICLRRuntimeHost2, (IUnknown**)&runtimeHost);
+	HRESULT hr = pfnGetCLRRuntimeHost(IID_ICLRRuntimeHost4, (IUnknown**)&runtimeHost);
 	// </Snippet3>
 
 	if (FAILED(hr))
 	{
-		printf("ERROR - Failed to get ICLRRuntimeHost2 instance.\nError code:%x\n", hr);
+		printf("ERROR - Failed to get ICLRRuntimeHost4 instance.\nError code:%x\n", hr);
 		return -1;
 	}
 
