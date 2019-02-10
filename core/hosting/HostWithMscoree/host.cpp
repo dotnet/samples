@@ -5,7 +5,7 @@
 // The host must be able to find CoreCLR.dll to start the runtime.
 // This string is used as a common, known location for a centrally installed CoreCLR.dll on Windows.
 // If your customers will have the CoreCLR.dll installed elsewhere, this will, of course, need modified.
-// Some hosts will carry the runtime and Framework with them locally so that necessary files like CoreCLR.dll 
+// Some hosts will carry the runtime and Framework with them locally so that necessary files like CoreCLR.dll
 // are easy to find and known to be good versions. Other hosts may expect that the apps they run will include
 // CoreCLR.dll next to them. Still others may rely on an environment variable being set to indicate where
 // the library can be found. In the end, every host will have its own heuristics for finding the core runtime
@@ -27,7 +27,7 @@ HMODULE LoadCoreCLR(const wchar_t* directoryPath);
 typedef void (STDMETHODCALLTYPE MainMethodFp)(LPWSTR* args);
 
 // One large main method to keep this sample streamlined.
-// 
+//
 // This function demonstrates how to start the .NET Core runtime,
 // create an AppDomain, and execute managed code.
 //
@@ -90,14 +90,14 @@ int wmain(int argc, wchar_t* argv[])
         coreCLRModule = LoadCoreCLR(coreRoot);
     }
 
-    // If CoreCLR.dll wasn't in %CORE_ROOT% or next to the app, 
+    // If CoreCLR.dll wasn't in %CORE_ROOT% or next to the app,
     // look in the common 1.1.0 install directory
     if (!coreCLRModule)
     {
         ::ExpandEnvironmentStringsW(coreCLRInstallDirectory, coreRoot, MAX_PATH);
         coreCLRModule = LoadCoreCLR(coreRoot);
     }
-    
+
     if (!coreCLRModule)
     {
         printf("ERROR - CoreCLR.dll could not be found");
@@ -150,7 +150,7 @@ int wmain(int argc, wchar_t* argv[])
             // STARTUP_FLAGS::STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN |		// Maximize domain-neutral loading
             // STARTUP_FLAGS::STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN_HOST |	// Domain-neutral loading for strongly-named assemblies
             STARTUP_FLAGS::STARTUP_CONCURRENT_GC |						// Use concurrent GC
-            STARTUP_FLAGS::STARTUP_SINGLE_APPDOMAIN |					// All code executes in the default AppDomain 
+            STARTUP_FLAGS::STARTUP_SINGLE_APPDOMAIN |					// All code executes in the default AppDomain
                                                                         // (required to use the runtimeHost->ExecuteAssembly helper function)
             STARTUP_FLAGS::STARTUP_LOADER_OPTIMIZATION_SINGLE_DOMAIN	// Prevents domain-neutral loading
         )
@@ -188,7 +188,7 @@ int wmain(int argc, wchar_t* argv[])
         // APPDOMAIN_SECURITY_SANDBOXED |					// Causes assemblies not from the TPA list to be loaded as partially trusted
         APPDOMAIN_ENABLE_PLATFORM_SPECIFIC_APPS |			// Enable platform-specific assemblies to run
         APPDOMAIN_ENABLE_PINVOKE_AND_CLASSIC_COMINTEROP |	// Allow PInvoking from non-TPA assemblies
-        APPDOMAIN_DISABLE_TRANSPARENCY_ENFORCEMENT;			// Entirely disables transparency checks 
+        APPDOMAIN_DISABLE_TRANSPARENCY_ENFORCEMENT;			// Entirely disables transparency checks
     // </Snippet5>
 
     // <Snippet6>
@@ -275,7 +275,7 @@ int wmain(int argc, wchar_t* argv[])
 
 
     // APP_NI_PATHS
-    // App (NI) paths are the paths that will be probed for native images not found on the TPA list. 
+    // App (NI) paths are the paths that will be probed for native images not found on the TPA list.
     // It will typically be similar to the app paths.
     // For this sample, we probe next to the app and in a hypothetical directory of the same name with 'NI' suffixed to the end.
     wchar_t appNiPaths[MAX_PATH * 50];

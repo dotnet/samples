@@ -64,7 +64,7 @@ int main(int argc, char* argv[])
     std::string managedLibraryPath(runtimePath);
     managedLibraryPath.append(FS_SEPERATOR);
     managedLibraryPath.append(MANAGED_ASSEMBLY);
-    
+
     //
     // STEP 1: Load CoreCLR (coreclr.dll/libcoreclr.so)
     //
@@ -72,9 +72,9 @@ int main(int argc, char* argv[])
     // <Snippet1>
     HMODULE coreClr = LoadLibraryExA(coreClrPath.c_str(), NULL, 0);
     // </Snippet1>
-#elif LINUX 
+#elif LINUX
     void *coreClr = dlopen(coreClrPath.c_str(), RTLD_NOW | RTLD_LOCAL);
-#endif 
+#endif
     if (coreClr == NULL)
     {
         printf("ERROR: Failed to load CoreCLR from %s\n", coreClrPath.c_str());
@@ -94,7 +94,7 @@ int main(int argc, char* argv[])
     coreclr_create_delegate_ptr createManagedDelegate = (coreclr_create_delegate_ptr)GetProcAddress(coreClr, "coreclr_create_delegate");
     coreclr_shutdown_ptr shutdownCoreClr = (coreclr_shutdown_ptr)GetProcAddress(coreClr, "coreclr_shutdown");
     // </Snippet2>
-#elif LINUX    
+#elif LINUX
     coreclr_initialize_ptr initializeCoreClr = (coreclr_initialize_ptr)dlsym(coreClr, "coreclr_initialize");
     coreclr_create_delegate_ptr createManagedDelegate = (coreclr_create_delegate_ptr)dlsym(coreClr, "coreclr_create_delegate");
     coreclr_shutdown_ptr shutdownCoreClr = (coreclr_shutdown_ptr)dlsym(coreClr, "coreclr_shutdown");
@@ -125,7 +125,7 @@ int main(int argc, char* argv[])
     // Construct the trusted platform assemblies (TPA) list
     // This is the list of assemblies that .NET Core can load as
     // trusted system assemblies.
-    // For this host (as with most), assemblies next to CoreCLR will 
+    // For this host (as with most), assemblies next to CoreCLR will
     // be included in the TPA list
     std::string tpaList;
     BuildTpaList(runtimePath, ".dll", tpaList);
@@ -172,19 +172,19 @@ int main(int argc, char* argv[])
     {
         printf("coreclr_initialize failed - status: 0x%08x\n", hr);
         return -1;
-    }                  
+    }
 
     //
     // STEP 5: Create delegate to managed code and invoke it
     //
 
     // <Snippet5>
-    doWork_ptr managedDelegate;    
+    doWork_ptr managedDelegate;
 
     // The assembly name passed in the third parameter is a managed assembly name
     // as described at https://docs.microsoft.com/dotnet/framework/app-domains/assembly-names
     hr = createManagedDelegate(
-            hostHandle, 
+            hostHandle,
             domainId,
             "ManagedLibrary, Version=1.0.0.0",
             "ManagedLibrary.ManagedWorker",
@@ -200,11 +200,11 @@ int main(int argc, char* argv[])
     {
         printf("coreclr_create_delegate failed - status: 0x%08x\n", hr);
         return -1;
-    }    
+    }
 
     // Create sample data for the double[] argument of the managed method to be called
     double data[4];
-    data[0] = 0; 
+    data[0] = 0;
     data[1] = 0.25;
     data[2] = 0.5;
     data[3] = 0.75;
@@ -258,7 +258,7 @@ int main(int argc, char* argv[])
 // <Snippet7>
 void BuildTpaList(const char* directory, const char* extension, std::string& tpaList)
 {
-    // This will add all files with a .dll extension to the TPA list. 
+    // This will add all files with a .dll extension to the TPA list.
     // This will include unmanaged assemblies (coreclr.dll, for example) that don't
     // belong on the TPA list. In a real host, only managed assemblies that the host
     // expects to load should be included. Having extra unmanaged assemblies doesn't
