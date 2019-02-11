@@ -49,7 +49,7 @@ namespace OfficeProgrammingWalkthrough
 
             // Create a new, empty workbook and add it to the collection returned 
             // by property Workbooks. The new workbook becomes the active workbook.
-            // Add has an optional parameter for specifying a praticular template. 
+            // Add has an optional parameter for specifying a particular template. 
             // Because no argument is sent in this example, Add creates a new workbook. 
             excelApp.Workbooks.Add();
 
@@ -100,7 +100,7 @@ namespace OfficeProgrammingWalkthrough
             // optional. In this example, only two of the parameters require
             // specified values, but in Visual C# 2008 an argument must be sent
             // for each parameter. Because the parameters are reference parameters,
-            // you have to contruct variables for the arguments.
+            // you have to construct variables for the arguments.
             object link = true;
             object displayAsIcon = true;
 
@@ -140,7 +140,7 @@ namespace OfficeProgrammingWalkthrough
 
             // Create a new, empty workbook and add it to the collection returned 
             // by property Workbooks. The new workbook becomes the active workbook.
-            // Add has an optional parameter for specifying a praticular template. 
+            // Add has an optional parameter for specifying a particular template. 
             // Because no argument is sent in this example, Add creates a new workbook. 
             excelApp.Workbooks.Add();
 

@@ -152,7 +152,7 @@ public class Math
         return a - b;
     }
 
-    // Multiplies two intergers and returns the result
+    // Multiplies two integers and returns the result
     /// <summary>
     /// Multiplies two integers <paramref name="a"/> and <paramref name="b"/> and returns the result.
     /// </summary>
