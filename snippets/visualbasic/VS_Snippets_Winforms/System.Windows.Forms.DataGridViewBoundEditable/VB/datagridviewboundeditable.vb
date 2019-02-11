@@ -19,10 +19,10 @@ Public Class Form1
     ' Initialize the form.
     Public Sub New()
 
-        Me.dataGridView1.Dock = DockStyle.Fill
+        dataGridView1.Dock = DockStyle.Fill
 
-        Me.ReloadButton.Text = "Reload"
-        Me.SubmitButton.Text = "Submit"
+        ReloadButton.Text = "Reload"
+        SubmitButton.Text = "Submit"
 
         Dim panel As New FlowLayoutPanel With {
             .Dock = DockStyle.Top,
