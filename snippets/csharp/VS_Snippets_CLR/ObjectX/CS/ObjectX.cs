@@ -3,7 +3,7 @@
 using System;
 
 // The Point class is derived from System.Object.
-class Point 
+class Point
 {
     public int x, y;
 
@@ -50,7 +50,8 @@ class Point
     //</snippet5>
 }
 
-public sealed class App {
+public sealed class App
+{
     static void Main() 
     {
         // Construct a Point object.
