@@ -8,13 +8,22 @@ public class ProcessFile
     {
         try
         {
-            StreamReader sr = File.OpenText("data.txt");
-            Console.WriteLine("The first line of this file is {0}", sr.ReadLine());
-	    sr.Close();
+            using (StreamReader sr = File.OpenText("data.txt"))
+            {
+                Console.WriteLine($"The first line of this file is {sr.ReadLine()}");
+            }
         }
-        catch (Exception e)
+        catch (FileNotFoundException e)
         {
-            Console.WriteLine("An error occurred: '{0}'", e);
+            Console.WriteLine($"The file was not found: '{e}'");
+        }
+        catch (DirectoryNotFoundException e)
+        {
+            Console.WriteLine($"The directory was not found: '{e}'");
+        }
+        catch (IOException e)
+        {
+            Console.WriteLine($"The file could not be opened: '{e}'");
         }
     }
 }

@@ -4,6 +4,7 @@ using System.IO;
 // </SnippetUsingsForPaths>
 
 // <SnippetMLUsings>
+using Microsoft.Data.DataView;
 using Microsoft.ML;
 using Microsoft.ML.Data;
 // </SnippetMLUsings>
@@ -24,9 +25,9 @@ namespace IrisFlowerClustering
             // </SnippetCreateContext>
 
             // <SnippetSetupTextLoader>
-            TextLoader textLoader = mlContext.Data.CreateTextReader(new TextLoader.Arguments()
+            TextLoader textLoader = mlContext.Data.CreateTextLoader(new TextLoader.Arguments()
             {
-                Separator = ",",
+                Separators = new char[] { ',' },
                 HasHeader = false,
                 Column = new[]
                             {
