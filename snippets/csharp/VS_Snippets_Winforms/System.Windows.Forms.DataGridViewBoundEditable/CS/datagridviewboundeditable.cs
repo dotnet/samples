@@ -4,7 +4,17 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
-public class Form1 : System.Windows.Forms.Form
+namespace WindowsFormsApp
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+    }
+}
+public class Form1 : Form
 {
     private DataGridView dataGridView1 = new DataGridView();
     private BindingSource bindingSource1 = new BindingSource();
@@ -12,7 +22,7 @@ public class Form1 : System.Windows.Forms.Form
     private Button reloadButton = new Button();
     private Button submitButton = new Button();
 
-    [STAThreadAttribute()]
+    [STAThread()]
     public static void Main()
     {
         Application.Run(new Form1());
@@ -23,71 +33,51 @@ public class Form1 : System.Windows.Forms.Form
     {
         dataGridView1.Dock = DockStyle.Fill;
 
-        reloadButton.Text = "reload";
-        submitButton.Text = "submit";
-        reloadButton.Click += new System.EventHandler(reloadButton_Click);
-        submitButton.Click += new System.EventHandler(submitButton_Click);
+        reloadButton.Text = "Reload";
+        submitButton.Text = "Submit";
+        reloadButton.Click += new EventHandler(ReloadButton_Click);
+        submitButton.Click += new EventHandler(SubmitButton_Click);
 
-        FlowLayoutPanel panel = new FlowLayoutPanel();
-        panel.Dock = DockStyle.Top;
-        panel.AutoSize = true;
+        FlowLayoutPanel panel = new FlowLayoutPanel
+        {
+            Dock = DockStyle.Top,
+            AutoSize = true
+        };
         panel.Controls.AddRange(new Control[] { reloadButton, submitButton });
 
-        this.Controls.AddRange(new Control[] { dataGridView1, panel });
-        this.Load += new System.EventHandler(Form1_Load);
-        this.Text = "DataGridView databinding and updating demo";
+        Controls.AddRange(new Control[] { dataGridView1, panel });
+        Load += new EventHandler(Form1_Load);
+        Text = "DataGridView data binding and updating demo";
     }
 
-    //<snippet10>
-    private void Form1_Load(object sender, System.EventArgs e)
-    {
-        // Bind the DataGridView to the BindingSource
-        // and load the data from the database.
-        dataGridView1.DataSource = bindingSource1;
-        GetData("select * from Customers");
-    }
-    //</snippet10>
-
-    private void reloadButton_Click(object sender, System.EventArgs e)
-    {
-        // Reload the data from the database.
-        GetData(dataAdapter.SelectCommand.CommandText);
-    }
-
-    private void submitButton_Click(object sender, System.EventArgs e)
-    {
-        // Update the database with the user's changes.
-        dataAdapter.Update((DataTable)bindingSource1.DataSource);
-    }
-
-    //<snippet20>
     private void GetData(string selectCommand)
     {
         try
         {
-            // Specify a connection string. Replace the given value with a 
-            // valid connection string for a Northwind SQL Server sample
-            // database accessible to your system.
+            // Specify a connection string.  
+            // Replace <SQL Server> with the SQL Server for your Northwind sample database.
+            // Replace "Integrated Security=True" with user login information if necessary.
             String connectionString =
-                "Integrated Security=SSPI;Persist Security Info=False;" +
-                "Initial Catalog=Northwind;Data Source=localhost";
+                "Data Source=<SQL Server>;Initial Catalog=Northwind;" +
+                "Integrated Security=True";
 
             // Create a new data adapter based on the specified query.
             dataAdapter = new SqlDataAdapter(selectCommand, connectionString);
 
             // Create a command builder to generate SQL update, insert, and
-            // delete commands based on selectCommand. These are used to
-            // update the database.
+            // delete commands based on selectCommand. 
             SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
 
             // Populate a new data table and bind it to the BindingSource.
-            DataTable table = new DataTable();
-            table.Locale = System.Globalization.CultureInfo.InvariantCulture;
+            DataTable table = new DataTable
+            {
+                Locale = Globalization.CultureInfo.InvariantCulture
+            };
             dataAdapter.Fill(table);
             bindingSource1.DataSource = table;
 
             // Resize the DataGridView columns to fit the newly loaded content.
-            dataGridView1.AutoResizeColumns( 
+            dataGridView1.AutoResizeColumns(
                 DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
         }
         catch (SqlException)
@@ -97,7 +87,25 @@ public class Form1 : System.Windows.Forms.Form
                 "valid for your system.");
         }
     }
-    //</snippet20>
 
+    private void Form1_Load(object sender, EventArgs e)
+    {
+        // Bind the DataGridView to the BindingSource
+        // and load the data from the database.
+        dataGridView1.DataSource = bindingSource1;
+        GetData("select * from Customers");
+    }
+
+    private void ReloadButton_Click(object sender, EventArgs e)
+    {
+        // Reload the data from the database.
+        GetData(dataAdapter.SelectCommand.CommandText);
+    }
+
+    private void SubmitButton_Click(object sender, EventArgs e)
+    {
+        // Update the database with changes.
+        dataAdapter.Update((DataTable)bindingSource1.DataSource);
+    }
 }
 //</snippet00>
