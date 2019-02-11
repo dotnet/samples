@@ -1,6 +1,7 @@
 ﻿// <Snippet1>
 using System;
 using System.IO;
+using Microsoft.Data.DataView;
 using Microsoft.ML;
 using Microsoft.ML.Core.Data;
 using Microsoft.ML.Data;
@@ -30,9 +31,9 @@ namespace TaxiFarePrediction
             // </Snippet3>
 
             // <Snippet4>
-            _textLoader = mlContext.Data.CreateTextReader(new TextLoader.Arguments()
+            _textLoader = mlContext.Data.CreateTextLoader(new TextLoader.Arguments()
             {
-                Separator = ",",
+                Separators = new[] { ',' },
                 HasHeader = true,
                 Column = new[]
                             {
@@ -68,7 +69,7 @@ namespace TaxiFarePrediction
             // </Snippet6>
 
             // <Snippet7>
-            var pipeline = mlContext.Transforms.CopyColumns("FareAmount", "Label")
+            var pipeline = mlContext.Transforms.CopyColumns(inputColumnName:"FareAmount", outputColumnName:"Label")
             // </Snippet7>
                     // <Snippet8>
                     .Append(mlContext.Transforms.Categorical.OneHotEncoding("VendorId"))
