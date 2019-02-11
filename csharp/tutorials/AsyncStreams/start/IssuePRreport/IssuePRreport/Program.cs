@@ -47,8 +47,15 @@ namespace GitHubActivityReport
 
             public void Report(int value) => action(value);
         }
+
+        // <SnippetStarterAppMain>
         static async Task Main(string[] args)
         {
+            //Follow these steps to create a GitHub Access Token https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token
+            //Select the following permissions for your GitHub Access Token:
+            // - repo:status
+            // - public_repo
+            // Replace the 3rd parameter to the following code with your GitHub access token.
             var key = GetEnvVariable("GitHubKey",
             "You must store you GitHub key in the 'GitHubKey' environment variable",
             "");
@@ -58,6 +65,7 @@ namespace GitHubActivityReport
                 Credentials = new Octokit.Credentials(key)
             };
 
+            // <SnippetEnumerateOldStyle>
             var progressReporter = new progressStatus((num) =>
             {
                 Console.WriteLine($"Received {num} issues in total");
@@ -66,7 +74,7 @@ namespace GitHubActivityReport
 
             try
             {
-                var results = await runPagedQuery(client, PagedIssueQuery, "docs",
+                var results = await runPagedQueryAsync(client, PagedIssueQuery, "docs",
                     cancellationSource.Token, progressReporter);
                 foreach(var issue in results)
                     Console.WriteLine(issue);
@@ -75,9 +83,12 @@ namespace GitHubActivityReport
             {
                 Console.WriteLine("Work has been cancelled");
             }
+            // </SnippetEnumerateOldStyle>
         }
+        // </SnippetStarterAppMain>
 
-        private static async Task<JArray> runPagedQuery(GitHubClient client, string queryText, string repoName, CancellationToken cancel, IProgress<int> progress)
+        // <SnippetRunPagedQuery>
+        private static async Task<JArray> runPagedQueryAsync(GitHubClient client, string queryText, string repoName, CancellationToken cancel, IProgress<int> progress)
         {
             var issueAndPRQuery = new GraphQLRequest
             {
@@ -102,16 +113,19 @@ namespace GitHubActivityReport
                 int totalCount = (int)issues(results)["totalCount"];
                 hasMorePages = (bool)pageInfo(results)["hasPreviousPage"];
                 issueAndPRQuery.variables["start_cursor"] = pageInfo(results)["startCursor"].ToString();
-                finalResults.Merge(issues(results)["nodes"]);
                 issuesReturned += issues(results)["nodes"].Count();
+                // <SnippetProcessPage>
+                finalResults.Merge(issues(results)["nodes"]);
                 progress?.Report(issuesReturned);
                 cancel.ThrowIfCancellationRequested();
+                // </SnippetProcessPage>
             }
             return finalResults;
 
             JObject issues(JObject result) => (JObject)result["data"]["repository"]["issues"];
             JObject pageInfo(JObject result) => (JObject)issues(result)["pageInfo"];
         }
+        // </SnippetRunPagedQuery>
 
 
         private static string GetEnvVariable(string item, string error, string defaultValue)
