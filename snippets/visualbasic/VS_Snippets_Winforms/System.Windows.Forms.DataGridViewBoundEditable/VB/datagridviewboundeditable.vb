@@ -1,9 +1,8 @@
-'<snippet00>
 Imports System.Data.SqlClient
-Imports System.Windows
+Imports System.Windows.Forms
 
 Public Class Form1
-    Inherits Forms.Form
+    Inherits Form
 
     Private dataGridView1 As New DataGridView()
     Private bindingSource1 As New BindingSource()
@@ -11,7 +10,6 @@ Public Class Form1
     Private WithEvents ReloadButton As New Button()
     Private WithEvents SubmitButton As New Button()
 
-    <STAThreadAttribute()>
     Public Shared Sub Main()
         Application.Run(New Form1())
     End Sub
@@ -62,6 +60,7 @@ Public Class Form1
             ' Resize the DataGridView columns to fit the newly loaded content.
             dataGridView1.AutoResizeColumns(
                 DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader)
+
         Catch ex As SqlException
             MessageBox.Show("To run this example, replace the value of the " +
                 "connectionString variable with a connection string that is " +
@@ -69,6 +68,7 @@ Public Class Form1
         End Try
 
     End Sub
+
     Private Sub Form1_Load(ByVal sender As Object, ByVal e As EventArgs) _
         Handles Me.Load
 
@@ -96,4 +96,3 @@ Public Class Form1
     End Sub
 
 End Class
-'</snippet00>
