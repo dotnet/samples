@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-#nullable enable
 namespace NullableIntroduction
 {
     public class SurveyRun

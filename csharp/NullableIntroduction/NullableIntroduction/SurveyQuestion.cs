@@ -1,5 +1,4 @@
-﻿#nullable enable
-namespace NullableIntroduction
+﻿namespace NullableIntroduction
 {
     public enum QuestionType
     {
