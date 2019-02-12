@@ -1,18 +1,21 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using Octokit;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using Octokit;
 
 namespace GitHubActivityReport
 {
     public class GraphQLRequest
     {
-        public string query { get; set; }
-        public IDictionary<string, object> variables { get; } = new Dictionary<string, object>();
+        [JsonProperty("query")]
+        public string Query { get; set; }
+
+        [JsonProperty("variables")]
+        public IDictionary<string, object> Variables { get; } = new Dictionary<string, object>();
 
         public string ToJsonText() =>
             JsonConvert.SerializeObject(this);
@@ -92,9 +95,9 @@ namespace GitHubActivityReport
         {
             var issueAndPRQuery = new GraphQLRequest
             {
-                query = queryText
+                Query = queryText
             };
-            issueAndPRQuery.variables["repo_name"] = repoName;
+            issueAndPRQuery.Variables["repo_name"] = repoName;
 
             JArray finalResults = new JArray();
             bool hasMorePages = true;
@@ -112,7 +115,7 @@ namespace GitHubActivityReport
 
                 int totalCount = (int)issues(results)["totalCount"];
                 hasMorePages = (bool)pageInfo(results)["hasPreviousPage"];
-                issueAndPRQuery.variables["start_cursor"] = pageInfo(results)["startCursor"].ToString();
+                issueAndPRQuery.Variables["start_cursor"] = pageInfo(results)["startCursor"].ToString();
                 issuesReturned += issues(results)["nodes"].Count();
                 // <SnippetProcessPage>
                 finalResults.Merge(issues(results)["nodes"]);
