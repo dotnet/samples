@@ -5,12 +5,14 @@ class Rectangle
 {
    private Point a, b;
 
-   public Rectangle(int upLeftX, int upLeftY, int downRightX, int downRightY) {
+   public Rectangle(int upLeftX, int upLeftY, int downRightX, int downRightY) 
+   {
       this.a = new Point(upLeftX, upLeftY);
       this.b = new Point(downRightX, downRightY);
    }
 
-   public override bool Equals(Object obj) {
+   public override bool Equals(Object obj)
+   {
       // Perform an equality check on two rectangles (Point object pairs).
       if (obj == null || GetType() != obj.GetType()) 
           return false;
@@ -18,11 +20,12 @@ class Rectangle
       return a.Equals(r.a) && b.Equals(r.b);
    }
 
-   public override int GetHashCode() {
+   public override int GetHashCode()
+   {
       return Tuple.Create(a, b).GetHashCode();
    }
 
-    public override String ToString() 
+    public override String ToString()
     {
        return String.Format("Rectangle({0}, {1}, {2}, {3})",
                             a.x, a.y, b.x, b.y); 
@@ -34,26 +37,29 @@ class Point
   internal int x;
   internal int y;
 
-  public Point(int X, int Y) {
+  public Point(int X, int Y)
+  {
      this.x = X;
      this.y = Y;
   }
 
-  public override bool Equals (Object obj) {
+  public override bool Equals (Object obj)
+  {
      // Performs an equality check on two points (integer pairs).
      if (obj == null || GetType() != obj.GetType()) return false;
      Point p = (Point)obj;
      return (x == p.x) && (y == p.y);
   }
 
-  public override int GetHashCode() {
+  public override int GetHashCode()
+  {
      return Tuple.Create(x, y).GetHashCode();
   }
 }
 
 class Example 
 {
-   public static void Main() 
+   public static void Main()
    {
       Rectangle r1 = new Rectangle(0, 0, 100, 200);
       Rectangle r2 = new Rectangle(0, 0, 100, 200);
