@@ -18,10 +18,13 @@ namespace operators
         {
             // <SnippetLeftShift>
             uint x = 0b_1100_1001_0000_0000_0000_0000_0001_0001;
+            Console.WriteLine($"Before: {Convert.ToString(x, toBase: 2)}");
+
             uint y = x << 4;
-            Console.WriteLine(Convert.ToString(y, toBase: 2));
+            Console.WriteLine($"After:  {Convert.ToString(y, toBase: 2)}");
             // Output:
-            // 10010000000000000000000100010000
+            // Before: 11001001000000000000000000010001
+            // After:  10010000000000000000000100010000
             // </SnippetLeftShift>
         }
 
@@ -41,10 +44,13 @@ namespace operators
         {
             // <SnippetLeftShiftAssignment>
             uint x = 0b_1100_1001_0000_0000_0000_0000_0001_0001;
+            Console.WriteLine($"Before: {Convert.ToString(x, toBase: 2)}");
+
             x <<= 4;
-            Console.WriteLine(Convert.ToString(x, toBase: 2));
+            Console.WriteLine($"After:  {Convert.ToString(x, toBase: 2)}");
             // Output:
-            // 10010000000000000000000100010000
+            // Before: 11001001000000000000000000010001
+            // After:  10010000000000000000000100010000
             // </SnippetLeftShiftAssignment>
         }
 
@@ -52,19 +58,22 @@ namespace operators
         {
             // <SnippetRightShift>
             uint x = 0b_1001;
+            Console.WriteLine($"Before: {Convert.ToString(x, toBase: 2), 4}");
+
             uint y = x >> 2;
-            Console.WriteLine(Convert.ToString(y, toBase: 2));
+            Console.WriteLine($"After:  {Convert.ToString(y, toBase: 2), 4}");
             // Output:
-            // 10
+            // Before: 1001
+            // After:    10
 
             int a = int.MinValue;
-            Console.WriteLine($"Before shift: {Convert.ToString(a, toBase: 2)}");
-            int count = 3;
-            int b = a >> count;
-            Console.WriteLine($"Shift right by {count}: {Convert.ToString(b, toBase: 2)}");
+            Console.WriteLine($"Before: {Convert.ToString(a, toBase: 2)}");
+
+            int b = a >> 3;
+            Console.WriteLine($"After:  {Convert.ToString(b, toBase: 2)}");
             // Output:
-            // Before shift: 10000000000000000000000000000000
-            // Shift right by 3: 11110000000000000000000000000000
+            // Before: 10000000000000000000000000000000
+            // After:  11110000000000000000000000000000
             // </SnippetRightShift>
         }
 
@@ -84,10 +93,13 @@ namespace operators
         {
             // <SnippetRightShiftAssignment>
             uint x = 0b_1001;
+            Console.WriteLine($"Before: {Convert.ToString(x, toBase: 2), 4}");
+
             x >>= 2;
-            Console.WriteLine(Convert.ToString(x, toBase: 2));
+            Console.WriteLine($"After:  {Convert.ToString(x, toBase: 2), 4}");
             // Output:
-            // 10
+            // Before: 1001
+            // After:    10
             // </SnippetRightShiftAssignment>
         }
     }
