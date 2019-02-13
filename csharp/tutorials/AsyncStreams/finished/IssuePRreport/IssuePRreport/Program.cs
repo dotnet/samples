@@ -44,7 +44,8 @@ namespace GitHubActivityReport
 
         static async Task Main(string[] args)
         {
-            //Follow these steps to create a GitHub Access Token https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token
+            //Follow these steps to create a GitHub Access Token
+            // https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token
             //Select the following permissions for your GitHub Access Token:
             // - repo:status
             // - public_repo
@@ -80,7 +81,7 @@ namespace GitHubActivityReport
             int pagesReturned = 0;
             int issuesReturned = 0;
 
-            // Stop with 10 pages, because these are big repos:
+            // Stop with 10 pages, because these are large repos:
             while (hasMorePages && (pagesReturned++ < 10))
             {
                 var postBody = issueAndPRQuery.ToJsonText();
