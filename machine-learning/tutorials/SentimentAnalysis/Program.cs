@@ -209,8 +209,6 @@ namespace SentimentAnalysis
             
             // Use the model to predict whether comment data is toxic (1) or nice (0).
             var predictedResults = mlContext.CreateEnumerable<SentimentPrediction>(predictions, reuseRowObject: false);
-            //var predictedResults = predictions.AsEnumerable<SentimentPrediction>();
-
             // </Snippet28>
 
             // <Snippet29>

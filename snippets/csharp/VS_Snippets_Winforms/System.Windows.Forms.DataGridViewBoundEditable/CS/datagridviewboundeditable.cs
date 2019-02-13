@@ -1,7 +1,7 @@
-//<snippet00>
 using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp
@@ -71,7 +71,7 @@ public class Form1 : Form
             // Populate a new data table and bind it to the BindingSource.
             DataTable table = new DataTable
             {
-                Locale = Globalization.CultureInfo.InvariantCulture
+                Locale = CultureInfo.InvariantCulture
             };
             dataAdapter.Fill(table);
             bindingSource1.DataSource = table;
@@ -108,4 +108,3 @@ public class Form1 : Form
         dataAdapter.Update((DataTable)bindingSource1.DataSource);
     }
 }
-//</snippet00>

@@ -36,7 +36,7 @@ public class Math
         return a - b;
     }
 
-    // Multiplies two intergers and returns the result
+    // Multiplies two integers and returns the result
     public static int Multiply(int a, int b)
     {
         return a * b;
