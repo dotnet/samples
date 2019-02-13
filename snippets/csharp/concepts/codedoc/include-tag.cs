@@ -43,7 +43,7 @@ public class Math
         return a - b;
     }
 
-    // Multiplies two intergers and returns the result
+    // Multiplies two integers and returns the result
     /// <include file='docs.xml' path='docs/members[@name="math"]/MultiplyInt/*'/>
     public static int Multiply(int a, int b)
     {

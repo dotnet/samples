@@ -7,5 +7,5 @@ public class VersionTest
         Console.WriteLine($"Version: {Environment.Version}");
     }
 }
-// The example displays output similiar to the following:'
+// The example displays output similar to the following:'
 //    Version: 4.0.30319.18010

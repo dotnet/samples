@@ -4,15 +4,6 @@ using System.Text;
 
 namespace CsCsrefProgrammingObjects
 {
-    //-----------------------------------------------------------------------------
-    // 10/12/04 From john kenn per MVP Feedback:
-    // Originally this was called POINT, 
-    // but as the framework already includes a POINT structure, this was troublesome
-    //-----------------------------------------------------------------------------
-    // 05/06/05 Per mblome
-    // Yes, use Coords instead of Point everywhere
-    //-----------------------------------------------------------------------------
-
 
     //-----------------------------------------------------------------------------
     //<Snippet1>
@@ -126,7 +117,7 @@ namespace CsCsrefProgrammingObjects
                 Coords p2 = new Coords(5, 3);
                 //</Snippet77>
 
-                // Display the results using the overriden ToString method:
+                // Display the results using the overridden ToString method:
                 Console.WriteLine("Coords #1 at {0}", p1);
                 Console.WriteLine("Coords #2 at {0}", p2);
                 Console.ReadKey();
@@ -1132,7 +1123,7 @@ class TestPerson
             // Call with an integer literal.
             int productC = Square(12);
 
-            // Call with an expression that evaulates to int.
+            // Call with an expression that evaluates to int.
             productC = Square(productA * 3);
         }
        
@@ -1740,7 +1731,7 @@ namespace RainyDay
                 // After assignment, tcB and tcA refer to the same object. 
                 // They now have reference equality. 
                 tcB = tcA;
-                Console.WriteLine("After asignment: ReferenceEquals(tcA, tcB) = {0}",
+                Console.WriteLine("After assignment: ReferenceEquals(tcA, tcB) = {0}",
                                     Object.ReferenceEquals(tcA, tcB)); // true
 
                 // Changes made to tcA are reflected in tcB. Therefore, objects
@@ -1758,7 +1749,7 @@ namespace RainyDay
                 // Value types are copied on assignment. tsD and tsC have 
                 // the same values but are not the same object.
                 TestStruct tsD = tsC;
-                Console.WriteLine("After asignment: ReferenceEquals(tsC, tsD) = {0}",
+                Console.WriteLine("After assignment: ReferenceEquals(tsC, tsD) = {0}",
                                     Object.ReferenceEquals(tsC, tsD)); // false
                 #endregion
 
@@ -1800,9 +1791,9 @@ namespace RainyDay
 
     /* Output:
         ReferenceEquals(tcA, tcB) = False
-        After asignment: ReferenceEquals(tcA, tcB) = True
+        After assignment: ReferenceEquals(tcA, tcB) = True
         tcB.Name = TestClass 42 tcB.Num: 42
-        After asignment: ReferenceEquals(tsC, tsD) = False
+        After assignment: ReferenceEquals(tsC, tsD) = False
         ReferenceEquals(strA, strB) = True
         strA = "Goodbye world!" strB = "Hello world!"
         After strA changes, ReferenceEquals(strA, strB) = False
