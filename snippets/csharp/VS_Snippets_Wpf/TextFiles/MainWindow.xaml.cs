@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Windows;
 
@@ -14,20 +14,20 @@ namespace TextFiles
             InitializeComponent();
         }
 
-            private async void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        private async void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            try
             {
-                try
+                using (StreamReader sr = new StreamReader("TestFile.txt"))
                 {
-                    using (StreamReader sr = new StreamReader("TestFile.txt"))
-                    {
-                        string line = await sr.ReadToEndAsync();
-                        ResultBlock.Text = line; 
-                    }
+                    string line = await sr.ReadToEndAsync();
+                    ResultBlock.Text = line;
                 }
-                catch (FileNotFoundException ex)
-                {
-                    ResultBlock.Text = ex.Message;
-                }
+            }
+            catch (FileNotFoundException ex)
+            {
+                ResultBlock.Text = ex.Message;
             }
         }
     }
+}
