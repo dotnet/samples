@@ -7,7 +7,7 @@ Module ForEachDemo
 
     Sub Main()
         ' A simple source for demonstration purposes. Modify this path as necessary.
-        Dim files As String() = IO.Directory.GetFiles("C:\Users\Public\Pictures\Sample Pictures", "*.jpg")
+        Dim files As String() = Directory.GetFiles("C:\Users\Public\Pictures\Sample Pictures", "*.jpg")
         Dim newDir As String = "C:\Users\Public\Pictures\Sample Pictures\Modified"
         IO.Directory.CreateDirectory(newDir)
 
