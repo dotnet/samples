@@ -9,7 +9,7 @@ Module ForEachDemo
         ' A simple source for demonstration purposes. Modify this path as necessary.
         Dim files As String() = Directory.GetFiles("C:\Users\Public\Pictures\Sample Pictures", "*.jpg")
         Dim newDir As String = "C:\Users\Public\Pictures\Sample Pictures\Modified"
-        IO.Directory.CreateDirectory(newDir)
+        Directory.CreateDirectory(newDir)
 
         ' Method signature: Parallel.ForEach(IEnumerable<TSource> source, Action<TSource> body)
         ' Be sure to add a reference to System.Drawing.dll.
