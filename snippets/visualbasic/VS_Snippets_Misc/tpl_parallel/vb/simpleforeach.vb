@@ -25,7 +25,7 @@ Module ForEachDemo
                                     ' Peek behind the scenes to see how work is parallelized.
                                     ' But be aware: Thread contention for the Console slows down parallel loops!!!
 
-                                    Console.WriteLine("Processing {filename} on thread {Thread.CurrentThread.ManagedThreadId}")
+                                    Console.WriteLine($"Processing {filename} on thread {Thread.CurrentThread.ManagedThreadId}")
                                     'close lambda expression and method invocation
                                 End Sub)
 
