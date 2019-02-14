@@ -65,6 +65,10 @@ namespace operators
             Console.WriteLine("===== <<, <<=, >>, and >>= operator examples ===");
             ShiftOperatorsExamples.Examples();
             Console.WriteLine();
+
+            Console.WriteLine("============== ! operator examples =============");
+            LogicalNegationExamples.Examples();
+            Console.WriteLine();
         }
     }
 }
