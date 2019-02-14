@@ -12,9 +12,9 @@ public class Example
     public static void Main()
     {
         // A simple source for demonstration purposes. Modify this path as necessary.
-        String[] files = System.IO.Directory.GetFiles(@"C:\Users\Public\Pictures\Sample Pictures", "*.jpg");
-        String newDir = @"C:\Users\Public\Pictures\Sample Pictures\Modified";
-        System.IO.Directory.CreateDirectory(newDir);
+        string[] files = Directory.GetFiles(@"C:\Users\Public\Pictures\Sample Pictures", "*.jpg");
+        string newDir = @"C:\Users\Public\Pictures\Sample Pictures\Modified";
+        Directory.CreateDirectory(newDir);
 
         // Method signature: Parallel.ForEach(IEnumerable<TSource> source, Action<TSource> body)
         // Be sure to add a reference to System.Drawing.dll.
@@ -22,7 +22,7 @@ public class Example
                                 {
                                     // The more computational work you do here, the greater 
                                     // the speedup compared to a sequential foreach loop.
-                                    String filename = System.IO.Path.GetFileName(currentFile);
+                                    string filename = Path.GetFileName(currentFile);
                                     var bitmap = new Bitmap(currentFile);
 
                                     bitmap.RotateFlip(RotateFlipType.Rotate180FlipNone);
@@ -31,7 +31,7 @@ public class Example
                                     // Peek behind the scenes to see how work is parallelized.
                                     // But be aware: Thread contention for the Console slows down parallel loops!!!
 
-                                    Console.WriteLine("Processing {0} on thread {1}", filename, Thread.CurrentThread.ManagedThreadId);
+                                    Console.WriteLine($"Processing {filename} on thread {Thread.CurrentThread.ManagedThreadId}");
                                     //close lambda expression and method invocation
                                 });
 
