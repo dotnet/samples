@@ -20,7 +20,7 @@ Module ForEachDemo
                                     Dim bitmap As New Bitmap(currentFile)
 
                                     bitmap.RotateFlip(System.Drawing.RotateFlipType.Rotate180FlipNone)
-                                    bitmap.Save(IO.Path.Combine(newDir, filename))
+                                    bitmap.Save(Path.Combine(newDir, filename))
 
                                     ' Peek behind the scenes to see how work is parallelized.
                                     ' But be aware: Thread contention for the Console slows down parallel loops!!!
