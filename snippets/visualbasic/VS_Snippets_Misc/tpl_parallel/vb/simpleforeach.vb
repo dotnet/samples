@@ -16,7 +16,7 @@ Module ForEachDemo
         Parallel.ForEach(files, Sub(currentFile)
                                     ' The more computational work you do here, the greater 
                                     ' the speedup compared to a sequential foreach loop.
-                                    Dim filename As String = IO.Path.GetFileName(currentFile)
+                                    Dim filename As String = Path.GetFileName(currentFile)
                                     Dim bitmap As New Bitmap(currentFile)
 
                                     bitmap.RotateFlip(System.Drawing.RotateFlipType.Rotate180FlipNone)
