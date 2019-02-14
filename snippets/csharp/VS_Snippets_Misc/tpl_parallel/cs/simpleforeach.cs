@@ -1,6 +1,5 @@
 // <snippet03>
 //
-// IMPORTANT!!!: Add a reference to System.Drawing.dll
 using System;
 using System.IO;
 using System.Threading;
@@ -17,8 +16,7 @@ public class Example
         Directory.CreateDirectory(newDir);
 
         // Method signature: Parallel.ForEach(IEnumerable<TSource> source, Action<TSource> body)
-        // Be sure to add a reference to System.Drawing.dll.
-        Parallel.ForEach(files, (currentFile) => 
+                Parallel.ForEach(files, (currentFile) => 
                                 {
                                     // The more computational work you do here, the greater 
                                     // the speedup compared to a sequential foreach loop.

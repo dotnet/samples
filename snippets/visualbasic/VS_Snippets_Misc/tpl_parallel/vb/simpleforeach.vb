@@ -1,6 +1,7 @@
 ﻿'<snippet03>
-' How to: Write a Simple Parallel.ForEach Loop
-' IMPORTANT!!!: Add reference to System.Drawing.dll
+Imports System.IO
+Imports System.Threading
+Imports System.Threading.Tasks
 Imports System.Drawing
 
 Module ForEachDemo
@@ -10,9 +11,7 @@ Module ForEachDemo
         Dim files As String() = Directory.GetFiles("C:\Users\Public\Pictures\Sample Pictures", "*.jpg")
         Dim newDir As String = "C:\Users\Public\Pictures\Sample Pictures\Modified"
         Directory.CreateDirectory(newDir)
-
-        ' Method signature: Parallel.ForEach(IEnumerable<TSource> source, Action<TSource> body)
-        ' Be sure to add a reference to System.Drawing.dll.
+       
         Parallel.ForEach(files, Sub(currentFile)
                                     ' The more computational work you do here, the greater 
                                     ' the speedup compared to a sequential foreach loop.
