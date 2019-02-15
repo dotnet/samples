@@ -108,7 +108,7 @@ Module Module1
         Dim i As Integer = 0
 
         For Each s As String In My.Application.CommandLineArgs
-            Console.WriteLine("[" + i.ToString() + "] = " + s)
+            Console.WriteLine($"[{i}] = {s}")
             i = i + 1
         Next
 

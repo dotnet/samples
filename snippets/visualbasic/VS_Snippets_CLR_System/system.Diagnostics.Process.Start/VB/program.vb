@@ -15,15 +15,15 @@ Module Program
         Dim password As New SecureString()
         Dim key As ConsoleKeyInfo
         Do
-           key = Console.ReadKey(True)
+            key = Console.ReadKey(True)
 
-           ' Ignore any key out of range.
-           If key.Key >= 33 AndAlso key.Key <= 90 AndAlso key.Key <> ConsoleKey.Enter Then
-              ' Append the character to the password.
-              password.AppendChar(key.KeyChar)
-              Console.Write("*")
-           End If
-        ' Exit if Enter key is pressed.
+            ' Ignore any key out of range.
+            If key.Key >= 33 AndAlso key.Key <= 90 AndAlso key.Key <> ConsoleKey.Enter Then
+                ' Append the character to the password.
+                password.AppendChar(key.KeyChar)
+                Console.Write("*")
+            End If
+            ' Exit if Enter key is pressed.
         Loop While key.Key <> ConsoleKey.Enter
         Console.WriteLine()
 
