@@ -6,7 +6,7 @@ Option Strict On
 Imports System.Globalization
 Imports System.IO
 
-Public Class Example
+Module Example
    Public Sub Main()
       Dim date1 As Date = #8/7/2011#
       Dim ci As CultureInfo = CultureInfo.CreateSpecificCulture("ar-SY")
@@ -33,7 +33,7 @@ Public Class Example
       End If
       Return calName
    End Function
-End Class
+End Module
 ' The example generates the following output:
 '    Calendar                         Long Date Pattern     Example Date
 '    

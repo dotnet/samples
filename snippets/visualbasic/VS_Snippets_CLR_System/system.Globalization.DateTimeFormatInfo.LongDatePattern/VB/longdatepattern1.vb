@@ -2,10 +2,9 @@
 Option Strict On
 
 ' <Snippet2>
-Imports System
 Imports System.Globalization
 
-Public Class Example
+Module Example
    Public Sub Main()
       Dim date1 As Date = #11/12/2011#
       Dim cultureNames() As String = { "en-US", "fr-FR", "ru-RU", "de-DE" }
@@ -17,7 +16,7 @@ Public Class Example
                            date1.ToString("D", culture))                 
       Next
    End Sub
-End Class
+End Module
 ' The example displays the following output:
 '    Culture Long Date Pattern    Date
 '    en-US   dddd, MMMM d, yyyy  Saturday, November 12, 2011
