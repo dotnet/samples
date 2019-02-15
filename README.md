@@ -87,7 +87,7 @@ To create a sample:
     }
     ```
     
-5. Don't check in solution files if it contains only one project.
+5. Don't check in the solution file if it contains only one project.
 
 To build and run your sample:
 
