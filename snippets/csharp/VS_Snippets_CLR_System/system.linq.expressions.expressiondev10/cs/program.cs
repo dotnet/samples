@@ -817,7 +817,7 @@ namespace ExpressionTreesCSharp
             // Add the following directive to your file:
             // using System.Linq.Expressions;  
 
-            // This expression represents a type convertion operation. 
+            // This expression represents a type conversion operation. 
             Expression convertExpr = Expression.Convert(
                                         Expression.Constant(5.5),
                                         typeof(Int16)
