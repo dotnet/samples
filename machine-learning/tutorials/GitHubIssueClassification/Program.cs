@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-
+using Microsoft.Data.DataView;
 using Microsoft.ML;
 using Microsoft.ML.Core.Data;
 using Microsoft.ML.Data;
@@ -42,7 +42,7 @@ namespace GitHubIssueClassification
             Console.WriteLine($"=============== Loading Dataset  ===============");
             
             // <SnippetLoadTrainData>
-            _trainingDataView = _mlContext.Data.CreateTextReader<GitHubIssue>(hasHeader: true).Read(_trainDataPath);
+            _trainingDataView = _mlContext.Data.CreateTextLoader<GitHubIssue>(hasHeader: true).Read(_trainDataPath);
             // </SnippetLoadTrainData>
 
             Console.WriteLine($"=============== Finished Loading Dataset  ===============");
@@ -73,11 +73,11 @@ namespace GitHubIssueClassification
             Console.WriteLine($"=============== Processing Data ===============");
             // STEP 2: Common data process configuration with pipeline data transformations
             // <SnippetMapValueToKey>
-            var pipeline = _mlContext.Transforms.Conversion.MapValueToKey("Area", "Label")
+            var pipeline = _mlContext.Transforms.Conversion.MapValueToKey(inputColumnName: "Area", outputColumnName: "Label")
                             // </SnippetMapValueToKey>
                             // <SnippetFeaturizeText>
-                            .Append(_mlContext.Transforms.Text.FeaturizeText("Title", "TitleFeaturized"))
-                            .Append(_mlContext.Transforms.Text.FeaturizeText("Description", "DescriptionFeaturized"))
+                            .Append(_mlContext.Transforms.Text.FeaturizeText(inputColumnName: "Title", outputColumnName: "TitleFeaturized"))
+                            .Append(_mlContext.Transforms.Text.FeaturizeText(inputColumnName: "Description", outputColumnName: "DescriptionFeaturized"))
                             // </SnippetFeaturizeText>
                             // <SnippetConcatenate>
                             .Append(_mlContext.Transforms.Concatenate("Features", "TitleFeaturized", "DescriptionFeaturized"))
@@ -97,14 +97,10 @@ namespace GitHubIssueClassification
         public static EstimatorChain<KeyToValueMappingTransformer> BuildAndTrainModel(IDataView trainingDataView, EstimatorChain<ITransformer> pipeline)
         {
             // STEP 3: Create the training algorithm/trainer
-            // Use the multi-class SDCA model to predict the label using features.
-            // <SnippetSdcaMultiClassTrainer>
-            var trainer = new SdcaMultiClassTrainer(_mlContext,DefaultColumnNames.Label, DefaultColumnNames.Features);
-            // </SnippetSdcaMultiClassTrainer> 
-
+            // Use the multi-class SDCA algorithm to predict the label using features.
             //Set the trainer/algorithm and map label to value (original readable state)
             // <SnippetAddTrainer> 
-            var trainingPipeline = pipeline.Append(trainer)
+            var trainingPipeline = pipeline.Append(_mlContext.MulticlassClassification.Trainers.StochasticDualCoordinateAscent(DefaultColumnNames.Label, DefaultColumnNames.Features))
                     .Append(_mlContext.Transforms.Conversion.MapKeyToValue("PredictedLabel"));
             // </SnippetAddTrainer> 
 
@@ -151,7 +147,7 @@ namespace GitHubIssueClassification
 
             //Load the test dataset into the IDataView
             // <SnippetLoadTestDataset>
-            var testDataView = _mlContext.Data.CreateTextReader<GitHubIssue>(hasHeader: true).Read(_testDataPath);
+            var testDataView = _mlContext.Data.CreateTextLoader<GitHubIssue>(hasHeader: true).Read(_testDataPath);
             // </SnippetLoadTestDataset>
 
             //Evaluate the model on a test dataset and calculate metrics of the model on the test data.
