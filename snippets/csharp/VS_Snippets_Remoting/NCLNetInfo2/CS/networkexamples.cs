@@ -905,7 +905,7 @@ using System.Net.Sockets;
  //</Snippet50> 
 
  //<Snippet51> 
-         public static void DisplayTypeAndAddress()
+        public static void DisplayTypeAndAddress()
         {
             IPGlobalProperties computerProperties = IPGlobalProperties.GetIPGlobalProperties();
             NetworkInterface[] nics = NetworkInterface.GetAllNetworkInterfaces();
