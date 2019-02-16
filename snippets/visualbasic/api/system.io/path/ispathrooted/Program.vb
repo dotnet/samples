@@ -2,8 +2,11 @@
 
 Module Program
     Public Sub Main()
-        Dim relative As String = "C:Documents" 
-        ShowPathInfo(relative)
+        Dim relative1 As String = "C:Documents" 
+        ShowPathInfo(relative1)
+
+        Dim relative2 As String = "C:Documents" 
+        ShowPathInfo(relative2)
 
         Dim absolute As String = "C:/Documents"
         ShowPathInfo(absolute)
@@ -22,6 +25,11 @@ End Module
 '        Rooted: True
 '        Fully qualified: False
 '        Full path: c:\Users\user1\Documents\projects\path\ispathrooted\Documents
+'
+'    Path: /Documents
+'       Rooted: True
+'       Fully qualified: False
+'       Full path: c:\Documents
 '
 '    Path: C:/Documents
 '       Rooted: True

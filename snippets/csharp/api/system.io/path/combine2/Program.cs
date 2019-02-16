@@ -5,46 +5,41 @@ class Program
 {
     static void Main()
     {
-        string[] paths1 = { @"C:\", @"C:\", @"\Program Files", "Program Files" };
-        string[] paths2 = {  @"\users\user1\documents", @"D:\", @"\Utilities", @"D:\Utilities" };
+        var path1 = "C:/Program Files/";
+        var path2 = "Utilities/SystemUtilities";
+        ShowPathInformation(path1, path2);
 
-        for(int ctr = 0; ctr < paths1.Length; ctr++)
-        {
-            Console.WriteLine($"\nConcatenating '{paths1[ctr]}' and '{paths2[ctr]}'");               
-            string combinedPath = Path.Combine(paths1[ctr], paths2[ctr]);
-            Console.WriteLine($"   Combine:  {combinedPath}");
-            Console.WriteLine($"   Full Path: {Path.GetFullPath(combinedPath)}");
-            string joinedPath = Path.Join(paths1[ctr], paths2[ctr]); 
-            Console.WriteLine($"\n   Join:    {joinedPath}");
-            Console.WriteLine($"   Full Path: {Path.GetFullPath(joinedPath)}");
-        }
+        path1 = "C:/";
+        path2 = "/Program Files";
+        ShowPathInformation(path1, path2);
+
+        path1 = "C:/Users/Public/Documents/";
+        path2 = "C:/Users/User1/Documents/Financial/";
+        ShowPathInformation(path1, path2);
+    }
+
+    private static void ShowPathInformation(string path1, string path2)
+    {
+        var result = Path.Join(path1.AsSpan(), path2.AsSpan());
+        Console.WriteLine($"Concatenating  '{path1}' and '{path2}'");
+        Console.WriteLine($"   Path.Join:     '{result}'");
+        Console.WriteLine($"   Path.Combine:  '{Path.Combine(path1, path2)}'");
+        Console.WriteLine($"   Path.FullPath: '{Path.GetFullPath(result)}'\n");
     }
 }
-// The example displays the following output:
-//      Concatenating 'C:\' and '\users\user1\documents'
-//      Combine:  \users\user1\documents
-//      Full Path: C:\users\user1\documents
+// The example displays the following output if run on a Windows system:
+//    Concatenating  'C:/Program Files/' and 'Utilities/SystemUtilities'
+//       Path.Join:     'C:/Program Files/Utilities/SystemUtilities'
+//       Path.Combine:  'C:/Program Files/Utilities/SystemUtilities'
+//       Path.FullPath: 'C:\Program Files\Utilities\SystemUtilities'
 //
-//      Join:    C:\\users\user1\documents
-//      Full Path: C:\users\user1\documents
+//    Concatenating  'C:/' and '/Program Files'
+//       Path.Join:     'C://Program Files'
+//       Path.Combine:  '/Program Files'
+//       Path.FullPath: 'C:\Program Files'
 //
-//      Concatenating 'C:\' and 'D:\'
-//      Combine:  D:\
-//      Full Path: D:\
-//
-//      Join:    C:\D:\
-//      Full Path: C:\D:\
-//
-//      Concatenating '\Program Files' and '\Utilities'
-//      Combine:  \Utilities
-//      Full Path: C:\Utilities
-//
-//      Join:    \Program Files\Utilities
-//      Full Path: C:\Program Files\Utilities
-//
-//      Concatenating 'Program Files' and 'D:\Utilities'
-//      Combine:  D:\Utilities
-//      Full Path: D:\Utilities
-//
-//      Join:    Program Files\D:\Utilities
-//      Full Path: C:\Development\cors\path\combine\Program Files\D:\Utilities
+//    Concatenating  'C:/Users/Public/Documents/' and 'C:/Users/User1/Documents/Financial/'
+//       Path.Join:     'C:/Users/Public/Documents/C:/Users/User1/Documents/Financial/'
+//       Path.Combine:  'C:/Users/User1/Documents/Financial/'
+//       Path.FullPath: 'C:\Users\Public\Documents\C:\Users\User1\Documents\Financial\'
+

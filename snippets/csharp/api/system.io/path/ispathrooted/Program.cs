@@ -5,10 +5,13 @@ class Program
 {
     static void Main()
     {
-        string relative = @"C:Documents"; 
-        ShowPathInfo(relative);
+        string relative1 = "C:Documents"; 
+        ShowPathInfo(relative1);
 
-        string absolute = @"C:/Documents";
+        string relative2 = "/Documents";
+        ShowPathInfo(relative2);
+
+        string absolute = "C:/Documents";
         ShowPathInfo(absolute);
     }
 
@@ -26,6 +29,11 @@ class Program
 //        Rooted: True
 //        Fully qualified: False
 //        Full path: c:\Users\user1\Documents\projects\path\ispathrooted\Documents
+//
+//    Path: /Documents
+//       Rooted: True
+//       Fully qualified: False
+//       Full path: c:\Documents
 //
 //    Path: C:/Documents
 //       Rooted: True
