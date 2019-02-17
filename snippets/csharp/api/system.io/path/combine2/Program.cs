@@ -24,22 +24,18 @@ class Program
         Console.WriteLine($"Concatenating  '{path1}' and '{path2}'");
         Console.WriteLine($"   Path.Join:     '{result}'");
         Console.WriteLine($"   Path.Combine:  '{Path.Combine(path1, path2)}'");
-        Console.WriteLine($"   Path.FullPath: '{Path.GetFullPath(result)}'\n");
     }
 }
 // The example displays the following output if run on a Windows system:
 //    Concatenating  'C:/Program Files/' and 'Utilities/SystemUtilities'
 //       Path.Join:     'C:/Program Files/Utilities/SystemUtilities'
 //       Path.Combine:  'C:/Program Files/Utilities/SystemUtilities'
-//       Path.FullPath: 'C:\Program Files\Utilities\SystemUtilities'
 //
 //    Concatenating  'C:/' and '/Program Files'
 //       Path.Join:     'C://Program Files'
 //       Path.Combine:  '/Program Files'
-//       Path.FullPath: 'C:\Program Files'
 //
 //    Concatenating  'C:/Users/Public/Documents/' and 'C:/Users/User1/Documents/Financial/'
 //       Path.Join:     'C:/Users/Public/Documents/C:/Users/User1/Documents/Financial/'
 //       Path.Combine:  'C:/Users/User1/Documents/Financial/'
-//       Path.FullPath: 'C:\Users\Public\Documents\C:\Users\User1\Documents\Financial\'
 
