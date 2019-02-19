@@ -5,7 +5,7 @@ Imports System.Threading
 
 Class PrintProcessClass
 
-    Private WithEvents myProcess As New Process
+    Private WithEvents myProcess As Process
     Private elapsedTime As Integer
     Private eventHandled As Boolean
 
@@ -17,19 +17,21 @@ Class PrintProcessClass
         elapsedTime = 0
         eventHandled = False
 
-        Try
-            ' Start a process to print a file and raise an event when done.
-            myProcess.StartInfo.FileName = fileName
-            myProcess.StartInfo.Verb = "Print"
-            myProcess.StartInfo.CreateNoWindow = True
-            myProcess.EnableRaisingEvents = True
-            myProcess.Start()
+        Using myProcess = New Process
+            Try
+                ' Start a process to print a file and raise an event when done.
+                myProcess.StartInfo.FileName = fileName
+                myProcess.StartInfo.Verb = "Print"
+                myProcess.StartInfo.CreateNoWindow = True
+                myProcess.EnableRaisingEvents = True
+                myProcess.Start()
 
-        Catch ex As Exception
-            Console.WriteLine("An error occurred trying to print ""{0}"":" & _
+            Catch ex As Exception
+                Console.WriteLine("An error occurred trying to print ""{0}"":" &
                 vbCrLf & ex.Message, fileName)
-            Return
-        End Try
+                Return
+            End Try
+        End Using
 
         ' Wait for Exited event, but not more than 30 seconds.
         Const SLEEP_AMOUNT As Integer = 100
@@ -43,12 +45,12 @@ Class PrintProcessClass
     End Sub
 
     ' Handle Exited event and display process information.
-    Private Sub myProcess_Exited(ByVal sender As Object, _
+    Private Sub myProcess_Exited(ByVal sender As Object,
             ByVal e As System.EventArgs) Handles myProcess.Exited
 
         eventHandled = True
-        Console.WriteLine("Exit time:    {0}" & vbCrLf & _
-            "Exit code:    {1}" & vbCrLf & "Elapsed time: {2}", _
+        Console.WriteLine("Exit time:    {0}" & vbCrLf &
+            "Exit code:    {1}" & vbCrLf & "Elapsed time: {2}",
             myProcess.ExitTime, myProcess.ExitCode, elapsedTime)
     End Sub
 

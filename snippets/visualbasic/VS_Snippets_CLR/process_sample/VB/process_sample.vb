@@ -18,57 +18,44 @@ Imports System.Diagnostics
 Imports System.Threading
 
 Namespace Process_Sample
-   Class MyProcessClass
+    Class MyProcessClass
 
-      Public Shared Sub Main()
-         Try
+        Public Shared Sub Main()
+            Try
 
-            Dim myProcess As Process
-            myProcess = Process.Start("NotePad.exe")
+                Using myProcess = Process.Start("NotePad.exe")
 
-            While Not myProcess.HasExited
+                    While Not myProcess.HasExited
 
-               Console.WriteLine()
-               
-               ' Get physical memory usage of the associated process.
-               Console.WriteLine("Process's physical memory usage: " + _
-                                      myProcess.WorkingSet.ToString)
-               ' Get base priority of the associated process.
-               Console.WriteLine("Base priority of the associated process: " + _
-                                      myProcess.BasePriority.ToString)
-               ' Get priority class of the associated process.
-               Console.WriteLine("Priority class of the associated process: " + _
-                                      myProcess.PriorityClass.ToString)
-               ' Get user processor time for this process.
-               Console.WriteLine("User Processor Time: " + _
-                                      myProcess.UserProcessorTime.ToString)
-               ' Get privileged processor time for this process.
-               Console.WriteLine("Privileged Processor Time: " + _
-                                   myProcess.PrivilegedProcessorTime.ToString)
-               ' Get total processor time for this process.
-               Console.WriteLine("Total Processor Time: " + _
-                                     myProcess.TotalProcessorTime.ToString)
-               ' Invoke overloaded ToString function.
-               Console.WriteLine("Process's Name: " + myProcess.ToString)
-               Console.WriteLine("-------------------------------------")
+                        Console.WriteLine()
 
-               If myProcess.Responding Then
-                  Console.WriteLine("Status:  Responding to user interface")
-                  myProcess.Refresh()
-               Else
-                  Console.WriteLine("Status:  Not Responding")
-               End If
-               Thread.Sleep(1000)
-            End While
+                        Console.WriteLine($"Process's physical memory usage          : {myProcess.WorkingSet}")
+                        Console.WriteLine($"Base priority of the associated process  : {myProcess.BasePriority}")
+                        Console.WriteLine($"Priority class of the associated process : {myProcess.PriorityClass}")
+                        Console.WriteLine($"User processor time                      : {myProcess.UserProcessorTime}")
+                        Console.WriteLine($"Privileged processor time                : {myProcess.PrivilegedProcessorTime}")
+                        Console.WriteLine($"Total processor time                     : {myProcess.TotalProcessorTime}")
+                        Console.WriteLine($"Process's name                           : {myProcess}")
+                        Console.WriteLine("-------------------------------------")
 
-            Console.WriteLine()
-            Console.WriteLine("Process exit code: {0}", myProcess.ExitCode)
+                        If myProcess.Responding Then
+                            Console.WriteLine("Status:  Responding to user interface")
+                            myProcess.Refresh()
+                        Else
+                            Console.WriteLine("Status:  Not Responding")
+                        End If
+                        Thread.Sleep(1000)
+                    End While
 
-         Catch e As Exception
-            Console.WriteLine("The following exception was raised: " + e.Message)
-         End Try
-      End Sub 'Main
-   End Class 'MyProcessClass
+                    Console.WriteLine()
+                    Console.WriteLine($"Process exit code: {myProcess.ExitCode}")
+                End Using
+
+            Catch e As Exception
+                Console.WriteLine($"The following exception was raised: {e.Message}")
+            End Try
+        End Sub 'Main
+    End Class 'MyProcessClass
 End Namespace 'Process_Sample
 
 ' </Snippet1>

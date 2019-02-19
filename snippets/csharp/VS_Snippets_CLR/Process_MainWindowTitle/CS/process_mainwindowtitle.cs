@@ -31,7 +31,7 @@ class MainWindowTitleClass
         }
         catch (Exception e)
         {
-            Console.Write(" Message : " + e.Message);
+            Console.Write($" Message : {e.Message}");
         }
     }
 }

@@ -54,7 +54,7 @@ namespace ProcessStandardInputSample
                 // Write a report header to the console.
                 if (numLines > 0)
                 {
-                    Console.WriteLine(" {0} sorted text line(s) ", numLines);
+                    Console.WriteLine($" {numLines} sorted text line(s) ");
                     Console.WriteLine("------------------------");
                 }
                 else

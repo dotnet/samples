@@ -22,24 +22,25 @@ Class ProcessDemo
             Console.WriteLine(localByName((i - 1)).Id.ToString())
             i -= 1
         End While
-        Dim chosen As Process
+
         i = localByName.Length
         While i > 0
             Console.WriteLine("Enter a process Id to kill the process")
             Dim id As String = Console.ReadLine()
-            If id = "" Then
+            If id = String.Empty Then
                 Exit While
             End If
             Try
-                chosen = Process.GetProcessById(Int32.Parse(id))
+                Using chosen As Process = Process.GetProcessById(Int32.Parse(id))
+                    If chosen.ProcessName = "notepad" Then
+                        chosen.Kill()
+                        chosen.WaitForExit()
+                    End If
+                End Using
             Catch e As Exception
                 Console.WriteLine("Incorrect entry.")
                 GoTo ContinueWhile1
             End Try
-            If chosen.ProcessName = "notepad" Then
-                chosen.Kill()
-                chosen.WaitForExit()
-            End If
             i -= 1
 ContinueWhile1:
         End While
