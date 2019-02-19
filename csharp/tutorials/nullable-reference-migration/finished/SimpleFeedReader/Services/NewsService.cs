@@ -60,7 +60,7 @@ namespace SimpleFeedReader.Services
 
             return news.OrderByDescending(story => story.Published);
         }
-        // <SnippetGetNewsFinished>
+        // </SnippetGetNewsFinished>
     }
 #nullable restore
 
