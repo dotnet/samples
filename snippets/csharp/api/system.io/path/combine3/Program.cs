@@ -27,7 +27,7 @@ class Program
         Console.WriteLine($"Concatenating  '{path1}, '{path2}', and `{path3}'");
         Console.WriteLine($"   Path.Join:     '{result}'");
         Console.WriteLine($"   Path.Combine:  '{Path.Combine(path1, path2, path3)}'");
-Console.WriteLine($"   {Path.GetFullPath(result)}");
+        Console.WriteLine($"   {Path.GetFullPath(result)}");
     }
 }
 // The example displays the following output if run on a Windows system:
