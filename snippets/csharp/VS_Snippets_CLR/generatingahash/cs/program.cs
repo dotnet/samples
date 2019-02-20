@@ -8,26 +8,26 @@ class Class1
 {
     static void Main(string[] args)
     {
-        byte[] HashValue;
+        byte[] hashValue;
 
-        string MessageString = "This is the original message!";
+        string messageString = "This is the original message!";
 
         //Create a new instance of the UnicodeEncoding class to 
         //convert the string into an array of Unicode bytes.
-        UnicodeEncoding UE = new UnicodeEncoding();
+        UnicodeEncoding ue = new UnicodeEncoding();
 
         //Convert the string into an array of bytes.
-        byte[] MessageBytes = UE.GetBytes(MessageString);
+        byte[] messageBytes = ue.GetBytes(messageString);
 
         //Create a new instance of the SHA1Managed class to create 
         //the hash value.
-        SHA1Managed SHhash = new SHA1Managed();
+        SHA1Managed shHash = new SHA1Managed();
 
         //Create the hash value from the array of bytes.
-        HashValue = SHhash.ComputeHash(MessageBytes);
+        hashValue = shHash.ComputeHash(messageBytes);
 
         //Display the hash value to the console. 
-        foreach (byte b in HashValue)
+        foreach (byte b in hashValue)
         {
             Console.Write("{0} ", b);
         }
