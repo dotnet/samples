@@ -18,12 +18,8 @@ Namespace ProcessSample
             Dim peakWorkingSet As Long = 0
             Dim peakVirtualMem As Long = 0
 
-            Dim myProcess As Process = Nothing
-
-            Try
-
-                ' Start the process.
-                myProcess = Process.Start("NotePad.exe")
+            ' Start the process.
+            Using myProcess = Process.Start("NotePad.exe")
 
                 ' Display process statistics until
                 ' the user closes the program.
@@ -38,25 +34,17 @@ Namespace ProcessSample
 
                         ' Display current process statistics.
 
-                        Console.WriteLine("{0} -", myProcess.ToString())
+                        Console.WriteLine($"{myProcess} -")
                         Console.WriteLine("-------------------------------------")
 
-                        Console.WriteLine("  physical memory usage: {0}", _
-                             myProcess.WorkingSet64)
-                        Console.WriteLine("  base priority: {0}", _
-                             myProcess.BasePriority)
-                        Console.WriteLine("  priority class: {0}", _
-                             myProcess.PriorityClass)
-                        Console.WriteLine("  user processor time: {0}", _
-                             myProcess.UserProcessorTime)
-                        Console.WriteLine("  privileged processor time: {0}", _
-                             myProcess.PrivilegedProcessorTime)
-                        Console.WriteLine("  total processor time: {0}", _
-                             myProcess.TotalProcessorTime)
-                        Console.WriteLine("  PagedSystemMemorySize64: {0}", _
-                            myProcess.PagedSystemMemorySize64)
-                        Console.WriteLine("  PagedMemorySize64: {0}", _
-                           myProcess.PagedMemorySize64)
+                        Console.WriteLine($"  Physical memory usage     : {myProcess.WorkingSet64}")
+                        Console.WriteLine($"  Base priority             : {myProcess.BasePriority}")
+                        Console.WriteLine($"  Priority class            : {myProcess.PriorityClass}")
+                        Console.WriteLine($"  User processor time       : {myProcess.UserProcessorTime}")
+                        Console.WriteLine($"  Privileged processor time : {myProcess.PrivilegedProcessorTime}")
+                        Console.WriteLine($"  Total processor time      : {myProcess.TotalProcessorTime}")
+                        Console.WriteLine($"  Paged system memory size  : {myProcess.PagedSystemMemorySize64}")
+                        Console.WriteLine($"  Paged memory size         : {myProcess.PagedMemorySize64}")
 
                         ' Update the values for the overall peak memory statistics.
                         peakPagedMem = myProcess.PeakPagedMemorySize64
@@ -72,21 +60,13 @@ Namespace ProcessSample
                 Loop While Not myProcess.WaitForExit(1000)
 
                 Console.WriteLine()
-                Console.WriteLine("Process exit code: {0}", myProcess.ExitCode)
+                Console.WriteLine($"  Process exit code                         : {myProcess.ExitCode}")
 
                 ' Display peak memory statistics for the process.
-                Console.WriteLine("Peak physical memory usage of the process: {0}", _
-                    peakWorkingSet)
-                Console.WriteLine("Peak paged memory usage of the process: {0}", _
-                    peakPagedMem)
-                Console.WriteLine("Peak virtual memory usage of the process: {0}", _
-                    peakVirtualMem)
-
-            Finally
-                If Not myProcess Is Nothing Then
-                    myProcess.Close()
-                End If
-            End Try
+                Console.WriteLine($"  Peak physical memory usage of the process : {peakWorkingSet}")
+                Console.WriteLine($"  Peak paged memory usage of the process    : {peakPagedMem}")
+                Console.WriteLine($"  Peak virtual memory usage of the process  : {peakVirtualMem}")
+            End Using
         End Sub 'Main
     End Class
 End Namespace

@@ -9,5 +9,5 @@ namespace SimpleFeedReader.ViewModels
         public string Title { get; set; }
         public string Uri { get; set; }
     }
-    // <SnippetStarterViewModel>
+    // </SnippetStarterViewModel>
 }

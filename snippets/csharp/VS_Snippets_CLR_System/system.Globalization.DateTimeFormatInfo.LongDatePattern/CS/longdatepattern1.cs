@@ -20,7 +20,7 @@ public class Example
 }
 // The example displays the following output:
 //    Culture Long Date Pattern    Date
-//    en-US   dddd, MMMM dd, yyyy  Saturday, November 12, 2011
+//    en-US   dddd, MMMM d, yyyy  Saturday, November 12, 2011
 //    fr-FR   dddd d MMMM yyyy     samedi 12 novembre 2011
 //    ru-RU   d MMMM yyyy 'г.'     12 ноября 2011 г.
 //    de-DE   dddd, d. MMMM yyyy   Samstag, 12. November 2011
