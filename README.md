@@ -3,9 +3,10 @@
 This repo contains all the sample code that is part of any topic under
 the .NET documentation. There are several different projects that
 are organized in sub-folders. These sub-folders are organized similarly
-to the organization of the docs for .NET.
+to the organization of the docs for .NET. Some of the articles will have more than one sample associated with them.
 
-Some of the articles will have more than one sample associated with them. 
+The content team tracks issues for .NET documentation in the [dotnet/docs](https://github.com/dotnet/docs) and [dotnet/dotnet-api-docs](https://github.com/dotnet/dotnet-api-docs) repositories. Issues are turned off on this repository. File issues against existing samples and suggestions for new samples in those repositories. If you're not sure where, choose [dotnet/docs](https://github.com/dotnet/docs/issues). This process keeps the issues associated with the articles that explain the concepts for each sample. The best process is to file an issue from the feedback control at the bottom of each docs page: For existing samples, file the issue on the page with the sample. To suggest new samples and tutorials, file the issue on the index page where you want to see the new sample.
+
 
 There are two classes of code in this repository:
 
