@@ -5,7 +5,7 @@ Imports System.IO
 Public Class Test
     Public Shared Sub Main()
         Try
-            ' Only get files that begin with the letter "c."
+            ' Only get files that begin with the letter "c".
             Dim dirs As String() = Directory.GetFiles("c:\", "c*")
             Console.WriteLine("The number of files starting with c is {0}.", dirs.Length)
             Dim dir As String
