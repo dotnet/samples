@@ -70,7 +70,7 @@ namespace classes
         {
             var report = new System.Text.StringBuilder();
 
-            report.AppendLine("Date\t\tAmount\tNote");
+            report.AppendLine("Date\tAmount\tNote");
             foreach (var item in allTransactions)
             {
                 report.AppendLine($"{item.Date.ToShortDateString()}\t{item.Amount}\t{item.Notes}");
