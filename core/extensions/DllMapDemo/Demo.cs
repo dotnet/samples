@@ -3,7 +3,7 @@ using System.IO;
 using System.Reflection;
 using System.Runtime.InteropServices;
 
-public class DllMapTest
+public class DllMapDemo
 {
     public static void Main()
     {

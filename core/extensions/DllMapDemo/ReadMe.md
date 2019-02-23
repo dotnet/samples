@@ -6,9 +6,9 @@ This samples illustrates the use of NativeLibrary APIs to implement library-name
 
 .Net Core 3 provides a rich set of APIs to manage native libraries:
 
-- [NativeLibrary APIs](https://github.com/dotnet/corefx/blob/master/src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs#L728-L738): Perform operations on native libraries (such as `Load()`, `Free()`, get the address of an exported  symbol, etc.) in a platform-independent way from managed code.
-- [DllImport Resolver callback](https://github.com/dotnet/corefx/blob/master/src/System.Runtime.InteropServices/ref/System.Runtime.InteropServices.cs#L734):  Get a call-back for first-chance native library resolution using custom logic. 
-- [Native Library Resolve event](https://github.com/dotnet/corefx/blob/master/src/System.Runtime.Loader/ref/System.Runtime.Loader.cs#L39): Get an event for last-chance native library resolution using custom logic.   
+- [NativeLibrary APIs](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.nativelibrary?view=netcore-3.0): Perform operations on native libraries (such as `Load()`, `Free()`, get the address of an exported  symbol, etc.) in a platform-independent way from managed code.
+- DllImport Resolver callback:  Get a call-back for first-chance native library resolution using custom logic. 
+- [Native Library Resolve event](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.loader.assemblyloadcontext.resolvingunmanageddll?view=netcore-3.0): Get an event for last-chance native library resolution using custom logic.   
 
 ## Library Mapping
 
@@ -20,7 +20,7 @@ The above APIs can be used to implement custom native library resolution logic, 
 
 ## Build and Run
 
-1. Install .NET Core 3.0 Preview 3 or newer.
+1. Install .NET Core 3.0 Preview 3 or newer (once available).
 
 2. Use the .NET Core SDK to build the project via `dotnet build`.
 
