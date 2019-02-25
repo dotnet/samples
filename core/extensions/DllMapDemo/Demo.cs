@@ -11,7 +11,7 @@ public class DllMapDemo
         {
             DllMap.Register(Assembly.GetExecutingAssembly());
             int thirty = NativeSum(10, 20);
-            Console.WriteLine("OldLib.NativeSum(10,20) = {0}", thirty);
+            Console.WriteLine($"OldLib.NativeSum(10,20) = {thirty}");
         }
         catch (Exception e)
         {

@@ -1,22 +1,22 @@
 # DllMap Demo
 
-This samples illustrates the use of NativeLibrary APIs to implement library-name mappings similar to [Mono](https://www.mono-project.com/) [Dllmap](http://www.mono-project.com/docs/advanced/pinvoke/dllmap/) feature.
+This sample illustrates the use of NativeLibrary APIs to implement library name mappings similar to the [Mono](https://www.mono-project.com/) [Dllmap](http://www.mono-project.com/docs/advanced/pinvoke/dllmap/) feature.
 
 ## NativeLibrary APIs
 
-.Net Core 3 provides a rich set of APIs to manage native libraries:
+.Net Core 3.0 provides a rich set of APIs to manage native libraries:
 
 - [NativeLibrary APIs](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.nativelibrary?view=netcore-3.0): Perform operations on native libraries (such as `Load()`, `Free()`, get the address of an exported  symbol, etc.) in a platform-independent way from managed code.
-- DllImport Resolver callback:  Get a call-back for first-chance native library resolution using custom logic. 
+- DllImport Resolver callback:  Gets a callback for first-chance native library resolution using custom logic. 
 - [Native Library Resolve event](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.loader.assemblyloadcontext.resolvingunmanageddll?view=netcore-3.0): Get an event for last-chance native library resolution using custom logic.   
 
 ## Library Mapping
 
-The above APIs can be used to implement custom native library resolution logic, including DllMap, as illustrated in this example. The sample demonstrates:
+These APIs can be used to implement custom native library resolution logic, including DllMap, as illustrated in this example. The sample demonstrates:
 
 - An [app](Demo.cs) that pInvokes a method in `OldLib`, but runs in an environment where only [`NewLib`](NewLib.cpp) is available.
 - The [XML file](Demo.xml) that maps the library name from `OldLib` to `NewLib`. 
-- The [Map](Map.cs) implementation, which parses the above mapping, and uses `NativeLibrary` APIs to load the correct library.
+- The [Map](Map.cs) implementation, which parses the above mapping and uses `NativeLibrary` APIs to load the correct library.
 
 ## Build and Run
 

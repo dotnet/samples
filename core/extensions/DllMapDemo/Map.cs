@@ -34,16 +34,12 @@ public static class DllMap
 
         XElement root = XElement.Load(xmlPath);
         var map =
-            from el in root.Elements("dllmap")
-            where (string)el.Attribute("dll") == originalLibName
-            select el.Attribute("target").Value;
+            (from el in root.Elements("dllmap")
+             where (string)el.Attribute("dll") == originalLibName
+             select el).SingleOrDefault();
 
-        foreach (var value in map)
-        {
-            if (mappedLibName != null)
-                throw new InvalidOperationException("Multiple mappings for the same library");
-            mappedLibName = value;
-        }
+        if (map != null)
+            mappedLibName = map.Attribute("target").Value;
 
         return (mappedLibName != null);
     }
