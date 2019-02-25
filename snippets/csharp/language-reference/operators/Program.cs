@@ -69,6 +69,10 @@ namespace operators
             Console.WriteLine("============== ! operator examples =============");
             LogicalNegationExamples.Examples();
             Console.WriteLine();
+
+            Console.WriteLine("============== . operator examples =============");
+            MemberAccessExamples.Examples();
+            Console.WriteLine();
         }
     }
 }
