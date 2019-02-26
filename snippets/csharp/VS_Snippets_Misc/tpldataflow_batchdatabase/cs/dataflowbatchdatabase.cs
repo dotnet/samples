@@ -365,8 +365,8 @@ Last=Smith First=Tom ID=26
 Last=Jones First=Tom ID=21
 There were 4 errors in this batch...
 Received a batch...
-Last=Tom First=Smith ID=26
-Last=Mike First=Jones ID=28
+Last=Smith First=Tom ID=26
+Last=Jones First=Mike ID=28
 There were 0 errors in this batch...
 Finished. There were 4 total errors.
 */
