@@ -13,7 +13,9 @@
 // <Snippet1>
 
 using System;
+using System.ComponentModel;
 using System.Diagnostics;
+using System.IO;
 using System.Threading;
 
 namespace ProcessSample
@@ -50,7 +52,7 @@ namespace ProcessSample
                     myProcess.Close();
                 }
             }
-            catch (Exception e)
+            catch (Exception e) when (e is Win32Exception || e is FileNotFoundException)
             {
                 Console.WriteLine("The following exception was raised: ");
                 Console.WriteLine(e.Message);
