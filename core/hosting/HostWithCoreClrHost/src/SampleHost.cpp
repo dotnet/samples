@@ -11,14 +11,14 @@
 // Define OS-specific items like the CoreCLR library's name and path elements
 #if WINDOWS
 #include <Windows.h>
-#define FS_SEPERATOR "\\"
+#define FS_SEPARATOR "\\"
 #define PATH_DELIMITER ";"
 #define CORECLR_FILE_NAME "coreclr.dll"
 #elif LINUX
 #include <dirent.h>
 #include <dlfcn.h>
 #include <limits.h>
-#define FS_SEPERATOR "/"
+#define FS_SEPARATOR "/"
 #define PATH_DELIMITER ":"
 #define MAX_PATH PATH_MAX
     #if OSX
@@ -49,7 +49,7 @@ int main(int argc, char* argv[])
 #elif LINUX
     realpath(argv[0], runtimePath);
 #endif
-    char *last_slash = strrchr(runtimePath, FS_SEPERATOR[0]);
+    char *last_slash = strrchr(runtimePath, FS_SEPARATOR[0]);
     if (last_slash != NULL)
         *last_slash = 0;
 
@@ -57,12 +57,12 @@ int main(int argc, char* argv[])
     // For this sample, we know CoreCLR's path. For other hosts,
     // it may be necessary to probe for coreclr.dll/libcoreclr.so
     std::string coreClrPath(runtimePath);
-    coreClrPath.append(FS_SEPERATOR);
+    coreClrPath.append(FS_SEPARATOR);
     coreClrPath.append(CORECLR_FILE_NAME);
 
     // Construct the managed library path
     std::string managedLibraryPath(runtimePath);
-    managedLibraryPath.append(FS_SEPERATOR);
+    managedLibraryPath.append(FS_SEPARATOR);
     managedLibraryPath.append(MANAGED_ASSEMBLY);
 
     //
@@ -265,7 +265,7 @@ void BuildTpaList(const char* directory, const char* extension, std::string& tpa
     // cause anything to fail, though, so this function just enumerates all dll's in
     // order to keep this sample concise.
     std::string searchPath(directory);
-    searchPath.append(FS_SEPERATOR);
+    searchPath.append(FS_SEPARATOR);
     searchPath.append("*");
     searchPath.append(extension);
 
@@ -278,7 +278,7 @@ void BuildTpaList(const char* directory, const char* extension, std::string& tpa
         {
             // Append the assembly to the list
             tpaList.append(directory);
-            tpaList.append(FS_SEPERATOR);
+            tpaList.append(FS_SEPARATOR);
             tpaList.append(findData.cFileName);
             tpaList.append(PATH_DELIMITER);
 
@@ -317,7 +317,7 @@ void BuildTpaList(const char* directory, const char* extension, std::string& tpa
 
         // Append the assembly to the list
         tpaList.append(directory);
-        tpaList.append(FS_SEPERATOR);
+        tpaList.append(FS_SEPARATOR);
         tpaList.append(filename);
         tpaList.append(PATH_DELIMITER);
 
