@@ -12,7 +12,9 @@
 
 ' <Snippet1>
 Imports System
+Imports System.ComponentModel
 Imports System.Diagnostics
+Imports System.IO
 Imports System.Threading
 
 Namespace Process_Sample
@@ -41,9 +43,9 @@ Namespace Process_Sample
                     ' Close process by sending a close message to its main window.
                     myProcess.CloseMainWindow()
                     ' Free resources associated with process.
-                    myProcess.Close();
+                    myProcess.Close()
                 End Using
-            Catch e As Exception
+            Catch e As Exception When TypeOf e Is Win32Exception Or TypeOf e Is FileNotFoundException
                 Console.WriteLine("The following exception was raised: ")
                 Console.WriteLine(e.Message)
             End Try
