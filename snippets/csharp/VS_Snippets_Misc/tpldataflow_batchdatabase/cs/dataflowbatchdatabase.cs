@@ -238,7 +238,7 @@ namespace DataflowBatchDatabase
                foreach (Employee e in data.Item1)
                {
                   Console.WriteLine("Last={0} First={1} ID={2}",
-                     e.FirstName, e.LastName, e.EmployeeID);
+                     e.LastName, e.FirstName, e.EmployeeID);
                }
 
                // Print the error count for this batch.
@@ -359,14 +359,14 @@ Demonstrating batched join database insert operations...
 Adding 16 entries to Employee table...
 Selecting items from Employee table...
 Received a batch...
-Last=Tom First=Jones ID=21
-Last=John First=Jones ID=24
-Last=Tom First=Smith ID=26
-Last=Tom First=Jones ID=21
+Last=Jones First=Tom ID=21
+Last=Jones First=John ID=24
+Last=Smith First=Tom ID=26
+Last=Jones First=Tom ID=21
 There were 4 errors in this batch...
 Received a batch...
-Last=Tom First=Smith ID=26
-Last=Mike First=Jones ID=28
+Last=Smith First=Tom ID=26
+Last=Jones First=Mike ID=28
 There were 0 errors in this batch...
 Finished. There were 4 total errors.
 */
