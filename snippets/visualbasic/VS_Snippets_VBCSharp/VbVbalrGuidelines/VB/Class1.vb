@@ -1,4 +1,4 @@
-﻿Imports System.Linq
+Imports System.Linq
 Imports System.Collections.Generic
 Imports System.Data.SqlClient
 Imports System.Windows.Forms
@@ -74,7 +74,7 @@ Class Samples1
     Dim letters4 As String() = {"a", "b", "c"}
     '</Snippet11>
     '<Snippet12>
-    Dim letters5() As String = {"a", "b", "c"}
+    Dim letters5 As String() = {"a", "b", "c"}
     '</Snippet12>
     '<Snippet13>
     Dim letters6(2) As String

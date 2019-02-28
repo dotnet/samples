@@ -1,4 +1,4 @@
-﻿Public Class Form6
+Public Class Form6
 
   Private Sub Form6_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
     '<Snippet13>
@@ -30,6 +30,15 @@
                                  Order By Average
 
     DataGridView1.DataSource = averageCustomersByCity
+
+    'Another way to grab the count and sum
+
+    londonCustomerCount = (From cust in db.Customers
+                            Where cust.City = "London").Count()
+
+    venezuelaTotalOrders = (From cust in db.Customers
+                                Where cust.Country = "Venezuela"
+                                Select cust.Orders).Sum()
     '</Snippet13>
   End Sub
 End Class

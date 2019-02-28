@@ -1,4 +1,4 @@
-﻿//<snippet5555>
+//<snippet5555>
 using System;
 using System.Linq;
 using System.Collections;
@@ -340,7 +340,7 @@ namespace CsProgGuideTypes
             // Change the value of i.
             i = 456;  
 
-            // The change in i does not effect the value stored in o.
+            // The change in i doesn't affect the value stored in o.
             System.Console.WriteLine("The value-type value = {0}", i);
             System.Console.WriteLine("The object-type value = {0}", o);
         }
@@ -449,12 +449,11 @@ namespace CsProgGuideTypes
             {
                 // Get the integral value of the character.
                 int value = Convert.ToInt32(letter);
-                // Convert the decimal value to a hexadecimal value in string form.
-                string hexOutput = String.Format("{0:X}", value);
-                Console.WriteLine("Hexadecimal value of {0} is {1}", letter, hexOutput);
+                // Convert the integer value to a hexadecimal value in string form.
+                Console.WriteLine($"Hexadecimal value of {letter} is {value:X}");
             }
             /* Output:
-               Hexadecimal value of H is 48
+                Hexadecimal value of H is 48
                 Hexadecimal value of e is 65
                 Hexadecimal value of l is 6C
                 Hexadecimal value of l is 6C
@@ -472,7 +471,7 @@ namespace CsProgGuideTypes
             //<Snippet31>
             string hexValues = "48 65 6C 6C 6F 20 57 6F 72 6C 64 21";
             string[] hexValuesSplit = hexValues.Split(' ');
-            foreach (String hex in hexValuesSplit)
+            foreach (string hex in hexValuesSplit)
             {
                 // Convert the number expressed in base-16 to an integer.
                 int value = Convert.ToInt32(hex, 16);
@@ -556,7 +555,7 @@ namespace CsProgGuideTypes
         static void Main()
         {
             //<snippet34>
-            // Implicit conversion. num long can
+            // Implicit conversion. A long can
             // hold any value an int can hold, and more!
             int num = 2147483647;
             long bigNum = num;
@@ -715,7 +714,7 @@ namespace CsProgGuideTypes
 
     //<snippet41>
     
-    //using System;
+    using System;
 
     class Animal
     {
@@ -735,8 +734,8 @@ namespace CsProgGuideTypes
             Test(new Mammal());
 
             // Keep the console window open in debug mode.
-            System.Console.WriteLine("Press any key to exit.");
-            System.Console.ReadKey();
+            Console.WriteLine("Press any key to exit.");
+            Console.ReadKey();
         }
 
         static void Test(Animal a)

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Collections.Generic;
 using System.Text;
@@ -15,7 +15,7 @@ namespace LINQGettingStarted_1
         static void Main()
         {
             // The Three Parts of a LINQ Query:
-            //  1. Data source.
+            // 1. Data source.
             int[] numbers = new int[7] { 0, 1, 2, 3, 4, 5, 6 };
 
             // 2. Query creation.
@@ -138,32 +138,32 @@ namespace LINQGettingStarted_1
             // Create the first data source.
             List<Student> students = new List<Student>()
             {
-                new Student {First="Svetlana",
-                    Last="Omelchenko", 
-                    ID=111, 
+                new Student { First="Svetlana",
+                    Last="Omelchenko",
+                    ID=111,
                     Street="123 Main Street",
                     City="Seattle",
-                    Scores= new List<int> {97, 92, 81, 60}},
-                new Student {First="Claire",
-                    Last="O’Donnell", 
+                    Scores= new List<int> { 97, 92, 81, 60 } },
+                new Student { First="Claire",
+                    Last="O’Donnell",
                     ID=112,
                     Street="124 Main Street",
                     City="Redmond",
-                    Scores= new List<int> {75, 84, 91, 39}},
-                new Student {First="Sven",
+                    Scores= new List<int> { 75, 84, 91, 39 } },
+                new Student { First="Sven",
                     Last="Mortensen",
                     ID=113,
                     Street="125 Main Street",
                     City="Lake City",
-                    Scores= new List<int> {88, 94, 65, 91}},
+                    Scores= new List<int> { 88, 94, 65, 91 } },
             };
 
             // Create the second data source.
             List<Teacher> teachers = new List<Teacher>()
             {                
-                new Teacher {First="Ann", Last="Beebe", ID=945, City = "Seattle"},
-                new Teacher {First="Alex", Last="Robinson", ID=956, City = "Redmond"},
-                new Teacher {First="Michiyo", Last="Sato", ID=972, City = "Tacoma"}
+                new Teacher { First="Ann", Last="Beebe", ID=945, City="Seattle" },
+                new Teacher { First="Alex", Last="Robinson", ID=956, City="Redmond" },
+                new Teacher { First="Michiyo", Last="Sato", ID=972, City="Tacoma" }
             };
             
             // Create the query.
@@ -209,12 +209,11 @@ namespace LINQGettingStarted_1
             // Create the query.
             var studentsToXML = new XElement("Root",
                 from student in students
-                let x = String.Format("{0},{1},{2},{3}", student.Scores[0],
-                        student.Scores[1], student.Scores[2], student.Scores[3])
+                let scores = string.Join(",", student.Scores)
                 select new XElement("student",
                            new XElement("First", student.First),
                            new XElement("Last", student.Last),
-                           new XElement("Scores", x)
+                           new XElement("Scores", scores)
                         ) // end "student"
                     ); // end "Root"
 
@@ -259,7 +258,7 @@ namespace LINQGettingStarted_1
             // Query.
             IEnumerable<string> query =
                 from rad in radii
-                select String.Format("Area = {0}", (rad * rad) * 3.14);
+                select $"Area = {rad * rad * Math.PI:F2}";
 
             // Query execution. 
             foreach (string s in query)
@@ -272,8 +271,8 @@ namespace LINQGettingStarted_1
     }
     /* Output:
         Area = 3.14
-        Area = 12.56
-        Area = 28.26
+        Area = 12.57
+        Area = 28.27
     */
     // </snippet10>
 
@@ -291,18 +290,18 @@ namespace LINQGettingStarted_1
         // Create a data source by using a collection initializer.
         static List<Student> students = new List<Student>
         {
-           new Student {First="Svetlana", Last="Omelchenko", ID=111, Scores= new List<int> {97, 92, 81, 60}},
-           new Student {First="Claire", Last="O'Donnell", ID=112, Scores= new List<int> {75, 84, 91, 39}},
-           new Student {First="Sven", Last="Mortensen", ID=113, Scores= new List<int> {88, 94, 65, 91}},
-           new Student {First="Cesar", Last="Garcia", ID=114, Scores= new List<int> {97, 89, 85, 82}},
-           new Student {First="Debra", Last="Garcia", ID=115, Scores= new List<int> {35, 72, 91, 70}},
-           new Student {First="Fadi", Last="Fakhouri", ID=116, Scores= new List<int> {99, 86, 90, 94}},
-           new Student {First="Hanying", Last="Feng", ID=117, Scores= new List<int> {93, 92, 80, 87}},
-           new Student {First="Hugo", Last="Garcia", ID=118, Scores= new List<int> {92, 90, 83, 78}},
-           new Student {First="Lance", Last="Tucker", ID=119, Scores= new List<int> {68, 79, 88, 92}},
-           new Student {First="Terry", Last="Adams", ID=120, Scores= new List<int> {99, 82, 81, 79}},
-           new Student {First="Eugene", Last="Zabokritski", ID=121, Scores= new List<int> {96, 85, 91, 60}},
-           new Student {First="Michael", Last="Tucker", ID=122, Scores= new List<int> {94, 92, 91, 91} }
+            new Student {First="Svetlana", Last="Omelchenko", ID=111, Scores= new List<int> {97, 92, 81, 60}},
+            new Student {First="Claire", Last="O'Donnell", ID=112, Scores= new List<int> {75, 84, 91, 39}},
+            new Student {First="Sven", Last="Mortensen", ID=113, Scores= new List<int> {88, 94, 65, 91}},
+            new Student {First="Cesar", Last="Garcia", ID=114, Scores= new List<int> {97, 89, 85, 82}},
+            new Student {First="Debra", Last="Garcia", ID=115, Scores= new List<int> {35, 72, 91, 70}},
+            new Student {First="Fadi", Last="Fakhouri", ID=116, Scores= new List<int> {99, 86, 90, 94}},
+            new Student {First="Hanying", Last="Feng", ID=117, Scores= new List<int> {93, 92, 80, 87}},
+            new Student {First="Hugo", Last="Garcia", ID=118, Scores= new List<int> {92, 90, 83, 78}},
+            new Student {First="Lance", Last="Tucker", ID=119, Scores= new List<int> {68, 79, 88, 92}},
+            new Student {First="Terry", Last="Adams", ID=120, Scores= new List<int> {99, 82, 81, 79}},
+            new Student {First="Eugene", Last="Zabokritski", ID=121, Scores= new List<int> {96, 85, 91, 60}},
+            new Student {First="Michael", Last="Tucker", ID=122, Scores= new List<int> {94, 92, 91, 91}}
         };
         //</snippet11>
         
