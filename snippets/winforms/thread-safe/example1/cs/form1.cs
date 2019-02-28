@@ -42,11 +42,11 @@ public class InvokeThreadSafeForm : Form
         Thread.Sleep(1000);
     }
 
-    private void SafeText(string text)
+    private void WriteTextSafe(string text)
     {
         if (textBox1.InvokeRequired)
         {
-            var d = new SafeCallDelegate(SafeText);
+            var d = new SafeCallDelegate(WriteTextSafe);
             Invoke(d, new object[] { text });
         }
         else
@@ -57,6 +57,6 @@ public class InvokeThreadSafeForm : Form
 
     private void SetText()
     {
-        SafeText("This text was set safely.");
+        WriteTextSafe("This text was set safely.");
     }
 }
