@@ -1,17 +1,17 @@
-﻿// <Snippet1>
+﻿// <SnippetAddUsings>
 using Microsoft.ML.Data;
-// </Snippet1>
+// </SnippetAddUsings>
 
 namespace SentimentAnalysis
 {
-    // <Snippet2>
+    // <SnippetDeclareTypes>
     public class SentimentData
     {
-        [Column(ordinal: "0", name: "Label")]
-        public float Sentiment;
-
-        [Column(ordinal: "1")]
+        [Column(ordinal: "0")]
         public string SentimentText;
+
+        [Column(ordinal: "1", name: "Label")]
+        public float Sentiment;
     }
 
     public class SentimentPrediction
@@ -25,5 +25,5 @@ namespace SentimentAnalysis
         [ColumnName("Score")]
         public float Score { get; set; }
     }
-    // </Snippet2>
+    // </SnippetDeclareTypes>
 }
