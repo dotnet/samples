@@ -104,7 +104,7 @@ namespace CsCsrefProgrammingObjects
             // Override the ToString method:
             public override string ToString()
             {
-                return (String.Format("({0},{1})", x, y));
+                return $"({x},{y})";
             }
         }
 
@@ -117,7 +117,7 @@ namespace CsCsrefProgrammingObjects
                 Coords p2 = new Coords(5, 3);
                 //</Snippet77>
 
-                // Display the results using the overridden ToString method:
+                // Display the results using the overriden ToString method:
                 Console.WriteLine("Coords #1 at {0}", p1);
                 Console.WriteLine("Coords #2 at {0}", p2);
                 Console.ReadKey();
@@ -463,7 +463,7 @@ namespace CsCsrefProgrammingObjects
             // actual bus times. Do not do this in your actual bus schedule program!
             Console.WriteLine("{0} is starting its route {1:N2} minutes after global start time {2}.",
                                     this.RouteNumber,
-                                    elapsedTime.TotalMilliseconds,
+                                    elapsedTime.Milliseconds,
                                     globalStartTime.ToShortTimeString());
         }
     }
@@ -499,7 +499,6 @@ namespace CsCsrefProgrammingObjects
         71 is starting its route 6.00 minutes after global start time 3:57 PM.
         72 is starting its route 31.00 minutes after global start time 3:57 PM.      
    */
-
     //</Snippet15>
 
 
@@ -1122,7 +1121,7 @@ class TestPerson
             // Call with an integer literal.
             int productC = Square(12);
 
-            // Call with an expression that evaluates to int.
+            // Call with an expression that evaulates to int.
             productC = Square(productA * 3);
         }
        
