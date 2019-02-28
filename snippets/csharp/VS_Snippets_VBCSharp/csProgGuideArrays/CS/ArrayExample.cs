@@ -18,7 +18,10 @@ class ArrayExample
     static void Main()
     {
         // Declare and initialize an array.
+        //<Snippet1>
         string[] weekDays = { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+        //</Snippet1>
+
         // Display the array elements.
         DisplayArray(weekDays);
         Console.WriteLine();
