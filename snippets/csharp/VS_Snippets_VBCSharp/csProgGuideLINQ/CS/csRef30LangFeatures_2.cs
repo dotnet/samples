@@ -1,4 +1,4 @@
-﻿
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -359,17 +359,17 @@ namespace csrefLINQExamples
 
                     // single-dimension jagged array
                     var c = new[]   
-            {  
-                new[]{1,2,3,4},
-                new[]{5,6,7,8}
-            };
+                    {  
+                        new[]{1,2,3,4},
+                        new[]{5,6,7,8}
+                    };
 
                     // jagged array of strings
                     var d = new[]   
-            {
-                new[]{"Luca", "Mads", "Luke", "Dinesh"},
-                new[]{"Karen", "Suma", "Frances"}
-            };
+                    {
+                        new[]{"Luca", "Mads", "Luke", "Dinesh"},
+                        new[]{"Karen", "Suma", "Frances"}
+                    };
                 }
             }
             //</snippet37>
@@ -380,16 +380,16 @@ namespace csrefLINQExamples
                 static void Method()
                 {
                     //<snippet38>
-                    var contacts = new[] 
+            var contacts = new[]
             {
                 new {
-                        Name = " Eugene Zabokritski",
-                        PhoneNumbers = new[] { "206-555-0108", "425-555-0001" }
-                    },
+                    Name = " Eugene Zabokritski",
+                    PhoneNumbers = new[] { "206-555-0108", "425-555-0001" }
+                },
                 new {
-                        Name = " Hanying Feng",
-                        PhoneNumbers = new[] { "650-555-0199" }
-                    }
+                    Name = " Hanying Feng",
+                    PhoneNumbers = new[] { "650-555-0199" }
+                }
             };
                     //</snippet38>
                 }

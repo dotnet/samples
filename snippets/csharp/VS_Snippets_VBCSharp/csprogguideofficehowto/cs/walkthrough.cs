@@ -1,4 +1,4 @@
-﻿
+
 //<Snippet18>
 using System;
 using System.Collections.Generic;
@@ -42,7 +42,7 @@ namespace OfficeProgramminWalkthruComplete
 
             // Create a new, empty workbook and add it to the collection returned 
             // by property Workbooks. The new workbook becomes the active workbook.
-            // Add has an optional parameter for specifying a particular template. 
+            // Add has an optional parameter for specifying a praticular template. 
             // Because no argument is sent in this example, Add creates a new workbook. 
             excelApp.Workbooks.Add();
 
@@ -67,7 +67,7 @@ namespace OfficeProgramminWalkthruComplete
             workSheet.Columns[1].AutoFit();
             workSheet.Columns[2].AutoFit();
 
-            // Call to AutoFormat in Visual C# 2010. This statement replaces the 
+            // Call to AutoFormat in Visual C#. This statement replaces the 
             // two calls to AutoFit.
             workSheet.Range["A1", "B3"].AutoFormat(
                 Excel.XlRangeAutoFormat.xlRangeAutoFormatClassic2);
@@ -84,7 +84,7 @@ namespace OfficeProgramminWalkthruComplete
             wordApp.Visible = true;
 
             // The Add method has four reference parameters, all of which are 
-            // optional. Visual C# 2010 allows you to omit arguments for them if
+            // optional. Visual C# allows you to omit arguments for them if
             // the default values are what you want.
             wordApp.Documents.Add();
 

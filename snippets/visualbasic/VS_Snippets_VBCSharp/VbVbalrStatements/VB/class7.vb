@@ -1,4 +1,4 @@
-﻿Imports System.Diagnostics
+Imports System.Diagnostics
 Imports System.Collections.Generic
 
 Public Class Class7
@@ -62,7 +62,7 @@ Public Class Class7
         For index As Integer = 1 To 100000
             ' If index is between 5 and 7, continue
             ' with the next iteration.
-            If index >= 5 And index <= 8 Then
+            If index >= 5 AndAlso index <= 8 Then
                 Continue For
             End If
 

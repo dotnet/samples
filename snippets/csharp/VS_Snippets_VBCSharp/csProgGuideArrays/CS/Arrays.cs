@@ -438,20 +438,20 @@ class TestJagged
         //</Snippet21>
 
         //<Snippet22>
-        int[][] jaggedArray2 = new int[][] 
+    int[][] jaggedArray2 = new int[][] 
     {
-        new int[] {1,3,5,7,9},
-        new int[] {0,2,4,6},
-        new int[] {11,22}
+        new int[] { 1, 3, 5, 7, 9 },
+        new int[] { 0, 2, 4, 6 },
+        new int[] { 11, 22 }
     };
         //</Snippet22>
 
         //<Snippet23>
-        int[][] jaggedArray3 = 
+    int[][] jaggedArray3 = 
     {
-        new int[] {1,3,5,7,9},
-        new int[] {0,2,4,6},
-        new int[] {11,22}
+        new int[] { 1, 3, 5, 7, 9 },
+        new int[] { 0, 2, 4, 6 },
+        new int[] { 11, 22 }
     };
         //</Snippet23>
 

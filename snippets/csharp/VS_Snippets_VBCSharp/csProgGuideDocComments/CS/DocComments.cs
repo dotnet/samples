@@ -38,8 +38,7 @@ namespace Wrap2
     /// text for class TestClass
     public class TestClass
     {
-        /// <summary>
-        /// <c>DoWork</c> is a method in the <c>TestClass</c> class.
+        /// <summary><c>DoWork</c> is a method in the <c>TestClass</c> class.
         /// </summary>
         public static void DoWork(int Int1)
         {
@@ -262,9 +261,9 @@ namespace Wrap7
     public class TestClass
     {
         /// <summary>DoWork is a method in the TestClass class.  
-        /// The <paramref name="Int1"/> parameter takes a number.
+        /// The <paramref name="int1"/> parameter takes a number.
         /// </summary>
-        public static void DoWork(int Int1)
+        public static void DoWork(int int1)
         {
         }
 

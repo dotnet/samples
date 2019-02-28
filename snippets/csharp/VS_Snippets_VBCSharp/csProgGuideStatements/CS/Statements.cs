@@ -591,7 +591,9 @@ namespace CsCsrefProgrammingStatements
             public TwoDPoint(int x, int y)
             {
                 if ((x < 1) || (x > 2000) || (y < 1) || (y > 2000))
+                {
                     throw new System.ArgumentException("Point must be in range 1 - 2000");
+                }
                 this.X = x;
                 this.Y = y;
             }
@@ -617,7 +619,9 @@ namespace CsCsrefProgrammingStatements
 
                 // If run-time types are not exactly the same, return false.
                 if (this.GetType() != p.GetType())
+                {
                     return false;
+                }
 
                 // Return true if the fields match.
                 // Note that the base class is not invoked because it is
@@ -663,7 +667,9 @@ namespace CsCsrefProgrammingStatements
                 : base(x, y)
             {
                 if ((z < 1) || (z > 2000))
+                {
                     throw new System.ArgumentException("Point must be in range 1 - 2000");
+                }    
                 this.Z = z;
             }
 
@@ -694,7 +700,9 @@ namespace CsCsrefProgrammingStatements
                     return base.Equals((TwoDPoint)p);
                 }
                 else
+                {
                     return false;
+                }    
             }
 
             public override int GetHashCode()
@@ -774,7 +782,6 @@ namespace CsCsrefProgrammingStatements
             pointE.Equals(list[0]): False
         */
     }
-
     //</Snippet19>
 
     // Test the Hash Code -- this is not in docs
@@ -1127,7 +1134,7 @@ namespace CsCsrefProgrammingStatements
                 Name = name;
                 Age = age;
             }
-            //Other properties, methods, events...
+            // Other properties, methods, events...
         }
 
         class Program
@@ -1137,10 +1144,10 @@ namespace CsCsrefProgrammingStatements
                 Person person1 = new Person("Leopold", 6);
                 Console.WriteLine("person1 Name = {0} Age = {1}", person1.Name, person1.Age);
 
-                // Declare  new person, assign person1 to it.
+                // Declare new person, assign person1 to it.
                 Person person2 = person1;
 
-                //Change the name of person2, and person1 also changes.
+                // Change the name of person2, and person1 also changes.
                 person2.Name = "Molly";
                 person2.Age = 16;
 

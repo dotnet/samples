@@ -66,7 +66,7 @@ namespace CsCsrefProgrammingProperties
             public Employee()
             {
                 // Calculate the employee's number:
-                counter = ++counter + NumberOfEmployees;
+                counter = ++NumberOfEmployees;
             }
         }
 
@@ -422,7 +422,7 @@ namespace CsCsrefProgrammingProperties
 
             public Employee()  // constructor
             {
-                counter = ++counter + numberOfEmployees;
+                counter = ++numberOfEmployees;
             }
         }
 

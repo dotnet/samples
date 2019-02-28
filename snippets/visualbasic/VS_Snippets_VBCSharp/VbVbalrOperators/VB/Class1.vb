@@ -1037,11 +1037,12 @@ Public Class Class1
     Shared Function ComparisonOperators() As Boolean
 
         '<Snippet1>
-        Dim testResult As Boolean
-        testResult = 45 < 35
-        testResult = 45 = 45
-        testResult = 4 <> 3
-        testResult = "5" > "4444"
+        Dim x As testClass
+        Dim y As New testClass()
+        x = y
+        If x Is y Then
+            ' Insert code to run if x and y point to the same instance.
+        End If
         '</Snippet1>
 
         Return testResult

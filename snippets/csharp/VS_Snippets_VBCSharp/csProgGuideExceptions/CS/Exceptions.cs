@@ -43,32 +43,37 @@ namespace CsCsrefProgrammingExceptions
 
 
         //<Snippet3>
-        static void TestCatch2()
+        using System;
+        using System.IO;
+
+        public class ExceptionExample
         {
-            System.IO.StreamWriter sw = null;
-            try
+            static void Main()
             {
-                sw = new System.IO.StreamWriter(@"C:\test\test.txt");
-                sw.WriteLine("Hello");
-            }
+                try
+                {
+                    using (var sw = new StreamWriter(@"C:\test\test.txt"))
+                    {
+                        sw.WriteLine("Hello");
+                    }   
+                }
+                // Put the more specific exceptions first.
+                catch (DirectoryNotFoundException ex)
+                {
+                    Console.WriteLine(ex);  
+                }
+                catch (FileNotFoundException ex)
+                {
+                    Console.WriteLine(ex);  
+                }
+                // Put the least specific exception last.
+                catch (IOException ex)
+                {
+                    Console.WriteLine(ex);  
+                }
 
-            catch (System.IO.FileNotFoundException ex)
-            {
-                // Put the more specific exception first.
-                System.Console.WriteLine(ex.ToString());  
+                Console.WriteLine("Done"); 
             }
-
-            catch (System.IO.IOException ex)
-            {
-                // Put the less specific exception last.
-                System.Console.WriteLine(ex.ToString());  
-            }
-            finally 
-            {
-                sw.Close();
-            }
-
-            System.Console.WriteLine("Done"); 
         }
         //</Snippet3>
 
@@ -338,7 +343,7 @@ namespace CsCsrefProgrammingExceptions
         // A constructor is needed for serialization when an
         // exception propagates from a remoting server to the client. 
         protected InvalidDepartmentException(System.Runtime.Serialization.SerializationInfo info,
-            System.Runtime.Serialization.StreamingContext context) { }
+            System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }
     //</Snippet15>
 
