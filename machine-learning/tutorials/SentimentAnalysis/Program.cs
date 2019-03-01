@@ -51,24 +51,8 @@ namespace SentimentAnalysis
             Console.WriteLine("=============== End of process ===============");
         }
 
-        private static (IDataView trainSet, IDataView testSet) LoadAndTransformData(MLContext mlContext)
+        private static (IDataView trainSet, IDataView testSet) LoadData(MLContext mlContext)
         {
-            // The TextLoader loads a dataset with comments and corresponding postive or negative sentiment. 
-            // When you create a loader, you specify the schema by passing a class to the loader containing
-            // all the column names and their types. This is used to create the model, and train it. 
-            // Initialize our TextLoader
-           // TODO: Change to ReadFromTextFile
-            // <SnippetCreateTextLoader>
-            //return mlContext.Data.CreateTextLoader(
-            //    columns: new TextLoader.Column[]
-            //    {
-            //        new TextLoader.Column("SentimentText", DataKind.Text,0),
-            //        new TextLoader.Column("Label", DataKind.Bool,1)
-            //    },
-            //    separatorChar: '\t',
-            //    hasHeader: false
-            //);
-            // </SnippetCreateTextLoader>
 
             //Note that this case, loading your training data from a file, 
             //is the easiest way to get started, but ML.NET also allows you 
@@ -86,13 +70,13 @@ namespace SentimentAnalysis
 
         public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView splitTrainSet)
         {
+
             // Create a flexible pipeline (composed by a chain of estimators) for creating/training the model.
             // This is used to format and clean the data.  
             // Convert the text column to numeric vectors (Features column) 
             // <SnippetFeaturizeText>
             var pipeline = mlContext.Transforms.Text.FeaturizeText(outputColumnName: DefaultColumnNames.Features, inputColumnName: nameof(SentimentData.SentimentText))
             //</SnippetFeaturizeText>
-
             // Adds a FastTreeBinaryClassificationTrainer, the decision tree learner for this project  
             // <SnippetAddTrainer> 
             .Append(mlContext.BinaryClassification.Trainers.FastTree(numLeaves: 50, numTrees: 50, minDatapointsInLeaves: 20));
@@ -101,7 +85,7 @@ namespace SentimentAnalysis
             // Create and train the model based on the dataset that has been loaded, transformed.
             // <SnippetTrainModel>
             Console.WriteLine("=============== Create and Train the Model ===============");
-            TransformerChain<BinaryPredictionTransformer<Microsoft.ML.Internal.Internallearn.IPredictorWithFeatureWeights<float>>> model = pipeline.Fit(splitTrainSet);
+            var model = pipeline.Fit(splitTrainSet);
             Console.WriteLine("=============== End of training ===============");
             Console.WriteLine();
             // </SnippetTrainModel>
@@ -209,15 +193,15 @@ namespace SentimentAnalysis
             }
             // </SnippetLoadModel>
 
-            // Create prediction engine
-            // <SnippetCreatePredictionEngine>
+            // Load test data  
+            // <SnippetPrediction>
             IDataView sentimentStreamingDataView = mlContext.Data.ReadFromEnumerable(sentiments);
-            //TODO: check exp in tutorial
+
             IDataView predictions = loadedModel.Transform(sentimentStreamingDataView);
 
-            // Use the model to predict whether comment data is Positive (1) or Negative (0).
+            // Use model to predict whether comment data is Positive (1) or Negative (0).
             IEnumerable<SentimentPrediction> predictedResults = mlContext.CreateEnumerable<SentimentPrediction>(predictions, reuseRowObject: false);
-            // </SnippetCreatePredictionEngine>
+            // </SnippetPrediction>
 
             // <SnippetAddInfoMessage>
             Console.WriteLine();
