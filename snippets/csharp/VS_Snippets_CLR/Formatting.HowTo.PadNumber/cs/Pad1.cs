@@ -23,19 +23,20 @@ public class Example
       ulong ulngValue = UInt64.MaxValue;
       
       // Display integer values by calling the ToString method.
-      Console.WriteLine("{0,22} {1,22}", byteValue.ToString("D8"), byteValue.ToString("X8"));
-      Console.WriteLine("{0,22} {1,22}", shortValue.ToString("D8"), shortValue.ToString("X8"));
-      Console.WriteLine("{0,22} {1,22}", intValue.ToString("D8"), intValue.ToString("X8"));
-      Console.WriteLine("{0,22} {1,22}", lngValue.ToString("D8"), lngValue.ToString("X8"));
-      Console.WriteLine("{0,22} {1,22}", ulngValue.ToString("D8"), ulngValue.ToString("X8"));
+      Console.WriteLine($"{byteValue.ToString("D8"),22} {byteValue.ToString("X8"),22}");
+      Console.WriteLine($"{shortValue.ToString("D8"),22} {shortValue.ToString("X8"),22}");
+      Console.WriteLine($"{intValue.ToString("D8"),22} {intValue.ToString("X8"),22}");
+      Console.WriteLine($"{lngValue.ToString("D8"),22} {lngValue.ToString("X8"),22}");
+      Console.WriteLine($"{ulngValue.ToString("D8"),22} {ulngValue.ToString("X8"),22}");
       Console.WriteLine();
-      
-      // Display the same integer values by using composite formatting.
-      Console.WriteLine("{0,22:D8} {0,22:X8}", byteValue);
-      Console.WriteLine("{0,22:D8} {0,22:X8}", shortValue);
-      Console.WriteLine("{0,22:D8} {0,22:X8}", intValue);
-      Console.WriteLine("{0,22:D8} {0,22:X8}", lngValue);
-      Console.WriteLine("{0,22:D8} {0,22:X8}", ulngValue);
+
+      // Display the same integer values with implicit conversion.
+      Console.WriteLine($"{byteValue,22:D8} {byteValue,22:X8}");
+      Console.WriteLine($"{shortValue,22:D8} {shortValue,22:X8}");
+      Console.WriteLine($"{intValue,22:D8} {intValue,22:X8}");
+      Console.WriteLine($"{lngValue,22:D8} {lngValue,22:X8}");
+      Console.WriteLine($"{ulngValue,22:D8} {ulngValue,22:X8}");
+
       // The example displays the following output:
       //                     00000254               000000FE
       //                     00010342               00002866
@@ -48,7 +49,6 @@ public class Example
       //                     01023983               000F9FEF
       //                     06985321               006A9669
       //         18446744073709551615       FFFFFFFFFFFFFFFF
-      //         18446744073709551615       FFFFFFFFFFFFFFFF
       // </Snippet1>
    }
 
@@ -60,6 +60,7 @@ public class Example
       int hexLength = value.ToString("X").Length + 5;
       Console.WriteLine(value.ToString("D" + decimalLength.ToString()));
       Console.WriteLine(value.ToString("X" + hexLength.ToString()));
+
       // The example displays the following output:
       //       00000160934
       //       00000274A6      
@@ -88,6 +89,7 @@ public class Example
       Console.WriteLine(formatString, decValue);      
       Console.WriteLine(formatString, sngValue);      
       Console.WriteLine(formatString, dblValue);      
+
       // The example displays the following output:
       //       01053240
       //       00103932.52
@@ -124,6 +126,7 @@ public class Example
          Console.WriteLine(dblValue.ToString(fmt));
          Console.WriteLine(formatString, dblValue);
       }
+
       // The example displays the following output:
       //       000009034521202.93
       //         000009034521202.93

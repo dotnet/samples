@@ -23,19 +23,19 @@ Module Example
       Dim ulngValue As ULong = UInt64.MaxValue
       
       ' Display integer values by calling the ToString method.
-      Console.WriteLine("{0,22} {1,22}", byteValue.ToString("D8"), byteValue.ToString("X8"))
-      Console.WriteLine("{0,22} {1,22}", shortValue.ToString("D8"), shortValue.ToString("X8"))
-      Console.WriteLine("{0,22} {1,22}", intValue.ToString("D8"), intValue.ToString("X8"))
-      Console.WriteLine("{0,22} {1,22}", lngValue.ToString("D8"), lngValue.ToString("X8"))
-      Console.WriteLine("{0,22} {1,22}", ulngValue.ToString("D8"), ulngValue.ToString("X8"))
-      Console.WriteLine()
-      
-      ' Display the same integer values by using composite formatting.
-      Console.WriteLine("{0,22:D8} {0,22:X8}", byteValue)
-      Console.WriteLine("{0,22:D8} {0,22:X8}", shortValue)
-      Console.WriteLine("{0,22:D8} {0,22:X8}", intValue)
-      Console.WriteLine("{0,22:D8} {0,22:X8}", lngValue)
-      Console.WriteLine("{0,22:D8} {0,22:X8}", ulngValue)
+      Console.WriteLine($"{byteValue.ToString("D8"),22} {byteValue.ToString("X8"),22}");
+      Console.WriteLine($"{shortValue.ToString("D8"),22} {shortValue.ToString("X8"),22}");
+      Console.WriteLine($"{intValue.ToString("D8"),22} {intValue.ToString("X8"),22}");
+      Console.WriteLine($"{lngValue.ToString("D8"),22} {lngValue.ToString("X8"),22}");
+      Console.WriteLine($"{ulngValue.ToString("D8"),22} {ulngValue.ToString("X8"),22}");
+      Console.WriteLine();
+
+      '  Display the same integer values with implicit conversion.
+      Console.WriteLine($"{byteValue,22:D8} {byteValue,22:X8}");
+      Console.WriteLine($"{shortValue,22:D8} {shortValue,22:X8}");
+      Console.WriteLine($"{intValue,22:D8} {intValue,22:X8}");
+      Console.WriteLine($"{lngValue,22:D8} {lngValue,22:X8}");
+      Console.WriteLine($"{ulngValue,22:D8} {ulngValue,22:X8}");
       ' The example displays the following output:
       '                     00000254               000000FE
       '                     00010342               00002866
