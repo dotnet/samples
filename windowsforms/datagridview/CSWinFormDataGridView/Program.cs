@@ -16,7 +16,7 @@ namespace CSWinFormDataGridView
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            //Application.Run(new CustomDataGridViewColumn.MainForm());
+            Application.Run(new CustomDataGridViewColumn.MainForm());
             //Application.Run(new DataGridViewPaging.MainForm());
             //Application.Run(new EditingControlHosting.MainForm());
             //Application.Run(new JustInTimeDataLoading.MainForm());
