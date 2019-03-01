@@ -1,11 +1,11 @@
-﻿//<Snippet1>
+//<Snippet1>
 using System.Linq;
 using System.Text;
 using System;
 
 namespace CustomExtensions
 {
-    //Extension methods must be defined in a static class
+    // Extension methods must be defined in a static class.
     public static class StringExtension
     {
         // This is the extension method.
@@ -19,16 +19,16 @@ namespace CustomExtensions
 }
 namespace Extension_Methods_Simple
 {
-    //Import the extension method namespace.
+    // Import the extension method namespace.
     using CustomExtensions;
     class Program
     {
         static void Main(string[] args)
         {
-            string s = "The quick brown fox jumps over the lazy dog.";
-            //  Call the method as if it were an 
-            //  instance method on the type. Note that the first
-            //  parameter is not specified by the calling code.
+            string s = "The quick brown fox jumped over the lazy dog.";
+            // Call the method as if it were an 
+            // instance method on the type. Note that the first
+            // parameter is not specified by the calling code.
             int i = s.WordCount();
             System.Console.WriteLine("Word count of s is {0}", i);
         }
@@ -212,8 +212,8 @@ namespace ExtensionMethodsDemo1
 
             // A contains no MethodA, so each call to MethodA resolves to 
             // the extension method that has a matching signature.
-            a.MethodA(1);           // Extension.MethodA(object, int)
-            a.MethodA("hello");     // Extension.MethodA(object, string)
+            a.MethodA(1);           // Extension.MethodA(IMyInterface, int)
+            a.MethodA("hello");     // Extension.MethodA(IMyInterface, string)
 
             // A has a method that matches the signature of the following call
             // to MethodB.
@@ -226,7 +226,7 @@ namespace ExtensionMethodsDemo1
 
             // B has no matching method for the following call, but 
             // class Extension does.
-            b.MethodA("hello");     // Extension.MethodA(object, string)
+            b.MethodA("hello");     // Extension.MethodA(IMyInterface, string)
 
             // C contains an instance method that matches each of the following
             // method calls.

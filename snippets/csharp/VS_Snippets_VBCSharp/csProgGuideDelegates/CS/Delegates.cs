@@ -4,7 +4,6 @@ using System.Windows.Forms;
 using System.Drawing;
 
 public delegate int PerformCalculation(int x, int y);
-
 class DelegatesIntro
 {
 
@@ -152,7 +151,6 @@ class TestStuffAgain
 
     //<Snippet20>
     public delegate int PerformCalculation(int x, int y);
-
     //</Snippet20>
 
 
@@ -356,7 +354,7 @@ namespace WrapAnonymousMethods
             p("The delegate using the anonymous method is called.");
 
             // The delegate instantiation using a named method "DoWork".
-            p = new Printer(TestClass.DoWork);
+            p = DoWork;
 
             // Results from the old style delegate call.
             p("The delegate using the named method is called.");
@@ -665,7 +663,7 @@ namespace WrapContravariance
             }
 
             // Class to test the book database:
-            class TestBookDB
+            class Test
             {
                 // Print the title of the book.
                 static void PrintTitle(Book b)

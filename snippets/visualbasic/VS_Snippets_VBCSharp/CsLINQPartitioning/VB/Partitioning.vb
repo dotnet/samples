@@ -1,4 +1,4 @@
-﻿Module Partitioning
+Module Partitioning
     Sub Main(ByVal args As String())
         TakeWhile()
     End Sub
@@ -25,7 +25,6 @@
         ' the
         ' doctor
         ' away
-
         ' </Snippet1>
 
     End Sub
@@ -53,7 +52,6 @@
         ' the
         ' doctor
         ' away
-
         ' </Snippet2>
 
     End Sub
@@ -78,7 +76,6 @@
 
         ' an
         ' apple
-
         ' </Snippet3>
 
     End Sub
@@ -107,7 +104,6 @@
         ' day
         ' keeps
         ' the
-
         ' </Snippet4>
 
     End Sub

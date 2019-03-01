@@ -1,4 +1,4 @@
-﻿Module Aggregating
+Module Aggregating
     Sub Main(ByVal args As String())
         Count()
     End Sub
@@ -16,7 +16,6 @@
         ' This code produces the following output:
 
         ' 76.65
-
         ' </Snippet1>
     End Sub
 
@@ -33,7 +32,6 @@
         ' This code produces the following output:
 
         ' 3
-
         ' </Snippet2>
     End Sub
 
@@ -50,7 +48,6 @@
         ' This code produces the following output:
 
         ' 6
-
         ' </Snippet3>
     End Sub
 
@@ -67,7 +64,6 @@
         ' This code produces the following output:
 
         ' 88.6
-
         ' </Snippet4>
     End Sub
 
@@ -84,7 +80,6 @@
         ' This code produces the following output:
 
         ' 68.5
-
         ' </Snippet5>
     End Sub
 
@@ -101,7 +96,6 @@
         ' This code produces the following output:
 
         ' 2235.2
-
         ' </Snippet6>
     End Sub
 End Module

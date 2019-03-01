@@ -1,4 +1,4 @@
-﻿
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +9,11 @@ namespace AutoImplMutable
 {
     // Auto-impl props
     //<snippet28>
-
     // This class is mutable. Its data can be modified from
     // outside the class.
     class Customer
     {
-        // Auto-Impl Properties for trivial get and set
+        // Auto-implemented properties for trivial get and set
         public double TotalPurchases { get; set; }
         public string Name { get; set; }
         public int CustomerID { get; set; }
@@ -26,21 +25,22 @@ namespace AutoImplMutable
             Name = name;
             CustomerID = ID;
         }
+
         // Methods
-        public string GetContactInfo() {return "ContactInfo";}
-        public string GetTransactionHistory() {return "History";}
+        public string GetContactInfo() { return "ContactInfo"; }
+        public string GetTransactionHistory() { return "History"; }
 
         // .. Additional methods, events, etc.
     }
-    
+
     class Program
     {
         static void Main()
         {
             // Intialize a new object.
-            Customer cust1 = new Customer ( 4987.63, "Northwind",90108 );
+            Customer cust1 = new Customer(4987.63, "Northwind", 90108);
 
-            //Modify a property
+            // Modify a property.
             cust1.TotalPurchases += 499.99;
         }
     }
@@ -359,17 +359,17 @@ namespace csrefLINQExamples
 
                     // single-dimension jagged array
                     var c = new[]   
-            {  
-                new[]{1,2,3,4},
-                new[]{5,6,7,8}
-            };
+                    {  
+                        new[]{1,2,3,4},
+                        new[]{5,6,7,8}
+                    };
 
                     // jagged array of strings
                     var d = new[]   
-            {
-                new[]{"Luca", "Mads", "Luke", "Dinesh"},
-                new[]{"Karen", "Suma", "Frances"}
-            };
+                    {
+                        new[]{"Luca", "Mads", "Luke", "Dinesh"},
+                        new[]{"Karen", "Suma", "Frances"}
+                    };
                 }
             }
             //</snippet37>
@@ -380,16 +380,16 @@ namespace csrefLINQExamples
                 static void Method()
                 {
                     //<snippet38>
-                    var contacts = new[] 
+            var contacts = new[]
             {
                 new {
-                        Name = " Eugene Zabokritski",
-                        PhoneNumbers = new[] { "206-555-0108", "425-555-0001" }
-                    },
+                    Name = " Eugene Zabokritski",
+                    PhoneNumbers = new[] { "206-555-0108", "425-555-0001" }
+                },
                 new {
-                        Name = " Hanying Feng",
-                        PhoneNumbers = new[] { "650-555-0199" }
-                    }
+                    Name = " Hanying Feng",
+                    PhoneNumbers = new[] { "650-555-0199" }
+                }
             };
                     //</snippet38>
                 }

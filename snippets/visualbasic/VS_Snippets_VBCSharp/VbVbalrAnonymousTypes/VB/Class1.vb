@@ -80,7 +80,6 @@ Module Module1
 
         ' OnHand is not a Key property. Its value can be changed.
         prod8.OnHand = 22
-
         '</Snippet8>
 
         '<Snippet9>

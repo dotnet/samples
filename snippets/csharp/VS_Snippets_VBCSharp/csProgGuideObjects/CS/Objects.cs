@@ -104,7 +104,7 @@ namespace CsCsrefProgrammingObjects
             // Override the ToString method:
             public override string ToString()
             {
-                return (String.Format("({0},{1})", x, y));
+                return $"({x},{y})";
             }
         }
 
@@ -117,7 +117,7 @@ namespace CsCsrefProgrammingObjects
                 Coords p2 = new Coords(5, 3);
                 //</Snippet77>
 
-                // Display the results using the overridden ToString method:
+                // Display the results using the overriden ToString method:
                 Console.WriteLine("Coords #1 at {0}", p1);
                 Console.WriteLine("Coords #2 at {0}", p2);
                 Console.ReadKey();
@@ -366,7 +366,7 @@ namespace CsCsrefProgrammingObjects
         // Private Constructor:
         private NLog() { }
 
-        public static double E = Math.E;  //2.71828...
+        public static double e = Math.E;  //2.71828...
     }
     //</Snippet11>
 
@@ -463,7 +463,7 @@ namespace CsCsrefProgrammingObjects
             // actual bus times. Do not do this in your actual bus schedule program!
             Console.WriteLine("{0} is starting its route {1:N2} minutes after global start time {2}.",
                                     this.RouteNumber,
-                                    elapsedTime.TotalMilliseconds,
+                                    elapsedTime.Milliseconds,
                                     globalStartTime.ToShortTimeString());
         }
     }
@@ -499,7 +499,6 @@ namespace CsCsrefProgrammingObjects
         71 is starting its route 6.00 minutes after global start time 3:57 PM.
         72 is starting its route 31.00 minutes after global start time 3:57 PM.      
    */
-
     //</Snippet15>
 
 
@@ -856,7 +855,6 @@ class TestPerson
         Temperature in Celsius: -6.67
         Press any key to exit.
      */
-
     //</Snippet31>
 
 
@@ -1123,7 +1121,7 @@ class TestPerson
             // Call with an integer literal.
             int productC = Square(12);
 
-            // Call with an expression that evaluates to int.
+            // Call with an expression that evaulates to int.
             productC = Square(productA * 3);
         }
        
@@ -1252,7 +1250,6 @@ class TestPerson
     public class Taxi
     {
         public bool IsInitialized;
-
         public Taxi()
         {
             IsInitialized = true;
@@ -1336,7 +1333,7 @@ class TestPerson
                 //<Snippet58>
                 public Manager(int initialData)
                 {
-                    // Add additional code here.
+                    //Add further instructions here.
                 }
                 //</Snippet58>
             }
@@ -1354,7 +1351,7 @@ class TestPerson
                 public Manager(int initialData)
                     : base()
                 {
-                    // Add additional code here.
+                    //Add further instructions here.
                 }
                 //</Snippet57>
             }
@@ -1620,7 +1617,7 @@ class TestPerson
     //<Snippet86>
     class Car
     {
-        ~Car()  // destructor
+        ~Car()  // finalizer
         {
             // cleanup statements...
         }
@@ -1679,7 +1676,6 @@ namespace RainyDay
     {
         public const double Pi = 3.14159;
         public const int SpeedOfLight = 300000; // km per sec.
-
     }
     class Program
     {
@@ -1731,7 +1727,7 @@ namespace RainyDay
                 // After assignment, tcB and tcA refer to the same object. 
                 // They now have reference equality. 
                 tcB = tcA;
-                Console.WriteLine("After assignment: ReferenceEquals(tcA, tcB) = {0}",
+                Console.WriteLine("After asignment: ReferenceEquals(tcA, tcB) = {0}",
                                     Object.ReferenceEquals(tcA, tcB)); // true
 
                 // Changes made to tcA are reflected in tcB. Therefore, objects
@@ -1749,7 +1745,7 @@ namespace RainyDay
                 // Value types are copied on assignment. tsD and tsC have 
                 // the same values but are not the same object.
                 TestStruct tsD = tsC;
-                Console.WriteLine("After assignment: ReferenceEquals(tsC, tsD) = {0}",
+                Console.WriteLine("After asignment: ReferenceEquals(tsC, tsD) = {0}",
                                     Object.ReferenceEquals(tsC, tsD)); // false
                 #endregion
 
@@ -1791,16 +1787,13 @@ namespace RainyDay
 
     /* Output:
         ReferenceEquals(tcA, tcB) = False
-        After assignment: ReferenceEquals(tcA, tcB) = True
+        After asignment: ReferenceEquals(tcA, tcB) = True
         tcB.Name = TestClass 42 tcB.Num: 42
-        After assignment: ReferenceEquals(tsC, tsD) = False
+        After asignment: ReferenceEquals(tsC, tsD) = False
         ReferenceEquals(strA, strB) = True
         strA = "Goodbye world!" strB = "Hello world!"
         After strA changes, ReferenceEquals(strA, strB) = False
-        ReferenceEquals(stringC, strB) = False
-        stringC == strB = True
     */
-
     //</Snippet90>  
 
 

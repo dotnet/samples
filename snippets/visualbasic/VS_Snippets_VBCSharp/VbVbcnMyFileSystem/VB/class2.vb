@@ -135,7 +135,6 @@ Public Class Class2
         saveCheckBox.Enabled = anySelected
     End Sub
     ' </snippet108>
-
     ' </snippet101>
 
 End Class

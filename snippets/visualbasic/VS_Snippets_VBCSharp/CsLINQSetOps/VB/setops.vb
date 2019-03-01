@@ -1,4 +1,4 @@
-﻿Module Projection
+Module Projection
     Sub Main(ByVal args As String())
         Distinct()
     End Sub
@@ -22,7 +22,6 @@
         ' This code produces the following output:
 
         ' The distinct grades are: 63 68 71 75 92 
-
         ' </Snippet1>
     End Sub
 
