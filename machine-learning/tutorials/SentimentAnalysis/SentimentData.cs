@@ -7,11 +7,11 @@ namespace SentimentAnalysis
     // <SnippetDeclareTypes>
     public class SentimentData
     {
-        [Column(ordinal: "0")]
+        [LoadColumn(0)]
         public string SentimentText;
 
-        [Column(ordinal: "1", name: "Label")]
-        public float Sentiment;
+        [LoadColumn(1), ColumnName("Label")]
+        public bool Sentiment;
     }
 
     public class SentimentPrediction
@@ -19,10 +19,10 @@ namespace SentimentAnalysis
         [ColumnName("PredictedLabel")]
         public bool Prediction { get; set; }
 
-        [ColumnName("Probability")]
+       // [ColumnName("Probability")]
         public float Probability { get; set; }
 
-        [ColumnName("Score")]
+      //  [ColumnName("Score")]
         public float Score { get; set; }
     }
     // </SnippetDeclareTypes>

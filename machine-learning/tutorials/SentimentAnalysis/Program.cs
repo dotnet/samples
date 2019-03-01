@@ -29,31 +29,7 @@ namespace SentimentAnalysis
             MLContext mlContext = new MLContext(seed: 0);
             // </SnippetCreateMLContext>
 
-            // The TextLoader loads a dataset with comments and corresponding postive or negative sentiment. 
-            // When you create a loader, you specify the schema by passing a class to the loader containing
-            // all the column names and their types. This is used to create the model, and train it. 
-            // Initialize our TextLoader
-            // <SnippetCreateTextLoader>
-            TextLoader textLoader = mlContext.Data.CreateTextLoader(
-                columns: new TextLoader.Column[]
-                {
-                    new TextLoader.Column("SentimentText", DataKind.Text,0),
-                    new TextLoader.Column("Label", DataKind.Bool,1)
-                },
-                separatorChar: '\t',
-                hasHeader: false
-            );
-            // </SnippetCreateTextLoader>
-            //Note that this case, loading your training data from a file, 
-            //is the easiest way to get started, but ML.NET also allows you 
-            //to load data from databases or in-memory collections.
-            // <SnippetLoadTrainData>
-            IDataView dataView = textLoader.Read(_dataPath);
-            // </SnippetLoadTrainData>
-
-            // <SnippetSplitData>
-            (IDataView trainSet, IDataView testSet) splitDataView = mlContext.BinaryClassification.TrainTestSplit(dataView, testFraction: 0.2);
-            // </SnippetSplitData>
+            (IDataView trainSet, IDataView testSet) splitDataView = LoadAndTransformData(mlContext);
 
             // <SnippetCallBuildAndTrainModel>
             ITransformer model = BuildAndTrainModel(mlContext, splitDataView.trainSet);
@@ -64,16 +40,48 @@ namespace SentimentAnalysis
             // </SnippetCallEvaluate>
 
             // <SnippetCallPredictSentiment>
-            PredictSentiment(mlContext, model);
+            UseModelWithSingleItem(mlContext, model);
             // </SnippetCallPredictSentiment>
 
             // <SnippetCallPredictSentimentWithModelLoadedFromFile>
-            PredictSentimentWithModelLoadedFromFile(mlContext);
+            UseLoadedModelWithBatchItems(mlContext);
             // </SnippetCallPredictSentimentWithModelLoadedFromFile>
-
 
             Console.WriteLine();
             Console.WriteLine("=============== End of process ===============");
+        }
+
+        private static (IDataView trainSet, IDataView testSet) LoadAndTransformData(MLContext mlContext)
+        {
+            // The TextLoader loads a dataset with comments and corresponding postive or negative sentiment. 
+            // When you create a loader, you specify the schema by passing a class to the loader containing
+            // all the column names and their types. This is used to create the model, and train it. 
+            // Initialize our TextLoader
+           // TODO: Change to ReadFromTextFile
+            // <SnippetCreateTextLoader>
+            //return mlContext.Data.CreateTextLoader(
+            //    columns: new TextLoader.Column[]
+            //    {
+            //        new TextLoader.Column("SentimentText", DataKind.Text,0),
+            //        new TextLoader.Column("Label", DataKind.Bool,1)
+            //    },
+            //    separatorChar: '\t',
+            //    hasHeader: false
+            //);
+            // </SnippetCreateTextLoader>
+
+            //Note that this case, loading your training data from a file, 
+            //is the easiest way to get started, but ML.NET also allows you 
+            //to load data from databases or in-memory collections.
+            // <SnippetLoadTrainData>
+            IDataView dataView = mlContext.Data.ReadFromTextFile<SentimentData>(_dataPath,hasHeader:false);
+            // </SnippetLoadTrainData>
+
+            // <SnippetSplitData>
+            (IDataView trainSet, IDataView testSet) splitDataView = mlContext.BinaryClassification.TrainTestSplit(dataView, testFraction: 0.2);
+            // </SnippetSplitData>
+
+            return splitDataView;
         }
 
         public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView splitTrainSet)
@@ -82,7 +90,7 @@ namespace SentimentAnalysis
             // This is used to format and clean the data.  
             // Convert the text column to numeric vectors (Features column) 
             // <SnippetFeaturizeText>
-            EstimatorChain<BinaryPredictionTransformer<Microsoft.ML.Internal.Internallearn.IPredictorWithFeatureWeights<float>>> pipeline = mlContext.Transforms.Text.FeaturizeText(outputColumnName: DefaultColumnNames.Features, inputColumnName: nameof(SentimentData.SentimentText))
+            var pipeline = mlContext.Transforms.Text.FeaturizeText(outputColumnName: DefaultColumnNames.Features, inputColumnName: nameof(SentimentData.SentimentText))
             //</SnippetFeaturizeText>
 
             // Adds a FastTreeBinaryClassificationTrainer, the decision tree learner for this project  
@@ -148,7 +156,7 @@ namespace SentimentAnalysis
             // </SnippetCallSaveModel>
         }
 
-        private static void PredictSentiment(MLContext mlContext, ITransformer model)
+        private static void UseModelWithSingleItem(MLContext mlContext, ITransformer model)
         {
             // <SnippetCreatePredictionEngine1>
             PredictionEngine<SentimentData, SentimentPrediction> predictionFunction = model.CreatePredictionEngine<SentimentData, SentimentPrediction>(mlContext);
@@ -162,7 +170,7 @@ namespace SentimentAnalysis
             // </SnippetCreateTestIssue1>
 
             // <SnippetPredict>
-            SentimentPrediction resultprediction = predictionFunction.Predict(sampleStatement);
+            var resultprediction = predictionFunction.Predict(sampleStatement);
             // </SnippetPredict>
             // <SnippetOutputPrediction>
             Console.WriteLine();
@@ -176,7 +184,7 @@ namespace SentimentAnalysis
             // </SnippetOutputPrediction>
         }
 
-        public static void PredictSentimentWithModelLoadedFromFile(MLContext mlContext)
+        public static void UseLoadedModelWithBatchItems(MLContext mlContext)
         {
             // Adds some comments to test the trained model's predictions.
             // <SnippetCreateTestIssues>
@@ -204,6 +212,7 @@ namespace SentimentAnalysis
             // Create prediction engine
             // <SnippetCreatePredictionEngine>
             IDataView sentimentStreamingDataView = mlContext.Data.ReadFromEnumerable(sentiments);
+            //TODO: check exp in tutorial
             IDataView predictions = loadedModel.Transform(sentimentStreamingDataView);
 
             // Use the model to predict whether comment data is Positive (1) or Negative (0).
