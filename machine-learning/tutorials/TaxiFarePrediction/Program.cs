@@ -3,12 +3,7 @@ using System;
 using System.IO;
 using Microsoft.Data.DataView;
 using Microsoft.ML;
-using Microsoft.ML.Core.Data;
 using Microsoft.ML.Data;
-using Microsoft.ML.Transforms;
-using Microsoft.ML.Transforms.Categorical;
-using Microsoft.ML.Transforms.Normalizers;
-using Microsoft.ML.Transforms.Text;
 // </Snippet1>
 
 namespace TaxiFarePrediction
@@ -19,7 +14,6 @@ namespace TaxiFarePrediction
         static readonly string _trainDataPath = Path.Combine(Environment.CurrentDirectory, "Data", "taxi-fare-train.csv");
         static readonly string _testDataPath = Path.Combine(Environment.CurrentDirectory, "Data", "taxi-fare-test.csv");
         static readonly string _modelPath = Path.Combine(Environment.CurrentDirectory, "Data", "Model.zip");
-        static TextLoader _textLoader;
         // </Snippet2>
 
         static void Main(string[] args)
@@ -31,22 +25,7 @@ namespace TaxiFarePrediction
             // </Snippet3>
 
             // <Snippet4>
-            _textLoader = mlContext.Data.CreateTextLoader(new TextLoader.Arguments()
-            {
-                Separators = new[] { ',' },
-                HasHeader = true,
-                Column = new[]
-                            {
-                                new TextLoader.Column("VendorId", DataKind.Text, 0),
-                                new TextLoader.Column("RateCode", DataKind.Text, 1),
-                                new TextLoader.Column("PassengerCount", DataKind.R4, 2),
-                                new TextLoader.Column("TripTime", DataKind.R4, 3),
-                                new TextLoader.Column("TripDistance", DataKind.R4, 4),
-                                new TextLoader.Column("PaymentType", DataKind.Text, 5),
-                                new TextLoader.Column("FareAmount", DataKind.R4, 6)
-                            }
-            }
-            );
+            //This code is been removed in v0.11 of ML.Net.
             // </Snippet4>
 
             // <Snippet5>
@@ -65,19 +44,19 @@ namespace TaxiFarePrediction
         public static ITransformer Train(MLContext mlContext, string dataPath)
         {
             // <Snippet6>
-            IDataView dataView = _textLoader.Read(dataPath);
+            IDataView dataView = mlContext.Data.LoadFromTextFile<TaxiTrip>(dataPath, hasHeader: true, separatorChar: ',');
             // </Snippet6>
 
             // <Snippet7>
-            var pipeline = mlContext.Transforms.CopyColumns(inputColumnName:"FareAmount", outputColumnName:"Label")
-            // </Snippet7>
+            var pipeline = mlContext.Transforms.CopyColumns(outputColumnName: "Label", inputColumnName: "FareAmount")
+                    // </Snippet7>
                     // <Snippet8>
-                    .Append(mlContext.Transforms.Categorical.OneHotEncoding("VendorId"))
-                    .Append(mlContext.Transforms.Categorical.OneHotEncoding("RateCode"))
-                    .Append(mlContext.Transforms.Categorical.OneHotEncoding("PaymentType"))
+                    .Append(mlContext.Transforms.Categorical.OneHotEncoding(outputColumnName: "VendorIdEncoded", inputColumnName: "VendorId"))
+                    .Append(mlContext.Transforms.Categorical.OneHotEncoding(outputColumnName: "RateCodeEncoded", inputColumnName: "RateCode"))
+                    .Append(mlContext.Transforms.Categorical.OneHotEncoding(outputColumnName: "PaymentTypeEncoded", inputColumnName: "PaymentType"))
                     // </Snippet8>
                     // <Snippet9>
-                    .Append(mlContext.Transforms.Concatenate("Features", "VendorId", "RateCode", "PassengerCount", "TripTime", "TripDistance", "PaymentType"))
+                    .Append(mlContext.Transforms.Concatenate("Features", "VendorIdEncoded", "RateCodeEncoded", "PassengerCount", "TripTime", "TripDistance", "PaymentTypeEncoded"))
                     // </Snippet9>
                     // <Snippet10>
                     .Append(mlContext.Regression.Trainers.FastTree());
@@ -101,7 +80,7 @@ namespace TaxiFarePrediction
         private static void Evaluate(MLContext mlContext, ITransformer model)
         {
             // <Snippet15>
-            IDataView dataView = _textLoader.Read(_testDataPath);
+            IDataView dataView = mlContext.Data.LoadFromTextFile<TaxiTrip>(_testDataPath, hasHeader: true, separatorChar: ',');
             // </Snippet15>
 
             // <Snippet16>
