@@ -3,7 +3,6 @@ using System.Text;
 
 namespace CSRefStrings
 {
-    //<snippet1>
     class TestStringBuilder
     {
         static void Main()
@@ -24,5 +23,4 @@ namespace CSRefStrings
             Console.WriteLine();
         }
     }
-    //</snippet1>
 }
