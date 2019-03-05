@@ -1,16 +1,11 @@
 // <SnippetAddUsings>
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 using Microsoft.Data.DataView;
 using Microsoft.ML;
-using Microsoft.ML.Core.Data;
 using Microsoft.ML.Data;
-using Microsoft.ML.Trainers;
 using Microsoft.ML.Transforms.Conversions;
-using Microsoft.ML.Transforms.Normalizers;
 // </SnippetAddUsings>
 
 namespace GitHubIssueClassification
@@ -42,7 +37,7 @@ namespace GitHubIssueClassification
             Console.WriteLine($"=============== Loading Dataset  ===============");
             
             // <SnippetLoadTrainData>
-            _trainingDataView = _mlContext.Data.CreateTextLoader<GitHubIssue>(hasHeader: true).Read(_trainDataPath);
+            _trainingDataView = _mlContext.Data.LoadFromTextFile<GitHubIssue>(_trainDataPath,hasHeader: true);
             // </SnippetLoadTrainData>
 
             Console.WriteLine($"=============== Finished Loading Dataset  ===============");
@@ -68,7 +63,7 @@ namespace GitHubIssueClassification
             // </SnippetCallPredictIssue>
         }
 
-        public static EstimatorChain<ITransformer> ProcessData()
+        public static EstimatorChain<ColumnConcatenatingTransformer> ProcessData()
         {
             Console.WriteLine($"=============== Processing Data ===============");
             // STEP 2: Common data process configuration with pipeline data transformations
@@ -94,7 +89,7 @@ namespace GitHubIssueClassification
             // </SnippetReturnPipeline>
         }
 
-        public static EstimatorChain<KeyToValueMappingTransformer> BuildAndTrainModel(IDataView trainingDataView, EstimatorChain<ITransformer> pipeline)
+        public static EstimatorChain<KeyToValueMappingTransformer> BuildAndTrainModel(IDataView trainingDataView, EstimatorChain<ColumnConcatenatingTransformer> pipeline)
         {
             // STEP 3: Create the training algorithm/trainer
             // Use the multi-class SDCA algorithm to predict the label using features.
@@ -147,7 +142,7 @@ namespace GitHubIssueClassification
 
             //Load the test dataset into the IDataView
             // <SnippetLoadTestDataset>
-            var testDataView = _mlContext.Data.CreateTextLoader<GitHubIssue>(hasHeader: true).Read(_testDataPath);
+            var testDataView = _mlContext.Data.LoadFromTextFile<GitHubIssue>(_testDataPath,hasHeader: true);
             // </SnippetLoadTestDataset>
 
             //Evaluate the model on a test dataset and calculate metrics of the model on the test data.
