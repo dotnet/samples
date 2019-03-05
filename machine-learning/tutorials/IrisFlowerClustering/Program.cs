@@ -25,11 +25,11 @@ namespace IrisFlowerClustering
             // </SnippetCreateContext>
 
             // <SnippetSetupTextLoader>
-            TextLoader textLoader = mlContext.Data.CreateTextLoader<IrisData>(hasHeader: false, separatorChar: ',');
+            //Note : This is removed in Ml.Net v0.11
             // </SnippetSetupTextLoader>
 
             // <SnippetCreateDataView>
-            IDataView dataView = textLoader.Read(_dataPath);
+            IDataView dataView = mlContext.Data.LoadFromTextFile<IrisData>(_dataPath, hasHeader: false, separatorChar: ',');
             // </SnippetCreateDataView>
 
             // <SnippetCreatePipeline>
