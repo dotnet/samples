@@ -5,7 +5,7 @@ using System.Linq;
 using Microsoft.Data.DataView;
 using Microsoft.ML;
 using Microsoft.ML.Data;
-using Microsoft.ML.Transforms.Conversions;
+using Microsoft.ML.Transforms;
 // </SnippetAddUsings>
 
 namespace GitHubIssueClassification
@@ -63,7 +63,7 @@ namespace GitHubIssueClassification
             // </SnippetCallPredictIssue>
         }
 
-        public static EstimatorChain<ColumnConcatenatingTransformer> ProcessData()
+        public static IEstimator<ITransformer> ProcessData()
         {
             Console.WriteLine($"=============== Processing Data ===============");
             // STEP 2: Common data process configuration with pipeline data transformations
@@ -89,7 +89,7 @@ namespace GitHubIssueClassification
             // </SnippetReturnPipeline>
         }
 
-        public static EstimatorChain<KeyToValueMappingTransformer> BuildAndTrainModel(IDataView trainingDataView, EstimatorChain<ColumnConcatenatingTransformer> pipeline)
+        public static IEstimator<ITransformer> BuildAndTrainModel(IDataView trainingDataView, IEstimator<ITransformer> pipeline)
         {
             // STEP 3: Create the training algorithm/trainer
             // Use the multi-class SDCA algorithm to predict the label using features.
