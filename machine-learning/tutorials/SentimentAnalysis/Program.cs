@@ -26,10 +26,13 @@ namespace SentimentAnalysis
             // during the learning process.  
             //Create ML Context with seed for repeatable/deterministic results
             // <SnippetCreateMLContext>
-            MLContext mlContext = new MLContext(seed: 0);
+            MLContext mlContext = new MLContext();
             // </SnippetCreateMLContext>
 
-            (IDataView trainSet, IDataView testSet) splitDataView = LoadAndTransformData(mlContext);
+            // <SnippetCallLoadData>
+            (IDataView trainSet, IDataView testSet) splitDataView = LoadData(mlContext);
+            // </SnippetCallLoadData>
+
 
             // <SnippetCallBuildAndTrainModel>
             ITransformer model = BuildAndTrainModel(mlContext, splitDataView.trainSet);
@@ -39,33 +42,35 @@ namespace SentimentAnalysis
             Evaluate(mlContext, model, splitDataView.testSet);
             // </SnippetCallEvaluate>
 
-            // <SnippetCallPredictSentiment>
+            // <SnippetCallUseModelWithSingleItem>
             UseModelWithSingleItem(mlContext, model);
-            // </SnippetCallPredictSentiment>
+            // </SnippetCallUseModelWithSingleItem>
 
-            // <SnippetCallPredictSentimentWithModelLoadedFromFile>
+            // <SnippetCallUseLoadedModelWithBatchItems>
             UseLoadedModelWithBatchItems(mlContext);
-            // </SnippetCallPredictSentimentWithModelLoadedFromFile>
+            // </SnippetCallUseLoadedModelWithBatchItems>
 
             Console.WriteLine();
             Console.WriteLine("=============== End of process ===============");
         }
 
-        private static (IDataView trainSet, IDataView testSet) LoadData(MLContext mlContext)
+        public static (IDataView trainSet, IDataView testSet) LoadData(MLContext mlContext)
         {
 
             //Note that this case, loading your training data from a file, 
             //is the easiest way to get started, but ML.NET also allows you 
             //to load data from databases or in-memory collections.
-            // <SnippetLoadTrainData>
+            // <SnippetLoadData>
             IDataView dataView = mlContext.Data.ReadFromTextFile<SentimentData>(_dataPath,hasHeader:false);
-            // </SnippetLoadTrainData>
+            // </SnippetLoadData>
 
             // <SnippetSplitData>
             (IDataView trainSet, IDataView testSet) splitDataView = mlContext.BinaryClassification.TrainTestSplit(dataView, testFraction: 0.2);
             // </SnippetSplitData>
 
+            // <SnippetReturnSplitData>        
             return splitDataView;
+            // </SnippetReturnSplitData>           
         }
 
         public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView splitTrainSet)
