@@ -5,9 +5,8 @@ using System.IO;
 using System.Linq;
 using Microsoft.Data.DataView;
 using Microsoft.ML;
-using Microsoft.ML.Core.Data;
 using Microsoft.ML.Data;
-using Microsoft.ML.Trainers.Online;
+using Microsoft.ML.Trainers;
 using Microsoft.ML.Transforms.Text;
 // </SnippetAddUsings>
 
@@ -30,16 +29,16 @@ namespace SentimentAnalysis
             // </SnippetCreateMLContext>
 
             // <SnippetCallLoadData>
-            (IDataView trainSet, IDataView testSet) splitDataView = LoadData(mlContext);
+            TrainCatalogBase.TrainTestData splitDataView = LoadData(mlContext);
             // </SnippetCallLoadData>
 
 
             // <SnippetCallBuildAndTrainModel>
-            ITransformer model = BuildAndTrainModel(mlContext, splitDataView.trainSet);
+            ITransformer model = BuildAndTrainModel(mlContext, splitDataView.TrainSet);
             // </SnippetCallBuildAndTrainModel>
 
             // <SnippetCallEvaluate>
-            Evaluate(mlContext, model, splitDataView.testSet);
+            Evaluate(mlContext, model, splitDataView.TestSet);
             // </SnippetCallEvaluate>
 
             // <SnippetCallUseModelWithSingleItem>
@@ -54,18 +53,18 @@ namespace SentimentAnalysis
             Console.WriteLine("=============== End of process ===============");
         }
 
-        public static (IDataView trainSet, IDataView testSet) LoadData(MLContext mlContext)
+        public static TrainCatalogBase.TrainTestData LoadData(MLContext mlContext)
         {
 
             //Note that this case, loading your training data from a file, 
             //is the easiest way to get started, but ML.NET also allows you 
             //to load data from databases or in-memory collections.
             // <SnippetLoadData>
-            IDataView dataView = mlContext.Data.ReadFromTextFile<SentimentData>(_dataPath,hasHeader:false);
+            IDataView dataView = mlContext.Data.LoadFromTextFile<SentimentData>(_dataPath,hasHeader:false);
             // </SnippetLoadData>
 
             // <SnippetSplitData>
-            (IDataView trainSet, IDataView testSet) splitDataView = mlContext.BinaryClassification.TrainTestSplit(dataView, testFraction: 0.2);
+            TrainCatalogBase.TrainTestData splitDataView = mlContext.BinaryClassification.TrainTestSplit(dataView, testFraction: 0.2);
             // </SnippetSplitData>
 
             // <SnippetReturnSplitData>        
@@ -200,12 +199,12 @@ namespace SentimentAnalysis
 
             // Load test data  
             // <SnippetPrediction>
-            IDataView sentimentStreamingDataView = mlContext.Data.ReadFromEnumerable(sentiments);
+            IDataView sentimentStreamingDataView = mlContext.Data.LoadFromEnumerable(sentiments);
 
             IDataView predictions = loadedModel.Transform(sentimentStreamingDataView);
 
             // Use model to predict whether comment data is Positive (1) or Negative (0).
-            IEnumerable<SentimentPrediction> predictedResults = mlContext.CreateEnumerable<SentimentPrediction>(predictions, reuseRowObject: false);
+            IEnumerable<SentimentPrediction> predictedResults = mlContext.Data.CreateEnumerable<SentimentPrediction>(predictions, reuseRowObject: false);
             // </SnippetPrediction>
 
             // <SnippetAddInfoMessage>
