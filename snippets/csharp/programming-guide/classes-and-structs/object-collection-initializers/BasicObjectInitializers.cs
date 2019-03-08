@@ -129,12 +129,19 @@ namespace object_collection_initializers
             // Auto-implemented properties.
             public int Age { get; set; }
             public string Name { get; set; }
+
+            public Cat() { }
+
+            public Cat(string name)
+            {
+                Name = name;
+            }
         }
 
         public static void Main()
         {
             Cat cat = new Cat { Age = 10, Name = "Fluffy" };
-            Cat sameCat = new Cat { Age = 10, Name = "Fluffy" };
+            Cat sameCat = new Cat("Fluffy"){ Age = 10 };
 
             List<Cat> cats = new List<Cat>
             {
