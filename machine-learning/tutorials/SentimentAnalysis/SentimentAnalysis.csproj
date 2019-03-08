@@ -10,21 +10,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.ML" Version="0.10.0" />
+    <PackageReference Include="Microsoft.ML" Version="0.11.0" />
   </ItemGroup>
-   
+
   <ItemGroup>
-    <Folder Include="Data\" />
-  </ItemGroup>
-  
-   <ItemGroup>
-    <None Update="Data\wikipedia-detox-250-line-all.tsv">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Data\wikipedia-detox-250-line-data.tsv">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Data\wikipedia-detox-250-line-test.tsv">
+    <None Update="Data\yelp_labelled.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
