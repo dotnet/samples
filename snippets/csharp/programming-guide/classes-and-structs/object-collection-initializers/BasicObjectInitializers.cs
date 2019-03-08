@@ -134,19 +134,19 @@ namespace object_collection_initializers
         public static void Main()
         {
             Cat cat = new Cat { Age = 10, Name = "Fluffy" };
-            Cat sameCat = new Cat("Fluffy"){ Age = 10 };
+            Cat sameCat = new Cat { Age = 10, Name = "Fluffy" };
 
             List<Cat> cats = new List<Cat>
             {
-                new Cat{ Name = "Sylvester", Age=8 },
-                new Cat{ Name = "Whiskers", Age=2 },
-                new Cat{ Name = "Sasha", Age=14 }
+                new Cat { Name = "Sylvester", Age = 8 },
+                new Cat { Name = "Whiskers", Age = 2 },
+                new Cat { Name = "Sasha", Age = 14 }
             };
 
             List<Cat> moreCats = new List<Cat>
             {
-                new Cat{ Name = "Furrytail", Age=5 },
-                new Cat{ Name = "Peaches", Age=4 },
+                new Cat { Name = "Furrytail", Age = 5 },
+                new Cat { Name = "Peaches", Age = 4 },
                 null
             };
 
