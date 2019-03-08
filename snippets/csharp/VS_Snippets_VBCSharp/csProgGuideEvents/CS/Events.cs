@@ -451,26 +451,26 @@ namespace WrapEvent
 //-----------------------------------------------------------------------------
 namespace WrapHash
 {
-    using System;
     //<Snippet9>
-    using System;    
-    using System.Collections.Generic;    
+    using System;
+    using System.Collections.Generic;
 
     public delegate void EventHandler1(int i);
-
     public delegate void EventHandler2(string s);
 
     public class PropertyEventsSample
     {
-        private readonly Dictionary<string, Delegate> _eventTable;
-        private readonly List<EventHandler1> _event1List = new List<EventHandler1>();
-        private readonly List<EventHandler2> _event2List = new List<EventHandler2>();
+        private const string Event1Key = nameof(Event1);
+        private const string Event2Key = nameof(Event2);
+
+        private readonly Dictionary<string, Delegate> handlers;
+
         public PropertyEventsSample()
         {
-            _eventTable = new Dictionary<string, Delegate>
+            handlers = new Dictionary<string, Delegate>
             {
-                {"Event1", null},
-                {"Event2", null}
+                [Event1Key] = null,
+                [Event2Key] = null
             };
         }
 
@@ -478,23 +478,16 @@ namespace WrapHash
         {
             add
             {
-                _event1List.Add(value);
-                lock (_eventTable)
+                lock (handlers)
                 {
-                    _eventTable["Event1"] = (EventHandler1) _eventTable["Event1"] + value;
+                    handlers[Event1Key] = (EventHandler1)handlers[Event1Key] + value;
                 }
             }
             remove
             {
-                if (!_event1List.Contains(value)) return;
-                _event1List.Remove(value);
-                lock (_eventTable)
+                lock (handlers)
                 {
-                    _eventTable["Event1"] = null;
-                    foreach (var event1 in _event1List)
-                    {
-                        _eventTable["Event1"] = (EventHandler1) _eventTable["Event1"] + event1;
-                    }
+                    handlers[Event1Key] = (EventHandler1)handlers[Event1Key] - value;
                 }
             }
         }
@@ -503,57 +496,46 @@ namespace WrapHash
         {
             add
             {
-                _event2List.Add(value);
-                lock (_eventTable)
+                lock (handlers)
                 {
-                    _eventTable["Event2"] = (EventHandler2) _eventTable["Event2"] + value;
+                    handlers[Event2Key] = (EventHandler2)handlers[Event2Key] + value;
                 }
             }
             remove
             {
-                if (!_event2List.Contains(value)) return;
-                _event2List.Remove(value);
-                lock (_eventTable)
+                lock (handlers)
                 {
-                    _eventTable["Event2"] = null;
-                    foreach (var event2 in _event2List)
-                    {
-                        _eventTable["Event2"] = (EventHandler2) _eventTable["Event2"] + event2;
-                    }
+                    handlers[Event2Key] = (EventHandler2)handlers[Event2Key] - value;
                 }
             }
         }
 
         internal void RaiseEvent1(int i)
         {
-            lock (_eventTable)
+            EventHandler1 handler;
+            lock (handlers)
             {
-                var handler1 = (EventHandler1) _eventTable["Event1"];
-                handler1?.Invoke(i);
+                handler = (EventHandler1)handlers[Event1Key];
             }
+            handler?.Invoke(i);
         }
 
         internal void RaiseEvent2(string s)
         {
-            lock (_eventTable)
+            EventHandler2 handler;
+            lock (handlers)
             {
-                var handler2 = (EventHandler2) _eventTable["Event2"];
-                handler2?.Invoke(s);
+                handler = (EventHandler2)handlers[Event2Key];
             }
+            handler?.Invoke(s);
         }
     }
 
     public static class TestClass
     {
-        private static void Delegate1Method(int i)
-        {
-            Console.WriteLine(i);
-        }
+        private static void Delegate1Method(int i) => Console.WriteLine(i);
 
-        private static void Delegate2Method(string s)
-        {
-            Console.WriteLine(s);
-        }
+        private static void Delegate2Method(string s) => Console.WriteLine(s);
 
         private static void Main()
         {
