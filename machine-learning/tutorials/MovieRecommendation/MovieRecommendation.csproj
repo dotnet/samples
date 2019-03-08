@@ -6,8 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.ML" Version="0.10.0" />
-    <PackageReference Include="Microsoft.ML.Recommender" Version="0.10.0" />
+    <PackageReference Include="Microsoft.ML" Version="0.11.0" />
+    <PackageReference Include="Microsoft.ML.Recommender" Version="0.11.0" />
   </ItemGroup>
 
   <ItemGroup>

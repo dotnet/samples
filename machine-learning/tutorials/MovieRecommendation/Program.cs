@@ -5,7 +5,6 @@ using Microsoft.ML;
 using Microsoft.ML.Trainers;
 using Microsoft.ML.Data;
 using Microsoft.Data.DataView;
-using Microsoft.ML.Core.Data;
 // </SnippetUsingStatements>
 
 namespace MovieRecommendation
@@ -18,33 +17,33 @@ namespace MovieRecommendation
 
             // Create MLContext to be shared across the model creation workflow objects 
             // <SnippetMLContext>
-            MLContext mlcontext = new MLContext();
+            MLContext mlContext = new MLContext();
             // </SnippetMLContext>
 
             // Load data
             // <SnippetLoadDataMain>
-            IDataView trainingDataView = LoadData(mlcontext).training;
-            IDataView testDataView = LoadData(mlcontext).test;
+            IDataView trainingDataView = LoadData(mlContext).training;
+            IDataView testDataView = LoadData(mlContext).test;
             // </SnippetLoadDataMain>
 
             // Build & train model
             // <SnippetBuildTrainModelMain>
-            ITransformer model = BuildAndTrainModel(mlcontext, trainingDataView);
+            ITransformer model = BuildAndTrainModel(mlContext, trainingDataView);
             // </SnippetBuildTrainModelMain>
 
             // Evaluate quality of model
             // <SnippetEvaluateModelMain>
-            EvaluateModel(mlcontext, testDataView, model);
+            EvaluateModel(mlContext, testDataView, model);
             // </SnippetEvaluateModelMain>
 
             // Use model to try a single prediction (one row of data)
             // <SnippetUseModelMain>
-            UseModelForSinglePrediction(mlcontext, model);
+            UseModelForSinglePrediction(mlContext, model);
             // </SnippetUseModelMain>
 
             // Save model
             // <SnippetSaveModelMain>
-            SaveModel(mlcontext, model);
+            SaveModel(mlContext, model);
             // </SnippetSaveModelMain>
         }
 
@@ -56,8 +55,8 @@ namespace MovieRecommendation
             var trainingDataPath = Path.Combine(Environment.CurrentDirectory, "Data", "recommendation-ratings-train.csv");
             var testDataPath = Path.Combine(Environment.CurrentDirectory, "Data", "recommendation-ratings-test.csv");
 
-            IDataView trainingDataView = mlcontext.Data.ReadFromTextFile<MovieRating>(trainingDataPath, hasHeader: true, separatorChar: ',');
-            IDataView testDataView = mlcontext.Data.ReadFromTextFile<MovieRating>(testDataPath, hasHeader: true, separatorChar: ',');
+            IDataView trainingDataView = mlcontext.Data.LoadFromTextFile<MovieRating>(trainingDataPath, hasHeader: true, separatorChar: ',');
+            IDataView testDataView = mlcontext.Data.LoadFromTextFile<MovieRating>(testDataPath, hasHeader: true, separatorChar: ',');
 
             return (trainingDataView, testDataView);
             // </SnippetLoadData>
@@ -77,10 +76,10 @@ namespace MovieRecommendation
             var options = new MatrixFactorizationTrainer.Options
             {
                 MatrixColumnIndexColumnName = "userIdEncoded",
-                MatrixRowIndexColumnName = "movieIdEncoded",
+                MatrixRowIndexColumnName = "movieIdEncoded", 
                 LabelColumnName = "Label",
-                NumIterations = 20,
-                K = 100
+                NumberOfIterations = 20,
+                ApproximationRank = 100
             };
 
             est = est.Append(mlcontext.Recommendation().Trainers.MatrixFactorization(options));
