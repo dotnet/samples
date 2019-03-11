@@ -71,8 +71,8 @@ namespace MovieRecommendation
                 .Append(mlcontext.Transforms.Conversion.MapValueToKey(outputColumnName: "movieIdEncoded", inputColumnName: "movieId"));
             // </SnippetDataTransformations>
 
-            // Set algorithm options, add algorithm, and train model
-            // <SnippetTrainModel>
+            // Set algorithm options and append algorithm
+            // <SnippetAddAlgorithm>
             var options = new MatrixFactorizationTrainer.Options
             {
                 MatrixColumnIndexColumnName = "userIdEncoded",
@@ -83,12 +83,15 @@ namespace MovieRecommendation
             };
 
             est = est.Append(mlcontext.Recommendation().Trainers.MatrixFactorization(options));
+            // </SnippetAddAlgorithm>
 
+            // Train model
+            // <SnippetFitModel>
             Console.WriteLine("=============== Training the model ===============");
             ITransformer model = est.Fit(trainingDataView);
 
             return model;
-            // </SnippetTrainModel>
+            // </SnippetFitModel>
         }
 
         // Evaluate model
