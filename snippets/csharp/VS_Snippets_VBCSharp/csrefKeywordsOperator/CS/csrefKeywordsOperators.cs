@@ -8,32 +8,55 @@ namespace KeywordsUberProject
     //<snippet1>
     class csrefKeywordsOperators
     {
-        class Base
+        class BaseClass
         {
-            public override string  ToString()
+            public override string ToString()
             {
- 	             return "Base";
+                return "BaseClass";
             }
         }
-        class Derived : Base 
-        { }
+
+        class DerivedClass : BaseClass
+        {
+            public override string ToString()
+            {
+                return "DerivedClass";
+            }
+        }
+
+        class AnotherClass
+        {
+            public override string ToString()
+            {
+                return "AnotherClass";
+            }
+        }
 
         class Program
         {
             static void Main()
             {
+                object[] array = new object[] { new BaseClass(), new DerivedClass(), new AnotherClass() };
 
-                Derived d = new Derived();
-
-                Base b = d as Base;
-                if (b != null)
+                for (int i = 0; i < array.Length; i++)
                 {
-                    Console.WriteLine(b.ToString());
-                }
+                    BaseClass b = array[i] as BaseClass;
 
+                    if (b != null) Console.WriteLine("{0}: {1}", i, b);
+                    else Console.WriteLine("{0}: null", i);
+                }
             }
         }
+
     }
+
+    /* Output:
+
+    0: BaseClass
+    1: DerivedClass
+    2: null
+
+    */
     //</snippet1>
 
     //<snippet2>
