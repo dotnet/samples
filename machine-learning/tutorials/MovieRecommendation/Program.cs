@@ -22,22 +22,26 @@ namespace MovieRecommendation
 
             // Load data
             // <SnippetLoadDataMain>
+            // Step 1: Load your data
             IDataView trainingDataView = LoadData(mlContext).training;
             IDataView testDataView = LoadData(mlContext).test;
             // </SnippetLoadDataMain>
 
             // Build & train model
             // <SnippetBuildTrainModelMain>
+            // Step 2: Build and train your model
             ITransformer model = BuildAndTrainModel(mlContext, trainingDataView);
             // </SnippetBuildTrainModelMain>
 
             // Evaluate quality of model
             // <SnippetEvaluateModelMain>
+            // Step 3: Evaluate your model
             EvaluateModel(mlContext, testDataView, model);
             // </SnippetEvaluateModelMain>
 
             // Use model to try a single prediction (one row of data)
             // <SnippetUseModelMain>
+            // Step 4: Use your model
             UseModelForSinglePrediction(mlContext, model);
             // </SnippetUseModelMain>
 
