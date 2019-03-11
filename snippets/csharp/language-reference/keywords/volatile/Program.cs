@@ -21,9 +21,10 @@ namespace VolatileTests
         // This method is called when the thread is started.
         public void DoWork()
         {
+            bool work = false;
             while (!_shouldStop)
             {
-                Console.WriteLine("Worker thread: working...");
+                work = !work; // simulate some work
             }
             Console.WriteLine("Worker thread: terminating gracefully.");
         }
@@ -54,7 +55,7 @@ namespace VolatileTests
 
             // Put the main thread to sleep for 1 millisecond to
             // allow the worker thread to do some work.
-            Thread.Sleep(1);
+            Thread.Sleep(500);
 
             // Request that the worker thread stop itself.
             workerObject.RequestStop();
@@ -66,12 +67,6 @@ namespace VolatileTests
         }
         // Sample output:
         // Main thread: starting worker thread...
-        // Worker thread: working...
-        // Worker thread: working...
-        // Worker thread: working...
-        // Worker thread: working...
-        // Worker thread: working...
-        // Worker thread: working...
         // Worker thread: terminating gracefully.
         // Main thread: worker thread has terminated.
     }
