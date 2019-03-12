@@ -81,18 +81,16 @@ namespace MovieRecommendation
                 NumberOfIterations = 20,
                 ApproximationRank = 100
             };
+            
+            var trainerEstimator = estimator.Append(mlContext.Recommendation().Trainers.MatrixFactorization(options));
             // </SnippetAddAlgorithm>
 
-            // Train model
             // <SnippetFitModel>
-            var trainerEstimator = estimator.Append(mlContext.Recommendation().Trainers.MatrixFactorization(options));
-            // </SnippetFitModel>
-
             Console.WriteLine("=============== Training the model ===============");
             ITransformer model = trainerEstimator.Fit(trainingDataView);
 
             return model;
-            // </SnippetTrainModel>
+            // </SnippetFitModel>
         }
 
         // Evaluate model
