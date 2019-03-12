@@ -24,10 +24,6 @@ namespace TaxiFarePrediction
             MLContext mlContext = new MLContext(seed: 0);
             // </Snippet3>
 
-            // <Snippet4>
-            //This code has been removed in v0.11.
-            // </Snippet4>
-
             // <Snippet5>
             var model = Train(mlContext, _trainDataPath);
             // </Snippet5>
