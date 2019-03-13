@@ -29,7 +29,7 @@ namespace IrisFlowerClustering
             // </SnippetSetupTextLoader>
 
             // <SnippetCreateDataView>
-            IDataView dataView = textLoader.Read(_dataPath);
+            IDataView dataView = textLoader.Load(_dataPath);
             // </SnippetCreateDataView>
 
             // <SnippetCreatePipeline>
