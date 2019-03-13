@@ -53,7 +53,7 @@ namespace VolatileTests
             while (!workerThread.IsAlive)
                 ;
 
-            // Put the main thread to sleep for 1 millisecond to
+            // Put the main thread to sleep for 500 millisecond to
             // allow the worker thread to do some work.
             Thread.Sleep(500);
 
