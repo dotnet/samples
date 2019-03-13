@@ -1,4 +1,4 @@
-﻿// <SnippetUsingStatements>
+// <SnippetUsingStatements>
 using System;
 using System.IO;
 using Microsoft.ML;
@@ -48,31 +48,31 @@ namespace MovieRecommendation
         }
 
         // Load data
-        public static (IDataView training, IDataView test) LoadData(MLContext mlcontext)
+        public static (IDataView training, IDataView test) LoadData(MLContext mlContext)
         {
             // Load training & test datasets using datapaths
             // <SnippetLoadData>
             var trainingDataPath = Path.Combine(Environment.CurrentDirectory, "Data", "recommendation-ratings-train.csv");
             var testDataPath = Path.Combine(Environment.CurrentDirectory, "Data", "recommendation-ratings-test.csv");
 
-            IDataView trainingDataView = mlcontext.Data.LoadFromTextFile<MovieRating>(trainingDataPath, hasHeader: true, separatorChar: ',');
-            IDataView testDataView = mlcontext.Data.LoadFromTextFile<MovieRating>(testDataPath, hasHeader: true, separatorChar: ',');
+            IDataView trainingDataView = mlContext.Data.LoadFromTextFile<MovieRating>(trainingDataPath, hasHeader: true, separatorChar: ',');
+            IDataView testDataView = mlContext.Data.LoadFromTextFile<MovieRating>(testDataPath, hasHeader: true, separatorChar: ',');
 
             return (trainingDataView, testDataView);
             // </SnippetLoadData>
         }
 
         // Build and train model
-        public static ITransformer BuildAndTrainModel(MLContext mlcontext, IDataView trainingDataView)
+        public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView trainingDataView)
         {
             // Add data transformations
             // <SnippetDataTransformations>
-            IEstimator<ITransformer> est = mlcontext.Transforms.Conversion.MapValueToKey(outputColumnName: "userIdEncoded", inputColumnName: "userId")
-                .Append(mlcontext.Transforms.Conversion.MapValueToKey(outputColumnName: "movieIdEncoded", inputColumnName: "movieId"));
+            IEstimator<ITransformer> estimator = mlContext.Transforms.Conversion.MapValueToKey(outputColumnName: "userIdEncoded", inputColumnName: "userId")
+                .Append(mlContext.Transforms.Conversion.MapValueToKey(outputColumnName: "movieIdEncoded", inputColumnName: "movieId"));
             // </SnippetDataTransformations>
 
-            // Set algorithm options, add algorithm, and train model
-            // <SnippetTrainModel>
+            // Set algorithm options and append algorithm
+            // <SnippetAddAlgorithm>
             var options = new MatrixFactorizationTrainer.Options
             {
                 MatrixColumnIndexColumnName = "userIdEncoded",
@@ -81,43 +81,50 @@ namespace MovieRecommendation
                 NumberOfIterations = 20,
                 ApproximationRank = 100
             };
+            
+            var trainerEstimator = estimator.Append(mlContext.Recommendation().Trainers.MatrixFactorization(options));
+            // </SnippetAddAlgorithm>
 
-            est = est.Append(mlcontext.Recommendation().Trainers.MatrixFactorization(options));
-
+            // <SnippetFitModel>
             Console.WriteLine("=============== Training the model ===============");
-            ITransformer model = est.Fit(trainingDataView);
+            ITransformer model = trainerEstimator.Fit(trainingDataView);
 
             return model;
-            // </SnippetTrainModel>
+            // </SnippetFitModel>
         }
 
         // Evaluate model
-        public static void EvaluateModel(MLContext mlcontext, IDataView testDataView, ITransformer model)
+        public static void EvaluateModel(MLContext mlContext, IDataView testDataView, ITransformer model)
         {
             // Evaluate model on test data & print evaluation metrics
-            // <SnippetEvaluateModel>
+            // <SnippetTransform>
             Console.WriteLine("=============== Evaluating the model ===============");
             var prediction = model.Transform(testDataView);
-            var metrics = mlcontext.Regression.Evaluate(prediction, label: DefaultColumnNames.Label, score: DefaultColumnNames.Score);
+            // </SnippetTransform>
 
+            // <SnippetEvaluate>
+            var metrics = mlContext.Regression.Evaluate(prediction, label: DefaultColumnNames.Label, score: DefaultColumnNames.Score);
+            // </SnippetEvaluate>
+
+            // <SnippetPrintMetrics>
             Console.WriteLine("Rms: " + metrics.Rms.ToString());
             Console.WriteLine("RSquared: " + metrics.RSquared.ToString());
-            // </SnippetEvaluateModel>
+            // </SnippetPrintMetrics>
         }
 
         // Use model for single prediction
-        public static void UseModelForSinglePrediction(MLContext mlcontext, ITransformer model)
+        public static void UseModelForSinglePrediction(MLContext mlContext, ITransformer model)
         {
             // <SnippetPredictionEngine>
             Console.WriteLine("=============== Making a prediction ===============");
-            var predictionengine = model.CreatePredictionEngine<MovieRating, MovieRatingPrediction>(mlcontext);
+            var predictionEngine = model.CreatePredictionEngine<MovieRating, MovieRatingPrediction>(mlContext);
             // </SnippetPredictionEngine>
 
             // Create test input & make single prediction
             // <SnippetMakeSinglePrediction>
             var testInput = new MovieRating { userId = 6, movieId = 10 };
 
-            var movieRatingPrediction = predictionengine.Predict(testInput);
+            var movieRatingPrediction = predictionEngine.Predict(testInput);
             // </SnippetMakeSinglePrediction>
 
             // <SnippetPrintResults>
@@ -133,14 +140,14 @@ namespace MovieRecommendation
         }
 
         //Save model
-        public static void SaveModel(MLContext mlcontext, ITransformer model)
+        public static void SaveModel(MLContext mlContext, ITransformer model)
         {
             // Save the trained model to .zip file
             // <SnippetSaveModel>
             using (var fs = new FileStream("moviePredictionModel.zip",
                 FileMode.Create, FileAccess.Write, FileShare.Write))
 
-                mlcontext.Model.Save(model, fs);
+                mlContext.Model.Save(model, fs);
             // </SnippetSaveModel>
         }
 
