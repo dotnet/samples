@@ -78,11 +78,10 @@ namespace toll_calculator
         private static bool IsWeekDay(DateTime timeOfToll) =>
             timeOfToll.DayOfWeek switch
         {
-            DayOfWeek.Saturday => false,
-            DayOfWeek.Sunday => false,
+            DayOfWeek.Saturday, DayOfWeek.Sunday => false,
             _ => true
         };
-        // <SnippetIsWeekDay>
+        // </SnippetIsWeekDay>
 
         // <SnippetGetTimeBand>
         private enum TimeBand
