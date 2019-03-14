@@ -11,7 +11,6 @@
 // 10 seconds.
 
 // <Snippet1>
-
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
