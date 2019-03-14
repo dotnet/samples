@@ -63,8 +63,8 @@ public class TimeZoneConversion
       //    Converting 8/31/2007 9:26:28 PM, Kind Utc
       //       ConvertTimeToUtc: 8/31/2007 9:26:28 PM, Kind Utc
       //    
-      //    Converting 10/26/2007 1:32:00 PM, Kind Unspecified
-      //       ConvertTimeToUtc: 10/26/2007 8:32:00 PM, Kind Utc
+      //    Converting 10/26/2006 1:32:00 PM, Kind Unspecified
+      //       ConvertTimeToUtc: 10/26/2006 8:32:00 PM, Kind Utc
       //    
       //    Converting 11/4/2007 1:30:00 AM, Kind Unspecified, Ambiguous True
       //       ConvertTimeToUtc: 11/4/2007 9:30:00 AM, Kind Utc
