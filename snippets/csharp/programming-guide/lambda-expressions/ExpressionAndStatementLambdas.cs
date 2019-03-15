@@ -8,11 +8,11 @@ namespace lambda_expressions
         {
             // <SnippetZeroParameters>
             Action line = () => Console.WriteLine();
-            // </SnippetZeroArguments>
+            // </SnippetZeroParameters>
 
             // <SnippetTwoParameters>
             Func<int, int, bool> testForEquality = (x, y) => x == y;
-            // </SnippetTwoArguments>
+            // </SnippetTwoParameters>
 
             // <SnippetExplicitlyTypedParameters>
             Func<int, string, bool> isTooLong = (int x, string s) => s.Length > x;
