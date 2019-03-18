@@ -9,7 +9,6 @@ public class BackgroundWorkerForm : Form
     private BackgroundWorker backgroundWorker1;
     private Button button1;
     private TextBox textBox1;
-    private Thread thread2 = null;
 
     [STAThread]
     static void Main()
@@ -45,12 +44,13 @@ public class BackgroundWorkerForm : Form
 
     private void BackgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
     {
-        thread2 = new Thread(new ThreadStart(backgroundWorker1.RunWorkerAsync));
-        Thread.Sleep(1000);
+        // Sleep 2 seconds to emulate getting data.
+        Thread.Sleep(2000);
+        e.Result = "This text was set safely by BackgroundWorker.";
     }
 
     private void BackgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
     {
-        textBox1.Text = "This text was set safely by BackgroundWorker.";
+        textBox1.Text = e.Result.ToString();
     }
 }

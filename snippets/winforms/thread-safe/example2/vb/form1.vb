@@ -15,7 +15,6 @@ Public Class BackgroundWorkerForm : Inherits Form
     Dim WithEvents BackgroundWorker1 As BackgroundWorker
     Dim WithEvents Button1 As Button
     Dim TextBox1 As TextBox
-    Dim Thread2 as Thread = Nothing
 
     Private Sub New()
         BackgroundWorker1 = New BackgroundWorker()
@@ -40,12 +39,13 @@ Public Class BackgroundWorkerForm : Inherits Form
 
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As DoWorkEventArgs) _
      Handles BackgroundWorker1.DoWork
-        thread2 = new Thread(new ThreadStart(AddressOf backgroundWorker1.RunWorkerAsync))
-        Thread.Sleep(1000)
+        ' Sleep 2 seconds to emulate getting data.
+        Thread.Sleep(2000)
+        e.Result = "This text was set safely by BackgroundWorker."
     End Sub
 
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) _
      Handles BackgroundWorker1.RunWorkerCompleted
-        textBox1.Text = "This text was set safely by BackgroundWorker."
+        textBox1.Text = e.Result.ToString()
     End Sub
 End Class
