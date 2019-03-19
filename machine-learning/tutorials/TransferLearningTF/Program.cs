@@ -15,14 +15,14 @@ namespace TransferLearningTF
     class Program
     {
         // <SnippetDeclareGlobalVariables>
-        static string assetsPath = Path.Combine(Environment.CurrentDirectory, "assets");
-        static string trainTagsTsv = Path.Combine(assetsPath, "inputs-train", "data", "tags.tsv");
-        static string predictTagsTsv = Path.Combine(assetsPath, "inputs-predict", "data", "tags.tsv");
-        static string trainImagesFolder = Path.Combine(assetsPath, "inputs-train", "data");
-        static string predictImagesFolder = Path.Combine(assetsPath, "inputs-predict", "data");
-        static string inceptionPb = Path.Combine(assetsPath, "inputs-train", "inception", "tensorflow_inception_graph.pb");
-        static string inputImageClassifierZip = Path.Combine(assetsPath, "inputs-predict", "imageClassifier.zip");
-        static string outputImageClassifierZip = Path.Combine(assetsPath, "outputs", "imageClassifier.zip");
+        static readonly string _assetsPath = Path.Combine(Environment.CurrentDirectory, "assets");
+        static readonly string _trainTagsTsv = Path.Combine(_assetsPath, "inputs-train", "data", "tags.tsv");
+        static readonly string _predictTagsTsv = Path.Combine(_assetsPath, "inputs-predict", "data", "tags.tsv");
+        static readonly string _trainImagesFolder = Path.Combine(_assetsPath, "inputs-train", "data");
+        static readonly string _predictImagesFolder = Path.Combine(_assetsPath, "inputs-predict", "data");
+        static readonly string _inceptionPb = Path.Combine(_assetsPath, "inputs-train", "inception", "tensorflow_inception_graph.pb");
+        static readonly string _inputImageClassifierZip = Path.Combine(_assetsPath, "inputs-predict", "imageClassifier.zip");
+        static readonly string _outputImageClassifierZip = Path.Combine(_assetsPath, "outputs", "imageClassifier.zip");
         private static string LabelTokey = nameof(LabelTokey);
         private static string ImageReal = nameof(ImageReal);
         private static string PredictedLabelValue = nameof(PredictedLabelValue);
@@ -36,22 +36,22 @@ namespace TransferLearningTF
             // </SnippetMLContext>
 
             // <SnippetCallBuildAndTrain>
-            BuildAndTrainModel(mlContext, trainTagsTsv, trainImagesFolder, inceptionPb, outputImageClassifierZip);
+            BuildAndTrainModel(mlContext, _trainTagsTsv, _trainImagesFolder, _inceptionPb, _outputImageClassifierZip);
             // </SnippetCallBuildAndTrain>
 
             // <SnippetCallClassifyImages>
-            ClassifyImages(mlContext, predictTagsTsv, predictImagesFolder, outputImageClassifierZip);
+            ClassifyImages(mlContext, _predictTagsTsv, _predictImagesFolder, _outputImageClassifierZip);
             // </SnippetCallClassifyImages>
         }
 
         // <SnippetImageNetSettings>
         private struct ImageNetSettings
         {
-            public const int imageHeight = 224;
-            public const int imageWidth = 224;
-            public const float mean = 117;
-            public const float scale = 1;
-            public const bool channelsLast = true;
+            public const int ImageHeight = 224;
+            public const int ImageWidth = 224;
+            public const float Mean = 117;
+            public const float Scale = 1;
+            public const bool ChannelsLast = true;
         }
         // </SnippetImageNetSettings>
 
@@ -62,9 +62,9 @@ namespace TransferLearningTF
 
             Console.WriteLine("Read model");
             Console.WriteLine($"Model location: {featurizerModelLocation}");
-            Console.WriteLine($"Images folder: {trainImagesFolder}");
+            Console.WriteLine($"Images folder: {_trainImagesFolder}");
             Console.WriteLine($"Training file: {dataLocation}");
-            Console.WriteLine($"Default parameters: image size=({ImageNetSettings.imageWidth},{ImageNetSettings.imageHeight}), image mean: {ImageNetSettings.mean}");
+            Console.WriteLine($"Default parameters: image size=({ImageNetSettings.ImageWidth},{ImageNetSettings.ImageHeight}), image mean: {ImageNetSettings.Mean}");
             
             // <SnippetLoadData>
             var data = mlContext.Data.ReadFromTextFile<ImageNetData>(path: dataLocation, hasHeader: true);
@@ -74,9 +74,9 @@ namespace TransferLearningTF
             var pipeline = mlContext.Transforms.Conversion.MapValueToKey(outputColumnName: LabelTokey, inputColumnName: DefaultColumnNames.Label)
             // </SnippetMapValueToKey1>
                             // <SnippetImageTransforms>
-                            .Append(mlContext.Transforms.LoadImages(trainImagesFolder, (ImageReal, nameof(ImageNetData.ImagePath))))
-                            .Append(mlContext.Transforms.Resize(outputColumnName: ImageReal, imageWidth: ImageNetSettings.imageWidth, imageHeight: ImageNetSettings.imageHeight, inputColumnName: ImageReal))
-                            .Append(mlContext.Transforms.ExtractPixels(new ImagePixelExtractorTransformer.ColumnInfo(name: "input", inputColumnName: ImageReal, interleave: ImageNetSettings.channelsLast, offset: ImageNetSettings.mean)))
+                            .Append(mlContext.Transforms.LoadImages(_trainImagesFolder, (ImageReal, nameof(ImageNetData.ImagePath))))
+                            .Append(mlContext.Transforms.Resize(outputColumnName: ImageReal, imageWidth: ImageNetSettings.ImageWidth, imageHeight: ImageNetSettings.ImageHeight, inputColumnName: ImageReal))
+                            .Append(mlContext.Transforms.ExtractPixels(new ImagePixelExtractorTransformer.ColumnInfo(name: "input", inputColumnName: ImageReal, interleave: ImageNetSettings.ChannelsLast, offset: ImageNetSettings.Mean)))
                             // </SnippetImageTransforms>
                             // <SnippetScoreTensorFlowModel>
                             .Append(mlContext.Transforms.ScoreTensorFlowModel(modelLocation: featurizerModelLocation, outputColumnNames: new[] { "softmax2_pre_activation" }, inputColumnNames: new[] { "input" }))
