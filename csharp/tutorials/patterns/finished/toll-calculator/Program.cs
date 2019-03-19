@@ -32,7 +32,7 @@ namespace toll_calculator
             Console.WriteLine($"The toll for a three ride share is {tollCalc.CalculateToll(threeRideShare)}");
             Console.WriteLine($"The toll for a fullVan is {tollCalc.CalculateToll(fullVan)}");
 
-            Console.WriteLine($"The toll for an mepty taxi is {tollCalc.CalculateToll(emptyTaxi)}");
+            Console.WriteLine($"The toll for an empty taxi is {tollCalc.CalculateToll(emptyTaxi)}");
             Console.WriteLine($"The toll for a single fare taxi is {tollCalc.CalculateToll(singleFare)}");
             Console.WriteLine($"The toll for a double fare taxi is {tollCalc.CalculateToll(doubleFare)}");
             Console.WriteLine($"The toll for a full van taxi is {tollCalc.CalculateToll(fullVanPool)}");
@@ -51,7 +51,7 @@ namespace toll_calculator
             }
             catch (ArgumentException e)
             {
-                Console.WriteLine("Caught an argument exception when using the wrong type", DayOfWeek.Friday);
+                Console.WriteLine("Caught an argument exception when using the wrong type");
             }
             try
             {
