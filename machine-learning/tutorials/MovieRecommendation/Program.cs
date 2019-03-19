@@ -146,9 +146,7 @@ namespace MovieRecommendation
             // <SnippetSaveModel>
             var modelPath = Path.Combine(Environment.CurrentDirectory, "Data", "MovieRecommenderModel.zip");
             
-            using (var fs = new FileStream(modelPath,
-                FileMode.Create, FileAccess.Write, FileShare.Write))
-
+            using (var fs = new FileStream(modelPath, FileMode.Create, FileAccess.Write, FileShare.Write))
                 mlContext.Model.Save(model, fs);
             // </SnippetSaveModel>
         }
