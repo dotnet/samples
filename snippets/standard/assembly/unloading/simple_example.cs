@@ -34,7 +34,7 @@ class Test
         int result = (int)a.EntryPoint.Invoke(null, args);
         // </Snippet4>
 
-        // </Snippet5>
+        // <Snippet5>
         alc.Unload();
         // </Snippet5>
 

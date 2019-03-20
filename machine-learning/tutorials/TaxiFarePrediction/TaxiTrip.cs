@@ -7,25 +7,25 @@ namespace TaxiFarePrediction
     // <Snippet2>
     public class TaxiTrip
     {
-        [Column("0")]
+        [LoadColumn(0)]
         public string VendorId;
 
-        [Column("1")]
+        [LoadColumn(1)]
         public string RateCode;
-        
-        [Column("2")]
+
+        [LoadColumn(2)]
         public float PassengerCount;
-        
-        [Column("3")]
+
+        [LoadColumn(3)]
         public float TripTime;
-        
-        [Column("4")]
+
+        [LoadColumn(4)]
         public float TripDistance;
-        
-        [Column("5")]
+
+        [LoadColumn(5)]
         public string PaymentType;
-        
-        [Column("6")]
+
+        [LoadColumn(6)]
         public float FareAmount;
     }
 
