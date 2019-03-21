@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 // </SnippetAddUsings>
-namespace TransferLearningTF//.ImageData
+namespace TransferLearningTF
 {
     // <SnippetDeclareTypes>
     public class ImageNetData
@@ -28,10 +28,6 @@ namespace TransferLearningTF//.ImageData
         }
     }
 
-    public class ImageNetDataProbability : ImageNetData
-    {
-        public float Probability { get; set; }
-    }
 
     public class ImageNetPipeline
     {
