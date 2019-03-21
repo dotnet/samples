@@ -67,17 +67,19 @@ namespace TransferLearningTF
             Console.WriteLine($"Default parameters: image size=({ImageNetSettings.ImageWidth},{ImageNetSettings.ImageHeight}), image mean: {ImageNetSettings.Mean}");
 
             // <SnippetLoadData>
-            var data = mlContext.Data.ReadFromTextFile<ImageNetData>(path: dataLocation, hasHeader: true);
+            var data = mlContext.Data.ReadFromTextFile<ImageData>(path: dataLocation, hasHeader: true);
             // </SnippetLoadData>
 
             // <SnippetMapValueToKey1>
             var estimator = mlContext.Transforms.Conversion.MapValueToKey(outputColumnName: LabelTokey, inputColumnName: DefaultColumnNames.Label)
                             // </SnippetMapValueToKey1>
+                            // The image transforms transform the images into the model's expected format.
                             // <SnippetImageTransforms>
-                            .Append(mlContext.Transforms.LoadImages(_trainImagesFolder, (ImageReal, nameof(ImageNetData.ImagePath))))
+                            .Append(mlContext.Transforms.LoadImages(_trainImagesFolder, (ImageReal, nameof(ImageData.ImagePath))))
                             .Append(mlContext.Transforms.Resize(outputColumnName: ImageReal, imageWidth: ImageNetSettings.ImageWidth, imageHeight: ImageNetSettings.ImageHeight, inputColumnName: ImageReal))
                             .Append(mlContext.Transforms.ExtractPixels(new ImagePixelExtractorTransformer.ColumnInfo(name: "input", inputColumnName: ImageReal, interleave: ImageNetSettings.ChannelsLast, offset: ImageNetSettings.Mean)))
                             // </SnippetImageTransforms>
+                            // The ScoreTensorFlowModel transform scores the TensorFlow model and allows communication 
                             // <SnippetScoreTensorFlowModel>
                             .Append(mlContext.Transforms.ScoreTensorFlowModel(modelLocation: inputModelLocation, outputColumnNames: new[] { "softmax2_pre_activation" }, inputColumnNames: new[] { "input" }))
                             // </SnippetScoreTensorFlowModel>
@@ -86,7 +88,7 @@ namespace TransferLearningTF
                             // </SnippetAddTrainer>
                             // <SnippetMapValueToKey2>
                             .Append(mlContext.Transforms.Conversion.MapKeyToValue((PredictedLabelValue, DefaultColumnNames.PredictedLabel)));
-            // </SnippetMapValueToKey2>
+                            // </SnippetMapValueToKey2>
 
             // Train the model
             Console.WriteLine("=============== Training classification model ===============");
@@ -101,13 +103,17 @@ namespace TransferLearningTF
             var predictions = model.Transform(data);
             // </SnippetTransformData>
 
+            // Create enumerables for both the ImageData and ImagePrediction DataViews 
+            // for displaying results
             // <SnippetEnumerateDataViews>
-            var imageNetData = mlContext.CreateEnumerable<ImageNetData>(data, false, true);
-            var imageNetPredictionData = mlContext.CreateEnumerable<ImageNetPrediction>(predictions, false, true);
+            var imageData = mlContext.CreateEnumerable<ImageData>(data, false, true);
+            var imagePredictionData = mlContext.CreateEnumerable<ImagePrediction>(predictions, false, true);
             // </SnippetEnumerateDataViews>
 
+            // Read the tags.tsv file and add the filepath to the image file name 
+            // before loading into ImageData 
             // <SnippetCallPairAndDisplayResults1>
-            PairAndDisplayResults(imageNetData, imageNetPredictionData);
+            PairAndDisplayResults(imageData, imagePredictionData);
             // </SnippetCallPairAndDisplayResults1>
 
             // Get some performance metrics on the model using training data
@@ -146,32 +152,47 @@ namespace TransferLearningTF
                 loadedModel = mlContext.Model.Load(fileStream);
             // </SnippetLoadModel>
 
+            // Read the tags.tsv file and add the filepath to the image file name 
+            // before loading into ImageData 
             // <SnippetReadFromCSV> 
-            var imageNetData = ImageNetData.ReadFromCsv(dataLocation, imagesFolder);
-            var imageNetDataView = mlContext.Data.ReadFromEnumerable<ImageNetData>(imageNetData);
+            var imageData = ReadFromTsv(dataLocation, imagesFolder);
+            var imageDataView = mlContext.Data.ReadFromEnumerable<ImageData>(imageData);
             // </SnippetReadFromCSV>  
             
             // <SnippetPredict>  
-            var predictions = loadedModel.Transform(imageNetDataView);
-            var imageNetPredictionData = mlContext.CreateEnumerable<ImageNetPrediction>(predictions, false,true);
+            var predictions = loadedModel.Transform(imageDataView);
+            var imagePredictionData = mlContext.CreateEnumerable<ImagePrediction>(predictions, false,true);
             // </SnippetPredict> 
 
             Console.WriteLine("=============== Making classifications ===============");
             // <SnippetCallPairAndDisplayResults2>
-            PairAndDisplayResults(imageNetData, imageNetPredictionData);
+            PairAndDisplayResults(imageData, imagePredictionData);
             // </SnippetCallPairAndDisplayResults2> 
 
         }
 
-        private static void PairAndDisplayResults(IEnumerable<ImageNetData> imageNetData, IEnumerable<ImageNetPrediction> imageNetPredictionData)
+        public static IEnumerable<ImageData> ReadFromTsv(string file, string folder)
         {
-            // Builds pairs of (image, prediction)
+            //Need to parse through the tags.tsv file to combine the file path to the 
+            // image name for the ImagePath property so that the image file can be found.
+            return File.ReadAllLines(file)
+             .Select(line => line.Split('\t'))
+             .Select(line => new ImageData()
+             {
+                 ImagePath = Path.Combine(folder, line[0]),
+                 Label = line[1],
+             });
+        }
+
+        private static void PairAndDisplayResults(IEnumerable<ImageData> imageNetData, IEnumerable<ImagePrediction> imageNetPredictionData)
+        {
+            // Builds pairs of (image, prediction) to sync up for display
             // <SnippetBuildImagePredictionPairs>
-            IEnumerable<(ImageNetData image, ImageNetPrediction prediction)> imagesAndPredictions = imageNetData.Zip(imageNetPredictionData, (image, prediction) => (image, prediction));
+            IEnumerable<(ImageData image, ImagePrediction prediction)> imagesAndPredictions = imageNetData.Zip(imageNetPredictionData, (image, prediction) => (image, prediction));
             // </SnippetBuildImagePredictionPairs>
 
             // <SnippetDisplayPredictions>
-            foreach ((ImageNetData image, ImageNetPrediction prediction) item in imagesAndPredictions)
+            foreach ((ImageData image, ImagePrediction prediction) item in imagesAndPredictions)
             {
                 Console.WriteLine($"Image: {Path.GetFileName(item.image.ImagePath)} predicted as: {item.prediction.PredictedLabelValue} with score: {item.prediction.Score.Max()} ");
             }
