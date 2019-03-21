@@ -36,9 +36,9 @@ namespace TransferLearningTF
             MLContext mlContext = new MLContext(seed:1);
             // </SnippetCreateMLContext>
 
-            // <SnippetCallBuildAndTrain>
-            BuildAndTrainModel(mlContext, _trainTagsTsv, _trainImagesFolder, _inceptionPb, _outputImageClassifierZip);
-            // </SnippetCallBuildAndTrain>
+            // <SnippetCallReuseAndTuneInceptionModel>
+            ReuseAndTuneInceptionModel(mlContext, _trainTagsTsv, _trainImagesFolder, _inceptionPb, _outputImageClassifierZip);
+            // </SnippetCallReuseAndTuneInceptionModel>
 
             // <SnippetCallClassifyImages>
             ClassifyImages(mlContext, _predictTagsTsv, _predictImagesFolder, _outputImageClassifierZip);
@@ -57,7 +57,7 @@ namespace TransferLearningTF
         // </SnippetInceptionSettings>
 
         // Build and train model
-        public static void BuildAndTrainModel(MLContext mlContext, string dataLocation, string imagesFolder, string inputModelLocation, string outputModelLocation)
+        public static void ReuseAndTuneInceptionModel(MLContext mlContext, string dataLocation, string imagesFolder, string inputModelLocation, string outputModelLocation)
         {
 
             Console.WriteLine("Read model");
