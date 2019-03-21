@@ -45,8 +45,8 @@ namespace TransferLearningTF
             // </SnippetCallClassifyImages>
         }
 
-        // <SnippetImageNetSettings>
-        private struct ImageNetSettings
+        // <SnippetInceptionSettings>
+        private struct InceptionSettings
         {
             public const int ImageHeight = 224;
             public const int ImageWidth = 224;
@@ -54,7 +54,7 @@ namespace TransferLearningTF
             public const float Scale = 1;
             public const bool ChannelsLast = true;
         }
-        // </SnippetImageNetSettings>
+        // </SnippetInceptionSettings>
 
         // Build and train model
         public static void BuildAndTrainModel(MLContext mlContext, string dataLocation, string imagesFolder, string inputModelLocation, string outputModelLocation)
@@ -64,7 +64,7 @@ namespace TransferLearningTF
             Console.WriteLine($"Model location: {inputModelLocation}");
             Console.WriteLine($"Images folder: {_trainImagesFolder}");
             Console.WriteLine($"Training file: {dataLocation}");
-            Console.WriteLine($"Default parameters: image size=({ImageNetSettings.ImageWidth},{ImageNetSettings.ImageHeight}), image mean: {ImageNetSettings.Mean}");
+            Console.WriteLine($"Default parameters: image size=({InceptionSettings.ImageWidth},{InceptionSettings.ImageHeight}), image mean: {InceptionSettings.Mean}");
 
             // <SnippetLoadData>
             var data = mlContext.Data.ReadFromTextFile<ImageData>(path: dataLocation, hasHeader: true);
@@ -76,8 +76,8 @@ namespace TransferLearningTF
                             // The image transforms transform the images into the model's expected format.
                             // <SnippetImageTransforms>
                             .Append(mlContext.Transforms.LoadImages(_trainImagesFolder, (ImageReal, nameof(ImageData.ImagePath))))
-                            .Append(mlContext.Transforms.Resize(outputColumnName: ImageReal, imageWidth: ImageNetSettings.ImageWidth, imageHeight: ImageNetSettings.ImageHeight, inputColumnName: ImageReal))
-                            .Append(mlContext.Transforms.ExtractPixels(new ImagePixelExtractorTransformer.ColumnInfo(name: "input", inputColumnName: ImageReal, interleave: ImageNetSettings.ChannelsLast, offset: ImageNetSettings.Mean)))
+                            .Append(mlContext.Transforms.Resize(outputColumnName: ImageReal, imageWidth: InceptionSettings.ImageWidth, imageHeight: InceptionSettings.ImageHeight, inputColumnName: ImageReal))
+                            .Append(mlContext.Transforms.ExtractPixels(new ImagePixelExtractorTransformer.ColumnInfo(name: "input", inputColumnName: ImageReal, interleave: InceptionSettings.ChannelsLast, offset: InceptionSettings.Mean)))
                             // </SnippetImageTransforms>
                             // The ScoreTensorFlowModel transform scores the TensorFlow model and allows communication 
                             // <SnippetScoreTensorFlowModel>
@@ -171,19 +171,6 @@ namespace TransferLearningTF
 
         }
 
-        public static IEnumerable<ImageData> ReadFromTsv(string file, string folder)
-        {
-            //Need to parse through the tags.tsv file to combine the file path to the 
-            // image name for the ImagePath property so that the image file can be found.
-            return File.ReadAllLines(file)
-             .Select(line => line.Split('\t'))
-             .Select(line => new ImageData()
-             {
-                 ImagePath = Path.Combine(folder, line[0]),
-                 Label = line[1],
-             });
-        }
-
         private static void PairAndDisplayResults(IEnumerable<ImageData> imageNetData, IEnumerable<ImagePrediction> imageNetPredictionData)
         {
             // Builds pairs of (image, prediction) to sync up for display
@@ -197,6 +184,22 @@ namespace TransferLearningTF
                 Console.WriteLine($"Image: {Path.GetFileName(item.image.ImagePath)} predicted as: {item.prediction.PredictedLabelValue} with score: {item.prediction.Score.Max()} ");
             }
             // </SnippetDisplayPredictions>
+        }
+
+        public static IEnumerable<ImageData> ReadFromTsv(string file, string folder)
+        {
+            //Need to parse through the tags.tsv file to combine the file path to the 
+            // image name for the ImagePath property so that the image file can be found.
+
+            // <SnippetReadFromTsv>
+            return File.ReadAllLines(file)
+             .Select(line => line.Split('\t'))
+             .Select(line => new ImageData()
+             {
+                 ImagePath = Path.Combine(folder, line[0]),
+                 Label = line[1],
+             });
+            // </SnippetReadFromTsv>
         }
     }
 
