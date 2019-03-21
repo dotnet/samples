@@ -1,7 +1,6 @@
 ' NclSslClientSync
 '<snippet0>
-Imports System
-Imports System.Collections
+mports System.Collections
 Imports System.Net
 Imports System.Net.Security
 Imports System.Net.Sockets
