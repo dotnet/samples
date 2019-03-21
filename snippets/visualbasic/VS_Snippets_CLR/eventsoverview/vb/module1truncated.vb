@@ -2,7 +2,7 @@
 Module Module1
 
     Sub Main()
-        Dim c As Counter = New Counter()
+        Dim c As New Counter()
         AddHandler c.ThresholdReached, AddressOf c_ThresholdReached
 
         ' provide remaining implementation for the class
