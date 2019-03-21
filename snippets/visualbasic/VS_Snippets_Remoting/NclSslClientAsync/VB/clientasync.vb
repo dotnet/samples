@@ -6,7 +6,6 @@ Imports System.Net.Sockets
 Imports System.Net.Security
 Imports System.Net
 Imports System.Collections
-Imports System
 Imports System.Threading
 
 ' NclSslClientAsync
