@@ -85,7 +85,7 @@ Namespace Examples.System.Net
 
             ' Read the  message sent by the server.
             ' The end of the message is signaled using the "<EOF>" marker.
-            Dim buffer = New Byte(2047) {}
+            Dim buffer = New Byte(2048) {}
             Dim messageData = New StringBuilder()
             Dim bytes As Integer
 
