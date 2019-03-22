@@ -1,6 +1,6 @@
 ' NclSslClientSync
 '<snippet0>
-mports System.Collections
+Imports System.Collections
 Imports System.Net
 Imports System.Net.Security
 Imports System.Net.Sockets
@@ -14,7 +14,6 @@ Namespace Examples.System.Net
     Public Class SslTcpClient
         
 '       <snippet1>
-
         ' The following method is invoked by the RemoteCertificateValidationDelegate.
         Public Shared Function ValidateServerCertificate(
             sender As Object, 
@@ -78,8 +77,8 @@ Namespace Examples.System.Net
             Console.WriteLine("Client closed.")
         End Sub
         '</snippet3>
+        
         '<snippet6>
-
         Private Shared Function ReadMessage(sslStream As SslStream) As String
 
             ' Read the  message sent by the server.
