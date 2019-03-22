@@ -38,7 +38,7 @@ namespace TransferLearningTF
 
             // <SnippetCallReuseAndTuneInceptionModel>
             ReuseAndTuneInceptionModel(mlContext, _trainTagsTsv, _trainImagesFolder, _inceptionPb, _outputImageClassifierZip);
-            // </SnippetCallReuseAndTuneInceptionModel>
+            // </CallSnippetReuseAndTuneInceptionModel>
 
             // <SnippetCallClassifyImages>
             ClassifyImages(mlContext, _predictTagsTsv, _predictImagesFolder, _outputImageClassifierZip);
@@ -154,10 +154,10 @@ namespace TransferLearningTF
 
             // Read the tags.tsv file and add the filepath to the image file name 
             // before loading into ImageData 
-            // <SnippetReadFromCSV> 
+            // <SnippetReadFromTSV> 
             var imageData = ReadFromTsv(dataLocation, imagesFolder);
             var imageDataView = mlContext.Data.ReadFromEnumerable<ImageData>(imageData);
-            // </SnippetReadFromCSV>  
+            // </SnippetReadFromTSV>  
             
             // <SnippetPredict>  
             var predictions = loadedModel.Transform(imageDataView);
