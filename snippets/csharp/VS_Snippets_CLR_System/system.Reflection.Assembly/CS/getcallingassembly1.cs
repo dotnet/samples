@@ -22,18 +22,20 @@ namespace FirstAssembly
 }
 
 // Assembly SecondAssembly
-//using System;
-//using System.Reflection;
-//using System.Runtime.CompilerServices;
+using System;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 
 namespace SecondAssembly
 {
-    class InSecondAssembly () {
-  [MethodImpl(MethodImplOptions.NoInlining)]
-    public static void OtherMethod()
+    class InSecondAssembly
     {
-        Console.WriteLine("OtherMehod executing assembly: " + Assembly.GetExecutingAssembly().FullName);
-        Console.WriteLine("OtherMethod called from: " + Assembly.GetCallingAssembly().FullName);
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        public static void OtherMethod()
+        {
+            Console.WriteLine("OtherMehod executing assembly: " + Assembly.GetExecutingAssembly().FullName);
+            Console.WriteLine("OtherMethod called from: " + Assembly.GetCallingAssembly().FullName);
+        }
     }
 }
 // The example produces output like the following:
