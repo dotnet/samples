@@ -58,7 +58,7 @@ class MyProcessModuleClass
         }
         catch (Exception e)
         {
-            Console.WriteLine("Exception : " + e.Message);
+            Console.WriteLine($"Exception : {e.Message}");
         }
     }
 }

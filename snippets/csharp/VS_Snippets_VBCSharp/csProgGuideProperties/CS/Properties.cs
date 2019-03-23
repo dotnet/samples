@@ -66,7 +66,7 @@ namespace CsCsrefProgrammingProperties
             public Employee()
             {
                 // Calculate the employee's number:
-                counter = ++counter + NumberOfEmployees;
+                counter = ++NumberOfEmployees;
             }
         }
 
@@ -422,7 +422,7 @@ namespace CsCsrefProgrammingProperties
 
             public Employee()  // constructor
             {
-                counter = ++counter + numberOfEmployees;
+                counter = ++numberOfEmployees;
             }
         }
 
@@ -563,7 +563,7 @@ namespace CsCsrefProgrammingProperties
             Console.WriteLine("names_3[0] = {0}", ro.Names_3[0]);
             
 
-            //throws runtime excepctions on unimplemented interface methods
+            //throws runtime exceptions on unimplemented interface methods
             IList<string> myList = (IList<string>)ro.Names_3;
             try
             {

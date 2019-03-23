@@ -187,7 +187,7 @@ Namespace DataflowBatchDatabase
                ' Update total error count.
              Console.WriteLine("Received a batch...")
              For Each e As Employee In data.Item1
-                 Console.WriteLine("Last={0} First={1} ID={2}", e.FirstName, e.LastName, e.EmployeeID)
+                 Console.WriteLine("Last={0} First={1} ID={2}", e.LastName, e.FirstName, e.EmployeeID)
              Next e
              Console.WriteLine("There were {0} errors in this batch...", data.Item2.Count)
              totalErrors += data.Item2.Count
@@ -293,14 +293,14 @@ End Namespace
 'Adding 16 entries to Employee table...
 'Selecting items from Employee table...
 'Received a batch...
-'Last=Tom First=Jones ID=21
-'Last=John First=Jones ID=24
-'Last=Tom First=Smith ID=26
-'Last=Tom First=Jones ID=21
+'Last=Jones First=Tom ID=21
+'Last=Jones First=John ID=24
+'Last=Smith First=Tom ID=26
+'Last=Jones First=Tom ID=21
 'There were 4 errors in this batch...
 'Received a batch...
-'Last=Tom First=Smith ID=26
-'Last=Mike First=Jones ID=28
+'Last=Smith First=Tom ID=26
+'Last=Jones First=Mike ID=28
 'There were 0 errors in this batch...
 'Finished. There were 4 total errors.
 '

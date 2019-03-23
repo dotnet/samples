@@ -4,15 +4,6 @@ using System.Text;
 
 namespace CsCsrefProgrammingObjects
 {
-    //-----------------------------------------------------------------------------
-    // 10/12/04 From john kenn per MVP Feedback:
-    // Originally this was called POINT, 
-    // but as the framework already includes a POINT structure, this was troublesome
-    //-----------------------------------------------------------------------------
-    // 05/06/05 Per mblome
-    // Yes, use Coords instead of Point everywhere
-    //-----------------------------------------------------------------------------
-
 
     //-----------------------------------------------------------------------------
     //<Snippet1>
@@ -113,7 +104,7 @@ namespace CsCsrefProgrammingObjects
             // Override the ToString method:
             public override string ToString()
             {
-                return (String.Format("({0},{1})", x, y));
+                return $"({x},{y})";
             }
         }
 
@@ -375,7 +366,7 @@ namespace CsCsrefProgrammingObjects
         // Private Constructor:
         private NLog() { }
 
-        public static double E = Math.E;  //2.71828...
+        public static double e = Math.E;  //2.71828...
     }
     //</Snippet11>
 
@@ -472,7 +463,7 @@ namespace CsCsrefProgrammingObjects
             // actual bus times. Do not do this in your actual bus schedule program!
             Console.WriteLine("{0} is starting its route {1:N2} minutes after global start time {2}.",
                                     this.RouteNumber,
-                                    elapsedTime.TotalMilliseconds,
+                                    elapsedTime.Milliseconds,
                                     globalStartTime.ToShortTimeString());
         }
     }
@@ -508,7 +499,6 @@ namespace CsCsrefProgrammingObjects
         71 is starting its route 6.00 minutes after global start time 3:57 PM.
         72 is starting its route 31.00 minutes after global start time 3:57 PM.      
    */
-
     //</Snippet15>
 
 
@@ -865,7 +855,6 @@ class TestPerson
         Temperature in Celsius: -6.67
         Press any key to exit.
      */
-
     //</Snippet31>
 
 
@@ -1261,7 +1250,6 @@ class TestPerson
     public class Taxi
     {
         public bool IsInitialized;
-
         public Taxi()
         {
             IsInitialized = true;
@@ -1345,7 +1333,7 @@ class TestPerson
                 //<Snippet58>
                 public Manager(int initialData)
                 {
-                    // Add additional code here.
+                    //Add further instructions here.
                 }
                 //</Snippet58>
             }
@@ -1363,7 +1351,7 @@ class TestPerson
                 public Manager(int initialData)
                     : base()
                 {
-                    // Add additional code here.
+                    //Add further instructions here.
                 }
                 //</Snippet57>
             }
@@ -1629,7 +1617,7 @@ class TestPerson
     //<Snippet86>
     class Car
     {
-        ~Car()  // destructor
+        ~Car()  // finalizer
         {
             // cleanup statements...
         }
@@ -1688,7 +1676,6 @@ namespace RainyDay
     {
         public const double Pi = 3.14159;
         public const int SpeedOfLight = 300000; // km per sec.
-
     }
     class Program
     {
@@ -1806,10 +1793,7 @@ namespace RainyDay
         ReferenceEquals(strA, strB) = True
         strA = "Goodbye world!" strB = "Hello world!"
         After strA changes, ReferenceEquals(strA, strB) = False
-        ReferenceEquals(stringC, strB) = False
-        stringC == strB = True
     */
-
     //</Snippet90>  
 
 

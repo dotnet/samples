@@ -66,12 +66,12 @@ namespace ProcessSample
 
 
                 Console.WriteLine();
-                Console.WriteLine($"  Process exit code         : {myProcess.ExitCode}");
+                Console.WriteLine($"  Process exit code          : {myProcess.ExitCode}");
 
                 // Display peak memory statistics for the process.
-                Console.WriteLine($"  Peak physical memory usage: {peakWorkingSet}");
-                Console.WriteLine($"  Peak paged memory usage   : {peakPagedMem}");
-                Console.WriteLine($"  Peak virtual memory usage : {peakVirtualMem}");
+                Console.WriteLine($"  Peak physical memory usage : {peakWorkingSet}");
+                Console.WriteLine($"  Peak paged memory usage    : {peakPagedMem}");
+                Console.WriteLine($"  Peak virtual memory usage  : {peakVirtualMem}");
             }
         }
     }

@@ -13,7 +13,7 @@ public abstract class Temperature : IConvertible
    public decimal Value
    { 
       get { return this.temp; } 
-      set { this.temp = Value; }        
+      set { this.temp = value; }        
    }
 
    public override string ToString()

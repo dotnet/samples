@@ -57,7 +57,6 @@ Module Module1
         For Each londonCust In londonCusts4
             Console.WriteLine(londonCust.Name & " " & londonCust.Phone)
         Next
-
         '</Snippet6>
 
 

@@ -3,9 +3,12 @@
 This repo contains all the sample code that is part of any topic under
 the .NET documentation. There are several different projects that
 are organized in sub-folders. These sub-folders are organized similarly
-to the organization of the docs for .NET.
+to the organization of the docs for .NET. Some of the articles will have more than one sample associated with them.
 
-Some of the articles will have more than one sample associated with them. 
+The content team tracks issues for .NET documentation in the [dotnet/docs](https://github.com/dotnet/docs) and [dotnet/dotnet-api-docs](https://github.com/dotnet/dotnet-api-docs) repositories. Issues are turned off on this repository. File issues against existing samples and suggestions for new samples in those repositories. If you're not sure where, choose [dotnet/docs](https://github.com/dotnet/docs/issues). This process keeps the issues associated with the articles that explain the concepts for each sample. The best process is to file an issue from the feedback control at the bottom of each docs page: 
+- For existing samples, file the issue on the page with the sample. 
+- To suggest new samples, file the issue on the index page where you want to see the new sample.
+
 
 There are two classes of code in this repository:
 
@@ -73,6 +76,7 @@ To create a sample:
 2. Write the topic that explains the concepts demonstrated in your sample (example: `docs/standard/linq/where-clause.md`).
 3. Write your sample (example: `WhereClause-Sample1.cs`).
 4. Create a Program.cs with a Main entry point that calls your samples. If there is already one there, add the call to your sample:
+
     ```csharp
     public class Program
     {
@@ -85,6 +89,9 @@ To create a sample:
         }
     }
     ```
+    
+5. Don't check in the solution file if it contains only one project.
+
 To build and run your sample:
 
 

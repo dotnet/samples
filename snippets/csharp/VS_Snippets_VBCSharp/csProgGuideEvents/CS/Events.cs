@@ -236,7 +236,7 @@ namespace DotNetEvents
             if (handler != null)
             {
                 // Format the string to send inside the CustomEventArgs parameter
-                e.Message += String.Format(" at {0}", DateTime.Now.ToString());
+                e.Message += $" at {DateTime.Now}";
 
                 // Use the () operator to raise the event.
                 handler(this, e);
@@ -451,36 +451,43 @@ namespace WrapEvent
 //-----------------------------------------------------------------------------
 namespace WrapHash
 {
-    using System;
     //<Snippet9>
+    using System;
+    using System.Collections.Generic;
+
     public delegate void EventHandler1(int i);
     public delegate void EventHandler2(string s);
 
     public class PropertyEventsSample
     {
-        private System.Collections.Generic.Dictionary<string, System.Delegate> eventTable;
+        private const string Event1Key = nameof(Event1);
+        private const string Event2Key = nameof(Event2);
+
+        private readonly Dictionary<string, Delegate> handlers;
 
         public PropertyEventsSample()
         {
-            eventTable = new System.Collections.Generic.Dictionary<string, System.Delegate>();
-            eventTable.Add("Event1", null);
-            eventTable.Add("Event2", null);
+            handlers = new Dictionary<string, Delegate>
+            {
+                [Event1Key] = null,
+                [Event2Key] = null
+            };
         }
 
         public event EventHandler1 Event1
         {
             add
             {
-                lock (eventTable)
+                lock (handlers)
                 {
-                    eventTable["Event1"] = (EventHandler1)eventTable["Event1"] + value;
+                    handlers[Event1Key] = (EventHandler1)handlers[Event1Key] + value;
                 }
             }
             remove
             {
-                lock (eventTable)
+                lock (handlers)
                 {
-                    eventTable["Event1"] = (EventHandler1)eventTable["Event1"] - value;
+                    handlers[Event1Key] = (EventHandler1)handlers[Event1Key] - value;
                 }
             }
         }
@@ -489,68 +496,64 @@ namespace WrapHash
         {
             add
             {
-                lock (eventTable)
+                lock (handlers)
                 {
-                    eventTable["Event2"] = (EventHandler2)eventTable["Event2"] + value;
+                    handlers[Event2Key] = (EventHandler2)handlers[Event2Key] + value;
                 }
             }
             remove
             {
-                lock (eventTable)
+                lock (handlers)
                 {
-                    eventTable["Event2"] = (EventHandler2)eventTable["Event2"] - value;
+                    handlers[Event2Key] = (EventHandler2)handlers[Event2Key] - value;
                 }
             }
         }
 
         internal void RaiseEvent1(int i)
         {
-            EventHandler1 handler1;
-            if (null != (handler1 = (EventHandler1)eventTable["Event1"]))
+            EventHandler1 handler;
+            lock (handlers)
             {
-                handler1(i);
+                handler = (EventHandler1)handlers[Event1Key];
             }
+            handler?.Invoke(i);
         }
 
         internal void RaiseEvent2(string s)
         {
-            EventHandler2 handler2;
-            if (null != (handler2 = (EventHandler2)eventTable["Event2"]))
+            EventHandler2 handler;
+            lock (handlers)
             {
-                handler2(s);
+                handler = (EventHandler2)handlers[Event2Key];
             }
+            handler?.Invoke(s);
         }
     }
 
-    public class TestClass
+    public static class TestClass
     {
-        public static void Delegate1Method(int i)
-        {
-            System.Console.WriteLine(i);
-        }
+        private static void Delegate1Method(int i) => Console.WriteLine(i);
 
-        public static void Delegate2Method(string s)
-        {
-            System.Console.WriteLine(s);
-        }
+        private static void Delegate2Method(string s) => Console.WriteLine(s);
 
-        static void Main()
+        private static void Main()
         {
-            PropertyEventsSample p = new PropertyEventsSample();
+            var p = new PropertyEventsSample();
 
-            p.Event1 += new EventHandler1(TestClass.Delegate1Method);
-            p.Event1 += new EventHandler1(TestClass.Delegate1Method);
-            p.Event1 -= new EventHandler1(TestClass.Delegate1Method);
+            p.Event1 += Delegate1Method;
+            p.Event1 += Delegate1Method;
+            p.Event1 -= Delegate1Method;
             p.RaiseEvent1(2);
 
-            p.Event2 += new EventHandler2(TestClass.Delegate2Method);
-            p.Event2 += new EventHandler2(TestClass.Delegate2Method);
-            p.Event2 -= new EventHandler2(TestClass.Delegate2Method);
+            p.Event2 += Delegate2Method;
+            p.Event2 += Delegate2Method;
+            p.Event2 -= Delegate2Method;
             p.RaiseEvent2("TestString");
 
             // Keep the console window open in debug mode.
-            System.Console.WriteLine("Press any key to exit.");
-            System.Console.ReadKey();
+            Console.WriteLine("Press any key to exit.");
+            Console.ReadKey();
         }
     }
     /* Output:
@@ -595,6 +598,7 @@ namespace WrapTwoInterfaceEvents
         // Explicit interface implementation required.
         // Associate IDrawingObject's event with
         // PreDrawEvent
+        #region IDrawingObjectOnDraw
         event EventHandler IDrawingObject.OnDraw
         {
             add
@@ -612,6 +616,7 @@ namespace WrapTwoInterfaceEvents
                 }
             }
         }
+        #endregion
         // Explicit interface implementation required.
         // Associate IShape's event with
         // PostDrawEvent
@@ -640,19 +645,12 @@ namespace WrapTwoInterfaceEvents
         public void Draw()
         {
             // Raise IDrawingObject's event before the object is drawn.
-            EventHandler handler = PreDrawEvent;
-            if (handler != null)
-            {
-                handler(this, new EventArgs());
-            }
+            PreDrawEvent?.Invoke(this, EventArgs.Empty);
+
             Console.WriteLine("Drawing a shape.");
 
-            // RaiseIShape's event after the object is drawn.
-            handler = PostDrawEvent;
-            if (handler != null)
-            {
-                handler(this, new EventArgs());
-            }
+            // Raise IShape's event after the object is drawn.
+            PostDrawEvent?.Invoke(this, EventArgs.Empty);
         }
     }
     public class Subscriber1
@@ -661,7 +659,7 @@ namespace WrapTwoInterfaceEvents
         public Subscriber1(Shape shape)
         {
             IDrawingObject d = (IDrawingObject)shape;
-            d.OnDraw += new EventHandler(d_OnDraw);
+            d.OnDraw += d_OnDraw;
         }
 
         void d_OnDraw(object sender, EventArgs e)
@@ -675,7 +673,7 @@ namespace WrapTwoInterfaceEvents
         public Subscriber2(Shape shape)
         {
             IShape d = (IShape)shape;
-            d.OnDraw += new EventHandler(d_OnDraw);
+            d.OnDraw += d_OnDraw;
         }
 
         void d_OnDraw(object sender, EventArgs e)
@@ -724,7 +722,7 @@ namespace ImplementInterfaceEvents
         public event EventHandler ShapeChanged;
         void ChangeShape()
         {
-            // Do something here before the event…
+            // Do something here before the eventï¿½
 
             OnShapeChanged(new MyEventArgs(/*arguments*/));
 

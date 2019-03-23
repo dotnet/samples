@@ -1,4 +1,4 @@
-﻿
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -66,7 +66,7 @@ namespace OfficeProgrammingWalkthrough
             wordApp.Visible = true;
 
             // The Add method has four reference parameters, all of which are 
-            // optional. Visual C# 2010 allows you to omit arguments for them if
+            // optional. Visual C# allows you to omit arguments for them if
             // the default values are what you want.
             wordApp.Documents.Add();
 
@@ -140,7 +140,7 @@ namespace OfficeProgrammingWalkthrough
 
             // Create a new, empty workbook and add it to the collection returned 
             // by property Workbooks. The new workbook becomes the active workbook.
-            // Add has an optional parameter for specifying a praticular template. 
+            // Add has an optional parameter for specifying a particular template. 
             // Because no argument is sent in this example, Add creates a new workbook. 
             excelApp.Workbooks.Add();
 

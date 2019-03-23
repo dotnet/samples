@@ -24,23 +24,8 @@ namespace IrisFlowerClustering
             var mlContext = new MLContext(seed: 0);
             // </SnippetCreateContext>
 
-            // <SnippetSetupTextLoader>
-            TextLoader textLoader = mlContext.Data.CreateTextLoader(new TextLoader.Arguments()
-            {
-                Separators = new char[] { ',' },
-                HasHeader = false,
-                Column = new[]
-                            {
-                                new TextLoader.Column("SepalLength", DataKind.R4, 0),
-                                new TextLoader.Column("SepalWidth", DataKind.R4, 1),
-                                new TextLoader.Column("PetalLength", DataKind.R4, 2),
-                                new TextLoader.Column("PetalWidth", DataKind.R4, 3)
-                            }
-            });
-            // </SnippetSetupTextLoader>
-
             // <SnippetCreateDataView>
-            IDataView dataView = textLoader.Read(_dataPath);
+            IDataView dataView = mlContext.Data.LoadFromTextFile<IrisData>(_dataPath, hasHeader: false, separatorChar: ',');
             // </SnippetCreateDataView>
 
             // <SnippetCreatePipeline>

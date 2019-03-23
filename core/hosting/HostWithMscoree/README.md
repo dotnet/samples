@@ -1,7 +1,7 @@
 .NET Core Hosting Sample
 ==================================
 
-This sample demonstrates a very simple .NET Core host using the `ICLRRuntimeHost2` interface in mscoree.h. It is part of the [.NET Core hosting tutorial](https://docs.microsoft.com/dotnet/core/tutorials/netcore-hosting). Please see that topic for a more detailed explanation of this sample. There are also alternative hosting APIs (in [CoreClrHost.h](https://github.com/dotnet/coreclr/blob/master/src/coreclr/hosts/inc/coreclrhost.h)) that may be easier to use. They are demonstrated in the [HostWithCoreClrHost folder](../HostWithCoreClrHost) of this repository. 
+This sample demonstrates a very simple .NET Core host using the `ICLRRuntimeHost4` interface in mscoree.h. It is part of the [.NET Core hosting tutorial](https://docs.microsoft.com/dotnet/core/tutorials/netcore-hosting). Please see that topic for a more detailed explanation of this sample. There are also alternative hosting APIs (in [CoreClrHost.h](https://github.com/dotnet/coreclr/blob/master/src/coreclr/hosts/inc/coreclrhost.h)) that may be easier to use. They are demonstrated in the [HostWithCoreClrHost folder](../HostWithCoreClrHost) of this repository. 
 
 About .NET Core Hosts
 ---------------------

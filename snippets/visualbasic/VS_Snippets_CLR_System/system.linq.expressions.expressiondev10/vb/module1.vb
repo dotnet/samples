@@ -780,7 +780,7 @@ Module Module1
         ' Add the following directive to your file:
         ' Imports System.Linq.Expressions 
 
-        ' This expression represents a type convertion operation.        
+        ' This expression represents a type conversion operation.        
         Dim convertExpr As Expression = Expression.Convert(
                                     Expression.Constant(5.5),
                                     GetType(Int16)

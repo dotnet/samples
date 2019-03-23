@@ -1,15 +1,11 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <FrameworkReference Include="Microsoft.DesktopUI" />
-  </ItemGroup>
-
-  <ItemGroup>
+   <ItemGroup>
     <ProjectReference Include="..\WindowsFormsForm\WindowsFormsForm.csproj" />
   </ItemGroup>
 

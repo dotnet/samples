@@ -1,4 +1,4 @@
-﻿//<snippet5555>
+//<snippet5555>
 using System;
 using System.Linq;
 using System.Collections;
@@ -340,7 +340,7 @@ namespace CsProgGuideTypes
             // Change the value of i.
             i = 456;  
 
-            // The change in i does not effect the value stored in o.
+            // The change in i doesn't affect the value stored in o.
             System.Console.WriteLine("The value-type value = {0}", i);
             System.Console.WriteLine("The object-type value = {0}", o);
         }
@@ -421,159 +421,6 @@ namespace CsProgGuideTypes
             //</Snippet23>
         }
     }
-    //-------------------------------------------------------------------------
-    public class ConvertStringExample1
-    {
-        //<Snippet24>
-        static void Main(string[] args)
-        {
-            int numVal = -1;
-            bool repeat = true;
-
-            while (repeat)
-            {
-                Console.WriteLine("Enter a number between −2,147,483,648 and +2,147,483,647 (inclusive).");
-
-                string input = Console.ReadLine();
-
-                // ToInt32 can throw FormatException or OverflowException.
-                try
-                {
-                    numVal = Convert.ToInt32(input);
-                }
-                catch (FormatException e)
-                {
-                    Console.WriteLine("Input string is not a sequence of digits.");
-                }
-                catch (OverflowException e)
-                {
-                    Console.WriteLine("The number cannot fit in an Int32.");
-                }
-                finally
-                {
-                    if (numVal < Int32.MaxValue)
-                    {
-                        Console.WriteLine("The new value is {0}", numVal + 1);
-                    }
-                    else
-                    {
-                        Console.WriteLine("numVal cannot be incremented beyond its current value");
-                    }
-                }
-                Console.WriteLine("Go again? Y/N");
-                string go = Console.ReadLine();
-                if (go == "Y" || go == "y")
-                {
-                    repeat = true;
-                }
-                else
-                {
-                    repeat = false;
-                }
-            }
-            // Keep the console open in debug mode.
-            Console.WriteLine("Press any key to exit.");
-            Console.ReadKey();    
-        }
-        // Sample Output:
-        // Enter a number between -2,147,483,648 and +2,147,483,647 (inclusive).
-        // 473
-        // The new value is 474
-        // Go again? Y/N
-        // y
-        // Enter a number between -2,147,483,648 and +2,147,483,647 (inclusive).
-        // 2147483647
-        // numVal cannot be incremented beyond its current value
-        // Go again? Y/N
-        // Y
-        // Enter a number between -2,147,483,648 and +2,147,483,647 (inclusive).
-        // -1000
-        // The new value is -999
-        // Go again? Y/N
-        // n
-        // Press any key to exit.
-        //</Snippet24>
-    }
-
-    public class ConvertStringExample3
-    {
-        static void Main(string[] args)
-        {
-            //<Snippet25>
-            int numVal = Int32.Parse("-105");
-            Console.WriteLine(numVal);
-            // Output: -105
-            //</Snippet25>
-
-            //<Snippet26>
-            // TryParse returns true if the conversion succeeded
-            // and stores the result in j.
-            int j;
-            if (Int32.TryParse("-105", out j))
-                Console.WriteLine(j);
-            else
-                Console.WriteLine("String could not be parsed.");
-            // Output: -105
-            //</Snippet26>
-
-            //<Snippet27>
-            try
-            {
-                int m = Int32.Parse("abc");
-            }
-            catch (FormatException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            // Output: Input string was not in a correct format.
-            //</Snippet27>
-
-            //<Snippet28>
-            string inputString = "abc";
-            int numValue;
-            bool parsed = Int32.TryParse(inputString, out numValue);
-
-            if (!parsed)
-                Console.WriteLine("Int32.TryParse could not parse '{0}' to an int.\n", inputString);
-
-            // Output: Int32.TryParse could not parse 'abc' to an int.
-            //</Snippet28>  
-            
-            //<Snippet100>
-            // This snippet shows a couple of examples that extract number characters from the
-            // beginning of the string to avoid TryParse errors.
-            StringBuilder sb = new StringBuilder();
-            var str = "  10FFxxx";
-            foreach (char c in str) {
-                // Check for numeric characters (hex in this case).  Add "." and "e" if float,
-                // and remove letters.  Include initial space because it is harmless.
-                if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'F') || (c >= 'a' && c <= 'f') || c == ' ') {
-                    sb.Append(c);
-                }
-                else
-                    break;
-            }
-            if (int.TryParse(sb.ToString(), System.Globalization.NumberStyles.HexNumber, null, out i))
-                Console.WriteLine(sb.ToString());
-
-            str = "   -10FFXXX";
-            sb.Clear();
-            foreach (char c in str) {
-                // Check for numeric characters (allow negative in this case but no hex digits). 
-                // Though we use int.TryParse in the previous example and this one, int.TryParse does NOT
-                // allow a sign character (-) AND hex digits at the same time.
-                // Include initial space because it is harmless.
-                if ((c >= '0' && c <= '9') || c == ' ' || c == '-') {
-                    sb.Append(c);
-                } else
-                    break;
-            }
-            if (int.TryParse(sb.ToString(), out i))
-                Console.WriteLine(sb.ToString());
-            //</Snippet100>
-                      
-        }
-    }
 
     public class ConvertStringExample4
     {
@@ -602,12 +449,11 @@ namespace CsProgGuideTypes
             {
                 // Get the integral value of the character.
                 int value = Convert.ToInt32(letter);
-                // Convert the decimal value to a hexadecimal value in string form.
-                string hexOutput = String.Format("{0:X}", value);
-                Console.WriteLine("Hexadecimal value of {0} is {1}", letter, hexOutput);
+                // Convert the integer value to a hexadecimal value in string form.
+                Console.WriteLine($"Hexadecimal value of {letter} is {value:X}");
             }
             /* Output:
-               Hexadecimal value of H is 48
+                Hexadecimal value of H is 48
                 Hexadecimal value of e is 65
                 Hexadecimal value of l is 6C
                 Hexadecimal value of l is 6C
@@ -625,7 +471,7 @@ namespace CsProgGuideTypes
             //<Snippet31>
             string hexValues = "48 65 6C 6C 6F 20 57 6F 72 6C 64 21";
             string[] hexValuesSplit = hexValues.Split(' ');
-            foreach (String hex in hexValuesSplit)
+            foreach (string hex in hexValuesSplit)
             {
                 // Convert the number expressed in base-16 to an integer.
                 int value = Convert.ToInt32(hex, 16);
@@ -709,7 +555,7 @@ namespace CsProgGuideTypes
         static void Main()
         {
             //<snippet34>
-            // Implicit conversion. num long can
+            // Implicit conversion. A long can
             // hold any value an int can hold, and more!
             int num = 2147483647;
             long bigNum = num;
@@ -888,8 +734,8 @@ namespace CsProgGuideTypes
             Test(new Mammal());
 
             // Keep the console window open in debug mode.
-            System.Console.WriteLine("Press any key to exit.");
-            System.Console.ReadKey();
+            Console.WriteLine("Press any key to exit.");
+            Console.ReadKey();
         }
 
         static void Test(Animal a)

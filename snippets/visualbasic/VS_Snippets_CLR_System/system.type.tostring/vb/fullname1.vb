@@ -2,40 +2,41 @@
 Option Strict On
 
 ' <Snippet1>
+Imports System
 Imports System.Collections.Generic
 Imports System.Globalization
 
 Module Example
-   Public Sub Main()
-      Dim t As Type = GetType(String)
-      ShowTypeInfo(t)
+    Public Sub Main()
+        Dim t As Type = GetType(String)
+        ShowTypeInfo(t)
 
-      t = GetType(System.Collections.Generic.List(Of))
-      ShowTypeInfo(t)
+        t = GetType(List(Of))
+        ShowTypeInfo(t)
 
-      Dim list As New List(Of String)()
-      t = list.GetType()
-      ShowTypeInfo(t)
-      
-      Dim v As Object = 12
-      t = v.GetType()
-      ShowTypeInfo(t)
-      
-      t = GetType(IFormatProvider)
-      ShowTypeInfo(t)
-      
-      Dim ifmt As IFormatProvider = NumberFormatInfo.CurrentInfo
-      t = ifmt.GetType()
-      ShowTypeInfo(t)
-   End Sub
-   
-   Private Sub ShowTypeInfo(t As Type)
-      Console.WriteLine("Name: {0}", t.Name)
-      Console.WriteLine("Full Name: {0}", t.FullName)
-      Console.WriteLine("ToString:  {0}", t.ToString())
-      Console.WriteLine("Assembly Qualified Name: {0}", t.AssemblyQualifiedName)
-      Console.WriteLine()
-   End Sub
+        Dim list As New List(Of String)()
+        t = list.GetType()
+        ShowTypeInfo(t)
+
+        Dim v As Object = 12
+        t = v.GetType()
+        ShowTypeInfo(t)
+
+        t = GetType(IFormatProvider)
+        ShowTypeInfo(t)
+
+        Dim ifmt As IFormatProvider = NumberFormatInfo.CurrentInfo
+        t = ifmt.GetType()
+        ShowTypeInfo(t)
+    End Sub
+
+    Private Sub ShowTypeInfo(t As Type)
+        Console.WriteLine($"Name: {t.Name}")
+        Console.WriteLine($"Full Name: {t.FullName}")
+        Console.WriteLine($"ToString:  {t}")
+        Console.WriteLine($"Assembly Qualified Name: {t.AssemblyQualifiedName}")
+        Console.WriteLine()
+    End Sub
 End Module
 ' The example displays output like the following:
 '    Name: String

@@ -10,7 +10,7 @@ public class Example
       // Call with an integer literal.
       int productB = Square(12);
 
-      // Call with an expression that evaulates to int.
+      // Call with an expression that evaluates to int.
       int productC = Square(productA * 3);
    }
    

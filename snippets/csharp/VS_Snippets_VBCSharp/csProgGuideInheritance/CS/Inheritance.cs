@@ -71,7 +71,7 @@ public abstract class Shape
 
     public override string ToString()
     {
-        return Id + " Area = " + string.Format("{0:F2}", Area);
+        return $"{Id} Area = {Area:F2}";
     }
 }
 //</Snippet1>
@@ -281,7 +281,7 @@ class Box : IDimensions
         Box box1 = new Box(30.0f, 20.0f);
 
         // Declare an interface instance dimensions:
-        IDimensions dimensions = (IDimensions)box1;
+        IDimensions dimensions = box1;
 
         // The following commented lines would produce compilation 
         // errors because they try to access an explicitly implemented
@@ -330,33 +330,21 @@ namespace WrapBox
         float lengthInches;
         float widthInches;
 
-        public Box(float length, float width)
+        public Box(float lengthInches, float widthInches)
         {
-            lengthInches = length;
-            widthInches = width;
+            this.lengthInches = lengthInches;
+            this.widthInches = widthInches;
         }
 
         // Explicitly implement the members of IEnglishDimensions:
-        float IEnglishDimensions.Length()
-        {
-            return lengthInches;
-        }
+        float IEnglishDimensions.Length() => lengthInches;
 
-        float IEnglishDimensions.Width()
-        {
-            return widthInches;
-        }
+        float IEnglishDimensions.Width() => widthInches;
 
         // Explicitly implement the members of IMetricDimensions:
-        float IMetricDimensions.Length()
-        {
-            return lengthInches * 2.54f;
-        }
+        float IMetricDimensions.Length() => lengthInches * 2.54f;
 
-        float IMetricDimensions.Width()
-        {
-            return widthInches * 2.54f;
-        }
+        float IMetricDimensions.Width() => widthInches * 2.54f;
 
         static void Main()
         {
@@ -364,10 +352,10 @@ namespace WrapBox
             Box box1 = new Box(30.0f, 20.0f);
 
             // Declare an instance of the English units interface:
-            IEnglishDimensions eDimensions = (IEnglishDimensions)box1;
+            IEnglishDimensions eDimensions = box1;
 
             // Declare an instance of the metric units interface:
-            IMetricDimensions mDimensions = (IMetricDimensions)box1;
+            IMetricDimensions mDimensions = box1;
 
             // Print dimensions in English units:
             System.Console.WriteLine("Length(in): {0}", eDimensions.Length());
@@ -409,24 +397,12 @@ class Test
 
         //<Snippet10>
         // Normal implementation:
-        public float Length()
-        {
-            return lengthInches;
-        }
-        public float Width()
-        {
-            return widthInches;
-        }
+        public float Length() => lengthInches;
+        public float Width() => widthInches;
 
         // Explicit implementation:
-        float IMetricDimensions.Length()
-        {
-            return lengthInches * 2.54f;
-        }
-        float IMetricDimensions.Width()
-        {
-            return widthInches * 2.54f;
-        }
+        float IMetricDimensions.Length() => lengthInches * 2.54f;
+        float IMetricDimensions.Width() => widthInches * 2.54f;
         //</Snippet10>
 
 
@@ -434,7 +410,7 @@ class Test
         public static void Test()
         {
             Box box1 = new Box(30.0f, 20.0f);
-            IMetricDimensions mDimensions = (IMetricDimensions)box1;
+            IMetricDimensions mDimensions = box1;
 
             System.Console.WriteLine("Length(in): {0}", box1.Length());
             System.Console.WriteLine("Width (in): {0}", box1.Width());
@@ -781,7 +757,6 @@ class OverrideToString
             return "Person: " + Name + " " + Age;
         }
     }
-
     //</Snippet36>
 
     void test()
@@ -812,8 +787,8 @@ class Test
     static void Main()
     {
         SampleClass sc = new SampleClass();
-        IControl ctrl = (IControl)sc;
-        ISurface srfc = (ISurface)sc;
+        IControl ctrl = sc;
+        ISurface srfc = sc;
 
         // The following lines all call the same method.
         sc.Paint();
@@ -881,10 +856,10 @@ class TestExplicitInterface2
         SampleClass obj = new SampleClass();
         //obj.Paint();  // Compiler error.
 
-        IControl c = (IControl)obj;
+        IControl c = obj;
         c.Paint();  // Calls IControl.Paint on SampleClass.
 
-        ISurface s = (ISurface)obj;
+        ISurface s = obj;
         s.Paint(); // Calls ISurface.Paint on SampleClass.
 
         // Output:
@@ -933,14 +908,9 @@ namespace WrapInterfaces
         // Implementation of IEquatable<T> interface
         public bool Equals(Car car)
         {
-            if (this.Make == car.Make &&
-                this.Model == car.Model &&
-                this.Year == car.Year)
-            {
-                return true;
-            }
-            else
-                return false;
+            return this.Make == car.Make &&
+                   this.Model == car.Model &&
+                   this.Year == car.Year;
         }
     }
     //</Snippet48>
@@ -1015,7 +985,7 @@ namespace WrapInterfaces
             // from System.Object.
             public override string ToString()
             {
-                return String.Format("{0} - {1}", this.ID, this.Title);
+                return $"{this.ID} - {this.Title}";
             }
         }
 
@@ -1094,6 +1064,9 @@ namespace WrapInterfaces
 namespace Polymorphism_Overview
 {
     //<Snippet50>
+    using System;
+    using System.Collections.Generic;
+
     public class Shape
     {
         // A few example members
@@ -1145,16 +1118,18 @@ namespace Polymorphism_Overview
             // can all be used whereever a Shape is expected. No cast is
             // required because an implicit conversion exists from a derived 
             // class to its base class.
-            System.Collections.Generic.List<Shape> shapes = new System.Collections.Generic.List<Shape>();
-            shapes.Add(new Rectangle());
-            shapes.Add(new Triangle());
-            shapes.Add(new Circle());
+            var shapes = new List<Shape>
+            {
+                new Rectangle(),
+                new Triangle(),
+                new Circle()
+            };
 
             // Polymorphism at work #2: the virtual method Draw is
             // invoked on each of the derived classes, not the base class.
-            foreach (Shape s in shapes)
+            foreach (var shape in shapes)
             {
-                s.Draw();
+                shape.Draw();
             }
 
             // Keep the console open in debug mode.
