@@ -30,7 +30,7 @@ Namespace Examples.System.Net
                 ProcessClient(client)
             End While
         End Sub
-        '<snippet1
+        '<snippet1>
         Private Shared Sub ProcessClient(client As TcpClient)
             ' A client has connected. Create the 
             ' SslStream using the client's network stream.
@@ -108,8 +108,8 @@ Namespace Examples.System.Net
 
             Return messageData.ToString()
         End Function
-
         ' </snippet2>
+
         ' <snippet3>
         Private Shared Sub DisplaySecurityLevel(stream As SslStream)
             Console.WriteLine("Cipher: {0} strength {1}", stream.CipherAlgorithm, stream.CipherStrength)
@@ -118,21 +118,22 @@ Namespace Examples.System.Net
             Console.WriteLine("Protocol: {0}", stream.SslProtocol)
         End Sub
         '</snippet3>
-        '<snippet4>
 
+        '<snippet4>
         Private Shared Sub DisplaySecurityServices(stream As SslStream)
             Console.WriteLine("Is authenticated: {0} as server? {1}", stream.IsAuthenticated, stream.IsServer)
             Console.WriteLine("IsSigned: {0}", stream.IsSigned)
             Console.WriteLine("Is Encrypted: {0}", stream.IsEncrypted)
         End Sub
         ' </snippet4>
+
         ' <snippet5>
         Private Shared Sub DisplayStreamProperties(stream As SslStream)
             Console.WriteLine("Can read: {0}, write {1}", stream.CanRead, stream.CanWrite)
             Console.WriteLine("Can timeout: {0}", stream.CanTimeout)
         End Sub
-
         ' </snippet5>
+
         ' <snippet6>
         Private Shared Sub DisplayCertificateInformation(stream As SslStream)
             Console.WriteLine("Certificate revocation list checked: {0}", stream.CheckCertRevocationStatus)
@@ -153,8 +154,8 @@ Namespace Examples.System.Net
                 Console.WriteLine("Remote certificate is null.")
             End If
         End Sub
-
         ' </snippet6>
+
         Private Shared Sub DisplayUsage()
             Console.WriteLine("To start the server specify:")
             Console.WriteLine("serverSync certificateFile.cer")
