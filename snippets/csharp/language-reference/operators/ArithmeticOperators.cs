@@ -6,14 +6,14 @@ namespace operators
     {
         public static void Examples()
         {
-            Console.WriteLine("=== ++ and -- operators");
+            Console.WriteLine("==== ++ and -- operators");
             Increment();
             Decrement();
             
-            Console.WriteLine("=== Unary + and - operators");
+            Console.WriteLine("==== Unary + and - operators");
             UnaryPlusAndMinus();
             
-            Console.WriteLine("=== *, /, %, +, and - operators");
+            Console.WriteLine("==== *, /, %, +, and - operators");
             Multiplication();
             IntegerDivision();
             IntegerAsFloatingPointDivision();
@@ -23,13 +23,13 @@ namespace operators
             Addition();
             Subtraction();
             
-            Console.WriteLine("=== Precedence and associativity examples");
+            Console.WriteLine("==== Precedence and associativity examples");
             PrecedenceAndAssociativity();
             
-            Console.WriteLine("=== Compound assignment");
+            Console.WriteLine("==== Compound assignment");
             CompoundAssignment();
             
-            Console.WriteLine("=== Special cases");
+            Console.WriteLine("==== Special cases");
             CheckedUnchecked();
             FloatingPointOverflow();
             RoundOffErrors();
