@@ -6,8 +6,8 @@ namespace operators
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("============== % operator examples =============");
-            RemainderExamples.Examples();
+            Console.WriteLine("======== Arithmetic operators examples =========");
+            ArithmeticOperators.Examples();
             Console.WriteLine();
 
             Console.WriteLine("============== + operator examples =============");
@@ -32,14 +32,6 @@ namespace operators
 
             Console.WriteLine("============== && and || operator examples =====");
             ConditionalLogicalOperatorsExamples.Examples();
-            Console.WriteLine();
-
-            Console.WriteLine("============== -- and ++ operator examples =====");
-            DecrementAndIncrementExamples.Examples();
-            Console.WriteLine();
-
-            Console.WriteLine("============== / operator examples =============");
-            DivisionExamples.Examples();
             Console.WriteLine();
 
             Console.WriteLine("============== == and != operator examples =====");
@@ -72,10 +64,6 @@ namespace operators
 
             Console.WriteLine("============== . operator examples =============");
             MemberAccessExamples.Examples();
-            Console.WriteLine();
-
-            Console.WriteLine("============== * operator examples =============");
-            MultiplicationExamples.Examples();
             Console.WriteLine();
         }
     }
