@@ -19,14 +19,10 @@ let examineNumber x =
       | _ -> ()
 
 let findSquareCubes x =
-   if (match x with
-       | Cube x -> true
-       | _ -> false
-       &&
-       match x with
-       | Square x -> true
-       | _ -> false
-      )
-   then printf "%d \n" x
+   match x with
+       | Cube x & Square _ -> printfn "%d is a cube and a square" x
+       | Cube x -> printfn "%d is a cube" x
+       | _ -> ()
+         
 
-[ 1 .. 1000000 ] |> List.iter (fun elem -> findSquareCubes elem)
+[ 1 .. 1000 ] |> List.iter (fun elem -> findSquareCubes elem)
