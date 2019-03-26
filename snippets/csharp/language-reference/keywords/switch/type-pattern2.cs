@@ -36,7 +36,7 @@ class Example
         else if (coll is IEnumerable) { 
             IEnumerable ie = (IEnumerable) coll;
             string result = "";
-            foreach (var item in ie) 
+            foreach (var e in ie) 
                result += "${e} ";
             Console.WriteLine(result);
         }
