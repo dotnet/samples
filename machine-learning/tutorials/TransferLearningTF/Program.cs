@@ -67,7 +67,7 @@ namespace TransferLearningTF
             Console.WriteLine($"Default parameters: image size=({InceptionSettings.ImageWidth},{InceptionSettings.ImageHeight}), image mean: {InceptionSettings.Mean}");
 
             // <SnippetLoadData>
-            var data = mlContext.Data.ReadFromTextFile<ImageData>(path: dataLocation, hasHeader: true);
+            var data = mlContext.Data.ReadFromTextFile<ImageData>(path: dataLocation, hasHeader: false);
             // </SnippetLoadData>
 
             // <SnippetMapValueToKey1>
@@ -140,11 +140,11 @@ namespace TransferLearningTF
             Console.WriteLine($"Model saved: {outputModelLocation}");
         }
 
-        public static void ClassifyImages(MLContext mlContext, string dataLocation, string imagesFolder, string outputModelLocation)
+        public static void ClassifyImages(MLContext mlContext2, string dataLocation, string imagesFolder, string outputModelLocation)
         {
             Console.WriteLine($"=============== Loading model ===============");
             Console.WriteLine($"Model loaded: {outputModelLocation}");
-
+            MLContext mlContext = new MLContext(seed: 1);
             // Load the model
             // <SnippetLoadModel>
             ITransformer loadedModel;
