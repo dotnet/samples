@@ -119,7 +119,7 @@ using System.Diagnostics;
     // ConfigurationUserLevel userLevel) method to 
     // get the configuration file.
     // It also creates a custom ConsoleSection and 
-    // sets its ConsoleEment BackgroundColor and
+    // sets its ConsoleElement BackgroundColor and
     // ForegroundColor properties to blue and yellow
     // respectively. Then it uses these properties to
     // set the console colors.  
@@ -239,7 +239,7 @@ using System.Diagnostics;
     // OpenExeConfiguration(string)method 
     // to get the application configuration file. 
     // It also creates a custom ConsoleSection and 
-    // sets its ConsoleEment BackgroundColor and
+    // sets its ConsoleElement BackgroundColor and
     // ForegroundColor properties to black and white
     // respectively. Then it uses these properties to
     // set the console colors.  
@@ -496,7 +496,7 @@ using System.Diagnostics;
     // This function uses the OpenMappedExeConfiguration 
     // method to access a new configuration file.   
     // It also gets the custom ConsoleSection and 
-    // sets its ConsoleEment BackgroundColor and
+    // sets its ConsoleElement BackgroundColor and
     // ForegroundColor properties to green and red
     // respectively. Then it uses these properties to
     // set the console colors.  
