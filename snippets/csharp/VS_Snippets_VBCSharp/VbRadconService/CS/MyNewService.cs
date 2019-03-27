@@ -65,7 +65,7 @@ public class MyNewService: System.ServiceProcess.ServiceBase
   //<Snippet3>
 	protected override void OnStart(string[] args)
 	{
-		eventLog1.WriteEntry("In OnStart");
+		eventLog1.WriteEntry("In OnStart.");
 	}
 	//</Snippet3>
 
@@ -73,7 +73,7 @@ public class MyNewService: System.ServiceProcess.ServiceBase
 	//<Snippet4>
 	protected override void OnStop()
 	{
-		eventLog1.WriteEntry("In onStop.");
+		eventLog1.WriteEntry("In OnStop.");
 	}
 	//</Snippet4>
 
