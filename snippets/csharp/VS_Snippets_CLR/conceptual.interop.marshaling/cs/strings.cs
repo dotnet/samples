@@ -22,13 +22,13 @@ public struct MyStrStruct2
 public class LibWrap
 {
     // Declares managed prototypes for unmanaged functions.
-    [DllImport("..\\LIB\\PinvokeLib.dll")]
+    [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
     public static extern string TestStringAsResult();
 
-    [DllImport("..\\LIB\\PinvokeLib.dll")]
+    [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
     public static extern void TestStringInStruct(ref MyStrStruct mss);
 
-    [DllImport("..\\LIB\\PinvokeLib.dll")]
+    [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
     public static extern void TestStringInStructAnsi(ref MyStrStruct2 mss);
 }
 //</snippet14>

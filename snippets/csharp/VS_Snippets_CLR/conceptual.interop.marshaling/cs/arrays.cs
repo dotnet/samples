@@ -33,7 +33,7 @@ public class LibWrap
 {
     // Declares a managed prototype for an array of integers by value.
     // The array size cannot be changed, but the array is copied back.
-    [DllImport("..\\LIB\\PinvokeLib.dll")]
+    [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
     public static extern int TestArrayOfInts(
         [In, Out] int[] array, int size);
 
@@ -41,27 +41,27 @@ public class LibWrap
     // The array size can change, but the array is not copied back 
     // automatically because the marshaler does not know the resulting size.
     // The copy must be performed manually.
-    [DllImport("..\\LIB\\PinvokeLib.dll")]
+    [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
     public static extern int TestRefArrayOfInts(
         ref IntPtr array, ref int size);
 
     // Declares a managed prototype for a matrix of integers by value.
-    [DllImport("..\\LIB\\PinvokeLib.dll")]
+    [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
     public static extern int TestMatrixOfInts(
         [In, Out] int[,] pMatrix, int row);
 
     // Declares a managed prototype for an array of strings by value.
-    [DllImport("..\\LIB\\PinvokeLib.dll")]
+    [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
     public static extern int TestArrayOfstrings(
         [In, Out] string[] stringArray, int size);
 
     // Declares a managed prototype for an array of structures with integers.
-    [DllImport("..\\LIB\\PinvokeLib.dll")]
+    [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
     public static extern int TestArrayOfStructs(
         [In, Out] MyPoint[] pointArray, int size);
 
     // Declares a managed prototype for an array of structures with strings.
-    [DllImport("..\\LIB\\PinvokeLib.dll")]
+    [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
     public static extern int TestArrayOfStructs2(
         [In, Out] MyPerson[] personArray, int size);
 }

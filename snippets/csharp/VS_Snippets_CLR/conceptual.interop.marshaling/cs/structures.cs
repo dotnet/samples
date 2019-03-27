@@ -37,13 +37,13 @@ public struct MyArrayStruct
 public class LibWrap
 {
     // Declares a managed prototype for unmanaged function.
-    [DllImport("..\\LIB\\PinvokeLib.dll")]
+    [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
     public static extern int TestStructInStruct(ref MyPerson2 person2);
 
-    [DllImport("..\\LIB\\PinvokeLib.dll")]
+    [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
     public static extern int TestStructInStruct3(MyPerson3 person3);
 
-    [DllImport("..\\LIB\\PinvokeLib.dll")]
+    [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
     public static extern int TestArrayInStruct(ref MyArrayStruct myStruct);
 }
 //</snippet23>
