@@ -12,7 +12,7 @@ public class OSVersionInfo
     public int BuildNumber;
     public int PlatformId;
 
-    [MarshalAs(UnmanagedType.ByValTStr, SizeConst=128)]
+    [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 128)]
     public String CSDVersion;
 }
 
@@ -25,7 +25,7 @@ public struct OSVersionInfo2
     public int BuildNumber;
     public int PlatformId;
 
-    [MarshalAs(UnmanagedType.ByValTStr, SizeConst=128)]
+    [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 128)]
     public String CSDVersion;
 }
 
@@ -34,7 +34,7 @@ public class LibWrap
     [DllImport("kernel32")]
     public static extern bool GetVersionEx([In, Out] OSVersionInfo osvi);
 
-    [DllImport("kernel32", EntryPoint="GetVersionEx")]
+    [DllImport("kernel32", EntryPoint = "GetVersionEx")]
     public static extern bool GetVersionEx2(ref OSVersionInfo2 osvi);
 }
 //</snippet11>
@@ -54,7 +54,7 @@ public class App
         Console.WriteLine("Class size:    {0}", osvi.OSVersionInfoSize);
         Console.WriteLine("OS Version:    {0}.{1}", osvi.MajorVersion, osvi.MinorVersion);
 
-        Console.WriteLine("\nPassing OSVersionInfo as a struct" );
+        Console.WriteLine("\nPassing OSVersionInfo as a struct");
 
         OSVersionInfo2 osvi2 = new OSVersionInfo2();
         osvi2.OSVersionInfoSize = Marshal.SizeOf(osvi2);

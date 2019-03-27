@@ -3,36 +3,37 @@ using System;
 using System.Runtime.InteropServices;
 
 //<snippet34>
-[StructLayout(LayoutKind.Sequential, CharSet=CharSet.Unicode)]
+[StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
 public struct DsBrowseInfo
 {
     public const int MAX_PATH = 256;
 
-    public int       Size;
-    public IntPtr    OwnerHandle;
-    public string    Caption;
-    public string    Title;
-    public string    Root;
-    public string    Path;
-    public int       PathSize;
-    public int       Flags;
-    public IntPtr    Callback;
-    public int       Param;
-    public int       ReturnFormat;
-    public string    UserName;
-    public string    Password;
-    public string    ObjectClass;
-    public int       ObjectClassSize;
+    public int    Size;
+    public IntPtr OwnerHandle;
+    public string Caption;
+    public string Title;
+    public string Root;
+    public string Path;
+    public int    PathSize;
+    public int    Flags;
+    public IntPtr Callback;
+    public int    Param;
+    public int    ReturnFormat;
+    public string UserName;
+    public string Password;
+    public string ObjectClass;
+    public int    ObjectClassSize;
 }
 
 public class LibWrap
 {
     // Declares a managed prototype for the unmanaged function.
-    [DllImport("dsuiext.dll", CharSet=CharSet.Unicode)]
+    [DllImport("dsuiext.dll", CharSet = CharSet.Unicode)]
     public static extern int DsBrowseForContainerW(ref DsBrowseInfo info);
 
     public const int DSBI_ENTIREDIRECTORY = 0x00090000;
     public const int ADS_FORMAT_WINDOWS = 1;
+
     public enum BrowseStatus
     {
         BrowseError = -1,
@@ -51,18 +52,19 @@ class App
     [STAThread]
     public static void Main()
     {
-        DsBrowseInfo dsbi = new DsBrowseInfo();
+        DsBrowseInfo dsbi = new DsBrowseInfo
+        {
+            Size = Marshal.SizeOf(typeof(DsBrowseInfo)),
+            PathSize = DsBrowseInfo.MAX_PATH,
+            Caption = "Container Selection Example",
+            Title = "Select a container from the list.",
+            ReturnFormat = LibWrap.ADS_FORMAT_WINDOWS,
+            Flags = LibWrap.DSBI_ENTIREDIRECTORY,
+            Root = "LDAP:",
+            Path = new string(new char[DsBrowseInfo.MAX_PATH])
+        };
 
-        dsbi.Size = Marshal.SizeOf(typeof(DsBrowseInfo));
-        dsbi.PathSize = DsBrowseInfo.MAX_PATH;
-        dsbi.Caption = "Container Selection Example";
-        dsbi.Title = "Select a container from the list.";
-        dsbi.ReturnFormat = LibWrap.ADS_FORMAT_WINDOWS;
-        dsbi.Flags = LibWrap.DSBI_ENTIREDIRECTORY;
-        dsbi.Root = "LDAP:";
-        dsbi.Path = new string(new char[DsBrowseInfo.MAX_PATH]);
         // Initialize remaining members...
-
         int status = LibWrap.DsBrowseForContainerW(ref dsbi);
         if ((LibWrap.BrowseStatus)status == LibWrap.BrowseStatus.BrowseOk)
         {
