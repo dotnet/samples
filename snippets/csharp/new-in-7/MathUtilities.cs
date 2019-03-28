@@ -31,24 +31,4 @@ namespace new_in_7
         #endregion
     }
 
-    public class FactorialExample
-    {
-        #region 38_LocalFunctionFactorial
-        public int LocalFunctionFactorial(int n)
-        {
-            recursiveCalls = 0;
-            return nthFactorial(n);
-
-            int nthFactorial(int number)
-            {
-                recursiveCalls++;
-                Console.WriteLine($"We've made {recursiveCalls} calls to this method");
-                return (number < 2) ? 
-                    1 : number * nthFactorial(number - 1);
-            }
-        }
-        #endregion
-
-        private int recursiveCalls = 0;
-    }
 }
