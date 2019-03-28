@@ -9,8 +9,8 @@ Namespace SimpleMVVM.ViewModel
         Private _isEnabled As Boolean
         Private ReadOnly _handler As Action
 
-        Public Sub New(ByVal hander As Action)
-            _handler = hander
+        Public Sub New(ByVal handler As Action)
+            _handler = handler
         End Sub
 
         Public Event CanExecuteChanged As EventHandler Implements ICommand.CanExecuteChanged
