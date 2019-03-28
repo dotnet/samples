@@ -19,7 +19,7 @@
 [<Measure>] type s
 
 // Force, Newtons.
-[<Measure>] type N = kg m / s
+[<Measure>] type N = kg m / s^2
 
 // Pressure, bar.
 [<Measure>] type bar
