@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 
 //<snippet23>
 // Declares a managed structure for each unmanaged structure.
-[StructLayout(LayoutKind.Sequential, CharSet=CharSet.Ansi)]
+[StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
 public struct MyPerson
 {
     public string first;
@@ -29,20 +29,21 @@ public struct MyPerson3
 public struct MyArrayStruct
 {
     public bool flag;
-    [MarshalAs(UnmanagedType.ByValArray, SizeConst=3)]
+
+    [MarshalAs(UnmanagedType.ByValArray, SizeConst = 3)]
     public int[] vals;
 }
 
 public class LibWrap
 {
     // Declares a managed prototype for unmanaged function.
-    [DllImport("..\\LIB\\PinvokeLib.dll")]
+    [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
     public static extern int TestStructInStruct(ref MyPerson2 person2);
 
-    [DllImport("..\\LIB\\PinvokeLib.dll")]
+    [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
     public static extern int TestStructInStruct3(MyPerson3 person3);
 
-    [DllImport("..\\LIB\\PinvokeLib.dll")]
+    [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
     public static extern int TestArrayInStruct(ref MyArrayStruct myStruct);
 }
 //</snippet23>

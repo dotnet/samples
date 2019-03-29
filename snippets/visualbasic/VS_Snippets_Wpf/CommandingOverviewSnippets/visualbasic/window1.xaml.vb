@@ -164,7 +164,7 @@ Namespace SDKSamples
 		'</SnippetCommandingOverviewCanExecute> 
 
 
-		'<SnippetCommandingOverviewMultipleCmdHander>
+		'<SnippetCommandingOverviewMultipleCmdHandler>
 		Private Sub ExecutedDisplayCommand(ByVal sender As Object, ByVal e As ExecutedRoutedEventArgs)
 			Dim command As RoutedCommand = TryCast(e.Command, RoutedCommand)
 
@@ -180,7 +180,7 @@ Namespace SDKSamples
 				End If
 			End If
 		End Sub
-		'</SnippetCommandingOverviewMultipleCmdHander>
+		'</SnippetCommandingOverviewMultipleCmdHandler>
 
 		'<SnippetCommandingOverviewMultipleCanExecute>
 		Private Sub CanExecuteDisplayCommand(ByVal sender As Object, ByVal e As CanExecuteRoutedEventArgs)

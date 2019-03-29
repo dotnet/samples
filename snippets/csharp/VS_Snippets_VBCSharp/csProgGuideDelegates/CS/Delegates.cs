@@ -430,7 +430,7 @@ namespace WrapContravariance
 
         }
 
-        // Event hander for any event with an EventArgs or
+        // Event handler for any event with an EventArgs or
         // derived class in the second parameter
         private void MultiHandler(object sender, System.EventArgs e)
         {

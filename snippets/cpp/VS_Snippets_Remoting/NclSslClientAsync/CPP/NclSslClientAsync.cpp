@@ -17,7 +17,7 @@ using namespace System::IO;
 // client-server application that communicates using the
 // SslStream and TcpClient classes.
 // After connecting to the server and authenticating, 
-// the client sends the server a message, recieves a message from the server,
+// the client sends the server a message, receives a message from the server,
 // and then terminates. Messages sent to and from the server are terminated
 // with '<EOF>'.
 public ref class SslTcpClient

@@ -32,7 +32,7 @@ namespace CS
 // <snippet1>
         static void Main(string[] args)
         {
-            // Create an instance of the MyExceptionHander class.
+            // Create an instance of the MyExceptionHandler class.
             MyExceptionHandler thisExceptionHandler =
                 new MyExceptionHandler();
 

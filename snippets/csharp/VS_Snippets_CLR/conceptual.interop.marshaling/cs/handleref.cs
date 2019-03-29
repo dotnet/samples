@@ -21,16 +21,16 @@ public class Overlapped2
 
 public class LibWrap
 {
-   // Declares managed prototypes for unmanaged functions.
-   // Because Overlapped is a structure, you cannot pass null as a
-   // parameter. Instead, declares an overloaded method.
+    // Declares managed prototypes for unmanaged functions.
+    // Because Overlapped is a structure, you cannot pass null as a
+    // parameter. Instead, declares an overloaded method.
     [DllImport("Kernel32.dll")]
     public static extern bool ReadFile(
         HandleRef hndRef,
         StringBuilder buffer,
         int numberOfBytesToRead,
         out int numberOfBytesRead,
-        ref Overlapped flag );
+        ref Overlapped flag);
 
     [DllImport("Kernel32.dll")]
     public static extern bool ReadFile(
@@ -38,11 +38,11 @@ public class LibWrap
         StringBuilder buffer,
         int numberOfBytesToRead,
         out int numberOfBytesRead,
-        IntPtr flag ); // Declares an int instead of a structure reference.
+        IntPtr flag); // Declares an int instead of a structure reference.
 
     // Because Overlapped2 is a class, you can pass null as parameter.
     // No overloading is needed.
-    [DllImport("Kernel32.dll", EntryPoint="ReadFile")]
+    [DllImport("Kernel32.dll", EntryPoint = "ReadFile")]
     public static extern bool ReadFile2(
         HandleRef hndRef,
         StringBuilder buffer,
@@ -66,9 +66,9 @@ public class App
         // Platform invoke holds a reference to HandleRef until the call
         // ends.
         LibWrap.ReadFile(hr, buffer, 5, out read, IntPtr.Zero);
-        Console.WriteLine("Read {0} bytes with struct parameter: {1}", read, buffer);
+        Console.WriteLine($"Read {read} bytes with struct parameter: {buffer}");
         LibWrap.ReadFile2(hr, buffer, 5, out read, null);
-        Console.WriteLine("Read {0} bytes with class parameter: {1}", read, buffer);
+        Console.WriteLine($"Read {read} bytes with class parameter: {buffer}");
     }
 }
 //</snippet44>

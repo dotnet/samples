@@ -19,7 +19,7 @@ public class LibWrap
 {
     // Declares a managed prototype for the unmanaged function using Platform Invoke.
     [DllImport("Kernel32.dll")]
-    public static extern void GetSystemTime([In,Out] SystemTime st);
+    public static extern void GetSystemTime([In, Out] SystemTime st);
 }
 
 public class App
@@ -30,7 +30,7 @@ public class App
         SystemTime st = new SystemTime();
         LibWrap.GetSystemTime(st);
         Console.Write("The Date is: ");
-        Console.Write("{0} {1} {2}",  st.month, st.day, st.year );
+        Console.Write("{0} {1} {2}", st.month, st.day, st.year);
     }
 }
 
