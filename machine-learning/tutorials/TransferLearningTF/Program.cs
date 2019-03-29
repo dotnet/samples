@@ -18,9 +18,10 @@ namespace TransferLearningTF
         // <SnippetDeclareGlobalVariables>
         static readonly string _assetsPath = Path.Combine(Environment.CurrentDirectory, "assets");
         static readonly string _trainTagsTsv = Path.Combine(_assetsPath, "inputs-train", "data", "tags.tsv");
-        static readonly string _predictTagsTsv = Path.Combine(_assetsPath, "inputs-predict", "data", "tags.tsv");
+        static readonly string _predictImageListTsv = Path.Combine(_assetsPath, "inputs-predict", "data", "image_list.tsv");
         static readonly string _trainImagesFolder = Path.Combine(_assetsPath, "inputs-train", "data");
         static readonly string _predictImagesFolder = Path.Combine(_assetsPath, "inputs-predict", "data");
+        static readonly string _predictSingleImage = Path.Combine(_assetsPath, "inputs-predict-single", "data", "toaster3.jpg");
         static readonly string _inceptionPb = Path.Combine(_assetsPath, "inputs-train", "inception", "tensorflow_inception_graph.pb");
         static readonly string _inputImageClassifierZip = Path.Combine(_assetsPath, "inputs-predict", "imageClassifier.zip");
         static readonly string _outputImageClassifierZip = Path.Combine(_assetsPath, "outputs", "imageClassifier.zip");
@@ -41,8 +42,12 @@ namespace TransferLearningTF
             // </CallSnippetReuseAndTuneInceptionModel>
 
             // <SnippetCallClassifyImages>
-            ClassifyImages(mlContext, _predictTagsTsv, _predictImagesFolder, _outputImageClassifierZip);
+            ClassifyImages(mlContext, _predictImageListTsv, _predictImagesFolder, _outputImageClassifierZip);
             // </SnippetCallClassifyImages>
+
+            // <SnippetCallClassifySingleImage>
+            ClassifySingleImage(mlContext, _predictSingleImage, _outputImageClassifierZip);
+            // </SnippetCallClassifySingleImage>
         }
 
         // <SnippetInceptionSettings>
@@ -60,14 +65,8 @@ namespace TransferLearningTF
         public static void ReuseAndTuneInceptionModel(MLContext mlContext, string dataLocation, string imagesFolder, string inputModelLocation, string outputModelLocation)
         {
 
-            Console.WriteLine("Read model");
-            Console.WriteLine($"Model location: {inputModelLocation}");
-            Console.WriteLine($"Images folder: {_trainImagesFolder}");
-            Console.WriteLine($"Training file: {dataLocation}");
-            Console.WriteLine($"Default parameters: image size=({InceptionSettings.ImageWidth},{InceptionSettings.ImageHeight}), image mean: {InceptionSettings.Mean}");
-
             // <SnippetLoadData>
-            var data = mlContext.Data.ReadFromTextFile<ImageData>(path: dataLocation, hasHeader: true);
+            var data = mlContext.Data.ReadFromTextFile<ImageData>(path: dataLocation, hasHeader: false);
             // </SnippetLoadData>
 
             // <SnippetMapValueToKey1>
@@ -144,7 +143,6 @@ namespace TransferLearningTF
         {
             Console.WriteLine($"=============== Loading model ===============");
             Console.WriteLine($"Model loaded: {outputModelLocation}");
-
             // Load the model
             // <SnippetLoadModel>
             ITransformer loadedModel;
@@ -152,7 +150,7 @@ namespace TransferLearningTF
                 loadedModel = mlContext.Model.Load(fileStream);
             // </SnippetLoadModel>
 
-            // Read the tags.tsv file and add the filepath to the image file name 
+            // Read the image_list.tsv file and add the filepath to the image file name 
             // before loading into ImageData 
             // <SnippetReadFromTSV> 
             var imageData = ReadFromTsv(dataLocation, imagesFolder);
@@ -168,6 +166,38 @@ namespace TransferLearningTF
             // <SnippetCallPairAndDisplayResults2>
             PairAndDisplayResults(imageData, imagePredictionData);
             // </SnippetCallPairAndDisplayResults2> 
+
+        }
+
+        public static void ClassifySingleImage(MLContext mlContext, string imagePath, string outputModelLocation)
+        {
+            Console.WriteLine($"=============== Loading model ===============");
+            Console.WriteLine($"Model loaded: {outputModelLocation}");
+            // Load the model
+            // <SnippetLoadModel2>
+            ITransformer loadedModel;
+            using (var fileStream = new FileStream(outputModelLocation, FileMode.Open))
+                loadedModel = mlContext.Model.Load(fileStream);
+            // </SnippetLoadModel2>
+
+            // load the fully qualified image file name into ImageData 
+            // <SnippetLoadImageData> 
+            var imageData = new ImageData()
+            {
+                ImagePath = imagePath
+            }; 
+            // </SnippetReadFromTSV2>  
+
+            // <SnippetPredictSingle>  
+            // Make prediction function (input = ImageNetData, output = ImageNetPrediction)
+            var predictor = loadedModel.CreatePredictionEngine<ImageData, ImagePrediction>(mlContext);
+            var prediction = predictor.Predict(imageData);
+            // </SnippetPredictSingle> 
+
+            Console.WriteLine("=============== Making single image classification ===============");
+            // <SnippetDisplayPrediction>
+            Console.WriteLine($"Image: {Path.GetFileName(imageData.ImagePath)} predicted as: {prediction.PredictedLabelValue} with score: {prediction.Score.Max()} ");
+            // </SnippetDisplayPrediction> 
 
         }
 
@@ -196,8 +226,7 @@ namespace TransferLearningTF
              .Select(line => line.Split('\t'))
              .Select(line => new ImageData()
              {
-                 ImagePath = Path.Combine(folder, line[0]),
-                 Label = line[1],
+                 ImagePath = Path.Combine(folder, line[0])
              });
             // </SnippetReadFromTsv>
         }
