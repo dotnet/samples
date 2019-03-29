@@ -45,7 +45,6 @@ namespace new_in_7
         }
         public static void SwitchPatternFull()
         {
-            // <SnippetSimpleSwitchPattern>
             test(5);
 
             // <SnippetNullableSwitch>
@@ -106,8 +105,6 @@ namespace new_in_7
                         break;
                 }
             }
-
-            // </SnippetSimpleSwitchPattern>
         }
     }
 }

@@ -111,11 +111,12 @@ namespace new_in_7
 
             // <SnippetNamedTuple>
             (string Alpha, string Beta) namedLetters = ("a", "b");
-            Console.WriteLine(namedLetters.Alpha, namedLetters.Beta);
+            Console.WriteLine($"{namedLetters.Alpha}, {namedLetters.Beta}");
             // </SnippetNamedTuple>
 
             // <SnippetImplicitNamedTuple>
             var alphabetStart = (Alpha: "a", Beta: "b");
+            Console.WriteLine($"{alphabetStart.Alpha}, {alphabetStart.Beta}");
             // </SnippetImplicitNamedTuple>
         }
 
