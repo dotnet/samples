@@ -13,19 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="assets\inputs-predict\data\1024px-Washing_Machine_Beko.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Update="assets\inputs-predict\data\broccoli.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="assets\inputs-predict\data\can_opener.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="assets\inputs-predict\data\Iceberg2.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="assets\inputs-predict\data\Kajzerka.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="assets\inputs-predict\data\pizza3.jpg">
@@ -34,16 +22,13 @@
     <None Update="assets\inputs-predict\data\Rogalik.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="assets\inputs-predict\data\tags.tsv">
+    <None Update="assets\inputs-predict\data\image_list.tsv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="assets\inputs-predict\data\teddy6.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="assets\inputs-predict\data\toaster3.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="assets\inputs-predict\data\Toy_Rabbit.jpg">
+    <None Update="assets\inputs-predict-single\data\toaster3.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="assets\inputs-predict\imageClassifier.zip">
@@ -56,9 +41,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="assets\inputs-train\data\pizza2.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="assets\inputs-train\data\Rogalik.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="assets\inputs-train\data\tags.tsv">
@@ -100,10 +82,6 @@
     <None Update="assets\outputs\TextFile1.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="assets\inputs-predict-single\data\" />
   </ItemGroup>
 
 </Project>
