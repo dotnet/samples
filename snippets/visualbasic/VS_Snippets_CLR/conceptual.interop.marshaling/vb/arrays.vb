@@ -26,37 +26,49 @@ End Structure
 Public Class LibWrap
     ' Declares a managed prototype for an array of integers by value.
     ' The array size cannot be changed, but the array is copied back.
-    Declare Function TestArrayOfInts Lib "..\LIB\PinvokeLib.dll" (
+    <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
+    Shared Function TestArrayOfInts(
         <[In], Out> ByVal myArray() As Integer, ByVal size As Integer) _
         As Integer
+    End Function
 
     ' Declares managed prototype for an array of integers by reference.
     ' The array size can change, but the array is not copied back 
     ' automatically because the marshaler does not know the resulting size.
     ' The copy must be performed manually.
-    Declare Function TestRefArrayOfInts Lib "..\LIB\PinvokeLib.dll" (
+    <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
+    Shared Function TestRefArrayOfInts(
         ByRef myArray As IntPtr, ByRef size As Integer) As Integer
+    End Function
 
     ' Declares a managed prototype for a matrix of integers by value.
-    Declare Function TestMatrixOfInts Lib "..\LIB\PinvokeLib.dll" (
+    <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
+    Shared Function TestMatrixOfInts(
         <[In], Out> ByVal matrix(,) As Integer, ByVal row As Integer) _
         As Integer
+    End Function
 
     ' Declares a managed prototype for an array of strings by value.
-    Declare Function TestArrayOfStrings Lib "..\LIB\PinvokeLib.dll" (
+    <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
+    Shared Function TestArrayOfStrings(
         <[In], Out> ByVal strArray() As String, ByVal size As Integer) _
         As Integer
+    End Function
 
     ' Declares a managed prototype for an array of structures with 
     ' integers.
-    Declare Function TestArrayOfStructs Lib "..\LIB\PinvokeLib.dll" (
+    <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
+    Shared Function TestArrayOfStructs(
         <[In], Out> ByVal pointArray() As MyPoint, ByVal size As Integer) _
         As Integer
+    End Function
 
     ' Declares a managed prototype for an array of structures with strings.
-    Declare Function TestArrayOfStructs2 Lib "..\LIB\PinvokeLib.dll" (
+    <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
+    Shared Function TestArrayOfStructs2(
         <[In], Out> ByVal personArray() As MyPerson, ByVal size As Integer) _
         As Integer
+    End Function
 End Class
 '</Snippet31>
 

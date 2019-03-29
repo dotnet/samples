@@ -12,8 +12,10 @@ End Class 'MyStruct
 
 Public Class LibWrap
     ' Declares a managed prototype for the unmanaged function.
-    Declare Sub TestOutArrayOfStructs Lib "..\\LIB\\PinvokeLib.dll" (
+    <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
+    Shared Sub TestOutArrayOfStructs(
         ByRef arrSize As Integer, ByRef outArray As IntPtr)
+    End Sub
 End Class 'LibWrap
 '</snippet20>
 

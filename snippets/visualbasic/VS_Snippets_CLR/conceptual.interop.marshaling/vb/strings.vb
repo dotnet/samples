@@ -19,12 +19,20 @@ End Structure
 
 Public Class LibWrap
     ' Declares managed prototypes for unmanaged functions.
-    Declare Function TestStringAsResult Lib "..\LIB\PinvokeLib.dll" () _
+    <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
+    Shared Function TestStringAsResult() _
         As String
-    Declare Sub TestStringInStruct Lib "..\LIB\PinvokeLib.dll" (
+    End Function
+
+    <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
+    Shared Sub TestStringInStruct(
         ByRef mss As MyStrStruct)
-    Declare Sub TestStringInStructAnsi Lib "..\LIB\PinvokeLib.dll" (
+    End Sub
+
+    <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
+    Shared Sub TestStringInStructAnsi(
         ByRef mss As MyStrStruct2)
+    End Sub
 End Class
 '</snippet14>
 

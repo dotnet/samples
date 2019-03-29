@@ -23,14 +23,20 @@ End Structure 'MyUnion2_2
 
 Public Class LibWrap
     ' Declares managed prototypes for unmanaged function.
-    Declare Sub TestUnion Lib "..\LIB\PinvokeLib.dll" (
+    <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
+    Shared Sub TestUnion(
         ByVal u As MyUnion, ByVal type As Integer)
+    End Sub
 
-    Overloads Declare Sub TestUnion2 Lib "..\LIB\PinvokeLib.dll" (
+    <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
+    Overloads Shared Sub TestUnion2(
         ByVal u As MyUnion2_1, ByVal type As Integer)
+    End Sub
 
-    Overloads Declare Sub TestUnion2 Lib "..\LIB\PinvokeLib.dll" (
+    <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
+    Overloads Shared Sub TestUnion2(
         ByVal u As MyUnion2_2, ByVal type As Integer)
+    End Sub
 End Class 'LibWrap
 '</snippet28>
 

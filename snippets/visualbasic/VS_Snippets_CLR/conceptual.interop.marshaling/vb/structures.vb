@@ -31,14 +31,20 @@ End Structure 'MyArrayStruct
 
 Public Class LibWrap
     ' Declares managed prototypes for unmanaged functions.
-    Declare Function TestStructInStruct Lib "..\LIB\PinvokeLib.dll" (
+    <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
+    Shared Function TestStructInStruct(
         ByRef person2 As MyPerson2) As Integer
+    End Function
 
-    Declare Function TestStructInStruct3 Lib "..\LIB\PinvokeLib.dll" (
+    <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
+    Shared Function TestStructInStruct3(
         ByVal person3 As MyPerson3) As Integer
+    End Function
 
-    Declare Function TestArrayInStruct Lib "..\LIB\PinvokeLib.dll" (
+    <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
+    Shared Function TestArrayInStruct(
         ByRef myStruct As MyArrayStruct) As Integer
+    End Function
 End Class 'LibWrap
 
 '</snippet23>

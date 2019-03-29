@@ -9,11 +9,15 @@ Public Delegate Function FPtr2(ByVal value As String) As Boolean
 
 Public Class LibWrap
     ' Declares managed prototypes for unmanaged functions.
-    Declare Sub TestCallBack Lib "..\LIB\PinvokeLib.dll" (
+    <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
+    Shared Sub TestCallBack(
         ByVal cb As FPtr, ByVal value As Integer)
+    End Sub
 
-    Declare Sub TestCallBack2 Lib "..\LIB\PinvokeLib.dll" (
+    <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
+    Shared Sub TestCallBack2(
         ByVal cb2 As FPtr2, ByVal value As String)
+    End Sub
 End Class
 '</snippet37>
 
