@@ -9,11 +9,11 @@ public delegate bool FPtr2(string value);
 public class LibWrap
 {
     // Declares managed prototypes for unmanaged functions.
-    [DllImport("..\\LIB\\PinvokeLib.dll")]
+    [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
     public static extern void TestCallBack(FPtr cb, int value);
 
-    [DllImport("..\\LIB\\PinvokeLib.dll")]
-    public static extern void TestCallBack2(FPtr2 cb2, String value);
+    [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
+    public static extern void TestCallBack2(FPtr2 cb2, string value);
 }
 //</snippet37>
 
@@ -30,14 +30,14 @@ public class App
 
     public static bool DoSomething(int value)
     {
-        Console.WriteLine("\nCallback called with param: {0}", value);
+        Console.WriteLine($"\nCallback called with param: {value}");
         // ...
         return true;
     }
 
-    public static bool DoSomething2( String value )
+    public static bool DoSomething2(string value)
     {
-        Console.WriteLine("\nCallback called with param: {0}", value);
+        Console.WriteLine($"\nCallback called with param: {value}");
         // ...
         return true;
     }
