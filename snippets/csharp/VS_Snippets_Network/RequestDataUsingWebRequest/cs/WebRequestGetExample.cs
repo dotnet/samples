@@ -13,10 +13,12 @@ namespace Examples.System.Net
               "http://www.contoso.com/default.html");
             // If required by the server, set the credentials.  
             request.Credentials = CredentialCache.DefaultCredentials;
+            
             // Get the response.  
             WebResponse response = request.GetResponse();
             // Display the status.  
             Console.WriteLine(((HttpWebResponse)response).StatusDescription);
+            
             // Get the stream containing content returned by the server. 
             // The using block ensures the stream is automatically closed. 
             using (Stream dataStream = response.GetResponseStream())
@@ -28,6 +30,7 @@ namespace Examples.System.Net
                 // Display the content.  
                 Console.WriteLine(responseFromServer);
             }
+            
             // Close the response.  
             response.Close();
         }
