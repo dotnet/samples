@@ -1,14 +1,10 @@
-// The following code example calls IsLeapYear for five years in each of the eras.
-
-// <snippet1>
 using System;
 using System.Globalization;
 
-
-public class SamplesJapaneseCalendar  {
-
-   public static void Main()  {
-
+public class SamplesJapaneseCalendar  
+{
+   public static void Main()  
+   {
       // Creates and initializes a JapaneseCalendar.
       JapaneseCalendar myCal = new JapaneseCalendar();
 
@@ -31,20 +27,17 @@ public class SamplesJapaneseCalendar  {
             Console.Write( "\t{0}", myCal.IsLeapYear( y, myCal.Eras[i] ) );
          Console.WriteLine();
       }
-
    }
-
 }
-
 /*
 This code produces the following output.
 
 YEAR            1       2       3       4       5
-CurrentEra:     False   False   False   True    False
+CurrentEra:     False   True    False   False   False
+Era 5:          False   True    False   False   False
 Era 4:          False   False   False   True    False
 Era 3:          False   False   True    False   False
 Era 2:          True    False   False   False   True
 Era 1:          True    False   False   False   True
 
 */
-// </snippet1>

@@ -1,9 +1,5 @@
-// The following code example calls GetMonthsInYear for 5 years in each era.
-
-// <snippet1>
 using System;
 using System.Globalization;
-
 
 public class SamplesJapaneseCalendar  {
 
@@ -31,20 +27,17 @@ public class SamplesJapaneseCalendar  {
             Console.Write( "\t{0}", myCal.GetMonthsInYear( y, myCal.Eras[i] ) );
          Console.WriteLine();
       }
-
    }
-
 }
-
 /*
 This code produces the following output.
 
 YEAR            1       2       3       4       5
 CurrentEra:     12      12      12      12      12
+Era 5:          12      12      12      12      12
 Era 4:          12      12      12      12      12
 Era 3:          12      12      12      12      12
 Era 2:          12      12      12      12      12
 Era 1:          12      12      12      12      12
 
 */
-// </snippet1>

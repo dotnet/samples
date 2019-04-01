@@ -1,12 +1,6 @@
-' The following code example calls GetMonthsInYear for 5 years in each era.
-
-' <snippet1>
-Imports System
 Imports System.Globalization
-Imports Microsoft.VisualBasic
 
 Public Class SamplesJapaneseCalendar   
-   
    Public Shared Sub Main()
 
       ' Creates and initializes a JapaneseCalendar.
@@ -37,18 +31,14 @@ Public Class SamplesJapaneseCalendar
          Console.WriteLine()
       Next i
 
-   End Sub 'Main 
-
-End Class 'SamplesJapaneseCalendar
-
-
-'This code produces the following output.
-'
-'YEAR            1       2       3       4       5
-'CurrentEra:     12      12      12      12      12
-'Era 4:          12      12      12      12      12
-'Era 3:          12      12      12      12      12
-'Era 2:          12      12      12      12      12
-'Era 1:          12      12      12      12      12
-
-' </snippet1>
+   End Sub 
+End Class 
+' This code produces the following output.
+'
+'      YEAR            1       2       3       4       5
+'      CurrentEra:     12      12      12      12      12
+'      Era 5:          12      12      12      12      12
+'      Era 4:          12      12      12      12      12
+'      Era 3:          12      12      12      12      12
+'      Era 2:          12      12      12      12      12
+'      Era 1:          12      12      12      12      12
