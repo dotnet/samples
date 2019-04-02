@@ -39,7 +39,7 @@ namespace TransferLearningTF
 
             // <SnippetCallReuseAndTuneInceptionModel>
             ReuseAndTuneInceptionModel(mlContext, _trainTagsTsv, _trainImagesFolder, _inceptionPb, _outputImageClassifierZip);
-            // </CallSnippetReuseAndTuneInceptionModel>
+            // </SnippetCallReuseAndTuneInceptionModel>
 
             // <SnippetCallClassifyImages>
             ClassifyImages(mlContext, _predictImageListTsv, _predictImagesFolder, _outputImageClassifierZip);
@@ -186,7 +186,7 @@ namespace TransferLearningTF
             {
                 ImagePath = imagePath
             }; 
-            // </SnippetReadFromTSV2>  
+            // </SnippetLoadImageData>  
 
             // <SnippetPredictSingle>  
             // Make prediction function (input = ImageNetData, output = ImageNetPrediction)
