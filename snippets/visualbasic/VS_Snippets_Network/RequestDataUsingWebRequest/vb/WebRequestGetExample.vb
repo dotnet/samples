@@ -9,10 +9,12 @@ Namespace Examples.System.Net
               WebRequest.Create("http://www.contoso.com/default.html")
             ' If required by the server, set the credentials.  
             request.Credentials = CredentialCache.DefaultCredentials
+
             ' Get the response.  
             Dim response As WebResponse = request.GetResponse()
             ' Display the status.  
             Console.WriteLine(CType(response, HttpWebResponse).StatusDescription)
+
             ' Get the stream containing content returned by the server. 
             ' The using block ensures the stream is automatically closed.
             Using dataStream As Stream = response.GetResponseStream()
@@ -23,7 +25,8 @@ Namespace Examples.System.Net
                 ' Display the content.  
                 Console.WriteLine(responseFromServer)
             End Using
-            ' Clean up the response.  
+
+            ' Clean up the response.
             response.Close()
         End Sub
     End Class
