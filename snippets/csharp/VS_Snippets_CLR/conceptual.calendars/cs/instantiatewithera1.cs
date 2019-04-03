@@ -1,4 +1,3 @@
-// <Snippet7>
 using System;
 using System.Globalization;
 
@@ -26,13 +25,3 @@ public class Example
       }                        
    }
 }
-// The example displays the following output:
-//    Date instantiated without an era:
-//    1/1/2 in Japanese Calendar -> 1/1/1990 in Gregorian
-//    
-//    Dates instantiated with eras:
-//    1/1/2 era 4 in Japanese Calendar -> 1/1/1990 in Gregorian
-//    1/1/2 era 3 in Japanese Calendar -> 1/1/1927 in Gregorian
-//    1/1/2 era 2 in Japanese Calendar -> 1/1/1913 in Gregorian
-//    1/1/2 era 1 in Japanese Calendar -> 1/1/1869 in Gregorian
-// </Snippet7>
