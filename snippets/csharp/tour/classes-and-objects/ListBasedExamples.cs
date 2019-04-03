@@ -1,7 +1,7 @@
 namespace ListExamples
 {
     using System;
-    public class List<T>
+    public class MyList<T>
     {
         // Constant
         const int defaultCapacity = 4;
@@ -11,7 +11,7 @@ namespace ListExamples
         int count;
 
         // Constructor
-        public List(int capacity = defaultCapacity) 
+        public MyList(int capacity = defaultCapacity) 
         {
             items = new T[capacity];
         }
@@ -60,9 +60,9 @@ namespace ListExamples
             Changed?.Invoke(this, EventArgs.Empty);
 
         public override bool Equals(object other) =>
-            Equals(this, other as List<T>);
+            Equals(this, other as MyList<T>);
 
-        static bool Equals(List<T> a, List<T> b) 
+        static bool Equals(MyList<T> a, MyList<T> b) 
         {
             if (Object.ReferenceEquals(a, null)) return Object.ReferenceEquals(b, null);
             if (Object.ReferenceEquals(b, null) || a.count != b.count)
@@ -81,10 +81,10 @@ namespace ListExamples
         public event EventHandler Changed;
 
         // Operators
-        public static bool operator ==(List<T> a, List<T> b) => 
+        public static bool operator ==(MyList<T> a, MyList<T> b) => 
             Equals(a, b);
 
-        public static bool operator !=(List<T> a, List<T> b) => 
+        public static bool operator !=(MyList<T> a, MyList<T> b) => 
             !Equals(a, b);
     }
 
@@ -92,13 +92,13 @@ namespace ListExamples
     {
         public static void ListExampleOne()
         {
-            List<string> list1 = new List<string>();
-            List<string> list2 = new List<string>(10);
+            MyList<string> list1 = new MyList<string>();
+            MyList<string> list2 = new MyList<string>(10);
         }
 
         public static void ListExampleTwo()
         {
-            List<string> names = new List<string>();
+            MyList<string> names = new MyList<string>();
             names.Capacity = 100;   // Invokes set accessor
             int i = names.Count;    // Invokes get accessor
             int j = names.Capacity; // Invokes get accessor
@@ -106,7 +106,7 @@ namespace ListExamples
 
         public static void ListExampleThree()
         {
-            List<string> names = new List<string>();
+            MyList<string> names = new MyList<string>();
             names.Add("Liz");
             names.Add("Martha");
             names.Add("Beth");
@@ -118,10 +118,10 @@ namespace ListExamples
         }
         public static void ListExampleFour() 
         {
-            List<int> a = new List<int>();
+            MyList<int> a = new MyList<int>();
             a.Add(1);
             a.Add(2);
-            List<int> b = new List<int>();
+            MyList<int> b = new MyList<int>();
             b.Add(1);
             b.Add(2);
             Console.WriteLine(a == b);  // Outputs "True" 
@@ -138,7 +138,7 @@ namespace ListExamples
         }
         public static void Usage() 
         {
-            List<string> names = new List<string>();
+            MyList<string> names = new MyList<string>();
             names.Changed += new EventHandler(ListChanged);
             names.Add("Liz");
             names.Add("Martha");
