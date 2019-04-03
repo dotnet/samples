@@ -11,6 +11,3 @@ Public Module Example
         Console.WriteLine($"Japanese calendar dat: {dat.ToString("d", jaJp)}")
     End Sub
 End Module
-' The example displays the following output:
-'    Gregorian calendar date: 1/1/2020
-'    Japanese calendar date: 令和2/1/1

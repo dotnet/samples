@@ -16,6 +16,3 @@ public class Example
         
     }
 }
-// The example displays the following output:
-//    Gregorian calendar date: 1/1/2020
-//    Japanese calendar date: 令和2/1/1
