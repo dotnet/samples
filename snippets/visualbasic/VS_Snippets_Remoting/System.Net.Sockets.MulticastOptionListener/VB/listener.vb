@@ -18,7 +18,7 @@
 ' follows:
 ' Open a console window and run the listener from the command line. 
 ' In another console window run the sender. In both cases you must specify 
-' the local IPAddress to use. To obtain this address run the ipconfig comand 
+' the local IPAddress to use. To obtain this address run the ipconfig command 
 ' from the command line. 
 
 

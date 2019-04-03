@@ -125,7 +125,7 @@ namespace SDKSamples
             KeyGesture pasteBind = new KeyGesture(Key.V, ModifierKeys.Alt);
             ApplicationCommands.Paste.InputGestures.Add(pasteBind);
 
-            // <SnippetInputBindingAddingComand>
+            // <SnippetInputBindingAddingCommand>
             KeyGesture HelpCmdKeyGesture = new KeyGesture(Key.H,
                 ModifierKeys.Alt);
 
@@ -134,7 +134,7 @@ namespace SDKSamples
                 HelpCmdKeyGesture);
 
             this.InputBindings.Add(inputBinding);
-            // </SnippetInputBindingAddingComand>
+            // </SnippetInputBindingAddingCommand>
 
             // <SnippetMouseBindingMouseAction> 
             MouseGesture CutCmdMouseGesture = new MouseGesture(

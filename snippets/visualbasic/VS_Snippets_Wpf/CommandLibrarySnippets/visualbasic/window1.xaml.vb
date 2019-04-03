@@ -108,14 +108,14 @@ Namespace SDKSamples
 			Dim pasteBind As New KeyGesture(Key.V, ModifierKeys.Alt)
 			ApplicationCommands.Paste.InputGestures.Add(pasteBind)
 
-			' <SnippetInputBindingAddingComand>
+			' <SnippetInputBindingAddingCommand>
 			Dim HelpCmdKeyGesture As New KeyGesture(Key.H, ModifierKeys.Alt)
 
 			Dim inputBinding As InputBinding
 			inputBinding = New InputBinding(ApplicationCommands.Help, HelpCmdKeyGesture)
 
 			Me.InputBindings.Add(inputBinding)
-			' </SnippetInputBindingAddingComand>
+			' </SnippetInputBindingAddingCommand>
 
 			' <SnippetMouseBindingMouseAction> 
 			Dim CutCmdMouseGesture As New MouseGesture(MouseAction.MiddleClick)
