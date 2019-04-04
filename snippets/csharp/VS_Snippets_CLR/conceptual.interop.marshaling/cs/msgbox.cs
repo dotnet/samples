@@ -9,20 +9,20 @@ public class LibWrap
     [DllImport("User32.dll", EntryPoint = "MessageBox",
         CharSet = CharSet.Auto)]
     public static extern int MsgBox(
-        IntPtr hWnd, string text, string caption, uint type);
+        IntPtr hWnd, string lpText, string lpCaption, uint uType);
 
     // Causes incorrect output in the message window.
     [DllImport("User32.dll", EntryPoint = "MessageBoxW",
         CharSet = CharSet.Ansi)]
     public static extern int MsgBox2(
-        IntPtr hWnd, string text, string caption, uint type);
+        IntPtr hWnd, string lpText, string lpCaption, uint uType);
 
     // Causes an exception to be thrown. EntryPoint, CharSet, and
     // ExactSpelling fields are mismatched.
     [DllImport("User32.dll", EntryPoint = "MessageBox",
         CharSet = CharSet.Ansi, ExactSpelling = true)]
     public static extern int MsgBox3(
-        IntPtr hWnd, string text, string caption, uint type);
+        IntPtr hWnd, string lpText, string lpCaption, uint uType);
 }
 //</snippet5>
 
