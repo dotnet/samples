@@ -65,6 +65,7 @@ namespace Example
                 Console.WriteLine("The two addresses are equal");
             else
                 Console.WriteLine("The two addresses are not equal");
+            // Will output "The two addresses are equal"
         //</snippet8>
         }
        
