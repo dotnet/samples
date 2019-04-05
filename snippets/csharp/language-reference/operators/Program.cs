@@ -10,6 +10,14 @@ namespace operators
             ArithmeticOperators.Examples();
             Console.WriteLine();
 
+            Console.WriteLine("============== == and != operator examples =====");
+            EqualityAndNonEqualityExamples.Examples();
+            Console.WriteLine();
+
+            Console.WriteLine("======== Logical operators examples ============");
+            LogicalOperators.Examples();
+            Console.WriteLine();
+
             Console.WriteLine("============== + operator examples =============");
             AdditionExamples.Examples();
             Console.WriteLine();
@@ -30,14 +38,6 @@ namespace operators
             BitwiseComplementExamples.Examples();
             Console.WriteLine();
 
-            Console.WriteLine("============== && and || operator examples =====");
-            ConditionalLogicalOperatorsExamples.Examples();
-            Console.WriteLine();
-
-            Console.WriteLine("============== == and != operator examples =====");
-            EqualityAndNonEqualityExamples.Examples();
-            Console.WriteLine();
-
             Console.WriteLine("======= >, <, >=, and <= operator examples =====");
             GreaterAndLessOperatorsExamples.Examples();
             Console.WriteLine();
@@ -56,10 +56,6 @@ namespace operators
 
             Console.WriteLine("===== <<, <<=, >>, and >>= operator examples ===");
             ShiftOperatorsExamples.Examples();
-            Console.WriteLine();
-
-            Console.WriteLine("============== ! operator examples =============");
-            LogicalNegationExamples.Examples();
             Console.WriteLine();
 
             Console.WriteLine("============== . operator examples =============");
