@@ -6,13 +6,12 @@ namespace operators
     {
         public static void Examples()
         {
-            Console.WriteLine("==== ! operator");
+            Console.WriteLine("==== !, &, |, ^ operators");
             Negation();
-
-            Console.WriteLine("==== &, |, ^ operators");
             And();
             Or();
             Xor();
+            WithNullableBoolean();
 
             Console.WriteLine("==== && and || operators");
             ConditionalAnd();
@@ -41,11 +40,17 @@ namespace operators
                 return true;
             }
             
-            bool test = false & SecondOperand();
-            Console.WriteLine(test);
+            bool a = false & SecondOperand();
+            Console.WriteLine(a);
             // Output:
             // Second operand is evaluated.
             // False
+
+            bool b = true & SecondOperand();
+            Console.WriteLine(b);
+            // Output:
+            // Second operand is evaluated.
+            // True
             // </SnippetAnd>
         }
 
@@ -55,11 +60,17 @@ namespace operators
             bool SecondOperand() 
             {
                 Console.WriteLine("Second operand is evaluated.");
-                return false;
+                return true;
             }
             
-            bool test = true | SecondOperand();
-            Console.WriteLine(test);
+            bool a = true | SecondOperand();
+            Console.WriteLine(a);
+            // Output:
+            // Second operand is evaluated.
+            // True
+
+            bool b = false | SecondOperand();
+            Console.WriteLine(b);
             // Output:
             // Second operand is evaluated.
             // True
@@ -118,6 +129,19 @@ namespace operators
             // Second operand is evaluated.
             // True
             // </SnippetConditionalOr>
+        }
+
+        private static void WithNullableBoolean()
+        {
+            // <SnippetWithNullableBoolean>
+            bool? test = null;
+            Display(!test);         // output: null
+            Display(test ^ false);  // output: null
+            Display(test ^ null);   // output: null
+            Display(true ^ null);   // output: null 
+
+            void Display(bool? b) => Console.WriteLine(b is null ? "null" : b.Value.ToString());
+            // </SnippetWithNullableBoolean>
         }
 
         private static void CompoundAssignment()
