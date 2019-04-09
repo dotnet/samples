@@ -42,7 +42,7 @@ class Example
                Console.WriteLine($"A instance of type {o.GetType().Name}");
                break;   
             default:
-                Console.WriteLine("Null passed to this method");
+                Console.WriteLine("Null passed to this method.");
                 break;
         }
     }
@@ -50,6 +50,7 @@ class Example
 // The example displays the following output:
 //     An array with 5 elements.
 //     4 items
+//     Null passed to this method.
 // </Snippet1>
 
 
