@@ -6,7 +6,7 @@ public class Example
 {
    public static void Main()
    {
-      String[] names = { "Samuel", "Dakota", "Koani", "Saya", "Vanya",
+      String[] names = { "Samuel", "Dakota", "Koani", "Saya", "Vanya", "Jody",
                          "Yiska", "Yuma", "Jody", "Nikita" };
       var nameList = new List<String>();
       nameList.AddRange(names);
@@ -26,9 +26,9 @@ public class Example
 }
 // The example displays the following output:
 //    List in unsorted order:
-//       Samuel   Dakota   Koani   Saya   Vanya   Yiska   Yuma   Jody   Nikita
+//       Samuel   Dakota   Koani   Saya   Vanya   Jody   Yiska   Yuma   Jody   Nikita
 //
 //    List in sorted order:
-//       Dakota   Jody   Koani   Nikita   Samuel   Saya   Vanya   Yiska   Yuma
+//       Dakota   Jody   Jody   Koani   Nikita   Samuel   Saya   Vanya   Yiska   Yuma
 // </Snippet2>
 
