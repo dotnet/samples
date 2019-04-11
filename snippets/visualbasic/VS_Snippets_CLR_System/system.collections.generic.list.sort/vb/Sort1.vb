@@ -7,8 +7,8 @@ Imports System.Collections.Generic
 Module Example
    Public Sub Main()
       Dim names() As String = { "Samuel", "Dakota", "Koani", "Saya",
-                                "Vanya", "Yiska", "Yuma", "Jody",
-                                "Nikita" }
+                                "Vanya", "Jody", "Yiska", "Yuma", 
+                                "Jody", "Nikita" }
       Dim nameList As New List(Of String)()
       nameList.AddRange(names)
       Console.WriteLine("List in unsorted order: ")
@@ -27,8 +27,8 @@ Module Example
 End Module
 ' The example displays the following output:
 '    List in unsorted order:
-'       Samuel   Dakota   Koani   Saya   Vanya   Yiska   Yuma   Jody   Nikita
+'       Samuel   Dakota   Koani   Saya   Vanya   Jody   Yiska   Yuma   Jody   Nikita
 '
 '    List in sorted order:
-'       Dakota   Jody   Koani   Nikita   Samuel   Saya   Vanya   Yiska   Yuma
+'       Dakota   Jody   Jody   Koani   Nikita   Samuel   Saya   Vanya   Yiska   Yuma
 ' </Snippet2>
