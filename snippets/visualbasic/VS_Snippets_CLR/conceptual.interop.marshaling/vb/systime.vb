@@ -3,7 +3,7 @@ Imports System
 Imports System.Runtime.InteropServices
 
 ' Declares a class member for each structure element.
-<StructLayout(LayoutKind.Sequential)> _
+<StructLayout(LayoutKind.Sequential)>
 Public Class SystemTime
     Public year As Short
     Public month As Short
@@ -17,8 +17,8 @@ End Class 'SystemTime
 
 Public Class LibWrap
     ' Declares a managed prototype for the unmanaged function.
-    Declare Sub GetSystemTime Lib "Kernel32.dll" _
-        (<[In](), Out()> ByVal st As SystemTime)
+    Declare Sub GetSystemTime Lib "Kernel32.dll" (
+        <[In](), Out()> ByVal st As SystemTime)
 End Class 'LibWrap
 
 Public Class App
