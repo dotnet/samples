@@ -3,7 +3,7 @@ Imports System
 Imports System.Runtime.InteropServices
 
 '<snippet34>
-<StructLayout(LayoutKind.Sequential, CharSet:=CharSet.Unicode)> _
+<StructLayout(LayoutKind.Sequential, CharSet:=CharSet.Unicode)>
 Public Structure DsBrowseInfo
     Public Const MAX_PATH As Integer = 256
 
@@ -26,8 +26,8 @@ End Structure
 
 Public Class LibWrap
     ' Declares a managed prototype for the unmanaged function.
-    Declare Unicode Function DsBrowseForContainerW Lib "dsuiext.dll" ( _
-        ByRef info As DSBrowseInfo ) As Integer
+    Declare Unicode Function DsBrowseForContainerW Lib "dsuiext.dll" (
+        ByRef info As DsBrowseInfo) As Integer
 
     Public Const DSBI_ENTIREDIRECTORY As Integer = &H90000
     Public Const ADS_FORMAT_WINDOWS As Integer = 1
@@ -44,7 +44,7 @@ Public Class App
     ' Must be marked as STA because the default is MTA.
     ' DsBrowseForContainerW calls CoInitialize, which initializes the
     ' COM library as STA.
-    <STAThread> _
+    <STAThread>
     Public Shared Sub Main()
         Dim dsbi As New DsBrowseInfo()
 
@@ -55,11 +55,11 @@ Public Class App
         dsbi.ReturnFormat = LibWrap.ADS_FORMAT_WINDOWS
         dsbi.Flags = LibWrap.DSBI_ENTIREDIRECTORY
         dsbi.Root = "LDAP:"
-        dsbi.Path = New String(New Char(DsBrowseInfo.MAX_PATH){})
-        ' Initialize remaining members...
+        dsbi.Path = New String(New Char(DsBrowseInfo.MAX_PATH) {})
 
+        ' Initialize remaining members...
         Dim status As Integer = LibWrap.DsBrowseForContainerW(dsbi)
-        if CType(status, LibWrap.BrowseStatus) = LibWrap.BrowseStatus.BrowseOk Then
+        If CType(status, LibWrap.BrowseStatus) = LibWrap.BrowseStatus.BrowseOk Then
             Console.WriteLine(dsbi.Path)
         Else
             Console.WriteLine("No path returned.")

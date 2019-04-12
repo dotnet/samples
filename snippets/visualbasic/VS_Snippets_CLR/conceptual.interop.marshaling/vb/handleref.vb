@@ -6,13 +6,13 @@ Imports System.Runtime.InteropServices
 
 '<snippet43>
 ' Declares a managed structure for the unmanaged structure.
-<StructLayout(LayoutKind.Sequential)> _
+<StructLayout(LayoutKind.Sequential)>
 Public Structure Overlapped
     ' ...
 End Structure
 
 ' Declares a managed class for the unmanaged structure.
-<StructLayout(LayoutKind.Sequential)> _
+<StructLayout(LayoutKind.Sequential)>
 Public Class Overlapped2
     ' ...
 End Class
@@ -21,28 +21,28 @@ Public Class LibWrap
     ' Declares a managed prototypes for unmanaged functions.
     ' Because Overlapped is a structure, you cannot pass Nothing as a
     ' parameter. Instead, declares an overloaded method.
-    Overloads Declare Ansi Function ReadFile Lib "Kernel32.dll" ( _
-        ByVal hndRef As HandleRef, _
-        ByVal buffer As StringBuilder, _
-        ByVal numberOfBytesToRead As Integer, _
-        ByRef numberOfBytesRead As Integer, _
+    Overloads Declare Ansi Function ReadFile Lib "Kernel32.dll" (
+        ByVal hndRef As HandleRef,
+        ByVal buffer As StringBuilder,
+        ByVal numberOfBytesToRead As Integer,
+        ByRef numberOfBytesRead As Integer,
         ByRef flag As Overlapped) As Boolean
 
     ' Declares an int instead of a structure reference for 'flag'
-    Overloads Declare Ansi Function ReadFile Lib "Kernel32.dll" ( _
-        ByVal hndRef As HandleRef, _
-        ByVal buffer As StringBuilder, _
-        ByVal numberOfBytesToRead As Integer, _
-        ByRef numberOfBytesRead As Integer, _
+    Overloads Declare Ansi Function ReadFile Lib "Kernel32.dll" (
+        ByVal hndRef As HandleRef,
+        ByVal buffer As StringBuilder,
+        ByVal numberOfBytesToRead As Integer,
+        ByRef numberOfBytesRead As Integer,
         ByVal flag As IntPtr) As Boolean
 
     ' Because Overlapped2 is a class, you can pass Nothing as a parameter.
     ' No overloading is needed.
-    Declare Ansi Function ReadFile2 Lib "Kernel32.dll" Alias "ReadFile" ( _
-        ByVal hndRef As HandleRef, _
-        ByVal buffer As StringBuilder, _
-        ByVal numberOfBytesToRead As Integer, _
-        ByRef numberOfBytesRead As Integer, _
+    Declare Ansi Function ReadFile2 Lib "Kernel32.dll" Alias "ReadFile" (
+        ByVal hndRef As HandleRef,
+        ByVal buffer As StringBuilder,
+        ByVal numberOfBytesToRead As Integer,
+        ByRef numberOfBytesRead As Integer,
         <[In], Out> ByVal flag As Overlapped2) As Boolean
 End Class
 '</snippet43>
@@ -59,9 +59,9 @@ Public Class App
         ' Platform invoke holds the reference to HandleRef until the
         ' call ends.
         LibWrap.ReadFile(hr, buffer, 5, read, IntPtr.Zero)
-        Console.WriteLine("Read {0} bytes with struct parameter: {1}", read, buffer)
+        Console.WriteLine($"Read {read} bytes with struct parameter: {buffer}")
         LibWrap.ReadFile2(hr, buffer, 5, read, Nothing)
-        Console.WriteLine("Read {0} bytes with class parameter: {1}", read, buffer)
+        Console.WriteLine($"Read {read} bytes with class parameter: {buffer}")
     End Sub
 End Class
 '</snippet44>
