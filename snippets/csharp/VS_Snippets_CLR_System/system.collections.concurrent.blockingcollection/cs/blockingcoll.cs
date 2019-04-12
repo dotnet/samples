@@ -137,13 +137,13 @@ class ConsumingEnumerableDemo
     //      BlockingCollection<T>.Add()
     //      BlockingCollection<T>.CompleteAdding()
     //      BlockingCollection<T>.GetConsumingEnumerable()
-    public static void BC_GetConsumingEnumerable()
+    public static async Task BC_GetConsumingEnumerable()
     {
         using (BlockingCollection<int> bc = new BlockingCollection<int>())
         {
 
             // Kick off a producer task
-            Task.Factory.StartNew(async () =>
+            await Task.Factory.StartNew(async () =>
             {
                 for (int i = 0; i < 10; i++)
                 {
@@ -163,6 +163,7 @@ class ConsumingEnumerableDemo
             {
                 Console.WriteLine(item);
             }
+            return;
         }
     }
 }
