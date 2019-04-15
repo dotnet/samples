@@ -258,10 +258,9 @@ namespace X509CertEncrypt
                             {
                                 do
                                 {
-                                    count = inFs.Read(data, 0, blockSizeBytes);
+                                    count = inFs.Read(data, offset, blockSizeBytes);
                                     offset += count;
                                     outStreamDecrypted.Write(data, 0, count);
-
                                 }
                                 while (count > 0);
 
