@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Microsoft.Data.DataView;
 using Microsoft.ML;
 using Microsoft.ML.Data;
+using static Microsoft.ML.DataOperationsCatalog;
 using Microsoft.ML.Trainers;
 using Microsoft.ML.Transforms.Text;
 // </SnippetAddUsings>
@@ -29,7 +29,7 @@ namespace SentimentAnalysis
             // </SnippetCreateMLContext>
 
             // <SnippetCallLoadData>
-            TrainCatalogBase.TrainTestData splitDataView = LoadData(mlContext);
+            TrainTestData splitDataView = LoadData(mlContext);
             // </SnippetCallLoadData>
 
 
@@ -53,18 +53,18 @@ namespace SentimentAnalysis
             Console.WriteLine("=============== End of process ===============");
         }
 
-        public static TrainCatalogBase.TrainTestData LoadData(MLContext mlContext)
+        public static TrainTestData LoadData(MLContext mlContext)
         {
 
             //Note that this case, loading your training data from a file, 
             //is the easiest way to get started, but ML.NET also allows you 
             //to load data from databases or in-memory collections.
             // <SnippetLoadData>
-            IDataView dataView = mlContext.Data.LoadFromTextFile<SentimentData>(_dataPath,hasHeader:false);
+            IDataView dataView = mlContext.Data.LoadFromTextFile<SentimentData>(_dataPath, hasHeader: false);
             // </SnippetLoadData>
 
             // <SnippetSplitData>
-            TrainCatalogBase.TrainTestData splitDataView = mlContext.BinaryClassification.TrainTestSplit(dataView, testFraction: 0.2);
+            TrainTestData splitDataView = mlContext.Data.TrainTestSplit(dataView, testFraction: 0.2);
             // </SnippetSplitData>
 
             // <SnippetReturnSplitData>        
@@ -79,17 +79,17 @@ namespace SentimentAnalysis
             // This is used to format and clean the data.  
             // Convert the text column to numeric vectors (Features column) 
             // <SnippetFeaturizeText>
-            var pipeline = mlContext.Transforms.Text.FeaturizeText(outputColumnName: DefaultColumnNames.Features, inputColumnName: nameof(SentimentData.SentimentText))
+            var estimator = mlContext.Transforms.Text.FeaturizeText(outputColumnName: "Features", inputColumnName: nameof(SentimentData.SentimentText))
             //</SnippetFeaturizeText>
-            // Adds a FastTreeBinaryClassificationTrainer, the decision tree learner for this project  
+            // append the training algorithm to the estimator
             // <SnippetAddTrainer> 
-            .Append(mlContext.BinaryClassification.Trainers.FastTree(numLeaves: 50, numTrees: 50, minDatapointsInLeaves: 20));
+            .Append(mlContext.BinaryClassification.Trainers.SdcaLogisticRegression(labelColumnName: "Label", featureColumnName: "Features"));
             // </SnippetAddTrainer>
 
             // Create and train the model based on the dataset that has been loaded, transformed.
             // <SnippetTrainModel>
             Console.WriteLine("=============== Create and Train the Model ===============");
-            var model = pipeline.Fit(splitTrainSet);
+            var model = estimator.Fit(splitTrainSet);
             Console.WriteLine("=============== End of training ===============");
             Console.WriteLine();
             // </SnippetTrainModel>
@@ -116,15 +116,14 @@ namespace SentimentAnalysis
             CalibratedBinaryClassificationMetrics metrics = mlContext.BinaryClassification.Evaluate(predictions, "Label");
             // </SnippetEvaluate>
 
-            // The Accuracy metric gets the accuracy of a classifier, which is the proportion 
+            // The Accuracy metric gets the accuracy of a model, which is the proportion 
             // of correct predictions in the test set.
 
-            // The Auc metric gets the area under the ROC curve.
-            // The area under the ROC curve is equal to the probability that the classifier ranks
+            // The AreaUnderROCCurve metric is equal to the probability that the algorithm ranks
             // a randomly chosen positive instance higher than a randomly chosen negative one
             // (assuming 'positive' ranks higher than 'negative').
 
-            // The F1Score metric gets the classifier's F1 score.
+            // The F1Score metric gets the model's F1 score.
             // The F1 score is the harmonic mean of precision and recall:
             //  2 * precision * recall / (precision + recall).
 
@@ -133,21 +132,24 @@ namespace SentimentAnalysis
             Console.WriteLine("Model quality metrics evaluation");
             Console.WriteLine("--------------------------------");
             Console.WriteLine($"Accuracy: {metrics.Accuracy:P2}");
-            Console.WriteLine($"Auc: {metrics.Auc:P2}");
+            Console.WriteLine($"Auc: {metrics.AreaUnderRocCurve:P2}");
             Console.WriteLine($"F1Score: {metrics.F1Score:P2}");
             Console.WriteLine("=============== End of model evaluation ===============");
             //</SnippetDisplayMetrics>
 
             // Save the new model to .ZIP file
-            // <SnippetCallSaveModel>
-            SaveModelAsFile(mlContext, model);
-            // </SnippetCallSaveModel>
+            // <SnippetSaveModel>             
+            using (var fs = new FileStream(_modelPath, FileMode.Create, FileAccess.Write, FileShare.Write))
+                mlContext.Model.Save(model, predictions.Schema, fs);
+            // </SnippetSaveModel>
+
+            Console.WriteLine("The model is saved to {0}", _modelPath);
         }
 
         private static void UseModelWithSingleItem(MLContext mlContext, ITransformer model)
         {
             // <SnippetCreatePredictionEngine1>
-            PredictionEngine<SentimentData, SentimentPrediction> predictionFunction = model.CreatePredictionEngine<SentimentData, SentimentPrediction>(mlContext);
+            PredictionEngine<SentimentData, SentimentPrediction> predictionFunction = mlContext.Model.CreatePredictionEngine<SentimentData, SentimentPrediction>(model);
             // </SnippetCreatePredictionEngine1>
 
             // <SnippetCreateTestIssue1>
@@ -191,9 +193,11 @@ namespace SentimentAnalysis
 
             // <SnippetLoadModel>
             ITransformer loadedModel;
+            DataViewSchema dataViewSchema;
+
             using (var stream = new FileStream(_modelPath, FileMode.Open, FileAccess.Read, FileShare.Read))
             {
-                loadedModel = mlContext.Model.Load(stream);
+                loadedModel = mlContext.Model.Load(stream, out dataViewSchema);
             }
             // </SnippetLoadModel>
 
@@ -229,18 +233,6 @@ namespace SentimentAnalysis
             Console.WriteLine("=============== End of predictions ===============");
 
             // </SnippetDisplayResults>          
-        }
-
-        // Saves the model we trained to a zip file.
-
-        private static void SaveModelAsFile(MLContext mlContext, ITransformer model)
-        {
-            // <SnippetSaveModel> 
-            using (var fs = new FileStream(_modelPath, FileMode.Create, FileAccess.Write, FileShare.Write))
-                mlContext.Model.Save(model, fs);
-            // </SnippetSaveModel>
-
-            Console.WriteLine("The model is saved to {0}", _modelPath);
         }
 
     }
