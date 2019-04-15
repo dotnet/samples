@@ -147,10 +147,10 @@ namespace X509CertEncrypt
                             {
                                 do
                                 {
-                                    count = inFs.Read(data, 0, blockSizeBytes);
+                                    count = inFs.Read(data, offset, blockSizeBytes);
                                     offset += count;
                                     outStreamEncrypted.Write(data, 0, count);
-                                    bytesRead += blockSizeBytes;
+                                    bytesRead += count;
                                 }
                                 while (count > 0);
                                 inFs.Close();
