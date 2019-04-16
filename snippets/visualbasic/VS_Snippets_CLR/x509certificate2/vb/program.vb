@@ -139,10 +139,10 @@ Class Program
                         Dim inFs As New FileStream(inFile, FileMode.Open)
                         Try
                             Do
-                                count = inFs.Read(data, 0, blockSizeBytes)
+                                count = inFs.Read(data, offset, blockSizeBytes)
                                 offset += count
                                 outStreamEncrypted.Write(data, 0, count)
-                                bytesRead += blockSizeBytes
+                                bytesRead += count
                             Loop While count > 0
                             inFs.Close()
                         Finally
@@ -259,7 +259,7 @@ Class Program
                     Dim outStreamDecrypted As New CryptoStream(outFs, transform, CryptoStreamMode.Write)
                     Try
                         Do
-                            count = inFs.Read(data, 0, blockSizeBytes)
+                            count = inFs.Read(data, offset, blockSizeBytes)
                             offset += count
                             outStreamDecrypted.Write(data, 0, count)
                         Loop While count > 0
