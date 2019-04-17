@@ -19,6 +19,7 @@ namespace operators
 
             Console.WriteLine("==== Additional examples");
             CompoundAssignment();
+            CompoundAssignmentWithCast();
             Precedence();
         }
 
@@ -81,6 +82,17 @@ namespace operators
             // Before: 11001001000000000000000000010001
             // After:  10010000000000000000000100010000
             // </SnippetLeftShift>
+
+            // <SnippetLeftShiftPromoted>
+            byte a = 0b_1111_0001;
+
+            var b = a << 8;
+            Console.WriteLine(b.GetType());
+            Console.WriteLine($"Shifted byte: {Convert.ToString(b, toBase: 2)}");
+            // Output:
+            // System.Int32
+            // Shifted byte: 1111000100000000
+            // </SnippetLeftShiftPromoted>
         }
 
         private static void RightShift()
@@ -154,6 +166,19 @@ namespace operators
 
             void Display(uint x) => Console.WriteLine($"{Convert.ToString(x, toBase: 2), 8}");
             // </SnippetCompoundAssignment>
+        }
+
+        private static void CompoundAssignmentWithCast()
+        {
+            // <SnippetCompoundAssignmentWithCast>
+            byte x = 0b_1111_0001;
+
+            int b = x << 8;
+            Console.WriteLine($"{Convert.ToString(b, toBase: 2)}");  // output: 1111000100000000
+
+            x <<= 8;
+            Console.WriteLine(x);  // output: 0
+            // </SnippetCompoundAssignmentWithCast>
         }
 
         private static void Precedence()
