@@ -54,14 +54,16 @@ namespace SentimentAnalysis
 
         public static TrainTestData LoadData(MLContext mlContext)
         {
-
-            //Note that this case, loading your training data from a file, 
-            //is the easiest way to get started, but ML.NET also allows you 
-            //to load data from databases or in-memory collections.
+            // Note that this case, loading your training data from a file, 
+            // is the easiest way to get started, but ML.NET also allows you 
+            // to load data from databases or in-memory collections.
             // <SnippetLoadData>
             IDataView dataView = mlContext.Data.LoadFromTextFile<SentimentData>(_dataPath, hasHeader: false);
             // </SnippetLoadData>
 
+            // You need both a training dataset to train the model and a test dataset to evaluate the model.
+            // Split the loaded dataset into train and test datasets
+            // Specify test dataset percentage with the `testFraction`parameter
             // <SnippetSplitData>
             TrainTestData splitDataView = mlContext.Data.TrainTestSplit(dataView, testFraction: 0.2);
             // </SnippetSplitData>
@@ -73,14 +75,13 @@ namespace SentimentAnalysis
 
         public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView splitTrainSet)
         {
-
             // Create a flexible pipeline (composed by a chain of estimators) for creating/training the model.
             // This is used to format and clean the data.  
             // Convert the text column to numeric vectors (Features column) 
             // <SnippetFeaturizeText>
             var estimator = mlContext.Transforms.Text.FeaturizeText(outputColumnName: "Features", inputColumnName: nameof(SentimentData.SentimentText))
             //</SnippetFeaturizeText>
-            // append the training algorithm to the estimator
+            // append the machine learning task to the estimator
             // <SnippetAddTrainer> 
             .Append(mlContext.BinaryClassification.Trainers.SdcaLogisticRegression(labelColumnName: "Label", featureColumnName: "Features"));
             // </SnippetAddTrainer>
@@ -168,7 +169,7 @@ namespace SentimentAnalysis
 
         public static void UseModelWithBatchItems(MLContext mlContext, ITransformer model)
         {
-            // Adds some comments to test the trained model's predictions.
+            // Adds some comments to test the trained model's data points.
             // <SnippetCreateTestIssues>
             IEnumerable<SentimentData> sentiments = new[]
             {
@@ -183,11 +184,11 @@ namespace SentimentAnalysis
             };
             // </SnippetCreateTestIssues>
 
-            // Load test data  
+            // Load batch comments just created 
             // <SnippetPrediction>
-            IDataView sentimentStreamingDataView = mlContext.Data.LoadFromEnumerable(sentiments);
+            IDataView batchComments = mlContext.Data.LoadFromEnumerable(sentiments);
 
-            IDataView predictions = model.Transform(sentimentStreamingDataView);
+            IDataView predictions = model.Transform(batchComments);
 
             // Use model to predict whether comment data is Positive (1) or Negative (0).
             IEnumerable<SentimentPrediction> predictedResults = mlContext.Data.CreateEnumerable<SentimentPrediction>(predictions, reuseRowObject: false);
