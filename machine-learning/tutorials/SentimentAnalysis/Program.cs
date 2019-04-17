@@ -22,8 +22,7 @@ namespace SentimentAnalysis
         static void Main(string[] args)
         {
             // Create ML.NET context/local environment - allows you to add steps in order to keep everything together 
-            // during the learning process.  
-            //Create ML Context with seed for repeatable/deterministic results
+            // as you discover the ML.NET trainers and transforms 
             // <SnippetCreateMLContext>
             MLContext mlContext = new MLContext();
             // </SnippetCreateMLContext>
@@ -45,9 +44,9 @@ namespace SentimentAnalysis
             UseModelWithSingleItem(mlContext, model);
             // </SnippetCallUseModelWithSingleItem>
 
-            // <SnippetCallUseLoadedModelWithBatchItems>
-            UseLoadedModelWithBatchItems(mlContext);
-            // </SnippetCallUseLoadedModelWithBatchItems>
+            // <SnippetCallUseModelWithBatchItems>
+            UseModelWithBatchItems(mlContext, model);
+            // </SnippetCallUseModelWithBatchItems>
 
             Console.WriteLine();
             Console.WriteLine("=============== End of process ===============");
@@ -137,13 +136,6 @@ namespace SentimentAnalysis
             Console.WriteLine("=============== End of model evaluation ===============");
             //</SnippetDisplayMetrics>
 
-            // Save the new model to .ZIP file
-            // <SnippetSaveModel>             
-            using (var fs = new FileStream(_modelPath, FileMode.Create, FileAccess.Write, FileShare.Write))
-                mlContext.Model.Save(model, predictions.Schema, fs);
-            // </SnippetSaveModel>
-
-            Console.WriteLine("The model is saved to {0}", _modelPath);
         }
 
         private static void UseModelWithSingleItem(MLContext mlContext, ITransformer model)
@@ -174,7 +166,7 @@ namespace SentimentAnalysis
             // </SnippetOutputPrediction>
         }
 
-        public static void UseLoadedModelWithBatchItems(MLContext mlContext)
+        public static void UseModelWithBatchItems(MLContext mlContext, ITransformer model)
         {
             // Adds some comments to test the trained model's predictions.
             // <SnippetCreateTestIssues>
@@ -191,21 +183,11 @@ namespace SentimentAnalysis
             };
             // </SnippetCreateTestIssues>
 
-            // <SnippetLoadModel>
-            ITransformer loadedModel;
-            DataViewSchema dataViewSchema;
-
-            using (var stream = new FileStream(_modelPath, FileMode.Open, FileAccess.Read, FileShare.Read))
-            {
-                loadedModel = mlContext.Model.Load(stream, out dataViewSchema);
-            }
-            // </SnippetLoadModel>
-
             // Load test data  
             // <SnippetPrediction>
             IDataView sentimentStreamingDataView = mlContext.Data.LoadFromEnumerable(sentiments);
 
-            IDataView predictions = loadedModel.Transform(sentimentStreamingDataView);
+            IDataView predictions = model.Transform(sentimentStreamingDataView);
 
             // Use model to predict whether comment data is Positive (1) or Negative (0).
             IEnumerable<SentimentPrediction> predictedResults = mlContext.Data.CreateEnumerable<SentimentPrediction>(predictions, reuseRowObject: false);
@@ -214,7 +196,7 @@ namespace SentimentAnalysis
             // <SnippetAddInfoMessage>
             Console.WriteLine();
 
-            Console.WriteLine("=============== Prediction Test of loaded model with a multiple samples ===============");
+            Console.WriteLine("=============== Prediction Test of loaded model with multiple samples ===============");
             // </SnippetAddInfoMessage>
 
             Console.WriteLine();
@@ -231,7 +213,6 @@ namespace SentimentAnalysis
 
             }
             Console.WriteLine("=============== End of predictions ===============");
-
             // </SnippetDisplayResults>          
         }
 
