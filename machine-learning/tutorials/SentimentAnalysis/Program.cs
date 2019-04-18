@@ -119,12 +119,11 @@ namespace SentimentAnalysis
             // The Accuracy metric gets the accuracy of a model, which is the proportion 
             // of correct predictions in the test set.
 
-            // The AreaUnderROCCurve metric is equal to the probability that the algorithm ranks
-            // a randomly chosen positive instance higher than a randomly chosen negative one
-            // (assuming 'positive' ranks higher than 'negative').
+            // The AreaUnderRocCurve metric is an indicator of how confident the model is 
+            // correctly classifying the positive and negative classes as such.
 
             // The F1Score metric gets the model's F1 score.
-            // The F1 score is the harmonic mean of precision and recall:
+            //  F1 is a measure of tradeoff between precision and recall.
             //  2 * precision * recall / (precision + recall).
 
             // <SnippetDisplayMetrics>
