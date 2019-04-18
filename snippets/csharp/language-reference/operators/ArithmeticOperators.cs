@@ -28,6 +28,7 @@ namespace operators
             
             Console.WriteLine("==== Compound assignment");
             CompoundAssignment();
+            CompoundAssignmentWithCast();
             
             Console.WriteLine("==== Special cases");
             CheckedUnchecked();
@@ -192,6 +193,21 @@ namespace operators
             a %= 3;
             Console.WriteLine(a);  // output: 2
             // </SnippetCompoundAssignment>
+        }
+
+        private static void CompoundAssignmentWithCast()
+        {
+            // <SnippetCompoundAssignmentWithCast>
+            byte a = 200;
+            byte b = 100;
+            
+            var c = a + b;
+            Console.WriteLine(c.GetType());  // output: System.Int32
+            Console.WriteLine(c);  // output: 300
+
+            a += b;
+            Console.WriteLine(a);  // output: 44
+            // </SnippetCompoundAssignmentWithCast>
         }
 
         private static void CheckedUnchecked()
