@@ -25,8 +25,8 @@ public class GetDotNetVersion
       // Checking the version using >= enables forward compatibility.
       string CheckFor45PlusVersion(int releaseKey)
       {
-         if (releaseKey > 461814)
-            return "4.7.2 or later";
+         if (releaseKey >= 528049)
+            return "4.8 or later";
          if (releaseKey >= 461808)
             return "4.7.2";
          if (releaseKey >= 461308)
