@@ -11,7 +11,6 @@
 ' <Snippet1>
 ' This program shows how to use the IPAddress class to obtain a server 
 ' IP addressess and related information.
-Imports System
 Imports System.Net
 Imports System.Net.Sockets
 Imports System.Text.RegularExpressions
@@ -108,9 +107,6 @@ Namespace Mssc.Services.ConnectionManagement
         ' Define a regular expression to parse user's input.
         ' This is a security check. It allows only
         ' alphanumeric input string between 2 to 40 character long.
-        'Define a regular expression to parse user's input.
-        'This is a security check. It allows only
-        'alphanumeric input string between 2 to 40 character long.
         Dim rex As New Regex("^[a-zA-Z]\w{1,39}$")
 
         If args.Length < 1 Then
