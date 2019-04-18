@@ -130,9 +130,9 @@ namespace SentimentAnalysis
             Console.WriteLine();
             Console.WriteLine("Model quality metrics evaluation");
             Console.WriteLine("--------------------------------");
-            Console.WriteLine($"Accuracy: {metrics.Accuracy:P2}");
-            Console.WriteLine($"Auc: {metrics.AreaUnderRocCurve:P2}");
-            Console.WriteLine($"F1Score: {metrics.F1Score:P2}");
+            Console.WriteLine($"            Accuracy: {metrics.Accuracy:P2}");
+            Console.WriteLine($"Area Under Roc Curve: {metrics.AreaUnderRocCurve:P2}");
+            Console.WriteLine($"             F1Score: {metrics.F1Score:P2}");
             Console.WriteLine("=============== End of model evaluation ===============");
             //</SnippetDisplayMetrics>
 
