@@ -139,9 +139,13 @@ namespace operators
             
             int a = 0b_0001;
             Console.WriteLine($"{a} << {count1} is {a << count1}; {a} << {count2} is {a << count2}");
+            // Output:
+            // 1 << 1 is 2; 1 << 225 is 2
 
             int b = 0b_0100;
             Console.WriteLine($"{b} >> {count1} is {b >> count1}; {b} >> {count2} is {b >> count2}");
+            // Output:
+            // 4 >> 1 is 2; 4 >> 225 is 2
             // </SnippetShiftCount>
         }
 
