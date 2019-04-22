@@ -96,7 +96,7 @@ namespace EventSampleCode
                 {
                     directoryChanged?.Invoke(this,
                         new SearchDirectoryArgs(dir, totalDirs, completedDirs++));
-                    // Recursively search this child directory:
+                    // Search each sub-directory for files that match the search pattern:
                     SearchDirectory(dir, searchPattern);
                 }
                 // Include the Current Directory:
