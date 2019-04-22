@@ -117,8 +117,8 @@ namespace TransferLearningTF
             Console.WriteLine("=============== Classification metrics ===============");
 
             // <SnippetEvaluate>           
-            var regressionContext = mlContext.MulticlassClassification;
-            var metrics = regressionContext.Evaluate(predictions, labelColumnName: LabelTokey, predictedLabelColumnName: "PredictedLabel");
+            var multiclassContext = mlContext.MulticlassClassification;
+            var metrics = multiclassContext.Evaluate(predictions, labelColumnName: LabelTokey, predictedLabelColumnName: "PredictedLabel");
             // </SnippetEvaluate>
 
             //<SnippetDisplayMetrics>
