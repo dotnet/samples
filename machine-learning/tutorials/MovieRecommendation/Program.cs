@@ -43,8 +43,6 @@ namespace MovieRecommendation
             // <SnippetSaveModelMain>
             SaveModel(mlContext, trainingDataView.Schema, model);
             // </SnippetSaveModelMain>
-
-            Console.ReadLine();
         }
 
         // Load data
