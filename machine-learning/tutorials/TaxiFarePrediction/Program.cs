@@ -106,11 +106,7 @@ namespace TaxiFarePrediction
         {
             //load the model
             // <Snippet21>
-            ITransformer loadedModel;
-            using (var stream = new FileStream(_modelPath, FileMode.Open, FileAccess.Read, FileShare.Read))
-            {
-                loadedModel = mlContext.Model.Load(stream, out var modelInputSchema);
-            }
+            ITransformer loadedModel = mlContext.Model.Load(_modelPath, out var modelInputSchema);
             // </Snippet21>
 
             //Prediction test
