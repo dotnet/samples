@@ -1,9 +1,7 @@
 ﻿// <Snippet1>
 using System;
 using System.IO;
-using Microsoft.Data.DataView;
 using Microsoft.ML;
-using Microsoft.ML.Data;
 // </Snippet1>
 
 namespace TaxiFarePrediction
@@ -72,7 +70,7 @@ namespace TaxiFarePrediction
             Console.WriteLine("=============== End of training ===============");
             Console.WriteLine();
             // <Snippet12>
-            SaveModelAsFile(mlContext, model);
+            SaveModelAsFile(mlContext, dataView.Schema, model);
             return model;
             // </Snippet12>
         }
@@ -95,10 +93,10 @@ namespace TaxiFarePrediction
             Console.WriteLine($"*       Model quality metrics evaluation         ");
             Console.WriteLine($"*------------------------------------------------");
             // <Snippet18>
-            Console.WriteLine($"*       R2 Score:      {metrics.RSquared:0.##}");
+            Console.WriteLine($"*       RSquared Score:      {metrics.RSquared:0.##}");
             // </Snippet18>
             // <Snippet19>
-            Console.WriteLine($"*       RMS loss:      {metrics.Rms:#.##}");
+            Console.WriteLine($"*       Root Mean Squared Error:      {metrics.RootMeanSquaredError:#.##}");
             // </Snippet19>
             Console.WriteLine($"*************************************************");
 
@@ -111,14 +109,14 @@ namespace TaxiFarePrediction
             ITransformer loadedModel;
             using (var stream = new FileStream(_modelPath, FileMode.Open, FileAccess.Read, FileShare.Read))
             {
-                loadedModel = mlContext.Model.Load(stream);
+                loadedModel = mlContext.Model.Load(stream, out var modelInputSchema);
             }
             // </Snippet21>
 
             //Prediction test
             // Create prediction function and make prediction.
             // <Snippet22>
-            var predictionFunction = loadedModel.CreatePredictionEngine<TaxiTrip, TaxiTripFarePrediction>(mlContext);
+            var predictionFunction = mlContext.Model.CreatePredictionEngine<TaxiTrip, TaxiTripFarePrediction>(loadedModel);
             // </Snippet22>
             //Sample: 
             //vendor_id,rate_code,passenger_count,trip_time_in_secs,trip_distance,payment_type,fare_amount
@@ -145,11 +143,10 @@ namespace TaxiFarePrediction
             // </Snippet25>
         }
 
-        private static void SaveModelAsFile(MLContext mlContext, ITransformer model)
+        private static void SaveModelAsFile(MLContext mlContext,DataViewSchema dataViewSchema, ITransformer model)
         {
             // <Snippet13> 
-            using (var fileStream = new FileStream(_modelPath, FileMode.Create, FileAccess.Write, FileShare.Write))
-                mlContext.Model.Save(model, fileStream);
+            mlContext.Model.Save(model, dataViewSchema, _modelPath);
             // </Snippet13>
 
             Console.WriteLine("The model is saved to {0}", _modelPath);
