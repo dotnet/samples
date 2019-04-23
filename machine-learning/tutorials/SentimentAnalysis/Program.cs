@@ -119,20 +119,21 @@ namespace SentimentAnalysis
             // The Accuracy metric gets the accuracy of a model, which is the proportion 
             // of correct predictions in the test set.
 
-            // The AreaUnderRocCurve metric is an indicator of how confident the model is 
-            // correctly classifying the positive and negative classes as such.
+            // The AreaUnderROCCurve metric is equal to the probability that the algorithm ranks
+            // a randomly chosen positive instance higher than a randomly chosen negative one
+            // (assuming 'positive' ranks higher than 'negative').
 
             // The F1Score metric gets the model's F1 score.
-            //  F1 is a measure of tradeoff between precision and recall.
+            // The F1 score is the harmonic mean of precision and recall:
             //  2 * precision * recall / (precision + recall).
 
             // <SnippetDisplayMetrics>
             Console.WriteLine();
             Console.WriteLine("Model quality metrics evaluation");
             Console.WriteLine("--------------------------------");
-            Console.WriteLine($"            Accuracy: {metrics.Accuracy:P2}");
-            Console.WriteLine($"Area Under Roc Curve: {metrics.AreaUnderRocCurve:P2}");
-            Console.WriteLine($"             F1Score: {metrics.F1Score:P2}");
+            Console.WriteLine($"Accuracy: {metrics.Accuracy:P2}");
+            Console.WriteLine($"Auc: {metrics.AreaUnderRocCurve:P2}");
+            Console.WriteLine($"F1Score: {metrics.F1Score:P2}");
             Console.WriteLine("=============== End of model evaluation ===============");
             //</SnippetDisplayMetrics>
 
@@ -159,7 +160,7 @@ namespace SentimentAnalysis
             Console.WriteLine("=============== Prediction Test of model with a single sample and test dataset ===============");
 
             Console.WriteLine();
-            Console.WriteLine($"Sentiment: {sampleStatement.SentimentText} | Prediction: {(Convert.ToBoolean(resultprediction.Prediction) ? "Positive" : "Negative")} | Probability: {resultprediction.Probability} ");
+            Console.WriteLine($"Sentiment: {resultprediction.SentimentText} | Prediction: {(Convert.ToBoolean(resultprediction.Prediction) ? "Positive" : "Negative")} | Probability: {resultprediction.Probability} ");
 
             Console.WriteLine("=============== End of Predictions ===============");
             Console.WriteLine();
@@ -200,20 +201,15 @@ namespace SentimentAnalysis
             // </SnippetAddInfoMessage>
 
             Console.WriteLine();
-
-            // Builds pairs of (sentiment, prediction)
-            // <SnippetBuildSentimentPredictionPairs>
-            IEnumerable<(SentimentData sentiment, SentimentPrediction prediction)> sentimentsAndPredictions = sentiments.Zip(predictedResults, (sentiment, prediction) => (sentiment, prediction));
-            // </SnippetBuildSentimentPredictionPairs>
-
+   
             // <SnippetDisplayResults>
-            foreach ((SentimentData sentiment, SentimentPrediction prediction) item in sentimentsAndPredictions)
+            foreach (SentimentPrediction prediction  in predictedResults)
             {
-                Console.WriteLine($"Sentiment: {item.sentiment.SentimentText} | Prediction: {(Convert.ToBoolean(item.prediction.Prediction) ? "Positive" : "Negative")} | Probability: {item.prediction.Probability} ");
+                Console.WriteLine($"Sentiment: {prediction.SentimentText} | Prediction: {(Convert.ToBoolean(prediction.Prediction) ? "Positive" : "Negative")} | Probability: {prediction.Probability} ");
 
             }
             Console.WriteLine("=============== End of predictions ===============");
-            // </SnippetDisplayResults>          
+            // </SnippetDisplayResults>       
         }
 
     }
