@@ -152,10 +152,8 @@ namespace csrefKeywordsChecked
             // is the maximum value for integers. 
             //int i1 = 2147483647 + 10;
 
-            // The following example, which includes variable ten, does not cause
-            // a compiler error.
-            int ten = 10;
-            int i2 = 2147483647 + ten;
+            // The following example, does not cause a compiler error.
+            int i2 = 2147483647 + 10;
 
             // By default, the overflow in the previous statement also does
             // not cause a run-time exception. The following line displays 
@@ -169,12 +167,12 @@ namespace csrefKeywordsChecked
             // OverflowException error is raised.
 
             // Checked expression.
-            Console.WriteLine(checked(2147483647 + ten));
+            Console.WriteLine(checked(2147483647 + 10));
 
             // Checked block.
             checked
             {
-                int i3 = 2147483647 + ten;
+                int i3 = 2147483647 + 10;
                 Console.WriteLine(i3);
             }
             //</Snippet4>
