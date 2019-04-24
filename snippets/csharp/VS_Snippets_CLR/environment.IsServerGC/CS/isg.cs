@@ -2,17 +2,17 @@
 using System;
 using System.Runtime;
 
-class Sample 
+class Sample
 {
-    public static void Main() 
+    public static void Main()
     {
-    string result;
+        string result;
 
-    if (GCSettings.IsServerGC == true)
-        result = "server";
-    else 
-        result = "workstation";
-    Console.WriteLine("The {0} garbage collector is running.", result);
+        if (GCSettings.IsServerGC == true)
+            result = "server";
+        else
+            result = "workstation";
+        Console.WriteLine("The {0} garbage collector is running.", result);
     }
 }
 // The example displays output like the following:

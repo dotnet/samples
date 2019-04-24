@@ -13,8 +13,8 @@ Public Class LibWrap
     End Enum
 
     ' Uses AsAny when void* is expected.
-    Declare Sub SetData Lib "..\LIB\PInvokeLib.dll" ( _
-        ByVal t As DataType, _
+    Declare Sub SetData Lib "..\LIB\PInvokeLib.dll" (
+        ByVal t As DataType,
         <MarshalAs(UnmanagedType.AsAny)> ByVal o As Object)
 
     ' Uses overloading when void* is expected.
@@ -28,7 +28,7 @@ End Class
 
 '<snippet47>
 Public Class App
-   Public Shared Sub Main()
+    Public Shared Sub Main()
         Console.WriteLine("Calling SetData using AsAny..." + vbNewLine)
         LibWrap.SetData(LibWrap.DataType.DT_I2, CShort(12))
         LibWrap.SetData(LibWrap.DataType.DT_I4, CLng(12))

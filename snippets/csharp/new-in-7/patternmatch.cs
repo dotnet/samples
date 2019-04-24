@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,125 +7,104 @@ using System.Threading.Tasks;
 
 namespace new_in_7
 {
-    #region 18_PercentileDice
-    public struct PercentileDice
-    {
-        public int OnesDigit { get; }
-        public int TensDigit { get; }
-
-        public PercentileDice(int tensDigit, int onesDigit)
-        {
-            this.OnesDigit = onesDigit;
-            this.TensDigit = tensDigit;
-        }
-    }
-    #endregion
-
     public class Patterns
     {
-        // Sum die roll:
-        #region 14_SumDieRolls
-        public static int DiceSum(IEnumerable<int> values)
+        public static void IsPatternTestOne()
         {
-            return values.Sum();
-        }
-        #endregion
+            // <SnippetSimpleIsPattern>
+            object count = 5;
 
-        // Sample 2
-        #region 15_SumDieRollsWithGroups
-        public static int DiceSum2(IEnumerable<object> values)
-        {
-            var sum = 0;
-            foreach(var item in values)
-            {
-                if (item is int val)
-                    sum += val;
-                else if (item is IEnumerable<object> subList)
-                    sum += DiceSum2(subList);
-            }
-            return sum;
+            if (count is int number)
+                Console.WriteLine(number);
+            else
+                Console.WriteLine($"{count} is not an integer");
+            // </SnippetSimpleIsPattern>
         }
-        #endregion
 
-        // Sample 3
-        #region 16_SumUsingSwitch
-        public static int DiceSum3(IEnumerable<object> values)
+        public static void SwitchPatternSimple()
         {
-            var sum = 0;
-            foreach (var item in values)
+            // <SnippetSimpleSwitchPattern>
+            test(5);
+
+            void test(object obj)
             {
-                switch (item)
+                switch (obj)
                 {
-                    case int val:
-                        sum += val;
-                        break;
-                    case IEnumerable<object> subList:
-                        sum += DiceSum3(subList);
-                        break;
-                }
-            }
-            return sum;
-        }
-        #endregion
-
-        #region 17_SwitchWithConstants
-        public static int DiceSum4(IEnumerable<object> values)
-        {
-            var sum = 0;
-            foreach (var item in values)
-            {
-                switch (item)
-                {
-                    case 0:
-                        break;
-                    case int val:
-                        sum += val;
-                        break;
-                    case IEnumerable<object> subList when subList.Any():
-                        sum += DiceSum4(subList);
-                        break;
-                    case IEnumerable<object> subList:
+                    case int i:
+                        Console.WriteLine($"The object is an integer: {i}");
                         break;
                     case null:
+                        Console.WriteLine($"The object is null");
                         break;
                     default:
-                        throw new InvalidOperationException("unknown item type");
+                        Console.WriteLine($"The object is some other type");
+                        break;
                 }
             }
-            return sum;
+            // </SnippetSimpleSwitchPattern>
         }
-        #endregion
-
-
-        #region 19_SwitchWithNewTypes
-        public static int DiceSum5(IEnumerable<object> values)
+        public static void SwitchPatternFull()
         {
-            var sum = 0;
-            foreach (var item in values)
+            test(5);
+
+            // <SnippetNullableSwitch>
+            int? answer = 42;
+            test(answer);
+            // </SnippetNullableSwitch>
+
+            // <SnippetTestLong>
+            long longValue = 12;
+            test(longValue);
+            // </SnippetTestLong>
+            // <SnippetMoreTests>
+            double pi = 3.14;
+            test(pi);
+            string sum = "12";
+            test(sum);
+            answer = null;
+            test(answer);
+            // </SnippetMoreTests>
+            // <SnippetTestWhenClause>
+            string message = "This is a longer message";
+            test(message);
+            // </SnippetTestWhenClause>
+
+            void test(object obj)
             {
-                switch (item)
+                switch (obj)
                 {
-                    case 0:
+                    // <SnippetConstantCase>
+                    case 5:
+                        Console.WriteLine("The object is 5");
                         break;
-                    case int val:
-                        sum += val;
+                    // </SnippetConstantCase>
+                    case int i:
+                        Console.WriteLine($"The object is an integer: {i}");
                         break;
-                    case PercentileDice dice:
-                        sum += dice.TensDigit + dice.OnesDigit;
+                        // <SnippetMoreCases>
+                    case long l:
+                        Console.WriteLine($"The object is a long: {l}");
                         break;
-                    case IEnumerable<object> subList when subList.Any():
-                        sum += DiceSum5(subList);
+                    case double d:
+                        Console.WriteLine($"The object is a double: {d}");
                         break;
-                    case IEnumerable<object> subList:
+                        // <SnippetWhenClause>
+                    case string s when s.StartsWith("This"):
+                        Console.WriteLine($"This was a string that started with the word 'This': {s}");
                         break;
+                        // </SnippetWhenClause>
+                    case string s:
+                        Console.WriteLine($"The object is a string: {s}");
+                        break;
+                    // </SnippetMoreCases>
                     case null:
+                        Console.WriteLine($"The object is null");
                         break;
                     default:
-                        throw new InvalidOperationException("unknown item type");
+                        Console.WriteLine($"The object is some other type");
+                        break;
                 }
             }
-            return sum;
         }
-        #endregion
     }
 }

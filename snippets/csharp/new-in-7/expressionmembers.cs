@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace new_in_7
 {
     public class ExpressionMembersExample
     {
-        #region 36_ExpressionBodiedEverything
+        // <SnippetExpressionBodiedEverything>
         // Expression-bodied constructor
         public ExpressionMembersExample(string label) => this.Label = label;
 
@@ -23,6 +19,6 @@ namespace new_in_7
             get => label;
             set => this.label = value ?? "Default label";
         }
-        #endregion
+        // </SnippetExpressionBodiedEverything>
     }
 }

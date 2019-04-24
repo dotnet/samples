@@ -75,13 +75,13 @@ namespace tuples
         #region 08_TupleMethodVersion
         public static double StandardDeviation(IEnumerable<double> sequence)
         {
-            (int Count, double Sum, double SumOfSquares) computation = ComputeSumsAnSumOfSquares(sequence);
+            (int Count, double Sum, double SumOfSquares) computation = ComputeSumAndSumOfSquares(sequence);
 
             var variance = computation.SumOfSquares - computation.Sum * computation.Sum / computation.Count;
             return Math.Sqrt(variance / computation.Count);
         }
 
-        private static (int Count, double Sum, double SumOfSquares) ComputeSumsAnSumOfSquares(IEnumerable<double> sequence)
+        private static (int Count, double Sum, double SumOfSquares) ComputeSumAndSumOfSquares(IEnumerable<double> sequence)
         {
             var computation = (count: 0, sum: 0.0, sumOfSquares: 0.0);
 

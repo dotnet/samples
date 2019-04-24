@@ -15,15 +15,15 @@ public class LibWrap
     }
 
     // Uses AsAny when void* is expected.
-    [DllImport( "..\\LIB\\PInvokeLib.dll" )]
+    [DllImport("..\\LIB\\PInvokeLib.dll")]
     public static extern void SetData(DataType t,
         [MarshalAs(UnmanagedType.AsAny)] object o);
 
     // Uses overloading when void* is expected.
-    [DllImport("..\\LIB\\PInvokeLib.dll", EntryPoint="SetData")]
+    [DllImport("..\\LIB\\PInvokeLib.dll", EntryPoint = "SetData")]
     public static extern void SetData2(DataType t, ref double i);
 
-    [DllImport("..\\LIB\\PInvokeLib.dll", EntryPoint="SetData")]
+    [DllImport("..\\LIB\\PInvokeLib.dll", EntryPoint = "SetData")]
     public static extern void SetData2(DataType t, string s);
 }
 //</snippet46>

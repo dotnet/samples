@@ -62,6 +62,7 @@ Public Class Test
         Else
             Console.WriteLine("The two addresses are not equal")
         End If
+        ' Will output "The two addresses are equal"
      '</snippet8>
     End Sub 'SampleEquals
     

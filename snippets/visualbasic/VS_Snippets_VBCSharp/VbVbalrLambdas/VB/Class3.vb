@@ -53,7 +53,7 @@ Module Module3
             ' level1 = 2
             ' level2 = 3, after aLambda is called in the Return statement
             ' level3 = 4, after aDel is called in Main
-            ' locarVar = 5
+            ' localVar = 5
             ' aField = 6
             ' aProp = 1
             ' The second time it is executed, two values have changed:

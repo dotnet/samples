@@ -82,7 +82,7 @@ public:
       return String::Format( "C:\\{0}.log", WebServiceType->FullName );
    }
 
-   // Recieve the filename stored by GetInitializer and store it in a member variable
+   // Receive the filename stored by GetInitializer and store it in a member variable
    // for this specific instance.
    virtual void Initialize( Object^ initializer ) override
    {

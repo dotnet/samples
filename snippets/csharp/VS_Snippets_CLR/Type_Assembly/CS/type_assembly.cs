@@ -1,25 +1,22 @@
 // <Snippet1>
 using System;
-using System.Reflection;
 
 class MyAssemblyClass
 {
     public static void Main()
     {
-        Type objType = typeof(System.Array);
-                    
-        // Print the full assembly name.
-        Console.WriteLine ("Full assembly name:\n   {0}.", 
-                           objType.Assembly.FullName.ToString()); 
+        Type objType = typeof(Array);
 
-        // Print the qualified assembly name.
-        Console.WriteLine ("Qualified assembly name:\n   {0}.", 
-                           objType.AssemblyQualifiedName.ToString()); 
+        // Print the assembly full name.
+        Console.WriteLine($"Assembly full name:\n   {objType.Assembly.FullName}.");
+
+        // Print the assembly qualified name.
+        Console.WriteLine($"Assembly qualified name:\n   {objType.AssemblyQualifiedName}.");
     }
 }
 // The example displays the following output if run under the .NET Framework 4.5:
-//    Full assembly name:
+//    Assembly full name:
 //       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
-//    Qualified assembly name:
+//    Assembly qualified name:
 //       System.Array, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
 // </Snippet1>

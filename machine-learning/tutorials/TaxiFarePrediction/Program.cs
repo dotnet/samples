@@ -22,10 +22,6 @@ namespace TaxiFarePrediction
             MLContext mlContext = new MLContext(seed: 0);
             // </Snippet3>
 
-            // <Snippet4>
-            //This code is been removed in v0.11 of ML.Net.
-            // </Snippet4>
-
             // <Snippet5>
             var model = Train(mlContext, _trainDataPath);
             // </Snippet5>
@@ -46,10 +42,10 @@ namespace TaxiFarePrediction
             // </Snippet6>
 
             // <Snippet7>
-            var pipeline = mlContext.Transforms.CopyColumns(outputColumnName: "Label", inputColumnName: "FareAmount")
-                    // </Snippet7>
+            var pipeline = mlContext.Transforms.CopyColumns(outputColumnName: "Label", inputColumnName:"FareAmount")
+            // </Snippet7>
                     // <Snippet8>
-                    .Append(mlContext.Transforms.Categorical.OneHotEncoding(outputColumnName: "VendorIdEncoded", inputColumnName: "VendorId"))
+                    .Append(mlContext.Transforms.Categorical.OneHotEncoding(outputColumnName: "VendorIdEncoded", inputColumnName:"VendorId"))
                     .Append(mlContext.Transforms.Categorical.OneHotEncoding(outputColumnName: "RateCodeEncoded", inputColumnName: "RateCode"))
                     .Append(mlContext.Transforms.Categorical.OneHotEncoding(outputColumnName: "PaymentTypeEncoded", inputColumnName: "PaymentType"))
                     // </Snippet8>

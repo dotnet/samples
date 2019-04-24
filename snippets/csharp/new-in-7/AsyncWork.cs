@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace new_in_7
 {
     public class AsyncWork
     {
-        #region 29_TaskExample
+        // <SnippetTaskExample>
         public Task<string> PerformLongRunningWork(string address, int index, string name)
         {
             if (string.IsNullOrWhiteSpace(address))
@@ -27,7 +24,7 @@ namespace new_in_7
                 return $"The results are {interimResult} and {secondResult}. Enjoy.";
             }
         }
-        #endregion
+        // </SnippetTaskExample>
 
         private async Task<string> SecondStep(Int32 index, String name)
         {
@@ -62,30 +59,12 @@ namespace new_in_7
         }
         #endregion
 
-        #region 30_UsingValueTask
+        // <SnippetUsingValueTask>
         public async ValueTask<int> Func()
         {
             await Task.Delay(100);
             return 5;
         }
-        #endregion
-
-        #region 31_AsyncOptimizedValueTask
-        public ValueTask<int> CachedFunc()
-        {
-            return (cache) ? new ValueTask<int>(cacheResult) : new ValueTask<int>(LoadCache());
-        }
-        private bool cache = false;
-        private int cacheResult;
-        private async Task<int> LoadCache()
-        {
-            // simulate async work:
-            await Task.Delay(100);
-            cacheResult = 100;
-            cache = true;
-            return cacheResult;
-        }
-        #endregion
-
+        // </SnippetUsingValueTask>
     }
 }

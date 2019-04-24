@@ -1,28 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace new_in_7
+﻿namespace new_in_7
 {
-    #region 11_PointWithDeconstruction
+    // <SnippetPointWithDeconstruction>
     public class Point
     {
-        public Point(double x, double y)
-        {
-            this.X = x;
-            this.Y = y;
-        }
-
+        public Point(double x, double y) 
+            => (X, Y) = (x, y);
+ 
         public double X { get; }
         public double Y { get; }
 
-        public void Deconstruct(out double x, out double y)
-        {
-            x = this.X;
-            y = this.Y;
-        }
+        public void Deconstruct(out double x, out double y) =>
+            (x, y) = (X, Y);
     }
-    #endregion
+    // </SnippetPointWithDeconstruction>
 }

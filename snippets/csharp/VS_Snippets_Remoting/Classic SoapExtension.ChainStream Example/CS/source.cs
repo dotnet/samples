@@ -27,7 +27,7 @@
 		  return "C:\\" + WebServiceType.FullName + ".log";    
 	  }
   
-    // Recieve the filename stored by GetInitializer and store it in a member variable
+    // Receive the filename stored by GetInitializer and store it in a member variable
     // for this specific instance.
     public override void Initialize(object initializer) {
         filename = (string) initializer;
