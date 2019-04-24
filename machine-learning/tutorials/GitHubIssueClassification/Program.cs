@@ -132,7 +132,7 @@ namespace GitHubIssueClassification
 
         }
 
-        public static void Evaluate(DataViewSchema trainigDataViewSchema)
+        public static void Evaluate(DataViewSchema trainingDataViewSchema)
         {
             // STEP 5:  Evaluate the model in order to get the model's accuracy metrics
             Console.WriteLine($"=============== Evaluating to get model's accuracy metrics - Starting time: {DateTime.Now.ToString()} ===============");
@@ -161,7 +161,7 @@ namespace GitHubIssueClassification
 
             // Save the new model to .ZIP file
             // <SnippetCallSaveModel>
-            SaveModelAsFile(_mlContext, trainigDataViewSchema, _trainedModel);
+            SaveModelAsFile(_mlContext, trainingDataViewSchema, _trainedModel);
             // </SnippetCallSaveModel>
 
         }
@@ -191,10 +191,10 @@ namespace GitHubIssueClassification
 
         }
 
-        private static void SaveModelAsFile(MLContext mlContext,DataViewSchema trainigDataViewSchema, ITransformer model)
+        private static void SaveModelAsFile(MLContext mlContext,DataViewSchema trainingDataViewSchema, ITransformer model)
         {
             // <SnippetSaveModel> 
-            mlContext.Model.Save(model, trainigDataViewSchema, _modelPath);
+            mlContext.Model.Save(model, trainingDataViewSchema, _modelPath);
             // </SnippetSaveModel>
 
             Console.WriteLine("The model is saved to {0}", _modelPath);
