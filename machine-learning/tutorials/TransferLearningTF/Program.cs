@@ -1,4 +1,4 @@
-﻿// <SnippetAddUsings>
+// <SnippetAddUsings>
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -36,15 +36,15 @@ namespace TransferLearningTF
             // </SnippetCreateMLContext>
 
             // <SnippetCallReuseAndTuneInceptionModel>
-            ReuseAndTuneInceptionModel(mlContext, _trainTagsTsv, _trainImagesFolder, _inceptionPb, _outputImageClassifierZip);
+            var model = ReuseAndTuneInceptionModel(mlContext, _trainTagsTsv, _trainImagesFolder, _inceptionPb, _outputImageClassifierZip);
             // </SnippetCallReuseAndTuneInceptionModel>
 
             // <SnippetCallClassifyImages>
-            ClassifyImages(mlContext, _predictImageListTsv, _predictImagesFolder, _outputImageClassifierZip);
+            ClassifyImages(mlContext, _predictImageListTsv, _predictImagesFolder, _outputImageClassifierZip, model);
             // </SnippetCallClassifyImages>
 
             // <SnippetCallClassifySingleImage>
-            ClassifySingleImage(mlContext, _predictSingleImage, _outputImageClassifierZip);
+            ClassifySingleImage(mlContext, _predictSingleImage, _outputImageClassifierZip, model);
             // </SnippetCallClassifySingleImage>
         }
 
@@ -60,7 +60,7 @@ namespace TransferLearningTF
         // </SnippetInceptionSettings>
 
         // Build and train model
-        public static void ReuseAndTuneInceptionModel(MLContext mlContext, string dataLocation, string imagesFolder, string inputModelLocation, string outputModelLocation)
+        public static ITransformer ReuseAndTuneInceptionModel(MLContext mlContext, string dataLocation, string imagesFolder, string inputModelLocation, string outputModelLocation)
         {
 
             // <SnippetLoadData>
@@ -126,29 +126,13 @@ namespace TransferLearningTF
             Console.WriteLine($"PerClassLogLoss is: {String.Join(" , ", metrics.PerClassLogLoss.Select(c => c.ToString()))}");
             //</SnippetDisplayMetrics>
 
-            // Save the model to assets/outputs
-            Console.WriteLine("=============== Save model to local file ===============");
-
-            // <SnippetSaveModel>
-            using (var fileStream = new FileStream(outputModelLocation, FileMode.Create))
-                mlContext.Model.Save(model, predictions.Schema, fileStream);
-            // </SnippetSaveModel>
-
-            Console.WriteLine($"Model saved: {outputModelLocation}");
+            // <SnippetReturnModel>
+            return model;
+            // </SnippetReturnModel>
         }
 
-        public static void ClassifyImages(MLContext mlContext, string dataLocation, string imagesFolder, string outputModelLocation)
+        public static void ClassifyImages(MLContext mlContext, string dataLocation, string imagesFolder, string outputModelLocation, ITransformer model)
         {
-            Console.WriteLine($"=============== Loading model ===============");
-            Console.WriteLine($"Model loaded: {outputModelLocation}");
-            // Load the model
-            // <SnippetLoadModel>
-            ITransformer loadedModel;
-            DataViewSchema dataViewSchema;
-
-            using (var fileStream = new FileStream(outputModelLocation, FileMode.Open))
-                loadedModel = mlContext.Model.Load(fileStream, out dataViewSchema);
-            // </SnippetLoadModel>
 
             // Read the image_list.tsv file and add the filepath to the image file name 
             // before loading into ImageData 
@@ -158,31 +142,19 @@ namespace TransferLearningTF
             // </SnippetReadFromTSV>  
 
             // <SnippetPredict>  
-            var predictions = loadedModel.Transform(imageDataView);
+            var predictions = model.Transform(imageDataView);
             var imagePredictionData = mlContext.Data.CreateEnumerable<ImagePrediction>(predictions, false, true);
             // </SnippetPredict> 
 
             Console.WriteLine("=============== Making classifications ===============");
 
-            // <SnippetCallPairAndDisplayResults2>
+            // <SnippetCallDisplayResults2>
             DisplayResults(imagePredictionData);
-            // </SnippetCallPairAndDisplayResults2> 
-
+            // </SnippetCallDisplayResults2> 
         }
 
-        public static void ClassifySingleImage(MLContext mlContext, string imagePath, string outputModelLocation)
+        public static void ClassifySingleImage(MLContext mlContext, string imagePath, string outputModelLocation, ITransformer model)
         {
-            Console.WriteLine($"=============== Loading model ===============");
-            Console.WriteLine($"Model loaded: {outputModelLocation}");
-            // Load the model
-            // <SnippetLoadModel2>
-            ITransformer loadedModel;
-            DataViewSchema dataViewSchema;
-
-            using (var fileStream = new FileStream(outputModelLocation, FileMode.Open))
-                loadedModel = mlContext.Model.Load(fileStream, out dataViewSchema);
-            // </SnippetLoadModel2>
-
             // load the fully qualified image file name into ImageData 
             // <SnippetLoadImageData> 
             var imageData = new ImageData()
@@ -193,7 +165,7 @@ namespace TransferLearningTF
 
             // <SnippetPredictSingle>  
             // Make prediction function (input = ImageData, output = ImagePrediction)
-            var predictor = mlContext.Model.CreatePredictionEngine<ImageData, ImagePrediction>(loadedModel);
+            var predictor = mlContext.Model.CreatePredictionEngine<ImageData, ImagePrediction>(model);
             var prediction = predictor.Predict(imageData);
             // </SnippetPredictSingle> 
 
@@ -204,10 +176,10 @@ namespace TransferLearningTF
 
         }
 
-        private static void DisplayResults(IEnumerable<ImagePrediction> imageNetPredictionData)
+        private static void DisplayResults(IEnumerable<ImagePrediction> imagePredictionData)
         {
             // <SnippetDisplayPredictions>
-            foreach (ImagePrediction prediction in imageNetPredictionData)
+            foreach (ImagePrediction prediction in imagePredictionData)
             {
                 Console.WriteLine($"Image: {Path.GetFileName(prediction.ImagePath)} predicted as: {prediction.PredictedLabelValue} with score: {prediction.Score.Max()} ");
             }
