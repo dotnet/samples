@@ -1,4 +1,3 @@
-
 '<Snippet1>
 Imports System
 Imports System.Text
@@ -35,8 +34,7 @@ Public Class GetSocket
          Next address
       
       Return s
-   End Function 
-   
+   End Function
    
    ' This method requests the home page content for the specified server.
    
@@ -46,6 +44,7 @@ Public Class GetSocket
       Dim request As String = "GET / HTTP/1.1" + ControlChars.Cr + ControlChars.Lf + "Host: " + server + ControlChars.Cr + ControlChars.Lf + "Connection: Close" + ControlChars.Cr + ControlChars.Lf + ControlChars.Cr + ControlChars.Lf
       Dim bytesSent As [Byte]() = ascii.GetBytes(request)
       Dim bytesReceived(255) As [Byte]
+      Dim page As String = ""  
       
       ' Create a socket connection with the specified server and port.
       Dim s As Socket = ConnectSocket(server, port)
@@ -60,7 +59,7 @@ Public Class GetSocket
       Dim bytes As Int32
       
       ' Read the first 256 bytes.
-      Dim page as [String] = "Default HTML page on " + server + ":" + ControlChars.Cr + ControlChars.Lf
+      page = "Default HTML page on " + server + ":" + ControlChars.Cr + ControlChars.Lf
       
       ' The following will block until the page is transmitted.
       Do
@@ -75,7 +74,6 @@ Public Class GetSocket
    Public Overloads Shared Sub Main()
       Main(System.Environment.GetCommandLineArgs())
    End Sub
-   
    
    Overloads Private Shared Sub Main(args() As String)
       Dim host As String
@@ -94,6 +92,4 @@ Public Class GetSocket
       Console.WriteLine(result)
    End Sub 'Main
 End Class  
-
 '</Snippet1>
-

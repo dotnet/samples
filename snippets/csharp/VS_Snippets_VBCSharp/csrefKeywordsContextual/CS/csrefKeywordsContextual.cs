@@ -225,30 +225,16 @@ namespace csrefKeywordsContextual
     }
 
 
-    //<Snippet15>    
-
+    //<Snippet15>
     class Events : IDrawingObject
     {
         event EventHandler PreDrawEvent;
 
         event EventHandler IDrawingObject.OnDraw
         {
-            add
-            {
-                lock (PreDrawEvent)
-                {
-                    PreDrawEvent += value;
-                }
-            }
-            remove
-            {
-                lock (PreDrawEvent)
-                {
-                    PreDrawEvent -= value;
-                }
-            }
+            add => PreDrawEvent += value;
+            remove => PreDrawEvent -= value;
         }
-
     }
     //</Snippet15>
     interface IDrawingObject

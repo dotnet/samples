@@ -189,7 +189,7 @@ namespace SDKSamples
         //</SnippetCommandingOverviewCanExecute> 
 
 
-        //<SnippetCommandingOverviewMultipleCmdHander>
+        //<SnippetCommandingOverviewMultipleCmdHandler>
         private void ExecutedDisplayCommand(object sender,
             ExecutedRoutedEventArgs e)
         {
@@ -211,7 +211,7 @@ namespace SDKSamples
                 }
             }
         }
-        //</SnippetCommandingOverviewMultipleCmdHander>
+        //</SnippetCommandingOverviewMultipleCmdHandler>
 
         //<SnippetCommandingOverviewMultipleCanExecute>
         private void CanExecuteDisplayCommand(object sender,

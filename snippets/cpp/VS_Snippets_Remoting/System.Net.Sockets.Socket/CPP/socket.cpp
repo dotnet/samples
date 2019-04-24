@@ -1,5 +1,3 @@
-
-
 /**
 * File name:socket.cs.
 * This example creates a Socket connection to the server specified by the user,
@@ -48,26 +46,25 @@ Socket^ ConnectSocket( String^ server, int port )
    return s;
 }
 
-
 // This method requests the home page content for the specified server.
 String^ SocketSendReceive( String^ server, int port )
 {
    String^ request = String::Concat( "GET / HTTP/1.1\r\nHost: ", server, "\r\nConnection: Close\r\n\r\n" );
    array<Byte>^bytesSent = Encoding::ASCII->GetBytes( request );
    array<Byte>^bytesReceived = gcnew array<Byte>(256);
+   String^ strRetPage = "";
    
    // Create a socket connection with the specified server and port.
    Socket^ s = ConnectSocket( server, port );
    if ( s == nullptr )
       return ("Connection failed");
-
    
    // Send request to the server.
    s->Send( bytesSent, bytesSent->Length, static_cast<SocketFlags>(0) );
    
    // Receive the server home page content.
    int bytes = 0;
-   String^ strRetPage = String::Concat( "Default HTML page on ", server, ":\r\n" );
+   strRetPage = String::Concat( "Default HTML page on ", server, ":\r\n" );
    do
    {
       bytes = s->Receive( bytesReceived, bytesReceived->Length, static_cast<SocketFlags>(0) );
@@ -96,5 +93,4 @@ int main()
    String^ result = SocketSendReceive( host, port );
    Console::WriteLine( result );
 }
-
 //</Snippet1>

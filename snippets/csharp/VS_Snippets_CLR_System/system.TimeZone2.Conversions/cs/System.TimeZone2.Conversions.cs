@@ -27,7 +27,7 @@ public class TimeZoneConversion
       Console.WriteLine("   ConvertTimeToUtc: {0}, Kind {1}", TimeZoneInfo.ConvertTimeToUtc(datNowUtc), TimeZoneInfo.ConvertTimeToUtc(datNowUtc).Kind);
       Console.WriteLine();
       
-      DateTime datNow = new DateTime(2006, 10, 26, 13, 32, 00);
+      DateTime datNow = new DateTime(2007, 10, 26, 13, 32, 00);
       Console.WriteLine("Converting {0}, Kind {1}", datNow, datNow.Kind);
       Console.WriteLine("   ConvertTimeToUtc: {0}, Kind {1}", TimeZoneInfo.ConvertTimeToUtc(datNow), TimeZoneInfo.ConvertTimeToUtc(datNow).Kind);
       Console.WriteLine();

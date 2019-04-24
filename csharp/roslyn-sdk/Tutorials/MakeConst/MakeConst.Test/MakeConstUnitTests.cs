@@ -234,7 +234,7 @@ namespace MakeConstTest
     {
         static void Main(string[] args)
         {
-            var item = 4;
+            var item = ""abc"";
         }
     }
 }";
@@ -247,7 +247,7 @@ namespace MakeConstTest
     {
         static void Main(string[] args)
         {
-            const int item = 4;
+            const string item = ""abc"";
         }
     }
 }";

@@ -3,7 +3,7 @@ Imports System
 Imports System.Runtime.InteropServices
 
 '<snippet11>
-<StructLayout(LayoutKind.Sequential)> _
+<StructLayout(LayoutKind.Sequential)>
 Public Class OSVersionInfo
     Public OSVersionInfoSize As Integer
     Public MajorVersion As Integer
@@ -11,11 +11,11 @@ Public Class OSVersionInfo
     Public BuildNumber As Integer
     Public PlatformId As Integer
 
-    <MarshalAs(UnmanagedType.ByValTStr, SizeConst:=128)> _
+    <MarshalAs(UnmanagedType.ByValTStr, SizeConst:=128)>
     Public CSDVersion As String
 End Class
 
-<StructLayout(LayoutKind.Sequential)> _
+<StructLayout(LayoutKind.Sequential)>
 Public Structure OSVersionInfo2
     Public OSVersionInfoSize As Integer
     Public MajorVersion As Integer
@@ -23,16 +23,16 @@ Public Structure OSVersionInfo2
     Public BuildNumber As Integer
     Public PlatformId As Integer
 
-    <MarshalAs(UnmanagedType.ByValTStr, SizeConst:=128)> _
+    <MarshalAs(UnmanagedType.ByValTStr, SizeConst:=128)>
     Public CSDVersion As String
 End Structure
 
 Public Class LibWrap
     Declare Ansi Function GetVersionEx Lib "kernel32" Alias _
-        "GetVersionExA" ( <[In], Out> ByVal osvi As OSVersionInfo ) As Boolean
+        "GetVersionExA" (<[In], Out> ByVal osvi As OSVersionInfo) As Boolean
 
     Declare Ansi Function GetVersionEx2 Lib "kernel32" Alias _
-        "GetVersionExA" ( ByRef osvi As OSVersionInfo2 ) As Boolean
+        "GetVersionExA" (ByRef osvi As OSVersionInfo2) As Boolean
 End Class
 '</snippet11>
 
@@ -51,7 +51,7 @@ Public Class App
 
         Console.WriteLine(vbNewLine + "Passing OSVersionInfo2 as a struct")
 
-        Dim osvi2 As new OSVersionInfo2()
+        Dim osvi2 As New OSVersionInfo2()
         osvi2.OSVersionInfoSize = Marshal.SizeOf(osvi2)
 
         LibWrap.GetVersionEx2(osvi2)

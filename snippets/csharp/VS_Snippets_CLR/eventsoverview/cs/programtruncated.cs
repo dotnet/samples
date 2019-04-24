@@ -5,9 +5,9 @@ namespace ConsoleApplication1
     // <snippet2>
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Counter c = new Counter();
+            var c = new Counter();
             c.ThresholdReached += c_ThresholdReached;
 
             // provide remaining implementation for the class
@@ -28,10 +28,7 @@ namespace ConsoleApplication1
         protected virtual void OnThresholdReached(EventArgs e)
         {
             EventHandler handler = ThresholdReached;
-            if (handler != null)
-            {
-                handler(this, e);
-            }
+            handler?.Invoke(this, e);
         }
 
         // provide remaining implementation for the class

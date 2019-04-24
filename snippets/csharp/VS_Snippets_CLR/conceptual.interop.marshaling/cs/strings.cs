@@ -5,14 +5,14 @@ using System.Runtime.InteropServices;
 
 //<snippet14>
 // Declares a managed structure for each unmanaged structure.
-[StructLayout(LayoutKind.Sequential, CharSet=CharSet.Unicode)]
+[StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
 public struct MyStrStruct
 {
     public string buffer;
     public int size;
 }
 
-[StructLayout(LayoutKind.Sequential, CharSet=CharSet.Ansi)]
+[StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
 public struct MyStrStruct2
 {
     public string buffer;
@@ -22,13 +22,13 @@ public struct MyStrStruct2
 public class LibWrap
 {
     // Declares managed prototypes for unmanaged functions.
-    [DllImport("..\\LIB\\PinvokeLib.dll")]
+    [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
     public static extern string TestStringAsResult();
 
-    [DllImport("..\\LIB\\PinvokeLib.dll")]
+    [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
     public static extern void TestStringInStruct(ref MyStrStruct mss);
 
-    [DllImport("..\\LIB\\PinvokeLib.dll")]
+    [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
     public static extern void TestStringInStructAnsi(ref MyStrStruct2 mss);
 }
 //</snippet14>
@@ -53,8 +53,8 @@ public class App
         mss.size = mss.buffer.Length;
 
         LibWrap.TestStringInStruct(ref mss);
-        Console.WriteLine( "\nBuffer after Unicode function call: {0}",
-            mss.buffer );
+        Console.WriteLine("\nBuffer after Unicode function call: {0}",
+            mss.buffer);
 
         StringBuilder buffer2 = new StringBuilder("content", 100);
         buffer2.Append((char)0);

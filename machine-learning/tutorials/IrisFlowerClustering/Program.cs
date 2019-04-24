@@ -4,7 +4,6 @@ using System.IO;
 // </SnippetUsingsForPaths>
 
 // <SnippetMLUsings>
-using Microsoft.Data.DataView;
 using Microsoft.ML;
 using Microsoft.ML.Data;
 // </SnippetMLUsings>
@@ -24,19 +23,15 @@ namespace IrisFlowerClustering
             var mlContext = new MLContext(seed: 0);
             // </SnippetCreateContext>
 
-            // <SnippetSetupTextLoader>
-            TextLoader textLoader = mlContext.Data.CreateTextLoader<IrisData>(hasHeader: false, separatorChar: ',');
-            // </SnippetSetupTextLoader>
-
             // <SnippetCreateDataView>
-            IDataView dataView = textLoader.Read(_dataPath);
+            IDataView dataView = mlContext.Data.LoadFromTextFile<IrisData>(_dataPath, hasHeader: false, separatorChar: ',');
             // </SnippetCreateDataView>
 
             // <SnippetCreatePipeline>
             string featuresColumnName = "Features";
             var pipeline = mlContext.Transforms
                 .Concatenate(featuresColumnName, "SepalLength", "SepalWidth", "PetalLength", "PetalWidth")
-                .Append(mlContext.Clustering.Trainers.KMeans(featuresColumnName, clustersCount: 3));
+                .Append(mlContext.Clustering.Trainers.KMeans(featuresColumnName, numberOfClusters: 3));
             // </SnippetCreatePipeline>
 
             // <SnippetTrainModel>
@@ -46,12 +41,12 @@ namespace IrisFlowerClustering
             // <SnippetSaveModel>
             using (var fileStream = new FileStream(_modelPath, FileMode.Create, FileAccess.Write, FileShare.Write))
             {
-                mlContext.Model.Save(model, fileStream);
+                mlContext.Model.Save(model, dataView.Schema, fileStream);
             }
             // </SnippetSaveModel>
 
             // <SnippetPredictor>
-            var predictor = model.CreatePredictionEngine<IrisData, ClusterPrediction>(mlContext);
+            var predictor = mlContext.Model.CreatePredictionEngine<IrisData, ClusterPrediction>(model);
             // </SnippetPredictor>
 
             // <SnippetPredictionExample>

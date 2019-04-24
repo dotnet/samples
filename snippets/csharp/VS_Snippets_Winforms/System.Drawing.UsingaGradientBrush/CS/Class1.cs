@@ -11,9 +11,9 @@ public class class1
     // 1948e834-e104-481c-b71d-d8aa9e4d106e
     // How to: Create a Path Gradient
 
-    public void Method11(PaintEventArgs e)
+    // <snippet11>
+    public void FillEllipseWithPathGradient(PaintEventArgs e)
     {
-        // <snippet11>
         // Create a path that consists of a single ellipse.
         GraphicsPath path = new GraphicsPath();
         path.AddEllipse(0, 0, 140, 70);
@@ -31,11 +31,12 @@ public class class1
 
         e.Graphics.FillEllipse(pthGrBrush, 0, 0, 140, 70);
 
-        // </snippet11>
     }
-    public void Method12(PaintEventArgs e)
+    // </snippet11>
+
+    // <snippet12>
+    public void ConstructBrushFromStarShapedPath(PaintEventArgs e)
     {
-        // <snippet12>
         // Put the points of a polygon in an array.
         Point[] points = {
            new Point(75, 0),
@@ -77,11 +78,12 @@ public class class1
         // Fill the path with the path gradient brush.
         e.Graphics.FillPath(pthGrBrush, path);
 
-        // </snippet12>
     }
-    public void Method13(PaintEventArgs e)
+    // </snippet12>
+
+    // <snippet13>
+    public void DrawPathGradentWthoutGraphicsPath(PaintEventArgs e)
     {
-        // <snippet13>
         // Construct a path gradient brush based on an array of points.
         PointF[] ptsF = {
            new PointF(0, 0), 
@@ -108,11 +110,13 @@ public class class1
 
         // Use the path gradient brush to fill a rectangle.
         e.Graphics.FillRectangle(pBrush, new Rectangle(0, 0, 160, 200));
-        // </snippet13>
     }
-    public void Method14(PaintEventArgs e)
+    // </snippet13>
+
+
+    // <snippet14>
+    public void CustomizePathGradientBrush(PaintEventArgs e)
     {
-        // <snippet14>
         // Create a path that consists of a single ellipse.
         GraphicsPath path = new GraphicsPath();
         path.AddEllipse(0, 0, 200, 100);
@@ -137,11 +141,12 @@ public class class1
         // Show this filled ellipse to the right of the first filled ellipse.
         e.Graphics.TranslateTransform(220.0f, 0.0f);
         e.Graphics.FillPath(pthGrBrush, path);
-        // </snippet14>
     }
-    public void Method15(PaintEventArgs e)
+    // <snippet14>
+
+    // <snippet15>
+    public void CustomizeWithInterpolation(PaintEventArgs e)
     {
-        // <snippet15>
         // Vertices of the outer triangle
         Point[] points = {
            new Point(100, 0),
@@ -172,11 +177,12 @@ public class class1
         // specified in the Point array. The portion of the
         // rectangle outside the triangle will not be painted.
         e.Graphics.FillRectangle(pthGrBrush, 0, 0, 200, 200);
-        // </snippet15>
     }
-    public void Method16(PaintEventArgs e)
+    // </snippet15>
+
+    // <snippet16>
+    public void SetCenterPoint(PaintEventArgs e)
     {
-        // <snippet16>
         // Create a path that consists of a single ellipse.
         GraphicsPath path = new GraphicsPath();
         path.AddEllipse(0, 0, 140, 70);
@@ -197,19 +203,41 @@ public class class1
         pthGrBrush.SurroundColors = colors;
 
         e.Graphics.FillEllipse(pthGrBrush, 0, 0, 140, 70);
-
-        // </snippet16>
-        
-        // <snippet17>
-        pthGrBrush.CenterPoint = new PointF(145, 35);
-        // </snippet17>
     }
+    // </snippet16>
+        
+    // <snippet17>
+    public void SetCenterPointOutsidePath(PaintEventArgs e)
+    {
+        // Create a path that consists of a single ellipse.
+        GraphicsPath path = new GraphicsPath();
+        path.AddEllipse(0, 0, 140, 70);
+
+        // Use the path to construct a brush.
+        PathGradientBrush pthGrBrush = new PathGradientBrush(path);
+
+        // Set the center point to a location that is not
+        // the centroid of the path.
+        pthGrBrush.CenterPoint = new PointF(145, 35);
+
+        // Set the color at the center of the path to blue.
+        pthGrBrush.CenterColor = Color.FromArgb(255, 0, 0, 255);
+
+        // Set the color along the entire boundary 
+        // of the path to aqua.
+        Color[] colors = { Color.FromArgb(255, 0, 255, 255) };
+        pthGrBrush.SurroundColors = colors;
+
+        e.Graphics.FillEllipse(pthGrBrush, 0, 0, 140, 70);
+    }
+    // </snippet17>
+
     // 6c88e1cc-1217-4399-ac12-cb37592b9f01
     // How to: Create a Linear Gradient
 
-    public void Method21(PaintEventArgs e)
+    // <snippet21>
+    public void UseHorizontalLinearGradients(PaintEventArgs e)
     {
-        // <snippet21>
         LinearGradientBrush linGrBrush = new LinearGradientBrush(
            new Point(0, 10),
            new Point(200, 10),
@@ -221,11 +249,12 @@ public class class1
         e.Graphics.DrawLine(pen, 0, 10, 200, 10);
         e.Graphics.FillEllipse(linGrBrush, 0, 30, 200, 100);
         e.Graphics.FillRectangle(linGrBrush, 0, 155, 500, 30);
-        // </snippet21>
     }
-    public void Method22(PaintEventArgs e)
+    // </snippet21>
+
+    // <snippet22>
+    public void CustomizeLinearGradients(PaintEventArgs e)
     {
-        // <snippet22>
         LinearGradientBrush linGrBrush = new LinearGradientBrush(
            new Point(0, 10),
            new Point(200, 10),
@@ -243,11 +272,12 @@ public class class1
 
         e.Graphics.FillEllipse(linGrBrush, 0, 30, 200, 100);
         e.Graphics.FillRectangle(linGrBrush, 0, 155, 500, 30);
-        // </snippet22>
     }
-    public void Method23(PaintEventArgs e)
+    // </snippet22>
+
+    // <snippet23>
+    public void CreateDiagonalLinearGradients(PaintEventArgs e)
     {
-        // <snippet23>
         LinearGradientBrush linGrBrush = new LinearGradientBrush(
            new Point(0, 0),
            new Point(200, 100),
@@ -258,15 +288,17 @@ public class class1
 
         e.Graphics.DrawLine(pen, 0, 0, 600, 300);
         e.Graphics.FillEllipse(linGrBrush, 10, 100, 200, 100);
-        // </snippet23>
     }
+    // </snippet23>
+
+
     // da4690e7-5fac-4fd2-b3f0-5cb35c165b92
     // How to: Apply Gamma Correction to a Gradient
 
-    public void Method31(PaintEventArgs e)
+    // <snippet31>
+    public void FillTwoRectangles(PaintEventArgs e)
     {
-        // <snippet31>
-        LinearGradientBrush linGrBrush = new LinearGradientBrush(
+       LinearGradientBrush linGrBrush = new LinearGradientBrush(
            new Point(0, 10),
            new Point(200, 10),
            Color.Red,
@@ -275,7 +307,8 @@ public class class1
         e.Graphics.FillRectangle(linGrBrush, 0, 0, 200, 50);
         linGrBrush.GammaCorrection = true;
         e.Graphics.FillRectangle(linGrBrush, 0, 60, 200, 50);
-        // </snippet31>
     }
-}
+    // </snippet31>
+} 
+
 
