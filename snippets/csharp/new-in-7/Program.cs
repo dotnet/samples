@@ -54,7 +54,7 @@ namespace new_in_7
             Console.WriteLine(item);
             item = 24;
             Console.WriteLine(matrix[4, 2]);
-            // <SnippetAssignRefReturn>
+            // </SnippetAssignRefReturn>
 
             Iterator.IteratorTest();
             Iterator.IteratorTestLocal();

@@ -14,8 +14,9 @@ namespace SentimentAnalysis
         public bool Sentiment;
     }
 
-    public class SentimentPrediction
+    public class SentimentPrediction : SentimentData
     {
+
         [ColumnName("PredictedLabel")]
         public bool Prediction { get; set; }
 
