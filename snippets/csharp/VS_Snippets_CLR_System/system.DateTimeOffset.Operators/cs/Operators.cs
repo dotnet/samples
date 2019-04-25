@@ -81,7 +81,7 @@ public class Class1
    {
       // <Snippet7>
       DateTimeOffset timeWithOffset; 
-      timeWithOffset = new DateTime(1008, 7, 3, 18, 45, 0);
+      timeWithOffset = new DateTime(2008, 7, 3, 18, 45, 0);
       Console.WriteLine(timeWithOffset.ToString());
       
       timeWithOffset = DateTime.UtcNow;
@@ -91,15 +91,22 @@ public class Class1
                                             DateTimeKind.Unspecified);
       Console.WriteLine(timeWithOffset.ToString());
    
-      timeWithOffset = new DateTime(2008, 1, 1, 2, 30, 0) + 
-                       new TimeSpan(1, 0, 0, 0);
+      timeWithOffset = new DateTime(2008, 7, 1, 2, 30, 0) +
+                             new TimeSpan(1, 0, 0, 0);
+      Console.WriteLine(timeWithOffset.ToString());
+       
+      timeWithOffset = new DateTime(2008, 1, 1, 2, 30, 0)
       Console.WriteLine(timeWithOffset.ToString());
       // The example produces the following output if run on 3/20/2007 
       // at 6:25 PM on a computer in the U.S. Pacific Daylight Time zone:
       //       7/3/2008 6:45:00 PM -07:00
       //       3/21/2007 1:25:52 AM +00:00
       //       3/20/2007 6:25:52 PM -07:00
-      //       1/2/2008 2:30:00 AM -08:00      
+      //       7/2/2008 2:30:00 AM -07:00
+      //       1/1/2008 2:30:00 AM -08:00
+      //
+      // The last example shows automatic adaption to the U.S. Pacific Time 
+      // for winter dates.
       // </Snippet7>
    }
 
