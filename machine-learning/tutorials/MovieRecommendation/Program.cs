@@ -3,8 +3,6 @@ using System;
 using System.IO;
 using Microsoft.ML;
 using Microsoft.ML.Trainers;
-using Microsoft.ML.Data;
-using Microsoft.Data.DataView;
 // </SnippetUsingStatements>
 
 namespace MovieRecommendation
@@ -43,7 +41,7 @@ namespace MovieRecommendation
 
             // Save model
             // <SnippetSaveModelMain>
-            SaveModel(mlContext, model);
+            SaveModel(mlContext, trainingDataView.Schema, model);
             // </SnippetSaveModelMain>
         }
 
@@ -103,11 +101,11 @@ namespace MovieRecommendation
             // </SnippetTransform>
 
             // <SnippetEvaluate>
-            var metrics = mlContext.Regression.Evaluate(prediction, label: DefaultColumnNames.Label, score: DefaultColumnNames.Score);
+            var metrics = mlContext.Regression.Evaluate(prediction, labelColumnName: "Label", scoreColumnName: "Score");
             // </SnippetEvaluate>
 
             // <SnippetPrintMetrics>
-            Console.WriteLine("Rms: " + metrics.Rms.ToString());
+            Console.WriteLine("Root Mean Squared Error : " + metrics.RootMeanSquaredError.ToString());
             Console.WriteLine("RSquared: " + metrics.RSquared.ToString());
             // </SnippetPrintMetrics>
         }
@@ -117,7 +115,7 @@ namespace MovieRecommendation
         {
             // <SnippetPredictionEngine>
             Console.WriteLine("=============== Making a prediction ===============");
-            var predictionEngine = model.CreatePredictionEngine<MovieRating, MovieRatingPrediction>(mlContext);
+            var predictionEngine = mlContext.Model.CreatePredictionEngine<MovieRating, MovieRatingPrediction>(model);
             // </SnippetPredictionEngine>
 
             // Create test input & make single prediction
@@ -140,15 +138,14 @@ namespace MovieRecommendation
         }
 
         //Save model
-        public static void SaveModel(MLContext mlContext, ITransformer model)
+        public static void SaveModel(MLContext mlContext, DataViewSchema trainingDataViewSchema, ITransformer model)
         {
             // Save the trained model to .zip file
             // <SnippetSaveModel>
             var modelPath = Path.Combine(Environment.CurrentDirectory, "Data", "MovieRecommenderModel.zip");
             
             Console.WriteLine("=============== Saving the model to a file ===============");
-            using (var fs = new FileStream(modelPath, FileMode.Create, FileAccess.Write, FileShare.Write))
-                mlContext.Model.Save(model, fs);
+            mlContext.Model.Save(model, trainingDataViewSchema, modelPath);
             // </SnippetSaveModel>
         }
 
