@@ -17,17 +17,17 @@ namespace WindowsApplication1
       private System.Windows.Forms.Button button2;
       private System.Windows.Forms.ListBox listBox1;
       private System.Windows.Forms.Button button3;
-        private System.ComponentModel.Container components;
+      private System.ComponentModel.Container components;
       
       public Form1()
       {
-            InitializeComponent();
+         InitializeComponent();
 
          // Sets up the initial objects in the CheckedListBox.
-            string[] myFruit = {"Apples", "Oranges","Tomato"};
+         string[] myFruit = {"Apples", "Oranges","Tomato"};
          checkedListBox1.Items.AddRange(myFruit);
 
-            // Changes the selection mode from double-click to single click.
+         // Changes the selection mode from double-click to single click.
          checkedListBox1.CheckOnClick = true;
       }
 
