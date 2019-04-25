@@ -19,7 +19,7 @@ Public Module GetDotNetVersion
 
    ' Checking the version using >= will enable forward compatibility.
    Private Function CheckFor45PlusVersion(releaseKey As Integer) As String
-      If releaseKey >= 528049 Then
+      If releaseKey >= 528040 Then
          Return "4.8 or later"
       Else If releaseKey >= 461808 Then
          Return "4.7.2" 
