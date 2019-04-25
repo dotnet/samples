@@ -1,0 +1,10 @@
+﻿.sys-template { display:none; }
+body { font-family: Arial, Helvetica, sans-serif; background-color: white; }
+.list { border-collapse:collapse; width:620px; font:14pt Arial; background-color:white; margin:7px; }
+.box { padding:3px; border-collapse:collapse; width:620px; font:14pt Arial; background-color:white; margin:7px; border:#002020 2px solid;}
+.box div { padding:2px; }
+.name { float:left; width:200px; }
+.value { float:left; width:400px; }
+.myselected { background-color:blue; color:white; }
+.box button{ font-family: "Verdana"; font-size: 12pt; font-weight: bold; }
+li { list-style-type: none; }

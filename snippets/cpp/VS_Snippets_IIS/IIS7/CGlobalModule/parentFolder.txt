@@ -1,0 +1,1 @@
+This is the parent for all the CGlobalModule samples.

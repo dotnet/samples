@@ -1,0 +1,29 @@
+﻿.sys-template { display:none; }
+body { font-family: Verdana, Helvetica, sans-serif; background-color: white; }
+.listitem { cursor:pointer; border-style: solid; float: left; border-width: 1px 3px 3px 1px; border-color: #ACC1D7; padding: 5px; color: black; width: 200px; background-color: #eeeeee; border-collapse: collapse; margin: 8px; }
+.listitem div { font-family: Arial; height: 22px; padding: 2px; font-size: 12px; }
+.listitem .title { height: 16px; font-size: 13px; font-weight:bold; }
+.listitem img { margin-top: 3px; height: 150px; width: 100%; }
+.imageslist .link { color:Navy; border: none; background-color: #eeeeee; width: 100%; }
+.alternateitem .link  { color:#333333; background-color: white; border:none; width: 100%;  }
+.myselected .link  { color:black; background-color: #E8B0FF; border:none; width: 100%; }
+.alternateitem { background-color: white; color: #333333; } 
+.scrollableRows { background-color: #F6F6F6; float: left; border: solid; border-width: 1px 3px 3px 1px; border-color: #5c87b2; overflow-y: auto; overflow-x: hidden; height: 520px; padding-right: 18px; width: 50%; } 
+.toolbar { font-size: 14px; border-style: solid; background-color: #f6f6f6; padding: 2px; float: left; margin-bottom: 10px; border-width: 1px 3px 3px 1px; border-color: #5c87b2; width: 50%; } 
+.toolbar button { margin-right: 5px; margin:3px; border-style: ridge; border-width: 2px; border-color: inherit; background-color: #d6c1ff; color: #000077; }  
+.right { margin-left:15px; }  
+.toolbar .picker { margin-right:5px; margin-left:5px; margin:3px; color: #000077;  padding:3px; border-style: solid; border-width: 1px 3px 3px 1px; border-color: #5c87b2; background-color: #D6C1FF; } 
+.toolbar .picker select { color: #000099;  } 
+.myselected { border-color: #7300A4; border-width: 1px 3px 3px 1px; border-style: solid; background-color: #E8B0FF; color: black; } 
+.label { height:24px; padding-left:10px; font-weight:bold;  color: #696969; width:25%; } 
+.imagesdetail input { width:93%;  color:black; } 
+.imagesdetail { float:left;  margin-left:10px;  width:45%; color: black;  background-color: #F6F6F6; border:solid 2px #5c87b2;  border-width: 1px 3px 3px 1px; } 
+.imagesdetail td { height:24px; } 
+.imagesdetail img { float:left;  width:45%; height:auto; margin-left:10px;  margin-top:10px;  background-color: #F6F6F6; border:solid 2px #5c87b2;  border-width: 1px 3px 3px 1px; } 
+.imagesdetail button { margin-left: 10px; margin-bottom: 10px; } 
+.detailname  { text-align:center; padding-top:8px; padding-bottom:8px; font:12pt verdana;  font-weight:bold;  font-variant:small-caps;  } 
+.jobtitle { text-align:center; font-weight:bold;  } 
+.imageslist table 
+.haschanges { text-align: center; font: 8pt verdana; font-weight: bold; font-variant: small-caps; color: #ee1111; } 
+button { text-decoration: underline; display:table-cell; } 
+

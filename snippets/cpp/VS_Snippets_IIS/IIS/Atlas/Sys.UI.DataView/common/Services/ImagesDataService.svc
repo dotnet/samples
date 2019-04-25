@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Factory="System.Data.Services.DataServiceHostFactory" Service="ImagesDataService" %>

@@ -1,0 +1,4 @@
+LIBRARY	"GetClientCertificate"
+
+EXPORTS
+    RegisterModule

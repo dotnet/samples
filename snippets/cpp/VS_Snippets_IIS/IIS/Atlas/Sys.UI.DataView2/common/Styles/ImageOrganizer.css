@@ -1,0 +1,37 @@
+﻿.sys-template { display:none; }
+body { font-family: Arial, Helvetica, sans-serif; background-color: white; }
+.imagesList { float:left; width:80%}
+.master .link { color:#000000; width:100%; background-color:#E0FFFF; border:none; font-weight:bold; text-align: left;}
+.alternateitem .link  { color:#284775; background-color:#FFFFFF; border:none; }
+.sortHeader .link  { color:white; background-color:#008080; border:none; }
+.myselected .link  { color:white; background-color:blue; border:none; }
+.filterBlock { float:left; width:14%; }
+.detailBlock { float:left; width:60%}
+.master { border-collapse:collapse; font:10pt Arial; background-color:white; padding:1px; margin:7px; border:#002020 2px solid;}
+.master td { cursor:default; border:1px solid #002020; font-weight:bold; padding:2px; padding-left:5px; padding-right:5px; background-color:#E0FFFF; color: #333333; white-space:nowrap; }
+.layout tr td { font:11pt verdana; font-weight:bold; background-color:#008080; color:white; border:1px solid white; border-bottom:1px solid #002020; border-top:1px solid #002020; }
+.alternateitem td { background-color:#FFFFFF; color:#284775; }
+.myselected td { background-color:blue; color:white; }
+.tagList { width:120px; }
+.tagList td { padding-right:10px; }
+.detail { float:left; font:10pt Arial; margin:7px; }
+.detail td { cursor:default; }
+.editFields input { width:98%; padding-left:5px; background-color: white;}
+.detailLabel { width:12%; font-weight:bold; padding-left:12px;}
+.detailHeader { width:12%; font-weight:bold; }
+fieldset { border:#002020 2px solid; padding:10px; }
+fieldset legend { font:11pt verdana; color:blue; font-weight:bold; font-variant:small-caps; }
+.hide { font:15pt }
+.displayOnly td { background-color: #EEEEEE; color: #505050; }
+.page { background-color: #F0F0F0; }
+.pageHeader button { cursor:pointer; border-style: ridge; border-width: 2px; border-color: inherit; background-color: #00FFFF; color: #000099; }
+.pageHeader div { font-style: italic; padding: 6px; font-family: Verdana; font-size: large; font-weight: bold; font-variant: normal; text-align: center; }
+.master button { cursor:pointer; border-style: ridge; border-width: 2px; border-color: inherit; background-color: #00FFFF; color: #000099; }
+.detailBlock button { cursor:pointer; border-style: ridge; border-width: 2px; border-color: inherit; background-color: #00FFFF; color: #000099; }
+.saveButton { margin-left:60px; }
+.pageHeader .testButton { margin-left:60px; background-color:ButtonFace; }
+.multiselect td { padding:0px; }
+.multiselect td button { width:100%; height:100%; background-color: #22dddd; color: #000099; }
+.multiselect .multiselected button { background-color: #bbffff; color: #000099; }
+button { text-decoration: underline; display:table-cell; }
+li { list-style-type: none; }

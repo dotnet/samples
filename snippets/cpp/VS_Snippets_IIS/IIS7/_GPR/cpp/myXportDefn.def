@@ -1,0 +1,4 @@
+LIBRARY	"GPR"
+
+EXPORTS
+    RegisterModule

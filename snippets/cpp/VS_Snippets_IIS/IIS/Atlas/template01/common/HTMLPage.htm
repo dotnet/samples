@@ -1,0 +1,37 @@
+﻿<!-- <Snippet2> -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Untitled Page</title>
+    <style type="text/css">
+      .sys-template { display:none; visibility:hidden; }
+    </style>
+    <script type="text/javascript" src="MicrosoftAjax/MicrosoftAjax.debug.js"></script>
+    <script type="text/javascript" src="MicrosoftAjax/MicrosoftAjaxTemplates.debug.js"></script>
+<script type="text/javascript">
+    function pageLoad() {
+        $create(
+            Sys.UI.DataView,
+            {
+                 autofetch: "true",
+                 dataProvider: "CompanyService.svc",
+                 fetchOperation: "GetCompanies"
+            },
+            {},
+            {},
+            $get("companyListView")
+        );
+    }
+</script>
+
+</head>
+<body>
+    <div>
+      <ul id="companyListView" class="sys-template">
+        <li>{{ CompanyName }}</li>
+      </ul>
+    </div>
+</body>
+</html>
+<!-- </Snippet2> -->

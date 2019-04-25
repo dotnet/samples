@@ -1,0 +1,4 @@
+LIBRARY	"RazEvnt"
+
+EXPORTS
+    RegisterModule

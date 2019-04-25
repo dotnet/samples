@@ -1,0 +1,4 @@
+LIBRARY	"WriteEntityChunkByReference"
+
+EXPORTS
+    RegisterModule
