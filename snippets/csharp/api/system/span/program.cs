@@ -42,7 +42,8 @@ class Program
         // Create a span from native memory.
         var native = Marshal.AllocHGlobal(100);
         Span<byte> nativeSpan;
-        unsafe {
+        unsafe
+        {
             nativeSpan = new Span<byte>(native.ToPointer(), 100);
         }
         byte data = 0;
@@ -93,7 +94,8 @@ public class Program2
         // Create an array from native memory.
         var native = Marshal.AllocHGlobal(100);
         Span<byte> nativeSpan;
-        unsafe {
+        unsafe 
+        {
             nativeSpan = new Span<byte>(native.ToPointer(), 100);
         }
 
