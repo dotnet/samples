@@ -35,5 +35,14 @@ class ThreadLocalDemo
             ThreadName.Dispose();
         }
 }
-
+// This multithreading example can produce different outputs for each 'action' invocation and will vary with each run.
+// Therefore, the example output will resemble but may not exactly match the following output (from a 4 core processor):
+// ThreadName = Thread5 
+// ThreadName = Thread6 
+// ThreadName = Thread4 
+// ThreadName = Thread6 (repeat)
+// ThreadName = Thread1 
+// ThreadName = Thread4 (repeat)
+// ThreadName = Thread7 
+// ThreadName = Thread5 (repeat)
 //</snippet01>

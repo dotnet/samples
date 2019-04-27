@@ -1,11 +1,9 @@
 
-// The following code example calls GetMonthsInYear for 5 years in each era.
-// <snippet1>
 using namespace System;
 using namespace System::Globalization;
+
 int main()
 {
-   
    // Creates and initializes a JapaneseCalendar.
    JapaneseCalendar^ myCal = gcnew JapaneseCalendar;
    
@@ -28,19 +26,5 @@ int main()
       for ( int y = 1; y <= 5; y++ )
          Console::Write( "\t {0}", myCal->GetMonthsInYear( y, myCal->Eras[ i ] ) );
       Console::WriteLine();
-
    }
 }
-
-/*
-This code produces the following output.
-
-YEAR            1       2       3       4       5
-CurrentEra:     12      12      12      12      12
-Era 4:          12      12      12      12      12
-Era 3:          12      12      12      12      12
-Era 2:          12      12      12      12      12
-Era 1:          12      12      12      12      12
-
-*/
-// </snippet1>

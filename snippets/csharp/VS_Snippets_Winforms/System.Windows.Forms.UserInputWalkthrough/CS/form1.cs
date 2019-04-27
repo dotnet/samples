@@ -289,8 +289,8 @@ namespace UserInputWalkthrough
             }
         }
 
-        // All-purpose method for displaying a line of text in the
-        // text boxe.
+        // All-purpose method for displaying a line of text in one of the
+        // text boxes.
         private void DisplayLine(string line)
         {
             TextBoxOutput.AppendText(line);

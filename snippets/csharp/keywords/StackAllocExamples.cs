@@ -11,10 +11,10 @@ namespace keywords
             InitializeBitMasks();
         }
 
-        private static unsafe void InitializeBitMasks()
+        private static void InitializeBitMasks()
         {
             // <Snippet2>
-            int* mask = stackalloc[] {
+            ReadOnlySpan<int> mask = stackalloc[] {
                 0b_0000_0000_0000_0001,
                 0b_0000_0000_0000_0010,
                 0b_0000_0000_0000_0100,
@@ -61,14 +61,13 @@ namespace keywords
         {
             // <Snippet1>
             const int arraySize = 20;
-            int* fib = stackalloc int[arraySize];
-            int* p = fib;
+            Span<int> fib = stackalloc int[arraySize];
             // The sequence begins with 1, 1.
-            *p++ = *p++ = 1;
-            for (int i = 2; i < arraySize; ++i, ++p)
+            fib[0] = fib[1] = 1;
+            for (int i = 2; i < arraySize; ++i)
             {
                 // Sum the previous two numbers.
-                *p = p[-1] + p[-2];
+                fib[i] = fib[i-1] + fib[i-2];
             }
             for (int i = 0; i < arraySize; ++i)
             {

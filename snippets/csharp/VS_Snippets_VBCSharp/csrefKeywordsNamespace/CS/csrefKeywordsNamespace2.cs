@@ -34,11 +34,6 @@ namespace NameSpace2
 
 namespace NameSpace3
 {
-    // Using directive:
-    using NameSpace1;
-    // Using directive:
-    using NameSpace2;
-
     class MainClass
     {
         static void Main()

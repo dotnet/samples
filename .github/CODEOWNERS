@@ -27,3 +27,5 @@
 /snippets/csharp/** @BillWagner
 # Visual Basic snippets:
 /snippets/visualbasic/** @rpetrusha
+# F# Snippets:
+/snippets/fsharp/** @cartermp

@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 
 //<snippet20>
 // Declares a class member for each structure element.
-[StructLayout(LayoutKind.Sequential, CharSet=CharSet.Ansi)]
+[StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
 public class MyStruct
 {
     public string buffer;
@@ -23,12 +23,12 @@ public unsafe class LibWrap
 {
     // Declares managed prototypes for the unmanaged function.
     [DllImport("..\\LIB\\PInvokeLib.dll")]
-    public static extern void TestOutArrayOfStructs(out int size,
-        out IntPtr outArray);
+    public static extern void TestOutArrayOfStructs(
+        out int size, out IntPtr outArray);
 
     [DllImport("..\\LIB\\PInvokeLib.dll")]
-    public static extern void TestOutArrayOfStructs(out int size,
-        MyUnsafeStruct** outArray);
+    public static extern void TestOutArrayOfStructs(
+        out int size, MyUnsafeStruct** outArray);
 }
 //</snippet20>
 
@@ -42,7 +42,7 @@ public class App
         Console.WriteLine("\nUsing unsafe code\n");
         UsingUnsafePointer();
     }
-   
+
     public static void UsingMarshaling()
     {
         int size;
@@ -63,6 +63,7 @@ public class App
             Console.WriteLine("Element {0}: {1} {2}", i, manArray[i].buffer,
                 manArray[i].size);
         }
+
         Marshal.FreeCoTaskMem(outArray);
     }
 
@@ -79,6 +80,7 @@ public class App
                 Marshal.PtrToStringAnsi(pCurrent->buffer), pCurrent->size);
             Marshal.FreeCoTaskMem(pCurrent->buffer);
         }
+
         Marshal.FreeCoTaskMem((IntPtr)pResult);
     }
 }

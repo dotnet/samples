@@ -29,7 +29,7 @@ Namespace CS
     Module Module1
         ' <snippet1>
         Sub Main(ByVal args() As String)
-            ' Create an instance of the MyExceptionHander class.
+            ' Create an instance of the MyExceptionHandler class.
             Dim thisExceptionHandler As New MyExceptionHandler()
 
             ' Enable the custom handler by setting 

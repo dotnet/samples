@@ -3,7 +3,7 @@
     Dim Button1 As Button
 
     '<Snippet200>
-    ' Event hander that accepts a parameter of the EventArgs type.
+    ' Event handler that accepts a parameter of the EventArgs type.
     Private Sub MultiHandler(ByVal sender As Object,
                              ByVal e As System.EventArgs)
         Label1.Text = DateTime.Now

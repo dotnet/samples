@@ -9,9 +9,9 @@ public class Example
     // An acceptable implementation.
     static void Log(ReadOnlyMemory<char> message)
     {
+        string defensiveCopy = message.ToString();
         // Run in the background so that we don't block the main thread while performing IO.
         Task.Run(() => {
-            string defensiveCopy = message.ToString();
             StreamWriter sw = File.AppendText(@".\input-numbers.dat");
             sw.WriteLine(defensiveCopy);
             sw.Flush();

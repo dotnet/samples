@@ -48,7 +48,7 @@ int main()
    int myCount = myLogEntryCollection->Count;
    
    // Iterate through all 'EventLogEntry' instances in 'EventLog'.
-   for ( int i = myCount - 1; i > 0; i-- )
+   for ( int i = myCount - 1; i > -1; i-- )
    {
       EventLogEntry^ myLogEntry = myLogEntryCollection[ i ];
       

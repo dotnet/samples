@@ -238,18 +238,6 @@ int main(int argc, char* argv[])
         printf("coreclr_shutdown failed - status: 0x%08x\n", hr);
     }
 
-    // Unload CoreCLR
-#if WINDOWS
-    if (!FreeLibrary(coreClr))
-    {
-        printf("Failed to free coreclr.dll\n");
-    }
-#elif LINUX
-    if (dlclose(coreClr))
-    {
-        printf("Failed to free libcoreclr.so\n");
-    }
-#endif
     return 0;
 }
 

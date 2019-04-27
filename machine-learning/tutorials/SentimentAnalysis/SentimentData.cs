@@ -14,15 +14,14 @@ namespace SentimentAnalysis
         public bool Sentiment;
     }
 
-    public class SentimentPrediction
+    public class SentimentPrediction : SentimentData
     {
+
         [ColumnName("PredictedLabel")]
         public bool Prediction { get; set; }
 
-       // [ColumnName("Probability")]
         public float Probability { get; set; }
 
-      //  [ColumnName("Score")]
         public float Score { get; set; }
     }
     // </SnippetDeclareTypes>

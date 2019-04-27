@@ -13,7 +13,7 @@ public struct MyUnion
     public double d;
 }
 
-[StructLayout(LayoutKind.Explicit, Size=128)]
+[StructLayout(LayoutKind.Explicit, Size = 128)]
 public struct MyUnion2_1
 {
     [FieldOffset(0)]
@@ -23,20 +23,20 @@ public struct MyUnion2_1
 [StructLayout(LayoutKind.Sequential)]
 public struct MyUnion2_2
 {
-    [MarshalAs(UnmanagedType.ByValTStr, SizeConst=128)]
+    [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 128)]
     public string str;
 }
 
 public class LibWrap
 {
     // Declares managed prototypes for unmanaged function.
-    [DllImport( "..\\LIB\\PInvokeLib.dll")]
+    [DllImport("..\\LIB\\PInvokeLib.dll")]
     public static extern void TestUnion(MyUnion u, int type);
 
-    [DllImport( "..\\LIB\\PInvokeLib.dll")]
+    [DllImport("..\\LIB\\PInvokeLib.dll")]
     public static extern void TestUnion2(MyUnion2_1 u, int type);
 
-    [DllImport( "..\\LIB\\PInvokeLib.dll")]
+    [DllImport("..\\LIB\\PInvokeLib.dll")]
     public static extern void TestUnion2(MyUnion2_2 u, int type);
 }
 //</snippet28>

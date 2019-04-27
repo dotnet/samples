@@ -12,5 +12,5 @@ namespace TransferLearningTF
         [LoadColumn(1)]
         public string Label;
     }
-    // <SnippetDeclareTypes>
+    // </SnippetDeclareTypes>
 }

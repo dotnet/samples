@@ -10,7 +10,7 @@ Public Module GetDotNetVersion
 
       Using ndpKey As RegistryKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry32).OpenSubKey(subkey)
          If ndpKey IsNot Nothing AndAlso ndpKey.GetValue("Release") IsNot Nothing 
-            Console.WriteLine(".NET Framework Version: " + CheckFor45PlusVersion(ndpKey.GetValue("Release")))
+            Console.WriteLine($".NET Framework Version: {CheckFor45PlusVersion(ndpKey.GetValue("Release"))}")
          Else 
             Console.WriteLine(".NET Framework Version 4.5 or later is not detected.")
          End If 
@@ -19,8 +19,12 @@ Public Module GetDotNetVersion
 
    ' Checking the version using >= will enable forward compatibility.
    Private Function CheckFor45PlusVersion(releaseKey As Integer) As String
-      If releaseKey >= 461308 Then
-         Return "4.7.1 or later"
+      If releaseKey >= 528040 Then
+         Return "4.8 or later"
+      Else If releaseKey >= 461808 Then
+         Return "4.7.2" 
+      Else If releaseKey >= 461308 Then
+         Return "4.7.1"
       Else If releaseKey >= 460798 Then
          Return "4.7"
       Else If releaseKey >= 394802 Then

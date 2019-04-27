@@ -89,5 +89,5 @@ End Class
 '       Valid: js@proseware.com9
 '       Valid: j.s@server1.proseware.com
 '       Valid: "j\"s\""@proseware.com
-'       Valid: js@contoso.ä¸­å›½
+'       Valid: js@contoso.中国
 ' </Snippet8>
