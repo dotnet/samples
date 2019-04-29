@@ -1,12 +1,12 @@
 COM Server Demo
 ================
 
-This is a basic example of providing a managed COM server in .NET Core 3.0. Documentation on the inner workings of activation can be found at [here](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/COM-activation.md).
+This is a basic example of providing a managed COM server in .NET Core 3.0. Documentation on the inner workings of activation can be found [here](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/COM-activation.md).
 
 Key Features
 ------------
 
-Demonstrates how to consume provide a COM server in .NET Core 3.0 Preview 5 or later.
+Demonstrates how to provide a COM server in .NET Core 3.0 Preview 5 or later.
 
 Addtional comments are contained in source and project files.
 
