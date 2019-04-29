@@ -2,10 +2,7 @@
 using System;
 using System.IO;
 using System.Linq;
-using Microsoft.Data.DataView;
 using Microsoft.ML;
-using Microsoft.ML.Data;
-using Microsoft.ML.Transforms;
 // </SnippetAddUsings>
 
 namespace GitHubIssueClassification
@@ -55,7 +52,7 @@ namespace GitHubIssueClassification
             // </SnippetCallBuildAndTrainModel>
 
             // <SnippetCallEvaluate>
-            Evaluate();
+            Evaluate(_trainingDataView.Schema);
             // </SnippetCallEvaluate>
 
             // <SnippetCallPredictIssue>
@@ -95,7 +92,7 @@ namespace GitHubIssueClassification
             // Use the multi-class SDCA algorithm to predict the label using features.
             //Set the trainer/algorithm and map label to value (original readable state)
             // <SnippetAddTrainer> 
-            var trainingPipeline = pipeline.Append(_mlContext.MulticlassClassification.Trainers.StochasticDualCoordinateAscent(DefaultColumnNames.Label, DefaultColumnNames.Features))
+            var trainingPipeline = pipeline.Append(_mlContext.MulticlassClassification.Trainers.SdcaMaximumEntropy("Label", "Features"))
                     .Append(_mlContext.Transforms.Conversion.MapKeyToValue("PredictedLabel"));
             // </SnippetAddTrainer> 
 
@@ -112,7 +109,7 @@ namespace GitHubIssueClassification
 
             // Create prediction engine related to the loaded trained model
             // <SnippetCreatePredictionEngine1>
-            _predEngine = _trainedModel.CreatePredictionEngine<GitHubIssue, IssuePrediction>(_mlContext);
+            _predEngine = _mlContext.Model.CreatePredictionEngine<GitHubIssue, IssuePrediction>(_trainedModel);
             // </SnippetCreatePredictionEngine1>
             // <SnippetCreateTestIssue1> 
             GitHubIssue issue = new GitHubIssue() {
@@ -135,7 +132,7 @@ namespace GitHubIssueClassification
 
         }
 
-        public static void Evaluate()
+        public static void Evaluate(DataViewSchema trainingDataViewSchema)
         {
             // STEP 5:  Evaluate the model in order to get the model's accuracy metrics
             Console.WriteLine($"=============== Evaluating to get model's accuracy metrics - Starting time: {DateTime.Now.ToString()} ===============");
@@ -155,8 +152,8 @@ namespace GitHubIssueClassification
             Console.WriteLine($"*************************************************************************************************************");
             Console.WriteLine($"*       Metrics for Multi-class Classification model - Test Data     ");
             Console.WriteLine($"*------------------------------------------------------------------------------------------------------------");
-            Console.WriteLine($"*       MicroAccuracy:    {testMetrics.AccuracyMicro:0.###}");
-            Console.WriteLine($"*       MacroAccuracy:    {testMetrics.AccuracyMacro:0.###}");
+            Console.WriteLine($"*       MicroAccuracy:    {testMetrics.MicroAccuracy:0.###}");
+            Console.WriteLine($"*       MacroAccuracy:    {testMetrics.MacroAccuracy:0.###}");
             Console.WriteLine($"*       LogLoss:          {testMetrics.LogLoss:#.###}");
             Console.WriteLine($"*       LogLossReduction: {testMetrics.LogLossReduction:#.###}");
             Console.WriteLine($"*************************************************************************************************************");
@@ -164,7 +161,7 @@ namespace GitHubIssueClassification
 
             // Save the new model to .ZIP file
             // <SnippetCallSaveModel>
-            SaveModelAsFile(_mlContext, _trainedModel);
+            SaveModelAsFile(_mlContext, trainingDataViewSchema, _trainedModel);
             // </SnippetCallSaveModel>
 
         }
@@ -172,11 +169,7 @@ namespace GitHubIssueClassification
         public static void PredictIssue()
         {
             // <SnippetLoadModel>
-            ITransformer loadedModel;
-            using (var stream = new FileStream(_modelPath, FileMode.Open, FileAccess.Read, FileShare.Read))
-            {
-                loadedModel = _mlContext.Model.Load(stream);
-            }
+            ITransformer loadedModel = _mlContext.Model.Load(_modelPath, out var modelInputSchema);            
             // </SnippetLoadModel>
 
             // <SnippetAddTestIssue> 
@@ -185,7 +178,7 @@ namespace GitHubIssueClassification
 
             //Predict label for single hard-coded issue
             // <SnippetCreatePredictionEngine>
-            _predEngine = loadedModel.CreatePredictionEngine<GitHubIssue, IssuePrediction>(_mlContext);
+            _predEngine = _mlContext.Model.CreatePredictionEngine<GitHubIssue, IssuePrediction>(loadedModel);
             // </SnippetCreatePredictionEngine>
 
             // <SnippetPredictIssue>
@@ -198,11 +191,10 @@ namespace GitHubIssueClassification
 
         }
 
-        private static void SaveModelAsFile(MLContext mlContext, ITransformer model)
+        private static void SaveModelAsFile(MLContext mlContext,DataViewSchema trainingDataViewSchema, ITransformer model)
         {
             // <SnippetSaveModel> 
-            using (var fs = new FileStream(_modelPath, FileMode.Create, FileAccess.Write, FileShare.Write))
-                mlContext.Model.Save(model, fs);
+            mlContext.Model.Save(model, trainingDataViewSchema, _modelPath);
             // </SnippetSaveModel>
 
             Console.WriteLine("The model is saved to {0}", _modelPath);
