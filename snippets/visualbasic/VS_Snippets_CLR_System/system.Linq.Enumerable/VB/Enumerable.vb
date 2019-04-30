@@ -3198,6 +3198,73 @@ Namespace SequenceExamples
         End Sub
 #End Region
 
+
+#Region "SkipLast"
+        Sub SkipLastEx1()
+#If NETCOREAPP Then
+            ' <Snippet203>
+            ' Create an array of integers that represent grades.
+            Dim grades() As Integer = {59, 82, 70, 56, 92, 98, 85}
+
+            ' Sort the numbers in descending order and
+            ' get all but the last (smallest) three numbers.
+            Dim topGrades As IEnumerable(Of Integer) =
+            grades _
+            .OrderByDescending(Function(g) g) _
+            .SkipLast(3)
+
+            ' Display the results.
+            Dim output As New System.Text.StringBuilder("All grades except the bottom three are:" & vbCrLf)
+            For Each grade As Integer In topGrades
+                output.AppendLine(grade)
+            Next
+            MsgBox(output.ToString())
+
+            ' This code produces the following output:
+            '
+            ' All grades except the bottom three are:
+            ' 98
+            ' 92
+            ' 85
+            ' 82
+            ' </Snippet203>
+#End If
+        End Sub
+#End Region
+
+#Region "TakeLast"
+        Sub TakeLastEx1()
+#If NETCOREAPP Then
+            ' <Snippet204>
+            ' Create an array of Integer values that represent grades.
+            Dim grades() As Integer = {59, 82, 70, 56, 92, 98, 85}
+
+            ' Get the lowest three grades by first sorting
+            ' them in descending order and then taking the
+            ' last three values.
+            Dim bottomThreeGrades As IEnumerable(Of Integer) =
+            grades _
+            .OrderByDescending(Function(grade) grade) _
+            .TakeLast(3)
+
+            ' Display the results.
+            Dim output As New System.Text.StringBuilder("The bottom three grades are:" & vbCrLf)
+            For Each grade As Integer In bottomThreeGrades
+                output.AppendLine(grade)
+            Next
+            MsgBox(output.ToString())
+
+            ' This code produces the following output:
+            '
+            ' The bottom three grades are:
+            ' 70
+            ' 59
+            ' 56
+            ' </Snippet204>
+#End If
+        End Sub
+#End Region
+
     End Module
 
 End Namespace
