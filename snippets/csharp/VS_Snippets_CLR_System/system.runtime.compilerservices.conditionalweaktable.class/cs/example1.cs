@@ -24,7 +24,7 @@ public class Example
 
       if (wr2.Target == null)
           Console.WriteLine("No strong reference to mc2 exists.");   
-      else if (cwt.TryGetValue(mc2, out data))
+      else if (cwt.TryGetValue(wr2.Target, out data))
           Console.WriteLine("Data created at {0}", data.CreationTime);      
       else
           Console.WriteLine("mc2 not found in the table.");
