@@ -4,12 +4,12 @@ using System.IO;
 using Microsoft.ML;
 // </SnippetAddUsings>
 
-namespace ShampooSalesAnomalyDetection
+namespace ProductSalesAnomalyDetection
 {
     class Program
     {
         // <SnippetDeclareGlobalVariables>
-        static readonly string _dataPath = Path.Combine(Environment.CurrentDirectory, "Data", "sales-of-shampoo-over-a-three-ye.csv");
+        static readonly string _dataPath = Path.Combine(Environment.CurrentDirectory, "Data", "product-sales.csv");
         //assign the Number of records in dataset file to constant variable
         const int _docsize = 36;
         // </SnippetDeclareGlobalVariables>
@@ -22,7 +22,7 @@ namespace ShampooSalesAnomalyDetection
 
             //STEP 1: Common data loading configuration
             // <SnippetLoadData>
-            IDataView dataView = mlContext.Data.LoadFromTextFile<ShampooSalesData>(path: _dataPath, hasHeader: true, separatorChar: ',');
+            IDataView dataView = mlContext.Data.LoadFromTextFile<ProductSalesData>(path: _dataPath, hasHeader: true, separatorChar: ',');
             // </SnippetLoadData>
 
             // Spike detects pattern temporary changes
@@ -35,34 +35,37 @@ namespace ShampooSalesAnomalyDetection
             DetectChangepoint(mlContext, _docsize, dataView);
             // </SnippetCallDetectChangepoint>
         }
-        static void DetectSpike(MLContext mlContext, int size, IDataView dataView)
+        static void DetectSpike(MLContext mlContext, int docSize, IDataView productSales)
         {
             Console.WriteLine("Detect temporary changes in pattern");
 
             // STEP 2: Set the training algorithm   
-            // <SnippetAddTrainer1> 
-            var iidSpikeEstimator = mlContext.Transforms.DetectIidSpike(outputColumnName: nameof(ShampooSalesPrediction.Prediction), inputColumnName: nameof(ShampooSalesData.numSales), confidence: 95, pvalueHistoryLength: size / 4);
-            // </SnippetAddTrainer1> 
+            // <SnippetAddSpikeTrainer> 
+            var iidSpikeEstimator = mlContext.Transforms.DetectIidSpike(outputColumnName: nameof(ProductSalesPrediction.Prediction), inputColumnName: nameof(ProductSalesData.numSales), confidence: 95, pvalueHistoryLength: docSize / 4);
+            // </SnippetAddSpikeTrainer> 
 
             // STEP 3:Train the model by fitting the dataview
             // Create and train the model based on the dataset that has been loaded, transformed.
             Console.WriteLine("=============== Training the model ===============");
             // <SnippetTrainModel1>
-            ITransformer trainedModel = iidSpikeEstimator.Fit(dataView);
+            ITransformer trainedModel = iidSpikeEstimator.Fit(productSales);
             // </SnippetTrainModel1>
 
             Console.WriteLine("=============== End of training process ===============");
+             //Apply data transformation to create predictions.
+            // <SnippetTransformData1>
+            IDataView transformedData = trainedModel.Transform(productSales);
+            // </SnippetTransformData1>
+ 
+            // <SnippetCreateEnumerable1>
+            var predictions = mlContext.Data.CreateEnumerable<ProductSalesPrediction>(transformedData, reuseRowObject: false);
+            // </SnippetCreateEnumerable1>
+            
             // <SnippetDisplayHeader1>
             Console.WriteLine("Alert\tScore\tP-Value");
             // </SnippetDisplayHeader1>
-            
-            //Apply data transformation to create predictions.
-            // <SnippetTransformData>
-            IDataView transformedData = trainedModel.Transform(dataView);
-            // </SnippetTransformData>
 
-            var predictions = mlContext.Data.CreateEnumerable<ShampooSalesPrediction>(transformedData, reuseRowObject: false);
-            // <SnippetDisplayResults>
+            // <SnippetDisplayResults1>
             foreach (var p in predictions)
             {
                 var results = $"{p.Prediction[0]}\t{p.Prediction[1]:f2}\t{p.Prediction[2]:F2}";
@@ -75,33 +78,38 @@ namespace ShampooSalesAnomalyDetection
                 Console.WriteLine(results);
             }
             Console.WriteLine("");
-            // </SnippetDisplayResults>
+            // </SnippetDisplayResults1>
         }
 
-        static void DetectChangepoint(MLContext mlContext, int size, IDataView dataView)
+        static void DetectChangepoint(MLContext mlContext, int docSize, IDataView productSales)
         {
             Console.WriteLine("Detect Persistent changes in pattern");
 
             //STEP 2: Set the training algorithm 
-            // <SnippetAddTrainer2> 
-            var iidChangePointEstimator = mlContext.Transforms.DetectIidChangePoint(outputColumnName: nameof(ShampooSalesPrediction.Prediction), inputColumnName: nameof(ShampooSalesData.numSales), confidence: 95, changeHistoryLength: size / 4);
-            // </SnippetAddTrainer2> 
+            // <SnippetAddChangePointTrainer> 
+            var iidChangePointEstimator = mlContext.Transforms.DetectIidChangePoint(outputColumnName: nameof(ProductSalesPrediction.Prediction), inputColumnName: nameof(ProductSalesData.numSales), confidence: 95, changeHistoryLength: docSize / 4);
+            // </SnippetAddChangePointTrainer> 
+
             //STEP 3:Train the model by fitting the dataview
             Console.WriteLine("=============== Training the model Using Change Point Detection Algorithm===============");
             // </SnippetTrainModel2>
-            ITransformer trainedModel = iidChangePointEstimator.Fit(dataView);
+            var trainedModel = iidChangePointEstimator.Fit(productSales);
             // </SnippetTrainModel2>
             Console.WriteLine("=============== End of training process ===============");
 
+            //Apply data transformation to create predictions.
+            // <SnippetTransformData2>
+            IDataView transformedData = trainedModel.Transform(productSales);
+            // </SnippetTransformData2>
+
+            // <SnippetCreateEnumerable2>
+            var predictions = mlContext.Data.CreateEnumerable<ProductSalesPrediction>(transformedData, reuseRowObject: false);
+            // </SnippetCreateEnumerable2>
+            
             // <SnippetDisplayHeader2>
             Console.WriteLine("Alert\tScore\tP-Value\tMartingale value");
             // </SnippetDisplayHeader2>
-            //Apply data transformation to create predictions.
-            // <SnippetTransformData2>
-            IDataView transformedData = trainedModel.Transform(dataView);
-            // </SnippetTransformData2>
 
-            var predictions = mlContext.Data.CreateEnumerable<ShampooSalesPrediction>(transformedData, reuseRowObject: false);
             // <SnippetDisplayResults2>
             foreach (var p in predictions)
             {
