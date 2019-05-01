@@ -6,7 +6,7 @@ public interface class ITest
     void Test(String^ greeting);
 };
 
-public ref class MarshallableExample : MarshalByRefObject, ITest
+public ref class MarshalableExample : MarshalByRefObject, ITest
 {
 public:
     virtual void Test(String^ greeting)
@@ -20,12 +20,12 @@ void main()
 {
     // Construct a path to the current assembly.
     String^ assemblyPath = Environment::CurrentDirectory + "\\" +
-        MarshallableExample::typeid->Assembly->GetName()->Name + ".exe";
+        MarshalableExample::typeid->Assembly->GetName()->Name + ".exe";
 
     AppDomain^ ad = AppDomain::CreateDomain("MyDomain");
  
     System::Runtime::Remoting::ObjectHandle^ oh = 
-        ad->CreateInstanceFrom(assemblyPath, "MarshallableExample");
+        ad->CreateInstanceFrom(assemblyPath, "MarshalableExample");
 
     Object^ obj = oh->Unwrap();
 
@@ -41,7 +41,7 @@ void main()
     ITest^ it = (ITest^) obj;
     it->Test("Hi");
 
-    MarshallableExample^ ex = (MarshallableExample^) obj;
+    MarshalableExample^ ex = (MarshalableExample^) obj;
     ex->Test("Goodbye");
 }
 
