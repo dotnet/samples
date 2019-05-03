@@ -31,7 +31,7 @@ namespace TaxiFarePrediction
             // </Snippet14>
 
             // <Snippet20>
-            TestSinglePrediction(mlContext);
+            TestSinglePrediction(mlContext, model);
             // </Snippet20>
         }
         
@@ -66,7 +66,6 @@ namespace TaxiFarePrediction
             Console.WriteLine("=============== End of training ===============");
             Console.WriteLine();
             // <Snippet12>
-            SaveModelAsFile(mlContext, dataView.Schema, model);
             return model;
             // </Snippet12>
         }
@@ -98,17 +97,12 @@ namespace TaxiFarePrediction
 
         }
 
-        private static void TestSinglePrediction(MLContext mlContext)
+        private static void TestSinglePrediction(MLContext mlContext, ITransformer model)
         {
-            //load the model
-            // <Snippet21>
-            ITransformer loadedModel = mlContext.Model.Load(_modelPath, out var modelInputSchema);
-            // </Snippet21>
-
             //Prediction test
             // Create prediction function and make prediction.
             // <Snippet22>
-            var predictionFunction = mlContext.Model.CreatePredictionEngine<TaxiTrip, TaxiTripFarePrediction>(loadedModel);
+            var predictionFunction = mlContext.Model.CreatePredictionEngine<TaxiTrip, TaxiTripFarePrediction>(model);
             // </Snippet22>
             //Sample: 
             //vendor_id,rate_code,passenger_count,trip_time_in_secs,trip_distance,payment_type,fare_amount
@@ -133,15 +127,6 @@ namespace TaxiFarePrediction
             Console.WriteLine($"Predicted fare: {prediction.FareAmount:0.####}, actual fare: 15.5");
             Console.WriteLine($"**********************************************************************");
             // </Snippet25>
-        }
-
-        private static void SaveModelAsFile(MLContext mlContext,DataViewSchema dataViewSchema, ITransformer model)
-        {
-            // <Snippet13> 
-            mlContext.Model.Save(model, dataViewSchema, _modelPath);
-            // </Snippet13>
-
-            Console.WriteLine("The model is saved to {0}", _modelPath);
         }
     }
 }
