@@ -43,7 +43,7 @@ Namespace Examples.VB.WebControls.Design
 
             ' If the markup is null or empty, return the markup 
             ' for the placeholder.
-            If markup Is Nothing OrElse markup = String.Empty Then
+            If String.IsNullOrEmpty(markup) Then
                 Return GetEmptyDesignTimeHtml()
             End If
 
