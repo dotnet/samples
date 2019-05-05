@@ -14,7 +14,7 @@ public class Example
    {
       bool result;
       // <Snippet1>
-      result = s == null || s == String.Empty;
+      result = string.IsNullOrEmpty(s);
       // </Snippet1>
       return result;
    }

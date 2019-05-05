@@ -151,8 +151,7 @@ namespace PhotoStreamingClient
 
             try
             {
-                if (photoEntity.FileName == string.Empty ||
-                    photoEntity.FileName == null)
+                if (string.IsNullOrEmpty(photoEntity.FileName))
                 {
                     MessageBox.Show("You must first select an image file to upload.");
                     return;

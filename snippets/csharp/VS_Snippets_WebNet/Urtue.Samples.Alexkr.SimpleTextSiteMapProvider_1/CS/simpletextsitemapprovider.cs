@@ -267,7 +267,7 @@ namespace Samples.AspNet.CS
 
                 // Is this a root node yet?
                 if (null == rootNode &&
-                    (null == nodeValues[3] || nodeValues[3] == String.Empty))
+                    string.IsNullOrEmpty(nodeValues[3]))
                 {
                   rootNode = temp;
                 }

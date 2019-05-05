@@ -141,7 +141,7 @@ namespace Samples.AspNet.CS.Controls
         // Open the XML document and set control properties directly.
         private void SetControlStyleFromConfiguration(string path)
         {
-            if (path == null || path == String.Empty)
+            if (string.IsNullOrEmpty(path))
                 return;
 
             WebControl wc = (WebControl)Component;
