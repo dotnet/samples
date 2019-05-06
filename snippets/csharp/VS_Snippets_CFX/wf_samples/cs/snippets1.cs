@@ -993,7 +993,7 @@ namespace WF_Snippets
                     sqlTrackingQueryOptions.WorkflowStatus = WorkflowStatus.Terminated;
                     queriedWorkflows.AddRange(sqlTrackingQuery.GetWorkflows(sqlTrackingQueryOptions));
                 }
-                else if (("all" == workflowEvent.ToLower(CultureInfo.InvariantCulture)) || (string.Empty == workflowEvent) || (null == workflowEvent))
+                else if (("all" == workflowEvent.ToLower(CultureInfo.InvariantCulture)) || string.IsNullOrEmpty(workflowEvent))
                 {
                     sqlTrackingQueryOptions.WorkflowStatus = WorkflowStatus.Created;
                     queriedWorkflows.AddRange(sqlTrackingQuery.GetWorkflows(sqlTrackingQueryOptions));

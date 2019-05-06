@@ -44,7 +44,7 @@ namespace Examples.CS.WebControls.Design
 
             // If the markup is null or empty, return the markup 
             // for the placeholder.
-            if(markup == null || markup == string.Empty)
+            if(string.IsNullOrEmpty(markup))
                 return GetEmptyDesignTimeHtml();
 
             // Make the markup uniform case so that the IndexOf will work.
