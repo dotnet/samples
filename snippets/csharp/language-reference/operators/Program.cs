@@ -10,7 +10,7 @@ namespace operators
             ArithmeticOperators.Examples();
             Console.WriteLine();
 
-            Console.WriteLine("============== == and != operator examples =====");
+            Console.WriteLine("============= == and != operators examples =====");
             EqualityAndNonEqualityExamples.Examples();
             Console.WriteLine();
 
@@ -20,6 +20,14 @@ namespace operators
 
             Console.WriteLine("==== Bitwise and shift operators examples ======");
             BitwiseAndShiftOperators.Examples();
+            Console.WriteLine();
+
+            Console.WriteLine("====== >, <, >=, and <= operators examples =====");
+            GreaterAndLessOperatorsExamples.Examples();
+            Console.WriteLine();
+
+            Console.WriteLine("========= Member access operators examples =====");
+            MemberAccessOperators.Examples();
             Console.WriteLine();
 
             Console.WriteLine("============== + operator examples =============");
@@ -38,24 +46,12 @@ namespace operators
             ConditionalExamples.Examples();
             Console.WriteLine();
 
-            Console.WriteLine("======= >, <, >=, and <= operator examples =====");
-            GreaterAndLessOperatorsExamples.Examples();
-            Console.WriteLine();
-
-            Console.WriteLine("============== [] operator examples ============");
-            IndexOperatorExamples.Examples();
-            Console.WriteLine();
-
             Console.WriteLine("============== () operator examples ============");
             InvocationOperatorExamples.Examples();
             Console.WriteLine();
 
             Console.WriteLine("============== => operator examples ============");
             LambdaOperatorExamples.Examples();
-            Console.WriteLine();
-
-            Console.WriteLine("============== . operator examples =============");
-            MemberAccessExamples.Examples();
             Console.WriteLine();
         }
     }
