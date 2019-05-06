@@ -3151,5 +3151,61 @@ namespace SequenceExamples
         }
         #endregion
 
+        #region SkipLast
+        static void SkipLast()
+        {
+#if NETCOREAPP
+            // <Snippet203>
+            int[] grades = { 59, 82, 70, 56, 92, 98, 85 };
+
+            IEnumerable<int> topGrades =
+                grades.OrderByDescending(g => g).SkipLast(3);
+
+            Console.WriteLine("All grades except the bottom three are:");
+            foreach (int grade in topGrades)
+            {
+                Console.WriteLine(grade);
+            }
+            /*
+             This code produces the following output:
+
+             All grades except the bottom three are:
+             98
+             92
+             85
+             82
+            */
+            // </Snippet203>
+#endif
+        }
+        #endregion
+
+        #region TakeLast
+        static void TakeLast()
+        {
+#if NETCOREAPP
+            // <Snippet204>
+            int[] grades = { 59, 82, 70, 56, 92, 98, 85 };
+
+            IEnumerable<int> bottomThreeGrades =
+                grades.OrderByDescending(grade => grade).TakeLast(3);
+
+            Console.WriteLine("The bottom three grades are:");
+            foreach (int grade in bottomThreeGrades)
+            {
+                Console.WriteLine(grade);
+            }
+            /*
+             This code produces the following output:
+
+             The bottom three grades are:
+             70
+             59
+             56
+            */
+            // </Snippet204>
+#endif
+        }
+        #endregion
     }
 }
