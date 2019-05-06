@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!--
+        COM servers must define a framework to use in situations where a CLR instance is not already present in the process.
+        Note that since the COM server may be activated in a process where the CLR must be activated, both the projects
+        *.runtimeconfig.json and *.deps.json files must be bundled with the server itself.
+        
+        In the following example, the following files are needed to deploy the COM server:
+            COMServer.comhost.dll
+            COMServer.dll
+            COMServer.deps.json
+            COMServer.runtimeconfig.json
+    -->
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    
+    <!-- Indicate the assembly is providing a COM server -->
+    <UseComHost>True</UseComHost>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Used in lieu of a Primary Interop Assembly (PIA) -->
+    <Compile Include="../COMContract/*.cs" />
+  </ItemGroup>
+
+  <Target Name="ServerUsage"
+          AfterTargets="Build">
+    <Message Importance="High" Text="%0a************************************%0a*** $(MSBuildProjectName) usage instructions ***%0a************************************" />
+    <Message Importance="High" Text="The server must be COM registered in order to activate.%0aThe following commands must be executed from an elevated command prompt." />
+    <Message Importance="High" Text="Register:%0a    regsvr32.exe &quot;$(ProjectDir)$(OutputPath)$(ComHostFileName)&quot;" />
+    <Message Importance="High" Text="Unregister:%0a    regsvr32.exe /u &quot;$(ProjectDir)$(OutputPath)$(ComHostFileName)&quot;" />
+  </Target>
+
+</Project>

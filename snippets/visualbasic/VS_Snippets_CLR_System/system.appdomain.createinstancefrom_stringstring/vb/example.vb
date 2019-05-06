@@ -6,7 +6,7 @@ Public Interface ITest
     Sub Test(ByVal greeting As String)
 End Interface
 
-Public Class MarshallableExample 
+Public Class MarshalableExample 
     Inherits MarshalByRefObject
     Implements ITest
 
@@ -14,12 +14,12 @@ Public Class MarshallableExample
     
         ' Construct a path to the current assembly.
         Dim assemblyPath As String = Environment.CurrentDirectory & "\" &
-            GetType(MarshallableExample).Assembly.GetName().Name & ".exe"
+            GetType(MarshalableExample).Assembly.GetName().Name & ".exe"
 
         Dim ad As AppDomain = AppDomain.CreateDomain("MyDomain")
  
         Dim oh As System.Runtime.Remoting.ObjectHandle = 
-            ad.CreateInstanceFrom(assemblyPath, "MarshallableExample")
+            ad.CreateInstanceFrom(assemblyPath, "MarshalableExample")
 
         Dim obj As Object = oh.Unwrap()
 
@@ -35,7 +35,7 @@ Public Class MarshallableExample
         Dim it As ITest = CType(obj, ITest) 
         it.Test("Hi")
 
-        Dim ex As MarshallableExample = CType(obj, MarshallableExample) 
+        Dim ex As MarshalableExample = CType(obj, MarshalableExample) 
         ex.Test("Goodbye")
     End Sub
 
