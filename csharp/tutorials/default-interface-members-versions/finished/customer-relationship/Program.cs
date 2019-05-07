@@ -7,6 +7,7 @@ namespace customer_relationship
     {
         static void Main(string[] args)
         {
+            // <SnippetTestDefaultImplementation>
             SampleCustomer c = new SampleCustomer("customer one", new DateTime(2010, 5, 31))
             {
                 Reminders =
@@ -23,9 +24,12 @@ namespace customer_relationship
             o = new SampleOrder(new DateTime(2103, 7, 4), 25m);
             c.AddOrder(o);
 
+            // <SnippetHighlightCast>
             // Check the discount:
             ICustomer theCustomer = c;
             Console.WriteLine($"Current discount: {theCustomer.ComputeLoyaltyDiscount()}");
+            // </SnippetHighlightCast>
+            // </SnippetTestDefaultImplementation>
 
             // Add more orders to get the discount:
             DateTime recurring = new DateTime(2013, 3, 15);
@@ -51,8 +55,10 @@ namespace customer_relationship
 
             Console.WriteLine($"Current discount: {theCustomer.ComputeLoyaltyDiscount()}");
 
+            // <SnippetSetLoyaltyThresholds>
             ICustomer.SetLoyaltyThresholds(new TimeSpan(30, 0, 0, 0), 1, 0.25m);
             Console.WriteLine($"Current discount: {theCustomer.ComputeLoyaltyDiscount()}");
+            // </SnippetSetLoyaltyThresholds>
 
         }
     }

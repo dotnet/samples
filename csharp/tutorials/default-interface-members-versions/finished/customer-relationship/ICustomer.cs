@@ -15,6 +15,7 @@ namespace customer_relationship
         IDictionary<DateTime, string> Reminders { get; }
 
         /*
+        <SnippetLoyaltyDiscountVersionOne>
         // Version 1:
         public decimal ComputeLoyaltyDiscount()
         {
@@ -25,12 +26,16 @@ namespace customer_relationship
             }
             return 0;
         }
+        </SnippetLoyaltyDiscountVersionOne>
         */
 
-        /* 
+        /*
+        // <SnippetLoyaltyDiscountVersionTwo>
         // Version 2:
-
-        public static void SetLoyaltyThresholds(TimeSpan ago, int minimumOrders, decimal percentageDiscount)
+        public static void SetLoyaltyThresholds(
+            TimeSpan ago, 
+            int minimumOrders = 10, 
+            decimal percentageDiscount = 0.10m)
         {
             length = ago;
             orderCount = minimumOrders;
@@ -50,9 +55,10 @@ namespace customer_relationship
             }
             return 0;
         }
+        // </SnippetLoyaltyDiscountVersionTwo>
         */
-        // Version 3:
 
+        // Version 3:
         public static void SetLoyaltyThresholds(TimeSpan ago, int minimumOrders, decimal percentageDiscount)
         {
             length = ago;
@@ -63,6 +69,8 @@ namespace customer_relationship
         private static int orderCount = 10;
         private static decimal discountPercent = 0.10m;
 
+        // <SnippetFinalVersion>
+        public decimal ComputeLoyaltyDiscount() => DefaultLoyaltyDiscount(this);
         protected static decimal DefaultLoyaltyDiscount(ICustomer c)
         {
             DateTime start = DateTime.Now - length;
@@ -72,9 +80,7 @@ namespace customer_relationship
                 return discountPercent;
             }
             return 0;
-
         }
-        public decimal ComputeLoyaltyDiscount() => DefaultLoyaltyDiscount(this);
-
+        // </SnippetFinalVersion>
     }
 }

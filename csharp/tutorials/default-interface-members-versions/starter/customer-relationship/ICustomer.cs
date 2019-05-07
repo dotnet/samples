@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace customer_relationship
 {
+    // <SnippetICustomerVersion1>
     public interface ICustomer
     {
         IEnumerable<IOrder> PreviousOrders { get; }
@@ -13,4 +13,5 @@ namespace customer_relationship
         string Name { get; }
         IDictionary<DateTime, string> Reminders { get; }
     }
+    // <SnippetICustomerVersion1>
 }

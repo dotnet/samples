@@ -30,13 +30,14 @@ namespace customer_relationship
             allOrders.Add(order);
         }
 
-        // Version 3:
+        // <SnippetOverrideAndExtend>
         public decimal ComputeLoyaltyDiscount()
         {
-            if (PreviousOrders.Any() == false)
+           if (PreviousOrders.Any() == false)
                 return 0.50m;
             else
                 return ICustomer.DefaultLoyaltyDiscount(this);
         }
+        // </SnippetOverrideAndExtend>s
     }
 }

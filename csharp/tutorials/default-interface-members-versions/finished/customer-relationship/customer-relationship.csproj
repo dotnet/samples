@@ -4,6 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <RootNamespace>customer_relationship</RootNamespace>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
 
 </Project>
