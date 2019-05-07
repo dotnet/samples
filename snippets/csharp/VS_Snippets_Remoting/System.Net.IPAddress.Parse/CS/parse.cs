@@ -29,7 +29,7 @@ class ParseAddress
       IPaddress = args[0];
 
     // Get the list of the IPv6 addresses associated with the requested host.
-    parse(IPaddress);
+    Parse(IPaddress);
    
   }
 
