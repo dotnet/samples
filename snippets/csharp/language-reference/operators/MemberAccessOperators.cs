@@ -1,8 +1,8 @@
 using System;
 // <SnippetNestedNamespace>
 using System.Collections.Generic;
-using System.Linq;
 // </SnippetNestedNamespace>
+using System.Linq;
 
 namespace operators
 {
@@ -64,7 +64,7 @@ namespace operators
             var dict = new Dictionary<string, double>();
             dict["one"] = 1;
             dict["pi"] = Math.PI;
-            Console.WriteLine(dict["one"] + dict["pi"]);
+            Console.WriteLine(dict["one"] + dict["pi"]);  // output: 4.14159265358979
             // </SnippetIndexers>
         }
 
