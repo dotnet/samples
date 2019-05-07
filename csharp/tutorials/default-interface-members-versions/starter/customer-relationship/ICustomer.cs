@@ -13,5 +13,5 @@ namespace customer_relationship
         string Name { get; }
         IDictionary<DateTime, string> Reminders { get; }
     }
-    // <SnippetICustomerVersion1>
+    // </SnippetICustomerVersion1>
 }
