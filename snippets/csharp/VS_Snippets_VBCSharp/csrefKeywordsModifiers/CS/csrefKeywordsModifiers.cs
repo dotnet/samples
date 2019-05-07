@@ -11,28 +11,22 @@ namespace csrefKeywordsModifiers
     //<snippet1>    
     abstract class ShapesClass
     {
-        abstract public int Area();
+        public abstract int GetArea();
     }
     
     class Square : ShapesClass
     {
-        int side = 0;
+        int side;
 
-        public Square(int n)
-        {
-            side = n;
-        }
-        // Area method is required to avoid
-        // a compile-time error.
-        public override int Area()
-        {
-            return side * side;
-        }
+        public Square(int n) => side = n;
+
+        // GetArea method is required to avoid a compile-time error.
+        public override int GetArea() => side * side;
 
         static void Main() 
         {
             Square sq = new Square(12);
-            Console.WriteLine("Area of the square = {0}", sq.Area());
+            Console.WriteLine($"Area of the square = {sq.GetArea()}");
         }
 
         //<snippet2>        
