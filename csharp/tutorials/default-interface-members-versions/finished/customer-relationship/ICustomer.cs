@@ -15,7 +15,7 @@ namespace customer_relationship
         IDictionary<DateTime, string> Reminders { get; }
 
         /*
-        <SnippetLoyaltyDiscountVersionOne>
+        // <SnippetLoyaltyDiscountVersionOne>
         // Version 1:
         public decimal ComputeLoyaltyDiscount()
         {
@@ -26,7 +26,7 @@ namespace customer_relationship
             }
             return 0;
         }
-        </SnippetLoyaltyDiscountVersionOne>
+        // </SnippetLoyaltyDiscountVersionOne>
         */
 
         /*
