@@ -38,6 +38,6 @@ namespace customer_relationship
             else
                 return ICustomer.DefaultLoyaltyDiscount(this);
         }
-        // </SnippetOverrideAndExtend>s
+        // </SnippetOverrideAndExtend>
     }
 }
