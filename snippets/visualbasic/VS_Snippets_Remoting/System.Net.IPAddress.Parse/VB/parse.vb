@@ -27,7 +27,7 @@ Class ParseAddress
          IPaddress = args(1)
       End If 
       ' Get the list of the IPv6 addresses associated with the requested host.
-      parse(IPaddress)
+      Parse(IPaddress)
    End Sub 'Main
     
    
@@ -36,7 +36,7 @@ Class ParseAddress
    ' IPv6 address, the method displays the Parse output into quad-notation or
    ' colon-hexadecimal notation, respectively. Otherwise, it displays an 
    ' error message.
-   Private Shared Sub parse(ipAddr As String)
+   Private Shared Sub Parse(ipAddr As String)
       Try
          ' Create an instance of IPAddress for the specified address string (in 
          ' dotted-quad, or colon-hexadecimal notation).
