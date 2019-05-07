@@ -9,12 +9,12 @@ using System.Runtime.InteropServices;
 namespace csrefKeywordsModifiers
 {
     //<snippet1>    
-    abstract class ShapesClass
+    abstract class Shape
     {
         public abstract int GetArea();
     }
     
-    class Square : ShapesClass
+    class Square : Shape
     {
         int side;
 
