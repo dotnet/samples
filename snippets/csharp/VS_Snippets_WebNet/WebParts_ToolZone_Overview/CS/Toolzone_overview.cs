@@ -9,7 +9,7 @@ public partial class Toolzone_overview_cs : System.Web.UI.Page
 {
   protected void Button1_Click(Object sender, EventArgs e)
   {
-    if(TextBox1.Text == String.Empty | TextBox1.Text.Length < 0)
+    if(string.IsNullOrEmpty(TextBox1.Text))
       EditorZone1.InstructionText = String.Empty;
     else
       EditorZone1.InstructionText = Server.HtmlEncode(TextBox1.Text);

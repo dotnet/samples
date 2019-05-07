@@ -142,7 +142,7 @@ Namespace Samples.AspNet.VB.Controls
         Private Sub SetControlStyleFromConfiguration(ByVal _
           path As String)
 
-            If path Is Nothing OrElse path = String.Empty Then
+            If String.IsNullOrEmpty(path) Then
                 Return
             End If
 
