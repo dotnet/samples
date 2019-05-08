@@ -59,7 +59,7 @@ Public Class ListenerBasic
         output.Close()
         listener.Stop()
     End Sub
-    ' <Snippet2>
+    ' </Snippet2>
 
     ' <Snippet3>
     ' This example requires the System and System.Net namespaces.
