@@ -22,10 +22,24 @@ namespace whats_new
             ReadJson(File.ReadAllText("launch.json"));
             // </SnippetReadJsonCall>
 
+            // <SnippetJsonSerializeCall>
+            // Calling code
+            Console.WriteLine("Read with JsonSerializer");
+            new JSON().WriteJSON();
+            // </SnippetJsonSerializeCall>
+
+            // <SnippetJsonDeserializeCall>
+            // Calling code
+            Console.WriteLine("Read with JsonSerializer");
+            var person = JsonPerson.Parse(new JSON().WriteJSON());
+            Console.WriteLine($"Name: {person.FirstName} {person.LastName}\nAge: {person.Age}");
+            // </SnippetJsonSerializeCall>
+
+
             //await TLS.ConnectCloudFlare();
 
             //Cipher.Run();
-            
+
         }
 
         // <SnippetPrintJson>
