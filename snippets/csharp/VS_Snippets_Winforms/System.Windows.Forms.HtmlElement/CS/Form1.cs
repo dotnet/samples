@@ -307,19 +307,19 @@ namespace HtmlElementProjectCSharp
 			{
 				HtmlDocument doc = webBrowser1.Document;
 
-                // Do not insert the warning again if it already exists. 
-                HtmlElementCollection returnedElems = doc.All.GetElementsByName("ADatumWarningDiv");
-                if ((returnedElems != null) && (returnedElems.Count > 0)) 
+				// Do not insert the warning again if it already exists. 
+				HtmlElementCollection returnedElems = doc.All.GetElementsByName("ADatumWarningDiv");
+				if ((returnedElems != null) && (returnedElems.Count > 0)) 
 				{
-                    return;
+					return;
 				}
 
-                HtmlElement divElem = doc.CreateElement("DIV");
-                divElem.Name = "ADatumWarningDiv";
-                divElem.Style = "background-color:black;color:white;font-weight:bold;width:100%;";
-                divElem.InnerText = message;
-
-                divElem = doc.Body.InsertAdjacentElement(HtmlElementInsertionOrientation.AfterBegin, divElem);
+				HtmlElement divElem = doc.CreateElement("DIV");
+				divElem.Name = "ADatumWarningDiv";
+				divElem.Style = "background-color:black;color:white;font-weight:bold;width:100%;";
+				divElem.InnerText = message;
+				
+				divElem = doc.Body.InsertAdjacentElement(HtmlElementInsertionOrientation.AfterBegin, divElem);
 			}
 		}
 		//</SNIPPET9>
