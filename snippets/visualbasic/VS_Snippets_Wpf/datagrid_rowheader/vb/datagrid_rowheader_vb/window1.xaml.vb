@@ -31,7 +31,7 @@ Public Class ConvertItemToIndex
             'Get the CollectionView from the DataGrid that is using the converter 
             Dim dg As DataGrid = DirectCast(Application.Current.MainWindow.FindName("DG1"), DataGrid)
             Dim cv As CollectionView = DirectCast(dg.Items, CollectionView)
-            'Get the index of the DataRowView from the CollectionView 
+            'Get the index of the item from the CollectionView 
             Dim rowindex As Integer = cv.IndexOf(value) + 1
 
             Return rowindex.ToString()
