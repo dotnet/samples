@@ -307,14 +307,14 @@ namespace HtmlWindowProjectCSharp
 		{
 			if (webBrowser1.Document != null)
 			{
-                webBrowser1.Document.Window.Error += new HtmlElementErrorEventHandler(scriptWindow_Error);
+             webBrowser1.Document.Window.Error += new HtmlElementErrorEventHandler(scriptWindow_Error);
 			}
 		}
 		
 		private void  scriptWindow_Error(object sender, HtmlElementErrorEventArgs e)
 		{
- 			MessageBox.Show("Suppressed error!");
-			e.Handled = true;
+         MessageBox.Show("Suppressed error!");
+         e.Handled = true;
 		}
 		//</SNIPPET16>
 
