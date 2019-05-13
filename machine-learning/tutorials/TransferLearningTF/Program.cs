@@ -136,10 +136,10 @@ namespace TransferLearningTF
 
             // Read the image_list.tsv file and add the filepath to the image file name 
             // before loading into ImageData 
-            // <SnippetReadFromTSV> 
+            // <SnippetCallReadFromTSV> 
             var imageData = ReadFromTsv(dataLocation, imagesFolder);
             var imageDataView = mlContext.Data.LoadFromEnumerable<ImageData>(imageData);
-            // </SnippetReadFromTSV>  
+            // </SnippetCallReadFromTSV>  
 
             // <SnippetPredict>  
             var predictions = model.Transform(imageDataView);
