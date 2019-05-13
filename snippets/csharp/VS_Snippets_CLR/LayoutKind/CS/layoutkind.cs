@@ -34,10 +34,10 @@ namespace InteropSample
       [FieldOffset(12)] public int bottom;
    }   
 
-   class LibWrapper
+   internal static class NativeMethods
    {
       [DllImport("user32.dll", CallingConvention=CallingConvention.StdCall)]
-      public static extern Bool PtInRect(ref Rect r, Point p);
+      internal static extern Bool PtInRect(ref Rect r, Point p);
    };
 
    class TestApplication
@@ -55,7 +55,7 @@ namespace InteropSample
             Point myPoint = new Point();
             myPoint.x = 50;
             myPoint.y = 50;
-            bPointInRect = LibWrapper.PtInRect(ref myRect, myPoint);
+            bPointInRect = NativeMethods.PtInRect(ref myRect, myPoint);
             if(bPointInRect == Bool.True)
                Console.WriteLine("Point lies within the Rect");
             else

@@ -27,19 +27,19 @@ Namespace InteropSample
    End Class 'MySystemTime
 
 
-   Class LibWrapper
+   Friend Class NativeMethods
 
       <DllImport("kernel32.dll")> _
-      Public Shared Sub GetSystemTime(<MarshalAs(UnmanagedType.LPStruct)> ByVal st As MySystemTime)
+      Friend Shared Sub GetSystemTime(<MarshalAs(UnmanagedType.LPStruct)> ByVal st As MySystemTime)
       End Sub
-   End Class 'LibWrapper
+   End Class 'NativeMethods
 
    Class TestApplication
 
       Public Shared Sub Main()
          Try
             Dim sysTime As New MySystemTime()
-            LibWrapper.GetSystemTime(sysTime)
+            NativeMethods.GetSystemTime(sysTime)
             Console.WriteLine("The System time is {0}/{1}/{2} {3}:{4}:{5}", sysTime.wDay, sysTime.wMonth, sysTime.wYear, sysTime.wHour, sysTime.wMinute, sysTime.wSecond)
          Catch e As TypeLoadException
             Console.WriteLine(("TypeLoadException : " + e.Message.ToString()))

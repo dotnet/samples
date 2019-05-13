@@ -24,12 +24,12 @@ Imports System.Runtime.InteropServices
    End Structure 
    
    
-   Class LibWrapper
+   Friend Class NativeMethods
       
       <DllImport("user32.dll", CallingConvention := CallingConvention.StdCall)>  _
-      Public Shared Function PtInRect(ByRef r As Rect, p As Point) As Bool
+      Friend Shared Function PtInRect(ByRef r As Rect, p As Point) As Bool
       End Function	
-   End Class 'LibWrapper
+   End Class 'NativeMethods
    
    
    Class TestApplication
@@ -45,7 +45,7 @@ Imports System.Runtime.InteropServices
             Dim myPoint As New Point()
             myPoint.x = 50
             myPoint.y = 50
-            bPointInRect = LibWrapper.PtInRect(myRect, myPoint)
+            bPointInRect = NativeMethods.PtInRect(myRect, myPoint)
             If bPointInRect = Bool.True Then
                Console.WriteLine("Point lies within the Rect")
             Else

@@ -30,10 +30,10 @@ namespace InteropSample
       [FieldOffset(14)]public ushort wMilliseconds; 
    }
 
-   class LibWrapper
+   internal static class NativeMethods
    {
       [DllImport("kernel32.dll")]
-      public static extern void GetSystemTime([MarshalAs(UnmanagedType.LPStruct)]MySystemTime st);
+      internal static extern void GetSystemTime([MarshalAs(UnmanagedType.LPStruct)]MySystemTime st);
    };
 
    class TestApplication
@@ -43,7 +43,7 @@ namespace InteropSample
          try
          {
             MySystemTime sysTime = new MySystemTime();
-            LibWrapper.GetSystemTime(sysTime);
+            NativeMethods.GetSystemTime(sysTime);
             Console.WriteLine("The System time is {0}/{1}/{2} {3}:{4}:{5}", sysTime.wDay,
                sysTime.wMonth, sysTime.wYear, sysTime.wHour, sysTime.wMinute, sysTime.wSecond);            
          }         
