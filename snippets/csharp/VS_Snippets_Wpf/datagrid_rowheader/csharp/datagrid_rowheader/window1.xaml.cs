@@ -56,7 +56,7 @@ namespace DataGrid_RowHeader
                 //Get the CollectionView from the DataGrid that is using the converter
                 DataGrid dg = (DataGrid)Application.Current.MainWindow.FindName("DG1");
                 CollectionView cv = (CollectionView)dg.Items;
-                //Get the index of the DataRowView from the CollectionView
+                //Get the index of the item from the CollectionView
                 int rowindex = cv.IndexOf(value)+1;
 
                 return rowindex.ToString();
