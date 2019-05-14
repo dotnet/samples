@@ -38,7 +38,7 @@ public:
    int bottom;
 };
 
-ref class LibWrapper
+ref class NativeMethods
 {
 public:
 
@@ -59,7 +59,7 @@ int main()
       Point myPoint = Point(  );
       myPoint.x = 50;
       myPoint.y = 50;
-      bPointInRect = LibWrapper::PtInRect(  &myRect, myPoint );
+      bPointInRect = NativeMethods::PtInRect(  &myRect, myPoint );
       if ( bPointInRect == Bool::True )
             Console::WriteLine( "Point lies within the Rect" );
       else
