@@ -2,7 +2,6 @@ using System;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-using Microsoft.CodeAnalysis.MSBuild;
 
 // <SnippetStaticUsings>
 using static Microsoft.CodeAnalysis.CSharp.SyntaxFactory;
@@ -34,8 +33,6 @@ namespace HelloWorld
 
         static void Main(string[] args)
         {
-            var workspace = MSBuildWorkspace.Create();
-
             // <SnippetCreateIdentifierName>
             NameSyntax name = IdentifierName("System");
             WriteLine($"\tCreated the identifier {name.ToString()}");
