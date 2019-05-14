@@ -17,10 +17,12 @@ class Example
 
       // Use this line to throw an exception that is not handled.
       // Task task1 = Task.Factory.StartNew(() => { throw new IndexOutOfRangeException(); } );
-      try {
+      try
+      {
           await task1;
       }
-      catch (AggregateException ae) {
+      catch (AggregateException ae)
+      {
           ae.Handle((x) =>
           {
               if (x is UnauthorizedAccessException) // This we know how to handle.
