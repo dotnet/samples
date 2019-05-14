@@ -93,11 +93,10 @@ Namespace Examples.NegotiateStreamExample
 
 		End Sub
 		'</snippet4>
-        
 	End Class
-	'<snippet6>
 
-	' The following class displays the properties of an authenticatedStream.
+	'<snippet6>
+	' The following class displays the properties of an AuthenticatedStream.
 	Public Class AuthenticatedStreamReporter
 		Public Shared Sub DisplayProperties(stream As AuthenticatedStream)
 			Console.WriteLine("IsAuthenticated: {0}", stream.IsAuthenticated)
@@ -108,5 +107,5 @@ Namespace Examples.NegotiateStreamExample
 		End Sub
 	End Class
 	'</snippet6>
-
 End Namespace
+' </snippet0>
