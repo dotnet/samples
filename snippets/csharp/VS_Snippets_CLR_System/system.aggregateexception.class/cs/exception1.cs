@@ -21,8 +21,13 @@ class Example
       {
           await task1;
       }
+      catch (UnauthorizedAccessException ae)
+      { 
+          Console.WriteLine("Caught unauthorized access exception-await behavior");
+      }
       catch (AggregateException ae)
       {
+          Console.WriteLine("Caught aggregate exception-Task.Wait behavior");
           ae.Handle((x) =>
           {
               if (x is UnauthorizedAccessException) // This we know how to handle.
