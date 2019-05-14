@@ -305,17 +305,17 @@ namespace HtmlWindowProjectCSharp
 		//<SNIPPET16>
 		private void SuppressScriptErrors()
 		{
-			if (webBrowser1.Document != null)
-			{
+            if (webBrowser1.Document != null)
+            {
                 webBrowser1.Document.Window.Error += new HtmlElementErrorEventHandler(scriptWindow_Error);
-			}
-		}
+            }
+        }
 		
-		private void  scriptWindow_Error(object sender, HtmlElementErrorEventArgs e)
-		{
- 			MessageBox.Show("Suppressed error!");
-			e.Handled = true;
-		}
+        private void  scriptWindow_Error(object sender, HtmlElementErrorEventArgs e)
+        {
+            MessageBox.Show("Suppressed error!");
+            e.Handled = true;
+        }
 		//</SNIPPET16>
 
 		//<SNIPPET17>
