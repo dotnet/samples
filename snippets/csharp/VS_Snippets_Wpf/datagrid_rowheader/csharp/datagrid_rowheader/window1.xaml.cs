@@ -53,13 +53,11 @@ namespace DataGrid_RowHeader
         {
             try
             {
-                //Get the DataRowView that is being passed to the Converter
-                System.Data.DataRowView drv = (System.Data.DataRowView)value;
                 //Get the CollectionView from the DataGrid that is using the converter
                 DataGrid dg = (DataGrid)Application.Current.MainWindow.FindName("DG1");
                 CollectionView cv = (CollectionView)dg.Items;
-                //Get the index of the DataRowView from the CollectionView
-                int rowindex = cv.IndexOf(drv)+1;
+                //Get the index of the item from the CollectionView
+                int rowindex = cv.IndexOf(value)+1;
 
                 return rowindex.ToString();
             }
