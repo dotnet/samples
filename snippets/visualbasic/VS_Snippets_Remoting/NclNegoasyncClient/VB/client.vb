@@ -1,8 +1,8 @@
+'<snippet0>
 Imports System.Text
 Imports System.Net.Sockets
 Imports System.Net.Security
 Imports System.Net
-'<snippet0>
 
 Namespace Examples.NegotiateStreamExample
 
@@ -56,7 +56,7 @@ Namespace Examples.NegotiateStreamExample
 			' Encode the test data into a byte array.
 			Dim message = Encoding.UTF8.GetBytes("Hello from the client.")
 			ar = authStream.BeginWrite(message, 0, message.Length, 
-               New AsyncCallback(AddressOf EndWriteCallback), authStream)
+                New AsyncCallback(AddressOf EndWriteCallback), authStream)
 			'</snippet3>
 			ar.AsyncWaitHandle.WaitOne()
 			Console.WriteLine("Sent {0} bytes.", message.Length)
