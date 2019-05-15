@@ -31,7 +31,7 @@ namespace OverviewSnippets
                 {
                     
                     Data data = null;
-                    // Blocks if number.Count == 0
+                    // Blocks if dataItems.Count == 0.
                     // IOE means that Take() was called on a completed collection.
                     // Some other thread can call CompleteAdding after we pass the
                     // IsCompleted check but before we call Take. 
