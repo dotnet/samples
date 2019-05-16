@@ -1075,10 +1075,10 @@ End Class
 Class Classe02587a6e85494d7f9392beae2c7f3903
     '02587a6e-8549-4d7f-9392-beae2c7f3903
     ' My.Computer.FileSystem.CopyDirectory Method
-    Public Sub Method91()
-        ' <snippet91>
+    Public Sub Method94()
+        ' <snippet94>
         My.Computer.FileSystem.CopyDirectory("C:\TestDirectory1", "C:\TestDirectory2")
-        ' </snippet91>
+        ' </snippet94>
     End Sub
 End Class
 
