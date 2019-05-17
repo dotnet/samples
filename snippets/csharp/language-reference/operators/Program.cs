@@ -30,12 +30,12 @@ namespace operators
             MemberAccessOperators.Examples();
             Console.WriteLine();
 
-            Console.WriteLine("============== + operator examples =============");
-            AdditionExamples.Examples();
+            Console.WriteLine("======= Pointer related operators examples =====");
+            PointerOperators.Examples();
             Console.WriteLine();
 
-            Console.WriteLine("============== & operator examples =============");
-            AndOperatorExamples.Examples();
+            Console.WriteLine("============== + operator examples =============");
+            AdditionExamples.Examples();
             Console.WriteLine();
 
             Console.WriteLine("============== = operator examples =============");
