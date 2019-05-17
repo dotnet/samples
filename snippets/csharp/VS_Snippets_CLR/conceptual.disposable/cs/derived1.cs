@@ -48,7 +48,7 @@ public class DisposableStreamResource2 : DisposableStreamResource
       bool result = WriteFile(safeHandle, output, output.Length, out bytesWritten, IntPtr.Zero);                                     
    }
 
-   protected new virtual void Dispose(bool disposing)
+   protected override void Dispose(bool disposing)
    {
       if (disposed) return;
       
