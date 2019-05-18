@@ -25,6 +25,8 @@ The project will only build and run on the Windows platform.
 
 1) Navigate to `COMClient/` and run `dotnet.exe run`.
 
+Program should output an estimated value of &#960;.
+
 **Note** Remember to unregister the COM server when the demo is complete.
 
 ### RegFree COM ###
@@ -33,6 +35,10 @@ The project will only build and run on the Windows platform.
 
 1) Navigate to the root directory and run `dotnet.exe build /p:RegFree=True`.
 
+    - If the Registered COM demo was previously run, the project should be cleaned first - `dotnet.exe clean` 
+
 1) Run the generated binary directly e.g. `COMClient\bin\Debug\netcoreapp3.0\COMClient.exe`.
+
+Program should output an estimated value of &#960;.
 
 **Note** The RegFree COM scenario requires a customized [application manifest](https://docs.microsoft.com/windows/desktop/sbscs/manifests) in the executing binary. This means that attempting to execute through `dotnet.exe` will not work and instead trigger a rebuild of the project.
