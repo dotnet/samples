@@ -102,9 +102,6 @@ namespace whats_new
                 var name = config.GetProperty("name").GetString();
                 Console.WriteLine($"Config: {name}");
             }
-
-            JsonPerson[] a;
-            a = { { new JsonPerson() } };
         }
         // </SnippetReadJson>
     }
