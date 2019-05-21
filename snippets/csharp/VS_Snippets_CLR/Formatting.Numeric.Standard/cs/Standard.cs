@@ -51,7 +51,7 @@ class formatting
       // current culture is English (United States):
       //       $12,345.68
       //       $12,345.679
-      //       kr 12.345,679
+      //       12.345,679 kr
       // </Snippet1> 
    }
    
