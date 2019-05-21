@@ -77,7 +77,7 @@ public class Form1:
 		//Add the event-handler delegate to handle the DrawItem event.
         MenuItem2.DrawItem += new DrawItemEventHandler(DrawCustomMenuItem);
 		
-      // Add the items to the menu.
+        // Add the items to the menu.
 		MainMenu1 = new MainMenu(new MenuItem[]{MenuItem1, MenuItem2});																													  
 
 		// Add the menu to the form.
