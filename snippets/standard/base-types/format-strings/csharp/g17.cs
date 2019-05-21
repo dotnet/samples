@@ -17,7 +17,7 @@ public class Example
       // The example displays the following output:
       //     0.84551240822557006 = 0.84551240822557: False
       //     0.84551240822557006 = 0.84551240822557006: True
-      // <SnippetGeneralFormatSpecifier>
+      // </SnippetGeneralFormatSpecifier>
    }
 }
 // The example displays the following output:
