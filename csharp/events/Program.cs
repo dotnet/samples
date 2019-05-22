@@ -12,7 +12,7 @@ namespace EventSampleCode
     {
         static void Main(string[] args)
         {
-            var lister = new FileSearcher();
+            var fileLister = new FileSearcher();
             int filesFound = 0;
 
             // <SnippetDeclareEventHandler>
@@ -22,21 +22,21 @@ namespace EventSampleCode
                 filesFound++;
             };
 
-            lister.FileFound += onFileFound;
+            fileLister.FileFound += onFileFound;
             // </SnippetDeclareEventHandler>
 
             // <SnippetSearch>
-            lister.DirectoryChanged += (sender, eventArgs) =>
+            fileLister.DirectoryChanged += (sender, eventArgs) =>
             {
                 Console.Write($"Entering '{eventArgs.CurrentSearchDirectory}'.");
                 Console.WriteLine($" {eventArgs.CompletedDirs} of {eventArgs.TotalDirs} completed...");
             };
             // </SnippetSearch>
 
-            lister.Search(".", "*.dll", true);
+            fileLister.Search(".", "*.dll", true);
 
             // <SnippetRemoveHandler>
-            lister.FileFound -= onFileFound;
+            fileLister.FileFound -= onFileFound;
             // </SnippetRemoveHandler>
         }
     }

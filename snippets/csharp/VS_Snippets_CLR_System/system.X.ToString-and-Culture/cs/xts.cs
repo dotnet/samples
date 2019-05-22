@@ -176,6 +176,7 @@ public class NumericFormats
 {
    public static void Main()
    {
+      // <SnippetFinalExample>
       // Display string representations of numbers for en-us culture
       CultureInfo ci = new CultureInfo("en-us");
       
@@ -216,6 +217,7 @@ public class NumericFormats
       Console.WriteLine("X: 0x{0}", 
               integral.ToString("X", ci));           // Displays "X: 0x20CB"
       Console.WriteLine();
+      // </SnippetFinalExample>
    }
 }
 // </Snippet1>
