@@ -51,7 +51,7 @@ namespace GitHubActivityReport
             // - public_repo
             // Replace the 3rd parameter to the following code with your GitHub access token.
             var key = GetEnvVariable("GitHubKey",
-            "You must store you GitHub key in the 'GitHubKey' environment variable",
+            "You must store your GitHub key in the 'GitHubKey' environment variable",
             "");
 
             var client = new GitHubClient(new Octokit.ProductHeaderValue("IssueQueryDemo"))
