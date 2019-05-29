@@ -92,7 +92,7 @@ namespace ProductSalesAnomalyDetection
 
             //STEP 3:Train the model by fitting the dataview
             Console.WriteLine("=============== Training the model Using Change Point Detection Algorithm===============");
-            // </SnippetTrainModel2>
+            // <SnippetTrainModel2>
             var trainedModel = iidChangePointEstimator.Fit(productSales);
             // </SnippetTrainModel2>
             Console.WriteLine("=============== End of training process ===============");
