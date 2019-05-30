@@ -23,7 +23,7 @@ public class Example
          case object _:
             Console.WriteLine("Some object type without format information");
             break;
-         default:
+         case null:
             Console.Write("A null object reference: ");
             Console.WriteLine("Its use could result in a NullReferenceException");
             break;
