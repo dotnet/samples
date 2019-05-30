@@ -15,15 +15,20 @@ public class Example
 
    private static void ProvidesFormatInfo(object obj)         
    {
-      if (obj is IFormatProvider fmt)
-         Console.WriteLine($"{fmt} object");
-      else if (obj is null) {
-         Console.Write("A null object reference: ");
-         Console.WriteLine("Its use could result in a NullReferenceException");
-      }
-      else
-         Console.WriteLine($"Some object type without format information");
-   }
+        switch (obj)
+        {
+            case IFormatProvider fmt:
+                Console.WriteLine($"{fmt} object");
+                break;
+            case object _:
+                Console.WriteLine("Some object type without format information");
+                break;
+            default:
+                Console.Write("A null object reference: ");
+                Console.WriteLine("Its use could result in a NullReferenceException");
+                break;
+        }
+    }
 }
 // The example displays the following output:
 //    en-US object
