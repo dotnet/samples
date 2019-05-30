@@ -17,7 +17,6 @@ namespace PartitionerTests
         static void Main(string[] args)
         {
             Consumer.Main2();
-            TestOrderableListPartitioner();
           //  TestDefaultRangePartitioner();
             //TestLoadBalancingCreateMethods();
             // ParallelLoopsWithPartitioner();
@@ -32,26 +31,6 @@ namespace PartitionerTests
             Console.ReadKey();
         }
 
-
-        static void TestOrderableListPartitioner()
-        {
-            var nums = Enumerable.Range(0, 10000).ToArray();
-            OrderableListPartitioner<int> part = new OrderableListPartitioner<int>(nums);
-
-            // Use with Parallel.ForEach
-            Parallel.ForEach(part, (i) => Console.WriteLine(i));
-
-
-            // Use with PLINQ
-            var query = from num in part.AsParallel()
-                        where num % 2 == 0
-                        select num;
-
-            foreach(var v in query)
-                Console.WriteLine(v);
-
-        }
-      
 
         static void TestDefaultRangePartitioner()
         {
@@ -148,117 +127,12 @@ namespace PartitionerTests
         }
     }
 
-    //<snippet04>
-    //
-    // An orderable dynamic partitioner for lists
-    //
-    class OrderableListPartitioner<TSource> : OrderablePartitioner<TSource>
-    {
-        private readonly IList<TSource> m_input;
-      
-        public OrderableListPartitioner(IList<TSource> input)
-            : base(true, false, true)
-        {
-            m_input = input;
-        }
-
-        // Must override to return true.
-        public override bool SupportsDynamicPartitions
-        {
-            get
-            {
-                return true;
-            }
-        }
-
-        public override IList<IEnumerator<KeyValuePair<long, TSource>>>
-            GetOrderablePartitions(int partitionCount)
-        {
-            var dynamicPartitions = GetOrderableDynamicPartitions();
-            var partitions =
-                new IEnumerator<KeyValuePair<long, TSource>>[partitionCount];
-
-            for (int i = 0; i < partitionCount; i++)
-            {
-                partitions[i] = dynamicPartitions.GetEnumerator();
-            }
-            return partitions;
-        }
-
-        public override IEnumerable<KeyValuePair<long, TSource>>
-            GetOrderableDynamicPartitions()
-        {
-            return new ListDynamicPartitions(m_input);
-        }
-
-        private class ListDynamicPartitions
-            : IEnumerable<KeyValuePair<long, TSource>>
-        {
-            private IList<TSource> m_input;
-            private int m_pos = 0;
-
-            internal ListDynamicPartitions(IList<TSource> input)
-            {
-                m_input = input;
-            }
-
-            public IEnumerator<KeyValuePair<long, TSource>> GetEnumerator()
-            {
-                while (true)
-                {
-                    // Each task gets the next item in the list. The index is 
-                    // incremented in a thread-safe manner to avoid races.
-                    int elemIndex = Interlocked.Increment(ref m_pos) - 1;
-
-                    if (elemIndex >= m_input.Count)
-                    {
-                        yield break;
-                    }
-
-                    yield return new KeyValuePair<long, TSource>(
-                        elemIndex, m_input[elemIndex]);
-                }
-            }
-
-            IEnumerator IEnumerable.GetEnumerator()
-            {
-                return
-                   ((IEnumerable<KeyValuePair<long, TSource>>)this)
-                   .GetEnumerator();
-            }
-        }
-    }
-
-    class ConsumerClass
-    {
-        static void Main()
-        {
-            var nums = Enumerable.Range(0, 10000).ToArray();
-            OrderableListPartitioner<int> partitioner = new OrderableListPartitioner<int>(nums);
-
-            // Use with Parallel.ForEach
-            Parallel.ForEach(partitioner, (i) => Console.WriteLine(i));
-
-
-            // Use with PLINQ
-            var query = from num in partitioner.AsParallel()
-                        where num % 2 == 0
-                        select num;
-
-            foreach (var v in query)
-                Console.WriteLine(v);
-        }
-    }
-    //</snippet04>
-
-   
-
     class PartTest2
     {
         static CancellationTokenSource cts = new CancellationTokenSource();
         static StringBuilder sb = new StringBuilder();
 
-        static void Main(string[] args)
+        static void Main2(string[] args)
         {
             //Math.
             int[] sourceArray = Enumerable.Range(1, 12680).ToArray();
@@ -513,7 +387,7 @@ namespace PartitionerTests
 
     class BasicMathTest
     {
-        static void Main()
+        static void Main2()
         {
             int[] nums = Enumerable.Range(1, 10000).ToArray();
             //   CalculatePartitions(3, 4, 4, nums.Length);
