@@ -38,6 +38,7 @@ namespace TextClassificationTF
             string modelLocation = DownloadTensorFlowSentimentModel();
             // <SnippetDownloadModel>
 
+            // <SnippetCreateTrainData>
             var trainData = new[] { new IMDBSentiment() {
                 Sentiment_Text = "this film was just brilliant casting location scenery story direction " +
                                     "everyone's really suited the part they played and you could just imagine being there robert " +
@@ -53,10 +54,13 @@ namespace TextClassificationTF
                                     "for what they have done don't you think the whole story was so lovely because it was true " +
                                     "and was someone's life after all that was shared with us all"
             } };
+            // </SnippetCreateTrainData>
 
+            // <SnippetLoadTrainData>
             var dataView = mlContext.Data.LoadFromEnumerable(trainData);
-
+            // </SnippetLoadTrainData>
             // This is the dictionary to convert words into the integer indexes.
+            // <SnippetCreateLookupMap>
             var lookupMap = mlContext.Data.LoadFromTextFile(Path.Combine(modelLocation, "imdb_word_index.csv"),
                 columns: new[]
                    {
@@ -65,6 +69,7 @@ namespace TextClassificationTF
                    },
                 separatorChar: ','
                );
+            // </SnippetCreateLookupMap>
 
             // Load the TensorFlow model once.
             //      - Use it for quering the schema for input and output in the model
