@@ -91,7 +91,7 @@ Partial Public Class Window1
 
         Dim gotCurrentTabletDevice As Boolean = False
 
-        ' Barf out list of tablet device names
+        ' Display a list of tablet device names
         i = 0
 
         While i < numTabletDevices

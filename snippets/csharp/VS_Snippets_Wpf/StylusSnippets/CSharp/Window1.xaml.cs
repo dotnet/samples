@@ -39,7 +39,7 @@ namespace StylusSnippets_CS
             // Notify base class of event
             base.OnStylusDown(e);
 
-            // Barf out a message that the stylus is down
+            // Display a message that the stylus is down
             textbox0.Text = "Stylus Down";
         }
 
@@ -82,7 +82,7 @@ namespace StylusSnippets_CS
         }
 
         // When user clicks button,
-        // barf out capabilities into panel
+        //  Display capabilities to panel
         private void Button1Click(object sender, RoutedEventArgs e)
         {
             // Clear the textbox if they clicked once before

@@ -37,8 +37,7 @@ namespace HwCaps_CS
         // To use Loaded event put Loaded="WindowLoaded" attribute in root element of .xaml file.
         // private void WindowLoaded(object sender, EventArgs e) {}
 
-        // When user clicks button,
-        // barf out capabilities into panel
+        // When user clicks button, display capabilities in panel
         private void Button1Click(object sender, RoutedEventArgs e)
         {
             // Clear the textbox if they clicked once before
@@ -100,7 +99,7 @@ namespace HwCaps_CS
 
             bool gotCurrentTabletDevice = false;
 
-            // Barf out list of tablet device names
+            // Display a list of tablet device names
             for (int i = 0; i < numTabletDevices; i++)
             {
                 TabletDevice theTD = myTabletDeviceCollection[i];

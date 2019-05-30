@@ -31,7 +31,7 @@ Partial Public Class Window1
         ' Notify base class of event
         MyBase.OnStylusDown(e)
 
-        ' Barf out a message that the stylus is down
+        ' Display a message that the stylus is down
         textbox0.Text = "Stylus Down"
     End Sub
     Private Sub button1_StylusUp(ByVal sender As Object, ByVal e As StylusEventArgs)
@@ -49,8 +49,8 @@ Partial Public Class Window1
 
         textbox0.Text = ""
     End Sub
-    ' When user clicks button,
-    ' barf out capabilities into panel
+
+    ' When user clicks button, display capabilities in panel
 
     Private Sub Button1Click(ByVal sender As Object, ByVal e As RoutedEventArgs) ' Handles button1.Click
         ' Clear the textbox if they clicked once before
