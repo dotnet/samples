@@ -48,7 +48,7 @@ namespace HtmlWindowProjectCSharp
 					Hashtable docLinksHash = new Hashtable();
 					linksTable.Add(webBrowser1.Document.Url.ToString(), docLinksHash);
 
-                    foreach (HtmlElement hrefElement in webBrowser1.Document.Links)
+					foreach (HtmlElement hrefElement in webBrowser1.Document.Links)
 					{
 						docLinksHash.Add(hrefElement.GetAttribute("HREF"), "Url");
 					}
