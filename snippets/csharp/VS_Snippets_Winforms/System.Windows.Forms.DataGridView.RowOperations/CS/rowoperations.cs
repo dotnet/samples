@@ -279,7 +279,7 @@ public class RowOperations : System.Windows.Forms.Form
     {
         Int32 cellValueAsInt;
         if (cell.Value.ToString().Length == 0)
-		{
+        {
             cell.ErrorText = "Please enter a track";
             songsDataGridView.Rows[cell.RowIndex].ErrorText = 
                 "Please enter a track";
@@ -305,7 +305,7 @@ public class RowOperations : System.Windows.Forms.Form
     private Boolean IsDateGood(DataGridViewCell cell) 
     {
         if (cell.Value == null)
-		{
+        {
             cell.ErrorText = "Missing date";
             songsDataGridView.Rows[cell.RowIndex].ErrorText = 
                 "Missing date";
