@@ -1,8 +1,8 @@
 open System
 open System.IO
 open Microsoft.Azure // Namespace for CloudConfigurationManager
-open Microsoft.WindowsAzure.Storage // Namespace for CloudStorageAccount
-open Microsoft.WindowsAzure.Storage.File // Namespace for File storage types
+open Microsoft.Azure.Storage // Namespace for CloudStorageAccount
+open Microsoft.Azure.Storage.File // Namespace for File storage types
 
 //
 // Get your connection string.
@@ -123,8 +123,8 @@ destBlob.StartCopy(sasUri2)
 // Troubleshooting File storage using metrics.
 //
 
-open Microsoft.WindowsAzure.Storage.File.Protocol
-open Microsoft.WindowsAzure.Storage.Shared.Protocol
+open Microsoft.Azure.Storage.File.Protocol
+open Microsoft.Azure.Storage.Shared.Protocol
 
 let props =
     FileServiceProperties(
