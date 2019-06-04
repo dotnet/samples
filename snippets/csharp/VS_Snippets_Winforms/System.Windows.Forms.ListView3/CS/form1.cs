@@ -69,7 +69,7 @@ public class Form1:
 	}
 
 	//<snippet1>
-   	private void ListView1_BeforeLabelEdit(object sender, 
+	private void ListView1_BeforeLabelEdit(object sender, 
 		System.Windows.Forms.LabelEditEventArgs e)
 	{
 		// Allow all but the first two items of the list to 

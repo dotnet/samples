@@ -130,7 +130,7 @@ module BasicFunctions =
     let result3 = sampleFunction3 (6.5 + 4.5)
 
     // This line uses '%f' to print the result as a float.  As with '%d' above, this is type-safe.
-    printfn "The result of applying the 2nd sample function to (6.5 + 4.5) is %f" result3
+    printfn "The result of applying the 3rd sample function to (6.5 + 4.5) is %f" result3
 
 
 /// Booleans are fundamental data types in F#.  Here are some examples of Booleans and conditional logic.
