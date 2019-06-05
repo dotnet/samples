@@ -1,10 +1,10 @@
-// <Snippet7>
 using System;
 
 public class Example
 {
    public static void Main()
    {
+      // <Snippet7>
       DateTime birthdate = new DateTime(1993, 7, 28);
       DateTime[] dates = { new DateTime(1993, 8, 16), 
                            new DateTime(1994, 7, 28), 
@@ -28,12 +28,12 @@ public class Example
             Console.WriteLine(output);
          }      
       }
+      // The example displays the following output:
+      //       You are now 0 years old.
+      //       You are now 1 years old.
+      //       You are now 7 years old.
+      //       You are now 9 years old.
+      //       You are now 13 years old.
+      // </Snippet7>
    }
 }
-// The example displays the following output:
-//       You are now 0 years old.
-//       You are now 1 years old.
-//       You are now 7 years old.
-//       You are now 9 years old.
-//       You are now 13 years old.
-// </Snippet7>
