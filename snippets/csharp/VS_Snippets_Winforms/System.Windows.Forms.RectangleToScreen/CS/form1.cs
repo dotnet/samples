@@ -145,7 +145,7 @@ public class Form1: Form
         // Find out which controls intersect the rectangle and 
         // change their color. The method uses the RectangleToScreen  
         // method to convert the Control's client coordinates 
-		// to screen coordinates.
+        // to screen coordinates.
         Rectangle controlRectangle;
         for(int i = 0; i < Controls.Count; i++)
         {

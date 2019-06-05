@@ -41,22 +41,20 @@ namespace operators
         private static void AddDelegates()
         {
             // <SnippetAddDelegates>
-            Action<int> printDouble = (int s) => Console.WriteLine(2 * s);
-            Action<int> printTriple = (int s) => Console.WriteLine(3 * s);
-            Action<int> combined = printDouble + printTriple;
-            combined(5);
-            // Output:
-            // 10
-            // 15
+            Action a = () => Console.Write("a");
+            Action b = () => Console.Write("b");
+            Action ab = a + b;
+            ab();  // output: ab
             // </SnippetAddDelegates>
+            Console.WriteLine();
         }
 
         private static void AddAndAssign()
         {
             // <SnippetAddAndAssign>
-            int a = 5;
-            a += 9;
-            Console.WriteLine(a);
+            int i = 5;
+            i += 9;
+            Console.WriteLine(i);
             // Output: 14
 
             string story = "Start. ";
@@ -64,13 +62,14 @@ namespace operators
             Console.WriteLine(story);
             // Output: Start. End.
 
-            Action<int> printer = (int s) => Console.WriteLine(s);
-            printer += (int s) => Console.WriteLine(2 * s);
-            printer(3);
-            // Output:
-            // 3
-            // 6
+            Action printer = () => Console.Write("a");
+            printer();  // output: a
+            
+            Console.WriteLine();
+            printer += () => Console.Write("b");
+            printer();  // output: ab
             // </SnippetAddAndAssign>
+            Console.WriteLine();
         }
     }
 }
