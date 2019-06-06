@@ -340,7 +340,7 @@ class TestArraysClass
 {
     static void Main()
     {
-        // Declare a single-dimensional array 
+        // Declare a single-dimensional array. 
         int[] array1 = new int[5];
 
         // Declare and set array element values.
