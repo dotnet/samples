@@ -2,6 +2,7 @@ using System;
 
 public class Example
 {
+   // <SnippetQAInterpolated2>
    public static void Main()
    {
       string[] names = { "Balto", "Vanya", "Dakota", "Samuel", "Koani", "Yiska", "Yuma" };
@@ -11,9 +12,10 @@ public class Example
       var date = DateTime.Now;
       output += $"\nIt is {date:t} on {date:d}. The day of the week is {date.DayOfWeek}.";
       Console.WriteLine(output);                           
+      // The example displays the following output:
+      //     Balto, Vanya, Dakota, Samuel, Koani, Yiska, Yuma
+      //     It is 10:29 AM on 1/8/2018. The day of the week is Monday.
+      // </SnippetQAInterpolated2>
    }
 }
-// The example displays the following output:
-//     Balto, Vanya, Dakota, Samuel, Koani, Yiska, Yuma
-//     It is 10:29 AM on 1/8/2018. The day of the week is Monday.
 

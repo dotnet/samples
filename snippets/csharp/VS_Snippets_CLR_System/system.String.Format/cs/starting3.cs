@@ -14,13 +14,15 @@ class Example
           sb.Append(String.Format("{0,6} {1,15:N0}\n", years[index], population[index]));
   
        Console.WriteLine(sb);
+
+       // Result:
+       //      Year      Population
+       //
+       //      2013       1,025,632
+       //      2014       1,105,967
+       //      2015       1,148,203
+       // </Snippet33>
    }
 }  
-// Result:
-//      Year      Population
-//
-//      2013       1,025,632
-//      2014       1,105,967
-//      2015       1,148,203
 
 

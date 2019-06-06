@@ -1,4 +1,3 @@
-// <Snippet21>
 using System;
 using System.Collections.Generic;
 
@@ -6,6 +5,7 @@ public class Example
 {
    public static void Main()
    {
+      // <Snippet21>
       Random rnd = new Random();
       int[]  numbers = new int[4];
       int total = 0;
@@ -16,6 +16,6 @@ public class Example
       }   
       numbers[3] = total;
       Console.WriteLine("{0} + {1} + {2} = {3}", numbers);   
+      // </Snippet21>
    }
 }
-// </Snippet21>
