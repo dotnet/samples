@@ -19,7 +19,7 @@ public class Form1 : Form
         InitializeComponent();
 
         // Instantiate BackgroundWorker and attach handlers to its
-        // DowWork and RunWorkerCompleted events.
+        // DoWork and RunWorkerCompleted events.
         backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
         backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
         backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
