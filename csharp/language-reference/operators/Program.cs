@@ -15,7 +15,7 @@ namespace operators
             Console.WriteLine();
 
             Console.WriteLine("======== Logical operators examples ============");
-            LogicalOperators.Examples();
+            BooleanLogicalOperators.Examples();
             Console.WriteLine();
 
             Console.WriteLine("==== Bitwise and shift operators examples ======");

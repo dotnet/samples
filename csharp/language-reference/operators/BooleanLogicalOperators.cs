@@ -2,7 +2,7 @@ using System;
 
 namespace operators
 {
-    public static class LogicalOperators
+    public static class BooleanLogicalOperators
     {
         public static void Examples()
         {
