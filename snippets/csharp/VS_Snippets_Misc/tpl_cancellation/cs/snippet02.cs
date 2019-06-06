@@ -2,16 +2,16 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+
 class Program
 {
-    static void Main()
+    static async Task Main()
     {
         var tokenSource2 = new CancellationTokenSource();
         CancellationToken ct = tokenSource2.Token;
 
-        var task = Task.Factory.StartNew(() =>
+        var task = Task.Run(() =>
         {
-
             // Were we already canceled?
             ct.ThrowIfCancellationRequested();
 
@@ -27,19 +27,19 @@ class Program
                 }
 
             }
-        }, tokenSource2.Token); // Pass same token to StartNew.
+        }, tokenSource2.Token); // Pass same token to Task.Run.
 
         tokenSource2.Cancel();
 
-        // Just continue on this thread, or Wait/WaitAll with try-catch:
+        // Just continue on this thread, or await with try-catch:
         try
         {
-            task.Wait();
+            await task;
         }
         catch (AggregateException e)
         {
             foreach (var v in e.InnerExceptions)
-                Console.WriteLine(e.Message + " " + v.Message);
+                Console.WriteLine($"{e.Message} {v.Message}");
         }
         finally
         {
