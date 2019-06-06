@@ -14,7 +14,7 @@ public class Example
       Console.WriteLine("Culture     Date                                Value\n");
       foreach (string cultureName in cultureNames)
       {
-         CultureInfo culture = new CultureInfo(cultureName);
+         System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo(cultureName);
          string output = String.Format(culture, "{0,-11} {1,-35:D} {2:N}", 
                                        culture.Name, dateToDisplay, value);
          Console.WriteLine(output);
