@@ -2,9 +2,9 @@ using System;
 
 public class Example
 {
-   // <SnippetQAInterpolated2>
    public static void Main()
    {
+      // <SnippetQAInterpolated2>
       string[] names = { "Balto", "Vanya", "Dakota", "Samuel", "Koani", "Yiska", "Yuma" };
       string output = $"{names[0]}, {names[1]}, {names[2]}, {names[3]}, {names[4]}, " + 
                       $"{names[5]}, {names[6]}";  

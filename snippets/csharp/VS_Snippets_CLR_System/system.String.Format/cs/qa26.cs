@@ -11,6 +11,7 @@ public class Example
          result = String.Format("{0,12:C2}   {0,12:E3}   {0,12:F4}   {0,12:N3}  {1,12:P2}\n",
                                 Convert.ToDouble(value), Convert.ToDouble(value) / 10000);
          Console.WriteLine(result);
+      }                           
       // The example displays output like the following:
       //       $1,603.00     1.603E+003      1603.0000      1,603.000       16.03 %
       //    
@@ -18,6 +19,5 @@ public class Example
       //    
       //      $15,436.14     1.544E+004     15436.1400     15,436.140      154.36 %
       // </Snippet26>
-      }                           
    }
 }
