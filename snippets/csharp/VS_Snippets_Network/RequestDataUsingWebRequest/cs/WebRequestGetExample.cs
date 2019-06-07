@@ -10,7 +10,7 @@ namespace Examples.System.Net
         {
             // Create a request for the URL.   
             WebRequest request = WebRequest.Create(
-              "http://www.contoso.com/default.html");
+              "https://docs.microsoft.com");
             // If required by the server, set the credentials.  
             request.Credentials = CredentialCache.DefaultCredentials;
             
