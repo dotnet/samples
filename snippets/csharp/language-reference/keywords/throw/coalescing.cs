@@ -9,7 +9,7 @@ public class Person
    {
        get => name;
        set => name = value ?? 
-           throw new ArgumentNullException("Name cannot be null", nameof(value));
+           throw new ArgumentNullException(paramName: nameof(value), message: "Name cannot be null");
    }   
 // </Snippet1>
 }
