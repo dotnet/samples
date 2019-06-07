@@ -24,7 +24,7 @@ class Employee
 sealed class EmployeeSerializationSurrogate : ISerializationSurrogate 
 {
 
-    // Serialize the Employee object to save the object’s name and address fields.
+    // Serialize the Employee object to save the object's name and address fields.
     public void GetObjectData(Object obj, 
         SerializationInfo info, StreamingContext context) 
     {
@@ -34,7 +34,7 @@ sealed class EmployeeSerializationSurrogate : ISerializationSurrogate
         info.AddValue("address", emp.address);
     }
 
-    // Deserialize the Employee object to set the object’s name and address fields.
+    // Deserialize the Employee object to set the object's name and address fields.
     public Object SetObjectData(Object obj,
         SerializationInfo info, StreamingContext context,
         ISurrogateSelector selector) 
@@ -43,7 +43,7 @@ sealed class EmployeeSerializationSurrogate : ISerializationSurrogate
         Employee emp = (Employee) obj;
         emp.name = info.GetString("name");
         emp.address = info.GetString("address");
-        return null;
+        return emp;
     }
 }
 
