@@ -6,7 +6,7 @@ public class Example
 {
    public static void Main()
    {
-      if (Environment.OSVersion.Platform == PlatformID. Win32NT)
+      if (Environment.OSVersion.Platform == PlatformID.Win32NT)
       {    
          // Change the directory to %WINDIR%
          Environment.CurrentDirectory = Environment.GetEnvironmentVariable("windir");
