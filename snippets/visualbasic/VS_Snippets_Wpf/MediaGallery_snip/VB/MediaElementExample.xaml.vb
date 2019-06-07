@@ -77,7 +77,7 @@ Namespace SDKSample
         Private Sub SeekToMediaPosition(ByVal sender As Object, ByVal args As RoutedPropertyChangedEventArgs(Of Double))
             Dim SliderValue As Integer = CType(timelineSlider.Value, Integer)
 
-            ' Overloaded constructor takes the arguments days, hours, minutes, seconds, miniseconds.
+            ' Overloaded constructor takes the arguments days, hours, minutes, seconds, milliseconds.
             ' Create a TimeSpan with miliseconds equal to the slider value.
             Dim ts As New TimeSpan(0, 0, 0, 0, SliderValue)
             myMediaElement.Position = ts
