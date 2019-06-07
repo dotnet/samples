@@ -1,12 +1,11 @@
-// <Snippet6>
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 
 public class Example
 {
    public static void Main()
    {
+      // <Snippet6>
       // First sentence of The Mystery of the Yellow Room, by Leroux.
       string opening = "Ce n'est pas sans une certaine émotion que "+
                        "je commence à raconter ici les aventures " +
@@ -30,7 +29,8 @@ public class Example
          }
       }
 
-      TextElementEnumerator te = StringInfo.GetTextElementEnumerator(opening);
+      System.Globalization.TextElementEnumerator te = 
+         System.Globalization.StringInfo.GetTextElementEnumerator(opening);
       while (te.MoveNext()) {
          string s = te.GetTextElement();   
          // Skip the ' character.
@@ -50,27 +50,27 @@ public class Example
       for (int ctr = 0; ctr < chars.Count; ctr++) 
          Console.WriteLine("{0,6} {1,20} {2,20}",
                            ctr, chars[ctr], elements[ctr]); 
+      // The example displays the following output:
+      //       Word #         Char Objects           Characters
+      //            0                    2                    2
+      //            1                    4                    4
+      //            2                    3                    3
+      //            3                    4                    4
+      //            4                    3                    3
+      //            5                    8                    8
+      //            6                    8                    7
+      //            7                    3                    3
+      //            8                    2                    2
+      //            9                    8                    8
+      //           10                    2                    1
+      //           11                    8                    8
+      //           12                    3                    3
+      //           13                    3                    3
+      //           14                    9                    9
+      //           15                   15                   15
+      //           16                    2                    2
+      //           17                    6                    6
+      //           18                   12                   12
+      // </Snippet6>   
    }
 }
-// The example displays the following output:
-//       Word #         Char Objects           Characters
-//            0                    2                    2
-//            1                    4                    4
-//            2                    3                    3
-//            3                    4                    4
-//            4                    3                    3
-//            5                    8                    8
-//            6                    8                    7
-//            7                    3                    3
-//            8                    2                    2
-//            9                    8                    8
-//           10                    2                    1
-//           11                    8                    8
-//           12                    3                    3
-//           13                    3                    3
-//           14                    9                    9
-//           15                   15                   15
-//           16                    2                    2
-//           17                    6                    6
-//           18                   12                   12
-// </Snippet6>   
