@@ -36,10 +36,9 @@ class Program
         {
             await task;
         }
-        catch (AggregateException e)
+        catch (OperationCanceledException e)
         {
-            foreach (var v in e.InnerExceptions)
-                Console.WriteLine($"{e.Message} {v.Message}");
+            Console.WriteLine($"{nameof(OperationCanceledException)} thrown with message: {e.Message}");
         }
         finally
         {
