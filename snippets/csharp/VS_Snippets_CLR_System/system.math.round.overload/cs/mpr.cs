@@ -1,10 +1,10 @@
-// <snippet4>
 using System;
 
 class Sample 
 {
     public static void Main() 
     {
+      // <snippet4>
        double posValue =  3.45;
        double negValue = -3.45;
 
@@ -29,15 +29,15 @@ class Sample
        result = Math.Round(negValue, 1, MidpointRounding.AwayFromZero);
        Console.WriteLine("{0,4} = Math.Round({1,5}, 1, MidpointRounding.AwayFromZero)\n", 
                          result, negValue);
+      // The example displays the following output:
+      //        3.4 = Math.Round( 3.45, 1)
+      //       -3.4 = Math.Round(-3.45, 1)
+      //       
+      //        3.4 = Math.Round( 3.45, 1, MidpointRounding.ToEven)
+      //        3.5 = Math.Round( 3.45, 1, MidpointRounding.AwayFromZero)
+      //       
+      //       -3.4 = Math.Round(-3.45, 1, MidpointRounding.ToEven)
+      //       -3.5 = Math.Round(-3.45, 1, MidpointRounding.AwayFromZero)
+      // </Snippet4>
    }
 }
-// The example displays the following output:
-//        3.4 = Math.Round( 3.45, 1)
-//       -3.4 = Math.Round(-3.45, 1)
-//       
-//        3.4 = Math.Round( 3.45, 1, MidpointRounding.ToEven)
-//        3.5 = Math.Round( 3.45, 1, MidpointRounding.AwayFromZero)
-//       
-//       -3.4 = Math.Round(-3.45, 1, MidpointRounding.ToEven)
-//       -3.5 = Math.Round(-3.45, 1, MidpointRounding.AwayFromZero)
-// </Snippet4>

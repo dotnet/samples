@@ -29,7 +29,7 @@ sealed class EmployeeSerializationSurrogate : ISerializationSurrogate
         SerializationInfo info, StreamingContext context) 
     {
 
-        Employee emp = (Employee) obj;
+        var emp = (Employee) obj;
         info.AddValue("name", emp.name);
         info.AddValue("address", emp.address);
     }
@@ -40,7 +40,7 @@ sealed class EmployeeSerializationSurrogate : ISerializationSurrogate
         ISurrogateSelector selector) 
     {
 
-        Employee emp = (Employee) obj;
+        var emp = (Employee) obj;
         emp.name = info.GetString("name");
         emp.address = info.GetString("address");
         return emp;
@@ -59,7 +59,7 @@ public sealed class App
         {
             //<snippet2>
             // Create a SurrogateSelector.
-            SurrogateSelector ss = new SurrogateSelector();
+            var ss = new SurrogateSelector();
 
             // Tell the SurrogateSelector that Employee objects are serialized and deserialized 
             // using the EmployeeSerializationSurrogate object.
@@ -90,7 +90,7 @@ public sealed class App
             try 
             {
                 // Deserialize the Employee object from the memory stream.
-                Employee emp = (Employee) formatter.Deserialize(stream);
+                var emp = (Employee) formatter.Deserialize(stream);
 
                 // Verify that it all worked.
                 Console.WriteLine("Name = {0}, Address = {1}", emp.name, emp.address);
