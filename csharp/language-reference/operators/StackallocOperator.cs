@@ -41,7 +41,6 @@ namespace operators
             // <SnippetAsExpression>
             int length = 1000;
             Span<byte> buffer = length <= 1024 ? stackalloc byte[length] : new byte[length];
-            buffer = stackalloc byte[128];
             // </SnippetAsExpression>
         }
 
