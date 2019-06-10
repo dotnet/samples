@@ -62,6 +62,10 @@ namespace operators
             LambdaOperator.Examples();
             Console.WriteLine();
 
+            Console.WriteLine("============ stackalloc operator examples ======");
+            StackallocOperator.Examples();
+            Console.WriteLine();
+
             Console.WriteLine("========= true and false operators examples ====");
             LaunchStatusTest.Main();
             Console.WriteLine();
