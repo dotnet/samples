@@ -26,7 +26,7 @@ Requirements
 Build and Run
 -------------
 
-1) In order to build and run, all requirements must be installed. The is also required:
+1) In order to build and run, all requirements must be installed. The following are also required:
 
     * The C++ compiler (`cl.exe` or `g++`) must be on the path.
     * The C++ compiler (`cl.exe` or `g++`) and `dotnet` must be the same bitness.
