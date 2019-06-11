@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.Build.Traversal">
+
+  <ItemGroup>
+    <ProjectReference Include="src/NativeHost/*.csproj" />
+    <ProjectReference Include="src/DotNetLib/*.csproj" />
+  </ItemGroup>
+
+</Project>
