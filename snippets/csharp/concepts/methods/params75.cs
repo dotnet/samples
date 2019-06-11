@@ -20,7 +20,7 @@ class Example
         Console.WriteLine("Vowels in words:");
         Console.WriteLine($"    From array: '{fromArray}'");
         Console.WriteLine($"    From multiple arguments: '{fromMultipleArguments}'");
-        Console.WriteLine($"    From no value: '{fromSingleValue}'");
+        Console.WriteLine($"    From no value: '{fromNoValue}'");
     }
 
     static string GetVowels(params string[] input)
@@ -41,6 +41,6 @@ class Example
 //     Vowels in words:
 //         From array: 'aeaaaea'
 //         From multiple arguments: 'aeaaaea'
-//         From single value: ''
+//         From no value: ''
 
 //<Snippet75>
