@@ -6,19 +6,21 @@ class Example
 {
     static void Main()
     {
+        // Invoking the method with an array
         string fromArray = GetVowels(
             new[] { "apple", "banana", "pear" });
 
-        string fromParameters = GetVowels(
+        // Invoking with a comma-separated list of arguments
+        string fromMultipleArguments = GetVowels(
             "apple", "banana", "pear");
 
-        string fromSingleValue = GetVowels(
-            "apple, banana, pear");
+        // Invoking without any arguments
+        string fromNoValue = GetVowels();
 
         Console.WriteLine("Vowels in words:");
-        Console.WriteLine($"    From array: {fromArray}");
-        Console.WriteLine($"    From parameters: {fromParameters}");
-        Console.WriteLine($"    From single value: {fromSingleValue}");
+        Console.WriteLine($"    From array: '{fromArray}'");
+        Console.WriteLine($"    From multiple arguments: '{fromMultipleArguments}'");
+        Console.WriteLine($"    From no value: '{fromSingleValue}'");
     }
 
     static string GetVowels(params string[] input)
@@ -37,8 +39,8 @@ class Example
 
 // The example displays the following output:
 //     Vowels in words:
-//         From array: aeaaaea
-//         From parameters: aeaaaea
-//         From single value: aeaaaea
+//         From array: 'aeaaaea'
+//         From multiple arguments: 'aeaaaea'
+//         From single value: ''
 
 //<Snippet75>
