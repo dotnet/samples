@@ -39,4 +39,15 @@ Build and Run
         * Windows: `bin\Debug\nativehost.exe`
         * Non-Windows: `bin/Debug/nativehost`
 
-The expected output will come from the `DotNetLib` class library.
+The expected output will come from the `DotNetLib` class library and include the arguments passed to the managed library from the host:
+```
+Hello, world! from Lib [count: 1]
+-- message: from host!
+-- number: 0
+Hello, world! from Lib [count: 2]
+-- message: from host!
+-- number: 1
+Hello, world! from Lib [count: 3]
+-- message: from host!
+-- number: 2
+```
