@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="$(SourceRoot)/DotNetLib/DotNetLib.csproj" />
+  </ItemGroup>
+
+  <!-- Target to build the native project -->
+  <Target Name="BuildNativeProject"
+          AfterTargets="Build">
+    <PropertyGroup>
+      <NativeBinDir>$(BinRoot)/$(Configuration)</NativeBinDir>
+      <NetHostDir>$(NetCoreTargetingPackRoot)/Microsoft.NETCore.App.Host.$(NETCoreSdkRuntimeIdentifier)/$(BundledNETCoreAppPackageVersion)/runtimes/$(NETCoreSdkRuntimeIdentifier)/native</NetHostDir>
+
+      <NetHostName Condition="$([MSBuild]::IsOsPlatform('Windows'))">nethost.dll</NetHostName>
+      <NetHostName Condition="$([MSBuild]::IsOsPlatform('Linux'))">libnethost.so</NetHostName>
+      <NetHostName Condition="$([MSBuild]::IsOsPlatform('OSX'))">libnethost.dylib</NetHostName>
+    </PropertyGroup>
+
+    <Exec Command="g++ nativehost.cpp -I$(NetHostDir) -Iinc -D LINUX -std=c++11 -o $(NativeBinDir)/nativehost -ldl -lnethost -L$(NetHostDir) -Wl,-rpath,'$ORIGIN',--disable-new-dtags"
+          ConsoleToMsBuild="true"
+          Condition="$([MSBuild]::IsOsPlatform('Linux'))" />
+
+    <Exec Command="g++ nativehost.cpp -I$(NetHostDir) -Iinc -D OSX -std=c++11 -o $(NativeBinDir)/nativehost -ldl -lnethost -L$(NetHostDir) -Wl,-rpath,'@loader_path'"
+          ConsoleToMsBuild="true"
+          Condition="$([MSBuild]::IsOsPlatform('OSX'))" />
+
+    <Exec Command="cl.exe nativehost.cpp /I $(NetHostDir) /I inc /D WINDOWS /EHsc /Od /GS /sdl /Zi /Fo$(NativeBinDir)\ /Fd$(NativeBinDir)\nativehost.pdb /link $(NetHostDir)/nethost.lib /out:$(NativeBinDir)\nativehost.exe"
+          ConsoleToMsBuild="true"
+          Condition="$([MSBuild]::IsOsPlatform('Windows'))" />
+
+    <!-- Copy the nethost library to the demo directory -->
+    <Copy SourceFiles="$(NetHostDir)/$(NetHostName)"
+          DestinationFolder="$(NativeBinDir)"
+          SkipUnchangedFiles="True" />
+  </Target>
+</Project>
