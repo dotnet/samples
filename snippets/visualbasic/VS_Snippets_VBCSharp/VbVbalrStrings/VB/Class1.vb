@@ -225,7 +225,7 @@ Class Class7e33b04748fc493bbb8d7d1ac3f90038
             End If
         Next
         ReDim Preserve testArray(lastNonEmpty)
-        ' TestArray now holds {"apple", "pear", "banana"}
+        ' testArray now holds {"apple", "pear", "banana"}
         ' </snippet14>
     End Sub
 
@@ -330,9 +330,9 @@ Class Classb0b9cc74369c4f389d3bdf6153e1bf15
         Dim testComp As Integer
         ' The two strings sort equally. Returns 0.
         testComp = StrComp(testStr1, testStr2, CompareMethod.Text)
-        ' testStr1 sorts before TestStr2. Returns -1.
+        ' testStr1 sorts before testStr2. Returns -1.
         testComp = StrComp(testStr1, testStr2, CompareMethod.Binary)
-        ' testStr2 sorts after TestStr1. Returns 1.
+        ' testStr2 sorts after testStr1. Returns 1.
         testComp = StrComp(testStr2, testStr1, CompareMethod.Binary)
         ' </snippet22>
     End Sub
@@ -427,7 +427,7 @@ Class Classc6f5bddaa7c34f3886cc1cf47aa940b3
         ' format, using the single letter code for the format.
         testStr = Format(Now(), "D")
 
-        ' Returns the value of TestDateTime in user-defined date/time formats.
+        ' Returns the value of testDateTime in user-defined date/time formats.
         ' Returns "5:4:23".
         testStr = Format(testDateTime, "h:m:s")
         ' Returns "05:04:23 PM".
