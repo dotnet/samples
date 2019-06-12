@@ -14,7 +14,7 @@ namespace MyCustomControls
          this.Appearance = Appearance.Button;
          // Center the text on the button.
          this.TextAlign = ContentAlignment.MiddleCenter;
-	 // Set the AccessibleDescription text.
+         // Set the AccessibleDescription text.
          this.AccessibleDescription = "A toggle style button.";
       }
       
