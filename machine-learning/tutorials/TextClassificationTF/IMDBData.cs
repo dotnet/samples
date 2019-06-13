@@ -24,7 +24,7 @@ namespace TextClassificationTF
     /// <summary>
     /// Class to contain the output values from the transformation.
     /// </summary>
-    public class IMDBSentimentPrediction
+    public class IMDBSentimentPrediction : IMDBSentiment
     {
         [VectorType(2)]
         public float[] Prediction { get; set; }
