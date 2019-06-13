@@ -16,7 +16,6 @@ namespace SentimentAnalysis
     {
         // <SnippetDeclareGlobalVariables>
         static readonly string _dataPath = Path.Combine(Environment.CurrentDirectory, "Data", "yelp_labelled.txt");
-        static readonly string _modelPath = Path.Combine(Environment.CurrentDirectory, "Data", "Model.zip");
         // </SnippetDeclareGlobalVariables>
 
         static void Main(string[] args)
@@ -153,14 +152,14 @@ namespace SentimentAnalysis
             // </SnippetCreateTestIssue1>
 
             // <SnippetPredict>
-            var resultprediction = predictionFunction.Predict(sampleStatement);
+            var resultPrediction = predictionFunction.Predict(sampleStatement);
             // </SnippetPredict>
             // <SnippetOutputPrediction>
             Console.WriteLine();
             Console.WriteLine("=============== Prediction Test of model with a single sample and test dataset ===============");
 
             Console.WriteLine();
-            Console.WriteLine($"Sentiment: {resultprediction.SentimentText} | Prediction: {(Convert.ToBoolean(resultprediction.Prediction) ? "Positive" : "Negative")} | Probability: {resultprediction.Probability} ");
+            Console.WriteLine($"Sentiment: {resultPrediction.SentimentText} | Prediction: {(Convert.ToBoolean(resultPrediction.Prediction) ? "Positive" : "Negative")} | Probability: {resultPrediction.Probability} ");
 
             Console.WriteLine("=============== End of Predictions ===============");
             Console.WriteLine();
