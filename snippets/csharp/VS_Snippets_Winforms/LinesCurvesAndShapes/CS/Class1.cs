@@ -44,8 +44,12 @@ public class LinesCurvesAndShapes : Form
     {
         Graphics myGraphics = e.Graphics;
         // <snippet22>
-        Point[] myPointArray =
-   { new Point(0, 0), new Point(60, 20), new Point(40, 50) };
+        Point[] myPointArray = 
+        { 
+            new Point(0, 0), 
+            new Point(60, 20), 
+            new Point(40, 50)
+        };
         myGraphics.DrawClosedCurve(myPen, myPointArray);
         myGraphics.FillClosedCurve(mySolidBrush, myPointArray);
         // </snippet22>
@@ -57,10 +61,12 @@ public class LinesCurvesAndShapes : Form
         SolidBrush mySolidBrush = new SolidBrush(Color.Aqua);
         GraphicsPath myGraphicsPath = new GraphicsPath();
 
-        Point[] myPointArray = {
-   new Point(15, 20), 
-   new Point(20, 40), 
-   new Point(50, 30)};
+        Point[] myPointArray = 
+        {
+            new Point(15, 20), 
+            new Point(20, 40), 
+            new Point(50, 30)
+        };
 
         FontFamily myFontFamily = new FontFamily("Times New Roman");
         PointF myPointF = new PointF(50, 20);
@@ -82,8 +88,12 @@ public class LinesCurvesAndShapes : Form
     public void Method31(PaintEventArgs e)
     {
         Graphics myGraphics = e.Graphics;
-        Point[] myPointArray = new Point[] { new Point(10, 10), 
-            new Point(50, 40), new Point(123, 200) };
+        Point[] myPointArray = 
+        {
+            new Point(10, 10), 
+            new Point(50, 40), 
+            new Point(123, 200)
+        };
         // <snippet31>
         myGraphics.DrawCurve(myPen, myPointArray, 1.5f);
         // </snippet31>
@@ -235,10 +245,12 @@ public class LinesCurvesAndShapes : Form
         // <snippet103>
         GraphicsPath myGraphicsPath = new GraphicsPath();
 
-        Point[] myPointArray = {
-   new Point(5, 30), 
-   new Point(20, 40), 
-   new Point(50, 30)};
+        Point[] myPointArray = 
+        {
+            new Point(5, 30), 
+            new Point(20, 40), 
+            new Point(50, 30)
+        };
 
         FontFamily myFontFamily = new FontFamily("Times New Roman");
         PointF myPointF = new PointF(50, 20);
@@ -261,7 +273,11 @@ public class LinesCurvesAndShapes : Form
         Graphics myGraphics = e.Graphics;
         // <snippet111>
         Point[] myPointArray = 
-   { new Point(0, 0), new Point(50, 30), new Point(30, 60) };
+        { 
+            new Point(0, 0), 
+            new Point(50, 30), 
+            new Point(30, 60)
+        };
         myGraphics.DrawPolygon(myPen, myPointArray);
         // </snippet111>
     }
