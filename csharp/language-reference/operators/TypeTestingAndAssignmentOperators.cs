@@ -9,6 +9,7 @@ namespace operators
         {
             Assignment();
             RefAssignment();
+            Cast();
         }
 
         private static void Assignment()
@@ -55,6 +56,20 @@ namespace operators
             // 3 0 0
             // 3 0 5
             // </SnippetRefAssignment>
+        }
+
+        private static void Cast()
+        {
+            // <SnippetCast>
+            double x = 1234.7;
+            int a = (int)x;
+            Console.WriteLine(a);   // output: 1234
+
+            IEnumerable<int> numbers = new int[] { 10, 20, 30 };
+            IList<int> list = (IList<int>)numbers;
+            Console.WriteLine(list.Count);  // output: 3
+            Console.WriteLine(list[1]);  // output: 20
+            // </SnippetCast>
         }
     }
 }
