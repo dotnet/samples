@@ -34,6 +34,10 @@ namespace operators
             PointerOperators.Examples();
             Console.WriteLine();
 
+            Console.WriteLine("= Type-testing and assignment operators examples");
+            TypeTestingAndAssignmentOperators.Examples();
+            Console.WriteLine();
+
             Console.WriteLine("============== + operator examples =============");
             AdditionOperator.Examples();
             Console.WriteLine();
@@ -42,20 +46,12 @@ namespace operators
             SubtractionOperator.Examples();
             Console.WriteLine();
 
-            Console.WriteLine("============== = operator examples =============");
-            AssignmentExamples.Examples();
-            Console.WriteLine();
-            
             Console.WriteLine("============== ?: operator examples ============");
             ConditionalOperator.Examples();
             Console.WriteLine();
 
             Console.WriteLine("============== ?? operator examples ============");
             NullCoalescingOperator.Examples();
-            Console.WriteLine();
-
-            Console.WriteLine("============== () operator examples ============");
-            InvocationOperatorExamples.Examples();
             Console.WriteLine();
 
             Console.WriteLine("============== => operator examples ============");
