@@ -58,16 +58,16 @@
   <Table>
     <ProductID>1003</ProductID>
     <CategoryID>1</CategoryID>
-    <ProductName>Funny Farms  Milk</ProductName>
-    <ProductDescription>Funny Farms Whole Milk Description</ProductDescription>
+    <ProductName>​Munson's Pickles and Preserves Farm Blackberry Preserves</ProductName>
+    <ProductDescription>​Munson's Pickles and Preserves Farm Blackberry Preserves Description</ProductDescription>
     <UnitPrice>1.29</UnitPrice>
-    <ImagePath>/quickstart/aspplus/images/milk4.gif</ImagePath>
+    <ImagePath>/quickstart/aspplus/images/preserves4.gif</ImagePath>
     <ServingSize>8 fl oz (240 mL)</ServingSize>
     <Servings>10</Servings>
     <Quantity>0</Quantity>
     <MinOnHand>0</MinOnHand>
     <MaxOnHand>0</MaxOnHand>
-    <Manufacturer>Funny Farms</Manufacturer>
+    <Manufacturer>Munson's Pickles and Preserves Farm</Manufacturer>
   </Table>
   <Table>
     <ProductID>2001</ProductID>
