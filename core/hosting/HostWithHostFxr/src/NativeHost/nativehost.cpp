@@ -84,9 +84,9 @@ int main(int argc, char *argv[])
     // STEP 2: Initialize and start the .NET Core runtime
     //
     const string_t config_path = root_path + STR("DotNetLib.runtimeconfig.json");
-    load_assembly_and_get_function_pointer_fn load_and_get = nullptr;
-    load_and_get = get_dotnet_load_assembly(config_path.c_str());
-    assert(load_and_get != nullptr && "Failure: get_dotnet_load_assembly()");
+    load_assembly_and_get_function_pointer_fn load_assembly_and_get_function_pointer = nullptr;
+    load_assembly_and_get_function_pointer = get_dotnet_load_assembly(config_path.c_str());
+    assert(load_assembly_and_get_function_pointer != nullptr && "Failure: get_dotnet_load_assembly()");
 
     //
     // STEP 3: Load managed assembly and get function pointer to a managed method
@@ -97,7 +97,7 @@ int main(int argc, char *argv[])
     // <SnippetLoadAndGet>
     // Function pointer to managed delegate
     component_entry_point_fn hello = nullptr;
-    int rc = load_and_get(
+    int rc = load_assembly_and_get_function_pointer(
         dotnetlib_path.c_str(),
         dotnet_type,
         dotnet_type_method,
@@ -195,7 +195,7 @@ namespace
     load_assembly_and_get_function_pointer_fn get_dotnet_load_assembly(const char_t *config_path)
     {
         // Load .NET Core
-        void *load_and_get = nullptr;
+        void *load_assembly_and_get_function_pointer = nullptr;
         hostfxr_handle cxt = nullptr;
         int rc = init_fptr(config_path, nullptr, &cxt);
         if (rc != 0 || cxt == nullptr)
@@ -209,12 +209,12 @@ namespace
         rc = get_delegate_fptr(
             cxt,
             hdt_load_assembly_and_get_function_pointer,
-            &load_and_get);
-        if (rc != 0 || load_and_get == nullptr)
+            &load_assembly_and_get_function_pointer);
+        if (rc != 0 || load_assembly_and_get_function_pointer == nullptr)
             std::cerr << "Get delegate failed: " << std::hex << std::showbase << rc << std::endl;
 
         close_fptr(cxt);
-        return (load_assembly_and_get_function_pointer_fn)load_and_get;
+        return (load_assembly_and_get_function_pointer_fn)load_assembly_and_get_function_pointer;
     }
     // </SnippetInitialize>
 }
