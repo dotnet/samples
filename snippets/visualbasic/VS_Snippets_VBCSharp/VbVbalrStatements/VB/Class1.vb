@@ -307,7 +307,7 @@ Public Class Class1
 
 
     '********************************************************************
-    Function findResult(ByVal i As Integer) As Integer
+    Function FindResult(ByVal i As Integer) As Integer
         Return i
     End Function
 
@@ -370,7 +370,7 @@ Public Class Class1
         '</Snippet75>
 
         '<Snippet74>
-        x = y + z + findResult(3)
+        x = y + z + FindResult(3)
         '</Snippet74>
 
         '<Snippet73>
@@ -609,7 +609,7 @@ Public Class Class1
 
     '********************************************************************
     '<Snippet53>
-    Public Function getAgePhrase(ByVal age As Integer) As String
+    Public Function GetAgePhrase(ByVal age As Integer) As String
         If age > 60 Then Return "Senior"
         If age > 40 Then Return "Middle-aged"
         If age > 20 Then Return "Adult"
@@ -903,11 +903,11 @@ LastLine:
 
     '********************************************************************
     '<Snippet25>
-    Public Function calcSum(ByVal ParamArray args() As Double) As Double
-        calcSum = 0
+    Public Function CalcSum(ByVal ParamArray args() As Double) As Double
+        CalcSum = 0
         If args.Length <= 0 Then Exit Function
         For i As Integer = 0 To UBound(args, 1)
-            calcSum += args(i)
+            CalcSum += args(i)
         Next i
     End Function
     '</Snippet25>
@@ -917,7 +917,7 @@ LastLine:
     Class WrapFunction
         ' Used in "Function Statement (Visual Basic)" and "Exit Statement (Visual Basic)"
         '<Snippet24>
-        Function myFunction(ByVal j As Integer) As Double
+        Function MyFunction(ByVal j As Integer) As Double
             Return 3.87 * j
         End Function
         '</Snippet24>
@@ -927,8 +927,8 @@ LastLine:
     '********************************************************************
     ' Used in "Function Statement (Visual Basic)" and "Exit Statement (Visual Basic)"
     '<Snippet23>
-    Function myFunction(ByVal j As Integer) As Double
-        myFunction = 3.87 * j
+    Function MyFunction(ByVal j As Integer) As Double
+        MyFunction = 3.87 * j
         Exit Function
     End Function
     '</Snippet23>
@@ -1241,22 +1241,22 @@ End Class
 Module Module1
 
     Sub Main()
-        ' In the following function call, calcSum's local variables 
+        ' In the following function call, CalcSum's local variables 
         ' are assigned the following values: args(0) = 4, args(1) = 3, 
         ' and so on. The displayed sum is 10.
-        Dim returnedValue As Double = calcSum(4, 3, 2, 1)
+        Dim returnedValue As Double = CalcSum(4, 3, 2, 1)
         Console.WriteLine("Sum: " & returnedValue)
         ' Parameter args accepts zero or more arguments. The sum 
         ' displayed by the following statements is 0.
-        returnedValue = calcSum()
+        returnedValue = CalcSum()
         Console.WriteLine("Sum: " & returnedValue)
     End Sub
 
-    Public Function calcSum(ByVal ParamArray args() As Double) As Double
-        calcSum = 0
+    Public Function CalcSum(ByVal ParamArray args() As Double) As Double
+        CalcSum = 0
         If args.Length <= 0 Then Exit Function
         For i As Integer = 0 To UBound(args, 1)
-            calcSum += args(i)
+            CalcSum += args(i)
         Next i
     End Function
 
