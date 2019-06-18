@@ -71,27 +71,45 @@ int main(int argc, char *argv[])
     assert(pos != string_t::npos);
     root_path = root_path.substr(0, pos + 1);
 
-    // Load hostfxr and get exports
+    //
+    // STEP 1: Load HostFxr and get exported hosting functions
+    //
     if (!load_hostfxr())
     {
         assert(false && "Failure: load_hostfxr()");
         return EXIT_FAILURE;
     }
 
+    //
+    // STEP 2: Initialize and start the .NET Core runtime
+    //
     const string_t config_path = root_path + STR("DotNetLib.runtimeconfig.json");
-    const string_t dotnetlib_path = root_path + STR("DotNetLib.dll");
-    const char_t *dotnet_type = STR("DotNetLib.Lib, DotNetLib");
-    const char_t *dotnet_type_method = STR("Hello");
-
     load_assembly_and_get_function_pointer_fn load_and_get = nullptr;
     load_and_get = get_dotnet_load_assembly(config_path.c_str());
     assert(load_and_get != nullptr && "Failure: get_dotnet_load_assembly()");
 
+    //
+    // STEP 3: Load managed assembly and get function pointer to a managed method
+    //
+    const string_t dotnetlib_path = root_path + STR("DotNetLib.dll");
+    const char_t *dotnet_type = STR("DotNetLib.Lib, DotNetLib");
+    const char_t *dotnet_type_method = STR("Hello");
+    // <SnippetLoadAndGet>
     // Function pointer to managed delegate
     component_entry_point_fn hello = nullptr;
-    int rc = load_and_get(dotnetlib_path.c_str(), dotnet_type, dotnet_type_method, nullptr, nullptr, (void**)&hello);
+    int rc = load_and_get(
+        dotnetlib_path.c_str(),
+        dotnet_type,
+        dotnet_type_method,
+        nullptr /*delegate_type_name*/,
+        nullptr,
+        (void**)&hello);
+    // </SnippetLoadAndGet>
     assert(rc == 0 && hello != nullptr && "Failure: load_assembly_and_get_function_pointer()");
 
+    //
+    // STEP 4: Run managed code
+    //
     struct lib_args
     {
         const char_t *message;
@@ -99,6 +117,7 @@ int main(int argc, char *argv[])
     };
     for (int i = 0; i < 3; ++i)
     {
+        // <SnippetCallManaged>
         lib_args args
         {
             STR("from host!"),
@@ -106,6 +125,7 @@ int main(int argc, char *argv[])
         };
 
         hello(&args, sizeof(args));
+        // </SnippetCallManaged>
     }
 
     return EXIT_SUCCESS;
@@ -149,6 +169,7 @@ namespace
     }
 #endif
 
+    // <SnippetLoadHostFxr>
     // Using the nethost library, discover the location of hostfxr and get exports
     bool load_hostfxr()
     {
@@ -167,7 +188,9 @@ namespace
 
         return (init_fptr && get_delegate_fptr && close_fptr);
     }
+    // </SnippetLoadHostFxr>
 
+    // <SnippetInitialize>
     // Load and initialize .NET Core and get desired function pointer for scenario
     load_assembly_and_get_function_pointer_fn get_dotnet_load_assembly(const char_t *config_path)
     {
@@ -193,4 +216,5 @@ namespace
         close_fptr(cxt);
         return (load_assembly_and_get_function_pointer_fn)load_and_get;
     }
+    // </SnippetInitialize>
 }

@@ -43,10 +43,20 @@ public class SamplesEncoding  {
    }
 
 }
-
-
 /* 
-This code produces the following output.
+The example produces the following output when run on .NET Core:
+
+Info.CodePage      Info.Name                    Info.DisplayName
+1200               utf-16                       Unicode                      
+1201               utf-16BE                     Unicode (Big-Endian)         
+12000              utf-32                       Unicode (UTF-32)             
+12001              utf-32BE                     Unicode (UTF-32 Big-Endian)    
+20127              us-ascii                     US-ASCII                     
+28591              iso-8859-1                   Western European (ISO)       
+65000              utf-7                        Unicode (UTF-7)              
+65001              utf-8                        Unicode (UTF-8)              
+
+The example produces the following output when run on .NET Framework:
 
 Info.CodePage      Info.Name                    Info.DisplayName
 37                 IBM037                       IBM EBCDIC (US-Canada)       
@@ -89,7 +99,7 @@ Info.CodePage      Info.Name                    Info.DisplayName
 1148               IBM01148                     IBM EBCDIC (International-Euro)    
 1149               IBM01149                     IBM EBCDIC (Icelandic-Euro)    
 1200               utf-16                       Unicode                      
-1201               unicodeFFFE                  Unicode (Big-Endian)         
+1201               utf-16BE                     Unicode (Big-Endian)         
 1250               windows-1250                 Central European (Windows)    
 1251               windows-1251                 Cyrillic (Windows)           
 1252               Windows-1252                 Western European (Windows)    
@@ -188,9 +198,8 @@ Info.CodePage      Info.Name                    Info.DisplayName
 57010              x-iscii-gu                   ISCII Gujarati               
 57011              x-iscii-pa                   ISCII Punjabi                
 65000              utf-7                        Unicode (UTF-7)              
-65001              utf-8                        Unicode (UTF-8)  
+65001              utf-8                        Unicode (UTF-8)              
 
 */
-
 // </Snippet1>
 
