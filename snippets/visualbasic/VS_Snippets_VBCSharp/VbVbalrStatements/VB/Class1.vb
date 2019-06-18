@@ -511,7 +511,7 @@ Public Class Class1
 
     '********************************************************************
     '<Snippet58>
-    Sub computeArea(ByVal length As Double, ByVal width As Double)
+    Sub ComputeArea(ByVal length As Double, ByVal width As Double)
         ' Declare local variable.
         Dim area As Double
         If length = 0 Or width = 0 Then
@@ -743,7 +743,7 @@ Public Class Class1
     '********************************************************************
     '<Snippet36>
     Class testClass1
-        Sub showHello()
+        Sub ShowHello()
             ' Display only the word "Hello"
             MsgBox(str.Left("Hello World", 5))
         End Sub
@@ -753,13 +753,13 @@ Public Class Class1
 
     '********************************************************************
     '<Snippet34>
-    Public Sub testImplements()
+    Public Sub TestImplements()
         ' This procedure tests the interface implementation by
         ' creating an instance of the class that implements ICustomerInfo.
         Dim cust As ICustomerInfo = New customerInfo()
         ' Associate an event handler with the event that is raised by
         ' the cust object.
-        AddHandler cust.updateComplete, AddressOf handleUpdateComplete
+        AddHandler cust.updateComplete, AddressOf HandleUpdateComplete
         ' Set the customerName Property
         cust.customerName = "Fred"
         ' Retrieve and display the customerName property.
@@ -769,7 +769,7 @@ Public Class Class1
         cust.updateCustomerStatus()
     End Sub
 
-    Sub handleUpdateComplete()
+    Sub HandleUpdateComplete()
         ' This is the event handler for the updateComplete event.
         MsgBox("Update is complete.")
     End Sub
@@ -974,7 +974,7 @@ LastLine:
 
     '********************************************************************
     '<Snippet20>
-    Sub exitStatementDemo()
+    Sub ExitStatementDemo()
         Dim demoNum As Single
         ' Set up an infinite loop.
         Do
@@ -1021,7 +1021,7 @@ LastLine:
 
     '********************************************************************
     '<Snippet17>
-    Sub exitDoExample()
+    Sub ExitDoExample()
         Dim counter As Integer = 0
         Dim number As Integer = 8
         Do Until number = 10
