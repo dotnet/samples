@@ -759,11 +759,11 @@ Public Class Class1
         Dim cust As ICustomerInfo = New customerInfo()
         ' Associate an event handler with the event that is raised by
         ' the cust object.
-        AddHandler cust.updateComplete, AddressOf HandleUpdateComplete
-        ' Set the customerName Property
-        cust.customerName = "Fred"
-        ' Retrieve and display the customerName property.
-        MsgBox("Customer name is: " & cust.customerName)
+        AddHandler cust.UpdateComplete, AddressOf HandleUpdateComplete
+        ' Set the CustomerName Property
+        cust.CustomerName = "Fred"
+        ' Retrieve and display the CustomerName property.
+        MsgBox("Customer name is: " & cust.CustomerName)
         ' Call the UpdateCustomerStatus procedure, which raises the
         ' updateComplete event.
         cust.UpdateCustomerStatus()
