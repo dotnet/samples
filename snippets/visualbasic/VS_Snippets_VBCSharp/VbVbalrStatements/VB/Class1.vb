@@ -53,27 +53,27 @@ End Namespace
 
 '********************************************************************
 '<Snippet62>
-Class bankAccount
+Class BankAccount
     Shared interestRate As Decimal
     Private accountNumber As String
     Private accountBalance As Decimal
     Public holdOnAccount As Boolean = False
 
-    Public ReadOnly Property balance() As Decimal
+    Public ReadOnly Property Balance() As Decimal
         Get
             Return accountBalance
         End Get
     End Property
 
-    Public Sub postInterest()
+    Public Sub PostInterest()
         accountBalance = accountBalance * (1 + interestRate)
     End Sub
 
-    Public Sub postDeposit(ByVal amountIn As Decimal)
+    Public Sub PostDeposit(ByVal amountIn As Decimal)
         accountBalance = accountBalance + amountIn
     End Sub
 
-    Public Sub postWithdrawal(ByVal amountOut As Decimal)
+    Public Sub PostWithdrawal(ByVal amountOut As Decimal)
         accountBalance = accountBalance - amountOut
     End Sub
 End Class
@@ -94,9 +94,9 @@ End Module
 
 '*************************************************************************
 Public Class widget
-    Sub spinClockwise()
+    Sub SpinClockwise()
     End Sub
-    Sub spinCounterClockwise()
+    Sub SpinCounterClockwise()
     End Sub
 End Class
 
@@ -221,7 +221,7 @@ Public Class Class1
     End Sub
     '</Snippet91>
 
-    Sub test()
+    Sub Test()
         '<Snippet87>
         Const naturalLogBase As Object = CDec(2.7182818284)
         MsgBox("Run-time type of constant naturalLogBase is " &
@@ -290,16 +290,16 @@ Public Class Class1
 
     '********************************************************************
     '<Snippet83>
-    Public Sub startWidget(ByVal aWidget As widget,
+    Public Sub StartWidget(ByVal aWidget As widget,
         ByVal clockwise As Boolean, ByVal revolutions As Integer)
         Dim counter As Integer
         If clockwise = True Then
             For counter = 1 To revolutions
-                aWidget.spinClockwise()
+                aWidget.SpinClockwise()
             Next counter
         Else
             For counter = 1 To revolutions
-                aWidget.spinCounterClockwise()
+                aWidget.SpinCounterClockwise()
             Next counter
         End If
     End Sub
@@ -307,7 +307,7 @@ Public Class Class1
 
 
     '********************************************************************
-    Function findResult(ByVal i As Integer) As Integer
+    Function FindResult(ByVal i As Integer) As Integer
         Return i
     End Function
 
@@ -327,7 +327,7 @@ Public Class Class1
 
     '********************************************************************
     '<Snippet80>
-    Public Sub applyFormat()
+    Public Sub ApplyFormat()
         Const limit As Integer = 33
         Dim thisWidget As New widget
         ' Insert code to implement the procedure.
@@ -370,7 +370,7 @@ Public Class Class1
         '</Snippet75>
 
         '<Snippet74>
-        x = y + z + findResult(3)
+        x = y + z + FindResult(3)
         '</Snippet74>
 
         '<Snippet73>
@@ -381,7 +381,7 @@ Public Class Class1
 
     '********************************************************************
     '<Snippet71>
-    Public Sub demoBox()
+    Public Sub DemoBox()
         Dim nameVar As String
         nameVar = "John"
         MsgBox("Hello " & nameVar _
@@ -391,7 +391,7 @@ Public Class Class1
 
 
     '********************************************************************
-    Sub testStatOver()
+    Sub TestStatOver()
         '<Snippet70>
         Dim sampleString As String = "Hello World" : MsgBox(sampleString)
         '</Snippet70>
@@ -498,7 +498,7 @@ Public Class Class1
     '</Snippet50>
 
     '<Snippet59>
-    Public Sub setbigbold(ByVal c As Control)
+    Public Sub SetBigBold(ByVal c As Control)
         Using nf As New System.Drawing.Font("Arial", 12.0F,
             System.Drawing.FontStyle.Bold)
 
@@ -511,7 +511,7 @@ Public Class Class1
 
     '********************************************************************
     '<Snippet58>
-    Sub computeArea(ByVal length As Double, ByVal width As Double)
+    Sub ComputeArea(ByVal length As Double, ByVal width As Double)
         ' Declare local variable.
         Dim area As Double
         If length = 0 Or width = 0 Then
@@ -542,17 +542,17 @@ Public Class Class1
         Private salary As Double
         Private bonus As Double
         ' Procedure member, which can access structure's private members.
-        Friend Sub calculateBonus(ByVal rate As Single)
+        Friend Sub CalculateBonus(ByVal rate As Single)
             bonus = salary * CDbl(rate)
         End Sub
         ' Property member to return employee's eligibility.
-        Friend ReadOnly Property eligible() As Boolean
+        Friend ReadOnly Property Eligible() As Boolean
             Get
                 Return level >= 25
             End Get
         End Property
         ' Event member, raised when business phone number has changed.
-        Public Event changedWorkPhone(ByVal newPhone As Long)
+        Public Event ChangedWorkPhone(ByVal newPhone As Long)
     End Structure
     '</Snippet57>
 
@@ -575,7 +575,7 @@ Public Class Class1
         '<Snippet55>
         Class propClass
             Private propVal As Integer
-            Property prop1() As Integer
+            Property Prop1() As Integer
                 Get
                     Return propVal
                 End Get
@@ -609,7 +609,7 @@ Public Class Class1
 
     '********************************************************************
     '<Snippet53>
-    Public Function getAgePhrase(ByVal age As Integer) As String
+    Public Function GetAgePhrase(ByVal age As Integer) As String
         If age > 60 Then Return "Senior"
         If age > 40 Then Return "Middle-aged"
         If age > 20 Then Return "Adult"
@@ -638,7 +638,7 @@ Public Class Class1
         ' Define a local variable to store the property value.
         Private propertyValue As String
         ' Define the property.
-        Public Property prop1() As String
+        Public Property Prop1() As String
             Get
                 ' The Get property procedure is called when the value
                 ' of a property is retrieved.
@@ -692,8 +692,8 @@ Public Class Class1
     '********************************************************************
     '<Snippet40>
     Public Interface thisInterface
-        Property thisProp(ByVal thisStr As String) As Char
-        Function thisFunc(ByVal thisInt As Integer) As Integer
+        Property ThisProp(ByVal thisStr As String) As Char
+        Function ThisFunc(ByVal thisInt As Integer) As Integer
     End Interface
     '</Snippet40>
 
@@ -701,11 +701,11 @@ Public Class Class1
     '********************************************************************
     '<Snippet39>
     Public Interface IDemo
-        Sub doSomething()
+        Sub DoSomething()
     End Interface
     Public Class implementIDemo
         Implements IDemo
-        Private Sub doSomething() Implements IDemo.doSomething
+        Private Sub DoSomething() Implements IDemo.DoSomething
         End Sub
     End Class
     Dim varAsInterface As IDemo = New implementIDemo()
@@ -743,7 +743,7 @@ Public Class Class1
     '********************************************************************
     '<Snippet36>
     Class testClass1
-        Sub showHello()
+        Sub ShowHello()
             ' Display only the word "Hello"
             MsgBox(str.Left("Hello World", 5))
         End Sub
@@ -753,24 +753,24 @@ Public Class Class1
 
     '********************************************************************
     '<Snippet34>
-    Public Sub testImplements()
+    Public Sub TestImplements()
         ' This procedure tests the interface implementation by
         ' creating an instance of the class that implements ICustomerInfo.
         Dim cust As ICustomerInfo = New customerInfo()
         ' Associate an event handler with the event that is raised by
         ' the cust object.
-        AddHandler cust.updateComplete, AddressOf handleUpdateComplete
-        ' Set the customerName Property
-        cust.customerName = "Fred"
-        ' Retrieve and display the customerName property.
-        MsgBox("Customer name is: " & cust.customerName)
-        ' Call the updateCustomerStatus procedure, which raises the
-        ' updateComplete event.
-        cust.updateCustomerStatus()
+        AddHandler cust.UpdateComplete, AddressOf HandleUpdateComplete
+        ' Set the CustomerName Property
+        cust.CustomerName = "Fred"
+        ' Retrieve and display the CustomerName property.
+        MsgBox("Customer name is: " & cust.CustomerName)
+        ' Call the UpdateCustomerStatus procedure, which raises the
+        ' UpdateComplete event.
+        cust.UpdateCustomerStatus()
     End Sub
 
-    Sub handleUpdateComplete()
-        ' This is the event handler for the updateComplete event.
+    Sub HandleUpdateComplete()
+        ' This is the event handler for the UpdateComplete event.
         MsgBox("Update is complete.")
     End Sub
     '</Snippet34>
@@ -779,18 +779,18 @@ Public Class Class1
     '********************************************************************
     '<Snippet33>
     Public Interface ICustomerInfo
-        Event updateComplete()
-        Property customerName() As String
-        Sub updateCustomerStatus()
+        Event UpdateComplete()
+        Property CustomerName() As String
+        Sub UpdateCustomerStatus()
     End Interface
 
     Public Class customerInfo
         Implements ICustomerInfo
         ' Storage for the property value.
         Private customerNameValue As String
-        Public Event updateComplete() Implements ICustomerInfo.updateComplete
+        Public Event UpdateComplete() Implements ICustomerInfo.UpdateComplete
         Public Property CustomerName() As String _
-            Implements ICustomerInfo.customerName
+            Implements ICustomerInfo.CustomerName
             Get
                 Return customerNameValue
             End Get
@@ -801,18 +801,18 @@ Public Class Class1
             End Set
         End Property
 
-        Public Sub updateCustomerStatus() _
-            Implements ICustomerInfo.updateCustomerStatus
+        Public Sub UpdateCustomerStatus() _
+            Implements ICustomerInfo.UpdateCustomerStatus
             ' Add code here to update the status of this account.
             ' Raise an event to indicate that this procedure is done.
-            RaiseEvent updateComplete()
+            RaiseEvent UpdateComplete()
         End Sub
     End Class
     '</Snippet33>
 
 
     '********************************************************************
-    Sub testIf()
+    Sub TestIf()
         '<Snippet32>
         Dim number, digits As Integer
         Dim myString As String
@@ -831,7 +831,7 @@ Public Class Class1
 
     '********************************************************************
     '<Snippet31>
-    Sub gotoStatementDemo()
+    Sub GoToStatementDemo()
         Dim number As Integer = 1
         Dim sampleString As String
         ' Evaluate number and branch to appropriate label.
@@ -855,7 +855,7 @@ LastLine:
         ' Define a private local variable to store the property value.
         Private currentTime As String
         ' Define the read-only property.
-        Public ReadOnly Property dateAndTime() As String
+        Public ReadOnly Property DateAndTime() As String
             Get
                 ' The Get procedure is called automatically when the
                 ' value of the property is retrieved.
@@ -876,9 +876,9 @@ LastLine:
 
     '********************************************************************
     '<Snippet28>
-    ReadOnly Property quoteForTheDay() As String
+    ReadOnly Property QuoteForTheDay() As String
         Get
-            quoteForTheDay = quoteValue
+            QuoteForTheDay = quoteValue
             Exit Property
         End Get
     End Property
@@ -890,7 +890,7 @@ LastLine:
         Private quoteValue As String = "No quote assigned yet."
 
         '<Snippet29>
-        ReadOnly Property quoteForTheDay() As String
+        ReadOnly Property QuoteForTheDay() As String
             Get
                 Return quoteValue
             End Get
@@ -903,11 +903,11 @@ LastLine:
 
     '********************************************************************
     '<Snippet25>
-    Public Function calcSum(ByVal ParamArray args() As Double) As Double
-        calcSum = 0
+    Public Function CalcSum(ByVal ParamArray args() As Double) As Double
+        CalcSum = 0
         If args.Length <= 0 Then Exit Function
         For i As Integer = 0 To UBound(args, 1)
-            calcSum += args(i)
+            CalcSum += args(i)
         Next i
     End Function
     '</Snippet25>
@@ -917,7 +917,7 @@ LastLine:
     Class WrapFunction
         ' Used in "Function Statement (Visual Basic)" and "Exit Statement (Visual Basic)"
         '<Snippet24>
-        Function myFunction(ByVal j As Integer) As Double
+        Function MyFunction(ByVal j As Integer) As Double
             Return 3.87 * j
         End Function
         '</Snippet24>
@@ -927,8 +927,8 @@ LastLine:
     '********************************************************************
     ' Used in "Function Statement (Visual Basic)" and "Exit Statement (Visual Basic)"
     '<Snippet23>
-    Function myFunction(ByVal j As Integer) As Double
-        myFunction = 3.87 * j
+    Function MyFunction(ByVal j As Integer) As Double
+        MyFunction = 3.87 * j
         Exit Function
     End Function
     '</Snippet23>
@@ -974,7 +974,7 @@ LastLine:
 
     '********************************************************************
     '<Snippet20>
-    Sub exitStatementDemo()
+    Sub ExitStatementDemo()
         Dim demoNum As Single
         ' Set up an infinite loop.
         Do
@@ -1021,7 +1021,7 @@ LastLine:
 
     '********************************************************************
     '<Snippet17>
-    Sub exitDoExample()
+    Sub ExitDoExample()
         Dim counter As Integer = 0
         Dim number As Integer = 8
         Do Until number = 10
@@ -1036,11 +1036,11 @@ LastLine:
 
     '********************************************************************
     '<Snippet15>
-    Declare Function getUserName Lib "advapi32.dll" Alias "GetUserNameA" (
+    Declare Function GetUserName Lib "advapi32.dll" Alias "GetUserNameA" (
         ByVal lpBuffer As String, ByRef nSize As Integer) As Integer
-    Sub getUser()
+    Sub GetUser()
         Dim buffer As String = New String(CChar(" "), 25)
-        Dim retVal As Integer = getUserName(buffer, 25)
+        Dim retVal As Integer = GetUserName(buffer, 25)
         Dim userName As String = Strings.Left(buffer, InStr(buffer, Chr(0)) - 1)
         MsgBox(userName)
     End Sub
@@ -1088,7 +1088,7 @@ LastLine:
     Public Sub CallStatement()
         '<Snippet9>
         ' (1) Call a Sub procedure.
-        Call printToDebugWindow("Hello World")
+        Call PrintToDebugWindow("Hello World")
         '</Snippet9>
 
         '<Snippet11>
@@ -1104,7 +1104,7 @@ LastLine:
     '<Snippet10>
 
     ' The above statement passes control to the following Sub procedure.
-    Sub printToDebugWindow(ByVal anyString As String)
+    Sub PrintToDebugWindow(ByVal anyString As String)
         Debug.WriteLine(anyString)
     End Sub
     '</Snippet10>
@@ -1115,7 +1115,7 @@ LastLine:
     ' (3) Call a Microsoft Windows DLL procedure. The Declare statement
     ' must be Private in a class, not in a module.
     Private Declare Sub MessageBeep Lib "User32" (ByVal N As Integer)
-    Sub callBeepDll()
+    Sub CallBeepDll()
         Call MessageBeep(-1)
     End Sub
     '</Snippet12>
@@ -1148,13 +1148,13 @@ Jump:   FileOpen(1, "MYFILE", OpenMode.Input)
     End Sub
 
     ' added 6/20/2005 to get around bogus ellipsis (VSW#523299)
-    Private Shared Sub labelsFused()
+    Private Shared Sub LabelsFused()
         '<Snippet708>
 Jump:   FileOpen(1, "testFile", OpenMode.Input)
         ' ...
 120:    FileClose(1)
         '</Snippet708>
-    End Sub ' labelsFused()
+    End Sub ' LabelsFused()
 
 
     '****************************************************************************
@@ -1204,7 +1204,7 @@ Jump:   FileOpen(1, "testFile", OpenMode.Input)
     '****************************************************************************
     '<Snippet5>
     Public Class dictionary
-        Public Sub add(ByVal et As String, ByVal kt As Integer)
+        Public Sub Add(ByVal et As String, ByVal kt As Integer)
             Dim dk As Integer
             If kt.CompareTo(dk) = 0 Then
             End If
@@ -1215,9 +1215,9 @@ Jump:   FileOpen(1, "testFile", OpenMode.Input)
 
     '****************************************************************************
     '<Snippet2>
-    Public Function howMany(ByVal ch As Char, ByVal st As String) As Integer
+    Public Function HowMany(ByVal ch As Char, ByVal st As String) As Integer
     End Function
-    Dim howManyA As Integer = howMany("a"c, "How many a's in this string?")
+    Dim howManyA As Integer = HowMany("a"c, "How many a's in this string?")
     '</Snippet2>
 
 
@@ -1227,11 +1227,11 @@ Jump:   FileOpen(1, "testFile", OpenMode.Input)
         SetLastError:=True, CharSet:=CharSet.Unicode,
         ExactSpelling:=True,
         CallingConvention:=CallingConvention.StdCall)>
-    Public Shared Function moveFile(ByVal src As String,
+    Public Shared Function MoveFile(ByVal src As String,
       ByVal dst As String) As Boolean
         ' This function copies a file from the path src to the path dst.
         ' Leave this function empty. The DLLImport attribute forces calls
-        ' to moveFile to be forwarded to MoveFileW in KERNEL32.DLL.
+        ' to MoveFile to be forwarded to MoveFileW in KERNEL32.DLL.
     End Function
     '</Snippet1>
 
@@ -1241,22 +1241,22 @@ End Class
 Module Module1
 
     Sub Main()
-        ' In the following function call, calcSum's local variables 
+        ' In the following function call, CalcSum's local variables 
         ' are assigned the following values: args(0) = 4, args(1) = 3, 
         ' and so on. The displayed sum is 10.
-        Dim returnedValue As Double = calcSum(4, 3, 2, 1)
+        Dim returnedValue As Double = CalcSum(4, 3, 2, 1)
         Console.WriteLine("Sum: " & returnedValue)
         ' Parameter args accepts zero or more arguments. The sum 
         ' displayed by the following statements is 0.
-        returnedValue = calcSum()
+        returnedValue = CalcSum()
         Console.WriteLine("Sum: " & returnedValue)
     End Sub
 
-    Public Function calcSum(ByVal ParamArray args() As Double) As Double
-        calcSum = 0
+    Public Function CalcSum(ByVal ParamArray args() As Double) As Double
+        CalcSum = 0
         If args.Length <= 0 Then Exit Function
         For i As Integer = 0 To UBound(args, 1)
-            calcSum += args(i)
+            CalcSum += args(i)
         Next i
     End Function
 
