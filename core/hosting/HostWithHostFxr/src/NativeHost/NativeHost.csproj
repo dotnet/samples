@@ -20,15 +20,15 @@
       <NetHostName Condition="$([MSBuild]::IsOsPlatform('OSX'))">libnethost.dylib</NetHostName>
     </PropertyGroup>
 
-    <Exec Command="g++ nativehost.cpp -I$(NetHostDir) -Iinc -D LINUX -std=c++11 -o $(NativeBinDir)/nativehost -ldl -lnethost -L$(NetHostDir) -Wl,-rpath,'$ORIGIN',--disable-new-dtags"
+    <Exec Command="g++ nativehost.cpp -I&quot;$(NetHostDir)&quot; -Iinc -D LINUX -std=c++11 -o &quot;$(NativeBinDir)/nativehost&quot; -ldl -lnethost -L&quot;$(NetHostDir)&quot; -Wl,-rpath,'$ORIGIN',--disable-new-dtags"
           ConsoleToMsBuild="true"
           Condition="$([MSBuild]::IsOsPlatform('Linux'))" />
 
-    <Exec Command="g++ nativehost.cpp -I$(NetHostDir) -Iinc -D OSX -std=c++11 -o $(NativeBinDir)/nativehost -ldl -lnethost -L$(NetHostDir) -Wl,-rpath,'@loader_path'"
+    <Exec Command="g++ nativehost.cpp -I&quot;$(NetHostDir)&quot; -Iinc -D OSX -std=c++11 -o &quot;$(NativeBinDir)/nativehost&quot; -ldl -lnethost -L&quot;$(NetHostDir)&quot; -Wl,-rpath,'@loader_path'"
           ConsoleToMsBuild="true"
           Condition="$([MSBuild]::IsOsPlatform('OSX'))" />
 
-    <Exec Command="cl.exe nativehost.cpp /I $(NetHostDir) /I inc /D WINDOWS /EHsc /Od /GS /sdl /Zi /Fo$(NativeBinDir)\ /Fd$(NativeBinDir)\nativehost.pdb /link $(NetHostDir)/nethost.lib /out:$(NativeBinDir)\nativehost.exe"
+    <Exec Command="cl.exe nativehost.cpp /I &quot;$(NetHostDir)&quot; /I inc /D WINDOWS /EHsc /Od /GS /sdl /Zi /Fo&quot;$(NativeBinDir)\\&quot; /Fd&quot;$(NativeBinDir)\nativehost.pdb&quot; /link &quot;$(NetHostDir)\nethost.lib&quot; /out:&quot;$(NativeBinDir)\nativehost.exe&quot;"
           ConsoleToMsBuild="true"
           Condition="$([MSBuild]::IsOsPlatform('Windows'))" />
 
