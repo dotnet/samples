@@ -765,12 +765,12 @@ Public Class Class1
         ' Retrieve and display the CustomerName property.
         MsgBox("Customer name is: " & cust.CustomerName)
         ' Call the UpdateCustomerStatus procedure, which raises the
-        ' updateComplete event.
+        ' UpdateComplete event.
         cust.UpdateCustomerStatus()
     End Sub
 
     Sub HandleUpdateComplete()
-        ' This is the event handler for the updateComplete event.
+        ' This is the event handler for the UpdateComplete event.
         MsgBox("Update is complete.")
     End Sub
     '</Snippet34>
@@ -805,7 +805,7 @@ Public Class Class1
             Implements ICustomerInfo.UpdateCustomerStatus
             ' Add code here to update the status of this account.
             ' Raise an event to indicate that this procedure is done.
-            RaiseEvent updateComplete()
+            RaiseEvent UpdateComplete()
         End Sub
     End Class
     '</Snippet33>
