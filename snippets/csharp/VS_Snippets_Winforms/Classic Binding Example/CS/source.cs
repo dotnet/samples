@@ -133,7 +133,7 @@ public class Form1 : System.Windows.Forms.Form
          collection; otherwise, no formatting occurs until 
          the Current object of the BindingManagerBase for 
          the data source changes. */
-         Binding b = new Binding
+      Binding b = new Binding
          ("Text", ds, "customers.custToOrders.OrderAmount");
       b.Parse+=new ConvertEventHandler(CurrencyStringToDecimal);
       b.Format+=new ConvertEventHandler(DecimalToCurrencyString);
