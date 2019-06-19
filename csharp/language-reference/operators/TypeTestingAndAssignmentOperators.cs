@@ -13,6 +13,7 @@ namespace operators
             IsOperatorExample.Main();
             IsOperatorWithInt();
             IsOperatorTypePattern();
+            AsOperator();
         }
 
         private static void Assignment()
@@ -118,6 +119,18 @@ namespace operators
                 Console.WriteLine(a + b);  // output 30
             }
             // </SnippetIsTypePattern>
+        }
+
+        private static void AsOperator()
+        {
+            // <SnippetAsOperator>
+            IEnumerable<int> numbers = new[] { 10, 20, 30 };
+            IList<int> indexableNumbers = numbers as IList<int>;
+            if (indexableNumbers != null)
+            {
+                Console.WriteLine(indexableNumbers[0] + indexableNumbers[indexableNumbers.Count - 1]);  // output: 40
+            }
+            // </SnippetAsOperator>
         }
     }
 }
