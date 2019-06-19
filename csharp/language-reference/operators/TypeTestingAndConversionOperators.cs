@@ -12,6 +12,9 @@ namespace operators
             IsOperatorWithInt();
             IsOperatorTypePattern();
             AsOperator();
+            TypeOf();
+            TypeOfUnboundGeneric();
+            TypeOfExample.Main();
         }
 
         private static void Cast()
@@ -84,5 +87,50 @@ namespace operators
             }
             // </SnippetAsOperator>
         }
+
+        private static void TypeOf()
+        {
+            // <SnippetTypeOf>
+            void PrintType<T>() => Console.WriteLine(typeof(T));
+
+            Console.WriteLine(typeof(List<string>));
+            PrintType<int>();
+            PrintType<System.Int32>();
+            PrintType<Dictionary<int, char>>();
+            // Output:
+            // System.Collections.Generic.List`1[System.String]
+            // System.Int32
+            // System.Int32
+            // System.Collections.Generic.Dictionary`2[System.Int32,System.Char]
+            // </SnippetTypeOf>
+        }
+
+        private static void TypeOfUnboundGeneric()
+        {
+            // <SnippetTypeOfUnboundGeneric>
+            Console.WriteLine(typeof(Dictionary<,>));
+            // Output:
+            // System.Collections.Generic.Dictionary`2[TKey,TValue]
+            // </SnippetTypeOfUnboundGeneric>
+        }
+
+        // <SnippetTypeCheckWithTypeOf>
+        public class Animal { }
+
+        public class Giraffe : Animal { }
+
+        public static class TypeOfExample
+        {
+            public static void Main()
+            {
+                object b = new Giraffe();
+                Console.WriteLine(b is Animal);  // output: True
+                Console.WriteLine(b.GetType() == typeof(Animal));  // output: False
+
+                Console.WriteLine(b is Giraffe);  // output: True
+                Console.WriteLine(b.GetType() == typeof(Giraffe));  // output: True
+            }
+        }
+        // </SnippetTypeCheckWithTypeOf>
     }
 }
