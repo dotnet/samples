@@ -68,8 +68,8 @@ namespace operators
             // <SnippetIsTypePattern>
             int i = 23;
             object iBoxed = i;
-            int? j = 7;
-            if (iBoxed is int a && j is int b)
+            int? jNullable = 7;
+            if (iBoxed is int a && jNullable is int b)
             {
                 Console.WriteLine(a + b);  // output 30
             }
@@ -80,10 +80,10 @@ namespace operators
         {
             // <SnippetAsOperator>
             IEnumerable<int> numbers = new[] { 10, 20, 30 };
-            IList<int> indexableNumbers = numbers as IList<int>;
-            if (indexableNumbers != null)
+            IList<int> indexable = numbers as IList<int>;
+            if (indexable != null)
             {
-                Console.WriteLine(indexableNumbers[0] + indexableNumbers[indexableNumbers.Count - 1]);  // output: 40
+                Console.WriteLine(indexable[0] + indexable[indexable.Count - 1]);  // output: 40
             }
             // </SnippetAsOperator>
         }
