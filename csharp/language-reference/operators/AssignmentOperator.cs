@@ -3,17 +3,17 @@ using System.Collections.Generic;
 
 namespace operators
 {
-    public static class AssignmentExamples
+    public static class AssignmentOperator
     {
         public static void Examples()
         {
-            VariablePropertyIndexerExample();
-            RefAssignmentExample();
+            Simple();
+            RefAssignment();
         }
 
-        private static void VariablePropertyIndexerExample()
+        private static void Simple()
         {
-            // <SnippetAssignments>
+            // <SnippetSimple>
             var numbers = new List<double>() { 1.0, 2.0, 3.0 };
 
             Console.WriteLine(numbers.Capacity);
@@ -32,10 +32,10 @@ namespace operators
             // Output:
             // 1
             // 5
-            // </SnippetAssignments>
+            // </SnippetSimple>
         }
 
-        private static void RefAssignmentExample()
+        private static void RefAssignment()
         {
             // <SnippetRefAssignment>
             void Display(double[] s) => Console.WriteLine(string.Join(" ", s));

@@ -34,8 +34,12 @@ namespace operators
             PointerOperators.Examples();
             Console.WriteLine();
 
-            Console.WriteLine("= Type-testing and assignment operators examples");
-            TypeTestingAndAssignmentOperators.Examples();
+            Console.WriteLine("= Type-testing and conversion operators examples");
+            TypeTestingAndConversionOperators.Examples();
+            Console.WriteLine();
+
+            Console.WriteLine("============== = operator examples =============");
+            AssignmentOperator.Examples();
             Console.WriteLine();
 
             Console.WriteLine("============== + operator examples =============");
