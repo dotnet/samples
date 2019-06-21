@@ -29,6 +29,7 @@ Build and Run
 1) In order to build and run, all prerequisites must be installed. The following are also required:
 
     * The C++ compiler (`cl.exe` or `g++`) must be on the path.
+      * On Windows, a [developer command prompt](https://docs.microsoft.com/cpp/build/building-on-the-command-line#developer_command_prompt_shortcuts) should be used.
     * The C++ compiler (`cl.exe` or `g++`) and `dotnet` must be the same bitness.
 
 1) Navigate to the root directory and run `dotnet build`.
