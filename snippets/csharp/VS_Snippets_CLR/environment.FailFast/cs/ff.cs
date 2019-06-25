@@ -11,10 +11,12 @@ class Example
        // terminate immediately. The try-finally block is not executed
        // and is included only to demonstrate that instructions within
        // try-catch blocks and finalizers are not performed.
-       try {
+       try 
+       {
            Environment.FailFast(causeOfFailure);
        }
-       finally {
+       finally 
+       {
            Console.WriteLine("This finally block will not be executed.");
        }
    }
