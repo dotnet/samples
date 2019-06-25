@@ -65,6 +65,7 @@ namespace operators
             var a = new int[3] { 10, 20, 30 };
             var b = new int[] { 10, 20, 30 };
             var c = new[] { 10, 20, 30 };
+            Console.WriteLine(c.GetType());  // output: System.Int32[]
             // </SnippetArrayInitialization>
         }
 
