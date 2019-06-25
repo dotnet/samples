@@ -9,7 +9,6 @@ public class DataProtectionSample
 
     public static void Main()
     {
-        
         // Create a simple byte array containing data to be encrypted.
         byte [] secret = { 0, 1, 2, 3, 4, 1, 2, 3, 4 };
 
