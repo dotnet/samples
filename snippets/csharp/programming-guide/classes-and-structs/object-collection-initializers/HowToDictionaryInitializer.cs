@@ -17,7 +17,7 @@ namespace object_collection_initializers
 
         public static void Main()
         { 
-            Dictionary<int, StudentName> students = new Dictionary<int, StudentName>()
+            var students = new Dictionary<int, StudentName>()
             {
                 { 111, new StudentName { FirstName="Sachin", LastName="Karnik", ID=211 } },
                 { 112, new StudentName { FirstName="Dina", LastName="Salimzianova", ID=317 } },
@@ -28,8 +28,9 @@ namespace object_collection_initializers
             {
                 Console.WriteLine($"Student {index} is {students[index].FirstName} {students[index].LastName}");
             }
+            Console.WriteLine();		
 
-            Dictionary<int, StudentName> students2 = new Dictionary<int, StudentName>()
+            var students2 = new Dictionary<int, StudentName>()
             {
                 [111] = new StudentName { FirstName="Sachin", LastName="Karnik", ID=211 },
                 [112] = new StudentName { FirstName="Dina", LastName="Salimzianova", ID=317 } ,
