@@ -1,4 +1,3 @@
-//<SnippetMarginValidationRuleCODE>
 using System.Globalization;
 using System.Windows.Controls;
 
@@ -43,4 +42,3 @@ namespace SDKSample
         }
     }
 }
-//</SnippetMarginValidationRuleCODE>
