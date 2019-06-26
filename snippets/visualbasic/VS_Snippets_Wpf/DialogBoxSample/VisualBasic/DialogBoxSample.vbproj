@@ -7,7 +7,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>
     </RootNamespace>
-    <AssemblyName>DialogBoxSampleVisualBasic</AssemblyName>
+    <AssemblyName>DialogBoxSample</AssemblyName>
     <MinFrameworkVersionRequired>3.0</MinFrameworkVersionRequired>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
@@ -33,7 +33,6 @@
     <DefineTrace>true</DefineTrace>
     <IncrementalBuild>true</IncrementalBuild>
     <OutputPath>bin\</OutputPath>
-    <DocumentationFile>DialogBoxSampleVisualBasic.xml</DocumentationFile>
     <NoWarn>42016,42017,42018,42019,42032,42314</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -43,7 +42,6 @@
     <IncrementalBuild>false</IncrementalBuild>
     <Optimize>true</Optimize>
     <OutputPath>bin\</OutputPath>
-    <DocumentationFile>DialogBoxSampleVisualBasic.xml</DocumentationFile>
     <NoWarn>42016,42017,42018,42019,42032,42314</NoWarn>
   </PropertyGroup>
   <ItemGroup>

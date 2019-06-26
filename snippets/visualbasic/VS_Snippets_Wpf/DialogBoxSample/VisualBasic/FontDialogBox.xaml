@@ -2,7 +2,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     x:Class="SDKSample.FontDialogBox"
-    xmlns:dialogBoxSample="clr-namespace:DialogBoxSampleVisualBasic" 
+    xmlns:dialogBoxSample="clr-namespace:SDKSample" 
     Title="Format Font Dialog Box"
     Height="300"
     Width="500"
