@@ -3,7 +3,7 @@ Imports System
 
 Public Class ParseTest
 
-    <FlagsAttribute()> _
+    <Flags()> _
     Enum Colors
         Red = 1
         Green = 2
