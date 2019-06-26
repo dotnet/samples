@@ -12,7 +12,7 @@ enum class BoilingPoints
    Fahrenheit = 212
 };
 
-[FlagsAttribute]
+[Flags]
 
 enum class Colors
 {
