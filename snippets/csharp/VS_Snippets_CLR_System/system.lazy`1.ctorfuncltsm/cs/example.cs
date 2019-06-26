@@ -75,8 +75,7 @@ class Program
         {
             large = lazyLargeObject.Value;
 
-            // The following line introduces an artificial delay, to exaggerate the race 
-            // condition.
+            // The following line introduces an artificial delay to exaggerate the race condition.
             Thread.Sleep(5); 
 
             // IMPORTANT: Lazy initialization is thread-safe, but it doesn't protect the  

@@ -84,7 +84,7 @@
       <asp:TextBox id="TextBox5" runat="server" />
 
       <asp:Label id="Label7" runat="server" AssociatedControlID="TextBox6">
-        Country</asp:Label>
+        Country/Region</asp:Label>
       <asp:TextBox id="TextBox6" runat="server" />
 
       <asp:Label id="Label8" runat="server" AssociatedControlID="DropDownList1">
