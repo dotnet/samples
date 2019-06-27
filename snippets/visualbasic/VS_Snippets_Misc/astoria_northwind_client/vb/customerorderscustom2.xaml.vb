@@ -46,7 +46,7 @@ Partial Public Class CustomerOrdersCustom
         Catch ex As DataServiceQueryException
             MessageBox.Show("The query could not be completed:\n" + ex.ToString())
         Catch ex As InvalidOperationException
-            MessageBox.Show("The following error occured:\n" + ex.ToString())
+            MessageBox.Show("The following error occurred:\n" + ex.ToString())
         End Try
     End Sub
     '<snippetCustomersOrdersDeleteRelated>

@@ -531,7 +531,7 @@ Class Source
 
     'string esqlQuery = @"SELECT REF(p) FROM AdventureWorksEntities.Products as p"; 
     '<snippeteSQLRefTypes> 
-    Private Shared Sub ExectueRefTypeQuery(ByVal esqlQuery As String)
+    Private Shared Sub ExecuteRefTypeQuery(ByVal esqlQuery As String)
         If esqlQuery.Length = 0 Then
             Console.WriteLine("The query string is empty.")
             Exit Sub

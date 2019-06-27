@@ -25,10 +25,10 @@ End Module
 '    Bonjour
 '    The current UI culture is ru-RU
 '    
-'    Unhandled Exception: System.Resources.MissingSatelliteAssemblyException: The satellite ass
-'    embly named "HelloWorld.resources.dll, PublicKeyToken=" for fallback culture "en" either c
-'    ould not be found or could not be loaded. This is generally a setup problem. Please consid
-'    er reinstalling or repairing the application.
+'    Unhandled Exception: System.Resources.MissingSatelliteAssemblyException: 
+'    The satellite assembly named "HelloWorld.resources.dll, PublicKeyToken=" for fallback culture 
+'    "en" either could not be found or could not be loaded. This is generally a setup problem. 
+'    Please consider reinstalling or repairing the application.
 '       at System.Resources.ManifestBasedResourceGroveler.HandleSatelliteMissing()
 '       at System.Resources.ManifestBasedResourceGroveler.GrovelForResourceSet(CultureInfo cult
 '    ure, Dictionary`2 localResourceSets, Boolean tryParents, Boolean createIfNotExists, StackC

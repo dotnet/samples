@@ -28,14 +28,14 @@ public class MyInstallerClass: Installer
    private void MyInstaller_BeforeRollBack(object sender, InstallEventArgs e)
    {
       Console.WriteLine("");
-      Console.WriteLine("BeforeRollback Event occured.");
+      Console.WriteLine("BeforeRollback Event occurred.");
       Console.WriteLine("");        
    }
    // Event handler for 'AfterRollback' event.
    private void MyInstaller_AfterRollback(object sender, InstallEventArgs e)
    {
       Console.WriteLine("");
-      Console.WriteLine("AfterRollback Event occured.");
+      Console.WriteLine("AfterRollback Event occurred.");
       Console.WriteLine("");        
    }
    // Override the 'Install' method.

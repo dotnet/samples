@@ -144,7 +144,7 @@ Public Class RegistryPermissionDemo
             Console.WriteLine("Write access Registry variables = " + vbLf + readPerm1.GetPathList(RegistryPermissionAccess.AllAccess))
         Catch e As ArgumentException
             ' RegistryPermissionAccess.AllAccess can not be used as a parameter for GetPathList.
-            Console.WriteLine("An ArgumentException occured as a result of using AllAccess. " + _
+            Console.WriteLine("An ArgumentException occurred as a result of using AllAccess. " + _
             "AllAccess cannot be used as a parameter in GetPathList because it represents more than one " + _
             "type of registry variable access : " + vbLf + e.Message)
         End Try

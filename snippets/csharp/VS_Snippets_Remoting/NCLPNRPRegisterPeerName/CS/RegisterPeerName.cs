@@ -156,14 +156,14 @@ namespace PNRPSample
                 // P2P is not supported on Windows Server 2003
                 if (e.InnerException != null)
                 { 
-                    Console.WriteLine("Error occured while attempting to register the PeerName: {0}", e.Message);
+                    Console.WriteLine("Error occurred while attempting to register the PeerName: {0}", e.Message);
                     Console.WriteLine(e.StackTrace);
 
                     Console.WriteLine("Inner Exception is {0}", e.InnerException);
                 }    
                 else 
                 {
-                    Console.WriteLine("Error occured while attempting to register the PeerName: {0}", e.Message);
+                    Console.WriteLine("Error occurred while attempting to register the PeerName: {0}", e.Message);
                     Console.WriteLine(usage);
 
                     Console.WriteLine("Exception is {0}", e);

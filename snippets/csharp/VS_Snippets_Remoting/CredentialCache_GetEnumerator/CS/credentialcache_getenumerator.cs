@@ -66,9 +66,9 @@ class CredentialCacheSnippet {
         catch(WebException e) 
         {
             if (e.Response != null)
-                Console.WriteLine("\r\nFailed to obtain a response. The following error occured : {0}",((HttpWebResponse)(e.Response)).StatusDescription); 
+                Console.WriteLine("\r\nFailed to obtain a response. The following error occurred : {0}",((HttpWebResponse)(e.Response)).StatusDescription); 
             else
-                Console.WriteLine("\r\nFailed to obtain a response. The following error occured : {0}",e.Status); 
+                Console.WriteLine("\r\nFailed to obtain a response. The following error occurred : {0}",e.Status); 
         }
         catch(Exception e)
         {

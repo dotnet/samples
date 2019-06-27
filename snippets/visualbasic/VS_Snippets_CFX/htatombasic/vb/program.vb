@@ -98,7 +98,7 @@ Module Program
             ' </Snippet8>
 
         Catch ce As CommunicationException
-            Console.WriteLine("An exception occured: {0}", ce.Message)
+            Console.WriteLine("An exception occurred: {0}", ce.Message)
             svcHost.Abort()
         End Try
     End Sub

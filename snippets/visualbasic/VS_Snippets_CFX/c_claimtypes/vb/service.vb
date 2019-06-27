@@ -67,7 +67,7 @@ Public Class EchoService
             If TryGetClaimValue(Of String)(claimSet, ClaimTypes.Upn, tmpName) Then
                 userName = tmpName
             Else
-                ' Try to find an X500DisinguishedName claim. This has been generated from the client certificate.
+                ' Try to find an X500DistinguishedName claim. This has been generated from the client certificate.
                 Dim tmpDistinguishedName As X500DistinguishedName = Nothing
                 If TryGetClaimValue(Of X500DistinguishedName)(claimSet, ClaimTypes.X500DistinguishedName, tmpDistinguishedName) Then
                     certificateSubjectName = tmpDistinguishedName.Name

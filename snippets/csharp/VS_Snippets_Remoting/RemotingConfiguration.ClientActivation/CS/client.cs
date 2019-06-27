@@ -29,7 +29,7 @@ public class ClientClass {
         }
 	catch (Exception ex)
 	{
-	   Console.WriteLine("An exception occured: " + ex.Message);
+	   Console.WriteLine("An exception occurred: " + ex.Message);
         }
     }
 }

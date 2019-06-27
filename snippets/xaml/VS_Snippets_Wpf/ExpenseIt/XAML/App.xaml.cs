@@ -19,7 +19,7 @@ namespace ExpenseIt
             // The defualt dialog box displays application-specific information that
             // an attacker may be able to use.
 #if(!DEBUG)
-            MessageBox.Show("An error occured.");
+            MessageBox.Show("An error occurred.");
             e.Handled = true;
 #endif
         }

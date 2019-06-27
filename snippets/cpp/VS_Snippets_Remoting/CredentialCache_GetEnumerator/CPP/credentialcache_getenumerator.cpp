@@ -55,9 +55,9 @@ void GetPage( String^ url, String^ userName, String^ password, String^ domainNam
    catch ( WebException^ e ) 
    {
       if ( e->Response != nullptr )
-            Console::WriteLine( "\r\nFailed to obtain a response. The following error occured : {0}", (dynamic_cast<HttpWebResponse^>(e->Response))->StatusDescription );
+            Console::WriteLine( "\r\nFailed to obtain a response. The following error occurred : {0}", (dynamic_cast<HttpWebResponse^>(e->Response))->StatusDescription );
       else
-            Console::WriteLine( "\r\nFailed to obtain a response. The following error occured : {0}", e->Status );
+            Console::WriteLine( "\r\nFailed to obtain a response. The following error occurred : {0}", e->Status );
    }
    catch ( Exception^ e ) 
    {

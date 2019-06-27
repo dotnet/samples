@@ -73,7 +73,7 @@ int main()
    }
    catch ( WebException^ e ) 
    {
-      Console::WriteLine( "\r\nException Raised. The following error occured : {0}", e->Message );
+      Console::WriteLine( "\r\nException Raised. The following error occurred : {0}", e->Message );
    }
    catch ( Exception^ e ) 
    {

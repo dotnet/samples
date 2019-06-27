@@ -52,7 +52,7 @@ namespace NorthwindClient
             }
             catch (ApplicationException ex)
             {
-                Console.WriteLine("An error occured:" + ex.Message + ex.InnerException.Message ?? string.Empty);
+                Console.WriteLine("An error occurred:" + ex.Message + ex.InnerException.Message ?? string.Empty);
             }
             catch (Exception ex)
             {

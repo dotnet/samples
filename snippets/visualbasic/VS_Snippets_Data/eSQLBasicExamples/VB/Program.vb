@@ -590,7 +590,7 @@ Module Program
 
     'string esqlQuery = @"SELECT REF(p) FROM AdventureWorksEntities.Product as p"
     '<snippeteSQLRefTypes>
-    Sub ExectueRefTypeQuery(ByVal esqlQuery As String)
+    Sub ExecuteRefTypeQuery(ByVal esqlQuery As String)
         If (esqlQuery.Length = 0) Then
             Console.WriteLine("The query string is empty.")
             Return
@@ -698,7 +698,7 @@ Module Program
         'ReturnNestedCollectionWithEntityCommand()
         'StoredProcWithEntityCommand()
         'ExecuteStructuralTypeQuery("SELECT VALUE Product FROM AdventureWorksEntities.Product AS Product")
-        'ExectueRefTypeQuery("SELECT REF(p) FROM AdventureWorksEntities.Product as p")
+        'ExecuteRefTypeQuery("SELECT REF(p) FROM AdventureWorksEntities.Product as p")
         'ExecutePrimitiveTypeQuery("SELECT VALUE AVG(p.ListPrice) FROM AdventureWorksEntities.Product as p")
 
     End Sub

@@ -23,7 +23,7 @@ Namespace CustomControlNameSpace
             myButton.Text = "MyButton"
             Controls.Add(myButton)
          Catch myExeception As Exception
-            Context.Response.Write("Execption occured:" & myExeception.Message)
+            Context.Response.Write("Execption occurred:" & myExeception.Message)
          End Try
       End Sub
 

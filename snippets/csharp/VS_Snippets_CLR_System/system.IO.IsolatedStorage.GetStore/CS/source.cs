@@ -29,7 +29,7 @@ class Program
         }
         catch (Exception e)
         {
-            Console.Write("Exception occured: {0}", e.ToString());
+            Console.Write("Exception occurred: {0}", e.ToString());
             Environment.ExitCode = 101;
         }
         return;

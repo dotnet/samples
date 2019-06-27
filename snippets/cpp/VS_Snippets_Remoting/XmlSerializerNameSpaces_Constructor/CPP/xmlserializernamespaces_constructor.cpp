@@ -65,7 +65,7 @@ public:
       }
       catch ( Exception^ e ) 
       {
-         Console::WriteLine( "Exception: {0} occured", e->Message );
+         Console::WriteLine( "Exception: {0} occurred", e->Message );
       }
    }
 // </Snippet1>

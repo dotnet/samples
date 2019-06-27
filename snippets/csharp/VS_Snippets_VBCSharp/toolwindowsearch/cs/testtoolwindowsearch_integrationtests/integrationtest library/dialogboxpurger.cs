@@ -173,7 +173,7 @@ namespace Microsoft.VsSDK.IntegrationTestLibrary
             // We give millisecondsToWait sec to bring up and close the dialog box.
             signaled = this.threadDone.WaitOne(numberOfMillisecondsToWait, false);
 
-            // Kill the thread since a timeout occured.
+            // Kill the thread since a timeout occurred.
             if (!signaled)
             {
                 lock (Mutex)

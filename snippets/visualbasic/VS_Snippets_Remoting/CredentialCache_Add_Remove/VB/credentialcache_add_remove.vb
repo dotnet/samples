@@ -67,9 +67,9 @@ Class CredentialCacheSnippet
             ' </Snippet3>
         Catch e As WebException
             If Not (e.Response Is Nothing) Then
-                Console.WriteLine(ControlChars.Lf + ControlChars.Cr + "Failed to obtain a response. The following error occured : {0}", CType(e.Response, HttpWebResponse).StatusDescription)
+                Console.WriteLine(ControlChars.Lf + ControlChars.Cr + "Failed to obtain a response. The following error occurred : {0}", CType(e.Response, HttpWebResponse).StatusDescription)
             Else
-                Console.WriteLine(ControlChars.Lf + ControlChars.Cr + "Failed to obtain a response. The following error occured : {0}", e.Status)
+                Console.WriteLine(ControlChars.Lf + ControlChars.Cr + "Failed to obtain a response. The following error occurred : {0}", e.Status)
             End If
         Catch e As Exception
             Console.WriteLine(ControlChars.Cr + "The following exception was raised : {0}", e.Message)

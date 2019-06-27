@@ -5,7 +5,7 @@ class Example
 {
     public static void Main() 
     {
-       string causeOfFailure = "A catastrophic failure has occured.";
+       string causeOfFailure = "A catastrophic failure has occurred.";
 
        // Assume your application has failed catastrophically and must
        // terminate immediately. The try-finally block is not executed
