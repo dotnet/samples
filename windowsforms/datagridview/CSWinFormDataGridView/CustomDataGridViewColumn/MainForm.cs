@@ -48,7 +48,7 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
             // Employee ID -- this will be of the format:
             // [A-Z][0-9][0-9][0-9][0-9][0-9]
             //
-            // this is well sutied to using a MaskedTextBox column.
+            // this is well suited to using a MaskedTextBox column.
             //
             mtbColumn = new MaskedTextBoxColumn();
             mtbColumn.HeaderText = "Employee ID";
