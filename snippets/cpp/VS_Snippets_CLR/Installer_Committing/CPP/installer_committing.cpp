@@ -29,7 +29,7 @@ private:
    // Event handler for 'Committing' event.
    void MyInstaller_Committing( Object^ /*sender*/, InstallEventArgs^ /*e*/ )
    {
-      Console::WriteLine( "Committing Event occured." );
+      Console::WriteLine( "Committing Event occurred." );
    }
    // </Snippet1>
 

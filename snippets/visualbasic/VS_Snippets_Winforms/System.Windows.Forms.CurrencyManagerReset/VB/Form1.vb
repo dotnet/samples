@@ -87,7 +87,7 @@ Public Class Form1
         relatedCM.Position = 3
 
         ' Set cacheing to true in case current changed event
-        ' occured on set up.
+        ' occurred on set up.
         cacheChildPosition = True
       
     

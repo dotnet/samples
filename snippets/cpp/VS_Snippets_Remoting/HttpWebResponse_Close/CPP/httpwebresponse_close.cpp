@@ -26,7 +26,7 @@ void GetPage( String^ url )
    }
    catch ( WebException^ e ) 
    {
-      Console::WriteLine( "\nWebException Raised. The following error occured : {0}", e->Status );
+      Console::WriteLine( "\nWebException Raised. The following error occurred : {0}", e->Status );
    }
    catch ( Exception^ e ) 
    {

@@ -2094,7 +2094,7 @@ Class Source1
             Catch generatedExceptionName As InvalidOperationException
                 Console.WriteLine("Ensure that the key value matches the value of the object's ID property.")
             Catch generatedExceptionName As UpdateException
-                Console.WriteLine("An error has occured. Ensure that an object with the '{0}' key value exists.", orderId)
+                Console.WriteLine("An error has occurred. Ensure that an object with the '{0}' key value exists.", orderId)
             End Try
         End Using
         '</snippetAddObjectUsingKey> 

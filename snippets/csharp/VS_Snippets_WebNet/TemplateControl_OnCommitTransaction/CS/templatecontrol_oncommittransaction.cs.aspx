@@ -25,7 +25,7 @@ public class Account
     {
        // Do some database work.Exception thrown here aborts the transaction ,else commits transaction.
        
-       // Some error occured, throw an exception.
+       // Some error occurred, throw an exception.
        throw new Exception();
        // Comment the above line of code to commit the transaction.
     }

@@ -87,7 +87,7 @@ namespace MultipleControls
         //<snippet2>
         private void bindingSource1_BindingComplete(object sender, BindingCompleteEventArgs e)
         {
-            // Check if the data source has been updated, and that no error has occured.
+            // Check if the data source has been updated, and that no error has occurred.
             if (e.BindingCompleteContext == 
                 BindingCompleteContext.DataSourceUpdate && e.Exception == null)
 
@@ -149,7 +149,7 @@ namespace MultipleControls
 
         private void bmb_BindingComplete(object sender, BindingCompleteEventArgs e)
         {
-            // Check if the data source has been updated, and that no error has occured.
+            // Check if the data source has been updated, and that no error has occurred.
             if (e.BindingCompleteContext ==
                 BindingCompleteContext.DataSourceUpdate && e.Exception == null)
 

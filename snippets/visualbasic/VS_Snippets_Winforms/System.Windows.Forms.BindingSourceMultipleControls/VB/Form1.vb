@@ -82,7 +82,7 @@ Public Class Form1
     Private Sub bindingSource1_BindingComplete(ByVal sender As Object, _
         ByVal e As BindingCompleteEventArgs) Handles bindingSource1.BindingComplete
 
-        ' Check if the data source has been updated, and that no error has occured.
+        ' Check if the data source has been updated, and that no error has occurred.
         If e.BindingCompleteContext = BindingCompleteContext.DataSourceUpdate _
             AndAlso e.Exception Is Nothing Then
 
@@ -145,7 +145,7 @@ Public Class Form1
     Private Sub bmb_BindingComplete(ByVal sender As Object, ByVal e As BindingCompleteEventArgs) _
         Handles bmb.BindingComplete
 
-        ' Check if the data source has been updated, and that no error has occured.
+        ' Check if the data source has been updated, and that no error has occurred.
         If e.BindingCompleteContext = BindingCompleteContext.DataSourceUpdate _
             AndAlso e.Exception Is Nothing Then
 

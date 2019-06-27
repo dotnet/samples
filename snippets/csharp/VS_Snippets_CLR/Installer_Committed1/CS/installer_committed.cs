@@ -24,7 +24,7 @@ public class MyInstallerClass: Installer
    // Event handler for 'Committed' event.
    private void MyInstaller_Committed(object sender, InstallEventArgs e)
    {
-      Console.WriteLine("Committed Event occured.");
+      Console.WriteLine("Committed Event occurred.");
    }
 // </Snippet1>
    // Override the 'Install' method.

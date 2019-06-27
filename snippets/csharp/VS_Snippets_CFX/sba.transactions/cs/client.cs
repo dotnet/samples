@@ -48,7 +48,7 @@ namespace Microsoft.WCF.Documentation
           if (txException.InnerException is TimeoutException)
             Console.WriteLine("The transaction scope timeout period was exceeded before it was able to commit.");
           else
-            Console.WriteLine("A transaction problem has occured: {0}", txException.Message);
+            Console.WriteLine("A transaction problem has occurred: {0}", txException.Message);
           wcfClient.Abort();
         }
         catch (FaultException unknown)

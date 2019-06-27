@@ -88,7 +88,7 @@ namespace PNRPSample
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error occured while attempting to resolve the PeerName: {0}", e.Message);
+                Console.WriteLine("Error occurred while attempting to resolve the PeerName: {0}", e.Message);
                 Console.WriteLine(e.StackTrace);
 
                 // P2P is not supported on Windows Server 2003

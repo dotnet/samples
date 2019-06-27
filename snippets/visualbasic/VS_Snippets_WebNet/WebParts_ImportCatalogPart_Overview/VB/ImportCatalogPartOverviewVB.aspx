@@ -20,7 +20,7 @@
       ImportCatalogPart1.UploadButtonText = "Upload Description"
       ImportCatalogPart1.UploadHelpText = "Upload a description file."
       ImportCatalogPart1.ImportedPartLabelText = "Imported Controls"
-      ImportCatalogPart1.PartImportErrorLabelText = "An error occured " _
+      ImportCatalogPart1.PartImportErrorLabelText = "An error occurred " _
         & "during the import process."
   End Sub
   ' </snippet3>

@@ -57,7 +57,7 @@ Public Class MyMainClass
          mySerializerObject.Serialize(myWriter, myXMLBook, myNameSpaces)
          myWriter.Close()
       Catch e As Exception
-         Console.WriteLine("Exception :" & e.Message & "Occured")
+         Console.WriteLine("Exception :" & e.Message & "Occurred")
       End Try
    End Sub
 ' </Snippet1>

@@ -62,7 +62,7 @@ int main()
    }
    catch ( Exception^ e ) 
    {
-      Console::WriteLine( "Error occured : {0}", e->Message );
+      Console::WriteLine( "Error occurred : {0}", e->Message );
    }
 }
 // </Snippet1>

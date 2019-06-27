@@ -73,9 +73,9 @@ Friend Class MyConstructorBuilder
          myModuleBuilder.CreateGlobalFunctions()
          myType1 = myTypeBuilder.CreateType()
       Catch ex As InvalidOperationException
-         Console.WriteLine("The following exception has occured : " + ex.Message)
+         Console.WriteLine("The following exception has occurred : " + ex.Message)
       Catch ex As Exception
-         Console.WriteLine("The following exception has occured : " + ex.Message)
+         Console.WriteLine("The following exception has occurred : " + ex.Message)
       End Try
    End Sub 'New
 

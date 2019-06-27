@@ -95,7 +95,7 @@
          }
          catch(Exception e)
          {
-            Console.WriteLine("Error occured : "+e.Message);
+            Console.WriteLine("Error occurred : "+e.Message);
          }
       }
    }

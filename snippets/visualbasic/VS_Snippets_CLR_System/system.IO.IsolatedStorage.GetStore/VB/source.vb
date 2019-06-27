@@ -18,7 +18,7 @@ Class Program
                 Environment.ExitCode = 101
             End If
         Catch e As Exception
-            Console.Write("Exception occured: {0}", e.ToString)
+            Console.Write("Exception occurred: {0}", e.ToString)
             Environment.ExitCode = 101
         End Try
         Return
