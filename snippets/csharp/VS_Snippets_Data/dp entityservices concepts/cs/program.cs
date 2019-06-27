@@ -8,7 +8,7 @@ namespace Microsoft.Samples.Entity
     {
         static void Main(string[] args)
         {
-            Source.ExectueRefTypeQuery(@"SELECT REF(p) FROM AdventureWorksEntities.Products as p where p.ProductID == @productID");
+            Source.ExecuteRefTypeQuery(@"SELECT REF(p) FROM AdventureWorksEntities.Products as p where p.ProductID == @productID");
             return;
 
             FileStream stream = new FileStream("c:\\ObjectServices"

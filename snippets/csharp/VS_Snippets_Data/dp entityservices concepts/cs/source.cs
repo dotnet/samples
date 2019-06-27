@@ -679,7 +679,7 @@ namespace Microsoft.Samples.Entity
 
         //string esqlQuery = @"SELECT REF(p) FROM AdventureWorksEntities.Products as p";
         //<snippeteSQLRefTypes>
-        static public void ExectueRefTypeQuery(string esqlQuery)
+        static public void ExecuteRefTypeQuery(string esqlQuery)
         {
             if (esqlQuery.Length == 0)
             {
