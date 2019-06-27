@@ -15,6 +15,10 @@ namespace operators
             Console.WriteLine("Reference types:");
             ReferenceTypesEquality.Main();
 
+            Console.WriteLine("Delegate types:");
+            DelegateEquality();
+            IdenticalLambdasNotEqual();
+
             Console.WriteLine("Non equality:");
             NonEquality();
         }
@@ -86,6 +90,30 @@ namespace operators
             object o2 = 1;
             Console.WriteLine(o1 != o2);  // output: True
             // </SnippetNonEquality>
+        }
+
+        private static void DelegateEquality()
+        {
+            // <SnippetDelegateEquality>
+            Action a = () => Console.WriteLine("a");
+
+            Action b = a + a;
+            Action c = a + a;
+            Console.WriteLine(object.ReferenceEquals(b, c));  // output: False
+            Console.WriteLine(b == c);  // output: True
+            // </SnippetDelegateEquality>
+        }
+
+        private static void IdenticalLambdasNotEqual()
+        {
+            // <SnippetIdenticalLambdas>
+            Action a = () => Console.WriteLine("a");
+            Action b = () => Console.WriteLine("a");
+
+            Console.WriteLine(a == b);  // output: False
+            Console.WriteLine(a + b == a + b);  // output: True
+            Console.WriteLine(b + a == a + b);  // output: False
+            // </SnippetIdenticalLambdas>
         }
     }
 }
