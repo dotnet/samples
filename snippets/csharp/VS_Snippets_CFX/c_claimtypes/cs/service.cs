@@ -71,7 +71,7 @@ namespace Microsoft.ServiceModel.Samples.SupportingTokens
                 }
                 else
                 {
-                    // Try to find an X500DisinguishedName claim. This has been generated from the client certificate.
+                    // Try to find an X500DistinguishedName claim. This has been generated from the client certificate.
                     X500DistinguishedName tmpDistinguishedName;
                     if (TryGetClaimValue<X500DistinguishedName>(claimSet, ClaimTypes.X500DistinguishedName, out tmpDistinguishedName))
                     {
