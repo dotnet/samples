@@ -70,7 +70,7 @@ Most existing projects include an `AssemblyInfo.cs` file in the Properties folde
 <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 ```
 #### Include the Windows.Compatibility Pack
-Not every framework assembly is available in the .NET Core base class library. Windows applications like WinForms and WPF could have dependencies that are not available in .NET Core or .NET Standard. Adding a reference to the [Windows Compatibilty Pack](https://docs.microsoft.com/dotnet/core/porting/windows-compat-pack) will help reduce missing assembly dependencies as it includes several types that might be needed by your application.
+Not every framework assembly is available in the .NET Core base class library. Windows applications like WinForms and WPF could have dependencies that are not available in .NET Core or .NET Standard. Adding a reference to the [Windows Compatibility Pack](https://docs.microsoft.com/dotnet/core/porting/windows-compat-pack) will help reduce missing assembly dependencies as it includes several types that might be needed by your application.
 
 ```cmd
 dotnet add package Microsoft.Windows.Compatibility
