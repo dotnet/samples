@@ -28,62 +28,104 @@ int main()
 }
 
 /*
-This code produces the following output.  This output has been cropped for brevity.
-
-CULTURE                                              SPECIFIC CULTURE
-ar           Arabic                                  ar-SA
-bg           Bulgarian                               bg-BG
-ca           Catalan                                 ca-ES
-zh-Hans      Chinese (Simplified)                    zh-CN
-cs           Czech                                   cs-CZ
-da           Danish                                  da-DK
-de           German                                  de-DE
-el           Greek                                   el-GR
-en           English                                 en-US
-es           Spanish                                 es-ES
-fi           Finnish                                 fi-FI
-fr           French                                  fr-FR
-he           Hebrew                                  he-IL
-hu           Hungarian                               hu-HU
-is           Icelandic                               is-IS
-it           Italian                                 it-IT
-ja           Japanese                                ja-JP
-ko           Korean                                  ko-KR
-nl           Dutch                                   nl-NL
-no           Norwegian                               nb-NO
-pl           Polish                                  pl-PL
-pt           Portuguese                              pt-BR
-rm           Romansh                                 rm-CH
-ro           Romanian                                ro-RO
-ru           Russian                                 ru-RU
-hr           Croatian                                hr-HR
-sk           Slovak                                  sk-SK
-sq           Albanian                                sq-AL
-sv           Swedish                                 sv-SE
-th           Thai                                    th-TH
-tr           Turkish                                 tr-TR
-ur           Urdu                                    ur-PK
-id           Indonesian                              id-ID
-uk           Ukrainian                               uk-UA
-be           Belarusian                              be-BY
-sl           Slovenian                               sl-SI
-et           Estonian                                et-EE
-lv           Latvian                                 lv-LV
-lt           Lithuanian                              lt-LT
-tg           Tajik                                   tg-Cyrl-TJ
-fa           Persian                                 fa-IR
-vi           Vietnamese                              vi-VN
-hy           Armenian                                hy-AM
-az           Azerbaijani                             az-Latn-AZ
-zh-TW        Chinese (Traditional, Taiwan)           zh-TW
-zh-CN        Chinese (Simplified, PRC)               zh-CN
-zh-HK        Chinese (Traditional, Hong Kong S.A.R.) zh-HK
-zh-SG        Chinese (Simplified, Singapore)         zh-SG
-zh-MO        Chinese (Traditional, Macao S.A.R.)     zh-MO
-zh           Chinese                                 zh-CN
-zh-Hant      Chinese (Traditional)                   zh-HK
-zh-CHS       Chinese (Simplified) Legacy             zh-CN
-zh-CHT       Chinese (Traditional) Legacy            zh-HK
-
+ The example displays the following output.  This output has been cropped for brevity.
+    CULTURE                                              SPECIFIC CULTURE
+               Invariant Language (Invariant Country)  
+    aa           Afar                                    aa-ET
+    af           Afrikaans                               af-ZA
+    agq          Aghem                                   agq-CM
+    ak           Akan                                    ak-GH
+    am           Amharic                                 am-ET
+    ar           Arabic                                  ar-SA
+    arn          Mapudungun                              arn-CL
+    as           Assamese                                as-IN
+    asa          Asu                                     asa-TZ
+    ast          Asturian                                ast-ES
+    az           Azerbaijani                             az-Latn-AZ
+    az-Cyrl      Azerbaijani (Cyrillic)                  az-Cyrl-AZ
+    az-Latn      Azerbaijani (Latin)                     az-Latn-AZ
+    ba           Bashkir                                 ba-RU
+    bas          Basaa                                   bas-CM
+    be           Belarusian                              be-BY
+    bem          Bemba                                   bem-ZM
+    bez          Bena                                    bez-TZ
+    bg           Bulgarian                               bg-BG
+    bin          Edo                                     bin-NG
+    bm           Bamanankan                              bm-Latn-ML
+    bm-Latn      Bamanankan (Latin)                      bm-Latn-ML
+    bn           Bangla                                  bn-BD
+    bo           Tibetan                                 bo-CN
+    br           Breton                                  br-FR
+    brx          Bodo                                    brx-IN
+    bs           Bosnian                                 bs-Latn-BA
+    bs-Cyrl      Bosnian (Cyrillic)                      bs-Cyrl-BA
+    bs-Latn      Bosnian (Latin)                         bs-Latn-BA
+    byn          Blin                                    byn-ER
+    ca           Catalan                                 ca-ES
+    ce           Chechen                                 ce-RU
+    cgg          Chiga                                   cgg-UG
+    chr          Cherokee                                chr-Cher-US
+    chr-Cher     Cherokee                                chr-Cher-US
+    co           Corsican                                co-FR
+    cs           Czech                                   cs-CZ
+    cu           Church Slavic                           cu-RU
+    cy           Welsh                                   cy-GB
+    da           Danish                                  da-DK
+    dav          Taita                                   dav-KE
+    de           German                                  de-DE
+    dje          Zarma                                   dje-NE
+    dsb          Lower Sorbian                           dsb-DE
+    dua          Duala                                   dua-CM
+    dv           Divehi                                  dv-MV
+    ...
+    ta           Tamil                                   ta-IN
+    te           Telugu                                  te-IN
+    teo          Teso                                    teo-UG
+    tg           Tajik                                   tg-Cyrl-TJ
+    tg-Cyrl      Tajik (Cyrillic)                        tg-Cyrl-TJ
+    th           Thai                                    th-TH
+    ti           Tigrinya                                ti-ER
+    tig          Tigre                                   tig-ER
+    tk           Turkmen                                 tk-TM
+    tn           Setswana                                tn-ZA
+    to           Tongan                                  to-TO
+    tr           Turkish                                 tr-TR
+    ts           Tsonga                                  ts-ZA
+    tt           Tatar                                   tt-RU
+    twq          Tasawaq                                 twq-NE
+    tzm          Central Atlas Tamazight                 tzm-Latn-DZ
+    tzm-Arab     Central Atlas Tamazight (Arabic)        tzm-Arab-MA
+    tzm-Latn     Central Atlas Tamazight (Latin)         tzm-Latn-DZ
+    tzm-Tfng     Central Atlas Tamazight (Tifinagh)      tzm-Tfng-MA
+    ug           Uyghur                                  ug-CN
+    uk           Ukrainian                               uk-UA
+    ur           Urdu                                    ur-PK
+    uz           Uzbek                                   uz-Latn-UZ
+    uz-Arab      Uzbek (Perso-Arabic)                    uz-Arab-AF
+    uz-Cyrl      Uzbek (Cyrillic)                        uz-Cyrl-UZ
+    uz-Latn      Uzbek (Latin)                           uz-Latn-UZ
+    vai          Vai                                     vai-Vaii-LR
+    vai-Latn     Vai (Latin)                             vai-Latn-LR
+    vai-Vaii     Vai (Vai)                               vai-Vaii-LR
+    ve           Venda                                   ve-ZA
+    vi           Vietnamese                              vi-VN
+    vo           Volapük                                 vo-001
+    vun          Vunjo                                   vun-TZ
+    wae          Walser                                  wae-CH
+    wal          Wolaytta                                wal-ET
+    wo           Wolof                                   wo-SN
+    xh           isiXhosa                                xh-ZA
+    xog          Soga                                    xog-UG
+    yav          Yangben                                 yav-CM
+    yi           Yiddish                                 yi-001
+    yo           Yoruba                                  yo-NG
+    zgh          Standard Moroccan Tamazight             zgh-Tfng-MA
+    zgh-Tfng     Standard Moroccan Tamazight (Tifinagh)  zgh-Tfng-MA
+    zh           Chinese                                 zh-CN
+    zh-CHS       Chinese (Simplified) Legacy             zh-CN
+    zh-CHT       Chinese (Traditional) Legacy            zh-HK
+    zh-Hans      Chinese (Simplified)                    zh-CN
+    zh-Hant      Chinese (Traditional)                   zh-HK
+    zu           isiZulu                                 zu-ZA
 */
 // </snippet1>
