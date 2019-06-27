@@ -9,8 +9,10 @@ using System.Data.SqlClient;
 using System.Data.EntityClient;
 using System.Data.Metadata.Edm;
 //</snippetNamespaces>
+//<snippetIncludes>
 using System.Data.Objects;
 using System.Data.Objects.DataClasses;
+//</snippetIncludes>
 using System.Linq;
 
 
@@ -18,6 +20,72 @@ namespace Microsoft.Samples.Entity
 {
     class Source
     {
+        public static void GroupByPartition()
+        {
+            Console.WriteLine("Starting method 'GroupPartition'");
+            //<snippetGroupByPartition>
+
+            using (AdventureWorksEntities context =
+                new AdventureWorksEntities())
+            {
+                // Query that returns average TotalDue for a contact.
+                string queryString = @"SELECT TOP(@number1) contactID, AVG(GroupPartition(order.TotalDue)) 
+                            FROM AdventureWorksEntities.SalesOrderHeaders 
+                            AS order GROUP BY order.Contact.ContactID as contactID";
+
+                ObjectQuery<DbDataRecord> query1 = new ObjectQuery<DbDataRecord>(queryString, context);
+                query1.Parameters.Add(new ObjectParameter("number1", 10));
+
+                foreach (DbDataRecord rec in query1)
+                {
+                    Console.WriteLine("ContactID = {0}  Average TotalDue = {1} ",
+                        rec[0], rec[1]);
+                }
+
+                queryString = @"SELECT TOP(@number2) contactID, AVG(order.TotalDue) 
+                            FROM AdventureWorksEntities.SalesOrderHeaders 
+                            AS order GROUP BY order.Contact.ContactID as contactID";
+                ObjectQuery<DbDataRecord> query2 = new ObjectQuery<DbDataRecord>(queryString, context);
+                query2.Parameters.Add(new ObjectParameter("number2", 10));
+                foreach (DbDataRecord rec in query2)
+                {
+                    Console.WriteLine("ContactID = {0}  Average TotalDue = {1} ",
+                        rec[0], rec[1]);
+                }
+            }
+            //</snippetGroupByPartition>
+        }
+        public static void CallInlineFunction()
+        {
+
+            Console.WriteLine("Starting method 'CallInlineFunction'");
+            //<snippetCallInlineFunction>
+            // Query that calls the OrderTotal function to recalculate the order total.
+            string queryString = @"USING Microsoft.Samples.Entity;
+                FUNCTION OrderTotal(o SalesOrderHeader) AS
+                (o.SubTotal + o.TaxAmt + o.Freight)
+
+                SELECT [order].TotalDue AS currentTotal, OrderTotal([order]) AS calculated
+                FROM AdventureWorksEntities.SalesOrderHeaders AS [order]
+                WHERE [order].Contact.ContactID = @customer";
+
+            int customerId = 364;
+            
+
+            using (AdventureWorksEntities context =
+                new AdventureWorksEntities())
+            {
+                ObjectQuery<DbDataRecord> query = new ObjectQuery<DbDataRecord>(queryString, context);
+                query.Parameters.Add(new ObjectParameter("customer",customerId));
+
+                foreach (DbDataRecord rec in query)
+                {
+                    Console.WriteLine("Order Total: Current - {0}, Calculated - {1}.", 
+                        rec[0], rec[1]);
+                }
+            }
+            //</snippetCallInlineFunction>
+        }
         static public void PolymorphicQuery()
         {
             //<snippetPolymorphicQuery>
@@ -47,6 +115,39 @@ namespace Microsoft.Samples.Entity
             }
             //</snippetPolymorphicQuery>
         }
+
+
+        static public void Transactions()
+        {
+            //<snippetTransactionsWithEntityClient>
+            using (EntityConnection con = new EntityConnection("name=AdventureWorksEntities"))
+            {
+                con.Open();
+                EntityTransaction transaction = con.BeginTransaction();
+                DbCommand cmd = con.CreateCommand();
+                cmd.Transaction = transaction;
+                cmd.CommandText = @"SELECT VALUE Contact FROM AdventureWorksEntities.Contacts 
+                    AS Contact WHERE Contact.LastName = @ln";
+                EntityParameter param = new EntityParameter();
+                param.ParameterName = "ln";
+                param.Value = "Adams";
+                cmd.Parameters.Add(param);
+
+                using (DbDataReader rdr = cmd.ExecuteReader(CommandBehavior.SequentialAccess))
+                {
+                    // Iterate through the collection of Contact items.
+                    while (rdr.Read())
+                    {
+                        Console.Write("First Name: " + rdr["FirstName"]);
+                        Console.WriteLine("\tLast Name: " + rdr["LastName"]);
+                    }
+                }
+                transaction.Commit();
+            }
+            //</snippetTransactionsWithEntityClient>
+
+        }
+
 
         static public void ComplexTypeWithEntityCommand()
         {
@@ -297,6 +398,223 @@ namespace Microsoft.Samples.Entity
             }
             //</snippetReturnNestedCollectionWithEntityCommand>
         }
+
+        static public void ReturnEntityTypeWithObectQuery()
+        {
+            //<snippetQueryEntityTypeCollection>
+            using (AdventureWorksEntities context =
+                new AdventureWorksEntities())
+            {
+                string esqlQuery = @"SELECT VALUE Contact
+                    FROM AdventureWorksEntities.Contacts as Contact where Contact.LastName = @ln";
+
+                // The following query returns a collection of Contact objects.
+                ObjectQuery<Contact> query = new ObjectQuery<Contact>(esqlQuery, context, MergeOption.NoTracking);
+                query.Parameters.Add(new ObjectParameter("ln", "Zhou"));
+
+                // Iterate through the collection of Contact items.
+                foreach (Contact result in query)
+                    Console.WriteLine("Contact First Name: {0}; Last Name: {1}",
+                            result.FirstName, result.LastName);
+            }
+            //</snippetQueryEntityTypeCollection>
+        }
+
+        static public void ParameterizedQueryWithObjectQuery()
+        {
+            //<snippetParameterizedQueryWithObjectQuery>
+            using (AdventureWorksEntities context =
+                new AdventureWorksEntities())
+            {
+                // Create a query that takes two parameters.
+                string queryString =
+                    @"SELECT VALUE Contact FROM AdventureWorksEntities.Contacts 
+                            AS Contact WHERE Contact.LastName = @ln AND
+                            Contact.FirstName = @fn";
+
+                ObjectQuery<Contact> contactQuery =
+                    new ObjectQuery<Contact>(queryString, context);
+
+                // Add parameters to the collection.
+                contactQuery.Parameters.Add(new ObjectParameter("ln", "Adams"));
+                contactQuery.Parameters.Add(new ObjectParameter("fn", "Frances"));
+
+                // Iterate through the collection of Contact items.
+                foreach (Contact result in contactQuery)
+                    Console.WriteLine("Last Name: {0}; First Name: {1}",
+                    result.LastName, result.FirstName);
+            }
+            //</snippetParameterizedQueryWithObjectQuery>
+        }
+
+        static public void NavRelationshipWithNavProperties()
+        {
+            //<snippetNavRelationshipWithNavProperties>
+            using (AdventureWorksEntities context =
+                new AdventureWorksEntities())
+            {
+                string esqlQuery = @"SELECT c.FirstName, c.SalesOrderHeaders 
+                    FROM AdventureWorksEntities.Contacts AS c where c.LastName = @ln";
+                ObjectQuery<DbDataRecord> query = new ObjectQuery<DbDataRecord>(esqlQuery, context);
+                query.Parameters.Add(new ObjectParameter("ln", "Zhou"));
+
+                foreach (DbDataRecord rec in query)
+                {
+
+                    // Display contact's first name.
+                    Console.WriteLine("First Name {0}: ", rec[0]);
+                    List<SalesOrderHeader> list = rec[1] as List<SalesOrderHeader>;
+                    // Display SalesOrderHeader information 
+                    // associated with the contact.
+                    foreach (SalesOrderHeader soh in list)
+                    {
+                        Console.WriteLine("   Order ID: {0}, Order date: {1}, Total Due: {2}",
+                            soh.SalesOrderID, soh.OrderDate, soh.TotalDue);
+                    }
+                }
+            }
+            //</snippetNavRelationshipWithNavProperties>
+        }
+
+        static public void ReturnAnonymousTypeWithObjectQuery()
+        {
+            //<snippetReturnAnonymousTypeWithObjectQuery>
+            using (AdventureWorksEntities context =
+                new AdventureWorksEntities())
+            {
+                string myQuery = @"SELECT p.ProductID, p.Name FROM 
+                    AdventureWorksEntities.Products as p";
+
+                foreach (DbDataRecord rec in
+                    new ObjectQuery<DbDataRecord>(myQuery, context))
+                {
+                    Console.WriteLine("ID {0}; Name {1}", rec[0], rec[1]);
+                }
+            }
+            //</snippetReturnAnonymousTypeWithObjectQuery>
+        }
+
+        static public void ReturnPrimitiveTypeWithObjectQuery()
+        {
+            //<snippetReturnPrimitiveTypeWithObjectQuery>
+            using (AdventureWorksEntities context =
+                new AdventureWorksEntities())
+            {
+                string queryString = @"SELECT VALUE Length(p.Name)FROM 
+                AdventureWorksEntities.Products AS p";
+
+                ObjectQuery<Int32> productQuery =
+                    new ObjectQuery<Int32>(queryString, context, MergeOption.NoTracking);
+                foreach (Int32 result in productQuery)
+                    Console.WriteLine("{0}", result);
+            }
+            //</snippetReturnPrimitiveTypeWithObjectQuery>
+        }
+        static public void GroupDataWithObjectQuery()
+        {
+            //<snippetGroupDataWithObjectQuery>
+            using (AdventureWorksEntities context =
+                new AdventureWorksEntities())
+            {
+                string esqlQuery = @"SELECT ln, 
+                    (SELECT c1.LastName FROM AdventureWorksEntities.Contacts 
+                        AS c1 WHERE SUBSTRING(c1.LastName ,1,1) = ln) 
+                    AS CONTACT 
+                    FROM AdventureWorksEntities.Contacts AS c2 GROUP BY SUBSTRING(c2.LastName ,1,1) AS ln
+                    ORDER BY ln";
+
+                foreach (DbDataRecord rec in
+                    new ObjectQuery<DbDataRecord>(esqlQuery, context))
+                {
+                    Console.WriteLine("Last names that start with the letter '{0}':",
+                                rec[0]);
+                    List<DbDataRecord> list = rec[1] as List<DbDataRecord>;
+                    foreach (DbDataRecord nestedRec in list)
+                    {
+                        for (int i = 0; i < nestedRec.FieldCount; i++)
+                        {
+                            Console.WriteLine("   {0} ", nestedRec[i]);
+                        }
+                    }
+                }
+            }
+            //</snippetGroupDataWithObjectQuery>
+        }
+
+        static public void AggregateDataWithObjectQuery()
+        {
+
+            //<snippetAggregateDataWithObjectQuery>
+            using (AdventureWorksEntities context =
+                new AdventureWorksEntities())
+            {
+                string esqlQuery = @"SELECT contactID, AVG(order.TotalDue) 
+                                        FROM AdventureWorksEntities.SalesOrderHeaders 
+                                        AS order GROUP BY order.Contact.ContactID as contactID";
+
+                foreach (DbDataRecord rec in
+                    new ObjectQuery<DbDataRecord>(esqlQuery, context))
+                {
+                    Console.WriteLine("ContactID = {0}  Average TotalDue = {1} ",
+                        rec[0], rec[1]);
+                }
+            }
+            //</snippetAggregateDataWithObjectQuery>
+        }
+
+        static public void OrderTwoUnionizedQueriesWithObjectQuery()
+        {
+            //<snippetOrderTwoUnionizedQueriesWithObjectQuery>
+            using (AdventureWorksEntities context =
+                new AdventureWorksEntities())
+            {
+                String esqlQuery = @"SELECT P2.Name, P2.ListPrice
+                    FROM ((SELECT P1.Name, P1.ProductID as Pid, P1.ListPrice 
+                        FROM AdventureWorksEntities.Products as P1
+                        where P1.Name like 'A%')
+                    union all
+                        (SELECT P1.Name, P1.ProductID as Pid, P1.ListPrice 
+                        FROM AdventureWorksEntities.Products as P1
+                        WHERE P1.Name like 'B%')
+                    ) as P2
+                    ORDER BY P2.Name";
+
+                foreach (DbDataRecord rec in
+                    new ObjectQuery<DbDataRecord>(esqlQuery, context))
+                {
+                    Console.WriteLine("Name: {0}; ListPrice: {1}", rec[0], rec[1]);
+                }
+            }
+            //</snippetOrderTwoUnionizedQueriesWithObjectQuery>
+        }
+
+        static public void ESQLPagingWithObjectQuery()
+        {
+            //<snippetESQLPagingWithObjectQuery>
+            using (AdventureWorksEntities context =
+                new AdventureWorksEntities())
+            {
+                // Create a query that takes two parameters.
+                string queryString =
+                    @"SELECT VALUE product FROM 
+                      AdventureWorksEntities.Products AS product 
+                      order by product.ListPrice SKIP @skip LIMIT @limit";
+
+                ObjectQuery<Product> productQuery =
+                    new ObjectQuery<Product>(queryString, context);
+
+                // Add parameters to the collection.
+                productQuery.Parameters.Add(new ObjectParameter("skip", 3));
+                productQuery.Parameters.Add(new ObjectParameter("limit", 5));
+
+                // Iterate through the collection of Contact items.
+                foreach (Product result in productQuery)
+                    Console.WriteLine("ID: {0}; Name: {1}",
+                    result.ProductID, result.Name);
+            }
+            //</snippetESQLPagingWithObjectQuery>
+        }
+
 
         //string esqlQuery = @"SELECT VALUE Product FROM AdventureWorksEntities.Products AS Product";
         //<snippeteSQLStructuralTypes>
