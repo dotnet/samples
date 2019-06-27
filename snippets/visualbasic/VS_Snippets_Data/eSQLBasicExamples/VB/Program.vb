@@ -299,8 +299,8 @@ Module Program
         ' </snippetParameterizedQueryWithObjectQuery>
     End Sub
 
-    Sub ReturnEntityTypeWithObectQuery()
-        '<snippetReturnEntityTypeWithObectQuery>
+    Sub ReturnEntityTypeWithObjectQuery()
+        '<snippetReturnEntityTypeWithObjectQuery>
         Using advWorksContext As AdventureWorksEntities = New AdventureWorksEntities
             Try
                 Dim queryString As String = "SELECT VALUE Product FROM AdventureWorksEntities.Product AS Product"
@@ -319,7 +319,7 @@ Module Program
                 Console.WriteLine(ex.ToString())
             End Try
         End Using
-        '</snippetReturnEntityTypeWithObectQuery>
+        '</snippetReturnEntityTypeWithObjectQuery>
     End Sub
 
     Sub ReturnNestedCollectionWithEntityCommand()
@@ -682,7 +682,7 @@ Module Program
     '</snippeteSQLPrimitiveTypes>
 
     Sub Main()
-        'ReturnEntityTypeWithObectQuery()
+        'ReturnEntityTypeWithObjectQuery()
         'ParameterizedQueryWithObjectQuery()
         'NavRelationshipWithNavProperties()
         'GroupDataWithObjectQuery()

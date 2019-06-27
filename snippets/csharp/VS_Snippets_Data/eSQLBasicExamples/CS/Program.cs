@@ -22,7 +22,7 @@ namespace eSQLExamplesCS
     {
         static void Main(string[] args)
         {
-            //ReturnEntityTypeWithObectQuery();
+            //ReturnEntityTypeWithObjectQuery();
             //ParameterizedQueryWithObjectQuery();
             //NavRelationshipWithNavProperties();
             //GroupDataWithObjectQuery();
@@ -387,9 +387,9 @@ namespace eSQLExamplesCS
             //</snippetReturnNestedCollectionWithEntityCommand>
         }
 
-        static private void ReturnEntityTypeWithObectQuery()
+        static private void ReturnEntityTypeWithObjectQuery()
         {
-            //<snippetReturnEntityTypeWithObectQuery>
+            //<snippetReturnEntityTypeWithObjectQuery>
             using (AdventureWorksEntities advWorksContext =
                 new AdventureWorksEntities())
             {
@@ -415,7 +415,7 @@ namespace eSQLExamplesCS
                     Console.WriteLine(ex.ToString());
                 }
             }
-            //</snippetReturnEntityTypeWithObectQuery>
+            //</snippetReturnEntityTypeWithObjectQuery>
         }
 
         static private void ParameterizedQueryWithObjectQuery()
