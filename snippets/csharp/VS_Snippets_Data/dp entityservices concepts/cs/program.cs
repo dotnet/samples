@@ -69,7 +69,7 @@ namespace Microsoft.Samples.Entity
                         }
                         catch (Exception ex)
                         {
-                            Console.WriteLine("An exception occured in method: "
+                            Console.WriteLine("An exception occurred in method: "
                                 + method.Name);
                             Console.WriteLine(ex.ToString());
                         }

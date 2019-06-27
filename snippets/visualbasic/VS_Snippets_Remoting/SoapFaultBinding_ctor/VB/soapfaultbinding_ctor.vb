@@ -84,7 +84,7 @@ Public Class MySoapFaultBindingSample
          Console.WriteLine("Proxy could be created using command : wsdl /language:VB " + _
                            myOutputWsdlFile)
       Catch e As Exception
-         Console.WriteLine("Error occured : " + e.Message)
+         Console.WriteLine("Error occurred : " + e.Message)
       End Try
    End Sub 'Main
 End Class 'MySoapFaultBindingSample

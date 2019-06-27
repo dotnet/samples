@@ -29,14 +29,14 @@ Public Class MyInstallerClass
    ' Event handler for 'BeforeRollback' event.
    Private Sub MyInstaller_BeforeRollBack(sender As Object, e As InstallEventArgs)
       Console.WriteLine("")
-      Console.WriteLine("BeforeRollback Event occured.")
+      Console.WriteLine("BeforeRollback Event occurred.")
       Console.WriteLine("")
    End Sub 'MyInstaller_BeforeRollBack
 
    ' Event handler for 'AfterRollback' event.
    Private Sub MyInstaller_AfterRollback(sender As Object, e As InstallEventArgs)
       Console.WriteLine("")
-      Console.WriteLine("AfterRollback Event occured.")
+      Console.WriteLine("AfterRollback Event occurred.")
       Console.WriteLine("")
    End Sub 'MyInstaller_AfterRollback
 

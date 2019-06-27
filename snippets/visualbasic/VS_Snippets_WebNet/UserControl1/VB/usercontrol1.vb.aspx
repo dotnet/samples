@@ -62,7 +62,7 @@
 ' </Snippet7>
 
 ' <Snippet6>
-        ' Saves state information which is used by display handler after the postback has occured.
+        ' Saves state information which is used by display handler after the postback has occurred.
 
         Sub SubmitBtn_Click(Sender As Object, e As EventArgs) 
 

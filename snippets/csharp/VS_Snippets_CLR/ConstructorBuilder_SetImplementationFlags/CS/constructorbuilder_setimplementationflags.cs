@@ -78,11 +78,11 @@ internal class MyConstructorBuilder
       }
       catch(InvalidOperationException ex)
       {
-         Console.WriteLine("The following exception has occured : "+ex.Message);
+         Console.WriteLine("The following exception has occurred : "+ex.Message);
       }
       catch(Exception ex)
       {
-         Console.WriteLine("The following exception has occured : "+ex.Message);
+         Console.WriteLine("The following exception has occurred : "+ex.Message);
       }
    }
 

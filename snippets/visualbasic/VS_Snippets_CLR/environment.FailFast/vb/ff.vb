@@ -1,7 +1,7 @@
 '<snippet1>
 Module Example
     Public Sub Main()
-        Dim causeOfFailure As String = "A catastrophic failure has occured."
+        Dim causeOfFailure As String = "A catastrophic failure has occurred."
         ' Assume your application has failed catastrophically and must
         ' terminate immediately. The try-finally block is not executed 
         ' and is included only to demonstrate that instructions within 

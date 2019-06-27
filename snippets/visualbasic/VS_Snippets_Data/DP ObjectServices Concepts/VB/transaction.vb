@@ -76,7 +76,7 @@ Class TransactionSample
                     ' Allow an UpdateException to pass through and 
                     ' retry, otherwise stop the execution. 
                     If ex.[GetType]() <> GetType(UpdateException) Then
-                        Console.WriteLine(("An error occured. " & "The operation cannot be retried.") + ex.Message)
+                        Console.WriteLine(("An error occurred. " & "The operation cannot be retried.") + ex.Message)
                         Exit Try
                         ' If we get to this point, the operation will be retried. 
                     End If

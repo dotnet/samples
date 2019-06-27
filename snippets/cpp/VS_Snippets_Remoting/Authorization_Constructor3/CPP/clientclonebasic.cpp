@@ -128,9 +128,9 @@ public:
       catch ( WebException^ e ) 
       {
          if ( e->Response != nullptr )
-                  Console::WriteLine( "\r\n Exception Raised. The following error occured : {0}", (dynamic_cast<HttpWebResponse^>(e->Response))->StatusDescription );
+                  Console::WriteLine( "\r\n Exception Raised. The following error occurred : {0}", (dynamic_cast<HttpWebResponse^>(e->Response))->StatusDescription );
          else
-                  Console::WriteLine( "\r\n Exception Raised. The following error occured : {0}", e->Status );
+                  Console::WriteLine( "\r\n Exception Raised. The following error occurred : {0}", e->Status );
       }
       catch ( Exception^ e ) 
       {

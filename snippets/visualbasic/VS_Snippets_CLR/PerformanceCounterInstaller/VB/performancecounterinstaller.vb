@@ -32,7 +32,7 @@ Public Class MyPerformanceCounterInstaller
             myPerformanceCounterInstaller.Counters.Add(myCounterCreation)
             Installers.Add(myPerformanceCounterInstaller)
         Catch e As Exception
-            Me.Context.LogMessage("Error occured :" + e.Message)
+            Me.Context.LogMessage("Error occurred :" + e.Message)
         End Try
     End Sub 'New
     Public Shared Sub Main()

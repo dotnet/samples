@@ -26,7 +26,7 @@ private:
    // Event handler for 'AfterRollback' event.
    void MyInstaller_AfterRollBack( Object^ sender, InstallEventArgs^ e )
    {
-      Console::WriteLine( "AfterRollBack Event occured." );
+      Console::WriteLine( "AfterRollBack Event occurred." );
    }
 
 

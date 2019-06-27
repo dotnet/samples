@@ -127,7 +127,7 @@ Public Class Form1
             Dim exceptionSource As String = ex.Source
             '</Snippet10>
 
-            ' Retrieve the call stack at the time the exception occured.
+            ' Retrieve the call stack at the time the exception occurred.
             '<Snippet11>
             Dim stackTrace As String = ex.StackTrace
             '</Snippet11>

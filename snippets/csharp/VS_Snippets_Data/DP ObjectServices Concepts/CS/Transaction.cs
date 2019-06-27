@@ -95,7 +95,7 @@ namespace ObjectServicesConceptsCS
                         // retry, otherwise stop the execution.
                         if (ex.GetType() != typeof(UpdateException))
                         {
-                            Console.WriteLine("An error occured. "
+                            Console.WriteLine("An error occurred. "
                                 + "The operation cannot be retried."
                                 + ex.Message);
                             break;

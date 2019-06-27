@@ -29,7 +29,7 @@
       ' Do some database work. Any exception thrown here aborts the transaction; 
       ' otherwise, transaction commits.
       
-      ' Some error occured, throw an exception.
+      ' Some error occurred, throw an exception.
       throw new Exception()
       ' Comment the above line of code to commit the transaction.
    End Sub

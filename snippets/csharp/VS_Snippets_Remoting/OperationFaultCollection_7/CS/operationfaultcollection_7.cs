@@ -131,7 +131,7 @@ public class MyOperationFaultCollectionSample
             else
             {
                Console.WriteLine(
-                  "An error occured while reversing the input WSDL file.");
+                  "An error occurred while reversing the input WSDL file.");
             }
          }
       }

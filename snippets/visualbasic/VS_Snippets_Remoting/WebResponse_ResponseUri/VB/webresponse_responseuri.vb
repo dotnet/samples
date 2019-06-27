@@ -56,7 +56,7 @@ Class WebResponseSnippet
             
 ' </Snippet1>        
         Catch e As WebException
-            Console.WriteLine(ControlChars.Cr + "The following error occured : {0}", e.Status)
+            Console.WriteLine(ControlChars.Cr + "The following error occurred : {0}", e.Status)
         Catch e As Exception
             Console.WriteLine(ControlChars.Cr + "The following exception was raised : {0}", e.Message)
         End Try

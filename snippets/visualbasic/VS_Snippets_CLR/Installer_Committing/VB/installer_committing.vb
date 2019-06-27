@@ -23,7 +23,7 @@ Public Class MyInstallerClass
    ' Event handler for 'Committing' event.
    Private Sub MyInstaller_Committing(ByVal sender As Object, _
                                       ByVal e As InstallEventArgs)
-      Console.WriteLine("Committing Event occured.")
+      Console.WriteLine("Committing Event occurred.")
    End Sub 'MyInstaller_Committing
 ' </Snippet1>
 

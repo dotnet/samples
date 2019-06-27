@@ -61,7 +61,7 @@ Class MyDiscoveryDocumentMod
          & myDiscoveryReferenceCollection.Count.ToString())
 
    Catch e As Exception
-       Console.Writeline("Exception occured : " + e.Message)
+       Console.Writeline("Exception occurred : " + e.Message)
    End Try
    End Sub
 

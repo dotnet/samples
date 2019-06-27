@@ -2678,7 +2678,7 @@ namespace ObjectServicesConceptsCS
                 }
                 catch (UpdateException)
                 {
-                    Console.WriteLine("An error has occured. Ensure that an object with the '{0}' key value exists.",
+                    Console.WriteLine("An error has occurred. Ensure that an object with the '{0}' key value exists.",
                     orderId);
                 }
             }

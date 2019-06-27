@@ -223,7 +223,7 @@ namespace operators
             }
             catch(OverflowException)
             {
-                Console.WriteLine($"Overflow occured when adding {a} to {b}.");
+                Console.WriteLine($"Overflow occurred when adding {a} to {b}.");
             }
             // </SnippetCheckedUnchecked>
         }

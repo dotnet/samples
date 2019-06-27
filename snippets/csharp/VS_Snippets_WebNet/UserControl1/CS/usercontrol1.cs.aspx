@@ -67,7 +67,7 @@
 
 
 // <Snippet6>
-                // Save state information which is used by display handler after the postback has occured.
+                // Save state information which is used by display handler after the postback has occurred.
                 void SubmitBtn_Click(Object sender, EventArgs e) 
                 {
                   // Clear all values from session state of 'Page'.

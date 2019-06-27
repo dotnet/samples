@@ -69,7 +69,7 @@ Module Program
             svcHost.Close()
 
         Catch cex As CommunicationException
-            Console.WriteLine("An exception occured: {0}", cex.Message)
+            Console.WriteLine("An exception occurred: {0}", cex.Message)
             svcHost.Abort()
         End Try
     End Sub

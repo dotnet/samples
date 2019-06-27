@@ -101,7 +101,7 @@ int main()
             Console::WriteLine( "The file StockQuoteOut_cpp.wsdl was successfully written" );
          }
          else
-            Console::WriteLine( "An error occured while reversing the input WSDL file." );
+            Console::WriteLine( "An error occurred while reversing the input WSDL file." );
       }
    }
    catch ( Exception^ e ) 
