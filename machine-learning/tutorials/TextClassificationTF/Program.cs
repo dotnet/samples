@@ -113,7 +113,7 @@ namespace TextClassificationTF
                 .Append(mlContext.Transforms.CustomMapping(ResizeFeaturesAction, "Resize")) 
                 // Passes the data to TensorFlow for scoring
                 .Append(tensorFlowModel.ScoreTensorFlowModel("Prediction/Softmax", "Features"))
-                // Retreives the 'Prediction' from TensorFlow and and copies to a column 
+                // Retrieves the 'Prediction' from TensorFlow and copies to a column 
                 .Append(mlContext.Transforms.CopyColumns("Prediction", "Prediction/Softmax"));
 
 
