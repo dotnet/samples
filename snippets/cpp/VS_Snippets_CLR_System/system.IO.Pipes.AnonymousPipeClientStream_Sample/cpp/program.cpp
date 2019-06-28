@@ -13,16 +13,6 @@ public:
         if (args->Length > 1)
         {
             PipeStream^ pipeClient = gcnew AnonymousPipeClientStream(PipeDirection::In, args[1]);
-            // Show that anonymous Pipes do not support Message mode.
-            try
-            {
-                Console::WriteLine("[CLIENT] Setting ReadMode to \"Message\".");
-                pipeClient->ReadMode = PipeTransmissionMode::Message;
-            }
-            catch (NotSupportedException^ e)
-            {
-                Console::WriteLine("[CLIENT] Execption:\n    {0}", e->Message);
-            }
 
             Console::WriteLine("[CLIENT] Current TransmissionMode: {0}.",
                 pipeClient->TransmissionMode);
