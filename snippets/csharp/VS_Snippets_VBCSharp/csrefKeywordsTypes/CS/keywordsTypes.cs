@@ -153,36 +153,6 @@ namespace csrefKeywordsMethodParams
     */
     //</snippet5>
 
-    //<snippet6>
-    public class TestDecimal
-    {
-        static void Main()
-        {
-            decimal d = 9.1m;
-            int y = 3;
-            Console.WriteLine(d + y);   // Result converted to decimal
-        }
-    }
-    // Output: 12.1
-    //</snippet6>
-
-    //<snippet7>
-    public class TestDecimalFormat
-    {
-        static void Main()
-        {
-            decimal x = 0.999m;
-            decimal y = 9999999999999999999999999999m;
-            Console.WriteLine("My amount = {0:C}", x);
-            Console.WriteLine("Your amount = {0:C}", y);
-        }
-    }
-    /* Output:
-        My amount = $1.00
-        Your amount = $9,999,999,999,999,999,999,999,999,999.00
-    */
-    //</snippet7>
-
     //<snippet8>      
     // Declare delegate -- defines required signature:
     delegate double MathAction(double num);
