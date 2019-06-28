@@ -19,16 +19,6 @@ public:
         AnonymousPipeServerStream^ pipeServer =
             gcnew AnonymousPipeServerStream(PipeDirection::Out,
             HandleInheritability::Inheritable);
-        // Show that anonymous pipes do not support Message mode.
-        try
-        {
-            Console::WriteLine("[SERVER] Setting ReadMode to \"Message\".");
-            pipeServer->ReadMode = PipeTransmissionMode::Message;
-        }
-        catch (NotSupportedException^ e)
-        {
-            Console::WriteLine("[SERVER] Exception:\n    {0}", e->Message);
-        }
 
         Console::WriteLine("[SERVER] Current TransmissionMode: {0}.",
             pipeServer->TransmissionMode);
