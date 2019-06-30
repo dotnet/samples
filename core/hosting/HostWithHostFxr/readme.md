@@ -12,7 +12,7 @@ The `nethost` header and library are part of the Microsoft.NETCore.DotNetAppHost
 
 The `coreclr_delegates.h` and `hostfxr.h` files are copied from the [core-setup](https://github.com/dotnet/core-setup) repo.
 
-Addtional comments are contained in source and project files.
+Additional comments are contained in source and project files.
 
 Prerequisites
 ------------

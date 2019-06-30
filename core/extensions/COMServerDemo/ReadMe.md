@@ -8,7 +8,7 @@ Key Features
 
 Demonstrates how to provide a COM server in .NET Core 3.0 Preview 5 or later.
 
-Addtional comments are contained in source and project files.
+Additional comments are contained in source and project files.
 
 Build and Run
 -------------
