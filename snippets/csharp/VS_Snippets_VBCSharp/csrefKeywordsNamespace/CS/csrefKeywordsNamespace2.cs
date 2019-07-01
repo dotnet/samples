@@ -1,4 +1,4 @@
-﻿// 9 comes before 8 because "using System;" is part of snippet and must come first in file.
+// 9 comes before 8 because "using System;" is part of snippet and must come first in file.
 
 //<snippet9>
 using System;
@@ -38,10 +38,10 @@ namespace NameSpace3
     {
         static void Main()
         {
-            AliasToMyClass instance1 = new AliasToMyClass();
+            var instance1 = new AliasToMyClass();
             Console.WriteLine(instance1);
 
-            UsingAlias instance2 = new UsingAlias();
+            var instance2 = new UsingAlias();
             Console.WriteLine(instance2);
 
         }
@@ -63,7 +63,7 @@ namespace PC
         void M()
         {
             // Use the alias
-            Project.MyClass mc = new Project.MyClass();
+            var mc = new Project.MyClass();
         }
     }
     namespace MyCompany
