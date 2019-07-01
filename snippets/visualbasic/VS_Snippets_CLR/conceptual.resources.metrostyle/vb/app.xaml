@@ -7,7 +7,6 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <!-- Common Metro styles -->
                 <!-- Visual Studio project and item templates require this reference -->
                 <ResourceDictionary Source="MetroStyle/Styles.xaml"/>
             </ResourceDictionary.MergedDictionaries>
