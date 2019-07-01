@@ -12,17 +12,6 @@ class PipeClient
             using (PipeStream pipeClient =
                 new AnonymousPipeClientStream(PipeDirection.In, args[0]))
             {
-                // Show that anonymous Pipes do not support Message mode.
-                try
-                {
-                    Console.WriteLine("[CLIENT] Setting ReadMode to \"Message\".");
-                    pipeClient.ReadMode = PipeTransmissionMode.Message;
-                }
-                catch (NotSupportedException e)
-                {
-                    Console.WriteLine("[CLIENT] Execption:\n    {0}", e.Message);
-                }
-
                 Console.WriteLine("[CLIENT] Current TransmissionMode: {0}.",
                    pipeClient.TransmissionMode);
 
