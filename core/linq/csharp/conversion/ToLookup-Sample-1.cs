@@ -9,7 +9,8 @@ namespace Conversion
         //related key expression into a grouped dictionary.
         //
         //Output:
-        //Bob's score: 40 
+        //Total Females: 2
+        //Total Males: 1
         public static void Example()
         {
             var scoreRecords = new[]
