@@ -67,7 +67,7 @@ Module Example
    End Sub
    
    Private Sub DisplayArray(cities() As CityInfo)
-      Console.WriteLine("{0,-20} {1,-25} {2,10}", "City", "Country", "Population")
+      Console.WriteLine("{0,-20} {1,-25} {2,10}", "City", "Country/Region", "Population")
       For Each city In cities
          Console.WriteLine("{0,-20} {1,-25} {2,10:N0}", city.City, city.Country, city.Population)
       Next
@@ -75,22 +75,22 @@ Module Example
    End Sub
 End Module
 ' The example displays the following output:
-'     City                 Country                   Population
+'     City                 Country/Region            Population
 '     New York City        United States of America   8,175,133
 '     Detroit              United States of America     713,777
 '     Paris                France                     2,193,031
 '     
-'     City                 Country                   Population
+'     City                 Country/Region            Population
 '     Detroit              United States of America     713,777
 '     New York City        United States of America   8,175,133
 '     Paris                France                     2,193,031
 '     
-'     City                 Country                   Population
+'     City                 Country/Region            Population
 '     Detroit              United States of America     713,777
 '     Paris                France                     2,193,031
 '     New York City        United States of America   8,175,133
 '     
-'     City                 Country                   Population
+'     City                 Country/Region            Population
 '     Paris                France                     2,193,031
 '     Detroit              United States of America     713,777
 '     New York City        United States of America   8,175,133

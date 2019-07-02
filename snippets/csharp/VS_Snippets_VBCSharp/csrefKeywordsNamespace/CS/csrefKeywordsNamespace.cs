@@ -74,7 +74,7 @@ namespace usingstatement
         void TestMethod()
         {
         //<snippet4>
-        using (Font font1 = new Font("Arial", 10.0f)) 
+        using (var font1 = new Font("Arial", 10.0f)) 
         {
             byte charset = font1.GdiCharSet;
         }
@@ -82,7 +82,7 @@ namespace usingstatement
 
         //<snippet5>    
             {
-              Font font1 = new Font("Arial", 10.0f);
+              var font1 = new Font("Arial", 10.0f);
               try
               {
                 byte charset = font1.GdiCharSet;
@@ -96,7 +96,7 @@ namespace usingstatement
         //</snippet5>
 
             //<snippet6>
-            using (Font font3 = new Font("Arial", 10.0f),
+            using (var font3 = new Font("Arial", 10.0f),
                         font4 = new Font("Arial", 10.0f))
             {
                 // Use font3 and font4.
@@ -104,7 +104,7 @@ namespace usingstatement
             //</snippet6>
 
             //<snippet7>
-            Font font2 = new Font("Arial", 10.0f);
+            var font2 = new Font("Arial", 10.0f);
             using (font2) // not recommended
             {
                 // use font2
