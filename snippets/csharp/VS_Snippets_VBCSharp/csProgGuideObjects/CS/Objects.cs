@@ -1443,7 +1443,7 @@ class TestPerson
     //<Snippet64>
     class Calendar1
     {
-        public const int months = 12;
+        public const int Months = 12;
     }
     //</Snippet64>
 
@@ -1451,7 +1451,7 @@ class TestPerson
     //<Snippet65>
     class Calendar2
     {
-        const int months = 12, weeks = 52, days = 365;
+        const int Months = 12, Weeks = 52, Days = 365;
     }
     //</Snippet65>
 
@@ -1459,24 +1459,24 @@ class TestPerson
     //<Snippet66>
     class Calendar3
     {
-        const int months = 12;
-        const int weeks = 52;
-        const int days = 365;
+        const int Months = 12;
+        const int Weeks = 52;
+        const int Days = 365;
 
-        const double daysPerWeek = (double) days / (double) weeks;
-        const double daysPerMonth = (double) days / (double) months;
+        const double DaysPerWeek = (double) Days / (double) Weeks;
+        const double DaysPerMonth = (double) Days / (double) Months;
     }
     //</Snippet66>
 
 
     class Calendar
     {
-        public const int months = 12;
+        public const int Months = 12;
 
         static void test()
         {
             //<Snippet67>
-            int birthstones = Calendar.months;
+            int birthstones = Calendar.Months;
             //</Snippet67>
 
             Console.WriteLine(birthstones.ToString());
