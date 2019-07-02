@@ -11,6 +11,7 @@
             ToListSample1.QuerySyntaxExample();
 
             ToDictionarySample1.Example();
+            ToLookupSample1.Example();
 
             OfTypeSample1.Example();
         }

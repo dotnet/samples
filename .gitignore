@@ -204,3 +204,8 @@ _dependentPackages/
 
 # Visual Studio Code
 .vscode/
+/core/extensions/AppWithPlugin/.idea/.idea.AppWithPlugin/riderModule.iml
+/core/extensions/AppWithPlugin/.idea/.idea.AppWithPlugin/.idea
+/csharp/NullableIntroduction/.idea/.idea.NullableIntroduction
+/csharp/events/.idea/.idea.events.dir/.idea
+/csharp/events/.idea/.idea.events.dir/riderModule.iml
