@@ -73,6 +73,10 @@ namespace operators
             Console.WriteLine("========= true and false operators examples ====");
             LaunchStatusTest.Main();
             Console.WriteLine();
+
+            Console.WriteLine("========= operator overloading example =========");
+            OperatorOverloading.Main();
+            Console.WriteLine();
         }
     }
 }
