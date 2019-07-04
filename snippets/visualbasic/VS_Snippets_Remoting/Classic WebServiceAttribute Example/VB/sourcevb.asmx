@@ -1,4 +1,3 @@
-' <Snippet1>
 <%@ WebService Language="VB" Class= "ServerVariables"%>
  
 Imports System
@@ -16,5 +15,3 @@ Public Class ServerVariables
         Return Server.MachineName
     End Function
 End Class
- 
-' </Snippet1>
