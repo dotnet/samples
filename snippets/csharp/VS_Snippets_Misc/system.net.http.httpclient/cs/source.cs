@@ -9,10 +9,10 @@ class HttpClient_Example
 // <Snippet1>
    static async Task Main()
    {
-      // Create a New HttpClient object and dispose it when done, so the app doesn't leak resources
+      // Create a New HttpClient object and dispose it when done, so the app doesn't leak resources.
       using (HttpClient client = new HttpClient())
       {
-         // Call asynchronous network methods in a try/catch block to handle exceptions
+         // Call asynchronous network methods in a try/catch block to handle exceptions.
          try	
          {
             HttpResponseMessage response = await client.GetAsync("http://www.contoso.com/");
