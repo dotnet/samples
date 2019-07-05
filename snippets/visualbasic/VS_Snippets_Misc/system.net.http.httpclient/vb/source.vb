@@ -5,7 +5,7 @@ Imports System.Net.Http
 Imports System.Threading.Tasks
 
 Class HttpClient_Example
-	' <Snippet1>
+' <Snippet1>
 	' HttpClient is intended to be instantiated once per application, rather than per-use. See Remarks.
     Shared ReadOnly client As HttpClient = New HttpClient()
 
@@ -24,5 +24,5 @@ Class HttpClient_Example
 			Console.WriteLine("Message :{0} ", e.Message)
 		End Try
 	End Function
-	' </Snippet1>		
+' </Snippet1>		
 End Class
