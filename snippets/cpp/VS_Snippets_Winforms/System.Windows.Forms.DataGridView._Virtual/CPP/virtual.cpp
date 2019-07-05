@@ -82,7 +82,7 @@ namespace Sample
         {
             MessageBox::Show(String::Format(
                 CultureInfo::CurrentCulture, 
-                "Exception occured: {0}", ex));
+                "Exception occurred: {0}", ex));
         }
     }
 

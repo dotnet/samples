@@ -125,7 +125,7 @@ Public Class MyOperationFaultCollectionSample
                   "The file StockQuoteOut_vb.wsdl was successfully written.")
             Else
                Console.WriteLine( _
-                  "An Error occured while reversing the input WSDL file.")
+                  "An Error occurred while reversing the input WSDL file.")
             End If
          End If
       Catch e As Exception

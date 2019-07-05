@@ -77,7 +77,7 @@ private void Button1_Click(object sender, EventArgs e) {
       <asp:Label id="Label6" runat="server" AssociatedControlID="TextBox5">Postal Code</asp:Label>
       <asp:TextBox id="TextBox5" runat="server" />
 
-      <asp:Label id="Label7" runat="server" AssociatedControlID="TextBox6">Country</asp:Label>
+      <asp:Label id="Label7" runat="server" AssociatedControlID="TextBox6">Country/Region</asp:Label>
       <asp:TextBox id="TextBox6" runat="server" />
 
       <asp:Label id="Label8" runat="server" AssociatedControlID="DropDownList1">

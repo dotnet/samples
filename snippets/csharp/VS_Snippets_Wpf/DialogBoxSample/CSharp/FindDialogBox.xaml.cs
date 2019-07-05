@@ -1,6 +1,3 @@
-//<SnippetTextFoundEventCODEBEHIND1>
-//<SnippetTextFoundEventRaiseCODEBEHIND1>
-//<SnippetFindDialogCloseCODEBEHIND1>
 using System;
 using System.Windows;
 using System.Windows.Controls;
@@ -10,15 +7,13 @@ namespace SDKSample
 {
     public partial class FindDialogBox : Window
     {
-        //</SnippetTextFoundEventRaiseCODEBEHIND1>
-        //</SnippetFindDialogCloseCODEBEHIND1>
         public event TextFoundEventHandler TextFound;
+        
         protected virtual void OnTextFound()
         {
             TextFoundEventHandler textFound = this.TextFound;
             if (textFound != null) textFound(this, EventArgs.Empty);
         }
-        //</SnippetTextFoundEventCODEBEHIND1>
 
         public FindDialogBox(TextBox textBoxToSearch)
         {
@@ -53,11 +48,8 @@ namespace SDKSample
             set { this.length = value; }
         }
 
-        //<SnippetTextFoundEventRaiseCODEBEHIND2>
         void findNextButton_Click(object sender, RoutedEventArgs e)
         {
-            //</SnippetTextFoundEventRaiseCODEBEHIND2>
-
             // Find matches
             if (this.matches == null)
             {
@@ -96,17 +88,13 @@ namespace SDKSample
             Match match = this.matches[this.matchIndex];
             if (TextFound != null)
             {
-                //<SnippetTextFoundEventRaiseCODEBEHIND3>
                 // Text found
                 this.index = match.Index;
                 this.length = match.Length;
                 OnTextFound();
-                //</SnippetTextFoundEventRaiseCODEBEHIND3>
             }
             this.matchIndex++;
-            //<SnippetTextFoundEventRaiseCODEBEHIND4>
         }
-        //</SnippetTextFoundEventRaiseCODEBEHIND4>
 
         void textBoxToSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -128,16 +116,11 @@ namespace SDKSample
             this.findNextButton.IsEnabled = true;
             this.matches = null;
         }
-        //<SnippetFindDialogCloseCODEBEHIND2>
+
         void closeButton_Click(object sender, RoutedEventArgs e)
         {
             // Close dialog box
             this.Close();
         }
-        //<SnippetTextFoundEventCODEBEHIND2>
-        //<SnippetTextFoundEventRaiseCODEBEHIND5>
     }
 }
-//</SnippetTextFoundEventCODEBEHIND2>
-//</SnippetTextFoundEventRaiseCODEBEHIND5>
-//</SnippetFindDialogCloseCODEBEHIND2>

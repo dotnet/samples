@@ -193,7 +193,7 @@
                         Command="ScrollBar.PageDownCommand" />
         </Track.IncreaseRepeatButton>
       </Track>
-      <RepeatButton Grid.Row="3"
+      <RepeatButton Grid.Row="2"
                     Style="{StaticResource ScrollBarLineButton}"
                     Height="18"
                     Command="ScrollBar.LineDownCommand"
@@ -267,7 +267,7 @@
         </Track.IncreaseRepeatButton>
       </Track>
       <!--</SnippetRepeatButtonStyle_a_lileib>-->
-      <RepeatButton Grid.Column="3"
+      <RepeatButton Grid.Column="2"
                     Style="{StaticResource ScrollBarLineButton}"
                     Width="18"
                     Command="ScrollBar.LineRightCommand"

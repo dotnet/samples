@@ -48,7 +48,7 @@ Class HttpWebResponseSnippet
             myHttpWebResponse.Close()
 ' </Snippet1>
         Catch e As WebException
-            Console.WriteLine(ControlChars.Lf + ControlChars.Cr + "Exception Raised. The following error occured : {0}", e.Status)
+            Console.WriteLine(ControlChars.Lf + ControlChars.Cr + "Exception Raised. The following error occurred : {0}", e.Status)
         Catch e As Exception
             Console.WriteLine(ControlChars.Cr + "The following exception was raised : {0}", e.Message)
         End Try

@@ -39,7 +39,7 @@ private:
    void MyInstaller_BeforeRollBack( Object^ sender, InstallEventArgs^ e )
    {
       Console::WriteLine( "" );
-      Console::WriteLine( "BeforeRollback Event occured." );
+      Console::WriteLine( "BeforeRollback Event occurred." );
       Console::WriteLine( "" );
    }
 
@@ -48,7 +48,7 @@ private:
    void MyInstaller_AfterRollback( Object^ sender, InstallEventArgs^ e )
    {
       Console::WriteLine( "" );
-      Console::WriteLine( "AfterRollback Event occured." );
+      Console::WriteLine( "AfterRollback Event occurred." );
       Console::WriteLine( "" );
    }
 

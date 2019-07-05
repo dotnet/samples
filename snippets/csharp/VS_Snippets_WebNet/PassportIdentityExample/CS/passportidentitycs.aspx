@@ -98,7 +98,7 @@ PassportIdentity Class topic. -->
         }
         catch (System.Runtime.InteropServices.COMException comError)
         {
-            this.Response.Write("An error occured while working with the " +
+            this.Response.Write("An error occurred while working with the " +
                 "Passport SDK.");
         }
     }

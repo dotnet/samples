@@ -34,6 +34,14 @@ namespace operators
             PointerOperators.Examples();
             Console.WriteLine();
 
+            Console.WriteLine("= Type-testing and conversion operators examples");
+            TypeTestingAndConversionOperators.Examples();
+            Console.WriteLine();
+
+            Console.WriteLine("============== = operator examples =============");
+            AssignmentOperator.Examples();
+            Console.WriteLine();
+
             Console.WriteLine("============== + operator examples =============");
             AdditionOperator.Examples();
             Console.WriteLine();
@@ -42,24 +50,32 @@ namespace operators
             SubtractionOperator.Examples();
             Console.WriteLine();
 
-            Console.WriteLine("============== = operator examples =============");
-            AssignmentExamples.Examples();
-            Console.WriteLine();
-            
             Console.WriteLine("============== ?: operator examples ============");
             ConditionalOperator.Examples();
             Console.WriteLine();
 
-            Console.WriteLine("============== () operator examples ============");
-            InvocationOperatorExamples.Examples();
+            Console.WriteLine("============== ?? operator examples ============");
+            NullCoalescingOperator.Examples();
             Console.WriteLine();
 
             Console.WriteLine("============== => operator examples ============");
             LambdaOperator.Examples();
             Console.WriteLine();
 
+            Console.WriteLine("============= new operator examples ============");
+            NewOperator.Examples();
+            Console.WriteLine();
+
+            Console.WriteLine("============ stackalloc operator examples ======");
+            StackallocOperator.Examples();
+            Console.WriteLine();
+
             Console.WriteLine("========= true and false operators examples ====");
             LaunchStatusTest.Main();
+            Console.WriteLine();
+
+            Console.WriteLine("========= operator overloading example =========");
+            OperatorOverloading.Main();
             Console.WriteLine();
         }
     }

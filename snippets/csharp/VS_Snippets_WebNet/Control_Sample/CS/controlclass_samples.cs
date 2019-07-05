@@ -21,7 +21,7 @@ namespace SimpleControlSample
 			if (!Page.IsPostBack)
 				output.Write("Page has just been loaded");
 		   else
-				output.Write("Postback has occured");
+				output.Write("Postback has occurred");
        }
   // </Snippet1>
     }    

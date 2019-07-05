@@ -20,7 +20,7 @@ Namespace SimpleControlSample
          If Not Page.IsPostBack Then
             output.Write("Page has just been loaded")
          Else
-            output.Write("Postback has occured")
+            output.Write("Postback has occurred")
          End If
       End Sub 
 ' </Snippet1>

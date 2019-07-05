@@ -118,9 +118,9 @@ namespace CloneBasicAuthenticationClient
 			catch(WebException e) 
 			{
 				if(e.Response != null)
-					Console.WriteLine("\r\n Exception Raised. The following error occured : {0}",((HttpWebResponse)(e.Response)).StatusDescription); 
+					Console.WriteLine("\r\n Exception Raised. The following error occurred : {0}",((HttpWebResponse)(e.Response)).StatusDescription); 
 				else
-					Console.WriteLine("\r\n Exception Raised. The following error occured : {0}",e.Status); 
+					Console.WriteLine("\r\n Exception Raised. The following error occurred : {0}",e.Status); 
 			}
 			catch(Exception e)
 			{

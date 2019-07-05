@@ -43,7 +43,7 @@ public:
       }
       catch ( Exception^ e ) 
       {
-		  this->Context->LogMessage( "Error occured : " + e->Message );
+		  this->Context->LogMessage( "Error occurred : " + e->Message );
       }
    }
 };

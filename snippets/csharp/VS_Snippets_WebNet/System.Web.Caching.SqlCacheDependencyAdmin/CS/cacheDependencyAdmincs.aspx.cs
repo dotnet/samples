@@ -117,7 +117,7 @@ public partial class cacheDependencyAdmincs : System.Web.UI.Page
     catch (HttpException ex)
     {
       enableTableErrorMsg.Text = "<br />" +
-        "An error occured enabling a table.<br />" +
+        "An error occurred enabling a table.<br />" +
         "The error message was: " +
         ex.Message;
       enableTableErrorMsg.Visible = true;

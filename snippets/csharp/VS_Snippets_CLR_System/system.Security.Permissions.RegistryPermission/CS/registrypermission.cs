@@ -187,7 +187,7 @@ public class RegistryPermissionDemo
         catch (ArgumentException e)
         {
             // RegistryPermissionAccess.AllAccess can not be used as a parameter for GetPathList.
-            Console.WriteLine("An ArgumentException occured as a result of using AllAccess. "
+            Console.WriteLine("An ArgumentException occurred as a result of using AllAccess. "
                 + "AllAccess cannot be used as a parameter in GetPathList because it represents more than one "
                 + "type of registry variable access : \n" + e);
         }

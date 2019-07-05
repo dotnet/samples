@@ -68,7 +68,7 @@ public class MyMainClass
       }
       catch(Exception e)
       {
-         Console.WriteLine("Exception :" + e.Message + "Occured");
+         Console.WriteLine("Exception :" + e.Message + "Occurred");
       }
    }
 // </Snippet1>

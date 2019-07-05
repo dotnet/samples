@@ -61,7 +61,7 @@ Namespace InlineSnippets
 			' </Snippet_Inline_NextSibling>
 
 			' <Snippet_Inline_PreviousSibling>
-			' After this line exectues, "previousSibling" is null, since "run1" is
+			' After this line executes, "previousSibling" is null, since "run1" is
 			' the first Inline element in the Paragraph.
 			Dim previousSibling As Inline = run1.PreviousInline
 

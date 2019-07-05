@@ -3,7 +3,7 @@
 // System::Reflection::AssemblyName::GetPublicKey()
 // System::Reflection::AssemblyName::GetPublicKeyToken()
 // System::Reflection::AssemblyName::Flags
-// System::Reflection::AssemblyName::VersionCompatibilty
+// System::Reflection::AssemblyName::VersionCompatibility
 /* 
    The following example demonstrates the 'GetPublicKey()' and
    'GetPublicKeyToken()' methods and the 'KeyPair', 'Flags' and 'VersionCompatibility'

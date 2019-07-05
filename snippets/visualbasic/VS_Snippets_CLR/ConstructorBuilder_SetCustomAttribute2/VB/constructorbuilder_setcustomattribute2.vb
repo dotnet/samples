@@ -65,9 +65,9 @@ Public Class MyConstructorBuilder
       Try
          myConstructor.SetCustomAttribute(myConstructorInfo, New Byte() {1, 0, 1})
       Catch ex As ArgumentNullException
-         Console.WriteLine("The following exception has occured : " + ex.Message)
+         Console.WriteLine("The following exception has occurred : " + ex.Message)
       Catch ex As Exception
-         Console.WriteLine("The following exception has occured : " + ex.Message)
+         Console.WriteLine("The following exception has occurred : " + ex.Message)
       End Try
       Return myTypeBuilder.CreateType()
    End Function 'MyCreateCallee

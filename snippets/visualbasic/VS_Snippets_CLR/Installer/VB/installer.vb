@@ -28,7 +28,7 @@ Public Class MyInstallerClass
    Private Sub MyInstaller_Committing(ByVal sender As Object, _
                                       ByVal e As InstallEventArgs)
       Console.WriteLine("")
-      Console.WriteLine("Committing Event occured.")
+      Console.WriteLine("Committing Event occurred.")
       Console.WriteLine("")
    End Sub 'MyInstaller_Committing
 
@@ -36,7 +36,7 @@ Public Class MyInstallerClass
    Private Sub MyInstaller_Committed(ByVal sender As Object, _
                                      ByVal e As InstallEventArgs)
       Console.WriteLine("")
-      Console.WriteLine("Committed Event occured.")
+      Console.WriteLine("Committed Event occurred.")
       Console.WriteLine("")
    End Sub 'MyInstaller_Committed
 

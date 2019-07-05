@@ -24,7 +24,7 @@ Public Class MyInstallerClass
    ' Event handler for 'Committed' event.
    Private Sub MyInstaller_Committed(ByVal sender As Object, ByVal e As InstallEventArgs)
       Console.WriteLine("")
-      Console.WriteLine("Committed Event occured.")
+      Console.WriteLine("Committed Event occurred.")
       Console.WriteLine("")
    End Sub 'MyInstaller_Committed
 ' </Snippet1>

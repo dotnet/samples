@@ -26,7 +26,7 @@ Public Class MyInstallerClass
    ' Event handler for 'AfterRollback' event.
    Private Sub MyInstaller_AfterRollBack(sender As Object, e As InstallEventArgs)
       Console.WriteLine("")
-      Console.WriteLine("AfterRollBack Event occured.")
+      Console.WriteLine("AfterRollBack Event occurred.")
       Console.WriteLine("")
    End Sub 'MyInstaller_AfterRollBack
 

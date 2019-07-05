@@ -121,7 +121,7 @@ public class SystemDrawingWorkingWithImages : Form
             Y += font.Height;
 
             e.Graphics.DrawString(
-               "   iD: 0x" + propItem.Id.ToString("x"),
+               "   id: 0x" + propItem.Id.ToString("x"),
                font,
                blackBrush,
                X, Y);

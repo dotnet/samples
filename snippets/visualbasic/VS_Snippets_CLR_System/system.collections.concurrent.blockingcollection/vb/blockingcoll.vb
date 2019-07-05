@@ -157,7 +157,7 @@ Class ConsumingEnumerableDemo
                         Thread.Sleep(100)
                     Next
 
-                    ' Need to do this to keep foreach below from hanging
+                    ' Need to do this to keep foreach below from not responding.
                     bc.CompleteAdding()
                 End Sub)
             ' Now consume the blocking collection with foreach.

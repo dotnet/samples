@@ -25,14 +25,14 @@ public class Example
                                 city.Item1, city.Item2, city.Item3, city.Item4, city.Item5,
                                 (city.Item5 - city.Item3)/ (double)city.Item3);
          Console.WriteLine(output);
+      }
       // The example displays the following output:
       //    City            Year  Population    Year  Population    Change (%)
-      //    
+      //  
       //    Los Angeles     1940   1,504,277    1950   1,970,358        31.0 %
       //    New York        1940   7,454,995    1950   7,891,957         5.9 %
       //    Chicago         1940   3,396,808    1950   3,620,962         6.6 %
       //    Detroit         1940   1,623,452    1950   1,849,568        13.9 %
       // </Snippet9>
-      }
    }
 }

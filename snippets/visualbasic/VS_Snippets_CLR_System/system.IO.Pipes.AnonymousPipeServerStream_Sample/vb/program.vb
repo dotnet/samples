@@ -1,5 +1,4 @@
 '<snippet01>
-Imports System
 Imports System.IO
 Imports System.IO.Pipes
 Imports System.Diagnostics
@@ -12,14 +11,6 @@ Class PipeServer
 
         Using pipeServer As New AnonymousPipeServerStream(PipeDirection.Out, _
             HandleInheritability.Inheritable)
-
-            ' Show that anonymous pipes do not support Message mode.
-            Try
-                Console.WriteLine("[SERVER] Setting ReadMode to ""Message"".")
-                pipeServer.ReadMode = PipeTransmissionMode.Message
-            Catch e As NotSupportedException
-                Console.WriteLine("[SERVER] Exception:\n    {0}", e.Message)
-            End Try
 
             Console.WriteLine("[SERVER] Current TransmissionMode: {0}.",
                 pipeServer.TransmissionMode)

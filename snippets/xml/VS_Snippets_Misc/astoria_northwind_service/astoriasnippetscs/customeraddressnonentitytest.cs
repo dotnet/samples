@@ -93,7 +93,7 @@ namespace AstoriaSnippetsCS
         }
 
         /// <summary>
-        ///A test for Country
+        ///A test for country/region.
         ///</summary>
         [TestMethod()]
         public void CountryTest()

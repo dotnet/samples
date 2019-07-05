@@ -14,12 +14,13 @@ public class Form1 : System.Windows.Forms.Form
     private System.Windows.Forms.ListView listView2;
     private System.Windows.Forms.ListView listView1;
 
-	public Form1()
-	{
-	InitializeComponent();
-	}
-	private void InitializeComponent()
-	{
+    public Form1()
+    {
+        InitializeComponent();
+    }
+
+    private void InitializeComponent()
+    {
         splitContainer1 = new System.Windows.Forms.SplitContainer();
         treeView1 = new System.Windows.Forms.TreeView();
         splitContainer2 = new System.Windows.Forms.SplitContainer();
@@ -60,7 +61,6 @@ public class Form1 : System.Windows.Forms.Form
         splitContainer1.Panel1.Name = "splitterPanel1";
         // Controls placed on Panel1 support right-to-left fonts.
         splitContainer1.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-
         // </snippet2>
 
         // Add a SplitContainer to the right panel.
@@ -119,7 +119,7 @@ public class Form1 : System.Windows.Forms.Form
         listView2.Size = new System.Drawing.Size(207, 142);
         // listView2 is the fifth control in the tab order.
         listView2.TabIndex = 4;
-        
+
         // These are basic properties of the form.
         ClientSize = new System.Drawing.Size(292, 273);
         Controls.Add(splitContainer1);
@@ -130,20 +130,22 @@ public class Form1 : System.Windows.Forms.Form
         ResumeLayout(false);
     }
 
-	[STAThread]
+    [STAThread]
     static void Main() 
-	{
-		Application.Run(new Form1());
-	}
+    {
+        Application.Run(new Form1());
+    }
+
     private void splitContainer1_SplitterMoving(System.Object sender, System.Windows.Forms.SplitterCancelEventArgs e)
     {
-    // As the splitter moves, change the cursor type.
-    Cursor.Current = System.Windows.Forms.Cursors.NoMoveVert;
+        // As the splitter moves, change the cursor type.
+        Cursor.Current = System.Windows.Forms.Cursors.NoMoveVert;
     }
+
     private void splitContainer1_SplitterMoved(System.Object sender, System.Windows.Forms.SplitterEventArgs e)
     {
-    // When the splitter stops moving, change the cursor back to the default.
-    Cursor.Current=System.Windows.Forms.Cursors.Default;
+        // When the splitter stops moving, change the cursor back to the default.
+        Cursor.Current=System.Windows.Forms.Cursors.Default;
     }
 }
 // </snippet1>

@@ -87,7 +87,7 @@ Partial Class cacheDependencyAdminvb
       End If
     Catch ex As HttpException
       enableTableErrorMsg.Text = "<br />" & _
-        "An error occured enabling a table.<br />" & _
+        "An error occurred enabling a table.<br />" & _
         "The error message was: " & _
         ex.Message
       enableTableErrorMsg.Visible = True
