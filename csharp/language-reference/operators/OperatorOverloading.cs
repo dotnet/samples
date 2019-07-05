@@ -28,7 +28,13 @@ public struct Fraction
         => new Fraction(a.num * b.num, a.den * b.den);
 
     public static Fraction operator /(Fraction a, Fraction b)
-        => b.num != 0 ? new Fraction(a.num * b.den, a.den * b.num) : throw new DivideByZeroException();
+    {
+        if (b.num == 0)
+        {
+            throw new DivideByZeroException();
+        }
+        return new Fraction(a.num * b.den, a.den * b.num);
+    }
 
     public override string ToString() => $"{num} / {den}";
 }
