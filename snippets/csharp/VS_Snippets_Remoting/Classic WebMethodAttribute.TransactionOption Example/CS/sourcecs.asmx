@@ -16,7 +16,7 @@
                // Explicitly abort the transaction.
                ContextUtil.SetAbort();
             else {
-               // Credit and Debit methods explictly vote within
+               // Credit and Debit methods explicitly vote within
                // the code for their methods whether to commit or
                // abort the transaction.
                objBank.Credit(Amount, AcctNumberTo);

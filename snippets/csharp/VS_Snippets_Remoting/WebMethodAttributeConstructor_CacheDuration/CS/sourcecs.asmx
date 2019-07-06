@@ -1,4 +1,3 @@
-// <Snippet1>
 <%@ WebService Language="C#" Class="Counter" %>
 <%@ assembly name="System.EnterpriseServices,Version=1.0.3300.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a" %>
 
@@ -24,5 +23,3 @@ public class Counter : WebService {
           return  (int) Application["MyServiceUsage"];
      }
 }
-
-// </Snippet1>

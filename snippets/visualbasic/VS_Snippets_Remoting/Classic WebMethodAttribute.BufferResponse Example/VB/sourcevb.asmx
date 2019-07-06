@@ -1,4 +1,3 @@
-'<Snippet1>
 <%@WebService Class="Streaming" language="VB"%>
 
 Imports System
@@ -113,4 +112,3 @@ Public Class TextFileEnumerator
         End Get
     End Property
 End Class
-'</Snippet1>

@@ -1,4 +1,3 @@
-' <Snippet1>
 <%@ WebService Language="VB" Class="ShoppingCart" %>
  
 Imports System.Web.Services
@@ -24,4 +23,3 @@ Public Class OrderItem
   Public Cost as Decimal
 
 End Class
-' </Snippet1>

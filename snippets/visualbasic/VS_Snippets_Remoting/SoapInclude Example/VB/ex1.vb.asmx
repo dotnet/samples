@@ -1,4 +1,3 @@
-'<Snippet1>
 <%@ WebService Language="VB" Class="Test" %>
  
 Imports System
@@ -52,6 +51,3 @@ End Class
 public Class Bike 
    Inherits Vehicle 
 End Class
-   
-'</Snippet1>
-

@@ -1,5 +1,4 @@
-﻿' <Snippet1>
-<%@ WebService Language="VB" Class="Stats" %>
+﻿<%@ WebService Language="VB" Class="Stats" %>
  
 Imports System.Web.Services
 Imports System.Web.Services.Protocols
@@ -14,5 +13,3 @@ Public Class Stats
         ' Begin a process that takes a long time to complete.
     End Sub
 End Class
-
-' </Snippet1>

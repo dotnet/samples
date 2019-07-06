@@ -1,4 +1,3 @@
-' <Snippet1>
 <%@ WebService Language="VB" class="ThrowSoapException"%>
 
 Imports System
@@ -44,5 +43,3 @@ Public Class ThrowSoapException
         Return
     End Sub
 End Class
-
-' </Snippet1>

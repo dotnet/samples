@@ -1,4 +1,3 @@
-'<Snippet1>
 <%@ WebService Language="VB" Class="SoapDocumentMethodSample" %>
 	
 Imports System.Web.Services
@@ -16,4 +15,3 @@ Public Class SoapDocumentMethodSample
         Return intarray
    End Function
 End Class
-'</Snippet1>
