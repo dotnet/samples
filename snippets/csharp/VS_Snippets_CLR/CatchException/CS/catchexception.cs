@@ -8,16 +8,16 @@ class ExceptionTestClass
       int x = 0;
       try 
       {
-         int y = 100/x;
+         int y = 100 / x;
       }
-         catch (ArithmeticException e) 
-         {
-            Console.WriteLine("ArithmeticException Handler: {0}", e.ToString());
-         }
-         catch (Exception e) 
-         {
-            Console.WriteLine("Generic Exception Handler: {0}", e.ToString());
-         }
+      catch (ArithmeticException e) 
+      {
+         Console.WriteLine($"ArithmeticException Handler: {e}");
+      }
+      catch (Exception e) 
+      {
+         Console.WriteLine($"Generic Exception Handler: {e}");
+      }
    }	
 }
 /*
