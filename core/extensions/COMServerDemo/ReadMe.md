@@ -17,7 +17,7 @@ The project will only build and run on the Windows platform.
 
 ### Registered COM ###
 
-1) Install .NET Core 3.0 Preview 5 or later.
+1) Install .NET Core 3.0 Preview 7 or later.
 
 1) Navigate to the root directory and run `dotnet.exe build`.
 
@@ -31,11 +31,11 @@ Program should output an estimated value of &#960;.
 
 ### RegFree COM ###
 
-1) Install .NET Core 3.0 Preview 5 or later.
+1) Install .NET Core 3.0 Preview 7 or later.
 
 1) Navigate to the root directory and run `dotnet.exe build /p:RegFree=True`.
 
-    - If the Registered COM demo was previously run, the project should be cleaned first - `dotnet.exe clean` 
+    - If the Registered COM demo was previously run, the project should be cleaned first - `dotnet.exe clean`
 
 1) Run the generated binary directly e.g. `COMClient\bin\Debug\netcoreapp3.0\COMClient.exe`.
 
