@@ -12,7 +12,7 @@ class HttpClient_Example
     
    static async Task Main()
    {
-     // Call asynchronous network methods in a try/catch block to handle exceptions
+     // Call asynchronous network methods in a try/catch block to handle exceptions.
      try	
      {
         HttpResponseMessage response = await client.GetAsync("http://www.contoso.com/");
