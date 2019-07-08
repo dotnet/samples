@@ -18,7 +18,7 @@ Public Class Bank
             ' Explicitly abort the transaction.
             ContextUtil.SetAbort()
         Else
-            ' Credit and Debit method explictly vote within
+            ' Credit and Debit method explicitly vote within
             ' the code for their methods whether to commit or
             ' abort the transaction.
             objBank.Credit(Amount, AcctNumberTo)

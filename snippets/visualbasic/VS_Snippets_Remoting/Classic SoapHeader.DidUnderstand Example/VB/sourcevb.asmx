@@ -1,4 +1,3 @@
-' <Snippet1>
 <%@ WebService Language="VB" Class="MyWebService"%>
 
 Imports System.Web.Services
@@ -39,5 +38,3 @@ Public Class MyWebService
     End Function
     
 End Class
-
-' </Snippet1>

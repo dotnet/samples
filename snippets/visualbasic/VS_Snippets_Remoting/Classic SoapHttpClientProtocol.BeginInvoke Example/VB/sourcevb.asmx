@@ -1,4 +1,3 @@
-' <Snippet2>
 <%@ WebService Language="VB" Class="MyMath"%>
 Imports System.Web.Services
 Imports System
@@ -10,5 +9,3 @@ Public Class MyMath
         Return num1 + num2
     End Function 'Add
 End Class 'Math
-' </Snippet2>
-

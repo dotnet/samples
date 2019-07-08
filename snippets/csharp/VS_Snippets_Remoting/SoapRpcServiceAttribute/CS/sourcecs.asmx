@@ -1,4 +1,3 @@
-//<Snippet1>
 <%@ WebService Language="c#" Class="SumService" %>
 
 using System;
@@ -15,4 +14,3 @@ using System.Web.Services.Description;
 			return a + b;
 		}
 	}
-//</Snippet1>

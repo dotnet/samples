@@ -1,4 +1,3 @@
-// <Snippet2>
 <%@ WebService Language="C#" Class="Math"%>
  using System.Web.Services;
  using System;
@@ -11,6 +10,3 @@
          return dividend/divisor;
      }
   }
-// </Snippet2>
-
-

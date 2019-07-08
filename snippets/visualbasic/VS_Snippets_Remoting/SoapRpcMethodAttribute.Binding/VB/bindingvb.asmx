@@ -1,4 +1,3 @@
-'<Snippet1>
 <%@ WebService Language="VB" class="BindingSample" %>
  Imports System.Web.Services
  Imports System.Web.Services.Protocols
@@ -28,5 +27,4 @@
 	  Public Function DefaultBindingMethod() As String
   		Return "Member of the default binding"
  	  End Function
-End Class    
-'</Snippet1>
+End Class

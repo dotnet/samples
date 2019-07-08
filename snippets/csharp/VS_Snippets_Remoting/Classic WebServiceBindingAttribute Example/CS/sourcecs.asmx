@@ -1,4 +1,3 @@
-// <Snippet1>
 <%@ WebService Language="C#" class="BindingSample" %>
  using System;
  using System.Web.Services;
@@ -40,5 +39,3 @@
       }
  
  }
-
-// </Snippet1>

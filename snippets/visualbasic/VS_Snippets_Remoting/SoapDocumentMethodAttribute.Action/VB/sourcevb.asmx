@@ -1,5 +1,4 @@
-﻿' <Snippet1>
-<%@ WebService Language="VB" class="MyUser" %>
+﻿<%@ WebService Language="VB" class="MyUser" %>
 
 Imports System.Web.Services
 Imports System.Web.Services.Protocols
@@ -14,5 +13,3 @@ Public Class MyUser
         Return User.Identity.Name
     End Function
 End Class
-
-' </Snippet1>

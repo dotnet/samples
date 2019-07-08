@@ -1,5 +1,4 @@
-﻿//<Snippet1>
-<%@ WebService Language="C#" class="BindingSample" %>
+﻿<%@ WebService Language="C#" class="BindingSample" %>
  using System;
  using System.Web.Services;
  using System.Web.Services.Protocols;
@@ -35,5 +34,4 @@
 	  		return "Member of the default binding.";
       }
  
- }   
-//</Snippet1>
+ }

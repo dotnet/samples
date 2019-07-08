@@ -1,4 +1,3 @@
-'<Snippet1>
 <%@ WebService Language="VB" Class="SumService" %>
 
 Imports System
@@ -17,4 +16,3 @@ Imports System.Web.Services.Description
 		   return a + b
 		End Function
 	End Class
-'</Snippet1>
