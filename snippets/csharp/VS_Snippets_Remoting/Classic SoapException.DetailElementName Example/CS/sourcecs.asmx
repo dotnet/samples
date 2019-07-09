@@ -1,4 +1,3 @@
-// <Snippet1>
 <%@ WebService Language="C#" class="ThrowSoapException"%>
 
 using System;
@@ -40,7 +39,6 @@ public class ThrowSoapException : WebService
         SoapException se = new SoapException("Fault occurred", SoapException.ClientFaultCode,Context.Request.Url.AbsoluteUri,node);
 
         throw se;
-        return;    }
+        return;    
+    }
 }
-
-// </Snippet1>

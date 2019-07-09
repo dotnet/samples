@@ -1,5 +1,4 @@
-﻿' <Snippet1>
-<%@ WebService Language="VB" class="MyUser" %>
+﻿<%@ WebService Language="VB" class="MyUser" %>
 Imports System
 Imports System.Web.Services
 Imports System.Web.Services.Protocols
@@ -22,7 +21,7 @@ Public Class MyUser
         ' Get the full user name, including the domain name if applicable.
         temp = User.Identity.Name
         
-        ' Deterime whether the user is part of a Domain by searching for a backslash.
+        ' Determine whether the user is part of a Domain by searching for a backslash.
         pos = temp.IndexOf("\")
         
         ' Parse the domain name out of the string, if one exists.
@@ -41,5 +40,3 @@ Public Class UserName
     Public Name As String
     Public Domain As String
 End Class
-
-' </Snippet1>

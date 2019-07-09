@@ -5,10 +5,10 @@ Public Class Class1
 
     Private Sub CreateRectangle()
         '<SnippetRectangleOpacityFadeExampleCode_1>
-        Dim myPanel As StackPanel = New StackPanel
+        Dim myPanel As New StackPanel()
         myPanel.Margin = New Thickness(10)
 
-        Dim myRectangle As Rectangle = New Rectangle
+        Dim myRectangle As New Rectangle()
         myRectangle.Name = "myRectangle"
         Me.RegisterName(myRectangle.Name, myRectangle)
         myRectangle.Width = 100
@@ -22,7 +22,7 @@ Public Class Class1
 
     Private Sub CreateDoubleAnimation()
         '<SnippetRectangleOpacityFadeExampleCode_2>
-        Dim myDoubleAnimation As DoubleAnimation = New DoubleAnimation()
+        Dim myDoubleAnimation As New DoubleAnimation()
         myDoubleAnimation.From = 1.0
         myDoubleAnimation.To = 0.0
         '</SnippetRectangleOpacityFadeExampleCode_2>

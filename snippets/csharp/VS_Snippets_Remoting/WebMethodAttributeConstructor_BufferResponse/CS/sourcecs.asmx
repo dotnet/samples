@@ -1,4 +1,3 @@
-//<Snippet1>
 <%@WebService class="Streaming" language="C#"%>
 <%@ assembly name="System.EnterpriseServices,Version=1.0.3300.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a" %>
 
@@ -115,4 +114,3 @@ public class TextFileEnumerator : IEnumerator {
         }
     }
 }
-//</Snippet1>

@@ -1,5 +1,4 @@
-﻿// <Snippet1>
-<%@ WebService Language="C#" class="MyUser" %>
+﻿<%@ WebService Language="C#" class="MyUser" %>
  using System;
  using System.Web.Services;
  using System.Web.Services.Protocols;
@@ -20,7 +19,7 @@
            // Get the full user name, including the domain name if applicable.
            temp = User.Identity.Name;
  
-           // Deterime whether the user is part of a domain by searching for a backslash.
+           // Determine whether the user is part of a domain by searching for a backslash.
            pos = temp.IndexOf("\\");
            
            // Parse the domain name out of the string, if one exists.
@@ -40,5 +39,3 @@
      public string Name;
      public string Domain;
  }
-
-// </Snippet1>

@@ -1,5 +1,4 @@
-﻿//<Snippet3>
-<%@ WebService Language="C#" Class="Math"%>
+﻿<%@ WebService Language="C#" Class="Math"%>
  using System.Web.Services;
  using System;
  
@@ -9,4 +8,3 @@
           return num1+num2;
           }
  }
-//</Snippet3>

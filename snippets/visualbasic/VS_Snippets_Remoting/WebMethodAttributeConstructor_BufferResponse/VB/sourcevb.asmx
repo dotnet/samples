@@ -1,4 +1,3 @@
-'<Snippet1>
 <%@WebService Class="Streaming" language="VB"%>
 <%@ assembly name="System.EnterpriseServices,Version=1.0.3300.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a" %>
 
@@ -115,4 +114,3 @@ Public Class TextFileEnumerator
         End Get
     End Property
 End Class
-'</Snippet1>

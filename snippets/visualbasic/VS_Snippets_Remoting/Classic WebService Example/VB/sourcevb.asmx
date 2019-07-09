@@ -1,4 +1,3 @@
-' <Snippet1>
 <%@ WebService Language="VB" Class="Util" %>
  
 Imports System
@@ -14,5 +13,3 @@ Public Class Util
         Return Context.Timestamp.TimeOfDay.ToString()
     End Function
 End Class
- 
-' </Snippet1>

@@ -1,5 +1,4 @@
-﻿// <Snippet1>
-<%@ WebService Language="C#" class="MyUser" %>
+﻿<%@ WebService Language="C#" class="MyUser" %>
  using System;
  using System.Web.Services;
  using System.Web.Services.Protocols;
@@ -40,5 +39,3 @@
      public string Name;
      public string Domain;
  }
-
-// </Snippet1>

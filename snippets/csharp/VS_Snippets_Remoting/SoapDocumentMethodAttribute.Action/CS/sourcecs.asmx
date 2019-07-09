@@ -1,5 +1,4 @@
-﻿// <Snippet1>
-<%@ WebService Language="C#" class="MyUser" %>
+﻿<%@ WebService Language="C#" class="MyUser" %>
  
  using System.Web.Services;
  using System.Web.Services.Protocols;
@@ -11,5 +10,3 @@
        return User.Identity.Name;
       }
  }
-
-// </Snippet1>

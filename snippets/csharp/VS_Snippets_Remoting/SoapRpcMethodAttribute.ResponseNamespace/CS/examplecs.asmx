@@ -1,4 +1,3 @@
-//<Snippet1>
 <%@ WebService Language="C#" Class="SoapRpcMethodSample" %>
 	
 using System.Web.Services;
@@ -18,4 +17,3 @@ public class SoapRpcMethodSample
         return intarray;
    }
 }
-//</Snippet1>

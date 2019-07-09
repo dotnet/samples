@@ -1,4 +1,3 @@
-// <Snippet1>
 <%@ WebService Language="C#" Class="Calculator" %>
  
  using System;
@@ -15,5 +14,3 @@
        return i + j + k;
     }   
  }
-
-// </Snippet1>
