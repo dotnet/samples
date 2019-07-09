@@ -37,7 +37,7 @@ Program should output an estimated value of &#960;.
 
     - If the Registered COM demo was previously run, the project should be cleaned first - `dotnet.exe clean`
 
-1) Run the generated binary directly e.g. `COMClient\bin\Debug\netcoreapp3.0\COMClient.exe`.
+1) Run the generated binary directly. For example, `COMClient\bin\Debug\netcoreapp3.0\COMClient.exe`.
 
 Program should output an estimated value of &#960;.
 
