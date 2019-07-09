@@ -1,6 +1,6 @@
 using System;
 
-public struct Digit
+public readonly struct Digit
 {
     private readonly byte digit;
 
