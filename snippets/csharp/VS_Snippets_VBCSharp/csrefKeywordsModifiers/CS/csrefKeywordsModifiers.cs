@@ -174,8 +174,8 @@ namespace csrefKeywordsModifiers
         {
             public int x;
             public int y;
-            public const int c1 = 5;
-            public const int c2 = c1 + 5;
+            public const int C1 = 5;
+            public const int C2 = C1 + 5;
 
             public SampleClass(int p1, int p2) 
             {
@@ -188,12 +188,12 @@ namespace csrefKeywordsModifiers
         {
             var mC = new SampleClass(11, 22);
             Console.WriteLine($"x = {mC.x}, y = {mC.y}");
-            Console.WriteLine($"c1 = {SampleClass.c1}, c2 = {SampleClass.c2}");
+            Console.WriteLine($"C1 = {SampleClass.C1}, C2 = {SampleClass.C2}");
         }
     }
     /* Output
         x = 11, y = 22
-        c1 = 5, c2 = 10
+        C1 = 5, C2 = 10
     */
     //</snippet5>
 
@@ -202,8 +202,8 @@ namespace csrefKeywordsModifiers
     {
         static void Main()
         {
-            const int c = 707;
-            Console.WriteLine($"My local constant = {c}");
+            const int C = 707;
+            Console.WriteLine($"My local constant = {C}");
         }
     }
     // Output: My local constant = 707
