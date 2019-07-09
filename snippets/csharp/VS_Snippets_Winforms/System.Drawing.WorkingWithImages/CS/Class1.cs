@@ -186,7 +186,8 @@ public class SystemDrawingWorkingWithImages : Form
 
    
     // <snippet71>
-	public bool ThumbnailCallback() {
+    public bool ThumbnailCallback()
+    {
         return true;
     }
 
