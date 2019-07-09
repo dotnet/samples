@@ -1451,7 +1451,7 @@ class TestPerson
     //<Snippet65>
     class Calendar2
     {
-        const int Months = 12, Weeks = 52, Days = 365;
+        public const int Months = 12, Weeks = 52, Days = 365;
     }
     //</Snippet65>
 
@@ -1459,12 +1459,12 @@ class TestPerson
     //<Snippet66>
     class Calendar3
     {
-        const int Months = 12;
-        const int Weeks = 52;
-        const int Days = 365;
+        public const int Months = 12;
+        public const int Weeks = 52;
+        public const int Days = 365;
 
-        const double DaysPerWeek = (double) Days / (double) Weeks;
-        const double DaysPerMonth = (double) Days / (double) Months;
+        public const double DaysPerWeek = (double) Days / (double) Weeks;
+        public const double DaysPerMonth = (double) Days / (double) Months;
     }
     //</Snippet66>
 
