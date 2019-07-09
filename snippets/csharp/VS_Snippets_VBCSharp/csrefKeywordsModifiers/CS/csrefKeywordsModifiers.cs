@@ -25,7 +25,7 @@ namespace csrefKeywordsModifiers
 
         static void Main() 
         {
-            Square sq = new Square(12);
+            var sq = new Square(12);
             Console.WriteLine($"Area of the square = {sq.GetArea()}");
         }
 
@@ -80,9 +80,9 @@ namespace csrefKeywordsModifiers
 
         static void Main()
         {
-            DerivedClass o = new DerivedClass();
+            var o = new DerivedClass();
             o.AbstractMethod();
-            Console.WriteLine("x = {0}, y = {1}", o.X, o.Y);
+            Console.WriteLine($"x = {o.X}, y = {o.Y}");
         }
     }
     // Output: x = 111, y = 161
@@ -100,7 +100,7 @@ namespace AccessibilityDomainNamespace
         static T1()
         {
             // T1 can access public or internal members
-            // in a public or private (or internal) nested class
+            // in a public or private (or internal) nested class.
             M1.publicInt = 1;
             M1.internalInt = 2;
             M2.publicInt = 3;
@@ -130,31 +130,31 @@ namespace AccessibilityDomainNamespace
     {
         static void Main()
         {
-            // Access is unlimited:
+            // Access is unlimited.
             T1.publicInt = 1;
 
-            // Accessible only in current assembly:
+            // Accessible only in current assembly.
             T1.internalInt = 2;
 
-            // Error CS0122: inaccessible outside T1:
+            // Error CS0122: inaccessible outside T1.
             // T1.privateInt = 3;  
 
-            // Access is unlimited:
+            // Access is unlimited.
             T1.M1.publicInt = 1;
 
-            // Accessible only in current assembly:
+            // Accessible only in current assembly.
             T1.M1.internalInt = 2;
 
-            // Error CS0122: inaccessible outside M1:
+            // Error CS0122: inaccessible outside M1.
             //    T1.M1.privateInt = 3; 
 
-            // Error CS0122: inaccessible outside T1:
+            // Error CS0122: inaccessible outside T1.
             //    T1.M2.publicInt = 1;
 
-            // Error CS0122: inaccessible outside T1:
+            // Error CS0122: inaccessible outside T1.
             //    T1.M2.internalInt = 2;
 
-            // Error CS0122: inaccessible outside M2:
+            // Error CS0122: inaccessible outside M2.
             //    T1.M2.privateInt = 3;
 
             // Keep the console open in debug mode.
@@ -186,10 +186,9 @@ namespace csrefKeywordsModifiers
 
         static void Main()
         {
-            SampleClass mC = new SampleClass(11, 22);
-            Console.WriteLine("x = {0}, y = {1}", mC.x, mC.y);
-            Console.WriteLine("C1 = {0}, C2 = {1}", 
-                              SampleClass.C1, SampleClass.C2);
+            var mC = new SampleClass(11, 22);
+            Console.WriteLine($"x = {mC.x}, y = {mC.y}");
+            Console.WriteLine($"C1 = {SampleClass.C1}, C2 = {SampleClass.C2}");
         }
     }
     /* Output
@@ -204,7 +203,7 @@ namespace csrefKeywordsModifiers
         static void Main()
         {
             const int C = 707;
-            Console.WriteLine("My local constant = {0}", C);
+            Console.WriteLine($"My local constant = {C}");
         }
     }
     // Output: My local constant = 707
@@ -304,9 +303,9 @@ namespace csrefKeywordsModifiers
         static void Main()
         {
             // Create some new employees.
-            SalesEmployee employee1 = new SalesEmployee("Alice", 
+            var employee1 = new SalesEmployee("Alice", 
                           1000, 500);
-            Employee employee2 = new Employee("Bob", 1200);
+            var employee2 = new Employee("Bob", 1200);
 
             Console.WriteLine("Employee4 " + employee1.name + 
                       " earned: " + employee1.CalculatePay());
@@ -342,7 +341,7 @@ namespace csrefKeywordsModifiers
     {
         static void Main()
         {
-            Employee2 e = new Employee2();
+            var e = new Employee2();
 
             // The data members are inaccessible (private), so
             // they can't be accessed like this:
@@ -368,8 +367,8 @@ namespace csrefKeywordsModifiers
     {
         static void Main()
         {
-            A a = new A();
-            B b = new B();
+            var a = new A();
+            var b = new B();
 
             // Error CS1540, because x can only be accessed by
             // classes derived from A.
@@ -392,12 +391,12 @@ namespace csrefKeywordsModifiers
     {
         static void Main() 
         {
-            DerivedPoint dpoint = new DerivedPoint();
+            var dpoint = new DerivedPoint();
 
-            // Direct access to protected members:
+            // Direct access to protected members.
             dpoint.x = 10;
             dpoint.y = 15;
-            Console.WriteLine("x = {0}, y = {1}", dpoint.x, dpoint.y); 
+            Console.WriteLine($"x = {dpoint.x}, y = {dpoint.y}"); 
         }
     }
     // Output: x = 10, y = 15
@@ -414,11 +413,11 @@ namespace csrefKeywordsModifiers
     {
         static void Main() 
         {
-            PointTest p = new PointTest();
-            // Direct access to public members:
+            var p = new PointTest();
+            // Direct access to public members.
             p.x = 10;
             p.y = 15;
-            Console.WriteLine("x = {0}, y = {1}", p.x, p.y); 
+            Console.WriteLine($"x = {p.x}, y = {p,y}"); 
         }
     }
     // Output: x = 10, y = 15
@@ -445,13 +444,13 @@ namespace csrefKeywordsModifiers
        class SampleClass
        {
           public int x;
-          // Initialize a readonly field
+          // Initialize a readonly field.
           public readonly int y = 25;
           public readonly int z;
 
           public SampleClass()
           {
-             // Initialize a readonly instance field
+             // Initialize a readonly instance field.
              z = 24;
           }
 
@@ -465,11 +464,11 @@ namespace csrefKeywordsModifiers
 
        static void Main()
        {
-          SampleClass p1 = new SampleClass(11, 21, 32);   // OK
-          Console.WriteLine("p1: x={0}, y={1}, z={2}", p1.x, p1.y, p1.z);
-          SampleClass p2 = new SampleClass();
+          var p1 = new SampleClass(11, 21, 32);   // OK
+          Console.WriteLine($"p1: x={p1.x}, y={p1.y}, z={p1.z}");
+          var p2 = new SampleClass();
           p2.x = 55;   // OK
-          Console.WriteLine("p2: x={0}, y={1}, z={2}", p2.x, p2.y, p2.z);
+          Console.WriteLine($"p2: x={p2.x}, y={p2.y}, z={p2.z}");
        }
     }
     /*
@@ -513,10 +512,10 @@ namespace csrefKeywordsModifiers
     {
         static void Main()
         {
-            SealedClass sc = new SealedClass();
+            var sc = new SealedClass();
             sc.x = 110;
             sc.y = 150;
-            Console.WriteLine("x = {0}, y = {1}", sc.x, sc.y);
+            Console.WriteLine($"x = {sc.x}, y = {sc.y}");
         }
     }
     // Output: x = 110, y = 150
@@ -573,18 +572,17 @@ namespace csrefKeywordsModifiers
             Console.Write("Enter the employee's ID: ");
             string id = Console.ReadLine();
 
-            // Create and configure the employee object:
+            // Create and configure the employee object.
             Employee4 e = new Employee4(name, id);
             Console.Write("Enter the current number of employees: ");
             string n = Console.ReadLine();
             Employee4.employeeCounter = Int32.Parse(n);
             Employee4.AddEmployee();
 
-            // Display the new information:
-            Console.WriteLine("Name: {0}", e.name);
-            Console.WriteLine("ID:   {0}", e.id);
-            Console.WriteLine("New Number of Employees: {0}",
-                      Employee4.employeeCounter);
+            // Display the new information.
+            Console.WriteLine($"Name: {e.name}");
+            Console.WriteLine($"ID:   {e.id}");
+            Console.WriteLine($"New Number of Employees: {Employee4.employeeCounter}");
         }
     }
     /*
@@ -630,7 +628,7 @@ namespace csrefKeywordsModifiers
     // compile with: -unsafe
     class UnsafeTest
     {
-        // Unsafe method: takes pointer to int:
+        // Unsafe method: takes pointer to int.
         unsafe static void SquarePtrParam(int* p)
         {
             *p *= *p;
@@ -639,7 +637,7 @@ namespace csrefKeywordsModifiers
         unsafe static void Main()
         {
             int i = 5;
-            // Unsafe method: uses address-of operator (&):
+            // Unsafe method: uses address-of operator (&).
             SquarePtrParam(&i);
             Console.WriteLine(i);
         }
@@ -713,7 +711,7 @@ namespace csrefKeywordsModifiers
             Shape c = new Circle(r);
             Shape s = new Sphere(r);
             Shape l = new Cylinder(r, h);
-            // Display results:
+            // Display results.
             Console.WriteLine("Area of Circle   = {0:F2}", c.Area());
             Console.WriteLine("Area of Sphere   = {0:F2}", s.Area());
             Console.WriteLine("Area of Cylinder = {0:F2}", l.Area());
@@ -744,7 +742,7 @@ namespace csrefKeywordsModifiers
         static void Main()
         {
             //<snippet25>
-            using (System.IO.StreamReader sr = new System.IO.StreamReader(@"C:\Users\Public\Documents\test.txt"))
+            using (var sr = new System.IO.StreamReader(@"C:\Users\Public\Documents\test.txt"))
             {
                 string s = null;
                 while((s = sr.ReadLine()) != null)

@@ -1,5 +1,4 @@
-﻿// <Snippet1>
-<%@ WebService Language="C#" Class="Stats" %>
+﻿<%@ WebService Language="C#" Class="Stats" %>
  
  using System.Web.Services;
  using System.Web.Services.Protocols;
@@ -13,5 +12,3 @@
       }      
  
  }
-
-// </Snippet1>

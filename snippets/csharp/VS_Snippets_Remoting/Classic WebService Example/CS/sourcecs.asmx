@@ -1,4 +1,3 @@
-// <Snippet1>
 <%@ WebService Language="C#" Class="Util" %>
  
  using System;
@@ -11,5 +10,3 @@
       return Context.Timestamp.TimeOfDay.ToString();
    }
  }
- 
-// </Snippet1>

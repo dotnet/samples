@@ -19,7 +19,7 @@ public class Bank : WebService
             ContextUtil.SetAbort();
         else 
         {
-            // The Credit and Debit methods explictly determine, in their
+            // The Credit and Debit methods explicitly determine, in their
             // own code, whether to commit or end the transaction.
             objBank.Credit(Amount, AcctNumberTo);
             objBank.Debit(Amount, AcctNumberFrom);

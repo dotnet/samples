@@ -1,4 +1,3 @@
-<!--<Snippet1>-->
 <%@ WebService Language="C#" Class="Test" %>
  
 using System;
@@ -47,5 +46,3 @@ public class Car : Vehicle {
  
 public class Bike : Vehicle {
 }
-   
-// </Snippet1>

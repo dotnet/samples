@@ -1,4 +1,3 @@
-' <Snippet1>
 <%@ WebService Language="VB" Class="Counter" %>
 <%@ assembly name="System.EnterpriseServices,Version=1.0.3300.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a" %>
 
@@ -25,5 +24,3 @@ Public Class Counter
         Return CInt(Application("MyServiceUsage"))
     End Function
 End Class
-
-' </Snippet1>

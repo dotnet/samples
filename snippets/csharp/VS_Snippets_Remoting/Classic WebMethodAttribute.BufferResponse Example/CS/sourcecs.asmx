@@ -1,4 +1,3 @@
-//<Snippet1>
 <%@WebService class="Streaming" language="C#"%>
 
 using System;
@@ -113,4 +112,3 @@ public class TextFileEnumerator : IEnumerator {
         }
     }
 }
-//</Snippet1>

@@ -1,4 +1,3 @@
-' <Snippet1>
 <%@ WebService Language="VB" Class="Calculator" %>
 
 Imports System
@@ -20,5 +19,3 @@ Public Class Calculator
         Return i + j + k
     End Function    
 End Class
-
-' </Snippet1>

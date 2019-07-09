@@ -1,4 +1,3 @@
-<!--<Snippet1>-->
 <%@ WebService Language="VB" class="BindingSample" %>
 Imports System
 Imports System.Web.Services
@@ -41,5 +40,3 @@ Public Class BindingSample
         Return "Member of the default binding"
     End Function
 End Class
-
-'</Snippet1>

@@ -1,4 +1,3 @@
-// <Snippet1>
 <%@ WebService Language="C#" Class="MyWebService"%>
 using System.Web.Services;
 using System.Web.Services.Protocols;
@@ -41,5 +40,3 @@ public class MyWebService {
        return unknownHeaderAttributes;
     }
 }
-
-// </Snippet1>

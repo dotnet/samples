@@ -1,4 +1,3 @@
-// <Snippet1>
 <%@ WebService Language="C#" Class="ShoppingCart" %>
  
  using System.Web.Services;
@@ -24,6 +23,3 @@ public class OrderItem
   public long CustomerID;
   public Decimal Cost;
 }
-
-
-// </Snippet1>
