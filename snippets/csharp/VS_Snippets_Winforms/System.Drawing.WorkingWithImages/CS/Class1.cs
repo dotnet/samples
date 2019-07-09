@@ -186,13 +186,25 @@ public class SystemDrawingWorkingWithImages : Form
 
    
     // <snippet71>
+    public bool ThumbnailCallback()
+    {
+        return true;
+    }
+
     private void GetThumbnail(PaintEventArgs e)
     {
+        Image.GetThumbnailImageAbort callback = 
+            new Image.GetThumbnailImageAbort(ThumbnailCallback);
         Image image = new Bitmap(@"c:\FakePhoto.jpg");
-        Image thumbnail = image.GetThumbnailImage(100, 100, () => true, new IntPtr());
-
-        e.Graphics.DrawImage(thumbnail, 10, 10, thumbnail.Width, thumbnail.Height);
-    }   
+        Image pThumbnail = image.GetThumbnailImage(100, 100, callback, new
+           IntPtr());
+        e.Graphics.DrawImage(
+           pThumbnail,
+           10,
+           10,
+           pThumbnail.Width,
+           pThumbnail.Height);
+    }
     // </snippet71>
     
     // fde9bccf-8aa5-4b0d-ba4b-788740627b02
