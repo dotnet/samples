@@ -1,7 +1,7 @@
 C# Numbers Sample
 ================
 
-This sample is created during the [Numbers in C# tutorial](https://docs.microsoft.com/en-in/dotnet/csharp/tutorials/intro-to-csharp/numbers-in-csharp-local)
+This sample is created during the [Numbers in C# tutorial](https://docs.microsoft.com/dotnet/csharp/tutorials/intro-to-csharp/numbers-in-csharp-local)
 for learning C# features. Please see that topic for detailed steps on the code
 for this sample.
 
