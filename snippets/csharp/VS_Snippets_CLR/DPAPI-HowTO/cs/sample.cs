@@ -94,7 +94,7 @@ public class MemoryProtectionSample
             throw new ArgumentException("Buffer");
         
 
-        // Encrypt the data in memory. The result is stored in the same same array as the original data.
+        // Encrypt the data in memory. The result is stored in the same array as the original data.
         ProtectedMemory.Protect(Buffer, Scope);
 
     }
@@ -107,7 +107,7 @@ public class MemoryProtectionSample
             throw new ArgumentException("Buffer");
         
 
-        // Decrypt the data in memory. The result is stored in the same same array as the original data.
+        // Decrypt the data in memory. The result is stored in the same array as the original data.
         ProtectedMemory.Unprotect(Buffer, Scope);
 
     }
@@ -142,7 +142,7 @@ public class MemoryProtectionSample
        
         int length = 0;
 
-        // Encrypt the data in memory. The result is stored in the same same array as the original data.
+        // Encrypt the data and store the result in a new byte array. The original data remains unchanged.
         byte[] encryptedData = ProtectedData.Protect(Buffer, Entropy, Scope);
 
         // Write the encrypted data to a stream.
