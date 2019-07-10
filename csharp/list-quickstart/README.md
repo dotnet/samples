@@ -1,7 +1,7 @@
 C# List Collections Sample
 ================
 
-This sample is part of the [List Collections tutorial](https://docs.microsoft.com/en-in/dotnet/csharp/tutorials/intro-to-csharp/arrays-and-collections)
+This sample is part of the [List Collections tutorial](https://docs.microsoft.com/dotnet/csharp/tutorials/intro-to-csharp/arrays-and-collections)
 for learning C# features. Please see that topic for detailed steps on the code
 for this sample.
 
