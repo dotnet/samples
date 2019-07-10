@@ -8,7 +8,7 @@ for this sample.
 Key Features
 ------------
 
-This sample demonstrates management of data collections using generic list type which explains about creation of generic [List&lt;T&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) type. It also explains about modification, searching and sorting of list items.
+This sample demonstrates management of data collections using generic list type which explains about creation of generic [List&lt;T&gt;](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1) type. It also explains about modification, searching and sorting of list items.
 
 Build and Run
 -------------
