@@ -10,10 +10,9 @@ public class Form1: Form
     // <Snippet1>
     private void AddConstraint(DataTable table)
     {
-        UniqueConstraint uniqueConstraint;
         // Assuming a column named "UniqueColumn" exists, and 
         // its Unique property is true.
-        uniqueConstraint = new UniqueConstraint(
+        var uniqueConstraint = new UniqueConstraint(
             table.Columns["UniqueColumn"]);
         table.Constraints.Add(uniqueConstraint);
     }
