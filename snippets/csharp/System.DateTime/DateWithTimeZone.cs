@@ -1,4 +1,4 @@
-﻿// <Snippet6>
+// <Snippet6>
 using System;
 
 namespace DateTimeExtensions
@@ -12,10 +12,7 @@ namespace DateTimeExtensions
         public DateWithTimeZone(DateTime dateValue, TimeZoneInfo timeZone)
         {
             dt = dateValue;
-            if (timeZone == null)
-                tz = TimeZoneInfo.Local;
-            else
-                tz = timeZone;
+            tz = timeZone ?? TimeZoneInfo.Local;
         }
 
         public TimeZoneInfo TimeZone
