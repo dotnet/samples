@@ -11,16 +11,14 @@ Public Class Form1
         Console.WriteLine()
 
         ' Print the table's name.
-        Console.WriteLine("TableName: " & dataTable.TableName)
+        Console.WriteLine($"TableName: {dataTable.TableName}")
 
         ' Iterate through the collection and print 
         ' each name and type value.
         Dim constraint As Constraint
         For Each constraint In  dataTable.Constraints
-            Console.WriteLine("Constraint Name: " _
-                & constraint.ConstraintName)
-            Console.WriteLine("Type: " _
-                & constraint.GetType().ToString())
+            Console.WriteLine($"Constraint Name: {constraint.ConstraintName}")
+            Console.WriteLine($"Type: {constraint.GetType().ToString()"})
 
             ' If the constraint is a UniqueConstraint, 
             ' print its properties using a function below.
@@ -39,45 +37,36 @@ Public Class Form1
     Private Sub PrintUniqueConstraintProperties( _
         constraint As Constraint)
 
-        Dim uniqueConstraint As UniqueConstraint
-        uniqueConstraint = CType(constraint, UniqueConstraint)
+        Dim uniqueConstraint = CType(constraint, UniqueConstraint)
 
         ' Get the Columns as an array.
-        Dim columnArray() As DataColumn
-        columnArray = uniqueConstraint.Columns
+        Dim columnArray() As DataColumn = uniqueConstraint.Columns
 
         ' Print each column's name.
-        Dim i As Integer
-        For i = 0 To columnArray.Length - 1
-            Console.WriteLine("Column Name: " _
-                & columnArray(i).ColumnName)
-        Next i
+        For i As Integer = 0 To columnArray.Length - 1
+            Console.WriteLine($"Column Name: {columnArray(i).ColumnName}")
+        Next
     End Sub
     
     Private Sub PrintForeigKeyConstraintProperties( _
         constraint As Constraint)
 
-        Dim fkConstraint As ForeignKeyConstraint
-        fkConstraint = CType(constraint, ForeignKeyConstraint)
+        Dim fkConstraint = CType(constraint, ForeignKeyConstraint)
         
         ' Get the Columns as an array.
-        Dim columnArray() As DataColumn
-        columnArray = fkConstraint.Columns
+        Dim columnArray() As DataColumn = fkConstraint.Columns
         
         ' Print each column's name.
-        Dim i As Integer
-        For i = 0 To columnArray.Length - 1
-            Console.WriteLine("Column Name: " _
-                & columnArray(i).ColumnName)
-        Next i
+        For i As Integer = 0 To columnArray.Length - 1
+            Console.WriteLine($"Column Name: {columnArray(i).ColumnName}")
+        Next
         Console.WriteLine()
         
         ' Get the related columns and print each columns name.
         columnArray = fkConstraint.RelatedColumns
-        For i = 0 To columnArray.Length - 1
-            Console.WriteLine("Related Column Name: " _
-                & columnArray(i).ColumnName)
-        Next i
+        For i As Integer = 0 To columnArray.Length - 1
+            Console.WriteLine($"Related Column Name: {columnArray(i).ColumnName}")
+        Next
         Console.WriteLine()
     End Sub
 ' </Snippet1>
