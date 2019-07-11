@@ -173,12 +173,12 @@ public class Class1
       // Displays:    $16,325.63
       culture = CultureInfo.CreateSpecificCulture("en-GB");
       Console.WriteLine(value.ToString(specifier, culture));
-      // Displays:    £16,325.63
+      // Displays:    Â£16,325.63
       
       specifier = "E04";
       culture = CultureInfo.CreateSpecificCulture("sv-SE");
       Console.WriteLine(value.ToString(specifier, culture));
-      // Displays: 1,6326E+004   
+      // Displays:    1,6326E+004   
        culture = CultureInfo.CreateSpecificCulture("en-NZ");
        Console.WriteLine(value.ToString(specifier, culture));
       // Displays:    1.6326E+004   
