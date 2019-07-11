@@ -10,18 +10,17 @@ public class Example
         Type t = assem.GetType("Transportation.MeansOfTransportation");
         if (t != null)
         {
-            Console.WriteLine("Virtual properties in type {0}:",
-                              t.FullName);
+            Console.WriteLine($"Virtual properties in type {t.FullName}:");
             PropertyInfo[] props = t.GetProperties();
             int nVirtual = 0;
             for (int ctr = 0; ctr < props.Length; ctr++)
+            {
                 if (props[ctr].GetMethod.IsVirtual)
                 {
-                    Console.WriteLine("   {0} (type {1})",
-                                      props[ctr].Name,
-                                      props[ctr].PropertyType.FullName);
+                    Console.WriteLine($"   {props[ctr].Name} (type {props[ctr].PropertyType.FullName})");
                     nVirtual++;
                 }
+            }
 
             if (nVirtual == 0)
                 Console.WriteLine("   No virtual properties");
