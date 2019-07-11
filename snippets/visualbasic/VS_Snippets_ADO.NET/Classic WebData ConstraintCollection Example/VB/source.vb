@@ -15,11 +15,9 @@ Public Class Form1
         table.Columns.Add(column)
 
         ' Print count, name, and type.
-        Console.WriteLine("Constraints.Count " _
-           + table.Constraints.Count.ToString())
+        Console.WriteLine($"Constraints.Count {table.Constraints.Count.ToString()}")
         Console.WriteLine(table.Constraints(0).ConstraintName)
-        Console.WriteLine( _
-            table.Constraints(0).GetType().ToString())
+        Console.WriteLine(table.Constraints(0).GetType().ToString())
 
         ' Add a second unique column.
         column = New DataColumn("UniqueColumn2")
@@ -27,11 +25,9 @@ Public Class Form1
         table.Columns.Add(column)
 
         ' Print info again.
-        Console.WriteLine("Constraints.Count " _
-           + table.Constraints.Count.ToString())
+        Console.WriteLine($"Constraints.Count {table.Constraints.Count.ToString()}")
         Console.WriteLine(table.Constraints(1).ConstraintName)
-        Console.WriteLine( _
-            table.Constraints(1).GetType().ToString())
+        Console.WriteLine(table.Constraints(1).GetType().ToString())
     End Sub
     
     Private Sub MakeTableWithForeignConstraint()
@@ -60,27 +56,21 @@ Public Class Form1
         dataSet.Tables.Add(ordersTable)
 
         ' Create a DataRelation for two of the columns.
-        Dim myRelation As New DataRelation _
-           ("CustomersOrders", id, orderId, True)
+        Dim myRelation As New DataRelation("CustomersOrders", id, orderId, True)
         dataSet.Relations.Add(myRelation)
 
         ' Print TableName, Constraints.Count, 
         ' ConstraintName and Type.
-        Dim t As DataTable
-        For Each t In  dataSet.Tables
+        For Each t As DataTable In  dataSet.Tables
             Console.WriteLine(t.TableName)
-            Console.WriteLine("Constraints.Count " _
-               + t.Constraints.Count.ToString())
-            Console.WriteLine("ParentRelations.Count " _
-               + t.ParentRelations.Count.ToString())
-            Console.WriteLine("ChildRelations.Count " _
-               + t.ChildRelations.Count.ToString())
-            Dim cstrnt As Constraint
-            For Each cstrnt In  t.Constraints
+            Console.WriteLine($"Constraints.Count {t.Constraints.Count.ToString()}")
+            Console.WriteLine($"ParentRelations.Count {t.ParentRelations.Count.ToString()}")
+            Console.WriteLine($"ChildRelations.Count {t.ChildRelations.Count.ToString()}")
+            For Each cstrnt As Constraint In  t.Constraints
                 Console.WriteLine(cstrnt.ConstraintName)
                 Console.WriteLine(cstrnt.GetType())
-            Next cstrnt
-        Next t
+            Next
+        Next
     End Sub
 ' </Snippet1>
 End Class
