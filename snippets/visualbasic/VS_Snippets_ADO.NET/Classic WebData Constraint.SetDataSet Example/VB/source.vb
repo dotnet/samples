@@ -8,8 +8,8 @@ Public Class Form1
     
     Public Sub Method()
 ' <Snippet1>
-Dim uniqueConstraint As New UniqueConstraint( _
-    DataSet1.Tables("Table1").Columns("Column1"))
+        Dim uniqueConstraint As New UniqueConstraint( _
+            DataSet1.Tables("Table1").Columns("Column1"))
 ' </Snippet1>
     End Sub
 End Class
