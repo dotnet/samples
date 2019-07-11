@@ -7,9 +7,7 @@ Public Class Form1: Inherits Form
 
 ' <Snippet1>
  Private Sub PrintToString(constraint As Constraint)
-  
      Console.WriteLine(constraint.ToString())
-    
  End Sub
 ' </Snippet1>
 
