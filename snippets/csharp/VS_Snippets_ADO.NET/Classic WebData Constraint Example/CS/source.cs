@@ -13,26 +13,24 @@ public class Form1: Form
         Console.WriteLine();
 
         // Print the table's name.
-        Console.WriteLine("TableName: " + dataTable.TableName);
+        Console.WriteLine($"TableName: {dateTable.TableName}");
 
         // Iterate through the collection and 
         // print each name and type value.
-        foreach(Constraint constraint in dataTable.Constraints ) 
+        foreach (Constraint constraint in dataTable.Constraints ) 
         {
-            Console.WriteLine("Constraint Name: " 
-                + constraint.ConstraintName);
-            Console.WriteLine("Type: " 
-                + constraint.GetType().ToString());
+            Console.WriteLine($"Constraint Name: {constraint.ConstraintName}");
+            Console.WriteLine($"Type: {constraint.GetType().ToString()}");
 
             // If the constraint is a UniqueConstraint, 
             // print its properties using a function below.
-            if(constraint is UniqueConstraint) 
+            if (constraint is UniqueConstraint) 
             {
                 PrintUniqueConstraintProperties(constraint);
             }
             // If the constraint is a ForeignKeyConstraint, 
             // print its properties using a function below.
-            if(constraint is ForeignKeyConstraint) 
+            if (constraint is ForeignKeyConstraint) 
             {
                 PrintForeigKeyConstraintProperties(constraint);
             }
@@ -42,45 +40,38 @@ public class Form1: Form
     private void PrintUniqueConstraintProperties(
         Constraint constraint)
     {
-        UniqueConstraint uniqueConstraint;
-        uniqueConstraint = (UniqueConstraint) constraint;
+        var uniqueConstraint = (UniqueConstraint) constraint;
 
         // Get the Columns as an array.
-        DataColumn[] columnArray;
-        columnArray = uniqueConstraint.Columns;
+        DataColumn[] columnArray = uniqueConstraint.Columns;
 
         // Print each column's name.
-        for(int i = 0;i<columnArray.Length ;i++) 
+        for (int i = 0; i < columnArray.Length; i++) 
         {
-            Console.WriteLine("Column Name: " 
-                + columnArray[i].ColumnName);
+            Console.WriteLine($"Column Name: {columnArray[i].ColumnName}");
         }
     }
  
     private void PrintForeigKeyConstraintProperties(
         Constraint constraint)
     {
-        ForeignKeyConstraint fkConstraint;
-        fkConstraint = (ForeignKeyConstraint) constraint;
+        var fkConstraint = (ForeignKeyConstraint) constraint;
  
         // Get the Columns as an array.
-        DataColumn[] columnArray;
-        columnArray = fkConstraint.Columns;
+        DataColumn[] columnArray = fkConstraint.Columns;
  
         // Print each column's name.
-        for(int i = 0;i<columnArray.Length ;i++) 
+        for (int i = 0; i < columnArray.Length; i++) 
         {
-            Console.WriteLine("Column Name: " 
-                + columnArray[i].ColumnName);
+            Console.WriteLine($"Column Name: {columnArray[i].ColumnName}");
         }
         Console.WriteLine();
  
         // Get the related columns and print each columns name.
-        columnArray = fkConstraint.RelatedColumns ;
-        for(int i = 0;i<columnArray.Length ;i++) 
+        columnArray = fkConstraint.RelatedColumns;
+        for (int i = 0; i < columnArray.Length; i++)
         {
-            Console.WriteLine("Related Column Name: " 
-                + columnArray[i].ColumnName);
+            Console.WriteLine($"Related Column Name: {columnArray[i].ColumnName}");
         }
         Console.WriteLine();
     }
