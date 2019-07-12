@@ -8,9 +8,8 @@ Public Class Form1: Inherits Form
 
 ' <Snippet1>
 
-Private Sub AddDataColumn(ByVal table As DataTable)
-    Dim column As DataColumn 
-    column = New DataColumn("id")
+Private Sub AddDataColumn(table As DataTable)
+    Dim column As New DataColumn("id")
 
     ' Set various properties.
     With column
