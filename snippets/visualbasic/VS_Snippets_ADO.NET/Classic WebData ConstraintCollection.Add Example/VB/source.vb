@@ -10,7 +10,7 @@ Public Class Form1
  Private Sub AddConstraint(table As DataTable)
      ' Assuming a column named "UniqueColumn" exists, and 
      ' its Unique property is true.
-        Dim uniqueConstraint As New UniqueConstraint(table.Columns("UniqueColumn"))
+     Dim uniqueConstraint As New UniqueConstraint(table.Columns("UniqueColumn"))
      table.Constraints.Add(uniqueConstraint)
  End Sub
 ' </Snippet1>
