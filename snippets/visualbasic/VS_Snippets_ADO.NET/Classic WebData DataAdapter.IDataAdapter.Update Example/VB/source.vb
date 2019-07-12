@@ -15,11 +15,9 @@ Module Module1
     End Sub
 
     ' <Snippet1>
-    Public Function CreateCommandAndUpdate( _
-        ByVal connectionString As String, _
-        ByVal queryString As String) As DataSet
+    Public Function CreateCommandAndUpdate(connectionString As String, queryString As String) As DataSet
 
-        Dim dataSet As DataSet = New DataSet
+        Dim dataSet As New DataSet()
 
         Using connection As New OleDbConnection(connectionString)
             connection.Open()
@@ -43,11 +41,10 @@ Module Module1
     End Function
     ' </Snippet1>
 
-    Private Function GetConnectionString() As String
+    Private Shared Function GetConnectionString() As String
         ' To avoid storing the connection string in your code,  
         ' you can retrieve it from a configuration file.
-        Return "Provider=sqloledb;Data Source=(local);Initial Catalog=Northwind;" _
-           & "Integrated Security=SSPI;"
+        Return "Provider=sqloledb;Data Source=(local);Initial Catalog=Northwind;Integrated Security=SSPI;"
     End Function
 
 End Module
