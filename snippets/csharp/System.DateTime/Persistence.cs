@@ -1,4 +1,4 @@
-﻿using DateTimeExtensions;
+using DateTimeExtensions;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -61,7 +61,7 @@ namespace SystemDateTimeReference
                 Console.WriteLine(dates[ctr].ToString("f"));
                 output += dates[ctr].ToString() + (ctr != dates.Length - 1 ? "|" : "");
             }
-            StreamWriter sw = new StreamWriter(filenameTxt);
+            var sw = new StreamWriter(filenameTxt);
             sw.Write(output);
             sw.Close();
             Console.WriteLine("Saved dates...");
@@ -137,7 +137,7 @@ namespace SystemDateTimeReference
                 output += dates[ctr].ToUniversalTime().ToString("O", CultureInfo.InvariantCulture)
                           + (ctr != dates.Length - 1 ? "|" : "");
             }
-            StreamWriter sw = new StreamWriter(filenameTxt);
+            var sw = new StreamWriter(filenameTxt);
             sw.Write(output);
             sw.Close();
             Console.WriteLine("Saved dates...");
@@ -210,14 +210,14 @@ namespace SystemDateTimeReference
 
             Console.WriteLine($"Current Time Zone: {TimeZoneInfo.Local.DisplayName}");
             Console.WriteLine($"The dates on an {Thread.CurrentThread.CurrentCulture.Name} system:");
-            long[] ticks = new long[dates.Length];
+            var ticks = new long[dates.Length];
             for (int ctr = 0; ctr < dates.Length; ctr++)
             {
                 Console.WriteLine(dates[ctr].ToString("f"));
                 ticks[ctr] = dates[ctr].ToUniversalTime().Ticks;
             }
-            FileStream fs = new FileStream(filenameInts, FileMode.Create);
-            BinaryWriter bw = new BinaryWriter(fs);
+            var fs = new FileStream(filenameInts, FileMode.Create);
+            var bw = new BinaryWriter(fs);
             bw.Write(ticks.Length);
             foreach (var tick in ticks)
                 bw.Write(tick);
@@ -301,7 +301,7 @@ namespace SystemDateTimeReference
         public static void PersistAsXML()
         {
             // Serialize the data.
-            List<DateTime> leapYears = new List<DateTime>();
+            var leapYears = new List<DateTime>();
             for (int year = 2000; year <= 2100; year += 4)
             {
                 if (DateTime.IsLeapYear(year))
@@ -309,7 +309,7 @@ namespace SystemDateTimeReference
             }
             DateTime[] dateArray = leapYears.ToArray();
 
-            XmlSerializer serializer = new XmlSerializer(dateArray.GetType());
+            var serializer = new XmlSerializer(dateArray.GetType());
             TextWriter sw = new StreamWriter(filenameXml);
 
             try
@@ -327,7 +327,7 @@ namespace SystemDateTimeReference
 
             // Deserialize the data.
             DateTime[] deserializedDates;
-            using (FileStream fs = new FileStream(filenameXml, FileMode.Open))
+            using (var fs = new FileStream(filenameXml, FileMode.Open))
             {
                 deserializedDates = (DateTime[])serializer.Deserialize(fs);
             }
@@ -368,8 +368,8 @@ namespace SystemDateTimeReference
                            new DateTime(2015, 1, 10, 1, 16, 0),
                            new DateTime(2014, 12, 20, 21, 45, 0),
                            new DateTime(2014, 6, 2, 15, 14, 0) };
-            FileStream fs = new FileStream(filenameBin, FileMode.Create);
-            BinaryFormatter bin = new BinaryFormatter();
+            var fs = new FileStream(filenameBin, FileMode.Create);
+            var bin = new BinaryFormatter();
 
             Console.WriteLine($"Current Time Zone: {TimeZoneInfo.Local.DisplayName}");
             Console.WriteLine($"The dates on an {Thread.CurrentThread.CurrentCulture.Name} system:");
@@ -391,7 +391,7 @@ namespace SystemDateTimeReference
 
             FileStream fs = new FileStream(filenameBin, FileMode.Open);
             BinaryFormatter bin = new BinaryFormatter();
-            DateTime[] dates = (DateTime[])bin.Deserialize(fs);
+            var dates = (DateTime[])bin.Deserialize(fs);
             fs.Close();
 
             Console.WriteLine($"The dates on an {Thread.CurrentThread.CurrentCulture.Name} system:");
@@ -432,8 +432,8 @@ namespace SystemDateTimeReference
                                       TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time")),
                                   new DateWithTimeZone(new DateTime(2014, 8, 28, 19, 0, 0),
                                       TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time")) };
-            FileStream fs = new FileStream(@".\Schedule.bin", FileMode.Create);
-            BinaryFormatter formatter = new BinaryFormatter();
+            var fs = new FileStream(@".\Schedule.bin", FileMode.Create);
+            var formatter = new BinaryFormatter();
             try
             {
                 formatter.Serialize(fs, dates);
@@ -473,7 +473,7 @@ namespace SystemDateTimeReference
                 return;
             }
 
-            BinaryFormatter formatter = new BinaryFormatter();
+            var formatter = new BinaryFormatter();
             DateWithTimeZone[] dates;
             try
             {

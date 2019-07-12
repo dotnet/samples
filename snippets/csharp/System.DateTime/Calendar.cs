@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace SystemDateTimeReference
 {
@@ -23,7 +23,7 @@ namespace SystemDateTimeReference
 
             thTH.DateTimeFormat.Calendar = new System.Globalization.GregorianCalendar();
             Console.WriteLine(value.ToString(thTH));
-            // Press "Run" to see the output
+            // Press "Run" to see the output.
             // </Snippet1>
         }
 
@@ -36,7 +36,7 @@ namespace SystemDateTimeReference
 
             thTH.DateTimeFormat.Calendar = new System.Globalization.GregorianCalendar();
             Console.WriteLine(value.ToString(thTH));
-            // Press "Run" to see the output
+            // Press "Run" to see the output.
             // </Snippet2>
         }
 
@@ -47,7 +47,7 @@ namespace SystemDateTimeReference
             var dat = new DateTime(2559, 5, 28, thTH.DateTimeFormat.Calendar);
             Console.WriteLine($"Thai Buddhist era date: {dat.ToString("d", thTH)}");
             Console.WriteLine($"Gregorian date:   {dat:d}");
-            // Press "Run" to see the output
+            // Press "Run" to see the output.
             // </Snippet3>
         }
 
@@ -66,7 +66,7 @@ namespace SystemDateTimeReference
             Console.WriteLine($"Date: {dat:d}");
             Console.WriteLine($"Year: {dat.Year}");
             Console.WriteLine($"Leap year: {DateTime.IsLeapYear(dat.Year)}");
-            // Press "Run" to see the output
+            // Press "Run" to see the output.
             // </Snippet4>
         }
 
@@ -86,7 +86,7 @@ namespace SystemDateTimeReference
             Console.WriteLine($"Date: {dat:d}");
             Console.WriteLine($"Day of Week: {dat.DayOfWeek}");
             Console.WriteLine($"Week of year: {greg.GetWeekOfYear(dat, System.Globalization.CalendarWeekRule.FirstDay,DayOfWeek.Sunday)}");
-            // Press "Run" to see the output
+            // Press "Run" to see the output.
             // </Snippet5>
         }
     }
