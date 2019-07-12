@@ -11,10 +11,10 @@ public class Form1: Form
     private void MakeTable()
     { 
         // Create a DataTable. 
-        DataTable table = new DataTable("Product");
+        var table = new DataTable("Product");
 
         // Create a DataColumn and set various properties. 
-        DataColumn column = new DataColumn(); 
+        var column = new DataColumn(); 
         column.DataType = System.Type.GetType("System.Decimal"); 
         column.AllowDBNull = false; 
         column.Caption = "Price"; 
@@ -26,7 +26,7 @@ public class Form1: Form
 
         // Add 10 rows and set values. 
         DataRow row; 
-        for(int i = 0; i < 10; i++)
+        for (int i = 0; i < 10; i++)
         { 
             row = table.NewRow(); 
             row["Price"] = i + 1; 
