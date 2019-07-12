@@ -11,9 +11,9 @@ public class Form1: Form
     private void PrintColumnNames(DataSet dataSet)
     {
         // For each DataTable, print the ColumnName.
-        foreach(DataTable table in dataSet.Tables)
+        foreach (DataTable table in dataSet.Tables)
         {
-            foreach(DataColumn column in table.Columns)
+            foreach (DataColumn column in table.Columns)
             {
                 Console.WriteLine(column.ColumnName);
             }
@@ -22,8 +22,7 @@ public class Form1: Form
  
     private void AddColumn(DataTable table)
     {
-        DataColumn column;
-        column = new DataColumn();
+        var column = new DataColumn();
         column.ColumnName = "SupplierID";
         column.DataType = System.Type.GetType("System.String");
         column.Unique = true;
