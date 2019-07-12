@@ -40,7 +40,7 @@ Public Class Form1
         Dim uniqueConstraint = CType(constraint, UniqueConstraint)
 
         ' Get the Columns as an array.
-        Dim columnArray() As DataColumn = uniqueConstraint.Columns
+        Dim columnArray As DataColumn() uniqueConstraint.Columns
 
         ' Print each column's name.
         For i As Integer = 0 To columnArray.Length - 1
@@ -54,7 +54,7 @@ Public Class Form1
         Dim fkConstraint = CType(constraint, ForeignKeyConstraint)
         
         ' Get the Columns as an array.
-        Dim columnArray() As DataColumn = fkConstraint.Columns
+        Dim columnArray As DataColumn() fkConstraint.Columns
         
         ' Print each column's name.
         For i As Integer = 0 To columnArray.Length - 1
