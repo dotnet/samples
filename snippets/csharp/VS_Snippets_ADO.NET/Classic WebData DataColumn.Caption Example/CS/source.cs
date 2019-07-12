@@ -9,22 +9,21 @@ public class Sample
 // <Snippet1>
 private void CreateDataTable()
 {
-   DataTable table;
+   var table = new DataTable("Customers");
    DataColumn column;
 
-   table = new DataTable("Customers");
 
-   //CustomerID column
+   // CustomerID column.
    column = table.Columns.Add("CustomerID", 
        System.Type.GetType("System.Int32"));
    column.Unique = true;
 	
-   //CustomerName column
+   // CustomerName column.
    column = table.Columns.Add("CustomerName", 
        System.Type.GetType("System.String"));
    column.Caption = "Name";
 
-   //CreditLimit
+   // CreditLimit column.
    column = table.Columns.Add("CreditLimit", 
        System.Type.GetType("System.Double"));
    column.DefaultValue = 0;
