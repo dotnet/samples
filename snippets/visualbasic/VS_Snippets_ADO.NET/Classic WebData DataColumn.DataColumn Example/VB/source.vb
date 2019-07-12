@@ -7,7 +7,7 @@ Public Class Form1: Inherits Form
 
 
 ' <Snippet1>
-Private Sub AddDataColumn(ByVal table As DataTable)
+Private Sub AddDataColumn(table As DataTable)
     Dim column As New DataColumn()
 
     ' Set various properties.
