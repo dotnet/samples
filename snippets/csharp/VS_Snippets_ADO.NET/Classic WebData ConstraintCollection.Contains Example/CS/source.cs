@@ -10,19 +10,15 @@ public class Sample
     {
         try
         {
-            if(constraints.Contains(constraint.ConstraintName)) 
+            if (constraints.Contains(constraint.ConstraintName) && constraints.CanRemove(constraint))
             {
-                if(constraints.CanRemove(constraint)) 
-                {
                     constraints.Remove(constraint.ConstraintName);
-                }
             }
         }
-        catch(Exception e) 
+        catch (Exception e) 
         {
             // Process exception and return.
-            Console.WriteLine("Exception of type {0} occurred.", 
-                e.GetType());
+            Console.WriteLine($"Exception of type {e.GetType()} occurred.");
         }
     }
     // </Snippet1>
