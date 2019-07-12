@@ -11,12 +11,11 @@ Public Shared Sub ConstraintAddRange(dataSet As DataSet)
 		Dim ordersTable As DataTable = dataSet.Tables("Orders")
 
 		' Create unique and foreign key constraints.
-		Dim uniqueConstraint As UniqueConstraint = New _
-            UniqueConstraint(customersTable.Columns("CustomerID"))
-		Dim fkConstraint As ForeignKeyConstraint = New _
-            ForeignKeyConstraint("CustOrdersConstraint", _
-            customersTable.Columns("CustomerID"), _
-            ordersTable.Columns("CustomerID"))
+		Dim uniqueConstraint As New UniqueConstraint(customersTable.Columns("CustomerID"))
+        Dim fkConstraint As New ForeignKeyConstraint( _
+        "CustOrdersConstraint", _
+        customersTable.Columns("CustomerID"), _
+        ordersTable.Columns("CustomerID"))
 
 		' Add the constraints.
 		customersTable.Constraints.AddRange(New Constraint() _
@@ -24,8 +23,7 @@ Public Shared Sub ConstraintAddRange(dataSet As DataSet)
 
 	Catch ex As Exception
 		' Process exception and return.
-        Console.WriteLine("Exception of type {0} occurred.", _
-        ex.GetType().ToString())
+        Console.WriteLine($"Exception of type {ex.GetType().ToString()} occurred.")
 	End Try
 End Sub
 ' </Snippet1>
