@@ -10,7 +10,7 @@ public class Form1: Form
     // <Snippet1>
     private void AddDataColumn(DataTable table)
     {
-        DataColumn column = new DataColumn();
+        var column = new DataColumn();
 
         // Set various properties.
         column.ColumnName = "id";
