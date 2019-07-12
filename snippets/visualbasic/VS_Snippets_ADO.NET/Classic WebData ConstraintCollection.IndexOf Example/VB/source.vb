@@ -18,7 +18,7 @@ Private Sub RemoveConstraint _
 
     Catch ex As Exception
         ' Process exception and return.
-        Console.WriteLine($"Exception of type {e.GetType()} occurred.")
+        Console.WriteLine($"Exception of type {ex.GetType()} occurred.")
     End Try
 End Sub
 ' </Snippet1>
