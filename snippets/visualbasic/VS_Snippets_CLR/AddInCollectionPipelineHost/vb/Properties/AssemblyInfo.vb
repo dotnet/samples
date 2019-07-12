@@ -11,7 +11,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyConfiguration("")>
 <Assembly: AssemblyCompany("Microsoft")>
 <Assembly: AssemblyProduct("ListAdaptersHost")>
-<Assembly: AssemblyCopyright("Copyright © Microsoft 2007")>
+<Assembly: AssemblyCopyright("Copyright Â© Microsoft 2007")>
 <Assembly: AssemblyTrademark("")>
 <Assembly: AssemblyCulture("")>
 

@@ -322,12 +322,12 @@ Namespace Microsoft.Security.Samples
 
     <DataContract()> _
     Public Class InHouseTraining
-        'code omitted…
+        'code omittedâ€¦
     End Class
 
     <DataContract()> _
     Public Class OutsideTraining
-        'code omitted…
+        'code omittedâ€¦
     End Class
     ' </Snippet6>
 

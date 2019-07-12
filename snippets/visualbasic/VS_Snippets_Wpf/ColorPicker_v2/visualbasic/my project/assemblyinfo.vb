@@ -15,7 +15,7 @@ Imports System.Windows
 <Assembly: AssemblyConfiguration("")>
 <Assembly: AssemblyCompany("Microsoft")>
 <Assembly: AssemblyProduct("ColorPickerDialog")>
-<Assembly: AssemblyCopyright("Copyright © MSFT 2006")>
+<Assembly: AssemblyCopyright("Copyright Â© MSFT 2006")>
 <Assembly: AssemblyTrademark("")>
 <Assembly: AssemblyCulture("")>
 

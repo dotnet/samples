@@ -52,9 +52,9 @@ public class SamplesUTF32Encoding  {
 /* 
 This code produces the following output.  The question marks take the place of characters that cannot be displayed at the console.
 
-The original characters : za??ß
+The original characters : za??ÃŸ
 Using the encoder       : 7A 00 00 00 61 00 00 00 06 03 00 00 FD 01 00 00 B2 03 00 00
-Using the decoder       : za??ß
+Using the decoder       : za??ÃŸ
 
 */
 

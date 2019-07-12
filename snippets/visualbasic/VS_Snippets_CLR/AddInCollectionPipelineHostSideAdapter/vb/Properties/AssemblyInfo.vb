@@ -11,7 +11,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyConfiguration("")>
 <Assembly: AssemblyCompany("Microsoft")>
 <Assembly: AssemblyProduct("Template")>
-<Assembly: AssemblyCopyright("Copyright © Microsoft 2006")>
+<Assembly: AssemblyCopyright("Copyright Â© Microsoft 2006")>
 <Assembly: AssemblyTrademark("")>
 <Assembly: AssemblyCulture("")>
 

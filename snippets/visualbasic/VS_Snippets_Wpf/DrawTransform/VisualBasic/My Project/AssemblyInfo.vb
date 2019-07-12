@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("Microsoft")> 
 <Assembly: AssemblyProduct("DrawTransformSample_VB")> 
-<Assembly: AssemblyCopyright("Copyright © Microsoft 2005")> 
+<Assembly: AssemblyCopyright("Copyright Â© Microsoft 2005")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: CLSCompliant(True)> 

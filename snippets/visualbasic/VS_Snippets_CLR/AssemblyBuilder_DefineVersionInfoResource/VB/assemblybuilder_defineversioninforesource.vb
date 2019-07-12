@@ -78,7 +78,7 @@ Module Example
       '
       attributeType = GetType(AssemblyCopyrightAttribute)
       ctor = attributeType.GetConstructor(ctorParameters)
-      ctorArgs = New Object() { "© My Example Company 1991-2005" }
+      ctorArgs = New Object() { "Â© My Example Company 1991-2005" }
       attribute = New CustomAttributeBuilder(ctor, ctorArgs)
       myAssembly.SetCustomAttribute(attribute)
 

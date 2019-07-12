@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("The Write Stuff")> 
 <Assembly: AssemblyProduct("GestureSample")> 
-<Assembly: AssemblyCopyright("Copyright © The Write Stuff 2005")> 
+<Assembly: AssemblyCopyright("Copyright Â© The Write Stuff 2005")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: CLSCompliant(True)> 

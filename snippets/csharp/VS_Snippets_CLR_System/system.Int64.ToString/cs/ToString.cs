@@ -121,7 +121,7 @@ public class LongToString
       //    G format using es-ES culture:             1679            -3045
       //    
       //    C format using en-US culture:        $1,679.00      ($3,045.00)
-      //    C format using fr-FR culture:       1 679,00 ?      -3 045,00 ?
+      //    C format using fr-FR culture:       1Â 679,00 ?      -3Â 045,00 ?
       //    C format using es-ES culture:       1.679,00 ?      -3.045,00 ?
       //    
       //    D8 format using en-US culture:         00001679        -00003045
@@ -137,11 +137,11 @@ public class LongToString
       //    F format using es-ES culture:          1679,00         -3045,00
       //    
       //    N format using en-US culture:         1,679.00        -3,045.00
-      //    N format using fr-FR culture:         1 679,00        -3 045,00
+      //    N format using fr-FR culture:         1Â 679,00        -3Â 045,00
       //    N format using es-ES culture:         1.679,00        -3.045,00
       //    
       //    P format using en-US culture:     167,900.00 %    -304,500.00 %
-      //    P format using fr-FR culture:     167 900,00 %    -304 500,00 %
+      //    P format using fr-FR culture:     167Â 900,00 %    -304Â 500,00 %
       //    P format using es-ES culture:     167.900,00 %    -304.500,00 %
       //    
       //    X8 format using en-US culture:         0000068F         FFFFF41B
