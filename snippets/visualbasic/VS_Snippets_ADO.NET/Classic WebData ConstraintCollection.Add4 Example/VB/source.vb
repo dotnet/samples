@@ -12,8 +12,7 @@ Module Module1
     End Sub
 
     ' <Snippet1>
-    Private Sub AddForeignConstraint( _
-    ByVal dataSet As DataSet, ByVal table As DataTable)
+    Private Sub AddForeignConstraint(dataSet As DataSet, table As DataTable)
         Try
             Dim parentColumns(2) As DataColumn
             Dim childColumns(2) As DataColumn
@@ -29,15 +28,14 @@ Module Module1
             childColumns(0) = ordersTable.Columns("CustomerID")
             childColumns(1) = ordersTable.Columns("CustomerName")
 
-            ' Create ForeignKeyConstraint
+            ' Create ForeignKeyConstraint.
             table.Constraints.Add("CustOrdersConstraint", _
                 parentColumns, childColumns)
 
         Catch ex As Exception
             ' In case the constraint already exists, 
             ' catch the collision here and respond.
-            Console.WriteLine("Exception of type {0} occurred.", _
-                ex.GetType().ToString())
+            Console.WriteLine($"Exception of type {ex.GetType().ToString()} occurred.")
         End Try
     End Sub
     ' </Snippet1>
