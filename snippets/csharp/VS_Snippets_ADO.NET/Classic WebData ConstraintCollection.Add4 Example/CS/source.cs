@@ -13,8 +13,8 @@ public class Form1: Form
     {
         try
         {
-            DataColumn[] parentColumns = new DataColumn[2];
-            DataColumn[] childColumns = new DataColumn[2];
+            var parentColumns = new DataColumn[2];
+            var childColumns = new DataColumn[2];
             // Get the tables from the DataSet.
             DataTable customersTable = dataSet.Tables["Customers"];
             DataTable ordersTable = dataSet.Tables["Orders"];
@@ -25,7 +25,7 @@ public class Form1: Form
             childColumns[0] = ordersTable.Columns["CustomerID"];
             childColumns[1] = ordersTable.Columns["CustomerName"];
  
-            // Create ForeignKeyConstraint
+            // Create ForeignKeyConstraint.
             table.Constraints.Add("CustOrdersConstraint",
                 parentColumns, childColumns);
         }
