@@ -1,5 +1,5 @@
-imports System
-imports System.Data
+Imports System
+Imports System.Data
 
 
 Public Class sample
@@ -7,22 +7,21 @@ Public Class sample
 
 ' <Snippet1>
 Private Sub CreateDataTable()
-    Dim table As DataTable
+    Dim table As New DataTable("Customers")
     Dim column As DataColumn 
 
-    table = new DataTable("Customers")
 
-    'CustomerID column
+    ' CustomerID column.
     column = table.Columns.Add( _
         "CustomerID", System.Type.GetType("System.Int32"))
     column.Unique = True
 	
-    'CustomerName column
+    ' CustomerName column.
     column = table.Columns.Add( _
         "CustomerName", System.Type.GetType("System.String"))
     column.Caption = "Name"
 
-    'CreditLimit
+    ' CreditLimit column.
     column = table.Columns.Add( _
         "CreditLimit", System.Type.GetType("System.Double"))
     column.DefaultValue = 0
