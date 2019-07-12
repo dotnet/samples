@@ -14,10 +14,8 @@ public class Sample
             DataTable ordersTable = dataSet.Tables["Orders"];
 
             // Create unique and foreign key constraints.
-            UniqueConstraint uniqueConstraint = new 
-                UniqueConstraint(customersTable.Columns["CustomerID"]);
-            ForeignKeyConstraint fkConstraint = new 
-                ForeignKeyConstraint("CustOrdersConstraint",
+            var uniqueConstraint = new UniqueConstraint(customersTable.Columns["CustomerID"]);
+            var fkConstraint = new ForeignKeyConstraint("CustOrdersConstraint",
                 customersTable.Columns["CustomerID"],
                 ordersTable.Columns["CustomerID"]);
 
@@ -28,8 +26,7 @@ public class Sample
         catch(Exception ex)
         {
             // Process exception and return.
-            Console.WriteLine("Exception of type {0} occurred.", 
-                ex.GetType());
+            Console.WriteLine($"Exception of type {ex.GetType()} occurred.");
         }
     }
     // </Snippet1>
