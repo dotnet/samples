@@ -9,10 +9,8 @@ Public Class Form1
 Private Sub RemoveConstraint(table As DataTable, _
     constraint As Constraint)
 
-    If table.Constraints.Contains(constraint.ConstraintName) Then
-        If table.Constraints.CanRemove(constraint) Then
+    If table.Constraints.Contains(constraint.ConstraintName) AndAlso table.Constraints.CanRemove(constraint) Then
             table.Constraints.Remove(constraint)
-        End If
     End If
 End Sub
 ' </Snippet1>
