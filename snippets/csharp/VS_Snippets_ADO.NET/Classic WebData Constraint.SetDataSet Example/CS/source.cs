@@ -6,7 +6,8 @@ public class Form1: Form
 {
   protected DataSet DataSet1;
 
-    public void Method() {
+    public void Method()
+    {
 // <Snippet1>
         var uniqueConstraint = new UniqueConstraint(
             DataSet1.Tables["Table1"].Columns["Column1"]);
