@@ -25,7 +25,7 @@ Module Module1
     End Sub
     ' </Snippet1>
 
-    Private Function GetConnectionString() As String
+    Private Shared Function GetConnectionString() As String
         Return "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=NWIND_RW.MDB"
     End Function
 End Module
