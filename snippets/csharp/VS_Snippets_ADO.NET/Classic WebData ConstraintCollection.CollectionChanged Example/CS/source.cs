@@ -16,7 +16,7 @@ public class Sample
         try
         {
             // Create Customers table.
-            DataTable customersTable = new DataTable("Customers");
+            var customersTable = new DataTable("Customers");
             customersTable.Columns.Add("id", typeof(int));
             customersTable.Columns.Add("Name", typeof(string));
             customersTable.Constraints.CollectionChanged += 
@@ -24,7 +24,7 @@ public class Sample
                 Collection_Changed);
 
             // Create Orders table.
-            DataTable ordersTable = new DataTable("Orders");
+            var ordersTable = new DataTable("Orders");
             ordersTable.Columns.Add("CustID", typeof(int));
             ordersTable.Columns.Add("CustName", typeof(string));
             ordersTable.Constraints.CollectionChanged += 
@@ -32,8 +32,7 @@ public class Sample
                 Collection_Changed);
 
             // Create unique constraint.
-            UniqueConstraint constraint = new UniqueConstraint(
-                customersTable.Columns["id"]);
+            var constraint = new UniqueConstraint(customersTable.Columns["id"]);
             customersTable.Constraints.Add(constraint);
 		
             // Create unique constraint and specify as primary key.
@@ -47,19 +46,17 @@ public class Sample
             // a primary key constraint.
             ordersTable.Constraints.RemoveAt(0);  
         }
-        catch(Exception ex)
+        catch (Exception ex)
         {
             // Process exception and return.
-            Console.WriteLine("Exception of type {0} occurred.", 
-                ex.GetType());
+            Console.WriteLine($"Exception of type {ex.GetType()} occurred.");
         }
     }
 
     private static void Collection_Changed(object sender, 
         System.ComponentModel.CollectionChangeEventArgs ex)
     {
-        Console.WriteLine("List_Changed Event: '{0}'\t element={1}", 
-            ex.Action, ex.Element);
+        Console.WriteLine($"List_Changed Event: '{ex.Action}'\t element={ex.Element}");
     }
     // </Snippet1>
 
