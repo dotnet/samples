@@ -10,7 +10,7 @@ Private Sub RemoveConstraint(table As DataTable, _
     constraint As Constraint)
 
     If table.Constraints.Contains(constraint.ConstraintName) AndAlso table.Constraints.CanRemove(constraint) Then
-            table.Constraints.Remove(constraint)
+        table.Constraints.Remove(constraint)
     End If
 End Sub
 ' </Snippet1>
