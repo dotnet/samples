@@ -12,7 +12,7 @@ public class Sample
         {
             if (constraints.Contains(constraint.ConstraintName) && constraints.CanRemove(constraint))
             {
-                    constraints.Remove(constraint.ConstraintName);
+                constraints.Remove(constraint.ConstraintName);
             }
         }
         catch (Exception e) 
