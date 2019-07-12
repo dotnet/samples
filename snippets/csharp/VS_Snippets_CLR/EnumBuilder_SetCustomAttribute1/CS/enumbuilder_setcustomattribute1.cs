@@ -1,4 +1,4 @@
-// System.Reflection.Emit.EnumBuilder
+﻿// System.Reflection.Emit.EnumBuilder
 // System.Reflection.Emit.EnumBuilder.IsDefined()
 // System.Reflection.Emit.EnumBuilder.GetCustomAttributes(Type, bool)
 // System.Reflection.Emit.EnumBuilder.SetCustomAttribute(CustomAttributeBuilder)

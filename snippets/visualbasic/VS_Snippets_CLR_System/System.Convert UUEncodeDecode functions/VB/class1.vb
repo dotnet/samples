@@ -1,4 +1,4 @@
-Namespace UUCodeVB
+﻿Namespace UUCodeVB
    Class Coder
       Private inputFileName As String
       Private outputFileName As String

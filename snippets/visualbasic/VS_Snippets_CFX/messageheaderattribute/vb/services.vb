@@ -1,4 +1,4 @@
-' <snippet1>
+﻿' <snippet1>
 Imports System.Runtime.Serialization
 Imports System.ServiceModel
 Imports System.ServiceModel.Channels

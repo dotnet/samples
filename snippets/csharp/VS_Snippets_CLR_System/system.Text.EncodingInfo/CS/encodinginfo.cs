@@ -1,4 +1,4 @@
-// The following code example retrieves the different names for each encoding
+﻿// The following code example retrieves the different names for each encoding
 // and compares them with the equivalent Encoding names.
 
 // <Snippet1>

@@ -1,4 +1,4 @@
-' XpsSave SDK Sample - XpsSaveHelper.vb
+﻿' XpsSave SDK Sample - XpsSaveHelper.vb
 ' Copyright (c) Microsoft Corporation. All rights reserved.
 
 

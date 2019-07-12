@@ -1,4 +1,4 @@
-' Topic: XML Value Property
+﻿' Topic: XML Value Property
 
 '<Snippet19>  
 Imports <xmlns:ns = "http://SomeNamespace"> 

@@ -1,4 +1,4 @@
-'<SnippetStartupEventCODEBEHIND>
+﻿'<SnippetStartupEventCODEBEHIND>
 
 Imports Microsoft.VisualBasic
 Imports System.Windows

@@ -1,4 +1,4 @@
-// <Snippet42>
+﻿// <Snippet42>
 using System;
 
 public class SampleRefType

@@ -1,4 +1,4 @@
-' Simplified 1/17/06 GlennHa
+﻿' Simplified 1/17/06 GlennHa
 ' System.Reflection.Emit.ModuleBuilder.DefineEnum
 
 ' <Snippet1>

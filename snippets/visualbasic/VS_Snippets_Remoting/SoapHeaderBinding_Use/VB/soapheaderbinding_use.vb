@@ -1,4 +1,4 @@
-' System.Web.Services.Description.SoapHeaderBinding.SoapHeaderBinding
+﻿' System.Web.Services.Description.SoapHeaderBinding.SoapHeaderBinding
 ' System.Web.Services.Description.SoapHeaderBinding.Message
 ' System.Web.Services.Description.SoapHeaderBinding.Part
 ' System.Web.Services.Description.SoapHeaderBinding.Use

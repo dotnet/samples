@@ -1,4 +1,4 @@
-// <snippet15>
+﻿// <snippet15>
 using System;
 using System.IO;
 using System.Security.AccessControl;

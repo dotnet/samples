@@ -1,4 +1,4 @@
-/*
+﻿/*
 
   AccelDecelExample.cs
      This example shows how to use the AccelerationRatio and DecelerationRatio properties of timelines

@@ -1,4 +1,4 @@
-'<Snippet1>
+﻿'<Snippet1>
 ' This example shows how a named mutex is used to signal between
 ' processes or threads.
 ' Run this program from two (or more) command windows. Each process

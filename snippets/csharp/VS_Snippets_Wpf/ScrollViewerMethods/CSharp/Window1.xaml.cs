@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Windows;
 using System.Windows.Automation.Provider;
 using System.Windows.Controls;

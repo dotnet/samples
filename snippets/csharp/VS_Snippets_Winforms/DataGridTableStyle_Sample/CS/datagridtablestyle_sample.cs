@@ -1,4 +1,4 @@
-// System.Windows.Forms.DataGridTableStyle.LinkColor;
+﻿// System.Windows.Forms.DataGridTableStyle.LinkColor;
 // System.Windows.Forms.DataGridTableStyle.HeaderFont;
 // System.Windows.Forms.DataGridTableStyle.LinkColorChanged;
 // System.Windows.Forms.DataGridTableStyle.HeaderFontChanged;

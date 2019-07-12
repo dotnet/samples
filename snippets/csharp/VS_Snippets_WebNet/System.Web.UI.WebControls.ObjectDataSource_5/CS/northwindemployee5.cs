@@ -1,4 +1,4 @@
-// <Snippet2>
+﻿// <Snippet2>
 namespace Samples.AspNet.CS {
 
 using System;

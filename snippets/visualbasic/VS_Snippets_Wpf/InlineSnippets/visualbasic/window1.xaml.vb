@@ -1,4 +1,4 @@
-Namespace InlineSnippets
+﻿Namespace InlineSnippets
 	''' <summary>
 	''' Interaction logic for Window1.xaml
 	''' </summary>

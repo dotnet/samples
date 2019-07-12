@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
 // QuickContacts.cs
 using System;
 using System.ComponentModel;

@@ -1,4 +1,4 @@
-/**
+﻿/**
   *File name: WebBaseEventCollection.cs
   *Purpose:   This little contrived example shows how to use the 
   *           WebBaseEventCollection. 

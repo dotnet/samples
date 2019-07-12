@@ -1,4 +1,4 @@
-' <SnippetPopExampleWholePage> 
+﻿' <SnippetPopExampleWholePage> 
 Imports System.Windows.Media.Animation
 
 Namespace SDKSample

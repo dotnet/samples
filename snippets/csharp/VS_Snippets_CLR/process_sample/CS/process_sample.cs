@@ -1,4 +1,4 @@
-// System.Diagnostics.Process.WorkingSet
+﻿// System.Diagnostics.Process.WorkingSet
 // System.Diagnostics.Process.BasePriority
 // System.Diagnostics.Process.UserProcessorTime
 // System.Diagnostics.Process.PrivilegedProcessorTime

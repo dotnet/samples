@@ -1,4 +1,4 @@
- 'System.Net.WebRequest.Create(Uri)
+﻿ 'System.Net.WebRequest.Create(Uri)
 '
 'This program demonstrates the 'Create(Uri)' method of the 'WebRequest' class.
 'A new 'Uri' object is created to the specified Uri.

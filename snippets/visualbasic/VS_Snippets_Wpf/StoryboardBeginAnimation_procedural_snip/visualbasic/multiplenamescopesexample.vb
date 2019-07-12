@@ -1,4 +1,4 @@
-' <SnippetMultipleNameScopesExample>
+﻿' <SnippetMultipleNameScopesExample>
 
 Imports System
 Imports System.Windows

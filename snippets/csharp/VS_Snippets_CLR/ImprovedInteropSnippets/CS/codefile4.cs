@@ -1,4 +1,4 @@
-
+﻿
 // System.Runtime.InteropServices.TypeLibTypeAttribute
 // System.Runtime.InteropServices.TypeLibTypeFlags
 // <Snippet4>

@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Imports System.Runtime.InteropServices
 
 <ComSourceInterfacesAttribute("ButtonEventsLib.ButtonEvents, ButtonEventsLib")> _

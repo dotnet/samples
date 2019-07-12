@@ -1,4 +1,4 @@
-' CustomButton.vb
+﻿' CustomButton.vb
 '
 ' <snippet1>
 ' Create a class that derives from ButtonDesigner

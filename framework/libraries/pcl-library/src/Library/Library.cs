@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 #if !PORTABLE259
 // .NET Core libraries can go here.

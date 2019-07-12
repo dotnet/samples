@@ -1,4 +1,4 @@
-// System.Windows.Forms.Control.Invoke(Delegate);
+﻿// System.Windows.Forms.Control.Invoke(Delegate);
 
 // <Snippet1>
 /*

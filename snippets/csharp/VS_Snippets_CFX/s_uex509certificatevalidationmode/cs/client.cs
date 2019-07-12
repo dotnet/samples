@@ -1,4 +1,4 @@
-// Snippet for X509CertificateValidationMode
+﻿// Snippet for X509CertificateValidationMode
 /*
  * 
  *  CalculatorChannel is not consistent with store, so changed everything else

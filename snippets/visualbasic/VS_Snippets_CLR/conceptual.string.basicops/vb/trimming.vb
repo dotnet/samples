@@ -1,4 +1,4 @@
-' <snippet15>
+﻿' <snippet15>
 Class Example
     Public Shared Sub Main()
         Trim()

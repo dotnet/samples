@@ -1,4 +1,4 @@
-Public Class Customer
+﻿Public Class Customer
 
     Public Sub New()
     End Sub

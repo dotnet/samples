@@ -1,4 +1,4 @@
-
+﻿
 Module IterateWithForEach
    Public Sub Main()
       ' Declare and iterate through a one-dimensional array.

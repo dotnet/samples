@@ -1,4 +1,4 @@
-' <SnippetRectAnimationUsingKeyFramesWholePage>
+﻿' <SnippetRectAnimationUsingKeyFramesWholePage>
 
 Imports System
 Imports System.Windows

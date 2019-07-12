@@ -1,4 +1,4 @@
-//<Snippet17>
+﻿//<Snippet17>
 using System;
 using System.Threading;
 

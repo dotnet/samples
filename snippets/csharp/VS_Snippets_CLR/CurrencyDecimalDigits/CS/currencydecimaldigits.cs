@@ -1,4 +1,4 @@
-// The following code example demonstrates the effect of changing the CurrencyDecimalDigits property.
+﻿// The following code example demonstrates the effect of changing the CurrencyDecimalDigits property.
 
 // <snippet1>
 using System;

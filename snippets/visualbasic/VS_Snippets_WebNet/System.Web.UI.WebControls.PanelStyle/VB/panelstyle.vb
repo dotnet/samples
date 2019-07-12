@@ -1,4 +1,4 @@
-' <snippet2>
+﻿' <snippet2>
 Partial Class PanelStylevb_aspx
     Inherits Page
 

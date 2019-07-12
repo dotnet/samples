@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
 // This code must be compiled with the /unsafe switch:
 //   csc /unsafe source.cs
 using System;

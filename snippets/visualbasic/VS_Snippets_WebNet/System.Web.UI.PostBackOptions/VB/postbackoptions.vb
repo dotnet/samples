@@ -1,3 +1,3 @@
-Public Class Nothing
+﻿Public Class Nothing
 
 End Class

@@ -1,4 +1,4 @@
-'<SnippetCustomEntryPointAndRunCODE>
+﻿'<SnippetCustomEntryPointAndRunCODE>
 
 Imports Microsoft.VisualBasic
 Imports System

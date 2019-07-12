@@ -1,4 +1,4 @@
-'<SnippetBrowseHomeCODEBEHIND>
+﻿'<SnippetBrowseHomeCODEBEHIND>
 
 Namespace SDKSample
 	Partial Public Class BrowseHome

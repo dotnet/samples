@@ -1,4 +1,4 @@
-/* This program demonstrates the "Set" method of "WebHeaderCollection" class.
+﻿/* This program demonstrates the "Set" method of "WebHeaderCollection" class.
    It sets the value of the 'Cache-Control' header in the request to "no-cache". The 'Cache-Control' header
    is used to specify the directive that must be followed by all caching mechanisms in the Request-Response chain.
    The 'no-cache' directive indicates that the caching mechanism must not resend the cached  response for a 

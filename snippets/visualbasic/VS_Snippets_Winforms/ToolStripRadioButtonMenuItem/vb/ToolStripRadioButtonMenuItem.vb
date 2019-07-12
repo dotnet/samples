@@ -1,4 +1,4 @@
-'<snippet000>
+﻿'<snippet000>
 '<snippet100>
 Imports System
 Imports System.Drawing

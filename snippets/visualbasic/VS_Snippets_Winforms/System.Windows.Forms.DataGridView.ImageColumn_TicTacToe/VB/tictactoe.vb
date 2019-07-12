@@ -1,4 +1,4 @@
-' The following code example demonstrates using images to create a 
+﻿' The following code example demonstrates using images to create a 
 ' TicTacToe game.
 '<snippet0>
 Imports System.IO

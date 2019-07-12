@@ -1,4 +1,4 @@
-//Types:System.Runtime.Serialization.SerializationException Vendor: Richter
+﻿//Types:System.Runtime.Serialization.SerializationException Vendor: Richter
 //Types:System.Runtime.Serialization.SurrogateSelector Vendor: Richter
 //<snippet1>
 using System;

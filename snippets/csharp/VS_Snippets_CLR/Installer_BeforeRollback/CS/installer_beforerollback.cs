@@ -1,4 +1,4 @@
-// System.Configuration.Install.Installer.BeforeRollback
+﻿// System.Configuration.Install.Installer.BeforeRollback
 
 /* The following program demonstrates the 'BeforeRollback' event of the 
    'Installer' class. It overrides the Install method, explicitly throws

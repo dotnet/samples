@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
 namespace CalcHVAs 
 {
     public interface ICalculator 

@@ -1,4 +1,4 @@
- Class ConvertSnippet
+﻿ Class ConvertSnippet
      Overloads Shared Sub Main(ByVal args() As String)
 
          Dim snippet As New ConvertSnippet()

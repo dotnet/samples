@@ -1,4 +1,4 @@
-//<Snippet2>
+﻿//<Snippet2>
 // Example of the Buffer.SetByte method.
 using System;
 

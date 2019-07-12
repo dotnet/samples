@@ -1,4 +1,4 @@
-// Contains the Main function to allow the
+﻿// Contains the Main function to allow the
 // example to be run as a console application.
 
 // <Snippet151>

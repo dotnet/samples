@@ -1,4 +1,4 @@
-Namespace HOWTONavigationSnippets
+﻿Namespace HOWTONavigationSnippets
 	Partial Public Class MainWindow
 		Inherits NavigationWindow
 		Public Sub New()

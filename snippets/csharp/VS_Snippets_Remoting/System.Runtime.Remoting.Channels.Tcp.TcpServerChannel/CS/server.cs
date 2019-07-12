@@ -1,4 +1,4 @@
-/// Class: System.Runtime.Remoting.Channels.Tcp.TcpServerChannel
+﻿/// Class: System.Runtime.Remoting.Channels.Tcp.TcpServerChannel
 ///    21    Ctor(string, int, IServerChannelSinkProvider)
 ///    22    GetChannelUri();
 ///    23    Parse();

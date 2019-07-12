@@ -1,4 +1,4 @@
-' <Snippet2>
+﻿' <Snippet2>
 Imports System
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Channels

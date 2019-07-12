@@ -1,4 +1,4 @@
-// <Internal>
+﻿// <Internal>
 // File name: ipaddress.cs
 // The snippets contained here apply to:
 // 1) System.Net.IPAddress.AddressFamily, snippet3.

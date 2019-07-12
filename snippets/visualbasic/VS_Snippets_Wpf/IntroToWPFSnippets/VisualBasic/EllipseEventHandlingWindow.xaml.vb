@@ -1,4 +1,4 @@
-'<SnippetHandleEllipseMouseUpEventCODEBEHIND>
+﻿'<SnippetHandleEllipseMouseUpEventCODEBEHIND>
 Imports System.Windows
 Imports System.Windows.Input
 

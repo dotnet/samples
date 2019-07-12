@@ -1,4 +1,4 @@
-' <Snippet3>
+﻿' <Snippet3>
 Module Example
     ' Create a TimeSpan object and display its value.
     Sub CreateTimeSpan( days As Integer, hours As Integer, _

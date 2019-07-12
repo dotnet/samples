@@ -1,4 +1,4 @@
-// The following code example displays several properties of the neutral cultures.
+﻿// The following code example displays several properties of the neutral cultures.
 
 // <snippet1>
 using System;

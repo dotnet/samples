@@ -1,4 +1,4 @@
-'System.Windows.Forms.DataGridTableStyle.ForeColor
+﻿'System.Windows.Forms.DataGridTableStyle.ForeColor
 
 ' The following program demonstrates the property 'ForeColor' of class 'DataGridTableStyle'.
 ' A table with 2 columns is created and attached to grid.A listbox allows selection of forecolors

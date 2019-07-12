@@ -1,4 +1,4 @@
-Public Class Form1
+﻿Public Class Form1
 
     '<SNIPPET1>
     Private Sub TabControl1_DrawItem(ByVal sender As Object, ByVal e As System.Windows.Forms.DrawItemEventArgs) Handles TabControl1.DrawItem

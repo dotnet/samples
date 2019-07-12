@@ -1,4 +1,4 @@
-// <Internal>
+﻿// <Internal>
 // This program contains snippets for the following members:
 // 1) System.Net.Sockets.MulticastOption;
 // 2) System.Net.Sockets.MulticastOption.MulticastOption(IPAddress, IPAddress);

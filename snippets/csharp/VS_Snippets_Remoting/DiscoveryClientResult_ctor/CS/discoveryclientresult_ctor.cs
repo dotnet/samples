@@ -1,4 +1,4 @@
-// System.Web.Services.Discovery.DiscoveryClientResult(Type,String,String)
+﻿// System.Web.Services.Discovery.DiscoveryClientResult(Type,String,String)
 
 /*
 The following example demonstrates the DiscoveryClientResult(Type,String,String)

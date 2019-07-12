@@ -1,4 +1,4 @@
-// System.Windows.Forms.DataGridTableStyle.PreferredColumnWidth
+﻿// System.Windows.Forms.DataGridTableStyle.PreferredColumnWidth
 /*
 The following example demonstrates the property 'PreferredColumnWidth'
 of 'DataGridTableStyle' class.

@@ -1,4 +1,4 @@
-'<snippet21>
+﻿'<snippet21>
 Imports System.IO
 
 Public Class ReadBuf

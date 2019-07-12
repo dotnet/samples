@@ -1,4 +1,4 @@
-' <Snippet3>
+﻿' <Snippet3>
 ' Example of the explicit conversions from Decimal to Short and 
 ' Decimal to UShort.
 Module DecimalToU_Int16Demo

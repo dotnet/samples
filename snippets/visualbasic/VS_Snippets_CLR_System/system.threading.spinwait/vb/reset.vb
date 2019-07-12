@@ -1,4 +1,4 @@
-' <snippet01>
+﻿' <snippet01>
 Imports System
 Imports System.Threading
 

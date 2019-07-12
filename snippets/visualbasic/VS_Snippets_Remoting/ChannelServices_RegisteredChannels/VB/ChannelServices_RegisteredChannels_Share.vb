@@ -1,4 +1,4 @@
-' The class 'HelloServer' is derived from 'MarshalByRefObject' to 
+﻿' The class 'HelloServer' is derived from 'MarshalByRefObject' to 
 ' make it remotable.  
 
 Imports System

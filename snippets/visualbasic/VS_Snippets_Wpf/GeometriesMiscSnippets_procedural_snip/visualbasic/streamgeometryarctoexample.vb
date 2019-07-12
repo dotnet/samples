@@ -1,4 +1,4 @@
-' <SnippetStreamGeometryArcToExampleWholePage>
+﻿' <SnippetStreamGeometryArcToExampleWholePage>
 
 Imports System
 Imports System.Windows

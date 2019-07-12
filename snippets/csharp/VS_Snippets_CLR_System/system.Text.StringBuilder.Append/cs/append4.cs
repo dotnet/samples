@@ -1,4 +1,4 @@
-// <Snippet18>
+﻿// <Snippet18>
 using System;
 
 public class Dog

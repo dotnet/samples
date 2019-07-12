@@ -1,4 +1,4 @@
-// System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider.Next;
+﻿// System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider.Next;
 
 using System;
 using System.Runtime.Remoting;

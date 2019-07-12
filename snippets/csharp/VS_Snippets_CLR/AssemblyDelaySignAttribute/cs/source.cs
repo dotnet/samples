@@ -1,4 +1,4 @@
-// Per Kitg, from cut QuickStart (vswhidbey 160832)
+﻿// Per Kitg, from cut QuickStart (vswhidbey 160832)
 //<Snippet1>
 using System;
 using System.Reflection;

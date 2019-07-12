@@ -1,4 +1,4 @@
-Namespace UE.Samples.Channel
+﻿Namespace UE.Samples.Channel
     Class service
 
         Public Shared Sub Main()

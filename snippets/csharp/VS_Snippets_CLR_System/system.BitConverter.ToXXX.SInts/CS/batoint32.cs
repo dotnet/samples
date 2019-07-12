@@ -1,4 +1,4 @@
-//<Snippet2>
+﻿//<Snippet2>
 // Example of the BitConverter.ToInt32 method.
 using System;
 

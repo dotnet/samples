@@ -1,4 +1,4 @@
-// <snippet11>
+﻿// <snippet11>
 using System;
 
 public class IsSurrogateSample {

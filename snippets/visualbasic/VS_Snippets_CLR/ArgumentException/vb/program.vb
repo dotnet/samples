@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Public Class App
     Public Shared Sub Main()
         ' ArgumentException is not thrown because 10 is an even number.

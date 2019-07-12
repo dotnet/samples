@@ -1,4 +1,4 @@
-/// Class:  System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYearMonth
+﻿/// Class:  System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYearMonth
 /// Need snippets:
 ///    10    class 
 ///    21    #ctor()

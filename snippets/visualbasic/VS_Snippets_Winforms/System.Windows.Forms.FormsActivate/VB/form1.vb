@@ -1,4 +1,4 @@
-' The following code example demonstrates another use of the 
+﻿' The following code example demonstrates another use of the 
 ' Form.SetDesktopLocation and Form.Activate members, 
 ' and demonstrates handling the Form.Load and Form.Activate 
 ' events.

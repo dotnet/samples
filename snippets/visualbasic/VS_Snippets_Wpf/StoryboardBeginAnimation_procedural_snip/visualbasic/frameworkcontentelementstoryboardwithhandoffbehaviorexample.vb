@@ -1,4 +1,4 @@
-' <SnippetFrameworkContentElementStoryboardWithHandoffBehaviorExampleWholePage>
+﻿' <SnippetFrameworkContentElementStoryboardWithHandoffBehaviorExampleWholePage>
 '
 '    This example shows how to animate
 '    a FrameworkContentElement with a storyboard.

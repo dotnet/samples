@@ -1,4 +1,4 @@
-'<SnippetDetectActivationStateCODEBEHIND>
+﻿'<SnippetDetectActivationStateCODEBEHIND>
 
 Imports Microsoft.VisualBasic
 Imports System

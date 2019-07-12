@@ -1,4 +1,4 @@
-' System.Runtime.Remoting.RemotingConfiguration.IsRemotelyActivatedClientType(Type)
+﻿' System.Runtime.Remoting.RemotingConfiguration.IsRemotelyActivatedClientType(Type)
 '
 ' The following example demonstrates the 'IsRemotelyActivatedClientType(Type)' method
 ' of 'RemotingConfiguration' class. 

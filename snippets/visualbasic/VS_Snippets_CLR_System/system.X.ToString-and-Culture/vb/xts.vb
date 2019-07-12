@@ -1,4 +1,4 @@
-' This older code snippet replaced by a new one
+﻿' This older code snippet replaced by a new one
 ' This code example demonstrates the ToString(String) and 
 ' ToString(String, IFormatProvider) methods for integral and
 ' floating-point numbers, in conjunction with the standard 

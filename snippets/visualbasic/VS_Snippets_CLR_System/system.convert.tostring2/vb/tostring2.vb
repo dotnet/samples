@@ -1,4 +1,4 @@
-' Visual Basic .NET Document
+﻿' Visual Basic .NET Document
 ' Illustrates ToString(Byte, Int) overload.
 Option Strict On
 

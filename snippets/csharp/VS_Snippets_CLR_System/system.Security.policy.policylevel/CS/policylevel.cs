@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 // This sample demonstrates how to set code access permissions programmatically.  It creates a
 // new parent and child code group pair, and allows the user to optionally delete the child group 
 // and/or the parent code group.  It also shows the result of a ResolvePolicy call, and displays 

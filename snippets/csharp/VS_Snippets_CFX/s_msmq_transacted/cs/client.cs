@@ -1,4 +1,4 @@
-// <Snippet12>
+﻿// <Snippet12>
 // This is the client code.
 //  Copyright (c) Microsoft Corporation.  All Rights Reserved.
 

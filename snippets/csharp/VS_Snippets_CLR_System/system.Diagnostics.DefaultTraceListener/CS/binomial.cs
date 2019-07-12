@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
 // <Snippet11>
 using System;
 using System.Diagnostics;

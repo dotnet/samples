@@ -1,4 +1,4 @@
-'<snippet3>
+﻿'<snippet3>
 Imports System.Web.UI.WebControls.WebParts
 
 Public Partial Class _Default

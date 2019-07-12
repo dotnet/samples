@@ -1,4 +1,4 @@
-'<Snippet2>
+﻿'<Snippet2>
 ' Example of the TimeSpan.FromMilliseconds( Double ) method.
 Imports System
 Imports Microsoft.VisualBasic

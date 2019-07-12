@@ -1,4 +1,4 @@
-' <snippet8>
+﻿' <snippet8>
 Module IsNumberSample
     Sub Main()
         Dim str As String

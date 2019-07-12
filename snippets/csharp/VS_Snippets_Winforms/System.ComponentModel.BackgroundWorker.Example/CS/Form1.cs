@@ -1,4 +1,4 @@
-// <snippet1>
+﻿// <snippet1>
 // <snippet7>
 using System;
 using System.ComponentModel;

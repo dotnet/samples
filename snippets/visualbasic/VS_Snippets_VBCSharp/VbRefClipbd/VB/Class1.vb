@@ -1,4 +1,4 @@
-Class Class16e44442bc65408fab450eb9c06c8625
+﻿Class Class16e44442bc65408fab450eb9c06c8625
 ' My.Computer.Clipboard.GetDataObjectMethod
 
 Public Sub Method1()

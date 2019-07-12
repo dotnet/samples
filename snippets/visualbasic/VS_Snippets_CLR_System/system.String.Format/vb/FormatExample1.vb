@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 ' This code example demonstrates the String.Format() method.
 ' This example uses the provider parameter to supply formatting 
 ' information using the invariant culture.

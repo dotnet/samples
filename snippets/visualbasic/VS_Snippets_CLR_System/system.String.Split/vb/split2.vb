@@ -1,4 +1,4 @@
-' <Snippet2>
+﻿' <Snippet2>
 Public Class SplitTest
     Public Shared Sub Main()
         Dim words As String = "This is a list of words, with: a bit of punctuation" + _

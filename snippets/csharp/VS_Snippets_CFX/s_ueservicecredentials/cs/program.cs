@@ -1,4 +1,4 @@
-//Snippet for System.ServiceModel.Description.ServiceCredentials
+﻿//Snippet for System.ServiceModel.Description.ServiceCredentials
 //
 using System;
 using System.ServiceModel;

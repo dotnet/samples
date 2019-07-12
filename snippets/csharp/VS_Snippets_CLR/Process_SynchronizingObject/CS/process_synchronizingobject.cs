@@ -1,4 +1,4 @@
-// System.Diagnostics.Process.SynchronizingObject
+﻿// System.Diagnostics.Process.SynchronizingObject
 /*
 The following example demonstrates the property 'SynchronizingObject'
 of 'Process' class.

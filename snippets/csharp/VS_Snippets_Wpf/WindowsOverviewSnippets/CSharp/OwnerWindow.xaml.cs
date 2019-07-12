@@ -1,4 +1,4 @@
-using System.Windows;
+﻿using System.Windows;
 
 public partial class OwnerWindow : System.Windows.Window
 {

@@ -1,4 +1,4 @@
- '<snippet1>
+﻿ '<snippet1>
 
 Option Explicit On
 Option Strict On

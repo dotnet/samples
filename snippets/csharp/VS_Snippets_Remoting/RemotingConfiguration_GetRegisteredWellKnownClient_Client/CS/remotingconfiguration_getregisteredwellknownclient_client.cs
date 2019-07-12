@@ -1,4 +1,4 @@
-// System.Runtime.Remoting.RemotingConfiguration.GetRegisteredWellKnownClientTypes
+﻿// System.Runtime.Remoting.RemotingConfiguration.GetRegisteredWellKnownClientTypes
 
 /*
 The following example demonstrates the 'GetRegisteredWellKnownClientTypes' method

@@ -1,4 +1,4 @@
-' <SnippetChangeSelectionProgrammaticalyCodeExampleWholePage>
+﻿' <SnippetChangeSelectionProgrammaticalyCodeExampleWholePage>
 
 Imports System
 Imports System.Windows

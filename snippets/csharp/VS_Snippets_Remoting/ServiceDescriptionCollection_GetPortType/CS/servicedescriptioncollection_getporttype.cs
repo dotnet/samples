@@ -1,4 +1,4 @@
-// System.Web.Services.Description.ServiceDescriptionCollection.GetPortType()
+﻿// System.Web.Services.Description.ServiceDescriptionCollection.GetPortType()
 
 /* The following program demonstrates the 'GetPortType' method 
    of 'ServiceDescriptionCollection' class. It searches for a 

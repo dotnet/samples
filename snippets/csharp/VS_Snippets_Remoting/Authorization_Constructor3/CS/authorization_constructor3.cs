@@ -1,4 +1,4 @@
-// System.Net.Authorization.Authorization(string,bool,string)
+﻿// System.Net.Authorization.Authorization(string,bool,string)
 
 /* This program demonstrates the contructor 'Authorization(string,bool,string)' of the authorization 
  * class.

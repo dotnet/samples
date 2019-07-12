@@ -1,4 +1,4 @@
-/*System.Net.HttpWebRequest.AddRange(int,int)
+﻿/*System.Net.HttpWebRequest.AddRange(int,int)
 This program demonstrates 'AddRange(int)' method of 'HttpWebRequest class.
 A new 'HttpWebRequest' object is created.The number of characters of the response to be received can be 
 restricted by the 'AddRange' method.By calling 'AddRange(50,150)' on the 'HttpWebRequest' object the content 

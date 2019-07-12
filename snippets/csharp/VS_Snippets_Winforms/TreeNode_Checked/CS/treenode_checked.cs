@@ -1,4 +1,4 @@
-// System.Windows.Forms.TreeNode.Checked
+﻿// System.Windows.Forms.TreeNode.Checked
 // System.Windows.Forms.TreeNode.BackColor
 /*
    The following example demonstrates the properties 'Checked' and

@@ -1,4 +1,4 @@
-' System.Web.Services.Description.PortTypeCollection
+﻿' System.Web.Services.Description.PortTypeCollection
 
 '  The following sample demonstrates the class 'PortTypeCollection'. It reads the
 '  contents of  WSDL document 'MathService.wsdl'into a 'ServiceDescription' instance.

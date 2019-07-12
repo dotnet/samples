@@ -1,4 +1,4 @@
-' CustomLabelDesigner.vb
+﻿' CustomLabelDesigner.vb
 ' <snippet1>
 Imports System
 Imports System.Web

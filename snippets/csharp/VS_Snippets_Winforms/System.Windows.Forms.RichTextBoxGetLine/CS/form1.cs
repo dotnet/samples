@@ -1,4 +1,4 @@
-// The following example demonstrates using the 
+﻿// The following example demonstrates using the 
 // RichTextBox.GetLineFromCharIndex method.
 using System.Windows.Forms;
 

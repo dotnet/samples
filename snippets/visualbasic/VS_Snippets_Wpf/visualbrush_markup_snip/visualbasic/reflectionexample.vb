@@ -1,4 +1,4 @@
-' <SnippetGraphicsMMVisualBrushReflectionExampleWholePage>
+﻿' <SnippetGraphicsMMVisualBrushReflectionExampleWholePage>
 
 Imports System
 Imports System.Windows

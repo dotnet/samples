@@ -1,4 +1,4 @@
-'<snippet19>
+﻿'<snippet19>
 Imports System
 Imports System.Runtime.InteropServices
 

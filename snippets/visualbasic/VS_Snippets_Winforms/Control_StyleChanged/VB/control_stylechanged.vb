@@ -1,4 +1,4 @@
-' System.Windows.Forms.Control.StyleChanged
+﻿' System.Windows.Forms.Control.StyleChanged
 
 ' The following example demonstrates the 'StyleChanged' event
 ' of 'Control' class. This example has the style of the form

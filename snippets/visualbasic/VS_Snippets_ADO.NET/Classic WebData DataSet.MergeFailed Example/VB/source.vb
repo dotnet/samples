@@ -1,4 +1,4 @@
-Imports System
+﻿Imports System
 Imports System.Data
 
 public class Sample

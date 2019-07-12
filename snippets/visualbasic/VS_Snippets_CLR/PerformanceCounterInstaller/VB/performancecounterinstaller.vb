@@ -1,4 +1,4 @@
-' System.Diagnostics.PerformanceCounterInstaller
+﻿' System.Diagnostics.PerformanceCounterInstaller
 
 ' The following example demonstrates 'PerformanceCounterInstaller' class.
 ' A class is inherited from 'Installer' having 'RunInstallerAttribute' to true.

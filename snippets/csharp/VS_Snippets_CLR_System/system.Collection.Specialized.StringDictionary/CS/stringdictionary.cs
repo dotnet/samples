@@ -1,4 +1,4 @@
-// The following code example demonstrates several of the properties and methods of StringDictionary.
+﻿// The following code example demonstrates several of the properties and methods of StringDictionary.
 
 // <snippet1>
 using System;

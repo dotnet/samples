@@ -1,4 +1,4 @@
-// DocumentStructure SDK Sample - App.xaml.cs
+﻿// DocumentStructure SDK Sample - App.xaml.cs
 // Copyright (c) Microsoft Corporation. All rights reserved.
 
 using System;

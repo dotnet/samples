@@ -1,4 +1,4 @@
-/*
+﻿/*
    This program demonstrates the 'Copy' method of 'DnsPermission' class.
    It creates an identical copy of 'DnsPermission' instance.
 */

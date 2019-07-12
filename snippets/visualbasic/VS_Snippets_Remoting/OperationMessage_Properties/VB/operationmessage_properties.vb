@@ -1,4 +1,4 @@
-' System.Web.Services.Description.OperationMessage
+﻿' System.Web.Services.Description.OperationMessage
 ' System.Web.Services.Description.OperationMessage.OperationMessage
 ' System.Web.Services.Description.OperationMessage.Message
 ' System.Web.Services.Description.OperationMessage.Operation

@@ -1,4 +1,4 @@
-' CustomCompareValidatorDesigner.vb
+﻿' CustomCompareValidatorDesigner.vb
 '
 ' <snippet1>
 Imports System

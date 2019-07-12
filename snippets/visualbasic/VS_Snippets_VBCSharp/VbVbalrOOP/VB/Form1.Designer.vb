@@ -1,4 +1,4 @@
-Partial Public Class Form1
+﻿Partial Public Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.

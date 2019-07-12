@@ -1,4 +1,4 @@
-// System.Reflection.Emit.ConstructorBuilder.SetCustomAttribute(CustomAttributeBuilder)
+﻿// System.Reflection.Emit.ConstructorBuilder.SetCustomAttribute(CustomAttributeBuilder)
 /*
    The following program demonstrates the 'SetCustomAttribute(CustomAttributeBuilder)'
    method of 'ConstructorBuilder' class. It defines a 'MyAttribute' class which is derived

@@ -1,4 +1,4 @@
-//<Snippet34>
+﻿//<Snippet34>
 // A skeleton of a C# program 
 using System;
 namespace YourNamespace

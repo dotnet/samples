@@ -1,4 +1,4 @@
-// The following code example demonstrates the effect of changing the CurrencyGroupSeparator property.
+﻿// The following code example demonstrates the effect of changing the CurrencyGroupSeparator property.
 
 // <snippet1>
 using System;

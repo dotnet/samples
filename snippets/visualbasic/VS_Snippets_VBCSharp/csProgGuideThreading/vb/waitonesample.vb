@@ -1,4 +1,4 @@
-' Thread Synchronization
+﻿' Thread Synchronization
 ' 413e1f28a2c54eec8338aa43e7982ff4
 
 ' <Snippet16>

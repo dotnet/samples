@@ -1,4 +1,4 @@
-// System.Reflection.Emit.AssemblyBuilder.DefineResource(string, string, string)
+﻿// System.Reflection.Emit.AssemblyBuilder.DefineResource(string, string, string)
 // System.Reflection.Emit.AssemblyBuilder.DefineVersionInfoResource(string, string, string, string, string)
 
 /*

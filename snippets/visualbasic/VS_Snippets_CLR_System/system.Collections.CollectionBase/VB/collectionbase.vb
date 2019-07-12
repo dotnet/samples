@@ -1,4 +1,4 @@
-' The following code example implements the CollectionBase class and uses that implementation to create a collection of Int16 objects.
+﻿' The following code example implements the CollectionBase class and uses that implementation to create a collection of Int16 objects.
 
 ' <Snippet1>
 Imports System

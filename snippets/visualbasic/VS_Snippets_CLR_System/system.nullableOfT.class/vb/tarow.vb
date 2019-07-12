@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 Class Sample
     ' Define the "titleAuthor" table of the Microsoft "pubs" database. 
     Public Structure titleAuthor

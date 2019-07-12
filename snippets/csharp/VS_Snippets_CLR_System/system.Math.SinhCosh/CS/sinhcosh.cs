@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 // Example for the hyperbolic Math.Sinh( double ) 
 // and Math.Cosh( double ) methods.
 using System;

@@ -1,4 +1,4 @@
-Imports System.ComponentModel
+﻿Imports System.ComponentModel
 
 Namespace VisualBasic
     Partial Public Class MainWindow

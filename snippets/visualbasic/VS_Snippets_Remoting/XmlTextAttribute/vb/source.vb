@@ -1,4 +1,4 @@
-
+﻿
 Option Strict Off
 Option Explicit On
 Imports System.Xml.Serialization

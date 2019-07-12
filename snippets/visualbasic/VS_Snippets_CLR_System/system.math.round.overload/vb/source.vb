@@ -1,4 +1,4 @@
-' <Snippet3>
+﻿' <Snippet3>
 Public Module Example
    Sub Main()
       Console.WriteLine(Math.Round(3.44, 1)) 

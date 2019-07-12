@@ -1,4 +1,4 @@
-' <Snippet16>
+﻿' <Snippet16>
 Imports System.Globalization
 
 Public Module Example

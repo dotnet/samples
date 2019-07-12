@@ -1,4 +1,4 @@
-// System.Net.WebResponse.ResponseUri
+﻿// System.Net.WebResponse.ResponseUri
 /* This program demonstrates the 'ResponseUri' property of the 'WebResponse' class
 It creates a web request and queries for a response.It then compares the ResponseUri value to the actual Url 
 value to see if the original request was redirected*/

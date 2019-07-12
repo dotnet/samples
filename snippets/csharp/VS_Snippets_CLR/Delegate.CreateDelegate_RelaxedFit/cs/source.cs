@@ -1,4 +1,4 @@
-// REDMOD\glennha
+﻿// REDMOD\glennha
 // <Snippet1>
 using System;
 using System.Reflection;

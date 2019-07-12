@@ -1,4 +1,4 @@
-'Types:System.IO.ErrorEventHandler Vendor: Richter
+﻿'Types:System.IO.ErrorEventHandler Vendor: Richter
 'Types:System.IO.FileSystemEventArgs Vendor: Richter
 'Types:System.IO.FileSystemEventHandler Vendor: Richter
 'Types:System.IO.InternalBufferOverflowException Vendor: Richter

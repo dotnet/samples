@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
 using Microsoft.Win32;
 using System;
 using System.Security;

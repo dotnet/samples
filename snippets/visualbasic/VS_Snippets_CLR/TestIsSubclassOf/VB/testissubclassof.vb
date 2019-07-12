@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Public Class Class1
 End Class
 

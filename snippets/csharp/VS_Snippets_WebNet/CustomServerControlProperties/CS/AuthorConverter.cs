@@ -1,4 +1,4 @@
-// <Snippet5>
+﻿// <Snippet5>
 // AuthorConverter.cs
 using System;
 using System.ComponentModel;

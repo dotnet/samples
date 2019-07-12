@@ -1,4 +1,4 @@
-//<snippet0>
+﻿//<snippet0>
 using System.IO;
 using System.Collections.Generic;
 using System.Windows.Forms;

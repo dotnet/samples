@@ -1,4 +1,4 @@
-' File name: Program.vb
+﻿' File name: Program.vb
 ' Snippets  for Silverlight 2 RTM 
 ' Copyright (c) Microsoft Corporation.  All Rights Reserved.
 

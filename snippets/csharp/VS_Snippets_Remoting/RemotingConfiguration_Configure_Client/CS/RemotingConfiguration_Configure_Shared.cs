@@ -1,4 +1,4 @@
-// This is the implementation class for the remote object.
+﻿// This is the implementation class for the remote object.
 
 using System;
 

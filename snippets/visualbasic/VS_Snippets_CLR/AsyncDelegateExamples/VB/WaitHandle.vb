@@ -1,4 +1,4 @@
-' <Snippet3>
+﻿' <Snippet3>
 Imports System
 Imports System.Threading
 Imports System.Runtime.InteropServices 

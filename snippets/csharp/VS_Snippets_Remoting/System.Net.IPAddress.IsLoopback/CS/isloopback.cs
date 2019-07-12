@@ -1,4 +1,4 @@
-/*
+﻿/*
    This program checks whether the specified address is a loopback address.  
    It invokes the IPAddress Parse method to translate the address 
    input string into the correct internal format.

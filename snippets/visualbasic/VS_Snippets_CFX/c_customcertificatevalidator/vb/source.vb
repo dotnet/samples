@@ -1,4 +1,4 @@
- '<snippet3>
+﻿ '<snippet3>
 Imports System
 Imports System.IdentityModel.Selectors
 Imports System.Security.Cryptography.X509Certificates

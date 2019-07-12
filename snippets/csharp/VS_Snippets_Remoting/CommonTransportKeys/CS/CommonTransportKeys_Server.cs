@@ -1,4 +1,4 @@
-/*
+﻿/*
    Supporting file: Server
 */
 using System;

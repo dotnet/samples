@@ -1,4 +1,4 @@
-' Snippet for System.ServiceModel.EnvelopeVersion
+﻿' Snippet for System.ServiceModel.EnvelopeVersion
 ' <Snippet0>
 
 

@@ -1,4 +1,4 @@
-'   System.Net.WebPermission.WebPermission(NetworkAccess,Regex);
+﻿'   System.Net.WebPermission.WebPermission(NetworkAccess,Regex);
 
 '   This program demonstrates the  'WebPermission(NetworkAccess,Regex)' constructor of 'WebPermission' class.
 '   First  a 'Regex' object is created that will accept all the urls which is having the hostfragment of

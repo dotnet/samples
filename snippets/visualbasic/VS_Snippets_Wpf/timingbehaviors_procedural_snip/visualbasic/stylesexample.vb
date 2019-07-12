@@ -1,4 +1,4 @@
-'
+﻿'
 '  StylesExample.vb
 '     This example shows how to create storyboards in a style.
 '

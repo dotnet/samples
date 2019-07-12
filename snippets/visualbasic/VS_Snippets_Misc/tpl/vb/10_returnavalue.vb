@@ -1,4 +1,4 @@
-Option Strict On
+﻿Option Strict On
 
 ' <snippet10>
 Imports System.Threading.Tasks

@@ -1,4 +1,4 @@
-' This snippet shows the use of some TreeView properties.
+﻿' This snippet shows the use of some TreeView properties.
 Imports System.Windows.Forms
 
 Public Class Form1

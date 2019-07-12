@@ -1,4 +1,4 @@
-// System.web.Services.Discovery.DiscoveryClientProtocol.Errors
+﻿// System.web.Services.Discovery.DiscoveryClientProtocol.Errors
 /*
    The following example demonstrates the usage of the 'Errors' property
    of the class 'DiscoveryClientProtocol'. The input to the program is

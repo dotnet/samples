@@ -1,4 +1,4 @@
-Option Strict On
+﻿Option Strict On
 Option Explicit On
 
 Class Class14501703298f4d43b139c4b6366af176

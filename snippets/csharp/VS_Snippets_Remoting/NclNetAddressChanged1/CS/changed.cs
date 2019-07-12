@@ -1,4 +1,4 @@
-// <snippet1>
+﻿// <snippet1>
 using System;
 using System.Net;
 using System.Net.NetworkInformation;

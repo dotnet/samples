@@ -1,4 +1,4 @@
-// <Snippet10>
+﻿// <Snippet10>
 using System;
 using System.IO;
 using System.Runtime.Versioning;

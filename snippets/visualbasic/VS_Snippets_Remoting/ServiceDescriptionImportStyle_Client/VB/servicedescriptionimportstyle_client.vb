@@ -1,4 +1,4 @@
-' System.Web.Services.Description.ServiceDescriptionImportStyle
+﻿' System.Web.Services.Description.ServiceDescriptionImportStyle
 ' System.Web.Services.Description.ServiceDescriptionImportStyle.Client
 
 '   The following program demonstrates the 'ServiceDescriptionImportStyle'

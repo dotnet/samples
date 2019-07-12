@@ -1,4 +1,4 @@
-
+﻿
 ' dump a range of Unicode characters as a 16x16 array
 ' <Snippet4>
 Imports System

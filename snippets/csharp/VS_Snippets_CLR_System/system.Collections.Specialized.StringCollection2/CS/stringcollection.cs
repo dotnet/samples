@@ -1,4 +1,4 @@
-// The following code example demonstrates several of the properties and methods of StringCollection.
+﻿// The following code example demonstrates several of the properties and methods of StringCollection.
 
 // <snippet1>
 using System;

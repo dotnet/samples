@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 // Note: You must compile this file using the C# /unsafe switch.
 using System;
 using System.IO;

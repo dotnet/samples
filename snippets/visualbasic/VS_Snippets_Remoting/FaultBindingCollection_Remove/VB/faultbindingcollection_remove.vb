@@ -1,4 +1,4 @@
-
+﻿
 ' * The following example demonstrates the 'Remove', 'CopyTo', 'Insert', 'Contains', 
 ' * 'IndexOf' method and 'Item[int]' property of FaultBindingCollection class
 ' * 

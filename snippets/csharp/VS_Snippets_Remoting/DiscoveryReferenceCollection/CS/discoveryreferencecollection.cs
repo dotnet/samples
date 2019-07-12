@@ -1,4 +1,4 @@
-// System.Web.Services.Discovery.DiscoveryReferenceCollection.DiscoveryReferenceCollection
+﻿// System.Web.Services.Discovery.DiscoveryReferenceCollection.DiscoveryReferenceCollection
 // System.Web.Services.Discovery.DiscoveryReferenceCollection.Add(DiscoveryReference)
 // System.Web.Services.Discovery.DiscoveryReferenceCollection.Contains(DiscoveryReference)
 // System.Web.Services.Discovery.DiscoveryReferenceCollection.Item(int)

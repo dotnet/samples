@@ -1,4 +1,4 @@
-using System.Net;
+﻿using System.Net;
 //  Copyright (c) Microsoft Corporation.  All Rights Reserved.
 //<snippet11>
 using System;

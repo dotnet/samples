@@ -1,4 +1,4 @@
-'<Snippet3>
+﻿'<Snippet3>
 Public Class SpecialFeaturesConverter
     Implements IMultiValueConverter
 

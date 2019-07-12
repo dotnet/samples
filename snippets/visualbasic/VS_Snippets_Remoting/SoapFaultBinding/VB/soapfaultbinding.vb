@@ -1,4 +1,4 @@
-' System.Web.Services.Description.SoapFaultBinding
+﻿' System.Web.Services.Description.SoapFaultBinding
 
 ' The following example demonstrates 'SoapFaultBinding' class. 
 ' It creates an instance of 'ServiceDescription' class by reading  an existing 

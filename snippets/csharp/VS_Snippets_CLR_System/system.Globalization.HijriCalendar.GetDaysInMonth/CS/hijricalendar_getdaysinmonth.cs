@@ -1,4 +1,4 @@
-// The following code example calls GetDaysInMonth for the twelfth month in each of 5 years in each era.
+﻿// The following code example calls GetDaysInMonth for the twelfth month in each of 5 years in each era.
 
 // <snippet1>
 using System;

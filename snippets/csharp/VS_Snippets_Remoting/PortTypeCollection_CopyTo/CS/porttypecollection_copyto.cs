@@ -1,4 +1,4 @@
-// System.Web.Services.Description.PortTypeCollection.CopyTo()
+﻿// System.Web.Services.Description.PortTypeCollection.CopyTo()
 
 /*
   The following sample demonstrates the 'CopyTo()' method of the class

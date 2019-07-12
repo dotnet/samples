@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 Imports System.Console
 Module Module1
    Public Sub DisplayProducts(ByVal table As DataTable)

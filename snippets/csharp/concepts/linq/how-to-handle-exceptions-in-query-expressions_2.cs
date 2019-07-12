@@ -1,4 +1,4 @@
-    class QueryThatThrows
+﻿    class QueryThatThrows
     {
         static void Main()
         {

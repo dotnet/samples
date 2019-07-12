@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Module Example
     Sub Main()
         ' Create and display a TimeSpan value of 1 tick.

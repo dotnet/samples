@@ -1,4 +1,4 @@
-' <SnippetGraphicsMMFrameworkElementStoryboardHandoffBehaviorExample>
+﻿' <SnippetGraphicsMMFrameworkElementStoryboardHandoffBehaviorExample>
 '
 '
 '   This sample animates the position of an ellipse when 

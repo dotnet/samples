@@ -1,4 +1,4 @@
-'<SnippetHomePageCODEBEHIND>
+﻿'<SnippetHomePageCODEBEHIND>
 
 Namespace SDKSample
 	Partial Public Class HomePage

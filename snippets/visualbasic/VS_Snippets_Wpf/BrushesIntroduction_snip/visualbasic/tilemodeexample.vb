@@ -1,4 +1,4 @@
-' <SnippetGraphicsMMDrawingBrushTileModeExample>
+﻿' <SnippetGraphicsMMDrawingBrushTileModeExample>
 
 Imports Microsoft.VisualBasic
 Imports System

@@ -1,4 +1,4 @@
-' Visual Basic .NET Document
+﻿' Visual Basic .NET Document
 '
 ' Note that code is VS TimeSpan project directory has debugging information.
 

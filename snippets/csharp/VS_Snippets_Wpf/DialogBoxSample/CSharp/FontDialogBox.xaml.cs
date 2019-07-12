@@ -1,4 +1,4 @@
-namespace SDKSample
+﻿namespace SDKSample
 {
     using System;
     using System.Collections;

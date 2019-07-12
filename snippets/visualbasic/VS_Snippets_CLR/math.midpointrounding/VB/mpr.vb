@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 ' This example demonstrates the Math.Round() method in conjunction 
 ' with the MidpointRounding enumeration.
 Imports System

@@ -1,4 +1,4 @@
-Module Example
+﻿Module Example
    Public Sub Main()
       Dim value As String 
       Dim toDelete As Boolean = False

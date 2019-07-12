@@ -1,4 +1,4 @@
-Imports System.Web
+﻿Imports System.Web
 Imports System.Security.Permissions
 
 Namespace Samples.AspNet.VB.Controls

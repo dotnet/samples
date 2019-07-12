@@ -1,4 +1,4 @@
-//<Snippet1>
+﻿//<Snippet1>
 #define TRACE
 #define ConfigFile
 // The following configuration file can be used with this sample.

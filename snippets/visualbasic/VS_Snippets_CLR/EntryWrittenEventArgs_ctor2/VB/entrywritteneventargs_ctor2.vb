@@ -1,4 +1,4 @@
-' System.Diagnostics.EntryWrittenEventArgs.ctor(EventLogEntry)
+﻿' System.Diagnostics.EntryWrittenEventArgs.ctor(EventLogEntry)
 ' System.Diagnostics.EntryWrittenEventArgs.Entry
 
 ' The following example demonstrates the 'Entry' property and

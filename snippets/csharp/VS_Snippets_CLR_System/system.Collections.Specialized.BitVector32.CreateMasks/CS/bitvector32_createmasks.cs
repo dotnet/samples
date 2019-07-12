@@ -1,4 +1,4 @@
-// The following code example shows how to create and use masks.
+﻿// The following code example shows how to create and use masks.
 
 
 // <snippet1>

@@ -1,4 +1,4 @@
-' System.Diagnostics.ProcessModule
+﻿' System.Diagnostics.ProcessModule
 
 ' The following program demonstrates the use of 'ProcessModule' class. 
 ' It creates a notepad, gets the 'MainModule' and all other modules of 

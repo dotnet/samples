@@ -1,4 +1,4 @@
-/*
+﻿/*
    System.Web.Services.Discovery.DiscoveryClientDocumentCollection
 
    The following example demonstrates the class 'DiscoveryClientDocumentCollection'.

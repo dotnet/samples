@@ -1,4 +1,4 @@
-Module Example
+﻿Module Example
    Public Sub Main()
       Dim original As Double = 0.84551240822557006
       Dim rSpecifier = original.ToString("R")

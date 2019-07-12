@@ -1,4 +1,4 @@
-// System.Windows.Forms.DataGridTableStyle.MappingNameChanged;
+﻿// System.Windows.Forms.DataGridTableStyle.MappingNameChanged;
 // System.Windows.Forms.DataGridTableStyle.GridLineStyleChanged;
 
 /* The following example demonstrates the events 

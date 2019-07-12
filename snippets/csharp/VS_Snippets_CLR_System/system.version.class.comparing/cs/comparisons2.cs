@@ -1,4 +1,4 @@
-// <Snippet2>
+﻿// <Snippet2>
 using System;
 
 enum VersionTime {Earlier = -1, Same = 0, Later = 1 };

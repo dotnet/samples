@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 ' IndexButton.vb
 Option Strict On
 Imports System

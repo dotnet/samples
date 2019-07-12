@@ -1,4 +1,4 @@
-' Topic: How to: Access XML Attributes (Visual Basic)
+﻿' Topic: How to: Access XML Attributes (Visual Basic)
 '<Snippet14>  
 Imports <xmlns:ns = "http://SomeNamespace"> 
  

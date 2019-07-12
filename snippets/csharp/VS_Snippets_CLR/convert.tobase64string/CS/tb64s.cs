@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 // This example demonstrates the Convert.ToBase64String() and 
 //                               Convert.FromBase64String() methods
 

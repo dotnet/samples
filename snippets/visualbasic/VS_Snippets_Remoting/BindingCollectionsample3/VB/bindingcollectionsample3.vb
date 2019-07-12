@@ -1,4 +1,4 @@
-' System.Web.Services.Description.BindingCollection;System.Web.Services.Description.Remove;System.Web.Services.Description.Add;
+﻿' System.Web.Services.Description.BindingCollection;System.Web.Services.Description.Remove;System.Web.Services.Description.Add;
 ' System.Web.Services.Description.Contains;System.Web.Services.Description.IndexOf
 
 ' The following example reads the contents of a file 'MathService.wsdl' into a ServiceDescription instance.

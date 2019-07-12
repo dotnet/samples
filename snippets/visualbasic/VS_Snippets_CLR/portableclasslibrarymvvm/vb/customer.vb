@@ -1,4 +1,4 @@
-' <snippet1>
+﻿' <snippet1>
 Namespace SimpleMVVM.Model
 
     Public Class Customer

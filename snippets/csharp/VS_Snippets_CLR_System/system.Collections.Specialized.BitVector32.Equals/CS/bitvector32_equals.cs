@@ -1,4 +1,4 @@
-// The following code example compares a BitVector32 with another BitVector32 and with an Int32.
+﻿// The following code example compares a BitVector32 with another BitVector32 and with an Int32.
 
 
 // <snippet1>

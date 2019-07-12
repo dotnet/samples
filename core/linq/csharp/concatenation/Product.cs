@@ -1,4 +1,4 @@
-namespace Concatenation
+﻿namespace Concatenation
 {
     public class Product
     {

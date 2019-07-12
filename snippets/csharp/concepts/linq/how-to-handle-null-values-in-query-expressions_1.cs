@@ -1,4 +1,4 @@
-                    var query1 =
+﻿                    var query1 =
                         from c in categories
                         where c != null
                         join p in products on c.ID equals

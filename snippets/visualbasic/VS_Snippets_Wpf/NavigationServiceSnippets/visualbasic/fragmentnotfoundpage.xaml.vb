@@ -1,4 +1,4 @@
-Namespace NavigationServiceSnippetSample_VisualBasic
+﻿Namespace NavigationServiceSnippetSample_VisualBasic
     ''' <summary>
     ''' Interaction logic for FragmentNotFoundPage.xaml
     ''' </summary>

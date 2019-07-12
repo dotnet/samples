@@ -1,4 +1,4 @@
-'   System.Configuration.Install.Installer.Uninstall
+﻿'   System.Configuration.Install.Installer.Uninstall
 
 '   The following example demonstrates the Uninstall method 
 '   of the class 'installer'. The method Uninstall is overridden

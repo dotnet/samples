@@ -1,4 +1,4 @@
-//<SnippetWindowRestoreBoundsCODEBEHIND1>
+﻿//<SnippetWindowRestoreBoundsCODEBEHIND1>
 using System;
 using System.ComponentModel;
 using System.IO;

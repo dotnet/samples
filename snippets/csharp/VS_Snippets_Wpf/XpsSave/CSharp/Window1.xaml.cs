@@ -1,4 +1,4 @@
-// XpsSyncAsyncSave SDK Sample - Window1.xaml.cs
+﻿// XpsSyncAsyncSave SDK Sample - Window1.xaml.cs
 // Copyright (c) Microsoft Corporation. All rights reserved.
 
 using System;

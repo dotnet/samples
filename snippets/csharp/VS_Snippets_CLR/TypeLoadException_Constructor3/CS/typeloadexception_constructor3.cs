@@ -1,4 +1,4 @@
-// System.TypeLoadException.TypeLoadException
+﻿// System.TypeLoadException.TypeLoadException
 
 /* This program demonstrates the 'TypeLoadException(string,Exception)'
    constructor of 'TypeLoadException' class. It attempts to call a 

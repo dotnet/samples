@@ -1,4 +1,4 @@
-// The following code example shows the results of CreateSpecificCulture with different culture types.
+﻿// The following code example shows the results of CreateSpecificCulture with different culture types.
 
 // <snippet1>
 using System;

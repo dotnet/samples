@@ -1,4 +1,4 @@
-'<Snippet2>
+﻿'<Snippet2>
 ' Add Option Strict Off to the top of your program.
 Option Strict Off
 '</Snippet2>

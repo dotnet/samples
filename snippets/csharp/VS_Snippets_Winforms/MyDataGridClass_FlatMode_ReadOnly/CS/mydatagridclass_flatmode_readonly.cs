@@ -1,4 +1,4 @@
-// System.Windows.Forms.DataGrid.ReadOnlyChanged
+﻿// System.Windows.Forms.DataGrid.ReadOnlyChanged
 // System.Windows.Forms.DataGrid.FlatModeChanged
 
 /* The following program demonstrates the methods 'ReadOnlyChanged' and 

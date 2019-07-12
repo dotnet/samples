@@ -1,4 +1,4 @@
-// <snippet6>
+﻿// <snippet6>
 using System;
 using System.Security.Permissions;
 using System.Web;

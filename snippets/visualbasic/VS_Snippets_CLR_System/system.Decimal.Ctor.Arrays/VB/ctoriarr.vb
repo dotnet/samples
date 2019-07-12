@@ -1,4 +1,4 @@
-'<Snippet1>
+﻿'<Snippet1>
 ' Example of the Decimal( Integer( ) ) constructor.
 Imports System
 Imports Microsoft.VisualBasic

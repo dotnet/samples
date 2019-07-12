@@ -1,4 +1,4 @@
-            class HowToOrderJoins
+﻿            class HowToOrderJoins
             {
                 #region Data
                 class Product

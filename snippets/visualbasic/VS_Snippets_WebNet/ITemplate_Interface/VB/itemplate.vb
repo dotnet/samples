@@ -1,4 +1,4 @@
-' <snippet1>
+﻿' <snippet1>
 ' Create a class that implements the ITemplate interface.
 ' This class overrides the InstantiateIn method to always
 ' place templates in a Literal object. It also creates a 

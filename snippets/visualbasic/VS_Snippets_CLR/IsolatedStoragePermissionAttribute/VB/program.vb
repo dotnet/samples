@@ -1,4 +1,4 @@
-'Types:System.Security.Permissions.IsolatedStorageContainment (enum)  Vendor: Richter
+﻿'Types:System.Security.Permissions.IsolatedStorageContainment (enum)  Vendor: Richter
 'Types:System.Security.Permissions.IsolatedStoragePermissionAttribute  Vendor: Richter
 'Types:System.Security.Permissions.SecurityAction  Vendor: Richter
 '<snippet1>

@@ -1,4 +1,4 @@
-//<Snippet00>
+﻿//<Snippet00>
 //<Snippet01>
 using System;
 using System.Drawing;

@@ -1,4 +1,4 @@
-
+﻿
 
 // The following code example handles the ListView.BeforeLabelEdit event
 // and demonstrates the EditLabelEventArgs.Item and CancelEdit properties. 

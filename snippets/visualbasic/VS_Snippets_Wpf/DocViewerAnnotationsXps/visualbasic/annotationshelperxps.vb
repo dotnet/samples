@@ -1,4 +1,4 @@
-' DocViewerAnnotationsXps SDK Sample - AnnotationsHelperXps.vb
+﻿' DocViewerAnnotationsXps SDK Sample - AnnotationsHelperXps.vb
 ' Copyright (c) Microsoft Corporation. All rights reserved.
 
 Imports System.Text

@@ -1,4 +1,4 @@
-' System.Runtime.Remoting.Lifetime.ClientSponsor.Register(MarshalByRefObject)
+﻿' System.Runtime.Remoting.Lifetime.ClientSponsor.Register(MarshalByRefObject)
 ' System.Runtime.Remoting.Lifetime.ClientSponsor.Unregister(MarshalByRefObject)
 ' System.Runtime.Remoting.Lifetime.ClientSponsor.RenewalTime
 ' System.Runtime.Remoting.Lifetime.ClientSponsor.InitializeLifetimeService()

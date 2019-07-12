@@ -1,4 +1,4 @@
-' <snippet1>
+﻿' <snippet1>
 Imports System.IO.Compression
 
 Module Module1

@@ -1,4 +1,4 @@
-//How to: Cancel by Registering a Callback
+﻿//How to: Cancel by Registering a Callback
 //<snippet8>
 using System;
 using System.Net;

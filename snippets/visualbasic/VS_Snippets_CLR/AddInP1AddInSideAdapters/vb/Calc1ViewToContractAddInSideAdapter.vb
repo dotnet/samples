@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Imports System.AddIn.Pipeline
 Imports Calc1AddInView.CalcAddInViews
 Imports Calc1Contract.CalculatorContracts

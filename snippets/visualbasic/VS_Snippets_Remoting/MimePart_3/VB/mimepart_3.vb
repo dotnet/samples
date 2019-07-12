@@ -1,4 +1,4 @@
-' System.Web.Services.Description.MimePart
+﻿' System.Web.Services.Description.MimePart
 ' System.Web.Services.Description.MimePart.ctor()
 ' System.Web.Services.Description.MimePart.Extensions
 

@@ -1,4 +1,4 @@
-Namespace My
+﻿Namespace My
 
   Public Class Sample1
     Public Sub Main()

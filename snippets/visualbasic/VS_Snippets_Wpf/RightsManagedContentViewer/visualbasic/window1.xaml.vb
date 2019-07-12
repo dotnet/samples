@@ -1,4 +1,4 @@
-' RightsManagedContentViewer Sample - Window1.xaml.vb
+﻿' RightsManagedContentViewer Sample - Window1.xaml.vb
 ' Copyright (c) Microsoft Corporation. All rights reserved.
 
 

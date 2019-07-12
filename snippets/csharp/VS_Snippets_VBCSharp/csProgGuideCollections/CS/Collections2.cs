@@ -1,4 +1,4 @@
-namespace WrapTokens
+﻿namespace WrapTokens
 {
 
 //<Snippet2>

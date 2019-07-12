@@ -1,4 +1,4 @@
-// <SnippetSeekStoryboardCodeBehindExampleWholePage>
+﻿// <SnippetSeekStoryboardCodeBehindExampleWholePage>
 using System;
 using System.Media;
 using System.Windows;

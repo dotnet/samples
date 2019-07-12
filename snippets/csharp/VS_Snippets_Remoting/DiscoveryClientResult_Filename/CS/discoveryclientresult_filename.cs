@@ -1,4 +1,4 @@
-// System.Web.Services.Discovery.DiscoveryClientResultCollection.Remove
+﻿// System.Web.Services.Discovery.DiscoveryClientResultCollection.Remove
 // System.Web.Services.Discovery.DiscoveryClientResult()
 // System.Web.Services.Discovery.DiscoveryClientResult.ReferenceTypeName
 // System.Web.Services.Discovery.DiscoveryClientResult.Url

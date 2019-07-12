@@ -1,4 +1,4 @@
-' System.Web.Services.Discovery.DiscoveryDocumentReference
+﻿' System.Web.Services.Discovery.DiscoveryDocumentReference
 ' System.Web.Services.Discovery.DiscoveryDocumentReference.DiscoveryDocumentReference()
 ' System.Web.Services.Discovery.DiscoveryDocumentReference.WriteDocument(object, Stream)
 

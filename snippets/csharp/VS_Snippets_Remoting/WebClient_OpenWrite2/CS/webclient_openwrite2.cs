@@ -1,4 +1,4 @@
-// System.Net.WebClient.OpenWrite(String)
+﻿// System.Net.WebClient.OpenWrite(String)
 /*
 This program demonstrates the 'OpenWrite(String)' method of "WebClient" class.
 It accepts an Uri and some string content to be posted to the Uri. The

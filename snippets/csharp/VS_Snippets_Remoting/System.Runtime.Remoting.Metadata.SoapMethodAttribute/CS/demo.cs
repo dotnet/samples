@@ -1,4 +1,4 @@
-/// Class: System.Runtime.Remoting.Metadata.SoapMethodAttribute
+﻿/// Class: System.Runtime.Remoting.Metadata.SoapMethodAttribute
 ///    100    class
 ///    110    ResponseXmlElementName
 ///    110    ResponseXmlNamespace

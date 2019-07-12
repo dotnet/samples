@@ -1,4 +1,4 @@
-' File name: CustomSection.cs
+﻿' File name: CustomSection.cs
 ' Allowed snippet tags range: [71 - 90].
 
 '<Snippet71>

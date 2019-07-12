@@ -1,4 +1,4 @@
-' System.Web.Services.Protocols.LogicalMethodInfo.Create(MethodInfo[], LogicalMethodTypes)
+﻿' System.Web.Services.Protocols.LogicalMethodInfo.Create(MethodInfo[], LogicalMethodTypes)
 ' System.Web.Services.Protocols.LogicalMethodInfo.AsyncCallbackParameter
 ' System.Web.Services.Protocols.LogicalMethodInfo.AsyncStateParameter
 ' System.Web.Services.Protocols.LogicalMethodInfo.AsyncResultParameter

@@ -1,4 +1,4 @@
-' CustomXhtmlTextWriter.vb
+﻿' CustomXhtmlTextWriter.vb
 '
 ' <snippet1>
 Imports System

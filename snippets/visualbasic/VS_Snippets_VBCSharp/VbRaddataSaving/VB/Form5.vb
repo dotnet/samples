@@ -1,4 +1,4 @@
-Public Class Form5
+﻿Public Class Form5
 
     '--------------------------------------------------------------------------
     Sub OtherSnips()

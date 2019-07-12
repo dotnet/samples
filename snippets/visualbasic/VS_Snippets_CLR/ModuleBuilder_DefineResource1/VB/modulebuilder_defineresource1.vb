@@ -1,4 +1,4 @@
-' System.Reflection.Emit.ModuleBuilder.DefineResource(String,String)
+﻿' System.Reflection.Emit.ModuleBuilder.DefineResource(String,String)
 
 ' The following example demonstrates the 'DefineResource(String,String)' method
 ' of 'ModuleBuilder' class.

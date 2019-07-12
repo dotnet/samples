@@ -1,4 +1,4 @@
-'<SnippetWindowMenuItemCODE>
+﻿'<SnippetWindowMenuItemCODE>
 
 Imports Microsoft.VisualBasic
 Imports System

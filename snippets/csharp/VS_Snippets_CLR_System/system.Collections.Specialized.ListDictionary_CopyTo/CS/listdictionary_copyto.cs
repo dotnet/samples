@@ -1,4 +1,4 @@
-// The following code example copies the elements of a ListDictionary to an array.
+﻿// The following code example copies the elements of a ListDictionary to an array.
 
 // <snippet1>
 using System;

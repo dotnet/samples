@@ -1,4 +1,4 @@
-Namespace HOWTOWindowManagementSnippets
+﻿Namespace HOWTOWindowManagementSnippets
 	Partial Public Class CustomWindow
 		Inherits Window
 		Public Sub New()

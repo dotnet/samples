@@ -1,4 +1,4 @@
-/* 
+﻿/* 
    System.Uri.IsHexDigit
    
 	The following program reads a string from console and determines whether the

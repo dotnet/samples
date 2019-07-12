@@ -1,4 +1,4 @@
-' <snippet1>
+﻿' <snippet1>
 Imports System.Web.UI
 
 Namespace Samples.AspNet.VB

@@ -1,4 +1,4 @@
-Imports System.Configuration
+﻿Imports System.Configuration
 Imports System.Xml
 
 Public Class SampleConfigurationBuilder : Inherits ConfigurationBuilder

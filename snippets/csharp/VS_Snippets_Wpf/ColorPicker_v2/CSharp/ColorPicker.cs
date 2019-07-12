@@ -1,4 +1,4 @@
-//
+﻿//
 // ColorPicker.cs 
 // An HSB (hue, saturation, brightness) based
 // color picker.

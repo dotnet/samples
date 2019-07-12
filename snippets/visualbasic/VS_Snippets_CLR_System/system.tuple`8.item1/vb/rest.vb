@@ -1,4 +1,4 @@
-'Option Strict On
+﻿'Option Strict On
 Option Infer On
 
 ' <Snippet2>

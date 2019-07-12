@@ -1,4 +1,4 @@
-'   The following program demonstrates the 'CreateHtmlTextWriter' method and constructor of 'Page' class. 
+﻿'   The following program demonstrates the 'CreateHtmlTextWriter' method and constructor of 'Page' class. 
 '  
 '   This program creates a custom 'TextWriter' derived from 'HtmlTextWriter' called 
 '   'MyHtmlTextWriter'. The 'CreateHtmlTextWriter' method is overriden in the 'MyPage' 

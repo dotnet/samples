@@ -1,4 +1,4 @@
- '
+﻿ '
  'File Name: tagPrefixAttribute'
  'Purpose: Show the use ot the TagPrefixAttribute class to define an assembly-level attribute that enables a control '
  'developer to specify a tag prefix alias for her custom controls. This attribute is used by tool such as Visual Studio.NET '

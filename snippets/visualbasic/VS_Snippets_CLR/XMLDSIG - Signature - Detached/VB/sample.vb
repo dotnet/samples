@@ -1,4 +1,4 @@
-'<SNIPPET1>
+﻿'<SNIPPET1>
 ' This example signs a URL using an
 ' envelope signature. It then verifies the 
 ' signed XML.

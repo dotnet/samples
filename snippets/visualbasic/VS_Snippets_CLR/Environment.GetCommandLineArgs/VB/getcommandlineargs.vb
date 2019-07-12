@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 Class Sample
    Public Shared Sub Main()
       Console.WriteLine()

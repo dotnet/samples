@@ -1,4 +1,4 @@
-namespace UIAProvider
+﻿namespace UIAProvider
 {
     partial class Form1
     {

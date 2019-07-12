@@ -1,4 +1,4 @@
-Imports System.Collections.ObjectModel
+﻿Imports System.Collections.ObjectModel
 
 Partial Public Class DataBindingLabApp
     Inherits Application

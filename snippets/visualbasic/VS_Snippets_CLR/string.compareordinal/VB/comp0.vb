@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 ' Sample for String.CompareOrdinal(String, String)
 Imports System
 Imports Microsoft.VisualBasic

@@ -1,4 +1,4 @@
-/// Class: System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDate
+﻿/// Class: System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDate
 ///    10    class 
 ///    21    #ctor()
 ///    22    #ctor(DateTime)

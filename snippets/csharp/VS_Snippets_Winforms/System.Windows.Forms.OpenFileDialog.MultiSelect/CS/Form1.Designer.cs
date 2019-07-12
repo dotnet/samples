@@ -1,4 +1,4 @@
-namespace TestOpenFileDialogMultiSelect
+﻿namespace TestOpenFileDialogMultiSelect
 {
     partial class Form1
     {

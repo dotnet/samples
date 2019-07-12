@@ -1,4 +1,4 @@
-' <SnippetDrawingBrushExampleWholePage>
+﻿' <SnippetDrawingBrushExampleWholePage>
 
 Imports System.Windows.Media.Animation
 

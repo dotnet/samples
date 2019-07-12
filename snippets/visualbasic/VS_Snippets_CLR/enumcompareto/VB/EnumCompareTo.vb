@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 Public Class CompareToTest
     Enum VehicleDoors
         Motorbike = 0

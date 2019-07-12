@@ -1,4 +1,4 @@
-// This sample demonstrates how to use each member of the StringBuilder class.
+﻿// This sample demonstrates how to use each member of the StringBuilder class.
 //<Snippet2>
 using System;
 using System.Text;

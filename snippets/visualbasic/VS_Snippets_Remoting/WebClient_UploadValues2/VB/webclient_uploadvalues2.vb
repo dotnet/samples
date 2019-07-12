@@ -1,4 +1,4 @@
-' System.Net.WebClient.UploadValues(String,String,NameValueCollection)
+﻿' System.Net.WebClient.UploadValues(String,String,NameValueCollection)
 
 'This program demonstrates the 'UploadValues(String,String,NameValueCollection)' method of "WebClient" class.
 'It accepts an Uri.Forms a 'NameValueCollection' instance using 

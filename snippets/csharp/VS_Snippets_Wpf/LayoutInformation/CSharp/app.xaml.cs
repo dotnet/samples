@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Windows;
 
 namespace layout_information

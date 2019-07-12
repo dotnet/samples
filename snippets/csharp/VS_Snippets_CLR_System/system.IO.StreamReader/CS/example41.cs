@@ -1,4 +1,4 @@
-// <Snippet41>
+﻿// <Snippet41>
 using System;
 using System.IO;
 

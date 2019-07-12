@@ -1,4 +1,4 @@
-' <Snippet_graphicsmm_StateEventHandlers>
+﻿' <Snippet_graphicsmm_StateEventHandlers>
 
 Imports System
 Imports System.Windows

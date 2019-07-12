@@ -1,4 +1,4 @@
-// System.Runtime.Remoting.Messaging.IMethodMessage.LogicalCallContext
+﻿// System.Runtime.Remoting.Messaging.IMethodMessage.LogicalCallContext
 // System.Runtime.Remoting.Messaging.IMethodMessage.Uri
 
 /*

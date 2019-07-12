@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 // Sample for String.Intern(String)
 using System;
 using System.Text;

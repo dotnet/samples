@@ -1,4 +1,4 @@
-' Example for Task.Run(Action) method
+﻿' Example for Task.Run(Action) method
 Option Strict On
 
 ' <Snippet1>

@@ -1,4 +1,4 @@
-// System.ArrayTypeMismatchException.ArrayTypeMismatchException
+﻿// System.ArrayTypeMismatchException.ArrayTypeMismatchException
 
 /*
    The following example demonstrates the 'ArrayTypeMismatchException(string)' 

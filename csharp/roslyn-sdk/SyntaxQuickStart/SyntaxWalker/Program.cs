@@ -1,4 +1,4 @@
-using static System.Console;
+﻿using static System.Console;
 
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;

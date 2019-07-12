@@ -1,4 +1,4 @@
-' <Snippet1> 
+﻿' <Snippet1> 
 Module Example
    Public Sub Main()
       Dim sentence As New Sentence("A time to see the world is now.")

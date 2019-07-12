@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
 // Specify /d:TRACE when compiling.
 
 using System;

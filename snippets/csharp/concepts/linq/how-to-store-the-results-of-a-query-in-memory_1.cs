@@ -1,4 +1,4 @@
-    class StoreQueryResults
+﻿    class StoreQueryResults
     {
         static List<int> numbers = new List<int>() { 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 };
         static void Main()

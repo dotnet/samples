@@ -1,4 +1,4 @@
-// <Snippet201> 
+﻿// <Snippet201> 
 using System;
 using System.Windows.Automation;
 using System.Windows.Automation.Provider;

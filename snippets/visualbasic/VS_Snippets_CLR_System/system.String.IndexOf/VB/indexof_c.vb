@@ -1,4 +1,4 @@
-Option Strict On 
+﻿Option Strict On 
 
 ' <Snippet5>
 Public Module Example

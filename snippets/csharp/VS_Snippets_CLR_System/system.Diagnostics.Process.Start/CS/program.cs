@@ -1,4 +1,4 @@
-//<Snippet1>
+﻿//<Snippet1>
 // NOTE: This example requires a text.txt file file in your Documents folder
 using System;
 using System.Diagnostics;

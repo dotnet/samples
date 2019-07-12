@@ -1,4 +1,4 @@
-' System.Web.Services.Protocols.LogicalMethodInfo.IsBeginMethod(MethodInfo) 
+﻿' System.Web.Services.Protocols.LogicalMethodInfo.IsBeginMethod(MethodInfo) 
 ' System.Web.Services.Protocols.LogicalMethodInfo.IsEndMethod(MethodInfo)
 
 'The following example demonstrates 'IsBeginMethod' and 'IsEndMethod' methods of 'System.Web.Services.Protocols.LogicalMethodInfo' class. The type information of methods of Math web service is taken in a varible of type MethodInfo. Then 'IsBeginMethod' and 'IsEndMethod' is used to query on created MethodInfo variable to find whether the method is begin and end method for asynchronous invocation or not.

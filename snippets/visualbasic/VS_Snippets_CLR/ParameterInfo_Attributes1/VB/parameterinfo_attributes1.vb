@@ -1,4 +1,4 @@
- ' System.Reflection.ParameterInfo.Attributes
+﻿ ' System.Reflection.ParameterInfo.Attributes
 '  The following example displays the attributes associated with the
 '  parameters of the method called 'MyMethod' of class 'ParameterInfo_Example'.
 

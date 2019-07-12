@@ -1,4 +1,4 @@
-// The purpose of this snippet is to demonstrate how to use all the primary virtual-mode events. 
+﻿// The purpose of this snippet is to demonstrate how to use all the primary virtual-mode events. 
 // Additionally, this example implements row-level commit-scope. To experiment with this feature,
 // make some edits in multiple cells within a single row, then click ESC once to revert the edit
 // for a single cell, and twice to revert the edit for the entire row. You can commit all edits 

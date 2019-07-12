@@ -1,4 +1,4 @@
-
+﻿
 Public Module Strings
    Public Sub Main()
       Dim dateInfo() As (dateAsString As String, description As String) = 

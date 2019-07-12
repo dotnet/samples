@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Public Class CopyToTest
     Public Shared Sub Main()
         ' Embed an array of characters in a string

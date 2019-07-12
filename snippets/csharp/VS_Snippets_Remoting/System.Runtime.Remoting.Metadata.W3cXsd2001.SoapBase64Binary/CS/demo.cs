@@ -1,4 +1,4 @@
-/// Class:  System.Runtime.Remoting.Metadata.W3cXsd2001.SoapBase64Binary
+﻿/// Class:  System.Runtime.Remoting.Metadata.W3cXsd2001.SoapBase64Binary
 ///    10    class 
 ///    21    #ctor()
 ///    22    #ctor(byte[])

@@ -1,4 +1,4 @@
-' The following code example demonstrates using the FontDialog.MinSize, 
+﻿' The following code example demonstrates using the FontDialog.MinSize, 
 ' FontDialog.MaxSize, and FontDialog.ShowEffects members, and 
 ' handling of Apply event.
 

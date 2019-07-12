@@ -1,4 +1,4 @@
-'<Snippet5>
+﻿'<Snippet5>
 ' Example of the Decimal.ToSingle and Decimal.ToDouble methods.
 Imports System
 Imports Microsoft.VisualBasic

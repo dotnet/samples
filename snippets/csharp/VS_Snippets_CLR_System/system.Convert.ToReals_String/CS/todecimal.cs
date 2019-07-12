@@ -1,4 +1,4 @@
-//<Snippet1>
+﻿//<Snippet1>
 // Example of the Convert.ToDecimal( String ) and 
 // Convert.ToDecimal( String, IFormatProvider ) methods.
 using System;

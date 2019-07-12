@@ -1,4 +1,4 @@
-namespace ExpressionTreeSamples
+﻿namespace ExpressionTreeSamples
 {
     // Base class for all samples.
     public abstract class Sample

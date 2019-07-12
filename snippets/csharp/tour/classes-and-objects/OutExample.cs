@@ -1,4 +1,4 @@
-namespace ClassesAndObjects
+﻿namespace ClassesAndObjects
 {
     using System;
     class OutExample

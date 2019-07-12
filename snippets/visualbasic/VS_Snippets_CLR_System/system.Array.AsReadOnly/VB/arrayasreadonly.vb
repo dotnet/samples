@@ -1,4 +1,4 @@
-' The following example wraps an array in a read-only IList.
+﻿' The following example wraps an array in a read-only IList.
 
 ' <Snippet1>
 Imports System

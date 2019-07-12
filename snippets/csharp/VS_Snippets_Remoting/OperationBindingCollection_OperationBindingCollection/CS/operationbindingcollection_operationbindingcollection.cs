@@ -1,4 +1,4 @@
-// System.Web.Services.Description.OperationBindingCollection
+﻿// System.Web.Services.Description.OperationBindingCollection
 // System.Web.Services.Description.OperationBindingCollection.Contains
 // System.Web.Services.Description.OperationBindingCollection.Add
 // System.Web.Services.Description.OperationBindingCollection.Item

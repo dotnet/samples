@@ -1,4 +1,4 @@
-'<snippet02>
+﻿'<snippet02>
 Option Strict On
 Option Explicit On
 Imports System.Collections.Concurrent

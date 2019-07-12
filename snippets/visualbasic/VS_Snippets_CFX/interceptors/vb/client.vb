@@ -1,4 +1,4 @@
-Imports System.ServiceModel
+﻿Imports System.ServiceModel
 Imports System.ServiceModel.Channels
 
 Imports microsoft.wcf.documentation

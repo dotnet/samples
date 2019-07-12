@@ -1,4 +1,4 @@
-namespace QueryExecution
+﻿namespace QueryExecution
 {
     public class Program
     {

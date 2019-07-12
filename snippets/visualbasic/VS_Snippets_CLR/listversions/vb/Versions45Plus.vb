@@ -1,4 +1,4 @@
-' <snippet5>
+﻿' <snippet5>
 Imports Microsoft.Win32
 
 Public Class GetDotNetVersion

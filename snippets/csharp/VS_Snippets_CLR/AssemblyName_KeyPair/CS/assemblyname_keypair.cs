@@ -1,4 +1,4 @@
-// System.Reflection.AssemblyName.KeyPair
+﻿// System.Reflection.AssemblyName.KeyPair
 // System.Reflection.AssemblyName.GetPublicKey()
 // System.Reflection.AssemblyName.GetPublicKeyToken()
 // System.Reflection.AssemblyName.Flags

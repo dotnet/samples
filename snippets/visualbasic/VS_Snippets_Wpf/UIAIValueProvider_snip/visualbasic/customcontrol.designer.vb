@@ -1,4 +1,4 @@
-Imports System
+﻿Imports System
 Namespace UIAIValueProvider_snip
 	Partial Public Class CustomControl
 		''' <summary>

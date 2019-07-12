@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 // Example for the String Inequality operator.
 using System;
 

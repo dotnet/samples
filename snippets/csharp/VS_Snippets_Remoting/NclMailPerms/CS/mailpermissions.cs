@@ -1,4 +1,4 @@
-
+﻿
 // NCLMailPerms
 
 using System;

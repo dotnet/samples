@@ -1,4 +1,4 @@
-// <snippet1>
+﻿// <snippet1>
 // Code for building SimpleType.dll.
 using System;
 using System.Reflection;

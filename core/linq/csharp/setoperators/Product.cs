@@ -1,4 +1,4 @@
-namespace SetOperators
+﻿namespace SetOperators
 {
     public class Product
     {

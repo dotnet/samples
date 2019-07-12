@@ -1,4 +1,4 @@
-'   System.Configuration.Install.Installer.Install
+﻿'   System.Configuration.Install.Installer.Install
 '   System.Configuration.Install.Installer.Commit
 
 '   The following example demonstrates the 'Install' and 'Commit' methods 

@@ -1,4 +1,4 @@
-//<Snippet4>
+﻿//<Snippet4>
 // Example of the BitConverter.GetBytes( double ) method.
 using System;
 

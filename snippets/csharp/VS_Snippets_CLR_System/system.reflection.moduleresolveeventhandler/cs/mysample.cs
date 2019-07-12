@@ -1,4 +1,4 @@
-// To compile and run the example
+﻿// To compile and run the example
 // 1.	Open a Command Prompt window and navigate to the directory that contains MySample.cs.
 // 2.	Compile Server1 using the following command:
 // csc /out:subfolder\Server1.netmodule /t:module Server1.cs

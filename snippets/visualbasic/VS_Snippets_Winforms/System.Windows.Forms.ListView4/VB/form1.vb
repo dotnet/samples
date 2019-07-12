@@ -1,4 +1,4 @@
-' The following code example demonstrates the use of ListView.Clear() 
+﻿' The following code example demonstrates the use of ListView.Clear() 
 ' and ListViewItem.Selected members.
 '
 ' This snippet example requires a form that contains a ListView 

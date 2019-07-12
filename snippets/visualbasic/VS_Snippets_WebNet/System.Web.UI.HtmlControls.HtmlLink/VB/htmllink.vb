@@ -1,4 +1,4 @@
-' <snippet2>
+﻿' <snippet2>
 Partial Class HtmlLinkvb_aspx
 
     Sub Page_Init(ByVal sender As Object, ByVal e As EventArgs)

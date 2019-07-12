@@ -1,4 +1,4 @@
-' Note : Calls  EmitClass class from 'MyEmitTestAssembly.dll' using reflection emit.
+﻿' Note : Calls  EmitClass class from 'MyEmitTestAssembly.dll' using reflection emit.
 
 Imports System
 

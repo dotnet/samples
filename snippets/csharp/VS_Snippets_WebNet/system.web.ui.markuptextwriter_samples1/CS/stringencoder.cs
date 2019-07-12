@@ -1,4 +1,4 @@
-// <snippet1>
+﻿// <snippet1>
 // Create a simple class, named StringEncoder,
 // that performs markup and URL encoding of strings.
 using System;

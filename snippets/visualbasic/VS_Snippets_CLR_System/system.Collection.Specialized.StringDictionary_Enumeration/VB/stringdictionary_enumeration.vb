@@ -1,4 +1,4 @@
-' The following code example enumerates the elements of a StringDictionary.
+﻿' The following code example enumerates the elements of a StringDictionary.
 
 ' <snippet1>
 Imports System

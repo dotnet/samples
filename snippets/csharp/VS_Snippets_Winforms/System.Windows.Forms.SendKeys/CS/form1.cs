@@ -1,4 +1,4 @@
-//The following code example shows the use of the 
+﻿//The following code example shows the use of the 
 // SendKeys.Send method.
 using System.Windows.Forms;
 

@@ -1,4 +1,4 @@
-' The following code example removes elements from the StringCollection.
+﻿' The following code example removes elements from the StringCollection.
 
 ' <snippet1>
 Imports System

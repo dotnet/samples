@@ -1,4 +1,4 @@
-        //Helper method, used in GroupByRange.
+﻿        //Helper method, used in GroupByRange.
         protected static int GetPercentile(Student s)
         {
             double avg = s.ExamScores.Average();

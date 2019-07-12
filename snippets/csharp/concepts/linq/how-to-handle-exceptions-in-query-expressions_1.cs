@@ -1,4 +1,4 @@
-    class ExceptionsOutsideQuery
+﻿    class ExceptionsOutsideQuery
     {
         static void Main()
         {

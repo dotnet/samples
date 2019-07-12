@@ -1,4 +1,4 @@
-// The following code example retrieves the different names for each encoding
+﻿// The following code example retrieves the different names for each encoding
 // and displays the encodings with one or more names that are different from EncodingInfo.Name.
 // It displays EncodingName but does not compare against it.
 

@@ -1,4 +1,4 @@
-Public Class Form1
+﻿Public Class Form1
     '<SNIPPET3>
     Private Sub Form1_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         Mus.Save()

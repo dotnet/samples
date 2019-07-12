@@ -1,4 +1,4 @@
-' <Snippet3>
+﻿' <Snippet3>
 Public Class Example
     Public Shared Sub Main()
         ' Define some integers for a division operation.

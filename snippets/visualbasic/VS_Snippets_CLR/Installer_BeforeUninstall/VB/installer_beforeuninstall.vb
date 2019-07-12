@@ -1,4 +1,4 @@
-' System.Configuration.Install.Installer.BeforeUninstall
+﻿' System.Configuration.Install.Installer.BeforeUninstall
 
 ' The following example demonstrates the event 'BeforeUninstall' of the
 ' 'Installer' class. This event is raised by the method 'OnBeforeUninstall'.

@@ -1,4 +1,4 @@
-Imports System.ComponentModel
+﻿Imports System.ComponentModel
 Imports System.Collections.ObjectModel
 
 Namespace HeaderedItemsControlSimple

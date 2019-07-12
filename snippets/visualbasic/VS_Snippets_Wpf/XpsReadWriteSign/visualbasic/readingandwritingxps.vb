@@ -1,4 +1,4 @@
-' XpsReadWriteSign SDK Sample - ReadingAndWritingXps.vb
+﻿' XpsReadWriteSign SDK Sample - ReadingAndWritingXps.vb
 ' Copyright (c) Microsoft Corporation. All rights reserved.
 
 

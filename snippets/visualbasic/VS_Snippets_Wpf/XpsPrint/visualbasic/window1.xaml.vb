@@ -1,4 +1,4 @@
-' XpsPrint SDK Sample - Window1.xaml.vb
+﻿' XpsPrint SDK Sample - Window1.xaml.vb
 ' Copyright (c) Microsoft Corporation. All rights reserved. 
 
 

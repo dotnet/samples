@@ -1,4 +1,4 @@
-// System.Web.Services.Discovery.DiscoveryClientProtocol.DiscoveryClientResultsFile
+﻿// System.Web.Services.Discovery.DiscoveryClientProtocol.DiscoveryClientResultsFile
 // System.Web.Services.Discovery.DiscoveryClientProtocol.DiscoveryClientResultsFile.ctor
 // System.Web.Services.Discovery.DiscoveryClientProtocol.DiscoveryClientResultsFile.Results
 /*

@@ -1,4 +1,4 @@
-' <Snippet4>
+﻿' <Snippet4>
 Module Example
     Public Sub Main() 
         Dim posValue As Double = 3.45

@@ -1,4 +1,4 @@
-//<snippet00>
+﻿//<snippet00>
 #region Using directives
 
 using System;

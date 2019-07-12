@@ -1,4 +1,4 @@
-// Illustrates the Task.Run(Action, CancellationToken) overload.
+﻿// Illustrates the Task.Run(Action, CancellationToken) overload.
  
 // <Snippet4>
 using System;

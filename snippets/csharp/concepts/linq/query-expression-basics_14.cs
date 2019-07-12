@@ -1,4 +1,4 @@
-            // percentileQuery is an IEnumerable<IGrouping<int, Country>>
+﻿            // percentileQuery is an IEnumerable<IGrouping<int, Country>>
             var percentileQuery =
                 from country in countries
                 let percentile = (int) country.Population / 10_000_000

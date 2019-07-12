@@ -1,4 +1,4 @@
-'<SnippetPersonClass>
+﻿'<SnippetPersonClass>
 Imports System.ComponentModel
 
 ' This class implements INotifyPropertyChanged

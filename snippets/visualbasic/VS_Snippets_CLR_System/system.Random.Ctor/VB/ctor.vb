@@ -1,4 +1,4 @@
-'<Snippet1>
+﻿'<Snippet1>
 ' Example of the Random class constructors and Random.NextDouble( ) 
 ' method.
 Imports System.Threading

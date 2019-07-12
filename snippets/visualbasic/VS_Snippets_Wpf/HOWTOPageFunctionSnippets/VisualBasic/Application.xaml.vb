@@ -1,4 +1,4 @@
-Imports System.Xml
+﻿Imports System.Xml
 Imports System.Configuration
 
 Namespace UsingPageFunctionsSample

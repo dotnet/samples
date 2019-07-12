@@ -1,4 +1,4 @@
- ' File name: WmiWebEventListener.cs
+﻿ ' File name: WmiWebEventListener.cs
 '* Shows how to capture the WMI events associated with 
 '* ASP.NET health monitoriong types. 
 ' 

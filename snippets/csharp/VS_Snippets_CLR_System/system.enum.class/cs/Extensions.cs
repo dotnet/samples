@@ -1,4 +1,4 @@
-//<snippet18>
+﻿//<snippet18>
 using System;
 
 // Define an enumeration to represent student grades.

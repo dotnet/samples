@@ -1,4 +1,4 @@
-// System.Diagnostics.CounterCreationData
+﻿// System.Diagnostics.CounterCreationData
 // System.Diagnostics.CounterCreationData(string, string, PerformanceCounterType)
 // System.Diagnostics.CounterCreationData()
 // System.Diagnostics.CounterCreationData.CounterName

@@ -1,4 +1,4 @@
-// System.Net.FileWebResponse.ContentLength;System.Net.FileWebResponse.ContentType.
+﻿// System.Net.FileWebResponse.ContentLength;System.Net.FileWebResponse.ContentType.
 
 /* This program demonstrates the 'ContentLength' and 'ContentType' property of 'FileWebResponse' class.
 It creates a web request and queries for a response.It then prints the content length

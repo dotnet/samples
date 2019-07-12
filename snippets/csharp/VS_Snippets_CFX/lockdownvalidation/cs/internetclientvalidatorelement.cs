@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ServiceModel.Configuration;
 
 namespace Microsoft.ServiceModel.Samples

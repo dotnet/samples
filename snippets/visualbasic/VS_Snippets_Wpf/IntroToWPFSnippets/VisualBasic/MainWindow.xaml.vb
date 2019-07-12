@@ -1,4 +1,4 @@
-Namespace SDKSample
+﻿Namespace SDKSample
 
     Partial Public Class MainWindow
         Inherits System.Windows.Window

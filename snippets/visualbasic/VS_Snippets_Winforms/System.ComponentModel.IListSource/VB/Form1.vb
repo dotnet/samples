@@ -1,4 +1,4 @@
-' <snippet1000>
+﻿' <snippet1000>
 Imports System.ComponentModel
 Imports System.Windows.Forms
 

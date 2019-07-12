@@ -1,4 +1,4 @@
-'<snippet5>
+﻿'<snippet5>
 Class Example
     Public Shared Sub Main()
         Compare()

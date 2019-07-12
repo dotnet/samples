@@ -1,4 +1,4 @@
-// <Internal>
+﻿// <Internal>
 // This program contains snippets applicable to the following:
 // System.Net.AuthenticationManger (Snippet1);  
 // System.Net.AuthenticationManger.Register (Snippet2);

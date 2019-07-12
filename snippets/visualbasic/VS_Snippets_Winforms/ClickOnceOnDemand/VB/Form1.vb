@@ -1,4 +1,4 @@
-'<SNIPPET1>
+﻿'<SNIPPET1>
 Imports System.Reflection
 Imports System.Deployment.Application
 Imports System.Collections.Generic

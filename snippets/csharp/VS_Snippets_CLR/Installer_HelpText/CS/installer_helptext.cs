@@ -1,4 +1,4 @@
-/*
+﻿/*
    System.Configuration.Install.Installer.HelpText
    
    The following example demonstrates the property 'HelpText'. The

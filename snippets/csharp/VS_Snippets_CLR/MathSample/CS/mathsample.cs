@@ -1,4 +1,4 @@
-// <snippet1>
+﻿// <snippet1>
 /// <summary>
 /// The following class represents simple functionality of the trapezoid.
 /// </summary>

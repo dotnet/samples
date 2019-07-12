@@ -1,4 +1,4 @@
-' System.Web.Services.Description.MimeTextBinding
+﻿' System.Web.Services.Description.MimeTextBinding
 ' System.Web.Services.Description.MimeTextBinding()
 ' System.Web.Services.Description.MimeTextMatch()
 ' System.Web.Services.Description.MimeTextMatch.Name

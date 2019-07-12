@@ -1,4 +1,4 @@
-'<Snippet99>
+﻿'<Snippet99>
 ' Imports statements must be at the top of a module.
 Imports Microsoft.VisualBasic.CallType
 '</Snippet99>

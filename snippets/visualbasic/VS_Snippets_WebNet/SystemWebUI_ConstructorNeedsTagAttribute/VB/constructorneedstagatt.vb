@@ -1,4 +1,4 @@
- ' <snippet1>
+﻿ ' <snippet1>
 ' File name: constructorneedstagatt.cs. 
 
 Imports System

@@ -1,4 +1,4 @@
-' CustomHyperlink.vb
+﻿' CustomHyperlink.vb
 ' <snippet3>
 Imports System.Web
 Imports System.ComponentModel

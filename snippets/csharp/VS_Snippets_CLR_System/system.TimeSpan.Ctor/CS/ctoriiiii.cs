@@ -1,4 +1,4 @@
-//<Snippet4>
+﻿//<Snippet4>
 // Example of the TimeSpan( int, int, int, int, int ) constructor. 
 using System;
 

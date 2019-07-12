@@ -1,4 +1,4 @@
-// <Snippet03>
+﻿// <Snippet03>
 #define LOGGING
 
 using System;

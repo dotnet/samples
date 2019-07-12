@@ -1,4 +1,4 @@
-namespace AutoSizeCS
+﻿namespace AutoSizeCS
 {
     partial class Form1
     {

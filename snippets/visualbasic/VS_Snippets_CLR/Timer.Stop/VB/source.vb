@@ -1,4 +1,4 @@
-' Alternative to using SignalTime to ensure that Elapsed 
+﻿' Alternative to using SignalTime to ensure that Elapsed 
 ' events are not processed if they occur after the timer 
 ' has been stopped. The object is to avoid race conditions.
 '

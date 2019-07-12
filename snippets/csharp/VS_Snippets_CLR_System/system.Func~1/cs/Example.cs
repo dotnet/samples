@@ -1,4 +1,4 @@
-// <Snippet5>
+﻿// <Snippet5>
 using System;
 
 static class Func1

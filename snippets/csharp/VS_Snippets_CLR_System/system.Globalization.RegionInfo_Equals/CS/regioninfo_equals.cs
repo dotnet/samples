@@ -1,4 +1,4 @@
-// The following code example compares two instances of RegionInfo that were created differently.
+﻿// The following code example compares two instances of RegionInfo that were created differently.
 
 // <snippet1>
 using System;

@@ -1,4 +1,4 @@
-' <Snippet2>
+﻿' <Snippet2>
 ' Example of the explicit conversions from Decimal to Integer and 
 ' Decimal to UInteger.
 Module DecimalToU_Int32Demo

@@ -1,4 +1,4 @@
-// <snippet30>
+﻿// <snippet30>
 namespace Microsoft.Samples.WinForms.Cs.HostApp {
     using System;
     using System.ComponentModel;

@@ -1,4 +1,4 @@
-namespace Projection
+﻿namespace Projection
 {
     public class Program
     {

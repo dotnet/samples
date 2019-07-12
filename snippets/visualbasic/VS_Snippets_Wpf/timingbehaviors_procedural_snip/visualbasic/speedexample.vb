@@ -1,4 +1,4 @@
-'
+﻿'
 '  SpeedExample.vb
 '     This example demonstrates how different speed ratios affect an animation
 '

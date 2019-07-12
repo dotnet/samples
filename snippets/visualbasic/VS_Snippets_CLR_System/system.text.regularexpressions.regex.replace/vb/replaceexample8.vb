@@ -1,4 +1,4 @@
-' Visual Basic .NET Document
+﻿' Visual Basic .NET Document
 ' Illustrate Replace(String, String, Int32)
 Option Strict On
 

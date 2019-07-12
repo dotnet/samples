@@ -1,4 +1,4 @@
-            // Here var is required because the query
+﻿            // Here var is required because the query
             // produces an anonymous type.
             var queryNameAndPop =
                 from country in countries

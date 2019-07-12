@@ -1,4 +1,4 @@
-
+﻿
 
 ' This example demonstrates handling the use of a ColorDialog object. 
 ' The ColorDialog object does not allow the user to set a custom color 

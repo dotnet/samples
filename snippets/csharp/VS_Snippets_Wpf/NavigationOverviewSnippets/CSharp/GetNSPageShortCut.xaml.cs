@@ -1,4 +1,4 @@
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 //<SnippetGetNSShortcutCODEBEHIND1>
 using System.Windows.Navigation;

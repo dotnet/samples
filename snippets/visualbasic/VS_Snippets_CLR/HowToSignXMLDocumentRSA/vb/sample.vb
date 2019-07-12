@@ -1,4 +1,4 @@
-' <snippet1>
+﻿' <snippet1>
 Imports System.Security.Cryptography
 Imports System.Security.Cryptography.Xml
 Imports System.Xml

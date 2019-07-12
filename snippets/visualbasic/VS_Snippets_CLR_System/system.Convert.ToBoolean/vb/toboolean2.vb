@@ -1,4 +1,4 @@
-' Visual Basic .NET Document
+﻿' Visual Basic .NET Document
 ' 
 ' Illustrates ToBoolean with the following parameter types:
 '    Byte

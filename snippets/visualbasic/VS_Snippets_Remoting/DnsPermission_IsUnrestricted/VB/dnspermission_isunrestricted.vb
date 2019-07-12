@@ -1,4 +1,4 @@
- '
+﻿ '
 '   This program demonstrates the 'IsUnrestricted' method of 'DnsPermission' class.
 '   It checks the overall permission state of the object and it will return true if the
 '   'DnsPermission' instance was created with unrestricted permission state otherwise false.

@@ -1,4 +1,4 @@
-// CustomLabelDesigner.cs
+﻿// CustomLabelDesigner.cs
 // <snippet1>
 using System;
 using System.Web;

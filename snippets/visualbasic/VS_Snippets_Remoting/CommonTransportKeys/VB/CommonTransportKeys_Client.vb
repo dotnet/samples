@@ -1,4 +1,4 @@
-' Supporting file: Client
+﻿' Supporting file: Client
 
 Imports System
 Imports System.Runtime.Remoting

@@ -1,4 +1,4 @@
-' <snippet30>
+﻿' <snippet30>
 Imports System
 Imports System.ComponentModel
 Imports System.Drawing

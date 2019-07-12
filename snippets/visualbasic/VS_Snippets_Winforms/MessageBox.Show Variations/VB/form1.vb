@@ -1,4 +1,4 @@
-Imports System.Windows.Forms
+﻿Imports System.Windows.Forms
 
 Public NotInheritable Class Form1
     Inherits System.Windows.Forms.Form

@@ -1,4 +1,4 @@
-// System.Runtime.Remoting.RemotingConfiguration.Configure
+﻿// System.Runtime.Remoting.RemotingConfiguration.Configure
 // System.Runtime.Remoting.RemotingConfiguration.GetRegisteredWellKnownServiceTypes
 
 /*

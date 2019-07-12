@@ -1,4 +1,4 @@
-'<Snippet1>
+﻿'<Snippet1>
 #Const CONTRACTS_FULL = True
 
 Imports System.Diagnostics.Contracts

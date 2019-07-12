@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 ' This code example demonstrates the System.Byte.Equals(Object) and
 ' System.Byte.Equals(Byte) methods.
 

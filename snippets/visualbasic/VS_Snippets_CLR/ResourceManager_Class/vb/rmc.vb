@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Imports System.Resources
 Imports System.Reflection
 Imports System.Threading

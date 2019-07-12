@@ -1,4 +1,4 @@
-// System.Runtime.Remoting.RemotingConfiguration.IsActivationAllowed
+﻿// System.Runtime.Remoting.RemotingConfiguration.IsActivationAllowed
 // System.Runtime.Remoting.RemotingConfiguration.GetRegisteredActivatedServiceTypes
 
 /*

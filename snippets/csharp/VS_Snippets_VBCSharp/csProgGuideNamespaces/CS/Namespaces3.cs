@@ -1,4 +1,4 @@
-//<Snippet19>
+﻿//<Snippet19>
 using System;
 //<Snippet18>
 using Microsoft.VisualBasic.Devices;

@@ -1,4 +1,4 @@
-' System.Web.Services.Protocols.HttpPostClientProtocol.HttpPostClientProtocol
+﻿' System.Web.Services.Protocols.HttpPostClientProtocol.HttpPostClientProtocol
 
 ' The following example demonstrates 'Constructor' of 'HttpPostClientProtocol' class
 ' A variable of type 'HttpPostClientProtocol' is used to set proxy information ,

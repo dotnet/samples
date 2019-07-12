@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 ' Sample for the Environment.SystemDirectory property
 Imports System
 

@@ -1,4 +1,4 @@
-// <Snippet3>
+﻿// <Snippet3>
 using System;
 using System.Text;
 using System.Runtime.Remoting.Messaging;

@@ -1,4 +1,4 @@
-'<snippet100>
+﻿'<snippet100>
 Imports System.Windows.Forms
 '<snippet101>
 Imports System.Web.ClientServices.Providers

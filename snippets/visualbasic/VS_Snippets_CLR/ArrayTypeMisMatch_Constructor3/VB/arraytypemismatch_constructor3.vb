@@ -1,4 +1,4 @@
-' System.ArrayTypeMismatchException.ArrayTypeMismatchException
+﻿' System.ArrayTypeMismatchException.ArrayTypeMismatchException
 
 ' The following example demonstrates the 'ArrayTypeMismatchException(string,innerException)'
 ' constructor of class ArrayTypeMismatchException class.It creates a 

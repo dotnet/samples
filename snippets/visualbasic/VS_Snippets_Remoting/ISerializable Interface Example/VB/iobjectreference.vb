@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 Imports System.Text
 Imports System.IO
 ' Add references to Soap and Binary formatters.

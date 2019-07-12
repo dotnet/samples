@@ -1,4 +1,4 @@
-// <Snippet8>
+﻿// <Snippet8>
 using System;
 using System.Globalization;
 using System.IO;

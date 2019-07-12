@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Imports System
 Imports System.Collections.ObjectModel
 Imports System.ServiceModel

@@ -1,4 +1,4 @@
-//<SnippetAppCODEBEHIND>
+﻿//<SnippetAppCODEBEHIND>
 using System.Windows;
 namespace SDKSample
 {

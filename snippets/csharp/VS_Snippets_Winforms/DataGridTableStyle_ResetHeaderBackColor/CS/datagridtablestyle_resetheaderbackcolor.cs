@@ -1,4 +1,4 @@
-// System.Windows.Forms.DataGridTableStyle.ResetHeaderBackColor
+﻿// System.Windows.Forms.DataGridTableStyle.ResetHeaderBackColor
 
 /*
 The following example demonstrates the 'ResetHeaderBackColor' method of 'DataGridTableStyle' class. 

@@ -1,4 +1,4 @@
-Namespace HOWTONavigationSnippets
+﻿Namespace HOWTONavigationSnippets
 	''' <summary>
 	''' Interaction logic for HomePage.xaml
 	''' </summary>

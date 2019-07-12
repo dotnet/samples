@@ -1,4 +1,4 @@
-// System.Web.Services.Description.OperationBinding
+﻿// System.Web.Services.Description.OperationBinding
 // System.Web.Services.Description.OperationBinding.OperationBinding
 // System.Web.Services.Description.OperationBinding.Name
 // System.Web.Services.Description.OperationBinding.Input

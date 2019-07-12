@@ -1,4 +1,4 @@
-//<snippet07>
+﻿//<snippet07>
 using System;
 using System.Collections.Concurrent;
 using System.Linq;

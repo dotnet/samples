@@ -1,4 +1,4 @@
-        public void GroupByCompositeKey()
+﻿        public void GroupByCompositeKey()
         {
             var queryHighScoreGroups =
                 from student in students

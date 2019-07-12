@@ -1,4 +1,4 @@
-// SampleID="NCLResponse1"
+﻿// SampleID="NCLResponse1"
 
 // <Snippet1>
 using System;

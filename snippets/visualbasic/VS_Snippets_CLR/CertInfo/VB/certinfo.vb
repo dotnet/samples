@@ -1,4 +1,4 @@
-'<SNIPPET1>
+﻿'<SNIPPET1>
 Imports System
 Imports System.Security.Cryptography
 Imports System.Security.Permissions

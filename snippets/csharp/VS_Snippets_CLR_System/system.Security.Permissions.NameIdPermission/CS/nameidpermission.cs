@@ -1,4 +1,4 @@
-#define debug
+﻿#define debug
 //<Snippet1>
 //#define debug
 // This custom permission is intended only for the purposes of illustration.

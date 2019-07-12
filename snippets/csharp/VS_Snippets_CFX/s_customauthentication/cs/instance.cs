@@ -1,4 +1,4 @@
-
+﻿
 //  Copyright (c) Microsoft Corporation.  All Rights Reserved.
 //  Snippet for CustomAuthentication
 //	07/17/06 a-arhu new IssuerBasedValidator(); // must use default constructor (issuer);

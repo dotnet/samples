@@ -1,4 +1,4 @@
-' <SnippetPenExampleWholePage>
+﻿' <SnippetPenExampleWholePage>
 
 Imports System
 Imports System.Windows

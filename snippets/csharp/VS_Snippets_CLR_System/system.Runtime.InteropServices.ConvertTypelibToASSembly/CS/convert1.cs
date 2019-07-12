@@ -1,4 +1,4 @@
-// Convert.cs
+﻿// Convert.cs
 //<snippet1>
 using System;
 using System.Reflection;

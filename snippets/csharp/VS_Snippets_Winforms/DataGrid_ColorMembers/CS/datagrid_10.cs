@@ -1,4 +1,4 @@
-// System.Windows.Forms.DataGrid.SelectionBackColor
+﻿// System.Windows.Forms.DataGrid.SelectionBackColor
 // System.Windows.Forms.DataGrid.SelectionForeColor
 // System.Windows.Forms.DataGrid.ResetSelectionBackColor
 // System.Windows.Forms.DataGrid.ResetSelectionForeColor

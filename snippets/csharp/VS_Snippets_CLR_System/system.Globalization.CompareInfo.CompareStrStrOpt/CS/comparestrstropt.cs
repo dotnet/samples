@@ -1,4 +1,4 @@
-// The following code example compares two strings using different CompareOptions settings.
+﻿// The following code example compares two strings using different CompareOptions settings.
 
 // <snippet1>
 using System;

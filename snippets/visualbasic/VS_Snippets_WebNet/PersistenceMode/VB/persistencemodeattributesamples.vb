@@ -1,4 +1,4 @@
-'  System.Web.UI.PersistenceMode.Attribute;System.Web.UI.PersistenceMode.InnerProperty;
+﻿'  System.Web.UI.PersistenceMode.Attribute;System.Web.UI.PersistenceMode.InnerProperty;
 '  System.Web.UI.PersistenceMode.InnerDefaultProperty;
 
 '  The following example demonstrates the attribute 'PersistenceModeAttribute' and members 'Attribute','InnerProperty'

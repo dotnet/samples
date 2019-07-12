@@ -1,4 +1,4 @@
-' <SnippetRichTextBoxCodeOnlyExample>
+﻿' <SnippetRichTextBoxCodeOnlyExample>
 
 Imports System
 Imports System.Windows

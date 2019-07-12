@@ -1,4 +1,4 @@
-using System.ServiceModel;
+﻿using System.ServiceModel;
 //<snippet0>
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"),
 XmlSerializerFormat(Style = OperationFormatStyle.Rpc, 

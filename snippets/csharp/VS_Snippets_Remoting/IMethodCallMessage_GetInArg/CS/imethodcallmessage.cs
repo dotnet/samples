@@ -1,4 +1,4 @@
-// System.Runtime.Remoting.IMethodCallMessage
+﻿// System.Runtime.Remoting.IMethodCallMessage
 // System.Runtime.Remoting.IMethodCallMessage.InArgCount
 // System.Runtime.Remoting.IMethodCallMessage.InArgs
 // System.Runtime.Remoting.IMethodCallMessage.GetArgName(int)

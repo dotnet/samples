@@ -1,4 +1,4 @@
-' System.Reflection.Emit.EnumBuilder.Assembly
+﻿' System.Reflection.Emit.EnumBuilder.Assembly
 ' System.Reflection.Emit.EnumBuilder.AssemblyQualifiedName
 ' System.Reflection.Emit.EnumBuilder.Module
 ' System.Reflection.Emit.EnumBuilder.Name

@@ -1,4 +1,4 @@
-// System.Diagnostics.EventLogEntryCollection.Count
+﻿// System.Diagnostics.EventLogEntryCollection.Count
 // System.Diagnostics.EventLogEntryCollection.Item
 
 

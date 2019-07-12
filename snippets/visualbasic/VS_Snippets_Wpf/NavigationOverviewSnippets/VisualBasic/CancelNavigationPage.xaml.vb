@@ -1,4 +1,4 @@
-'<SnippetCancelNavigationPageCODEBEHIND>
+﻿'<SnippetCancelNavigationPageCODEBEHIND>
 
 Namespace SDKSample
 	Partial Public Class CancelNavigationPage

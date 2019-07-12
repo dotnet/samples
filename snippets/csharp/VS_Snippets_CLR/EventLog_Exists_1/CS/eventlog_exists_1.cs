@@ -1,4 +1,4 @@
-// System.Diagnostics.EventLog.Exists(String)
+﻿// System.Diagnostics.EventLog.Exists(String)
 
 /*
    The following sample demonstrates the 'Exists(String)'method of 

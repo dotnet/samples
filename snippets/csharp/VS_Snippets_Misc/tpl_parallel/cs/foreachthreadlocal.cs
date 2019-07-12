@@ -1,4 +1,4 @@
-//<snippet04>
+﻿//<snippet04>
  using System;
  using System.Linq;
  using System.Threading;

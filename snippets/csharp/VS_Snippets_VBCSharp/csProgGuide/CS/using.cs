@@ -1,4 +1,4 @@
-namespace n0
+﻿namespace n0
 {
 //<Snippet1>
 using System;

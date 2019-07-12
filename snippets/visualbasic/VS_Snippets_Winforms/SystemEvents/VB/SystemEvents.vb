@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 Imports System
 Imports Microsoft.Win32
 Imports System.Windows.Forms

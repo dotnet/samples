@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 ' The following example displays the names and sizes
 ' of the files in the specified directory.
 Imports System

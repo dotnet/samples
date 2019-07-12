@@ -1,4 +1,4 @@
-' <snippet2>
+﻿' <snippet2>
 Partial Class WizardStepCollectionvb_aspx
     Inherits System.Web.UI.Page
 

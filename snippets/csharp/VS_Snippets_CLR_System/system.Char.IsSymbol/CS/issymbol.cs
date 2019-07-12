@@ -1,4 +1,4 @@
-// <snippet12>
+﻿// <snippet12>
 using System;
 
 public class IsSymbolSample {

@@ -1,4 +1,4 @@
-'<SnippetDetectPermsGracefulCODE1>
+﻿'<SnippetDetectPermsGracefulCODE1>
 
 Imports System.IO
 Imports System.IO.IsolatedStorage

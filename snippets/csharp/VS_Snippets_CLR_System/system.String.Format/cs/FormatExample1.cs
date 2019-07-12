@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
 // This code example demonstrates the String.Format() method.
 // Formatting for this example uses the "en-US" culture.
 

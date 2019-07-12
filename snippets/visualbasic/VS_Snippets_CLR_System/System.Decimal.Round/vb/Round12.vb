@@ -1,4 +1,4 @@
-' <Snippet12>
+﻿' <Snippet12>
 Public Module Example
    Public Sub Main()
       ' Define a set of Decimal values.

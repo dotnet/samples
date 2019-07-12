@@ -1,4 +1,4 @@
-' Topic: XML Element Literal
+﻿' Topic: XML Element Literal
 
 '<Snippet22>  
 ' Place Imports statements at the top of your program.  

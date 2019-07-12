@@ -1,4 +1,4 @@
- '
+﻿ '
 '   This program demonstrates the 'FromXml' method of 'DnsPermission' class.
 '   It creates an instance of 'DnsPermission' class and prints the XML encoding of that instance.Then it 
 '   creates a 'SecurityElement' object and adds the attributes corresponding to the above 'DnsPermission'

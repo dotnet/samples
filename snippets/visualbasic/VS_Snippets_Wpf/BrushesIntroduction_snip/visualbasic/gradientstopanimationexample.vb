@@ -1,4 +1,4 @@
-' <SnippetGraphicsMMGradientAnimationExamplesWholePage>
+﻿' <SnippetGraphicsMMGradientAnimationExamplesWholePage>
 
 Imports Microsoft.VisualBasic
 Imports System

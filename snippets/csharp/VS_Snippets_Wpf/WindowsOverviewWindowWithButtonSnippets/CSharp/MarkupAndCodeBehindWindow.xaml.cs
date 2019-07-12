@@ -1,4 +1,4 @@
-//<SnippetMarkupAndCodeBehindWindowCODEBEHIND>
+﻿//<SnippetMarkupAndCodeBehindWindowCODEBEHIND>
 using System.Windows;
 
 namespace SDKSample

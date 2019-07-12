@@ -1,4 +1,4 @@
-' <SnippetGraphicsMMVisualBrushAsRectangleBackgroundExampleWholePage>
+﻿' <SnippetGraphicsMMVisualBrushAsRectangleBackgroundExampleWholePage>
 
 Imports Microsoft.VisualBasic
 Imports System

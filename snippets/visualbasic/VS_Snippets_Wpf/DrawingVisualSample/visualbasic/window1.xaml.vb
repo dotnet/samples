@@ -1,4 +1,4 @@
-Imports System.Globalization
+﻿Imports System.Globalization
 
 Namespace SDKSample
 	Partial Public Class Window1

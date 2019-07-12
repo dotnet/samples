@@ -1,4 +1,4 @@
-// This sample demonstrates how to encode and decode a string using
+﻿// This sample demonstrates how to encode and decode a string using
 // the RSAOAEPKeyExchangeFormatter and RSAOAEPKeyExchangeDeformatter classes.
 //<Snippet2>
 using System;

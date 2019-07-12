@@ -1,4 +1,4 @@
-' Visual Basic .NET Document
+﻿' Visual Basic .NET Document
 ' Conversions from DateTimeOffset to DateTime and vice versa
 Option Strict On
 

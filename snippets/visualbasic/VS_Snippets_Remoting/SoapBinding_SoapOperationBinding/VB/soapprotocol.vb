@@ -1,4 +1,4 @@
-' System.Web.Services.Description.SoapBinding.ctor
+﻿' System.Web.Services.Description.SoapBinding.ctor
 ' System.Web.Services.Description.SoapBinding.Transport
 ' System.Web.Services.Description.SoapBinding.Style
 ' System.Web.Services.Description.SoapBindingStyle.Document

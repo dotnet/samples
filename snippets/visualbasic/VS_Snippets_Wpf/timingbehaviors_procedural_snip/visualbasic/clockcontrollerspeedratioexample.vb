@@ -1,4 +1,4 @@
-' <SnippetGraphicsMMClockControllerSpeedRatioExample>
+﻿' <SnippetGraphicsMMClockControllerSpeedRatioExample>
 '
 '  This example shows how to interactively control 
 '  the speed of a clock

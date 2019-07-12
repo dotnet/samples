@@ -1,4 +1,4 @@
-Namespace VisualBasic
+﻿Namespace VisualBasic
     '<Snippet_MyCustomContentState_VB>
     <Serializable()>
     Public Class MyCustomContentState

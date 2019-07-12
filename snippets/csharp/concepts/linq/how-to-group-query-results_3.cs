@@ -1,4 +1,4 @@
-        public void GroupBySubstring()
+﻿        public void GroupBySubstring()
         {            
             Console.WriteLine("\r\nGroup by something other than a property of the object:");
 

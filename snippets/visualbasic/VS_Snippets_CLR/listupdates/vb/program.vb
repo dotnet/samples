@@ -1,4 +1,4 @@
-
+﻿
 Imports Microsoft.Win32
 
 Public Class GetUpdateHistory

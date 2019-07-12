@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Module Example
    ' Define an Enum without FlagsAttribute.
    Enum SingleHue As Short

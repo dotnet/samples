@@ -1,4 +1,4 @@
-Try
+﻿Try
     Dim contacts As XElement = XElement.Parse(
         "<Contacts>  
             <Contact>  

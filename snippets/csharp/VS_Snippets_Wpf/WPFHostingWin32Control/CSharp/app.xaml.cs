@@ -1,4 +1,4 @@
-//This is a list of commonly used namespaces for an application class.
+﻿//This is a list of commonly used namespaces for an application class.
 using System;
 using System.Windows;
 using System.Runtime.InteropServices;

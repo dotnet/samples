@@ -1,4 +1,4 @@
-//<Snippet2>
+﻿//<Snippet2>
 // Server1 module
 
 using System;

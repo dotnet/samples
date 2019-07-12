@@ -1,4 +1,4 @@
-Namespace Samples.AspNet.Profile
+﻿Namespace Samples.AspNet.Profile
 
   Public Class ShoppingCart
     Public HasChanged As Boolean = False

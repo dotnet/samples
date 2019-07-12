@@ -1,4 +1,4 @@
-class Test1
+﻿class Test1
 {
     //<Snippet2>
     static int Main(string[] args)

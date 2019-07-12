@@ -1,4 +1,4 @@
-//<snippet2>
+﻿//<snippet2>
 using System;
 
 class EventTester

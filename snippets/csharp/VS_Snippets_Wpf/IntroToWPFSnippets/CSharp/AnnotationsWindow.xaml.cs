@@ -1,4 +1,4 @@
-// AnnotationsStyling SDK Sample - ThemeWindow.xaml.cs
+﻿// AnnotationsStyling SDK Sample - ThemeWindow.xaml.cs
 // Copyright (c) Microsoft Corporation. All rights reserved.
 
 using System;

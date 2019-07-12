@@ -1,4 +1,4 @@
-// MailLink.cs
+﻿// MailLink.cs
 // <Snippet1>
 using System;
 using System.ComponentModel;

@@ -1,4 +1,4 @@
-' <Snippet3>
+﻿' <Snippet3>
 Imports System.Threading.Tasks
 Imports System.Timers
 

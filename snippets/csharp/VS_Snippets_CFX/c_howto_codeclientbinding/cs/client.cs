@@ -1,4 +1,4 @@
-//code for c_HowTo_CodeClientBindings client
+﻿//code for c_HowTo_CodeClientBindings client
 
 using System;
 using System.ServiceModel;

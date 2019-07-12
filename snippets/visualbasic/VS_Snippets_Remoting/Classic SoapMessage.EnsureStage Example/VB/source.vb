@@ -1,4 +1,4 @@
-Namespace EnsureStageExample
+﻿Namespace EnsureStageExample
    Class Class1
       
       Public Shared Sub Main()

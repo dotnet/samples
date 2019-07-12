@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Public Module Example
     Public Sub Main()
         ' Define an array of Int64 values.

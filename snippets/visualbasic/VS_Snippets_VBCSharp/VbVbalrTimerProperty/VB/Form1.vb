@@ -1,4 +1,4 @@
-Public Class Form1
+﻿Public Class Form1
 
 '<Snippet1>
   Public Sub waitFiveSeconds()

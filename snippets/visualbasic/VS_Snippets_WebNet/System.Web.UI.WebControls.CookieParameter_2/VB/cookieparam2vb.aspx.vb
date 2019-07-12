@@ -1,4 +1,4 @@
-' <Snippet2>
+﻿' <Snippet2>
 Partial Class cookieparam2vb_aspx
     Inherits System.Web.UI.Page
     Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs)

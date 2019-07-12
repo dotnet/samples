@@ -1,4 +1,4 @@
-// System.Web.UI.ValidatorCollection.Add()
+﻿// System.Web.UI.ValidatorCollection.Add()
 /*
    The following program demonstrates the 'Add' method of the
    'ValidatorCollection' class in 'System.Web.UI'. It adds a

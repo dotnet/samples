@@ -1,4 +1,4 @@
- ' System.Net.WebPermissionAttribute.Connect;System.Net.WebPermissionAttribute.Accept;
+﻿ ' System.Net.WebPermissionAttribute.Connect;System.Net.WebPermissionAttribute.Accept;
 
 
 Imports System

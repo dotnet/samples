@@ -1,4 +1,4 @@
-Imports System.IO.Log
+﻿Imports System.IO.Log
 Imports System.IO
 Imports System.Xml
 '<snippet0>

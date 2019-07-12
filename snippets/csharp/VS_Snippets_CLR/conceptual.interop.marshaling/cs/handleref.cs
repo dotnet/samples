@@ -1,4 +1,4 @@
-//<snippet42>
+﻿//<snippet42>
 using System;
 using System.IO;
 using System.Text;

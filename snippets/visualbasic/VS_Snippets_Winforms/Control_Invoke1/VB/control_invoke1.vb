@@ -1,4 +1,4 @@
-' System.Windows.Forms.Control.Invoke(Delegate,Object[]);
+﻿' System.Windows.Forms.Control.Invoke(Delegate,Object[]);
 
 ' The following example demonstrates the 'Invoke(Delegate,Object[])'
 ' method of 'Control' class.

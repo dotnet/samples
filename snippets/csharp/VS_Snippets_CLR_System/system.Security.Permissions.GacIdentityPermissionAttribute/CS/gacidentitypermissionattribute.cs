@@ -1,4 +1,4 @@
-//<Snippet1>
+﻿//<Snippet1>
 // To run this sample you must create a strong-name key named snkey.snk 
 // using the Strong Name tool (sn.exe).  Both the library assembly and the 
 // application assembly that calls it must be signed with that key.  

@@ -1,3 +1,3 @@
-Public Class FormChild
+﻿Public Class FormChild
 
 End Class

@@ -1,4 +1,4 @@
-' <Snippet4>
+﻿' <Snippet4>
 Module Example
     Public Sub Main()
         ' Define an array of 8-bit signed integer values.

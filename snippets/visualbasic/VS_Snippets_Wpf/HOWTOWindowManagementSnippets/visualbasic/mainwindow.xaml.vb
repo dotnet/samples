@@ -1,4 +1,4 @@
-Namespace HOWTOWindowManagementSnippets
+﻿Namespace HOWTOWindowManagementSnippets
 	Partial Public Class MainWindow
 		Inherits Window
 

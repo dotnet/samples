@@ -1,4 +1,4 @@
-' <SnippetStackPanelExampleWholePage>
+﻿' <SnippetStackPanelExampleWholePage>
 
 Imports System
 Imports System.Windows

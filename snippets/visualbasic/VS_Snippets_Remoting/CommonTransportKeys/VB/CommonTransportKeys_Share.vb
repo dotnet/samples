@@ -1,4 +1,4 @@
-' Supporting file: Common  
+﻿' Supporting file: Common  
 
 Imports System
 Imports MicroSoft.VisualBasic

@@ -1,4 +1,4 @@
-' <SnippetSimpleFlowCodeOnlyExampleWholePage>
+﻿' <SnippetSimpleFlowCodeOnlyExampleWholePage>
 
 Imports System
 Imports System.Windows

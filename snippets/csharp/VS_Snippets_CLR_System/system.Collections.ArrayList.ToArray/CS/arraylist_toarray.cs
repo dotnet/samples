@@ -1,4 +1,4 @@
-// The following example shows how to copy the elements of an ArrayList to a string array.
+﻿// The following example shows how to copy the elements of an ArrayList to a string array.
 
 // <Snippet1>
 using System;

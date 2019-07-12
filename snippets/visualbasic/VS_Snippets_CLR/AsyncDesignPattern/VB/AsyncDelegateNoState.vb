@@ -1,4 +1,4 @@
-' <Snippet4>
+﻿' <Snippet4>
 
 'The following example demonstrates using asynchronous methods to
 'get Domain Name System information for the specified host computers.

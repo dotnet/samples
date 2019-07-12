@@ -1,4 +1,4 @@
-//<SnippetPageWithNonDefaultConstructorCODEBEHIND>
+﻿//<SnippetPageWithNonDefaultConstructorCODEBEHIND>
 using System.Windows.Controls;
 
 namespace SDKSample

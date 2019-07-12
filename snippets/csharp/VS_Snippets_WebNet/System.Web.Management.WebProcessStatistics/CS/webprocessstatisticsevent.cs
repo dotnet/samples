@@ -1,4 +1,4 @@
-/**
+﻿/**
   *File name: WebprocessStatistics.cs
   *Purpose: Implements a custom WebBaseEvent type 
   *to use the System.Web.Management helper classes.

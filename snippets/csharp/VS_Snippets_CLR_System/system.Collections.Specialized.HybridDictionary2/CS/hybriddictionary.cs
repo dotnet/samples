@@ -1,4 +1,4 @@
-// The following code example demonstrates several of the properties and methods of HybridDictionary.
+﻿// The following code example demonstrates several of the properties and methods of HybridDictionary.
 
 // <snippet1>
 using System;

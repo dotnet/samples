@@ -1,4 +1,4 @@
-// The following code example creates a case-sensitive hashtable and a case-insensitive hashtable
+﻿// The following code example creates a case-sensitive hashtable and a case-insensitive hashtable
 // and demonstrates the difference in their behavior, even if both contain the same elements.
 
 // <Snippet1>

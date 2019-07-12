@@ -1,4 +1,4 @@
-/*
+﻿/*
    This program demonstrates 'Resolve' method of 'Dns' class.
    It takes a URL or IP address string from commandline or uses default value and obtains the 'IPHostEntry' 
    object by calling 'Resolve' method of 'Dns' class. Then prints host name, IP address list and aliases.
