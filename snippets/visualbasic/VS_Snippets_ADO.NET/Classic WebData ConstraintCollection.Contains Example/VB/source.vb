@@ -7,16 +7,13 @@ Public Class Sample
  Public Shared Sub RemoveConstraint( _
     constraints As ConstraintCollection, constraint As Constraint)
 	Try
-		If constraints.Contains(constraint.ConstraintName) Then
-			If constraints.CanRemove(constraint)
+        If constraints.Contains(constraint.ConstraintName) AndAlso constraints.CanRemove(constraint) Then
 				constraints.Remove(constraint.ConstraintName)
-			End If
 		End If
 
 	Catch e As Exception
 		' Process exception and return.
-        Console.WriteLine("Exception of type {0} occurred.", _
-            e.GetType().ToString())
+        Console.WriteLine($"Exception of type {e.GetType().ToString()} occurred.")
 	End Try
  End Sub
 ' </Snippet1>
