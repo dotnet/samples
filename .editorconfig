@@ -14,6 +14,9 @@ indent_size = 4
 [project.json]
 indent_size = 2
 
+[*.{cs,vb}]
+charset = utf-8-bom
+
 # C# files
 [*.cs]
 # New line preferences
