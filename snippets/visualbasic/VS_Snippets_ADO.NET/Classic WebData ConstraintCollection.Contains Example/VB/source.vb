@@ -8,7 +8,7 @@ Public Class Sample
     constraints As ConstraintCollection, constraint As Constraint)
 	Try
         If constraints.Contains(constraint.ConstraintName) AndAlso constraints.CanRemove(constraint) Then
-				constraints.Remove(constraint.ConstraintName)
+			constraints.Remove(constraint.ConstraintName)
 		End If
 
 	Catch e As Exception
