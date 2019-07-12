@@ -10,7 +10,7 @@ public class Form1: Form
     // <Snippet1>
     private void GetConstraint(DataTable table)
     {
-        if(table.Constraints.Contains("CustomersOrdersConstraint"))
+        if (table.Constraints.Contains("CustomersOrdersConstraint"))
         {
             Constraint constraint = 
                 table.Constraints["CustomersOrdersConstraint"];
