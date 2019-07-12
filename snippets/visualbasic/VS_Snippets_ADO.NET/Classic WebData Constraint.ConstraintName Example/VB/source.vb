@@ -7,9 +7,9 @@ Public Class Form1
     
 ' <Snippet1>
  Private Sub PrintConstraintNames(myTable As DataTable)
-    For Each cs As Constraint In  myTable.Constraints
+     For Each cs As Constraint In myTable.Constraints
          Console.WriteLine(cs.ConstraintName)
-    Next
+     Next
  End Sub
 ' </Snippet1>
 End Class
