@@ -21,14 +21,12 @@ namespace DataAdapterIDataAdapterUpdateCS
             string connectionString,
             string queryString)
         {
-            DataSet dataSet = new DataSet();
+            var dataSet = new DataSet();
 
-            using (OleDbConnection connection =
-                       new OleDbConnection(connectionString))
+            using (var connection = new OleDbConnection(connectionString))
             {
                 connection.Open();
-                OleDbDataAdapter adapter =
-                    new OleDbDataAdapter();
+                var adapter = new OleDbDataAdapter();
                 adapter.SelectCommand =
                     new OleDbCommand(queryString, connection);
                 OleDbCommandBuilder builder =
@@ -50,8 +48,7 @@ namespace DataAdapterIDataAdapterUpdateCS
         {
             // To avoid storing the connection string in your code, 
             // you can retrieve it from a configuration file.
-            return "Provider=sqloledb;Data Source=(local);Initial Catalog=Northwind;"
-                + "Integrated Security=SSPI";
+            return "Provider=sqloledb;Data Source=(local);Initial Catalog=Northwind;Integrated Security=SSPI";
         }
 
     }
