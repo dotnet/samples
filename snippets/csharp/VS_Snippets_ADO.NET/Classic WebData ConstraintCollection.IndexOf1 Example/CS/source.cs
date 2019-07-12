@@ -15,7 +15,7 @@ public class Form1: Form
         {
             if (constraints.Contains(constraint.ConstraintName) && constraints.CanRemove(constraint)) 
             {
-                    constraints.RemoveAt(constraints.IndexOf(constraint));
+                constraints.RemoveAt(constraints.IndexOf(constraint));
             }
         }
         catch(Exception e) 
