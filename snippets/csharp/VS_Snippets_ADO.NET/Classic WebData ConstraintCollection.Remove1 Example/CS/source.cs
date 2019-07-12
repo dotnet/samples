@@ -12,7 +12,7 @@ public class Form1: Form
         Constraint constraint)
     {
         if (constraints.Contains(constraint.ConstraintName) && constraints.CanRemove(constraint))
-                constraints.Remove(constraint.ConstraintName);
+            constraints.Remove(constraint.ConstraintName);
     }
     // </Snippet1>
 
