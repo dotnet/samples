@@ -1,6 +1,6 @@
-imports System
-imports System.Data
-imports System.Windows.Forms
+Imports System
+Imports System.Data
+Imports System.Windows.Forms
 
 
 Public Class Form1: Inherits Form
@@ -8,20 +8,16 @@ Public Class Form1: Inherits Form
 
 ' <Snippet1>
 Private Sub PrintColumnNames(dataSet As DataSet)
-    Dim table As DataTable
-    Dim column As DataColumn 
-
     ' For each DataTable, print the ColumnName.
-    For Each table in dataSet.Tables
-        For Each column in table.Columns
-        Console.WriteLine(column.ColumnName)
+    For Each table As DataTable In dataSet.Tables
+        For Each column As DataColumn In table.Columns
+            Console.WriteLine(column.ColumnName)
         Next
     Next
 End Sub
 
 Private Sub AddColumn(table As DataTable)
-    Dim column As DataColumn
-    column = New DataColumn()
+    Dim column As New DataColumn()
 
     With column
         .ColumnName = "SupplierID"
