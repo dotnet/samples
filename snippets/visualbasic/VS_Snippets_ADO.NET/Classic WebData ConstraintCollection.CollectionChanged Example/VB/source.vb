@@ -36,11 +36,11 @@ Private Shared Sub ConstraintCollectionChanged()
             "pKey", ordersTable.Columns("CustID"), True)
 
 		' Remove constraints.
-		customersTable.Constraints.RemoveAt( 0)
+		customersTable.Constraints.RemoveAt(0)
 
 		' Results in an Exception. You can't remove 
         ' a primary key constraint.
-		ordersTable.Constraints.RemoveAt( 0) 
+		ordersTable.Constraints.RemoveAt(0) 
  
 	Catch ex As Exception
 		' Process exception and return.
