@@ -17,8 +17,7 @@ Public Class Form1
      myDataAdapter.TableMappings.Add("Orders", "DataOrders")
      myDataAdapter.TableMappings.Add("Products", "DataProducts")
      Dim myMessage As String = "Table Mappings:" + ControlChars.Cr
-     Dim i As Integer
-     For i = 0 To myDataAdapter.TableMappings.Count - 1
+     For i As Integer = 0 To myDataAdapter.TableMappings.Count - 1
          myMessage += i.ToString() + " " _
             + myDataAdapter.TableMappings(i).ToString() + ControlChars.Cr
      Next i
