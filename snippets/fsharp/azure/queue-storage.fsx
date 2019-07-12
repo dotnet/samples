@@ -1,6 +1,6 @@
 open Microsoft.Azure // Namespace for CloudConfigurationManager 
-open Microsoft.WindowsAzure.Storage // Namespace for CloudStorageAccount
-open Microsoft.WindowsAzure.Storage.Queue // Namespace for Queue storage types
+open Microsoft.Azure.Storage // Namespace for CloudStorageAccount
+open Microsoft.Azure.Storage.Queue // Namespace for Queue storage types
 
 //
 // Get your connection string.

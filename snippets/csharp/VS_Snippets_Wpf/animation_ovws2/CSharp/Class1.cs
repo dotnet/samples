@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,10 +15,10 @@ namespace WpfApplication1
         private void CreateRectangle()
         {
             //<SnippetRectangleOpacityFadeExampleCode_1>
-            StackPanel myPanel = new StackPanel();
+            var myPanel = new StackPanel();
             myPanel.Margin = new Thickness(10);
 
-            Rectangle myRectangle = new Rectangle();
+            var myRectangle = new Rectangle();
             myRectangle.Name = "myRectangle";
             this.RegisterName(myRectangle.Name, myRectangle);
             myRectangle.Width = 100;
@@ -32,7 +32,7 @@ namespace WpfApplication1
         private void CreateDoubleAnimation()
         {
             //<SnippetRectangleOpacityFadeExampleCode_2>
-            DoubleAnimation myDoubleAnimation = new DoubleAnimation();
+            var myDoubleAnimation = new DoubleAnimation();
             myDoubleAnimation.From = 1.0;
             myDoubleAnimation.To = 0.0;
             //</SnippetRectangleOpacityFadeExampleCode_2>

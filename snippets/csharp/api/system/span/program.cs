@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.InteropServices;
 using static Program2;
 
@@ -25,11 +25,11 @@ class Program
         
         byte data = 0;
         for (int ctr = 0; ctr < arraySpan.Length; ctr++)
-           arraySpan[ctr] = data++;
+            arraySpan[ctr] = data++;
 
         int arraySum = 0;
         foreach (var value in array)
-           arraySum += value;
+            arraySum += value;
 
         Console.WriteLine($"The sum is {arraySum}");
         // Output:  The sum is 4950
@@ -42,18 +42,19 @@ class Program
         // Create a span from native memory.
         var native = Marshal.AllocHGlobal(100);
         Span<byte> nativeSpan;
-        unsafe {
+        unsafe
+        {
             nativeSpan = new Span<byte>(native.ToPointer(), 100);
         }
         byte data = 0;
         for (int ctr = 0; ctr < nativeSpan.Length; ctr++)
-           nativeSpan[ctr] = data++;
+            nativeSpan[ctr] = data++;
 
         int nativeSum = 0;
-        foreach (var value in nativeSpan)    
-           nativeSum += value;
+        foreach (var value in nativeSpan)
+            nativeSum += value;
 
-        Console.WriteLine($"The sum is {nativeSum}");    
+        Console.WriteLine($"The sum is {nativeSum}");
         Marshal.FreeHGlobal(native);
         // Output:  The sum is 4950
         // </Snippet2>
@@ -66,13 +67,13 @@ class Program
         byte data = 0;
         Span<byte> stackSpan = stackalloc byte[100];
         for (int ctr = 0; ctr < stackSpan.Length; ctr++)
-           stackSpan[ctr] = data++;
+            stackSpan[ctr] = data++;
 
         int stackSum = 0;
-        foreach (var value in stackSpan)    
-           stackSum += value;
+        foreach (var value in stackSpan)
+            stackSum += value;
 
-        Console.WriteLine($"The sum is {stackSum}");    
+        Console.WriteLine($"The sum is {stackSum}");
         // Output:  The sum is 4950
         // </Snippet3>
     }
@@ -88,17 +89,18 @@ public class Program2
         var arraySpan = new Span<byte>(array);
         
         InitializeSpan(arraySpan);
-        Console.WriteLine($"The sum is {ComputeSum(arraySpan):N0}");    
+        Console.WriteLine($"The sum is {ComputeSum(arraySpan):N0}");
 
         // Create an array from native memory.
         var native = Marshal.AllocHGlobal(100);
         Span<byte> nativeSpan;
-        unsafe {
+        unsafe
+        {
             nativeSpan = new Span<byte>(native.ToPointer(), 100);
         }
 
         InitializeSpan(nativeSpan);
-        Console.WriteLine($"The sum is {ComputeSum(arraySpan):N0}");    
+        Console.WriteLine($"The sum is {ComputeSum(nativeSpan):N0}");
         
         Marshal.FreeHGlobal(native);
 
@@ -106,8 +108,8 @@ public class Program2
         Span<byte> stackSpan = stackalloc byte[100];
 
         InitializeSpan(stackSpan);
-        Console.WriteLine($"The sum is {ComputeSum(arraySpan):N0}");    
-    }        
+        Console.WriteLine($"The sum is {ComputeSum(stackSpan):N0}");
+    }
 
     public static void InitializeSpan(Span<byte> span)
     {
@@ -120,7 +122,7 @@ public class Program2
     {
         int sum = 0;
         foreach (var value in span)
-           sum += value;
+            sum += value;
 
         return sum;
     }

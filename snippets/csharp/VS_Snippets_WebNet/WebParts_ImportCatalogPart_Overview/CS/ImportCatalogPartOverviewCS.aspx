@@ -20,7 +20,7 @@
     ImportCatalogPart1.UploadButtonText = "Upload Description";
     ImportCatalogPart1.UploadHelpText = "Upload a description file.";
     ImportCatalogPart1.ImportedPartLabelText = "Imported Controls";
-    ImportCatalogPart1.PartImportErrorLabelText = "An error occured " 
+    ImportCatalogPart1.PartImportErrorLabelText = "An error occurred " 
       + "during the import process.";
 
   }

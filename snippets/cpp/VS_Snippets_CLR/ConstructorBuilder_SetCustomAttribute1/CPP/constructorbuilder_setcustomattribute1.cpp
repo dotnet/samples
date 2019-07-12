@@ -62,11 +62,11 @@ static Type^ MyCreateCallee( AppDomain^ domain )
    }
    catch ( ArgumentNullException^ ex ) 
    {
-      Console::WriteLine( "The following exception has occured : {0}", ex->Message );
+      Console::WriteLine( "The following exception has occurred : {0}", ex->Message );
    }
    catch ( Exception^ ex ) 
    {
-      Console::WriteLine( "The following exception has occured : {0}", ex->Message );
+      Console::WriteLine( "The following exception has occurred : {0}", ex->Message );
    }
 
    return myTypeBuilder->CreateType();

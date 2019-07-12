@@ -5,7 +5,7 @@ public class GetDotNetVersion
 {
    public static void Main()
    {
-      GetDotNetVersion.Get45PlusFromRegistry();
+      Get45PlusFromRegistry();
    }
 
    private static void Get45PlusFromRegistry()
@@ -15,7 +15,7 @@ public class GetDotNetVersion
       using (var ndpKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry32).OpenSubKey(subkey))
       {
    		if (ndpKey != null && ndpKey.GetValue("Release") != null) {
-   			Console.WriteLine(".NET Framework Version: " + CheckFor45PlusVersion((int) ndpKey.GetValue("Release")));
+   			Console.WriteLine($".NET Framework Version: {CheckFor45PlusVersion((int) ndpKey.GetValue("Release"))}");
    		}
          else {
             Console.WriteLine(".NET Framework Version 4.5 or later is not detected.");
@@ -25,8 +25,10 @@ public class GetDotNetVersion
       // Checking the version using >= enables forward compatibility.
       string CheckFor45PlusVersion(int releaseKey)
       {
+         if (releaseKey >= 528040)
+            return "4.8 or later";
          if (releaseKey >= 461808)
-            return "4.7.2 or later";
+            return "4.7.2";
          if (releaseKey >= 461308)
             return "4.7.1";
          if (releaseKey >= 460798)

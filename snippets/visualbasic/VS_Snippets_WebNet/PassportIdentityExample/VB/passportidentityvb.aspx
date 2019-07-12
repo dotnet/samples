@@ -89,7 +89,7 @@ PassportIdentity Class topic. -->
             End If
 
         Catch comError As System.Runtime.InteropServices.COMException
-            Me.Response.Write("An error occured while working with the " & _
+            Me.Response.Write("An error occurred while working with the " & _
                 "Passport SDK. The following result was returned: " & _
                 comError.ErrorCode)
         End Try

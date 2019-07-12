@@ -24,20 +24,16 @@ namespace AsyncBreakfast
                 if (finished == eggsTask)
                 {
                     Console.WriteLine("eggs are ready");
-                    allTasks.Remove(eggsTask);
-                    var eggs = await eggsTask;
-                } else if (finished == baconTask)
+                }
+                else if (finished == baconTask)
                 {
                     Console.WriteLine("bacon is ready");
-                    allTasks.Remove(baconTask);
-                    var bacon = await baconTask;
-                } else if (finished == toastTask)
+                }
+                else if (finished == toastTask)
                 {
                     Console.WriteLine("toast is ready");
-                    allTasks.Remove(toastTask);
-                    var toast = await toastTask;
-                } else
-                        allTasks.Remove(finished);
+                }
+                allTasks.Remove(finished);
             }
             Console.WriteLine("Breakfast is ready!");
             // </SnippetAwaitAnyTask>

@@ -1,12 +1,10 @@
-'<snippet1>
-Imports System
+' <Snippet1>
 Imports System.Xml
 Imports System.Xml.Schema
 Imports System.IO
 
-public class Sample 
-
-  public shared sub Main() 
+Public Module Sample 
+  Public Sub Main() 
 
     ' Create the XmlSchemaSet class.
     Dim sc as XmlSchemaSet = new XmlSchemaSet()
@@ -24,14 +22,25 @@ public class Sample
     Dim reader as XmlReader = XmlReader.Create("booksSchemaFail.xml", settings)
 
     ' Parse the file. 
-    while reader.Read()
-    end while
+    While reader.Read()
+    End While
     
-  end sub
+  End Sub
 
   ' Display any validation errors.
-  private shared sub ValidationCallBack(sender as object, e as ValidationEventArgs) 
-    Console.WriteLine("Validation Error: {0}", e.Message)
-  end sub
-end class
-'</snippet1>
+  Private Sub ValidationCallBack(sender as object, e as ValidationEventArgs) 
+    Console.WriteLine($"Validation Error:{vbCrLf}   {e.Message}")
+    Console.WriteLine()
+  End Sub
+End Module
+' The example displays output like the following:
+'   Validation Error: 
+'        The element 'book' in namespace 'urn:bookstore-schema' has invalid child element 'author' 
+'        in namespace 'urn:bookstore-schema'. List of possible elements expected: 'title' in 
+'        namespace 'urn:bookstore-schema'.
+'
+'    Validation Error: 
+'       The element 'author' in namespace 'urn:bookstore-schema' has invalid child element 'name' 
+'       in namespace 'urn:bookstore-schema'. List of possible elements expected: 'first-name' in 
+'       namespace 'urn:bookstore-schema'.
+' </Snippet1>

@@ -115,7 +115,7 @@ Inherits Form
             Y += font.Height
 
             e.Graphics.DrawString( _
-               "   iD: 0x" & propItem.Id.ToString("x"), _
+               "   id: 0x" & propItem.Id.ToString("x"), _
                font, _
                blackBrush, _
                X, Y)

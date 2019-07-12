@@ -92,7 +92,7 @@ Public Module MemoryProtectionSample
             Throw New ArgumentException("Buffer")
         End If
 
-        ' Encrypt the data in memory. The result is stored in the same same array as the original data.
+        ' Encrypt the data in memory. The result is stored in the same array as the original data.
         ProtectedMemory.Protect(Buffer, Scope)
 
     End Sub 'EncryptInMemoryData
@@ -106,7 +106,7 @@ Public Module MemoryProtectionSample
             Throw New ArgumentException("Buffer")
         End If
 
-        ' Decrypt the data in memory. The result is stored in the same same array as the original data.
+        ' Decrypt the data in memory. The result is stored in the same array as the original data.
         ProtectedMemory.Unprotect(Buffer, Scope)
 
     End Sub 'DecryptInMemoryData
@@ -147,7 +147,7 @@ Public Module MemoryProtectionSample
         End If
         Dim length As Integer = 0
 
-        ' Encrypt the data in memory. The result is stored in the same same array as the original data.
+        ' Encrypt the data and store the result in a new byte array. The original data remains unchanged.
         Dim encryptedData As Byte() = ProtectedData.Protect(Buffer, Entropy, Scope)
 
         ' Write the encrypted data to a stream.

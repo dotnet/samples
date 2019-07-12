@@ -1,7 +1,3 @@
-//<SnippetOpenMarginsDialogCODEBEHIND1>
-//<SnippetOpenFindDialogCODEBEHIND1>
-//<SnippetOpenMarginsDialogProcessReturnCODEBEHIND1>
-//<SnippetOpenFindDialogResultCODEBEHIND1>
 using System;
 using System.ComponentModel;
 using System.Windows;
@@ -12,10 +8,6 @@ namespace SDKSample
 {
     public partial class MainWindow : Window
     {
-        //</SnippetOpenMarginsDialogProcessReturnCODEBEHIND1>
-        //</SnippetOpenMarginsDialogCODEBEHIND1>
-        //</SnippetOpenFindDialogCODEBEHIND1>
-        //</SnippetOpenFindDialogResultCODEBEHIND1>
         bool needsToBeSaved;
 
         public MainWindow()
@@ -70,7 +62,6 @@ namespace SDKSample
             this.Close();
         }
 
-        //<SnippetOpenFindDialogCODEBEHIND2>
         void editFindMenuItem_Click(object sender, RoutedEventArgs e)
         {
             // Instantiate the dialog box
@@ -83,13 +74,9 @@ namespace SDKSample
             // Open the dialog box modally
             dlg.Show();
         }
-        //</SnippetOpenFindDialogCODEBEHIND2>
 
-        //<SnippetOpenMarginsDialogCODEBEHIND2>
-        //<SnippetOpenMarginsDialogProcessReturnCODEBEHIND2>
         void formatMarginsMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            //</SnippetOpenMarginsDialogProcessReturnCODEBEHIND2>
             // Instantiate the dialog box
             MarginsDialogBox dlg = new MarginsDialogBox();
 
@@ -100,18 +87,13 @@ namespace SDKSample
             // Open the dialog box modally 
             dlg.ShowDialog();
 
-            //</SnippetOpenMarginsDialogCODEBEHIND2>
-            //<SnippetOpenMarginsDialogProcessReturnCODEBEHIND3>
             // Process data entered by user if dialog box is accepted
             if (dlg.DialogResult == true)
             {
                 // Update fonts
                 this.documentTextBox.Margin = dlg.DocumentMargin;
             }
-            //<SnippetOpenMarginsDialogCODEBEHIND3>
         }
-        //</SnippetOpenMarginsDialogCODEBEHIND3>
-        //</SnippetOpenMarginsDialogProcessReturnCODEBEHIND3>
 
         void formatFontMenuItem_Click(object sender, RoutedEventArgs e)
         {
@@ -200,7 +182,6 @@ namespace SDKSample
             }
         }
 
-        //<SnippetOpenFindDialogResultCODEBEHIND2>
         void dlg_TextFound(object sender, EventArgs e)
         {
             // Get the find dialog box that raised the event
@@ -210,12 +191,5 @@ namespace SDKSample
             this.documentTextBox.Select(dlg.Index, dlg.Length);
             this.documentTextBox.Focus();
         }
-        //<SnippetOpenMarginsDialogCODEBEHIND4>
-        //<SnippetOpenFindDialogCODEBEHIND3>
-        //<SnippetOpenMarginsDialogProcessReturnCODEBEHIND4>
     }
 }
-//</SnippetOpenMarginsDialogCODEBEHIND4>
-//</SnippetOpenMarginsDialogProcessReturnCODEBEHIND4>
-//</SnippetOpenFindDialogCODEBEHIND3>
-//</SnippetOpenFindDialogResultCODEBEHIND2>

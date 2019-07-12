@@ -1,4 +1,3 @@
-// <Snippet1>
 <%@ WebService Language="C#" class="ThrowSoapException"%>
 
 using System;
@@ -42,5 +41,3 @@ public class ThrowSoapException : WebService
         throw se;
         return;    }
 }
-
-// </Snippet1>

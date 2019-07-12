@@ -20,7 +20,7 @@ namespace ABI
         };
 
         [uuid({3B631C7A-B226-4F9A-8279-17D4CBAABA93})]
-        interface IMyAddtionalInterfaceOnFactory: IWeakReference
+        interface IMyAdditionalInterfaceOnFactory: IWeakReference
         {
             virtual HRESULT STDMETHODCALLTYPE Resolve( 
                 /* [in] */ __RPC__in REFIID riid,
@@ -43,7 +43,7 @@ namespace ABI
         //ActivatableClass(MyClass);
 
         // <snippet1>
-        struct MyClassFactory : public ActivationFactory<IMyAddtionalInterfaceOnFactory>
+        struct MyClassFactory : public ActivationFactory<IMyAdditionalInterfaceOnFactory>
         {
             STDMETHOD(ActivateInstance) (_Outptr_result_nullonfailure_ IInspectable** ppvObject)
             {

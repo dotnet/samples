@@ -26,7 +26,7 @@ private:
    void MyInstaller_Committing( Object^ sender, InstallEventArgs^ e )
    {
       Console::WriteLine( "" );
-      Console::WriteLine( "Committing Event occured." );
+      Console::WriteLine( "Committing Event occurred." );
       Console::WriteLine( "" );
    }
 
@@ -35,7 +35,7 @@ private:
    void MyInstaller_Committed( Object^ sender, InstallEventArgs^ e )
    {
       Console::WriteLine( "" );
-      Console::WriteLine( "Committed Event occured." );
+      Console::WriteLine( "Committed Event occurred." );
       Console::WriteLine( "" );
    }
 

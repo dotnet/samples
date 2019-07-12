@@ -6,25 +6,25 @@ class TestRef
 {
     static void FillArray(ref int[] arr)
     {
-        // Create the array on demand:
+        // Create the array on demand.
         if (arr == null)
         {
             arr = new int[10];
         }
-        // Fill the array:
+        // Fill the array.
         arr[0] = 1111;
         arr[4] = 5555;
     }
 
     static void Main()
     {
-        // Initialize the array:
+        // Initialize the array.
         int[] theArray = { 1, 2, 3, 4, 5 };
 
-        // Pass the array using ref:
+        // Pass the array using ref.
         FillArray(ref theArray);
 
-        // Display the updated array:
+        // Display the updated array.
         System.Console.WriteLine("Array elements are:");
         for (int i = 0; i < theArray.Length; i++)
         {
@@ -48,7 +48,7 @@ class TestOut
 {
     static void FillArray(out int[] arr)
     {
-        // Initialize the array:
+        // Initialize the array.
         arr = new int[5] { 1, 2, 3, 4, 5 };
     }
 
@@ -56,10 +56,10 @@ class TestOut
     {
         int[] theArray; // Initialization is not required
 
-        // Pass the array to the callee using out:
+        // Pass the array to the callee using out.
         FillArray(out theArray);
 
-        // Display the array elements:
+        // Display the array elements.
         System.Console.WriteLine("Array elements are:");
         for (int i = 0; i < theArray.Length; i++)
         {
@@ -340,25 +340,25 @@ class TestArraysClass
 {
     static void Main()
     {
-        // Declare a single-dimensional array 
+        // Declare a single-dimensional array. 
         int[] array1 = new int[5];
 
-        // Declare and set array element values
+        // Declare and set array element values.
         int[] array2 = new int[] { 1, 3, 5, 7, 9 };
 
-        // Alternative syntax
+        // Alternative syntax.
         int[] array3 = { 1, 2, 3, 4, 5, 6 };
 
-        // Declare a two dimensional array
+        // Declare a two dimensional array.
         int[,] multiDimensionalArray1 = new int[2, 3];
 
-        // Declare and set array element values
+        // Declare and set array element values.
         int[,] multiDimensionalArray2 = { { 1, 2, 3 }, { 4, 5, 6 } };
 
-        // Declare a jagged array
+        // Declare a jagged array.
         int[][] jaggedArray = new int[6][];
 
-        // Set the values of the first array in the jagged array structure
+        // Set the values of the first array in the jagged array structure.
         jaggedArray[0] = new int[4] { 1, 2, 3, 4 };
     }
 }
@@ -372,7 +372,7 @@ namespace WrapTestArraysClass
     {
         static void Main()
         {
-            // Declare and initialize an array:
+            // Declare and initialize an array.
             int[,] theArray = new int[5, 10];
             System.Console.WriteLine("The array has {0} dimensions.", theArray.Rank);
         }
@@ -387,14 +387,14 @@ class ArrayTest
 {
     static void Main()
     {
-        // Declare the array of two elements:
+        // Declare the array of two elements.
         int[][] arr = new int[2][];
 
-        // Initialize the elements:
+        // Initialize the elements.
         arr[0] = new int[5] { 1, 3, 5, 7, 9 };
         arr[1] = new int[4] { 2, 4, 6, 8 };
 
-        // Display the array elements:
+        // Display the array elements.
         for (int i = 0; i < arr.Length; i++)
         {
             System.Console.Write("Element({0}): ", i);

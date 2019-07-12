@@ -1,9 +1,6 @@
 //<snippet1>
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Collections.Concurrent;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -29,9 +26,8 @@ class AddTakeDemo
     {
         using (BlockingCollection<int> bc = new BlockingCollection<int>())
         {
-
-            // Spin up a Task to populate the BlockingCollection 
-            using (Task t1 = Task.Factory.StartNew(() =>
+            // Spin up a Task to populate the BlockingCollection
+            using (Task t1 = Task.Run(() =>
             {
                 bc.Add(1);
                 bc.Add(2);
@@ -39,9 +35,8 @@ class AddTakeDemo
                 bc.CompleteAdding();
             }))
             {
-
                 // Spin up a Task to consume the BlockingCollection
-                using (Task t2 = Task.Factory.StartNew(() =>
+                using (Task t2 = Task.Run(() =>
                 {
                     try
                     {
@@ -54,8 +49,9 @@ class AddTakeDemo
                         Console.WriteLine("That's All!");
                     }
                 }))
-
+                {
                     await Task.WhenAll(t1, t2);
+                }
             }
         }
     }
@@ -92,7 +88,7 @@ class TryTakeDemo
             // Launch three parallel actions to consume the BlockingCollection
             Parallel.Invoke(action, action, action);
 
-            Console.WriteLine("Sum[0..{0}) = {1}, should be {2}", NUMITEMS, outerSum, ((NUMITEMS*(NUMITEMS - 1))/2));
+            Console.WriteLine("Sum[0..{0}) = {1}, should be {2}", NUMITEMS, outerSum, ((NUMITEMS * (NUMITEMS - 1)) / 2));
             Console.WriteLine("bc.IsCompleted = {0} (should be true)", bc.IsCompleted);
         }
     }
@@ -102,7 +98,6 @@ class TryTakeDemo
 //<snippet3>
 class FromToAnyDemo
 {
-
     // Demonstrates:
     //      Bounded BlockingCollection<T>
     //      BlockingCollection<T>.TryAddToAny()
@@ -137,13 +132,12 @@ class ConsumingEnumerableDemo
     //      BlockingCollection<T>.Add()
     //      BlockingCollection<T>.CompleteAdding()
     //      BlockingCollection<T>.GetConsumingEnumerable()
-    public static void BC_GetConsumingEnumerable()
+    public static async Task BC_GetConsumingEnumerable()
     {
         using (BlockingCollection<int> bc = new BlockingCollection<int>())
         {
-
             // Kick off a producer task
-            Task.Factory.StartNew(async () =>
+            await Task.Run(async () =>
             {
                 for (int i = 0; i < 10; i++)
                 {

@@ -4,13 +4,13 @@ Imports System.IO
 Imports System.Runtime.InteropServices
 
 '<snippet40>
-Public Delegate Function CallBack(ByVal handle As Integer, _
-    ByVal param As IntPtr) As Boolean
+Public Delegate Function CallBack(
+    ByVal handle As Integer, ByVal param As IntPtr) As Boolean
 
 Public Class LibWrap
     ' Passes a managed object instead of an LPARAM.
     ' Declares a managed prototype for the unmanaged function.
-    Declare Function EnumWindows Lib "user32.dll" ( _
+    Declare Function EnumWindows Lib "user32.dll" (
         ByVal cb As CallBack, ByVal param As IntPtr) As Boolean
 End Class
 '</snippet40>
@@ -18,7 +18,7 @@ End Class
 '<snippet41>
 Public Class App
     Public Shared Sub Main()
-        Dim tw As TextWriter = System.Console.Out
+        Dim tw As TextWriter = Console.Out
         Dim gch As GCHandle = GCHandle.Alloc(tw)
 
         ' Platform invoke prevents the delegate from being garbage collected
@@ -29,8 +29,8 @@ Public Class App
         gch.Free()
     End Sub
 
-    Public Shared Function CaptureEnumWindowsProc(ByVal handle  As Integer, _
-        ByVal param As IntPtr) As Boolean
+    Public Shared Function CaptureEnumWindowsProc(
+        ByVal handle As Integer, ByVal param As IntPtr) As Boolean
         Dim gch As GCHandle = GCHandle.op_Explicit(param)
         Dim tw As TextWriter = CType(gch.Target, TextWriter)
         tw.WriteLine(handle)

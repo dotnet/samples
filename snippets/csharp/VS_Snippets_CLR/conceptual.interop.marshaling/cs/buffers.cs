@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 //<snippet2>
 public class LibWrap
 {
-    [DllImport("Kernel32.dll", CharSet=CharSet.Auto)]
-    public static extern int GetSystemDirectory(StringBuilder
-        sysDirBuffer, int size);
+    [DllImport("Kernel32.dll", CharSet = CharSet.Auto)]
+    public static extern int GetSystemDirectory(
+        StringBuilder sysDirBuffer, int size);
 
-    [DllImport("Kernel32.dll", CharSet=CharSet.Auto)]
+    [DllImport("Kernel32.dll", CharSet = CharSet.Auto)]
     public static extern IntPtr GetCommandLine();
 }
 //</snippet2>

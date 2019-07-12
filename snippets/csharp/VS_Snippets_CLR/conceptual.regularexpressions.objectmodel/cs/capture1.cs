@@ -24,4 +24,5 @@ public class Example
 //       Chicago               62
 //       New York              67
 //       San Francisco         59
+//       Seattle               58
 // </Snippet16>

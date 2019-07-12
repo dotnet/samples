@@ -1,4 +1,3 @@
-// <Snippet1>
 <%@ WebService Language="C#" Class= "ServerVariables"%>
  
  using System;
@@ -13,5 +12,3 @@
        return Server.MachineName;
     }   
  }
- 
-// </Snippet1>

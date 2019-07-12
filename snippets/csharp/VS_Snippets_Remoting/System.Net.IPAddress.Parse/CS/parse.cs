@@ -29,7 +29,7 @@ class ParseAddress
       IPaddress = args[0];
 
     // Get the list of the IPv6 addresses associated with the requested host.
-    parse(IPaddress);
+    Parse(IPaddress);
    
   }
 
@@ -38,7 +38,7 @@ class ParseAddress
   // IPv6 address, the method displays the Parse output into quad-notation or
   // colon-hexadecimal notation, respectively. Otherwise, it displays an 
   // error message.
-  private static void parse(string ipAddress)
+  private static void Parse(string ipAddress)
   {
     try
     {

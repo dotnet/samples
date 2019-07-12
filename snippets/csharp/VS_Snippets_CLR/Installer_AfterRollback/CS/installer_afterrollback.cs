@@ -26,7 +26,7 @@ public class MyInstallerClass: Installer
    // Event handler for 'AfterRollback' event.
    private void MyInstaller_AfterRollBack(object sender, InstallEventArgs e)
    {
-      Console.WriteLine("AfterRollBack Event occured.");
+      Console.WriteLine("AfterRollBack Event occurred.");
    }
 
    // Override the 'Install' method.

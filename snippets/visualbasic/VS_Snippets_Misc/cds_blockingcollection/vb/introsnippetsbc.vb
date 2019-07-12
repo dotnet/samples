@@ -48,7 +48,7 @@ Module IntroSnippetsBC
                                   While moreItemsToAdd = True
                                       Dim item As Data = GetData()
 
-                                      ' Blocks if numbers.Count = dataItems.BoundedCapacity
+                                      ' Blocks if dataItems.Count = dataItems.BoundedCapacity.
                                       dataItems.Add(item)
                                   End While
 

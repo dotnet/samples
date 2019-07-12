@@ -38,7 +38,7 @@ namespace eSQLExamplesCS
             //ReturnNestedCollectionWithEntityCommand();
             //StoredProcWithEntityCommand();
             //ExecuteStructuralTypeQuery(@"SELECT VALUE Product FROM AdventureWorksEntities.Product AS Product");
-            //ExectueRefTypeQuery(@"SELECT REF(p) FROM AdventureWorksEntities.Product as p");
+            //ExecuteRefTypeQuery(@"SELECT REF(p) FROM AdventureWorksEntities.Product as p");
             //ExecutePrimitiveTypeQuery(@"SELECT VALUE AVG(p.ListPrice) FROM AdventureWorksEntities.Product as p");
 
         }
@@ -769,7 +769,7 @@ namespace eSQLExamplesCS
         
         //string esqlQuery = @"SELECT REF(p) FROM AdventureWorksEntities.Product as p";
         //<snippeteSQLRefTypes>
-                static void ExectueRefTypeQuery(string esqlQuery)
+                static void ExecuteRefTypeQuery(string esqlQuery)
                 {
                     if (esqlQuery.Length == 0)
                     {

@@ -81,7 +81,7 @@ namespace SDKSample
       {
          int SliderValue = (int)timelineSlider.Value;
 
-         // Overloaded constructor takes the arguments days, hours, minutes, seconds, miniseconds.
+         // Overloaded constructor takes the arguments days, hours, minutes, seconds, milliseconds.
          // Create a TimeSpan with miliseconds equal to the slider value.
          TimeSpan ts = new TimeSpan(0, 0, 0, 0, SliderValue);
          myMediaElement.Position = ts;

@@ -9,11 +9,9 @@
 
 ' <Snippet1>
 ' <Snippet2>
-Imports System
 Imports System.Diagnostics
 
 Class MyEventlogClass
-
    Public Shared Sub Main()
       Dim myEventType As String = Nothing
       ' Associate the instance of 'EventLog' with local System Log.
@@ -37,7 +35,7 @@ Class MyEventlogClass
       Dim myCount As Integer = myLogEntryCollection.Count
       ' Iterate through all 'EventLogEntry' instances in 'EventLog'.
       Dim i As Integer
-      For i = myCount - 1 To -1 Step -1
+      For i = myCount - 1 To 0 Step -1
          Dim myLogEntry As EventLogEntry = myLogEntryCollection(i)
          ' Select the entry having desired EventType.
          If myLogEntry.EntryType.ToString().Equals(myEventType) Then
@@ -46,9 +44,8 @@ Class MyEventlogClass
                              "event of type " & myLogEntry.EntryType.ToString())
             Return
          End If
-      Next i
-
-   End Sub 'Main
-End Class 'MyEventlogClass
+      Next 
+   End Sub
+End Class
 ' </Snippet2>
 ' </Snippet1>

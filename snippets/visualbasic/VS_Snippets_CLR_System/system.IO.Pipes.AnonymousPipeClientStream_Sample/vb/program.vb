@@ -1,5 +1,4 @@
 '<snippet01>
-Imports System
 Imports System.IO
 Imports System.IO.Pipes
 
@@ -7,14 +6,6 @@ Class PipeClient
     Shared Sub Main(args() as String)
         If args.Length > 0 Then
             Using pipeClient As New AnonymousPipeClientStream(PipeDirection.In, args(0))
-                ' Show that anonymous Pipes do not support Message mode.
-                Try
-                    Console.WriteLine("[CLIENT] Setting ReadMode to ""Message"".")
-                    pipeClient.ReadMode = PipeTransmissionMode.Message
-                Catch e As NotSupportedException
-                    Console.WriteLine("[CLIENT] Execption:" + vbNewLine + "    {0}", e.Message)
-                End Try
-
                 Console.WriteLine("[CLIENT] Current TransmissionMode: {0}.", _
                    pipeClient.TransmissionMode)
 

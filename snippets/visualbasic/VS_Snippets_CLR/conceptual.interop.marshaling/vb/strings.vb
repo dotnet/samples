@@ -5,13 +5,13 @@ Imports System.Runtime.InteropServices
 
 '<snippet14>
 ' Declares a managed structure for each unmanaged structure.
-<StructLayout(LayoutKind.Sequential, CharSet:=CharSet.Unicode)> _
+<StructLayout(LayoutKind.Sequential, CharSet:=CharSet.Unicode)>
 Public Structure MyStrStruct
     Public buffer As String
     Public size As Integer
 End Structure
 
-<StructLayout(LayoutKind.Sequential, CharSet:=CharSet.Ansi)> _
+<StructLayout(LayoutKind.Sequential, CharSet:=CharSet.Ansi)>
 Public Structure MyStrStruct2
     Public buffer As String
     Public size As Integer
@@ -19,12 +19,20 @@ End Structure
 
 Public Class LibWrap
     ' Declares managed prototypes for unmanaged functions.
-    Declare Function TestStringAsResult Lib "..\LIB\PinvokeLib.dll" () _
+    <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
+    Shared Function TestStringAsResult() _
         As String
-    Declare Sub TestStringInStruct Lib "..\LIB\PinvokeLib.dll" _
-        (ByRef mss As MyStrStruct)
-    Declare Sub TestStringInStructAnsi Lib "..\LIB\PinvokeLib.dll" _
-        (ByRef mss As MyStrStruct2)
+    End Function
+
+    <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
+    Shared Sub TestStringInStruct(
+        ByRef mss As MyStrStruct)
+    End Sub
+
+    <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
+    Shared Sub TestStringInStructAnsi(
+        ByRef mss As MyStrStruct2)
+    End Sub
 End Class
 '</snippet14>
 
@@ -46,8 +54,8 @@ Public Class App
         mss.size = mss.buffer.Length
 
         LibWrap.TestStringInStruct(mss)
-        Console.WriteLine(vbNewLine + "Buffer after Unicode function call: {0}", _
-            mss.buffer )
+        Console.WriteLine(vbNewLine + "Buffer after Unicode function call: {0}",
+            mss.buffer)
 
         Dim buffer2 As New StringBuilder("content", 100)
         buffer2.Append(ChrW(0))

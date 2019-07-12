@@ -442,12 +442,10 @@ class WriteTextFile
             string destFile = System.IO.Path.Combine(targetPath, fileName);
 
             // To copy a folder's contents to a new location:
-            // Create a new target folder, if necessary.
-            if (!System.IO.Directory.Exists(targetPath))
-            {
-                System.IO.Directory.CreateDirectory(targetPath);
-            }
-
+            // Create a new target folder. 
+            // If the directory already exists, this method does not create a new directory.
+            System.IO.Directory.CreateDirectory(targetPath);
+            
             // To copy a file to another location and 
             // overwrite the destination file if it already exists.
             System.IO.File.Copy(sourceFile, destFile, true);

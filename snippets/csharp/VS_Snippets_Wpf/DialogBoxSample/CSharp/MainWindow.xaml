@@ -9,7 +9,6 @@
     Closing="mainWindow_Closing"
     >
   <DockPanel>
-
     <Menu DockPanel.Dock="Top">
       <MenuItem Header="_File">
         <MenuItem Header="_Open" Click="fileOpen_Click" />
@@ -19,21 +18,13 @@
         <MenuItem Header="_Exit" Click="fileExit_Click" />
       </MenuItem>
       <MenuItem Header="_Edit">
-        <!--<SnippetOpenFindDialogMARKUP1>-->
         <!--Main Window-->
-        <!--</SnippetOpenFindDialogMARKUP1>-->
-        <!--<SnippetOpenFindDialogMARKUP2>-->
         <MenuItem Name="editFindMenuItem" Header="_Find" InputGestureText="Ctrl+F" Click="editFindMenuItem_Click" />
-        <!--</SnippetOpenFindDialogMARKUP2>-->
       </MenuItem>
       <MenuItem Header="F_ormat">
         <MenuItem Name="formatFontMenuItem" Header="_Font..." Click="formatFontMenuItem_Click" />
-        <!--<SnippetMainWindowMarginsDialogBoxMenuItemMARKUP1>-->
         <!--Main Window-->
-        <!--</SnippetMainWindowMarginsDialogBoxMenuItemMARKUP1>-->
-        <!--<SnippetMainWindowMarginsDialogBoxMenuItemMARKUP2>-->
         <MenuItem Name="formatMarginsMenuItem" Header="_Margins..." Click="formatMarginsMenuItem_Click" />
-        <!--</SnippetMainWindowMarginsDialogBoxMenuItemMARKUP2>-->
       </MenuItem>
     </Menu>
 
@@ -48,6 +39,5 @@
       BorderThickness="0" >
       The quick brown fox jumps over the lazy old brown dog.
     </TextBox>
-
   </DockPanel>
 </Window>

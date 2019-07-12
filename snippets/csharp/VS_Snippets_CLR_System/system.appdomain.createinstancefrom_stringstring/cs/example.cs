@@ -6,18 +6,18 @@ public interface ITest
     void Test(string greeting);
 }
 
-public class MarshallableExample : MarshalByRefObject, ITest
+public class MarshalableExample : MarshalByRefObject, ITest
 {
     static void Main()
     {
         // Construct a path to the current assembly.
         string assemblyPath = Environment.CurrentDirectory + "\\" +
-            typeof(MarshallableExample).Assembly.GetName().Name + ".exe";
+            typeof(MarshalableExample).Assembly.GetName().Name + ".exe";
 
         AppDomain ad = AppDomain.CreateDomain("MyDomain");
  
         System.Runtime.Remoting.ObjectHandle oh = 
-            ad.CreateInstanceFrom(assemblyPath, "MarshallableExample");
+            ad.CreateInstanceFrom(assemblyPath, "MarshalableExample");
 
         object obj = oh.Unwrap();
 
@@ -33,7 +33,7 @@ public class MarshallableExample : MarshalByRefObject, ITest
         ITest it = (ITest) obj;
         it.Test("Hi");
 
-        MarshallableExample ex = (MarshallableExample) obj;
+        MarshalableExample ex = (MarshalableExample) obj;
         ex.Test("Goodbye");
     }
 

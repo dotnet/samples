@@ -4,22 +4,21 @@ Imports System.Runtime.InteropServices
 
 '<snippet5>
 Public Class LibWrap
-   ' Declares managed prototypes for unmanaged functions.
-   Declare Auto Function MsgBox Lib "User32.dll" Alias "MessageBox" ( _
-       ByVal hWnd As Integer, ByVal txt As String, ByVal caption As String, _
-       ByVal typ As Integer ) As Integer
+    ' Declares managed prototypes for unmanaged functions.
+    Declare Auto Function MsgBox Lib "User32.dll" Alias "MessageBox" (
+        ByVal hWnd As IntPtr, ByVal lpText As String, ByVal lpCaption As String,
+        ByVal uType As UInteger) As Integer
 
-   ' Causes incorrect output in the message window.
-   Declare Ansi Function MsgBox2 Lib "User32.dll" Alias "MessageBoxW" ( _
-       ByVal hWnd As Integer, ByVal txt As String, ByVal caption As String, _
-       ByVal type As Integer ) As Integer
+    ' Causes incorrect output in the message window.
+    Declare Ansi Function MsgBox2 Lib "User32.dll" Alias "MessageBoxW" (
+        ByVal hWnd As IntPtr, ByVal lpText As String, ByVal lpCaption As String,
+        ByVal uType As UInteger) As Integer
 
-   ' Causes an exception to be thrown.
-   ' ExactSpelling is True by default in when
-   ' Ansi or Unicode is used.
-   Declare Ansi Function MsgBox3 Lib "User32.dll" Alias "MessageBox" ( _
-       ByVal hWnd As Integer, ByVal txt As String, ByVal caption As String, _
-       ByVal typ As Integer ) As Integer
+    ' Causes an exception to be thrown.
+    ' ExactSpelling is True by default when Ansi or Unicode is used.
+    Declare Ansi Function MsgBox3 Lib "User32.dll" Alias "MessageBox" (
+        ByVal hWnd As IntPtr, ByVal lpText As String, ByVal lpCaption As String,
+        ByVal uType As UInteger) As Integer
 End Class
 '</snippet5>
 

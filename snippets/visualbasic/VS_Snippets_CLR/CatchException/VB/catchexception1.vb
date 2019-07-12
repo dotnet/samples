@@ -17,7 +17,7 @@ End Class
 
 Public Class Ex13
     Public Shared Sub PromoteEmployee(emp As Object)
-        'Cast object to Employee.
+        ' Cast object to Employee.
         Dim e As Employee = CType(emp, Employee)
         ' Increment employee level.
         e.Emlevel = e.Emlevel + 1
@@ -26,11 +26,11 @@ Public Class Ex13
     Public Shared Sub Main()
         Try
             Dim o As Object = New Employee()
-            Dim newyears As New DateTime(2001, 1, 1)
-            'Promote the new employee.
+            Dim newYears As New DateTime(2001, 1, 1)
+            ' Promote the new employee.
             PromoteEmployee(o)
-            'Promote DateTime; results in InvalidCastException as newyears is not an employee instance.
-            PromoteEmployee(newyears)
+            ' Promote DateTime; results in InvalidCastException as newYears is not an employee instance.
+            PromoteEmployee(newYears)
         Catch e As InvalidCastException
             Console.WriteLine("Error passing data to PromoteEmployee method. " + e.Message)
         End Try

@@ -30,13 +30,13 @@ namespace Microsoft.ServiceModel.Samples
             MessageVersion msgVersion)
         {
             if (encoding == null)
-            	throw new ArgumentNullException("encoding");    
+            	throw new ArgumentNullException(nameof(encoding));    
 
             if (mediaType == null)
-            	throw new ArgumentNullException("mediaType");
+            	throw new ArgumentNullException(nameof(mediaType));
 
             if (msgVersion == null)
-            	throw new ArgumentNullException("msgVersion");
+            	throw new ArgumentNullException(nameof(msgVersion));
 
             this.msgVersion = msgVersion;
             this.mediaType = mediaType;
@@ -71,7 +71,7 @@ namespace Microsoft.ServiceModel.Samples
             set
             {
                 if (value == null)
-                    throw new ArgumentNullException("value");
+                    throw new ArgumentNullException(nameof(value));
                 this.msgVersion = value;
             }
         }
@@ -88,7 +88,7 @@ namespace Microsoft.ServiceModel.Samples
             set
             {
                 if (value == null)
-                    throw new ArgumentNullException("value");
+                    throw new ArgumentNullException(nameof(value));
                 this.mediaType = value;
             }
         }
@@ -103,7 +103,7 @@ namespace Microsoft.ServiceModel.Samples
             set
             {
                 if (value == null)
-                    throw new ArgumentNullException("value");
+                    throw new ArgumentNullException(nameof(value));
                 this.encoding = value;
             }
         }
@@ -139,7 +139,7 @@ namespace Microsoft.ServiceModel.Samples
         public override IChannelFactory<TChannel> BuildChannelFactory<TChannel>(BindingContext context)
         {
             if (context == null)
-                throw new ArgumentNullException("context");
+                throw new ArgumentNullException(nameof(context));
 
             context.BindingParameters.Add(this);
             return context.BuildInnerChannelFactory<TChannel>();
@@ -148,7 +148,7 @@ namespace Microsoft.ServiceModel.Samples
         public override bool CanBuildChannelFactory<TChannel>(BindingContext context)
         {
             if (context == null)
-                throw new ArgumentNullException("context");
+                throw new ArgumentNullException(nameof(context));
 
             return context.CanBuildInnerChannelFactory<TChannel>();
         }
@@ -156,7 +156,7 @@ namespace Microsoft.ServiceModel.Samples
         public override IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext context)
         {
             if (context == null)
-                throw new ArgumentNullException("context");
+                throw new ArgumentNullException(nameof(context));
 
             context.BindingParameters.Add(this);
             return context.BuildInnerChannelListener<TChannel>();
@@ -165,7 +165,7 @@ namespace Microsoft.ServiceModel.Samples
         public override bool CanBuildChannelListener<TChannel>(BindingContext context)
         {
             if (context == null)
-                throw new ArgumentNullException("context");
+                throw new ArgumentNullException(nameof(context));
 
             context.BindingParameters.Add(this);
             return context.CanBuildInnerChannelListener<TChannel>();

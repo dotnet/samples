@@ -14,7 +14,7 @@ public class Example
    {
       bool result;
       // <Snippet1>
-      result = s == null || s == String.Empty;
+      result = s == null || s == string.Empty;
       // </Snippet1>
       return result;
    }

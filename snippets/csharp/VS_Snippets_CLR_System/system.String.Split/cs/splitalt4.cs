@@ -1,4 +1,3 @@
-// <Snippet11>
 using System;
 using System.Collections.Generic;
 
@@ -6,6 +5,7 @@ public class Example
 {
    public static void Main()
    {
+      // <Snippet11>
       String value = "This is the first sentence in a string. " +
                      "More sentences will follow. For example, " +
                      "this is the third sentence. This is the " +
@@ -26,12 +26,12 @@ public class Example
       // Display the sentences.
       foreach (var sentence in sentences)
          Console.WriteLine(sentence);
+      // The example displays the following output:
+      //       This is the first sentence in a string.
+      //       More sentences will follow.
+      //       For example, this is the third sentence.
+      //       This is the fourth.
+      //       And this is the fifth and final sentence.
+      // </Snippet11>
    }
 }
-// The example displays the following output:
-//       This is the first sentence in a string.
-//       More sentences will follow.
-//       For example, this is the third sentence.
-//       This is the fourth.
-//       And this is the fifth and final sentence.
-// </Snippet11>

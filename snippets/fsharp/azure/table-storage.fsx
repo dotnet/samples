@@ -1,8 +1,8 @@
 open System
 open System.IO
 open Microsoft.Azure // Namespace for CloudConfigurationManager
-open Microsoft.WindowsAzure.Storage // Namespace for CloudStorageAccount
-open Microsoft.WindowsAzure.Storage.Table // Namespace for Table storage types
+open Microsoft.Azure.Storage // Namespace for CloudStorageAccount
+open Microsoft.Azure.Storage.Table // Namespace for Table storage types
 
 //
 // Get your connection string.

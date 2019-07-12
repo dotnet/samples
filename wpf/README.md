@@ -44,7 +44,7 @@ dotnet run
 There is no tooling available to help with project migration. In order to migrate your WPF application, you will create a new project and manually port all of the elements defined in your original project. You will notice the new project is based on the simplified project format, and not everything will be migrated.
 
 ### Migrate the head project
-Ideally you should migrate all projects in your solution to target .NET Core 3.0 and/or .NET Standard 2.0. The first step to migrate will be to retarget the application's entry point (i.e. 'head' project) and mantain your existing references.
+Ideally you should migrate all projects in your solution to target .NET Core 3.0 and/or .NET Standard 2.0. The first step to migrate will be to retarget the application's entry point (i.e. 'head' project) and maintain your existing references.
 
 1. Start from a working Solution. You must be able to open the solution in Visual Studio and double check that you can build and run without any issues.
 2. If your solution also has server side projects, such as ASP.NET, we recommend splitting your solution into different server and client solutions. For this effort, work with the client solution only.
@@ -69,7 +69,7 @@ Most existing projects include an `AssemblyInfo.cs` file in the Properties folde
 <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 ```
 **Include the Windows.Compatibility Pack**
-Not every framework assembly is available in the .NET Core base class library. Windows applications like WinForms and WPF could have dependencies that are not available in .NET Core or .NET Standard. Adding a reference to the [Windows Compatibilty Pack](https://docs.microsoft.com/en-us/dotnet/core/porting/windows-compat-pack) will help reduce missing assembly dependencies as it includes several types that might be needed by your application.
+Not every framework assembly is available in the .NET Core base class library. Windows applications like WinForms and WPF could have dependencies that are not available in .NET Core or .NET Standard. Adding a reference to the [Windows Compatibility Pack](https://docs.microsoft.com/en-us/dotnet/core/porting/windows-compat-pack) will help reduce missing assembly dependencies as it includes several types that might be needed by your application.
 
 ```cmd
 dotnet add package Microsoft.Windows.Compatibility

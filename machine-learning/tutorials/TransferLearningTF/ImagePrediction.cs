@@ -3,7 +3,7 @@
 namespace TransferLearningTF
 {
     // <SnippetDeclareTypes>
-    public class ImagePrediction
+    public class ImagePrediction : ImageData
     {
         public float[] Score;
 

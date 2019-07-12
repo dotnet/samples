@@ -15,7 +15,7 @@ class CustomBinder : Binder
     {
         if (match == null)
         {
-            throw new ArgumentNullException("match");
+            throw new ArgumentNullException(nameof(match));
         }
         // Arguments are not being reordered.
         state = null;
@@ -38,7 +38,7 @@ class CustomBinder : Binder
     {
         if (match == null)
         {
-            throw new ArgumentNullException("match");
+            throw new ArgumentNullException(nameof(match));
         }
         foreach (FieldInfo fi in match)
         {
@@ -58,7 +58,7 @@ class CustomBinder : Binder
     {
         if (match == null)
         {
-            throw new ArgumentNullException("match");
+            throw new ArgumentNullException(nameof(match));
         }
 
         // Find a parameter match and return the first method with
@@ -84,7 +84,7 @@ class CustomBinder : Binder
     {
         if (match == null)
         {
-            throw new ArgumentNullException("match");
+            throw new ArgumentNullException(nameof(match));
         }
         foreach (PropertyInfo pi in match)
         {

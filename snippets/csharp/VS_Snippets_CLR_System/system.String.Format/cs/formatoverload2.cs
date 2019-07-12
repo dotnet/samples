@@ -1,10 +1,10 @@
-// <Snippet9>
 using System;
 
 public class Example
 {
    public static void Main()
    {
+      // <Snippet9>
       // Create array of 5-tuples with population data for three U.S. cities, 1940-1950.
       Tuple<string, DateTime, int, DateTime, int>[] cities = 
           { Tuple.Create("Los Angeles", new DateTime(1940, 1, 1), 1504277, 
@@ -26,13 +26,13 @@ public class Example
                                 (city.Item5 - city.Item3)/ (double)city.Item3);
          Console.WriteLine(output);
       }
+      // The example displays the following output:
+      //    City            Year  Population    Year  Population    Change (%)
+      //  
+      //    Los Angeles     1940   1,504,277    1950   1,970,358        31.0 %
+      //    New York        1940   7,454,995    1950   7,891,957         5.9 %
+      //    Chicago         1940   3,396,808    1950   3,620,962         6.6 %
+      //    Detroit         1940   1,623,452    1950   1,849,568        13.9 %
+      // </Snippet9>
    }
 }
-// The example displays the following output:
-//    City            Year  Population    Year  Population    Change (%)
-//    
-//    Los Angeles     1940   1,504,277    1950   1,970,358        31.0 %
-//    New York        1940   7,454,995    1950   7,891,957         5.9 %
-//    Chicago         1940   3,396,808    1950   3,620,962         6.6 %
-//    Detroit         1940   1,623,452    1950   1,849,568        13.9 %
-// </Snippet9>

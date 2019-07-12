@@ -28,7 +28,7 @@ namespace CustomControlNameSpace
          }
          catch(Exception myExeception)
          {
-            Context.Response.Write("Execption occured:"+myExeception.Message);
+            Context.Response.Write("Execption occurred:"+myExeception.Message);
          }
       }
 

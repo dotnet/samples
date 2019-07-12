@@ -1,15 +1,7 @@
-// This example demonstrates using the following members: 
-// Form.BackColor, Control.RectangleToScreen, Control.PointToScreen,
-// ControlPaint.DrawReversibleFrame, and Rectangle.Intersects.
-
-
 using System.Windows.Forms;
 using System.Drawing;
 
-public class Form1:
-    System.Windows.Forms.Form
-
-
+public class Form1: Form
 {
     public Form1() : base()
     {        
@@ -87,8 +79,7 @@ public class Form1:
     // control's color will change.
 
     bool isDrag = false;
-    Rectangle theRectangle = new Rectangle
-		(new Point(0, 0), new Size(0, 0));
+    Rectangle theRectangle = new Rectangle(new Point(0, 0), new Size(0, 0));
     Point startPoint;
 
     private void Form1_MouseDown(object sender, 
@@ -97,7 +88,7 @@ public class Form1:
 
         // Set the isDrag variable to true and get the starting point 
         // by using the PointToScreen method to convert form 
-		// coordinates to screen coordinates.
+        // coordinates to screen coordinates.
         if (e.Button==MouseButtons.Left)
         {
             isDrag = true;
@@ -115,17 +106,17 @@ public class Form1:
     {
 
         // If the mouse is being dragged, 
-		// undraw and redraw the rectangle as the mouse moves.
+        // undraw and redraw the rectangle as the mouse moves.
         if (isDrag)
 
             // Hide the previous rectangle by calling the 
-			// DrawReversibleFrame method with the same parameters.
+            // DrawReversibleFrame method with the same parameters.
         {
             ControlPaint.DrawReversibleFrame(theRectangle, 
 				this.BackColor, FrameStyle.Dashed);
 
             // Calculate the endpoint and dimensions for the new 
-	        // rectangle, again using the PointToScreen method.
+            // rectangle, again using the PointToScreen method.
             Point endPoint = ((Control) sender).PointToScreen(new Point(e.X, e.Y));
 
             int width = endPoint.X-startPoint.X;
@@ -134,29 +125,28 @@ public class Form1:
 				startPoint.Y, width, height);
 
             // Draw the new rectangle by calling DrawReversibleFrame
-			// again.  
+            // again.  
             ControlPaint.DrawReversibleFrame(theRectangle, 
 				this.BackColor, FrameStyle.Dashed);
         }
     }
 
     private void Form1_MouseUp(object sender, 
-		System.Windows.Forms.MouseEventArgs e)
+           System.Windows.Forms.MouseEventArgs e)
     {
-
         // If the MouseUp event occurs, the user is not dragging.
         isDrag = false;
 
         // Draw the rectangle to be evaluated. Set a dashed frame style 
         // using the FrameStyle enumeration.
         ControlPaint.DrawReversibleFrame(theRectangle, 
-			this.BackColor, FrameStyle.Dashed);
+            this.BackColor, FrameStyle.Dashed);
 
         // Find out which controls intersect the rectangle and 
         // change their color. The method uses the RectangleToScreen  
         // method to convert the Control's client coordinates 
-		// to screen coordinates.
-	    Rectangle controlRectangle;
+        // to screen coordinates.
+        Rectangle controlRectangle;
         for(int i = 0; i < Controls.Count; i++)
         {
             controlRectangle = Controls[i].RectangleToScreen

@@ -15,7 +15,7 @@ Public Class Snippets
 
     '<snippet51>
     Public Function M2() As <MarshalAs(UnmanagedType.LPWStr)> String
-        Dim msg As New String(New char(128){})
+        Dim msg As New String(New Char(128) {})
         ' Load message here ...
         Return msg
     End Function
@@ -24,7 +24,7 @@ End Class
 
 '<snippet50>
 Class MsgText
-    <MarshalAs(UnmanagedType.LPWStr)> _
+    <MarshalAs(UnmanagedType.LPWStr)>
     Public msg As String = ""
 End Class
 '</snippet50>

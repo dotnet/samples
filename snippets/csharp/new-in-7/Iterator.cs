@@ -1,49 +1,88 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace new_in_7
 {
     public static class Iterator
     {
-        #region 25_IteratorMethod
-        public static IEnumerable<char> AlphabetSubset(char start, char end)
+        public static void IteratorTest()
         {
-            if (start < 'a' || start > 'z')
-                throw new ArgumentOutOfRangeException(paramName: nameof(start), message: "start must be a letter");
-            if (end < 'a' || end > 'z')
-                throw new ArgumentOutOfRangeException(paramName: nameof(end), message: "end must be a letter");
+            // <SnippetIteratorMethod>
+            IEnumerable<char> AlphabetSubset(char start, char end)
+            {
+                if (start < 'a' || start > 'z')
+                    throw new ArgumentOutOfRangeException(paramName: nameof(start), message: "start must be a letter");
+                if (end < 'a' || end > 'z')
+                    throw new ArgumentOutOfRangeException(paramName: nameof(end), message: "end must be a letter");
 
-            if (end <= start)
-                throw new ArgumentException($"{nameof(end)} must be greater than {nameof(start)}");
-            for (var c = start; c < end; c++)
-                yield return c;
+                if (end <= start)
+                    throw new ArgumentException($"{nameof(end)} must be greater than {nameof(start)}");
+                for (var c = start; c < end; c++)
+                    yield return c;
+            }
+
+
+            try
+            {
+                var resultSet1 = AlphabetSubset('d', 'r');
+                var resultSet2 = AlphabetSubset('f', 'a');
+                Console.WriteLine("iterators created");
+                foreach (var thing1 in resultSet1)
+                    Console.Write($"{thing1}, ");
+                Console.WriteLine();
+                foreach (var thing2 in resultSet2)
+                    Console.Write($"{thing2}, ");
+                Console.WriteLine();
+            }
+            catch (ArgumentException)
+            {
+                Console.WriteLine("Caught an argument exception");
+            }
+            // </SnippetIteratorMethod>
         }
-        #endregion
 
-        #region 27_IteratorMethodRefactored
-        public static IEnumerable<char> AlphabetSubset2(char start, char end)
+        public static void IteratorTestLocal()
         {
-            if (start < 'a' || start > 'z')
-                throw new ArgumentOutOfRangeException(paramName: nameof(start), message: "start must be a letter");
-            if (end < 'a' || end > 'z')
-                throw new ArgumentOutOfRangeException(paramName: nameof(end), message: "end must be a letter");
+            // <SnippetIteratorMethodLocalInteractive>
+            IEnumerable<char> AlphabetSubset(char start, char end)
+            {
+                if (start < 'a' || start > 'z')
+                    throw new ArgumentOutOfRangeException(paramName: nameof(start), message: "start must be a letter");
+                if (end < 'a' || end > 'z')
+                    throw new ArgumentOutOfRangeException(paramName: nameof(end), message: "end must be a letter");
 
-            if (end <= start)
-                throw new ArgumentException($"{nameof(end)} must be greater than {nameof(start)}");
-            return alphabetSubsetImplementation(start, end);
+                if (end <= start)
+                    throw new ArgumentException($"{nameof(end)} must be greater than {nameof(start)}");
+
+                return alphabetSubsetImplementation();
+
+                IEnumerable<char> alphabetSubsetImplementation()
+                {
+                    for (var c = start; c < end; c++)
+                        yield return c;
+                }
+            }
+
+            try
+            {
+                var resultSet1 = AlphabetSubset('d', 'r');
+                var resultSet2 = AlphabetSubset('f', 'a');
+                Console.WriteLine("iterators created");
+                foreach (var thing1 in resultSet1)
+                    Console.Write($"{thing1}, ");
+                Console.WriteLine();
+                foreach (var thing2 in resultSet2)
+                    Console.Write($"{thing2}, ");
+                Console.WriteLine();
+            }
+            catch (ArgumentException)
+            {
+                Console.WriteLine("Caught an argument exception");
+            }
+            // </SnippetIteratorMethodLocalInteractive>
         }
 
-        private static IEnumerable<char> alphabetSubsetImplementation(char start, char end)
-        { 
-            for (var c = start; c < end; c++)
-                yield return c;
-        }
-        #endregion
-
-        #region 28_IteratorMethodLocal
+        // <SnippetIteratorMethodLocal>
         public static IEnumerable<char> AlphabetSubset3(char start, char end)
         {
             if (start < 'a' || start > 'z')
@@ -62,7 +101,7 @@ namespace new_in_7
                     yield return c;
             }
         }
-        #endregion
+        // </SnippetIteratorMethodLocal>
     }
 
 }

@@ -46,7 +46,7 @@ public:
    short wMilliseconds;
 };
 
-ref class LibWrapper
+ref class NativeMethods
 {
 public:
 
@@ -59,7 +59,7 @@ int main()
    try
    {
       MySystemTime sysTime;
-      LibWrapper::GetSystemTime(  &sysTime );
+      NativeMethods::GetSystemTime(  &sysTime );
       Console::WriteLine( "The System time is {0}/{1}/{2} {3}:{4}:{5}", sysTime.wDay, sysTime.wMonth, sysTime.wYear, sysTime.wHour, sysTime.wMinute, sysTime.wSecond );
    }
    catch ( TypeLoadException^ e ) 

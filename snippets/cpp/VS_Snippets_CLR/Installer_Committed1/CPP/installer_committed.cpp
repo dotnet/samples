@@ -28,7 +28,7 @@ private:
    // Event handler for 'Committed' event.
    void MyInstaller_Committed( Object^ sender, InstallEventArgs^ e )
    {
-      Console::WriteLine( "Committed Event occured." );
+      Console::WriteLine( "Committed Event occurred." );
    }
    // </Snippet1>
 

@@ -10,7 +10,8 @@ using namespace System::IO;
 // Display any validation errors.
 static void ValidationCallBack( Object^ /*sender*/, ValidationEventArgs^ e )
 {
-   Console::WriteLine( L"Validation Error: {0}", e->Message );
+   Console::WriteLine( L"Validation Error:\n   {0}", e->Message );
+   Console::WriteLine();
 }
 
 int main()
@@ -25,7 +26,7 @@ int main()
    XmlReaderSettings^ settings = gcnew XmlReaderSettings;
    settings->ValidationType = ValidationType::Schema;
    settings->Schemas = sc;
-   settings->ValidationEventHandler += gcnew ValidationEventHandler( ValidationCallBack );
+   settings->ValidationEventHandler += gcnew ValidationEventHandler(ValidationCallBack);
 
    // Create the XmlReader object.
    XmlReader^ reader = XmlReader::Create( L"booksSchemaFail.xml", settings );
@@ -36,4 +37,14 @@ int main()
 
    return 1;
 }
+// The example displays output like the following:
+//   Validation Error: 
+//        The element 'book' in namespace 'urn:bookstore-schema' has invalid child element 'author' 
+//        in namespace 'urn:bookstore-schema'. List of possible elements expected: 'title' in 
+//        namespace 'urn:bookstore-schema'.
+//
+//    Validation Error: 
+//       The element 'author' in namespace 'urn:bookstore-schema' has invalid child element 'name' 
+//       in namespace 'urn:bookstore-schema'. List of possible elements expected: 'first-name' in 
+//       namespace 'urn:bookstore-schema'.
 //</snippet1>

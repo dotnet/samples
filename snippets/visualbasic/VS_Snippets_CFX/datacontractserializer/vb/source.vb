@@ -126,7 +126,7 @@ Public Class GetCurrency
         End Set
     End Property
      
-    ' Use this method to look up the country and set 
+    ' Use this method to look up the country/region and set 
     ' the Currency field after deserialization.
     <OnDeserialized()>  _
     Private Sub GetLocalRate(ByVal sc As StreamingContext) 

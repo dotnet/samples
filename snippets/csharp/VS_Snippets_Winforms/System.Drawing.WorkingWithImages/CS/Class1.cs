@@ -121,7 +121,7 @@ public class SystemDrawingWorkingWithImages : Form
             Y += font.Height;
 
             e.Graphics.DrawString(
-               "   iD: 0x" + propItem.Id.ToString("x"),
+               "   id: 0x" + propItem.Id.ToString("x"),
                font,
                blackBrush,
                X, Y);
@@ -185,28 +185,27 @@ public class SystemDrawingWorkingWithImages : Form
     // How to: Create Thumbnail Images
 
    
-        // <snippet71>
-	public bool ThumbnailCallback() {
-            return true;
-        }
-       
-        private void GetThumbnail(PaintEventArgs e)
-        {
+    // <snippet71>
+    public bool ThumbnailCallback()
+    {
+        return true;
+    }
 
-            Image.GetThumbnailImageAbort callback = 
-                new Image.GetThumbnailImageAbort(ThumbnailCallback);
-            Image image = new Bitmap(@"c:\FakePhoto.jpg");
-            Image pThumbnail = image.GetThumbnailImage(100, 100, callback, new
-               IntPtr());
-            e.Graphics.DrawImage(
-               pThumbnail,
-               10,
-               10,
-               pThumbnail.Width,
-               pThumbnail.Height);
-        }
-      
-        // </snippet71>
+    private void GetThumbnail(PaintEventArgs e)
+    {
+        Image.GetThumbnailImageAbort callback = 
+            new Image.GetThumbnailImageAbort(ThumbnailCallback);
+        Image image = new Bitmap(@"c:\FakePhoto.jpg");
+        Image pThumbnail = image.GetThumbnailImage(100, 100, callback, new
+           IntPtr());
+        e.Graphics.DrawImage(
+           pThumbnail,
+           10,
+           10,
+           pThumbnail.Width,
+           pThumbnail.Height);
+    }
+    // </snippet71>
     
     // fde9bccf-8aa5-4b0d-ba4b-788740627b02
     // How to: Use Interpolation Mode to Control Image Quality During Scaling

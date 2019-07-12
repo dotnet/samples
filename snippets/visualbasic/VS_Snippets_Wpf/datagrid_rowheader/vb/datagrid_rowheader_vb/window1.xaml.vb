@@ -28,13 +28,11 @@ Public Class ConvertItemToIndex
 
     Public Function Convert(ByVal value As Object, ByVal targetType As System.Type, ByVal parameter As Object, ByVal culture As System.Globalization.CultureInfo) As Object Implements System.Windows.Data.IValueConverter.Convert
         Try
-            'Get the DataRowView that is being passed to the Converter 
-            Dim drv As System.Data.DataRowView = DirectCast(value, System.Data.DataRowView)
             'Get the CollectionView from the DataGrid that is using the converter 
             Dim dg As DataGrid = DirectCast(Application.Current.MainWindow.FindName("DG1"), DataGrid)
             Dim cv As CollectionView = DirectCast(dg.Items, CollectionView)
-            'Get the index of the DataRowView from the CollectionView 
-            Dim rowindex As Integer = cv.IndexOf(drv) + 1
+            'Get the index of the item from the CollectionView 
+            Dim rowindex As Integer = cv.IndexOf(value) + 1
 
             Return rowindex.ToString()
 

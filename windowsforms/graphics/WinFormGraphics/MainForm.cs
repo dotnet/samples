@@ -121,7 +121,7 @@ namespace WinFormGraphics
 
                 #endregion
 
-                #region Eaxmple 5 -- Draw A Ellipse With Gradient Brush
+                #region Example 5 -- Draw A Ellipse With Gradient Brush
 
                 // Specify a bound for the ellipse.
                 Rectangle r = new Rectangle(350, 280,280,150);

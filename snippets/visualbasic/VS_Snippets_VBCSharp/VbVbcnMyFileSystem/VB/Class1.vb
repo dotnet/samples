@@ -9,6 +9,7 @@ Imports System.IO
 
 Imports System.Drawing
 Imports System.Windows.Forms
+Imports Microsoft.VisualBasic.FileIO
 
 Class Class00ad6fbd924e4a49af32d505fe69ea32
     ' 00ad6fbd-924e-4a49-af32-d505fe69ea32
@@ -1071,4 +1072,32 @@ Class Class7bb0d83e875a4b158935bdc24e71ef98
 
 End Class
 
+Class Classe02587a6e85494d7f9392beae2c7f3903
+    '02587a6e-8549-4d7f-9392-beae2c7f3903
+    ' My.Computer.FileSystem.CopyDirectory Method
+    Public Sub Method94()
+        ' <snippet94>
+        My.Computer.FileSystem.CopyDirectory("C:\TestDirectory1", "C:\TestDirectory2")
+        ' </snippet94>
+    End Sub
+End Class
 
+Class Classe664cd9b1a9174Ffc96ed789c60582205
+    ' 664cd9b1-a917-4ffc-96ed-789c60582205
+    ' My.Computer.FileSystem.CopyDirectory Method
+    Public Sub Method92()
+        ' <snippet92>
+        My.Computer.FileSystem.CopyDirectory("C:\TestDirectory1", "C:\TestDirectory2", UIOption.AllDialogs)
+        ' </snippet92>
+    End Sub
+End Class
+
+Class Classe9df56b2b8eb34f9ba184c2bb529eeaa7
+    ' 9df56b2b-8eb3-4f9b-a184-c2bb529eeaa7
+    ' My.Computer.FileSystem.CopyDirectory Method
+    Public Sub Method93()
+        ' <snippet93>
+        My.Computer.FileSystem.CopyDirectory("C:\TestDirectory1", "C:\TestDirectory2", UIOption.AllDialogs, UICancelOption.DoNothing)
+        ' </snippet93>
+    End Sub
+End Class

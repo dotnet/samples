@@ -137,7 +137,7 @@ class CryptographicExceptionMembers
             string exceptionSource = ex.Source;
             //</Snippet10>
 
-            // Retrieve the call stack at the time the exception occured.
+            // Retrieve the call stack at the time the exception occurred.
             //<Snippet11>
             string stackTrace = ex.StackTrace;
             //</Snippet11>

@@ -1,4 +1,3 @@
-' <Snippet1>
 <%@ WebService Language="VB" Class="Counter" %>
 
 Imports System.Web.Services
@@ -25,5 +24,3 @@ Public Class Counter
         Return CInt(Application("MyServiceUsage"))
     End Function
 End Class
-
-' </Snippet1>

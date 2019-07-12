@@ -116,8 +116,8 @@ private:
 
    void button2_Click( Object^ /*sender*/, System::EventArgs^ /*e*/ )
    {
-      Form^ foobar = gcnew Form;
-      foobar->Show();
+      Form^ frm = gcnew Form;
+      frm->Show();
    }
 };
 

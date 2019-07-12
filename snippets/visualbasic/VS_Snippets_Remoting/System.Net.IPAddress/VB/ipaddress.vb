@@ -11,7 +11,6 @@
 ' <Snippet1>
 ' This program shows how to use the IPAddress class to obtain a server 
 ' IP addressess and related information.
-Imports System
 Imports System.Net
 Imports System.Net.Sockets
 Imports System.Text.RegularExpressions
@@ -22,7 +21,10 @@ Namespace Mssc.Services.ConnectionManagement
   Module M_TestIPAddress
 
     Class TestIPAddress
-      'The IPAddresses method obtains the selected server IP address information.      'It then displays the type of address family supported by the server and       'its IP address in standard and byte format.
+
+      'The IPAddresses method obtains the selected server IP address information.
+      'It then displays the type of address family supported by the server and 
+      'its IP address in standard and byte format.
       Private Shared Sub IPAddresses(ByVal server As String)
         Try
           Dim ASCII As New System.Text.ASCIIEncoding()
@@ -36,7 +38,7 @@ Namespace Mssc.Services.ConnectionManagement
 
             '<Snippet3>
             ' Display the type of address family supported by the server. If the
-            ' server is IPv6-enabled this value is: InternNetworkV6. If the server
+            ' server is IPv6-enabled this value is: InterNetworkV6. If the server
             ' is also IPv4-enabled there will be an additional value of InterNetwork.
             Console.WriteLine(("AddressFamily: " + curAdd.AddressFamily.ToString()))
 
@@ -105,9 +107,6 @@ Namespace Mssc.Services.ConnectionManagement
         ' Define a regular expression to parse user's input.
         ' This is a security check. It allows only
         ' alphanumeric input string between 2 to 40 character long.
-        'Define a regular expression to parse user's input.
-        'This is a security check. It allows only
-        'alphanumeric input string between 2 to 40 character long.
         Dim rex As New Regex("^[a-zA-Z]\w{1,39}$")
 
         If args.Length < 1 Then

@@ -48,7 +48,7 @@ namespace HtmlWindowProjectCSharp
 					Hashtable docLinksHash = new Hashtable();
 					linksTable.Add(webBrowser1.Document.Url.ToString(), docLinksHash);
 
-                    foreach (HtmlElement hrefElement in webBrowser1.Document.Links)
+					foreach (HtmlElement hrefElement in webBrowser1.Document.Links)
 					{
 						docLinksHash.Add(hrefElement.GetAttribute("HREF"), "Url");
 					}
@@ -305,17 +305,17 @@ namespace HtmlWindowProjectCSharp
 		//<SNIPPET16>
 		private void SuppressScriptErrors()
 		{
-			if (webBrowser1.Document != null)
-			{
+            if (webBrowser1.Document != null)
+            {
                 webBrowser1.Document.Window.Error += new HtmlElementErrorEventHandler(scriptWindow_Error);
-			}
-		}
+            }
+        }
 		
-		private void  scriptWindow_Error(object sender, HtmlElementErrorEventArgs e)
-		{
- 			MessageBox.Show("Suppressed error!");
-			e.Handled = true;
-		}
+        private void  scriptWindow_Error(object sender, HtmlElementErrorEventArgs e)
+        {
+            MessageBox.Show("Suppressed error!");
+            e.Handled = true;
+        }
 		//</SNIPPET16>
 
 		//<SNIPPET17>

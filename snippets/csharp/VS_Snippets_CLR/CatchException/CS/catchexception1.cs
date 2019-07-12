@@ -23,8 +23,8 @@ public class Ex13
 {
     public static void PromoteEmployee(Object emp)
     {
-        //Cast object to Employee.
-        Employee e = (Employee) emp;
+        // Cast object to Employee.
+        var e = (Employee) emp;
         // Increment employee level.
         e.Emlevel = e.Emlevel + 1;
     }
@@ -34,11 +34,11 @@ public class Ex13
         try
         {
             Object o = new Employee();
-            DateTime newyears = new DateTime(2001, 1, 1);
-            //Promote the new employee.
+            DateTime newYears = new DateTime(2001, 1, 1);
+            // Promote the new employee.
             PromoteEmployee(o);
-            //Promote DateTime; results in InvalidCastException as newyears is not an employee instance.
-            PromoteEmployee(newyears);
+            // Promote DateTime; results in InvalidCastException as newYears is not an employee instance.
+            PromoteEmployee(newYears);
         }
         catch (InvalidCastException e)
         {

@@ -1,10 +1,10 @@
-// <Snippet1>
 using System;
 
 class Example 
 {
    public static void Main() 
    {
+   // <Snippet1>
       string source = "[stop]ONE[stop][stop]TWO[stop][stop][stop]THREE[stop][stop]";
       string[] stringSeparators = new string[] {"[stop]"};
       string[] result;
@@ -39,19 +39,19 @@ class Example
          Console.Write("'{0}' ", String.IsNullOrEmpty(s) ? "<>" : s);                   
       }
       Console.WriteLine();
+   // The example displays the following output:
+   //    Splitting the string:
+   //       "[stop]ONE[stop][stop]TWO[stop][stop][stop]THREE[stop][stop]".
+   //    
+   //    Using the delimiter string:
+   //       "[stop]"
+   //    
+   //    Result including all elements (9 elements):
+   //       '<>' 'ONE' '<>' 'TWO' '<>' '<>' 'THREE' '<>' '<>'
+   //    
+   //    Result including non-empty elements (3 elements):
+   //       'ONE' 'TWO' 'THREE'
+   // </Snippet1>
    }
 }
-// The example displays the following output:
-//    Splitting the string:
-//       "[stop]ONE[stop][stop]TWO[stop][stop][stop]THREE[stop][stop]".
-//    
-//    Using the delimiter string:
-//       "[stop]"
-//    
-//    Result including all elements (9 elements):
-//       '<>' 'ONE' '<>' 'TWO' '<>' '<>' 'THREE' '<>' '<>'
-//    
-//    Result including non-empty elements (3 elements):
-//       'ONE' 'TWO' 'THREE'
-// </Snippet1>
 
