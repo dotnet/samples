@@ -22,8 +22,7 @@ public class Form1
         {
             // In case the constraint already exists, 
             // catch the collision here and respond.
-            Console.WriteLine("Exception of type {0} occurred.", 
-                ex.GetType());
+            Console.WriteLine($"Exception of type {ex.GetType()} occurred.");
         }
     }
     // </Snippet1>
