@@ -12,7 +12,7 @@ Private Sub RemoveConstraint _
 
     Try
         If constraints.Contains(constraint.ConstraintName) AndAlso constraints.CanRemove(constraint) Then
-                constraints.RemoveAt _
+            constraints.RemoveAt _
                 (constraints.IndexOf(constraint.ConstraintName))
         End If
 
