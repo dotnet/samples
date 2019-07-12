@@ -10,7 +10,7 @@ public class Form1: Form
 // <Snippet1>
  private void AddUniqueConstraint(DataTable table)
  {
-    table.Constraints.Add("idConstraint", table.Columns["id"], true);
+     table.Constraints.Add("idConstraint", table.Columns["id"], true);
  }
 // </Snippet1>
 
