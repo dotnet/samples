@@ -8,14 +8,11 @@ Public Class Form1: Inherits Form
 
 ' <Snippet1>
 Private Sub AddNullAllowedColumn()
-    Dim column As DataColumn
-    column = New DataColumn("classID", _
-        System.Type.GetType("System.Int32"))
+    Dim column As New DataColumn("classID", System.Type.GetType("System.Int32"))
     column.AllowDBNull = True
 
     ' Add the column to a new DataTable.
-    Dim table As DataTable
-    table = New DataTable
+    Dim table As New DataTable()
     table.Columns.Add(column)
 End Sub
 ' </Snippet1>
