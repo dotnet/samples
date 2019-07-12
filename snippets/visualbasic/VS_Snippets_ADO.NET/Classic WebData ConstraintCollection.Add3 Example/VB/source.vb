@@ -17,8 +17,7 @@ Private Sub AddForeignConstraint(dataSet As DataSet)
     Catch ex As Exception
         ' In case the constraint already exists, 
         ' catch the collision here and respond.
-        Console.WriteLine("Exception of type {0} occurred.", _
-            ex.GetType().ToString())
+        Console.WriteLine($"Exception of type {ex.GetType().ToString()} occurred.")
     End Try
 End Sub
 ' </Snippet1>
