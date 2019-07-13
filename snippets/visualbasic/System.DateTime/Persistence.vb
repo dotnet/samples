@@ -37,7 +37,7 @@ Module Persistence
     End Sub
 
     Private Sub SaveDatesAsStrings()
-        Dim dates() As Date = {#6/14/2014 6:32AM#, #7/10/2014 11:49PM#,
+        Dim dates As Date() = {#6/14/2014 6:32AM#, #7/10/2014 11:49PM#,
                               #1/10/2015 1:16AM#, #12/20/2014 9:45PM#,
                               #6/2/2014 3:14PM#}
         Dim output As String = Nothing
@@ -59,7 +59,7 @@ Module Persistence
         Console.WriteLine($"Current Time Zone: {TimeZoneInfo.Local.DisplayName}")
         Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture("en-GB")
         Dim sr As New StreamReader(filenameTxt)
-        Dim inputValues() As String = sr.ReadToEnd().Split({"|"c}, StringSplitOptions.RemoveEmptyEntries)
+        Dim inputValues As String() = sr.ReadToEnd().Split({"|"c}, StringSplitOptions.RemoveEmptyEntries)
         sr.Close()
         Console.WriteLine($"The dates on an {Thread.CurrentThread.CurrentCulture.Name} system:")
         For Each inputValue In inputValues
@@ -100,7 +100,7 @@ Module Persistence
     End Sub
 
     Private Sub SaveDatesAsInvariantStrings()
-        Dim dates() As Date = {#6/14/2014 6:32AM#, #7/10/2014 11:49PM#,
+        Dim dates As Date() = {#6/14/2014 6:32AM#, #7/10/2014 11:49PM#,
                               #1/10/2015 1:16AM#, #12/20/2014 9:45PM#,
                               #6/2/2014 3:14PM#}
         Dim output As String = Nothing
@@ -124,7 +124,7 @@ Module Persistence
                         TimeZoneInfo.Local.DisplayName)
         Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture("en-GB")
         Dim sr As New StreamReader(filenameTxt)
-        Dim inputValues() As String = sr.ReadToEnd().Split({"|"c}, StringSplitOptions.RemoveEmptyEntries)
+        Dim inputValues As String() = sr.ReadToEnd().Split({"|"c}, StringSplitOptions.RemoveEmptyEntries)
         sr.Close()
         Console.WriteLine($"The dates on an {Thread.CurrentThread.CurrentCulture.Name} system:")
         For Each inputValue In inputValues
@@ -168,7 +168,7 @@ Module Persistence
     End Sub
 
     Private Sub SaveDatesAsIntegers()
-        Dim dates() As Date = {#6/14/2014 6:32AM#, #7/10/2014 11:49PM#,
+        Dim dates As Date() = {#6/14/2014 6:32AM#, #7/10/2014 11:49PM#,
                               #1/10/2015 1:16AM#, #12/20/2014 9:45PM#,
                               #6/2/2014 3:14PM#}
 
@@ -196,7 +196,7 @@ Module Persistence
         Dim fs As New FileStream(filenameInts, FileMode.Open)
         Dim br As New BinaryReader(fs)
         Dim items As Integer
-        Dim dates() As DateTime
+        Dim dates As DateTime()
 
         Try
             items = br.ReadInt32()
@@ -257,7 +257,7 @@ Module Persistence
                 leapYears.Add(New Date(year, 2, 29))
             End If
         Next
-        Dim dateArray() As DateTime = leapYears.ToArray()
+        Dim dateArray As DateTime() = leapYears.ToArray()
 
         Dim serializer As New XmlSerializer(dateArray.GetType())
         Dim sw As TextWriter = New StreamWriter(filenameXml)
@@ -271,7 +271,7 @@ Module Persistence
         End Try
 
         ' Deserialize the data.
-        Dim deserializedDates() As Date
+        Dim deserializedDates As Date()
         Using fs As New FileStream(filenameXml, FileMode.Open)
             deserializedDates = CType(serializer.Deserialize(fs), Date())
         End Using
@@ -303,7 +303,7 @@ Module Persistence
     End Sub
 
     Private Sub SaveDatesBinary()
-        Dim dates() As Date = {#6/14/2014 6:32AM#, #7/10/2014 11:49PM#,
+        Dim dates As Date() = {#6/14/2014 6:32AM#, #7/10/2014 11:49PM#,
                               #1/10/2015 1:16AM#, #12/20/2014 9:45PM#,
                               #6/2/2014 3:14PM#}
         Dim fs As New FileStream(filenameBin, FileMode.Create)
@@ -327,7 +327,7 @@ Module Persistence
 
         Dim fs As New FileStream(filenameBin, FileMode.Open)
         Dim bin As New BinaryFormatter()
-        Dim dates() As DateTime = DirectCast(bin.Deserialize(fs), Date())
+        Dim dates As DateTime() = DirectCast(bin.Deserialize(fs), Date())
         fs.Close()
 
         Console.WriteLine("The dates on an {Thread.CurrentThread.CurrentCulture.Name} system:")
@@ -359,7 +359,7 @@ Module Persistence
 
     ' <Snippet7>
     Public Sub SaveDateWithTimeZone()
-        Dim dates() As DateWithTimeZone = {New DateWithTimeZone(#8/9/2014 7:30PM#,
+        Dim dates As DateWithTimeZone() = {New DateWithTimeZone(#8/9/2014 7:30PM#,
                                           TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time")),
                                       New DateWithTimeZone(#8/15/2014 7:00PM#,
                                           TimeZoneInfo.FindSystemTimeZoneById("Pacific Standard Time")),
@@ -402,7 +402,7 @@ Module Persistence
         End If
 
         Dim formatter As New BinaryFormatter()
-        Dim dates() As DateWithTimeZone = Nothing
+        Dim dates As DateWithTimeZone ()= Nothing
         Try
             dates = DirectCast(formatter.Deserialize(fs), DateWithTimeZone())
             ' Display dates.

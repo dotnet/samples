@@ -153,48 +153,22 @@ namespace csrefKeywordsMethodParams
     */
     //</snippet5>
 
-    //<snippet8>      
-    // Declare delegate -- defines required signature:
-    delegate double MathAction(double num);
-
-    class DelegateTest
+    //<snippet9>
+    // Mixing types in expressions
+    class MixedTypes
     {
-        // Regular method that matches signature:
-        static double DoubleAmount(double input)
-        {
-            return input * 2;
-        }
-
         static void Main()
         {
-            // Instantiate delegate with named method:
-            MathAction ma = DoubleAmount;
-
-            // Invoke delegate ma:
-            double multByTwo = ma(4.5);
-            Console.WriteLine("multByTwo: {0}", multByTwo);
-
-            // Instantiate delegate with anonymous method:
-            MathAction ma2 = delegate(double input)
-            {
-                return input * input;
-            };
-
-            double square = ma2(5);
-            Console.WriteLine("square: {0}", square);
-
-            // Instantiate delegate with lambda expression
-            MathAction ma3 = s => s * s * s;
-            double cube = ma3(4.375);
-
-            Console.WriteLine("cube: {0}", cube);
+            int x = 3;
+            float y = 4.5f;
+            short z = 5;
+            double w = 1.7E+3;
+            // Result of the 2nd argument is a double:
+            Console.WriteLine("The sum is {0}", x + y + z + w);
         }
-        // Output:
-        // multByTwo: 9
-        // square: 25
-        // cube: 83.740234375
     }
-    //</snippet8>
+    // Output: The sum is 1712.5
+    //</snippet9>
 
     //<snippet10>
     public class EnumTest
@@ -387,53 +361,6 @@ namespace csrefKeywordsMethodParams
     }
     // Output: My Point: x=2, y=3
     //</snippet15>
-
-//<snippet16>
-class ObjectTest
-{
-   public int i = 10;
-}
-
-class MainClass2
-{
-   static void Main()
-   {
-      object a;
-      a = 1;   // an example of boxing
-      Console.WriteLine(a);
-      Console.WriteLine(a.GetType());
-      Console.WriteLine(a.ToString());
-
-      a = new ObjectTest();
-      ObjectTest classRef;
-      classRef = (ObjectTest)a;
-      Console.WriteLine(classRef.i);
-   }
-}
-/* Output
-    1
-    System.Int32
-    1
- * 10
-*/
-//</snippet16>
-
-//<snippet17>
-    class SimpleStringTest 
-    {
-       static void Main()
-       {
-          string a = "\u0068ello ";
-          string b = "world";
-          Console.WriteLine( a + b );
-          Console.WriteLine( a + b == "Hello World" ); // == performs a case-sensitive comparison
-       }
-    }
-    /* Output:
-        hello world
-        False
-     */
-//</snippet17>
 
     class VarTest
     {
