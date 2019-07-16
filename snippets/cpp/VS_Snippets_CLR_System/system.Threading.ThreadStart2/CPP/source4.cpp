@@ -15,7 +15,7 @@ public ref class ThreadWithState
 private:
     // State information used in the task.
     String^ boilerplate;
-    int value;
+    int numberValue;
 
     // Delegate used to execute the callback method when the
     // task is complete.
@@ -28,7 +28,7 @@ public:
         ExampleCallback^ callbackDelegate)
     {
         boilerplate = text;
-        value = number;
+        numberValue = number;
         callback = callbackDelegate;
     }
 
@@ -37,7 +37,7 @@ public:
     // the callback delegate with the number of lines printed.
     void ThreadProc()
     {
-        Console::WriteLine(boilerplate, value);
+        Console::WriteLine(boilerplate, numberValue);
         if (callback != nullptr)
         {
             callback(1);
