@@ -29,7 +29,7 @@ namespace Samples
     {
         public string fromCity = "Tokyo";
         public string toCity = "London";
-        //code omitted…
+        //code omittedâ€¦
         protected override void OnWriteBodyContents(XmlDictionaryWriter w)
         {
             w.WriteStartElement("airfareRequest");
@@ -146,7 +146,7 @@ namespace Samples
         [OperationContract]
         public FileMessage GetFile()
         {
-            //code omitted…
+            //code omittedâ€¦
             FileMessage fm = new FileMessage("myFile.xml");
             return fm;
 

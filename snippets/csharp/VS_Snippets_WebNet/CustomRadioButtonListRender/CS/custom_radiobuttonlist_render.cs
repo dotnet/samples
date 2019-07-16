@@ -13,7 +13,7 @@ namespace Samples.AspNet.CS.Controls
       base.Render(writer);
 
       // Append some text to the Image.
-      writer.Write("Experience Windows Server 2003 and Visual Studio® .NET 2003.");
+      writer.Write("Experience Windows Server 2003 and Visual StudioÂ® .NET 2003.");
     }
   }
 }

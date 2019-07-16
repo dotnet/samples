@@ -31,7 +31,7 @@ public sealed class App
 // This code produces the following output.
 //
 // The currency symbol for 'English (United States)' is '$'
-// The currency symbol for 'English (United Kingdom)' is '£'
+// The currency symbol for 'English (United Kingdom)' is 'Â£'
 // The currency symbol for 'English (Australia)' is '$'
 // The currency symbol for 'English (Canada)' is '$'
 // The currency symbol for 'English (New Zealand)' is '$'

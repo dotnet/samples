@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("The Write Stuff")]
 [assembly: AssemblyProduct("GestureControl")]
-[assembly: AssemblyCopyright("Copyright © The Write Stuff 2005")]
+[assembly: AssemblyCopyright("Copyright Â© The Write Stuff 2005")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

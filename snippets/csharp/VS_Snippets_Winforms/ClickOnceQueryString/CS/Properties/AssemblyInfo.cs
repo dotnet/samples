@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("MS")]
 [assembly: AssemblyProduct("ClickOnceQueryString")]
-[assembly: AssemblyCopyright("Copyright © MS 2005")]
+[assembly: AssemblyCopyright("Copyright Â© MS 2005")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

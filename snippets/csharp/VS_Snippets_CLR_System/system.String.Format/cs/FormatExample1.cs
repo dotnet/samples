@@ -70,7 +70,7 @@ class Sample
 This example displays the following output to the console:
 
 Standard Numeric Format Specifiers
-(C) Currency: . . . . . . . . (¤123.00)
+(C) Currency: . . . . . . . . (Â¤123.00)
 (D) Decimal:. . . . . . . . . -123
 (E) Scientific: . . . . . . . -1.234500E+002
 (F) Fixed point:. . . . . . . -123.45

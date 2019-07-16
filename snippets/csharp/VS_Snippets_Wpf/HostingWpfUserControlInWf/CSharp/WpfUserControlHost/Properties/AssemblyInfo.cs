@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
 [assembly: AssemblyProduct("WpfUserControlHost")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2005")]
+[assembly: AssemblyCopyright("Copyright Â© Microsoft 2005")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

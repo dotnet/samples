@@ -66,7 +66,7 @@ class Members
         fileCodeGroup.Description = "Temp folder permissions group";
         //</Snippet4>
 
-        // Retrieve the string representation of the  fileCodeGroup’s 
+        // Retrieve the string representation of the  fileCodeGroupâ€™s 
         // attributes. FileCodeGroup does not use AttributeString, so the
         // value should be null.
         //<Snippet5>

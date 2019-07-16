@@ -59,7 +59,7 @@ public class Class1
       double number;
       
       // Parse currency value using en-GB culture.
-      value = "£1,097.63";
+      value = "Â£1,097.63";
       style = NumberStyles.Number | NumberStyles.AllowCurrencySymbol;
       culture = CultureInfo.CreateSpecificCulture("en-GB");
       if (Double.TryParse(value, style, culture, out number))
@@ -67,7 +67,7 @@ public class Class1
       else
          Console.WriteLine("Unable to convert '{0}'.", value);
       // Displays: 
-      //       Converted '£1,097.63' to 1097.63.
+      //       Converted 'Â£1,097.63' to 1097.63.
       
       value = "1345,978";
       style = NumberStyles.AllowDecimalPoint;

@@ -78,7 +78,7 @@ namespace SDKSample
         ///   Turns Annotations on.</summary>
         private void OnLoaded(object sender, RoutedEventArgs e)
         {
-            // Make sure that an AnnotationService isn’t already enabled.
+            // Make sure that an AnnotationService isnâ€™t already enabled.
             AnnotationService service = AnnotationService.GetService(Viewer);
             if (service == null)
            {

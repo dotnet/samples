@@ -14,7 +14,7 @@ using System.Windows;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("MSFT")]
 [assembly: AssemblyProduct("ColorPickerStepByStep")]
-[assembly: AssemblyCopyright("Copyright © MSFT 2005")]
+[assembly: AssemblyCopyright("Copyright Â© MSFT 2005")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

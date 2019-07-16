@@ -62,7 +62,7 @@ Module modMain
       Dim number As Double
       
       ' Parse currency value using en-GB culture.
-      value = "£1,097.63"
+      value = "Â£1,097.63"
       style = NumberStyles.Number Or NumberStyles.AllowCurrencySymbol
       culture = CultureInfo.CreateSpecificCulture("en-GB")
       If Double.TryParse(value, style, culture, number) Then
@@ -71,7 +71,7 @@ Module modMain
          Console.WriteLine("Unable to convert '{0}'.", value)
       End If    
       ' Displays: 
-      '       Converted '£1,097.63' to 1097.63.
+      '       Converted 'Â£1,097.63' to 1097.63.
       
       value = "1345,978"
       style = NumberStyles.AllowDecimalPoint

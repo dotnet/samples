@@ -24,7 +24,7 @@ Public Module Example
 End Module
 ' The example displays output like the following:
 '       The currency symbol for 'English (United States)' is '$'
-'       The currency symbol for 'English (United Kingdom)' is '£'
+'       The currency symbol for 'English (United Kingdom)' is 'Â£'
 '       The currency symbol for 'English (Australia)' is '$'
 '       The currency symbol for 'English (Canada)' is '$'
 '       The currency symbol for 'English (New Zealand)' is '$'
