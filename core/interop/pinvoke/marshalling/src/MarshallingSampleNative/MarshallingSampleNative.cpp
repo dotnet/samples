@@ -5,7 +5,7 @@
 
 // string functions
 
-extern "C" DLL_EXPORT int STDMETHODCALLTYPE CountUtf8Characters(char* value)
+extern "C" DLL_EXPORT int STDMETHODCALLTYPE CountBytesInString(char* value)
 {
     // value is ANSI (on Windows)/ UTF8 (on Linux/Mac) null-terminated string
     // and can be null.
@@ -19,7 +19,7 @@ extern "C" DLL_EXPORT int STDMETHODCALLTYPE CountUtf8Characters(char* value)
     }
 }
 
-extern "C" DLL_EXPORT int STDMETHODCALLTYPE CountUtf16Characters(WCHAR* value)
+extern "C" DLL_EXPORT int STDMETHODCALLTYPE CountUtf16StringSize(WCHAR* value)
 {
     // value is UTF16 null-terminated string
     // and can be null.
@@ -50,7 +50,7 @@ extern "C" DLL_EXPORT int STDMETHODCALLTYPE CountPlatformSpecificCharacters(char
     }
 }
 
-char* CreateCopyOfString(const char* stringValue, int& stringValueSize)
+static char* CreateCopyOfString(const char* stringValue, int& stringValueSize)
 {
     stringValueSize = strlen(stringValue) + 1; // + 1 for null terminator
 
@@ -60,7 +60,7 @@ char* CreateCopyOfString(const char* stringValue, int& stringValueSize)
     char* buffer = (char*)CoTaskMemAlloc(stringValueSize);
 #else
     // On Linux and Mac the returned buffer is going to be freed with free(), so it needs to be allocated
-    // with malloc/callos/realloc.
+    // with malloc/calloc/realloc.
     char* buffer = (char*)malloc(stringValueSize);
 #endif
 
@@ -283,10 +283,6 @@ extern "C" DLL_EXPORT double STDMETHODCALLTYPE SumDoubles(double inValue, /*[In]
 
 #if !WINDOWS
 typedef struct tagDEC {
-    // Decimal.cs treats the first two shorts as one long
-    // And they seriable the data so we need to little endian
-    // seriliazation
-    // The wReserved overlaps with Variant's vt member
 #if BIGENDIAN
     union {
         struct {
