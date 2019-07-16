@@ -7,7 +7,7 @@ Imports System.Threading
 Public Class ThreadWithState
     ' State information used in the task.
     Private boilerplate As String
-    Private value As Integer
+    Private numberValue As Integer
 
     ' Delegate used to execute the callback method when the
     ' task is complete.
@@ -18,7 +18,7 @@ Public Class ThreadWithState
     Public Sub New(text As String, number As Integer, _
         callbackDelegate As ExampleCallback)
         boilerplate = text
-        value = number
+        numberValue = number
         callback = callbackDelegate
     End Sub
 
@@ -26,7 +26,7 @@ Public Class ThreadWithState
     ' formatting and printing a document, and then invokes
     ' the callback delegate with the number of lines printed.
     Public Sub ThreadProc()
-        Console.WriteLine(boilerplate, value)
+        Console.WriteLine(boilerplate, numberValue)
         If Not (callback Is Nothing) Then
             callback(1)
         End If
