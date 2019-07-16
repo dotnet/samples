@@ -14,7 +14,7 @@ using System.Windows;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
 [assembly: AssemblyProduct("ColorPickerDialog")]
-[assembly: AssemblyCopyright("Copyright © MSFT 2006")]
+[assembly: AssemblyCopyright("Copyright Â© MSFT 2006")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -63,7 +63,7 @@ class Sample
 Note: This code example was executed on a console whose user interface 
 culture is "en-US" (English-United States).
 
-Search for the target string "Å" in the string "a°xyz".
+Search for the target string "Ã…" in the string "aÂ°xyz".
 
 Using the English (United States) - "en-US" culture:
 Case sensitive:

@@ -101,7 +101,7 @@ namespace PassiveFlowSTS
         /// be used as a tool to obscure redirects to malicious sites. For this reason,
         /// the STS should make some attempt to validate the value of reply request.
         /// 
-        /// DO NOT use this sample code ‘as is’ in production code.
+        /// DO NOT use this sample code â€˜as isâ€™ in production code.
         /// This is only sample code. A production site would need to validate the request
         /// against known Urls for the current connection.
         /// </remarks>

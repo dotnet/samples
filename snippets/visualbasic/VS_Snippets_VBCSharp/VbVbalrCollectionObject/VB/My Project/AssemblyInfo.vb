@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("MS")> 
 <Assembly: AssemblyProduct("VbVbalrCollectionObject")> 
-<Assembly: AssemblyCopyright("Copyright © MS 2005")> 
+<Assembly: AssemblyCopyright("Copyright Â© MS 2005")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: CLSCompliant(True)> 

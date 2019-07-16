@@ -356,9 +356,9 @@ End Module
 ' </snippet5>
 
 ' DouglasR note: re previous snippet
-'I() 'd probably refactor the paging code off into it’s own function. 
+'I() 'd probably refactor the paging code off into itâ€™s own function. 
 'Something like GetFiles(pageSize As Integer, currentPage As Integer) As Boolean where the 
-' boolean returns true if there’s more data.
+' boolean returns true if thereâ€™s more data.
 
 '<snippet6>
 Module QueryDuplicateFileNames

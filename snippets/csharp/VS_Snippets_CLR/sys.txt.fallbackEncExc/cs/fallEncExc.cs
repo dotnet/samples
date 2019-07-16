@@ -76,7 +76,7 @@ This code example produces the following results:
 
 The name of the encoding is "us-ascii".
 
-Input string (3 characters): "«X»"
+Input string (3 characters): "Â«XÂ»"
 Input string in hexadecimal: 0xAB 0x58 0xBB
 
 Encode the input string...

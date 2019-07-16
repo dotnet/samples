@@ -15,7 +15,7 @@ Imports System.Windows
 <Assembly: AssemblyConfiguration("")>
 <Assembly: AssemblyCompany("MSFT")>
 <Assembly: AssemblyProduct("ColorPickerStepByStep")>
-<Assembly: AssemblyCopyright("Copyright © MSFT 2005")>
+<Assembly: AssemblyCopyright("Copyright Â© MSFT 2005")>
 <Assembly: AssemblyTrademark("")>
 <Assembly: AssemblyCulture("")>
 

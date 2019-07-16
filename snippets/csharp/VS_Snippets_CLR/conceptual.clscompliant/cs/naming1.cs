@@ -48,7 +48,6 @@ public class Size
 //    Naming2a.cs(13,8): (Location of symbol related to previous warning)
 // </Snippet17>
 
-// â„«   Ã…    í©€í¼Š 
 public class Example
 {
    public static void Main()

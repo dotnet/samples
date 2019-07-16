@@ -269,7 +269,7 @@ namespace GenericVariance
             ints.Add(42);
             List<object> objects = new List<object>();
 
-            // doesn’t compile ‘ints’ is not a IEnumerable<object>
+            // doesnâ€™t compile â€˜intsâ€™ is not a IEnumerable<object>
             //objects.AddRange(ints); 
             //</Snippet55>
             
@@ -279,7 +279,7 @@ namespace GenericVariance
             //</Snippet57>
 
             //<Snippet59>
-            // would like to do this, but can’t ...
+            // would like to do this, but canâ€™t ...
             // ... ints is not an IEnumerable<object>
             //PrintObjects(ints);
             //</Snippet59>
