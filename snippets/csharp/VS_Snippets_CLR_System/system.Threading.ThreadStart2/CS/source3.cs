@@ -9,20 +9,20 @@ public class ThreadWithState
 {
     // State information used in the task.
     private string boilerplate;
-    private int value;
+    private int numberValue;
 
     // The constructor obtains the state information.
     public ThreadWithState(string text, int number)
     {
         boilerplate = text;
-        value = number;
+        numberValue = number;
     }
 
     // The thread procedure performs the task, such as formatting
     // and printing a document.
     public void ThreadProc()
     {
-        Console.WriteLine(boilerplate, value);
+        Console.WriteLine(boilerplate, numberValue);
     }
 }
 
