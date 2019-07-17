@@ -47,12 +47,12 @@ namespace Enums
             //...
             meetingDay = Day.Friday;
             //</snippet4>
-            Console.WriteLine("Meeting day is {0}", meetingDay);
+            Console.WriteLine($"Meeting day is {meetingDay}");
 
-            Console.WriteLine("Meeting day is {0}", (int) meetingDay);
+            Console.WriteLine($"Meeting day is {(int) meetingDay}");
 
             meetingDay = (Day)42;
-            Console.WriteLine("Meeting day is {0}", meetingDay);
+            Console.WriteLine($"Meeting day is {meetingDay}");
 
             Days meetingDays = Days.Tuesday | Days.Thursday;
             Console.WriteLine(meetingDays);
@@ -77,19 +77,19 @@ namespace Enums
             // Set an additional flag using bitwise OR.
             meetingDays = meetingDays | Days.Friday;
 
-            Console.WriteLine("Meeting days are {0}", meetingDays);
+            Console.WriteLine($"Meeting days are {meetingDays}");
             // Output: Meeting days are Tuesday, Thursday, Friday
 
             // Toggle a flag using bitwise XOR.
             meetingDays = meetingDays ^ Days.Tuesday;
-            Console.WriteLine("Meeting days are {0}", meetingDays);
+            Console.WriteLine($"Meeting days are {meetingDays}");
             // Output: Meeting days are Thursday, Friday
             //</snippet6>
 
             //<snippet7>
             // Test value of flags using bitwise AND.
             bool test = (meetingDays & Days.Thursday) == Days.Thursday;
-            Console.WriteLine("Thursday {0} a meeting day.", test == true ? "is" : "is not");
+            Console.WriteLine($"Thursday {test == true ? "is" : "is not"} a meeting day.");
             // Output: Thursday is a meeting day.
             //</snippet7>
 
