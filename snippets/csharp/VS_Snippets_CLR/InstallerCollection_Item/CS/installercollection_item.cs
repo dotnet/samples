@@ -1,4 +1,4 @@
-// System.Configuration.Install.InstallerCollection.Item(Int32)
+﻿// System.Configuration.Install.InstallerCollection.Item(Int32)
 
 /*
    The following example demonstrates the 'Item(Int32)' method of the 

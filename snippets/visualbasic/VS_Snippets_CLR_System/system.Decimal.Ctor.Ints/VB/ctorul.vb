@@ -1,4 +1,4 @@
-'<Snippet4>
+﻿'<Snippet4>
 ' Example of the Decimal( UInt64 ) constructor.
 Imports System
 Imports Microsoft.VisualBasic

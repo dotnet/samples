@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 // Example for the hyperbolic Math.Tanh( double ) method.
 using System;
 

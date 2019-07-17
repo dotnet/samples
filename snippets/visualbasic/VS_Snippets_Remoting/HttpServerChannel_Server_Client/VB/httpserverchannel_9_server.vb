@@ -1,4 +1,4 @@
-' System.Runtime.Remoting.Channels.Http.HttpServerChannel
+﻿' System.Runtime.Remoting.Channels.Http.HttpServerChannel
 ' System.Runtime.Remoting.Channels.Http.HttpServerChannel.StartListening(); System.Runtime.Remoting.Channels.Http.HttpServerChannel.ChannelName; System.Runtime.Remoting.Channels.Http.HttpServerChannel.ChannelPriority; System.Runtime.Remoting.Channels.Http.HttpServerChannel.ChannelScheme; System.Runtime.Remoting.Channels.Http.HttpServerChannel.GetChannelUri(); System.Runtime.Remoting.Channels.Http.HttpServerChannel.WantsToListen
 ' System.Runtime.Remoting.Channels.Http.HttpServerChannel.Parse(); System.Runtime.Remoting.Channels.Http.HttpServerChannel.StopListening()
 

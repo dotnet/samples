@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 public class SplitTest {
     public static void Main() {

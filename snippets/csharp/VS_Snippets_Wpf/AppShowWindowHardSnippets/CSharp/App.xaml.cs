@@ -1,4 +1,4 @@
-//<SnippetStartupEventCODEBEHIND>
+﻿//<SnippetStartupEventCODEBEHIND>
 using System.Windows;
 
 namespace SDKSample

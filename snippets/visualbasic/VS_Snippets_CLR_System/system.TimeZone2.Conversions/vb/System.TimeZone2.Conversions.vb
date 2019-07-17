@@ -1,4 +1,4 @@
-' Conversions Examples
+﻿' Conversions Examples
 Option Strict On
 
 <Assembly: CLSCompliant(True)>

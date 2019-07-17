@@ -1,4 +1,4 @@
-' <Snippet40>
+﻿' <Snippet40>
 Imports System.IO
 
 Module Module1

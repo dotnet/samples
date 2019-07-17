@@ -1,4 +1,4 @@
-//NCLPingSync
+﻿//NCLPingSync
 //<snippet1>
 using System;
 using System.Net;

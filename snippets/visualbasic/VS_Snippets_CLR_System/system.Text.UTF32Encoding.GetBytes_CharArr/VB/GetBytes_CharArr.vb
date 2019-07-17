@@ -1,4 +1,4 @@
-' The following code example determines the number of bytes required to encode three characters from a character array,
+﻿' The following code example determines the number of bytes required to encode three characters from a character array,
 ' then encodes the characters and displays the resulting bytes.
 
 ' <Snippet1>

@@ -1,4 +1,4 @@
-// <Snippet22>
+﻿// <Snippet22>
 using System;
 using System.Text.RegularExpressions;
 

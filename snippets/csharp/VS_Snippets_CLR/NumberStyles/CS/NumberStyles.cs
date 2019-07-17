@@ -1,4 +1,4 @@
-//Types:System.Globalization.NumberStyles (enum) Vendor: Richter
+﻿//Types:System.Globalization.NumberStyles (enum) Vendor: Richter
 //<snippet1>
 using System;
 using System.Text;

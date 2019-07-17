@@ -1,4 +1,4 @@
-' This example demonstrates using the Control.PerformLayout method.  
+﻿' This example demonstrates using the Control.PerformLayout method.  
 ' It contains a custom LayoutControl object and three buttons.  
 ' The Click event handler for Button1 explicitly calls PerformLayout.  
 ' The Click event handler for Button2 implicitly calls PerformLayout. 

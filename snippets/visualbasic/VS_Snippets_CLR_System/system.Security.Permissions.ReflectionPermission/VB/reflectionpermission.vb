@@ -1,4 +1,4 @@
-' This sample demonstrates the IsSubsetOf, Union, Intersect, Copy, ToXml and FromXml methods
+﻿' This sample demonstrates the IsSubsetOf, Union, Intersect, Copy, ToXml and FromXml methods
 ' of the ReflectionPermission class.
 '<Snippet1>
 Imports System

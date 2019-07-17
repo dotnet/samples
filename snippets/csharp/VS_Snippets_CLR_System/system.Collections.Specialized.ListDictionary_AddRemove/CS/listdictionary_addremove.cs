@@ -1,4 +1,4 @@
-// The following code example adds to and removes elements from a ListDictionary.
+﻿// The following code example adds to and removes elements from a ListDictionary.
 
 // <snippet1>
 using System;

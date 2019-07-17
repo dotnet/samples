@@ -1,4 +1,4 @@
-'<snippet4>
+﻿'<snippet4>
 Imports System.Threading
 
 ' The ThreadWithState class contains the information needed for

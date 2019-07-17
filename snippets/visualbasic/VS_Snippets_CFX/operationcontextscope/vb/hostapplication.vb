@@ -1,4 +1,4 @@
-Imports System.Configuration
+﻿Imports System.Configuration
 Imports System.ServiceModel
 Imports System.Text
 Imports Microsoft.WCF.Documentation

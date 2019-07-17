@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 Imports System.Net.Security
 Imports System.ServiceModel
 Imports System.Text

@@ -1,4 +1,4 @@
-Public Class Samples4
+﻿Public Class Samples4
 
 Public Shared Sub Main()
 

@@ -1,4 +1,4 @@
- '*
+﻿ '*
 '  *File name: WebApplicationLifeTimeEvent.vb
 '  *Purpose: Implements a custom WebApplicationLifeTimeEvent type
 '  *

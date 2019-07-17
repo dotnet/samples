@@ -1,4 +1,4 @@
-// The following code example demonstrates that Type objects are returned
+﻿// The following code example demonstrates that Type objects are returned
 // by the typeid operator, and shows how Type objects are used in reflection
 // to explore information about types and to invoke members of types.
 //<Snippet1>

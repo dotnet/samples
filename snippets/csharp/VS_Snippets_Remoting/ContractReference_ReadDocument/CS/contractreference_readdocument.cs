@@ -1,4 +1,4 @@
-// System.Web.Services.Discovery.ContractReference.ReadDocument
+﻿// System.Web.Services.Discovery.ContractReference.ReadDocument
 /* 
  * The following example demonstrates the 'ReadDocument' method of the 
  * 'ContractReference' class.

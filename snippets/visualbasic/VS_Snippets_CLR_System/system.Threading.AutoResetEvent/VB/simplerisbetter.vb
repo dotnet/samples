@@ -1,4 +1,4 @@
-'<Snippet3>
+﻿'<Snippet3>
 Imports System.Threading
 
 ' Visual Studio: Replace the default class in a Console project with 

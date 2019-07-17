@@ -1,4 +1,4 @@
-Option Explicit
+﻿Option Explicit
 
 Imports System
 Imports System.Data

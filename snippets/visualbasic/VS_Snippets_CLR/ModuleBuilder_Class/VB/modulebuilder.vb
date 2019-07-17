@@ -1,4 +1,4 @@
-' System.Reflection.Emit.ModuleBuilder
+﻿' System.Reflection.Emit.ModuleBuilder
 
 ' The following example demonstrates the 'ModuleBuilder' class. 
 '  A dynamic assembly with a module in it is created in 'CodeGenerator' class. 

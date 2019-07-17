@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 // This example demonstrates the GetConsoleFallbackUICulture() method
 using System;
 using System.Globalization;

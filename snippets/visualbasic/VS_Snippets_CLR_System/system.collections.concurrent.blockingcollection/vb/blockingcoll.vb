@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 Imports System.Threading.Tasks
 Imports System.Collections.Concurrent
 Imports System.Threading

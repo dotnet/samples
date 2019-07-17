@@ -1,4 +1,4 @@
-' The following code example demonstrates how to determine the GregorianCalendar version supported by the culture.
+﻿' The following code example demonstrates how to determine the GregorianCalendar version supported by the culture.
 
 ' <snippet1>
 Imports System

@@ -1,4 +1,4 @@
-' <SnippetPointAnimationUsingPathWholePage>
+﻿' <SnippetPointAnimationUsingPathWholePage>
 
 Imports System
 Imports System.Windows

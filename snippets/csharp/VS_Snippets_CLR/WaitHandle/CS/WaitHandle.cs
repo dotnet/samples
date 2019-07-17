@@ -1,4 +1,4 @@
-//Types:System.Threading.WaitHandle Vendor: Richter
+﻿//Types:System.Threading.WaitHandle Vendor: Richter
 //<snippet1>
 using System;
 using System.Threading;

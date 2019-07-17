@@ -1,4 +1,4 @@
-' XpsPrint SDK Sample - XpsPrintHelper.vb
+﻿' XpsPrint SDK Sample - XpsPrintHelper.vb
 ' Copyright (c) Microsoft Corporation. All rights reserved.
 
 

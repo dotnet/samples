@@ -1,4 +1,4 @@
-' <snippet1>
+﻿' <snippet1>
 ' Create a custom HtmlTextWriter class that overrides 
 ' the RenderBeforeContent and RenderAfterContent methods.
 Imports System

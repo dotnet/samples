@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 
 // The following code example demonstrates using the ListBox.Sort method
 // by inheriting from the ListBox class and overriding the Sort method.

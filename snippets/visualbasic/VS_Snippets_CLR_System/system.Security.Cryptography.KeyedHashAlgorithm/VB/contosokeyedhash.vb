@@ -1,4 +1,4 @@
-' This sample demonstrates how to extend the KeyedHashAlgorithm class.
+﻿' This sample demonstrates how to extend the KeyedHashAlgorithm class.
 '<Snippet3>
 Imports System
 Imports System.Security.Cryptography

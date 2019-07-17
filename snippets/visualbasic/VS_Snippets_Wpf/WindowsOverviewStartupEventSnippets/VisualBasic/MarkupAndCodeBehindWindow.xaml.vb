@@ -1,4 +1,4 @@
-Imports System.Windows
+﻿Imports System.Windows
 
 Namespace SDKSample
 	Partial Public Class MarkupAndCodeBehindWindow

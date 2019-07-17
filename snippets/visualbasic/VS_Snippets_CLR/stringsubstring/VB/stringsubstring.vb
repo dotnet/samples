@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 Public Class SubStringTest
     Public Shared Sub Main()
         Dim info As String() = { "Name: Felica Walker", "Title: Mz.", 

@@ -1,4 +1,4 @@
-//<SNIPPET1>
+﻿//<SNIPPET1>
 //The following sample uses the Cryptography class to simulate the roll of a dice.
 
 using System;

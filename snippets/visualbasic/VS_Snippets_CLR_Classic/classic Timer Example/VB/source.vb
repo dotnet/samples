@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 ' Use this code inside a project created with the Visual Basic > Windows Desktop > Console Application template. 
 ' Replace the default code in Module1.vb with this code. Then right click the project in Solution Explorer, 
 ' select Properties, and set the Startup Object to Timer1. 

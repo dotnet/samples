@@ -1,4 +1,4 @@
-// <SnippetMatrixAnimationUsingPathDoesRotateWithTangentWholePage>
+﻿// <SnippetMatrixAnimationUsingPathDoesRotateWithTangentWholePage>
 using System;
 using System.Windows;
 using System.Windows.Controls;

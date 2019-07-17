@@ -1,4 +1,4 @@
-// <snippet4>
+﻿// <snippet4>
 using System;
 
 public class IsDigitSample {

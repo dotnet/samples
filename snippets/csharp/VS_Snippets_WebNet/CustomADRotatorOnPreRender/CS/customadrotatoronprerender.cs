@@ -1,4 +1,4 @@
-using System.Web;
+﻿using System.Web;
 using System.Security.Permissions;
 
 namespace Samples.AspNet.CS.Controls

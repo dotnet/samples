@@ -1,4 +1,4 @@
-
+﻿
 namespace IndexersSamples.Common
 {
     public class Measurements

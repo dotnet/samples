@@ -1,4 +1,4 @@
-Imports System.Globalization
+﻿Imports System.Globalization
 
 Public Module Example
    Dim jaJp As CultureInfo

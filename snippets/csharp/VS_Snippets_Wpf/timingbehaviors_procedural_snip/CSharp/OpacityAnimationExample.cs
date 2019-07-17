@@ -1,4 +1,4 @@
-/*
+﻿/*
 
 OpacityAnimationExample.cs
   This example shows how to animate the opacity of objects,

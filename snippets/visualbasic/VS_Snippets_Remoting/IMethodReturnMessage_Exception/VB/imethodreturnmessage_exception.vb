@@ -1,4 +1,4 @@
-' System.Runtime.Remoting.Messaging.IMethodReturnMessage.Exception
+﻿' System.Runtime.Remoting.Messaging.IMethodReturnMessage.Exception
 
 ' The following example demonstrates 'Exception' property of 'IMethodReturnMessage'interface.
 ' A 'CustomServer' class is defined extending 'MarshalByRefObject'. A custom proxy

@@ -1,4 +1,4 @@
- ' File name: FixedValidatorAttribute.cs
+﻿ ' File name: FixedValidatorAttribute.cs
 ' Allowed snippet tags range: [21 - 30].
 ' <Snippet21>
 Imports System

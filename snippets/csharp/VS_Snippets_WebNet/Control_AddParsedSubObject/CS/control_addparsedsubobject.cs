@@ -1,4 +1,4 @@
-// System.Web.UI.Control.AddParsedSubObject;
+﻿// System.Web.UI.Control.AddParsedSubObject;
 
 /*
    The following example demonstrates the method 'AddParsedSubObject' of class

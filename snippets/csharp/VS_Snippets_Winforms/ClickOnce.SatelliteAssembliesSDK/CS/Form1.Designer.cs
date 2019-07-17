@@ -1,4 +1,4 @@
-namespace ClickOnce.SatelliteAssemblies
+﻿namespace ClickOnce.SatelliteAssemblies
 {
     partial class Form1
     {

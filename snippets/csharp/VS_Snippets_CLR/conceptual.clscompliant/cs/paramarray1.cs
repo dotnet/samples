@@ -1,4 +1,4 @@
-// <Snippet25>
+﻿// <Snippet25>
 using System;
 
 [assembly: CLSCompliant(true)]

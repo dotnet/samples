@@ -1,4 +1,4 @@
-' System.Runtime.Remoting.Channels.ChannelServices
+﻿' System.Runtime.Remoting.Channels.ChannelServices
 ' System.Runtime.Remoting.Channels.ChannelServices.RegisteredChannels
 ' System.Runtime.Remoting.Channels.ChannelServices.UnregisterChannel(IChannel[])
 

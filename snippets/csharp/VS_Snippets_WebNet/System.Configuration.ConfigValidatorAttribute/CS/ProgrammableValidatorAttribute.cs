@@ -1,4 +1,4 @@
-// File name: ProgrammableValidatorAttribute.cs
+﻿// File name: ProgrammableValidatorAttribute.cs
 // Allowed snippet tags range: [31 - 40].
 
 // <Snippet31>

@@ -1,4 +1,4 @@
-//<Snippet1>
+﻿//<Snippet1>
 #define CODE_ANALYSIS
 using System;
 using System.Diagnostics.CodeAnalysis;

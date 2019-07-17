@@ -1,4 +1,4 @@
-' <snippet4>
+﻿' <snippet4>
 Imports System.Configuration
 Imports System.ServiceModel
 Imports System.Text

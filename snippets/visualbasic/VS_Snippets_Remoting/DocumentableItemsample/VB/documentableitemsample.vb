@@ -1,4 +1,4 @@
-' System.Web.Services.Description.DocumentableItem.Documentation;
+﻿' System.Web.Services.Description.DocumentableItem.Documentation;
 
 ' The following program demonstrates the property 'Documentation' of abstract class
 ' 'DocumentableItem'. The program reads a wsdl document "MathService_vb.wsdl" and

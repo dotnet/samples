@@ -1,4 +1,4 @@
-' System.Web.Services.Description.MimePartCollection
+﻿' System.Web.Services.Description.MimePartCollection
 
 ' The following program demostrates 'MimePartCollection' class. It 
 ' takes 'MimePartCollection_1_Input_vb.wsdl' as input which

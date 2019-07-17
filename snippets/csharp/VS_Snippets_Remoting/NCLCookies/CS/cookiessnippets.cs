@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
 using System.Net;
 using System;
 namespace Examples.System.Net.Cookies

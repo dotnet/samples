@@ -1,4 +1,4 @@
-// The following code example compares portions of two strings using the different CompareInfo instances:
+﻿// The following code example compares portions of two strings using the different CompareInfo instances:
 //    a CompareInfo instance associated with the "Spanish - Spain" culture with international sort,
 //    a CompareInfo instance associated with the "Spanish - Spain" culture with traditional sort, and
 //    a CompareInfo instance associated with the InvariantCulture.

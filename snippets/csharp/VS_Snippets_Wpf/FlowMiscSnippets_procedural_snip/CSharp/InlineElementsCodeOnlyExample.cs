@@ -1,4 +1,4 @@
-// <SnippetInlineElementsCodeOnlyExampleWholePage>
+﻿// <SnippetInlineElementsCodeOnlyExampleWholePage>
 using System;
 using System.Windows;
 using System.Windows.Media;

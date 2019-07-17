@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 ' Declare an interface.
 Interface IInterface
 End Interface

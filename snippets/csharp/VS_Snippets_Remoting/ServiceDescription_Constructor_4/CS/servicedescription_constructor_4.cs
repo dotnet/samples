@@ -1,4 +1,4 @@
-// System.Web.Services.Description.ServiceDescription.ServiceDescription()
+﻿// System.Web.Services.Description.ServiceDescription.ServiceDescription()
 // System.Web.Services.Description.ServiceDescription.Read(string)
 // System.Web.Services.Description.ServiceDescription.Messages
 // System.Web.Services.Description.ServiceDescription.Name

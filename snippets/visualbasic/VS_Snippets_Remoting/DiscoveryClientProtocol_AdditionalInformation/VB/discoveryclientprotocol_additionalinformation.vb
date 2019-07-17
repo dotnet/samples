@@ -1,4 +1,4 @@
-' System.Web.Services.Discovery.SoapBinding.SoapBinding
+﻿' System.Web.Services.Discovery.SoapBinding.SoapBinding
 ' System.Web.Services.Discovery.SoapBinding.Address
 ' System.Web.Services.Discovery.SoapBinding.Binding
 ' System.Web.Services.Discovery.SoapBinding.Namespace

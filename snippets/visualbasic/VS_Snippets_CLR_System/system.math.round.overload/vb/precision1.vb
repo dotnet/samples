@@ -1,4 +1,4 @@
-' Visual Basic .NET Document
+﻿' Visual Basic .NET Document
 
 ' Illustrate rounding error in Math.Round(Double).
 Option Strict On

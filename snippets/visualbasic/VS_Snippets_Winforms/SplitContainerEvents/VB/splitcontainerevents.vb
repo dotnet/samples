@@ -1,4 +1,4 @@
-' <snippet1>
+﻿' <snippet1>
 ' Compile this example using the following command line:
 ' vbc splitcontainerevents.vb /r:System.Drawing.dll /r:System.Windows.Forms.dll /r:System.dll /r:System.Data.dll
 Imports System

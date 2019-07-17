@@ -1,4 +1,4 @@
-Imports System.IO
+﻿Imports System.IO
 
 Class Class1
    Public Shared Sub Main()

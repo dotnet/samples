@@ -1,4 +1,4 @@
-// System.Net.WebClient.QueryString
+﻿// System.Net.WebClient.QueryString
 
 /*This program demonstrates the 'QueryString' property of 'WebClient' class.
  It accepts a search phrase as user input and invokes the search of www.google.com for  

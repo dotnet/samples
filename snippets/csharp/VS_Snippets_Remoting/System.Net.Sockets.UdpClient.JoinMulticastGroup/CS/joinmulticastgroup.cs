@@ -1,4 +1,4 @@
-// File name:multicastOperations.cs
+﻿// File name:multicastOperations.cs
 // This example shows how to join a multicast group and perform a muticast 
 // data exchange. The OriginatorClient object starts the conversation while 
 // the TargetClient responds. The two helper objects Receive and Send 

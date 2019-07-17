@@ -1,4 +1,4 @@
-// This sample demonstrates how to use each member of the PolicyStatement
+﻿// This sample demonstrates how to use each member of the PolicyStatement
 // class.
 //<Snippet1>
 using System;

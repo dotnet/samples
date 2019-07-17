@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 ' This example demonstrates the ConsoleKeyInfo.GetHashCode() method.
 Imports System
 Imports System.Text

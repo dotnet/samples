@@ -1,4 +1,4 @@
-/*
+﻿/*
 
 This example shows how the BeginTime property determines when a timeline starts.
 Several rectangles re-animated by DoubleAnimations with identical durations and target values, but with different

@@ -1,4 +1,4 @@
-'<SnippetXBAPApplicationDefinitionCODEBEHIND>
+﻿'<SnippetXBAPApplicationDefinitionCODEBEHIND>
 
 Imports System.Windows
 

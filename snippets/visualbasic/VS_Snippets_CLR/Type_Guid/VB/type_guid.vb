@@ -1,4 +1,4 @@
-' <Snippet1>	
+﻿' <Snippet1>	
 Class MyGetTypeFromCLSID
 
     Public Class MyClass1

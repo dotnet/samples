@@ -1,4 +1,4 @@
-// System.Reflection.AssemblyName.GetAssemblyName(string)
+﻿// System.Reflection.AssemblyName.GetAssemblyName(string)
 // System.Reflection.AssemblyName.ToString()
 
 /*

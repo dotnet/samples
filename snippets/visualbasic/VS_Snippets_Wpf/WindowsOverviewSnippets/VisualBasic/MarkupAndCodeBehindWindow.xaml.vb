@@ -1,4 +1,4 @@
-'<SnippetMarkupAndCodeBehindWindowCODEBEHIND>
+﻿'<SnippetMarkupAndCodeBehindWindowCODEBEHIND>
 
 Imports System.Windows
 

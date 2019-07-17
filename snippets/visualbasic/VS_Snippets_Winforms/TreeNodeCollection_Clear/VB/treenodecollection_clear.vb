@@ -1,4 +1,4 @@
-' System.Windows.Forms.TreeNodeCollection.Clear
+﻿' System.Windows.Forms.TreeNodeCollection.Clear
 ' System.Windows.Forms.TreeNodeCollection.AddRange
 
 ' The following program demonstrates the 'Clear' and 'AddRange' methods of 

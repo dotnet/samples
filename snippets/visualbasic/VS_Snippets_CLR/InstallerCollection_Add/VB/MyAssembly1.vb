@@ -1,4 +1,4 @@
-' This program is supposed to be used with the InstallerCollection_***.vb
+﻿' This program is supposed to be used with the InstallerCollection_***.vb
 ' examples. Provide the exe of this program as input to the 
 ' InstallerCollection_***.exe programs.
 

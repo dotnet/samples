@@ -1,4 +1,4 @@
-' Created by REDMOND\glennha for Whidbey.
+﻿' Created by REDMOND\glennha for Whidbey.
 '<Snippet1>
 Imports System
 Imports System.Reflection

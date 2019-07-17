@@ -1,4 +1,4 @@
-'<SnippetMainWindowGetPropertyCODEBEHIND>
+﻿'<SnippetMainWindowGetPropertyCODEBEHIND>
 
 Imports Microsoft.VisualBasic
 Imports System

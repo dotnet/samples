@@ -1,4 +1,4 @@
-using Xunit;
+﻿using Xunit;
 using TextUtils;
 using System.Diagnostics;
 

@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Class MyGCCollectClass
      Private Const maxGarbage As Integer = 1000
 

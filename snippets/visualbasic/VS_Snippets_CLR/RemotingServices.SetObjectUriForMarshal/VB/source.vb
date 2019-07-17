@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Imports System.Runtime.Remoting
 Imports System.Security.Permissions
 

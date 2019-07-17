@@ -1,4 +1,4 @@
-'<SnippetWindowDialogResultCODEBEHIND>
+﻿'<SnippetWindowDialogResultCODEBEHIND>
 
 Imports System
 Imports System.Windows

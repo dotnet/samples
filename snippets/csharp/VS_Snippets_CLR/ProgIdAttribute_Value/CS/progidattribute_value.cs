@@ -1,4 +1,4 @@
-/*
+﻿/*
    System.Runtime.InteropServices.ProgIdAttribute.Value
    
    The program shows MyClass as a COM class with prog id 'InteropSample.MyClass'.

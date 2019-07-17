@@ -1,4 +1,4 @@
-// REDMOND\glennha
+﻿// REDMOND\glennha
 // Showing all the things D(A) can bind to.
 //
 //<Snippet1>

@@ -1,4 +1,4 @@
-' The following code example searches the StringCollection for an element.
+﻿' The following code example searches the StringCollection for an element.
 
 ' <snippet1>
 Imports System

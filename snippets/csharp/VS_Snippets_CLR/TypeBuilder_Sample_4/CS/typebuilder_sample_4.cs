@@ -1,4 +1,4 @@
-// FxCop Exception:
+﻿// FxCop Exception:
 // This sample generates FxCop violation SecureLateBindingMethods for 
 // Activator.CreateInstance, Type.GetType, etc.. 
 // The violation can be ignored, because:

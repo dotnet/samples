@@ -1,4 +1,4 @@
-/**
+﻿/**
   *File name: WebEventProvider.cs
   *Purpose: Shows how to build a custom event provider. 
   **/  

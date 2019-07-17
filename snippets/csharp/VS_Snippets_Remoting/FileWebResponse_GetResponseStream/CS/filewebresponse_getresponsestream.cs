@@ -1,4 +1,4 @@
-// System.Net.FileWebResponse.GetResponseStream.
+﻿// System.Net.FileWebResponse.GetResponseStream.
 
 /* This program demonstrates the 'GetResponseStream' method of the 'FileWebResponse' class.
    It creates a 'FileWebRequest' object and queries for a response.

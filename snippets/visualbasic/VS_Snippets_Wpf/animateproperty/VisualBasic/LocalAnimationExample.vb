@@ -1,4 +1,4 @@
-' <Snippet11>
+﻿' <Snippet11>
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 '''This sample demonstrates how to apply non-storyboard animations to a property.
 '''To animate in markup, you must use storyboards.

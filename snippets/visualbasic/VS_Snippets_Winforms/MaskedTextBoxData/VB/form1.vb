@@ -1,4 +1,4 @@
-'<SNIPPET1>
+﻿'<SNIPPET1>
 Imports System.Data.SqlClient
 
 Public Class Form1

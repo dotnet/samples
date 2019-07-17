@@ -1,4 +1,4 @@
-// <snippet10>
+﻿// <snippet10>
 namespace Microsoft.Samples.WinForms.Cs.HostApp 
 {
 	using System;

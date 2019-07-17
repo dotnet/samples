@@ -1,4 +1,4 @@
-// Illustrates Convert.ToDateTime(String) method.
+﻿// Illustrates Convert.ToDateTime(String) method.
 
 // <Snippet2>
 using System;

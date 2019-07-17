@@ -1,4 +1,4 @@
-//<Snippet2>
+﻿//<Snippet2>
 // Example of the explicit conversions from decimal to int and 
 // decimal to uint.
 using System;

@@ -1,4 +1,4 @@
-// RightsManagedContentViewer SDK Sample - App.xaml.cs
+﻿// RightsManagedContentViewer SDK Sample - App.xaml.cs
 // Copyright (c) Microsoft Corporation. All rights reserved.
 
 using System;

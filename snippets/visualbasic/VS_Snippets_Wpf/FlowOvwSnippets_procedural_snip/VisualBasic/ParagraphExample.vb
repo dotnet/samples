@@ -1,4 +1,4 @@
-' <SnippetParagraphCodeOnlyExampleWholePage>
+﻿' <SnippetParagraphCodeOnlyExampleWholePage>
 
 Imports System
 Imports System.Windows

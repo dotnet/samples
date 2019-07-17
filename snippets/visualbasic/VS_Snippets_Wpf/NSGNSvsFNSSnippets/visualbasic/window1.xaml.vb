@@ -1,4 +1,4 @@
-Imports System.Text
+﻿Imports System.Text
 
 '<SnippetNSFrameDiffCODE1>
 Imports System.Windows.Controls

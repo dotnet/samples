@@ -1,4 +1,4 @@
-' System.Runtime.Remoting.Channels.ITransportHeaders
+﻿' System.Runtime.Remoting.Channels.ITransportHeaders
 ' System.Runtime.Remoting.Channels.ITransportHeaders.Item
 ' System.Runtime.Remoting.Channels.ITransportHeaders.GetEnumerator()
 

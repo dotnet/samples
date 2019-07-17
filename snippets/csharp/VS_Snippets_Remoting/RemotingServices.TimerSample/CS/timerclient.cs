@@ -1,4 +1,4 @@
-// System.Runtime.Remoting.RemotingServices.GetLifetimeService
+﻿// System.Runtime.Remoting.RemotingServices.GetLifetimeService
 // This sample is of a remote client for a group coffee timer.
 // Since the client must stay connected to a stateful server object
 // for minutes without calling it, it needs to register as a sponsor

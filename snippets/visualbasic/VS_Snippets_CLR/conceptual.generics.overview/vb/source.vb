@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 Namespace GenericsExample1
     '<snippet2>
     Public Class Generic(Of T)

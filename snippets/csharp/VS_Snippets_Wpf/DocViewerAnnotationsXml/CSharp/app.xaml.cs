@@ -1,4 +1,4 @@
-// DocViewerAnnotationsXml SDK Sample - app.xaml.cs
+﻿// DocViewerAnnotationsXml SDK Sample - app.xaml.cs
 // Copyright (c) Microsoft Corporation. All rights reserved.
 
 using System;

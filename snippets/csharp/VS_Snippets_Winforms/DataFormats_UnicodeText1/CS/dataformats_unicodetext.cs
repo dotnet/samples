@@ -1,4 +1,4 @@
-// System.Windows.Forms.DataFormats.UnicodeText;System.Windows.Forms.Text;
+﻿// System.Windows.Forms.DataFormats.UnicodeText;System.Windows.Forms.Text;
 
 /*
  *  The following example demonstrates the 'UnicodeText' and 'Text' field of 'DataFormats' class. 

@@ -1,4 +1,4 @@
-' Topic: XML Element Literal
+﻿' Topic: XML Element Literal
 
 Public Class Samples9
 Public Shared Sub Main()

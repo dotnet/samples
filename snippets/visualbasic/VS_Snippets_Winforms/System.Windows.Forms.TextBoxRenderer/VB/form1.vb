@@ -1,4 +1,4 @@
-' This sample can go in TextBoxRenderer class overview.
+﻿' This sample can go in TextBoxRenderer class overview.
 ' - Snippet2 can go in IsSupported and DrawTextBox
 ' - Snippet4 could go in TextFormatFlags
 

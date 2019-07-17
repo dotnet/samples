@@ -1,4 +1,4 @@
-' This sample opens a file whose name is passed to it as a parameter. 
+﻿' This sample opens a file whose name is passed to it as a parameter. 
 ' It reads each line in the file and replaces every occurrence of 4 
 ' space characters with a tab character.
 '

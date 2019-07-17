@@ -1,4 +1,4 @@
-//<Snippet2>
+﻿//<Snippet2>
 // Example of some BitConverter.ToString( ) method overloads.
 using System;
 

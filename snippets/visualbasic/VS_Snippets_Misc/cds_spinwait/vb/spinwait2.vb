@@ -1,4 +1,4 @@
-' How to: Use SpinWait to Implement a Two-Phase Wait Operation
+﻿' How to: Use SpinWait to Implement a Two-Phase Wait Operation
 ' <Snippet03>
 #Const LOGGING = 1
 

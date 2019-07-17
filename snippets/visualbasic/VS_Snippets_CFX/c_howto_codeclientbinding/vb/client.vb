@@ -1,4 +1,4 @@
-'code for c_HowTo_CodeClientBindings client
+﻿'code for c_HowTo_CodeClientBindings client
 
 Imports System
 Imports System.ServiceModel

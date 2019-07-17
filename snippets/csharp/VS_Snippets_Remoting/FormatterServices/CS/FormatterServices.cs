@@ -1,4 +1,4 @@
-//Types:System.Runtime.Serialization.FormatterServices Vendor: Richter
+﻿//Types:System.Runtime.Serialization.FormatterServices Vendor: Richter
 //Types:System.Runtime.Serialization.SerializationInfoEnumerator  Vendor: Richter
 //<snippet1>
 using System;

@@ -1,4 +1,4 @@
-// System.Web.Services.Discovery.DiscoveryClientProtocol.AdditionalInformation
+﻿// System.Web.Services.Discovery.DiscoveryClientProtocol.AdditionalInformation
 
 /* The following example demonstrates 'AdditionalInformation' of DiscoveryClientProtocol
    class.

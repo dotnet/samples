@@ -1,4 +1,4 @@
-
+﻿
 // <SnippetSimpleRadialGradientExampleWholePage>
 
 using System;

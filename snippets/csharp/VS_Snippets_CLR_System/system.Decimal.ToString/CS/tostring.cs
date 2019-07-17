@@ -1,4 +1,4 @@
-//<Snippet1>
+﻿//<Snippet1>
 // Example for the Decimal.ToString( ) methods.
 using System;
 using System.Globalization;

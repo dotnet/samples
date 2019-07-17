@@ -1,4 +1,4 @@
-/**
+﻿/**
   *File name: WebRequestInformation.cs
   *Purpose: Implements a custom type to 
  * access the request information. 

@@ -1,4 +1,4 @@
-'<snippet0>
+﻿'<snippet0>
 Imports System.Text
 Imports System.Net.Sockets
 Imports System.Net.Security

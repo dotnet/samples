@@ -1,4 +1,4 @@
-' The following code example shows the values returned by each method for different types of characters.
+﻿' The following code example shows the values returned by each method for different types of characters.
 
 ' <snippet1>
 Imports System

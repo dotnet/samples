@@ -1,4 +1,4 @@
-// System.Runtime.Remoting.RemotingConfiguration.IsWellKnownClientType(Type)
+﻿// System.Runtime.Remoting.RemotingConfiguration.IsWellKnownClientType(Type)
 /*
 The following example demonstrates the 'IsWellKnownClientType(Type)' method
 of 'RemotingConfiguration' class. It registers a 'TcpChannel' object with the channel

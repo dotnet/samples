@@ -1,4 +1,4 @@
-' XpsSyncAsyncSave SDK Sample - Application.xaml.vb
+﻿' XpsSyncAsyncSave SDK Sample - Application.xaml.vb
 ' Copyright (c) Microsoft Corporation. All rights reserved. 
 
 

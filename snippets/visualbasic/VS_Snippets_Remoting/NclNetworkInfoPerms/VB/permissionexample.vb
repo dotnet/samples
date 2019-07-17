@@ -1,4 +1,4 @@
- ' NclNetworkInfoPerms
+﻿ ' NclNetworkInfoPerms
 Imports System
 Imports System.Net
 Imports System.Net.NetworkInformation

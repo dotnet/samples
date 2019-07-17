@@ -1,4 +1,4 @@
-namespace PLINQ_Samples
+﻿namespace PLINQ_Samples
 {
     using System;
     using System.Collections.Generic;

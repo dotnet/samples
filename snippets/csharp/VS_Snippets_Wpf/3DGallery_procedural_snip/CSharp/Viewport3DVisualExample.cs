@@ -1,4 +1,4 @@
-// <SnippetViewport3DVisualExampleWholePage>
+﻿// <SnippetViewport3DVisualExampleWholePage>
 using System;
 using System.Windows;
 using System.Windows.Controls;

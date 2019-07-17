@@ -1,4 +1,4 @@
-// System.Diagnostics.Process.StandardInput
+﻿// System.Diagnostics.Process.StandardInput
 //
 //
 // The following example illustrates how to redirect the StandardInput

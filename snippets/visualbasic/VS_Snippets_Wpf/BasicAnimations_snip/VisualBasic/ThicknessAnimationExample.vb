@@ -1,4 +1,4 @@
-' <SnippetThicknessAnimationWholePage>
+﻿' <SnippetThicknessAnimationWholePage>
 
 Imports Microsoft.VisualBasic
 Imports System

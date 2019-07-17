@@ -1,4 +1,4 @@
-'<Snippet1>
+﻿'<Snippet1>
 ' Example of the Convert.ToString( DateTime ) and 
 ' Convert.ToString( DateTime, IFormatProvider ) methods.
 Imports System

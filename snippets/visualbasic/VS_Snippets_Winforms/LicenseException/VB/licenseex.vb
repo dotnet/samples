@@ -1,4 +1,4 @@
-imports System
+﻿imports System
 imports System.ComponentModel
 
 <LicenseProvider(GetType(LicFileLicenseProvider))> _

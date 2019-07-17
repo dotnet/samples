@@ -1,4 +1,4 @@
- '<Snippet3>
+﻿ '<Snippet3>
 Imports System
 Imports System.Windows
 Imports System.Windows.Controls

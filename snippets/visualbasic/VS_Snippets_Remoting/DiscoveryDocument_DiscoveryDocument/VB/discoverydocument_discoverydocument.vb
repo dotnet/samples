@@ -1,4 +1,4 @@
-' System.Web.Services.Discovery.DiscoveryDocument.DiscoveryDocument
+﻿' System.Web.Services.Discovery.DiscoveryDocument.DiscoveryDocument
 ' System.Web.Services.Discovery.DiscoveryDocument.Namespace
 ' System.Web.Services.Discovery.DiscoveryDocument.CanRead
 ' System.Web.Services.Discovery.DiscoveryDocument.Read( XmlReader )

@@ -1,4 +1,4 @@
-// This is the code for the topic: HowTo Use Reliable Session
+﻿// This is the code for the topic: HowTo Use Reliable Session
 //<snippet1111>
 using System;
 using System.ServiceModel;

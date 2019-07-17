@@ -1,4 +1,4 @@
-' Visual Basic .NET Document
+﻿' Visual Basic .NET Document
 '
 ' Example code illustrating the overloads of the Int32.Parse method.
 '

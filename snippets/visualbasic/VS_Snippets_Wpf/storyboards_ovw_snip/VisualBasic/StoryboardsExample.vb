@@ -1,4 +1,4 @@
-' <Snippet100>
+﻿' <Snippet100>
 
 Imports System
 Imports System.Windows

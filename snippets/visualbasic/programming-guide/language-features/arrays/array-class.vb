@@ -1,4 +1,4 @@
-
+﻿
 Module Example
    Public Sub Main()
       Dim arr As Array = Array.CreateInstance(GetType(Object), 19)

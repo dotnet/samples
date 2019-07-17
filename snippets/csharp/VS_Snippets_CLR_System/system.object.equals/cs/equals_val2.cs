@@ -1,4 +1,4 @@
-// <Snippet4>
+﻿// <Snippet4>
 using System;
 
 // Define a value type that does not override Equals.

@@ -1,4 +1,4 @@
-// System.Diagnostics.ProcessModule.ToString
+﻿// System.Diagnostics.ProcessModule.ToString
 
 /* The following program demonstrates the use of 'ToString' property of 
    'ProcessModule' class. It creates a notepad, gets the 'MainModule' and 

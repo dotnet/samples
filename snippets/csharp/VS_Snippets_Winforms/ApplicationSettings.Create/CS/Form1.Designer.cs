@@ -1,4 +1,4 @@
-namespace AppSettingsArchitectureProject
+﻿namespace AppSettingsArchitectureProject
 {
     partial class Form1
     {

@@ -1,4 +1,4 @@
-// System.Reflection.Emit.TypeBuilder.DefineUninitializedData(string,int,FieldAttributes)
+﻿// System.Reflection.Emit.TypeBuilder.DefineUninitializedData(string,int,FieldAttributes)
 
 /*
    The following program demonstrates the 'DefineUninitializedData'

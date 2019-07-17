@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 ' Create a Class with a number of nested Classes.
 Public Class OuterClass
     Private Class PrivateClass

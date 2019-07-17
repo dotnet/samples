@@ -1,4 +1,4 @@
-Namespace XpsApiSdk
+﻿Namespace XpsApiSdk
 	Partial Friend Class SignatureDialog
 		''' <summary>
 		''' Required designer variable.

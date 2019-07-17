@@ -1,4 +1,4 @@
-try {  
+﻿try {  
     XElement contacts = XElement.Parse(  
         @"<Contacts>  
             <Contact>  

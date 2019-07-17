@@ -1,4 +1,4 @@
-// snippet code for \WSHttpBinding\WSHttpBinding.cs
+﻿// snippet code for \WSHttpBinding\WSHttpBinding.cs
 //<snippet0>
 using System;
 using System.ServiceModel;

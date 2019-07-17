@@ -1,4 +1,4 @@
-//<Snippet2>
+﻿//<Snippet2>
 // Example of the TimeSpan.Compare( TimeSpan, TimeSpan ) and 
 // TimeSpan.Equals( TimeSpan, TimeSpan ) methods.
 using System;

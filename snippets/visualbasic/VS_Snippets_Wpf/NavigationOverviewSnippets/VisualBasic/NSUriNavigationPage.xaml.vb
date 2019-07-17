@@ -1,4 +1,4 @@
-'<SnippetNSUriNavigationPageCODEBEHIND>
+﻿'<SnippetNSUriNavigationPageCODEBEHIND>
 
 Namespace SDKSample
 	Partial Public Class NSUriNavigationPage

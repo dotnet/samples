@@ -1,4 +1,4 @@
-' System.Runtime.Remoting.Proxies.RealProxy.SupportsInterface(Guid);
+﻿' System.Runtime.Remoting.Proxies.RealProxy.SupportsInterface(Guid);
 ' System.Runtime.Remoting.Proxies.RealProxy.GetCOMIUnknown(bool);
 ' System.Runtime.Remoting.Proxies.RealProxy.SetCOMIUnknown(IntPtr);
 ' The following example demonstrates implementation of methods

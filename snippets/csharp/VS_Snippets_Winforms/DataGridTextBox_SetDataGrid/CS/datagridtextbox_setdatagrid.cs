@@ -1,4 +1,4 @@
-// System.Windows.Forms.DataGridTextBox.DataGridTextBox
+﻿// System.Windows.Forms.DataGridTextBox.DataGridTextBox
 // System.Windows.Forms.DataGridTextBox.SetDataGrid
 
 /* The following example demonstrates the constructor for 

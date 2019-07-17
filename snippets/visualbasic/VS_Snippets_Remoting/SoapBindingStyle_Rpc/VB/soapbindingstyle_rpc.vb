@@ -1,4 +1,4 @@
-' System.Web.Services.Description.SoapBindingStyle.Rpc
+﻿' System.Web.Services.Description.SoapBindingStyle.Rpc
 ' System.Web.Services.Description.SoapBindingUse.Encoded
 ' System.Web.Services.Description.SoapBodyBinding.Encoding
 ' System.Web.Services.Description.SoapBodyBinding.Namespace

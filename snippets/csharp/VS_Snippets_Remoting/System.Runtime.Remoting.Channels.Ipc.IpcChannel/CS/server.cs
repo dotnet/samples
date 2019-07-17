@@ -1,4 +1,4 @@
-/// Class: System.Runtime.Remoting.Channels.Ipc.IpcChannel
+﻿/// Class: System.Runtime.Remoting.Channels.Ipc.IpcChannel
 /// 10 class - Server.cs
 /// 20 class - Client.cs
 /// 30 class - Common.cs

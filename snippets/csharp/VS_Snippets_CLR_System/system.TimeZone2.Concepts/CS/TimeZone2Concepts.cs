@@ -1,4 +1,4 @@
-// Note that this source code file includes a code module (modMain) and
+﻿// Note that this source code file includes a code module (modMain) and
 // a WinForm. 
 
 using System;

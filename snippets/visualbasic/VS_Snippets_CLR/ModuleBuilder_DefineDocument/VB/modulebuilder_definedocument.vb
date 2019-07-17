@@ -1,4 +1,4 @@
-' System.Reflection.Emit.ModuleBuilder.DefineDocument
+﻿' System.Reflection.Emit.ModuleBuilder.DefineDocument
 
 ' The following example demonstrates the 'DefineDocument' method
 ' of 'ModuleBuilder' class.

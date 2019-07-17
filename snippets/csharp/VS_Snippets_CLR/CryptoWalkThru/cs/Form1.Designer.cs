@@ -1,4 +1,4 @@
-namespace CryptoWalkThru
+﻿namespace CryptoWalkThru
 {
     partial class Form1
     {

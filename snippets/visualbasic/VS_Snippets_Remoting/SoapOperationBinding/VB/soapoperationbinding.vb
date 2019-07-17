@@ -1,4 +1,4 @@
-' System.Web.Services.Description.SoapBinding
+﻿' System.Web.Services.Description.SoapBinding
 ' System.Web.Services.Description.SoapOperationBinding
 ' System.Web.Services.Description.SoapBodyBinding
 ' System.Web.Services.Description.SoapAddressBinding

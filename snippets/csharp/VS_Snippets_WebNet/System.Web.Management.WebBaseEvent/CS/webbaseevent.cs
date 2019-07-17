@@ -1,4 +1,4 @@
-/**
+﻿/**
   *File name: WebBaseEvent.cs
   *Purpose: Implements a custom WebBaseEvent type
   **/

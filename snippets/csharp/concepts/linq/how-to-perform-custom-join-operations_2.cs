@@ -1,4 +1,4 @@
-    class MergeTwoCSVFiles
+﻿    class MergeTwoCSVFiles
     {
         static void Main()
         {

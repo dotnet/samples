@@ -1,4 +1,4 @@
-Namespace SDKSamples
+﻿Namespace SDKSamples
 	Partial Public Class Window1
 		Inherits Window
 		'<SnippetMenuItemCommandingCodeBehind>

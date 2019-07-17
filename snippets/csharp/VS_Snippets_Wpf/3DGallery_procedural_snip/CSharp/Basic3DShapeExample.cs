@@ -1,4 +1,4 @@
-// <SnippetBasic3DShapeCodeExampleWholePage>
+﻿// <SnippetBasic3DShapeCodeExampleWholePage>
 using System;
 using System.Windows;
 using System.Windows.Controls;

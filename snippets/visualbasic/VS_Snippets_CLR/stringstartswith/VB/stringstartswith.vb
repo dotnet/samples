@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 Public Class Example
    Public Shared Sub Main()
       Dim strSource() As String = { "<b>This is bold text</b>", 

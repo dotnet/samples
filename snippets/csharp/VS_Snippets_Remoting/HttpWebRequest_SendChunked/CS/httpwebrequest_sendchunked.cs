@@ -1,4 +1,4 @@
-/*  
+﻿/*  
    System.Net.HttpWebRequest.SendChunked  
    System.Net.HttpWebRequest.TransferEncoding
    This program demonstrates 'TransferEncoding' and 'SendChunked' properties of 'HttpWebRequestClass'.

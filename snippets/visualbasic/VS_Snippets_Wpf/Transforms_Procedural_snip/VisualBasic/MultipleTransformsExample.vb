@@ -1,4 +1,4 @@
-' <SnippetMultipleTransformsCodeExampleWholePage>
+﻿' <SnippetMultipleTransformsCodeExampleWholePage>
 
 Imports System
 Imports System.Windows

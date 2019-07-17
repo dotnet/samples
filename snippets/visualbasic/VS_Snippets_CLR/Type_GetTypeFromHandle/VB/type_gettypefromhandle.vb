@@ -1,4 +1,4 @@
-' System.Type.GetTypeFromHandle(RuntimeTypeHandle)
+﻿' System.Type.GetTypeFromHandle(RuntimeTypeHandle)
 
 ' The following example demonstrates the 'GetTypeFromHandle(RuntimeTypeHandle)' method
 ' of the 'Type' Class.

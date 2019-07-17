@@ -1,4 +1,4 @@
-' System.Reflection.Emit.FieldBuilder.ReflectedType
+﻿' System.Reflection.Emit.FieldBuilder.ReflectedType
 ' System.Reflection.Emit.FieldBuilder.Attributes
 
 '  The following example demonstrates 'ReflectedType' and 'Attributes'

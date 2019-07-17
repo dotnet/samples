@@ -1,4 +1,4 @@
-/*
+﻿/*
    System.Configuration.Install.Installer.Uninstall
 
    The following example demonstrates the Uninstall method 

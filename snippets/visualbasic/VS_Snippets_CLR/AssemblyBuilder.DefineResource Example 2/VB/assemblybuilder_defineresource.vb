@@ -1,4 +1,4 @@
-' System.Reflection.Emit.AssemblyBuilder.DefineResource(String, String, String)
+﻿' System.Reflection.Emit.AssemblyBuilder.DefineResource(String, String, String)
 ' System.Reflection.Emit.AssemblyBuilder.DefineVersionInfoResource(String, String, String, String, String)
 
 ' The following program demonstrates the 'DefineResource(String, String, String)' and 

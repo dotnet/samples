@@ -1,4 +1,4 @@
-// XpsPrint SDK Sample - XpsPrintHelper.cs
+﻿// XpsPrint SDK Sample - XpsPrintHelper.cs
 // Copyright (c) Microsoft Corporation. All rights reserved.
 
 using System;

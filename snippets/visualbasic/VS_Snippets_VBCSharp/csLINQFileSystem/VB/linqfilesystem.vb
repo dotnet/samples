@@ -1,4 +1,4 @@
-'Imports System.IO
+﻿'Imports System.IO
 Imports System.Linq
 
 ' How to: Find Files by Extension & How to: Find newest file

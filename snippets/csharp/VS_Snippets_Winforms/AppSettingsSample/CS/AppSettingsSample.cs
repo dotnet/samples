@@ -1,4 +1,4 @@
-//AppSettingsSample C# sample, flattened to one file for Parsnip.
+﻿//AppSettingsSample C# sample, flattened to one file for Parsnip.
 
 using System;
 using System.Collections.Generic;

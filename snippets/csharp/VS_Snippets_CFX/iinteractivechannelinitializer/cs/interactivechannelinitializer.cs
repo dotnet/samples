@@ -1,4 +1,4 @@
-// <snippet9>
+﻿// <snippet9>
 using System;
 using System.Collections.Generic;
 using System.ServiceModel.Dispatcher;

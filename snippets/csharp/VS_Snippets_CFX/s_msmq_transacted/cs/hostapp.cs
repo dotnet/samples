@@ -1,4 +1,4 @@
-// <Snippet10>
+﻿// <Snippet10>
 // This is the hosting application.
 
 using System;

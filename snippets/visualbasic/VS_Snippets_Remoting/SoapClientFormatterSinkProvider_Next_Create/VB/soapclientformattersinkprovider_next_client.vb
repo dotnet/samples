@@ -1,4 +1,4 @@
-' System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider
+﻿' System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider
 ' System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider.Next
 
 ' The following program demonstrates the 'SoapClientFormatterSinkProvider' class

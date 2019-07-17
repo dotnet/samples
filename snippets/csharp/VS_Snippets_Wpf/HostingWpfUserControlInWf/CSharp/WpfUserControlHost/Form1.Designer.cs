@@ -1,4 +1,4 @@
-namespace WpfUserControlHost
+﻿namespace WpfUserControlHost
 {
     partial class Form1
     {

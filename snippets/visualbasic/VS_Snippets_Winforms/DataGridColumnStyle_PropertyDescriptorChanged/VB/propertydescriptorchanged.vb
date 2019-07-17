@@ -1,4 +1,4 @@
-' System.Windows.Forms.DataGridColumnStyle.PropertyDescriptorChanged
+﻿' System.Windows.Forms.DataGridColumnStyle.PropertyDescriptorChanged
 '
 ' The following example demonstrates 'PropertyDescriptorChanged' Event of
 ' 'DataGridColumnStyle' class. A  DataGrid and Button are added to a form.

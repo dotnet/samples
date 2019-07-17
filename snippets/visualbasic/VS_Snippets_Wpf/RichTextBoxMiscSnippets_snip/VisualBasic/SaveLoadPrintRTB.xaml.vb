@@ -1,4 +1,4 @@
-' <SnippetSaveLoadPrintRTBCodeExampleWholePage>
+﻿' <SnippetSaveLoadPrintRTBCodeExampleWholePage>
 
 Imports System
 Imports System.IO

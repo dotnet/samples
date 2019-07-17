@@ -1,4 +1,4 @@
-' System.Net.WebPermission.ToXml;System.Net.WebPermission.FromXml;
+﻿' System.Net.WebPermission.ToXml;System.Net.WebPermission.FromXml;
 '
 ' This program shows the use of the ToXml and FromXml methods of the WebPermission class.
 ' It creates a WebPermission instance with the Permissionstate set to None and 

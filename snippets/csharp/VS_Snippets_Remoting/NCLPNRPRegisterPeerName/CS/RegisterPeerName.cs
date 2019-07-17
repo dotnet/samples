@@ -1,4 +1,4 @@
-// RegisterPeerName.cs
+﻿// RegisterPeerName.cs
 //
 // Description:
 //

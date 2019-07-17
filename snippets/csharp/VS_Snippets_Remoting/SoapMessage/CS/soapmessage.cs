@@ -1,4 +1,4 @@
-// System.Web.Services.Protocols.SoapMessage
+﻿// System.Web.Services.Protocols.SoapMessage
 // System.Web.Services.Protocols.SoapMessage.Action
 // System.Web.Services.Protocols.SoapMessage.ContentType
 // System.Web.Services.Protocols.SoapMessage.OneWay

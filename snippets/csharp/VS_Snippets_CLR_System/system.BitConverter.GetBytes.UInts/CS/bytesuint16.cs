@@ -1,4 +1,4 @@
-//<Snippet3>
+﻿//<Snippet3>
 // Example of the BitConverter.GetBytes( ushort ) method.
 using System;
 

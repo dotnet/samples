@@ -1,4 +1,4 @@
-Imports System.Collections
+﻿Imports System.Collections
 Imports Microsoft.Win32
 
 Module Sample 

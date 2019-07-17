@@ -1,4 +1,4 @@
- '<snippet1>
+﻿ '<snippet1>
 Class stringConcat5
    Public Shared Sub Main()
       Dim i As Integer = - 123

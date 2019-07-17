@@ -1,4 +1,4 @@
-// System.Windows.Forms.DataGridTextBox.IsInEditOrNavigateMode
+﻿// System.Windows.Forms.DataGridTextBox.IsInEditOrNavigateMode
 
 /* The following program demonstrates the 'IsInEditOrNavigateMode'
    property of the 'System.Windows.Forms.DataGridTextBox' class.

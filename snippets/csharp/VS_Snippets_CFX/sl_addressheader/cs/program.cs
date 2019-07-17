@@ -1,4 +1,4 @@
-// File name: Program.cs
+﻿// File name: Program.cs
 // Snippets  for Silverlight 2 RTM 
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.
 

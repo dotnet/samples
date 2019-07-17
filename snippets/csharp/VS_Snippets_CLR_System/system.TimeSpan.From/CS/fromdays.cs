@@ -1,4 +1,4 @@
-//<Snippet6>
+﻿//<Snippet6>
 // Example of the TimeSpan.FromDays( double ) method.
 using System;
 

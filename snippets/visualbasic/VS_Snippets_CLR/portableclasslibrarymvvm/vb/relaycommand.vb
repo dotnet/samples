@@ -1,4 +1,4 @@
-' <snippet4>
+﻿' <snippet4>
 Imports System.Windows.Input
 
 Namespace SimpleMVVM.ViewModel

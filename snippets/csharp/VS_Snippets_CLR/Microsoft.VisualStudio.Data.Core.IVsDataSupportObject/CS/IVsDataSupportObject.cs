@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
 using System;
 using Microsoft.VisualStudio.Data.Core;
 using Microsoft.VisualStudio.Data.Services.SupportEntities;

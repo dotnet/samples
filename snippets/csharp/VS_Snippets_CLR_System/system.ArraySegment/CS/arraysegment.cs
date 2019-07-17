@@ -1,4 +1,4 @@
-// The following code example passes an ArraySegment to a method.
+﻿// The following code example passes an ArraySegment to a method.
 
 // <Snippet1>
 using System;

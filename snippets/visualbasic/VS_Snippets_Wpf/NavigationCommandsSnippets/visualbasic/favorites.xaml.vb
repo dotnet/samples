@@ -1,4 +1,4 @@
-'<SnippetFavoritesCODEBEHIND>
+﻿'<SnippetFavoritesCODEBEHIND>
 
 Namespace SDKSample
 	Partial Public Class Favorites

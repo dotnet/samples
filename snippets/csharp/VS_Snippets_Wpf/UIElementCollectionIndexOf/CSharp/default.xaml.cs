@@ -1,4 +1,4 @@
-namespace WCSamples {
+﻿namespace WCSamples {
     using System.Windows;
     using System.Windows.Controls;
     using System.Windows.Documents;

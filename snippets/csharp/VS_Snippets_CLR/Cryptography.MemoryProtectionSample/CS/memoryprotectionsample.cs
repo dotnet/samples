@@ -1,4 +1,4 @@
-//<SNIPPET1>
+﻿//<SNIPPET1>
 using System;
 using System.Security.Cryptography;
 

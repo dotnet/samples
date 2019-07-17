@@ -1,4 +1,4 @@
-// <snippet1>
+﻿// <snippet1>
 public class Product
 {
     public int ProductID { get; set; }

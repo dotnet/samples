@@ -1,4 +1,4 @@
-Imports System.Collections.Generic
+﻿Imports System.Collections.Generic
 Imports System.Reflection
                                                                
 ' A custom attribute to allow multiple authors per method.

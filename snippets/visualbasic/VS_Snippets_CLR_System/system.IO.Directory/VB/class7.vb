@@ -1,4 +1,4 @@
-' <snippet15>
+﻿' <snippet15>
 Imports System.IO
 Imports System.Security.AccessControl
 

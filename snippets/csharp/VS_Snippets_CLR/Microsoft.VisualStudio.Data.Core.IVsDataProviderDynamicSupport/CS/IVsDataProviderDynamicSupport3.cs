@@ -1,4 +1,4 @@
-// <Snippet3>
+﻿// <Snippet3>
 using System;
 using System.ComponentModel.Design;
 using Microsoft.Win32;

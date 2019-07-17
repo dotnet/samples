@@ -1,4 +1,4 @@
-'<SnippetCallApplicationGetResourceStreamCODEBEHIND1>
+﻿'<SnippetCallApplicationGetResourceStreamCODEBEHIND1>
 
 Imports System
 Imports System.IO

@@ -1,4 +1,4 @@
-' <SnippetImageBrushExampleWholePage>
+﻿' <SnippetImageBrushExampleWholePage>
 
 
 Imports System

@@ -1,4 +1,4 @@
-Imports System.Globalization
+﻿Imports System.Globalization
 
 <Assembly: CLSCompliant(True)>
 Module Example

@@ -1,4 +1,4 @@
-' System.Web.Services.Description.ServiceDescriptionCollection.Contains()
+﻿' System.Web.Services.Description.ServiceDescriptionCollection.Contains()
 ' System.Web.Services.Description.ServiceDescriptionCollection.IndexOf()
 ' System.Web.Services.Description.ServiceDescriptionCollection.Remove()
 

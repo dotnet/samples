@@ -1,4 +1,4 @@
-//<SnippetDetectActivationStateCODEBEHIND>
+﻿//<SnippetDetectActivationStateCODEBEHIND>
 using System;
 using System.Windows;
 

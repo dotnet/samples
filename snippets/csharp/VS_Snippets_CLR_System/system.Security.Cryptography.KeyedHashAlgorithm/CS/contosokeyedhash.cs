@@ -1,4 +1,4 @@
-// This sample demonstrates how to extend the KeyedHashAlgorithm class.
+﻿// This sample demonstrates how to extend the KeyedHashAlgorithm class.
 //<Snippet3>
 using System;
 using System.Security.Cryptography;

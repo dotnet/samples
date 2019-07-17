@@ -1,4 +1,4 @@
-// Snippet for S_UENamedPipeTransportBindingElement.
+﻿// Snippet for S_UENamedPipeTransportBindingElement.
 using System;
 using System.Collections.Generic;
 using System.Configuration;

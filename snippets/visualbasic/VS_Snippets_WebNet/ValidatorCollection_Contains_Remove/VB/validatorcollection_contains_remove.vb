@@ -1,4 +1,4 @@
-' System.Web.UI.ValidatorCollection.Contains()
+﻿' System.Web.UI.ValidatorCollection.Contains()
 ' System.Web.UI.ValidatorCollection.Remove()
 
 ' The following program demonstrates 'Contains' and 'Remove'

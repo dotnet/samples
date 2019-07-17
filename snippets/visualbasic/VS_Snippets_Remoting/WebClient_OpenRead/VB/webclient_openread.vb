@@ -1,4 +1,4 @@
-' System.Net.WebClient.OpenRead
+﻿' System.Net.WebClient.OpenRead
 
 'This program demonstrates the 'OpenRead' method of 'WebClient' class.
 'It creates a URI to access a web resource. It then invokes 'OpenRead' tp obtain a 'Stream'

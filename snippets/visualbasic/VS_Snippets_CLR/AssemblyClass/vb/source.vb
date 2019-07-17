@@ -1,4 +1,4 @@
-' GlennHa 1/23/06
+﻿' GlennHa 1/23/06
 '<Snippet1>
 Imports System
 Imports System.Reflection

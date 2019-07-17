@@ -1,4 +1,4 @@
-Public Class Form1
+﻿Public Class Form1
     Dim flowPanel As FlowLayoutPanel
     Dim urlLabel As Label
     Dim urlTextBox As TextBox

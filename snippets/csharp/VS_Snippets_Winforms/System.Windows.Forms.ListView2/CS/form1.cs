@@ -1,4 +1,4 @@
-
+﻿
 // The following code example demonstrates using the ListView.CheckedItems, 
 // CheckedItem.CheckState, ListView.BeginUpdate, and ListView.EndUpdate 
 // members, along with instances of the ListViewCheckedItemCollection, 

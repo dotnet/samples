@@ -1,4 +1,4 @@
-' How to: Cancel Threads Cooperatively
+﻿' How to: Cancel Threads Cooperatively
 ' <snippet14>
 Imports System.Threading
 

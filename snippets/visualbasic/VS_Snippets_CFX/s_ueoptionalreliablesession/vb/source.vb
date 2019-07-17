@@ -1,4 +1,4 @@
- ' OptionalReliableSession Class
+﻿ ' OptionalReliableSession Class
 Imports System
 Imports System.Collections.Generic
 Imports System.Configuration

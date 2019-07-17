@@ -1,4 +1,4 @@
-//<snippet7>
+﻿//<snippet7>
 using System;
 using System.Diagnostics;
 using Microsoft.VisualBasic;

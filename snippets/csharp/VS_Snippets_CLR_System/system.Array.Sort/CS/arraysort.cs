@@ -1,4 +1,4 @@
-// The following example shows how to sort the values in an array using the default comparer
+﻿// The following example shows how to sort the values in an array using the default comparer
 // and a custom comparer that reverses the sort order.
 
 // <Snippet1>

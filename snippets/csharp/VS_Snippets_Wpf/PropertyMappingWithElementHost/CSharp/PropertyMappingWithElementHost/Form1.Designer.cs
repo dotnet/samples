@@ -1,4 +1,4 @@
-namespace PropertyMappingWithElementHost
+﻿namespace PropertyMappingWithElementHost
 {
     partial class Form1
     {

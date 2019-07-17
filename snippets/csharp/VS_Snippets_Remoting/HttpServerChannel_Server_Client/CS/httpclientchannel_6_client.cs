@@ -1,4 +1,4 @@
-// System.Runtime.Remoting.Channels.Http.HttpClientChannel
+﻿// System.Runtime.Remoting.Channels.Http.HttpClientChannel
 // System.Runtime.Remoting.Channels.Http.HttpClientChannel.ChannelName; System.Runtime.Remoting.Channels.Http.HttpClientChannel.ChannelPriority; System.Runtime.Remoting.Channels.Http.HttpClientChannel.Parse(); System.Runtime.Remoting.Channels.Http.HttpClientChannel.Keys; System.Runtime.Remoting.Channels.Http.HttpClientChannel.CreateMessageSink()
 
 /*

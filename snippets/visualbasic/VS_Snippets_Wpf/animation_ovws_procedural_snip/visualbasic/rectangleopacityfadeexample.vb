@@ -1,4 +1,4 @@
-' <SnippetRectangleOpacityFadeCodeExampleWholePage>
+﻿' <SnippetRectangleOpacityFadeCodeExampleWholePage>
 
 Imports Microsoft.VisualBasic
 Imports System

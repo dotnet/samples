@@ -1,4 +1,4 @@
-'
+﻿'
 'AutoReverseExample.xaml
 '     This example shows how to use the AutoReverse property to make a timeline play backwards at the end of each iteration.
 '     Several rectangles are animated by DoubleAnimations with identical durations and target values, but with different

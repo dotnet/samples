@@ -1,4 +1,4 @@
-//NCLPingAsync
+﻿//NCLPingAsync
 //<snippet1>
 using System;
 using System.Text;

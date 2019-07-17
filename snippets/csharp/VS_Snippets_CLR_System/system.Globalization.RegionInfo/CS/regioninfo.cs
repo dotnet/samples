@@ -1,4 +1,4 @@
-// The following code example demonstrates several members of the RegionInfo class.
+﻿// The following code example demonstrates several members of the RegionInfo class.
 
 // <snippet1>
 using System;

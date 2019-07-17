@@ -1,4 +1,4 @@
-// System.Reflection.Emit.EnumBuilder.TypeToken
+﻿// System.Reflection.Emit.EnumBuilder.TypeToken
 // System.Reflection.Emit.EnumBuilder.UnderlyingField
 // System.Reflection.Emit.EnumBuilder.UnderlyingSystemType
 // System.Reflection.Emit.EnumBuilder.GUID

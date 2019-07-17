@@ -1,4 +1,4 @@
-' <SnippetStreamGeometryBezierToExampleWholePage>
+﻿' <SnippetStreamGeometryBezierToExampleWholePage>
 
 Imports System
 Imports System.Windows

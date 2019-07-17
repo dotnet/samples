@@ -1,4 +1,4 @@
-// <snippet17>
+﻿// <snippet17>
 using System;
 
 public class ToStringSample {

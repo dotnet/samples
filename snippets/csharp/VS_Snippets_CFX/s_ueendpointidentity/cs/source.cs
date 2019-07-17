@@ -1,4 +1,4 @@
-//  S_UEEndpointIdentity
+﻿//  S_UEEndpointIdentity
 //
 using System;
 using System.IdentityModel.Claims;

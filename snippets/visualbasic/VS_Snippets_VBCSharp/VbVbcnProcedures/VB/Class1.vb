@@ -1,4 +1,4 @@
-Imports Microsoft.VisualBasic.Interaction
+﻿Imports Microsoft.VisualBasic.Interaction
 Imports System.Diagnostics
 '<Snippet30>
 ' Insert the following line at the beginning of your source file.

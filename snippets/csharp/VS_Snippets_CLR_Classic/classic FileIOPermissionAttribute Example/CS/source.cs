@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Security.Permissions;
 
 namespace Snippet1 {

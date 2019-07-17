@@ -1,4 +1,4 @@
-' Code sample for System.Diagnostics.ConsoleTraceListener
+﻿' Code sample for System.Diagnostics.ConsoleTraceListener
 
 ' <Snippet1>
 ' Define the TRACE constant, which enables trace output to the 

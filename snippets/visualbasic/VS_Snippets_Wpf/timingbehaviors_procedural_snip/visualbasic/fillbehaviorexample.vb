@@ -1,4 +1,4 @@
-'
+﻿'
 '
 'FillBehaviorExample.vb
 '  This Sample demonstrates how the FillBehavior property influences behavior at the end of an animation.

@@ -1,4 +1,4 @@
-// <Snippet8>
+﻿// <Snippet8>
 using System;
 using Microsoft.VisualStudio.Data.Core;
 using Microsoft.VisualStudio.Shell.Interop;

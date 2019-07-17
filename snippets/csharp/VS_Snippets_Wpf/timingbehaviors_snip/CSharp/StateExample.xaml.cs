@@ -1,4 +1,4 @@
-// <Snippet_graphicsmm_StateEventHandlers>
+﻿// <Snippet_graphicsmm_StateEventHandlers>
 using System;
 using System.Windows;
 using System.Windows.Controls;

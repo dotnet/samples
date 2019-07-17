@@ -1,4 +1,4 @@
-' <Snippet2>
+﻿' <Snippet2>
 Imports System.Globalization
 Imports Windows.ApplicationModel.Resources
 Imports Windows.ApplicationModel.Resources.Core

@@ -1,4 +1,4 @@
-//<SnippetMarkupAndCodeBehindPageCODEBEHIND>
+﻿//<SnippetMarkupAndCodeBehindPageCODEBEHIND>
 using System.Windows.Controls;
 
 public partial class MarkupAndCodeBehindPage : Page

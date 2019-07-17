@@ -1,4 +1,4 @@
-/// Class: System.Runtime.Remoting.Channels.Ipc.IpcChannel
+﻿/// Class: System.Runtime.Remoting.Channels.Ipc.IpcChannel
 /// 41 #ctor(IDictionary,IClientChannelSinkProvider,IServerChannelSinkProvider)
 
 using System;

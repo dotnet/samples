@@ -1,4 +1,4 @@
-
+﻿
 Imports System.Runtime.InteropServices
 Imports System.Windows
 Imports System.Windows.Ink

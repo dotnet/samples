@@ -1,4 +1,4 @@
-/*
+﻿/*
 AnimatingSizeExample.cs
   This example shows two ways of animating the size
      of a framework element.

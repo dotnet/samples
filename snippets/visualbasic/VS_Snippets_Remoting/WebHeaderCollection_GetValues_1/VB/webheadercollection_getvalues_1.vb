@@ -1,4 +1,4 @@
- '
+﻿ '
 ' This program demonstrate's the 'GetValues(string)' method of 'WebHeaderCollection' class.
 ' 
 ' The program creates a 'HttpWebRequest' object from the specified URL and gets the response from it. The 

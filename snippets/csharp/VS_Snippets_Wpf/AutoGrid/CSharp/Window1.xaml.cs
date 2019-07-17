@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO;
 using System.Resources;
 using System.Windows.Markup;

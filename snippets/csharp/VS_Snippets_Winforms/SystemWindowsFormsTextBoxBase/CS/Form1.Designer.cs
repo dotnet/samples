@@ -1,4 +1,4 @@
-namespace SelectionStartCS
+﻿namespace SelectionStartCS
 {
     partial class Form1
     {

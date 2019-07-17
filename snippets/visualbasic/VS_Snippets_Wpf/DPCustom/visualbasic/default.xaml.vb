@@ -1,4 +1,4 @@
-Namespace SDKSample
+﻿Namespace SDKSample
 	Partial Public Class DPCustom
 		Private myShirt As Shirt
 		Private Sub OnInit(ByVal sender As Object, ByVal e As EventArgs)

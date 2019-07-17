@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
 // The following example uses instances of classes in 
 // the System.Reflection namespace to discover an event argument type.
 using System;

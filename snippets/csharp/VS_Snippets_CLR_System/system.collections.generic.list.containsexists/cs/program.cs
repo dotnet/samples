@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 using System;
 using System.Collections.Generic;
 // Simple business object. A PartId is used to identify a part 

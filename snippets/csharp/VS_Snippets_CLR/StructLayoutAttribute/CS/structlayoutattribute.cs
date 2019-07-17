@@ -1,4 +1,4 @@
-/*
+﻿/*
    System.Runtime.InteropServices.StructLayoutAttribute.StructLayoutAttribute(LayoutKind)
    System.Runtime.InteropServices.StructLayoutAttribute.CharSet
    System.Runtime.InteropServices.StructLayoutAttribute.Size

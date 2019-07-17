@@ -1,4 +1,4 @@
-// <Snippet4>
+﻿// <Snippet4>
 // ContactCollectionEditor.cs
 using System;
 using System.ComponentModel;

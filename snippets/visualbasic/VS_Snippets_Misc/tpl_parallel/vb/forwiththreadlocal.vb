@@ -1,4 +1,4 @@
-'<snippet05>
+﻿'<snippet05>
 'How to: Write a Parallel.For Loop That Has Thread-Local Variables
 
 Imports System.Threading

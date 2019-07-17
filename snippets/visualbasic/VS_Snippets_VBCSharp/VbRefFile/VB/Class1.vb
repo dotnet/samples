@@ -1,4 +1,4 @@
-Class Class0c0a56cae3d043359738b40e3c422810
+﻿Class Class0c0a56cae3d043359738b40e3c422810
     ' My.Computer.FileSystem.GetFileInfoMethod
 
     Public Sub Method1()

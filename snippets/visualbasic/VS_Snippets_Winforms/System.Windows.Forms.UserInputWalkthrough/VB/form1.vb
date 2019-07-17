@@ -1,4 +1,4 @@
-' User Input Test Application for new Windows Forms user input conceptual topics
+﻿' User Input Test Application for new Windows Forms user input conceptual topics
 ' in Visual Studio 2005 documentation.
 
 ' <Snippet0>

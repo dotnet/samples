@@ -1,4 +1,4 @@
-' System.Web.Services.Description.SoapHeaderBinding
+﻿' System.Web.Services.Description.SoapHeaderBinding
 
 '  The following example demonstrates the class 'SoapHeaderBinding'.
 '  It takes as input a wsdl file. By using the 'Read' method 

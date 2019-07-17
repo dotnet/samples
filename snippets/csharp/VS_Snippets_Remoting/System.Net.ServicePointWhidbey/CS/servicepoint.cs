@@ -1,4 +1,4 @@
-// This example shows how to use the ServicePoint and ServicePointManager classes.
+﻿// This example shows how to use the ServicePoint and ServicePointManager classes.
 // The ServicePointManager class uses the ServicePoint class to manage connections
 // to a remote host. The networking classes reuse service points for all 
 // requests to a given URI. In fact, the same ServicePoint object 

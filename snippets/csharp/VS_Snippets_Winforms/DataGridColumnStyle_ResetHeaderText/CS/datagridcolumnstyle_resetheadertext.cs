@@ -1,4 +1,4 @@
-// System.Windows.Forms.DataGridColumnStyle.ResetHeaderText
+﻿// System.Windows.Forms.DataGridColumnStyle.ResetHeaderText
 
 /*
    The following example demonstrates 'ResetHeaderText' method of 'DataGridColumnStyle' class.

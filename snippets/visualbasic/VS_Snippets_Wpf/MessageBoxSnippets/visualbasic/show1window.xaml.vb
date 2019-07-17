@@ -1,4 +1,4 @@
-Namespace VisualBasic
+﻿Namespace VisualBasic
 
     Partial Public Class Show1Window
         Inherits Window

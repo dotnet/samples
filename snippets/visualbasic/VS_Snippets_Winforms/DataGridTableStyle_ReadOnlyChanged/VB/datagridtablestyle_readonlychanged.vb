@@ -1,4 +1,4 @@
-' System.Windows.Forms.DataGridTableStyle.ReadOnlyChanged
+﻿' System.Windows.Forms.DataGridTableStyle.ReadOnlyChanged
 
 ' The following example demonstrates the 'ReadOnlyChanged' event of 
 ' 'DataGridTableStyle' class. It adds a DataGrid and checkbox to a Form. 

@@ -1,4 +1,4 @@
-// PanelContainerDesigner.cs
+﻿// PanelContainerDesigner.cs
 // <snippet1>
 using System;
 using System.Web;

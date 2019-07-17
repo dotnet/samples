@@ -1,4 +1,4 @@
-// File name: AutomobileConverter.cs
+﻿// File name: AutomobileConverter.cs
 // Allowed snippet tags range: [1 - 10].
 
 // <Snippet1>

@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 
 ' This code example demonstrates the DateTime Kind, Now, and
 ' UtcNow properties, and the SpecifyKind(), ToLocalTime(), 

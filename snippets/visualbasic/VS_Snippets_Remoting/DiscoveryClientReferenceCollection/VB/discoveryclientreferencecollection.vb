@@ -1,4 +1,4 @@
-' System.Web.Services.Discovery.DiscoveryClientReferenceCollection
+﻿' System.Web.Services.Discovery.DiscoveryClientReferenceCollection
 
 ' The following example demonstrates the class 
 ' 'DiscoveryClientReferenceCollection'. A sample discovery document 

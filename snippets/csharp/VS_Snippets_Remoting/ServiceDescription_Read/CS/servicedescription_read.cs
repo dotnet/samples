@@ -1,4 +1,4 @@
-// System.Web.Description.ServiceDescription.Read(XmlReader)
+﻿// System.Web.Description.ServiceDescription.Read(XmlReader)
 // System.Web.Description.ServiceCollection.Item(string)
 // System.Web.Description.ServiceCollection.Insert(int,Service)
 // System.Web.Description.ServiceDescription.Write(XmlWriter)

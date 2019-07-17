@@ -1,4 +1,4 @@
-' <SnippetViewport3DVisualExampleWholePage>
+﻿' <SnippetViewport3DVisualExampleWholePage>
 
 Imports Microsoft.VisualBasic
 Imports System

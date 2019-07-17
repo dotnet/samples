@@ -1,4 +1,4 @@
-/*
+﻿/*
    This program demonstrates 'GetCredential' method of 'ICredentials' interface.
    The 'CredentialList' class implements 'ICredentials' interface which stores credentials for multiple 
    internet resources.The Program takes URL, Username, Password and Domain name from commandline and adds 

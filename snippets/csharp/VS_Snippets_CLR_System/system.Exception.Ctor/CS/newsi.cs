@@ -1,4 +1,4 @@
-//<Snippet3>
+﻿//<Snippet3>
 // Example for the Exception( string, Exception ) constructor.
 using System;
 

@@ -1,4 +1,4 @@
-' snippet code for \WSHttpBinding\WSHttpBinding.vb
+﻿' snippet code for \WSHttpBinding\WSHttpBinding.vb
 '<snippet0>
 
 Imports System

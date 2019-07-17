@@ -1,4 +1,4 @@
-Imports System.Resources
+﻿Imports System.Resources
 ' <Snippet2>
 Imports MyCompany.Employees
 Imports System.Collections.Generic

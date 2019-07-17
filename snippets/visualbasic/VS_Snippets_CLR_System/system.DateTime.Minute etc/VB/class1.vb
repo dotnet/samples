@@ -1,4 +1,4 @@
-
+﻿
 Namespace Minute_Etc
     _
    Class Class1

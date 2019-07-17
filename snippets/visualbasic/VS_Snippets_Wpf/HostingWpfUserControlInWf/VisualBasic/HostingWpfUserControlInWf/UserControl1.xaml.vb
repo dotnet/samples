@@ -1,4 +1,4 @@
-' Interaction logic for UserControl1.xaml
+﻿' Interaction logic for UserControl1.xaml
 Partial Public Class UserControl1
     Inherits UserControl
 

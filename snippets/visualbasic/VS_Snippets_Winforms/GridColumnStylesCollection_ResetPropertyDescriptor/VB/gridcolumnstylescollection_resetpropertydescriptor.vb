@@ -1,4 +1,4 @@
-' System.Windows.Forms.GridColumnStylesCollection.ResetPropertyDescriptors()
+﻿' System.Windows.Forms.GridColumnStylesCollection.ResetPropertyDescriptors()
 
 ' The following program demonstrates the 'ResetPropertyDecriptors()'
 ' method of 'GridColumnStylesCollection' class. An instance of DataGrid is

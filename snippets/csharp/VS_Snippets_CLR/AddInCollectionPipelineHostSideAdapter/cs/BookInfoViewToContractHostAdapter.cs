@@ -1,4 +1,4 @@
-// <Snippet6>
+﻿// <Snippet6>
 using System.AddIn.Pipeline;
 namespace LibraryContractsHostAdapters
 {

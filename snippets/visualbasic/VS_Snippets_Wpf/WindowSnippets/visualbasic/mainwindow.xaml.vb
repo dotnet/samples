@@ -1,4 +1,4 @@
-'<SnippetWindowCODEBEHIND>
+﻿'<SnippetWindowCODEBEHIND>
 
 Imports System
 Imports System.Windows

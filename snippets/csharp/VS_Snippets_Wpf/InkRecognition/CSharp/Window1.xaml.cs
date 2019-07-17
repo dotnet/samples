@@ -1,4 +1,4 @@
-//<Snippet2>
+﻿//<Snippet2>
 using System.Windows;
 using Microsoft.Ink;
 using System.IO;

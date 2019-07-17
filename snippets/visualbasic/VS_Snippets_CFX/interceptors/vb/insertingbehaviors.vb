@@ -1,4 +1,4 @@
-' <snippet5>
+﻿' <snippet5>
 Imports System.ServiceModel
 Imports System.ServiceModel.Channels
 Imports System.ServiceModel.Configuration

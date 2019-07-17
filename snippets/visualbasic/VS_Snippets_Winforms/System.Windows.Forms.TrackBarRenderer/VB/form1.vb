@@ -1,4 +1,4 @@
-' This sample can go in TrackBarRenderer class overview.
+﻿' This sample can go in TrackBarRenderer class overview.
 ' - Snippet2 can go in GetTopPointingThumbSize, and possibly other Gets
 ' - Snippet4 can go in IsSupported, DrawHorizontalTrack, and DrawTopPointingThumb
 ' - Snippet6 can go in DrawVerticalTick; see below about bug in the meantime, though

@@ -1,4 +1,4 @@
-//Types:System.Runtime.Serialization.ObjectManager Vendor: Richter
+﻿//Types:System.Runtime.Serialization.ObjectManager Vendor: Richter
 //<snippet1>
 using System;
 using System.Text;

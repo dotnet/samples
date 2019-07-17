@@ -1,4 +1,4 @@
-' System.Reflection.Emit.ILGenerator.BeginFaultBlock()
+﻿' System.Reflection.Emit.ILGenerator.BeginFaultBlock()
 
 ' The following program demonstrates the 'BeginFaultBlock()' method of 'ILGenerator'
 ' class. Exception is raised by passing two integer values which are out of range,

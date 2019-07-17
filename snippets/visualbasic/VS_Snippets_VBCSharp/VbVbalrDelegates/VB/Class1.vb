@@ -1,4 +1,4 @@
-Class Class5adbba155a1d413fab3e3ff6cc0a4669
+﻿Class Class5adbba155a1d413fab3e3ff6cc0a4669
     ' How to: Pass Procedures to Another Procedure in Visual Basic
 
     ' Snippet 14 is from f799c518081740ccad0b4da846fdba57

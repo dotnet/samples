@@ -1,4 +1,4 @@
-/*
+﻿/*
    System.Configuration.Install.Installer.Installers
    System.Configuration.Install.Installer.Parent
 

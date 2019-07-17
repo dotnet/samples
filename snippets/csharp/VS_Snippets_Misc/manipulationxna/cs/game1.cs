@@ -1,4 +1,4 @@
-// <Snippet_Game1Class>
+﻿// <Snippet_Game1Class>
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;

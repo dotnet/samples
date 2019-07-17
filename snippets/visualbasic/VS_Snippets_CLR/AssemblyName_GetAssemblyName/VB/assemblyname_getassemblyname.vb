@@ -1,4 +1,4 @@
- ' System.Reflection.AssemblyName.GetAssemblyName(string)
+﻿ ' System.Reflection.AssemblyName.GetAssemblyName(string)
 ' System.Reflection.AssemblyName.ToString()
 'This example demonstrates the 'GetAssemblyName(string)' and 'ToString()'
 ' methods of the 'AssemblyName' class. Get the path of 'System.dll' from 

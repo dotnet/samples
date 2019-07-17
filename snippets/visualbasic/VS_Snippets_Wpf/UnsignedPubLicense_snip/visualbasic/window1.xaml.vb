@@ -1,4 +1,4 @@
-' RightsManagedPackagePublish Sample - Window1.xaml.vb
+﻿' RightsManagedPackagePublish Sample - Window1.xaml.vb
 ' Copyright (c) Microsoft Corporation. All rights reserved.
 
 

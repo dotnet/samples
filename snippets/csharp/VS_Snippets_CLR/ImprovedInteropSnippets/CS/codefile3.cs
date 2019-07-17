@@ -1,4 +1,4 @@
-// System.Assembly.GetCustomAttributes
+﻿// System.Assembly.GetCustomAttributes
 // System.Runtime.InteropServices.ImportedFromTypeLibAttribute
 // <Snippet3>
 using System;

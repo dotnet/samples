@@ -1,4 +1,4 @@
- '*
+﻿ '*
 '  *File name: WebManagementEvent.cs
 '  *Purpose: Implements a custom WebManagementEvent type
 '  *

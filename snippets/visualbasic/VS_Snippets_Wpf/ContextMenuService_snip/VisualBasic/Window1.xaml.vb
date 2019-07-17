@@ -1,4 +1,4 @@
-Namespace ContextMenus
+﻿Namespace ContextMenus
     Partial Public Class Window1
         Inherits System.Windows.Window
 

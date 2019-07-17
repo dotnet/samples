@@ -1,4 +1,4 @@
-' System.Net.NetworkCredential.GetCredential
+﻿' System.Net.NetworkCredential.GetCredential
 
  'This program demontrates the 'GetCredential' of 'NetworkCredential' class.
 '  It accepts an URL, username and password from console. Creates a 'NetworkCredential' object 

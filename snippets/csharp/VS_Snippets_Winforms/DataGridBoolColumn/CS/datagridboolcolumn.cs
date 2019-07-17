@@ -1,4 +1,4 @@
-// System.Windows.Forms.DataGridBoolColumn.TrueValueChanged
+﻿// System.Windows.Forms.DataGridBoolColumn.TrueValueChanged
 // System.Windows.Forms.DataGridBoolColumn.AllowNullChanged
 // System.Windows.Forms.DataGridBoolColumn.FalseValueChanged
 

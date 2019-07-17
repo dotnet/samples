@@ -1,4 +1,4 @@
-' DocViewerAnnotationsXml SDK Sample - Window1.xaml.vb
+﻿' DocViewerAnnotationsXml SDK Sample - Window1.xaml.vb
 ' Copyright (c) Microsoft Corporation. All rights reserved.
 
 Imports System.Net

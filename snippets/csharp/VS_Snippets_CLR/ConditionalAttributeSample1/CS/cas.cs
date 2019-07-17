@@ -1,4 +1,4 @@
-//<snippet7>
+﻿//<snippet7>
 #define CONDITION1
 #define CONDITION2
 using System;

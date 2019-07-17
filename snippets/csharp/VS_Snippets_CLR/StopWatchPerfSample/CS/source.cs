@@ -1,4 +1,4 @@
-// System.Diagnostics.Stopwatch
+﻿// System.Diagnostics.Stopwatch
 
 //<Snippet1>
 using System;

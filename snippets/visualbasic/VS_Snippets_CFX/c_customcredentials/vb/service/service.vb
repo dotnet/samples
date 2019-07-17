@@ -1,4 +1,4 @@
- '<snippet0>
+﻿ '<snippet0>
 Imports System
 Imports System.IdentityModel.Selectors
 Imports System.Security.Permissions

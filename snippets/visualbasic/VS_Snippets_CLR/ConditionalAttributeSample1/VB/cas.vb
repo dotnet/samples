@@ -1,4 +1,4 @@
-'<snippet7>
+﻿'<snippet7>
 #Const CONDITION1 = True
 #Const CONDITION2 = True
 Imports System

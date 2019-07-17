@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 #Const TRACE=True
 
 Imports System

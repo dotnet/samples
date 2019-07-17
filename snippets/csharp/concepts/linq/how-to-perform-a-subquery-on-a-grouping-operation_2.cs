@@ -1,4 +1,4 @@
-        public void QueryMaxUsingMethodSyntax()
+﻿        public void QueryMaxUsingMethodSyntax()
         {
             var queryGroupMax = students
                 .GroupBy(student => student.Year)

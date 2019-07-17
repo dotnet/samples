@@ -1,4 +1,4 @@
-/*System.Net.HttpWebRequest.HaveResponse
+﻿/*System.Net.HttpWebRequest.HaveResponse
  
 This program demonstrates 'HaveResponse' property of 'HttpWebRequest' Class.
 A new 'HttpWebRequest' is created.

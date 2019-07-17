@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 
 ' To compile and run this sample from the command line, proceed as follows:
 ' vbc controliskeylocked.vb /r:System.Windows.Forms.dll /r:System.dll 

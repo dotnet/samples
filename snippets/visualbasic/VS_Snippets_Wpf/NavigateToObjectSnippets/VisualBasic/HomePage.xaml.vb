@@ -1,4 +1,4 @@
-'<SnippetPageThatNavsToObjectCODEBEHIND>
+﻿'<SnippetPageThatNavsToObjectCODEBEHIND>
 
 Namespace SDKSample
 	Partial Public Class HomePage

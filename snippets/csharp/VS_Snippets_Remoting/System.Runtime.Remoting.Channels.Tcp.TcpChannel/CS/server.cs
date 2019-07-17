@@ -1,4 +1,4 @@
-/// class: System.Runtime.Remoting.Channels.Tcp.TcpChannel
+﻿/// class: System.Runtime.Remoting.Channels.Tcp.TcpChannel
 //<snippet1>
 using System;
 using System.Runtime.Remoting;

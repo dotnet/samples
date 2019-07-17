@@ -1,4 +1,4 @@
-' <Snippet2>
+﻿' <Snippet2>
 ' A type that represents a 2-D point.
 Public Structure Point
     Private x As Integer

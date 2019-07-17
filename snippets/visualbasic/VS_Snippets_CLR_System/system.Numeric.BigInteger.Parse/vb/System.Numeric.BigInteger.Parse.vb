@@ -1,4 +1,4 @@
-' Visual Basic code for BIgInteger.Parse method
+﻿' Visual Basic code for BIgInteger.Parse method
 Option Strict On
 
 Imports System.Globalization

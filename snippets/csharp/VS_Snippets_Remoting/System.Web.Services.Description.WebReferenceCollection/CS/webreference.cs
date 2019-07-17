@@ -1,4 +1,4 @@
-/// Class: System.Web.Services.Description.WebReferenceCollection
+﻿/// Class: System.Web.Services.Description.WebReferenceCollection
 /// 10 Item[Int32]
 /// 10 Contains(WebReference)
 /// 10 CopyTo(WebReference[],Int32)

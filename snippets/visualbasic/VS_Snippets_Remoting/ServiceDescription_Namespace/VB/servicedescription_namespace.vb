@@ -1,4 +1,4 @@
-' System.Web.Services.Description.ServiceDescription.Namespace
+﻿' System.Web.Services.Description.ServiceDescription.Namespace
 
 ' The following example demonstrates 'Namespace' property of 'ServiceDescription' class.The input to the program is a 
 ' WSDL file 'MyWsdl.wsdl'.This program displays the Namespace of 'ServiceDescription' class.

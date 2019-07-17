@@ -1,4 +1,4 @@
-
+﻿
 
 ' Snippet for: M:System.Drawing.ImageAnimator.Animate(System.Drawing.Image,System.EventHandler)
 ' <snippet1>

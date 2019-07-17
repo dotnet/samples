@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
 /*
    This example shows a code-behind page that includes a custom control,
    MyControl. The control overrides its Render method to write some HTML

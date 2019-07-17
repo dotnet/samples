@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Reflection;
 
 // Define a custom parameter attribute that takes a single message argument.

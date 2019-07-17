@@ -1,4 +1,4 @@
-Imports System.Windows.Media.Animation
+﻿Imports System.Windows.Media.Animation
 
 ' Namespace that defines the OutlineText custom control class in the referenced assembly.
 Imports OutlineText

@@ -1,4 +1,4 @@
-// WebControlDesignerCollectionEditors.cs
+﻿// WebControlDesignerCollectionEditors.cs
 // <snippet5>
 using System.Web.UI;
 using System.Web.UI.WebControls;

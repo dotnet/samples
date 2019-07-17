@@ -1,4 +1,4 @@
- ' File name:ipendpoint.cs.
+﻿ ' File name:ipendpoint.cs.
 ' <Internal>
 ' This program contains snippets applicable to the following:
 ' System.Net.IPEndPoint (Snippet1);  

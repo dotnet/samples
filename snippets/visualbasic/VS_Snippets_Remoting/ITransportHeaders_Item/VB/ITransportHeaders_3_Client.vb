@@ -1,4 +1,4 @@
-' Supporting file for the ITransportHeaders_3_Server.vb
+﻿' Supporting file for the ITransportHeaders_3_Server.vb
 Imports System
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Channels

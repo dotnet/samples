@@ -1,4 +1,4 @@
-// <Snippet10>
+﻿// <Snippet10>
 using Microsoft.Win32.SafeHandles;
 using System;
 using System.IO;

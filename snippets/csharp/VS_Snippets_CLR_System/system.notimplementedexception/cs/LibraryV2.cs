@@ -1,4 +1,4 @@
-// <Snippet3>
+﻿// <Snippet3>
 namespace Utilities
 {
    public class StringLibrary

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.CodeDom;
 
 namespace CodeMemberField_PublicConst_Example

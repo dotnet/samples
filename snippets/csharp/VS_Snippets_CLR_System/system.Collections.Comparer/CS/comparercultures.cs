@@ -1,4 +1,4 @@
-// The following code example shows how Compare returns different values depending on the culture associated with the Comparer.
+﻿// The following code example shows how Compare returns different values depending on the culture associated with the Comparer.
 
 // <snippet1>
 using System;

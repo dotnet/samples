@@ -1,4 +1,4 @@
-// System.Net.WebPermission.WebPermission(NetworkAccess, uriString);System.Net.WebPermission.Union;
+﻿// System.Net.WebPermission.WebPermission(NetworkAccess, uriString);System.Net.WebPermission.Union;
 
 /**
   * This program shows the use of the WebPermission(NetworkAccess access,string uriString) 

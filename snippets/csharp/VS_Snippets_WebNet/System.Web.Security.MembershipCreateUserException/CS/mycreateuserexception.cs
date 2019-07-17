@@ -1,4 +1,4 @@
-//<Snippet5>
+﻿//<Snippet5>
 using System.Web.Security;
 using System.Runtime.Serialization;
 

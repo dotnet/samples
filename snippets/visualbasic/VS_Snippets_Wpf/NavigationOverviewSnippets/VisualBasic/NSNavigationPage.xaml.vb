@@ -1,4 +1,4 @@
-'<SnippetNSNavigationPageCODEBEHIND>
+﻿'<SnippetNSNavigationPageCODEBEHIND>
 
 Namespace SDKSample
 	Partial Public Class NSNavigationPage

@@ -1,4 +1,4 @@
-' System.Windows.Forms.DataGridColumnStyle.NullTextChanged
+﻿' System.Windows.Forms.DataGridColumnStyle.NullTextChanged
 '
 '
 ' The following example demonstrates the 'NullTextChanged' event of

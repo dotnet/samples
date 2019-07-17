@@ -1,4 +1,4 @@
-//Types:System.Reflection.StrongNameKeyPair Vendor: Richter
+﻿//Types:System.Reflection.StrongNameKeyPair Vendor: Richter
 //<snippet1>
 using System;
 using System.IO;

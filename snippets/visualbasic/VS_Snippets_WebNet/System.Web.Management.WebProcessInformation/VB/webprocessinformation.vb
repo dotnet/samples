@@ -1,4 +1,4 @@
- '*
+﻿ '*
 '  *File name: WebProcessInformation.vb
 '  *Purpose: Implements a custom type to acess 
 '  *the process information.: 

@@ -1,4 +1,4 @@
-Namespace HOWTOWindowManagementSnippets
+﻿Namespace HOWTOWindowManagementSnippets
 	''' <summary>
 	''' Interaction logic for CustomDialogBox.xaml
 	''' </summary>

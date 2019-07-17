@@ -1,4 +1,4 @@
-// The following example builds a CodeDom source graph for a simple
+﻿// The following example builds a CodeDom source graph for a simple
 // Hello World program.  The source is then saved to a file,
 // compiled into an executable, and run.
 

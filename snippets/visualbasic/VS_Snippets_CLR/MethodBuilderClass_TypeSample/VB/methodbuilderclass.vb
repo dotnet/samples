@@ -1,4 +1,4 @@
-' System.Reflection.Emit.MethodBuilder
+﻿' System.Reflection.Emit.MethodBuilder
 
 ' This program demonstrates 'MethodBuilder' class.  A dynamic class 'myTypeBuilder'
 ' is created in which a constructor 'myConstructorBuilder' and a method 'myMethodBuilder'

@@ -1,4 +1,4 @@
-/*  System.Net.WebRequest.ContentType System.Net.WebRequest.ContentLength System.Net.WebRequest.GetRequestStream
+﻿/*  System.Net.WebRequest.ContentType System.Net.WebRequest.ContentLength System.Net.WebRequest.GetRequestStream
   This program demonstrates 'GetRequestStream' method , 'ContentLength' and 'ContentType' properties of 
 	'WebRequestClass'.
   A new 'WebRequest' object is created and the method used for sending data is set to 'POST' method by setting 

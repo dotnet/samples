@@ -1,4 +1,4 @@
-// DocumentSerialize SDK Sample - Util.cs
+﻿// DocumentSerialize SDK Sample - Util.cs
 // Copyright (c) Microsoft Corporation. All rights reserved.
 
 using System;

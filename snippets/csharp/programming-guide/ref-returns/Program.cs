@@ -1,4 +1,4 @@
-namespace UseRefReturns
+﻿namespace UseRefReturns
 {
     using static System.Console;
     using RefReturns;

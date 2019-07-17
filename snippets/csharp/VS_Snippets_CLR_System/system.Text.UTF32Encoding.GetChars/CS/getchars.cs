@@ -1,4 +1,4 @@
-// The following code example encodes a string into an array of bytes, and then decodes the bytes into an array of characters.
+﻿// The following code example encodes a string into an array of bytes, and then decodes the bytes into an array of characters.
 
 // <Snippet1>
 using System;

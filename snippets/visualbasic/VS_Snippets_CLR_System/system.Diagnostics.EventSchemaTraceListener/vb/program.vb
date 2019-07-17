@@ -1,4 +1,4 @@
-'<Snippet1>
+﻿'<Snippet1>
 #Const NOCONFIGFILE = True
 Imports System
 Imports System.IO

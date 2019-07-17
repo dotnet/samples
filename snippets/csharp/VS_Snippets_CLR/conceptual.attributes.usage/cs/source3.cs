@@ -1,4 +1,4 @@
-//<snippet18>
+﻿//<snippet18>
 using System;
 using System.Reflection;
 using CustomCodeAttributes;

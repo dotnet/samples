@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 ' Name this Visual Basic file HandlerTest.vb and compile it with the
 ' command line: vbc /target:library /r:System.Web.dll HandlerTest.vb.
 ' Copy HandlerTest.dll to your \bin directory.

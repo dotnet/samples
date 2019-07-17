@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 // This example demonstrates the Version.Revision,
 // MajorRevision, and MinorRevision properties.
 using System;

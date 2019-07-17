@@ -1,4 +1,4 @@
-// Types:System.ArgumentException Vendor: Richter
+﻿// Types:System.ArgumentException Vendor: Richter
 //<snippet1>
 using System;
 

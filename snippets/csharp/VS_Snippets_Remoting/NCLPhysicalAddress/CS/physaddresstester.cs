@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Net.NetworkInformation;
 
 namespace Examples.System.Net.Networking

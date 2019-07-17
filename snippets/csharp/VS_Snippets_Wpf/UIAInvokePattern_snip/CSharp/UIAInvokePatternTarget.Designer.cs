@@ -1,4 +1,4 @@
-namespace UIAInvokePattern_snip
+﻿namespace UIAInvokePattern_snip
 {
     partial class UIAInvokePatternTarget
     {

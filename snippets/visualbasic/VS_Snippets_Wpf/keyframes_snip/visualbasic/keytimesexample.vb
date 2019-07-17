@@ -1,4 +1,4 @@
-' <SnippetKeyTimesExampleUsingWholePage>
+﻿' <SnippetKeyTimesExampleUsingWholePage>
 
 Imports System
 Imports System.Windows

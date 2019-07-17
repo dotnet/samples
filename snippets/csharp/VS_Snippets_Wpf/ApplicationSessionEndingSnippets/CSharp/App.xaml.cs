@@ -1,4 +1,4 @@
-//<SnippetHandlingSessionEndingCODEBEHIND>
+﻿//<SnippetHandlingSessionEndingCODEBEHIND>
 using System.Windows;
 
 namespace SDKSample

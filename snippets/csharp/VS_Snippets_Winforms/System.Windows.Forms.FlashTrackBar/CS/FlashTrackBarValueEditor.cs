@@ -1,4 +1,4 @@
-// <snippet20>
+﻿// <snippet20>
 namespace Microsoft.Samples.WinForms.Cs.FlashTrackBar {
     using System;
     using System.ComponentModel;

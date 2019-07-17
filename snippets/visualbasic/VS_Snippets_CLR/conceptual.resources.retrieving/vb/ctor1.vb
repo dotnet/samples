@@ -1,4 +1,4 @@
-Imports System.Resources
+﻿Imports System.Resources
 
 Public Module Example
    Public Sub Main()

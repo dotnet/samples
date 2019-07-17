@@ -1,4 +1,4 @@
-' This sample can go in ComboBoxRenderer class overview.
+﻿' This sample can go in ComboBoxRenderer class overview.
 ' - Snippet2 can go in IsSupported
 ' - Snippet4 can go in DrawTextBox and DrawDropDownButton
 

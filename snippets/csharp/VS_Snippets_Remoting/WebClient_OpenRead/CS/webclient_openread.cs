@@ -1,4 +1,4 @@
-// System.Net.WebClient.OpenRead
+﻿// System.Net.WebClient.OpenRead
 
 /*
 This program demonstrates the 'OpenRead' method of 'WebClient' class.

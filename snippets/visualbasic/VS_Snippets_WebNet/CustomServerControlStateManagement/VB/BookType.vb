@@ -1,4 +1,4 @@
-' BookType.vb
+﻿' BookType.vb
 Option Strict On
 Imports System
 

@@ -1,4 +1,4 @@
-// <Snippet7>
+﻿// <Snippet7>
 using System;
 using System.Threading;
 using Microsoft.VisualStudio.Data.Core;

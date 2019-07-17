@@ -1,4 +1,4 @@
-//<SnippetHandleExitCODEBEHIND>
+﻿//<SnippetHandleExitCODEBEHIND>
 using System;
 using System.Collections;
 using System.Windows;

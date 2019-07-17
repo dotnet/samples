@@ -1,4 +1,4 @@
-// File name: AutomobileSection.cs
+﻿// File name: AutomobileSection.cs
 // Allowed snippet tags range: [11 - 20].
 
 // <Snippet11>

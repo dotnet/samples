@@ -1,4 +1,4 @@
-' System.Configuration.Install.ComponentInstaller.CopyFromComponent
+﻿' System.Configuration.Install.ComponentInstaller.CopyFromComponent
 ' System.Configuration.Install.ComponentInstaller.IsEquivalentInstaller
 
 '   The following example demonstrates the 'CopyFromComponent' and

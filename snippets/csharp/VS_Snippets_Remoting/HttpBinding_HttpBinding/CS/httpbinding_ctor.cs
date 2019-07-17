@@ -1,4 +1,4 @@
-//  System.Web.Services.Description.HttpBinding.HttpBinding()
+﻿//  System.Web.Services.Description.HttpBinding.HttpBinding()
 //  System.Web.Services.Description.HttpBinding.Namespace
 //  System.Web.Services.Description.HttpAddressBinding.HttpAddressBinding()
 

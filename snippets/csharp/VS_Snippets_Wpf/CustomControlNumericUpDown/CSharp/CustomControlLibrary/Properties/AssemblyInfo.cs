@@ -1,4 +1,4 @@
-using System.Windows;
+﻿using System.Windows;
 
 //<SnippetThemesSection>
 [assembly: ThemeInfo(ResourceDictionaryLocation.SourceAssembly, 

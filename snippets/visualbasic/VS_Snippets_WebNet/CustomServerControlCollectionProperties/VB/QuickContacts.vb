@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 ' QuickContacts.vb
 Option Strict On
 Imports System

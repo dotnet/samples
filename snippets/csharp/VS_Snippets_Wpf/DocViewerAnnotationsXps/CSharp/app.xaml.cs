@@ -1,4 +1,4 @@
-// DocViewerAnnotationsXps SDK Sample - app.xaml.cs
+﻿// DocViewerAnnotationsXps SDK Sample - app.xaml.cs
 // Copyright (c) Microsoft Corporation. All rights reserved.
 
 using System;

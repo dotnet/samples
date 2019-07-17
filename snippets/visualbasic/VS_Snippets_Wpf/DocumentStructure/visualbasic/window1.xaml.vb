@@ -1,4 +1,4 @@
-' DocumentStructure SDK Sample - Window1.xaml.vb
+﻿' DocumentStructure SDK Sample - Window1.xaml.vb
 ' Copyright (c) Microsoft Corporation. All rights reserved.
 
 Imports System.Windows.Xps.Packaging

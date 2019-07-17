@@ -1,4 +1,4 @@
-// <Snippet7>
+﻿// <Snippet7>
 using System;
 
 public enum ArrivalStatus { Unknown=-3, Late=-1, OnTime=0, Early=1 };

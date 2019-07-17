@@ -1,4 +1,4 @@
-' <SnippetGraphicsMMClockControllerExample>
+﻿' <SnippetGraphicsMMClockControllerExample>
 '
 '  This example shows how to interactively control 
 '  a root clock.

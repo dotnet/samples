@@ -1,4 +1,4 @@
-'<SnippetHomePageCODEBEHIND>
+﻿'<SnippetHomePageCODEBEHIND>
 
 Imports System.Windows.Controls
 

@@ -1,4 +1,4 @@
-//<Snippet5>
+﻿//<Snippet5>
 // Example of the TimeSpan.FromHours( double ) method.
 using System;
 

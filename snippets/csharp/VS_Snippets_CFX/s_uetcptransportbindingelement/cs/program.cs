@@ -1,4 +1,4 @@
-// Snippet for S_UETcpTransportBindingElement
+﻿// Snippet for S_UETcpTransportBindingElement
 using System;
 using System.Collections.Generic;
 using System.Configuration;

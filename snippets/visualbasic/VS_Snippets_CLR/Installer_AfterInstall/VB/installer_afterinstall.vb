@@ -1,4 +1,4 @@
-' System.Configuration.Install.Installer.AfterInstall
+﻿' System.Configuration.Install.Installer.AfterInstall
 
 ' The following example demonstrates the event 'AfterInstall' of the
 ' 'Installer' class. The event 'AfterInstall' is raised by the method

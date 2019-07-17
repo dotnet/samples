@@ -1,4 +1,4 @@
-' <Snippet101>
+﻿' <Snippet101>
 ' EllipseGeometryExample.vb
 '
 ' This sample demonstrates how to animate the center

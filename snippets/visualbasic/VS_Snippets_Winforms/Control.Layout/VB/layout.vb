@@ -1,4 +1,4 @@
-Public NotInheritable Class MyForm
+﻿Public NotInheritable Class MyForm
     Inherits System.Windows.Forms.Form
 
     Public Sub New()

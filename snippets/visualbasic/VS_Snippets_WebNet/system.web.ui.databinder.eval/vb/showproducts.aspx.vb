@@ -1,4 +1,4 @@
-' <snippet2>
+﻿' <snippet2>
 Public Class ShowProducts
     Inherits System.Web.UI.Page
 

@@ -1,4 +1,4 @@
-// System.Net.WebPermission.AddPermission(NetworkAccess, regex);
+﻿// System.Net.WebPermission.AddPermission(NetworkAccess, regex);
 // System.Net.WebPermission.IsSubsetOf;
 /**
   * This program shows how to use the  AddPermission(NetworkAccess, regex) and 

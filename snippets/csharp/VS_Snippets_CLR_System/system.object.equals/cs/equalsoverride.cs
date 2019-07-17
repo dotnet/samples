@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 // <Snippet6>
 public class Person

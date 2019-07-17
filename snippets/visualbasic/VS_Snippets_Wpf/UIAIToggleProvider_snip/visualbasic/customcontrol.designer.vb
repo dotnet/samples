@@ -1,4 +1,4 @@
-Imports System
+﻿Imports System
 Namespace UIAIToggleProvider_snip
 	Partial Public Class CustomControl
 		''' <summary>

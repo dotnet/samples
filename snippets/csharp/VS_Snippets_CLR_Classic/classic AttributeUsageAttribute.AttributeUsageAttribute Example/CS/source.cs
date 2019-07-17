@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 // <Snippet1>
 namespace System.Runtime.InteropServices

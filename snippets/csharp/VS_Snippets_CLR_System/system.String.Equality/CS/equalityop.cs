@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 // Example for the String Equality operator.
 using System;
 

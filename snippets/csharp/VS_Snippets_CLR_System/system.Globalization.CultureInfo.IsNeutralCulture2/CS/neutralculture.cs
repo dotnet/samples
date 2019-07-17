@@ -1,4 +1,4 @@
-// The following code example determines which cultures using the Chinese language are neutral cultures.
+﻿// The following code example determines which cultures using the Chinese language are neutral cultures.
 
 // <snippet1>
 using System;

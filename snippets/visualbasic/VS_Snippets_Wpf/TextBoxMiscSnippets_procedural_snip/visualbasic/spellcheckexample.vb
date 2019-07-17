@@ -1,4 +1,4 @@
-' <SnippetSpellCheckCodeExampleWholePage>
+﻿' <SnippetSpellCheckCodeExampleWholePage>
 
 Imports System
 Imports System.Windows

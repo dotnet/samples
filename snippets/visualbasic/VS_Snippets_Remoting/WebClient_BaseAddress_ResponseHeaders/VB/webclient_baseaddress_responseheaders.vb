@@ -1,4 +1,4 @@
-' System.Net.WebClient.BaseAddress; System.Net.WebClient.ResponseHeaders
+﻿' System.Net.WebClient.BaseAddress; System.Net.WebClient.ResponseHeaders
 
  'This program demonstrates the 'BaseAddress' and 'ResponseHeaders' property of 'WebClient' class.
 '  It accepts the base Uri from the user and assigns it to the 'BaseAddress' property of the 

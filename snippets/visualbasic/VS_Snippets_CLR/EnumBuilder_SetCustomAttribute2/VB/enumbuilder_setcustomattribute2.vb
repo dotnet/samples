@@ -1,4 +1,4 @@
-' System.Reflection.Emit.EnumBuilder.GetCustomAttributes(Boolean)
+﻿' System.Reflection.Emit.EnumBuilder.GetCustomAttributes(Boolean)
 ' System.Reflection.Emit.EnumBuilder.SetCustomAttribute(ConstructorInfo, Byte())
 
 ' The following program demonstrates 'GetCustomAttributes(Boolean)'

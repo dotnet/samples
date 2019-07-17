@@ -1,4 +1,4 @@
-' Snippet1 is in x509store2.vb
+﻿' Snippet1 is in x509store2.vb
 '
 '<Snippet2>
 Option Strict On

@@ -1,4 +1,4 @@
-//<SNIPPET1>
+﻿//<SNIPPET1>
 //
 // This example signs an XML file using an
 // envelope signature. It then verifies the 

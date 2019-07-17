@@ -1,4 +1,4 @@
-// What is the resolution of the system clock?
+﻿// What is the resolution of the system clock?
 
 // <Snippet1>
 using System;

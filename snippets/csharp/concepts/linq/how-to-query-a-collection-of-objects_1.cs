@@ -1,4 +1,4 @@
-    public class StudentClass
+﻿    public class StudentClass
     {
         #region data
         protected enum GradeLevel { FirstYear = 1, SecondYear, ThirdYear, FourthYear };

@@ -1,4 +1,4 @@
-//<Snippet1>
+﻿//<Snippet1>
 // Example of Convert.ToDateTime( String, IFormatProvider ).
 using System;
 using System.Globalization;

@@ -1,4 +1,4 @@
-' The following code example demonstrates using the 
+﻿' The following code example demonstrates using the 
 ' ContextMenu.Show() method.
 
 Imports System.Windows.Forms

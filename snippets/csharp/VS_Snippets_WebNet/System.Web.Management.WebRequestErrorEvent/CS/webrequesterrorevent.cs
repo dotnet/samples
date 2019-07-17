@@ -1,4 +1,4 @@
-/**
+﻿/**
   *File name: WebRequestErrorEvent.cs
   *Purpose: Implements a custom WebRequestErrorEvent type
   *by inheriting from the System.Web.Management.WebRequestErrorEvent.

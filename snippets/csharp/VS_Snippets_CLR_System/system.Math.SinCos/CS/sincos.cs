@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 // Example for the trigonometric Math.Sin( double ) 
 // and Math.Cos( double ) methods.
 using System;

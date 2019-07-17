@@ -1,4 +1,4 @@
-/// Class: System.Runtime.Remoting.Metadata.W3cXsd2001.SoapHexBinary
+﻿/// Class: System.Runtime.Remoting.Metadata.W3cXsd2001.SoapHexBinary
 ///    10    class 
 ///    21    #ctor()
 ///    22    #ctor(byte[])

@@ -1,4 +1,4 @@
-' System.Web.Services.Description.MimeContentBinding.Type
+﻿' System.Web.Services.Description.MimeContentBinding.Type
 ' System.Web.Services.Description.MimeContentBinding.Part
 ' System.Web.Services.Description.MimeContentBinding.NameSpace
 ' System.Web.Services.Description.MimeContentBinding

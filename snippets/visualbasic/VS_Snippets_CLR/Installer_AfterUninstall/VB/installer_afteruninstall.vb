@@ -1,4 +1,4 @@
-' System.Configuration.Install.Installer.AfterUninstall
+﻿' System.Configuration.Install.Installer.AfterUninstall
 
 ' The following example demonstrates the event 'AfterUninstall' of the
 ' 'Installer' class. This event is raised by the method 'OnAfterUninstall'.

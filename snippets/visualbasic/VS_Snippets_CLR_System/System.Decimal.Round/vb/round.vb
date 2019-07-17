@@ -1,4 +1,4 @@
-Module Example
+﻿Module Example
     Const dataFmt As String = "{0,26}{1,8}{2,26}"
 
     ' Display Decimal.Round parameters and the result.

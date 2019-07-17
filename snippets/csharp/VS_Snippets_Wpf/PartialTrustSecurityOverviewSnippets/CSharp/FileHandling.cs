@@ -1,4 +1,4 @@
-//<SnippetDetectPermsCODE1>
+﻿//<SnippetDetectPermsCODE1>
 using System.IO;
 using System.IO.IsolatedStorage;
 using System.Security;

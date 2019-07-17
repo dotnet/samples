@@ -1,4 +1,4 @@
-Public Module Example
+﻿Public Module Example
    Public Sub Main()
       ' <Snippet1>
       Dim n As Double = 9.3

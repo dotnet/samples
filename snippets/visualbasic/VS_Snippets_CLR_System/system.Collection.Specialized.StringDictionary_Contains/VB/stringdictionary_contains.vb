@@ -1,4 +1,4 @@
-' The following code example searches for an element in a StringDictionary.
+﻿' The following code example searches for an element in a StringDictionary.
 
 ' <snippet1>
 Imports System

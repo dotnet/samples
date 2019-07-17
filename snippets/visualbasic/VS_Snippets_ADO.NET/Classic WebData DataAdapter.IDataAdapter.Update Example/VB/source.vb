@@ -1,4 +1,4 @@
-Option Explicit On
+﻿Option Explicit On
 Option Strict On
 Imports System.Data.OleDb
 Imports System.Data

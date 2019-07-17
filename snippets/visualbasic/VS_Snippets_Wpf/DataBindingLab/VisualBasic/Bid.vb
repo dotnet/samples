@@ -1,4 +1,4 @@
-Public Class Bid
+﻿Public Class Bid
 
     Private AmountValue As Integer
     Private BidderValue As User

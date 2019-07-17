@@ -1,4 +1,4 @@
-'<Snippet1>
+﻿'<Snippet1>
 Module Module1
     'Add references to Microsoft.Build.Framework and
     'Microsoft.Build.BuildEngine

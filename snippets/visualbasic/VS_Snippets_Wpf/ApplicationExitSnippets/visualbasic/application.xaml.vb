@@ -1,4 +1,4 @@
-'<SnippetHandleExitCODEBEHIND>
+﻿'<SnippetHandleExitCODEBEHIND>
 
 Imports Microsoft.VisualBasic
 Imports System

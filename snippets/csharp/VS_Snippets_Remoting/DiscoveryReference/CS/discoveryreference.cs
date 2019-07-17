@@ -1,4 +1,4 @@
-// System.Web.Services.Discovery.DiscoveryReference.ClientProtocol
+﻿// System.Web.Services.Discovery.DiscoveryReference.ClientProtocol
 // System.Web.Services.Discovery.DiscoveryReference.DefaultFilename
 // System.Web.Services.Discovery.DiscoveryReference.WriteDocument(object,Stream)
 // System.Web.Services.Discovery.DiscoveryReference.ReadDocument(Stream)

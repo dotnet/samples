@@ -1,4 +1,4 @@
-Namespace SDKSample
+﻿Namespace SDKSample
 
     Partial Public Class DataTemplateWindow
         Inherits System.Windows.Window

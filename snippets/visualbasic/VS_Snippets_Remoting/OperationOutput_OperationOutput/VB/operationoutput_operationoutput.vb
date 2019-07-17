@@ -1,4 +1,4 @@
-' System.Web.Services.Description.OperationOutput
+﻿' System.Web.Services.Description.OperationOutput
 ' System.Web.Services.Description.OperationOutput.OperationOutput
 
 ' The following example demonstrates the usage of the 'OperationOutput'

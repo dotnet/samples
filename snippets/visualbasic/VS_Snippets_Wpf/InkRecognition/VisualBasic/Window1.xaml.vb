@@ -1,4 +1,4 @@
-'<Snippet2>
+﻿'<Snippet2>
 Imports System.Windows
 Imports Microsoft.Ink
 Imports System.IO

@@ -1,4 +1,4 @@
-' The following code example adds to and removes elements from a HybridDictionary.
+﻿' The following code example adds to and removes elements from a HybridDictionary.
 
 ' <snippet1>
 Imports System

@@ -1,4 +1,4 @@
-' The following code example demonstrates using the Keys enum,  
+﻿' The following code example demonstrates using the Keys enum,  
 ' and the TextBoxBase.ScrollToCaret,  and TextBox.HideSelection methods.
 ' It also demonstrates and handling the TextBox.Click event.
 

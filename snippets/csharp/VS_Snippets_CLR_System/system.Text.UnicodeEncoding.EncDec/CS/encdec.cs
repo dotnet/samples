@@ -1,4 +1,4 @@
-// The following code example uses an encoder and a decoder to encode a string into an array of bytes,
+﻿// The following code example uses an encoder and a decoder to encode a string into an array of bytes,
 // and then decode the bytes into an array of characters.
 
 // <Snippet1>

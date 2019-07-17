@@ -1,4 +1,4 @@
-namespace Restriction
+﻿namespace Restriction
 {
     public class Product
     {

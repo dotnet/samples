@@ -1,4 +1,4 @@
-Imports System.Text
+﻿Imports System.Text
 Imports System.Threading
 Imports System.Windows.Threading
 Imports System.Timers

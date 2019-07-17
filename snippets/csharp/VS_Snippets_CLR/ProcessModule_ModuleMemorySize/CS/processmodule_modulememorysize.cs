@@ -1,4 +1,4 @@
-// System.Diagnostics.ProcessModule.ModuleMemorySize
+﻿// System.Diagnostics.ProcessModule.ModuleMemorySize
 
 /* The following program demonstrates the use of 'ModuleMemorySize' property of 
    'ProcessModule' class. It creates a notepad, gets the 'MainModule' and 

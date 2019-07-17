@@ -1,4 +1,4 @@
-'<Snippet3>
+﻿'<Snippet3>
 ' Example of the Convert.ToInt16( String ) and 
 ' Convert.ToInt16( String, IFormatProvider ) methods.
 Imports System

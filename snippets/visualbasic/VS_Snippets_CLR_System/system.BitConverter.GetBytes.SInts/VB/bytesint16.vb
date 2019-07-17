@@ -1,4 +1,4 @@
-' <Snippet3>
+﻿' <Snippet3>
 Module Example
     Public Sub Main( )
         ' Define an array of integers.

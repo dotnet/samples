@@ -1,4 +1,4 @@
-namespace CS
+﻿namespace CS
 {
     partial class ComplexDataGridView
     {

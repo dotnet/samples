@@ -1,4 +1,4 @@
-// System.Diagnostics.CounterSample.CounterSample(long,long,long,long,long,long,PerformanceCounterType)
+﻿// System.Diagnostics.CounterSample.CounterSample(long,long,long,long,long,long,PerformanceCounterType)
 // System.Diagnostics.CounterSample.CounterSample(long,long,long,long,long,long,PerformanceCounterType,long)
 
 /* The following program demonstrates the constructors of the 'CounterSample'

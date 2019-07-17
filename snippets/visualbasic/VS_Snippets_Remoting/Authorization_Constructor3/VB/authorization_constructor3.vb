@@ -1,4 +1,4 @@
- ' This program demonstrates the contructor 'Authorization(string,bool,string)' of the authorization 
+﻿ ' This program demonstrates the contructor 'Authorization(string,bool,string)' of the authorization 
 ' * class.
 ' * 
 ' * We implement the interface "IAuthenticationModule" to make CloneBasic which is a custom authentication module.

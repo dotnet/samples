@@ -1,4 +1,4 @@
-' System.Net.NetworkCredential.Username;System.Net.NetworkCredential.Domain;System.Net.NetworkCredential.Password
+﻿' System.Net.NetworkCredential.Username;System.Net.NetworkCredential.Domain;System.Net.NetworkCredential.Password
 
  'This program demontrates the 'UserName','Domain' and 'Password' properties of 'NetworkCredential' class.
 '  It takes an URL, username, password and domainname from console. An empty 'NetworkCredential' object 

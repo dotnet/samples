@@ -1,4 +1,4 @@
-/**
+﻿/**
   *File name: WebRequestEvent.cs
   *Purpose: Implements a custom Web request event type.
   **/

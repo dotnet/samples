@@ -1,4 +1,4 @@
-// The following example shows how to sort two associated arrays
+﻿// The following example shows how to sort two associated arrays
 // where the first array contains the keys and the second array contains the values.
 // Sorts are done using the default comparer and a custom comparer that reverses the sort order.
 

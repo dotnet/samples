@@ -1,4 +1,4 @@
-' System.Diagnostics.EventLog.WriteEntry(String, String, EventLogEntryType, Int32, Int16)
+﻿' System.Diagnostics.EventLog.WriteEntry(String, String, EventLogEntryType, Int32, Int16)
 ' System.Diagnostics.EventLog.WriteEntry(String, String, EventLogEntryType, Int32, Int16, Byte[])
 ' System.Diagnostics.EventLog.EventLog.WriteEntry(String, EventLogEntryType, Int32, Int16)
 

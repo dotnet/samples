@@ -1,4 +1,4 @@
-'File name: myDataBoundLiteralControl
+﻿'File name: myDataBoundLiteralControl
 
 ' <Snippet1> 
 Imports System

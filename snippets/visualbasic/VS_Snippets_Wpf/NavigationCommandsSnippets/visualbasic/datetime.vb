@@ -1,4 +1,4 @@
-Namespace SDKSample
+﻿Namespace SDKSample
 
   ' Need this to bind to, since System.DateTime is a struct (ie not a type with a default constructor)
     Public Class DateTime

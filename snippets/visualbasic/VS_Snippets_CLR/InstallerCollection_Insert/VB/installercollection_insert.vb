@@ -1,4 +1,4 @@
-' System.Configuration.Install.InstallerCollection.Insert(Int32, Installer)
+﻿' System.Configuration.Install.InstallerCollection.Insert(Int32, Installer)
 ' System.Configuration.Install.InstallerCollection.AddRange(InstallerCollection)
 
 ' The following example demonstrates the 'Insert(Int32, Installer)' and

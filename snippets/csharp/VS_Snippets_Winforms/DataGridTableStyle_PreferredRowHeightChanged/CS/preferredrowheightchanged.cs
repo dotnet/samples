@@ -1,4 +1,4 @@
-   // System.Windows.Forms.DataGridTableStyle.PreferredRowHeightChanged
+﻿   // System.Windows.Forms.DataGridTableStyle.PreferredRowHeightChanged
 
    /*
      The following example demonstrates 'PreferredRowHeightChanged' Event of 'DataGridTableStyle' class. 

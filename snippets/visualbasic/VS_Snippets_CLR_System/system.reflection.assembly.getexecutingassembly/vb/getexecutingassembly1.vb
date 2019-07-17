@@ -1,4 +1,4 @@
-' <Snippet5>
+﻿' <Snippet5>
 Imports System.Reflection
 
 Public Module Example

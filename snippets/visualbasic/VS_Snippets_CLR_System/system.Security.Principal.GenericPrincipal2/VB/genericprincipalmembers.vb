@@ -1,4 +1,4 @@
-' This sample demonstrates how to call each member of the GenericPrincipal
+﻿' This sample demonstrates how to call each member of the GenericPrincipal
 ' class.
 '<Snippet1>
 Imports System

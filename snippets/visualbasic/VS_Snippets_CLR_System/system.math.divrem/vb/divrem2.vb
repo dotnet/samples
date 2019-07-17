@@ -1,4 +1,4 @@
-' Visual Basic .NET Document
+﻿' Visual Basic .NET Document
 ' The example illustrates DivRem(Int32, Int32)
 Option Strict On
 

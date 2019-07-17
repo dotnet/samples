@@ -1,4 +1,4 @@
-'Types:System.AppDomain,System.AppDomainSetup Vendor: Richter
+﻿'Types:System.AppDomain,System.AppDomainSetup Vendor: Richter
 '<snippet1>
 Imports System
 Imports System.Reflection

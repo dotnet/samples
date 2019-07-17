@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 Class Sample
    Public Shared Sub Main()
       Dim letterA As Integer = &H41    'U+00041 = LATIN CAPITAL LETTER A

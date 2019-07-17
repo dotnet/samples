@@ -1,4 +1,4 @@
-' System.Diagnostics.EventLogEntryType
+﻿' System.Diagnostics.EventLogEntryType
 ' System.Diagnostics.EventLogEntryType.Error
 ' System.Diagnostics.EventLogEntryType.Warning
 ' System.Diagnostics.EventLogEntryType.Information

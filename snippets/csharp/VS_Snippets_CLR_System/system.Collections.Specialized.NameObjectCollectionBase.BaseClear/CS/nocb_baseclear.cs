@@ -1,4 +1,4 @@
-// The following example uses BaseClear to remove all elements from a NameObjectCollectionBase.
+﻿// The following example uses BaseClear to remove all elements from a NameObjectCollectionBase.
 // For an expanded version of this example, see the NameObjectCollectionBase class topic.
 
 // <snippet1>

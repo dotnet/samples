@@ -1,4 +1,4 @@
-//<Snippet1>
+﻿//<Snippet1>
 // The following configuration file can be used with this sample.
 // When using a configuration file #define ConfigFile.
 //<configuration>

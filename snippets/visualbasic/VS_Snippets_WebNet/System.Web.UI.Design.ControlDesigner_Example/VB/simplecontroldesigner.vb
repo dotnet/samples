@@ -1,4 +1,4 @@
-' <snippet1>
+﻿' <snippet1>
 ' Create a designer class for a custom class,
 ' named Simple.
 Imports System

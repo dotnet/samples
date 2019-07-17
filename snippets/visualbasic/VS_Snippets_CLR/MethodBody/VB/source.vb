@@ -1,4 +1,4 @@
-' 1 - (entire sample) MethodBody class
+﻿' 1 - (entire sample) MethodBody class
 ' 2 - (everything through GetMethodBody and displaying InitLocals & MaxStackSize)
 ' 3 - (displaying locals)
 ' 4 - (displaying exception clauses)

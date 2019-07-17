@@ -1,4 +1,4 @@
-//System.Runtime.InteropServices.IDispatchImplAttribute
+﻿//System.Runtime.InteropServices.IDispatchImplAttribute
 //System.Runtime.InteropServices.IDispatchImplType
 // <Snippet1>
 using System;

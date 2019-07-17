@@ -1,4 +1,4 @@
-// The following example demonstrates using the ForEach method.
+﻿// The following example demonstrates using the ForEach method.
 
 //<Snippet1>
 using System;

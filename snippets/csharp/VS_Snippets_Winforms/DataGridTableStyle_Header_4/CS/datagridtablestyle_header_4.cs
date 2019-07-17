@@ -1,4 +1,4 @@
-// System.Windows.Forms.DataGridTableStyle.HeaderForeColorChanged;System.Windows.Forms.DataGridTableStyle.HeaderForeColor
+﻿// System.Windows.Forms.DataGridTableStyle.HeaderForeColorChanged;System.Windows.Forms.DataGridTableStyle.HeaderForeColor
 // System.Windows.Forms.DataGridTableStyle.HeaderBackColorChanged;System.Windows.Forms.DataGridTableStyle.HeaderBackColor
 
 /*

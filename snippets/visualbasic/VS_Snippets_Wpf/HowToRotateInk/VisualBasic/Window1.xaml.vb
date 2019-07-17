@@ -1,4 +1,4 @@
-Imports System.Windows.Ink
+﻿Imports System.Windows.Ink
 ' Interaction logic for Window1.xaml
 Partial Public Class Window1
     Inherits Window

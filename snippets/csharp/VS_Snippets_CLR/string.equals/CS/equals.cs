@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 // Sample for String.Equals(Object)
 //            String.Equals(String)
 //            String.Equals(String, String)

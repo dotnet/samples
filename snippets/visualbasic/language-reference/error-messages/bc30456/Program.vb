@@ -1,4 +1,4 @@
-Module Program
+﻿Module Program
     Sub Main()
         Console.WriteLine($"Installed UI Culture: {My.Computer.Info.InstalledUICulture}")
     End Sub

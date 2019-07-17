@@ -1,4 +1,4 @@
-' System.Web.Services.Description.MimeTextMatch
+﻿' System.Web.Services.Description.MimeTextMatch
 ' System.Web.Services.Description.MimeTextMatch.Capture
 ' System.Web.Services.Description.MimeTextMatch.Group
 ' System.Web.Services.Description.MimeTextMatch.Repeats

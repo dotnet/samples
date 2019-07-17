@@ -1,4 +1,4 @@
-' This example demonstrates creating an owner-drawn ComboBox control. 
+﻿' This example demonstrates creating an owner-drawn ComboBox control. 
 ' The DrawMode property is set to OwnerDrawnVariable. It also demonstrates
 ' using the ComboBox.DropDownWidth and ComboBox.DropDownStyle properties
 ' and handling the ComboBox.MeasureItem and ComboBox.DrawItem events for

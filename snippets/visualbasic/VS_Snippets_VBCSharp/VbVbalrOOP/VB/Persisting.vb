@@ -1,4 +1,4 @@
-' Need a reference to System.Runtime.Serialization.Formatters.Soap
+﻿' Need a reference to System.Runtime.Serialization.Formatters.Soap
 ' And System.Xml
 ' <snippet83>
 Imports System.Runtime.Serialization.Formatters.Soap

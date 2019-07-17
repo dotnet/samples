@@ -1,4 +1,4 @@
-' <Snippet4>
+﻿' <Snippet4>
 ' StateManagedAuthorConverter.vb
 Imports System
 Imports System.ComponentModel

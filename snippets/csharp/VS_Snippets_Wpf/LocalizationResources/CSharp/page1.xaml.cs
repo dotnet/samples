@@ -1,4 +1,4 @@
-namespace MySampleApp     // Namespace must be the same as what you set in project file
+﻿namespace MySampleApp     // Namespace must be the same as what you set in project file
 {
     using System;
     using System.Windows.Controls;

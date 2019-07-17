@@ -1,4 +1,4 @@
-' DataboundDesigner.vb
+﻿' DataboundDesigner.vb
 '
 
 ' Create a custom designer, named TemplatedListDesigner, that

@@ -1,4 +1,4 @@
-' <SnippetRectAnimationWholePage>
+﻿' <SnippetRectAnimationWholePage>
 
 Imports Microsoft.VisualBasic
 Imports System

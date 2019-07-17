@@ -1,4 +1,4 @@
- 'System.Net.HttpWebRequest.UserAgent
+﻿ 'System.Net.HttpWebRequest.UserAgent
 'This program demonstrates 'UserAgent' property of 'HttpWebRequest' Class.
 'A new 'HttpWebRequest' object is created.The 'UserAgent' property is set to
 '"Mozilla/4.0 (compatible; MSIE 6.0b; Windows NT 5.0; COM+ 1.0.2702)".

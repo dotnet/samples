@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 ' This example demonstrates the GetConsoleFallbackUICulture() method
 Imports System
 Imports System.Globalization

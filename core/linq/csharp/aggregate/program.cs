@@ -1,4 +1,4 @@
-namespace Aggregate
+﻿namespace Aggregate
 {
     public class Program
     {

@@ -1,4 +1,4 @@
-/* Supporting program for the 'SoapClientFormatterSinkProvider_Next_Server.cs' and
+﻿/* Supporting program for the 'SoapClientFormatterSinkProvider_Next_Server.cs' and
   'SoapClientFormatterSinkProvider_Next_Client.cs'
  */
 using System;

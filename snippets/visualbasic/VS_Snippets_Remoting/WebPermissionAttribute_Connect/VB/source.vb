@@ -1,4 +1,4 @@
- ' System.Net.WebPermissionAttribute.Connect;System.Net.WebPermissionAttribute.Connect;
+﻿ ' System.Net.WebPermissionAttribute.Connect;System.Net.WebPermissionAttribute.Connect;
 
 'Demonstrate how to use the WebPermissionAttribute  Connect property.
 

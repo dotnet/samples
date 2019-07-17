@@ -1,4 +1,4 @@
-' System.Web.Services.Description.Service
+﻿' System.Web.Services.Description.Service
 
 '   The following sample demonstrates the class 'Service'.This sample reads the
 '   contents of a file 'MathService.wsdl' into a 'ServiceDescription' instance. 
