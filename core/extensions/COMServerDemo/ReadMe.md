@@ -13,7 +13,7 @@ Additional comments are contained in source and project files.
 Build and Run
 -------------
 
-The project will only build and run on the Windows platform.
+The project will only build and run on the Windows platform. You can build and run the example either by registering the COM server or by using registration-free COM.
 
 ### Registered COM ###
 
@@ -42,3 +42,5 @@ Program should output an estimated value of &#960;.
 Program should output an estimated value of &#960;.
 
 **Note** The RegFree COM scenario requires a customized [application manifest](https://docs.microsoft.com/windows/desktop/sbscs/manifests) in the executing binary. This means that attempting to execute through `dotnet.exe` will not work and instead trigger a rebuild of the project.
+
+**Note** Running the "Registered COM" first and then immediately following it by "RegFree COM" will not work, since the build system will not correctly rebuild all files (the simple property change is not detected as a reason for a full rebuild). To fix this, run `dotnet clean` between the two samples.
