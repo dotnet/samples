@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.Build.Traversal">
+
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+
+    <RunCommand>$(BinRoot)\$(Configuration)\MarshallingSample</RunCommand>
+    <RunCommand Condition="$([MSBuild]::IsOsPlatform('Windows'))">$(BinRoot)\$(Configuration)\MarshallingSample.exe</RunCommand>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="src/MarshallingSample/*.csproj" />
+    <ProjectReference Include="src/MarshallingSampleNative/*.csproj" />
+  </ItemGroup>
+  
+</Project>

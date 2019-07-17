@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <OutputType>exe</OutputType>
+    <DefineConstants Condition="'$(OS)' == 'Windows_NT'">$(DefineConstants);WINDOWS</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="$(SourceRoot)/MarshallingSampleNative/MarshallingSampleNative.csproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+
+  <Target Name="SetupForDemo" AfterTargets="Build">
+
+    <ItemGroup>
+      <AllOutputs Include="$(OutputPath)MarshallingSample.*" />
+    </ItemGroup>
+
+    <!-- Copy the project outputs to the bin directory -->
+    <Copy SourceFiles="@(AllOutputs)" DestinationFolder="$(BinRoot)/$(Configuration)" />
+  </Target>
+
+</Project>
