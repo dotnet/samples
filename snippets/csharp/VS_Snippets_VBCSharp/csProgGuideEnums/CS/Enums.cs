@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -80,7 +80,7 @@ namespace Enums
             Console.WriteLine("Meeting days are {0}", meetingDays);
             // Output: Meeting days are Tuesday, Thursday, Friday
 
-            // Remove a flag using bitwise XOR.
+            // Toggle a flag using bitwise XOR.
             meetingDays = meetingDays ^ Days.Tuesday;
             Console.WriteLine("Meeting days are {0}", meetingDays);
             // Output: Meeting days are Thursday, Friday
