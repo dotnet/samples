@@ -30,13 +30,15 @@ Build and Run
 
     * The C++ compiler (`cl.exe` or `g++`) must be on the path.
       * On Windows, a [Developer Command Prompt for Visual Studio](https://docs.microsoft.com/cpp/build/building-on-the-command-line#developer_command_prompt_shortcuts) should be used.
-    * The C++ compiler (`cl.exe` or `g++`) and `dotnet` must be the same bitness.
+    * The C++ compiler (`cl.exe` or `g++`) and `dotnet` must be the same bitness (32-bit or 64-bit).
+      * On Windows, the default developer command prompt for VS uses the 32-bit compilers, but `dotnet` is typically 64-bit by default. Make sure to select the "x64 Native Tools Command Prompt for VS 2019" (or 2017).
 
 1) Navigate to the root directory and run `dotnet build`.
 
-1) Run the `nativehost` executable.
+1) Run the samples. Do one of the following:
 
-    * The executable will be in `bin` under a subdirectory for the configuration (`Debug` is the default).
+    * Use `dotnet run` (which will build and run at the same time).
+    * Use `dotnet build` to build the executable. The executable will be in `bin` under a subdirectory for the configuration (`Debug` is the default).
         * Windows: `bin\Debug\nativehost.exe`
         * Non-Windows: `bin/Debug/nativehost`
 
@@ -52,3 +54,11 @@ Hello, world! from Lib [count: 3]
 -- message: from host!
 -- number: 2
 ```
+
+Note: The way the sample is built is relatively complicated. The goal is that it's possible to build and run the sample with simple `dotnet run` with minimal requirements on pre-installed tools. Typically real-world projects which have both managed and native components will use different build systems for each; for example msbuild/dotnet for managed and CMake for native.
+
+Visual Studio support
+---------------------
+
+The `src\HostWithHostFxr.sln` can be used to open the sample in Visual Studio 2019. In order to be able to build from Visual Studio, though, it has to be started from the correct developer environment. From the developer environment console, start it with `devenv src\HostWithHostFxr.sln`. With that, the solution can be built. To run it set the start project to `build/NativeHost`.
+Note that with mixed mode debugging (that is a debugger which can see both native and managed code at the same time), there's a known limitation where no breakpoints will be hit before the runtime starts. So the parts of the sample before (and including) the call to `load_assembly_and_get_function_pointer` are not possible to debug like that. To debug those, start the process from a normal native-only debugger.
