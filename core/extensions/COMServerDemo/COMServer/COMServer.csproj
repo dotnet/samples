@@ -18,7 +18,7 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
 
     <!-- Indicate the assembly is providing a COM server -->
-    <UseComHost>True</UseComHost>
+    <EnableComHosting>True</EnableComHosting>
 
     <!-- Generate a RegFree COM manifest -->
     <EnableRegFreeCom Condition="'$(RegFree)' == 'True'">True</EnableRegFreeCom>
