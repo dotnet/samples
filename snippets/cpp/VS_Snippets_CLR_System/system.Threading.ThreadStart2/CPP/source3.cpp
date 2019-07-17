@@ -10,21 +10,21 @@ public ref class ThreadWithState
 private:
     // State information used in the task.
     String^ boilerplate;
-    int value;
+    int numberValue;
 
     // The constructor obtains the state information.
 public:
     ThreadWithState(String^ text, int number)
     {
         boilerplate = text;
-        value = number;
+        numberValue = number;
     }
 
     // The thread procedure performs the task, such as formatting
     // and printing a document.
     void ThreadProc()
     {
-        Console::WriteLine(boilerplate, value);
+        Console::WriteLine(boilerplate, numberValue);
     }
 };
 

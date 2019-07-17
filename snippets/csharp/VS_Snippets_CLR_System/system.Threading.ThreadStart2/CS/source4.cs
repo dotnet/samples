@@ -10,7 +10,7 @@ public class ThreadWithState
 {
     // State information used in the task.
     private string boilerplate;
-    private int value;
+    private int numberValue;
 
     // Delegate used to execute the callback method when the
     // task is complete.
@@ -22,7 +22,7 @@ public class ThreadWithState
         ExampleCallback callbackDelegate) 
     {
         boilerplate = text;
-        value = number;
+        numberValue = number;
         callback = callbackDelegate;
     }
     
@@ -31,7 +31,7 @@ public class ThreadWithState
     // the callback delegate with the number of lines printed.
     public void ThreadProc() 
     {
-        Console.WriteLine(boilerplate, value);
+        Console.WriteLine(boilerplate, numberValue);
         if (callback != null)
             callback(1);
     }
