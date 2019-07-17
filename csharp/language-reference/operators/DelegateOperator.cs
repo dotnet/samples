@@ -15,23 +15,16 @@ namespace operators
         private static void AnonymousMethod()
         {
             // <SnippetAnonymousMethod>
-            Action<IEnumerable<int>> display = delegate (IEnumerable<int> s)
-            {
-                Console.WriteLine(string.Join(" ", s));
-            };
-
-            var numbers = new[] { 1, 2, 3 };
-            display(numbers);  // output: 1 2 3
+            Func<int, int, int> sum = delegate (int a, int b) { return a + b; };
+            Console.WriteLine(sum(3, 4));  // output: 7
             // </SnippetAnonymousMethod>
         }
 
         private static void Lambda()
         {
             // <SnippetLambda>
-            Action<IEnumerable<int>> display = s => Console.WriteLine(string.Join(" ", s));
-
-            var numbers = new[] { 1, 2, 3 };
-            display(numbers);  // output 1 2 3
+            Func<int, int, int> sum = (a, b) => a + b;
+            Console.WriteLine(sum(3, 4));  // output: 7
             // </SnippetLambda>
         }
 
