@@ -123,9 +123,6 @@ class Members
                         //Transform the final block of data.
                         myOutputBytes = myTransform.TransformFinalBlock(myInputBytes, i, myInputBytes.Length - i);
                         myOutputFile.Write(myOutputBytes, 0, myOutputBytes.Length);
-
-                        //Free up any used resources.
-                        myTransform.Clear();
                     }
                 }
             }
