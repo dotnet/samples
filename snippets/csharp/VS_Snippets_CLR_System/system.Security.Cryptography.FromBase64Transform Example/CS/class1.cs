@@ -98,16 +98,15 @@ class Members
         {
             using (FromBase64Transform myTransform = new FromBase64Transform(FromBase64TransformMode.IgnoreWhiteSpaces))
             {
-
                 byte[] myOutputBytes = new byte[myTransform.OutputBlockSize];
 
-                //Open the input and output files.
+                // Open the input and output files.
                 using (FileStream myInputFile = new FileStream(inFileName, FileMode.Open, FileAccess.Read))
                 {
                     using (FileStream myOutputFile = new FileStream(outFileName, FileMode.Create, FileAccess.Write))
                     {
 
-                        //Retrieve the file contents into a byte array. 
+                        // Retrieve the file contents into a byte array. 
                         byte[] myInputBytes = new byte[myInputFile.Length];
                         myInputFile.Read(myInputBytes, 0, myInputBytes.Length);
 
@@ -120,13 +119,12 @@ class Members
                             myOutputFile.Write(myOutputBytes, 0, bytesWritten);
                         }
 
-                        //Transform the final block of data.
+                        // Transform the final block of data.
                         myOutputBytes = myTransform.TransformFinalBlock(myInputBytes, i, myInputBytes.Length - i);
                         myOutputFile.Write(myOutputBytes, 0, myOutputBytes.Length);
                     }
                 }
             }
-
         }
 }
 
