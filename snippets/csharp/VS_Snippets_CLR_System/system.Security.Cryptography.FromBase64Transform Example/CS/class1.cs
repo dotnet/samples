@@ -111,12 +111,12 @@ class Members
                         byte[] myInputBytes = new byte[myInputFile.Length];
                         myInputFile.Read(myInputBytes, 0, myInputBytes.Length);
 
-                        //Transform the data in chunks the size of InputBlockSize. 
+                        // Transform the data in chunks the size of InputBlockSize. 
                         int i = 0;
-                        while (myInputBytes.Length - i > 4/*myTransform.InputBlockSize*/)
+                        while (myInputBytes.Length - i > myTransform.InputBlockSize)
                         {
-                            int bytesWritten = myTransform.TransformBlock(myInputBytes, i, 4/*myTransform.InputBlockSize*/, myOutputBytes, 0);
-                            i += 4/*myTransform.InputBlockSize*/;
+                            int bytesWritten = myTransform.TransformBlock(myInputBytes, i, myTransform.InputBlockSize, myOutputBytes, 0);
+                            i += myTransform.InputBlockSize;
                             myOutputFile.Write(myOutputBytes, 0, bytesWritten);
                         }
 
