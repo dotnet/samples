@@ -1,4 +1,4 @@
-//This app used to draw strokes onto a Label, but the Visual object model changed 
+﻿//This app used to draw strokes onto a Label, but the Visual object model changed 
 // so drastically that that's difficult to do.  Instead, the app has methods
 //that returns a DrawingVisual that contains a stroke.
 

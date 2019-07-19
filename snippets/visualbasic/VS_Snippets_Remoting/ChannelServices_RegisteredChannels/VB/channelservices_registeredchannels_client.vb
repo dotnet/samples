@@ -1,4 +1,4 @@
-' System.Runtime.Remoting.Channels.ChannelServices.GetUrlsForObject(MarshalByRefObject)
+﻿' System.Runtime.Remoting.Channels.ChannelServices.GetUrlsForObject(MarshalByRefObject)
 
 ' The following example demonstrates the method 'GetUrlsForObject' 
 ' of the class 'ChannelServices'. The example is just a client, it 

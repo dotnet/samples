@@ -1,4 +1,4 @@
-// System.Web.Services.Protocols.LogicalMethodTypes.Sync
+﻿// System.Web.Services.Protocols.LogicalMethodTypes.Sync
 // System.Web.Services.Protocols.LogicalMethodTypes.LogicalMethodTypes
 // System.Web.Services.Protocols.LogicalMethodInfo.MethodInfo
 

@@ -1,4 +1,4 @@
-// System.Windows.Forms.Control.Font
+﻿// System.Windows.Forms.Control.Font
 // System.Windows.Forms.Control.FontChanged
 // System.Windows.Forms.Control.Focused
 // System.Windows.Forms.Control.Focus

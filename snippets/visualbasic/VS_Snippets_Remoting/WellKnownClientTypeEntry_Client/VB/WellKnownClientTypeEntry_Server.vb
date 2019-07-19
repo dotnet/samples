@@ -1,4 +1,4 @@
-' This is the server program for the 'WellKnownClientTypeEntry_Client.vb' program.
+﻿' This is the server program for the 'WellKnownClientTypeEntry_Client.vb' program.
 Imports System
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Channels

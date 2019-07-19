@@ -1,4 +1,4 @@
-// <Snippet21>
+﻿// <Snippet21>
 using System;
 using System.Globalization;
 using System.IO;

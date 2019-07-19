@@ -1,4 +1,4 @@
-' This program implments the remote method which will be called by the
+﻿' This program implments the remote method which will be called by the
 ' client.   
 
 Imports System

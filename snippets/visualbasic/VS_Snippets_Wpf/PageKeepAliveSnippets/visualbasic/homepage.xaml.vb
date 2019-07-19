@@ -1,4 +1,4 @@
-'<SnippetSetPageKeepAliveCODEBEHIND>
+﻿'<SnippetSetPageKeepAliveCODEBEHIND>
 
 Imports System
 Imports System.Windows

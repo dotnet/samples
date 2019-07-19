@@ -1,4 +1,4 @@
-// Snippet1 is in x509store2.cs.
+﻿// Snippet1 is in x509store2.cs.
 //
 //<Snippet2>
 using System;

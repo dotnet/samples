@@ -1,4 +1,4 @@
-'*************************************************************************
+﻿'*************************************************************************
 Imports System.Data.SqlClient
 Imports System.Windows.Forms
 Imports System.Drawing.Color

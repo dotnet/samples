@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 // This example demonstrates a System.Globalization.Culture-
 // AndRegionInfoBuilder constructor and some of the properties 
 // of the CultureAndRegionInfoBuilder object that is created.

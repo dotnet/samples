@@ -1,4 +1,4 @@
-' System.Diagnostics.Process.StandardError
+﻿' System.Diagnostics.Process.StandardError
 '
 ' The following example demonstrates property 'StandardError' of
 ' 'Process' class.

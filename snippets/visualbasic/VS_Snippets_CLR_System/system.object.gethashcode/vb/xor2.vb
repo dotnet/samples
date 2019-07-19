@@ -1,4 +1,4 @@
-' <Snippet3>
+﻿' <Snippet3>
 Public Structure Point
     Private x As Integer
     Private y As Integer

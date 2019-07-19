@@ -1,4 +1,4 @@
-Imports System.Threading.Tasks
+﻿Imports System.Threading.Tasks
 
 ' Add the following Imports statements, and add a reference for System.Net.Http.
 '<snippet1>

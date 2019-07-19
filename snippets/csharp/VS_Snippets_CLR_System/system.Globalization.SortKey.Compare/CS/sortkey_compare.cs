@@ -1,4 +1,4 @@
-// The following code example compares SortKey objects created with cultures that have different sort orders.
+﻿// The following code example compares SortKey objects created with cultures that have different sort orders.
 
 
 // <snippet1>

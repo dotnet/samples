@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 // Sample for Environment class summary
 using System;
 using System.Collections;

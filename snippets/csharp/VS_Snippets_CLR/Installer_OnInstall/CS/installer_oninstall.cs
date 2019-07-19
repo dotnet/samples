@@ -1,4 +1,4 @@
-/*
+﻿/*
    System.Configuration.Install.Installer.OnBeforeInstall(IDictionary savedState)
    System.Configuration.Install.Installer.OnAfterInstall(IDictionary savedState)
 

@@ -1,4 +1,4 @@
-//<snippet0>
+﻿//<snippet0>
 using System;
 using Microsoft.Win32;
 //</snippet0>

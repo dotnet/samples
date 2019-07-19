@@ -1,4 +1,4 @@
-Public Module Example
+﻿Public Module Example
    Public Sub Main()
       Dim dateStrings() As String = { "2018-08-18T12:45:16.0000000Z",
                                       "2018/08/18T12:45:16.0000000Z",

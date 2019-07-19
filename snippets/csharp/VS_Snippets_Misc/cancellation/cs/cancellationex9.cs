@@ -1,4 +1,4 @@
-// How to: Cancel by using a WaitHandle
+﻿// How to: Cancel by using a WaitHandle
 
 //<snippet9>
 using System;

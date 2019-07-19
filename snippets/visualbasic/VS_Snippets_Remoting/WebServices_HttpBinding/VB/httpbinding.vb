@@ -1,4 +1,4 @@
-' System.Web.Services.HttpBinding;System.Web.Services.HttpBinding.Verb;
+﻿' System.Web.Services.HttpBinding;System.Web.Services.HttpBinding.Verb;
 ' System.Web.Services.HttpAddressBinding;System.Web.Services.HttpAddressBinding.Location;
 '
 ' * The following example demonstrates the 'HttpBinding()' constructor 

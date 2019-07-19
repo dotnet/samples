@@ -1,4 +1,4 @@
-Public Class Form1
+﻿Public Class Form1
   Public Enum Days
     'NO SUNDAY ON PURPOSE, DON'T KEYWORD THIS
     Monday

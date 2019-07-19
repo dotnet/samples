@@ -1,4 +1,4 @@
-// This example demonstrates using images to create a 
+﻿// This example demonstrates using images to create a 
 // TicTacToe game.
 //<snippet0>
 using System.IO;

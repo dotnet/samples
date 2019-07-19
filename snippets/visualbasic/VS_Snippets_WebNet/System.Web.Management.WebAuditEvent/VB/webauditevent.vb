@@ -1,4 +1,4 @@
- '*
+﻿ '*
 '  *File name: WebAuditEvent.cs
 '  *Purpose: Implements a custom WebAuditEvent type
 '  *by inheriting from the System.Web.Management.WebAuditEvent class.

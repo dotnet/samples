@@ -1,4 +1,4 @@
-// <Snippet0>
+﻿// <Snippet0>
 // <Snippet1>
 using System;
 using System.Collections.Generic;

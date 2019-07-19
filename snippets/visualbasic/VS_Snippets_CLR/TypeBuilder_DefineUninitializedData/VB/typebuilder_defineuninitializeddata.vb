@@ -1,4 +1,4 @@
-' System.Reflection.Emit.TypeBuilder.DefineUninitializedData(string,int,FieldAttributes)
+﻿' System.Reflection.Emit.TypeBuilder.DefineUninitializedData(string,int,FieldAttributes)
 ' The following program demonstrates the 'DefineUninitializedData'
 ' method of 'TypeBuilder' class. It builds an assembly by defining 'MyHelloWorld' type and
 ' it has 'MyGreeting' field. Then it displays the initial value of 'MyGreeting'

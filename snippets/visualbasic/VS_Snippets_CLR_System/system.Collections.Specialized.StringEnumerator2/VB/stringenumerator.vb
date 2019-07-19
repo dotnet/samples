@@ -1,4 +1,4 @@
-' The following code example demonstrates several of the properties and methods of StringEnumerator.
+﻿' The following code example demonstrates several of the properties and methods of StringEnumerator.
 
 ' <snippet1>
 Imports System

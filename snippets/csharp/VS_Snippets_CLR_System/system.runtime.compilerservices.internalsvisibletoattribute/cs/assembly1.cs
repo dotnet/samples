@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
 //
 // The source code should be saved in a file named Example1.cs. It 
 // can be compiled at the command line as follows:

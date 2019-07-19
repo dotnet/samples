@@ -1,4 +1,4 @@
-' The following example uses BaseGetAllKeys and BaseGetAllValues to get an array of the keys or an array of the values.
+﻿' The following example uses BaseGetAllKeys and BaseGetAllValues to get an array of the keys or an array of the values.
 ' For an expanded version of this example, see the NameObjectCollectionBase class topic.
 
 ' <snippet1>

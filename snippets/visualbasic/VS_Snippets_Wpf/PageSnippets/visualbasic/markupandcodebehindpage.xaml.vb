@@ -1,4 +1,4 @@
-'<SnippetMarkupAndCodeBehindPageCODEBEHIND>
+﻿'<SnippetMarkupAndCodeBehindPageCODEBEHIND>
 
 Imports System.Windows.Controls
 

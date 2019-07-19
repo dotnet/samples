@@ -1,4 +1,4 @@
-' System.Web.Services.Discovery.DiscoveryDocument.Write(Stream)
+﻿' System.Web.Services.Discovery.DiscoveryDocument.Write(Stream)
 
 ' The following example demonstrates the 'Write(Stream)' method
 ' of the 'DiscoveryDocument' class.

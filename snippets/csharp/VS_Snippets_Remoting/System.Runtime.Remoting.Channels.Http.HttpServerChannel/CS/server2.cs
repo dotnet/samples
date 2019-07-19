@@ -1,4 +1,4 @@
-/// Legend:
+﻿/// Legend:
 /// -    Bugs
 /// x    Done
 ///        Work in progress

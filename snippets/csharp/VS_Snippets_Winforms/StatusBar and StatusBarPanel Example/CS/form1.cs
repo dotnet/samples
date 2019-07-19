@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
@@ -103,8 +103,7 @@ namespace StatusBarEX
 			// Display the second panel with a raised border style.
 			panel2.BorderStyle = StatusBarPanelBorderStyle.Raised;
 			
-			// Create ToolTip text that displays time the application was 
-      			//started.
+			// Create ToolTip text that displays time the application was started.
 			panel2.ToolTipText = "Started: " + System.DateTime.Now.ToShortTimeString();
 			// Set the text of the panel to the current date.
 			panel2.Text = System.DateTime.Today.ToLongDateString();

@@ -1,4 +1,4 @@
-' System.Windows.Forms.DataGridTableStyle.ColumnHeadersVisible;
+﻿' System.Windows.Forms.DataGridTableStyle.ColumnHeadersVisible;
 ' System.Windows.Forms.DataGridTableStyle.ColumnHeadersVisibleChanged;
 '
 ' The following example demonstrates the property 'ColumnHeadersVisible'

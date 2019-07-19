@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 // This example demonstrates the RegionInfo.EnglishName, NativeName, 
 // CurrencyEnglishName, CurrencyNativeName, and GeoId properties.
 

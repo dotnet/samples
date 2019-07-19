@@ -1,4 +1,4 @@
-// The following example uses BaseSet to set the value of a specific element.
+﻿// The following example uses BaseSet to set the value of a specific element.
 // For an expanded version of this example, see the NameObjectCollectionBase class topic.
 
 // <snippet1>

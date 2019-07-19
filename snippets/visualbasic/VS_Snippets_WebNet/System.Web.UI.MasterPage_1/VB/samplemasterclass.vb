@@ -1,4 +1,4 @@
-' <snippet3>
+﻿' <snippet3>
 Class SampleMasterClass
          Inherits System.Web.UI.MasterPage
      Dim asitename As String

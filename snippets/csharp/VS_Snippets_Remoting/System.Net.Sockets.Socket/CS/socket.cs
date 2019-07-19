@@ -1,4 +1,4 @@
-/**
+﻿/**
   * File name:socket.cs.
   * This example creates a socket connection to the server specified by the user, 
   * using port 80. Once the connection has been established it asks the server for 

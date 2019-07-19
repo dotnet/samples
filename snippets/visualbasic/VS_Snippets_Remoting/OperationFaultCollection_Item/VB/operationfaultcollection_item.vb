@@ -1,4 +1,4 @@
-' System.Web.Services.Description.OperationFaultCollection.Item[String]
+﻿' System.Web.Services.Description.OperationFaultCollection.Item[String]
 
 ' The following example demonstrates the 'Item' property of the
 ' 'OperationFaultCollection' class. The program removes a fault binding

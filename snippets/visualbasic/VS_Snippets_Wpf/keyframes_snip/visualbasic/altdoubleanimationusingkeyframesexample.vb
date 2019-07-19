@@ -1,4 +1,4 @@
-' <SnippetAltDoubleAnimationUsingKeyFramesWholePage>
+﻿' <SnippetAltDoubleAnimationUsingKeyFramesWholePage>
 
 Imports System
 Imports System.Windows

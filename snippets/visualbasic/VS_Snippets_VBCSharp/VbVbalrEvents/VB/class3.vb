@@ -1,4 +1,4 @@
-Class Class3
+﻿Class Class3
 
     ' Handles Clause (Visual Basic)
     ' 1b051c0e-f499-42f6-acb5-6f4f27824b40

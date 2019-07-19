@@ -1,4 +1,4 @@
-Public Module Example
+﻿Public Module Example
    Public Sub Main()
       Dim name = "John"
       Dim greeting = $"Hello, {name}!"

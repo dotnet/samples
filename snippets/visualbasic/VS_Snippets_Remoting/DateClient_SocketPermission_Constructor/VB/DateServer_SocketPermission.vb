@@ -1,4 +1,4 @@
- '
+﻿ '
 '  This program demonstrates the 'AcceptList' property  of 'SocketPermission' class.
 '
 '  This program provides a class called 'DateServer' that functions as a server 

@@ -1,4 +1,4 @@
-//<Snippet2>
+﻿//<Snippet2>
 // Example of the explicit conversion from double to decimal.
 using System;
 

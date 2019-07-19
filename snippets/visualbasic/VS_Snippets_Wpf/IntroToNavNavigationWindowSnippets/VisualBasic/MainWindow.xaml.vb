@@ -1,4 +1,4 @@
-'<SnippetNavigationWindowCODEBEHIND>
+﻿'<SnippetNavigationWindowCODEBEHIND>
 
 Namespace SDKSample
 	Partial Public Class MainWindow

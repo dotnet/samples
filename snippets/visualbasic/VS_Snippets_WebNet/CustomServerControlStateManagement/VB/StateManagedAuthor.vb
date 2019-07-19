@@ -1,4 +1,4 @@
-' <Snippet3>
+﻿' <Snippet3>
 ' StateManagedAuthor.vb
 Option Strict On
 Imports System

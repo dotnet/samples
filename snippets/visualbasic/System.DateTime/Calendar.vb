@@ -1,4 +1,4 @@
-Imports System.Globalization
+﻿Imports System.Globalization
 
 Module CalendarSamples
     Public Sub Snippets()

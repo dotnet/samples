@@ -1,4 +1,4 @@
-
+﻿
 Module ReturnValuesAndParams
    Public Sub Main()
       Dim numbers As Integer() = GetNumbers()

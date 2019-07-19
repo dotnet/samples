@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Module Example
     Sub Main( )
         ' Create parallel arrays of Decimals to use as the dividend and divisor.

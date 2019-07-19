@@ -1,4 +1,4 @@
-' The following code example demonstrates the effect of changing the PercentDecimalSeparator property.
+﻿' The following code example demonstrates the effect of changing the PercentDecimalSeparator property.
 
 ' <snippet1>
 Imports System

@@ -1,4 +1,4 @@
-'<SnippetSetImageSourceCODEBEHIND1>
+﻿'<SnippetSetImageSourceCODEBEHIND1>
 
 Imports System
 Imports System.Windows.Media.Imaging

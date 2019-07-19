@@ -1,4 +1,4 @@
-#Const debug = True
+﻿#Const debug = True
 ' This custom permission is intended only for the purposes of illustration.
 ' The following code shows how to create a custom permission that inherits
 ' from CodeAccessPermission. The code implements all required overrides.

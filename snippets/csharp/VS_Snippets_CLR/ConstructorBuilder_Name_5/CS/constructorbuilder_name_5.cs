@@ -1,4 +1,4 @@
-// System.Reflection.Emit.ConstructorBuilder
+﻿// System.Reflection.Emit.ConstructorBuilder
 // System.Reflection.Emit.ConstructorBuilder.Name
 // System.Reflection.Emit.ConstructorBuilder.ReflectedType
 // System.Reflection.Emit.ConstructorBuilder.Signature

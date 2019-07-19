@@ -1,4 +1,4 @@
-//Types:System.Globalization.NumberFormatInfo Vendor: Richter
+﻿//Types:System.Globalization.NumberFormatInfo Vendor: Richter
 //<snippet1>
 using System;
 using System.Globalization;

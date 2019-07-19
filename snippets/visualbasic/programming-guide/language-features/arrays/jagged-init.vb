@@ -1,4 +1,4 @@
-
+﻿
 Module Example
    Public Sub Main()
       CompileBad()

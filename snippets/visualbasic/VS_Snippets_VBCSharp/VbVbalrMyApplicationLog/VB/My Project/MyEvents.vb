@@ -1,4 +1,4 @@
-Namespace My
+﻿Namespace My
 
     'Use the editor window dropdowns in the Application pane of the Project Designer to handle MyApplication Events
     '

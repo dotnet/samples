@@ -1,4 +1,4 @@
-'---------------------------------------------------------------------------
+﻿'---------------------------------------------------------------------------
 ' <copyright file="Trackball.vb" company="Microsoft">
 '    Copyright (c) Microsoft Corporation.  All rights reserved.
 ' </copyright>

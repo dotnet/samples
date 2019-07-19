@@ -1,4 +1,4 @@
-' This program is supposed to be used with the IntallerCollection_***.cs
+﻿' This program is supposed to be used with the IntallerCollection_***.cs
 ' examples. Provide the exe of this program as input to the 
 ' InstallerCollection_***.exe programs.
 

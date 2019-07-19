@@ -1,4 +1,4 @@
-'System.Net.HaveResponse 
+﻿'System.Net.HaveResponse 
 'This program demonstrates 'HaveResponse' property of 'HttpWebRequest' Class.
 'A new 'HttpWebRequest' is created.
 'The 'HaveResponse' property is a ReadOnly, boolean property that indicates 

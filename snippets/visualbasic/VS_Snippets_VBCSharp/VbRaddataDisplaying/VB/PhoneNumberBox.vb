@@ -1,4 +1,4 @@
-'<Snippet3>
+﻿'<Snippet3>
 <System.ComponentModel.DefaultBindingProperty("PhoneNumber")>
 Public Class PhoneNumberBox
 

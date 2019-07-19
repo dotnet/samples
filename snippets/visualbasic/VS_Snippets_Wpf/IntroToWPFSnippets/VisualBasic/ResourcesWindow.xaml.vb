@@ -1,4 +1,4 @@
-Namespace SDKSample
+﻿Namespace SDKSample
 
     Partial Public Class ResourcesWindow
         Inherits System.Windows.Window

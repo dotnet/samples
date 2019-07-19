@@ -1,4 +1,4 @@
-' System.Web.Control.MapPathSecure
+﻿' System.Web.Control.MapPathSecure
 ' System.Web.Control.TemplateSourceDirectory
 
 '   The following example demonstrates 'TemplateSourceDirectory' and 

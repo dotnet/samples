@@ -1,4 +1,4 @@
-'<snippet0>
+﻿'<snippet0>
 Imports System.IO
 Imports System.Collections.Generic
 Imports System.Windows.Forms

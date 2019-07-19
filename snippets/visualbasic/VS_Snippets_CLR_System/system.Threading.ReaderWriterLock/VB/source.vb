@@ -1,4 +1,4 @@
-'<Snippet1>
+﻿'<Snippet1>
 '<Snippet2>
 ' The complete code is located in the ReaderWriterLock class topic.
 Imports System.Threading

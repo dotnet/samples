@@ -1,4 +1,4 @@
-// <SnippetImageDrawingWithDrawingBrushExample>
+﻿// <SnippetImageDrawingWithDrawingBrushExample>
 using System;
 using System.Windows;
 using System.Windows.Controls;

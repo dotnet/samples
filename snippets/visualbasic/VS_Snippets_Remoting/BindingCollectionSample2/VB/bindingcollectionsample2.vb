@@ -1,4 +1,4 @@
-' System.Web.Services.Description.Binding.Binding();System.Web.Services.Description.Binding.Name;
+﻿' System.Web.Services.Description.Binding.Binding();System.Web.Services.Description.Binding.Name;
 ' System.Web.Services.Description.Binding.Type;System.Web.Services.Description.Binding.Extensions;System.Web.Services.Description.Binding.Operations;
 ' System.Web.Services.Description.BindingCollection.Insert;
 ' System.Web.Services.Description.Binding.ServiceDescription;

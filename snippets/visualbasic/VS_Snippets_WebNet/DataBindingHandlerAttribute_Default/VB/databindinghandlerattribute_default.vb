@@ -1,4 +1,4 @@
-' System.Web.UI.DataBindingHandlerAttribute.Default
+﻿' System.Web.UI.DataBindingHandlerAttribute.Default
 
 ' The following program demonstrates 'Default' field of 'DataBindingHandlerAttribute' class.
 ' It obtains an instance of 'DataBindingHandlerAttribute' class by using 'Default' field

@@ -1,4 +1,4 @@
-' <Snippet6>
+﻿' <Snippet6>
 Namespace DateTimeExtensions
     <Serializable> Public Structure DateWithTimeZone
         Private tz As TimeZoneInfo

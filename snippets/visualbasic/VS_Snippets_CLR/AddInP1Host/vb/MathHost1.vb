@@ -1,4 +1,4 @@
-'<Snippet1>
+﻿'<Snippet1>
 Imports System.Collections.Generic
 Imports System.Collections.ObjectModel
 Imports System.AddIn.Hosting

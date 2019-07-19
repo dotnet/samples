@@ -1,4 +1,4 @@
-//<SnippetPersonClassCODE>
+﻿//<SnippetPersonClassCODE>
 namespace SDKSample
 {
     class Person

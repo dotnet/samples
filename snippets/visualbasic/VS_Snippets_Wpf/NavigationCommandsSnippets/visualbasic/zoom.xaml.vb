@@ -1,4 +1,4 @@
-'<SnippetZoomCODEBEHIND>
+﻿'<SnippetZoomCODEBEHIND>
 
 Namespace SDKSample
 	Partial Public Class Zoom

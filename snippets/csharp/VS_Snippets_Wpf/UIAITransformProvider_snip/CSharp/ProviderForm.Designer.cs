@@ -1,4 +1,4 @@
-namespace UIAITransformProvider_snip
+﻿namespace UIAITransformProvider_snip
 {
     partial class ProviderForm
     {

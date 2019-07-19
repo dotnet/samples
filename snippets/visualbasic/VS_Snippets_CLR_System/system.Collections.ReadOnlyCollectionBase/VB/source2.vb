@@ -1,4 +1,4 @@
-' The following code example implements the ReadOnlyCollectionBase class.
+﻿' The following code example implements the ReadOnlyCollectionBase class.
 
 Imports System
 Imports System.Collections

@@ -1,4 +1,4 @@
-// System.Configuration.Install.AssemblyInstaller.UseNewContext
+﻿// System.Configuration.Install.AssemblyInstaller.UseNewContext
 // System.Configuration.Install.AssemblyInstaller.HelpText
 
 /* The following example demonstrates the 'UseNewContext' and the

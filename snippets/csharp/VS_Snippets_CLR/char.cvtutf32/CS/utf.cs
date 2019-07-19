@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 // This example demonstrates the Char.ConvertFromUtf32() method
 //                           and Char.ConvertToUtf32() overloads.
 using System;

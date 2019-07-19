@@ -1,4 +1,4 @@
-Imports System
+﻿Imports System
 Imports System.Windows
 Imports System.Windows.Xps.Packaging
 Imports System.Security.Cryptography

@@ -1,4 +1,4 @@
-' System.Web.Services.Protocols.HttpWebClientProtocol.UserAgent
+﻿' System.Web.Services.Protocols.HttpWebClientProtocol.UserAgent
 ' The following example demonstrates 'UserAgent' member of 'HttpWebClientProtocol' 
 ' class. First the default user agent is displayed. Then the user agent is modified 
 ' and displayed.

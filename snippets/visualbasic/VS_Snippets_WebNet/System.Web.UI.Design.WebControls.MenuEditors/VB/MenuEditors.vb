@@ -1,4 +1,4 @@
-' MenuEditors.vb
+﻿' MenuEditors.vb
 ' <snippet1>
 Imports System.Web
 Imports System.Web.UI.WebControls

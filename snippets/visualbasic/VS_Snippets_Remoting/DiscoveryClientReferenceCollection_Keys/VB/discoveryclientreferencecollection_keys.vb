@@ -1,4 +1,4 @@
-' System.Web.Services.Discovery.DiscoveryClientReferenceCollection.Keys
+﻿' System.Web.Services.Discovery.DiscoveryClientReferenceCollection.Keys
 ' System.Web.Services.Discovery.DiscoveryClientReferenceCollection.Values
 ' System.Web.Services.Discovery.DiscoveryClientReferenceCollection.Contains
 

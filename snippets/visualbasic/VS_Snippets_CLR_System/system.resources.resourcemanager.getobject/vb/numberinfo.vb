@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 <Serializable> Public Class Numbers
    Public Readonly One As String
    Public ReadOnly Two As String

@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Public Class AppException : Inherits Exception
    Public Sub New(message As String)
       MyBase.New(message)

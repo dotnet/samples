@@ -1,4 +1,4 @@
-// This snippet shows the use of some TreeView properties.
+﻿// This snippet shows the use of some TreeView properties.
 using System.Windows.Forms;
 
 public class Form1:

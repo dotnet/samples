@@ -1,4 +1,4 @@
-//<SnippetPageTitleCODEBEHIND1>
+﻿//<SnippetPageTitleCODEBEHIND1>
 using System.Windows.Controls;
 
 namespace SDKSample

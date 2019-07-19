@@ -1,4 +1,4 @@
-' <snippet1>
+﻿' <snippet1>
 ' Create a namespace that contains a class, named 
 ' SimpleDesigner, that extends the ControlDesigner class.
 ' The DataBinding and DataBindingCollection classes 

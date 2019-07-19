@@ -1,4 +1,4 @@
-' XpsCreate SDK Sample - XpsCreate.vb
+﻿' XpsCreate SDK Sample - XpsCreate.vb
 ' Copyright (c) Microsoft Corporation. All rights reserved.
 
 

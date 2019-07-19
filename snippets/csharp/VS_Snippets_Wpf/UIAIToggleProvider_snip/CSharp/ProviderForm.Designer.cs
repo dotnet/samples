@@ -1,4 +1,4 @@
-namespace UIAIToggleProvider_snip
+﻿namespace UIAIToggleProvider_snip
 {
     partial class ProviderForm
     {

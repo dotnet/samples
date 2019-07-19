@@ -1,4 +1,4 @@
-            class MQ
+﻿            class MQ
             {
                 // QueryMethhod1 returns a query as its value.
                 IEnumerable<string> QueryMethod1(ref int[] ints)

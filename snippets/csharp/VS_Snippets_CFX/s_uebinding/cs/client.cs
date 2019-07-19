@@ -1,4 +1,4 @@
-
+﻿
 //  Snippet file for S_UEBinding
 //  Copyright (c) Microsoft Corporation.  All Rights Reserved.
 //  Change ICalculator to CalculatorService.

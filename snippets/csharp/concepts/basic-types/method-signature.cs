@@ -1,4 +1,4 @@
-public string GetName(int ID)
+﻿public string GetName(int ID)
 {
     if (ID < names.Length)
         return names[ID];

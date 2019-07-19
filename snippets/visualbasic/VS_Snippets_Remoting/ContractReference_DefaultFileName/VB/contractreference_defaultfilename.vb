@@ -1,4 +1,4 @@
-' System.Web.Services.Discovery.ContractReference.DefaultFileName
+﻿' System.Web.Services.Discovery.ContractReference.DefaultFileName
 ' System.Web.Services.Discovery.ContractReference.Url
 
 ' The following example demonstrates the 'DefaultFilename' and 'Url' properties of 

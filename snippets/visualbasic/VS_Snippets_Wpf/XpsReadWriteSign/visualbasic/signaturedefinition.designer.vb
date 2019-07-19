@@ -1,4 +1,4 @@
-Imports System
+﻿Imports System
 Namespace SDKSample
 	Partial Public Class SignatureDefinition
 		''' <summary>

@@ -1,4 +1,4 @@
-// System.Diagnostics.EventLogInstaller
+﻿// System.Diagnostics.EventLogInstaller
 
 // The following example demonstrates the EventLogInstaller class.
 // It defines the instance SampleEventLogInstaller with the

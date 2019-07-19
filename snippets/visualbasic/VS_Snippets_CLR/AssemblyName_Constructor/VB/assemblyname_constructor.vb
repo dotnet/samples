@@ -1,4 +1,4 @@
- ' System.Reflection.AssemblyName.AssemblyName()
+﻿ ' System.Reflection.AssemblyName.AssemblyName()
 ' System.Reflection.AssemblyName.Name
 ' System.Reflection.AssemblyName.Version
 ' The following example demonstrates the constructor 'AssemblyName()' and

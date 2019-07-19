@@ -1,4 +1,4 @@
-// System.Web.Services.Protocols.HttpGetClientProtocol.HttpGetClientProtocol
+﻿// System.Web.Services.Protocols.HttpGetClientProtocol.HttpGetClientProtocol
 
 /* The following example demonstrates 'Constructor' of 'HttpGetClientProtocol' class
    A variable of type 'HttpGetClientProtocol' is used to set proxy information ,

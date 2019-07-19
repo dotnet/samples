@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Module DecimalMulDivRemDemo
     Const dataFmt As String = "{0,-35}{1,31}"
 

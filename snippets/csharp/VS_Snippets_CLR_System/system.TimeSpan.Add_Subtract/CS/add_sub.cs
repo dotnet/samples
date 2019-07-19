@@ -1,4 +1,4 @@
-//<Snippet1>
+﻿//<Snippet1>
 // Example of the TimeSpan.Add( ) and TimeSpan.Subtract( ) methods.
 using System;
 

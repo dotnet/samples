@@ -1,4 +1,4 @@
-' The following code example calls IsLeapDay for the last day of the second month (February) for five years in each of the eras.
+﻿' The following code example calls IsLeapDay for the last day of the second month (February) for five years in each of the eras.
 
 ' <snippet1>
 Imports System

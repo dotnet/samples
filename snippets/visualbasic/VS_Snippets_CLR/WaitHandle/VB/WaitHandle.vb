@@ -1,4 +1,4 @@
- 'Types:System.Threading.WaitHandle Vendor: Richter (converted to VB by GlennHa)
+﻿ 'Types:System.Threading.WaitHandle Vendor: Richter (converted to VB by GlennHa)
 '<snippet1>
 Imports System
 Imports System.Threading

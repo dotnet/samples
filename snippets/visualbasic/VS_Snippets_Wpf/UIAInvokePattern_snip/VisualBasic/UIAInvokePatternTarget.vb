@@ -1,3 +1,3 @@
-Public Class UIAInvokePatternTarget
+﻿Public Class UIAInvokePatternTarget
 
 End Class

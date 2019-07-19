@@ -1,4 +1,4 @@
-' System.Reflection.Emit.ConstructorBuilder.GetModule()
+﻿' System.Reflection.Emit.ConstructorBuilder.GetModule()
 ' System.Reflection.Emit.ConstructorBuilder.GetToken()
 ' System.Reflection.Emit.ConstructorBuilder.GetMethodImplementationFlags()
 ' System.Reflection.Emit.ConstructorBuilder.GetParameters()

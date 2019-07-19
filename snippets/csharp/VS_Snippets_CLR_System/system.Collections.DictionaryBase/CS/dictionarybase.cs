@@ -1,4 +1,4 @@
-// The following code example implements the DictionaryBase class and uses that implementation to create a dictionary of String keys and values that have a Length of 5 or less.
+﻿// The following code example implements the DictionaryBase class and uses that implementation to create a dictionary of String keys and values that have a Length of 5 or less.
 
 // <Snippet1>
 using System;

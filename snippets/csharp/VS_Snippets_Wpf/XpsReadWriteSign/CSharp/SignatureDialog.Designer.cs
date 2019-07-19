@@ -1,4 +1,4 @@
-namespace XpsApiSdk
+﻿namespace XpsApiSdk
 {
     partial class SignatureDialog
     {

@@ -1,4 +1,4 @@
-' Topic: XML Value Property
+﻿' Topic: XML Value Property
 
 Public Class Samples7
     Public Shared Sub Main()

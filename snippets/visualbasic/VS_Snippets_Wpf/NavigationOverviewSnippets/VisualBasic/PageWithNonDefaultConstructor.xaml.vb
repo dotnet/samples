@@ -1,4 +1,4 @@
-'<SnippetPageWithNonDefaultConstructorCODEBEHIND>
+﻿'<SnippetPageWithNonDefaultConstructorCODEBEHIND>
 
 Namespace SDKSample
 	Partial Public Class PageWithNonDefaultConstructor

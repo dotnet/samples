@@ -1,4 +1,4 @@
-'<Snippet2>
+﻿'<Snippet2>
 ' Example of the Decimal( Integer, Integer, Integer, Boolean, Byte ) 
 ' constructor.
 Imports System

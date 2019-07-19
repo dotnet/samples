@@ -1,4 +1,4 @@
-Public Class Form1
+﻿Public Class Form1
 
     ' <snippet1>
     Private Sub Form1_Click(ByVal sender As System.Object, _

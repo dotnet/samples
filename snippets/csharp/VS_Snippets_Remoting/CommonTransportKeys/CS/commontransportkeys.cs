@@ -1,4 +1,4 @@
-// System.Runtime.Remoting.Channels.CommonTransportKeys
+﻿// System.Runtime.Remoting.Channels.CommonTransportKeys
 // System.Runtime.Remoting.Channels.CommonTransportKeys.IPAddress
 // System.Runtime.Remoting.Channels.CommonTransportKeys.ConnectionId
 // System.Runtime.Remoting.Channels.CommonTransportKeys.RequestUri

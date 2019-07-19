@@ -1,4 +1,4 @@
-Class DateTimeComparisons
+﻿Class DateTimeComparisons
     Public Shared Sub Snippets()
         TestRoughlyEquals()
     End Sub

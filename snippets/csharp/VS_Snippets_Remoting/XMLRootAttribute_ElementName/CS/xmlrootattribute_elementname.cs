@@ -1,4 +1,4 @@
-// System.Xml.Serialization.XmlRootAttribute.ElementName 
+﻿// System.Xml.Serialization.XmlRootAttribute.ElementName 
 
 /* The following example demonstrates the property 
    'ElementName' of class 'XmlRootAttribute'.

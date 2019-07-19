@@ -1,4 +1,4 @@
-// The following example builds a CodeDom source graph for a simple
+﻿// The following example builds a CodeDom source graph for a simple
 // class that represents document properties.  The source for the 
 // graph is generated, saved to a file, compiled into an executable, 
 // and run.

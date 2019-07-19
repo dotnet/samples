@@ -1,4 +1,4 @@
-// DocViewerAnnotationsXps SDK Sample - AnnotationsHelperXps.cs
+﻿// DocViewerAnnotationsXps SDK Sample - AnnotationsHelperXps.cs
 // Copyright (c) Microsoft Corporation. All rights reserved.
 
 using System;

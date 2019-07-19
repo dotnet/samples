@@ -1,4 +1,4 @@
- '<SnippetBitmapDecoderFullPage>
+﻿ '<SnippetBitmapDecoderFullPage>
 Imports System
 Imports System.Windows
 Imports System.IO

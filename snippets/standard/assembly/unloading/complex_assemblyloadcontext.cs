@@ -1,4 +1,4 @@
-class TestAssemblyLoadContext : AssemblyLoadContext
+﻿class TestAssemblyLoadContext : AssemblyLoadContext
 {
     private AssemblyDependencyResolver _resolver;
 

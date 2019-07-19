@@ -1,4 +1,4 @@
-// Illustrates Convert.ToDateTime(Object) method.
+﻿// Illustrates Convert.ToDateTime(Object) method.
 
 // <Snippet1>
 using System;

@@ -1,4 +1,4 @@
-' System.Web.Services.Discovery.SchemaReference.SchemaReference()
+﻿' System.Web.Services.Discovery.SchemaReference.SchemaReference()
 ' System.Web.Services.Discovery.SchemaReference.SchemaReference(string)
 ' System.Web.Services.Discovery.SchemaReference.SchemaReference.DefaultFileName
 ' System.Web.Services.Discovery.SchemaReference.SchemaReference.Namespace

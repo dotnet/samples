@@ -1,4 +1,4 @@
-//<snippet0>
+﻿//<snippet0>
 using System.Windows.Forms;
 
 public class Form1 : Form

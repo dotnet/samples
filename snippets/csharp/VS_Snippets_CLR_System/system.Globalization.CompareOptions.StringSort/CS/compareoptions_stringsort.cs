@@ -1,4 +1,4 @@
-// The following code example shows how sorting with CompareOptions.StringSort differs from sorting without CompareOptions.StringSort.
+﻿// The following code example shows how sorting with CompareOptions.StringSort differs from sorting without CompareOptions.StringSort.
 
 // <snippet1>
 using System;

@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 ' Compile using /r:System.dll.
 Imports Microsoft.VisualBasic
 Imports System

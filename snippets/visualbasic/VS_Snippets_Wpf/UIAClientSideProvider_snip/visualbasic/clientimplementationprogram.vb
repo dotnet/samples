@@ -1,4 +1,4 @@
-' <Snippet201> 
+﻿' <Snippet201> 
 
 Imports System
 Imports System.Windows.Automation

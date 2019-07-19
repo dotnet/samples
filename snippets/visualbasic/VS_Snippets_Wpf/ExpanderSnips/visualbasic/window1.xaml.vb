@@ -1,4 +1,4 @@
-Namespace ExpanderSnips
+﻿Namespace ExpanderSnips
 	''' <summary>
 	''' Interaction logic for Window1.xaml
 	''' </summary>

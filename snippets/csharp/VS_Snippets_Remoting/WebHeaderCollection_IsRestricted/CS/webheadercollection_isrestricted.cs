@@ -1,4 +1,4 @@
-/*This program demonstrates the "IsRestricted" method of "WebHeaderCollection".
+﻿/*This program demonstrates the "IsRestricted" method of "WebHeaderCollection".
   It checks if the first header returned in the response is a restricted header or not.
 */
 

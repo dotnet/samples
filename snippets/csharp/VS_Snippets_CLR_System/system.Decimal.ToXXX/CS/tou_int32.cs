@@ -1,4 +1,4 @@
-//<Snippet2>
+﻿//<Snippet2>
 // Example of the decimal.ToInt32 and decimal.ToUInt32 methods.
 using System;
 

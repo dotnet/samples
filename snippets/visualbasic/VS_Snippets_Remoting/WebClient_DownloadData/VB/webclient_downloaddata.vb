@@ -1,4 +1,4 @@
-' System.Net.WebClient.DownloadData
+﻿' System.Net.WebClient.DownloadData
 
 'This program demonstrates the 'DownloadData' method and 'WebClient()' constructor of 'WebClient' class.
 'It creates a URI to access a web resource. The Uri can point 

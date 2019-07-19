@@ -1,4 +1,4 @@
-namespace SynchronizingObjectCS1
+﻿namespace SynchronizingObjectCS1
 {
     partial class Form1
     {

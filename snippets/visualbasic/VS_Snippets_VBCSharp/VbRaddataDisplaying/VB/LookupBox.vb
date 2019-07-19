@@ -1,4 +1,4 @@
-'<Snippet5>
+﻿'<Snippet5>
 <System.ComponentModel.LookupBindingProperties("DataSource", "DisplayMember", "ValueMember", "LookupMember")>
 Public Class LookupBox
 

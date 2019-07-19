@@ -1,4 +1,4 @@
-// The following code example demonstrates the effect of changing the PercentGroupSizes property.
+﻿// The following code example demonstrates the effect of changing the PercentGroupSizes property.
 
 // <snippet1>
 using System;

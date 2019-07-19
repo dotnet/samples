@@ -1,4 +1,4 @@
-//<SnippetCodeWindow>
+﻿//<SnippetCodeWindow>
 using System.Windows;
 using System.Windows.Controls;
 

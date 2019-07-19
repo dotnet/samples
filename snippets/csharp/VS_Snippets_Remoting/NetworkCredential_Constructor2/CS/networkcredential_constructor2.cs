@@ -1,4 +1,4 @@
-// System.Net.NetworkCredential.NetworkCredential(string,string)
+﻿// System.Net.NetworkCredential.NetworkCredential(string,string)
 
 /*This program demontrates the 'NetworkCredential(string,string)' constructor of 'NetworkCredential' class.
   It takes an URL, username, password and domainname from console and forms a 'NetworkCredential' object with 

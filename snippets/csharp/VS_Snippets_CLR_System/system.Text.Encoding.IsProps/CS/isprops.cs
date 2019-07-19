@@ -1,4 +1,4 @@
-// The following code example checks the values of the Boolean properties of each encoding.
+﻿// The following code example checks the values of the Boolean properties of each encoding.
 
 // <Snippet1>
 using System;

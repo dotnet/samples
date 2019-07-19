@@ -1,4 +1,4 @@
-' <Snippet8>
+﻿' <Snippet8>
 Imports System.Text.RegularExpressions
 
 Module Example

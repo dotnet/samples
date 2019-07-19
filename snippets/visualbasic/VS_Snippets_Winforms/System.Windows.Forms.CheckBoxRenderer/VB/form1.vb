@@ -1,4 +1,4 @@
-' This sample can go in CheckBoxRenderer class overview. 
+﻿' This sample can go in CheckBoxRenderer class overview. 
 ' - Snippet2 can go in GetGlyphSize
 ' - Snippet4 can go in DrawCheckBox
 ' - Snippet4 can also go in the VisualStyles.CheckBoxState enum, if necessary.

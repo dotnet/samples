@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 ' This example demonstrates overloads of the TryParse method for
 ' several base types, and the TryParseExact method for DateTime.
 ' In most cases, this example uses the most complex overload; that is, the overload 

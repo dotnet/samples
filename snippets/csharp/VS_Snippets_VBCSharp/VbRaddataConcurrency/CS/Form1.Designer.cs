@@ -1,4 +1,4 @@
-namespace ConcurrencyWalkthroughCS
+﻿namespace ConcurrencyWalkthroughCS
 {
     partial class Form1
     {

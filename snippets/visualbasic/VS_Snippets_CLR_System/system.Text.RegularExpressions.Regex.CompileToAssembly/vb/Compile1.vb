@@ -1,4 +1,4 @@
-' Code to illustrate creating an assembly
+﻿' Code to illustrate creating an assembly
 Option Strict On
 
 ' <Snippet1>

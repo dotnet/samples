@@ -1,4 +1,4 @@
-' System.Runtime.Remoting.Messaging.IMethodReturnMessage
+﻿' System.Runtime.Remoting.Messaging.IMethodReturnMessage
 ' System.Runtime.Remoting.Messaging.IMethodReturnMessage.OutArgs
 ' System.Runtime.Remoting.Messaging.IMethodReturnMessage.ReturnValue
 ' System.Runtime.Remoting.Messaging.IMethodReturnMessage.OutArgCount

@@ -1,4 +1,4 @@
-'<SnippetAppCODEBEHIND>
+﻿'<SnippetAppCODEBEHIND>
 
 Imports System.Windows
 

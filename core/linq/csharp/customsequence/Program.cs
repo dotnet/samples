@@ -1,4 +1,4 @@
-namespace CustomSequence
+﻿namespace CustomSequence
 {
     public class Program
     {

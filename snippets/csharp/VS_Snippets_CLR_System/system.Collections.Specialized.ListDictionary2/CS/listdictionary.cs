@@ -1,4 +1,4 @@
-// The following code example demonstrates several of the properties and methods of ListDictionary.
+﻿// The following code example demonstrates several of the properties and methods of ListDictionary.
 
 // <snippet1>
 using System;

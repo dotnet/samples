@@ -1,4 +1,4 @@
- ' File name: ElementInformation.cs
+﻿ ' File name: ElementInformation.cs
 ' Allowed snippet tags range: [71 - 90].
 Imports System
 ' using System.Collections.Generic;

@@ -1,4 +1,4 @@
-Namespace SDKSamples
+﻿Namespace SDKSamples
     '<SnippetImplementICommandSourceClassDefinition>
     Public Class CommandSlider
         Inherits Slider

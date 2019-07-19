@@ -1,4 +1,4 @@
-// <snippet1>
+﻿// <snippet1>
 /* File Name: constructorneedstagatt.cs. */
 
 using System;

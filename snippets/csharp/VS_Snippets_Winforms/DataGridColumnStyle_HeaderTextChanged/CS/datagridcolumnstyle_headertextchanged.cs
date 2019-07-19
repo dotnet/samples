@@ -1,4 +1,4 @@
-// System.Windows.Forms.DataGridColumnStyle.HeaderTextChanged
+﻿// System.Windows.Forms.DataGridColumnStyle.HeaderTextChanged
 
 /*
    The following example demonstrates 'HeaderTextChanged' event of 'DataGridColumnStyle' class.

@@ -1,4 +1,4 @@
-' System.Web.Services.Description.ServiceDescriptionCollection.GetBinding()
+﻿' System.Web.Services.Description.ServiceDescriptionCollection.GetBinding()
 
 ' The following program demonstrates the 'GetBinding' method 
 ' of 'ServiceDescriptionCollection' class. It searches for a 

@@ -1,4 +1,4 @@
-// This sample demonstrates how to use each member of the FileCodeGroup class.
+﻿// This sample demonstrates how to use each member of the FileCodeGroup class.
 //<Snippet1>
 using System;
 using System.Security;

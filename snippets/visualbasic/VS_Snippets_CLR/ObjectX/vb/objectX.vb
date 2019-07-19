@@ -1,4 +1,4 @@
-'Types:System.Object Vendor: Richter
+﻿'Types:System.Object Vendor: Richter
 ' <snippet1>
 ' The Point class is derived from System.Object.
 Class Point

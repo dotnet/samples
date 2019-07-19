@@ -1,4 +1,4 @@
-// System.Type.GetMembers(BindingFlags)
+﻿// System.Type.GetMembers(BindingFlags)
 
 /*
   This program demonstrates 'GetMembers(BindingFlags)' method of 

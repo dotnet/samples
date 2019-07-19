@@ -1,4 +1,4 @@
-            //Query syntax
+﻿            //Query syntax
             IEnumerable<City> queryMajorCities =
                 from city in cities
                 where city.Population > 100000

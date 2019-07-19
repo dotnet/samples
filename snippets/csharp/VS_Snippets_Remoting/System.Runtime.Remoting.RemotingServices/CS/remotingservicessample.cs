@@ -1,4 +1,4 @@
-// C:\Program Files\Microsoft.NET\FrameworkSDK\Samples\technologies\remoting\advanced\customproxies
+﻿// C:\Program Files\Microsoft.NET\FrameworkSDK\Samples\technologies\remoting\advanced\customproxies
 
 //<snippet1>
 using System;

@@ -1,4 +1,4 @@
-// System.Net.WebPermission.WebPermission();
+﻿// System.Net.WebPermission.WebPermission();
 // System.Net.WebPermission.AddPermission(NetworkAccess,stringuri);
 // System.Net.WebPermission.Intersect;
 /**

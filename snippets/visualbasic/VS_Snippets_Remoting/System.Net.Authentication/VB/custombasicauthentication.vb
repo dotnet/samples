@@ -1,4 +1,4 @@
-'<Snippet1>
+﻿'<Snippet1>
 ' The following example shows how to create a custom Basic authentication module,
 ' how to register it using the AuthenticationManager class and how to authorize  
 ' users to access a Web site.

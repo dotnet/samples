@@ -1,4 +1,4 @@
-' <snippet6>
+﻿' <snippet6>
 Imports System.IO
 Imports System.Windows
 

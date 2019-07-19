@@ -1,4 +1,4 @@
-'<snippet3>
+﻿'<snippet3>
 Imports System.Threading
 
 ' The ThreadWithState class contains the information needed for
@@ -6,18 +6,18 @@ Imports System.Threading
 Public Class ThreadWithState
     ' State information used in the task.
     Private boilerplate As String
-    Private value As Integer
+    Private numberValue As Integer
 
     ' The constructor obtains the state information.
     Public Sub New(text As String, number As Integer)
         boilerplate = text
-        value = number
+        numberValue = number
     End Sub
 
     ' The thread procedure performs the task, such as formatting
     ' and printing a document.
     Public Sub ThreadProc()
-        Console.WriteLine(boilerplate, value)
+        Console.WriteLine(boilerplate, numberValue)
     End Sub
 End Class
 

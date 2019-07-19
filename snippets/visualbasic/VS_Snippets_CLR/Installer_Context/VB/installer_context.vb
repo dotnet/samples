@@ -1,4 +1,4 @@
-' System.Configuration.Install.Installer.Context
+﻿' System.Configuration.Install.Installer.Context
 
 ' The following example demonstrates the 'Context' property of
 ' the 'Installer' class. The contents of the 'Context' property

@@ -1,4 +1,4 @@
-//<SnippetActivationDeactivationCODEBEHIND>
+﻿//<SnippetActivationDeactivationCODEBEHIND>
 using System;
 using System.Windows;
 

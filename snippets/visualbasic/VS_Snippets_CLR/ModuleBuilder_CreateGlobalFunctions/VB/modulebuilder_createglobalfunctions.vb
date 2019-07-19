@@ -1,4 +1,4 @@
-' System.Reflection.Emit.ModuleBuilder.DefineGlobalMethod(String,MethodAttributes,Type,Type())
+﻿' System.Reflection.Emit.ModuleBuilder.DefineGlobalMethod(String,MethodAttributes,Type,Type())
 ' System.Reflection.Emit.ModuleBuilder.CreateGlobalFunctions
 
 ' The following example demonstrates the 'DefineGlobalMethod(String,MethodAttributes,Type,Type())'

@@ -1,4 +1,4 @@
-Public Module Example
+﻿Public Module Example
    Public Sub Main()
    End Sub
 End Module

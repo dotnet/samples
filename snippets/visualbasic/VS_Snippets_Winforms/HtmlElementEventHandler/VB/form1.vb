@@ -1,4 +1,4 @@
-<System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.Demand, Name:="FullTrust")> _
+﻿<System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.Demand, Name:="FullTrust")> _
 Public Class Form1
     Inherits System.Windows.Forms.Form
 

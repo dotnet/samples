@@ -1,4 +1,4 @@
-' CustomHyperLinkDesigner.vb
+﻿' CustomHyperLinkDesigner.vb
 ' <snippet4>
 Imports System
 Imports System.Web.UI.WebControls

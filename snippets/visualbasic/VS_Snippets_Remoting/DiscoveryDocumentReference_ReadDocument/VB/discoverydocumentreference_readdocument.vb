@@ -1,4 +1,4 @@
-' System.Web.Services.Discovery.DiscoveryDocumentReference.ReadDocument(stream)
+﻿' System.Web.Services.Discovery.DiscoveryDocumentReference.ReadDocument(stream)
 
 ' This program demonstrates the 'ReadDocument(stream)' of 'DiscoveryDocumentReference'
 ' class. Read the contents of the discovery document from the stream and returns 

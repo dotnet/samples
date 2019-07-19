@@ -1,4 +1,4 @@
-Namespace SDKSample
+﻿Namespace SDKSample
 
     Partial Public Class HomePage
         Inherits System.Windows.Controls.Page

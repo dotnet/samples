@@ -1,4 +1,4 @@
-' <Snippet1>            
+﻿' <Snippet1>            
 Class Example
    Public Shared Sub Main()
       Dim value1 As UInt64 = 50

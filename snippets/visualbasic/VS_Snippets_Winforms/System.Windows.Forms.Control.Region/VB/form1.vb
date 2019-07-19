@@ -1,4 +1,4 @@
-' This example demonstrates using the Control.Region property by 
+﻿' This example demonstrates using the Control.Region property by 
 ' creating a round button.  
 
 

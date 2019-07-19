@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 ' This example demonstrates the System.Globalization.Culture-
 ' AndRegionInfoBuilder Unregister method.
 ' Compile this example with a reference to sysglobl.dll.

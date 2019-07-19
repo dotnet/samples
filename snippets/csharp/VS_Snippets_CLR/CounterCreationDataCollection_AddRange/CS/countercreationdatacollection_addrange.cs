@@ -1,4 +1,4 @@
-// System.Diagnostics.CounterCreationDataCollection.ctor
+﻿// System.Diagnostics.CounterCreationDataCollection.ctor
 // System.Diagnostics.CounterCreationDataCollection.AddRange(CounterCreationDataCollection)
 /*
    The following program demonstrates 'CounterCreationDataCollection()' constructor and

@@ -1,4 +1,4 @@
-// System.Web.Services.Description.MimeMultipartRelatedBinding
+﻿// System.Web.Services.Description.MimeMultipartRelatedBinding
 // System.Web.Services.Description.MimeMultipartRelatedBinding.Parts;
 
 /* The following program demonstrates the property 'Parts' of class 'MimeMultipartRelatedBinding'.

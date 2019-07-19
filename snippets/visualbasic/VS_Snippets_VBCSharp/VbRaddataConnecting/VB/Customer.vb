@@ -1,4 +1,4 @@
-'<Snippet1>
+﻿'<Snippet1>
 ''' <summary>
 ''' A single customer
 ''' </summary>

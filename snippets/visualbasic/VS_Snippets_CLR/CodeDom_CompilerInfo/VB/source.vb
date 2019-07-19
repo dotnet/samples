@@ -1,4 +1,4 @@
-' System.CodeDom.Compiler.CompilerInfo
+﻿' System.CodeDom.Compiler.CompilerInfo
 ' 
 ' Requires .NET Framework version 2.0 or higher.
 '

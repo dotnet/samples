@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 Imports System.IO
 Imports System.Collections
 Imports System.Runtime.Serialization

@@ -1,4 +1,4 @@
-' Visual Basic .NET Document
+﻿' Visual Basic .NET Document
 
 ' <Snippet1>
 Imports System.Threading

@@ -1,4 +1,4 @@
-Class Class1c726124781d49769baaed46814ff3fe
+﻿Class Class1c726124781d49769baaed46814ff3fe
 ' HowtoWriteTexttoFilesinMyDocuments(VisualBasic)
 
 Public Sub Method1()

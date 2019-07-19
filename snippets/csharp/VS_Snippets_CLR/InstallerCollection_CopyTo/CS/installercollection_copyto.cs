@@ -1,4 +1,4 @@
-// System.Configuration.Install.InstallerCollection.CopyTo(Installer[], Int32)
+﻿// System.Configuration.Install.InstallerCollection.CopyTo(Installer[], Int32)
 
 /*
    The following example demonstrates the 'CopyTo(Installer[], Int32)' method

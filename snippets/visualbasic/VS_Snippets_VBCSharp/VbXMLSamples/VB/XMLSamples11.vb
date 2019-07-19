@@ -1,4 +1,4 @@
-' Topic: XML CDATA Literal
+﻿' Topic: XML CDATA Literal
 
 Public Class Samples11
 Public Shared Sub Main()

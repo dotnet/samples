@@ -1,4 +1,4 @@
-' System.Windows.Forms.DataGridTableStyle.RowHeadersVisibleChanged
+﻿' System.Windows.Forms.DataGridTableStyle.RowHeadersVisibleChanged
 ' System.Windows.Forms.DataGridTableStyle.RowHeadersVisible
 
 ' The following program demonstrates the 'RowHeadersVisible' 

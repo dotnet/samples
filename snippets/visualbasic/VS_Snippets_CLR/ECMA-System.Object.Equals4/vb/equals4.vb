@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Public Structure Complex
     Public re, im As Double
     

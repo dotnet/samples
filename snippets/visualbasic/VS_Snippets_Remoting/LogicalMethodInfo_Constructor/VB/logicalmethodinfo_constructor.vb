@@ -1,4 +1,4 @@
-' All the following have been marked as 1 snippet : Snippet1
+﻿' All the following have been marked as 1 snippet : Snippet1
 
 ' System.Web.Services.Protocols.LogicalMethodInfo.LogicalMethodInfo(MethodInfo)
 ' System.Web.Services.Protocols.LogicalMethodInfo.DeclaringType

@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 // Sample for Enum.ToString(String)
 using System;
 

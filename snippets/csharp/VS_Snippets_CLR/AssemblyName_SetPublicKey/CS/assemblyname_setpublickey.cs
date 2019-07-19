@@ -1,4 +1,4 @@
-// System.Reflection.AssemblyName.SetPublicKey(byte[])
+﻿// System.Reflection.AssemblyName.SetPublicKey(byte[])
 // System.Reflection.AssemblyName.SetPublicKeyToken(byte[])
   
 /* 

@@ -1,4 +1,4 @@
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using Prime.Services;
 
 namespace Prime.UnitTests.Services

@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 ' This example demonstrates the generic and non-generic versions of the 
 ' CompareTo method for several base types.
 ' The non-generic version takes a parameter of type Object, while the generic

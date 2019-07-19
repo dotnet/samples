@@ -1,4 +1,4 @@
-' System.Runtime.InteropServices.ComImportAttribute
+﻿' System.Runtime.InteropServices.ComImportAttribute
 ' System.Runtime.InteropServices.InAttribute
 ' System.Runtime.InteropServices.OutAttribute
 ' System.Runtime.InteropServices.UnmanagedType

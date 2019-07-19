@@ -1,4 +1,4 @@
-/*File name: myDataBoundLiteralControl.cs */
+﻿/*File name: myDataBoundLiteralControl.cs */
 
 // <Snippet1>   
 

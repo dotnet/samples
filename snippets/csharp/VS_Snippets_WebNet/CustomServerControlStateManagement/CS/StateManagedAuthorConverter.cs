@@ -1,4 +1,4 @@
-// <Snippet4>
+﻿// <Snippet4>
 // StateManagedAuthorConverter.cs
 using System;
 using System.ComponentModel;

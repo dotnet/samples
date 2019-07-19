@@ -1,4 +1,4 @@
-// <Snippet11>
+﻿// <Snippet11>
 using System;
 
 // A class that represents an individual card in a playing deck.

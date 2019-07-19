@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 // <Snippet15>
 public class ByteByByteFormatter : IFormatProvider, ICustomFormatter

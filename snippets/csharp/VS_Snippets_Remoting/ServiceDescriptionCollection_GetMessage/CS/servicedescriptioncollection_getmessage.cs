@@ -1,4 +1,4 @@
-// System.Web.Services.Description.ServiceDescriptionCollection.GetMessage()
+﻿// System.Web.Services.Description.ServiceDescriptionCollection.GetMessage()
 
 /* The following program demonstrates the 'GetMessage' method 
    of 'ServiceDescriptionCollection' class. It searches for a 

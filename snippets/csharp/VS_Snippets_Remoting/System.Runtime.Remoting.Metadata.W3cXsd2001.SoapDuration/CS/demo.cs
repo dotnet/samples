@@ -1,4 +1,4 @@
-/// Class:  System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDuration
+﻿/// Class:  System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDuration
 ///    10    class 
 ///    !    #ctor
 ///    11    Parse()

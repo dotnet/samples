@@ -1,4 +1,4 @@
-// <Snippet19>
+﻿// <Snippet19>
 using System;
 using System.Diagnostics;
 using System.Linq;

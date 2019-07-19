@@ -1,4 +1,4 @@
-' System.Net.HttpWebRequest.AllowWriteStreamBuffering
+﻿' System.Net.HttpWebRequest.AllowWriteStreamBuffering
 ' This program demonstrates 'AllowWriteStreamBuffering' property of 'HttpWebRequestClass'.
 ' A new 'HttpWebRequest' object is created.
 ' The 'AllowWriteStreamBuffering' property value is set to false.

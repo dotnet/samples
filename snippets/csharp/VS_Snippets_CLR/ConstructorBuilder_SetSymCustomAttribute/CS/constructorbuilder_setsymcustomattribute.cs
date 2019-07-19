@@ -1,4 +1,4 @@
-// System.Reflection.Emit.ConstructorBuilder.SetSymCustomAttribute()
+﻿// System.Reflection.Emit.ConstructorBuilder.SetSymCustomAttribute()
 
 /* The following program demonstrates the 'SetSymCustomAttribute' method
    of ConstructorBuilder class. It creates an assembly in the current 

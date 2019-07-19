@@ -1,4 +1,4 @@
-
+﻿
 //<Snippet4>
 class ClassConvert
 {

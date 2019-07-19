@@ -1,4 +1,4 @@
- '---------------------------------------------------------------------
+﻿ '---------------------------------------------------------------------
 '  This file is part of the Microsoft .NET Framework SDK Code Samples.
 ' 
 '  Copyright (C) Microsoft Corporation.  All rights reserved.

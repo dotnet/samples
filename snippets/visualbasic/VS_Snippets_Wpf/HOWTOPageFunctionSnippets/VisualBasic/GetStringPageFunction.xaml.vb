@@ -1,4 +1,4 @@
-Namespace UsingPageFunctionsSample
+﻿Namespace UsingPageFunctionsSample
 	'<SnippetPageFunctionReturnAResultCODEBEHIND>
 	Partial Public Class GetStringPageFunction
 		Inherits PageFunction(Of String)

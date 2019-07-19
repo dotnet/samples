@@ -1,4 +1,4 @@
-' System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection
+﻿' System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection
 ' System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection.ctor
 ' System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection.Add()
 ' System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection.Item

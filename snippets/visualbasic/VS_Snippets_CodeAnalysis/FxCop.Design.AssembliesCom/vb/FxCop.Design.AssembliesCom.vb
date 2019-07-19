@@ -1,4 +1,4 @@
-'<Snippet1>
+﻿'<Snippet1>
 Imports System
 
 <Assembly: System.Runtime.InteropServices.ComVisible(False)>

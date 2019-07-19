@@ -1,4 +1,4 @@
-' System.Reflection.Emit.TypeBuilder.DefineNestedType(string, TypeAttributes, Type, Type[])
+﻿' System.Reflection.Emit.TypeBuilder.DefineNestedType(string, TypeAttributes, Type, Type[])
 ' System.Reflection.Emit.TypeBuilder.DefineMethodOverride(MethodInfo, MethodInfo)
 ' System.Reflection.Emit.TypeBuilder.DefineMethod(string, MethodAttributes,Type,Type[])
 '

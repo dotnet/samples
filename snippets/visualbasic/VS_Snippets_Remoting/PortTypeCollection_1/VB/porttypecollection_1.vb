@@ -1,4 +1,4 @@
-' System.Web.Services.Description.PortTypeCollection.Item[int]
+﻿' System.Web.Services.Description.PortTypeCollection.Item[int]
 ' System.Web.Services.Description.PortTypeCollection.Remove()
 ' System.Web.Services.Description.PortTypeCollection.Add()
 

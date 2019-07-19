@@ -1,4 +1,4 @@
-// This sample might go in a VisualStyleRenderer conceptual topic, or the VisualStyleRenderer
+﻿// This sample might go in a VisualStyleRenderer conceptual topic, or the VisualStyleRenderer
 // class itself. The sample defines a custom control that imitates a window using VisualStyleElements
 // for the window parts. It handles resizing and moving the window. 
 

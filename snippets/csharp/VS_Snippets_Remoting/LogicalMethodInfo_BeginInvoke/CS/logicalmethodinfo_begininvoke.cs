@@ -1,4 +1,4 @@
-// System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke(object,object[],AsyncCallback,object) 
+﻿// System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke(object,object[],AsyncCallback,object) 
 // System.Web.Services.Protocols.LogicalMethodInfo.EndInvoke(object,IAsyncResult)
 
 /* The following example demonstrates 'BeginInvoke' and 'EndInvoke' methods of

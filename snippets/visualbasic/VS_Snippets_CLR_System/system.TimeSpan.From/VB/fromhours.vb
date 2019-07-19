@@ -1,4 +1,4 @@
-'<Snippet5>
+﻿'<Snippet5>
 ' Example of the TimeSpan.FromHours( Double ) method.
 Imports System
 Imports Microsoft.VisualBasic

@@ -1,4 +1,4 @@
-' System.Web.HttpUtility.HtmlEncode(string)
+﻿' System.Web.HttpUtility.HtmlEncode(string)
 ' System.Web.HttpUtility.HtmlDecode(string,TextWriter)
 
 ' The following example demonstrates the  'HtmlEncode(string)'

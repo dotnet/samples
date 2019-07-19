@@ -1,4 +1,4 @@
-public struct Point
+﻿public struct Point
 {
     public double X { get; }
     public double Y { get; }

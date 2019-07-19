@@ -1,4 +1,4 @@
-
+﻿
 '   The following program demonstrates the 'RegisterViewStateHandler' method of 'Page' class.
 '   
 '   The program creates 'MyForm' derived from 'HtmlForm' and calls 'RegisterViewStateHandler'

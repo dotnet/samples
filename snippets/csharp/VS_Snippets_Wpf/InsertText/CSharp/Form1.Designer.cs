@@ -1,4 +1,4 @@
-namespace InsertTextW32Target
+﻿namespace InsertTextW32Target
 {
     partial class Target
     {

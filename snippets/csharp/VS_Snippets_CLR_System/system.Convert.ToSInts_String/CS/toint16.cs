@@ -1,4 +1,4 @@
-//<Snippet3>
+﻿//<Snippet3>
 // Example of the Convert.ToInt16( string ) and 
 // Convert.ToInt16( string, IFormatProvider ) methods.
 using System;

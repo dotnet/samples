@@ -1,4 +1,4 @@
-
+﻿
 '  The following example demonstrates the 'Item[string]' property of 
 '  FaultBindingCollection class
 '  The program removes a fault binding with the name 'ErrorString' from 

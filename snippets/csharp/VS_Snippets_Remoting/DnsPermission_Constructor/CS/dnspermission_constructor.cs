@@ -1,4 +1,4 @@
-/*
+﻿/*
    This program demonstrates the 'Constructor' of 'DnsPermission' class.
    It creates an instance of 'DnsPermission' class and checks for permission.Then it 
    creates a 'SecurityElement' object and  prints it's attributes which hold the  XML

@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
 // Beginning of the HighSchool.dll 
 
 namespace HighSchool

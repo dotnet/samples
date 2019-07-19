@@ -1,4 +1,4 @@
-// System.Windows.Forms.Control.BeginInvoke(Delegate, object[])
+﻿// System.Windows.Forms.Control.BeginInvoke(Delegate, object[])
 // System.Windows.Forms.Control.BeginInvoke(Delegate)
 
 /*

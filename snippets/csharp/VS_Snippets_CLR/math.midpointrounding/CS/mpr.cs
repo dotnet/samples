@@ -1,4 +1,4 @@
-// This example demonstrates the Math.Round() method in conjunction 
+﻿// This example demonstrates the Math.Round() method in conjunction 
 // with the MidpointRounding enumeration.
 using System;
 

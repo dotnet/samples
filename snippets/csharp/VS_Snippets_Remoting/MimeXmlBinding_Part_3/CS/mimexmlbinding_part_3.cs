@@ -1,4 +1,4 @@
-// System.Web.Services.Description.MimeXmlBinding
+﻿// System.Web.Services.Description.MimeXmlBinding
 // System.Web.Services.Description.MimeXmlBinding.MimeXmlBinding()
 // System.Web.Services.Description.MimeXmlBinding.Part
 

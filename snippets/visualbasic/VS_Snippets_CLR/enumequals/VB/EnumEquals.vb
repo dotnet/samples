@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 Public Class EqualsTest
     Enum Colors
         Red

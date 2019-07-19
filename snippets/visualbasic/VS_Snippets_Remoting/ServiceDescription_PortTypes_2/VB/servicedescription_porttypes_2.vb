@@ -1,4 +1,4 @@
-' System.Web.Services.Description.ServiceDescription.PortTypes
+﻿' System.Web.Services.Description.ServiceDescription.PortTypes
 ' System.Web.Services.Description.ServiceDescription.CanRead
 
 ' The following example demonstrates the 'PortTypes' property

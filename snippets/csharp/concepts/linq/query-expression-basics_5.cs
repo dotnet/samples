@@ -1,4 +1,4 @@
-        static void Main()
+﻿        static void Main()
         {
             // Data source.
             int[] scores = { 90, 71, 82, 93, 75, 82 };

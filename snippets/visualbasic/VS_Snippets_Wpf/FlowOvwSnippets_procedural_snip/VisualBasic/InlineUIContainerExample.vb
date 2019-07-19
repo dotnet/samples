@@ -1,4 +1,4 @@
-' <SnippetInlineUIContainerCodeOnlyExampleWholePage>
+﻿' <SnippetInlineUIContainerCodeOnlyExampleWholePage>
 
 Imports System
 Imports System.Windows

@@ -1,4 +1,4 @@
-// System.Windows.Forms.DataGrid.AllowNavigationChanged
+﻿// System.Windows.Forms.DataGrid.AllowNavigationChanged
 // System.Windows.Forms.DataGrid.Navigate
 
 /* The following program demonstrates the 'AllowNavigationChanged'

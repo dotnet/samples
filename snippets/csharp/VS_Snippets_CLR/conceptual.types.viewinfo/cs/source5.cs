@@ -1,4 +1,4 @@
-// <snippet5>
+﻿// <snippet5>
 // This program lists all the public constructors
 // of the System.String class.
 using System;

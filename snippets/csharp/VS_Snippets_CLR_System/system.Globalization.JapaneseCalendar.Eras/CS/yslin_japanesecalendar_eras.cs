@@ -1,4 +1,4 @@
-// The following code example displays the values contained in the Eras property.
+﻿// The following code example displays the values contained in the Eras property.
 
 
 // <snippet1>

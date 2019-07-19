@@ -1,4 +1,4 @@
-//<Snippet2>
+﻿//<Snippet2>
 // Example of Convert.ToString( non-numeric types, IFormatProvider ).
 using System;
 using System.Globalization;

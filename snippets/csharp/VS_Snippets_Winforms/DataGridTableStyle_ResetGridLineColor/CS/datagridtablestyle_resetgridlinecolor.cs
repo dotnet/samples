@@ -1,4 +1,4 @@
-// System.Windows.Forms.DataGridTableStyle.ResetGridLineColor
+﻿// System.Windows.Forms.DataGridTableStyle.ResetGridLineColor
 
 /*
  The following example demonstrates the 'ResetGridLineColor'  method of 'DataGridTableStyle' class. 

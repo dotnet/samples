@@ -1,4 +1,4 @@
-' <SnippetTextBoxBackgroundCodeExampleWholePage>
+﻿' <SnippetTextBoxBackgroundCodeExampleWholePage>
 
 Namespace SDKSample
     Partial Public Class TextBoxBackgroundExample

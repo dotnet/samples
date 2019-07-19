@@ -1,4 +1,4 @@
-' System.Windows.Forms.DataGrid.ParentRowsLabelStyleChanged
+﻿' System.Windows.Forms.DataGrid.ParentRowsLabelStyleChanged
 ' System.Windows.Forms.DataGrid.ParentRowsVisibleChanged
 
 ' The following program demonstrates the 'ParentRowsLabelStyleChanged', and

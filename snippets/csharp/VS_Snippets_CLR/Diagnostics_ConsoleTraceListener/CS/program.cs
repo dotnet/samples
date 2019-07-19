@@ -1,4 +1,4 @@
-//<Snippet1>
+﻿//<Snippet1>
 // Define the TRACE directive, which enables trace output to the 
 // Trace.Listeners collection. Typically, this directive is defined
 // as a compilation argument.

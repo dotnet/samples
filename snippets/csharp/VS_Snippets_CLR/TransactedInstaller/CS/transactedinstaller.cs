@@ -1,4 +1,4 @@
-// System.Configuration.Install.TransactedInstaller
+﻿// System.Configuration.Install.TransactedInstaller
 // System.Configuration.Install.TransactedInstaller.TransactedInstaller()
 // System.Configuration.Install.TransactedInstaller.Install(IDictionary)
 // System.COnfiguration.Install.TransactedInstaller.Uninstall(IDictionary)

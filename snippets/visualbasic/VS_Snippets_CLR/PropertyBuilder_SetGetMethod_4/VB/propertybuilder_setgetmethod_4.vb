@@ -1,4 +1,4 @@
-' System.Reflection.Emit.PropertyBuilder.SetGetMethod
+﻿' System.Reflection.Emit.PropertyBuilder.SetGetMethod
 ' System.Reflection.Emit.PropertyBuilder.SetSetMethod
 ' System.Reflection.Emit.PropertyBuilder.AddOtherMethod
 ' System.Reflection.Emit.PropertyBuilder

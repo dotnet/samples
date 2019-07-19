@@ -1,4 +1,4 @@
-// System.Web.UI.Control.MapPathSecure
+﻿// System.Web.UI.Control.MapPathSecure
 // System.Web.UI.Control.TemplateSourceDirectory
 
 /* The following example demonstrates 'TemplateSourceDirectory' and 'MapPathSecure' 

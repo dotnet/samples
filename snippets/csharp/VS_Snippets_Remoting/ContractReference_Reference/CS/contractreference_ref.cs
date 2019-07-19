@@ -1,4 +1,4 @@
-/*
+﻿/*
    System.Web.Services.Discovery.ContractReference.ctor
    System.Web.Services.Discovery.ContractReference.Ref
    System.Web.Services.Discovery.ContractReference.DocRef

@@ -1,4 +1,4 @@
-' The following code example demonstrates the effect of changing the NumberDecimalDigits property.
+﻿' The following code example demonstrates the effect of changing the NumberDecimalDigits property.
 
 ' <snippet1>
 Imports System

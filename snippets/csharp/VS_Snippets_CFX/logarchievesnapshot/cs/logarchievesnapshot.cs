@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO.Log;
 using System.IO;
 using System.Collections.Generic;

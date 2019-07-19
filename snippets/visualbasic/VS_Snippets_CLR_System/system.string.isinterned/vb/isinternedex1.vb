@@ -1,4 +1,4 @@
-' Visual Basic .NET Document
+﻿' Visual Basic .NET Document
 ' Uses IsInterned to determine whether a string is interned (True) or not (False).
 Option Strict On
 

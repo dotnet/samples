@@ -1,4 +1,4 @@
-' <SnippetSeekStoryboardExampleWholePage>
+﻿' <SnippetSeekStoryboardExampleWholePage>
 
 Imports System
 Imports System.Windows

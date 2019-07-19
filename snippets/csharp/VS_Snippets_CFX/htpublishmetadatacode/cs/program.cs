@@ -1,4 +1,4 @@
-// <Snippet11>
+﻿// <Snippet11>
 // <Snippet0>
 using System;
 using System.Runtime.Serialization;

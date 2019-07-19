@@ -1,4 +1,4 @@
-// The following code example shows that CultureInfo.Clone also clones the DateTimeFormatInfo and NumberFormatInfo instances associated with the CultureInfo.
+﻿// The following code example shows that CultureInfo.Clone also clones the DateTimeFormatInfo and NumberFormatInfo instances associated with the CultureInfo.
 
 
 // <snippet1>

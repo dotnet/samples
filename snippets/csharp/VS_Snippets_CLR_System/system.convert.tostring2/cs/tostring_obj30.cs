@@ -1,4 +1,4 @@
-// <Snippet30>
+﻿// <Snippet30>
 using System;
 
 public class Temperature : IFormattable 

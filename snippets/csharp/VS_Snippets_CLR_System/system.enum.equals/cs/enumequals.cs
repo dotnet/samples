@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
 using System;
 
 public enum SledDog { Unknown=0, AlaskanMalamute=1, Malamute=1, 

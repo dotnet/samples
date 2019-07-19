@@ -1,4 +1,4 @@
-
+﻿
 
 Namespace SDKSample
 	Partial Public Class GetNSPage

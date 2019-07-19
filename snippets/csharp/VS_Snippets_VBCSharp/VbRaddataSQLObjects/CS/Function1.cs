@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 //-----------------------------------------------------------------------------
 //<Snippet4>
 using System.Data.SqlTypes;

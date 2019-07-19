@@ -1,4 +1,4 @@
-Imports System.ServiceModel
+﻿Imports System.ServiceModel
 
 '<snippet0>
 <ServiceContract(Namespace:="http://Microsoft.ServiceModel.Samples"), _

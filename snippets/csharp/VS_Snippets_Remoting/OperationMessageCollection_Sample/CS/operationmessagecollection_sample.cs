@@ -1,4 +1,4 @@
-// System.Web.Services.Description.OperationMessageCollection
+﻿// System.Web.Services.Description.OperationMessageCollection
 // System.Web.Services.Description.OperationMessageCollection.Item
 // System.Web.Services.Description.OperationMessageCollection.CopyTo
 // System.Web.Services.Description.OperationMessageCollection.Add

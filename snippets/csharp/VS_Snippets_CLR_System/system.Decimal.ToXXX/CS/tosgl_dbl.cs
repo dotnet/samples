@@ -1,4 +1,4 @@
-//<Snippet5>
+﻿//<Snippet5>
 // Example of the decimal.ToSingle and decimal.ToDouble methods.
 using System;
 

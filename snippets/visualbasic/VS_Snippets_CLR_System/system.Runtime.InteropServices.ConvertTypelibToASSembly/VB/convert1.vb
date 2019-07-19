@@ -1,4 +1,4 @@
-'ConvertTypelibToAssembly
+﻿'ConvertTypelibToAssembly
 '<snippet1>
 Imports System
 Imports System.Reflection

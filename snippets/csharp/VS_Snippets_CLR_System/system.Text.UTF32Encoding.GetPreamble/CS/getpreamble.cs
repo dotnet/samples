@@ -1,4 +1,4 @@
-// The following code example retrieves and displays the byte order mark for different UTF32Encoding instances.
+﻿// The following code example retrieves and displays the byte order mark for different UTF32Encoding instances.
 
 // <Snippet1>
 using System;

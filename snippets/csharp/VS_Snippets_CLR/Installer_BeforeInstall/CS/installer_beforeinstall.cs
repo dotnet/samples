@@ -1,4 +1,4 @@
-/*
+﻿/*
    System.Configuration.Install.Installer.BeforeInstall
 
    The following example demonstrates the event 'BeforeInstall' of the 

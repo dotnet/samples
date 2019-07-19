@@ -1,4 +1,4 @@
-// System.Web.Services.Description.PortType
+﻿// System.Web.Services.Description.PortType
 
 /*
   The following sample demonstrates the class 'PortType'. This sample reads 

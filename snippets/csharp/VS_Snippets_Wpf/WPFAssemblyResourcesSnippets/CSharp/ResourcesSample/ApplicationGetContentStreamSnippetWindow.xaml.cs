@@ -1,4 +1,4 @@
-//<SnippetCallApplicationGetContentStreamCODEBEHIND1>
+﻿//<SnippetCallApplicationGetContentStreamCODEBEHIND1>
 using System;
 using System.IO;
 using System.Windows.Resources;

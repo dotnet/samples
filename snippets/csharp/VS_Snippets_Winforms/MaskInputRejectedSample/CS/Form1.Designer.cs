@@ -1,4 +1,4 @@
-namespace MaskInputRejectedSampleCSharp
+﻿namespace MaskInputRejectedSampleCSharp
 {
 	partial class Form1
 	{

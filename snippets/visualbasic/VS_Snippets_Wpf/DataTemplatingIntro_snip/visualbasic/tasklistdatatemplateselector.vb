@@ -1,4 +1,4 @@
-'<SnippetDTSClass>
+﻿'<SnippetDTSClass>
 
 Namespace SDKSample
 	Public Class TaskListDataTemplateSelector

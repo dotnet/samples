@@ -1,4 +1,4 @@
-'<Snippet1>
+﻿'<Snippet1>
 ' This sample demonstrates the use of the FileIOPermissionAttribute class.
 ' The sample follows the recommended procedure of first granting PermitOnly permissions, 
 ' then using a Deny on that set of granted permissions.  

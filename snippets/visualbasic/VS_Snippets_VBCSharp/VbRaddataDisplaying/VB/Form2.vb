@@ -1,4 +1,4 @@
-Public Class Form2
+﻿Public Class Form2
 
     '<Snippet1>
     Friend Sub LoadOrders(ByVal CustomerID As String)

@@ -1,4 +1,4 @@
-// This class demonstrates how to extend the AsymmetricKeyExchangeDeformatter
+﻿// This class demonstrates how to extend the AsymmetricKeyExchangeDeformatter
 // abstract class.
 //<Snippet1>
 using System;

@@ -1,4 +1,4 @@
-namespace MaskedTextBoxDataCSharp
+﻿namespace MaskedTextBoxDataCSharp
 {
     partial class Form1
     {

@@ -1,4 +1,4 @@
-// <snippet10>
+﻿// <snippet10>
 using System;
 using System.Xml;
 using System.Xml.Serialization;

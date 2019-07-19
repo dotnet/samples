@@ -1,4 +1,4 @@
-'<SnippetCode>
+﻿'<SnippetCode>
 
 Imports System
 Imports System.Windows

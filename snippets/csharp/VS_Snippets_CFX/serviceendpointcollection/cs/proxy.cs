@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
 
 [System.ServiceModel.ServiceContractAttribute(
     Namespace = "http://Microsoft.ServiceModel.Samples")]

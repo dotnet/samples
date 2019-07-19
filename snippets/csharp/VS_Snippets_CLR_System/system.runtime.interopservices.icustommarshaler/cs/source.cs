@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 // <Snippet4>
 using System.Runtime.InteropServices;
 // </Snippet4>

@@ -1,4 +1,4 @@
-Namespace NavigationServiceSnippetSample_VisualBasic
+﻿Namespace NavigationServiceSnippetSample_VisualBasic
     Partial Public Class MainWindow
         Inherits Window
         Public Sub New()

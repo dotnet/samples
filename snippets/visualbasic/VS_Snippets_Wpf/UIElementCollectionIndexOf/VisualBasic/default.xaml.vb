@@ -1,4 +1,4 @@
-Imports System.Windows
+﻿Imports System.Windows
 Imports System.Windows.Controls
 
 Namespace WCSamples

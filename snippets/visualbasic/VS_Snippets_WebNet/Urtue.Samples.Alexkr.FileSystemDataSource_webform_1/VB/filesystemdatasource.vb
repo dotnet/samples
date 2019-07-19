@@ -1,4 +1,4 @@
-' <Snippet2>
+﻿' <Snippet2>
 ' <Snippet1>
 Imports System
 Imports System.Collections

@@ -1,4 +1,4 @@
-' System.Net.CredentialCache.GetEnumerator
+﻿' System.Net.CredentialCache.GetEnumerator
 
 'This program demonstrates the  'GetEnumerator' method of the CredentialCache
 'class.It takes an URL, creates a 'WebRequest' object for the Url. The program stores a known set of credentials

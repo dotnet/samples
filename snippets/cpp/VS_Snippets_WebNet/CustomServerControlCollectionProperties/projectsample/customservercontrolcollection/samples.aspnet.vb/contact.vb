@@ -1,4 +1,4 @@
-' Contact.vb
+﻿' Contact.vb
 ' The type of the items in the Contacts collection property 
 ' in QuickContacts.
 Option Strict On

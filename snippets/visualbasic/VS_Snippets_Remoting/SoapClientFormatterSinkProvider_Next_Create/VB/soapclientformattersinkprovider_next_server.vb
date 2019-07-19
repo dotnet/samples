@@ -1,4 +1,4 @@
-' System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider.Next;
+﻿' System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider.Next;
 
 Imports System
 Imports System.Runtime.Remoting

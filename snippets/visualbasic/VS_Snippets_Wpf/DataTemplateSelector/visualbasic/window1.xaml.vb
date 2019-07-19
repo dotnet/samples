@@ -1,4 +1,4 @@
-Namespace SDKSample
+﻿Namespace SDKSample
 	Partial Public Class Window1
 		Inherits Window
 		Public Sub New()

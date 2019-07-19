@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 Imports System.Runtime.CompilerServices
 
 <Assembly: DependencyAttribute("AssemblyA", LoadHint.Always)> 

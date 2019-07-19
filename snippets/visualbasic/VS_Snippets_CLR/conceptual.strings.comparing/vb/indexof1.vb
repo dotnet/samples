@@ -1,4 +1,4 @@
-' <Snippet2>
+﻿' <Snippet2>
 Imports System.Globalization
 Imports System.Threading
 

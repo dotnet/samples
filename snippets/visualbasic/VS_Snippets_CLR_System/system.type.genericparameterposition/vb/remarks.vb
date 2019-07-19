@@ -1,4 +1,4 @@
-Imports System
+﻿Imports System
 
 ' <Snippet1>
 Public Class B(Of T, U)

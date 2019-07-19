@@ -1,4 +1,4 @@
-' System.Diagnostics.EventLogEntryCollection
+﻿' System.Diagnostics.EventLogEntryCollection
 ' System.Diagnostics.EventLogEntryCollection.CopyTo(EventLogEntry[],int)
 
 ' The following example demonstrates the EventLogEntryCollection class and the

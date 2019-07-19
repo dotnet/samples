@@ -1,4 +1,4 @@
-'
+﻿'
 ' ColorPicker.vb 
 ' An HSB (hue, saturation, brightness) based
 ' color picker.

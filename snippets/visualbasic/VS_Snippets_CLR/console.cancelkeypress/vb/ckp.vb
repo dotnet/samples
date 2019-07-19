@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Class Sample
     Public Shared Sub Main() 
         Dim cki As ConsoleKeyInfo

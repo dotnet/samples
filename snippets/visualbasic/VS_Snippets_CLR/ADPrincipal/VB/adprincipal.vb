@@ -1,4 +1,4 @@
-' <SNIPPET1>
+﻿' <SNIPPET1>
 Imports System
 Imports System.Security.Principal
 Imports System.Threading

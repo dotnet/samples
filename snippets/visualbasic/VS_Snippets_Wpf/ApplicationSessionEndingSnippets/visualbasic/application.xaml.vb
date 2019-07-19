@@ -1,4 +1,4 @@
-'<SnippetHandlingSessionEndingCODEBEHIND>
+﻿'<SnippetHandlingSessionEndingCODEBEHIND>
 
 Imports Microsoft.VisualBasic
 Imports System.Windows

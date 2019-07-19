@@ -1,4 +1,4 @@
-// System.Web.UI.DataBindingHandlerAttribute.HandlerTypeName
+﻿// System.Web.UI.DataBindingHandlerAttribute.HandlerTypeName
 
 /*
    The following program demonstrates 'HandlerTypeName' property of 

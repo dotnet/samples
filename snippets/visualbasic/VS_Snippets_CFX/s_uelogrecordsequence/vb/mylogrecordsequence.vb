@@ -1,4 +1,4 @@
-' snippet for System.IO.Log.LogRecordSequence
+﻿' snippet for System.IO.Log.LogRecordSequence
 ' <Snippet0>
 
 Imports System

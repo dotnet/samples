@@ -1,4 +1,4 @@
-//This code example demonstrates ControlPaint.DrawReversibleLine, 
+﻿//This code example demonstrates ControlPaint.DrawReversibleLine, 
 //ControlPaint.DrawFocusRectangle and ControlPaint.FillReversibleRectangle.
 
 using System.Windows.Forms;

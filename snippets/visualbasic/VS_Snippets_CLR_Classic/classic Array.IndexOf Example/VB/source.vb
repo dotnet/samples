@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Public Module Example
    Public Sub Main()
       ' Create a string array with 3 elements having the same value.

@@ -1,4 +1,4 @@
-// System.Net.WebResponse.GetResponseStream
+﻿// System.Net.WebResponse.GetResponseStream
 
 /* This program demonstrates the 'GetResponseStream' method of the 'WebResponse' class.
 It creates a web request and queries for a response. It then gets the response stream . This response stream 

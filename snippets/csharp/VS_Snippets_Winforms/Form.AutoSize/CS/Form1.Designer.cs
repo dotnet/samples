@@ -1,4 +1,4 @@
-namespace AutoSizeProject
+﻿namespace AutoSizeProject
 {
     partial class Form1
     {

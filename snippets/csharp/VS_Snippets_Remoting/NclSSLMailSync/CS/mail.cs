@@ -1,4 +1,4 @@
-// NclMailSync
+﻿// NclMailSync
 
 using System;
 using System.Net;

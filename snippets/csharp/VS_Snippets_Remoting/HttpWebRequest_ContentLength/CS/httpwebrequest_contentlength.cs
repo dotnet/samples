@@ -1,4 +1,4 @@
-/* 
+﻿/* 
    System.Net.HttpWebRequest.Method,System.Net.HttpWebRequest.ContentLength,System.Net.HttpWebRequest.ContentType
     System.Net.HttpWebRequest.GetRequestStream
     This program demonstrates 'Method', 'ContentLength' and 'ContentType' properties and 'GetRequestStream'

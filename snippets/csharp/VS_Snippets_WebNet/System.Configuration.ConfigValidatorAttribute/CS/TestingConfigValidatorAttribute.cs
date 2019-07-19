@@ -1,4 +1,4 @@
-// File name: TestingConfigValidatorAttribute.cs
+﻿// File name: TestingConfigValidatorAttribute.cs
 // Allowed snippet tags range: [41 - 50].
 
 // <Snippet41>

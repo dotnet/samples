@@ -1,4 +1,4 @@
-// System.Windows.Forms.DataGridTableStyle.AllowSorting;
+﻿// System.Windows.Forms.DataGridTableStyle.AllowSorting;
 // System.Windows.Forms.DataGridTableStyle.AllowSortingChanged;
 
 /* The following example demonstrates the property

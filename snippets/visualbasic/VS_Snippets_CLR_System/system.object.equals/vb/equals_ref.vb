@@ -1,4 +1,4 @@
-' Visual Basic .NET Document
+﻿' Visual Basic .NET Document
 ' Illustrates reference equality with reference types.
 Option Strict On
 

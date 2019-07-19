@@ -1,4 +1,4 @@
-'Types:System.Collections.DictionaryEntry  Vendor: Richter
+﻿'Types:System.Collections.DictionaryEntry  Vendor: Richter
 'Types:System.Collections.IDictionary  Vendor: Richter
 'Types:System.Collections.IDictionaryEnumerator  Vendor: Richter
 '<snippet1>

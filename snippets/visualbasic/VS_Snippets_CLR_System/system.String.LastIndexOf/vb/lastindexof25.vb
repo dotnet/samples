@@ -1,4 +1,4 @@
-' <Snippet25>
+﻿' <Snippet25>
 Public Module Example
    Public Sub Main()
       Dim searchString As String = ChrW(&h00AD) + "m"

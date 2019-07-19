@@ -1,4 +1,4 @@
-// System.Runtime.InteropServices.TypeLibVarAttribute
+﻿// System.Runtime.InteropServices.TypeLibVarAttribute
 // System.Runtime.InteropServices.TypeLibVarFlags
 // <Snippet1>
 

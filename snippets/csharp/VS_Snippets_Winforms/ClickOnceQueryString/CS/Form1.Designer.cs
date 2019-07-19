@@ -1,4 +1,4 @@
-namespace ClickOnceQueryString
+﻿namespace ClickOnceQueryString
 {
     partial class Form1
     {

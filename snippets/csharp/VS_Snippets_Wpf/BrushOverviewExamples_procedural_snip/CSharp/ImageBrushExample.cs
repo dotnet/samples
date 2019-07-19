@@ -1,4 +1,4 @@
-
+﻿
 // <SnippetGraphicsMMImageBrushAsCanvasBackgroundExampleWholePage>
 using System;
 using System.Windows;

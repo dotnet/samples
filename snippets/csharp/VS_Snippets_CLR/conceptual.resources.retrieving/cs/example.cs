@@ -1,4 +1,4 @@
-// <Snippet6>
+﻿// <Snippet6>
 using System;
 
 [Serializable] public struct PersonTable

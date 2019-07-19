@@ -1,4 +1,4 @@
-' System.Web.Services.Description.SoapHeaderBinding.MapToProperty
+﻿' System.Web.Services.Description.SoapHeaderBinding.MapToProperty
 ' 
 ' The following example demonstrates the 'MapToProperty' property of class 'SoapHeaderBinding'.
 ' It reads an existing wsdl file and gets 'SoapHeaderBinding' instance from it.

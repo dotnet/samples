@@ -1,4 +1,4 @@
-' <SnippetStreamGeometryPolyQuadraticBezierToExampleWholePage>
+﻿' <SnippetStreamGeometryPolyQuadraticBezierToExampleWholePage>
 
 Imports System
 Imports System.Windows

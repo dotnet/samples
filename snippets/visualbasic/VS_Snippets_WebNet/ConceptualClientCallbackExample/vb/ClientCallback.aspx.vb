@@ -1,4 +1,4 @@
-' <Snippet4>
+﻿' <Snippet4>
 Partial Class ClientCallback
     Inherits System.Web.UI.Page
     Implements System.Web.UI.ICallbackEventHandler

@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 // Example for the Math.Log( double ) and Math.Log( double, double ) methods.
 using System;
 

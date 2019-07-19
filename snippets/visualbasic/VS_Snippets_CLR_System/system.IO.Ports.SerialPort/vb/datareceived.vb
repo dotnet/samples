@@ -1,4 +1,4 @@
-'<snippet06>
+﻿'<snippet06>
 Imports System
 Imports System.IO.Ports
 

@@ -1,4 +1,4 @@
-'<SnippetThreadingWeatherCodeBehind>
+﻿'<SnippetThreadingWeatherCodeBehind>
 
 Imports System
 Imports System.Windows

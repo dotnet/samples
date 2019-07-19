@@ -1,4 +1,4 @@
-// 9 comes before 8 because "using System;" is part of snippet and must come first in file.
+﻿// 9 comes before 8 because "using System;" is part of snippet and must come first in file.
 
 //<snippet9>
 using System;

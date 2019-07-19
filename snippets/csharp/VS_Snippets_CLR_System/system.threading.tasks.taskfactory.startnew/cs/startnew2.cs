@@ -1,4 +1,4 @@
-// Illustrates the TaskFactory.StartNew(Action, CancellationToken) overload.
+﻿// Illustrates the TaskFactory.StartNew(Action, CancellationToken) overload.
  
 // <Snippet2>
 using System;

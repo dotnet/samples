@@ -1,4 +1,4 @@
-' <Snippet12>
+﻿' <Snippet12>
 Imports System
 Imports System.IO
 Imports System.Runtime.Serialization.Formatters.Binary

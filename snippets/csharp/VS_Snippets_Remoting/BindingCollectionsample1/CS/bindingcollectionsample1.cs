@@ -1,4 +1,4 @@
-// System.Web.Services.Description.BindingCollection;System.Web.Services.Description.BindingCollection.Item[Int32];
+﻿// System.Web.Services.Description.BindingCollection;System.Web.Services.Description.BindingCollection.Item[Int32];
 // System.Web.Services.Description.BindingCollection.Item[String];System.Web.Services.Description.BindingCollection.CopyTo
 
 /* The program reads a wsdl document "MathService.wsdl" and instantiates a ServiceDescription instance 

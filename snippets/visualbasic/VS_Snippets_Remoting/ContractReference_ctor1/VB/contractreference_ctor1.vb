@@ -1,4 +1,4 @@
-' System.Web.Services.Discovery.ContractReference.ContractReference(string)
+﻿' System.Web.Services.Discovery.ContractReference.ContractReference(string)
 
 ' The following example demonstrates the constructor 'ContractReference(string)' 
 ' of 'ContractReference' class. A 'DiscoveryDocument' object is created .The 

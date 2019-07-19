@@ -1,4 +1,4 @@
-// System.Console.OpenStandartInput
+﻿// System.Console.OpenStandartInput
 // <Snippet1>
 using System;
 using System.Text;

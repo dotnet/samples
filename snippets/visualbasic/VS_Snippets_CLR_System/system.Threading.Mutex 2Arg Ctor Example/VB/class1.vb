@@ -1,4 +1,4 @@
-'<Snippet1>
+﻿'<Snippet1>
 Imports System.Threading
 Public Class Test
    Public Shared Sub Main()

@@ -1,4 +1,4 @@
-namespace Structs
+﻿namespace Structs
 {
     struct Point
     {

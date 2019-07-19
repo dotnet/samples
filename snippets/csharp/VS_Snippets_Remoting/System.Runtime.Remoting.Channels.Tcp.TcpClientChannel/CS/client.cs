@@ -1,4 +1,4 @@
-// class: System.Runtime.Remoting.Channels.Tcp.TcpClientChannel
+﻿// class: System.Runtime.Remoting.Channels.Tcp.TcpClientChannel
 // client.cs:
 //        Ctor(string, IClientChannelSinkProvider)
 //        CreateMessageSink

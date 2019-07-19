@@ -1,4 +1,4 @@
-namespace Samples.AspNet.CS.Controls {
+﻿namespace Samples.AspNet.CS.Controls {
 
 // <Snippet1>
     using System;

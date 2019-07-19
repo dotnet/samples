@@ -1,4 +1,4 @@
-// System.Runtime.Remoting.Channels.IServerChannelSinkProvider.CreateSink()
+﻿// System.Runtime.Remoting.Channels.IServerChannelSinkProvider.CreateSink()
 // System.Runtime.Remoting.Channels.IServerChannelSinkProvider.GetChannelData()
 // System.Runtime.Remoting.Channels.IServerChannelSinkProvider.Next
 

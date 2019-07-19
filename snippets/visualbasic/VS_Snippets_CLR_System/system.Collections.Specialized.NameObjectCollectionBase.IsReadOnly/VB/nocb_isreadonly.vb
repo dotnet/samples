@@ -1,4 +1,4 @@
-' The following example creates a read-only collection.
+﻿' The following example creates a read-only collection.
 ' For an expanded version of this example, see the NameObjectCollectionBase class topic.
 
 ' <snippet1>

@@ -1,4 +1,4 @@
-// The following code example demonstrates the behavior of UnicodeEncoding with error detection enabled and without.
+﻿// The following code example demonstrates the behavior of UnicodeEncoding with error detection enabled and without.
 
 // <Snippet1>
 using System;

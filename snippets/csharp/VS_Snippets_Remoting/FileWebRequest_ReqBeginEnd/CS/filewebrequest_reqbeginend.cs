@@ -1,4 +1,4 @@
-// System.Net.FileWebRequest.BeginGetRequestStream;System.Net.FileWebRequest.EndGetRequestStream;
+﻿// System.Net.FileWebRequest.BeginGetRequestStream;System.Net.FileWebRequest.EndGetRequestStream;
 // Snippet1 and Snippet2 go together
 
 /*

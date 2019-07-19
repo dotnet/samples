@@ -1,4 +1,4 @@
-// The following code example determines whether a string is the prefix or suffix of another string using CompareOptions.
+﻿// The following code example determines whether a string is the prefix or suffix of another string using CompareOptions.
 
 // <snippet1>
 using System;

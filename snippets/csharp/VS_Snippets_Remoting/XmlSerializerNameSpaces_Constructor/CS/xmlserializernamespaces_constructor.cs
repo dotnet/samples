@@ -1,4 +1,4 @@
-// System.Xml.Serialization.XmlSerializerNamespaces.constructor
+﻿// System.Xml.Serialization.XmlSerializerNamespaces.constructor
 
 /* The following example demonstrates the constructor of class
 XmlSerializerNamespaces. This sample serializes an object of 'MyPriceClass'

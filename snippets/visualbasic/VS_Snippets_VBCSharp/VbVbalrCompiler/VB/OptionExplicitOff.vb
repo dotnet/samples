@@ -1,4 +1,4 @@
-Option Explicit Off
+﻿Option Explicit Off
 Option Strict On
 
 Namespace Class5d296ab3bafe4c4d988778f162ed86c7

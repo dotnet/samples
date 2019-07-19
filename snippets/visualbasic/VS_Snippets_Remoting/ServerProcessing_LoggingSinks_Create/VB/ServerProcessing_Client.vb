@@ -1,4 +1,4 @@
-' This file is a support file for demonstrating IClientChannelSinkProvider 
+﻿' This file is a support file for demonstrating IClientChannelSinkProvider 
 ' and ServerProcessing.
 
 Imports System

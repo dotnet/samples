@@ -1,4 +1,4 @@
- ' Snippet for: F:System.Drawing.Imaging.Encoder.SaveFlag
+﻿ ' Snippet for: F:System.Drawing.Imaging.Encoder.SaveFlag
 ' <snippet4>
 Imports System
 Imports System.Drawing

@@ -1,4 +1,4 @@
-'<Snippet13>
+﻿'<Snippet13>
 ' Compile the source for this as follows:
 ' vbc /r:System.dll /r:System.Design.dll /r:System.Drawing.dll /debug+ /r:System.Web.dll /t:library /out:SimpleControlDesignersVB.dll SimpleControlDesigners.vb
 '</Snippet13>

@@ -1,4 +1,4 @@
-Module Module1
+﻿Module Module1
     '<Snippet1>
     Sub Main()
         Dim GStart As Guid = Guid.NewGuid()

@@ -1,4 +1,4 @@
-' <SnippetBasicBorderCodeExampleWholePage>
+﻿' <SnippetBasicBorderCodeExampleWholePage>
 
 Imports Microsoft.VisualBasic
 Imports System

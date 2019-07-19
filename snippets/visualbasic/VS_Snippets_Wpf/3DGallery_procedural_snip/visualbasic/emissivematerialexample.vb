@@ -1,4 +1,4 @@
-' <SnippetEmissiveMaterialCodeExampleWholePage>
+﻿' <SnippetEmissiveMaterialCodeExampleWholePage>
 
 Imports Microsoft.VisualBasic
 Imports System

@@ -1,4 +1,4 @@
-namespace ValidatingTypeSampleCSharp
+﻿namespace ValidatingTypeSampleCSharp
 {
 	partial class Form1
 	{

@@ -1,4 +1,4 @@
-' <snippet1>
+﻿' <snippet1>
 Imports System.Web.Script.Serialization
 
 Public Class _Default

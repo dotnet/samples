@@ -1,4 +1,4 @@
-//---------------------------------------------------------------------------
+﻿//---------------------------------------------------------------------------
 // <copyright file="Trackball.cs" company="Microsoft">
 //    Copyright (c) Microsoft Corporation.  All rights reserved.
 // </copyright>

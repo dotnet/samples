@@ -1,4 +1,4 @@
-' Interaction logic for Window1.xaml
+﻿' Interaction logic for Window1.xaml
 Imports System.Text
 
 Partial Public Class Window1

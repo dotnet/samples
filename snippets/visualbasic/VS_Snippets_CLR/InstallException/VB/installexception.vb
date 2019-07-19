@@ -1,4 +1,4 @@
-' System.Configuration.Install.InstallException
+﻿' System.Configuration.Install.InstallException
 ' System.Configuration.Install.InstallException.InstallException()
 ' System.Configuration.Install.InstallException.InstallException(String, Exception)
 ' System.Configuration.Install.InstallException.InstallException(String)

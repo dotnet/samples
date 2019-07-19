@@ -1,4 +1,4 @@
-' <Snippet2>
+﻿' <Snippet2>
 Imports System.Web.UI
 Imports System.Drawing
 Imports System.Globalization

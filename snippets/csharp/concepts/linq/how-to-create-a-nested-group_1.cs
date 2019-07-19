@@ -1,4 +1,4 @@
-        public void QueryNestedGroups()
+﻿        public void QueryNestedGroups()
         {
             var queryNestedGroups =
                 from student in students

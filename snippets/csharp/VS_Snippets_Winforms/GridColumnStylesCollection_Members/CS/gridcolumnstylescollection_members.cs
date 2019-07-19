@@ -1,4 +1,4 @@
-// System.Windows.Forms.GridColumnStylesCollection.Clear
+﻿// System.Windows.Forms.GridColumnStylesCollection.Clear
 // System.Windows.Forms.GridColumnStylesCollection.Item [int index]
 // System.Windows.Forms.GridColumnStylesCollection.Item [string columnName]
 

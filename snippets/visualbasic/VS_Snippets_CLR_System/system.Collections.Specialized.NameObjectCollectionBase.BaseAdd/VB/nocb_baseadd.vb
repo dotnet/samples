@@ -1,4 +1,4 @@
-' The following example uses BaseAdd to create a new NameObjectCollectionBase with elements from another dictionary.
+﻿' The following example uses BaseAdd to create a new NameObjectCollectionBase with elements from another dictionary.
 ' For an expanded version of this example, see the NameObjectCollectionBase class topic.
 
 ' <snippet1>

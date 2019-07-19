@@ -1,4 +1,4 @@
-//<snippet00>
+﻿//<snippet00>
 // A simple example for the DictionaryEntry structure.
 using System;
 using System.Collections;

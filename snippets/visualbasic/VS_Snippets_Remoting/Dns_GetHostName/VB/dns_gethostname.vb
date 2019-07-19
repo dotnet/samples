@@ -1,4 +1,4 @@
- '
+﻿ '
 '   This program demonstrates the 'GetHostName' method of 'Dns' class.
 '   It creates a 'DnsHostName' instance and calls 'GetHostName' method to get the local host 
 '   computer name. Then prints the computer name on the console.

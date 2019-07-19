@@ -1,4 +1,4 @@
-' System.Int16.Equals(Object)
+﻿' System.Int16.Equals(Object)
 
 ' The following program demonstrates the 'Equals(Object)' method
 ' of struct 'Int16'. This compares an instance of 'Int16' with the

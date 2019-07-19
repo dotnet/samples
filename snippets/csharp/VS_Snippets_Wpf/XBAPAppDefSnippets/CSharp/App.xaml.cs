@@ -1,4 +1,4 @@
-//<SnippetXBAPApplicationDefinitionCODEBEHIND>
+﻿//<SnippetXBAPApplicationDefinitionCODEBEHIND>
 using System.Windows;
 
 namespace SDKSample

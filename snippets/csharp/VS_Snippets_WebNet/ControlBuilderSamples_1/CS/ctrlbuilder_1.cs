@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
 // To work correctly with the .aspx file for this sample, name the compiled DLL 
 // generated from this class ctrlBuilder_1.dll.
 // Create a namespace that contains two classes that inherit from the

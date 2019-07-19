@@ -1,4 +1,4 @@
-' Interaction logic for App.xaml
+﻿' Interaction logic for App.xaml
 Partial Public Class App
     Inherits Application
 

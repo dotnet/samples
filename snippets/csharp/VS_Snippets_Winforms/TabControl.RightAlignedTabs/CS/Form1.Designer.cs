@@ -1,4 +1,4 @@
-namespace TestVerticalTabsCS
+﻿namespace TestVerticalTabsCS
 {
     partial class Form1
     {

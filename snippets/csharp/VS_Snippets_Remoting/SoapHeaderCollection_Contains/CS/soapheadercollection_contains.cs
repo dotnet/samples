@@ -1,4 +1,4 @@
-// System.Web.Services.Protocols.SoapHeaderCollection.Contains(SoapHeader); System.Web.Services.Protocols.SoapHeaderCollection.IndexOf(); System.Web.Services.Protocols.SoapHeaderCollection.Item; System.Web.Services.Protocols.SoapHeaderCollection.Remove(SoapHeader)
+﻿// System.Web.Services.Protocols.SoapHeaderCollection.Contains(SoapHeader); System.Web.Services.Protocols.SoapHeaderCollection.IndexOf(); System.Web.Services.Protocols.SoapHeaderCollection.Item; System.Web.Services.Protocols.SoapHeaderCollection.Remove(SoapHeader)
 
 /*
    The following example demonstrates the methods 'Contains','IndexOf' and 

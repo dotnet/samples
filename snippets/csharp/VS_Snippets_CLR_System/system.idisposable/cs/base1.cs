@@ -1,4 +1,4 @@
-// <Snippet3>
+﻿// <Snippet3>
 using Microsoft.Win32.SafeHandles;
 using System;
 using System.Runtime.InteropServices;

@@ -1,4 +1,4 @@
-// This is the client program for the 'WellKnownServiceTypeEntry_Server.cs' program.
+﻿// This is the client program for the 'WellKnownServiceTypeEntry_Server.cs' program.
 
 using System;
 using System.Runtime.Remoting;

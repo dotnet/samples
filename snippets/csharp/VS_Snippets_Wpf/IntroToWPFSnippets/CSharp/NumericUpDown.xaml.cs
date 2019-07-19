@@ -1,4 +1,4 @@
-//<SnippetUserControlCODEBEHIND1>
+﻿//<SnippetUserControlCODEBEHIND1>
 using System;
 using System.Windows;
 using System.Windows.Controls;

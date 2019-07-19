@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 ' Create a class that derives from the
 ' ChtmlTextWriter class.
 Imports System

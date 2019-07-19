@@ -1,4 +1,4 @@
-' <Snippet25>
+﻿' <Snippet25>
 Option Strict On
 
 Imports System.Globalization

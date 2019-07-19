@@ -1,4 +1,4 @@
-// The following code example displays the value of LongDatePattern for selected cultures.
+﻿// The following code example displays the value of LongDatePattern for selected cultures.
 
 
 // <snippet1>

@@ -1,4 +1,4 @@
-//<Snippet1>
+﻿//<Snippet1>
 using System.CodeDom;
 using System.CodeDom.Compiler;
 using System.Collections;

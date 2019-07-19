@@ -1,4 +1,4 @@
-' <snippet6>
+﻿' <snippet6>
 Imports System.ServiceModel
 Imports System.ServiceModel.Channels
 

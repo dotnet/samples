@@ -1,4 +1,4 @@
-//<SnippetHandleEllipseMouseUpEventCODEBEHIND>
+﻿//<SnippetHandleEllipseMouseUpEventCODEBEHIND>
 using System.Windows;
 using System.Windows.Input;
 

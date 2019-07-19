@@ -1,4 +1,4 @@
-    class DynamicPredicates : StudentClass
+﻿    class DynamicPredicates : StudentClass
     {
         static void Main(string[] args)
         {

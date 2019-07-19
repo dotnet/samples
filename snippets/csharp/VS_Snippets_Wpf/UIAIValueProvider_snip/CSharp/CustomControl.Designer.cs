@@ -1,4 +1,4 @@
-namespace UIAIValueProvider_snip
+﻿namespace UIAIValueProvider_snip
 {
     partial class CustomControl
     {

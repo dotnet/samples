@@ -1,4 +1,4 @@
-// This example demonstrates StringBuilder.Remove()
+﻿// This example demonstrates StringBuilder.Remove()
 //<snippet1>
 using System;
 using System.Text;

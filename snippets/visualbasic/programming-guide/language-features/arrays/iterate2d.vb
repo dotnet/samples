@@ -1,4 +1,4 @@
-
+﻿
 Module IterateArray
    Public Sub Main()
       Dim numbers = {{1, 2}, {3, 4}, {5, 6}}

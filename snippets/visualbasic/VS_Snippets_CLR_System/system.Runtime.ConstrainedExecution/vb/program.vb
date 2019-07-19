@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Imports System.Threading
 Imports System.Runtime.CompilerServices
 Imports System.Runtime.ConstrainedExecution

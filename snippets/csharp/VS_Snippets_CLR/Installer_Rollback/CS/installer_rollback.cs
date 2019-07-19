@@ -1,4 +1,4 @@
-/*
+﻿/*
    System.Configuration.Install.Installer.Rollback
 
    The following example demonstrates the Rollback method

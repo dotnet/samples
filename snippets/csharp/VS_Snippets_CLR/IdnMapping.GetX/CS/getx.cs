@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 // This example demonstrates the GetAscii and GetUnicode methods.
 // For sake of illustration, this example uses the most complex
 // form of those methods, not the most convenient.

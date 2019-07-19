@@ -1,4 +1,4 @@
-' <!-- <SnippetTimelineCompletedExampleCodeBehindUsingWholePage> -->
+﻿' <!-- <SnippetTimelineCompletedExampleCodeBehindUsingWholePage> -->
 ' TimelineCompletedExample.xaml.vb
 ' Handles the ZoomOutStoryboard's Completed event.
 ' See the TimelienCompletedExample.xaml file

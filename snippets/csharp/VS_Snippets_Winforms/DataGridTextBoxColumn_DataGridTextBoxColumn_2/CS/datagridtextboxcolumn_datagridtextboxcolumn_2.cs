@@ -1,4 +1,4 @@
-// System.Windows.Forms.DataGridTextBoxColumn.DataGridTextBoxColumn(PropertyDescriptor)
+﻿// System.Windows.Forms.DataGridTextBoxColumn.DataGridTextBoxColumn(PropertyDescriptor)
 // System.Windows.Forms.DataGridTextBoxColumn.DataGridTextBoxColumn(PropertyDescriptor, string)
 
 /*

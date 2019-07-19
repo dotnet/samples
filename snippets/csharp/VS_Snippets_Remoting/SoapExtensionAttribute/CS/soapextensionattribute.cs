@@ -1,4 +1,4 @@
-// System.Web.Services.Protocols.SoapExtensionAttribute
+﻿// System.Web.Services.Protocols.SoapExtensionAttribute
 // System.Web.Services.Protocols.SoapExtensionAttribute.ExtensionType
 // System.Web.Services.Protocols.SoapExtensionAttribute.Priority
 

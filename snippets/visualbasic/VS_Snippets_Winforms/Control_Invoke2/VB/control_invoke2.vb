@@ -1,4 +1,4 @@
-' System.Windows.Forms.Control.Invoke(Delegate);
+﻿' System.Windows.Forms.Control.Invoke(Delegate);
 ' <Snippet1>
 ' The following example demonstrates the 'Invoke(Delegate)' method of 'Control class.
 ' A 'ListBox' and a 'Button' control are added to a form, containing a delegate

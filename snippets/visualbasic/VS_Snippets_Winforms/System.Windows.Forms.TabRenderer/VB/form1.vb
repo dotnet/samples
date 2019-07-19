@@ -1,4 +1,4 @@
-' This entire sample can go	in the TabRenderer overview. 
+﻿' This entire sample can go	in the TabRenderer overview. 
 '  - Snippet2 can be excerpted in DrawTabPage, DrawTabItem,	and	IsSupported.
 '  - Snippet2 could	also be	excerpted in the VisualStyles.TabItemState enum,
 '	 if	necessary.

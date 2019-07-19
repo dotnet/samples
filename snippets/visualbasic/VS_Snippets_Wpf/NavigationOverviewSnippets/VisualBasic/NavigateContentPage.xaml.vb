@@ -1,4 +1,4 @@
-Namespace SDKSample
+﻿Namespace SDKSample
 	Partial Public Class NavigateContentPage
 		Inherits Page
 		Public Sub New()

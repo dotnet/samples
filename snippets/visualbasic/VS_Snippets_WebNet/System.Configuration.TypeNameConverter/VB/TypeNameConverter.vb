@@ -1,4 +1,4 @@
- ' <Snippet1>
+﻿ ' <Snippet1>
 Imports System
 Imports System.IO
 Imports System.ComponentModel

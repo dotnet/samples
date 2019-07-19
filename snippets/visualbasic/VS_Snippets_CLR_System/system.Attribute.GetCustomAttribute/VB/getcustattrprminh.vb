@@ -1,4 +1,4 @@
-'<Snippet3>
+﻿'<Snippet3>
 ' Example for the Attribute.GetCustomAttribute( ParameterInfo, Type, Boolean ) 
 ' method.
 Imports System

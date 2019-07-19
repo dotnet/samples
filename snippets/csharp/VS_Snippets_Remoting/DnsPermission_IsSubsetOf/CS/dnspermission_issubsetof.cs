@@ -1,4 +1,4 @@
-/*
+﻿/*
    This program demonstrates the  'IsSubsetOf' method of 'DnsPermission' class.
    'IsSubsetOf' method returns true, if the current DnsPermission instance allows no
    more access to DNS servers than does the specified 'DnsPermission' instance.

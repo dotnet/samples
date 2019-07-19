@@ -1,4 +1,4 @@
-//<SnippetApplicationCODE>
+﻿//<SnippetApplicationCODE>
 using System;
 using System.Windows;
 

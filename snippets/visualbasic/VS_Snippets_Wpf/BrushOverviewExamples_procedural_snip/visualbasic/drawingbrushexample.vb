@@ -1,4 +1,4 @@
-' <SnippetGraphicsMMDrawingBrushAsButtonBackgroundExampleWholePage>
+﻿' <SnippetGraphicsMMDrawingBrushAsButtonBackgroundExampleWholePage>
 
 Imports Microsoft.VisualBasic
 Imports System

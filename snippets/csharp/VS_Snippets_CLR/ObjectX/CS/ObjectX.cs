@@ -1,4 +1,4 @@
-//Types:System.Object Vendor: Richter
+﻿//Types:System.Object Vendor: Richter
 //<snippet1>
 using System;
 

@@ -1,4 +1,4 @@
-// This file is for miscellaneous, tiny snippets that do not need to exist within a wider scope.
+﻿// This file is for miscellaneous, tiny snippets that do not need to exist within a wider scope.
 // Do not wrap the entire file in a snippet tag for use in any topic.
 
 #region Using directives

@@ -1,4 +1,4 @@
-'<Snippet2>
+﻿'<Snippet2>
 ' Example of the TimeSpan Addition and Subtraction operators.
 Imports System
 Imports Microsoft.VisualBasic

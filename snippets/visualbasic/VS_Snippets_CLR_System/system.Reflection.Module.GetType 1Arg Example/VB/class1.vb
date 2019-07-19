@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 Imports System.Reflection
 
 'This code assumes that the root namespace is set to empty("").

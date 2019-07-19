@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 
 Imports System.Web.Compilation
 Imports System.Security

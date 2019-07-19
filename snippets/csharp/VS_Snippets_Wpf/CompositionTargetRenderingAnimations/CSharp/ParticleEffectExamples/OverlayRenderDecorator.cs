@@ -1,4 +1,4 @@
-namespace Microsoft.Samples.PerFrameAnimations
+﻿namespace Microsoft.Samples.PerFrameAnimations
 {
     using System;
     using System.Collections;

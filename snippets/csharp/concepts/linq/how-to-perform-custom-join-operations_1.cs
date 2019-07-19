@@ -1,4 +1,4 @@
-            class CustomJoins
+﻿            class CustomJoins
             {
 
                 #region Data

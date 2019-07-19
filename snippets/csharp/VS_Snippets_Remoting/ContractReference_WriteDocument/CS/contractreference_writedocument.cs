@@ -1,4 +1,4 @@
-// System.Web.Services.Discovery.ContractReference.WriteDocument
+﻿// System.Web.Services.Discovery.ContractReference.WriteDocument
 
  /*
 The following example demonstrates the 'WriteDocument' method of 

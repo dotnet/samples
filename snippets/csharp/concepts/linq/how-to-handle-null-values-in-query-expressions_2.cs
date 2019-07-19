@@ -1,4 +1,4 @@
-                void TestMethod(Northwind db)
+﻿                void TestMethod(Northwind db)
                 {
                     var query =
                         from o in db.Orders

@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
 // Name this C# file HandlerTest.cs and compile it with the
 // command line: csc /t:library /r:System.Web.dll HandlerTest.cs.
 // Copy HandlerTest.dll to your \bin directory.

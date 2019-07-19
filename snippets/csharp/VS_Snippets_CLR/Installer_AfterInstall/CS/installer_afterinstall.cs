@@ -1,4 +1,4 @@
-/*
+﻿/*
    System.Configuration.Install.Installer.AfterInstall
 
    The following example demonstrates the event 'AfterInstall' of the 

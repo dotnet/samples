@@ -1,4 +1,4 @@
-using System.Windows;
+﻿using System.Windows;
 using System.Collections.ObjectModel;
 
 namespace SDKSample

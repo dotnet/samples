@@ -1,4 +1,4 @@
-using System.EnterpriseServices;
+﻿using System.EnterpriseServices;
 
 [assembly: System.Reflection.AssemblyKeyFile("Transaction.snk")]
 // <snippet1>

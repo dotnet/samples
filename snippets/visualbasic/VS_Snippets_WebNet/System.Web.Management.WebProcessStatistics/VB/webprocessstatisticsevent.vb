@@ -1,4 +1,4 @@
- '*
+﻿ '*
 '  *File name: WebprocessStatistics.cs
 '  *Purpose: Implements a custom WebBaseEvent type 
 '  *that uses the webProcessStattistics

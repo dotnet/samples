@@ -1,4 +1,4 @@
-Option Infer On
+﻿Option Infer On
 
 ' <Snippet1>
 Module Example

@@ -1,4 +1,4 @@
-namespace WinFormsAutoScaling
+﻿namespace WinFormsAutoScaling
 {
     partial class Form1
     {

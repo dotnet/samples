@@ -1,4 +1,4 @@
-' System.Runtime.Remoting.Channels.IChannelSender
+﻿' System.Runtime.Remoting.Channels.IChannelSender
 ' System.Runtime.Remoting.Channels.IChannelSender.CreateMessageSink()
 
 ' The following program demonstrates the usage of IChannelSender 

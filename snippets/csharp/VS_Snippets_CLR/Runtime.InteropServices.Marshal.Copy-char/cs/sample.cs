@@ -1,4 +1,4 @@
-//<SNIPPET1>
+﻿//<SNIPPET1>
 // Remember that the actual size of System.Char in unmanaged memory is 2.
 using System;
 using System.Runtime.InteropServices;

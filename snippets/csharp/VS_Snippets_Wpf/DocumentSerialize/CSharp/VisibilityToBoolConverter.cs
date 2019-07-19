@@ -1,4 +1,4 @@
-// DocumentSerialize SDK Sample - VisibilityToBoolConverter.cs
+﻿// DocumentSerialize SDK Sample - VisibilityToBoolConverter.cs
 // Copyright (c) Microsoft Corporation. All rights reserved.
 
 using System;

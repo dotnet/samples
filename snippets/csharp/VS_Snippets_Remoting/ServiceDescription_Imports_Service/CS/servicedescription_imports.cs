@@ -1,4 +1,4 @@
-// System.Web.Services.Description.ServiceDescription.Imports
+﻿// System.Web.Services.Description.ServiceDescription.Imports
 
 /* The following program demonstrates the property 'Imports' of 'ServiceDescription' class.
    The input to the program is a WSDL file 'ServiceDescription_Imports_Input_CS.wsdl' which 

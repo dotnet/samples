@@ -1,4 +1,4 @@
-/* This program demonstrates the "Add" method of "WebHeaderCollection" class.
+﻿/* This program demonstrates the "Add" method of "WebHeaderCollection" class.
    It uses the "Add" method of "WebHeaderCollection" class  to add the 'Accept-Language' header in the request.
    The 'Accept-Language' header is used in a request to specify the language preferences of the user. The server 
    can use the language preferences specified to generate output for that particular language. 

@@ -1,4 +1,4 @@
-' System.Web.Services.Description.OperationFaultCollection.Add
+﻿' System.Web.Services.Description.OperationFaultCollection.Add
 
 ' The following example demonstrates the 'Add' method of the
 ' 'OperationFaultCollection' class. Based on 'StockQuote_vb.wsdl', the program generates a WSDL file

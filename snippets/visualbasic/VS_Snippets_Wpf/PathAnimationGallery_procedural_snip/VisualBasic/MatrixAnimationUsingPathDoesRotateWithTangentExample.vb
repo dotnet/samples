@@ -1,4 +1,4 @@
-' <SnippetMatrixAnimationUsingPathDoesRotateWithTangentWholePage>
+﻿' <SnippetMatrixAnimationUsingPathDoesRotateWithTangentWholePage>
 
 Imports System
 Imports System.Windows

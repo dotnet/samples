@@ -1,4 +1,4 @@
-' System.Net.HttpWebResponse.ResponseUri
+﻿' System.Net.HttpWebResponse.ResponseUri
 'This program demonstrates the 'ResponseUri' property of the 'HttpWebResponse' class
 'It creates a web request and queries for a response.It checks if the original Uri 
 'was redirected by the server. 

@@ -1,4 +1,4 @@
-namespace Microsoft.AdoDotNet.CodeSamples
+﻿namespace Microsoft.AdoDotNet.CodeSamples
 {
     partial class Form1
     {

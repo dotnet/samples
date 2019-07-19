@@ -1,4 +1,4 @@
-// <Internal>
+﻿// <Internal>
 // This program contains examples for the following types and methods:
 // System.Net.FileWebRequest.GetResponse;
 // </Internal>

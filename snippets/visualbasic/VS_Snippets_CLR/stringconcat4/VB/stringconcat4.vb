@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Public Class ConcatTest
     Public Shared Sub Main()
         Dim fName As String = "Simon"

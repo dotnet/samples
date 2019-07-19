@@ -1,4 +1,4 @@
-' System.Diagnostics.CounterCreationDataCollection.Contains(CounterCreationData)
+﻿' System.Diagnostics.CounterCreationDataCollection.Contains(CounterCreationData)
 ' System.Diagnostics.CounterCreationDataCollection.Remove(CounterCreationData)
 
 ' The following program demonstrates 'Contains' and 'Remove' methods of

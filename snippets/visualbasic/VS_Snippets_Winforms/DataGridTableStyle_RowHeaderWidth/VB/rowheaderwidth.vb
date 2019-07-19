@@ -1,4 +1,4 @@
-' System.Windows.Forms.DataGridTableStyle.RowHeaderWidth
+﻿' System.Windows.Forms.DataGridTableStyle.RowHeaderWidth
 ' System.Windows.Forms.DataGridTableStyle.RowHeaderWidthChanged
 
 '   The following program demonstrates the 'RowHeaderWidth' 

@@ -1,4 +1,4 @@
-// The following example uses BaseRemove and BaseRemoveAt to remove elements from a NameObjectCollectionBase.
+﻿// The following example uses BaseRemove and BaseRemoveAt to remove elements from a NameObjectCollectionBase.
 // For an expanded version of this example, see the NameObjectCollectionBase class topic.
 
 // <snippet1>

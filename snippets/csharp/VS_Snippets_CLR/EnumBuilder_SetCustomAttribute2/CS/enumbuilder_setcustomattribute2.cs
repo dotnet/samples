@@ -1,4 +1,4 @@
-// System.Reflection.Emit.EnumBuilder.GetCustomAttributes(bool)
+﻿// System.Reflection.Emit.EnumBuilder.GetCustomAttributes(bool)
 // System.Reflection.Emit.EnumBuilder.SetCustomAttribute(ConstructorInfo, byte[])
 
 /*

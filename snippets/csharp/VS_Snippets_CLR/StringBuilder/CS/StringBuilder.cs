@@ -1,4 +1,4 @@
-//Code Modification: Removed AppendLine and associated comment after the AppendFormat line.
+﻿//Code Modification: Removed AppendLine and associated comment after the AppendFormat line.
 //The CR/LF bytes introduces by AppendLine made the sb.Length appear incorrect.   
 // Before 
 //sb.AppendFormat("GHI{0}{1}", 'J', 'k');

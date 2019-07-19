@@ -1,4 +1,4 @@
-' This example demonstrates overriding the OnClick method of a 
+﻿' This example demonstrates overriding the OnClick method of a 
 ' custom TextBox control.
 
 Imports System

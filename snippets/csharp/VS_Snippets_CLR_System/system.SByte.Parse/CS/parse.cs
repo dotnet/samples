@@ -1,4 +1,4 @@
-//<Snippet1>
+﻿//<Snippet1>
 // Example of the SByte.Parse( ) methods.
 using System;
 using System.Globalization;

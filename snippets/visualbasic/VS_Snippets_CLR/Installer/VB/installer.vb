@@ -1,4 +1,4 @@
-' System.Configuration.Install.Installer
+﻿' System.Configuration.Install.Installer
 
 ' The following program demonstrates the use of the 'Installer'
 ' class. It creates a class which inherits from 'Installer'.

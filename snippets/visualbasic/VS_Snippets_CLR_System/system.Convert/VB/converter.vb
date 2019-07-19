@@ -1,4 +1,4 @@
-Option Strict On
+﻿Option Strict On
 
 Namespace ConvertSnippet
    'This class is the snippet for the class System.Convert

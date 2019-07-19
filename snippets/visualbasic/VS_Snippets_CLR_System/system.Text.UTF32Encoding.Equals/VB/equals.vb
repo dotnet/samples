@@ -1,4 +1,4 @@
-' The following code example creates instances of the UTF32Encoding class using different parameter values and then checks them for equality.
+﻿' The following code example creates instances of the UTF32Encoding class using different parameter values and then checks them for equality.
 
 ' <Snippet1>
 Imports System

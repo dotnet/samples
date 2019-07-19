@@ -1,4 +1,4 @@
-' System.Web.Services.Discovery.ContractReference.Contract
+﻿' System.Web.Services.Discovery.ContractReference.Contract
 ' 
 ' The following example demonstrates the 'Contract' property of the 'ContractReference'
 ' class.

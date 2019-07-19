@@ -1,4 +1,4 @@
-' Visual Basic .NET Document
+﻿' Visual Basic .NET Document
 ' Illustrates System.Convert.ToString(String) returns the same string.
 Option Strict On
 

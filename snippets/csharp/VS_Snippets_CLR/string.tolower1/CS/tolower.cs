@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 // Sample for String.ToLower(CultureInfo)
 
 using System;

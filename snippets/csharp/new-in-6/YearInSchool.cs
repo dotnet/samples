@@ -1,4 +1,4 @@
-namespace NewStyle
+﻿namespace NewStyle
 {
     public enum Standing
     {

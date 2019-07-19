@@ -1,4 +1,4 @@
-/*
+﻿/*
    This program converts a string containing an IP address, in dotted-quad notation for 
    IPv4 or in colon-hexadecimal for IPv6, into an instance of the IPAddress class.
    Then it uses the overloaded IPAddress ToString method to display the address in 

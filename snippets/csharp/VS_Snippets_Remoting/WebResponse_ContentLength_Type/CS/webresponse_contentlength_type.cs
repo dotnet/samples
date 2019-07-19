@@ -1,4 +1,4 @@
-// System.Net.WebResponse.ContentLength;System.Net.WebResponse.ContentType
+﻿// System.Net.WebResponse.ContentLength;System.Net.WebResponse.ContentType
 
 /* This program demonstrates the 'ContentLength' and 'ContentType' property of 'WebResponse' class
 It creates a web request and queries for a response.It then prints the content length and content type

@@ -1,4 +1,4 @@
-' Topic: XML Descendant Axis Property
+﻿' Topic: XML Descendant Axis Property
 '<Snippet26>  
 Imports <xmlns:ns = "http://SomeNamespace"> 
  

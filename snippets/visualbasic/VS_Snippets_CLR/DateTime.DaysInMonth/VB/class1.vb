@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Class Example
    Public Shared Sub Main()
       Const July As Integer = 7

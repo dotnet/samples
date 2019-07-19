@@ -1,4 +1,4 @@
-'<SnippetWindowWithFileExitCODEBEHIND>
+﻿'<SnippetWindowWithFileExitCODEBEHIND>
 
 Imports System.Windows
 

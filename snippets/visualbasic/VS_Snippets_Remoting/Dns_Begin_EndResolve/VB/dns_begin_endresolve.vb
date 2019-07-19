@@ -1,4 +1,4 @@
- '
+﻿ '
 '   This program demonstrates 'BeginResolve' and 'EndResolve' methods of Dns class.
 '   It obtains the 'IPHostEntry' object by calling 'BeginResolve' and 'EndResolve' method 
 '   of 'Dns' class by passing a URL, a callback function and an instance of 'RequestState'

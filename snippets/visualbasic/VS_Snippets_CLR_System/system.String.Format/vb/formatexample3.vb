@@ -1,4 +1,4 @@
-' <Snippet3>
+﻿' <Snippet3>
 Public Enum Color
    Yellow = 1
    Blue = 2

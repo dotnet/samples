@@ -1,4 +1,4 @@
-// QuickContacts.cs
+﻿// QuickContacts.cs
 using System;
 using System.ComponentModel;
 using System.Collections;

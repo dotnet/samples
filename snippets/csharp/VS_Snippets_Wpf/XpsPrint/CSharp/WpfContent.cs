@@ -1,4 +1,4 @@
-// XpsPrint SDK Sample - WpfContent.cs
+﻿// XpsPrint SDK Sample - WpfContent.cs
 // Copyright (c) Microsoft Corporation. All rights reserved.
 //
 // This file provides the methods for creating the default

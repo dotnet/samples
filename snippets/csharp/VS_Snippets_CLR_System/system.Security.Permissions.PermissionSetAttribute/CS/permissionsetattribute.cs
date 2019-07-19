@@ -1,4 +1,4 @@
-//<Snippet1>
+﻿//<Snippet1>
 // The #define statement for BuildFile must be included the first time this sample is run.  
 // This causes the sample to create a file named 'LocalIntranet.xml' in the c:\temp folder.  
 // After creating the LocalInternet.xml file, comment out the #define statement and rerun 

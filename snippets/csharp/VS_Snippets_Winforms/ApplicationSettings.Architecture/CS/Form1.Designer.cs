@@ -1,4 +1,4 @@
-namespace ApplicationSettingsArchitectureCS
+﻿namespace ApplicationSettingsArchitectureCS
 {
     partial class Form1
     {

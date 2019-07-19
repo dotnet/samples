@@ -1,4 +1,4 @@
-/**
+﻿/**
   *File name: WebProcessInformation.cs
   *Purpose: Implements a custom type to acess 
   *the process information.: 

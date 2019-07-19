@@ -1,4 +1,4 @@
-// System.Runtime.Remoting.Lifetime.ILease
+﻿// System.Runtime.Remoting.Lifetime.ILease
 // System.Runtime.Remoting.Lifetime.ILease.InitialLeaseTime
 // System.Runtime.Remoting.Lifetime.ILease.CurrentLeaseTime
 // System.Runtime.Remoting.Lifetime.ILease.RenewOnCallTime

@@ -1,4 +1,4 @@
-Namespace SDKSample
+﻿Namespace SDKSample
 '<SnippetDPDeclarationCODE>
 Partial Public Class RetainedStateDPPage
 	Inherits Page

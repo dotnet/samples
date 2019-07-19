@@ -1,4 +1,4 @@
-// System.Web.Services.Description.ServiceDescriptionCollection
+﻿// System.Web.Services.Description.ServiceDescriptionCollection
 
 /*The following program demonstrates the 'ServiceDescriptionCollection' class.
   It creates two 'ServiceDescription' objects and add them to

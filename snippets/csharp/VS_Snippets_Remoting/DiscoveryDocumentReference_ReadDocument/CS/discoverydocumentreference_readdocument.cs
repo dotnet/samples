@@ -1,4 +1,4 @@
-// System.Web.Services.Discovery.DiscoveryDocumentReference.ReadDocument(stream)
+﻿// System.Web.Services.Discovery.DiscoveryDocumentReference.ReadDocument(stream)
 
 /*
    This program demonstrates the 'ReadDocument(stream)' of 'DiscoveryDocumentReference'

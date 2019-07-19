@@ -1,4 +1,4 @@
-Option Strict On
+﻿Option Strict On
 
 ' <Snippet1>
 Imports System.Collections.Generic

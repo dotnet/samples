@@ -1,4 +1,4 @@
-/*
+﻿/*
    This program demonstrates the 'Intersect' and 'Union' methods of 'DnsPermission' class.
    It creates a 'DnsPermission' instance that is the Union/Intersection of current permission 
    instance and specified permission instance.

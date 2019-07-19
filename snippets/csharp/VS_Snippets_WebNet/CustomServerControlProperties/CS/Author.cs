@@ -1,4 +1,4 @@
-// <Snippet2>
+﻿// <Snippet2>
 // Author.cs
 using System;
 using System.Collections;

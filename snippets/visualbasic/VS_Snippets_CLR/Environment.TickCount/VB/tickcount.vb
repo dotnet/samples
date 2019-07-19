@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 
 ' Sample for the Environment.TickCount property.
 ' TickCount cycles between Int32.MinValue, which is a negative 

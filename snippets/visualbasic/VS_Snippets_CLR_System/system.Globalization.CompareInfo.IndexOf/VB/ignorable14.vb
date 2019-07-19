@@ -1,4 +1,4 @@
-' Visual Basic .NET Document
+﻿' Visual Basic .NET Document
 Option Strict On
 ' <Snippet15>
 Imports System.Globalization

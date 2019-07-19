@@ -1,4 +1,4 @@
-Imports Microsoft.VisualBasic.CompilerServices
+﻿Imports Microsoft.VisualBasic.CompilerServices
 
 Public Module Example
    Sub Main(args As String())

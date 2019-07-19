@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 
 // Note: you must compile this sample using the unsafe flag.
 // From the command line, type the following: csc sample.cs /unsafe

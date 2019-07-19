@@ -1,4 +1,4 @@
-'<Snippet4>
+﻿'<Snippet4>
 ' Example of the Decimal.ToSByte and Decimal.ToByte methods.
 Imports System
 Imports Microsoft.VisualBasic

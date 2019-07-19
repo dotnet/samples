@@ -1,4 +1,4 @@
-//Types:System.AppDomain,System.AppDomainSetup Vendor: Richter
+﻿//Types:System.AppDomain,System.AppDomainSetup Vendor: Richter
 //Translated by REDMOND\glennha
 //<snippet1>
 using System;

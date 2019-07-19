@@ -1,4 +1,4 @@
-' SyncLock Statement
+﻿' SyncLock Statement
 ' 14501703298f4d43b139c4b6366af176
 
 ' <snippet21>

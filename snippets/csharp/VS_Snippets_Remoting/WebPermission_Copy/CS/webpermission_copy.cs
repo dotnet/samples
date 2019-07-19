@@ -1,4 +1,4 @@
-// System.Net.WebPermission.WebPermission(PermissionState);System.Net.WebPermission.Copy;
+﻿// System.Net.WebPermission.WebPermission(PermissionState);System.Net.WebPermission.Copy;
 /**
  * This program demonstrates the  WebPermission(PermissionState) constructor and 
  * Copy method of the WebPermission class .

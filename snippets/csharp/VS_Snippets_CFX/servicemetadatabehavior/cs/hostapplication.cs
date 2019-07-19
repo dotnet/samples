@@ -1,4 +1,4 @@
-// snippet code for ServiceMetadataBehavior
+﻿// snippet code for ServiceMetadataBehavior
 // This code does not work, all snippet code is generic
 // Most members are obsolete.
 // a-arhu 8/15/06

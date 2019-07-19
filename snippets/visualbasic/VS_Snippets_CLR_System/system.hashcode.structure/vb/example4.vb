@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Public Structure Path
     Implements IEquatable(Of Path)
 

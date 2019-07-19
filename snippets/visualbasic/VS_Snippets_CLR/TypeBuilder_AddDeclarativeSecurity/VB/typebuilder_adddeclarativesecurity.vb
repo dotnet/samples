@@ -1,4 +1,4 @@
-' System.Reflection.Emit.TypeBuilder.AddDeclarativeSecurity
+﻿' System.Reflection.Emit.TypeBuilder.AddDeclarativeSecurity
 
 ' The following example demonstrates method AddDeclarativeSecurity
 ' of 'TypeBuilder' class.

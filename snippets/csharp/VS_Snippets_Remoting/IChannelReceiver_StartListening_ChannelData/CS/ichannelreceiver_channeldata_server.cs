@@ -1,4 +1,4 @@
-//  System.Runtime.Remoting.Channels.IChannelReceiver
+﻿//  System.Runtime.Remoting.Channels.IChannelReceiver
 //  System.Runtime.Remoting.Channels.IChannelReceiver.ChannelData
 //  System.Runtime.Remoting.Channels.IChannelReceiver.GetUrlsForUri
 //  System.Runtime.Remoting.Channels.IChannelReceiver.StartListening

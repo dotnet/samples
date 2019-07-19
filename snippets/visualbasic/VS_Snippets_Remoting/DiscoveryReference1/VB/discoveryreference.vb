@@ -1,4 +1,4 @@
-' System.Web.Services.Discovery.DiscoveryReference
+﻿' System.Web.Services.Discovery.DiscoveryReference
 
 '   This program demonstrates 'DiscoveryReference' class. 
 '   DiscoveryReference class is derived in 'MyDiscoveryReferenceClass'. A

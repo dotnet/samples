@@ -1,4 +1,4 @@
-
+﻿
 Module Example
    Public Sub Main()
       Dim rnd As New Random()
