@@ -1,4 +1,4 @@
-﻿//Types:System.Object Vendor: Richter
+//Types:System.Object Vendor: Richter
 //<snippet1>
 using System;
 
@@ -20,7 +20,7 @@ class Point
         if (obj.GetType() != this.GetType()) return false;
 
         // Return true if  x and y fields match.
-        Point other = (Point) obj;
+        var other = (Point) obj;
         return (this.x == other.x) && (this.y == other.y);
     }
     //</snippet2>
@@ -37,7 +37,7 @@ class Point
     // Return the point's value as a string.
     public override String ToString() 
     {
-        return String.Format("({0}, {1})", x, y);
+        return $"({x}, {y})";
     }
     //</snippet4>
 
@@ -55,13 +55,13 @@ public sealed class App
     static void Main() 
     {
         // Construct a Point object.
-        Point p1 = new Point(1,2);
+        var p1 = new Point(1,2);
 
         // Make another Point object that is a copy of the first.
-        Point p2 = p1.Copy();
+        var p2 = p1.Copy();
 
         // Make another variable that references the first Point object.
-        Point p3 = p1;
+        var p3 = p1;
 
 	//<snippet6>
         // The line below displays false because p1 and p2 refer to two different objects.
@@ -78,7 +78,7 @@ public sealed class App
         
         //<snippet8> 
         // The line below displays: p1's value is: (1, 2)
-        Console.WriteLine("p1's value is: {0}", p1.ToString());
+        Console.WriteLine($"p1's value is: {p1.ToString()}");
         //</snippet8>
     }
 }
