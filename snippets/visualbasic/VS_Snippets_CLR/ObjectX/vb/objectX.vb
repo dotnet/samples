@@ -1,4 +1,4 @@
-﻿'Types:System.Object Vendor: Richter
+'Types:System.Object Vendor: Richter
 ' <snippet1>
 ' The Point class is derived from System.Object.
 Class Point
@@ -26,14 +26,14 @@ Class Point
     '<snippet3>
     ' Return the XOR of the x and y fields.
     Public Overrides Function GetHashCode() As Integer 
-        Return (x << 1) XOr y
+        Return (x << 1) XOR y
     End Function 
     '</snippet3>
 
     '<snippet4>
     ' Return the point's value as a string.
     Public Overrides Function ToString() As String 
-        Return String.Format("({0}, {1})", x, y)
+        Return $"({x}, {y})"
     End Function
     '</snippet4>
 
