@@ -14,14 +14,14 @@ namespace Enums
     [Flags]
     enum Days
     {
-        None = 0x0,
-        Sunday = 0x1,
-        Monday = 0x2,
-        Tuesday = 0x4,
-        Wednesday = 0x8,
-        Thursday = 0x10,
-        Friday = 0x20,
-        Saturday = 0x40
+        None        = 0,
+        Sunday      = 1,
+        Monday      = 2,
+        Tuesday     = 4,
+        Wednesday   = 8,
+        Thursday    = 16,
+        Friday      = 32,
+        Saturday    = 64
     }
     class MyClass
     {
