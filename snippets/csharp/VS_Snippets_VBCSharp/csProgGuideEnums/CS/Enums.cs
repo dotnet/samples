@@ -19,9 +19,9 @@ namespace Enums
         Monday = 0x2,
         Tuesday = 0x4,
         Wednesday = 0x8,
-        Thursday = 0x10,
-        Friday = 0x20,
-        Saturday = 0x40
+        Thursday = 0x16,
+        Friday = 0x32,
+        Saturday = 0x64
     }
     class MyClass
     {
