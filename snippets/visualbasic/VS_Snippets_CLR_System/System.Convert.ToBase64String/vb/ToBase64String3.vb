@@ -19,7 +19,7 @@ Module Example
        Console.WriteLine("   Sum of elements: {0:N0}", originalTotal)                  
        Console.WriteLine()
        
-       ' Convert the array to a base 64 sring.
+       ' Convert the array to a base 64 string.
        Dim s As String = Convert.ToBase64String(bytes, 
                                                Base64FormattingOptions.InsertLineBreaks)
        Console.WriteLine("The base 64 string:{1}   {0}{1}", 
