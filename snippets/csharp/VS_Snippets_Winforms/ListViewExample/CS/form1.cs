@@ -133,7 +133,7 @@ namespace ListViewExample
 			listView1.Columns.Add("Column 4", -2, HorizontalAlignment.Center);
 
 			//Add the items to the ListView.
-            listView1.Items.AddRange(new ListViewItem[]{item1,item2,item3});
+			listView1.Items.AddRange(new ListViewItem[]{item1,item2,item3});
 
 			// Create two ImageList objects.
 			ImageList imageListSmall = new ImageList();
