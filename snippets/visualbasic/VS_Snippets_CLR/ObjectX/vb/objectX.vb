@@ -72,7 +72,7 @@ NotInheritable Public Class App
         
         '<snippet8> 
         ' The line below displays: p1's value is: (1, 2)
-        Console.WriteLine("p1's value is: {0}", p1.ToString())
+        Console.WriteLine($"p1's value is: {p1.ToString()}")
     
     End Sub
         '</snippet8>
