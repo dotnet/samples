@@ -10,8 +10,8 @@ public class Example
        Console.WriteLine("The byte array: ");
        Console.WriteLine("   {0}\n", BitConverter.ToString(bytes));
        
-       // Convert the array to a base 64 sring.
-       String s = Convert.ToBase64String(bytes);
+       // Convert the array to a base 64 string.
+       string s = Convert.ToBase64String(bytes);
        Console.WriteLine("The base 64 string:\n   {0}\n", s);
        
        // Restore the byte array.
