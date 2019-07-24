@@ -5,7 +5,7 @@ Module Module1
     Sub Main()
 
         ' Declare an instance of the class and assign a value to its field.
-        Dim c1 As Class1 = New Class1()
+        Dim c1 As New Class1()
         c1.Field = 5
         Console.WriteLine(c1.Field)
         ' Output: 5
