@@ -74,6 +74,10 @@ namespace operators
             NewOperator.Examples();
             Console.WriteLine();
 
+            Console.WriteLine("=============== sizeof operator examples =======");
+            SizeOfOperator.Main();
+            Console.WriteLine();
+
             Console.WriteLine("============ stackalloc operator examples ======");
             StackallocOperator.Examples();
             Console.WriteLine();
