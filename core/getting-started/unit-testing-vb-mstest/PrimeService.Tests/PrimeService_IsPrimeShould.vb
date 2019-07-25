@@ -10,7 +10,7 @@ Namespace PrimeService.Tests
         <DataRow(-1)>
         <DataRow(0)>
         <DataRow(1)>
-        Sub ReturnFalseGivenValuesLessThan2(value As Integer)
+        Sub IsPrime_ValuesLessThan2_ReturnFalse(value As Integer)
             Dim result As Boolean = _primeService.IsPrime(value)
 
             Assert.IsFalse(result, $"{value} should not be prime")
