@@ -6,7 +6,7 @@ Namespace Examples.System.Net
         Public Shared Sub Main()
             ' Create a request for the URL.   
             Dim request As WebRequest =
-              WebRequest.Create("http://www.contoso.com/default.html")
+              WebRequest.Create("https://docs.microsoft.com")
             ' If required by the server, set the credentials.  
             request.Credentials = CredentialCache.DefaultCredentials
 
