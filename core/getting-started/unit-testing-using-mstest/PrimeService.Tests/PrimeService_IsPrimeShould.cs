@@ -14,7 +14,7 @@ namespace Prime.UnitTests.Services
         }
 
         [TestMethod]
-        public void ReturnFalseGivenValueOf1()
+        public void IsPrime_InputIs1_ReturnFalse()
         {
             var result = _primeService.IsPrime(1);
 
@@ -26,7 +26,7 @@ namespace Prime.UnitTests.Services
         [DataRow(-1)]
         [DataRow(0)]
         [DataRow(1)]
-        public void ReturnFalseGivenValuesLessThan2(int value)
+        public void IsPrime_ValuesLessThan2_ReturnFalse(int value)
         {
             var result = _primeService.IsPrime(value);
 
