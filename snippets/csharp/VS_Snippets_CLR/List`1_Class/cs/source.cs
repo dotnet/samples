@@ -1,5 +1,4 @@
 ﻿// REDMOND\glennha
-// <Snippet1>
 using System;
 using System.Collections.Generic;
 
@@ -7,6 +6,7 @@ public class Example
 {
     public static void Main()
     {
+// <Snippet1>
 //<snippet2>
         List<string> dinosaurs = new List<string>();
 
@@ -62,8 +62,6 @@ public class Example
         Console.WriteLine("\nClear()");
         Console.WriteLine("Capacity: {0}", dinosaurs.Capacity);
         Console.WriteLine("Count: {0}", dinosaurs.Count);
-    }
-}
 
 /* This code example produces the following output:
 
@@ -109,4 +107,6 @@ Count: 0
  */
 // </Snippet1>
 
+    }
+}
 
