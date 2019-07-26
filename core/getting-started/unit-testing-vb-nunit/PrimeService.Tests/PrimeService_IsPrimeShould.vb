@@ -1,4 +1,4 @@
-﻿Imports NUnit.Framework
+Imports NUnit.Framework
 
 Namespace PrimeService.Tests
     '<Sample_TestCode>
@@ -9,7 +9,7 @@ Namespace PrimeService.Tests
         <TestCase(-1)>
         <TestCase(0)>
         <TestCase(1)>
-        Sub ReturnFalseGivenValuesLessThan2(value As Integer)
+        Sub IsPrime_ValuesLessThan2_ReturnFalse(value As Integer)
             Dim result As Boolean = _primeService.IsPrime(value)
 
             Assert.IsFalse(result, $"{value} should not be prime")
@@ -19,7 +19,7 @@ Namespace PrimeService.Tests
         <TestCase(3)>
         <TestCase(5)>
         <TestCase(7)>
-        Public Sub ReturnTrueGivenPrimesLessThan10(value As Integer)
+        Public Sub IsPrime_PrimesLessThan10_ReturnTrue(value As Integer)
             Dim result As Boolean = _primeService.IsPrime(value)
 
             Assert.IsTrue(result, $"{value} should be prime")
@@ -29,7 +29,7 @@ Namespace PrimeService.Tests
         <TestCase(6)>
         <TestCase(8)>
         <TestCase(9)>
-        Public Sub ReturnFalseGivenNonPrimesLessThan10(value As Integer)
+        Public Sub IsPrime_NonPrimesLessThan10_ReturnFalse(value As Integer)
             Dim result As Boolean = _primeService.IsPrime(value)
 
             Assert.IsFalse(result, $"{value} should not be prime")
