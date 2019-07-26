@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp3.0;net472</TargetFrameworks>
+    <ApplicationManifest Condition="'$(TargetFramework)' == 'net472'">netfx.manifest</ApplicationManifest>
+    <EnableComHosting Condition="'$(TargetFramework)' == 'netcoreapp3.0'">true</EnableComHosting>
+    <EnableRegFreeCom Condition="'$(TargetFramework)' == 'netcoreapp3.0'">true</EnableRegFreeCom>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Contracts\IServer.cs" Link="IServer.cs" />
+  </ItemGroup>
+
+</Project>

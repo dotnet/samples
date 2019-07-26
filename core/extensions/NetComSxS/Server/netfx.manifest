@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+
+  <assemblyIdentity
+      type="win32"
+      name="Server"
+      version="1.0.0.0" />
+
+  <clrClass
+      clsid="{4378D242-7D40-441D-8743-B93068C43B30}"
+      name="Server.ServerImpl"
+      runtimeVersion="v4.0.30319"
+      threadingModel="Both"></clrClass>
+</assembly>
