@@ -66,8 +66,7 @@ namespace KeywordsUberProject
         22
         */
         //</snippet9>
-    }
-
+    
     namespace newModifier2
     {
     //<snippet10>
@@ -108,5 +107,6 @@ namespace KeywordsUberProject
     200
     */
     //</snippet10>
+    }
     }
 }
