@@ -1,4 +1,4 @@
-' <snippet1>
+﻿' <snippet1>
 ' Create a code-behind user control that is cached
 ' for 20 seconds and uses the VaryByCustom property
 ' to vary the cached control according to the type of browser

@@ -1,4 +1,4 @@
-
+﻿
 'This program checks if whether address entered by the user is a loopback address.  
 'The program invokes the IPAddress.Parse method to translate the address 
 'input string into the correct internal format.

@@ -1,4 +1,4 @@
-' The following code example calls IsLeapYear for five years in each of the eras.
+﻿' The following code example calls IsLeapYear for five years in each of the eras.
 
 ' <snippet1>
 Imports System

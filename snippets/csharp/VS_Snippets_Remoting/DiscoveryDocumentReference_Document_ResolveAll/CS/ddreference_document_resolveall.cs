@@ -1,4 +1,4 @@
-// System.Web.Services.Discovery.DiscoveryDocumentReference.Document
+﻿// System.Web.Services.Discovery.DiscoveryDocumentReference.Document
 // System.Web.Services.Discovery.DiscoveryDocumentReference.ResolveAll()
 
 /*

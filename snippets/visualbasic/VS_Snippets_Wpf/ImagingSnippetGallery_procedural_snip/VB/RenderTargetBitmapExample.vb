@@ -1,4 +1,4 @@
- ' <SnippetRenderTargetBitmapCodeExampleWholePage>
+﻿ ' <SnippetRenderTargetBitmapCodeExampleWholePage>
 Imports System
 Imports System.Windows
 Imports System.Windows.Controls

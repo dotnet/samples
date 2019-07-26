@@ -1,4 +1,4 @@
-'<SnippetMyCustomContentStateCODE>
+﻿'<SnippetMyCustomContentStateCODE>
 
 Imports Microsoft.VisualBasic
 Imports System

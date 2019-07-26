@@ -1,4 +1,4 @@
-Imports System.Windows.Media.Animation
+﻿Imports System.Windows.Media.Animation
 
 Namespace Microsoft.Samples.MatrixExamples
 	''' <summary>

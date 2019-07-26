@@ -1,4 +1,4 @@
-namespace MySampleApp
+﻿namespace MySampleApp
 {
     using System;
     using System.Windows;

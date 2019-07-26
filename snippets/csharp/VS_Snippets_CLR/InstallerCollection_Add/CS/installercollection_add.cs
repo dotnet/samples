@@ -1,4 +1,4 @@
-// System.Configuration.Install.InstallerCollection
+﻿// System.Configuration.Install.InstallerCollection
 // System.Configuration.Install.InstallerCollection.Add(Installer)
 
 /*

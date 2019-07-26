@@ -1,4 +1,4 @@
-//<Snippet1>
+﻿//<Snippet1>
 // Example of selected TimeZone class elements.
 using System;
 using System.Globalization;

@@ -1,4 +1,4 @@
-' <SnippetStreamGeometryTriangleExampleWholePage>
+﻿' <SnippetStreamGeometryTriangleExampleWholePage>
 
 Imports System
 Imports System.Windows

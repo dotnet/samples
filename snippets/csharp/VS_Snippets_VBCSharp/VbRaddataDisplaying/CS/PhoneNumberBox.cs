@@ -1,4 +1,4 @@
-//<Snippet3>
+﻿//<Snippet3>
 using System.Windows.Forms;
 
 namespace CS

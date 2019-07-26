@@ -1,4 +1,4 @@
-//<Snippet1>
+﻿//<Snippet1>
 #define CONTRACTS_FULL
 
 using System;

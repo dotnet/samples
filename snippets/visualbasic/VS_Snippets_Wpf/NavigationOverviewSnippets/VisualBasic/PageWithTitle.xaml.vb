@@ -1,4 +1,4 @@
-'<SnippetPageTitleCODEBEHIND1>
+﻿'<SnippetPageTitleCODEBEHIND1>
 
 Namespace SDKSample
 	Partial Public Class PageWithTitle

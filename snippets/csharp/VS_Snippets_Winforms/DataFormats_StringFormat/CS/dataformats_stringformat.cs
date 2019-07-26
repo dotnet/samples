@@ -1,4 +1,4 @@
-// System.Windows.Forms.DataFormats.StringFormat
+﻿// System.Windows.Forms.DataFormats.StringFormat
 
 /*
  *  The following example demonstrates the 'StringFormat' field of 'DataFormats' class. 

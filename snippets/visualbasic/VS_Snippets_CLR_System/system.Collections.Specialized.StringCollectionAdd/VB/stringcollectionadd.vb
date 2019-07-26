@@ -1,4 +1,4 @@
-' The following code example adds new elements to the StringCollection.
+﻿' The following code example adds new elements to the StringCollection.
 
 ' <snippet1>
 Imports System

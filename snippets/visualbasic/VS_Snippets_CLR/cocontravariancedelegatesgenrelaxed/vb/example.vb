@@ -1,4 +1,4 @@
-'<Snippet1>
+﻿'<Snippet1>
 Public Class Type1 
 End Class
 Public Class Type2

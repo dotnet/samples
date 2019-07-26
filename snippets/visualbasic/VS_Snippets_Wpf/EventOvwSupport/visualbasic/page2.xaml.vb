@@ -1,4 +1,4 @@
-Namespace SDKSample
+﻿Namespace SDKSample
 	Partial Public Class EventOvw2
 		Inherits StackPanel
 '<SnippetEventSetterRef>

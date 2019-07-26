@@ -1,4 +1,4 @@
-'<Snippet1>
+﻿'<Snippet1>
 Public Class Form1
 
     Private Sub ButtonClickWork(ByVal sender As System.Object, ByVal e As System.EventArgs) _

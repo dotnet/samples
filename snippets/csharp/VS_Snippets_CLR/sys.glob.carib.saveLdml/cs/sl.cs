@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 // This example demonstrates the CultureAndRegionInfoBuilder.Save and 
 // CreateFromLdml methods.
 // Compile this example with a reference to sysglobl.dll.

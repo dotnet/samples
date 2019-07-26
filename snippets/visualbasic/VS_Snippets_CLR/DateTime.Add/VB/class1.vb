@@ -1,4 +1,4 @@
-Class Class1
+﻿Class Class1
    Public Shared Sub Main()
       ' <Snippet1>
       ' Calculate what day of the week is 36 days from this instant.

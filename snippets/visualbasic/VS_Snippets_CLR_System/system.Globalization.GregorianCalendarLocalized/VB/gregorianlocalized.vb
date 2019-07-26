@@ -1,4 +1,4 @@
-' The following code example prints a DateTime using a GregorianCalendar that is localized.
+﻿' The following code example prints a DateTime using a GregorianCalendar that is localized.
 
 ' <snippet1>
 Imports System

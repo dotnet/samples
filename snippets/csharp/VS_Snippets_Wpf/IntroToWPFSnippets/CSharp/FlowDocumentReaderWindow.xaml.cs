@@ -1,4 +1,4 @@
-//<SnippetFlowDocumentReaderCODEBEHIND>
+﻿//<SnippetFlowDocumentReaderCODEBEHIND>
 using System.Windows;
 using System.Windows.Documents;
 using System.IO;

@@ -1,4 +1,4 @@
-' <SnippetCompositeShapeCodeExampleWholePage>
+﻿' <SnippetCompositeShapeCodeExampleWholePage>
 
 Imports System
 Imports System.Windows

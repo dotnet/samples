@@ -1,4 +1,4 @@
-/// Class: System.Runtime.Remoting.SoapServices
+﻿/// Class: System.Runtime.Remoting.SoapServices
 ///    100    class
 ///    101    CodeXmlNamespaceForClrTypeNamespace()
 ///    102    DecodeXmlNamespaceForClrTypeNamespace()

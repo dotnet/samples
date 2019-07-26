@@ -1,4 +1,4 @@
-            int highestScore =
+﻿            int highestScore =
                 (from score in scores
                  select score)
                 .Max();

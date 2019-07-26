@@ -1,4 +1,4 @@
-' System.Diagnostics.EntryWrittenEventArgs.ctor()
+﻿' System.Diagnostics.EntryWrittenEventArgs.ctor()
 
 ' The following example demonstrates 'EntryWrittenEventArgs ()'
 ' constructor of the 'EntryWrittenEventArgs' class. It creates a custom 'EventLog'

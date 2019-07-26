@@ -1,4 +1,4 @@
-' System.Windows.Forms.TreeNode.ImageIndex
+﻿' System.Windows.Forms.TreeNode.ImageIndex
 ' System.Windows.Forms.TreeNode.SelectedImageIndex
 ' System.Windows.Forms.TreeView.ImageIndex
 ' System.Windows.Forms.TreeView.SelectedImageIndex

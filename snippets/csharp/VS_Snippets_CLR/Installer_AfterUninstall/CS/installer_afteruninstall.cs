@@ -1,4 +1,4 @@
-/*
+﻿/*
    System.Configuration.Install.Installer.AfterUninstall
 
    The following example demonstrates the event 'AfterUninstall' of the 

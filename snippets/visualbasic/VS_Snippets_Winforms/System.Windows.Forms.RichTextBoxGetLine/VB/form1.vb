@@ -1,4 +1,4 @@
-' The following example demonstrates using the RichTextBox.GetLineFromCharIndex
+﻿' The following example demonstrates using the RichTextBox.GetLineFromCharIndex
 ' method.
 Imports System.Windows.Forms
 

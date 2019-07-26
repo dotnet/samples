@@ -1,4 +1,4 @@
-'<Snippet3>
+﻿'<Snippet3>
 ' Example of the Decimal.GetTypeCode method. 
 Imports System
 Imports Microsoft.VisualBasic

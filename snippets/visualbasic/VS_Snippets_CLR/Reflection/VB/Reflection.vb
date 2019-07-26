@@ -1,4 +1,4 @@
-'Types: System.Reflection.Assembly Vendor:Richter
+﻿'Types: System.Reflection.Assembly Vendor:Richter
 'Types: System.Reflection.AssemblyName Vendor:Richter
 'Types: System.Reflection.MemberInfo Vendor:Richter
 'Types: System.Reflection.Module Vendor:Richter

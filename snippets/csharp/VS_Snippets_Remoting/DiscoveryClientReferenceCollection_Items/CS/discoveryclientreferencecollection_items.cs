@@ -1,4 +1,4 @@
-/*
+﻿/*
    System.Web.Services.Discovery.DiscoveryClientReferenceCollection.DiscoveryClientReferenceCollection
    System.Web.Services.Discovery.DiscoveryClientReferenceCollection.Add(DiscoveryReference)
    System.Web.Services.Discovery.DiscoveryClientReferenceCollection.Add(DiscoveryReference, url)

@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 // Sample for String.LastIndexOf(Char, Int32, Int32)
 using System;
 

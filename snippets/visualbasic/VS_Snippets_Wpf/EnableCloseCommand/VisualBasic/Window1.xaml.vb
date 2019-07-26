@@ -1,4 +1,4 @@
-Namespace WCSamples
+﻿Namespace WCSamples
 
 	Partial Public Class Window1
 		Inherits Window

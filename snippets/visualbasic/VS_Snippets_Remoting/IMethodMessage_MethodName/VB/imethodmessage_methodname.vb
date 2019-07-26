@@ -1,4 +1,4 @@
-' System.Runtime.Remoting.Messaging.IMethodMessage
+﻿' System.Runtime.Remoting.Messaging.IMethodMessage
 ' System.Runtime.Remoting.Messaging.IMethodMessage.MethodName
 ' System.Runtime.Remoting.Messaging.IMethodMessage.ArgCount
 ' System.Runtime.Remoting.Messaging.IMethodMessage.GetArgName

@@ -1,4 +1,4 @@
-        public void QueryMax()
+﻿        public void QueryMax()
         {
             var queryGroupMax =
                 from student in students

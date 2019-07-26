@@ -1,4 +1,4 @@
-// System.Diagnostics.ProcessModule.BaseAddress
+﻿// System.Diagnostics.ProcessModule.BaseAddress
 
 /* The following program demonstrates the use of 'BaseAddress' property of 
    'ProcessModule' class. It creates a notepad, gets the 'MainModule' and 

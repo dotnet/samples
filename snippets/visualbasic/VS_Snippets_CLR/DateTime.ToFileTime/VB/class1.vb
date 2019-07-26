@@ -1,4 +1,4 @@
-Namespace ToFileTime
+﻿Namespace ToFileTime
     _
    Class Class1
       '<Snippet1>

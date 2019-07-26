@@ -1,4 +1,4 @@
-' <Snippet5>
+﻿' <Snippet5>
 ' AuthorConverter.vb
 Imports System
 Imports System.ComponentModel

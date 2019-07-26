@@ -1,4 +1,4 @@
-' <SnippetImageBrushStretchModesExampleWholePage>
+﻿' <SnippetImageBrushStretchModesExampleWholePage>
 
 Imports System
 Imports System.Windows

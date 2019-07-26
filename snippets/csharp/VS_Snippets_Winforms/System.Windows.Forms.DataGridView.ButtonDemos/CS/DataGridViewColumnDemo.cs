@@ -1,4 +1,4 @@
-//<snippet100>
+﻿//<snippet100>
 using System.Windows.Forms;
 using System;
 using System.Drawing;

@@ -1,4 +1,4 @@
-//<SnippetAllClockCS>
+﻿//<SnippetAllClockCS>
 using System;
 using System.Windows;
 using System.Windows.Controls;

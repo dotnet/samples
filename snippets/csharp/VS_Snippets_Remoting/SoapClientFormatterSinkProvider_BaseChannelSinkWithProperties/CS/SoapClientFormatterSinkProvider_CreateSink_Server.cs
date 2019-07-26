@@ -1,4 +1,4 @@
-/* This is supporting program for the 'SoapClientFormatterSinkProvider_CreateSink_Client'.
+﻿/* This is supporting program for the 'SoapClientFormatterSinkProvider_CreateSink_Client'.
  */
 using System;
 using System.Runtime.Remoting;

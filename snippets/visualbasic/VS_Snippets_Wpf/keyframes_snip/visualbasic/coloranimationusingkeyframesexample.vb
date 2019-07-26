@@ -1,4 +1,4 @@
-' <SnippetColorAnimationUsingKeyFramesWholePage>
+﻿' <SnippetColorAnimationUsingKeyFramesWholePage>
 
 Imports System
 Imports System.Windows

@@ -1,4 +1,4 @@
-Imports System
+﻿Imports System
 Imports System.IO
 Imports System.Runtime.Serialization
 Imports System.Security.Permissions

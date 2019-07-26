@@ -1,4 +1,4 @@
-// <snippet8>
+﻿// <snippet8>
 using System;
 
 public class IsNumberSample {

@@ -1,4 +1,4 @@
-// System.Web.Services.Description.SoapHeaderBinding.MapToProperty
+﻿// System.Web.Services.Description.SoapHeaderBinding.MapToProperty
 
 /* 
 The following example demonstrates the 'MapToProperty' property of class 'SoapHeaderBinding'.

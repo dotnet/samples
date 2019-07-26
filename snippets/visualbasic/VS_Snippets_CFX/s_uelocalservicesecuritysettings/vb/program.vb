@@ -1,4 +1,4 @@
-' Snippet for S_UELocalServiceSecuritySettings.
+﻿' Snippet for S_UELocalServiceSecuritySettings.
 Imports System
 Imports System.Collections.Generic
 Imports System.Configuration

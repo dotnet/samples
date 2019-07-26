@@ -1,4 +1,4 @@
-' <SnippetInsertInlineIntoTextExampleWholePage>
+﻿' <SnippetInsertInlineIntoTextExampleWholePage>
 
 Imports System
 Imports System.Windows

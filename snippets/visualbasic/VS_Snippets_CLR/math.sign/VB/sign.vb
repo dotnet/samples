@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 ' This example demonstrates Math.Sign()
 Class Sample
    Public Shared Sub Main()

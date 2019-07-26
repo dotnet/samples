@@ -1,4 +1,4 @@
-        // To run this sample, first specify an integer value of 1 to 4 for the command
+﻿        // To run this sample, first specify an integer value of 1 to 4 for the command
         // line. This number will be converted to a GradeLevel value that specifies which
         // set of students to query. 
         // Call the method: QueryByYear(args[0]);

@@ -1,4 +1,4 @@
-// System.Windows.Forms.DataGridTableStyle.ResetHeaderFont
+﻿// System.Windows.Forms.DataGridTableStyle.ResetHeaderFont
 
 /* The following example demonstrates 'ResetHeaderFont' method of 'DataGridTableStyle' class.
    A DataGrid and two Button's are added to a form. When user clicks 'Set Header Font' button the Header Font of  

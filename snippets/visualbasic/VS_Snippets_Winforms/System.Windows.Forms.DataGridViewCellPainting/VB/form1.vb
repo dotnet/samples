@@ -1,4 +1,4 @@
-'<Snippet00>
+﻿'<Snippet00>
 Imports System.Data
 Imports System.Data.SqlClient
 Imports System.Drawing

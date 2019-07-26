@@ -1,4 +1,4 @@
-' <SNIPPET2>
+﻿' <SNIPPET2>
 Imports System
 Imports System.Security.Cryptography
 

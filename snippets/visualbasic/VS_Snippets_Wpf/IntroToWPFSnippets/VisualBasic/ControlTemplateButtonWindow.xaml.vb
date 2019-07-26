@@ -1,4 +1,4 @@
-'<SnippetButtonControlTemplateWindowCODEBEHIND>
+﻿'<SnippetButtonControlTemplateWindowCODEBEHIND>
 Imports System.Windows
 
 Namespace SDKSample

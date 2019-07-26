@@ -1,4 +1,4 @@
-// BookType.cs
+﻿// BookType.cs
 using System;
 
 namespace Samples.AspNet.CS.Controls

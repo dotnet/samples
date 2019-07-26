@@ -1,4 +1,4 @@
-// This example demonstrates the StringBuilder.AppendFormat method
+﻿// This example demonstrates the StringBuilder.AppendFormat method
 //<snippet1>
 using System;
 using System.Text;

@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Imports System.Data
 Public Class A
    Public Shared Sub Main(args As String())

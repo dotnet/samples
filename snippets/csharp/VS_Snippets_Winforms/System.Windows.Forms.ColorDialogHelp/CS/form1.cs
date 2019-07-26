@@ -1,4 +1,4 @@
-// This example demonstrates handling the use of a ColorDialog object. 
+﻿// This example demonstrates handling the use of a ColorDialog object. 
 // The ColorDialog object does not allow the user to set a custom color 
 // but it allows the full set of basic colors to be displayed. By setting the
 // SolidColorOnly property to false, it allows the display of colors that 

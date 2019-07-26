@@ -1,4 +1,4 @@
-// System.Configuration.Install.AssemblyInstaller.AssemblyInstaller( string, string[] )
+﻿// System.Configuration.Install.AssemblyInstaller.AssemblyInstaller( string, string[] )
 // System.Configuration.Install.AssemblyInstaller.Uninstall
 
 /* The following example demonstrates the 'AssemblyInstaller( string, string[] )'

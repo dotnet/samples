@@ -1,4 +1,4 @@
-/**
+﻿/**
   *File name: WebFailureAuditEvent.cs
   *Purpose: Implements a custom WebFailureAuditEvent type
   *by inheriting from the System.Web.Management.WebFailureAuditEvent class

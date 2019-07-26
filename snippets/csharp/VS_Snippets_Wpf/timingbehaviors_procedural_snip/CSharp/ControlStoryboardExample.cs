@@ -1,4 +1,4 @@
-// <SnippetControlStoryboardExampleUsingWholePage>
+﻿// <SnippetControlStoryboardExampleUsingWholePage>
 /*
     This example shows how to control
     a storyboard after it has started.

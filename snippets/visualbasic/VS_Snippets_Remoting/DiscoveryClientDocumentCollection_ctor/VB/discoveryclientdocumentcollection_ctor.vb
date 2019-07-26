@@ -1,4 +1,4 @@
-' System.Web.Services.Discovery.DiscoveryClientDocumentCollection.DiscoveryClientDocumentCollection
+﻿' System.Web.Services.Discovery.DiscoveryClientDocumentCollection.DiscoveryClientDocumentCollection
 ' System.Web.Services.Discovery.DiscoveryClientDocumentCollection.Add
 ' System.Web.Services.Discovery.DiscoveryClientDocumentCollection.Remove
 ' System.Web.Services.Discovery.DiscoveryClientDocumentCollection.Item

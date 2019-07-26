@@ -1,4 +1,4 @@
-'*
+﻿'*
 '  *File name: BufferedWebEventProvider.cs
 '  *Purpose: Shows how to build a buffered custom event provider. 
 '  *

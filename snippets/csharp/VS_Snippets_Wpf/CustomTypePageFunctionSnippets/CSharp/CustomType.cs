@@ -1,4 +1,4 @@
-//<SnippetCustomTypeCODE1>
+﻿//<SnippetCustomTypeCODE1>
 namespace SDKSample
 {
     public class CustomType

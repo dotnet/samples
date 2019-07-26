@@ -1,4 +1,4 @@
-// System.Configuration.Install.AssemblyInstaller.Rollback
+﻿// System.Configuration.Install.AssemblyInstaller.Rollback
 // System.Configuration.Install.AssemblyInstaller.Path
 // System.Configuration.Install.AssemblyInstaller.CommandLine
 

@@ -1,4 +1,4 @@
-//<SnippetSetImageSourceCODEBEHIND1>
+﻿//<SnippetSetImageSourceCODEBEHIND1>
 using System;
 using System.Windows.Media.Imaging;
 //</SnippetSetImageSourceCODEBEHIND1>

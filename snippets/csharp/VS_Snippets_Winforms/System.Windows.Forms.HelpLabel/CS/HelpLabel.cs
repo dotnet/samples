@@ -1,4 +1,4 @@
-// <snippet1>
+﻿// <snippet1>
 namespace Microsoft.Samples.WinForms.Cs.HelpLabel 
 {
 	using System;

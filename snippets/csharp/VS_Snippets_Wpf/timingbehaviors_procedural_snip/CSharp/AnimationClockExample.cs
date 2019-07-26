@@ -1,4 +1,4 @@
-// <SnippetGraphicsMMCreateAnimationClockWholeClass>
+﻿// <SnippetGraphicsMMCreateAnimationClockWholeClass>
 /*
     This example shows how to create and apply
     an AnimationClock.

@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 
 ' This example demonstrates the String() methods that use
 ' the StringSplitOptions enumeration.

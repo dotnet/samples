@@ -1,4 +1,4 @@
-' System.Windows.Forms.GridColumnStylesCollection.RemoveAt
+﻿' System.Windows.Forms.GridColumnStylesCollection.RemoveAt
 
 ' The following program demonstrates the 'RemoveAt(int)' method of
 ' 'GridColumnStylesCollection' class. An instance of DataGrid is created

@@ -1,4 +1,4 @@
-Imports System.Collections.Generic
+﻿Imports System.Collections.Generic
 
 ' <Snippet6>
 Public Class LocationTracker : Implements IObservable(Of Location)

@@ -1,4 +1,4 @@
-// <Snippet15>
+﻿// <Snippet15>
 using System;
 
 public class Example

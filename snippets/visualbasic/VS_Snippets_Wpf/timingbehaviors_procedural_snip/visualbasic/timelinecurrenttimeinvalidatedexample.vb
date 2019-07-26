@@ -1,4 +1,4 @@
-'<SnippetTimelineCurrentTimeInvalidatedExampleWholePage>
+﻿'<SnippetTimelineCurrentTimeInvalidatedExampleWholePage>
 '
 '
 '   This example shows how to register for the

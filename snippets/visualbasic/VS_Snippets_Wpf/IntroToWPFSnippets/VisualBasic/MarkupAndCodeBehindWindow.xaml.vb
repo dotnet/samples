@@ -1,4 +1,4 @@
-'<SnippetMarkupAndCodeBehindWindowCODEBEHIND>
+﻿'<SnippetMarkupAndCodeBehindWindowCODEBEHIND>
 imports System.Windows ' Window, RoutedEventArgs, MessageBox
 
 Namespace SDKSample

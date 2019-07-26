@@ -1,4 +1,4 @@
-// REDMOND\glennha
+﻿// REDMOND\glennha
 // <Snippet1>
 using System;
 using System.Reflection;

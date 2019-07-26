@@ -1,4 +1,4 @@
-'
+﻿'
 'This code examples shows a use of the Control.Capture property.
 '
 Imports System.Windows.Forms

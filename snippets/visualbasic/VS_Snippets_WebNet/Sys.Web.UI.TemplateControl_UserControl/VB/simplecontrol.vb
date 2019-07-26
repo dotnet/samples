@@ -1,4 +1,4 @@
-' <snippet2>
+﻿' <snippet2>
 Imports System
 Imports System.Web.UI
 Imports System.Web.UI.WebControls

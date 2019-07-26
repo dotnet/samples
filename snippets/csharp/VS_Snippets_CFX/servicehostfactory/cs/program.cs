@@ -1,4 +1,4 @@
-// Program.cs
+﻿// Program.cs
 // Snippet for ServiceHostFactory
 using System;
 using System.ServiceModel;

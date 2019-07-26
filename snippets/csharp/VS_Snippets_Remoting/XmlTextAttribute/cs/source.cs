@@ -1,4 +1,4 @@
-using System.Xml.Serialization;
+﻿using System.Xml.Serialization;
 using System.Security.Permissions;
 [assembly: SecurityPermission(
    SecurityAction.RequestMinimum, Execution = true)]

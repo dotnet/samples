@@ -1,4 +1,4 @@
-            var queryGroupMax =
+﻿            var queryGroupMax =
                 from student in students
                 group student by student.GradeLevel into studentGroup
                 select new

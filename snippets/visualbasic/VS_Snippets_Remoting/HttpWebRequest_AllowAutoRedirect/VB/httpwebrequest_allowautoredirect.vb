@@ -1,4 +1,4 @@
-' System.Net.HttpWebRequest.AllowAutoRedirect System.Net.HttpWebRequest.Address
+﻿' System.Net.HttpWebRequest.AllowAutoRedirect System.Net.HttpWebRequest.Address
 ' This program demonstrates  'AllowAutoRedirect' and 'Address' properties of HttpWebRequest Class.
 ' A new HttpWebRequest Object is created.
 ' AllowAutoredirect is a property that redirects a page automatically to the new Uri.

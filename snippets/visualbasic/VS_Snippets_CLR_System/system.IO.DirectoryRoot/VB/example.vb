@@ -1,4 +1,4 @@
- '<SNIPPET1>
+﻿ '<SNIPPET1>
 ' This sample shows how to set the current directory and how to determine
 ' the root directory.
 Imports System

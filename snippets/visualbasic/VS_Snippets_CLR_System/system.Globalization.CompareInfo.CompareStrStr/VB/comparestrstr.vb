@@ -1,4 +1,4 @@
-' <snippet1>
+﻿' <snippet1>
 ' The following code example compares two strings using the different CompareInfo instances:
 '    a CompareInfo instance associated with the "Spanish - Spain" culture with international sort,
 '    a CompareInfo instance associated with the "Spanish - Spain" culture with traditional sort, and

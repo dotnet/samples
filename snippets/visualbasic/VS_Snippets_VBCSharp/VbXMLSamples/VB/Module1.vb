@@ -1,4 +1,4 @@
-'<Snippet45>
+﻿'<Snippet45>
 ' Place Imports statements at the top of your program.  
 Imports <xmlns="http://DefaultNamespace">
 Imports <xmlns:ns="http://NewNamespace">

@@ -1,4 +1,4 @@
-namespace EnsureStageExample
+﻿namespace EnsureStageExample
 {
    class Class1
    {

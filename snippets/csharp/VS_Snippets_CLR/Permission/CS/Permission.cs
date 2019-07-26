@@ -1,4 +1,4 @@
-// Types:System.Security.IPermission Vendor:Richter
+Ôªø// Types:System.Security.IPermission Vendor:Richter
 // Types:System.Security.ISecurityEncodable Vendor:Richter
 //<snippet1>
 using System;
@@ -174,7 +174,7 @@ public sealed class SoundPermission : CodeAccessPermission, IPermission,
     {
         // These first three lines create an element with the required format.
         SecurityElement e = new SecurityElement("IPermission");
-        // Replace the double quotation marks (ìî) with single quotation marks (ëí)
+        // Replace the double quotation marks (‚Äú‚Äù) with single quotation marks (‚Äò‚Äô)
         // to remain XML compliant when the culture is not neutral.
         e.AddAttribute("class", GetType().AssemblyQualifiedName.Replace('\"', '\''));
         e.AddAttribute("version", "1");

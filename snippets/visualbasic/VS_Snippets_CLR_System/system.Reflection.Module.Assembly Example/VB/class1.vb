@@ -1,4 +1,4 @@
-' <snippet1>
+﻿' <snippet1>
 Imports System.Reflection
 
 Namespace ReflectionModule_Examples

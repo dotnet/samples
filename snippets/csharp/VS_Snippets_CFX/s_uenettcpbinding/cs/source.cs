@@ -1,4 +1,4 @@
-// S_UENetTcpBinding/CS/source.cs Snippet for
+﻿// S_UENetTcpBinding/CS/source.cs Snippet for
 // System.ServiceModel.TcpBinding
 
 //<snippet0>

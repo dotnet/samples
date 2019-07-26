@@ -1,4 +1,4 @@
-' <snippet10>
+﻿' <snippet10>
 ' <snippet20>
 Imports System
 Imports System.ComponentModel

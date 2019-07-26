@@ -1,4 +1,4 @@
-'<Snippet1>
+﻿'<Snippet1>
 ' This sample demonstrates the use of the SecurityPermissionAttribute.
 Imports System
 Imports System.Security.Permissions

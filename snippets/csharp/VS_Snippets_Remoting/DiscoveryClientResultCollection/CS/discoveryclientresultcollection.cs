@@ -1,4 +1,4 @@
-// System.Web.Services.Discovery.DiscoveryClientResultCollection
+﻿// System.Web.Services.Discovery.DiscoveryClientResultCollection
 /*
 The following example demonstrates 'DiscoveryClientResultCollection' class.
 A 'DiscoveryClientResultCollection' object is obtained by reading a '.discomap' file

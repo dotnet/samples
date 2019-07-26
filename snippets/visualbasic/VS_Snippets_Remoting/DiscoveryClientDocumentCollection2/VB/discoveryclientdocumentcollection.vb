@@ -1,4 +1,4 @@
-' System.Web.Services.Discovery.DiscoveryClientDocumentCollection
+﻿' System.Web.Services.Discovery.DiscoveryClientDocumentCollection
 
 ' The following example demonstrates the class 'DiscoveryClientDocumentCollection'.
 ' A sample discovery document is read and the 'Keys' and 'Values' properties 

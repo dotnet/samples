@@ -1,4 +1,4 @@
-'<Snippet3>
+﻿'<Snippet3>
 ' Example of the Convert.ToSingle( String ) and 
 ' Convert.ToSingle( String, IFormatProvider ) methods.
 Imports System

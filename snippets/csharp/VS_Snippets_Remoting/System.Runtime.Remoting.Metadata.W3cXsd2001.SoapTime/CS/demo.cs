@@ -1,4 +1,4 @@
-/// Class:  System.Runtime.Remoting.Metadata.W3cXsd2001.SoapTime
+﻿/// Class:  System.Runtime.Remoting.Metadata.W3cXsd2001.SoapTime
 /// Need snippets:
 ///    10    class 
 ///    21    #ctor()

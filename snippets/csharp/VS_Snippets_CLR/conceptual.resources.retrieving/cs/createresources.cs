@@ -1,4 +1,4 @@
-// <Snippet4>
+﻿// <Snippet4>
 using System;
 using System.Drawing;
 using System.Drawing.Imaging;

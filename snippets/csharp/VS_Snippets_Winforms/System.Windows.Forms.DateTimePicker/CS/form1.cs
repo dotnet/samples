@@ -1,4 +1,4 @@
-// This example demonstrates using the read-only fields DateTimePicker.MaxDateTime
+﻿// This example demonstrates using the read-only fields DateTimePicker.MaxDateTime
 // and DateTimePicker.MinDateTime.
 
 using System.Windows.Forms;

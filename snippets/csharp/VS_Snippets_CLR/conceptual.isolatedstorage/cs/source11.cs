@@ -1,4 +1,4 @@
-//<snippet16>
+﻿//<snippet16>
 using System;
 using System.IO.IsolatedStorage;
 

@@ -1,4 +1,4 @@
-// Snippet for S_UE System.ServiceModel.Dispatcher.ExceptionHandler.HandleException
+﻿// Snippet for S_UE System.ServiceModel.Dispatcher.ExceptionHandler.HandleException
 // 06192006 Created by A.Hu
 
 // <snippet0>

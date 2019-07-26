@@ -1,4 +1,4 @@
-' The following code example enumerates the elements of a ListDictionary.
+﻿' The following code example enumerates the elements of a ListDictionary.
 
 ' <snippet1>
 Imports System

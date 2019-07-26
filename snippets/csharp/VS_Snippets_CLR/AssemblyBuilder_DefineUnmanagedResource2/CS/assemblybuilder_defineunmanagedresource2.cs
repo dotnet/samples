@@ -1,4 +1,4 @@
-// System.Reflection.Emit.AssemblyBuilder
+﻿// System.Reflection.Emit.AssemblyBuilder
 // System.Reflection.Emit.AssemblyBuilder.DefineResource(string, string, string, ResourceAttribute)
 // System.Reflection.Emit.AssemblyBuilder.DefineUnmanagedResource(string)
 

@@ -1,4 +1,4 @@
-' <snippet7>
+﻿' <snippet7>
 Imports System
 
 Module IsLowerSample

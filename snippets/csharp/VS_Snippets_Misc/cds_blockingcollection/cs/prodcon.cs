@@ -1,4 +1,4 @@
-//<snippet06>
+﻿//<snippet06>
 namespace ProdConsumerCS
 {
     using System;

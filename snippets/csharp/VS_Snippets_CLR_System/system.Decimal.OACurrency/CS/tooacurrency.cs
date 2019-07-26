@@ -1,4 +1,4 @@
-//<Snippet1>
+﻿//<Snippet1>
 // Example of the decimal.ToOACurrency method. 
 using System;
 

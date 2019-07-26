@@ -1,4 +1,4 @@
-'<Snippet4>
+﻿'<Snippet4>
 <System.ComponentModel.ComplexBindingProperties("DataSource", "DataMember")>
 Public Class ComplexDataGridView
 

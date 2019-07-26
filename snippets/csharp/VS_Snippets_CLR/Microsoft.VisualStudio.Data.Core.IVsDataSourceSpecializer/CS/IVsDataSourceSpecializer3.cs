@@ -1,4 +1,4 @@
-// <Snippet3>
+﻿// <Snippet3>
 using System;
 using Microsoft.VisualStudio.Data.Core;
 using Microsoft.VisualStudio.Data.Framework;

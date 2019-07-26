@@ -1,4 +1,4 @@
-// System.Web.Services.Description.Read(StreamReader)
+﻿// System.Web.Services.Description.Read(StreamReader)
 /* 
    The following example demonstrates the 'Read(StreamReader)' method  of 
    'ServiceDescription' class.A ServiceDescription instance is 

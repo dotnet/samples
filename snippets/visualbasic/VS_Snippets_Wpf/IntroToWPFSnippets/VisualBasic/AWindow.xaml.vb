@@ -1,4 +1,4 @@
-'<SnippetWindowCODEBEHIND>
+﻿'<SnippetWindowCODEBEHIND>
 
 Namespace SDKSample
 

@@ -1,4 +1,4 @@
-// The following code example creates SortedList instances using different constructors
+﻿// The following code example creates SortedList instances using different constructors
 // and demonstrates the differences in the behavior of the SortedList instances.
 
 // <Snippet1>

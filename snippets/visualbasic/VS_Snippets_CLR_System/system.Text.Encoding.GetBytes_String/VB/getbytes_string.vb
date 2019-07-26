@@ -1,4 +1,4 @@
-' The following code example determines the number of bytes required to encode a string or a range in the string,
+﻿' The following code example determines the number of bytes required to encode a string or a range in the string,
 ' encodes the characters, and displays the resulting bytes.
 
 ' <Snippet1>

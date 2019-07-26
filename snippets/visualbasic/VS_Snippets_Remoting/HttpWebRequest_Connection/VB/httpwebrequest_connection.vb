@@ -1,4 +1,4 @@
-' System.Net.HttpWebRequest.KeepAlive System.Net.HttpWebRequest.Connection
+﻿' System.Net.HttpWebRequest.KeepAlive System.Net.HttpWebRequest.Connection
 '  This program demonstrates 'Connection' and 'KeepAlive' properties of HttpWebRequest Class.
 '  Two new 'HttpWebRequest' objects are created .The 'KeepAlive' property of one of the 'HttpWebRequest' 
 '  objects is set to 'false' that in turn sets the value of Connection field of the HTTP request Headers to

@@ -1,4 +1,4 @@
-'<Snippet1>
+﻿'<Snippet1>
 ' The following example displays an application that provides the ability to 
 ' open rich text files (rtf) into the RichTextBox. The example demonstrates 
 ' using the FolderBrowserDialog to set the default directory for opening files.

@@ -1,4 +1,4 @@
-' This sample demonstrates how to use each member of the
+﻿' This sample demonstrates how to use each member of the
 ' CryptographicException class.
 '<Snippet2>
 Imports System

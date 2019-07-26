@@ -1,4 +1,4 @@
-// The following code example demonstrates several of the properties and methods of NameValueCollection.
+﻿// The following code example demonstrates several of the properties and methods of NameValueCollection.
 
 
 // <snippet1>

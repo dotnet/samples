@@ -1,4 +1,4 @@
-//<snippet000>
+﻿//<snippet000>
 //<snippet100>
 using System;
 using System.Data;

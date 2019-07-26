@@ -1,4 +1,4 @@
-Public Class app
+﻿Public Class app
     Inherits Application
 
     ' Methods

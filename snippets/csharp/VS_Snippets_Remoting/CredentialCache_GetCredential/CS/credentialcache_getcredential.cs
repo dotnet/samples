@@ -1,4 +1,4 @@
-// System.Net.CredentialCache.GetCredential
+﻿// System.Net.CredentialCache.GetCredential
 
 /*This program demontrates the 'GetCredential' method of the CredentialCache class.It takes an URL 
 creates a 'WebRequest' object for the Url. The program stores a known set of credentials in a credential cache.

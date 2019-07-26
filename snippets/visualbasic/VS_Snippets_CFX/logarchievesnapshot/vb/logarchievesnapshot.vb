@@ -1,4 +1,4 @@
-Imports System
+﻿Imports System
 Imports System.IO.Log
 Imports System.IO
 Imports System.Collections.Generic

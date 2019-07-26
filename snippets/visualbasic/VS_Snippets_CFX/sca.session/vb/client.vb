@@ -1,4 +1,4 @@
-' <snippet3>
+﻿' <snippet3>
 
 Imports Microsoft.VisualBasic
 Imports System

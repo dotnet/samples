@@ -1,4 +1,4 @@
-Namespace Prime.Services
+﻿Namespace Prime.Services
     Public Class PrimeService
         Public Function IsPrime(candidate As Integer) As Boolean
             If candidate < 2 Then

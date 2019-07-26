@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 Class Sample
    Public Shared Sub Main()
       Dim val As [String]() =  {"apple", "orange", "grape", "pear"}

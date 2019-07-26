@@ -1,4 +1,4 @@
-
+﻿
 // <SnippetGraphicsMMVisualBrushAsRectangleBackgroundExampleWholePage>
 using System;
 using System.Windows;

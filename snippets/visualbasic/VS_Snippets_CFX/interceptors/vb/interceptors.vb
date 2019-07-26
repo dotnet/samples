@@ -1,4 +1,4 @@
-Imports System.ServiceModel
+﻿Imports System.ServiceModel
 Imports System.ServiceModel.Description
 Imports System.ServiceModel.Dispatcher
 Imports System.Text

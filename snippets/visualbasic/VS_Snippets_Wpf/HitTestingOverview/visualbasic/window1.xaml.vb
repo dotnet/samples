@@ -1,4 +1,4 @@
-Imports System.Collections
+﻿Imports System.Collections
 
 Namespace SDKSample
 	Partial Public Class Window1

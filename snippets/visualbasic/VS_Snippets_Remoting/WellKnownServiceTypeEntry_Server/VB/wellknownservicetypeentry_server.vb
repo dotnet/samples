@@ -1,4 +1,4 @@
-' System.Runtime.Remoting.WellKnownServiceTypeEntry
+﻿' System.Runtime.Remoting.WellKnownServiceTypeEntry
 
 ' The following example demonstrates the 'WellKnownServiceTypeEntry' class. 
 ' It registers a 'HttpChannel' object with the channel services. Then registers the 'HelloServer'

@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 Imports System.Threading
 Imports System.Collections.Generic
 Imports System.Text

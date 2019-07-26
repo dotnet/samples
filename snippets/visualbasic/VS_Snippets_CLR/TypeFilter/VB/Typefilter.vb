@@ -1,4 +1,4 @@
-'Types:System.Reflection.TypeFilter Vendor: Richter
+﻿'Types:System.Reflection.TypeFilter Vendor: Richter
 '<snippet1>
 Imports System.Reflection
 

@@ -1,4 +1,4 @@
-//<SnippetGetAnimationBaseValueExampleWholePage>
+﻿//<SnippetGetAnimationBaseValueExampleWholePage>
 /*
 
    This sample shows how to use the 

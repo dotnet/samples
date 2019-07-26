@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
 using System;
 
 enum SignMagnitude { Negative = -1, Zero = 0, Positive = 1 };

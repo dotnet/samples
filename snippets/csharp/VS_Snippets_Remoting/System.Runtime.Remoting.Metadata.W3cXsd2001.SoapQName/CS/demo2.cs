@@ -1,4 +1,4 @@
-/// Need snippets:
+﻿/// Need snippets:
 ///    21    #ctor()
 ///    22    #ctor(string)
 ///    23    #ctor(string,string)

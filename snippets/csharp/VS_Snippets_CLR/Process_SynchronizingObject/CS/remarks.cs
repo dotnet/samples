@@ -1,4 +1,4 @@
-// This is kind of a ripoff of 'process_synchronizingobject.cs' for use as a snippet
+﻿// This is kind of a ripoff of 'process_synchronizingobject.cs' for use as a snippet
 // for the remarks section.
 
 using System;

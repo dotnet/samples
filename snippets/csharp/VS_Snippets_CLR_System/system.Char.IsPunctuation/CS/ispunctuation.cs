@@ -1,4 +1,4 @@
-// <snippet9>
+﻿// <snippet9>
 using System;
 
 public class IsPunctuationSample {

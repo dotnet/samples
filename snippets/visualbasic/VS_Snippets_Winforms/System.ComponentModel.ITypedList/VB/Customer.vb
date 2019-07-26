@@ -1,4 +1,4 @@
-' <snippet10>
+﻿' <snippet10>
 Imports System.ComponentModel
 
 Public Class Customer

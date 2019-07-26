@@ -1,4 +1,4 @@
- '<Snippet2>
+﻿ '<Snippet2>
 ' Example for the Exception( String ) constructor( String ).
 Imports System
 Imports Microsoft.VisualBasic

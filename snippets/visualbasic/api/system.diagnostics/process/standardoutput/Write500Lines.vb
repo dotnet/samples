@@ -1,4 +1,4 @@
-Imports System.IO
+﻿Imports System.IO
 
 Public Module Example
    Public Sub Main()

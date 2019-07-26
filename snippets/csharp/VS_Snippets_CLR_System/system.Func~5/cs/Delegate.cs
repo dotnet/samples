@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
 using System;
 
 delegate int Searcher(string searchString, int start, int count, 

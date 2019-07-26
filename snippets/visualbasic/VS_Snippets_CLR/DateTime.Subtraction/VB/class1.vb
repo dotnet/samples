@@ -1,4 +1,4 @@
-Namespace Subtract
+﻿Namespace Subtract
     _
    Class Class1
       Public Shared Sub Main(ByVal args() As String)

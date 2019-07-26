@@ -1,4 +1,4 @@
-''' <summary>
+﻿''' <summary>
 ''' A single order
 ''' </summary>
 Public Class Order

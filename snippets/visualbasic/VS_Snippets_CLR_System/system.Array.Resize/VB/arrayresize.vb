@@ -1,4 +1,4 @@
-' The following example shows how resizing affects the array.
+﻿' The following example shows how resizing affects the array.
 
 ' <Snippet1>
 Imports System

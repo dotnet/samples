@@ -1,4 +1,4 @@
-//<Snippet1>
+﻿//<Snippet1>
 // CatchNonClsCompliantException.cs
 using System;
 

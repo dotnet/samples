@@ -1,4 +1,4 @@
-// This entire sample can go in DataGridViewAdvancedBorderStyle class overview.
+﻿// This entire sample can go in DataGridViewAdvancedBorderStyle class overview.
 //  - Snippet10 can go in DataGridView.EnableHeadersVisualStyles property (state in the
 //    Example intro that EnableVisualStyles() was called for the app itself, so setting
 //    this property to false overrides that).

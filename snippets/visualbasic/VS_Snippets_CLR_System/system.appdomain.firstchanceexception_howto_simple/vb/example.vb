@@ -1,4 +1,4 @@
-'<Snippet1>
+﻿'<Snippet1>
 '<Snippet2>
 Imports System.Runtime.ExceptionServices
 

@@ -1,4 +1,4 @@
-' <Snippet19>
+﻿' <Snippet19>
 Module Example
     Sub Main()
         Dim source = Enumerable.Range(0, 3000000)

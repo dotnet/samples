@@ -1,4 +1,4 @@
-'* The following example demonstrates the 'Add' method of the 'FaultBindingCollection' class
+﻿'* The following example demonstrates the 'Add' method of the 'FaultBindingCollection' class
 ' * and constructor and 'Extensions' property of 'FaultBinding'class and 'Documentation' 
 ' * property of 'DocumentableItem' class.
 ' * 

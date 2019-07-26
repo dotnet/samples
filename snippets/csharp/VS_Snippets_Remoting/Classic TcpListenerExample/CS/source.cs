@@ -1,4 +1,4 @@
-//<Snippet1>
+﻿//<Snippet1>
 /**
 * The following sample is intended to demonstrate how to use a
 * TcpListener for synchronous communcation with a TCP client

@@ -1,4 +1,4 @@
-' File name begingetresponse.vb
+﻿' File name begingetresponse.vb
 ' <Snippet1>
 
 Imports System

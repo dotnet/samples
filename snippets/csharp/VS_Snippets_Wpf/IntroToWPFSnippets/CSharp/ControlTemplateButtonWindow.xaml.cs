@@ -1,4 +1,4 @@
-//<SnippetButtonControlTemplateWindowCODEBEHIND>
+﻿//<SnippetButtonControlTemplateWindowCODEBEHIND>
 using System.Windows;
 
 namespace SDKSample

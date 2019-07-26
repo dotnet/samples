@@ -1,4 +1,4 @@
-'<snippet18>
+﻿'<snippet18>
 Imports System.Runtime.CompilerServices
 
 ' Define an enumeration to represent student grades.

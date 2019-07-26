@@ -1,4 +1,4 @@
- ' System.Windows.Forms.DataGridTableStyle.ResetForeColor
+﻿ ' System.Windows.Forms.DataGridTableStyle.ResetForeColor
 
 ' The following example demonstrates 'ResetForeColor' method of 
 ' 'DataGridTableStyle' class. A DataGrid and two Buttons are added to 

@@ -1,4 +1,4 @@
-#define debug
+﻿#define debug
 //#define debug
 // This custom permission is intended only for the purposes of illustration.
 // The following code shows how to create a custom permission that inherits

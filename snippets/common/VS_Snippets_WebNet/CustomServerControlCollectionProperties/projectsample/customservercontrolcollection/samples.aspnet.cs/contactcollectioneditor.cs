@@ -1,4 +1,4 @@
-// ContactCollectionEditor.cs
+﻿// ContactCollectionEditor.cs
 using System;
 using System.ComponentModel;
 using System.ComponentModel.Design;

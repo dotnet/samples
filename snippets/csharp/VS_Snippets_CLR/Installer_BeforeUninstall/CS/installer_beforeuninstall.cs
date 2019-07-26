@@ -1,4 +1,4 @@
-/*
+﻿/*
    System.Configuration.Install.Installer.BeforeUninstall
 
    The following example demonstrates the event 'BeforeUninstall' of the 

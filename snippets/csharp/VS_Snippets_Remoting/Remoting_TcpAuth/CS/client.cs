@@ -1,4 +1,4 @@
-// <snippet30>
+﻿// <snippet30>
 using System;
 using System.Collections;
 using System.Runtime.Remoting;

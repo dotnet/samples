@@ -1,4 +1,4 @@
-' System.Web.Services.Discovery.DiscoveryClientDocumentCollection.Keys
+﻿' System.Web.Services.Discovery.DiscoveryClientDocumentCollection.Keys
 ' System.Web.Services.Discovery.DiscoveryClientDocumentCollection.Values
 ' System.Web.Services.Discovery.DiscoveryClientDocumentCollection.Contains(String)
 

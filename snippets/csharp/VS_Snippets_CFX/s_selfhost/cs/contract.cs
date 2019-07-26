@@ -1,4 +1,4 @@
-//<snippet10>
+﻿//<snippet10>
 using System;
 // Step 5: Add the using statement for the System.ServiceModel namespace
 //<snippet100>

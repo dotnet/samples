@@ -1,4 +1,4 @@
-// Snippet for S_UEBinding
+﻿// Snippet for S_UEBinding
 // <Snippet1>
 // 07/18/06 a-arhu: this does not exist anymore  //snip.Snippet15();
 // using System.Runtime.Remoting.Messaging;

@@ -1,4 +1,4 @@
-Module Example
+﻿Module Example
    Public Sub Main()
       Dim n As New NumericValue(15)
       n.IncrementValue() += 12

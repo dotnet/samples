@@ -1,4 +1,4 @@
-//<Snippet3>
+﻿//<Snippet3>
 // Example of the decimal.ToInt16 and decimal.ToUInt16 methods.
 using System;
 

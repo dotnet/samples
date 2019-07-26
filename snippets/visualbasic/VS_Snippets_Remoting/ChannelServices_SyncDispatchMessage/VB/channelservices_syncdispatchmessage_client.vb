@@ -1,4 +1,4 @@
-' System.Runtime.Remoting.Channels.ChannelServices.SyncDispatchMessage(IMessage)
+﻿' System.Runtime.Remoting.Channels.ChannelServices.SyncDispatchMessage(IMessage)
 
 ' The following example demonstrates 'SyncDispatchMessage' method of 
 ' 'ChannelServices' class. In the example, 'MyProxy' extends 'RealProxy'

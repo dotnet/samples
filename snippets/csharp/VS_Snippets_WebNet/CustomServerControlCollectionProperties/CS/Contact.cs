@@ -1,4 +1,4 @@
-// <Snippet2>
+﻿// <Snippet2>
 // Contact.cs
 // The type of the items in the Contacts collection property 
 //in QuickContacts.

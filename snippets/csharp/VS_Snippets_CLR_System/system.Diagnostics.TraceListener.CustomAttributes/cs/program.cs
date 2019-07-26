@@ -1,4 +1,4 @@
-//<Snippet1>
+﻿//<Snippet1>
 // This code example uses the following application configuration file:
 
 //<?xml version="1.0" encoding="utf-8"?>

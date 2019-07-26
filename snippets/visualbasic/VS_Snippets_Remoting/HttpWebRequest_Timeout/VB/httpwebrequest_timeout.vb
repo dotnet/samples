@@ -1,4 +1,4 @@
-' System.Net.HttpWebRequest.Timeout
+﻿' System.Net.HttpWebRequest.Timeout
  'This program demonstrates 'Timeout' property of the HttpWebRequest Class.
 ' A new HttpWebRequest Object is created .
 ' The default value of the 'Timeout' property is printed to the console.

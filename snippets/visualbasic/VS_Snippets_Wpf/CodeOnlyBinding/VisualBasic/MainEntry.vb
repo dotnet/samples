@@ -1,4 +1,4 @@
-Imports System
+﻿Imports System
     Friend NotInheritable Class MainEntry
         ' Methods
         <STAThread> _

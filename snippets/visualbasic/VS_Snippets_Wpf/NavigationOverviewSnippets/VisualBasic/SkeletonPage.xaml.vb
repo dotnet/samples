@@ -1,4 +1,4 @@
-'<SnippetSkeletonPageCodebehind>
+﻿'<SnippetSkeletonPageCodebehind>
 
 Namespace SDKSample
 	Partial Public Class SkeletonPage

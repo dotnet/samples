@@ -1,4 +1,4 @@
-//<Snippet1>
+﻿//<Snippet1>
 // This sample demonstrates the use of the WindowsIdentity class to impersonate a user.
 // IMPORTANT NOTES:
 // This sample requests the user to enter a password on the console screen.

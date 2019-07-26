@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
 // Book.cs
 using System;
 using System.ComponentModel;

@@ -1,4 +1,4 @@
-' The following code example searches for an element in a ListDictionary.
+﻿' The following code example searches for an element in a ListDictionary.
 
 ' <snippet1>
 Imports System

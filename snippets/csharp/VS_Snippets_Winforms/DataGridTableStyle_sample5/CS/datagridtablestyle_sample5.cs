@@ -1,4 +1,4 @@
-// System.Windows.Forms.DataGridTableStyle.AlternatingBackColor;
+﻿// System.Windows.Forms.DataGridTableStyle.AlternatingBackColor;
 // System.Windows.Forms.DataGridTableStyle.GridLineColor;
 // System.Windows.Forms.DataGridTableStyle.GridLineColorChanged;
 

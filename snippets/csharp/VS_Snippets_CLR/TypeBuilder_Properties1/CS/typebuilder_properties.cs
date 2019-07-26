@@ -1,4 +1,4 @@
-// System.Reflection.Emit.TypeBuilder.FullName
+﻿// System.Reflection.Emit.TypeBuilder.FullName
 // System.Reflection.Emit.TypeBuilder.GetConstructors
 // System.Reflection.Emit.TypeBuilder.DefineTypeInitializer
 

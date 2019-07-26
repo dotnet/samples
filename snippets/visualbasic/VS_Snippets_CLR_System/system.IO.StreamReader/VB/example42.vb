@@ -1,4 +1,4 @@
-' <Snippet42>
+﻿' <Snippet42>
 Imports System.Text
 Imports System.IO
 

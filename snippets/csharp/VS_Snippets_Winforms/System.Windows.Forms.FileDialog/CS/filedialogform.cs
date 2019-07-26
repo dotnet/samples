@@ -1,4 +1,4 @@
-
+﻿
 // The following code example demonstrates using 
 // the following members: LostFocus, OpenFileDialog.Multiselect, 
 // FileNames, Title, ErrorProvider.GetError, PictureBox.Image,

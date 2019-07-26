@@ -1,4 +1,4 @@
-' System.Runtime.Remoting.Messaging.IMethodMessage.LogicalCallContext
+﻿' System.Runtime.Remoting.Messaging.IMethodMessage.LogicalCallContext
 ' System.Runtime.Remoting.Messaging.IMethodMessage.Uri
 
 ' The program demonstrates the 'LogicalCallContext' and 'Uri' properties of 

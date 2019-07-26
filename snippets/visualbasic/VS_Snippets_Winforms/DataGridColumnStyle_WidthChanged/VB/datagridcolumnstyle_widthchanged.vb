@@ -1,4 +1,4 @@
-' System.Windows.Forms.DataGridColumnStyle.WidthChanged
+﻿' System.Windows.Forms.DataGridColumnStyle.WidthChanged
 
 ' The following example demonstrates the 'WidthChanged' event of 
 ' the 'DataGridColumnStyle' class. In the example a message will be 

@@ -1,4 +1,4 @@
-' The following code example encodes a string into an array of bytes, and then decodes the bytes back into a string.
+﻿' The following code example encodes a string into an array of bytes, and then decodes the bytes back into a string.
 
 ' <Snippet1>
 Imports System

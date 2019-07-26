@@ -1,4 +1,4 @@
-namespace CustomControls
+﻿namespace CustomControls
 {
     partial class SampleApplicationForm
     {

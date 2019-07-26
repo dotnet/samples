@@ -1,4 +1,4 @@
-' System.Diagnostics.EventLogEntry.EntryType
+﻿' System.Diagnostics.EventLogEntry.EntryType
 ' System.Diagnostics.EventLogEntry.Source
 
 ' The following example demonstrates the properties 'EntryType' and 'Source'

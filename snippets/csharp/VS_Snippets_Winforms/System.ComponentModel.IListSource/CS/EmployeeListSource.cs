@@ -1,4 +1,4 @@
-// <snippet1>
+Ôªø// <snippet1>
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -37,7 +37,7 @@ namespace IListSourceCS
                 ble.Add(new Employee("Furse, Kari", 19000000));
                 ble.Add(new Employee("Langhorn, Carl", 16000000));
                 ble.Add(new Employee("Todorov, Teodor", 15700000));
-                ble.Add(new Employee("VerebÈlyi, ¡gnes", 15700000));
+                ble.Add(new Employee("Vereb√©lyi, √Ågnes", 15700000));
             }
 
             return ble;

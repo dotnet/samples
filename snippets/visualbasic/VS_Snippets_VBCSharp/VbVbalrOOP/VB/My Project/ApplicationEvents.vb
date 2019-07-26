@@ -1,4 +1,4 @@
-Namespace My
+﻿Namespace My
 
     'The following events are available for MyApplication
     '

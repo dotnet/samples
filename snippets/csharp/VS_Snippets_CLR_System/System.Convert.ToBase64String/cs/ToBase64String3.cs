@@ -1,4 +1,4 @@
-// <Snippet3>
+﻿// <Snippet3>
 using System;
 
 public class Example
@@ -6,7 +6,7 @@ public class Example
    public static void Main()
    {
        // Define a byte array.
-       Byte[] bytes = new Byte[100];
+       var bytes = new byte[100];
        int originalTotal = 0;
        for (int ctr = 0; ctr <= bytes.GetUpperBound(0); ctr++) {
           bytes[ctr] = (byte)(ctr + 1);
@@ -20,8 +20,8 @@ public class Example
        Console.WriteLine("   Sum of elements: {0:N0}", originalTotal);                  
        Console.WriteLine();
        
-       // Convert the array to a base 64 sring.
-       String s = Convert.ToBase64String(bytes, 
+       // Convert the array to a base 64 string.
+       string s = Convert.ToBase64String(bytes, 
                                          Base64FormattingOptions.InsertLineBreaks);
        Console.WriteLine("The base 64 string:\n   {0}\n", s);
        

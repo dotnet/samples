@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 // Example for the Math.E field.
 using System;
 

@@ -1,4 +1,4 @@
-' <SnippetSizeAnimationWholePage>
+﻿' <SnippetSizeAnimationWholePage>
 
 Imports Microsoft.VisualBasic
 Imports System

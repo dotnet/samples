@@ -1,4 +1,4 @@
-Class Class384033c618f94d59961036371226558f
+﻿Class Class384033c618f94d59961036371226558f
 ' HowtoReadTextfromFileswithaStreamReader(VisualBasic)
 
 Public Sub Method1()

@@ -1,4 +1,4 @@
-Partial Public Class Form1
+﻿Partial Public Class Form1
     Inherits System.Windows.Forms.Form
 
     <System.Diagnostics.DebuggerNonUserCode()> _

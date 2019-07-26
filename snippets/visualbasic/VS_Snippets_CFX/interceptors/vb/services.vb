@@ -1,4 +1,4 @@
-Imports System.Runtime.Serialization
+﻿Imports System.Runtime.Serialization
 Imports System.ServiceModel
 Imports System.Text
 

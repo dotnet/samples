@@ -1,4 +1,4 @@
-Imports System
+ï»¿Imports System
 Imports System.IO
 Imports System.Runtime.Serialization
 Imports System.Xml
@@ -39,7 +39,7 @@ Namespace Samples
 
         Public fromCity As String = "Tokyo"
         Public toCity As String = "London"
-        ' Code omitted…
+        ' Code omittedâ€¦
         Protected Overrides Sub OnWriteBodyContents(ByVal w As XmlDictionaryWriter)
             w.WriteStartElement("airfareRequest")
             w.WriteElementString("from", fromCity)
@@ -145,7 +145,7 @@ Namespace Samples
     Public Class SomeClass
         '<snippet7>
         <OperationContract()> Public Function GetFile() As FileMessage
-            'code omitted…
+            'code omittedâ€¦
             Dim fm As New FileMessage("myFile.xml")
             Return fm
         End Function

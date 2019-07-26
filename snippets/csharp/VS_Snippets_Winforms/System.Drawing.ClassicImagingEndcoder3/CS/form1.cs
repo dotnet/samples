@@ -1,4 +1,4 @@
-// Snippet for: F:System.Drawing.Imaging.Encoder.Quality
+﻿// Snippet for: F:System.Drawing.Imaging.Encoder.Quality
 // <snippet3>
 using System;
 using System.Drawing;

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 // This sample converts tab-delmited input and converts it to 
 // comma-delimited output.  Furthermore, it converts all boolean
 // input to numeric representations.

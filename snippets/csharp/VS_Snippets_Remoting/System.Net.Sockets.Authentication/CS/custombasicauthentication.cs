@@ -1,4 +1,4 @@
-// This program shows how to create your own Basic authentication module,
+﻿// This program shows how to create your own Basic authentication module,
 // register it via the AuthenticationManager class and authorize allowed 
 // users to access a page on a Web site.
 // Note: In order to run this program you must create a test Web site that performs

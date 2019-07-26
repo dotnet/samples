@@ -1,4 +1,4 @@
-' <snippet1>
+﻿' <snippet1>
 Module GetNumericValueSample
     Sub Main()
         Dim str As String

@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Public Class TipCalculator
    Private Const tipRate As Double = 0.18
    

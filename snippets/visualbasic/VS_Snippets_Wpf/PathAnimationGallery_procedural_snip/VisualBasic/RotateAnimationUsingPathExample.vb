@@ -1,4 +1,4 @@
-' <SnippetRotateAnimationUsingPathWholePage>
+﻿' <SnippetRotateAnimationUsingPathWholePage>
 
 Imports System
 Imports System.Windows

@@ -1,4 +1,4 @@
-' <Snippet0>
+﻿' <Snippet0>
 Imports System
 Imports System.Text
 Imports System.Windows.Forms

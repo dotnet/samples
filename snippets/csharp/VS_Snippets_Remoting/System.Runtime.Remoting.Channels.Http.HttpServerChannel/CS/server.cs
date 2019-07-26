@@ -1,4 +1,4 @@
-/// Class:  System.Runtime.Remoting.Channels.Http.HttpServerChannel
+﻿/// Class:  System.Runtime.Remoting.Channels.Http.HttpServerChannel
 ///    20    class - server
 ///    30    class - client
 ///    40    class - remotable object

@@ -1,4 +1,4 @@
-        public void GroupByRange()
+﻿        public void GroupByRange()
         {            
             Console.WriteLine("\r\nGroup by numeric range and project into a new anonymous type:");
 

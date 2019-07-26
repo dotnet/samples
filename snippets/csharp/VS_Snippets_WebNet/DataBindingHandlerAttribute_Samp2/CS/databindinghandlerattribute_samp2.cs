@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
 // The following example uses the Default
 // DataBindingHandlerAttribute constructor.
 using System;

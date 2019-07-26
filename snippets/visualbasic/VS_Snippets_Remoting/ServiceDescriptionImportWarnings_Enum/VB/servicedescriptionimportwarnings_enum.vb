@@ -1,4 +1,4 @@
-' System.Web.Services.Description.ServiceDescriptionImportWarnings.NoCodeGenerated
+﻿' System.Web.Services.Description.ServiceDescriptionImportWarnings.NoCodeGenerated
 ' System.Web.Services.Description.ServiceDescriptionImportWarnings.NoMethodsGenerated
 ' System.Web.Services.Description.ServiceDescriptionImportWarnings.UnsupportedOperationsIgnored
 ' System.Web.Services.Description.ServiceDescriptionImportWarnings.OptionalExtensionsIgnored

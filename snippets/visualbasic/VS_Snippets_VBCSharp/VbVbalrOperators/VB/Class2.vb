@@ -1,4 +1,4 @@
-'<Snippet54>
+﻿'<Snippet54>
 Option Strict Off
 '</Snippet54>
 

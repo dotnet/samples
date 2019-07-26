@@ -1,4 +1,4 @@
- '*
+﻿ '*
 '  *File name: WebThreadInformation.cs
 '  *Purpose: Implements a custom type to 
 ' * access the thread information. 

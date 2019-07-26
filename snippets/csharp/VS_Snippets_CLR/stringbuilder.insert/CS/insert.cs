@@ -1,4 +1,4 @@
-// This example demonstrates StringBuilder.Insert()
+﻿// This example demonstrates StringBuilder.Insert()
 //<snippet1>
 using System;
 using System.Text;

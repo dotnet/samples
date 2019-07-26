@@ -1,4 +1,4 @@
-/*
+﻿/*
  This program demonstrates the "Remove" method of "WebHeaderCollection" class.
  It uses the "Remove" method of "WebHeaderCollection" to remove the 'Cache-Control' header from the request.
  The 'Cache-Control' header is used to specify the directive that must be followed by all caching mechanisms

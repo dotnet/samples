@@ -1,4 +1,4 @@
-// Counter.cs
+﻿// Counter.cs
 // <snippet0>
 using System;
 

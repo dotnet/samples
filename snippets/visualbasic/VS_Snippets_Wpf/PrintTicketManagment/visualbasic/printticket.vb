@@ -1,4 +1,4 @@
-'
+﻿'
 ' * Copyright (c) 1990 - 2005  Microsoft Corporation.
 ' * All Rights Reserved.
 ' *

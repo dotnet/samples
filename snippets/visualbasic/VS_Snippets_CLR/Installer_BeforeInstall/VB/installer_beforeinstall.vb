@@ -1,4 +1,4 @@
-' System.Configuration.Install.Installer.BeforeInstall
+﻿' System.Configuration.Install.Installer.BeforeInstall
 
 ' The following example demonstrates the event 'BeforeInstall' of the
 ' 'Installer' class. The event 'BeforeInstall' is raised by the method

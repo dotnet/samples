@@ -1,4 +1,4 @@
-//<SnippetDataBindingCODEBEHIND>
+﻿//<SnippetDataBindingCODEBEHIND>
 using System.Windows;
 
 namespace SDKSample

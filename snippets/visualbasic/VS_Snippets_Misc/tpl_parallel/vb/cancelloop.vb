@@ -1,4 +1,4 @@
-'<snippet29>
+﻿'<snippet29>
 ' How to: Cancel a Parallel.For or ForEach Loop
 
 Imports System.Threading

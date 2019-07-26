@@ -1,4 +1,4 @@
-// DocumentSerialize SDK Sample - ThumbViewer.cs
+﻿// DocumentSerialize SDK Sample - ThumbViewer.cs
 // Copyright (c) Microsoft Corporation. All rights reserved.
 
 using System;

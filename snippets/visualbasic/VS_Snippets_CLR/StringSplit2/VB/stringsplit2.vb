@@ -1,4 +1,4 @@
- ' <Snippet1>
+﻿ ' <Snippet1>
 Public Class StringSplit2
    Public Shared Sub Main()
       

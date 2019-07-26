@@ -1,4 +1,4 @@
-' <Snippet4>
+﻿' <Snippet4>
 Imports System
 Imports System.Globalization
 

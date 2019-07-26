@@ -1,4 +1,4 @@
-' DocumentStructure SDK Sample - App.xaml.vb
+﻿' DocumentStructure SDK Sample - App.xaml.vb
 ' Copyright (c) Microsoft Corporation. All rights reserved.
 
 Imports System.Xml

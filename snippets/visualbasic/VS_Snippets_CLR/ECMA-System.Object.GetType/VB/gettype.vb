@@ -1,4 +1,4 @@
-'<Snippet1>
+﻿'<Snippet1>
 ' Define a base and a derived class.
 Public Class MyBaseClass
 End Class 

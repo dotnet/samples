@@ -1,4 +1,4 @@
-' The following code example demonstrates the effect of changing the NumberGroupSeparator property.
+﻿' The following code example demonstrates the effect of changing the NumberGroupSeparator property.
 
 ' <snippet1>
 Imports System

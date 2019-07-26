@@ -1,4 +1,4 @@
-' System.Reflection.Emit.ILGenerator.BeginExceptFilterBlock()
+﻿' System.Reflection.Emit.ILGenerator.BeginExceptFilterBlock()
 ' System.Reflection.Emit.ILGenerator.BeginFinallyBlock()
 
 ' The following program demonstrates the 'BeginExceptFilterBlock()' method and

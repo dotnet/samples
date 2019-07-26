@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 ' This example demonstrates Math.Max()
 Class Sample
    Public Shared Sub Main()

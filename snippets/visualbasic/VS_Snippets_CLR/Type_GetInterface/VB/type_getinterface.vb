@@ -1,4 +1,4 @@
-' System.Type.GetInterface(String)
+﻿' System.Type.GetInterface(String)
 ' System.Type.GetInterface(String, bool)
 ' System.Type.GetInterfaceMap
 '

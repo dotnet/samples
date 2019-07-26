@@ -1,4 +1,4 @@
-'<Snippet1>
+﻿'<Snippet1>
 ' To replace the default AppDomainManager, identify  the 
 ' replacement assembly and replacement type in the 
 ' APPDOMAIN_MANAGER_ASM and APPDOMAIN_MANAGER_TYPE  

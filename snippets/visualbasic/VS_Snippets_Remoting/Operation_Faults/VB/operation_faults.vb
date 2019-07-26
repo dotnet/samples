@@ -1,4 +1,4 @@
-' System.Web.Services.Description.Operation.Faults
+﻿' System.Web.Services.Description.Operation.Faults
 
 ' The following program demonstrates the 'Faults' property of 'Operation'
 ' class. It reads from a 'Operation_Faults_Input_VB.wsdl' file removes fault

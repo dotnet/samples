@@ -1,4 +1,4 @@
-//<snippet0>
+﻿//<snippet0>
 using System.Security.Permissions;
 using System;
 using System.Collections.Generic;

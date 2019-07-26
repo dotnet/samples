@@ -1,4 +1,4 @@
-' System.Web.Services.Discovery.ContractReference
+﻿' System.Web.Services.Discovery.ContractReference
 
 '  The following example demonstrates the 'ContractReference' class .
 '  A new instance of 'ContractReference' class  is obtained. The

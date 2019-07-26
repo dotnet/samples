@@ -1,4 +1,4 @@
-' <SnippetClockControllerSeekExample>
+﻿' <SnippetClockControllerSeekExample>
 
 Imports Microsoft.VisualBasic
 Imports System

@@ -1,4 +1,4 @@
-// <SnippetTextEffectTargetCodeExampleWholePage>
+﻿// <SnippetTextEffectTargetCodeExampleWholePage>
 using System;
 using System.Windows;
 using System.Collections;

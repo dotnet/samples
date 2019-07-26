@@ -1,4 +1,4 @@
-' <SnippetPolyBezierSegmentCodeExampleWholePage>
+﻿' <SnippetPolyBezierSegmentCodeExampleWholePage>
 
 Imports System
 Imports System.Windows

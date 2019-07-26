@@ -1,4 +1,4 @@
- ' <snippet0>
+﻿ ' <snippet0>
 Imports System
 Imports System.EnterpriseServices
 Imports System.Reflection

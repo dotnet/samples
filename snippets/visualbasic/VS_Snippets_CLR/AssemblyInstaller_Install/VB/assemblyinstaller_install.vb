@@ -1,4 +1,4 @@
-' System.Configuration.Install.AssemblyInstaller.AssemblyInstaller()
+﻿' System.Configuration.Install.AssemblyInstaller.AssemblyInstaller()
 ' System.Configuration.Install.AssemblyInstaller.Install
 ' System.Configuration.Install.AssemblyInstaller.Commit
 

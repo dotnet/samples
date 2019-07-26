@@ -1,4 +1,4 @@
-   // System.Windows.Forms.DataGridTableStyle.ResetAlternatingBackColor
+﻿   // System.Windows.Forms.DataGridTableStyle.ResetAlternatingBackColor
 
    /*
      The following example demonstrates the 'ResetAlternatingBackColor' method of 'DataGridTableStyle' class.

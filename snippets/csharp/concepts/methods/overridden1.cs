@@ -1,4 +1,4 @@
-// <Snippet105>
+﻿// <Snippet105>
 using System;
 
 public class Person

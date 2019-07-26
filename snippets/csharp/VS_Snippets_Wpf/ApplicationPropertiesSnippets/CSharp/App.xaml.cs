@@ -1,4 +1,4 @@
-//<SnippetHandleStartupCODEBEHIND>
+﻿//<SnippetHandleStartupCODEBEHIND>
 using System;
 using System.Windows;
 

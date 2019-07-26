@@ -1,4 +1,4 @@
-//<Snippet2>
+﻿//<Snippet2>
 // Example of the Convert.ToInt32( string ) and 
 // Convert.ToInt32( string, IFormatProvider ) methods.
 using System;

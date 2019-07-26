@@ -1,4 +1,4 @@
-// Updated for 406827 REDMOND\glennha
+﻿// Updated for 406827 REDMOND\glennha
 // <Snippet1>
 using System;
 using System.Reflection;

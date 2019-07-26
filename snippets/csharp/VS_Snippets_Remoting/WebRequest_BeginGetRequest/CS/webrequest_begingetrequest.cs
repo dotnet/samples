@@ -1,4 +1,4 @@
-/* System.Net.WebRequest.BeginGetRequestStream System.Net.WebRequest.EndGetRequestStream System.Net.WebRequest.Method
+﻿/* System.Net.WebRequest.BeginGetRequestStream System.Net.WebRequest.EndGetRequestStream System.Net.WebRequest.Method
   This program demonstrates 'BeginGetRequestStream','EndGetRequestStream' methods and 'Method' property of 
     'WebRequest' class. 
    A new 'WebRequest' object is created .The method property of the 'WebRequest' object is set to POST. An 

@@ -1,4 +1,4 @@
-'<SnippetWindowRestoreBoundsCODEBEHIND1>
+﻿'<SnippetWindowRestoreBoundsCODEBEHIND1>
 
 Imports System
 Imports System.ComponentModel

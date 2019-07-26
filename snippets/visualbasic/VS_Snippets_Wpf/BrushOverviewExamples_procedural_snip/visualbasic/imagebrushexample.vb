@@ -1,4 +1,4 @@
-' <SnippetGraphicsMMImageBrushAsCanvasBackgroundExampleWholePage>
+﻿' <SnippetGraphicsMMImageBrushAsCanvasBackgroundExampleWholePage>
 
 Imports Microsoft.VisualBasic
 Imports System

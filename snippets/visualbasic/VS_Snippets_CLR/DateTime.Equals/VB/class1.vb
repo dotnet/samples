@@ -1,4 +1,4 @@
-Class Class1
+﻿Class Class1
    Public Shared Sub Main()
       ' <Snippet1>
       Dim today1 As New System.DateTime(System.DateTime.Today.Ticks)

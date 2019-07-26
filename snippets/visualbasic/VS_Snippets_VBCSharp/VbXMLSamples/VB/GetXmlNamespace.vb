@@ -1,4 +1,4 @@
-' Topic: GetXmlNamespace Operator
+﻿' Topic: GetXmlNamespace Operator
 '<Snippet38>
 ' Place Imports statements at the top of your program.  
 Imports <xmlns:ns="http://SomeNamespace">

@@ -1,4 +1,4 @@
-
+﻿
 Module SimpleArray
    Public Sub Main()
       ' Declare an array with 7 elements.

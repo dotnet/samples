@@ -1,4 +1,4 @@
-' System.Type.GetMembers()
+﻿' System.Type.GetMembers()
 ' This program demonstrates GetMembers() method of System.Type Class.
 ' Get the members (properties, methods, fields, events, and so on)
 ' of the class 'MyClass' and displays the same to the console.     

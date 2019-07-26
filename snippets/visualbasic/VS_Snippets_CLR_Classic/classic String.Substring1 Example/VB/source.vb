@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Public Class Sample
    Public Shared Sub Main()
       Dim myString As String = "abc"

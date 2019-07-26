@@ -1,4 +1,4 @@
-// <SnippetFormatConvertedBitmapCodeExample2WholePage>
+﻿// <SnippetFormatConvertedBitmapCodeExample2WholePage>
 using System;
 using System.Windows;
 using System.Windows.Controls;

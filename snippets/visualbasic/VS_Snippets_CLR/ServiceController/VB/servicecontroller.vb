@@ -1,4 +1,4 @@
-' System.ServiceProcess.ServiceController
+﻿' System.ServiceProcess.ServiceController
 '
 ' The following example application performs basic service queries/commands.
 

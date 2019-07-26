@@ -1,4 +1,4 @@
-//<Snippet9>
+﻿//<Snippet9>
 using System.Web.Profile;
 using System.Configuration.Provider;
 using System.Collections.Specialized;

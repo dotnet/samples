@@ -1,4 +1,4 @@
-'<Snippet1>
+﻿'<Snippet1>
 Imports System.CodeDom
 Imports System.CodeDom.Compiler
 Imports System.Collections

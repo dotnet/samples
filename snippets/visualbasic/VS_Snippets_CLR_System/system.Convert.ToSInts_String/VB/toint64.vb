@@ -1,4 +1,4 @@
-'<Snippet1>
+﻿'<Snippet1>
 ' Example of the Convert.ToInt64( String ) and 
 ' Convert.ToInt64( String, IFormatProvider ) methods.
 Imports System

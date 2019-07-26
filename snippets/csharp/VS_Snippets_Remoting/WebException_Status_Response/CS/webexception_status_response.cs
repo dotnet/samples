@@ -1,4 +1,4 @@
-/* This program demonstrates the "Status" and the "Response" property of "WebException" class.
+﻿/* This program demonstrates the "Status" and the "Response" property of "WebException" class.
    It tries to access an invalid site and displays the status code and status description of the 
    resultant  exception that is raised.
 */

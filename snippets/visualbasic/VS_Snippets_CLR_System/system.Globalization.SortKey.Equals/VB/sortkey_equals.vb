@@ -1,4 +1,4 @@
-' The following code example shows the results of SortKey.Equals when compared with different SortKey objects.
+﻿' The following code example shows the results of SortKey.Equals when compared with different SortKey objects.
 
 ' <snippet1>
 Imports System

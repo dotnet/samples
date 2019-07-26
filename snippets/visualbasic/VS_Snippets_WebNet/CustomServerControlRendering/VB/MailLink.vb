@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 ' MailLink.vb
 Option Strict On
 Imports System

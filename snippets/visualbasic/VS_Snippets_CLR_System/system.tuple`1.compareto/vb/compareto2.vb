@@ -1,4 +1,4 @@
-' <Snippet2>
+﻿' <Snippet2>
 Imports System.Collections.Generic
 
 Public Class DescendingComparer(Of T) : Implements IComparer(Of T)

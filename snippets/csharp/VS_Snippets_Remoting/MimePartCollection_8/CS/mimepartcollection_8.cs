@@ -1,4 +1,4 @@
-// System.Web.Services.Description.MimePartCollection.MimePartCollection()
+﻿// System.Web.Services.Description.MimePartCollection.MimePartCollection()
 // System.Web.Services.Description.MimePartCollection.Item[System.Int32 index]
 // System.Web.Services.Description.MimePartCollection.Insert
 // System.Web.Services.Description.MimePartCollection.IndexOf

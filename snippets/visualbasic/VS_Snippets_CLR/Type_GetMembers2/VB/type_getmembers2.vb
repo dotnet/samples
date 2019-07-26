@@ -1,4 +1,4 @@
-' System.Type.GetMembers(BindingFlags)
+﻿' System.Type.GetMembers(BindingFlags)
 
 ' This program demonstrates 'GetMembers(BindingFlags)' method of 
 ' System.Type Class. This will get all the public instance members

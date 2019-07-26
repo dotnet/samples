@@ -1,4 +1,4 @@
-// System.Reflection.Emit.LocalBuilder
+﻿// System.Reflection.Emit.LocalBuilder
 // System.Reflection.Emit.ILGenerator.DeclareLocal(Type)
 // System.Reflection.Emit.LocalBuilder.SetLocalSymInfo(String)
 // System.Reflection.Emit.LocalBuilder.LocalType()

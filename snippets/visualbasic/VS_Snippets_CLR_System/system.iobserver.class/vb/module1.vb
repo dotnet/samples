@@ -1,4 +1,4 @@
-' <Snippet9>
+﻿' <Snippet9>
 Module Module1
    Dim provider As LocationTracker
 

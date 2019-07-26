@@ -1,4 +1,4 @@
-' This is a simple example for VisualStyleInformation that displays
+﻿' This is a simple example for VisualStyleInformation that displays
 ' all of the visual style values in a ListView.
 
 ' <Snippet0>

@@ -1,4 +1,4 @@
-// The following code example demonstrates the effect of changing the PercentGroupSeparator property.
+﻿// The following code example demonstrates the effect of changing the PercentGroupSeparator property.
 
 // <snippet1>
 using System;

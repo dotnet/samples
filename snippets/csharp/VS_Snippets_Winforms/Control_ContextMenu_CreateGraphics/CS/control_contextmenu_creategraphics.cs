@@ -1,4 +1,4 @@
-// System.Windows.Forms.Control.ContextMenu
+﻿// System.Windows.Forms.Control.ContextMenu
 // System.Windows.Forms.Control.ContextMenuChanged
 // System.Windows.Forms.Control.CreateGraphics
 

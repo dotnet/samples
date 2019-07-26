@@ -1,4 +1,4 @@
-' System.Diagnostics.Process.Refresh
+﻿' System.Diagnostics.Process.Refresh
 ' System.Diagnostics.Process.HasExited
 ' System.Diagnostics.Process.Close
 ' System.Diagnostics.Process.CloseMainWindow

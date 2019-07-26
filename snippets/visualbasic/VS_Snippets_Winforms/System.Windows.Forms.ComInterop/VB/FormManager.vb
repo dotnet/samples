@@ -1,4 +1,4 @@
-' <snippet10>
+﻿' <snippet10>
 Imports System.Runtime.InteropServices
 Imports System.Threading
 Imports System.Windows.Forms

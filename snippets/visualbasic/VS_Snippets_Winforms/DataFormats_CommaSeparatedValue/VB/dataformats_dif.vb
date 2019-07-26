@@ -1,4 +1,4 @@
-' System.Windows.Forms.DataFormats.Dif
+﻿' System.Windows.Forms.DataFormats.Dif
 ' The following example demonstrates the 'Dif' field of 'DataFormats' class.
 ' It  creates a 'FileStream' object of the Temp.dif file.
 ' It stores the object in the form of the 'Dif' format in the 'DataObject'. 

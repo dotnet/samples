@@ -1,4 +1,4 @@
-' Topic: XML Literals Overview
+﻿' Topic: XML Literals Overview
 
 Public Class Samples2
 

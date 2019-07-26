@@ -1,4 +1,4 @@
-' <SnippetBasicRichTextBoxWithContentCodeOnlyExample>
+﻿' <SnippetBasicRichTextBoxWithContentCodeOnlyExample>
 
 Imports System
 Imports System.Windows

@@ -1,4 +1,4 @@
-' System.Diagnostics.ProcessModule.ModuleName
+﻿' System.Diagnostics.ProcessModule.ModuleName
 
 ' The following program demonstrates the use of 'ModuleName' property of 
 ' 'ProcessModule' class. It creates a notepad, gets the 'MainModule' and 

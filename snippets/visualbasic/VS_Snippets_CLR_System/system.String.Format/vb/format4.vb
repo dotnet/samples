@@ -1,4 +1,4 @@
-' <Snippet4>
+﻿' <Snippet4>
 Public Module Example
    Public Sub Main()
       Dim formatString As String = "    {0,10} ({0,8:X8})" + vbCrLf +  _

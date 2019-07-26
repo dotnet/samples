@@ -1,4 +1,4 @@
-' System.Reflection.Emit.ILGenerator
+﻿' System.Reflection.Emit.ILGenerator
 ' System.Reflection.Emit.ILGenerator.BeginScope()
 ' System.Reflection.Emit.ILGenerator.EndScope()
 

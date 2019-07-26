@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Globalization;
 
 public class Class1
@@ -173,7 +173,7 @@ public class Class1
       // Displays:    $16,325.63
       culture = CultureInfo.CreateSpecificCulture("en-GB");
       Console.WriteLine(value.ToString(specifier, culture));
-      // Displays:    �16,325.63
+      // Displays:    £16,325.63
       
       specifier = "E04";
       culture = CultureInfo.CreateSpecificCulture("sv-SE");

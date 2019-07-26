@@ -1,4 +1,4 @@
-Imports System
+﻿Imports System
 
 Namespace CustomCodeAttributes
     '<snippet4>

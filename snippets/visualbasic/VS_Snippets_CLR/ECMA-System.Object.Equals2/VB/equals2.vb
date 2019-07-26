@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Class Point
     Protected x, y As Integer
     

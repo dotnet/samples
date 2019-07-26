@@ -1,4 +1,4 @@
-'   The following example creates an assembly which is used to demonstrate
+﻿'   The following example creates an assembly which is used to demonstrate
 '   the methods, properties and constructors of the 'AssemblyInstaller' class.
 
 Imports System

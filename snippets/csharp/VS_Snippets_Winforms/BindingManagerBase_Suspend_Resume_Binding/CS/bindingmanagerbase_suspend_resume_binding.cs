@@ -1,4 +1,4 @@
-// System.BindingManagerBase.SuspendBinding
+﻿// System.BindingManagerBase.SuspendBinding
 // System.BindingManagerBase.ResumeBinding
 
 /* This program demonstrates 'SuspendBinding' and 'ResumeBinding' method of 'BindingManagerBase'class.

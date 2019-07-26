@@ -1,4 +1,4 @@
- '<snippet1>
+﻿ '<snippet1>
 Class stringReplace1
    Public Shared Sub Main()
       Dim str As [String] = "1 2 3 4 5 6 7 8 9"

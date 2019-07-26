@@ -1,4 +1,4 @@
-' System.Xml.Serialization.XmlRootAttribute.XmlRootAttribute(string)
+﻿' System.Xml.Serialization.XmlRootAttribute.XmlRootAttribute(string)
 
 '   The following example demonstrates the constructor
 '   'XmlRootAttribute(string)' of class 'XmlRootAttribute'.

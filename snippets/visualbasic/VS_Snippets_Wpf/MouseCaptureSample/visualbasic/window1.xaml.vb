@@ -1,4 +1,4 @@
-Namespace SDKSamples
+﻿Namespace SDKSamples
 	''' <summary>
 	''' Interaction logic for Window1.xaml
 	''' </summary>

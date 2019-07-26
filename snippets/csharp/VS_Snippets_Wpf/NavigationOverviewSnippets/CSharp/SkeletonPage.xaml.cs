@@ -1,4 +1,4 @@
-//<SnippetSkeletonPageCodebehind>
+﻿//<SnippetSkeletonPageCodebehind>
 using System;
 using System.Windows.Controls;
 

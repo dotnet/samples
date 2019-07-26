@@ -1,4 +1,4 @@
-' System.Reflection.Emit.TypeBuilder.GetEvents(BindingFlags)
+﻿' System.Reflection.Emit.TypeBuilder.GetEvents(BindingFlags)
 
 ' The program demonstrates the 'GetEvents(BindingFlags)' method of the 'TypeBuilder' class.
 ' It builds an assembly by defining 'HelloWorld' type and creates a 'Click' and

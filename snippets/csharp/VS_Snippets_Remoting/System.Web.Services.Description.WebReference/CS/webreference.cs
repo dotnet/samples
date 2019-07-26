@@ -1,4 +1,4 @@
-/// Class: System.Web.Services.Description.WebReference
+﻿/// Class: System.Web.Services.Description.WebReference
 /// 11 #ctor(DocumentCollection,CodeNamespace,String,String,String)
 /// 11 ProxyCode
 /// 11 ValidationWarnings

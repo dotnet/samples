@@ -1,4 +1,4 @@
-//NCLCustomWebClient
+﻿//NCLCustomWebClient
 
 using System;
 using System.Net;

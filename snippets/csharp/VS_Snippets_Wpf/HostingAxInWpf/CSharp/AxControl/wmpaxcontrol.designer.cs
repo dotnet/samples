@@ -1,4 +1,4 @@
-namespace WmpAxLib
+﻿namespace WmpAxLib
 {
     partial class WmpAxControl
     {

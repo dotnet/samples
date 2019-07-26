@@ -1,4 +1,4 @@
-' System.Windows.Forms.DataGridTableStyle.PreferredRowHeight
+﻿' System.Windows.Forms.DataGridTableStyle.PreferredRowHeight
 
 ' The following example demonstrates 'PreferredRowHeight' property of 'DataGridTableStyle' 
 ' class. It adds a DataGrid, Button and a TextBox to a form. It changes the 

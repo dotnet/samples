@@ -1,4 +1,4 @@
- ' System.Reflection.AssemblyName.CodeBase
+﻿ ' System.Reflection.AssemblyName.CodeBase
 ' System.Reflection.AssemblyName.CultureInfo
 ' System.Reflection.AssemblyName.HashAlgorithm
 ' System.Reflection.AssemblyName.FullName

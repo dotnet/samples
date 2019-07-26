@@ -1,4 +1,4 @@
-'<SnippetCustomTypeCODE1>
+﻿'<SnippetCustomTypeCODE1>
 Public Class CustomType
     '</SnippetCustomTypeCODE1>
     'code

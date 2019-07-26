@@ -1,4 +1,4 @@
-namespace ManagedDOMStyles
+﻿namespace ManagedDOMStyles
 {
     partial class Form1
     {

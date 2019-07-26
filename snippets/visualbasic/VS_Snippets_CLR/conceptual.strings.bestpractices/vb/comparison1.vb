@@ -1,4 +1,4 @@
-' Differences in sort order:
+﻿' Differences in sort order:
 ' Swedish ö
 
 

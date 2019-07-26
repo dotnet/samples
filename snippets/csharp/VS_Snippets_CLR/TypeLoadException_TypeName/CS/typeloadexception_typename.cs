@@ -1,4 +1,4 @@
-// System.TypeLoadException.TypeName;System.TypeLoadException.Message
+﻿// System.TypeLoadException.TypeName;System.TypeLoadException.Message
 
 /* This program demonstrates the 'TypeName' and 'Message' properties
    of the 'TypeLoadException' class. It attempts to load a 

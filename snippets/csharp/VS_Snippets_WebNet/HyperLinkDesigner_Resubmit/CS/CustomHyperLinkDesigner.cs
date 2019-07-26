@@ -1,4 +1,4 @@
-// CustomHyperLinkDesigner.cs
+﻿// CustomHyperLinkDesigner.cs
 // <snippet4>
 using System;
 using System.Web.UI;

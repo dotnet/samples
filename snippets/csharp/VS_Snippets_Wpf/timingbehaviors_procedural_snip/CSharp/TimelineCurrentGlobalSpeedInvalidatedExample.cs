@@ -1,4 +1,4 @@
-//<SnippetTimelineCurrentGlobalSpeedInvalidatedExampleWholePage>
+﻿//<SnippetTimelineCurrentGlobalSpeedInvalidatedExampleWholePage>
 /*
 
    This example shows how to register for the

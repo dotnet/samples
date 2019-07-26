@@ -1,4 +1,4 @@
-' <Snippet2>
+﻿' <Snippet2>
 Module Example
     Public Sub Main()
        ' Define an array of 32-bit integer values.

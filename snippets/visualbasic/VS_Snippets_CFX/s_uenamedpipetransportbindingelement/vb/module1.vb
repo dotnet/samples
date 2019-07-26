@@ -1,4 +1,4 @@
-' Snippet for S_UENamedPipeTransportBindingElement.
+﻿' Snippet for S_UENamedPipeTransportBindingElement.
 
 Imports System
 Imports System.Collections.Generic

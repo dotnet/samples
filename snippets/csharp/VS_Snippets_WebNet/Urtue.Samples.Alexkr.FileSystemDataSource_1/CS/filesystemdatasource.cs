@@ -1,4 +1,4 @@
-namespace Samples.AspNet
+﻿namespace Samples.AspNet
 {
     // <Snippet2>
     // <Snippet1>

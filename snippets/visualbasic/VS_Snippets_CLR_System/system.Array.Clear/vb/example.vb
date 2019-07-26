@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Module Example
     Sub Main()
         Console.WriteLine(vbLf & "One dimension (Rank=1):")

@@ -1,4 +1,4 @@
- '<snippet1>
+﻿ '<snippet1>
 Imports System.Windows.Controls
 Imports System.Windows.Ink
 Imports System.Windows.Input

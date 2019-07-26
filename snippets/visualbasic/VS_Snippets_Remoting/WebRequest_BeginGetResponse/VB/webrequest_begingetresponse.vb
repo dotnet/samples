@@ -1,4 +1,4 @@
-' System.Net.WebRequest.BeginGetResponse  System.Net.WebRequest.EndGetResponse 
+﻿' System.Net.WebRequest.BeginGetResponse  System.Net.WebRequest.EndGetResponse 
 '  This program demonstrates 'BeginGetResponse' and 'EndGetResponse' methods of 'WebRequest' Class.
 '  A new 'WebRequest' object is created to the mentioned Uri.An Asynchronous call is started for response 
 '  from the Uri using 'BeginGetResponse' method of 'WebRequest' class. The asynchronous response is ended 

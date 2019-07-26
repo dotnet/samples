@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 ' Sample for String.IndexOfAny(Char[], Int32, Int32)
 Imports System
 

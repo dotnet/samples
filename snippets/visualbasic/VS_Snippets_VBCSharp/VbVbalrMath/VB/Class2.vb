@@ -1,4 +1,4 @@
-Option Strict Off
+﻿Option Strict Off
 
 Public Class Class2
 

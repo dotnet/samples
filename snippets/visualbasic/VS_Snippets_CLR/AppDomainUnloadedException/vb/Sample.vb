@@ -1,4 +1,4 @@
-' C# and VB versions originally written by REDMOND\glennha
+﻿' C# and VB versions originally written by REDMOND\glennha
 '<Snippet1>
 Imports System
 Imports System.Threading

@@ -1,4 +1,4 @@
-// System.Windows.Forms.DataFormats.GetFormat(Int32)
+﻿// System.Windows.Forms.DataFormats.GetFormat(Int32)
 
 /*
 The following example demonstrates the 'GetFormat(int)' method of 'DataFormats'

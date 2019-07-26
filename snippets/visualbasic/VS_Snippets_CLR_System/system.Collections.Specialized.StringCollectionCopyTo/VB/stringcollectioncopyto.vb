@@ -1,4 +1,4 @@
-' The following code example copies a StringCollection to an array.
+﻿' The following code example copies a StringCollection to an array.
 
 ' <snippet1>
 Imports System

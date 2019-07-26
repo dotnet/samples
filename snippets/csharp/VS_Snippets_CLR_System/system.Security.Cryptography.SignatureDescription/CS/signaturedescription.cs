@@ -1,4 +1,4 @@
-// This sample demonstrates how to use each member of the SignatureDescription
+﻿// This sample demonstrates how to use each member of the SignatureDescription
 // class.
 //<Snippet2>
 using System;

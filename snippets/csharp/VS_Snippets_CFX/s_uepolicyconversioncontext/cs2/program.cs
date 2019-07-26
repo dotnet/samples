@@ -1,4 +1,4 @@
-// Snippet for System.ServiceModel.Description.PolicyConversionContext
+﻿// Snippet for System.ServiceModel.Description.PolicyConversionContext
 // Snippet 0
 // Snippet 1 public class MyBindingElement : BindingElement, IPolicyExporter
 // 001 06-27-2006 a-arhu using System.ServiceModel.Channels

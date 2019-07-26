@@ -1,4 +1,4 @@
-'Types:System.IO.WaitForChangedResult Vendor: Richter
+﻿'Types:System.IO.WaitForChangedResult Vendor: Richter
 '<snippet1>
 Imports System.IO
 

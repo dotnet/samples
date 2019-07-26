@@ -1,4 +1,4 @@
-namespace CustomElementClient
+﻿namespace CustomElementClient
 {
     partial class Form1
     {

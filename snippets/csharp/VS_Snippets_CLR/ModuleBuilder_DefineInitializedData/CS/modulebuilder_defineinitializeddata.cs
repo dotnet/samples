@@ -1,4 +1,4 @@
-// System.Reflection.Emit.ModuleBuilder.DefineInitializedData
+﻿// System.Reflection.Emit.ModuleBuilder.DefineInitializedData
 
 /*
 The following example demonstrates the 'DefineInitializedData' method of 

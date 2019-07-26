@@ -1,4 +1,4 @@
-Imports System.Globalization
+﻿Imports System.Globalization
 
 Public Class SamplesJapaneseCalendar   
    Public Shared Sub Main()

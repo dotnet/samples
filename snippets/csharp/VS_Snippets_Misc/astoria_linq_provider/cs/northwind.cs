@@ -1,4 +1,4 @@
-//<snippetLinq2SqlProvider>
+﻿//<snippetLinq2SqlProvider>
 using System;
 using System.ComponentModel;
 using System.Collections;

@@ -1,4 +1,4 @@
-' System.Configuration.Install.UninstallAction
+﻿' System.Configuration.Install.UninstallAction
 ' System.Configuration.Install.UninstallAction.NoAction
 ' System.Configuration.Install.UninstallAction.Remove
 

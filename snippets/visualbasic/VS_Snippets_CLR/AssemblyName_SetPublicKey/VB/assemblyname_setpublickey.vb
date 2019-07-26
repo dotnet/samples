@@ -1,4 +1,4 @@
- ' System.Reflection.AssemblyName.SetPublicKey(byte[])
+﻿ ' System.Reflection.AssemblyName.SetPublicKey(byte[])
 ' System.Reflection.AssemblyName.SetPublicKeyToken(byte[])
 ' The following example demonstrates the 'SetPublicKey(byte[])' 
 ' and the 'SetPublicKeyToken(byte[])' methods of the 'AssemblyName' class.

@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
 //
 // This example signs a file specified by a URI 
 // using a detached signature. It then verifies  

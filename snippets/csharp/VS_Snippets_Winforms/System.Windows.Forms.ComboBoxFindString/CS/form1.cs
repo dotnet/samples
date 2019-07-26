@@ -1,4 +1,4 @@
-// This example demonstrates using the following members: 
+﻿// This example demonstrates using the following members: 
 // ComboBox.FindStringExact(string)
 // ComboBox.FindStringExact(string, integer), 
 // ComboBox.ObjectCollection.AddRange(),

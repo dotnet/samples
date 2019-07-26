@@ -1,4 +1,4 @@
-' System.Net.CredentialCache.DefaultCredentials.
+﻿' System.Net.CredentialCache.DefaultCredentials.
 
  ' This program demonstrates the 'DefaultCredentials' property of the 'CredentialCache' 
 '   class.

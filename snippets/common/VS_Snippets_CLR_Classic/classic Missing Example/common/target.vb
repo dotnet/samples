@@ -1,4 +1,4 @@
-' This source file is compiled by each of the language 
+﻿' This source file is compiled by each of the language 
 ' examples, and then used to illustrate Missing.Value. 
 '
 ' The code below is included in a PLAIN CODE BLOCK in the 

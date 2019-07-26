@@ -1,4 +1,4 @@
-// NclSslClientSync
+﻿// NclSslClientSync
 //<snippet0>
 using System;
 using System.Collections;

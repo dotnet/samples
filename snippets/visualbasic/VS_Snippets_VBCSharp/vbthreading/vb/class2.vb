@@ -1,4 +1,4 @@
-' How to: Use a Thread Pool
+﻿' How to: Use a Thread Pool
 ' 5426dae4c3f34e76a99819f7ca4baf3f
 
 ' <Snippet20>

@@ -1,4 +1,4 @@
-' The following code example uses a BitVector32 as a collection of sections.
+﻿' The following code example uses a BitVector32 as a collection of sections.
 
 
 ' <snippet1>

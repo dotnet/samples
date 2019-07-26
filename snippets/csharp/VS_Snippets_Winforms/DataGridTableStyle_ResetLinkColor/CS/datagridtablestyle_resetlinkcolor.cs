@@ -1,4 +1,4 @@
-// System.Windows.Forms.DataGridTableStyle.ResetLinkColor
+﻿// System.Windows.Forms.DataGridTableStyle.ResetLinkColor
 
 /* The following program demonstrates the 'ResetLinkColor'
    of 'System.Windows.Forms.DataGridTableStyle' class.

@@ -1,4 +1,4 @@
-' SimpleRadioButtonListDesigner.vb
+﻿' SimpleRadioButtonListDesigner.vb
 ' <snippet1>
 Imports System
 Imports System.ComponentModel

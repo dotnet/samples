@@ -1,4 +1,4 @@
-' This is the first code listing in the System.Data.Common.DbConnectionStringBuilder.
+﻿' This is the first code listing in the System.Data.Common.DbConnectionStringBuilder.
 
 Option Explicit On
 Option Strict On

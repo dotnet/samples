@@ -1,4 +1,4 @@
-' Topic: How to: Access XML Descendant Elements (Visual Basic)
+﻿' Topic: How to: Access XML Descendant Elements (Visual Basic)
 
 Public Class Samples13
 Public Shared Sub Main()

@@ -1,4 +1,4 @@
-// Snippet marked here to be grouped with Snippet1 in aspx file.
+﻿// Snippet marked here to be grouped with Snippet1 in aspx file.
 
 using System;
 using System.Web.UI;

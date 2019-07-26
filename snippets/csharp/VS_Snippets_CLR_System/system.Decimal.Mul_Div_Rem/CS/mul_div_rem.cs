@@ -1,4 +1,4 @@
-//<Snippet1>
+﻿//<Snippet1>
 // Example of the decimal.Multiply, decimal.Divide, and 
 // decimal.Remainder methods. 
 using System;

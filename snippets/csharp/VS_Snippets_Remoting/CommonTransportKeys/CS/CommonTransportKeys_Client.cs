@@ -1,4 +1,4 @@
-/*
+﻿/*
    Supporting file: Client
 */
 using System;

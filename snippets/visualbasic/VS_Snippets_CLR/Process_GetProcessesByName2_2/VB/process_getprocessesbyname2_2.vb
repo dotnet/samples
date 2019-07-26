@@ -1,4 +1,4 @@
-' System.Diagnostics.Process.GetProcessesByName(String, String)
+﻿' System.Diagnostics.Process.GetProcessesByName(String, String)
 ' System.Diagnostics.Process.MachineName
 
 ' The following program demonstrates the method 'GetProcessesByName(String,

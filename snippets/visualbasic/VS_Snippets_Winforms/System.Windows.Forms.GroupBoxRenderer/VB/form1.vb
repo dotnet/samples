@@ -1,4 +1,4 @@
- ' This sample can go in GroupBoxRenderer class overview.
+﻿ ' This sample can go in GroupBoxRenderer class overview.
 ' - Snippet2 can go in DrawGroupBox
 ' This is a custom GroupBox-like control that has a double border
 ' and uses an internal FlowLayoutPanel to contain added controls.

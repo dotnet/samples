@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Class Class1
    Public Shared Sub Main()
       Dim today As System.DateTime

@@ -1,4 +1,4 @@
-' Snippet Class:  for ClientCredentials
+﻿' Snippet Class:  for ClientCredentials
 ' snippet digits: 0-4 used 
 ' References:
 '   System.ServiceModel

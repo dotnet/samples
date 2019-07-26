@@ -1,4 +1,4 @@
-namespace TestMaskedTextBoxCSharp
+﻿namespace TestMaskedTextBoxCSharp
 {
     partial class Form1
     {

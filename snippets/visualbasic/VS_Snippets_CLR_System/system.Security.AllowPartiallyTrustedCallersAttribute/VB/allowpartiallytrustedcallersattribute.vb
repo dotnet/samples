@@ -1,4 +1,4 @@
-'<Snippet1>
+﻿'<Snippet1>
 ' The following HTML code can be used to call the user control in this sample.
 '
 '<HTML>

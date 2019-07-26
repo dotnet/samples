@@ -1,4 +1,4 @@
-// System.Net.HttpWebRequest.BeginGetResponse  System.Net.HttpWebRequest.EndGetResponse
+﻿// System.Net.HttpWebRequest.BeginGetResponse  System.Net.HttpWebRequest.EndGetResponse
   
  /** 
   * Snippet1,Snippet2,Snippet3 go together.

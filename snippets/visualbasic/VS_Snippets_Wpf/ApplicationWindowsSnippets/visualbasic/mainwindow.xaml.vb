@@ -1,4 +1,4 @@
-'<SnippetMainWindowSetWindowsCODEBEHIND1>
+﻿'<SnippetMainWindowSetWindowsCODEBEHIND1>
 
 Imports Microsoft.VisualBasic
 Imports System

@@ -1,4 +1,4 @@
-' The following code example determines the number of bytes required to encode a character array,
+﻿' The following code example determines the number of bytes required to encode a character array,
 ' encodes the characters, and displays the resulting bytes.
 
 ' <Snippet2>

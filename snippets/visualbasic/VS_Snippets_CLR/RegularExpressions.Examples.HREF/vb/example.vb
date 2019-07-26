@@ -1,4 +1,4 @@
-Option Strict On
+﻿Option Strict On
 
 Imports System
 Imports System.Text.RegularExpressions

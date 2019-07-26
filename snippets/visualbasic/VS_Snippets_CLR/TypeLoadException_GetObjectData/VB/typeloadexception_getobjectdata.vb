@@ -1,4 +1,4 @@
-'  System.TypeLoadException.GetObjectData
+﻿'  System.TypeLoadException.GetObjectData
 '  System.TypeLoadException
 
 '  This program demonstrates the 'GetObjectData' method and the 

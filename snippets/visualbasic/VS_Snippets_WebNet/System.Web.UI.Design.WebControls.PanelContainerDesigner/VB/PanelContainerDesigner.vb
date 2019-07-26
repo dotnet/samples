@@ -1,4 +1,4 @@
-' PanelContainerDesigner.vb
+﻿' PanelContainerDesigner.vb
 ' <snippet1>
 Imports System
 Imports System.Web

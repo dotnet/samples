@@ -1,4 +1,4 @@
-'<Snippet2>
+﻿'<Snippet2>
 ' Example of the Decimal.ToInt32 and Decimal.ToUInt32 methods.
 Imports System
 Imports Microsoft.VisualBasic

@@ -1,4 +1,4 @@
-'<SnippetApplicationCODE>
+﻿'<SnippetApplicationCODE>
 
 Imports Microsoft.VisualBasic
 Imports System

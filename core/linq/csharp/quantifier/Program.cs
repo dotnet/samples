@@ -1,4 +1,4 @@
-namespace Quantifier
+﻿namespace Quantifier
 {
     public class Program
     {

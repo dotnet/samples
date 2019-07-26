@@ -1,4 +1,4 @@
-// System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider.CreateSink
+﻿// System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider.CreateSink
 
 using System;
 using System.Collections;

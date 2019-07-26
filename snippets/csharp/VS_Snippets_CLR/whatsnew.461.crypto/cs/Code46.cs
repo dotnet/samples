@@ -1,4 +1,4 @@
-namespace Net461 {
+﻿namespace Net461 {
 // <Snippet1>
 using System;
 using System.Security.Cryptography;

@@ -1,4 +1,4 @@
-' <snippet1>
+﻿' <snippet1>
 ' <snippet2>
 
 Imports System

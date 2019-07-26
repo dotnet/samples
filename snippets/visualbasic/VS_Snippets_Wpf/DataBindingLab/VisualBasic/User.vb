@@ -1,4 +1,4 @@
-Public Class User
+﻿Public Class User
 
     Private NameValue As String
     Private RatingValue As Integer

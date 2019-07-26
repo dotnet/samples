@@ -1,4 +1,4 @@
-' Interaction logic for Window1.xaml
+﻿' Interaction logic for Window1.xaml
 Partial Public Class Window1
     Inherits Window
 

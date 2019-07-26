@@ -1,4 +1,4 @@
-' Snippet for: F:System.Drawing.Imaging.Encoder.ColorDepth
+﻿' Snippet for: F:System.Drawing.Imaging.Encoder.ColorDepth
 
 ' <snippet1>
 Imports System

@@ -1,4 +1,4 @@
-' <Snippet15>
+﻿' <Snippet15>
 Public Class ByteByByteFormatter : Implements IFormatProvider, ICustomFormatter
    Public Function GetFormat(formatType As Type) As Object _
                    Implements IFormatProvider.GetFormat

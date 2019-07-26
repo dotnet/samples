@@ -1,4 +1,4 @@
-' This program will define the methods to execute from the client.
+﻿' This program will define the methods to execute from the client.
 
 Imports System
 Imports System.Runtime.Remoting

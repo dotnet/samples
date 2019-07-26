@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 // Sample for the Environment.NewLine property
 using System;
 

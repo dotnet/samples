@@ -1,4 +1,4 @@
-' System.Net.WebClient.DownloadFile
+﻿' System.Net.WebClient.DownloadFile
 
 'This program demonstrates the 'DownloadFile' method of 'WebClient' class.
 'It creates a URI to access a web resource at 'http://www.microsoft.com'. The Uri can point 

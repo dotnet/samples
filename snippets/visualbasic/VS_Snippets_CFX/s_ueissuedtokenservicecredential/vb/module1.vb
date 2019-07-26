@@ -1,4 +1,4 @@
-' Snippet for U_SEIssuedTokenServiceCredential
+﻿' Snippet for U_SEIssuedTokenServiceCredential
 ' Type T:System.IdentityModel.Tokens.SamlSerializer
 ' Snippet used 0-1 cs 10
 '

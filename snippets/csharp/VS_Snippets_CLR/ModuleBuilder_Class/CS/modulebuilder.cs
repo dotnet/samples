@@ -1,4 +1,4 @@
-// System.Reflection.Emit.ModuleBuilder
+﻿// System.Reflection.Emit.ModuleBuilder
 
 /*
 The following example demonstrates the 'ModuleBuilder' class. 

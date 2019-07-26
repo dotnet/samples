@@ -1,4 +1,4 @@
-' Visual Basic .NET Document
+ï»¿' Visual Basic .NET Document
 Option Strict On
 
 'Imports System.Globalization
@@ -63,7 +63,7 @@ Module Example
       Dim number As Single
       
       ' Parse currency value using en-GB culture.
-      value = "£1,097.63"
+      value = "Â£1,097.63"
       style = System.Globalization.NumberStyles.Number Or _
               System.Globalization.NumberStyles.AllowCurrencySymbol
       culture = System.Globalization.CultureInfo.CreateSpecificCulture("en-GB")
@@ -99,7 +99,7 @@ Module Example
          Console.WriteLine("Unable to convert '{0}'.", value)
       End If    
       ' The example displays the following output:
-      '       Converted '£1,097.63' to 1097.63.
+      '       Converted 'Â£1,097.63' to 1097.63.
       '       Converted '1345,978' to 1345.978.
       '       Converted '1.345,978' to 1345.978.
       '       Unable to convert '1 345,978'.

@@ -1,4 +1,4 @@
-// <Snippet9>
+﻿// <Snippet9>
 // This is the service code
 //  Copyright (c) Microsoft Corporation.  All Rights Reserved.
 

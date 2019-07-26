@@ -1,4 +1,4 @@
-' <snippet1>
+﻿' <snippet1>
 Public Class Product
     Public Property ProductID As Integer
     Public Property Name As String

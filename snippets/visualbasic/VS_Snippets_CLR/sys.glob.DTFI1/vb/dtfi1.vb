@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 
 ' This code example demonstrates the DateTimeFormatInfo 
 ' MonthGenitiveNames, AbbreviatedMonthGenitiveNames, 

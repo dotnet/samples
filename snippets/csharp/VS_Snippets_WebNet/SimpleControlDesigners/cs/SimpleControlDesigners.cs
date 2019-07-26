@@ -1,4 +1,4 @@
-/*
+﻿/*
 //<Snippet13>
 Compile the source for this as follows:
 csc /r:System.dll /r:System.Design.dll /r:System.Drawing.dll /debug+ /r:System.Web.dll /t:library /out:SimpleControlDesignersCS.dll simplecontroldesigners.cs

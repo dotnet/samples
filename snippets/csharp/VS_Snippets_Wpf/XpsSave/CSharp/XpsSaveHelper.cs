@@ -1,4 +1,4 @@
-// XpsSave SDK Sample - XpsSaveHelper.cs
+﻿// XpsSave SDK Sample - XpsSaveHelper.cs
 // Copyright (c) Microsoft Corporation. All rights reserved.
 
 using System;

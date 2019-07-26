@@ -1,4 +1,4 @@
-/*
+﻿/*
     The main Math class
     Contains all methods for performing basic math functions
 */

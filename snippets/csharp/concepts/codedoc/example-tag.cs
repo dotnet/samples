@@ -1,4 +1,4 @@
-// Adds two integers and returns the result
+﻿// Adds two integers and returns the result
 /// <summary>
 /// Adds two integers and returns the result.
 /// </summary>

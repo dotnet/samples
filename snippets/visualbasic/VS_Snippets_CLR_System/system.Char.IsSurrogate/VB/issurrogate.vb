@@ -1,4 +1,4 @@
-' <snippet11>
+﻿' <snippet11>
 Imports System
 
 Module IsSurrogateSample

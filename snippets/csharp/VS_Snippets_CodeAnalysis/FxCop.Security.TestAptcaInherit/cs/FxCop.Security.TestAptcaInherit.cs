@@ -1,4 +1,4 @@
-using System.Security;
+﻿using System.Security;
 using System.Security.Permissions;
 using System.Reflection;
 //<Snippet1>

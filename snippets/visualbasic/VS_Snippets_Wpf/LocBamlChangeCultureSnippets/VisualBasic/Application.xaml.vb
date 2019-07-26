@@ -1,4 +1,4 @@
-'<SnippetLocBamlChangeCultureCODEBEHIND>
+﻿'<SnippetLocBamlChangeCultureCODEBEHIND>
 
 Imports System.Windows
 Imports System.Globalization

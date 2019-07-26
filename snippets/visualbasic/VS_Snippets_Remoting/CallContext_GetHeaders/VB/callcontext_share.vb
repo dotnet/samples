@@ -1,4 +1,4 @@
-' System.Runtime.Remoting.CallContext.SetHeaders(Header[])
+﻿' System.Runtime.Remoting.CallContext.SetHeaders(Header[])
 Imports System
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Channels

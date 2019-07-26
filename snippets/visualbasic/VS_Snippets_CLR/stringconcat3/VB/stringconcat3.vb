@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 Public Class Example
     Public Shared Sub Main()
         ' Make an array of strings. Note that we have included spaces.

@@ -1,4 +1,4 @@
-namespace Equality
+﻿namespace Equality
 {
     public class Program
     {

@@ -1,4 +1,4 @@
-// System.Windows.Forms.DataGridTableStyle.SelectionForeColor
+﻿// System.Windows.Forms.DataGridTableStyle.SelectionForeColor
 // System.Windows.Forms.DataGridTableStyle.ResetSelectionForeColor
 
 /* The following program demonstrates the use of 'SelectionForeColor' 

@@ -1,4 +1,4 @@
-//<snippet1>
+ï»¿//<snippet1>
 // This example demonstrates the EncoderReplacementFallback class.
 
 using System;
@@ -88,7 +88,7 @@ This code example produces the following results:
 
 The name of the encoding is "us-ascii".
 
-Input string (3 characters): "«X»"
+Input string (3 characters): "Â«XÂ»"
 Input string in hexadecimal: 0xAB 0x58 0xBB
 
 Encode the input string...
@@ -100,7 +100,7 @@ Encoded bytes in hexadecimal (19 bytes):
 0x29
 
 Decode the encoded bytes...
-Input string:  "«X»"
+Input string:  "Â«XÂ»"
 Decoded string:"(unknown)X(unknown)"
 
 */

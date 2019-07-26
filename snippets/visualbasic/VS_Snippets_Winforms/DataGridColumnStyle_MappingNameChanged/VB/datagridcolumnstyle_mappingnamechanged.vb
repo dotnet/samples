@@ -1,4 +1,4 @@
-' System.Windows.Forms.DataGridColumnStyle.MappingNameChanged
+﻿' System.Windows.Forms.DataGridColumnStyle.MappingNameChanged
 '
 ' The following example demonstrates the 'MappingNameChanged' event of
 ' 'DataGridColumnStyle' class. It adds a DataGrid and a button to a Form.

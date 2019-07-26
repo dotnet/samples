@@ -1,4 +1,4 @@
-/* The class 'HelloServer' is derived from 'MarshalByRefObject' to make
+﻿/* The class 'HelloServer' is derived from 'MarshalByRefObject' to make
    it remotable. Ihe method 'HelloMethod' can be called by the client
    after creating instance of the 'HelloServer' class.
 */

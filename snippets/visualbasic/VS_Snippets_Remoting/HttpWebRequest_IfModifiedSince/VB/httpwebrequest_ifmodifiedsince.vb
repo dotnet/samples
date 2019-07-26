@@ -1,4 +1,4 @@
-' System.Net.HttpWebRequest.IfModifiedSince
+﻿' System.Net.HttpWebRequest.IfModifiedSince
 '  
 'This program demonstrates the 'IfModifiedSince' property of the 'HttpWebRequest' class .
 'A new 'HttpWebrequest' object is created.

@@ -1,4 +1,4 @@
-' <SnippetInlineElementsCodeOnlyExampleWholePage>
+ï»¿' <SnippetInlineElementsCodeOnlyExampleWholePage>
 Imports System
 Imports System.Windows
 Imports System.Windows.Media
@@ -31,7 +31,7 @@ Namespace SDKSample
 			myFigure.VerticalOffset = 20
 
 			' Create some paragraph text.
-			Dim paragraphString As String = "Neptune(planet), major planet in the solar system, eighth planet" & "from the Sun and fourth largest in diameter.  Neptune maintains an almost constant" & "distance, about 4,490 million km (about 2,790 million mi), from the Sun.  Neptune" & "revolves outside the orbit of Uranus and for most of its orbit moves inside the" & "elliptical path of the outermost planet Pluto (see Solar System). Every 248 years," & "Pluto’s elliptical orbit brings the planet inside Neptune’s nearly circular orbit" & "for about 20 years, temporarily making Neptune the farthest planet from the Sun." & "The last time Pluto’s orbit brought it inside Neptune’s orbit was in 1979. In" & "1999 Pluto’s orbit carried it back outside Neptune’s orbit."
+			Dim paragraphString As String = "Neptune(planet), major planet in the solar system, eighth planet" & "from the Sun and fourth largest in diameter.  Neptune maintains an almost constant" & "distance, about 4,490 million km (about 2,790 million mi), from the Sun.  Neptune" & "revolves outside the orbit of Uranus and for most of its orbit moves inside the" & "elliptical path of the outermost planet Pluto (see Solar System). Every 248 years," & "Plutoâ€™s elliptical orbit brings the planet inside Neptuneâ€™s nearly circular orbit" & "for about 20 years, temporarily making Neptune the farthest planet from the Sun." & "The last time Plutoâ€™s orbit brought it inside Neptuneâ€™s orbit was in 1979. In" & "1999 Plutoâ€™s orbit carried it back outside Neptuneâ€™s orbit."
 			' A child Inline element for the new Paragraph element.
 			Dim myRun As New Run(paragraphString)
 			Dim myParagraph As New Paragraph(myRun, myFigure)

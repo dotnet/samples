@@ -1,4 +1,4 @@
-// Snippet for ServiceEndpointCollection
+﻿// Snippet for ServiceEndpointCollection
 // using System.ServiceModel.Description;
 
 // <snippet1>

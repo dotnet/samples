@@ -1,4 +1,4 @@
-// System.Web.Services.Description.ServiceDescriptionBaseCollection.
+﻿// System.Web.Services.Description.ServiceDescriptionBaseCollection.
 /*
    The following example demonstrates 'ServiceDescriptionBaseCollection' class.
    A 'ServiceDescription' instance is obtained from the existing Wsdl.

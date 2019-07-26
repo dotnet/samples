@@ -1,4 +1,4 @@
-// This class creates a custom crytographic object based on the asymmetric
+﻿// This class creates a custom crytographic object based on the asymmetric
 // algorithm by extending the abstract base class AsymmetricAlgorithm.
 //<Snippet2>
 using System;

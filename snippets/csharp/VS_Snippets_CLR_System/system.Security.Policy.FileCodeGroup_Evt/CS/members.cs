@@ -1,4 +1,4 @@
-// This sample demonstrates how to use each member of the FileCodeGroup class.
+﻿// This sample demonstrates how to use each member of the FileCodeGroup class.
 //<Snippet1>
 using System;
 using System.Security;
@@ -66,7 +66,7 @@ class Members
         fileCodeGroup.Description = "Temp folder permissions group";
         //</Snippet4>
 
-        // Retrieve the string representation of the  fileCodeGroup�s 
+        // Retrieve the string representation of the  fileCodeGroup’s 
         // attributes. FileCodeGroup does not use AttributeString, so the
         // value should be null.
         //<Snippet5>

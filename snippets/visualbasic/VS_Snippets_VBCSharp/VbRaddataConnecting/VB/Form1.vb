@@ -1,4 +1,4 @@
-'<Snippet3>
+﻿'<Snippet3>
 Public Class Form1
     '<Snippet4>
     Private Sub LoadCustomers()

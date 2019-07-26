@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 ' The following example uses the 
 ' DataBindingHandlerAttribute(String) constructor to designate
 ' the custom DataBindingHandler class, named MyDataBindingHandler,

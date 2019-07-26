@@ -1,4 +1,4 @@
-'<snippet2>
+﻿'<snippet2>
 ' This code example demonstrates the RegexCompilationInfo constructor.
 ' Execute this code example after executing genFishRegex.exe.
 ' compile: vbc /r:FishRegex.dll useFishRegex.vb

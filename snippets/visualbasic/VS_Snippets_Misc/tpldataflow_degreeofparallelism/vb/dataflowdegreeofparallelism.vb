@@ -1,4 +1,4 @@
-' <snippet1>
+﻿' <snippet1>
 Imports Microsoft.VisualBasic
 Imports System
 Imports System.Diagnostics

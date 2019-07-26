@@ -1,4 +1,4 @@
-// <Snippet3>
+﻿// <Snippet3>
 using System;
 
 public enum Color {Yellow = 1, Blue, Green};
@@ -63,7 +63,7 @@ class Example
 }
 // The example displays the following output:
 //    Standard Numeric Format Specifiers
-//    (C) Currency: . . . . . . . . (�123.00)
+//    (C) Currency: . . . . . . . . (¤123.00)
 //    (D) Decimal:. . . . . . . . . -123
 //    (E) Scientific: . . . . . . . -1.234500E+002
 //    (F) Fixed point:. . . . . . . -123.45

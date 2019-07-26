@@ -1,4 +1,4 @@
- ' Types:System.Security.IPermission Vendor:Richter
+﻿ ' Types:System.Security.IPermission Vendor:Richter
 ' Types:System.Security.ISecurityEncodable Vendor:Richter
 '<snippet1>
 Imports System

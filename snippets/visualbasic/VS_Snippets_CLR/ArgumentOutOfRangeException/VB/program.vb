@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Module Module1
    Public Sub Main()
        Try

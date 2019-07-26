@@ -1,4 +1,4 @@
-' System.Net.WebException.WebException(String,InnerException);
+﻿' System.Net.WebException.WebException(String,InnerException);
 
 ' This program demonstrates the 'WebException(String,InnerException)' constructor of 'WebException' class.
 ' It creates a 'HttpConnect' object and calls the 'ConnectHttpServer' method with invalid 'URL'.

@@ -1,4 +1,4 @@
-' <SnippetSeekExampleUsingWholePage>
+﻿' <SnippetSeekExampleUsingWholePage>
 '
 '    This example shows how to seek a storyboard.
 '

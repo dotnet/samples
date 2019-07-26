@@ -1,4 +1,4 @@
-'<SnippetDataBindingCODEBEHIND>
+﻿'<SnippetDataBindingCODEBEHIND>
 Imports System.Windows
 
 Namespace SDKSample

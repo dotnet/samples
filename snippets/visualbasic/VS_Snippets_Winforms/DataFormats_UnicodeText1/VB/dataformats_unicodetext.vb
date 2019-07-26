@@ -1,4 +1,4 @@
- ' System.Windows.Forms.DataFormats.UnicodeText;System.Windows.Forms.Text;
+﻿ ' System.Windows.Forms.DataFormats.UnicodeText;System.Windows.Forms.Text;
  ' The following example demonstrates the 'UnicodeText' and 'Text' field of 'DataFormats' class.
  ' It stores a String object in Clipboard using the Clipboard's 'SetDataObject' method.
  ' It retrieves the String object stored in the Clipboard by using the GetDataObject method

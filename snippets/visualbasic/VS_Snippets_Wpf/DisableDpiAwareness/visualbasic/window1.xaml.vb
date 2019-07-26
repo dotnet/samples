@@ -1,4 +1,4 @@
-' <SnippetDisableDpiAwarenessAttribute1>
+﻿' <SnippetDisableDpiAwarenessAttribute1>
 ' Disable Dpi awareness in the application assembly.
 <Assembly: DisableDpiAwareness>
 ' </SnippetDisableDpiAwarenessAttribute1>

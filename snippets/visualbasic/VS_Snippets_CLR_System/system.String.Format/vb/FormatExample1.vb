@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 ' This code example demonstrates the String.Format() method.
 ' This example uses the provider parameter to supply formatting 
 ' information using the invariant culture.
@@ -74,7 +74,7 @@ End Class 'Sample
 ' This example displays the following output to the console:
 '
 '    Standard Numeric Format Specifiers
-'    (C) Currency: . . . . . . . . (�123.00)
+'    (C) Currency: . . . . . . . . (¤123.00)
 '    (D) Decimal:. . . . . . . . . -123
 '    (E) Scientific: . . . . . . . -1.234500E+002
 '    (F) Fixed point:. . . . . . . -123.45

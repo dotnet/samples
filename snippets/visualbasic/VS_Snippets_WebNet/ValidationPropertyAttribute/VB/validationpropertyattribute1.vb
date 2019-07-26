@@ -1,4 +1,4 @@
-' System.Web.UI.ValidationPropertyAttribute.ValidationPropertyAttribute(string)
+﻿' System.Web.UI.ValidationPropertyAttribute.ValidationPropertyAttribute(string)
 
 ' The following example demonstrates the constructor of 'ValidationPropertyAttribute(string)'.
 ' A custom control is created and ValidationPropertyAttribute is applied 

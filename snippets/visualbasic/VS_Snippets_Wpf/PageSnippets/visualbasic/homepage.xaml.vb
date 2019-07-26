@@ -1,4 +1,4 @@
-'<SnippetSetPageWindowXxxCODEBEHIND>
+﻿'<SnippetSetPageWindowXxxCODEBEHIND>
 
 Imports System
 Imports System.Windows

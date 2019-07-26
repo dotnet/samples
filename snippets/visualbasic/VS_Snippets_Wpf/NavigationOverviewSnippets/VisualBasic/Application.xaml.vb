@@ -1,4 +1,4 @@
-'<SnippetXBAPApplicationDefinitionCODEBEHIND>
+﻿'<SnippetXBAPApplicationDefinitionCODEBEHIND>
 
 Namespace SDKSample
 	Partial Public Class App

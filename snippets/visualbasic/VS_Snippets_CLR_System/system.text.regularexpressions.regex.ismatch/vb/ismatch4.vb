@@ -1,4 +1,4 @@
-' Visual Basic .NET Document
+﻿' Visual Basic .NET Document
 Option Strict On
 ' Illustrates Regex.IsMatch(String, String) method.
 ' <Snippet4>

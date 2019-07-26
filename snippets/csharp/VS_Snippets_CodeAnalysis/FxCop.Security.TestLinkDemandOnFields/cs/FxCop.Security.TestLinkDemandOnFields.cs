@@ -1,4 +1,4 @@
-using System.Reflection;
+﻿using System.Reflection;
 //<Snippet1>
 using System;
 using System.Security;

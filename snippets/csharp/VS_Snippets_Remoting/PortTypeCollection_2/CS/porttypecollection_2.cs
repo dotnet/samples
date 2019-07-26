@@ -1,4 +1,4 @@
-// System.Web.Services.Description.PortTypeCollection.Contains()
+﻿// System.Web.Services.Description.PortTypeCollection.Contains()
 // System.Web.Services.Description.PortTypeCollection.Insert()
 // System.Web.Services.Description.PortTypeCollection.IndexOf()
 // System.Web.Services.Description.PortTypeCollection.Item[string]

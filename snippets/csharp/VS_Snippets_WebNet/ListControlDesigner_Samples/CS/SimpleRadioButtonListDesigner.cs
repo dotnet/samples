@@ -1,4 +1,4 @@
-// SimpleRadioButtonListDesigner.cs
+﻿// SimpleRadioButtonListDesigner.cs
 // <snippet1>
 using System;
 using System.ComponentModel;

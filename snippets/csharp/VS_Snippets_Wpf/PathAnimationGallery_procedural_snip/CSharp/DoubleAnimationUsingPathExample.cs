@@ -1,4 +1,4 @@
-// <SnippetDoubleAnimationUsingPathWholePage>
+﻿// <SnippetDoubleAnimationUsingPathWholePage>
 using System;
 using System.Windows;
 using System.Windows.Controls;

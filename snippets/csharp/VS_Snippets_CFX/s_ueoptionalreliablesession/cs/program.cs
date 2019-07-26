@@ -1,4 +1,4 @@
-// OptionalReliableSession Class
+﻿// OptionalReliableSession Class
 using System;
 using System.Collections.Generic;
 using System.Configuration;

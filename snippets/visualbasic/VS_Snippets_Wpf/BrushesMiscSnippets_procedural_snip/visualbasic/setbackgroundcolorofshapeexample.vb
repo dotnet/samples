@@ -1,4 +1,4 @@
-' <SnippetSetBackgroundColorOfShapeCodeExampleWholePage>
+﻿' <SnippetSetBackgroundColorOfShapeCodeExampleWholePage>
 
 Imports Microsoft.VisualBasic
 Imports System

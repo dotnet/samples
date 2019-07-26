@@ -1,4 +1,4 @@
-' The following code example displays the value of LongTimePattern for selected cultures.
+﻿' The following code example displays the value of LongTimePattern for selected cultures.
 
 ' <snippet1>
 Imports System

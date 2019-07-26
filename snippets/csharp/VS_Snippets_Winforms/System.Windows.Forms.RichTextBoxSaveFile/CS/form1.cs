@@ -1,4 +1,4 @@
-// The following code example demonstrates using the 
+﻿// The following code example demonstrates using the 
 // RichTextBox1.SaveFile and RichTextBox.LoadFile methods with streams.
 // It also demonstrates using the FileDialog.FileName, 
 // SaveFileDialog.CreatePrompt, SaveFileDialog.OverwritePrompt, and 

@@ -1,4 +1,4 @@
-// System.Configuration.Install.InstallerCollection.AddRange(Installer[])
+﻿// System.Configuration.Install.InstallerCollection.AddRange(Installer[])
 
 /*
    The following example demonstrates the 'AddRange(Installer[])'

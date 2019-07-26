@@ -1,4 +1,4 @@
-// System.Windows.Forms.DataGrid.ResetHeaderBackColor
+﻿// System.Windows.Forms.DataGrid.ResetHeaderBackColor
 // System.Windows.Forms.DataGrid.ResetHeaderForeColor
 // System.Windows.Forms.DataGrid.ResetHeaderFont
 // System.Windows.Forms.DataGrid.Select

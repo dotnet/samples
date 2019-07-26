@@ -1,4 +1,4 @@
-' <Snippet2>
+﻿' <Snippet2>
 Public Class SamplesArray2
 
     Public Shared Sub Main()

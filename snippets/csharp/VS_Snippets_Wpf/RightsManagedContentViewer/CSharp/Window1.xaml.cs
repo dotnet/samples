@@ -1,4 +1,4 @@
-// RightsManagedContentViewer Sample - Window1.xaml.cs
+﻿// RightsManagedContentViewer Sample - Window1.xaml.cs
 // Copyright (c) Microsoft Corporation. All rights reserved.
 
 using System;

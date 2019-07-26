@@ -1,4 +1,4 @@
-// The following example shows how to implement and use the NameObjectCollectionBase class.
+﻿// The following example shows how to implement and use the NameObjectCollectionBase class.
 
 // <snippet1>
 using System;

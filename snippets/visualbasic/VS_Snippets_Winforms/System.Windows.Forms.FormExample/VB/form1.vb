@@ -1,4 +1,4 @@
-' The following code example demonstrates the result of setting 
+﻿' The following code example demonstrates the result of setting 
 ' the desktop bounds and desktop location. It also demonstates
 ' the Form.MaximumSize property.
 

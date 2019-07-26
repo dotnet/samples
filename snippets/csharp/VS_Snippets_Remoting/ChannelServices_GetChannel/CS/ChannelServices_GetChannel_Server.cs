@@ -1,4 +1,4 @@
-/*
+﻿/*
    This program registers the remote object.
  */ 
 using System;

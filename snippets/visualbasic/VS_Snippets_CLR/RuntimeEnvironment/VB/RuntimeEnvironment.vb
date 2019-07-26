@@ -1,4 +1,4 @@
-'Types:System.Runtime.InteropServices.RuntimeEnvironment Vendor: Richter
+﻿'Types:System.Runtime.InteropServices.RuntimeEnvironment Vendor: Richter
 '<snippet1>
 Imports System.Reflection
 Imports System.Runtime.InteropServices

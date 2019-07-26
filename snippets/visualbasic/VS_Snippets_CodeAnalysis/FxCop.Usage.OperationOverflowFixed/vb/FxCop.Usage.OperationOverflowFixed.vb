@@ -1,4 +1,4 @@
-'<Snippet1>
+﻿'<Snippet1>
 Public Module Calculator
 
     Public Function Decrement(ByVal input As Integer) As Integer

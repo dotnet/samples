@@ -1,4 +1,4 @@
-//<SnippetCustomEntryPointAndRunCODE>
+﻿//<SnippetCustomEntryPointAndRunCODE>
 using System;
 using System.Windows;
 

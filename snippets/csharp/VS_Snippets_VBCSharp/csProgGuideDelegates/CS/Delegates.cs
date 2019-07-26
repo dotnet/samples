@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Windows.Forms;
 //using System.Threading;
 using System.Drawing;
@@ -60,53 +60,7 @@ class TestStuff
         Del d = obj.DoWork;
         //</Snippet1>
     }
-
-
-    //<Snippet5>
-    // Create a delegate.
-    delegate void Del(int x);
-
-    // Instantiate the delegate using an anonymous method.
-    Del d = delegate(int k) { /* ... */ };
-    //</Snippet5>
 }
-
-
-//-----------------------------------------------------------------------------
-class TestStuffAlso
-{
-    System.Windows.Forms.Button button1 = new System.Windows.Forms.Button();
-    delegate void Del();
-
-    void Test1()
-    {
-        //<Snippet6>
-        // Create a handler for a click event.
-        button1.Click += delegate(System.Object o, System.EventArgs e)
-                           { System.Windows.Forms.MessageBox.Show("Click!"); };
-        //</Snippet6>
-
-        //<Snippet8>
-        int n = 0;
-        Del d = delegate() { System.Console.WriteLine("Copy #:{0}", ++n); };
-        //</Snippet8>
-    }
-
-
-    //<Snippet7>
-    void StartThread()
-    {
-        System.Threading.Thread t1 = new System.Threading.Thread
-          (delegate()
-                {
-                    System.Console.Write("Hello, ");
-                    System.Console.WriteLine("World!");
-                });
-        t1.Start();
-    }
-    //</Snippet7>
-}
-
 
 //-----------------------------------------------------------------------------
 class TestStuffAgain
@@ -331,48 +285,6 @@ namespace WrapNamedMethods2
     */
     //</Snippet3>
 }
-
-
-//-----------------------------------------------------------------------------
-namespace WrapAnonymousMethods
-{
-    //<Snippet4>
-    // Declare a delegate.
-    delegate void Printer(string s);
-
-    class TestClass
-    {
-        static void Main()
-        {
-            // Instantiate the delegate type using an anonymous method.
-            Printer p = delegate(string j)
-            {
-                System.Console.WriteLine(j);
-            };
-
-            // Results from the anonymous delegate call.
-            p("The delegate using the anonymous method is called.");
-
-            // The delegate instantiation using a named method "DoWork".
-            p = DoWork;
-
-            // Results from the old style delegate call.
-            p("The delegate using the named method is called.");
-        }
-
-        // The method associated with the named delegate.
-        static void DoWork(string k)
-        {
-            System.Console.WriteLine(k);
-        }
-    }
-    /* Output:
-        The delegate using the anonymous method is called.
-        The delegate using the named method is called.
-    */
-    //</Snippet4>
-}
-
 
 //-----------------------------------------------------------------------------
 namespace WrapCovariance

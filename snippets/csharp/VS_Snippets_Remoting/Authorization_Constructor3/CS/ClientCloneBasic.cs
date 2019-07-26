@@ -1,4 +1,4 @@
-/* This is a client program to test the "CloneBasic" class of IAuthenticationModule_Methods_Props.dll.
+﻿/* This is a client program to test the "CloneBasic" class of IAuthenticationModule_Methods_Props.dll.
  *
  * To demonstrate the functionality of CloneBasic, Client class has been made which makes
  * the webrequest for the protected resource. A site for such a protected resource

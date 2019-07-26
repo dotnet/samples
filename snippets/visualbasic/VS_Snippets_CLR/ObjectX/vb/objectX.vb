@@ -26,14 +26,14 @@ Class Point
     '<snippet3>
     ' Return the XOR of the x and y fields.
     Public Overrides Function GetHashCode() As Integer 
-        Return (x << 1) XOr y
+        Return (x << 1) XOR y
     End Function 
     '</snippet3>
 
     '<snippet4>
     ' Return the point's value as a string.
     Public Overrides Function ToString() As String 
-        Return String.Format("({0}, {1})", x, y)
+        Return $"({x}, {y})"
     End Function
     '</snippet4>
 
@@ -72,7 +72,7 @@ NotInheritable Public Class App
         
         '<snippet8> 
         ' The line below displays: p1's value is: (1, 2)
-        Console.WriteLine("p1's value is: {0}", p1.ToString())
+        Console.WriteLine($"p1's value is: {p1.ToString()}")
     
     End Sub
         '</snippet8>

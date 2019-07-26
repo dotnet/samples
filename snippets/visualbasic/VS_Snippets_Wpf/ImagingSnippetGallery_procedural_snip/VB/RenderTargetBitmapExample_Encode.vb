@@ -1,4 +1,4 @@
- ' <SnippetRenderTargetBitmapEncodeCodeExampleWholePage>
+﻿ ' <SnippetRenderTargetBitmapEncodeCodeExampleWholePage>
 Imports System
 Imports System.IO
 Imports System.Windows

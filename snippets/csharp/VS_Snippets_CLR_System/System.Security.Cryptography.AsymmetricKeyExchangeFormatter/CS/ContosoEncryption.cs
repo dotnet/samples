@@ -1,4 +1,4 @@
-// This sample demonstrates how to encrypt and decrypt messages using the
+﻿// This sample demonstrates how to encrypt and decrypt messages using the
 // ContosoFormatter and ContosoDeformatter classes.  These classes extend
 // AsymmetricKeyExchangeFormatter and AsymmetricKeyExchangeDeformatter classes
 // respectfully and can be found in their class reference.

@@ -1,4 +1,4 @@
-// <Snippet28>
+﻿// <Snippet28>
 using System;
 using System.Collections.Generic;
 using System.Threading;
