@@ -6,6 +6,12 @@
       name="Server"
       version="1.0.0.0" />
 
+    <!--
+    .NET Framework classes are exposed to Reg-Free COM via the <clrClass> tag identifying the type name
+    and runtime version in addition to the usual information. See
+    https://docs.microsoft.com/en-us/dotnet/framework/interop/configure-net-framework-based-com-components-for-reg
+    for documentation on all of the attributes on the <clrClass> element.
+    -->
   <clrClass
       clsid="{4378D242-7D40-441D-8743-B93068C43B30}"
       name="Server.ServerImpl"
