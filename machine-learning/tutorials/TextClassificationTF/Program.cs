@@ -14,6 +14,8 @@ namespace TextClassificationTF
     {
         // <SnippetDeclareGlobalVariables>
         public const int MaxSentenceLength = 600;
+        static readonly string _modelDownloadPath = "https://github.com/dotnet/machinelearning-testdata/raw/master/Microsoft.ML.TensorFlow.TestModels/sentiment_model/";
+        static readonly string _modelPath = "sentiment_model";
         // </SnippetDeclareGlobalVariables>
 
         static void Main(string[] args)
@@ -23,7 +25,7 @@ namespace TextClassificationTF
             MLContext mlContext = new MLContext(seed: 1);
             // </SnippetCreateMLContext>
 
-            // <SnippetCalReuseAndTuneSentimentModel>
+            // <SnippetCallReuseAndTuneSentimentModel>
             var model = ReuseAndTuneSentimentModel(mlContext);
             // </SnippetCallReuseAndTuneSentimentModel>
 
@@ -40,7 +42,7 @@ namespace TextClassificationTF
 
             // <SnippetCreateTrainData>
             var trainData = new[] { new IMDBSentiment() {
-                Sentiment_Text = "this film was just brilliant casting location scenery story direction " +
+                SentimentText = "this film was just brilliant casting location scenery story direction " +
                                     "everyone's really suited the part they played and you could just imagine being there robert " +
                                     "is an amazing actor and now the same being director  father came from the same scottish " +
                                     "island as myself so i loved the fact there was a real connection with this film the witty " +
@@ -93,35 +95,43 @@ namespace TextClassificationTF
             // <SnippetResizeFeatures>
             Action<IMDBSentiment, IntermediateFeatures> ResizeFeaturesAction = (s, f) =>
             {
-                f.Sentiment_Text = s.Sentiment_Text;
+                f.Sentiment_Text = s.SentimentText;
                 var features = s.VariableLengthFeatures;
                 Array.Resize(ref features, MaxSentenceLength);
                 f.Features = features;
             };
             // </SnippetResizeFeatures>
 
-
             // A pipeline converts text into vector of words.
             // 'TokenizeIntoWords' uses spaces to parse the text/string into words
             // Space is also a default value for the 'separators' argument if it is not specified.
-            var pipeline = mlContext.Transforms.Text.TokenizeIntoWords("TokenizedWords", "Sentiment_Text")
-                // MapValue maps each word to an integer which is an index in the dictionary ('lookupMap'),
+            // <SnippetTokenizeIntoWords>
+            var pipeline = mlContext.Transforms.Text.TokenizeIntoWords("TokenizedWords", "SentimentText")
+                // </SnippetTokenizeIntoWords>
+                // MapValue maps each word to an integer which is an index in the dictionary ('lookupMap')
+                // <SnippetMapValue>
                 .Append(mlContext.Transforms.Conversion.MapValue("VariableLengthFeatures", lookupMap,
                     lookupMap.Schema["Words"], lookupMap.Schema["Ids"], "TokenizedWords"))
+                // </SnippetMapValue>
                 // CustomMappingEstimator is used to resize variable length vector 
                 // to fixed length vector via ResizeFeaturesAction.
-                .Append(mlContext.Transforms.CustomMapping(ResizeFeaturesAction, "Resize")) 
+                // <SnippetCustomMapping>
+                .Append(mlContext.Transforms.CustomMapping(ResizeFeaturesAction, "Resize"))
+                // </SnippetCustomMapping>
                 // Passes the data to TensorFlow for scoring
+                // <SnippetScoreTensorFlowModel>
                 .Append(tensorFlowModel.ScoreTensorFlowModel("Prediction/Softmax", "Features"))
-                // Retrieves the 'Prediction' from TensorFlow and copies to a column 
+                // </SnippetScoreTensorFlowModel>
+                // Retrieves the 'Prediction' from TensorFlow and and copies to a column 
+                // <SnippetCopyColumns>
                 .Append(mlContext.Transforms.CopyColumns("Prediction", "Prediction/Softmax"));
-
+            // </SnippetCopyColumns>
 
             // Train the model
             Console.WriteLine("=============== Training classification model ===============");
             // Create and train the model based on the dataset that has been loaded, transformed.
             // <SnippetTrainModel>
-           ITransformer model = pipeline.Fit(dataView);
+            ITransformer model = pipeline.Fit(dataView);
             // </SnippetTrainModel>
 
             // <SnippetReturnModel>
@@ -141,26 +151,26 @@ namespace TextClassificationTF
         public static string DownloadTensorFlowSentimentModel()
         {
             // <SnippetDeclareDownloadPath>
-            string downloadPath = "https://github.com/dotnet/machinelearning-testdata/raw/master/Microsoft.ML.TensorFlow.TestModels/sentiment_model/";
+
             // </SnippetDeclareDownloadPath>
 
             // <SnippetCheckModelDir>
             string modelPath = "sentiment_model";
-            if (!Directory.Exists(modelPath))
-                Directory.CreateDirectory(modelPath);
+            if (!Directory.Exists(_modelPath))
+                Directory.CreateDirectory(_modelPath);
             // </SnippetCheckModelDir>
 
             // <SnippetCheckVariableDir>
-            string variablePath = Path.Combine(modelPath, "variables");
-            if (!Directory.Exists(variablePath))
-                Directory.CreateDirectory(variablePath);
+            string _variablePath = Path.Combine(modelPath, "variables");
+            if (!Directory.Exists(_variablePath))
+                Directory.CreateDirectory(_variablePath);
             // </SnippetCheckVariableDir>
 
             // <SnippetDownloadModel>
-            Download(Path.Combine(downloadPath, "saved_model.pb"), Path.Combine(modelPath, "saved_model.pb"));
-            Download(Path.Combine(downloadPath, "imdb_word_index.csv"), Path.Combine(modelPath, "imdb_word_index.csv"));
-            Download(Path.Combine(downloadPath, "variables", "variables.data-00000-of-00001"), Path.Combine(variablePath, "variables.data-00000-of-00001"));
-            Download(Path.Combine(downloadPath, "variables", "variables.index"), Path.Combine(variablePath, "variables.index"));
+            Download(Path.Combine(_modelDownloadPath, "saved_model.pb"), Path.Combine(_modelPath, "saved_model.pb"));
+            Download(Path.Combine(_modelDownloadPath, "imdb_word_index.csv"), Path.Combine(modelPath, "imdb_word_index.csv"));
+            Download(Path.Combine(_modelDownloadPath, "variables", "variables.data-00000-of-00001"), Path.Combine(_variablePath, "variables.data-00000-of-00001"));
+            Download(Path.Combine(_modelDownloadPath, "variables", "variables.index"), Path.Combine(_variablePath, "variables.index"));
             // </SnippetDownloadModel>
 
             // <SnippetReturnModelPath>
@@ -191,7 +201,7 @@ namespace TextClassificationTF
 
             // <SnippetCreateTestData>
             var data = new[] { new IMDBSentiment() {
-                Sentiment_Text = "this film is really bad"
+                SentimentText = "this film is really bad"
             }};
             // </SnippetCreateTestData>
 
