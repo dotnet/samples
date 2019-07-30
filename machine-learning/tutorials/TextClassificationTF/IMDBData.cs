@@ -29,5 +29,5 @@ namespace TextClassificationTF
         [VectorType(2)]
         public float[] Prediction { get; set; }
     }
-    // <SnippetDeclareTypes>
+    // </SnippetDeclareTypes>
 }

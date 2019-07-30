@@ -38,7 +38,7 @@ namespace TextClassificationTF
         {
             // <SnippetDownloadModel>
             string modelLocation = DownloadTensorFlowSentimentModel();
-            // <SnippetDownloadModel>
+            // </SnippetDownloadModel>
 
             // <SnippetCreateTrainData>
             var trainData = new[] { new IMDBSentiment() {
@@ -107,7 +107,7 @@ namespace TextClassificationTF
             // Space is also a default value for the 'separators' argument if it is not specified.
             // <SnippetTokenizeIntoWords>
             var pipeline = mlContext.Transforms.Text.TokenizeIntoWords("TokenizedWords", "SentimentText")
-                // </SnippetTokenizeIntoWords>
+            // </SnippetTokenizeIntoWords>
                 // MapValue maps each word to an integer which is an index in the dictionary ('lookupMap')
                 // <SnippetMapValue>
                 .Append(mlContext.Transforms.Conversion.MapValue("VariableLengthFeatures", lookupMap,
@@ -125,7 +125,7 @@ namespace TextClassificationTF
                 // Retrieves the 'Prediction' from TensorFlow and and copies to a column 
                 // <SnippetCopyColumns>
                 .Append(mlContext.Transforms.CopyColumns("Prediction", "Prediction/Softmax"));
-            // </SnippetCopyColumns>
+                // </SnippetCopyColumns>
 
             // Train the model
             Console.WriteLine("=============== Training classification model ===============");
@@ -190,7 +190,7 @@ namespace TextClassificationTF
             }
 
             return dataFile;
-            // <//SnippetDownloadDataFile>
+            // </SnippetDownloadDataFile>
         }
 
         public static void PredictSentiment(MLContext mlContext, ITransformer model)
