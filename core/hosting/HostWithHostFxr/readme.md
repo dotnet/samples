@@ -55,10 +55,10 @@ Hello, world! from Lib [count: 3]
 -- number: 2
 ```
 
-Note: The way the sample is built is relatively complicated. The goal is that it's possible to build and run the sample with simple `dotnet run` with minimal requirements on pre-installed tools. Typically real-world projects which have both managed and native components will use different build systems for each; for example msbuild/dotnet for managed and CMake for native.
+Note: The way the sample is built is relatively complicated. The goal is that it's possible to build and run the sample with simple `dotnet run` with minimal requirements on pre-installed tools. Typically, real-world projects that have both managed and native components will use different build systems for each; for example, msbuild/dotnet for managed and CMake for native.
 
 Visual Studio support
 ---------------------
 
-The `src\HostWithHostFxr.sln` can be used to open the sample in Visual Studio 2019. In order to be able to build from Visual Studio, though, it has to be started from the correct developer environment. From the developer environment console, start it with `devenv src\HostWithHostFxr.sln`. With that, the solution can be built. To run it set the start project to `build/NativeHost`.
-Note that with mixed mode debugging (that is a debugger which can see both native and managed code at the same time), there's a known limitation where no breakpoints will be hit before the runtime starts. So the parts of the sample before (and including) the call to `load_assembly_and_get_function_pointer` are not possible to debug like that. To debug those, start the process from a normal native-only debugger.
+The `src\HostWithHostFxr.sln` solution file can be used to open the sample in Visual Studio 2019. In order to be able to build from Visual Studio, though, it has to be started from the correct developer environment. From the developer environment console, start it with `devenv src\HostWithHostFxr.sln`. With that, the solution can be built. To run it, set the start project to `build/NativeHost`.
+Note that with mixed mode debugging (that is, a debugger that can see both native and managed code at the same time), there's a known limitation where no breakpoints will be hit before the runtime starts. So it is not possible to debug the parts of the sample before (and including) the call to `load_assembly_and_get_function_pointer` like that. To debug those, start the process from a normal native-only debugger.
