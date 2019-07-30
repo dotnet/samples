@@ -33,7 +33,7 @@ Build and Run
     * The C++ compiler (`cl.exe` or `g++`) and `dotnet` must be the same bitness (32-bit or 64-bit).
       * On Windows, the default developer command prompt for VS uses the 32-bit compilers, but `dotnet` is typically 64-bit by default. Make sure to select the "x64 Native Tools Command Prompt for VS 2019" (or 2017).
 
-1) Navigate to the root directory and run `dotnet build`.
+1) Navigate to the root directory.
 
 1) Run the samples. Do one of the following:
 
