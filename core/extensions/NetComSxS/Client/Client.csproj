@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks>netcoreapp3.0;net472</TargetFrameworks>
+    <ApplicationManifest>app.netcoreserver.manifest</ApplicationManifest>
+    <ApplicationManifest Condition="'$(NetFXServer)' == 'true'">app.netfxserver.manifest</ApplicationManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Contracts\Contracts.csproj" />
+  </ItemGroup>
+
+</Project>
