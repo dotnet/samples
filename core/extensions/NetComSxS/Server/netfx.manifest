@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+
+  <assemblyIdentity
+      type="win32"
+      name="Server"
+      version="1.0.0.0" />
+
+    <!--
+    .NET Framework classes are exposed to Reg-Free COM via the <clrClass> tag identifying the type name
+    and runtime version in addition to the usual information. See
+    https://docs.microsoft.com/en-us/dotnet/framework/interop/configure-net-framework-based-com-components-for-reg
+    for documentation on all of the attributes on the <clrClass> element.
+    -->
+  <clrClass
+      clsid="{4378D242-7D40-441D-8743-B93068C43B30}"
+      name="Server.ServerImpl"
+      runtimeVersion="v4.0.30319"
+      threadingModel="Both"></clrClass>
+</assembly>

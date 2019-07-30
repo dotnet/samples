@@ -799,7 +799,7 @@ module OptionValues =
     /// Next, define a type where the ZipCode is optional.
     type Customer = { ZipCode: ZipCode option }
 
-    /// Next, define an interface type the represents an object to compute the shipping zone for the customer's zip code, 
+    /// Next, define an interface type that represents an object to compute the shipping zone for the customer's zip code, 
     /// given implementations for the 'getState' and 'getShippingZone' abstract methods.
     type IShippingCalculator =
         abstract GetState : ZipCode -> string option

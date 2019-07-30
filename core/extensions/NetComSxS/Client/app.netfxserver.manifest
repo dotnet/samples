@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<assembly manifestVersion="1.0" xmlns="urn:schemas-microsoft-com:asm.v1">
+  <assemblyIdentity version="1.0.0.0" name="Client"/>
+  <dependency>
+    <dependentAssembly>
+      <!-- RegFree COM matching the registration of the generated managed COM server -->
+      <assemblyIdentity
+          type="win32"
+          name="Server"
+          version="1.0.0.0"/>
+    </dependentAssembly>
+  </dependency>
+</assembly>
