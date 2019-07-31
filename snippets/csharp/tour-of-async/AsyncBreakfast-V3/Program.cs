@@ -12,7 +12,7 @@ namespace AsyncBreakfast
             Console.WriteLine("coffee is ready");
             var eggsTask = FryEggsAsync(2);
             var baconTask = FryBaconAsync(3);
-            var toastTask = makeToastWithButterAndJamAsync(2);
+            var toastTask = MakeToastWithButterAndJamAsync(2);
 
             var eggs = await eggsTask;
             Console.WriteLine("eggs are ready");
@@ -26,12 +26,12 @@ namespace AsyncBreakfast
             Console.WriteLine("Breakfast is ready!");
 
             // <SnippetComposeToastTask>
-            async Task<Toast> makeToastWithButterAndJamAsync(int number)
+            async Task<Toast> MakeToastWithButterAndJamAsync(int number)
             {
-                var plainToast = await ToastBreadAsync(number);
-                ApplyButter(plainToast);
-                ApplyJam(plainToast);
-                return plainToast;
+                var toast = await ToastBreadAsync(number);
+                ApplyButter(toast);
+                ApplyJam(toast);
+                return toast;
             }
             // </SnippetComposeToastTask>
         }
