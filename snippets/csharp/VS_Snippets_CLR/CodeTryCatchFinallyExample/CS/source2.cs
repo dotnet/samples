@@ -1,4 +1,4 @@
-﻿//<snippet3>
+//<snippet3>
 using System;
 
 class ArgumentOutOfRangeExample
@@ -15,6 +15,7 @@ class ArgumentOutOfRangeExample
         catch (ArgumentOutOfRangeException e)
         {
             Console.WriteLine("Error: {0}", e);
+            throw;
         }
         finally
         {

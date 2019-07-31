@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
@@ -6,6 +6,19 @@
 
   <ItemGroup>
     <ProjectReference Include="$(SourceRoot)/DotNetLib/DotNetLib.csproj" />
+  </ItemGroup>
+
+  <!-- This is to hide all the source files in VS to make the project cleaner,
+       but also to include them in the build so that when the source is modified the build will rerun the C++ compiler. -->
+  <ItemGroup>
+    <Content Include="*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Visible>false</Visible>
+    </Content>
+    <Content Include="inc/*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Visible>false</Visible>
+    </Content>
   </ItemGroup>
 
   <!-- Target to build the native project -->
@@ -20,11 +33,11 @@
       <NetHostName Condition="$([MSBuild]::IsOsPlatform('OSX'))">libnethost.dylib</NetHostName>
     </PropertyGroup>
 
-    <Exec Command="g++ nativehost.cpp -I&quot;$(NetHostDir)&quot; -Iinc -D LINUX -std=c++11 -o &quot;$(NativeBinDir)/nativehost&quot; -ldl -lnethost -L&quot;$(NetHostDir)&quot; -Wl,-rpath,'$ORIGIN',--disable-new-dtags"
+    <Exec Command="g++ nativehost.cpp -I&quot;$(NetHostDir)&quot; -Iinc -D LINUX -std=c++11 -o &quot;$(NativeBinDir)/nativehost&quot; -ldl -lnethost -L&quot;$(NetHostDir)&quot; -g -Wl,-rpath,'$ORIGIN',--disable-new-dtags"
           ConsoleToMsBuild="true"
           Condition="$([MSBuild]::IsOsPlatform('Linux'))" />
 
-    <Exec Command="g++ nativehost.cpp -I&quot;$(NetHostDir)&quot; -Iinc -D OSX -std=c++11 -o &quot;$(NativeBinDir)/nativehost&quot; -ldl -lnethost -L&quot;$(NetHostDir)&quot; -Wl,-rpath,'@loader_path'"
+    <Exec Command="g++ nativehost.cpp -I&quot;$(NetHostDir)&quot; -Iinc -D OSX -std=c++11 -o &quot;$(NativeBinDir)/nativehost&quot; -ldl -lnethost -L&quot;$(NetHostDir)&quot; -g -Wl,-rpath,'@loader_path'"
           ConsoleToMsBuild="true"
           Condition="$([MSBuild]::IsOsPlatform('OSX'))" />
 
