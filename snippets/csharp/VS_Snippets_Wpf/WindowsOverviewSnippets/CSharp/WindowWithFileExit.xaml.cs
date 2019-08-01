@@ -1,4 +1,4 @@
-//<SnippetWindowWithFileExitCODEBEHIND>
+﻿//<SnippetWindowWithFileExitCODEBEHIND>
 using System.Windows;
 
 namespace SDKSample

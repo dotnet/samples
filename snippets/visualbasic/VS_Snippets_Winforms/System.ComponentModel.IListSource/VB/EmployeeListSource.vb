@@ -1,4 +1,4 @@
-' <snippet1>
+Ôªø' <snippet1>
 Imports System.ComponentModel
 
 Public Class EmployeeListSource
@@ -65,7 +65,7 @@ Public Sub New(ByVal Container As System.ComponentModel.IContainer)
             ble.Add(New Employee("Furse, Kari", 19000000))
             ble.Add(New Employee("Langhorn, Carl", 16000000))
             ble.Add(New Employee("Todorov, Teodor", 15700000))
-            ble.Add(New Employee("VerebÈlyi, ¡gnes", 15700000))
+            ble.Add(New Employee("Vereb√©lyi, √Ågnes", 15700000))
         End If
 
         Return ble

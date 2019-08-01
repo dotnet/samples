@@ -1,4 +1,4 @@
-//<SnippetNavigationWindowCODEBEHIND>
+﻿//<SnippetNavigationWindowCODEBEHIND>
 using System.Windows.Navigation;
 
 namespace SDKSample

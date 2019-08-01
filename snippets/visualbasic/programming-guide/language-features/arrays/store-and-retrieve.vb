@@ -1,4 +1,4 @@
-
+﻿
 Module Example
    Public Sub Main()
       ' Create a 10-element integer array.

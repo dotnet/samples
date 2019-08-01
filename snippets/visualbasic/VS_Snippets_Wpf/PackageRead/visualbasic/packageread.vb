@@ -1,4 +1,4 @@
-'-----------------------------------------------------------------------------
+﻿'-----------------------------------------------------------------------------
 ' <copyright file="PackageRead.vb" company="Microsoft">
 '   Copyright (C) Microsoft Corporation.  All rights reserved.</copyright>
 '

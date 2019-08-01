@@ -1,4 +1,4 @@
-' System.Net.Authorization.Authorization(string,bool);System.Net.Authorization.ProtectionRealm
+﻿' System.Net.Authorization.Authorization(string,bool);System.Net.Authorization.ProtectionRealm
 '   This program demonstrates the 'ProtectionRealm' property and 'Authorization(string,bool)' constructor of 
 '   the "Authorization" class. The "IAuthenticationModule" interface is implemented in 'CloneBasic' to make
 '   it a custom authentication module. The custom authentication module encodes username and password as

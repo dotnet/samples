@@ -1,4 +1,4 @@
-// System.Diagnostics
+﻿// System.Diagnostics
 //
 // Requires .NET Framework version 1.2 or higher.
 

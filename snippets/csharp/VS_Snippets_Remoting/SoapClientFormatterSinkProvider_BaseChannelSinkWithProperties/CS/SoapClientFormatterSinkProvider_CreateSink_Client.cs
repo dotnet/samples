@@ -1,4 +1,4 @@
-// System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider.CreateSink
+﻿// System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider.CreateSink
 // System.Runtime.Remoting.Channels.BaseChannelSinkWithProperties
 
 /*

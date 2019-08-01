@@ -1,4 +1,4 @@
-'<SNIPPET1>
+﻿'<SNIPPET1>
 Public Class DynamicClass
     Sub New()
 

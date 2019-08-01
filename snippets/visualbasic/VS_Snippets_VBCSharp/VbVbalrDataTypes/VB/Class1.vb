@@ -1,4 +1,4 @@
-Public Class Class1
+﻿Public Class Class1
 
 ' Added 6/15/2005 for Generic Procedures in Visual Basic
 Public Class GenericProcedures

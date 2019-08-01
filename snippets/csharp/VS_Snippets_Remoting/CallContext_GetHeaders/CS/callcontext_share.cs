@@ -1,4 +1,4 @@
-// System.Runtime.Remoting.CallContext.SetHeaders(Header[])
+﻿// System.Runtime.Remoting.CallContext.SetHeaders(Header[])
 
 using System;
 using System.Runtime.Remoting;

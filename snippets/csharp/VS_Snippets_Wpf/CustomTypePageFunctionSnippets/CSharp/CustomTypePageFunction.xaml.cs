@@ -1,4 +1,4 @@
-//<SnippetCustomTypePageFunctionCODEBEHIND1>
+﻿//<SnippetCustomTypePageFunctionCODEBEHIND1>
 using System.Windows.Navigation;
 
 namespace SDKSample

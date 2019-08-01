@@ -1,4 +1,4 @@
-Namespace ControlProps
+﻿Namespace ControlProps
     Partial Public Class Pane1
         Inherits System.Windows.Controls.StackPanel
 

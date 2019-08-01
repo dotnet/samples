@@ -1,4 +1,4 @@
-' The following code example encodes a string into an array of bytes,
+﻿' The following code example encodes a string into an array of bytes,
 ' and then decodes a range of the bytes into an array of characters.
 
 ' <Snippet1>

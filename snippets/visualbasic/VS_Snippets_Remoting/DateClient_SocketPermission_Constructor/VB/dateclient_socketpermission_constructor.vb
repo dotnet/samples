@@ -1,4 +1,4 @@
- '
+﻿ '
 '  This program demonstrates the 'SocketPermission(PermissionState)', 
 '  'SocketPermission(NetworkAccess, TransportType, string, int) constructors,
 '  'FromXml', 'Intersect', 'AddPermission' methods and 'AllPorts' field

@@ -10,7 +10,7 @@ namespace TextClassificationTF
     /// </summary>
     public class IMDBSentiment
     {
-        public string Sentiment_Text { get; set; }
+        public string SentimentText { get; set; }
 
         /// <summary>
         /// This is a variable length vector designated by VectorType attribute.
@@ -29,5 +29,5 @@ namespace TextClassificationTF
         [VectorType(2)]
         public float[] Prediction { get; set; }
     }
-    // <SnippetDeclareTypes>
+    // </SnippetDeclareTypes>
 }

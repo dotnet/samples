@@ -1,4 +1,4 @@
-// <Snippet3>
+﻿// <Snippet3>
 // StateManagedAuthor.cs
 using System;
 using System.Collections;

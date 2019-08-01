@@ -1,4 +1,4 @@
-/*System.Net.WebRequest.PreAuthenticate,System.Net.WebRequest.Credentials
+﻿/*System.Net.WebRequest.PreAuthenticate,System.Net.WebRequest.Credentials
  This program demonstrates the 'PreAuthenticate' and 'NetworkCredential' properties of the WebRequest Class.
 The PreAuthenticate Property has a default value set to False.
 This is set to True and new NetwrokCredential object is created with UserName and Password.  

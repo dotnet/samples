@@ -1,4 +1,4 @@
-'<Snippet1>
+﻿'<Snippet1>
 ' Example of the TimeSpan relational operators.
 Imports System
 Imports Microsoft.VisualBasic

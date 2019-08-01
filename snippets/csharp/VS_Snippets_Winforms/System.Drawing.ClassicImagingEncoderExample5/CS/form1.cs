@@ -1,4 +1,4 @@
- // Snippet for: F:System.Drawing.Imaging.Encoder.Transformation
+﻿ // Snippet for: F:System.Drawing.Imaging.Encoder.Transformation
         // <snippet5>
 using System;
 using System.Drawing;

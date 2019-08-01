@@ -1,4 +1,4 @@
-'<SnippetHandleStartupCODEBEHIND>
+﻿'<SnippetHandleStartupCODEBEHIND>
 
 Imports Microsoft.VisualBasic
 Imports System

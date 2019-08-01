@@ -1,4 +1,4 @@
-// System.Reflection.Emit.ModuleBuilder.GetArrayMethod
+﻿// System.Reflection.Emit.ModuleBuilder.GetArrayMethod
 // System.Reflection.Emit.ModuleBuilder.GetArrayMethodToken
 /*
 The following example demonstrates 'GetArrayMethod' and 'GetArrayMethodToken'

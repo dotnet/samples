@@ -1,4 +1,4 @@
-'<SNIPPET1>
+﻿'<SNIPPET1>
 Public Class MouseWheelControl
     Sub New()
         ' Add initialization code for the control here. 

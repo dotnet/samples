@@ -1,4 +1,4 @@
-' Supporting file: Server
+﻿' Supporting file: Server
 
 Imports System
 Imports System.Runtime.Remoting

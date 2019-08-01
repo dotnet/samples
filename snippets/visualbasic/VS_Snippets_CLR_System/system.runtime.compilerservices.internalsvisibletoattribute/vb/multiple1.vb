@@ -1,4 +1,4 @@
-Imports System.Runtime.CompilerServices
+﻿Imports System.Runtime.CompilerServices
 
 ' <Snippet3>
 <assembly:InternalsVisibleTo("Friend1a")>

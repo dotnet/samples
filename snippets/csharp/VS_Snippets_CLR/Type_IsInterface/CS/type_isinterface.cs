@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
 using System;
 // Declare an interface.
 interface myIFace

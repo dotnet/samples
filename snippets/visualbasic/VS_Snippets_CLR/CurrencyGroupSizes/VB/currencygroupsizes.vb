@@ -1,4 +1,4 @@
-' The following code example demonstrates the effect of changing the CurrencyGroupSizes property.
+﻿' The following code example demonstrates the effect of changing the CurrencyGroupSizes property.
 
 ' <snippet1>
 Imports System

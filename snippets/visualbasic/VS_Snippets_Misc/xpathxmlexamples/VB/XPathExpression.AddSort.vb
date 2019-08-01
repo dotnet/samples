@@ -1,4 +1,4 @@
-'<snippet4>
+﻿'<snippet4>
 Imports System.Xml
 Imports System.Xml.XPath
 Module Module1

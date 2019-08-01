@@ -1,4 +1,4 @@
-// The following code example enumerates the elements of a HybridDictionary.
+﻿// The following code example enumerates the elements of a HybridDictionary.
 
 // <snippet1>
 using System;

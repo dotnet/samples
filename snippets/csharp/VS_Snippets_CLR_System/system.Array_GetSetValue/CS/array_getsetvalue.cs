@@ -1,4 +1,4 @@
-// The following code example demonstrates how to set and get a specific value in a one-dimensional or multidimensional array.
+﻿// The following code example demonstrates how to set and get a specific value in a one-dimensional or multidimensional array.
 
 // <Snippet1>
 using System;

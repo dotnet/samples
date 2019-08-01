@@ -1,4 +1,4 @@
-
+﻿
 class TimePeriod
 {
     private double _seconds;

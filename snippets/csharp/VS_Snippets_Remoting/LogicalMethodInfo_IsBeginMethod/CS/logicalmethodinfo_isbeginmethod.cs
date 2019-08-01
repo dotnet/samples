@@ -1,4 +1,4 @@
-// System.Web.Services.Protocols.LogicalMethodInfo.IsBeginMethod(MethodInfo) 
+﻿// System.Web.Services.Protocols.LogicalMethodInfo.IsBeginMethod(MethodInfo) 
 // System.Web.Services.Protocols.LogicalMethodInfo.IsEndMethod(MethodInfo)
 
 /* 

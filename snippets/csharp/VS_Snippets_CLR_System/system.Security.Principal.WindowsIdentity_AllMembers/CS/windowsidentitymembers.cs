@@ -1,4 +1,4 @@
-// This sample demonstrates how to use each member of the WindowsIdentity
+﻿// This sample demonstrates how to use each member of the WindowsIdentity
 // class.
 //<Snippet1>
 using System;

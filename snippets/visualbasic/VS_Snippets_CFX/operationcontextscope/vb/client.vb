@@ -1,4 +1,4 @@
-' <snippet3>
+﻿' <snippet3>
 Imports System.ServiceModel
 Imports System.ServiceModel.Channels
 Imports System.Threading

@@ -1,4 +1,4 @@
-namespace GetSupportedPatterns
+﻿namespace GetSupportedPatterns
 {
     partial class Form1
     {

@@ -1,4 +1,4 @@
-//<Snippet1>
+﻿//<Snippet1>
 // This example demonstrates a thread-safe method that adds to a
 // running total.  
 using System;

@@ -1,4 +1,4 @@
-/* This file is a support file for demonstrating the members of
+﻿/* This file is a support file for demonstrating the members of
    IChannelSender interface on the client side. */
 
 using System;

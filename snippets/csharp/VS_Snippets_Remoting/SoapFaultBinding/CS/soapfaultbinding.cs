@@ -1,4 +1,4 @@
-// System.Web.Services.Description.SoapFaultBinding
+﻿// System.Web.Services.Description.SoapFaultBinding
 
 /*
  The following example demonstrates 'SoapFaultBinding' class. 

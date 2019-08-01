@@ -1,4 +1,4 @@
-'<Snippet3>
+﻿'<Snippet3>
 ' Example of the explicit conversion from Single to Decimal.
 Imports System
 Imports Microsoft.VisualBasic

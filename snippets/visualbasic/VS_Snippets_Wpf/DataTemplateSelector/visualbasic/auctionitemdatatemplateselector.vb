@@ -1,4 +1,4 @@
-'<SnippetDataTemplateSelector>
+﻿'<SnippetDataTemplateSelector>
 
 Namespace SDKSample
 	Public Class AuctionItemDataTemplateSelector

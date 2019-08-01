@@ -1,4 +1,4 @@
-// This sample demonstrates how to use each member of the CryptoAPITransform
+﻿// This sample demonstrates how to use each member of the CryptoAPITransform
 // class.
 //<Snippet1>
 using System;

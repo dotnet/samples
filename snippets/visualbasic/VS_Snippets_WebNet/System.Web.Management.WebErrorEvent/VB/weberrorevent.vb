@@ -1,4 +1,4 @@
- '*
+﻿ '*
 '  *File name: WebErrorEvent.cs
 '  *Purpose: Implements a custom WebErrorEvent type
 '  *by inheriting from the System.Web.Management.WebErrorEvent.

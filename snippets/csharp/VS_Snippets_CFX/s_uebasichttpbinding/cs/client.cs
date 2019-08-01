@@ -1,4 +1,4 @@
-//  client.cs, snippet for S_UEEnvelopeVersion Copyright (c) Microsoft
+﻿//  client.cs, snippet for S_UEEnvelopeVersion Copyright (c) Microsoft
 //  Corporation.  All Rights Reserved.
 
 using System;

@@ -1,4 +1,4 @@
-/*System.Net.WebRequest.Proxy
+﻿/*System.Net.WebRequest.Proxy
  This program demonstrates the 'Proxy' property of the 'WebRequest' class.
 A WebRequest object is created and a new Proxy Object is created.
 The Proxy Object is assigned the 'Proxy' Property of the WebRequest Object and then printed to the console,this is the default Proxy setting.

@@ -1,4 +1,4 @@
-' System.Web.Services.Description.ServiceDescription.Extensions
+﻿' System.Web.Services.Description.ServiceDescription.Extensions
 ' System.Web.Services.Description.ServiceDescription.RetrievalUrl
 
 ' The following program demonstrates properties 'Extensions', 'RetrievalUrl' of 

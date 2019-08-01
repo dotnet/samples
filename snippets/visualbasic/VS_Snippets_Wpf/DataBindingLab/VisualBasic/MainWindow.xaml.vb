@@ -1,4 +1,4 @@
-Imports System.ComponentModel
+﻿Imports System.ComponentModel
 
 Partial Public Class MainWindow
     Inherits Window

@@ -1,4 +1,4 @@
-// System.Windows.Forms.Control.Scale(float)
+﻿// System.Windows.Forms.Control.Scale(float)
 // System.Windows.Forms.Control.SizeChanged
 
 /*

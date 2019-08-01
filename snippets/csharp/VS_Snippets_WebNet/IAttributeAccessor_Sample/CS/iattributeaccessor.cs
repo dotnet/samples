@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
 // The following class creates a custom ASP.NET server control that implements
 // the IAttributeAccessor interface. It creates a MyTextBox class that contains
 // Width and Text properties that get and set their values from view state.

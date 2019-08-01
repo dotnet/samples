@@ -1,4 +1,4 @@
-' System.Web.Services.Discovery.DiscoveryDocumentReference.DiscoveryDocumentReference(string)
+﻿' System.Web.Services.Discovery.DiscoveryDocumentReference.DiscoveryDocumentReference(string)
 ' System.Web.Services.Discovery.DiscoveryDocumentReference.Ref
 ' System.Web.Services.Discovery.DiscoveryDocumentReference.Url
 ' System.Web.Services.Discovery.DiscoveryDocumentReference.DefaultFilename

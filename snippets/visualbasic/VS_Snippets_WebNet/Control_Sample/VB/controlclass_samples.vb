@@ -1,4 +1,4 @@
-' System.Web.UI.Control.Page;
+﻿' System.Web.UI.Control.Page;
 
 ' The following example demonstrates the 'Page' property
 ' of 'Control' Class. 

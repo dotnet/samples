@@ -1,4 +1,4 @@
-'<SnippetSetPageShowsNavigationUICODEBEHIND>
+﻿'<SnippetSetPageShowsNavigationUICODEBEHIND>
 
 Imports System
 Imports System.Windows

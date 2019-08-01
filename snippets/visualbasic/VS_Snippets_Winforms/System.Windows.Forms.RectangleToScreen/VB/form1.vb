@@ -1,4 +1,4 @@
-' This example demonstrates using the following members: 
+﻿' This example demonstrates using the following members: 
 ' Form.BackColor, Control.RectangleToScreen, Control.PointToScreen,
 ' ControlPaint.DrawReversibleFrame, and Rectangle.Intersects.
 

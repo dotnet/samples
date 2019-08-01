@@ -1,4 +1,4 @@
-' The following example demonstrates the 'AddStyleAttribute(string, string)' method 
+﻿' The following example demonstrates the 'AddStyleAttribute(string, string)' method 
 ' * of 'HtmlTextWriter' class.
 ' * 
 ' * In this program a custom web control called 'FirstControl' is shown. It has 

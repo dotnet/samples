@@ -1,4 +1,4 @@
-
+﻿
 '<snippet2>
 ' Add an Imports directive and a reference for System.Net.Http.
 Imports System.Net.Http

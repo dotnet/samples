@@ -1,4 +1,4 @@
-' The following code example encodes a string into an array of bytes,
+ï»¿' The following code example encodes a string into an array of bytes,
 ' and then decodes the bytes into an array of characters.
 
 ' <Snippet1>
@@ -67,7 +67,7 @@ End Class 'SamplesEncoding
 
 'This code produces the following output.  The question marks take the place of characters that cannot be displayed at the console.
 '
-'BE array with BE encoding : System.Text.UTF32Encoding : 5   12  :za??ß
-'LE array with LE encoding : System.Text.UTF32Encoding : 5   12  :za??ß
+'BE array with BE encoding : System.Text.UTF32Encoding : 5   12  :za??ÃŸ
+'LE array with LE encoding : System.Text.UTF32Encoding : 5   12  :za??ÃŸ
 
 ' </Snippet1>

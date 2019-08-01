@@ -1,4 +1,4 @@
-//Types:System.Runtime.InteropServices.ClassInterfaceType Vendor: Richter
+﻿//Types:System.Runtime.InteropServices.ClassInterfaceType Vendor: Richter
 //<snippet1>
 using System;
 using System.Runtime.InteropServices;

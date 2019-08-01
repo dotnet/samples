@@ -1,4 +1,4 @@
-// System.Web.Services.Description.ServiceDescription.Types
+﻿// System.Web.Services.Description.ServiceDescription.Types
 // System.Web.Services.Description.ServiceDescription.Write(Stream)
 
 /*

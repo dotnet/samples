@@ -1,4 +1,4 @@
-/// Sample: System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.2
+﻿/// Sample: System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.2
 ///    21    Ctor(string, int)
 
 using System;

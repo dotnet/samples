@@ -1,4 +1,4 @@
-// XpsCreate SDK Sample - XpsCreate.cs
+﻿// XpsCreate SDK Sample - XpsCreate.cs
 // Copyright (c) Microsoft Corporation. All rights reserved.
 
 using System;

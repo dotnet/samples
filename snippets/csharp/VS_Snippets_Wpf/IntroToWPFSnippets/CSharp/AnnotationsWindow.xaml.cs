@@ -1,4 +1,4 @@
-// AnnotationsStyling SDK Sample - ThemeWindow.xaml.cs
+﻿// AnnotationsStyling SDK Sample - ThemeWindow.xaml.cs
 // Copyright (c) Microsoft Corporation. All rights reserved.
 
 using System;
@@ -78,7 +78,7 @@ namespace SDKSample
         ///   Turns Annotations on.</summary>
         private void OnLoaded(object sender, RoutedEventArgs e)
         {
-            // Make sure that an AnnotationService isn�t already enabled.
+            // Make sure that an AnnotationService isn’t already enabled.
             AnnotationService service = AnnotationService.GetService(Viewer);
             if (service == null)
            {

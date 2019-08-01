@@ -1,4 +1,4 @@
-'<Snippet1>
+﻿'<Snippet1>
 ' Example of the Decimal fields.
 Imports System
 Imports Microsoft.VisualBasic

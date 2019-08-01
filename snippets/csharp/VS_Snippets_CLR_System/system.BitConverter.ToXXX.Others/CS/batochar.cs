@@ -1,4 +1,4 @@
-//<Snippet2>
+﻿//<Snippet2>
 // Example of the BitConverter.ToChar method.
 using System;
 
@@ -61,7 +61,7 @@ index   array elements    char
     3            2A-00       *
     5            41-00       A
     7            7D-00       }
-    9            C5-00       �
+    9            C5-00       Å
    11            A8-03       ?
    13            29-04       ?
    15            AC-20       ?

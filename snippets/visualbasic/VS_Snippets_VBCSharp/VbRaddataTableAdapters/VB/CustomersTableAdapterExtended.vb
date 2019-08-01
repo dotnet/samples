@@ -1,4 +1,4 @@
-'<Snippet2>
+﻿'<Snippet2>
 Namespace NorthwindDataSetTableAdapters
 
     Partial Class CustomersTableAdapter

@@ -1,4 +1,4 @@
-// The following code example uses an encoder and a decoder to encode a string into an array of bytes,
+ï»¿// The following code example uses an encoder and a decoder to encode a string into an array of bytes,
 // and then decode the bytes into an array of characters.
 
 // <Snippet1>
@@ -52,9 +52,9 @@ public class SamplesUnicodeEncoding  {
 /* 
 This code produces the following output.  The question marks take the place of characters that cannot be displayed at the console.
 
-The original characters : za??ß
+The original characters : za??ÃŸ
 Using the encoder       : 7A 00 61 00 06 03 FD 01 B2 03
-Using the decoder       : za??ß
+Using the decoder       : za??ÃŸ
 
 */
 

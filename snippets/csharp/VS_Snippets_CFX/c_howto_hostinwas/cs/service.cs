@@ -1,4 +1,4 @@
-// This is the code for the topic: How to: Host a WCF Service in WAS
+﻿// This is the code for the topic: How to: Host a WCF Service in WAS
 //<snippet1111>
 
 using System;

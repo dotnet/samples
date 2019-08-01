@@ -1,4 +1,4 @@
-// This is the code for the topic: How to: Create a Custom Reliable Session Binding with HTTPS
+﻿// This is the code for the topic: How to: Create a Custom Reliable Session Binding with HTTPS
 //<snippet1111>
 using System;
 using System.ServiceModel;

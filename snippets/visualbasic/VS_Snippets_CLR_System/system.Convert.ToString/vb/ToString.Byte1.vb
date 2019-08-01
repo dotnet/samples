@@ -1,4 +1,4 @@
-' <Snippet3> 
+﻿' <Snippet3> 
 Public Module Example
    Public Sub Main()
       Dim values() As Byte = { Byte.MinValue, 12, 100, 179, Byte.MaxValue }

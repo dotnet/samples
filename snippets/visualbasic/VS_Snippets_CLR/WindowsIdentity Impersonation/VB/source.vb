@@ -1,4 +1,4 @@
-
+﻿
 
 '<Snippet1>
 ' This sample demonstrates the use of the WindowsIdentity class to impersonate a user.

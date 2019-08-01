@@ -1,4 +1,4 @@
-// System.Int16.Equals(Object)
+﻿// System.Int16.Equals(Object)
 
 /* 
    The following program demonstrates the 'Equals(Object)' method

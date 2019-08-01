@@ -1,4 +1,4 @@
-Namespace HyperlinkSnippets
+﻿Namespace HyperlinkSnippets
 	''' <summary>
 	''' Interaction logic for Window1.xaml
 	''' </summary>

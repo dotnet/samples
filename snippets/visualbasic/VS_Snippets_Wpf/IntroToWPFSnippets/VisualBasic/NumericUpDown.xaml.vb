@@ -1,4 +1,4 @@
-'<SnippetUserControlCODEBEHIND1>
+﻿'<SnippetUserControlCODEBEHIND1>
 imports System 'EventArgs
 imports System.Windows 'DependencyObject, DependencyPropertyChangedEventArgs, 
                        ' FrameworkPropertyMetadata, PropertyChangedCallback, 

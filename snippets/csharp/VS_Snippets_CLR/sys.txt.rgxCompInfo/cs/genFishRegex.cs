@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 // This code example demonstrates the RegexCompilationInfo constructor
 // and the Regex.CompileToAssembly() method.
 // compile: csc genFishRegex.cs

@@ -1,4 +1,4 @@
-' This program acts as a client and calls the remote method 'HelloMethod'.
+﻿' This program acts as a client and calls the remote method 'HelloMethod'.
 
 Imports System
 Imports System.Net

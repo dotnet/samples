@@ -1,4 +1,4 @@
-' System.Configuration.Install.Installer.HelpText
+﻿' System.Configuration.Install.Installer.HelpText
 
 ' The following example demonstrates the property 'HelpText'. The
 ' 'HelpText' property is defined in the 'Installer', which when called

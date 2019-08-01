@@ -1,4 +1,4 @@
-Imports Microsoft.Win32
+﻿Imports Microsoft.Win32
 
 Public Module VersionTest
    Public Sub Main()

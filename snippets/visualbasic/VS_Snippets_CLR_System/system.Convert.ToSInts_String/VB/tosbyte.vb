@@ -1,4 +1,4 @@
-'<Snippet4>
+﻿'<Snippet4>
 ' Example of the Convert.ToSByte( String ) and 
 ' Convert.ToSByte( String, IFormatProvider ) methods.
 Imports System

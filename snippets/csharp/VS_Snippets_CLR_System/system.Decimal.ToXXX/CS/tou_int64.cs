@@ -1,4 +1,4 @@
-//<Snippet1>
+﻿//<Snippet1>
 // Example of the decimal.ToInt64 and decimal.ToUInt64 methods.
 using System;
 

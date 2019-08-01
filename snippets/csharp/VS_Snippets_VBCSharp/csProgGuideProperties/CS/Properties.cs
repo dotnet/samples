@@ -1,4 +1,4 @@
-namespace CsCsrefProgrammingProperties
+﻿namespace CsCsrefProgrammingProperties
 {
     using System.Linq;
     using System.Collections.Generic;

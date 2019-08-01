@@ -1,4 +1,4 @@
-' System.Web.Services.Description.MessageBinding
+﻿' System.Web.Services.Description.MessageBinding
 ' System.Web.Services.Description.MessageBinding.MessageBinding();
 ' System.Web.Services.Description.MessageBinding.Extensions;
 ' System.Web.Services.Description.MessageBinding.Name;

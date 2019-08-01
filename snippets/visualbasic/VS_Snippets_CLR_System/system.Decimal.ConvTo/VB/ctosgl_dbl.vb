@@ -1,4 +1,4 @@
-' <Snippet5>
+﻿' <Snippet5>
 Module Example
     Public Sub Main( )
         ' Define an array of Decimal values.

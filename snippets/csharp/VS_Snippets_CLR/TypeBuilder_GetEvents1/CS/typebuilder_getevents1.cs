@@ -1,4 +1,4 @@
-   // System.Reflection.Emit.TypeBuilder.GetEvents(BindingFlags)
+﻿   // System.Reflection.Emit.TypeBuilder.GetEvents(BindingFlags)
 
 /*
    The program demonstrates the 'GetEvents' method of the 'TypeBuilder' class.

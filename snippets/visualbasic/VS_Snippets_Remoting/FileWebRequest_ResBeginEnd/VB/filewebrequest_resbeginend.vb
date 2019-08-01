@@ -1,4 +1,4 @@
-' System.Net.FileWebRequest.BeginGetResponse;System.Net.FileWebRequest.EndGetResponse;
+﻿' System.Net.FileWebRequest.BeginGetResponse;System.Net.FileWebRequest.EndGetResponse;
 ' Snippet1 and Snippet2 go together  
 ' This program demonstrates 'BeginGetResponse' and 'EndGetResponse' methods of 'FileWebRequest' class.
 ' The path of the file from where content is to be read  is obtained as a command line argument and a 

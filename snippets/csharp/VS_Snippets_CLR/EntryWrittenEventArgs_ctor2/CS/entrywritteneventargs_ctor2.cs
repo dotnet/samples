@@ -1,4 +1,4 @@
-// System.Diagnostics.EntryWrittenEventArgs.ctor(EventLogEntry)
+﻿// System.Diagnostics.EntryWrittenEventArgs.ctor(EventLogEntry)
 // System.Diagnostics.EntryWrittenEventArgs.Entry
 
 /* 

@@ -1,4 +1,4 @@
-' Visual Basic .NET Document
+﻿' Visual Basic .NET Document
 '
 ' Example for Task.Run(Func<T>, CancellationToken)
 Option Strict On

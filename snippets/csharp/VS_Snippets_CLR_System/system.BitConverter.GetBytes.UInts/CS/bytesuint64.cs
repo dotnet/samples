@@ -1,4 +1,4 @@
-//<Snippet1>
+﻿//<Snippet1>
 // Example of the BitConverter.GetBytes( ulong ) method.
 using System;
 

@@ -1,4 +1,4 @@
-'<Snippet1>
+﻿'<Snippet1>
 ' Example for the TimeSpan.GetHashCode( ) method.
 Imports System
 Imports Microsoft.VisualBasic

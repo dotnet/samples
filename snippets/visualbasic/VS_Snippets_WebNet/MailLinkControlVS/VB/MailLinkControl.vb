@@ -1,4 +1,4 @@
-' MailLink.cs
+﻿' MailLink.cs
 ' <Snippet1>
 Imports System
 Imports System.ComponentModel

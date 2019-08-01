@@ -1,4 +1,4 @@
-// This sample demonstrates how to encode and decode a string using
+﻿// This sample demonstrates how to encode and decode a string using
 // the RSAOAEPKeyExchangeFormatter and RSAOAEPKeyExchangeDeformatter classes.
 //<Snippet2>
 using System;
@@ -187,7 +187,7 @@ class RSAEncoder
 //
 // Encoding the following message:
 // A phrase to be encoded.
-// Resulting message encoded: %?}T:v??xu?eD)YucItjwu�ALH HB,Uj??2xq?.?s45
+// Resulting message encoded: %?}T:v??xu?eD)YucItjwu¦ALH HB,Uj??2xq?.?s45
 // ?f?L2?=X?CPzWx???"q5?6&N"AE,Z+T?(]S?_7~,?G{?VV!:S?df?
 // Resulting message decoded:
 // A phrase to be encoded.

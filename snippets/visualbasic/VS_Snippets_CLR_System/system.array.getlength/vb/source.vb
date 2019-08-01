@@ -1,4 +1,4 @@
-' The following example demonstrates using the Array.GetLength method.
+﻿' The following example demonstrates using the Array.GetLength method.
 
 ' <Snippet1>
 Imports System

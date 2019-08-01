@@ -1,4 +1,4 @@
-' System.Web.UI.Control.Dispose()
+﻿' System.Web.UI.Control.Dispose()
 
 '   The following example demonstrates the Dispose() method of class Control.
 '   In Dispose() method all resources are cleaned up and Dispose() of

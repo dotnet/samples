@@ -1,4 +1,4 @@
-'<Snippet1>
+﻿'<Snippet1>
 ' This sample requires a text.txt file file in your documents folder.
 ' You'll also need to set the startup object in the project to Sub Main.
 Imports System.Diagnostics

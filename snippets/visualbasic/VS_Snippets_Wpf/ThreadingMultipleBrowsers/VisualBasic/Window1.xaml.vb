@@ -1,4 +1,4 @@
-'<SnippetThreadingMultiBrowserCodeBehind>
+﻿'<SnippetThreadingMultiBrowserCodeBehind>
 
 Imports System
 Imports System.Windows

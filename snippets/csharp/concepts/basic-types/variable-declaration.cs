@@ -1,4 +1,4 @@
-// Declaration only:
+﻿// Declaration only:
 float temperature;
 string name;
 MyClass myClass;

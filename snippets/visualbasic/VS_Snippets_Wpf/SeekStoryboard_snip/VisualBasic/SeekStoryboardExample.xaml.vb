@@ -1,4 +1,4 @@
-' <SnippetSeekStoryboardCodeBehindExampleWholePage>
+﻿' <SnippetSeekStoryboardCodeBehindExampleWholePage>
 
 Imports System
 Imports System.Media

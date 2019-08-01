@@ -1,4 +1,4 @@
-' Visual Basic .NET Document
+﻿' Visual Basic .NET Document
 ' Illustrates Convert.ToDateTime(String) method.
 Option Strict On
 

@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 ' The following code example demonstrates using the MenuItem 
 ' Merge-Order property to control the way a merged menu is displayed.
 

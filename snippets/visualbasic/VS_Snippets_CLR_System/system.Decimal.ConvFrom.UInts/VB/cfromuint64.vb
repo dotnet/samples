@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Module Example
     Public Sub Main()
         Dim values() As ULong = { ULong.MinValue, ULong.MaxValue, 

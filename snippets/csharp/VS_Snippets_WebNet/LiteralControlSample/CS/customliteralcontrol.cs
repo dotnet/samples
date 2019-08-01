@@ -1,4 +1,4 @@
-// System.Web.UI.LiteralControl.Text
+﻿// System.Web.UI.LiteralControl.Text
 // System.Web.UI.LiteralControl.CreateControlCollection
 // System.Web.UI.LiteralControl.Render
 /*

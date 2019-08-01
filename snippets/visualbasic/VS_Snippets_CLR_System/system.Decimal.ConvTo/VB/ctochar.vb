@@ -1,4 +1,4 @@
-' <Snippet6>
+﻿' <Snippet6>
 ' Visual Basic does not support explicit Decimal-to-Char
 ' conversion using either CType or CChar.
 ' </Snippet6>

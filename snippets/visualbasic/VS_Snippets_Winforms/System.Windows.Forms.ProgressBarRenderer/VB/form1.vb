@@ -1,4 +1,4 @@
- ' This sample can go in ProgressBarRenderer class overview.
+﻿ ' This sample can go in ProgressBarRenderer class overview.
 ' - Snippet2 can go in DrawVerticalBar and IsSupported
 ' - Snippet4 can go in ChunkSpaceThickness and ChunkThickness
 ' - Snippet6 can go in DrawVerticalChunks

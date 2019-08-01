@@ -1,4 +1,4 @@
-' System.Net.FileWebRequest.ContentLength;System.Net.FileWebRequest.RequestUri;
+﻿' System.Net.FileWebRequest.ContentLength;System.Net.FileWebRequest.RequestUri;
 
 ' This program demonstrates 'ContentLength'and 'RequestUri property of 'FileWebRequest' class.
 ' The path of a file where user would like to write something is obtained from command line argument.

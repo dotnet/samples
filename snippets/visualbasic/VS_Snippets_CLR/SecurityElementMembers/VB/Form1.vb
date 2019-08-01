@@ -1,4 +1,4 @@
-' This sample demonstrates how to use  members of the SecurityElement class.
+﻿' This sample demonstrates how to use  members of the SecurityElement class.
 ' The sample creates a SecurityElement for the root of the XML tree and 
 ' demonstrates how to add attributes and child elements.
 '<Snippet1>

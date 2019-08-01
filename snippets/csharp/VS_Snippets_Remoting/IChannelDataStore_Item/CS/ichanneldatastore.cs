@@ -1,4 +1,4 @@
-// System.Runtime.Remoting.Channels.IChannelDataStore
+﻿// System.Runtime.Remoting.Channels.IChannelDataStore
 // System.Runtime.Remoting.Channels.IChannelDataStore.ChannelUris
 // System.Runtime.Remoting.Channels.IChannelDataStore.Item[object]
 

@@ -1,4 +1,4 @@
-namespace ServerInitiatedNego
+﻿namespace ServerInitiatedNego
 {
     using System;
     using System.Collections.Generic;

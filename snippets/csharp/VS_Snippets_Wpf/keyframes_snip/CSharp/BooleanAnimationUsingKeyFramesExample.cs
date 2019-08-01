@@ -1,4 +1,4 @@
-// <SnippetBooleanAnimationUsingKeyFramesWholePage>
+﻿// <SnippetBooleanAnimationUsingKeyFramesWholePage>
 // Demonstrates a BooleanAnimationUsingKeyFrames. The animation is used to
 // animate the IsEnabled property of a button.
 using System;

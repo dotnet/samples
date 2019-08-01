@@ -1,4 +1,4 @@
-// System.Runtime.Remoting.Messaging.IMessage
+﻿// System.Runtime.Remoting.Messaging.IMessage
 // System.Runtime.Remoting.Messaging.IMessage.Properties
 // System.Runtime.Remoting.Messaging.IMessageSink
 // System.Runtime.Remoting.Messaging.IMessageSink.SyncProcessMessage(IMessage)

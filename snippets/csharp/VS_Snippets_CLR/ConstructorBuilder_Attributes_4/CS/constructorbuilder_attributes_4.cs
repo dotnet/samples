@@ -1,4 +1,4 @@
-// System.Reflection.Emit.ConstructorBuilder.AddDeclarativeSecurity()
+﻿// System.Reflection.Emit.ConstructorBuilder.AddDeclarativeSecurity()
 // System.Reflection.Emit.ConstructorBuilder.Attributes
 // System.Reflection.Emit.ConstructorBuilder.DeclaringType
 // System.Reflection.Emit.ConstructorBuilder.DefineParameter()

@@ -1,4 +1,4 @@
-'<snippet01>
+﻿'<snippet01>
 Imports System.Diagnostics
 Imports System.Threading
 Imports System.Threading.Tasks

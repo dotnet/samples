@@ -1,4 +1,4 @@
-' The following example uses BaseGetKey and BaseGet to get specific keys and values.
+﻿' The following example uses BaseGetKey and BaseGet to get specific keys and values.
 ' For an expanded version of this example, see the NameObjectCollectionBase class topic.
 
 ' <snippet1>

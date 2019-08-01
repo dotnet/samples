@@ -1,4 +1,4 @@
-' <SnippetMatrixAnimationUsingPathOffsetCumulativeWholePage>
+﻿' <SnippetMatrixAnimationUsingPathOffsetCumulativeWholePage>
 
 Imports System
 Imports System.Windows

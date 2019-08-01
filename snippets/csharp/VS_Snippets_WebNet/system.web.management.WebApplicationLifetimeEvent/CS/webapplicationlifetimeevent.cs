@@ -1,4 +1,4 @@
-/**
+﻿/**
   *File name: WebApplicationLifeTimeEvent.cs
   *Purpose: Implements a custom WebApplicationLifeTimeEvent type
   **/

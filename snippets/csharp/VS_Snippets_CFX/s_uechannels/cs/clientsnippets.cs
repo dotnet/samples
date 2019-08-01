@@ -1,4 +1,4 @@
-/*
+﻿/*
  *
  *ServiceModel.ChannelFactory`1.#ctor(System.Type) is protected, does
  *not require sample.

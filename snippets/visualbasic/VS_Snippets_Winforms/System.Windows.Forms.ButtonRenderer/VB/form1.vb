@@ -1,4 +1,4 @@
-' This entire sample can go in the ButtonRenderer overview. 
+﻿' This entire sample can go in the ButtonRenderer overview. 
 '  - Snippet2 can be excerpted in ButtonRenderer.DrawBackground overload
 '    and specific ButtonRenderer.DrawBackground that it uses.
 '  - Snippet4 can be linked to in ButtonRenderer.DrawParentBackground

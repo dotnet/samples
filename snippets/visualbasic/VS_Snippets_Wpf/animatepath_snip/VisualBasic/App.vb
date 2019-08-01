@@ -1,4 +1,4 @@
-
+﻿
 '
 ' This sample demonstrates how to animate the position of a Geometry using
 ' a PointAnimation.

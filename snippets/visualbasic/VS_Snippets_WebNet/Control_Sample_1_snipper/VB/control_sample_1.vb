@@ -1,4 +1,4 @@
-' System.Web.UI.Control.OnPreRender;
+﻿' System.Web.UI.Control.OnPreRender;
 ' System.Web.UI.Control.PreRender;
 
 ' The following example demontrates implementation of 'PreRender' event and 

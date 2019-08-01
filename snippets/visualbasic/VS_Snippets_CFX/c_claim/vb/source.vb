@@ -1,4 +1,4 @@
-'
+﻿'
 Imports System.Security.Permissions
 Imports System
 Imports System.ServiceModel

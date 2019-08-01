@@ -1,4 +1,4 @@
-' WebControlDesignerCollectionEditors.vb
+﻿' WebControlDesignerCollectionEditors.vb
 ' <snippet5>
 Imports System.Web.UI
 Imports System.Web.UI.WebControls

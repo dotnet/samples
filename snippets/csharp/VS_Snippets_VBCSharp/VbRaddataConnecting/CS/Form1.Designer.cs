@@ -1,4 +1,4 @@
-namespace ObjectBindingWalkthrough
+﻿namespace ObjectBindingWalkthrough
 {
     partial class Form1
     {

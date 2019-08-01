@@ -1,4 +1,4 @@
-' System.web.Services.Discovery.DiscoveryClientProtocol.Download(string,string)
+﻿' System.web.Services.Discovery.DiscoveryClientProtocol.Download(string,string)
 
 ' The following example demonstrates the usage of the 'Download' method
 ' of the class 'DiscoveryClientProtocol'. The input to the program is

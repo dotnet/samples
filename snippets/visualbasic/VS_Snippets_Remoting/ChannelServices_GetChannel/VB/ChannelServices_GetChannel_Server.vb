@@ -1,4 +1,4 @@
-' This program registers the remote object.
+﻿' This program registers the remote object.
 
 Imports System
 Imports System.Runtime.Remoting

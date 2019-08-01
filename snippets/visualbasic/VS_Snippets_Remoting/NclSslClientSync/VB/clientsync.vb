@@ -1,4 +1,4 @@
-' NclSslClientSync
+﻿' NclSslClientSync
 '<snippet0>
 Imports System.Collections
 Imports System.Net

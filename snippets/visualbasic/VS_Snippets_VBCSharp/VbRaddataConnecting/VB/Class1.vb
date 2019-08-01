@@ -1,4 +1,4 @@
-Public Class Class1
+﻿Public Class Class1
 
     Sub OtherSnips()
         Dim CustomerBindingSource As New System.Windows.Forms.BindingSource()

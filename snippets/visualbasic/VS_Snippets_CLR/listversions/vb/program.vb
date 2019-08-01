@@ -1,4 +1,4 @@
-'<snippet0>
+﻿'<snippet0>
 Imports Microsoft.Win32
 '</snippet0>
 

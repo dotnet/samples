@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
 using System.IO;
 using System.AddIn.Pipeline;
 using System.AddIn.Contract;

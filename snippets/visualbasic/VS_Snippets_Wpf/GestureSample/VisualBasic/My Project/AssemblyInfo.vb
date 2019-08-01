@@ -1,4 +1,4 @@
-Imports System
+﻿Imports System
 Imports System.Reflection
 Imports System.Runtime.InteropServices
 
@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("The Write Stuff")> 
 <Assembly: AssemblyProduct("GestureSample")> 
-<Assembly: AssemblyCopyright("Copyright � The Write Stuff 2005")> 
+<Assembly: AssemblyCopyright("Copyright © The Write Stuff 2005")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: CLSCompliant(True)> 

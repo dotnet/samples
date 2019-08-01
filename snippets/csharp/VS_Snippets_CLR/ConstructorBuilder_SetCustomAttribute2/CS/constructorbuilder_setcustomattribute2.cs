@@ -1,4 +1,4 @@
-// System.Reflection.Emit.ConstructorBuilder.SetCustomAttribute(ConstructorInfo, byte[])
+﻿// System.Reflection.Emit.ConstructorBuilder.SetCustomAttribute(ConstructorInfo, byte[])
 /*
    The following program demonstrates the 'SetCustomAttribute(ConstructorInfo, byte[])'
    method of 'ConstructorBuilder' class. It defines a 'MyAttribute' class which is derived

@@ -9,7 +9,7 @@
             <InlineData(-1)>
             <InlineData(0)>
             <InlineData(1)>
-            Sub ReturnFalseGivenValuesLessThan2(value As Integer)
+            Sub IsPrime_ValueLessThan2_ReturnFalse(value As Integer)
                 Dim result As Boolean = _primeService.IsPrime(value)
 
                 Assert.False(result, $"{value} should not be prime")
@@ -20,7 +20,7 @@
             <InlineData(3)>
             <InlineData(5)>
             <InlineData(7)>
-            Public Sub ReturnTrueGivenPrimesLessThan10(value As Integer)
+            Public Sub IsPrime_PrimesLessThan10_ReturnTrue(value As Integer)
                 Dim result As Boolean = _primeService.IsPrime(value)
     
                 Assert.True(result, $"{value} should be prime")
@@ -31,7 +31,7 @@
             <InlineData(6)>
             <InlineData(8)> 
             <InlineData(9)> 
-            Public Sub ReturnFalseGivenNonPrimesLessThan10(value As Integer)
+            Public Sub IsPrime_NonPrimesLessThan10_ReturnFalse(value As Integer)
                 Dim result As Boolean = _primeService.IsPrime(value)
     
                 Assert.False(result, $"{value} should not be prime")

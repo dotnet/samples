@@ -1,4 +1,4 @@
-' System.Web.Services.DiscoveryClientResult
+﻿' System.Web.Services.DiscoveryClientResult
 
 ' The following example demonstrates 'DiscoveryClientResult' class.
 ' A 'DiscoveryClientResultCollection' object is obtained by reading a

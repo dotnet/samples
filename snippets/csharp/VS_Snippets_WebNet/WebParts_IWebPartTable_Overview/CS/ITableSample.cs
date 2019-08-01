@@ -1,4 +1,4 @@
-//<SNIPPET2>
+﻿//<SNIPPET2>
 using System;
 using System.Collections;
 using System.ComponentModel;

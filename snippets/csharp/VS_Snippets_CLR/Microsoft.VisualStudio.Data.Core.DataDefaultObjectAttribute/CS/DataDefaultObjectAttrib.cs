@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
 // <Snippet2>
 using System;
 using System.Runtime.InteropServices;

@@ -1,4 +1,4 @@
-// The following code example calls GetDaysInYear for 5 years in each era.
+﻿// The following code example calls GetDaysInYear for 5 years in each era.
 
 // <snippet1>
 using System;

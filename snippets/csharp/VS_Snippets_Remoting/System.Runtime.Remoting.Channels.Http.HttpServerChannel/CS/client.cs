@@ -1,4 +1,4 @@
-//<snippet30>
+﻿//<snippet30>
 using System;
 using System.Runtime.Remoting;
 using System.Runtime.Remoting.Channels;

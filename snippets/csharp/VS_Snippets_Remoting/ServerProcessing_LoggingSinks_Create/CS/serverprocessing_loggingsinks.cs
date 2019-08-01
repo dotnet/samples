@@ -1,4 +1,4 @@
-// System.Runtime.Remoting.Channels.IClientChannelSinkProvider.CreateSink()
+﻿// System.Runtime.Remoting.Channels.IClientChannelSinkProvider.CreateSink()
 // System.Runtime.Remoting.Channels.IClientChannelSinkProvider.Next
 // System.Runtime.Remoting.Channels.ServerProcessing
 // System.Runtime.Remoting.Channels.ServerProcessing.Complete

@@ -1,4 +1,4 @@
-' Visual Basic .NET Document
+﻿' Visual Basic .NET Document
 Option Strict On
 
 ' Both Match.Captures and Group.Captures return a CaptureCollection object. 

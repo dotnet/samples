@@ -1,4 +1,4 @@
-// System.Windows.Forms.DataGridTableStyle.PreferredRowHeight
+﻿// System.Windows.Forms.DataGridTableStyle.PreferredRowHeight
 
 /*
    The following example demonstrates 'PreferredRowHeight' property of 'DataGridTableStyle' 

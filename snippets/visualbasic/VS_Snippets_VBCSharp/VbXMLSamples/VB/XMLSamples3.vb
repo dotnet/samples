@@ -1,4 +1,4 @@
-' Topic: How to: Declare and Use XML Namespace Prefixes
+﻿' Topic: How to: Declare and Use XML Namespace Prefixes
 '<Snippet8>
 ' Place Imports statements at the top of your program.  
 Imports <xmlns:ns="http://SomeNamespace">

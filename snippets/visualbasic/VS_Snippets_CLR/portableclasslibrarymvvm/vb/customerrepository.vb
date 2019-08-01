@@ -1,4 +1,4 @@
-' <snippet2>
+﻿' <snippet2>
 Namespace SimpleMVVM.Model
     Public Class CustomerRepository
         Private _customers As List(Of Customer)

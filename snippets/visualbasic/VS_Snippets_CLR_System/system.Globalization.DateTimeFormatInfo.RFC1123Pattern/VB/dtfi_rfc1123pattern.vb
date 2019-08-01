@@ -1,4 +1,4 @@
-' The following code example displays the value of RFC1123Pattern for selected cultures.
+﻿' The following code example displays the value of RFC1123Pattern for selected cultures.
 
 ' <snippet1>
 Imports System

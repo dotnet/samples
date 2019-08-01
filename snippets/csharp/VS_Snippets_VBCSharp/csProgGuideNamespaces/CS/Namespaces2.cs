@@ -1,4 +1,4 @@
-//<Snippet7>
+﻿//<Snippet7>
 using Co = Company.Proj.Nested;  // define an alias to represent a namespace
 //</Snippet7>
 

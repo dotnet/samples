@@ -1,4 +1,4 @@
-namespace Samples.AspNet {
+﻿namespace Samples.AspNet {
 // <Snippet1>
     using System;
     using System.Collections;

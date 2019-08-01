@@ -1,4 +1,4 @@
-Class Class1
+﻿Class Class1
    Public Shared Sub Main()
       ShowDefaultFormats()
       Console.WriteLine("----")

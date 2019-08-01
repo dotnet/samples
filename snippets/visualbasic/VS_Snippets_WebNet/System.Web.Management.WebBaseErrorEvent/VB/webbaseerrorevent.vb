@@ -1,4 +1,4 @@
- '*
+﻿ '*
 '  *File name: WebBaseErrorEvent.cs
 '  *Purpose: Implements a custom SampleWebBaseErrorEvent type
 '  *by inheriting from the System.Web.Management.WebBaseErrorEvent class.

@@ -1,4 +1,4 @@
-using Library;
+﻿using Library;
 using Xunit;
 
 namespace TestApp

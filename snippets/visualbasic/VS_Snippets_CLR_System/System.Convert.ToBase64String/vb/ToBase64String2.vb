@@ -5,18 +5,18 @@ Option Strict On
 Module Example
    Public Sub Main()
        ' Define a byte array.
-       Dim bytes() As Byte = { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 }
+       Dim bytes As Byte() = { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 }
        Console.WriteLine("The byte array: ")
        Console.WriteLine("   {0}", BitConverter.ToString(bytes))
        Console.WriteLine()
        
-       ' Convert the array to a base 64 sring.
+       ' Convert the array to a base 64 string.
        Dim s As String = Convert.ToBase64String(bytes)
        Console.WriteLine("The base 64 string:{1}   {0}{1}", 
                          s, vbCrLf)
        
        ' Restore the byte array.
-       Dim newBytes() As Byte = Convert.FromBase64String(s)
+       Dim newBytes As Byte() = Convert.FromBase64String(s)
        Console.WriteLine("The restored byte array: ")
        Console.WriteLine("   {0}", BitConverter.ToString(newBytes))
        Console.WriteLine()

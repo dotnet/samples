@@ -1,4 +1,4 @@
-'
+﻿'
 'OpacityExample.vb
 '
 '

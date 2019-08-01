@@ -1,4 +1,4 @@
-' Char.IsSeparator() example
+﻿' Char.IsSeparator() example
 Option Strict On
 
 ' <Snippet1>

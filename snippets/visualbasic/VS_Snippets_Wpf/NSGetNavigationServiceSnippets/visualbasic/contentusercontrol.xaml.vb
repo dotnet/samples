@@ -1,4 +1,4 @@
-Namespace VisualBasic
+﻿Namespace VisualBasic
     ''' <summary>
     ''' Interaction logic for ContentUserControl.xaml
     ''' </summary>

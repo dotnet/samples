@@ -6,11 +6,7 @@ Namespace DateTimeExtensions
 
         Public Sub New(dateValue As DateTime, timeZone As TimeZoneInfo)
             dt = dateValue
-            If timeZone Is Nothing Then
-                tz = TimeZoneInfo.Local
-            Else
-                tz = timeZone
-            End If
+            tz = If(timeZone, TimeZoneInfo.Local)
         End Sub
 
         Public Property TimeZone As TimeZoneInfo

@@ -1,4 +1,4 @@
- '
+﻿ '
 '   This program demonstrates 'GetHostByAddress(IPAddress)' method of 'Dns' class.
 '   It takes an IP address string from commandline or uses default value and creates 
 '   an instance of IPAddress for the specified IP address string. Obtains the IPHostEntry 

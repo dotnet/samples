@@ -1,4 +1,4 @@
-// System.Diagnostics.CounterCreationDataCollection.Insert(int, CounterCreationData)
+﻿// System.Diagnostics.CounterCreationDataCollection.Insert(int, CounterCreationData)
 // System.Diagnostics.CounterCreationDataCollection.IndexOf(CounterCreationData)
 
 /*

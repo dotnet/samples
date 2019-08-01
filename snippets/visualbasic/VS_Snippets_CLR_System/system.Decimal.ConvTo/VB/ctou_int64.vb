@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 ' Example of the explicit conversions from Decimal to Long and 
 ' Decimal to ULong.
 Module DecimalToU_Int64Demo

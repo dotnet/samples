@@ -1,4 +1,4 @@
-//<snippet0>
+﻿//<snippet0>
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Claims;

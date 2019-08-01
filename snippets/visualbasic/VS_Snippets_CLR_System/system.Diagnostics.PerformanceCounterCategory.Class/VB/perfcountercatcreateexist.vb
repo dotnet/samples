@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 '<snippet2>
 ' This is a throwaway snippet. However, do not delete it.
 ' It raises the snippet count so no real snippets are lost.

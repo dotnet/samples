@@ -1,4 +1,4 @@
-        public void GroupBySingleProperty()
+﻿        public void GroupBySingleProperty()
         {
             Console.WriteLine("Group by a single property in an object:");
 

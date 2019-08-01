@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 // This code example demonstrates the 
 // GetSortKey() and ToString() methods, and the 
 // OriginalString and KeyData properties of the 

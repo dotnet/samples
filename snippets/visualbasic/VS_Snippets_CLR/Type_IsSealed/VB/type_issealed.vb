@@ -1,4 +1,4 @@
-' <Snippet1>   
+﻿' <Snippet1>   
 Public Class Example
     ' Declare InnerClass as sealed.
     Public NotInheritable Class InnerClass

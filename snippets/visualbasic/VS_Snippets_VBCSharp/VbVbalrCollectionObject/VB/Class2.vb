@@ -1,4 +1,4 @@
-'*************************************************************************
+﻿'*************************************************************************
 '<Snippet10>
 Public Class widgetRepository
     Public widgetColl As New Microsoft.VisualBasic.Collection()

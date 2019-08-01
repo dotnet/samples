@@ -1,4 +1,4 @@
-' <Snippet4>
+﻿' <Snippet4>
 Option Strict On
 
 Module Example

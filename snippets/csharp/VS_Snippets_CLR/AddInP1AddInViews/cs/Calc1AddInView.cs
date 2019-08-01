@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
 using System.AddIn.Pipeline;
 
 namespace CalcAddInViews 

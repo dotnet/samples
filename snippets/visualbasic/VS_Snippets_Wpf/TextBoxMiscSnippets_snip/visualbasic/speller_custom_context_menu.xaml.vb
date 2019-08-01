@@ -1,4 +1,4 @@
-' <SnippetSpellerCustomContextMenuCodeExampleWholePage>
+﻿' <SnippetSpellerCustomContextMenuCodeExampleWholePage>
 
 Namespace SDKSample
     Partial Public Class SpellerCustomContextMenu

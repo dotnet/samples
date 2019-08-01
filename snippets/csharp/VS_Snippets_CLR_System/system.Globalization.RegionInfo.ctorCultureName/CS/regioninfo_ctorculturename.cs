@@ -1,4 +1,4 @@
-// The following code example creates instances of T:System.Globalization.RegionInfo using culture names.
+﻿// The following code example creates instances of T:System.Globalization.RegionInfo using culture names.
 
 // <snippet1>
 using System;

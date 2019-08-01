@@ -1,4 +1,4 @@
-' System.Xml.Serialization.XmlAttributeAttribute.XmlAttributeAttribute()
+﻿' System.Xml.Serialization.XmlAttributeAttribute.XmlAttributeAttribute()
 ' System.Xml.Serialization.XmlAttributeAttribute.XmlAttributeAttribute(String)
 
 '  The following example demonstrates the constructor of XmlAttributeAttribute.

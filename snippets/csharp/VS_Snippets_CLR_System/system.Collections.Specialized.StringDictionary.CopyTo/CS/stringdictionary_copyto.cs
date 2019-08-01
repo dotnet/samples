@@ -1,4 +1,4 @@
-// The following code example shows how a StringDictionary can be copied to an array.
+﻿// The following code example shows how a StringDictionary can be copied to an array.
 
 // <snippet1>
 using System;

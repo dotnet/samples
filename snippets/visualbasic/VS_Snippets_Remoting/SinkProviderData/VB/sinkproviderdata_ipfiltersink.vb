@@ -1,4 +1,4 @@
-' System.Runtime.Remoting.Channels.SinkProviderData
+﻿' System.Runtime.Remoting.Channels.SinkProviderData
 ' System.Runtime.Remoting.Channels.SinkProviderData.Children
 ' System.Runtime.Remoting.Channels.SinkProviderData.Name
 ' System.Runtime.Remoting.Channels.SinkProviderData.Properties

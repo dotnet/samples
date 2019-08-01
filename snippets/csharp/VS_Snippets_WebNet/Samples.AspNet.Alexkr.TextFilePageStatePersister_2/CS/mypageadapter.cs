@@ -1,4 +1,4 @@
-// <snippet5>
+﻿// <snippet5>
 namespace Samples.AspNet.CS {
 
     using System.Security.Permissions;

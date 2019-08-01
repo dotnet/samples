@@ -1,4 +1,4 @@
-//<Snippet1>
+﻿//<Snippet1>
 // Example of BitConverter class methods.
 using System;
 

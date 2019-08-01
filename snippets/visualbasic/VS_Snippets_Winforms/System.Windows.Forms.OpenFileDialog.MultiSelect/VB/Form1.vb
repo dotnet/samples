@@ -1,4 +1,4 @@
-Imports System.Security
+﻿Imports System.Security
 
 Public Class Form1
     '<SNIPPET1>

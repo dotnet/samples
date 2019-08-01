@@ -1,4 +1,4 @@
-' <snippet1>
+﻿' <snippet1>
 ' The following code example demonstrates several of the properties and methods of ListDictionary.
 
 Imports System

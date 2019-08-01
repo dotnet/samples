@@ -1,4 +1,4 @@
-' System.Configuration.Install.AssemblyInstaller
+﻿' System.Configuration.Install.AssemblyInstaller
 
 '   The following example demonstrates the 'AssemblyInstaller' class.
 '   An object of the AssemblyInstaller class is created by invoking the constructor.

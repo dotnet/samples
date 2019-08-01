@@ -1,4 +1,4 @@
-' System.Diagnostics.Process.MainWindowTitle
+﻿' System.Diagnostics.Process.MainWindowTitle
 
 ' The following program demonstrates the property 'MainWindowTitle' of class
 ' 'Process'. It creates a new process notepad on local computer and displays

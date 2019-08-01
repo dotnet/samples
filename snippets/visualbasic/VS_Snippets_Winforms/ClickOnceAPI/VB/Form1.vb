@@ -1,4 +1,4 @@
-Imports System.Deployment.Application
+﻿Imports System.Deployment.Application
 Imports System.ComponentModel
 
 <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.Demand, Name:="FullTrust")> _

@@ -1,4 +1,4 @@
-//<SnippetPersonClass>
+﻿//<SnippetPersonClass>
 using System.ComponentModel;
 
 namespace SDKSample

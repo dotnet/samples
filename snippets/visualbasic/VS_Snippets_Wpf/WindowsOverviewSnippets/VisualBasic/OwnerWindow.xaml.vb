@@ -1,4 +1,4 @@
-Imports System.Windows
+﻿Imports System.Windows
 
 Partial Public Class OwnerWindow
 	Inherits System.Windows.Window

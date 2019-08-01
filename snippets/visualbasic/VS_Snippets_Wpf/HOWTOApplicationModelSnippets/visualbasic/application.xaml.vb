@@ -1,4 +1,4 @@
-Imports System.IO
+﻿Imports System.IO
 Imports System.IO.IsolatedStorage
 
 Namespace SDKSample

@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Imports System.Reflection
 
 Public Delegate Sub MyDelegate(ByVal i As Integer)

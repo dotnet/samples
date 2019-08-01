@@ -1,4 +1,4 @@
-namespace LocalizingWpfInWf
+﻿namespace LocalizingWpfInWf
 {
     partial class Form1
     {

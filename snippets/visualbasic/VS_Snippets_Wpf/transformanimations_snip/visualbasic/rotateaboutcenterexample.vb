@@ -1,4 +1,4 @@
-'
+﻿'
 '  RotateAboutCenterExample.vb
 '     This example shows how to use the RepeatBehavior property to make a timeline repeat.
 '

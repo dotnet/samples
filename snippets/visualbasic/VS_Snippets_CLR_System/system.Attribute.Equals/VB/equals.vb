@@ -1,4 +1,4 @@
-Imports System.Reflection
+﻿Imports System.Reflection
 
 ' Define a custom parameter attribute that takes a single message argument.
 <AttributeUsage(AttributeTargets.Parameter)>  _

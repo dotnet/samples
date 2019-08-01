@@ -1,4 +1,4 @@
-//<Snippet3>
+﻿//<Snippet3>
 // Example of the Convert.ToString( numeric types ) and 
 // Convert.ToString( numeric types, IFormatProvider ) methods.
 using System;

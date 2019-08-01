@@ -1,4 +1,4 @@
-' System.Windows.Forms.DataGrid.CaptionVisibleChanged
+﻿' System.Windows.Forms.DataGrid.CaptionVisibleChanged
 ' System.Windows.Forms.DataGrid.CurrentCellChanged
 ' System.Windows.Forms.DataGrid.Scroll
 

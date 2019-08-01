@@ -1,4 +1,4 @@
-'<Snippet1>
+﻿'<Snippet1>
 ' If compiling with the Visual Basic compiler (vbc.exe) from the command
 ' prompt, be sure to add the following switch:
 '    /reference:System.Runtime.Serialization.Formatters.Soap.dll 

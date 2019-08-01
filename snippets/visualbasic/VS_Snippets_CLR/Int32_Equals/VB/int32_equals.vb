@@ -1,4 +1,4 @@
-' System.Int32.Equals(Object)
+﻿' System.Int32.Equals(Object)
 
 ' The following program demonstrates the 'Equals(Object)' method
 ' of struct 'Int32'. This compares an instance of 'Int32' with the

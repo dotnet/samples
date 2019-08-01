@@ -1,4 +1,4 @@
-//<SnippetCodePageCODEBEHIND>
+﻿//<SnippetCodePageCODEBEHIND>
 using System.Windows.Controls;
 
 public class CodePage : Page

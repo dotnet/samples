@@ -1,4 +1,4 @@
-// <snippet3>
+﻿// <snippet3>
 public class SampleMasterClass : System.Web.UI.MasterPage {
      private string sitename;     
      public string SiteName

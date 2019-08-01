@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 ' Example for the String.IndexOf( Char, Integer, Integer ) method.
 Imports System
 Imports Microsoft.VisualBasic

@@ -1,4 +1,4 @@
-'<snippet20>
+﻿'<snippet20>
 Imports System
 Imports System.IO
 Imports System.CodeDom

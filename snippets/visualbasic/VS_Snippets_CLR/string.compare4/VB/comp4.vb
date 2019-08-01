@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 ' Sample for String.Compare(String, Int32, String, Int32, Int32, Boolean)
 Imports System
 Imports Microsoft.VisualBasic

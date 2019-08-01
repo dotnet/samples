@@ -1,4 +1,4 @@
-' <SnippetSimpleRadialGradientExampleWholePage>
+﻿' <SnippetSimpleRadialGradientExampleWholePage>
 
 
 Imports Microsoft.VisualBasic

@@ -1,4 +1,4 @@
-'<Snippet3>
+﻿'<Snippet3>
 ' Example of the BitConverter.ToUInt64 method.
 Imports System
 Imports Microsoft.VisualBasic

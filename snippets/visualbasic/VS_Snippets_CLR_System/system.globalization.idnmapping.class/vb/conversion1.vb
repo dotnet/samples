@@ -1,4 +1,4 @@
-' This example simply tries to demonstrates the use of the GetAscii and GetUnicode methods
+﻿' This example simply tries to demonstrates the use of the GetAscii and GetUnicode methods
 ' with some valid and invalid characters. There is no difference here betweeen the two 
 ' versions of IDNA.  
 

@@ -1,4 +1,4 @@
-' System.BindingManagerBase.SuspendBinding
+﻿' System.BindingManagerBase.SuspendBinding
 ' System.BindingManagerBase.ResumeBinding
 
 ' The following example demonstrates 'SuspendBinding' and 'ResumeBinding' methomyDataSet of'

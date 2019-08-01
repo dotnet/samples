@@ -1,4 +1,4 @@
-'<snippet40>
+﻿'<snippet40>
 
 '<snippet44>
 Imports System.ComponentModel

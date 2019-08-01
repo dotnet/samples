@@ -1,4 +1,4 @@
-' <Snippet2>
+﻿' <Snippet2>
 Partial Class DefaultVB
     Inherits System.Web.UI.Page
 

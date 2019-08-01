@@ -1,4 +1,4 @@
-'<Snippet1>
+﻿'<Snippet1>
 Module Example
    Public Sub Main()
       ' Define Boolean true and false values.

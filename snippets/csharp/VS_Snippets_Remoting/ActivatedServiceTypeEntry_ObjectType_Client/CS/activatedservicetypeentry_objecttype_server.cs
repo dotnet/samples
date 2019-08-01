@@ -1,4 +1,4 @@
- // System.Runtime.Remoting.ActivatedServiceTypeEntry
+﻿ // System.Runtime.Remoting.ActivatedServiceTypeEntry
  // System.Runtime.Remoting.ActivatedServiceTypeEntry.ObjectType
  // System.Runtime.Remoting.ActivatedServiceTypeEntry.ToString
 

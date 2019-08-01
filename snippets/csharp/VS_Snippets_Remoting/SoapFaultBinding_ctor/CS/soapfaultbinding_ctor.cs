@@ -1,4 +1,4 @@
-// System.Web.Services.Description.SoapBodyBinding.PartsString
+﻿// System.Web.Services.Description.SoapBodyBinding.PartsString
 // System.Web.Services.Description.SoapFaultBinding.ctor
 // System.Web.Services.Description.SoapFaultBinding.Use
 // System.Web.Services.Description.SoapFaultBinding.Encoding

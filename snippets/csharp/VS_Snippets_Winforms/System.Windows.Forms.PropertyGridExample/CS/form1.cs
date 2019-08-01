@@ -1,4 +1,4 @@
-// The following example combines some controls on 
+﻿// The following example combines some controls on 
 // a form with using a CheckedListBox and PropertyGrid.  
 // This method demonstrates the using the PropertyGrid.PropertySort, 
 // PropertyGrid.SelectedObjects, CheckedListBox.SelectionMode, 

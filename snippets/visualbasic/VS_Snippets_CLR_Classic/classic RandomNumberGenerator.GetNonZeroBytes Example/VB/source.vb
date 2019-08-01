@@ -1,4 +1,4 @@
-Imports System
+﻿Imports System
 Imports System.Data
 Imports System.Security.Cryptography
 Imports System.Windows.Forms

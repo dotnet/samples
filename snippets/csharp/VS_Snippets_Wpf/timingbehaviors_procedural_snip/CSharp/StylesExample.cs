@@ -1,4 +1,4 @@
-/*
+﻿/*
   StylesExample.cs
      This example shows how to create storyboards in a style.
 */

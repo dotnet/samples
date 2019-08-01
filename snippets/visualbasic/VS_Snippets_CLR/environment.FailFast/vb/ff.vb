@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 Module Example
     Public Sub Main()
         Dim causeOfFailure As String = "A catastrophic failure has occurred."

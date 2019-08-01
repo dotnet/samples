@@ -1,4 +1,4 @@
-Partial Public Class AddProductWindow
+﻿Partial Public Class AddProductWindow
     Inherits Window
 
     Public Sub New()

@@ -1,4 +1,4 @@
-//<Snippet1>
+﻿//<Snippet1>
 // Example for the OperatingSystem constructor and the 
 // OperatingSystem.ToString( ) method.
 using System;

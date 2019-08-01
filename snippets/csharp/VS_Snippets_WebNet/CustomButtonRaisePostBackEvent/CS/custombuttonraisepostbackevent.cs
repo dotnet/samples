@@ -1,4 +1,4 @@
-// <Snippet2>
+﻿// <Snippet2>
 namespace Samples.AspNet.CS.Controls
 {
   [System.Security.Permissions.PermissionSet(System.Security.Permissions.SecurityAction.Demand, Name="FullTrust")]

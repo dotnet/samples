@@ -1,4 +1,4 @@
-'<snippet10>
+﻿'<snippet10>
 Imports System
 Imports System.ComponentModel
 Imports System.ComponentModel.Design

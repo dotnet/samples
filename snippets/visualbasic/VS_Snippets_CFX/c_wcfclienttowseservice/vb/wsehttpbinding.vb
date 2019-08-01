@@ -1,4 +1,4 @@
-' Copyright (c) Microsoft Corporation.  All Rights Reserved.
+﻿' Copyright (c) Microsoft Corporation.  All Rights Reserved.
 ' <snipppet5>
 Imports System
 Imports System.Text

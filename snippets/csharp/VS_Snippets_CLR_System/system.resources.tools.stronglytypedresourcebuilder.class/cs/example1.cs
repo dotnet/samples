@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
 using Microsoft.CSharp;
 using System;
 using System.CodeDom;

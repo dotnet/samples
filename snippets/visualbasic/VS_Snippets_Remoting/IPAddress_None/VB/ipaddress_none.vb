@@ -1,4 +1,4 @@
- '
+﻿ '
 '   This program demonstrates the 'None' field of 'IPAddress' class.
 '   Provides an IP address indicating that no network interface should be used.
 '

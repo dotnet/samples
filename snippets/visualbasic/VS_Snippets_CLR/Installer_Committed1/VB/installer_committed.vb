@@ -1,4 +1,4 @@
-' System.Configuration.Install.Installer.Committed
+﻿' System.Configuration.Install.Installer.Committed
 
 ' The following program demonstrates the 'Committed' event of the
 ' 'Installer' class.  When the 'Commit' is complete, 'Committed' event

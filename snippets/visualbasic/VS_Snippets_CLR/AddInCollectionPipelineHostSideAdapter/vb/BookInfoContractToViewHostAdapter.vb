@@ -1,4 +1,4 @@
-' <Snippet5>
+﻿' <Snippet5>
 
 Imports Microsoft.VisualBasic
 Imports System.AddIn.Pipeline

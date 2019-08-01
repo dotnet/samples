@@ -1,4 +1,4 @@
-'<SnippetSearchCODEBEHIND>
+﻿'<SnippetSearchCODEBEHIND>
 
 Namespace SDKSample
 	Partial Public Class Search

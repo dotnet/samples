@@ -1,4 +1,4 @@
-// <Snippet2>
+﻿// <Snippet2>
 using System.Resources;
 
 [assembly:NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]

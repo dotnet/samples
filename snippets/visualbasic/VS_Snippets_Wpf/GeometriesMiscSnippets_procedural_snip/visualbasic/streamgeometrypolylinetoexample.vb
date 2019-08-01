@@ -1,4 +1,4 @@
-' <SnippetStreamGeometryPolyLineToExampleWholePage>
+﻿' <SnippetStreamGeometryPolyLineToExampleWholePage>
 
 Imports System
 Imports System.Windows

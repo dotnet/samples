@@ -1,4 +1,4 @@
-' System.Net.FileWebResponse.ResponseUri
+﻿' System.Net.FileWebResponse.ResponseUri
 
 'This program demonstrates the 'ResponseUri' property of the 'FileWebResponse' class.
 'It creates a FileWebRequest and queries for a response.It then displays the Uri of the file

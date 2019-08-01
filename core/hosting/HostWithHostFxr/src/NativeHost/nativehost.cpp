@@ -145,26 +145,26 @@ namespace
     void *load_library(const char_t *path)
     {
         HMODULE h = ::LoadLibraryW(path);
-        assert(h != NULL);
+        assert(h != nullptr);
         return (void*)h;
     }
     void *get_export(void *h, const char *name)
     {
         void *f = ::GetProcAddress((HMODULE)h, name);
-        assert(f != NULL);
+        assert(f != nullptr);
         return f;
     }
 #else
     void *load_library(const char_t *path)
     {
         void *h = dlopen(path, RTLD_LAZY | RTLD_LOCAL);
-        assert(h != NULL);
+        assert(h != nullptr);
         return h;
     }
     void *get_export(void *h, const char *name)
     {
         void *f = dlsym(h, name);
-        assert(f != NULL);
+        assert(f != nullptr);
         return f;
     }
 #endif
@@ -176,7 +176,7 @@ namespace
         // Pre-allocate a large buffer for the path to hostfxr
         char_t buffer[MAX_PATH];
         size_t buffer_size = sizeof(buffer) / sizeof(char_t);
-        int rc = get_hostfxr_path(buffer, &buffer_size, NULL);
+        int rc = get_hostfxr_path(buffer, &buffer_size, nullptr);
         if (rc != 0)
             return false;
 

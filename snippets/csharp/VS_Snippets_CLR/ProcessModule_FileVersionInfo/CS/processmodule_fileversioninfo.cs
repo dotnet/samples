@@ -1,4 +1,4 @@
-// System.Diagnostics.ProcessModule.FileVersionInfo
+﻿// System.Diagnostics.ProcessModule.FileVersionInfo
 
 /* The following program demonstrates the use of 'FileVersionInfo' property of 
    'ProcessModule' class. It creates a notepad, gets the 'MainModule' and 

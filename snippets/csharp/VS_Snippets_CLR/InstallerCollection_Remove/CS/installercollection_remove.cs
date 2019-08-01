@@ -1,4 +1,4 @@
-// System.Configuration.Install.InstallerCollection.Remove(Installer)
+﻿// System.Configuration.Install.InstallerCollection.Remove(Installer)
 // System.Configuration.Install.InstallerCollection.Contains(Installer)
 // System.Configuration.Install.InstallerCollection.IndexOf(Installer)
 

@@ -1,4 +1,4 @@
-// Example for Task.Run(Action) method.
+﻿// Example for Task.Run(Action) method.
 
 // <Snippet1>
 using System;

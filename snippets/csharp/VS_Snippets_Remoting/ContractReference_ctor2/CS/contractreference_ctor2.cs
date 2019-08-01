@@ -1,4 +1,4 @@
-// System.Web.Services.Discovery.ContractReference.ContractReference(string,string)
+﻿// System.Web.Services.Discovery.ContractReference.ContractReference(string,string)
 /*
   The following example demonstrates the constructor 'ContractReference(string,string)' 
   of 'ContractReference' class. In this example the 'ContractReference' class constructor

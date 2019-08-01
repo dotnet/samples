@@ -1,4 +1,4 @@
-' QuickContacts.vb
+﻿' QuickContacts.vb
 Option Strict On
 Imports System
 Imports System.ComponentModel

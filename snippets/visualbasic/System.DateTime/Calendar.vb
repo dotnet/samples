@@ -42,8 +42,8 @@ Module CalendarSamples
         ' <Snippet3>
         Dim thTH As New CultureInfo("th-TH")
         Dim dat As New DateTime(2559, 5, 28, thTH.DateTimeFormat.Calendar)
-        Console.WriteLine("Thai Buddhist Era date: {0}", dat.ToString("d", thTH))
-        Console.WriteLine("Gregorian date:   {0:d}", dat)
+        Console.WriteLine($"Thai Buddhist Era date: {dat.ToString("d", thTH)}")
+        Console.WriteLine($"Gregorian date:   {dat:d}")
         ' The example displays the following output:
         '       Thai Buddhist Era Date:  28/5/2559
         '       Gregorian Date:     28/05/2016
@@ -56,15 +56,15 @@ Module CalendarSamples
         Dim cal As Calendar = thTH.DateTimeFormat.Calendar
         Dim dat As New DateTime(2559, 5, 28, cal)
         Console.WriteLine("Using the Thai Buddhist Era calendar:")
-        Console.WriteLine("Date: {0}", dat.ToString("d", thTH))
-        Console.WriteLine("Year: {0}", cal.GetYear(dat))
-        Console.WriteLine("Leap year: {0}", cal.IsLeapYear(cal.GetYear(dat)))
+        Console.WriteLine($"Date: {dat.ToString("d", thTH)}")
+        Console.WriteLine($"Year: {cal.GetYear(dat)}")
+        Console.WriteLine($"Leap year: {cal.IsLeapYear(cal.GetYear(dat))}")
         Console.WriteLine()
 
         Console.WriteLine("Using the Gregorian calendar:")
-        Console.WriteLine("Date: {0:d}", dat)
-        Console.WriteLine("Year: {0}", dat.Year)
-        Console.WriteLine("Leap year: {0}", DateTime.IsLeapYear(dat.Year))
+        Console.WriteLine($"Date: {dat:d}")
+        Console.WriteLine($"Year: {dat.Year}")
+        Console.WriteLine($"Leap year: {DateTime.IsLeapYear(dat.Year)}")
         ' The example displays the following output:
         '       Using the Thai Buddhist Era calendar
         '       Date :   28/5/2559
@@ -84,20 +84,16 @@ Module CalendarSamples
         Dim thCalendar As Calendar = thTH.DateTimeFormat.Calendar
         Dim dat As New DateTime(1395, 8, 18, thCalendar)
         Console.WriteLine("Using the Thai Buddhist Era calendar:")
-        Console.WriteLine("Date: {0}", dat.ToString("d", thTH))
-        Console.WriteLine("Day of Week: {0}", thCalendar.GetDayOfWeek(dat))
-        Console.WriteLine("Week of year: {0}",
-                        thCalendar.GetWeekOfYear(dat, CalendarWeekRule.FirstDay,
-                                               DayOfWeek.Sunday))
+        Console.WriteLine($"Date: {dat.ToString("d", thTH)}")
+        Console.WriteLine($"Day of Week: {thCalendar.GetDayOfWeek(dat)}")
+        Console.WriteLine($"Week of year: {thCalendar.GetWeekOfYear(dat, CalendarWeekRule.FirstDay, DayOfWeek.Sunday)}")
         Console.WriteLine()
 
         Dim greg As Calendar = New GregorianCalendar()
         Console.WriteLine("Using the Gregorian calendar:")
-        Console.WriteLine("Date: {0:d}", dat)
-        Console.WriteLine("Day of Week: {0}", dat.DayOfWeek)
-        Console.WriteLine("Week of year: {0}",
-                         greg.GetWeekOfYear(dat, CalendarWeekRule.FirstDay,
-                                            DayOfWeek.Sunday))
+        Console.WriteLine($"Date: {dat:d}")
+        Console.WriteLine($"Day of Week: {dat.DayOfWeek}")
+        Console.WriteLine($"Week of year: {greg.GetWeekOfYear(dat, CalendarWeekRule.FirstDay, DayOfWeek.Sunday)}")
         ' The example displays the following output:
         '       Using the Thai Buddhist Era calendar
         '       Date :  18/8/1395

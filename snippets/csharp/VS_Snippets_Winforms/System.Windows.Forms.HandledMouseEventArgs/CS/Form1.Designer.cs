@@ -1,4 +1,4 @@
-namespace TestMouseWheel
+﻿namespace TestMouseWheel
 {
     partial class Form1
     {

@@ -1,4 +1,4 @@
-Option Explicit On
+﻿Option Explicit On
 Option Strict On
 
 ' How to: Convert Strings into an Array of Characters in Visual Basic

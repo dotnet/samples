@@ -1,4 +1,4 @@
-            // Query #7.
+﻿            // Query #7.
 
             // Using a query expression with method syntax
             int numCount1 =

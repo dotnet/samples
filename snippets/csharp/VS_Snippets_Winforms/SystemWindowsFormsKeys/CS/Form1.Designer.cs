@@ -1,4 +1,4 @@
-namespace KeysConverterCS
+﻿namespace KeysConverterCS
 {
     partial class Form1
     {

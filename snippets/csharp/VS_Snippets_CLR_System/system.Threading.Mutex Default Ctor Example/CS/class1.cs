@@ -1,4 +1,4 @@
-//<Snippet1>
+﻿//<Snippet1>
 // This example shows how a Mutex is used to synchronize access
 // to a protected resource. Unlike Monitor, Mutex can be used with
 // WaitHandle.WaitAll and WaitAny, and can be passed across

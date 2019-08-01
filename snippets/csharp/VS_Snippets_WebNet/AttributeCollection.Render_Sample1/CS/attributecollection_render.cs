@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
 /* Create a custom WebControl class, named AttribRender, that overrides 
    the Render method to write two introductory strings. Then call the
    AttributeCollection.Render method, which allows the control to write the

@@ -1,4 +1,4 @@
-Imports System.ComponentModel
+﻿Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Threading
 Imports System.Windows.Forms

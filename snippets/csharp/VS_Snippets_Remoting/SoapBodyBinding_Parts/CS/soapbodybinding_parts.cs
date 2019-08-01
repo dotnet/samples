@@ -1,4 +1,4 @@
-// System.Web.Services.Description.SoapBinding.Namespace
+﻿// System.Web.Services.Description.SoapBinding.Namespace
 // System.Web.Services.Description.SoapBodyBinding.Parts
 
 /*

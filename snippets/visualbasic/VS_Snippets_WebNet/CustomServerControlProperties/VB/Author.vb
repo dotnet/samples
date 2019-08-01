@@ -1,4 +1,4 @@
-' <Snippet2>
+﻿' <Snippet2>
 ' Author.vb
 Option Strict On
 Imports System

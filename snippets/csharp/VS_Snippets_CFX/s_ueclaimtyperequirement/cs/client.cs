@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.
+﻿// Copyright (c) Microsoft Corporation.  All Rights Reserved.
 // Snippet for System.ServiceModel.Security.Tokens.ClaimTypeRequirement
 // snippet used 0,2
 // 06-22-06 a-arthu put in snippets

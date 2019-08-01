@@ -1,4 +1,4 @@
-// Sample NCLNetInfoReport
+﻿// Sample NCLNetInfoReport
 
 using System;
 using System.Net;

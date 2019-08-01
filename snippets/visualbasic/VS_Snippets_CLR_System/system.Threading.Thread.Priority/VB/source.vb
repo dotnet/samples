@@ -1,4 +1,4 @@
-Option Explicit On
+﻿Option Explicit On
 
 ' <Snippet1>
 Imports System.Threading

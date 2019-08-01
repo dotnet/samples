@@ -1,4 +1,4 @@
-//  Snippet for
+﻿//  Snippet for
 //  System.ServiceModel.Security.X509ServiceCertificateAuthentication
 //  Snippet0,1,2,3,4
 //

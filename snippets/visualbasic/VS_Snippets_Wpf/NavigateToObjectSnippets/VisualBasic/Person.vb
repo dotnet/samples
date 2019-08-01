@@ -1,4 +1,4 @@
-'<SnippetPersonClassCODE>
+﻿'<SnippetPersonClassCODE>
 
 Namespace SDKSample
 	Public Class Person

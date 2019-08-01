@@ -1,4 +1,4 @@
-// Module Name: PeerNameResolver.cs
+﻿// Module Name: PeerNameResolver.cs
 //
 // Description:
 //

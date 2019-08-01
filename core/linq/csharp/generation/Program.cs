@@ -1,4 +1,4 @@
-namespace Generation
+﻿namespace Generation
 {
     public class Program
     {

@@ -10,6 +10,7 @@ Class ArgumentOutOfRangeExample
             Array.Copy(array1, array2 , -1)
         Catch e As ArgumentOutOfRangeException
             Console.WriteLine("Error: {0}", e)
+            Throw
         Finally
             Console.WriteLine("This statement is always executed.")
         End Try

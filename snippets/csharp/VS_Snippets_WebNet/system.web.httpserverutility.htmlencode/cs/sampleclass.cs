@@ -1,4 +1,4 @@
-// <snippet2>
+﻿// <snippet2>
 public class SampleClass
 {
     public string GetEncodedText()

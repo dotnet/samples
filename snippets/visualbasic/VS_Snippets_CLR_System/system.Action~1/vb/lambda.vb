@@ -1,4 +1,4 @@
-Option Strict On
+﻿Option Strict On
 
 ' <Snippet4>
 Imports System.Windows.Forms

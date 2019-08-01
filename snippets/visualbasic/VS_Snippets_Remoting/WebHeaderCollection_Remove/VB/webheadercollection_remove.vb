@@ -1,4 +1,4 @@
- '
+﻿ '
 ' This program demonstrates the "Remove" method of "WebHeaderCollection" class.
 '
 ' This program uses the "Remove" method of "WebHeaderCollection" to

@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 
 public class Class1
 {
@@ -60,7 +60,7 @@ public class Class1
       float number;
       
       // Parse currency value using en-GB culture.
-      value = "£1,097.63";
+      value = "Â£1,097.63";
       style = System.Globalization.NumberStyles.Number | 
               System.Globalization.NumberStyles.AllowCurrencySymbol;
       culture = System.Globalization.CultureInfo.CreateSpecificCulture("en-GB");
@@ -92,7 +92,7 @@ public class Class1
       else
          Console.WriteLine("Unable to convert '{0}'.", value);
       // The example displays the following output:
-      //       Converted '£1,097.63' to 1097.63.
+      //       Converted 'Â£1,097.63' to 1097.63.
       //       Converted '1345,978' to 1345.978.
       //       Converted '1.345,978' to 1345.978.
       //       Unable to convert '1 345,978'.

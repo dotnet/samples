@@ -14,14 +14,14 @@ namespace Enums
     [Flags]
     enum Days
     {
-        None = 0x0,
-        Sunday = 0x1,
-        Monday = 0x2,
-        Tuesday = 0x4,
-        Wednesday = 0x8,
-        Thursday = 0x10,
-        Friday = 0x20,
-        Saturday = 0x40
+        None      = 0b_0000_0000, // 0
+        Sunday    = 0b_0000_0001, // 1
+        Monday    = 0b_0000_0010, // 2
+        Tuesday   = 0b_0000_0100, // 4
+        Wednesday = 0b_0000_1000, // 8
+        Thursday  = 0b_0001_0000, // 16
+        Friday    = 0b_0010_0000, // 32
+        Saturday  = 0b_0100_0000  // 64 
     }
     class MyClass
     {
@@ -47,12 +47,12 @@ namespace Enums
             //...
             meetingDay = Day.Friday;
             //</snippet4>
-            Console.WriteLine("Meeting day is {0}", meetingDay);
+            Console.WriteLine($"Meeting day is {meetingDay}");
 
-            Console.WriteLine("Meeting day is {0}", (int) meetingDay);
+            Console.WriteLine($"Meeting day is {(int) meetingDay}");
 
             meetingDay = (Day)42;
-            Console.WriteLine("Meeting day is {0}", meetingDay);
+            Console.WriteLine($"Meeting day is {meetingDay}");
 
             Days meetingDays = Days.Tuesday | Days.Thursday;
             Console.WriteLine(meetingDays);
@@ -77,19 +77,19 @@ namespace Enums
             // Set an additional flag using bitwise OR.
             meetingDays = meetingDays | Days.Friday;
 
-            Console.WriteLine("Meeting days are {0}", meetingDays);
+            Console.WriteLine($"Meeting days are {meetingDays}");
             // Output: Meeting days are Tuesday, Thursday, Friday
 
-            // Remove a flag using bitwise XOR.
+            // Toggle a flag using bitwise XOR.
             meetingDays = meetingDays ^ Days.Tuesday;
-            Console.WriteLine("Meeting days are {0}", meetingDays);
+            Console.WriteLine($"Meeting days are {meetingDays}");
             // Output: Meeting days are Thursday, Friday
             //</snippet6>
 
             //<snippet7>
             // Test value of flags using bitwise AND.
             bool test = (meetingDays & Days.Thursday) == Days.Thursday;
-            Console.WriteLine("Thursday {0} a meeting day.", test == true ? "is" : "is not");
+            Console.WriteLine($"Thursday {test == true ? "is" : "is not"} a meeting day.");
             // Output: Thursday is a meeting day.
             //</snippet7>
 

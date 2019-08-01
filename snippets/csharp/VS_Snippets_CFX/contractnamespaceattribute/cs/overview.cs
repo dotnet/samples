@@ -1,4 +1,4 @@
-using System.Security.Permissions;
+﻿using System.Security.Permissions;
 using System;
 using System.Runtime.Serialization;
 [assembly: SecurityPermission(

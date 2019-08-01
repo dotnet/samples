@@ -12,7 +12,7 @@ namespace SystemDateTimeReference
         private static void DemonstrateResolution()
         {
             // <Snippet1>
-            String output = "";
+            string output = "";
             for (int ctr = 0; ctr <= 20; ctr++)
             {
                 output += String.Format($"{DateTime.Now.Millisecond}\n");
@@ -27,7 +27,7 @@ namespace SystemDateTimeReference
                 }
             }
             Console.WriteLine(output);
-            // Press "Run" to see the output
+            // Press "Run" to see the output.
             // </Snippet1>
         }
 

@@ -1,4 +1,4 @@
-' This sample demonstrates how to use each member of the FirstMatchCodeGroup
+﻿' This sample demonstrates how to use each member of the FirstMatchCodeGroup
 ' class.
 '<Snippet1>
 Imports System.Security

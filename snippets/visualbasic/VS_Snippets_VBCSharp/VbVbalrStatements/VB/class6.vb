@@ -1,4 +1,4 @@
-Public Class Class6
+﻿Public Class Class6
     ' 790068a2-1307-4e28-8a72-be5ebda099e9
     ' If...Then...Else Statement (Visual Basic)
 

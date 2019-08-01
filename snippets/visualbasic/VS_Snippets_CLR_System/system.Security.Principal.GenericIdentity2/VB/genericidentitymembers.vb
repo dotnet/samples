@@ -1,4 +1,4 @@
-' This sample demonstrates how to use each member of the GenericIdentity
+﻿' This sample demonstrates how to use each member of the GenericIdentity
 ' class.
 '<Snippet1>
 Imports System

@@ -1,4 +1,4 @@
-// System.Web.Services.Description.PortType.Operations
+﻿// System.Web.Services.Description.PortType.Operations
 // System.Web.Services.Description.PortType.PortType()
 // System.Web.Services.Description.PortType.Name
 

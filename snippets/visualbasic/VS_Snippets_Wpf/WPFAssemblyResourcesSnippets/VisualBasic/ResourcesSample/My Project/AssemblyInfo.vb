@@ -1,4 +1,4 @@
-#Region "Using directives"
+﻿#Region "Using directives"
 
 Imports System.Reflection
 Imports System.Runtime.CompilerServices

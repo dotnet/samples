@@ -1,4 +1,4 @@
-// <Snippet2>
+﻿// <Snippet2>
 using System;
 
 // A type that represents a 2-D point.

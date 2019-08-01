@@ -1,4 +1,4 @@
-/*
+﻿/*
    System.Configuration.Install.Installer.Context
 
    The following example demonstrates the 'Context' property of 

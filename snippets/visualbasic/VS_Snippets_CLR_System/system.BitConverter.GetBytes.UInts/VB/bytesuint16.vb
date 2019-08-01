@@ -1,4 +1,4 @@
-'<Snippet3>
+﻿'<Snippet3>
 ' Example of the BitConverter.GetBytes( UInt16 ) method.
 Imports System
 Imports Microsoft.VisualBasic

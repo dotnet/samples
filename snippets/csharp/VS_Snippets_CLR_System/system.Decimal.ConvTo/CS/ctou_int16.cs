@@ -1,4 +1,4 @@
-//<Snippet3>
+﻿//<Snippet3>
 // Example of the explicit conversions from decimal to short and 
 // decimal to ushort.
 using System;

@@ -1,4 +1,4 @@
-' System.Reflection.Emit.FieldBuilder.SetOffset
+﻿' System.Reflection.Emit.FieldBuilder.SetOffset
 ' System.Reflection.Emit.FieldBuilder.SetMarshal
 
 '  The following program demonstrates 'SetOffset' and 'SetMarshal'

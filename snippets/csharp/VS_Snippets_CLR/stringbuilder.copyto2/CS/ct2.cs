@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 // This example demonstrates the CopyTo(Int32, Char[], Int32, Int32) method.
 
 // Typically the destination array is small, preallocated, and global while 

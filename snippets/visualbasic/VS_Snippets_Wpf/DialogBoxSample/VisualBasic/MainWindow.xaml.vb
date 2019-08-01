@@ -1,4 +1,4 @@
-Imports System.ComponentModel
+﻿Imports System.ComponentModel
 Imports System.Windows
 Imports System.Windows.Controls
 Imports Microsoft.Win32

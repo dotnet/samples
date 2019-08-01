@@ -1,4 +1,4 @@
-' The following example illustrates using the C# or Visual Basic 
+﻿' The following example illustrates using the C# or Visual Basic 
 ' code providers to compile a source file.  The example program takes
 ' a source file as input and attempts to compile the code into an executable.
 ' If the source file has a .vb extension, it is compiled with the Visual Basic

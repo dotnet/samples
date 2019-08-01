@@ -1,4 +1,4 @@
-// System.Web.Services.Description.OperationFaultCollection.Item[string]
+﻿// System.Web.Services.Description.OperationFaultCollection.Item[string]
 
 /*
    The following example demonstrates the 'Item' property of the

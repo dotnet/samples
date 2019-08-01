@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 ' Assembly building example in the .NET Framework.
 Imports System
 

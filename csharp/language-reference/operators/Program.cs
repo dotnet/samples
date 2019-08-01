@@ -62,8 +62,20 @@ namespace operators
             LambdaOperator.Examples();
             Console.WriteLine();
 
+            Console.WriteLine("========== delegate operator examples ==========");
+            DelegateOperator.Examples();
+            Console.WriteLine();
+
+            Console.WriteLine("=========== nameof operator examples ===========");
+            NameOfOperator.Examples();
+            Console.WriteLine();
+
             Console.WriteLine("============= new operator examples ============");
             NewOperator.Examples();
+            Console.WriteLine();
+
+            Console.WriteLine("=============== sizeof operator examples =======");
+            SizeOfOperator.Main();
             Console.WriteLine();
 
             Console.WriteLine("============ stackalloc operator examples ======");

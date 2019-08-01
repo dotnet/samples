@@ -1,4 +1,4 @@
-'The code example demonstrates using the ControlPaint.DrawReversibleLine, 
+﻿'The code example demonstrates using the ControlPaint.DrawReversibleLine, 
 'ControlPaint.DrawFocusRectangle, and ControlPaint.FillReversibleRectangle methods.
 
 

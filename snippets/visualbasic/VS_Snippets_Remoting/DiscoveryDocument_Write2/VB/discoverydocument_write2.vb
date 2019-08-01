@@ -1,4 +1,4 @@
-' System.Web.Services.Discovery.DiscoveryDocument.Write(XmlTextWriter)
+﻿' System.Web.Services.Discovery.DiscoveryDocument.Write(XmlTextWriter)
 
 ' The following example demonstrates the 'Write(XmlTextWriter)' method
 ' of the 'DiscoveryDocument' class.

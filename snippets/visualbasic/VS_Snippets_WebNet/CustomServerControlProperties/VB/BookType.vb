@@ -1,4 +1,4 @@
-' <Snippet3>
+﻿' <Snippet3>
 ' BookType.vb
 Option Strict On
 Imports System

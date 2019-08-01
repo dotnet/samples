@@ -1,4 +1,4 @@
-//<Snippet1>
+﻿//<Snippet1>
 // Example for the Attribute.TypeId property.
 using System;
 using System.Reflection;

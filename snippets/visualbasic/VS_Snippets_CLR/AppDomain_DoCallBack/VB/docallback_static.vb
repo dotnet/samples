@@ -1,4 +1,4 @@
-Option Strict on
+﻿Option Strict on
 Option Explicit On
 
 Imports System

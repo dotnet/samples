@@ -1,4 +1,4 @@
-Imports System.Security.Cryptography
+﻿Imports System.Security.Cryptography
 Imports System.Text
 
 Public Module Program

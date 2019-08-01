@@ -1,4 +1,4 @@
-Class Class072b9cf6629846f1849e4edc1631564c
+﻿Class Class072b9cf6629846f1849e4edc1631564c
     ' WithEvents and the Handles Clause
 
     ' <snippet1>

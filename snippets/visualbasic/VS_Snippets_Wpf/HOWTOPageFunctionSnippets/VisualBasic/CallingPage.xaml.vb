@@ -1,4 +1,4 @@
-Namespace UsingPageFunctionsSample
+﻿Namespace UsingPageFunctionsSample
 	Partial Public Class CallingPage
 		Inherits Page
 		Public Sub New()

@@ -1,4 +1,4 @@
- '
+﻿ '
 'This program demonstrates the 'Status' and the 'Response' property of "WebException" class.
 '
 ' This program tries to access an invalid site and displays the status code and 

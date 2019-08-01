@@ -1,4 +1,4 @@
-   // System.Windows.Forms.DataGridTableStyle.ResetBackColor
+﻿   // System.Windows.Forms.DataGridTableStyle.ResetBackColor
 
    /*
       The following example demonstrates the 'ResetBackColor' method of 'DataGridTableStyle' class. 

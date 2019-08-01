@@ -1,4 +1,4 @@
-        public void GroupByBoolean()
+﻿        public void GroupByBoolean()
         {            
             Console.WriteLine("\r\nGroup by a Boolean into two groups with string keys");
             Console.WriteLine("\"True\" and \"False\" and project into a new anonymous type:");

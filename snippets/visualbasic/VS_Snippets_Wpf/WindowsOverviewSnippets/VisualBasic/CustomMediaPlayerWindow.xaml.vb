@@ -1,4 +1,4 @@
-'<SnippetActivationDeactivationCODEBEHIND>
+﻿'<SnippetActivationDeactivationCODEBEHIND>
 
 Imports System
 Imports System.Windows

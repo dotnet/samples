@@ -1,4 +1,4 @@
-namespace ListViewOverview
+﻿namespace ListViewOverview
 {
 	using System;
 	using System.Drawing;

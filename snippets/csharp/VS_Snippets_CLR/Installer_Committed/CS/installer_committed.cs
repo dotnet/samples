@@ -1,4 +1,4 @@
-/*
+﻿/*
    System.Configuration.Install.Installer.OnCommitting(Idictionary savedState)
    System.Configuration.Install.Installer.OnCommitted(Idictionary savedState)
 

@@ -1,4 +1,4 @@
-using System.Security.Permissions;
+﻿using System.Security.Permissions;
 using System;
 using System.ServiceModel;
 using System.Runtime.Serialization;

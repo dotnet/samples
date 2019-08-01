@@ -1,4 +1,4 @@
-// This sample demonstrates how to derive from the MaskGenerationMethod class.
+﻿// This sample demonstrates how to derive from the MaskGenerationMethod class.
 //<Snippet1>
 using System;
 using System.Security.Cryptography;

@@ -1,4 +1,4 @@
-// The following code example uses a BitVector32 as a collection of bit flags.
+﻿// The following code example uses a BitVector32 as a collection of bit flags.
 
 
 // <snippet1>

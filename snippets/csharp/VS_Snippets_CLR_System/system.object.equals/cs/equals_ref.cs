@@ -1,4 +1,4 @@
-// <Snippet2>
+﻿// <Snippet2>
 using System;
 
 // Define a reference type that does not override Equals.

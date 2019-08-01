@@ -1,4 +1,4 @@
-Imports System
+﻿Imports System
 
 Public Class NotMuchHere
     Public Shared Sub Main()

@@ -1,4 +1,4 @@
-Public Class Form1
+﻿Public Class Form1
     Sub New()
 
         ' This call is required by the Windows Form Designer.

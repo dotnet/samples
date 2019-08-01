@@ -1,4 +1,4 @@
-//<Snippet74>
+﻿//<Snippet74>
 public class Example
 {
    public static void Main()

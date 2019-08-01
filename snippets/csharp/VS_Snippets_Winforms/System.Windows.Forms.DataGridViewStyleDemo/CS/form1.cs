@@ -1,4 +1,4 @@
-// <snippet10>
+﻿// <snippet10>
 using System;
 using System.Drawing;
 using System.Collections;

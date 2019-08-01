@@ -1,4 +1,4 @@
-' System.Windows.Forms.DataGridColumnStyle.AlignmentChanged
+﻿' System.Windows.Forms.DataGridColumnStyle.AlignmentChanged
 '
 '
 ' The following example demonstrates the 'AlignmentChanged' event of

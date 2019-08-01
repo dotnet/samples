@@ -1,4 +1,4 @@
-' System.Net.HttpWebRequest.Accept
+﻿' System.Net.HttpWebRequest.Accept
 '  This program demonstrates 'Accept' property of the 'HttpWebRequest' 
 '  class.A new 'HttpWebRequest' object is created.
 '  The 'Accept' property of 'HttpWebRequest' class is set to 

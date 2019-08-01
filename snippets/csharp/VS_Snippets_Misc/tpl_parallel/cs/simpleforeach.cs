@@ -1,4 +1,4 @@
-// <snippet03>
+﻿// <snippet03>
 using System;
 using System.IO;
 using System.Threading;

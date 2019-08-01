@@ -1,4 +1,4 @@
-//Types:Microsoft.Win32.SystemEvents Vendor: Richter
+﻿//Types:Microsoft.Win32.SystemEvents Vendor: Richter
 //<snippet1>
 using System;
 using Microsoft.Win32;

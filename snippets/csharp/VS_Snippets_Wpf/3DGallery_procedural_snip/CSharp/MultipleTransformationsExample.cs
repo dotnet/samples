@@ -1,4 +1,4 @@
-// <SnippetMultiple3DTransformationsCodeExampleWholePage>
+﻿// <SnippetMultiple3DTransformationsCodeExampleWholePage>
 using System;
 using System.Windows;
 using System.Windows.Controls;

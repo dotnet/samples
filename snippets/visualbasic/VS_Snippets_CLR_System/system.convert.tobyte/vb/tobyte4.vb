@@ -1,4 +1,4 @@
-Option Strict On
+﻿Option Strict On
 
 ' <Snippet14>
 Imports System.Globalization

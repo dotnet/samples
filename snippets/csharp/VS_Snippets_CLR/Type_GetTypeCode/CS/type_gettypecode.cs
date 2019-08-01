@@ -1,4 +1,4 @@
-// System.Type.GetTypeCode()
+﻿// System.Type.GetTypeCode()
 // System.Type.GetProperties()
 // System.Type.GetTypeArray()
 // System.Type.GetType(String,Boolean,Boolean)

@@ -1,4 +1,4 @@
-' This sample can go in ScrollBarRenderer class overview.
+﻿' This sample can go in ScrollBarRenderer class overview.
 ' - Snippet2 can go in IsSupported, DrawRightHorizontalTrack, 
 '   DrawHorizontalThumb, DrawHorizontalThumbGrip, DrawArrowButton, 
 '   and, if necessary, ScrollBarState and ScrollBarArrowButtonState enums.

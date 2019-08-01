@@ -1,4 +1,4 @@
-// System.Web.Services.Protocols.SoapHeaderCollection
+﻿// System.Web.Services.Protocols.SoapHeaderCollection
 // System.Web.Services.Protocols.SoapHeaderCollection.SoapHeaderCollection()
 // System.Web.Services.Protocols.SoapHeaderCollection.Add(SoapHeader)
 // System.Web.Services.Protocols.SoapHeaderCollection.Insert(int, SoapHeader)

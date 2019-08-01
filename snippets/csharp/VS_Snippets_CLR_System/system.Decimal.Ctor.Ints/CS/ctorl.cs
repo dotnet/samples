@@ -1,4 +1,4 @@
-//<Snippet3>
+﻿//<Snippet3>
 // Example of the decimal( long ) constructor.
 using System;
 

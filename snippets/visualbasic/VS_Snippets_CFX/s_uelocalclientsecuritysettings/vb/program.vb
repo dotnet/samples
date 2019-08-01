@@ -1,4 +1,4 @@
-' Snippet for S_UELocalClientSecuritySettings
+﻿' Snippet for S_UELocalClientSecuritySettings
 
 
 Imports System

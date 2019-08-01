@@ -1,4 +1,4 @@
-' System.Runtime.Remoting.Channels.IChannelReceiverHook
+﻿' System.Runtime.Remoting.Channels.IChannelReceiverHook
 ' System.Runtime.Remoting.Channels.IChannelReceiverHook.WantsToListen
 ' System.Runtime.Remoting.Channels.IChannelReceiverHook.ChannelScheme
 

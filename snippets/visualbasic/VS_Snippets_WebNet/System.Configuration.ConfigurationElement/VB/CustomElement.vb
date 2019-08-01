@@ -1,4 +1,4 @@
-' File name: CustomElement.cs
+﻿' File name: CustomElement.cs
 ' Allowed snippet tags range: [31 - 50].
 
 '<Snippet31>

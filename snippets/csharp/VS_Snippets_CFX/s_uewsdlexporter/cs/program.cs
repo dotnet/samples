@@ -1,4 +1,4 @@
-// <Snippet0>
+﻿// <Snippet0>
 using System;
 using System.ServiceModel;
 using System.ServiceModel.Description;

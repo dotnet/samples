@@ -1,4 +1,4 @@
-Namespace Samples.AspNet.VB.Controls
+﻿Namespace Samples.AspNet.VB.Controls
 ' <Snippet2>
 <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.Demand, Name:="FullTrust")> _
 Public Class CustomButtonRaisePostBackEvent

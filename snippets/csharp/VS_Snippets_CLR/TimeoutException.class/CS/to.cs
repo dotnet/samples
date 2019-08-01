@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 // This example demonstrates the use of the TimeoutException 
 // exception in conjunction with the SerialPort class.
 

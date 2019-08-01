@@ -1,4 +1,4 @@
-// REDMOND\glennha
+ï»¿// REDMOND\glennha
 //<Snippet1>
 using System;
 using System.Reflection;
@@ -148,8 +148,8 @@ public class Example
 
         // Create a delegate that represents the dynamic method. 
         // Creating the delegate completes the method, and any further 
-        // attempts to change the method — for example, by adding more
-        // MSIL — are ignored. 
+        // attempts to change the method â€” for example, by adding more
+        // MSIL â€” are ignored. 
         // 
         // The following code binds the method to a new instance
         // of the Example class whose private test field is set to 42.

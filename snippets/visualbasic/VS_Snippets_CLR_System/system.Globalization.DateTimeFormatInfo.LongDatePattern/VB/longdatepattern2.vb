@@ -1,4 +1,4 @@
-' Visual Basic .NET Document
+﻿' Visual Basic .NET Document
 Option Strict On
 
 ' Relationships between calendar and long date pattern in Arabic (Syria) culture.

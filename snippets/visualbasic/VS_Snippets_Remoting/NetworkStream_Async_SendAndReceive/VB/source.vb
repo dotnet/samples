@@ -1,4 +1,4 @@
-' The following sample is intended to demonstrate how to use a 
+﻿' The following sample is intended to demonstrate how to use a 
 'NetworkStream for synchronous communcation with a remote host
 'This class uses several NetworkStream members that would be useful
 ' in a synchronous communciation senario

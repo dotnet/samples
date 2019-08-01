@@ -1,4 +1,4 @@
-Imports System.Security.Permissions
+﻿Imports System.Security.Permissions
 Imports System
 Imports System.Xml
 Imports System.Runtime.Serialization

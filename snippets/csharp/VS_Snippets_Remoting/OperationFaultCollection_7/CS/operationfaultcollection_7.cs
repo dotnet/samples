@@ -1,4 +1,4 @@
-// System.Web.Services.Description.OperationFaultCollection
+﻿// System.Web.Services.Description.OperationFaultCollection
 // System.Web.Services.Description.OperationFaultCollection.Contains
 // System.Web.Services.Description.OperationFaultCollection.CopyTo
 // System.Web.Services.Description.OperationFaultCollection.IndexOf

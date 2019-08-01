@@ -1,4 +1,4 @@
-' <Snippet2>
+﻿' <Snippet2>
 Module Example
     ' Display the individual bytes in the array in hexadecimal.
     Sub DisplayArray(arr As Array, name As String)

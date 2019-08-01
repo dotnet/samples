@@ -1,4 +1,4 @@
-//<Snippet8>
+﻿//<Snippet8>
 using System.Runtime.InteropServices;
 
 namespace project_name

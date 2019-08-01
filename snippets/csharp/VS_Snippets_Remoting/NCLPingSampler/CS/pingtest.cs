@@ -1,4 +1,4 @@
-//NCLPingSampler
+﻿//NCLPingSampler
 //<snippet0>
 using System;
 using System.Net;

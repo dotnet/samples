@@ -1,4 +1,4 @@
-//<SNIPPET4>
+﻿//<SNIPPET4>
 using System;
 using System.Security.Cryptography.Xml;
 using System.Xml;

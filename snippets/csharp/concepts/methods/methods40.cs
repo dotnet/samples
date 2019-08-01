@@ -1,4 +1,4 @@
-//<Snippet40>
+﻿//<Snippet40>
 using System;
 
 abstract class Motorcycle

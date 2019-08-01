@@ -1,4 +1,4 @@
- '*
+﻿ '*
 '  *File name: WebAuthenticationFailureAuditEvent.cs
 '  *Purpose: Implements a custom WebAuthenticationFailureAuditEvent type
 '  *by inheriting from the System.Web.Management.WebAuthenticationFailureAuditEvent class

@@ -1,4 +1,4 @@
-' fb4b89d4-4926-4f20-868d-427fa28497b2
+﻿' fb4b89d4-4926-4f20-868d-427fa28497b2
     ' /addmodule
 Option Explicit On
 

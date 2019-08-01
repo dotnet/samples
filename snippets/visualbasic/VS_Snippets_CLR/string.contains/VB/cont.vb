@@ -1,4 +1,4 @@
-'<snippet1>
+﻿'<snippet1>
 Class Example
    Public Shared Sub Main()
       Dim s1 As String = "The quick brown fox jumps over the lazy dog"

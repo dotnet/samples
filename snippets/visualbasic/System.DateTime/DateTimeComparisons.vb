@@ -22,15 +22,15 @@
         Dim freq As Integer = 60 * 60 * 2 ' 2 hours;
         Dim d1 As DateTime = DateTime.Now
 
-        Dim d2 As DateTime = d1.AddSeconds((2 * window))
-        Dim d3 As DateTime = d1.AddSeconds((-2 * window))
-        Dim d4 As DateTime = d1.AddSeconds((window / 2))
-        Dim d5 As DateTime = d1.AddSeconds((-window / 2))
+        Dim d2 As DateTime = d1.AddSeconds(2 * window)
+        Dim d3 As DateTime = d1.AddSeconds(-2 * window)
+        Dim d4 As DateTime = d1.AddSeconds(window / 2)
+        Dim d5 As DateTime = d1.AddSeconds(-window / 2)
 
-        Dim d6 As DateTime = d1.AddHours(2).AddSeconds((2 * window))
-        Dim d7 As DateTime = d1.AddHours(2).AddSeconds((-2 * window))
-        Dim d8 As DateTime = d1.AddHours(2).AddSeconds((window / 2))
-        Dim d9 As DateTime = d1.AddHours(2).AddSeconds((-window / 2))
+        Dim d6 As DateTime = d1.AddHours(2).AddSeconds(2 * window)
+        Dim d7 As DateTime = d1.AddHours(2).AddSeconds(-2 * window)
+        Dim d8 As DateTime = d1.AddHours(2).AddSeconds(window / 2)
+        Dim d9 As DateTime = d1.AddHours(2).AddSeconds(-window / 2)
 
         Console.WriteLine($"d1 ({d1}) ~= d1 ({d1}): {RoughlyEquals(d1, d1, window, freq)}")
         Console.WriteLine($"d1 ({d1}) ~= d2 ({d2}): {RoughlyEquals(d1, d2, window, freq)}")

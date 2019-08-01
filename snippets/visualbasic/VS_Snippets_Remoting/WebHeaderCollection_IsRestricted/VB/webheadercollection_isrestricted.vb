@@ -1,4 +1,4 @@
- '
+﻿ '
 ' This program demonstrates the "IsRestricted" method of "WebHeaderCollection".
 '
 ' This program checks if the first header returned in the 

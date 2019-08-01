@@ -1,4 +1,4 @@
-'<SnippetCalledPageFunctionCODEBEHIND1>
+﻿'<SnippetCalledPageFunctionCODEBEHIND1>
 '<SnippetAcceptsInitialDataCODEBEHIND1>
 '<SnippetReturnCODEBEHIND1>
 Imports System

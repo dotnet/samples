@@ -1,4 +1,4 @@
-namespace LinqFaroShuffle
+﻿namespace LinqFaroShuffle
 {
     #region snippet1
     public class PlayingCard

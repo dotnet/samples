@@ -1,4 +1,4 @@
-// XpsReadWriteSign SDK Sample - ReadingAndWritingXps.cs
+﻿// XpsReadWriteSign SDK Sample - ReadingAndWritingXps.cs
 // Copyright (c) Microsoft Corporation. All rights reserved.
 
 using System;

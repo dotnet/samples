@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Class Sample
    Public Shared Sub Main() 
       ' Define a string array with the following three "I" characters:

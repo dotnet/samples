@@ -1,4 +1,4 @@
-'<Snippet2>
+﻿'<Snippet2>
 ' Example of the BitConverter.GetBytes( UInt32 ) method.
 Imports System
 Imports Microsoft.VisualBasic

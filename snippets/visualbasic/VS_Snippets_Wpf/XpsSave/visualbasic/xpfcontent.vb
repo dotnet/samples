@@ -1,4 +1,4 @@
-' XpsSave SDK Sample - XpfContent.vb
+﻿' XpsSave SDK Sample - XpfContent.vb
 ' Copyright (c) Microsoft Corporation. All rights reserved.
 '
 ' This file provides the methods for creating the default

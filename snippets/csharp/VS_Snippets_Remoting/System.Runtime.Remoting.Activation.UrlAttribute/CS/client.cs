@@ -1,4 +1,4 @@
-// class: System.Runtime.Remoting.Activation.UrlAttribute
+﻿// class: System.Runtime.Remoting.Activation.UrlAttribute
 //<snippet0>
 using System;
 using System.Runtime.Remoting;

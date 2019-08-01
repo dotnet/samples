@@ -1,4 +1,4 @@
-' System.Windows.Forms.DataGridColumnStyle.ReadOnlyChanged
+﻿' System.Windows.Forms.DataGridColumnStyle.ReadOnlyChanged
 '
 '
 ' The following example demonstrates 'ReadOnlyChanged' Event of

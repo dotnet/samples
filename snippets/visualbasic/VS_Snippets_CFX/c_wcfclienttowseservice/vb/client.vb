@@ -1,4 +1,4 @@
-' Copyright (c) Microsoft Corporation.  All Rights Reserved.
+﻿' Copyright (c) Microsoft Corporation.  All Rights Reserved.
 ' <snippet0>
 Imports System
 Imports System.Collections.Generic

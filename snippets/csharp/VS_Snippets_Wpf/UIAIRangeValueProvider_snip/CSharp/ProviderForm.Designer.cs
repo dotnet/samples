@@ -1,4 +1,4 @@
-namespace UIAIRangeValueProvider_snip
+﻿namespace UIAIRangeValueProvider_snip
 {
     partial class ProviderForm
     {

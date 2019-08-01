@@ -1,4 +1,4 @@
-' System.Configuration.Install.InstallEventArgs
+﻿' System.Configuration.Install.InstallEventArgs
 ' System.Configuration.Install.InstallEventArgs.InstallEventArgs()
 ' System.Configuration.Install.InstallEventArgs.InstallEventArgs(IDictionary)
 ' System.Configuration.Install.InstallEventArgs.SavedState

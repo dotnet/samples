@@ -1,4 +1,4 @@
-// PackageDigitalSignature SDK Sample - PackageDigitalSignature.cs
+﻿// PackageDigitalSignature SDK Sample - PackageDigitalSignature.cs
 // Copyright (c) Microsoft Corporation. All rights reserved.
 
 using System;

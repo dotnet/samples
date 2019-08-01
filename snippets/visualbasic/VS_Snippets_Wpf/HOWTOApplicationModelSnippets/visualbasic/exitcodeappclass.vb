@@ -1,4 +1,4 @@
-Namespace SDKSample
+﻿Namespace SDKSample
 	Friend Class ExitCodeAppClass
 		Inherits Application
 		Protected Overrides Sub OnExit(ByVal e As ExitEventArgs)

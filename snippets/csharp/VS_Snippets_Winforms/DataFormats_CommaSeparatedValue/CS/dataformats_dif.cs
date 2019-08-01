@@ -1,4 +1,4 @@
-// System.Windows.Forms.DataFormats.Dif
+﻿// System.Windows.Forms.DataFormats.Dif
 
 /*
  The following example demonstrates the 'Dif' field of 'DataFormats' class. 

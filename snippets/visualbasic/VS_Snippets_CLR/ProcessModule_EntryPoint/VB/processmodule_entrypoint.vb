@@ -1,4 +1,4 @@
-' System.Diagnostics.ProcessModule.EntryPointAddress
+﻿' System.Diagnostics.ProcessModule.EntryPointAddress
 
 ' The following program demonstrates the use of 'EntryPointAddress' property of 
 ' 'ProcessModule' class. It creates a notepad, gets the 'MainModule' and 

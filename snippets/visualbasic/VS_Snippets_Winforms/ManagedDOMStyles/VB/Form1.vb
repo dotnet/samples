@@ -1,4 +1,4 @@
-'<SNIPPET2>
+﻿'<SNIPPET2>
 <System.Security.Permissions.PermissionSet(Security.Permissions.SecurityAction.Demand, Name:="FullTrust")> _
 Public Class Form1
 

@@ -1,4 +1,4 @@
-// snippet
+﻿// snippet
 // C:\sdtree\snippets\indigo\c_Collection_Types_in_Data_Contracts\CS\Program.cs
 using System;
 using System.Collections;

@@ -1,4 +1,4 @@
-/// Class: System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime
+﻿/// Class: System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime
 ///    10    class 
 ///    11    Parse
 ///    12    ToString

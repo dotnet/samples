@@ -1,4 +1,4 @@
-namespace ListExamples
+﻿namespace ListExamples
 {
     using System;
     public class MyList<T>

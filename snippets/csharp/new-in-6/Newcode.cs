@@ -1,4 +1,4 @@
-// <UsingStaticMath>
+﻿// <UsingStaticMath>
 using static System.Math;
 // </UsingStaticMath>
 // <UsingStatic>

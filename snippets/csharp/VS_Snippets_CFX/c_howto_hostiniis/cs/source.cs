@@ -1,4 +1,4 @@
-//Code for con topic: HowTo: Host a WCF Service in IIS
+﻿//Code for con topic: HowTo: Host a WCF Service in IIS
 
 //<snippet1>
 using System;

@@ -1,4 +1,4 @@
-// System.ServiceProcess.ServiceInstaller
+﻿// System.ServiceProcess.ServiceInstaller
 
 // The following example demonstrates the ServiceInstaller class.
 // It defines the instance SimpleServiceInstaller with the

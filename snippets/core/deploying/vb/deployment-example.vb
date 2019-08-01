@@ -1,4 +1,4 @@
-Imports System.Text.RegularExpressions
+﻿Imports System.Text.RegularExpressions
 
 Namespace Applications.ConsoleApps
     Public Module ConsoleParser

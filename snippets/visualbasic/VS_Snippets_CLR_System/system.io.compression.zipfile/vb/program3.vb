@@ -1,4 +1,4 @@
-' <snippet3>
+﻿' <snippet3>
 Imports System.IO
 Imports System.IO.Compression
 

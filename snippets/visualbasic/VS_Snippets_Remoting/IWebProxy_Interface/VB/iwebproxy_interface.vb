@@ -1,4 +1,4 @@
- '
+﻿ '
 '  This program demonstrates  'Credentials' property, 'GetProxy' and 'IsBypassed' methods of 
 '  IWebProxy interface.
 '  The 'WebProxy_Interface' class implements the 'IWebProxy' interface. It provides an implementation for the

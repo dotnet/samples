@@ -1,4 +1,4 @@
-'<SnippetStartupXBAPCODEBEHIND>
+﻿'<SnippetStartupXBAPCODEBEHIND>
 
 Imports System
 Imports System.Windows

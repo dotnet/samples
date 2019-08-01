@@ -1,4 +1,4 @@
-//<Snippet1>
+﻿//<Snippet1>
 // Example of the decimal.Negate, decimal.Floor, and decimal.Truncate 
 // methods. 
 using System;

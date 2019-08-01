@@ -1,4 +1,4 @@
-Imports System.Collections
+﻿Imports System.Collections
 
 Public Class Example
    Public Class ReverserClass : Implements IComparer

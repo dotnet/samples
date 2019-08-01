@@ -1,4 +1,4 @@
-'<SNIPPET4>
+﻿'<SNIPPET4>
 Imports System
 Imports System.Security.Cryptography.Xml
 Imports System.Xml

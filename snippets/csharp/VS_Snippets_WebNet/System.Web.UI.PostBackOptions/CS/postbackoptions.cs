@@ -1,4 +1,4 @@
-public class nothing
+﻿public class nothing
 {
 
 }

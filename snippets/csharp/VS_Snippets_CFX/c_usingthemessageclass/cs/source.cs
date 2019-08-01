@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.ServiceModel;
 using System.Runtime.Serialization;
 using System.IO;
@@ -207,7 +207,7 @@ namespace Samples2
                 writer.WriteEndElement();
             }
         }    
-        //code omitted…
+        //code omittedâ€¦
     //</snippet9>
 
         //<snippet10>
@@ -257,7 +257,7 @@ namespace Samples2
     
     public class RandomNumbersXmlReader : XmlDictionaryReader
     {
-        //code to serve up 100000 random numbers in XML form omitted…
+        //code to serve up 100000 random numbers in XML form omittedâ€¦
 
         //</snippet10>
         public override int AttributeCount

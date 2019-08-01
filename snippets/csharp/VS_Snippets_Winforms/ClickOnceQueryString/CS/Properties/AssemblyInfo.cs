@@ -1,4 +1,4 @@
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("MS")]
 [assembly: AssemblyProduct("ClickOnceQueryString")]
-[assembly: AssemblyCopyright("Copyright � MS 2005")]
+[assembly: AssemblyCopyright("Copyright © MS 2005")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

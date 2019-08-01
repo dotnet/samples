@@ -1,4 +1,4 @@
-// This sample demonstrates how to use each member of the KeySizes class.
+﻿// This sample demonstrates how to use each member of the KeySizes class.
 //<Snippet1>
 using System;
 using System.Security.Cryptography;

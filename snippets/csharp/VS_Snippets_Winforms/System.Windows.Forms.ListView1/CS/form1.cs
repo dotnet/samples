@@ -1,4 +1,4 @@
-// The following Snippet code example demonstrates using the: 
+﻿// The following Snippet code example demonstrates using the: 
 // ListView.MultiSelect, ListView.SelectedItems, 
 // ListView.SelectIndices, SelectedIndexCollection, 
 // SelectedListViewItemCollection ListView.SelectedIndexChanged event, 

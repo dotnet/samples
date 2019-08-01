@@ -1,4 +1,4 @@
-//<Snippet1>
+﻿//<Snippet1>
 // Example of the explicit conversions from decimal to long and 
 // decimal to ulong.
 using System;

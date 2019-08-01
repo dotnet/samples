@@ -1,4 +1,4 @@
-Imports System.Configuration
+﻿Imports System.Configuration
 
 Namespace ExpanderSnips
 	''' <summary>

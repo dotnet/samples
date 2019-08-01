@@ -1,4 +1,4 @@
-' This sample can go in RadioButtonRenderer class overview
+﻿' This sample can go in RadioButtonRenderer class overview
 ' - Snippet2 can go in GetGlyphSize
 ' - Snippet4 can go in DrawRadioButton.
 ' - Snippet4 can also go in RadioButtonState enum, if necessary.

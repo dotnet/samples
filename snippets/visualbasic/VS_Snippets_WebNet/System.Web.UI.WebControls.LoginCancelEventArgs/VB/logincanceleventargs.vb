@@ -1,4 +1,4 @@
-' <snippet2>
+﻿' <snippet2>
 Partial Class LoginCancelEventArgsvb_aspx
     Inherits System.Web.UI.Page
 

@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Class Rectangle 
     Private a, b As Point
     

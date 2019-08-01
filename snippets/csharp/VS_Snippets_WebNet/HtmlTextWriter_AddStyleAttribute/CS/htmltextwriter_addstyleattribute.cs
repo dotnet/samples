@@ -1,4 +1,4 @@
-/* 
+﻿/* 
  * The following example demonstrates the 'AddStyleAttribute(string, string)' method 
  * of 'HtmlTextWriter' class.
  * 

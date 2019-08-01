@@ -1,4 +1,4 @@
-Class Base
+﻿Class Base
 End Class
 
 Class Derived

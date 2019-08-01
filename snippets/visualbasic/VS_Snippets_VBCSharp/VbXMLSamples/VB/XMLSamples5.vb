@@ -1,4 +1,4 @@
-Public Class Samples5
+﻿Public Class Samples5
 Public Shared Sub Main()
         ' Topic: How to: Access XML Attributes (Visual Basic)
         '<Snippet11>

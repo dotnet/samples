@@ -1,4 +1,4 @@
-// System.Web.Services.Description.ServiceDescription.Bindings
+﻿// System.Web.Services.Description.ServiceDescription.Bindings
 
 /* 
   The following example demonstrates the property 'Bindings' of 

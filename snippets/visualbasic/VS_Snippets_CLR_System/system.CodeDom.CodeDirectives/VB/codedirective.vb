@@ -1,4 +1,4 @@
-' Demonstrate the use of classed derived from CodeDirective.
+﻿' Demonstrate the use of classed derived from CodeDirective.
 '<Snippet1>
 Imports System.CodeDom
 Imports System.CodeDom.Compiler

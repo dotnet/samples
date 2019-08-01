@@ -1,4 +1,4 @@
-' System.Runtime.Remoting.Lifetime.ISponsor
+﻿' System.Runtime.Remoting.Lifetime.ISponsor
 ' System.Runtime.Remoting.Lifetime.ISponsor.Renewal
 
 ' The following program demonstrates the 'ISponsor' interface and its 'Renewal' method.

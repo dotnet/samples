@@ -1,4 +1,4 @@
-'<Snippet1>
+﻿'<Snippet1>
 Imports System.Web.Security
 Imports System.Configuration.Provider
 Imports System.Collections.Specialized

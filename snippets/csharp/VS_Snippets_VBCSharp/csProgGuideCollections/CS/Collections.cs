@@ -1,4 +1,4 @@
-//<Snippet1>
+﻿//<Snippet1>
 using System.Collections;
 
 // Declare the Tokens class:

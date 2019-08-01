@@ -1,4 +1,4 @@
-/// Need snippets:
+﻿/// Need snippets:
 ///    21    #ctor()
 ///    22    #ctor(DateTime)
 ///    23    #ctor(DateTime,int)

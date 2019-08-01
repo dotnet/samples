@@ -1,4 +1,4 @@
-using System.Resources;
+﻿using System.Resources;
 
 // <Snippet2>
 using System;

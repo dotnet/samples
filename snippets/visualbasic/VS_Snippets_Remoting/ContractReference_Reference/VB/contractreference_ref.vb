@@ -1,4 +1,4 @@
-' System.Web.Services.Discovery.ContractReference.ctor(String)
+﻿' System.Web.Services.Discovery.ContractReference.ctor(String)
 ' System.Web.Services.Discovery.ContractReference.Ref
 ' System.Web.Services.Discovery.ContractReference.DocRef
 ' System.Web.Services.Discovery.ContractReference.Namespace

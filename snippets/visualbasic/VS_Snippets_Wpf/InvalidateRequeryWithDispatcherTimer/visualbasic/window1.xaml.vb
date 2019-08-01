@@ -1,4 +1,4 @@
-Imports System.Windows.Threading
+﻿Imports System.Windows.Threading
 Imports System.Globalization
 Imports System.Windows
 

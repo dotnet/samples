@@ -1,4 +1,4 @@
-//<SnippetHomePageCODEBEHIND>
+﻿//<SnippetHomePageCODEBEHIND>
 using System.Windows.Controls;
 
 namespace SDKSample

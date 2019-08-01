@@ -1,4 +1,4 @@
-'<SNIPPET1>
+﻿'<SNIPPET1>
 '<SNIPPET2>
 Imports Microsoft.Win32
 '</SNIPPET2>

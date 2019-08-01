@@ -1,4 +1,4 @@
-' This example demonstrates StringBuilder.EnsureCapacity
+﻿' This example demonstrates StringBuilder.EnsureCapacity
 '                           StringBuilder.Capacity
 '                           StringBuilder.Length
 '                           StringBuilder.Equals

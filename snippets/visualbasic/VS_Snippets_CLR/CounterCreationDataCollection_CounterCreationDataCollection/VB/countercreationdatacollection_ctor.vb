@@ -1,4 +1,4 @@
-' System.Diagnostics.CounterCreationDataCollection.CounterCreationDataCollection(CounterCreationDataCollection)
+﻿' System.Diagnostics.CounterCreationDataCollection.CounterCreationDataCollection(CounterCreationDataCollection)
 
 ' The following program demonstrates 'CounterCreationDataCollection(CounterCre
 ' ationDataCollection)' constructor of 'CounterCreationDataCollection' class.

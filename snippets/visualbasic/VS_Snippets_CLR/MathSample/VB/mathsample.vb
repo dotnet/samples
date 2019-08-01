@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 'The following class represents simple functionality of the trapezoid.
 Class MathTrapezoidSample
 

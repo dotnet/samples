@@ -1,4 +1,4 @@
-// System.Net.Sockets.TcpClient main functionality. 
+﻿// System.Net.Sockets.TcpClient main functionality. 
 
 /**
   * This program shows how to use the TcpClient 

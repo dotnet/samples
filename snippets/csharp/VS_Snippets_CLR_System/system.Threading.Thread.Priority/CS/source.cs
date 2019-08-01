@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
 using System;
 using System.Threading;
 using Timers = System.Timers;

@@ -1,4 +1,4 @@
-// When you run this, Ignore each of the 3 asserts. At the end, go
+﻿// When you run this, Ignore each of the 3 asserts. At the end, go
 // check the event log for the 4 entries this generates.
 //
 using System;

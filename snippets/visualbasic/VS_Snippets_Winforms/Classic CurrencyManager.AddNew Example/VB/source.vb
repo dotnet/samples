@@ -1,4 +1,4 @@
-Option Strict
+﻿Option Strict
 Option Explicit
 
 Imports System

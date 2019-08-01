@@ -1,4 +1,4 @@
-'<SnippetCodeWindow>
+﻿'<SnippetCodeWindow>
 Imports System.Windows
 Imports System.Windows.Controls
 

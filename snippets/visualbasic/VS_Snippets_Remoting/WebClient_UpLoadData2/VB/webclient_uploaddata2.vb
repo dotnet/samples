@@ -1,4 +1,4 @@
- ' System.Net.WebClient.UploadData(String,byte[])
+﻿ ' System.Net.WebClient.UploadData(String,byte[])
 
 'This program demonstrates the 'UploadData(String,byte[])' method of "WebClient" class.
 'It accepts an Uri and some string content to be posted to the Uri. This string is posted to the Uri 

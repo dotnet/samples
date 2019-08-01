@@ -1,4 +1,4 @@
-//<SnippetDTSClass>
+﻿//<SnippetDTSClass>
 using System.Windows;
 using System.Windows.Controls;
 

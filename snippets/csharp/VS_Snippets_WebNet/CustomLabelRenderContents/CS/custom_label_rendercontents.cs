@@ -1,4 +1,4 @@
-// <Snippet2>
+﻿// <Snippet2>
 using System.Web;
 using System.Security.Permissions;
 
@@ -13,7 +13,7 @@ namespace Samples.AspNet.CS.Controls
       base.RenderContents(writer);
 
       // Append some text to the Label.
-      writer.Write("<BR>Experience Windows Server 2003 and Visual Studio� .NET 2003.");
+      writer.Write("<BR>Experience Windows Server 2003 and Visual Studio® .NET 2003.");
     }
   }
 }

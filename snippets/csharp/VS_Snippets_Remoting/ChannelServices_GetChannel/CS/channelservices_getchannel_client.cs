@@ -1,4 +1,4 @@
-// System.Runtime.Remoting.Channels.ChannelServices.GetChannel
+﻿// System.Runtime.Remoting.Channels.ChannelServices.GetChannel
 // System.Runtime.Remoting.Channels.ChannelServices.GetChannelSinkProperties
 /*
    This example demonstrates the usage of the properties 'GetChannel' and 

@@ -1,4 +1,4 @@
-' System.Configuration.Install.InstallContext
+﻿' System.Configuration.Install.InstallContext
 ' System.Configuration.Install.InstallContext.InstallContext()
 ' System.Configuration.Install.InstallContext.InstallContext(string, string[])
 ' System.Configuration.Install.InstallContext.IsParameterTrue

@@ -1,4 +1,4 @@
-' Visual Basic .NET Document
+﻿' Visual Basic .NET Document
 '
 ' Example illustrates the Convert.ToInt32(String, IFormatProvider) overload.
 '

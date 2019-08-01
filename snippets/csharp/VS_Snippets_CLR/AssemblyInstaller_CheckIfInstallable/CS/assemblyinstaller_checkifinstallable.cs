@@ -1,4 +1,4 @@
-// System.Configuration.Install.AssemblyInstaller.CheckIfInstallable
+﻿// System.Configuration.Install.AssemblyInstaller.CheckIfInstallable
 
 /* The following example demonstrates the 'CheckIfInstallable' method
    of the 'AssemblyInstaller' class.

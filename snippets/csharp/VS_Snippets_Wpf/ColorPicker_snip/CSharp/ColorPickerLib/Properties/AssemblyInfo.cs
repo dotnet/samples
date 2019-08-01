@@ -1,4 +1,4 @@
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Windows;
@@ -14,7 +14,7 @@ using System.Windows;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("MSFT")]
 [assembly: AssemblyProduct("ColorPickerStepByStep")]
-[assembly: AssemblyCopyright("Copyright � MSFT 2005")]
+[assembly: AssemblyCopyright("Copyright © MSFT 2005")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

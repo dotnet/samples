@@ -1,4 +1,4 @@
-Imports System.Diagnostics
+﻿Imports System.Diagnostics
 
 Public Class Class1
 

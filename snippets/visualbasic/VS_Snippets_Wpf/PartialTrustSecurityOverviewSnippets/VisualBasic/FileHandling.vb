@@ -1,4 +1,4 @@
-'<SnippetDetectPermsCODE1>
+﻿'<SnippetDetectPermsCODE1>
 
 Imports System.IO
 Imports System.IO.IsolatedStorage

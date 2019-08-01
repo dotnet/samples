@@ -1,4 +1,4 @@
-Namespace ButtonProps
+﻿Namespace ButtonProps
     Partial Public Class Page1
         Inherits System.Windows.Controls.StackPanel
         Private Sub OnClickDefault(ByVal Sender As Object, ByVal e As RoutedEventArgs)

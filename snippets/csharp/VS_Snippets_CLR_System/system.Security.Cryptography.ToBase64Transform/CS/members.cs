@@ -1,4 +1,4 @@
-// This sample demonstrates how to use each member of the ToBase64Transform
+﻿// This sample demonstrates how to use each member of the ToBase64Transform
 // class. The file named members.cs is read in and written out as a 
 // transformed file named members.enc.
 //<Snippet1>

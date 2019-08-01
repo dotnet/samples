@@ -1,4 +1,4 @@
-' System.Runtime.Remoting.CallContext.FreeNamedDataSlot(string)
+﻿' System.Runtime.Remoting.CallContext.FreeNamedDataSlot(string)
 ' System.Runtime.Remoting.CallContext.GetHeaders()
 ' System.Runtime.Remoting.CallContext.SetHeaders(Header[])
 

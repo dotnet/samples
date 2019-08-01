@@ -1,4 +1,4 @@
-Public Class Form4
+﻿Public Class Form4
 
     '--------------------------------------------------------------------------
     Private Sub CustomersBindingNavigatorSaveItem_Click() Handles CustomersBindingNavigatorSaveItem.Click

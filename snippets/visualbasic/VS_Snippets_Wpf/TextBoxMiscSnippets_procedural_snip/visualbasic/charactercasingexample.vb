@@ -1,4 +1,4 @@
-' <SnippetCharacterCasingCodeExampleWholePage>
+﻿' <SnippetCharacterCasingCodeExampleWholePage>
 
 Imports System
 Imports System.Windows

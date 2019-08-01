@@ -1,4 +1,4 @@
-
+﻿
 ' This example demonstrates the ComboBox.ObjectCollection.AddRange, 
 ' ComboBox.DropDown, and ComboBox.Text properties and the 
 ' MessageBox.Show(string, string, MessageBoxButton, MessageBoxIcon) 

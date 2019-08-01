@@ -1,4 +1,4 @@
-// The following code example encodes a string into an array of bytes, and then decodes the bytes into an array of characters.
+ï»¿// The following code example encodes a string into an array of bytes, and then decodes the bytes into an array of characters.
 
 // <Snippet1>
 using System;
@@ -88,8 +88,8 @@ public class SamplesUTF32Encoding  {
 /* BUGBUG: Reproduce this output in retail build, then add to the snippet.
 This code produces the following output.  The question marks take the place of characters that cannot be displayed at the console.
 
-BE array with BE encoding : System.Text.UTF32Encoding : 7   14  :za??ß?
-LE array with LE encoding : System.Text.UTF32Encoding : 7   14  :za??ß?
+BE array with BE encoding : System.Text.UTF32Encoding : 7   14  :za??ÃŸ?
+LE array with LE encoding : System.Text.UTF32Encoding : 7   14  :za??ÃŸ?
 BE array with LE encoding : System.Text.UTF32Encoding :Invalid byte was found at byte index 3.
 LE array with BE encoding : System.Text.UTF32Encoding :Invalid byte was found at byte index 3.
 

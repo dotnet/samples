@@ -1,4 +1,4 @@
-// System.Web.Services.Description.OperationFault
+﻿// System.Web.Services.Description.OperationFault
 // System.Web.Services.Description.OperationFault.OperationFault
 
 /* The following example demonstrates the usage of the 'OperationFault'

@@ -1,4 +1,4 @@
-//<SnippetPersonClassCODE>
+﻿//<SnippetPersonClassCODE>
 using System.Windows.Media;
 
 namespace SDKSample

@@ -10,7 +10,7 @@ Module Parsing
         ' <Snippet1>
         Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture("en-GB")
 
-        Dim date1 As DateTime = New DateTime(2013, 6, 1, 12, 32, 30)
+        Dim date1 As New DateTime(2013, 6, 1, 12, 32, 30)
         Dim badFormats As New List(Of String)
 
         Console.WriteLine($"{"Date String",-37} {"Date",-19}")

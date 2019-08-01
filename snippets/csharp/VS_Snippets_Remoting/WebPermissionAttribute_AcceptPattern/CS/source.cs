@@ -1,4 +1,4 @@
-// System.Net.WebPermissionAttribute.Connect;System.Net.WebPermissionAttribute.Accept;
+﻿// System.Net.WebPermissionAttribute.Connect;System.Net.WebPermissionAttribute.Accept;
 /*
 This program demonstrates the 'Connect' and 'Accept' properties of the class 'WebPermissionAttribute'.
 The program uses declarative security for calling the code in 'Connect' method.

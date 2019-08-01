@@ -1,4 +1,4 @@
-/*
+﻿/*
    System.Web.Services.Discovery.DiscoveryClientProtocol.DiscoveryClientProtocol
    System.Web.Services.Discovery.DiscoveryClientProtocol.Download(ref String)
    

@@ -1,4 +1,4 @@
-Imports System.Reflection
+﻿Imports System.Reflection
 
  Class Class1
      Overloads Shared Sub Main(ByVal args() As String)

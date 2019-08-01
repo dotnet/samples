@@ -1,4 +1,4 @@
-' Rewritten Aug 2005 REDMOND\glennha
+﻿' Rewritten Aug 2005 REDMOND\glennha
 ' System.Reflection.Emit.AssemblyBuilder.DefineVersionInfoResource()
 
 ' This code example shows how to use the AssemblyBuilder.DefineVersionInfoResource method
@@ -78,7 +78,7 @@ Module Example
       '
       attributeType = GetType(AssemblyCopyrightAttribute)
       ctor = attributeType.GetConstructor(ctorParameters)
-      ctorArgs = New Object() { "� My Example Company 1991-2005" }
+      ctorArgs = New Object() { "© My Example Company 1991-2005" }
       attribute = New CustomAttributeBuilder(ctor, ctorArgs)
       myAssembly.SetCustomAttribute(attribute)
 

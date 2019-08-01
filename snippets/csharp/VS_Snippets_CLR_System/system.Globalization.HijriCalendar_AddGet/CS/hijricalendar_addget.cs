@@ -1,4 +1,4 @@
-// The following code example displays the values of several components of a DateTime in terms of the Hijri calendar.
+﻿// The following code example displays the values of several components of a DateTime in terms of the Hijri calendar.
 
 // <snippet1>
 using System;

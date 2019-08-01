@@ -1,4 +1,4 @@
-Imports System.Collections
+﻿Imports System.Collections
 
 Module Program
     Public Sub Main()

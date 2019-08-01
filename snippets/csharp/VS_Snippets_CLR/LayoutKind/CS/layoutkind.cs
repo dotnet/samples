@@ -1,4 +1,4 @@
-/*
+﻿/*
    System.Runtime.InteropServices.LayoutKind.Sequential
    System.Runtime.InteropServices.LayoutKind.Explicit
    

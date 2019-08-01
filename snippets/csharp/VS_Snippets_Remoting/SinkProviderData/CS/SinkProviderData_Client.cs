@@ -1,4 +1,4 @@
-/* The following program is the supporting program for demonstration of
+﻿/* The following program is the supporting program for demonstration of
    'System.Runtime.Remoting.Channels.SinkProviderData' class and its
    properties 'Children', 'Name', 'Properties'.
 */

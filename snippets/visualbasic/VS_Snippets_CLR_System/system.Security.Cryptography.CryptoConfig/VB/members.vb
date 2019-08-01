@@ -1,4 +1,4 @@
-' This sample demonstrates how to use each member of the CryptoConfig class.
+﻿' This sample demonstrates how to use each member of the CryptoConfig class.
 '<Snippet1>
 Imports System
 Imports System.Security.Cryptography

@@ -1,4 +1,4 @@
-' Example of the TimeSpan.Parse( String ) and TimeSpan.ToString( ) 
+﻿' Example of the TimeSpan.Parse( String ) and TimeSpan.ToString( ) 
 ' methods.
 
 ' <Snippet1>

@@ -1,4 +1,4 @@
-' System.Windows.Forms.Control.VisibleChanged
+﻿' System.Windows.Forms.Control.VisibleChanged
 
 ' The following program demonstrates 'VisibleChanged' event for the 'Control' class.
 ' The 'VisibleChanged' event is raised when the 'Visible' property value of

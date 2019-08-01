@@ -1,4 +1,4 @@
-' System.Web.Services.Description.ServiceDescription
+﻿' System.Web.Services.Description.ServiceDescription
 
 '  The following example demonstrates the 'ServiceDescription' class.
 '  The input to the program is a WSDL file 'MyWsdl.wsdl'.

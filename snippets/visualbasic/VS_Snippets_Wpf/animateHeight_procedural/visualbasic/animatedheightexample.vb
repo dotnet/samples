@@ -1,4 +1,4 @@
-'
+﻿'
 '
 'This Sample shows a Rectangle with a gradient fill and an animated height
 '

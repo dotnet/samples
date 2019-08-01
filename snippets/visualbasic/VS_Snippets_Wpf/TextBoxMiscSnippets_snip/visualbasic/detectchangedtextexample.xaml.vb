@@ -1,4 +1,4 @@
-' <SnippetDetectChangedTextCodeExampleWholePage>
+﻿' <SnippetDetectChangedTextCodeExampleWholePage>
 
 Namespace SDKSample
 

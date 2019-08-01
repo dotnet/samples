@@ -1,4 +1,4 @@
- '
+﻿ '
 '   This program demonstrates 'GetHostByName' method of 'Dns' class.
 '   It takes a URL string from commandline or uses default value, and obtains 
 '   the 'IPHostEntry' object by calling 'GetHostByName' method of 'Dns' class.Then 

@@ -1,4 +1,4 @@
-' <Snippet1>   
+﻿' <Snippet1>   
 ' Declare an enum type.
 Enum NumEnum
     One

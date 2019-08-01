@@ -1,4 +1,4 @@
-' System.Reflection.Emit.ConstructorBuilder.SetImplementationFlags()
+﻿' System.Reflection.Emit.ConstructorBuilder.SetImplementationFlags()
 
 ' The following program demonstrates the 'SetImplementationFlags'
 ' method of ConstructorBuilder class. It creates an assembly in the

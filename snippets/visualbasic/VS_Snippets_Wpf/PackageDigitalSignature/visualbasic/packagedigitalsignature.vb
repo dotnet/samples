@@ -1,4 +1,4 @@
-' PackageDigitalSignature SDK Sample - PackageDigitalSignature.vb
+﻿' PackageDigitalSignature SDK Sample - PackageDigitalSignature.vb
 ' Copyright (c) Microsoft Corporation. All rights reserved.
 
 Imports Microsoft.VisualBasic

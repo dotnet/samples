@@ -1,4 +1,4 @@
-// System.UInt32.Equals(Object)
+﻿// System.UInt32.Equals(Object)
 
 /* 
    The following program demonstrates the 'Equals(Object)' method

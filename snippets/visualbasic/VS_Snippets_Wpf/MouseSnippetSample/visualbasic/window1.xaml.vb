@@ -1,4 +1,4 @@
-Namespace WCSamples
+﻿Namespace WCSamples
     ''' <summary>
     ''' Interaction logic for Window1.xaml
     ''' </summary>

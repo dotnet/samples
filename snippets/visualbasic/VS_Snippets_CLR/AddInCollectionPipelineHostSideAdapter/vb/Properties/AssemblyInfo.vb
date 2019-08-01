@@ -1,4 +1,4 @@
-Imports Microsoft.VisualBasic
+﻿Imports Microsoft.VisualBasic
 Imports System.Reflection
 Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
@@ -11,7 +11,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyConfiguration("")>
 <Assembly: AssemblyCompany("Microsoft")>
 <Assembly: AssemblyProduct("Template")>
-<Assembly: AssemblyCopyright("Copyright � Microsoft 2006")>
+<Assembly: AssemblyCopyright("Copyright © Microsoft 2006")>
 <Assembly: AssemblyTrademark("")>
 <Assembly: AssemblyCulture("")>
 

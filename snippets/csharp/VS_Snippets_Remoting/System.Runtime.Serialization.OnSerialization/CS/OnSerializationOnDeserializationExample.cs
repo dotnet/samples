@@ -1,4 +1,4 @@
-namespace Serialization
+﻿namespace Serialization
 {
     // <snippet1>
     using System;

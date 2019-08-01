@@ -1,4 +1,4 @@
-namespace ClickOnce.OpenDataFile
+﻿namespace ClickOnce.OpenDataFile
 {
     partial class Form1
     {

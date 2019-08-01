@@ -1,4 +1,4 @@
-// The following code example demonstrates how setting the 
+﻿// The following code example demonstrates how setting the 
 // Label.Autosize property to True will causes the width of 
 // the label to adjust.
 using System.Windows.Forms;

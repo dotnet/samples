@@ -1,4 +1,4 @@
-//<Snippet29>
+﻿//<Snippet29>
 //Type parameter T in angle brackets.
 public class GenericList<T> : System.Collections.Generic.IEnumerable<T>
 {

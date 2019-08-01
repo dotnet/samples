@@ -1,4 +1,4 @@
-'
+﻿'
 'AnimatingSizeExample.vb
 '  This example shows two ways of animating the size
 '     of a framework element.

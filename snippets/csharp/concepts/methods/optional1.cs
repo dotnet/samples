@@ -1,4 +1,4 @@
-// <Snippet21>
+﻿// <Snippet21>
 using System;
 
 public class Options

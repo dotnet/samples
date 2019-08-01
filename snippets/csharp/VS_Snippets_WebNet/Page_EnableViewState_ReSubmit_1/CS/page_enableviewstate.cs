@@ -1,4 +1,4 @@
-// System.Web.UI.Page.EnableViewState
+﻿// System.Web.UI.Page.EnableViewState
 /*
    The following program demonstrates the 'EnableViewState' property of 'Page' class.
    It displays a TextBox and a Button control on the page. On page load event it

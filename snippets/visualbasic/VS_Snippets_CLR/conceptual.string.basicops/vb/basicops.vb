@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Class MainClass
    Public Shared Sub Main()
       Dim MyData As New MailToData()

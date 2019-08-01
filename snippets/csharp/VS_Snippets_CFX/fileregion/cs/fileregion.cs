@@ -1,4 +1,4 @@
-using System.IO.Log;
+﻿using System.IO.Log;
 using System.IO;
 using System.Xml;
 //<snippet0>

@@ -1,4 +1,4 @@
-//<Snippet0>
+﻿//<Snippet0>
 using System;
 using System.Windows.Forms;
 using System.Security.Permissions;

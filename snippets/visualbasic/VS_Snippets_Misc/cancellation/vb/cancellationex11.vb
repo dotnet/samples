@@ -1,4 +1,4 @@
-Option Strict On
+﻿Option Strict On
 
 ' How to: Cancel by using a WaitHandle
 '<snippet11>

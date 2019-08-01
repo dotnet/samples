@@ -1,4 +1,4 @@
-// <snippet2>
+﻿// <snippet2>
 using System;
 using System.Web.UI;
 using System.Web.UI.WebControls;

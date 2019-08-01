@@ -1,4 +1,4 @@
-' System.ArrayTypeMismatchException.ArrayTypeMismatchException
+﻿' System.ArrayTypeMismatchException.ArrayTypeMismatchException
 ' The following example demonstrates the 'ArrayTypeMismatchException(string)' 
 ' constructor of class ArrayTypeMismatchException class. A function has
 ' been created which takes two arrays as arguments. It checks whether the two

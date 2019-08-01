@@ -1,3 +1,3 @@
-//<Snippet3>
+﻿//<Snippet3>
 // compile with: -unsafe
 //</Snippet3>

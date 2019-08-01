@@ -1,4 +1,4 @@
-' <Snippet1>
+﻿' <Snippet1>
 Imports System.Xml
 Imports System.Xml.Schema
 Imports System.IO

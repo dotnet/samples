@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 /////////////////////////////////////////////////////////////////////
 // Pull model smart tag example.
 // Need references to System.dll, System.Windows.Forms.dll, 

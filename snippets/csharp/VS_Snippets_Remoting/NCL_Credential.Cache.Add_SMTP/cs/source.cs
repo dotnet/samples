@@ -1,4 +1,4 @@
-//The following sample initializes a CredentialCache with multiple security credentials
+﻿//The following sample initializes a CredentialCache with multiple security credentials
 //and later uses NTLM credentials with SmtpClient
  
 using System;

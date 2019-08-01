@@ -1,4 +1,4 @@
-// System.Web.Services.Protocols.SoapMessageState
+﻿// System.Web.Services.Protocols.SoapMessageState
 // System.Web.Services.Protocols.SoapMessageState.AfterDeserialize
 // System.Web.Services.Protocols.SoapMessageState.AfterSerialize
 // System.Web.Services.Protocols.SoapMessageState.BeforeDeserialize

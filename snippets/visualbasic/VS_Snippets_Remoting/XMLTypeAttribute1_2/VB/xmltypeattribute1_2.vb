@@ -1,4 +1,4 @@
-' System.Xml.Serialization.XmlTypeAttribute.XmlTypeAttribute()
+﻿' System.Xml.Serialization.XmlTypeAttribute.XmlTypeAttribute()
 ' System.Xml.Serialization.XmlTypeAttribute.XmlTypeAttribute(string)
 
 '   The following example demonstrates the contructors 'XmlTypeAttribute()'

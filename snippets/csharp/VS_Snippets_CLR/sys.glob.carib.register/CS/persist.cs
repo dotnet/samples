@@ -1,4 +1,4 @@
-//<snippet1>
+﻿//<snippet1>
 // This example demonstrates the System.Globalization.Culture-
 // AndRegionInfoBuilder Register method.
 // Compile this code example with a reference to sysglobl.dll.
