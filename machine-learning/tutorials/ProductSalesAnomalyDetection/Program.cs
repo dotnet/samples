@@ -2,6 +2,7 @@
 using System;
 using System.IO;
 using Microsoft.ML;
+using System.Collections.Generic;
 // </SnippetAddUsings>
 
 namespace ProductSalesAnomalyDetection
@@ -44,17 +45,17 @@ namespace ProductSalesAnomalyDetection
             var iidSpikeEstimator = mlContext.Transforms.DetectIidSpike(outputColumnName: nameof(ProductSalesPrediction.Prediction), inputColumnName: nameof(ProductSalesData.numSales), confidence: 95, pvalueHistoryLength: docSize / 4);
             // </SnippetAddSpikeTrainer> 
 
-            // STEP 3:Train the model by fitting the dataview
-            // Create and train the model based on the dataset that has been loaded, transformed.
+            // STEP 3: Create the transform
+            // Create the spike detection transform
             Console.WriteLine("=============== Training the model ===============");
             // <SnippetTrainModel1>
-            ITransformer trainedModel = iidSpikeEstimator.Fit(productSales);
+            ITransformer iidSpikeTransform = iidSpikeEstimator.Fit(CreateEmptyDataView(mlContext));
             // </SnippetTrainModel1>
 
             Console.WriteLine("=============== End of training process ===============");
              //Apply data transformation to create predictions.
             // <SnippetTransformData1>
-            IDataView transformedData = trainedModel.Transform(productSales);
+            IDataView transformedData = iidSpikeTransform.Transform(productSales);
             // </SnippetTransformData1>
  
             // <SnippetCreateEnumerable1>
@@ -90,16 +91,16 @@ namespace ProductSalesAnomalyDetection
             var iidChangePointEstimator = mlContext.Transforms.DetectIidChangePoint(outputColumnName: nameof(ProductSalesPrediction.Prediction), inputColumnName: nameof(ProductSalesData.numSales), confidence: 95, changeHistoryLength: docSize / 4);
             // </SnippetAddChangePointTrainer> 
 
-            //STEP 3:Train the model by fitting the dataview
+            //STEP 3: Create the transform
             Console.WriteLine("=============== Training the model Using Change Point Detection Algorithm===============");
             // <SnippetTrainModel2>
-            var trainedModel = iidChangePointEstimator.Fit(productSales);
+            var iidChangePointTransform = iidChangePointEstimator.Fit(CreateEmptyDataView(mlContext));
             // </SnippetTrainModel2>
             Console.WriteLine("=============== End of training process ===============");
 
             //Apply data transformation to create predictions.
             // <SnippetTransformData2>
-            IDataView transformedData = trainedModel.Transform(productSales);
+            IDataView transformedData = iidChangePointTransform.Transform(productSales);
             // </SnippetTransformData2>
 
             // <SnippetCreateEnumerable2>
@@ -124,5 +125,13 @@ namespace ProductSalesAnomalyDetection
             Console.WriteLine("");
             // </SnippetDisplayResults2>
         }
+
+        // <SnippetCreateEmptyDataView>
+        static IDataView CreateEmptyDataView(MLContext mlContext) {
+            // Create empty DataView. We just need the schema to call Fit() for the time series transforms
+            IEnumerable<ProductSalesData> enumerableData = new List<ProductSalesData>();
+            return mlContext.Data.LoadFromEnumerable(enumerableData);
+        }
+        // </SnippetCreateEmptyDataView>
     }
 }

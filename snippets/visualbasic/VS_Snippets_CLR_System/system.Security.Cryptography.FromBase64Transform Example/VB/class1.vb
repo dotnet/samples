@@ -75,28 +75,25 @@ Friend Class Members
 
             Dim myOutputBytes(myTransform.OutputBlockSize - 1) As Byte
 
-            'Open the input and output files.
+            ' Open the input and output files.
             Using myInputFile As New FileStream(inFileName, FileMode.Open, FileAccess.Read)
                 Using myOutputFile As New FileStream(outFileName, FileMode.Create, FileAccess.Write)
 
-                    'Retrieve the file contents into a byte array. 
+                    ' Retrieve the file contents into a byte array. 
                     Dim myInputBytes(myInputFile.Length - 1) As Byte
                     myInputFile.Read(myInputBytes, 0, myInputBytes.Length)
 
-                    'Transform the data in chunks the size of InputBlockSize. 
+                    ' Transform the data in chunks the size of InputBlockSize. 
                     Dim i As Integer = 0
-                    Do While myInputBytes.Length - i > 4 'myTransform.InputBlockSize
-                        Dim bytesWritten As Int32 = myTransform.TransformBlock(myInputBytes, i, 4, myOutputBytes, 0) 'myTransform.InputBlockSize
-                        i += 4 'myTransform.InputBlockSize
+                    Do While myInputBytes.Length - i > myTransform.InputBlockSize
+                        Dim bytesWritten As Int32 = myTransform.TransformBlock(myInputBytes, i, myTransform.InputBlockSize, myOutputBytes, 0)
+                        i += myTransform.InputBlockSize
                         myOutputFile.Write(myOutputBytes, 0, bytesWritten)
                     Loop
 
-                    'Transform the final block of data.
+                    ' Transform the final block of data.
                     myOutputBytes = myTransform.TransformFinalBlock(myInputBytes, i, myInputBytes.Length - i)
                     myOutputFile.Write(myOutputBytes, 0, myOutputBytes.Length)
-
-                    'Free up any used resources.
-                    myTransform.Clear()
                 End Using
             End Using
         End Using

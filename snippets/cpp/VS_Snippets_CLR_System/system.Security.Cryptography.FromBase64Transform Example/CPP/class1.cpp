@@ -3,6 +3,7 @@
 using namespace System;
 using namespace System::IO;
 using namespace System::Security::Cryptography;
+
 class MyMainClass
 {
 public:
@@ -11,24 +12,22 @@ public:
       FromBase64Transform^ myTransform = gcnew FromBase64Transform( FromBase64TransformMode::IgnoreWhiteSpaces );
       array<Byte>^myOutputBytes = gcnew array<Byte>(myTransform->OutputBlockSize);
       
-      //Open the input and output files.
+      // Open the input and output files.
       FileStream^ myInputFile = gcnew FileStream( inFileName,FileMode::Open,FileAccess::Read );
       FileStream^ myOutputFile = gcnew FileStream( outFileName,FileMode::Create,FileAccess::Write );
       
-      //Retrieve the file contents into a Byte array.
+      // Retrieve the file contents into a Byte array.
       array<Byte>^myInputBytes = gcnew array<Byte>(myInputFile->Length);
       myInputFile->Read( myInputBytes, 0, myInputBytes->Length );
       
-      //Transform the data in chunks the size of InputBlockSize.
+      // Transform the data in chunks the size of InputBlockSize.
       int i = 0;
-      while ( myInputBytes->Length - i > 4 )
+      while ( myInputBytes->Length - i > myTransform->InputBlockSize )
       {
-         myTransform->TransformBlock( myInputBytes, i, 4, myOutputBytes, 0 );
+         myTransform->TransformBlock( myInputBytes, i, myTransform->InputBlockSize, myOutputBytes, 0 );
          
-         /*myTransform->InputBlockSize*/
-         i += 4;
+         i += myTransform->InputBlockSize;
          
-         /*myTransform->InputBlockSize*/
          myOutputFile->Write( myOutputBytes, 0, myTransform->OutputBlockSize );
       }
 
@@ -42,7 +41,6 @@ public:
       myInputFile->Close();
       myOutputFile->Close();
    }
-
 };
 
 int main()
