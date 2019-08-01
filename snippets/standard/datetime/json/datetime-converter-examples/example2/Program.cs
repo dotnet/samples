@@ -14,10 +14,9 @@ namespace DateTimeConverterExamples
     {
         public override DateTime Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
-            if (reader.TokenType != JsonTokenType.String)
-            {
-                throw new JsonException();
-            }
+            // typeToConvert will always be typeof(DateTime). The parameter is useful for
+            // polymorphic cases and when using generics to get typeof(T) in a performant way.
+            Debug.Assert(typeToConvert == typeof(DateTime));
 
             if (Utf8Parser.TryParse(reader.ValueSpan, out DateTime value, out _, 'R'))
             {
@@ -44,7 +43,7 @@ namespace DateTimeConverterExamples
         private static void ParseDateTimeWithDefaultOptions()
         {
             var _ = JsonSerializer.Deserialize<DateTime>(@"""Thu, 25 Jul 2019 13:36:07 GMT""");
-            // Throws JsonException
+            // Throws JsonException.
         }
 
         private static void ProcessDateTimeWithCustomConverter()

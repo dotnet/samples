@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
@@ -9,10 +10,9 @@ namespace DateTimeConverterExamples
     {
         public override DateTime Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
-            if (reader.TokenType != JsonTokenType.String)
-            {
-                throw new JsonException();
-            }
+            // typeToConvert will always be typeof(DateTime). The parameter is useful for
+            // polymorphic cases and when using generics to get typeof(T) in a performant way.
+            Debug.Assert(typeToConvert == typeof(DateTime));
 
             return DateTime.Parse(reader.GetString());
         }
@@ -28,7 +28,7 @@ namespace DateTimeConverterExamples
         private static void ParseDateTimeWithDefaultOptions()
         {
             var _ = JsonSerializer.Deserialize<DateTime>(@"""04-10-2008 6:30 AM""");
-            // Throws JsonException
+            // Throws JsonException.
         }
 
         private static void FormatDateTimeWithDefaultOptions()
@@ -49,7 +49,7 @@ namespace DateTimeConverterExamples
             Console.WriteLine(resultDateTime);
             // 4/10/2008 6:30:00 AM
 
-            var resultDateTimeJson = JsonSerializer.Serialize(DateTime.Parse(testDateTimeStr), options);
+            string resultDateTimeJson = JsonSerializer.Serialize(DateTime.Parse(testDateTimeStr), options);
             Console.WriteLine(Regex.Unescape(resultDateTimeJson));
             // "4/10/2008 6:30:00 AM"
         }

@@ -12,10 +12,9 @@ namespace DateTimeConverterExamples
     {
         public override DateTime Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
-            if (reader.TokenType != JsonTokenType.String)
-            {
-                throw new JsonException();
-            }
+            // typeToConvert will always be typeof(DateTime). The parameter is useful for
+            // polymorphic cases and when using generics to get typeof(T) in a performant way.
+            Debug.Assert(typeToConvert == typeof(DateTime));
 
             if (!reader.TryGetDateTime(out DateTime value))
             {
@@ -28,7 +27,7 @@ namespace DateTimeConverterExamples
         public override void Write(Utf8JsonWriter writer, DateTime value, JsonSerializerOptions options)
         {
             // Converters allow support for custom formats.
-            writer.WriteStringValue(value.ToString("dd/MM/yyy"));
+            writer.WriteStringValue(value.ToString("dd/MM/yyyy"));
         }
     }
 
@@ -37,7 +36,7 @@ namespace DateTimeConverterExamples
         private static void ParseDateTimeWithDefaultOptions()
         {
             var _ = JsonSerializer.Deserialize<DateTime>(@"""2019-07-16 16:45:27.4937872+00:00""");
-            // Throws JsonException
+            // Throws JsonException.
         }
 
         private static void ProcessDateTimeWithCustomConverter()
@@ -53,7 +52,7 @@ namespace DateTimeConverterExamples
             // 7/16/2019 4:45:27 PM
 
             Console.WriteLine(JsonSerializer.Serialize(DateTime.Parse(testDateTimeStr), options));
-            // "16.07.2019"
+            // "16/07/2019"
         }
 
         static void Main(string[] args)
@@ -66,7 +65,7 @@ namespace DateTimeConverterExamples
             catch (JsonException e)
             {
                 Console.WriteLine(e.Message);
-                // The JSON value could not be converted to System.DateTime. Path: $ | LineNumber: 0 | BytePositionInLine: 31.
+                // The JSON value could not be converted to System.DateTime. Path: $ | LineNumber: 0 | BytePositionInLine: 35.
             }
 
             // Using converters gives you control over the serializers parsing and formatting.
@@ -76,6 +75,6 @@ namespace DateTimeConverterExamples
 }
 
 // The example displays the following output:
-// The JSON value could not be converted to System.DateTime.Path: $ | LineNumber: 0 | BytePositionInLine: 31.
-// 7/25/2019 1:36:07 PM
-// "Thu, 25 Jul 2019 09:36:07 GMT"
+// The JSON value could not be converted to System.DateTime.Path: $ | LineNumber: 0 | BytePositionInLine: 35.
+// 7/16/2019 4:45:27 PM
+// "16/07/2019"
