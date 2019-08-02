@@ -62,6 +62,10 @@ namespace operators
             LambdaOperator.Examples();
             Console.WriteLine();
 
+            Console.WriteLine("=========== default operator examples ==========");
+            DefaultOperator.Examples();
+            Console.WriteLine();
+
             Console.WriteLine("========== delegate operator examples ==========");
             DelegateOperator.Examples();
             Console.WriteLine();
