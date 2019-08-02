@@ -1,11 +1,11 @@
-﻿//<Snippet1>
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 public class Example
 {
     public static void Main()
     {
+        //<Snippet1>
         //<Snippet2>
         // Create a new dictionary of strings, with string keys.
         //
@@ -137,42 +137,40 @@ public class Example
             Console.WriteLine("Key \"doc\" is not found.");
         }
         //</Snippet10>
+
+        /* This code example produces the following output:
+
+        An element with Key = "txt" already exists.
+        For key = "rtf", value = wordpad.exe.
+        For key = "rtf", value = winword.exe.
+        Key = "tif" is not found.
+        Key = "tif" is not found.
+        Value added for key = "ht": hypertrm.exe
+
+        Key = txt, Value = notepad.exe
+        Key = bmp, Value = paint.exe
+        Key = dib, Value = paint.exe
+        Key = rtf, Value = winword.exe
+        Key = doc, Value = winword.exe
+        Key = ht, Value = hypertrm.exe
+
+        Value = notepad.exe
+        Value = paint.exe
+        Value = paint.exe
+        Value = winword.exe
+        Value = winword.exe
+        Value = hypertrm.exe
+
+        Key = txt
+        Key = bmp
+        Key = dib
+        Key = rtf
+        Key = doc
+        Key = ht
+
+        Remove("doc")
+        Key "doc" is not found.
+        */
+        //</Snippet1>
     }
 }
-
-/* This code example produces the following output:
-
-An element with Key = "txt" already exists.
-For key = "rtf", value = wordpad.exe.
-For key = "rtf", value = winword.exe.
-Key = "tif" is not found.
-Key = "tif" is not found.
-Value added for key = "ht": hypertrm.exe
-
-Key = txt, Value = notepad.exe
-Key = bmp, Value = paint.exe
-Key = dib, Value = paint.exe
-Key = rtf, Value = winword.exe
-Key = doc, Value = winword.exe
-Key = ht, Value = hypertrm.exe
-
-Value = notepad.exe
-Value = paint.exe
-Value = paint.exe
-Value = winword.exe
-Value = winword.exe
-Value = hypertrm.exe
-
-Key = txt
-Key = bmp
-Key = dib
-Key = rtf
-Key = doc
-Key = ht
-
-Remove("doc")
-Key "doc" is not found.
- */
-//</Snippet1>
-
-
