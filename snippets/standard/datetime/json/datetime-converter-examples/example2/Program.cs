@@ -14,8 +14,8 @@ namespace DateTimeConverterExamples
     {
         public override DateTime Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
-            // typeToConvert will always be typeof(DateTime). The parameter is useful for
-            // polymorphic cases and when using generics to get typeof(T) in a performant way.
+            // When implementing JsonConverter<DateTime>, typeToConvert will always be typeof(DateTime).
+            // The parameter is useful for polymorphic cases and when using generics to get typeof(T) in a performant way.
             Debug.Assert(typeToConvert == typeof(DateTime));
 
             if (Utf8Parser.TryParse(reader.ValueSpan, out DateTime value, out _, 'R'))
@@ -28,13 +28,13 @@ namespace DateTimeConverterExamples
 
         public override void Write(Utf8JsonWriter writer, DateTime value, JsonSerializerOptions options)
         {
-            // The R standard format will always be 29 tokens.
-            Span<byte> destination = new byte[29];
+            // The R standard format will always be 29 bytes.
+            Span<byte> utf8Date = new byte[29];
 
-            bool result = Utf8Formatter.TryFormat(value, destination, out _, new StandardFormat('R'));
+            bool result = Utf8Formatter.TryFormat(value, utf8Date, out _, new StandardFormat('R'));
             Debug.Assert(result);
 
-            writer.WriteStringValue(destination);
+            writer.WriteStringValue(utf8Date);
         }
     }
 

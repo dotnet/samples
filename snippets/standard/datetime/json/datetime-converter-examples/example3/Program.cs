@@ -12,8 +12,8 @@ namespace DateTimeConverterExamples
     {
         public override DateTime Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
-            // typeToConvert will always be typeof(DateTime). The parameter is useful for
-            // polymorphic cases and when using generics to get typeof(T) in a performant way.
+            // When implementing JsonConverter<DateTime>, typeToConvert will always be typeof(DateTime).
+            // The parameter is useful for polymorphic cases and when using generics to get typeof(T) in a performant way.
             Debug.Assert(typeToConvert == typeof(DateTime));
 
             if (!reader.TryGetDateTime(out DateTime value))
