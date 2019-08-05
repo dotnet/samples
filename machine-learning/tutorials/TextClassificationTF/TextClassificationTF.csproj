@@ -11,4 +11,24 @@
     <PackageReference Include="Microsoft.ML.TensorFlow" Version="0.12.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="sentiment_model\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="sentiment_model\imdb_word_index.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="sentiment_model\saved_model.pb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="sentiment_model\variables\variables.data-00000-of-00001">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="sentiment_model\variables\variables.index">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
+
