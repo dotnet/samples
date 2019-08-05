@@ -11,26 +11,29 @@ using M = System.Messaging;
 
 //-----------------------------------------------------------------------------
 //<Snippet5>
-using colAlias = System.Collections;
-namespace System
+using generics = System.Collections.Generic;
+
+namespace AliasExample
 {
     class TestClass
     {
         static void Main()
         {
-            // Searching the alias:
-            colAlias::Hashtable test = new colAlias::Hashtable();
-
-            // Add items to the table.
-            test.Add("A", "1");
-            test.Add("B", "2");
-            test.Add("C", "3");
-
-            foreach (string name in test.Keys)
+            generics::Dictionary<string, int> dict = new generics::Dictionary<string, int>()
             {
-                // Searching the global namespace:
-                global::System.Console.WriteLine(name + " " + test[name]);
+                ["A"] = 1,
+                ["B"] = 2,
+                ["C"] = 3
+            };
+
+            foreach (string name in dict.Keys)
+            {
+                System.Console.WriteLine($"{name} {dict[name]}");
             }
+            // Output:
+            // A 1
+            // B 2
+            // C 3
         }
     }
 }

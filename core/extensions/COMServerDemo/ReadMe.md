@@ -6,7 +6,7 @@ This is a basic example of providing a managed COM server in .NET Core 3.0. Docu
 Key Features
 ------------
 
-Demonstrates how to provide a COM server in .NET Core 3.0 Preview 5 or later.
+Demonstrates how to provide a COM server in .NET Core 3.0 Preview 7 or later.
 
 Additional comments are contained in source and project files.
 

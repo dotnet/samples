@@ -19,15 +19,15 @@ namespace TextClassificationTF
         /// </summary>
         [VectorType]
         public int[] VariableLengthFeatures { get; set; }
-    }  
+    }
 
     /// <summary>
     /// Class to contain the output values from the transformation.
     /// </summary>
-    public class IMDBSentimentPrediction : IMDBSentiment
+    public class IMDBSentimentPrediction
     {
         [VectorType(2)]
         public float[] Prediction { get; set; }
     }
-    // <SnippetDeclareTypes>
+    // </SnippetDeclareTypes>
 }

@@ -6,8 +6,8 @@ public class Example
 {
     public static void Main()
     {
-// <Snippet1>
-//<snippet2>
+        //<Snippet1>
+        //<snippet2>
         List<string> dinosaurs = new List<string>();
 
         Console.WriteLine("\nCapacity: {0}", dinosaurs.Capacity);
@@ -17,7 +17,7 @@ public class Example
         dinosaurs.Add("Mamenchisaurus");
         dinosaurs.Add("Deinonychus");
         dinosaurs.Add("Compsognathus");
-//</snippet2>
+        //</snippet2>
         Console.WriteLine();
         foreach(string dinosaur in dinosaurs)
         {
@@ -39,10 +39,10 @@ public class Example
             Console.WriteLine(dinosaur);
         }
 
-	//<snippet3>
+	    //<snippet3>
         // Shows accessing the list using the Item property.
         Console.WriteLine("\ndinosaurs[3]: {0}", dinosaurs[3]);
-	//</snippet3>
+	    //</snippet3>
 
         Console.WriteLine("\nRemove(\"Compsognathus\")");
         dinosaurs.Remove("Compsognathus");
@@ -63,49 +63,49 @@ public class Example
         Console.WriteLine("Capacity: {0}", dinosaurs.Capacity);
         Console.WriteLine("Count: {0}", dinosaurs.Count);
 
-/* This code example produces the following output:
+        /* This code example produces the following output:
 
-Capacity: 0
+        Capacity: 0
 
-Tyrannosaurus
-Amargasaurus
-Mamenchisaurus
-Deinonychus
-Compsognathus
+        Tyrannosaurus
+        Amargasaurus
+        Mamenchisaurus
+        Deinonychus
+        Compsognathus
 
-Capacity: 8
-Count: 5
+        Capacity: 8
+        Count: 5
 
-Contains("Deinonychus"): True
+        Contains("Deinonychus"): True
 
-Insert(2, "Compsognathus")
+        Insert(2, "Compsognathus")
 
-Tyrannosaurus
-Amargasaurus
-Compsognathus
-Mamenchisaurus
-Deinonychus
-Compsognathus
+        Tyrannosaurus
+        Amargasaurus
+        Compsognathus
+        Mamenchisaurus
+        Deinonychus
+        Compsognathus
 
-dinosaurs[3]: Mamenchisaurus
+        dinosaurs[3]: Mamenchisaurus
 
-Remove("Compsognathus")
+        Remove("Compsognathus")
 
-Tyrannosaurus
-Amargasaurus
-Mamenchisaurus
-Deinonychus
-Compsognathus
+        Tyrannosaurus
+        Amargasaurus
+        Mamenchisaurus
+        Deinonychus
+        Compsognathus
 
-TrimExcess()
-Capacity: 5
-Count: 5
+        TrimExcess()
+        Capacity: 5
+        Count: 5
 
-Clear()
-Capacity: 5
-Count: 0
- */
-// </Snippet1>
+        Clear()
+        Capacity: 5
+        Count: 0
+         */
+        // </Snippet1>
     }
 }
 
