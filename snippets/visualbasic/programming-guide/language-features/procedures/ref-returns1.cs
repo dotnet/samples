@@ -1,5 +1,4 @@
-﻿// <Snippet1>
-using System;
+﻿using System;
 
 public class NumericValue
 {
@@ -21,5 +20,3 @@ public class NumericValue
       return value;
    }
 }
-// </Snippet1>
-

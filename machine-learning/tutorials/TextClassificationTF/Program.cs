@@ -9,13 +9,11 @@ using Microsoft.ML.Transforms;
 
 namespace TextClassificationTF
 {
-
     class Program
     {
         // <SnippetDeclareGlobalVariables>
         public const int MaxSentenceLength = 600;
-        static readonly string _modelDownloadPath = "https://github.com/dotnet/machinelearning-testdata/raw/master/Microsoft.ML.TensorFlow.TestModels/sentiment_model/";
-        static readonly string _modelPath = "sentiment_model";
+        static readonly string _modelPath = Path.Combine(Environment.CurrentDirectory, "sentiment_model");
         // </SnippetDeclareGlobalVariables>
 
         static void Main(string[] args)
@@ -37,7 +35,7 @@ namespace TextClassificationTF
         public static ITransformer ReuseAndTuneSentimentModel(MLContext mlContext)
         {
             // <SnippetDownloadModel>
-            string modelLocation = DownloadTensorFlowSentimentModel();
+            // string modelLocation = DownloadTensorFlowSentimentModel();
             // </SnippetDownloadModel>
 
             // <SnippetCreateTrainData>
@@ -63,7 +61,7 @@ namespace TextClassificationTF
             // </SnippetLoadTrainData>
             // This is the dictionary to convert words into the integer indexes.
             // <SnippetCreateLookupMap>
-            var lookupMap = mlContext.Data.LoadFromTextFile(Path.Combine(modelLocation, "imdb_word_index.csv"),
+            var lookupMap = mlContext.Data.LoadFromTextFile(Path.Combine(_modelPath, "imdb_word_index.csv"),
                 columns: new[]
                    {
                         new TextLoader.Column("Words", DataKind.String, 0),
@@ -77,17 +75,17 @@ namespace TextClassificationTF
             //      - Use it for quering the schema for input and output in the model
             //      - Use it for prediction in the pipeline.
             // <SnippetLoadTensorFlowModel>
-            var tensorFlowModel = mlContext.Model.LoadTensorFlowModel(modelLocation);
+            var tensorFlowModel = mlContext.Model.LoadTensorFlowModel(_modelPath);
             // </SnippetLoadTensorFlowModel>
 
             // <SnippetGetModelSchema>
             var schema = tensorFlowModel.GetModelSchema();
+            Console.WriteLine(" =============== TensorFlow Model Schema =============== ");
+            var featuresType = (VectorDataViewType)schema["Features"].Type;
+            Console.WriteLine($"Name: Features, Type: {featuresType.ItemType.RawType}, Shape: (-1, {featuresType.Dimensions[0]})");
+            var predictionType = (VectorDataViewType)schema["Prediction/Softmax"].Type;
+            Console.WriteLine($"Name: Prediction/Softmax, Type: {featuresType.ItemType.RawType}, Shape: (-1, {featuresType.Dimensions[0]})");
             // </SnippetGetModelSchema>
-
-            //var featuresType = (VectorDataViewType)schema["Features"].Type;
-            //Console.WriteLine("Name: {0}, Type: {1}, Shape: (-1, {2})", "Features", featuresType.ItemType.RawType, featuresType.Dimensions[0]);
-            //var predictionType = (VectorDataViewType)schema["Prediction/Softmax"].Type;
-            //Console.WriteLine("Name: {0}, Type: {1}, Shape: (-1, {2})", "Prediction/Softmax", predictionType.ItemType.RawType, predictionType.Dimensions[0]);
 
             // The model expects the input feature vector to be a fixed length vector.
             // This action resizes the integer vector to a fixed length vector 
@@ -107,7 +105,7 @@ namespace TextClassificationTF
             // Space is also a default value for the 'separators' argument if it is not specified.
             // <SnippetTokenizeIntoWords>
             var pipeline = mlContext.Transforms.Text.TokenizeIntoWords("TokenizedWords", "SentimentText")
-            // </SnippetTokenizeIntoWords>
+                // </SnippetTokenizeIntoWords>
                 // MapValue maps each word to an integer which is an index in the dictionary ('lookupMap')
                 // <SnippetMapValue>
                 .Append(mlContext.Transforms.Conversion.MapValue("VariableLengthFeatures", lookupMap,
@@ -125,7 +123,7 @@ namespace TextClassificationTF
                 // Retrieves the 'Prediction' from TensorFlow and and copies to a column 
                 // <SnippetCopyColumns>
                 .Append(mlContext.Transforms.CopyColumns("Prediction", "Prediction/Softmax"));
-                // </SnippetCopyColumns>
+            // </SnippetCopyColumns>
 
             // Train the model
             Console.WriteLine("=============== Training classification model ===============");
@@ -137,60 +135,6 @@ namespace TextClassificationTF
             // <SnippetReturnModel>
             return model;
             // </SnippetReturnModel>
-        }
-
-        /// <summary>
-        /// Downloads sentiment_model from the dotnet/machinelearning-testdata repo.
-        /// </summary>
-        /// <remarks>
-        /// The model is downloaded from
-        /// https://github.com/dotnet/machinelearning-testdata/blob/master/Microsoft.ML.TensorFlow.TestModels/sentiment_model
-        /// The model is in 'SavedModel' format. For further explanation on how was the `sentiment_model` created
-        /// c.f. https://github.com/dotnet/machinelearning-testdata/blob/master/Microsoft.ML.TensorFlow.TestModels/sentiment_model/README.md
-        /// </remarks>
-        public static string DownloadTensorFlowSentimentModel()
-        {
-            // <SnippetDeclareDownloadPath>
-
-            // </SnippetDeclareDownloadPath>
-
-            // <SnippetCheckModelDir>
-            string modelPath = "sentiment_model";
-            if (!Directory.Exists(_modelPath))
-                Directory.CreateDirectory(_modelPath);
-            // </SnippetCheckModelDir>
-
-            // <SnippetCheckVariableDir>
-            string _variablePath = Path.Combine(modelPath, "variables");
-            if (!Directory.Exists(_variablePath))
-                Directory.CreateDirectory(_variablePath);
-            // </SnippetCheckVariableDir>
-
-            // <SnippetDownloadModel>
-            Download(Path.Combine(_modelDownloadPath, "saved_model.pb"), Path.Combine(_modelPath, "saved_model.pb"));
-            Download(Path.Combine(_modelDownloadPath, "imdb_word_index.csv"), Path.Combine(modelPath, "imdb_word_index.csv"));
-            Download(Path.Combine(_modelDownloadPath, "variables", "variables.data-00000-of-00001"), Path.Combine(_variablePath, "variables.data-00000-of-00001"));
-            Download(Path.Combine(_modelDownloadPath, "variables", "variables.index"), Path.Combine(_variablePath, "variables.index"));
-            // </SnippetDownloadModel>
-
-            // <SnippetReturnModelPath>
-            return modelPath;
-            // </SnippetReturnModelPath>
-        }
-
-        private static string Download(string baseGitPath, string dataFile)
-        {
-            // <SnippetDownloadDataFile>
-            if (File.Exists(dataFile))
-                return dataFile;
-
-            using (WebClient client = new WebClient())
-            {
-                client.DownloadFile(new Uri($"{baseGitPath}"), dataFile);
-            }
-
-            return dataFile;
-            // </SnippetDownloadDataFile>
         }
 
         public static void PredictSentiment(MLContext mlContext, ITransformer model)
