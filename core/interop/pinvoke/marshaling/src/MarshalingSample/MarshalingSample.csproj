@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="$(SourceRoot)/MarshallingSampleNative/MarshallingSampleNative.csproj">
+    <ProjectReference Include="$(SourceRoot)/MarshalingSampleNative/MarshalingSampleNative.csproj">
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>
@@ -15,7 +15,7 @@
   <Target Name="SetupForDemo" AfterTargets="Build">
 
     <ItemGroup>
-      <AllOutputs Include="$(OutputPath)MarshallingSample.*" />
+      <AllOutputs Include="$(OutputPath)MarshalingSample.*" />
     </ItemGroup>
 
     <!-- Copy the project outputs to the bin directory -->
