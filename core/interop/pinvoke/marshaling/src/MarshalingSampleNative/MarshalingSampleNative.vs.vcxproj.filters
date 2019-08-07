@@ -11,7 +11,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MarshallingSampleNative.cpp">
+    <ClCompile Include="MarshalingSampleNative.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
