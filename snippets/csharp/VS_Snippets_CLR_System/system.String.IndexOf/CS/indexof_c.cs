@@ -1,10 +1,10 @@
-﻿// <Snippet5>
-using System;
+﻿using System;
 
 class Example
 {
    static void Main()
    {
+      // <Snippet5>
       // Create a Unicode string with 5 Greek Alpha characters.
       String szGreekAlpha = new String('\u0391',5);
 
@@ -26,11 +26,13 @@ class Example
                         ialpha);
       Console.WriteLine("First occurrence of the Greek letter Omega: Index {0}", 
                         iomega);
+
+      // The example displays the following output:
+      //    The string: OOO?????OOO
+      //    First occurrence of the Greek letter Alpha: Index 3
+      //    First occurrence of the Greek letter Omega: Index 0
+      // </Snippet5>
    }
 } 
-// The example displays the following output:
-//    The string: OOO?????OOO
-//    First occurrence of the Greek letter Alpha: Index 3
-//    First occurrence of the Greek letter Omega: Index 0
-// </Snippet5>
+
 

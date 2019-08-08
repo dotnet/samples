@@ -1,10 +1,10 @@
-﻿// <Snippet2>
-using System;
+﻿using System;
 
 public class Example
 {
    public static void Main()
    {
+      // <Snippet2>
       String s = null;
       
       Console.WriteLine("The value of the string is '{0}'", s);
@@ -15,12 +15,13 @@ public class Example
       catch (NullReferenceException e) {
          Console.WriteLine(e.Message);
       }
+
+      // The example displays the following output:
+      //     The value of the string is ''
+      //     Object reference not set to an instance of an object.
+      // </Snippet2>
    }
 }
-// The example displays the following output:
-//     The value of the string is ''
-//     Object reference not set to an instance of an object.
-// </Snippet2>
 
 public class Empty
 {

@@ -1,11 +1,11 @@
-﻿// <Snippet1>
-using System;
+﻿using System;
 using System.Globalization;
 
 public class Example
 {
    public static void Main()
    {
+      // <Snippet1>
       string string1 = "brother";
       string string2 = "Brother";
       string relation;
@@ -48,10 +48,11 @@ public class Example
 
       Console.WriteLine("'{0}' {1} '{2}'.", 
                         string1, relation, string2);
+
+      // The example produces the following output:
+      //    'brother' comes before 'Brother'.   
+      //    'brother' is the same as 'Brother'.
+      //    'brother' comes after 'Brother'.
+      // </Snippet1>
    }
 }
-// The example produces the following output:
-//    'brother' comes before 'Brother'.   
-//    'brother' is the same as 'Brother'.
-//    'brother' comes after 'Brother'.
-// </Snippet1>

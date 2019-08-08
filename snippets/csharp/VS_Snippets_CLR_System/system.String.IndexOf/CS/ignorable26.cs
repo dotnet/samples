@@ -1,10 +1,10 @@
-﻿// <Snippet26>
-using System;
+﻿using System;
 
 public class Example
 {
    public static void Main()
    {
+      // <Snippet26>
       string s1 = "ani\u00ADmal";
       string s2 = "animal";
       
@@ -33,22 +33,24 @@ public class Example
       // Use ordinal comparison to find the soft hyphen followed by "m".
       Console.WriteLine(s1.IndexOf("\u00ADm", StringComparison.Ordinal));
       Console.WriteLine(s2.IndexOf("\u00ADm", StringComparison.Ordinal));
+
+      // The example displays the following output:
+      //       Culture-sensitive comparison:
+      //       0
+      //       0
+      //       1
+      //       1
+      //       4
+      //       3
+      //       Ordinal comparison:
+      //       3
+      //       -1
+      //       -1
+      //       -1
+      //       3
+      //       -1
+      // </Snippet26>
    }
 }
-// The example displays the following output:
-//       Culture-sensitive comparison:
-//       0
-//       0
-//       1
-//       1
-//       4
-//       3
-//       Ordinal comparison:
-//       3
-//       -1
-//       -1
-//       -1
-//       3
-//       -1
-// </Snippet26>
+
 

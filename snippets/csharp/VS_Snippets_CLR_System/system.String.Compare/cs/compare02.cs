@@ -1,10 +1,10 @@
-﻿// <Snippet18>
-using System;
+﻿using System;
 
 class Example
 {
    static void Main()
    {
+      // <Snippet18>
       // Create upper-case characters from their Unicode code units.
       String stringUpper = "\x0041\x0042\x0043";
 
@@ -24,12 +24,13 @@ class Example
       Console.WriteLine("The Strings are equal when case is ignored? {0}",
                         String.Compare(stringUpper, stringLower, true) == 0
                                        ? "true" : "false" );
+
+      // The example displays the following output:
+      //       Comparing 'ABC' and 'abc':
+      //       The Strings are equal when capitalized? true
+      //       The Strings are equal when case is ignored? true
+      // </Snippet18>
    }
 } 
-// The example displays the following output:
-//       Comparing 'ABC' and 'abc':
-//       The Strings are equal when capitalized? true
-//       The Strings are equal when case is ignored? true
-// </Snippet18>
 
 
