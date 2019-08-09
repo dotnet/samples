@@ -1,10 +1,10 @@
-﻿using System;
+﻿// <Snippet22>
+using System;
 
 public class Example
 {
     public static void Main()
     {
-        // <Snippet22>
         string searchString = "\u00ADm";
         string s1 = "ani\u00ADmal" ;
         string s2 = "animal";
@@ -15,6 +15,6 @@ public class Example
         // The example displays the following output:
         //       4
         //       3
-        // </Snippet22>
     }
 }
+// </Snippet22>
