@@ -1,11 +1,11 @@
-﻿using System;
+﻿// <Snippet23>
+using System;
 using System.Globalization;
 
 public class Example
 {
     public static void Main()
     {
-        // <Snippet23>
         string s1 = "Ani\u00ADmal";
         string s2 = "animal";
       
@@ -14,7 +14,7 @@ public class Example
                         CultureInfo.InvariantCulture));
 
         // The example displays the following output:
-        //       Comparison of 'ani-mal' and 'animal': 0
-        // </Snippet23>
+        //       Comparison of 'Ani-mal' and 'animal': 0
     }
 }
+// </Snippet23>
