@@ -13,6 +13,6 @@ public class Example
 
         // The example displays the following output:
         //       Comparison of 'ani-mal' and 'animal': 0
-        // </Snippet22>
     }
 }
+// </Snippet22>
