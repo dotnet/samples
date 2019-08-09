@@ -1,7 +1,9 @@
 ﻿using System;
 
-public class SubStringTest {
-    public static void Main() {
+public class SubStringTest 
+{
+    public static void Main() 
+    {
         //<snippet10>
         string [] info = { "Name: Felica Walker", "Title: Mz.", 
                            "Age: 47", "Location: Paris", "Gender: F"};
@@ -12,7 +14,8 @@ public class SubStringTest {
             Console.WriteLine(s);
 
         Console.WriteLine("\nWe want to retrieve only the key information. That is:");        
-        foreach (string s in info) {
+        foreach (string s in info) 
+        {
             found = s.IndexOf(": ");
             Console.WriteLine("   {0}", s.Substring(found + 2));
         }
