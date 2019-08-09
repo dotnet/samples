@@ -33,7 +33,7 @@ public class Example
       if (divisor.Equals(0)) 
          divisor = Math.Min(value1, value2);
       
-      return Math.Abs(value1 - value2)/divisor <= epsilon;           
+      return Math.Abs((value1 - value2) / divisor) <= epsilon;           
    } 
 }
 // The example displays the following output:
