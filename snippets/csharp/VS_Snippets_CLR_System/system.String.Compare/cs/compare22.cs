@@ -12,7 +12,7 @@ public class Example
                         s1, s2, String.Compare(s1, s2, true));
 
         // The example displays the following output:
-        //       Comparison of 'ani-mal' and 'animal': 0
+        //       Comparison of 'Ani-mal' and 'animal': 0
     }
 }
 // </Snippet22>
