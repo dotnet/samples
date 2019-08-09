@@ -1,10 +1,10 @@
-﻿using System;
+﻿// <Snippet21>
+using System;
 
 public class Example
 {
     public static void Main()
     {
-        // <Snippet21>
         string s1 = "ani\u00ADmal";
         string s2 = "animal";
 
@@ -13,6 +13,6 @@ public class Example
 
         // The example displays the following output:
         //       Comparison of 'ani-mal' and 'animal': 0
-        // </Snippet21>
     }
 }
+// </Snippet21>
