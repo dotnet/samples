@@ -13,6 +13,9 @@ End Class
 
 ' <Snippet1>
 Namespace System.Runtime
+   <AttributeUsage(AttributeTargets.Method Or 
+                   AttributeTargets.Constructor Or 
+                   AttributeTargets.Property)>
    Public Class BypassNGenAttribute : Inherits Attribute 
    End Class   
 End Namespace
