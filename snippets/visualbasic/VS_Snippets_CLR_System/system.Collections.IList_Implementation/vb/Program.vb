@@ -1,5 +1,4 @@
 ﻿'<snippet01>
-Imports System
 Imports System.Collections
 
 Public Class Program
@@ -42,8 +41,8 @@ Public Class Program
 
         ' Check for specific elements in the list
         Console.WriteLine("Check for specific elements in the list")
-        Console.WriteLine("List contains 'three': {0}", myList.Contains("three"))
-        Console.WriteLine("List contains 'ten': {0}", myList.Contains("ten"))
+        Console.WriteLine($"List contains 'three': {myList.Contains("three")}")
+        Console.WriteLine($"List contains 'ten': {myList.Contains("ten")}")
 
     End Sub
 End Class ' class Program
@@ -52,7 +51,7 @@ End Class ' class Program
 Public Class SimpleList
     Implements IList
 
-    Private _contents(8) As Object
+    Private _contents(7) As Object
     Private _count As Integer
 
     Public Sub New()
@@ -62,16 +61,13 @@ Public Class SimpleList
 
     ' IList Members
     Public Function Add(ByVal value As Object) As Integer Implements IList.Add
-
         If (_count < _contents.Length - 1) Then
 
             _contents(_count) = value
             _count = _count + 1
 
             Return (_count - 1)
-
         Else
-
             Return -1
         End If
     End Function
@@ -84,8 +80,7 @@ Public Class SimpleList
 
         Dim inList As Boolean = False
 
-        Dim i As Integer
-        For i = 0 To Count
+        For i As Integer = 0 To Count
 
             If _contents(i) = value Then
 
@@ -103,17 +98,12 @@ Public Class SimpleList
 
         Dim itemIndex As Integer = -1
 
-        Dim i As Integer
-        For i = 0 To Count
-
+        For i As Integer = 0 To Count
             If _contents(i) = value Then
-
                 itemIndex = i
                 Exit For
-
             End If
-
-        Next i
+        Next
 
         Return itemIndex
     End Function
@@ -124,8 +114,7 @@ Public Class SimpleList
 
             _count = _count + 1
 
-            Dim i As Integer
-            For i = Count - 1 To index
+            For i As Integer = Count - 1 To index
 
                 _contents(i) = _contents(i - 1)
             Next i
@@ -141,7 +130,6 @@ Public Class SimpleList
     End Property
 
     Public ReadOnly Property IsReadOnly() As Boolean Implements IList.IsReadOnly
-
         Get
             Return False
         End Get
@@ -155,8 +143,7 @@ Public Class SimpleList
 
         If index >= 0 And index < Count Then
 
-            Dim i As Integer
-            For i = index To Count - 1
+            For i As Integer = index To Count - 1
 
                 _contents(i) = _contents(i + 1)
             Next i
@@ -166,7 +153,6 @@ Public Class SimpleList
     End Sub
 
     Public Property Item(ByVal index As Integer) As Object Implements IList.Item
-
         Get
             Return _contents(index)
         End Get
@@ -177,11 +163,9 @@ Public Class SimpleList
     End Property
 
     ' ICollection Members
-
     Public Sub CopyTo(ByVal array As Array, ByVal index As Integer) Implements ICollection.CopyTo
         Dim j As Integer = index
-        Dim i As Integer
-        For i = 0 To Count
+        For i As Integer = 0 To Count
             array.SetValue(_contents(i), j)
             j = j + 1
         Next i
@@ -212,22 +196,18 @@ Public Class SimpleList
 
         ' Refer to the IEnumerator documentation for an example of
         ' implementing an enumerator.
-        Throw New Exception("The method or operation is not implemented.")
+        Throw New NotImplementedException("The method or operation is not implemented.")
     End Function
 
     Public Sub PrintContents()
-
-        Console.WriteLine("List has a capacity of {0} and currently has {1} elements.", _contents.Length - 1, _count)
+        Console.WriteLine($"List has a capacity of {_contents.Length} and currently has {_count} elements.")
         Console.Write("List contents:")
 
-        Dim i As Integer
-        For i = 0 To Count
-
-            Console.Write(" {0}", _contents(i))
-        Next i
+        For i As Integer = 0 To Count - 1
+            Console.Write($" {_contents(i)}")
+        Next
 
         Console.WriteLine()
-
     End Sub
 End Class
 '</snippet02>

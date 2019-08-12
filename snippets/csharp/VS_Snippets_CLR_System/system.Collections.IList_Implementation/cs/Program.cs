@@ -42,8 +42,8 @@ class Program
 
         // Check for specific elements in the list
         Console.WriteLine("Check for specific elements in the list");
-        Console.WriteLine("List contains \"three\": {0}", test.Contains("three"));
-        Console.WriteLine("List contains \"ten\": {0}", test.Contains("ten"));
+        Console.WriteLine($"List contains \"three\": {test.Contains("three")}");
+        Console.WriteLine($"List contains \"ten\": {test.Contains("ten")}");
     }
 } // class Program
 
@@ -210,16 +210,16 @@ class SimpleList : IList
     {
         // Refer to the IEnumerator documentation for an example of
         // implementing an enumerator.
-        throw new Exception("The method or operation is not implemented.");
+        throw new NotImplementedException("The method or operation is not implemented.");
     }
 
     public void PrintContents()
     {
-        Console.WriteLine("List has a capacity of {0} and currently has {1} elements.", _contents.Length, _count);
+        Console.WriteLine($"List has a capacity of {_contents.Length} and currently has {_count} elements.");
         Console.Write("List contents:");
         for (int i = 0; i < Count; i++)
         {
-            Console.Write(" {0}", _contents[i]);
+            Console.Write($" {_contents[i]}");
         }
         Console.WriteLine();
     }
