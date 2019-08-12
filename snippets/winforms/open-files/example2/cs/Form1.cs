@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Security;
 using System.Windows.Forms;
@@ -17,13 +18,12 @@ public class OpenFileDialogForm : Form
 
     private Button selectButton;
     private OpenFileDialog openFileDialog1;
-    private BackgroundWorker backgroundWorker1;
 
     public OpenFileDialogForm()
     {
-        openFileDialog1 = new OpenFileDialog();
+        openFileDialog1 = new OpenFileDialog()
         {
-            Filename = "Select a text file",
+            FileName = "Select a text file",
             Filter = "Text files (*.txt)|*.txt",
             Title = "Open text file"
         };
@@ -45,7 +45,7 @@ public class OpenFileDialogForm : Form
             try
             {
                 var filePath = openFileDialog1.FileName;
-                using (FileStream fs = File.Open(filePath, FileMode.Open))
+                using (Stream str = openFileDialog1.OpenFile())
                 {
                     Process.Start("notepad.exe", filePath);
                 }
