@@ -10,10 +10,7 @@ namespace DateTimeConverterExamples
     {
         public override DateTime Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
-            // When implementing JsonConverter<DateTime>, typeToConvert will always be typeof(DateTime).
-            // The parameter is useful for polymorphic cases and when using generics to get typeof(T) in a performant way.
             Debug.Assert(typeToConvert == typeof(DateTime));
-
             return DateTime.Parse(reader.GetString());
         }
 
@@ -28,13 +25,11 @@ namespace DateTimeConverterExamples
         private static void ParseDateTimeWithDefaultOptions()
         {
             var _ = JsonSerializer.Deserialize<DateTime>(@"""04-10-2008 6:30 AM""");
-            // Throws JsonException.
         }
 
         private static void FormatDateTimeWithDefaultOptions()
         {
             Console.WriteLine(JsonSerializer.Serialize(DateTime.Parse("04-10-2008 6:30 AM -4")));
-            // "2008-04-10T06:30:00-04:00"
         }
 
         private static void ProcessDateTimeWithCustomConverter()
@@ -47,11 +42,9 @@ namespace DateTimeConverterExamples
 
             var resultDateTime = JsonSerializer.Deserialize<DateTime>(testDateTimeJson, options);
             Console.WriteLine(resultDateTime);
-            // 4/10/2008 6:30:00 AM
 
             string resultDateTimeJson = JsonSerializer.Serialize(DateTime.Parse(testDateTimeStr), options);
             Console.WriteLine(Regex.Unescape(resultDateTimeJson));
-            // "4/10/2008 6:30:00 AM"
         }
 
         static void Main(string[] args)
@@ -64,7 +57,6 @@ namespace DateTimeConverterExamples
             catch (JsonException e)
             {
                 Console.WriteLine(e.Message);
-                // The JSON value could not be converted to System.DateTime. Path: $ | LineNumber: 0 | BytePositionInLine: 20.
             }
 
             // Formatting with default options prints according to extended ISO 8601 profile.
