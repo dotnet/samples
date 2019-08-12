@@ -37,9 +37,6 @@ Public Class OpenFileDialogForm : Inherits Form
                 Using str = openFileDialog1.OpenFile()
                     Process.Start("notepad.exe", filePath)
                 End Using
-
-'                Dim str As New FileStream(filePath, FileMode.Open)
-'                Process.Start("notepad.exe", filePath)
             Catch SecEx As SecurityException
                 MessageBox.Show($"Security error:{vbCrLf}{vbCrLf}{SecEx.Message}{vbCrLf}{vbCrLf}" &
                 $"Details:{vbCrLf}{vbCrLf}{SecEx.StackTrace}")
