@@ -33,8 +33,7 @@ Public Class SamplesHashtable
 
     Public Shared Sub PrintKeysAndValues(myHT As Hashtable)
         Console.WriteLine(vbTab + "-KEY-" + vbTab + "-VALUE-")
-        Dim de As DictionaryEntry
-        For Each de In  myHT
+        For Each de As DictionaryEntry In myHT
             Console.WriteLine(vbTab + "{0}:" + vbTab + "{1}", de.Key, de.Value)
         Next
         Console.WriteLine()
@@ -50,10 +49,10 @@ End Class 'SamplesHashtable
 '    Values:
 '         -KEY-   -VALUE-
 '         two:    quick
-'         three:  brown
-'         four:   fox
 '         five:   jumps
 '         one:    The
+'         three:  brown
+'         four:   fox
 '
 ' After Clear,
 '    Count    : 0
