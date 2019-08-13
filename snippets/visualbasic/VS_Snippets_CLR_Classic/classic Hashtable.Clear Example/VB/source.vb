@@ -24,7 +24,7 @@ Public Class SamplesHashtable
 
         ' Displays the count and values of the Hashtable.
         Console.WriteLine("After Clear,")
-        Console.WriteLine($"   Count    : {0}")
+        Console.WriteLine($"   Count    : {myHT.Count}")
         Console.WriteLine("   Values:")
         PrintKeysAndValues(myHT)
 
