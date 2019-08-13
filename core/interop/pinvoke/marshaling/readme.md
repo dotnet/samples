@@ -1,7 +1,7 @@
-.NET Core PInvoke Marshalling Sample
+.NET Core PInvoke Marshaling Sample
 ================
 
-This project demonstrates different ways to marshall arguments to native function when using PInvokes. Documentation can be found here for [PInvokes](https://docs.microsoft.com/en-us/dotnet/standard/native-interop/pinvoke) and here for the [Type marshalling](https://docs.microsoft.com/en-us/dotnet/standard/native-interop/type-marshaling).
+This project demonstrates different ways to marshal arguments to native function when using PInvokes. Documentation can be found here for [PInvokes](https://docs.microsoft.com/en-us/dotnet/standard/native-interop/pinvoke) and here for the [Type marshaling](https://docs.microsoft.com/en-us/dotnet/standard/native-interop/type-marshaling).
 
 Prerequisites
 ------------
@@ -28,12 +28,12 @@ Build and Run
 
     * Use `dotnet run` (which will build and run at the same time).
     * Use `dotnet build` to build the executable. The executable will be in `bin` under a subdirectory for the configuration (`Debug` is the default).
-        * Windows: `bin\Debug\MarshallingSample.exe`
-        * Non-Windows: `bin/Debug/MarshallingSample`
+        * Windows: `bin\Debug\MarshalingSample.exe`
+        * Non-Windows: `bin/Debug/MarshalingSample`
 
 Note: The way the sample is built is relatively complicated. The goal is that it's possible to build and run the sample with simple `dotnet run` with minimal requirements on pre-installed tools. Typically real-world projects which have both managed and native components will use different build systems for each; for example msbuild/dotnet for managed and CMake for native.
 
 Visual Studio support
 ---------------------
 
-The `src\MarshallingSample.sln` can be used to open the sample in Visual Studio 2019. In order to be able to build from Visual Studio, though, it has to be started from the correct developer environment. From the developer environment console, start it with `devenv src\MarshallingSample.sln`. With that, the solution can be built. To run it set the start project to `MarshallingSample`.
+The `src\MarshalingSample.sln` can be used to open the sample in Visual Studio 2019. In order to be able to build from Visual Studio, though, it has to be started from the correct developer environment. From the developer environment console, start it with `devenv src\MarshalingSample.sln`. With that, the solution can be built. To run it set the start project to `MarshalingSample`.

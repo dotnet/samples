@@ -27,16 +27,16 @@ namespace CsCsrefProgrammingObjects
     {
         static void Main()
         {
-            // Initialize:   
-            Coords coords1 = new Coords();
-            Coords coords2 = new Coords(10, 10);
+            // Initialize.
+            var coords1 = new Coords();
+            var coords2 = new Coords(10, 10);
 
-            // Display results:
+            // Display results.
             Console.Write("Coords 1: ");
-            Console.WriteLine("x = {0}, y = {1}", coords1.x, coords1.y);
+            Console.WriteLine($"x = {coords1.x}, y = {coords1.y}");
 
             Console.Write("Coords 2: ");
-            Console.WriteLine("x = {0}, y = {1}", coords2.x, coords2.y);
+            Console.WriteLine($"x = {coords2.x}, y = {coords2.y}");
 
             // Keep the console window open in debug mode.
             Console.WriteLine("Press any key to exit.");
@@ -52,21 +52,21 @@ namespace CsCsrefProgrammingObjects
 
     //-----------------------------------------------------------------------------
     //<Snippet3>
-    // Declare a struct object without "new."
+    // Declare a struct object without "new".
     class TestCoordsNoNew
     {
         static void Main()
         {
-            // Declare an object:
+            // Declare an object.
             Coords coords1;
 
-            // Initialize:
+            // Initialize.
             coords1.x = 10;
             coords1.y = 20;
 
-            // Display results:
+            // Display results.
             Console.Write("Coords 1: ");
-            Console.WriteLine("x = {0}, y = {1}", coords1.x, coords1.y);
+            Console.WriteLine($"x = {coords1.x}, y = {coords1.y}");
 
             // Keep the console window open in debug mode.
             Console.WriteLine("Press any key to exit.");
@@ -85,7 +85,7 @@ namespace CsCsrefProgrammingObjects
         {
             public int x, y;
 
-            // Default constructor:
+            // Default constructor.
             public Coords()
             {
                 x = 0;
@@ -93,7 +93,7 @@ namespace CsCsrefProgrammingObjects
             }
 
             //<Snippet76>
-            // A constructor with two arguments:
+            // A constructor with two arguments.
             public Coords(int x, int y)
             {
                 this.x = x;
@@ -101,7 +101,7 @@ namespace CsCsrefProgrammingObjects
             }
             //</Snippet76>
 
-            // Override the ToString method:
+            // Override the ToString method.
             public override string ToString()
             {
                 return $"({x},{y})";
@@ -113,13 +113,13 @@ namespace CsCsrefProgrammingObjects
             static void Main()
             {
                 //<Snippet77>
-                Coords p1 = new Coords();
-                Coords p2 = new Coords(5, 3);
+                var p1 = new Coords();
+                var p2 = new Coords(5, 3);
                 //</Snippet77>
 
-                // Display the results using the overriden ToString method:
-                Console.WriteLine("Coords #1 at {0}", p1);
-                Console.WriteLine("Coords #2 at {0}", p2);
+                // Display the results using the overriden ToString method.
+                Console.WriteLine($"Coords #1 at {p1}");
+                Console.WriteLine($"Coords #2 at {p2}");
                 Console.ReadKey();
             }
         }
@@ -253,9 +253,9 @@ namespace CsCsrefProgrammingObjects
         {
             static void Main()
             {
-                Person person = new Person();
+                var person = new Person();
 
-                Console.WriteLine("Name: {0}, Age: {1}", person.name, person.age);
+                Console.WriteLine("Name: {person.name}, Age: {person.age}");
                 // Keep the console window open in debug mode.
                 Console.WriteLine("Press any key to exit.");
                 Console.ReadKey();

@@ -151,7 +151,7 @@ public:
         void set(int index, Object^ value)
         {
             Object^ key = ((DictionaryEntry^)_people[index])->Key;
-            _people[index] = gcnew DictionaryEntry(Keys, value);
+            _people[index] = gcnew DictionaryEntry(key, value);
         }
     }
 
