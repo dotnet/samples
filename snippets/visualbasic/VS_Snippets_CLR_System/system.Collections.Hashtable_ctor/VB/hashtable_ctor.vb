@@ -40,11 +40,7 @@ Public Class myCultureComparer
     Public Function Equals1(ByVal x As Object, ByVal y As Object) _
         As Boolean Implements IEqualityComparer.Equals
 
-        If (myComparer.Compare(x, y) = 0) Then
-            Return True
-        Else
-            Return False
-        End If
+        Return myComparer.Compare(x, y) = 0
     End Function
 
     Public Function GetHashCode1(ByVal obj As Object) _
