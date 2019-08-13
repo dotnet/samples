@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <AssemblyName>Formatter</AssemblyName>
+    <RootNamespace>Formatter</RootNamespace>
+    <StartupObject>Formatter.Form1</StartupObject>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+<!--    <Import Include="System.Drawing" /> -->  
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+
+</Project>
