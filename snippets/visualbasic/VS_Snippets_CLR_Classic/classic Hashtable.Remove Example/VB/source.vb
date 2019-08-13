@@ -1,5 +1,4 @@
-﻿' <Snippet1>
-Imports System
+' <Snippet1>
 Imports System.Collections
 Imports Microsoft.VisualBasic
 
@@ -35,8 +34,8 @@ Public Class SamplesHashtable
     Public Shared Sub PrintKeysAndValues(myHT As Hashtable)
         Dim de As DictionaryEntry
         For Each de In  myHT
-            Console.WriteLine("    {0}:    {1}", de.Key, de.Value)
-        Next de
+            Console.WriteLine($"    {de.Key}:    {de.Value}")
+        Next
         Console.WriteLine()
     End Sub
 End Class
@@ -45,24 +44,24 @@ End Class
 ' This code produces the following output.
 ' 
 'The Hashtable initially contains the following:
+'    1a:    The
 '    2c:    over
-'    3a:    the
+'    3c:    dog
+'    1c:    brown
 '    2b:    jumps
 '    3b:    lazy
 '    1b:    quick
-'    3c:    dog
 '    2a:    fox
-'    1c:    brown
-'    1a:    The
-'
-'After removing "lazy":
-'    2c:    over
 '    3a:    the
+
+'After removing "lazy":
+'    1a:    The
+'    2c:    over
+'    3c:    dog
+'    1c:    brown
 '    2b:    jumps
 '    1b:    quick
-'    3c:    dog
 '    2a:    fox
-'    1c:    brown
-'    1a:    The
+'    3a:    the
 
 ' </Snippet1>
