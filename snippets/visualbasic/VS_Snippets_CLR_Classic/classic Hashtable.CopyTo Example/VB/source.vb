@@ -1,5 +1,4 @@
-﻿' <Snippet1>
-Imports System
+' <Snippet1>
 Imports System.Collections
 
 Public Class SamplesHashtable
@@ -43,10 +42,9 @@ Public Class SamplesHashtable
 
     End Sub 'Main
 
-    Public Shared Sub PrintValues(myArr() As String, mySeparator As Char)
-        Dim i As Integer
-        For i = 0 To myArr.Length - 1
-            Console.Write("{0}{1}", mySeparator, myArr(i))
+    Public Shared Sub PrintValues(myArr As String(), mySeparator As Char)
+        For i As Integer = 0 To myArr.Length - 1
+            Console.Write($"{mySeparator}{myArr(i)}")
         Next i
         Console.WriteLine()
     End Sub 'PrintValues
@@ -59,8 +57,8 @@ End Class 'SamplesHashtable
 ' The target Array contains the following before:
 '  The quick brown fox jumps over the lazy dog
 ' After copying the keys, starting at index 6:
-'  The quick brown fox jumps over B A dog
+'  The quick brown fox jumps over A B dog
 ' After copying the values, starting at index 6:
-'  The quick brown fox jumps over valueB valueA dog
+'  The quick brown fox jumps over valueA valueB dog
 
 ' </Snippet1>
