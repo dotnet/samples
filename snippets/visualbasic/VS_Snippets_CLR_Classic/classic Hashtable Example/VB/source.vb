@@ -1,4 +1,4 @@
-﻿' <Snippet1>
+' <Snippet1>
 Imports System
 Imports System.Collections
 
@@ -14,7 +14,7 @@ Public Class SamplesHashtable
 
         ' Displays the properties and values of the Hashtable.
         Console.WriteLine("myHT")
-        Console.WriteLine("  Count:    {0}", myHT.Count)
+        Console.WriteLine($"  Count:    {myHT.Count}")
         Console.WriteLine("  Keys and Values:")
         PrintKeysAndValues(myHT)
 
