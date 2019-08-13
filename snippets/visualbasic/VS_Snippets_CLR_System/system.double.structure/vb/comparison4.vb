@@ -33,7 +33,7 @@ Module Example
          divisor = Math.Min(value1, value2)
       End If 
       
-      Return Math.Abs(value1 - value2)/divisor <= epsilon           
+      Return Math.Abs((value1 - value2) / divisor) <= epsilon           
    End Function
 End Module
 ' The example displays the following output:
