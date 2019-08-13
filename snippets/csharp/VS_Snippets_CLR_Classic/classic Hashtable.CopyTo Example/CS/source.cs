@@ -42,7 +42,7 @@
        PrintValues(myTargetArray, ' ');
     }
  
-    public static void PrintValues( String[] myArr, char mySeparator )
+    public static void PrintValues(String[] myArr, char mySeparator)
     {
        for (int i = 0; i < myArr.Length; i++)
           Console.Write($"{mySeparator}{myArr[i]}");
