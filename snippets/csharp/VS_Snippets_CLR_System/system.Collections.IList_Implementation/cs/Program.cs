@@ -6,9 +6,9 @@ class Program
 {
     static void Main()
     {
-        SimpleList test = new SimpleList();
+        var test = new SimpleList();
 
-        // Populate the List
+        // Populate the List.
         Console.WriteLine("Populate the List");
         test.Add("one");
         test.Add("two");
@@ -21,31 +21,31 @@ class Program
         test.PrintContents();
         Console.WriteLine();
 
-        // Remove elements from the list
+        // Remove elements from the list.
         Console.WriteLine("Remove elements from the list");
         test.Remove("six");
         test.Remove("eight");
         test.PrintContents();
         Console.WriteLine();
 
-        // Add an element to the end of the list
+        // Add an element to the end of the list.
         Console.WriteLine("Add an element to the end of the list");
         test.Add("nine");
         test.PrintContents();
         Console.WriteLine();
 
-        // Insert an element into the middle of the list
+        // Insert an element into the middle of the list.
         Console.WriteLine("Insert an element into the middle of the list");
         test.Insert(4, "number");
         test.PrintContents();
         Console.WriteLine();
 
-        // Check for specific elements in the list
+        // Check for specific elements in the list.
         Console.WriteLine("Check for specific elements in the list");
         Console.WriteLine($"List contains \"three\": {test.Contains("three")}");
         Console.WriteLine($"List contains \"ten\": {test.Contains("ten")}");
     }
-} // class Program
+} 
 
 //<snippet02>
 class SimpleList : IList
@@ -68,10 +68,8 @@ class SimpleList : IList
 
             return (_count - 1);
         }
-        else
-        {
-            return -1;
-        }
+
+        return -1;
     }
 
     public void Clear()
@@ -81,30 +79,26 @@ class SimpleList : IList
 
     public bool Contains(object value)
     {
-        bool inList = false;
         for (int i = 0; i < Count; i++)
         {
             if (_contents[i] == value)
             {
-                inList = true;
-                break;
+                return true;
             }
         }
-        return inList;
+        return false;
     }
 
     public int IndexOf(object value)
     {
-        int itemIndex = -1;
         for (int i = 0; i < Count; i++)
         {
             if (_contents[i] == value)
             {
-                itemIndex = i;
-                break;
+                return i;
             }
         }
-        return itemIndex;
+        return -1;
     }
 
     public void Insert(int index, object value)
@@ -166,15 +160,13 @@ class SimpleList : IList
         }
     }
 
-    // ICollection Members
+    // ICollection members.
 
     public void CopyTo(Array array, int index)
     {
-        int j = index;
         for (int i = 0; i < Count; i++)
         {
-            array.SetValue(_contents[i], j);
-            j++;
+            array.SetValue(_contents[i], index++);
         }
     }
 
