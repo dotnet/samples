@@ -1,4 +1,4 @@
-﻿' The following code example creates hash tables using different Hashtable
+' The following code example creates hash tables using different Hashtable
 ' constructors and demonstrates the differences in the behavior of the hash
 ' tables, even if each one contains the same elements.
 
@@ -23,11 +23,7 @@ Public Class myCultureComparer
     Public Function Equals1(ByVal x As Object, ByVal y As Object) _
         As Boolean Implements IEqualityComparer.Equals
 
-        If (myComparer.Compare(x, y) = 0) Then
-            Return True
-        Else
-            Return False
-        End If
+        Return myComparer.Compare(x, y) = 0
     End Function
 
     Public Function GetHashCode1(ByVal obj As Object) _
@@ -60,9 +56,9 @@ Public Class SamplesHashtable
       Dim myHT3 As New Hashtable(mySL, New myCultureComparer(myCul))
 
       ' Search for a key in each hash table.
-      Console.WriteLine("first is in myHT1: {0}", myHT1.ContainsKey("first"))
-      Console.WriteLine("first is in myHT2: {0}", myHT2.ContainsKey("first"))
-      Console.WriteLine("first is in myHT3: {0}", myHT3.ContainsKey("first"))
+      Console.WriteLine($"first is in myHT1: {myHT1.ContainsKey("first")}")
+      Console.WriteLine($"first is in myHT2: {myHT2.ContainsKey("first")}")
+      Console.WriteLine($"first is in myHT3: {myHT3.ContainsKey("first")}")
 
    End Sub 'Main 
 
