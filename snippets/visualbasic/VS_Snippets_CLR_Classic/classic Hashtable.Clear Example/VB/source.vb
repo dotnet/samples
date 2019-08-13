@@ -1,5 +1,4 @@
-﻿' <Snippet1>
-Imports System
+' <Snippet1>
 Imports System.Collections
 
 Public Class SamplesHashtable
@@ -16,7 +15,7 @@ Public Class SamplesHashtable
 
         ' Displays the count and values of the Hashtable.
         Console.WriteLine("Initially,")
-        Console.WriteLine("   Count    : {0}", myHT.Count)
+        Console.WriteLine($"   Count    : {myHT.Count}")
         Console.WriteLine("   Values:")
         PrintKeysAndValues(myHT)
 
@@ -25,7 +24,7 @@ Public Class SamplesHashtable
 
         ' Displays the count and values of the Hashtable.
         Console.WriteLine("After Clear,")
-        Console.WriteLine("   Count    : {0}", myHT.Count)
+        Console.WriteLine($"   Count    : {0}")
         Console.WriteLine("   Values:")
         PrintKeysAndValues(myHT)
 
@@ -37,7 +36,7 @@ Public Class SamplesHashtable
         Dim de As DictionaryEntry
         For Each de In  myHT
             Console.WriteLine(vbTab + "{0}:" + vbTab + "{1}", de.Key, de.Value)
-        Next de
+        Next
         Console.WriteLine()
     End Sub 'PrintKeysAndValues
 
