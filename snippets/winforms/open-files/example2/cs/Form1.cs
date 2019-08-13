@@ -28,7 +28,7 @@ public class OpenFileDialogForm : Form
             Title = "Open text file"
         };
 
-        selectButton = new Button
+        selectButton = new Button()
         {
             Size = new Size(100, 20),
             Location = new Point(15, 15),

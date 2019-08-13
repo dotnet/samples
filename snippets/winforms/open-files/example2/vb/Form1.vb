@@ -16,16 +16,14 @@ Public Class OpenFileDialogForm : Inherits Form
     End Sub
 
     Private Sub New()
-        openFileDialog1 = New OpenFileDialog()
-        With openFileDialog1
-           .FileName = "Select a text file"
-           .Filter = "Text files (*.txt)|*.txt"
+        openFileDialog1 = New OpenFileDialog() With
+        {
+           .FileName = "Select a text file",
+           .Filter = "Text files (*.txt)|*.txt",
            .Title = "Open text file"
-        End With
-        selectButton = New Button()
-        With selectButton
-           .Text = "Select file"
-        End With
+        }
+
+        selectButton = New Button() With { .Text = "Select file" }
         Controls.Add(selectButton)
     End Sub
     
