@@ -21,7 +21,7 @@ public class People : IOrderedDictionary
                 return i;
         }
 
-        // key not found, reutrn -1.
+        // key not found, return -1.
         return -1;
     }
 
@@ -66,7 +66,7 @@ public class People : IOrderedDictionary
         set
         {
             object key = ((DictionaryEntry)_people[index]).Key;
-            _people[index] = new DictionaryEntry(Keys, value);
+            _people[index] = new DictionaryEntry(key, value);
         }
     }
     // IDictionary Members
