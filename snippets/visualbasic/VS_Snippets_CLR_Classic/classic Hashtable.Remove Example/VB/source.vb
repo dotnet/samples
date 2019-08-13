@@ -32,8 +32,7 @@ Public Class SamplesHashtable
     
     
     Public Shared Sub PrintKeysAndValues(myHT As Hashtable)
-        Dim de As DictionaryEntry
-        For Each de In  myHT
+        For Each de As DictionaryEntry In myHT
             Console.WriteLine($"    {de.Key}:    {de.Value}")
         Next
         Console.WriteLine()
