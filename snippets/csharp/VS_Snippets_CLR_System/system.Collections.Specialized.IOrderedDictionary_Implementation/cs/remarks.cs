@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Specialized;
 
@@ -19,7 +19,7 @@ public class SimpleOD : IOrderedDictionary
                 return i;
         }
 
-        // key not found, reutrn -1.
+        // key not found, return -1.
         return -1;
     }
 
@@ -64,7 +64,7 @@ public class SimpleOD : IOrderedDictionary
         set
         {
             object key = ((DictionaryEntry)itemlist[index]).Key;
-            itemlist[index] = new DictionaryEntry(Keys, value);
+            itemlist[index] = new DictionaryEntry(key, value);
         }
     }
     // IDictionary Members
