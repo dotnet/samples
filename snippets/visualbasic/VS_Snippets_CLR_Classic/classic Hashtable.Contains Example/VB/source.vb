@@ -56,10 +56,9 @@ Public Class SamplesHashtable
     Public Shared Sub PrintIndexAndKeysAndValues(myHT As Hashtable)
         Dim i As Integer = 0
         Console.WriteLine(vbTab + "-INDEX-" + vbTab + "-KEY-" + vbTab + "-VALUE-")
-        Dim de As DictionaryEntry
-        For Each de In  myHT
+        For Each de As DictionaryEntry In myHT
             Console.WriteLine(vbTab + "[{0}]:" + vbTab + "{1}" + vbTab + "{2}", i, de.Key, de.Value)
-            i = i + 1
+            i += 1
         Next
         Console.WriteLine()
     End Sub 'PrintIndexAndKeysAndValues
@@ -78,8 +77,8 @@ End Class 'SamplesHashtable
 '         [4]:    0       zero
 '
 ' The key "2" is in the Hashtable.
-' The key "6" is NOT in the Hashtable.
-' The value "three" is in the Hashtable.
-' The value "nine" is NOT in the Hashtable.
+' The key "6" is  NOT in the Hashtable.
+' The value "three" is  in the Hashtable.
+' The value "nine" is  NOT in the Hashtable.
 
 ' </Snippet1>
