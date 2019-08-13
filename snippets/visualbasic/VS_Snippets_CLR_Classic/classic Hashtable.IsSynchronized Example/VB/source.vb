@@ -1,5 +1,4 @@
-﻿' <Snippet1>
-Imports System
+' <Snippet1>
 Imports System.Collections
 
 Public Class SamplesHashtable    
@@ -18,19 +17,10 @@ Public Class SamplesHashtable
         Dim mySyncdHT As Hashtable = Hashtable.Synchronized(myHT)
         
         ' Displays the sychronization status of both Hashtables.
-        Dim msg As String
-        If myHT.IsSynchronized Then
-            msg = "synchronized"
-        Else
-            msg = "not synchronized"
-        End If
-        Console.WriteLine("myHT is {0}.", msg)
-        If mySyncdHT.IsSynchronized Then
-            msg = "synchronized"
-        Else
-            msg = "not synchronized"
-        End If        
-        Console.WriteLine("mySyncdHT is {0}.", msg)
+        Dim msg As String = If(myHT.IsSynchronized, "synchronized", "not synchronized")
+        Console.WriteLine($"myHT is {msg}.")
+        msg = If(mySyncdHT.IsSynchronized, "synchronized", "not synchronized")
+        Console.WriteLine($"mySyncdHT is {msg}.")
     End Sub
 End Class
 
