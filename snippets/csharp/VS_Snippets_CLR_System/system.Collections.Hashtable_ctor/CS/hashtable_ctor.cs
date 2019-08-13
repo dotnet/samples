@@ -37,14 +37,7 @@ class myCultureComparer : IEqualityComparer
 
     public new bool Equals(object x, object y)
     {
-        if (myComparer.Compare(x, y) == 0)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return myComparer.Compare(x, y) == 0
     }
 
     public int GetHashCode(object obj)
