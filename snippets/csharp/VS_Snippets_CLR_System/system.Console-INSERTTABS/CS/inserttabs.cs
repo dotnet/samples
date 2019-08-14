@@ -28,7 +28,7 @@ public class InsertTabs
         try
         {
             // Attempt to open output file.
-             var writer = new StreamWriter(args[1]);
+            var writer = new StreamWriter(args[1]);
             // Redirect standard output from the console to the output file.
             Console.SetOut(writer);
             // Redirect standard input from the console to the input file.
