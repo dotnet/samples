@@ -7,9 +7,7 @@ public class StringClassTest
    {
       // <Snippet1>
       string characters = "abc\u0000def";
-      Console.WriteLine(characters.Length);    
-         
-      // Displays 7
+      Console.WriteLine(characters.Length); // Displays 7
       // </Snippet1>      
    }
 }
