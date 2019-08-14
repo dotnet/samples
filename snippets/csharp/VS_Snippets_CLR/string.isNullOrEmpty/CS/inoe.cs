@@ -13,7 +13,7 @@ class Sample
     Console.WriteLine("String s2 {0}.", Test(s2));
     Console.WriteLine("String s3 {0}.", Test(s3));
 
-    public static String Test(string s)
+    String Test(string s)
     {
     if (String.IsNullOrEmpty(s)) 
         return "is null or empty";
