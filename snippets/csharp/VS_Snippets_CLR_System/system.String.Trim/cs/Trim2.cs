@@ -1,10 +1,10 @@
-﻿using System;
+﻿// <Snippet2>
+using System;
 
 public class Example
 {
     public static void Main()
     {
-        // <Snippet2>
         Console.Write("Enter your first name: ");
         string firstName = Console.ReadLine();
       
@@ -29,6 +29,6 @@ public class Example
         //       
         //       You entered '   John  ', '', and '   Doe'.
         //       The result is John Doe.
-        // </Snippet2>
     }
 }
+// </Snippet2>
