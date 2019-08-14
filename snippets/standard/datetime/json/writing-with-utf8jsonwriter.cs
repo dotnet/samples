@@ -7,14 +7,14 @@ public class Example
 {
     public static void Main(string[] args)
     {
-        var options = new JsonWriterOptions
+        JsonWriterOptions options = new JsonWriterOptions
         {
             Indented = true
         };
 
-        using (var stream = new MemoryStream())
+        using (MemoryStream stream = new MemoryStream())
         {
-            using (var writer = new Utf8JsonWriter(stream, options))
+            using (Utf8JsonWriter writer = new Utf8JsonWriter(stream, options))
             {
                 writer.WriteStartObject();
                 writer.WriteString("date", DateTimeOffset.UtcNow);

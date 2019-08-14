@@ -5,7 +5,7 @@ public class Example
 {
     private static double ComputeAverageTemperatures(string json)
     {
-        var options = new JsonDocumentOptions
+        JsonDocumentOptions options = new JsonDocumentOptions
         {
             AllowTrailingCommas = true
         };
@@ -27,7 +27,7 @@ public class Example
                 }
             }
 
-            var averageTemp = (double)sumOfAllTemperatures / count;
+            double averageTemp = (double)sumOfAllTemperatures / count;
             return averageTemp;
         }
     }

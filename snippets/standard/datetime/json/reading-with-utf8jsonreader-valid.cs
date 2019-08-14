@@ -8,7 +8,7 @@ public class Example
     {
         byte[] utf8Data = Encoding.UTF8.GetBytes(@"""2019-07-26T00:00:00""");
 
-        var json = new Utf8JsonReader(utf8Data);
+        Utf8JsonReader json = new Utf8JsonReader(utf8Data);
         while (json.Read())
         {
             if (json.TokenType == JsonTokenType.String)
@@ -16,7 +16,6 @@ public class Example
                 Console.WriteLine(json.TryGetDateTime(out DateTime datetime));
                 Console.WriteLine(datetime);
                 Console.WriteLine(json.GetDateTime());
-
             }
         }
     }

@@ -8,7 +8,7 @@ public class Example
     {
         byte[] utf8Data = Encoding.UTF8.GetBytes(@"""2019/07/26 00:00:00""");
 
-        var json = new Utf8JsonReader(utf8Data);
+        Utf8JsonReader json = new Utf8JsonReader(utf8Data);
         while (json.Read())
         {
             if (json.TokenType == JsonTokenType.String)
@@ -16,7 +16,7 @@ public class Example
                 Console.WriteLine(json.TryGetDateTime(out DateTime datetime));
                 Console.WriteLine(datetime);
 
-                var _ = json.GetDateTime();
+                DateTime _ = json.GetDateTime();
             }
         }
     }
@@ -27,4 +27,3 @@ public class Example
 // 1/1/0001 12:00:00 AM
 // Unhandled exception. System.FormatException: The JSON value is not in a supported DateTime format.
 //     at System.Text.Json.Utf8JsonReader.GetDateTime()
-//     at Example.Main(String[] args) in D:\console_apps\DateTimeConverterExamples\Program.cs:line 19

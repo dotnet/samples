@@ -14,6 +14,7 @@ public class Example
         Product p = new Product();
         p.Name = "Banana";
         p.ExpiryDate = new DateTime(2019, 7, 26);
+
         string json = JsonSerializer.Serialize(p);
     }
 }

@@ -2,7 +2,6 @@
 using System.Buffers;
 using System.Buffers.Text;
 using System.Diagnostics;
-using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -40,18 +39,18 @@ namespace DateTimeConverterExamples
     {
         private static void ParseDateTimeWithDefaultOptions()
         {
-            var _ = JsonSerializer.Deserialize<DateTime>(@"""Thu, 25 Jul 2019 13:36:07 GMT""");
+            DateTime _ = JsonSerializer.Deserialize<DateTime>(@"""Thu, 25 Jul 2019 13:36:07 GMT""");
         }
 
         private static void ProcessDateTimeWithCustomConverter()
         {
-            var options = new JsonSerializerOptions();
+            JsonSerializerOptions options = new JsonSerializerOptions();
             options.Converters.Add(new DateTimeConverterForCustomStandardFormatR());
 
-            var testDateTimeStr = "Thu, 25 Jul 2019 13:36:07 GMT";
-            var testDateTimeJson = @"""" + testDateTimeStr + @"""";
+            string testDateTimeStr = "Thu, 25 Jul 2019 13:36:07 GMT";
+            string testDateTimeJson = @"""" + testDateTimeStr + @"""";
 
-            var resultDateTime = JsonSerializer.Deserialize<DateTime>(testDateTimeJson, options);
+            DateTime resultDateTime = JsonSerializer.Deserialize<DateTime>(testDateTimeJson, options);
             Console.WriteLine(resultDateTime);
 
             Console.WriteLine(JsonSerializer.Serialize(DateTime.Parse(testDateTimeStr), options));

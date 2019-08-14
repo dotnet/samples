@@ -24,7 +24,7 @@ namespace DateTimeConverterExamples
     {
         private static void ParseDateTimeWithDefaultOptions()
         {
-            var _ = JsonSerializer.Deserialize<DateTime>(@"""04-10-2008 6:30 AM""");
+            DateTime _ = JsonSerializer.Deserialize<DateTime>(@"""04-10-2008 6:30 AM""");
         }
 
         private static void FormatDateTimeWithDefaultOptions()
@@ -34,13 +34,13 @@ namespace DateTimeConverterExamples
 
         private static void ProcessDateTimeWithCustomConverter()
         {
-            var options = new JsonSerializerOptions();
+            JsonSerializerOptions options = new JsonSerializerOptions();
             options.Converters.Add(new DateTimeConverterUsingDateTimeParse());
 
-            var testDateTimeStr = "04-10-2008 6:30 AM";
-            var testDateTimeJson = @"""" + testDateTimeStr + @"""";
+            string testDateTimeStr = "04-10-2008 6:30 AM";
+            string testDateTimeJson = @"""" + testDateTimeStr + @"""";
 
-            var resultDateTime = JsonSerializer.Deserialize<DateTime>(testDateTimeJson, options);
+            DateTime resultDateTime = JsonSerializer.Deserialize<DateTime>(testDateTimeJson, options);
             Console.WriteLine(resultDateTime);
 
             string resultDateTimeJson = JsonSerializer.Serialize(DateTime.Parse(testDateTimeStr), options);

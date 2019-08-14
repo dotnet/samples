@@ -5,7 +5,7 @@ public class Example
 {
     private static double ComputeAverageTemperatures(string json)
     {
-        var options = new JsonDocumentOptions
+        JsonDocumentOptions options = new JsonDocumentOptions
         {
             AllowTrailingCommas = true
         };
@@ -27,13 +27,15 @@ public class Example
                 }
             }
 
-            var averageTemp = (double)sumOfAllTemperatures / count;
+            double averageTemp = (double)sumOfAllTemperatures / count;
             return averageTemp;
         }
     }
 
     public static void Main(string[] args)
     {
+        // Computing the average temperatures will fail because the DateTimeOffset
+        // values in the payload do not conform to the extended ISO 8601-1:2019 profile.
         string json =
                 @"[" +
                     @"{" +
@@ -57,5 +59,3 @@ public class Example
 // The example displays the following output:
 // Unhandled exception.System.FormatException: One of the identified items was in an invalid format.
 //    at System.Text.Json.JsonElement.GetDateTimeOffset()
-//    at Example.ComputeAverageTemperatures(String json) in D:\console_apps\DateTimeConverterExamples\Program.cs:line 20
-//    at Example.Main(String[] args)

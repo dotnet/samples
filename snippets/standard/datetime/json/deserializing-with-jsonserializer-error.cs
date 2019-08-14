@@ -14,7 +14,7 @@ public class Example
         string json = @"{""Name"":""Banana"",""ExpiryDate"":""26/07/2019""}";
         try
         {
-            var _ = JsonSerializer.Deserialize<Product>(json);
+            Product _ = JsonSerializer.Deserialize<Product>(json);
         }
         catch (JsonException e)
         {

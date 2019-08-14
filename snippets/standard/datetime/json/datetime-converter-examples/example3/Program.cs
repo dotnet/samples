@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Buffers;
-using System.Buffers.Text;
 using System.Diagnostics;
-using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using System.Text.RegularExpressions;
 
 namespace DateTimeConverterExamples
 {
@@ -32,21 +30,22 @@ namespace DateTimeConverterExamples
     {
         private static void ParseDateTimeWithDefaultOptions()
         {
-            var _ = JsonSerializer.Deserialize<DateTime>(@"""2019-07-16 16:45:27.4937872+00:00""");
+            DateTime _ = JsonSerializer.Deserialize<DateTime>(@"""2019-07-16 16:45:27.4937872+00:00""");
         }
 
         private static void ProcessDateTimeWithCustomConverter()
         {
-            var options = new JsonSerializerOptions();
+            JsonSerializerOptions options = new JsonSerializerOptions();
             options.Converters.Add(new DateTimeConverterUsingDateTimeParseAsFallback());
 
-            var testDateTimeStr = "2019-07-16 16:45:27.4937872+00:00";
-            var testDateTimeJson = @"""" + testDateTimeStr + @"""";
+            string testDateTimeStr = "2019-07-16 16:45:27.4937872+00:00";
+            string testDateTimeJson = @"""" + testDateTimeStr + @"""";
 
-            var resultDateTime = JsonSerializer.Deserialize<DateTime>(testDateTimeJson, options);
+            DateTime resultDateTime = JsonSerializer.Deserialize<DateTime>(testDateTimeJson, options);
             Console.WriteLine(resultDateTime);
 
-            Console.WriteLine(JsonSerializer.Serialize(DateTime.Parse(testDateTimeStr), options));
+            string resultDateTimeJson = JsonSerializer.Serialize(DateTime.Parse(testDateTimeStr), options);
+            Console.WriteLine(Regex.Unescape(resultDateTimeJson));
         }
 
         static void Main(string[] args)
