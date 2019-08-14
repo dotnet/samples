@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 // This sample converts tab-delmited input and converts it to 
 // comma-delimited output.  Furthermore, it converts all boolean
 // input to numeric representations.
@@ -6,22 +6,28 @@
 // System.Console.WriteLine
 // System.Console.ReadLine
 // <Snippet1>
-public class FormatConverter {
-    public static void Main(string[] args) {
+public class FormatConverter
+{
+    public static void Main(string[] args)
+    {
         string lineInput;
-        while ((lineInput = Console.ReadLine()) != null) {
+        while ((lineInput = Console.ReadLine()) != null)
+        {
             string[] fields = lineInput.Split(new char[] {'\t'});
             bool isFirstField = true;
-            foreach(string item in fields) {
+            foreach (string item in fields)
+            {
                 if (isFirstField)
                     isFirstField = false;
                 else
                     Console.Write(',');
                 // If the field represents a boolean, replace with a numeric representation.
-                try {
+                try
+                {
                     Console.Write(Convert.ToByte(Convert.ToBoolean(item)));
                 }
-                catch(FormatException) {
+                catch(FormatException)
+                {
                     Console.Write(item);
                 }
             }
