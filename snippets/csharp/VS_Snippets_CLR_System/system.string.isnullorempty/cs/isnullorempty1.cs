@@ -9,7 +9,7 @@ public class Example
       Console.WriteLine(TestForNullOrEmpty(s1));
       Console.WriteLine(TestForNullOrEmpty(s2));
 
-      bool TestForNullOrEmpty(string s)
+      private static bool TestForNullOrEmpty(string s)
       {
          bool result;
          // <Snippet1>
