@@ -4,18 +4,18 @@ public class Example
 {
    public static void Main()
    {
+      // <Snippet1>
       string s1 = null;
       string s2 = "";
       Console.WriteLine(TestForNullOrEmpty(s1));
       Console.WriteLine(TestForNullOrEmpty(s2));
-   }
 
-   private static bool TestForNullOrEmpty(string s)
-   {
-      bool result;
-      // <Snippet1>
-      result = s == null || s == string.Empty;
+      bool TestForNullOrEmpty(string s)
+      {
+         bool result;
+         result = s == null || s == string.Empty;
+         return result;
+      }
       // </Snippet1>
-      return result;
    }
 }
