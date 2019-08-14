@@ -1,4 +1,4 @@
-﻿// The following code example creates hash tables using different Hashtable
+// The following code example creates hash tables using different Hashtable
 // constructors and demonstrates the differences in the behavior of the hash
 // tables, even if each one contains the same elements.
 
@@ -23,14 +23,7 @@ class myCultureComparer : IEqualityComparer
 
     public new bool Equals(object x, object y)
     {
-        if (myComparer.Compare(x, y) == 0)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return myComparer.Compare(x, y) == 0;
     }
 
     public int GetHashCode(object obj)
@@ -47,28 +40,28 @@ public class SamplesHashtable
     {
 
         // Create the dictionary.
-        SortedList mySL = new SortedList();
+        var mySL = new SortedList();
         mySL.Add("FIRST", "Hello");
         mySL.Add("SECOND", "World");
         mySL.Add("THIRD", "!");
 
         // Create a hash table using the default comparer.
-        Hashtable myHT1 = new Hashtable(mySL);
+        var myHT1 = new Hashtable(mySL);
 
         // Create a hash table using the specified IEqualityComparer that uses
         // the CaseInsensitiveComparer.DefaultInvariant to determine equality.
-        Hashtable myHT2 = new Hashtable(mySL, new myCultureComparer());
+        var myHT2 = new Hashtable(mySL, new myCultureComparer());
 
         // Create a hash table using an IEqualityComparer that is based on
         // the Turkish culture (tr-TR) where "I" is not the uppercase
         // version of "i".
-        CultureInfo myCul = new CultureInfo("tr-TR");
-        Hashtable myHT3 = new Hashtable(mySL, new myCultureComparer(myCul));
+        var myCul = new CultureInfo("tr-TR");
+        var myHT3 = new Hashtable(mySL, new myCultureComparer(myCul));
 
         // Search for a key in each hash table.
-        Console.WriteLine("first is in myHT1: {0}", myHT1.ContainsKey("first"));
-        Console.WriteLine("first is in myHT2: {0}", myHT2.ContainsKey("first"));
-        Console.WriteLine("first is in myHT3: {0}", myHT3.ContainsKey("first"));
+        Console.WriteLine($"first is in myHT1: {myHT1.ContainsKey("first")}");
+        Console.WriteLine($"first is in myHT2: {myHT2.ContainsKey("first")}");
+        Console.WriteLine($"first is in myHT3: {myHT3.ContainsKey("first")}");
 
     }
 

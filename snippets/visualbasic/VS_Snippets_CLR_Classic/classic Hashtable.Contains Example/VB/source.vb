@@ -1,5 +1,4 @@
-﻿' <Snippet1>
-Imports System
+' <Snippet1>
 Imports System.Collections
 
 Public Class SamplesHashtable
@@ -20,16 +19,16 @@ Public Class SamplesHashtable
 
         ' Searches for a specific key.
         Dim myKey As Integer = 2
-        Console.Write("The key ""{0}"" is ", myKey)
-        If(myHT.ContainsKey(myKey))
+        Console.Write($"The key ""{myKey}"" is ")
+        If (myHT.ContainsKey(myKey))
            Console.WriteLine("in the Hashtable.")
         Else
            Console.WriteLine("NOT in the Hashtable.")
         End If
 
         myKey = 6
-        Console.Write("The key ""{0}"" is ", myKey)
-        If(myHT.ContainsKey(myKey))
+        Console.Write($"The key ""{myKey}"" is ")
+        If (myHT.ContainsKey(myKey))
            Console.WriteLine(" in the Hashtable.")
         Else
            Console.WriteLine(" NOT in the Hashtable.")
@@ -38,15 +37,15 @@ Public Class SamplesHashtable
         ' Searches for a specific value.
         Dim myValue As String = "three"
         Console.Write("The value ""{0}"" is ", myValue)
-        If(myHT.ContainsValue(myValue))
+        If (myHT.ContainsValue(myValue))
            Console.WriteLine(" in the Hashtable.")
         Else
            Console.WriteLine(" NOT in the Hashtable.")
         End If
 
         myValue = "nine"
-        Console.Write("The value ""{0}"" is ", myValue)
-        If(myHT.ContainsValue(myValue))
+        Console.Write($"The value ""{myValue}"" is ")
+        If (myHT.ContainsValue(myValue))
            Console.WriteLine(" in the Hashtable.")
         Else
            Console.WriteLine(" NOT in the Hashtable.")
@@ -57,11 +56,10 @@ Public Class SamplesHashtable
     Public Shared Sub PrintIndexAndKeysAndValues(myHT As Hashtable)
         Dim i As Integer = 0
         Console.WriteLine(vbTab + "-INDEX-" + vbTab + "-KEY-" + vbTab + "-VALUE-")
-        Dim de As DictionaryEntry
-        For Each de In  myHT
+        For Each de As DictionaryEntry In myHT
             Console.WriteLine(vbTab + "[{0}]:" + vbTab + "{1}" + vbTab + "{2}", i, de.Key, de.Value)
-            i = i + 1
-        Next de
+            i += 1
+        Next
         Console.WriteLine()
     End Sub 'PrintIndexAndKeysAndValues
 
@@ -79,8 +77,8 @@ End Class 'SamplesHashtable
 '         [4]:    0       zero
 '
 ' The key "2" is in the Hashtable.
-' The key "6" is NOT in the Hashtable.
-' The value "three" is in the Hashtable.
-' The value "nine" is NOT in the Hashtable.
+' The key "6" is  NOT in the Hashtable.
+' The value "three" is  in the Hashtable.
+' The value "nine" is  NOT in the Hashtable.
 
 ' </Snippet1>

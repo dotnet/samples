@@ -1,38 +1,40 @@
-﻿// <Snippet1>
+// <Snippet1>
  using System;
  using System.Collections;
- public class SamplesHashtable  {
+ public class SamplesHashtable
+ {
  
-    public static void Main()  {
- 
+    public static void Main()
+    {
        // Creates and initializes a new Hashtable.
-       Hashtable myHT = new Hashtable();
-       myHT.Add( "1a", "The" );
-       myHT.Add( "1b", "quick" );
-       myHT.Add( "1c", "brown" );
-       myHT.Add( "2a", "fox" );
-       myHT.Add( "2b", "jumps" );
-       myHT.Add( "2c", "over" );
-       myHT.Add( "3a", "the" );
-       myHT.Add( "3b", "lazy" );
-       myHT.Add( "3c", "dog" );
+       var myHT = new Hashtable();
+       myHT.Add("1a", "The");
+       myHT.Add("1b", "quick");
+       myHT.Add("1c", "brown");
+       myHT.Add("2a", "fox");
+       myHT.Add("2b", "jumps");
+       myHT.Add("2c", "over");
+       myHT.Add("3a", "the");
+       myHT.Add("3b", "lazy");
+       myHT.Add("3c", "dog");
  
        // Displays the Hashtable.
-       Console.WriteLine( "The Hashtable initially contains the following:" );
-       PrintKeysAndValues( myHT );
+       Console.WriteLine("The Hashtable initially contains the following:");
+       PrintKeysAndValues(myHT);
  
        // Removes the element with the key "3b".
-       myHT.Remove( "3b" );
+       myHT.Remove("3b");
  
        // Displays the current state of the Hashtable.
-       Console.WriteLine( "After removing \"lazy\":" );
-       PrintKeysAndValues( myHT );
+       Console.WriteLine("After removing \"lazy\":");
+       PrintKeysAndValues(myHT);
     }
  
  
-    public static void PrintKeysAndValues( Hashtable myHT )  {
-       foreach ( DictionaryEntry de in myHT )
-          Console.WriteLine( "    {0}:    {1}", de.Key, de.Value );
+    public static void PrintKeysAndValues(Hashtable myHT)
+    {
+       foreach (DictionaryEntry de in myHT)
+          Console.WriteLine($"    {de.Key}:    {de.Value}");
        Console.WriteLine();
     }
 
