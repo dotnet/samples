@@ -28,11 +28,14 @@ public class InsertTabs
         try
         {
             // Attempt to open output file.
-            var writer = new StreamWriter(args[1]);
-            // Redirect standard output from the console to the output file.
-            Console.SetOut(writer);
+            using (var writer = new StreamWriter(args[1]))
+            {
+                // Redirect standard output from the console to the output file.
+                Console.SetOut(writer);
+            }
             // Redirect standard input from the console to the input file.
-            Console.SetIn(new StreamReader(args[0]));
+            Console.SetIn(new StreamReader(args[0]));                
+
         }
         catch(IOException e)
         {
@@ -47,7 +50,6 @@ public class InsertTabs
             string newLine = line.Replace(("").PadRight(tabSize, ' '), "\t");
             Console.WriteLine(newLine);
         }
-        writer.Close();
         // Recover the standard output stream so that a 
         // completion message can be displayed.
         var standardOutput = new StreamWriter(Console.OpenStandardOutput());
