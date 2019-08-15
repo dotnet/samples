@@ -14,10 +14,10 @@ public class TipCalculator
         }
         double tip = billTotal * tipRate;
         Console.WriteLine();
-        Console.WriteLine("Bill total:\t{0,8:c}", billTotal);
-        Console.WriteLine("Tip total/rate:\t{0,8:c} ({1:p1})", tip, tipRate);
+        Console.WriteLine($"Bill total:\t{billTotal,8:c}");
+        Console.WriteLine($"Tip total/rate:\t{tip,8:c} ({tipRate:p1})");
         Console.WriteLine(("").PadRight(24, '-'));
-        Console.WriteLine("Grand total:\t{0,8:c}", billTotal + tip);
+        Console.WriteLine($"Grand total:\t{billTotal + tip,8:c}");
         return 0;
 
     }
