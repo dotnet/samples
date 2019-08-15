@@ -15,7 +15,7 @@ public class FormatConverter
         {
             string[] fields = lineInput.Split(new char[] {'\t'});
             bool isFirstField = true;
-            foreach (string item in fields)
+            foreach (var item in fields)
             {
                 if (isFirstField)
                     isFirstField = false;
