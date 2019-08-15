@@ -22,14 +22,11 @@ public class FormatConverter
                 else
                     Console.Write(',');
                 // If the field represents a boolean, replace with a numeric representation.
-                try
-                {
-                    Console.Write(Convert.ToByte(Convert.ToBoolean(item)));
-                }
-                catch(FormatException)
-                {
-                    Console.Write(item);
-                }
+				bool itemBool;
+				if (Boolean.TryParse(item, out itemBool))
+					Console.Write(Convert.ToByte(itemBool));
+				else
+					Console.Write(item);
             }
             Console.WriteLine();
         }
