@@ -28,8 +28,10 @@ Public Class InsertTabs
                 ' Redirect standard output from the console to the output file.
                 Console.SetOut(writer)
 			End Using
-            ' Redirect standard input from the console to the input file.
-            Console.SetIn(New StreamReader(args(0)))
+			Using reader As New StreamReader(args(0))
+			    ' Redirect standard input from the console to the input file.
+                Console.SetIn(reader)
+			End Using
         Catch e As IOException
             Dim errorWriter As TextWriter = Console.Error
             errorWriter.WriteLine(e.Message)
