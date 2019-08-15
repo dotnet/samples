@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
+Imports Microsoft.VisualBasic
 
 ' This sample converts tab-delmited input and converts it to 
 ' comma-delimited output.  Furthermore, it converts all boolean
@@ -10,25 +9,24 @@ Imports System
 ' <Snippet1>
 Public Class FormatConverter
    Public Shared Sub Main()
-      Dim lineInput As String
-      lineInput = Console.ReadLine()
+      Dim lineInput As String = Console.ReadLine()
       While Not lineInput Is Nothing
-         Dim fields() As String = lineInput.Split(ControlChars.Tab)
+         Dim fields As String() = lineInput.Split(ControlChars.Tab)
          Dim isFirstField As Boolean = True
-         Dim item As String
-         For Each item In  fields
+         For Each item As String In fields
             If isFirstField Then
                isFirstField = False
             Else
                Console.Write(",")
             End If
-            ' If the field represents a boolean, replace with a numeric representation.
-            Try
-               Console.Write(Convert.ToByte(Convert.ToBoolean(item)))
-            Catch
-               Console.Write(item)
-            End Try
-         Next item
+			' If the field represents a boolean, replace with a numeric representation.
+            Dim itemBool As Boolean
+			If Boolean.TryParse(item, itemBool)
+				Console.Write(Convert.ToByte(itemBool))
+			Else
+				Console.Write(item)
+			End If
+         Next
          Console.WriteLine()
          lineInput = Console.ReadLine()
       End While
