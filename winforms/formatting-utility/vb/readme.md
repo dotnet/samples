@@ -49,7 +49,7 @@ Console.WriteLine("{0:YYYY-MM-dd}", thisDate);
 
 Frequently, though, developers forget what standard and custom format specifiers are available, and they forget how a particular format string is reflected in the result string. The Format Utility (Formatter.exe) allows you to enter a source value, indicate whether it is a number or a date and time value, and select a standard format string from a drop-down list or enter a custom format string in a text box. By default, numbers and dates use the formatting conventions of the current culture, though you can also select a culture whose formatting conventions you'd like to use. A text box then displays the result string
 
-Note that the standard numeric format strings do not include precision specifiers; if you want to include a precision specifier in a format string, you must enter it yourself.
+Note that the standard numeric format strings do not include precision specifiers. If you want to include a precision specifier in a format string, you must enter it yourself.
 
 For information on formatting in .NET, see:
 
@@ -62,4 +62,3 @@ For information on formatting in .NET, see:
 - [Standard date and time format strings](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings)
 
 - [Custom date and time format strings](https://docs.microsoft.com/dotnet/standard/base-types/custom-date-and-time-format-strings)
-
