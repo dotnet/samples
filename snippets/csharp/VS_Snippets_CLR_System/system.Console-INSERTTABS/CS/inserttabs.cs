@@ -33,8 +33,11 @@ public class InsertTabs
                 // Redirect standard output from the console to the output file.
                 Console.SetOut(writer);
             }
-            // Redirect standard input from the console to the input file.
-            Console.SetIn(new StreamReader(args[0]));                
+            using (var reader = new StreamReader(args[0]))
+            {
+                // Redirect standard input from the console to the input file.
+                Console.SetIn(reader);
+            }
 
         }
         catch(IOException e)
@@ -42,7 +45,7 @@ public class InsertTabs
             TextWriter errorWriter = Console.Error;
             errorWriter.WriteLine(e.Message);
             errorWriter.WriteLine(usageText);
-            return 1;            
+            return 1;
         }
         string line;
         while ((line = Console.ReadLine()) != null)
@@ -60,5 +63,3 @@ public class InsertTabs
     }
 }
 // </Snippet1>
-
-
