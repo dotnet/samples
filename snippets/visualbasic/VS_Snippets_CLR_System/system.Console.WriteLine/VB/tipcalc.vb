@@ -15,10 +15,10 @@ Public Class TipCalculator
      
       Dim tip As Double = billTotal * tipRate
       Console.WriteLine()
-      Console.WriteLine("Bill total:{1}{0,8:c}", billTotal, vbTab)
-      Console.WriteLine("Tip total/rate:{2}{0,8:c} ({1:p1})", tip, tipRate, vbTab)
+      Console.WriteLine($"Bill total:{vbTab}{billTotal,8:c}")
+      Console.WriteLine($"Tip total/rate:{vbTab}{tip,8:c} ({tipRate:p1})")
       Console.WriteLine("".PadRight(24, "-"c))
-      Console.WriteLine("Grand total:{1}{0,8:c}", billTotal + tip, vbTab)
+      Console.WriteLine($"Grand total:{vbTab}{billTotal + tip,8:c}")
       Return 0
    End Function 
 End Class 
