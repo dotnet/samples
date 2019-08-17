@@ -1,4 +1,4 @@
-﻿---
+---
 languages:
 - vb
 products:
@@ -6,7 +6,8 @@ products:
 - windows
 page_type: sample
 name: ".NET Core WinForms Formatting Utility"
-description: "A .NET Core Windows Forms application that allows you to apply standard or custom format strings to either numeric values or date and time values and to determine how they affect the result string."
+urlFragment: "winforms-formatting-utility-vb"
+description: "A .NET Core Windows Forms application that allows you to apply standard or custom format strings.."
 ---
 # .NET Formatting Utility
 
