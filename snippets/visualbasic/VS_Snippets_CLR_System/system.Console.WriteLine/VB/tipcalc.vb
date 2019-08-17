@@ -2,7 +2,7 @@
 Public Module TipCalculator
     Private Const tipRate As Double = 0.18
    
-    Public Shared Sub Main(args As String())
+    Public Sub Main(args As String())
         Dim billTotal As Double
         If (args.Length < 2) OrElse (Not Double.TryParse(args(1), billTotal)) Then
             Console.WriteLine("usage: TIPCALC total")
