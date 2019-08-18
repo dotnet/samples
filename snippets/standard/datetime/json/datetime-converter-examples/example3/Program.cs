@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Buffers;
-using System.Buffers.Text;
 using System.Diagnostics;
-using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using System.Text.RegularExpressions;
 
 namespace DateTimeConverterExamples
 {
@@ -12,8 +10,6 @@ namespace DateTimeConverterExamples
     {
         public override DateTime Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
-            // When implementing JsonConverter<DateTime>, typeToConvert will always be typeof(DateTime).
-            // The parameter is useful for polymorphic cases and when using generics to get typeof(T) in a performant way.
             Debug.Assert(typeToConvert == typeof(DateTime));
 
             if (!reader.TryGetDateTime(out DateTime value))
@@ -26,7 +22,6 @@ namespace DateTimeConverterExamples
 
         public override void Write(Utf8JsonWriter writer, DateTime value, JsonSerializerOptions options)
         {
-            // Converters allow support for custom formats.
             writer.WriteStringValue(value.ToString("dd/MM/yyyy"));
         }
     }
@@ -35,24 +30,22 @@ namespace DateTimeConverterExamples
     {
         private static void ParseDateTimeWithDefaultOptions()
         {
-            var _ = JsonSerializer.Deserialize<DateTime>(@"""2019-07-16 16:45:27.4937872+00:00""");
-            // Throws JsonException.
+            DateTime _ = JsonSerializer.Deserialize<DateTime>(@"""2019-07-16 16:45:27.4937872+00:00""");
         }
 
         private static void ProcessDateTimeWithCustomConverter()
         {
-            var options = new JsonSerializerOptions();
+            JsonSerializerOptions options = new JsonSerializerOptions();
             options.Converters.Add(new DateTimeConverterUsingDateTimeParseAsFallback());
 
-            var testDateTimeStr = "2019-07-16 16:45:27.4937872+00:00";
-            var testDateTimeJson = @"""" + testDateTimeStr + @"""";
+            string testDateTimeStr = "2019-07-16 16:45:27.4937872+00:00";
+            string testDateTimeJson = @"""" + testDateTimeStr + @"""";
 
-            var resultDateTime = JsonSerializer.Deserialize<DateTime>(testDateTimeJson, options);
+            DateTime resultDateTime = JsonSerializer.Deserialize<DateTime>(testDateTimeJson, options);
             Console.WriteLine(resultDateTime);
-            // 7/16/2019 4:45:27 PM
 
-            Console.WriteLine(JsonSerializer.Serialize(DateTime.Parse(testDateTimeStr), options));
-            // "16/07/2019"
+            string resultDateTimeJson = JsonSerializer.Serialize(DateTime.Parse(testDateTimeStr), options);
+            Console.WriteLine(Regex.Unescape(resultDateTimeJson));
         }
 
         static void Main(string[] args)
@@ -65,7 +58,6 @@ namespace DateTimeConverterExamples
             catch (JsonException e)
             {
                 Console.WriteLine(e.Message);
-                // The JSON value could not be converted to System.DateTime. Path: $ | LineNumber: 0 | BytePositionInLine: 35.
             }
 
             // Using converters gives you control over the serializers parsing and formatting.

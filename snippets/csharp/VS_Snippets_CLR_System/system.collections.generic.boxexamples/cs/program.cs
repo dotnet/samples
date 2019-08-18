@@ -145,7 +145,7 @@ public class BoxCollection : ICollection<Box>
         foreach (Box bx in innerCol)
         {
             // Equality defined by the Box
-            // class's implmentation of IEquitable<T>.
+            // class's implmentation of IEquatable<T>.
             if (bx.Equals(item))
             {
                 found = true;

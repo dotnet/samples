@@ -7,7 +7,6 @@ Imports System.Windows.Forms
 Public Class OpenFileDialogForm : Inherits Form 
     Dim WithEvents selectButton As Button
     Dim openFileDialog1 As OpenFileDialog
-    Dim backgroundWorker1 As BackgroundWorker
 
     Public Shared Sub Main()
       Application.SetCompatibleTextRenderingDefault(false)
@@ -17,17 +16,14 @@ Public Class OpenFileDialogForm : Inherits Form
     End Sub
 
     Private Sub New()
-        backgroundWorker1 = New BackgroundWorker()
-        openFileDialog1 = New OpenFileDialog()
-        With openFileDialog1
-           .FileName = "Select a text file"
-           .Filter = "Text files (*.txt)|*.txt"
+        openFileDialog1 = New OpenFileDialog() With
+        {
+           .FileName = "Select a text file",
+           .Filter = "Text files (*.txt)|*.txt",
            .Title = "Open text file"
-        End With
-        selectButton = New Button()
-        With selectButton
-           .Text = "Select file"
-        End With
+        }
+
+        selectButton = New Button() With { .Text = "Select file" }
         Controls.Add(selectButton)
     End Sub
     
@@ -36,8 +32,9 @@ Public Class OpenFileDialogForm : Inherits Form
         If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
             Try
                 Dim filePath = OpenFileDialog1.FileName
-                Dim fs As FileStream = New FileStream(filePath, FileMode.Open)
-                Process.Start("notepad.exe", filePath)
+                Using str = openFileDialog1.OpenFile()
+                    Process.Start("notepad.exe", filePath)
+                End Using
             Catch SecEx As SecurityException
                 MessageBox.Show($"Security error:{vbCrLf}{vbCrLf}{SecEx.Message}{vbCrLf}{vbCrLf}" &
                 $"Details:{vbCrLf}{vbCrLf}{SecEx.StackTrace}")

@@ -142,7 +142,7 @@ public class class1
         e.Graphics.TranslateTransform(220.0f, 0.0f);
         e.Graphics.FillPath(pthGrBrush, path);
     }
-    // <snippet14>
+    // </snippet14>
 
     // <snippet15>
     public void CustomizeWithInterpolation(PaintEventArgs e)

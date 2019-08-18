@@ -22,9 +22,9 @@ Friend Class Program
 
         ' The following lines show how to use other constructors to achieve exactly the
         ' same result as the previous line: 
-        'lazyLargeObject = new Lazy<LargeObject>(InitLargeObject, true);
-        'lazyLargeObject = new Lazy<LargeObject>(InitLargeObject, _
-        '                               LazyThreadSafetyMode.ExecutionAndPublication);
+        'lazyLargeObject = New Lazy(Of LargeObject)(AddressOf InitLargeObject, True)
+        'lazyLargeObject = New Lazy(Of LargeObject)(AddressOf InitLargeObject, _
+        '                               LazyThreadSafetyMode.ExecutionAndPublication)
         '</SnippetNewLazy>
 
 

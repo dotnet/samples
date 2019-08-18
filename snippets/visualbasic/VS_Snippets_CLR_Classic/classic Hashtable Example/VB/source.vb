@@ -1,4 +1,4 @@
-﻿' <Snippet1>
+' <Snippet1>
 
 Imports System.Collections
 
@@ -14,7 +14,7 @@ Public Class SamplesHashtable
 
         ' Displays the properties and values of the Hashtable.
         Console.WriteLine("myHT")
-        Console.WriteLine("  Count:    {0}", myHT.Count)
+        Console.WriteLine($"  Count:    {myHT.Count}")
         Console.WriteLine("  Keys and Values:")
         PrintKeysAndValues(myHT)
 
@@ -22,10 +22,9 @@ Public Class SamplesHashtable
 
     Public Shared Sub PrintKeysAndValues(myHT As Hashtable)
         Console.WriteLine(vbTab + "-KEY-" + vbTab + "-VALUE-")
-        Dim de As DictionaryEntry
-        For Each de In  myHT
+        For Each de As DictionaryEntry In myHT
             Console.WriteLine(vbTab + "{0}:" + vbTab + "{1}", de.Key, de.Value)
-        Next de
+        Next
         Console.WriteLine()
     End Sub 'PrintKeysAndValues
 
@@ -39,8 +38,8 @@ End Class 'SamplesHashtable
 '  Keys and Values:
 '        -KEY-   -VALUE-
 '        Second: World
-'        Third:  !
 '        First:  Hello
+'        Third:  !
 '
 
 ' </Snippet1>

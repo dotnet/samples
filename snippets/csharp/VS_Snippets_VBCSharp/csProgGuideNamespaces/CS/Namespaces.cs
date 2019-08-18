@@ -4,11 +4,6 @@
 using Alias = System;
 //</Snippet14>
 
-//<Snippet16>
-using M = System.Messaging;
-//</Snippet16>
-
-
 //-----------------------------------------------------------------------------
 //<Snippet5>
 using generics = System.Collections.Generic;
@@ -38,57 +33,6 @@ namespace AliasExample
     }
 }
 //</Snippet5>
-
-
-//-----------------------------------------------------------------------------
-//<Snippet1>
-class TestApp
-{
-    // Define a new class called 'System' to cause problems.
-    public class System { }
-
-    // Define a constant called 'Console' to cause more problems.
-    const int Console = 7;
-    const int number = 66;
-
-    static void Main()
-    {
-        // The following line causes an error. It accesses TestApp.Console,
-        // which is a constant.
-        //Console.WriteLine(number);
-    }
-}
-//</Snippet1>
-
-
-//-----------------------------------------------------------------------------
-class TestApp2
-{
-    const int number = 66;
-
-    static void Main()
-    {
-        //<Snippet2>
-        // The following line causes an error. It accesses TestApp.System,
-        // which does not have a Console.WriteLine method.
-        System.Console.WriteLine(number);
-        //</Snippet2>
-
-        //<Snippet3>
-        // OK
-        global::System.Console.WriteLine(number);
-        //</Snippet3>
-    }
-}
-
-
-//-----------------------------------------------------------------------------
-//<Snippet4>
-class TestClass : global::TestApp
-//</Snippet4>
-{
-}
-
 
 //-----------------------------------------------------------------------------
 namespace WrapSampleNamespace
@@ -194,20 +138,3 @@ namespace Library
     public class C : Alias.Exception { }
 }
 //</Snippet15>
-
-
-//-----------------------------------------------------------------------------
-class Wrap17
-{
-    //<Snippet17>
-    class TestClass
-    {
-        public void TestMethod(object M)
-        {
-            // To reference the alias M, use M::AccessControlList
-            // instead of M.AccessControlList. 
-            M::AccessControlList test = M as M::AccessControlList;
-        }
-    }
-    //</Snippet17>
-}
