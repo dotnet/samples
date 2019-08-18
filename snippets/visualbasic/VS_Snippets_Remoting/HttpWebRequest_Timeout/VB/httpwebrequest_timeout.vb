@@ -5,7 +5,7 @@
 ' It is then set to a value.Then again it is displayed to the console.
 ' If the 'Timeout' property is set to a value less than the time required to get the response an Exception is raised.
 ' 'Timeout' property measures the time in Milliseconds. 
-Imports System
+
 Imports System.IO
 Imports System.Net
 Imports System.Text

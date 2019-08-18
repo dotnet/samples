@@ -1,7 +1,7 @@
 ﻿' The following code example determines whether a string is the prefix or suffix of another string using CompareOptions.
 
 ' <snippet1>
-Imports System
+
 Imports System.Globalization
 
 Public Class SamplesCompareInfo

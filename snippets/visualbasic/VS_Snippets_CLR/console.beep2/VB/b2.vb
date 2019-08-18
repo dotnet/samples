@@ -1,6 +1,6 @@
 ﻿'<snippet1>
 ' This example demonstrates the Console.Beep(Int32, Int32) method
-Imports System
+
 Imports System.Threading
 
 Class Sample

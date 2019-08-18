@@ -1,5 +1,5 @@
 ﻿' <snippet2>
-Imports System
+
 Imports System.Diagnostics
 
 Class InitTraceListener

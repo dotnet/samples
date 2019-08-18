@@ -1,6 +1,6 @@
 ﻿'<Snippet1>
 ' Example of the TimeSpan fields.
-Imports System
+
 Imports Microsoft.VisualBasic
 
 Module TimeSpanFieldsDemo

@@ -1,6 +1,6 @@
 ﻿'<snippet1>
 ' Sample for the Environment.Version property
-Imports System
+
 
 Class Sample
    Public Shared Sub Main()

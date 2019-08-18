@@ -1,7 +1,7 @@
 ﻿'System.Runtime.InteropServices.IDispatchImplAttribute
 'System.Runtime.InteropServices.IDispatchImplType
 ' <Snippet1>
-Imports System
+
 Imports System.Runtime.InteropServices
 ' by default all classes in this assembly will use COM implementaion 
 <Assembly: IDispatchImpl(IDispatchImplType.CompatibleImpl)> 

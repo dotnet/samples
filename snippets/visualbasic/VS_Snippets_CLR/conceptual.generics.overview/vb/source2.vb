@@ -1,5 +1,5 @@
 ﻿'<snippet6>
-Imports System
+
 
 Public Class MyEventArgs
     Inherits EventArgs

@@ -10,7 +10,7 @@
 ' reference is saved.and programmatically added to it. The contents of this collection 
 ' are displayed.
 
-Imports System
+
 Imports System.Reflection
 Imports System.Web.Services.Discovery
 

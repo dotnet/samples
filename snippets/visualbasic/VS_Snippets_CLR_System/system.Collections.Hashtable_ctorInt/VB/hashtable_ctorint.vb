@@ -3,7 +3,7 @@
 ' tables, even if each one contains the same elements.
 
 ' <Snippet1>
-Imports System
+
 Imports System.Collections
 Imports System.Globalization
 

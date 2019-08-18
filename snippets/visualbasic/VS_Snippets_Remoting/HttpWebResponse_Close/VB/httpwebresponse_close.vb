@@ -4,7 +4,7 @@
 ' It creates a web request and queries for a response.The response object can be processed as desired.
 'The program then closes the response object and releases resources associated with it.
 
-Imports System
+
 Imports System.Net
 Imports Microsoft.VisualBasic
 Imports System.Environment

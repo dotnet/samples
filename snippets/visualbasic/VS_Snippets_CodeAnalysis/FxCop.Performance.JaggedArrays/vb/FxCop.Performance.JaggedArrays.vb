@@ -1,5 +1,5 @@
 ﻿'<Snippet1>
-Imports System
+
 
 Public Class ArrayHolder
     Private jaggedArray As Integer()() =  {New Integer() {1, 2, 3, 4}, _

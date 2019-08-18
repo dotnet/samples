@@ -22,7 +22,7 @@
 ' 'Input Message'. The instance is then written to 'MathService_new_vb.wsdl'.
 
 ' <Snippet1>
-Imports System
+
 Imports System.Xml
 Imports System.Web.Services
 Imports System.Web.Services.Description

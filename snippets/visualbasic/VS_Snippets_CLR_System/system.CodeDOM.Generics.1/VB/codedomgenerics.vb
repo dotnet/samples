@@ -239,7 +239,7 @@ End Class 'CodeDomGenericsDemo
 'Option Strict Off
 'Option Explicit On
 
-'Imports System
+'
 'Imports System.Collections.Generic
 
 'Namespace DemoNamespace

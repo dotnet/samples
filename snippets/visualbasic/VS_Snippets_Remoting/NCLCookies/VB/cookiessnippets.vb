@@ -1,6 +1,6 @@
 ﻿ ' <Snippet1>
 Imports System.Net
-Imports System
+
 
 ' This example is run at the command line.
 ' Specify one argument: the name of the host to 

@@ -5,7 +5,7 @@
 ' discovery document reference. The references of the 'DiscoveryDocumentReference'
 ' are printed.
 
-Imports System
+
 Imports System.Web.Services.Discovery
 Imports System.IO
 Imports System.Collections

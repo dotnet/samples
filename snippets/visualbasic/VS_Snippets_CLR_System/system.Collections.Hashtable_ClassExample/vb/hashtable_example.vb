@@ -1,5 +1,5 @@
 ﻿'<snippet00>
-Imports System
+
 Imports System.Collections
 
 Module Example

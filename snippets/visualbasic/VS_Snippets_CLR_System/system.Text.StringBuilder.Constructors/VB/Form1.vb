@@ -1,6 +1,6 @@
 ﻿' This sample demonstrates how to call each member of the StringBuilder class.
 '<Snippet2>
-Imports System
+
 Imports System.Text
 
 Public Class Form1

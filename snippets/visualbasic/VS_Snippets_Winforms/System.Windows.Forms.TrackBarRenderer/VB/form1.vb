@@ -4,7 +4,7 @@
 ' - Snippet6 can go in DrawVerticalTick; see below about bug in the meantime, though
 
 '<Snippet0>
-Imports System
+
 Imports System.Drawing
 Imports System.Windows.Forms
 Imports System.Windows.Forms.VisualStyles

@@ -11,7 +11,7 @@
 ' from the installers collection of the 'TransactedInstaller' instance.
 ' The installation process is started which installs only 'MyAssembly1.exe'.
 
-Imports System
+
 Imports System.Reflection
 Imports System.ComponentModel
 Imports System.Collections

@@ -2,7 +2,7 @@
 '  The program shows a managed declaration of the PtInRect function and defines Point
 '  structure with sequential layout and Rect structure with explicit layout. The PtInRect
 '  checks the point lies within the rectangle or not.
-Imports System
+
 Imports System.Runtime.InteropServices
 
    Enum Bool

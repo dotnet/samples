@@ -50,7 +50,7 @@
 ' *
 ' *****************************************************************************
 
-Imports System
+
 Imports System.Windows
 Imports System.Windows.Documents
 Imports System.Windows.Automation

@@ -4,7 +4,7 @@
 ' 'Process'. It creates a new process notepad on local computer and displays
 ' its caption to console.
 ' <Snippet1>
-Imports System
+
 Imports System.Diagnostics
 
 Class MainWindowTitleClass

@@ -11,7 +11,7 @@
 ' with 'FontChanged' event of 'DateTimePicker' control which sets the focus
 ' on 'DateTimePicker' control.
 
-Imports System
+
 Imports System.Drawing
 Imports System.Windows.Forms
 

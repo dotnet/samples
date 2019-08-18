@@ -1,4 +1,4 @@
-﻿Imports System
+﻿
 Imports System.Security.Cryptography
 
 Class RSACSPSample

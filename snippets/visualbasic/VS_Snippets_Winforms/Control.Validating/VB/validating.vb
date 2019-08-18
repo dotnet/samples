@@ -1,6 +1,6 @@
 ﻿Option Explicit
 Option Strict
-Imports System
+
 Imports Microsoft.VisualBasic
 
 Public Class Form1

@@ -1,5 +1,5 @@
 ﻿'<snippetEnlistTransaction> 
-Imports System
+
 Imports System.Linq
 Imports System.Data
 Imports System.Data.Objects

@@ -7,7 +7,7 @@
 ' 'PropertyDescriptorChanged' event, which then calls user defined EventHandler
 ' function.
 
-Imports System
+
 Imports System.ComponentModel
 Imports System.Data
 Imports System.Drawing

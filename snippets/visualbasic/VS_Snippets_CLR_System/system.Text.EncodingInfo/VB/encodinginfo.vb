@@ -2,7 +2,7 @@
 ' and compares them with the equivalent Encoding names.
 
 ' <Snippet1>
-Imports System
+
 Imports System.Text
 
 Public Class SamplesEncoding

@@ -1,6 +1,6 @@
 ﻿Imports System.Windows.Forms
 Imports System.Drawing
-Imports System
+
 
 Public Class MouseSizing
     Inherits System.Windows.Forms.Form

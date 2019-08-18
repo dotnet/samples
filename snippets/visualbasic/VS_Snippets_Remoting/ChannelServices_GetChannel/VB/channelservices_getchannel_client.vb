@@ -6,7 +6,7 @@
 ' the registered channel name, priority and channelsinkproperties
 ' for a given proxy and executes a remote method 'HelloMethod'.
 
-Imports System
+
 Imports System.Runtime.Remoting.Channels
 Imports System.Runtime.Remoting.Channels.Http
 Imports System.Collections

@@ -14,7 +14,7 @@
 ' This example uses the IPEndPoint class and its members to display the home page 
 ' of the server selected by the user.
 
-Imports System
+
 Imports System.Text
 Imports System.IO
 Imports System.Net

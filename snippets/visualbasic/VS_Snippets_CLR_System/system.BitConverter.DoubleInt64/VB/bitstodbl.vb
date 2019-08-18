@@ -1,6 +1,6 @@
 ﻿'<Snippet1>
 ' Example of the BitConverter.Int64BitsToDouble method.
-Imports System
+
 Imports Microsoft.VisualBasic
 
 Module Int64BitsToDoubleDemo

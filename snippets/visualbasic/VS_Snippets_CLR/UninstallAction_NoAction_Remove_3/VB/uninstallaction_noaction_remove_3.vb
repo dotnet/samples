@@ -8,7 +8,7 @@
 ' log depending on the user input.
 
 ' <Snippet1>
-Imports System
+
 Imports System.Diagnostics
 Imports System.Collections
 Imports System.ComponentModel

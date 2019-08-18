@@ -1,7 +1,7 @@
 ﻿'  This program is just used to show a client proxy which helps 
 '  accessing a web service.
 
-Imports System
+
 Imports System.Web.Services.Protocols
 
 Public Class MySoapHeader

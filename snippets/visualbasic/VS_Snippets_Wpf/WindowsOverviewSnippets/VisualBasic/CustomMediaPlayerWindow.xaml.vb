@@ -1,6 +1,6 @@
 ﻿'<SnippetActivationDeactivationCODEBEHIND>
 
-Imports System
+
 Imports System.Windows
 
 Namespace SDKSample

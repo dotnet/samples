@@ -1,6 +1,6 @@
 ﻿'<snippet1>
 ' Sample for String.LastIndexOfAny(Char[], Int32)
-Imports System
+
  _
 
 Class Sample

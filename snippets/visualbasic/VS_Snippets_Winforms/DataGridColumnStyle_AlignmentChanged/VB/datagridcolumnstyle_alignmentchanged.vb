@@ -8,7 +8,7 @@
 ' button it changes the alignment of the 'DataGridColumnStyle' and the
 ' 'AlignmentChanged' event is raised.
 
-Imports System
+
 Imports System.ComponentModel
 Imports System.Data
 Imports System.Drawing

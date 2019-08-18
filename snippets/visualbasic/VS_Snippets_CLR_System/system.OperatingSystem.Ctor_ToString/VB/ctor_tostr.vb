@@ -1,7 +1,7 @@
 ﻿'<Snippet1>
 ' Example for the OperatingSystem constructor and the  
 ' OperatingSystem.ToString( ) method.
-Imports System
+
 Imports Microsoft.VisualBasic
 
 Module OpSysConstructDemo

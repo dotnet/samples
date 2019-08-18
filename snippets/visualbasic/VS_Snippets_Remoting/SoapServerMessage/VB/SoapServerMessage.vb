@@ -1,6 +1,6 @@
 ﻿'This program is just used to show a client proxy which helps accessing a web service.
 
-Imports System
+
 Imports System.IO
 Imports System.Web.Services.Protocols
 Imports System.Web.Services

@@ -1,7 +1,7 @@
 ﻿'<snippet1>
 ' This example demonstrates the Console.BufferHeight and 
 '                               Console.BufferWidth properties.
-Imports System
+
 
 Class Sample
    Public Shared Sub Main()

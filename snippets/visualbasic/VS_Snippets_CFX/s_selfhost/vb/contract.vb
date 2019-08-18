@@ -1,5 +1,5 @@
 ﻿'<snippet10>
-Imports System
+
 ' Step 5: Add the Imports statement for the System.ServiceModel namespace
 '<snippet100>
 Imports System.ServiceModel

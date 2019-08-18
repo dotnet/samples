@@ -1,5 +1,5 @@
 ﻿'<Snippet1>
-Imports System
+
 Imports System.Windows.Forms
 
 Public Class Form1

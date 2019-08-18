@@ -12,7 +12,7 @@
 ' displayed to the console.
 
 ' <Snippet1>
-Imports System
+
 Imports System.ComponentModel
 Imports System.Collections
 Imports System.Configuration.Install

@@ -1,7 +1,7 @@
 ﻿' This file is a support file for demonstrating IClientChannelSinkProvider 
 ' and ServerProcessing.
 
-Imports System
+
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Channels.Tcp
 Imports System.Runtime.Remoting.Channels

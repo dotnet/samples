@@ -1,5 +1,5 @@
 ﻿'<snippet1>
-Imports System
+
 Imports System.Threading
 
 Namespace InterlockedExchange_Example

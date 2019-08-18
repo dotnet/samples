@@ -5,7 +5,7 @@
 ' A dynamic assembly with a module in it is created in 'CodeGenerator' class.
 ' Then a managed resource is defined in the module using the 'DefineResource' method.
 ' <Snippet1>
-Imports System
+
 Imports System.Reflection
 Imports System.Reflection.Emit
 Imports System.Resources

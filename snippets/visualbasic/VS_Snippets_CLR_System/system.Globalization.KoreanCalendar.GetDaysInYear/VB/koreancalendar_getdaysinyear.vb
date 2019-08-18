@@ -1,7 +1,7 @@
 ﻿' The following code example calls GetDaysInYear for 5 years in each era.
 
 ' <snippet1>
-Imports System
+
 Imports System.Globalization
 Imports Microsoft.VisualBasic
 

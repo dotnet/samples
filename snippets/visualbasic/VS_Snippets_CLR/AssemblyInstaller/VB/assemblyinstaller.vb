@@ -6,7 +6,7 @@
 '   called to install the 'MyAssembly.exe' assembly.
 
 ' <Snippet1>
-Imports System
+
 Imports System.Configuration.Install
 Imports System.Collections
 Imports System.Collections.Specialized

@@ -1,7 +1,7 @@
 ﻿' <snippet1>
 ' Create a designer class for a custom class,
 ' named Simple.
-Imports System
+
 Imports System.ComponentModel
 Imports System.IO
 Imports System.Web

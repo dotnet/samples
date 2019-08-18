@@ -1,7 +1,7 @@
 ﻿' System.Diagnostics.Stopwatch
 
 '<Snippet1>
-Imports System
+
 Imports System.Diagnostics
 
 Class OperationsTimer

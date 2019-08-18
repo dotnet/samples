@@ -3,7 +3,7 @@
 ' CreateFromLdml methods.
 ' Compile this example with a reference to sysglobl.dll.
 
-Imports System
+
 Imports System.Globalization
 Imports System.IO
 Imports System.Xml

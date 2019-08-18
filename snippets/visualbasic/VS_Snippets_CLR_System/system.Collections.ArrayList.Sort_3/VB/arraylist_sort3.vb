@@ -1,7 +1,7 @@
 ﻿' The following example shows how to sort the values in a section of an <see cref="System.Collections.ArrayList" /> using the default comparer and a custom comparer which reverses the sort order.
 
 ' <Snippet1>
-Imports System
+
 Imports System.Collections
 Imports Microsoft.VisualBasic
 

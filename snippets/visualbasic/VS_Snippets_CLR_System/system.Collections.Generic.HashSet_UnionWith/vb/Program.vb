@@ -1,5 +1,5 @@
 ﻿'<snippet01>
-Imports System
+
 Imports System.Collections.Generic
 
 Class Program

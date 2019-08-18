@@ -1,6 +1,6 @@
 ﻿' <Snippet5>
 ' AuthorConverter.vb
-Imports System
+
 Imports System.ComponentModel
 Imports System.ComponentModel.Design.Serialization
 Imports System.Globalization

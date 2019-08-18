@@ -22,7 +22,7 @@
 ' Effect of each property can be seen on 'DataGrid'.
 
 
-Imports System
+
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel

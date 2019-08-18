@@ -1,7 +1,7 @@
 ﻿ ' This sample demonstrates the IsSubsetOf, Union, Intersect, Copy, ToXml and FromXml methods
 ' of the EnvironmentPermission class.
 ' <Snippet1>
-Imports System
+
 Imports System.Security
 Imports System.Security.Permissions
 Imports System.Collections

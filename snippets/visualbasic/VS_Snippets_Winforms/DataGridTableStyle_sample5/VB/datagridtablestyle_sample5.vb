@@ -11,7 +11,7 @@
 ' GridLineColor and AlternatingBackColor.
 '
 
-Imports System
+
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel

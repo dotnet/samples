@@ -3,7 +3,7 @@
 ' This code example demonstrates the DateTime Kind, Now, and
 ' UtcNow properties, and the SpecifyKind(), ToLocalTime(), 
 ' and ToUniversalTime() methods.
-Imports System
+
 
 Class Sample
     Public Shared Sub Main() 

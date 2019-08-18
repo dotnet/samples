@@ -1,5 +1,5 @@
 ﻿'<snippet10>
-Imports System
+
 Imports System.IO.IsolatedStorage
 
 Class RoamingIsoStorage

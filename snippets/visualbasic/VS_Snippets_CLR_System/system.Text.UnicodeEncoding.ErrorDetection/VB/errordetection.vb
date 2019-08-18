@@ -1,7 +1,7 @@
 ﻿' The following code example demonstrates the behavior of UnicodeEncoding with error detection enabled and without.
 
 ' <Snippet1>
-Imports System
+
 Imports System.Text
 Imports Microsoft.VisualBasic
 

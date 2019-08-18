@@ -1,7 +1,7 @@
 ﻿'File name: myDataBoundLiteralControl
 
 ' <Snippet1> 
-Imports System
+
 Imports System.Web
 Imports System.Web.UI
 

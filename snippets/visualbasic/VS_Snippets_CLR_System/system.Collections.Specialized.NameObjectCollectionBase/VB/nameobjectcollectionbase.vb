@@ -1,7 +1,7 @@
 ﻿' The following example shows how to implement and use the NameObjectCollectionBase class.
 
 ' <snippet1>
-Imports System
+
 Imports System.Collections
 Imports System.Collections.Specialized
 

@@ -1,7 +1,7 @@
 ﻿' The following code example removes elements from the StringCollection.
 
 ' <snippet1>
-Imports System
+
 Imports System.Collections
 Imports System.Collections.Specialized
 

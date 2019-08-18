@@ -20,7 +20,7 @@
 ' <Snippet2>
 ' <Snippet3>
 ' <Snippet4>
-Imports System
+
 Imports System.Web.Services.Description
 Imports System.Collections
 Imports System.Xml

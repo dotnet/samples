@@ -7,7 +7,7 @@
 '  It attaches 'MyProcessExited' method of 'MyButton' class as EventHandler to
 '  'Exited' event of the process.
 
-Imports System
+
 Imports System.Diagnostics
 Imports System.Windows.Forms
 

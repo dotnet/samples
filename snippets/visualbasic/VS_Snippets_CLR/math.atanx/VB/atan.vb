@@ -2,7 +2,7 @@
 ' This example demonstrates Math.Atan()
 '                           Math.Atan2()
 '                           Math.Tan()
-Imports System
+
 
 Class Sample
    Public Shared Sub Main()

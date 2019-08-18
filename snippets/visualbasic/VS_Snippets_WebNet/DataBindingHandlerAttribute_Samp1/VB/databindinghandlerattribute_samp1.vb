@@ -3,7 +3,7 @@
 ' DataBindingHandlerAttribute(String) constructor to designate
 ' the custom DataBindingHandler class, named MyDataBindingHandler,
 ' for the custom MyWebControl class.
-Imports System
+
 Imports System.Web
 Imports System.Web.UI
 Imports System.Web.UI.WebControls

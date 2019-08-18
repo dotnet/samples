@@ -7,7 +7,7 @@
 ' with the 'StyleChanged' event pops a message box indicating
 ' the same.
 
-Imports System
+
 Imports System.ComponentModel
 Imports System.Windows.Forms
 

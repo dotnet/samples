@@ -5,7 +5,7 @@
 '  which returns the 'IDataObject'.It checks the string data is available or not 
 '  by using the 'GetDataPresent' method of 'IDataObject'. If data is there then it displays the data to the console. 
 
-Imports System
+
 Imports System.Drawing.Imaging
 Imports System.Windows.Forms
 

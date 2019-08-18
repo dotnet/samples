@@ -5,7 +5,7 @@
 '   This program demonstrates 'Student' class to 
 '   which the 'ElementName' property has been applied.
 
-Imports System
+
 Imports System.IO
 Imports System.Xml.Serialization
 

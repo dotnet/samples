@@ -1,7 +1,7 @@
 ﻿'<Snippet1>
 Option Explicit
 
-Imports System
+
 Imports System.Drawing
 Imports System.Windows.Forms
 

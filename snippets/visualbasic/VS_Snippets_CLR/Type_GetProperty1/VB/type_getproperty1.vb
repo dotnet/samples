@@ -1,5 +1,5 @@
 ﻿' <Snippet1>   
-Imports System
+
 Imports System.Reflection
 Class MyClass1
     Private myProperty1 As Integer

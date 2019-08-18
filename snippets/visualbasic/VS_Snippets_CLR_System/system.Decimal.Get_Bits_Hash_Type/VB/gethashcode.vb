@@ -1,6 +1,6 @@
 ﻿'<Snippet1>
 ' Example of the Decimal.GetHashCode method. 
-Imports System
+
 Imports Microsoft.VisualBasic
 
 Module DecimalGetHashCodeDemo

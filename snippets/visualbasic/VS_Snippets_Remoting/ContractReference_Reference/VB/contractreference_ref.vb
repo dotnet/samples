@@ -8,7 +8,7 @@
 ' document is read and 'Ref', 'DocRef' and 'Namespace' properties
 ' are displayed.
 
-Imports System
+
 Imports System.Data
 Imports System.Xml
 Imports System.Web.Services.Discovery

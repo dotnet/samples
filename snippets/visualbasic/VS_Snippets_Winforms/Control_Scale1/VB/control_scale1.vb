@@ -13,7 +13,7 @@
 ' displays a message box indicating that the size of the control has 
 ' changed. 
 
-Imports System
+
 Imports System.ComponentModel
 Imports System.Windows.Forms
 

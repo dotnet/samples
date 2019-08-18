@@ -1,4 +1,4 @@
-﻿Imports System
+﻿
 Namespace ElementProvider
 	Partial Public Class Form1
 		''' <summary>

@@ -2,7 +2,7 @@
 'Types:System.MissingMemberException Vendor: Richter
 'Types:System.MissingFieldException Vendor: Richter
 '<snippet1>
-Imports System
+
 Imports System.Reflection
 
 Public Class App

@@ -2,7 +2,7 @@
 ' it remotable. Ihe method 'HelloMethod' can be called by the client
 ' after creating instance of the 'HelloServer' class.
 
-Imports System
+
 
 Namespace RemotingSamples
    Public Class HelloServer

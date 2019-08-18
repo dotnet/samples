@@ -2,7 +2,7 @@
 ' This example demonstrates the 
 ' System.String.Compare(String, String, StringComparison) method.
 
-Imports System
+
 Imports System.Threading
 
 Class Sample

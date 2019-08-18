@@ -1,7 +1,7 @@
 ﻿'The following example demonstrates the 'GetFormat(int)' method of 'DataFormats' class. It creates a 'DataFormats' object using a integer into the 'GetFormat' method. By using the 'DatFormats' object it displays the format name with 'respective the id.
 
 ' <Snippet1>
-Imports System
+
 Imports System.Windows.Forms
 Imports Microsoft.Visualbasic
 

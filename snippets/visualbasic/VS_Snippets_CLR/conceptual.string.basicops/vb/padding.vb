@@ -1,7 +1,7 @@
 ﻿Option Strict On
 
 ' <snippet2>
-Imports System
+
 
 Class Example
     Public Shared Sub Main()

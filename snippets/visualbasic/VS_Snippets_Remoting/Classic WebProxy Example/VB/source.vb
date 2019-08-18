@@ -1,4 +1,4 @@
-﻿Imports System
+﻿
 Imports System.Net
 
 Public Class Sample  

@@ -10,7 +10,7 @@
 ' Finally, it displays the attributes , values and childrens of those XML encoded 
 ' instances.
 
-Imports System
+
 Imports System.Net
 Imports System.Security
 Imports System.Security.Permissions

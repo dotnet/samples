@@ -1,6 +1,6 @@
 ﻿'<Snippet4>
 ' Example of the BitConverter.ToSingle method.
-Imports System
+
 Imports Microsoft.VisualBasic
 
 Module BytesToSingleDemo

@@ -1,5 +1,5 @@
 ﻿'<Snippet19>
-Imports System
+
 Imports System.Windows.Media
 Imports System.Windows
 Imports System.Windows.Input.StylusPlugIns

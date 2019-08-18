@@ -3,7 +3,7 @@ Option Explicit On
 Option Strict On
 
 ' <snippet35>
-Imports System
+
 Imports System.IO
 ' </snippet35>
 

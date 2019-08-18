@@ -1,4 +1,4 @@
-﻿Imports System
+﻿
 Imports System.Xml
 
 public class Sample 

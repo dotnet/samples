@@ -1,7 +1,7 @@
 ﻿'<snippet1>
 ' This example demonstrates the 
 '     Environment.ProcessorCount property.
-Imports System
+
 
 Class Sample
    Public Shared Sub Main()

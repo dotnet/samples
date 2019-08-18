@@ -1,6 +1,6 @@
 ﻿' <SnippetSeekStoryboardCodeBehindExampleWholePage>
 
-Imports System
+
 Imports System.Media
 Imports System.Windows
 Imports System.Windows.Controls

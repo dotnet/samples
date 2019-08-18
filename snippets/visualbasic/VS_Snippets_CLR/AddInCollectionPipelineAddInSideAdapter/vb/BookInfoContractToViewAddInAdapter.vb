@@ -1,7 +1,7 @@
 ﻿' <Snippet4>
 
 Imports Microsoft.VisualBasic
-Imports System
+
 Imports System.AddIn.Pipeline
 Namespace LibraryContractsAddInAdapters
 

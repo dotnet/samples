@@ -4,7 +4,7 @@
 '  'EventLog' class. It checks for the existence of a log and displays 
 '  the result accordingly.
 
-Imports System
+
 Imports System.Diagnostics
 
 Class EventLog_Exists_1

@@ -13,7 +13,7 @@
 ' the properties of 'SoapFaultBinding' objects are reflected and which could be
 ' used for generating a proxy.
 
-Imports System
+
 Imports System.Web.Services.Description
 
 Public Class MySoapFaultBindingSample

@@ -1,5 +1,5 @@
 ﻿'<snippet3>
-Imports System
+
 Imports System.IO.IsolatedStorage
 
 Public Class DeletingStores

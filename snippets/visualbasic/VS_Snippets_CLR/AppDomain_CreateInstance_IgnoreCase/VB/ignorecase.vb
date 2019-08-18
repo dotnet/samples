@@ -2,7 +2,7 @@
 Option Explicit On
 
 ' <Snippet1>
-Imports System
+
 Imports System.Reflection
 
 Module Test

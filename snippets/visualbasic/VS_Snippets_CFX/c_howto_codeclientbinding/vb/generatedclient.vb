@@ -1,4 +1,4 @@
-﻿Imports System
+﻿
 
 Namespace Microsoft.ServiceModel.Samples
 

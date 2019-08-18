@@ -7,7 +7,7 @@
 ' and display the 'Exception' property value of 'IMethodReturnMessage' interface to
 ' the console.
 
-Imports System
+
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Proxies
 Imports System.Runtime.Remoting.Messaging

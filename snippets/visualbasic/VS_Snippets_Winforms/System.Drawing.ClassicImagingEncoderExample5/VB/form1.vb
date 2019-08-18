@@ -1,6 +1,6 @@
 ﻿ ' Snippet for: F:System.Drawing.Imaging.Encoder.Transformation
 ' <snippet5>
-Imports System
+
 Imports System.Drawing
 Imports System.Drawing.Imaging
 

@@ -4,7 +4,7 @@
 ' The DataBinding and DataBindingCollection classes 
 ' are available only at design time, so manipulating their 
 ' methods and properties must occur at design time as well.
-Imports System
+
 Imports System.Web.UI
 Imports System.Web.UI.WebControls
 Imports System.ComponentModel

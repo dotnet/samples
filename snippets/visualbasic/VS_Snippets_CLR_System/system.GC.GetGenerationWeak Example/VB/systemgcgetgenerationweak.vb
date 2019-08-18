@@ -1,5 +1,5 @@
 ﻿'<snippet1>
-Imports System
+
 
 Namespace GCGetGenerationWeakExample
 

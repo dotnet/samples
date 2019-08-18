@@ -20,7 +20,7 @@
 ' and the program is excecuted second time to show the exception occuring.
 
 ' <Snippet1>
-Imports System
+
 Imports System.Web.Services.Discovery
 Imports System.Xml
 Imports System.Collections

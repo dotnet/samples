@@ -1,6 +1,6 @@
 ﻿'<snippet1>
 ' This example demonstrates the PlatformID enumeration.
-Imports System
+
 
 Class Sample
    Public Shared Sub Main()

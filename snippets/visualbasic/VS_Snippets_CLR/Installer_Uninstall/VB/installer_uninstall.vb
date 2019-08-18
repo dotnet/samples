@@ -4,7 +4,7 @@
 '   of the class 'installer'. The method Uninstall is overridden
 '   in the derived class of 'installer'.
 
-Imports System
+
 Imports System.ComponentModel
 Imports System.Configuration.Install
 Imports System.Collections

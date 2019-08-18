@@ -7,7 +7,7 @@
 '
 Option Explicit On
 Option Strict On
-Imports System
+
 Imports System.Web.Services.Description
 
 Public Class MapToPropertySample

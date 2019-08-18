@@ -1,5 +1,5 @@
 ﻿' <Snippet1>
-Imports System
+
 
 Class Example
     Public Shared Sub Main()

@@ -1,4 +1,4 @@
-﻿Imports System
+﻿
 Imports System.Reflection
 
 Public Class Sample    

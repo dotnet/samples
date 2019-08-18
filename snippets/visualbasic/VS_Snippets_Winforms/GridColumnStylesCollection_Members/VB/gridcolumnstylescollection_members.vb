@@ -7,7 +7,7 @@
 ' In this program the user can add custom styles and clear them. The information on the styles
 ' is displayed depending on the option chosen by user.
 
-Imports System
+
 Imports System.ComponentModel
 Imports System.Data
 Imports System.Drawing

@@ -1,6 +1,6 @@
 ﻿'<snippet1>
 ' Example for the Math.Log( Double ) and Math.Log( Double, Double ) methods.
-Imports System
+
 Imports Microsoft.VisualBasic
 
 Module LogDLogDD

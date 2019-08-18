@@ -6,7 +6,7 @@
 ' To avoid confusion with other Timer classes, this sample always uses the fully-qualified
 ' name of System.Timers.Timer.
 
-Imports System
+
 
 Public Class Module1
 

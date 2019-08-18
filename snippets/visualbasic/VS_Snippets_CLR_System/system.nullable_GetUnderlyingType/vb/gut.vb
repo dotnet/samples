@@ -2,7 +2,7 @@
 ' This code example demonstrates the 
 ' Nullable.GetUnderlyingType() method.
 
-Imports System
+
 Imports System.Reflection
 
 Class Sample

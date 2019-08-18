@@ -1,4 +1,4 @@
-﻿Imports System
+﻿
 
 ' <Snippet1>
 Class B(Of U)

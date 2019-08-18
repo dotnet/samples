@@ -1,6 +1,6 @@
 ﻿' <snippet1>
 ' Code for building SimpleType.dll.
-Imports System
+
 Imports System.Reflection
 Imports System.Globalization
 Imports Simple_Type

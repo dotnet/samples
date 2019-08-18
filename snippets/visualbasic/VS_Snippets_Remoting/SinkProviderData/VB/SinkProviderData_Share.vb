@@ -2,7 +2,7 @@
 ' 'System.Runtime.Remoting.Channels.SinkProviderData' class and its 
 ' properties 'Children', 'Name', 'Properties'.
 
-Imports System
+
 
 Public Class mySharedStringClass
    Inherits MarshalByRefObject

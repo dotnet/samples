@@ -8,7 +8,7 @@
 '   file, but not the %winnt%\Globalization directory that contains the file.
 '
 
-Imports System
+
 Imports System.Globalization
 
 Class Sample

@@ -4,7 +4,7 @@
 ' of struct 'Int32'. This compares an instance of 'Int32' with the
 ' passed in object and returns true if they are equal.
 
-Imports System
+
 Imports Microsoft.VisualBasic
 
 Class MyInt32_Equals

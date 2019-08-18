@@ -1,4 +1,4 @@
-﻿Imports System
+﻿
 Imports System.ServiceModel.Channels
 Imports System.Configuration
 Imports System.Messaging

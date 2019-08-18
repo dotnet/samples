@@ -3,7 +3,7 @@
 ' the Render method to write two introductory strings. Then call the
 ' AttributeCollection.Render method, which allows the control to write the
 ' attribute values that are added to it when it is included in a page.
-Imports System
+
 Imports System.Web
 Imports System.Web.UI
 Imports System.Web.UI.WebControls

@@ -1,6 +1,6 @@
 ﻿'<snippet1>
 ' Sample for String.Intern(String)
-Imports System
+
 Imports System.Text
 
 Class Sample

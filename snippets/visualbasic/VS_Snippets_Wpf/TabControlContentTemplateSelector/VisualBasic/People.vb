@@ -1,4 +1,4 @@
-﻿Imports System
+﻿
 Imports System.Collections.ObjectModel
 
 Public Class People

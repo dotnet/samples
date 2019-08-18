@@ -1,6 +1,6 @@
 ﻿Imports System.Windows.Forms
 Imports System.Drawing
-Imports System
+
 
 '<snippet0>
 Public Class ProgrammaticSizing

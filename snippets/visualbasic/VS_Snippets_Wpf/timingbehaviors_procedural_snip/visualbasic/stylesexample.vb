@@ -3,7 +3,7 @@
 '     This example shows how to create storyboards in a style.
 '
 
-Imports System
+
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Media

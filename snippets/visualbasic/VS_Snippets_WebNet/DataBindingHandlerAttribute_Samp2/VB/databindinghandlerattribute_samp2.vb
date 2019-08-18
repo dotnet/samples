@@ -1,7 +1,7 @@
 ﻿' <Snippet1>
 ' The following example uses the Default
 ' DataBindingHandlerAttribute constructor.
-Imports System
+
 Imports System.Web
 Imports System.Web.UI
 Imports System.Web.UI.WebControls

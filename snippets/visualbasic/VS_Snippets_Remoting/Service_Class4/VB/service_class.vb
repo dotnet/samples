@@ -11,7 +11,7 @@
 ' file 'MathService_New.wsdl'.
 
 ' <Snippet1>
-Imports System
+
 Imports System.Web.Services.Description
 Imports System.Xml
 Imports Microsoft.VisualBasic

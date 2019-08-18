@@ -1,6 +1,6 @@
 ﻿'------------------------------------------------------------------------------
 '<Snippet5>
-Imports System
+
 Imports System.Data.SqlTypes
 Imports Microsoft.SqlServer.Server
 

@@ -12,7 +12,7 @@
 '   and 'order' as its child nodes. It also provides option for the user to change the font
 '   and text of the node.
 
-Imports System
+
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel

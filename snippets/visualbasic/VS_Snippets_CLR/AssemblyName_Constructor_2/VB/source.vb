@@ -1,7 +1,7 @@
 ﻿' REDMOND\glennha
 ' Simplified snippet per SuzCook tech review.
 ' <Snippet1>
-Imports System
+
 Imports System.Reflection
 
 Public Class AssemblyNameDemo

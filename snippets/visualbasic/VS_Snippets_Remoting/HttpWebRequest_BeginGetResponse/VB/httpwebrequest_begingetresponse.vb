@@ -9,7 +9,7 @@
   ' the asynchronous response phase.
   ' Finally, the EndGetResponse method is used to end the asynchronous response phase .*/
 
-Imports System
+
 Imports System.Net
 Imports System.IO
 Imports System.Text

@@ -1,7 +1,7 @@
 ﻿'<Snippet1>
 ' Example of the Decimal.Negate, Decimal.Floor, and Decimal.Truncate 
 ' methods. 
-Imports System
+
 Imports Microsoft.VisualBasic
 
 Module DecimalFloorNegTruncDemo

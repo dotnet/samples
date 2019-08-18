@@ -4,7 +4,7 @@
 ' The non-generic version takes a parameter of type Object, while the generic
 ' version takes a type-specific parameter, such as Boolean, Int32, or Double.
 
-Imports System
+
 
 Class Sample
    Public Shared Sub Main()

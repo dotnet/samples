@@ -4,7 +4,7 @@
 ' OriginalString and KeyData properties of the 
 ' System.Globalization.SortKey class.
 
-Imports System
+
 Imports System.Globalization
 
 Class Sample

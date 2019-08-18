@@ -1,7 +1,7 @@
 ﻿' The following code example demonstrates several of the properties and methods of HybridDictionary.
 
 ' <snippet1>
-Imports System
+
 Imports System.Collections
 Imports System.Collections.Specialized
 

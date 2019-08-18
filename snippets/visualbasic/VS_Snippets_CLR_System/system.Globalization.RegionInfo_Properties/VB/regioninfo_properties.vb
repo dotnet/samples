@@ -1,7 +1,7 @@
 ﻿' The following code example displays the properties of the RegionInfo class.
 
 ' <snippet1>
-Imports System
+
 Imports System.Globalization
 
 

@@ -7,7 +7,7 @@
 '  returns the type referenced by the specified type handle.
 
 
-Imports System
+
 Imports System.Reflection
 
 Public Class MyClass1

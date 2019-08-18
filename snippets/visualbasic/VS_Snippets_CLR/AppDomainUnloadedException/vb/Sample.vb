@@ -1,6 +1,6 @@
 ﻿' C# and VB versions originally written by REDMOND\glennha
 '<Snippet1>
-Imports System
+
 Imports System.Threading
 Imports System.Runtime.InteropServices
 

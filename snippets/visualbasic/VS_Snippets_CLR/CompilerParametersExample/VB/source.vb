@@ -5,7 +5,7 @@
 ' This example is based loosely on the CodeDom example, but its
 ' primary intent is to illustrate the CompilerParameters class.
 '<Snippet1>
-Imports System
+
 Imports System.Globalization
 Imports System.CodeDom
 Imports System.CodeDom.Compiler

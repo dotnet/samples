@@ -7,7 +7,7 @@
 ' points of OutputBinding for one of the Binding object and its property'Parts' has been demonstrated.
 
 ' <Snippet1>
-Imports System
+
 Imports System.Web.Services.Description
 
 Namespace MimeContentBinding_work

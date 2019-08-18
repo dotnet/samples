@@ -12,7 +12,7 @@
 ' The second process (and any subsequent process) waits for earlier
 ' processes to release the named mutex.
 
-Imports System
+
 Imports System.Threading
 
 Public Class Test

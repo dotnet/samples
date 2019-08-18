@@ -1,6 +1,6 @@
 ﻿' This example demonstrates the StringBuilder.AppendFormat method
 '<snippet1>
-Imports System
+
 Imports System.Text
 Imports System.Globalization
 

@@ -11,7 +11,7 @@
 ' the Math Web Service. This class can also be found in the SoapHttpClientProtocol  
 ' class example.
 
-Imports System
+
 Imports System.Reflection
 Imports System.Web.Services.Protocols
 Imports System.Diagnostics

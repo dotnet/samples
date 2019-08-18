@@ -1,4 +1,4 @@
-﻿Imports System
+﻿
 Imports System.Collections.Generic
 
 Public Class ProgStubClass

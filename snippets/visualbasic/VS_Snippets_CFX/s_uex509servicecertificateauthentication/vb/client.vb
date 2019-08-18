@@ -4,7 +4,7 @@
 '
 '  Copyright (c) Microsoft Corporation.  All Rights Reserved.
 
-Imports System
+
 Imports System.ServiceModel.Description
 Imports System.ServiceModel.Channels
 Imports System.ServiceModel

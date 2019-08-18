@@ -1,7 +1,7 @@
 ﻿'System.Net.WebRequest.RequestUri
 'This program demonstrates the 'Requesturi' property of the WebRequest Class 
 ' Here the RequestUri property displays the request Uri name to the console.
-Imports System
+
 Imports System.IO
 Imports System.Net
 Imports System.Text

@@ -7,7 +7,7 @@
 ' button it changes the GridLineColor to 'blue'. If the user clicks the 
 ' 'Reset GridLineColor' button it changes the GridLineColor to  default color.
 
-Imports System
+
 Imports System.ComponentModel
 Imports System.Data
 Imports System.Drawing

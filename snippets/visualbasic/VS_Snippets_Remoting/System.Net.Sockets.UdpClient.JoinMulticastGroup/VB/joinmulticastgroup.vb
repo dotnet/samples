@@ -7,7 +7,7 @@
 ' Build it via command line. Rubuild it in VS when a suitable version is 
 ' available.
 ' <Snippet1>
-Imports System
+
 Imports System.Net
 Imports System.Net.Sockets
 Imports System.Text

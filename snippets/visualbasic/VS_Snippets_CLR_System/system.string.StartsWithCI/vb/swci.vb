@@ -2,7 +2,7 @@
 ' This code example demonstrates the 
 ' System.String.StartsWith(String, ..., CultureInfo) method.
 
-Imports System
+
 Imports System.Threading
 Imports System.Globalization
 

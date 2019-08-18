@@ -6,7 +6,7 @@
 Option Explicit On 
 Option Strict On
 
-Imports System
+
 
 Namespace GetFileSystemEntries
     Class Class1

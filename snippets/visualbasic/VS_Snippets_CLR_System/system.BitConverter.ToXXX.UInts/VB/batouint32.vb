@@ -1,6 +1,6 @@
 ﻿'<Snippet2>
 ' Example of the BitConverter.ToUInt32 method.
-Imports System
+
 Imports Microsoft.VisualBasic
 
 Module BytesToUInt32Demo

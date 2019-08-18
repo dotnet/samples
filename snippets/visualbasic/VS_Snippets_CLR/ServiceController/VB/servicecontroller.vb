@@ -2,7 +2,7 @@
 '
 ' The following example application performs basic service queries/commands.
 
-Imports System
+
 Imports System.Collections
 Imports System.Data
 Imports System.ServiceProcess

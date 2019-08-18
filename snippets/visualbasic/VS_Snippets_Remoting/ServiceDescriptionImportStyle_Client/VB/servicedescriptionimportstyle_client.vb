@@ -8,7 +8,7 @@
 '   the usage of Client.
 
 ' <Snippet1>
-Imports System
+
 Imports System.Web.Services.Description
 
 Namespace MyServiceDescription

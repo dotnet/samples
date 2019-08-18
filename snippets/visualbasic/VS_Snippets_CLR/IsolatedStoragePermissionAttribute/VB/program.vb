@@ -3,7 +3,7 @@
 'Types:System.Security.Permissions.SecurityAction  Vendor: Richter
 '<snippet1>
 Option Strict On
-Imports System
+
 Imports System.Security.Permissions
 Imports System.IO.IsolatedStorage
 Imports System.IO

@@ -4,7 +4,7 @@
 '   object by calling 'Resolve' method of 'Dns' class. Then prints host name, IP address list and aliases.
 '
 
-Imports System
+
 Imports System.Net
 Imports System.Net.Sockets
 Imports Microsoft.VisualBasic

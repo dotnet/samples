@@ -1,6 +1,6 @@
 ﻿' Copyright (c) Microsoft Corporation. All rights reserved.
 ' <snippet6>
-Imports System
+
 
 Namespace Microsoft.ServiceModel.Samples
 

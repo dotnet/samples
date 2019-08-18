@@ -5,7 +5,7 @@
 ' all other modules of the process 'notepad.exe', displays 'FileVersionInfo'
 ' for all the modules and the main module.
 
-Imports System
+
 Imports System.Diagnostics
 
 Class MyProcessModuleClass

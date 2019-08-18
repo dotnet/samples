@@ -3,7 +3,7 @@
 '   It creates an identical copy of 'DnsPermission' instance.
 '
 
-Imports System
+
 Imports System.Net
 Imports System.Security
 Imports System.Security.Permissions

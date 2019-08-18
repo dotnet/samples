@@ -16,7 +16,7 @@
 ' 'Remove'method.The ServiceDescription is finally written into output wsdl file
 ' 'MimePartCollection_8_out_vb.wsdl'.
 
-Imports System
+
 Imports System.Collections
 Imports System.Xml
 Imports System.Web.Services.Description

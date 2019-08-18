@@ -1,6 +1,6 @@
 ﻿'<Snippet2>
 ' Example of the Decimal( UInt32 ) constructor.
-Imports System
+
 Imports Microsoft.VisualBasic
 
 Module DecimalCtorUIDemo

@@ -1,5 +1,5 @@
 ﻿'<Snippet1>
-Imports System
+
 Imports Microsoft.Win32
 Imports System.Security.AccessControl
 Imports System.Security.Principal

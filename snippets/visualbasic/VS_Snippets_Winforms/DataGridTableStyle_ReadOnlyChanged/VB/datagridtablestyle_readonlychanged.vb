@@ -5,7 +5,7 @@
 ' When the Check box is checked, the 'ReadOnly' property of 
 ' 'DataGridTableStyle' is changed. 
 
-Imports System
+
 Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms

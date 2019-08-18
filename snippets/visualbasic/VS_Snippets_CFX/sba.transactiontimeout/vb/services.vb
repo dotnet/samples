@@ -1,7 +1,7 @@
 ﻿' <snippet2>
 
 
-Imports System
+
 Imports System.ServiceModel
 Imports System.Transactions
 

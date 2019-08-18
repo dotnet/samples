@@ -1,5 +1,5 @@
 ﻿' <snippet5>
-Imports System
+
 
 Module IsLetterSample
 

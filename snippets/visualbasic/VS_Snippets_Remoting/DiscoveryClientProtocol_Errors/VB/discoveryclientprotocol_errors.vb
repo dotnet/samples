@@ -11,7 +11,7 @@
 ' to web service is missing, and the program is excecuted the second time
 ' to show the exception occuring.
 Option Strict On
-Imports System
+
 Imports System.Web.Services.Discovery
 Imports System.Collections
 

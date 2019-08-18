@@ -1,5 +1,5 @@
 ﻿' <Snippet2>
-Imports System
+
 Imports System.Collections
 
 Public Class HashtableExample

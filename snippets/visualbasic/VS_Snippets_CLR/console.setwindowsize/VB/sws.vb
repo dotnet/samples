@@ -2,7 +2,7 @@
 ' This example demonstrates the Console.SetWindowSize method,
 '                           the Console.WindowWidth property, 
 '                       and the Console.WindowHeight property.
-Imports System
+
 
 Class Sample
    Public Shared Sub Main()

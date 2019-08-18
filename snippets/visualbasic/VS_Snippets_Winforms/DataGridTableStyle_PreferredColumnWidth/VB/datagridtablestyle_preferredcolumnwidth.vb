@@ -6,7 +6,7 @@
 ' DataGrid and applies 'DataGridTableStyle' to it.
 ' Event Handler has been attached to handle 'PreferredColumnWidthChanged' event.
 
-Imports System
+
 Imports System.ComponentModel
 Imports System.Windows.Forms
 Imports System.Data

@@ -2,7 +2,7 @@
 
 '<snippet1>
 
-Imports System
+
 Imports System.ServiceModel
 
 Namespace Microsoft.ServiceModel.Samples

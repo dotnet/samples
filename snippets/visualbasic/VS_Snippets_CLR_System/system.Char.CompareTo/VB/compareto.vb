@@ -1,5 +1,5 @@
 ﻿' <snippet19>
-Imports System
+
 
 Module CompareToSample
 

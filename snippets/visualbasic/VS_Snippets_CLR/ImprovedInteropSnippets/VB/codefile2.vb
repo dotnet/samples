@@ -7,7 +7,7 @@
 'Imports System.Reflection
 
 ' <Snippet2>
-Imports System
+
 Imports System.Runtime.InteropServices
 
 Module MyModule

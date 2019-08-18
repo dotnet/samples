@@ -1,6 +1,6 @@
 ﻿' Note : Calls  EmitClass class from 'MyEmitTestAssembly.dll' using reflection emit.
 
-Imports System
+
 
 Public Class MyAssemblyResourceApplication
    

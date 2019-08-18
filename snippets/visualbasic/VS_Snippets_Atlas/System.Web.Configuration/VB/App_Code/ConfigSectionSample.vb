@@ -1,4 +1,4 @@
-﻿Imports System
+﻿
 Imports System.Web.Configuration
 
 Public Class ConfigSectionSample

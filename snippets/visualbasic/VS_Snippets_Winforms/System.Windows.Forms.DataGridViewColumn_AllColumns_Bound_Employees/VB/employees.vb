@@ -3,7 +3,7 @@
 '
 
 '<snippet0>
-Imports System
+
 Imports System.Data
 Imports System.Data.SqlClient
 Imports System.Windows.Forms

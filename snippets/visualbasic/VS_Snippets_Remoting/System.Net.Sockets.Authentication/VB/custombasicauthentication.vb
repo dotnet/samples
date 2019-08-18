@@ -10,7 +10,7 @@
 ' enhance security you may want to consider the use of more secure authorization
 ' scheme and technolgies such as SSL.   
 '<Snippet1>
-Imports System
+
 Imports System.Net
 Imports System.IO
 Imports System.Text

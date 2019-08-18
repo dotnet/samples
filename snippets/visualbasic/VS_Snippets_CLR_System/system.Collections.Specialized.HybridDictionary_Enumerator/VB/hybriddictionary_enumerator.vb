@@ -1,7 +1,7 @@
 ﻿' The following code example enumerates the elements of a HybridDictionary.
 
 ' <snippet1>
-Imports System
+
 Imports System.Collections
 Imports System.Collections.Specialized
 

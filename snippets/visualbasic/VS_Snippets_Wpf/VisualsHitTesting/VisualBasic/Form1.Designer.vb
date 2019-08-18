@@ -1,4 +1,4 @@
-﻿Imports System
+﻿
 Namespace SDKSample
 	Partial Public Class Form1
 		''' <summary>

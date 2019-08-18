@@ -13,7 +13,7 @@
 ' The 'Item' property gets or sets a DiscoveryReference object from the
 ' 'DiscoveryClientReferenceCollection' with the specified Url.
 
-Imports System
+
 Imports System.Collections
 Imports System.Web.Services.Discovery
 

@@ -1,6 +1,6 @@
 ﻿'<Snippet1>
 ' Example of the Buffer.ByteLength method.
-Imports System
+
 Imports Microsoft.VisualBasic
 
 Module ByteLengthDemo

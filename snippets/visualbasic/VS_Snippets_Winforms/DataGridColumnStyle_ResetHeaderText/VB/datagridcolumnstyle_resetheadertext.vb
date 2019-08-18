@@ -6,7 +6,7 @@
 ' 'DataGrid'.On clicking the set button,the Header Text is set. The reset
 ' button resets the HeaderText to its default value.
 
-Imports System
+
 Imports System.Drawing
 Imports System.Windows.Forms
 Imports System.Data

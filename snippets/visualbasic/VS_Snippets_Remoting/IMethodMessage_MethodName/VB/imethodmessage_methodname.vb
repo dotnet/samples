@@ -13,7 +13,7 @@
 ' The Invoke method calls the methods and properties of 'IMethodMessage' interface
 ' and displays the result to the console.
 
-Imports System
+
 Imports System.Reflection
 Imports System.Runtime.Remoting.Proxies
 Imports System.Runtime.Remoting.Messaging

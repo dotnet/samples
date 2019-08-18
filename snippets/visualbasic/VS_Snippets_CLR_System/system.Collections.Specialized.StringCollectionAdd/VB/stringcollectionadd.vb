@@ -1,7 +1,7 @@
 ﻿' The following code example adds new elements to the StringCollection.
 
 ' <snippet1>
-Imports System
+
 Imports System.Collections
 Imports System.Collections.Specialized
 

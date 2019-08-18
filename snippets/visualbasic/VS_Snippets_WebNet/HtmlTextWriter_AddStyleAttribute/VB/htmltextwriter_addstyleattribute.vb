@@ -11,7 +11,7 @@
 ' * Note : Follow the instructions in HtmlTextWriterReadme.txt for details on installing
 ' *        a site that uses custom controls.  
 
-Imports System
+
 Imports System.Web
 Imports System.Web.UI
 Imports System.Web.UI.WebControls

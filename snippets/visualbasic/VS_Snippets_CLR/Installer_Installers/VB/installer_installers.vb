@@ -6,7 +6,7 @@
 ' associated with an Installer and the Parent property gets the
 ' installer containing the collection that this installer belongs to.
 
-Imports System
+
 Imports System.Collections
 Imports System.ServiceProcess
 Imports System.Diagnostics

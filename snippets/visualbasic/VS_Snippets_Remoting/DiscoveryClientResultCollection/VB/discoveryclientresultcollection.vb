@@ -7,7 +7,7 @@
 ' added to 'DiscoveryClientResultCollection' class .
 
 ' <Snippet1>
-Imports System
+
 Imports System.Reflection
 Imports System.IO
 Imports System.Web.Services.Discovery

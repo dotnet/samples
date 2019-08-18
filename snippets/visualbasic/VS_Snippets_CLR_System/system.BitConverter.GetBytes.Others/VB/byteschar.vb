@@ -1,6 +1,6 @@
 ﻿'<Snippet2>
 ' Example of the BitConverter.GetBytes( Char ) method.
-Imports System
+
 Imports Microsoft.VisualBasic
 
 Module GetBytesCharDemo

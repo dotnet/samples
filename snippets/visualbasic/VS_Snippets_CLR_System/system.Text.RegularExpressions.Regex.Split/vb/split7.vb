@@ -2,7 +2,7 @@
 Option Strict On
 
 ' <Snippet7>
-Imports System
+
 Imports System.Text.RegularExpressions
 
 Module Example

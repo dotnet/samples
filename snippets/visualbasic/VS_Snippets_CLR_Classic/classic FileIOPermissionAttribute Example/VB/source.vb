@@ -1,4 +1,4 @@
-﻿Imports System
+﻿
 Imports System.Security.Permissions
 
 Namespace Snippet1

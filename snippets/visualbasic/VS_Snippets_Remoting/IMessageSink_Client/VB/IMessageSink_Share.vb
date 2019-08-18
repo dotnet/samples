@@ -1,4 +1,4 @@
-﻿Imports System
+﻿
 
 Namespace Share
    Public Class MyHelloService

@@ -5,7 +5,7 @@
 'Need references to System.dll, System.Windows.Forms.dll, 
 ' System.Design.dll, and System.Drawing.dll.
 '///////////////////////////////////////////////////////////////////
-Imports System
+
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel

@@ -1,5 +1,5 @@
 ﻿'<snippet1>
-Imports System
+
 Imports System.IO
 Imports System.Diagnostics
 
@@ -30,7 +30,7 @@ Class IORedirExample
 End Class
 '</snippet1>
 '<snippet2>
-Imports System
+
 Imports System.IO
 Imports System.Diagnostics
 

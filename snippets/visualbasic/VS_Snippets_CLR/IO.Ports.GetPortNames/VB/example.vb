@@ -2,7 +2,7 @@
 ' Insert this code into a new VB Console application project, and set the
 ' startup object to Sub Main.
 
-Imports System
+
 Imports System.IO.Ports
 
 Module SerialPortExample

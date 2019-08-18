@@ -2,7 +2,7 @@
 ' This code example demonstrates the 
 ' System.String.LastIndexOf(String, ..., StringComparison) methods.
 
-Imports System
+
 Imports System.Threading
 Imports System.Globalization
 

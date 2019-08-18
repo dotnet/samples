@@ -6,7 +6,7 @@
 '   A class is derived from the 'Installer' base class and the Install
 '   and Commit methods are overridden.
 
-Imports System
+
 Imports System.ComponentModel
 Imports System.Configuration.Install
 Imports System.Collections

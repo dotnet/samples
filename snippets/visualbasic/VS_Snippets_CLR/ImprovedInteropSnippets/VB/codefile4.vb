@@ -3,7 +3,7 @@
 'Imports System.Reflection
 ' <Snippet4>
 
-Imports System
+
 Imports System.Runtime.InteropServices
 
 Module B

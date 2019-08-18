@@ -1,7 +1,7 @@
 ﻿'<snippet1>
 ' This example demonstrates the Calendar.AlgorithmType property and
 ' CalendarAlgorithmType enumeration.
-Imports System
+
 Imports System.Globalization
 
 Class Sample

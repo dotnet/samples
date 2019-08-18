@@ -4,7 +4,7 @@
 ' Create a class that derives from ButtonDesigner
 ' and displays the custom SampleButton control
 ' on the design surface.
-Imports System
+
 Imports System.Web.UI.Design
 Imports System.Drawing
 Imports System.ComponentModel

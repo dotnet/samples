@@ -9,7 +9,7 @@
 ' event. The SelectionBackColor is reset to its default value with
 ' the 'ResetSelectionBackColor' button.
 
-Imports System
+
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel

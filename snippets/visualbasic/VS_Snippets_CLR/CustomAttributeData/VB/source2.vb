@@ -1,5 +1,5 @@
 ﻿' <snippet2>
-Imports System
+
 
 Public Class ExampleAttribute
     Inherits Attribute

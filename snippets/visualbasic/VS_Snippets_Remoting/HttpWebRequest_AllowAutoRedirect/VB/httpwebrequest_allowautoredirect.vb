@@ -6,7 +6,7 @@
 ' Using the 'Address' property the address of the Responding Uri is printed to console.
 ' The contents of the redirected page are displayed to the console.
 
-Imports System
+
 Imports System.IO
 Imports System.Net
 Imports System.Text

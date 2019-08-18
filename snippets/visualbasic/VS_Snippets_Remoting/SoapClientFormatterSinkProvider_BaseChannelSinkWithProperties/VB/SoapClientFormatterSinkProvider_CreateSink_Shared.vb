@@ -1,6 +1,6 @@
 ﻿' This is supporting program for the 'SoapClientFormatterSinkProvider_CreateSink_Client'.
 
-Imports System
+
 
 Public Class HelloService
    Inherits MarshalByRefObject

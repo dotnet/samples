@@ -1,5 +1,5 @@
 ﻿'<Snippet1>
-Imports System
+
 Imports System.Runtime.ConstrainedExecution
 
 <assembly:ReliabilityContractAttribute( _ 

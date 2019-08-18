@@ -10,7 +10,7 @@
 ' It also displays 'NameSpace' of the 'MimeContentBinding' object.
 
 ' <Snippet4>
-Imports System
+
 Imports System.Web.Services.Description
 
 Namespace MimeContentBinding_work

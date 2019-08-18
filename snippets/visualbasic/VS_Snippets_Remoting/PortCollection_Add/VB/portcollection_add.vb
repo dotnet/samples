@@ -7,7 +7,7 @@
 ' whether a port exists.  The programs writes a new web service description
 ' file.
 
-Imports System
+
 Imports System.Web.Services.Description
 Imports System.Xml
 Imports Microsoft.VisualBasic

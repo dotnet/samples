@@ -1,6 +1,6 @@
 ﻿' SimpleRadioButtonListDesigner.vb
 ' <snippet1>
-Imports System
+
 Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Diagnostics

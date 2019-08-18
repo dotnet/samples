@@ -1,6 +1,6 @@
 ﻿'<Snippet3>
 ' Example of the BitConverter.ToDouble method.
-Imports System
+
 Imports Microsoft.VisualBasic
 
 Module BytesToDoubleDemo

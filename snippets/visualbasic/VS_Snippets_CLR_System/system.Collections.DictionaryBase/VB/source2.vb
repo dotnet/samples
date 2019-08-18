@@ -1,6 +1,6 @@
 ﻿' The following code example implements the DictionaryBase class and uses that implementation to create a dictionary of String keys and values that have a Length of 5 or less.
 
-Imports System
+
 Imports System.Collections
 
 Public Class ShortStringDictionary

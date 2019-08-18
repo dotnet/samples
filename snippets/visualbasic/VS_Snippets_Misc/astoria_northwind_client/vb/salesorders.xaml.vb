@@ -1,4 +1,4 @@
-﻿'Imports System
+﻿'
 'Imports System.Collections.Generic
 'Imports System.Linq
 'Imports System.Text
@@ -21,13 +21,13 @@
 'Imports System.Windows.Navigation
 'Imports System.Windows.Data
 'Imports System.Windows.Documents
-'Imports System.Windows.ShapesImports System
+'Imports System.Windows.Shapes
 'Imports System.Linq
 'Imports System.Windows.Controls
 'Imports System.Text
 'Imports System.Collections.Generic
 '<snippetWpfDataBindingCode>
-Imports System
+
 Imports System.Linq
 Imports System.Windows
 Imports System.Data.Services.Client

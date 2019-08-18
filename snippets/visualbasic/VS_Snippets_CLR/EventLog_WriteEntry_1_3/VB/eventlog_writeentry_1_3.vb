@@ -9,7 +9,7 @@
 ' 'EventLog'.The following example writes the information to an event log. 
 
 
-Imports System
+
 Imports System.Diagnostics
 
 Class MyEventLog

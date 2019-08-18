@@ -1,6 +1,6 @@
 ﻿' MailLink.cs
 ' <Snippet1>
-Imports System
+
 Imports System.ComponentModel
 Imports System.Security
 Imports System.Security.Permissions

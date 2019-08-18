@@ -1,7 +1,7 @@
 ﻿'  Copyright (c) Microsoft Corporation.  All Rights Reserved.
 ' <Snippet3>
 
-Imports System
+
 Imports System.Configuration
 Imports System.Messaging
 Imports System.ServiceModel

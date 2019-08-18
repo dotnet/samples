@@ -1,5 +1,5 @@
 ﻿' <Snippet2>
-Imports System
+
 Imports Microsoft.VisualBasic
 
 Public Class Order

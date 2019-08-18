@@ -1,4 +1,4 @@
-﻿Imports System
+﻿
 
 ' <Snippet1>
 Namespace System.Runtime.InteropServices

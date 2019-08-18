@@ -1,6 +1,6 @@
 ﻿' Created 4-5-2006 by GlennHa from sample code by HaiboLuo...Thx, Haibo!
 '<Snippet1>
-Imports System
+
 Imports System.Reflection
 Imports System.Reflection.Emit
 

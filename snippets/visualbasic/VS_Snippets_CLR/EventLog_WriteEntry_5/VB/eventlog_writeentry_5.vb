@@ -8,7 +8,7 @@
 ' description, Log entry type, application specific identifier for the event,
 ' application specific subcategory and  data to be associated with the entry.
 
-Imports System
+
 Imports System.Diagnostics
 
 Class EventLog_WriteEntry_5

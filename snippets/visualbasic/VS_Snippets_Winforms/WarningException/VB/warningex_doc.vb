@@ -1,4 +1,4 @@
-﻿Imports System
+﻿
 Imports System.ComponentModel
 
 Module Module1

@@ -6,7 +6,7 @@
 ' nonexistent assembly and the results of the call are displayed 
 ' onto the console.
 ' <Snippet1>
-Imports System
+
 Imports System.Configuration.Install
 
 Class MyCheckIfInstallableClass

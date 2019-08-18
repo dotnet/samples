@@ -1,7 +1,7 @@
 ﻿'<Snippet2>
 ' Example of the TimeSpan.Compare( TimeSpan, TimeSpan ) and 
 ' TimeSpan.Equals( TimeSpan, TimeSpan ) methods.
-Imports System
+
 Imports Microsoft.VisualBasic
 
 Module TSCompareEqualsDemo

@@ -1,5 +1,5 @@
 ﻿' <Snippet1>
-Imports System
+
 Imports System.Reflection
 
 ' This sample class has a field, constructor, method, and property.

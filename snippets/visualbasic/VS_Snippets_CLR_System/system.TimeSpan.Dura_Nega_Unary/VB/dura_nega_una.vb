@@ -1,7 +1,7 @@
 ﻿'<Snippet1>
 ' Example of the TimeSpan.Duration( ) and TimeSpan.Negate( ) methods,
 ' and the TimeSpan Unary Negation and Unary Plus operators.
-Imports System
+
 Imports Microsoft.VisualBasic
 
 Module DuraNegaUnaryDemo

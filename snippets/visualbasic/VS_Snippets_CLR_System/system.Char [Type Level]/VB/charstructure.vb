@@ -1,6 +1,6 @@
 ﻿imports Microsoft.VisualBasic
 ' <snippet23>
-imports System
+
 
 Module CharStructure
 

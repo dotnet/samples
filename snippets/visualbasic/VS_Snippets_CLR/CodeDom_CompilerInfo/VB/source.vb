@@ -22,7 +22,7 @@
 '      - Displays settings for the compiler associated with the .vb
 '        file extension.
 
-Imports System
+
 Imports System.IO
 Imports System.Globalization
 Imports System.CodeDom

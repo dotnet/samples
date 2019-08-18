@@ -1,7 +1,7 @@
 ﻿' The following code example shows that DTFI ignores the punctuation in the era name only if the calendar is Gregorian and the culture uses the era name "A.D.".
 
 ' <snippet1>
-Imports System
+
 Imports System.Globalization
 
 Public Class SamplesGregorianCalendar

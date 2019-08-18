@@ -9,7 +9,7 @@
 ' 'DataGridTextBox' changes the value of 'IsInEditOrNavigateMode'
 ' from true to false. 
 
-Imports System
+
 Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms

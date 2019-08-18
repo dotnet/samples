@@ -1,5 +1,5 @@
 ﻿'  Copyright (c) Microsoft Corporation.  All Rights Reserved.
-Imports System
+
 Imports System.Text
 
 ' Define the purchase order line item.

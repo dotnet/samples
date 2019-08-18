@@ -7,7 +7,7 @@
 '  object by using the 'References' property of 'DiscoveryDocument' object.Then it displays the
 ' 'DefaultFileName' and 'Url' properties of 'ContractReference'.
 
-Imports System
+
 Imports System.Web.Services.Discovery
 Imports System.Xml.Schema
 Imports System.Collections

@@ -6,7 +6,7 @@
 ' pink. When the user clicks on 'ResetBackColor' button, then the value 
 ' of DataGridBackColor is set to its default value.
 
-Imports System
+
 Imports System.Drawing
 Imports System.Collections
 Imports System.Windows.Forms

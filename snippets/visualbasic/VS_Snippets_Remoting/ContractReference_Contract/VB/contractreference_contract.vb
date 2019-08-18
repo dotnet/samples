@@ -7,7 +7,7 @@
 ' Using the 'Contract' property of the 'ContractReference' instance it creates a wsdl 
 ' file which works as a service description file.' 
 
-Imports System
+
 Imports System.Web.Services.Protocols
 Imports System.Net
 Imports System.IO

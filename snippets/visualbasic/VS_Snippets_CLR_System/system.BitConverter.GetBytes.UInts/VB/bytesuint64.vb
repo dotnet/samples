@@ -1,6 +1,6 @@
 ﻿'<Snippet1>
 ' Example of the BitConverter.GetBytes( UInt64 ) method.
-Imports System
+
 Imports System.Globalization
 Imports Microsoft.VisualBasic
 

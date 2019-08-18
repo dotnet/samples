@@ -7,7 +7,7 @@
 ' string 'Caveman' as a parameter. The server returns the string
 ' 'Hi there Caveman'.  
 
-Imports System
+
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Channels
 Imports System.Runtime.Remoting.Channels.Tcp

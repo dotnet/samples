@@ -10,7 +10,7 @@
 ' instance of 'TransactedInstaller' named 'myTransactedInstaller2'.The 
 ' installation process installs both 'MyAssembly1.exe' and 'MyAssembly2.exe'.
 
-Imports System
+
 Imports System.Reflection
 Imports System.ComponentModel
 Imports System.Collections

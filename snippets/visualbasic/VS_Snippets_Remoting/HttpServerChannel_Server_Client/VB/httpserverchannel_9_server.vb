@@ -9,7 +9,7 @@
 ' of the 'HttpServerChannel' channel and displays the property values of this class.
 
 ' <Snippet1>
-Imports System
+
 Imports System.Collections
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Channels

@@ -1,6 +1,6 @@
 ﻿'<snippet1>
 ' Sample for String.ToCharArray(Int32, Int32)
-Imports System
+
 
 Class Sample
    

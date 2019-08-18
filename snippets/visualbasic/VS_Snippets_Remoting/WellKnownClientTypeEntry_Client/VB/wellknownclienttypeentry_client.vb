@@ -7,7 +7,7 @@
 ' values for the above well-known type and makes few method calls on the remote object.
 
 ' <Snippet1>
-Imports System
+
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Channels
 Imports System.Runtime.Remoting.Channels.Http

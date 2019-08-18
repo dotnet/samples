@@ -9,7 +9,7 @@
 ' to the Invoke method. Then the values of 'Uri' and 'LogicalCallContext' properties
 ' are displayed to the console.
 
-Imports System
+
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Proxies
 Imports System.Runtime.Remoting.Channels

@@ -1,6 +1,6 @@
 ﻿'<snippet1>
 ' Sample for String.GetTypeCode()
-Imports System
+
 
 Class Sample
    Public Shared Sub Main()

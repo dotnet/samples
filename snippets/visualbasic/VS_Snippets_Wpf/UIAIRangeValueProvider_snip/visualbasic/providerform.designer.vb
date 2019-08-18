@@ -1,4 +1,4 @@
-﻿Imports System
+﻿
 Namespace UIAIRangeValueProvider_snip
 	Partial Public Class ProviderForm
 		''' <summary>

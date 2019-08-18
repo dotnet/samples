@@ -1,5 +1,5 @@
 ﻿Imports Microsoft.VisualBasic
-Imports System
+
 
 Namespace Samples.AspNet.Security
   Public Class MyIDClass

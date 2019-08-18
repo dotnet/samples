@@ -4,7 +4,7 @@
 ' 'Installer' class.  When the 'Commit' is complete, 'Committed' event
 ' occurs and  a message is displayed.
 
-Imports System
+
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Configuration.Install

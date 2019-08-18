@@ -13,7 +13,7 @@
 '	Displays the 'RowHeaderWidth', depending on the selection of 
 '	buttons.
 '
-Imports System
+
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel

@@ -6,7 +6,7 @@
 ' A initialized data field is created using  'DefineInitializedData'
 ' method for creating the initialized data.
 
-Imports System
+
 Imports System.Reflection
 Imports System.Reflection.Emit
 

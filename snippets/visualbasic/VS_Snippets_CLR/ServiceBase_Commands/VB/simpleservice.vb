@@ -7,7 +7,7 @@
 ' Turn on logging to the event log.
 #Const LOGEVENTS = True
 
-Imports System
+
 Imports System.IO
 Imports System.Threading
 Imports System.Collections.Generic

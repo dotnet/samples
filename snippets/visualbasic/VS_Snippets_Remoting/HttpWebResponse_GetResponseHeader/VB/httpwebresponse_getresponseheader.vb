@@ -4,7 +4,7 @@
 'It creates a web request and queries for a response.If the site requires authentication it 
 'will respond with a challenge string which is extracted using 'GetResponse' method.
 
-Imports System
+
 Imports System.Net
 Imports Microsoft.VisualBasic
 Imports System.Environment

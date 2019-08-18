@@ -12,7 +12,7 @@
 ' files to be placed in the same directory as that of .exe for running.
 
 
-Imports System
+
 Imports System.Web.Services.Description
 
 Class MyServiceDescriptionCollection

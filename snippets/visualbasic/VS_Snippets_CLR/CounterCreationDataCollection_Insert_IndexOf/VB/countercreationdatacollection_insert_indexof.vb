@@ -8,7 +8,7 @@
 ' inserted into the 'CounterCreationDataCollection' at specified index. The
 ' inserted counter and its index are displayed to the console.
 
-Imports System
+
 Imports System.Diagnostics
 
 Public Class CounterCreationDataCollectionExample

@@ -1,7 +1,7 @@
 ﻿' The following code example shows that CultureInfo.ReadOnly also protects the DateTimeFormatInfo and NumberFormatInfo instances associated with the CultureInfo.
 
 ' <snippet1>
-Imports System
+
 Imports System.Globalization
 
 

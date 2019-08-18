@@ -9,7 +9,7 @@
 ' 'GetRegisteredActivatedClientTypes' method it gets the registered activated service types
 ' and displays it's properties to the console.
 
-Imports System
+
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Channels
 Imports System.Runtime.Remoting.Channels.Tcp

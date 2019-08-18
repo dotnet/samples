@@ -1,5 +1,5 @@
 ﻿' <snippet12>
-Imports System
+
 
 Module IsSymbolSample
 

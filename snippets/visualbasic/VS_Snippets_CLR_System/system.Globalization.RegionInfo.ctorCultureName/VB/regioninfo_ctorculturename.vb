@@ -1,7 +1,7 @@
 ﻿' The following code example creates instances of T:System.Globalization.RegionInfo using culture names.
 
 ' <snippet1>
-Imports System
+
 Imports System.Globalization
 
 Public Class SamplesRegionInfo

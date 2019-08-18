@@ -1,7 +1,7 @@
 ﻿' <Snippet6>
 
 Imports Microsoft.VisualBasic
-Imports System
+
 Namespace LibraryContractsAddInAdapters
 
 Public Class BookInfoAddInAdapter

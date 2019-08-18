@@ -9,7 +9,7 @@
 ' A COM Runtime Wrapper takes care of method call to unmanaged world. SupportsInterface
 ' method is overridden to return address of COM Runtime Wrapper.
 
-Imports System
+
 Imports System.Collections
 Imports System.Runtime.Serialization
 Imports System.Runtime.Remoting

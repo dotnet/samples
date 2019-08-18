@@ -1,7 +1,7 @@
 ﻿' This sample demonstrates how to use each member of the
 ' CryptographicException class.
 '<Snippet2>
-Imports System
+
 Imports System.Text
 Imports System.Security.Cryptography
 Imports System.Runtime.Serialization

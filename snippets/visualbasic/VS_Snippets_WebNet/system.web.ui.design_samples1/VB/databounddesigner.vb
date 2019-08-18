@@ -4,7 +4,7 @@
 ' Create a custom designer, named TemplatedListDesigner, that
 ' derives from the TemplatedControlDesigner class and implements
 ' the IDataSourceProvider interface.
-Imports System
+
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.ComponentModel.Design

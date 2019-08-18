@@ -1,6 +1,6 @@
 ﻿'<Snippet2>
 Imports System.Runtime.CompilerServices
-Imports System
+
 <Assembly: InternalsVisibleTo("AssemblyB")> 
 
 ' Friend class.

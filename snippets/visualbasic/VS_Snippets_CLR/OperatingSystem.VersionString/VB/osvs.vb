@@ -1,6 +1,6 @@
 ﻿'<snippet1>
 ' This example demonstrates the VersionString property.
-Imports System
+
 
 Class Sample
    Public Shared Sub Main()

@@ -8,7 +8,7 @@
 ' class. It creates a TreeView, adds 10 TreeNode objects to it and
 ' expands node1,collapses node1 and makes a clone to Node 9 and add it to Node7.
 
-Imports System
+
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel

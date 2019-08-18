@@ -13,7 +13,7 @@
 'PARTICULAR PURPOSE.
 '---------------------------------------------------------------------
 ' <snippet1>
-Imports System
+
 Imports System.Collections.Generic
 Imports System.ComponentModel
 Imports System.Drawing

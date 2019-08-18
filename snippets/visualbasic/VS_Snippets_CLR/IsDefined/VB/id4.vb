@@ -1,5 +1,5 @@
 ﻿'<Snippet4>
-Imports System
+
 Imports System.Reflection
 
 Module DemoModule

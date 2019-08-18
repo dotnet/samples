@@ -1,5 +1,5 @@
 ﻿' <Snippet2>
-Imports System
+
 Imports System.Messaging
 Imports System.Threading
 

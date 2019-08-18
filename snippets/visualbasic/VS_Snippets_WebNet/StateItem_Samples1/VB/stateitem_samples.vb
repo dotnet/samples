@@ -2,7 +2,7 @@
 ' Create a custom control with two properties named Text and 
 ' FontSize that get their values from and set their values
 ' to the control's ViewState property.
-Imports System
+
 Imports System.Web.UI
 Imports System.Collections
 Imports System.Web.UI.WebControls

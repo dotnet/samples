@@ -1,6 +1,6 @@
 ﻿' REDMOND\glennha
 '<Snippet1>
-Imports System
+
 Imports System.Collections.Generic
 
 Module Example

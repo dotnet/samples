@@ -1,7 +1,7 @@
 ﻿' This sample demonstrates how to use each member of the CryptoAPITransform
 ' class.
 '<Snippet1>
-Imports System
+
 Imports System.Security.Cryptography
 Imports System.Collections
 Imports System.Text

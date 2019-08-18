@@ -10,7 +10,7 @@
 ' UInt16, UInt32, and UInt64. The floating-point numeric types 
 ' are Decimal, Single, and Double.
 ' 
-' Imports System
+' 
 ' Imports System.Globalization
 ' Imports System.Threading
 ' 

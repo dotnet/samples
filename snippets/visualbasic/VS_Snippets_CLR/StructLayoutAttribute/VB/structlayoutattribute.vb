@@ -7,7 +7,7 @@
 '  and print to the console.
 
 ' <Snippet1>
-Imports System
+
 Imports System.Runtime.InteropServices
 
 Namespace InteropSample

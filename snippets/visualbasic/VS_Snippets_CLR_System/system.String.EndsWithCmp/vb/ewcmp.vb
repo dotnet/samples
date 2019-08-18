@@ -2,7 +2,7 @@
 ' This example demonstrates the 
 ' System.String.EndsWith(String, StringComparison) method.
 
-Imports System
+
 Imports System.Threading
 
 Class Sample

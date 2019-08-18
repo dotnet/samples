@@ -1,6 +1,6 @@
 ﻿' QuickContacts.vb
 Option Strict On
-Imports System
+
 Imports System.ComponentModel
 Imports System.Collections
 Imports System.Security.Permissions

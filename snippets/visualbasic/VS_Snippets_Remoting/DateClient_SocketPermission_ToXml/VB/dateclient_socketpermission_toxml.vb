@@ -20,7 +20,7 @@
 '  Note: This program requires 'DateServer_SocketPermission' program executing.
 '
 
-Imports System
+
 Imports System.Net
 Imports System.Net.Sockets
 Imports System.Text

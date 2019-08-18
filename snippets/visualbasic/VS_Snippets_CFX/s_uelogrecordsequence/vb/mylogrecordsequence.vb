@@ -1,7 +1,7 @@
 ﻿' snippet for System.IO.Log.LogRecordSequence
 ' <Snippet0>
 
-Imports System
+
 Imports System.IO
 Imports System.Collections.Generic
 Imports System.Text

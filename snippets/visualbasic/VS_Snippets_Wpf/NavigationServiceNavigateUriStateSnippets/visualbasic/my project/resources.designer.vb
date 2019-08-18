@@ -8,7 +8,7 @@
 ' </auto-generated>
 '------------------------------------------------------------------------------
 
-Imports System
+
 
 Namespace My.Resources
 

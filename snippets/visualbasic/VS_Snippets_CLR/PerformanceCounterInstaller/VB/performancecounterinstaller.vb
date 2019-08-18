@@ -11,7 +11,7 @@
 '    InstallUtil.exe /u PerformanceCounterInstaller.exe
 
 ' <Snippet1>
-Imports System
+
 Imports System.Configuration.Install
 Imports System.Diagnostics
 Imports System.ComponentModel

@@ -6,7 +6,7 @@
 ' class a 'FileWebResponse' object is obtained which is used to print the content on the file.
 
 
-Imports System
+
 Imports System.Net
 Imports System.IO
 Imports System.Threading

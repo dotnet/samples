@@ -5,7 +5,7 @@
 '   obtained from existing Wsdl.Name property of Bindings in the 
 '   ServiceDescription is displayed to console.
 
-Imports System
+
 Imports System.Web.Services
 Imports System.Web.Services.Description
 Imports System.Xml

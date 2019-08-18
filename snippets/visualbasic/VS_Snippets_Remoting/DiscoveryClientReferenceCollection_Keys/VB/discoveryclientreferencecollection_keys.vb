@@ -7,7 +7,7 @@
 ' discovery document is read and the 'Keys', 'Values' and 'Contains' properties 
 ' are displayed.
 
-Imports System
+
 Imports System.Net
 Imports System.Collections
 Imports System.Security.Permissions

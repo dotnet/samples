@@ -8,7 +8,7 @@
 ' assigned to each customer. It also displays selected nodes in a
 ' messagebox.
 
-Imports System
+
 Imports System.Drawing
 Imports System.Collections
 Imports System.Windows.Forms

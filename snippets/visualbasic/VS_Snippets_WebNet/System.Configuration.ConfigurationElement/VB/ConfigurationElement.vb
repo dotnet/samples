@@ -4,7 +4,7 @@
 ' <Snippet151>
 ' Set Assembly name to ConfigurationElement
 ' and set Root namespace to Samples.AspNet
-Imports System
+
 Imports System.Configuration
 Imports System.Collections
 

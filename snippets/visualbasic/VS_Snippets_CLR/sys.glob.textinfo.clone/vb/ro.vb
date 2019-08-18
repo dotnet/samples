@@ -2,7 +2,7 @@
 ' This example demonstrates the TextInfo.Clone() and
 ' TextInfo.ReadOnly() methods.
 
-Imports System
+
 Imports System.Globalization
 
 Class Sample

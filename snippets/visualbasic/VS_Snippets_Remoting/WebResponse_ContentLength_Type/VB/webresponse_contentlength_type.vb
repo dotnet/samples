@@ -4,7 +4,7 @@
 'It creates a web request and queries for a response.
 'It then prints the content length and content type of the entity body in the response onto the console 
 
-Imports System
+
 Imports System.Net
 Imports System.IO
 Imports System.Text

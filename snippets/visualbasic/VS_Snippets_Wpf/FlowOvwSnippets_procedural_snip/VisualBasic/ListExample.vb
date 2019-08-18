@@ -1,6 +1,6 @@
 ﻿' <SnippetListCodeOnlyExampleWholePage>
 
-Imports System
+
 Imports System.Windows
 Imports System.Windows.Media
 Imports System.Windows.Controls

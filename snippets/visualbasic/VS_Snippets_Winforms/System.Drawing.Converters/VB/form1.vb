@@ -2,7 +2,7 @@
 Option Strict On
 
 Imports System.Drawing
-Imports System
+
 Imports System.Windows.Forms
 
 Public Class Form1

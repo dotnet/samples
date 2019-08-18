@@ -7,7 +7,7 @@
 ' Turn on the constant for trace output.
 #Const TRACE = True
 
-Imports System
+
 Imports System.ComponentModel
 Imports System.IO
 Imports System.ServiceProcess

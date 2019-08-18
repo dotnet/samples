@@ -9,7 +9,7 @@
 '------------------------------------------------------------------------------
 
 
-Imports System
+
 
 <System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0"), _
 System.ServiceModel.ServiceContractAttribute(Namespace:="http://microsoft.wcf.documentation")> _

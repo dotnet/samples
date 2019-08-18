@@ -5,7 +5,7 @@
 ' method and 'RowHeadersVisibleChanged' event of 
 ' System.Windows.Forms.DataGridTableStyle' class. It makes the 
 ' row headers visible or invisible on button click */
-Imports System
+
 Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms

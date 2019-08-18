@@ -1,7 +1,7 @@
 ﻿' The following code example searches the StringCollection for an element.
 
 ' <snippet1>
-Imports System
+
 Imports System.Collections
 Imports System.Collections.Specialized
 

@@ -4,7 +4,7 @@
 '  It get all attributes of MyClass by calling GetAttributes method of TypeDescriptor
 '  then prints the 'Value' property of 'ProgIdAttribute' class.
 
-Imports System
+
 Imports System.ComponentModel
 Imports System.Runtime.InteropServices
 

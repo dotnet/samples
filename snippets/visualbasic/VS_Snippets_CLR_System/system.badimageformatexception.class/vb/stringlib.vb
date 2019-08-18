@@ -1,6 +1,6 @@
 ﻿Option Strict On
 
-Imports System
+
 
 ' <Snippet2>
 Public Module StringLib

@@ -5,7 +5,7 @@
 ' is not having the import element. A new 'Import' is defined and added to the new modified 
 ' 'ServiceDescription_Imports_Output_VB.wsdl' file.
 
-Imports System
+
 Imports System.Web.Services
 Imports System.Web.Services.Description
 Imports System.Xml

@@ -4,7 +4,7 @@
 '''To animate in markup, you must use storyboards.
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-Imports System
+
 Imports System.Windows
 Imports System.Windows.Navigation
 Imports System.Windows.Media

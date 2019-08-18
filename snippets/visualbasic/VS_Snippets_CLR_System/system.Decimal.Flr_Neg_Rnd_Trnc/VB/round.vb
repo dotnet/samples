@@ -1,6 +1,6 @@
 ﻿'<Snippet2>
 ' Example of the Decimal.Round method. 
-Imports System
+
 Imports Microsoft.VisualBasic
 
 Module DecimalRoundDemo

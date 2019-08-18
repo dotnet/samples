@@ -13,7 +13,7 @@
 '  It adds the 'PortType',Messages to the 'ServiceDescription' object. Finally it writes the
 '  'ServiceDescrption' as a WSDL file with name 'AddNumbersOne.wsdl.
 
-Imports System
+
 Imports System.Web.Services.Description
 Imports System.Web
 Imports System.Collections

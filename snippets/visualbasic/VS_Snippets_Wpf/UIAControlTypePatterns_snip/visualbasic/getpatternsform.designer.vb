@@ -1,4 +1,4 @@
-﻿Imports System
+﻿
 Namespace GetSupportedPatterns
 	Partial Public Class Form1
 		''' <summary>

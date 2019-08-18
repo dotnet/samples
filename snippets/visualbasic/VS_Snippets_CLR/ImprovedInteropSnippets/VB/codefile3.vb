@@ -1,7 +1,7 @@
 ﻿' System.Assembly.GetCustomAttributes
 ' System.Runtime.InteropServices.ImportedFromTypeLibAttribute
 ' <Snippet3>
-Imports System
+
 Imports System.Reflection
 Imports System.Runtime.InteropServices
 

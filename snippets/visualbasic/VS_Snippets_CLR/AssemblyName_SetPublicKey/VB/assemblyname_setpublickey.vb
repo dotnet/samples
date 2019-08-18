@@ -17,7 +17,7 @@
 'since this assembly has been stongly signed.
 ' <Snippet1>
 ' <Snippet2>
-Imports System
+
 Imports System.Reflection
 Imports System.Threading
 Imports System.IO

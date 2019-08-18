@@ -1,4 +1,4 @@
-﻿Imports System
+﻿
 
 Class GuidList
     Private Sub New()

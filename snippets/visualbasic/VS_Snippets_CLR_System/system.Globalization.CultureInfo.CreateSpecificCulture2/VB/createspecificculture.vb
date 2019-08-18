@@ -1,7 +1,7 @@
 ﻿' The following code example shows the results of CreateSpecificCulture with different culture types.
 
 ' <snippet1>
-Imports System
+
 Imports System.Globalization
 
 Module Module1

@@ -2,7 +2,7 @@
 Option Explicit
 Option Strict
 
-Imports System
+
 Imports System.Globalization
 
 Public Class MainClass

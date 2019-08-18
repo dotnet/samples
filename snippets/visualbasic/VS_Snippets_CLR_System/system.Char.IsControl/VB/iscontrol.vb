@@ -1,6 +1,6 @@
 ﻿imports Microsoft.VisualBasic
 ' <snippet3>
-imports System
+
 
 Module IsControlSample
 

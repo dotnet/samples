@@ -15,7 +15,7 @@
 ' collection is removed and programmatically added to it to show the usage of methods of 
 ' 'DiscoveryClientResultCollection' class . The contents of this collection are displayed..
 
-Imports System
+
 Imports System.Web.Services.Discovery
 
 Public Class MyDiscoveryClientResult

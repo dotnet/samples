@@ -1,5 +1,5 @@
 ﻿' <Snippet1>
-Imports System
+
 Imports System.Threading
 
 ' Simple threading scenario:  Start a Shared method running

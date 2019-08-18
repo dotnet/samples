@@ -7,7 +7,7 @@
 '   a new Image instance. ImageUrl is obtained by resolving Url from 
 '   one of the custom control's properties.
 
-Imports System
+
 Imports System.Web
 Imports System.Web.UI
 Imports System.Collections.Specialized

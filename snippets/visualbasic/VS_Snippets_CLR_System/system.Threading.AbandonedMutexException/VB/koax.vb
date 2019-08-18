@@ -1,6 +1,6 @@
 ﻿'<Snippet1>
 Option Explicit
-Imports System
+
 Imports System.Threading
 
 Public Class Example

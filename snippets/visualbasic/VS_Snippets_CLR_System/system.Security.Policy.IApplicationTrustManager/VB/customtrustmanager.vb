@@ -16,7 +16,7 @@
 '        </security>
 '    </mscorlib>
 '</configuration>
-Imports System
+
 Imports System.Security
 Imports System.Security.Policy
 Imports System.Windows.Forms

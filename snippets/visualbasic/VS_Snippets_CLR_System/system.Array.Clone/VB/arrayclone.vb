@@ -1,7 +1,7 @@
 ﻿' The following code example clones a CultureInfo array and demonstrates the behavior of a shallow copy.
 
 ' <Snippet1>
-Imports System
+
 Imports System.Globalization
 
 Public Class SamplesArray

@@ -1,7 +1,7 @@
 ﻿' The following code example demonstrates how to determine the GregorianCalendar version supported by the culture.
 
 ' <snippet1>
-Imports System
+
 Imports System.Globalization
 
 Public Class SamplesCultureInfo

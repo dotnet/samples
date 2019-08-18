@@ -7,7 +7,7 @@
 'IEnumerator instance ,unregisters the first authentication module and displays to show that it was 
 'unregistered. Then registers the same module back again and displays all the modules again.
 
-Imports System
+
 Imports System.Net
 Imports System.Collections
 Imports Microsoft.VisualBasic

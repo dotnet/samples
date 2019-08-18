@@ -1,7 +1,7 @@
 ﻿' The following code example demonstrates several of the properties and methods of StringEnumerator.
 
 ' <snippet1>
-Imports System
+
 Imports System.Collections.Specialized
 
 Public Class SamplesStringEnumerator

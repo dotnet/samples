@@ -1,6 +1,6 @@
 ﻿'<Snippet1>
 ' Example of the TimeSpan.Add( ) and TimeSpan.Subtract( ) methods.
-Imports System
+
 Imports Microsoft.VisualBasic
 
 Module TimeSpanAddSubDemo

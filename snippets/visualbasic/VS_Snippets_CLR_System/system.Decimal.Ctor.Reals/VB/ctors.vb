@@ -1,6 +1,6 @@
 ﻿'<Snippet1>
 ' Example of the Decimal( Single ) constructor.
-Imports System
+
 Imports Microsoft.VisualBasic
 
 Module DecimalCtorSDemo

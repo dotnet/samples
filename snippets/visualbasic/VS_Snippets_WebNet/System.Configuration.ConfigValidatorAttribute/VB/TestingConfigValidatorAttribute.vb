@@ -1,7 +1,7 @@
 ﻿ ' File name: TestingConfigValidatorAttribute.cs
 ' Allowed snippet tags range: [41 - 50].
 ' <Snippet41>
-Imports System
+
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.Configuration

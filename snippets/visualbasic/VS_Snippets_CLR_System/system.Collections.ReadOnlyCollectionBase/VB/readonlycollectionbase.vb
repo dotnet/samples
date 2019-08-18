@@ -1,7 +1,7 @@
 ﻿' The following code example implements the ReadOnlyCollectionBase class.
 
 ' <Snippet1>
-Imports System
+
 Imports System.Collections
 
 Public Class ROCollection

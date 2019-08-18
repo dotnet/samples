@@ -9,7 +9,7 @@
 '   writes into 'MimePart_3_OutPut_vb.wsdl' file.
 
 ' <Snippet1>
-Imports System
+
 Imports System.Xml
 Imports System.Web.Services.Description
 

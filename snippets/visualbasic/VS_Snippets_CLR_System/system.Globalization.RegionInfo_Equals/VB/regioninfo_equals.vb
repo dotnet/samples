@@ -1,7 +1,7 @@
 ﻿' The following code example compares two instances of RegionInfo that were created differently.
 
 ' <snippet1>
-Imports System
+
 Imports System.Globalization
 
 

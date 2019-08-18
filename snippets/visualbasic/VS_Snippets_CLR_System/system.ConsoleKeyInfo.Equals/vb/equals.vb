@@ -1,6 +1,6 @@
 ﻿'<snippet1>
 ' This example demonstrates the ConsoleKeyInfo.Equals() method.
-Imports System
+
 Imports System.Text
 
 Class Sample

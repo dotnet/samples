@@ -2,7 +2,7 @@
 ' This code example demonstrates the Nullable(Of T).Equals 
 ' methods.
 
-Imports System
+
 
 Class Sample
     Public Shared Sub Main() 

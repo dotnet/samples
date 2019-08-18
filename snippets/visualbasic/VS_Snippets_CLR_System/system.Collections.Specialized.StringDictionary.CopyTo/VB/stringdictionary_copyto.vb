@@ -1,7 +1,7 @@
 ﻿' The following code example shows how a StringDictionary can be copied to an array.
 
 ' <snippet1>
-Imports System
+
 Imports System.Collections
 Imports System.Collections.Specialized
 Imports Microsoft.VisualBasic

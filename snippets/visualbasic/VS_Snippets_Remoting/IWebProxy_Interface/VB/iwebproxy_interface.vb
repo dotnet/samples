@@ -8,7 +8,7 @@
 '  the credentials required by the proxy server to authenticate the actual user.
 '
 
-Imports System
+
 Imports System.Net
 Imports Microsoft.VisualBasic
 

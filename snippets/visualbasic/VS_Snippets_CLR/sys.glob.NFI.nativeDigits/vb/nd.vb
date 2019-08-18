@@ -1,7 +1,7 @@
 ﻿'<snippet1>
 ' This example demonstrates the NativeDigits property.
 
-Imports System
+
 Imports System.Globalization
 Imports System.Threading
 

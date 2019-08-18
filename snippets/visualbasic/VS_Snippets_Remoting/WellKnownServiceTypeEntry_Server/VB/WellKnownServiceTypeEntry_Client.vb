@@ -1,5 +1,5 @@
 ﻿' This is the client program for the 'WellKnownServiceTypeEntry_Server.vb' program.
-Imports System
+
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Channels
 Imports System.Runtime.Remoting.Channels.Http

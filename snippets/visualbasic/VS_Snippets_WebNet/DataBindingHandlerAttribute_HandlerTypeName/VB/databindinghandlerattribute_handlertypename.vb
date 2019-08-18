@@ -6,7 +6,7 @@
 '   to the 'SimpleWebControl'. The attributes and their corresponding handler type name 
 '   of the custom control are displayed to the console.
 
-Imports System
+
 Imports System.Web.UI
 Imports System.Web.UI.WebControls
 Imports System.ComponentModel

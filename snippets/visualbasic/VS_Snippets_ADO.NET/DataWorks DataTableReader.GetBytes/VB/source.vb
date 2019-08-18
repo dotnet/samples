@@ -1,7 +1,7 @@
 ﻿Option Explicit
 Option Strict
 ' <Snippet1>
-Imports System
+
 Imports System.Data
 Imports System.Data.SqlClient
 Imports System.Drawing

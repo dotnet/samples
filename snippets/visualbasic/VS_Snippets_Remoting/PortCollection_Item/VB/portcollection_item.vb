@@ -12,7 +12,7 @@
 ' to remove the newly added port.The programs writes a new web service
 ' description file.
 
-Imports System
+
 Imports System.Web.Services.Description
 Imports Microsoft.VisualBasic
 

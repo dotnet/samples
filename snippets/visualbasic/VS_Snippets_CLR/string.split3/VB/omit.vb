@@ -2,7 +2,7 @@
 
 ' This example demonstrates the String() methods that use
 ' the StringSplitOptions enumeration.
-Imports System
+
 
 Class Sample
     Public Shared Sub Main() 

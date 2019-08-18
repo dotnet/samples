@@ -1,7 +1,7 @@
 ﻿Option Strict On
 Option Explicit On
 
-Imports System
+
 
 ' <Snippet3>
 Public Class PingPong

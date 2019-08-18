@@ -2,7 +2,7 @@
 ' Copyright (c) Microsoft Corporation. All rights reserved.
 
 
-Imports System
+
 Imports System.Diagnostics
 Imports System.Windows
 Imports System.Windows.Input

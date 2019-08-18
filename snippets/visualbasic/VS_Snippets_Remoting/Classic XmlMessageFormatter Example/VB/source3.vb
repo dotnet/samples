@@ -1,5 +1,5 @@
 ﻿' <Snippet3>
-Imports System
+
 Imports System.Messaging
 
 Class Client

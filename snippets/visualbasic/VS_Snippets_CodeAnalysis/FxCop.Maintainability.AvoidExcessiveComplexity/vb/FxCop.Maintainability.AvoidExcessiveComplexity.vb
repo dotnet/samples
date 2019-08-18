@@ -1,5 +1,5 @@
 ﻿
-Imports System
+
 Public Class SnippetClass
     '<Snippet1>
     Public Sub Method()

@@ -6,7 +6,7 @@
 ' it is associated with data source. When the button "Change Appearance" is clicked,
 ' the format of the Date column in the grid is modified to a specific format.
 
-Imports System
+
 Imports System.ComponentModel
 Imports System.Data
 Imports System.Drawing

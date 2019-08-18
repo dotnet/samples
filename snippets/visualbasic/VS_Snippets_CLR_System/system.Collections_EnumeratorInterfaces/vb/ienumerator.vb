@@ -1,5 +1,5 @@
 ﻿'<Snippet1>
-Imports System
+
 Imports System.Collections
 
 ' Simple business object.

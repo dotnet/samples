@@ -4,7 +4,7 @@
 ' the process's exit code.
 
 ' <Snippet1>
-Imports System
+
 Imports System.Diagnostics
 
 Namespace ProcessSample

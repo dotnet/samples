@@ -9,7 +9,7 @@
 '   The program invokes 'FindPartsByName' to obtain an array of MessagePart's 
 '   and also invokes 'FindPartByName' to retrieve a specific 'MessagePart'.
 
-Imports System
+
 Imports System.Web.Services.Description
 Imports System.Collections
 Imports System.Xml

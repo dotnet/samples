@@ -11,7 +11,7 @@
 ' various methods of 'DiscoveryReferenceCollection' class are demonstrated.
 
 ' <Snippet1>
-Imports System
+
 Imports System.IO
 Imports System.Web.Services.Discovery
 

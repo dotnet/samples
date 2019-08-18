@@ -1,5 +1,5 @@
 ﻿'<Snippet1>
-Imports System
+
 Imports System.Reflection
 
 <Assembly:AssemblyVersion("1.1.0.0")>

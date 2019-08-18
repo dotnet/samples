@@ -1,4 +1,4 @@
-﻿Imports System
+﻿
 Imports System.Windows
 
 Public Class App

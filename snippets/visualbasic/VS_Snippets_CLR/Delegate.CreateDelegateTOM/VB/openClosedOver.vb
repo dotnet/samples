@@ -2,7 +2,7 @@
 ' All four permutations of instance/Shared with open/closed.
 '
 '<Snippet1>
-Imports System
+
 Imports System.Reflection
 Imports System.Security.Permissions
 

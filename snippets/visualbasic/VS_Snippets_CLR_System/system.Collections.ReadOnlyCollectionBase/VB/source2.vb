@@ -1,6 +1,6 @@
 ﻿' The following code example implements the ReadOnlyCollectionBase class.
 
-Imports System
+
 Imports System.Collections
 
 Public Class ROCollection

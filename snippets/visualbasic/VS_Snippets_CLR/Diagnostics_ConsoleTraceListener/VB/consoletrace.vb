@@ -6,7 +6,7 @@
 ' as a compilation argument.
 #Const TRACE = True
 
-Imports System
+
 Imports System.Diagnostics
 
 Public Class ConsoleTraceSample

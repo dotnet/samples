@@ -2,7 +2,7 @@
 'Types:System.Collections.IDictionary  Vendor: Richter
 'Types:System.Collections.IDictionaryEnumerator  Vendor: Richter
 '<snippet1>
-Imports System
+
 Imports System.Collections
 
 '<snippet2>

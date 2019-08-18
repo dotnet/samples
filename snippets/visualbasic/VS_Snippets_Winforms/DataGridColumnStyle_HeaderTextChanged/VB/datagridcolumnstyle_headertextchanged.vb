@@ -8,7 +8,7 @@
 ' user defined EventHandler function and displays a message on form.
 '
 
-Imports System
+
 Imports System.ComponentModel
 Imports System.Data
 Imports System.Drawing

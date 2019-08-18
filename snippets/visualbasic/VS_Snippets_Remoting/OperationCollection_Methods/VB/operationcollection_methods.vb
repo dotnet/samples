@@ -17,7 +17,7 @@
 
 ' <Snippet1>
 Option Strict On
-Imports System
+
 Imports System.Web.Services
 Imports System.Xml
 Imports System.Web.Services.Description

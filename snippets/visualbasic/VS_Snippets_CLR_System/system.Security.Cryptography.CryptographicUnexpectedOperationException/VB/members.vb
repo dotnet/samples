@@ -1,7 +1,7 @@
 ﻿' This sample demonstrates how to use each member of the
 ' CryptographicUnexpectedOperationException class.
 '<Snippet2>
-Imports System
+
 Imports System.Security.Cryptography
 Imports System.Runtime.Serialization
 

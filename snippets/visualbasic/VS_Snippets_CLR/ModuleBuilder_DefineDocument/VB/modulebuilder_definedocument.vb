@@ -6,7 +6,7 @@
 ' It gets the object representing the defined document using the method
 ' 'DefineDocument'.
 ' <Snippet1>
-Imports System
+
 Imports System.Reflection
 Imports System.Reflection.Emit
 Imports System.Resources

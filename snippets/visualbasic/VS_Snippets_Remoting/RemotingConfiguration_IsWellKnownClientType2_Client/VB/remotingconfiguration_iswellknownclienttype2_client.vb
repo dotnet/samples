@@ -5,7 +5,7 @@
 ' services. Then registers the 'MyServerImpl' object as well-known type at the client end.
 ' and displays it's properties to the console.
 
-Imports System
+
 Imports System.Reflection
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Channels

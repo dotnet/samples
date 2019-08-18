@@ -1,7 +1,7 @@
 ﻿'<snippet1>
 ' This code example demonstrates members of the System.StringComparer class.
 
-Imports System
+
 Imports System.Collections
 Imports System.Collections.Generic
 Imports System.Globalization

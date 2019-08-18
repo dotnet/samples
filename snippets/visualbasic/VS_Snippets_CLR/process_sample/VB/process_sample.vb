@@ -13,7 +13,7 @@
 ' process.  The example detects when the process exits, and displays the process's exit code.
 
 ' <Snippet1>
-Imports System
+
 Imports System.Diagnostics
 Imports System.Threading
 

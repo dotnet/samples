@@ -5,7 +5,7 @@
 'This NetworkCredential Object associated to the WebRequest Object to be able to authenticate the requested Uri
 'To check the validity of this program, please try with some authenticated sites with appropriate credentials
 
-Imports System
+
 Imports System.IO
 Imports System.Net
 Imports System.Text

@@ -5,7 +5,7 @@
 '   prints the host name and IP addresses associated with the specified URL.      
 '
 
-Imports System
+
 Imports System.Net
 Imports System.Net.Sockets
 Imports Microsoft.VisualBasic

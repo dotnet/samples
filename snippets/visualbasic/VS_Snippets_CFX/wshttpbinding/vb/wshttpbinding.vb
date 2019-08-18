@@ -1,7 +1,7 @@
 ﻿' snippet code for \WSHttpBinding\WSHttpBinding.vb
 '<snippet0>
 
-Imports System
+
 Imports System.ServiceModel
 Imports System.Collections.Generic
 Imports System.IdentityModel.Tokens

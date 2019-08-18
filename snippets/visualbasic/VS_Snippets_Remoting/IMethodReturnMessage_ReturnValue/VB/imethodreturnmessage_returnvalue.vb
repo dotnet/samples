@@ -13,7 +13,7 @@
 ' The Invoke method calls properties of 'IMethodReturnMessage' interface and
 ' prints the values to the console.
 
-Imports System
+
 Imports System.Collections
 Imports System.Runtime.Serialization
 Imports System.Runtime.Remoting

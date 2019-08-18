@@ -13,7 +13,7 @@
 '   constructed and added to the ServiceCollection.
 '   The programs writes a new web service description file.
 
-Imports System
+
 Imports System.Web.Services.Description
 Imports System.Collections
 Imports System.Xml

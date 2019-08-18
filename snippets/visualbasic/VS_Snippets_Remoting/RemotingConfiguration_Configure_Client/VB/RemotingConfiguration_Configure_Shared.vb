@@ -1,5 +1,5 @@
 ﻿' This is the implementation class for the remote object.
-Imports System
+
 
 Public Class MyServerImpl
    Inherits MarshalByRefObject

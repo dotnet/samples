@@ -2,7 +2,7 @@
 ' System.Reflection.Emit.ModuleBuilder.DefineEnum
 
 ' <Snippet1>
-Imports System
+
 Imports System.Reflection
 Imports System.Reflection.Emit
 

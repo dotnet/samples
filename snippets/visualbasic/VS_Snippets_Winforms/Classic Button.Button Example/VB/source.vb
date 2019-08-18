@@ -1,7 +1,7 @@
 ﻿Option Explicit
 Option Strict
 
-Imports System
+
 Imports System.Windows.Forms
 
 Public Class Form1

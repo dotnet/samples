@@ -1,6 +1,6 @@
 ﻿'<snippet1>
 ' This code example demonstrates the Guid.NewGuid() method.
-Imports System
+
 
 Class Sample
     Public Shared Sub Main()

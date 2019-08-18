@@ -1,5 +1,5 @@
 ﻿' <Snippet6>
-Imports System
+
 
 Public Module Example
    Public Sub Main()

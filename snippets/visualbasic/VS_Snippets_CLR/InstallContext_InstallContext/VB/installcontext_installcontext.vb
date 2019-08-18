@@ -18,7 +18,7 @@
 '  also saves it to the specified log file.
 
 ' <Snippet1>
-Imports System
+
 Imports System.ComponentModel
 Imports System.Configuration.Install
 Imports System.Collections

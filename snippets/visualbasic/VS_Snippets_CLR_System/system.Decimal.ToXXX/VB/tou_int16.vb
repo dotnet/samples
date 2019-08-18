@@ -1,6 +1,6 @@
 ﻿'<Snippet3>
 ' Example of the Decimal.ToInt16 and Decimal.ToUInt16 methods.
-Imports System
+
 Imports Microsoft.VisualBasic
 
 Module DecimalToU_Int16Demo

@@ -1,6 +1,6 @@
 ﻿'<Snippet1>
 ' Example of the BitConverter.ToString( Byte( ) ) method.
-Imports System
+
 Imports Microsoft.VisualBasic
 
 Module BytesToStringDemo

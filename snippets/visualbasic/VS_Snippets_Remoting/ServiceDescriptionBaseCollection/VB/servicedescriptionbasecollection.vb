@@ -7,7 +7,7 @@
 '  'ServiceDescriptionBaseCollection' are passed to my method and modifications of
 '  corresponding  instances in done.
 
-Imports System
+
 Imports System.Web.Services.Description
 Imports System.Collections
 Imports System.Xml

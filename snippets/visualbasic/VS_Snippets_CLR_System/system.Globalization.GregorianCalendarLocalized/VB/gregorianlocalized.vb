@@ -1,7 +1,7 @@
 ﻿' The following code example prints a DateTime using a GregorianCalendar that is localized.
 
 ' <snippet1>
-Imports System
+
 Imports System.Globalization
 
 Public Class SamplesGregorianCalendar

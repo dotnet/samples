@@ -1,4 +1,4 @@
-﻿Imports System
+﻿
 Imports System.Web.Mail
 
 Namespace MyNameSpace

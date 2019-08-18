@@ -1,6 +1,6 @@
 ﻿' This sample demonstrates how to derive from the MaskGenerationMethod class.
 '<Snippet1>
-Imports System
+
 Imports System.Security.Cryptography
 
 '<Snippet2>

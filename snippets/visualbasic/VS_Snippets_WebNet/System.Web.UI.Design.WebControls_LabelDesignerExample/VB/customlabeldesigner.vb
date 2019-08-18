@@ -1,6 +1,6 @@
 ﻿' CustomLabelDesigner.vb
 ' <snippet1>
-Imports System
+
 Imports System.Web
 Imports System.ComponentModel
 Imports System.Web.UI.WebControls

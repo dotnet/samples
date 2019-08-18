@@ -23,7 +23,7 @@
 '    InstallUtil InstallEventArgs.exe
 
 ' <Snippet1>
-Imports System
+
 Imports System.ComponentModel
 Imports System.Collections
 Imports System.Configuration.Install

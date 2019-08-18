@@ -1,5 +1,5 @@
 ﻿'<Snippet1>
-Imports System
+
 Imports System.Management
 
 ' This sample demonstrates invoking a WMI method

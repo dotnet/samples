@@ -1,7 +1,7 @@
 ﻿' <snippet1>
 ' The following code example demonstrates several of the properties and methods of ListDictionary.
 
-Imports System
+
 Imports System.Collections
 Imports System.Collections.Specialized
 

@@ -1,6 +1,6 @@
 ﻿'<Snippet1>
 ' Example of the Decimal( Integer( ) ) constructor.
-Imports System
+
 Imports Microsoft.VisualBasic
 
 Module DecimalCtorIArrDemo

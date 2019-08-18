@@ -1,4 +1,4 @@
-﻿Imports System
+﻿
 
 ' <Snippet1>
 Public Class Base(Of TBase)

@@ -1,7 +1,7 @@
 ﻿' The following code example shows how HijriAdjustment affects the date.
 
 ' <snippet1>
-Imports System
+
 Imports System.Globalization
 
 Public Class SamplesHijriCalendar

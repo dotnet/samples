@@ -9,7 +9,7 @@
 ' port types collection of the service description. A modified WSDL 
 ' is the output of the program.
 
-Imports System
+
 Imports System.Web.Services
 Imports System.Web.Services.Description
 Imports System.Xml

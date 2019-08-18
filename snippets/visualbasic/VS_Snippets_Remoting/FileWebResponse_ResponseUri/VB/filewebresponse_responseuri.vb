@@ -4,7 +4,7 @@
 'It creates a FileWebRequest and queries for a response.It then displays the Uri of the file
 'system resource that provided the response.
 
-Imports System
+
 Imports System.Net
 Imports Microsoft.VisualBasic
 Imports System.Environment

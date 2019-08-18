@@ -1,6 +1,6 @@
 ﻿'<snippet1>
 ' Sample for Enum.ToString(String)
-Imports System
+
 
 Class Sample
    Enum Colors

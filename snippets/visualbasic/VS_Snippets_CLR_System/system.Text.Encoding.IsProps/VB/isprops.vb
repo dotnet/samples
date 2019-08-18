@@ -1,7 +1,7 @@
 ﻿' The following code example checks the values of the Boolean properties of each encoding.
 
 ' <Snippet1>
-Imports System
+
 Imports System.Text
 
 Public Class SamplesEncoding   

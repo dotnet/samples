@@ -6,7 +6,7 @@
 'The program stores a known set of credentials in a credential cache and removes a credential when it 
 'is no longer needed.
 
-Imports System
+
 Imports System.Net
 Imports Microsoft.VisualBasic
 Imports System.Environment

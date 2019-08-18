@@ -6,7 +6,7 @@
 ' removes the sign bit to yield a nonnegative number that cycles 
 ' between zero and Int32.MaxValue once every 24.9 days.
 
-Imports System
+
 
 Class Sample
    Public Shared Sub Main()

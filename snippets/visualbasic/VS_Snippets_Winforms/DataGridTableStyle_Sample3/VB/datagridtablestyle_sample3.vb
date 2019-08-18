@@ -7,7 +7,7 @@
 ' DataTable objects, and a DataRelation that relates the two tables. A button
 ' on the form changes the appearance of column headers on the grid.
 '
-Imports System
+
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel

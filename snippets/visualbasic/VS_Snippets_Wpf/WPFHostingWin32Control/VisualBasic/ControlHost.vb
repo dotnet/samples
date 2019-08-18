@@ -1,6 +1,6 @@
 ﻿#Region "Using directives"
 
-Imports System
+
 Imports System.Drawing
 Imports System.Windows
 Imports System.Windows.Controls

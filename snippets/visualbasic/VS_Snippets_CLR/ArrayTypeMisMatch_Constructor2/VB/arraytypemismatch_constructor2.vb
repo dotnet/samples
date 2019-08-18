@@ -7,7 +7,7 @@
 ' is caught in the calling method.
 ' <Snippet1>
 
-Imports System
+
 
 Public Class ArrayTypeMisMatchConst
 

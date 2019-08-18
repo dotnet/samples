@@ -8,7 +8,7 @@
 
 ' Use 'installutil' to run the assembly Installer_HelpText.exe.
 
-Imports System
+
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Configuration.Install

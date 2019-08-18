@@ -3,7 +3,7 @@ Option Strict On
 
 ' <Snippet2>
 Imports Microsoft.Win32.SafeHandles
-Imports System
+
 Imports System.ComponentModel
 Imports System.IO
 Imports System.Runtime.InteropServices

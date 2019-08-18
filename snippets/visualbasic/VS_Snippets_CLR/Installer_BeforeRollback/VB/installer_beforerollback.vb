@@ -7,7 +7,7 @@
 ' a message is displayed when the event occurs.   
 
 ' <Snippet1>
-Imports System
+
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Configuration.Install

@@ -3,7 +3,7 @@
 ' The following example demonstrates the 'Page' property
 ' of 'Control' Class. 
 
-Imports System
+
 Imports System.Web
 Imports System.Web.UI
 

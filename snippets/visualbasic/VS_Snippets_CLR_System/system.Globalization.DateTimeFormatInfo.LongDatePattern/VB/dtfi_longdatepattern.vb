@@ -1,7 +1,7 @@
 ﻿' The following code example displays the value of LongDatePattern for selected cultures.
 
 ' <snippet1>
-Imports System
+
 Imports System.Globalization
 
 Public Class SamplesDTFI

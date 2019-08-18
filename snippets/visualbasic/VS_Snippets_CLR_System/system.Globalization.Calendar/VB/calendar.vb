@@ -1,7 +1,7 @@
 ﻿' The following code example demonstrates the members of the Calendar class.
 
 ' <snippet1>
-Imports System
+
 Imports System.Globalization
 
 

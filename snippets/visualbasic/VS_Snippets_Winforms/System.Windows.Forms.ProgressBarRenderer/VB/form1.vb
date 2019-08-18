@@ -13,7 +13,7 @@
 ' For simplicity, this sampel does not handle run-time switching of visual styles.
 
 '<Snippet0>
-Imports System
+
 Imports System.Drawing
 Imports System.Windows.Forms
 Imports System.Windows.Forms.VisualStyles

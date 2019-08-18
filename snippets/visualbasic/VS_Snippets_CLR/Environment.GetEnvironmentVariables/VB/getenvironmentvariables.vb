@@ -1,6 +1,6 @@
 ﻿'<snippet1>
 ' Sample for the Environment.GetEnvironmentVariables method
-Imports System
+
 Imports System.Collections
 
 Class Sample

@@ -58,7 +58,7 @@
 ' *
 ' ****************************************************************************
 
-Imports System
+
 Imports System.Windows
 Imports System.Diagnostics
 Imports System.Windows.Automation

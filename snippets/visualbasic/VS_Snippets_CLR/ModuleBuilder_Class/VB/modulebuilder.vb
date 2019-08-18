@@ -6,7 +6,7 @@
 ' class and created class is called from the 'TestClass'.
 
 ' <Snippet1>
-Imports System
+
 Imports System.Reflection
 Imports System.Reflection.Emit
 Imports System.Security.Permissions

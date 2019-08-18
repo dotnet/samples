@@ -4,7 +4,7 @@
 '    a CompareInfo instance associated with the "Spanish - Spain" culture with traditional sort, and
 '    a CompareInfo instance associated with the InvariantCulture.
 
-Imports System
+
 Imports System.Globalization
 
 Public Class SamplesCompareInfo

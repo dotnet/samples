@@ -7,7 +7,7 @@
 ' is created in the module using the 'DefineGlobalMethod' method. The global method is called from
 ' the 'CallerClass'.
 
-Imports System
+
 Imports System.Reflection
 Imports System.Reflection.Emit
 

@@ -1,5 +1,5 @@
 ﻿' <Snippet1>
-Imports System
+
 
 Public Enum Color
     Red

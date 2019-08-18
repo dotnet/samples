@@ -9,7 +9,7 @@
 ' whose 'DidUnderstand' property is set to false and hence a 'SoapHeaderException'
 ' is thrown.
 
-Imports System
+
 
 Public Class MySoapHeader_EncodedMustUnderstand
     

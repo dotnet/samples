@@ -10,7 +10,7 @@
 ' A new Service object is constructed and added at index 1 of the Collection of Services.
 ' A new WSDL file is created as output.
 
-Imports System
+
 Imports System.Text
 Imports System.Web.Services.Description
 Imports System.Collections

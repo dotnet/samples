@@ -1,7 +1,7 @@
 ﻿' The following code example displays the values of several components of a DateTime in terms of the Gregorian calendar.
 
 ' <snippet1>
-Imports System
+
 Imports System.Globalization
 
 

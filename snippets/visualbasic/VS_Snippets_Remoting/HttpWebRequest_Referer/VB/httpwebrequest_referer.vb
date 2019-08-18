@@ -8,7 +8,7 @@
 '     the request to that server.Please refer to RFC 2616 for more information on HTTP Headers.
 '
 
-Imports System
+
 Imports System.IO
 Imports System.Net
 Imports System.Text

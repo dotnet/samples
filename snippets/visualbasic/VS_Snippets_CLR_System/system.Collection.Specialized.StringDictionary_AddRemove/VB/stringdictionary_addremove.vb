@@ -1,7 +1,7 @@
 ﻿' The following code example demonstrates how to add and remove elements from a StringDictionary.
 
 ' <snippet1>
-Imports System
+
 Imports System.Collections
 Imports System.Collections.Specialized
 

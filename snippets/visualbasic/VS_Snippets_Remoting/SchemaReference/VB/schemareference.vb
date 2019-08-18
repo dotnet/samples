@@ -18,7 +18,7 @@
 '  Note : The dataservice.xsd file should be copied to Inetpub\wwwroot
 
 ' <Snippet1> 
-Imports System
+
 Imports System.IO
 Imports System.Net
 Imports System.Xml

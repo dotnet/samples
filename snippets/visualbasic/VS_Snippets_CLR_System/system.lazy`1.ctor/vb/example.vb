@@ -1,5 +1,5 @@
 ﻿'<SnippetAll>
-Imports System
+
 Imports System.Threading
 
 Class Program

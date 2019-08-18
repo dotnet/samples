@@ -1,5 +1,5 @@
 ﻿' <snippet3>
-Imports System
+
 Imports System.Collections
 
 Public Class ExampleClass

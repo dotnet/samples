@@ -1,6 +1,6 @@
 ﻿' <Snippet4>
 ' StateManagedAuthorConverter.vb
-Imports System
+
 Imports System.ComponentModel
 Imports System.ComponentModel.Design.Serialization
 Imports System.Globalization

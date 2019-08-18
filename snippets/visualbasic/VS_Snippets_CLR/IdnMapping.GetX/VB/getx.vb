@@ -3,7 +3,7 @@
 ' For sake of illustration, this example uses the most complex
 ' form of those methods, not the most convenient.
 
-Imports System
+
 Imports System.Globalization
 
 Class Sample

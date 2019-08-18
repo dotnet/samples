@@ -4,7 +4,7 @@ Imports Windows.UI.Xaml.Navigation
 Imports System.Reflection
 Imports System.Globalization
 Imports System.Text
-Imports System
+
 
 Public NotInheritable Class MainPage
     Inherits Page

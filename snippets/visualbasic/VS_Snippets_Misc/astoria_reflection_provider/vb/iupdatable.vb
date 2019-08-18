@@ -2,7 +2,7 @@
 Option Strict On
 
 '<snippetCustomIUpdatable>
-Imports System
+
 Imports System.Collections
 Imports System.Reflection
 Imports System.Data.Services

@@ -1,6 +1,6 @@
 ﻿'<snippet1>
 ' Assembly building example in the .NET Framework.
-Imports System
+
 
 Namespace myStringer
     Public Class Stringer

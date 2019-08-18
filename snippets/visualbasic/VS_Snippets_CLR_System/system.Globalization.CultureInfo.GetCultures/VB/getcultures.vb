@@ -1,7 +1,7 @@
 ﻿' The following code example displays several properties of the neutral cultures.
 
 ' <snippet1>
-Imports System
+
 Imports System.Globalization
 
 Module Module1

@@ -3,7 +3,7 @@
 ' generated from this class ctrlBuildervb_1.dll.
 ' Create a namespace that contains two classes that inherit from the
 ' ControlBuilder class, MyItemControlBuilder and NoWhiteSpaceControlBuilder.
-Imports System
+
 Imports System.Collections
 Imports System.Web
 Imports System.Web.UI

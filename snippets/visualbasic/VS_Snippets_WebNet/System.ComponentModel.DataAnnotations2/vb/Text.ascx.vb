@@ -2,7 +2,7 @@
 ' C:\sdtree\Orcas\Web.NET\System.ComponentModel.DataAnnotations2
 '<snippet2>
 
-Imports System
+
 Imports System.Data
 Imports System.Configuration
 Imports System.Collections

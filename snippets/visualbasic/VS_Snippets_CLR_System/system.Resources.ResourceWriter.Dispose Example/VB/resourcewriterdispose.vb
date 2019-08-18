@@ -1,5 +1,5 @@
 ﻿'<snippet1>
-Imports System
+
 Imports System.Resources
 Imports System.IO
 

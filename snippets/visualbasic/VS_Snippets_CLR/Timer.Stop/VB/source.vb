@@ -3,7 +3,7 @@
 ' has been stopped. The object is to avoid race conditions.
 '
 '<Snippet1>
-Imports System
+
 Imports System.Timers
 Imports System.Threading
 

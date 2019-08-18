@@ -18,7 +18,7 @@
 ' <Snippet4>
 ' <Snippet5>
 ' <Snippet6>
-Imports System
+
 Imports System.Diagnostics
 
 Namespace MyDiagnostics

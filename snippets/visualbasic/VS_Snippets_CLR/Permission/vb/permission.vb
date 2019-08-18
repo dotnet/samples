@@ -1,7 +1,7 @@
 ﻿ ' Types:System.Security.IPermission Vendor:Richter
 ' Types:System.Security.ISecurityEncodable Vendor:Richter
 '<snippet1>
-Imports System
+
 Imports System.Security
 Imports System.Security.Permissions
 Imports System.Reflection

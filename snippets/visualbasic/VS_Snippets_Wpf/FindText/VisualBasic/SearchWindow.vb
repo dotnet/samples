@@ -32,7 +32,7 @@
 ' *
 ' *****************************************************************************************
 
-Imports System
+
 Imports System.Windows
 Imports System.Windows.Automation
 Imports System.Windows.Controls

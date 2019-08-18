@@ -1,6 +1,6 @@
 ﻿' BookType.vb
 Option Strict On
-Imports System
+
 
 Namespace Samples.AspNet.VB.Controls
     Public Enum BookType

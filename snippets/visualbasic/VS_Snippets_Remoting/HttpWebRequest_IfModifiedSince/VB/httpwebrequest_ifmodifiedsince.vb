@@ -9,7 +9,7 @@
 'else the response headers and the contents of the page of the requested Uri are printed to the Console.
 
 
-Imports System
+
 Imports System.Net
 Imports System.IO
 Imports System.Text

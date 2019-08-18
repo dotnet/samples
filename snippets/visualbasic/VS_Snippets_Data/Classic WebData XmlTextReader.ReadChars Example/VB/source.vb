@@ -1,5 +1,5 @@
 ﻿' <Snippet1>
-Imports System
+
 Imports System.Xml
 
 ' Reads an XML document using ReadChars

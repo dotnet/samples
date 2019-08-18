@@ -5,7 +5,7 @@
 ' of 'DataBindingHandlerAttribute' class. Then it displays the value of 'HandlerTypeName'
 ' property.
 
-Imports System
+
 Imports System.Web.UI
 Imports System.Web.UI.WebControls
 Imports System.Web.UI.Design

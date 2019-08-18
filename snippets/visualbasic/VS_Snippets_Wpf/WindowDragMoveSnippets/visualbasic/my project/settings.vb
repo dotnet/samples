@@ -9,7 +9,7 @@
 '------------------------------------------------------------------------------
 
 
-Imports System
+
 Namespace My
 	Partial Public Class Settings
 		Inherits System.Configuration.ApplicationSettingsBase

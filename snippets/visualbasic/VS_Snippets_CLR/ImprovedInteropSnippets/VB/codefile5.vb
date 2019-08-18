@@ -1,7 +1,7 @@
 ﻿' System.Runtime.InteropServices.TypeLibFuncAttribute
 ' System.Runtime.InteropServices.TypeLibFuncFlags
 ' <Snippet5>
-Imports System
+
 Imports System.Reflection
 Imports System.Runtime.InteropServices
 

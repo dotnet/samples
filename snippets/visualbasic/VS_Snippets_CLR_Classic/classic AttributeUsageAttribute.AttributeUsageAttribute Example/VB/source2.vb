@@ -1,5 +1,5 @@
 ﻿' <Snippet2>
-Imports System
+
 
 Namespace ExampleA
     ' <Snippet3>

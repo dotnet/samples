@@ -1,7 +1,7 @@
 ﻿' The following code example determines which cultures using the Chinese language are neutral cultures.
 
 ' <snippet1>
-Imports System
+
 Imports System.Globalization
 
 Module Module1

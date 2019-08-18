@@ -8,7 +8,7 @@
 '   of the control is obtained and all the files in the directory are 
 '   rendered onto the browser.
 
-Imports System
+
 Imports System.IO
 Imports System.Web
 Imports System.Web.Util

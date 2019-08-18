@@ -1,4 +1,4 @@
-﻿Imports System
+﻿
 
 Public Class TypedReferenceArray
         Shared Sub Main()

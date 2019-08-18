@@ -1,7 +1,7 @@
 ﻿' The following code example compares SortKey objects created with cultures that have different sort orders.
 
 ' <snippet1>
-Imports System
+
 Imports System.Globalization
 
 Public Class SamplesSortKey

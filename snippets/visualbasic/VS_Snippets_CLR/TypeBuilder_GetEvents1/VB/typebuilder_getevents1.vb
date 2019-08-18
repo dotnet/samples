@@ -5,7 +5,7 @@
 ' 'MouseUp' events on the type. Then displays all events to the Console.
 
 ' <Snippet1>
-Imports System
+
 Imports System.Threading
 Imports System.Reflection
 Imports System.Reflection.Emit

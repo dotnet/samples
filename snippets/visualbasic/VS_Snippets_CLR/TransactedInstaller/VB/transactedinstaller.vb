@@ -13,7 +13,7 @@
 ' If the '/?' or '/help' option is provided then the help information is
 ' printed to the console.
 
-Imports System
+
 Imports System.ComponentModel
 Imports System.Collections
 Imports System.Configuration.Install

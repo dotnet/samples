@@ -4,7 +4,7 @@
 'It creates a web request and queries for a response.It then displays 
 'all the response headers to the console. 
 
-Imports System
+
 Imports System.Net
 Imports Microsoft.VisualBasic
 Imports System.Environment

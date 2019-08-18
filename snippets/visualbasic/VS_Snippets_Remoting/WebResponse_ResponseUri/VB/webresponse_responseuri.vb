@@ -3,7 +3,7 @@
 'It creates a web request and queries for a response.
 'It then compares the ResponseUri value to the actual Url value to see if the original request was redirected
 
-Imports System
+
 Imports System.Net
 Imports System.IO
 Imports System.Text

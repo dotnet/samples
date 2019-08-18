@@ -1,4 +1,4 @@
-﻿Imports System
+﻿
 Imports System.CodeDom
 
 Public Class Class1

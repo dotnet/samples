@@ -1,5 +1,5 @@
 '<snippet3>
-Imports System
+
 
 Class ArgumentOutOfRangeExample
     Public Shared Sub Main()

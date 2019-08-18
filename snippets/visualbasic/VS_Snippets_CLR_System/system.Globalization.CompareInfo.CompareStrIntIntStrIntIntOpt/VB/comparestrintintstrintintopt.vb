@@ -1,7 +1,7 @@
 ﻿' The following code example compares portions of two strings using different CompareOptions settings.
 
 ' <snippet1>
-Imports System
+
 Imports System.Globalization
 
 Public Class SamplesCompareInfo

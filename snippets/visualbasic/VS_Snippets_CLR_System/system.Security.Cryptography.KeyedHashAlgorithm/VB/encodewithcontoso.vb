@@ -1,7 +1,7 @@
 ﻿' This sample class demonstrates how to use the ContosoKeyedHash class to
 ' compute Hash
 '<Snippet21>
-Imports System
+
 Imports System.IO
 Imports System.Text
 Imports System.Collections

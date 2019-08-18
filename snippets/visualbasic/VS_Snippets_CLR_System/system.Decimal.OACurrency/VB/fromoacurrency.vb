@@ -1,6 +1,6 @@
 ﻿'<Snippet2>
 ' Example of the Decimal.FromOACurrency method. 
-Imports System
+
 Imports Microsoft.VisualBasic
 
 Module DecimalFromOACurrencyDemo
