@@ -39,7 +39,7 @@ Public Class CookieExample
     
     			'<Snippet4>
     			' Show the string representation of the cookie.
-    			Console.WriteLine("String: {0}", cook.ToString())
+    			Console.WriteLine($"String: {cook}")
     			' </Snippet4>
     		Next
     	End Using
