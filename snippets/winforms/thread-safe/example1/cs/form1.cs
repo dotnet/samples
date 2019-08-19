@@ -47,7 +47,7 @@ public class InvokeThreadSafeForm : Form
         if (textBox1.InvokeRequired)
         {
             var d = new SafeCallDelegate(WriteTextSafe);
-            Invoke(d, new object[] { text });
+            textBox1.Invoke(d, new object[] { text });
         }
         else
         {
