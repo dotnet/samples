@@ -66,7 +66,7 @@ namespace WriteableBitmapDemo
                 unsafe
                 {
                     // Get a pointer to the back buffer.
-                    int pBackBuffer = (int)writeableBitmap.BackBuffer;
+                    IntPtr pBackBuffer = writeableBitmap.BackBuffer;
 
                     // Find the address of the pixel to draw.
                     pBackBuffer += row * writeableBitmap.BackBufferStride;
