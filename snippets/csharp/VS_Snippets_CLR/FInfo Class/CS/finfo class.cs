@@ -38,7 +38,7 @@ class Test
 
             // Copy the file.
             fi1.CopyTo(path2);
-            Console.WriteLine($"{path1} was copied to {path2}.");
+            Console.WriteLine($"{path} was copied to {path2}.");
 
             // Delete the newly created file.
             fi2.Delete();
