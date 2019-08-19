@@ -44,14 +44,10 @@ namespace Examples.System.Net.Cookies
     
                     //<Snippet4>
                     // Show the string representation of the cookie.
-                    Console.WriteLine ($"String: {cook.ToString()}");
+                    Console.WriteLine($"String: {cook}");
                     // </Snippet4>
                 }
             }
-            
-            
-
-
             // </Snippet3>
         }
         // </Snippet2>
