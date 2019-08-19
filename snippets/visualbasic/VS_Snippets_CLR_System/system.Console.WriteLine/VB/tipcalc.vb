@@ -4,7 +4,7 @@ Public Module TipCalculator
    
     Public Sub Main(args As String())
         Dim billTotal As Double
-        If (args.Length < 2) OrElse (Not Double.TryParse(args(1), billTotal)) Then
+        If (args.Length = 0) OrElse (Not Double.TryParse(args(0), billTotal)) Then
             Console.WriteLine("usage: TIPCALC total")
             Return
         End If
