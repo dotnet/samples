@@ -17,19 +17,19 @@ Public Class FormatConverter
             Else
                Console.Write(",")
             End If
-			' If the field represents a boolean, replace with a numeric representation.
+            ' If the field represents a boolean, replace with a numeric representation.
             Dim itemBool As Boolean
-			If Boolean.TryParse(item, itemBool)
-				Console.Write(Convert.ToByte(itemBool))
-			Else
-				Console.Write(item)
-			End If
+            If Boolean.TryParse(item, itemBool)
+                Console.Write(Convert.ToByte(itemBool))
+            Else
+                Console.Write(item)
+            End If
          Next
          Console.WriteLine()
          lineInput = Console.ReadLine()
       End While
-   End Sub 'Main
-End Class 'FormatConverter
+   End Sub
+End Class 
 ' </Snippet1>
 '
 'usage examples:
