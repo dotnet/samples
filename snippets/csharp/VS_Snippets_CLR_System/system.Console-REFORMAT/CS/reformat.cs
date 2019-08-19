@@ -21,6 +21,7 @@ public class FormatConverter
                     isFirstField = false;
                 else
                     Console.Write(',');
+                
                 // If the field represents a boolean, replace with a numeric representation.
 				bool itemBool;
 				if (Boolean.TryParse(item, out itemBool))
