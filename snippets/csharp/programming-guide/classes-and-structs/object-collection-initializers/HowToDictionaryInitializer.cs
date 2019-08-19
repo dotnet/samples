@@ -39,7 +39,7 @@ namespace object_collection_initializers
 
             foreach (var index in Enumerable.Range(111, 3))
             {
-                Console.WriteLine($"Student {index} is {students[index].FirstName} {students[index].LastName}");
+                Console.WriteLine($"Student {index} is {students2[index].FirstName} {students2[index].LastName}");
             }
         }
     }
