@@ -42,7 +42,7 @@ Public Class InvokeThreadSafeForm : Inherits Form
     Private Sub WriteTextSafe(text As String)
         If TextBox1.InvokeRequired Then
             Dim d As New SafeCallDelegate(AddressOf SetText)
-            Invoke(d, New Object() {text})
+            TextBox1.Invoke(d, New Object() {text})
         Else
             TextBox1.Text = text
         End If
