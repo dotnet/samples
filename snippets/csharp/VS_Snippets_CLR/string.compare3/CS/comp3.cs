@@ -1,9 +1,9 @@
-﻿//<snippet1>
-// Sample for String.Compare(String, Int32, String, Int32, Int32)
+﻿// Sample for String.Compare(String, Int32, String, Int32, Int32)
 using System;
 
 class Sample {
     public static void Main() {
+    //<snippet1>
 //                 0123456
     String str1 = "machine";
     String str2 = "device";
@@ -17,12 +17,13 @@ class Sample {
     Console.Write("Substring '{0}' in '{1}' is ", str1.Substring(2, 2), str1);
     Console.Write("{0} ", str);
     Console.WriteLine("substring '{0}' in '{1}'.", str2.Substring(0, 2), str2);
+
+    /*
+    This example produces the following results:
+
+    str1 = 'machine', str2 = 'device'
+    Substring 'ch' in 'machine' is less than substring 'de' in 'device'.
+    */
+    //</snippet1>
     }
 }
-/*
-This example produces the following results:
-
-str1 = 'machine', str2 = 'device'
-Substring 'ch' in 'machine' is less than substring 'de' in 'device'.
-*/
-//</snippet1>
