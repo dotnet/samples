@@ -1,9 +1,9 @@
-﻿// <Snippet1>
-using System;
+﻿using System;
 
 public class Sample
 {
    public static void Main() {
+      // <Snippet1>
       String myString = "abc";
       bool test1 = myString.Substring(2, 1).Equals("c"); // This is true.
       Console.WriteLine(test1);
@@ -16,11 +16,12 @@ public class Sample
       catch (ArgumentOutOfRangeException e) {
          Console.WriteLine(e.Message);
       }         
+
+      // The example displays the following output:
+      //       True
+      //       True
+      //       Index and length must refer to a location within the string.
+      //       Parameter name: length
+      // </Snippet1>
    }
 }
-// The example displays the following output:
-//       True
-//       True
-//       Index and length must refer to a location within the string.
-//       Parameter name: length
-// </Snippet1>
