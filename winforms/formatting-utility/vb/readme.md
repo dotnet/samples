@@ -5,9 +5,9 @@ products:
 - dotnet-core
 - windows
 page_type: sample
-name: ".NET Core WinForms Formatting Utility"
+name: ".NET Core WinForms Formatting Utility (Visual Basic)"
 urlFragment: "winforms-formatting-utility-vb"
-description: "A .NET Core Windows Forms application that allows you to apply standard or custom format strings.."
+description: "A .NET Core Windows Forms application written in Visual Basic that allows you to apply standard or custom format strings."
 ---
 # .NET Formatting Utility
 
@@ -44,8 +44,8 @@ The source code includes an MSBuild project file for Visual Basic (a .vbproj fil
 
 *Formatting* involves converting a value to its string representation. `ToString` methods that include a string parameter, [interpolated strings](https://docs.microsoft.com/dotnet/csharp/language-reference/tokens/interpolated), as well as the [composite formatting feature](https://docs.microsoft.com/dotnet/standard/base-types/composite-formatting) supported by such methods as [String.Format](https://docs.microsoft.com/dotnet/api/system.string.format), [StringBuilder.AppendFormat](https://docs.microsoft.com/dotnet/api/system.text.stringbuilder.appendformat), the [Console](https://docs.microsoft.com/dotnet/api/system.console) output methods, and the stream output methods give developers control over the string representations of numbers and dates. They allow such code as:
 
-```cs
-Console.WriteLine("{0:YYYY-MM-dd}", thisDate);
+```vb
+Console.WriteLine("{0:YYYY-MM-dd}", thisDate)
 ```
 
 Frequently, though, developers forget what standard and custom format specifiers are available, and they forget how a particular format string is reflected in the result string. The Format Utility (Formatter.exe) allows you to enter a source value, indicate whether it is a number or a date and time value, and select a standard format string from a drop-down list or enter a custom format string in a text box. By default, numbers and dates use the formatting conventions of the current culture, though you can also select a culture whose formatting conventions you'd like to use. A text box then displays the result string

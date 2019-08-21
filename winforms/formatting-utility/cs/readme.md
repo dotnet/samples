@@ -5,9 +5,9 @@ products:
 - dotnet-core
 - windows
 page_type: sample
-name: ".NET Core WinForms Formatting Utility"
+name: ".NET Core WinForms Formatting Utility (C#)"
 urlFragment: "winforms-formatting-utility-cs"
-description: "A .NET Core Windows Forms application that allows you to apply standard or custom format strings."
+description: "A .NET Core Windows Forms application written in C# that allows you to apply standard or custom format strings."
 ---
 
 # .NET Formatting Utility
