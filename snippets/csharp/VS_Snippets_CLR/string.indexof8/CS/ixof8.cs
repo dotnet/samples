@@ -1,13 +1,12 @@
-﻿//<snippet1>
-// Sample for String.IndexOf(String, Int32, Int32)
+﻿// Sample for String.IndexOf(String, Int32, Int32)
 using System;
 
 class Sample {
     public static void Main() {
-
-    string br1 = "0----+----1----+----2----+----3----+----4----+----5----+----6----+-";
-    string br2 = "0123456789012345678901234567890123456789012345678901234567890123456";
-    string str = "Now is the time for all good men to come to the aid of their party.";
+    //<snippet1>
+    string br1 = "0----+----1----+----2----+----3----+----4----+----5----+----6----+---";
+    string br2 = "012345678901234567890123456789012345678901234567890123456789012345678";
+    string str = "Now is the time for all good men to come to the aid of their country.";
     int start;
     int at;
     int end;
@@ -32,17 +31,18 @@ class Sample {
         start = at+1;
         }
     Console.WriteLine();
+
+    /*
+    This example produces the following results:
+
+    All occurrences of 'he' from position 33 to 66.
+    0----+----1----+----2----+----3----+----4----+----5----+----6----+---
+    012345678901234567890123456789012345678901234567890123456789012345678
+    Now is the time for all good men to come to the aid of their country.
+
+    The string 'he' occurs at position(s): 45 56
+
+    */
+    //</snippet1>
     }
 }
-/*
-This example produces the following results:
-
-All occurrences of 'he' from position 33 to 66.
-0----+----1----+----2----+----3----+----4----+----5----+----6----+-
-0123456789012345678901234567890123456789012345678901234567890123456
-Now is the time for all good men to come to the aid of their party.
-
-The string 'he' occurs at position(s): 45 56
-
-*/
-//</snippet1>

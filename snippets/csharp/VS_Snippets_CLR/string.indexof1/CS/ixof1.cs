@@ -1,13 +1,13 @@
-﻿//<snippet1>
-// Sample for String.IndexOf(Char, Int32)
+﻿// Sample for String.IndexOf(Char, Int32)
 using System;
 
 class Sample {
     public static void Main() {
 
-    string br1 = "0----+----1----+----2----+----3----+----4----+----5----+----6----+-";
-    string br2 = "0123456789012345678901234567890123456789012345678901234567890123456";
-    string str = "Now is the time for all good men to come to the aid of their party.";
+    //<snippet1>
+    string br1 = "0----+----1----+----2----+----3----+----4----+----5----+----6----+---";
+    string br2 = "012345678901234567890123456789012345678901234567890123456789012345678";
+    string str = "Now is the time for all good men to come to the aid of their country.";
     int start;
     int at;
 
@@ -26,17 +26,18 @@ class Sample {
         start = at+1;
         }
     Console.WriteLine();
+    
+    /*
+    This example produces the following results:
+
+    All occurrences of 't' from position 0 to 66.
+    0----+----1----+----2----+----3----+----4----+----5----+----6----+---
+    012345678901234567890123456789012345678901234567890123456789012345678
+    Now is the time for all good men to come to the aid of their country.
+
+    The letter 't' occurs at position(s): 7 11 33 41 44 55 65
+
+    */
+    //</snippet1>
     }
 }
-/*
-This example produces the following results:
-
-All occurrences of 't' from position 0 to 66.
-0----+----1----+----2----+----3----+----4----+----5----+----6----+-
-0123456789012345678901234567890123456789012345678901234567890123456
-Now is the time for all good men to come to the aid of their party.
-
-The letter 't' occurs at position(s): 7 11 33 41 44 55 64
-
-*/
-//</snippet1>
