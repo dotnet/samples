@@ -12,7 +12,7 @@ public class Example
                           RegexOptions.None, TimeSpan.FromMilliseconds(150));
       Match m = r.Match(url);
       if (m.Success)
-         Console.WriteLine(r.Match(url).Result("${proto}${port}")); 
+         Console.WriteLine(m.Result("${proto}${port}")); 
    }
 }
 // The example displays the following output:
