@@ -8,8 +8,6 @@
 ' because that's the only .NET language that can create
 ' optional parameters in managed code.
 
-Imports System
-
 Public Class MissingSample
     
     Public Shared Sub MyMethod(Optional k As Integer = 33)
