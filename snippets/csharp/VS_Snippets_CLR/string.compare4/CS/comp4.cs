@@ -1,11 +1,11 @@
 ﻿// Sample for String.Compare(String, Int32, String, Int32, Int32, Boolean)
+//<snippet1>
 using System;
 
 class Sample 
 {
     public static void Main() 
     {
-        //<snippet1>
         String str1 = "MACHINE";
         String str2 = "machine";
         String str;
@@ -38,6 +38,6 @@ class Sample
         Honor case:
         Substring 'CH' in 'MACHINE' is greater than substring 'ch' in 'machine'.
         */
-        //</snippet1>
     }
 }
+//</snippet1>
