@@ -1,5 +1,5 @@
-﻿// Sample for String.Compare(String, Int32, String, Int32, Int32, Boolean)
-//<snippet1>
+﻿//<snippet1>
+// Sample for String.Compare(String, Int32, String, Int32, Int32, Boolean)
 using System;
 
 class Sample 
