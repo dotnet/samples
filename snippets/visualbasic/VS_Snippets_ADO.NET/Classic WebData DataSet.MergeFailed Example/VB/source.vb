@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 
 public class Sample
 	public Shared Sub Main()
