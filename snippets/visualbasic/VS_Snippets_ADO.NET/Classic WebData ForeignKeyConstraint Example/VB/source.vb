@@ -1,6 +1,5 @@
 ﻿Option Explicit On
 Option Strict On
-Imports System
 Imports System.Data
 
 Module Module1

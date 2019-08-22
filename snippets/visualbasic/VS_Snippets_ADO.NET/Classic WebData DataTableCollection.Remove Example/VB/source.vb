@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 
 Module DataTableCollectionRemove
 ' <Snippet1>
