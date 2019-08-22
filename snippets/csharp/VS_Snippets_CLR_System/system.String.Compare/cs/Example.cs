@@ -1,11 +1,11 @@
-﻿using System;
+﻿// <Snippet1>
+using System;
 using System.Globalization;
 
 public class Example
 {
     public static void Main()
     {
-        // <Snippet1>
         string string1 = "brother";
         string string2 = "Brother";
         string relation;
@@ -53,6 +53,6 @@ public class Example
         //    'brother' comes before 'Brother'.   
         //    'brother' is the same as 'Brother'.
         //    'brother' comes after 'Brother'.
-        // </Snippet1>
     }
 }
+// </Snippet1>
