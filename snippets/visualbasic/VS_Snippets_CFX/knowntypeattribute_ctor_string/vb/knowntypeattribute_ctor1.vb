@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.IO
+﻿Imports System.IO
 Imports System.Runtime.Serialization
 Imports System.Security.Permissions
 <assembly: SecurityPermission(SecurityAction.RequestMinimum, Execution := True)>

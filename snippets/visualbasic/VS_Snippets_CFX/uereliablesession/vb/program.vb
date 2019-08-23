@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.ServiceModel
+﻿Imports System.ServiceModel
 Imports System.ServiceModel.Channels
 
 Namespace test

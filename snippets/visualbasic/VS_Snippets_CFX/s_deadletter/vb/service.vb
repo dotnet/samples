@@ -1,7 +1,5 @@
 ﻿'  Copyright (c) Microsoft Corporation.  All Rights Reserved.
 
-Imports System
-
 Imports System.ServiceModel.Channels
 Imports System.Configuration
 'using System.Messaging;

@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Configuration
+﻿Imports System.Configuration
 Imports System.ServiceModel
 
 Namespace Microsoft.ServiceModel.Samples
