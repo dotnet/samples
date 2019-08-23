@@ -14,8 +14,6 @@
 '-----------------------------------------------------------------------
 
 Imports System.Transactions
-Imports System
-
 Namespace Microsoft.Samples
 
 	Public NotInheritable Class VolatileEnlist

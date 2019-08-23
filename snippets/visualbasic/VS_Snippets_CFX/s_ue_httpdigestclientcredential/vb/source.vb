@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Runtime.Serialization
+﻿Imports System.Runtime.Serialization
 Imports System.ServiceModel
 Imports System.ServiceModel.Security
 Imports System.ServiceModel.Description

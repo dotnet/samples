@@ -8,7 +8,6 @@
 ' </auto-generated>
 '------------------------------------------------------------------------------
 
-Imports System
 <System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0"), System.ServiceModel.ServiceContractAttribute(Namespace:="http://microsoft.wcf.documentation", ConfigurationName:="ISampleService")> _
 Public Interface ISampleService
 

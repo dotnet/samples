@@ -1,6 +1,5 @@
 ﻿' <snippet5>
 
-Imports System
 Imports System.ServiceModel
 Imports System.ServiceModel.Channels
 Imports System.ServiceModel.Configuration
