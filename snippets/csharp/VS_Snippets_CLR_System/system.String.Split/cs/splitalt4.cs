@@ -15,9 +15,11 @@ public class Example
       int position = 0;
       int start = 0;
       // Extract sentences from the string.
-      do {
+      do 
+      {
          position = value.IndexOf('.', start);
-         if (position >= 0) {
+         if (position >= 0) 
+         {
             sentences.Add(value.Substring(start, position - start + 1).Trim());
             start = position + 1;
          }
@@ -26,6 +28,7 @@ public class Example
       // Display the sentences.
       foreach (var sentence in sentences)
          Console.WriteLine(sentence);
+
       // The example displays the following output:
       //       This is the first sentence in a string.
       //       More sentences will follow.
