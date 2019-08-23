@@ -1,6 +1,4 @@
-﻿//<snippet1>
-using System;
-
+﻿using System;
 
 namespace String_Example
 {
@@ -8,6 +6,7 @@ namespace String_Example
     {
         public static void Main()
         {
+            //<snippet1>
             // Create a string that will be trimmed.
             string path = "c:/temp//";
 
@@ -27,13 +26,14 @@ namespace String_Example
             string trimmedWhiteSpace = pathWhitespace.TrimEnd(null);
 
             Console.WriteLine("The trimmed value is: {0}.", trimmedWhiteSpace);
+
+            // This code example displays the following
+            // to the console:
+            //
+            // The trimmed value is: c:/temp.
+            // The trimmed value is: c:/temp/.
+            //</snippet1>
         }
 
     }
 }
-// This code example displays the following
-// to the console:
-//
-// The trimmed value is: c:/temp.
-// The trimmed value is: c:/temp/.
-//</snippet1>

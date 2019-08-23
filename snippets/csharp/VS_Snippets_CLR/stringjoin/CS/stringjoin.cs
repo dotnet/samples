@@ -1,17 +1,18 @@
 ﻿//<snippet1>
 using System;
 
-public class JoinTest {
-    public static void Main() {
-
+public class JoinTest 
+{
+    public static void Main() 
+    {
         Console.WriteLine(MakeLine(0, 5, ", "));
         Console.WriteLine(MakeLine(1, 6, "  "));
         Console.WriteLine(MakeLine(9, 9, ": "));
         Console.WriteLine(MakeLine(4, 7, "< "));
     }
 
-    private static string MakeLine(int initVal, int multVal, string sep) {
-
+    private static string MakeLine(int initVal, int multVal, string sep) 
+    {
         string [] sArr = new string [10];
 
         for (int i = initVal; i < initVal + 10; i++)

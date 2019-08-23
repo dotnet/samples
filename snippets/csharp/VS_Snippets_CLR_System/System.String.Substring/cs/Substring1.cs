@@ -7,7 +7,8 @@ public class Example
         // <Snippet1>
         String[] pairs = { "Color1=red", "Color2=green", "Color3=blue",
                          "Title=Code Repository" };
-        foreach (var pair in pairs) {
+        foreach (var pair in pairs) 
+        {
             int position = pair.IndexOf("=");
             if (position < 0)
                 continue;
