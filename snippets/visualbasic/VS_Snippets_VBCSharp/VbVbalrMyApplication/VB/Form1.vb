@@ -3,7 +3,7 @@ Option Strict On
 
 Public Class Form1
 
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
         Dim start As New Threading.ThreadStart(AddressOf launch)
         Dim t As System.Threading.Thread
         t = New System.Threading.Thread(start)
@@ -11,12 +11,12 @@ Public Class Form1
 
     End Sub
 
-    Public Shared Sub MsgBox(ByVal s As String)
+    Public Shared Sub MsgBox(s As String)
         Form1.TextBox1.Text &= s & vbCrLf
         Microsoft.VisualBasic.MsgBox(s)
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
         testAppInfo()
     End Sub
 
@@ -64,14 +64,14 @@ Public Class Form1
 
     '<snippet12>
     Private Sub InitializeSaveMySettingsOnExit()
-        SaveMySettingsOnExit.Checked = 
+        SaveMySettingsOnExit.Checked =
             My.Application.SaveMySettingsOnExit
     End Sub
-    Private Sub SaveMySettingsOnExit_CheckedChanged( 
-        ByVal sender As System.Object, 
-        ByVal e As System.EventArgs 
+    Private Sub SaveMySettingsOnExit_CheckedChanged(
+        sender As System.Object,
+        e As System.EventArgs
     ) Handles SaveMySettingsOnExit.CheckedChanged
-        My.Application.SaveMySettingsOnExit = 
+        My.Application.SaveMySettingsOnExit =
             SaveMySettingsOnExit.Checked
     End Sub
     '</snippet12>
@@ -112,8 +112,8 @@ Public Class Form1
             Form1.ListBox1.DataSource = formTitles
         End Sub
 
-        Private Delegate Function GetFormTitleDelegate(ByVal f As Form) As String
-        Private Function GetFormTitle(ByVal f As Form) As String
+        Private Delegate Function GetFormTitleDelegate(f As Form) As String
+        Private Function GetFormTitle(f As Form) As String
             ' Check if the form can be accessed from the current thread.
             If Not f.InvokeRequired Then
                 ' Access the form directly.
@@ -161,7 +161,7 @@ Public Class Form1
     End Class
 
     ' This is called by snippet 9, the NetworkAvailabiliyChanges event.
-    Public Sub SetConnectionStatus(ByVal x As Boolean)
+    Public Sub SetConnectionStatus(x As Boolean)
         MsgBox("Network: " & x)
     End Sub
 
@@ -291,13 +291,13 @@ Public Class Form1
 
         Dim Label1 As New Label
         ' <snippet50>
-        Private Sub DisplayAvailability(ByVal available As Boolean)
+        Private Sub DisplayAvailability(available As Boolean)
             Label1.Text = available.ToString
         End Sub
 
-        Private Sub MyComputerNetwork_NetworkAvailabilityChanged( 
-            ByVal sender As Object, 
-            ByVal e As Devices.NetworkAvailableEventArgs)
+        Private Sub MyComputerNetwork_NetworkAvailabilityChanged(
+            sender As Object,
+            e As Devices.NetworkAvailableEventArgs)
 
             DisplayAvailability(e.IsNetworkAvailable)
         End Sub
