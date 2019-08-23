@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data.Odbc
+﻿Imports System.Data.Odbc
 
 Module Module1
 
