@@ -204,3 +204,4 @@ _dependentPackages/
 
 # Visual Studio Code
 .vscode/
+/winforms/formatting-utility/vb/FormatUtility.sln
