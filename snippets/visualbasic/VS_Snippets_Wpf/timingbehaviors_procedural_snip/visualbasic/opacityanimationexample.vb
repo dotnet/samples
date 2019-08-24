@@ -26,15 +26,17 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			Me.WindowTitle = "Opacity Animation Example"
 			Me.Background = Brushes.White
 
-			Dim myStackPanel As New StackPanel()
-			myStackPanel.Margin = New Thickness(20)
+            Dim myStackPanel As New StackPanel With {
+                .Margin = New Thickness(20)
+            }
 
-			'
-			'  Clicking on this button animates its opacity.
-			'
-			Dim opacityAnimatedButton As New Button()
-			opacityAnimatedButton.Name = "opacityAnimatedButton"
-			Me.RegisterName(opacityAnimatedButton.Name, opacityAnimatedButton)
+                '
+                '  Clicking on this button animates its opacity.
+                '
+            Dim opacityAnimatedButton As New Button With {
+                .Name = "opacityAnimatedButton"
+            }
+            Me.RegisterName(opacityAnimatedButton.Name, opacityAnimatedButton)
 			opacityAnimatedButton.Content = "A Button"
 			myStackPanel.Children.Add(opacityAnimatedButton)
 
@@ -59,22 +61,24 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			'  Create EventTriggers and a BeginStoryboard action to start
 			'  the storyboard
 			Dim myOpacityBeginStoryboard As New BeginStoryboard()
-			Dim myOpacityEventTrigger As New EventTrigger()
-			myOpacityEventTrigger.RoutedEvent = Button.ClickEvent
-			myOpacityEventTrigger.SourceName = opacityAnimatedButton.Name
-			myStackPanel.Triggers.Add(myOpacityEventTrigger)
+            Dim myOpacityEventTrigger As New EventTrigger With {
+                .RoutedEvent = Button.ClickEvent,
+                .SourceName = opacityAnimatedButton.Name
+            }
+            myStackPanel.Triggers.Add(myOpacityEventTrigger)
 
 			myOpacityBeginStoryboard.Storyboard = myOpacityStoryboard
 			myOpacityEventTrigger.Actions.Add(myOpacityBeginStoryboard)
 
 
 
-			'
-			'  Clicking on this button animates the opacity of the brush used to paint the background.
-			'
-			Dim opacityBrushPaintedButton As New Button()
-			opacityBrushPaintedButton.Name = "opacityBrushPaintedButton"
-			Me.RegisterName(opacityBrushPaintedButton.Name, opacityBrushPaintedButton)
+            '
+            '  Clicking on this button animates the opacity of the brush used to paint the background.
+            '
+            Dim opacityBrushPaintedButton As New Button With {
+                .Name = "opacityBrushPaintedButton"
+            }
+            Me.RegisterName(opacityBrushPaintedButton.Name, opacityBrushPaintedButton)
 			opacityBrushPaintedButton.Content = "A Button"
 			Dim mySolidColorBrush As New SolidColorBrush()
 			Me.RegisterName("mySolidColorBrush", mySolidColorBrush)
@@ -101,10 +105,11 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			'  Create EventTriggers and a BeginStoryboard action to start
 			'  the storyboard
 			Dim myBackgroundOpacityBeginStoryboard As New BeginStoryboard()
-			Dim myBackgroundOpacityEventTrigger As New EventTrigger()
-			myBackgroundOpacityEventTrigger.RoutedEvent = Button.ClickEvent
-			myBackgroundOpacityEventTrigger.SourceName = opacityBrushPaintedButton.Name
-			myStackPanel.Triggers.Add(myBackgroundOpacityEventTrigger)
+            Dim myBackgroundOpacityEventTrigger As New EventTrigger With {
+                .RoutedEvent = Button.ClickEvent,
+                .SourceName = opacityBrushPaintedButton.Name
+            }
+            myStackPanel.Triggers.Add(myBackgroundOpacityEventTrigger)
 
 			myBackgroundOpacityBeginStoryboard.Storyboard = myBackgroundOpacityStoryboard
 			myBackgroundOpacityEventTrigger.Actions.Add(myBackgroundOpacityBeginStoryboard)

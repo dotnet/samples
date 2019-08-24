@@ -49,28 +49,28 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			End Set
 		End Property
 
-		Private Sub onClockTimeInvalidated(ByVal sender As Object, ByVal args As EventArgs)
-			SetValue(CurrentTimeProperty, theClock.CurrentTime)
-		End Sub
+        Private Sub onClockTimeInvalidated(sender As Object, args As EventArgs)
+            SetValue(CurrentTimeProperty, theClock.CurrentTime)
+        End Sub
 
-		Public Shared ReadOnly CurrentTimeProperty As DependencyProperty = DependencyProperty.Register("CurrentTime", GetType(TimeSpan?), GetType(ElapsedTimeControl), New FrameworkPropertyMetadata(CType(Nothing, TimeSpan?), New PropertyChangedCallback(AddressOf currentTime_Changed)))
+        Public Shared ReadOnly CurrentTimeProperty As DependencyProperty = DependencyProperty.Register("CurrentTime", GetType(TimeSpan?), GetType(ElapsedTimeControl), New FrameworkPropertyMetadata(CType(Nothing, TimeSpan?), New PropertyChangedCallback(AddressOf currentTime_Changed)))
 
 
-		Private Shared Sub currentTime_Changed(ByVal d As DependencyObject, ByVal args As DependencyPropertyChangedEventArgs)
-			'((ElapsedTimeControl)d).onCurrentTimeChanged(oldValue, newValue)
-		End Sub
+        Private Shared Sub currentTime_Changed(d As DependencyObject, args As DependencyPropertyChangedEventArgs)
+            '((ElapsedTimeControl)d).onCurrentTimeChanged(oldValue, newValue)
+        End Sub
 
-		Private Sub onCurrentTimeChanged(ByVal oldValue As Object, ByVal newValue As Object)
-			If previousTime IsNot Nothing AndAlso (CType(previousTime, TimeSpan)).Milliseconds <> (CType(theClock.CurrentTime, TimeSpan)).Milliseconds Then
-				SetValue(CurrentTimeAsStringProperty, theClock.CurrentTime.ToString())
-				previousTime = CType(theClock.CurrentTime, TimeSpan)
-			ElseIf previousTime Is Nothing Then
-				SetValue(CurrentTimeAsStringProperty, theClock.CurrentTime.ToString())
-				previousTime = CType(theClock.CurrentTime, TimeSpan)
-			End If
+        Private Sub onCurrentTimeChanged(_0 As Object, _1 As Object)
+            If previousTime IsNot Nothing AndAlso (CType(previousTime, TimeSpan)).Milliseconds <> (CType(theClock.CurrentTime, TimeSpan)).Milliseconds Then
+                SetValue(CurrentTimeAsStringProperty, theClock.CurrentTime.ToString())
+                previousTime = CType(theClock.CurrentTime, TimeSpan)
+            ElseIf previousTime Is Nothing Then
+                SetValue(CurrentTimeAsStringProperty, theClock.CurrentTime.ToString())
+                previousTime = CType(theClock.CurrentTime, TimeSpan)
+            End If
 
-		End Sub
+        End Sub
 
-		Public Shared ReadOnly CurrentTimeAsStringProperty As DependencyProperty = DependencyProperty.Register("CurrentTimeAsString", GetType(String), GetType(ElapsedTimeControl))
+        Public Shared ReadOnly CurrentTimeAsStringProperty As DependencyProperty = DependencyProperty.Register("CurrentTimeAsString", GetType(String), GetType(ElapsedTimeControl))
 	End Class
 End Namespace
