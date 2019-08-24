@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data.Objects.DataClasses
+﻿Imports System.Data.Objects.DataClasses
 
 Module Module1
 

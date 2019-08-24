@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
- Imports System
- Imports System.Xml
+  Imports System.Xml
  Imports Microsoft.VisualBasic
  
  public class Sample 
