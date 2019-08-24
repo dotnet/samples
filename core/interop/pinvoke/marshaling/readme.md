@@ -1,7 +1,7 @@
 .NET Core PInvoke Marshaling Sample
 ================
 
-This project demonstrates different ways to marshal arguments to native function when using PInvokes. Documentation can be found here for [PInvokes](https://docs.microsoft.com/en-us/dotnet/standard/native-interop/pinvoke) and here for the [Type marshaling](https://docs.microsoft.com/en-us/dotnet/standard/native-interop/type-marshaling).
+This project demonstrates different ways to marshal arguments to native function when using PInvokes. Documentation can be found here for [PInvokes](https://docs.microsoft.com/dotnet/standard/native-interop/pinvoke) and here for the [Type marshaling](https://docs.microsoft.com/dotnet/standard/native-interop/type-marshaling).
 
 Prerequisites
 ------------
