@@ -1,6 +1,4 @@
-﻿Imports System
-
-Class GuidList
+﻿Class GuidList
     Private Sub New()
     End Sub
 
