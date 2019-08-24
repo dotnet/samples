@@ -3,7 +3,6 @@
 ' A new 'WebRequest' object is created.The (name,value) collection of the HTTP Headers are displayed to the
 ' console.The contents of the HTML page of the requested URI are displayed to the console. 
 
-Imports System
 Imports System.IO
 Imports System.Net
 Imports System.Text

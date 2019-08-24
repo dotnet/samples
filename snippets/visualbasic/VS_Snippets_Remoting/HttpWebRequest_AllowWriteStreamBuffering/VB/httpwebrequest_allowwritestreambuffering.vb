@@ -15,7 +15,6 @@
 ' Note:This program posts data to the Uri : http://www20.brinkster.com/codesnippets/next.asp.
 
 
-Imports System
 Imports System.IO
 Imports System.Net
 Imports System.Text

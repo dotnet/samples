@@ -6,7 +6,6 @@
 'A new Proxy object is then constructed from the inputs.
 'Then the 'Proxy' property of the request is associated with the new Proxy object constructed
 
-Imports System
 Imports System.IO
 Imports System.Net
 Imports System.Text

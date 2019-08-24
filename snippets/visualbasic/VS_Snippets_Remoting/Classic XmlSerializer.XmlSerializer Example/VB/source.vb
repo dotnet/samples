@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 'Beginning of the HighSchool.dll 
-Imports System
 Imports System.IO
 Imports System.Xml
 Imports System.Xml.Serialization

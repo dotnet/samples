@@ -8,7 +8,6 @@
 ' attributes in the 'ServiceDescription' instance.
 
 ' <Snippet1>
-Imports System
 Imports System.Web.Services.Description
 Imports System.Collections
 Imports System.Xml

@@ -5,7 +5,6 @@
 'This response stream is piped to a higher level stream reader. The reader reads 256 characters at a time ,
 ' writes them into a string and then displays the string in the console
 
-Imports System
 Imports System.Net
 Imports System.IO
 Imports System.Text

@@ -7,7 +7,6 @@
 ' 
 '  While running this program make sure to refer the 'Authorization_Construstor3.dll'
 ' 
-Imports System
 Imports System.Net
 Imports System.Text
 Imports System.IO

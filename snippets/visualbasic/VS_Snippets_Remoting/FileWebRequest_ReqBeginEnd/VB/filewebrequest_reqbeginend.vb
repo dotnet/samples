@@ -7,7 +7,6 @@
 ' a stream object is obtained which is used to write into the file.
 
 
-Imports System
 Imports System.Net
 Imports System.IO
 Imports System.Text

@@ -7,7 +7,6 @@
 ' sample discovery document is read and the method 'download'
 ' is applied on it.
 
-Imports System
 Imports System.Net
 Imports System.IO
 Imports System.Security.Permissions

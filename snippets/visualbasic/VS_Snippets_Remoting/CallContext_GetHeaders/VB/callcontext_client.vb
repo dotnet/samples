@@ -11,7 +11,6 @@
 ' Headers are set in 'HeaderMethod' of remote object using 'SetHeaders' method.
 ' Finally the 'GetHeaders' method is used to get all headers.
 
-Imports System
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Channels
 Imports System.Runtime.Remoting.Channels.Tcp

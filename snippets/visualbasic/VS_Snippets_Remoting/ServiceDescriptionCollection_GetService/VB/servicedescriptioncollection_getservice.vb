@@ -10,7 +10,6 @@
 ' files to be placed in same directory as that of .exe for running.
 
 
-Imports System
 Imports System.Xml
 Imports System.Web.Services.Description
 

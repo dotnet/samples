@@ -13,7 +13,6 @@
 ' security mechanisms, such as SSL, when transferring sensitive information.
 
 
-Imports System
 Imports System.Net
 Imports System.IO
 Imports System.Text

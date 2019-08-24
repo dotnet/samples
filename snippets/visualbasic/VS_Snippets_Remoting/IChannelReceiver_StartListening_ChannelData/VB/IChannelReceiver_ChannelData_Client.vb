@@ -1,6 +1,5 @@
 ﻿' This program acts as a client and calls the remote method 'HelloMethod'.
 
-Imports System
 Imports System.Net
 Imports System.Collections.Specialized
 Imports System.Runtime.Remoting.Channels

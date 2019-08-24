@@ -7,7 +7,6 @@
 'The changed Version and the 'ProtocolVersion' of the response object are displayed.
 '
 
-Imports System
 Imports System.IO
 Imports System.Net
 Imports Microsoft.VisualBasic

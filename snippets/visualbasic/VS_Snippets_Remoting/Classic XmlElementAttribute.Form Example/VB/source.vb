@@ -1,7 +1,6 @@
 ﻿Option Explicit
 Option Strict
 
-Imports System
 Imports System.IO
 Imports System.Xml
 Imports System.Xml.Schema

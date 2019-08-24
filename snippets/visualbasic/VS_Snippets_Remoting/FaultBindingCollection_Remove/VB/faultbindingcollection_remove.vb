@@ -5,7 +5,6 @@
 ' * The program reverses the fault bindings that appear in the WSDL file. It also reverses
 ' * the operation faults and displays the resultant WSDL file to the console.
 ' *
-Imports System
 Imports System.Web.Services.Description
 
 

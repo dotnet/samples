@@ -7,7 +7,6 @@
 ' out.
 
 ' <Snippet1>
-Imports System
 Imports System.Web.Services.Description
 Imports System.Xml
 Imports System.Xml.Schema

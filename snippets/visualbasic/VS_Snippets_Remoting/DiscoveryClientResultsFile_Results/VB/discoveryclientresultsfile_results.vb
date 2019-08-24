@@ -10,7 +10,6 @@
 ' all valid references of the discovery document 'MathService.vsdisco'.
 
 ' <Snippet1>
-Imports System
 Imports System.Web.Services.Discovery
 Imports System.Net
 Imports System.Xml

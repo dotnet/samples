@@ -10,7 +10,6 @@
 ' string passed from the client to the string "Hi There" and returns the
 ' resulting string back to the client.
 
-Imports System
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Channels
 Imports System.Runtime.Remoting.Channels.Tcp
