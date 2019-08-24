@@ -6,7 +6,6 @@
 ' Page.Validators in Page_Load method and validates the
 ' TextBox on clicking the Submit button.
 
-Imports System
 Imports System.Web
 Imports System.Web.UI
 Imports System.Web.UI.WebControls

@@ -3,7 +3,6 @@
 ' which is created for every instance of a child element with its name
 ' declared in a page associated with this namespace, the other, Employees,
 ' which contains these child elements.
-Imports System
 Imports System.Collections
 Imports System.Drawing
 Imports System.Web

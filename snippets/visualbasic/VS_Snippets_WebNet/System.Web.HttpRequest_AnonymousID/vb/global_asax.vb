@@ -1,6 +1,4 @@
 ﻿Imports Microsoft.VisualBasic
-Imports System
-
 Public Class global_asax
 
     ' <snippet2>

@@ -1,5 +1,4 @@
 ﻿' <snippet1>
-Imports System
 Imports System.Web
 Imports System.Drawing
 Imports System.Web.UI.WebControls
