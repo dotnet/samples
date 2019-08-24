@@ -1,6 +1,4 @@
 ﻿'<Snippet1>
-Imports System
-
 Namespace Samples
 
     Public Interface Book      ' Violates this rule

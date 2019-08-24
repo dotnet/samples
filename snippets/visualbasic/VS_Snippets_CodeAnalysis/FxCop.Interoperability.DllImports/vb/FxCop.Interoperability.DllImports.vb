@@ -1,6 +1,4 @@
 ﻿'<Snippet1>
-Imports System
-
 NameSpace MSInternalLibrary
 
 ' Violates rule: PInvokesShouldNotBeVisible.
