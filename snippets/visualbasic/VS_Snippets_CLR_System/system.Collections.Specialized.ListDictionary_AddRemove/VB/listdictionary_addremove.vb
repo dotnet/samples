@@ -1,7 +1,6 @@
 ﻿' The following code example adds to and removes elements from a ListDictionary.
 
 ' <snippet1>
-Imports System
 Imports System.Collections
 Imports System.Collections.Specialized
 

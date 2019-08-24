@@ -1,6 +1,4 @@
 ﻿' <Snippet6>
-Imports System
-
 Public Module Example
    Public Sub Main()
       Dim s1 As String = "We went to a bookstore, "

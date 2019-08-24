@@ -1,7 +1,4 @@
 ﻿'<snippet1>
-Imports System
-
-
 Module Application
 
     Sub Main()

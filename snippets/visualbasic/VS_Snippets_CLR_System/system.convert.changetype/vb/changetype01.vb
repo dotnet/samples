@@ -1,6 +1,4 @@
 ﻿' <Snippet2>
-Imports System
-
 Public Class ChangeTypeTest
     
     Public Shared Sub Main()

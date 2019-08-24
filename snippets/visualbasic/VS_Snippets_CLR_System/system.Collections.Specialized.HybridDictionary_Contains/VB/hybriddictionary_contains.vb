@@ -1,7 +1,6 @@
 ﻿' The following code example searches for an element in a HybridDictionary.
 
 ' <snippet1>
-Imports System
 Imports System.Collections
 Imports System.Collections.Specialized
 

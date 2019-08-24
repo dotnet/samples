@@ -1,7 +1,6 @@
 ﻿' The following code example adds to and removes elements from a HybridDictionary.
 
 ' <snippet1>
-Imports System
 Imports System.Collections
 Imports System.Collections.Specialized
 

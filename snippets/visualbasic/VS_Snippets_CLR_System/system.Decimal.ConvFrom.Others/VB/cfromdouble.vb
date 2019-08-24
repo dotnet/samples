@@ -1,6 +1,5 @@
 ﻿'<Snippet2>
 ' Example of the explicit conversion from Double to Decimal.
-Imports System
 Imports Microsoft.VisualBasic
 
 Module DecimalFromDoubleDemo

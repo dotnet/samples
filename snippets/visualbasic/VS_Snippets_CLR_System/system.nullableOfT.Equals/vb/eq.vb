@@ -2,8 +2,6 @@
 ' This code example demonstrates the Nullable(Of T).Equals 
 ' methods.
 
-Imports System
-
 Class Sample
     Public Shared Sub Main() 
         Dim nullInt1 As Nullable(Of Integer) = 100 

@@ -1,7 +1,6 @@
 ﻿' The following code example changes the casing of a string.
 
 ' <snippet1>
-Imports System
 Imports System.Globalization
 
 Public Class SamplesTextInfo

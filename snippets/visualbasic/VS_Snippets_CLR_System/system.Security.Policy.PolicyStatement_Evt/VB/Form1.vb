@@ -1,7 +1,6 @@
 ﻿' This sample demonstrates how to call each member of the PolicyStatement
 ' class.
 '<Snippet1>
-Imports System
 Imports System.Security
 Imports System.Security.Policy
 Imports System.Security.Principal

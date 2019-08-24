@@ -1,5 +1,4 @@
 ﻿'<snippet00>
-Imports System
 Imports System.IO
 
 Public Class Test

@@ -2,7 +2,6 @@
 ' For an expanded version of this example, see the NameObjectCollectionBase class topic.
 
 ' <snippet1>
-Imports System
 Imports System.Collections
 Imports System.Collections.Specialized
 

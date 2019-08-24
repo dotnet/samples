@@ -1,7 +1,6 @@
 ﻿' <Snippet1>
 ' Compile using /r:System.dll.
 Imports Microsoft.VisualBasic
-Imports System
 Imports System.IO
 Imports System.Globalization
 Imports System.Net

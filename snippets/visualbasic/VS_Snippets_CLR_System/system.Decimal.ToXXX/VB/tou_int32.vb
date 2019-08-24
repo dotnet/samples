@@ -1,6 +1,5 @@
 ﻿'<Snippet2>
 ' Example of the Decimal.ToInt32 and Decimal.ToUInt32 methods.
-Imports System
 Imports Microsoft.VisualBasic
 
 Module DecimalToU_Int32Demo

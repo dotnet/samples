@@ -2,8 +2,6 @@
 ' This example demonstrates the Version.Revision,
 ' MajorRevision, and MinorRevision properties.
 
-Imports System
-
 Class Sample
     Public Shared Sub Main() 
         Dim fmtStd As String = "Standard version:" & vbCrLf & _

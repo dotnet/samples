@@ -2,7 +2,6 @@
 ' and demonstrates the difference in their behavior, even if both contain the same elements.
 
 ' <Snippet1>
-Imports System
 Imports System.Collections
 Imports System.Globalization
 

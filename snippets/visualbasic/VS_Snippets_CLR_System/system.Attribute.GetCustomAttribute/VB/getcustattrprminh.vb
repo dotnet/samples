@@ -1,7 +1,6 @@
 ﻿'<Snippet3>
 ' Example for the Attribute.GetCustomAttribute( ParameterInfo, Type, Boolean ) 
 ' method.
-Imports System
 Imports System.Reflection
 Imports Microsoft.VisualBasic
 

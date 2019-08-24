@@ -1,7 +1,6 @@
 ﻿' The following code example displays the values contained in the Eras property.
 
 ' <snippet1>
-Imports System
 Imports System.Globalization
 
 Public Class SamplesJapaneseCalendar

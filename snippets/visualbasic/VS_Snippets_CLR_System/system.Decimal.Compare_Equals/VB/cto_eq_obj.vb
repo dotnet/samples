@@ -1,6 +1,5 @@
 ﻿'<Snippet1>
 ' Example of the Decimal.CompareTo and Decimal.Equals instance methods.
-Imports System
 Imports Microsoft.VisualBasic
 
 Module DecCompToEqualsObjDemo

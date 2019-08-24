@@ -1,6 +1,5 @@
 ﻿'<Snippet1>
 ' Example for the Attribute.GetCustomAttribute( ParameterInfo, Type ) method.
-Imports System
 Imports System.Reflection
 Imports Microsoft.VisualBasic
 

@@ -2,8 +2,6 @@
 ' This code example demonstrates the 
 ' Nullable(Of T).GetValueOrDefault methods.
 
-Imports System
-
 Class Sample
     Public Shared Sub Main() 
         Dim mySingle As Nullable(Of System.Single) = 12.34F 

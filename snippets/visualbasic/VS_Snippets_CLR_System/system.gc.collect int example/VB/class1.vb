@@ -1,6 +1,4 @@
 ﻿'<snippet1>
-Imports System
-
 Namespace GCCollectInt_Example
     Class MyGCCollectClass
         Private maxGarbage As Long = 10000

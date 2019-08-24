@@ -2,8 +2,6 @@
 ' This code example demonstrates the System.Byte.Equals(Object) and
 ' System.Byte.Equals(Byte) methods.
 
-Imports System
-
 Class Sample
     Public Shared Sub Main() 
         Dim byteVal1 As Byte = &H7F

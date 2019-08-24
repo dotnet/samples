@@ -1,6 +1,5 @@
 ﻿'<Snippet5>
 ' Example of the Decimal.ToSingle and Decimal.ToDouble methods.
-Imports System
 Imports Microsoft.VisualBasic
 
 Module DecimalToSgl_DblDemo
