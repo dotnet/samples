@@ -4,7 +4,6 @@
 ' <snippet0>
 
 
-Imports System
 Imports System.ServiceModel.Dispatcher
 
 Namespace CS

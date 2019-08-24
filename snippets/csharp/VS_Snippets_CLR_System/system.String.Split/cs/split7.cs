@@ -10,6 +10,7 @@ public class Example
       string[] words = value.Split(separators, StringSplitOptions.RemoveEmptyEntries);
       foreach (var word in words)
          Console.WriteLine(word);
+         
       // The example displays the following output:
       //       The
       //       handsome

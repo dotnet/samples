@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Workflow.Activities
+﻿Imports System.Workflow.Activities
 Imports System.ServiceModel
 
 Namespace WorkflowServiceAttributesSnippets

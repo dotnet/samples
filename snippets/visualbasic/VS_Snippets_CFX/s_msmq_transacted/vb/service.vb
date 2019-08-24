@@ -2,7 +2,6 @@
 ' This is the service code
 '  Copyright (c) Microsoft Corporation.  All Rights Reserved.
 
-Imports System
 Imports System.ServiceModel.Channels
 Imports System.Configuration
 Imports System.Messaging

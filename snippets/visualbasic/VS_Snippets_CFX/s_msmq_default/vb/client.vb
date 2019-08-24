@@ -1,6 +1,5 @@
 ﻿'  Copyright (c) Microsoft Corporation.  All Rights Reserved.
 
-Imports System
 Imports System.Configuration
 Imports System.Messaging
 Imports System.ServiceModel

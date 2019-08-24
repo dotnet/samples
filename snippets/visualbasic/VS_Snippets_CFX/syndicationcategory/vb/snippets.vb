@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.ServiceModel.Syndication
+﻿Imports System.ServiceModel.Syndication
 
 Public Class Snippets
     Public Shared Sub Snippet2()

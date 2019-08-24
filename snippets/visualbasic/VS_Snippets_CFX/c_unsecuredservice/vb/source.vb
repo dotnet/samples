@@ -1,5 +1,4 @@
 ﻿ '<snippet0>
-Imports System
 Imports System.Collections.Generic
 Imports System.ServiceModel
 '<snippet0>

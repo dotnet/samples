@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.ServiceModel
 
 Namespace Samples

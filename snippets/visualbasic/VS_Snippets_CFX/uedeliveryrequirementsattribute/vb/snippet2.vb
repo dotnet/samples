@@ -1,5 +1,4 @@
 ﻿' <Snippet2>
-Imports System
 Imports System.ServiceModel
 
 <ServiceContract()> _

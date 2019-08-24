@@ -1,7 +1,6 @@
 ﻿' <Snippet10>
 ' This is the hosting application.
 
-Imports System
 Imports System.ServiceModel.Channels
 Imports System.Configuration
 Imports System.Messaging

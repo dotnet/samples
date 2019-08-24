@@ -1,5 +1,4 @@
 ﻿ '<snippet0>
-Imports System
 Imports System.ServiceModel
 Imports System.Net.Security
 Imports System.ServiceModel.Description

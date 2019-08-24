@@ -1,7 +1,6 @@
 ﻿'  Copyright (c) Microsoft Corporation.  All Rights Reserved.
 ' <snippet1>
 
-Imports System
 Imports System.ServiceModel.Description
 Imports System.Configuration
 Imports System.ServiceModel

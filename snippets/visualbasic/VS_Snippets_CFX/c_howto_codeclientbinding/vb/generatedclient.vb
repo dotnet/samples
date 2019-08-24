@@ -1,6 +1,4 @@
-﻿Imports System
-
-Namespace Microsoft.ServiceModel.Samples
+﻿Namespace Microsoft.ServiceModel.Samples
 
     '<snippet10>  
     <System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0"), _
