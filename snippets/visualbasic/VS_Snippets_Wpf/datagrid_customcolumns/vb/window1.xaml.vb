@@ -37,34 +37,36 @@ Class Window1
     '<SnippetGetDataTop>
     Public Function GetData() As ObservableCollection(Of Customer)
         '</SnippetGetDataTop>
-        Dim ctadapter As AdventureWorksLT2008DataSetTableAdapters.CustomerTableAdapter = New AdventureWorksLT2008DataSetTableAdapters.CustomerTableAdapter()
-        Dim dt As New AdventureWorksLT2008DataSet.CustomerDataTable()
-        ctadapter.Fill(dt)
+        Using ctadapter As New AdventureWorksLT2008DataSetTableAdapters.CustomerTableAdapter()
+            Dim dt As New AdventureWorksLT2008DataSet.CustomerDataTable()
+            ctadapter.Fill(dt)
 
 
-        Dim custstatus As OrderStatus() = {OrderStatus.[New], OrderStatus.Received, OrderStatus.None, OrderStatus.Shipped, OrderStatus.[New], OrderStatus.Processing, _
-        OrderStatus.Received, OrderStatus.None, OrderStatus.Shipped, OrderStatus.[New]}
-        Dim IsMember As Boolean() = {True, True, False, True, False, True, _
-        True, False, True, False}
+            Dim custstatus As OrderStatus() = {OrderStatus.[New], OrderStatus.Received, OrderStatus.None, OrderStatus.Shipped, OrderStatus.[New], OrderStatus.Processing,
+            OrderStatus.Received, OrderStatus.None, OrderStatus.Shipped, OrderStatus.[New]}
+            Dim IsMember As Boolean() = {True, True, False, True, False, True,
+            True, False, True, False}
 
 
-        Dim customers As New ObservableCollection(Of Customer)()
+            Dim customers As New ObservableCollection(Of Customer)()
 
-        Dim i As Integer
-        For i = 0 To 9
-            Dim r As DataRow = dt.Rows(i)
-            Dim c As New Customer()
-            c.FirstName = DirectCast(r("FirstName"), String)
-            c.LastName = DirectCast(r("LastName"), String)
-            c.Email = New Uri("mailto:" & DirectCast(r("EmailAddress"), String))
-            c.IsMember = IsMember(i)
-            c.Status = custstatus(i)
-            customers.Add(c)
-        Next
+            Dim i As Integer
+            For i = 0 To 9
+                Dim r As DataRow = dt.Rows(i)
+                Dim c As New Customer With {
+                    .FirstName = DirectCast(r("FirstName"), String),
+                    .LastName = DirectCast(r("LastName"), String),
+                    .Email = New Uri("mailto:" & DirectCast(r("EmailAddress"), String)),
+                    .IsMember = IsMember(i),
+                    .Status = custstatus(i)
+                }
+                customers.Add(c)
+            Next
 
 
-        '<SnippetGetDataEnd>
-        Return customers
+            '<SnippetGetDataEnd>
+            Return customers
+        End Using
     End Function
     '</SnippetGetDataEnd>
 
@@ -91,7 +93,7 @@ End Enum
 Public Class EmailConverter
     Implements IValueConverter
 
-    Public Function Convert(ByVal value As Object, ByVal targetType As System.Type, ByVal parameter As Object, ByVal culture As System.Globalization.CultureInfo) As Object Implements System.Windows.Data.IValueConverter.Convert
+    Public Function Convert(value As Object, targetType As System.Type, parameter As Object, culture As System.Globalization.CultureInfo) As Object Implements System.Windows.Data.IValueConverter.Convert
         If value IsNot Nothing Then
             Dim email As String = value.ToString()
             Dim index As Integer = email.IndexOf("@")
@@ -103,7 +105,7 @@ Public Class EmailConverter
         End If
     End Function
 
-    Public Function ConvertBack(ByVal value As Object, ByVal targetType As System.Type, ByVal parameter As Object, ByVal culture As System.Globalization.CultureInfo) As Object Implements System.Windows.Data.IValueConverter.ConvertBack
+    Public Function ConvertBack(value As Object, targetType As System.Type, parameter As Object, culture As System.Globalization.CultureInfo) As Object Implements System.Windows.Data.IValueConverter.ConvertBack
         Dim email As New Uri(DirectCast(value, String))
         Return email
     End Function
