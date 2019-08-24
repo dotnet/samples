@@ -1,6 +1,5 @@
 ﻿'<snippet1>
 ' Sample for String.CompareOrdinal(String, String)
-Imports System
 Imports Microsoft.VisualBasic
 
 Class Sample

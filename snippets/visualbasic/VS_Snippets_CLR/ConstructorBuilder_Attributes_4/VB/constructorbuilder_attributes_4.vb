@@ -11,7 +11,6 @@
 ' Add declarative security to the constructor. Display the 'Attributes',
 ' 'DeclaringType' and 'DefineParameter'.
 
-Imports System
 Imports System.Reflection
 Imports System.Reflection.Emit
 Imports System.Security.Permissions

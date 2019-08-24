@@ -1,6 +1,5 @@
 ﻿' This example demonstrates StringBuilder.Replace()
 '<snippet1>
-Imports System
 Imports System.Text
 
 Class Sample

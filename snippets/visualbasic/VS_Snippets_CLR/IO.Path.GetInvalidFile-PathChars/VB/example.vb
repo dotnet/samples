@@ -1,5 +1,4 @@
 ﻿'<SNIPPET1>
-Imports System
 Imports System.IO
 
 Namespace PathExample

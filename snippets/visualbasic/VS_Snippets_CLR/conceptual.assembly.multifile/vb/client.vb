@@ -1,5 +1,4 @@
 ﻿'<snippet3>
-Imports System
 Imports myStringer
 
 Class MainClientApp

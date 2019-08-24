@@ -1,6 +1,4 @@
 ﻿'<Snippet2>
-Imports System
-
 Public Class Employee
     'Create employee level property.
     Public Property Emlevel As Integer

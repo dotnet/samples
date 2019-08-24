@@ -1,7 +1,5 @@
 ﻿'<snippet1>
 ' This example demonstrates Math.BigMul()
-Imports System
-
 Class Sample
    Public Shared Sub Main()
       Dim int1 As Integer = Int32.MaxValue

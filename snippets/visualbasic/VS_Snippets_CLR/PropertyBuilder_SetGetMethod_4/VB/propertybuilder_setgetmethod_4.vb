@@ -11,7 +11,6 @@
 ' This property value is reset with default string using othermethod.
 
 ' <Snippet4>
-Imports System
 Imports System.Threading
 Imports System.Reflection
 Imports System.Reflection.Emit

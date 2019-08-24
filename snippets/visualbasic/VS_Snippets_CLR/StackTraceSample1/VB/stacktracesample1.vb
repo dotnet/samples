@@ -1,5 +1,4 @@
 ﻿'<snippet1>
-Imports System
 Imports System.Diagnostics
 
 Class StackTraceSample

@@ -1,8 +1,6 @@
 ﻿
 ' <Snippet1>
 
-Imports System
-
 Namespace EventSample
 
     ' Class that contains the data for

@@ -1,5 +1,4 @@
 ﻿'<snippet13>
-Imports System
 Imports System.IO.IsolatedStorage
 
 Class UserDomainAssembly_IsoStorage

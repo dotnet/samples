@@ -1,6 +1,5 @@
 ﻿' REDMOND\glennha
 '<Snippet1>
-Imports System
 Imports System.Reflection
 Imports System.Reflection.Emit
 Imports System.Collections.Generic

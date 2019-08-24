@@ -1,8 +1,4 @@
 ﻿'<snippet1>
-Imports System
-
-
-
 Public Class ConcatTest
     
     Public Shared Sub Main()

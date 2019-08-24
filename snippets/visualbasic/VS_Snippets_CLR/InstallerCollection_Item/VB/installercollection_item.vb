@@ -7,7 +7,6 @@
 ' installed are displayed on the console. The installation process then installs 
 ' both 'MyAssembly1.exe' and 'MyAssembly2.exe'.
 
-Imports System
 Imports System.ComponentModel
 Imports System.Collections
 Imports System.Configuration.Install

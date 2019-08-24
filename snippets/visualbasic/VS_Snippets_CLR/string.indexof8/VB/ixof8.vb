@@ -1,7 +1,5 @@
 ﻿'<snippet1>
 ' Sample for String.IndexOf(String, Int32, Int32)
-Imports System
-
 Class Sample
    
    Public Shared Sub Main()

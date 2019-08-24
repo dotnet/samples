@@ -1,6 +1,5 @@
 ﻿'<SNIPPET1>
 'The following sample uses the Cryptography class to simulate the roll of a dice.
-Imports System
 Imports System.IO
 Imports System.Text
 Imports System.Security.Cryptography

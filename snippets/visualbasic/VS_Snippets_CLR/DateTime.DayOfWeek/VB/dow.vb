@@ -1,7 +1,5 @@
 ﻿'<snippet1>
 ' This example demonstrates the DateTime.DayOfWeek property
-Imports System
-
 Class Sample
    Public Shared Sub Main()
       ' Assume the current culture is en-US.

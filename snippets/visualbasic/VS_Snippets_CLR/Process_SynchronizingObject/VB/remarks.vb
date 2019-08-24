@@ -1,7 +1,6 @@
 ﻿' This is kind of a ripoff of 'process_synchronizingobject.cs' for use as a snippet
 ' for the remarks section.
 
-Imports System
 Imports System.Diagnostics
 Imports System.Windows.Forms
 

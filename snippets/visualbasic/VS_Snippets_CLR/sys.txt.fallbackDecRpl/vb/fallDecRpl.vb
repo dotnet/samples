@@ -1,6 +1,5 @@
 ﻿'<snippet1>
 ' This example demonstrates the DecoderReplacementFallback class.
-Imports System
 Imports System.Text
 
 Class Sample

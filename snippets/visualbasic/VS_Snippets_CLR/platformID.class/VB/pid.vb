@@ -1,7 +1,5 @@
 ﻿'<snippet1>
 ' This example demonstrates the PlatformID enumeration.
-Imports System
-
 Class Sample
    Public Shared Sub Main()
       Dim msg1 As String = "This is a Windows operating system."

@@ -4,7 +4,6 @@
 ' of the class 'MyClass' and displays the same to the console.     
 
 
-Imports System
 Imports System.Reflection
 Imports System.Security
 Imports Microsoft.VisualBasic

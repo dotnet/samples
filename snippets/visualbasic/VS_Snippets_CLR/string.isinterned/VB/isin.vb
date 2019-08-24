@@ -1,6 +1,5 @@
 ﻿'<snippet1>
 ' Sample for String.IsInterned(String)
-Imports System
 Imports System.Text
 Imports System.Runtime.CompilerServices
 

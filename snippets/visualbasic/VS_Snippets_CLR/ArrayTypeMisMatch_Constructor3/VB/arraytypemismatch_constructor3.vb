@@ -10,8 +10,6 @@
 
 ' <Snippet1>
 
-Imports System
-
 Public Class ArrayTypeMisMatchConst
 
    Public Sub CopyArray(myArray As Array, myArray1 As Array)
