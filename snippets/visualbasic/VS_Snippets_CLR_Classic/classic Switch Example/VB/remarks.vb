@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Diagnostics
+﻿Imports System.Diagnostics
 
 Public Class SomeClass
 '/ <Snippet4>

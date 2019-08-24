@@ -1,6 +1,4 @@
 ﻿' <Snippet1>
-Imports System
-
 Public Class SamplesDelegate
 
    ' Declares a delegate for a method that takes in an int and returns a String.
