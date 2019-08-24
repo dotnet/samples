@@ -1,6 +1,6 @@
 # DllMap Demo
 
-This sample illustrates the use of NativeLibrary APIs to implement library name mappings similar to the [Mono](https://www.mono-project.com/) [Dllmap](http://www.mono-project.com/docs/advanced/pinvoke/dllmap/) feature.
+This sample illustrates the use of NativeLibrary APIs to implement library name mappings similar to the [Mono](https://www.mono-project.com/) [Dllmap](https://www.mono-project.com/docs/advanced/pinvoke/dllmap/) feature.
 
 ## NativeLibrary APIs
 

@@ -46,7 +46,7 @@ Note that you must run `dotnet restore` ([see note](#dotnet-restore-note)) in th
 the tests. `dotnet build` will follow the dependency and build both the library and unit
 tests projects, but it will not restore NuGet packages.
 
-This sample focuses on setting up and using [Visual Studio Code](http://code.visualstudio.com)
+This sample focuses on setting up and using [Visual Studio Code](https://code.visualstudio.com)
 as your development editor. The topic walks through all the setup and configuration steps for
 that environment.
 
