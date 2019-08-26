@@ -1,7 +1,4 @@
-﻿Imports System
-
-
-Namespace Snippets
+﻿Namespace Snippets
     Class Launcher
         'Entry point which delegates to C-style main Private Function
         Public Overloads Shared Sub Main()

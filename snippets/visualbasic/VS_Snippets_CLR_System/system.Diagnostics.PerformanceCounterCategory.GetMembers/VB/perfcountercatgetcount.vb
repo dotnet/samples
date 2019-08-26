@@ -1,5 +1,4 @@
 ﻿'<snippet3>
-Imports System
 Imports System.Diagnostics
 
 Module PerfCounterCatGetCountMod

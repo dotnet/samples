@@ -1,6 +1,5 @@
 ﻿'<Snippet1>
 ' Example for the Exception.GetBaseException method.
-Imports System
 Imports Microsoft.VisualBasic
 
 Namespace NDP_UE_VB

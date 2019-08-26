@@ -1,6 +1,5 @@
 ﻿'<Snippet1>
 ' Example for the Byte.ToString( ) methods.
-Imports System
 Imports System.Globalization
 Imports Microsoft.VisualBasic
 

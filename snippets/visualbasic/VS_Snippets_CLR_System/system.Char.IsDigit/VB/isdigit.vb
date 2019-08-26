@@ -1,6 +1,4 @@
 ﻿' <snippet4>
-Imports System
-
 Module IsDigitSample
 
     Sub Main()

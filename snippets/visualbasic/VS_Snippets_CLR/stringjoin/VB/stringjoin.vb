@@ -1,6 +1,4 @@
 ﻿'<snippet1>
-Imports System
-
 Public Class JoinTest
     
     Public Shared Sub Main()

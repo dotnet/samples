@@ -1,8 +1,6 @@
 ﻿' The following example demonstrates using the Array.GetLength method.
 
 ' <Snippet1>
-Imports System
-
 Public Class SamplesArray
     Public Shared Sub Main()
         ' make a single dimension array

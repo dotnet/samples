@@ -8,7 +8,6 @@
 ' with symbolic information.
 
 
-Imports System
 Imports System.Reflection
 Imports System.Reflection.Emit
 Imports System.Security.Permissions

@@ -2,7 +2,6 @@
 ' The sample creates a SecurityElement for the root of the XML tree and 
 ' demonstrates how to add attributes and child elements.
 '<Snippet1>
-Imports System
 Imports System.Security
 Imports System.Collections
 

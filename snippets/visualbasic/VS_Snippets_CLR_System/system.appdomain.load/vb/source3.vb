@@ -1,5 +1,4 @@
 ﻿'<snippet3>
-Imports System
 Imports System.Reflection
 
 Class AppDomain2

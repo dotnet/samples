@@ -2,7 +2,6 @@
 Option Strict On
 
 ' <Snippet1>
-Imports System
 Imports System.Reflection
 
 Interface Interf

@@ -1,5 +1,4 @@
 ﻿' <Snippet1>
-Imports System
 Imports Microsoft.Win32
 
 Public Class RegGetDef

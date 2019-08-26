@@ -1,8 +1,6 @@
 ﻿Option Strict On
 Option Explicit On
 
-Imports System
-
 ' <Snippet2>
 <Serializable> _
 Public Class PingPong

@@ -10,7 +10,6 @@
 ' Use the installer process 'InstallUtil' to run the assembly 
 ' Installer_OnInstall.exe.
 
-Imports System
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Configuration.Install

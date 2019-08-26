@@ -2,7 +2,6 @@
 ' This code example demonstrates the CompareInfo.Compare() and
 ' SortKey.Compare() methods.
 
-Imports System
 Imports System.Globalization
 
 Class Sample

@@ -1,7 +1,6 @@
 ﻿' System.Configuration.Install.AssemblyInstaller.AssemblyInstaller( string, string[] )
 ' System.Configuration.Install.AssemblyInstaller.Uninstall
 
-Imports System
 Imports System.Configuration.Install
 Imports System.Collections
 Imports System.Collections.Specialized

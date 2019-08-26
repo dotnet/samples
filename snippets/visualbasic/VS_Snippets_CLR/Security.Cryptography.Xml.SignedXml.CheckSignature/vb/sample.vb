@@ -10,7 +10,6 @@
 ' Run the following command to create a certificate
 ' and place it in the store.
 ' makecert -r -pe -n "CN=XMLDSIG_Test" -b 01/01/2005 -e 01/01/2010 -sky signing -ss my
-Imports System
 Imports System.Security.Cryptography
 Imports System.Security.Cryptography.Xml
 Imports System.Security.Cryptography.X509Certificates

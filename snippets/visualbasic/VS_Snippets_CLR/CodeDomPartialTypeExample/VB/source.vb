@@ -3,7 +3,6 @@
 ' graph is generated, saved to a file, compiled into an executable, 
 ' and run.
 
-Imports System
 Imports System.CodeDom
 Imports System.CodeDom.Compiler
 Imports System.Collections

@@ -1,6 +1,4 @@
 ﻿'<Snippet1>
-Imports System
-
 Module DemoModule
 	' This attribute is only valid on a class.
 	<AttributeUsage(AttributeTargets.Class)> _

@@ -1,7 +1,6 @@
 ﻿' This class demonstrates how to extend the AsymmetricKeyExchangeDeformatter 
 ' abstract class.
 '<Snippet1>
-Imports System
 Imports System.Security.Cryptography
 
 Namespace Contoso

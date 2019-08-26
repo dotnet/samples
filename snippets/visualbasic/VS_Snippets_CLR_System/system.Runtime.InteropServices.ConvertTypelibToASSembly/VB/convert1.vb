@@ -1,6 +1,5 @@
 ﻿'ConvertTypelibToAssembly
 '<snippet1>
-Imports System
 Imports System.Reflection
 Imports System.Reflection.Emit
 Imports System.Runtime.InteropServices

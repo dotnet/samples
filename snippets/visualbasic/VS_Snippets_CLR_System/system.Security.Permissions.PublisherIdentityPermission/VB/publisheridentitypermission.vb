@@ -1,7 +1,6 @@
 ﻿'<Snippet1>
 ' To execute this sample you will need two certification files, MyCert1.cer and MyCert2.cer.
 ' The certification files can be created using the Certification Creation Tool, MakeCert.exe.
-Imports System
 Imports System.Security
 Imports System.Security.Permissions
 Imports System.Security.Cryptography.X509Certificates

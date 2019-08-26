@@ -1,6 +1,5 @@
 ﻿'<Snippet3>
 ' Example of the BitConverter.ToInt64 method.
-Imports System
 Imports Microsoft.VisualBasic
 
 Module BytesToInt64Demo

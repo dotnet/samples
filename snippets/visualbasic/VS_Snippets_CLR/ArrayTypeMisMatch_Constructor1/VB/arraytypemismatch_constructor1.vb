@@ -7,8 +7,6 @@
 ' then a new 'ArrayTypeMismatchException' object is created and thrown. 
 ' That exception is caught in the calling method.
 ' <Snippet1>
-Imports System
-
 Public Class ArrayTypeMisMatchConst
    Public Sub CopyArray(myArray As Array, myArray1 As Array)
       

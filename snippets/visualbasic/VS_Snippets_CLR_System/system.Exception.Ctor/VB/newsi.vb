@@ -1,6 +1,5 @@
 ﻿'<Snippet3>
 ' Sample for Exception( String, Exception ) constructor.
-Imports System
 Imports Microsoft.VisualBasic
 
 Namespace NDP_UE_VB

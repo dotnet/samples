@@ -1,7 +1,6 @@
 ﻿'<snippet7>
 #Const CONDITION1 = True
 #Const CONDITION2 = True
-Imports System
 Imports System.Diagnostics
 
 Class Test

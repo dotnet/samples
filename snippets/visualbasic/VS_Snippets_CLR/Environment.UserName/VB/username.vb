@@ -1,7 +1,5 @@
 ﻿'<snippet1>
 ' Sample for the Environment.UserName property
-Imports System
-
 Class Sample
    Public Shared Sub Main()
       Console.WriteLine()

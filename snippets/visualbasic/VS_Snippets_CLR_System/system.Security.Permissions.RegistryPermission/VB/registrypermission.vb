@@ -3,7 +3,6 @@
 ' GetPathList, AddPathList, and SetPathList methods
 ' of the RegistryPermission class.
 
-Imports System
 Imports System.Security
 Imports System.Security.Permissions
 Imports System.Collections

@@ -1,6 +1,4 @@
 '<snippet3>
-Imports System
-
 Class ArgumentOutOfRangeExample
     Public Shared Sub Main()
         Dim array1() As Integer = {0, 0}

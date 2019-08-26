@@ -6,7 +6,6 @@
 #If BELOW_WHIDBEY_BUILD Then
 
 '<snippet1>
-Imports System
 Imports System.Collections
 Imports System.Collections.Specialized
 Imports System.Diagnostics
@@ -203,7 +202,6 @@ End Class
 #Else
 
 '<snippet2>
-Imports System
 Imports System.Collections
 Imports System.Collections.Specialized
 Imports System.Diagnostics

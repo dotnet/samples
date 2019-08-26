@@ -1,7 +1,6 @@
 ﻿' This sample demonstrates how to use each member of the GenericIdentity
 ' class.
 '<Snippet1>
-Imports System
 Imports System.Security.Principal
 
 Public Class Form1

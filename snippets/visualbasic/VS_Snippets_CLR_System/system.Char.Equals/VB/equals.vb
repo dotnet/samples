@@ -1,7 +1,5 @@
 ﻿imports Microsoft.VisualBasic
 ' <snippet20>
-imports System
-
 Module EqualsSample
 
     Sub Main()

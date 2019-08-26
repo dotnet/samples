@@ -2,7 +2,6 @@
 Option Strict On
 
 ' <Snippet1>
-Imports System
 Imports System.Collections.Generic
 Imports System.Globalization
 

@@ -8,7 +8,6 @@
 ' If a complex overload specifies the style parameter, the parameter value is 
 ' the default value used by the equivalent simple overload.
 
-Imports System
 Imports System.Globalization
 
 Class Sample

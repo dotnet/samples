@@ -2,8 +2,6 @@
 ' This example demonstrates Math.Atan()
 '                           Math.Atan2()
 '                           Math.Tan()
-Imports System
-
 Class Sample
    Public Shared Sub Main()
       Dim x As Double = 1.0

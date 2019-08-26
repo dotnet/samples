@@ -5,7 +5,6 @@
 ' all other modules of the process 'notepad.exe', displays 'ModuleName'
 ' for all the modules and the main module.
 
-Imports System
 Imports System.Diagnostics
 
 Class MyProcessModuleClass

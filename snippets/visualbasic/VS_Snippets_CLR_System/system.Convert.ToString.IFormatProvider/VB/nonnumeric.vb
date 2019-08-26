@@ -1,6 +1,5 @@
 ﻿'<Snippet2>
 ' Example of Convert.ToString( non-numeric types, IFormatProvider ).
-Imports System
 Imports System.Globalization
 Imports Microsoft.VisualBasic
 

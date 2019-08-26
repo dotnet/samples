@@ -1,6 +1,4 @@
-﻿Imports System
-
-Public Class Dummy
+﻿Public Class Dummy
 ' <Snippet1>
     Public Shared Function Factory(Of T As New)() As T
         Return New T()

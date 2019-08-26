@@ -1,5 +1,4 @@
 ﻿'<snippet25>
-Imports System
 Imports System.Runtime.InteropServices
 
 ' Declares a class member for each structure element.

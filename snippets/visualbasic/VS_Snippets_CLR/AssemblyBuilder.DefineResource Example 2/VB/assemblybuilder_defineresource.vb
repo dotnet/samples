@@ -8,7 +8,6 @@
 ' trademark are defined with 'DefineVersionInfoResource' method. The EmittedTest.vb file
 ' calls the methods of "MyEmitAssembly.dll" assembly and the message is displayed to console.
 
-Imports System
 Imports System.Threading
 Imports System.Reflection
 Imports System.Reflection.Emit

@@ -1,6 +1,4 @@
 ﻿' <Snippet1>
-Imports System
-
 Class TestGetElementType
 
     Public Shared Sub Main()

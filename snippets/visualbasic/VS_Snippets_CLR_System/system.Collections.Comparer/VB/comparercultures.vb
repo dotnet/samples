@@ -1,7 +1,6 @@
 ﻿' The following code example shows how Compare returns different values depending on the culture associated with the Comparer.
 
 ' <snippet1>
-Imports System
 Imports System.Collections
 Imports System.Globalization
 

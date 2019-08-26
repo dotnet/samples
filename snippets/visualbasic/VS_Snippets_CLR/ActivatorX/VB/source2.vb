@@ -1,6 +1,4 @@
 ﻿'<snippet4>
-Imports System
-
 Class DynamicInstanceList
     Private Shared instanceSpec As String = "System.EventArgs;System.Random;" + _
         "System.Exception;System.Object;System.Version"

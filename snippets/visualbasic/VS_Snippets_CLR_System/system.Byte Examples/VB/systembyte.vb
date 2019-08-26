@@ -1,7 +1,4 @@
-﻿Imports System
-
-
-Namespace SystemByte_Examples
+﻿Namespace SystemByte_Examples
     _
    '/ <summary>
    '/ Summary description for Class1.

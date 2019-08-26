@@ -1,6 +1,4 @@
 ﻿' <snippet1>
-Imports System
-
 Module GetUnicodeCategorySample
 
     Sub Main()

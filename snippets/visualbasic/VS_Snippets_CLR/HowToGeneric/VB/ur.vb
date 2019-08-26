@@ -1,7 +1,6 @@
 ﻿' REDMOND\glennha
 ' Example code for How to: Discover and Manipulate Generic Types
 '<Snippet1>
-Imports System
 Imports System.Reflection
 Imports System.Collections.Generic
 Imports System.Security.Permissions
