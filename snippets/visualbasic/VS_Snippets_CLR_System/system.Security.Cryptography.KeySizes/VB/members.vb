@@ -1,6 +1,5 @@
 ﻿' This sample demonstrates how to use each member of the KeySizes class.
 '<Snippet1>
-Imports System
 Imports System.Security.Cryptography
 
 Public Class Form1

@@ -2,7 +2,6 @@
 ' To replace the default security manager with MySecurityManager, add the 
 ' assembly to the GAC and call MySecurityManager in the
 ' custom implementation of the AppDomainManager.
-Imports System
 Imports System.Collections
 Imports System.Net
 Imports System.Reflection

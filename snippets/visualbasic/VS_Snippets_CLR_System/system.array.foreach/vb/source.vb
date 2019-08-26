@@ -1,8 +1,6 @@
 ﻿' The following example demonstrates using the ForEach method.
 
 '<Snippet1>
-Imports System
-
 Public Class SamplesArray
     Public Shared Sub Main()
         ' create a three element array of integers

@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Globalization
+﻿Imports System.Globalization
 
 Public Class Example
     Public Shared Sub Main()

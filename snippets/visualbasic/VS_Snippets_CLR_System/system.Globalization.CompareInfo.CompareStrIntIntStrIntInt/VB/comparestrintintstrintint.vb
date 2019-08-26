@@ -4,7 +4,6 @@
 '    a CompareInfo instance associated with the InvariantCulture.
 
 ' <snippet1>
-Imports System
 Imports System.Globalization
 
 Public Class SamplesCompareInfo

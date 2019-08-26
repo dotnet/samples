@@ -1,7 +1,6 @@
 ﻿' The following code example calls GetDaysInMonth for the twelfth month in each of 5 years in each era.
 
 ' <snippet1>
-Imports System
 Imports System.Globalization
 Imports Microsoft.VisualBasic
 

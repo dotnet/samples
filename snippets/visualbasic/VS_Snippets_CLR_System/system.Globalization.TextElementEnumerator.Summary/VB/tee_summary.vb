@@ -1,7 +1,6 @@
 ﻿' The following code example shows the values returned by TextElementEnumerator.
 
 ' <snippet1>
-Imports System
 Imports System.Globalization
 Imports Microsoft.VisualBasic
 

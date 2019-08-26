@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Collections
+﻿Imports System.Collections
 
 Public Class Remarks
     Public Shared Sub Main()

@@ -1,6 +1,5 @@
 ﻿' The following example shows how to copy the elements of an ArrayList to a string array.
 ' <Snippet1>
-Imports System
 Imports System.Collections
 
 Public Class SamplesArrayList

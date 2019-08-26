@@ -1,7 +1,6 @@
 ﻿' The following code example displays the parent culture of each specific culture using the Chinese language.
 
 ' <snippet1>
-Imports System
 Imports System.Globalization
 
 Module Module1

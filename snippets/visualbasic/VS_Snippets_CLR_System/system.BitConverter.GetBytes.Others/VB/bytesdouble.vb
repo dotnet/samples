@@ -1,6 +1,5 @@
 ﻿'<Snippet4>
 ' Example of the BitConverter.GetBytes( Double ) method.
-Imports System
 Imports Microsoft.VisualBasic
 
 Module GetBytesDoubleDemo

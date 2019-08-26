@@ -3,7 +3,6 @@
 ' It displays EncodingName but does not compare against it.
 
 ' <Snippet1>
-Imports System
 Imports System.Text
 
 Public Class SamplesEncoding   

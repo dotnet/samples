@@ -1,6 +1,5 @@
 ﻿'<Snippet1>
 ' Example of the Buffer class methods.
-Imports System
 Imports Microsoft.VisualBasic
 
 Module BufferClassDemo

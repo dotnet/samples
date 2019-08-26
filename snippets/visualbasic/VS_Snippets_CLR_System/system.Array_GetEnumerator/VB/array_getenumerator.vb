@@ -1,8 +1,6 @@
 ﻿' The following example shows how to use GetEnumerator to list the elements of an array.
 
 ' <Snippet1>
-Imports System
-
 Public Class SamplesArray
 
    Public Shared Sub Main()

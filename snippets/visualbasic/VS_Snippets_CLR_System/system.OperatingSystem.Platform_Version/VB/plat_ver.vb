@@ -1,7 +1,6 @@
 ﻿'<Snippet1>
 ' Example for the OperatingSystem.Platform and 
 ' OperatingSystem.Version properties.
-Imports System
 Imports Microsoft.VisualBasic
 
 Module PlatformVersionDemo

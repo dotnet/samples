@@ -1,7 +1,6 @@
 ﻿' Visual Basic .NET Document
 Option Strict On
 
-Imports System
 Imports System.Text
 
 <Assembly: CLSCompliant(True)>

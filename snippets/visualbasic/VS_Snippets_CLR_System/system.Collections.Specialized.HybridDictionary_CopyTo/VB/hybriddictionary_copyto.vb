@@ -1,7 +1,6 @@
 ﻿' The following code example copies the elements of a HybridDictionary to an array.
 
 ' <snippet1>
-Imports System
 Imports System.Collections
 Imports System.Collections.Specialized
 

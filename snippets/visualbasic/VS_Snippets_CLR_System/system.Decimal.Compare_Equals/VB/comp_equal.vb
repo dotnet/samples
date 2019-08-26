@@ -1,6 +1,5 @@
 ﻿'<Snippet2>
 ' Example of the Decimal.Compare and static Decimal.Equals methods.
-Imports System
 Imports Microsoft.VisualBasic
 
 Module DecCompareEqualsDemo

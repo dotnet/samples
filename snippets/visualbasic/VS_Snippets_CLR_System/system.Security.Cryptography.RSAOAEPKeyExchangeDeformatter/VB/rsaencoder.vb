@@ -1,7 +1,6 @@
 ﻿' This sample demonstrates how to encode and decode a string using
 ' the RSAOAEPKeyExchangeFormatter and RSAOAEPKeyExchangeDeformatter classes.
 '<Snippet2>
-Imports System
 Imports System.Security.Cryptography
 Imports System.Text
 

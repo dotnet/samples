@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Collections.Generic
+﻿Imports System.Collections.Generic
 
 Public Class ProgStubClass
     Shared Sub Main()

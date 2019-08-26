@@ -1,7 +1,6 @@
 ﻿' The following code example gets the minimum date and the maximum date of the calendar.
 
 ' <snippet1>
-Imports System
 Imports System.Globalization
 
 Public Class SamplesCalendar   

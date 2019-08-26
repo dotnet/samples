@@ -1,7 +1,6 @@
 ﻿' The following code example gets two instances of the same encoding (one by codepage and another by name), and checks their equality.
 
 ' <Snippet1>
-Imports System
 Imports System.Text
 
 Public Class SamplesEncoding   

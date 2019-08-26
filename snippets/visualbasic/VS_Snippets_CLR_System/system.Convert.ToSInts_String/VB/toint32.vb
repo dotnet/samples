@@ -1,7 +1,6 @@
 ﻿'<Snippet2>
 ' Example of the Convert.ToInt32( String ) and 
 ' Convert.ToInt32( String, IFormatProvider ) methods.
-Imports System
 Imports System.Globalization
 Imports Microsoft.VisualBasic
 

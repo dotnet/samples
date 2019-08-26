@@ -2,7 +2,6 @@
 ' If the specified date is the last day of the year, GetWeekOfYear returns the total number of weeks in that year.
 
 ' <snippet1>
-Imports System
 Imports System.Globalization
 
 Public Class SamplesCalendar

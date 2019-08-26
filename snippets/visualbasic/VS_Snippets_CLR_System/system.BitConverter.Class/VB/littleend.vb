@@ -1,6 +1,5 @@
 ﻿'<Snippet2>
 ' Example of the BitConverter.IsLittleEndian field.
-Imports System
 Imports Microsoft.VisualBasic
 
 Module LittleEndDemo
