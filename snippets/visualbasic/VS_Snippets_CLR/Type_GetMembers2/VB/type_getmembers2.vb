@@ -5,7 +5,6 @@
 ' declared or inherited by this type and displays the members to
 ' the console.
 
-Imports System
 Imports System.Reflection
 Imports System.Security
 Imports Microsoft.VisualBasic

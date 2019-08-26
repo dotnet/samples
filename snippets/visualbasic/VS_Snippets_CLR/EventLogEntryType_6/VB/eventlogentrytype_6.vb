@@ -12,7 +12,6 @@
 ' if does not exist.
 
 ' <Snippet1>
-Imports System
 Imports System.Diagnostics
 Imports System.Runtime.Serialization
 

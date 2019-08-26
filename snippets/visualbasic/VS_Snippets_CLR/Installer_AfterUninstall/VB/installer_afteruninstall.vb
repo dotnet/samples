@@ -6,7 +6,6 @@
 ' Use the installer process 'InstallUtil -u' to run the assembly
 ' 'Installer_AfterUninstall.exe'.
 
-Imports System
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Configuration.Install

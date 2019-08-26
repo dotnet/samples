@@ -10,7 +10,6 @@
 ' 'Installer_Committed.exe' needs to be run using the installer process 
 ' 'installutil'. 
 
-Imports System
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Configuration.Install

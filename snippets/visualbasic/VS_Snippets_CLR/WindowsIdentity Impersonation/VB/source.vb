@@ -8,7 +8,6 @@
 ' it will be visible to anyone viewing the screen.
 ' On Windows Vista and later this sample must be run as an administrator. 
 
-Imports System
 Imports System.Runtime.InteropServices
 Imports System.Security.Principal
 Imports System.Security.Permissions

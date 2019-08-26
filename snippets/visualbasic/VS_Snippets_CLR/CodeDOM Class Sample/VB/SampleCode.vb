@@ -12,8 +12,6 @@
 Option Strict Off
 Option Explicit On
 
-Imports System
-
 Namespace CodeDOMSample
     
     Public NotInheritable Class CodeDOMCreatedClass

@@ -6,7 +6,6 @@
 ' array of 'CounterCreationData' to the constructor. The counters of the
 ' 'CounterCreationDataCollection' are displayed to the console.
 
-Imports System
 Imports System.Diagnostics
 
 Public Class CounterCreationExample

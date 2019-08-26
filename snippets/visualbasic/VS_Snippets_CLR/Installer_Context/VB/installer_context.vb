@@ -10,7 +10,6 @@
 
 ' Use 'installutil' to run the assembly Installer_Context.exe
 
-Imports System
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Configuration.Install

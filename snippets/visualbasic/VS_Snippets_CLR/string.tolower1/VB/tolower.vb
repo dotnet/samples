@@ -1,6 +1,5 @@
 ﻿'<snippet1>
 ' Sample for String.ToLower(CultureInfo)
-Imports System
 Imports System.Globalization
 Imports Microsoft.VisualBasic
 

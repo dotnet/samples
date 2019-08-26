@@ -24,7 +24,6 @@
 ' <Snippet3>
 ' <Snippet4>
 ' <Snippet5>
-Imports System
 Imports System.Reflection
 Imports System.Threading
 Imports System.IO

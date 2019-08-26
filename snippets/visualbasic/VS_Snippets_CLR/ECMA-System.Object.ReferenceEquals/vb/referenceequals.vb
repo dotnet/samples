@@ -1,6 +1,4 @@
 ﻿'<snippet1>
-Imports System
-
 Public Class App
     Public Shared Sub Main() 
         Dim o As Object = Nothing

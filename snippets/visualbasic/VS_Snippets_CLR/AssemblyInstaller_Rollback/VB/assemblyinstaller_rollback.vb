@@ -9,7 +9,6 @@
 '  'MyAssembly.exe' assembly. The 'Rollback' method is called to undo the
 '  install process on the specified assembly.
 
-Imports System
 Imports System.Configuration.Install
 Imports System.Collections
 Imports System.Collections.Specialized

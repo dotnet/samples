@@ -2,7 +2,6 @@
 Option Explicit On
 
 ' <Snippet1>
-Imports System
 Imports System.IO
 Imports System.Reflection
 Imports System.Reflection.Emit

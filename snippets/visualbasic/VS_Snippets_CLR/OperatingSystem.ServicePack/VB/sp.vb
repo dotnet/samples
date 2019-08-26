@@ -1,7 +1,5 @@
 ﻿'<snippet1>
 ' This example demonstrates the OperatingSystem.ServicePack property.
-Imports System
-
 Class Sample
    Public Shared Sub Main()
       Dim os As OperatingSystem = Environment.OSVersion

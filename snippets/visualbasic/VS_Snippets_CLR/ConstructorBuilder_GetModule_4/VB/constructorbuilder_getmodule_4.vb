@@ -11,7 +11,6 @@
 ' constructor at run time. Set a custom attribute using a custom attribute 
 ' builder and displays module name, Token id and parameter info of this class.
 
-Imports System
 Imports System.Reflection
 Imports System.Reflection.Emit
 Imports System.Security

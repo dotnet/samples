@@ -9,7 +9,6 @@
 ' to examine the version information for the assembly.
 
 ' <Snippet1>
-Imports System
 Imports System.Reflection
 Imports System.Reflection.Emit
 

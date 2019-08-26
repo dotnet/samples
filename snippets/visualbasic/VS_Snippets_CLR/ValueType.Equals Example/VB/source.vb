@@ -1,6 +1,4 @@
-﻿Imports System
-
-Namespace Snippets
+﻿Namespace Snippets
    '<snippet1>
    Public Structure Complex
       Private m_Re As Double

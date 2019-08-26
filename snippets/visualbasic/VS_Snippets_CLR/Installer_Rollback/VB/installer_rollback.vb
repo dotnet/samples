@@ -5,7 +5,6 @@
 '   in a derived class of 'installer'. An exception is generated to
 '   force an installation rollback.
 
-Imports System
 Imports System.ComponentModel
 Imports System.Configuration.Install
 Imports System.Collections

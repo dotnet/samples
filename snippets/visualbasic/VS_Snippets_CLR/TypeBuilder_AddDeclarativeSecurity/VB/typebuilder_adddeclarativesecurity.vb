@@ -9,7 +9,6 @@
 ' full trust permission set. 
 
 ' <Snippet1>
-Imports System
 Imports System.Reflection
 Imports System.Reflection.Emit
 Imports System.Security

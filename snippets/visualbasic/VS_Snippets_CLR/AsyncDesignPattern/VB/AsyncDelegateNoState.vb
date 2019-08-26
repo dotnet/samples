@@ -5,7 +5,6 @@
 'This example uses a delegate to obtain the results of each asynchronous 
 'operation.
 
-Imports System
 Imports System.Net
 Imports System.Net.Sockets
 Imports System.Threading

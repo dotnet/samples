@@ -6,7 +6,6 @@
 ' using the first entry in the custom eventlog.This object is used to notify a message
 
 ' <Snippet1>
-Imports System
 Imports System.Diagnostics
 
 Class MySample

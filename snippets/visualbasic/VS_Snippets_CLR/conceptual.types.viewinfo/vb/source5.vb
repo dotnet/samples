@@ -1,7 +1,6 @@
 ﻿' <snippet5>
 ' This program lists all the public constructors
 ' of the System.String class.
-Imports System
 Imports System.Reflection
 
 Public Class OtherSnippets

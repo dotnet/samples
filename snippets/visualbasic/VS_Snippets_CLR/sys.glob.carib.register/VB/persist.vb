@@ -3,7 +3,6 @@
 ' AndRegionInfoBuilder Register method.
 ' Compile this code example with a reference to sysglobl.dll.
 
-Imports System
 Imports System.Globalization
 
 Class Sample

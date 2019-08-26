@@ -1,6 +1,5 @@
 ﻿' <Snippet1>   
 
-Imports System
 Imports System.Reflection
 Module Module1
     Public Class MyClass1

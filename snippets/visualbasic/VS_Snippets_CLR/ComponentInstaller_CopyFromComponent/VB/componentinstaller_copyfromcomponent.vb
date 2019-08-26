@@ -8,7 +8,6 @@
 '   It also checks whether 'ServiceInstaller' object can handle the same kind of 
 '   installation as 'EventLogInstaller' object. 
 
-Imports System
 Imports System.Diagnostics
 Imports System.ServiceProcess
 

@@ -1,6 +1,4 @@
 ﻿' <snippet1>
-Imports System
-
 Class StringParseMethod
     Public Shared Sub Main()
         ' <snippet2>

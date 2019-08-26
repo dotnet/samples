@@ -1,6 +1,4 @@
 ﻿'<Snippet1>
-Imports System
-
 Class ExceptionTestClass
    
    Public Shared Sub Main()
