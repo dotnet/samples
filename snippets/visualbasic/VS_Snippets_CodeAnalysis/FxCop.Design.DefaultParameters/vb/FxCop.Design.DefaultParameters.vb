@@ -1,6 +1,4 @@
 ﻿'<Snippet1>
-Imports System
-
 <Assembly: CLSCompliant(True)>
 Namespace DesignLibrary
 

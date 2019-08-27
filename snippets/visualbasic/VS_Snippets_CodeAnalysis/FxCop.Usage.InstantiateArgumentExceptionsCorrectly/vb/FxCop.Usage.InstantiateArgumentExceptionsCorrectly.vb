@@ -1,6 +1,4 @@
 ﻿'<Snippet1>
-Imports System
-
 Namespace Samples1
 
     Public Class Book
