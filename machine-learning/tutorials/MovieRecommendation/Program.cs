@@ -20,8 +20,7 @@ namespace MovieRecommendation
 
             // Load data
             // <SnippetLoadDataMain>
-            IDataView trainingDataView = LoadData(mlContext).training;
-            IDataView testDataView = LoadData(mlContext).test;
+            (IDataView trainingDataView, IDataView testDataView) = LoadData(mlContext);
             // </SnippetLoadDataMain>
 
             // Build & train model
