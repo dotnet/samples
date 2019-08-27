@@ -17,7 +17,6 @@
 '   modified ServiceDescription is written to 'MimeText_Binding_Match_8_Output_vb.wsdl'.
 
 ' <Snippet1>
-Imports System
 Imports System.Web.Services.Description
 Imports System.Collections
 Imports System.Xml

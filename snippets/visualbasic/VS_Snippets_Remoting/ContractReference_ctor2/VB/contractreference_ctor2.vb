@@ -8,7 +8,6 @@
 '  discovery document and a '.disco' file is generated for the webservice where the 
 '  reference tags of ContractReference are reflected.
 
-Imports System
 Imports System.Xml
 Imports System.IO
 Imports System.Web.Services.Discovery

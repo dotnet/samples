@@ -7,7 +7,6 @@
 ' 'ParameterOrderString'. It then displays the same using 'ParameterOrder'
 ' property.
 
-Imports System
 Imports System.Web.Services.Description
 Imports System.Collections
 Imports System.Xml

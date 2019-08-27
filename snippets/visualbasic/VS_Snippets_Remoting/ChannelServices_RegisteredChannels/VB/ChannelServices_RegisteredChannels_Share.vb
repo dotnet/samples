@@ -1,7 +1,6 @@
 ﻿' The class 'HelloServer' is derived from 'MarshalByRefObject' to 
 ' make it remotable.  
 
-Imports System
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Channels
 

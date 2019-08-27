@@ -6,7 +6,6 @@
 'The response is obtained and displayed to the console.
 '
 
-Imports System
 Imports System.IO
 Imports System.Net
 Imports Microsoft.VisualBasic

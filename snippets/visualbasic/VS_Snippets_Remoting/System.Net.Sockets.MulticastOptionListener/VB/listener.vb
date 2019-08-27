@@ -22,7 +22,6 @@
 ' from the command line. 
 
 
-Imports System
 Imports System.Net
 Imports System.Net.Sockets
 Imports System.Text

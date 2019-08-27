@@ -1,7 +1,6 @@
 ﻿' C:\Program Files\Microsoft.NET\FrameworkSDK\Samples\technologies\remoting\advanced\customproxies
 
 '<snippet1>
-Imports System
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Messaging
 Imports System.Runtime.Remoting.Channels

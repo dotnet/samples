@@ -12,7 +12,6 @@
 ' the message being passed through it.
 
 
-Imports System
 Imports System.Collections
 Imports System.IO
 Imports System.Runtime.Remoting.Channels

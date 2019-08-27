@@ -10,7 +10,6 @@
 ' A new Message is defined and added to the ServiceDescription.
 ' A new wsdl with modified ServiceDescription is written in 'MyOutWsdl.wsdl'.
 
-Imports System
 Imports System.Web.Services
 Imports System.Web.Services.Description
 Imports System.Xml

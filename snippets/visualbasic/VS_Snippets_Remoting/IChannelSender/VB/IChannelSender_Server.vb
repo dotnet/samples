@@ -1,7 +1,6 @@
 ﻿' This file is a support file for demonstrating the members of
 ' IChannelSender interface on the client side.
 
-Imports System
 Imports System.Collections
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Channels

@@ -5,7 +5,6 @@
 ' are displayed.
 
 ' <Snippet1>
-Imports System
 Imports System.Net
 Imports System.IO
 Imports System.Collections

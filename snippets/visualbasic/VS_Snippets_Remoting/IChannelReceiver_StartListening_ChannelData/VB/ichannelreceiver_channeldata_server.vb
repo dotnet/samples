@@ -9,7 +9,6 @@
 ' It creates a server by implementing 'IChannelReceiver' interface to receive 
 ' request send by the client.
 
-Imports System
 Imports System.IO
 Imports System.Net
 Imports System.Threading
