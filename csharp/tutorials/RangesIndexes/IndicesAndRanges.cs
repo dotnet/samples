@@ -123,7 +123,7 @@ namespace RangesIndexes
 
             for(int start = 0; start < sequence.Length; start += 100)
             {
-                Range r = start..start+10;
+                Range r = start..(start+10);
                 var (min, max, average) = MovingAverage(sequence, r);
                 Console.WriteLine($"From {r.Start} to {r.End}:    \tMin: {min},\tMax: {max},\tAverage: {average}");
             }
