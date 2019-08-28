@@ -11,7 +11,6 @@
 Option Strict Off
 Option Explicit On
 
-Imports System
 Imports System.ComponentModel
 Imports System.Diagnostics
 Imports System.Web.Services

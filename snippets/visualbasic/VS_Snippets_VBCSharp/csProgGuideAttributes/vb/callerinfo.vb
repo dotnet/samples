@@ -1,6 +1,4 @@
-﻿Imports System
-
-Public Class CallerInfo
+﻿Public Class CallerInfo
 
     '<Snippet51>
     Private Sub DoProcessing()

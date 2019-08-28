@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Text
+﻿Imports System.Text
 Imports System.Collections.Generic
 Imports Microsoft.VisualStudio.TestTools.UnitTesting
 'Imports GFUDemo_VB
