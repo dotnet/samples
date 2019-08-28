@@ -31,7 +31,7 @@ public class Example
     }
 }
 
-// The example similar output to the following:
+// The example displays output similar to the following:
 // {
 //     "date": "Tuesday, 27 August 2019 19:21:44",
 //     "temp": 42
