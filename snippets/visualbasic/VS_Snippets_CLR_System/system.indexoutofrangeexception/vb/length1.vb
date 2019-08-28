@@ -8,7 +8,7 @@ Module Example
    Public Sub Main()
       Dim characters As New List(Of Char)()
       characters.InsertRange(0, { "a"c, "b"c, "c"c, "d"c, "e"c, "f"c} )
-      For ctr As Integer = 0 To characters.Count - 1
+      For ctr As Integer = 0 To characters.Count
          Console.Write("'{0}'    ", characters(ctr))
       Next
    End Sub
