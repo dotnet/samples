@@ -84,8 +84,7 @@ Public Class SimpleList
 
         Dim inList As Boolean = False
 
-        Dim i As Integer
-        For i = 0 To Count
+        For i As Integer = 0 To Count - 1
 
             If _contents(i) = value Then
 
@@ -94,7 +93,7 @@ Public Class SimpleList
 
             End If
 
-        Next i
+        Next
 
         Return inList
     End Function
@@ -103,8 +102,7 @@ Public Class SimpleList
 
         Dim itemIndex As Integer = -1
 
-        Dim i As Integer
-        For i = 0 To Count
+        For i = 0 To Count - 1
 
             If _contents(i) = value Then
 
@@ -180,11 +178,10 @@ Public Class SimpleList
 
     Public Sub CopyTo(ByVal array As Array, ByVal index As Integer) Implements ICollection.CopyTo
         Dim j As Integer = index
-        Dim i As Integer
-        For i = 0 To Count
+        For i As Integer = 0 To Count - 1
             array.SetValue(_contents(i), j)
             j = j + 1
-        Next i
+        Next
     End Sub
 
     Public ReadOnly Property Count() As Integer Implements ICollection.Count
@@ -220,11 +217,10 @@ Public Class SimpleList
         Console.WriteLine("List has a capacity of {0} and currently has {1} elements.", _contents.Length - 1, _count)
         Console.Write("List contents:")
 
-        Dim i As Integer
-        For i = 0 To Count
+        For i As Integer = 0 To Count - 1
 
             Console.Write(" {0}", _contents(i))
-        Next i
+        Next
 
         Console.WriteLine()
 

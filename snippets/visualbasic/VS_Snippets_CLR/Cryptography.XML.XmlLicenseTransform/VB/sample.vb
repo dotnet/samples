@@ -30,9 +30,8 @@ Class XmlLicenseTransformExample
         Dim nodeList As XmlNodeList = xmlDocument.SelectNodes("//dsig:Signature", nsManager)
 
         Dim count = nodeList.Count
-        Dim i As Integer
 
-        For i = 0 To count
+        For i As Integer = 0 To count - 1
             Dim clone As XmlDocument = xmlDocument.Clone()
            
             Dim signatures As XmlNodeList = clone.SelectNodes("//dsig:Signature", nsManager)
