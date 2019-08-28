@@ -32,6 +32,17 @@ namespace keywords
     { }
     // </Snippet4>
 
+    // <SnippetNotNull>
+#nullable enable
+    class NotNullContainer<T>
+        where T : notnull
+    {
+
+    }
+#nullable restore
+    // </SnippetNotNull>
+
+
     // <Snippet5>
     public class MyGenericClass<T> where T : IComparable<T>, new()
     {
