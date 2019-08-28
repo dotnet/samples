@@ -64,8 +64,7 @@ Class ConnectionStrings
         As ConnectionStringsSection = _
         config.ConnectionStrings
         
-        Dim i As Integer
-        For i = 0 To ConfigurationManager.ConnectionStrings.Count
+        For i As Integer = 0 To ConfigurationManager.ConnectionStrings.Count - 1
             Dim cs As ConnectionStringSettings = _
             csSection.ConnectionStrings(i)
             
