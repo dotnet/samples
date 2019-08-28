@@ -6,7 +6,6 @@
 ' client is created. The client registers a sponsor that(after the initial lease time)
 ' renews the lease at different time from that specified in the remote type.
 
-Imports System
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Lifetime
 Imports System.Security.Permissions

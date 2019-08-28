@@ -7,7 +7,6 @@
 ' file stream.
 ' Note: The 'TestInput_vb.wsdl' file should exist in the same folder.
 
-Imports System
 Imports System.Web.Services.Discovery
 Imports System.IO
 Imports System.Web.Services.Description

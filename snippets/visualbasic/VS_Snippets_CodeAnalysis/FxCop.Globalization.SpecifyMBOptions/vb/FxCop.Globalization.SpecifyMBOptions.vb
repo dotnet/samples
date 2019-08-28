@@ -1,5 +1,4 @@
 ﻿'<Snippet1>
-Imports System
 Imports System.Globalization
 Imports System.Resources
 Imports System.Windows.Forms

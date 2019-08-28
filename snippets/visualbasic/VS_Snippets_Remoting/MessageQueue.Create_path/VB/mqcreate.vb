@@ -1,5 +1,4 @@
 ﻿' <Snippet1>
-Imports System
 Imports System.Messaging
 
 ' Provides a container class for the example.

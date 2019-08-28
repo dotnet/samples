@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.IO.Ports
+﻿Imports System.IO.Ports
 
 Namespace FxCop.Reliability.CA2000.DisposeObjectsBeforeLosingScope
 

@@ -11,7 +11,6 @@
 ' is displayed on the console.
 
 
-Imports System
 Imports System.Security.Permissions
 Imports System.Web.Services.Description
 Imports System.CodeDom

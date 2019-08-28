@@ -1,6 +1,4 @@
 ﻿' Supporting file for the ITransportHeaders_3_Server.vb
-Imports System
-
 Public Class MyHelloServer
    Inherits MarshalByRefObject
 

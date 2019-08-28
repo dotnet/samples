@@ -5,7 +5,6 @@
 ' with the name 'ErrorString' from the WSDL file. It also removes an
 ' operation fault with the name 'ErrorString' and generates a WSDL file.
 
-Imports System
 Imports System.Web.Services.Description
 
 Public Class MySample

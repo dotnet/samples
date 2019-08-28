@@ -5,7 +5,6 @@
 'It creates a web request and queries for a response.
 ' It then prints out all the response headers ( name -value pairs) onto the console 
 
-Imports System
 Imports System.Net
 Imports System.IO
 Imports System.Text

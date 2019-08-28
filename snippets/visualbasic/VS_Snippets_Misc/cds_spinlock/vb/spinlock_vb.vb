@@ -1,7 +1,6 @@
 ﻿Imports System.Collections.Generic
 Imports System.Diagnostics
 '<snippet02>
-Imports System
 Imports System.Threading
 Imports System.Threading.Tasks
 Class SpinLockDemo2

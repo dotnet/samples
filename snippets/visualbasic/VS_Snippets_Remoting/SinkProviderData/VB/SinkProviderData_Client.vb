@@ -2,7 +2,6 @@
 ' 'System.Runtime.Remoting.Channels.SinkProviderData' class and its 
 ' properties 'Children', 'Name', 'Properties'.
 
-Imports System
 Imports System.Runtime.Remoting
 
 Public Class SinkProviderData_Client

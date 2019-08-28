@@ -1,6 +1,4 @@
-﻿Imports System
-
-Namespace Share
+﻿Namespace Share
    Public Class MyHelloService
       Inherits MarshalByRefObject
 

@@ -11,7 +11,6 @@
 ' Note: This program requires 'DataTypes_VB.wsdl' and 'MathService_VB.wsdl' 
 ' files to be placed in same directory as that of .exe for running.
 
-Imports System
 Imports System.Web.Services.Description
 
 Class MyServiceDescriptionCollection

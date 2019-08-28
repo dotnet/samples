@@ -18,7 +18,6 @@
 '   for input and output of 'HttpPost' and finally writes into 
 '   'MimeText_Match_MatchColl_9_Output_vb.wsdl'.
 
-Imports System
 Imports System.Web.Services.Description
 Imports System.Collections
 Imports System.Xml

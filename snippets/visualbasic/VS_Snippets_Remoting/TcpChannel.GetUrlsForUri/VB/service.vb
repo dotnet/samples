@@ -1,8 +1,4 @@
 ﻿
-Imports System
-
-
-
 Public Class HelloService
     Inherits MarshalByRefObject
     

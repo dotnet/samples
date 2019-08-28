@@ -1,5 +1,4 @@
 ﻿'<Snippet1>
-Imports System
 Namespace Samples
 
     <FlagsAttribute()> _

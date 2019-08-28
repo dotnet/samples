@@ -4,7 +4,6 @@
 'It creates a Web request and queries for a response.It evaluates the response method used and the prints
 ' the Web server name to the console
 
-Imports System
 Imports System.Net
 Imports System.IO
 Imports System.Text

@@ -12,7 +12,6 @@
 ' discovery document is read and the methods 'Add', 'Remove' and the 
 ' property 'Item' are applied on the sample.
 
-Imports System
 Imports System.Net
 Imports System.IO
 Imports System.Collections

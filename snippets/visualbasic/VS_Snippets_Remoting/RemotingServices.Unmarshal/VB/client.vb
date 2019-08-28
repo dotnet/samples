@@ -5,7 +5,6 @@
 ' of the lease to prevent the server from being collected.
 ' Multiple clients can connect to the same timer object, and receive
 ' notification when the timer expires.
-Imports System
 Imports System.Net.Sockets
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Channels

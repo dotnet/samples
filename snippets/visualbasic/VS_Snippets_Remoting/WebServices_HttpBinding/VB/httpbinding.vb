@@ -12,7 +12,6 @@
 '  Finally it writes the 'ServiceDescrption' as a WSDL file with name 
 ' 'AddNumbers.wsdl.
   
-Imports System
 Imports System.Web.Services.Description
 Imports System.Collections
 Imports System.Xml
