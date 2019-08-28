@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace operators
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             Console.WriteLine("======== Arithmetic operators examples =========");
             ArithmeticOperators.Examples();
@@ -60,6 +61,10 @@ namespace operators
 
             Console.WriteLine("============== => operator examples ============");
             LambdaOperator.Examples();
+            Console.WriteLine();
+
+            Console.WriteLine("=============== await operator examples ========");
+            await AwaitOperator.Main();
             Console.WriteLine();
 
             Console.WriteLine("=========== default operator examples ==========");
