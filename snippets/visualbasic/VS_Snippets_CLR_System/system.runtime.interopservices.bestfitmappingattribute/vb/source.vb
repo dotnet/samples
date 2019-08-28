@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Runtime.InteropServices
+﻿Imports System.Runtime.InteropServices
 
 ' <Snippet1>
 <BestFitMapping(False, ThrowOnUnmappableChar := True)> _

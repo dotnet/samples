@@ -10,7 +10,6 @@
 'to construct a site using files accompanying this and provide
 'url name of this site to the program.
 '
-Imports System
 Imports System.Net
 Imports System.IO
 Imports System.Text

@@ -2,7 +2,6 @@
 ' This example demonstrates the Char.IsLowSurrogate() method
 '                                    IsHighSurrogate() method
 '                                    IsSurrogatePair() method
-Imports System
 Imports Microsoft.VisualBasic
 
 Class Sample

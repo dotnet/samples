@@ -1,7 +1,5 @@
 ﻿'<snippet1>
 ' Sample for String.IndexOfAny(Char[], Int32)
-Imports System
-
 Class Sample
    Public Shared Sub Main()
       Dim br1 As String = "0----+----1----+----2----+----3----+----4----+----5----+----6----+-"

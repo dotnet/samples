@@ -16,10 +16,10 @@ namespace whats_new
                 Age = 18
             };
             
-            System.Console.WriteLine(System.Text.Json.Serialization.JsonSerializer.ToString(instance));
+            System.Console.WriteLine(System.Text.Json.JsonSerializer.Serialize(instance));
             // </SnippetJsonSerialize>
 
-            return System.Text.Json.Serialization.JsonSerializer.ToString(instance);
+            return System.Text.Json.JsonSerializer.Serialize(instance);
         }
     }
 
@@ -31,7 +31,7 @@ namespace whats_new
         public int Age { get; set; }
 
         public static JsonPerson Parse(string json) =>
-            System.Text.Json.Serialization.JsonSerializer.Parse<JsonPerson>(json);
+            System.Text.Json.JsonSerializer.Deserialize<JsonPerson>(json);
     }
     // </SnippetJsonDeserialize>
 }

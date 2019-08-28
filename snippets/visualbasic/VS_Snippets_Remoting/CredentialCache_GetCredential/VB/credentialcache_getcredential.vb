@@ -4,7 +4,6 @@
 'creates a 'WebRequest' object for the Url. The program stores a known set of credentials in a credential cache.
 ''GetCredential' will then retrieve the credentials for the requested Uri.
 
-Imports System
 Imports System.Net
 Imports System.Collections
 Imports Microsoft.VisualBasic

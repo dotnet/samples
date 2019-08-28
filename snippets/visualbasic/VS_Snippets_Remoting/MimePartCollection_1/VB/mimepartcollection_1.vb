@@ -8,7 +8,6 @@
 ' into the file'MimePartCollection_1_Output_VB.wsdl'.
 
 ' <Snippet1>
-Imports System
 Imports System.Collections
 Imports System.Xml
 Imports System.Web.Services.Description

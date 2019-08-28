@@ -1,5 +1,4 @@
 ﻿' <Snippet1>
-Imports System
 Imports System.Messaging
 
 ' This class represents an object the following example 

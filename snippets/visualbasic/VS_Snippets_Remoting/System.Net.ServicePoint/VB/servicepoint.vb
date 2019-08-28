@@ -8,7 +8,6 @@
 ' scheme identifier (for example,  HTTP) and host fragment (for example,  www.contoso.com).  
 ' Reusing service points in this way can help improve application  performance.
 
-Imports System
 Imports System.Net
 Imports System.Threading
 Imports System.Text.RegularExpressions

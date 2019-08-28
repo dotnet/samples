@@ -1,6 +1,4 @@
-﻿Imports System
-
-Public Class Example
+﻿Public Class Example
 
     Public Shared Sub Main()
     

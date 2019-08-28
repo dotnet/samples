@@ -1,6 +1,4 @@
 ﻿' <Snippet3>
-Imports System
-
 Public Class HelloServiceClass
    Inherits MarshalByRefObject
    

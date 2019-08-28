@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 Imports Microsoft.VisualBasic
-Imports System
 Imports System.Threading
 
 Public Class TimerExample

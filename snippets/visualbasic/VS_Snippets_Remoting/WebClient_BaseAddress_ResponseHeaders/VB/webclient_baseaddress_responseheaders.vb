@@ -9,7 +9,6 @@
 '  header information of the response received from the server.This is displayed to the console.
 '
 
-Imports System
 Imports System.Net
 Imports System.Text
 Imports Microsoft.VisualBasic

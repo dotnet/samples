@@ -1,7 +1,6 @@
 ﻿' The following code example copies the elements of a ListDictionary to an array.
 
 ' <snippet1>
-Imports System
 Imports System.Collections
 Imports System.Collections.Specialized
 

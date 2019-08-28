@@ -8,7 +8,6 @@
 
 Option Strict On
 ' <Snippet1>
-Imports System
 Imports System.Net
 Imports System.Collections
 Imports System.Security.Permissions

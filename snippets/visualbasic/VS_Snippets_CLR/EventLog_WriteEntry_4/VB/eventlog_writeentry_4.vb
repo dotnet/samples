@@ -5,7 +5,6 @@
 ' 'EventLog' class. It writes an entry to a custom event log, "MyNewLog".
 ' It creates the source "MySource" if the source does not already exist.
 
-Imports System
 Imports System.Diagnostics
 
 Class EventLog_WriteEntry_4

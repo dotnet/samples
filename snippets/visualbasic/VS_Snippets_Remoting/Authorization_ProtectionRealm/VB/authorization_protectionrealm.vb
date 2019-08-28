@@ -5,7 +5,6 @@
 '   base64 strings and then returns back an 'Authorization' instance. The 'Authorization' instance encapsulates
 '   a list of Uri's for which it is applicable using the "ProtectionRealm" property.
 ' 
-Imports System
 Imports System.Net
 Imports System.Text
 Imports Microsoft.VisualBasic

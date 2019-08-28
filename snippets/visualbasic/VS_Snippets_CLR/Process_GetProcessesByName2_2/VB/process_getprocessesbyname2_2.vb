@@ -7,7 +7,6 @@
 ' processes by name on remote computer and displays its properties to console.
 ' <Snippet1>
 ' <Snippet2>
-Imports System
 Imports System.Diagnostics
 Imports Microsoft.VisualBasic
 

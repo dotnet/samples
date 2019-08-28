@@ -8,7 +8,6 @@
 ' </auto-generated>
 '------------------------------------------------------------------------------
 
-Imports System
 Namespace Microsoft.ServiceModel.Samples
 
 

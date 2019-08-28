@@ -4,7 +4,6 @@
 'the response object from the Url. The response object can be processed as desired.
 'The program then closes the response object and releases resources associated with it.
 
-Imports System
 Imports System.Net
 Imports System.IO
 Imports System.Text

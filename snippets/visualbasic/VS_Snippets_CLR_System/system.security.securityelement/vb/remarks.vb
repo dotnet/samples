@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Security
+﻿Imports System.Security
 
 Public Class SecurityElementTest
     Private Dim xmlRootElement As SecurityElement

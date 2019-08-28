@@ -1,6 +1,4 @@
-﻿Imports System
-
-Namespace CustomCodeAttributes
+﻿Namespace CustomCodeAttributes
     '<snippet4>
     <AttributeUsage(AttributeTargets.All)>
     Public Class DeveloperAttribute

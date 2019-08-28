@@ -22,7 +22,6 @@
 ' on the CustomServer class. Implementation of 'RealProxy' and 'ProxyAttribute' methods are shown.
 
 ' <Snippet12>
-Imports System
 Imports System.Collections
 Imports System.Runtime.Serialization
 Imports System.Runtime.Remoting

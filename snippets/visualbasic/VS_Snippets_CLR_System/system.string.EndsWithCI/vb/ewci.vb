@@ -2,7 +2,6 @@
 ' This code example demonstrates the 
 ' System.String.EndsWith(String, ..., CultureInfo) method.
 
-Imports System
 Imports System.Threading
 Imports System.Globalization
 

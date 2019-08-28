@@ -1,7 +1,6 @@
 ﻿' This sample demonstrates how to call each member of the GenericPrincipal
 ' class.
 '<Snippet1>
-Imports System
 Imports System.Security.Principal
 
 Public Class Form1

@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.IO
+﻿Imports System.IO
 
 Namespace ConsoleApplication1
    Class MyBinaryFile

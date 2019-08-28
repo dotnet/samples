@@ -1,6 +1,4 @@
 ﻿'<snippet1>
-Imports System
-
 Namespace ReRegisterForFinalizeExample
     Class MyMainClass
         Shared Sub Main()

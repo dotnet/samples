@@ -1,6 +1,4 @@
 ﻿' <Snippet1>
-Imports System
-
 Public Class EnumSample    
     Enum Colors
         Red = 1

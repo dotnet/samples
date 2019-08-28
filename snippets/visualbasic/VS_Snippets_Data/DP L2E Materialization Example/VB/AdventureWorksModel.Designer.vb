@@ -8,7 +8,6 @@
 ' </auto-generated>
 '------------------------------------------------------------------------------
 
-Imports System
 Imports System.Data.Objects
 Imports System.Data.Objects.DataClasses
 Imports System.Data.EntityClient

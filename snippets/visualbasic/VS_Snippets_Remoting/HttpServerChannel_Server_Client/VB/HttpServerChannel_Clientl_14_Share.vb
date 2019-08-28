@@ -1,6 +1,5 @@
 ﻿' This program will define the methods to execute from the client.
 
-Imports System
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Channels
 Imports System.Runtime.Remoting.Channels.Http

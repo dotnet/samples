@@ -1,8 +1,6 @@
 ﻿' This file is a support file for demonstrating IClientChannelSinkProvider 
 ' and ServerProcessing.
 
-Imports System
-
 Public Class MyHelloService
    Inherits MarshalByRefObject
    Private Shared myInstances As Integer

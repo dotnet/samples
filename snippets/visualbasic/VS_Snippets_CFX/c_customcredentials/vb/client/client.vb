@@ -1,5 +1,4 @@
 ﻿'<snippet20>
-Imports System
 Imports System.IdentityModel.Selectors
 Imports System.Security.Permissions
 Imports System.ServiceModel

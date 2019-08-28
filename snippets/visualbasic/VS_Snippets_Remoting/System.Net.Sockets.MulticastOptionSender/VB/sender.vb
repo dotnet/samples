@@ -10,7 +10,6 @@
 ' the local IPAddress to use. To obtain this address, run the ipconfig command
 ' from the command line. 
 '  
-Imports System
 Imports System.Net.Sockets
 Imports System.Net
 Imports System.Text

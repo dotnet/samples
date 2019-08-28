@@ -1,6 +1,4 @@
 ﻿' <Snippet1>
-Imports System
-
 Class Program
 
     Public Shared Sub Main()

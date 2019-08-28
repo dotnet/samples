@@ -7,7 +7,6 @@
 ' type. It also defines a constructor for 'HelloWorld' type. Then it displays the
 ' full name of type and its constructors to the console.
 
-Imports System
 Imports System.Threading
 Imports System.Reflection
 Imports System.Reflection.Emit

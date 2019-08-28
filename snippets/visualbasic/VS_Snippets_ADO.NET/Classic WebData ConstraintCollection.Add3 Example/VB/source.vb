@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 
 Public Class Form1
     Protected DataSet1 As DataSet

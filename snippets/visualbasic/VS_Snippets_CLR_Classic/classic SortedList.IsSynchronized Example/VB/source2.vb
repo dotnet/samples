@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Collections
+﻿Imports System.Collections
 
 Public Class SamplesSortedList
     Public Shared Sub Main()

@@ -1,6 +1,4 @@
 ﻿'<Snippet1>
-Imports System
-
 Friend Class InternalOnly
     Public Class Nested
     End Class

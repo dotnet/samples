@@ -8,7 +8,6 @@
 
 ' <Snippet1>
 ' <Snippet2>
-Imports System
 Imports System.Reflection
 Imports System.Runtime.Serialization
 Imports System.Runtime.Serialization.Formatters.Soap

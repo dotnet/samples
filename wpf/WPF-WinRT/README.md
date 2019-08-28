@@ -3,7 +3,7 @@
 This sample shows how to consume the Windows 10 API from .NET Core and .Net Framework projects.
 
 ## Pre-requisites
-To access Win10 APIs you need to have the Windows SDK installed. You can add it from the Visual Studio setup or download from [here](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk)
+To access Win10 APIs you need to have the Windows SDK installed. You can add it from the Visual Studio setup or download from [here](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
 
 ## Configure the reference in your project
 

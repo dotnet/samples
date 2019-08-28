@@ -1,7 +1,6 @@
 ﻿' The following code example shows how sorting with CompareOptions.StringSort differs from sorting without CompareOptions.StringSort.
 
 ' <snippet1>
-Imports System
 Imports System.Collections
 Imports System.Globalization
 

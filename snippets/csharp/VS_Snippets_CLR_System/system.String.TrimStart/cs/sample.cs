@@ -57,9 +57,9 @@ public class TrimExample
     }
     // </Snippet2>
 
-    // <Snippet1>
     public static void Main(string[] args)
     {
+        // <Snippet1>
         // TrimStart examples
         string lineWithLeadingSpaces = "   Hello World!";
         string lineWithLeadingSymbols = "$$$$Hello World!";
@@ -99,7 +99,7 @@ public class TrimExample
         lineAfterTrimStart = lineToBeTrimmed.TrimStart('_', '#', ' ');
         Console.WriteLine(lineAfterTrimStart);
         // Result: John Smith
+        // </Snippet1>
     }
-    // </Snippet1>
 }
 

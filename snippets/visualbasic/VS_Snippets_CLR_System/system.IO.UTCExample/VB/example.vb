@@ -1,7 +1,6 @@
 ﻿ '<SNIPPET1>
 ' This sample shows the differences between dates from methods that use
 'coordinated universal time (UTC) format and those that do not.
-Imports System
 Imports System.IO
 
 

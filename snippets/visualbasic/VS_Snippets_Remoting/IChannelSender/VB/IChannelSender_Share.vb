@@ -2,8 +2,6 @@
 ' IChannelSender interface on the client side. The program will
 ' define the methods to execute from the client.
 
-Imports System
-
 Public Class MyHelloServer
    Inherits MarshalByRefObject
    

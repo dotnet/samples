@@ -1,6 +1,4 @@
 ﻿' <snippet21>
-Imports System
-
 ' <snippet22>
 Class B(Of T, U)
 End Class

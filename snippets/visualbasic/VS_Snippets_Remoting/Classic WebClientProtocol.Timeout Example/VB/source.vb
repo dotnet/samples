@@ -1,6 +1,4 @@
-﻿Imports System
-
-Public Class Sample    
+﻿Public Class Sample    
     
     Public Sub sampleFunction()
         Dim math As New myMath()

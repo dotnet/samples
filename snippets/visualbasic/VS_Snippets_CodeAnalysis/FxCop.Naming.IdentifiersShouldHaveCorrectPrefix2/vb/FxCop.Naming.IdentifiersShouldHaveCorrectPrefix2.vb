@@ -1,6 +1,4 @@
 ﻿'<Snippet1>
-Imports System
-
 Namespace Samples
 
     Public Interface IBook  ' Fixes the violation by prefixing the interface with 'I'

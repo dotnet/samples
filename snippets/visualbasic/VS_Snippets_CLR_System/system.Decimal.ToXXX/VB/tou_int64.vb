@@ -1,6 +1,5 @@
 ﻿'<Snippet1>
 ' Example of the Decimal.ToInt64 and Decimal.ToUInt64 methods.
-Imports System
 Imports Microsoft.VisualBasic
 
 Module DecimalToU_Int64Demo

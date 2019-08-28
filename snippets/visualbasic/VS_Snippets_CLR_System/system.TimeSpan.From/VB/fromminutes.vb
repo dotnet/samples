@@ -1,6 +1,5 @@
 ﻿'<Snippet4>
 ' Example of the TimeSpan.FromMinutes( Double ) method.
-Imports System
 Imports Microsoft.VisualBasic
 
 Module FromMinutesDemo

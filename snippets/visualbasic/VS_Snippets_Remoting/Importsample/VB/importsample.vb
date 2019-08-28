@@ -16,7 +16,6 @@
 '  The real world web service has been assumed.
 
 ' <Snippet7>
-Imports System
 Imports System.Web.Services.Description
 Imports System.Collections
 Imports System.Xml

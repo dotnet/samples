@@ -1,5 +1,4 @@
 ﻿'<Snippet1>
-Imports System
 Imports Microsoft.Win32.SafeHandles
 Imports System.Runtime.InteropServices
 

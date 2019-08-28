@@ -1,6 +1,5 @@
 ﻿'<Snippet6>
 ' Example of the TimeSpan.FromDays( Double ) method.
-Imports System
 Imports Microsoft.VisualBasic
 
 Module FromDaysDemo

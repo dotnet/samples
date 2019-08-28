@@ -1,8 +1,4 @@
 ﻿ ' <snippet30>
-Imports System
-
-
-
 Public Class CrmClient
     
     

@@ -13,7 +13,6 @@
 '  and again invokes DoSocketGet to obtain a response and display.
 ' 
 
-Imports System
 Imports System.Net
 Imports System.Text
 Imports System.Net.Sockets

@@ -9,7 +9,6 @@
 ' of 'HttpClientChannel'.
 
 ' <Snippet4>
-Imports System
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Channels
 Imports System.Runtime.Remoting.Channels.Http

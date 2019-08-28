@@ -1,6 +1,5 @@
 ﻿ '<Snippet2>
 ' Example for the Exception( String ) constructor( String ).
-Imports System
 Imports Microsoft.VisualBasic
 
 Namespace NDP_UE_VB

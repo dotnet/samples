@@ -9,7 +9,6 @@
 ' corresponding to the 'Sort' method of the 'Array' .The token used to identify the 'Sort' 
 ' method in dynamic module is displayed using 'GetArrayMethodToken' method.
 
-Imports System
 Imports System.Reflection
 Imports System.Reflection.Emit
 Imports System.Security.Permissions

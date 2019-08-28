@@ -1,7 +1,6 @@
 ﻿'<snippet1>
 ' This example demonstrates the RegionInfo.EnglishName, NativeName, 
 ' CurrencyEnglishName, CurrencyNativeName, and GeoId properties.
-Imports System
 Imports System.Globalization
 
 Class Sample

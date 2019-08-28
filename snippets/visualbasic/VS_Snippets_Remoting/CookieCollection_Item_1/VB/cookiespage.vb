@@ -13,7 +13,6 @@
 '** communication with the server.
 '
 
-Imports System
 Imports System.IO
 Imports System.Text
 Imports System.Collections.Specialized

@@ -4,7 +4,6 @@
 'get Domain Name System information for the specified host computer.
 'This example polls to detect the end of the asynchronous operation.
 
-Imports System
 Imports System.Net
 Imports System.Net.Sockets
 Imports System.Threading

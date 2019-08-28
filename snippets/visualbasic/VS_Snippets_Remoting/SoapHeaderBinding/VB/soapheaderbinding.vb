@@ -9,7 +9,6 @@
 '  could be used for generating a proxy.
 
 ' <Snippet1>
-Imports System
 Imports System.Web.Services.Description
 Imports System.Collections
 Imports System.Xml

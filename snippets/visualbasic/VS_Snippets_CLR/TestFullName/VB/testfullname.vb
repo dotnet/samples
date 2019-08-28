@@ -1,6 +1,4 @@
 ﻿' <Snippet1>
-Imports System
-
 Class TestFullName
    
     Public Shared Sub Main()

@@ -3,7 +3,6 @@
 ' <Snippet1>
 Option Strict On
 
-Imports System
 Imports System.IO
 
 Public Class ProcessFile

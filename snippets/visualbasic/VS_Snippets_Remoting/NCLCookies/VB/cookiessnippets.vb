@@ -1,6 +1,5 @@
-﻿ ' <Snippet1>
+' <Snippet1>
 Imports System.Net
-Imports System
 
 ' This example is run at the command line.
 ' Specify one argument: the name of the host to 
@@ -12,41 +11,38 @@ Public Class CookieExample
     
     ' <Snippet2>
     Public Shared Sub Main(args() As String)
-        If args Is Nothing OrElse args.Length <> 1 Then
-            Console.WriteLine("Specify the URL to receive the request.")
-            Environment.Exit(1)
-        End If
-        ' <Snippet3>
-        Dim request As HttpWebRequest = CType(WebRequest.Create(args(0)), HttpWebRequest)
-        request.CookieContainer = New CookieContainer()
-        
-        Dim response As HttpWebResponse = CType(request.GetResponse(), HttpWebResponse)
-
-        
-        
-        ' Print the properties of each cookie.
-        Dim cook As Cookie
-        For Each cook In  response.Cookies
-            Console.WriteLine("Cookie:")
-            Console.WriteLine("{0} = {1}", cook.Name, cook.Value)
-            Console.WriteLine("Domain: {0}", cook.Domain)
-            Console.WriteLine("Path: {0}", cook.Path)
-            Console.WriteLine("Port: {0}", cook.Port)
-            Console.WriteLine("Secure: {0}", cook.Secure)
-            
-            Console.WriteLine("When issued: {0}", cook.TimeStamp)
-            Console.WriteLine("Expires: {0} (expired? {1})", cook.Expires, cook.Expired)
-            Console.WriteLine("Don't save: {0}", cook.Discard)
-            Console.WriteLine("Comment: {0}", cook.Comment)
-            Console.WriteLine("Uri for comments: {0}", cook.CommentUri)
-            Console.WriteLine("Version: RFC {0}", IIf(cook.Version = 1, "2109", "2965"))
-            
-            '<Snippet4>
-            ' Show the string representation of the cookie.
-            Console.WriteLine("String: {0}", cook.ToString())
-            ' </Snippet4>
-        Next cook
-        ' </Snippet3>
+    	If args Is Nothing OrElse args.Length <> 1 Then
+    		Console.WriteLine("Specify the URL to receive the request.")
+    		Environment.Exit(1)
+    	End If
+    	' <Snippet3>
+    	Dim request As HttpWebRequest = WebRequest.Create(args(0))
+    	request.CookieContainer = New CookieContainer()
+    
+    	Using response As HttpWebResponse = request.GetResponse()
+    		' Print the properties of each cookie.
+    		For Each cook As Cookie In response.Cookies
+    			Console.WriteLine("Cookie:")
+    			Console.WriteLine($"{cook.Name} = {cook.Value}")
+    			Console.WriteLine($"Domain: {cook.Domain}")
+    			Console.WriteLine($"Path: {cook.Path}")
+    			Console.WriteLine($"Port: {cook.Port}")
+    			Console.WriteLine($"Secure: {cook.Secure}")
+    
+    			Console.WriteLine($"When issued: {cook.TimeStamp}")
+    			Console.WriteLine($"Expires: {cook.Expires} (expired? {cook.Expired})")
+    			Console.WriteLine($"Don't save: {cook.Discard}")
+    			Console.WriteLine($"Comment: {cook.Comment}")
+    			Console.WriteLine($"Uri for comments: {cook.CommentUri}")
+    			Console.WriteLine($"Version: RFC {If(cook.Version = 1, 2109, 2965)}")
+    
+    			'<Snippet4>
+    			' Show the string representation of the cookie.
+    			Console.WriteLine($"String: {cook}")
+    			' </Snippet4>
+    		Next
+    	End Using
+    	' </Snippet3>
     End Sub 'Main
     ' </Snippet2>
 End Class 'CookieExample 

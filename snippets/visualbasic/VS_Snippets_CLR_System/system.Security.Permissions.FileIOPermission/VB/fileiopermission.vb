@@ -2,7 +2,6 @@
 ' GetPathList and SetPathList methods, and the AllFiles and AllLocalFiles properties  
 ' of the FileIOPermission class.
 ' <Snippet1>
-Imports System
 Imports System.Security
 Imports System.Security.Permissions
 Imports System.Collections

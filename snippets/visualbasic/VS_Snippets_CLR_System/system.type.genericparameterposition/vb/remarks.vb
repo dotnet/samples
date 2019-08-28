@@ -1,6 +1,4 @@
-﻿Imports System
-
-' <Snippet1>
+﻿' <Snippet1>
 Public Class B(Of T, U)
 End Class
 Public Class A(Of V)

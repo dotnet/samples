@@ -10,7 +10,6 @@
 ' 'ServiceDescription' object creates another wsdl file which supports 'SOAP' protocol
 ' also. This wsdl file is used to generate a proxy which is used by the .aspx file.
 
-Imports System
 Imports System.Web.Services.Description
 Imports System.Collections
 Imports System.Xml

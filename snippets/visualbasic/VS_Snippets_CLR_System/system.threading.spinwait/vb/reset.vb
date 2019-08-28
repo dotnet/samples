@@ -1,5 +1,4 @@
 ﻿' <snippet01>
-Imports System
 Imports System.Threading
 
 Public Class LockFreeStack(Of T)

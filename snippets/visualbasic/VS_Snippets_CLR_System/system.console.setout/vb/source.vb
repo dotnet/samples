@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.IO
+﻿Imports System.IO
 
 Public Class SetOutSample
         Shared Sub Main()

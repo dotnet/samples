@@ -3,7 +3,6 @@
 ' using a detached signature. It then verifies  
 ' the signed XML.
 
-Imports System
 Imports System.Security.Cryptography
 Imports System.Security.Cryptography.Xml
 Imports System.Text

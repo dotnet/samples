@@ -13,7 +13,6 @@
 ' <Snippet1>
 ' <Snippet2>
 ' <Snippet3>
-Imports System
 Imports System.Reflection
 Imports System.Threading
 Imports System.Reflection.Emit

@@ -15,7 +15,6 @@
 ' all the SOAP messages that get transfered both from the client and the 
 ' server are written into a log file.
 
-Imports System
 Imports System.IO
 Imports System.Web.Services.Protocols
 Imports System.Web.Services

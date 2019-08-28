@@ -1,5 +1,4 @@
 ﻿'<Snippet1>
-Imports System
 Imports System.CodeDom
 
 Namespace CodeDomSamples
@@ -57,9 +56,7 @@ Namespace CodeDomSamples
             'Option Strict Off
             'Option Explicit On
 
-            'Imports System
-
-            'Namespace Samples
+            '            'Namespace Samples
 
             '            Public Class TryCatchTest
 

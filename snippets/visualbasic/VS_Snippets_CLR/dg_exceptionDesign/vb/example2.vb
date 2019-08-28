@@ -1,6 +1,4 @@
 ﻿'<snippet14>
-Imports System
-
 Public Class EmployeeListNotFoundException
     Inherits Exception
 

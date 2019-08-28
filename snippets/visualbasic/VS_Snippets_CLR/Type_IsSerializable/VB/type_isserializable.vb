@@ -1,5 +1,4 @@
 ﻿' <Snippet1>   
-Imports System
 Imports Microsoft.VisualBasic
 Namespace SystemType
     Public Class [MyClass]

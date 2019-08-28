@@ -1,32 +1,23 @@
-﻿' <Snippet1>
-Public Class TipCalculator
-   Private Const tipRate As Double = 0.18
+' <Snippet1>
+Public Module TipCalculator
+    Private Const tipRate As Double = 0.18
    
-   Public Shared Sub Main()
-      System.Environment.ExitCode = Calculator(System.Environment.GetCommandLineArgs())
-   End Sub
-   
-   Public Shared Function Calculator(args() As String) As Integer
-      Dim billTotal As Double
-      If args.Length < 2 Then
-         Console.WriteLine("usage: TIPCALC total")
-         Return 1
-      Else
-         If Not Double.TryParse(args(1), billTotal) Then
+    Public Sub Main(args As String())
+        Dim billTotal As Double
+        If (args.Length = 0) OrElse (Not Double.TryParse(args(0), billTotal)) Then
             Console.WriteLine("usage: TIPCALC total")
-            Return 1
-         End If
-         
-         Dim tip As Double = billTotal * tipRate
-         Console.WriteLine()
-         Console.WriteLine("Bill total:{1}{0,8:c}", billTotal, vbTab)
-         Console.WriteLine("Tip total/rate:{2}{0,8:c} ({1:p1})", tip, tipRate, vbTab)
-         Console.WriteLine("".PadRight(24, "-"c))
-         Console.WriteLine("Grand total:{1}{0,8:c}", billTotal + tip, vbTab)
-         Return 0
-      End If
-   End Function 
-End Class 
+            Return
+        End If
+
+        Dim tip As Double = billTotal * tipRate
+        Console.WriteLine()
+        Console.WriteLine($"Bill total:{vbTab}{billTotal,8:c}")
+        Console.WriteLine($"Tip total/rate:{vbTab}{tip,8:c} ({tipRate:p1})")
+        Console.WriteLine("".PadRight(24, "-"c))
+        Console.WriteLine($"Grand total:{vbTab}{billTotal + tip,8:c}")
+    End Sub
+
+End Module
 
 'Example Output:
 '---------------

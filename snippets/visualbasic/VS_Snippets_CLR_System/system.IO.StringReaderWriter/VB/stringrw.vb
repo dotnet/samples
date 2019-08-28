@@ -3,7 +3,6 @@ Option Explicit
 Option Strict
 
 Imports Microsoft.VisualBasic
-Imports System
 Imports System.IO
 
 Public Class StrReader

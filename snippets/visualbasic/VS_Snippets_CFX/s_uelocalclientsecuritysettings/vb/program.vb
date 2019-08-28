@@ -1,7 +1,6 @@
 ﻿' Snippet for S_UELocalClientSecuritySettings
 
 
-Imports System
 Imports System.Collections.Generic
 Imports System.Configuration
 Imports System.Globalization

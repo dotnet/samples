@@ -92,7 +92,7 @@ Public Class Example
         Next
 
 
-        ' Check the list for part #1734. This calls the IEquitable.Equals method
+        ' Check the list for part #1734. This calls the IEquatable.Equals method
         ' of the Part class, which checks the PartId for equality.
         Console.WriteLine(vbLf & "Contains(""1734""): {0}", parts.Contains(New Part() With { _
              .PartId = 1734, _

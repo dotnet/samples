@@ -5,7 +5,6 @@
 '   from the WSDL document.A BindingCollection instance is then retrieved from this ServiceDescription instance 
 '   and it's members are demonstrated. 
  
-Imports System
 Imports System.Web.Services.Description
 Imports System.Collections
 Imports System.Xml

@@ -1,7 +1,6 @@
 ﻿'<snippet1>
 ' This example demonstrates the StringBuilder.AppendLine() 
 ' method.
-Imports System
 Imports System.Text
 
 Class Sample

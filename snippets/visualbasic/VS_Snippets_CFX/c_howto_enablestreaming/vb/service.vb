@@ -1,6 +1,5 @@
 ﻿'  Copyright (c) Microsoft Corporation.  All Rights Reserved.
 
-Imports System
 Imports System.Configuration
 Imports System.IO
 Imports System.Runtime.Serialization

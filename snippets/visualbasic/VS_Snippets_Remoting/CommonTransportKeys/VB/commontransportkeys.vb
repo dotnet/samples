@@ -13,7 +13,6 @@
 ' CommonTransportKeys_Share.vb files along with channels.config, server.exe.config, client.exe.config 
 ' config files.
 
-Imports System
 Imports System.Collections
 Imports System.IO
 Imports System.Runtime.Remoting.Channels

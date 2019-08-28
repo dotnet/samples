@@ -1,7 +1,6 @@
 ﻿' System.Runtime.InteropServices.TypeLibVarAttribute
 ' System.Runtime.InteropServices.TypeLibVarFlags
 ' <Snippet1>
-Imports System
 Imports System.Reflection
 Imports System.Runtime.InteropServices
 

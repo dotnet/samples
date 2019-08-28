@@ -6,7 +6,6 @@
 'the response will be OK . 'GetEnumerator' is used to enlist all the credentials stored in the Credential Cache
 '
 
-Imports System
 Imports System.Net
 Imports System.Collections
 Imports Microsoft.VisualBasic

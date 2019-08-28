@@ -1,14 +1,14 @@
 # DllMap Demo
 
-This sample illustrates the use of NativeLibrary APIs to implement library name mappings similar to the [Mono](https://www.mono-project.com/) [Dllmap](http://www.mono-project.com/docs/advanced/pinvoke/dllmap/) feature.
+This sample illustrates the use of NativeLibrary APIs to implement library name mappings similar to the [Mono](https://www.mono-project.com/) [Dllmap](https://www.mono-project.com/docs/advanced/pinvoke/dllmap/) feature.
 
 ## NativeLibrary APIs
 
 .Net Core 3.0 provides a rich set of APIs to manage native libraries:
 
-- [NativeLibrary APIs](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.nativelibrary?view=netcore-3.0): Perform operations on native libraries (such as `Load()`, `Free()`, get the address of an exported  symbol, etc.) in a platform-independent way from managed code.
-- [DllImport Resolver callback](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.nativelibrary.setdllimportresolver?view=netcore-3.0):  Gets a callback for first-chance native library resolution using custom logic. 
-- [Native Library Resolve event](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.loader.assemblyloadcontext.resolvingunmanageddll?view=netcore-3.0): Get an event for last-chance native library resolution using custom logic.   
+- [NativeLibrary APIs](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.nativelibrary?view=netcore-3.0): Perform operations on native libraries (such as `Load()`, `Free()`, get the address of an exported  symbol, etc.) in a platform-independent way from managed code.
+- [DllImport Resolver callback](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.nativelibrary.setdllimportresolver?view=netcore-3.0):  Gets a callback for first-chance native library resolution using custom logic. 
+- [Native Library Resolve event](https://docs.microsoft.com/dotnet/api/system.runtime.loader.assemblyloadcontext.resolvingunmanageddll?view=netcore-3.0): Get an event for last-chance native library resolution using custom logic.   
 
 ## Library Mapping
 

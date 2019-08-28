@@ -1,6 +1,4 @@
-﻿Imports System
-
-Public Class MyServerImpl
+﻿Public Class MyServerImpl
    Inherits MarshalByRefObject
    
    Public Sub New()

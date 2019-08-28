@@ -1,5 +1,4 @@
 ﻿'<snippet23>
-Imports System
 Imports System.Collections.Generic
 
 Class AdvantageGenerics

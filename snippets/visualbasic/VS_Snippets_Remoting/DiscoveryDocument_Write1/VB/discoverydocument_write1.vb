@@ -6,7 +6,6 @@
 ' passed to the Read method to create a DiscoveryDocument. The contents of this
 ' document are displayed onto the console using the Write(Stream) method.
 
-Imports System
 Imports System.Xml
 Imports System.IO
 Imports System.Web.Services.Discovery

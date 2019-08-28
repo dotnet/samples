@@ -5,7 +5,6 @@
 ' LocalInternet.xml file, comment out the #Const BUILDFILE = True statement,
 ' uncomment the #Const BUILDFILE = False statement, and rerun the sample to
 ' demonstrate the use of the permission set attribute.
-Imports System
 Imports System.Security
 Imports System.Security.Permissions
 Imports System.Security.Policy
