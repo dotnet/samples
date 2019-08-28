@@ -11,7 +11,7 @@
       found in AssemblyInfo.vb. This property is useful for 
       applications ported from NetFx, which may have used
       AssemblyInfo.vb -->
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
   </PropertyGroup>
 
   <ItemGroup>
