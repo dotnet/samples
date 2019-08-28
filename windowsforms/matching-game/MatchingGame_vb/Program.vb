@@ -9,7 +9,6 @@ Namespace MatchingGame
         ''' <summary>
         ''' The main entry point for the application.
         ''' </summary>
-        <STAThread>
         Public Sub Main()
             Application.EnableVisualStyles()
             Application.SetCompatibleTextRenderingDefault(False)
