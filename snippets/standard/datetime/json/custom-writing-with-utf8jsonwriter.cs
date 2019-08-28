@@ -8,14 +8,14 @@ public class Example
 {
     public static void Main(string[] args)
     {
-        JsonWriterOptions options = new JsonWriterOptions
+        var options = new JsonWriterOptions
         {
             Indented = true
         };
 
-        using (MemoryStream stream = new MemoryStream())
+        using (var stream = new MemoryStream())
         {
-            using (Utf8JsonWriter writer = new Utf8JsonWriter(stream, options))
+            using (var writer = new Utf8JsonWriter(stream, options))
             {
                 string dateStr = DateTime.UtcNow.ToString("F", CultureInfo.InvariantCulture);
 
@@ -31,7 +31,7 @@ public class Example
     }
 }
 
-// The example displays the following output:
+// The example similar output to the following:
 // {
 //     "date": "Tuesday, 27 August 2019 19:21:44",
 //     "temp": 42
