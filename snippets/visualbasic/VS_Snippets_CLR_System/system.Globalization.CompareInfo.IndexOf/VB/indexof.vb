@@ -1,7 +1,6 @@
 ﻿' The following code example determines the indexes of the first and last occurrences of a character or a substring within a string.
 
 ' <snippet1>
-Imports System
 Imports System.Globalization
 Imports Microsoft.VisualBasic
 

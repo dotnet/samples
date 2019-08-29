@@ -4,7 +4,6 @@
 '   XmlSerializerNamespaces. This sample serializes an object of 'MyPriceClass'
 '   into an XML document.
 
-Imports System
 Imports System.Xml
 Imports System.Xml.Serialization
 Imports System.IO

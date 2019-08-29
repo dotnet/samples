@@ -1,6 +1,4 @@
-﻿Imports System
-
-Public Class Sample
+﻿Public Class Sample
 Public Shared Sub Main()
 '<snippet1>
 Dim str As String

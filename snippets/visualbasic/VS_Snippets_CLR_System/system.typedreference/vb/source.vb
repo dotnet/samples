@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Reflection
+﻿Imports System.Reflection
 
 Public Class TypedReferenceArray
         Shared Sub Main()

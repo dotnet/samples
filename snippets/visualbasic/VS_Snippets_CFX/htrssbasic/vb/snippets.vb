@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Xml
+﻿Imports System.Xml
 Imports System.ServiceModel
 Imports System.ServiceModel.Description
 Imports System.ServiceModel.Syndication

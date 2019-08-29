@@ -7,7 +7,6 @@
 ' It creates  a customized channel 'MyCustomChannel' by implementing 
 ' 'IChannelReceiverHook' interface.
 
-Imports System
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Channels
 Imports System.Runtime.Remoting.Channels.Http

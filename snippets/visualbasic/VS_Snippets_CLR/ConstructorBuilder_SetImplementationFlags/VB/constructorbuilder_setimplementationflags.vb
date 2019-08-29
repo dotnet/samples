@@ -7,7 +7,6 @@
 ' constructor at run time. It then sets the method implementation flags
 ' for the constructor and displays the same.
 
-Imports System
 Imports System.Reflection
 Imports System.Reflection.Emit
 Imports System.Security.Permissions

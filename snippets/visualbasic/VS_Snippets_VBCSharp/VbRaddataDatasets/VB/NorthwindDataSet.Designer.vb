@@ -11,9 +11,6 @@
 Option Strict Off
 Option Explicit On
 
-Imports System
-
-
 <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0"),  _
  Serializable(),  _
  System.ComponentModel.DesignerCategoryAttribute("code"),  _

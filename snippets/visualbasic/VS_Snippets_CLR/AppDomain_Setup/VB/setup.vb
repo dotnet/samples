@@ -1,7 +1,6 @@
 ﻿Option Strict On
 Option Explicit On
 
-Imports System
 Imports System.Security.Policy
 
 Module Test

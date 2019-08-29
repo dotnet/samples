@@ -2,7 +2,6 @@
 Option Strict
 
 ' <Snippet1>
-Imports System
 Imports System.Collections
 Imports System.IO
 Imports System.Xml.Serialization

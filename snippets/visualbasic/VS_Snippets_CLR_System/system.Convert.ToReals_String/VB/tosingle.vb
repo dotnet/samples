@@ -1,7 +1,6 @@
 ﻿'<Snippet3>
 ' Example of the Convert.ToSingle( String ) and 
 ' Convert.ToSingle( String, IFormatProvider ) methods.
-Imports System
 Imports System.Globalization
 Imports Microsoft.VisualBasic
 

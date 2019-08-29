@@ -1,4 +1,4 @@
-﻿// Sample for String.IndexOf(String, Int32, Int32)
+// Sample for String.IndexOf(String, Int32, Int32)
 using System;
 
 class Sample 

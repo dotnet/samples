@@ -6,7 +6,6 @@
 '  'ErrorString' and displays the resultant WSDL file to the console.
  
 
-Imports System
 Imports System.Web.Services.Description
 
 

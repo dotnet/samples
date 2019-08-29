@@ -1,7 +1,6 @@
 ﻿' The following code example compares different implementations of the Calendar class.
 
 ' <snippet1>
-Imports System
 Imports System.Globalization
 
 

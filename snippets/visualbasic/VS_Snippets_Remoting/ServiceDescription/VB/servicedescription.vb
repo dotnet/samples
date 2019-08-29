@@ -7,7 +7,6 @@
 '  The program generates a new Web Service Description document.
 '
 
-Imports System
 Imports System.Web.Services
 Imports System.Web.Services.Description
 Imports System.Xml

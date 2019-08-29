@@ -1,5 +1,4 @@
 ﻿'<Snippet1>
-Imports System
 Imports System.ServiceProcess
 Imports System.Diagnostics
 Imports System.Threading

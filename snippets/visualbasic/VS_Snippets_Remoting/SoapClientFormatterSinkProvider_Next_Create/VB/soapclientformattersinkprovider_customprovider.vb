@@ -1,6 +1,5 @@
 ﻿' System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider.CreateSink
 
-Imports System
 Imports System.Collections
 Imports System.IO
 Imports System.Runtime.Remoting.Channels

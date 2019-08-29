@@ -2,7 +2,6 @@
 ' Sample for String.Equals(Object)
 '            String.Equals(String)
 '            String.Equals(String, String)
-Imports System
 Imports System.Text
 
 Class Sample

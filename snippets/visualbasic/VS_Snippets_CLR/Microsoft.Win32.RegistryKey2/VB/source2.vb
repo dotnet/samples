@@ -1,5 +1,4 @@
 ﻿' <Snippet5>
-Imports System
 Imports Microsoft.Win32
 
 Public Class RegKeyDel

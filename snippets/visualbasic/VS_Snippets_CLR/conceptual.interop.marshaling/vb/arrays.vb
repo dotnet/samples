@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Runtime.InteropServices
+﻿Imports System.Runtime.InteropServices
 
 '<Snippet31>
 ' Declares a managed structure for each unmanaged structure.

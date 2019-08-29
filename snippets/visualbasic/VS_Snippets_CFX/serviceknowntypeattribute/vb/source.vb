@@ -1,6 +1,5 @@
 ﻿ '  Copyright (c) Microsoft Corporation.  All Rights Reserved.
 '<snippet0>
-Imports System
 Imports System.Collections
 Imports System.ServiceModel
 Imports System.Runtime.Serialization

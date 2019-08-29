@@ -6,7 +6,6 @@
 ' 'ServiceDescription_Extensions_Input_vb.wsdl'. This program adds one object 
 ' to the extensions collection and displays the count and set the 'RetrievalURL' and displays.
 
-Imports System
 Imports System.Web.Services
 Imports System.Web.Services.Description
 

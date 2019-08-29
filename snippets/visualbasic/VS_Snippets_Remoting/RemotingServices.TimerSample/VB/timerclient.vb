@@ -7,7 +7,6 @@
 ' notification when the timer expires.
 ' System.Runtime.Remoting.RemotingServices.GetLifetimeService
 ' <Snippet1>
-Imports System
 Imports System.Collections
 Imports System.Net.Sockets
 Imports System.Runtime.Remoting

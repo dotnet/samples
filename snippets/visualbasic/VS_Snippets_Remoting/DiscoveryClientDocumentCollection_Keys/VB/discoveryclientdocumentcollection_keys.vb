@@ -10,7 +10,6 @@
 ' and the properties 'Keys' and 'Values' and the method 'Contains' are 
 ' displayed.
 
-Imports System
 Imports System.Net
 Imports System.IO
 Imports System.Collections

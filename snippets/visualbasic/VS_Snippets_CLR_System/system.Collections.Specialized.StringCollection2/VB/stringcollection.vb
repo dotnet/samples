@@ -1,7 +1,6 @@
 ﻿' The following code example demonstrates several of the properties and methods of StringCollection.
 
 ' <snippet1>
-Imports System
 Imports System.Collections
 Imports System.Collections.Specialized
 

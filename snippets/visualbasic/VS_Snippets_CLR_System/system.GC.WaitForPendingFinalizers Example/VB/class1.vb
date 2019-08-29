@@ -1,6 +1,4 @@
 ﻿'<snippet1>
-Imports System
-
 Namespace WaitForPendingFinalizersExample
    Class MyWaitForPendingFinalizersClass
   

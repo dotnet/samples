@@ -6,7 +6,6 @@
 ' and defines 'HelloWorld' type. Then it gets the custom attributes of 'HelloWorld' type
 ' and displays its contents to the console.
 ' <Snippet1>
-Imports System
 Imports System.Threading
 Imports System.Reflection
 Imports System.Reflection.Emit

@@ -5,26 +5,24 @@ Option Strict On
 Imports System.Text.RegularExpressions
 
 Module Example
-   Public Sub Main()
-      Dim inputs() As String = { "Brooklyn Dodgers, National League, 1911, 1912, 1932-1957",  _
-                            "Chicago Cubs, National League, 1903-present" + vbCrLf, _
-                            "Detroit Tigers, American League, 1901-present" + vbLf, _
-                            "New York Giants, National League, 1885-1957", _
-                            "Washington Senators, American League, 1901-1960" + vbCrLf }  
-      Dim pattern As String = "^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+\r?\z"
+    Public Sub Main()
+        Dim inputs() As String = {"Brooklyn Dodgers, National League, 1911, 1912, 1932-1957",
+                              "Chicago Cubs, National League, 1903-present" + vbCrLf,
+                              "Detroit Tigers, American League, 1901-present" + vbLf,
+                              "New York Giants, National League, 1885-1957",
+                              "Washington Senators, American League, 1901-1960" + vbCrLf}
+        Dim pattern As String = "^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+\r?\z"
 
-      For Each input As String In inputs
-         If input.Length > 70 Or Not input.Contains(",") Then Continue For
-
-         Console.WriteLine(Regex.Escape(input))
-         Dim match As Match = Regex.Match(input, pattern)
-         If match.Success Then
-            Console.WriteLine("   Match succeeded.")
-         Else
-            Console.WriteLine("   Match failed.")
-         End If
-      Next   
-   End Sub
+        For Each input As String In inputs
+            Console.WriteLine(Regex.Escape(input))
+            Dim match As Match = Regex.Match(input, pattern)
+            If match.Success Then
+                Console.WriteLine("   Match succeeded.")
+            Else
+                Console.WriteLine("   Match failed.")
+            End If
+        Next
+    End Sub
 End Module
 ' The example displays the following output:
 '    Brooklyn\ Dodgers,\ National\ League,\ 1911,\ 1912,\ 1932-1957

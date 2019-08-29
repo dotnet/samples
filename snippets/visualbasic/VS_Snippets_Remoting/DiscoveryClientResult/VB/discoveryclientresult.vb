@@ -7,7 +7,6 @@
 ' collection are displayed..
 
 ' <Snippet1>
-Imports System
 Imports System.Web.Services.Discovery
 
 Public Class MyDiscoveryClientResult

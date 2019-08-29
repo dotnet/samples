@@ -1,8 +1,6 @@
 ﻿' Supporting program for the 'SoapClientFormatterSinkProvider_Next_Server.vb' and
 ' 'SoapClientFormatterSinkProvider_Next_Client.vb'
 
-Imports System
-
 Public Class HelloService
    Inherits MarshalByRefObject
 

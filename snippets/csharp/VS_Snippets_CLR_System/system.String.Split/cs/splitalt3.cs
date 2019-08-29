@@ -6,18 +6,19 @@ public class Example
    {
       // <Snippet10>
       String input = "abacus -- alabaster - * - atrium -+- " +
-                     "any -*- actual - + - armoir - - alarm";
+                     "any -*- actual - + - armoire - - alarm";
       String pattern = @"\s-\s?[+*]?\s?-\s";
       String[] elements = System.Text.RegularExpressions.Regex.Split(input, pattern);
       foreach (var element in elements)
          Console.WriteLine(element);
+
       // The example displays the following output:
       //       abacus
       //       alabaster
       //       atrium
       //       any
       //       actual
-      //       armoir
+      //       armoire
       //       alarm
       // </Snippet10>
    }

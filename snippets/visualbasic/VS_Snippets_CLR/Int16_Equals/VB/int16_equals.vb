@@ -4,7 +4,6 @@
 ' of struct 'Int16'. This compares an instance of 'Int16' with the
 ' passed in object and returns true if they are equal.
 
-Imports System
 Imports Microsoft.VisualBasic
 
 Class MyInt16_Equals

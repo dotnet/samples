@@ -4,7 +4,6 @@
 ' envelope signature. It then verifies the 
 ' signed XML.
 '
-Imports System
 Imports System.Security.Cryptography
 Imports System.Security.Cryptography.Xml
 Imports System.Security.Cryptography.X509Certificates

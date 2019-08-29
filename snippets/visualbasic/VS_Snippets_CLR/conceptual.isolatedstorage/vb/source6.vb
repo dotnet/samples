@@ -1,5 +1,4 @@
 ﻿'<snippet7>
-Imports System
 Imports System.IO.IsolatedStorage
 
 Public Class ObtainingAStore

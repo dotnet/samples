@@ -1,8 +1,6 @@
 ﻿'   Supporting file for AssemblyBuilder_DefineUnmanagedResource2.cs
 '   Note : Calls  EmitClass class from 'MyEmitTestAssembly.dll' using reflection emit.
 
-Imports System
-
 Public Class MyAssemblyResourceApplication
    
    Public Shared Sub Main()

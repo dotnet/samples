@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Diagnostics
+﻿Imports System.Diagnostics
 
 ' <Snippet1>
 ' The following are possible values for the new switch.

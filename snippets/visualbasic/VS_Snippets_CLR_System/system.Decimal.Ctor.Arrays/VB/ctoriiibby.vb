@@ -1,7 +1,6 @@
 ﻿'<Snippet2>
 ' Example of the Decimal( Integer, Integer, Integer, Boolean, Byte ) 
 ' constructor.
-Imports System
 Imports Microsoft.VisualBasic
 
 Module DecimalCtorIIIBByDemo

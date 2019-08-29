@@ -6,8 +6,6 @@
 Option Explicit On 
 Option Strict On
 
-Imports System
-
 Namespace GetFileSystemEntries
     Class Class1
         Overloads Shared Sub Main(ByVal args() As String)

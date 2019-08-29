@@ -2,7 +2,6 @@
 ' How to: Create a File in Visual Basic
 
 ' <snippet1>
-Imports System
 Imports System.IO
 Imports System.Text
 

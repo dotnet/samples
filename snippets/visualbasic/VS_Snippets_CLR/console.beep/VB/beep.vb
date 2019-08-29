@@ -1,7 +1,5 @@
 ﻿'<snippet1>
 ' This example demonstrates the Console.Beep() method.
-Imports System
-
 Class Sample
    Public Shared Sub Main(args() As String)
       Dim x As Integer = 0

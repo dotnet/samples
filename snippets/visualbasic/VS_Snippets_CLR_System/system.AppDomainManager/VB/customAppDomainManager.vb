@@ -5,7 +5,6 @@
 ' environment variables. For example:
 ' set APPDOMAIN_MANAGER_TYPE=library.TestAppDomainManager
 ' set APPDOMAIN_MANAGER_ASM=library, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f1368f7b12a08d72
-Imports System
 Imports System.Collections
 Imports System.Net
 Imports System.Reflection

@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Threading
+﻿Imports System.Threading
 
 Friend Class Program
     Private Shared lazyLargeObject As Lazy(Of LargeObject) = Nothing

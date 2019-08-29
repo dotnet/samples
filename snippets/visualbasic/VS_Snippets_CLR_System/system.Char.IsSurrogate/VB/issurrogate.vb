@@ -1,6 +1,4 @@
 ﻿' <snippet11>
-Imports System
-
 Module IsSurrogateSample
 
     Sub Main()

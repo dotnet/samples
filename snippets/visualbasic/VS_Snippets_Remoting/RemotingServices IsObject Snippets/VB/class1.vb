@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Runtime.Remoting
+﻿Imports System.Runtime.Remoting
 
 
 Namespace RemoteClient

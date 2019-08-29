@@ -1,7 +1,5 @@
 ﻿' REDMOND\glennha
 ' <Snippet1>
-Imports System
-
 Public Class DinoDiscoverySet
 
     Public Shared Sub Main()

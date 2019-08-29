@@ -1,7 +1,6 @@
 ﻿' This class creates a custom crytographic object based on the asymmetric
 ' algorithm by extending the abstract base class AsymmetricAlgorithm.
 '<Snippet2>
-Imports System
 Imports System.Xml
 Imports System.Text
 Imports System.Security.Cryptography

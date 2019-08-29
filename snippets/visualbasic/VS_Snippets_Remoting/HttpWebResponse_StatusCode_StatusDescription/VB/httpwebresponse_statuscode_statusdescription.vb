@@ -3,7 +3,6 @@
  'This program demonstrates the 'StatusCode' and 'StatusDescription' property of the 'HttpWebResponse' class
 'It creates a web request and queries for a response. 
 
-Imports System
 Imports System.Net
 Imports Microsoft.VisualBasic
 Imports System.Environment

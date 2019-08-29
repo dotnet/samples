@@ -2,7 +2,6 @@
 Option Explicit
 Option Strict
 
-Imports System
 Imports System.Threading
 
 Public Class IsThreadPool

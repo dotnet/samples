@@ -1,4 +1,4 @@
-﻿//<snippet1>
+//<snippet1>
 // Sample for String.Compare(String, Int32, String, Int32, Int32, Boolean)
 using System;
 
@@ -19,7 +19,6 @@ class Sample
         Console.Write("Substring '{0}' in '{1}' is ", str1.Substring(2, 2), str1);
         Console.Write("{0} ", str);
         Console.WriteLine("substring '{0}' in '{1}'.", str2.Substring(2, 2), str2);
-
         Console.WriteLine();
         Console.WriteLine("Honor case:");
         result = String.Compare(str1, 2, str2, 2, 2, false);

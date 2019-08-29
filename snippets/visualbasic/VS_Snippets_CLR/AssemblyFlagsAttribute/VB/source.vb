@@ -1,5 +1,4 @@
 ﻿'<Snippet1>
-Imports System
 Imports System.Reflection
 
 ' Specify a combination of AssemblyNameFlags for this 

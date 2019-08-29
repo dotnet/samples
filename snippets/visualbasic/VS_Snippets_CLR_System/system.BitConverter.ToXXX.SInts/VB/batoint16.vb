@@ -1,6 +1,5 @@
 ﻿'<Snippet1>
 ' Example of the BitConverter.ToInt16 method.
-Imports System
 Imports Microsoft.VisualBasic
 
 Module BytesToInt16Demo

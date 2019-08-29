@@ -1,6 +1,4 @@
-﻿Imports System
-
-' <Snippet1>
+﻿' <Snippet1>
 Class B(Of U)
 End Class
 Class C(Of T)

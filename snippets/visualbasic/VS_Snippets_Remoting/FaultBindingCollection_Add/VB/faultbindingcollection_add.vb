@@ -8,7 +8,6 @@
 ' * stock and 'time' is the time for which the trading price is to be returned for the stock 
 ' * specified. The WSDL file generated for the service supports the SOAP protocol only. 
 '
-Imports System
 Imports System.Web.Services.Description
 Imports System.Xml
 Imports System.Xml.Schema

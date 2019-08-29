@@ -1,5 +1,4 @@
 ﻿'<Snippet1>
-Imports System
 Imports System.Reflection
 
 ' Define a sample interface to use as an interface constraint.

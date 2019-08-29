@@ -1,6 +1,4 @@
 ﻿' <Snippet1>
-Imports System
-
 Public Class SamplesArray
     Public Shared Sub Main()
         ' Creates and initializes a new Array.

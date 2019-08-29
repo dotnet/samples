@@ -17,7 +17,6 @@
 ' The program creates a dynamic assembly and a type within it called as 
 ' 'HelloWorld' This defines a field and implements an interface.
 
-Imports System
 Imports System.Reflection
 Imports System.Reflection.Emit
 Imports System.Threading

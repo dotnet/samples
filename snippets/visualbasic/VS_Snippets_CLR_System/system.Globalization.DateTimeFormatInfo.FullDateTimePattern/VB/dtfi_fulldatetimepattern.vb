@@ -1,7 +1,6 @@
 ﻿' The following code example displays the value of FullDateTimePattern for selected cultures.
 
 ' <snippet1>
-Imports System
 Imports System.Globalization
 
 Public Class SamplesDTFI

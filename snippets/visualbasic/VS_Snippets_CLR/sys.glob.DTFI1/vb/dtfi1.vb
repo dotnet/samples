@@ -5,7 +5,6 @@
 ' ShortestDayNames, and NativeCalendarName properties, and
 ' the GetShortestDayName() and SetAllDateTimePatterns() methods.
 
-Imports System
 Imports System.Globalization
 
 Class Sample

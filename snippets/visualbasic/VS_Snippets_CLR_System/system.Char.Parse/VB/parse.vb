@@ -1,7 +1,5 @@
 ﻿imports Microsoft.VisualBasic
 ' <snippet15>
-imports System
-
 Module ParseSample
 
     Sub Main()

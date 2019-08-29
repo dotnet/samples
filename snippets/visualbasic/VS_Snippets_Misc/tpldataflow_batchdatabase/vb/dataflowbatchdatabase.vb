@@ -1,6 +1,5 @@
 ﻿' <snippet100>
 ' <snippet1>
-Imports System
 Imports System.Collections.Generic
 Imports System.Data.SqlServerCe
 Imports System.Diagnostics

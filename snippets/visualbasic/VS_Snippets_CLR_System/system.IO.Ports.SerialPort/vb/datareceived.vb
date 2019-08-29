@@ -1,5 +1,4 @@
 ﻿'<snippet06>
-Imports System
 Imports System.IO.Ports
 
 Class PortDataReceived

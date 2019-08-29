@@ -1,5 +1,4 @@
 ﻿'<snippet1>
-Imports System
 Imports System.Security.Permissions
 Imports System.Collections
 

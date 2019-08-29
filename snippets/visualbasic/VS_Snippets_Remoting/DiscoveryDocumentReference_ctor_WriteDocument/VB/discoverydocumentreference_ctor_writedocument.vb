@@ -8,7 +8,6 @@
 ' document into a file stream and print its contents on the console.
 
 ' <Snippet1>
-Imports System
 Imports System.Xml
 Imports System.Web.Services.Discovery
 Imports System.IO

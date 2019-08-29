@@ -1,7 +1,6 @@
 ﻿' The following code example shows how to create and use masks.
 
 ' <snippet1>
-Imports System
 Imports System.Collections.Specialized
 
 

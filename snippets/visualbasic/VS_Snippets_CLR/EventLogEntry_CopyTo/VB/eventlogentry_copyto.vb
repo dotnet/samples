@@ -7,7 +7,6 @@
 ' to an Array.
 
 ' <Snippet1>
-Imports System
 Imports System.Collections
 Imports System.Diagnostics
 

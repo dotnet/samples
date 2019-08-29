@@ -8,7 +8,6 @@
 ' </auto-generated>
 '------------------------------------------------------------------------------
 
-Imports System
 <System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0"), System.ServiceModel.ServiceContractAttribute(Namespace:="http://Microsoft.ServiceModel.Samples", ConfigurationName:="IOrderTaker", SessionMode:=System.ServiceModel.SessionMode.Required)> _
 Public Interface IOrderTaker
 
