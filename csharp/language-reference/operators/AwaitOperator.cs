@@ -13,7 +13,7 @@ public class AwaitOperator
         Console.WriteLine($"{nameof(Main)}: Downloaded {bytesLoaded} bytes.");
     }
 
-    private static async Task<int> DownloadDocsMainPage()
+    private static async Task<int> DownloadDocsMainPageAsync()
     {
         Console.WriteLine($"{nameof(DownloadDocsMainPage)}: About to start downloading.");
         
