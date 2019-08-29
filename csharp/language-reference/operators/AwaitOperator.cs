@@ -20,7 +20,7 @@ public class AwaitOperator
         var client = new HttpClient();
         byte[] content = await client.GetByteArrayAsync("https://docs.microsoft.com/en-us/");
         
-        Console.WriteLine($"{nameof(DownloadDocsMainPage)}: Finished downloading.");
+        Console.WriteLine($"{nameof(DownloadDocsMainPageAsync)}: Finished downloading.");
         return content.Length;
     }
 }
