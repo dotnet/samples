@@ -1,5 +1,4 @@
 ﻿'<SNIPPET1>
-Imports System
 Imports System.Windows.Forms
 Imports System.Deployment.Application
 Imports System.Drawing

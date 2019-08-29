@@ -6,7 +6,6 @@
 ' collections are added to it. A Remove button is provided to delete the
 ' CustomerName column style collection.
 
-Imports System
 Imports System.ComponentModel
 Imports System.Data
 Imports System.Drawing

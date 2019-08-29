@@ -5,7 +5,6 @@
 ' TODO: see if you can work DrawParentBackground into here somehow.
 
 '<Snippet0>
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 Imports System.Windows.Forms.VisualStyles

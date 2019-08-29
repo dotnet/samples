@@ -1,7 +1,6 @@
 ﻿Imports System.Drawing
 Imports System.Drawing.Drawing2D
 Imports System.Drawing.Imaging
-Imports System
 Imports System.Windows.Forms
 
 

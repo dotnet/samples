@@ -6,7 +6,6 @@
 '  A table is created and added to a datagrid with two coloumns.The table allows to change
 '  Header's  background and foreground colors through selection of combobox values.
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel

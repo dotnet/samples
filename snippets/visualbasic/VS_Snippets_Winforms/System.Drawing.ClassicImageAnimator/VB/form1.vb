@@ -2,7 +2,6 @@
 
 ' Snippet for: M:System.Drawing.ImageAnimator.Animate(System.Drawing.Image,System.EventHandler)
 ' <snippet1>
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 

@@ -4,7 +4,6 @@
 ' event of 'DataGrid' class. On the click of "ParentDetailsButton" button in the
 ' Datagrid, a message is displayed.
 
-Imports System
 Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms

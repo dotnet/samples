@@ -4,7 +4,6 @@
 ' vbc controliskeylocked.vb /r:System.Windows.Forms.dll /r:System.dll 
 ' /r:System.Data.dll /r:System.Drawing.dll
 
-Imports System
 Imports System.Windows.Forms
 Imports Microsoft.VisualBasic
 
