@@ -1,7 +1,6 @@
 ﻿' Using Async for File Access
 
 '<Snippet1>
-Imports System
 Imports System.Collections.Generic
 Imports System.Diagnostics
 Imports System.IO

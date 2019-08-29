@@ -10,7 +10,7 @@ Module Example
       list.AddRange( { "A", "B", "C" } )
       Try
          ' Display the elements in the list by index.
-         For ctr As Integer = 0 To list.Count 
+         For ctr As Integer = 0 To list.Count
             Console.WriteLine("Index {0}: {1}", ctr, list(ctr)) 
          Next   
       Catch e As ArgumentOutOfRangeException
