@@ -3,8 +3,6 @@ Option Strict
 Option Explicit
 
 Imports System.Diagnostics
-Imports Microsoft.VisualBasic
-
 Class MySample
     Public Shared Sub Main()
         

@@ -1,7 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Globalization
-Imports Microsoft.VisualBasic
-
 Class SamplesNumberFormatInfo
     
     Public Shared Sub Main()

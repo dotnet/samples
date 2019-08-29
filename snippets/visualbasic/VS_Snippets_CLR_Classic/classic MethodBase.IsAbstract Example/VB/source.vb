@@ -1,7 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
-
 Class methodbase1
 
     Public Shared Function Main() As Integer

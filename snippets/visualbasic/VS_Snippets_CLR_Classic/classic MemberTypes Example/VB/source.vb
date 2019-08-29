@@ -1,7 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
-
 Class membertypesenum
 
     Public Overloads Shared Function Main(ByVal args() As String) As Integer

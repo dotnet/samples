@@ -1,7 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
-
 Class parminfo
     
     Public Shared Sub mymethod(int1m As Integer, ByRef str2m As String, _

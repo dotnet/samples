@@ -1,7 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
-
 ' Define a property.
 Public Class Myproperty
     Private myCaption As String = "A Default caption"

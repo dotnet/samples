@@ -1,7 +1,5 @@
 ﻿'<Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
-
 Class AttributesSample
 
     Public Sub Mymethod(ByVal int1m As Integer, ByRef str2m As String, ByRef str3m As String)

@@ -1,7 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
-
 Public MustInherit Class dtype
 
     Public MustInherit Class MyClassA

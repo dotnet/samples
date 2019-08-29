@@ -1,8 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
-
-
 'Make two fields, one public and one read-only.
 Public Class Myfielda
     Public field As String = "A - public modifiable field"

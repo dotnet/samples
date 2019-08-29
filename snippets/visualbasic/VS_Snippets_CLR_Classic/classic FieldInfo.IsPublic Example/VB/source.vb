@@ -1,8 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
-
-
 ' Make two fields.
 Public Class Myfielda
     ' Make a private field.

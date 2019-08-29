@@ -1,7 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
-
 Class paramatt
 
     Public Shared Sub mymethod(ByVal str1 As String, ByRef str2 As String, _
