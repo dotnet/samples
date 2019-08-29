@@ -1,6 +1,5 @@
 ﻿' <SnippetGraphicsMMVisualBrushReflectionExampleWholePage>
 
-Imports System
 Imports System.Windows
 Imports System.Windows.Data
 Imports System.Windows.Controls

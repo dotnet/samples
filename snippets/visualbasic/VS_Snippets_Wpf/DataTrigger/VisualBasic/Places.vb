@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Collections.ObjectModel
+﻿Imports System.Collections.ObjectModel
 
 '<Snippet2>
 Public Class Place

@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Collections.ObjectModel
+﻿Imports System.Collections.ObjectModel
 Imports System.AddIn.Hosting
 Imports System.Windows
 
