@@ -3,9 +3,6 @@
 ' <Snippet1>
 Imports System
 Imports System.Windows.Forms
-Imports Microsoft.Visualbasic
-
-
 Public Class DataFormat_GetFormat
    
    Shared Sub Main()

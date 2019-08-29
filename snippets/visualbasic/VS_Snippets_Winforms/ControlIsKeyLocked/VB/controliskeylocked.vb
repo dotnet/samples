@@ -6,8 +6,6 @@
 
 Imports System
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
-
 Public Class CapsLockIndicator
    
     Public Shared Sub Main()

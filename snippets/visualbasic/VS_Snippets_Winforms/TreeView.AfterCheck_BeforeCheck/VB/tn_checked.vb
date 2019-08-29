@@ -5,9 +5,6 @@ Imports System.Collections
 Imports System.ComponentModel
 Imports System.Windows.Forms
 Imports System.Data
-Imports Microsoft.VisualBasic
-
-
 Namespace TN_Checked
     
    Public Class Form1

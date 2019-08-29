@@ -8,8 +8,6 @@ Imports System.Reflection
 Imports System.Text
 Imports System.Windows.Forms
 Imports System.Windows.Forms.Design
-Imports Microsoft.VisualBasic
-
 ' This control provides an example design-time user interface to 
 ' the ITypeResolutionService.
 <DesignerAttribute(GetType(WindowMessageDesigner), GetType(IDesigner))>  _

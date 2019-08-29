@@ -7,8 +7,6 @@ Imports System.Collections
 Imports System.ComponentModel
 Imports System.Windows.Forms
 Imports System.Data
-Imports Microsoft.VisualBasic
-
 Public Class Form1
     Inherits System.Windows.Forms.Form
     Private WithEvents splitContainer1 As System.Windows.Forms.SplitContainer

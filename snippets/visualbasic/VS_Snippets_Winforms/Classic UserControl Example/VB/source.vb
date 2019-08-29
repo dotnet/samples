@@ -3,8 +3,6 @@ Imports System
 Imports System.Windows.Forms
 Imports System.Drawing
 Imports System.ComponentModel
-Imports Microsoft.VisualBasic
-
 Namespace UserControls
 
    Public Class MyCustomerInfoUserControl

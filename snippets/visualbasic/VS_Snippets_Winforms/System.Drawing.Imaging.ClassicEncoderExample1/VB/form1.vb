@@ -4,9 +4,6 @@
 Imports System
 Imports System.Drawing
 Imports System.Drawing.Imaging
-Imports Microsoft.VisualBasic
-
-
 Class Example_SetColorDepth
 
     Public Shared Sub Main()

@@ -13,8 +13,6 @@ Imports System.Collections
 Imports System.ComponentModel
 Imports System.Windows.Forms
 Imports System.Data
-Imports MicroSoft.VisualBasic
-
 Public Class MyForm
    Inherits Form
    Private myTreeView As TreeView

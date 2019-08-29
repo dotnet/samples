@@ -11,8 +11,6 @@ Imports System.Collections
 Imports System.ComponentModel
 Imports System.Windows.Forms
 Imports System.Data
-Imports Microsoft.VisualBasic
-
 Namespace MyWidthChangedEventExample
  
    Public Class MyForm

@@ -1,8 +1,6 @@
 ﻿Imports System
 Imports System.Windows.Forms
 Imports System.ComponentModel
-Imports Microsoft.VisualBasic
-
 Public Class Form1
     Inherits Form
     Protected textBox1 As TextBox
