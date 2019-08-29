@@ -20,10 +20,6 @@
 Imports System.IO
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
-
-
-
 Class HttpWebRequest_SendChunked
    Public Overloads Shared Sub Main()
         Main(System.Environment.GetCommandLineArgs())

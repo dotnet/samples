@@ -4,7 +4,6 @@
  ' It creates a web request and queries for a response.The server should respond using the same version 
 
 Imports System.Net
-Imports Microsoft.VisualBasic
 Imports System.Environment
 
 Class HttpWebResponseSnippet

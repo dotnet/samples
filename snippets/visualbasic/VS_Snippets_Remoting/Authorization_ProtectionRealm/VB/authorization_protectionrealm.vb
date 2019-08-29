@@ -7,8 +7,6 @@
 ' 
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
-
 Namespace CloneBasicAuthentication
     
     ' The 'CloneBasic' authentication module class implements 'IAuthenticationModule'.

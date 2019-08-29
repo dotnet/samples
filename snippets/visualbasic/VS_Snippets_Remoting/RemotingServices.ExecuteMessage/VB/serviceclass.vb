@@ -5,9 +5,6 @@ Imports System.Runtime.Remoting.Messaging
 Imports System.Runtime.Remoting.Contexts
 Imports System.Runtime.Remoting.Channels
 Imports System.Security.Permissions
-Imports Microsoft.VisualBasic
-
-
 Public Class SampleService
    Inherits ContextBoundObject
    

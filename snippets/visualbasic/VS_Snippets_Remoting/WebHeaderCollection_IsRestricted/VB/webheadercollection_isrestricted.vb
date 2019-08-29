@@ -6,9 +6,6 @@
 '
 
 Imports System.Net
-Imports Microsoft.VisualBasic
-
-
 Public Class CheckRestricted
     
 ' <Snippet1>            

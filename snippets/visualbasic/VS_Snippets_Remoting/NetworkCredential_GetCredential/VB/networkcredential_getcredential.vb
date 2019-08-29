@@ -8,8 +8,6 @@
 '  otherwise an exception is thrown.
 
 Imports System.Net
-Imports Microsoft.VisualBasic
-
 Class NetworkCredential_GetCredential
     
     'Entry point which delegates to C-style main Private Function

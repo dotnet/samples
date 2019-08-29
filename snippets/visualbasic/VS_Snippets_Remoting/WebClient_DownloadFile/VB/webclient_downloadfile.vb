@@ -10,9 +10,6 @@
 
 Imports System.Net
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
-
-
 Public Class WebClient_DownloadFile
     
     Public Shared Sub Main()

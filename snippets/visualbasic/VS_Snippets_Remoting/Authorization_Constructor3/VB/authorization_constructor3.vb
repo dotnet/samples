@@ -10,8 +10,6 @@
 ' 
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
-
 Namespace CloneBasicAuthentication
     
     

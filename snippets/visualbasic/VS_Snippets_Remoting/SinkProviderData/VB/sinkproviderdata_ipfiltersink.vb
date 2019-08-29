@@ -19,8 +19,6 @@ Imports System.Runtime.Remoting.Channels
 Imports System.Runtime.Remoting.Channels.Http
 Imports System.Runtime.Remoting.Messaging
 Imports System.Security.Permissions
-Imports Microsoft.VisualBasic
-
 Namespace IPFilter
 ' <Snippet1>
 ' <Snippet2>

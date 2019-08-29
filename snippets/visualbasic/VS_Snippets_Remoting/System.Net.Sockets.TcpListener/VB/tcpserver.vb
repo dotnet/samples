@@ -3,9 +3,6 @@ Imports System.IO
 Imports System.Net
 Imports System.Net.Sockets
 Imports System.Text
-Imports Microsoft.VisualBasic
-
-
 Class MyTcpListener
 
     Public Shared Sub Main()

@@ -5,7 +5,6 @@
 'The program then closes the response object and releases resources associated with it.
 
 Imports System.Net
-Imports Microsoft.VisualBasic
 Imports System.Environment
 
 Class HttpWebResponseSnippet

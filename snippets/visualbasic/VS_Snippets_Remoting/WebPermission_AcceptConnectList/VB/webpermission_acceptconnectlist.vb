@@ -11,8 +11,6 @@ Imports System.Net
 Imports System.Security
 Imports System.Security.Permissions
 Imports System.Collections
-Imports Microsoft.VisualBasic
-
  _
 
 Class WebPermission_AcceptConnectList

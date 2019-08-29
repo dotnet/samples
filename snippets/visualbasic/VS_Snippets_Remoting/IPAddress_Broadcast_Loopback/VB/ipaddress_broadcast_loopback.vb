@@ -5,9 +5,6 @@
 
 
 Imports System.Net
-Imports Microsoft.VisualBasic
-
-
 Class LoopbackBroadcastSample
     
     Public Shared Sub Main()

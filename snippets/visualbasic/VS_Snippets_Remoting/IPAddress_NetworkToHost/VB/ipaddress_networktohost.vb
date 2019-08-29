@@ -8,9 +8,6 @@
 '
 
 Imports System.Net
-Imports Microsoft.VisualBasic
-
-
 Class NetworkToHostByteSample
     
     Public Shared Sub Main()

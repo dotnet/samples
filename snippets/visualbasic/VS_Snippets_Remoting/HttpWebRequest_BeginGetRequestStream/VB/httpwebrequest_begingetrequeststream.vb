@@ -4,8 +4,6 @@ Imports System.Net
 Imports System.IO
 Imports System.Text
 Imports System.Threading
-Imports Microsoft.VisualBasic
-
 Class HttpWebRequestBeginGetRequest
     Public Shared allDone As New ManualResetEvent(False)
 

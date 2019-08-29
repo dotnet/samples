@@ -9,8 +9,6 @@
 
 Imports System.Web.Services.Description
 Imports System.Xml
-Imports Microsoft.VisualBasic
-
 Class PortCollection_2
    Public Shared Sub Main()
       Try

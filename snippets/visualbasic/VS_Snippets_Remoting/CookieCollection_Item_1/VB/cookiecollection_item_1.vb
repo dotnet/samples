@@ -17,9 +17,6 @@ Imports System.Net
 Imports System.IO
 Imports System.Text
 Imports System.Text.RegularExpressions
-Imports Microsoft.VisualBasic
-
-
 Public Class CookieCollection_Item_1
     
     'Entry point which delegates to C-style main Private Function

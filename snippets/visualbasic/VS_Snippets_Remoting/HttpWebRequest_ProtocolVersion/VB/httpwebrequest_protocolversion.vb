@@ -11,10 +11,6 @@
 Imports System.IO
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
-
-
-
 Class HttpWebRequest_ProtocolVersion
     
     Shared Sub Main()

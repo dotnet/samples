@@ -9,9 +9,6 @@
 ' 
 
 Imports System.Net
-Imports Microsoft.VisualBasic
-
-
 Class CredentialCacheSnippet
     
     'Entry point which delegates to C-style main Private Function

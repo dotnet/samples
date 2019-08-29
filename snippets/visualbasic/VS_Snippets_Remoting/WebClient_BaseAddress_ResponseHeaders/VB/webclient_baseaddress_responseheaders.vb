@@ -11,9 +11,6 @@
 
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
-
-
 Public Class WebClient_BaseAddress
     
     Public Shared Sub Main()

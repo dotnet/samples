@@ -18,9 +18,6 @@ Imports System.Net.Sockets
 Imports System.Text
 Imports System.Security
 Imports System.Collections
-Imports Microsoft.VisualBasic
-
-
 Public Class DateServer
     
     'Client connecting to the date server.

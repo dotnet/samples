@@ -6,10 +6,6 @@ Imports System.Net
 Imports System.Security
 Imports System.Security.Permissions
 Imports System.IO
-Imports Microsoft.VisualBasic
-
-
-
 Public Class WebPermissionAttribute_AcceptConnect
 
 ' <Snippet1>

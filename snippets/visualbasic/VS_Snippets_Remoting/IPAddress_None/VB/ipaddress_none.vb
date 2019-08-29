@@ -4,9 +4,6 @@
 '
 
 Imports System.Net
-Imports Microsoft.VisualBasic
-
-
 Class NoneFieldAddress
 
 ' <Snippet1>	    

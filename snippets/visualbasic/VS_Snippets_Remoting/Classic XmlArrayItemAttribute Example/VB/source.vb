@@ -4,9 +4,6 @@ Option Strict
 
 Imports System.IO
 Imports System.Xml.Serialization
-Imports Microsoft.VisualBasic
-
-
 Public Class Group
     ' The XmlArrayItemAttribute allows the XmlSerializer to insert
     ' both the base type (Employee) and derived type (Manager)

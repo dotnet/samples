@@ -7,7 +7,6 @@
 'is no longer needed.
 
 Imports System.Net
-Imports Microsoft.VisualBasic
 Imports System.Environment
 
 Class CredentialCacheSnippet

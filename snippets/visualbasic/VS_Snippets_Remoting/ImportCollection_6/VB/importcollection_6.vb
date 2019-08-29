@@ -14,8 +14,6 @@
 ' <Snippet1>
 Imports System.Web.Services.Description
 Imports System.Xml
-Imports Microsoft.VisualBasic
-
 Class ServiceDescription_ImportCollection
    Public Shared Sub Main()
       Dim myServiceDescription As ServiceDescription = _

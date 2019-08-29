@@ -9,8 +9,6 @@
 '
 
 Imports System.Net
-Imports Microsoft.VisualBasic
-
 ' <Snippet1>
 ' <Snippet2>
 ' <snippet3>

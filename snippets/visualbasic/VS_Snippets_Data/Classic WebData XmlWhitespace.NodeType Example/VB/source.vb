@@ -4,8 +4,6 @@ Option Explicit
 
 Imports System.IO
 Imports System.Xml
-Imports Microsoft.VisualBasic
-
 Public Class Sample
     Private currNode As XmlNode
     Private filename As String = "space.xml"

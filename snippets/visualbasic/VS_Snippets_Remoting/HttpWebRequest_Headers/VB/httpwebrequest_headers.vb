@@ -10,9 +10,6 @@
 Imports System.IO
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
-
-
 Class HttpWebRequest_Headers
     
     Public Shared Sub Main()

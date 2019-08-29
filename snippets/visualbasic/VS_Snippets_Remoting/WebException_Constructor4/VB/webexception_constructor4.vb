@@ -11,8 +11,6 @@
 Imports System.Net
 Imports System.Net.Sockets
 Imports System.Text
-Imports Microsoft.VisualBasic
-
 Class HttpConnect
 Public Shared Sub Main()
         Try

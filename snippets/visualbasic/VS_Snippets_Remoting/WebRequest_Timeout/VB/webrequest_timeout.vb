@@ -8,9 +8,6 @@
 Imports System.IO
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
-
-
 Class WebRequest_Timeout
     
     Shared Sub Main()

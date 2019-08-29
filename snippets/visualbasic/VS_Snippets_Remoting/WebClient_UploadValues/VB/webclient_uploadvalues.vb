@@ -14,9 +14,6 @@
 Imports System.Collections.Specialized
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
-
-
 Public Class WebClient_UpLoadValues
     
     Public Shared Sub Main()

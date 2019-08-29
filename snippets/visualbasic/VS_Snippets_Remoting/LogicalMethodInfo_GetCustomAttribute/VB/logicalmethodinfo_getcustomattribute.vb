@@ -30,8 +30,6 @@
 ' <Snippet4>
 Imports System.Reflection
 Imports System.Web.Services.Protocols
-Imports MicroSoft.VisualBasic
-
 ' Define a custom attribute with one named parameter.
 <AttributeUsage(AttributeTargets.Method Or AttributeTargets.ReturnValue, AllowMultiple := True)>  _
 Public Class MyAttribute

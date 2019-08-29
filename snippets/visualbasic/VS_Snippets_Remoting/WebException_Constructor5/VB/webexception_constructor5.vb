@@ -16,10 +16,6 @@ Imports System.Net
 Imports System.Net.Sockets
 Imports System.Text
 Imports System.IO
-Imports Microsoft.VisualBasic
-
-
-
 Public Class HttpConnect
     Inherits WebResponse
     

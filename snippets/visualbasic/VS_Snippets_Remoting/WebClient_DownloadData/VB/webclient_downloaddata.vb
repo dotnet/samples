@@ -8,9 +8,6 @@
 
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
-
-
 Public Class WebClient_DownloadData
     
     Public Shared Sub Main()

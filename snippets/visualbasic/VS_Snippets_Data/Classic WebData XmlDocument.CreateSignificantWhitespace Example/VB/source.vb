@@ -3,8 +3,6 @@ Option Explicit
 Option Strict
 
 Imports System.Xml
-Imports Microsoft.VisualBasic
-
 Public Class Sample
     
     Public Shared Sub Main()

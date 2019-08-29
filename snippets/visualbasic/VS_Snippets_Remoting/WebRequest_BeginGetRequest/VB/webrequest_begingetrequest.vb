@@ -6,8 +6,6 @@ Imports System.Net
 Imports System.IO
 Imports System.Text
 Imports System.Threading
-Imports Microsoft.VisualBasic
-
 Public Class RequestState
     ' This class stores the request state of the request.
     Public request As WebRequest

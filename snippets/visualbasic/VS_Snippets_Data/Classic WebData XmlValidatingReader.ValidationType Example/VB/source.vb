@@ -2,8 +2,6 @@
 Imports System.IO
 Imports System.Xml
 Imports System.Xml.Schema
-Imports Microsoft.VisualBasic
-
 Public Class Sample
     Private doc1 As String = "notValid.xml"
     Private doc2 As String = "cdDTD.xml"
