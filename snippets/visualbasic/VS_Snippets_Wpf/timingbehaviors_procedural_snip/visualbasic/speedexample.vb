@@ -21,19 +21,22 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 
 			Me.WindowTitle = "Speed Example"
 
-			Dim myStackPanel As New StackPanel()
-			myStackPanel.Margin = New Thickness(20)
+            Dim myStackPanel As New StackPanel With {
+                .Margin = New Thickness(20)
+            }
 
-			Dim myTextBlock As New TextBlock()
-			myTextBlock.Text = "Speed=""1"""
-			myStackPanel.Children.Add(myTextBlock)
+            Dim myTextBlock As New TextBlock With {
+                .Text = "Speed=""1"""
+            }
+            myStackPanel.Children.Add(myTextBlock)
 
-			'
-			'  Create the rectangles to animate
-			'
-			Dim defaultSpeedRectangle As New Rectangle()
-			defaultSpeedRectangle.Name = "defaultSpeedRectangle"
-			Me.RegisterName(defaultSpeedRectangle.Name, defaultSpeedRectangle)
+            '
+            '  Create the rectangles to animate
+            '
+            Dim defaultSpeedRectangle As New Rectangle With {
+                .Name = "defaultSpeedRectangle"
+            }
+            Me.RegisterName(defaultSpeedRectangle.Name, defaultSpeedRectangle)
 			defaultSpeedRectangle.Width = 20
 			defaultSpeedRectangle.Height = 20
 			Dim mySolidColorBrush As New SolidColorBrush(Color.FromArgb(170,51,51,255))
@@ -41,14 +44,16 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			defaultSpeedRectangle.HorizontalAlignment = HorizontalAlignment.Left
 			myStackPanel.Children.Add(defaultSpeedRectangle)
 
-			myTextBlock = New TextBlock()
-			myTextBlock.Margin= New Thickness(0,20,0,0)
-			myTextBlock.Text = "Speed=""2"""
-			myStackPanel.Children.Add(myTextBlock)
+            myTextBlock = New TextBlock With {
+                .Margin = New Thickness(0, 20, 0, 0),
+                .Text = "Speed=""2"""
+            }
+            myStackPanel.Children.Add(myTextBlock)
 
-			Dim fasterRectangle As New Rectangle()
-			fasterRectangle.Name = "fasterRectangle"
-			Me.RegisterName(fasterRectangle.Name, fasterRectangle)
+            Dim fasterRectangle As New Rectangle With {
+                .Name = "fasterRectangle"
+            }
+            Me.RegisterName(fasterRectangle.Name, fasterRectangle)
 			fasterRectangle.Width = 20
 			fasterRectangle.Height = 20
 			mySolidColorBrush = New SolidColorBrush(Color.FromArgb(170,51,51,255))
@@ -56,14 +61,16 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			fasterRectangle.HorizontalAlignment = HorizontalAlignment.Left
 			myStackPanel.Children.Add(fasterRectangle)
 
-			myTextBlock = New TextBlock()
-			myTextBlock.Margin= New Thickness(0,20,0,0)
-			myTextBlock.Text = "Speed=""0.5"""
-			myStackPanel.Children.Add(myTextBlock)
+            myTextBlock = New TextBlock With {
+                .Margin = New Thickness(0, 20, 0, 0),
+                .Text = "Speed=""0.5"""
+            }
+            myStackPanel.Children.Add(myTextBlock)
 
-			Dim slowerRectangle As New Rectangle()
-			slowerRectangle.Name = "slowerRectangle"
-			Me.RegisterName(slowerRectangle.Name, slowerRectangle)
+            Dim slowerRectangle As New Rectangle With {
+                .Name = "slowerRectangle"
+            }
+            Me.RegisterName(slowerRectangle.Name, slowerRectangle)
 			slowerRectangle.Width = 20
 			slowerRectangle.Height = 20
 			mySolidColorBrush = New SolidColorBrush(Color.FromArgb(170,51,51,255))
@@ -112,25 +119,28 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			myStoryboard.Children.Add(myDoubleSpeedRatioDoubleAnimation)
 			myStoryboard.Children.Add(myHalvedSpeedRatioDoubleAnimation)
 
-			'
-			'  Create the button to restart the animations.
-			'
-			Dim myButton As New Button()
-			myButton.Margin = New Thickness(0,30,0,0)
-			myButton.HorizontalAlignment = HorizontalAlignment.Left
-			myButton.Content = "Restart Animations"
-			myStackPanel.Children.Add(myButton)
+            '
+            '  Create the button to restart the animations.
+            '
+            Dim myButton As New Button With {
+                .Margin = New Thickness(0, 30, 0, 0),
+                .HorizontalAlignment = HorizontalAlignment.Left,
+                .Content = "Restart Animations"
+            }
+            myStackPanel.Children.Add(myButton)
 
-			'
-			'  Create an EventTrigger and a BeginStoryboard action to start the storyboard
-			'
-			Dim myBeginStoryboard As New BeginStoryboard()
-			myBeginStoryboard.Storyboard = myStoryboard
+            '
+            '  Create an EventTrigger and a BeginStoryboard action to start the storyboard
+            '
+            Dim myBeginStoryboard As New BeginStoryboard With {
+                .Storyboard = myStoryboard
+            }
 
-			Dim myEventTrigger As New EventTrigger()
-			myEventTrigger.RoutedEvent = Button.ClickEvent
-			myEventTrigger.SourceName = myButton.Name
-			myEventTrigger.Actions.Add(myBeginStoryboard)
+            Dim myEventTrigger As New EventTrigger With {
+                .RoutedEvent = Button.ClickEvent,
+                .SourceName = myButton.Name
+            }
+            myEventTrigger.Actions.Add(myBeginStoryboard)
 			myStackPanel.Triggers.Add(myEventTrigger)
 
 			Me.Content = myStackPanel

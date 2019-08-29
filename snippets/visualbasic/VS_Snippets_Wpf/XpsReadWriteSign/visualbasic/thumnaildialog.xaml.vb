@@ -28,7 +28,7 @@ Namespace SDKSample
 			End If
 		End Sub
 
-		Private Sub AddThumbnail(ByVal sender As Object, ByVal e As RoutedEventArgs)
+		Private Sub AddThumbnail(sender As Object, e As RoutedEventArgs)
 			Dim docSeq As FixedDocumentSequence = _xpsDocument.GetFixedDocumentSequence()
 			Dim paginator As DocumentPaginator = docSeq.DocumentPaginator
 			Dim page As DocumentPage = paginator.GetPage(0)
@@ -63,14 +63,15 @@ Namespace SDKSample
 			thumbnail.Commit()
 			_xpsDocument.Close()
 			stream.Position = 0
-			Dim imageBrush As New ImageBrush(BitmapFrame.Create(stream))
-			imageBrush.Stretch = Stretch.Uniform
-			thumbnailDisplay.Fill = imageBrush
+            Dim imageBrush As New ImageBrush(BitmapFrame.Create(stream)) With {
+                .Stretch = Stretch.Uniform
+            }
+            thumbnailDisplay.Fill = imageBrush
 
-			' Once a thumbnail is set disable the "Add Thumbnail" button.
-			addThumbnailButton.IsEnabled = False
+            ' Once a thumbnail is set disable the "Add Thumbnail" button.
+            addThumbnailButton.IsEnabled = False
 		End Sub
-		Private _xpsDocument As XpsDocument
+		Private ReadOnly _xpsDocument As XpsDocument
 
 	End Class
 End Namespace

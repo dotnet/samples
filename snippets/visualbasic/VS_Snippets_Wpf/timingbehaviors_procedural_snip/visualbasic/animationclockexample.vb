@@ -17,23 +17,25 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 	Public Class AnimationClockExample
 		Inherits Page
 
-		Private myScaleTransform As ScaleTransform
+        Private ReadOnly myScaleTransform As ScaleTransform
 
-		Public Sub New()
+        Public Sub New()
 
 			Me.WindowTitle = "Opacity Animation Example"
 			Me.Background = Brushes.White
-			Dim myStackPanel As New StackPanel()
-			myStackPanel.Margin = New Thickness(20)
+            Dim myStackPanel As New StackPanel With {
+                .Margin = New Thickness(20)
+            }
 
-			' Create a button that with a ScaleTransform.
-			' The ScaleTransform will animate when the
-			' button is clicked.
-			Dim myButton As New Button()
-			myButton.Margin = New Thickness(50)
-			myButton.HorizontalAlignment = HorizontalAlignment.Left
-			myButton.Content = "Click Me"
-			myScaleTransform = New ScaleTransform(1,1)
+                ' Create a button that with a ScaleTransform.
+                ' The ScaleTransform will animate when the
+                ' button is clicked.
+            Dim myButton As New Button With {
+                .Margin = New Thickness(50),
+                .HorizontalAlignment = HorizontalAlignment.Left,
+                .Content = "Click Me"
+            }
+            myScaleTransform = New ScaleTransform(1,1)
 			myButton.RenderTransform = myScaleTransform
 
 
@@ -45,23 +47,24 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			Me.Content = myStackPanel
 		End Sub
 
-		' Create and apply and animation when the button is clicked.
-		Private Sub myButton_Clicked(ByVal sender As Object, ByVal e As RoutedEventArgs)
+        ' Create and apply and animation when the button is clicked.
+        Private Sub myButton_Clicked(sender As Object, e As RoutedEventArgs)
 
-			' Create a DoubleAnimation to animate the
-			' ScaleTransform.
-			Dim myAnimation As New DoubleAnimation(1, 5, New Duration(TimeSpan.FromSeconds(5))) ' "To" value -  "From" value
-			myAnimation.AutoReverse = True
+            ' Create a DoubleAnimation to animate the
+            ' ScaleTransform.
+            Dim myAnimation As New DoubleAnimation(1, 5, New Duration(TimeSpan.FromSeconds(5))) With {
+                .AutoReverse = True
+            } ' "To" value -  "From" value
 
-			' Create a clock the for the animation.
-			Dim myClock As AnimationClock = myAnimation.CreateClock()
+            ' Create a clock the for the animation.
+            Dim myClock As AnimationClock = myAnimation.CreateClock()
 
-			' Associate the clock the ScaleX and
-			' ScaleY properties of the button's
-			' ScaleTransform.
-			myScaleTransform.ApplyAnimationClock(ScaleTransform.ScaleXProperty, myClock)
-			myScaleTransform.ApplyAnimationClock(ScaleTransform.ScaleYProperty, myClock)
-		End Sub
-	End Class
+            ' Associate the clock the ScaleX and
+            ' ScaleY properties of the button's
+            ' ScaleTransform.
+            myScaleTransform.ApplyAnimationClock(ScaleTransform.ScaleXProperty, myClock)
+            myScaleTransform.ApplyAnimationClock(ScaleTransform.ScaleYProperty, myClock)
+        End Sub
+    End Class
 End Namespace
 ' </SnippetGraphicsMMCreateAnimationClockWholeClass>

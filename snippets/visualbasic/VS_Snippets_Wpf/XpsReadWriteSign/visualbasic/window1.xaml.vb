@@ -78,163 +78,168 @@ Namespace SDKSample
 
 
 		End Sub
-		#End Region
+#End Region
 
-		#Region "Private Methods"
-		' ----------------------- OpenCommandHandler -------------------------
-		''' <summary>
-		'''   Opens an existing XPS document and displays
-		'''   it with a DocumentViewer./// </summary>
-		''' <param name="sender"></param>
-		''' <param name="e"></param>
-		Private Sub OpenCommandHandler(ByVal sender As Object, ByVal e As ExecutedRoutedEventArgs)
-			'Display a file open dialog to find and existing document
-			Dim dlg As New OpenFileDialog()
-			dlg.Filter = "Xps Documents (*.xps)|*.xps"
-			dlg.FilterIndex = 1
-			If dlg.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
-				If _xpsDocument IsNot Nothing Then
-					_xpsDocument.Close()
-				End If
-				Try
-					_xpsDocument = New XpsDocument(dlg.FileName, System.IO.FileAccess.ReadWrite)
-				Catch e1 As UnauthorizedAccessException
-					System.Windows.MessageBox.Show(String.Format("Unable to access {0}", dlg.FileName))
-					Return
-				End Try
-				' For optimal performance the XPS document should be remain
-				' open while its FixedDocumentSequence is active in the
-				' DocumentViewer control.  When the XPS document is opened
-				' with the XpsDocument constructor ("new" above) a reference
-				' to it is automatically added to the PackageStore.  The
-				' PackStore is a static application collection that contains a
-				' reference to each open package along the package's URI as a
-				' key.  Adding a reference of the XPS package to the
-				' PackageStore keeps the package open and avoids repeated opens
-				' and closes while the document content is actively being
-				' processed by the DocumentViewer control.  The XpsDocument
-				' Dispose() method automatically removes the package from the
-				' PackageStore after the document is removed from the
-				' DocumentViewer control and is no longer in use.
-				docViewer.Document = _xpsDocument.GetFixedDocumentSequence()
-				_fileName = dlg.FileName
-			End If
-			EnableMenuItems()
-		End Sub ' end:OpenCommandHandler()
-
-
-		' ----------------------- OutlineCommandHandler ----------------------
-		''' <summary>
-		'''   Iterates through the parts of an XpsDocument initializing
-		'''   a tree view control with the names of its parts.</summary>
-		''' <param name="sender"></param>
-		''' <param name="e"></param>
-		Private Sub OutlineCommandHandler(ByVal sender As Object, ByVal e As ExecutedRoutedEventArgs)
-			If _xpsDocument IsNot Nothing Then
-				_xpsReadWriteUtility.IterateXpsPackageParts(_xpsDocument, treeView, _fileName)
-			End If
-		End Sub ' end:OutlineCommandHandler()
+#Region "Private Methods"
+        ' ----------------------- OpenCommandHandler -------------------------
+        ''' <summary>
+        '''   Opens an existing XPS document and displays
+        '''   it with a DocumentViewer./// </summary>
+        ''' <param name="sender"></param>
+        ''' <param name="e"></param>
+        Private Sub OpenCommandHandler(sender As Object, e As ExecutedRoutedEventArgs)
+            'Display a file open dialog to find and existing document
+            Using dlg As New OpenFileDialog With {
+                .Filter = "Xps Documents (*.xps)|*.xps",
+                .FilterIndex = 1
+            }
+                If dlg.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
+                    If _xpsDocument IsNot Nothing Then
+                        _xpsDocument.Close()
+                    End If
+                    Try
+                        _xpsDocument = New XpsDocument(dlg.FileName, System.IO.FileAccess.ReadWrite)
+                    Catch e1 As UnauthorizedAccessException
+                        System.Windows.MessageBox.Show(String.Format("Unable to access {0}", dlg.FileName))
+                        Return
+                    End Try
+                    ' For optimal performance the XPS document should be remain
+                    ' open while its FixedDocumentSequence is active in the
+                    ' DocumentViewer control.  When the XPS document is opened
+                    ' with the XpsDocument constructor ("new" above) a reference
+                    ' to it is automatically added to the PackageStore.  The
+                    ' PackStore is a static application collection that contains a
+                    ' reference to each open package along the package's URI as a
+                    ' key.  Adding a reference of the XPS package to the
+                    ' PackageStore keeps the package open and avoids repeated opens
+                    ' and closes while the document content is actively being
+                    ' processed by the DocumentViewer control.  The XpsDocument
+                    ' Dispose() method automatically removes the package from the
+                    ' PackageStore after the document is removed from the
+                    ' DocumentViewer control and is no longer in use.
+                    docViewer.Document = _xpsDocument.GetFixedDocumentSequence()
+                    _fileName = dlg.FileName
+                End If
+            End Using
+            EnableMenuItems()
+        End Sub ' end:OpenCommandHandler()
 
 
-		' ---------------------- SignatureCommandHandler ---------------------
-		''' <summary>
-		'''   Displays a dialog showing the current digital signatures and
-		'''   signature definitions.  A button on the dialog allows additional
-		'''   signatures to be added.</summary>
-		''' <param name="sender"></param>
-		''' <param name="e"></param>
-		Private Sub SignatureCommandHandler(ByVal sender As Object, ByVal e As ExecutedRoutedEventArgs)
-			If _fileName IsNot Nothing Then
-				Dim signatureDialog As New SignatureDialog(_xpsDocument)
-				signatureDialog.ShowDialog()
-
-				' Close to flush the new signature definition, then reopen.
-				_xpsDocument.Close()
-				_xpsDocument = New XpsDocument(_fileName, FileAccess.ReadWrite)
-			End If
-		End Sub ' end:SignatureCommandHandler()
-
-		' ---------------------- ThumbnailCommandHandler ---------------------
-		''' <summary>
-		'''   Displays a dialog showing the current thumbnail.  A button on the dialog creates a
-		'''   thumbnail add adds it.</summary>
-		''' <param name="sender"></param>
-		''' <param name="e"></param>
-		Private Sub ThumbnailCommandHandler(ByVal sender As Object, ByVal e As ExecutedRoutedEventArgs)
-			If _fileName IsNot Nothing Then
-				Dim thumnailDialog As New ThumnailDialog(_xpsDocument)
-				thumnailDialog.ShowDialog()
-
-				' Close and re-open the document in case a new thumbnail was added.
-				_xpsDocument.Close()
-				_xpsDocument = New XpsDocument(_fileName, FileAccess.ReadWrite)
-			End If
-		End Sub ' end:ThumbnailCommandHandler()
-
-		' ------------------------- NewCommandHandler ------------------------
-		''' <summary>
-		'''   Prompts the user for a new XPS document file name, creates the
-		'''   new document, fills the document with a preset block of content,
-		'''   and then sets the new document as the current document.</summary>
-		''' <param name="sender"></param>
-		''' <param name="e"></param>
-		Private Sub NewCommandHandler(ByVal sender As Object, ByVal e As ExecutedRoutedEventArgs)
-			' Prompt the user for new file to be saved
-			Dim saveDlg As New SaveFileDialog()
-			saveDlg.Title = "New Xps Document"
-			saveDlg.Filter = "Xps Documents (*.xps)|*.xps"
-			saveDlg.FilterIndex = 1
-			saveDlg.DefaultExt = "*.xps"
-			If saveDlg.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
-				If _xpsDocument IsNot Nothing Then
-					_xpsDocument.Close()
-				End If
-				Try
-					' Open a "Save As" dialog to query the user
-					' for where to create the new XPS document.
-					If File.Exists(saveDlg.FileName) Then
-						File.Delete(saveDlg.FileName)
-					End If
-					_xpsDocument = New XpsDocument(saveDlg.FileName, System.IO.FileAccess.ReadWrite)
-				Catch e1 As UnauthorizedAccessException
-					System.Windows.MessageBox.Show(String.Format("Unable to access {0}", saveDlg.FileName))
-					Return
-				End Try
-
-				' Fill the newly created document.
-				_xpsReadWriteUtility.Create(_xpsDocument)
-
-				' Close it to flush the values.
-				_xpsDocument.Close()
-
-				' Re-open the document and set as the current document.
-				_xpsDocument = New XpsDocument(saveDlg.FileName, System.IO.FileAccess.ReadWrite)
-				docViewer.Document = _xpsDocument.GetFixedDocumentSequence()
-				 _fileName = saveDlg.FileName
-			End If ' end:if (saveDlg.ShowDialog() == DialogResult.OK)
-
-			EnableMenuItems()
-		End Sub ' end:NewCommandHandler()
+        ' ----------------------- OutlineCommandHandler ----------------------
+        ''' <summary>
+        '''   Iterates through the parts of an XpsDocument initializing
+        '''   a tree view control with the names of its parts.</summary>
+        ''' <param name="sender"></param>
+        ''' <param name="e"></param>
+        Private Sub OutlineCommandHandler(sender As Object, e As ExecutedRoutedEventArgs)
+            If _xpsDocument IsNot Nothing Then
+                _xpsReadWriteUtility.IterateXpsPackageParts(_xpsDocument, treeView, _fileName)
+            End If
+        End Sub ' end:OutlineCommandHandler()
 
 
-		' ---------------------- ProportiesCommandHandler --------------------
-		''' <summary>
-		'''   File|Properties handler - Opens a dialog to display the
-		'''   document properties and allows them to be edited.</summary>
-		''' <param name="sender"></param>
-		''' <param name="e"></param>
-		Private Sub ProportiesCommandHandler(ByVal sender As Object, ByVal e As ExecutedRoutedEventArgs)
-			Dim properties As New PropertiesDialog(_xpsDocument)
-			properties.ShowDialog()
-		End Sub ' end:ProportiesCommandHandler()
+        ' ---------------------- SignatureCommandHandler ---------------------
+        ''' <summary>
+        '''   Displays a dialog showing the current digital signatures and
+        '''   signature definitions.  A button on the dialog allows additional
+        '''   signatures to be added.</summary>
+        ''' <param name="sender"></param>
+        ''' <param name="e"></param>
+        Private Sub SignatureCommandHandler(sender As Object, e As ExecutedRoutedEventArgs)
+            If _fileName IsNot Nothing Then
+                Dim signatureDialog As New SignatureDialog(_xpsDocument)
+                signatureDialog.ShowDialog()
+
+                ' Close to flush the new signature definition, then reopen.
+                _xpsDocument.Close()
+                _xpsDocument = New XpsDocument(_fileName, FileAccess.ReadWrite)
+            End If
+        End Sub ' end:SignatureCommandHandler()
+
+        ' ---------------------- ThumbnailCommandHandler ---------------------
+        ''' <summary>
+        '''   Displays a dialog showing the current thumbnail.  A button on the dialog creates a
+        '''   thumbnail add adds it.</summary>
+        ''' <param name="sender"></param>
+        ''' <param name="e"></param>
+        Private Sub ThumbnailCommandHandler(sender As Object, e As ExecutedRoutedEventArgs)
+            If _fileName IsNot Nothing Then
+                Dim thumnailDialog As New ThumnailDialog(_xpsDocument)
+                thumnailDialog.ShowDialog()
+
+                ' Close and re-open the document in case a new thumbnail was added.
+                _xpsDocument.Close()
+                _xpsDocument = New XpsDocument(_fileName, FileAccess.ReadWrite)
+            End If
+        End Sub ' end:ThumbnailCommandHandler()
+
+        ' ------------------------- NewCommandHandler ------------------------
+        ''' <summary>
+        '''   Prompts the user for a new XPS document file name, creates the
+        '''   new document, fills the document with a preset block of content,
+        '''   and then sets the new document as the current document.</summary>
+        ''' <param name="sender"></param>
+        ''' <param name="e"></param>
+        Private Sub NewCommandHandler(sender As Object, e As ExecutedRoutedEventArgs)
+            ' Prompt the user for new file to be saved
+            Using saveDlg As New SaveFileDialog With {
+                .Title = "New Xps Document",
+                .Filter = "Xps Documents (*.xps)|*.xps",
+                .FilterIndex = 1,
+                .DefaultExt = "*.xps"
+            }
+                If saveDlg.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
+                    If _xpsDocument IsNot Nothing Then
+                        _xpsDocument.Close()
+                    End If
+                    Try
+                        ' Open a "Save As" dialog to query the user
+                        ' for where to create the new XPS document.
+                        If File.Exists(saveDlg.FileName) Then
+                            File.Delete(saveDlg.FileName)
+                        End If
+                        _xpsDocument = New XpsDocument(saveDlg.FileName, System.IO.FileAccess.ReadWrite)
+                    Catch e1 As UnauthorizedAccessException
+                        System.Windows.MessageBox.Show(String.Format("Unable to access {0}", saveDlg.FileName))
+                        Return
+                    End Try
+
+                    ' Fill the newly created document.
+                    _xpsReadWriteUtility.Create(_xpsDocument)
+
+                    ' Close it to flush the values.
+                    _xpsDocument.Close()
+
+                    ' Re-open the document and set as the current document.
+                    _xpsDocument = New XpsDocument(saveDlg.FileName, System.IO.FileAccess.ReadWrite)
+                    docViewer.Document = _xpsDocument.GetFixedDocumentSequence()
+                    _fileName = saveDlg.FileName
+                End If ' end:if (saveDlg.ShowDialog() == DialogResult.OK)
+            End Using
+
+            EnableMenuItems()
+        End Sub ' end:NewCommandHandler()
 
 
-		' ------------------------ CloseCommandHandler -----------------------
-		''' <summary>
-		'''   File|Close handler - Closes current XPS document.</summary>
-		''' <param name="sender"></param>
-		''' <param name="e"></param>
-		Private Sub CloseCommandHandler(ByVal sender As Object, ByVal e As ExecutedRoutedEventArgs)
+        ' ---------------------- ProportiesCommandHandler --------------------
+        ''' <summary>
+        '''   File|Properties handler - Opens a dialog to display the
+        '''   document properties and allows them to be edited.</summary>
+        ''' <param name="sender"></param>
+        ''' <param name="e"></param>
+        Private Sub ProportiesCommandHandler(sender As Object, e As ExecutedRoutedEventArgs)
+            Using properties As New PropertiesDialog(_xpsDocument)
+                properties.ShowDialog()
+            End Using
+        End Sub ' end:ProportiesCommandHandler()
+
+
+        ' ------------------------ CloseCommandHandler -----------------------
+        ''' <summary>
+        '''   File|Close handler - Closes current XPS document.</summary>
+        ''' <param name="sender"></param>
+        ''' <param name="e"></param>
+        Private Sub CloseCommandHandler(sender As Object, e As ExecutedRoutedEventArgs)
 			Me.Close()
 			EnableMenuItems()
 		End Sub ' end:CloseCommandHandler()
@@ -245,7 +250,7 @@ Namespace SDKSample
 		'''     Registers menu commands (helper method).</summary>
 		''' <param name="command"></param>
 		''' <param name="handler"></param>
-		Private Sub AddCommandBindings(ByVal command As ICommand, ByVal handler As ExecutedRoutedEventHandler)
+		Private Sub AddCommandBindings(command As ICommand, handler As ExecutedRoutedEventHandler)
 			Dim cmdBindings As New CommandBinding(command)
 			AddHandler cmdBindings.Executed, handler
 			CommandBindings.Add(cmdBindings)
@@ -272,7 +277,7 @@ Namespace SDKSample
 
 		#Region "Private Members"
 		Private _xpsDocument As XpsDocument
-		Private _xpsReadWriteUtility As XpsReadWriteUtility
+		Private ReadOnly _xpsReadWriteUtility As XpsReadWriteUtility
 		Private _fileName As String
 		Private Shared OutlineCommand As RoutedCommand
 		Private Shared SignCommand As RoutedCommand
