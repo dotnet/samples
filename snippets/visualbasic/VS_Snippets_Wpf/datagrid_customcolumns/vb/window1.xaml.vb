@@ -50,7 +50,6 @@ Class Window1
 
             Dim customers As New ObservableCollection(Of Customer)()
 
-            Dim i As Integer
             For i = 0 To 9
                 Dim r As DataRow = dt.Rows(i)
                 Dim c As New Customer With {
