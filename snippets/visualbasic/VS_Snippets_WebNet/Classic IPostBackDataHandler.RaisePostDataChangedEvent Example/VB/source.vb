@@ -1,6 +1,4 @@
-﻿Imports System
-
-Public Class Sample    
+﻿Public Class Sample    
     
 ' <Snippet1>
  Public Overridable Sub RaisePostDataChangedEvent()

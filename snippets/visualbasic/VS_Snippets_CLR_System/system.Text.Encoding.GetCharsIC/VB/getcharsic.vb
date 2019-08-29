@@ -2,7 +2,6 @@
 ' and then decodes a range of the bytes into an array of characters.
 
 ' <Snippet1>
-Imports System
 Imports System.Text
 Imports Microsoft.VisualBasic
 

@@ -9,7 +9,6 @@
 ' which could be used to create either an InputBinding or OutputBinding.This generic nature is
 ' achieved by returning an instance of 'MessageBinding'.
 ' <Snippet1>
-Imports System
 Imports System.Web.Services.Description
 
 Class MyClass1

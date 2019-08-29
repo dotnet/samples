@@ -1,7 +1,6 @@
 ﻿' File name begingetresponse.vb
 ' <Snippet1>
 
-Imports System
 Imports System.Net
 Imports System.IO
 Imports System.Text

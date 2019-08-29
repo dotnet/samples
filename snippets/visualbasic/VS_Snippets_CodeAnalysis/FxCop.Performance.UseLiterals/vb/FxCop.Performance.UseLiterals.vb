@@ -1,6 +1,4 @@
 ﻿'<Snippet1>
-Imports System
-
 Namespace PerformanceLibrary
 
    ' This class violates the rule.

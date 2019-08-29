@@ -8,7 +8,6 @@
 'It creates an instance of 'DiscoveryDocumentReference' and displays the 'Ref', 'Url' and
 ''DefaultFilename' properties.
 
-Imports System
 Imports System.Xml
 Imports System.Web.Services.Discovery
 

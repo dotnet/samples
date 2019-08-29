@@ -1,5 +1,4 @@
 ﻿'<snippet1>
-Imports System
 Imports System.IO
 Imports System.Collections
 Imports System.Runtime.Serialization.Formatters.Binary

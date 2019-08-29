@@ -1,6 +1,5 @@
 ﻿'REDMOND\glennha
 '<Snippet1>
-Imports System
 Imports System.Drawing
 
 Public Class Example

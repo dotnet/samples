@@ -10,7 +10,6 @@
 
 ' <Snippet2>
 ' Define the namespaces used by this sample.
-Imports System
 Imports System.Text
 Imports System.Globalization
 Imports System.IO

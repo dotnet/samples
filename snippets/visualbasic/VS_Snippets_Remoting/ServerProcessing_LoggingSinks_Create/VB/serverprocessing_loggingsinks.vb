@@ -17,7 +17,6 @@
 ' enum. The output of the 'ServerProcessing' enum is displayed 
 ' on the server console.
 
-Imports System
 Imports System.Collections
 Imports System.IO
 Imports System.Reflection

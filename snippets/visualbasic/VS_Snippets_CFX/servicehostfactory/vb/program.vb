@@ -2,7 +2,6 @@
 ' Snippet for ServiceHostFactory
 
 
-Imports System
 Imports System.ServiceModel
 Imports System.ServiceModel.Activation
 Imports System.Collections.Generic

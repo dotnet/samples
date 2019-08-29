@@ -9,7 +9,6 @@
 '	'PropertyInfo' array and displayed.	Array of 'Type' objects is created which represents 
 '	the type specified by an arbitary	set of objects. When 'Type' object is attempted to 
 '	create for 'sYSTem.iNT32', an exception is thrown when case-sensitive search is done.  
-Imports System
 Imports System.Reflection
 
 

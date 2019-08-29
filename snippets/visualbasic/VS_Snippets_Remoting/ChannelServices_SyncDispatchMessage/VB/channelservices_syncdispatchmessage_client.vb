@@ -6,7 +6,6 @@
 ' method, the 'MyProxy' class is instantiated and 'MyPrintMethod' method 
 ' is called on it.
 
-Imports System
 Imports System.Collections
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Channels

@@ -11,7 +11,6 @@
 ' <Snippet1>
 ' <Snippet2>
 
-Imports System
 Imports System.Diagnostics
 
 Public Class CounterDataCollectionExample

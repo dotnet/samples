@@ -2,7 +2,6 @@
 ' class. The file named members.cs is read in and written out as a
 ' transformed file named members.enc.
 '<Snippet1>
-Imports System
 Imports System.IO
 Imports System.Security.Cryptography
 

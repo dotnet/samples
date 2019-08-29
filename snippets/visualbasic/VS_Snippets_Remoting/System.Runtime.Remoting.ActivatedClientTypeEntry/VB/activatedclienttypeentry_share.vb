@@ -1,6 +1,4 @@
 ﻿'<snippet20>
-Imports System
-
 Public Class HelloServer
     Inherits MarshalByRefObject
     

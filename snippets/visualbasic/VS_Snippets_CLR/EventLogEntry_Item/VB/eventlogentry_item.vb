@@ -8,7 +8,6 @@
 ' A new entry is created for 'MyNewLog'.Entries  of 'MyNewLog' are obtained and 
 ' the count and the messages are  displayed.
 
-Imports System
 Imports System.Collections
 Imports System.Diagnostics
 

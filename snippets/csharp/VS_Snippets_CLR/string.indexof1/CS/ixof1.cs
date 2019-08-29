@@ -1,11 +1,10 @@
-﻿// Sample for String.IndexOf(Char, Int32)
+// Sample for String.IndexOf(Char, Int32)
 using System;
 
 class Sample 
 {
     public static void Main() 
     {
-
         //<snippet1>
         string br1 = "0----+----1----+----2----+----3----+----4----+----5----+----6----+---";
         string br2 = "012345678901234567890123456789012345678901234567890123456789012345678";

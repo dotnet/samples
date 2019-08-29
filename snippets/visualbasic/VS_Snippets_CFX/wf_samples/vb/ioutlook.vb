@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Collections.Generic
+﻿Imports System.Collections.Generic
 Imports System.Text
 
 Namespace WF_Snippets.Microsoft.Office.Core

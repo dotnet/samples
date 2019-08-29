@@ -80,15 +80,14 @@ Class Program
     Private Shared Function GetConnectionStringByProvider( _
         ByVal providerName As String) As String
 
-        Dim i As Integer = 0
-        For i = 0 To ConfigurationManager.ConnectionStrings.Count
+        For i As Integer = 0 To ConfigurationManager.ConnectionStrings.Count - 1
             Dim settings As ConnectionStringSettings = _
             ConfigurationManager.ConnectionStrings(i)
 
             If settings.ProviderName = providerName Then
                 Return settings.ConnectionString
             End If
-        Next i
+        Next
 
         ' Provider name not found.
         Return Nothing

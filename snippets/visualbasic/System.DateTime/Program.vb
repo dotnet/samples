@@ -1,6 +1,4 @@
-﻿Imports System
-
-Module Program
+﻿Module Program
     Sub Main(args As String())
         Instantiation.Snippets()
         StringFormat.Snippets()

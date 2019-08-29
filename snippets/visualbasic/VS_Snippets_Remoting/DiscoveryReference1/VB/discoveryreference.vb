@@ -7,7 +7,6 @@
 '   Note : The dataservice.disco file should be copied to c:\Inetpub\wwwroot
 
 ' <Snippet1>
-Imports System
 Imports System.IO
 Imports System.Web.Services.Discovery
 Imports System.Net

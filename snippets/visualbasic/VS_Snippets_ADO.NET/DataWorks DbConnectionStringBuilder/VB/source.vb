@@ -3,7 +3,6 @@
 Option Explicit On
 Option Strict On
 
-Imports System
 Imports System.Data
 Imports System.Data.Common
 Imports System.Data.OleDb

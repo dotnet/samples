@@ -1,6 +1,4 @@
 ﻿'<snippet2>
-Imports System
-
 Class EventTester
     Public Event EventItem As EventHandler
 

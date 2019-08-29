@@ -2,7 +2,6 @@
 ' Showing all the things D(A) can bind to.
 '
 '<Snippet1>
-Imports System
 Imports System.Reflection
 Imports System.Security.Permissions
 

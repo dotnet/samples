@@ -11,7 +11,6 @@
 ' class are added to an ArrayList and their outputs are displayed onto the console.
 '
 
-Imports System
 Imports System.IO
 Imports System.Collections
 Imports System.Net

@@ -1,6 +1,4 @@
 ﻿' <snippet10>
-Imports System
-
 Module IsSeparatorSample
 
     Sub Main()

@@ -1,6 +1,5 @@
 ﻿'<Snippet2>
 ' Example of the BitConverter.ToChar method.
-Imports System
 Imports Microsoft.VisualBasic
 
 Module BytesToCharDemo

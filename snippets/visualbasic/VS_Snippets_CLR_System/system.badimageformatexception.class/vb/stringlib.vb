@@ -1,7 +1,5 @@
 ﻿Option Strict On
 
-Imports System
-
 ' <Snippet2>
 Public Module StringLib
    Private exceptionList() As String = { "a", "an", "the", "in", "on", "of" }

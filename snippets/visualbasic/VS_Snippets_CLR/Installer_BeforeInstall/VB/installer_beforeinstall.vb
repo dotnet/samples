@@ -7,7 +7,6 @@
 ' Use the installer process 'InstallUtil' to run the assembly
 ' Installer_BeforeInstall.exe.
 
-Imports System
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Configuration.Install

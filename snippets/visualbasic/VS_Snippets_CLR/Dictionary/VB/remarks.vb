@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Collections
+﻿Imports System.Collections
 
 Public Class SimpleDictionary
     Inherits DictionaryBase

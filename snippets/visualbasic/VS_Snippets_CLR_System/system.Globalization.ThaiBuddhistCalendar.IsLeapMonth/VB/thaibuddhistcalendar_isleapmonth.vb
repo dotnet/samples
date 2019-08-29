@@ -1,7 +1,6 @@
 ﻿' The following code example calls IsLeapMonth for all the months in five years in the current era.
 
 ' <snippet1>
-Imports System
 Imports System.Globalization
 Imports Microsoft.VisualBasic
 

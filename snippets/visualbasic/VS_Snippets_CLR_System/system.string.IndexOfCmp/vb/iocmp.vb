@@ -2,7 +2,6 @@
 ' This code example demonstrates the 
 ' System.String.IndexOf(String, ..., StringComparison) methods.
 
-Imports System
 Imports System.Threading
 Imports System.Globalization
 

@@ -2,7 +2,6 @@
 ' The following example demonstrates using asynchronous methods to
 ' get Domain Name System information for the specified host computer.
 
-Imports System
 Imports System.Net
 Imports System.Net.Sockets
 Imports System.Threading

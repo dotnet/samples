@@ -1,5 +1,4 @@
 ﻿' <snippet6>
-Imports System
 Imports System.Diagnostics
 
 Class OverviewTraceListener

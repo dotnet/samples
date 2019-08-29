@@ -6,7 +6,6 @@
 ' object as activated client type which can be activated at the server and displays it's 
 ' properties to the console.
 
-Imports System
 Imports System.Reflection
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Channels

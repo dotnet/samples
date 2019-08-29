@@ -1,7 +1,6 @@
 ﻿
 ' dump a range of Unicode characters as a 16x16 array
 ' <Snippet4>
-Imports System
 Imports System.IO
 Imports System.Globalization
 Imports System.Text

@@ -1,6 +1,5 @@
 ﻿'<snippet1>
 ' This example demonstrates the Console.Title property.
-Imports System
 Imports Microsoft.VisualBasic
 
 Class Sample

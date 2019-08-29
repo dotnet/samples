@@ -1,5 +1,4 @@
 ﻿'<snippet1>
-Imports System
 Imports System.Xml
 Imports System.Xml.Schema
 Imports System.Xml.Serialization

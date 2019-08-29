@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Configuration
 Imports System.Collections
 Imports System.ComponentModel
@@ -42,10 +41,9 @@ Dim httpModules As HttpModuleActionCollection = httpModulesSection.Modules
 
 ' Read the modules information.
 Dim modulesInfo As New StringBuilder()
-Dim i As Integer
-For i = 0 To httpModules.Count
+For i As Integer = 0 To httpModules.Count - 1
   modulesInfo.Append(String.Format("Name: {0}" + vbLf + "Type: {1}" + vbLf + vbLf, httpModules(i).Name, httpModules(i).Type))
-Next i
+Next
 
 ' </Snippet3>
 

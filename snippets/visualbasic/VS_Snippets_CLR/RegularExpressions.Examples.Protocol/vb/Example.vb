@@ -12,7 +12,7 @@ Module Example
 
       Dim m As Match = r.Match(url)
       If m.Success Then
-         Console.WriteLine(r.Match(url).Result("${proto}${port}"))
+         Console.WriteLine(m.Result("${proto}${port}"))
       End If   
    End Sub
 End Module

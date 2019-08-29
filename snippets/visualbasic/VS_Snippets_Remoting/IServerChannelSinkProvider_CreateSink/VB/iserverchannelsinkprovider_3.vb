@@ -9,7 +9,6 @@
 ' property. The return value of 'GetChannelData()' is displayed on
 ' the console.
 
-Imports System
 Imports System.Runtime.Remoting.Channels
 Imports System.Runtime.Remoting.Channels.Http
 

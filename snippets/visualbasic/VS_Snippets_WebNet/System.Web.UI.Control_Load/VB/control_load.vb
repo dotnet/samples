@@ -5,7 +5,6 @@
 ' MyControl. The page also overrides its own constructor to ensure that a
 ' custom Load event is used when the page is called by a request.
 
-Imports System
 Imports System.Web
 Imports System.Web.UI
 Imports System.Web.UI.WebControls

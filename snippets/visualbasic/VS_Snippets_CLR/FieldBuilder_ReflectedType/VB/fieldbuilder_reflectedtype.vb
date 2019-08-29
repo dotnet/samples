@@ -7,7 +7,6 @@
 '  the field is initialized.Method of the class gets the value of the Field.
 '  An instance of the class is created and method is invoked.
 ' <Snippet1>
-Imports System
 Imports System.Threading
 Imports System.Reflection
 Imports System.Reflection.Emit

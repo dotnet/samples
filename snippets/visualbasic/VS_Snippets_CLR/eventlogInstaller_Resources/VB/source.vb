@@ -17,8 +17,7 @@
 '           InstallUtil.exe /u <filename.exe>
 
 '<Snippet1>
-   Imports System
-   Imports System.Configuration.Install
+      Imports System.Configuration.Install
    Imports System.Diagnostics
    Imports System.ComponentModel
 

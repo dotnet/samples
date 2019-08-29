@@ -2,7 +2,6 @@
 'NetworkStream for synchronous communcation with a remote host
 'This class uses several NetworkStream members that would be useful
 ' in a synchronous communciation senario
-Imports System
 Imports System.Text
 Imports System.IO
 Imports System.Net

@@ -1,6 +1,4 @@
 ﻿' <Snippet1>
-Imports System
-
 Module Module1
 
     Sub Main()

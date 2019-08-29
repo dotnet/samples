@@ -10,7 +10,6 @@
 ' 'MathServiceSoap' and adds the same later. Then it checks whether the collection contains 
 ' the added 'PortType'.The sample writes a new web service description file 'MathService_New.wsdl'.
 
-Imports System
 Imports System.Web.Services.Description
 Imports System.Xml
 Imports Microsoft.VisualBasic

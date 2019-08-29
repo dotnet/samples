@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Collections
+﻿Imports System.Collections
 Imports System.Collections.Specialized
 
 Public Class SimpleOD
@@ -117,11 +116,10 @@ Public Class SimpleOD
     Public ReadOnly Property Keys() As ICollection _
         Implements IDictionary.Keys
         Get
-            Dim KeyCollection As ArrayList = New ArrayList(itemlist.Count)
-            Dim i As Integer
-            For i = 0 To itemlist.Count
+            Dim KeyCollection As New ArrayList(itemlist.Count)
+            For i As Integer = 0 To itemlist.Count - 1
                 KeyCollection(i) = CType(itemlist(i), DictionaryEntry).Key
-            Next i
+            Next
             Return KeyCollection
         End Get
     End Property
@@ -136,8 +134,7 @@ Public Class SimpleOD
         Implements IDictionary.Values
         Get
             Dim ValueCollection As ArrayList = New ArrayList(itemlist.Count)
-            Dim i As Integer
-            For i = 0 To itemlist.Count
+            For i As Integer = 0 To itemlist.Count - 1
                 ValueCollection(i) = CType(itemlist(i), DictionaryEntry).Value
             Next i
             Return ValueCollection

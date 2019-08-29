@@ -1,6 +1,4 @@
 ﻿' <Snippet1>
-Imports System
-
 Class Example
     Public Shared Sub Main()
         Dim objType As Type = GetType(Array)

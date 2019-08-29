@@ -1,8 +1,6 @@
 ﻿Option Strict on
 Option Explicit On
 
-Imports System
-
 ' <Snippet1>
 Public Module PingPong
 

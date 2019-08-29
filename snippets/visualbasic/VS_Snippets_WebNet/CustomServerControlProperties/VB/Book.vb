@@ -1,7 +1,6 @@
 ﻿' <Snippet1>
 ' Book.vb
 Option Strict On
-Imports System
 Imports System.ComponentModel
 Imports System.Security.Permissions
 Imports System.Web

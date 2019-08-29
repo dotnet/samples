@@ -1,5 +1,4 @@
 ﻿'<Snippet2>
-Imports System
 Imports System.IO
 Imports System.Xml
 Imports System.Security.Cryptography
@@ -118,10 +117,9 @@ Class Class1
                     Console.WriteLine("Encoding the following message: " + xmlDoc.InnerText)
 
                     Console.WriteLine("Nodes of the XmlNodeList retrieved " + "from GetOutput:")
-                    Dim j As Integer
-                    For j = 0 To xmlNodes.Count
+                    For j As Integer = 0 To xmlNodes.Count - 1
                         Console.WriteLine("Node " + j + " has the following name: " + xmlNodes.Item(j).Name + " and the following InnerXml: " + xmlNodes.Item(j).InnerXml)
-                    Next j
+                    Next
                 Catch ex As Exception
                     Console.WriteLine("Unexpected exception caught: " + ex.ToString())
                 End Try

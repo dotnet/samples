@@ -1,6 +1,4 @@
 ﻿' <snippet9>
-Imports System
-
 Module IsPunctuationSample
 
     Sub Main()

@@ -1,7 +1,9 @@
 ﻿using System;
 
-public class ReplaceTest {
-    public static void Main() {
+public class ReplaceTest 
+{
+    public static void Main() 
+    {
 
         //<snippet1>
         string errString = "This docment uses 3 other docments to docment the docmentation";

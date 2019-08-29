@@ -1,6 +1,5 @@
 ﻿' Types:System.Globalization.CompareInfo Vendor: Richter
 '<snippet1>
-Imports System
 Imports System.Text
 Imports System.Globalization
 

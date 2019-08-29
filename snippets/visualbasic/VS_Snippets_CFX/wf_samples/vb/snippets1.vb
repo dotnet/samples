@@ -1,6 +1,4 @@
-﻿Imports System
-
-Imports System.Collections.ObjectModel
+﻿Imports System.Collections.ObjectModel
 Imports System.Workflow.Activities
 Imports System.Workflow.ComponentModel
 Imports System.Workflow.Runtime

@@ -6,8 +6,6 @@ Imports System.Web
 Imports System.Security.Permissions
 Imports System.ComponentModel
 Imports System.Collections
-Imports System
-
 Namespace Samples.AspNet.VB.Controls
   
 

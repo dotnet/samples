@@ -1,7 +1,6 @@
 ﻿'  The following example creates an assembly which is used to demonstrate
 '  the methods, properties and constructors of the 'AssemblyInstaller' class.
 
-Imports System
 Imports System.ComponentModel
 Imports System.Configuration.Install
 Imports System.Collections

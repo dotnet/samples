@@ -1,6 +1,5 @@
 ﻿'<Snippet2>
 ' Example of the Buffer.SetByte method.
-Imports System
 Imports Microsoft.VisualBasic
 
 Module SetByteDemo

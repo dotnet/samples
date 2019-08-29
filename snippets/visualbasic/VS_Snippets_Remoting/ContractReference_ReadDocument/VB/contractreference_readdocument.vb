@@ -7,7 +7,6 @@
 ' 'ServiceDescription' instance.
 ' 
 
-Imports System
 Imports System.IO
 Imports System.Web.Services.Discovery
 Imports System.Web.Services.Description

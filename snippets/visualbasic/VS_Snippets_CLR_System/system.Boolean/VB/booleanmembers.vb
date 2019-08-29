@@ -1,6 +1,4 @@
 ﻿
-Imports System
-
 Public Class BooleanMembers
     
     Public Shared Sub Main()

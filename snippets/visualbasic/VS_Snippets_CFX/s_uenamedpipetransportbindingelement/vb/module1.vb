@@ -1,6 +1,5 @@
 ﻿' Snippet for S_UENamedPipeTransportBindingElement.
 
-Imports System
 Imports System.Collections.Generic
 Imports System.Configuration
 Imports System.Globalization

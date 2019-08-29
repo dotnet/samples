@@ -1,6 +1,5 @@
 ﻿'<Snippet2>
 ' Example of the Decimal( Double ) constructor.
-Imports System
 Imports Microsoft.VisualBasic
 
 Module DecimalCtorDoDemo

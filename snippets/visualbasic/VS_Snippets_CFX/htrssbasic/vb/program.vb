@@ -1,5 +1,4 @@
 ﻿' <Snippet12>
-Imports System
 Imports System.Xml
 Imports System.ServiceModel
 Imports System.ServiceModel.Description

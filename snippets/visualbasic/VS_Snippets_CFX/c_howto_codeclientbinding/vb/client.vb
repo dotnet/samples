@@ -1,6 +1,5 @@
 ﻿'code for c_HowTo_CodeClientBindings client
 
-Imports System
 Imports System.ServiceModel
 Imports System.ServiceModel.Channels
 

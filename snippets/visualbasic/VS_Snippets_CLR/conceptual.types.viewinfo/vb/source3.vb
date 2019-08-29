@@ -1,6 +1,5 @@
 ﻿' <snippet3>
 ' This code displays information about the GetValue method of FieldInfo.
-Imports System
 Imports System.Reflection
 Class MyMethodInfo
     Public Shared Sub Main()

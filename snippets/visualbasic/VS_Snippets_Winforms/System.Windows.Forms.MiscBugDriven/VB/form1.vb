@@ -139,13 +139,12 @@ Public Class Form1
         imageList1.Images.AddStrip(bitmaps)
         
         ' Iterate through the images and display them on the form.
-        Dim i As Integer
-        For i = 0 To imageList1.Images.Count
+        For i As Integer = 0 To imageList1.Images.Count - 1
             
             imageList1.Draw(Me.CreateGraphics(), New Point(10, 10), i)
             Application.DoEvents()
             System.Threading.Thread.Sleep(1000)
-        Next i
+        Next
      
     End Sub
     

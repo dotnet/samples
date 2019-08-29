@@ -1,6 +1,5 @@
 ﻿'<Snippet2>
 ' Example of some BitConverter.ToString( ) method overloads.
-Imports System
 Imports Microsoft.VisualBasic
 
 Module BytesToStringDemo

@@ -1,5 +1,4 @@
-﻿Imports System
-' <Snippet2>
+﻿' <Snippet2>
 Imports System.Web.DynamicData
 
 Partial Public Class DynamicData_FieldTemplates_UnitsInStock

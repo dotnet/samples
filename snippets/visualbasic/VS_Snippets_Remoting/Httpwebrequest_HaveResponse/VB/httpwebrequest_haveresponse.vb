@@ -9,7 +9,6 @@
 'If there is a response then the HTML contents of the page of the requested Uri are displayed to the console 
 'else a message 'The response is not received' is displayed to the console.
 
-Imports System
 Imports System.IO
 Imports System.Net
 Imports System.Text

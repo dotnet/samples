@@ -4,7 +4,6 @@
 ' of the CultureAndRegionInfoBuilder object that is created.
 ' Compile this example with a reference to sysglobl.dll.
 
-Imports System
 Imports System.Globalization
 
 Class Sample

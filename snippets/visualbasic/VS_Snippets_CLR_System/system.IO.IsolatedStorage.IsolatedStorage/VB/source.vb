@@ -1,6 +1,5 @@
 ﻿'<snippet1>  
 'This sample demonstrates methods of classes found in the System.IO IsolatedStorage namespace.
-Imports System
 Imports System.IO
 Imports System.IO.IsolatedStorage
 Imports System.Security.Policy

@@ -1,6 +1,4 @@
 ﻿'<Snippet1>
-Imports System
-
 Namespace NamingLibrary
 
    Enum DigitalImageMode
