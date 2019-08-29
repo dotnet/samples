@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Namespace UIAIRangeValueProvider_snip
 	Partial Public Class CustomControl
 		''' <summary>

@@ -17,8 +17,6 @@ Imports System.Windows.Media.Animation
 Imports System.Windows.Shapes
 Imports System.Windows.Controls
 Imports System.Windows.Input
-Imports Microsoft.VisualBasic
-
 Namespace Microsoft.Samples.Animation.TimingBehaviors
 
 

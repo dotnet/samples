@@ -17,8 +17,6 @@ Imports System.Windows.Media.Imaging
 Imports System.Xml
 Imports System.Security.Permissions
 Imports WinForms = Microsoft.Win32
-Imports Microsoft.VisualBasic
-
 Namespace SdkSample
 	' ========================= partial class Window1 ========================
 	''' <summary>

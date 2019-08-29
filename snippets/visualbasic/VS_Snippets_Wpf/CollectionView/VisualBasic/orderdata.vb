@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Imports System.ComponentModel
 Imports System.Windows
 Imports System.Windows.Controls

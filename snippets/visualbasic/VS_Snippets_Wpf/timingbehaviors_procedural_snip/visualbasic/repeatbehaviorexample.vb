@@ -11,8 +11,6 @@ Imports System.Windows.Controls
 Imports System.Windows.Media
 Imports System.Windows.Shapes
 Imports System.Windows.Media.Animation
-Imports Microsoft.VisualBasic
-
 Namespace Microsoft.Samples.Animation.TimingBehaviors
 	Partial Public Class RepeatBehaviorExample
 		Inherits Page
