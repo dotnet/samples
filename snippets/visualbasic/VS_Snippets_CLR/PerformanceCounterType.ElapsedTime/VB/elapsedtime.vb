@@ -10,8 +10,6 @@ Imports System.Collections
 Imports System.Collections.Specialized
 Imports System.Diagnostics
 Imports System.Runtime.InteropServices
-Imports Microsoft.VisualBasic
-
 Public Class App
    Private Shared PC As PerformanceCounter
 
@@ -139,8 +137,6 @@ Imports System.Collections
 Imports System.Collections.Specialized
 Imports System.Diagnostics
 Imports System.Runtime.InteropServices
-Imports Microsoft.VisualBasic
-
 Public Class App
 
     Public Shared Sub Main()

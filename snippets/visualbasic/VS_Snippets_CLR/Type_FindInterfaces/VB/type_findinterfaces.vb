@@ -2,8 +2,6 @@
 
 Imports System.Xml
 Imports System.Reflection
-Imports Microsoft.VisualBasic
-
 Public Class MyFindInterfacesSample
     Public Shared Sub Main()
         Try

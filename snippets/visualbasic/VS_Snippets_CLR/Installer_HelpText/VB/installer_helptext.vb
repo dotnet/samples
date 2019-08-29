@@ -11,8 +11,6 @@
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Configuration.Install
-Imports Microsoft.VisualBasic
-
 <RunInstaller(True)> _
 Public Class MyInstaller
    Inherits Installer

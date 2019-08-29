@@ -1,7 +1,5 @@
 ﻿' <Snippet1>
 Imports System.IO
-Imports Microsoft.VisualBasic
-
 Public Class Test
     Public Shared Sub Main()
         ' Specify the directory you want to manipulate.

@@ -1,7 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
-
 ' Define a custom attribute with one named parameter.
 <AttributeUsage(AttributeTargets.All)> Public Class MyAttribute
     Inherits Attribute

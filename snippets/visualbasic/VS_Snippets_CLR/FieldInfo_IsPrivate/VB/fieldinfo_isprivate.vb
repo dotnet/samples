@@ -1,8 +1,6 @@
 ﻿' <Snippet1>	
 
 Imports System.Reflection
-Imports Microsoft.VisualBasic
-
 Class [MyClass]
     Private myField As String
     Public myArray() As String = {"New York", "New Jersey"}

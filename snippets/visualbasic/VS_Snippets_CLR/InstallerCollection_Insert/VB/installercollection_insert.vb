@@ -15,8 +15,6 @@ Imports System.ComponentModel
 Imports System.Collections
 Imports System.Configuration.Install
 Imports System.IO
-Imports Microsoft.VisualBasic
-
 Public Class InstallerCollection_Insert
    
    Public Shared Sub Main()

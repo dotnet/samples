@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
 Public Class MyClass1
     Protected myField As String = "A sample protected field."
 End Class 'MyClass1

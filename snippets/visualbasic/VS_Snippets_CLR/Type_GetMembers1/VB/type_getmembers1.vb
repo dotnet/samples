@@ -6,8 +6,6 @@
 
 Imports System.Reflection
 Imports System.Security
-Imports Microsoft.VisualBasic
-
 ' <Snippet1>
 Class [MyClass]
    Public myInt As Integer = 0

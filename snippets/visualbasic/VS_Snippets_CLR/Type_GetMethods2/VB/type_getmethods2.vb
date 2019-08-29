@@ -2,8 +2,6 @@
 
 Imports System.Reflection
 Imports System.Reflection.Emit
-Imports Microsoft.VisualBasic
-
 ' Create a class having two public methods and one protected method.
 Public Class MyTypeClass
     Public Sub MyMethods()

@@ -10,8 +10,6 @@
 
 Imports System.Reflection
 Imports System.Collections
-Imports Microsoft.VisualBasic
-
 Class MyInterfaceClass
 
 ' <Snippet1>

@@ -1,7 +1,5 @@
 ﻿' <Snippet3>
 Imports System.Runtime.InteropServices
-Imports Microsoft.VisualBasic
-
 Module DemoModule
 
     ' Set a GUID and ProgId attribute for this class.

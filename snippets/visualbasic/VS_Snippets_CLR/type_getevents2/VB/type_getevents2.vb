@@ -2,8 +2,6 @@
 Imports System.Reflection
 Imports System.Security
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
-
 Class EventsSample
 
     Public Shared Sub Main()

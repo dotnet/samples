@@ -2,8 +2,6 @@
 
 Imports System.Reflection
 Imports System.Runtime.Serialization
-Imports Microsoft.VisualBasic
-
 <Serializable()> _
 Public Class [MyClass]
     Public myShort As Short

@@ -1,8 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Reflection
 Imports System.Globalization
-Imports Microsoft.VisualBasic
-
 Public Class MyBinder
     Inherits Binder
     Public Sub New()

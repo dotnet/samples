@@ -3,11 +3,6 @@ Imports System.Security.Cryptography
 Imports System.Security.Permissions
 Imports System.IO
 Imports System.Security.Cryptography.X509Certificates
-Imports Microsoft.VisualBasic
-
-
-
-
 Class CertInfo
 
     'Reads a file.

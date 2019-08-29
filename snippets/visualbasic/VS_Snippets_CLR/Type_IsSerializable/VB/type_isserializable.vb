@@ -1,5 +1,4 @@
 ﻿' <Snippet1>   
-Imports Microsoft.VisualBasic
 Namespace SystemType
     Public Class [MyClass]
         ' Declare a public class with the [Serializable] attribute.

@@ -7,8 +7,6 @@
 ' <Snippet1>
 ' <Snippet2>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
-
 Public Class Example
    Public Shared Sub Main()
       ' Get a reference to the assembly mscorlib.dll, which is always

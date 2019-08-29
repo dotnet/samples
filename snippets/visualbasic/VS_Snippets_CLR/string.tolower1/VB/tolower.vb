@@ -1,8 +1,6 @@
 ﻿'<snippet1>
 ' Sample for String.ToLower(CultureInfo)
 Imports System.Globalization
-Imports Microsoft.VisualBasic
-
 Class Sample
    Public Shared Sub Main()
       Dim str1 As [String] = "INDIGO"

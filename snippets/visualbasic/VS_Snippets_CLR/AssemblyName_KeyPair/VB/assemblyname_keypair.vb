@@ -31,9 +31,6 @@ Imports System.Globalization
 Imports System.Reflection.Emit
 Imports System.Configuration.Assemblies
 Imports System.Text
-Imports Microsoft.VisualBasic
-
-
 Public Class AssemblyName_CodeBase
    
    Public Shared Sub MakeAssembly(myAssemblyName As AssemblyName, fileName As String)

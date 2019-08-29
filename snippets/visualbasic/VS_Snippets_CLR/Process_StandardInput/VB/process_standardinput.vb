@@ -12,8 +12,6 @@
 Imports System.IO
 Imports System.Diagnostics
 Imports System.ComponentModel
-Imports Microsoft.VisualBasic
-
 Namespace Process_StandardInput_Sample
 
     Class StandardInputTest

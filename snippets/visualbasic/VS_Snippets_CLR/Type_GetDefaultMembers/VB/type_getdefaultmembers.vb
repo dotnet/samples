@@ -1,8 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Reflection
 Imports System.IO
-Imports Microsoft.VisualBasic
-
 <DefaultMemberAttribute("Age")> Public Class [MyClass]
 
     Public Sub Name(ByVal s As String)
