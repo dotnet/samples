@@ -27,5 +27,5 @@ public class AwaitOperator
 // Output similar to:
 // DownloadDocsMainPage: About to start downloading.
 // Main: Launched downloading.
-// DownloadDocsMainPage: Finished downloading.
+// DownloadDocsMainPageAsync: Finished downloading.
 // Main: Downloaded 27700 bytes.
