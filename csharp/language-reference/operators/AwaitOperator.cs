@@ -6,7 +6,7 @@ public class AwaitOperator
 {
     public static async Task Main()
     {
-        Task<int> downloading = DownloadDocsMainPage();
+        Task<int> downloading = DownloadDocsMainPageAsync();
         Console.WriteLine($"{nameof(Main)}: Launched downloading.");
 
         int bytesLoaded = await downloading;
