@@ -1,6 +1,4 @@
 ﻿Imports System.Data
-Imports Microsoft.VisualBasic
-
 Public Class Sample
     
 ' <Snippet1>

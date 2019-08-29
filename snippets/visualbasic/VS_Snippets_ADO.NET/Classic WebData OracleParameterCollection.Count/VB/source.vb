@@ -3,9 +3,6 @@ Imports System.Data
 Imports System.Data.OracleClient
 Imports System.Data.Common
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
-
-
 Public Class Form1
     Inherits Form
     Protected DataSet1 As DataSet

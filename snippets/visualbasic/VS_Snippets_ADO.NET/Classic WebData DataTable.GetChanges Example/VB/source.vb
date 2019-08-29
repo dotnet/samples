@@ -1,7 +1,5 @@
 ﻿Imports System.Data
 Imports System.Data.OleDb
-Imports Microsoft.VisualBasic
-
 Public Class Sample
 ' <Snippet1>
 Private Sub UpdateDataTable(table As DataTable, _
