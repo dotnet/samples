@@ -1,7 +1,5 @@
 ﻿'<Snippet3>
 ' Example of the Buffer.GetByte method.
-Imports Microsoft.VisualBasic
-
 Module GetByteDemo
 
     Const formatter As String = "{0,10}{1,10}{2,9} {3}"

@@ -1,7 +1,5 @@
 ﻿'<Snippet3>
 ' Example of the BitConverter.ToDouble method.
-Imports Microsoft.VisualBasic
-
 Module BytesToDoubleDemo
 
     Const formatter As String = "{0,5}{1,27}{2,27:E16}"

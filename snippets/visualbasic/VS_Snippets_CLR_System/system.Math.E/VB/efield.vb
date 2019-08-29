@@ -1,7 +1,5 @@
 ﻿'<snippet1>
 ' Example for the Math.E field.
-Imports Microsoft.VisualBasic
-
 Module EField
        
     Sub Main()

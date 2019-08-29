@@ -2,8 +2,6 @@
 
 ' <snippet1>
 Imports System.Globalization
-Imports Microsoft.VisualBasic
-
 Public Class SamplesCharUnicodeInfo   
 
    Public Shared Sub Main()

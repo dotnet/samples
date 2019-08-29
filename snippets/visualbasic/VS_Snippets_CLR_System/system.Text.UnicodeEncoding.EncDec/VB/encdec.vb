@@ -3,8 +3,6 @@
 
 ' <Snippet1>
 Imports System.Text
-Imports Microsoft.VisualBasic
-
 Public Class SamplesUnicodeEncoding   
 
    Public Shared Sub Main()

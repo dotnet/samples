@@ -2,8 +2,6 @@
 
 ' <snippet1>
 Imports System.Globalization
-Imports Microsoft.VisualBasic
-
 Public Class SamplesTextElementEnumerator
 
    Public Shared Sub Main()

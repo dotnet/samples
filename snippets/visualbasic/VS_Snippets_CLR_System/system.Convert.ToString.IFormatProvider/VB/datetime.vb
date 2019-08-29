@@ -2,8 +2,6 @@
 ' Example of the Convert.ToString( DateTime ) and 
 ' Convert.ToString( DateTime, IFormatProvider ) methods.
 Imports System.Globalization
-Imports Microsoft.VisualBasic
-
 Module DateTimeIFormatProviderDemo
     
     Sub DisplayDateNCultureName( testDate As DateTime, _

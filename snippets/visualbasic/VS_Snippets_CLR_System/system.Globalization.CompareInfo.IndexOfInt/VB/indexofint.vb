@@ -3,8 +3,6 @@
 
 ' <snippet1>
 Imports System.Globalization
-Imports Microsoft.VisualBasic
-
 Public Class SamplesCompareInfo
 
    Public Shared Sub Main()

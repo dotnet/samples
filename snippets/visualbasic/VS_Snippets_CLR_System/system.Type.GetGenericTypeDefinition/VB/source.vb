@@ -1,9 +1,6 @@
 ﻿'<Snippet1>
 Imports System.Reflection
 Imports System.Collections.Generic
-Imports Microsoft.VisualBasic
-
-
 Public Class Test
     Public Shared Sub Main() 
         Console.WriteLine(vbCrLf & "--- Get the generic type that defines a constructed type.")

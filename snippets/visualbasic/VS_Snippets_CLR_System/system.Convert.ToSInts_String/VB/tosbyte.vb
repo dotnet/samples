@@ -2,8 +2,6 @@
 ' Example of the Convert.ToSByte( String ) and 
 ' Convert.ToSByte( String, IFormatProvider ) methods.
 Imports System.Globalization
-Imports Microsoft.VisualBasic
-
 Module ToSByteProviderDemo
 
     Dim format As String = "{0,-20}{1,-20}{2}"

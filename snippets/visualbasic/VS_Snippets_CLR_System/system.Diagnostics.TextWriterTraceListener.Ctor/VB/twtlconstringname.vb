@@ -1,7 +1,5 @@
 ﻿'<snippet4>
 Imports System.Diagnostics
-Imports Microsoft.VisualBasic
-
 Module TWTLConStringNameMod
 
     Const LISTENER_NAME As String = "myStringListener"

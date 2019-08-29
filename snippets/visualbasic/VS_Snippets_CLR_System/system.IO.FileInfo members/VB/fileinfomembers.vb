@@ -1,7 +1,6 @@
 ﻿' <Snippet12>
 Imports System.IO
 Imports System.Runtime.Serialization.Formatters.Binary
-Imports Microsoft.VisualBasic
 ' </Snippet12>
 
 Public Class FileInfoSnippets

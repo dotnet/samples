@@ -2,8 +2,6 @@
 ' Example of the Convert.ToInt64( String ) and 
 ' Convert.ToInt64( String, IFormatProvider ) methods.
 Imports System.Globalization
-Imports Microsoft.VisualBasic
-
 Module ToInt64ProviderDemo
 
     Dim format As String = "{0,-22}{1,-20}{2}"

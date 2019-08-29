@@ -1,7 +1,5 @@
 ﻿'<Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
-
 Public Class Example
     Public Shared Sub Main()
         ' Create a Type object that represents a one-dimensional

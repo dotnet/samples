@@ -1,7 +1,5 @@
 ﻿'<snippet5>
 Imports System.Diagnostics
-Imports Microsoft.VisualBasic
-
 Module PerfCounterCatDeleteMod
 
     '<snippet6>

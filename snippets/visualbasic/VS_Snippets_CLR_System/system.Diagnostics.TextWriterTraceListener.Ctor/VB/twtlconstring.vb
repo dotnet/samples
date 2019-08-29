@@ -1,7 +1,5 @@
 ﻿'<snippet3>
 Imports System.Diagnostics
-Imports Microsoft.VisualBasic
-
 Module TWTLConStringMod
 
     ' args(0) is the specification of the trace log file.

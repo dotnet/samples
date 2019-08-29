@@ -1,7 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Diagnostics
-Imports Microsoft.VisualBasic
-
 Module DefaultTraceListenerMod
 
     Dim defaultListener As Diagnostics.DefaultTraceListener

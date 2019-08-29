@@ -8,8 +8,6 @@
 
 '<snippet27>
 Imports System.Diagnostics
-Imports Microsoft.VisualBasic
-
 Module PerfCounterCatCreateExistMod
 
     '<snippet28>

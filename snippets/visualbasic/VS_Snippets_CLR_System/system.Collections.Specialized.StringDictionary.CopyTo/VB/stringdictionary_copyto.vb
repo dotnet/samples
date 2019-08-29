@@ -3,8 +3,6 @@
 ' <snippet1>
 Imports System.Collections
 Imports System.Collections.Specialized
-Imports Microsoft.VisualBasic
-
 Public Class SamplesStringDictionary
 
    Public Shared Sub Main()

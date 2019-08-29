@@ -10,8 +10,7 @@
 'Imports System.Security.Policy
 'Imports System.Security.Principal
 'Imports System.Security.Permissions
-'Imports Microsoft.VisualBasic
-'Imports ClassLibraryVB
+''Imports ClassLibraryVB
 '
 'Class [MyClass]
 '
@@ -27,8 +26,6 @@
 '    End Sub 'Main
 'End Class '[MyClass
 Imports System.Security.Permissions
-Imports Microsoft.VisualBasic
-
 '<Snippet2>
 ' Demand that the calling program be in the global assembly cache.
 <GacIdentityPermissionAttribute(SecurityAction.Demand)> _

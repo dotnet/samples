@@ -2,8 +2,6 @@
 
 ' <Snippet1>
 Imports System.Text
-Imports Microsoft.VisualBasic
-
 Public Class SamplesUTF32Encoding   
 
    Public Shared Sub Main()

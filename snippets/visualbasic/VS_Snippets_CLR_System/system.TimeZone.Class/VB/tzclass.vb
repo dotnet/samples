@@ -1,8 +1,6 @@
 ﻿'<Snippet1>
 ' Example of selected TimeZone class elements.
 Imports System.Globalization
-Imports Microsoft.VisualBasic
-
 Module TimeZoneDemo
 
     Sub Main( )

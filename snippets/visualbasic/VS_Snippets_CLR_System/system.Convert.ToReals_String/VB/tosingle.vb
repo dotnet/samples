@@ -2,8 +2,6 @@
 ' Example of the Convert.ToSingle( String ) and 
 ' Convert.ToSingle( String, IFormatProvider ) methods.
 Imports System.Globalization
-Imports Microsoft.VisualBasic
-
 Module ToSingleProviderDemo
 
     Dim formatter As String = "{0,-22}{1,-20}{2}"

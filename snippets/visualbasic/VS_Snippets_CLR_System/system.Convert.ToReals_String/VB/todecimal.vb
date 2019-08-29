@@ -2,8 +2,6 @@
 ' Example of the Convert.ToDecimal( String ) and 
 ' Convert.ToDecimal( String, IFormatProvider ) methods.
 Imports System.Globalization
-Imports Microsoft.VisualBasic
-
 Module ToDecimalProviderDemo
 
     Dim formatter As String = "{0,-22}{1,-20}{2}"

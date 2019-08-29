@@ -2,10 +2,6 @@
 ' This sample demonstrates the use of the SecurityPermissionAttribute.
 Imports System.Security.Permissions
 Imports System.Security
-Imports Microsoft.VisualBasic
-
-
-
 Class [MyClass]
 
     Public Shared Sub PermissionDemo()

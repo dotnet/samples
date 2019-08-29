@@ -1,7 +1,5 @@
 ﻿'<Snippet1>
 ' Example of the Decimal.GetHashCode method. 
-Imports Microsoft.VisualBasic
-
 Module DecimalGetHashCodeDemo
     
     ' Display the Decimal.GetHashCode argument and the result array.

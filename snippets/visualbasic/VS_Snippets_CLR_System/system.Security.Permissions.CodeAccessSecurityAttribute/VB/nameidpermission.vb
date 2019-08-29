@@ -8,8 +8,6 @@ Imports System.Security.Permissions
 Imports System.IO
 Imports System.Security.Policy
 Imports System.Collections
-Imports Microsoft.VisualBasic
-
 ' Use the command line option '/keyfile' or appropriate project settings to sign this assembly.
 <Assembly: System.Security.AllowPartiallyTrustedCallersAttribute()> 
 Namespace MyPermission

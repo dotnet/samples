@@ -1,8 +1,6 @@
 ﻿'<snippet5>
 Imports System.Diagnostics
 Imports System.IO
-Imports Microsoft.VisualBasic
-
 Module TWTLConWriterNameMod
 
     Const LISTENER_NAME As String = "myWriterListener"

@@ -1,8 +1,6 @@
 ﻿' <Snippet1>
 ' <Snippet11>
 Imports System.Diagnostics
-Imports Microsoft.VisualBasic
-
 Module Binomial
 
     ' args(0) is the number of possibilities for binomial coefficients.

@@ -1,8 +1,6 @@
 ﻿'<Snippet1>
 Imports System.Reflection
 Imports System.Collections.Generic
-Imports Microsoft.VisualBasic
-
 Public Class Test
     Public Shared Sub Main()
         Console.WriteLine(vbCrLf & "--- Create a constructed type from the generic Dictionary type.")
