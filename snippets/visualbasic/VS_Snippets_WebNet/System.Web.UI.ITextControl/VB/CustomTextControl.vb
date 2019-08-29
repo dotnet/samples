@@ -1,6 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-
-'<Snippet1>
+﻿'<Snippet1>
 
 Public Class CustomTextControl
     Inherits System.Web.UI.Control

@@ -1,6 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-
-' <Snippet5>
+﻿' <Snippet5>
 Public Class EmployeeLogic
     Public Shared Function GetFullNamesAndIDs() As Array
         Dim ndc As New NorthwindDataContext()

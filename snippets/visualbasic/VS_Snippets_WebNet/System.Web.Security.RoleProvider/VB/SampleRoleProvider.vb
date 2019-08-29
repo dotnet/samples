@@ -9,8 +9,6 @@ Imports System.Configuration
 Imports System.Diagnostics
 Imports System.Web
 Imports System.Globalization
-Imports Microsoft.VisualBasic
-
 '
 '
 ' This provider works with the following schema for the tables of role data.

@@ -1,6 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-
-' <Snippet1>
+﻿' <Snippet1>
 Public Class customeditablebox
     Inherits System.Web.UI.UserControl
     Implements System.Web.UI.IEditableTextControl

@@ -9,8 +9,6 @@ Imports System.Configuration
 Imports System.Diagnostics
 Imports System.Web
 Imports System.Collections
-Imports Microsoft.VisualBasic
-
 '
 '
 ' This provider works with the following schema for the table of user data.
