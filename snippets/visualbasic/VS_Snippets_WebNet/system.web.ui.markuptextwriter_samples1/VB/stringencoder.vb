@@ -1,7 +1,6 @@
 ﻿' <snippet1>
 ' Create a simple class, named StringEncoder,
 ' that performs HTML and URL encoding of strings.
-Imports System
 Imports System.Web
 Imports System.Security.Permissions
 Imports System.Web.UI

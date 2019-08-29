@@ -1,6 +1,5 @@
 ﻿' <snippet6>
 ' Imports System.Design
-Imports System
 Imports System.ComponentModel
 Imports System.ComponentModel.Design
 Imports System.Web.UI

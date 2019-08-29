@@ -3,7 +3,6 @@ Imports System.Web
 Imports System.Web.UI
 Imports System.Web.UI.WebControls
 
-Imports System
 Imports System.Drawing
 Namespace SomeNamespace
 

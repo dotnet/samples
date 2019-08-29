@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Web.Mail
+﻿Imports System.Web.Mail
 Imports System.Text
 
 

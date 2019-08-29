@@ -1,7 +1,6 @@
 ﻿' <snippet1>
 ' This control renders values stored in view state for Text and FontSize properties.
 
-Imports System
 Imports System.Web
 Imports System.Web.UI
 
