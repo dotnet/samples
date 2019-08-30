@@ -12,8 +12,8 @@ namespace testwebapi.Controllers
     [ApiController]
     public class DiagScenarioController : ControllerBase
     {
-        object o1 = new object();
-        object o2 = new object();
+        var o1 = new object();
+        var o2 = new object();
 
         private static Processor p = new Processor();
 
@@ -27,8 +27,8 @@ namespace testwebapi.Controllers
 
             Thread.Sleep(5000);
 
-            Thread[] threads = new Thread[300];
-            for(int i=0; i<300;i++)
+            var threads = new Thread[300];
+            for(int i = 0; i < 300; i++)
             {
                 (threads[i] = new Thread(() => {
                     lock (o1) {Thread.Sleep(100);}
@@ -60,7 +60,7 @@ namespace testwebapi.Controllers
         [Route("memspike/{seconds}")]
         public ActionResult<string> memspike(int seconds)
         {
-            Stopwatch watch=new Stopwatch();
+            var watch = new Stopwatch();
             watch.Start();
 
             while(true)
@@ -71,8 +71,8 @@ namespace testwebapi.Controllers
                     break;
                 watch.Start();
 
-                int it = (200000*1000) / 100;
-                for(int i=0; i<it; i++)
+                int it = (2000 * 1000);
+                for(int i = 0; i < it; i++)
                 {
                     p.ProcessTransaction(new Customer(Guid.NewGuid().ToString()));
                 }
@@ -81,6 +81,8 @@ namespace testwebapi.Controllers
 
                 // Cleanup
                 p = null;
+
+                // Call GC.Collect twice
                 GC.Collect();
                 GC.Collect();
 
@@ -93,8 +95,8 @@ namespace testwebapi.Controllers
         [Route("memleak/{kb}")]
         public ActionResult<string> memleak(int kb)
         {
-            int it = (kb*1000) / 100;
-            for(int i=0; i<it; i++)
+            int it = (kb * 1000) / 100;
+            for(int i = 0; i < it; i++)
             {
                 p.ProcessTransaction(new Customer(Guid.NewGuid().ToString()));
             }
@@ -114,7 +116,7 @@ namespace testwebapi.Controllers
         [Route("highcpu/{milliseconds}")]
         public ActionResult<string> highcpu(int milliseconds)
         {
-            Stopwatch watch=new Stopwatch();
+            var watch = new Stopwatch();
             watch.Start();
 
             while (true)
@@ -127,7 +129,6 @@ namespace testwebapi.Controllers
 
             return "success:highcpu";
         }
-
     }
 
     class Customer
