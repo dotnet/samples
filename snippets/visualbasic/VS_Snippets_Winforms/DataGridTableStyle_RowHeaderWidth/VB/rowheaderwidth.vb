@@ -5,7 +5,6 @@
 '   method and 'RowHeaderWidthChanged' event of 'DataGridTableStyle'
 '   class. It changes the row header width on button click 
 '   and resets the row header width. 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel

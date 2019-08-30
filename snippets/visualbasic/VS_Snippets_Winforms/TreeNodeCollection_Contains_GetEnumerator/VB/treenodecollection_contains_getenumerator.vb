@@ -7,7 +7,6 @@
 ' TreeNodes. It checks for a TreeNode in the collection and also
 ' gets an Enumerator to iterate through the collection.
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel

@@ -7,7 +7,6 @@
 ' When user clicks the set button, it raises 'PreferredRowHeightChanged'
 ' Event which calls user defined  EventHandler function.
 
-Imports System
 Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms

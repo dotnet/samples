@@ -19,7 +19,6 @@
 '               part only returns a height of 15, which is way to short; is this a bug?
 
 ' <Snippet0>
-Imports System
 Imports System.Text
 Imports System.Drawing
 Imports System.Drawing.Drawing2D

@@ -1,5 +1,4 @@
-﻿imports System
-imports System.ComponentModel
+﻿imports System.ComponentModel
 
 <LicenseProvider(GetType(LicFileLicenseProvider))> _
 Public Class Form1
