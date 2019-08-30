@@ -82,8 +82,9 @@ namespace testwebapi.Controllers
                 // Cleanup
                 p = null;
 
-                // Call GC.Collect twice
+                // GC
                 GC.Collect();
+                GC.WaitForPendingFinalizers();
                 GC.Collect();
 
                 Thread.Sleep(5000);	// Sleep for 5 seconds before spiking memory again
