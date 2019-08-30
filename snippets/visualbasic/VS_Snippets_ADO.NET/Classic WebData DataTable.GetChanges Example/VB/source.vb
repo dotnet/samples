@@ -1,5 +1,6 @@
 ﻿Imports System.Data
 Imports System.Data.OleDb
+
 Public Class Sample
 ' <Snippet1>
 Private Sub UpdateDataTable(table As DataTable, _
