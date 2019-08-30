@@ -1,3 +1,13 @@
+---
+languages:
+   - csharp
+ products:
+   - dotnet-core
+page_type: sample
+name: "Diagnostic Scenarios"
+urlFragment: "diagnostic-scenarios"
+description: "A .NET Core sample with methods that trigger undesirable behaviors to diagnose."
+---
 # DiagnosticScenarios sample debug target
 
 This sample is for the [diagnostics tutorials](https://docs.microsoft.com/dotnet/core/diagnostics/tutorial/diagnostic-scenarios.md) in the .NET Core Guide.
@@ -29,4 +39,3 @@ This method will cause the target to leak memory (amount specified by {kb}).
 http://localhost:5000/api/diagscenario/memspike/{seconds}
 
 This method will cause intermittent memory spikes over the specified number of seconds. Memory will go from base line to spike and back to baseline several times.
-
