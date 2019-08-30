@@ -2,8 +2,8 @@
 Imports System.Data
 Imports System.Data.OracleClient
 Imports System.Data.Common
-Public class Sample
 
+Public class Sample
 
 ' <Snippet1>
  Public Sub ShowOracleException() 
