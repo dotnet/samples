@@ -12,8 +12,8 @@ namespace testwebapi.Controllers
     [ApiController]
     public class DiagScenarioController : ControllerBase
     {
-        var o1 = new object();
-        var o2 = new object();
+        object o1 = new object();
+        object o2 = new object();
 
         private static Processor p = new Processor();
 
