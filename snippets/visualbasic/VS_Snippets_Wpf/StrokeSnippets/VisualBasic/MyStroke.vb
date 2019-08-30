@@ -5,7 +5,6 @@ Imports System.Windows.Ink
 Imports System.Windows.Input
 Imports System.Windows.Media
 
-Imports System
 Imports System.Collections.Generic
 Imports System.Text
 

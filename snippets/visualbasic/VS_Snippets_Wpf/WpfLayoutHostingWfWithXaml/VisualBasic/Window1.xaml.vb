@@ -1,5 +1,4 @@
 ﻿' <snippet100>
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Data

@@ -1,5 +1,4 @@
-﻿Imports System
-Namespace UIAIValueProvider_snip
+﻿Namespace UIAIValueProvider_snip
 	Partial Public Class CustomControl
 		''' <summary>
 		''' Required designer variable.

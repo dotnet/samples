@@ -38,7 +38,6 @@
 ' * PARTICULAR PURPOSE.
 ' * 
 ' *****************************************************************************
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 Imports System.Windows.Automation
