@@ -49,7 +49,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
             Dim withoutAutoReverseRectangle As New Rectangle With {
                 .Name = "withoutAutoReverseRectangle"
             }
-            Me.RegisterName(withoutAutoReverseRectangle.Name,withoutAutoReverseRectangle)
+            RegisterName(withoutAutoReverseRectangle.Name,withoutAutoReverseRectangle)
 			withoutAutoReverseRectangle.Width = 100
 			withoutAutoReverseRectangle.Height = 20
 			Dim mySolidColorBrush As New SolidColorBrush(Color.FromArgb(170,51,51,255))
@@ -66,7 +66,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
             Dim autoReverseRectangle As New Rectangle With {
                 .Name = "autoReverseRectangle"
             }
-            Me.RegisterName(autoReverseRectangle.Name, autoReverseRectangle)
+            RegisterName(autoReverseRectangle.Name, autoReverseRectangle)
 			autoReverseRectangle.Width = 100
 			autoReverseRectangle.Height = 20
 			autoReverseRectangle.Fill = mySolidColorBrush
@@ -82,7 +82,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
             Dim autoReverseRectangleWithRepeats As New Rectangle With {
                 .Name = "autoReverseRectangleWithRepeats"
             }
-            Me.RegisterName(autoReverseRectangleWithRepeats.Name, autoReverseRectangleWithRepeats)
+            RegisterName(autoReverseRectangleWithRepeats.Name, autoReverseRectangleWithRepeats)
 			autoReverseRectangleWithRepeats.Width = 100
 			autoReverseRectangleWithRepeats.Height = 20
 			autoReverseRectangleWithRepeats.Fill = mySolidColorBrush
@@ -100,7 +100,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
             Dim complexAutoReverseExample As New Rectangle With {
                 .Name = "complexAutoReverseExample"
             }
-            Me.RegisterName(complexAutoReverseExample.Name, complexAutoReverseExample)
+            RegisterName(complexAutoReverseExample.Name, complexAutoReverseExample)
 			complexAutoReverseExample.Width = 100
 			complexAutoReverseExample.Height = 20
 			complexAutoReverseExample.Fill = mySolidColorBrush
@@ -192,7 +192,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
             }
             myEventTrigger.Actions.Add(myBeginStoryboard)
 			myStackPanel.Triggers.Add(myEventTrigger)
-			Me.Content = myStackPanel
+			Content = myStackPanel
 		End Sub
 	End Class
 End Namespace

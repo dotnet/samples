@@ -21,8 +21,8 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 
         Public Sub New()
 
-			Me.WindowTitle = "Opacity Animation Example"
-			Me.Background = Brushes.White
+			WindowTitle = "Opacity Animation Example"
+			Background = Brushes.White
             Dim myStackPanel As New StackPanel With {
                 .Margin = New Thickness(20)
             }
@@ -44,7 +44,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			AddHandler myButton.Click, AddressOf myButton_Clicked
 
 			myStackPanel.Children.Add(myButton)
-			Me.Content = myStackPanel
+			Content = myStackPanel
 		End Sub
 
         ' Create and apply and animation when the button is clicked.

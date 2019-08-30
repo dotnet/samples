@@ -19,7 +19,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			' Create a name scope for the page.
 			NameScope.SetNameScope(Me, New NameScope())
 
-			Me.WindowTitle = "Speed Example"
+			WindowTitle = "Speed Example"
 
             Dim myStackPanel As New StackPanel With {
                 .Margin = New Thickness(20)
@@ -36,7 +36,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
             Dim defaultSpeedRectangle As New Rectangle With {
                 .Name = "defaultSpeedRectangle"
             }
-            Me.RegisterName(defaultSpeedRectangle.Name, defaultSpeedRectangle)
+            RegisterName(defaultSpeedRectangle.Name, defaultSpeedRectangle)
 			defaultSpeedRectangle.Width = 20
 			defaultSpeedRectangle.Height = 20
 			Dim mySolidColorBrush As New SolidColorBrush(Color.FromArgb(170,51,51,255))
@@ -53,7 +53,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
             Dim fasterRectangle As New Rectangle With {
                 .Name = "fasterRectangle"
             }
-            Me.RegisterName(fasterRectangle.Name, fasterRectangle)
+            RegisterName(fasterRectangle.Name, fasterRectangle)
 			fasterRectangle.Width = 20
 			fasterRectangle.Height = 20
 			mySolidColorBrush = New SolidColorBrush(Color.FromArgb(170,51,51,255))
@@ -70,7 +70,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
             Dim slowerRectangle As New Rectangle With {
                 .Name = "slowerRectangle"
             }
-            Me.RegisterName(slowerRectangle.Name, slowerRectangle)
+            RegisterName(slowerRectangle.Name, slowerRectangle)
 			slowerRectangle.Width = 20
 			slowerRectangle.Height = 20
 			mySolidColorBrush = New SolidColorBrush(Color.FromArgb(170,51,51,255))
@@ -143,7 +143,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
             myEventTrigger.Actions.Add(myBeginStoryboard)
 			myStackPanel.Triggers.Add(myEventTrigger)
 
-			Me.Content = myStackPanel
+			Content = myStackPanel
 		End Sub
 	End Class
 End Namespace

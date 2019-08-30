@@ -23,7 +23,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			' Create a name scope for the page.
 			NameScope.SetNameScope(Me, New NameScope())
 
-			Me.WindowTitle = "BeginTime Example"
+			WindowTitle = "BeginTime Example"
 
             Dim myStackPanel As New StackPanel With {
                 .Margin = New Thickness(20)
@@ -53,7 +53,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
             Dim defaultBeginTimeRectangle As New Rectangle With {
                 .Name = "defaultBeginTimeRectangle"
             }
-            Me.RegisterName(defaultBeginTimeRectangle.Name, defaultBeginTimeRectangle)
+            RegisterName(defaultBeginTimeRectangle.Name, defaultBeginTimeRectangle)
 			defaultBeginTimeRectangle.Width = 20
 			defaultBeginTimeRectangle.Height = 20
 			myColor = New Color()
@@ -71,7 +71,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
             Dim delayedBeginTimeRectangle As New Rectangle With {
                 .Name = "delayedBeginTimeRectangle"
             }
-            Me.RegisterName(delayedBeginTimeRectangle.Name, delayedBeginTimeRectangle)
+            RegisterName(delayedBeginTimeRectangle.Name, delayedBeginTimeRectangle)
 			delayedBeginTimeRectangle.Width = 20
 			delayedBeginTimeRectangle.Height = 20
 			myColor = New Color()
@@ -89,7 +89,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
             Dim delayedAnimationWithDelayedParentRectangle As New Rectangle With {
                 .Name = "delayedAnimationWithDelayedParentRectangle"
             }
-            Me.RegisterName(delayedAnimationWithDelayedParentRectangle.Name, delayedAnimationWithDelayedParentRectangle)
+            RegisterName(delayedAnimationWithDelayedParentRectangle.Name, delayedAnimationWithDelayedParentRectangle)
 			delayedAnimationWithDelayedParentRectangle.Width = 20
 			delayedAnimationWithDelayedParentRectangle.Height = 20
 			myColor = New Color()
@@ -173,7 +173,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
             myEventTrigger.Actions.Add(myBeginStoryboard)
 		   myStackPanel.Triggers.Add(myEventTrigger)
 
-		   Me.Content = myStackPanel
+		   Content = myStackPanel
 		End Sub
 	End Class
 End Namespace
