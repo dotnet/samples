@@ -19,16 +19,16 @@ Partial NotInheritable Class MySettings
     Private Shared m_Default As MySettings
     
     Private Shared gate As Object = New Object
-    
-#If _MyType = "WindowsForms" Then 
+
+#If _MYTYPE = "WindowsForms" Then
         <System.Diagnostics.DebuggerNonUserCode(), System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)> _ 
-        Private Shared Sub AutoSaveSettings(ByVal sender As Object, ByVal e As EventArgs) 
+        Private Shared Sub AutoSaveSettings(sender As Object, e As EventArgs) 
             If My.Application.SaveMySettingsOnExit Then 
                 MySettings.Default.Save()
             End If
         End Sub
 #End If
-    
+
     Public Shared ReadOnly Property [Default]() As MySettings
         Get
             If (MySettings.m_Default Is Nothing) Then

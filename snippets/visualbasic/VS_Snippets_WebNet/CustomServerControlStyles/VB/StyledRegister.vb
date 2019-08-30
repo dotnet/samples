@@ -1,7 +1,6 @@
 ﻿' <Snippet1>
 ' StyledRegister.vb
 Option Strict On
-Imports System
 Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Security.Permissions

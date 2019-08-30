@@ -25,31 +25,35 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 
 			WindowTitle = "FillBehavior Example"
 
-			Dim myStackPanel As New StackPanel()
-			myStackPanel.Margin = New Thickness(20)
+            Dim myStackPanel As New StackPanel With {
+                .Margin = New Thickness(20)
+            }
 
-			Dim myBorder As New Border()
+            Dim myBorder As New Border()
 			Dim mySolidColorBrush As New SolidColorBrush(Color.FromArgb(153,255,255,255))
 			myBorder.Background = mySolidColorBrush
 
-			Dim myTextBlock As New TextBlock()
-			myTextBlock.Text = "This example shows how the FillBehavior property determines how an "
-			myTextBlock.Text &= "animation behaves after it reaches the end of its duration."
+            Dim myTextBlock As New TextBlock With {
+                .Text = "This example shows how the FillBehavior property determines how an "
+            }
+            myTextBlock.Text &= "animation behaves after it reaches the end of its duration."
 			myTextBlock.Margin = New Thickness(20)
 			myBorder.Child = myTextBlock
 			myStackPanel.Children.Add(myBorder)
 
-			myTextBlock = New TextBlock()
-			myTextBlock.Text = "FillBehavior = ""Deactivate"""
-			myStackPanel.Children.Add(myTextBlock)
+            myTextBlock = New TextBlock With {
+                .Text = "FillBehavior = ""Deactivate"""
+            }
+            myStackPanel.Children.Add(myTextBlock)
 
 
-			'
-			'  Create the first rectangle to animate.
-			'
-			Dim deactivateAnimationRectangle As New Rectangle()
-			deactivateAnimationRectangle.Name = "deactivateAnimationRectangle"
-			Me.RegisterName(deactivateAnimationRectangle.Name, deactivateAnimationRectangle)
+            '
+            '  Create the first rectangle to animate.
+            '
+            Dim deactivateAnimationRectangle As New Rectangle With {
+                .Name = "deactivateAnimationRectangle"
+            }
+            Me.RegisterName(deactivateAnimationRectangle.Name, deactivateAnimationRectangle)
 			deactivateAnimationRectangle.Width = 20
 			deactivateAnimationRectangle.Height = 20
 			mySolidColorBrush = New SolidColorBrush(Color.FromArgb(170,51,51,255))
@@ -57,16 +61,18 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			deactivateAnimationRectangle.HorizontalAlignment = HorizontalAlignment.Left
 			myStackPanel.Children.Add(deactivateAnimationRectangle)
 
-			myTextBlock = New TextBlock()
-			myTextBlock.Text = vbLf & "FillBehavior = ""HoldEnd"""
-			myStackPanel.Children.Add(myTextBlock)
+            myTextBlock = New TextBlock With {
+                .Text = vbLf & "FillBehavior = ""HoldEnd"""
+            }
+            myStackPanel.Children.Add(myTextBlock)
 
-			'
-			'  Create the second rectangle to animate.
-			'
-			Dim holdEndAnimationRectangle As New Rectangle()
-			holdEndAnimationRectangle.Name = "holdEndAnimationRectangle"
-			Me.RegisterName(holdEndAnimationRectangle.Name, holdEndAnimationRectangle)
+            '
+            '  Create the second rectangle to animate.
+            '
+            Dim holdEndAnimationRectangle As New Rectangle With {
+                .Name = "holdEndAnimationRectangle"
+            }
+            Me.RegisterName(holdEndAnimationRectangle.Name, holdEndAnimationRectangle)
 			holdEndAnimationRectangle.Width = 20
 			holdEndAnimationRectangle.Height = 20
 			mySolidColorBrush = New SolidColorBrush(Color.FromArgb(170,51,51,255))
@@ -104,28 +110,31 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			myStoryboard.Children.Add(myStopDoubleAnimation)
 			myStoryboard.Children.Add(myHoldEndDoubleAnimation)
 
-			'
-			'  Create the button to start the animation
-			'
-			Dim myButton As New Button()
-			myButton.Name = "myButton"
-			Me.RegisterName(myButton.Name, myButton)
+            '
+            '  Create the button to start the animation
+            '
+            Dim myButton As New Button With {
+                .Name = "myButton"
+            }
+            Me.RegisterName(myButton.Name, myButton)
 			myButton.Margin = New Thickness(0,30,0,0)
 			myButton.Content = "Restart Animations"
 			myButton.HorizontalAlignment = HorizontalAlignment.Left
 			myStackPanel.Children.Add(myButton)
 
-			'
-			'  Create an EventTrigger and a BeginStoryboard action to start
-			'    the storyboard.
-			'
-			Dim myBeginStoryboard As New BeginStoryboard()
-			myBeginStoryboard.Storyboard = myStoryboard
+            '
+            '  Create an EventTrigger and a BeginStoryboard action to start
+            '    the storyboard.
+            '
+            Dim myBeginStoryboard As New BeginStoryboard With {
+                .Storyboard = myStoryboard
+            }
 
-			Dim myEventTrigger As New EventTrigger()
-			myEventTrigger.RoutedEvent = Button.ClickEvent
-			myEventTrigger.SourceName = myButton.Name
-			myEventTrigger.Actions.Add(myBeginStoryboard)
+            Dim myEventTrigger As New EventTrigger With {
+                .RoutedEvent = Button.ClickEvent,
+                .SourceName = myButton.Name
+            }
+            myEventTrigger.Actions.Add(myBeginStoryboard)
 			myStackPanel.Triggers.Add(myEventTrigger)
 
 			Me.Content = myStackPanel

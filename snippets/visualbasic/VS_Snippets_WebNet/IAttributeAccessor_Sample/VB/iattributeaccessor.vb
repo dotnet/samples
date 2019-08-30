@@ -7,7 +7,6 @@
 ' The page then displays the values of the Text and Width properties 
 ' using the IAttributeAccessor.GetAttribute method.
 ' When compiled, this assembly is named MyAttributeAccessor.
-Imports System
 Imports System.Web
 Imports System.Web.UI
 Imports System.Security.Permissions

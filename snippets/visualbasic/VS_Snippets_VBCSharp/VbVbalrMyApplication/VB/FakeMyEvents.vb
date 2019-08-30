@@ -9,9 +9,9 @@
 
     Partial Friend Class MyApplication
         '<snippet51>
-        Protected Overrides Function OnInitialize( 
-            ByVal commandLineArgs As System.Collections.
-                ObjectModel.ReadOnlyCollection(Of String) 
+        Protected Overrides Function OnInitialize(
+            commandLineArgs As System.Collections.
+                ObjectModel.ReadOnlyCollection(Of String)
         ) As Boolean
             ' Set the display time to 5000 milliseconds (5 seconds). 
             Me.MinimumSplashScreenDisplayTime = 5000
@@ -20,27 +20,27 @@
         '</snippet51>
 
         '<snippet9>
-        Private Sub MyApplication_NetworkAvailabilityChanged( 
-            ByVal sender As Object, 
-            ByVal e As Microsoft.VisualBasic.Devices.NetworkAvailableEventArgs 
+        Private Sub MyApplication_NetworkAvailabilityChanged(
+            sender As Object,
+            e As Microsoft.VisualBasic.Devices.NetworkAvailableEventArgs
         ) Handles Me.NetworkAvailabilityChanged
             My.Forms.Form1.SetConnectionStatus(e.IsNetworkAvailable)
         End Sub
         '</snippet9>
 
         '<snippet13>
-        Private Sub MyApplication_Shutdown( 
-            ByVal sender As Object, 
-            ByVal e As System.EventArgs 
+        Private Sub MyApplication_Shutdown(
+            sender As Object,
+            e As System.EventArgs
         ) Handles Me.Shutdown
             My.Application.Log.WriteEntry("Application Shut Down.")
         End Sub
         '</snippet13>
 
         '<snippet14>
-        Private Sub MyApplication_Startup( 
-            ByVal sender As Object, 
-            ByVal e As Microsoft.VisualBasic.ApplicationServices.StartupEventArgs 
+        Private Sub MyApplication_Startup(
+            sender As Object,
+            e As Microsoft.VisualBasic.ApplicationServices.StartupEventArgs
         ) Handles Me.Startup
             ' Get the splash screen.
             Dim splash As SplashScreen1 = CType(My.Application.SplashScreen, SplashScreen1)
@@ -55,9 +55,9 @@
         '          End While
 
         '<snippet15>
-        Private Sub MyApplication_StartupNextInstance( 
-            ByVal sender As Object, 
-            ByVal e As Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs 
+        Private Sub MyApplication_StartupNextInstance(
+            sender As Object,
+            e As Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs
         ) Handles Me.StartupNextInstance
             Dim inputArgument As String = "/input="
             Dim inputName As String = ""
@@ -77,13 +77,13 @@
         '</snippet15>
 
         '<snippet17>
-        Private Sub MyApplication_UnhandledException( 
-            ByVal sender As Object, 
-            ByVal e As Microsoft.VisualBasic.ApplicationServices.UnhandledExceptionEventArgs 
+        Private Sub MyApplication_UnhandledException(
+            sender As Object,
+            e As Microsoft.VisualBasic.ApplicationServices.UnhandledExceptionEventArgs
         ) Handles Me.UnhandledException
 
-            My.Application.Log.WriteException(e.Exception, 
-                TraceEventType.Critical, 
+            My.Application.Log.WriteException(e.Exception,
+                TraceEventType.Critical,
                 "Unhandled Exception.")
         End Sub
         '</snippet17>
@@ -94,9 +94,9 @@ End Namespace
 Class FakeMyApp : Inherits Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase
     '<snippet40>
     '<snippet41>
-    Private Sub MyApplication_Startup( 
-        ByVal sender As Object, 
-        ByVal e As Microsoft.VisualBasic.ApplicationServices.StartupEventArgs 
+    Private Sub MyApplication_Startup(
+        sender As Object,
+        e As Microsoft.VisualBasic.ApplicationServices.StartupEventArgs
     ) Handles Me.Startup
         '</snippet41>
         '<snippet43>

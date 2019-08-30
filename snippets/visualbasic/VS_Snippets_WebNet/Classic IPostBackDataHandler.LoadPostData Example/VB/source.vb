@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Collections.Specialized
+﻿Imports System.Collections.Specialized
 
 Public Class Sample
     

@@ -4,7 +4,6 @@
 ' for 20 seconds using the PartialCachingAttribute class.
 ' This control uses a DataGrid server control to display
 ' XML data.
-Imports System
 Imports System.IO
 Imports System.Data
 Imports System.Web

@@ -1,5 +1,4 @@
 ﻿' <snippet1>
-Imports System
 'Imports System.Design
 Imports System.Drawing
 Imports System.ComponentModel
