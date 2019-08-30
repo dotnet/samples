@@ -6,10 +6,10 @@ Imports System.Security.Cryptography.X509Certificates
 Imports System.ServiceModel
 Imports System.ServiceModel.Security
 Imports System.ServiceModel.Channels
+
 Namespace Microsoft.ServiceModel.Samples
 
     ' The service contract is defined in generatedClient.vb, generated from the service by
-
     ' the svcutil tool.
     Class Program
 
