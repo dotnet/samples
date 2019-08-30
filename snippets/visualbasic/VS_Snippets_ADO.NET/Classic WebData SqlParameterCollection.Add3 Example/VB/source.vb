@@ -1,5 +1,6 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
+
 Public Class Sample
 ' <Snippet1>
   Public Sub AddSqlParameter(command As SqlCommand) 
