@@ -1,4 +1,5 @@
 ﻿Imports System.Data
+
 Public Class Sample
     
 ' <Snippet1>
