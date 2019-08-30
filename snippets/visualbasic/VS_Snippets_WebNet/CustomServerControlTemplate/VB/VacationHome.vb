@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 Option Strict On
-Imports System
 Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Security.Permissions

@@ -11,7 +11,6 @@
 ' Any changes in either the cell or the 'DataGridTextBox' are
 ' accepted.
 
-Imports System
 Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms

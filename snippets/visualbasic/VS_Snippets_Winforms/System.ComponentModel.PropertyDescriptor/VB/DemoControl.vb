@@ -1,5 +1,4 @@
 ﻿ ' <snippet100>
-Imports System
 Imports System.ComponentModel
 Imports System.ComponentModel.Design
 Imports System.Text

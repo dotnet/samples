@@ -8,7 +8,6 @@
 ' A button on the form toggles sorting availability on the grid.
 '
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel

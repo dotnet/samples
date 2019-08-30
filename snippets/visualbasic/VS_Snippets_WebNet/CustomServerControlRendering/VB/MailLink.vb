@@ -1,7 +1,6 @@
 ﻿' <Snippet1>
 ' MailLink.vb
 Option Strict On
-Imports System
 Imports System.ComponentModel
 Imports System.Security
 Imports System.Security.Permissions

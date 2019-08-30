@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Windows.Xps.Packaging
+﻿Imports System.Windows.Xps.Packaging
 Imports System.Windows.Forms
 
 Namespace SDKSample
@@ -15,7 +14,7 @@ Namespace SDKSample
 		'''   The document to copy the property values to.</param>
 		''' <param name="propertiesDialog">
 		'''   The dialog to copy the property values from.</param>
-		Public Sub WriteProperties(ByVal xpsDocument As XpsDocument, ByVal propertiesDialog As PropertiesDialog)
+		Public Sub WriteProperties(xpsDocument As XpsDocument, propertiesDialog As PropertiesDialog)
 			xpsDocument.CoreDocumentProperties.Creator = propertiesDialog.Creator.Text
 
 			xpsDocument.CoreDocumentProperties.Description = propertiesDialog.Description.Text
@@ -45,7 +44,7 @@ Namespace SDKSample
 		'''   The document to copy the properties from.</param>
 		''' <param name="propertiesDialog">
 		'''   The dialog to copy the properties to.</param>
-		Public Sub ReadProperties(ByVal xpsDocument As XpsDocument, ByVal propertiesDialog As PropertiesDialog)
+		Public Sub ReadProperties(xpsDocument As XpsDocument, propertiesDialog As PropertiesDialog)
 			propertiesDialog.Creator.Text = xpsDocument.CoreDocumentProperties.Creator
 
 			propertiesDialog.Description.Text = xpsDocument.CoreDocumentProperties.Description

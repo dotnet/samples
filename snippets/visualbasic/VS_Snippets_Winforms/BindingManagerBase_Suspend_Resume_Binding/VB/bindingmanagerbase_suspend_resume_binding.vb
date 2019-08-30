@@ -7,7 +7,6 @@
 ' 'DataTable'. If 'SuspendBinding' button is pressed it suspenmyDataSet the Data Binding between 
 ' TextBoxes and the 'DataTable' and if the ResumeButton is pressed it resumes the Data Binding.
 
-Imports System
 Imports System.Data
 Imports System.Drawing
 Imports System.Globalization

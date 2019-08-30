@@ -9,11 +9,11 @@ namespace DictionaryHowTo
     using System.Threading;
     using System.Threading.Tasks;
 
-    // The type of the Value to store in the dictionary:
+    // The type of the Value to store in the dictionary.
     class CityInfo : IEqualityComparer<CityInfo>
     {
         public string Name { get; set; }
-        public DateTime lastQueryDate { get; set; }
+        public DateTime LastQueryDate { get; set; }
         public decimal Longitude { get; set; }
         public decimal Latitude { get; set; }
         public int[] RecentHighTemperatures { get; set; }
@@ -21,7 +21,7 @@ namespace DictionaryHowTo
         public CityInfo(string name, decimal longitude, decimal latitude, int[] temps)
         {
             Name = name;
-            lastQueryDate = DateTime.Now;
+            LastQueryDate = DateTime.Now;
             Longitude = longitude;
             Latitude = latitude;
             RecentHighTemperatures = temps;
@@ -34,13 +34,13 @@ namespace DictionaryHowTo
         public CityInfo(string key)
         {
             Name = key;
-            // MaxValue means "not initialized"
+            // MaxValue means "not initialized".
             Longitude = Decimal.MaxValue;
             Latitude = Decimal.MaxValue;
-            lastQueryDate = DateTime.Now;
+            LastQueryDate = DateTime.Now;
             RecentHighTemperatures = new int[] { 0 };
-
         }
+        
         public bool Equals(CityInfo x, CityInfo y)
         {
             return x.Name == y.Name && x.Longitude == y.Longitude && x.Latitude == y.Latitude;
@@ -73,17 +73,16 @@ namespace DictionaryHowTo
             };
 
             // Add some key/value pairs from multiple threads.
-            Task[] tasks = new Task[2];
+            var tasks = new Task[2];
 
             tasks[0] = Task.Run(() =>
             {
                 for (int i = 0; i < 2; i++)
                 {
                     if (cities.TryAdd(data[i].Name, data[i]))
-                        Console.WriteLine("Added {0} on thread {1}", data[i],
-                            Thread.CurrentThread.ManagedThreadId);
+                        Console.WriteLine($"Added {data[i]} on thread {Thread.CurrentThread.ManagedThreadId}");
                     else 
-                        Console.WriteLine("Could not add {0}", data[i]);
+                        Console.WriteLine($"Could not add {data[i]}");
                 }
             });
 
@@ -92,10 +91,9 @@ namespace DictionaryHowTo
                 for (int i = 2; i < data.Length; i++)
                 {
                     if (cities.TryAdd(data[i].Name, data[i]))
-                        Console.WriteLine("Added {0} on thread {1}", data[i],
-                            Thread.CurrentThread.ManagedThreadId);
+                        Console.WriteLine($"Added {data[i]} on thread {Thread.CurrentThread.ManagedThreadId}");
                     else
-                        Console.WriteLine("Could not add {0}", data[i]);
+                        Console.WriteLine($"Could not add {data[i]}");
                 }
             });
 
@@ -107,7 +105,7 @@ namespace DictionaryHowTo
             // that does not support thread-safe enumeration.
             foreach (var city in cities)
             {
-                Console.WriteLine("{0} has been added.", city.Key);
+                Console.WriteLine($"{city.Key} has been added.");
             }
 
             AddOrUpdateWithoutRetrieving();
@@ -123,7 +121,7 @@ namespace DictionaryHowTo
         private static void AddOrUpdateWithoutRetrieving()
         {
             // Sometime later. We receive new data from some source.
-            CityInfo ci = new CityInfo() { Name = "Toronto",
+            var ci = new CityInfo() { Name = "Toronto",
                                             Latitude = 43.716589M,
                                             Longitude = -79.340686M,
                                             RecentHighTemperatures = new int[] { 54, 59, 67, 82, 87, 55, -14 } };
@@ -138,18 +136,18 @@ namespace DictionaryHowTo
                     // Here we make sure the city really is the same city we already have.
                     // (Support for multiple cities of the same name is left as an exercise for the reader.)
                     if (ci != existingVal)
-                        throw new ArgumentException("Duplicate city names are not allowed: {0}.", ci.Name);
+                        throw new ArgumentException($"Duplicate city names are not allowed: {ci.Name}.");
 
-                    // The only updatable fields are the temperature array and lastQueryDate.
-                    existingVal.lastQueryDate = DateTime.Now;
+                    // The only updatable fields are the temperature array and LastQueryDate.
+                    existingVal.LastQueryDate = DateTime.Now;
                     existingVal.RecentHighTemperatures = ci.RecentHighTemperatures;
                     return existingVal;
                 });
 
             // Verify that the dictionary contains the new or updated data.
-            Console.Write("Most recent high temperatures for {0} are: ", cities[ci.Name].Name);
+            Console.Write($"Most recent high temperatures for {cities[ci.Name].Name} are: ");
             int[] temps = cities[ci.Name].RecentHighTemperatures;
-            foreach (var temp in temps) Console.Write("{0}, ", temp);
+            foreach (var temp in temps) Console.Write($"{temp}, ");
             Console.WriteLine();
         }
 
@@ -172,9 +170,9 @@ namespace DictionaryHowTo
             // Use the data.
             if (retrievedValue != null)
             {
-                Console.Write("Most recent high temperatures for {0} are: ", retrievedValue.Name);
+                Console.Write($"Most recent high temperatures for {retrievedValue.Name} are: ");
                 int[] temps = cities[retrievedValue.Name].RecentHighTemperatures;
-                foreach (var temp in temps) Console.Write("{0}, ", temp);
+                foreach (var temp in temps) Console.Write($"{temp}, ");
             }
             Console.WriteLine();
         }
@@ -192,13 +190,13 @@ namespace DictionaryHowTo
             
             if (cities.TryGetValue(searchKey, out retrievedValue))
             {
-                // use the data
-                Console.Write("Most recent high temperatures for {0} are: ", retrievedValue.Name);
+                // Use the data.
+                Console.Write($"Most recent high temperatures for {retrievedValue.Name} are: ");
                 int[] temps = retrievedValue.RecentHighTemperatures;
-                foreach (var temp in temps) Console.Write("{0}, ", temp);
+                foreach (var temp in temps) Console.Write($"{temp}, ");
 
-                // Make a copy of the data. Our object will update its lastQueryDate automatically.
-                CityInfo newValue = new CityInfo(retrievedValue.Name,
+                // Make a copy of the data. Our object will update its LastQueryDate automatically.
+                var newValue = new CityInfo(retrievedValue.Name,
                                                 retrievedValue.Longitude,
                                                 retrievedValue.Latitude,
                                                 retrievedValue.RecentHighTemperatures);
@@ -206,8 +204,8 @@ namespace DictionaryHowTo
                 // Replace the old value with the new value.
                 if (!cities.TryUpdate(searchKey, newValue, retrievedValue))
                 {
-                    //The data was not updated. Log error, throw exception, etc.
-                    Console.WriteLine("Could not update {0}", retrievedValue.Name);
+                    // The data was not updated. Log error, throw exception, etc.
+                    Console.WriteLine($"Could not update {retrievedValue.Name}");
                 }
             }
             else
@@ -216,15 +214,15 @@ namespace DictionaryHowTo
                 // the data. Another option is to add a default value here and 
                 // update with real data later on some other thread.
                 CityInfo newValue = GetDataForCity(searchKey);
-                if(cities.TryAdd(searchKey, newValue))
+                if (cities.TryAdd(searchKey, newValue))
                 {
-                    // use the data
-                    Console.Write("Most recent high temperatures for {0} are: ", newValue.Name);
+                    // Use the data.
+                    Console.Write($"Most recent high temperatures for {newValue.Name} are: ");
                     int[] temps = newValue.RecentHighTemperatures;
-                    foreach (var temp in temps) Console.Write("{0}, ", temp);
+                    foreach (var temp in temps) Console.Write($"{temp}, ");
                 }
                 else
-                    Console.WriteLine("Unable to add data for {0}", searchKey);
+                    Console.WriteLine($"Unable to add data for {searchKey}");
             }
         }
 
@@ -243,7 +241,7 @@ namespace DictionaryHowTo
                                         Latitude = -58.369997M, 
                                         RecentHighTemperatures = new int[] { 80, 86, 89, 91, 84, 86, 88 } };
             else
-                throw new ArgumentException("Cannot find any data for {0}", name);
+                throw new ArgumentException($"Cannot find any data for {name}");
         }
     }
 }

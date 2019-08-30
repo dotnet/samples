@@ -1,5 +1,4 @@
 ﻿'<Snippet1>
-Imports System
 Imports System.Management
 
 ' This example demonstrates how

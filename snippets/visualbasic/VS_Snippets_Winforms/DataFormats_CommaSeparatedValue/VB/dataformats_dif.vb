@@ -4,7 +4,6 @@
 ' It stores the object in the form of the 'Dif' format in the 'DataObject'. 
 ' Then it checks whether the data stored in 'Dif' format is present or not.
 
-Imports System
 Imports System.Data
 Imports System.Windows.Forms
 Imports System.IO

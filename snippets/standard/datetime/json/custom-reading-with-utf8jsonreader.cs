@@ -9,7 +9,7 @@ public class Example
     {
         byte[] utf8Data = Encoding.UTF8.GetBytes(@"""Friday, 26 July 2019 00:00:00""");
 
-        Utf8JsonReader json = new Utf8JsonReader(utf8Data);
+        var json = new Utf8JsonReader(utf8Data);
         while (json.Read())
         {
             if (json.TokenType == JsonTokenType.String)

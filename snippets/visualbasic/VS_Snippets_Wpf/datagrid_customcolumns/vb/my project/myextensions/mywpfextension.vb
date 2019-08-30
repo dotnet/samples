@@ -7,10 +7,10 @@ Namespace My
     ''' <remarks></remarks>
     <Global.Microsoft.VisualBasic.HideModuleName()> _
     Module MyWpfExtension
-        Private s_Computer As New ThreadSafeObjectProvider(Of Global.Microsoft.VisualBasic.Devices.Computer)
-        Private s_User As New ThreadSafeObjectProvider(Of Global.Microsoft.VisualBasic.ApplicationServices.User)
-        Private s_Windows As New ThreadSafeObjectProvider(Of MyWindows)
-        Private s_Log As New ThreadSafeObjectProvider(Of Global.Microsoft.VisualBasic.Logging.Log)
+        Private ReadOnly s_Computer As New ThreadSafeObjectProvider(Of Global.Microsoft.VisualBasic.Devices.Computer)
+        Private ReadOnly s_User As New ThreadSafeObjectProvider(Of Global.Microsoft.VisualBasic.ApplicationServices.User)
+        Private ReadOnly s_Windows As New ThreadSafeObjectProvider(Of MyWindows)
+        Private ReadOnly s_Log As New ThreadSafeObjectProvider(Of Global.Microsoft.VisualBasic.Logging.Log)
         ''' <summary>
         ''' Returns the application object for the running application
         ''' </summary>
@@ -62,8 +62,8 @@ Namespace My
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)> _
         <Global.Microsoft.VisualBasic.MyGroupCollection("System.Windows.Window", "Create__Instance__", "Dispose__Instance__", "My.MyWpfExtenstionModule.Windows")> _
         Friend NotInheritable Class MyWindows
-            <Global.System.Diagnostics.DebuggerHidden()> _
-            Private Shared Function Create__Instance__(Of T As {New, Global.System.Windows.Window})(ByVal Instance As T) As T
+            <Global.System.Diagnostics.DebuggerHidden()>
+            Private Shared Function Create__Instance__(Of T As {New, Global.System.Windows.Window})(Instance As T) As T
                 If Instance Is Nothing Then
                     If s_WindowBeingCreated IsNot Nothing Then
                         If s_WindowBeingCreated.ContainsKey(GetType(T)) = True Then
@@ -79,18 +79,18 @@ Namespace My
                     Return Instance
                 End If
             End Function
-            <Global.System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1822:MarkMembersAsStatic")>  _
-            <Global.System.Diagnostics.DebuggerHidden()> _
+            <Global.System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1822:MarkMembersAsStatic")>
+            <Global.System.Diagnostics.DebuggerHidden()>
             Private Sub Dispose__Instance__(Of T As Global.System.Windows.Window)(ByRef instance As T)
                 instance = Nothing
             End Sub
-            <Global.System.Diagnostics.DebuggerHidden()> _
-            <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)> _
+            <Global.System.Diagnostics.DebuggerHidden()>
+            <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>
             Public Sub New()
                 MyBase.New()
             End Sub
             <Global.System.ThreadStatic()> Private Shared s_WindowBeingCreated As Global.System.Collections.Hashtable
-            <Global.System.ComponentModel.EditorBrowsable(Global.System.ComponentModel.EditorBrowsableState.Never)> Public Overrides Function Equals(ByVal o As Object) As Boolean
+            <Global.System.ComponentModel.EditorBrowsable(Global.System.ComponentModel.EditorBrowsableState.Never)> Public Overrides Function Equals(o As Object) As Boolean
                 Return MyBase.Equals(o)
             End Function
             <Global.System.ComponentModel.EditorBrowsable(Global.System.ComponentModel.EditorBrowsableState.Never)> Public Overrides Function GetHashCode() As Integer

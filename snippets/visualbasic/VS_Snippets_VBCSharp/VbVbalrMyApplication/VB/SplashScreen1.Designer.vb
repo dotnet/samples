@@ -11,8 +11,8 @@
     End Sub
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
-    Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
+    <System.Diagnostics.DebuggerNonUserCode()>
+    Protected Overloads Overrides Sub Dispose(disposing As Boolean)
         If disposing Then
             If Not (components Is Nothing) Then
                 components.Dispose()

@@ -7,7 +7,6 @@
  ' displays the data to the console. It also checks 'Text' format data is present or not. 
  ' If the data is there it displays the data to the console.
 
-Imports System
 Imports System.Drawing.Imaging
 Imports System.Windows.Forms
 

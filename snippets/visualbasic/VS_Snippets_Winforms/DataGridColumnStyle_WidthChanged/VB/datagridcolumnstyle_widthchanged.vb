@@ -5,7 +5,6 @@
 ' displayed whenever the width of the 'Customer ID' column of the 
 ' data grid is changed.
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel

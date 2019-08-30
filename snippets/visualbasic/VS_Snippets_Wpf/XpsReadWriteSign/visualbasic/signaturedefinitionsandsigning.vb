@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Windows
+﻿Imports System.Windows
 Imports System.Windows.Xps.Packaging
 Imports System.Security.Cryptography
 Imports System.Security.Cryptography.X509Certificates
@@ -24,7 +23,7 @@ Namespace SDKSample
 		'''   updating the signature information.</param>
 		''' <param name="xpsDocument">
 		'''   The XPS document containing the signature information.</param>
-		Public Sub IterateSignatureDefinitions(ByVal signatureDialog As SignatureDialog, ByVal xpsDocument As XpsDocument)
+		Public Sub IterateSignatureDefinitions(signatureDialog As SignatureDialog, xpsDocument As XpsDocument)
 			Dim docSeq As IXpsFixedDocumentSequenceReader = xpsDocument.FixedDocumentSequenceReader
 
 			' For every FixedDocument in the XPS document.
@@ -63,9 +62,9 @@ Namespace SDKSample
 		'''   updating the signature information.</param>
 		''' <param name="xpsDocument">
 		'''   The XPS document containing the signature information.</param>
-		Public Sub IterateSignatures(ByVal signatureDialog As SignatureDialog, ByVal xpsDocument As XpsDocument)
-			Dim found As Boolean = False
-			Dim docSeq As IXpsFixedDocumentSequenceReader = xpsDocument.FixedDocumentSequenceReader
+		Public Sub IterateSignatures(signatureDialog As SignatureDialog, xpsDocument As XpsDocument)
+            Dim found As Boolean
+            Dim docSeq As IXpsFixedDocumentSequenceReader = xpsDocument.FixedDocumentSequenceReader
 
 			' For every signature in the XPS document.
 			For Each sig As XpsDigitalSignature In xpsDocument.Signatures
@@ -110,7 +109,7 @@ Namespace SDKSample
 		'''   The X509 certificate to use for signing.</param>
 		''' <param name="spotId">
 		'''   The nullable spotId GUID of the signature definition.</param>
-		Public Sub SignXps(ByVal xpsDocument As XpsDocument, ByVal cert As X509Certificate, ByVal spotId? As Guid)
+		Public Sub SignXps(xpsDocument As XpsDocument, cert As X509Certificate, spotId? As Guid)
 			' If there's a SignatureDefinition spotId,
 			' associate it with the signature.
 			If spotId IsNot Nothing Then
