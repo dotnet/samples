@@ -1,5 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Reflection
+
 Class membertypesenum
 
     Public Overloads Shared Function Main(ByVal args() As String) As Integer
