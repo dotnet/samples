@@ -5,6 +5,7 @@
 
 ' <Snippet1>
 Imports System.Reflection
+
 Public Class MyClass1
    
    Public Function MyMethod(i As Integer, ByRef j As Short, ByRef k As Long) As Integer
