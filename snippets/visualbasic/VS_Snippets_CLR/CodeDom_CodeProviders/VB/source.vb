@@ -11,6 +11,7 @@ Imports System.Globalization
 Imports System.CodeDom.Compiler
 Imports System.Text
 Imports Microsoft.CSharp
+
 Namespace CodeProviders
     Class CompileSample
         <STAThread()>  _
