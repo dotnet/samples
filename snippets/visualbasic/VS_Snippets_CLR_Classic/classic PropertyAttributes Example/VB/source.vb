@@ -1,5 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Reflection
+
 ' Make three properties, one read-write, one default,
 ' and one read-only. 
 Public Class Aproperty
