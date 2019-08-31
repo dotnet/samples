@@ -17,6 +17,7 @@ Imports System.ComponentModel
 Imports System.Collections
 Imports System.Configuration.Install
 Imports System.IO
+
 Public Class TransactedInstaller_Example
 
    ' Entry point which delegates to C-style main Private Function
