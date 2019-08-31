@@ -3,6 +3,7 @@ Option Strict
 Option Explicit
 
 Imports System.Diagnostics
+
 Class MySample
     Public Shared Sub Main()
         
