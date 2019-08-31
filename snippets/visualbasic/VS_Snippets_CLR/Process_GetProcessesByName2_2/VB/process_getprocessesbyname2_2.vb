@@ -8,6 +8,7 @@
 ' <Snippet1>
 ' <Snippet2>
 Imports System.Diagnostics
+
 Class GetProcessesByNameClass
 
     'Entry point which delegates to C-style main Private Function
