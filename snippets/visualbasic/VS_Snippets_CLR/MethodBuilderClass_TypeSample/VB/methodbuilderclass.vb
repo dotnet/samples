@@ -9,6 +9,7 @@
 ' <Snippet1>
 Imports System.Reflection
 Imports System.Reflection.Emit
+
 Public Class MethodBuilderClass
 
    Public Shared Sub Main()
