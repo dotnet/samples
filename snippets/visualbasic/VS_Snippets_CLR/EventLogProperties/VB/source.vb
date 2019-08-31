@@ -4,6 +4,7 @@ Imports System.Globalization
 Imports System.Data
 Imports System.Diagnostics
 Imports Microsoft.Win32
+
 Class EventLogProperties
    
    ' The main entry point for the sample application.
