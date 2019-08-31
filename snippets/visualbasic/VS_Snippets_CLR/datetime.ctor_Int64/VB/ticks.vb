@@ -1,6 +1,7 @@
 ﻿'<snippet1>
 ' This example demonstrates the DateTime(Int64) constructor.
 Imports System.Globalization
+
 Class Sample
    Public Shared Sub Main()
       ' Instead of using the implicit, default "G" date and time format string, we 
