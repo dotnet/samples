@@ -1,5 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Reflection
+
 ' Define one writable property and one not writable.
 Public Class Mypropertya
     Private myCaption As String = "A Default caption"
