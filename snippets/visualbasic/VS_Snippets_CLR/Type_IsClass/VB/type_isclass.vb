@@ -1,5 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Reflection
+
 Public Class MyDemoClass
 End Class 'MyDemoClass
 
