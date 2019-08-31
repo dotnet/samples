@@ -1,5 +1,6 @@
 ﻿' <Snippet1>	
 Imports System.Reflection
+
 Class [MyClass]
     Public myField As Integer = 10
 End Class '[MyClass]
