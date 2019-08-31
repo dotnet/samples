@@ -1,5 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Reflection
+
 Public Class MyTypeDelegatorClass
     Inherits TypeDelegator
     Public myElementType As String = Nothing
