@@ -1,6 +1,7 @@
 ﻿' <Snippet1>	
 
 Imports System.Reflection
+
 Class [MyClass]
     Private myField As String
     Public myArray() As String = {"New York", "New Jersey"}
