@@ -1,5 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Reflection
+
 ' Define one readable property and one not readable.
 Public Class Mypropertya
     Private myCaption As String = "A Default caption"
