@@ -1,5 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Globalization
+
 Class SamplesNumberFormatInfo
     
     Public Shared Sub Main()
