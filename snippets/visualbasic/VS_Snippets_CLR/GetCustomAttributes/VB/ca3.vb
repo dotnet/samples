@@ -1,5 +1,6 @@
 ﻿' <Snippet3>
 Imports System.Runtime.InteropServices
+
 Module DemoModule
 
     ' Set a GUID and ProgId attribute for this class.
