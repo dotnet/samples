@@ -1,6 +1,7 @@
 ﻿' <Snippet1>
 Imports System.Reflection
 Imports System.Globalization
+
 Public Class MyBinder
     Inherits Binder
     Public Sub New()
