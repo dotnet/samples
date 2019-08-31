@@ -1,5 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Reflection
+
 ' Make a field.
 Public Class Myfield
     Private m_field As String = "a private field"
