@@ -1,6 +1,7 @@
 ﻿' <Snippet1>
 Imports System.IO
 Imports System.Reflection
+
 Namespace MyNamespace1
 
     Interface i
