@@ -8,6 +8,7 @@
 ' <Snippet1>
 ' <Snippet2>
 Imports System.Reflection
+
 Public Class AssemblyName_GetAssemblyName
    
    Public Shared Sub Main()
