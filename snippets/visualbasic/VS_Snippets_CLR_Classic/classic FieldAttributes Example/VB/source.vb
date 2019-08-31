@@ -1,6 +1,7 @@
 ﻿' Updated for 406827 REDMOND\glennha
 '<Snippet1>
 Imports System.Reflection
+
 Public Class Demo
     ' Declare three fields.
     ' The first field is private.
