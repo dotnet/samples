@@ -1,6 +1,7 @@
 ﻿' <Snippet1>
 Imports System.IO
 Imports System.Security.Permissions
+
 Public Class Watcher
 
     Public Shared Sub Main()
