@@ -1,6 +1,7 @@
 ﻿' <Snippet1>
 Imports System.Reflection
 Imports System.ComponentModel.Design
+
 Class FieldInfo_IsSpecialName
 
     Public Shared Sub Main()
