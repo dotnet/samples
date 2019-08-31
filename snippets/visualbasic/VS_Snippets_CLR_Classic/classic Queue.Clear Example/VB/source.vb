@@ -1,5 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Collections
+
 Public Class SamplesQueue    
     
     Public Shared Sub Main()
