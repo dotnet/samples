@@ -1,6 +1,7 @@
 ﻿' <Snippet1>
 Imports System.Reflection
 Imports System.Security
+
 Public Class MyFilterAttributeSample
 
     Public Shared Sub Main()
