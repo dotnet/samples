@@ -1,5 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Reflection
+
 ' Define a custom attribute with one named parameter.
 <AttributeUsage(AttributeTargets.All)> Public Class MyAttribute
     Inherits Attribute
