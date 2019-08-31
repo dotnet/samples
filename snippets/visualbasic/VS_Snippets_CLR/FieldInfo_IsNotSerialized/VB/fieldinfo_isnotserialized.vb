@@ -2,6 +2,7 @@
 
 Imports System.Reflection
 Imports System.Runtime.Serialization
+
 <Serializable()> _
 Public Class [MyClass]
     Public myShort As Short
