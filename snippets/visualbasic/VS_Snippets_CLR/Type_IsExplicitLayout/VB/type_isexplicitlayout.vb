@@ -2,6 +2,7 @@
 Imports System.Reflection
 Imports System.ComponentModel
 Imports System.Runtime.InteropServices
+
 'Class to test for the ExplicitLayout property.
    <StructLayout(LayoutKind.Explicit, Size := 16, CharSet := CharSet.Ansi)>  _
    Public Class MySystemTime
