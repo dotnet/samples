@@ -6,7 +6,6 @@
 ' DataGrid. One button sets the Alternating background color of 'DataGrid' 
 ' and other resets it to its default value.
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel

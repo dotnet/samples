@@ -23,10 +23,6 @@
 ' ****************************************************************************
 
 Imports System.Windows.Automation
-Imports System
-
-
-
 Public Class ElementStore
 
     ''' <summary>

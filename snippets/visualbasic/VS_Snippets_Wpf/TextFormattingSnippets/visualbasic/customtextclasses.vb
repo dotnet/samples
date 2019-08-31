@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Globalization
+﻿Imports System.Globalization
 Imports System.Windows
 Imports System.Windows.Media
 Imports System.Windows.Media.TextFormatting

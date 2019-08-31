@@ -1,5 +1,4 @@
 ﻿'<snippet1>
-Imports System
 Imports System.Drawing
 Imports System.Drawing.Imaging
 Imports System.Windows.Forms

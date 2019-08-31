@@ -7,7 +7,6 @@
 ' color is set to blue. When 'Reset ForeColor' button is clicked foreground 
 ' color is reset to its default value. 
 
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 Imports System.Data

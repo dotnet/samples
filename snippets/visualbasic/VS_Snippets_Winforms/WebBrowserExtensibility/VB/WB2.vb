@@ -1,5 +1,4 @@
 ﻿'<snippet00>
-Imports System
 Imports System.Windows.Forms
 Imports System.Runtime.InteropServices
 Imports System.Security.Permissions

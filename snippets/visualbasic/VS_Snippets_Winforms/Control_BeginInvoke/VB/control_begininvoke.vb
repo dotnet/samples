@@ -10,7 +10,6 @@
 ' clicked a delegate is called asynchronously using 'BeginInvoke' which will display
 ' a message in the 'TextBox'.
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel

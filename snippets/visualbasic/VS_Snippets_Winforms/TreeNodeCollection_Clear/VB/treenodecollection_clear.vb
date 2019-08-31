@@ -6,7 +6,6 @@
 ' object contains the customer list and the second object is empty. The user
 ' is provided with the option to add or remove a 'TreeNode'.
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel

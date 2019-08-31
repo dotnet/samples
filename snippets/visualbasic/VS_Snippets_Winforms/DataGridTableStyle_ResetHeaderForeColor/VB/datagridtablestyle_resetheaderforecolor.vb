@@ -7,7 +7,6 @@
 ' it sets the header fore color. If the user clicks on 'Reset HeaderForeColor'
 ' button it resets the grid 'HeaderForeColor' to its default value.
 
-Imports System
 Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms

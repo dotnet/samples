@@ -8,7 +8,6 @@
 ' handler function.
 '
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.Windows.Forms

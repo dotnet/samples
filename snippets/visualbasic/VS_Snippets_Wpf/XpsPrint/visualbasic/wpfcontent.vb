@@ -5,7 +5,6 @@
 ' DocumentViewer content used by the XpsPrint SDK sample.
 
 
-Imports System
 Imports System.Collections.Generic
 Imports System.IO
 Imports System.IO.Packaging

@@ -4,7 +4,6 @@
 ' A table with 2 columns is created and attached to grid.A listbox allows selection of forecolors
 ' for the grid.
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel

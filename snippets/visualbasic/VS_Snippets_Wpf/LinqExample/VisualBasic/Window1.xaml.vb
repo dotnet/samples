@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Collections.Generic
+﻿Imports System.Collections.Generic
 '<SnippetUsing>
 Imports System.Linq
 '</SnippetUsing>

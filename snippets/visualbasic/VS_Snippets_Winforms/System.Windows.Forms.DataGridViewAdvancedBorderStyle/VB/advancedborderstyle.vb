@@ -8,7 +8,6 @@
 '  - Snippet30 can go in DataGridViewRow.AdjustRowHeaderBorderStyle()
 
 ' <Snippet0>
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 
