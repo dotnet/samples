@@ -18,6 +18,7 @@
 Imports System.Reflection
 Imports System.Threading
 Imports System.Reflection.Emit
+
 Public Class AssemblyName_Constructor
    
    Public Shared Sub MakeAssembly(myAssemblyName As AssemblyName, fileName As String)
