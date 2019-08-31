@@ -1,5 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Reflection
+
 Public Class FieldInfo_GetFieldFromHandle
     Public x As String
     Public y As Char
