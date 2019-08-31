@@ -1,5 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Reflection
+
 Public Class MyClass1
     Protected myField As String = "A sample protected field."
 End Class 'MyClass1
