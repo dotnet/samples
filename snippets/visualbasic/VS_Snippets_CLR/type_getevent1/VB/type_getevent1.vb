@@ -1,6 +1,7 @@
 ﻿' <Snippet1>   
 Imports System.Reflection
 Imports System.Security
+
 ' Compile this sample using the following command line:
 ' vbc type_getevent.vb /r:"System.Windows.Forms.dll" /r:"System.dll"
 
