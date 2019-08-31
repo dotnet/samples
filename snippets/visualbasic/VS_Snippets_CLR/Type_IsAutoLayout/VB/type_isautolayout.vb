@@ -1,5 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Runtime.InteropServices
+
 ' The Demo class is has the AutoLayout attribute.
 <StructLayoutAttribute(LayoutKind.Auto)> _
 Public Class Demo
