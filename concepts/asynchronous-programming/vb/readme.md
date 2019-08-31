@@ -6,7 +6,7 @@ languages:
    - windows
 page_type: sample
 name: "Async Sample: Asynchronous Programming with Async and Await"
-urlFragment: "MainWindow.xaml.vb"
+urlFragment: "async-and-await-vb"
 description: "A .NET Core WPF application that contains the example method from Asynchronous Progamming with Async and Await in Visual Basic."
 ---
 # Introduction
