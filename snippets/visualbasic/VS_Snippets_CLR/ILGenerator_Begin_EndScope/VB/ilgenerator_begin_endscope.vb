@@ -13,6 +13,7 @@
 Imports System.Reflection
 Imports System.Reflection.Emit
 Imports System.Security.Permissions
+
 Public Class ILGenerator_Begin_EndScope
    <PermissionSetAttribute(SecurityAction.Demand, Name:="FullTrust")> _
    Public Shared Sub Main()
