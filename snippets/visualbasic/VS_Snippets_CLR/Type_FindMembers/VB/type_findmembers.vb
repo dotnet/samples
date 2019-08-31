@@ -1,6 +1,7 @@
 ﻿' <Snippet1>
 
 Imports System.Reflection
+
 Class MyFindMembersClass
 
     Public Shared Sub Main()
