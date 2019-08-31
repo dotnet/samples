@@ -1,6 +1,7 @@
 ﻿' <Snippet1>
 Imports System.Reflection
 Imports System.Collections
+
 ' A test class that has some properties.
 Public Class MyProperty
 
