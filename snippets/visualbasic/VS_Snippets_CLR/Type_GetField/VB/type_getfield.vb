@@ -2,6 +2,7 @@
 ' <Snippet2>
 
 Imports System.Reflection
+
 Public Class MyFieldClassA
     Public Field As String = "A Field"
 End Class 'MyFieldClassA
