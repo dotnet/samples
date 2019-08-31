@@ -4,6 +4,7 @@ Option Strict
 
 Imports System.Diagnostics
 Imports System.Threading
+
 Class MySample
     Public Shared Sub Main()
         
