@@ -110,3 +110,19 @@ To build and run your sample:
 
    This should include a brief description of the code, and refer people to the article that references the sample.
 
+4. To make the sample downloadable from [Samples Browser](https://docs.microsoft.com/samples/browse/), That requires adding metadata to the top of the readme.md, For more information check [This issue](https://github.com/dotnet/docs/issues/13921).
+The following is an example of the metadata section, taken from the [WinForms Formatting Utility for C#](https://docs.microsoft.com/en-us/samples/dotnet/samples/winforms-formatting-utility-cs/):
+
+```
+---
+languages:
+   - csharp
+ products:
+   - dotnet-core
+   - windows
+page_type: sample
+name: ".NET Core WinForms Formatting Utility"
+urlFragment: "winforms-formatting-utility-cs"
+description: "A .NET Core Windows Forms application that allows you to apply standard or custom format strings."
+---
+```
