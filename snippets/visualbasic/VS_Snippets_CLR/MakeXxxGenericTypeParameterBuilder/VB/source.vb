@@ -1,6 +1,7 @@
 ﻿'<Snippet1>
 Imports System.Reflection
 Imports System.Reflection.Emit
+
 Public Class Example
     Public Shared Sub Main()
         ' Define a dynamic assembly to contain the sample type. The
