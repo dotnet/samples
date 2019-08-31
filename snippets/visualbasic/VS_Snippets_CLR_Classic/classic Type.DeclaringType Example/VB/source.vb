@@ -1,5 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Reflection
+
 Public MustInherit Class dtype
 
     Public MustInherit Class MyClassA
