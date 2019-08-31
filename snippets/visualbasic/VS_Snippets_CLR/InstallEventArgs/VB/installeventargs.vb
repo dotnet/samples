@@ -27,6 +27,7 @@ Imports System.ComponentModel
 Imports System.Collections
 Imports System.Configuration.Install
 Imports System.IO
+
 <RunInstaller(True)> Public Class MyInstaller
    Inherits Installer
    ' Simple events to handle before and after commit handlers.
