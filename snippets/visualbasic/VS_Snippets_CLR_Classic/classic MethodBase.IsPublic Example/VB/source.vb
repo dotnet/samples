@@ -1,5 +1,6 @@
 ﻿Imports System.Reflection
 Imports System.Windows.Forms
+
 ' <Snippet1>
 Class methodbase1
     
