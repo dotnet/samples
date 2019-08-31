@@ -1,5 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Reflection
+
 Class Mymemberinfo
 
     Public Shared Function Main() As Integer
