@@ -10,6 +10,7 @@ Imports System.IO
 Imports System.Diagnostics
 Imports System.Threading
 Imports System.ComponentModel
+
 Class ProcessNMakeStreamRedirection
 
    ' Define static variables shared by class methods.
