@@ -10,6 +10,7 @@
 
 Imports System.Reflection
 Imports System.Collections
+
 Class MyInterfaceClass
 
 ' <Snippet1>
