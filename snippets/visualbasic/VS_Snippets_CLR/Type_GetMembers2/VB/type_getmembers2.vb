@@ -7,6 +7,7 @@
 
 Imports System.Reflection
 Imports System.Security
+
 ' <Snippet1>
 Class [MyClass]
    Public myInt As Integer = 0
