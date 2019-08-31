@@ -1,5 +1,6 @@
 ﻿' <Snippet1>
 Imports Microsoft.Win32
+
 Public Class Example
     Public Shared Sub Main()
         ' Delete and recreate the test key.
