@@ -1,5 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Reflection
+
 ' Define a property.
 Public Class Myproperty
     Private myCaption As String = "A Default caption"
