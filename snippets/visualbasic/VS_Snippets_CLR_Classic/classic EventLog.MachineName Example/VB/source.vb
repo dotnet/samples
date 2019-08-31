@@ -1,5 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Diagnostics
+
 Class MySample
     Public Shared Sub Main()
         Dim myNewLog As New EventLog()
