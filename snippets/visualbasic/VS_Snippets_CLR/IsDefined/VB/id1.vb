@@ -1,5 +1,6 @@
 ﻿'<Snippet1>
 Imports System.Reflection
+
 ' Add an AssemblyDescription attribute.
 <Assembly: AssemblyDescription("A sample description")> 
 
