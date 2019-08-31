@@ -1,5 +1,6 @@
 ﻿'<Snippet1>
 Imports System.Reflection
+
 Class AttributesSample
 
     Public Sub Mymethod(ByVal int1m As Integer, ByRef str2m As String, ByRef str3m As String)
