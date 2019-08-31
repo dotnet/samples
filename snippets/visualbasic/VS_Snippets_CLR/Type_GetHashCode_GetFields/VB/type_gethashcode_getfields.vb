@@ -1,6 +1,7 @@
 ﻿' <Snippet1>
 Imports System.Security
 Imports System.Reflection
+
 ' Compile this sample using the following command line:
 ' vbc type_gethashcode_getfields.vb /r:"System.Windows.Forms.dll" /r:"System.dll"
 
