@@ -12,6 +12,7 @@
 Imports System.IO
 Imports System.Diagnostics
 Imports System.ComponentModel
+
 Namespace Process_StandardInput_Sample
 
     Class StandardInputTest
