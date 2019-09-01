@@ -28,11 +28,11 @@ namespace MakeConst
 
         public override void Initialize(AnalysisContext context)
         {
+             // See https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Analyzer%20Actions%20Semantics.md for more information
             context.ConfigureGeneratedCodeAnalysis(GeneratedCodeAnalysisFlags.Analyze | GeneratedCodeAnalysisFlags.None);
             context.EnableConcurrentExecution();
-            // See https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Analyzer%20Actions%20Semantics.md for more information
-            // <SnippetRegisterNodeAction>
             context.RegisterSyntaxNodeAction(AnalyzeNode, SyntaxKind.LocalDeclarationStatement);
+            // <SnippetRegisterNodeAction>
         }
 
         private void AnalyzeNode(SyntaxNodeAnalysisContext context)
