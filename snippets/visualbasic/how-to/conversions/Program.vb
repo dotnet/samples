@@ -11,7 +11,7 @@ Module Program
     Sub FirstExample()
         ' <Snippet1>
         Dim MyString As String = "Jan 1, 2009"
-        Dim MyDateTime As Date = Date.Parse(MyString)
+        Dim MyDateTime As DateTime = DateTime.Parse(MyString)
         Console.WriteLine(MyDateTime)
         ' Displays the following output on a system whose culture is en-US:
         '       1/1/2009 12:00:00 AM
@@ -22,7 +22,7 @@ Module Program
         ' <Snippet2>
         Dim MyCultureInfo As CultureInfo = New CultureInfo("de-DE")
         Dim MyString As String = "12 Juni 2008"
-        Dim MyDateTime As Date = Date.Parse(MyString, MyCultureInfo)
+        Dim MyDateTime As DateTime = DateTime.Parse(MyString, MyCultureInfo)
         Console.WriteLine(MyDateTime)
         ' The example displays the following output:
         '       6/12/2008 12:00:00 AM
@@ -33,7 +33,7 @@ Module Program
         ' <Snippet3>
         Dim MyCultureInfo As CultureInfo = New CultureInfo("de-DE")
         Dim MyString As String = "12 Juni 2008"
-        Dim MyDateTime As Date = Date.Parse(MyString, MyCultureInfo,
+        Dim MyDateTime As DateTime = DateTime.Parse(MyString, MyCultureInfo,
                                    DateTimeStyles.NoCurrentDateDefault)
         Console.WriteLine(MyDateTime)
         ' The example displays the following output if the current culture is en-US:
@@ -47,7 +47,7 @@ Module Program
         Dim MyString() As String = {" Friday, April 10, 2009", "Friday, April 10, 2009"}
         For Each dateString As String In MyString
             Try
-                Dim MyDateTime As Date = Date.ParseExact(dateString, "D",
+                Dim MyDateTime As DateTime = DateTime.ParseExact(dateString, "D",
                                                              MyCultureInfo)
                 Console.WriteLine(MyDateTime)
             Catch e As FormatException
