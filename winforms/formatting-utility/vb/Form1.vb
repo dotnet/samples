@@ -21,7 +21,7 @@ Public Class Form1
     Private ReadOnly dateFormats() As String = {"g", "d", "D", "f", "F", "g", "G", "M", "O", "R", "s", "t", "T", "u", "U", "Y"}
 
     Private Sub Form1_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        ' Disable Value text box.
+        ' Disable OK button.
         OKButton.Enabled = False
 
         ' Add label to status bar.
