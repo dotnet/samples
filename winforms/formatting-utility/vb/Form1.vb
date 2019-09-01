@@ -40,7 +40,7 @@ Public Class Form1
 
         ' Populate CultureNames list box with culture names
         Dim cultures() As CultureInfo = CultureInfo.GetCultures(CultureTypes.AllCultures)
-        ' Define a string array so that we can sort and modify the names.
+        ' Define a string list so that we can sort and modify the names.
         Dim names As New List(Of String)
         Dim currentIndex As Integer      ' Index of the current culture.
 
