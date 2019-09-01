@@ -10,12 +10,8 @@
          found in AssemblyInfo.cs. This property is useful for
          applications ported from NetFx, which may have used
          AssemblyInfo.cs -->
-    <GenerForms>true</GenerForms>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.6.1" />
