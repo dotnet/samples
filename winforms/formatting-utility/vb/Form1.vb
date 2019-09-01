@@ -5,16 +5,16 @@ Imports System.Text.RegularExpressions
 
 Public Class Form1
 
-   Private label As ToolStripStatusLabel
+    Private label As ToolStripStatusLabel
 
     Private ReadOnly rm As New ResourceManager("Formatter.Resources", Me.GetType().Assembly)
     Private decimalSeparator As String
-   Private amDesignator, pmDesignator, aDesignator, pDesignator As String
-   Private pattern As String
+    Private amDesignator, pmDesignator, aDesignator, pDesignator As String
+    Private pattern As String
 
-   ' Flags to indicate presence of error information in status bar
-   Dim valueInfo As Boolean
-   Dim formatInfo As Boolean
+    ' Flags to indicate presence of error information in status bar
+    Dim valueInfo As Boolean
+    Dim formatInfo As Boolean
 
     Private ReadOnly numberFormats() As String = {"C", "D", "E", "e", "F", "G", "N", "P", "R", "X", "x"}
     Private Const DEFAULTSELECTION As Integer = 5
@@ -79,7 +79,7 @@ Public Class Form1
             pDesignator = String.Empty
         End If
         ' For regex pattern for date and time components.
-        pattern = "^\s*\S+\s+\S+\s+\S+(\s+\S+)?(?<!" + amDesignator + "|" + aDesignator + "|" + pmDesignator + "|" + pDesignator + ")\s*$"
+        pattern = $"^\s*\S+\s+\S+\s+\S+(\s+\S+)?(?<!{amDesignator}|{aDesignator}|{pmDesignator}|{pDesignator})\s*$"
 
         ' Select NumberBox for numeric string and populate combo box.
         Me.NumberBox.Checked = True
@@ -140,11 +140,7 @@ Public Class Form1
             End If
 
             ' Format date value.
-            If hasOffset Then
-                Me.Result.Text = dto.ToString(Me.FormatStrings.Text, culture)
-            Else
-                Me.Result.Text = dat.ToString(Me.FormatStrings.Text, culture)
-            End If
+            Me.Result.Text = If(hasOffset, dto, dat).ToString(Me.FormatStrings.Text, culture)
         Else
             ' Handle formatting of a number.
             Dim intToFormat As Long
@@ -212,11 +208,7 @@ Public Class Form1
             label.Text = String.Empty
             valueInfo = False
         End If
-        If String.IsNullOrEmpty(Value.Text) Then
-            OKButton.Enabled = False
-        Else
-            OKButton.Enabled = True
-        End If
+        OKButton.Enabled = Not String.IsNullOrEmpty(Value.Text)
     End Sub
 
     Private Sub FormatStrings_SelectedValueChanged(sender As Object, e As System.EventArgs) Handles FormatStrings.SelectedValueChanged, CultureNames.SelectedValueChanged
