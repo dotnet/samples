@@ -238,7 +238,7 @@ namespace Formatter
             label.Text = String.Empty;
             valueInfo = false;
          }
-         OKButton.Enabled = not string.IsNullOrEmpty(Value.Text);
+         OKButton.Enabled = !string.IsNullOrEmpty(Value.Text);
       }
 
       private void FormatStrings_SelectedIndexChanged(object sender, EventArgs e)
