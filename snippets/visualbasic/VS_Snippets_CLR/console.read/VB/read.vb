@@ -1,7 +1,5 @@
 ﻿'<snippet1>
 ' This example demonstrates the Console.Read() method.
-Imports Microsoft.VisualBasic
-
 Class Sample
    Public Shared Sub Main()
       Dim m1 As String = _

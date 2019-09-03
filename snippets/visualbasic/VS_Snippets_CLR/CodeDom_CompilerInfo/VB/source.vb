@@ -27,7 +27,6 @@ Imports System.Globalization
 Imports System.CodeDom
 Imports System.CodeDom.Compiler
 Imports Microsoft.CSharp
-Imports Microsoft.VisualBasic
 Imports System.ComponentModel
 
 Namespace CodeDomCompilerInfoSample

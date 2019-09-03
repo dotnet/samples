@@ -4,8 +4,6 @@
 ' of struct 'Int64'. This compares an instance of 'Int64' with the
 ' passed in object and returns true if they are equal.
 
-Imports Microsoft.VisualBasic
-
 Class MyInt64_Equals
    
    Public Shared Sub Main()

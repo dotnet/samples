@@ -1,6 +1,5 @@
 ﻿' <Snippet3>
 Imports System.Runtime.InteropServices
-Imports Microsoft.VisualBasic
 
 Module DemoModule
 

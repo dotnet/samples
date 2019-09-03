@@ -9,7 +9,6 @@
 ' <Snippet1>
 Imports System.Reflection
 Imports System.Reflection.Emit
-Imports MicroSoft.VisualBasic
 
 Public Class MethodBuilderClass
 

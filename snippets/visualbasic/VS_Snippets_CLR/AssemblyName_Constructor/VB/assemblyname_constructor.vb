@@ -18,7 +18,6 @@
 Imports System.Reflection
 Imports System.Threading
 Imports System.Reflection.Emit
-Imports Microsoft.VisualBasic
 
 Public Class AssemblyName_Constructor
    

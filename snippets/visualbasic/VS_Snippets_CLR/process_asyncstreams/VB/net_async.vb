@@ -16,8 +16,6 @@ Imports System.IO
 Imports System.Diagnostics
 Imports System.Threading
 Imports System.ComponentModel
-Imports Microsoft.VisualBasic
-
 
 Namespace ProcessAsyncStreamSamples
    
