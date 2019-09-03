@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Diagnostics
-Imports Microsoft.VisualBasic
 
 Class MySample
     Public Shared Sub Main()
