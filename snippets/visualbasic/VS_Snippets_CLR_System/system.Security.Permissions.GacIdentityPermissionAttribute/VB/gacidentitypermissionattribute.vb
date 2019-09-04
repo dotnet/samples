@@ -12,7 +12,6 @@
 'Imports System.Security.Permissions
 'Imports ClassLibraryVB
 
-'
 'Class [MyClass]
 '
 '    Overloads Shared Sub Main(ByVal args() As String)
