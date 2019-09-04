@@ -6,9 +6,9 @@ Public Class Test
     Public Shared Sub Main()
         Dim path1 As String = Path.GetTempFileName()
         Dim path2 As String = Path.GetTempFileName()
-        Dim fi As FileInfo = New FileInfo(path1)
+        Dim fi As New FileInfo(path1)
 
-        'Create a file to write to.
+        ' Create a file to write to.
         Dim sw As StreamWriter = fi.CreateText()
 
         sw.WriteLine("Hello")
