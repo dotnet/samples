@@ -8,6 +8,7 @@
 
 Imports System.Net
 Imports System.Net.Sockets
+
 Class DnsHostByAddress
     
     Public Shared Sub Main()

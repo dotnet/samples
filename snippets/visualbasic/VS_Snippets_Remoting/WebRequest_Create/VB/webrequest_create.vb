@@ -11,6 +11,7 @@
 Imports System.Net
 Imports System.IO
 Imports System.Text
+
 Class WebRequest_Create_Uri
     
     Public Shared Sub Main()

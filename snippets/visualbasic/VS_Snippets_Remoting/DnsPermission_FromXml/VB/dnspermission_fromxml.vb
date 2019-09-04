@@ -10,6 +10,7 @@ Imports System.Net
 Imports System.Security
 Imports System.Security.Permissions
 Imports System.Collections
+
 Class DnsPermissionExample
     
     

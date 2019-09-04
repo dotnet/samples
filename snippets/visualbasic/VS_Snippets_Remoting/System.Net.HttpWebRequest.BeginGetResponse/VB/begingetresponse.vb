@@ -5,6 +5,7 @@ Imports System.Net
 Imports System.IO
 Imports System.Text
 Imports System.Threading
+
 Public Class RequestState
    ' This class stores the State of the request.
    Private BUFFER_SIZE As Integer = 1024

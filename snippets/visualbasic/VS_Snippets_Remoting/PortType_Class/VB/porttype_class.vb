@@ -10,6 +10,7 @@
 ' <Snippet1>
 Imports System.Web.Services.Description
 Imports System.Xml
+
 Class MyPortTypeClass
    Public Shared Sub Main()
       Try

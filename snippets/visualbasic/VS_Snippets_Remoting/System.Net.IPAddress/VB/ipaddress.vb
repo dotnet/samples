@@ -14,6 +14,7 @@
 Imports System.Net
 Imports System.Net.Sockets
 Imports System.Text.RegularExpressions
+
 Namespace Mssc.Services.ConnectionManagement
   Module M_TestIPAddress
 

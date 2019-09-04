@@ -12,6 +12,7 @@
 Imports System.IO
 Imports System.Net
 Imports System.Text
+
 Class HttpWebRequest_HaveResponse
     
     Public Shared Sub Main()

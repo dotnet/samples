@@ -8,6 +8,7 @@
 
 ' <Snippet1>
 Imports System.Web.Services.Description
+
 Class DocumentableItemSample
    Public Shared Sub Main()
       Dim myServiceDescription As ServiceDescription = _

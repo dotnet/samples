@@ -7,6 +7,7 @@
 ' 
 
 Imports System.Net
+
 Class NetworkCredentialSnippet
     
     'Entry point which delegates to C-style main Private Function

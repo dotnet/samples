@@ -11,6 +11,7 @@
 Imports System.Web.Services.Discovery
 Imports System.Collections
 Imports System.Security.Permissions
+
 Class DiscoveryDocumentReference_Document_ResolveAll
    
    Shared Sub Main()

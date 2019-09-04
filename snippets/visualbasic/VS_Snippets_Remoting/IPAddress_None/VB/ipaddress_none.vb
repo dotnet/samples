@@ -4,6 +4,7 @@
 '
 
 Imports System.Net
+
 Class NoneFieldAddress
 
 ' <Snippet1>	    

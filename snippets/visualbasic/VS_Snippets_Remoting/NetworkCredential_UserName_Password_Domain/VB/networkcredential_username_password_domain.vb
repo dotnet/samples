@@ -9,6 +9,7 @@
 ' 
 
 Imports System.Net
+
 Class CredentialCacheSnippet
     
     'Entry point which delegates to C-style main Private Function

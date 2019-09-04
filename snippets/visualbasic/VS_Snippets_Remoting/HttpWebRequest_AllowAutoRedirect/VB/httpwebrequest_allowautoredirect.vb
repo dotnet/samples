@@ -9,6 +9,7 @@
 Imports System.IO
 Imports System.Net
 Imports System.Text
+
 Class HttpWebRequest_AllowAutoRedirect
     
     Shared Sub Main()

@@ -2,6 +2,7 @@
 Imports System.Net
 Imports System.IO
 Imports System.Text
+
 Class HttpWebResponseSnippet
    
    'Entry point which delegates to C-style main Private Function

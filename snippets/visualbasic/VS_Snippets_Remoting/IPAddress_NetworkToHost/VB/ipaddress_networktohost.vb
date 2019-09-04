@@ -8,6 +8,7 @@
 '
 
 Imports System.Net
+
 Class NetworkToHostByteSample
     
     Public Shared Sub Main()

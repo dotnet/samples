@@ -3,6 +3,7 @@
  
 Imports System.Net
 Imports System.Net.Mail
+
 Class SMTP_CredentailCache_Sample
 
     Shared Sub Main()

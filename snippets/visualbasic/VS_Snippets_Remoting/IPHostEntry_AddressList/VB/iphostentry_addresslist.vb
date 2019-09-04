@@ -7,6 +7,7 @@
 
 Imports System.Net
 Imports System.Net.Sockets
+
 Class HostInfoSample
     
     Public Shared Sub Main()

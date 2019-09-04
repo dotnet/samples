@@ -29,6 +29,7 @@
 ' <Snippet1>
 Imports System.Reflection
 Imports System.Web.Services.Protocols
+
 Public Class MyService
    Inherits SoapHttpClientProtocol
    

@@ -3,6 +3,7 @@ Imports System.Text
 Imports System.IO
 Imports System.Net
 Imports System.Net.Sockets
+
 Public Class GetSocket
    
    Private Shared Function ConnectSocket(server As String, port As Integer) As Socket

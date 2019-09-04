@@ -26,6 +26,7 @@
 Imports System.Reflection
 Imports System.Security.Permissions
 Imports System.Web.Services.Protocols
+
 Public Class MyService
    
    Public Function Add(xValue As Integer, yValue As Integer) As Integer

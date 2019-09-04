@@ -4,6 +4,7 @@ Option Strict
 ' <Snippet1>
 Imports System.IO
 Imports System.Xml.Serialization
+
 Public Class Group
     Public Employees() As Employee
 End Class

@@ -3,6 +3,7 @@ Option Strict Off
 Option Explicit On
 Imports System.Xml.Serialization
 Imports System.Security.Permissions
+
 <Assembly: IsolatedStorageFilePermission(SecurityAction.RequestMinimum)> 
 
 '<snippet0>

@@ -8,6 +8,7 @@
 Imports System.IO
 Imports System.Net
 Imports System.Text
+
 Class HttpWebRequest_Timeout
     
     Shared Sub Main()

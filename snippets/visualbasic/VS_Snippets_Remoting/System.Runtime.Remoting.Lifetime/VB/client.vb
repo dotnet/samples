@@ -4,6 +4,7 @@ Imports System.Runtime.Remoting.Lifetime
 Imports System.Runtime.Remoting.Channels
 Imports System.Runtime.Remoting.Channels.Http
 Imports System.Security.Permissions
+
 Public Class Client
 <SecurityPermission(SecurityAction.Demand)> _
    Public Shared Sub Main()      

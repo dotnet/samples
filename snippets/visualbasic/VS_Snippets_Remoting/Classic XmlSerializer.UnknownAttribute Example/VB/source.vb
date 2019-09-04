@@ -3,6 +3,7 @@ Imports System.IO
 Imports System.Xml.Serialization
 Imports System.Xml
 Imports System.Xml.Schema
+
 Public Class Group
    Public GroupName As String 
 End Class

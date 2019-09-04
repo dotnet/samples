@@ -8,6 +8,7 @@
 Imports System.Web.Services.Description
 Imports System.Collections
 Imports System.Xml
+
 Class [MyClass]
    
    Public Shared Sub Main()

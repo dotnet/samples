@@ -1,5 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Messaging
+
    
 Public Class MyNewQueue
 

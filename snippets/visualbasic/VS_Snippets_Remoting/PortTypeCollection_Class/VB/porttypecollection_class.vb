@@ -12,6 +12,7 @@
 Imports System.Web.Services.Description
 Imports System.Xml
 Imports System.Collections
+
 Class MyPortTypeCollectionClass
    Public Shared Sub Main()
       Try

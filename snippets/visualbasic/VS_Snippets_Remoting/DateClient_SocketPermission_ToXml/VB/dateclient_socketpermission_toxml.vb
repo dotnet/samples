@@ -26,6 +26,7 @@ Imports System.Text
 Imports System.Collections
 Imports System.Security
 Imports System.Security.Permissions
+
 Public Class DateClient
     
     Private serverSocket As Socket

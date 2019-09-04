@@ -1,6 +1,7 @@
 ﻿Imports System.Net
 Imports System.Net.Sockets
 Imports System.Threading
+
 Namespace DnsNew
 
     Class DnsChanges

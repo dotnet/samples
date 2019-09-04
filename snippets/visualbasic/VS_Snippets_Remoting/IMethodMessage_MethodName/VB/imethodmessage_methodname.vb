@@ -17,6 +17,7 @@ Imports System.Reflection
 Imports System.Runtime.Remoting.Proxies
 Imports System.Runtime.Remoting.Messaging
 Imports System.Security.Permissions
+
 <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> _
 Public Class Reverser
    Inherits MarshalByRefObject

@@ -4,6 +4,7 @@ Imports System.Net
 Imports System.IO
 Imports System.Text
 Imports System.Threading
+
 Class HttpWebRequestBeginGetRequest
     Public Shared allDone As New ManualResetEvent(False)
 

@@ -17,6 +17,7 @@ Imports System.Net
 Imports System.Text
 Imports System.Net.Sockets
 Imports System.Runtime.InteropServices
+
 Class IPEndPointSnippet
     
     Public Shared Sub Main()

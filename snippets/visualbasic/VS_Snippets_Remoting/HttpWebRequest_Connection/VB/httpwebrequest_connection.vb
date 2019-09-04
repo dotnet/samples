@@ -9,6 +9,7 @@
 Imports System.IO
 Imports System.Net
 Imports System.Text
+
 ' <Snippet1>
 
 Class HttpWebRequest_Connection

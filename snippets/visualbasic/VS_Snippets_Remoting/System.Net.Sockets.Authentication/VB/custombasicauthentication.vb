@@ -14,6 +14,7 @@ Imports System.Net
 Imports System.IO
 Imports System.Text
 Imports System.Collections
+
 ' The ClientAuthentication class performs the following main tasks:
 ' 1) It obtains the user's credentials.
 ' 2) Unregisters the standard Basic authentication.

@@ -6,6 +6,7 @@
 
 Imports System.Net
 Imports System.Net.Sockets
+
 Class DnsResolve
     
     Public Shared Sub Main()

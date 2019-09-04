@@ -2,6 +2,7 @@
 Imports System.Xml
 Imports System.Xml.Serialization
 Imports System.IO
+
 ' The XmlRootAttribute allows you to set an alternate name
 ' (PurchaseOrder) of the XML element, the element namespace; by
 ' default, the XmlSerializer uses the class name. The attribute

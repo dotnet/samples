@@ -1,6 +1,7 @@
 ﻿' <Snippet1>
 Imports System.IO
 Imports System.Xml.Serialization
+
 ' This is the class that will be serialized.
 Public Class OrderedItem
     <XmlElement(Namespace := "http://www.cpandl.com")> _

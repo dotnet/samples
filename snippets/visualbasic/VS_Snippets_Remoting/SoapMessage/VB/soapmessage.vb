@@ -18,6 +18,7 @@
 Imports System.IO
 Imports System.Web.Services.Protocols
 Imports System.Web.Services
+
 Public Class MySoapExtension
    Inherits SoapExtension
    Private oldStream As Stream

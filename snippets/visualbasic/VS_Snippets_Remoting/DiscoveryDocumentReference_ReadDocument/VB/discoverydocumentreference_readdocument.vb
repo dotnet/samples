@@ -9,6 +9,7 @@ Imports System.Web.Services.Discovery
 Imports System.IO
 Imports System.Collections
 Imports System.Security.Permissions
+
 Class DiscoveryDocumentReference_ReadDocument
    
    Shared Sub Main()

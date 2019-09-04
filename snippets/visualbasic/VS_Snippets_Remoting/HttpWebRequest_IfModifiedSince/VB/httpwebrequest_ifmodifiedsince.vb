@@ -12,6 +12,7 @@
 Imports System.Net
 Imports System.IO
 Imports System.Text
+
 Class HttpWebRequest_IfModifiedSince
     
   Public Shared Sub Main()

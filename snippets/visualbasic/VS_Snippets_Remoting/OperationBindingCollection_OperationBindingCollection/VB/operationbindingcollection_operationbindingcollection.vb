@@ -19,6 +19,7 @@
 
 ' <Snippet1>
 Imports System.Web.Services.Description
+
 Class MyOperationBindingCollectionSample
 
    Shared Sub Main()

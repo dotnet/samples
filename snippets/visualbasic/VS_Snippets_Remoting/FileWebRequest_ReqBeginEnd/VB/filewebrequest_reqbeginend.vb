@@ -11,6 +11,7 @@ Imports System.Net
 Imports System.IO
 Imports System.Text
 Imports System.Threading
+
 ' <Snippet1>
 ' <Snippet2>
 Public Class RequestDeclare

@@ -8,6 +8,7 @@
 
 Imports System.Net
 Imports System.IO
+
 Public Class WebClient_OpenRead
     
     Public Shared Sub Main()

@@ -1,6 +1,7 @@
 ﻿Imports System.IO
 Imports System.Xml
 Imports System.Xml.Serialization
+
 Public Class Sample
     
     ' <Snippet1>

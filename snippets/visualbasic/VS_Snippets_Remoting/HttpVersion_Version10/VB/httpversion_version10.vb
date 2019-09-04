@@ -9,6 +9,7 @@
 
 Imports System.IO
 Imports System.Net
+
 Class HttpVersion_Version10
     
     Public Shared Sub Main()

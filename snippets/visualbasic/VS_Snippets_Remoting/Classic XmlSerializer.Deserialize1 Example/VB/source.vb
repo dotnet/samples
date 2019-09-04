@@ -2,6 +2,7 @@
 Imports System.IO
 Imports System.Text
 Imports System.Xml.Serialization
+
 ' This is the class that will be deserialized.
 Public Class OrderedItem
     <XmlElement(Namespace := "http://www.cpandl.com")> _

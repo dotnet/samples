@@ -12,6 +12,7 @@ Imports System.Text
 Imports System.IO
 Imports System.Collections
 Imports CloneBasicAuthentication
+
 Namespace CloneBasicAuthenticationClient
     
     

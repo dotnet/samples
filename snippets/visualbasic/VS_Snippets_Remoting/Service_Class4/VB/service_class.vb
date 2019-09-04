@@ -13,6 +13,7 @@
 ' <Snippet1>
 Imports System.Web.Services.Description
 Imports System.Xml
+
 Class MyServiceClass
    
    Public Shared Sub Main()

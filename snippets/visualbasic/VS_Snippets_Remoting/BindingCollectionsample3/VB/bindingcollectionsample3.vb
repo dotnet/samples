@@ -7,6 +7,7 @@
 ' Adds the same binding back again into the instance and writes to another temporary file.
 
 Imports System.Web.Services.Description
+
 Class [MyClass]
    
    Public Shared Sub Main()

@@ -25,6 +25,7 @@
 ' <Snippet1>
 Imports System.Reflection
 Imports System.Web.Services.Protocols
+
 Public Class MyService
    
    Public Sub MyMethod(inParameter As Integer, ByRef outParameter As Integer)

@@ -14,6 +14,7 @@
 ' <Snippet1>
 Imports System.Web.Services.Description
 Imports System.Xml
+
 Class ServiceDescription_ImportCollection
    Public Shared Sub Main()
       Dim myServiceDescription As ServiceDescription = _
@@ -53,6 +54,7 @@ Class ServiceDescription_ImportCollection
       ' Get Import by Index.
       Dim myImport As Import = _
             myServiceDescription.Imports(myServiceDescription.Imports.Count - 1)
+
       Console.WriteLine("Import by Index...")
       If myImportCollection.Contains(myImport) Then
          Console.WriteLine("Import Namespace '" + myImport.Namespace + _
