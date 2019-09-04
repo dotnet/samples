@@ -1,7 +1,6 @@
 ﻿' <Snippet1>
 Imports System.IO
 Imports System.Reflection
-Imports Microsoft.VisualBasic
 
 Namespace MyNamespace1
 

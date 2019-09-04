@@ -1,7 +1,6 @@
 ﻿' <Snippet1>
 
 Imports System.Reflection
-Imports Microsoft.VisualBasic
 
 Class MyFindMembersClass
 

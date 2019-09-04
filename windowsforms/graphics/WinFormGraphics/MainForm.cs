@@ -47,7 +47,7 @@ namespace WinFormGraphics
 
         private void groupBox1_Paint(object sender, PaintEventArgs e)
         {
-            using (Pen p = new Pen(Color.Black))
+            using (var p = new Pen(Color.Black))
             {
                 #region Example 1 -- Draw A Line
 
@@ -72,7 +72,7 @@ namespace WinFormGraphics
                 // Draw a curve with default rendering mode. (No antialiasing.)
 
                 // Specify a collection of points for the curve.
-                Point[] ps = new Point[]{
+                var ps = new Point[]{
                     new Point(40,250),
                     new Point(80,300),
                     new Point(120,200)};
@@ -80,7 +80,7 @@ namespace WinFormGraphics
                 e.Graphics.DrawCurve(p, ps);
 
                 // Specify a collection of points for the curve.
-                Point[] ps2 = new Point[]{
+                var ps2 = new Point[]{
                     new Point(150,250),
                     new Point(190,300),
                     new Point(230,200)};
@@ -109,9 +109,9 @@ namespace WinFormGraphics
 
                 #region Example 4 -- Draw A Vertical String
 
-                using (SolidBrush br = new SolidBrush(Color.Red))
+                using (var br = new SolidBrush(Color.Red))
                 {
-                    StringFormat sf = new StringFormat();
+                    var sf = new StringFormat();
                     sf.FormatFlags = StringFormatFlags.DirectionVertical;
 
                     e.Graphics.DrawString(
@@ -124,11 +124,10 @@ namespace WinFormGraphics
                 #region Example 5 -- Draw A Ellipse With Gradient Brush
 
                 // Specify a bound for the ellipse.
-                Rectangle r = new Rectangle(350, 280,280,150);
+                var r = new Rectangle(350, 280,280,150);
 
                 // Use a LinearGradientBrush to draw the ellipse.
-                using (LinearGradientBrush br =
-                    new LinearGradientBrush(
+                using (var br = new LinearGradientBrush(
                         r, Color.Silver, 
                         Color.Black, 
                         LinearGradientMode.Vertical))

@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
 
 ' Make three properties, one read-write, one default,
 ' and one read-only. 

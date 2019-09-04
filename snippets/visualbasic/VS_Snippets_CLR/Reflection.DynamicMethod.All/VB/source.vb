@@ -1,7 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Reflection
 Imports System.Reflection.Emit
-Imports Microsoft.VisualBasic
 Imports System.Globalization
 
 Public Class Test

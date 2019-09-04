@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
 
 Public Class MainClass
     Public Overloads Shared Sub Main(ByVal args() As String)

@@ -2,7 +2,7 @@
 Imports System.Reflection
 Imports System.ComponentModel
 Imports System.Runtime.InteropServices
-Imports Microsoft.VisualBasic
+
 Class MyTypeSequential1
 End Class 'MyTypeSequential1
 <StructLayoutAttribute(LayoutKind.Sequential)> Class MyTypeSequential2

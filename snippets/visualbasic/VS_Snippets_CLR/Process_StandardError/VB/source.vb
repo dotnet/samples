@@ -10,7 +10,6 @@
 Imports System.Diagnostics
 Imports System.ComponentModel
 Imports System.IO
-Imports Microsoft.VisualBasic
 
 Namespace Process_StandardError
 
