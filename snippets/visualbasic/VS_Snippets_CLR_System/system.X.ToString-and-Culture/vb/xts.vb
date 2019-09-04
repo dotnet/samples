@@ -9,8 +9,8 @@
 ' numeric types are System.Byte, SByte, Int16, Int32, Int64, 
 ' UInt16, UInt32, and UInt64. The floating-point numeric types 
 ' are Decimal, Single, and Double.
-' 
-' ' Imports System.Globalization
+
+' Imports System.Globalization
 ' Imports System.Threading
 
 ' 
