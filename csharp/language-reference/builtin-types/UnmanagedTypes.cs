@@ -1,3 +1,4 @@
+// <SnippetProgramExample>
 using System;
 
 public struct Coords<T>
@@ -22,3 +23,15 @@ public class UnmanagedTypes
 // Output:
 // Coords`1[System.Int32] is unmanaged and its size is 8 bytes
 // Coords`1[System.Double] is unmanaged and its size is 16 bytes
+// </SnippetProgramExample>
+
+namespace always_unmanaged
+{
+    // <SnippetAlwaysUnmanaged>
+    public struct Coords<T> where T : unmanaged
+    {
+        public T X;
+        public T Y;
+    }
+    // </SnippetAlwaysUnmanaged>
+}
