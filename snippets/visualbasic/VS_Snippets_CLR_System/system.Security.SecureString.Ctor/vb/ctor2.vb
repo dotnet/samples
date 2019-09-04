@@ -4,7 +4,6 @@ Option Strict On
 ' <Snippet2>
 Imports System.Security
 
- 
 Module Example
    Public Sub Main()
       ' Define the string value to assign to a new secure string.
