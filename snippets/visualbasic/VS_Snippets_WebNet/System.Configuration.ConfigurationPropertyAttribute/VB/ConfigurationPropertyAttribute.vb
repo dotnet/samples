@@ -1,5 +1,4 @@
 ﻿'<Snippet21>
-Imports System
 Imports System.Configuration
 
 Public Class UsingConfigurationPropertyAttribute

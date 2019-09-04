@@ -2,8 +2,6 @@
 ' This example demonstrates the Char.IsLowSurrogate() method
 '                                    IsHighSurrogate() method
 '                                    IsSurrogatePair() method
-Imports Microsoft.VisualBasic
-
 Class Sample
    Public Shared Sub Main()
       Dim cHigh As Char = ChrW(&HD800)

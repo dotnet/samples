@@ -1,5 +1,4 @@
 ﻿'<Snippet1>
-Imports System
 Imports System.Management
 
 'The sample below demonstrates the various conversions

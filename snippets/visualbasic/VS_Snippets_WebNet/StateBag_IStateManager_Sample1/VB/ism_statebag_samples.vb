@@ -3,7 +3,6 @@
 ' that implements the IStateManager interface and 
 ' another, MyControl, that overrides its own view-state
 ' management methods to use those of MyItem.
-Imports System
 Imports System.Web
 Imports System.Web.UI
 Imports System.Collections

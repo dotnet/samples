@@ -7,7 +7,6 @@
 ' 
 
 
-Imports System
 Imports System.Printing
 
 Namespace PrintTicketSample

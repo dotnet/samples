@@ -5,7 +5,6 @@
 ' When the user clicks on the 'Change Mapping Name' button, it changes
 ' mapping name and generates 'MappingNameChanged' event.
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.Windows.Forms

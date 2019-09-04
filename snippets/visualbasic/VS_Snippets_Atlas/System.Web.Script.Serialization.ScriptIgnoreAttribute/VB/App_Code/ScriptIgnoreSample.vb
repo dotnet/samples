@@ -1,5 +1,4 @@
 ﻿' <Snippet1>
-Imports Microsoft.VisualBasic
 Imports System.Web.Script.Serialization
 
 Public Class Group

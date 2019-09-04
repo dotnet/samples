@@ -2,7 +2,6 @@
 
 Imports System.Security
 Imports System.Reflection
-Imports Microsoft.VisualBasic
 
 Public Class MyMemberSample
 

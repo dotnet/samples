@@ -22,8 +22,6 @@
 ' * PARTICULAR PURPOSE.
 ' * 
 ' *****************************************************************************
-Imports System
-
 Friend Class NativeMethods
 
     <System.Runtime.InteropServices.DllImport("user32.dll")> _

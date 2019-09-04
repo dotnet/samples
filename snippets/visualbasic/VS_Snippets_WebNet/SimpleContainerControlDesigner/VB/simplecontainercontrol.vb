@@ -1,7 +1,6 @@
 ﻿' <Snippet1>
 
 Imports Microsoft.VisualBasic
-Imports System
 Imports System.ComponentModel
 Imports System.ComponentModel.Design
 Imports System.Collections

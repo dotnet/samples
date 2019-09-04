@@ -1,7 +1,6 @@
 ﻿'<SnippetDetectActivationStateCODEBEHIND>
 
 Imports Microsoft.VisualBasic
-Imports System
 Imports System.Windows
 
 Namespace SDKSample

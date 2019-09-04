@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.ComponentModel
+﻿Imports System.ComponentModel
 
 Public Class Person
     Implements INotifyPropertyChanged

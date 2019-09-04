@@ -1,5 +1,4 @@
-﻿Imports System
-    Friend NotInheritable Class MainEntry
+﻿    Friend NotInheritable Class MainEntry
         ' Methods
         <STAThread> _
         Public Shared Sub Main()

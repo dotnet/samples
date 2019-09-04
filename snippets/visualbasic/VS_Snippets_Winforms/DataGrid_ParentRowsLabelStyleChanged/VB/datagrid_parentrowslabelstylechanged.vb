@@ -8,7 +8,6 @@
 ' sets the 'ParentRowsLabelStyle' property and the "Toggle Visible" button sets the 
 ' 'ParentRowsVisible' property. When the event is raised a message will be displayed.
 '
-Imports System
 Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms

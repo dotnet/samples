@@ -1,7 +1,6 @@
 ﻿ ' File name: AutomobileSection.cs
 ' Allowed snippet tags range: [11 - 20].
 ' <Snippet11>
-Imports System
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.Configuration

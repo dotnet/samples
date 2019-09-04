@@ -1,6 +1,5 @@
 ﻿ ' Snippet for: F:System.Drawing.Imaging.Encoder.Compression
 ' <snippet2>
-Imports System
 Imports System.Drawing
 Imports System.Drawing.Imaging
 

@@ -1,7 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Reflection
 Imports System.Reflection.Emit
-Imports Microsoft.VisualBasic
 
 Public Class Test
     ' Declare a delegate that will be used to execute the completed

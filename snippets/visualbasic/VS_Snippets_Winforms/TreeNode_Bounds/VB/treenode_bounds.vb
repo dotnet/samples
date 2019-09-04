@@ -14,7 +14,6 @@
 ' the child tree nodes display the order numbers assigned to each 
 ' customer.
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel

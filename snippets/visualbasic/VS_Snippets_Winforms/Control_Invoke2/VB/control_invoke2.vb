@@ -6,7 +6,6 @@
 ' on the thread that owns the underlying handle of the form. When user clicks on button
 ' the above delegate is executed using 'Invoke' method.
 
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 Imports System.Threading

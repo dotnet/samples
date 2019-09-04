@@ -1,5 +1,4 @@
-﻿Imports System
-Namespace SDKSample
+﻿Namespace SDKSample
 	Partial Public Class PropertiesDialog
 		''' <summary>
 		'''   Required designer variable.</summary>

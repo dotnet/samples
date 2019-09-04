@@ -5,7 +5,6 @@
 ' the selected row from the 'DataGrid' control.
 '
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel

@@ -4,8 +4,6 @@
 ' of struct 'UInt16'. This compares an instance of 'UInt16' with the
 ' passed in object and returns true if they are equal.
 
-Imports Microsoft.VisualBasic
-
 Class MyUInt16_Equals
    
    Public Shared Sub Main()

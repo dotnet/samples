@@ -1,7 +1,5 @@
 ﻿'<snippet1>
 ' Sample for String.Compare(String, Int32, String, Int32, Int32, Boolean)
-Imports Microsoft.VisualBasic
-
 Class Sample
    
    Public Shared Sub Main()

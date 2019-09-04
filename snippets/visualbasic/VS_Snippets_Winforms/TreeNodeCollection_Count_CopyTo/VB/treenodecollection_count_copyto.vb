@@ -8,7 +8,6 @@
 ' and displays the count of the collection and the elements of the
 ' array.
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel

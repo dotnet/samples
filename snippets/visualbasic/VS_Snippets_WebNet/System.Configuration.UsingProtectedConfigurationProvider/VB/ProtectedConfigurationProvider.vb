@@ -1,5 +1,4 @@
 ﻿'<Snippet11>
-Imports System
 Imports System.Configuration
 
 Namespace Samples.AspNet

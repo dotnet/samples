@@ -1,7 +1,6 @@
 ﻿' <Snippet1>
 ' Create a class that derives from the
 ' ChtmlTextWriter class.
-Imports System
 Imports System.IO
 Imports System.Web.UI
 Imports System.Web.UI.WebControls.Adapters

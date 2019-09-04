@@ -1,7 +1,6 @@
 ﻿' <Snippet3>
 ' StateManagedAuthor.vb
 Option Strict On
-Imports System
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Globalization

@@ -8,7 +8,6 @@
 ' event. Custom handler written for PreRender event renders custom controls
 ' to web client. 
 
-Imports System
 Imports System.Data
 Imports System.Web
 Imports System.Web.UI

@@ -5,7 +5,6 @@
 ' custom BindData method that is used as the event handler
 ' associated with the Literal object's DataBinding event.  
 
-Imports System
 Imports System.Web
 Imports System.Data
 Imports System.Web.UI
