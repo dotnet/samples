@@ -1,7 +1,6 @@
 ﻿' Visual Basic .NET Document
 Option Strict On
 ' <Snippet1>
-Imports Microsoft.VisualBasic
 Imports System.CodeDom
 Imports System.CodeDom.Compiler
 Imports System.Drawing

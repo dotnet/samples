@@ -1,5 +1,4 @@
-﻿imports Microsoft.VisualBasic
-' <snippet3>
+﻿' <snippet3>
 Module IsControlSample
 
     Sub Main()

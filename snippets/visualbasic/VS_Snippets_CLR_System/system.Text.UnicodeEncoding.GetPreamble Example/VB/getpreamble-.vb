@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Text
-Imports Microsoft.VisualBasic
 
 Class UnicodeEncodingExample
     

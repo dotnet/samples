@@ -5,9 +5,6 @@ Imports System.Security.Permissions
 Imports System.Security
 Imports System.IO
 Imports System.Collections
-Imports Microsoft.VisualBasic
-
-
 
 Class [MyClass]
 

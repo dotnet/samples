@@ -1,7 +1,5 @@
 ﻿'<Snippet2>
 ' Example of the Decimal.Round method. 
-Imports Microsoft.VisualBasic
-
 Module DecimalRoundDemo
     
     Const dataFmt As String = "{0,26}{1,8}{2,26}"

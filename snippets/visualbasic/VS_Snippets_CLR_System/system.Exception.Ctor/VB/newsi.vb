@@ -1,7 +1,5 @@
 ﻿'<Snippet3>
 ' Sample for Exception( String, Exception ) constructor.
-Imports Microsoft.VisualBasic
-
 Namespace NDP_UE_VB
 
     ' Derive an exception with a specifiable message and inner exception.

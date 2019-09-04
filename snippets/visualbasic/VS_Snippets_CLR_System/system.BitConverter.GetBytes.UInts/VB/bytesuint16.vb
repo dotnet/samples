@@ -1,7 +1,5 @@
 ﻿'<Snippet3>
 ' Example of the BitConverter.GetBytes( UInt16 ) method.
-Imports Microsoft.VisualBasic
-
 Module GetBytesUInt16Demo
 
     Const formatter As String = "{0,10}{1,13}"

@@ -2,7 +2,6 @@
 
 ' <Snippet1>
 Imports System.Collections
-Imports Microsoft.VisualBasic
 
 Public Class SamplesArrayList
 

@@ -1,6 +1,5 @@
 ﻿'<snippet3>
 Imports System.Diagnostics
-Imports Microsoft.VisualBasic
 
 Module PerfCounterCatObjCountExistsMod
 

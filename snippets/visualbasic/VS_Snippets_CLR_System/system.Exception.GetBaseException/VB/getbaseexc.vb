@@ -1,7 +1,5 @@
 ﻿'<Snippet1>
 ' Example for the Exception.GetBaseException method.
-Imports Microsoft.VisualBasic
-
 Namespace NDP_UE_VB
 
     ' Define two derived exceptions to demonstrate nested exceptions.
