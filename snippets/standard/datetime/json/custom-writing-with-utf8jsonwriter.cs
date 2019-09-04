@@ -17,10 +17,15 @@ public class Example
         {
             using (var writer = new Utf8JsonWriter(stream, options))
             {
-                string dateStr = DateTime.UtcNow.ToString("F", CultureInfo.InvariantCulture);
+                DateTime utcNow = DateTime.UtcNow;
+                string dateStr = utcNow.ToString("F", CultureInfo.InvariantCulture);
 
                 writer.WriteStartObject();
-                writer.WriteString("date", dateStr);
+                writer.WritePropertyName("dateFormats");
+                writer.WriteStartArray();
+                writer.WriteStringValue(utcNow);
+                writer.WriteStringValue(dateStr);
+                writer.WriteEndArray();
                 writer.WriteNumber("temp", 42);
                 writer.WriteEndObject();
             }
@@ -33,6 +38,9 @@ public class Example
 
 // The example displays output similar to the following:
 // {
-//     "date": "Tuesday, 27 August 2019 19:21:44",
+//     "dateFormats": [
+//         "2019-09-04T17:38:04.6940145Z",
+//         "Wednesday, 04 September 2019 17:38:04"
+//     ],
 //     "temp": 42
 // }

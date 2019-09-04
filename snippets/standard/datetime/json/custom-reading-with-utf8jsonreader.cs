@@ -14,6 +14,15 @@ public class Example
         {
             if (json.TokenType == JsonTokenType.String)
             {
+                try
+                {
+                    DateTimeOffset _ = json.GetDateTimeOffset();
+                }
+                catch (FormatException e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+
                 string value = json.GetString();
                 DateTimeOffset dto = DateTimeOffset.ParseExact(value, "F", CultureInfo.InvariantCulture);
                 Console.WriteLine(dto);
@@ -23,4 +32,5 @@ public class Example
 }
 
 // The example displays the following output:
+// The JSON value is not in a supported DateTimeOffset format.
 // 7/26/2019 12:00:00 AM -04:00
