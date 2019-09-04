@@ -4,7 +4,6 @@ Option Strict On
 ' <Snippet1>
 Imports System.Globalization
 
-   
 Module Example
    Public Sub Main()
       Dim cal As New UmAlQuraCalendar()
