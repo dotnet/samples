@@ -3,8 +3,6 @@ Imports System.Security
 Imports System.Security.Permissions
 Imports System.Text.RegularExpressions
 Imports System.Collections
-Imports Microsoft.VisualBasic
-
 
 Class MyWebPermissionExample
    

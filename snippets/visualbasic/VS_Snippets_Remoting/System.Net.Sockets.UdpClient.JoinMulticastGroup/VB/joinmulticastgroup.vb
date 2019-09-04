@@ -12,11 +12,6 @@ Imports System.Net.Sockets
 Imports System.Text
 Imports System.IO
 Imports System.Threading
-Imports Microsoft.VisualBasic
-
-
-
-
 
 ' The following Receive class is used by both the ClientOriginator and 
 ' the ClientTarget class to receive data from one another..

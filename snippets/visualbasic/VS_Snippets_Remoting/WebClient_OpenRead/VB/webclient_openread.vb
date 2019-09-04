@@ -8,8 +8,6 @@
 
 Imports System.Net
 Imports System.IO
-Imports Microsoft.VisualBasic
-
 
 Public Class WebClient_OpenRead
     

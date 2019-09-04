@@ -12,8 +12,6 @@
 Imports System.Net
 Imports System.IO
 Imports System.Text
-Imports Microsoft.VisualBasic
-
 
 Class HttpWebRequest_IfModifiedSince
     

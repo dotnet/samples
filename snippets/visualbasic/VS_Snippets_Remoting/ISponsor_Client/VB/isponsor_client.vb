@@ -9,7 +9,6 @@
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Lifetime
 Imports System.Security.Permissions
-Imports MicroSoft.VisualBasic
 
 Public Class Client
    <SecurityPermission(SecurityAction.LinkDemand)> _

@@ -10,9 +10,11 @@ Imports System.Windows.Media
 Imports System.Windows.Media.Imaging
 Imports System.Windows.Navigation
 Imports System.Windows.Shapes
+
 '<snippetCustomersOrdersImportsWpf>
 Imports System.Data.Services.Client
 Imports NorthwindClient.Northwind
+
 '</snippetCustomersOrdersImportsWpf>
 
 Partial Public Class CustomerOrdersWpf2

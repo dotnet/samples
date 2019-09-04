@@ -5,8 +5,6 @@ Imports System.Runtime.Remoting.Channels.Http
 Imports System.Runtime.Remoting.Messaging
 Imports System.Runtime.Serialization
 Imports System.Security.Permissions
-Imports Microsoft.VisualBasic
-
 
 ' code that drives the example
 Public Class ObjRefExample

@@ -53,6 +53,7 @@ Module Module1
     Sub method3()
         ' <Snippet3>
         ' Imports System.Data.Common
+
         Dim db As New Northwnd("c:\northwnd.mdf")
 
         Dim q = _

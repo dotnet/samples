@@ -5,7 +5,6 @@
 'It then prints out all the response headers ( name -value pairs) onto the console 
 
 Imports System.Net
-Imports Microsoft.VisualBasic
 Imports System.Environment
 
 

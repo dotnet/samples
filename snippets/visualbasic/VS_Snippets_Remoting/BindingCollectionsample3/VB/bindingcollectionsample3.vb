@@ -7,7 +7,6 @@
 ' Adds the same binding back again into the instance and writes to another temporary file.
 
 Imports System.Web.Services.Description
-Imports Microsoft.VisualBasic
 
 Class [MyClass]
    
