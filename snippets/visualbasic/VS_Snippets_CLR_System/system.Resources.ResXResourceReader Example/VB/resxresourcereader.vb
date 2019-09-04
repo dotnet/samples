@@ -1,6 +1,7 @@
 ﻿'<Snippet1>
 Imports System.Resources
 Imports System.Collections
+
 Class ReadResXResources
    
    Public Shared Sub Main()

@@ -1,5 +1,6 @@
 ﻿'<snippet3>
 Imports System.Diagnostics
+
 Module PerfCounterCatObjCountExistsMod
 
     '<snippet4>

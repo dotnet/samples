@@ -5,6 +5,7 @@ Imports System.Security
 Imports System.Security.Permissions
 Imports System.Reflection
 Imports MyPermission
+
 ' Use the command line option '/keyfile' or appropriate project settings to sign this assembly.
 <Assembly: System.Security.AllowPartiallyTrustedCallersAttribute()> 
 Namespace MyPermissionAttribute

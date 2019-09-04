@@ -3,6 +3,7 @@
 ' <snippet1>
 Imports System.Collections
 Imports System.Collections.Specialized
+
 Public Class SamplesStringDictionary
 
    Public Shared Sub Main()

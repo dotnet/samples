@@ -1,6 +1,7 @@
 ﻿'<Snippet1>
 ' Example for the Attribute.GetCustomAttribute( ParameterInfo, Type ) method.
 Imports System.Reflection
+
 Namespace NDP_UE_VB
 
     '<Snippet2> 

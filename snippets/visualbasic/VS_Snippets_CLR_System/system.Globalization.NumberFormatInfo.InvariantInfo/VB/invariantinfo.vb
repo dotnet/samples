@@ -1,6 +1,7 @@
 ﻿'<Snippet1>
 Imports System.Globalization
 Imports System.Text
+
 Class SamplesNumberFormatInfo
    
    

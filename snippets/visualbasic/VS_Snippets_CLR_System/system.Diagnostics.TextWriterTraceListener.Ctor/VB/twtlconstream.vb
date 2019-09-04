@@ -1,6 +1,7 @@
 ﻿'<Snippet1>
 Imports System.Diagnostics
 Imports System.IO
+
 Module TWTLConStreamMod
 
     ' args(0) is the specification of the trace log file.

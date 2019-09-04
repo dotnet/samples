@@ -1,6 +1,7 @@
 ﻿'<Snippet1>
 ' Example for the Attribute.TypeId property.
 Imports System.Reflection
+
 Namespace NDP_UE_VB
 
     ' Define a custom parameter attribute that takes a single message argument.

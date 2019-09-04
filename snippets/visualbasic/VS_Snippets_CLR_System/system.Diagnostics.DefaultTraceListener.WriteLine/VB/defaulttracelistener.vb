@@ -1,5 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Diagnostics
+
 Module DefaultTraceListenerMod
 
     Dim defaultListener As Diagnostics.DefaultTraceListener

@@ -2,6 +2,7 @@
 ' Example for the Attribute.GetCustomAttribute( ParameterInfo, Type, Boolean ) 
 ' method.
 Imports System.Reflection
+
 Namespace NDP_UE_VB
 
     ' Define a custom parameter attribute that takes a single message argument.

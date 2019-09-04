@@ -1,4 +1,4 @@
-﻿Imports System.Collections.Generic
+﻿w
 Module Module1
     Sub Main()
         EnumerateGroup()

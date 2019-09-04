@@ -2,6 +2,7 @@
 ' This sample demonstrates the use of the SecurityPermissionAttribute.
 Imports System.Security.Permissions
 Imports System.Security
+
 Class [MyClass]
 
     Public Shared Sub PermissionDemo()

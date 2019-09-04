@@ -1,6 +1,7 @@
 ﻿'<Snippet1>
 ' Example of Convert.ToDateTime( String, IFormatProvider ).
 Imports System.Globalization
+
 Module StringToDateTimeDemo
 
     Const lineFmt As String = "{0,-18}{1,-12}{2}"

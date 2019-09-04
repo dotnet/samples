@@ -1,5 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Text
+
 Class UnicodeEncodingExample
     
     Public Shared Sub Main()

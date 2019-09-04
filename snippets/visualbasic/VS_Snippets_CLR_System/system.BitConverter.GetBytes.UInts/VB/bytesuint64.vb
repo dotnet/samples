@@ -1,6 +1,7 @@
 ﻿'<Snippet1>
 ' Example of the BitConverter.GetBytes( UInt64 ) method.
 Imports System.Globalization
+
 Module GetBytesUInt64Demo
 
     Const formatter As String = "{0,22}{1,30}"

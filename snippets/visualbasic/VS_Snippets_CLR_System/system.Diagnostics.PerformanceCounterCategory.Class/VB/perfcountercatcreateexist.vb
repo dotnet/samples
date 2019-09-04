@@ -8,6 +8,7 @@
 
 '<snippet27>
 Imports System.Diagnostics
+
 Module PerfCounterCatCreateExistMod
 
     '<snippet28>

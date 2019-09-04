@@ -11,6 +11,7 @@
 'Imports System.Security.Principal
 'Imports System.Security.Permissions
 ''Imports ClassLibraryVB
+
 '
 'Class [MyClass]
 '
@@ -26,6 +27,7 @@
 '    End Sub 'Main
 'End Class '[MyClass
 Imports System.Security.Permissions
+
 '<Snippet2>
 ' Demand that the calling program be in the global assembly cache.
 <GacIdentityPermissionAttribute(SecurityAction.Demand)> _

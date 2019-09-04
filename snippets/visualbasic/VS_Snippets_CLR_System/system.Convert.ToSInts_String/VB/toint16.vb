@@ -2,6 +2,7 @@
 ' Example of the Convert.ToInt16( String ) and 
 ' Convert.ToInt16( String, IFormatProvider ) methods.
 Imports System.Globalization
+
 Module ToInt16ProviderDemo
 
     Dim format As String = "{0,-20}{1,-20}{2}"

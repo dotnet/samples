@@ -1,6 +1,7 @@
 ﻿'<Snippet1>
 ' Example of selected TimeZone class elements.
 Imports System.Globalization
+
 Module TimeZoneDemo
 
     Sub Main( )

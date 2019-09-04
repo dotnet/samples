@@ -2,6 +2,7 @@
 
 ' <snippet1>
 Imports System.Globalization
+
 Public Class SamplesKoreanCalendar   
    
    Public Shared Sub Main()

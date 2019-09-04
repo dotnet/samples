@@ -1,5 +1,6 @@
 ﻿'<snippet1>
 Imports System.Diagnostics
+
 Module PerfCounterCatCreateMod
 
     '<snippet2>

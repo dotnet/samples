@@ -5,6 +5,7 @@ Imports System.Security.Permissions
 Imports System.Security
 Imports System.IO
 Imports System.Collections
+
 Class [MyClass]
 
     Public Shared Sub PermissionSetDemo()

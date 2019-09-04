@@ -30,6 +30,7 @@ Imports System.Security
 Imports System.Security.Permissions
 Imports System.Reflection
 Imports System.Runtime.CompilerServices
+
 ' This strong name key is used to create a code group that gives permissions to this assembly.
 
 <Assembly: AssemblyKeyFile("snKey.snk")> 

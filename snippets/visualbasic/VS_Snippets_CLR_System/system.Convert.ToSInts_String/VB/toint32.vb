@@ -2,6 +2,7 @@
 ' Example of the Convert.ToInt32( String ) and 
 ' Convert.ToInt32( String, IFormatProvider ) methods.
 Imports System.Globalization
+
 Module ToInt32ProviderDemo
 
     Dim format As String = "{0,-20}{1,-20}{2}"

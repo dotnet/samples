@@ -1,6 +1,7 @@
 ﻿'<Snippet2>
 ' Example of Convert.ToString( non-numeric types, IFormatProvider ).
 Imports System.Globalization
+
 ' An instance of this class can be passed to methods that require 
 ' an IFormatProvider.
 Public Class DummyProvider

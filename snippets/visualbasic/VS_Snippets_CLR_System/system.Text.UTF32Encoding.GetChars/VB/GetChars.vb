@@ -2,6 +2,7 @@
 
 ' <Snippet1>
 Imports System.Text
+
 Public Class SamplesUTF32Encoding   
 
    Public Shared Sub Main()

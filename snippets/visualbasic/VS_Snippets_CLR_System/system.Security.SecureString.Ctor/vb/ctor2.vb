@@ -3,6 +3,7 @@ Option Strict On
 
 ' <Snippet2>
 Imports System.Security
+
  
 Module Example
    Public Sub Main()

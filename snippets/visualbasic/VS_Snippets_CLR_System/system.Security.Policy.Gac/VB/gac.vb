@@ -2,6 +2,7 @@
 Imports System.Security.Policy
 Imports System.Security
 Imports System.Security.Permissions
+
 Class GacDemo
     <STAThread()> _
     Overloads Shared Sub Main(ByVal args() As String)

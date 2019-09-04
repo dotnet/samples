@@ -2,6 +2,7 @@
 
 ' <Snippet1>
 Imports System.Collections
+
 Public Class SamplesArrayList
 
    Public Class myReverserClass

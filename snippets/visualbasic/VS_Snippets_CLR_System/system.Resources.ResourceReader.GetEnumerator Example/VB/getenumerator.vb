@@ -1,6 +1,7 @@
 ﻿'<snippet1>
 Imports System.Resources
 Imports System.Collections
+
 Class EnumerateResources
    
    Public Shared Sub Main()

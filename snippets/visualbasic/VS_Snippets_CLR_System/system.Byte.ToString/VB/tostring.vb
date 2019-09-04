@@ -1,6 +1,7 @@
 ﻿'<Snippet1>
 ' Example for the Byte.ToString( ) methods.
 Imports System.Globalization
+
 Module ByteToStringDemo
     
     Sub RunToStringDemo( )

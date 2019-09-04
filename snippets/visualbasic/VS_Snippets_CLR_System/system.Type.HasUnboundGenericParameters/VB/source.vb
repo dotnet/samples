@@ -1,6 +1,7 @@
 ﻿'<Snippet1>
 Imports System.Reflection
 Imports System.Collections.Generic
+
 ' Define a base class with two type parameters.
 Public Class Base(Of T, U)
 End Class

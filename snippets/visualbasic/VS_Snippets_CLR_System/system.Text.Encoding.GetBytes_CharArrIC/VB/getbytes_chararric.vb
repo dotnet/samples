@@ -3,6 +3,7 @@
 
 ' <Snippet1>
 Imports System.Text
+
 Public Class SamplesEncoding   
 
    Public Shared Sub Main()

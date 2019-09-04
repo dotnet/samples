@@ -6,6 +6,7 @@ Imports System.Reflection
 Imports System.Security.Permissions
 Imports System.Security
 Imports System.IO
+
 Class [MyClass]
 
 

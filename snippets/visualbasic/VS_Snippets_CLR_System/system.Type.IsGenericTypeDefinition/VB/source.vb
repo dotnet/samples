@@ -1,6 +1,7 @@
 ﻿'<Snippet1>
 Imports System.Reflection
 Imports System.Collections.Generic
+
 Public Class Test
     Private Shared Sub DisplayGenericTypeInfo(ByVal t As Type) 
         Console.WriteLine(vbCrLf & t.ToString())

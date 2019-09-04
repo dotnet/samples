@@ -2,6 +2,7 @@
 
 ' <snippet1>
 Imports System.Globalization
+
 Public Class SamplesJulianCalendar   
    
    Public Shared Sub Main()

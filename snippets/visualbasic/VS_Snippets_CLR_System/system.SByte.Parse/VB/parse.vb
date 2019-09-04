@@ -1,6 +1,7 @@
 ﻿'<Snippet1>
 ' Example of the SByte.Parse( ) methods.
 Imports System.Globalization
+
 Module SByteParseDemo
     
     Sub SByteParse( styles As NumberStyles, _

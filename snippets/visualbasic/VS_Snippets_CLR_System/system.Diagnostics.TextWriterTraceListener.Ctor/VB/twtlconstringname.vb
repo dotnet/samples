@@ -1,5 +1,6 @@
 ﻿'<snippet4>
 Imports System.Diagnostics
+
 Module TWTLConStringNameMod
 
     Const LISTENER_NAME As String = "myStringListener"

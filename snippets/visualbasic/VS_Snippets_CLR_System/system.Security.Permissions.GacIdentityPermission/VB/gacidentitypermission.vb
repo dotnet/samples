@@ -1,6 +1,7 @@
 ﻿' <Snippet1>
 Imports System.Security
 Imports System.Security.Permissions
+
 Public Class GacIdentityPermissionDemo
 
     ' <Snippet2>

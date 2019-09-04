@@ -1,5 +1,6 @@
 ﻿'<Snippet1>
 Imports System.Collections
+
 Public Class Example
 
     Public Shared Sub Main
