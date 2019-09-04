@@ -6,11 +6,11 @@
 ' assembly cache.
 ' This console application can be created using the following code.
 
-''Imports System.Security
+'Imports System.Security
 'Imports System.Security.Policy
 'Imports System.Security.Principal
 'Imports System.Security.Permissions
-''Imports ClassLibraryVB
+'Imports ClassLibraryVB
 
 '
 'Class [MyClass]
