@@ -4,6 +4,7 @@ Option Strict
 
 Imports System.IO
 Imports System.Xml
+
 Public Class Sample
    Private Const filename As String = "binary.xml"
    

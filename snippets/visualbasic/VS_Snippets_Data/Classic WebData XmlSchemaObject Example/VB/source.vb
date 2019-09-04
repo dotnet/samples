@@ -6,6 +6,7 @@ Imports System.Xml
 Imports System.Xml.Schema
 Imports System.IO
 Imports System.Reflection
+
 Public Class ValidXSD
 
     Public Shared Sub Main()

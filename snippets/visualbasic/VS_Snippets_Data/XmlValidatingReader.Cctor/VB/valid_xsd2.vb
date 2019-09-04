@@ -2,6 +2,7 @@
 Imports System.IO
 Imports System.Xml
 Imports System.Xml.Schema
+
 public class Sample
 
   private m_success as Boolean = true

@@ -3,6 +3,7 @@ Option Explicit
 Option Strict
 
 Imports System.Xml
+
 Public Class Sample
     
     Public Shared Sub Main()

@@ -8,6 +8,7 @@ Module Module1
 
         ' <Snippet1>
         ' Add 'Imports System.Reflection' for this section.
+
         Dim db As New Northwnd("...")
         '...
         Try

@@ -5,6 +5,7 @@ Option Explicit On
 Imports System.Xml
 Imports System.Xml.Schema
 Imports System.IO
+
 Public Class ValidXSD
     Public Shared Sub Main()
         Dim fs As FileStream

@@ -1,4 +1,5 @@
 ﻿'Imports ArraysAndListsInQueries_VB.AdventureWorksModel
+
 Module Module1
 
     Sub Main()
