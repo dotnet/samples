@@ -17,41 +17,7 @@ Text in brackets are placeholders; replace the text with the requested informati
 
 [Brief description of the change]
 
-### Change description
-
-#### Old behavior
-
-#### New behavior
-
-#### Reason for change
-
-### Category
-
-[Choose a category from one of the following:
-
-- ASP.NET Core
-- C#
-- Core
-- CoreFx
-- Data
-- Debugger
-- Deployment for .NET Core
-- EF Core
-- Globalization
-- interop
-- JIT
-- LINQ
-- Managed Extensibility Framework (MEF)
-- MSBuild
-- Networking
-- Printing
-- Security
-- Serialization
-- Visual Basic
-- Windows Forms
-- Windows Presentation Foundation (WPF)
-- XML, XSLT
-]
+[Describe the outdated practice and what would be preferred for modern code]
 
 [What article (in dotnet/docs or dotnet/dotnet-api-docs) uses this sample?]
 
