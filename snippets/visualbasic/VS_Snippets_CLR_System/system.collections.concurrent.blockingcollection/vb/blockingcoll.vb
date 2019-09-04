@@ -102,7 +102,6 @@ End Class
 
 '<snippet3>
 'Imports System.Threading.Tasks
-
 'Imports System.Collections.Concurrent
 
 ' Demonstrates:
@@ -138,7 +137,6 @@ End Class
 
 '<snippet4>
 'Imports System.Threading.Tasks
-
 'Imports System.Collections.Concurrent
 
 ' Demonstrates:
