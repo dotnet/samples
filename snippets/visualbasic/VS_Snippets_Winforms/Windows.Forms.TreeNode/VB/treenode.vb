@@ -2,6 +2,7 @@
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Windows.Forms
+
 Namespace Foo
 
    Public Class Form1
