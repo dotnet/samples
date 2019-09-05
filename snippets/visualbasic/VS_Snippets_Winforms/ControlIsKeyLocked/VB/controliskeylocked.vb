@@ -5,6 +5,7 @@
 ' /r:System.Data.dll /r:System.Drawing.dll
 
 Imports System.Windows.Forms
+
 Public Class CapsLockIndicator
    
     Public Shared Sub Main()
