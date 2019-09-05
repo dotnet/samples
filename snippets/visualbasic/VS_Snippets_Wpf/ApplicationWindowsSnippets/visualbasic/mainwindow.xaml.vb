@@ -1,6 +1,5 @@
 ﻿'<SnippetMainWindowSetWindowsCODEBEHIND1>
 
-Imports Microsoft.VisualBasic
 Imports System.Windows
 Imports System.Windows.Controls
 

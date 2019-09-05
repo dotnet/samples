@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System.Diagnostics
+﻿Imports System.Diagnostics
 Imports System.Windows
 Imports System.Windows.Input
 Imports System.Windows.Media
