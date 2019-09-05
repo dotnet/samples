@@ -2,6 +2,7 @@
 
 ' <Snippet1>
 Imports System.Windows.Forms
+
 Public Class DataFormat_GetFormat
    
    Shared Sub Main()
