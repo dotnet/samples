@@ -3,6 +3,7 @@
 ' <snippet1>
 Imports System.Drawing
 Imports System.Drawing.Imaging
+
 Class Example_SetColorDepth
 
     Public Shared Sub Main()
