@@ -6,6 +6,7 @@ Imports System.Collections
 Imports System.ComponentModel
 Imports System.Windows.Forms
 Imports System.Data
+
 ' Create an empty Windows form.
 Public Class Form1
     Inherits System.Windows.Forms.Form
