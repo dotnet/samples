@@ -4,6 +4,7 @@ Imports System.Collections
 Imports System.ComponentModel
 Imports System.ComponentModel.Design
 Imports System.Windows.Forms
+
 '  This sample demonstrates using the ISelectionService
 '  interface to receive notification of selection change events.  
 
