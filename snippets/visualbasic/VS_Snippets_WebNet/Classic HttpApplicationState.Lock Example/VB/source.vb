@@ -1,8 +1,5 @@
-﻿Imports System
-Imports System.Web
+﻿Imports System.Web
 Imports System.Web.UI
-
-
 
 Public Class Page1
     Inherits Page

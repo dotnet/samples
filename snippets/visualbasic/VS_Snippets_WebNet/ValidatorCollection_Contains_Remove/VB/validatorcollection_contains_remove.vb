@@ -6,7 +6,6 @@
 ' It checks for the 'RequiredFieldValidator' in the ValidatorCollection
 ' and removes it from the collection.
 
-Imports System
 Imports System.Web
 Imports System.Web.UI
 Imports System.Web.UI.WebControls

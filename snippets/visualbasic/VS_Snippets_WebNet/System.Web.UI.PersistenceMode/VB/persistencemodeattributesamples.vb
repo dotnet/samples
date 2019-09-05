@@ -13,7 +13,6 @@
 ' 'PersistenceMode.InnerDefaultProperty' is applied to property 'Items' which is of type 'ListItemCollection'.
 ' This is initialized as inner content of the HTML tag as a child
  
-Imports System
 Imports System.Web
 Imports System.Web.UI
 Imports System.Web.UI.WebControls

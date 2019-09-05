@@ -1,11 +1,8 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.Drawing
 Imports System.Web.UI
 Imports System.Web.UI.WebControls
 Imports System.Collections
-
-
 
 Public Class Form1
     Inherits Page

@@ -1,10 +1,8 @@
 ﻿Option Explicit
 Option Strict
 
-imports System
-imports System.Data
-imports System.Web.UI
-
+Imports System.Data
+Imports System.Web.UI
 
 Public Class Form1: Inherits Control
 

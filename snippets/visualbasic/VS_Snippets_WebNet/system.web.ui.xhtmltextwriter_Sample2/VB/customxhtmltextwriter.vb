@@ -1,7 +1,6 @@
 ﻿' CustomXhtmlTextWriter.vb
 '
 ' <snippet1>
-Imports System
 Imports System.IO
 Imports System.Web
 Imports System.Security.Permissions
