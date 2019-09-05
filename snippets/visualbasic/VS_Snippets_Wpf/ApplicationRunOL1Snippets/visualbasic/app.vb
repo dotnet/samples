@@ -1,6 +1,5 @@
 ﻿'<SnippetCustomEntryPointAndRunOL1CODE>
 
-Imports Microsoft.VisualBasic
 Imports System.Windows
 
 Namespace VisualBasic

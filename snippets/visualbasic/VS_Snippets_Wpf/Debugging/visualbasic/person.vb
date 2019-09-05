@@ -1,6 +1,5 @@
 ﻿'<SnippetPersonClass>
 
-Imports Microsoft.VisualBasic
 Imports System.ComponentModel
 
 Namespace SDKSample

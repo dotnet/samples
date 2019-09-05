@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System.Collections.Generic
+﻿Imports System.Collections.Generic
 Imports System.Windows.Data
 Imports System.Globalization
 
