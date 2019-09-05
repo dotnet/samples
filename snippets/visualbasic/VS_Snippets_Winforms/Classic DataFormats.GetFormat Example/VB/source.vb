@@ -1,6 +1,7 @@
 ﻿Imports System.IO
 Imports System.Data
 Imports System.Windows.Forms
+
 Public Class Form1
     Inherits Form
     Protected textBox1 As TextBox
