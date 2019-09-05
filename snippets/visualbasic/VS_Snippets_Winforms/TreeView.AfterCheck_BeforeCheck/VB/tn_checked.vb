@@ -1,9 +1,9 @@
-﻿
-Imports System.Drawing
+﻿Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Windows.Forms
 Imports System.Data
+
 Namespace TN_Checked
     
    Public Class Form1
