@@ -28,20 +28,20 @@ Public Structure MyArrayStruct
     Public vals As Integer()
 End Structure 'MyArrayStruct
 
-Public Class LibWrap
+Friend Class NativeMethods
     ' Declares managed prototypes for unmanaged functions.
     <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
-    Shared Function TestStructInStruct(
+    Friend Shared Function TestStructInStruct(
         ByRef person2 As MyPerson2) As Integer
     End Function
 
     <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
-    Shared Function TestStructInStruct3(
+    Friend Shared Function TestStructInStruct3(
         ByVal person3 As MyPerson3) As Integer
     End Function
 
     <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
-    Shared Function TestArrayInStruct(
+    Friend Shared Function TestArrayInStruct(
         ByRef myStruct As MyArrayStruct) As Integer
     End Function
 End Class 'LibWrap
@@ -69,7 +69,7 @@ Public Class App
         Console.WriteLine("first = {0}, last = {1}, age = {2}",
             personName.first, personName.last, personAll.age)
 
-        Dim res As Integer = LibWrap.TestStructInStruct(personAll)
+        Dim res As Integer = NativeMethods.TestStructInStruct(personAll)
 
         Dim personRes As MyPerson =
             CType(Marshal.PtrToStructure(personAll.person,
@@ -87,7 +87,7 @@ Public Class App
         person3.person.first = "John"
         person3.person.last = "Evans"
         person3.age = 27
-        LibWrap.TestStructInStruct3(person3)
+        NativeMethods.TestStructInStruct3(person3)
 
         ' Structure with an embedded array.
         Dim myStruct As New MyArrayStruct()
@@ -104,7 +104,7 @@ Public Class App
         Console.WriteLine("{0} {1} {2}", myStruct.vals(0),
             myStruct.vals(1), myStruct.vals(2))
 
-        LibWrap.TestArrayInStruct(myStruct)
+        NativeMethods.TestArrayInStruct(myStruct)
         Console.WriteLine(vbNewLine + "Structure with array after call:")
         Console.WriteLine(myStruct.flag)
         Console.WriteLine("{0} {1} {2}", myStruct.vals(0),
