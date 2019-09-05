@@ -1,4 +1,5 @@
 ﻿Imports Microsoft.VisualBasic.PowerPacks
+
 Public Class ShapeOnEnabled
     Dim canvas As New ShapeContainer
     Dim theLine As New DisabledLine

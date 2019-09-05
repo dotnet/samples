@@ -1,4 +1,5 @@
 ﻿Imports Microsoft.VisualBasic.PowerPacks
+
 Public Class ShapeMouseDown
     ' <Snippet1>
     Private Sub RectangleShape1_MouseDown(

@@ -1,6 +1,6 @@
 ﻿'<Snippet1>
-Imports System
 Imports System.Management
+
 ' This sample demonstrates how to
 ' enumerate all methods in
 ' Win32_LogicalDisk class using

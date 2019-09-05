@@ -3,6 +3,7 @@
 Imports System.Web.Compilation
 Imports System.Security
 Imports System.Security.Permissions
+
 Namespace PrecompBuildSystem
 
     <PermissionSet(SecurityAction.Demand, Unrestricted:=true)> _

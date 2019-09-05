@@ -1,9 +1,9 @@
 ﻿' <Snippet1>
-Imports System
 Imports System.Data
 Imports System.Web
 Imports System.Web.Security
 Imports System.Web.UI
+
 ' Module that demonstrates one event handler for several events.
 Namespace Samples
 

@@ -1,4 +1,5 @@
 ﻿Imports Microsoft.VisualBasic.PowerPacks
+
 Public Class ShapeCollectionRemove
     ' <Snippet1>
     Private Sub Form1_Click() Handles Me.Click

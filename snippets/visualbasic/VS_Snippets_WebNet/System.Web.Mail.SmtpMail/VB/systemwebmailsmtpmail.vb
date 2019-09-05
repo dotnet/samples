@@ -1,7 +1,6 @@
 ﻿' <Snippet1>
-Imports System
 Imports System.Web.Mail
- 
+
 Namespace SendMail
    Public Class usage
       Public Sub DisplayUsage()

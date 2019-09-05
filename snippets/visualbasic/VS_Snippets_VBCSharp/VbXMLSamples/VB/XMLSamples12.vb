@@ -1,7 +1,7 @@
 ﻿' Topic: XML Descendant Axis Property
 '<Snippet26>  
 Imports <xmlns:ns = "http://SomeNamespace"> 
- 
+
 Class TestClass2
 
     Shared Sub TestPrefix()

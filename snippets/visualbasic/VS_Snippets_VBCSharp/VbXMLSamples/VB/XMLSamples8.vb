@@ -2,7 +2,7 @@
 
 '<Snippet19>  
 Imports <xmlns:ns = "http://SomeNamespace"> 
- 
+
 Class TestClass4
 
     Shared Sub TestPrefix()

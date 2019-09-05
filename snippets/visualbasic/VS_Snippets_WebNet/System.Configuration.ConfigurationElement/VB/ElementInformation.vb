@@ -1,13 +1,11 @@
 ﻿ ' File name: ElementInformation.cs
 ' Allowed snippet tags range: [71 - 90].
-Imports System
+
 ' using System.Collections.Generic;
 Imports System.Collections.Specialized
 Imports System.Collections
 Imports System.Text
 Imports System.Configuration
-
-
 
 Class UsingElementInformation
     

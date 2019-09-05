@@ -1,12 +1,11 @@
 ﻿' <snippet1>
-Imports System
 Imports System.Security.Permissions
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Web
 Imports System.Web.UI
- 
+
 Namespace Samples.AspNet.VB.Controls
 ' <snippet2>
     '////////////////////////////////////////////////////////////

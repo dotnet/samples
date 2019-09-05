@@ -5,7 +5,6 @@ Option Explicit On
 Imports System.Runtime.InteropServices
 ' </snippet13>
 Imports System.Diagnostics
-
 Imports System.Windows.Forms
 
 ' <snippet40>

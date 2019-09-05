@@ -1,4 +1,5 @@
 ﻿Imports Microsoft.VisualBasic.PowerPacks
+
 Public Class VbPowerPacksTabbing
 
     ' <Snippet1>

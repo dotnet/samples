@@ -6,6 +6,7 @@ Imports System.Runtime.InteropServices
 
 ' <snippet30>
 Imports System.Reflection
+
 <Assembly: AssemblyTitleAttribute("Production assembly 4"), 
 Module: CLSCompliant(True)> 
 ' </snippet30>

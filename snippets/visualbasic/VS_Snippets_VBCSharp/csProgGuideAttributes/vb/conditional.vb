@@ -2,6 +2,7 @@
 
 #Const TRACE_ON = True
 Imports System.Diagnostics
+
 Module TestConditionalAttribute
     Public Class Trace
         <Conditional("TRACE_ON")> 

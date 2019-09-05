@@ -1,6 +1,6 @@
 ﻿'<Snippet1>
-Imports System
 Imports System.Management
+
 Public Class RemoteConnect
 
     Public Overloads Shared Function Main( _

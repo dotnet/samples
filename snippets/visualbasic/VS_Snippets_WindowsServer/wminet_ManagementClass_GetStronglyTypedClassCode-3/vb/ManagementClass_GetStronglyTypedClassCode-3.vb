@@ -1,9 +1,9 @@
 ﻿'<Snippet1>
-Imports System
 Imports System.Management
 Imports System.CodeDom
 Imports System.IO
 Imports System.CodeDom.Compiler
+
 Class GenerateVBCode
 
     Public Overloads Shared Function _

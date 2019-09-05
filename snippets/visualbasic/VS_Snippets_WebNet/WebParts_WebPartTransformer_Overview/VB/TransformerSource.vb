@@ -5,6 +5,7 @@ Imports System.Reflection
 Imports System.Security.Permissions
 Imports System.Web.UI.WebControls
 Imports System.Web.UI.WebControls.WebParts
+
 ' <Snippet2>
 Namespace Samples.AspNet.VB.Controls
 

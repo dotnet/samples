@@ -1,7 +1,7 @@
 ﻿' Topic: How to: Access XML Attributes (Visual Basic)
 '<Snippet14>  
 Imports <xmlns:ns = "http://SomeNamespace"> 
- 
+
 Class TestClass3
 
     Shared Sub TestPrefix()

@@ -5,6 +5,7 @@ Option Strict
 Imports System
 Imports System.Web
 Imports System.Web.UI
+
 Namespace SimpleControlSamples
     Public Class InnerContent
         Inherits Control

@@ -9,6 +9,7 @@ Imports System.Web.Services
 
 ' <snippet13>
 Imports System.Reflection
+
 <Assembly: AssemblyTitleAttribute("Production assembly 4"),
 Module: CLSCompliant(True)> 
 ' </snippet13>

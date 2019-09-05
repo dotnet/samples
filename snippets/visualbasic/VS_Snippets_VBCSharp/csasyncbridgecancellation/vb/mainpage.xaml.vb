@@ -2,8 +2,10 @@
 '<snippet1>
 ' Add an Imports statement for SyndicationClient.
 Imports Windows.Web.Syndication
+
 ' Add an Imports statement for Tasks.
 Imports System.Threading.Tasks
+
 ' Add an Imports statement for CancellationToken.
 Imports System.Threading
 

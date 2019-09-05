@@ -1,4 +1,5 @@
 ﻿Imports Microsoft.VisualBasic.PowerPacks
+
 Public Class SimpleShapeDraw
     ' <Snippet1>
     Private Sub Form1_Load() Handles MyBase.Load

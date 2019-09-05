@@ -1,6 +1,7 @@
 ﻿' <Snippet2>
 Imports System.Web
 Imports System.Security.Permissions
+
 Namespace Samples.AspNet.VB.Controls
     <AspNetHostingPermission(SecurityAction.Demand, Level:=AspNetHostingPermissionLevel.Minimal)> _
     Public NotInheritable Class CustomCompareValidatorEvaluateIsValid

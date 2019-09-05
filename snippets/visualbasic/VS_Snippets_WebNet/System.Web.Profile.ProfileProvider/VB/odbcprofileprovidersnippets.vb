@@ -1,9 +1,9 @@
-﻿Imports System
-Imports System.Configuration
+﻿Imports System.Configuration
 Imports System.Collections.Specialized
 Imports System.Security.Permissions
 Imports System.Web
 Imports System.Web.Profile
+
 <AspNetHostingPermission(SecurityAction.Demand, Level:=AspNetHostingPermissionLevel.Minimal), _
  AspNetHostingPermission(SecurityAction.InheritanceDemand, Level:=AspNetHostingPermissionLevel.Minimal)> _
 Public Class SnippetProfileProvider

@@ -1,4 +1,5 @@
 ﻿Imports Microsoft.VisualBasic.PowerPacks
+
 Public Class ShapeIsAccessible
 
     Private Sub ShapeIsAccessible_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load

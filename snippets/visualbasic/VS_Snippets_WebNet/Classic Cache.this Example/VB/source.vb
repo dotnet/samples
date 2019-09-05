@@ -4,6 +4,7 @@ Imports System.Web
 Imports System.Web.UI
 Imports System.Web.UI.HTMLControls
 Imports System.Web.UI.WebControls
+
 Public Class Page1: Inherits Page
     Protected divCacheContents As HtmlGenericControl
     Protected txtName As TextBox

@@ -2,6 +2,7 @@
 Option Strict On
 Option Infer On
 Imports System.Collections.Generic
+
 '<Snippet1>
 Module Module1
 

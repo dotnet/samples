@@ -1,5 +1,4 @@
 ﻿' <Snippet1>
-Imports System
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.Web.Compilation
@@ -8,6 +7,7 @@ Imports System.Globalization
 Imports System.Collections
 Imports System.Reflection
 Imports System.Web.UI.Design
+
 Namespace CustomResourceProviders
     ' <Snippet2>
     <DesignTimeResourceProviderFactoryAttribute(GetType(CustomDesignTimeResourceProviderFactory))> _
