@@ -4,6 +4,7 @@ Option Strict
 Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
+
 Public Class Form1
     Inherits Form
     Protected checkBox1 As CheckBox
