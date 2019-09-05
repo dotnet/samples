@@ -3,6 +3,7 @@ Imports System.Collections
 Imports System.ComponentModel
 Imports System.Windows.Forms
 Imports System.IO
+
 Namespace CursorSetStyle
    Public Class Form1
       Inherits System.Windows.Forms.Form
