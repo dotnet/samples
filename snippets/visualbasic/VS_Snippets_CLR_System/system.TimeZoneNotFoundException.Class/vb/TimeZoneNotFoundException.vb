@@ -5,6 +5,7 @@ Option Strict On
 Imports System.IO
 Imports System.Runtime.Serialization
 Imports System.Runtime.Serialization.Formatters.Soap
+
 ' </Snippet4>
 
 <Assembly: CLSCompliant(True)>

@@ -15,7 +15,6 @@
 Imports System.Web.Services.Description
 Imports System.Collections
 Imports System.Xml
-Imports Microsoft.VisualBasic
 
 Class MyClass1
    Public Shared Sub Main()

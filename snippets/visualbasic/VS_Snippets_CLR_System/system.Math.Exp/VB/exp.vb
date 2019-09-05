@@ -1,7 +1,5 @@
 ﻿'<snippet1>
 ' Example for the Math.Exp( Double ) method.
-Imports Microsoft.VisualBasic
-
 Module ExpDemo
    
     Sub Main()

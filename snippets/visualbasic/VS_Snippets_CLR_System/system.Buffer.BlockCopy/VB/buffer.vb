@@ -1,7 +1,5 @@
 ﻿'<Snippet1>
 ' Example of the Buffer class methods.
-Imports Microsoft.VisualBasic
-
 Module BufferClassDemo
 
     ' Display the array elements from right to left in hexadecimal.

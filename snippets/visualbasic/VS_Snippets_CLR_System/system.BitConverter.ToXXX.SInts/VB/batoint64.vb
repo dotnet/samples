@@ -1,7 +1,5 @@
 ﻿'<Snippet3>
 ' Example of the BitConverter.ToInt64 method.
-Imports Microsoft.VisualBasic
-
 Module BytesToInt64Demo
 
     Const formatter As String = "{0,5}{1,27}{2,24}"

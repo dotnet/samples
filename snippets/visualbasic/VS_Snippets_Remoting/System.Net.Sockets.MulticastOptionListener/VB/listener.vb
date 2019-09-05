@@ -25,8 +25,6 @@
 Imports System.Net
 Imports System.Net.Sockets
 Imports System.Text
-Imports Microsoft.VisualBasic
-
 
 Namespace Mssc.TransportProtocols.Utilities
 

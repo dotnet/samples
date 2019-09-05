@@ -12,8 +12,6 @@
 '
 
 Imports System.Net
-Imports Microsoft.VisualBasic
-
 
 Public Class WebHeaderCollection_Remove
     

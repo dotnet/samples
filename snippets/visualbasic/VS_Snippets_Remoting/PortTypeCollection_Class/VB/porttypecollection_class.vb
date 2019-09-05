@@ -12,7 +12,6 @@
 Imports System.Web.Services.Description
 Imports System.Xml
 Imports System.Collections
-Imports Microsoft.VisualBasic
 
 Class MyPortTypeCollectionClass
    Public Shared Sub Main()

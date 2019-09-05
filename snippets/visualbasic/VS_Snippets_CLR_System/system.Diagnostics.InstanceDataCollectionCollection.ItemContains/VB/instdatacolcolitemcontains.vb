@@ -1,7 +1,6 @@
 ﻿'<snippet1>
 Imports System.Diagnostics
 Imports System.Collections
-Imports Microsoft.VisualBasic
 
 Module InstDataColColItemContainsMod
 

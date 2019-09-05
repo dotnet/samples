@@ -8,7 +8,6 @@
 '  otherwise an exception is thrown.
 
 Imports System.Net
-Imports Microsoft.VisualBasic
 
 Class NetworkCredential_GetCredential
     

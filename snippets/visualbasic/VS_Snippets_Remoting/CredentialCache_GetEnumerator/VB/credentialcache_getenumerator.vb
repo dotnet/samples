@@ -8,7 +8,6 @@
 
 Imports System.Net
 Imports System.Collections
-Imports Microsoft.VisualBasic
 Imports System.Environment
 
 Class CredentialCacheSnippet

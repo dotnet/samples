@@ -2,6 +2,7 @@
 Imports System.IO
 Imports System.Net
 Imports System.Text
+
 Namespace Examples.System.Net
     Public Class WebRequestGetExample
 

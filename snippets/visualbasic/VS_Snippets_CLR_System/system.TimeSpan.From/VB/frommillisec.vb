@@ -1,7 +1,5 @@
 ﻿'<Snippet2>
 ' Example of the TimeSpan.FromMilliseconds( Double ) method.
-Imports Microsoft.VisualBasic
-
 Module FromMillisecDemo
 
     Sub GenTimeSpanFromMillisec( millisec As Double )

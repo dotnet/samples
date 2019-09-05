@@ -5,7 +5,6 @@
 'if the entity requested was modified any time today.
 
 Imports System.Net
-Imports Microsoft.VisualBasic
 Imports System.Environment
 
 Class HttpWebResponseSnippet

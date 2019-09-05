@@ -2,7 +2,6 @@
 Imports System.Security.Policy
 Imports System.Security
 Imports System.Security.Permissions
-Imports Microsoft.VisualBasic
 
 Class GacDemo
     <STAThread()> _
