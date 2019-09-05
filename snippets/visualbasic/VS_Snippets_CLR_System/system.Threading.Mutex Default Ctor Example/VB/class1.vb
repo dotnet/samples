@@ -5,7 +5,6 @@
 ' AppDomain boundaries.
  
 Imports System.Threading
-Imports Microsoft.VisualBasic
 
 Class Test
     ' Create a new Mutex. The creating thread does not own the

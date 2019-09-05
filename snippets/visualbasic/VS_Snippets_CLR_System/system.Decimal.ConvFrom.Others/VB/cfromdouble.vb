@@ -1,7 +1,5 @@
 ﻿'<Snippet2>
 ' Example of the explicit conversion from Double to Decimal.
-Imports Microsoft.VisualBasic
-
 Module DecimalFromDoubleDemo
 
     Const formatter As String = "{0,25:E16}{1,33}"

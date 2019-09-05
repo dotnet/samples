@@ -10,7 +10,6 @@
 
 Imports System.Net
 Imports System.Collections
-Imports Microsoft.VisualBasic
 
 Namespace CrendentialSample
     

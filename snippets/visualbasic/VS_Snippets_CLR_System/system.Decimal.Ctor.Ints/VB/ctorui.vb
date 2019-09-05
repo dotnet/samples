@@ -1,7 +1,5 @@
 ﻿'<Snippet2>
 ' Example of the Decimal( UInt32 ) constructor.
-Imports Microsoft.VisualBasic
-
 Module DecimalCtorUIDemo
 
     ' Create a Decimal object and display its value.

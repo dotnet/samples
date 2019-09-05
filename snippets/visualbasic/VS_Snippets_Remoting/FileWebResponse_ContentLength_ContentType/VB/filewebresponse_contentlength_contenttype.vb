@@ -5,7 +5,6 @@
 'and content type of the entity body in the response onto the console 
 
 Imports System.Net
-Imports Microsoft.VisualBasic
 Imports System.Environment
 
 

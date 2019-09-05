@@ -1,7 +1,5 @@
 ﻿'<snippet1>
 ' Example for the String.IndexOf( Char, Integer, Integer ) method.
-Imports Microsoft.VisualBasic
-
 Module IndexOfCII
    
     Sub Main()

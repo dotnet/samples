@@ -26,7 +26,6 @@
 Imports System.Reflection
 Imports System.Security.Permissions
 Imports System.Web.Services.Protocols
-Imports Microsoft.VisualBasic
 
 Public Class MyService
    

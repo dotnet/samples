@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 ' Compile using /r:System.dll.
-Imports Microsoft.VisualBasic
 Imports System.Net
 Imports System.Net.Sockets
 

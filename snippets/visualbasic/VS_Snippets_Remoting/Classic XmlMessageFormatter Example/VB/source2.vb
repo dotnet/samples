@@ -1,6 +1,4 @@
 ﻿' <Snippet2>
-Imports Microsoft.VisualBasic
-
 Public Class Order
     
     Public itemId As Integer

@@ -1,7 +1,5 @@
 ﻿'<Snippet4>
 ' Example of the BitConverter.ToSingle method.
-Imports Microsoft.VisualBasic
-
 Module BytesToSingleDemo
 
     Const formatter As String = "{0,5}{1,17}{2,18:E7}"

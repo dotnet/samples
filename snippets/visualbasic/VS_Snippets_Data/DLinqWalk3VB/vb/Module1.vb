@@ -1,6 +1,7 @@
 ﻿' <Snippet1>
 Imports System.Data.Linq
 Imports System.Data.Linq.Mapping
+
 ' </Snippet1>
 
 Module Module1

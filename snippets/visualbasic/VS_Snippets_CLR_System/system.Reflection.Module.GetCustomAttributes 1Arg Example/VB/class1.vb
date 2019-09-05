@@ -1,5 +1,6 @@
 ﻿' <snippet1>
 Imports System.Reflection
+
 ' Define a module-level attribute.
 <Module: ReflectionModule_Examples.MySimpleAttribute("module-level")> 
 

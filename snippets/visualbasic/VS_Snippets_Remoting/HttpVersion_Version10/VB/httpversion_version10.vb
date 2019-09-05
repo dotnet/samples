@@ -9,8 +9,6 @@
 
 Imports System.IO
 Imports System.Net
-Imports Microsoft.VisualBasic
-
 
 Class HttpVersion_Version10
     

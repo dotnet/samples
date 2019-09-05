@@ -4,7 +4,6 @@
 'was redirected by the server. 
 
 Imports System.Net
-Imports Microsoft.VisualBasic
 Imports System.Environment
 
 Class HttpWebResponseSnippet

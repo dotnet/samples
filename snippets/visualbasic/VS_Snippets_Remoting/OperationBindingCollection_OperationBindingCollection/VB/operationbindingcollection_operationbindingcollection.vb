@@ -19,7 +19,6 @@
 
 ' <Snippet1>
 Imports System.Web.Services.Description
-Imports Microsoft.VisualBasic
 
 Class MyOperationBindingCollectionSample
 

@@ -5,7 +5,6 @@
 'will respond with a challenge string which is extracted using 'GetResponse' method.
 
 Imports System.Net
-Imports Microsoft.VisualBasic
 Imports System.Environment
 
 Class HttpWebResponseSnippet

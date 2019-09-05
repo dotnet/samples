@@ -17,7 +17,6 @@ Imports System.Net
 Imports System.IO
 Imports System.Text
 Imports System.Collections
-Imports Microsoft.VisualBasic
 
 Namespace Mssc.Services.Authentication
 

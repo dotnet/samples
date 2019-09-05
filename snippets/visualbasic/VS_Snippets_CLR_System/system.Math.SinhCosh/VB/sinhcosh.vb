@@ -1,7 +1,5 @@
 ﻿'<snippet1>
 ' Example for the hyperbolic Math.Sinh( Double ) and Math.Cosh( Double ) methods.
-Imports Microsoft.VisualBasic
-
 Module SinhCosh
    
     Sub Main()
