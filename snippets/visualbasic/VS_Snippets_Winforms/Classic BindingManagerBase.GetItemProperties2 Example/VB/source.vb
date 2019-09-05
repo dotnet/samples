@@ -3,6 +3,7 @@ Option Strict
 
 Imports System.ComponentModel
 Imports System.Windows.Forms
+
 Public Class Form1
     Inherits Form
     Protected textBox1 As TextBox
