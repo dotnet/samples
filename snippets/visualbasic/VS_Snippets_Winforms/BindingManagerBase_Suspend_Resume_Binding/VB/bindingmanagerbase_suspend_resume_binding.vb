@@ -11,6 +11,7 @@ Imports System.Data
 Imports System.Drawing
 Imports System.Globalization
 Imports System.Windows.Forms
+
 Public Class Form1
    Inherits Form
    Private button1 As Button
