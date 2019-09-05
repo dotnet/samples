@@ -7,6 +7,7 @@
 Imports System.Data
 Imports System.Windows.Forms
 Imports System.IO
+
 Public Class DataFormats_Dif
    
    Public Shared Sub Main()
