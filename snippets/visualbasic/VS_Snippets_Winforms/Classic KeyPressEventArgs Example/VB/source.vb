@@ -1,6 +1,7 @@
 ﻿Imports System.Data
 Imports System.ComponentModel
 Imports System.Windows.Forms
+
 ' <Snippet1>
 Public Class myKeyPressClass
     Private Shared keyPressCount As Long = 0
