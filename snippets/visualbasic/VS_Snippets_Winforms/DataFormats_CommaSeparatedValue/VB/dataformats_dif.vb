@@ -7,7 +7,6 @@
 Imports System.Data
 Imports System.Windows.Forms
 Imports System.IO
-Imports Microsoft.VisualBasic
 
 Public Class DataFormats_Dif
    
