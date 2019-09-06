@@ -4,7 +4,6 @@ Option Strict
 
 Imports System.Web
 Imports System.Web.UI
-Imports Microsoft.VisualBasic
 
 Namespace SimpleControlSamples
     Public Class InnerContent
