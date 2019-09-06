@@ -1,5 +1,6 @@
 ﻿'<snippet1>
 Imports System.Collections.Generic
+
 ' Simple business object. A PartId is used to identify a part 
 ' but the part name can change. 
 Public Class Part

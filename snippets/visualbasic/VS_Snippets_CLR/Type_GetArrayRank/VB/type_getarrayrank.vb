@@ -1,6 +1,4 @@
 ﻿' <Snippet1>
-Imports Microsoft.VisualBasic
-
 Class MyArrayRankSample
     Public Shared Sub Main()
         Try

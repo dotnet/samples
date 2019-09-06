@@ -1,6 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
-Imports System.Windows
+﻿Imports System.Windows
 
 Namespace VisualBasic
     Partial Public Class App

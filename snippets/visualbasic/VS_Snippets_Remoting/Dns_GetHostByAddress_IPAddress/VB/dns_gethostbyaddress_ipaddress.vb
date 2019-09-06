@@ -8,9 +8,6 @@
 
 Imports System.Net
 Imports System.Net.Sockets
-Imports Microsoft.VisualBasic
-
-
 
 Class DnsHostByAddress
     

@@ -7,6 +7,7 @@ Imports System.Net.Mail
 Imports System.Net.Mime
 Imports System.Threading
 Imports System.ComponentModel
+
 Namespace Examples.SmtpExamples.Async
     Public Class SimpleAsynchronousExample
         Private Shared mailSent As Boolean = False

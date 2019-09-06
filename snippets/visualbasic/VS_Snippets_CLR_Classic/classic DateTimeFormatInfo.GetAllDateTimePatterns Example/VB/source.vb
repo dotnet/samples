@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Globalization
-Imports Microsoft.VisualBasic
 
 Public Class SamplesDateTimeFormatInfo    
     

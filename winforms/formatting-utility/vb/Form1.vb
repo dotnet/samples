@@ -5,7 +5,7 @@ Imports System.Text.RegularExpressions
 
 Public Class Form1
 
-   Private label As ToolStripStatusLabel
+    Private label As ToolStripStatusLabel
 
     Private ReadOnly rm As New ResourceManager("Formatter.Resources", [GetType]().Assembly)
     Private decimalSeparator As String
@@ -20,8 +20,8 @@ Public Class Form1
     Private Const DEFAULTSELECTION As Integer = 5
     Private ReadOnly dateFormats() As String = {"g", "d", "D", "f", "F", "g", "G", "M", "O", "R", "s", "t", "T", "u", "U", "Y"}
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Disable Value text box.
+    Private Sub Form1_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        ' Disable OK button.
         OKButton.Enabled = False
 
         ' Add label to status bar.
@@ -40,7 +40,7 @@ Public Class Form1
 
         ' Populate CultureNames list box with culture names
         Dim cultures() As CultureInfo = CultureInfo.GetCultures(CultureTypes.AllCultures)
-        ' Define a string array so that we can sort and modify the names.
+        ' Define a string list so that we can sort and modify the names.
         Dim names As New List(Of String)
         Dim currentIndex As Integer      ' Index of the current culture.
 
@@ -79,7 +79,7 @@ Public Class Form1
             pDesignator = String.Empty
         End If
         ' For regex pattern for date and time components.
-        pattern = "^\s*\S+\s+\S+\s+\S+(\s+\S+)?(?<!" + amDesignator + "|" + aDesignator + "|" + pmDesignator + "|" + pDesignator + ")\s*$"
+        pattern = $"^\s*\S+\s+\S+\s+\S+(\s+\S+)?(?<!{amDesignator}|{aDesignator}|{pmDesignator}|{pDesignator})\s*$"
 
         ' Select NumberBox for numeric string and populate combo box.
         NumberBox.Checked = True
@@ -140,11 +140,8 @@ Public Class Form1
             End If
 
             ' Format date value.
-            If hasOffset Then
-                Result.Text = dto.ToString(FormatStrings.Text, culture)
-            Else
-                Result.Text = dat.ToString(FormatStrings.Text, culture)
-            End If
+
+            Me.Result.Text = If(hasOffset, dto, dat).ToString(Me.FormatStrings.Text, culture)
         Else
             ' Handle formatting of a number.
             Dim intToFormat As Long
@@ -212,11 +209,7 @@ Public Class Form1
             label.Text = String.Empty
             valueInfo = False
         End If
-        If String.IsNullOrEmpty(Value.Text) Then
-            OKButton.Enabled = False
-        Else
-            OKButton.Enabled = True
-        End If
+        OKButton.Enabled = Not String.IsNullOrEmpty(Value.Text)
     End Sub
 
     Private Sub FormatStrings_SelectedValueChanged(sender As Object, e As EventArgs) Handles FormatStrings.SelectedValueChanged, CultureNames.SelectedValueChanged

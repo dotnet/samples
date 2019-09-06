@@ -7,7 +7,6 @@
 Imports System.IO
 Imports System.Web.Services.Protocols
 Imports System.Web.Services
-Imports MicroSoft.VisualBasic
 
 Public Class MySoapExtension
    Inherits SoapExtension

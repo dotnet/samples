@@ -14,7 +14,6 @@
 ' is raised which is confirmed by the message shown by the
 ' alert message box.
 
-Imports System
 Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms

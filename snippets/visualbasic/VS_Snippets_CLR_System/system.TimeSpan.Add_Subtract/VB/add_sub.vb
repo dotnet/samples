@@ -1,7 +1,5 @@
 ﻿'<Snippet1>
 ' Example of the TimeSpan.Add( ) and TimeSpan.Subtract( ) methods.
-Imports Microsoft.VisualBasic
-
 Module TimeSpanAddSubDemo
     
     Const dataFmt As String = "{0,-24}{1,24}"

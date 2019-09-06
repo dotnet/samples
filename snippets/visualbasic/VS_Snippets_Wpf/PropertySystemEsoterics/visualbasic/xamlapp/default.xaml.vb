@@ -1,12 +1,10 @@
-﻿Imports System
-Imports System.Windows
+﻿Imports System.Windows
 Imports System.Collections
 Imports System.Windows.Media
 Imports System.Windows.Controls
 Imports System.Windows.Shapes
 Imports System.Windows.Navigation
 Imports System.Text
-Imports Microsoft.VisualBasic
 
 Namespace SDKSample
 	Partial Public Class XAMLAPP

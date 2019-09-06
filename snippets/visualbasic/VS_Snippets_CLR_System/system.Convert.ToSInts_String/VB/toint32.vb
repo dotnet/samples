@@ -2,7 +2,6 @@
 ' Example of the Convert.ToInt32( String ) and 
 ' Convert.ToInt32( String, IFormatProvider ) methods.
 Imports System.Globalization
-Imports Microsoft.VisualBasic
 
 Module ToInt32ProviderDemo
 

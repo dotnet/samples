@@ -1,7 +1,5 @@
 ﻿'<Snippet3>
 ' Example of the explicit conversion from Single to Decimal.
-Imports Microsoft.VisualBasic
-
 Module DecimalFromSingleDemo
 
     Const formatter As String = "{0,16:E7}{1,33}"

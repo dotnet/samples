@@ -2,7 +2,6 @@
 ' Copyright (c) Microsoft Corporation. All rights reserved.
 
 
-Imports System
 Imports System.IO
 Imports System.Collections.Generic
 Imports System.IO.Packaging

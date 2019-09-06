@@ -8,13 +8,11 @@
 ' and displays the count of the collection and the elements of the
 ' array.
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Windows.Forms
 Imports System.Data
-Imports MicroSoft.VisualBasic
 
 Public Class MyForm
    Inherits Form

@@ -8,7 +8,6 @@
 ' <Snippet1>
 ' <Snippet2>
 Imports System.Diagnostics
-Imports Microsoft.VisualBasic
 
 Class GetProcessesByNameClass
 

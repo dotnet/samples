@@ -10,7 +10,6 @@
 Imports System.Runtime.InteropServices
 Imports System.Security.Principal
 Imports System.Security.Permissions
-Imports Microsoft.VisualBasic
 Imports Microsoft.Win32.SafeHandles
 Imports System.Runtime.ConstrainedExecution
 Imports System.Security

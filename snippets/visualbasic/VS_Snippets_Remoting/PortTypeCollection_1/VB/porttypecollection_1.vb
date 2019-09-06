@@ -11,7 +11,6 @@
 
 Imports System.Web.Services.Description
 Imports System.Xml
-Imports Microsoft.VisualBasic
 
 Class MyPortTypeCollectionClass
    

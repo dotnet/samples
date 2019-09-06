@@ -1,6 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
-Imports System.Windows
+﻿Imports System.Windows
 Imports System.Windows.Navigation
 Imports System.Windows.Controls
 Imports System.Windows.Media

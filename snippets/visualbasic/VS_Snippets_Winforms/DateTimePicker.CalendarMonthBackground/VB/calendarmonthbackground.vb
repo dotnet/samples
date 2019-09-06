@@ -1,7 +1,6 @@
 ﻿
 ' compile with: -r:system.dll -r:system.windows.forms.dll -r:system.drawing.dll
 Imports System.Windows.Forms
-Imports System
 Imports System.Drawing
 
 Public Class [MyClass]

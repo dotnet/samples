@@ -9,7 +9,6 @@
 '
 '
 
-Imports System
 Imports System.Windows
 Imports System.Windows.Navigation
 Imports System.Windows.Media
@@ -17,7 +16,6 @@ Imports System.Windows.Media.Animation
 Imports System.Windows.Shapes
 Imports System.Windows.Controls
 Imports System.Windows.Input
-Imports Microsoft.VisualBasic
 
 Namespace Microsoft.Samples.Animation.TimingBehaviors
 

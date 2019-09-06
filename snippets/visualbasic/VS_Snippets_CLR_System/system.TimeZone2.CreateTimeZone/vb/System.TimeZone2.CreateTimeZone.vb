@@ -2,9 +2,11 @@
 Option Strict On
 
 Imports System.IO
+
 ' <Snippet6>
 Imports System.Collections.Generic
 Imports System.Collections.ObjectModel
+
 ' </Snippet6>
 
 <Assembly: CLSCompliant(True)>

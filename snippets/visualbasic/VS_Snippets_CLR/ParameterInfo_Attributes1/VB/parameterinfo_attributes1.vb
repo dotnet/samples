@@ -5,7 +5,6 @@
 
 ' <Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
 
 Public Class MyClass1
    

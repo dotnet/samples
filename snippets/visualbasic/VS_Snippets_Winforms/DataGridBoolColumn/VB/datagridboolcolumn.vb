@@ -17,7 +17,6 @@
 '   changing 'FalseValue' raises the 'FalseValueChanged' and
 '   'AllowNull' changes the 'AllowNullChanged' events respectively.
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel

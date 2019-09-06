@@ -13,7 +13,6 @@
 ' description file.
 
 Imports System.Web.Services.Description
-Imports Microsoft.VisualBasic
 
 Class PortCollection_Item
     Public Shared Sub Main()

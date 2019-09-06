@@ -6,7 +6,6 @@
 
 Imports System.Reflection
 Imports System.Security
-Imports Microsoft.VisualBasic
 
 ' <Snippet1>
 Class [MyClass]

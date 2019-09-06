@@ -1,7 +1,5 @@
 ﻿'<Snippet4>
 ' Example of the BitConverter.GetBytes( Double ) method.
-Imports Microsoft.VisualBasic
-
 Module GetBytesDoubleDemo
 
     Const formatter As String = "{0,25:E16}{1,30}"

@@ -18,9 +18,6 @@
 Imports System.IO
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
-
-
 
 Class HttpWebRequest_AllowWriteStreamBuffering
     Public Shared Sub Main()

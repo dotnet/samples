@@ -5,11 +5,13 @@ Option Strict On
 Imports System.Data.SqlTypes
 Imports System.Collections.Generic
 Imports System.Text
+
 '<snippetEntityObjectUsing>
 Imports System.Data
 Imports System.Data.Objects.DataClasses
 Imports System.Data.Metadata.Edm
 Imports Microsoft.Samples.Edm
+
 '</snippetEntityObjectUsing>
 
 '<snippetCustomObjectAssemblyAttributes>

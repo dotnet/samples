@@ -4,7 +4,6 @@
 ' On clicking the "Unselect Row" button, the selected row of
 ' the Datagrid is unselected.
 
-Imports System
 Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms

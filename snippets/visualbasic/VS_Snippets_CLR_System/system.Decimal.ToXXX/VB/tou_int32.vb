@@ -1,7 +1,5 @@
 ﻿'<Snippet2>
 ' Example of the Decimal.ToInt32 and Decimal.ToUInt32 methods.
-Imports Microsoft.VisualBasic
-
 Module DecimalToU_Int32Demo
 
     Dim formatter As String = "{0,17}{1,19}{2,19}"

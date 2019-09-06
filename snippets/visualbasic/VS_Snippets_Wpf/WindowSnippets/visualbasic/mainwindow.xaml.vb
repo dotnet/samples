@@ -1,6 +1,5 @@
 ﻿'<SnippetWindowCODEBEHIND>
 
-Imports System
 Imports System.Windows
 Partial Public Class MainWindow
 	Inherits Window
