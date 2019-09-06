@@ -5,7 +5,6 @@ using System.Web;
 using System.Web.Services;
 using System.Web.Services.Protocols;
 
-
 // Binding is defined on a remote server, but this XML Web service implements
 // at least one operation in that binding.
  [ WebServiceBinding(Name="RemoteBinding", 
