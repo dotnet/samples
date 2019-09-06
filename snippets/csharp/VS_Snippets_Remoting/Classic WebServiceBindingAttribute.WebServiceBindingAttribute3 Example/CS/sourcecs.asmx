@@ -5,7 +5,6 @@ using System.Web;
 using System.Web.Services;
 using System.Web.Services.Protocols;
 
-// <Snippet1>
 
 // Binding is defined on a remote server, but this XML Web service implements
 // at least one operation in that binding.
@@ -20,5 +19,3 @@ using System.Web.Services.Protocols;
               return "Member of a binding defined on another server";
       }
  }
- 
-// </Snippet1>
