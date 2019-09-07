@@ -25,10 +25,10 @@ Module Module1
             ' </Snippet3>
             
             ' <Snippet4>
-            ' Remove elements that have non-media extensions. See the 'isDoc' method.
+            ' Remove elements that have non-media extensions. See the 'IsDoc' method.
             Console.WriteLine("Remove docs from the set...")
             Console.WriteLine($"{vbTab}Count before: {mediaFiles1.Count}")
-            mediaFiles1.RemoveWhere(AddressOf isDoc)
+            mediaFiles1.RemoveWhere(AddressOf IsDoc)
             Console.WriteLine($"{vbTab}Count after: {mediaFiles1.Count}")
             ' </Snippet4>
         
@@ -90,18 +90,15 @@ Module Module1
     ' <Snippet8>
     ' Defines a predicate delegate to use
     ' for the SortedSet.RemoveWhere method.
-    Private Function isDoc(ByVal s As String) As Boolean
-        If (s.ToLower.EndsWith(".txt") _
-                    OrElse (s.ToLower.EndsWith(".doc") _
-                    OrElse (s.ToLower.EndsWith(".xls") _
-                    OrElse (s.ToLower.EndsWith(".xlsx") _
-                    OrElse (s.ToLower.EndsWith(".pdf") _
-                    OrElse (s.ToLower.EndsWith(".doc") _
-                    OrElse s.ToLower.EndsWith(".docx"))))))) Then
-            Return True
-        Else
-            Return False
-        End If
+    Private Function IsDoc(s As String) As Boolean
+        Dim lowerCase As String = s.ToLower()
+        Return s.EndsWith(".txt") OrElse 
+    			s.EndsWith(".doc") OrElse 
+    			s.EndsWith(".xls") OrElse
+                s.EndsWith(".xlsx") OrElse
+                s.EndsWith(".pdf") OrElse
+                s.EndsWith(".doc") OrElse
+                s.EndsWith(".docx")
     End Function
     ' </Snippet8>
     
