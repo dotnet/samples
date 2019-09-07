@@ -4,8 +4,7 @@
 
     Protected catalog As ListDictionary
     Protected returnValue As String
-    Sub Page_Load(sender As Object, e As _
-        System.EventArgs) Handles Me.Load
+    Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
         Dim cbReference As String
         cbReference = Page.ClientScript.GetCallbackEventReference(Me,
             "arg", "ReceiveServerData", "context")
