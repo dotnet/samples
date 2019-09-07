@@ -91,7 +91,7 @@ Module Module1
     ' Defines a predicate delegate to use
     ' for the SortedSet.RemoveWhere method.
     Private Function IsDoc(s As String) As Boolean
-        Dim lowerCase As String = s.ToLower()
+        s = s.ToLower()
         Return s.EndsWith(".txt") OrElse 
     			s.EndsWith(".doc") OrElse 
     			s.EndsWith(".xls") OrElse
