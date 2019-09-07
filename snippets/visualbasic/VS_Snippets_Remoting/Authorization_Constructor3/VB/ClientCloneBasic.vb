@@ -12,7 +12,6 @@ Imports System.Text
 Imports System.IO
 Imports System.Collections
 Imports CloneBasicAuthentication
-Imports Microsoft.VisualBasic
 
 Namespace CloneBasicAuthenticationClient
     

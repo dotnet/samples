@@ -2,7 +2,6 @@
 ' Copyright (c) Microsoft Corporation. All rights reserved.
 
 
-Imports System
 Imports System.Collections.ObjectModel
 Imports System.IO
 Imports System.Net
@@ -17,7 +16,6 @@ Imports System.Windows.Media.Imaging
 Imports System.Xml
 Imports System.Security.Permissions
 Imports WinForms = Microsoft.Win32
-Imports Microsoft.VisualBasic
 
 Namespace SdkSample
 	' ========================= partial class Window1 ========================

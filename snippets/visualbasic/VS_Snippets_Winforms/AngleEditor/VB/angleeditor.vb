@@ -1,6 +1,5 @@
 ﻿'<Snippet1>
 Option Strict Off
-Imports System
 Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Drawing.Design

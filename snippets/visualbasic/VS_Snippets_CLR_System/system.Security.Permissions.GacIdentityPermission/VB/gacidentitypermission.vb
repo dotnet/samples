@@ -1,9 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Security
 Imports System.Security.Permissions
-Imports Microsoft.VisualBasic
-
-
 
 Public Class GacIdentityPermissionDemo
 

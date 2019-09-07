@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 
-Imports Microsoft.VisualBasic
 Imports System.Collections.Generic
 Imports System.AddIn.Pipeline
 Namespace LibraryContractsHostAdapters

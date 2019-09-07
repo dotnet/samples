@@ -1,7 +1,5 @@
 ﻿'<Snippet2>
 ' Example of the Decimal( Double ) constructor.
-Imports Microsoft.VisualBasic
-
 Module DecimalCtorDoDemo
 
     ' Get the exception type name; remove the namespace prefix.

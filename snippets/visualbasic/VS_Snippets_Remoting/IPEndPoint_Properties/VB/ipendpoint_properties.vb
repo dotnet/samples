@@ -17,8 +17,6 @@ Imports System.Net
 Imports System.Text
 Imports System.Net.Sockets
 Imports System.Runtime.InteropServices
-Imports Microsoft.VisualBasic
-
 
 Class IPEndPointSnippet
     

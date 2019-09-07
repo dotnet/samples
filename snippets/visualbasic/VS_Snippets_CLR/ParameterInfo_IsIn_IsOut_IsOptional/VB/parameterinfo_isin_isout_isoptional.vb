@@ -16,9 +16,6 @@
 Imports System.Reflection
 Imports System.Threading
 Imports System.Reflection.Emit
-Imports Microsoft.VisualBasic
-
-
 
 Public Class ParameterInfo_IsIn_IsOut_IsOptional
    

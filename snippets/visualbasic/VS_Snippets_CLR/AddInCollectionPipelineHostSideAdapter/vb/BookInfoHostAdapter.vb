@@ -1,6 +1,5 @@
 ﻿' <Snippet7>
 
-Imports Microsoft.VisualBasic
 Namespace LibraryContractsHostAdapters
 Public Class BookInfoHostAdapter
 

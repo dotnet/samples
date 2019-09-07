@@ -7,13 +7,11 @@
 ' TreeNodes. It checks for a TreeNode in the collection and also
 ' gets an Enumerator to iterate through the collection.
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Windows.Forms
 Imports System.Data
-Imports MicroSoft.VisualBasic
 
 Public Class MyForm
    Inherits Form

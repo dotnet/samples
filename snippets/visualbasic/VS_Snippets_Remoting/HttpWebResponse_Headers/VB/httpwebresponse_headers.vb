@@ -5,7 +5,6 @@
 'all the response headers to the console. 
 
 Imports System.Net
-Imports Microsoft.VisualBasic
 Imports System.Environment
 
 Class HttpWebResponseSnippet

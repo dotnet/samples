@@ -1,7 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Reflection
 Imports System.ComponentModel.Design
-Imports Microsoft.VisualBasic
 
 Class FieldInfo_IsSpecialName
 

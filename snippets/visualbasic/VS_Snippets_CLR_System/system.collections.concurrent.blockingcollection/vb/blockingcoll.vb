@@ -58,7 +58,7 @@ End Class
 
 '<snippet2>
 'Imports System.Collections.Concurrent
-' Imports System.Threading
+'Imports System.Threading
 'Imports System.Threading.Tasks
 
 Class TryTakeDemo

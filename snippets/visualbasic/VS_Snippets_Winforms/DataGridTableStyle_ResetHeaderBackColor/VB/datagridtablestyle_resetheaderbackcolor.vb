@@ -8,7 +8,6 @@
 ' user clicks the 'ResetHeaderBackColor' button it changes the Header 
 ' Background Color to default color.
 
-Imports System
 Imports System.ComponentModel
 Imports System.Data
 Imports System.Drawing

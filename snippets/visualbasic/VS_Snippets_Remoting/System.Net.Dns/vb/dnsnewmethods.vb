@@ -1,7 +1,6 @@
 ﻿Imports System.Net
 Imports System.Net.Sockets
 Imports System.Threading
-Imports Microsoft.VisualBasic
 
 Namespace DnsNew
 

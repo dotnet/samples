@@ -1,7 +1,5 @@
 ﻿'<Snippet1>
 ' Example of the TimeSpan( Long ) constructor.
-Imports Microsoft.VisualBasic
-
 Module TimeSpanCtorLDemo
 
     ' Create a TimeSpan object and display its value.

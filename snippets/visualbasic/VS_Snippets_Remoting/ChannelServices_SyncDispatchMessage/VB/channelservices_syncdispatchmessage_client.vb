@@ -13,7 +13,6 @@ Imports System.Runtime.Remoting.Channels.Tcp
 Imports System.Runtime.Remoting.Proxies
 Imports System.Runtime.Remoting.Messaging
 Imports System.Security.Permissions
-Imports Microsoft.VisualBasic
 
 ' <Snippet1>
 ' Create a custom 'RealProxy'.

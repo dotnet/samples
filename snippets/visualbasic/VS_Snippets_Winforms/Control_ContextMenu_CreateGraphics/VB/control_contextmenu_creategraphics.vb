@@ -11,7 +11,6 @@
 ' instance of 'Graphics' class is obtained by calling 'CreateGraphics' method and draws an
 ' ellipse inside the 'TextBox' control.
 
-Imports System
 Imports System.Drawing
 Imports System.ComponentModel
 Imports System.Windows.Forms

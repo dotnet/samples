@@ -1,7 +1,6 @@
 ﻿Imports System.Data
 Imports System.Data.OleDb
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
 
 Public Class Form1
     Inherits Form

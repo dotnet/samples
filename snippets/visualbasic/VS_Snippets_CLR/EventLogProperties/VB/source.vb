@@ -4,7 +4,6 @@ Imports System.Globalization
 Imports System.Data
 Imports System.Diagnostics
 Imports Microsoft.Win32
-Imports Microsoft.VisualBasic
 
 Class EventLogProperties
    

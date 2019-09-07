@@ -1,12 +1,10 @@
 ﻿Imports System.Data
 Imports System.Data.OleDb
-Imports Microsoft.VisualBasic
 
 Public Class Sample
 
   Public Shared Sub Main()
   
-
   End Sub
 
 '<Snippet1>

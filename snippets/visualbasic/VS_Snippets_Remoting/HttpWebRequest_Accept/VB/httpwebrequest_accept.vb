@@ -18,8 +18,6 @@
 
 Imports System.IO
 Imports System.Net
-Imports Microsoft.VisualBasic
-
 
 Class HttpWebRequest_Accept
     

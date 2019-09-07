@@ -9,8 +9,6 @@ Imports System.Security.Policy
 Imports System.Security.Permissions
 Imports System.Reflection
 Imports System.Globalization
-Imports Microsoft.VisualBasic
-
 
 Class PolicyLevelSample
 

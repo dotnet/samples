@@ -4,7 +4,6 @@
 ' The 'VisibleChanged' event is raised when the 'Visible' property value of
 ' 'Label' control has changed.
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel

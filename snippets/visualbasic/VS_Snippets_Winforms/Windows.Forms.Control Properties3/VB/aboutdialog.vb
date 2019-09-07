@@ -1,9 +1,7 @@
-﻿Imports System
-Imports System.Drawing
+﻿Imports System.Drawing
 Imports System.ComponentModel
 Imports System.Windows.Forms
 Imports System.Reflection
-Imports Microsoft.VisualBasic
 Imports System.Runtime.CompilerServices
 
 <Assembly: AssemblyCompany("Microsoft")>

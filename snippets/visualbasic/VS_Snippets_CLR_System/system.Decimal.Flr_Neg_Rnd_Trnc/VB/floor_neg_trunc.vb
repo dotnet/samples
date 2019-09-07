@@ -1,8 +1,6 @@
 ﻿'<Snippet1>
 ' Example of the Decimal.Negate, Decimal.Floor, and Decimal.Truncate 
 ' methods. 
-Imports Microsoft.VisualBasic
-
 Module DecimalFloorNegTruncDemo
     
     Const dataFmt As String = "{0,-30}{1,26}"

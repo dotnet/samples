@@ -1,7 +1,5 @@
 ﻿'<snippet1>
 ' Sample for String.CompareOrdinal(String, String)
-Imports Microsoft.VisualBasic
-
 Class Sample
    Public Shared Sub Main()
       Dim str1 As [String] = "ABCD"

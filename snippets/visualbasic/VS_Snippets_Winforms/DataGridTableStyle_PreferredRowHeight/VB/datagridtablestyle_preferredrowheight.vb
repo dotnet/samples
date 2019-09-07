@@ -4,7 +4,6 @@
 ' class. It adds a DataGrid, Button and a TextBox to a form. It changes the 
 ' 'PreferredRowHeight' property by taking the value entered in the textbox.
 
-Imports System
 Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms

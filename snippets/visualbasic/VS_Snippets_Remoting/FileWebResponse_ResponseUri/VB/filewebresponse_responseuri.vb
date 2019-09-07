@@ -5,7 +5,6 @@
 'system resource that provided the response.
 
 Imports System.Net
-Imports Microsoft.VisualBasic
 Imports System.Environment
 
 

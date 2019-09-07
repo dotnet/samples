@@ -8,7 +8,6 @@
 Imports System.IO
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
 Imports System.Environment
 
 Class WebRequest_Preauthenticate

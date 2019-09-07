@@ -1,7 +1,5 @@
 ﻿'<Snippet2>
 ' Example of the BitConverter.GetBytes( Char ) method.
-Imports Microsoft.VisualBasic
-
 Module GetBytesCharDemo
 
     Const formatter As String = "{0,10}{1,16}"

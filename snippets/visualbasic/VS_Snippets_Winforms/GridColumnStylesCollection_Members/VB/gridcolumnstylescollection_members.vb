@@ -7,13 +7,11 @@
 ' In this program the user can add custom styles and clear them. The information on the styles
 ' is displayed depending on the option chosen by user.
 
-Imports System
 Imports System.ComponentModel
 Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
 Imports System.Collections
-Imports Microsoft.VisualBasic
 
 Public Class MyForm
     Inherits System.Windows.Forms.Form

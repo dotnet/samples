@@ -1,7 +1,6 @@
 ﻿'<Snippet1>
 ' Example of the Single.Parse( ) methods.
 Imports System.Globalization
-Imports Microsoft.VisualBasic
 
 Module SingleParseDemo
     
