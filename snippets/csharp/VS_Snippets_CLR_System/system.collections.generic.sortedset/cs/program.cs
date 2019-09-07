@@ -31,10 +31,10 @@ class Program
 
             // <Snippet4>
             // Remove elements that have non-media extensions.
-            // See the 'isDoc' method.
+            // See the 'IsDoc' method.
             Console.WriteLine("Remove docs from the set...");
             Console.WriteLine($"\tCount before: {mediaFiles1.Count}");
-            mediaFiles1.RemoveWhere(isDoc);
+            mediaFiles1.RemoveWhere(IsDoc);
             Console.WriteLine($"\tCount after: {mediaFiles1.Count}");
             // </Snippet4>
 
@@ -107,22 +107,16 @@ class Program
     // <Snippet8>
     // Defines a predicate delegate to use
     // for the SortedSet.RemoveWhere method.
-    private static bool isDoc(string s)
+    private static bool IsDoc(string s)
     {
-        if (s.ToLower().EndsWith(".txt") ||
-            s.ToLower().EndsWith(".doc") ||
-            s.ToLower().EndsWith(".xls") ||
-            s.ToLower().EndsWith(".xlsx") ||
-            s.ToLower().EndsWith(".pdf") ||
-            s.ToLower().EndsWith(".doc") ||
-            s.ToLower().EndsWith(".docx"))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        string lowerCase = s.ToLower();
+        return (lowerCase.EndsWith(".txt") ||
+            lowerCase.EndsWith(".doc") ||
+            lowerCase.EndsWith(".xls") ||
+            lowerCase.EndsWith(".xlsx") ||
+            lowerCase.EndsWith(".pdf") ||
+            lowerCase.EndsWith(".doc") ||
+            lowerCase.EndsWith(".docx"));
     }
     // </Snippet8>
 
