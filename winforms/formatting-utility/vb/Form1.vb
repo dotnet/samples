@@ -7,7 +7,7 @@ Public Class Form1
 
     Private label As ToolStripStatusLabel
 
-    Private ReadOnly rm As New ResourceManager("Formatter.Resources", Me.[GetType]().Assembly)
+    Private ReadOnly rm As New ResourceManager("Formatter.Resources", Me.GetType().Assembly)
     Private decimalSeparator As String
     Private amDesignator, pmDesignator, aDesignator, pDesignator As String
     Private pattern As String
