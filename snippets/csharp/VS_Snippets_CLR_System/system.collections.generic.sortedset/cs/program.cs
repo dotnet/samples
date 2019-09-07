@@ -109,14 +109,14 @@ class Program
     // for the SortedSet.RemoveWhere method.
     private static bool IsDoc(string s)
     {
-        string lowerCase = s.ToLower();
-        return (lowerCase.EndsWith(".txt") ||
-            lowerCase.EndsWith(".doc") ||
-            lowerCase.EndsWith(".xls") ||
-            lowerCase.EndsWith(".xlsx") ||
-            lowerCase.EndsWith(".pdf") ||
-            lowerCase.EndsWith(".doc") ||
-            lowerCase.EndsWith(".docx"));
+        s = s.ToLower();
+        return (s.EndsWith(".txt") ||
+            s.EndsWith(".doc") ||
+            s.EndsWith(".xls") ||
+            s.EndsWith(".xlsx") ||
+            s.EndsWith(".pdf") ||
+            s.EndsWith(".doc") ||
+            s.EndsWith(".docx"));
     }
     // </Snippet8>
 
