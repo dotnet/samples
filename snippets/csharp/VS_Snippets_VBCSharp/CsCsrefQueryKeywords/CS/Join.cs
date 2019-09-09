@@ -185,7 +185,7 @@ namespace Joins
             // A nested foreach statement  is required to access group items
             foreach (var prodGrouping in leftOuterQuery)
             {
-                Console.WriteLine("Group:", prodGrouping.Count());
+                Console.WriteLine("Group:");
                 foreach (var item in prodGrouping)
                 {
                     totalItems++;
