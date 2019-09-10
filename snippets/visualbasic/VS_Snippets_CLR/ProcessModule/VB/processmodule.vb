@@ -4,7 +4,6 @@
 ' It creates a notepad, gets the 'MainModule' and all other modules of 
 ' the process 'notepad.exe', displays some of the properties of each modules.
 
-Imports System
 Imports System.Diagnostics
 
 Class MyProcessModuleClass

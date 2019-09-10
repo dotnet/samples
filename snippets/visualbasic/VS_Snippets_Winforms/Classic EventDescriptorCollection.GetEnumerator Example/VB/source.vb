@@ -1,10 +1,6 @@
-﻿Imports System
-Imports System.Collections
+﻿Imports System.Collections
 Imports System.ComponentModel
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
-
-
 
 Public Class Form1
     Inherits Form

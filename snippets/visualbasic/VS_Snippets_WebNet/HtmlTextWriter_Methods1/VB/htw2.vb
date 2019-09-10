@@ -1,7 +1,6 @@
 ﻿' <snippet1>
 ' Create a custom HtmlTextWriter class that overrides 
 ' the RenderBeforeContent and RenderAfterContent methods.
-Imports System
 Imports System.IO
 Imports System.Web
 Imports System.Web.UI

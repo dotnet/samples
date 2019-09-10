@@ -8,7 +8,6 @@
 '    PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
 '
 '*********************************************************
-Imports System
 Imports System.Collections.Generic
 Imports System.Linq
 Imports System.Text
@@ -93,6 +92,7 @@ Partial Public Class PhotoDetailsWindow
                 photoEntity.FileSize = CType(imageStream.Length, Integer)
 
                 ' Create a new image Imports the memory stream.
+
                 Dim imageFromStream = New BitmapImage()
                 imageFromStream.BeginInit()
                 imageFromStream.StreamSource = imageStream

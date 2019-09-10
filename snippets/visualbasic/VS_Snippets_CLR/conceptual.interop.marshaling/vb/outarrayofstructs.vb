@@ -1,5 +1,4 @@
 ﻿'<snippet19>
-Imports System
 Imports System.Runtime.InteropServices
 
 '<snippet20>
@@ -10,10 +9,10 @@ Public Class MyStruct
     Public someSize As Integer
 End Class 'MyStruct
 
-Public Class LibWrap
+Friend Class NativeMethods
     ' Declares a managed prototype for the unmanaged function.
     <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
-    Shared Sub TestOutArrayOfStructs(
+    Friend Shared Sub TestOutArrayOfStructs(
         ByRef arrSize As Integer, ByRef outArray As IntPtr)
     End Sub
 End Class 'LibWrap
@@ -31,7 +30,7 @@ Public Class App
         Dim arrSize As Integer
         Dim outArray As IntPtr
 
-        LibWrap.TestOutArrayOfStructs(arrSize, outArray)
+        NativeMethods.TestOutArrayOfStructs(arrSize, outArray)
         Dim manArray(arrSize - 1) As MyStruct
         Dim current As IntPtr = outArray
         Dim i As Integer

@@ -1,11 +1,8 @@
 ﻿' <Snippet1>
-Imports System
 Imports System.IO
 Imports System.Text
 Imports System.Xml
 Imports System.Xml.Serialization
-Imports Microsoft.VisualBasic
-
 
 ' This is the class that will be deserialized.
 Public Class OrderedItem

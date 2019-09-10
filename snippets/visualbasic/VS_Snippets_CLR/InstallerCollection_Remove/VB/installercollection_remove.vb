@@ -11,13 +11,11 @@
 ' from the installers collection of the 'TransactedInstaller' instance.
 ' The installation process is started which installs only 'MyAssembly1.exe'.
 
-Imports System
 Imports System.Reflection
 Imports System.ComponentModel
 Imports System.Collections
 Imports System.Configuration.Install
 Imports System.IO
-Imports Microsoft.VisualBasic
 
 Public Class InstallerCollection_Remove
    Public Shared Sub Main()

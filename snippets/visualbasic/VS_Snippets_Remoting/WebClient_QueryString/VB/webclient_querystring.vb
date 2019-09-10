@@ -7,11 +7,8 @@
 ' filesystem folder as 'searchresult.htm'. 
 ' 
 
-Imports System
 Imports System.Collections.Specialized
 Imports System.Net
-Imports Microsoft.VisualBasic
-
 
 Public Class WebClient_QueryString
     

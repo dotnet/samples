@@ -9,12 +9,9 @@
 
 
 
-Imports System
 Imports System.Net
 Imports System.Net.Sockets
 Imports System.Text
-Imports Microsoft.VisualBasic
-
 
 Class HttpConnect
 Public shared Sub Main()

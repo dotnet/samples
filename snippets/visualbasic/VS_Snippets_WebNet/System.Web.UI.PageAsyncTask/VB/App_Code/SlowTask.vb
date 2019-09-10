@@ -1,5 +1,4 @@
 ﻿' <Snippet2> 
-Imports Microsoft.VisualBasic
 Imports System.Threading
 
 Namespace Samples.AspNet.VB.Controls

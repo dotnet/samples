@@ -2,14 +2,10 @@
 ' This sample demonstrates the use of the FileIOPermissionAttribute class.
 ' The sample follows the recommended procedure of first granting PermitOnly permissions, 
 ' then using a Deny on that set of granted permissions.  
-Imports System
 Imports System.Reflection
 Imports System.Security.Permissions
 Imports System.Security
 Imports System.IO
-Imports Microsoft.VisualBasic
-
-
 
 Class [MyClass]
 

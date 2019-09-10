@@ -10,14 +10,10 @@
 ' enhance security you may want to consider the use of more secure authorization
 ' scheme and technolgies such as SSL.   
 '<Snippet1>
-Imports System
 Imports System.Net
 Imports System.IO
 Imports System.Text
 Imports System.Collections
-Imports Microsoft.VisualBasic
-
-
 
 ' The ClientAuthentication class performs the following main tasks:
 ' 1) It obtains the user's credentials.

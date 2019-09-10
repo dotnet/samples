@@ -8,7 +8,6 @@
 '    PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
 '
 '*********************************************************
-Imports System
 Imports System.Collections.Generic
 Imports System.Linq
 Imports System.Text
@@ -200,6 +199,7 @@ Partial Public Class PhotoWindow
                 MessageBoxButton.YesNo) = MessageBoxResult.Yes Then
 
                 ' Refresh images from the data service Imports overwrite changes.
+
                 GetPhotosFromService(MergeOption.OverwriteChanges)
             Else
                 ' Warn the user about possible other errors.

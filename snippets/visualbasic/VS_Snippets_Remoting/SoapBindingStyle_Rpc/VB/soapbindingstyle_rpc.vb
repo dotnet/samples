@@ -16,7 +16,6 @@
 ' An output wsdl file is generated from 'ServiceDescription' object which 
 ' could be used for generating a proxy.
 
-Imports System
 Imports System.Web.Services.Description
 Imports System.Collections
 Imports System.Xml

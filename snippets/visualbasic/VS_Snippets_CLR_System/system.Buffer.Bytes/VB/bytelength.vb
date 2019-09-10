@@ -1,8 +1,5 @@
 ﻿'<Snippet1>
 ' Example of the Buffer.ByteLength method.
-Imports System
-Imports Microsoft.VisualBasic
-
 Module ByteLengthDemo
 
     Const formatter As String = "{0,10}{1,20}{2,9}{3,12}"

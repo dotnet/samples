@@ -1,10 +1,9 @@
-﻿Imports System
-Imports System.IO
+﻿Imports System.IO
 Imports System.Xml
 Imports System.Xml.Schema
 Imports System.Xml.XPath
 Imports System.Collections
- 
+
 Class XPathNavigatorMethods
 
     Shared contosobooks As String = "C:\Documents and Settings\dylanm\My Documents\contosoBooks.xml"

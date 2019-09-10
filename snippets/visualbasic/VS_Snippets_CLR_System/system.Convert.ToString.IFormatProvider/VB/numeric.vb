@@ -1,9 +1,7 @@
 ﻿'<Snippet3>
 ' Example of the Convert.ToString( numeric types ) and 
 ' Convert.ToString( numeric types, IFormatProvider ) methods.
-Imports System
 Imports System.Globalization
-Imports Microsoft.VisualBasic
 
 Module ConvertNumericProviderDemo
 

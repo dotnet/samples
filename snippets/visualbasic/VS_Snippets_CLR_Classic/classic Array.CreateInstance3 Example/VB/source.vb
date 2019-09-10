@@ -1,7 +1,4 @@
 ﻿' <Snippet1>
-Imports System
-Imports Microsoft.VisualBasic
-
 Public Class SamplesArray    
     
     Public Shared Sub Main()

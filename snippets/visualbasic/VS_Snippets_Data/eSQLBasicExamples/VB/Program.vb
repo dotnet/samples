@@ -1,5 +1,4 @@
 ﻿'<snippetNamespaces>
-Imports System
 Imports System.Collections.Generic
 Imports System.Collections
 Imports System.Data.Common
@@ -8,8 +7,10 @@ Imports System.Data.SqlClient
 Imports System.Data.EntityClient
 Imports System.Data.Metadata.Edm
 Imports System.IO
+
 ' Add AdventureWorksModel prepended with the root namespace for the project.
 'Imports ProjectName.AdventureWorksModel
+
 '</snippetNamespaces>
 Imports System.Data.Objects
 Imports System.Data.Objects.DataClasses

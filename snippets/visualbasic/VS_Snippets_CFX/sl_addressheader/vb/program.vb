@@ -6,7 +6,6 @@
 ' NSs automatically added to a SL App
 
 
-Imports System
 Imports System.Collections.Generic
 Imports System.Linq
 Imports System.Windows

@@ -1,10 +1,10 @@
 ﻿'<Snippet1>
-Imports System
 Imports System.IO
 Imports System.Xml.Serialization
 Imports System.Collections
 Imports System.Xml
 Imports System.Text
+
 Public Class Transportation
    ' The SoapElementAttribute specifies that the
    ' generated XML element name will be "Wheels"

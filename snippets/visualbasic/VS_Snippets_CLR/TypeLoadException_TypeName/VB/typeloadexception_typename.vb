@@ -6,9 +6,7 @@
 
 ' <Snippet1>
 ' <Snippet2>
-Imports System
 Imports System.Reflection
-Imports Microsoft.VisualBasic
 
 Public Class Example
    Public Shared Sub Main()

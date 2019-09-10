@@ -1,7 +1,6 @@
 ﻿' The following code example determines the Windows code page that most closely corresponds to each encoding.
 
 ' <Snippet1>
-Imports System
 Imports System.Text
 
 Public Class SamplesEncoding   

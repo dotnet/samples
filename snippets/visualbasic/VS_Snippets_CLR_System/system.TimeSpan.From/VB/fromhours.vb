@@ -1,8 +1,5 @@
 ﻿'<Snippet5>
 ' Example of the TimeSpan.FromHours( Double ) method.
-Imports System
-Imports Microsoft.VisualBasic
-
 Module FromHoursDemo
 
     Sub GenTimeSpanFromHours( hours As Double )

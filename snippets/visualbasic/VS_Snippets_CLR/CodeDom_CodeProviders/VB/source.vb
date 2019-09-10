@@ -6,13 +6,11 @@
 ' code provider.
 
 ' <Snippet1>
-Imports System
 Imports System.IO
 Imports System.Globalization
 Imports System.CodeDom.Compiler
 Imports System.Text
 Imports Microsoft.CSharp
-Imports Microsoft.VisualBasic
 
 Namespace CodeProviders
     Class CompileSample

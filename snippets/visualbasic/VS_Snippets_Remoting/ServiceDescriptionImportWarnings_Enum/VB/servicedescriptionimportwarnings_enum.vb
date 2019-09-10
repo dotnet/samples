@@ -11,12 +11,9 @@
 ' is displayed on the console.
 
 
-Imports System
 Imports System.Security.Permissions
 Imports System.Web.Services.Description
 Imports System.CodeDom
-Imports Microsoft.VisualBasic
-
 
 Public Class ServiceDescriptionImportWarnings_Enum
    

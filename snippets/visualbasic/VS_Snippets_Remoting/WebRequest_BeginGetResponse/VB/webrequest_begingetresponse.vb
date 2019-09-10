@@ -9,14 +9,10 @@
 ' <Snippet1>
 ' <Snippet2>
 
-Imports System
 Imports System.Net
 Imports System.IO
 Imports System.Text
 Imports System.Threading
-Imports Microsoft.VisualBasic
-
-
 
 Public Class RequestState
   ' This class stores the state of the request

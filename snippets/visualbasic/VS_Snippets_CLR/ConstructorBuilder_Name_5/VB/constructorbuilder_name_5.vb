@@ -12,7 +12,6 @@
 '   'Name', 'Signature' and 'ReflectedType' to the console.
 
 ' <Snippet1>
-Imports System
 Imports System.Reflection
 Imports System.Reflection.Emit
 Imports System.Security.Permissions

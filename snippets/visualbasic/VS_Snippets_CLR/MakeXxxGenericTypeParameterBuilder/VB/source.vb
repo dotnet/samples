@@ -1,8 +1,6 @@
 ﻿'<Snippet1>
-Imports System
 Imports System.Reflection
 Imports System.Reflection.Emit
-Imports Microsoft.VisualBasic
 
 Public Class Example
     Public Shared Sub Main()

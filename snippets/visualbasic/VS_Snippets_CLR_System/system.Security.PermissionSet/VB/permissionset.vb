@@ -1,14 +1,10 @@
 ﻿'<Snippet1>
 ' This sample demonstrates the use of the PermissionSet class.
-Imports System
 Imports System.Reflection
 Imports System.Security.Permissions
 Imports System.Security
 Imports System.IO
 Imports System.Collections
-Imports Microsoft.VisualBasic
-
-
 
 Class [MyClass]
 

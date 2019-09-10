@@ -4,7 +4,6 @@
 '   computer name. Then prints the computer name on the console.
 '
 
-Imports System
 Imports System.Net
 Imports System.Net.Sockets
 

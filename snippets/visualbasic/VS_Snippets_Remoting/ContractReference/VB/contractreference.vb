@@ -8,7 +8,6 @@
 '  ContractReference are reflected.
 
 ' <Snippet1>
-Imports System
 Imports System.Xml
 Imports System.IO
 Imports System.Web.Services.Discovery

@@ -1,8 +1,5 @@
 ﻿'<Snippet4>
 ' Example of the Decimal( UInt64 ) constructor.
-Imports System
-Imports Microsoft.VisualBasic
-
 Module DecimalCtorULDemo
 
     ' Create a Decimal object and display its value.

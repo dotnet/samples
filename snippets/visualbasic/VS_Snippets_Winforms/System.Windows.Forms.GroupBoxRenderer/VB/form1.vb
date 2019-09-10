@@ -5,7 +5,6 @@
 ' TODO: see if you can work DrawParentBackground into here somehow.
 
 '<Snippet0>
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 Imports System.Windows.Forms.VisualStyles
@@ -32,12 +31,11 @@ Class Form1
         ' Add some radio buttons to test the CustomGroupBox.
         Dim count As Integer = 8
         Dim ButtonArray(count) As RadioButton
-        Dim i As Integer
-        For i = 0 To count
+        For i = 0 To count - 1
             ButtonArray(i) = New RadioButton()
             ButtonArray(i).Text = "Button " +(i + 1).ToString()
             GroupBox1.Controls.Add(ButtonArray(i))
-        Next i
+        Next
         
         If Application.RenderWithVisualStyles Then
             Me.Text = "Visual Styles Enabled"

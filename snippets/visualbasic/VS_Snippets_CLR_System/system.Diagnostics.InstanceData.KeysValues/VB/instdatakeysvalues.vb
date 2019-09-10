@@ -1,8 +1,6 @@
 ﻿'<snippet1>
-Imports System
 Imports System.Diagnostics
 Imports System.Collections
-Imports Microsoft.VisualBasic
 
 Module InstDataKeysValuesMod
 

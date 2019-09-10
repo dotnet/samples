@@ -1,8 +1,5 @@
 ﻿' This program is used as a client of the client proxy class. 
 
-Imports System
-Imports MicroSoft.VisualBasic
-
 Public Class Client
    Public Shared Sub Main()
       Dim myService As New MathService()

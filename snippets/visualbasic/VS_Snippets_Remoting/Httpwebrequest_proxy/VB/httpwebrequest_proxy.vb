@@ -8,13 +8,9 @@
 'Note:No credentials are required if the Proxy does not require any authentication.
 
 
-Imports System
 Imports System.IO
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
-
-
 
 Class HttpWebRequest_Proxy
     

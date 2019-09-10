@@ -1,5 +1,4 @@
 ﻿' <Snippet1>
-Imports System
 Imports System.IO
 
 Public Class Test
@@ -11,7 +10,6 @@ Public Class Test
                 sw.WriteLine("Hello")
                 sw.WriteLine("And")
                 sw.WriteLine("Welcome")
-                sw.Flush()
            End Using
         End If
 

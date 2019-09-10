@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Web.Security
+﻿Imports System.Web.Security
 
 Namespace myPassportExamples
 public class myPassportIdentity

@@ -1,6 +1,5 @@
 ﻿'<SnippetCallApplicationGetContentStreamCODEBEHIND1>
 
-Imports System
 Imports System.IO
 Imports System.Windows.Resources
 '</SnippetCallApplicationGetContentStreamCODEBEHIND1>

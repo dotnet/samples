@@ -6,11 +6,8 @@
 'obtained and displayed to the console.
 '
 
-Imports System
 Imports System.IO
 Imports System.Net
-Imports Microsoft.VisualBasic
-
 
 Class HttpWebRequest_AddRange_int
     

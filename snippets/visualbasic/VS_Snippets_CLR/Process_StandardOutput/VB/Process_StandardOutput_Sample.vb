@@ -1,7 +1,6 @@
 ﻿' This program is used by 'Process_StandardOutput.exe'. Its output will 
 ' get read  by Process_StandardOutput.exe.
 
-Imports System
 Imports System.ComponentModel
 
 Class Class1

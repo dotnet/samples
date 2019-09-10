@@ -10,7 +10,6 @@
 ' on the form changes the appearance of the grid by setting the linkcolor and
 ' headerfont.
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel

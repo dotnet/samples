@@ -1,6 +1,4 @@
-﻿Imports System
-
-Public Class HelloServer
+﻿Public Class HelloServer
    Inherits MarshalByRefObject
 
    Public Sub New(myString As String)

@@ -1,7 +1,5 @@
-﻿Imports System
-Imports System.Reflection
+﻿Imports System.Reflection
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
 
 ' <Snippet1>
 Class methodbase1

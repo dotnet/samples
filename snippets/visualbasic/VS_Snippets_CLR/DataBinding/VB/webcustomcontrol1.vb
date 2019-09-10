@@ -55,7 +55,6 @@
 '     This file contains the properties of 'DataBinding' and 'DataBindingCollection' 
 '     classes demonstrated.
 
-Imports System
 Imports System.Web.UI
 Imports System.Web.UI.WebControls
 Imports System.ComponentModel

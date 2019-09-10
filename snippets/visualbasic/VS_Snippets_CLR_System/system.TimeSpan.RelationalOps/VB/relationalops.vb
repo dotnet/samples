@@ -1,8 +1,5 @@
 ﻿'<Snippet1>
 ' Example of the TimeSpan relational operators.
-Imports System
-Imports Microsoft.VisualBasic
-
 Module TSRelationalOpsDemo
     
     Const dataFmt As String = "{0,-47}{1}"

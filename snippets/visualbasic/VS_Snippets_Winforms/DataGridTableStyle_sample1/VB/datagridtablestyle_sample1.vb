@@ -8,7 +8,6 @@
 ' on the form changes data and appearance of the grid by setting the
 ' MappingName and GridLineStyle.
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel

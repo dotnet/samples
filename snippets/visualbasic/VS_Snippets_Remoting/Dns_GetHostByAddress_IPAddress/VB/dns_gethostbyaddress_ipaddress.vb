@@ -6,12 +6,8 @@
 '   IP address list and aliases.   
 '
 
-Imports System
 Imports System.Net
 Imports System.Net.Sockets
-Imports Microsoft.VisualBasic
-
-
 
 Class DnsHostByAddress
     

@@ -1,7 +1,5 @@
 ﻿'<snippet3>
-Imports System
 Imports System.Diagnostics
-Imports Microsoft.VisualBasic
 
 Module TWTLConStringMod
 

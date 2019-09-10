@@ -1,8 +1,6 @@
 ﻿'<Snippet1>
-Imports System
 Imports System.Resources
 Imports System.Collections
-Imports Microsoft.VisualBasic
 
 Class EnumerateResources
    

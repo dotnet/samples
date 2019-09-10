@@ -1,6 +1,5 @@
 ﻿' <snippet5>
 
-Imports System
 Imports System.ServiceModel
 
 Public Class Client

@@ -7,10 +7,8 @@
 ' on the console using 'Attributes' and 'Signature' properties of the 'MethodBuilder' class.
 
 ' <Snippet1>
-Imports System
 Imports System.Reflection
 Imports System.Reflection.Emit
-Imports MicroSoft.VisualBasic
 
 Public Class MethodBuilderClass
 

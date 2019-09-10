@@ -1,6 +1,6 @@
 ﻿Imports System.ServiceModel
+
 '<snippetCustomIQueryableFeeds>
-Imports System
 Imports System.Collections.Generic
 Imports System.Data.Services
 Imports System.Data.Services.Common

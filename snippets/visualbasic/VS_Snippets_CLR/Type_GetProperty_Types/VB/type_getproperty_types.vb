@@ -1,5 +1,4 @@
 ﻿' <Snippet1>
-Imports System
 Imports System.Reflection
 Class MyClass1
     Private myMessage As [String] = "Hello World."

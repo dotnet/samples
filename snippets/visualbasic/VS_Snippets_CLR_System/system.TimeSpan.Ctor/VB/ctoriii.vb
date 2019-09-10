@@ -1,8 +1,5 @@
 ﻿'<Snippet2>
 ' Example of the TimeSpan( Integer, Integer, Integer ) constructor.
-Imports System
-Imports Microsoft.VisualBasic
-
 Module TimeSpanCtorIIIDemo
 
     ' Create a TimeSpan object and display its value.

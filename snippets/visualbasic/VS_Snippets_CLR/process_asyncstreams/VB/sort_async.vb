@@ -9,13 +9,11 @@
 
 ' <Snippet1>
 ' Define the namespaces used by this sample.
-Imports System
 Imports System.Text
 Imports System.IO
 Imports System.Diagnostics
 Imports System.Threading
 Imports System.ComponentModel
-Imports Microsoft.VisualBasic
 
 Namespace ProcessAsyncStreamSamples
 

@@ -1,5 +1,4 @@
-﻿Imports System
-Namespace SDKSample
+﻿Namespace SDKSample
 	Partial Public Class SignatureDefinition
 		''' <summary>
 		''' Required designer variable.

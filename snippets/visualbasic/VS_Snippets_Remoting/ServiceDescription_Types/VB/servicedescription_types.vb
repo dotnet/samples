@@ -6,7 +6,6 @@
 ' Types of the SericeDescription are removed.New Types are constructed.
 ' Types are then added to ServiceDescription . A new WSDL file is created as output.
 
-Imports System
 Imports System.Text
 Imports System.Web.Services.Description
 Imports System.Collections

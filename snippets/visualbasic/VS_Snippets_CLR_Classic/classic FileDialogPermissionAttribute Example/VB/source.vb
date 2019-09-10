@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Security.Permissions
+﻿Imports System.Security.Permissions
 
 ' <Snippet1>
  <Assembly: FileDialogPermissionAttribute(SecurityAction.RequestMinimum, _

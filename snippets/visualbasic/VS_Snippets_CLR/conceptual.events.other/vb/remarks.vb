@@ -1,6 +1,4 @@
 ﻿
-Imports System
-
 ' Code section for remarks
 Namespace EventRemarks
     Public Class AlarmEventArgs

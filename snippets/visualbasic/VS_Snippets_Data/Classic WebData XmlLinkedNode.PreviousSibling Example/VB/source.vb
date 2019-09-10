@@ -1,8 +1,6 @@
 ﻿' <Snippet1>
- Imports System
  Imports System.Xml
- Imports Microsoft.VisualBasic
- 
+
  public class Sample 
 
    public shared sub Main() 

@@ -1,5 +1,4 @@
 ﻿'<snippetNamespaces> 
-Imports System
 Imports System.Collections.Generic
 Imports System.Collections
 Imports System.Data.Common
@@ -8,10 +7,12 @@ Imports System.IO
 Imports System.Data.SqlClient
 Imports System.Data.EntityClient
 Imports System.Data.Metadata.Edm
+
 '</snippetNamespaces> 
 '<snippetIncludes> 
 Imports System.Data.Objects
 Imports System.Data.Objects.DataClasses
+
 '</snippetIncludes> 
 
 

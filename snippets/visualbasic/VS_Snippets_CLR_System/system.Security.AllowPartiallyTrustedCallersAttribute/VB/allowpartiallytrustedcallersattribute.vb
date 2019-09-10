@@ -20,7 +20,6 @@
 ' it should be used with great caution.  Assert should always be followed with a RevertAssert 
 ' command to restore the security settings.
 
-Imports System
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Drawing
@@ -31,8 +30,6 @@ Imports System.Security
 Imports System.Security.Permissions
 Imports System.Reflection
 Imports System.Runtime.CompilerServices
-Imports Microsoft.VisualBasic
-
 
 ' This strong name key is used to create a code group that gives permissions to this assembly.
 

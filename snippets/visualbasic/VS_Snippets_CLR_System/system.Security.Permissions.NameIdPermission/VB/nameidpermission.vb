@@ -4,13 +4,11 @@
 ' The following code shows how to create a custom permission that inherits
 ' from CodeAccessPermission. The code implements all required overrides.
 ' A wildcard character ('*') is implemented for the Name property.
-Imports System
 Imports System.Security
 Imports System.Security.Permissions
 Imports System.IO
 Imports System.Security.Policy
 Imports System.Collections
-Imports Microsoft.VisualBasic
 
 <assembly: System.Reflection.AssemblyKeyFile("Key.snk")>
 

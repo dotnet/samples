@@ -1,8 +1,5 @@
 ﻿'<Snippet1>
 ' Example of the Decimal.ToOACurrency method. 
-Imports System
-Imports Microsoft.VisualBasic
-
 Module DecimalToOACurrencyDemo
     
     Const dataFmt As String = "{0,31}{1,27}"

@@ -22,15 +22,12 @@
 '  Note: This program requires 'DateServer_SocketPermission' program executing. 
 '
 
-Imports System
 Imports System.Net
 Imports System.Net.Sockets
 Imports System.Text
 Imports System.Collections
 Imports System.Security
 Imports System.Security.Permissions
-Imports Microsoft.VisualBasic
-
 
 Public Class DateClient
     

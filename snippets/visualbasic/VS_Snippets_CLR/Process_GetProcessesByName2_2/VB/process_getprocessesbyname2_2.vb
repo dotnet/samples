@@ -7,9 +7,7 @@
 ' processes by name on remote computer and displays its properties to console.
 ' <Snippet1>
 ' <Snippet2>
-Imports System
 Imports System.Diagnostics
-Imports Microsoft.VisualBasic
 
 Class GetProcessesByNameClass
 
@@ -47,11 +45,11 @@ Class GetProcessesByNameClass
         Catch e As PlatformNotSupportedException
             Console.WriteLine(
                 "Finding notepad processes on remote computers " &
-                "is not supported on this operating system.");
+                "is not supported on this operating system.")
         Catch e As InvalidOperationException
             Console.WriteLine("Unable to get process information on the remote computer.")
         End Try
-    End Sub 'Main
-End Class 'GetProcessesByNameClass
+    End Sub
+End Class
 ' </Snippet1>
 ' </Snippet2>

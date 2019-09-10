@@ -1,7 +1,5 @@
 ﻿'<Snippet1>
 
-Imports System
-
 Namespace UsageLibrary
 
 Public Class SomeStaticFields

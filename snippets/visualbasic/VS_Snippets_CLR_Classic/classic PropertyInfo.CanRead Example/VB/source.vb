@@ -1,7 +1,5 @@
 ﻿' <Snippet1>
-Imports System
 Imports System.Reflection
-Imports Microsoft.VisualBasic
 
 ' Define one readable property and one not readable.
 Public Class Mypropertya

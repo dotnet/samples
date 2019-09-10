@@ -1,6 +1,4 @@
 ﻿' <snippet1>
-Imports System
-
 Imports System.IdentityModel.Selectors
 Imports System.IdentityModel.Tokens
 

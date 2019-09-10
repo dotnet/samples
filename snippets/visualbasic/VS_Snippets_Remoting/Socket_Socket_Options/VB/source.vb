@@ -1,10 +1,8 @@
-﻿Imports System
-Imports System.Text
+﻿Imports System.Text
 Imports System.IO
 Imports System.Net
 Imports System.Net.Sockets
 Imports System.Threading
-Imports Microsoft.VisualBasic
 
 Public Class Sync_Send_Receive
 

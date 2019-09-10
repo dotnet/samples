@@ -1,11 +1,9 @@
 ﻿' <Snippet1>
-Imports System
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Lifetime
 Imports System.Runtime.Remoting.Channels
 Imports System.Runtime.Remoting.Channels.Http
 Imports System.Security.Permissions
-Imports Microsoft.VisualBasic
 
 Public Class Client
 <SecurityPermission(SecurityAction.Demand)> _

@@ -12,11 +12,9 @@
 ' retrieved from each Message and it's members are demonstrated.
 
 ' <Snippet8>
-Imports System
 Imports System.Web.Services.Description
 Imports System.Collections
 Imports System.Xml
-Imports Microsoft.VisualBasic
 
 Class MyClass1
    Public Shared Sub Main()

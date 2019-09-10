@@ -3,7 +3,6 @@
 ' Sorts are done using the default comparer and a custom comparer that reverses the sort order.
 
 ' <Snippet1>
-Imports System
 Imports System.Collections
 
 Public Class SamplesArray

@@ -1,8 +1,6 @@
 ﻿' <Snippet1>
-Imports System
 Imports System.Reflection
 Imports System.Security
-Imports Microsoft.VisualBasic
 
 Public Class MyFilterNameIgnoreCaseSample
     Public Shared Sub Main()

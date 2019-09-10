@@ -14,12 +14,9 @@
 '      for default web site in IIS  
 ' 
 
-Imports System
 Imports System.Net
 Imports System.IO
 Imports System.Text
-Imports Microsoft.VisualBasic
-
 
 Class CredentialCache_DefaultCredentials
     

@@ -1,6 +1,5 @@
 ﻿' REDMOND\glennha, gawd help me
 '<Snippet1>
-Imports System
 Imports System.Reflection
 Imports System.Reflection.Emit
 

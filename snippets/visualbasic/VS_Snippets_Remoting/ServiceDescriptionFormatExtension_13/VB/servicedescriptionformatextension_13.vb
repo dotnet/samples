@@ -22,7 +22,6 @@
 ' the same directory as that of .exe for running.
 
 ' <Snippet1>
-Imports System
 Imports System.Web.Services.Description
 Imports System.Collections
 

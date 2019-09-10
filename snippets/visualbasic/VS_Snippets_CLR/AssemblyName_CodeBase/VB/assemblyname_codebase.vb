@@ -15,8 +15,6 @@
 ' <Snippet3>
 ' <Snippet4>
 
-Imports System
-Imports Microsoft.VisualBasic
 Imports System.Reflection
 Imports System.Threading
 Imports System.IO

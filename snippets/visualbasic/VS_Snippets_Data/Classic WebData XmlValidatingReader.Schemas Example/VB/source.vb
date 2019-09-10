@@ -2,11 +2,9 @@
 Option Strict
 Option Explicit
 
-Imports System
 Imports System.IO
 Imports System.Xml
 Imports System.Xml.Schema
-Imports Microsoft.VisualBasic
 
 Public Class SchemaCollectionSample
     Private doc1 As String = "booksSchema.xml"

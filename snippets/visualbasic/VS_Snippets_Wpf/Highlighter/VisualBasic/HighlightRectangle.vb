@@ -23,7 +23,6 @@
 ' * 
 ' *****************************************************************************
 
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 Imports System.Runtime.InteropServices

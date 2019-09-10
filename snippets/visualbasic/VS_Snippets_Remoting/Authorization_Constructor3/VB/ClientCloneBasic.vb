@@ -7,13 +7,11 @@
 ' 
 '  While running this program make sure to refer the 'Authorization_Construstor3.dll'
 ' 
-Imports System
 Imports System.Net
 Imports System.Text
 Imports System.IO
 Imports System.Collections
 Imports CloneBasicAuthentication
-Imports Microsoft.VisualBasic
 
 Namespace CloneBasicAuthenticationClient
     

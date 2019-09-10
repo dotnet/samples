@@ -1,7 +1,6 @@
 ﻿' The following code example creates a LinkedList node, adds it to a LinkedList, and tracks the values of its properties as the LinkedList changes.
 
 ' <snippet1>
-Imports System
 Imports System.Collections.Generic
 
 Public Class GenericCollection

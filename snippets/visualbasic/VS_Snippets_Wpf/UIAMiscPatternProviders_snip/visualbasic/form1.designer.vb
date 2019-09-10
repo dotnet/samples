@@ -1,5 +1,4 @@
-﻿Imports System
-Namespace ElementProvider
+﻿Namespace ElementProvider
 	Partial Public Class Form1
 		''' <summary>
 		''' Required designer variable.

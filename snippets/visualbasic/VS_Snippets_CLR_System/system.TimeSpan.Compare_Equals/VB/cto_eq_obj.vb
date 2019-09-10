@@ -1,9 +1,6 @@
 ﻿'<Snippet1>
 ' Example of the TimeSpan.CompareTo( Object ) and 
 ' TimeSpan.Equals( Object ) methods.
-Imports System
-Imports Microsoft.VisualBasic
-
 Module TSCompToEqualsObjDemo
     
     ' Compare the TimeSpan to the Object parameters, 

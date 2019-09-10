@@ -1,9 +1,7 @@
 ﻿' <Snippet1>
 ' <Snippet2>
 
-Imports System
 Imports System.Reflection
-Imports Microsoft.VisualBasic
 
 Public Class MyFieldClassA
     Public Field As String = "A Field"

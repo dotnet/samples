@@ -1,9 +1,7 @@
 ﻿' The following code example calls IsLeapYear for five years in each of the eras.
 
 ' <snippet1>
-Imports System
 Imports System.Globalization
-Imports Microsoft.VisualBasic
 
 Public Class SamplesGregorianCalendar   
    

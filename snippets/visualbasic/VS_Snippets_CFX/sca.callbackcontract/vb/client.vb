@@ -1,7 +1,5 @@
 ﻿' <snippet3>
 
-Imports Microsoft.VisualBasic
-Imports System
 Imports System.ServiceModel
 Imports System.ServiceModel.Channels
 Imports System.Threading

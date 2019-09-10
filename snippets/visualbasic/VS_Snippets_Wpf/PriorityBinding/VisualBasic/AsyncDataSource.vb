@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Threading
+﻿Imports System.Threading
 
 '<Snippet1>
     Public Class AsyncDataSource

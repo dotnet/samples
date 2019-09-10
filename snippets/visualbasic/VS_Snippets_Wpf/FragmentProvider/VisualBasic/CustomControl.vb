@@ -25,7 +25,6 @@
 '******************************************************************************
 Option Strict Off  ' To prevent warnings with Int function.
 
-Imports System
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.Drawing

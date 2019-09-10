@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Threading
+﻿Imports System.Threading
 Imports System.Security.Permissions
 
 Public Class ThreadWork

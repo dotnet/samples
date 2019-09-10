@@ -1,25 +1,27 @@
 ﻿' C:\Program Files\Microsoft.NET\FrameworkSDK\Samples\technologies\remoting\advanced\customproxies
 
 '<snippet1>
-Imports System
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Messaging
 Imports System.Runtime.Remoting.Channels
 Imports System.Reflection
 Imports Microsoft.VisualBasic.Constants
 Imports Microsoft.VisualBasic.Interaction
+
 '</snippet1>
 
 '<snippet4>
 Imports System.Runtime.Remoting.Channels.Tcp
 Imports System.Runtime.Remoting.Lifetime
 Imports System.Runtime.Remoting.Proxies
+
 '</snippet4>
 
 '<snippet5>
 Imports System.Runtime.Remoting.Channels.Http
 Imports System.Net
 Imports System.IO
+
 '</snippet5>
 
 Imports System.Security.Permissions

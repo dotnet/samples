@@ -6,10 +6,8 @@
 ' from 'ServiceDescription'. It copies the collection into an array of 'PortType' 
 ' and displays their names.
 
-Imports System
 Imports System.Web.Services.Description
 Imports System.Xml
-Imports Microsoft.VisualBasic
 
 Class MyPortTypeCollectionClass   
    Public Shared Sub Main()

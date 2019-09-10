@@ -4,9 +4,7 @@
 'It creates a web request and queries for a response.The program checks 
 'if the entity requested was modified any time today.
 
-Imports System
 Imports System.Net
-Imports Microsoft.VisualBasic
 Imports System.Environment
 
 Class HttpWebResponseSnippet

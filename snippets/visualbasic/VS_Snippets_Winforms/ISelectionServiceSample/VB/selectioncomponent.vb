@@ -1,11 +1,9 @@
 ﻿'<Snippet1>
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.ComponentModel.Design
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
 
 '  This sample demonstrates using the ISelectionService
 '  interface to receive notification of selection change events.  

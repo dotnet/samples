@@ -11,10 +11,7 @@
 ' the origin server (HTTP version 1.1, RFC2616, Sec 14.9)
 '
 
-Imports System
 Imports System.Net
-Imports Microsoft.VisualBasic
-
 
 Public Class WebHeaderCollection_Remove
     

@@ -16,11 +16,8 @@
 '     only by servers that use HTTP 1.1 protocol.
 '     Please refer to RFC 2616 for further information on HTTP Headers.
 
-Imports System
 Imports System.IO
 Imports System.Net
-Imports Microsoft.VisualBasic
-
 
 Class HttpWebRequest_Accept
     

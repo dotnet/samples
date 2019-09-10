@@ -1,11 +1,8 @@
 ﻿' The following sample initializes a CredentialCache with multiple security credentials
 ' and later uses NTLM credentials with SmtpClient
  
-Imports System
 Imports System.Net
 Imports System.Net.Mail
-Imports Microsoft.VisualBasic
-
 
 Class SMTP_CredentailCache_Sample
 

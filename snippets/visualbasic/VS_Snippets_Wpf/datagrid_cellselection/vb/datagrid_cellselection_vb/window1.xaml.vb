@@ -27,7 +27,7 @@ Class Window1
 
 
     '<Snippet2>
-    Private Sub DG1_SelectionChanged(ByVal sender As Object, ByVal e As SelectionChangedEventArgs)
+    Private Sub DG1_SelectionChanged(sender As Object, e As SelectionChangedEventArgs)
         'Get the newly selected rows
         Dim selectedrows As System.Collections.IList = e.AddedItems
 
@@ -46,7 +46,7 @@ Class Window1
     '</Snippet2>
 
     '<Snippet3>
-    Private Sub DG1_SelectedCellsChanged(ByVal sender As Object, ByVal e As SelectedCellsChangedEventArgs)
+    Private Sub DG1_SelectedCellsChanged(sender As Object, e As SelectedCellsChangedEventArgs)
         'Get the newly selected cells
         Dim selectedcells As IList(Of DataGridCellInfo) = e.AddedCells
 

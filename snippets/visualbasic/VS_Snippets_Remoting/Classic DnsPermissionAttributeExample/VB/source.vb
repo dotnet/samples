@@ -2,9 +2,6 @@
 Imports System.Security
 Imports System.Security.Permissions
 Imports System.Net
-Imports System
-Imports Microsoft.VisualBasic
-
 
 '<Snippet1>
 ' Uses the DnsPermissionAttribute to restrict access only to those who have permission.

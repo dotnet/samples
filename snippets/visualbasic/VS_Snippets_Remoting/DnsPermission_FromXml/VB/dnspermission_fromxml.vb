@@ -6,13 +6,10 @@
 '   'FromXml' method and it's XML encoding is printed.
 '
 
-Imports System
 Imports System.Net
 Imports System.Security
 Imports System.Security.Permissions
 Imports System.Collections
-Imports Microsoft.VisualBasic
-
 
 Class DnsPermissionExample
     

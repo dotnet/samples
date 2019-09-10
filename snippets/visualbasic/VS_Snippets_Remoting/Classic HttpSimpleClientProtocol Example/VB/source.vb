@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Web.Services
-Imports System
 
 Public Class Math
     <WebMethod()> _

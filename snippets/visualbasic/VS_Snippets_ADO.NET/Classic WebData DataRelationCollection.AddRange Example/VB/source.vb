@@ -1,7 +1,4 @@
-﻿Imports System
-Imports System.Data
-Imports Microsoft.VisualBasic
-
+﻿Imports System.Data
 
 Public Class SamPle
 

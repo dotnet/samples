@@ -1,9 +1,7 @@
-﻿Imports System
-Imports System.Xml
+﻿Imports System.Xml
 Imports System.Data
 Imports System.Data.Common
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
 
 Public Class Form1
     Inherits Form

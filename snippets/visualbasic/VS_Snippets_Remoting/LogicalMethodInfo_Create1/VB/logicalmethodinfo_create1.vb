@@ -23,10 +23,8 @@
 
 
 ' <Snippet1>
-Imports System
 Imports System.Reflection
 Imports System.Web.Services.Protocols
-Imports Microsoft.VisualBasic
 
 Public Class MyService
    

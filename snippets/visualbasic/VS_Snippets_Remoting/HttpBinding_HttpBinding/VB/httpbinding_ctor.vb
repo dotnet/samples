@@ -5,7 +5,6 @@
 '  The following program demonstrates the constructor, field 'Namespace' of
 '  class 'HttpBinding' and constructor of class 'HttpAddressBinding'. This program writes all 'HttpPost' binding      related information to the input wsdl file and genrates an output file which is later on compiled using wsdl       tool.
 
-Imports System
 Imports System.Web.Services.Description
 Imports System.Collections
 Imports System.Xml

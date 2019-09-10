@@ -4,8 +4,6 @@
 '     Console.CursorTop properties, and the
 '     Console.SetCursorPosition and 
 '     Console.Clear methods.
-Imports System
-
 Class Sample
    Protected Shared origRow As Integer
    Protected Shared origCol As Integer

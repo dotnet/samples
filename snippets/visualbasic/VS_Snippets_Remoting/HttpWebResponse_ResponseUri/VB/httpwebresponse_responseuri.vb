@@ -3,9 +3,7 @@
 'It creates a web request and queries for a response.It checks if the original Uri 
 'was redirected by the server. 
 
-Imports System
 Imports System.Net
-Imports Microsoft.VisualBasic
 Imports System.Environment
 
 Class HttpWebResponseSnippet

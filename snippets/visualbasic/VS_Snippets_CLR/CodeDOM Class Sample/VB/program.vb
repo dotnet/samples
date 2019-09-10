@@ -1,10 +1,8 @@
 ﻿'<Snippet1>
-Imports System
 Imports System.Reflection
 Imports System.IO
 Imports System.CodeDom
 Imports System.CodeDom.Compiler
-Imports Microsoft.VisualBasic
 
 ' This code example creates a graph using a CodeCompileUnit and  
 ' generates source code for the graph using the VBCodeProvider.

@@ -9,10 +9,8 @@
 ' the contents into an array.Calls 'IndexOf' for a given port.
 ' 'Insert' method is called to insert a new port in the collection.
 
-Imports System
 Imports System.Web.Services.Description
 Imports System.Xml
-Imports Microsoft.VisualBasic
 
 Class PortCollection_3
    Public Shared Sub Main()

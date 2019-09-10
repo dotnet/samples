@@ -7,7 +7,6 @@
 ' the registered well-known objects at the service end and displays it's properties 
 ' on the console.
 
-Imports System
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Channels
 Imports System.Runtime.Remoting.Channels.Tcp

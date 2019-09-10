@@ -4,13 +4,10 @@
 '   more access to DNS servers than does the specified 'DnsPermission' instance.
 '
 
-Imports System
 Imports System.Net
 Imports System.Security
 Imports System.Security.Permissions
 Imports System.Collections
-Imports Microsoft.VisualBasic
-
 
 Class DnsPermissionExample
     

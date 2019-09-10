@@ -23,11 +23,9 @@
 ' purposes it is being showed in a more simplified scenario.
 
 ' <Snippet1>
-Imports System
 Imports System.Reflection
 Imports System.Security.Permissions
 Imports System.Web.Services.Protocols
-Imports Microsoft.VisualBasic
 
 Public Class MyService
    

@@ -1,8 +1,6 @@
 ﻿'<Snippet1>
 ' Example for the Attribute.TypeId property.
-Imports System
 Imports System.Reflection
-Imports Microsoft.VisualBasic
 
 Namespace NDP_UE_VB
 

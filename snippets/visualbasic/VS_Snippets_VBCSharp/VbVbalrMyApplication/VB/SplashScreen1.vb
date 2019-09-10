@@ -4,7 +4,7 @@
     '  of the Project Designer ("Properties" under the "Project" menu).
 
 
-    Private Sub SplashScreen1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+    Private Sub SplashScreen1_Load(sender As Object, e As System.EventArgs) Handles Me.Load
         'Set up the dialog text at runtime according to the application's assembly information.  
 
         'TODO: Customize the application's assembly information in the "Application" pane of the project 
@@ -36,7 +36,7 @@
         Get
             Return TextBox1.Text
         End Get
-        Set(ByVal value As String)
+        Set(value As String)
             TextBox1.Text = value
             Me.Refresh()
         End Set

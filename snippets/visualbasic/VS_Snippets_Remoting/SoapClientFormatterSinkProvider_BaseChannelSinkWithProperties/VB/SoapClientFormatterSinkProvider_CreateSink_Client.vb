@@ -11,7 +11,6 @@
 ' return a sink to the caller and form the sink chain which is used to process
 ' the message being passed through it.
 
-Imports System
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Channels.Tcp
 Imports System.Runtime.Remoting.Channels

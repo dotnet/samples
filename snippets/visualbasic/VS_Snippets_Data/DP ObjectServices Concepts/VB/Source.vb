@@ -1,6 +1,5 @@
 ﻿'<snippetUsingSerialization> 
 '<snippetUsing> 
-Imports System
 Imports System.Linq
 Imports System.Collections.Generic
 Imports System.Text
@@ -8,17 +7,21 @@ Imports System.Data
 Imports System.Data.Common
 Imports System.Data.Objects
 Imports System.Data.Objects.DataClasses
+
 '</snippetUsing> 
 Imports System.Runtime.Serialization
 Imports System.Runtime.Serialization.Formatters.Binary
 Imports System.IO
+
 '</snippetUsingSerialization> 
 Imports System.Xml.Serialization
 Imports System.Data.Common.CommandTrees
 Imports System.Data.Metadata.Edm
 Imports System.Data.EntityClient
+
 '<snippetUsingEvents> 
 Imports System.ComponentModel
+
 '</snippetUsingEvents> 
 Imports System.Data.SqlClient
 

@@ -5,7 +5,6 @@
 ' binding and operation fault with the name 'ErrorString'. The modified
 ' ServiceDescriptor is written to 'Operation_Faults_Output_VB.wsdl' file.
 
-Imports System
 Imports System.Web.Services.Description
 
 Public Class MyOperationClass

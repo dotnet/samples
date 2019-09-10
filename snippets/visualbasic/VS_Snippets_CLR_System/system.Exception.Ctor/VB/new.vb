@@ -1,8 +1,5 @@
 ﻿'<Snippet1>
 ' Example for the Exception( ) constructor.
-Imports System
-Imports Microsoft.VisualBasic
-
 Namespace NDP_UE_VB
 
     ' Derive an exception with a predefined message.

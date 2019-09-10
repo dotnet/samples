@@ -7,7 +7,6 @@
 ' '0' instance, creates an instance of 'CounterSample', and displays
 ' the corresponding fields.
 
-Imports System
 Imports System.Diagnostics
 
 Class MyCounterSampleClass

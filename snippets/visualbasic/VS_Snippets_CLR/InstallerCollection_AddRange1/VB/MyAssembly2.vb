@@ -2,11 +2,9 @@
 ' examples. Provide the exe of this program as input to the 
 ' InstallerCollection_***.exe programs.
 
-Imports System
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Configuration.Install
-Imports Microsoft.VisualBasic
 
 <RunInstaller(True)> _
 Public Class MyInstaller

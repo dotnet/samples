@@ -1,7 +1,4 @@
-﻿imports Microsoft.VisualBasic
-' <snippet14>
-imports System
-
+﻿' <snippet14>
 Module IsWhiteSpaceSample
 
     Sub Main()

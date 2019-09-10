@@ -1,5 +1,4 @@
 ﻿' <Snippet3>
-Imports System
 Imports System.CodeDom
 Imports System.CodeDom.Compiler
 Imports System.Drawing
@@ -9,7 +8,6 @@ Imports System.Windows.Forms
 Imports System.Data
 Imports System.IO
 Imports Microsoft.CSharp
-Imports Microsoft.VisualBasic
 Imports Microsoft.JScript
 
 

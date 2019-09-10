@@ -1,7 +1,6 @@
 ﻿' <Snippet1>
-Imports System
 Imports System.Reflection
-Imports Microsoft.VisualBasic
+
 Public Class MyTypeDelegator
     Inherits TypeDelegator
     Public myElementType As String = Nothing

@@ -6,13 +6,11 @@
 '
 
 
-Imports System
 Imports System.Windows
 Imports System.Windows.Shapes
 Imports System.Windows.Controls
 Imports System.Windows.Media
 Imports System.Windows.Media.Animation
-Imports Microsoft.VisualBasic
 
 Namespace Microsoft.Samples.Animation.TimingBehaviors
 	Partial Public Class AutoReverseExample
@@ -22,30 +20,34 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			' Create a name scope for the page.
 			NameScope.SetNameScope(Me, New NameScope())
 
-			Dim myStackPanel As New StackPanel()
-			myStackPanel.Margin = New Thickness(20)
+            Dim myStackPanel As New StackPanel With {
+                .Margin = New Thickness(20)
+            }
 
-			Dim myBorder As New Border()
-			Dim myTextBlock As New TextBlock()
-			myTextBlock.Margin = New Thickness(20)
-			myTextBlock.Text = "This example shows how to use the AutoReverse property to make a"
-			myTextBlock.Text &= " timeline play backwards at the end of each  iteration. Several rectangles are"
+            Dim myBorder As New Border()
+            Dim myTextBlock As New TextBlock With {
+                .Margin = New Thickness(20),
+                .Text = "This example shows how to use the AutoReverse property to make a"
+            }
+            myTextBlock.Text &= " timeline play backwards at the end of each  iteration. Several rectangles are"
 			myTextBlock.Text &= " animated by DoubleAnimations with identical durations and target values, but with different "
 			myTextBlock.Text &= " AutoReverse and RepeatBehavior settings."
 
 			myBorder.Child = myTextBlock
 			myStackPanel.Children.Add(myBorder)
 
-			myTextBlock = New TextBlock()
-			myTextBlock.Text = "AutoReverse=""False"" (Default)."
-			myStackPanel.Children.Add(myTextBlock)
+            myTextBlock = New TextBlock With {
+                .Text = "AutoReverse=""False"" (Default)."
+            }
+            myStackPanel.Children.Add(myTextBlock)
 
-			'
-			'  Create the rectangles to animate
-			'
-			Dim withoutAutoReverseRectangle As New Rectangle()
-			withoutAutoReverseRectangle.Name = "withoutAutoReverseRectangle"
-			Me.RegisterName(withoutAutoReverseRectangle.Name,withoutAutoReverseRectangle)
+            '
+            '  Create the rectangles to animate
+            '
+            Dim withoutAutoReverseRectangle As New Rectangle With {
+                .Name = "withoutAutoReverseRectangle"
+            }
+            Me.RegisterName(withoutAutoReverseRectangle.Name,withoutAutoReverseRectangle)
 			withoutAutoReverseRectangle.Width = 100
 			withoutAutoReverseRectangle.Height = 20
 			Dim mySolidColorBrush As New SolidColorBrush(Color.FromArgb(170,51,51,255))
@@ -53,28 +55,32 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			withoutAutoReverseRectangle.HorizontalAlignment = HorizontalAlignment.Left
 			myStackPanel.Children.Add(withoutAutoReverseRectangle)
 
-			myTextBlock = New TextBlock()
-			myTextBlock.Margin = New Thickness(0,20,0,0)
-			myTextBlock.Text = "AutoReverse=""True""."
-			myStackPanel.Children.Add(myTextBlock)
+            myTextBlock = New TextBlock With {
+                .Margin = New Thickness(0, 20, 0, 0),
+                .Text = "AutoReverse=""True""."
+            }
+            myStackPanel.Children.Add(myTextBlock)
 
-			Dim autoReverseRectangle As New Rectangle()
-			autoReverseRectangle.Name = "autoReverseRectangle"
-			Me.RegisterName(autoReverseRectangle.Name, autoReverseRectangle)
+            Dim autoReverseRectangle As New Rectangle With {
+                .Name = "autoReverseRectangle"
+            }
+            Me.RegisterName(autoReverseRectangle.Name, autoReverseRectangle)
 			autoReverseRectangle.Width = 100
 			autoReverseRectangle.Height = 20
 			autoReverseRectangle.Fill = mySolidColorBrush
 			autoReverseRectangle.HorizontalAlignment = HorizontalAlignment.Left
 			myStackPanel.Children.Add(autoReverseRectangle)
 
-			myTextBlock = New TextBlock()
-			myTextBlock.Margin = New Thickness(0,20,0,0)
-			myTextBlock.Text = "In this example, AutoReverse=""True"" " & vbLf & "RepeatBehavior=""2x""."
-			myStackPanel.Children.Add(myTextBlock)
+            myTextBlock = New TextBlock With {
+                .Margin = New Thickness(0, 20, 0, 0),
+                .Text = "In this example, AutoReverse=""True"" " & vbLf & "RepeatBehavior=""2x""."
+            }
+            myStackPanel.Children.Add(myTextBlock)
 
-			Dim autoReverseRectangleWithRepeats As New Rectangle()
-			autoReverseRectangleWithRepeats.Name = "autoReverseRectangleWithRepeats"
-			Me.RegisterName(autoReverseRectangleWithRepeats.Name, autoReverseRectangleWithRepeats)
+            Dim autoReverseRectangleWithRepeats As New Rectangle With {
+                .Name = "autoReverseRectangleWithRepeats"
+            }
+            Me.RegisterName(autoReverseRectangleWithRepeats.Name, autoReverseRectangleWithRepeats)
 			autoReverseRectangleWithRepeats.Width = 100
 			autoReverseRectangleWithRepeats.Height = 20
 			autoReverseRectangleWithRepeats.Fill = mySolidColorBrush
@@ -82,15 +88,17 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			myStackPanel.Children.Add(autoReverseRectangleWithRepeats)
 
 
-			myTextBlock = New TextBlock()
-			myTextBlock.Margin = New Thickness(0,20,0,0)
-			myTextBlock.Text = "In this example, AutoReverse=""True"" and RepeatBehavior=""2x"" "
-			myTextBlock.Text &= "have been set on the animation's parent timeline."
+            myTextBlock = New TextBlock With {
+                .Margin = New Thickness(0, 20, 0, 0),
+                .Text = "In this example, AutoReverse=""True"" and RepeatBehavior=""2x"" "
+            }
+            myTextBlock.Text &= "have been set on the animation's parent timeline."
 			myStackPanel.Children.Add(myTextBlock)
 
-			Dim complexAutoReverseExample As New Rectangle()
-			complexAutoReverseExample.Name = "complexAutoReverseExample"
-			Me.RegisterName(complexAutoReverseExample.Name, complexAutoReverseExample)
+            Dim complexAutoReverseExample As New Rectangle With {
+                .Name = "complexAutoReverseExample"
+            }
+            Me.RegisterName(complexAutoReverseExample.Name, complexAutoReverseExample)
 			complexAutoReverseExample.Width = 100
 			complexAutoReverseExample.Height = 20
 			complexAutoReverseExample.Fill = mySolidColorBrush
@@ -133,13 +141,14 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			myRepeatedAndReversedDoubleAnimation.AutoReverse = True
 			myRepeatedAndReversedDoubleAnimation.RepeatBehavior = New RepeatBehavior(2)
 
-			'
-			' Set the parent timeline's AutoReverse property to True and set the animation's
-			'   RepeatBehavior to 2x. As a result, the animation plays forward twice and then backwards twice.
-			'
-			Dim myParallelTimeline As New ParallelTimeline()
-			myParallelTimeline.AutoReverse = True
-			Dim myParallelRepeatedAndReversedDoubleAnimation As New DoubleAnimation()
+            '
+            ' Set the parent timeline's AutoReverse property to True and set the animation's
+            '   RepeatBehavior to 2x. As a result, the animation plays forward twice and then backwards twice.
+            '
+            Dim myParallelTimeline As New ParallelTimeline With {
+                .AutoReverse = True
+            }
+            Dim myParallelRepeatedAndReversedDoubleAnimation As New DoubleAnimation()
 			Storyboard.SetTargetName(myParallelRepeatedAndReversedDoubleAnimation, complexAutoReverseExample.Name)
 			Storyboard.SetTargetProperty(myParallelRepeatedAndReversedDoubleAnimation, New PropertyPath(Rectangle.WidthProperty))
 			myParallelRepeatedAndReversedDoubleAnimation.From = 100
@@ -158,25 +167,28 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			myParallelTimeline.Children.Add(myParallelRepeatedAndReversedDoubleAnimation)
 			myStoryboard.Children.Add(myParallelTimeline)
 
-			'
-			'  Create the button to restart the animations.
-			'
-			Dim myButton As New Button()
-			myButton.Margin = New Thickness(0,30,0,0)
-			myButton.HorizontalAlignment = HorizontalAlignment.Left
-			myButton.Content = "Restart Animations"
-			myStackPanel.Children.Add(myButton)
+            '
+            '  Create the button to restart the animations.
+            '
+            Dim myButton As New Button With {
+                .Margin = New Thickness(0, 30, 0, 0),
+                .HorizontalAlignment = HorizontalAlignment.Left,
+                .Content = "Restart Animations"
+            }
+            myStackPanel.Children.Add(myButton)
 
-			'
-			'  Create an EventTrigger and a BeginStoryboard action to start
-			'    the storyboard
-			Dim myBeginStoryboard As New BeginStoryboard()
-			myBeginStoryboard.Storyboard = myStoryboard
+            '
+            '  Create an EventTrigger and a BeginStoryboard action to start
+            '    the storyboard
+            Dim myBeginStoryboard As New BeginStoryboard With {
+                .Storyboard = myStoryboard
+            }
 
-			Dim myEventTrigger As New EventTrigger()
-			myEventTrigger.RoutedEvent = Button.ClickEvent
-			myEventTrigger.SourceName = myButton.Name
-			myEventTrigger.Actions.Add(myBeginStoryboard)
+            Dim myEventTrigger As New EventTrigger With {
+                .RoutedEvent = Button.ClickEvent,
+                .SourceName = myButton.Name
+            }
+            myEventTrigger.Actions.Add(myBeginStoryboard)
 			myStackPanel.Triggers.Add(myEventTrigger)
 			Me.Content = myStackPanel
 		End Sub

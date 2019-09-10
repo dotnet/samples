@@ -1,6 +1,5 @@
 ﻿'<snippet1>
 ' This example demonstrates the EncoderExceptionFallback class.
-Imports System
 Imports System.Text
 
 Class Sample

@@ -3,7 +3,6 @@
 ' This sample also gives them the ability to preview each element at three different sizes.
 
 ' <Snippet0>
-Imports System
 Imports System.Text
 Imports System.Drawing
 Imports System.Collections.Generic

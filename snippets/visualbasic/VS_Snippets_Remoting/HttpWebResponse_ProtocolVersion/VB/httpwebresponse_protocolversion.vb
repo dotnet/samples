@@ -3,9 +3,7 @@
  ' This program demonstrates the 'ProtocolVersion' property of the 'HttpWebResponse' class.
  ' It creates a web request and queries for a response.The server should respond using the same version 
 
-Imports System
 Imports System.Net
-Imports Microsoft.VisualBasic
 Imports System.Environment
 
 Class HttpWebResponseSnippet

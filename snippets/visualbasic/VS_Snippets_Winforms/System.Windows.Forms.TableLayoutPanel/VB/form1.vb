@@ -1,5 +1,4 @@
 ﻿' <snippet1>
-Imports System
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Drawing
@@ -68,13 +67,12 @@ Public Class Form1
     ByVal e As System.EventArgs) _
     Handles getcontrolFromPosBtn.Click
 
-        Dim i As Integer = 0
-        Dim j As Integer = 0
+
         Trace.WriteLine(Me.TableLayoutPanel1.ColumnCount)
         Trace.WriteLine(Me.TableLayoutPanel1.RowCount)
 
-        For i = 0 To Me.TableLayoutPanel1.ColumnCount
-            For j = 0 To Me.TableLayoutPanel1.RowCount
+        For i As Integer = 0 To Me.TableLayoutPanel1.ColumnCount - 1
+            For j As Integer = 0 To Me.TableLayoutPanel1.RowCount - 1
 
                 Dim c As Control = Me.TableLayoutPanel1.GetControlFromPosition(i, j)
 

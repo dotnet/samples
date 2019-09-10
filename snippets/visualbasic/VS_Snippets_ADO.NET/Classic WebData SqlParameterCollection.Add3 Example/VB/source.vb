@@ -1,7 +1,5 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.Data.SqlClient
-Imports Microsoft.VisualBasic
 
 Public Class Sample
 ' <Snippet1>

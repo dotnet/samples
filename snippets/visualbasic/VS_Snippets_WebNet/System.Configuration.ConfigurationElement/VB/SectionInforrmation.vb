@@ -1,6 +1,5 @@
 ﻿ ' File name: SectionInformation.cs
 ' Allowed snippet tags range: [91 - 120].
-Imports System
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.Configuration

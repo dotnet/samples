@@ -4,14 +4,14 @@ using System.Text.RegularExpressions;
 
 public class Example
 {
-   public static void Main()
-   {
-      string input = "equity queen equip acquaint quiet";
-      string pattern = @"\Bqu\w+";
-      foreach (Match match in Regex.Matches(input, pattern))
-         Console.WriteLine("'{0}' found at position {1}", 
-                           match.Value, match.Index);
-   }
+    public static void Main()
+    {
+        string input = "equity queen equip acquaint quiet";
+        string pattern = @"\Bqu\w+";
+        foreach (Match match in Regex.Matches(input, pattern))
+            Console.WriteLine("'{0}' found at position {1}",
+                              match.Value, match.Index);
+    }
 }
 // The example displays the following output:
 //       'quity' found at position 1

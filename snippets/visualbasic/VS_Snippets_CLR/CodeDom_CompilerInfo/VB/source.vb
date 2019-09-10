@@ -22,13 +22,11 @@
 '      - Displays settings for the compiler associated with the .vb
 '        file extension.
 
-Imports System
 Imports System.IO
 Imports System.Globalization
 Imports System.CodeDom
 Imports System.CodeDom.Compiler
 Imports Microsoft.CSharp
-Imports Microsoft.VisualBasic
 Imports System.ComponentModel
 
 Namespace CodeDomCompilerInfoSample

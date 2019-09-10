@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Collections
 Imports System.Windows
 Imports System.Windows.Threading
@@ -37,8 +36,7 @@ Class CustomDynamicRenderer
         If pen Is Nothing Then
             pen = New Pen(brush, 2.0)
         End If
-        Dim i As Integer
-        For i = 0 To stylusPoints.Count
+        For i As Integer = 0 To stylusPoints.Count - 1
             Dim pt As Point = CType(stylusPoints(i), Point)
             Dim v As Vector = Point.Subtract(prevPoint, pt)
             If v.Length > 4 Then
@@ -75,8 +73,7 @@ Class FilterPlugin
     
     Private Sub Filter(ByVal rawStylusInput As RawStylusInput) 
         Dim stylusPoints As StylusPointCollection = rawStylusInput.GetStylusPoints()
-        Dim i As Integer
-        For i = 0 To stylusPoints.Count
+        For i As Integer = 0 To stylusPoints.Count - 1
             Dim sp As StylusPoint = stylusPoints(i)
             If sp.X < 100 Then
                 sp.X = 100
@@ -127,15 +124,14 @@ Class TransformPlugin
     
     Private Sub Transform(ByVal rawStylusInput As RawStylusInput) 
         Dim stylusPoints As StylusPointCollection = rawStylusInput.GetStylusPoints()
-        Dim i As Integer
-        For i = 0 To stylusPoints.Count
+        For i As Integer = 0 To stylusPoints.Count - 1
             Dim sp As StylusPoint = stylusPoints(i)
             Dim pt As Point = CType(sp, Point)
             pt *= _matrix
             sp.X = pt.X
             sp.Y = pt.Y
             stylusPoints(i) = sp
-        Next i
+        Next
         rawStylusInput.SetStylusPoints(stylusPoints)
     
     End Sub 'Transform

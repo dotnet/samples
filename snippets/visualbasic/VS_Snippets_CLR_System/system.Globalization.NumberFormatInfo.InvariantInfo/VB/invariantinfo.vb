@@ -1,9 +1,6 @@
 ﻿'<Snippet1>
-Imports System
 Imports System.Globalization
 Imports System.Text
-Imports Microsoft.VisualBasic
-
 
 Class SamplesNumberFormatInfo
    

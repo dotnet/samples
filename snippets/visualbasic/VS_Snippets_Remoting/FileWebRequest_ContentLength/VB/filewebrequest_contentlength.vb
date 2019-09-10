@@ -6,10 +6,8 @@
 ' set the length of the file content that was written.
 
 Imports System.Net
-Imports System
 Imports System.IO
 Imports System.Text
-Imports Microsoft.VisualBasic
 Imports System.Environment
 
 

@@ -6,11 +6,8 @@
 'the required text/html homepage into a byte array. The downloaded data is displayed on the Console.
 '
 
-Imports System
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
-
 
 Public Class WebClient_DownloadData
     

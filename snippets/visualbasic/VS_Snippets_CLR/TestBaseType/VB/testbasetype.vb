@@ -1,6 +1,4 @@
 ﻿' <Snippet1>
-Imports System
-
 Class TestType
    
     Public Shared Sub Main()

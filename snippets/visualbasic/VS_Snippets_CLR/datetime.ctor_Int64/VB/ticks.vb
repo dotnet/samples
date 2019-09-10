@@ -1,8 +1,6 @@
 ﻿'<snippet1>
 ' This example demonstrates the DateTime(Int64) constructor.
-Imports System
 Imports System.Globalization
-Imports Microsoft.VisualBasic
 
 Class Sample
    Public Shared Sub Main()

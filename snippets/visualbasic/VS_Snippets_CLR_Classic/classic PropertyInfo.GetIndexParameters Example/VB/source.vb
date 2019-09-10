@@ -1,8 +1,6 @@
 ﻿' <Snippet1>
-Imports System
 Imports System.Reflection
 Imports System.Collections
-Imports Microsoft.VisualBasic
 
 ' A test class that has some properties.
 Public Class MyProperty

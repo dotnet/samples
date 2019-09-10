@@ -9,11 +9,9 @@
 
 ' <Snippet1>
 
-Imports System
 Imports System.IO
 Imports System.Diagnostics
 Imports System.ComponentModel
-Imports Microsoft.VisualBasic
 
 Namespace Process_StandardInput_Sample
 

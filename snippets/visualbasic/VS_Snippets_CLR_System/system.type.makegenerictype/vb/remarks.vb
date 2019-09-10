@@ -1,6 +1,4 @@
-﻿Imports System
-
-' <Snippet1>
+﻿' <Snippet1>
 Public Class Base(Of T, U)
 End Class
 Public Class Derived(Of V)

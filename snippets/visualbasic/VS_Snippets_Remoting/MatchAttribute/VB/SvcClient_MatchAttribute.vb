@@ -16,9 +16,7 @@
 ' parsed with the help of 'MatchAttribute' class and the contents
 ' are available in the 'Headers' instance returned by 'GetHeaders'
 ' method.
-Imports Microsoft.VisualBasic
 ' <Snippet1>
-Imports System
 Imports System.Web.Services.Protocols
 
 

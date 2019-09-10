@@ -1,8 +1,5 @@
 ﻿'<Snippet1>
 ' Example for the OperatingSystem.Clone method.
-Imports System
-Imports Microsoft.VisualBasic
-
 Module CloneCompareDemo
     
     ' Copy, clone, and duplicate an OperatingSystem object.

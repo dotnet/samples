@@ -1,5 +1,4 @@
 ﻿ '<snippet1>
-Imports System
  _
 
 Class stringToString

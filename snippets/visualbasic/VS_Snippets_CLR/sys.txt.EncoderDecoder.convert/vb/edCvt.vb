@@ -3,7 +3,6 @@
 ' This example uses files for input and output, but any source that can be expressed
 ' as a stream can be used instead.
 
-Imports System
 Imports System.Text
 Imports System.IO
 

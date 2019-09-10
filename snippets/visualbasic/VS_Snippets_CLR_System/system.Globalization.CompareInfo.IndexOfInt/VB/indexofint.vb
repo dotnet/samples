@@ -2,9 +2,7 @@
 ' Note that IndexOf and LastIndexOf are searching in different portions of the string, even with the same StartIndex parameter.
 
 ' <snippet1>
-Imports System
 Imports System.Globalization
-Imports Microsoft.VisualBasic
 
 Public Class SamplesCompareInfo
 

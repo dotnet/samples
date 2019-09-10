@@ -1,9 +1,6 @@
 ﻿'<Snippet1>
 ' Example for the Exception.HelpLink, Exception.Source,
 ' Exception.StackTrace, and Exception.TargetSite properties.
-Imports System
-Imports Microsoft.VisualBasic
-
 Namespace NDP_UE_VB
 
     ' Derive an exception; the constructor sets the HelpLink and 

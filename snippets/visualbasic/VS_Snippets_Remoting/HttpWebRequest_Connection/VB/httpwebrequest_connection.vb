@@ -6,11 +6,9 @@
 '  throws an 'ArgumentException' which is caught.The HTTP request Headers are displayed to the console.
 '  The contents of the HTML page of the requested URI are displayed to the console. 
 
-Imports System
 Imports System.IO
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
 
 ' <Snippet1>
 

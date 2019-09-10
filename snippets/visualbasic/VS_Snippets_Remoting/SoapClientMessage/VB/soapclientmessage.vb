@@ -17,11 +17,9 @@
 '  from the client and the server(which is hosting the web service) are 
 '  written into a log file. 
 
-Imports System
 Imports System.IO
 Imports System.Web.Services.Protocols
 Imports System.Web.Services
-Imports Microsoft.VisualBasic
 
 Public Class MySoapExtension
    Inherits SoapExtension

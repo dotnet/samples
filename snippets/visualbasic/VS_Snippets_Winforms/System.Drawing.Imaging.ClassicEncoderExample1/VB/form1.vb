@@ -1,11 +1,8 @@
 ﻿' Snippet for: F:System.Drawing.Imaging.Encoder.ColorDepth
 
 ' <snippet1>
-Imports System
 Imports System.Drawing
 Imports System.Drawing.Imaging
-Imports Microsoft.VisualBasic
-
 
 Class Example_SetColorDepth
 

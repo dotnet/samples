@@ -1,7 +1,4 @@
-﻿imports Microsoft.VisualBasic
-' <snippet20>
-imports System
-
+﻿' <snippet20>
 Module EqualsSample
 
     Sub Main()

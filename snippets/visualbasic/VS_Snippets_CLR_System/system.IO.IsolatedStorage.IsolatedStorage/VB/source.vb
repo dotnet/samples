@@ -1,10 +1,8 @@
 ﻿'<snippet1>  
 'This sample demonstrates methods of classes found in the System.IO IsolatedStorage namespace.
-Imports System
 Imports System.IO
 Imports System.IO.IsolatedStorage
 Imports System.Security.Policy
-Imports Microsoft.VisualBasic
 Imports Microsoft.Win32.SafeHandles
 Imports System.Security.Permissions
 

@@ -1,5 +1,4 @@
 ﻿'<snippet8>
-Imports System
 Imports System.Reflection
 
 Class Asminfo1

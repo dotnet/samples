@@ -7,7 +7,6 @@
 ' 'Download' method of 'DiscoveryClientPrototocol' and prints out 
 ' the 'contentType' and length in bytes of the discoverydocument.
 Option Strict On
-Imports System
 Imports System.Web.Services.Discovery
 Imports System.Collections
 Imports System.IO

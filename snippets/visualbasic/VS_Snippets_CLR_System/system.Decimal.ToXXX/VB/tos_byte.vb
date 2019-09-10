@@ -1,8 +1,5 @@
 ﻿'<Snippet4>
 ' Example of the Decimal.ToSByte and Decimal.ToByte methods.
-Imports System
-Imports Microsoft.VisualBasic
-
 Module DecimalToS_ByteDemo
 
     Dim formatter As String = "{0,16}{1,19}{2,19}"

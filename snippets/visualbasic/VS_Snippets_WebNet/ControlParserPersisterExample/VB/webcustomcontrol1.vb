@@ -1,6 +1,4 @@
 ﻿'<Snippet1>
-Imports Microsoft.VisualBasic
-Imports System
 Imports System.Drawing
 Imports System.Drawing.Design
 Imports System.Web.UI

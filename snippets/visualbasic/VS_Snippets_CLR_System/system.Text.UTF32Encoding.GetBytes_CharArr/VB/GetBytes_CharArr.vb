@@ -2,9 +2,7 @@
 ' then encodes the characters and displays the resulting bytes.
 
 ' <Snippet1>
-Imports System
 Imports System.Text
-Imports Microsoft.VisualBasic
 
 Public Class SamplesUTF32Encoding   
 

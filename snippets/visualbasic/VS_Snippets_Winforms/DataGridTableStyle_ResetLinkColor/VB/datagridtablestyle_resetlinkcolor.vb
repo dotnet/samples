@@ -10,7 +10,6 @@
 '  Buttons are provided on form to demonstrate setting link color
 '  and 'ResetLinkColor' method.
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel

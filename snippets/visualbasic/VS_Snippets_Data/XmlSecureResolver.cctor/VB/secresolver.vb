@@ -1,10 +1,9 @@
-﻿Imports System
-Imports System.IO
+﻿Imports System.IO
 Imports System.Xml
 Imports System.Security
 Imports System.Security.Policy
 Imports System.Net
- 
+
  public class Sample
   
    private shared filename as String = "http://localhost/data/books.xml"

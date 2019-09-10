@@ -7,13 +7,11 @@
 '
 
 
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Media
 Imports System.Windows.Shapes
 Imports System.Windows.Media.Animation
-Imports Microsoft.VisualBasic
 
 Namespace Microsoft.Samples.Animation.TimingBehaviors
 	Partial Public Class BeginTimeExample
@@ -25,30 +23,35 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 
 			Me.WindowTitle = "BeginTime Example"
 
-			Dim myStackPanel As New StackPanel()
-			myStackPanel.Margin = New Thickness(20)
+            Dim myStackPanel As New StackPanel With {
+                .Margin = New Thickness(20)
+            }
 
-			Dim myBorder As New Border()
+            Dim myBorder As New Border()
 			Dim myColor As New Color()
-			Dim mySolidColorBrush As New SolidColorBrush(Color.FromArgb(153,255,255,255))
-			mySolidColorBrush.Color = myColor
-			myBorder.Background = mySolidColorBrush
+            Dim mySolidColorBrush As New SolidColorBrush(Color.FromArgb(153, 255, 255, 255)) With {
+                .Color = myColor
+            }
+            myBorder.Background = mySolidColorBrush
 
-			Dim myTextBlock As New TextBlock()
-			myTextBlock.Margin = New Thickness(20)
-			myTextBlock.Text = "This example shows how the BeginTime property determines when a timeline starts."
-			myTextBlock.Text &= " Several rectangles are animated by DoubleAnimations with identical durations and"
+            Dim myTextBlock As New TextBlock With {
+                .Margin = New Thickness(20),
+                .Text = "This example shows how the BeginTime property determines when a timeline starts."
+            }
+            myTextBlock.Text &= " Several rectangles are animated by DoubleAnimations with identical durations and"
 			myTextBlock.Text &= " target values, but with different BeginTime settings."
 			myBorder.Child = myTextBlock
 			myStackPanel.Children.Add(myBorder)
 
-			myTextBlock = New TextBlock()
-			myTextBlock.Text = "Animation BeginTime: ""0:0:0"" "
-			myStackPanel.Children.Add(myTextBlock)
+            myTextBlock = New TextBlock With {
+                .Text = "Animation BeginTime: ""0:0:0"" "
+            }
+            myStackPanel.Children.Add(myTextBlock)
 
-			Dim defaultBeginTimeRectangle As New Rectangle()
-			defaultBeginTimeRectangle.Name = "defaultBeginTimeRectangle"
-			Me.RegisterName(defaultBeginTimeRectangle.Name, defaultBeginTimeRectangle)
+            Dim defaultBeginTimeRectangle As New Rectangle With {
+                .Name = "defaultBeginTimeRectangle"
+            }
+            Me.RegisterName(defaultBeginTimeRectangle.Name, defaultBeginTimeRectangle)
 			defaultBeginTimeRectangle.Width = 20
 			defaultBeginTimeRectangle.Height = 20
 			myColor = New Color()
@@ -57,14 +60,16 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			defaultBeginTimeRectangle.HorizontalAlignment = HorizontalAlignment.Left
 			myStackPanel.Children.Add(defaultBeginTimeRectangle)
 
-			myTextBlock = New TextBlock()
-			myTextBlock.Margin = New Thickness(0,20,0,0)
-			myTextBlock.Text = "Animation BeginTime: ""0:0:5"" " & vbLf
-			myStackPanel.Children.Add(myTextBlock)
+            myTextBlock = New TextBlock With {
+                .Margin = New Thickness(0, 20, 0, 0),
+                .Text = "Animation BeginTime: ""0:0:5"" " & vbLf
+            }
+            myStackPanel.Children.Add(myTextBlock)
 
-			Dim delayedBeginTimeRectangle As New Rectangle()
-			delayedBeginTimeRectangle.Name = "delayedBeginTimeRectangle"
-			Me.RegisterName(delayedBeginTimeRectangle.Name, delayedBeginTimeRectangle)
+            Dim delayedBeginTimeRectangle As New Rectangle With {
+                .Name = "delayedBeginTimeRectangle"
+            }
+            Me.RegisterName(delayedBeginTimeRectangle.Name, delayedBeginTimeRectangle)
 			delayedBeginTimeRectangle.Width = 20
 			delayedBeginTimeRectangle.Height = 20
 			myColor = New Color()
@@ -74,13 +79,15 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			myStackPanel.Children.Add(delayedBeginTimeRectangle)
 
 
-			myTextBlock = New TextBlock()
-			myTextBlock.Text = vbLf & "Parent Timeline BeginTime: ""0:0:5"" " & vbLf & "Animation BeginTime: ""0:0:5"" "
-			myStackPanel.Children.Add(myTextBlock)
+            myTextBlock = New TextBlock With {
+                .Text = vbLf & "Parent Timeline BeginTime: ""0:0:5"" " & vbLf & "Animation BeginTime: ""0:0:5"" "
+            }
+            myStackPanel.Children.Add(myTextBlock)
 
-			Dim delayedAnimationWithDelayedParentRectangle As New Rectangle()
-			delayedAnimationWithDelayedParentRectangle.Name = "delayedAnimationWithDelayedParentRectangle"
-			Me.RegisterName(delayedAnimationWithDelayedParentRectangle.Name, delayedAnimationWithDelayedParentRectangle)
+            Dim delayedAnimationWithDelayedParentRectangle As New Rectangle With {
+                .Name = "delayedAnimationWithDelayedParentRectangle"
+            }
+            Me.RegisterName(delayedAnimationWithDelayedParentRectangle.Name, delayedAnimationWithDelayedParentRectangle)
 			delayedAnimationWithDelayedParentRectangle.Width = 20
 			delayedAnimationWithDelayedParentRectangle.Height = 20
 			myColor = New Color()
@@ -115,13 +122,14 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			myDelayedDoubleAnimation.FillBehavior = FillBehavior.HoldEnd
 
 
-			'
-			'  Create an animation with a 5 second delay in both the parent and
-			'  child timelines.
-			'
-			Dim myParallelTimeline As New ParallelTimeline()
-			myParallelTimeline.BeginTime = TimeSpan.FromSeconds(5)
-			Dim myParallelDelayedDoubleAnimation As New DoubleAnimation()
+            '
+            '  Create an animation with a 5 second delay in both the parent and
+            '  child timelines.
+            '
+            Dim myParallelTimeline As New ParallelTimeline With {
+                .BeginTime = TimeSpan.FromSeconds(5)
+            }
+            Dim myParallelDelayedDoubleAnimation As New DoubleAnimation()
 			Storyboard.SetTargetName(myParallelDelayedDoubleAnimation, delayedAnimationWithDelayedParentRectangle.Name)
 			Storyboard.SetTargetProperty(myParallelDelayedDoubleAnimation, New PropertyPath(Rectangle.WidthProperty))
 			myParallelDelayedDoubleAnimation.From = 20
@@ -139,25 +147,28 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			myParallelTimeline.Children.Add(myParallelDelayedDoubleAnimation)
 			myStoryboard.Children.Add(myParallelTimeline)
 
-			'
-			'  Create the button to restart the animations
-			'
-			Dim myButton As New Button()
-			myButton.Margin = New Thickness(0,30,0,0)
-			myButton.HorizontalAlignment = HorizontalAlignment.Left
-			myButton.Content = "Restart Animations"
-			myStackPanel.Children.Add(myButton)
+            '
+            '  Create the button to restart the animations
+            '
+            Dim myButton As New Button With {
+                .Margin = New Thickness(0, 30, 0, 0),
+                .HorizontalAlignment = HorizontalAlignment.Left,
+                .Content = "Restart Animations"
+            }
+            myStackPanel.Children.Add(myButton)
 
-		   '
-		   '  Create an EventTrigger and a BeginStoryboard action to start
-		   '    the storyboard
-		   '
-		   Dim myBeginStoryboard As New BeginStoryboard()
-		   myBeginStoryboard.Storyboard = myStoryboard
-		   Dim myEventTrigger As New EventTrigger()
-		   myEventTrigger.RoutedEvent = Button.ClickEvent
-		   myEventTrigger.SourceName = myButton.Name
-		   myEventTrigger.Actions.Add(myBeginStoryboard)
+            '
+            '  Create an EventTrigger and a BeginStoryboard action to start
+            '    the storyboard
+            '
+            Dim myBeginStoryboard As New BeginStoryboard With {
+                .Storyboard = myStoryboard
+            }
+            Dim myEventTrigger As New EventTrigger With {
+                .RoutedEvent = Button.ClickEvent,
+                .SourceName = myButton.Name
+            }
+            myEventTrigger.Actions.Add(myBeginStoryboard)
 		   myStackPanel.Triggers.Add(myEventTrigger)
 
 		   Me.Content = myStackPanel

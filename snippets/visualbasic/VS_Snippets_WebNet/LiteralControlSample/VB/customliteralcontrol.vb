@@ -13,7 +13,6 @@
 '  'CreateControlCollection' method is overridden to be able to allow child control creation.
 '  The  'Text'  property is overridden to be able to display the text of the control
 
-Imports System
 Imports System.Collections
 Imports System.Web.UI
 Imports System.Web.UI.WebControls

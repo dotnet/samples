@@ -4,12 +4,10 @@
 ' 'OperationFaultCollection' class. Based on 'StockQuote_vb.wsdl', the program generates a WSDL file
 ' 'StockQuoteNew_vb.wsdl' which contains 'Fault' information written out.
 
-Imports System
 Imports System.Web.Services.Description
 Imports System.Xml
 Imports System.Xml.Schema
 Imports System.Xml.Serialization
-Imports Microsoft.VisualBasic
 
 Public Class MyFaultCollectionSample
    Public Shared Sub Main()

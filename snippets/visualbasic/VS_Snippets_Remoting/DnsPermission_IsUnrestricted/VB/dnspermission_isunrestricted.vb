@@ -4,13 +4,10 @@
 '   'DnsPermission' instance was created with unrestricted permission state otherwise false.
 '
 
-Imports System
 Imports System.Net
 Imports System.Security
 Imports System.Security.Permissions
 Imports System.Collections
-Imports Microsoft.VisualBasic
-
 
 Class DnsPermissionExample
     

@@ -1,8 +1,5 @@
 ﻿' Supporting file: Common  
 
-Imports System
-Imports MicroSoft.VisualBasic
-
 Public Class Foo
    Inherits MarshalByRefObject
    

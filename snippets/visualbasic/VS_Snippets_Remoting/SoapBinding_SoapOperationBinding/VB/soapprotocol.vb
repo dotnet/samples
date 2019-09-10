@@ -27,7 +27,6 @@
 ' which is used by the .aspx file.
 ' Note: To run the example run the make file provided and open the '.aspx' file in browser.
 
-Imports System
 Imports System.Web.Services.Description
 Imports System.Collections
 Imports System.Xml

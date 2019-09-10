@@ -1,8 +1,6 @@
 ﻿' <Snippet1>
-Imports System
 Imports System.Reflection
 Imports System.IO
-Imports Microsoft.VisualBasic
 
 <DefaultMemberAttribute("Age")> Public Class [MyClass]
 

@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Web.UI
 
 Namespace Samples.AspNet.VB.Controls

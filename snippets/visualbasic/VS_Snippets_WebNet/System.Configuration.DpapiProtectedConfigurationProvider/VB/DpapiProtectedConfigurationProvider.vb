@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Configuration
+﻿Imports System.Configuration
 
 
 Public Class UsingDpapiProtectedConfigurationProvider

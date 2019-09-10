@@ -8,10 +8,8 @@
 ' * * 
 ' * Please Note : This program has to be compiled as a dll.
 ' 
-Imports System
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
 
 Namespace CloneBasicAuthentication
     

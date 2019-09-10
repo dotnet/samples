@@ -1,7 +1,4 @@
-﻿imports Microsoft.VisualBasic
-' <snippet6>
-imports System
-
+﻿' <snippet6>
 Module IsLetterOrDigitSample
 
     Sub Main()

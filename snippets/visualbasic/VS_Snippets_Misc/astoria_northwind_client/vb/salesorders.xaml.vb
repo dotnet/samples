@@ -1,33 +1,54 @@
-﻿'Imports System
-'Imports System.Collections.Generic
+﻿''Imports System.Collections.Generic
+
 'Imports System.Linq
+
 'Imports System.Text
+
 'Imports System.Windows
+
 'Imports System.Windows.Controls
+
 'Imports System.Windows.Data
+
 'Imports System.Windows.Documents
+
 'Imports System.Windows.Input
+
 'Imports System.Windows.Media
+
 'Imports System.Windows.Media.Imaging
+
 'Imports System.Windows.Navigation
+
 'Imports System.Windows.Shapes
+
 'Imports NorthwindClient.Northwind
+
 'Imports System.Data.Services.Client
+
 'Imports System.Windows.Threading
 
 'Imports System.Windows.Input
+
 'Imports System.Windows.Media
+
 'Imports System.Windows.Media.Imaging
+
 'Imports System.Windows.Navigation
+
 'Imports System.Windows.Data
+
 'Imports System.Windows.Documents
-'Imports System.Windows.ShapesImports System
-'Imports System.Linq
+
+'Imports System.Windows.Shapes'Imports System.Linq
+
 'Imports System.Windows.Controls
+
 'Imports System.Text
+
 'Imports System.Collections.Generic
+
 '<snippetWpfDataBindingCode>
-Imports System
 Imports System.Linq
 Imports System.Windows
 Imports System.Data.Services.Client

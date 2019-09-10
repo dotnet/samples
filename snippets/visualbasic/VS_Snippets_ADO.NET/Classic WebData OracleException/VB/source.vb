@@ -1,12 +1,9 @@
-﻿Imports System
-Imports System.Xml
+﻿Imports System.Xml
 Imports System.Data
 Imports System.Data.OracleClient
 Imports System.Data.Common
-Imports Microsoft.VisualBasic
 
 Public class Sample
-
 
 ' <Snippet1>
  Public Sub ShowOracleException() 

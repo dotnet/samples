@@ -3,15 +3,12 @@
 ' new parent and child code group pair, and allows the user to optionally delete the child group 
 ' and/or the parent code group.  It also shows the result of a ResolvePolicy call, and displays 
 ' the permissions for the three security levels; Enterprise, Machine, and User.
-Imports System
 Imports System.Collections
 Imports System.Security
 Imports System.Security.Policy
 Imports System.Security.Permissions
 Imports System.Reflection
 Imports System.Globalization
-Imports Microsoft.VisualBasic
-
 
 Class PolicyLevelSample
 

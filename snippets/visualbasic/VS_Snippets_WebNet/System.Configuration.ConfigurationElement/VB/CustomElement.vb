@@ -2,7 +2,6 @@
 ' Allowed snippet tags range: [31 - 50].
 
 '<Snippet31>
-Imports System
 Imports System.Configuration
 Imports System.Collections
 

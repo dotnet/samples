@@ -2,7 +2,6 @@
 
 
 ' <snippet1>
-Imports System
 Imports System.Collections.Specialized
 
 Public Class SamplesBitVector32

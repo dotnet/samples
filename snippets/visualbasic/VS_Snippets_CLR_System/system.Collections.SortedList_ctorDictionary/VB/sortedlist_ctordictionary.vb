@@ -2,7 +2,6 @@
 ' and demonstrates the differences in the behavior of the SortedList instances.
 
 ' <Snippet1>
-Imports System
 Imports System.Collections
 Imports System.Globalization
 

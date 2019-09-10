@@ -13,13 +13,10 @@
 '        program.Please refer the "ReadmeCookiesServer.txt" file for setting up the server.
 '
 
-Imports System
 Imports System.Net
 Imports System.IO
 Imports System.Text
 Imports System.Text.RegularExpressions
-Imports Microsoft.VisualBasic
-
 
 Public Class CookieCollection_Item_2
     

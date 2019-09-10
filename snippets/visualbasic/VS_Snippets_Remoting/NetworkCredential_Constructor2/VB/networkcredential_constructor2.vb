@@ -6,10 +6,7 @@
 '  it.A message is displayed onto the console on successful reception of response otherwise an exception is thrown.
 ' 
 
-Imports System
 Imports System.Net
-Imports Microsoft.VisualBasic
-
 
 Class NetworkCredentialSnippet
     

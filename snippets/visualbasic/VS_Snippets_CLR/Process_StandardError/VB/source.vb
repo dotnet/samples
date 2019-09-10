@@ -7,11 +7,9 @@
 ' error when a bad network path is given.This program gets 'StandardError' of
 ' net.exe process and reads output from its stream reader.*/
 
-Imports System
 Imports System.Diagnostics
 Imports System.ComponentModel
 Imports System.IO
-Imports Microsoft.VisualBasic
 
 Namespace Process_StandardError
 

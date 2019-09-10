@@ -9,7 +9,6 @@
 '   to this the log messages are displayed on the console. The 'HelpText'
 '   property for the object is displayed on the console.
 
-Imports System
 Imports System.Configuration.Install
 Imports System.Collections
 Imports System.Collections.Specialized

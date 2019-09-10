@@ -1,8 +1,5 @@
 ﻿'<snippet1>
 ' Example for the trigonometric Math.Sin( Double ) and Math.Cos( Double ) methods.
-Imports System
-Imports Microsoft.VisualBasic
-
 Module SinCos
    
     Sub Main()

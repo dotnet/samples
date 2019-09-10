@@ -1,8 +1,7 @@
 ﻿'<snippet1>
-Imports System
 Imports System.IO
 Imports System.Xml
- 
+
 public class Sample
 
   private const filename as String = "doment.xml"

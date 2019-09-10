@@ -1,8 +1,6 @@
 ﻿' The following code example passes an ArraySegment to a method.
 
 ' <Snippet1>
-Imports System
-
 Public Class SamplesArray
 
     Public Shared Sub Main()

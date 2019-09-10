@@ -1,7 +1,6 @@
 ﻿'<snippet1>
 ' Remember that the actual size of System.Char in unmanaged memory is 2.
 
-Imports System
 Imports System.Runtime.InteropServices
 
 

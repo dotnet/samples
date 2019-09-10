@@ -6,9 +6,7 @@
 '  an exception. A new exception is thrown with this exception as an 
 '  inner exception.
 
-Imports Microsoft.VisualBasic
 ' <Snippet1>
-Imports System
 Imports System.Runtime.InteropServices
 
 Public Class TypeLoadException_Constructor3

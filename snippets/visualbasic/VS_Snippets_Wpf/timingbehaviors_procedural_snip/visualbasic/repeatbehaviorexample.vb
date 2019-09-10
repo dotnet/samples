@@ -5,13 +5,11 @@
 '
 
 
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Media
 Imports System.Windows.Shapes
 Imports System.Windows.Media.Animation
-Imports Microsoft.VisualBasic
 
 Namespace Microsoft.Samples.Animation.TimingBehaviors
 	Partial Public Class RepeatBehaviorExample
@@ -23,34 +21,39 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 
 			Me.WindowTitle = "RepeatBehavior Example"
 
-			Dim myBorder As New Border()
-			myBorder.HorizontalAlignment = HorizontalAlignment.Stretch
-			Me.Content = myBorder
+            Dim myBorder As New Border With {
+                .HorizontalAlignment = HorizontalAlignment.Stretch
+            }
+            Me.Content = myBorder
 
-			Dim myStackPanel As New StackPanel()
-			myStackPanel.Margin = New Thickness(20)
-			myBorder.Child = myStackPanel
+            Dim myStackPanel As New StackPanel With {
+                .Margin = New Thickness(20)
+            }
+            myBorder.Child = myStackPanel
 
 			Dim myBorder1 As New Border()
 			Dim mySolidColorBrush As New SolidColorBrush(Color.FromArgb(153,255,255,255))
 			myBorder1.Background = mySolidColorBrush
 			myStackPanel.Children.Add(myBorder1)
 
-			Dim myTextBlock As New TextBlock()
-			myTextBlock.Margin = New Thickness(20)
-			myTextBlock.Text = "This example shows how the RepeatBehavior property "
-			myTextBlock.Text &= "is used to make a timeline repeat. Several rectangles are animated by "
+            Dim myTextBlock As New TextBlock With {
+                .Margin = New Thickness(20),
+                .Text = "This example shows how the RepeatBehavior property "
+            }
+            myTextBlock.Text &= "is used to make a timeline repeat. Several rectangles are animated by "
 			myTextBlock.Text &= "DoubleAnimations with identical durations and target values, but with different "
 			myTextBlock.Text &= "RepeatBehavior settings."
 			myBorder1.Child = myTextBlock
 
-			myTextBlock = New TextBlock()
-			myTextBlock.Text = vbLf & "RepeatBehavior=""Forever"" "
-			myStackPanel.Children.Add(myTextBlock)
+            myTextBlock = New TextBlock With {
+                .Text = vbLf & "RepeatBehavior=""Forever"" "
+            }
+            myStackPanel.Children.Add(myTextBlock)
 
-			Dim foreverRepeatingRectangle As New Rectangle()
-			foreverRepeatingRectangle.Name = "foreverRepeatingRectangle"
-			Me.RegisterName(foreverRepeatingRectangle.Name, foreverRepeatingRectangle)
+            Dim foreverRepeatingRectangle As New Rectangle With {
+                .Name = "foreverRepeatingRectangle"
+            }
+            Me.RegisterName(foreverRepeatingRectangle.Name, foreverRepeatingRectangle)
 			mySolidColorBrush = New SolidColorBrush(Color.FromArgb(170,51,51,255))
 			foreverRepeatingRectangle.Fill = mySolidColorBrush
 			foreverRepeatingRectangle.Width = 50
@@ -59,40 +62,46 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			myStackPanel.Children.Add(foreverRepeatingRectangle)
 
 
-			myTextBlock = New TextBlock()
-			myTextBlock.Text = vbLf & "RepeatBehavior=""0:0:4"" "
-			myStackPanel.Children.Add(myTextBlock)
+            myTextBlock = New TextBlock With {
+                .Text = vbLf & "RepeatBehavior=""0:0:4"" "
+            }
+            myStackPanel.Children.Add(myTextBlock)
 
 
-			Dim fourSecondsRepeatingRectangle As New Rectangle()
-			fourSecondsRepeatingRectangle.Name = "fourSecondsRepeatingRectangle"
-			Me.RegisterName(fourSecondsRepeatingRectangle.Name, fourSecondsRepeatingRectangle)
+            Dim fourSecondsRepeatingRectangle As New Rectangle With {
+                .Name = "fourSecondsRepeatingRectangle"
+            }
+            Me.RegisterName(fourSecondsRepeatingRectangle.Name, fourSecondsRepeatingRectangle)
 			fourSecondsRepeatingRectangle.Fill= mySolidColorBrush
 			fourSecondsRepeatingRectangle.Width = 50
 			fourSecondsRepeatingRectangle.Height = 20
 			fourSecondsRepeatingRectangle.HorizontalAlignment = HorizontalAlignment.Left
 			myStackPanel.Children.Add(fourSecondsRepeatingRectangle)
 
-			myTextBlock = New TextBlock()
-			myTextBlock.Text = vbLf & "RepeatBehavior=""2x"" "
-			myStackPanel.Children.Add(myTextBlock)
+            myTextBlock = New TextBlock With {
+                .Text = vbLf & "RepeatBehavior=""2x"" "
+            }
+            myStackPanel.Children.Add(myTextBlock)
 
-			Dim twiceRepeatingRectangle As New Rectangle()
-			twiceRepeatingRectangle.Name = "twiceRepeatingRectangle"
-			Me.RegisterName(twiceRepeatingRectangle.Name, twiceRepeatingRectangle)
+            Dim twiceRepeatingRectangle As New Rectangle With {
+                .Name = "twiceRepeatingRectangle"
+            }
+            Me.RegisterName(twiceRepeatingRectangle.Name, twiceRepeatingRectangle)
 			twiceRepeatingRectangle.Fill = mySolidColorBrush
 			twiceRepeatingRectangle.Width = 50
 			twiceRepeatingRectangle.Height = 20
 			twiceRepeatingRectangle.HorizontalAlignment = HorizontalAlignment.Left
 			myStackPanel.Children.Add(twiceRepeatingRectangle)
 
-			myTextBlock = New TextBlock()
-			myTextBlock.Text = vbLf & "RepeatBehavior=""0.05"" "
-			myStackPanel.Children.Add(myTextBlock)
+            myTextBlock = New TextBlock With {
+                .Text = vbLf & "RepeatBehavior=""0.05"" "
+            }
+            myStackPanel.Children.Add(myTextBlock)
 
-			Dim halfRepeatingRectangle As New Rectangle()
-			halfRepeatingRectangle.Name = "halfRepeatingRectangle"
-			Me.RegisterName(halfRepeatingRectangle.Name, halfRepeatingRectangle)
+            Dim halfRepeatingRectangle As New Rectangle With {
+                .Name = "halfRepeatingRectangle"
+            }
+            Me.RegisterName(halfRepeatingRectangle.Name, halfRepeatingRectangle)
 
 			halfRepeatingRectangle.Fill = mySolidColorBrush
 			halfRepeatingRectangle.Width = 50
@@ -100,13 +109,15 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			halfRepeatingRectangle.HorizontalAlignment = HorizontalAlignment.Left
 			myStackPanel.Children.Add(halfRepeatingRectangle)
 
-			myTextBlock = New TextBlock()
-			myTextBlock.Text = vbLf & "RepeatBehavior=""0:0:1"" "
-			myStackPanel.Children.Add(myTextBlock)
+            myTextBlock = New TextBlock With {
+                .Text = vbLf & "RepeatBehavior=""0:0:1"" "
+            }
+            myStackPanel.Children.Add(myTextBlock)
 
-			Dim oneSecondRepeatingRectangle As New Rectangle()
-			oneSecondRepeatingRectangle.Name = "oneSecondRepeatingRectangle"
-			Me.RegisterName(oneSecondRepeatingRectangle.Name, oneSecondRepeatingRectangle)
+            Dim oneSecondRepeatingRectangle As New Rectangle With {
+                .Name = "oneSecondRepeatingRectangle"
+            }
+            Me.RegisterName(oneSecondRepeatingRectangle.Name, oneSecondRepeatingRectangle)
 			oneSecondRepeatingRectangle.Fill = mySolidColorBrush
 			oneSecondRepeatingRectangle.Width = 50
 			oneSecondRepeatingRectangle.Height = 20
@@ -185,44 +196,50 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			myStoryboard.Children.Add(myHalfRepeatingDoubleAnimation)
 			myStoryboard.Children.Add(myOneSecondDoubleAnimation)
 
-			'
-			'  Create buttons to restart and stop the animations.
-			'
-			Dim myRestartButton As New Button()
-			myRestartButton.Name = "restartButton"
-			Me.RegisterName(myRestartButton.Name, myRestartButton)
+            '
+            '  Create buttons to restart and stop the animations.
+            '
+            Dim myRestartButton As New Button With {
+                .Name = "restartButton"
+            }
+            Me.RegisterName(myRestartButton.Name, myRestartButton)
 			myRestartButton.Content = "Start Animations"
 			myStackPanel1.Children.Add(myRestartButton)
 
-			Dim myStopButton As New Button()
-			myStopButton.Name = "stopButton"
-			Me.RegisterName(myStopButton.Name, myStopButton)
+            Dim myStopButton As New Button With {
+                .Name = "stopButton"
+            }
+            Me.RegisterName(myStopButton.Name, myStopButton)
 			myStopButton.Content = "Stop"
 			mySolidColorBrush = New SolidColorBrush(Color.FromArgb(102,153,0,255))
 			myStopButton.Background = mySolidColorBrush
 			myStackPanel1.Children.Add(myStopButton)
 
-			'
-			'  Create EventTriggers and the BeginStoryboard and StopStoryboard actions to start
-			'    and stop the storyboard.
-			Dim myBeginStoryboard As New BeginStoryboard()
-			myBeginStoryboard.Name = "myBeginStoryboard"
-			Me.RegisterName(myBeginStoryboard.Name,myBeginStoryboard)
+            '
+            '  Create EventTriggers and the BeginStoryboard and StopStoryboard actions to start
+            '    and stop the storyboard.
+            Dim myBeginStoryboard As New BeginStoryboard With {
+                .Name = "myBeginStoryboard"
+            }
+            Me.RegisterName(myBeginStoryboard.Name,myBeginStoryboard)
 			myBeginStoryboard.Storyboard = myStoryboard
 
-			Dim myEventTrigger As New EventTrigger()
-			myEventTrigger.RoutedEvent = Button.ClickEvent
-			myEventTrigger.SourceName = myRestartButton.Name
-			myEventTrigger.Actions.Add(myBeginStoryboard)
+            Dim myEventTrigger As New EventTrigger With {
+                .RoutedEvent = Button.ClickEvent,
+                .SourceName = myRestartButton.Name
+            }
+            myEventTrigger.Actions.Add(myBeginStoryboard)
 			myStackPanel.Triggers.Add(myEventTrigger)
 
-			Dim myEventTrigger1 As New EventTrigger()
-			myEventTrigger1.RoutedEvent = Button.ClickEvent
-			myEventTrigger1.SourceName = myStopButton.Name
+            Dim myEventTrigger1 As New EventTrigger With {
+                .RoutedEvent = Button.ClickEvent,
+                .SourceName = myStopButton.Name
+            }
 
-			Dim myStopStoryboard As New StopStoryboard()
-			myStopStoryboard.BeginStoryboardName = myBeginStoryboard.Name
-			myEventTrigger1.Actions.Add(myStopStoryboard)
+            Dim myStopStoryboard As New StopStoryboard With {
+                .BeginStoryboardName = myBeginStoryboard.Name
+            }
+            myEventTrigger1.Actions.Add(myStopStoryboard)
 			myStackPanel.Triggers.Add(myEventTrigger1)
 
 

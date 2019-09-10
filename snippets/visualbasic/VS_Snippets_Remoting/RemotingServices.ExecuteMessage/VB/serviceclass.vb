@@ -1,13 +1,10 @@
-﻿Imports System
-Imports System.Collections
+﻿Imports System.Collections
 Imports System.Diagnostics
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Messaging
 Imports System.Runtime.Remoting.Contexts
 Imports System.Runtime.Remoting.Channels
 Imports System.Security.Permissions
-Imports Microsoft.VisualBasic
-
 
 Public Class SampleService
    Inherits ContextBoundObject

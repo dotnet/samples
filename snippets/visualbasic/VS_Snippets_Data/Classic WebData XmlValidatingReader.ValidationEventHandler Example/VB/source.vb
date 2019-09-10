@@ -1,9 +1,7 @@
 ﻿' <Snippet1>
-Imports System
 Imports System.IO
 Imports System.Xml
 Imports System.Xml.Schema
-Imports Microsoft.VisualBasic
 
 Public Class Sample
     

@@ -1,8 +1,5 @@
 ﻿'<snippet1>
 ' This example demonstrates the Console.CursorVisible property.
-Imports System
-Imports Microsoft.VisualBasic
-
 Class Sample
    Public Shared Sub Main()
       Dim m1 As String = vbCrLf & "The cursor is {0}." & _

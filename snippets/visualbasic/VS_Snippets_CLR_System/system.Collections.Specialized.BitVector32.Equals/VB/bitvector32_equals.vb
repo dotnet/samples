@@ -1,7 +1,6 @@
 ﻿' The following code example compares a BitVector32 with another BitVector32 and with an Int32.
 
 ' <snippet1>
-Imports System
 Imports System.Collections.Specialized
 
 

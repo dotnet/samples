@@ -6,7 +6,6 @@
 ' is created by passing an array of 'CounterCreationData'. A particular instance of
 ' 'CounterCreationData' is removed if it exist in the 'CounterCreationDataCollection'.
 
-Imports System
 Imports System.Diagnostics
 
 Public Class CounterCreationDataCollectionExample

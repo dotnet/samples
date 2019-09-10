@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Text
+﻿Imports System.Text
 Imports System.IO
 Imports System.Xml
 
@@ -59,7 +58,7 @@ reader.ReadToFollowing("book")
 If reader.HasAttributes Then
   Console.WriteLine("Attributes of <" + reader.Name + ">")
   Dim i As Integer
-  For i = 0 To reader.AttributeCount
+  For i = 0 To reader.AttributeCount - 1
     reader.MoveToAttribute(i)
     Console.Write(" {0}={1}", reader.Name, reader.Value)
   Next i

@@ -9,10 +9,7 @@
 ' language. 
 '
 
-Imports System
 Imports System.Net
-Imports Microsoft.VisualBasic
-
 
 Public Class WebHeaderCollection_Add
     

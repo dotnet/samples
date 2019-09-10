@@ -1,10 +1,8 @@
 ﻿' <snippet1>
-Imports System
 Imports System.IO
 Imports System.Web
 Imports System.Web.UI
 Imports System.Web.UI.Adapters
-Imports Microsoft.VisualBasic
 
 ' A derived PageAdapter class.
 Public Class CustomPageAdapter

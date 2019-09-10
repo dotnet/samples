@@ -10,12 +10,9 @@
 '
 '  Note: This program POSTs data to the Uri: http://www20.Brinkster.com/codesnippets/next.asp 
 
-Imports System
 Imports System.IO
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
-
 
 Class WebRequest_ContentLength
     

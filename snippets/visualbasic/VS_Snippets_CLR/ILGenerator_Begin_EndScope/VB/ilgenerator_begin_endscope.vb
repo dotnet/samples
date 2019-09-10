@@ -10,11 +10,9 @@
 ' 'EndScope' methods. Respective messages related to scope are printed on the console. 
 
 ' <Snippet1>
-Imports System
 Imports System.Reflection
 Imports System.Reflection.Emit
 Imports System.Security.Permissions
-Imports MicroSoft.VisualBasic
 
 Public Class ILGenerator_Begin_EndScope
    <PermissionSetAttribute(SecurityAction.Demand, Name:="FullTrust")> _

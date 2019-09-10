@@ -8,13 +8,9 @@
 'The Html contents of the page of the requested Uri Are printed to the console.
 'Here the 'ProtocolVersion' property displays the ProtocolVersion being used  
 
-Imports System
 Imports System.IO
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
-
-
 
 Class HttpWebRequest_ProtocolVersion
     

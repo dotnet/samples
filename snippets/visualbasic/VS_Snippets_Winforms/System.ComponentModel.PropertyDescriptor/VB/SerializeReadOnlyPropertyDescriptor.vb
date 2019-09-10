@@ -1,5 +1,4 @@
 ﻿' <snippet1>
-Imports System
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Text
@@ -150,7 +149,7 @@ Friend NotInheritable Class SerializeReadOnlyPropertyDescriptor
             ' array.  If it is, replace it.
             Dim match As Boolean = False
             Dim existingIdx As Integer
-            For existingIdx = 0 To existing.Count
+            For existingIdx = 0 To existing.Count - 1
                 If newArray(existingIdx).TypeId.Equals(newAttrs(idx).TypeId) Then
                     match = True
                     newArray(existingIdx) = newAttrs(idx)

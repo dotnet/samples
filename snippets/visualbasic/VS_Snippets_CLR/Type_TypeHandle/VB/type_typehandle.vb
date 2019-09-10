@@ -1,7 +1,6 @@
 ﻿' <Snippet1>	
-Imports System
 Imports System.Reflection
-Imports Microsoft.VisualBasic
+
 Class [MyClass]
     Public myField As Integer = 10
 End Class '[MyClass]

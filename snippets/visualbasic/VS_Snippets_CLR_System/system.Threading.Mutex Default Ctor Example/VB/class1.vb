@@ -4,9 +4,7 @@
 ' WaitHandle.WaitAll and WaitAny, and can be passed across
 ' AppDomain boundaries.
  
-Imports System
 Imports System.Threading
-Imports Microsoft.VisualBasic
 
 Class Test
     ' Create a new Mutex. The creating thread does not own the

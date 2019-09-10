@@ -6,7 +6,6 @@
 ' supporting 'HttpPost'.It then adds those objects and writes into
 ' 'Operation_IsBoundBy_Output_VB.wsdl'.
 
-Imports System
 Imports System.Web.Services.Description
 Imports System.Collections
 Imports System.Xml

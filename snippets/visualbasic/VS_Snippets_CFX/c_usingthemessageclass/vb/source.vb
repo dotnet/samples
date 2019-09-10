@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.ServiceModel
+﻿Imports System.ServiceModel
 Imports System.Runtime.Serialization
 Imports System.IO
 Imports System.Collections.Generic

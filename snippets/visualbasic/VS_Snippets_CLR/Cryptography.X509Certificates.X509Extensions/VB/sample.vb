@@ -1,5 +1,4 @@
 ﻿'<SNIPPET1>
-Imports System
 Imports System.Security.Cryptography
 Imports System.Security.Cryptography.X509Certificates
 
@@ -13,8 +12,7 @@ Module CertSelect
             store.Open(OpenFlags.ReadOnly Or OpenFlags.OpenExistingOnly)
 
             Dim collection As X509Certificate2Collection = CType(store.Certificates, X509Certificate2Collection)
-            Dim i As Integer
-            For i = 0 To collection.Count
+            For i As Integer = 0 To collection.Count - 1
                 Dim extension As X509Extension
                 For Each extension In collection(i).Extensions
                     Console.WriteLine(extension.Oid.FriendlyName + "(" + extension.Oid.Value + ")")

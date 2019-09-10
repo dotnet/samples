@@ -1,10 +1,8 @@
 ﻿' <snippet1>
-Imports System
 Imports System.IO
 Imports System.Runtime
 Imports System.Reflection
 Imports System.Runtime.Remoting.Lifetime
-Imports Microsoft.VisualBasic
 Imports System.Security.Permissions
 
 Namespace StreamWriterSample

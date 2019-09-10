@@ -1,6 +1,6 @@
 ﻿' <Snippet1>
-Imports System
 Imports System.Security.Principal
+
 Module Module1
 
     Sub Main()

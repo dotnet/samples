@@ -1,6 +1,4 @@
-﻿Imports System
-
-' <Snippet1>
+﻿' <Snippet1>
 Namespace System.Runtime.InteropServices
     
     <AttributeUsage(AttributeTargets.Method _

@@ -1,8 +1,6 @@
 ﻿'<Snippet1>
-Imports System
 Imports System.Reflection
 Imports System.Collections.Generic
-Imports Microsoft.VisualBasic
 
 ' Define a base class with two type parameters.
 Public Class Base(Of T, U)

@@ -1,8 +1,5 @@
 ﻿'<Snippet1>
 ' Example for the Exception.HResult property.
-Imports System
-Imports Microsoft.VisualBasic
-
 Namespace NDP_UE_VB
 
     ' Create the derived exception class.

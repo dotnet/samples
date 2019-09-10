@@ -1,7 +1,5 @@
 ﻿' Copyright (c) Microsoft Corporation. All rights reserved.
 ' <snippet6>
-Imports System
-
 Namespace Microsoft.ServiceModel.Samples
 
     ' The service contract is defined in generatedClient.vb, generated from the service by the svcutil tool.

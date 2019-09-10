@@ -12,7 +12,6 @@
 
 ' Revised 3/16/06 by REDMOND\GlennHa, for vswhidbey 191996.
 ' <Snippet1>
-Imports System
 Imports System.Reflection
 Imports System.Reflection.Emit
 Imports System.Threading

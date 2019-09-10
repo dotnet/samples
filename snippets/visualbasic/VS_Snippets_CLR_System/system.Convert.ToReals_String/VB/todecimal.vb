@@ -1,9 +1,7 @@
 ﻿'<Snippet1>
 ' Example of the Convert.ToDecimal( String ) and 
 ' Convert.ToDecimal( String, IFormatProvider ) methods.
-Imports System
 Imports System.Globalization
-Imports Microsoft.VisualBasic
 
 Module ToDecimalProviderDemo
 

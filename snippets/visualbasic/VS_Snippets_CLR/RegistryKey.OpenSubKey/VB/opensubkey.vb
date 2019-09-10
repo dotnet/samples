@@ -1,7 +1,5 @@
 ﻿'<Snippet1>
-Imports System
 Imports Microsoft.Win32
-Imports Microsoft.VisualBasic
 
 Public Class Example
     Public Shared Sub Main()

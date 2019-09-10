@@ -1,6 +1,7 @@
 ﻿'<snippet1>
 Imports System.Text
 Imports System.IO
+
 ' Add references to Soap and Binary formatters.
 Imports System.Runtime.Serialization.Formatters.Binary
 Imports System.Runtime.Serialization.Formatters.Soap

@@ -2,11 +2,8 @@
 Option Strict
 
 ' <Snippet1>
-Imports System
 Imports System.IO
 Imports System.Xml.Serialization
-Imports Microsoft.VisualBasic
-
 
 Public Class Orchestra
     Public Instruments() As Instrument

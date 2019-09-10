@@ -1,6 +1,4 @@
 ﻿' <snippet7>
-Imports System
-
 Module IsLowerSample
 
     Sub Main()

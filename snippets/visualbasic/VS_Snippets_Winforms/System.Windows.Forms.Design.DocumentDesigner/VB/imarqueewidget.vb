@@ -1,7 +1,4 @@
 ﻿ ' <snippet1>
-Imports System
-
-
 ' <snippet2>
 ' <snippet3>
 ' This interface defines the contract for any class that is to

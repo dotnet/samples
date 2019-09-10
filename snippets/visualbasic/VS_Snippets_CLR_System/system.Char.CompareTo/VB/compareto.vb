@@ -1,6 +1,4 @@
 ﻿' <snippet19>
-Imports System
-
 Module CompareToSample
 
     Sub Main()

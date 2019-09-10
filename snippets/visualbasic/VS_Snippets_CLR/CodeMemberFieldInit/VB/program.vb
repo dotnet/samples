@@ -1,5 +1,4 @@
 ﻿'<Snippet1>
-Imports System
 Imports System.Reflection
 Imports System.IO
 Imports System.CodeDom
@@ -129,9 +128,7 @@ End Class 'Sample
 'Option Strict Off
 'Option Explicit On
 
-'Imports System
-
-'Namespace CodeDOMSample
+''Namespace CodeDOMSample
 
 '    Public NotInheritable Class CodeDOMCreatedClass
 

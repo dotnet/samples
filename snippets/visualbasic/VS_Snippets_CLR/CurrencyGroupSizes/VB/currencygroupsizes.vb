@@ -1,7 +1,6 @@
 ﻿' The following code example demonstrates the effect of changing the CurrencyGroupSizes property.
 
 ' <snippet1>
-Imports System
 Imports System.Globalization
 
 Class NumberFormatInfoSample

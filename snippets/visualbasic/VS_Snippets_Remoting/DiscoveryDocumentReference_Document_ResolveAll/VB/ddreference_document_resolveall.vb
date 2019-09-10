@@ -8,11 +8,9 @@
 ' discovery documents are displayed on the console using the 'Document' property.
 
 ' <Snippet2>
-Imports System
 Imports System.Web.Services.Discovery
 Imports System.Collections
 Imports System.Security.Permissions
-Imports MicroSoft.VisualBasic
 
 Class DiscoveryDocumentReference_Document_ResolveAll
    

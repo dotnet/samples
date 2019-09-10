@@ -6,13 +6,11 @@
 #If BELOW_WHIDBEY_BUILD Then
 
 '<snippet1>
-Imports System
 Imports System.Collections
 Imports System.Collections.Specialized
 Imports System.Diagnostics
 Imports System.Runtime.InteropServices
-Imports Microsoft.VisualBasic
-
+    
 Public Class App
 
    Private Shared PC As PerformanceCounter
@@ -203,13 +201,10 @@ End Class
 #Else
 
 '<snippet2>
-Imports System
 Imports System.Collections
 Imports System.Collections.Specialized
 Imports System.Diagnostics
 Imports System.Runtime.InteropServices
-Imports Microsoft.VisualBasic
-
 Public Class App
 
     Private Const categoryName As String = "AverageTimer32SampleCategory"

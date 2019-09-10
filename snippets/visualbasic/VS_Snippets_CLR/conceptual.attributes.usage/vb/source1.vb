@@ -1,5 +1,4 @@
 ﻿'<snippet1>
-Imports System
 '<snippet2>
 Imports System.Reflection
 <Assembly:AssemblyTitle("My Assembly")>

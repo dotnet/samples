@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Runtime.Serialization
+﻿Imports System.Runtime.Serialization
 
 <DataContract()> _
 Public Class Customer

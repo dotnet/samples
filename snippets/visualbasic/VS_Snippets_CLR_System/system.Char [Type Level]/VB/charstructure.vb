@@ -1,7 +1,4 @@
-﻿imports Microsoft.VisualBasic
-' <snippet23>
-imports System
-
+﻿' <snippet23>
 Module CharStructure
 
     Public Sub Main()

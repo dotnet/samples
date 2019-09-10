@@ -11,7 +11,6 @@
 ' class are added to an ArrayList and their outputs are displayed onto the console.
 '
 
-Imports System
 Imports System.IO
 Imports System.Collections
 Imports System.Net
@@ -20,7 +19,6 @@ Imports System.Runtime.Remoting.Channels
 Imports System.Runtime.Remoting.Channels.Http
 Imports System.Runtime.Remoting.Messaging
 Imports System.Security.Permissions
-Imports Microsoft.VisualBasic
 
 Namespace IPFilter
 ' <Snippet1>

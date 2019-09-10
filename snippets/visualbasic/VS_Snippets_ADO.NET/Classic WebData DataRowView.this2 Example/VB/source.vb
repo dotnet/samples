@@ -1,6 +1,4 @@
-﻿Imports System
-Imports System.Data
-Imports Microsoft.VisualBasic
+﻿Imports System.Data
 
 Public Class Sample
     
@@ -10,12 +8,9 @@ Public Class Sample
     Dim colCount As Integer = view.Table.Columns.Count
 
     ' Iterate through the rows of the DataView.
-    Dim rowView As DataRowView
-    Dim i As Integer
-
-    For Each rowView In view
+    For Each rowView As DataRowView In view
       ' Display the value in each item of the DataRowView
-      For i = 0 To colCount
+      For i As Integer = 0 To colCount - 1
          Console.Write(rowView(i) & vbTab)
       Next
       Console.WriteLine()

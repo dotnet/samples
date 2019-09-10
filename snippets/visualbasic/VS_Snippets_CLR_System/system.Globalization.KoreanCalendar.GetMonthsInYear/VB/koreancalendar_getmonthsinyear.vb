@@ -1,9 +1,7 @@
 ﻿' The following code example calls GetMonthsInYear for 5 years in each era.
 
 ' <snippet1>
-Imports System
 Imports System.Globalization
-Imports Microsoft.VisualBasic
 
 Public Class SamplesKoreanCalendar   
    

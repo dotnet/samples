@@ -1,8 +1,5 @@
 ﻿' <Snippet5>
 
-Imports Microsoft.VisualBasic
-Imports System
-
 Namespace LibraryContractsAddInAdapters
 Public Class BookInfoViewToContractAddInAdapter
     Inherits System.AddIn.Pipeline.ContractBase

@@ -6,9 +6,7 @@
 ' 'ServiceDescription' instance into a temporary file.
 ' Adds the same binding back again into the instance and writes to another temporary file.
 
-Imports System
 Imports System.Web.Services.Description
-Imports Microsoft.VisualBasic
 
 Class [MyClass]
    

@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Collections.ObjectModel
+﻿Imports System.Collections.ObjectModel
 
     Public Class Orders
         Inherits ObservableCollection(Of Order)

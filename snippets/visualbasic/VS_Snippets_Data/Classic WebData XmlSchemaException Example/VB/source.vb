@@ -2,11 +2,9 @@
 Option Strict On
 Option Explicit On
 
-Imports System
 Imports System.Xml
 Imports System.Xml.Schema
 Imports System.IO
-Imports Microsoft.VisualBasic
 
 Public Class ValidXSD
     Public Shared Sub Main()

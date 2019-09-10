@@ -1,6 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
-Imports System.Configuration
+﻿Imports System.Configuration
 Imports System.Collections.Generic
 Imports System.ServiceModel
 Imports System.Text

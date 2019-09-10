@@ -12,11 +12,8 @@
 'an error.It is advisable to construct a site using files accompanying this and provide
 'url name of this site to the program.
 '
-Imports System
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
-
 
 Public Class WebClient_UploadData_Headers
     

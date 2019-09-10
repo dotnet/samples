@@ -6,7 +6,7 @@ using namespace System::Runtime::InteropServices;
 public delegate bool FPtr(int value);
 public delegate bool FPtr2(String^ value);
 
-public ref class LibWrap
+private ref class NativeMethods
 {
 public:
     // Declares managed prototypes for unmanaged functions.
@@ -25,9 +25,9 @@ public:
     static void Main()
     {
         FPtr^ cb = gcnew FPtr(&App::DoSomething);
-        LibWrap::TestCallBack(cb, 99);
+        NativeMethods::TestCallBack(cb, 99);
         FPtr2^ cb2 = gcnew FPtr2(&App::DoSomething2);
-        LibWrap::TestCallBack2(cb2, "abc");
+        NativeMethods::TestCallBack2(cb2, "abc");
     }
 
     static bool DoSomething(int value)

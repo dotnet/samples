@@ -17,7 +17,6 @@
 'since this assembly has been stongly signed.
 ' <Snippet1>
 ' <Snippet2>
-Imports System
 Imports System.Reflection
 Imports System.Threading
 Imports System.IO
@@ -25,7 +24,6 @@ Imports System.Globalization
 Imports System.Reflection.Emit
 Imports System.Configuration.Assemblies
 Imports System.Text
-Imports Microsoft.VisualBasic
 
 Public Class AssemblyName_CodeBase
    

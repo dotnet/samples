@@ -85,7 +85,6 @@ Public Class SimpleList
         For i As Integer = 0 To Count - 1
             If _contents(i) = value Then Return i
         Next
-
         Return -1
     End Function
 

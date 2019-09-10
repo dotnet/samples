@@ -1,5 +1,6 @@
 ﻿'<Snippet1>
 Imports System.Device.Location
+
 Module ResolveCivicAddressAsync
     '<Snippet2>
 

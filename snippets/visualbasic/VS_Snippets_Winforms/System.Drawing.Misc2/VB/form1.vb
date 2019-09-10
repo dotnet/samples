@@ -2,7 +2,6 @@
 Option Strict On
 
 
-Imports System
 Imports System.Windows.Forms
 Imports System.Drawing
 Imports System.Drawing.Drawing2D

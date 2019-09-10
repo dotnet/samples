@@ -1,6 +1,4 @@
-﻿Imports System
-
-Public Class TypedReferenceArray
+﻿Public Class TypedReferenceArray
         Shared Sub Main()
 		Try
 ' <Snippet1>

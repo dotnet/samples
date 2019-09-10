@@ -9,10 +9,8 @@
 ' a new PortType and writes a new web service description file into 
 ' 'MathService_New.wsdl'.
 
-Imports System
 Imports System.Web.Services.Description
 Imports System.Xml
-Imports Microsoft.VisualBasic
 
 Class MyPortTypeCollectionClass
    

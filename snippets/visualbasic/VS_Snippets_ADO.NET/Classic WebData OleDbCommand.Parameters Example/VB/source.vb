@@ -1,15 +1,12 @@
-﻿Imports System
-Imports System.Xml
+﻿Imports System.Xml
 Imports System.Data
 Imports System.Data.OleDb
 Imports System.Data.Common
-Imports Microsoft.VisualBasic
 
 Public Class Form1
 
-    
-' <Snippet1>
- Public Sub CreateMyOleDbCommand(connection As OleDbConnection, _
+  ' <Snippet1>
+  Public Sub CreateMyOleDbCommand(connection As OleDbConnection, _
     queryString As String, parameters() As OleDbParameter)
 
      Dim command As New OleDbCommand(queryString, connection)

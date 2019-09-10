@@ -8,12 +8,10 @@
 ' document into a file stream and print its contents on the console.
 
 ' <Snippet1>
-Imports System
 Imports System.Xml
 Imports System.Web.Services.Discovery
 Imports System.IO
 Imports System.Collections
-Imports MicroSoft.VisualBasic
 
 Public Class DiscoveryDocumentReference_ctor_WriteDocument
 

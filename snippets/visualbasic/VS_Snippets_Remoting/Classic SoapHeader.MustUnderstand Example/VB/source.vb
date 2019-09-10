@@ -1,7 +1,6 @@
 ﻿Imports System.Web.Services.Protocols
-' <Snippet1>
-Imports System
 
+' <Snippet1>
 Public Class Sample
     
     Public Shared Sub Main()

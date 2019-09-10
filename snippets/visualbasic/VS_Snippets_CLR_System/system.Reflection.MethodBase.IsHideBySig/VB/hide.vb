@@ -1,5 +1,4 @@
 ﻿'<Snippet1>
-Imports System
 Imports System.Reflection
 
 ' The base class B contains an overloaded method M.

@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Web
+﻿Imports System.Web
 Imports System.Web.Caching
 
 ' A namespace that contains a class, CustomCacheDependency, that 

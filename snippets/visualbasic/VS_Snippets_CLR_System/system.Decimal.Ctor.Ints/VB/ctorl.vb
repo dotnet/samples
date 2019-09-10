@@ -1,8 +1,5 @@
 ﻿'<Snippet3>
 ' Example of the Decimal( Long ) constructor.
-Imports System
-Imports Microsoft.VisualBasic
-
 Module DecimalCtorLDemo
 
     ' Create a Decimal object and display its value.

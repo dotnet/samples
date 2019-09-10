@@ -2,9 +2,6 @@
 ' This code example demonstrates the Console.WriteLine() method.
 ' Formatting for this example uses the "en-US" culture.
 
-Imports System
-Imports Microsoft.VisualBasic
-
 Class Sample
    Public Enum Color
       Yellow = 1

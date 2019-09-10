@@ -1,6 +1,4 @@
 ﻿'<Snippet1>
-Imports System
-
 Public Interface ITest
 
     Sub Test(ByVal greeting As String)

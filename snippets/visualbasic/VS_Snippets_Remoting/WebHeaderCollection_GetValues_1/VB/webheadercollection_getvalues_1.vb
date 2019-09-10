@@ -6,10 +6,7 @@
 ' the corresponding headers in the response are displayed to the console.
 '
 
-Imports System
 Imports System.Net
-Imports Microsoft.VisualBasic
-
 
 Public Class WebHeaderCollection_GetValues_1
     

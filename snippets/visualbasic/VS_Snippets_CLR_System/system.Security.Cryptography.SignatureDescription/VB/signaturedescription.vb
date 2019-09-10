@@ -1,7 +1,6 @@
 ﻿' This sample demonstrates how to use each member of the SignatureDescription
 ' class.
 '<Snippet2>
-Imports System
 Imports System.Security
 Imports System.Security.Cryptography
 

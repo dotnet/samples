@@ -1,9 +1,9 @@
 ﻿' <Snippet1>
-Imports System
 Imports System.Net
 Imports System.Net.Sockets
 Imports System.IO
 Imports System.Threading
+
 Public Class ServicePointExample
 
     ' Pass in the name of the Web page to retrieve.
