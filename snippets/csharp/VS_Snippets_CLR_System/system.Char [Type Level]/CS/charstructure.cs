@@ -5,14 +5,14 @@ public class CharStructureSample
 {
 	public static void Main()
     {
-		char chA = 'A';
-		char ch1 = '1';
-		string str = "test string"; 
+        char chA = 'A';
+        char ch1 = '1';
+        string str = "test string"; 
 
-		Console.WriteLine(chA.CompareTo('B'));	        //-----------  Output: "-1" (meaning 'A' is 1 less than 'B')
-		Console.WriteLine(chA.Equals('A'));				//-----------  Output: "True"
-		Console.WriteLine(Char.GetNumericValue(ch1));	//-----------  Output: "1"
-		Console.WriteLine(Char.IsControl('\t'));        //-----------  Output: "True"
+        Console.WriteLine(chA.CompareTo('B'));          //-----------  Output: "-1" (meaning 'A' is 1 less than 'B')
+        Console.WriteLine(chA.Equals('A'));             //-----------  Output: "True"
+        Console.WriteLine(Char.GetNumericValue(ch1));   //-----------  Output: "1"
+        Console.WriteLine(Char.IsControl('\t'));        //-----------  Output: "True"
         Console.WriteLine(Char.IsDigit(ch1));           //-----------  Output: "True"
         Console.WriteLine(Char.IsLetter(','));          //-----------  Output: "False"
         Console.WriteLine(Char.IsLower('u'));           //-----------  Output: "True"
