@@ -11,7 +11,6 @@ namespace operators
             WithNullConditional();
             WithNullableTypes();
             NullCoalescingAssignment();
-            TypeOfNullCoalescingAssignment();
         }
 
         private static void WithNullConditional()
@@ -59,33 +58,16 @@ namespace operators
         private static void NullCoalescingAssignment()
         {
             // <SnippetAssignment>
-            List<int> InitializeList()
-            {
-                Console.WriteLine("Initializing list...");
-                return new List<int>();
-            }
-
             List<int> numbers = null;
-            (numbers ??= InitializeList()).Add(5);
-            Console.WriteLine(string.Join(" ", numbers));
-
-            numbers ??= InitializeList();
-            Console.WriteLine(string.Join(" ", numbers));
-            // Output:
-            // Initializing list...
-            // 5
-            // 5
-            // </SnippetAssignment>
-        }
-
-        private static void TypeOfNullCoalescingAssignment()
-        {
-            // <SnippetTypeOfResult>
             int? a = null;
-            int b = 6;
-            int c = (a ??= b);
-            Console.WriteLine(c);  // output: 6
-            // </SnippetTypeOfResult>
+            
+            (numbers ??= new List<int>()).Add(5);
+            Console.WriteLine(string.Join(" ", numbers));  // output: 5
+
+            numbers.Add(a ??= 0);
+            Console.WriteLine(string.Join(" ", numbers));  // output: 5 0
+            Console.WriteLine(a);  // output: 0
+            // </SnippetAssignment>
         }
     }
 }
