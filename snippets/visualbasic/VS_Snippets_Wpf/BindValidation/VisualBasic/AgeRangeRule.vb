@@ -1,6 +1,7 @@
 ﻿Imports System.Globalization
 Imports System.Windows.Controls
 
+    '<Snippet3>
     Public Class AgeRangeRule
         Inherits ValidationRule
 
@@ -45,5 +46,6 @@ Imports System.Windows.Controls
         Private _max As Integer
         Private _min As Integer
     End Class
+	'</Snippet3>
 
 
