@@ -1,8 +1,8 @@
 ---
 languages:
-   - csharp
- products:
-   - dotnet-core
+- csharp
+products:
+- dotnet-core
 page_type: sample
 name: "Diagnostic Scenarios"
 urlFragment: "diagnostic-scenarios"

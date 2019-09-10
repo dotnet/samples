@@ -4,7 +4,7 @@ using namespace System::Runtime::InteropServices;
 
 //<snippet17>
 // Declares a class member for each structure element.
-[StructLayout(LayoutKind::Sequential, CharSet=CharSet::Auto)]
+[StructLayout(LayoutKind::Sequential, CharSet = CharSet::Auto)]
 public ref class FindData
 {
 public:
@@ -22,17 +22,17 @@ public:
     int  nFileSizeLow;
     int  dwReserved0;
     int  dwReserved1;
-    [MarshalAs(UnmanagedType::ByValTStr, SizeConst=260)]
+    [MarshalAs(UnmanagedType::ByValTStr, SizeConst = 260)]
     String^  fileName;
-    [MarshalAs(UnmanagedType::ByValTStr, SizeConst=14)]
+    [MarshalAs(UnmanagedType::ByValTStr, SizeConst = 14)]
     String^  alternateFileName;
 };
 
-public ref class LibWrap
+private ref class LibWrap
 {
 public:
     // Declares a managed prototype for the unmanaged function.
-    [DllImport("Kernel32.dll", CharSet=CharSet::Auto)]
+    [DllImport("Kernel32.dll", CharSet = CharSet::Auto)]
     static IntPtr FindFirstFile(String^ fileName, [In, Out]
         FindData^ findFileData);
 };
