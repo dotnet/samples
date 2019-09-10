@@ -3,7 +3,7 @@ using System;
 
 public class CharStructureSample
 {
-	public static void Main()
+    public static void Main()
     {
         char chA = 'A';
         char ch1 = '1';
