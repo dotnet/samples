@@ -10,26 +10,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-
-namespace StylingIntroSample
+namespace IntroToStylingAndTemplating
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for Window3.xaml
     /// </summary>
-
-    public partial class Window1 : System.Windows.Window
+    public partial class Window3 : Window
     {
-        PhotoList Photos;
-
-        public Window1()
+        public Window3()
         {
             InitializeComponent();
-        }
-
-        private void WindowLoaded(object sender, RoutedEventArgs e)
-        {
-            Photos = (PhotoList)(this.Resources["MyPhotos"] as ObjectDataProvider).Data;
-            Photos.Path = "...\\...\\Images";
         }
     }
 }

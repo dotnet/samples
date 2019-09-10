@@ -36,8 +36,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-  </ItemGroup>
-  <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -45,6 +43,15 @@
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Window1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window3.xaml">
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Compile Include="App.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -68,6 +75,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Window1.xaml.cs" />
+    <Compile Include="Window2.xaml.cs" />
+    <Compile Include="Window3.xaml.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
