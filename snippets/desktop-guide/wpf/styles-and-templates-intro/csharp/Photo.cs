@@ -1,8 +1,9 @@
-// // Copyright (c) Microsoft. All rights reserved.
+﻿// // Copyright (c) Microsoft. All rights reserved.
 // // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 namespace IntroToStylingAndTemplating
 {
+    // <PhotoClass>
     public class Photo
     {
         public Photo(string path)
@@ -14,4 +15,5 @@ namespace IntroToStylingAndTemplating
 
         public override string ToString() => Source;
     }
+    // </PhotoClass>
 }
