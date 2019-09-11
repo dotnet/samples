@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:IntroToStylingAndTemplating"
         mc:Ignorable="d"
         Title="Window2" Height="450" Width="800" Loaded="Window_Loaded">
-    <!--<SnippetDefaultTextBlockStyleBasedOn-->
+    <!--<SnippetDefaultTextBlockStyleBasedOn>-->
     <Window.Resources>
         <!-- .... other resources .... -->
         
@@ -29,10 +29,10 @@
         </Style>
     </Window.Resources>
     <!--</SnippetDefaultTextBlockStyleBasedOn>-->
-    <!--<SnippetTextBlocksExplicit-->
+    <!--<SnippetTextBlocksExplicit>-->
     <StackPanel>
         <TextBlock Style="{StaticResource TitleText}" Name="textblock1">My Pictures</TextBlock>
         <TextBlock>Check out my new pictures!</TextBlock>
     </StackPanel>
-    <!--<SnippetTextBlocksExplicit-->
+    <!--</SnippetTextBlocksExplicit>-->
 </Window>
