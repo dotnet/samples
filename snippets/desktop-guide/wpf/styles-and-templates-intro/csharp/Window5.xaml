@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:IntroToStylingAndTemplating"
         mc:Ignorable="d"
         Title="Window5" Height="450" Width="800">
-    <!--<SnippetPropertyTrigger-->
+    <!--<SnippetPropertyTrigger>-->
     <Window.Resources>
         <!-- .... other resources .... -->
 
@@ -22,7 +22,7 @@
             </Style.Triggers>
         </Style>
     </Window.Resources>
-    <!--</SnippetPropertyTrigger-->
+    <!--</SnippetPropertyTrigger>-->
     <StackPanel>
         <TextBlock>My Pictures</TextBlock>
         <TextBlock>Check out my new pictures!</TextBlock>

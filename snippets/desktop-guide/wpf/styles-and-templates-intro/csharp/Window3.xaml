@@ -12,9 +12,9 @@
     <StackPanel>
         <TextBlock>My Pictures</TextBlock>
         <TextBlock>Check out my new pictures!</TextBlock>
-        <!--<SnippetListBox-->
+        <!--<SnippetListBox>-->
         <ListBox ItemsSource="{Binding Source={StaticResource MyPhotos}}"
                  Background="Silver" Width="600" Margin="10" SelectedIndex="0"/>
-        <!--</SnippetListBox-->
+        <!--</SnippetListBox>-->
     </StackPanel>
 </Window>

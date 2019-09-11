@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:IntroToStylingAndTemplating"
         mc:Ignorable="d"
         Title="Window4" Height="450" Width="800">
-    <!--<SnippetDataTemplate-->
+    <!--<SnippetDataTemplate>-->
     <Window.Resources>
         <!-- .... other resources .... -->
 
@@ -18,7 +18,7 @@
             </Border>
         </DataTemplate>
     </Window.Resources>
-    <!--</SnippetDataTemplate-->
+    <!--</SnippetDataTemplate>-->
     <StackPanel>
         <TextBlock>My Pictures</TextBlock>
         <TextBlock>Check out my new pictures!</TextBlock>

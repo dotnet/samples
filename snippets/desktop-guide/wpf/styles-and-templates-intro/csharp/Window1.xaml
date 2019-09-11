@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:IntroToStylingAndTemplating"
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800">
-    <!--<SnippetDefaultTextBlockStyle-->
+    <!--<SnippetDefaultTextBlockStyle>-->
     <Window.Resources>
         <!--A Style that affects all TextBlocks-->
         <Style TargetType="TextBlock">
@@ -16,7 +16,7 @@
         </Style>
     </Window.Resources>
     <!--</SnippetDefaultTextBlockStyle>-->
-    <!--<SnippetTextBlocks-->
+    <!--<SnippetTextBlocks>-->
     <StackPanel>
         <TextBlock>My Pictures</TextBlock>
         <TextBlock>Check out my new pictures!</TextBlock>
