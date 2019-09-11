@@ -6,8 +6,10 @@
         xmlns:local="clr-namespace:IntroToStylingAndTemplating"
         mc:Ignorable="d"
         Title="Window2" Height="450" Width="800" Loaded="Window_Loaded">
-    <!--<SnippetDefaultTextblockStyleBasedOn-->
+    <!--<SnippetDefaultTextBlockStyleBasedOn-->
     <Window.Resources>
+        <!-- .... other resources .... -->
+        
         <!--A Style that extends the previous TextBlock Style-->
         <!--This is a "named style" with an x:Key of TitleText-->
         <Style BasedOn="{StaticResource {x:Type TextBlock}}"
@@ -26,7 +28,7 @@
             </Setter>
         </Style>
     </Window.Resources>
-    <!--</SnippetDefaultTextblockStyleBasedOn>-->
+    <!--</SnippetDefaultTextBlockStyleBasedOn>-->
     <!--<SnippetTextBlocksExplicit-->
     <StackPanel>
         <TextBlock Style="{StaticResource TitleText}" Name="textblock1">My Pictures</TextBlock>

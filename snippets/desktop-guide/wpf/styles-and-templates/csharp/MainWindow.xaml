@@ -7,8 +7,7 @@
         mc:Ignorable="d"
         Title="Style Intro Sample" Loaded="WindowLoaded" SizeToContent="WidthAndHeight">
     <Window.Resources>
-        <ObjectDataProvider x:Key="MyPhotos"
-      ObjectType="{x:Type local:PhotoList}"/>
+        <ObjectDataProvider x:Key="MyPhotos" ObjectType="{x:Type local:PhotoList}"/>
 
         <!--A Style that affects all TextBlocks-->
         <Style TargetType="TextBlock">

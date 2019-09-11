@@ -6,29 +6,15 @@
         xmlns:local="clr-namespace:IntroToStylingAndTemplating"
         mc:Ignorable="d"
         Title="Window3" Height="450" Width="800">
-    <!--<SnippetDefaultTextblockStyleBasedOn-->
     <Window.Resources>
-        <!--A Style that extends the previous TextBlock Style-->
-        <!--This is a "named style" with an x:Key of TitleText-->
-        <Style BasedOn="{StaticResource {x:Type TextBlock}}"
-               TargetType="TextBlock"
-               x:Key="TitleText">
-            <Setter Property="FontSize" Value="26"/>
-            <Setter Property="Foreground">
-                <Setter.Value>
-                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                        <LinearGradientBrush.GradientStops>
-                            <GradientStop Offset="0.0" Color="#90DDDD" />
-                            <GradientStop Offset="1.0" Color="#5BFFFF" />
-                        </LinearGradientBrush.GradientStops>
-                    </LinearGradientBrush>
-                </Setter.Value>
-            </Setter>
-        </Style>
+        <ObjectDataProvider x:Key="MyPhotos" ObjectType="{x:Type local:PhotoList}"/>
     </Window.Resources>
-    <!--</SnippetDefaultTextblockStyleBasedOn>-->
     <StackPanel>
         <TextBlock>My Pictures</TextBlock>
         <TextBlock>Check out my new pictures!</TextBlock>
+        <!--<SnippetListBox-->
+        <ListBox ItemsSource="{Binding Source={StaticResource MyPhotos}}"
+                 Background="Silver" Width="600" Margin="10" SelectedIndex="0"/>
+        <!--</SnippetListBox-->
     </StackPanel>
 </Window>

@@ -53,6 +53,15 @@
     <Page Include="Window3.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Window4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window5.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window6.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Compile Include="App.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -78,6 +87,9 @@
     <Compile Include="Window1.xaml.cs" />
     <Compile Include="Window2.xaml.cs" />
     <Compile Include="Window3.xaml.cs" />
+    <Compile Include="Window4.xaml.cs" />
+    <Compile Include="Window5.xaml.cs" />
+    <Compile Include="Window6.xaml.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
