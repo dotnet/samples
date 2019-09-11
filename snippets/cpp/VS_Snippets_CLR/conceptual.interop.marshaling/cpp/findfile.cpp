@@ -28,7 +28,7 @@ public:
     String^  alternateFileName;
 };
 
-private ref class LibWrap
+private ref class NativeMethods
 {
 public:
     // Declares a managed prototype for the unmanaged function.
@@ -45,7 +45,7 @@ public:
     static void Main()
     {
         FindData^ fd = gcnew FindData();
-        IntPtr handle = LibWrap::FindFirstFile("C:\\*.*", fd);
+        IntPtr handle = NativeMethods::FindFirstFile("C:\\*.*", fd);
         Console::WriteLine("The first file: {0}", fd->fileName);
     }
 };
