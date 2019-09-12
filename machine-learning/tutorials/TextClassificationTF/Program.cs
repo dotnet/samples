@@ -23,8 +23,7 @@ namespace TextClassificationTF
             // </SnippetCreateMLContext>
 
             // <SnippetCreateEmptyDataView>
-            IEnumerable<IMDBSentiment> emptyData = new List<IMDBSentiment>();
-            var dataView = mlContext.Data.LoadFromEnumerable(emptyData);
+            IDataView dataView = mlContext.Data.LoadFromEnumerable(new List<IMDBSentiment>());
             // </SnippetCreateEmptyDataView>
 
             // Dictionary to convert words into integer indexes.
