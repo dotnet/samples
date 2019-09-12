@@ -12,7 +12,7 @@
         <Style TargetType="ListBoxItem">
             <Setter Property="Opacity" Value="0.5" />
             <Setter Property="MaxHeight" Value="75" />
-            <!--<SnippetStyleEventTriggers-->
+            <!--<SnippetStyleEventTriggers>-->
             <Style.Triggers>
                 <Trigger Property="IsSelected" Value="True">
                     <Trigger.Setters>
@@ -43,7 +43,7 @@
                     </EventTrigger.Actions>
                 </EventTrigger>
             </Style.Triggers>
-            <!--</SnippetStyleEventTriggers-->
+            <!--</SnippetStyleEventTriggers>-->
         </Style>
     </Window.Resources>
     <StackPanel>

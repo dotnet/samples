@@ -10,6 +10,7 @@ namespace operators
         {
             WithNullConditional();
             WithNullableTypes();
+            NullCoalescingAssignment();
         }
 
         private static void WithNullConditional()
@@ -45,6 +46,28 @@ namespace operators
                 set => name = value ?? throw new ArgumentNullException(nameof(value), "Name cannot be null");
             }
             // </SnippetWithThrowExpression>
+        }
+
+        // <SnippetUnconstrainedType>
+        private static void Display<T>(T a, T backup)
+        {
+            Console.WriteLine(a ?? backup);
+        }
+        // </SnippetUnconstrainedType>
+
+        private static void NullCoalescingAssignment()
+        {
+            // <SnippetAssignment>
+            List<int> numbers = null;
+            int? a = null;
+            
+            (numbers ??= new List<int>()).Add(5);
+            Console.WriteLine(string.Join(" ", numbers));  // output: 5
+
+            numbers.Add(a ??= 0);
+            Console.WriteLine(string.Join(" ", numbers));  // output: 5 0
+            Console.WriteLine(a);  // output: 0
+            // </SnippetAssignment>
         }
     }
 }
