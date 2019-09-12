@@ -36,9 +36,9 @@ End Module
 
 ' <Snippet1>
 Public Class StudentInfo
-    Shared Sub Display(ByVal name As String,
-                Optional ByVal age As Short = 0,
-                Optional ByVal birth As Date = #1/1/2000#)
+    Shared Sub Display(name As String,
+                Optional age As Short = 0,
+                Optional birth As Date = #1/1/2000#)
 
         Console.WriteLine($"Name = {name}; age = {age}; birth date = {birth:d}")
     End Sub
