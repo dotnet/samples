@@ -94,11 +94,8 @@ namespace TextClassificationTF
                 .Append(mlContext.Transforms.CopyColumns("Prediction", "Prediction/Softmax"));
             // </SnippetCopyColumns>
 
-            // Train the model
-            Console.WriteLine("=============== Training classification model ===============");
-
             // <SnippetCreateModel>
-            // Create and train the model based on the dataset that has been loaded, transformed.
+            // Create an executable model from the estimator pipeline
             ITransformer model = pipeline.Fit(dataView);
             // </SnippetCreateModel>
 
