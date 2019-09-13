@@ -1,35 +1,35 @@
 ﻿' <Snippet1>
 Imports System.Xml
 
-public class Sample 
+Public Class Sample 
  
-  public shared sub Main() 
+    Public Shared Sub Main() 
    
-    Dim writer as XmlTextWriter = nothing
-     
-      try 
-    
-        writer = new XmlTextWriter (Console.Out)
- 
-        ' Write an element.
-        writer.WriteStartElement("address")
-     
-        ' Write an email address using entities
-        ' for the @ and . characters.
-        writer.WriteString("someone")
-        writer.WriteCharEntity("@"c)
-        writer.WriteString("example")
-        writer.WriteCharEntity("."c)
-        writer.WriteString("com")
-        writer.WriteEndElement()        
- 
-    finally 
-      ' Close the writer.
-      if not writer is nothing
-        writer.Close()
-      end if
-    end try 
+        Dim writer As XmlTextWriter = Nothing
 
-  end sub
-end class
+        Try 
+
+            writer = new XmlTextWriter(Console.Out)
+
+            ' Write an element.
+            writer.WriteStartElement("address")
+     
+            ' Write an email address using entities
+            ' for the @ and . characters.
+            writer.WriteString("someone")
+            writer.WriteCharEntity("@"c)
+            writer.WriteString("example")
+            writer.WriteCharEntity("."c)
+            writer.WriteString("com")
+            writer.WriteEndElement()        
+ 
+        Finally
+            ' Close the writer.
+            If writer IsNot Nothing
+                writer.Close()
+            End If
+        End Try
+
+    End Sub
+End Class
 ' </Snippet1>
