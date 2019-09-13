@@ -2,7 +2,7 @@
 languages:
 - vb
  products:
-   - dotnet-core
+- dotnet-core
    - windows
 page_type: sample
 name: "Async Sample: Asynchronous Programming with Async and Await"
