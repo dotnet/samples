@@ -32,7 +32,13 @@ To download and run the sample, follow these steps:
     2. Navigate to the folder that holds the unzipped sample code, and open the Visual Basic project (.vbproj) file.
  
     3. Choose the F5 key, or Ctrl+F5 keys, to run the project.
- 
+
+3. From the command line:
+
+   1. Navigate to the folder that holds the unzipped sample code.
+   
+   2. At the command line, type `dotnet run`.
+      
  ## More Information
  
   - https://docs.microsoft.com/en-us/dotnet/visual-basic/programming-guide/concepts/async/index
