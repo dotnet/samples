@@ -15,7 +15,7 @@ This sample is a WPF application that contains the example method from [Asynchro
 
 Async and Await provide all the advantages of traditional asynchronous programming, but with much less effort from the developer. The compiler does the difficult work that the developer used to do, yet the code retains a logical structure that resembles synchronous code.
 
-The example Async Function in this sample (named GetStringAsync) uses an HttpClient method to download the contents of a website.
+The example Async function in this sample (named `GetStringAsync`) uses an [HttpClient](https://docs.microsoft.com/dotnet/api/system.net.http.httpclient) method to download the contents of a website.
 
 The code for the MainWindow.xaml.vb or MainWindow.xaml.cs file from this sample is included in the topic.
 
