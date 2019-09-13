@@ -8,10 +8,12 @@
         mc:Ignorable="d"
         Title="WindowSingleResource" Height="450" Width="800">
     <Window.Resources>
+        
         <Style x:Key="Header1" TargetType="TextBlock">
             <Setter Property="FontSize" Value="15" />
             <Setter Property="FontWeight" Value="ExtraBold" />
         </Style>
+        
     </Window.Resources>
     <Grid />
 </Window>

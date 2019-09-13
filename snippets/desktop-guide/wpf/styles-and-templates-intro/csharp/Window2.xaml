@@ -9,9 +9,15 @@
     <!--<SnippetDefaultTextBlockStyleBasedOn>-->
     <Window.Resources>
         <!-- .... other resources .... -->
+
+        <!--A Style that affects all TextBlocks-->
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
         
-        <!--A Style that extends the previous TextBlock Style-->
-        <!--This is a "named style" with an x:Key of TitleText-->
+        <!--A Style that extends the previous TextBlock Style with an x:Key of TitleText-->
         <Style BasedOn="{StaticResource {x:Type TextBlock}}"
                TargetType="TextBlock"
                x:Key="TitleText">

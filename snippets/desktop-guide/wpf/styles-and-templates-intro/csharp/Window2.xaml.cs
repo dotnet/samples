@@ -25,7 +25,7 @@ namespace IntroToStylingAndTemplating
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             // <SnippetSetStyleCode>
-            textblock1.Style = (Style)(Resources["TitleText"]);
+            textblock1.Style = (Style)Resources["TitleText"];
             // </SnippetSetStyleCode>
         }
     }

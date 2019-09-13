@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IntroToStylingAndTemplating"
         mc:Ignorable="d"
-        Title="ExplicitStyle" Height="75" Width="300">
+        Height="100" Width="300"
+        Title="Style Intro Sample">
     <!--<ExplicitStyleDeclare>-->
     <Window.Resources>
         <Style x:Key="TitleText" TargetType="TextBlock">

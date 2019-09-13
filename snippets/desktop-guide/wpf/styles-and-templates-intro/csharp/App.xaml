@@ -6,10 +6,12 @@
              StartupUri="WindowExplicitStyle.xaml">
     <Application.Resources>
         <ResourceDictionary>
+            
             <Style x:Key="Header1" TargetType="TextBlock">
                 <Setter Property="FontSize" Value="15" />
                 <Setter Property="FontWeight" Value="ExtraBold" />
             </Style>
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>
