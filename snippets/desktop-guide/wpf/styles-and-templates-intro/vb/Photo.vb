@@ -7,7 +7,7 @@ Public Class Photo
     Public ReadOnly Property Source As String
 
     Public Overrides Function ToString() As String
-        Return MyBase.ToString()
+        Return Source
     End Function
 End Class
 ' </PhotoClass>
