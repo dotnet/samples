@@ -35,7 +35,7 @@ Class MainWindow
             '  - getStringTask stores the task we get from the call to GetStringAsync. 
             '  - Task(Of String) means it is a task which returns a String when it is done.
             Dim getStringTask As Task(Of String) =
-                client.GetStringAsync("http://msdn.microsoft.com")
+                client.GetStringAsync("https://docs.microsoft.com/dotnet")
 
             ' You can do other work here that doesn't rely on the string from GetStringAsync. 
             DoIndependentWork()
