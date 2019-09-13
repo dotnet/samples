@@ -11,7 +11,7 @@ description: "A .NET Core WPF application that contains the example method from 
 ---
 # Introduction
 
-This sample is a WPF application that contains the example method from Asynchronous Progamming with Async and Await in Visual Basic. The topic gives an overview of asynchronous programming, including when to use it and how you write an Async method. This sample contains the Async Function that is used as an illustration.
+This sample is a WPF application that contains the example method from [Asynchronous Progamming with Async and Await in Visual Basic](https://docs.microsoft.com/dotnet/visual-basic/programming-guide/concepts/async/). The topic gives an overview of asynchronous programming, including when to use it and how to write an Async method. This sample contains an Async function that is used as an illustration.
 
 Async and Await provide all the advantages of traditional asynchronous programming, but with much less effort from the developer. The compiler does the difficult work that the developer used to do, yet the code retains a logical structure that resembles synchronous code.
 
