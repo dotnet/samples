@@ -17,7 +17,7 @@ This sample is a WPF application that contains the example method from [Asynchro
 
 The example Async function in this sample (named `GetStringAsync`) uses an [HttpClient](https://docs.microsoft.com/dotnet/api/system.net.http.httpclient) method to download the contents of a website.
 
-The code for the MainWindow.xaml.vb or MainWindow.xaml.cs file from this sample is included in the topic.
+The code for the MainWindow.xaml.vb file from this sample is included in the topic.
 
 ## Building the Sample
 
