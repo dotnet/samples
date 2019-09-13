@@ -27,7 +27,7 @@ Public Class DataFormats_UnicodeText
 	        Dim myDataObject As IDataObject = Clipboard.GetDataObject()
 	        ' Checks whether the format of the data is 'UnicodeText' or not.
 	        If myDataObject.GetDataPresent(DataFormats.UnicodeText) Then
-		        Console.WriteLine("Data in 'UnicodeText' format:" + myDataObject.GetData(DataFormats.UnicodeText))
+		        Console.WriteLine($"Data in 'UnicodeText' format:{myDataObject.GetData(DataFormats.UnicodeText)}")
 	        Else
 		        Console.WriteLine("No String information was contained in the clipboard.")
 	        End If
