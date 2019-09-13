@@ -7,18 +7,18 @@ Imports System.Runtime.InteropServices
 Public Structure MyUnion
     <FieldOffset(0)> Public i As Integer
     <FieldOffset(0)> Public d As Double
-End Structure 'MyUnion
+End Structure
 
 <StructLayout(LayoutKind.Explicit, Size:=128)>
 Public Structure MyUnion2_1
     <FieldOffset(0)> Public i As Integer
-End Structure 'MyUnion2_1
+End Structure
 
 <StructLayout(LayoutKind.Sequential)>
 Public Structure MyUnion2_2
     <MarshalAs(UnmanagedType.ByValTStr, SizeConst:=128)>
     Public str As String
-End Structure 'MyUnion2_2
+End Structure
 
 Friend Class NativeMethods
     ' Declares managed prototypes for unmanaged function.
@@ -36,7 +36,7 @@ Friend Class NativeMethods
     Friend Overloads Shared Sub TestUnion2(
         ByVal u As MyUnion2_2, ByVal type As Integer)
     End Sub
-End Class 'LibWrap
+End Class
 '</snippet28>
 
 '<snippet29>
@@ -56,7 +56,7 @@ Public Class App
         Dim mu2_2 As New MyUnion2_2()
         mu2_2.str = "*** string ***"
         NativeMethods.TestUnion2(mu2_2, 2)
-    End Sub 'Main
-End Class 'App
+    End Sub
+End Class
 '</snippet29>
 '</snippet26>
