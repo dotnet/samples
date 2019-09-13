@@ -31,7 +31,7 @@ To download and run the sample, follow these steps:
  
     2. Navigate to the folder that holds the unzipped sample code, and open the Visual Basic project (.vbproj) file.
  
- 4. Choose the F5 key, or Ctrl+F5 keys, to run the project.
+    3. Choose the F5 key, or Ctrl+F5 keys, to run the project.
  
  ## More Information
  
