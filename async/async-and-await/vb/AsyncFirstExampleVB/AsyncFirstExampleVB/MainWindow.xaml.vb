@@ -1,5 +1,4 @@
 ﻿
-' Note: This project requires a reference to System.Net.Http.
 Imports System.Net.Http
 
 ' Example which demonstrates Asynchronous Progamming with Async and Await.
