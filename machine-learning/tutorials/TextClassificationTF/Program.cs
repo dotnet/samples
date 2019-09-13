@@ -41,9 +41,8 @@ namespace TextClassificationTF
             // with zeros. If there are more than 600 words in the sentence, then the
             // array is truncated at 600.
             // <SnippetResizeFeatures>
-            Action<IMDBSentiment, IntermediateFeatures> ResizeFeaturesAction = (s, f) =>
+            Action<MovieReview, FixedLengthFeatures> ResizeFeaturesAction = (s, f) =>
             {
-                f.Sentiment_Text = s.SentimentText;
                 var features = s.VariableLengthFeatures;
                 Array.Resize(ref features, FeatureLength);
                 f.Features = features;
@@ -68,7 +67,7 @@ namespace TextClassificationTF
             // <SnippetTokenizeIntoWords>
             IEstimator<ITransformer> pipeline =
                 // Split the text into individual words
-                mlContext.Transforms.Text.TokenizeIntoWords("TokenizedWords", "SentimentText")
+                mlContext.Transforms.Text.TokenizeIntoWords("TokenizedWords", "ReviewText")
                 // </SnippetTokenizeIntoWords>
 
                 // <SnippetMapValue>
@@ -94,7 +93,7 @@ namespace TextClassificationTF
 
             // <SnippetCreateModel>
             // Create an executable model from the estimator pipeline
-            IDataView dataView = mlContext.Data.LoadFromEnumerable(new List<IMDBSentiment>());
+            IDataView dataView = mlContext.Data.LoadFromEnumerable(new List<MovieReview>());
             ITransformer model = pipeline.Fit(dataView);
             // </SnippetCreateModel>
 
@@ -106,26 +105,24 @@ namespace TextClassificationTF
         public static void PredictSentiment(MLContext mlContext, ITransformer model)
         {
             // <SnippetCreatePredictionEngine>
-            var engine = mlContext.Model.CreatePredictionEngine<IMDBSentiment, IMDBSentimentPrediction>(model);
+            var engine = mlContext.Model.CreatePredictionEngine<MovieReview, MovieReviewSentimentPrediction>(model);
             // </SnippetCreatePredictionEngine>
 
             // <SnippetCreateTestData>
-            var data = new[] { new IMDBSentiment() {
-                SentimentText = "this film is really good"
-            }};
+            var review = new MovieReview()
+            {
+                ReviewText = "this film is really good"
+            };
             // </SnippetCreateTestData>
 
             // Predict with TensorFlow pipeline.
             // <SnippetPredict>  
-            var prediction = engine.Predict(data[0]);
+            var sentimentPrediction = engine.Predict(review);
             // </SnippetPredict>  
 
             // <SnippetDisplayPredictions>
-            Console.WriteLine("Number of classes: {0}", prediction.Prediction.Length);
-            Console.WriteLine("Is sentiment/review positive? {0}", prediction.Prediction[1] > 0.5 ? "Yes." : "No.");
-            Console.WriteLine("Prediction[0]: {0}", prediction.Prediction[0]);
-            Console.WriteLine("Prediction[1]: {0}", prediction.Prediction[1]);
-            Console.WriteLine("Sum: {0}", prediction.Prediction[0] + prediction.Prediction[1]);
+            Console.WriteLine("Number of classes: {0}", sentimentPrediction.Prediction.Length);
+            Console.WriteLine("Is sentiment/review positive? {0}", sentimentPrediction.Prediction[1] > 0.5 ? "Yes." : "No.");
             // </SnippetDisplayPredictions>
 
             /////////////////////////////////// Expected output ///////////////////////////////////
@@ -137,18 +134,46 @@ namespace TextClassificationTF
             // Is sentiment/review positive ? Yes
             // Prediction Confidence: 0.65
         }
-        // <SnippetDeclareIntermediateFeatures>
-        /// <summary>
-        /// Class to hold intermediate data. Mostly used by CustomMapping Estimator
-        /// </summary>
-        public class IntermediateFeatures
-        {
-            public string Sentiment_Text { get; set; }
 
+        // <SnippetMovieReviewClass>
+        /// <summary>
+        /// Class to hold original sentiment data.
+        /// </summary>
+        public class MovieReview
+        {
+            public string ReviewText { get; set; }
+
+            /// <summary>
+            /// This is a variable length vector designated by VectorType attribute.
+            /// Variable length vectors are produced by applying operations such as 'TokenizeWords' on strings
+            /// resulting in vectors of tokens of variable lengths.
+            /// </summary>
+            [VectorType]
+            public int[] VariableLengthFeatures { get; set; }
+        }
+        //</SnippetMovieReviewClass>
+
+        //<SnippetPrediction>
+        /// <summary>
+        /// Class to contain the output values from the transformation.
+        /// </summary>
+        public class MovieReviewSentimentPrediction
+        {
+            [VectorType(2)]
+            public float[] Prediction { get; set; }
+        }
+        // </SnippetPrediction>
+
+        // <SnippetFixedLengthFeatures>
+        /// <summary>
+        /// Class to hold the fixed length feature vector. Used by the custom mapping
+        /// action
+        /// </summary>
+        public class FixedLengthFeatures
+        {
             [VectorType(FeatureLength)]
             public int[] Features { get; set; }
         }
-        // </SnippetDeclareIntermediateFeatures>
+        // </SnippeteFixedLengthFeatures>
     }
-
 }
