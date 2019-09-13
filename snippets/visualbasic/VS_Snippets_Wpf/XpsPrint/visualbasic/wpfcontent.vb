@@ -656,7 +656,7 @@ Namespace SDKSampleHelper
 			Dim yScale As Double = (printableHeight - yMargin * 2) / printableHeight
 
 			fp.RenderTransform = New MatrixTransform(xScale, 0, 0, yScale, xMargin, yMargin)
-		End Sub ' end:PerformTransform()
+		End Sub
 
 		#End Region ' Create FixedPage methods
 
@@ -677,7 +677,7 @@ Namespace SDKSampleHelper
 			shape.Margin = thick
 			shape.Width = rx * 2
 			shape.Height = ry * 2
-		End Sub ' end:SetEllipse()
+		End Sub
 
 
 		' --------------------- AdjustFlowDocumentToPage ---------------------

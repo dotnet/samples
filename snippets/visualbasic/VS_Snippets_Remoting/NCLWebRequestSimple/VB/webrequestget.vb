@@ -29,7 +29,7 @@ Namespace Examples.System.Net
             reader.Close()
             dataStream.Close()
             response.Close()
-        End Sub 'Main
+        End Sub
     End Class 'WebRequestGetExample
 End Namespace
 ' </Snippet1>

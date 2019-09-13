@@ -23,14 +23,14 @@ Namespace MyInkEraser
             root.Children.Add(inkEraser1)
             inkEraser1.Background = Brushes.DarkSlateBlue
 
-        End Sub 'New
+        End Sub
 
         ' To use Loaded event put Loaded="WindowLoaded" attribute in root element of .xaml file.
         ' private void WindowLoaded(object sender, EventArgs e) {}
         ' Sample event handler:  
         Private Sub ToggleErase(ByVal sender As Object, ByVal e As RoutedEventArgs)
 
-        End Sub 'ToggleErase
+        End Sub
 
         'if (myInkEraser.Mode == InkMode.Ink)
         '{
@@ -45,13 +45,13 @@ Namespace MyInkEraser
 
         Private Sub ResetInk(ByVal sender As Object, ByVal e As RoutedEventArgs)
             inkEraser1.ResetInk()
-        End Sub 'ResetInk
+        End Sub
 
         'inkEraser1.ResetInk();
 
         Private Sub SaveStrokes(ByVal sender As Object, ByVal e As RoutedEventArgs)
 
-        End Sub 'SaveStrokes
+        End Sub
     End Class 'Window1 'string strokes = inkEraser1.SaveStrokes();
 
 End Namespace

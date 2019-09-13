@@ -78,7 +78,7 @@ NotInheritable Public Class CustomSection
     
     Public Sub New() 
     
-    End Sub 'New
+    End Sub
     
     
     '<Snippet6>

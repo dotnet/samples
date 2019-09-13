@@ -6,7 +6,7 @@ Namespace CodeDomSamples
     Public Class CodeReferenceExample
 
         Public Sub New()
-        End Sub 'New
+        End Sub
 
         Public Sub CodeFieldReferenceExample()
             '<Snippet2>
@@ -15,7 +15,7 @@ Namespace CodeDomSamples
 
             '	Me.TestField
             '</Snippet2>
-        End Sub 'CodeFieldReferenceExample
+        End Sub
 
         Public Sub CodePropertyReferenceExample()
             '<Snippet3>
@@ -24,7 +24,7 @@ Namespace CodeDomSamples
 
             '	Me.TestProperty
             '</Snippet3>
-        End Sub 'CodePropertyReferenceExample
+        End Sub
 
         Public Sub CodeVariableReferenceExample()
             '<Snippet4>
@@ -33,7 +33,7 @@ Namespace CodeDomSamples
 
             '	TestVariable
             '</Snippet4>
-        End Sub 'CodeVariableReferenceExample
+        End Sub
 
     End Class 'CodeReferenceExample 
 End Namespace 'CodeDomSamples 

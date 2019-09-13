@@ -24,6 +24,6 @@ Public Class Form1
         ' Prints the string in a text box with autoconvert = true.
         textBox1.Text &= "With autoconvert = true, you can convert text to string format. " & _
                         "String is: " & myDataObject.GetData("System.String", True).ToString()
-    End Sub 'GetIfPresent3
+    End Sub
     ' </Snippet1>
 End Class 'Form1

@@ -8,14 +8,14 @@ Public Class HelloServiceClass
    Public Sub New()
       n_instance += 1
       Console.WriteLine(Me.GetType().Name + " has been created.  Instance # = {0}", n_instance)
-   End Sub 'New
+   End Sub
       
    
    Protected Overrides Sub Finalize()
       Console.WriteLine("Destroyed instance {0} of HelloServiceClass.", n_instance)
       n_instance -= 1
       MyBase.Finalize()
-   End Sub 'Finalize
+   End Sub
    
    
    

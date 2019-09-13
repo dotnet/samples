@@ -86,6 +86,6 @@ Public Class Form1
         Next i
         ' Show the results in a message box. 
         MessageBox.Show(theResult)
-    End Sub 'SetData4 
+    End Sub
     ' </snippet1>
 End Class

@@ -16,7 +16,7 @@ Public Class Form1
         ' Prints whether data is present in text format.
         textBox1.Text = "Data in text format is: " & _
             myDataObject.GetDataPresent(DataFormats.Text).ToString()
-    End Sub 'GetIfPresent
+    End Sub
     ' </Snippet1>
 End Class 'Form1
 

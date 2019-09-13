@@ -54,7 +54,7 @@ Public Class Example
                     Console.WriteLine(vbCrLf & " {0} ({1}) = {2}", s, rvk, rk.GetValue(s))
             End Select
         Next s
-    End Sub 'Main
+    End Sub
 End Class 'Example
 
 '

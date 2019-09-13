@@ -6,7 +6,7 @@ Class Sample
       Console.WriteLine("2) The length of '{0}' is {1}", "xyz", "xyz".Length)
       Dim length As Integer = str.Length
       Console.WriteLine("1) The length of '{0}' is {1}", str, length)
-   End Sub 'Main
+   End Sub
 End Class 'Sample
 '
 'This example displays the following output:

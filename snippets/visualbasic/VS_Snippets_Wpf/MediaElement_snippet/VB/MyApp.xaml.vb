@@ -20,6 +20,6 @@ Namespace MediaElementExample
             Dim mainWindow As New SampleViewer()
             mainWindow.Show()
 
-        End Sub 'AppStartingUp
+        End Sub
     End Class 'MyApp
 End Namespace 'MediaElementExample

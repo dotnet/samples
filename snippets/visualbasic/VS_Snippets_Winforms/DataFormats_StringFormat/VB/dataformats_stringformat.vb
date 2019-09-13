@@ -32,6 +32,6 @@ Public Class DataFormats_StringFormat
 	      catch e as Exception
 		Console.WriteLine(e.Message)
       End try
-   End Sub 'Main 
+   End Sub
 End Class 'DataFormats_StringFormat
 ' </Snippet1>

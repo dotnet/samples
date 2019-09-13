@@ -95,7 +95,7 @@ Class EncoderTest
         encoder.GetBytes(chars, 3, 1, fourthcharNoFlush, 0, bFlushState)
         Console.WriteLine("Fourth character:")
         ShowArray(fourthcharNoFlush)
-    End Sub 'Main
+    End Sub
     
     
     Public Shared Sub ShowArray(theArray As Array)
@@ -104,7 +104,7 @@ Class EncoderTest
             Console.Write("[{0}]", o)
         Next o
         Console.WriteLine(ControlChars.NewLine)
-    End Sub 'ShowArray
+    End Sub
 End Class 'EncoderTest
 
 'This code example produces the following output.

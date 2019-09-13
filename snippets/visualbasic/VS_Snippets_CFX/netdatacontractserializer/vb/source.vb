@@ -237,7 +237,7 @@ NotInheritable Public Class TestFutureCompatibleTypes
     
     Private Sub New() 
     
-    End Sub 'New
+    End Sub
      
     Public Shared Sub RunTest() 
         SerializeNewVersion("myTestFile.xml")
@@ -641,7 +641,7 @@ Friend Class MySelector
     Public Sub ChainSelector(ByVal selector As ISurrogateSelector) _
      Implements ISurrogateSelector.ChainSelector
     
-    End Sub 'ChainSelector
+    End Sub
     
     
     Public Function GetNextSelector() As ISurrogateSelector _

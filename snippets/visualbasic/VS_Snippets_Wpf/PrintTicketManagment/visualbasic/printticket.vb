@@ -156,7 +156,7 @@ Namespace PrintTicketSample
 				Console.WriteLine("Press Return to continue...")
 				Console.ReadLine()
 			End Try
-		End Sub 'end Main
+		End Sub
 		'</SnippetUIForMergeAndValidatePTUtility>
 
 	End Class 'end Application class

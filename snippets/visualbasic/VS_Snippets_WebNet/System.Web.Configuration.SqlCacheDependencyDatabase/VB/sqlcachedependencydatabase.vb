@@ -78,7 +78,7 @@ Class UsingSqlCacheDependencyDatabase
         '</Snippet6>
 
 
-   End Sub 'Main 
+   End Sub
 End Class 'UsingSqlCacheDependencyDatabase 
 
 

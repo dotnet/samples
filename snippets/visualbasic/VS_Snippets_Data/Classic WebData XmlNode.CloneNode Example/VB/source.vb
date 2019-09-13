@@ -26,6 +26,6 @@ Public Class Sample
         'include the child nodes, but does include its attribute.
         Dim shallow As XmlNode = root.CloneNode(False)
         Console.WriteLine(shallow.OuterXml)
-    End Sub 'Main
+    End Sub
 End Class 'Sample
 ' </Snippet1>

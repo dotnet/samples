@@ -26,7 +26,7 @@ Public Class App
         Dim st As New SystemTime()
         LibWrap.GetSystemTime(st)
         Console.Write("The Date is: {0} {1} {2}", st.month, st.day, st.year)
-    End Sub 'Main
+    End Sub
 End Class 'App
 
 ' The program produces output similar to the following:

@@ -37,7 +37,7 @@ Public Class Form1
                 result = 1.0
         End Select
         ' </Snippet2>
-    End Sub 'Method
+    End Sub
 
     Public Shared Sub Main()
         Dim myForm as Form1 = new Form1()

@@ -12,7 +12,7 @@ Class UIATransformPattern_snippets
     ''' </summary>
     Public Sub New()
 
-    End Sub 'New
+    End Sub
 
 
     ' <Snippet100>
@@ -110,7 +110,7 @@ Class UIATransformPattern_snippets
             Return
         End Try
 
-    End Sub 'RotateElement
+    End Sub
     ' </Snippet102>
 
     ' <Snippet103>
@@ -144,7 +144,7 @@ Class UIATransformPattern_snippets
             Return
         End Try
 
-    End Sub 'MoveElement    
+    End Sub
     ' </Snippet103>
 
     ' <Snippet104>
@@ -176,7 +176,7 @@ Class UIATransformPattern_snippets
             Return
         End Try
 
-    End Sub 'ResizeElement
+    End Sub
     ' </Snippet104>
 
     '''--------------------------------------------------------------------
@@ -193,6 +193,6 @@ Class UIATransformPattern_snippets
             ' and call its Run() method to start it.
             Dim app As New UIATransformPattern_snippets()
         
-        End Sub 'Main
+        End Sub
     End Class 'TestMain
 End Class 'UIATransformPattern_snippets

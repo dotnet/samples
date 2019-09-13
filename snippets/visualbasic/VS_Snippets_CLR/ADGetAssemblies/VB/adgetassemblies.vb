@@ -23,6 +23,6 @@ Class ADGetAssemblies
       For Each assem In  assems
          Console.WriteLine(assem.ToString())
       Next assem
-   End Sub 'Main 
+   End Sub
 End Class 'ADGetAssemblies 
 ' </SNIPPET1>

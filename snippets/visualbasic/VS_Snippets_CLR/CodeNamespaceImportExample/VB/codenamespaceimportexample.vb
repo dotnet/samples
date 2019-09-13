@@ -30,7 +30,7 @@ Namespace CodeDomSamples
             'End Namespace
 
             '</Snippet2>
-        End Sub 'New 
+        End Sub
 
     End Class 'CodeNamespaceImportExample
 End Namespace 'CodeDomSamples

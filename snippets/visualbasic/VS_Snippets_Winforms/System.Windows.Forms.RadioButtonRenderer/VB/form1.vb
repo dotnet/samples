@@ -80,7 +80,7 @@ Namespace RadioButtonRendererSample
                 .Text = "Click here"
                 .Font = SystemFonts.IconTitleFont
             End With
-        End Sub 'New
+        End Sub
 
         '<Snippet2>
         ' Define the text bounds so that the text rectangle 

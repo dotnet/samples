@@ -164,7 +164,7 @@ Public Class MathSvc
    <System.Diagnostics.DebuggerStepThroughAttribute()> _
    Public Sub New()
       Me.Url = "http://localhost/MathSvc_SoapExtensionAttribute_vb.asmx"
-   End Sub 'New
+   End Sub
    
    
    <System.Web.Services.Protocols.SoapDocumentMethodAttribute _

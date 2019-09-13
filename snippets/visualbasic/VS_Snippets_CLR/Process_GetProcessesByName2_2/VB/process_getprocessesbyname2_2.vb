@@ -49,7 +49,7 @@ Class GetProcessesByNameClass
         Catch e As InvalidOperationException
             Console.WriteLine("Unable to get process information on the remote computer.")
         End Try
-    End Sub 'Main
+    End Sub
 End Class 'GetProcessesByNameClass
 ' </Snippet1>
 ' </Snippet2>

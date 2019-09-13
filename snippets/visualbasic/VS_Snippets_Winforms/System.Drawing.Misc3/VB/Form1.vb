@@ -279,7 +279,7 @@ Public Class Form1
         'ConstructAnIconFromAType(e);
         ShowOutputChannels(e)
 
-    End Sub 'Form1_Paint
+    End Sub
 End Class 'Form1 
 
 

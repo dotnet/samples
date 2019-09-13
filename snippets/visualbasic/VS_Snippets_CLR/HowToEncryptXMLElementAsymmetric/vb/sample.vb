@@ -62,7 +62,7 @@ Class Program
 
         Console.ReadLine()
 
-    End Sub 'Main
+    End Sub
 
 
     Public Shared Sub Encrypt(ByVal Doc As XmlDocument, ByVal EncryptionElement As String, ByVal EncryptionElementID As String, ByVal Alg As RSA, ByVal KeyName As String)
@@ -190,7 +190,7 @@ Class Program
             End If
         End Try
 
-    End Sub 'Encrypt
+    End Sub
 
 
 
@@ -216,7 +216,7 @@ Class Program
         ' Decrypt the element.
         exml.DecryptDocument()
 
-    End Sub 'Decrypt 
+    End Sub
 End Class 'Program
 
 

@@ -21,7 +21,7 @@ Class CustomDynamicRenderer
         MyBase.OnStylusDown(rawStylusInput)
         rawStylusInput.NotifyWhenProcessed(Nothing)
 
-    End Sub 'OnStylusDown
+    End Sub
 
 
     Protected Overrides Sub OnStylusDownProcessed(ByVal callbackData As Object, ByVal targetVerified As Boolean)
@@ -31,12 +31,12 @@ Class CustomDynamicRenderer
         Dim renderingThreadDispatcher As Dispatcher = Me.GetDispatcher()
         renderingThreadDispatcher.BeginInvoke(DispatcherPriority.Normal, New WorkerMethod(AddressOf DoSomething))
 
-    End Sub 'OnStylusDownProcessed
+    End Sub
 
 
     Private Sub DoSomething()
         ' Perform work on the rendering thread.
-    End Sub 'DoSomething
+    End Sub
 
 End Class
 '</Snippet19>
@@ -54,7 +54,7 @@ Class CustomDynamicRenderer2
 
     Public Sub New()
 
-    End Sub 'New
+    End Sub
 
     '<Snippet18>
     Protected Overrides Sub OnIsActiveForInputChanged()
@@ -67,7 +67,7 @@ Class CustomDynamicRenderer2
             ' Allocate the resources the plug-in uses.
         End If
 
-    End Sub 'OnIsActiveForInputChanged
+    End Sub
     '</Snippet18>
 
     Protected Overrides Sub OnStylusUp(ByVal rawStylusInput As RawStylusInput)
@@ -76,13 +76,13 @@ Class CustomDynamicRenderer2
 
         rawStylusInput.NotifyWhenProcessed(Nothing)
 
-    End Sub 'OnStylusUp
+    End Sub
 
 
     Protected Overrides Sub OnStylusUpProcessed(ByVal callbackData As Object, ByVal targetVerified As Boolean)
         MyBase.OnStylusUpProcessed(callbackData, targetVerified)
 
-    End Sub 'OnStylusUpProcessed
+    End Sub
     'NotifyOnNextRenderComplete();
 
     '<Snippet22>
@@ -92,7 +92,7 @@ Class CustomDynamicRenderer2
 
         MessageBox.Show(Me.Element.ToString())
 
-    End Sub 'OnAdded
+    End Sub
     '</Snippet22>
 
     Protected Overrides Sub OnRemoved()
@@ -100,7 +100,7 @@ Class CustomDynamicRenderer2
         MyBase.OnRemoved()
         MessageBox.Show(Me.Element.ToString())
 
-    End Sub 'OnRemoved
+    End Sub
 
 
     ' <Snippet16>
@@ -114,7 +114,7 @@ Class CustomDynamicRenderer2
             MessageBox.Show("The StylusPlugin is not enabled.")
         End If
 
-    End Sub 'OnEnabledChanged
+    End Sub
     ' </Snippet16>
 
     '<Snippet21>
@@ -124,7 +124,7 @@ Class CustomDynamicRenderer2
 
         MessageBox.Show(Me.DrawingAttributes.Color.ToString())
 
-    End Sub 'OnDrawingAttributesReplaced
+    End Sub
     '</Snippet21>
 
     '<Snippet11>
@@ -150,7 +150,7 @@ Class CustomDynamicRenderer2
 
         drawingContext.DrawGeometry(brush, Nothing, geometry)
 
-    End Sub 'OnDraw
+    End Sub
 
     '</Snippet11>
 End Class 'CustomDynamicRenderer

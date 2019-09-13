@@ -14,7 +14,7 @@ Namespace Samples.AspNet.Controls
         Inherits Login
 
         Public Sub New() 
-        End Sub 'New
+        End Sub
 
         Protected Overrides Sub OnLoggingIn(ByVal e As LoginCancelEventArgs) 
 
@@ -23,7 +23,7 @@ Namespace Samples.AspNet.Controls
             Me.MembershipProvider = list.SelectedValue
             MyBase.OnLoggingIn(e)
 
-        End Sub 'OnLoggingIn
+        End Sub
 
 
         Protected Overrides Sub CreateChildControls() 
@@ -31,7 +31,7 @@ Namespace Samples.AspNet.Controls
             LayoutTemplate = New MyTemplate()
             MyBase.CreateChildControls()
 
-        End Sub 'CreateChildControls
+        End Sub
     End Class 'CustomLogin
 
     ' A Template that contains the child controls.
@@ -80,7 +80,7 @@ Namespace Samples.AspNet.Controls
             container.Controls.Add(New LiteralControl("<br>"))
             container.Controls.Add(submit)
 
-        End Sub 'ITemplate.InstantiateIn
+        End Sub
     End Class 'MyTemplate
 End Namespace
 ' </snippet1>

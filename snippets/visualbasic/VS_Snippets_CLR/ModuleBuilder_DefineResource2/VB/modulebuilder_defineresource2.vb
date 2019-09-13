@@ -34,7 +34,7 @@ Public Class CodeGenerator
       writer.AddResource("String 3", "Third String")
       myAssemblyBuilder.Save("MyAssembly.dll")
 
-   End Sub 'New 
+   End Sub
 End Class 'CodeGenerator
 
 Public Class CallerClass
@@ -43,6 +43,6 @@ Public Class CallerClass
       Dim myGenerator As New CodeGenerator()
       Console.WriteLine("A resource named 'MyResource.resource' has been created and can be " + _
                                                          "viewed  in the 'MyAssembly.dll'")
-   End Sub 'Main
+   End Sub
 End Class 'CallerClass
 ' </Snippet1>

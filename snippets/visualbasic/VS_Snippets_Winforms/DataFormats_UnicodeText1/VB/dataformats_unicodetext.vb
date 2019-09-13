@@ -40,7 +40,7 @@ Public Class DataFormats_UnicodeText
 	      catch e as Exception
 		Console.WriteLine(e.Message)
       End try
-   End Sub 'Main 
+   End Sub
 End Class 'DataFormats_UnicodeText 
 	' </Snippet2>
 	' </Snippet1>

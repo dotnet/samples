@@ -45,5 +45,5 @@ Partial Class sitemapnode2avb_aspx
         End While
 
         ' </snippet1>
-    End Sub ' Page_Load
+    End Sub
 End Class

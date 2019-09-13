@@ -57,7 +57,7 @@ Public Class App
       ' Create the counter.
       PC = New PerformanceCounter("ElapsedTimeSampleCategory", _
             "ElapsedTimeSample", False)
-   End Sub 'CreateCounters
+   End Sub
 
 
 

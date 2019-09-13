@@ -131,7 +131,7 @@ Module Program
         EncryptedXml.ReplaceElement(elementToEncrypt, edElement, False)
 	'</snippet9>
 
-    End Sub 'Encrypt
+    End Sub
     
 
     Sub Decrypt(ByVal Doc As XmlDocument, ByVal Alg As SymmetricAlgorithm)

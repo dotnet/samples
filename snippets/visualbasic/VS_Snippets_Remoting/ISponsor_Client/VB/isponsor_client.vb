@@ -30,7 +30,7 @@ Public Class Client
       
       Console.WriteLine("Press enter to end the client application domain.")
       Console.ReadLine()
-   End Sub 'Main
+   End Sub
 End Class 'Client
  
 ' <Snippet1>
@@ -42,7 +42,7 @@ Public Class MyClientSponsor
    
    Public Sub New()
       lastRenewal = DateTime.Now
-   End Sub 'New
+   End Sub
    
    <SecurityPermission(SecurityAction.LinkDemand, Flags := SecurityPermissionFlag.Infrastructure)> _
    Public Function Renewal(lease As ILease) As TimeSpan Implements ISponsor.Renewal

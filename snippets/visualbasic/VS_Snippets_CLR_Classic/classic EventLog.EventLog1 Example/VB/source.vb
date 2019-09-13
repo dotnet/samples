@@ -27,6 +27,6 @@ Class MySample
         For Each entry In  myLog.Entries
             Console.WriteLine((ControlChars.Tab & "Entry: " & entry.Message))
         Next entry
-    End Sub ' Main
+    End Sub
 End Class ' MySample
 ' </Snippet1>

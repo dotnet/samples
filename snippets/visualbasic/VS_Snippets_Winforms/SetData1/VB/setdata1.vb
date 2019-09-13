@@ -32,7 +32,7 @@ Private Sub SetData1()
 
    ' Displays the result in a message box.
    MessageBox.Show(myMessageText, "The Test Result")
-End Sub 'SetData1
+End Sub
 ' </snippet1>
     Public Shared Sub Main()
        System.Windows.Forms.Application.Run(New Form1())

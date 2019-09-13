@@ -7,7 +7,7 @@ Class Form1
 
     Private Sub UpdateAppButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles UpdateAppButton.Click
         UpdateApplication()
-    End Sub 'UpdateAppButton_Click
+    End Sub
 
     '<SNIPPET1>
     Private sizeOfUpdate As Long = 0

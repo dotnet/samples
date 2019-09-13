@@ -33,7 +33,7 @@ Class testClass
         Console.WriteLine("Press the enter key to exit")
         Console.ReadLine()
 
-    End Sub 'Main
+    End Sub
 
     '<Snippet12>
     Private Shared Sub DisplayProperties(ByVal ts As TraceSource)

@@ -52,13 +52,13 @@ Namespace MyControls
 
             ' Render the </table> tag.
             writer.RenderEndTag()
-        End Sub 'RenderContents
+        End Sub
 
         ' Data binding consists of saving an enumerator for the data.
         Protected Overrides Sub PerformDataBinding(ByVal data As IEnumerable)
 
             dataSourceEnumerator = data.GetEnumerator()
-        End Sub 'PerformDataBinding
+        End Sub
     End Class 'MyDataBound
 
     ' MyDataBoundAdapter modifies a MyDataBound control to display a
@@ -98,7 +98,7 @@ Namespace MyControls
                 ' Add a separator to the ArrayList.
                 dataArray.Add("----------")
             End While
-        End Sub 'PerformDataBinding
+        End Sub
 
         ' Render the data source as a one-dimensional list.
         Protected Overrides Sub RenderContents( _
@@ -110,7 +110,7 @@ Namespace MyControls
                 writer.Write(dataArray(col))
                 writer.WriteBreak()
             Next col
-        End Sub 'RenderContents
+        End Sub
         ' </snippet3>
     End Class 'MyDataBoundAdapter 
 End Namespace ' MyControls

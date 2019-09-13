@@ -34,7 +34,7 @@ Class ClientAuthentication
       Console.WriteLine(ControlChars.Tab + "customBasicAuthentication URL username password")
       Console.WriteLine(ControlChars.Cr + ControlChars.Lf + "Example:")
       Console.WriteLine(ControlChars.Tab + "customBasicAuthentication http://ndpue/ncl/ basicuser basic.101 ndpue")
-   End Sub 'showusage
+   End Sub
    
    
    ' <Snippet8>
@@ -50,7 +50,7 @@ Class ClientAuthentication
          Dim currentAuthenticationModule As IAuthenticationModule = CType(registeredModules.Current, IAuthenticationModule)
          Console.WriteLine(ControlChars.Tab + "  CanPreAuthenticate : {0}", currentAuthenticationModule.CanPreAuthenticate)
       End While
-   End Sub 'displayRegisteredModules 
+   End Sub
    
    ' </Snippet8>
    ' The getPage method accesses the selected page an displays its content 
@@ -94,7 +94,7 @@ Class ClientAuthentication
          Console.WriteLine(("Caught Exception: " + e.Message))
          Console.WriteLine(("Stack: " + e.StackTrace))
       End Try
-   End Sub 'getPage
+   End Sub
    
    
    ' The displayPageContent method display the content of the
@@ -116,7 +116,7 @@ Class ClientAuthentication
          bytes = ReceiveStream.Read(read, 0, 512)
       End While
       Console.WriteLine("")
-   End Sub 'displayPageContent
+   End Sub
    
    'Entry point which delegates to C-style main Private Function
    Public Overloads Shared Sub Main()
@@ -164,7 +164,7 @@ Class ClientAuthentication
       getPage(uri)
     End If
     Return
-  End Sub 'Main
+  End Sub
 End Class 'ClientAuthentication 
 '</Snippet2>
 
@@ -188,7 +188,7 @@ Public Class CustomBasic
   Public Sub New()
     m_authenticationType = "Basic"
     m_canPreAuthenticate = False
-  End Sub 'New
+  End Sub
 
   ' Define the authentication type. This type is then used to identify this
   ' custom authentication module. The default is set to Basic.

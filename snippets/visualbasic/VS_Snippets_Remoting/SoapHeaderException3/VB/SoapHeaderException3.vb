@@ -29,7 +29,7 @@ Public Class MathSvc
    <System.Diagnostics.DebuggerStepThroughAttribute()>  _
    Public Sub New()
       Me.Url = "http://localhost/MathSvc_SoapHeaderException3.vb.asmx"
-   End Sub 'New
+   End Sub
 
    Public Function BeginAdd(xValue As System.Single, yValue As System.Single, _
       callback As System.AsyncCallback, asyncState As Object) As System.IAsyncResult

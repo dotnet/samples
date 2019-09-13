@@ -133,6 +133,6 @@ Class MyOperationBindingCollectionSample
          Console.WriteLine("Source : " & e.Source.ToString())
          Console.WriteLine("Message : " & e.Message.ToString())
       End Try
-   End Sub 'Main
+   End Sub
 End Class 'MyOperationBindingCollectionSample
 ' </Snippet1>

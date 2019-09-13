@@ -26,5 +26,5 @@ Public Class Class1
              ' Insert code here.
         End If
         ' </Snippet2>
-    End Sub 'Method1
+    End Sub
 End Class 'Class1 

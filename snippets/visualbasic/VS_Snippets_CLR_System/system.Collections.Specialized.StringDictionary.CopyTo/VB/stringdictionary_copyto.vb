@@ -36,7 +36,7 @@ Public Class SamplesStringDictionary
       Next i
       Console.WriteLine()
 
-   End Sub 'Main 
+   End Sub
 
 End Class 'SamplesStringDictionary
 

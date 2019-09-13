@@ -39,13 +39,13 @@ Public Class Sample
         Dim c As Color = Color.Red
         Console.WriteLine(TypeDescriptor.GetConverter(c).ConvertToString(c))
         ' </Snippet3>
-    End Sub 'Method1
+    End Sub
      
     Public Sub Method2()
         ' <Snippet4>
         Dim c As Color = CType(TypeDescriptor.GetConverter(GetType(Color)).ConvertFromString("Red"), Color)
         ' </Snippet4>
-    End Sub 'Method2
+    End Sub
      
     
     Public Sub Method3()
@@ -55,5 +55,5 @@ Public Class Sample
             Console.WriteLine(TypeDescriptor.GetConverter(c).ConvertToString(c))
         Next c
         ' </Snippet5>
-    End Sub 'Method3 
+    End Sub
 End Class 'Sample

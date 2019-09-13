@@ -51,6 +51,6 @@ Public Class Test
       ' Mutex, you can call WaitOne to request control of the 
       ' named mutex.
       m.ReleaseMutex()
-   End Sub 'Main
+   End Sub
 End Class 'Test
 '</Snippet1>

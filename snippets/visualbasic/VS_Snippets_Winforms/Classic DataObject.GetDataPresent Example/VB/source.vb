@@ -27,7 +27,7 @@ Public Class Form1
         ' Retrieves the data using its type format, and displays the type.
         Dim myObject As Object = myDataObject.GetData(myType)
         textBox1.Text += "The data type stored in the DataObject is: " + myObject.GetType().Name
-    End Sub 'GetIfPresent2
+    End Sub
     ' </Snippet1>
 End Class 'Form1
 

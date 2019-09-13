@@ -16,6 +16,6 @@ Public Class Form1
         
         ' Add the button to the form.
         Controls.Add(button1)
-    End Sub 'InitializeMyButton
+    End Sub
     ' </Snippet1>
 End Class 'Form1 

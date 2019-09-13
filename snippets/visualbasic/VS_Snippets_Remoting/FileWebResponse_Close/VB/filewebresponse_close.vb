@@ -28,7 +28,7 @@ Class FileWebResponseSnippet
         Console.WriteLine("Press any key to continue...")
         Console.ReadLine()
         Return
-    End Sub 'Main
+    End Sub
     
 ' <Snippet1>  
     Public Shared Sub GetPage(url As [String])
@@ -49,5 +49,5 @@ Class FileWebResponseSnippet
             Console.WriteLine(ControlChars.Cr + "The following exception was raised : {0}", e.Message)
         End Try
 ' </Snippet1>
-    End Sub 'GetPage
+    End Sub
 End Class 'FileWebResponseSnippet

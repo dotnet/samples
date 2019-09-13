@@ -67,7 +67,7 @@ Namespace SdkSample
 				OpenDocument(dialog.FileName)
 			End If
 
-		End Sub ' end:OnOpen()
+		End Sub
 
 
 		' --------------------------- OpenDocument ---------------------------
@@ -216,7 +216,7 @@ Namespace SdkSample
 		'''   Performs clean up when the application is closed.</summary>
 		Private Overloads Sub OnClosed(ByVal sender As Object, ByVal e As EventArgs)
 			CloseDocument()
-		End Sub ' end:OnClosed()
+		End Sub
 
 
 		' ----------------------------- OnClose ------------------------------
@@ -225,7 +225,7 @@ Namespace SdkSample
 		'''   to close the currently open document.</summary>
 		Private Sub OnClose(ByVal target As Object, ByVal args As ExecutedRoutedEventArgs)
 			CloseDocument()
-		End Sub ' end:OnClose()
+		End Sub
 
 
 		' --------------------------- CloseDocument --------------------------
@@ -257,7 +257,7 @@ Namespace SdkSample
 			' Close the XrML file.
 			CloseXrML()
 
-		End Sub ' end:CloseDocument
+		End Sub
 		#End Region ' File|Close
 
 
@@ -296,7 +296,7 @@ Namespace SdkSample
 				OpenXrML(dialog.FileName)
 			End If
 
-		End Sub ' end:OnRights()
+		End Sub
 
 
 		' ----------------------------- OpenXrML -----------------------------
@@ -346,7 +346,7 @@ Namespace SdkSample
 				WriteStatus("Closed '" & _xrmlFilename & "'")
 				_xrmlFilename = Nothing
 			End If
-		End Sub ' end:CloseXrML
+		End Sub
 		#End Region ' File|Rights...
 
 
@@ -379,7 +379,7 @@ Namespace SdkSample
 			WriteStatus("Publishing '" & _rmxpsPackageName & "'.")
 			PublishRMPackage(_xpsDocumentPath, _xrmlFilepath, dialog.FileName)
 
-		End Sub ' end:OnPublish()
+		End Sub
 
 
 		' ------------------------ PublishRMPackage --------------------------
@@ -524,7 +524,7 @@ Namespace SdkSample
 		'''   shutdown and exit the application.</summary>
 		Private Sub OnExit(ByVal sender As Object, ByVal e As EventArgs)
 			Close() ' invokes OnClosed()
-		End Sub ' end:OnExit()
+		End Sub
 		#End Region ' File|Exit
 
 
@@ -585,7 +585,7 @@ Namespace SdkSample
 		'''   Handles the user "File | Print" menu operation.</summary>
 		Private Sub OnPrint(ByVal target As Object, ByVal args As ExecutedRoutedEventArgs)
 			PrintDocument()
-		End Sub ' end:OnClose()
+		End Sub
 
 
 		' -------------------------- PrintDocument ---------------------------
@@ -597,7 +597,7 @@ Namespace SdkSample
 			End If
 			docViewer.Print()
 
-		End Sub ' end:PrintDocument()
+		End Sub
 
 
 		' ----------------------- DocViewer attribute ------------------------

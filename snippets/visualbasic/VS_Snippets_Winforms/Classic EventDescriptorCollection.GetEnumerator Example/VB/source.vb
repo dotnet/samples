@@ -24,7 +24,7 @@ Public Class Form1
             myEvent = ie.Current
             textBox1.Text += myEvent.ToString() & ControlChars.Cr
         End While
-    End Sub 'MyEnumerator
+    End Sub
     ' </Snippet1>
 End Class 'Form1 
 

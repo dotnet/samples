@@ -23,7 +23,7 @@ Public Class MyDataGridTableStyle_RowHeadersVisibleChanged
       
       ' Bind the controls to the DataGrid.
       MakeDataSet()
-   End Sub 'New
+   End Sub
    
    
    ' Clean up any resources being used.
@@ -34,13 +34,13 @@ Public Class MyDataGridTableStyle_RowHeadersVisibleChanged
          End If
       End If
       MyBase.Dispose(disposing)
-   End Sub 'Dispose
+   End Sub
    
    
    ' Main entry point for the application.
    Shared Sub Main()
       Application.Run(New MyDataGridTableStyle_RowHeadersVisibleChanged())
-   End Sub 'Main
+   End Sub
    
    
    Private Sub InitializeComponent()
@@ -66,7 +66,7 @@ Public Class MyDataGridTableStyle_RowHeadersVisibleChanged
       
       Me.Controls.Add(myButton)
       Me.Controls.Add(myDataGrid)
-   End Sub 'InitializeComponent
+   End Sub
     
    
    Private Sub MakeDataSet()
@@ -105,7 +105,7 @@ Public Class MyDataGridTableStyle_RowHeadersVisibleChanged
       tPer.Rows(4)("PersonName") = "Simon"
       
       myDataGrid.SetDataBinding(myDataSet, "Person")
-   End Sub 'MakeDataSet
+   End Sub
    
    
    Private Sub DataGridTableStyle_RowHeadersVisible_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -137,14 +137,14 @@ Public Class MyDataGridTableStyle_RowHeadersVisibleChanged
       myDataGrid.TableStyles.Add(myDataGridTableStyle)
       myDataGridTableStyle.GridLineColor = Color.Aquamarine
       AttachRowHeaderVisibleChanged()
-   End Sub 'DataGridTableStyle_RowHeadersVisible_Load
+   End Sub
    
 ' <Snippet1>
 ' <Snippet2>
    ' Instantiate the EventHandler.
    Public Sub AttachRowHeaderVisibleChanged()
       AddHandler myDataGridTableStyle.RowHeadersVisibleChanged, AddressOf MyDelegateRowHeadersVisibleChanged
-   End Sub 'AttachRowHeaderVisibleChanged
+   End Sub
    
    
    ' raise the event when RowHeadersVisible property is changed.
@@ -156,7 +156,7 @@ Public Class MyDataGridTableStyle_RowHeadersVisibleChanged
             myString += " not visible"
         End If
         MessageBox.Show(myString, "RowHeader information")
-    End Sub 'MyDelegateRowHeadersVisibleChanged
+    End Sub
    
    
    ' raise the event when a button is clicked.
@@ -166,7 +166,7 @@ Public Class MyDataGridTableStyle_RowHeadersVisibleChanged
       Else
          myDataGridTableStyle.RowHeadersVisible = True
       End If
-   End Sub 'myButton_Click 
+   End Sub
 ' </Snippet2>
 ' </Snippet1>
 End Class 'MyDataGridTableStyle_RowHeadersVisibleChanged 

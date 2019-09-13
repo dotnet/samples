@@ -148,7 +148,7 @@ Namespace SDKSample
 					printHelper.PrintMultipleFixedContentDocuments(printQueue, async)
 					Exit Select
 			End Select ' end:switch (currentMode)
-		End Sub ' end:ButtonHelperSave()
+		End Sub
 
 
 		' ------------------------- OnBtnCancelClick -------------------------
@@ -186,7 +186,7 @@ Namespace SDKSample
 				AsyncPrintStatus.Text = asyncInformation.Status
 				AsyncPrintProgress.Value += 5
 			End If
-	   End Sub ' end:AsyncPrintEvent()
+	   End Sub
 
 
 		' -------------------- GetContainerPathFromDialog --------------------
@@ -270,7 +270,7 @@ Namespace SDKSample
 					LoadDocumentViewer(_contentDir & "\ViewFixedDocumentSequence.xps")
 					UIEnabled(True, True, False)
 			End Select
-		End Sub ' end:UpdateUI()
+		End Sub
 
 
 		' ------------------------- LoadDocumentViewer -----------------------
@@ -306,7 +306,7 @@ Namespace SDKSample
 			' Leave the new _xpsPackage open for DocumentViewer
 			' to access additional required resources.
 
-		End Sub ' end:LoadDocumentViewer()
+		End Sub
 
 
 		#Region "Private Members"

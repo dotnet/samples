@@ -40,11 +40,11 @@ Public Class ValidXSD
             Console.WriteLine("Source = {0}", e.Source)
 
         End Try
-    End Sub 'Main
+    End Sub
 
 
     Private Shared Sub ShowCompileError(ByVal sender As Object, ByVal e As ValidationEventArgs)
         Console.WriteLine("Validation Error: {0}", e.Message)
-    End Sub 'ShowCompileError
+    End Sub
 End Class 'ValidXSD
 ' </Snippet1>

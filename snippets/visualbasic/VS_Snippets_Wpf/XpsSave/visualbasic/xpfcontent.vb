@@ -653,7 +653,7 @@ Namespace SDKSampleHelper
 			shape.Margin = thick
 			shape.Width = rx * 2
 			shape.Height = ry * 2
-		End Sub ' end:SetEllipse()
+		End Sub
 
 
 		#Region "private members"

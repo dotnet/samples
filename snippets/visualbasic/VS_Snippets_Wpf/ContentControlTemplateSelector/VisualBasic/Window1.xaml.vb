@@ -22,7 +22,7 @@ Class Window1
     Public Sub New() 
         InitializeComponent()
     
-    End Sub 'New 
+    End Sub
 End Class 'Window1
 
 

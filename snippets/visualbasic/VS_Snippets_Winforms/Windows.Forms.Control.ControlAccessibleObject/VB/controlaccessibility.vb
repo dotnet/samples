@@ -82,7 +82,7 @@ Namespace ControlAccessibility
             End If
          End If
          MyBase.Dispose(disposing)
-      End Sub 'Dispose
+      End Sub
       
       Private Sub InitializeComponent()
          ' 
@@ -91,12 +91,12 @@ Namespace ControlAccessibility
          Me.ClientSize = New System.Drawing.Size(292, 273)
          Me.Name = "Form1"
          Me.Text = "Form1"
-      End Sub 'InitializeComponent
+      End Sub
 
       <STAThread()> _
       Shared Sub Main()
         Application.Run(New MyForm())
-      End Sub 'Main
+      End Sub
       
 ' <snippet2>
 Public Sub New()

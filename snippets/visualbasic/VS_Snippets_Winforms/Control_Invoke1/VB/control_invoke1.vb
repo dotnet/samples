@@ -36,26 +36,26 @@ Public Class MyFormControl
       Controls.AddRange(New Control() {myListBox, myButton})
       Text = " 'Control_Invoke' example "
       myDelegate = New AddListItem(AddressOf AddListItemMethod)
-   End Sub 'New
+   End Sub
 
    Shared Sub Main()
       Dim myForm As New MyFormControl()
       myForm.ShowDialog()
-   End Sub 'Main
+   End Sub
 
    Public Sub AddListItemMethod(myString As String)
       myListBox.Items.Add(myString)
-   End Sub 'AddListItemMethod
+   End Sub
 
    Private Sub Button_Click(sender As Object, e As EventArgs)
       myThread = New Thread(New ThreadStart(AddressOf ThreadFunction))
       myThread.Start()
-   End Sub 'Button_Click
+   End Sub
 
    Private Sub ThreadFunction()
       Dim myThreadClassObject As New MyThreadClass(Me)
       myThreadClassObject.Run()
-   End Sub 'ThreadFunction
+   End Sub
 End Class 'MyFormControl
 
 Public Class MyThreadClass
@@ -63,7 +63,7 @@ Public Class MyThreadClass
 
    Public Sub New(myForm As MyFormControl)
       myFormControl1 = myForm
-   End Sub 'New
+   End Sub
    Private myString As String
 
    Public Sub Run()
@@ -78,6 +78,6 @@ Public Class MyThreadClass
          myFormControl1.Invoke(myFormControl1.myDelegate, New Object() {myString})
       Next i
 
-   End Sub 'Run
+   End Sub
 End Class 'MyThreadClass
 ' </Snippet1>

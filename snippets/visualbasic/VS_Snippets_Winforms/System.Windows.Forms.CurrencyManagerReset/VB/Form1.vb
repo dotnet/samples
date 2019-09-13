@@ -90,7 +90,7 @@ Public Class Form1
         cacheChildPosition = True
       
     
-    End Sub 'InitializeControlsAndDataSource
+    End Sub
     
     
     

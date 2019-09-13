@@ -17,7 +17,7 @@ NotInheritable Public Class UsingInfiniteTimeSpanConverter
             Console.WriteLine(e.Message)
         End Try
     
-    End Sub 'GetTimeDelay
+    End Sub
     
     
     Public Shared Sub SetTimeDelay() 
@@ -48,6 +48,6 @@ NotInheritable Public Class UsingInfiniteTimeSpanConverter
             Console.WriteLine(e.Message)
         End Try
     
-    End Sub 'SetTimeDelay
+    End Sub
 End Class 'UsingInfiniteTimeSpanConverter
 '</Snippet1>

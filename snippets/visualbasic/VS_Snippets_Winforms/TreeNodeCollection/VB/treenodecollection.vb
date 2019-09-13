@@ -19,7 +19,7 @@ Namespace ToolBarStuff
       
       Public Sub New()
          InitializeComponent()
-      End Sub 'New
+      End Sub
        
       
       Private Sub InitializeComponent()
@@ -70,11 +70,11 @@ Namespace ToolBarStuff
          Me.Name = "Form1"
          Me.Text = "Form1"
          Me.ResumeLayout(False)
-      End Sub 'InitializeComponent
+      End Sub
        
       <STAThread()>Shared Sub Main()
          Application.Run(New Form1())
-      End Sub 'Main
+      End Sub
       
       
 ' <snippet1>

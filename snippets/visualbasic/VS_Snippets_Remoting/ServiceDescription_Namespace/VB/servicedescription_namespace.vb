@@ -20,6 +20,6 @@ Namespace ServiceDescription1
          Catch e As Exception
             Console.WriteLine("Exception: " + e.Message)
          End Try
-      End Sub 'Main 
+      End Sub
    End Class 'MyService
 End Namespace 'ServiceDescription1

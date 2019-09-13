@@ -21,7 +21,7 @@ Class Program
                 Console.WriteLine("The hashes are not same.")
             End If
         End Using
-    End Sub 'Main
+    End Sub
 
 
 

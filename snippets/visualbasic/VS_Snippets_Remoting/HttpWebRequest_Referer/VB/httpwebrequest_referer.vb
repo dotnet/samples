@@ -32,7 +32,7 @@ Class HttpWebRequest_Referer
             Console.WriteLine(ControlChars.Cr + "Exception Caught!")
             Console.WriteLine("Message :{0}", e.Message)
         End Try
-    End Sub ' Main
+    End Sub
     
     Public Shared Sub GetPage(myUri As [String])
         Try
@@ -72,5 +72,5 @@ Class HttpWebRequest_Referer
             Console.WriteLine(ControlChars.Cr + "Exception Caught!")
             Console.WriteLine("Message :{0} ", e.Message)
         End Try
-    End Sub ' GetPage 
+    End Sub
 End Class ' HttpWebRequest_Referer

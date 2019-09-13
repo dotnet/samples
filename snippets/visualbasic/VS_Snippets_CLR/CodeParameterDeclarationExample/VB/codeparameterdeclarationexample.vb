@@ -38,7 +38,7 @@ Namespace CodeDomSamples
             type1.Members.Add(method1)
             '</Snippet2>
 
-        End Sub 'New 
+        End Sub
     End Class 'CodeParameterDeclarationExample
 End Namespace 'CodeDomSamples
 '</Snippet1>

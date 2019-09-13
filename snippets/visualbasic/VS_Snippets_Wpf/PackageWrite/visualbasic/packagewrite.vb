@@ -35,7 +35,7 @@ Namespace SDKSample
             CreatePackage()
 
             MessageBox.Show("Normal Completion:" & vbLf & "Successfully packaged '" & documentPath & "' and" & vbLf & "'" & resourcePath & "' into new '" & packagePath & "' zip file.", "End of Program", MessageBoxButton.OK, MessageBoxImage.Information)
-        End Sub ' end:main()
+        End Sub
 
 
         '<SnippetPackageWriteCreatePackage>
@@ -94,7 +94,7 @@ Namespace SDKSample
             End Using ' end:using (Package package) - Close and dispose package.
             '</SnippetPackageWriteUsingPackage>
 
-        End Sub ' end:CreatePackage()
+        End Sub
 
 
         '  --------------------------- CopyStream ---------------------------
@@ -113,7 +113,7 @@ Namespace SDKSample
                 target.Write(buf, 0, bytesRead)
                 bytesRead = source.Read(buf, 0, bufSize)
             Loop
-        End Sub ' end:CopyStream()
+        End Sub
         '</SnippetPackageWriteCreatePackage>
 
     End Class ' end:class PackageWrite

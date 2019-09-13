@@ -18,7 +18,7 @@ Public Class MyAttribute
    
    Public Sub New(s As Boolean)
       Me.s = s
-   End Sub 'New
+   End Sub
 End Class 'MyAttribute
 
 Class MyApplication
@@ -34,7 +34,7 @@ Class MyApplication
             Exit For
          End If
       Next index
-   End Sub 'Main
+   End Sub
    
    Private Shared Function CreateCallee(domain As AppDomain) As Type
       Dim myAssemblyName As New AssemblyName()

@@ -31,7 +31,7 @@ Public Class MyClass1
         
         ' Print the value of the Object in a textBox.
         textBox1.Text = myDereferencedObject.MyObjectValue
-    End Sub 'MyClipboardMethod
+    End Sub
 End Class 'MyClass
 
 
@@ -44,7 +44,7 @@ End Class 'MyClass
     ' Creates a default constructor for the class.
     Public Sub New()
         myValue = "This is the value of the class"
-    End Sub 'New
+    End Sub
     
     ' Creates a property to retrieve or set the value.
     

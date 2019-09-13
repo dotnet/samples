@@ -40,7 +40,7 @@ Public Class MyAttribute
    
    Public Sub New(name As String)
       myName = name
-   End Sub 'New
+   End Sub
    
    Public ReadOnly Property Name() As String
       Get
@@ -117,6 +117,6 @@ Public Class LogicalMethodInfo_GetCustomAttribute
             End If
          Next i
       End If
-   End Sub 'Main 
+   End Sub
 End Class 'LogicalMethodInfo_GetCustomAttribute
 ' </Snippet4>

@@ -81,7 +81,7 @@ Namespace Examples.VB.WebControls.Design
 
         Protected Overrides Sub Render(ByVal output As HtmlTextWriter)
             output.Write(textData)
-        End Sub ' Render
+        End Sub
 
     End Class ' CustomWebControl
 End Namespace ' Examples.VB.WebControls.Design

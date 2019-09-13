@@ -50,7 +50,7 @@ Public Class CustomPageAdapter
         ' Render the hyperlink opening tag with the added attributes.
         writer.RenderBeginTag("a")
 
-    End Sub ' RenderBeginHyperlink
+    End Sub
 End Class ' CustomPageAdapter
 ' </snippet1>
 

@@ -66,7 +66,7 @@
 
     Private Sub button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles button1.Click
       MessageBox.Show(FindMyText("Golf", 44, -1).ToString())
-    End Sub 'button1_Click
+    End Sub
 
 
     '<Snippet1>

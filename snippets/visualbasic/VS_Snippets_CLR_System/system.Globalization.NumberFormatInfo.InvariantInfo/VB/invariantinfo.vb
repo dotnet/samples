@@ -46,7 +46,7 @@ Class SamplesNumberFormatInfo
       Console.WriteLine(ControlChars.Tab + "PerMilleSymbol" + ControlChars.Tab + ControlChars.Tab + ControlChars.Tab + "{0}" + ControlChars.Tab + "(U+{1:x2}{2:x2})", myInv.PerMilleSymbol, myCodes(0), myCodes(1))
       Console.WriteLine(ControlChars.Tab + "PositiveInfinitySymbol" + ControlChars.Tab + ControlChars.Tab + "{0}", myInv.PositiveInfinitySymbol)
       Console.WriteLine(ControlChars.Tab + "PositiveSign" + ControlChars.Tab + ControlChars.Tab + ControlChars.Tab + "{0}", myInv.PositiveSign)
-   End Sub 'Main 
+   End Sub
 End Class 'SamplesNumberFormatInfo
 
 

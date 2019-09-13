@@ -68,7 +68,7 @@ Namespace Examples.VB.WebControls.Design
 
             MyBase.Initialize(component)
 
-        End Sub ' Initialize
+        End Sub
         ' </snippet5>
     End Class ' MyPanelContainerDesigner
 End Namespace ' Examples.VB.WebControls.Design

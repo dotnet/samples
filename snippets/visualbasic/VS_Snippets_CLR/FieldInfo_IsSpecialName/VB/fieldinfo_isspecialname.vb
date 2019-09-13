@@ -23,6 +23,6 @@ Class FieldInfo_IsSpecialName
         Catch e As Exception
             Console.WriteLine("Exception : {0} ", e.Message.ToString())
         End Try
-    End Sub 'Main
+    End Sub
 End Class 'FieldInfo_IsSpecialName
 ' </Snippet1>

@@ -53,6 +53,6 @@ Public Class MyClient
             Console.WriteLine("Calling remote object")
             Console.WriteLine(myHelloServer.HelloMethod("Bill"))
         End If
-    End Sub 'Main
+    End Sub
 End Class 'MyClient
 '</snippet1>

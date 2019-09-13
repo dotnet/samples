@@ -106,7 +106,7 @@ Class ILLabelDemo
          
          Console.WriteLine("One of the integers to add was greater than 100!")
       End If 
-   End Sub 'Main
+   End Sub
 End Class 'ILLabelDemo 
 
 

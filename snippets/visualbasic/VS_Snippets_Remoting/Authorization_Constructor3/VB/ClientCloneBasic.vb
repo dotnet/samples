@@ -67,14 +67,14 @@ Namespace CloneBasicAuthenticationClient
             Catch e As Exception
                 Console.WriteLine(ControlChars.Cr + " The following exception was raised : {0}", e.Message)
             End Try
-        End Sub 'Main
+        End Sub
         
         Public Shared Sub PrintUsage()
             Console.WriteLine(ControlChars.Lf + ControlChars.Cr + "Usage: Try a site which requires CloneBasic(custom made) authentication as below")
             Console.WriteLine("   ClientCloneBasic URLname username password domainname")
             Console.WriteLine(ControlChars.Cr + "Example:")
             Console.WriteLine(ControlChars.Cr + "   ClientCloneBasic http://www.microsoft.com/net/ george george123 microsoft")
-        End Sub 'PrintUsage
+        End Sub
         
         Public Shared Sub GetPage(url As String, username As String, passwd As String, domain As String)
             Try
@@ -114,6 +114,6 @@ Namespace CloneBasicAuthenticationClient
             Catch e As Exception
                 Console.WriteLine(ControlChars.Cr + " The following exception was raised : {0}", e.Message)
             End Try
-        End Sub 'GetPage
+        End Sub
     End Class 'Client 
 End Namespace 'CloneBasicAuthenticationClient 

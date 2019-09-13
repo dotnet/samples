@@ -18,6 +18,6 @@ Public Class Example
             rk.GetValue("ExpandValue", "No Value", _
             RegistryValueOptions.DoNotExpandEnvironmentNames))
         Console.WriteLine("Expanded: ""{0}""", rk.GetValue("ExpandValue"))
-    End Sub 'Main
+    End Sub
 End Class 'Example
 ' </Snippet1>

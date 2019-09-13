@@ -40,7 +40,7 @@ Public Class SamplesHijriCalendar
          Console.WriteLine()
       Next i
 
-   End Sub 'Main 
+   End Sub
 
 End Class 'SamplesHijriCalendar
 

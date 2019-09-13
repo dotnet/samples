@@ -73,7 +73,7 @@ Class Sample
         ' custom culture available to other applications. The mySavedCARIB.xml file
         ' remains on your computer.
 
-    End Sub 'Main ' 
+    End Sub
 End Class 'Sample
 
 'This code example produces the following results:

@@ -51,7 +51,7 @@ Namespace Samples.AspNet.Management
             String.Format("Buffering: {0}", buffer))
             customInfo.AppendLine( _
             String.Format("Buffering modality: {0}", BufferMode))
-        End Sub 'Initialize
+        End Sub
 
 
 
@@ -75,7 +75,7 @@ Namespace Samples.AspNet.Management
                 ' Store the information in the specified file.
                 StoreToFile(customInfo, logFilePath, FileMode.Append)
             End If
-        End Sub 'ProcessEvent
+        End Sub
 
 
         ' Processes the messages that have been buffered.
@@ -110,7 +110,7 @@ Namespace Samples.AspNet.Management
             ' Store the information in the specified file.
             StoreToFile(customInfo, logFilePath, FileMode.Append)
 
-        End Sub 'ProcessEventFlush
+        End Sub
 
 
         ' Performs standard shutdown.
@@ -120,7 +120,7 @@ Namespace Samples.AspNet.Management
             ' down the provider.
             ' Flush the buffer, if needed.
             Flush()
-        End Sub 'Shutdown
+        End Sub
 
 
         ' Store event information in a local file.
@@ -170,7 +170,7 @@ Namespace Samples.AspNet.Management
             Catch e As Exception
                 Throw New Exception("SampleEventProvider.StoreToFile: " + e.ToString())
             End Try
-        End Sub 'StoreToFile
+        End Sub
     End Class 'SampleBufferedEventProvider
 
 End Namespace

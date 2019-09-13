@@ -12,7 +12,7 @@ Namespace CodeDomSerializerExceptionExampleVB
             '<Snippet1>
             Throw New CodeDomSerializerException("This exception was raised as an example.", New CodeLinePragma("Example.txt", 20))
             '</Snippet1>
-        End Sub 'Main 
+        End Sub
 
     End Class 'CodeDomSerializerExceptionExample
 

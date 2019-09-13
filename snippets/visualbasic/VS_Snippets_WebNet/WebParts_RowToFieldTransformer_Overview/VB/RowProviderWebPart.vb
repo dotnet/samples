@@ -41,7 +41,7 @@ Namespace Samples.AspNet.VB.Controls
             row("ZIP Code") = 98000
             _table.Rows.Add(row)
 
-        End Sub 'New
+        End Sub
 
         <ConnectionProvider("Row")> _
         Public Function GetConnectionInterface() As IWebPartRow
@@ -60,7 +60,7 @@ Namespace Samples.AspNet.VB.Controls
             Implements IWebPartRow.GetRowData
             callback(_table.DefaultView(0))
 
-        End Sub 'GetRowData
+        End Sub
     End Class 'RowProviderWebPart           
 
 End Namespace

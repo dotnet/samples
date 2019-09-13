@@ -47,7 +47,7 @@ Next
 
 ' </Snippet3>
 
-End Sub 'New
+End Sub
 End Class 'UsingHttpModulesSection
 
 ' UsingHttpModulesSection class end.

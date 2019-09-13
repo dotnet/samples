@@ -118,7 +118,7 @@ Namespace ProcessAsyncStreamSamples
                 Console.WriteLine("Exception:")
                 Console.WriteLine(e)
             End Try
-        End Sub 'Main
+        End Sub
     End Class  'ProcessSampleMain
 End Namespace 'Process_AsyncStream_Sample
 ' </Snippet1>

@@ -45,7 +45,7 @@ Namespace ISOCS
                 lp.DeleteFiles()
                 lp.DeleteDirectories()
             End If
-        End Sub 'Main
+        End Sub
 
 
         Shared Sub GatherInfoFromUser(ByVal lp As LoginPrefs)
@@ -53,7 +53,7 @@ Namespace ISOCS
             lp.NewsUrl = Console.ReadLine()
             Console.WriteLine("Please enter the URL of your sports site.")
             lp.SportsUrl = Console.ReadLine()
-        End Sub 'GatherInfoFromUser
+        End Sub
     End Class 'ConsoleApp
     _
 
@@ -63,7 +63,7 @@ Namespace ISOCS
         Public Sub New(ByVal myUserName As String)
             userName = myUserName
             myNewPrefs = GetPrefsForUser()
-        End Sub 'New
+        End Sub
         Private userName As String
 
         Private myNewsUrl As String
@@ -230,7 +230,7 @@ Namespace ISOCS
             Catch ex As Exception
                 Console.WriteLine(ex.ToString())
             End Try
-        End Sub 'DeleteFiles
+        End Sub
 
         '</snippet6>
         '<snippet8>  
@@ -264,7 +264,7 @@ Namespace ISOCS
             Catch ex As Exception
                 Console.WriteLine(ex.ToString())
             End Try
-        End Sub 'DeleteDirectories
+        End Sub
 
         '</snippet8>
         '<snippet7>  

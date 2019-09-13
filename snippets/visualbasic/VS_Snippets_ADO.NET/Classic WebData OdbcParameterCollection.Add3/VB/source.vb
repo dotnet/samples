@@ -21,6 +21,6 @@ Public Class Form1
         command.Parameters
       Dim parameter As OdbcParameter = _
         paramCollection.Add("CustomerID", OdbcType.VarChar, 5)
-    End Sub 'CreateOdbcParamColl
+    End Sub
     ' </Snippet1>
 End Class 'Form1 

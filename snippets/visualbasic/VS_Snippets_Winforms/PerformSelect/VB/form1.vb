@@ -75,16 +75,16 @@ Public Class Form1
 
         ' Select the File menu item.
         menuItem1.PerformSelect()
-    End Sub 'CreateMyMenu
+    End Sub
 
 
     Private Sub menuItem1_Select(ByVal sender As Object, ByVal e As System.EventArgs)
         MessageBox.Show("You selected the File menu.", "The Event Information")
-    End Sub 'menuItem1_Select
+    End Sub
 
 
     Private Sub menuItem2_Select(ByVal sender As Object, ByVal e As System.EventArgs)
         MessageBox.Show("You selected the Edit menu.", "The Event Information")
-    End Sub 'menuItem2_Select
+    End Sub
     ' </snippet1>
 End Class

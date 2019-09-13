@@ -15,7 +15,7 @@ Public Class Class1
         Dim fs As New FileStream(filename, FileMode.Open)
         Dim o As ObjectToDeserialize = _
             CType(mySerializer.Deserialize(fs), ObjectToDeserialize)
-    End Sub 'DeserializeItem
+    End Sub
     
     
     Private Sub Serializer_UnknownNode _

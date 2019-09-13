@@ -10,13 +10,13 @@ Namespace Samples.AspNet.VB
     Public Sub New() 
         Throw New NotSupportedException("Initialize data.")
     
-    End Sub 'New
+    End Sub
     
     
     Public Sub New(ByVal data As String) 
         _data = data
     
-    End Sub 'New
+    End Sub
     
     Private _data As String
     

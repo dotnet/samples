@@ -16,7 +16,7 @@ Public Class Form1
     <STAThread()>  _
     Shared Sub Main()
         Application.Run(New Form1())
-    End Sub 'Main
+    End Sub
     
     Public Sub New()
         Me.addressTextBox = New System.Windows.Forms.TextBox()
@@ -113,6 +113,6 @@ Public Class Form1
         Me.ClientSize = New System.Drawing.Size(292, 160)
         Me.Text = "Help Provider Demonstration"
 
-    End Sub 'New        
+    End Sub
 End Class 'Form1
 '</Snippet1>

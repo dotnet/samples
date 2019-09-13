@@ -32,7 +32,7 @@ Private Sub GetFormats2()
    Next i
    ' Displays the results.
    MessageBox.Show(theResult)
-End Sub 'GetFormats2
+End Sub
 ' </snippet1>
     Public Shared Sub Main()
        System.Windows.Forms.Application.Run(New Form1())

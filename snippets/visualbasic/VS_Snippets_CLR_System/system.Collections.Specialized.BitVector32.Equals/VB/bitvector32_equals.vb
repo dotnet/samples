@@ -58,7 +58,7 @@ Public Class SamplesBitVector32
          Console.WriteLine("   Using the ""=="" operator, myBV.Data({0}) does not equal myInt32({1}).", myBV.Data, myInt32)
       End If 
 
-   End Sub 'Main
+   End Sub
 
 End Class 'SamplesBitVector32 
 

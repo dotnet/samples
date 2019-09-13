@@ -49,7 +49,7 @@ Namespace SDKSample
 
 			Next doc ' end:foreach (IXpsFixedDocumentReader
 
-		End Sub ' end:IterateSignatureDefinitions()
+		End Sub
 
 		'</SnippetIterateSignatureDefinitions>
 
@@ -93,7 +93,7 @@ Namespace SDKSample
 				End If
 			Next sig ' end:foreach (XpsDigitalSignature
 
-		End Sub ' end:IterateSignatures()
+		End Sub
 
 
 		'<SnippetSignXpsDocument>
@@ -118,7 +118,7 @@ Namespace SDKSample
 				xpsDocument.SignDigitally(cert, True, XpsDigSigPartAlteringRestrictions.None)
 			End If
 
-		End Sub ' end:SignXps()
+		End Sub
 
 		'</SnippetSignXpsDocument>
 

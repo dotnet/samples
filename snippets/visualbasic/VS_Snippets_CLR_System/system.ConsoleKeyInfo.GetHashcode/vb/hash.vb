@@ -34,7 +34,7 @@ Class Sample
             cki1 = Console.ReadKey(True)
         Loop While cki1.Key <> ConsoleKey.Escape
     
-    End Sub 'Main
+    End Sub
      ' Note: This example requires the Escape (Esc) key.
     
     ' The KeyCombination() method creates a string that specifies what 

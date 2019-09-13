@@ -9,7 +9,7 @@ Public Structure MyPoint
     Public Sub New(x As Integer, y As Integer)
         Me.x = x
         Me.y = y
-    End Sub 'New
+    End Sub
 End Structure
 
 <StructLayout(LayoutKind.Sequential, CharSet:=CharSet.Ansi)>
@@ -19,7 +19,7 @@ Public Structure MyPerson
     Public Sub New(first As String, last As String)
         Me.first = first
         Me.last = last
-    End Sub 'New
+    End Sub
 End Structure
 
 Public Class LibWrap

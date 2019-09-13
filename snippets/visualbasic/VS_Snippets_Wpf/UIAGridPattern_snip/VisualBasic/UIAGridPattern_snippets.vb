@@ -13,7 +13,7 @@ Class UIAGridPattern_snippets
     ''' </summary>
     Public Sub New()
 
-    End Sub 'New
+    End Sub
 
 
     ' <Snippet100>
@@ -100,7 +100,7 @@ Class UIAGridPattern_snippets
         AddressOf OnGridStructureChange
         Automation.AddStructureChangedEventHandler( _
         targetControl, TreeScope.Element, gridStructureChangedListener)
-    End Sub 'SetGridEventListeners    
+    End Sub
     ' </Snippet102>
 
     ' <Snippet103>
@@ -134,7 +134,7 @@ Class UIAGridPattern_snippets
             ' Row item added.
         End If
 
-    End Sub 'OnGridStructureChange 
+    End Sub
     ' Member variables to track current row and column counts.
     Private columnCount As Integer = 0
     Private rowCount As Integer = 0
@@ -149,7 +149,7 @@ Class UIAGridPattern_snippets
     ByVal args As System.Windows.ExitEventArgs)
         Automation.RemoveAllEventHandlers()
         MyBase.OnExit(args)
-    End Sub 'OnExit
+    End Sub
 
     ' </Snippet103>
     '''--------------------------------------------------------------------
@@ -166,6 +166,6 @@ Class UIAGridPattern_snippets
             ' and call its Run() method to start it.
             Dim app As New UIAGridPattern_snippets()
         
-        End Sub 'Main
+        End Sub
     End Class 'TestMain 
 End Class 'UIAGridPattern_snippets 

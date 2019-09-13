@@ -9,7 +9,7 @@ Class Sample
       Console.WriteLine("Note that the new console title is ""{0}""" & vbCrLf & _
                         "  (Press any key to quit.)", Console.Title)
       Console.ReadKey(True)
-   End Sub 'Main
+   End Sub
 End Class 'Sample
 '
 'This example produces the following results:

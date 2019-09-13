@@ -36,5 +36,5 @@ Public Class Sample
         reader.Close()
 '</snippet1>
     
-    End Sub 'Main 
+    End Sub
 End Class 'Sample 

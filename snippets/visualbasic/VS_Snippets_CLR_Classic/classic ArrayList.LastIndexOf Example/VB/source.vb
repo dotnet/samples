@@ -36,7 +36,7 @@ Public Class SamplesArrayList
       ' Searches for the last occurrence of the duplicated value in a section of the ArrayList.  Note that the start index is greater than the end index because the search is done backward.
       myIndex = myAL.LastIndexOf(myString, 10, 6)
       Console.WriteLine("The last occurrence of ""{0}"" between index 10 and index 5 is at index {1}.", myString, myIndex)
-   End Sub 'Main
+   End Sub
    
    
    Public Shared Sub PrintIndexAndValues(myList As IEnumerable)
@@ -47,7 +47,7 @@ Public Class SamplesArrayList
          i = i + 1
       Next obj
       Console.WriteLine()
-   End Sub 'PrintIndexAndValues
+   End Sub
 
 End Class 'SamplesArrayList
 

@@ -65,7 +65,7 @@ Class SecurityPrincipalDemo
 
         Thread.CurrentPrincipal = genericPrincipal
 
-    End Sub 'Main
+    End Sub
 
 
 

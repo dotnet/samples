@@ -26,7 +26,7 @@ Public Class SamplesArray
         ' Displays the values of the Array.
         Console.WriteLine("After reversing:")
         PrintIndexAndValues(myArray)
-    End Sub 'Main
+    End Sub
     
     
     

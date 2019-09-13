@@ -18,7 +18,7 @@ Class MyApp
         MyBase.OnStartup(args)
         win.Show()
 
-    End Sub 'AppStartingUp
+    End Sub
 End Class 'MyApp 
 '
 'ToDo: Error processing original source shown below

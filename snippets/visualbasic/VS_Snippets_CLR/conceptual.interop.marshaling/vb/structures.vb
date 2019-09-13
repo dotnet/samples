@@ -109,7 +109,7 @@ Public Class App
         Console.WriteLine(myStruct.flag)
         Console.WriteLine("{0} {1} {2}", myStruct.vals(0),
             myStruct.vals(1), myStruct.vals(2))
-    End Sub 'Main
+    End Sub
 End Class 'App
 '</snippet24>
 '</snippet22>

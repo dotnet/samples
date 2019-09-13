@@ -42,7 +42,7 @@ Public Class DateClient
         serverPort = port
         serverSocket = New Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp)
         asciiEncoding = Encoding.ASCII
-    End Sub 'New
+    End Sub
     
     
     'Print a security element and all its children, in a depth-first manner.
@@ -70,7 +70,7 @@ Public Class DateClient
                 PrintSecurityElement(CType(securityElementObj.Children(i), SecurityElement), depth)
             Next i
         End If
-    End Sub 'PrintSecurityElement
+    End Sub
      
     Public Function GetDate() As [String]
 ' <Snippet1>
@@ -173,7 +173,7 @@ Public Class UserDateClient
         Catch e As Exception
             Console.WriteLine(ControlChars.Cr + "Exception raised : {0}", e.Message)
         End Try
-    End Sub 'Main
+    End Sub
     
     
     Private Shared Sub PrintUsage()
@@ -181,5 +181,5 @@ Public Class UserDateClient
         Console.WriteLine(ControlChars.Tab + "DateClient_SocketPermission_ToXml " + ChrW(60) + "ipaddress" + ChrW(62) + " " + ChrW(60) + "port" + ChrW(62))
         Console.WriteLine(ControlChars.Tab + "The ipaddress argument is the ip address of the Date server.")
         Console.WriteLine(ControlChars.Tab + "The port argument is the port of the Date server.")
-    End Sub 'PrintUsage
+    End Sub
 End Class 'UserDateClient

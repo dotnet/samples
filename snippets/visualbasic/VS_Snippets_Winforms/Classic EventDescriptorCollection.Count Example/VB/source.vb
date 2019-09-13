@@ -16,7 +16,7 @@ Public Class Form1
         
         ' Prints the number of events on button1 in a text box.
         textBox1.Text = events.Count.ToString()
-    End Sub 'GetCount
+    End Sub
     ' </Snippet1>
 End Class 'Form1 
 

@@ -13,7 +13,7 @@ Module Test
       AddHandler currentDomain.AssemblyResolve, AddressOf MyResolveEventHandler
       
       InstantiateMyDynamicType(currentDomain)   'OK!
-   End Sub 'Main
+   End Sub
    
    Sub InstantiateMyDynamicType(domain As AppDomain)
       Try
@@ -22,7 +22,7 @@ Module Test
       Catch e As Exception
          Console.WriteLine(e.Message)
       End Try
-   End Sub 'InstantiateMyDynamicType
+   End Sub
    
    Function MyResolveEventHandler(sender As Object, args As ResolveEventArgs) As System.Reflection.Assembly
       Return DefineDynamicAssembly(DirectCast(sender, AppDomain))

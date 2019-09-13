@@ -25,7 +25,7 @@ Public Class SamplesStringEnumerator
          Console.WriteLine("The first element is {0}.", myEnumerator.Current)
       End If 
 
-   End Sub 'Main
+   End Sub
 
 End Class 'SamplesStringEnumerator 
 

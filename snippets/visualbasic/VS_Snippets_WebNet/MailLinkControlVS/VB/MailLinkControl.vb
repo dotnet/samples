@@ -68,7 +68,7 @@ Namespace Samples.AspNet
             writer.AddAttribute( _
             HtmlTextWriterAttribute.Href, "mailto:" + Email)
 
-        End Sub 'AddAttributesToRender
+        End Sub
 
 
         Protected Overrides Sub RenderContents(ByVal writer _
@@ -78,7 +78,7 @@ Namespace Samples.AspNet
             End If
             writer.WriteEncodedText([Text])
 
-        End Sub 'RenderContents
+        End Sub
     End Class 'MailLink
 End Namespace
 

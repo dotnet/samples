@@ -21,7 +21,7 @@ Namespace CodeDomSamples
           '     'Else block. If condition is false, execute these statements.
           
           '</Snippet2>
-      End Sub 'New 
+      End Sub
 
    End Class 'CodeConditionStatementExample
 

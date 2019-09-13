@@ -104,7 +104,7 @@ Namespace CodeDomSamples
 
 
         '</Snippet2>
-      End Sub 'New 
+      End Sub
 
    End Class 'CodeConstructorExample
 

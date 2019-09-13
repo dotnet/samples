@@ -31,7 +31,7 @@ Public Class MyForm
     Public Sub New()
         InitializeComponent()
         SetUp()
-    End Sub 'New
+    End Sub
 
 
     Private Sub InitializeComponent()
@@ -96,18 +96,18 @@ Public Class MyForm
         Controls.Add(indexRadioButton)
         Controls.Add(myLabel)
         Controls.Add(myLabel2)
-    End Sub 'InitializeComponent
+    End Sub
 
 
     Public Shared Sub Main()
         Application.Run(New MyForm())
-    End Sub 'Main
+    End Sub
 
 
     Private Sub SetUp()
         MakeDataSet()
         myDataGrid.SetDataBinding(myDataSet, "Customers")
-    End Sub 'SetUp
+    End Sub
 
 
     ' Create a DataSet with two tables and populate it.
@@ -167,7 +167,7 @@ Public Class MyForm
                 ordersTable.Rows.Add(newRow2)
             Next j
         Next index
-    End Sub 'MakeDataSet
+    End Sub
 
 
     Private Sub AddStyles_Clicked(ByVal sender As Object, ByVal e As System.EventArgs) Handles addStylesButton.Click
@@ -176,7 +176,7 @@ Public Class MyForm
             Return
         End If
         AddCustomDataTableStyle()
-    End Sub 'AddStyles_Clicked
+    End Sub
 
 
     Private Sub AddCustomDataTableStyle()
@@ -230,7 +230,7 @@ Public Class MyForm
 
         ' Set the TablesAlreadyAdded to true so we don't try to do this again.
         TablesAlreadyAdded = True
-    End Sub 'AddCustomDataTableStyle
+    End Sub
 
 
     Private Sub SelectChoice_Clicked(ByVal sender As Object, ByVal e As System.EventArgs) Handles selectChoiceButton.Click
@@ -241,7 +241,7 @@ Public Class MyForm
                 PrintColumnInformationUsingIndex()
             End If
         End If
-    End Sub 'SelectChoice_Clicked
+    End Sub
     ' <Snippet1>
     Private Sub Clear_Clicked(ByVal sender As Object, ByVal e As System.EventArgs) Handles clearButton.Click
         ' TablesAlreadyAdded set to false so that table styles can be added again.
@@ -254,7 +254,7 @@ Public Class MyForm
             myColumns.Clear()
         Next myTableStyle
         myDataGrid.TableStyles.Clear()
-    End Sub 'Clear_Clicked
+    End Sub
 
     ' </Snippet1>
     ' <Snippet2>
@@ -270,7 +270,7 @@ Public Class MyForm
                 myLabel.Text += ControlChars.Cr + "Mapping Name: " + myColumns(myTableStyle.GridColumnStyles(index).MappingName).MappingName
             Next index
         Next myTableStyle
-    End Sub 'PrintColumnInformationUsingColumnName
+    End Sub
 
     ' </Snippet2>
     ' <Snippet3>
@@ -285,6 +285,6 @@ Public Class MyForm
                 myLabel.Text += ControlChars.Cr + "Mapping Name: " + myColumns(index).MappingName
             Next index
         Next myTableStyle
-    End Sub 'PrintColumnInformationUsingIndex 
+    End Sub
     ' </Snippet3>
 End Class 'MyForm

@@ -18,6 +18,6 @@ Public Class MoveToTest
 
         ' Delete the parent directory.
         di.Delete(True)
-    End Sub 'Main
+    End Sub
 End Class 'MoveToTest
 ' </snippet1>

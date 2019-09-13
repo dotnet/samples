@@ -67,7 +67,7 @@ Namespace Samples.AspNet.VB.Controls
             Else
                 Controls.Add(New LiteralControl([Text] + " " + DateTime))
             End If
-        End Sub 'CreateChildControls
+        End Sub
 
     End Class 'VB_TemplatedFirstControl
 
@@ -80,7 +80,7 @@ Namespace Samples.AspNet.VB.Controls
 
         Public Sub New(ByVal parent As VB_TemplatedFirstControl)
             Me._parent = parent
-        End Sub 'New
+        End Sub
 
         Public ReadOnly Property [Text]() As [String]
             Get

@@ -24,6 +24,6 @@ Public Class DeleteTest
 
         ' Delete the directory.
         di.Delete(True)
-    End Sub 'Main
+    End Sub
 End Class 'DeleteTest
 ' </snippet1>

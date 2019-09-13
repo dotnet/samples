@@ -29,7 +29,7 @@ Namespace SDKSample
                     myMediaElement.Stretch = Stretch.UniformToFill
             End Select
 
-        End Sub 'OnClickChangeStretch
+        End Sub
     End Class 'StretchMediaElementExample 
 End Namespace 'SDKSample
 ' </SnippetMediaElementCSharpExampleWholePage>

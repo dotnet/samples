@@ -16,7 +16,7 @@ Module Test
       AddHandler currentDomain.AssemblyResolve, AddressOf MyResolver
       
       InstantiateMyType(currentDomain)      ' OK!
-   End Sub 'Main
+   End Sub
    
    
    Sub InstantiateMyType(domain As AppDomain)
@@ -26,7 +26,7 @@ Module Test
       Catch e As Exception
          Console.WriteLine(e.Message)
       End Try
-   End Sub 'InstantiateMyType
+   End Sub
    
    
    ' Loads the content of a file to a byte array. 
@@ -73,7 +73,7 @@ Module Test
       typeBuilder.CreateType()
       
       assemblyBuilder.Save("temp.dll")
-   End Sub 'EmitAssembly
+   End Sub
 
 End Module 'Test
 ' </Snippet1>

@@ -22,7 +22,7 @@ Public Class MyNewQueue
 
             Return
 
-        End Sub 'Main
+        End Sub
 
 
 
@@ -52,7 +52,7 @@ Public Class MyNewQueue
 
             Return
 
-        End Sub 'SendHighPriorityMessages
+        End Sub
 
 
 
@@ -81,7 +81,7 @@ Public Class MyNewQueue
 
             Return
 
-        End Sub 'SendNormalPriorityMessages
+        End Sub
 
 End Class 'MyNewQueue
 

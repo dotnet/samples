@@ -15,7 +15,7 @@ Namespace Samples.AspNet.Controls.VB
        Implements IDataSource, IListSource
 
        Public Sub New()
-       End Sub 'New
+       End Sub
        Private view As SomeDataSourceView = Nothing
 ' <Snippet2>
        #Region "Implementation of IDataSource"
@@ -65,7 +65,7 @@ Namespace Samples.AspNet.Controls.VB
 
        Public Sub New(owner As IDataSource)
           MyBase.New(owner, defaultViewName)
-       End Sub 'New
+       End Sub
 
 
        Protected Overrides Function ExecuteSelect(selectArguments As DataSourceSelectArguments) As IEnumerable

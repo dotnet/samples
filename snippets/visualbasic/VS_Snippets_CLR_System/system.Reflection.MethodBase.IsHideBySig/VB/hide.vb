@@ -53,7 +53,7 @@ Public Class Test
         Dim binst As B = dinst
         binst.M()
         binst.M(42)         
-    End Sub 'Main
+    End Sub
 End Class 'Test
 
 ' This code example produces the following output:

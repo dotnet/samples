@@ -25,11 +25,11 @@ Class DocumentableItemSample
          Console.WriteLine("Documentation Element for Port Type {0} is ", myBinding.Name)
          PrintDocumentation(myBinding)
       Next myBinding
-   End Sub 'Main
+   End Sub
 
    ' Prints documentation associated with a wsdl element.
    Public Shared Sub PrintDocumentation(myItem As DocumentableItem)
       Console.WriteLine(ControlChars.Tab + myItem.Documentation)
-   End Sub 'PrintDocumentation
+   End Sub
 End Class 'DocumentableItemSample
 ' </Snippet1>

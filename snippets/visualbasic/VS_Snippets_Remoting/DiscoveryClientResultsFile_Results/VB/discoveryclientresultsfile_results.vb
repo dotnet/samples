@@ -53,6 +53,6 @@ Class myDiscoveryClient_Results
       Catch e As Exception
          Console.WriteLine(e.Message)
       End Try
-   End Sub 'Main
+   End Sub
 End Class 'myDiscoveryClient_Results
 ' </Snippet1>

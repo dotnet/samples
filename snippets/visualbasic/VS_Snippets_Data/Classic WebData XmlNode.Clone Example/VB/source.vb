@@ -20,6 +20,6 @@ Public Class Sample
         'child nodes. This is similar to calling CloneNode(true).
         Dim clone As XmlNode = root.Clone()
         Console.WriteLine(clone.OuterXml)
-    End Sub 'Main
+    End Sub
 End Class 'Sample
 ' </Snippet1>

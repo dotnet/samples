@@ -45,5 +45,5 @@ Public Class ContractReference_ctor
       Catch e As Exception
          Console.WriteLine("Error is " + e.Message)
       End Try
-   End Sub 'Main
+   End Sub
 End Class 'ContractReference_ctor

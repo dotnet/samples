@@ -19,7 +19,7 @@ Namespace MCursor
         <System.STAThread()> _
         Public Shared Sub Main()
             System.Windows.Forms.Application.Run(New Form1)
-        End Sub 'Main
+        End Sub
 
         Public Sub New()
 
@@ -74,7 +74,7 @@ Namespace MCursor
             For Each cursor In CursorList()
                 cursorSelectionComboBox.Items.Add(cursor)
             Next cursor
-        End Sub 'New 
+        End Sub
 
         Private Function CursorList() As Cursor()
             ' Make an array of all the types of cursors in Windows Forms.

@@ -29,7 +29,7 @@ Namespace CustomInkControlSample
             inkCanvas1.Background = Brushes.Green
 
 
-        End Sub 'New
+        End Sub
 
     End Class 'Window3 
 

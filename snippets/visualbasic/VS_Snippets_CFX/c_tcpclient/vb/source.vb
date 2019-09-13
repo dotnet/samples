@@ -28,7 +28,7 @@ Friend Class Service
             Console.ReadLine()
         End Try
     
-    End Sub 'Main
+    End Sub
      
     
     Private Sub NetTcpSecurityWindows() 
@@ -120,25 +120,25 @@ Public Class CalculatorClient
     Public Sub New(ByVal endpointConfigurationName As String) 
         MyBase.New(endpointConfigurationName)
     
-    End Sub 'New
+    End Sub
     
     
     Public Sub New(ByVal endpointConfigurationName As String, ByVal remoteAddress As String) 
         MyBase.New(endpointConfigurationName, remoteAddress)
     
-    End Sub 'New
+    End Sub
     
     
     Public Sub New(ByVal endpointConfigurationName As String, ByVal remoteAddress As System.ServiceModel.EndpointAddress) 
         MyBase.New(endpointConfigurationName, remoteAddress)
     
-    End Sub 'New
+    End Sub
     
     
     Public Sub New(ByVal binding As System.ServiceModel.Channels.Binding, ByVal remoteAddress As System.ServiceModel.EndpointAddress) 
         MyBase.New(binding, remoteAddress)
     
-    End Sub 'New
+    End Sub
     
     
     Public Function Add(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Add

@@ -25,7 +25,7 @@ Class WebRequest_Preauthenticate
         Console.WriteLine(ControlChars.Cr + "Press any key to continue...")
         Console.ReadLine()
         Return
-    End Sub ' Main
+    End Sub
     
     Public Shared Sub GetPage(url As String)
     Try
@@ -77,7 +77,7 @@ Class WebRequest_Preauthenticate
             Console.WriteLine(ControlChars.Cr + "Exception is raised. ")
             Console.WriteLine(ControlChars.Cr + "Message:{0} ", e.Message)
         End Try
-    End Sub ' GetPage
+    End Sub
 End Class ' WebRequest_Preauthenticate 
 
 

@@ -17,6 +17,6 @@ Namespace StrokeCollectionShadow
             Dim mainWindow As New Window1()
             mainWindow.Show()
 
-        End Sub 'AppStartingUp
+        End Sub
     End Class 'MyApp 
 End Namespace

@@ -13,7 +13,7 @@ Class Sample
       Console.WriteLine("s3 = '{0}'", s3)
       Console.WriteLine("Is s2 the same reference as s1?: {0}", s2 Is s1)
       Console.WriteLine("Is s3 the same reference as s1?: {0}", s3 Is s1)
-   End Sub 'Main
+   End Sub
 End Class 'Sample
 '
 's1 = 'MyTest'

@@ -17,7 +17,7 @@ Namespace SDKSample
 			' Create the application window (as defined in Window1.xaml).
 			_window1 = New Window1()
 			_window1.Show()
-		End Sub ' end:AppStartup()
+		End Sub
 
 
 		Private _window1 As Window1 = Nothing ' application main window

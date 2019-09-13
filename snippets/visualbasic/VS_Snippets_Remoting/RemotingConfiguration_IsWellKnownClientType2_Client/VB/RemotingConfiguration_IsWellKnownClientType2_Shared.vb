@@ -4,7 +4,7 @@ Public Class MyServerImpl
    
    Public Sub New()
       Console.WriteLine("Server Activated")
-   End Sub 'New
+   End Sub
 
    Public Function MyMethod(name As String) As String
       Console.WriteLine(name)

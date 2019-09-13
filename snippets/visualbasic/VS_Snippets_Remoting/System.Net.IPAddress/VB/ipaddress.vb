@@ -69,7 +69,7 @@ Namespace Mssc.Services.ConnectionManagement
         Catch e As Exception
           Console.WriteLine(("[DoResolve] Exception: " + e.ToString()))
         End Try
-      End Sub 'IPAddresses
+      End Sub
 
 
       ' This IPAddressAdditionalInfo displays additional server address information.
@@ -97,7 +97,7 @@ Namespace Mssc.Services.ConnectionManagement
         Catch e As Exception
           Console.WriteLine(("[IPAddresses] Exception: " + e.ToString()))
         End Try
-      End Sub 'IPAddressAdditionalInfo
+      End Sub
 
       Public Shared Sub Main(ByVal args() As String)
         Dim server As String = Nothing
@@ -125,7 +125,7 @@ Namespace Mssc.Services.ConnectionManagement
 
         ' Get additonal address information.
         IPAddressAdditionalInfo()
-      End Sub 'Main
+      End Sub
     End Class 'TestIPAddress
   End Module
 End Namespace

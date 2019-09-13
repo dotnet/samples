@@ -6,7 +6,7 @@ Public Class MyType
     Public Sub New()
         Console.WriteLine()
         Console.WriteLine("MyType instantiated!")
-    End Sub 'New
+    End Sub
 
 End Class 'MyType
 
@@ -28,7 +28,7 @@ Class Test
         ' This call will succeed in creating an instance of MyType since the
         ' assembly name is valid.
         InstantiateMyTypeSucceed(currentDomain)
-    End Sub 'Main
+    End Sub
 
     Private Shared Sub InstantiateMyTypeFail(domain As AppDomain)
         ' Calling InstantiateMyType will always fail since the assembly info
@@ -40,7 +40,7 @@ Class Test
             Console.WriteLine()
             Console.WriteLine(e.Message)
         End Try
-    End Sub 'InstantiateMyType
+    End Sub
 
     Private Shared Sub InstantiateMyTypeSucceed(domain As AppDomain)
         Try

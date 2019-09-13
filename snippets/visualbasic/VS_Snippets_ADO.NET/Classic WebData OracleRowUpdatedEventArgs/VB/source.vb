@@ -13,12 +13,12 @@ Public Class Form1
     'Handler for RowUpdating event.
     Private Shared Sub OnRowUpdating(sender As Object, e As OracleRowUpdatingEventArgs)
         PrintEventArgs(e)
-    End Sub 'OnRowUpdating
+    End Sub
 
     'Handler for RowUpdated event.
     Private Shared Sub OnRowUpdated(sender As Object, e As OracleRowUpdatedEventArgs)
         PrintEventArgs(e)
-    End Sub 'OnRowUpdated
+    End Sub
     
     'Entry point which delegates to C-style main Private Function.
     Public Overloads Shared Sub Main()
@@ -59,7 +59,7 @@ Public Class Form1
         Console.WriteLine("OnRowUpdating")
         Console.WriteLine("  event args: (" & " command=" & args.Command.CommandText & _
                         " commandType=" & args.StatementType & " status=" & args.Status & ")")
-    End Sub 'PrintEventArgs
+    End Sub
     
     
     Overloads Private Shared Sub PrintEventArgs(args As OracleRowUpdatedEventArgs)
@@ -67,6 +67,6 @@ Public Class Form1
         Console.WriteLine("  event args: (" & " command=" & args.Command.CommandText & _
                         " commandType=" & args.StatementType & " recordsAffected=" & _
                         args.RecordsAffected & " status=" & args.Status & ")")
-    End Sub 'PrintEventArgs
+    End Sub
 End Class 'Form1
 ' </Snippet1>

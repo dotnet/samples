@@ -78,7 +78,7 @@ Public NotInheritable Class Form1
         Else
             MessageBox.Show("The specified data is not stored in the data object.")
         End If
-    End Sub 'GetDataPresent2
+    End Sub
     ' </snippet1>
 
 

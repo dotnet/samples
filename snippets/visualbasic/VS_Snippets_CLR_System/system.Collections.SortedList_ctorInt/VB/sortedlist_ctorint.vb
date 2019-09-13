@@ -67,7 +67,7 @@ Public Class SamplesSortedList
             Console.WriteLine(e)
         End Try
         PrintKeysAndValues(mySL4)
-    End Sub 'Main
+    End Sub
 
     Public Shared Sub PrintKeysAndValues(ByVal myList As SortedList)
         Console.WriteLine("        -KEY-   -VALUE-")
@@ -77,7 +77,7 @@ Public Class SamplesSortedList
                myList.GetKey(i), myList.GetByIndex(i))
         Next i
         Console.WriteLine()
-    End Sub 'PrintKeysAndValues
+    End Sub
 
 End Class 'SamplesSortedList
 

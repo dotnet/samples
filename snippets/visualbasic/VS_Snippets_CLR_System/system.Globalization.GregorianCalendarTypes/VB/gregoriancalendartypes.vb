@@ -23,7 +23,7 @@ Public Class SamplesCultureInfo
          End If
       Next cal
 
-   End Sub 'Main 
+   End Sub
 
 End Class 'SamplesCultureInfo
 

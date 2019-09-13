@@ -27,7 +27,7 @@ Public Class Example
       Dim myInterface As IMyInterface = _
             CType(Activator.CreateInstance(myNestedClassType), IMyInterface)
       Console.WriteLine(myInterface.HelloMethod("Bill"))
-   End Sub 'Main
+   End Sub
 
    ' Create the callee transient dynamic assembly.
    Private Shared Function CreateCallee(myAppDomain As AppDomain) As Type

@@ -27,7 +27,7 @@ Class Alice
             bob.Dispose()
         End Try
 
-    End Sub 'Main
+    End Sub
 
 
     '<Snippet2>
@@ -60,7 +60,7 @@ Class Alice
             aes.Dispose()
         End Try
 
-    End Sub 'Send 
+    End Sub
     '</Snippet2>
 End Class 'Alice
 
@@ -72,7 +72,7 @@ Public Class Bob
     Public Sub New()
         key = rsaKey.ExportCspBlob(False)
 
-    End Sub 'New
+    End Sub
 
     '<Snippet3>
     Public Sub Receive(ByVal iv() As Byte, ByVal encryptedSessionKey() As Byte, ByVal encryptedMessage() As Byte)
@@ -105,10 +105,10 @@ Public Class Bob
             aes.Dispose()
         End Try
 
-    End Sub 'Receive
+    End Sub
     '</Snippet3>
     Public Overloads Sub Dispose() Implements IDisposable.Dispose
         rsaKey.Dispose()
-    End Sub 'Dispose
+    End Sub
 End Class 'Bob
 '</Snippet1>

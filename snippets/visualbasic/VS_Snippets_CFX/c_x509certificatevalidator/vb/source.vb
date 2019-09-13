@@ -40,7 +40,7 @@ Class Program
 
         serviceHost.Close()
 
-    End Sub 'Main
+    End Sub
 End Class 'Program
 
 '<snippet1>
@@ -57,7 +57,7 @@ Public Class MyX509CertificateValidator
 
         Me.allowedIssuerName = allowedIssuerName
 
-    End Sub 'New
+    End Sub
 
     ' </snippet3>
     ' <snippet2>
@@ -72,7 +72,7 @@ Public Class MyX509CertificateValidator
             Throw New SecurityTokenValidationException("Certificate was not issued by a trusted issuer")
         End If
 
-    End Sub 'Validate
+    End Sub
 End Class 'MyX509CertificateValidator
 ' </snippet2>
 '</snippet1>

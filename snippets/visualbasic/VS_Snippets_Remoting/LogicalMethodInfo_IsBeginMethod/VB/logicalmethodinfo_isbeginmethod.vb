@@ -36,7 +36,7 @@ Public Class IsBeginMethodClass
 
 ' </Snippet1>
 ' </Snippet2>
-   End Sub 'Main
+   End Sub
 
 End Class 'LogicalMethodInfo_BeginInvoke 
 
@@ -51,7 +51,7 @@ Namespace MyMath
 
       Public Sub New()
          Me.Url = "http://localhost/Math.asmx"
-      End Sub 'New
+      End Sub
 
 
       <System.Web.Services.Protocols.SoapDocumentMethodAttribute( _

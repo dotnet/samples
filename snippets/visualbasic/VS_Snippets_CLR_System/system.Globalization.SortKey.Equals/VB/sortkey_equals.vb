@@ -55,7 +55,7 @@ Public Class SamplesSortKey
       '    with the same string and the same CompareOptions.
       Console.WriteLine("different     different    same             same             {0}", mySK1.Equals(mySK6))
 
-   End Sub 'Main 
+   End Sub
 
 End Class 'SamplesSortKey
 

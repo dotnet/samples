@@ -14,6 +14,6 @@ Class SecurityPrincipalDemo
         principalPerm.Demand()
         Console.WriteLine("Demand succeeded.")
 
-    End Sub 'Main
+    End Sub
 End Class 'SecurityPrincipalDemo
 '</Snippet1>

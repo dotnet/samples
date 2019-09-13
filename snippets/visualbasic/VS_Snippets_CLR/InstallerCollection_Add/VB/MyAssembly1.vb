@@ -13,25 +13,25 @@ Public Class MyInstaller
    Public Overrides Sub Install(savedState As IDictionary)
       MyBase.Install(savedState)
       Console.WriteLine("Install ..." + ControlChars.Newline)
-   End Sub 'Install
+   End Sub
    
    
    Public Overrides Sub Commit(savedState As IDictionary)
       MyBase.Commit(savedState)
       Console.WriteLine("Committing ..." + ControlChars.Newline)
-   End Sub 'Commit
+   End Sub
    
    
    Public Overrides Sub Rollback(savedState As IDictionary)
       MyBase.Rollback(savedState)
       Console.WriteLine("RollBack ..." + ControlChars.Newline)
-   End Sub 'Rollback
+   End Sub
    
    
    Public Overrides Sub Uninstall(savedState As IDictionary)
       MyBase.Uninstall(savedState)
       Console.WriteLine("UnInstall ..." + ControlChars.Newline)
-   End Sub 'Uninstall
+   End Sub
 End Class 'MyInstaller
 
 ' An Assembly that has its own installer.
@@ -39,7 +39,7 @@ Public Class MyAssembly1
    
    Public Shared Sub Main()
       Console.WriteLine("This assembly is just an example for the Installer" + ControlChars.Newline)
-   End Sub 'Main
+   End Sub
 End Class 'MyAssembly1
 
 

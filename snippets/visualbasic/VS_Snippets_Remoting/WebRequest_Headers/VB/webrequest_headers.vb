@@ -40,7 +40,7 @@ Class WebRequest_Headers
 
         End Try
 
-    End Sub ' Main 
+    End Sub
 
 End Class ' WebRequest_Headers
 

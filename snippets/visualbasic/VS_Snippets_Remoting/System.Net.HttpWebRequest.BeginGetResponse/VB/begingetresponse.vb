@@ -20,7 +20,7 @@ Public Class RequestState
       requestData = New StringBuilder("")
       request = Nothing
       streamResponse = Nothing
-   End Sub 'New
+   End Sub
 End Class 'RequestState
 
 
@@ -40,7 +40,7 @@ Class HttpWebRequest_BeginGetResponse
             request.Abort()
          End If
       End If
-   End Sub 'TimeoutCallback
+   End Sub
    
    
    Shared Sub Main()
@@ -81,7 +81,7 @@ Class HttpWebRequest_BeginGetResponse
          Console.WriteLine("Press any key to continue..........")
          Console.Read()
       End Try
-   End Sub 'Main
+   End Sub
    
    Private Shared Sub RespCallback(asynchronousResult As IAsyncResult)
       Try
@@ -103,7 +103,7 @@ Class HttpWebRequest_BeginGetResponse
          Console.WriteLine(ControlChars.Lf + "Status:{0}", e.Status)
       End Try
       allDone.Set()
-   End Sub 'RespCallback
+   End Sub
    
    Private Shared Sub ReadCallBack(asyncResult As IAsyncResult)
       Try
@@ -135,7 +135,7 @@ Class HttpWebRequest_BeginGetResponse
          Console.WriteLine(ControlChars.Lf + "Status:{0}", e.Status)
       End Try
       allDone.Set()
-   End Sub 'ReadCallBack 
+   End Sub
 End Class 'HttpWebRequest_BeginGetResponse
 
 ' </Snippet1>

@@ -28,7 +28,7 @@ Class FormAnalyzer
 
         InitializeComponent()
     
-    End Sub 'New
+    End Sub
     
     Protected Overrides Sub OnContentRendered(ByVal e As EventArgs) 
         MyBase.OnContentRendered(e)
@@ -56,7 +56,7 @@ Class FormAnalyzer
         hintNodeYear.Factoid = "(!IS_DATE_YEAR)"
         hintNodeGenre.Factoid = "(!IS_DEFAULT)"
     
-    End Sub 'OnContentRendered
+    End Sub
 
     ' <summary>
     ' InkCanvas.StrokeCollected event handler.  Begins 
@@ -86,7 +86,7 @@ Class FormAnalyzer
         analyzer.AddStroke(args.Stroke)
         analyzer.BackgroundAnalyze()
     
-    End Sub 'RestartAnalysis
+    End Sub
     
     ' <summary>
     ' Analyzer.ResultsUpdated event handler.
@@ -131,7 +131,7 @@ Class FormAnalyzer
             xaml_blockGenre.Text = recoText
         End If
 
-    End Sub 'analyzer_ResultsUpdated
+    End Sub
      
     'Clear the canvas, but leave the current strokes in the analyzer.
     Private Sub ClearCanvas(ByVal sender As Object, ByVal args As EventArgs) 
@@ -140,6 +140,6 @@ Class FormAnalyzer
         
         xaml_writingCanvas.Strokes.Clear()
     
-    End Sub 'ClearCanvas
+    End Sub
 End Class 'FormAnalyzer
 '</Snippet2>

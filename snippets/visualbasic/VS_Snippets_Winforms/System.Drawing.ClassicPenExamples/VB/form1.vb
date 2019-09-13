@@ -229,5 +229,5 @@ Public Class Form1
     Shared Sub Main()
         Application.Run(New Form1)
 
-    End Sub 'Main
+    End Sub
 End Class

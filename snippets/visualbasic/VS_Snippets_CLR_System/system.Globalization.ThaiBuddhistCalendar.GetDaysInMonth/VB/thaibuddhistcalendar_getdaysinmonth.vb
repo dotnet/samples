@@ -35,7 +35,7 @@ Public Class SamplesThaiBuddhistCalendar
          Console.WriteLine()
       Next i
 
-   End Sub 'Main 
+   End Sub
 
 End Class 'SamplesThaiBuddhistCalendar
 

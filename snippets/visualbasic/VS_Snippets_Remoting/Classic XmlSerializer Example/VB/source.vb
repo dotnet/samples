@@ -56,7 +56,7 @@ Public Class OrderedItem
     ' and stores the value in a field. 
     Public Sub Calculate()
         LineTotal = UnitPrice * Quantity
-    End Sub 'Calculate
+    End Sub
 End Class 'OrderedItem
 
 
@@ -67,7 +67,7 @@ Public Class Test
       Dim t As New Test()
       t.CreatePO("po.xml")
       t.ReadPO("po.xml")
-   End Sub 'Main
+   End Sub
     
    Private Sub CreatePO(filename As String)
       ' Create an instance of the XmlSerializer class;
@@ -111,7 +111,7 @@ Public Class Test
       ' Serialize the purchase order, and close the TextWriter.
       serializer.Serialize(writer, po)
       writer.Close()
-   End Sub 'CreatePO
+   End Sub
     
    Protected Sub ReadPO(filename As String)
       ' Create an instance of the XmlSerializer class;
@@ -152,7 +152,7 @@ Public Class Test
       " Shipping" & ControlChars.Tab & po.ShipCost )
       Console.WriteLine( New String(ControlChars.Tab, 5) & _
       " Total" &  New String(ControlChars.Tab, 2) & po.TotalCost)
-    End Sub 'ReadPO
+    End Sub
     
     Protected Sub ReadAddress(a As Address, label As String)
       ' Read the fields of the Address object.
@@ -163,17 +163,17 @@ Public Class Test
       Console.WriteLine(ControlChars.Tab & a.State)
       Console.WriteLine(ControlChars.Tab & a.Zip)
       Console.WriteLine()
-    End Sub 'ReadAddress
+    End Sub
         
     Private Sub serializer_UnknownNode(sender As Object, e As XmlNodeEventArgs)
         Console.WriteLine(("Unknown Node:" & e.Name & ControlChars.Tab & e.Text))
-    End Sub 'serializer_UnknownNode
+    End Sub
     
     
     Private Sub serializer_UnknownAttribute(sender As Object, e As XmlAttributeEventArgs)
         Dim attr As System.Xml.XmlAttribute = e.Attr
         Console.WriteLine(("Unknown attribute " & attr.Name & "='" & attr.Value & "'"))
-    End Sub 'serializer_UnknownAttribute
+    End Sub
 End Class 'Test
 ' </Snippet1>
 

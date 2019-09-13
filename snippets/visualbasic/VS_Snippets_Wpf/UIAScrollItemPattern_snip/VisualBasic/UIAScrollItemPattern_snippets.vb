@@ -13,7 +13,7 @@ Class UIAScrollItemPattern_snippets
     ''' </summary>
     Public Sub New() 
     
-    End Sub 'New
+    End Sub
     
     
     ' <Snippet100>
@@ -74,7 +74,7 @@ Class UIAScrollItemPattern_snippets
             ' TO DO: error handling.
         End Try
 
-    End Sub 'OnSelectionItemSelect 
+    End Sub
     ' </Snippet101>
 
     '''--------------------------------------------------------------------
@@ -91,6 +91,6 @@ Class UIAScrollItemPattern_snippets
             ' and call its Run() method to start it.
             Dim app As New UIAScrollItemPattern_snippets()
         
-        End Sub 'Main
+        End Sub
     End Class 'TestMain
 End Class 'UIAScrollItemPattern_snippets

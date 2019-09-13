@@ -62,7 +62,7 @@ Public Class PrintingExample
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
-    End Sub 'Printing    
+    End Sub
     
     ' This is the main entry point for the application.
     Public Shared Sub Main()

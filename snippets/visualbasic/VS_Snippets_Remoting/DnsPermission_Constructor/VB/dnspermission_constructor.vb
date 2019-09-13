@@ -26,7 +26,7 @@ Class DnsPermissionExample
             Console.WriteLine(("Source : " + e.Source))
             Console.WriteLine(("Message : " + e.Message))
         End Try
-    End Sub 'Main
+    End Sub
     
 ' <Snippet1>    
     Public Sub useDns()
@@ -41,7 +41,7 @@ Class DnsPermissionExample
         Console.WriteLine((ControlChars.Cr + ControlChars.Tab + "Tag :" + securityElementObj.Tag))
         ' Print the attributes and values.
         PrintKeysAndValues(securityElementObj.Attributes)
-    End Sub 'useDns
+    End Sub
     
     Private Sub PrintKeysAndValues(myList As Hashtable)
         ' Get the enumerator that can iterate through the hash table.
@@ -51,6 +51,6 @@ Class DnsPermissionExample
             Console.WriteLine(ControlChars.Tab + "{0}:" + ControlChars.Tab + "{1}", myEnumerator.Key, myEnumerator.Value)
         End While
         Console.WriteLine()
-    End Sub 'PrintKeysAndValues
+    End Sub
 ' </Snippet1>    
 End Class 'DnsPermissionExample

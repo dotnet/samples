@@ -13,14 +13,14 @@ Public Class Form1
     Public Sub New()
         InitializeComponent()
 
-    End Sub 'New
+    End Sub
 
 
     Public Shared Sub Main()
         Application.EnableVisualStyles()
         Application.Run(New Form1())
 
-    End Sub 'Main
+    End Sub
 
     '<snippet1>
     Private Sub MeasureText1(ByVal e As PaintEventArgs)
@@ -137,7 +137,7 @@ Public Class Form1
         Me.Name = "Form1"
         Me.ResumeLayout(False)
 
-    End Sub 'InitializeComponent
+    End Sub
 
 
     Private Sub Form1_Paint(ByVal sender As Object, _

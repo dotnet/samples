@@ -63,7 +63,7 @@ Class Sample
       Catch e As Exception
          Console.WriteLine(e)
       End Try
-   End Sub 'Main
+   End Sub
    
    Public Shared Sub Show(caption As String, var1 As [Object], var2 As [Object], _
                           resultGeneric As Integer, resultNonGeneric As Integer)
@@ -87,7 +87,7 @@ Class Sample
          Console.WriteLine("Generic CompareTo = {0}; non-generic CompareTo = {1}", _
                             resultGeneric, resultNonGeneric)
       End If
-   End Sub 'Show
+   End Sub
 End Class 'Sample
 '
 'This example produces the following results:

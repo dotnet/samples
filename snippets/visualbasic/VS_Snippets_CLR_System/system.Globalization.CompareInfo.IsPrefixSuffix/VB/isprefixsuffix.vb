@@ -23,7 +23,7 @@ Public Class SamplesCompareInfo
       Console.WriteLine("IsSuffix( {0}, {1} ) : {2}", myStr1, myXfix, myComp.IsSuffix(myStr1, myXfix))
       Console.WriteLine("IsSuffix( {0}, {1} ) : {2}", myStr2, myXfix, myComp.IsSuffix(myStr2, myXfix))
 
-   End Sub 'Main 
+   End Sub
 
 End Class 'SamplesCompareInfo
 

@@ -73,6 +73,6 @@ Public Class Form1
 
         ' Remove the item "Open" from the File menu.
         fileMenu.MenuItems.Remove(openFile)
-    End Sub 'InitializeMyMenu
+    End Sub
     ' </snippet1>
 End Class

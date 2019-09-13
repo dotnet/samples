@@ -40,7 +40,7 @@ Imports System.Messaging
 
             Return
 
-        End Sub 'Main
+        End Sub
 
 
         
@@ -64,7 +64,7 @@ Imports System.Messaging
 
             Return
 
-        End Sub 'NotifyArrived
+        End Sub
 
 
         
@@ -86,7 +86,7 @@ Imports System.Messaging
 
             Return
 
-        End Sub 'SendMessage
+        End Sub
 
 
         
@@ -128,7 +128,7 @@ Imports System.Messaging
 
             Return
 
-        End Sub 'PeekFirstMessage 
+        End Sub
 
 End Class 'MyNewQueue
 

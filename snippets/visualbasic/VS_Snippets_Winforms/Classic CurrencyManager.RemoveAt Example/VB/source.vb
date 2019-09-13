@@ -16,6 +16,6 @@ Public Class Form1
             myCurrencyManager.RemoveAt(0)
         End If
         
-    End Sub 'RemoveFromList
+    End Sub
     ' </Snippet1>
 End Class 'Form1 

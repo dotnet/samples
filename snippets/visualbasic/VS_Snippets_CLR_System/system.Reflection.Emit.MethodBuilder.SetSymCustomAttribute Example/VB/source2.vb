@@ -25,5 +25,5 @@ Class VariousMethodBuilderSnippets
       myMethod.SetSymCustomAttribute("SymFullName", symFullName)
 
       ' </Snippet1>
-   End Sub 'ContainerMethod 
+   End Sub
 End Class 'VariousMethodBuilderSnippets 

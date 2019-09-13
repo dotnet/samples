@@ -29,5 +29,5 @@ Class MyUInt32_Equals
       Catch e As Exception
          Console.WriteLine("Exception :{0}", e.Message.ToString())
       End Try
-   End Sub 'Main
+   End Sub
 End Class 'MyUInt32_Equals

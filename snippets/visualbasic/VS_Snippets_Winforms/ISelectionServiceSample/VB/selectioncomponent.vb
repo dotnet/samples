@@ -37,7 +37,7 @@ Namespace ISelectionServiceExample
             Me.tbox1.TabIndex = 0
             Me.Controls.Add(Me.tbox1)
             Me.ResumeLayout()
-        End Sub 'New
+        End Sub
 
         Public Overrides Property Site() As ISite
             Get
@@ -84,11 +84,11 @@ Namespace ISelectionServiceExample
 
         Private Sub OnSelectionChanged(ByVal sender As Object, ByVal args As EventArgs)            
             tbox1.AppendText("The selected component was changed.  Selected components:" + Microsoft.VisualBasic.ControlChars.CrLf + "    " + GetSelectedComponents() + Microsoft.VisualBasic.ControlChars.CrLf)
-        End Sub 'OnSelectionChanged
+        End Sub
 
         Private Sub OnSelectionChanging(ByVal sender As Object, ByVal args As EventArgs)                        
             tbox1.AppendText("The selected component is changing.  Selected components:" + Microsoft.VisualBasic.ControlChars.CrLf + "    " + GetSelectedComponents() + Microsoft.VisualBasic.ControlChars.CrLf)
-        End Sub 'OnSelectionChanging
+        End Sub
 
         Private Function GetSelectedComponents() As String
             Dim selectedString As String = String.Empty
@@ -117,7 +117,7 @@ Namespace ISelectionServiceExample
                 RemoveHandler selectionService.SelectionChanged, AddressOf OnSelectionChanged
             End If
             MyBase.Dispose(disposing)
-        End Sub 'Dispose
+        End Sub
     End Class 'SelectionComponent
 
 End Namespace 'ISelectionServiceExample

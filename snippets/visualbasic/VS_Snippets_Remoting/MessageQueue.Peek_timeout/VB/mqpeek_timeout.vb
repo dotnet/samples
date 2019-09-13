@@ -25,7 +25,7 @@ Imports System.Messaging
 
             Return
 
-        End Sub 'Main
+        End Sub
 
 
         '

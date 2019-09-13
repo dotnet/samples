@@ -19,7 +19,7 @@ Public Class MyMethodTracingSwitch
     
     Public Sub New(displayName As String, description As String)
         MyBase.New(displayName, description)
-    End Sub 'New
+    End Sub
 
 
     Public Property Level() As MethodTracingSwitchLevel
@@ -55,7 +55,7 @@ Public Class MyMethodTracingSwitch
 
             outExit = True
         End If
-    End Sub 'SetSwitchSetting
+    End Sub
 
 
     Public ReadOnly Property OutputExit() As Boolean

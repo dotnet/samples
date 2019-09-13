@@ -179,6 +179,6 @@ Public Class Evidence_Example
             Console.WriteLine(e.ToString())
             Environment.ExitCode = 101
         End Try
-    End Sub 'Main
+    End Sub
 End Class 'Evidence_Example
 '</Snippet1>

@@ -18,6 +18,6 @@ Public Class CheckingSpace
         Dim eStream As New IsolatedStorageFileStream("AFifth.txt", FileMode.Create, isoStore)
 
         Console.WriteLine(isoStore.AvailableFreeSpace + " bytes of space remain in this isolated store.")
-    End Sub ' End of Main.
+    End Sub
 End Class
 '</snippet8>

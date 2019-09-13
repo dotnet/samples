@@ -16,6 +16,6 @@ Public Class Order
         ' Add order to the database.
         ' Insert code here.
  
-    End Sub 'ShipItems 
+    End Sub
 End Class 'Order 
 ' </Snippet2>

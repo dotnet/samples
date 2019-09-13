@@ -27,7 +27,7 @@ Public Class App
         Dim cb2 As FPtr2 = AddressOf App.DoSomething2
         LibWrap.TestCallBack(cb, 99)
         LibWrap.TestCallBack2(cb2, "abc")
-    End Sub 'Main
+    End Sub
 
     Public Shared Function DoSomething(ByVal value As Integer) As Boolean
         Console.WriteLine(ControlChars.CrLf + $"Callback called with param: {value}")

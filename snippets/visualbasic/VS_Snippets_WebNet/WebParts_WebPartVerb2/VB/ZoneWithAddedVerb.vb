@@ -31,7 +31,7 @@ Namespace Samples.AspNet.VB.Controls
       e.Verbs = New WebPartVerbCollection(e.Verbs, newVerbs)
       MyBase.OnCreateVerbs(e)
 
-    End Sub 'OnCreateVerbs
+    End Sub
 
 
     Sub CopyWebPartToNewOne(ByVal sender As Object, _
@@ -61,7 +61,7 @@ Namespace Samples.AspNet.VB.Controls
     Friend Sub New(ByVal serverClickHandler As WebPartEventHandler)
       MyBase.New("MyVerb", serverClickHandler)
 
-    End Sub 'New
+    End Sub
 
     Public Overrides Property [Text]() As String
       Get

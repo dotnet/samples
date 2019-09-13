@@ -19,10 +19,10 @@ Namespace ITypeDescriptorFilterSample
 
         Public Sub New(ByVal container As System.ComponentModel.IContainer)
             container.Add(Me)
-        End Sub 'New
+        End Sub
 
         Public Sub New()
-        End Sub 'New
+        End Sub
     End Class 'ButtonDesignerFilterComponent
 
     ' Provides a designer that can add a ColorCycleButtonDesigner to each 

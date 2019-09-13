@@ -61,7 +61,7 @@ Public Class Form1
         ' Add the DataGridTableStyle objects to the collection.
         myDataGrid.TableStyles.Add(ts1)
         myDataGrid.TableStyles.Add(ts2)
-    End Sub 'AddCustomDataTableStyle
+    End Sub
     ' </Snippet1>
 End Class 'Form1 
 
