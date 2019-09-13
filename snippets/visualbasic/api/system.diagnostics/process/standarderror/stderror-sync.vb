@@ -12,7 +12,7 @@ Public Module Example
       Dim output As String = p.StandardError.ReadToEnd()  
       p.WaitForExit()
 
-      Console.WriteLine($"\nError stream: {output}");
+      Console.WriteLine($"\nError stream: {output}")
    End Sub
 End Module
 ' The end of the output produced by the example includes the following:

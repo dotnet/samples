@@ -31,7 +31,7 @@ End Class
 
 Module Example
    Public Sub Main()
-      Dim jupiter As New Planet("Jupiter", 3.65e08);
+      Dim jupiter As New Planet("Jupiter", 3.65e08)
       GetPropertyValues(jupiter)
    End Sub
    
