@@ -4,6 +4,7 @@ using System.IO;
 using System.Collections.Generic;
 using Microsoft.ML;
 using Microsoft.ML.Data;
+using Microsoft.ML.Transforms;
 // </SnippetAddUsings>
 
 namespace TextClassificationTF
@@ -22,11 +23,7 @@ namespace TextClassificationTF
             MLContext mlContext = new MLContext();
             // </SnippetCreateMLContext>
 
-            // <SnippetCreateEmptyDataView>
-            IDataView dataView = mlContext.Data.LoadFromEnumerable(new List<IMDBSentiment>());
-            // </SnippetCreateEmptyDataView>
-
-            // Dictionary to convert words into integer indexes.
+            // Dictionary to encode words as integers.
             // <SnippetCreateLookupMap>
             var lookupMap = mlContext.Data.LoadFromTextFile(Path.Combine(_modelPath, "imdb_word_index.csv"),
                 columns: new[]
@@ -37,20 +34,6 @@ namespace TextClassificationTF
                 separatorChar: ','
                );
             // </SnippetCreateLookupMap>
-
-            // Load the TensorFlow model.
-            // <SnippetLoadTensorFlowModel>
-            var tensorFlowModel = mlContext.Model.LoadTensorFlowModel(_modelPath);
-            // </SnippetLoadTensorFlowModel>
-
-            // <SnippetGetModelSchema>
-            var schema = tensorFlowModel.GetModelSchema();
-            Console.WriteLine(" =============== TensorFlow Model Schema =============== ");
-            var featuresType = (VectorDataViewType)schema["Features"].Type;
-            Console.WriteLine($"Name: Features, Type: {featuresType.ItemType.RawType}, Shape: (-1, {featuresType.Dimensions[0]})");
-            var predictionType = (VectorDataViewType)schema["Prediction/Softmax"].Type;
-            Console.WriteLine($"Name: Prediction/Softmax, Type: {featuresType.ItemType.RawType}, Shape: (-1, {featuresType.Dimensions[0]})");
-            // </SnippetGetModelSchema>
 
             // The model expects the input feature vector to be a fixed length vector.
             // This action resizes the integer vector to a fixed length vector. If there
@@ -67,8 +50,23 @@ namespace TextClassificationTF
             };
             // </SnippetResizeFeatures>
 
+            // Load the TensorFlow model.
+            // <SnippetLoadTensorFlowModel>
+            TensorFlowModel tensorFlowModel = mlContext.Model.LoadTensorFlowModel(_modelPath);
+            // </SnippetLoadTensorFlowModel>
+
+            // <SnippetGetModelSchema>
+            DataViewSchema schema = tensorFlowModel.GetModelSchema();
+            Console.WriteLine(" =============== TensorFlow Model Schema =============== ");
+            var featuresType = (VectorDataViewType)schema["Features"].Type;
+            Console.WriteLine($"Name: Features, Type: {featuresType.ItemType.RawType}, Size: ({featuresType.Dimensions[0]})");
+            var predictionType = (VectorDataViewType)schema["Prediction/Softmax"].Type;
+            Console.WriteLine($"Name: Prediction/Softmax, Type: {predictionType.ItemType.RawType}, Size: ({predictionType.Dimensions[0]})");
+
+            // </SnippetGetModelSchema>
+
             // <SnippetTokenizeIntoWords>
-            var pipeline =
+            IEstimator<ITransformer> pipeline =
                 // Split the text into individual words
                 mlContext.Transforms.Text.TokenizeIntoWords("TokenizedWords", "SentimentText")
                 // </SnippetTokenizeIntoWords>
@@ -96,6 +94,7 @@ namespace TextClassificationTF
 
             // <SnippetCreateModel>
             // Create an executable model from the estimator pipeline
+            IDataView dataView = mlContext.Data.LoadFromEnumerable(new List<IMDBSentiment>());
             ITransformer model = pipeline.Fit(dataView);
             // </SnippetCreateModel>
 
@@ -124,12 +123,15 @@ namespace TextClassificationTF
             // <SnippetDisplayPredictions>
             Console.WriteLine("Number of classes: {0}", prediction.Prediction.Length);
             Console.WriteLine("Is sentiment/review positive? {0}", prediction.Prediction[1] > 0.5 ? "Yes." : "No.");
-            Console.WriteLine("Prediction Confidence: {0}", prediction.Prediction[1].ToString("0.00"));
+            Console.WriteLine("Prediction[0]: {0}", prediction.Prediction[0]);
+            Console.WriteLine("Prediction[1]: {0}", prediction.Prediction[1]);
+            Console.WriteLine("Sum: {0}", prediction.Prediction[0] + prediction.Prediction[1]);
             // </SnippetDisplayPredictions>
+
             /////////////////////////////////// Expected output ///////////////////////////////////
             // 
-            // Name: Features, Type: System.Int32, Shape: (-1, 600)
-            // Name: Prediction/Softmax, Type: System.Single, Shape: (-1, 2)
+            // Name: Features, Type: System.Int32, Size: 600
+            // Name: Prediction/Softmax, Type: System.Single, Size: 2
             // 
             // Number of classes: 2
             // Is sentiment/review positive ? Yes
