@@ -43,7 +43,7 @@ Class TestBase64
     ' passed by the user is encoded and included in the document.
     Public Shared Sub EncodeXmlFile(xmlFileName As String, fileOld As FileStream)
 
-        Dim buffer(bufferSize) As Byte
+        Dim buffer(bufferSize - 1) As Byte
         Dim readByte As Integer = 0
 
         Dim xw As New XmlTextWriter(xmlFileName, Encoding.UTF8)
@@ -79,7 +79,7 @@ Class TestBase64
     ' and generate the original object.
     Public Shared Sub DecodeOrignalObject(xmlFileName As String, fileNew As FileStream)
 
-        Dim buffer(bufferSize) As Byte
+        Dim buffer(bufferSize - 1) As Byte
         Dim readByte as integer = 0
 
         ' Create a file to write the bmp back.
@@ -106,8 +106,8 @@ Class TestBase64
         Dim count As Integer
         Dim readByte as integer = 0
 
-        Dim bufferOld(bufferSize) As Byte
-        Dim bufferNew(bufferSize) As Byte
+        Dim bufferOld(bufferSize - 1) As Byte
+        Dim bufferNew(bufferSize - 1) As Byte
 
         Dim binaryReaderOld As New BinaryReader(fileOld)
         Dim binaryReaderNew As New BinaryReader(fileNew)
@@ -119,7 +119,7 @@ Class TestBase64
             readByteOld = binaryReaderOld.Read(bufferOld, 0, bufferSize)
             readByteNew = binaryReaderNew.Read(bufferNew, 0, bufferSize)
 
-            If Not (readByteOld = readByteNew)
+            If readByteOld <> readByteNew
                 Return False
             End If
 
