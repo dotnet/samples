@@ -1,6 +1,5 @@
 ﻿Option Explicit
 Option Strict
-Imports Microsoft.VisualBasic
 
 Public Class Form1
     Inherits System.Windows.Forms.Form

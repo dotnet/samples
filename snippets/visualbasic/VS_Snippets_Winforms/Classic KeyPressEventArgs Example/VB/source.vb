@@ -1,7 +1,6 @@
 ﻿Imports System.Data
 Imports System.ComponentModel
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
 
 ' <Snippet1>
 Public Class myKeyPressClass

@@ -2,8 +2,6 @@
 
 ' <Snippet1>
 Imports System.Windows.Forms
-Imports Microsoft.Visualbasic
-
 
 Public Class DataFormat_GetFormat
    

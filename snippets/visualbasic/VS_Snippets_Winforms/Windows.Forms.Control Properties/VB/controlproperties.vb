@@ -2,8 +2,6 @@
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
-
 
 Namespace ControlProperties
    

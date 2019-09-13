@@ -6,14 +6,14 @@ using System.Runtime.InteropServices;
 public delegate bool FPtr(int value);
 public delegate bool FPtr2(string value);
 
-public class LibWrap
+internal static class NativeMethods
 {
     // Declares managed prototypes for unmanaged functions.
     [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
-    public static extern void TestCallBack(FPtr cb, int value);
+    internal static extern void TestCallBack(FPtr cb, int value);
 
     [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
-    public static extern void TestCallBack2(FPtr2 cb2, string value);
+    internal static extern void TestCallBack2(FPtr2 cb2, string value);
 }
 //</snippet37>
 
@@ -23,9 +23,9 @@ public class App
     public static void Main()
     {
         FPtr cb = new FPtr(App.DoSomething);
-        LibWrap.TestCallBack(cb, 99);
+        NativeMethods.TestCallBack(cb, 99);
         FPtr2 cb2 = new FPtr2(App.DoSomething2);
-        LibWrap.TestCallBack2(cb2, "abc");
+        NativeMethods.TestCallBack2(cb2, "abc");
     }
 
     public static bool DoSomething(int value)

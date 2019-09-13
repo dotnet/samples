@@ -29,14 +29,14 @@ Public Class Form1
         StatusBar.Items.AddRange(New ToolStripItem() {label})
 
         ' Get localized strings for user interface.
-        Me.Text = rm.GetString("WindowCaption")
-        Me.ValueLabel.Text = rm.GetString(NameOf(ValueLabel))
-        Me.FormatLabel.Text = rm.GetString(NameOf(FormatLabel))
-        Me.ResultLabel.Text = rm.GetString(NameOf(ResultLabel))
-        Me.CulturesLabel.Text = rm.GetString("CultureLabel")
-        Me.NumberBox.Text = rm.GetString("NumberBoxText")
-        Me.DateBox.Text = rm.GetString("DateBoxText")
-        Me.OKButton.Text = rm.GetString("OKButtonText")
+        Text = rm.GetString("WindowCaption")
+        ValueLabel.Text = rm.GetString(NameOf(ValueLabel))
+        FormatLabel.Text = rm.GetString(NameOf(FormatLabel))
+        ResultLabel.Text = rm.GetString(NameOf(ResultLabel))
+        CulturesLabel.Text = rm.GetString("CultureLabel")
+        NumberBox.Text = rm.GetString("NumberBoxText")
+        DateBox.Text = rm.GetString("DateBoxText")
+        OKButton.Text = rm.GetString("OKButtonText")
 
         ' Populate CultureNames list box with culture names
         Dim cultures() As CultureInfo = CultureInfo.GetCultures(CultureTypes.AllCultures)
@@ -51,7 +51,7 @@ Public Class Form1
         ' Change the name of the invariant culture so it is human readable.
         names(0) = rm.GetString("InvariantCultureName")
         ' Add the culture names to the list box.
-        Me.CultureNames.Items.AddRange(names.ToArray())
+        CultureNames.Items.AddRange(names.ToArray())
 
         ' Make the current culture the selected culture.
         For ctr As Integer = 0 To names.Count - 1
@@ -60,7 +60,7 @@ Public Class Form1
                 Exit For
             End If
         Next
-        Me.CultureNames.SelectedIndex = currentIndex
+        CultureNames.SelectedIndex = currentIndex
 
         ' Get decimal separator.
         decimalSeparator = NumberFormatInfo.CurrentInfo.NumberDecimalSeparator
@@ -82,45 +82,45 @@ Public Class Form1
         pattern = $"^\s*\S+\s+\S+\s+\S+(\s+\S+)?(?<!{amDesignator}|{aDesignator}|{pmDesignator}|{pDesignator})\s*$"
 
         ' Select NumberBox for numeric string and populate combo box.
-        Me.NumberBox.Checked = True
+        NumberBox.Checked = True
     End Sub
 
-    Private Sub NumberBox_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles NumberBox.CheckedChanged
-        If Me.NumberBox.Checked Then
-            Me.Result.Text = String.Empty
+    Private Sub NumberBox_CheckedChanged(sender As Object, e As EventArgs) Handles NumberBox.CheckedChanged
+        If NumberBox.Checked Then
+            Result.Text = String.Empty
 
-            Me.FormatStrings.Items.Clear()
-            Me.FormatStrings.Items.AddRange(numberFormats)
-            Me.FormatStrings.SelectedIndex = DEFAULTSELECTION
+            FormatStrings.Items.Clear()
+            FormatStrings.Items.AddRange(numberFormats)
+            FormatStrings.SelectedIndex = DEFAULTSELECTION
         End If
     End Sub
 
-    Private Sub OKButton_Click(sender As System.Object, e As System.EventArgs) Handles OKButton.Click
+    Private Sub OKButton_Click(sender As Object, e As EventArgs) Handles OKButton.Click
 
         label.Text = ""
-        Me.Result.Text = String.Empty
+        Result.Text = String.Empty
 
         ' Get name of the current culture.
         Dim culture As CultureInfo
-        Dim cultureName As String = CStr(Me.CultureNames.Items(Me.CultureNames.SelectedIndex))
+        Dim cultureName As String = CStr(CultureNames.Items(CultureNames.SelectedIndex))
         ' If the selected culture is the invariant culture, change its name.
         If cultureName = rm.GetString("InvariantCultureName") Then cultureName = String.Empty
         culture = CultureInfo.CreateSpecificCulture(cultureName)
 
         ' Parse string as date
-        If Me.DateBox.Checked Then
-            Dim dat As DateTime
+        If DateBox.Checked Then
+            Dim dat As Date
             Dim dto As DateTimeOffset
-            Dim ticks As Int64
+            Dim ticks As Long
             Dim hasOffset As Boolean = False
 
             ' Is the date a number expressed in ticks?
-            If Int64.TryParse(Me.Value.Text, ticks) Then
+            If Long.TryParse(Value.Text, ticks) Then
                 dat = New Date(ticks)
             Else
                 ' Does the date have three components (date, time offset), or fewer than 3?
-                If Regex.IsMatch(Me.Value.Text, pattern, RegexOptions.IgnoreCase) Then
-                    If DateTimeOffset.TryParse(Me.Value.Text, dto) Then
+                If Regex.IsMatch(Value.Text, pattern, RegexOptions.IgnoreCase) Then
+                    If DateTimeOffset.TryParse(Value.Text, dto) Then
                         hasOffset = True
                     Else
                         label.Text = rm.GetString("MSG_InvalidDTO")
@@ -129,7 +129,7 @@ Public Class Form1
                     End If
                 Else
                     ' The string is to be interpeted as a DateTime, not a DateTimeOffset.
-                    If DateTime.TryParse(Me.Value.Text, dat) Then
+                    If Date.TryParse(Value.Text, dat) Then
                         hasOffset = False
                     Else
                         label.Text = rm.GetString("MSG_InvalidDate")
@@ -140,6 +140,7 @@ Public Class Form1
             End If
 
             ' Format date value.
+
             Me.Result.Text = If(hasOffset, dto, dat).ToString(Me.FormatStrings.Text, culture)
         Else
             ' Handle formatting of a number.
@@ -154,11 +155,11 @@ Public Class Form1
                     If Not Double.TryParse(Value.Text, floatToFormat) Then
                         label.Text = rm.GetString("MSG_InvalidFloat")
                     Else
-                        Me.Result.Text = floatToFormat.ToString(Me.FormatStrings.Text, culture)
+                        Result.Text = floatToFormat.ToString(FormatStrings.Text, culture)
                     End If
                 Catch ex As FormatException
                     label.Text = rm.GetString("MSG_InvalidFormat")
-                    Me.formatInfo = True
+                    formatInfo = True
                 End Try
             Else
                 ' Handle formatting an integer.
@@ -169,21 +170,21 @@ Public Class Form1
                     label.Text = rm.GetString("MSG_InvalidInteger")
                 Else
                     ' Format an Int64
-                    If bigintToFormat >= Int64.MinValue And bigintToFormat <= Int64.MaxValue Then
+                    If bigintToFormat >= Long.MinValue And bigintToFormat <= Long.MaxValue Then
                         intToFormat = CLng(bigintToFormat)
                         Try
-                            Me.Result.Text = intToFormat.ToString(Me.FormatStrings.Text, culture)
+                            Result.Text = intToFormat.ToString(FormatStrings.Text, culture)
                         Catch ex As FormatException
                             label.Text = rm.GetString("MSG_InvalidFormat")
-                            Me.formatInfo = True
+                            formatInfo = True
                         End Try
                     Else
                         ' Format a BigInteger
                         Try
-                            Me.Result.Text = bigintToFormat.ToString(Me.FormatStrings.Text, culture)
+                            Result.Text = bigintToFormat.ToString(FormatStrings.Text, culture)
                         Catch ex As Exception
                             label.Text = rm.GetString("MSG_InvalidFormat")
-                            Me.formatInfo = True
+                            formatInfo = True
                         End Try
                     End If
                 End If
@@ -191,18 +192,18 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub DateBox_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles DateBox.CheckedChanged
-        If Me.DateBox.Checked Then
-            Me.Result.Text = String.Empty
+    Private Sub DateBox_CheckedChanged(sender As Object, e As EventArgs) Handles DateBox.CheckedChanged
+        If DateBox.Checked Then
+            Result.Text = String.Empty
 
-            Me.FormatStrings.Items.Clear()
-            Me.FormatStrings.Items.AddRange(dateFormats)
-            Me.FormatStrings.SelectedIndex = DEFAULTSELECTION
+            FormatStrings.Items.Clear()
+            FormatStrings.Items.AddRange(dateFormats)
+            FormatStrings.SelectedIndex = DEFAULTSELECTION
         End If
     End Sub
 
-    Private Sub Value_TextChanged(sender As Object, e As System.EventArgs) Handles Value.TextChanged
-        Me.Result.Text = String.Empty
+    Private Sub Value_TextChanged(sender As Object, e As EventArgs) Handles Value.TextChanged
+        Result.Text = String.Empty
 
         If valueInfo Then
             label.Text = String.Empty
@@ -211,15 +212,15 @@ Public Class Form1
         OKButton.Enabled = Not String.IsNullOrEmpty(Value.Text)
     End Sub
 
-    Private Sub FormatStrings_SelectedValueChanged(sender As Object, e As System.EventArgs) Handles FormatStrings.SelectedValueChanged, CultureNames.SelectedValueChanged
-        Me.Result.Text = String.Empty
+    Private Sub FormatStrings_SelectedValueChanged(sender As Object, e As EventArgs) Handles FormatStrings.SelectedValueChanged, CultureNames.SelectedValueChanged
+        Result.Text = String.Empty
         If formatInfo Then
             label.Text = String.Empty
             formatInfo = False
         End If
     End Sub
 
-    Private Sub CultureNames_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles CultureNames.SelectedIndexChanged
-        Me.Result.Text = String.Empty
+    Private Sub CultureNames_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CultureNames.SelectedIndexChanged
+        Result.Text = String.Empty
     End Sub
 End Class

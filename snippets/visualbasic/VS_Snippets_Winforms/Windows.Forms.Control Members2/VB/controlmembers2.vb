@@ -1,7 +1,6 @@
 ﻿Imports System.Drawing
 Imports System.ComponentModel
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
 
 Namespace ControlMembers3
    Public Class Form1

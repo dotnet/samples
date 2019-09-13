@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Public Class global_asax
+﻿Public Class global_asax
 
     ' <snippet2>
     Sub Application_Start(ByVal sender As Object, ByVal e As EventArgs)

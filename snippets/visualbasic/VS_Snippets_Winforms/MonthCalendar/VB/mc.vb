@@ -5,7 +5,6 @@ Imports System.ComponentModel
 Imports System.Windows.Forms
 Imports System.Data
 Imports System.IO
-Imports Microsoft.VisualBasic
 
 Namespace MonthCalender
    ' Summary description for Form1.

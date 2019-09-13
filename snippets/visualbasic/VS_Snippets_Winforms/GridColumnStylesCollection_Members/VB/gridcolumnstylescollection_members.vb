@@ -12,7 +12,6 @@ Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
 Imports System.Collections
-Imports Microsoft.VisualBasic
 
 Public Class MyForm
     Inherits System.Windows.Forms.Form

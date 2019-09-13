@@ -7,7 +7,6 @@
 Imports System.Data
 Imports System.Windows.Forms
 Imports System.IO
-Imports Microsoft.VisualBasic
 
 Public Class DataFormats_Dif
    
@@ -31,4 +30,4 @@ Public Class DataFormats_Dif
          Console.WriteLine(("The Exception is:" + e.Message))
       End Try
    End Sub
-End Class 'DataFormats_Dif
+End Class
