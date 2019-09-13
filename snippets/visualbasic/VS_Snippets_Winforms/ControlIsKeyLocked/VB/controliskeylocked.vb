@@ -5,7 +5,6 @@
 ' /r:System.Data.dll /r:System.Drawing.dll
 
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
 
 Public Class CapsLockIndicator
    

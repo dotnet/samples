@@ -1,7 +1,6 @@
 ﻿'<snippet1>
 Imports System.Drawing
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
 
 Public Class Form1
     Inherits System.Windows.Forms.Form

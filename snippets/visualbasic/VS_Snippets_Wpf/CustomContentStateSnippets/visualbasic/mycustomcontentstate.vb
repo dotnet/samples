@@ -1,6 +1,5 @@
 ﻿'<SnippetMyCustomContentStateCODE>
 
-Imports Microsoft.VisualBasic
 Imports System.Windows.Controls
 Imports System.Windows.Navigation
 <Serializable>

@@ -163,7 +163,7 @@ namespace Formatter
                }
             }
             // Format date value.
-            this.Result.Text = (hasOffet ? dto : dat).ToString(this.FormatStrings.Text, culture);
+            this.Result.Text = (hasOffset ? dto : dat).ToString(this.FormatStrings.Text, culture);
          }
          else {
             // Handle formatting of a number.

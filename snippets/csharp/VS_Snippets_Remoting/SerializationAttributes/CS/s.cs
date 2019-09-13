@@ -8,13 +8,13 @@ using System.Runtime.Serialization.Formatters.Soap;
 public class Test {
    public static void Main()  {
 
-      //Creates a new TestSimpleObject object.
+      // Creates a new TestSimpleObject object.
       TestSimpleObject obj = new TestSimpleObject();
 
       Console.WriteLine("Before serialization the object contains: ");
       obj.Print();
 
-      //Opens a file and serializes the object into it in binary format.
+      // Opens a file and serializes the object into it in binary format.
       Stream stream = File.Open("data.xml", FileMode.Create);
       SoapFormatter formatter = new SoapFormatter();
 
@@ -22,11 +22,11 @@ public class Test {
 
       formatter.Serialize(stream, obj);
       stream.Close();
-   
-      //Empties obj.
+
+      // Empties obj.
       obj = null;
-   
-      //Opens file "data.xml" and deserializes the object from it.
+
+      // Opens file "data.xml" and deserializes the object from it.
       stream = File.Open("data.xml", FileMode.Open);
       formatter = new SoapFormatter();
 
@@ -43,17 +43,17 @@ public class Test {
 
 
 // A test object that needs to be serialized.
-[Serializable()]		
+[Serializable()]
 public class TestSimpleObject  {
 
     public int member1;
     public string member2;
     public string member3;
     public double member4;
-    
+
     // A field that is not serialized.
-    [NonSerialized()] public string member5; 
-    
+    [NonSerialized()] public string member5;
+
     public TestSimpleObject() {
 
         member1 = 11;

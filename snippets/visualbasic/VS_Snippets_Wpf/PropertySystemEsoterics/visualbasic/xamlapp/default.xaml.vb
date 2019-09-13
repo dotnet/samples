@@ -5,7 +5,6 @@ Imports System.Windows.Controls
 Imports System.Windows.Shapes
 Imports System.Windows.Navigation
 Imports System.Text
-Imports Microsoft.VisualBasic
 
 Namespace SDKSample
 	Partial Public Class XAMLAPP

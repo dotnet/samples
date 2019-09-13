@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System.Globalization
+﻿Imports System.Globalization
 Imports System.ComponentModel
 Imports System.Windows
 Imports System.Windows.Controls

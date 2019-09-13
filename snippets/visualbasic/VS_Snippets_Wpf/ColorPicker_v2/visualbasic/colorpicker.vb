@@ -5,7 +5,6 @@
 '
 ' 
 
-Imports Microsoft.VisualBasic
 Imports System.Windows
 Imports System.Windows.Navigation
 Imports System.Windows.Media
