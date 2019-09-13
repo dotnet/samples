@@ -3,7 +3,7 @@ languages:
 - vb
  products:
 - dotnet-core
-   - windows
+- windows
 page_type: sample
 name: "Async Sample: Asynchronous Programming with Async and Await"
 urlFragment: "async-and-await-vb"
