@@ -29,7 +29,7 @@ To download and run the sample, follow these steps:
  
     1. On the menu bar, choose File, Open, Project/Solution.
  
- 3. Navigate to the folder that holds the unzipped sample code, and open the solution (.sln) file.
+    2. Navigate to the folder that holds the unzipped sample code, and open the Visual Basic project (.vbproj) file.
  
  4. Choose the F5 key, or Ctrl+F5 keys, to run the project.
  
