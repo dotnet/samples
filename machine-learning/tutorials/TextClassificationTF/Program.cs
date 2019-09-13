@@ -174,6 +174,6 @@ namespace TextClassificationTF
             [VectorType(FeatureLength)]
             public int[] Features { get; set; }
         }
-        // </SnippeteFixedLengthFeatures>
+        // </SnippetFixedLengthFeatures>
     }
 }
