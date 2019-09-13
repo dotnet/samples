@@ -25,7 +25,9 @@ To download and run the sample, follow these steps:
 
  1. Download and unzip the sample.
     
- 2. In Visual Studio (2019 or later), on the menu bar, choose File, Open, Project/Solution.
+ 2. In Visual Studio (2019 or later):
+ 
+    1. On the menu bar, choose File, Open, Project/Solution.
  
  3. Navigate to the folder that holds the unzipped sample code, and open the solution (.sln) file.
  
