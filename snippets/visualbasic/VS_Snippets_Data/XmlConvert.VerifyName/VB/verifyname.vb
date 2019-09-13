@@ -1,33 +1,33 @@
 ﻿'<snippet1>
 Imports System.Xml
 
-public class Sample
+Public Class Sample
 
-  public shared sub Main()
-     Dim writer as XmlTextWriter = new XmlTextWriter ("out.xml", nothing)
-     Dim tag as string = "item name"
-   
-    try
+    Public Shared Sub Main()
+        Dim writer As New XmlTextWriter("out.xml", Nothing)
+        Dim tag As String = "item name"
+
+        Try
 	
-     ' Write the root element.
-     writer.WriteStartElement("root")
+            ' Write the root element.
+            writer.WriteStartElement("root")
 
-     writer.WriteStartElement(XmlConvert.VerifyName(tag))
+            writer.WriteStartElement(XmlConvert.VerifyName(tag))
 
-     catch e as XmlException
-        Console.WriteLine(e.Message)
-        Console.WriteLine("Convert to a valid name...")
-        writer.WriteStartElement(XmlConvert.EncodeName(tag))
-     end try
+        Catch e As XmlException
+            Console.WriteLine(e.Message)
+            Console.WriteLine("Convert to a valid name...")
+            writer.WriteStartElement(XmlConvert.EncodeName(tag))
+        End Try
 
-     writer.WriteString("hammer")
-     writer.WriteEndElement()
+        writer.WriteString("hammer")
+        writer.WriteEndElement()
 
-     ' Write the end tag for the root element.
-     writer.WriteEndElement()
+        ' Write the end tag for the root element.
+        writer.WriteEndElement()
  
-     writer.Close()
+        writer.Close()
   
-  end sub
-end class
+    End Sub
+End Class
 '</snippet1>
