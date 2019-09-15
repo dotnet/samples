@@ -32,22 +32,22 @@ Private Sub CreateNewDataRow()
  
  Private Function MakeNamesTable() As DataTable
     ' Create a new DataTable titled 'Names.'
-    Dim namesTable As DataTable = new DataTable("Names") 
+    Dim namesTable As New DataTable("Names") 
 
     ' Add three column objects to the table.
-    Dim idColumn As DataColumn = new  DataColumn()
+    Dim idColumn As New DataColumn()
     idColumn.DataType = System.Type.GetType("System.Int32")
     idColumn.ColumnName = "id"
     idColumn.AutoIncrement = True
     namesTable.Columns.Add(idColumn)
 
-    Dim fNameColumn As DataColumn = New DataColumn()
+    Dim fNameColumn As New DataColumn()
     fNameColumn.DataType = System.Type.GetType("System.String")
     fNameColumn.ColumnName = "Fname"
     fNameColumn.DefaultValue = "Fname"
     namesTable.Columns.Add(fNameColumn)
 
-    Dim lNameColumn As DataColumn = new DataColumn()
+    Dim lNameColumn As New DataColumn()
     lNameColumn.DataType = System.Type.GetType("System.String")
     lNameColumn.ColumnName = "LName"
     namesTable.Columns.Add(lNameColumn)

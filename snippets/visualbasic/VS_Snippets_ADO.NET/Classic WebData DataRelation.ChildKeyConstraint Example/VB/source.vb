@@ -13,7 +13,7 @@ Protected DataSet1 As DataSet
         "Suppliers").Columns("SupplierID")
     Dim childColumn As DataColumn = dataSet.Tables( _
         "Products").Columns("SupplierID")
-    Dim relation As DataRelation = New DataRelation( _
+    Dim relation As New DataRelation( _
         "SuppliersConstraint", parentColumn, childColumn)
     dataSet.Relations.Add(relation)
 
