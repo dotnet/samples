@@ -14,7 +14,7 @@ Class MainWindow
     End Sub
 
     Public Async Function CopyFilesAsync(Source As StreamReader, Destination As StreamWriter) As Task
-        Dim buffer(4096) As Char
+        Dim buffer(4095) As Char
         Dim numRead As Integer
 
         numRead = Await Source.ReadAsync(buffer, 0, buffer.Length)
