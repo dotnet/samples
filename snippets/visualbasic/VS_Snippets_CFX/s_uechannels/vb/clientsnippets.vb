@@ -19,7 +19,7 @@ Public Class clientSnippets
         ' <Snippet12>
         Dim binding As CustomBinding = New CustomBinding()
         Binding.Elements.Add(New HttpTransportBindingElement())
-        Dim bindingParameters(2) As Object
+        Dim bindingParameters(1) As Object
 
         binding.CanBuildChannelFactory(Of IRequestChannel)(bindingParameters)
         ' </Snippet12>
@@ -29,7 +29,7 @@ Public Class clientSnippets
         ' <Snippet3>
         Dim binding As CustomBinding = New CustomBinding()
         binding.Elements.Add(New HttpTransportBindingElement())
-        Dim bindingParams(2) As Object
+        Dim bindingParams(1) As Object
 
         Dim factory As IChannelFactory(Of IRequestChannel) = binding.BuildChannelFactory(Of IRequestChannel)(bindingParams)
         factory.Open()

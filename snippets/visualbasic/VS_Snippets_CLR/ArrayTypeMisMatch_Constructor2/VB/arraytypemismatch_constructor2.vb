@@ -26,10 +26,10 @@ Public Class ArrayTypeMisMatchConst
    
    Shared Sub Main()
       Try
-         Dim myStringArray(2) As String
+         Dim myStringArray(1) As String
          myStringArray.SetValue("Jones", 0)
          myStringArray.SetValue("John", 1)
-         Dim myIntArray(2) As Integer
+         Dim myIntArray(1) As Integer
          Dim myArrayType As New ArrayTypeMisMatchConst()
          myArrayType.CopyArray(myStringArray, myIntArray)
       Catch e As ArrayTypeMismatchException
