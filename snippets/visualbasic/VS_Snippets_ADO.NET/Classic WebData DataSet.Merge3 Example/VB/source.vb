@@ -25,7 +25,7 @@ Private Sub DemonstrateMergeTable()
     table.Columns.Add(c2)
 
     ' DataColumn array to set primary key.
-    Dim keyCol(1) As DataColumn
+    Dim keyCol(0) As DataColumn
 
     ' Set primary key column.
     keyCol(0) = c1

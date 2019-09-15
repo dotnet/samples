@@ -32,7 +32,7 @@ Module Test
    ' Loads the content of a file to a byte array. 
    Function loadFile(filename As String) As Byte()
       Dim fs As New FileStream(filename, FileMode.Open)
-      Dim buffer(CInt(fs.Length)) As Byte
+      Dim buffer(CInt(fs.Length - 1)) As Byte
       fs.Read(buffer, 0, buffer.Length)
       fs.Close()
       
