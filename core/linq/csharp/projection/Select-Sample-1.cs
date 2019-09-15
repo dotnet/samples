@@ -4,9 +4,8 @@ namespace Projection
 {
     public class SelectSample1
     {
-        //This sample uses select to produce a sequence of ints one higher than those in an existing array of ints.
-        //
-        //Outputs:
+        // This sample uses select to produce a sequence of ints one higher than those in an existing array of ints.
+        // Outputs:
         // Numbers + 1:
         // 6
         // 5
@@ -33,9 +32,8 @@ namespace Projection
             }
         }
 
-        //This sample uses select to produce a sequence of ints one higher than those in an existing array of ints.
-        //
-        //Outputs:
+        // This sample uses select to produce a sequence of ints one higher than those in an existing array of ints.
+        // Outputs:
         // Numbers + 1:
         // 6
         // 5

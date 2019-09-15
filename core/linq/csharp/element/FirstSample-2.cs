@@ -5,9 +5,8 @@ namespace Element
 {
     public static class FirstSample2
     {
-        //This sample uses First to find the first element in the array that starts with 'o'.
-        //
-        //Output: 
+        // This sample uses First to find the first element in the array that starts with 'o'.
+        // Output: 
         // A string starting with 'o': one
         public static void Example()
         {
@@ -15,7 +14,7 @@ namespace Element
 
             string startsWithO = strings.First(s => s[0] == 'o');
 
-            Console.WriteLine("A string starting with 'o': {0}", startsWithO);
+            Console.WriteLine($"A string starting with 'o': {startsWithO}");
         }
     }
 }

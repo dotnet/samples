@@ -5,9 +5,8 @@ namespace Aggregate
 {
     public static class MinSample1
     {
-        //This sample uses Min to get the lowest number in an array.
-        // 
-        //Output: 
+        // This sample uses Min to get the lowest number in an array.
+        // Output: 
         // The minimum number is 0.
         public static void Example()
         {
