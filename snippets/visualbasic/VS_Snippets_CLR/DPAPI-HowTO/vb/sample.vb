@@ -177,7 +177,7 @@ Public Module MemoryProtectionSample
         End If
 
 
-        Dim inBuffer(Length) As Byte
+        Dim inBuffer(Length - 1) As Byte
         Dim outBuffer() As Byte
 
         ' Read the encrypted data from a stream.
