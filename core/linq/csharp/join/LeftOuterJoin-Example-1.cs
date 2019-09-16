@@ -6,7 +6,7 @@ namespace Join
 {
     public static class LeftOuterJoinExample1
     {
-        // A left outer joinis like a cross join, except that all the left hand side elements get included at least once,
+        // A left outer join is like a cross join, except that all the left hand side elements get included at least once,
         // even if they don't match any right hand side elements. Note how Vegetables shows up in the output even though
         // it has no matching products.
         // Output: 
@@ -82,7 +82,7 @@ namespace Join
             }
         }
 
-        // A left outer joinis like a cross join, except that all the left hand side elements get included at least once,
+        // A left outer join is like a cross join, except that all the left hand side elements get included at least once,
         // even if they don't match any right hand side elements. Note how Vegetables shows up in the output even though
         // it has no matching products.
         // Output: 
