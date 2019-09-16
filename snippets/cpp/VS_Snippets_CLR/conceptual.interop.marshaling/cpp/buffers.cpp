@@ -4,14 +4,13 @@ using namespace System::Text;
 using namespace System::Runtime::InteropServices;
 
 //<snippet2>
-public ref class LibWrap
+private ref class NativeMethods
 {
 public:
-    [DllImport("Kernel32.dll", CharSet=CharSet::Auto)]
-    static int GetSystemDirectory(StringBuilder^
-        sysDirBuffer, int size);
+    [DllImport("Kernel32.dll", CharSet = CharSet::Auto)]
+    static int GetSystemDirectory(StringBuilder^ sysDirBuffer, int size);
 
-    [DllImport("Kernel32.dll", CharSet=CharSet::Auto)]
+    [DllImport("Kernel32.dll", CharSet = CharSet::Auto)]
     static IntPtr GetCommandLine();
 };
 //</snippet2>
@@ -24,10 +23,10 @@ public:
     {
         // Call GetSystemDirectory.
         StringBuilder^ sysDirBuffer = gcnew StringBuilder(256);
-        LibWrap::GetSystemDirectory(sysDirBuffer, sysDirBuffer->Capacity);
+        NativeMethods::GetSystemDirectory(sysDirBuffer, sysDirBuffer->Capacity);
         // ...
         // Call GetCommandLine.
-        IntPtr cmdLineStr = LibWrap::GetCommandLine();
+        IntPtr cmdLineStr = NativeMethods::GetCommandLine();
         String^ commandLine = Marshal::PtrToStringAuto(cmdLineStr);
     }
 };
