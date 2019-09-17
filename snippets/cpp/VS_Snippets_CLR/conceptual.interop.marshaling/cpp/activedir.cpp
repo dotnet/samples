@@ -4,7 +4,7 @@ using namespace System::Reflection;
 using namespace System::Runtime::InteropServices;
 
 //<snippet34>
-[StructLayout(LayoutKind::Sequential, CharSet=CharSet::Unicode)]
+[StructLayout(LayoutKind::Sequential, CharSet = CharSet::Unicode)]
 public value struct DsBrowseInfo
 {
 public:
@@ -27,11 +27,11 @@ public:
     int        ObjectClassSize;
 };
 
-public ref class LibWrap
+private ref class NativeMethods
 {
 public:
     // Declares a managed prototype for the unmanaged function.
-    [DllImport("dsuiext.dll", CharSet=CharSet::Unicode)]
+    [DllImport("dsuiext.dll", CharSet = CharSet::Unicode)]
     static int DsBrowseForContainerW(DsBrowseInfo^ info);
 
     static int DSBI_ENTIREDIRECTORY = 0x00090000;
@@ -62,14 +62,14 @@ public:
         dsbi.PathSize = DsBrowseInfo::MAX_PATH;
         dsbi.Caption = "Container Selection Example";
         dsbi.Title = "Select a container from the list.";
-        dsbi.ReturnFormat = LibWrap::ADS_FORMAT_WINDOWS;
-        dsbi.Flags = LibWrap::DSBI_ENTIREDIRECTORY;
+        dsbi.ReturnFormat = NativeMethods::ADS_FORMAT_WINDOWS;
+        dsbi.Flags = NativeMethods::DSBI_ENTIREDIRECTORY;
         dsbi.Root = "LDAP:";
         dsbi.Path = gcnew String(gcnew array<Char>(DsBrowseInfo::MAX_PATH));
         // Initialize remaining members...
 
-        int status = LibWrap::DsBrowseForContainerW(dsbi);
-        if ((LibWrap::BrowseStatus)status == LibWrap::BrowseStatus::BrowseOk)
+        int status = NativeMethods::DsBrowseForContainerW(dsbi);
+        if ((NativeMethods::BrowseStatus)status == NativeMethods::BrowseStatus::BrowseOk)
         {
             Console::WriteLine(dsbi.Path);
         }
