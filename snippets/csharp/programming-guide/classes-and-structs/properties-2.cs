@@ -2,16 +2,16 @@
 
 public class Person
 {
-   private string _firstName;
-   private string _lastName;
-   
+   private string firstName;
+   private string lastName;
+
    public Person(string first, string last)
    {
-      _firstName = first;
-      _lastName = last;
+      firstName = first;
+      lastName = last;
    }
 
-   public string Name => $"{_firstName} {_lastName}";   
+   public string Name => $"{firstName} {lastName}";
 }
 
 public class Example
