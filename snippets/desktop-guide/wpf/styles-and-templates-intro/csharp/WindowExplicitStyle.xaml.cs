@@ -13,20 +13,13 @@ using System.Windows.Shapes;
 namespace IntroToStylingAndTemplating
 {
     /// <summary>
-    /// Interaction logic for Window2.xaml
+    /// Interaction logic for ExplicitStyle.xaml
     /// </summary>
-    public partial class Window2 : Window
+    public partial class ExplicitStyle : Window
     {
-        public Window2()
+        public ExplicitStyle()
         {
             InitializeComponent();
-        }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            // <SnippetSetStyleCode>
-            textblock1.Style = (Style)Resources["TitleText"];
-            // </SnippetSetStyleCode>
         }
     }
 }
