@@ -11,6 +11,6 @@ Public Class GetFilesTest
         For Each fri In fiArr
             Console.WriteLine(fri.Name)
         Next fri
-    End Sub 'Main
+    End Sub
 End Class 'GetFilesTest
 ' </snippet1>

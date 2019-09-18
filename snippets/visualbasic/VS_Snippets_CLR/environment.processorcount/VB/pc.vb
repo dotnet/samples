@@ -6,7 +6,7 @@ Class Sample
       Console.WriteLine("The number of processors " & _
                         "on this computer is {0}.", _
                         Environment.ProcessorCount)
-   End Sub 'Main
+   End Sub
 End Class 'Sample
 '
 'This example produces the following results:

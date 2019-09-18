@@ -92,7 +92,7 @@ Module Module1
             Catch ex As Exception
                 Console.WriteLine(("Exception occurred. " + ex.Message))
             End Try
-        End Sub 'Main 
+        End Sub
     End Class 'Class1
 End Module
 
@@ -102,7 +102,7 @@ Public NotInheritable Class SafeTokenHandle
     Private Sub New()
         MyBase.New(True)
 
-    End Sub 'New
+    End Sub
 
     Private Declare Auto Function LogonUser Lib "advapi32.dll" (ByVal lpszUsername As [String], _
             ByVal lpszDomain As [String], ByVal lpszPassword As [String], _

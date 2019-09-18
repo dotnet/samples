@@ -24,7 +24,7 @@ Namespace College
         Inherits HighSchool.Student
 
         Public Sub New()
-        End Sub 'New
+        End Sub
         ' Add a new field named University.
         Public University As String
         ' Use extra types to use this field.
@@ -48,7 +48,7 @@ Namespace College
             Dim test As New Run()
             test.WriteOverriddenAttributes("College.xml")
             test.ReadOverriddenAttributes("College.xml")
-        End Sub 'Main
+        End Sub
 
 
         Private Sub WriteOverriddenAttributes(ByVal filename As String)
@@ -115,7 +115,7 @@ Namespace College
             g2.Info = o2
             mySerializer.Serialize(myStreamWriter, oMyClass)
             myStreamWriter.Close()
-        End Sub 'WriteOverriddenAttributes
+        End Sub
 
 
         Private Sub ReadOverriddenAttributes(ByVal filename As String)
@@ -163,7 +163,7 @@ Namespace College
                 p = CType(g.Info(1), Phone)
                 Console.WriteLine(p.Number)
             Next grad
-        End Sub 'ReadOverriddenAttributes
+        End Sub
     End Class 'Run
 End Namespace 'College
 ' </Snippet1>

@@ -18,7 +18,7 @@ Public Class Form1
         dataTable1 = dataSet1.Tables(dataGrid1.DataMember)
         dataCol1 = dataTable1.Columns(dgCol.MappingName)
         dgCol.HeaderText = dataCol1.Caption
-    End Sub 'SetHeaderText
+    End Sub
     ' </Snippet1>
 End Class 'Form1 
 

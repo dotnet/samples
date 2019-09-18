@@ -20,7 +20,7 @@ Public Class MyAttribute
    Public Sub New(myString As String, myInteger As Integer)
       Me.myString = myString
       Me.myInteger = myInteger
-   End Sub 'New
+   End Sub
 End Class 'MyAttribute
 
 Public Class MyConstructorBuilder
@@ -40,7 +40,7 @@ Public Class MyConstructorBuilder
                                                             MyAttribute).myInteger.ToString())
          End If
       Next index
-   End Sub 'Main
+   End Sub
    
    Private Shared Function MyCreateCallee(domain As AppDomain) As Type
       Dim myAssemblyName As New AssemblyName()

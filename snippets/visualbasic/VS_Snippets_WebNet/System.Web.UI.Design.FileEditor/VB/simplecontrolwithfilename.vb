@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 
-Imports Microsoft.VisualBasic
 Imports System.ComponentModel
 Imports System.ComponentModel.Design
 Imports System.Web.UI

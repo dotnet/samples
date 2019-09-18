@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-
+﻿
 ' <Snippet5>
 Public Class EmployeeLogic
     Public Shared Function GetFullNamesAndIDs() As Array

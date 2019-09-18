@@ -25,7 +25,7 @@ Class Window1
         Me.root.Children.Add(selector)
         Me.WindowState = WindowState.Maximized
     
-    End Sub 'New
+    End Sub
     
     
     Protected Overrides Sub OnKeyDown(ByVal e As System.Windows.Input.KeyEventArgs) 
@@ -46,7 +46,7 @@ Class Window1
             End If
         End If
     
-    End Sub 'OnKeyDown
+    End Sub
 End Class 'Window1
 '
 'ToDo: Error processing original source shown below

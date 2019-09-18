@@ -9,7 +9,7 @@ Public Class MyHelloServer
    
    Public Sub New()
       Console.WriteLine("HelloServer activated")
-   End Sub 'New
+   End Sub
    
    Public Function myHelloMethod(name As String) As String
       Console.WriteLine("Hello.HelloMethod : {0}", name)

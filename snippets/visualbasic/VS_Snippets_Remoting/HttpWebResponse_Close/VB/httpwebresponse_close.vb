@@ -25,7 +25,7 @@ Class HttpWebResponseSnippet
         Console.WriteLine("Press any key to continue...")
         Console.ReadLine()
         Return
-    End Sub 'Main
+    End Sub
     
     
     Public Shared Sub GetPage(url As [String])
@@ -45,5 +45,5 @@ Class HttpWebResponseSnippet
         Catch e As Exception
             Console.WriteLine("The following exception was raised : {0}", e.Message)
         End Try
-   End Sub 'GetPage
+   End Sub
 End Class 'HttpWebResponseSnippet

@@ -23,7 +23,7 @@ Module Module1
         ' certificate.
         signedCms.CheckSignature(True)
         '</Snippet1>
-    End Sub 'Test_CheckSignature1
+    End Sub
 
     Sub Test_CheckSignature2(ByVal innerContent() As Byte, ByVal encodedMessage() As Byte)
         '<Snippet2>
@@ -42,7 +42,7 @@ Module Module1
         ' certificate.
         signedCms.CheckSignature(True)
         '</Snippet2>
-    End Sub 'Test_CheckSignature2
+    End Sub
 
     Sub Test_ComputeSignature1(ByVal dataToSign() As Byte)
         '<Snippet3>
@@ -61,7 +61,7 @@ Module Module1
         ' The signed CMS/PKCS #7 message is ready to send.
         ' The original content is included in this byte array.
         '</Snippet3>
-    End Sub 'Test_ComputeSignature1
+    End Sub
 
     Sub Test_ComputeSignature2(ByVal dataToSign() As Byte)
         '<Snippet4>
@@ -80,6 +80,6 @@ Module Module1
         ' The signed CMS/PKCS #7 message is ready to send.
         ' The original content is not included in this byte array.
         '</Snippet4>
-    End Sub 'Test_ComputeSignature2 
+    End Sub
 
 End Module

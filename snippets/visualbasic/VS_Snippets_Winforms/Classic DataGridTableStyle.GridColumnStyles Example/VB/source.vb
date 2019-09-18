@@ -20,6 +20,6 @@ Public Class Form1
                 Console.WriteLine(dgc.MappingName)
             Next dgc
         Next dgt
-    End Sub 'WriteMappingNames
+    End Sub
     ' </Snippet1>
 End Class 'Form1

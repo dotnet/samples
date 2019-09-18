@@ -84,7 +84,7 @@ Namespace Samples.AspNet.VB.Controls
                 End Try
             End If
 
-        End Sub ' PerformDataBinding
+        End Sub
 
         ' <snippet5>
         Private Sub RecurseDataBindInternal(ByVal node As TreeNode, _
@@ -146,7 +146,7 @@ Namespace Samples.AspNet.VB.Controls
                 End If
             Next item
 
-        End Sub 'RecurseDataBindInternal
+        End Sub
 
         ' </snippet4>
         ' </snippet5>
@@ -188,7 +188,7 @@ Namespace Samples.AspNet.VB.Controls
             Next rvnode
             writer.WriteLine("</PRE>")
 
-        End Sub 'Render
+        End Sub
 
 
         Private Class RootViewNode

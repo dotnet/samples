@@ -13,14 +13,14 @@ Public Class SamplesDTFI
       PrintPattern("ja-JP")
       PrintPattern("fr-FR")
 
-   End Sub 'Main
+   End Sub
 
    Public Shared Sub PrintPattern(myCulture As [String])
 
       Dim myDTFI As DateTimeFormatInfo = New CultureInfo(myCulture, False).DateTimeFormat
       Console.WriteLine("  {0}     {1}", myCulture, myDTFI.UniversalSortableDateTimePattern)
 
-   End Sub 'PrintPattern 
+   End Sub
 
 End Class 'SamplesDTFI
 

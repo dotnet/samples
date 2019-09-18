@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-'<Snippet2>
+﻿'<Snippet2>
 ' friend_unsigned_B.vb
 ' Compile with: 
 ' Vbc /r:friend_unsigned_A.dll friend_unsigned_B.vb

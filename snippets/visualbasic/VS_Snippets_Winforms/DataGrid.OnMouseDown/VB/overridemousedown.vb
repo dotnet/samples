@@ -35,7 +35,7 @@ Namespace DataGridSample
             ' grid.ReadOnly = true;
             ' grid.DataMember = "First";
             AddHandler button1.Click, AddressOf OnButtonClick
-        End Sub 'New
+        End Sub
 
 
         Private Sub OnButtonClick(ByVal sender As Object, ByVal e As EventArgs)
@@ -43,12 +43,12 @@ Namespace DataGridSample
             ' grid[0,0] = "nou";
             ' grid.SetDataBinding(null, "");
             DataGridSample.SortDataGrid.Sort(grid, "First", True)
-        End Sub 'OnButtonClick
+        End Sub
 
 
         Private Sub grid_Enter(ByVal sender As Object, ByVal e As EventArgs)
             grid.CurrentCell = New DataGridCell(2, 2)
-        End Sub 'grid_Enter
+        End Sub
 
 
         Private Sub AddSomeData()
@@ -68,7 +68,7 @@ Namespace DataGridSample
 
         Private Sub foo(ByVal sender As Object, ByVal e As KeyEventArgs)
             Console.WriteLine("on key down handler called")
-        End Sub 'foo
+        End Sub
 
 
         Private Sub InitForm()
@@ -90,7 +90,7 @@ Namespace DataGridSample
             Me.StartPosition = FormStartPosition.CenterScreen
             Me.Controls.Add(grid)
             Me.Controls.Add(button1)
-        End Sub 'InitForm
+        End Sub
         'this.SetNewControls(new Control[]{grid, button1});
     End Class 'Singe
     _
@@ -133,7 +133,7 @@ Namespace DataGridSample
             Else
                 dv.Sort = colName + " DESC"
             End If
-        End Sub 'Sort
+        End Sub
     End Class 'SortDataGrid
 End Namespace 'DataGridSample 
 
@@ -141,5 +141,5 @@ Module Module1
     <STAThreadAttribute()> _
     Sub Main()
         Application.Run(New DataGridSample.Singe())
-    End Sub 'Main
+    End Sub
 End Module

@@ -26,7 +26,7 @@ Namespace StrokeSnippets_VB
             Dim mainWindow As New Window1()
             mainWindow.Show()
 
-        End Sub 'AppStartingUp
+        End Sub
     End Class 'MyApp 
     '
     'ToDo: Error processing original source shown below

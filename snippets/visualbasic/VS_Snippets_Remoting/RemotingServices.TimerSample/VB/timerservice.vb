@@ -17,7 +17,7 @@ Public Class TimerServiceEventArgs
     Public Sub New(ByVal message As String) 
         m_Message = message
     
-    End Sub 'New
+    End Sub
     
     
     Public ReadOnly Property Message() As String 
@@ -47,7 +47,7 @@ Public Class TimerService
     Public Sub New() 
         MyClass.New(4.0)
     
-    End Sub 'New
+    End Sub
     
     
     Public Sub New(ByVal minutes As Double) 
@@ -56,7 +56,7 @@ Public Class TimerService
         m_Timer = New Timer()
         AddHandler m_Timer.Elapsed, AddressOf OnElapsed
     
-    End Sub 'New
+    End Sub
     
     
     Public Property MinutesToTime() As Double 
@@ -77,7 +77,7 @@ Public Class TimerService
         Else
         End If
      ' TODO: Raise an exception
-    End Sub 'Start
+    End Sub
     
     
     Private Sub OnElapsed(ByVal [source] As Object, ByVal e As ElapsedEventArgs) 
@@ -91,7 +91,7 @@ Public Class TimerService
             RaiseEvent TimerExpired(Me, timerEventArgs)
         End If
     
-    End Sub 'OnElapsed
+    End Sub
     
     <SecurityPermission(SecurityAction.LinkDemand, Flags := SecurityPermissionFlag.Infrastructure)> _
     Public Overrides Function InitializeLifetimeService() As [Object] 

@@ -56,7 +56,7 @@ Friend Class CodeGenerator
       myTypeBuilder.CreateType()
 ' </Snippet1>
 ' </Snippet2>
-   End Sub 'New
+   End Sub
 
    Public ReadOnly Property MyBuilder() As AssemblyBuilder
       Get
@@ -92,5 +92,5 @@ Public Class TestClass
             Console.WriteLine("Array element {0} : {1} ", j, mySortedArray(j))
          Next j
       End If
-   End Sub 'Main
+   End Sub
 End Class 'TestClass

@@ -8,7 +8,7 @@ Public Class MyTypeDelegatorClass
     Public Sub New(ByVal myType As Type)
         MyBase.New(myType)
         Me.myType = myType
-    End Sub 'New
+    End Sub
 
     ' Override IsMarshalByRefImpl.
     Protected Overrides Function IsMarshalByRefImpl() As Boolean
@@ -46,7 +46,7 @@ Public Class MyTypeDemoClass
         Catch e As Exception
             Console.WriteLine("Exception: {0}", e.Message.ToString())
         End Try
-    End Sub 'Main
+    End Sub
 End Class 'MyTypeDemoClass
 
 ' This class is used to demonstrate 'IsMarshalByRefImpl' method.

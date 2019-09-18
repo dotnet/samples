@@ -19,7 +19,7 @@ Public Class Form1
         
         ' Prints the string in a text box.
         textBox1.Text = myDataObject.GetData(DataFormats.Text).ToString()
-    End Sub 'CreateDefaultDataObject
+    End Sub
     ' </Snippet1>
 End Class 'Form1 
 

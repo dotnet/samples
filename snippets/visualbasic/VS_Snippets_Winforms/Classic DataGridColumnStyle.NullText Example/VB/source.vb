@@ -13,7 +13,7 @@ Public Class Form1
         Dim myGridColumn As DataGridColumnStyle
         myGridColumn = dataGrid1.TableStyles(0).GridColumnStyles(0)
         myGridColumn.NullText = "Null Text"
-    End Sub 'SetNullText
+    End Sub
     ' </Snippet1>
 End Class 'Form1 
 

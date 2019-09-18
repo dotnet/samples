@@ -1,8 +1,6 @@
 ﻿Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
-
 
 Public Class Form1
     Inherits Form
@@ -21,7 +19,7 @@ Public Class Form1
         Console.WriteLine(("Type " & myHitTest.Type))
         Console.WriteLine(("ToString " & myHitTest.ToString()))
         Console.WriteLine(("Hit " & ReturnHitTest(myHitTest.Type)))
-    End Sub 'dataGrid1_MouseDown
+    End Sub
     
     
     Private Function ReturnHitTest(hit As System.Windows.Forms.DataGrid.HitTestType) As String

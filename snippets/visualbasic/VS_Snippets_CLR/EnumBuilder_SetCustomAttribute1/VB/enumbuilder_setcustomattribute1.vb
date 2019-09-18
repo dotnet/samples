@@ -25,7 +25,7 @@ Public Class MyAttribute
    Public Sub New(myString1 As String, myInteger1 As Integer)
       Me.myString = myString1
       Me.myInteger = myInteger1
-   End Sub 'New
+   End Sub
 End Class 'MyAttribute
 
 Class MyApplication
@@ -55,7 +55,7 @@ Class MyApplication
       Catch e As Exception
          Console.WriteLine("The following exception is raised:" + e.Message)
       End Try
-   End Sub 'Main
+   End Sub
 
    Private Shared Sub CreateCallee(domain As AppDomain)
       ' Create a name for the assembly.
@@ -82,7 +82,7 @@ Class MyApplication
 
       myEnumBuilder.CreateType()
       myEnumBuilder.SetCustomAttribute(myCustomAttributeBuilder)
-   End Sub 'CreateCallee
+   End Sub
 End Class 'MyApplication
 ' </Snippet2>
 ' </Snippet1>

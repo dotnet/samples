@@ -71,5 +71,5 @@ Class HttpWebRequest_IfModifiedSince
             Console.WriteLine("Source  :{0}", e.Source)
             Console.WriteLine("Message :{0}", e.Message)
         End Try
-    End Sub ' Main 
+    End Sub
 End Class ' HttpWebRequest_IfModifiedSince

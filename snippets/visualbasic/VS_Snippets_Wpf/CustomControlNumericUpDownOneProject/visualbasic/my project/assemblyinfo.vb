@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System.Windows
+﻿Imports System.Windows
 
 	'(used if a resource is not found in the page, 
 	' or application resource dictionaries)

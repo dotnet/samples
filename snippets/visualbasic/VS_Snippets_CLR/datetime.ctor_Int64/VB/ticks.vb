@@ -24,7 +24,7 @@ Class Sample
       Console.WriteLine(format, 2, "minimum", dt2)
       Console.WriteLine(format, 3, "custom ", dt3)
       Console.WriteLine(vbCrLf & "The custom date and time is created from {0:N0} ticks.", ticks)
-   End Sub 'Main
+   End Sub
 End Class 'Sample
 '
 'This example produces the following results:

@@ -17,6 +17,6 @@ Public Class Sample
         Dim root As XmlNode = doc.FirstChild
         Console.WriteLine("Display the title element...")
         Console.WriteLine(root("title").OuterXml)
-    End Sub 'Main
+    End Sub
 End Class 'Sample
 ' </Snippet1>

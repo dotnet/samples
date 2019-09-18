@@ -13,7 +13,7 @@ Namespace ReflectionModule_Examples
             Dim myModule As [Module] = moduleArray(0)
 
             Console.WriteLine("myModule.IsResource() = {0}", myModule.IsResource())
-        End Sub 'Main
+        End Sub
     End Class 'MyMainClass
 End Namespace 'ReflectionModule_Examples
 '</snippet1>

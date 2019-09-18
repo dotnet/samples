@@ -49,7 +49,7 @@ Public Class SamplesUnicodeEncoding
       Console.Write("Using the decoder       : ")
       Console.WriteLine(myDecodedChars)
 
-   End Sub 'Main 
+   End Sub
 
 End Class 'SamplesUnicodeEncoding
 

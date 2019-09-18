@@ -12,7 +12,7 @@ Class UIATogglePattern_snippets
     ''' </summary>
     Public Sub New()
 
-    End Sub 'New
+    End Sub
 
 
     ' <Snippet100>
@@ -100,7 +100,7 @@ Class UIATogglePattern_snippets
             Return
         End Try
 
-    End Sub 'ToggleElement
+    End Sub
     ' </Snippet102>
 
     '''--------------------------------------------------------------------
@@ -117,6 +117,6 @@ Class UIATogglePattern_snippets
             ' and call its Run() method to start it.
             Dim app As New UIATogglePattern_snippets()
         
-        End Sub 'Main
+        End Sub
     End Class 'TestMain
 End Class 'UIATogglePattern_snippets

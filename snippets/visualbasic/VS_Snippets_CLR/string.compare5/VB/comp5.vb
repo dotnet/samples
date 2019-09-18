@@ -27,7 +27,7 @@ Class Sample
       Console.Write("Substring '{0}' in '{1}' is ", str1.Substring(4, 2), str1)
       Console.Write("{0} ", str)
       Console.WriteLine("substring '{0}' in '{1}'.", str2.Substring(4, 2), str2)
-   End Sub 'Main
+   End Sub
 End Class 'Sample
 '
 'This example produces the following results:

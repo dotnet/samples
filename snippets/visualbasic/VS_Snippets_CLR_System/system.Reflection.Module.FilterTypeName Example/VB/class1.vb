@@ -20,7 +20,7 @@ Namespace ReflectionModule_Examples
             For Each t In tArray
                 Console.WriteLine("Found a module beginning with My*: {0}", t.Name)
             Next t
-        End Sub 'Main
+        End Sub
     End Class 'MyMainClass
 
     Class MySecondClass

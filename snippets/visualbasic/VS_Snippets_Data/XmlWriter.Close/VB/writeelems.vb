@@ -29,6 +29,6 @@ Public Class Sample
      ' Write the XML and close the writer.
      writer.Close()
 
-  End Sub 'Main 
+  End Sub
 End Class 'Sample
 '</snippet1>

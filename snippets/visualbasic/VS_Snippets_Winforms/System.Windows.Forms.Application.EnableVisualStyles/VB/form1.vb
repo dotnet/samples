@@ -15,7 +15,7 @@ Namespace VStyles
 
             System.Windows.Forms.Application.EnableVisualStyles()
             System.Windows.Forms.Application.Run(New Form1)
-        End Sub 'Main
+        End Sub
 
         Public Sub New()
 
@@ -30,7 +30,7 @@ Namespace VStyles
             Me.Controls.Add(Me.button1)
 
             Me.Text = "Application.EnableVisualStyles Example"
-        End Sub 'New 
+        End Sub
 
     End Class 'Form1
 End Namespace 'VStyles

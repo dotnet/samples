@@ -15,7 +15,7 @@ Public Class Form1
         ' Get the name of the DataGrid of the DataGridTable 
         ' passed as an argument. 
         Console.WriteLine(myGridTable.DataGrid.CurrentCell.ToString())
-    End Sub 'GetSelectedIndex
+    End Sub
     ' </Snippet1>
 End Class 'Form1 
 

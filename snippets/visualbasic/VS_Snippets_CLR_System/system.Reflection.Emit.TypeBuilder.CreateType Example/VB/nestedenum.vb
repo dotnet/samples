@@ -63,7 +63,7 @@ Friend Class NestedEnum
       
       ' Remove the listener for the type resolve events.
       RemoveHandler currentDomain.TypeResolve, resolveHandler 
-   End Sub 'Main
+   End Sub
 End Class 'NestedEnum
 
 
@@ -74,7 +74,7 @@ Friend Class TypeResolveHandler
    
    Public Sub New([mod] As [Module])
       m_Module = [mod]
-   End Sub 'New
+   End Sub
    
    
    Public Function ResolveEvent(sender As [Object], args As ResolveEventArgs) As [Assembly]

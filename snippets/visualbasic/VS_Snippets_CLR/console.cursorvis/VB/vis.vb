@@ -31,7 +31,7 @@ Class Sample
       End While
       Console.CursorVisible = saveCursorVisibile
       Console.CursorSize = saveCursorSize
-   End Sub 'Main
+   End Sub
 End Class 'Sample 
 '
 'This example produces the following results. Note that these results

@@ -33,7 +33,7 @@ Public Class Form1
          ' Invoke the Paint method to paint the cell with the brushes.
          gridCol.PaintCol(g, cellRect, cm, hi.Row, bBrush, fBrush, False)
       End If
-   End Sub 'PaintCell
+   End Sub
 End Class 'Form1 
 
 Public Class MyGridColumn

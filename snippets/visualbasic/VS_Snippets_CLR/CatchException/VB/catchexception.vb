@@ -10,7 +10,7 @@ Class ExceptionTestClass
       Catch e As Exception
          Console.WriteLine("Generic Exception Handler: {0}", e.ToString())
       End Try
-   End Sub 'Main
+   End Sub
 End Class 'ExceptionTestClass
 '
 'This code example produces the following results:

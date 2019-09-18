@@ -19,7 +19,7 @@ Class Form1
         'InitializeTextSearchListView();
         InitializeLocationSearchListView()
     
-    End Sub 'New
+    End Sub
     
     '/ <summary>
     '/ Required designer variable.
@@ -36,7 +36,7 @@ Class Form1
         End If
         MyBase.Dispose(disposing)
     
-    End Sub 'Dispose
+    End Sub
     
     #Region "Windows Form Designer generated code"
     
@@ -53,7 +53,7 @@ Class Form1
         Me.Name = "Form1"
         Me.Text = "Form1"
     
-    End Sub 'InitializeComponent 
+    End Sub
     
     #End Region
     
@@ -159,7 +159,7 @@ Class Form1
         Application.EnableVisualStyles()
         Application.Run(New Form1())
     
-    End Sub 'Main
+    End Sub
 End Class 'Form1 
 
 

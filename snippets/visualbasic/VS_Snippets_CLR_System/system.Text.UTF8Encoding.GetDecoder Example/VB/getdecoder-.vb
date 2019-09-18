@@ -23,6 +23,6 @@ Class UTF8EncodingExample
             Console.Write("[{0}]", c)
         Next c
         Console.WriteLine()
-    End Sub 'Main
+    End Sub
 End Class 'UTF8EncodingExample
 ' </Snippet1>

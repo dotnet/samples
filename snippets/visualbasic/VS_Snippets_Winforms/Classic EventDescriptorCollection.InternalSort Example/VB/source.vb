@@ -10,7 +10,7 @@ MustInherit Public Class Coll1
     
     Public Sub New()
         MyBase.New(Nothing)
-    End Sub 'New
+    End Sub
     
     
     
@@ -18,5 +18,5 @@ MustInherit Public Class Coll1
         ' <Snippet1>
         Me.InternalSort(New String() {"D", "B"})
         ' </Snippet1>
-    End Sub 'Method
+    End Sub
 End Class 'Coll1

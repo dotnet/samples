@@ -39,7 +39,7 @@ Public Class X509store2
         Console.ReadKey()
         Return
 
-    End Sub 'Main
+    End Sub
 
     '<Snippet8>
     'Deny the permission the ability to add to a store.
@@ -57,7 +57,7 @@ Public Class X509store2
             Return
         End Try
 
-    End Sub 'AddToStore
+    End Sub
 
     '</Snippet8>
     ' The following method is intended to demonstrate only the behavior of 

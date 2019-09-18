@@ -24,7 +24,7 @@ Public Class Form1
         Controls.Add(textBox1)
         ' Add the Label control to the form's control collection.
         Controls.Add(label1)
-    End Sub 'AddMyControls
+    End Sub
     ' </Snippet1>
 End Class 'Form1 
 

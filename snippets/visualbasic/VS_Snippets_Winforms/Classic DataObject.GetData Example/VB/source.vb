@@ -1,9 +1,6 @@
 ﻿Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
-
-
 
 Public Class Form1
     Inherits Form
@@ -24,7 +21,7 @@ Public Class Form1
         End If 
         ' Prints the string in a text box with autoconvert = true.
         textBox1.Text += myDataObject.GetData("System.String", True).ToString()
-    End Sub 'GetMyData3
+    End Sub
     ' </Snippet1>
 End Class 'Form1 
 

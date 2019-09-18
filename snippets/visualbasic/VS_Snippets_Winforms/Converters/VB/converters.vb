@@ -224,6 +224,6 @@ Console.WriteLine(TypeDescriptor.GetConverter(m).ConvertToString(m))
 
 	    '============================================================
 
-        End Sub 'Main 
+        End Sub
     End Class
     End Namespace 'TypeCon 

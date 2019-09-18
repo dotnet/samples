@@ -32,7 +32,7 @@ Public Class CodeGenerator
             FieldAttributes.Static Or FieldAttributes.Public)
       myModuleBuilder.CreateGlobalFunctions()
 ' </Snippet1>
-   End Sub 'New
+   End Sub
 
    Public ReadOnly Property MyAssembly() As AssemblyBuilder
       Get
@@ -50,5 +50,5 @@ Public Class CallerClass
       Console.WriteLine("The name of the initialized data field is :" + myInfo.Name)
       Console.WriteLine("The object having the field value is :" + _
                         myInfo.GetValue(myBuilder).ToString())
-   End Sub 'Main
+   End Sub
 End Class 'CallerClass

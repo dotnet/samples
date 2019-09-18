@@ -16,7 +16,7 @@ Public Class SamplesCompareOptions
       Public Sub New(cmpi As CompareInfo, options As CompareOptions)
          myComp = cmpi
          Me.myOptions = options
-      End Sub 'New
+      End Sub
       
       ' Compares strings with the CompareOptions specified in the constructor.
       Public Function Compare(a As [Object], b As [Object]) As Integer Implements IComparer.Compare
@@ -74,7 +74,7 @@ Public Class SamplesCompareOptions
          Console.WriteLine(myStr)
       Next myStr 
 
-   End Sub 'Main
+   End Sub
 
 End Class 'SamplesCompareOptions 
 

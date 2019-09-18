@@ -425,7 +425,7 @@ Namespace AttributesDemoControlLibrary
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
-        End Sub 'InitializeComponent 
+        End Sub
 
 #End Region
 

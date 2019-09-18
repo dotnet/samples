@@ -35,7 +35,7 @@ Namespace RSACryptoServiceProvider_Examples
             Else
                 Console.WriteLine("Invalid signature")
             End If
-        End Sub 'Main
+        End Sub
     End Class 'MyMainClass
 
     Class Sender
@@ -48,7 +48,7 @@ Namespace RSACryptoServiceProvider_Examples
             'Generate public and private key data.
             rsaPrivateParams = rsaCSP.ExportParameters(True)
             rsaPubParams = rsaCSP.ExportParameters(False)
-        End Sub 'New
+        End Sub
 
         Public ReadOnly Property PublicParameters() As RSAParameters
             Get
@@ -87,7 +87,7 @@ Namespace RSACryptoServiceProvider_Examples
             'Generate public and private key data.
             rsaPrivateParams = rsaCSP.ExportParameters(True)
             rsaPubParams = rsaCSP.ExportParameters(False)
-        End Sub 'New
+        End Sub
 
         Public ReadOnly Property PublicParameters() As RSAParameters
             Get
@@ -122,7 +122,7 @@ Namespace RSACryptoServiceProvider_Examples
             roundTrip = myAscii.GetString(fromEncrypt)
 
             Console.WriteLine("RoundTrip: {0}", roundTrip)
-        End Sub 'DecryptData
+        End Sub
     End Class 'Receiver
 End Namespace 'RSACryptoServiceProvider_Examples
 '</snippet1>

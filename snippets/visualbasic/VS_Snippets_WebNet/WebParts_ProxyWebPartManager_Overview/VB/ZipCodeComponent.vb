@@ -106,7 +106,7 @@ Namespace Samples.AspNet.VB.Controls
 				DisplayContent.Text = "My Zip Code is:  " + _zipSearch
       End If
 
-    End Sub 'OnPreRender
+    End Sub
 
     Protected Overrides Sub CreateChildControls()
       Controls.Clear()

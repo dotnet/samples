@@ -2,7 +2,6 @@
 Imports System.ComponentModel
 Imports System.Windows.Forms
 Imports System.Drawing
-Imports Microsoft.VisualBasic
 
 Public Class Form1
    Inherits Form
@@ -23,7 +22,7 @@ Private Sub GetFormats1()
    Next i 
    ' Displays the result in a message box.
    MessageBox.Show(theResult)
-End Sub 'GetFormats1
+End Sub
 ' </snippet1>
     Public Shared Sub Main()
        System.Windows.Forms.Application.Run(New Form1())

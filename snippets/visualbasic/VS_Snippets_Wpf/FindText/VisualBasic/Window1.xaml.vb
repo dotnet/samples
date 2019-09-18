@@ -45,7 +45,7 @@ Namespace SDKSample
         Public Sub New()
             InitializeComponent()
 
-        End Sub 'New
+        End Sub
 
 
         Private Sub LoadFile(ByVal sender As [Object], ByVal args As RoutedEventArgs)
@@ -86,7 +86,7 @@ Namespace SDKSample
                 End If
             End If
 
-        End Sub 'LoadFile
+        End Sub
 
 
         Private Sub SaveFile(ByVal sender As [Object], ByVal args As RoutedEventArgs)
@@ -112,17 +112,17 @@ Namespace SDKSample
                 End If
             End If
 
-        End Sub 'SaveFile
+        End Sub
 
 
         Private Sub Clear(ByVal sender As [Object], ByVal args As RoutedEventArgs)
             FlowDocRdr.Document = Nothing
 
-        End Sub 'Clear
+        End Sub
 
         Private Sub [Exit](ByVal sender As [Object], ByVal args As RoutedEventArgs)
             Me.Close()
 
-        End Sub 'Exit
+        End Sub
     End Class 'Window1 '
 End Namespace

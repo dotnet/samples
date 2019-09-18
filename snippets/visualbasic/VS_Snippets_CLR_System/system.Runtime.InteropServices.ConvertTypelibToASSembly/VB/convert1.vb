@@ -28,7 +28,7 @@ Public Class App
         Dim eventHandler As New ConversionEventHandler()
         Dim asm As AssemblyBuilder = converter.ConvertTypeLibToAssembly(typeLib, "ExplorerLib.dll", 0, eventHandler, Nothing, Nothing, Nothing, Nothing)
         asm.Save("ExplorerLib.dll")
-    End Sub 'Main
+    End Sub
 End Class 'App
  _
 
@@ -37,7 +37,7 @@ Public Class ConversionEventHandler
 
     Public Sub ReportEvent(ByVal eventKind As ImporterEventKind, ByVal eventCode As Integer, ByVal eventMsg As String) Implements ITypeLibImporterNotifySink.ReportEvent
         ' handle warning event here...
-    End Sub 'ReportEvent
+    End Sub
 
     Public Function ResolveRef(ByVal typeLib As Object) As [Assembly] Implements ITypeLibImporterNotifySink.ResolveRef
         ' resolve reference here and return a correct assembly...

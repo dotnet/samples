@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System.IO
+﻿Imports System.IO
 Imports System.Resources
 Imports System.Windows.Markup
 Imports System.Threading

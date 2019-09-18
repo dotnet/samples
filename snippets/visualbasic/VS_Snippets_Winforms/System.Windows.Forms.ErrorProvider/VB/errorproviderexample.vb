@@ -23,7 +23,7 @@ Namespace ErrorProvider
         <System.STAThread()>  _
         Public Shared Sub Main()
             System.Windows.Forms.Application.Run(New Form1())
-        End Sub 'Main
+        End Sub
 
         Public Sub New()
             
@@ -112,7 +112,7 @@ Namespace ErrorProvider
             favoriteColorErrorProvider.BlinkRate = 1000
             favoriteColorErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink
             '</Snippet2>
-        End Sub 'New
+        End Sub
  
         '<Snippet3>       
         Private Sub nameTextBox1_Validated(sender As Object, e As System.EventArgs) Handles nameTextBox1.Validated

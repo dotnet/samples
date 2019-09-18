@@ -20,7 +20,7 @@ Namespace Bubble
       Protected Overrides Sub Render(myWriter As HtmlTextWriter)
          myWriter.Write("ParentControl")
          RenderChildren(myWriter)
-      End Sub 'Render
+      End Sub
    End Class 'ParentControl
     _
    ' </snippet1>
@@ -34,7 +34,7 @@ Namespace Bubble
          Context.Response.Write("<br><br>ChildControl's OnClick called.")
          ' Bubble this event to parent.
          RaiseBubbleEvent(Me, e)
-      End Sub 'OnClick
+      End Sub
    End Class 'ChildControl 
    ' </snippet2>  
 End Namespace 'Bubble

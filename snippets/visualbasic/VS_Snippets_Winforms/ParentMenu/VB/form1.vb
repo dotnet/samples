@@ -74,6 +74,6 @@ Public Class Form1
         End If
         ' Assign mainMenu1 to the form.
         Me.Menu = mainMenu1
-    End Sub 'CreateMyMenuItems
+    End Sub
     ' </snippet1>
 End Class

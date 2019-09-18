@@ -19,7 +19,7 @@ Public Class MyWebService
     SoapHeader("myHeader", Direction := SoapHeaderDirection.InOut)> _
    Public Sub Hello()
 
-   End Sub 'Hello
+   End Sub
 End Class 'MyWebService
 
 ' </Snippet1>

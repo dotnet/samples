@@ -35,7 +35,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
         Public Sub New()
             MyBase.New(ServiceConstants.SecurityTokenServiceName, FederationUtilities.GetX509TokenFromCert(ServiceConstants.CertStoreName, ServiceConstants.CertStoreLocation, ServiceConstants.CertDistinguishedName), FederationUtilities.GetX509TokenFromCert(ServiceConstants.CertStoreName, ServiceConstants.CertStoreLocation, ServiceConstants.TargetDistinguishedName))
 
-        End Sub 'New
+        End Sub
 
         '/ <summary>
         '/ Overrides the GetIssuedClaims from the SecurityTokenService base class.
@@ -80,7 +80,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
         '</snippet1>
         Public Shared Sub Main()
 
-        End Sub 'Main 
+        End Sub
 
         '/ <summary>
         '/ Wrapper for the Application level check performed at the BookStoreSTS for 
@@ -91,7 +91,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
                 Throw New FaultException(String.Format("Purchase limit not sufficient to purchase '{0}'", bookName))
             End If
 
-        End Sub 'EnsurePurchaseLimitSufficient
+        End Sub
 
 
         '/ <summary>
@@ -264,7 +264,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
             Me.issuerTokenValue = issuerToken
             Me.proofKeyEncryptionTokenValue = encryptionToken
 
-        End Sub 'New
+        End Sub
 
         '/ <summary>
         '/ The name of the STS.
@@ -459,7 +459,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
         Protected Sub New()
             MyClass.New(String.Empty, String.Empty, 0, Nothing)
 
-        End Sub 'New
+        End Sub
 
 
         '/ <summary>
@@ -476,7 +476,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
             Me.m_keySize = keySize
             Me.m_appliesTo = appliesTo
 
-        End Sub 'New
+        End Sub
 
         ' Public properties
         '/ <summary>
@@ -553,7 +553,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
         Public Sub New()
             MyClass.New(String.Empty, String.Empty, 0, Nothing, Nothing)
 
-        End Sub 'New
+        End Sub
 
 
         '/ <summary>
@@ -568,7 +568,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
             MyBase.New(context, tokenType, keySize, appliesTo) ' Pass first 4 params to base class
             Me.requestorEntropy = entropy
 
-        End Sub 'New
+        End Sub
 
         ' Public properties
         '/ <summary>
@@ -661,7 +661,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
 
             writer.WriteEndElement()
             ' wst:RequestSecurityToken
-        End Sub 'OnWriteBodyContents
+        End Sub
 
 
 
@@ -917,7 +917,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
         Public Sub New()
             MyClass.New(String.Empty, String.Empty, 0, Nothing, Nothing, Nothing, False)
 
-        End Sub 'New
+        End Sub
 
 
         '/ <summary>
@@ -936,7 +936,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
             Me.requestedProofTokenValue = requestedProofToken
             Me.computeKeyValue = computeKey
 
-        End Sub 'New
+        End Sub
 
         ' public properties
         '/ <summary>
@@ -1143,7 +1143,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
 
             writer.WriteEndElement()
             ' wst:RequestSecurityTokenResponse
-        End Sub 'OnWriteBodyContents
+        End Sub
     End Class 'RequestSecurityTokenResponse
 
     Public NotInheritable Class FederationUtilities
@@ -1210,7 +1210,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
 
         Private Sub New()
 
-        End Sub 'New
+        End Sub
     End Class 'FederationUtilities
 
     Public NotInheritable Class SamlTokenCreator
@@ -1302,7 +1302,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
             IssuerDistinguishedName = ConfigurationManager.AppSettings("issuerDistinguishedName")
             CheckIfLoaded(IssuerDistinguishedName)
 
-        End Sub 'LoadAppSettings
+        End Sub
 
 
         '/ <summary>
@@ -1314,10 +1314,10 @@ Namespace Microsoft.ServiceModel.Samples.Federation
                 Throw New ConfigurationErrorsException("Required Configuration Element(s) missing at BookStoreSTS. Please check the STS configuration file.")
             End If
 
-        End Sub 'CheckIfLoaded
+        End Sub
 
         Private Sub New()
 
-        End Sub 'New
+        End Sub
     End Class 'ServiceConstants
 End Namespace

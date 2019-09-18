@@ -21,7 +21,7 @@ Namespace ExampleControl
         Inherits System.ComponentModel.Design.Serialization.CodeDomSerializer
 
         Public Sub New()
-        End Sub 'New
+        End Sub
 
         Public Overrides Function Deserialize(ByVal manager As System.ComponentModel.Design.Serialization.IDesignerSerializationManager, ByVal codeObject As Object) As Object
             Return Nothing

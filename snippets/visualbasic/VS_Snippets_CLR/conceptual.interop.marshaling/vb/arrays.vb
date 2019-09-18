@@ -9,7 +9,7 @@ Public Structure MyPoint
     Public Sub New(x As Integer, y As Integer)
         Me.x = x
         Me.y = y
-    End Sub 'New
+    End Sub
 End Structure
 
 <StructLayout(LayoutKind.Sequential, CharSet:=CharSet.Ansi)>
@@ -19,14 +19,14 @@ Public Structure MyPerson
     Public Sub New(first As String, last As String)
         Me.first = first
         Me.last = last
-    End Sub 'New
+    End Sub
 End Structure
 
-Public Class LibWrap
+Friend Class NativeMethods
     ' Declares a managed prototype for an array of integers by value.
     ' The array size cannot be changed, but the array is copied back.
     <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
-    Shared Function TestArrayOfInts(
+    Friend Shared Function TestArrayOfInts(
         <[In], Out> ByVal myArray() As Integer, ByVal size As Integer) _
         As Integer
     End Function
@@ -36,20 +36,20 @@ Public Class LibWrap
     ' automatically because the marshaler does not know the resulting size.
     ' The copy must be performed manually.
     <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
-    Shared Function TestRefArrayOfInts(
+    Friend Shared Function TestRefArrayOfInts(
         ByRef myArray As IntPtr, ByRef size As Integer) As Integer
     End Function
 
     ' Declares a managed prototype for a matrix of integers by value.
     <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
-    Shared Function TestMatrixOfInts(
+    Friend Shared Function TestMatrixOfInts(
         <[In], Out> ByVal matrix(,) As Integer, ByVal row As Integer) _
         As Integer
     End Function
 
     ' Declares a managed prototype for an array of strings by value.
     <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
-    Shared Function TestArrayOfStrings(
+    Friend Shared Function TestArrayOfStrings(
         <[In], Out> ByVal strArray() As String, ByVal size As Integer) _
         As Integer
     End Function
@@ -57,14 +57,14 @@ Public Class LibWrap
     ' Declares a managed prototype for an array of structures with 
     ' integers.
     <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
-    Shared Function TestArrayOfStructs(
+    Friend Shared Function TestArrayOfStructs(
         <[In], Out> ByVal pointArray() As MyPoint, ByVal size As Integer) _
         As Integer
     End Function
 
     ' Declares a managed prototype for an array of structures with strings.
     <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
-    Shared Function TestArrayOfStructs2(
+    Friend Shared Function TestArrayOfStructs2(
         <[In], Out> ByVal personArray() As MyPerson, ByVal size As Integer) _
         As Integer
     End Function
@@ -84,7 +84,7 @@ Public Class App
             Console.Write(" " & array1(i))
         Next i
 
-        Dim sum1 As Integer = LibWrap.TestArrayOfInts(array1, array1.Length)
+        Dim sum1 As Integer = NativeMethods.TestArrayOfInts(array1, array1.Length)
         Console.WriteLine(ControlChars.CrLf & "Sum of elements:" & sum1)
         Console.WriteLine(ControlChars.CrLf & "Integer array passed ByVal after call:")
         For Each i In array1
@@ -103,7 +103,7 @@ Public Class App
         Dim buffer As IntPtr = Marshal.AllocCoTaskMem(Marshal.SizeOf(
             arraySize) * array2.Length)
         Marshal.Copy(array2, 0, buffer, array2.Length)
-        Dim sum2 As Integer = LibWrap.TestRefArrayOfInts(buffer,
+        Dim sum2 As Integer = NativeMethods.TestRefArrayOfInts(buffer,
             arraySize)
         Console.WriteLine(ControlChars.CrLf & "Sum of elements:" & sum2)
 
@@ -135,7 +135,7 @@ Public Class App
             Console.WriteLine("")
         Next i
 
-        Dim sum3 As Integer = LibWrap.TestMatrixOfInts(matrix, [DIM] + 1)
+        Dim sum3 As Integer = NativeMethods.TestMatrixOfInts(matrix, [DIM] + 1)
         Console.WriteLine(ControlChars.CrLf & "Sum of elements:" & sum3)
         Console.WriteLine(ControlChars.CrLf & "Matrix after call:")
         For i = 0 To [DIM]
@@ -155,7 +155,7 @@ Public Class App
         For Each s In strArray
             Console.Write(" " & s)
         Next s
-        Dim lenSum As Integer = LibWrap.TestArrayOfStrings(
+        Dim lenSum As Integer = NativeMethods.TestArrayOfStrings(
             strArray, strArray.Length)
         Console.WriteLine(ControlChars.CrLf &
             "Sum of string lengths:" & lenSum)
@@ -173,7 +173,7 @@ Public Class App
         For Each p In points
             Console.WriteLine($"x = {p.x}, y = {p.y}")
         Next p
-        Dim allSum As Integer = LibWrap.TestArrayOfStructs(points,
+        Dim allSum As Integer = NativeMethods.TestArrayOfStructs(points,
             points.Length)
         Console.WriteLine(ControlChars.CrLf & "Sum of points:" & allSum)
         Console.WriteLine(ControlChars.CrLf & "Points array after call:")
@@ -192,7 +192,7 @@ Public Class App
             Console.WriteLine($"first = {pe.first}, last = {pe.last}")
         Next pe
 
-        Dim namesSum As Integer = LibWrap.TestArrayOfStructs2(persons,
+        Dim namesSum As Integer = NativeMethods.TestArrayOfStructs2(persons,
             persons.Length)
         Console.WriteLine(ControlChars.CrLf & "Sum of name lengths:" &
             namesSum)

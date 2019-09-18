@@ -82,7 +82,7 @@ Private Sub AddCustomDataTableStyle()
    ' the GridTableStylesCollection. 
    myDataGrid.TableStyles.Add(ts1)
    myDataGrid.TableStyles.Add(ts2)
-End Sub 'AddCustomDataTableStyle
+End Sub
   '</snippet1>
 
   '<snippet2>

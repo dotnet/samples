@@ -76,6 +76,6 @@ Public Class Form1
 
         ' Clear the File menu items. 
         fileMenu.MenuItems.Clear()
-    End Sub 'InitializeMyMenu
+    End Sub
     ' </snippet1>
 End Class

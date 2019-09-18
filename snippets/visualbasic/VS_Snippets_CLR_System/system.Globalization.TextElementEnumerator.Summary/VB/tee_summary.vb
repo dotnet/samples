@@ -24,7 +24,7 @@ Public Class SamplesTextElementEnumerator
          Console.WriteLine("[{0}]:" + ControlChars.Tab + "{1}" + ControlChars.Tab + "{2}", myTEE.ElementIndex, myTEE.Current, myTEE.GetTextElement())
       End While
 
-   End Sub 'Main 
+   End Sub
 
 End Class 'SamplesTextElementEnumerator
 

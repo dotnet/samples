@@ -19,7 +19,7 @@ Namespace CodeDomSamples
 
          ' Throw New System.Exception
         '</Snippet2>
-      End Sub 'New 
+      End Sub
 
    End Class 'CodeThrowExceptionStatementExample 
 

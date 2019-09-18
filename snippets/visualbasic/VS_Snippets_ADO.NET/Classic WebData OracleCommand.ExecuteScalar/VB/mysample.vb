@@ -14,6 +14,6 @@ Public Sub CreateOracleCommand(myScalarQuery As String, connection As OracleConn
     command.Connection.Open()
     command.ExecuteScalar()
     connection.Close()
-End Sub 'CreateOracleCommand
+End Sub
 ' </Snippet1>
 End Class

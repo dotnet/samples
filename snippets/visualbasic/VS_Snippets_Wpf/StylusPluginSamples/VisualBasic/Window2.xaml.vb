@@ -26,7 +26,7 @@ Class Window2
         
         WindowState = WindowState.Maximized
     
-    End Sub 'New
+    End Sub
 End Class 'Window2 
 
 Public Class FilteredInkCanvas
@@ -41,7 +41,7 @@ Public Class FilteredInkCanvas
         Me.DefaultDrawingAttributes.Height = 20
         Me.DefaultDrawingAttributes.Width = 20
     
-    End Sub 'New
+    End Sub
     
     
     Protected Overrides Sub OnStrokeCollected(ByVal e As InkCanvasStrokeCollectedEventArgs) 
@@ -52,5 +52,5 @@ Public Class FilteredInkCanvas
         Dim newStroke As New ImageStroke(e.Stroke, Me.DynamicRenderer.ElementBounds)
         Me.Strokes.Add(newStroke)
     
-    End Sub 'OnStrokeCollected
+    End Sub
 End Class 'FilteredInkCanvas

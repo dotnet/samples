@@ -13,11 +13,11 @@ Public Class Sample
         'Validate file against the XSD schema. 
         'The validation should fail.
         Validate("notValidXSD.xml")
-    End Sub 'New
+    End Sub
     
     Public Shared Sub Main()
         Dim validation As New Sample()
-    End Sub 'Main
+    End Sub
     
     Private Sub Validate(filename As String)
         Try
@@ -39,12 +39,12 @@ Public Class Sample
                 reader.Close()
             End If
         End Try
-    End Sub 'Validate
+    End Sub
      
     'Display the validation error.
     Private Sub ValidationEventHandle(sender As Object, args As ValidationEventArgs)
         m_success = False
         Console.WriteLine(ControlChars.CrLf & ControlChars.Tab & "Validation error: " & args.Message)
-    End Sub 'ValidationEventHandle
+    End Sub
 End Class 'Sample
 ' </Snippet1>

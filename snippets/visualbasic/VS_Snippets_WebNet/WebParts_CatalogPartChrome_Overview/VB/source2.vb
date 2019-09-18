@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-
+﻿
 ' <Snippet2>
 Namespace Samples.AspNet.VB.Controls
 

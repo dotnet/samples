@@ -2,7 +2,6 @@
 Imports System.ComponentModel
 Imports System.Windows.Forms
 Imports System.Reflection
-Imports Microsoft.VisualBasic
 Imports System.Runtime.CompilerServices
 
 <Assembly: AssemblyCompany("Microsoft")>
@@ -19,7 +18,7 @@ Namespace CodeExamples
       
       Public Sub New()
          InitializeComponent()
-      End Sub 'New
+      End Sub
       
       Private Sub InitializeComponent()
          Me.labelVersionInfo = New System.Windows.Forms.Label()
@@ -48,11 +47,11 @@ Namespace CodeExamples
          Me.Name = "AboutDialog"
          Me.Text = "About"
          Me.ResumeLayout(False)
-      End Sub 'InitializeComponent
+      End Sub
        
      Shared Sub Main()
          Application.Run(New AboutDialog())
-      End Sub 'Main
+      End Sub
       
       
 ' <snippet1>

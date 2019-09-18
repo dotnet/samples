@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System.Collections.Generic
+﻿Imports System.Collections.Generic
 Imports System.Text
 Imports System.Printing
 Imports System.IO
@@ -23,7 +22,7 @@ Namespace BatchPrintXPSFiles
 			' constructor will execute.
 			printingThread.Start()
 
-		End Sub 'end Main
+		End Sub
 
 	End Class 'end Program class
 
@@ -75,7 +74,7 @@ Namespace BatchPrintXPSFiles
 			Console.WriteLine("Press Enter to end program.")
 			Console.ReadLine()
 
-		End Sub ' end PrintXPS method
+		End Sub
 
 	End Class ' end BatchXPSPrinter class
 	'</SnippetBatchPrintXPSFiles>

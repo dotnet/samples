@@ -59,7 +59,7 @@ Class MyPortTypeClass
       Catch e As Exception
          Console.WriteLine("Exception:" + e.Message.ToString())
       End Try
-   End Sub 'Main
+   End Sub
    
    Public Shared Function CreateOperation(operationName As String, inputMessage As String, _
                            outputMessage As String, targetNamespace As String) As Operation

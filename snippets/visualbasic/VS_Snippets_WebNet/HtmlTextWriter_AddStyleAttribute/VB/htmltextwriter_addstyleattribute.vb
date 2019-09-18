@@ -55,7 +55,7 @@ Namespace CustomControls
             ' Close the element.
             writer.RenderEndTag()
             ' </Snippet1>
-        End Sub 'Render
+        End Sub
     End Class 'FirstControl
 
 End Namespace 'CustomControls 

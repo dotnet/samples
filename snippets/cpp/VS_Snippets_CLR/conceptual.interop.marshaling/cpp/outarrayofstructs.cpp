@@ -4,7 +4,7 @@ using namespace System::Runtime::InteropServices;
 
 //<snippet20>
 // Declares a class member for each structure element.
-[StructLayout(LayoutKind::Sequential, CharSet=CharSet::Ansi)]
+[StructLayout(LayoutKind::Sequential, CharSet = CharSet::Ansi)]
 public ref class MyStruct
 {
 public:
@@ -21,17 +21,15 @@ public:
     int size;
 };
 
-public ref class LibWrap
+private ref class NativeMethods
 {
 public:
     // Declares managed prototypes for the unmanaged function.
     [DllImport("..\\LIB\\PInvokeLib.dll")]
-    static void TestOutArrayOfStructs(int% size,
-        IntPtr% outArray);
+    static void TestOutArrayOfStructs(int% size, IntPtr% outArray);
 
     [DllImport("..\\LIB\\PInvokeLib.dll")]
-    static void TestOutArrayOfStructs(int% size,
-        MyUnsafeStruct** outArray);
+    static void TestOutArrayOfStructs(int% size, MyUnsafeStruct** outArray);
 };
 //</snippet20>
 
@@ -52,7 +50,7 @@ public:
         int size;
         IntPtr outArray;
 
-        LibWrap::TestOutArrayOfStructs(size, outArray);
+        NativeMethods::TestOutArrayOfStructs(size, outArray);
         array<MyStruct^>^ manArray = gcnew array<MyStruct^>(size);
         IntPtr current = outArray;
         for (int i = 0; i < size; i++)
@@ -75,7 +73,7 @@ public:
         int size;
         MyUnsafeStruct* pResult;
 
-        LibWrap::TestOutArrayOfStructs(size, &pResult);
+        NativeMethods::TestOutArrayOfStructs(size, &pResult);
         MyUnsafeStruct* pCurrent = pResult;
         for (int i = 0; i < size; i++, pCurrent++)
         {

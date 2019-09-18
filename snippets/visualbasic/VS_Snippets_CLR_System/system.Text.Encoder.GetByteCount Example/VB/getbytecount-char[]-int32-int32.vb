@@ -16,7 +16,7 @@ Class EncoderExample
         Dim byteCount As Integer = _
             uniEncoder.GetByteCount(chars, 0, chars.Length, True)
         Console.WriteLine("{0} bytes needed to encode characters.", byteCount)
-    End Sub 'Main
+    End Sub
 End Class 'EncoderExample
 '
 'This example produces the following output.

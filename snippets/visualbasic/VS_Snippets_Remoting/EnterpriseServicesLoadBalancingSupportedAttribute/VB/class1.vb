@@ -32,7 +32,7 @@ Public Class LoadBalancingSupportedAttribute_Value
         ' Display the value of the attribute's Value property.
         MsgBox("LoadBalancingSupportedAttribute.Value: " & attribute.Value)
     
-    End Sub 'ValueExample
+    End Sub
 End Class 'LoadBalancingSupportedAttribute_Value
 ' </snippet3>
 
@@ -48,5 +48,5 @@ Public Class LoadBalancingSupportedAttribute_Example
         ' Demonstrate the LoadBalancingSupportedAttribute properties.
         valueExample.ValueExample()
 
-    End Sub 'Main
+    End Sub
 End Class 'LoadBalancingSupportedAttribute_Example

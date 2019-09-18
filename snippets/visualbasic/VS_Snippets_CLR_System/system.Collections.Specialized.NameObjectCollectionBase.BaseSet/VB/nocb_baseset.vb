@@ -41,7 +41,7 @@ Public Class MyCollection
       For Each de In  d
          Me.BaseAdd(CType(de.Key, [String]), de.Value)
       Next de
-   End Sub 'New
+   End Sub
 
 End Class 'MyCollection
 
@@ -71,14 +71,14 @@ Public Class SamplesNameObjectCollectionBase
       Console.WriteLine("After setting the value associated with the key ""red"":")
       PrintKeysAndValues2(myCol)
 
-   End Sub 'Main
+   End Sub
 
    Public Shared Sub PrintKeysAndValues2(myCol As MyCollection)
       Dim s As [String]
       For Each s In  myCol.AllKeys
          Console.WriteLine("{0}, {1}", s, myCol(s))
       Next s
-   End Sub 'PrintKeysAndValues2
+   End Sub
 
 End Class 'SamplesNameObjectCollectionBase 
 

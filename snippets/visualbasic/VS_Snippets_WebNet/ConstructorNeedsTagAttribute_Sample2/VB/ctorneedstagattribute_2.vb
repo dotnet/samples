@@ -34,7 +34,7 @@ Public NotInheritable Class SimpleControl
    
    Protected Overrides Sub Render(output As HtmlTextWriter)
       output.Write("Testing the ConstructorNeedsTagAttribute class.")
-   End Sub 'Render 
+   End Sub
  End Class 'SimpleControl
 ' </Snippet1>
 End Namespace 'MyUserControl

@@ -48,7 +48,7 @@ Public Class SamplesBitArray
             Console.Write("{0,8}", obj)
         Next obj
         Console.WriteLine()
-    End Sub 'PrintValues
+    End Sub
 
 End Class
 

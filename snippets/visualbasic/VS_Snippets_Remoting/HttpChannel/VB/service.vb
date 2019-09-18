@@ -17,7 +17,7 @@ Public Class SampleServiceEventArgs
     Public Sub New(ByVal message As String) 
         m_Message = message
     
-    End Sub 'New
+    End Sub
     
     
     Public ReadOnly Property Message() As String 

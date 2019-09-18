@@ -25,7 +25,7 @@ Public Class MyForm
    Public Sub New()
       InitializeComponent()
       SetUp()
-   End Sub 'New
+   End Sub
    
    
    ' Clean up any resources being used.
@@ -36,12 +36,12 @@ Public Class MyForm
          End If
       End If
       MyBase.Dispose(disposing)
-   End Sub 'Dispose
+   End Sub
    
    
    Public Shared Sub Main()
       Application.Run(New MyForm())
-   End Sub 'Main
+   End Sub
    
    
    Private Sub InitializeComponent()
@@ -76,7 +76,7 @@ Public Class MyForm
       Me.Controls.Add(toggleStyleButton)
       Me.Controls.Add(toggleVisibleButton)
       Me.Controls.Add(myDataGrid)
-   End Sub 'InitializeComponent
+   End Sub
    
    
    Private Sub SetUp()
@@ -84,7 +84,7 @@ Public Class MyForm
       MakeDataSet()
       ' Bind the DataGrid to the DataSet.
       myDataGrid.SetDataBinding(myDataSet, "Person")
-   End Sub 'SetUp
+   End Sub
    
    
    ' Create a DataSet with two tables and populate it.
@@ -135,12 +135,12 @@ Public Class MyForm
          ' Add the row to the 'Detail' table.
          detailTable.Rows.Add(newRow2)
       Next i
-   End Sub 'MakeDataSet
+   End Sub
 ' <Snippet1>
    Private Sub CallParentRowsLabelStyleChanged()
       AddHandler myDataGrid.ParentRowsLabelStyleChanged, AddressOf _
                                            DataGridParentRowsLabelStyleChanged_Clicked
-   End Sub 'CallParentRowsLabelStyleChanged
+   End Sub
    
    
    ' Set the 'ParentRowsLabelStyle' property on click of a button.
@@ -150,7 +150,7 @@ Public Class MyForm
         Else
             myDataGrid.ParentRowsLabelStyle = DataGridParentRowsLabelStyle.Both
         End If
-    End Sub 'ToggleStyle_Clicked
+    End Sub
 
     ' raise the event when 'ParentRowsLabelStyle' property is changed.
     Private Sub DataGridParentRowsLabelStyleChanged_Clicked(ByVal sender As Object, ByVal e As EventArgs)
@@ -160,14 +160,14 @@ Public Class MyForm
         myMessage += myLabelStyle
 
         MessageBox.Show(myMessage, "ParentRowsLabelStyle information")
-    End Sub 'DataGridParentRowsLabelStyleChanged_Clicked
+    End Sub
 
     ' </Snippet1>
     ' <Snippet2>
     Private Sub CallParentRowsVisibleChanged()
         AddHandler myDataGrid.ParentRowsVisibleChanged, AddressOf _
                                                   DataGridParentRowsVisibleChanged_Clicked
-    End Sub 'CallParentRowsVisibleChanged
+    End Sub
 
 
     ' Set the 'ParentRowsVisible' property on click of a button.
@@ -177,7 +177,7 @@ Public Class MyForm
         Else
             myDataGrid.ParentRowsVisible = True
         End If
-    End Sub 'ToggleVisible_Clicked
+    End Sub
 
     ' raise the event when 'ParentRowsVisible' property is changed.
     Private Sub DataGridParentRowsVisibleChanged_Clicked(ByVal sender As Object, ByVal e As EventArgs)
@@ -185,6 +185,6 @@ Public Class MyForm
         Dim visible As Boolean = myDataGrid.ParentRowsVisible
         myMessage += IIF(visible, " ", "Not") + "Visible"
         MessageBox.Show(myMessage, "ParentRowsVisible information")
-    End Sub 'DataGridParentRowsVisibleChanged_Clicked
+    End Sub
     ' </Snippet2>
 End Class 'MyForm 

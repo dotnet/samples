@@ -59,7 +59,7 @@ Class MyListItem
         myID = parentItems.Count + 1
         myIndex = parentItems.Count
         myBounds = myRect
-    End Sub 'New
+    End Sub
 
     ''' <summary>
     ''' Gets and sets the text of the item.
@@ -267,7 +267,7 @@ Class MyListItem
         Dim handler As PaintEventHandler = AddressOf parentControl.PaintMe
         parentControl.BeginInvoke(handler, New Object() {Me, args})
 
-    End Sub 'SetFocus
+    End Sub
 
 #End Region
 End Class

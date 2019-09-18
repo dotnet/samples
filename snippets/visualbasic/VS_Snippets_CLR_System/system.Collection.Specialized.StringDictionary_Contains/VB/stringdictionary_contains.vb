@@ -34,7 +34,7 @@ Public Class SamplesStringDictionary
       End If
       Console.WriteLine()
 
-   End Sub 'Main
+   End Sub
 
    Public Shared Sub PrintKeysAndValues(myCol As StringDictionary)
       Dim de As DictionaryEntry
@@ -45,7 +45,7 @@ Public Class SamplesStringDictionary
       Next de
       Console.WriteLine()
 
-   End Sub 'PrintKeysAndValues
+   End Sub
 
 End Class 'SamplesStringDictionary 
 

@@ -12,7 +12,7 @@ Class LoopbackBroadcastSample
         Dim loopbackBroadcastSampleObj As New LoopbackBroadcastSample()
         loopbackBroadcastSampleObj.PrintLoopbackAddress()
         loopbackBroadcastSampleObj.PrintBroadcastAddress()
-    End Sub 'Main
+    End Sub
     
     
 ' <Snippet1>
@@ -20,7 +20,7 @@ Class LoopbackBroadcastSample
         ' Gets the IP loopback address and converts it to a string.
         Dim IpAddressString As [String] = IPAddress.Loopback.ToString()
         Console.WriteLine(("Loopback IP address : " + IpAddressString))
-    End Sub 'PrintLoopbackAddress
+    End Sub
 ' </Snippet1>	
 
 ' <Snippet2>	
@@ -28,7 +28,7 @@ Class LoopbackBroadcastSample
         ' gets the IP Broadcast address and convert it to string.
         Dim IpAddressString As [String] = IPAddress.Broadcast.ToString()
         Console.WriteLine((ControlChars.Cr + "Broadcast IP address : " + IpAddressString))
-    End Sub 'PrintBroadcastAddress
+    End Sub
 ' </Snippet2>	
 
 End Class 'LoopbackBroadcastSample 

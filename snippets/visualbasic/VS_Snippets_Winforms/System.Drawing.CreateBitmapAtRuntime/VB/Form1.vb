@@ -15,7 +15,7 @@ Public Class Form1
 
         CreateBitmapAtRuntime()
     
-    End Sub 'New
+    End Sub
     
     
     <STAThread()>  _
@@ -24,7 +24,7 @@ Public Class Form1
         Application.SetCompatibleTextRenderingDefault(False)
         Application.Run(New Form1())
     
-    End Sub 'Main
+    End Sub
     
     
 

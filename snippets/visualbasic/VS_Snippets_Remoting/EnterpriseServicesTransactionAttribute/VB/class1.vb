@@ -48,7 +48,7 @@ Public Class TransactionAttribute_Isolation
         ' Display the new value of the attribute's Isolation property.
         MsgBox("TransactionAttribute.Isolation: " & attribute.Isolation)
     
-    End Sub 'IsolationExample
+    End Sub
 End Class 'TransactionAttribute_Isolation
 ' </snippet3>
 
@@ -71,7 +71,7 @@ Public Class TransactionAttribute_Timeout
         ' Display the new value of the attribute's Timeout property.
         MsgBox("TransactionAttribute.Timeout: " & attribute.Timeout)
     
-    End Sub 'TimeoutExample
+    End Sub
 End Class 'TransactionAttribute_Timeout
 ' </snippet4>
 
@@ -87,7 +87,7 @@ Public Class TransactionAttribute_Value
         ' Display the value of the attribute's Value property.
         MsgBox("TransactionAttribute.Value: " & attribute.Value)
     
-    End Sub 'ValueExample
+    End Sub
 End Class 'TransactionAttribute_Value
 ' </snippet5>
 
@@ -107,5 +107,5 @@ Public Class TransactionAttribute_Example
         'timeoutExample.TimeoutExample()
         'valueExample.ValueExample()
     
-    End Sub 'Main
+    End Sub
 End Class 'TransactionAttribute_Example

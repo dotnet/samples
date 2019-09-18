@@ -18,7 +18,7 @@ Public Sub InitMyForm()
    WindowState = FormWindowState.Maximized
    ' Displays the window information.
    label1.Text = "The Form Window is " + WindowState
-End Sub 'InitMyForm
+End Sub
 ' </snippet1>
 
    Public Shared Sub Main()

@@ -18,7 +18,7 @@ Class ShadowedStroke
 
         AddHandler Me.DrawingAttributes.PropertyDataChanged, AddressOf DrawingAttributes_PropertyDataChanged
 
-    End Sub 'New
+    End Sub
 
     Public Property Shadowed() As Boolean 
 
@@ -68,6 +68,6 @@ Class ShadowedStroke
         End If
         MyBase.DrawCore(context, overriddenAttributes)
 
-    End Sub 'DrawCore
+    End Sub
 End Class 'ShadowedStroke
 '</Snippet1>

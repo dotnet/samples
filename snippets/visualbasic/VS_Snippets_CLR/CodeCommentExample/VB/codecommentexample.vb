@@ -20,7 +20,7 @@ Namespace CodeDomSamples
     
          ' 'This comment was generated from a System.CodeDom.CodeComment
     '</Snippet2>
-      End Sub 'New 
+      End Sub
 
    End Class 'CodeCommentExample
 

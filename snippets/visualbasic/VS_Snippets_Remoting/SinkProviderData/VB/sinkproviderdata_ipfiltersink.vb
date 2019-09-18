@@ -34,7 +34,7 @@ Namespace IPFilter
       Private myCollectionData As ICollection = Nothing
 
       Public Sub New()
-      End Sub 'New
+      End Sub
 
       Public Sub New(properties As IDictionary, providerData As ICollection)
          Dim myMode As String = CType(properties("mode"), String)
@@ -46,12 +46,12 @@ Namespace IPFilter
             End If
          End If
          myCollectionData = providerData
-      End Sub 'New
+      End Sub
 
 <SecurityPermission(SecurityAction.Demand, Flags := SecurityPermissionFlag.Infrastructure)> _
       Public Sub GetChannelData(myLocalChannelData As IChannelDataStore) Implements _
                                        IServerChannelSinkProvider.GetChannelData
-      End Sub 'GetChannelData
+      End Sub
 
 <SecurityPermission(SecurityAction.Demand, Flags := SecurityPermissionFlag.Infrastructure)> _
       Public Function CreateSink(myChannel As IChannelReceiver) As IServerChannelSink Implements _
@@ -126,7 +126,7 @@ Namespace IPFilter
             Console.Write(ControlChars.Tab + "{0}", myEnumerator.Current)
          End While
          Console.WriteLine()
-      End Sub 'PrintValues
+      End Sub
    End Class 'MySinkProviderData
      ' class MySinkProviderData
 ' </Snippet4>
@@ -172,7 +172,7 @@ Namespace IPFilter
                "(" + ipAddress1.ToString() + ") cannot be more specific than mask " + _
                                                       "(" + mask.ToString() + ")")
             End If
-         End Sub 'New
+         End Sub
 
          Public Function MatchIPAddress(ipToMatch As Integer) As Boolean
             Return(myNewMask And ipToMatch) = myNewIPAddress
@@ -197,13 +197,13 @@ Namespace IPFilter
          myIServerChannelSink_newSink = myIServerChannelSink_nextSink
 
          myBool_Accept = myAcceptMode
-      End Sub 'New
+      End Sub
        ' MyIPFilterChannelSink
 
       Public Sub AddFilter(mask As IPAddress, ipAddress1 As IPAddress)
          Dim f As New MyFilter(mask, ipAddress1)
          myFilterSet.Add(f)
-      End Sub 'AddFilter
+      End Sub
 
 <SecurityPermission(SecurityAction.Demand, Flags := SecurityPermissionFlag.Infrastructure)> _
       Public Function ProcessMessage(sinkStack As IServerChannelSinkStack, requestMsg As _
@@ -239,7 +239,7 @@ Namespace IPFilter
       Public Sub AsyncProcessResponse(sinkStack As IServerResponseChannelSinkStack, state As _
                            Object, msg As IMessage, headers As ITransportHeaders, stream As Stream) _
                                                 Implements IServerChannelSink.AsyncProcessResponse
-      End Sub 'AsyncProcessResponse
+      End Sub
 
       ' AsyncProcessResponse
 

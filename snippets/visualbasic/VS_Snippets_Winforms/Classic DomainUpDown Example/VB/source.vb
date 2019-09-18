@@ -1,9 +1,6 @@
 ﻿Imports System.Data
 Imports System.ComponentModel
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
-
-
 
 Public Class Form1
     Inherits Form
@@ -20,7 +17,7 @@ Public Class Form1
         
         ' Add the DomainUpDown control to the form.
         Controls.Add(domainUpDown1)
-    End Sub 'MySub
+    End Sub
     
     
     Private Sub button1_Click(sender As System.Object, e As System.EventArgs)
@@ -33,7 +30,7 @@ Public Class Form1
         
         ' Clear the TextBox.
         textBox1.Text = ""
-    End Sub 'button1_Click
+    End Sub
     
     
     Private Sub checkBox1_Click(sender As System.Object, e As System.EventArgs)
@@ -44,7 +41,7 @@ Public Class Form1
         Else
             domainUpDown1.Sorted = True
         End If
-    End Sub 'checkBox1_Click
+    End Sub
     
     
     Private Sub domainUpDown1_SelectedItemChanged _
@@ -53,7 +50,7 @@ Public Class Form1
         ' Display the SelectedIndex and SelectedItem property values in a MessageBox.
         MessageBox.Show(("SelectedIndex: " & domainUpDown1.SelectedIndex.ToString() & _
             ControlChars.Cr & "SelectedItem: " & domainUpDown1.SelectedItem.ToString()))
-    End Sub 'domainUpDown1_SelectedItemChanged
+    End Sub
     ' </Snippet1>
 End Class 'Form1
 

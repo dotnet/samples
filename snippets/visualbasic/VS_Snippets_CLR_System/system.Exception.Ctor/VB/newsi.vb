@@ -11,17 +11,17 @@ Namespace NDP_UE_VB
            
         Public Sub New( )
             MyBase.New( overflowMessage )
-        End Sub ' New
+        End Sub
            
         Public Sub New( auxMessage As String )
             MyBase.New( String.Format( "{0} - {1}", _
                 overflowMessage, auxMessage ) )
-        End Sub ' New
+        End Sub
            
         Public Sub New( auxMessage As String, inner As Exception )
             MyBase.New( String.Format( "{0} - {1}", _
                 overflowMessage, auxMessage ), inner )
-        End Sub ' New
+        End Sub
     End Class ' LogTableOverflowException
 
     Class LogTable
@@ -29,7 +29,7 @@ Namespace NDP_UE_VB
         Public Sub New( numElements As Integer )
             logArea = New String( numElements ) { }
             elemInUse = 0
-        End Sub ' New
+        End Sub
            
         Protected logArea( ) As String
         Protected elemInUse As Integer
@@ -76,7 +76,7 @@ Namespace NDP_UE_VB
             Catch ex As Exception
                 Console.WriteLine( ex.ToString( ) )
             End Try
-        End Sub ' Main
+        End Sub
 
     End Module ' OverflowDemo
 End Namespace ' NDP_UE_VB

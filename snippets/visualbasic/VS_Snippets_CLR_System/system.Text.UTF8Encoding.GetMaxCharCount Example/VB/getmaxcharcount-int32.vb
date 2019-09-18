@@ -12,6 +12,6 @@ Class UTF8EncodingExample
             maxCharCount, _
             byteCount _
         )
-    End Sub 'Main
+    End Sub
 End Class 'UTF8EncodingExample
 ' </Snippet1>

@@ -6,7 +6,7 @@ Imports System.Reflection.Emit
 ' Create a class having two public methods and one protected method.
 Public Class MyTypeClass
     Public Sub MyMethods()
-    End Sub 'MyMethods
+    End Sub
     Public Function MyMethods1() As Integer
         Return 3
     End Function 'MyMethods1
@@ -28,7 +28,7 @@ Public Class TypeMain
         Console.WriteLine((ControlChars.Cr + "The number of protected methods is " & myArrayMethodInfo1.Length.ToString() & "."))
         ' Display all the nonpublic methods.
         DisplayMethodInfo(myArrayMethodInfo1)
-    End Sub 'Main
+    End Sub
 
     Public Shared Sub DisplayMethodInfo(ByVal myArrayMethodInfo() As MethodInfo)
         ' Display information for all methods.
@@ -37,6 +37,6 @@ Public Class TypeMain
             Dim myMethodInfo As MethodInfo = CType(myArrayMethodInfo(i), MethodInfo)
             Console.WriteLine((ControlChars.Cr + "The name of the method is " & myMethodInfo.Name & "."))
         Next i
-    End Sub 'DisplayMethodInfo
+    End Sub
 End Class 'TypeMain	
 ' </Snippet1>

@@ -34,12 +34,12 @@ Public Class MyFormControl
       Controls.AddRange(New Control() {myDateTimePicker, myButton})
       Text = "Control Example"
       AddEventHandler()
-   End Sub 'New
+   End Sub
    
    Shared Sub Main()
       Dim myForm As New MyFormControl()
       myForm.ShowDialog()
-   End Sub 'Main
+   End Sub
 
 ' <Snippet1>
    Private Sub myButton_Click(sender As Object, e As EventArgs)

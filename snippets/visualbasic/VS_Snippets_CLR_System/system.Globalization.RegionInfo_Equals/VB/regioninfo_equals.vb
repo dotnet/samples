@@ -21,7 +21,7 @@ Public Class SamplesRegionInfo
          Console.WriteLine("The two RegionInfo instances are NOT equal.")
       End If 
 
-   End Sub 'Main
+   End Sub
 
 End Class 'SamplesRegionInfo 
 

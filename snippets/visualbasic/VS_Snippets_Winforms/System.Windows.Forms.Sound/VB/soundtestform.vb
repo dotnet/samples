@@ -371,7 +371,7 @@ Public Class SoundTestForm
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show
         Me.Text = "Sound API Test Form"
         Me.ResumeLayout(False)
-    End Sub 'InitializeComponent
+    End Sub
 
     <STAThread()> _
     Shared Sub Main()

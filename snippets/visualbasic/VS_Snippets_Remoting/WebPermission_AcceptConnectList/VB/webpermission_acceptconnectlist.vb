@@ -25,7 +25,7 @@ Class WebPermission_AcceptConnectList
       Catch e As Exception
          Console.WriteLine(("Exception : " + e.Message))
       End Try
-   End Sub 'Main
+   End Sub
    
    
    Public Sub DisplayAcceptConnect()
@@ -67,7 +67,7 @@ Class WebPermission_AcceptConnectList
       End While 
  ' </Snippet2>
  
-   End Sub 'DisplayAcceptConnect
+   End Sub
 
    
    Private Sub PrintKeysAndValues(myHashtable As Hashtable, myList As IEnumerable)
@@ -84,6 +84,6 @@ Class WebPermission_AcceptConnectList
       While myEnumerator1.MoveNext()
          Console.Write(myEnumerator1.Current)
       End While
-   End Sub 'PrintKeysAndValues
+   End Sub
 
 End Class 'WebPermission_AcceptConnectList

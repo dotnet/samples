@@ -19,7 +19,7 @@ End Sub
         ' Insert code to create and populate columns.
         Dim myDatatView As New DataView(myTable)
         myGrid.DataSource = myDatatView
-    End Sub 'BindToDataView
+    End Sub
     
     Private Sub BindToDataSet(myGrid As DataGrid)
         ' Create a DataSet.
@@ -28,7 +28,7 @@ End Sub
         myGrid.DataSource = myDataSet
         ' Use the DataMember property to specify the DataTable.
         myGrid.DataMember = "Suppliers"
-    End Sub 'BindToDataSet
+    End Sub
     
     Private Function GetDataViewFromDataSource() As DataView
         ' Create a DataTable variable, and set it to the DataSource.

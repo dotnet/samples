@@ -55,7 +55,7 @@ Class Program
         Console.ReadLine()
         Automation.RemoveAllEventHandlers()
     
-    End Sub 'Main
+    End Sub
 End Class 'Program
 
 
@@ -100,7 +100,7 @@ Class Reader
         ' </Snippet104>
         Automation.AddAutomationFocusChangedEventHandler(New AutomationFocusChangedEventHandler(AddressOf OnFocusChanged))
     
-    End Sub 'New
+    End Sub
     
     
     
@@ -108,7 +108,7 @@ Class Reader
     Private Sub OnFocusChanged(ByVal src As Object, ByVal e As AutomationFocusChangedEventArgs)
         Dim elementFocused As AutomationElement = DirectCast(src, AutomationElement)
         ' TODO: Do something in response to the focus change.
-    End Sub 'OnFocusChanged
+    End Sub
     ' </Snippet106>
 
     ' <Snippet105>
@@ -140,7 +140,7 @@ Class Reader
             End If
         End If
      
-    End Sub 'OnStructureChanged
+    End Sub
     ' </Snippet105>
 
     ' <Snippet101> 
@@ -161,7 +161,7 @@ Class Reader
             Console.WriteLine("Window closed.")
         End If
     
-    End Sub 'WindowClosedHandler
+    End Sub
     
     
     ''' <summary>
@@ -216,7 +216,7 @@ Class Reader
             Automation.AddAutomationEventHandler(WindowPattern.WindowClosedEvent, element, TreeScope.Element, onWindowClosed)
         End If
 
-    End Sub 'AddToWindowHandler
+    End Sub
 
 
     ' <Snippet102>        

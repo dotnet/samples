@@ -34,7 +34,7 @@ Class UIARangeValuePattern_snippets
         ' <Snippet104Maximum>
         SetRangeValue(targetControl(0), rangeValuePattern.Current.Maximum)
 
-    End Sub 'New
+    End Sub
      ' </Snippet104Maximum>
     
     
@@ -214,7 +214,7 @@ Class UIARangeValuePattern_snippets
             ' TO DO: Error handling.
         End Try
 
-    End Sub 'SetRangeValue
+    End Sub
     ' </Snippet103>
 
     ' <Snippet104>
@@ -250,7 +250,7 @@ Class UIARangeValuePattern_snippets
             ' TO DO: Error handling.
         End Try
 
-    End Sub 'SetRangeValue 
+    End Sub
     ' </Snippet104>
 
     '''--------------------------------------------------------------------
@@ -267,6 +267,6 @@ Class UIARangeValuePattern_snippets
             ' and call its Run() method to start it.
             Dim app As New UIARangeValuePattern_snippets()
         
-        End Sub 'Main
+        End Sub
     End Class 'TestMain
 End Class 'UIARangeValuePattern_snippets 

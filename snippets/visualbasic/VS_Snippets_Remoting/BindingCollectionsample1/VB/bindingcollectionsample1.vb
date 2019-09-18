@@ -50,5 +50,5 @@ Class [MyClass]
       ' </Snippet3>
       myServiceDescription = Nothing
       myBinding = Nothing
-   End Sub 'Main
+   End Sub
 End Class '[MyClass]

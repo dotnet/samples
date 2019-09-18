@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System.Text
+﻿Imports System.Text
 Imports System.Windows.Media
 Imports System.Windows
 Imports System.Windows.Controls

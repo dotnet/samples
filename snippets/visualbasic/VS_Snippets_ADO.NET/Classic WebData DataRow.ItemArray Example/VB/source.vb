@@ -29,14 +29,14 @@ End Sub
  
 Private Function MakeTableWithAutoIncrement() As DataTable
     ' Make a table with one AutoIncrement column.
-    Dim table As DataTable = New DataTable("table")
-    Dim idColumn As DataColumn = New DataColumn("id", _
+    Dim table As New DataTable("table")
+    Dim idColumn As New DataColumn("id", _
         Type.GetType("System.Int32"))
     idColumn.AutoIncrement = True
     idColumn.AutoIncrementSeed = 10
     table.Columns.Add (idColumn)
     
-    Dim firstNameColumn As DataColumn = New DataColumn( _
+    Dim firstNameColumn As New DataColumn( _
         "Item", Type.GetType("System.String"))
     table.Columns.Add(firstNameColumn)
     MakeTableWithAutoIncrement = table

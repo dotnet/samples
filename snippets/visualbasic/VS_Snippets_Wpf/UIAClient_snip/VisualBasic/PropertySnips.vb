@@ -13,7 +13,7 @@ Class PropertySnips
     ''' </summary>
     Public Sub New()
 
-    End Sub 'New
+    End Sub
 
     ' <Snippet172> 
 
@@ -29,7 +29,7 @@ Class PropertySnips
         Automation.AddAutomationPropertyChangedEventHandler(element, TreeScope.Element, _
             propChangeHandler, AutomationElement.IsEnabledProperty)
 
-    End Sub 'SubscribePropertyChange
+    End Sub
 
 
 
@@ -47,7 +47,7 @@ Class PropertySnips
         Else
         End If
      ' TODO: Handle other property-changed events.
-    End Sub 'OnPropertyChange
+    End Sub
     
     
     Public Sub UnsubscribePropertyChange(ByVal element As AutomationElement)
@@ -55,7 +55,7 @@ Class PropertySnips
             Automation.RemoveAutomationPropertyChangedEventHandler(element, propChangeHandler)
         End If
 
-    End Sub 'UnsubscribePropertyChange
+    End Sub
     
     ' </Snippet172>
     Public Sub GetAllProperties(ByVal autoElement As AutomationElement) 
@@ -425,7 +425,7 @@ Class PropertySnips
         Dim runtimeIdentifier As Integer() = _
             CType(autoElement.GetCurrentPropertyValue(AutomationElement.RuntimeIdProperty), Integer())
         ' </Snippet169>    
-    End Sub 'GetAllProperties
+    End Sub
 End Class 'PropertySnips 
 
 ' <Snippet999>

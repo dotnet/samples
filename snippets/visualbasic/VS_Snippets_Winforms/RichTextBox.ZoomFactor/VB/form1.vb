@@ -65,7 +65,7 @@
 
     Private Sub button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles button1.Click
         ZoomMyRichTextBox()
-    End Sub 'button1_Click
+    End Sub
 
 
     '<Snippet1>

@@ -23,7 +23,7 @@ Public shared Sub Main()
             Console.WriteLine(("The Exception is :" + e.Message))
             Console.WriteLine("The Exception is : Unable to Contact the server")
         End Try
-    End Sub ' Main
+    End Sub
 
     Public Sub ConnectHttpServer(connectUri As [String])
 
@@ -49,5 +49,5 @@ Public shared Sub Main()
         End Try
 
 ' </Snippet1>
-    End Sub 'ConnectHttpServer
+    End Sub
 End Class 'HttpConnect 

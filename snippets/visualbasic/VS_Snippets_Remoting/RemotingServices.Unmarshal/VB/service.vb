@@ -35,7 +35,7 @@ Public Class SampleTwo
         Console.WriteLine("This message was received from the client:")
         Console.WriteLine(vbTab + "{0}", s)
     
-    End Sub 'PrintMessage
+    End Sub
 End Class 'SampleTwo
 
 End Namespace

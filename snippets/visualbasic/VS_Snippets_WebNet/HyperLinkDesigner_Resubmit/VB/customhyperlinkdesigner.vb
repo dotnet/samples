@@ -77,7 +77,7 @@ Namespace Examples.VB.WebControls.Design
             End If
 
             MyBase.DataBindControl(designerHost, control)
-        End Sub ' DataBindControl
+        End Sub
     End Class ' CustomHyperLinkDataBindingHandler
     ' </snippet2>
 End Namespace ' Examples.VB.WebControls.Design

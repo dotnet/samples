@@ -22,6 +22,6 @@ Public Class App
     Public Shared Sub Main()
         LibWrap.printf(ControlChars.CrLf + "Print params: %i %f", 99, 99.99)
         LibWrap.printf(ControlChars.CrLf + "Print params: %i %s", 99, "abcd")
-    End Sub 'Main
+    End Sub
 End Class 'App
 ' </Snippet1>

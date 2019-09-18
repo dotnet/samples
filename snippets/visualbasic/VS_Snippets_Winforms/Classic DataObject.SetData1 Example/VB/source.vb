@@ -18,7 +18,7 @@ Public Class Form1
         
         ' Retrieves the data by specifying Text.
         textBox1.Text = myDataObject.GetData(DataFormats.Text).GetType().Name
-    End Sub 'AddMyData
+    End Sub
     ' </Snippet1>
 End Class 'Form1 
 

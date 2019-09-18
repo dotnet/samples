@@ -24,6 +24,6 @@ Namespace ImageElementExample
         Public Sub New()
             InitializeComponent()
 
-        End Sub 'New
+        End Sub
     End Class 'SampleViewer 
 End Namespace

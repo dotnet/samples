@@ -19,7 +19,7 @@ Public Class C
     Private id As Integer
     Public Sub New(ByVal id As Integer) 
         Me.id = id
-    End Sub 'New
+    End Sub
 
     Public Sub M1(ByVal s As String) 
         Console.WriteLine("Instance method M1 on C:  id = {0}, s = {1}", _

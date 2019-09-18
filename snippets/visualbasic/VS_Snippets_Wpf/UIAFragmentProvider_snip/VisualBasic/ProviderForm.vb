@@ -74,7 +74,7 @@ Partial Class UIAFragmentProviderForm
         myList.Add("Tulip")
         myList.Add("Zinnia")
 
-    End Sub 'New
+    End Sub
 
 
     ''' <summary>
@@ -85,7 +85,7 @@ Partial Class UIAFragmentProviderForm
     Private Sub button1_Click(ByVal sender As Object, ByVal e As EventArgs)
         Application.Exit()
 
-    End Sub 'button1_Click
+    End Sub
 End Class 'UIAFragmentProviderForm 
 '
 'ToDo: Error processing original source shown below

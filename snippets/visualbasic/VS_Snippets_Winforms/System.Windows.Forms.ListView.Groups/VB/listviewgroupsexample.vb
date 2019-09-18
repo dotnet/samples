@@ -90,13 +90,13 @@ Public Class ListViewGroupsExample
         Me.Controls.Add(myListView)
         Me.Size = New System.Drawing.Size(550, 330)
         Me.Text = "ListView Groups Example"
-    End Sub 'New
+    End Sub
     
     <STAThread()> _
     Shared Sub Main()
         Application.EnableVisualStyles()
         Application.Run(New ListViewGroupsExample())
-    End Sub 'Main
+    End Sub
     
     ' Groups the items using the groups created for the clicked 
     ' column.
@@ -117,7 +117,7 @@ Public Class ListViewGroupsExample
         If isRunningXPOrLater Then
             SetGroups(e.Column)
         End If
-    End Sub 'myListView_ColumnClick
+    End Sub
     
     '<Snippet2>
     ' Sets myListView to the groups created for the specified column.
@@ -151,7 +151,7 @@ Public Class ListViewGroupsExample
             ' Assign the item to the matching group.
             item.Group = CType(groups(subItemText), ListViewGroup)
         Next item
-    End Sub 'SetGroups
+    End Sub
     '</Snippet2>
 
     '<Snippet3>
@@ -196,7 +196,7 @@ Public Class ListViewGroupsExample
         ' Stores the sort order.
         Public Sub New(theOrder As SortOrder)
             order = theOrder
-        End Sub 'New
+        End Sub
         
         ' Compares the groups by header value, using the saved sort
         ' order to return the correct value.

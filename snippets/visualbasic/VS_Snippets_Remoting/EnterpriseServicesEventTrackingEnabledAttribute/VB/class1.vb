@@ -32,7 +32,7 @@ Public Class EventTrackingEnabledAttribute_Value
         ' Display the value of the attribute's Value property.
         MsgBox("EventTrackingEnabledAttribute.Value: " & attribute.Value)
     
-    End Sub 'ValueExample
+    End Sub
 End Class 'EventTrackingEnabledAttribute_Value
 ' </snippet3>
 
@@ -49,5 +49,5 @@ Public Class EventTrackingEnabledAttribute_Example
         ' Demonstrate the EventTrackingEnabledAttribute properties.
         valueExample.ValueExample()
     
-    End Sub 'Main
+    End Sub
 End Class 'EventTrackingEnabledAttribute_Example

@@ -11,6 +11,7 @@ public class Class1
       
       Console.WriteLine("  {0,12}\n +  {1,10}\n   {3}\n    {2,10}", 
                         time1, time2, time3, new String('_', 10));
+
       // The example displays the following output:
       //           1.00:00:00
       //        +    12:00:00

@@ -64,7 +64,7 @@ Namespace Samples.AspNet.VB.Controls
 
           Controls.Add(_list)
 
-      End Sub 'CreateChildControls
+      End Sub
 
 
       Private Sub OnClickAddButton(ByVal sender As Object, ByVal e As EventArgs)
@@ -86,14 +86,14 @@ Namespace Samples.AspNet.VB.Controls
 
           OnUrlAdded()
 
-      End Sub 'OnClickAddButton
+      End Sub
 
 
       Protected Overridable Sub OnUrlAdded()
           _listDirty = True
           ChildControlsCreated = False
 
-      End Sub 'OnUrlAdded
+      End Sub
 
 
       Protected Overrides Sub RenderContents(ByVal writer As HtmlTextWriter)
@@ -112,7 +112,7 @@ Namespace Samples.AspNet.VB.Controls
 
           MyBase.RenderContents(writer)
 
-      End Sub 'RenderContents
+      End Sub
 
 
       Public Overridable ReadOnly Property IsDirty() As Boolean _
@@ -137,7 +137,7 @@ Namespace Samples.AspNet.VB.Controls
               End If
           End If
 
-      End Sub 'Load
+      End Sub
 
       ' </snippet3>
       ' <snippet4>

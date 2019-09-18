@@ -40,5 +40,5 @@ Public Class WebClient_OpenRead
             ' Display the exception.
             Console.WriteLine(("The following general exception was raised: " + e.Message))
         End Try
-    End Sub 'Main
+    End Sub
 End Class 'WebClient_OpenRead

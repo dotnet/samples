@@ -27,6 +27,6 @@ Partial Class cookieparam2vb_aspx
             SqlDataSource1.SelectParameters.Add(cookieParam)
 
         End If
-    End Sub ' Page_Load
+    End Sub
 End Class
 ' </Snippet2>

@@ -225,7 +225,7 @@ Namespace DataBindingTest
             End If 
 '</Snippet20>
          End If
-      End Sub 'OnBindingsCollectionChanged
+      End Sub
 
       Public Sub WriteToFile(ByVal input As String)
          'This method writes the values of the properties at the design time into a Text file DataBindingOutput.txt in the "C"  of the system.
@@ -235,7 +235,7 @@ Namespace DataBindingTest
          Dim CharArray As Char() = encoder.GetChars(ByteArray)
          myFile.WriteLine(CharArray, 0, input.Length)
          myFile.Close()
-      End Sub 'WriteToFile
+      End Sub
    End Class 'SimpleDesigner
 '<Snippet21>
    <DefaultProperty("Text"), ToolboxData("<{0}:Simple runat=server></{0}:Simple>"), Designer("DataBindingTest.SimpleDesigner"), DataBindingHandlerAttribute(GetType(System.Web.UI.Design.TextDataBindingHandler))> Public Class SimpleWebControl
@@ -265,6 +265,6 @@ Namespace DataBindingTest
             End If
 '</Snippet22>
          Next attribute
-      End Sub 'Render
+      End Sub
    End Class 'SimpleWebControl
 End Namespace 'DataBindingTest

@@ -12,6 +12,6 @@ Class UTF7EncodingExample
             maxByteCount, _
             charCount _
         )
-    End Sub 'Main
+    End Sub
 End Class 'UTF7EncodingExample
 ' </Snippet1>

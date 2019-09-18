@@ -7,7 +7,7 @@ Public Class NetworkingExample
         AddHandler NetworkChange.NetworkAddressChanged, AddressOf AddressChangedCallback
         Console.WriteLine("Listening for address changes. Press any key to exit.")
         Console.ReadLine()
-    End Sub 'Main
+    End Sub
     Private Shared Sub AddressChangedCallback(ByVal sender As Object, ByVal e As EventArgs)
 
         Dim adapters As NetworkInterface() = NetworkInterface.GetAllNetworkInterfaces()

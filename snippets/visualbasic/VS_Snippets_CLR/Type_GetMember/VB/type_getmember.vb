@@ -28,7 +28,7 @@ Public Class MyMemberSample
             Console.WriteLine(("Source: " + e.Source))
             Console.WriteLine(("Message: " + e.Message))
         End Try
-    End Sub 'Main
+    End Sub
 
 
     Public Sub GetMemberInfo()
@@ -45,7 +45,7 @@ Public Class MyMemberSample
         Else
             Console.WriteLine("No members match the search criteria.")
         End If
-    End Sub 'GetMemberInfo
+    End Sub
     ' </Snippet1>
 
     ' <Snippet2>
@@ -65,7 +65,7 @@ Public Class MyMemberSample
         Else
             Console.WriteLine("No members match the search criteria.")
         End If
-    End Sub 'GetPublicStaticMemberInfo
+    End Sub
     ' </Snippet2>
 
     ' <Snippet3>
@@ -84,6 +84,6 @@ Public Class MyMemberSample
         Else
             Console.WriteLine("No members match the search criteria.")
         End If
-    End Sub 'GetPublicInstanceMethodMemberInfo 
+    End Sub
 End Class 'MyMemberSample
 ' </Snippet3>

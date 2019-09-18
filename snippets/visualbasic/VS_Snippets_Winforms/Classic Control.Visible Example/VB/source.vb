@@ -25,6 +25,6 @@ Public Class Form1
         Else
             vScrollBar1.Visible = True
         End If
-    End Sub 'DisplayScrollBars
+    End Sub
     ' </Snippet1>
 End Class 'Form1 

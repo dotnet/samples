@@ -11,32 +11,31 @@ Partial Class ClientCallback
     Protected validationLookUpStock As String = "LookUpStock"
     Protected validationLookUpSale As String = "LookUpSale"
     '</Snippet3>
-    Sub Page_Load(ByVal sender As Object, ByVal e As _
-        System.EventArgs) Handles Me.Load
+    Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
 
-        Page.ClientScript.RegisterClientScriptBlock(Me.GetType(), _
-            validationLookUpStock, "function LookUpStock() {  " & _
-            "var lb = document.forms[0].ListBox1; " & _
-            "if (lb.selectedIndex == -1) { alert ('Please make a selection.'); return; } " & _
-            "var product = lb.options[lb.selectedIndex].text;  " & _
+        Page.ClientScript.RegisterClientScriptBlock(Me.GetType(),
+            validationLookUpStock, "function LookUpStock() {  " &
+            "var lb = document.forms[0].ListBox1; " &
+            "if (lb.selectedIndex == -1) { alert ('Please make a selection.'); return; } " &
+            "var product = lb.options[lb.selectedIndex].text;  " &
             "CallServer(product, ""LookUpStock"");}  ", True)
         If (User.Identity.IsAuthenticated) Then
-            Page.ClientScript.RegisterClientScriptBlock(Me.GetType(), _
-            validationLookUpSale, "function LookUpSale() {  " & _
-            "var lb = document.forms[0].ListBox1; " & _
-            "if (lb.selectedIndex == -1) { alert ('Please make a selection.'); return; } " & _
-            "var product = lb.options[lb.selectedIndex].text;  " & _
+            Page.ClientScript.RegisterClientScriptBlock(Me.GetType(),
+            validationLookUpSale, "function LookUpSale() {  " &
+            "var lb = document.forms[0].ListBox1; " &
+            "if (lb.selectedIndex == -1) { alert ('Please make a selection.'); return; } " &
+            "var product = lb.options[lb.selectedIndex].text;  " &
             "CallServer(product, ""LookUpSale"");} ", True)
         End If
 
         Dim cbReference As String
-        cbReference = "var param = arg + '|' + context;" & _
-             Page.ClientScript.GetCallbackEventReference(Me, _
+        cbReference = "var param = arg + '|' + context;" &
+             Page.ClientScript.GetCallbackEventReference(Me,
             "param", "ReceiveServerData", "context")
         Dim callbackScript As String = ""
-        callbackScript &= "function CallServer(arg, context) { " & _
+        callbackScript &= "function CallServer(arg, context) { " &
             cbReference & "} ;"
-        Page.ClientScript.RegisterClientScriptBlock(Me.GetType(), _
+        Page.ClientScript.RegisterClientScriptBlock(Me.GetType(),
             "CallServer", callbackScript, True)
 
         ' Populate List Dictionary with invented database data
@@ -113,11 +112,11 @@ Partial Class ClientCallback
     '</Snippet6>
 
     '<Snippet7>
-    Protected Overrides Sub Render(ByVal writer As System.Web.UI.HtmlTextWriter)
-        Page.ClientScript.RegisterForEventValidation("LookUpStockButton", _
+    Protected Overrides Sub Render(writer As System.Web.UI.HtmlTextWriter)
+        Page.ClientScript.RegisterForEventValidation("LookUpStockButton",
           validationLookUpStock)
         If (User.Identity.IsAuthenticated) Then
-            Page.ClientScript.RegisterForEventValidation("LookUpSaleButton", _
+            Page.ClientScript.RegisterForEventValidation("LookUpSaleButton",
              validationLookUpSale)
         End If
         MyBase.Render(writer)

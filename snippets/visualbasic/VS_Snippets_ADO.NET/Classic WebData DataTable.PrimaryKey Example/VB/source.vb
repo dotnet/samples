@@ -25,8 +25,8 @@ Protected DataGrid1 As DataGrid
  
  Private Sub SetPrimaryKeys()
     ' Create a new DataTable and set two DataColumn objects as primary keys.
-    Dim table As DataTable = new DataTable()
-    Dim keys(1) As DataColumn
+    Dim table As New DataTable()
+    Dim keys(2) As DataColumn
     Dim column  As DataColumn
 
     ' Create column 1.

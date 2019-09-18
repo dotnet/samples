@@ -6,5 +6,5 @@ Public Class Foo
    ' Print the string value.
    Public Sub PrintString(str As String)
       Console.WriteLine(ControlChars.Newline + str)
-   End Sub 'PrintString
+   End Sub
 End Class 'Foo

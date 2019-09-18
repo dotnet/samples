@@ -26,6 +26,6 @@ Public Class MyMainClass
         Catch e As Exception
             Console.WriteLine("Error", e.Message.ToString())
         End Try
-    End Sub 'Main
+    End Sub
 End Class 'MyMainClass
 ' </Snippet1>

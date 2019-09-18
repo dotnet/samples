@@ -1,7 +1,6 @@
 ﻿Imports System.Data
 Imports System.ComponentModel
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
 
 ' <Snippet1>
 Public Class myKeyPressClass
@@ -33,6 +32,6 @@ Public Class myKeyPressClass
             " returns pressed" & ControlChars.CrLf & keyPressCount & _
             " other keys pressed" & ControlChars.CrLf
         ex.Handled = True
-    End Sub 'myKeyCounter
+    End Sub
 End Class 'myKeyPressClass
 ' </Snippet1>

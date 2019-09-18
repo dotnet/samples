@@ -5,7 +5,6 @@
 ' /r:System.Data.dll /r:System.Drawing.dll
 
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
 
 Public Class CapsLockIndicator
    
@@ -15,6 +14,6 @@ Public Class CapsLockIndicator
         Else
             MessageBox.Show("The Caps Lock key is OFF.")
         End If
-    End Sub 'Main
+    End Sub
 End Class 'CapsLockIndicator
 ' </Snippet1>

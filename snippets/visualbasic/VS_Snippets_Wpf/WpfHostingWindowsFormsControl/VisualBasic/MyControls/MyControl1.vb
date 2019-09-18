@@ -43,7 +43,7 @@ Public Class MyControl1
         End If
         MyBase.Dispose(disposing)
 
-    End Sub 'Dispose
+    End Sub
 
 #Region "Component Designer generated code"
 

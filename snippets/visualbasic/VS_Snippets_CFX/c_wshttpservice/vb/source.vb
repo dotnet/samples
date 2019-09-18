@@ -16,7 +16,7 @@ Class Service
         b.Security.Mode = SecurityMode.Message
         b.Security.Message.ClientCredentialType = MessageCredentialType.Windows
          '</snippet1>
-    End Sub 'Basic
+    End Sub
     
     
     Private Sub Basic2() 

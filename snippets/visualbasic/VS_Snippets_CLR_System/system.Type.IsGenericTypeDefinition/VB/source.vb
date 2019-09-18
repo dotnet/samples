@@ -52,7 +52,7 @@ Public Class Test
         ' Display information for an ordinary type.
         DisplayGenericTypeInfo(GetType(String))
     
-    End Sub 'Main
+    End Sub
 End Class 'Test
 
 ' This example produces the following output:

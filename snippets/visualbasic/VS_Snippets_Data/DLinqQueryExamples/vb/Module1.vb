@@ -442,7 +442,7 @@ Module Module1
 
         ''''''''''''''''''' E N D   O F   Q U E R I E S ''''''''''''''''''''
 
-    End Sub ' End Main Sub
+    End Sub
 
 
     '''''''''''''''''''''''''' OUT OF SCOPE METHODS ''''''''''''''''''

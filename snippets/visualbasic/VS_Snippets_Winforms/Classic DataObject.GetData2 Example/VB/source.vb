@@ -26,7 +26,7 @@ Public Class Form1
         Else
             textBox1.Text = "Data of the specified type was not stored " & "in the DataObject."
         End If
-    End Sub 'GetMyData
+    End Sub
     ' </Snippet1>
 End Class 'Form1 
 

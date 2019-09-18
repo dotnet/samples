@@ -1,5 +1,4 @@
 ﻿Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
 
 Public Class Form1
     Inherits Form

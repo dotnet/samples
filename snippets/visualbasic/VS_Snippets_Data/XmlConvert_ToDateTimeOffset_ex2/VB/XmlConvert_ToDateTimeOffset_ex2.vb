@@ -19,6 +19,6 @@ Module Module1
         Catch e As Exception
             Console.WriteLine(e)
         End Try
-    End Sub 'Main
+    End Sub
 End Module
 '</snippet1>

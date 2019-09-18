@@ -106,7 +106,7 @@ Class MyOperationMessageCollectionSample
          Console.WriteLine("Source : " & e.Source.ToString())
          Console.WriteLine("Message : " & e.Message.ToString())
       End Try
-   End Sub 'Main
+   End Sub
    
 ' <Snippet9>
 ' <Snippet10>
@@ -123,7 +123,7 @@ Class MyOperationMessageCollectionSample
       Console.WriteLine("The first occurrence of operation Output " & _
          "in the collection " &  myOperationMessageCollection.Output.ToString())
       Console.WriteLine()
-   End Sub 'DisplayFlowInputOutput
+   End Sub
 End Class 'MyOperationMessageCollectionSample 
 ' </Snippet11>
 ' </Snippet10>

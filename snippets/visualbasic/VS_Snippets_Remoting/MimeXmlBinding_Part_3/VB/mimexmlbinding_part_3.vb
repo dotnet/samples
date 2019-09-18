@@ -70,6 +70,6 @@ Class MyXmlBinding
       Catch e As Exception
          Console.WriteLine("Exception: {0}", e.Message)
       End Try
-   End Sub 'Main
+   End Sub
 End Class 'MyXmlBinding
 ' </Snippet1>

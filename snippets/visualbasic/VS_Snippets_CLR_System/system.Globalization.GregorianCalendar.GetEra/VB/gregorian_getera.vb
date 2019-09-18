@@ -25,7 +25,7 @@ Public Class SamplesGregorianCalendar
          Console.WriteLine()
       Next myCI
 
-   End Sub 'Main 
+   End Sub
 
 End Class 'SamplesGregorianCalendar
 

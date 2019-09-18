@@ -44,7 +44,7 @@ Class ListPattern
         MyList = list
         SelectedIndex = index
     
-    End Sub 'New
+    End Sub
     
     ' <Snippet119>
     #Region "ISelectionProvider Members"

@@ -39,13 +39,13 @@ Class SecurityPrincipalDemo
         Dim sid As New SecurityIdentifier(WellKnownSidType.BuiltinAdministratorsSid, Nothing)
         Console.WriteLine("WellKnownSidType BuiltinAdministratorsSid  {0}? {1}.", sid.Value, myPrincipal.IsInRole(sid))
 
-    End Sub 'DemonstrateWindowsBuiltInRoleEnum
+    End Sub
     '</snippet5>
 
     Public Shared Sub Main()
         DemonstrateWindowsBuiltInRoleEnum()
 
-    End Sub 'Main
+    End Sub
 End Class 'SecurityPrincipalDemo 
 ' </Snippet1>
 

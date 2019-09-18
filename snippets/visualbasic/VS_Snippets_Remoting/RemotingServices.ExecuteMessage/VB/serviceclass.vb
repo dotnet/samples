@@ -95,7 +95,7 @@ Public Class ReplicationSink
          Console.WriteLine("The requestMessage is not a MethodCall")
       End Try
    
-   End Sub 'ProcessMessageStart
+   End Sub
    ' </Snippet1>
 
    <SecurityPermission(SecurityAction.LinkDemand, Flags := SecurityPermissionFlag.Infrastructure)> _
@@ -119,5 +119,5 @@ Public Class ReplicationSink
       Catch e As InvalidCastException
          Console.WriteLine("The requestMessage is not a ReturnMessage.")
       End Try
-   End Sub 'ProcessMessageFinish
+   End Sub
 End Class 'ReplicationSink

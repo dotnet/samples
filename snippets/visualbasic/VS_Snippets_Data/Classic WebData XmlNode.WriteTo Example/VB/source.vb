@@ -20,6 +20,6 @@ Public Class Sample
         Dim writer As New XmlTextWriter(Console.Out)
         writer.Formatting = Formatting.Indented
         root.WriteTo(writer)
-    End Sub 'Main 
+    End Sub
 End Class 'Sample
 ' </Snippet1>

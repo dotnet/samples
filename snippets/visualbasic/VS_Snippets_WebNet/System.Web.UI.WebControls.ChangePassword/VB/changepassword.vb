@@ -6,7 +6,6 @@ Imports System.Web.Security
 Imports System.Web.UI
 Imports System.Web.UI.WebControls
 Imports System.Web.UI.HtmlControls
-Imports Microsoft.VisualBasic
 
 Partial Class ChangePassword_vb_aspx
     Inherits System.Web.UI.Page
