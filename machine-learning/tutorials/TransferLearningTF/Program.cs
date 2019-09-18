@@ -5,9 +5,6 @@ using System.IO;
 using System.Linq;
 using Microsoft.ML;
 using Microsoft.ML.Data;
-using Microsoft.ML.Data.IO;
-using Microsoft.ML.Trainers;
-using Microsoft.ML.Transforms.Image;
 // </SnippetAddUsings>
 
 namespace TransferLearningTF
@@ -24,20 +21,18 @@ namespace TransferLearningTF
         static readonly string _inceptionPb = Path.Combine(_assetsPath, "inputs-train", "inception", "tensorflow_inception_graph.pb");
         static readonly string _inputImageClassifierZip = Path.Combine(_assetsPath, "inputs-predict", "imageClassifier.zip");
         static readonly string _outputImageClassifierZip = Path.Combine(_assetsPath, "outputs", "imageClassifier.zip");
-        private static string LabelTokey = nameof(LabelTokey);
-        private static string PredictedLabelValue = nameof(PredictedLabelValue);
         // </SnippetDeclareGlobalVariables>
 
         static void Main(string[] args)
         {
             // Create MLContext to be shared across the model creation workflow objects 
             // <SnippetCreateMLContext>
-            MLContext mlContext = new MLContext(seed: 1);
+            MLContext mlContext = new MLContext();
             // </SnippetCreateMLContext>
 
-            // <SnippetCallReuseAndTuneInceptionModel>
-            var model = ReuseAndTuneInceptionModel(mlContext, _trainTagsTsv, _trainImagesFolder, _inceptionPb, _outputImageClassifierZip);
-            // </SnippetCallReuseAndTuneInceptionModel>
+            // <SnippetCallGenerateModel>
+            ITransformer model = GenerateModel(mlContext, _trainTagsTsv, _trainImagesFolder, _inceptionPb, _outputImageClassifierZip);
+            // </SnippetCallGenerateModel>
 
             // <SnippetCallClassifyImages>
             ClassifyImages(mlContext, _predictImageListTsv, _predictImagesFolder, _outputImageClassifierZip, model);
@@ -60,32 +55,32 @@ namespace TransferLearningTF
         // </SnippetInceptionSettings>
 
         // Build and train model
-        public static ITransformer ReuseAndTuneInceptionModel(MLContext mlContext, string dataLocation, string imagesFolder, string inputModelLocation, string outputModelLocation)
+        public static ITransformer GenerateModel(MLContext mlContext, string dataLocation, string imagesFolder, string inputModelLocation, string outputModelLocation)
         {
 
             // <SnippetLoadData>
-            var data = mlContext.Data.LoadFromTextFile<ImageData>(path: dataLocation, hasHeader: false);
+            IDataView data = mlContext.Data.LoadFromTextFile<ImageData>(path: dataLocation, hasHeader: false);
             // </SnippetLoadData>
 
             // <SnippetMapValueToKey1>
-            var estimator = mlContext.Transforms.Conversion.MapValueToKey(outputColumnName: LabelTokey, inputColumnName: "Label")
+            IEstimator<ITransformer> pipeline = mlContext.Transforms.LoadImages(outputColumnName: "input", imageFolder: _trainImagesFolder, inputColumnName: nameof(ImageData.ImagePath))
                             // </SnippetMapValueToKey1>
                             // The image transforms transform the images into the model's expected format.
                             // <SnippetImageTransforms>
-                            .Append(mlContext.Transforms.LoadImages(outputColumnName: "input", imageFolder: _trainImagesFolder, inputColumnName: nameof(ImageData.ImagePath)))
                             .Append(mlContext.Transforms.ResizeImages(outputColumnName: "input", imageWidth: InceptionSettings.ImageWidth, imageHeight: InceptionSettings.ImageHeight, inputColumnName: "input"))
                             .Append(mlContext.Transforms.ExtractPixels(outputColumnName: "input", interleavePixelColors: InceptionSettings.ChannelsLast, offsetImage: InceptionSettings.Mean))
                             // </SnippetImageTransforms>
+                            .Append(mlContext.Transforms.Conversion.MapValueToKey(outputColumnName: "LabelTokey", inputColumnName: "Label"))
                             // The ScoreTensorFlowModel transform scores the TensorFlow model and allows communication 
                             // <SnippetScoreTensorFlowModel>
                             .Append(mlContext.Model.LoadTensorFlowModel(inputModelLocation).
                                 ScoreTensorFlowModel(outputColumnNames: new[] { "softmax2_pre_activation" }, inputColumnNames: new[] { "input" }, addBatchDimensionInput: true))
                             // </SnippetScoreTensorFlowModel>
                             // <SnippetAddTrainer> 
-                            .Append(mlContext.MulticlassClassification.Trainers.LbfgsMaximumEntropy(labelColumnName: LabelTokey, featureColumnName: "softmax2_pre_activation"))
+                            .Append(mlContext.MulticlassClassification.Trainers.LbfgsMaximumEntropy(labelColumnName: "LabelTokey", featureColumnName: "softmax2_pre_activation"))
                             // </SnippetAddTrainer>
                             // <SnippetMapValueToKey2>
-                            .Append(mlContext.Transforms.Conversion.MapKeyToValue(PredictedLabelValue, "PredictedLabel"))
+                            .Append(mlContext.Transforms.Conversion.MapKeyToValue("PredictedLabelValue", "PredictedLabel"))
                             .AppendCacheCheckpoint(mlContext);
             // </SnippetMapValueToKey2>
 
@@ -93,20 +88,20 @@ namespace TransferLearningTF
             Console.WriteLine("=============== Training classification model ===============");
             // Create and train the model based on the dataset that has been loaded, transformed.
             // <SnippetTrainModel>
-            ITransformer model = estimator.Fit(data);
+            ITransformer model = pipeline.Fit(data);
             // </SnippetTrainModel>
 
             // Process the training data through the model
             // This is an optional step, but it's useful for debugging issues
             // <SnippetTransformData>
-            var predictions = model.Transform(data);
+            IDataView predictions = model.Transform(data);
             // </SnippetTransformData>
 
             // Create enumerables for both the ImageData and ImagePrediction DataViews 
             // for displaying results
             // <SnippetEnumerateDataViews>
-            var imageData = mlContext.Data.CreateEnumerable<ImageData>(data, false, true);
-            var imagePredictionData = mlContext.Data.CreateEnumerable<ImagePrediction>(predictions, false, true);
+            IEnumerable<ImageData> imageData = mlContext.Data.CreateEnumerable<ImageData>(data, false, true);
+            IEnumerable<ImagePrediction> imagePredictionData = mlContext.Data.CreateEnumerable<ImagePrediction>(predictions, false, true);
             // </SnippetEnumerateDataViews>
 
             // <SnippetCallDisplayResults1>
@@ -118,7 +113,7 @@ namespace TransferLearningTF
 
             // <SnippetEvaluate>           
             var multiclassContext = mlContext.MulticlassClassification;
-            var metrics = multiclassContext.Evaluate(predictions, labelColumnName: LabelTokey, predictedLabelColumnName: "PredictedLabel");
+            var metrics = multiclassContext.Evaluate(predictions, labelColumnName: "LabelTokey", predictedLabelColumnName: "PredictedLabel");
             // </SnippetEvaluate>
 
             //<SnippetDisplayMetrics>
@@ -200,6 +195,25 @@ namespace TransferLearningTF
              });
             // </SnippetReadFromTsv>
         }
-    }
 
+        // <SnippetDeclareImageData>
+        public class ImageData
+        {
+            [LoadColumn(0)]
+            public string ImagePath;
+
+            [LoadColumn(1)]
+            public string Label;
+        }
+        // </SnippetDeclareImageData>
+
+        // <SnippetDeclareImagePrediction>
+        public class ImagePrediction : ImageData
+        {
+            public float[] Score;
+
+            public string PredictedLabelValue;
+        }
+        // </SnippetDeclareImagePrediction>
+    }
 }
