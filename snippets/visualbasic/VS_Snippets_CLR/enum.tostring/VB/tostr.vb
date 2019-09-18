@@ -29,7 +29,7 @@ Class Sample
       
       Console.WriteLine("myColor.ToString(""f"") = {0}", myColor.ToString("f"))
       Console.WriteLine("myColor.ToString(""F"") = {0}", myColor.ToString("F"))
-   End Sub 'Main
+   End Sub
 End Class 'Sample
 '
 'This example produces the following results:

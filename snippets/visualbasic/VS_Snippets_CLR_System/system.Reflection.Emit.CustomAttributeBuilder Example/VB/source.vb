@@ -23,7 +23,7 @@ Public Class ClassCreator
    
    Public Sub New(name As String)
       Me.creator = name
-   End Sub 'New
+   End Sub
 
 End Class 'ClassCreator
  _ 
@@ -44,7 +44,7 @@ Public Class DateLastUpdated
    
    Public Sub New(theDate As String)
       Me.dateUpdated = theDate
-   End Sub 'New
+   End Sub
 
 End Class 'DateLastUpdated
  _ 
@@ -132,7 +132,7 @@ Class MethodBuilderCustomAttributesDemo
       
       Console.WriteLine(myType.InvokeMember("HelloWorld", BindingFlags.InvokeMethod, _
 						Nothing, myInstance, New Object() {}))
-   End Sub 'Main
+   End Sub
 
 End Class 'MethodBuilderCustomAttributesDemo
 

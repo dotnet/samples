@@ -74,7 +74,7 @@ Public Class HttpGetClientProtocolClass
         Console.WriteLine("Auto redirect is: " _
             & myHttpGetClientProtocol.AllowAutoRedirect)
 ' </Snippet1>
-    End Sub 'Main
+    End Sub
 End Class 'HttpGetClientProtocolClass
 
 

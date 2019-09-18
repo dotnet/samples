@@ -88,6 +88,6 @@ Public Class GetSocket
       Dim result As String = SocketSendReceive(host, port)
       
       Console.WriteLine(result)
-   End Sub 'Main
+   End Sub
 End Class  
 '</Snippet1>

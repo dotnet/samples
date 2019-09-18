@@ -23,7 +23,7 @@ Public Class Form1
         ' Required for Windows Form Designer support
         '
         InitializeComponent()
-    End Sub 'New
+    End Sub
    
     '/ <summary>
     '/ Clean up any resources being used.
@@ -35,7 +35,7 @@ Public Class Form1
             End If
         End If
         MyBase.Dispose(disposing)
-    End Sub 'Dispose
+    End Sub
 
 
     '/ <summary>
@@ -61,7 +61,7 @@ Public Class Form1
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
-    End Sub 'InitializeComponent
+    End Sub
 
 
     '/ <summary>
@@ -70,7 +70,7 @@ Public Class Form1
     <STAThread()> _
     Shared Sub Main()
         Application.Run(New Form1())
-    End Sub 'Main
+    End Sub
 
 
     '<Snippet1>
@@ -84,6 +84,6 @@ Public Class Form1
             Help.ShowPopup(textBox1, "Enter your first name followed by your last name. Middle name is optional.", _
                  New Point(textBox1.Top, Me.textBox1.Left))
         End If
-    End Sub 'textBox1_KeyDown
+    End Sub
     '</Snippet1>
 End Class 'Form1 

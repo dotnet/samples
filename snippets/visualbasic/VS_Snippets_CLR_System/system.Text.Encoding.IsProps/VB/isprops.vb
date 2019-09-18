@@ -24,7 +24,7 @@ Public Class SamplesEncoding
          Console.WriteLine("{0,-8} {1,-8} ", e.IsSingleByte, e.IsReadOnly)
       Next ei
 
-   End Sub 'Main 
+   End Sub
 
 End Class 'SamplesEncoding
 

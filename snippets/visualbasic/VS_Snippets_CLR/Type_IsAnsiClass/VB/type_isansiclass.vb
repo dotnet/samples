@@ -19,6 +19,6 @@ Public Class MyType_IsAnsiClass
         Catch e As Exception
             Console.WriteLine("Exception: {0}", e.Message.ToString())
         End Try
-    End Sub 'Main
+    End Sub
 End Class 'MyType_IsAnsiClass
 ' </Snippet1>

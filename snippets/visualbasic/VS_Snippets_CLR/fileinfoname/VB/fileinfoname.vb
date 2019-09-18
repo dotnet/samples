@@ -13,7 +13,7 @@ Public Class NameTest
         For Each fiTemp In fi
             Console.WriteLine(fiTemp.Name)
         Next fiTemp
-    End Sub 'Main
+    End Sub
 End Class 'NameTest
 'This code produces output similar to the following; 
 'results may vary based on the computer/file structure/etc.:

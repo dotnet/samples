@@ -14,7 +14,7 @@ Namespace Samples.AspNet.VB.Controls
 
             ' Append some text to the Image.
             writer.Write("Experience Windows Server 2003 and Visual Studio .NET 2003.")
-        End Sub 'Render
+        End Sub
     End Class
 End Namespace
 ' </Snippet2>

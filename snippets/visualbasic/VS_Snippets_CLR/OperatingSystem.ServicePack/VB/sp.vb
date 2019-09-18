@@ -4,7 +4,7 @@ Class Sample
    Public Shared Sub Main()
       Dim os As OperatingSystem = Environment.OSVersion
       Console.WriteLine("Service pack version = ""{0}""", os.ServicePack)
-   End Sub 'Main
+   End Sub
 End Class 'Sample
 '
 'This example produces the following results:

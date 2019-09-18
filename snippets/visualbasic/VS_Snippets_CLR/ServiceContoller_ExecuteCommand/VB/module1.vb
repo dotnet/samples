@@ -17,6 +17,6 @@ Class Program
         myService.ExecuteCommand(Fix(SimpleServiceCustomCommands.RestartWorker))
         myService.ExecuteCommand(Fix(SimpleServiceCustomCommands.CheckWorker))
     
-    End Sub 'Main 
+    End Sub
 End Class 'Program 
 '</Snippet1>

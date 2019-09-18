@@ -100,7 +100,7 @@ Public Class SamplesCompareInfo
       PrintMarker("            Ü : ", - 1, myComp.LastIndexOf(myStr, "Ü"c, [iS], CompareOptions.IgnoreCase))
       PrintMarker("            ü : ", - 1, myComp.LastIndexOf(myStr, "ü"c, [iS], CompareOptions.IgnoreCase))
 
-   End Sub 'Main
+   End Sub
 
    Public Shared Sub PrintMarker(Prefix As [String], First As Integer, Last As Integer)
 
@@ -136,7 +136,7 @@ Public Class SamplesCompareInfo
 
       End If 
 
-   End Sub 'PrintMarker
+   End Sub
 
 End Class 'SamplesCompareInfo 
 

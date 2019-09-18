@@ -13,12 +13,12 @@ Namespace Windows.Communication.Foundation.Samples
 
     Public Class Test
         Private Sub New()
-        End Sub 'New
+        End Sub
 
         Shared Sub Main()
             Console.WriteLine("Hello")
             Console.ReadLine()
-        End Sub 'Main
+        End Sub
         Private Class Snippets
             Private Sub Snippet1()
                 '<snippet1>

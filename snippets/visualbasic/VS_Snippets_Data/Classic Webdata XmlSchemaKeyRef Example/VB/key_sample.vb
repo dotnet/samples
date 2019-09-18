@@ -17,7 +17,7 @@ Public Class XmlSchemaObjectGenerator
          End If 
       End If
       Console.WriteLine(args.Message)
-   End Sub 'ValidationCallback
+   End Sub
    
    
    
@@ -95,7 +95,7 @@ Public Class XmlSchemaObjectGenerator
       End If
       
       schema.Write(Console.Out)
-   End Sub 'Main 
+   End Sub
 End Class 'XmlSchemaObjectGenerator 
 
 ' Main() 

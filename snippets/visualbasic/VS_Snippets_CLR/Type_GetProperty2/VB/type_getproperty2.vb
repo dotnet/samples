@@ -24,7 +24,7 @@ Module Module1
             Catch e As NullReferenceException
                 Console.WriteLine("MyProperty does not exist in MyClass.", e.Message.ToString())
             End Try
-        End Sub 'Main
+        End Sub
     End Class 'MyClass1
 End Module 'Module1
 ' </Snippet1>

@@ -29,7 +29,7 @@ Namespace ProgressBarEx
          
          pBar1.Bounds = New Rectangle(10, 50, 200, 20)
          Me.Controls.Add(pBar1)
-      End Sub 'New
+      End Sub
        
       
       
@@ -78,7 +78,7 @@ Namespace ProgressBarEx
                 End If
             End If
             MyBase.Dispose(disposing)
-        End Sub 'Dispose
+        End Sub
 
 
         '
@@ -114,7 +114,7 @@ Namespace ProgressBarEx
             Me.Name = "Form1"
             Me.Text = "Form1"
             Me.ResumeLayout(False)
-        End Sub 'InitializeComponent
+        End Sub
 
         '
         'ToDo: Error processing original source shown below
@@ -132,7 +132,7 @@ Namespace ProgressBarEx
         _
         Shared Sub Main()
             Application.Run(New Form1())
-        End Sub 'Main
+        End Sub
 
 
         Private Sub button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles button1.Click
@@ -144,6 +144,6 @@ Namespace ProgressBarEx
             tempFiles(4) = "file5.txt"
 
             CopyWithProgress(tempFiles)
-        End Sub 'button1_Click
+        End Sub
     End Class 'Form1
 End Namespace 'ProgressBarEx

@@ -16,7 +16,7 @@ Class Form1
         InitializeTreeView1()
       
         'InitializeLineTreeView();
-    End Sub 'New 
+    End Sub
     
    
     ' <snippet1>
@@ -66,7 +66,7 @@ Class Form1
 
         treeView1.TreeViewNodeSorter = New NodeSorter()
 
-    End Sub 'button1_Click
+    End Sub
     
     ' Create a node sorter that implements the IComparer interface.
     
@@ -120,7 +120,7 @@ Class Form1
         Application.EnableVisualStyles()
         Application.Run(New Form1())
     
-    End Sub 'Main
+    End Sub
     
     
     Private Sub InitializeComponent() 
@@ -141,7 +141,7 @@ Class Form1
         Me.ResumeLayout(False)
         Me.PerformLayout()
     
-    End Sub 'InitializeComponent
+    End Sub
      
     
     
@@ -161,7 +161,7 @@ Class Form1
             MessageBox.Show(hitNode.Level.ToString())
         End If
     
-    End Sub 'treeView1_MouseDown
+    End Sub
     
     '</snippet3>
     
@@ -175,7 +175,7 @@ Class Form1
 
         textBox1.Text = e.Node.Text
 
-    End Sub 'treeView1_NodeMouseClick
+    End Sub
     
     
     '</snippet4>
@@ -202,7 +202,7 @@ Class Form1
             MessageBox.Show("File not found.")
         End Try
 
-    End Sub 'treeView1_NodeMouseDoubleClick
+    End Sub
     
     '</snippet5>
     ' The following example demonstrates how to handle the
@@ -214,7 +214,7 @@ Class Form1
 
         e.Node.Toggle()
 
-    End Sub 'treeView1_NodeMouseHover
+    End Sub
     
     ' </snippet6>
 

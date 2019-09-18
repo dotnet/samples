@@ -30,7 +30,7 @@ Class PolicyLevelSample
         ListMachinePermissionSets()
         Console.Out.WriteLine("Press the Enter key to exit.")
         Dim consoleInput As String = Console.ReadLine()
-    End Sub 'Main
+    End Sub
 
 
     Public Shared Sub CreateAPolicyLevel()
@@ -121,7 +121,7 @@ Class PolicyLevelSample
             Console.WriteLine(e.Message)
             Return
         End Try
-    End Sub 'CreateAPolicyLevel
+    End Sub
 
     ' Compare two PolicyLevels using ToXml and FromXml.
     Private Shared Function ComparePolicyLevels(ByVal pLevel1 As PolicyLevel, ByVal pLevel2 As PolicyLevel) As Boolean
@@ -162,7 +162,7 @@ Class PolicyLevelSample
         Console.WriteLine(pState.ToXml().ToString())
 
         Return
-    End Sub 'CheckEvidence
+    End Sub
 
     '</Snippet13>
     '<Snippet14> 
@@ -172,7 +172,7 @@ Class PolicyLevelSample
         While namedPermission.MoveNext()
             Console.WriteLine((ControlChars.Tab + CType(namedPermission.Current, NamedPermissionSet).Name))
         End While
-    End Sub 'ListPermissionSets
+    End Sub
 
     '</Snippet14>
     Private Shared Function GetKey() As Byte()
@@ -200,7 +200,7 @@ Class PolicyLevelSample
         End While
 
         Return
-    End Sub 'CheckEvidence
+    End Sub
 
     '</Snippet15>
     '<Snippet16> 
@@ -219,7 +219,7 @@ Class PolicyLevelSample
                 End While
             End If
         End While
-    End Sub 'ListMachinePermissionSets
+    End Sub
 End Class 'PolicyLevelSample 
 '</Snippet16>
 '</Snippet1>

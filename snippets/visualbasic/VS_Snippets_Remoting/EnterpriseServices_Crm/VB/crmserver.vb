@@ -30,7 +30,7 @@ Class AccountManager
         writer.WriteLine(balance)
         writer.Close()
 
-    End Sub 'WriteAccountBalance
+    End Sub
 
 
     Public Shared Function ReadAccountBalance(ByVal filename As String) As Integer
@@ -112,7 +112,7 @@ Public Class Account
             ContextUtil.SetAbort()
         End If
         '</snippet13>
-    End Sub 'DebitAccount ' 
+    End Sub
     
 End Class 'Account
 
@@ -130,7 +130,7 @@ Public Class AccountCompensator
     ' <snippet21>
     Public Overrides Sub BeginPrepare() 
     
-    End Sub 'BeginPrepare
+    End Sub
     
     ' nothing to do
     ' </snippet21>
@@ -171,7 +171,7 @@ Public Class AccountCompensator
     ' <snippet24>
     Public Overrides Sub BeginCommit(ByVal commit As Boolean) 
     
-    End Sub 'BeginCommit
+    End Sub
     
     ' nothing to do
     ' </snippet24>
@@ -186,14 +186,14 @@ Public Class AccountCompensator
     ' <snippet26>
     Public Overrides Sub EndCommit() 
     
-    End Sub 'EndCommit
+    End Sub
     
     ' nothing to do
     ' </snippet26>
     ' <snippet27>
     Public Overrides Sub BeginAbort(ByVal abort As Boolean) 
     
-    End Sub 'BeginAbort
+    End Sub
     
     ' nothing to do
     ' </snippet27>
@@ -227,7 +227,7 @@ Public Class AccountCompensator
     ' <snippet29>
     Public Overrides Sub EndAbort() 
     
-    End Sub 'EndAbort
+    End Sub
 End Class 'AccountCompensator ' nothing to do
 ' </snippet29>
 ' </snippet20>

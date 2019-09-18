@@ -66,7 +66,7 @@ Namespace SDKSample
             ' myStackPanel.Children.Add(myTextBlock);
             Me.Content = myStackPanel
 
-        End Sub 'New
+        End Sub
 
         ' <SnippetPixelFormatExample1>
         Public Function createPixelFormat() As PixelFormat

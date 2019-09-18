@@ -48,7 +48,7 @@ Module Program
             tDESkey.Clear()
         End Try
 
-    End Sub 'Main
+    End Sub
 
 
     Sub Encrypt(ByVal Doc As XmlDocument, ByVal ElementToEncrypt As String, ByVal Alg As SymmetricAlgorithm, ByVal KeyName As String)
@@ -94,7 +94,7 @@ Module Program
         '''''''''''''''''''''''''''''''''''''''''''''''''''
         EncryptedXml.ReplaceElement(elementEncrypt, edElement, False)
 
-    End Sub 'Encrypt
+    End Sub
 
 
     Sub Decrypt(ByVal Doc As XmlDocument, ByVal Alg As SymmetricAlgorithm, ByVal KeyName As String)

@@ -250,7 +250,7 @@ Public Class EnvironmentPermissionDemo
             System.Environment.ExitCode = 101
         End Try
     
-    End Sub 'Main
+    End Sub
 End Class 'EnvironmentPermissionDemo
 
 

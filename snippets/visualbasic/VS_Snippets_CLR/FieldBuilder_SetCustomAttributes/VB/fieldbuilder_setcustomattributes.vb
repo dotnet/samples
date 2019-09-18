@@ -21,7 +21,7 @@ Namespace MySample
 
       Public Sub New(ByVal myString As String)
          myCustomAttributeValue = myString
-      End Sub 'New
+      End Sub
    End Class 'MyAttribute1
    <AttributeUsage(AttributeTargets.All, AllowMultiple:=False)> Public Class MyAttribute2
       Inherits Attribute
@@ -29,7 +29,7 @@ Namespace MySample
 
       Public Sub New(ByVal myBool As Boolean)
          myCustomAttributeValue = myBool
-      End Sub 'New
+      End Sub
    End Class 'MyAttribute2
 
    Class FieldBuilder_Sample
@@ -115,7 +115,7 @@ Namespace MySample
          Catch e as Exception
             Console.WriteLine("Exception Caught "+e.Message)
          End Try
-      End Sub 'Main
+      End Sub
    End Class 'FieldBuilder_Sample
 End Namespace 'MySample
 ' </Snippet1>

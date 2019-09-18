@@ -31,6 +31,6 @@ Public Class PrintServerCreate
 		Console.ReadLine()
 
 		' </Snippet_CreatePrintServer>
-	End Sub 'end Run()
+	End Sub
 
 End Class ' end:class PrintServerCreate

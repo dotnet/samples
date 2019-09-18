@@ -55,7 +55,7 @@ Public Class MyAuthorizationPolicy
     Public Sub New()
         value_id = Guid.NewGuid().ToString()
 
-    End Sub 'New
+    End Sub
 
     ' 
     Public Function Evaluate(ByVal evaluationContext As EvaluationContext, ByRef state As Object) As Boolean Implements IAuthorizationPolicy.Evaluate
@@ -154,7 +154,7 @@ Public Class MyAuthorizationPolicy
 
         Public Sub New()
 
-        End Sub 'New
+        End Sub
 
 
         Public Property ClaimsAdded() As Boolean

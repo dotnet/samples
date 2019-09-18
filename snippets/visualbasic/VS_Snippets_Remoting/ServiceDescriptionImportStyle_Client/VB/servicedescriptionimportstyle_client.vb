@@ -26,7 +26,7 @@ Namespace MyServiceDescription
          Catch e As Exception
             Console.WriteLine("Following exception was thrown: " + e.ToString())
          End Try
-      End Sub 'Main
+      End Sub
    End Class 'MyImporter
 End Namespace 'MyServiceDescription
 ' </Snippet1>

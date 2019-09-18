@@ -68,7 +68,7 @@ Class Sample
                         "(X) Hexadecimal:. . . . . . . {0:X}" & vbCrLf, _
                         Color.Green)
       Console.WriteLine(s)
-   End Sub 'Main
+   End Sub
 End Class 'Sample
 '
 ' This example displays the following output to the console:

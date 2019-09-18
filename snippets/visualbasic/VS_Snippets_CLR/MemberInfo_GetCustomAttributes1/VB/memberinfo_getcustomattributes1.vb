@@ -8,7 +8,7 @@ Imports System.Reflection
 
     Public Sub New(ByVal name As String)
         myName = name
-    End Sub 'New
+    End Sub
 
     Public ReadOnly Property Name() As String
         Get
@@ -22,7 +22,7 @@ Public Class MyClass1
 
     <MyAttribute("This is an example attribute.")> Public Sub MyMethod(ByVal i As Integer)
         Return
-    End Sub 'MyMethod
+    End Sub
 End Class 'MyClass1
 
 
@@ -50,6 +50,6 @@ Public Class MemberInfo_GetCustomAttributes
         Catch e As Exception
             Console.WriteLine("An exception occurred: {0}.", e.Message)
         End Try
-    End Sub 'Main
+    End Sub
 End Class 'MemberInfo_GetCustomAttributes
 ' </Snippet1>

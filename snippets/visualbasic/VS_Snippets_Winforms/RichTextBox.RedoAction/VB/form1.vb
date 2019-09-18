@@ -74,7 +74,7 @@
 
     Private Sub button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles button1.Click
         RedoAllButDeletes()
-    End Sub 'button1_Click
+    End Sub
 
 
     '<Snippet1>

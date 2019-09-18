@@ -39,7 +39,7 @@ Public Class SamplesArrayList
         Dim names As String() = CType(myAL.ToArray(GetType(String)), String())
       '</snippet5>
     '</snippet4>
-    End Sub 'Main
+    End Sub
    
    
     
@@ -53,7 +53,7 @@ Public Class SamplesArrayList
         Next s
         sb.Remove(sb.Length - 2, 2)
         Console.WriteLine(sb)
-    End Sub 'PrintValues
+    End Sub
 '</snippet2>
 End Class 'SamplesArrayList
 

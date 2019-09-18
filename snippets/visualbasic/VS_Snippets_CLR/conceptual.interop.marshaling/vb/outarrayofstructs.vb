@@ -24,7 +24,7 @@ Public Class App
         Console.WriteLine(vbNewLine + "Using marshal class" + vbNewLine)
         UsingMarshaling()
         'Visual Basic 2005 cannot use unsafe code.
-    End Sub 'Main
+    End Sub
 
     Public Shared Sub UsingMarshaling()
         Dim arrSize As Integer
@@ -47,7 +47,7 @@ Public Class App
                 buffer, manArray(i).someSize)
         Next i
         Marshal.FreeCoTaskMem(outArray)
-    End Sub 'UsingMarshal
+    End Sub
 End Class 'App
 '</snippet21>
 '</snippet19>

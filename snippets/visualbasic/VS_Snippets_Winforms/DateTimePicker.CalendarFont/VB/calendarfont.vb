@@ -8,7 +8,7 @@ Public Class [MyClass]
    
    <STAThread()> Public Shared Sub Main()
       Application.Run(New [MyClass]())
-   End Sub 'Main   
+   End Sub
 ' <snippet1>   
    Public Sub New()
       ' Create a new DateTimePicker.

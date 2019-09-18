@@ -24,7 +24,7 @@ Public Class SamplesCompareInfo
       Console.WriteLine("   With IgnoreSymbols                : {0}", myComp.Compare(myStr1, myStr2, CompareOptions.IgnoreSymbols))
       Console.WriteLine("   With IgnoreCase and IgnoreSymbols : {0}", myComp.Compare(myStr1, myStr2, CompareOptions.IgnoreCase Or CompareOptions.IgnoreSymbols))
 
-   End Sub 'Main 
+   End Sub
 
 End Class 'SamplesCompareInfo
 

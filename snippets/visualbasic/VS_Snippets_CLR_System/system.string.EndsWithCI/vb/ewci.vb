@@ -54,7 +54,7 @@ Class Sample
         result = xyzARing.EndsWith(capitalARing, True, ci)
         Console.WriteLine(msg3, result)
     
-    End Sub 'Main
+    End Sub
 End Class 'Sample
 
 '

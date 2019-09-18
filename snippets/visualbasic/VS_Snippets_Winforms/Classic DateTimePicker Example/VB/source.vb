@@ -23,7 +23,7 @@ Public Class Form1
         ' Show the CheckBox and display the control as an up-down control.
         dateTimePicker1.ShowCheckBox = True
         dateTimePicker1.ShowUpDown = True
-    End Sub 'CreateMyDateTimePicker
+    End Sub
     ' </Snippet1>
 End Class 'Form1 
 

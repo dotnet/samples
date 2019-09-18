@@ -25,7 +25,7 @@ Class Sample
          Console.Write("(not found)")
       End If
       Console.WriteLine()
-   End Sub 'Main
+   End Sub
 End Class 'Sample
 '
 'The first character occurrence from position 22 for 16 characters.

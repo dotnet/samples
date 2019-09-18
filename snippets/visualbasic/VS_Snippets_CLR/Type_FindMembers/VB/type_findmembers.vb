@@ -25,7 +25,7 @@ Class MyFindMembersClass
         Catch e As Exception
             Console.WriteLine("Exception : " + e.ToString())
         End Try
-    End Sub 'Main
+    End Sub
 
     Public Shared Function DelegateToSearchCriteria _
                             (ByVal objMemberInfo As MemberInfo, _

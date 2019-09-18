@@ -25,7 +25,7 @@ Public Class Form1
       ' Required for Windows Form Designer support
       '
       InitializeComponent()
-   End Sub 'New
+   End Sub
     
    '
    ' TODO: Add any constructor code after InitializeComponent call
@@ -70,7 +70,7 @@ Public Class Form1
       Me.Name = "Form1"
       Me.Text = "Form1"
       Me.ResumeLayout(False)
-   End Sub 'InitializeComponent
+   End Sub
     
    '
    'ToDo: Error processing original source shown below
@@ -83,7 +83,7 @@ Public Class Form1
    <STAThread()>  _
    Shared Sub Main()
       Application.Run(New Form1())
-   End Sub 'Main
+   End Sub
    
    
    '<snippet1>

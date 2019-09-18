@@ -34,7 +34,7 @@ Public Class MyDataGridTextBox
       InitializeComponent()
       ' Bind the controls.
       MakeDataSet()
-   End Sub 'New
+   End Sub
 
    ' Clean up any resources being used.
    Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -44,12 +44,12 @@ Public Class MyDataGridTextBox
          End If
       End If
       MyBase.Dispose(disposing)
-   End Sub 'Dispose
+   End Sub
 
    ' Main entry point for the application.
    Shared Sub Main()
       Application.Run(New MyDataGridTextBox())
-   End Sub 'Main
+   End Sub
 
    Private Sub InitializeComponent()
       ' Create the form and its controls.
@@ -81,7 +81,7 @@ Public Class MyDataGridTextBox
       myDataGridTextBox.ForeColor = Color.Red
       myDataGridTextBox.Multiline = True
       myDataGridTextBox.WordWrap = True
-   End Sub 'InitializeComponent
+   End Sub
 
    Private Sub AddCustomDataTableStyle()
       ' Map the DataGridTableStyle to the Table name.
@@ -101,7 +101,7 @@ Public Class MyDataGridTextBox
 
       ' Add the DataGridTableStyle to GridTableStylesCollection.
       myDataGrid.TableStyles.Add(myDataGridTableStyle)
-   End Sub 'AddCustomDataTableStyle
+   End Sub
 
 ' <Snippet2>
    ' Create a DataSet with a table and populate it.
@@ -131,6 +131,6 @@ Public Class MyDataGridTextBox
       myDataGridTextBox.DataBindings.Add("Text", myDataSet, "Person.PersonName")
       ' Set the DataGrid to the DataGridTextBox.
       myDataGridTextBox.SetDataGrid(myDataGrid)
-   End Sub 'MakeDataSet
+   End Sub
 ' </Snippet2>
 End Class 'MyDataGridTextBox

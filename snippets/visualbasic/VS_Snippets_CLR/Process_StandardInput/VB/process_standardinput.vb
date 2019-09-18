@@ -68,7 +68,7 @@ Namespace Process_StandardInput_Sample
                 myProcess.WaitForExit()
             End Using
 
-        End Sub 'Main
+        End Sub
     End Class  'StandardInputTest
 End Namespace 'Process_StandardInput_Sample
 ' </Snippet1>

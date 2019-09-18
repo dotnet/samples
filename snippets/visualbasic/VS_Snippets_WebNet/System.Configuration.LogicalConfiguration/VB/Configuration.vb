@@ -19,7 +19,7 @@ Namespace Samples.AspNet
 
         Public Sub New()
 
-        End Sub 'New
+        End Sub
        
 
         ' Define a custom section.
@@ -108,7 +108,7 @@ Namespace Samples.AspNet
             ' Save the changes.
             config.Save()
 
-        End Sub 'CreateCustomSection
+        End Sub
 
 
         ' Get the custom section stored in 

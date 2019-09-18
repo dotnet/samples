@@ -26,7 +26,7 @@ Public Class MyTypeClass
         Catch e As NullReferenceException
             Console.WriteLine("The property does not exist in MyClass.", e.Message.ToString())
         End Try
-    End Sub 'Main
+    End Sub
 End Class 'MyTypeClass 
 ' </Snippet1>
 

@@ -15,6 +15,6 @@ Public Class Form1
         
         dgt.BeginEdit(myCol, 1)
         dgt.EndEdit(myCol, 1, True)
-    End Sub 'EditTable
+    End Sub
     ' </Snippet1>
 End Class 'Form1

@@ -53,13 +53,13 @@ Public Class TreeViewOwnerDraw
         ' Initialize the form and add the TreeView control to it.
         Me.ClientSize = New Size(292, 273)
         Me.Controls.Add(myTreeView)
-    End Sub 'New
+    End Sub
     '</Snippet2>
     
     <STAThreadAttribute()> _
     Shared Sub Main()
         Application.Run(New TreeViewOwnerDraw())
-    End Sub 'Main
+    End Sub
     
     '<Snippet3>
     ' Draws a node.
@@ -112,7 +112,7 @@ Public Class TreeViewOwnerDraw
             End Try
         End If
 
-    End Sub 'myTreeView_DrawNode
+    End Sub
     '</Snippet3>
 
     ' Selects a node that is clicked on its label or tag text.
@@ -121,7 +121,7 @@ Public Class TreeViewOwnerDraw
         If NodeBounds(clickedNode).Contains(e.X, e.Y) Then
             myTreeView.SelectedNode = clickedNode
         End If
-    End Sub 'myTreeView_MouseDown
+    End Sub
 
     ' Returns the bounds of the specified node, including the region 
     ' occupied by the node label and any node tag displayed.

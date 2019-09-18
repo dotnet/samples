@@ -30,6 +30,6 @@ Class X500Sample
             msg = "Error: Information could not be written out for this certificate."
             MsgBox(msg)
       End Try
-   End Sub 'Main 
+   End Sub
 End Class 'X500Sample
 '</SNIPPET1>

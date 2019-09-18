@@ -27,6 +27,6 @@ Class MySample
             mySourceData.MachineName = "MyMachine"
             EventLog.CreateEventSource(mySourceData)
         End If
-    End Sub 'Main
+    End Sub
 End Class 'MySample
 ' </Snippet1>

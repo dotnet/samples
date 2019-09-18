@@ -14,7 +14,7 @@ Namespace InkRecognition
 
         Public Sub New()
             InitializeComponent()
-        End Sub 'New
+        End Sub
 
 
         ' Recognizes handwriting by using RecognizerContext
@@ -43,7 +43,7 @@ Namespace InkRecognition
                     End If
                 End Using
             End Using
-        End Sub 'buttonClick
+        End Sub
 
         Private Sub btnClear_Click(sender As Object, e As RoutedEventArgs)
             theInkCanvas.Strokes.Clear()

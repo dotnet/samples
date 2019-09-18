@@ -22,7 +22,7 @@ Class Program
         ' test the ForAll generic overload. This is only for purpose of demonstrating how ForAll works.
         CheckTypeArray(numbers)
 
-    End Sub 'Main
+    End Sub
 
 
     Private Shared Function CheckIndexes(ByVal args() As String) As Boolean

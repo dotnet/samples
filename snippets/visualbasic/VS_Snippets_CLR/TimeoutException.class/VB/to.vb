@@ -29,7 +29,7 @@ Class Sample
       Catch e As TimeoutException
          Console.WriteLine(e)
       End Try
-   End Sub 'Main
+   End Sub
 End Class 'Sample
 '
 'This example produces the following results:

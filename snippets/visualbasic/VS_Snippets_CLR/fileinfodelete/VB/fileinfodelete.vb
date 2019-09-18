@@ -11,6 +11,6 @@ Public Class DeleteTest
         fs.Close()
         ' Delete the file.
         fi.Delete()
-    End Sub 'Main
+    End Sub
 End Class 'DeleteTest
 ' </snippet1>

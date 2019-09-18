@@ -5,7 +5,7 @@ Public Class HelloService
 
    Public Sub New()
       Console.WriteLine("Server Started ")
-   End Sub 'New
+   End Sub
 
    Public Function HelloMethod(name As String) As String
       Return "Hi, " + name

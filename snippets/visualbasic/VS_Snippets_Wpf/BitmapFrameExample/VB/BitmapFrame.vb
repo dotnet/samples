@@ -21,7 +21,7 @@ Namespace SDKSample
             MyBase.OnStartup(e)
             CreateAndShowMainWindow()
 
-        End Sub 'OnStartup
+        End Sub
 
         <SecurityPermissionAttribute(SecurityAction.Demand, Flags:=SecurityPermissionFlag.UnmanagedCode)> Private Sub CreateAndShowMainWindow()
 
@@ -175,7 +175,7 @@ Namespace SDKSample
             theWindow.Content = mySV
             theWindow.Show()
 
-        End Sub 'CreateAndShowMainWindow
+        End Sub
     End Class 'MyApp
 
     ' Define a static entry class
@@ -187,7 +187,7 @@ Namespace SDKSample
             Dim app As New MyApp()
             app.Run()
 
-        End Sub 'Main
+        End Sub
     End Class 'EntryClass
 
 End Namespace 'SDKSample

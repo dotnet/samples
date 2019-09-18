@@ -35,7 +35,7 @@ Public Class SamplesQueue
             Console.Write("    {0}", myObj)
         Next myObj
         Console.WriteLine()
-    End Sub 'PrintValues
+    End Sub
 
 End Class 'SamplesQueue 
 

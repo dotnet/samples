@@ -18,7 +18,7 @@ Class EncoderExample
         ' Note that their hash codes differ.
         Console.WriteLine(enc1.GetHashCode())
         Console.WriteLine(enc2.GetHashCode())
-    End Sub 'Main
+    End Sub
 End Class 'EncoderExample
 
 'This code example produces the following output.

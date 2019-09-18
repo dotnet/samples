@@ -48,7 +48,7 @@ Namespace PrinterStatusSurvey
 
 			'</SnippetSurveyQueues>
 
-		End Sub 'end Main
+		End Sub
 
 	End Class 'end Program class
 
@@ -100,7 +100,7 @@ Namespace PrinterStatusSurvey
 			' The following method is defined in the complete example.
 			ReportAvailabilityAtThisTime(statusReport, pq)
 
-		End Sub 'end SpotTroubleUsingProperties
+		End Sub
 		' </SnippetSpotTroubleUsingQueueProperties>
 
 		' <SnippetSpotTroubleUsingQueueAttributes>

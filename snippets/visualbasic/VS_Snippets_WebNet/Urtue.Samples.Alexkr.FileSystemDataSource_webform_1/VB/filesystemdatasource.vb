@@ -40,7 +40,7 @@ Namespace Samples.AspNet
             Else
                 _viewPath = Path.Combine(currentRequest.MapPath(currentRequest.ApplicationPath), viewPath)
             End If
-        End Sub 'New
+        End Sub
 
 
         ' Starting with the rootNode, recursively build a list of

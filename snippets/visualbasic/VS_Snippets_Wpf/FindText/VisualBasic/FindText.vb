@@ -68,7 +68,7 @@ Namespace SDKSample
                 ' Create an instance of the sample class and call its Run() method to start it.
                 Dim app As New FindText()
                 app.Run()
-            End Sub 'Main
+            End Sub
         End Class 'TestMain
 
     End Class

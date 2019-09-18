@@ -23,7 +23,7 @@ Public Class SamplesGregorianCalendar
          Console.WriteLine()
       Next y
 
-   End Sub 'Main 
+   End Sub
 
 End Class 'SamplesGregorianCalendar
 

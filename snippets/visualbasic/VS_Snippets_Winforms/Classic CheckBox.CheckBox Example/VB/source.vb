@@ -24,6 +24,6 @@ Public Class Form1
         
         ' Add the check box control to the form.
         Controls.Add(checkBox1)
-    End Sub 'InstantiateMyCheckBox
+    End Sub
     ' </Snippet1>
 End Class 'Form1 

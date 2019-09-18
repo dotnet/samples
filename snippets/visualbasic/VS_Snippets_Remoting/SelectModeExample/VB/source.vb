@@ -56,11 +56,11 @@ Public Class Sample
          bytes = s.Receive(RecvBytes, RecvBytes.Length, 0)
          strRetPage = strRetPage + ASCII.GetString(RecvBytes, 0, bytes)
       End While 
-   End Sub 'DoSocketGet
+   End Sub
    
    Public Shared Sub Main()
       DoSocketGet("www.contoso.com")
-   End Sub 'Main
+   End Sub
 End Class 'Sample 
 
 

@@ -26,7 +26,7 @@ Public Class FieldInfo_FieldHandle
         Catch e As Exception
             Console.WriteLine(" Exception: {0}", e.Message.ToString())
         End Try
-    End Sub 'Main
+    End Sub
 
     Public Shared Sub DisplayFieldHandle(ByVal myFieldHandle As RuntimeFieldHandle)
         ' Get the type from the handle.
@@ -34,6 +34,6 @@ Public Class FieldInfo_FieldHandle
         ' Display the type.
         Console.WriteLine(ControlChars.Cr + "Displaying the field from the handle." + ControlChars.Cr)
         Console.WriteLine("The type is {0}.", myField.ToString())
-    End Sub 'DisplayFieldHandle
+    End Sub
 End Class 'FieldInfo_FieldHandle
 ' </Snippet1>

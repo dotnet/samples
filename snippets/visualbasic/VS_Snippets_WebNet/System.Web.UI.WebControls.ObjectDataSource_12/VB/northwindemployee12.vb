@@ -64,7 +64,7 @@ Public Class EmployeeLogic
       If Not retval Then
          Throw New NorthwindDataException("Employee update failed.")
       End If
-   End Sub 'UpdateEmployee
+   End Sub
 
    ' This method is added as a conveniece wrapper on the original
    ' implementation.
@@ -77,7 +77,7 @@ Public Class EmployeeLogic
       ne.City = aCity
       ne.PostalCode = aPostalCode
       UpdateEmployee(ne)
-   End Sub 'UpdateEmployeeWrapper
+   End Sub
 '</Snippet3>
    ' And so on...
 
@@ -123,7 +123,7 @@ Public Class NorthwindEmployee
             Throw
          End Try
       End Try
-   End Sub 'New
+   End Sub
 
    Private ID As Object
    Public ReadOnly Property EmpID() As Object
@@ -196,7 +196,7 @@ Friend Class NorthwindDataException
 
    Public Sub New(msg As String)
       MyBase.New(msg)
-   End Sub 'New
+   End Sub
 
 End Class 'NorthwindDataException
 End Namespace

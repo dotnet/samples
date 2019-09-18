@@ -74,7 +74,7 @@ Public Class Form1
             True, DataSourceUpdateMode.OnPropertyChanged)
 
     
-    End Sub 'InitializeControlsAndDataSource
+    End Sub
     
     '</snippet3>
     '<snippet2>

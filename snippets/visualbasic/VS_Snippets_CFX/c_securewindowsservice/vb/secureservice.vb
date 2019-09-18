@@ -15,7 +15,7 @@ Public Class Test
         Console.WriteLine("Starting....")
         t.Run()
     
-    End Sub 'Main
+    End Sub
      
     
     Private Sub Run() 
@@ -42,7 +42,7 @@ Public Class Test
         Console.ReadLine()
         myServiceHost.Close()
     
-    End Sub 'Run
+    End Sub
 End Class 'Test
 
 <ServiceContract()>  _

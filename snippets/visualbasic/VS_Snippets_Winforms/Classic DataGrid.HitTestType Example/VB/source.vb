@@ -19,7 +19,7 @@ Public Class Form1
         Console.WriteLine(("Type " & myHitTest.Type))
         Console.WriteLine(("ToString " & myHitTest.ToString()))
         Console.WriteLine(("Hit " & ReturnHitTest(myHitTest.Type)))
-    End Sub 'dataGrid1_MouseDown
+    End Sub
     
     
     Private Function ReturnHitTest(hit As System.Windows.Forms.DataGrid.HitTestType) As String

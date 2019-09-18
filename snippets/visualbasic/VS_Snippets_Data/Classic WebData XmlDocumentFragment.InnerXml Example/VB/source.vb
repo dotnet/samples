@@ -19,6 +19,6 @@ Public Class Sample
         
         ' Display the document fragment.
         Console.WriteLine(docFrag.InnerXml)
-    End Sub 'Main 
+    End Sub
 End Class 'Sample
 ' </Snippet1>

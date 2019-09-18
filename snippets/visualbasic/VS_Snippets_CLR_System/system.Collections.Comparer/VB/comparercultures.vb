@@ -24,7 +24,7 @@ Public Class SamplesComparer
       Dim myCompTrad As New Comparer(New CultureInfo(&H40A, False))
       Console.WriteLine("   Traditional Sort  : {0}", myCompTrad.Compare(str1, str2))
 
-   End Sub 'Main 
+   End Sub
 
 End Class 'SamplesComparer
 

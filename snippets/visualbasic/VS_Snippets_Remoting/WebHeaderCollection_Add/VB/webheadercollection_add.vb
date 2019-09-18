@@ -50,7 +50,7 @@ Public Class WebHeaderCollection_Add
         Catch e As Exception
             Console.WriteLine(e.Message)
         End Try
-    End Sub 'Main
+    End Sub
 ' </Snippet1>    
     
     Public Shared Sub printHeaders(headers As WebHeaderCollection)
@@ -62,5 +62,5 @@ Public Class WebHeaderCollection_Add
         For i = 0 To headers.Count - 1
             Console.WriteLine((ControlChars.Tab + headers.AllKeys(i) + " : " + headers(i)))
         Next i
-    End Sub 'printHeaders
+    End Sub
 End Class 'WebHeaderCollection_Add

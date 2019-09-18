@@ -7,6 +7,6 @@ Public Class MainClass
         Dim result As [Object] = tDate.InvokeMember("Now", _
             BindingFlags.GetProperty, Nothing, Nothing, New [Object](-1) {})
         Console.WriteLine(result.ToString())
-    End Sub 'Main
+    End Sub
 End Class 'MainClass
 ' </Snippet1>

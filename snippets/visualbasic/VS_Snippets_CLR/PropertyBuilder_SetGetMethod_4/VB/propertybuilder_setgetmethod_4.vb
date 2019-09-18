@@ -47,7 +47,7 @@ Public Class App
       Dim myAssembly As AssemblyBuilder = CType(helloWorldType.Assembly, AssemblyBuilder)
       ' Save to disk.
       myAssembly.Save("EmittedAssembly.dll")
-   End Sub 'Main
+   End Sub
 
 
    ' Create the callee transient dynamic assembly.

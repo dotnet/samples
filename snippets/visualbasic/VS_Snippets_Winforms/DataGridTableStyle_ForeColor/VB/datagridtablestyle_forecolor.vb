@@ -25,7 +25,7 @@ Namespace Datagrid
       
       Public Sub New()
          InitializeComponent()
-      End Sub 'New
+      End Sub
       
       ' Clean up resources.
         Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -35,7 +35,7 @@ Namespace Datagrid
                 End If
             End If
             MyBase.Dispose(disposing)
-        End Sub 'Dispose
+        End Sub
 
         Private Sub InitializeComponent()
             Me.myComboBox = New System.Windows.Forms.ComboBox()
@@ -79,18 +79,18 @@ Namespace Datagrid
             Me.Text = "Form1"
             CType(Me.dataGrid1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
-        End Sub 'InitializeComponent
+        End Sub
 
 
         <STAThread()> Shared Sub Main()
             Application.Run(New Form1())
-        End Sub 'Main
+        End Sub
 
 
         Private Sub Form1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
             myComboBox.SelectedIndex = 0
             Create_Table()
-        End Sub 'Form1_Load
+        End Sub
 
 ' <Snippet1>
         Private Sub Create_Table()
@@ -122,7 +122,7 @@ Namespace Datagrid
             myTableStyle.MappingName = "Customers"
             myTableStyle.ForeColor = Color.DarkMagenta
             dataGrid1.TableStyles.Add(myTableStyle)
-        End Sub 'Create_Table
+        End Sub
 
         ' Set table's forecolor.
         Private Sub OnForeColor_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles button2.Click
@@ -136,7 +136,7 @@ Namespace Datagrid
                     myTableStyle.ForeColor = Color.Violet
             End Select
             dataGrid1.TableStyles.Add(myTableStyle)
-        End Sub 'OnForeColor_Click
+        End Sub
 ' </Snippet1>
     End Class 'Form1 
 End Namespace 'Datagrid

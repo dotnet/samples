@@ -32,7 +32,7 @@ Public Class SamplesBitArray
            myBA.Count - 2, myBA.Get(myBA.Count - 2))
         Console.WriteLine("    at index {0} : {1}", _
            myBA.Count - 1, myBA.Get(myBA.Count - 1))
-    End Sub 'Main
+    End Sub
 
     Public Shared Sub PrintIndexAndValues(myCol As IEnumerable)
         Dim i As Integer
@@ -43,7 +43,7 @@ Public Class SamplesBitArray
             i = i + 1
         Next obj
         Console.WriteLine()
-    End Sub 'PrintValues
+    End Sub
 
 End Class
 

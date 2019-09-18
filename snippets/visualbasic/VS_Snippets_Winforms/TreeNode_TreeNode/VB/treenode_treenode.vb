@@ -34,7 +34,7 @@ Public Class TreeNode_Checked
    Public Sub New()
       InitializeComponent()
       FillMyTreeView()
-   End Sub 'New
+   End Sub
    ' ArrayList object to hold the 'Customer' objects.
    Private customerArray As New ArrayList()
    
@@ -64,7 +64,7 @@ Public Class TreeNode_Checked
       
       ' Begin repainting the TreeView.
       myTreeView.EndUpdate()
-   End Sub 'FillMyTreeView
+   End Sub
    
    
    
@@ -76,7 +76,7 @@ Public Class Customer
    Public Sub New(myName As String)
       CustomerName = myName
       CustomerOrders = New ArrayList()
-   End Sub 'New
+   End Sub
 End Class 'Customer
 
 
@@ -85,7 +85,7 @@ Public Class Order
    
    Public Sub New(myOrderID As String)
       Me.OrderID = myOrderID
-   End Sub 'New
+   End Sub
 End Class 'Order
 
 Private Sub FillTreeView()
@@ -157,10 +157,10 @@ End Sub
       Me.Name = "Form1"
       Me.Text = "TreeNode Example"
       Me.ResumeLayout(True)
-   End Sub 'InitializeComponent
+   End Sub
    
    
    Shared Sub Main()
       Application.Run(New TreeNode_Checked())
-   End Sub 'Main
+   End Sub
 End Class 'TreeNode_Checked

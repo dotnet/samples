@@ -42,7 +42,7 @@ Public Class SamplesEncoding
          Console.WriteLine()
       Next ei
 
-   End Sub 'Main 
+   End Sub
 
 End Class 'SamplesEncoding
 

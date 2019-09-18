@@ -37,6 +37,6 @@ Public Class IndexOfTest
             totFinds = 0
         
         Loop While True
-    End Sub 'Main
+    End Sub
 End Class 'IndexOfTest
 '</snippet1>

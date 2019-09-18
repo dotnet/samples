@@ -11,11 +11,11 @@ MustInherit Public Class Coll1
     
     Public Sub New()
         MyBase.New(Nothing)
-    End Sub 'New
+    End Sub
      
     Protected Sub Method()
         ' <Snippet1>
         myNewColl = Me.Sort(New String() {"D", "B"})
         ' </Snippet1>
-    End Sub 'Method 
+    End Sub
 End Class 'Coll1

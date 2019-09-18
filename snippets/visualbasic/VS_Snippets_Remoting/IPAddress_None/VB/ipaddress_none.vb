@@ -14,7 +14,7 @@ Class NoneFieldAddress
         ' and converts it to a string. 
         Dim address As String = IPAddress.None.ToString()
         Console.WriteLine(("IP address : " + address))
-    End Sub 'Main 
+    End Sub
 ' </Snippet1>	
 
 End Class 'NoneFieldAddress

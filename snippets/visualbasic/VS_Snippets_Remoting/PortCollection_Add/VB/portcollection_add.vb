@@ -69,5 +69,5 @@ Class PortCollection_2
       Catch ex As Exception
          Console.WriteLine("Exception:" + ex.Message)
       End Try
-   End Sub 'Main
+   End Sub
 End Class 'PortCollection_2

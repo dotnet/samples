@@ -29,7 +29,7 @@ Class Sample
             Console.Write("are not")
         End If
         Console.WriteLine(" equal.")
-    End Sub 'Main 
+    End Sub
 End Class 'Sample
 
 '

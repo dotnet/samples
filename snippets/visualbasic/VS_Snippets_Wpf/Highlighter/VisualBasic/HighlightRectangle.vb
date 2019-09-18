@@ -82,7 +82,7 @@ Friend Class HighlightRectangle
             End With
         Next form
 
-    End Sub 'New
+    End Sub
 
 #End Region
 
@@ -149,7 +149,7 @@ Friend Class HighlightRectangle
             bottomForm.Hide()
         End If
 
-    End Sub 'Show
+    End Sub
 
 
     ''' <summary>
@@ -160,7 +160,7 @@ Friend Class HighlightRectangle
 
         Show(True)
 
-    End Sub 'ShowRectangle
+    End Sub
 
 
     ''' <summary>
@@ -171,7 +171,7 @@ Friend Class HighlightRectangle
 
         Show(False)
 
-    End Sub 'HideRectangle
+    End Sub
 
 
     ''' <summary>
@@ -192,7 +192,7 @@ Friend Class HighlightRectangle
         NativeMethods.SetWindowPos(rightForm.Handle, NativeMethods.HWND_TOPMOST, highlightLocation.Left + highlightLocation.Width, highlightLocation.Top, highlightLineWidth, highlightLocation.Height, NativeMethods.SWP_NOACTIVATE)
         NativeMethods.SetWindowPos(bottomForm.Handle, NativeMethods.HWND_TOPMOST, highlightLocation.Left - highlightLineWidth, highlightLocation.Top + highlightLocation.Height, highlightLocation.Width + 2 * highlightLineWidth, highlightLineWidth, NativeMethods.SWP_NOACTIVATE)
 
-    End Sub 'Layout
+    End Sub
 
 #End Region
 

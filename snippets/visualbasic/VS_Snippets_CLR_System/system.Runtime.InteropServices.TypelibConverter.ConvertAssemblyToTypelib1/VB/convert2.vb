@@ -27,7 +27,7 @@ Public Class App
 
         Dim typeLib As UCOMICreateITypeLib = CType(converter.ConvertAssemblyToTypeLib(asm, "MyTypeLib.dll", 0, eventHandler), UCOMICreateITypeLib)
         typeLib.SaveAllChanges()
-    End Sub 'Main
+    End Sub
 End Class 'App
 
 Public Class ConversionEventHandler
@@ -35,7 +35,7 @@ Public Class ConversionEventHandler
 
     Public Sub ReportEvent(ByVal eventKind As ExporterEventKind, ByVal eventCode As Integer, ByVal eventMsg As String) Implements ITypeLibExporterNotifySink.ReportEvent
         ' Handle the warning event here.
-    End Sub 'ReportEvent
+    End Sub
 
     Public Function ResolveRef(ByVal asm As [Assembly]) As [Object] Implements ITypeLibExporterNotifySink.ResolveRef
         ' Resolve the reference here and return a correct type library.

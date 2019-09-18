@@ -40,7 +40,7 @@ Partial Class Window1
 
         inkCanvas1.DefaultDrawingAttributes = teachersDA
 
-    End Sub 'New
+    End Sub
 
 
     ' Switch between using the 'pen' DrawingAttributes and the 
@@ -56,7 +56,7 @@ Partial Class Window1
             inkCanvas1.DefaultDrawingAttributes = teachersDA
         End If
 
-    End Sub 'switchAuthor_click
+    End Sub
 
 
     ' Change the color of the ink that on the InkCanvas that used the pen.
@@ -75,7 +75,7 @@ Partial Class Window1
             End If
         Next s
 
-    End Sub 'changeColor_click
+    End Sub
 End Class 'Window1 
 '</Snippet3>
 
@@ -91,7 +91,7 @@ Class CodeSnippet
         
         inkCanvas1.Strokes.AddPropertyData(timestamp, DateTime.Now)
     
-    End Sub 'AddTimestamp
+    End Sub
     
     
     ' Get the timestamp of the StrokeCollection.
@@ -107,6 +107,6 @@ Class CodeSnippet
             MessageBox.Show("The StrokeCollection does not have a timestamp.")
         End If
     
-    End Sub 'GetTimestamp
+    End Sub
     '</Snippet1>
 End Class 'CodeSnippet

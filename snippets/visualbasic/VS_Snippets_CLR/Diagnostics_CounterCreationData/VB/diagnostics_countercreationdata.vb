@@ -58,7 +58,7 @@ Namespace MyDiagnostics
                 Console.WriteLine("CounterHelp : " + myCol(i).CounterHelp)
                 Console.WriteLine("CounterType : " + myCol(i).CounterType.ToString())
             Next i
-        End Sub 'Main
+        End Sub
     End Class 'MyCounterCreationData
 End Namespace 'MyDiagnostics
 ' </Snippet6>

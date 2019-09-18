@@ -12,6 +12,6 @@ Namespace MyAssembly
       
       Shared Sub Main()
          Console.WriteLine("Hello World")
-      End Sub 'Main
+      End Sub
    End Class 'MyProjectInstaller
 End Namespace 'MyAssembly

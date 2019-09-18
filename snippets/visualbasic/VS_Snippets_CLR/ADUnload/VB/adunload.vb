@@ -25,6 +25,6 @@ Class ADUnload
       Catch e As AppDomainUnloadedException
          Console.WriteLine("The appdomain MyDomain does not exist.")
       End Try
-   End Sub 'Main 
+   End Sub
 End Class 'ADUnload
 ' </SNIPPET1>

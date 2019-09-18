@@ -32,7 +32,7 @@ Class Sample
          start = at + 1
       End While
       Console.WriteLine()
-   End Sub 'Main
+   End Sub
 End Class 'Sample
 '
 'This example produces the following results:

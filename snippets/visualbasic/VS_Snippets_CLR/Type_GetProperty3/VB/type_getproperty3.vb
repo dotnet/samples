@@ -34,7 +34,7 @@ Module Module1
                 Console.WriteLine("Source : {0}", e.Source.ToString())
                 Console.WriteLine("Message : {0}", e.Message.ToString())
             End Try
-        End Sub 'Main
+        End Sub
     End Class 'MyTypeClass
 End Module 'Module1
 ' </Snippet1>

@@ -50,7 +50,7 @@ Public Class ServerProcess
       Next myChannelData
 ' </Snippet2>
 ' </Snippet3>
-   End Sub 'Main
+   End Sub
 End Class 'ServerProcess
 
 ' Marshal ByRef Object class.

@@ -18,7 +18,7 @@ Class NumberFormatInfoSample
       nfi.PercentGroupSeparator = " "
       Console.WriteLine(myInt.ToString("P", nfi))
 
-   End Sub 'Main 
+   End Sub
 
 End Class 'NumberFormatInfoSample
 

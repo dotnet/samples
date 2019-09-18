@@ -42,5 +42,5 @@ Class Test
          acceptList(i) = CType(listenList(i), Socket).Accept()
       Next i
 '</Snippet1>
-   End Sub 'Main
+   End Sub
 End Class

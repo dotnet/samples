@@ -23,7 +23,7 @@ Public Class SamplesJapaneseCalendar
          Console.WriteLine()
       Next y
 
-   End Sub 'Main 
+   End Sub
 
 End Class 'SamplesJapaneseCalendar
 

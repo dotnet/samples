@@ -39,7 +39,7 @@ Namespace CustomTraceListener
             Next traceListener
             ts.TraceEvent(TraceEventType.Error, 1, "test error message")
 
-        End Sub 'Main
+        End Sub
     End Class 'Program
 
     Public Class TestListener
@@ -49,7 +49,7 @@ Namespace CustomTraceListener
 
         Public Sub New(ByVal listenerName As String)
             m_name = listenerName
-        End Sub 'New
+        End Sub
 
 
         Public Property [Source]() As String
@@ -70,12 +70,12 @@ Namespace CustomTraceListener
         Public Overrides Sub Write(ByVal s As String)
             Console.Write(m_name + " " + [Source] + ": " + s)
 
-        End Sub 'Write
+        End Sub
 
         Public Overrides Sub WriteLine(ByVal s As String)
             Console.WriteLine(s)
 
-        End Sub 'WriteLine
+        End Sub
 
         Protected Overrides Function GetSupportedAttributes() As String()
             Return New String() {"Source"}

@@ -18,7 +18,7 @@ Class MyApp
         Dim secondWindow As New Window2()
         secondWindow.Show()
 
-    End Sub 'AppStartingUp
+    End Sub
 End Class 'MyApp 
 '
 'ToDo: Error processing original source shown below

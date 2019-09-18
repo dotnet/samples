@@ -48,7 +48,7 @@ Public Class Sample
         
         ' Write the XML content to the console.
         Console.Write(doc.InnerXml)
-    End Sub 'Main 
+    End Sub
 End Class 'Sample
 
 ' </Snippet1>

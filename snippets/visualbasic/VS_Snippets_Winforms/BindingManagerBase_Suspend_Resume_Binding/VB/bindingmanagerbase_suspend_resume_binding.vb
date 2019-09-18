@@ -30,7 +30,7 @@ Public Class Form1
       InitializeComponent()
       ' Call SetUp to bind the controls.
       SetUp()
-   End Sub 'New
+   End Sub
    
    
    Private Sub InitializeComponent()
@@ -97,18 +97,18 @@ Public Class Form1
       Name = "Form1"
       [Text] = "Binding Sample"
       ResumeLayout(False)
-   End Sub 'InitializeComponent
+   End Sub
    
    
    Public Shared Sub Main()
       Application.Run(New Form1())
-   End Sub 'Main
+   End Sub
    
    
    Private Sub SetUp()
       MakeDataSet()
       BindControls()
-   End Sub 'SetUp
+   End Sub
    
    
    Protected Sub BindControls()
@@ -116,19 +116,19 @@ Public Class Form1
       text2.DataBindings.Add(New Binding("Text", myDataSet, "customers.custID"))
       
       myBindingManager = BindingContext(myDataSet, "Customers")
-   End Sub 'BindControls
+   End Sub
    
    
     Private Sub button1_Click(ByVal sender As Object, ByVal e As EventArgs)
         ' Go to the previous item in the Customer list.
         myBindingManager.Position -= 1
-    End Sub 'button1_Click
+    End Sub
    
    
     Private Sub button2_Click(ByVal sender As Object, ByVal e As EventArgs)
         ' Go to the next item in the Customer list.
         myBindingManager.Position += 1
-    End Sub 'button2_Click
+    End Sub
    
    
    ' Create a DataSet with two tables and populate it.
@@ -165,7 +165,7 @@ Public Class Form1
       Dim idKeyRestraint As New UniqueConstraint(myCustomerColumnID)
       myCustomerTable.Constraints.Add(idKeyRestraint)
       myDataSet.EnforceConstraints = True
-   End Sub 'MakeDataSet
+   End Sub
    
    
 ' <Snippet1>
@@ -177,7 +177,7 @@ Public Class Form1
          MessageBox.Show(ex.Source.ToString())
          MessageBox.Show(ex.Message.ToString())
       End Try
-   End Sub 'button3_Click
+   End Sub
    
 ' </Snippet1>
 ' <Snippet2>
@@ -189,7 +189,7 @@ Public Class Form1
          MessageBox.Show(ex.Source.ToString())
          MessageBox.Show(ex.Message.ToString())
       End Try
-   End Sub 'button4_Click
+   End Sub
 ' </Snippet2>
 End Class 'Form1
 

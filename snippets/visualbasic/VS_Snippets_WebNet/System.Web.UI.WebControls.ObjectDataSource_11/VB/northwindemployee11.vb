@@ -54,13 +54,13 @@ Public Class EmployeeLogic
          Throw New NorthwindDataException("Employee delete failed.")
       End If ' Delete the object in memory.
       ne = Nothing
-   End Sub 'DeleteEmployee
+   End Sub
 
 
    Public Shared Sub DeleteEmployee(anID As Integer)
       Dim tempEmp As New NorthwindEmployee(anID)
       DeleteEmployee(tempEmp)
-   End Sub 'DeleteEmployeeByID
+   End Sub
 
    ' And so on...
 
@@ -103,7 +103,7 @@ Public Class NorthwindEmployee
             Throw
          End Try
       End Try
-   End Sub 'New
+   End Sub
 
    Private ID As Object
    Public ReadOnly Property EmpID() As Object
@@ -170,7 +170,7 @@ Friend Class NorthwindDataException
 
    Public Sub New(msg As String)
       MyBase.New(msg)
-   End Sub 'New
+   End Sub
 End Class 'NorthwindDataException
 
 End Namespace

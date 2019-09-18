@@ -49,7 +49,7 @@ Namespace CustomerCodeExamples
          Me.Text = "TV1"
          Me.ResumeLayout(False)
          Me.components = New System.ComponentModel.Container()
-      End Sub 'InitializeComponent
+      End Sub
 
       '<snippet1>
       Public Class Customer
@@ -84,7 +84,7 @@ Namespace CustomerCodeExamples
 
          Public Sub New(ByVal orderid As String)
             Me.ordID = orderid
-         End Sub 'New
+         End Sub
 
          Public Property OrderID() As String
             Get
@@ -142,13 +142,13 @@ Namespace CustomerCodeExamples
 
          ' Begin repainting the TreeView.
          treeView1.EndUpdate()
-      End Sub 'FillMyTreeView
+      End Sub
       '</snippet1>      
 
 
       Private Sub button1_Click(ByVal sender As Object, ByVal e As System.EventArgs)
          Me.FillMyTreeView()
-      End Sub 'button1_Click
+      End Sub
 
    End Class 'TV1
 

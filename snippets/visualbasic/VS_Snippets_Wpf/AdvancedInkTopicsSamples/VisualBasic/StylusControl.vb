@@ -35,7 +35,7 @@ Class InkControl
         ip.AttachVisuals(cdr.RootVisual, cdr.DrawingAttributes)
         Me.StylusPlugIns.Add(cdr)
 
-    End Sub 'New
+    End Sub
 
     Shared Sub New()
 
@@ -43,7 +43,7 @@ Class InkControl
         Dim owner As Type = GetType(InkControl)
         ClipToBoundsProperty.OverrideMetadata(owner, New FrameworkPropertyMetadata(True))
 
-    End Sub 'New
+    End Sub
 
     '<Snippet7>
     Protected Overrides Sub OnStylusDown(ByVal e As StylusDownEventArgs)
@@ -57,7 +57,7 @@ Class InkControl
 
         stylusPoints.Add(eventPoints)
 
-    End Sub 'OnStylusDown
+    End Sub
     '</Snippet7>
 
     '<Snippet8>
@@ -72,7 +72,7 @@ Class InkControl
         Dim newStylusPoints As StylusPointCollection = e.GetStylusPoints(Me, stylusPoints.Description)
         stylusPoints.Add(newStylusPoints)
 
-    End Sub 'OnStylusMove
+    End Sub
     '</Snippet8>
 
     '<Snippet10>
@@ -99,7 +99,7 @@ Class InkControl
         ' Release stylus capture.
         Stylus.Capture(Nothing)
 
-    End Sub 'OnStylusUp
+    End Sub
     '</Snippet10>
 
     '<Snippet11>
@@ -117,7 +117,7 @@ Class InkControl
         Dim pt As Point = e.GetPosition(Me)
         stylusPoints.Add(New StylusPoint(pt.X, pt.Y))
 
-    End Sub 'OnMouseLeftButtonDown
+    End Sub
     '</Snippet11>
 
     '<Snippet12>
@@ -143,7 +143,7 @@ Class InkControl
         Dim pt As Point = e.GetPosition(Me)
         stylusPoints.Add(New StylusPoint(pt.X, pt.Y))
 
-    End Sub 'OnMouseMove
+    End Sub
     '</Snippet12>
 
     '<Snippet13>
@@ -170,7 +170,7 @@ Class InkControl
 
         stylusPoints = Nothing
 
-    End Sub 'OnMouseLeftButtonUp 
+    End Sub
     '</Snippet13>
 End Class 'StylusControl
 '</Snippet6>

@@ -31,7 +31,7 @@ Class Window1
         ReportLBIs()
 
 
-    End Sub 'New
+    End Sub
 
 
     Sub ReportLBIs()
@@ -48,7 +48,7 @@ Class Window1
             Console.WriteLine(item.GetType().ToString())
         Next item
 
-    End Sub 'ReportLBIs
+    End Sub
     '</Snippet11>
 
     '<Snippet12>
@@ -79,7 +79,7 @@ Class Window1
 
         root.Children.Add(listBox1)
 
-    End Sub 'AddThirdListBox
+    End Sub
 
 
     Private Sub listBox1_SelectionChanged(ByVal sender As Object, ByVal e As SelectionChangedEventArgs)
@@ -108,7 +108,7 @@ Class Window1
             lbi.Background = Brushes.Green
         End If
 
-    End Sub 'listBox1_SelectionChanged
+    End Sub
 
 
     Private listBox1 As New ListBox()
@@ -151,7 +151,7 @@ Class Window1
         '</Snippet4>
         root.Children.Add(listBox1)
 
-    End Sub 'AddFirstListBox
+    End Sub
 
 
 
@@ -201,7 +201,7 @@ Class Window1
 
         AddHandler stringContent.Click, AddressOf stringContent_Click
 
-    End Sub 'CreateButtons
+    End Sub
 
 
     Private Sub stringContent_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
@@ -215,7 +215,7 @@ Class Window1
         End If
         '</Snippet15>
 
-    End Sub 'stringContent_Click
+    End Sub
 End Class 'Window1
 
 
@@ -229,6 +229,6 @@ Public Class MyData
         Add("Item 2")
         Add("Item 3")
 
-    End Sub 'New
+    End Sub
 End Class 'MyData
 '</Snippet8>

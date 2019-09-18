@@ -29,6 +29,6 @@ Partial Class Form1
 
         InitializeComponent()
 
-    End Sub 'New
+    End Sub
 End Class 'Form1
 '

@@ -19,6 +19,6 @@ Namespace ImageElementExample
             Dim mainWindow As New SampleViewer()
             mainWindow.Show()
 
-        End Sub 'AppStartingUp
+        End Sub
     End Class 'app
 End Namespace 'ImageElementExample

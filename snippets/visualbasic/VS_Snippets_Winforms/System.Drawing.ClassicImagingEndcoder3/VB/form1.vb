@@ -44,7 +44,7 @@ Class Example_SetJPEGQuality
         myEncoderParameters.Param(0) = myEncoderParameter
         myBitmap.Save("Shapes075.jpg", myImageCodecInfo, myEncoderParameters)
 
-    End Sub 'Main
+    End Sub
 
     Private Shared Function GetEncoderInfo(ByVal format As ImageFormat) As ImageCodecInfo
         Dim j As Integer

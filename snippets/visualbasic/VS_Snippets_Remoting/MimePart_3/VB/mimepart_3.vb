@@ -51,6 +51,6 @@ Public Class MyMimePart
       myServiceDescription.Write("MimePart_3_Output_vb.wsdl")
       Console.WriteLine( _
          "MimePart_3_Output_vb.wsdl has been generated successfully.")
-   End Sub 'Main
+   End Sub
 End Class 'MyMimePart
 ' </Snippet1>

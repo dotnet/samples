@@ -80,7 +80,7 @@ Class MyServiceClass
       Catch e As Exception
          Console.WriteLine("Exception: " & e.Message.ToString())
       End Try
-   End Sub 'Main
+   End Sub
    
    
    Public Shared Function CreatePort(PortName As String, _

@@ -27,7 +27,7 @@ Public Class SamplesEncoding
 
       Next ei
 
-   End Sub 'Main 
+   End Sub
 
 End Class 'SamplesEncoding
 

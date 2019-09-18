@@ -21,7 +21,7 @@ Public Class ArrayTypeMisMatchConst
          ' Throw an exception of type 'ArrayTypeMismatchException' with a message and innerexception.
          Throw New ArrayTypeMismatchException("The Source and destination arrays are of not same type", e)
       End Try
-   End Sub 'CopyArray
+   End Sub
 
    Shared Sub Main()
       Try
@@ -35,6 +35,6 @@ Public Class ArrayTypeMisMatchConst
          Console.WriteLine("The Exception Message is : " + e.Message)
          Console.WriteLine("The Inner exception is :" + e.InnerException.ToString())
       End Try
-   End Sub 'Main
+   End Sub
 End Class 'ArrayTypeMisMatchConst
 ' </Snippet1>

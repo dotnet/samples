@@ -51,6 +51,6 @@ Public Class DiscoveryDocumentReference_ctor_WriteDocument
         Catch e As Exception
             Console.WriteLine("Exception: {0}", e.Message.ToString())
         End Try
-    End Sub 'Main
+    End Sub
 End Class 'DiscoveryDocumentReference_ctor_WriteDocument
 ' </Snippet1>

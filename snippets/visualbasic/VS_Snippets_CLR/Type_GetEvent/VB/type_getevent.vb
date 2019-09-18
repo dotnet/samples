@@ -25,6 +25,6 @@ Class MyEventExample
         Catch e As Exception
             Console.WriteLine("The following exception was raised : {0}", e.Message)
         End Try
-    End Sub 'Main
+    End Sub
 End Class 'MyEventExample
 ' </Snippet1>

@@ -17,6 +17,6 @@ Public Class Form1
         For Each myEvent In  events
             textBox1.Text &= myEvent.Name & ControlChars.Cr
         Next myEvent
-    End Sub 'MyEventCollection 
+    End Sub
     ' </Snippet1>
 End Class 'Form1 

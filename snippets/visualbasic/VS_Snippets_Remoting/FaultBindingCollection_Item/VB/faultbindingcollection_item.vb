@@ -36,5 +36,5 @@ Public Class FaultBindingCollection_Remove
         End If
         ' </Snippet1>
       myServiceDescription.Write(Console.Out)
-   End Sub 'Main
+   End Sub
 End Class 'FaultBindingCollection_Remove

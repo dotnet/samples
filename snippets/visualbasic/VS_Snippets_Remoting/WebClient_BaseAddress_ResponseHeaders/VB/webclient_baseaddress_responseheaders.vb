@@ -56,5 +56,5 @@ Public Class WebClient_BaseAddress
         Catch e As Exception
             Console.WriteLine(("The following Exception was raised: " + e.Message))
         End Try
-    End Sub 'Main
+    End Sub
 End Class 'WebClient_BaseAddress

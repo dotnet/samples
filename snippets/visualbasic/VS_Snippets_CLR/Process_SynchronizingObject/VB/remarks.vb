@@ -21,7 +21,7 @@ Namespace SynchronizingObjectTest
                 End If
             End If
             MyBase.Dispose(disposing)
-        End Sub 'Dispose
+        End Sub
 
         Private Sub InitializeComponent()
             Me.button1 = New Button()

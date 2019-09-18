@@ -23,7 +23,7 @@ Class Sample
          Console.Write("(not found)")
       End If
       Console.WriteLine()
-   End Sub 'Main
+   End Sub
 End Class 'Sample
 '
 '

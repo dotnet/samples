@@ -95,5 +95,5 @@ Class WebRequest_Proxy
             Console.WriteLine(ControlChars.Cr + "Exception is raised ")
             Console.WriteLine(ControlChars.Cr + "{0} ", e.Message)
         End Try
-    End Sub ' Main
+    End Sub
 End Class ' WebRequest_Proxy

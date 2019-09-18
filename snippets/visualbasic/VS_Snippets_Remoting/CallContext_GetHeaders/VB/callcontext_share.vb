@@ -52,7 +52,7 @@ Namespace RemotingSamples
       Public Sub New(p As IPrincipal)
          noOfAccesses = 0
          myIprincipal = p
-      End Sub 'New
+      End Sub
    End Class 'MyLogicalCallContextData
 End Namespace 'RemotingSamples
 

@@ -85,7 +85,7 @@ Public Class SamplesArrayList
         Catch myException As Exception
             Console.WriteLine("Exception: " + myException.ToString())
         End Try
-    End Sub 'Main
+    End Sub
 
     Public Shared Sub PrintValues(myList As IEnumerable, mySeparator As Char)
         Dim obj As [Object]
@@ -93,7 +93,7 @@ Public Class SamplesArrayList
             Console.Write("{0}{1}", mySeparator, obj)
         Next obj
         Console.WriteLine()
-    End Sub 'PrintValues
+    End Sub
 
 End Class
 

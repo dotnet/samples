@@ -12,7 +12,7 @@ Class UIASelectionPattern_snippets
     ''' </summary>
     Public Sub New()
 
-    End Sub 'New
+    End Sub
 
     '''--------------------------------------------------------------------
     ''' <summary>
@@ -28,7 +28,7 @@ Class UIASelectionPattern_snippets
             ' and call its Run() method to start it.
             Dim app As New UIASelectionPattern_snippets()
         
-        End Sub 'Main
+        End Sub
     End Class 'TestMain
     
     
@@ -156,7 +156,7 @@ Class UIASelectionPattern_snippets
         SelectionPattern.InvalidatedEvent, _
         selectionContainer, TreeScope.Element, selectionInvalidatedHandler)
 
-    End Sub 'SetSelectionEventHandlers
+    End Sub
 
     '''--------------------------------------------------------------------
     ''' <summary>
@@ -168,7 +168,7 @@ Class UIASelectionPattern_snippets
     Private Sub OnSelectionInvalidatedHandler( _
     ByVal src As Object, ByVal e As AutomationEventArgs)
         ' TODO: event handling
-    End Sub 'SelectionHandler
+    End Sub
     ' </Snippet103>
 
     ' <Snippet104>

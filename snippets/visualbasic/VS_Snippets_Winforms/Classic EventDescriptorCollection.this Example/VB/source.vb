@@ -16,7 +16,7 @@ Public Class Form1
         
         ' Prints the second event's name.
         textBox1.Text = events(1).ToString()
-    End Sub 'PrintIndexItem
+    End Sub
     ' </Snippet1>
 End Class 'Form1 
 

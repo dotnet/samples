@@ -10,7 +10,7 @@ Namespace NDP_UE_VB
             MyBase.New( _
                 "The argument to a function requiring " & _
                 "even input is not divisible by 2." )
-        End Sub ' New
+        End Sub
     End Class ' NotEvenException
 
     Module NewExceptionDemo
@@ -34,7 +34,7 @@ Namespace NDP_UE_VB
 
             CalcHalf2( 24 )
             CalcHalf2( 27 )
-        End Sub ' Main
+        End Sub
            
         ' Half throws a base exception if the input is not even.
         Function Half( input As Integer ) As Integer
@@ -67,7 +67,7 @@ Namespace NDP_UE_VB
             Catch ex As Exception
                 Console.WriteLine( ex.ToString( ) )
             End Try
-        End Sub ' CalcHalf
+        End Sub
            
         ' CalcHalf2 calls Half2 and catches any thrown exceptions.
         Sub CalcHalf2( input As Integer )
@@ -80,7 +80,7 @@ Namespace NDP_UE_VB
             Catch ex As Exception
                 Console.WriteLine( ex.ToString( ) )
             End Try
-        End Sub ' CalcHalf2
+        End Sub
 
     End Module ' NewExceptionDemo
 End Namespace ' NDP_UE_VB

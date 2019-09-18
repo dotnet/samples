@@ -26,7 +26,7 @@ Public Class Form1
       MakeDataSet()
       myDataGrid.SetDataBinding(myDataSet, "Customers")
       AddCustomDataTableStyle()
-   End Sub 'New
+   End Sub
 
    Private Sub InitializeComponent()
      ' Create the form and its controls.
@@ -45,22 +45,22 @@ Public Class Form1
       myDataGrid.CaptionText = "DataGridColumnStyle"
       Me.Controls.Add(myButton)
       Me.Controls.Add(myDataGrid)
-   End Sub 'InitializeComponent
+   End Sub
 
    Public Shared Sub Main()
       Application.Run(New Form1())
-   End Sub 'Main
+   End Sub
    Private myMessage As String = Nothing
 
     Private Sub Button_Click(ByVal sender As Object, ByVal e As EventArgs)
         myDataGridColumnStyle.Alignment = HorizontalAlignment.Center
         MessageBox.Show(myMessage)
-    End Sub 'Button_Click
+    End Sub
 
 ' <Snippet1>
     Private Sub AlignmentChanged_Click(ByVal sender As Object, ByVal e As EventArgs)
         myMessage = "Alignment has been Changed"
-    End Sub 'AlignmentChanged_Click
+    End Sub
 
    Private Sub AddCustomDataTableStyle()
       ' Create a 'DataGridTableStyle'.
@@ -76,7 +76,7 @@ Public Class Form1
       myDataTableStyle.GridColumnStyles.Add(myDataGridColumnStyle)
       ' Add the 'DataGridTableStyle' to 'DataGrid'.
       myDataGrid.TableStyles.Add(myDataTableStyle)
-   End Sub 'AddCustomDataTableStyle
+   End Sub
 ' </Snippet1>
 
    Private Sub MakeDataSet()
@@ -99,6 +99,6 @@ Public Class Form1
       myTable.Rows(2)("CustName") = "David"
       myTable.Rows(3)("CustName") = "Robert"
       myTable.Rows(4)("CustName") = "John"
-   End Sub 'MakeDataSet
+   End Sub
 End Class 'Form1
 

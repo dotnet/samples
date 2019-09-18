@@ -20,7 +20,7 @@ Public Class AssemblyName_GetAssemblyName
       Dim myAssemblyName As AssemblyName = AssemblyName.GetAssemblyName("MyAssembly.exe")
       Console.WriteLine(vbCrLf & "Displaying assembly information:" & vbCrLf)
       Console.WriteLine(myAssemblyName.ToString())
-   End Sub 'Main 
+   End Sub
 End Class 'AssemblyName_GetAssemblyName 
 ' </Snippet2>
 ' </Snippet1>

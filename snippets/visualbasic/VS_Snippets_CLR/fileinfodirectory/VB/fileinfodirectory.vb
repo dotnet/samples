@@ -19,7 +19,7 @@ Public Class DirectoryTest
         For Each info In fsi
             Console.WriteLine(info.Name)
         Next info
-    End Sub 'Main
+    End Sub
 End Class 'DirectoryTest
 
 'This code produces output similar to the following; 

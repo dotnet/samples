@@ -3,7 +3,7 @@
 Class Sample
    Public Shared Sub Main()
       Console.WriteLine("WorkingSet: {0}", Environment.WorkingSet)
-   End Sub 'Main
+   End Sub
 End Class 'Sample
 '
 'This example produces the following results:

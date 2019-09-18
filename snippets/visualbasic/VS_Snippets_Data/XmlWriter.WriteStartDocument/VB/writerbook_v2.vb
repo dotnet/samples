@@ -56,6 +56,6 @@ Public Class Sample
      writer.Flush()
      writer.Close()
         
-    End Sub 'Main 
+    End Sub
 End Class 'Sample
 '</snippet1>

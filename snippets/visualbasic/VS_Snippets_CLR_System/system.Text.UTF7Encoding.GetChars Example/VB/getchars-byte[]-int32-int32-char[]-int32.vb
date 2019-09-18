@@ -25,6 +25,6 @@ Class UTF7EncodingExample
             Console.Write("[{0}]", c)
         Next c
         Console.WriteLine()
-    End Sub 'Main
+    End Sub
 End Class 'UTF7EncodingExample
 ' </Snippet1>

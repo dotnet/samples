@@ -13,7 +13,7 @@ Partial Class UIAFragmentProviderForm
         End If
         MyBase.Dispose(disposing)
 
-    End Sub 'Dispose
+    End Sub
 
 #Region "Windows Form Designer generated code"
 
@@ -48,7 +48,7 @@ Partial Class UIAFragmentProviderForm
         Me.Text = "UIAutomation Fragment Provider"
         Me.ResumeLayout(False)
 
-    End Sub 'InitializeComponent 
+    End Sub
 
 #End Region
 

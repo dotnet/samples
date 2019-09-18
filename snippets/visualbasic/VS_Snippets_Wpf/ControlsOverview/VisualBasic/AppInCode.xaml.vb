@@ -27,7 +27,7 @@ Partial Class AppInCode
         CreateControls()
         SetLabelProperties()
 
-    End Sub 'New
+    End Sub
 
 
     Sub SetLabelProperties()
@@ -47,13 +47,13 @@ Partial Class AppInCode
         AddHandler submit.Click, AddressOf submit_Click
         '</Snippet8>
 
-    End Sub 'SetLabelProperties
+    End Sub
 
     '<Snippet9>
     Private Sub submit_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
         MessageBox.Show("Hello, " + firstName.Text + " " + lastName.Text)
 
-    End Sub 'submit_Click
+    End Sub
     '</Snippet9>
 
     '<Snippet2>
@@ -97,6 +97,6 @@ Partial Class AppInCode
         grid1.Children.Add(clear)
 
 
-    End Sub 'CreateControls
+    End Sub
     '</Snippet2>
 End Class 'AppInCode

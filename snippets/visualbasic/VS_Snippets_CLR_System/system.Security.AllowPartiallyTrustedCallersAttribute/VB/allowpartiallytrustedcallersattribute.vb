@@ -90,7 +90,7 @@ Public Class UserControl1
             ' file operations.
             fileIOPermission.RevertAssert()
         End If
-    End Sub 'New
+    End Sub
 
 
     ' Clean up any resources being used.
@@ -101,7 +101,7 @@ Public Class UserControl1
             End If
         End If
         MyBase.Dispose(disposing)
-    End Sub 'Dispose
+    End Sub
 
 
     ' Required method for Designer support - do not modify 
@@ -133,13 +133,13 @@ Public Class UserControl1
         Me.Name = "UserControl1"
         Me.Size = New System.Drawing.Size(592, 400)
         Me.ResumeLayout(False)
-    End Sub 'InitializeComponent
+    End Sub
 
     Private Sub UserControl1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
-    End Sub 'UserControl1_Load
+    End Sub
 
     Private Sub textBox1_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles textBox1.TextChanged
-    End Sub 'textBox1_TextChanged
+    End Sub
 End Class 'UserControl1 
 '</Snippet1>
 

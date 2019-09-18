@@ -77,7 +77,7 @@ Public Class NorthwindEmployee
       Me.aFirstName = aFirstName
       Me.aLastName = aLastName
       Me.aAddress = anAddress
-   End Sub 'New
+   End Sub
    
    Private ID As Object   
    Public ReadOnly Property EmpID() As String

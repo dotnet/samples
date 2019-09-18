@@ -94,6 +94,6 @@ Public Class MySample
 ' </Snippet8>
          End If 
       End While
-   End Sub 'Main
+   End Sub
 End Class 'MySample
 ' </Snippet1>

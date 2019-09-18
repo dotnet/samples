@@ -18,7 +18,7 @@ Namespace CodeDomSamples
 
         ' Dim TestString As String = "Testing"
     '</Snippet2>
-      End Sub 'New 
+      End Sub
 
    End Class 'CodeVariableDeclarationStatementExample
 

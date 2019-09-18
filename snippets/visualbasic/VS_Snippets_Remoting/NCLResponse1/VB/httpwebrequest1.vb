@@ -33,7 +33,7 @@ Imports System.IO
         Console.WriteLine(readStream.ReadToEnd())
         response.Close()
         readStream.Close()
-    End Sub 'Main
+    End Sub
 End Class 'Test
 '
 'The output from this example will vary depending on the value passed into Main 

@@ -18,7 +18,7 @@ Class NumberFormatInfoSample
       nfi.NumberGroupSeparator = " "
       Console.WriteLine(myInt.ToString("N", nfi))
 
-   End Sub 'Main 
+   End Sub
 
 End Class 'NumberFormatInfoSample
 

@@ -25,7 +25,7 @@ Namespace ListViewOverview
             InitializeComponent()
             
             InitializeMyLinkLabel()
-        End Sub 'New
+        End Sub
         
         '<Snippet1>
         ' Create a new LinkLabel control.
@@ -50,7 +50,7 @@ Namespace ListViewOverview
             
             ' Add the control to the form.
             Me.Controls.Add(linkLabel1)
-        End Sub 'InitializeMyLinkLabel
+        End Sub
         
         
         Private Sub linkLabel1_LinkClicked(sender As Object, e As System.Windows.Forms.LinkLabelLinkClickedEventArgs)
@@ -58,7 +58,7 @@ Namespace ListViewOverview
             linkLabel1.Links(linkLabel1.Links.IndexOf(e.Link)).Visited = True
             ' Display the appropriate link based on the value of the LinkData property of the Link object.
             System.Diagnostics.Process.Start(e.Link.LinkData.ToString())
-        End Sub 'linkLabel1_LinkClicked
+        End Sub
         '</Snippet1>
 
          
@@ -70,7 +70,7 @@ Namespace ListViewOverview
             Me.components = New System.ComponentModel.Container()
             Me.Size = New System.Drawing.Size(300, 300)
             Me.Text = "Form1"
-        End Sub 'InitializeComponent
+        End Sub
         
         '/ <summary>
         '/ 	The main entry point for the application.
@@ -78,6 +78,6 @@ Namespace ListViewOverview
         <STAThread()> _
         Shared Sub Main()
             Application.Run(New Form1())
-        End Sub 'Main
+        End Sub
     End Class 'Form1
 End Namespace 'ListViewOverview

@@ -8,15 +8,15 @@ Class MyCompanyEventSource
 
     Public Sub Startup()
         WriteEvent(1)
-    End Sub 'Startup
+    End Sub
 
     Public Sub OpenFileStart(ByVal fileName As String)
         WriteEvent(2, fileName)
-    End Sub 'OpenFileStart
+    End Sub
 
     Public Sub OpenFileStop()
         WriteEvent(3)
-    End Sub 'OpenFileStop
+    End Sub
 End Class 'MyCompanyEventSource 
 '</Snippet2>
 
@@ -30,7 +30,7 @@ Class Program
         ' ...
         MyCompanyEventSource.Log.OpenFileStop()
 
-    End Sub 'Main
+    End Sub
 End Class 'Program
 '</Snippet3>
 '</Snippet1>

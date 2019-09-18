@@ -32,7 +32,7 @@ Public Class SamplesUTF32Encoding
       PrintCountsAndBytes(myChars, 4, 3, u32Nobom)
       PrintCountsAndBytes(myChars, 4, 3, u32Bom)
 
-   End Sub 'Main
+   End Sub
 
 
    Public Shared Sub PrintCountsAndBytes(chars() As Char, index As Integer, count As Integer, enc As Encoding)
@@ -61,7 +61,7 @@ Public Class SamplesUTF32Encoding
       ' Display all the encoded bytes.
       PrintHexBytes(bytes)
 
-   End Sub 'PrintCountsAndBytes
+   End Sub
 
 
    Public Shared Sub PrintHexBytes(bytes() As Byte)
@@ -76,7 +76,7 @@ Public Class SamplesUTF32Encoding
          Console.WriteLine()
       End If
 
-   End Sub 'PrintHexBytes 
+   End Sub
 
 End Class 'SamplesUTF32Encoding
 

@@ -15,7 +15,7 @@ Namespace NDP_UE_VB
             MyBase.New( String.Format( "(HRESULT:0x{1:X8}) {0}", _
                 message, SecondLevelHResult ), inner )
             HResult = SecondLevelHResult
-        End Sub ' New
+        End Sub
     End Class ' SecondLevelException
 
     Module HResultDemo
@@ -41,7 +41,7 @@ Namespace NDP_UE_VB
             Catch ex As Exception
                 Console.WriteLine( ex.ToString( ) )
             End Try
-        End Sub ' Main
+        End Sub
 
     End Module ' HResultDemo
 End Namespace ' NDP_UE_VB

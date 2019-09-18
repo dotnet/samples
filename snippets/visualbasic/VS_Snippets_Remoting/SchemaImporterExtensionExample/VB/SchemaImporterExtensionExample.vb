@@ -9,7 +9,7 @@ Public Class Test
     Shared Sub Main() 
         Console.WriteLine("started")
     
-    End Sub 'Main 
+    End Sub
 End Class 'Test
 
 

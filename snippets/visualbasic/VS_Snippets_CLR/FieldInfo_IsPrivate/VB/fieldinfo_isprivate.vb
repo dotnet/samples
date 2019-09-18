@@ -8,7 +8,7 @@ Class [MyClass]
 
     Sub New()
         myField = "Microsoft"
-    End Sub 'New
+    End Sub
 
     ReadOnly Property GetField() As String
         Get
@@ -42,6 +42,6 @@ Class FieldInfo_IsPrivate
         Catch e As Exception
             Console.WriteLine("Exception : {0} ", e.Message.ToString())
         End Try
-    End Sub 'Main
+    End Sub
 End Class 'FieldInfo_IsPrivate
 ' </Snippet1>

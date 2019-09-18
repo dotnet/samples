@@ -19,7 +19,7 @@ Public Class Form1
             ' Disable each control in the active form's control collection.
             currentForm.Controls(i).Enabled = False
         Next i
-    End Sub 'DisableActiveFormControls
+    End Sub
     ' </Snippet1>
 End Class 'Form1 
 

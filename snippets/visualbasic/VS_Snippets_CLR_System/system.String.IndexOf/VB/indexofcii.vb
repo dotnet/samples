@@ -26,7 +26,7 @@ Module IndexOfCII
         FindAllChar("i"c, str)
         FindAllChar("@"c, str)
         FindAllChar(" "c, str)
-    End Sub 'Main
+    End Sub
        
     Sub FindAllChar(target As Char, searched As String)
 
@@ -53,7 +53,7 @@ Module IndexOfCII
           
         Console.WriteLine("occurrences: {0}", hitCount)
 
-    End Sub 'FindAllChar
+    End Sub
 End Module 'IndexOfCII
 
 ' This example of String.IndexOf( Char, Integer, Integer )
