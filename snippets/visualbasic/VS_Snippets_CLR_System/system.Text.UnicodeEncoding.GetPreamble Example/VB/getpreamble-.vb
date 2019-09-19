@@ -20,6 +20,6 @@ Class UnicodeEncodingExample
         For Each b In  byteOrderMark
             Console.Write("[{0}]", b)
         Next b
-    End Sub 'Main
+    End Sub
 End Class 'UnicodeEncodingExample
 ' </Snippet1>

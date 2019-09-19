@@ -21,7 +21,7 @@ Public Class MyProxyAttribute
 
 <SecurityPermission(SecurityAction.LinkDemand)> _
    Public Sub New()
-   End Sub 'New
+   End Sub
 
 <SecurityPermissionAttribute(SecurityAction.LinkDemand, Flags:=SecurityPermissionFlag.Infrastructure)> _
    Public Overrides Function CreateInstance(serverType As Type) As MarshalByRefObject
@@ -52,13 +52,13 @@ Public Class MyProxy
       targetObject = CType(Activator.CreateInstance(type), MarshalByRefObject)
       Dim myObject As ObjRef = RemotingServices.Marshal(targetObject)
       stringUri = myObject.URI
-   End Sub 'New
+   End Sub
 
 <SecurityPermission(SecurityAction.LinkDemand)> _
    Public Sub New(type As Type, targetObject As MarshalByRefObject)
       MyBase.New(type)
       Me.targetObject = targetObject
-   End Sub 'New
+   End Sub
 
 
 ' <Snippet2>
@@ -83,7 +83,7 @@ Public Class Zip
    Implements ILogicalThreadAffinative
 
    Public Sub New()
-   End Sub 'New
+   End Sub
 
    Public Function Method1(i As Integer) As Integer
       Return i
@@ -97,5 +97,5 @@ Public Class ProxySample
       Dim myZip As Zip = CType(proxy.GetTransparentProxy(), Zip)
       CallContext.SetData("USER", New Zip())
       myZip.Method1(6)
-   End Sub 'Main
+   End Sub
 End Class 'ProxySample

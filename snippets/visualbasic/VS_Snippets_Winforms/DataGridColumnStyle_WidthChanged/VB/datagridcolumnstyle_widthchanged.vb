@@ -10,7 +10,6 @@ Imports System.Collections
 Imports System.ComponentModel
 Imports System.Windows.Forms
 Imports System.Data
-Imports Microsoft.VisualBasic
 
 Namespace MyWidthChangedEventExample
  
@@ -27,7 +26,7 @@ Namespace MyWidthChangedEventExample
       Public Sub New()
          InitializeComponent()
          SetUp()
-      End Sub 'New
+      End Sub
       
       
       Protected Overloads Sub Dispose(ByVal disposing As Boolean)
@@ -37,12 +36,12 @@ Namespace MyWidthChangedEventExample
             End If
          End If
          MyBase.Dispose(disposing)
-      End Sub 'Dispose
+      End Sub
 
 
       <STAThread()> Shared Sub Main()
          Application.Run(New MyForm())
-      End Sub 'Main
+      End Sub
 
       Private Sub InitializeComponent()
          Try
@@ -109,7 +108,7 @@ Namespace MyWidthChangedEventExample
             Console.WriteLine("Source : " + exc.Source.ToString())
             Console.WriteLine("Message : " + exc.Message.ToString())
          End Try
-      End Sub 'InitializeComponent
+      End Sub
       Private Sub SetUp()
          Try
             ' Create a DataSet with one table.
@@ -121,7 +120,7 @@ Namespace MyWidthChangedEventExample
             Console.WriteLine("Source : " + exc.Source.ToString())
             Console.WriteLine("Message : " + exc.Message.ToString())
          End Try
-      End Sub 'SetUp
+      End Sub
 
 
       Private Sub MakeDataSet()
@@ -156,7 +155,7 @@ Namespace MyWidthChangedEventExample
             Console.WriteLine("Source : " + exc.Source.ToString())
             Console.WriteLine("Message : " + exc.Message.ToString())
          End Try
-      End Sub 'MakeDataSet
+      End Sub
 
 
         Private Sub MyIDColumnWidthChanged(ByVal obj As Object, ByVal e As EventArgs)
@@ -171,7 +170,7 @@ Namespace MyWidthChangedEventExample
                 Console.WriteLine("Source : " + exc.Source.ToString())
                 Console.WriteLine("Message : " + exc.Message.ToString())
             End Try
-        End Sub 'MyIDColumnWidthChanged
+        End Sub
 
 
         Private Sub OnNoneButtonClick(ByVal obj As Object, ByVal e As EventArgs)
@@ -183,7 +182,7 @@ Namespace MyWidthChangedEventExample
                 Console.WriteLine("Source : " + exc.Source.ToString())
                 Console.WriteLine("Message : " + exc.Message.ToString())
             End Try
-        End Sub 'OnNoneButtonClick
+        End Sub
 
 
         Private Sub OnSolidButtonClick(ByVal obj As Object, ByVal e As EventArgs)
@@ -195,6 +194,6 @@ Namespace MyWidthChangedEventExample
                 Console.WriteLine("Source : " + exc.Source.ToString())
                 Console.WriteLine("Message : " + exc.Message.ToString())
             End Try
-        End Sub 'OnSolidButtonClick
+        End Sub
    End Class 'MyForm
 End Namespace 'MyWidthChangedEventExample

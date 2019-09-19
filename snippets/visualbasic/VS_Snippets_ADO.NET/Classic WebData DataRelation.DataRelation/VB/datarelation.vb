@@ -11,15 +11,15 @@ Protected DataSet1 As DataSet
     ' Code to get the DataSet not shown here.
     ' Get the DataColumn objects from two DataTable 
     ' objects in a DataSet.
-    Dim parentCols() As DataColumn = New DataColumn() _
+    Dim parentCols As DataColumn() = _
         {DataSet1.Tables("Customers").Columns("CustID"), _
         DataSet1.Tables("Customers").Columns("OrdID")}
-    Dim childCols() As DataColumn = New DataColumn() _
+    Dim childCols As DataColumn() = _
         {DataSet1.Tables("Orders").Columns("CustID"), _
         DataSet1.Tables("Orders").Columns("OrdID")}
 
     ' Create DataRelation.
-    Dim CustOrderRel As DataRelation = New DataRelation( _
+    Dim CustOrderRel As New DataRelation( _
         "CustomersOrders", parentCols, childCols)
 
     ' Add the relation to the DataSet.

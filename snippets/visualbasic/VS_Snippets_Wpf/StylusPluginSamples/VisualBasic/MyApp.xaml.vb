@@ -19,5 +19,5 @@ Class MyApp
 
         'Dim secondWindow As New Window2()
         'secondWindow.Show()
-    End Sub 'AppStartup 
+    End Sub
 End Class 'MyApp 

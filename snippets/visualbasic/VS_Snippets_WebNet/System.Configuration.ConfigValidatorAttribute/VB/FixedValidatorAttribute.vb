@@ -71,7 +71,7 @@ Public Class FixedValidator
             Console.WriteLine(err.ToString())
         End Try
 
-    End Sub 'Validate
+    End Sub
 End Class 'FixedValidator 
 
 ' </Snippet21>

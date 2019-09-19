@@ -19,14 +19,14 @@ Class Client
         ' This line uses a new method you define on the Order class:
         ' orderRequest.PrintReceipt()
 
-    End Sub 'Main
+    End Sub
     
     ' Creates the queue if it does not already exist.
     Public Shared Sub EnsureQueueExists(path As String)
         If Not MessageQueue.Exists(path) Then
             MessageQueue.Create(path)
         End If
-    End Sub 'EnsureQueueExists
+    End Sub
 End Class 'Client 
 ' </Snippet3>
 

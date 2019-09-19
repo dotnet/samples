@@ -13,6 +13,6 @@ Class InTest
         Dim name As [String] = tIn.ReadLine()
         
         tOut.WriteLine("Buenos Dias, {0}!", name)
-    End Sub 'Main
+    End Sub
 End Class 'InTest
 '</snippet1>

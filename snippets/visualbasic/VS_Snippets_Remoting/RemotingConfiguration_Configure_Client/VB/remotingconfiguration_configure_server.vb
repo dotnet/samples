@@ -34,5 +34,5 @@ Public Class Sample
 ' </Snippet2>
       Console.WriteLine("Press <enter> to exit...")
       Console.ReadLine()
-   End Sub 'Main
+   End Sub
 End Class 'Sample

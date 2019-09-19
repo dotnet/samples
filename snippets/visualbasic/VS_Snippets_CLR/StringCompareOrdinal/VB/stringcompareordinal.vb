@@ -32,6 +32,6 @@ Class Test
       End If
       Console.WriteLine("Compare(""{0}"".Chars({2}), ""{1}"".Chars({2})):", strLow, strCap, pos)
       Console.WriteLine("   '{0}' is {1} '{2}'", strLow.Chars(pos), result, strCap.Chars(pos))
-   End Sub 'Main
+   End Sub
 End Class 'Test
 '</Snippet1>	

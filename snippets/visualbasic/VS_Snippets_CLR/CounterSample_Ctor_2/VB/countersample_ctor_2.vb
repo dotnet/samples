@@ -67,5 +67,5 @@ Class MyCounterSampleClass
       Console.WriteLine("CounterType = " & myCounterSample2.CounterType.ToString)
       Console.WriteLine("CounterTimeStamp = " & myCounterSample2.CounterTimeStamp)
 ' </Snippet2>
-   End Sub 'Main
+   End Sub
 End Class 'MyCounterSampleClass

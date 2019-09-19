@@ -47,7 +47,7 @@ Public Class CodeGenerator
       methodIL.Emit(OpCodes.Stfld, greetingField)
       methodIL.Emit(OpCodes.Ret)
       myTypeBuilder.CreateType()
-   End Sub 'New
+   End Sub
 
    Public ReadOnly Property MyAssembly() As AssemblyBuilder
       Get
@@ -75,6 +75,6 @@ Public Class TestClass
       Dim args As Object() = {"Hello."}
       Dim myObject As Object = Activator.CreateInstance(myType, Nothing, Nothing)
       myMethodInfo.Invoke(myObject, args)
-   End Sub 'Main
+   End Sub
 End Class 'TestClass
 ' </Snippet1>

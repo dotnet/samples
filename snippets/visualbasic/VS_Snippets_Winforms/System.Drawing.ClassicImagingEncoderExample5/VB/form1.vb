@@ -34,7 +34,7 @@ Class Example_RotateJPEG
         myEncoderParameters.Param(0) = myEncoderParameter
         myBitmap.Save("ShapesR90.jpg", myImageCodecInfo, myEncoderParameters)
     
-    End Sub 'Main
+    End Sub
     
     Private Shared Function GetEncoderInfo(ByVal mimeType As String) As ImageCodecInfo 
         Dim j As Integer

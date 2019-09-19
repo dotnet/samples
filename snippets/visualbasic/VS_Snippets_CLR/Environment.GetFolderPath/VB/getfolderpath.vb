@@ -4,7 +4,7 @@ Class Sample
    Public Shared Sub Main()
       Console.WriteLine()
       Console.WriteLine("GetFolderPath: {0}", Environment.GetFolderPath(Environment.SpecialFolder.System))
-   End Sub 'Main
+   End Sub
 End Class 'Sample
 '
 'This example produces the following results:

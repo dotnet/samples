@@ -17,7 +17,7 @@ Class Alice
             End Using
         End If
 
-    End Sub 'Main
+    End Sub
 End Class 'Alice 
 
 
@@ -33,6 +33,6 @@ Public Class Bob
                 End If
         End Using
 
-    End Sub 'Receive
+    End Sub
 End Class 'Bob 
 '</Snippet1>

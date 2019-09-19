@@ -13,7 +13,7 @@ Class DataGridViewRowPainting
 
         Application.Run(New DataGridViewRowPainting())
 
-    End Sub 'Main
+    End Sub
 
     Public Sub New()
 
@@ -21,7 +21,7 @@ Class DataGridViewRowPainting
         Me.Controls.Add(Me.dataGridView1)
         Me.Text = "DataGridView row painting demo"
 
-    End Sub 'New
+    End Sub
 
     Sub DataGridViewRowPainting_Load(ByVal sender As Object, _
         ByVal e As EventArgs) Handles Me.Load
@@ -85,7 +85,7 @@ Class DataGridViewRowPainting
         ' Adjust the row heights to accommodate the normal cell content.
         Me.dataGridView1.AutoResizeRows( _
             DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders)
-    End Sub 'DataGridViewRowPainting_Load
+    End Sub
 
     '<snippet18>
     ' Forces the control to repaint itself when the user 
@@ -96,7 +96,7 @@ Class DataGridViewRowPainting
 
         Me.dataGridView1.Invalidate()
 
-    End Sub 'dataGridView1_ColumnWidthChanged
+    End Sub
     '</snippet18>
 
     '<Snippet19>
@@ -110,7 +110,7 @@ Class DataGridViewRowPainting
         End If
         oldRowIndex = Me.dataGridView1.CurrentCellAddress.Y
 
-    End Sub 'dataGridView1_CurrentCellChanged
+    End Sub
     '</Snippet19>
 
     '<Snippet20>
@@ -150,7 +150,7 @@ Class DataGridViewRowPainting
         End If
         '</Snippet25>
 
-    End Sub 'dataGridView1_RowPrePaint
+    End Sub
     '</Snippet20>
 
     '<Snippet30>
@@ -221,7 +221,7 @@ Class DataGridViewRowPainting
             e.DrawFocus(rowBounds, True)
         End If
 
-    End Sub 'dataGridView1_RowPostPaint
+    End Sub
     '</Snippet30>
 
     '<Snippet40>

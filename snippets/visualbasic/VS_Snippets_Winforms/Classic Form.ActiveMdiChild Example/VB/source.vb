@@ -22,7 +22,7 @@ Public Class Form1
                 tempChild.Controls(i).Text = ""
             End If
         Next i
-    End Sub 'ClearAllChildFormText
+    End Sub
     ' </Snippet1>
 End Class 'Form1 
 

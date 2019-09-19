@@ -13,15 +13,15 @@ Public Class Form1
         InitializeComponent()
         
         AddHandler textBox1.KeyPress, AddressOf myKeyPressHandler.myKeyCounter
-    End Sub 'New
+    End Sub
     
     ' </Snippet2>
     Private Sub InitializeComponent()
-    End Sub 'InitializeComponent
+    End Sub
     
     Public Class myKeyPressClass
         
         Friend Sub myKeyCounter(sender As Object, ex As KeyPressEventArgs)
-        End Sub 'myKeyCounter
+        End Sub
     End Class 'myKeyPressClass
 End Class 'Form1 

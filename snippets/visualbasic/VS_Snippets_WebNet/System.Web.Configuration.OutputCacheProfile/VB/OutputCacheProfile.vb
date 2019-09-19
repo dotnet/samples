@@ -134,7 +134,7 @@ Class UsingOutputCacheProfile
     outputCacheProfile.Enabled = False
     ' </Snippet12>
 
-   End Sub 'Main 
+   End Sub
 End Class 'UsingOutputCacheProfile 
 
 ' UsingOutputCacheProfile class end.

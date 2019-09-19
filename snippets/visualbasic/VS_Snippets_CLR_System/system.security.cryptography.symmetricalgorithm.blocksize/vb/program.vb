@@ -80,7 +80,7 @@ Class Program
             Console.WriteLine(vbTab + "Legal max block size = " + k.MaxSize)
         Next k
 
-    End Sub 'Main 
+    End Sub
 End Class 'Program
 'This sample produces the following output:
 'AesManaged

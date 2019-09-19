@@ -20,7 +20,7 @@ Namespace CodeDomSamples
             '       Return [Text]
             '   End Function
             '</Snippet2>
-        End Sub 'New 
+        End Sub
 
     End Class 'CodeMemberMethodExample 
 End Namespace 'CodeDomSamples

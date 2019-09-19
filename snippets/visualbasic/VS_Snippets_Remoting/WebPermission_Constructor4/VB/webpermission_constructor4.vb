@@ -27,7 +27,7 @@ Class WebPermission_regexConstructor
   Catch e As Exception
     Console.WriteLine(("Exception raised: " + e.Message))
   End Try
-  End Sub 'Main
+  End Sub
   
   
   Public Sub CreateRegexConstructor()
@@ -48,7 +48,7 @@ Class WebPermission_regexConstructor
     PrintKeysAndValues(myWebPermission.ToXml().Attributes, myWebPermission.ToXml().Children)
 
 
-   End Sub 'CreateRegexConstructor
+   End Sub
    
   
   Private Sub PrintKeysAndValues(myHashtable As Hashtable, myList As IEnumerable)
@@ -65,5 +65,5 @@ Class WebPermission_regexConstructor
     While myEnumerator1.MoveNext()
       Console.Write(ControlChars.Tab + "{0}", myEnumerator1.Current)
     End While
-  End Sub 'PrintKeysAndValues
+  End Sub
 End Class 'WebPermission_regexConstructor

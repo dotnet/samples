@@ -28,7 +28,7 @@ Public Class RequestState
     requestData = New StringBuilder("")
     request = Nothing
     responseStream = Nothing
-  End Sub ' New
+  End Sub
 End Class ' RequestState
 
 Class WebRequest_BeginGetResponse
@@ -64,7 +64,7 @@ Class WebRequest_BeginGetResponse
       Console.WriteLine(("Source : " + e.Source))
       Console.WriteLine(("Message : " + e.Message))
     End Try
-  End Sub ' Main
+  End Sub
 
   Private Shared Sub RespCallback(asynchronousResult As IAsyncResult)
     Try
@@ -87,7 +87,7 @@ Class WebRequest_BeginGetResponse
       Console.WriteLine(("Source : " + e.Source))
       Console.WriteLine(("Message : " + e.Message))
     End Try
-  End Sub ' RespCallback
+  End Sub
   Private Shared Sub ReadCallBack(asyncResult As IAsyncResult)
     Try
       ' Result state is set to AsyncState.
@@ -118,7 +118,7 @@ Class WebRequest_BeginGetResponse
       Console.WriteLine("Source :{0} ", e.Source)
       Console.WriteLine("Message :{0} ", e.Message)
     End Try
-  End Sub ' ReadCallBack 
+  End Sub
 
 End Class ' WebRequest_BeginGetResponse
 

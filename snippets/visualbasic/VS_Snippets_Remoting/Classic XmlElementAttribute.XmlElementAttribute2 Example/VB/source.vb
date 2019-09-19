@@ -24,7 +24,7 @@ Public Class Run
         Dim test As New Run()
         test.SerializeObject("Override.xml")
         test.DeserializeObject("Override.xml")
-    End Sub 'Main
+    End Sub
     
     
     Public Sub SerializeObject(filename As String)

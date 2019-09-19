@@ -68,10 +68,10 @@ Class LogicalMethodInfo_Constructor
       Console.WriteLine(ControlChars.Tab + "The sum of 10 and 10 is : {0}", _
                                     myLogicalMethodInfo.Invoke(service, New Object() {10, 10}))
 
-   End Sub 'Run
+   End Sub
    
    Shared Sub Main()
       Run()
-   End Sub 'Main
+   End Sub
 End Class 'LogicalMethodInfo_Constructor
 ' </Snippet1>

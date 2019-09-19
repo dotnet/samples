@@ -32,5 +32,5 @@ Public Class Form1
                 CType(attributes(GetType(DefaultValueAttribute)), DefaultValueAttribute)
         Console.WriteLine(("The default value is: " & myAttribute.Value.ToString()))
         ' </Snippet2>
-    End Sub 'Method 
+    End Sub
 End Class 'Form1

@@ -31,7 +31,7 @@ Class MyApp
         Dim mainWindow As New Window1()
         mainWindow.Show()
 
-    End Sub 'AppStartup
+    End Sub
 End Class 'MyApp 
 '
 'ToDo: Error processing original source shown below

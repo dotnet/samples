@@ -39,7 +39,7 @@ Public Class SamplesEncoding
       Console.Write("LE array with LE encoding : ")
       PrintCountsAndChars(barrLE, 0, 8, u32LE)
 
-   End Sub 'Main
+   End Sub
 
 
    Public Shared Sub PrintCountsAndChars(bytes() As Byte, index As Integer, count As Integer, enc As Encoding)
@@ -67,7 +67,7 @@ Public Class SamplesEncoding
       ' Display the characters.
       Console.WriteLine(chars)
 
-   End Sub 'PrintCountsAndChars 
+   End Sub
 
 End Class 'SamplesEncoding
 

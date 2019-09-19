@@ -23,7 +23,7 @@ Namespace Samples.AspNet
             ' Perform the first update.
             UpdateAppSettings()
 
-        End Sub 'New
+        End Sub
 
 
 
@@ -47,7 +47,7 @@ Namespace Samples.AspNet
 
             config.Save()
 
-        End Sub 'UpdateAppSettngs
+        End Sub
 
     End Class 'ExternalConfiguration 
 

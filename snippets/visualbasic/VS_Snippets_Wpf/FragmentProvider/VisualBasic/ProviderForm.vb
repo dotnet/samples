@@ -89,7 +89,7 @@ Partial Class SampleApplicationForm
         customList.Add("Kim", Availability.Online)
         customList.Add("Bailey", Availability.Offline)
 
-    End Sub 'New
+    End Sub
 
 
     ''' <summary>
@@ -101,7 +101,7 @@ Partial Class SampleApplicationForm
         Handles btnExit.Click
 
         Application.Exit()
-    End Sub 'button1_Click
+    End Sub
 
 
     ''' <summary>
@@ -120,7 +120,7 @@ Partial Class SampleApplicationForm
             Me.txtItem.Clear()
         End If
 
-    End Sub 'btnAdd_Click
+    End Sub
 
 
     ''' <summary>
@@ -132,6 +132,6 @@ Partial Class SampleApplicationForm
         Handles btnRemove.Click
 
         Dim success As Boolean = customList.Remove(Me.customList.SelectedIndex)
-    End Sub 'btnRemove_Click
+    End Sub
 End Class 'SampleApplicationForm
 '

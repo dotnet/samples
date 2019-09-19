@@ -6,7 +6,7 @@ Class Sample
       Dim tc As TypeCode = str.GetTypeCode()
       Console.WriteLine("The type code for '{0}' is {1}, which represents {2}.", _
                            str, tc.ToString("D"), tc.ToString("F"))
-   End Sub 'Main
+   End Sub
 End Class 'Sample
 '
 'This example produces the following results:

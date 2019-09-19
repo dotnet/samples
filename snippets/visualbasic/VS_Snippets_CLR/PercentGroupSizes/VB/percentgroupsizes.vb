@@ -22,7 +22,7 @@ Class NumberFormatInfoSample
       nfi.PercentGroupSizes = mySizes2
       Console.WriteLine(myInt.ToString("P", nfi))
 
-   End Sub 'Main 
+   End Sub
 
 End Class 'NumberFormatInfoSample
 

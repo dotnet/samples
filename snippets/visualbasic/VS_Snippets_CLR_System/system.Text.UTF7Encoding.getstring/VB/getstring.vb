@@ -25,7 +25,7 @@ Public Class SamplesUTF7Encoding
       ' Decode the byte array.
       Console.WriteLine("The new string is: {0}", u7.GetString(myBArr, 0, myBArr.Length))
 
-   End Sub 'Main 
+   End Sub
 
 End Class 'SamplesUTF7Encoding
 

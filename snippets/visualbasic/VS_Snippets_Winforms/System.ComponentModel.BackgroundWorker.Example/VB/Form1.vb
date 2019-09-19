@@ -135,7 +135,7 @@ Public Class Form1
             components.Dispose()
         End If
         MyBase.Dispose(disposing)
-    End Sub 'Dispose
+    End Sub
 
 #Region "Windows Form Designer generated code"
 

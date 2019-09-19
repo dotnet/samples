@@ -57,12 +57,12 @@ Public Class MyVB_Item: Inherits Control
          If TypeOf obj Is MyVB_Item Then
             _items.Add(obj)
          End If
-      End Sub 'AddParsedSubObject
+      End Sub
       
       <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.Demand, Name:="FullTrust")> _
       Protected Overrides Sub Render(output As HtmlTextWriter)        
         output.Write(("<span style='background-color:aqua; color:red; font:8pt tahoma, verdana;'><b>" + CType(_items(SelectedIndex), MyVB_Item).Message + "</b></span>"))
-      End Sub 'Render
+      End Sub
    End Class 'MyVB_CustomParse 
    
 End Namespace 'CustomControls

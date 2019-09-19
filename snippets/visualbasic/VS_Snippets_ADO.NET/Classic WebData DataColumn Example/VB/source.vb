@@ -8,10 +8,10 @@ Public Class Form1: Inherits Form
 ' <Snippet1>
     Private Sub MakeTable()
         ' Create a DataTable. 
-        Dim table As DataTable = new DataTable("Product") 
+        Dim table As New DataTable("Product")
 
         ' Create a DataColumn and set various properties. 
-        Dim column As DataColumn = New DataColumn 
+        Dim column As New DataColumn()
         column.DataType = System.Type.GetType("System.Decimal") 
         column.AllowDBNull = False 
         column.Caption = "Price"  

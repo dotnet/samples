@@ -197,7 +197,7 @@ Public Class Form1
       Me.Text = "Form1"
       Me.ResumeLayout(False)
       Me.PerformLayout()
-   End Sub 'InitializeComponent 
+   End Sub
    
    #End Region
    

@@ -20,7 +20,7 @@ Imports System.Web.Services.Discovery
 Class DiscoverySoapBindingMod
    Shared Sub Main()
       Run()
-   End Sub 'Main
+   End Sub
 
    <PermissionSetAttribute(SecurityAction.Demand, Name := "FullTrust")> _
    Shared Sub Run()
@@ -58,7 +58,7 @@ Class DiscoverySoapBindingMod
             Console.WriteLine(e.ToString())
         End Try
 
-    End Sub 'Run
+    End Sub
 End Class
 
 ' </Snippet1>

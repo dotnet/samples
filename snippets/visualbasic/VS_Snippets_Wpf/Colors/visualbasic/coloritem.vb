@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System.ComponentModel
+﻿Imports System.ComponentModel
 Imports System.Reflection
 Imports System.Windows.Data
 Imports System.Windows.Media

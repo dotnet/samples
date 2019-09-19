@@ -12,7 +12,7 @@ Public Class MyUser
     
     Public Sub New()
         Me.Url = "http://www.contoso.com/username.asmx"
-    End Sub 'New
+    End Sub
     
     <HttpMethodAttribute(GetType(XmlReturnReader), GetType(HtmlFormParameterWriter))> _
     Public Function GetUserName() As UserName

@@ -1154,7 +1154,7 @@ Jump:   FileOpen(1, "testFile", OpenMode.Input)
         ' ...
 120:    FileClose(1)
         '</Snippet708>
-    End Sub ' LabelsFused()
+    End Sub
 
 
     '****************************************************************************

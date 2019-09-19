@@ -33,7 +33,7 @@ Class Sample
                          IIf(0 = [String].CompareOrdinal(str3, str4), "equal", "not equal"))
       CodePoints("str3", str3)
       CodePoints("str4", str4)
-   End Sub 'Main
+   End Sub
 
    Public Shared Sub CodePoints(title As [String], s As [String])
       Console.Write("{0}The code points in {1} are: {0}", Environment.NewLine, title)
@@ -42,7 +42,7 @@ Class Sample
          Console.Write("{0:x4} ", AscW(c))
       Next c
       Console.WriteLine()
-   End Sub 'CodePoints
+   End Sub
 End Class 'Sample
 '
 'str1 = 'INDIGO'

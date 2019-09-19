@@ -19,15 +19,15 @@ public struct MyUnsafeStruct
     public int size;
 }
 
-public unsafe class LibWrap
+internal static unsafe class NativeMethods
 {
     // Declares managed prototypes for the unmanaged function.
     [DllImport("..\\LIB\\PInvokeLib.dll")]
-    public static extern void TestOutArrayOfStructs(
+    internal static extern void TestOutArrayOfStructs(
         out int size, out IntPtr outArray);
 
     [DllImport("..\\LIB\\PInvokeLib.dll")]
-    public static extern void TestOutArrayOfStructs(
+    internal static extern void TestOutArrayOfStructs(
         out int size, MyUnsafeStruct** outArray);
 }
 //</snippet20>
@@ -48,7 +48,7 @@ public class App
         int size;
         IntPtr outArray;
 
-        LibWrap.TestOutArrayOfStructs(out size, out outArray);
+        NativeMethods.TestOutArrayOfStructs(out size, out outArray);
         MyStruct[] manArray = new MyStruct[size];
         IntPtr current = outArray;
         for (int i = 0; i < size; i++)
@@ -56,7 +56,7 @@ public class App
             manArray[i] = new MyStruct();
             Marshal.PtrToStructure(current, manArray[i]);
 
-            //Marshal.FreeCoTaskMem( (IntPtr)Marshal.ReadInt32( current ));
+            //Marshal.FreeCoTaskMem((IntPtr)Marshal.ReadInt32(current));
             Marshal.DestroyStructure(current, typeof(MyStruct));
             current = (IntPtr)((long)current + Marshal.SizeOf(manArray[i]));
 
@@ -72,7 +72,7 @@ public class App
         int size;
         MyUnsafeStruct* pResult;
 
-        LibWrap.TestOutArrayOfStructs(out size, &pResult);
+        NativeMethods.TestOutArrayOfStructs(out size, &pResult);
         MyUnsafeStruct* pCurrent = pResult;
         for (int i = 0; i < size; i++, pCurrent++)
         {

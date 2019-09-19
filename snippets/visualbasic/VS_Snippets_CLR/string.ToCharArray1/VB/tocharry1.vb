@@ -15,7 +15,7 @@ Class Sample
       For Each c In arr
          Console.WriteLine(c)
       Next c
-   End Sub 'Main
+   End Sub
 End Class 'Sample
 '
 'This example produces the following results:

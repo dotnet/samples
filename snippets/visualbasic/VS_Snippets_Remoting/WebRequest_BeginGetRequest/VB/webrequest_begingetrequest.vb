@@ -13,7 +13,7 @@ Public Class RequestState
     
     Public Sub New()
         request = Nothing
-    End Sub ' New
+    End Sub
 End Class ' RequestState
 
 
@@ -57,7 +57,7 @@ Class WebRequest_BeginGetRequeststream
             streamRead.Close()
             ' Release the HttpWebResponse Resource.
              myWebResponse.Close()
-    End Sub ' Main
+    End Sub
      
     Private Shared Sub ReadCallback(asynchronousResult As IAsyncResult)
             Dim myRequestState As RequestState = CType(asynchronousResult.AsyncState, RequestState)
@@ -75,6 +75,6 @@ Class WebRequest_BeginGetRequeststream
             streamResponse.Close()
             ' Allow the main thread to resume.
             allDone.Set()
-    End Sub ' ReadCallback 
+    End Sub
 End Class ' WebRequest_BeginGetRequeststream 
 ' </Snippet3>

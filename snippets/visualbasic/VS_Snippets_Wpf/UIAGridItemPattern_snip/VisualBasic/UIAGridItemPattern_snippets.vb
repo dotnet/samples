@@ -13,7 +13,7 @@ Class UIAGridItemPattern_snippets
     ''' </summary>
     Public Sub New()
 
-    End Sub 'New
+    End Sub
 
 
     ' <Snippet100>
@@ -131,7 +131,7 @@ Class UIAGridItemPattern_snippets
         AddressOf OnGridItemFocusChange
         Automation.AddAutomationFocusChangedEventHandler( _
         gridItemFocusChangedListener)
-    End Sub 'SetGridItemEventListeners
+    End Sub
     ' </Snippet102>
 
     ' <Snippet103>
@@ -195,7 +195,7 @@ Class UIAGridItemPattern_snippets
         gridItem.Current.AutomationId.ToString())
         Console.WriteLine(gridItemReport.ToString())
 
-    End Sub 'OnGridItemFocusChange
+    End Sub
     
     
     '''--------------------------------------------------------------------
@@ -208,7 +208,7 @@ Class UIAGridItemPattern_snippets
         Automation.RemoveAllEventHandlers()
         MyBase.OnExit(args)
     
-    End Sub 'OnExit    
+    End Sub
     ' </Snippet103>
 
     ' <Snippet104>
@@ -264,6 +264,6 @@ Class UIAGridItemPattern_snippets
             
             app.Run()
         
-        End Sub 'Main
+        End Sub
     End Class 'TestMain
 End Class 'UIAGridItemPattern_snippets

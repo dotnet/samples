@@ -29,7 +29,7 @@ Class Program
         Dim sandbox As AppDomain = AppDomain.CreateDomain("Sandboxed Domain", e, ads, pset, Nothing)
         sandbox.ExecuteAssemblyByName("HelloWorld")
     
-    End Sub 'Main
+    End Sub
 End Class 'Program
 
 '</Snippet1>

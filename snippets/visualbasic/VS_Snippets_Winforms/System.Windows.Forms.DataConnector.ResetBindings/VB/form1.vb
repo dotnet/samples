@@ -83,7 +83,7 @@ Class Form1
             bindingSource1.ResetBindings(False)
         End If
 
-    End Sub 'button1_Click
+    End Sub
     
     '</snippet3>
     <STAThread()>  _

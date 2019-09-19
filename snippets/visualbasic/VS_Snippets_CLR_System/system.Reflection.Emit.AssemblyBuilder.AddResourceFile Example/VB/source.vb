@@ -80,7 +80,7 @@ Class AsmBuilderGetFileDemo
       Console.WriteLine(sr.ReadToEnd())
       sr.Close()
 
-   End Sub 'Main 
+   End Sub
 
 End Class 'AsmBuilderGetFileDemo
 

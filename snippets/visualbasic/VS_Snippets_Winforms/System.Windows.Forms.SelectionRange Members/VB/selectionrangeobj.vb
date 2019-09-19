@@ -22,7 +22,7 @@ Namespace SelectionRangew
       
       Public Sub New()
          InitializeComponent()
-      End Sub 'New
+      End Sub
        
       Private Sub InitializeComponent()
          Me.monthCalendar1 = New System.Windows.Forms.MonthCalendar()
@@ -85,11 +85,11 @@ Namespace SelectionRangew
          Me.Name = "Form1"
          Me.Text = "Form1"
          Me.ResumeLayout(False)
-      End Sub 'InitializeComponent
+      End Sub
        
       Shared Sub Main()
          Application.Run(New Form1())
-      End Sub 'Main
+      End Sub
       
 
 '<snippet1>

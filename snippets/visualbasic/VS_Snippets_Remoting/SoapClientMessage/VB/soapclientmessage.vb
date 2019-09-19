@@ -44,7 +44,7 @@ Public Class MySoapExtension
    ' Save the name of the log file that will save the SOAP messages.
    Public Overrides Sub Initialize(initializer As Object)
       filename = CStr(initializer)
-   End Sub 'Initialize
+   End Sub
    
    
 ' <Snippet1>
@@ -60,7 +60,7 @@ Public Class MySoapExtension
          Case Else
                Throw New Exception("invalid stage")
       End Select
-   End Sub 'ProcessMessage
+   End Sub
    
    
    ' Write the contents of the outgoing SOAP message to the log file.
@@ -123,7 +123,7 @@ Public Class MySoapExtension
 ' </Snippet4>
 ' </Snippet3>
 ' </Snippet2>
-  End Sub 'WriteOutput
+  End Sub
 ' </Snippet1>
    ' Write the contents of the incoming SOAP message to the log file.
    Public Sub WriteInput(message As SoapClientMessage)
@@ -138,7 +138,7 @@ Public Class MySoapExtension
       Copy(newStream, myFileStream)
       myFileStream.Close()
       newStream.Position = 0
-   End Sub 'WriteInput
+   End Sub
   
    ' Return a new MemoryStream for SOAP processing.
    Public Overrides Function ChainStream(stream As Stream) As Stream
@@ -153,7 +153,7 @@ Public Class MySoapExtension
       Dim myTextWriter = New StreamWriter(toStream)
       myTextWriter.WriteLine(myTextReader.ReadToEnd())
       myTextWriter.Flush()
-   End Sub 'Copy
+   End Sub
 End Class 'MySoapExtension
 
 ' A SoapExtensionAttribute that can be associated with an
@@ -167,7 +167,7 @@ Public Class MySoapExtensionAttribute
    ' Set the name of the log file where SOAP messages will be stored.
    Public Sub New()
       myFilename = "C:\logClient.txt"
-   End Sub 'New
+   End Sub
    
    ' Return the type of MySoapExtension.  
    Public Overrides ReadOnly Property ExtensionType() As Type
@@ -204,7 +204,7 @@ Public Class MathSvc
  <System.Diagnostics.DebuggerStepThroughAttribute()>  _
     Public Sub New()
       Me.Url = "http://localhost/MathSvc_SoapClientMessage_vb.asmx"
-   End Sub 'New
+   End Sub
    
    <System.Web.Services.Protocols.SoapDocumentMethodAttribute _
       ("http://tempuri.org/Add", _

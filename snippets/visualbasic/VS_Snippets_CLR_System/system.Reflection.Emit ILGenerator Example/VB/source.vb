@@ -166,7 +166,7 @@ Class TestILGenerator
       Console.WriteLine("(10, 10, 10) . (20, 20, 20) = {0}", _
                         IVType.InvokeMember("DotProduct", BindingFlags.InvokeMethod, _
                         Nothing, aVector1, passMe))
-   End Sub 'Main
+   End Sub
 End Class 'TestILGenerator
 
 

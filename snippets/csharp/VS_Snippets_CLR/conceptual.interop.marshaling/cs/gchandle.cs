@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 //<snippet40>
 public delegate bool CallBack(int handle, IntPtr param);
 
-public class LibWrap
+internal static class NativeMethods
 {
     // Passes a managed object as an LPARAM type.
     // Declares a managed prototype for the unmanaged function.
     [DllImport("user32.dll")]
-    public static extern bool EnumWindows(CallBack cb, IntPtr param);
+    internal static extern bool EnumWindows(CallBack cb, IntPtr param);
 }
 //</snippet40>
 
@@ -26,7 +26,7 @@ public class App
 
         // Platform invoke prevents the delegate from being garbage
         // collected before the call ends.
-        LibWrap.EnumWindows(cewp, (IntPtr)gch);
+        NativeMethods.EnumWindows(cewp, (IntPtr)gch);
         gch.Free();
     }
 

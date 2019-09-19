@@ -23,7 +23,7 @@ Public Class MyApplication
       For i = 0 To info.Length - 1
          Console.WriteLine(info(i).Name)
       Next i
-   End Sub 'Main
+   End Sub
 
    ' Create the callee transient dynamic assembly.
    Private Shared Function CreateCallee(myDomain As AppDomain) As TypeBuilder

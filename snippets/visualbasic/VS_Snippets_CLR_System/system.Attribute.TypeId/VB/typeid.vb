@@ -13,7 +13,7 @@ Namespace NDP_UE_VB
         Public Sub New(UsageMsg As String)
             Me.usageMsg = UsageMsg
             Me.GUIDinstance = Guid.NewGuid()
-        End Sub ' New
+        End Sub
 
         ' This is storage for the attribute message and unique ID.
         Protected usageMsg As String
@@ -51,7 +51,7 @@ Namespace NDP_UE_VB
             strArray() As String, _
             <ArgumentUsage("Can pass a param list or array here.")> _
             ParamArray strList() As String)
-        End Sub ' TestMethod
+        End Sub
     End Class ' TestClass
 
     Module AttributeTypeIdDemo
@@ -103,7 +103,7 @@ Namespace NDP_UE_VB
                 Console.WriteLine("The parameters information could not " & _
                     "be retrieved for method {0}.", mInfo.Name)
             End If
-        End Sub ' ShowAttributeTypeIds
+        End Sub
 
         Sub Main()
             Console.WriteLine( _
@@ -115,7 +115,7 @@ Namespace NDP_UE_VB
                 "display the attributes and corresponding TypeId values:" )
 
             ShowAttributeTypeIds( )
-        End Sub ' Main
+        End Sub
 
     End Module ' AttributeTypeIdDemo
 End Namespace ' NDP_UE_VB

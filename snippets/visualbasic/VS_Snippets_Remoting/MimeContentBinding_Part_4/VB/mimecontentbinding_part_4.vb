@@ -48,7 +48,7 @@ Namespace MimeContentBinding_work
 ' </Snippet2>
          Console.WriteLine("Namespace: " & MimeContentBinding.Namespace)
 ' </Snippet3>
-      End Sub 'Main 
+      End Sub
    End Class 'MyMimeContentClass
 End Namespace 'MimeContentBinding_work
 ' </Snippet4>

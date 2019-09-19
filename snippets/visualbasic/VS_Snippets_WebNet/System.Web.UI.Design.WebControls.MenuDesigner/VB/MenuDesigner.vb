@@ -105,7 +105,7 @@ Namespace Examples.VB.WebControls.Design
 
             MyBase.Initialize(component)
 
-        End Sub ' Initialize
+        End Sub
         ' </snippet6>
     End Class ' MyMenuDesigner
 End Namespace ' Examples.VB.WebControls.Design

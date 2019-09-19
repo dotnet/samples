@@ -6,10 +6,10 @@
   </PropertyGroup>
   
   <!--
-    The following 'COMReference' items were copied from a .NET Framework project. They were added by using the Visual Studio COM References window. See https://docs.microsoft.com/en-us/visualstudio/ide/managing-references-in-a-project?view=vs-2017.
+    The following 'COMReference' items were copied from a .NET Framework project. They were added by using the Visual Studio COM References window. For more information, see https://docs.microsoft.com/visualstudio/ide/managing-references-in-a-project.
 
     Observe the 'EmbedInteropTypes' tag value.
-    See https://docs.microsoft.com/en-us/visualstudio/msbuild/common-msbuild-project-items?view=vs-2017#comreference
+    For more information, see https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-items#comreference.
   -->
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">

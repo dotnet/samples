@@ -22,18 +22,18 @@ Public Class HelloServer
       System.Console.ReadLine()
 ' </Snippet2>
 ' <Snippet3>
-   End Sub 'Main
+   End Sub
     
       
    Public Sub New()
       Console.WriteLine("HelloServer activated")
-   End Sub 'New
+   End Sub
    
       
    Protected Overrides Sub Finalize()
       Console.WriteLine("Object Destroyed")
       MyBase.Finalize()
-   End Sub 'Finalize
+   End Sub
 
          
    Public Function HelloMethod(name As [String]) As [String]

@@ -3,7 +3,6 @@ Option Strict
 
 Imports System.ComponentModel
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
 
 Public Class Form1
     Inherits Form
@@ -17,6 +16,6 @@ Public Class Form1
         For i = 0 To ps.Count - 1
             Console.WriteLine((ControlChars.Tab & ps(i).Name & ControlChars.Tab & ps(i).PropertyType.ToString))
         Next i
-    End Sub 'PrintPropertyDescriptions
+    End Sub
     ' </Snippet1>
 End Class 'Form1 

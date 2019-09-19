@@ -70,7 +70,7 @@ Namespace MyNameSpace
          If myMessageSink Is Nothing Then
             Throw New Exception("A supported channel could not be found for myUrl1:" + myUrl)
          End If
-      End Sub 'New
+      End Sub
 
       <SecurityPermission(SecurityAction.LinkDemand, Flags := SecurityPermissionFlag.Infrastructure)> _
       Public Overrides Function Invoke(ByVal myMesg As IMessage) As IMessage
@@ -157,7 +157,7 @@ Namespace MyNameSpace
          Else
             Console.WriteLine("myService.HelloMethod FAILED : returned {0}", myReturnString)
          End If
-      End Sub 'Main
+      End Sub
    End Class 'ProxySample
 End Namespace 'MyNameSpace
 '</Snippet1>

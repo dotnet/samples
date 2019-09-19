@@ -24,7 +24,7 @@ Namespace CodeDomSamples
          '			Console.WriteLine([text])
          '		End Sub
          '</Snippet2>
-     End Sub 'New 
+     End Sub
    
     End Class 'CodeArgumentReferenceExpressionExample    
 

@@ -57,7 +57,7 @@ Public Class SamplesArrayList
             Console.Write("   {0}", obj)
         Next obj
         Console.WriteLine()
-    End Sub 'PrintValues
+    End Sub
 
 End Class
 

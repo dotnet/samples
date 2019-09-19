@@ -45,7 +45,7 @@ Public Class SamplesArrayList
       Console.WriteLine("After sorting with the reverse case-insensitive comparer:")
       PrintIndexAndValues(myAL)
 
-   End Sub 'Main
+   End Sub
 
    Public Shared Sub PrintIndexAndValues(myList As IEnumerable)
       Dim i As Integer = 0
@@ -55,7 +55,7 @@ Public Class SamplesArrayList
          i = i + 1
       Next obj
       Console.WriteLine()
-   End Sub 'PrintIndexAndValues
+   End Sub
 
 End Class 'SamplesArrayList
 

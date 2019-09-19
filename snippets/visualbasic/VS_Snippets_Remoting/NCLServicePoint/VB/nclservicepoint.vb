@@ -30,6 +30,6 @@ Public Class ServicePointExample
         Console.WriteLine(s.ReadToEnd())
         responseStream.Close()
         response.Close()
-    End Sub 'Main
+    End Sub
 End Class
 '</Snippet1>

@@ -15,7 +15,7 @@ Namespace CodeDomSamples
 
          ' MyBase.Dispose
         '</Snippet2>
-      End Sub 'New 
+      End Sub
 
    End Class 'CodeBaseReferenceExpressionExample ' Creates a method invoke expression
 

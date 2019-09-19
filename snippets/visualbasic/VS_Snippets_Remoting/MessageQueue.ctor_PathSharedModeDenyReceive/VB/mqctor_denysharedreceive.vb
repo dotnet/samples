@@ -20,7 +20,7 @@ Public Class MyNewQueue
 
             Return
 
-        End Sub 'Main
+        End Sub
 
 
   
@@ -58,7 +58,7 @@ Public Class MyNewQueue
 
             Return
 
-        End Sub 'GetExclusiveAccess
+        End Sub
 
 End Class 'MyNewQueue
 

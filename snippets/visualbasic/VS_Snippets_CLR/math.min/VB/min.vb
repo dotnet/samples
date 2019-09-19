@@ -44,7 +44,7 @@ Class Sample
       Console.WriteLine(str, "UInt16 ", xUshort1, xUshort2, Math.Min(xUshort1, xUshort2))
       Console.WriteLine(str, "UInt32 ", xUint1, xUInt2, Math.Min(xUInt1, xUInt2))
       Console.WriteLine(str, "UInt64 ", xUlong1, xUlong2, Math.Min(xUlong1, xUlong2))
-   End Sub 'Main
+   End Sub
 End Class 'Sample
 '
 ' This example produces the following results:

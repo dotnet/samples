@@ -76,7 +76,7 @@ Public Class Form1
             txtResult.Text = "Cancelled"
         End If
         testDialog.Dispose()
-    End Sub 'ShowMyDialogBox
+    End Sub
     '</Snippet1>
 
 

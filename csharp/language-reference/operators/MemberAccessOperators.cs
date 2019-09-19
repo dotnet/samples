@@ -15,6 +15,9 @@ namespace operators
             Indexers();
             NullConditional();
             Invocation();
+            IndexFromEnd();
+            Ranges();
+            RangesOptional();
         }
 
         private static void QualifiedName()
@@ -106,6 +109,66 @@ namespace operators
             numbers.Clear();
             display(numbers.Count);   // output: 0
             // </SnippetInvocation>
+        }
+
+        private static void IndexFromEnd()
+        {
+            // <SnippetIndexFromEnd>
+            var xs = new[] { 0, 10, 20, 30, 40 };
+            var last = xs[^1];
+            Console.WriteLine(last);  // output: 40
+
+            var lines = new List<string> { "one", "two", "three", "four" };
+            var prelast = lines[^2];
+            Console.WriteLine(prelast);  // output: three
+            
+            string word = "Twenty";
+            Index toFirst = ^word.Length;
+            char first = word[toFirst];
+            Console.WriteLine(first);  // output: T
+            // </SnippetIndexFromEnd>
+        }
+
+        private static void Ranges()
+        {
+            // <SnippetRanges>
+            var numbers = new[] { 0, 10, 20, 30, 40, 50 };
+            int start = 1;
+            int amountToTake = 3;
+            var subset = numbers[start..(start + amountToTake)];
+            Display(subset);  // output: 10 20 30
+
+            int margin = 1;
+            var inner = numbers[margin..^margin];
+            Display(inner);  // output: 10 20 30 40
+
+            string line = "one two three";
+            int amountToTakeFromEnd = 5;
+            Range endIndices = ^amountToTakeFromEnd..^0;
+            string end = line[endIndices];
+            Console.WriteLine(end);  // output: three
+
+            void Display<T>(IEnumerable<T> xs) => Console.WriteLine(string.Join(" ", xs));
+            // </SnippetRanges>
+        }
+
+        private static void RangesOptional()
+        {
+            // <SnippetRangesOptional>
+            var numbers = new[] { 0, 10, 20, 30, 40, 50 };
+            int amountToDrop = numbers.Length / 2;
+
+            var rightHalf = numbers[amountToDrop..];
+            Display(rightHalf);  // output: 30 40 50
+
+            var leftHalf = numbers[..^amountToDrop];
+            Display(leftHalf);  // output: 0 10 20
+
+            var all = numbers[..];
+            Display(all);  // output: 0 10 20 30 40 50
+
+            void Display<T>(IEnumerable<T> xs) => Console.WriteLine(string.Join(" ", xs));
+            // </SnippetRangesOptional>
         }
     }
 }

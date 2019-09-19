@@ -16,7 +16,7 @@ Public Module PingPong
         ' Output:
         '   PING! from defaultDomain
         '   PONG! from otherDomain
-     End Sub 'Main
+     End Sub
 
      Sub MyCallBack()
         Dim name As String = AppDomain.CurrentDomain.FriendlyName
@@ -24,7 +24,7 @@ Public Module PingPong
             name = "defaultDomain"
         End If
         Console.WriteLine(greetings + " from " + name)
-     End Sub 'MyCallBack
+     End Sub
 
 End Module 'PingPong
 ' </Snippet1>

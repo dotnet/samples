@@ -81,7 +81,7 @@ Public Class App
 	
 	Run()
 	
-    End Sub 'Main
+    End Sub
     
     <SecurityPermissionAttribute(SecurityAction.Demand, Flags:=SecurityPermissionFlag.UnmanagedCode)> _
     Public Shared Sub Run()
@@ -99,6 +99,6 @@ Public Class App
         LibWrap.ReadFile2(hr, buffer, 5, read, Nothing)
         Console.WriteLine("Read with class parameter: {0}", buffer)
 
-    End Sub 'Run
+    End Sub
 End Class 'App
 ' </Snippet1> 

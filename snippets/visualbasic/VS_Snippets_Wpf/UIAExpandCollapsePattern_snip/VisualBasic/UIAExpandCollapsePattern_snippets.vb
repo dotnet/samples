@@ -12,7 +12,7 @@ Class UIAExpandCollapsePattern_snippets
     ''' </summary>
     Public Sub New()
 
-    End Sub 'New
+    End Sub
 
 
     ' <Snippet100>
@@ -123,7 +123,7 @@ Class UIAExpandCollapsePattern_snippets
             ' TO DO: error handling.
         End Try
 
-    End Sub 'ExpandCollapseMenuItem ' TO DO: error handling.
+    End Sub
     ' </Snippet102>
 
 
@@ -141,6 +141,6 @@ Class UIAExpandCollapsePattern_snippets
             ' and call its Run() method to start it.
             Dim app As New UIAExpandCollapsePattern_snippets()
         
-        End Sub 'Main
+        End Sub
     End Class 'TestMain
 End Class 'UIAExpandCollapsePattern_snippets

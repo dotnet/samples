@@ -16,7 +16,7 @@ Class DiscoveryDocumentReference_Document_ResolveAll
    
    Shared Sub Main()
       Run()
-   End Sub 'Main
+   End Sub
 
    <PermissionSetAttribute(SecurityAction.Demand, Name := "FullTrust")> _
    Shared Sub Run()
@@ -50,6 +50,6 @@ Class DiscoveryDocumentReference_Document_ResolveAll
       Catch e As Exception
          Console.WriteLine("Exception :{0}", e.Message)
       End Try
-   End Sub 'Run
+   End Sub
 End Class 'DiscoveryDocumentReference_Document_ResolveAll
 ' </Snippet2>

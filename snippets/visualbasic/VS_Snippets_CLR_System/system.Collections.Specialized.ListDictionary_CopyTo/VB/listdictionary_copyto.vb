@@ -34,7 +34,7 @@ Public Class SamplesListDictionary
       Next i
       Console.WriteLine()
 
-   End Sub 'Main
+   End Sub
 
    Public Shared Sub PrintKeysAndValues(myCol As IDictionary)
 
@@ -45,7 +45,7 @@ Public Class SamplesListDictionary
       Next de
       Console.WriteLine()
 
-   End Sub 'PrintKeysAndValues
+   End Sub
 
 End Class 'SamplesListDictionary 
 

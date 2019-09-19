@@ -21,7 +21,7 @@ Namespace SDKSample
             MyBase.OnStartup(e)
             CreateAndShowMainWindow()
 
-        End Sub 'OnStartup
+        End Sub
 
         Private Sub CreateAndShowMainWindow()
 
@@ -98,7 +98,7 @@ Namespace SDKSample
             myWindow.Content = mySV
             myWindow.Show()
 
-        End Sub 'CreateAndShowMainWindow
+        End Sub
     End Class 'app
 
     ' Define a static entry class
@@ -110,6 +110,6 @@ Namespace SDKSample
             Dim app As New app()
             app.Run()
 
-        End Sub 'Main
+        End Sub
     End Class 'EntryClass
 End Namespace 'SDKSample

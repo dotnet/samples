@@ -68,6 +68,6 @@ End Namespace
 Namespace CodeDomSerializerSample
    Class CodeDomSerializerStart
       Public Shared Sub Main()
-      End Sub 'Main
+      End Sub
    End Class 'CodeDomSerializerStart
 End Namespace 'CodeDomSerializerSample

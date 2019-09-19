@@ -84,6 +84,6 @@
 
       ' Clear all selections in the ListBox.
       listBox1.ClearSelected()
-   End Sub 'RemoveTopItems
+   End Sub
    '</Snippet1>
 End Class

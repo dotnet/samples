@@ -46,7 +46,7 @@ Class Form1
         Application.SetCompatibleTextRenderingDefault(False)
         Application.Run(New Form1())
     
-    End Sub 'Main
+    End Sub
     
     Private WithEvents button1 As System.Windows.Forms.Button
     Private imageList1 As System.Windows.Forms.ImageList
@@ -312,6 +312,6 @@ Public Class OrderForm
         Me.panel2.PerformLayout()
         Me.ResumeLayout(False)
     
-    End Sub 'InitializeComponent 
+    End Sub
 End Class 'OrderForm
 

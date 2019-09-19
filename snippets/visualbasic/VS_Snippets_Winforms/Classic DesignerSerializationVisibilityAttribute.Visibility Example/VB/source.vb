@@ -30,6 +30,6 @@ Public Class Form1
             ' Insert code here.
         End If 
         ' </Snippet1>
-    End Sub 'Method
+    End Sub
 End Class 'Form1 
 

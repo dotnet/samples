@@ -31,7 +31,7 @@ Class Sample
             Console.WriteLine(m1)
          End Try
       Loop While ch <> "+"c
-   End Sub 'Main
+   End Sub
 End Class 'Sample
 '
 'This example produces the following results:

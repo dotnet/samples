@@ -24,7 +24,7 @@ Namespace StrokeCollectionShadow
             myInkSelector.Background = Brushes.Green
             root.Children.Add(myInkSelector)
 
-        End Sub 'New
+        End Sub
 
 
         ' To use Loaded event put Loaded="WindowLoaded" attribute in root element of .xaml file.
@@ -33,6 +33,6 @@ Namespace StrokeCollectionShadow
         Private Sub Toggle3d_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
             myInkSelector.Shadowed = Not myInkSelector.Shadowed
 
-        End Sub 'Toggle3d_Click
+        End Sub
     End Class 'Window1 
 End Namespace

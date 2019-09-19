@@ -13,7 +13,7 @@ Class Sample
     ' display its value.
         nullableDate = Nothing
         Display("2)", nullableDate)
-    End Sub 'Main
+    End Sub
 
     '  Display the text representation of a nullable DateTime.
     Public Shared Sub Display(ByVal title As String, _
@@ -26,7 +26,7 @@ Class Sample
         Else
             Console.WriteLine("The current date and time is {0}.", msg)
         End If
-    End Sub 'Display 
+    End Sub
 End Class 'Sample
 
 'This code example produces the following results:

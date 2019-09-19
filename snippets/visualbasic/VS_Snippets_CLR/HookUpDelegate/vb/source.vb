@@ -11,7 +11,7 @@ Class ExampleForm
     Public Sub New() 
         Me.Text = "Click me"
     
-    End Sub 'New
+    End Sub
 End Class 'ExampleForm
 '</Snippet2>
 
@@ -19,7 +19,7 @@ Class Example
     Public Shared Sub Main() 
         Dim ex As New Example()
         ex.HookUpDelegate()
-    End Sub 'Main
+    End Sub
         
     Private Sub HookUpDelegate() 
         ' Load an assembly, for example using the Assembly.Load

@@ -477,7 +477,7 @@ Public Class GridStrip
       Me.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
       Me.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table
       Me.ResumeLayout(False)
-   End Sub 'InitializeComponent 
+   End Sub
    
    #End Region
 

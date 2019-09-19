@@ -47,7 +47,7 @@ Public Class AssemblyName_CodeBase
       ' Set the method with name 'Main' as the entry point in the assembly.
       myAssemblyBuilder.SetEntryPoint(myMethodBuilder)
       myAssemblyBuilder.Save(fileName)
-   End Sub 'MakeAssembly
+   End Sub
    
    
    Public Shared Sub Main()
@@ -99,7 +99,7 @@ Public Class AssemblyName_CodeBase
          Dim publicKeyTokenBytes As Byte() = myAssembly.GetName().GetPublicKeyToken()
          Console.WriteLine(Encoding.ASCII.GetString(publicKeyTokenBytes))
       End If
-   End Sub 'Main 
+   End Sub
 End Class 'AssemblyName_CodeBase 
 ' </Snippet2>
 ' </Snippet1>

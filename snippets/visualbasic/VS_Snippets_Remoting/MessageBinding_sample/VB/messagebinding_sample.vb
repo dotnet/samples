@@ -16,7 +16,7 @@ Class MyClass1
    Public Shared Sub Main()
       Dim addOperationBinding As OperationBinding = _
          CreateOperationBinding("Add", "http://tempuri.org/")
-   End Sub 'Main
+   End Sub
 
    Public Shared Function CreateInputOutputBinding(myBindName As String, _
       isInputBinding As Boolean) As MessageBinding

@@ -39,7 +39,7 @@ Public Class IChannelReceiverHook_ChannelScheme
          Console.WriteLine("Source : " + e.Source)
          Console.WriteLine("Message : " + e.Message)
       End Try
-   End Sub 'Main
+   End Sub
 End Class 'IChannelReceiverHook_ChannelScheme
 
 ' <Snippet1>
@@ -52,12 +52,12 @@ Public Class MyCustomChannel
    ' Constructor for MyCustomChannel.
    Public Sub New(ByVal port As Integer)
       portSet = True
-   End Sub 'New
+   End Sub
 
    ' Constructor for MyCustomChannel.
    Public Sub New()
       portSet = False
-   End Sub 'New
+   End Sub
 
 ' <Snippet2>
    Public ReadOnly Property WantsToListen() As Boolean Implements IChannelReceiverHook.WantsToListen
@@ -92,6 +92,6 @@ Public Class MyCustomChannel
    Public Sub AddHookChannelUri(ByVal channelUri As String) _
                                           Implements IChannelReceiverHook.AddHookChannelUri
       ' Null implementation.
-   End Sub 'AddHookChannelUri
+   End Sub
 End Class 'MyCustomChannel 
 ' </Snippet1>

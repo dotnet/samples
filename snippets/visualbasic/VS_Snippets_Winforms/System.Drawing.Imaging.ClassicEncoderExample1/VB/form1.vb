@@ -3,8 +3,6 @@
 ' <snippet1>
 Imports System.Drawing
 Imports System.Drawing.Imaging
-Imports Microsoft.VisualBasic
-
 
 Class Example_SetColorDepth
 

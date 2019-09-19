@@ -17,6 +17,6 @@ Public Class Sample
         
         'Display the document element.
         Console.WriteLine(doc.DocumentElement.OuterXml)
-    End Sub 'Main
+    End Sub
 End Class 'Sample
 ' </Snippet1>

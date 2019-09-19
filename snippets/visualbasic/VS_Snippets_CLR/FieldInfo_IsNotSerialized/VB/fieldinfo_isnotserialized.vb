@@ -30,6 +30,6 @@ Public Class Type_IsNotSerializable
                 Console.WriteLine("The {0} field is serializable.", myFields(i))
             End If
         Next i
-    End Sub 'Main
+    End Sub
 End Class 'Type_IsNotSerializable
 ' </Snippet1>

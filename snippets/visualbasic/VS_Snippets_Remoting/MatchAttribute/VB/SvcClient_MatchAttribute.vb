@@ -25,7 +25,7 @@ Public Class MatchAttribute_Example
 
     Public Sub New()
         Url = "http://localhost"
-    End Sub 'New
+    End Sub
 
     <HttpMethodAttribute(GetType(TextReturnReader), GetType(UrlParameterWriter))> _
     Public Function GetHeaders() As Headers
@@ -116,5 +116,5 @@ Public Class SvcClient
         Next i
         Console.WriteLine(ControlChars.NewLine + "The H3 html tag has attribute : {0} = {1}", _
                                                         myHeaders.Attribute, myHeaders.Value)
-    End Sub 'Main
+    End Sub
 End Class 'SvcClient

@@ -1,8 +1,6 @@
 ﻿Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
-
 
 Public Class Form1
     Inherits Form
@@ -16,7 +14,7 @@ Public Class Form1
         ' Use the DataGrid control's HitTest method with the x and y properties.
         myHitTest = dataGrid1.HitTest(e.X, e.Y)
         Console.WriteLine(("Hashcode " & myHitTest.GetHashCode().ToString()))
-    End Sub 'dataGrid1_MouseDown
+    End Sub
     ' </Snippet1>
 End Class 'Form1 
 

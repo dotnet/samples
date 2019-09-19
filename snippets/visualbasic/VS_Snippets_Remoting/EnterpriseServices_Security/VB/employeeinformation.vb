@@ -46,7 +46,7 @@ Public Class EmployeeInformation
             Throw New UnauthorizedAccessException()
         End If
     
-    End Sub 'SetSalary
+    End Sub
     ' </snippet6>
     
     ' <snippet7>
@@ -67,7 +67,7 @@ Public Class EmployeeInformation
     Protected Overrides Sub Construct(ByVal constructorString As String) 
         accountName = constructorString
     
-    End Sub 'Construct
+    End Sub
     ' </snippet8>
 
 End Class 'EmployeeInformation
@@ -79,5 +79,5 @@ Public Class Test
 
     Public Shared Sub Main()
 
-    End Sub 'Main
+    End Sub
 End Class 'Test

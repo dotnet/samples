@@ -37,13 +37,13 @@ Namespace CustomInkControlSample
             s = New Stroke(points)
             inkFileName = "strokes.isf"
 
-        End Sub 'New
+        End Sub
 
 
         ' To use Loaded event put Loaded="OnLoad" attribute in root element of .xaml file.
         Private Sub OnLoad(ByVal sender As Object, ByVal e As RoutedEventArgs)
 
-        End Sub 'OnLoad
+        End Sub
 
         '<Snippet21>
         ' Copy the strokes from one InkCanvas to another InkCanvas.
@@ -72,14 +72,14 @@ Namespace CustomInkControlSample
 
             End If
 
-        End Sub 'SwitchMode_Click
+        End Sub
 
 
         ' Remove the selected strokes from the InkCanvas.
         Private Sub DeleteStrokes_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
 
             DeleteStroke(s)
-        End Sub 'DeleteStrokes_Click
+        End Sub
 
         '<Snippet7>
         ' Replace the selected strokes with other strokes.
@@ -162,7 +162,7 @@ Namespace CustomInkControlSample
             End Try
 
 
-        End Sub 'LoadStrokes_Click 
+        End Sub
         '</Snippet11>
 
         '<Snippet12>
@@ -224,19 +224,19 @@ Namespace CustomInkControlSample
 
             ReplaceStrokes(collection)
 
-        End Sub 'ReplaceStrokes_Click
+        End Sub
 
 
         Private Sub InsertStrokes_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
 
             InsertStroke(s)
 
-        End Sub 'InsertStrokes_Click
+        End Sub
 
 
         Private Sub AddStrokes_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
 
-        End Sub 'AddStrokes_Click
+        End Sub
 
 
         Private Sub AddStrokes()
@@ -246,7 +246,7 @@ Namespace CustomInkControlSample
             inkCanvas1.Strokes.CopyTo(strokes, 0)
             '</Snippet25>
 
-        End Sub 'AddStrokes
+        End Sub
 
         Private Sub MoveFirstStroke_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
 
@@ -257,14 +257,14 @@ Namespace CustomInkControlSample
             End If
             '</Snippet26>
 
-        End Sub 'MoveFirstStroke_Click
+        End Sub
 
         '<Snippet27>
         Private Sub GetPropertyIds(ByVal strokes As StrokeCollection)
 
             Dim propertyIds As Guid() = strokes.GetPropertyDataIds()
 
-        End Sub 'GetPropertyIds
+        End Sub
         '</Snippet27>
 
         '<Snippet28>

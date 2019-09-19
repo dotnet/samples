@@ -14,6 +14,6 @@ Class MySample
         For Each log In  remoteEventLogs
             Console.WriteLine(("Log: " & log.Log))
         Next log
-    End Sub ' Main
+    End Sub
 End Class ' MySample
 ' </Snippet1>

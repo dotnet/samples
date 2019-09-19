@@ -34,7 +34,7 @@ Class Example_SetTIFFCompression
         myEncoderParameters.Param(0) = myEncoderParameter
         myBitmap.Save("ShapesLZW.tif", myImageCodecInfo, myEncoderParameters)
     
-    End Sub 'Main
+    End Sub
     
     Private Shared Function GetEncoderInfo(ByVal mimeType As String) As ImageCodecInfo 
         Dim j As Integer

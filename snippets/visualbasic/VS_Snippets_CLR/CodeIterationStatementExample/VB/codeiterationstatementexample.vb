@@ -37,7 +37,7 @@ Namespace CodeDomSamples
         '         Console.WriteLine(testInt.ToString)
         '         testInt = (testInt + 1)
         '</Snippet2>      
-      End Sub 'New 
+      End Sub
 
    End Class 'CodeIterationStatementExample
 

@@ -23,14 +23,14 @@ Public Structure DsBrowseInfo
     Public ObjectClassSize As Integer
 End Structure
 
-Public Class LibWrap
+Friend Class NativeMethods
     ' Declares a managed prototype for the unmanaged function.
-    Declare Unicode Function DsBrowseForContainerW Lib "dsuiext.dll" (
+    Friend Declare Unicode Function DsBrowseForContainerW Lib "dsuiext.dll" (
         ByRef info As DsBrowseInfo) As Integer
 
-    Public Const DSBI_ENTIREDIRECTORY As Integer = &H90000
-    Public Const ADS_FORMAT_WINDOWS As Integer = 1
-    Public Enum BrowseStatus
+    Friend Const DSBI_ENTIREDIRECTORY As Integer = &H90000
+    Friend Const ADS_FORMAT_WINDOWS As Integer = 1
+    Friend Enum BrowseStatus
         BrowseError = -1
         BrowseOk = 1
         BrowseCancel = 2
@@ -51,14 +51,14 @@ Public Class App
         dsbi.PathSize = DsBrowseInfo.MAX_PATH
         dsbi.Caption = "Container Selection Example"
         dsbi.Title = "Select a container from the list."
-        dsbi.ReturnFormat = LibWrap.ADS_FORMAT_WINDOWS
-        dsbi.Flags = LibWrap.DSBI_ENTIREDIRECTORY
+        dsbi.ReturnFormat = NativeMethods.ADS_FORMAT_WINDOWS
+        dsbi.Flags = NativeMethods.DSBI_ENTIREDIRECTORY
         dsbi.Root = "LDAP:"
         dsbi.Path = New String(New Char(DsBrowseInfo.MAX_PATH) {})
 
         ' Initialize remaining members...
-        Dim status As Integer = LibWrap.DsBrowseForContainerW(dsbi)
-        If CType(status, LibWrap.BrowseStatus) = LibWrap.BrowseStatus.BrowseOk Then
+        Dim status As Integer = NativeMethods.DsBrowseForContainerW(dsbi)
+        If CType(status, NativeMethods.BrowseStatus) = NativeMethods.BrowseStatus.BrowseOk Then
             Console.WriteLine(dsbi.Path)
         Else
             Console.WriteLine("No path returned.")

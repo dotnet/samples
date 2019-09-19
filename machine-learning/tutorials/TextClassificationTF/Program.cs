@@ -1,7 +1,7 @@
 ﻿// <SnippetAddUsings>
 using System;
 using System.IO;
-using System.Net;
+using System.Collections.Generic;
 using Microsoft.ML;
 using Microsoft.ML.Data;
 using Microsoft.ML.Transforms;
@@ -12,7 +12,7 @@ namespace TextClassificationTF
     class Program
     {
         // <SnippetDeclareGlobalVariables>
-        public const int MaxSentenceLength = 600;
+        public const int FeatureLength = 600;
         static readonly string _modelPath = Path.Combine(Environment.CurrentDirectory, "sentiment_model");
         // </SnippetDeclareGlobalVariables>
 
@@ -20,46 +20,10 @@ namespace TextClassificationTF
         {
             // Create MLContext to be shared across the model creation workflow objects 
             // <SnippetCreateMLContext>
-            MLContext mlContext = new MLContext(seed: 1);
+            MLContext mlContext = new MLContext();
             // </SnippetCreateMLContext>
 
-            // <SnippetCallReuseAndTuneSentimentModel>
-            var model = ReuseAndTuneSentimentModel(mlContext);
-            // </SnippetCallReuseAndTuneSentimentModel>
-
-            // <SnippetCallPredictSentiment>
-            PredictSentiment(mlContext, model);
-            // </SnippetCallPredictSentiment>
-        }
-
-        public static ITransformer ReuseAndTuneSentimentModel(MLContext mlContext)
-        {
-            // <SnippetDownloadModel>
-            // string modelLocation = DownloadTensorFlowSentimentModel();
-            // </SnippetDownloadModel>
-
-            // <SnippetCreateTrainData>
-            var trainData = new[] { new IMDBSentiment() {
-                SentimentText = "this film was just brilliant casting location scenery story direction " +
-                                    "everyone's really suited the part they played and you could just imagine being there robert " +
-                                    "is an amazing actor and now the same being director  father came from the same scottish " +
-                                    "island as myself so i loved the fact there was a real connection with this film the witty " +
-                                    "remarks throughout the film were great it was just brilliant so much that i bought the " +
-                                    "film as soon as it was released for  and would recommend it to everyone to watch and the " +
-                                    "fly fishing was amazing really cried at the end it was so sad and you know what they say " +
-                                    "if you cry at a film it must have been good and this definitely was also  to the two " +
-                                    "little boy's that played the  of norman and paul they were just brilliant children are " +
-                                    "often left out of the  list i think because the stars that play them all grown up are " +
-                                    "such a big profile for the whole film but these children are amazing and should be praised " +
-                                    "for what they have done don't you think the whole story was so lovely because it was true " +
-                                    "and was someone's life after all that was shared with us all"
-            } };
-            // </SnippetCreateTrainData>
-
-            // <SnippetLoadTrainData>
-            var dataView = mlContext.Data.LoadFromEnumerable(trainData);
-            // </SnippetLoadTrainData>
-            // This is the dictionary to convert words into the integer indexes.
+            // Dictionary to encode words as integers.
             // <SnippetCreateLookupMap>
             var lookupMap = mlContext.Data.LoadFromTextFile(Path.Combine(_modelPath, "imdb_word_index.csv"),
                 columns: new[]
@@ -71,115 +35,157 @@ namespace TextClassificationTF
                );
             // </SnippetCreateLookupMap>
 
-            // Load the TensorFlow model once.
-            //      - Use it for quering the schema for input and output in the model
-            //      - Use it for prediction in the pipeline.
-            // <SnippetLoadTensorFlowModel>
-            var tensorFlowModel = mlContext.Model.LoadTensorFlowModel(_modelPath);
-            // </SnippetLoadTensorFlowModel>
-
-            // <SnippetGetModelSchema>
-            var schema = tensorFlowModel.GetModelSchema();
-            Console.WriteLine(" =============== TensorFlow Model Schema =============== ");
-            var featuresType = (VectorDataViewType)schema["Features"].Type;
-            Console.WriteLine($"Name: Features, Type: {featuresType.ItemType.RawType}, Shape: (-1, {featuresType.Dimensions[0]})");
-            var predictionType = (VectorDataViewType)schema["Prediction/Softmax"].Type;
-            Console.WriteLine($"Name: Prediction/Softmax, Type: {featuresType.ItemType.RawType}, Shape: (-1, {featuresType.Dimensions[0]})");
-            // </SnippetGetModelSchema>
-
             // The model expects the input feature vector to be a fixed length vector.
-            // This action resizes the integer vector to a fixed length vector 
-            // required for CustomMappingEstimator input
+            // This action resizes the variable length array generated by the lookup map
+            // to a fixed length vector. If there are less than 600 words in the sentence,
+            // the remaining indices will be filled with zeros. If there are more than
+            // 600 words in the sentence, then the array is truncated at 600.
             // <SnippetResizeFeatures>
-            Action<IMDBSentiment, IntermediateFeatures> ResizeFeaturesAction = (s, f) =>
+            Action<VariableLength, FixedLength> ResizeFeaturesAction = (s, f) =>
             {
-                f.Sentiment_Text = s.SentimentText;
                 var features = s.VariableLengthFeatures;
-                Array.Resize(ref features, MaxSentenceLength);
+                Array.Resize(ref features, FeatureLength);
                 f.Features = features;
             };
             // </SnippetResizeFeatures>
 
-            // A pipeline converts text into vector of words.
-            // 'TokenizeIntoWords' uses spaces to parse the text/string into words
-            // Space is also a default value for the 'separators' argument if it is not specified.
+            // Load the TensorFlow model.
+            // <SnippetLoadTensorFlowModel>
+            TensorFlowModel tensorFlowModel = mlContext.Model.LoadTensorFlowModel(_modelPath);
+            // </SnippetLoadTensorFlowModel>
+
+            // <SnippetGetModelSchema>
+            DataViewSchema schema = tensorFlowModel.GetModelSchema();
+            Console.WriteLine(" =============== TensorFlow Model Schema =============== ");
+            var featuresType = (VectorDataViewType)schema["Features"].Type;
+            Console.WriteLine($"Name: Features, Type: {featuresType.ItemType.RawType}, Size: ({featuresType.Dimensions[0]})");
+            var predictionType = (VectorDataViewType)schema["Prediction/Softmax"].Type;
+            Console.WriteLine($"Name: Prediction/Softmax, Type: {predictionType.ItemType.RawType}, Size: ({predictionType.Dimensions[0]})");
+
+            // </SnippetGetModelSchema>
+
             // <SnippetTokenizeIntoWords>
-            var pipeline = mlContext.Transforms.Text.TokenizeIntoWords("TokenizedWords", "SentimentText")
+            IEstimator<ITransformer> pipeline =
+                // Split the text into individual words
+                mlContext.Transforms.Text.TokenizeIntoWords("TokenizedWords", "ReviewText")
                 // </SnippetTokenizeIntoWords>
-                // MapValue maps each word to an integer which is an index in the dictionary ('lookupMap')
+
                 // <SnippetMapValue>
+                // Map each word to an integer value. The array of integer makes up the input features.
                 .Append(mlContext.Transforms.Conversion.MapValue("VariableLengthFeatures", lookupMap,
                     lookupMap.Schema["Words"], lookupMap.Schema["Ids"], "TokenizedWords"))
                 // </SnippetMapValue>
-                // CustomMappingEstimator is used to resize variable length vector 
-                // to fixed length vector via ResizeFeaturesAction.
+
                 // <SnippetCustomMapping>
+                // Resize variable length vector to fixed length vector.
                 .Append(mlContext.Transforms.CustomMapping(ResizeFeaturesAction, "Resize"))
                 // </SnippetCustomMapping>
-                // Passes the data to TensorFlow for scoring
+
                 // <SnippetScoreTensorFlowModel>
+                // Passes the data to TensorFlow for scoring
                 .Append(tensorFlowModel.ScoreTensorFlowModel("Prediction/Softmax", "Features"))
                 // </SnippetScoreTensorFlowModel>
-                // Retrieves the 'Prediction' from TensorFlow and and copies to a column 
+
                 // <SnippetCopyColumns>
+                // Retrieves the 'Prediction' from TensorFlow and and copies to a column
                 .Append(mlContext.Transforms.CopyColumns("Prediction", "Prediction/Softmax"));
             // </SnippetCopyColumns>
 
-            // Train the model
-            Console.WriteLine("=============== Training classification model ===============");
-            // Create and train the model based on the dataset that has been loaded, transformed.
-            // <SnippetTrainModel>
+            // <SnippetCreateModel>
+            // Create an executable model from the estimator pipeline
+            IDataView dataView = mlContext.Data.LoadFromEnumerable(new List<MovieReview>());
             ITransformer model = pipeline.Fit(dataView);
-            // </SnippetTrainModel>
+            // </SnippetCreateModel>
 
-            // <SnippetReturnModel>
-            return model;
-            // </SnippetReturnModel>
+            // <SnippetCallPredictSentiment>
+            PredictSentiment(mlContext, model);
+            // </SnippetCallPredictSentiment>
         }
 
         public static void PredictSentiment(MLContext mlContext, ITransformer model)
         {
             // <SnippetCreatePredictionEngine>
-            var engine = mlContext.Model.CreatePredictionEngine<IMDBSentiment, IMDBSentimentPrediction>(model);
+            var engine = mlContext.Model.CreatePredictionEngine<MovieReview, MovieReviewSentimentPrediction>(model);
             // </SnippetCreatePredictionEngine>
 
             // <SnippetCreateTestData>
-            var data = new[] { new IMDBSentiment() {
-                SentimentText = "this film is really bad"
-            }};
+            var review = new MovieReview()
+            {
+                ReviewText = "this film is really good"
+            };
             // </SnippetCreateTestData>
 
             // Predict with TensorFlow pipeline.
             // <SnippetPredict>  
-            var prediction = engine.Predict(data[0]);
+            var sentimentPrediction = engine.Predict(review);
             // </SnippetPredict>  
 
             // <SnippetDisplayPredictions>
-            Console.WriteLine("Number of classes: {0}", prediction.Prediction.Length);
-            Console.WriteLine("Is sentiment/review positive? {0}", prediction.Prediction[1] > 0.5 ? "Yes." : "No.");
-            Console.WriteLine("Prediction Confidence: {0}", prediction.Prediction[1].ToString("0.00"));
+            Console.WriteLine("Number of classes: {0}", sentimentPrediction.Prediction.Length);
+            Console.WriteLine("Is sentiment/review positive? {0}", sentimentPrediction.Prediction[1] > 0.5 ? "Yes." : "No.");
             // </SnippetDisplayPredictions>
+
             /////////////////////////////////// Expected output ///////////////////////////////////
             // 
-            // Name: Features, Type: System.Int32, Shape: (-1, 600)
-            // Name: Prediction/Softmax, Type: System.Single, Shape: (-1, 2)
+            // Name: Features, Type: System.Int32, Size: 600
+            // Name: Prediction/Softmax, Type: System.Single, Size: 2
             // 
             // Number of classes: 2
             // Is sentiment/review positive ? Yes
             // Prediction Confidence: 0.65
         }
-        // <SnippetDeclareIntermediateFeatures>
-        /// <summary>
-        /// Class to hold intermediate data. Mostly used by CustomMapping Estimator
-        /// </summary>
-        public class IntermediateFeatures
-        {
-            public string Sentiment_Text { get; set; }
 
-            [VectorType(MaxSentenceLength)]
+        // <SnippetMovieReviewClass>
+        /// <summary>
+        /// Class to hold original sentiment data.
+        /// </summary>
+        public class MovieReview
+        {
+            public string ReviewText { get; set; }
+        }
+        //</SnippetMovieReviewClass>
+
+        //<SnippetPrediction>
+        /// <summary>
+        /// Class to contain the output values from the transformation.
+        /// </summary>
+        public class MovieReviewSentimentPrediction
+        {
+            [VectorType(2)]
+            public float[] Prediction { get; set; }
+        }
+        // </SnippetPrediction>
+
+        // <SnippetVariableLengthFeatures>
+        /// <summary>
+        /// Class to hold the variable length feature vector. Used to define the
+        /// column names used as input to the custom mapping action.
+        /// </summary>
+        public class VariableLength
+        {
+            /// <summary>
+            /// This is a variable length vector designated by VectorType attribute.
+            /// Variable length vectors are produced by applying operations such as 'TokenizeWords' on strings
+            /// resulting in vectors of tokens of variable lengths.
+            /// </summary>
+            [VectorType]
+            public int[] VariableLengthFeatures { get; set; }
+        }
+        // </SnippetVariableLengthFeatures>
+
+        // <SnippetFixedLengthFeatures>
+        /// <summary>
+        /// Class to hold the fixed length feature vector. Used to define the
+        /// column names used as output from the custom mapping action,
+        /// </summary>
+        public class FixedLength
+        {
+            /// <summary>
+            /// This is a fixed length vector designated by VectorType attribute.
+            /// </summary>
+            [VectorType(FeatureLength)]
             public int[] Features { get; set; }
         }
-        // </SnippetDeclareIntermediateFeatures>
+        // </SnippetFixedLengthFeatures>
     }
-
 }

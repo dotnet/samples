@@ -29,12 +29,12 @@ public struct MyPerson
     }
 }
 
-public class LibWrap
+internal static class NativeMethods
 {
     // Declares a managed prototype for an array of integers by value.
     // The array size cannot be changed, but the array is copied back.
     [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
-    public static extern int TestArrayOfInts(
+    internal static extern int TestArrayOfInts(
         [In, Out] int[] array, int size);
 
     // Declares a managed prototype for an array of integers by reference.
@@ -42,27 +42,27 @@ public class LibWrap
     // automatically because the marshaler does not know the resulting size.
     // The copy must be performed manually.
     [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
-    public static extern int TestRefArrayOfInts(
+    internal static extern int TestRefArrayOfInts(
         ref IntPtr array, ref int size);
 
     // Declares a managed prototype for a matrix of integers by value.
     [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
-    public static extern int TestMatrixOfInts(
+    internal static extern int TestMatrixOfInts(
         [In, Out] int[,] pMatrix, int row);
 
     // Declares a managed prototype for an array of strings by value.
     [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
-    public static extern int TestArrayOfstrings(
+    internal static extern int TestArrayOfstrings(
         [In, Out] string[] stringArray, int size);
 
     // Declares a managed prototype for an array of structures with integers.
     [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
-    public static extern int TestArrayOfStructs(
+    internal static extern int TestArrayOfStructs(
         [In, Out] MyPoint[] pointArray, int size);
 
     // Declares a managed prototype for an array of structures with strings.
     [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
-    public static extern int TestArrayOfStructs2(
+    internal static extern int TestArrayOfStructs2(
         [In, Out] MyPerson[] personArray, int size);
 }
 //</Snippet31>
@@ -81,7 +81,7 @@ public class App
             Console.Write(" " + array1[i]);
         }
 
-        int sum1 = LibWrap.TestArrayOfInts(array1, array1.Length);
+        int sum1 = NativeMethods.TestArrayOfInts(array1, array1.Length);
         Console.WriteLine("\nSum of elements:" + sum1);
         Console.WriteLine("\nInteger array passed ByVal after call:");
 
@@ -104,7 +104,7 @@ public class App
            * array2.Length);
         Marshal.Copy(array2, 0, buffer, array2.Length);
 
-        int sum2 = LibWrap.TestRefArrayOfInts(ref buffer, ref size);
+        int sum2 = NativeMethods.TestRefArrayOfInts(ref buffer, ref size);
         Console.WriteLine("\nSum of elements:" + sum2);
         if (size > 0)
         {
@@ -138,7 +138,7 @@ public class App
             Console.WriteLine("");
         }
 
-        int sum3 = LibWrap.TestMatrixOfInts(matrix, DIM);
+        int sum3 = NativeMethods.TestMatrixOfInts(matrix, DIM);
         Console.WriteLine("\nSum of elements:" + sum3);
         Console.WriteLine("\nMatrix after call:");
         for (int i = 0; i < DIM; i++)
@@ -159,7 +159,7 @@ public class App
             Console.Write(" " + s);
         }
 
-        int lenSum = LibWrap.TestArrayOfstrings(strArray, strArray.Length);
+        int lenSum = NativeMethods.TestArrayOfstrings(strArray, strArray.Length);
         Console.WriteLine("\nSum of string lengths:" + lenSum);
         Console.WriteLine("\nstring array after call:");
         foreach (string s in strArray)
@@ -175,7 +175,7 @@ public class App
             Console.WriteLine($"X = {p.X}, Y = {p.Y}");
         }
 
-        int allSum = LibWrap.TestArrayOfStructs(points, points.Length);
+        int allSum = NativeMethods.TestArrayOfStructs(points, points.Length);
         Console.WriteLine("\nSum of points:" + allSum);
         Console.WriteLine("\nPoints array after call:");
         foreach (MyPoint p in points)
@@ -197,7 +197,7 @@ public class App
             Console.WriteLine($"First = {pe.First}, Last = {pe.Last}");
         }
 
-        int namesSum = LibWrap.TestArrayOfStructs2(persons, persons.Length);
+        int namesSum = NativeMethods.TestArrayOfStructs2(persons, persons.Length);
         Console.WriteLine("\nSum of name lengths:" + namesSum);
         Console.WriteLine("\n\nPersons array after call:");
         foreach (MyPerson pe in persons)

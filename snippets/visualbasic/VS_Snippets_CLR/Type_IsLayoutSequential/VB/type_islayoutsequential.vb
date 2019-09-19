@@ -21,6 +21,6 @@ End Class 'MyTypeSequential1
         Catch e As Exception
             Console.WriteLine(ControlChars.Cr + "An exception occurred: {0}", e.Message.ToString())
         End Try
-    End Sub 'Main
+    End Sub
 End Class 'MyTypeSeq2
 ' </Snippet1>

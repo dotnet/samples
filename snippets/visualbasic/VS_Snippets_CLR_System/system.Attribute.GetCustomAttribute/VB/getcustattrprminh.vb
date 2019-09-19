@@ -13,7 +13,7 @@ Namespace NDP_UE_VB
         ' This is the attribute constructor.
         Public Sub New(UsageMsg As String)
             Me.usageMsg = UsageMsg
-        End Sub ' New
+        End Sub
 
         ' usageMsg is storage for the attribute message.
         Protected usageMsg As String
@@ -37,7 +37,7 @@ Namespace NDP_UE_VB
             <ArgumentUsage("Must pass an array here.")> _
             strArray() As String, _
             ParamArray strList() As String)
-        End Sub ' TestMethod
+        End Sub
     End Class ' BaseClass
 
     Public Class DerivedClass
@@ -49,7 +49,7 @@ Namespace NDP_UE_VB
             strArray() As String, _
             <ArgumentUsage("Can pass a parameter list or array here.")> _
             ParamArray strList() As String)
-        End Sub ' TestMethod
+        End Sub
     End Class ' DerivedClass
 
     Class DemoClass
@@ -95,7 +95,7 @@ Namespace NDP_UE_VB
                         paramInfo.Name, usageAttr.Message)
                 End If
             Next paramInfo
-        End Sub ' DisplayParameterAttributes
+        End Sub
        
         Public Shared Sub Main()
             Console.WriteLine( _
@@ -119,7 +119,7 @@ Namespace NDP_UE_VB
                     "The parameters information could " & _
                     "not be retrieved for method {0}.", mInfo.Name)
             End If
-        End Sub ' Main
+        End Sub
 
     End Class ' DemoClass
 End Namespace ' NDP_UE_VB

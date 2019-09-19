@@ -30,6 +30,6 @@ Partial Class param1avb_aspx
         DataGrid1.DataSource = sqlSource
         DataGrid1.DataBind()
 
-    End Sub 'Page_Load
+    End Sub
 End Class
 ' </snippet4>

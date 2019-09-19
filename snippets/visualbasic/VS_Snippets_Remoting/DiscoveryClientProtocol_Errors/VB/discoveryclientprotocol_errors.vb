@@ -46,5 +46,5 @@ Public Class DiscoveryClientProtocol_Errors
          End If
       End While
 ' </Snippet1>
-   End Sub 'Main 
+   End Sub
 End Class 'DiscoveryClientProtocol_Errors

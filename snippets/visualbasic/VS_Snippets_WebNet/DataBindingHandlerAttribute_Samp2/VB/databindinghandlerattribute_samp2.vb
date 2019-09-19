@@ -16,7 +16,7 @@ Namespace MyTextCustomControl
    
    Protected Overrides Sub Render(output As HtmlTextWriter)
       output.Write("This class uses the DataBindingHandlerAttribute class.")
-   End Sub 'Render 
+   End Sub
 
  End Class 'MyTextBox
 End Namespace 'MyTextCustomControl

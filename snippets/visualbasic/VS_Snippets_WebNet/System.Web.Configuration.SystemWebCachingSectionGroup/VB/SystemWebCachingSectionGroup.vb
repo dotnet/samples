@@ -167,5 +167,5 @@ Class UsingSystemWebCachingSectionGroup
             ' debugging purposes.
             msg = e.ToString()
         End Try
-    End Sub 'Main
+    End Sub
 End Class 'UsingSystemWebCachingSectionGroup

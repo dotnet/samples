@@ -45,7 +45,7 @@ Public Class ParameterInfo_IsIn_IsOut_IsOptional
       myILGenerator.Emit(OpCodes.Ret)
       ' End the creation of the type.
       myTypeBuilder.CreateType()
-   End Sub 'DefineMethod
+   End Sub
    
    
    Public Shared Sub Main()
@@ -85,7 +85,7 @@ Public Class ParameterInfo_IsIn_IsOut_IsOptional
       Else
          Console.WriteLine("Could not find a assembly named 'MyAssembly' for the current application domain")
       End If
-   End Sub 'Main
+   End Sub
 End Class 'ParameterInfo_IsIn_IsOut_IsOptional 
 ' </Snippet3>
 ' </Snippet2>

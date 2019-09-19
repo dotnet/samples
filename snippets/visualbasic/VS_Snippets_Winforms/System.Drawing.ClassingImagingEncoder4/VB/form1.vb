@@ -53,7 +53,7 @@ Class Example_MultiFrame
         myEncoderParameters.Param(0) = myEncoderParameter
         multi.SaveAdd(myEncoderParameters)
     
-    End Sub 'Main
+    End Sub
     
     Private Shared Function GetEncoderInfo(ByVal mimeType As String) As ImageCodecInfo 
         Dim j As Integer

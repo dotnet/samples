@@ -40,7 +40,7 @@ Partial Class ClientForm
         End If
         MyBase.Dispose(disposing)
 
-    End Sub 'Dispose
+    End Sub
 
 #Region "Windows Form Designer generated code"
 
@@ -123,7 +123,7 @@ Partial Class ClientForm
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
-    End Sub 'InitializeComponent 
+    End Sub
 
 #End Region
 

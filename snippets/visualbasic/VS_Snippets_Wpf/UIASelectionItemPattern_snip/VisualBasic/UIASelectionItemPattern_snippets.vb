@@ -12,7 +12,7 @@ Class UIASelectionItemPattern_snippets
     ''' </summary>
     Public Sub New()
 
-    End Sub 'New
+    End Sub
 
 
     ' <Snippet100>
@@ -70,12 +70,12 @@ Class UIASelectionItemPattern_snippets
         Automation.AddAutomationEventHandler( _
         SelectionItemPattern.ElementRemovedFromSelectionEvent, _
         selectionItem, TreeScope.Element, selectionHandler)
-    End Sub 'SetSelectionEventHandlers
+    End Sub
 
 
     Private Sub OnSelectionHandler(ByVal src As Object, ByVal e As AutomationEventArgs)
         ' TODO: event handling
-    End Sub 'SelectionHandler
+    End Sub
     ' </Snippet101>
 
     ' <Snippet102>
@@ -210,7 +210,7 @@ Class UIASelectionItemPattern_snippets
             End If
         End If
 
-    End Sub 'AddItemToSelection    
+    End Sub
     ' </Snippet104>
 
     ' <Snippet105>
@@ -264,7 +264,7 @@ Class UIASelectionItemPattern_snippets
                 Return
             End Try
         End If
-    End Sub 'RemoveItemFromSelection
+    End Sub
     ' </Snippet105>
 
     ' <Snippet106>
@@ -305,7 +305,7 @@ Class UIASelectionItemPattern_snippets
                 Return
             End Try
         End If
-    End Sub 'SelectListItem
+    End Sub
     ' </Snippet106>
 
     '''--------------------------------------------------------------------
@@ -322,6 +322,6 @@ Class UIASelectionItemPattern_snippets
             ' and call its Run() method to start it.
             Dim app As New UIASelectionItemPattern_snippets()
 
-        End Sub 'Main
+        End Sub
     End Class 'TestMain
 End Class 'UIASelectionItemPattern_snippets

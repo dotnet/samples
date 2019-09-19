@@ -13,11 +13,11 @@ Public Class Sample
         aSocket.Shutdown(SocketShutdown.Both)
         aSocket.Close()
     
-    End Sub 'SocketClose
+    End Sub
      ' </Snippet1>
     
     Public Shared Sub Main() 
         SocketClose()
     
-    End Sub 'Main 
+    End Sub
 End Class 'Sample

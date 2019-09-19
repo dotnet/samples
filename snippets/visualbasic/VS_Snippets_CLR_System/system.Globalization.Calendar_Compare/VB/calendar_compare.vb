@@ -45,7 +45,7 @@ Public Class SamplesCalendar
          Console.WriteLine("   IsLeapYear:  {0}", myCals(i).IsLeapYear(iYear))
       Next i 
 
-   End Sub 'Main
+   End Sub
 
 End Class 'SamplesCalendar 
 

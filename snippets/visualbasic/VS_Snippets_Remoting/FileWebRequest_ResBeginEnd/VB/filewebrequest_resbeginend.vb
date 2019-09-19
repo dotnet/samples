@@ -18,7 +18,7 @@ Public Class RequestDeclare
      
     Public Sub New()
         myFileWebRequest = Nothing
-    End Sub ' New
+    End Sub
 End Class ' RequestDeclare
 
 
@@ -58,7 +58,7 @@ Class FileWebRequest_resbeginend
                 Console.WriteLine(("UriFormatException is :" + e.Message))
             End Try
         End If
-    End Sub ' Main
+    End Sub
     
     
     Private Shared Sub RespCallback(ar As IAsyncResult)
@@ -93,7 +93,7 @@ Class FileWebRequest_resbeginend
 	     myFileWebResponse.Close()
         allDone.Set()
         Console.WriteLine("File reading is over.")
-    End Sub ' RespCallback 
+    End Sub
 End Class ' FileWebRequest_resbeginend
 
 ' </Snippet2> 

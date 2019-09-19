@@ -1,8 +1,6 @@
 ﻿Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
-
 
 Public Class Form1
     Inherits Form
@@ -17,7 +15,7 @@ Public Class Form1
         myHitTest = dataGrid1.HitTest(e.X, e.Y)
         Console.WriteLine(("Column " & myHitTest.Column))
         Console.WriteLine(("Row " & myHitTest.Row))
-    End Sub 'dataGrid1_MouseDown
+    End Sub
     ' </Snippet1>
 End Class 'Form1 
 

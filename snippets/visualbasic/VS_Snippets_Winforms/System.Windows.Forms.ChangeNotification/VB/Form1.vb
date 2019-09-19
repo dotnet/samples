@@ -37,12 +37,12 @@ Public Class Form1
         Me.Controls.Add(customerControl1)
         Me.Size = New Size(800, 200)
 
-    End Sub 'New
+    End Sub
      
     Private Sub customerControl1_DataSourceChanged(ByVal sender As [Object], ByVal e As EventArgs) 
         MessageBox.Show("Data Source has changed")
     
-    End Sub 'customerControl1_DataSourceChanged
+    End Sub
     
     
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) _
@@ -59,7 +59,7 @@ Public Class Form1
         Me.customersBindingSource.DataSource = customerList
         customerControl1.DataSource = customersBindingSource
 
-    End Sub 'Form1_Load
+    End Sub
     
     
     ' This event handler changes the value of the CompanyName
@@ -82,7 +82,7 @@ Public Class Form1
         Application.EnableVisualStyles()
         Application.Run(New Form1())
     
-    End Sub 'Main
+    End Sub
 End Class 'Form1
 
 '</snippet1>
@@ -178,7 +178,7 @@ Public Class DemoCustomer
         companyNameValue = "no data"
         phoneNumberValue = "no data"
     
-    End Sub 'New
+    End Sub
     
     
     ' This is the public factory method.

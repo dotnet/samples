@@ -17,6 +17,6 @@ Public Class Form1
         button1.TextAlign = ContentAlignment.MiddleLeft
         ' Give the button a flat appearance.
         button1.FlatStyle = FlatStyle.Flat
-    End Sub 'SetMyButtonProperties
+    End Sub
     ' </Snippet1>
 End Class 'Form1 

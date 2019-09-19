@@ -22,7 +22,7 @@ Public Class ApplicationIDAttribute_Value
         ' Display the value of the attribute's Value property.
         MsgBox("ApplicationIDAttribute.Value: " & attribute.Value.ToString())
 
-    End Sub 'ValueExample
+    End Sub
 End Class 'ApplicationIDAttribute_Value
 
 ' </snippet0>
@@ -38,5 +38,5 @@ Public Class ApplicationIDAttribute_Example
         ' Demonstrate the ApplicationIDAttribute properties.
         valueExample.ValueExample()
     
-    End Sub 'Main
+    End Sub
 End Class 'ApplicationIDAttribute_Example

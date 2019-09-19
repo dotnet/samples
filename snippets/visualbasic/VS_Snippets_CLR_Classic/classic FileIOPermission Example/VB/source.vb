@@ -38,5 +38,5 @@ Class Program
         End Try
         ' </Snippet3>
 
-    End Sub 'Main 
+    End Sub
 End Class 'Program 

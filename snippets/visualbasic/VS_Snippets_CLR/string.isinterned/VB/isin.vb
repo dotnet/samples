@@ -17,7 +17,7 @@ Class Sample
         Console.WriteLine()
         Test(1, str1)
         Test(2, str2)
-    End Sub 'Main
+    End Sub
 
     Public Shared Sub Test(ByVal sequence As Integer, ByVal str As [String])
         Console.Write("{0}) The string, '", sequence)
@@ -27,7 +27,7 @@ Class Sample
         Else
             Console.WriteLine("{0}', is interned.", strInterned)
         End If
-    End Sub 'Test
+    End Sub
 End Class 'Sample '
 
 'This example produces the following results:

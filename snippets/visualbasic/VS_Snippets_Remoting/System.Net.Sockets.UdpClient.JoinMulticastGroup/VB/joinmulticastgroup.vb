@@ -66,7 +66,7 @@ Public Class Send
       Thread.Sleep(1000)
       Console.WriteLine(New [String](eom))
       c.Send(GetByteArray(eom), eom.Length, ep)
-   End Sub 'OriginatorSendData
+   End Sub
    
    
    ' The following static method sends data to the ClientOriginator on 
@@ -82,7 +82,7 @@ Public Class Send
       Thread.Sleep(1000)
       Console.WriteLine(New [String](eom))
       c.Send(GetByteArray(eom), eom.Length, ep)
-   End Sub 'TargetSendData
+   End Sub
    
    ' Internal utility 
    Public Shared Function GetByteArray(ChArray() As [Char]) As [Byte]()
@@ -154,7 +154,7 @@ Public Class ClientTarget
       
       ' Exit the multicast conversation. 
       m_ClientTarget.DropMulticastGroup(m_GrpAddr)
-   End Sub 'StartMulticastConversation
+   End Sub
 End Class 'ClientTarget
 
 
@@ -293,6 +293,6 @@ Public Class ClientOriginator
       Else
          Console.WriteLine("Unable to Join the multicast group")
       End If
-   End Sub 'Main
+   End Sub
 End Class 'ClientOriginator
 ' </Snippet1>

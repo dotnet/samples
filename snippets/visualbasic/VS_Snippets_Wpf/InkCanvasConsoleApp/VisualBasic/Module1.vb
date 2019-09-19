@@ -16,7 +16,7 @@ Class Program
         win.Content = ic
         win.Show()
 
-    End Sub 'OnStartup
+    End Sub
 
 End Class 'Program
 

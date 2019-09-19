@@ -41,7 +41,7 @@ Public Class SamplesHybridDictionary
       End If
       Console.WriteLine()
 
-   End Sub 'Main
+   End Sub
 
    Public Shared Sub PrintKeysAndValues(myCol As IDictionary)
 
@@ -52,7 +52,7 @@ Public Class SamplesHybridDictionary
       Next de
       Console.WriteLine()
 
-   End Sub 'PrintKeysAndValues
+   End Sub
 
 End Class 'SamplesHybridDictionary 
 

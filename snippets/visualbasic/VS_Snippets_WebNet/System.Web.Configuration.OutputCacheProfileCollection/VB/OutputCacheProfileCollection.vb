@@ -135,7 +135,7 @@ Class UsingOutputCacheSettingsSection
 
         '</Snippet12>
 
-  End Sub 'Main 
+  End Sub
 End Class 'UsingOutputCacheSettingsSection
 
 

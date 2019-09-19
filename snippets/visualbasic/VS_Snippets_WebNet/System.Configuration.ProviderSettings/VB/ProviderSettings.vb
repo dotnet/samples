@@ -64,13 +64,13 @@ Namespace Samples.AspNet
             Next pSettings
             ' </Snippet4>
 
-        End Sub 'GetProviderSettings
+        End Sub
 
 
         Public Shared Sub Main(ByVal args() As String)
 
             GetProviderSettings()
-        End Sub 'Main 
+        End Sub
     End Class 'UsingProviderSettings
 
 End Namespace

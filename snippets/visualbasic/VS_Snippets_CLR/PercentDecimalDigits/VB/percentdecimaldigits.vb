@@ -18,7 +18,7 @@ Class NumberFormatInfoSample
       nfi.PercentDecimalDigits = 4
       Console.WriteLine(myInt.ToString("P", nfi))
 
-   End Sub 'Main 
+   End Sub
 
 End Class 'NumberFormatInfoSample
 

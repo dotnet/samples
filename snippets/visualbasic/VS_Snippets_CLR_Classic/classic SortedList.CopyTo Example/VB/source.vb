@@ -35,7 +35,7 @@ Public Class SamplesSortedList
       ' Displays the values of the target Array.
       PrintValues(myTargetArray, " "c)
 
-   End Sub 'Main
+   End Sub
 
 
    Public Shared Sub PrintValues(myArr() As DictionaryEntry, mySeparator As Char)
@@ -44,7 +44,7 @@ Public Class SamplesSortedList
          Console.Write("{0}{1}", mySeparator, myArr(i).Value)
       Next i
       Console.WriteLine()
-  End Sub 'PrintValues
+  End Sub
 
 End Class 'SamplesSortedList 
 

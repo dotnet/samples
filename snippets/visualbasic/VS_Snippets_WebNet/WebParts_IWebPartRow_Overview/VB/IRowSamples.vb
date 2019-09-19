@@ -47,7 +47,7 @@ Namespace Samples.AspNet.VB.Controls
       row("ZIP Code") = 98000
       _table.Rows.Add(row)
 
-    End Sub 'New
+    End Sub
 
 
     <ConnectionProvider("Row")> _

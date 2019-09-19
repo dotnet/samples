@@ -34,5 +34,5 @@ Public Class Form1
             CType(attributes(GetType(DescriptionAttribute)), DescriptionAttribute)
         Console.WriteLine(myAttribute.Description)
         ' </Snippet2>
-    End Sub 'Method 
+    End Sub
 End Class 'Form1

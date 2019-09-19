@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System.Data
+﻿Imports System.Data
 Imports System.Windows
 Imports System.Windows.Data
 Imports System.Configuration

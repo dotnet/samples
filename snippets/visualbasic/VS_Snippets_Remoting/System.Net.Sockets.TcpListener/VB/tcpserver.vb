@@ -70,7 +70,7 @@ Class MyTcpListener
       
       Console.WriteLine(ControlChars.Cr + "Hit enter to continue....")
       Console.Read()
-   End Sub 'Main
+   End Sub
 
 End Class 'MyTcpListener 
 ' </Snippet1>

@@ -38,10 +38,10 @@ Class MyWebPermissionExample
     End While
 '</Snippet1>
  
-  End Sub 'MySample
+  End Sub
     
   Public Shared Sub Main()
     MySample()
-  End Sub 'Main
+  End Sub
 
 End Class 'WebPermission_regexConstructor 

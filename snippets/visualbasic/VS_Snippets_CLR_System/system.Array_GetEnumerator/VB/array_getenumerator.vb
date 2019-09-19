@@ -26,7 +26,7 @@ Public Class SamplesArray
          i += 1
       End While 
 
-   End Sub 'Main
+   End Sub
 
 End Class 'SamplesArray 
 

@@ -56,5 +56,5 @@ Class UsingSessionPageState
 
         ' </Snippet2>
 
-    End Sub 'Main 
+    End Sub
 End Class 'UsingSessionPageState 

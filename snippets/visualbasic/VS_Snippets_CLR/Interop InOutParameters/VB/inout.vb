@@ -22,7 +22,7 @@ End Class 'LibWrap
 Public Class App
     Public Shared Sub Main()
 
-    End Sub 'Main
+    End Sub
 End Class 'App
 
 ' </Snippet1>

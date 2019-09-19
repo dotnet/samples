@@ -19,7 +19,7 @@ Namespace WebPage
       
       Public Sub New()
          MyBase.New()
-      End Sub 'New
+      End Sub
 
       <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.Demand, Name:="FullTrust")> _
       Protected Overrides Function CreateHtmlTextWriter(ByVal writer As TextWriter) As HtmlTextWriter
@@ -34,7 +34,7 @@ Namespace WebPage
          writer.RenderBeginTag(HtmlTextWriterTag.Font)
          writer.Write(("<br>" + "The time on the server:<br> " + System.DateTime.Now.ToLongTimeString()))
          writer.RenderEndTag()
-      End Sub 'Render
+      End Sub
    End Class 'MyPage
 	
 
@@ -44,7 +44,7 @@ Namespace WebPage
       Public Sub New(writer As TextWriter)
          MyBase.New(writer)
          writer.Write("<font color=blue> 'MyHtmlTextWriter' is used for rendering.</font>")
-      End Sub 'New
+      End Sub
    End Class 'MyHtmlTextWriter
 End Namespace 'WebPage
 ' </Snippet2>	

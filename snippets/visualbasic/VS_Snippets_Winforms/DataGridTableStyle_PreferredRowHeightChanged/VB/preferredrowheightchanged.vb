@@ -23,7 +23,7 @@ Public Class MyDataForm
    Public Sub New()
       InitializeComponent()
       SetUp()
-   End Sub 'New
+   End Sub
    
    
    Private Sub InitializeComponent()
@@ -53,12 +53,12 @@ Public Class MyDataForm
       Controls.Add(myDataGrid)
       Controls.Add(myLabel)
       Text = "PreferredRowHeightChanged example"
-   End Sub 'InitializeComponent
+   End Sub
    
    
    Public Shared Sub Main()
       Application.Run(New MyDataForm())
-   End Sub 'Main
+   End Sub
    
    
 ' <Snippet1>
@@ -72,12 +72,12 @@ Public Class MyDataForm
       myTableStyle.MappingName = "Orders"
       ' Add EventHandler function for 'PreferredRowHeightChanged' Event.
       AddHandler myTableStyle.PreferredRowHeightChanged, AddressOf RowHeight_Changed
-   End Sub 'SetUp
+   End Sub
 
    ' Called when the PreferredRowHeight property of myTableStyle is modified
     Private Sub RowHeight_Changed(ByVal sender As Object, ByVal e As EventArgs)
         MessageBox.Show("PreferredRowHeight property is changed")
-    End Sub 'RowHeight_Changed
+    End Sub
    
 ' </Snippet1>
     Private Sub myButton_Click(ByVal sender As Object, ByVal e As EventArgs)
@@ -106,7 +106,7 @@ Public Class MyDataForm
                 myTextBox.Focus()
             End If
         End Try
-    End Sub 'myButton_Click
+    End Sub
     
    
    ' Create a DataSet with a table and populate it.
@@ -126,5 +126,5 @@ Public Class MyDataForm
          ' Add the row to the Orders table.
          myTable.Rows.Add(newRow)
       Next j
-   End Sub 'MakeDataSet
+   End Sub
 End Class 'MyDataForm

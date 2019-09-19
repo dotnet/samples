@@ -12,7 +12,7 @@ Public Class Employee
         FirstName = newFName
         LastName = newLName
     
-    End Sub 'New
+    End Sub
     <DataMember()>  _
     Friend FirstName As String
     <DataMember()>  _

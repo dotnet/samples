@@ -113,5 +113,5 @@ Public Class CalculatorService
         Console.WriteLine()
         Console.ReadLine()
 
-    End Sub 'Main
+    End Sub
 End Class 'CalculatorService

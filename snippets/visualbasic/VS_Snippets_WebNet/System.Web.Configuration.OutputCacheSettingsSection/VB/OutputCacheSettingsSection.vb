@@ -38,7 +38,7 @@ Class UsingOutputCacheSettingsSection
 
     ' </Snippet3>
 
-   End Sub 'Main
+   End Sub
 End Class 'UsingOutputCacheSettingsSection 
 
 ' UsingOutputCacheSettingsSection class end.

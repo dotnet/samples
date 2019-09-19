@@ -38,13 +38,13 @@ Class Window1
         AddHandler ClearStrokes.Click, AddressOf ClearStrokes_Click
         WindowState = WindowState.Maximized
     
-    End Sub 'New
+    End Sub
     
     
     Private Sub ClearStrokes_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
         customInkCanvas.Strokes.Clear()
 
-    End Sub 'ClearStrokes_Click
+    End Sub
     
     
     Private Sub customInkCanvas_StrokeCollected(ByVal sender As Object, ByVal e As InkCanvasStrokeCollectedEventArgs)
@@ -64,7 +64,7 @@ Class Window1
 
         System.Diagnostics.Debug.WriteLine("")
 
-    End Sub 'customInkCanvas_StrokeCollected
+    End Sub
 End Class 'Window1 
 
 '<Snippet4>
@@ -76,7 +76,7 @@ Public Class FilterInkCanvas
     Public Sub New()
         Me.StylusPlugIns.Add(filter)
 
-    End Sub 'New
+    End Sub
 End Class 'FilterInkCanvas
 '</Snippet4>
 
@@ -91,7 +91,7 @@ Public Class DynamicallyFilteredInkCanvas
 
         Me.StylusPlugIns.Insert(dynamicRenderIndex, filter)
 
-    End Sub 'New 
+    End Sub
 
 End Class 'DynamicallyFilteredInkCanvas
 '</Snippet5>
@@ -107,7 +107,7 @@ Public Class CustomRenderingInkCanvas
         ' custom InkCanvas.
         Me.DynamicRenderer = customRenderer
 
-    End Sub 'New
+    End Sub
 
     Protected Overrides Sub OnStrokeCollected(ByVal e As InkCanvasStrokeCollectedEventArgs)
 
@@ -120,6 +120,6 @@ Public Class CustomRenderingInkCanvas
         Dim args As New InkCanvasStrokeCollectedEventArgs(customStroke)
         MyBase.OnStrokeCollected(args)
 
-    End Sub 'OnStrokeCollected 
+    End Sub
 End Class 'CustomRenderingInkCanvas
 '</Snippet9>

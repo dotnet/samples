@@ -1,10 +1,10 @@
-﻿// <Snippet1>
-using System;
+﻿using System;
 
 public class ToString
 {
    public static void Main()
    {
+      // <Snippet1>
       TimeSpan span;
       
       // Initialize a time span to zero.
@@ -35,14 +35,15 @@ public class ToString
       // Initalize a timespan to 25 milliseconds.
       span = new TimeSpan(0, 0, 0, 0, 25);
       Console.WriteLine(span);
+
+      // The example displays the following output:
+      //       00:00:00
+      //       -14.00:00:00
+      //       01:02:03
+      //       00:00:00.2500000
+      //       99.23:59:59.9990000
+      //       03:00:00
+      //       00:00:00.0250000
+      // </Snippet1>
    }
 }
-// The example displays the following output:
-//       00:00:00
-//       -14.00:00:00
-//       01:02:03
-//       00:00:00.2500000
-//       99.23:59:59.9990000
-//       03:00:00
-//       00:00:00.0250000
-// </Snippet1>
