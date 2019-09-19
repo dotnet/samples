@@ -45,7 +45,7 @@ Public Class ObjectPoolingAttribute_Enabled
         ' Display the new value of the attribute's Enabled property.
         MsgBox("ObjectPoolingAttribute.Enabled: " & attribute.Enabled)
     
-    End Sub 'EnabledExample
+    End Sub
 End Class 'ObjectPoolingAttribute_Enabled
 ' </snippet4>
 
@@ -61,5 +61,5 @@ Public Class ObjectPoolingAttribute_Example
         ' Demonstrate the ObjectPoolingAttribute properties.
         enabledExample.EnabledExample()
 
-    End Sub 'Main
+    End Sub
 End Class 'ObjectPoolingAttribute_Example

@@ -22,7 +22,7 @@ Namespace TestNamespace
         Shared Sub Main() 
             Console.WriteLine("Just for compiling.")
         
-        End Sub 'Main
+        End Sub
     End Class 'Test
 End Namespace 'TestNamespace
 

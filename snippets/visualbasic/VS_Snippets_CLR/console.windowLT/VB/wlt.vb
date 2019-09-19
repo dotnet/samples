@@ -95,7 +95,7 @@ Class Sample
          Console.SetWindowSize(saveWindowWidth, saveWindowHeight)
          Console.CursorVisible = saveCursorVisible
       End Try
-   End Sub 'Main ' end Main
+   End Sub
 End Class 'Sample ' end Sample
 '
 'This example produces results similar to the following:

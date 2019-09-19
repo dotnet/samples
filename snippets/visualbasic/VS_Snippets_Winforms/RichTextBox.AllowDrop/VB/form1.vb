@@ -76,7 +76,7 @@
          ' Retrieve the selected item text to drag into the RichTextBox.
          lb.DoDragDrop(lb.Items(index).ToString(), DragDropEffects.Copy)
       End If
-   End Sub 'listBox1_MouseDown
+   End Sub
 
 
    Private Sub richTextBox1_DragEnter(ByVal sender As Object, ByVal e As DragEventArgs) Handles richTextBox1.DragEnter
@@ -84,12 +84,12 @@
       If e.Data.GetDataPresent("Text") Then
          e.Effect = DragDropEffects.Copy
       End If
-   End Sub 'richTextBox1_DragEnter
+   End Sub
 
    Private Sub richTextBox1_DragDrop(ByVal sender As Object, ByVal e As DragEventArgs) Handles richTextBox1.DragDrop
       ' Paste the text into the RichTextBox where at selection location.
       richTextBox1.SelectedText = e.Data.GetData("System.String", True).ToString()
-   End Sub 'richTextBox1_DragDrop
+   End Sub
 
    '</Snippet1>
 End Class

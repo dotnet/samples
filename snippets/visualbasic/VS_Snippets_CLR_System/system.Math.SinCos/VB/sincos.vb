@@ -27,7 +27,7 @@ Module SinCos
           
         UseTwoAngles(15.0, 30.0)
         UseTwoAngles(30.0, 45.0)
-    End Sub 'Main
+    End Sub
       
     ' Evaluate trigonometric identities with a given angle.
     Sub UseSineCosine(degrees As Double)
@@ -61,7 +61,7 @@ Module SinCos
             "(Math.Cos({0} deg))^2 - (Math.Sin({0} deg))^2 = {1:E16}", _ 
             degrees, cosAngle * cosAngle - sinAngle * sinAngle)
 
-    End Sub 'UseSineCosine
+    End Sub
        
     ' Evaluate trigonometric identities that are functions of two angles.
     Sub UseTwoAngles(degreesX As Double, degreesY As Double)
@@ -89,7 +89,7 @@ Module SinCos
             "                           Math.Cos({0} deg) = {1:E16}", _
             degreesX + degreesY, Math.Cos(angleX + angleY))
 
-    End Sub 'UseTwoAngles
+    End Sub
 End Module 'SinCos
 
 ' This example of trigonometric Math.Sin( double ) and Math.Cos( double )

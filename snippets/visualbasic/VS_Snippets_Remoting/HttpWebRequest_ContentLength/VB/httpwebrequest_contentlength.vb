@@ -79,5 +79,5 @@ Class HttpWebRequest_ContentLength
             Console.WriteLine(("Source : " + e.Source))
             Console.WriteLine(("Message : " + e.Message))
         End Try
-    End Sub ' Main
+    End Sub
 End Class ' HttpWebRequest_ContentLength 

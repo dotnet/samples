@@ -54,7 +54,7 @@ Public Class ImageRenderer
         ' </Snippet17>
         drawingContext.DrawGeometry(imageBrush, Nothing, geometry)
     
-    End Sub 'OnDraw
+    End Sub
 End Class 'ImageRenderer
 
 
@@ -77,7 +77,7 @@ Public Class ImageStroke
         ' Map the brush to the entire bounds of the element.
         imageBrush.ViewportUnits = BrushMappingMode.Absolute
     
-    End Sub 'New
+    End Sub
      
     
     Public Sub New(ByVal oldStroke As Stroke, ByVal controlBounds As Rect) 
@@ -88,12 +88,12 @@ Public Class ImageStroke
             viewportSet = True
         End If
     
-    End Sub 'New
+    End Sub
     
     
     Protected Overrides Sub DrawCore(ByVal drawingContext As DrawingContext, ByVal drawingAttributes As DrawingAttributes) 
         Dim geometry As Geometry = Me.GetGeometry(drawingAttributes)
         drawingContext.DrawGeometry(imageBrush, Nothing, geometry)
     
-    End Sub 'DrawCore 
+    End Sub
 End Class 'ImageStroke

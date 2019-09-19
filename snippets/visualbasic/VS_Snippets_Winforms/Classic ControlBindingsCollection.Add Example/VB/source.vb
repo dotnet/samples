@@ -28,9 +28,9 @@ Public Class Form1
 
     ' method added so sample will compile
     Private Sub CurrencyStringToDecimal(sender As Object, e As ConvertEventArgs)
-    End Sub 'CurrencyStringToDecimal
+    End Sub
      
     ' method added so sample will compile
     Private Sub DecimalToCurrencyString(sender As Object, e As ConvertEventArgs)
-    End Sub 'DecimalToCurrencyString 
+    End Sub
 End Class 'Form1

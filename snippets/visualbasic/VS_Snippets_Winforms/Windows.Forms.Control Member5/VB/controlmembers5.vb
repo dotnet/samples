@@ -14,7 +14,7 @@ Namespace ControlMembers4
       
       Public Sub New()
          InitializeComponent()
-      End Sub 'New
+      End Sub
       
       
       
@@ -53,17 +53,17 @@ Namespace ControlMembers4
          Me.Name = "Form1"
          Me.Text = "Form1"
          Me.ResumeLayout(False)
-      End Sub 'InitializeComponent
+      End Sub
        
       <STAThread()> _
       Shared Sub Main()
          Application.Run(New Form1())
-      End Sub 'Main
+      End Sub
       
       
       Private Sub button3_Click(sender As Object, e As System.EventArgs) Handles button3.Click
          Me.SizeControls()
-      End Sub 'button3_Click
+      End Sub
       
       
 ' Control.Size/Control.ClientSize/Control.SetClientSizeCore
@@ -81,7 +81,7 @@ End Sub
 
       Private Sub button1_Click(sender As Object, e As System.EventArgs) Handles button1.Click
          Me.ResizeForm()
-      End Sub 'button1_Click
+      End Sub
       
       
 ' Control.ClientRectangle/Control.Bounds/Rectangle.Inflate/
@@ -104,7 +104,7 @@ End Sub
       
       Private Sub button2_Click(sender As Object, e As System.EventArgs) Handles button2.Click
          Me.AutoSizeControl(CType(sender, Control), 5)
-      End Sub 'button2_Click
+      End Sub
       
       
 ' Control.CreateGraphics/Control.Text/Control.Font/

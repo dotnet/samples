@@ -71,6 +71,6 @@ Class ServiceDescription_ImportCollection
 ' </Snippet5>
 ' </Snippet4>
       End If
-   End Sub 'Main
+   End Sub
 End Class 'ServiceDescription_ImportCollection 
 ' </snippet1>

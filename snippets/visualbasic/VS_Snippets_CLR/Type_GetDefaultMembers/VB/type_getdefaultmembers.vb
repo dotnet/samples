@@ -5,7 +5,7 @@ Imports System.IO
 <DefaultMemberAttribute("Age")> Public Class [MyClass]
 
     Public Sub Name(ByVal s As String)
-    End Sub 'Name
+    End Sub
 
     Public ReadOnly Property Age() As Integer
         Get
@@ -32,6 +32,6 @@ Imports System.IO
         Catch e As Exception
             Console.WriteLine("Exception: " + e.Message)
         End Try
-    End Sub 'Main
+    End Sub
 End Class '[MyClass]
 ' </Snippet1>

@@ -48,7 +48,7 @@ Namespace ServiceDescription1
          Catch e As Exception
             Console.WriteLine("Exception: " + e.Message.ToString())
          End Try
-      End Sub 'Main
+      End Sub
       
       ' Used to create OperationBinding instances within 'Binding'.
       Public Shared Function CreateOperationBinding(operation As String, targetNamespace As String) _

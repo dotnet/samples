@@ -14,5 +14,5 @@ Shared Class Program
         Application.EnableVisualStyles()
         Application.Run(New Form1())
     
-    End Sub 'Main
+    End Sub
 End Class 'Program

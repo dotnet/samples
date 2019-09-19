@@ -72,7 +72,7 @@ Public Class EmployeeLogic
 
       ' Call the true implementation.
       InsertNewEmployee(tempEmployee)
-   End Sub 'InsertNewEmployeeWrapper
+   End Sub
 
 
    Public Shared Sub InsertNewEmployee(ne As NorthwindEmployee)
@@ -80,7 +80,7 @@ Public Class EmployeeLogic
       If Not retval Then
          Throw New NorthwindDataException("InsertNewEmployee failed.")
       End If
-   End Sub 'InsertNewEmployee
+   End Sub
 ' </snippet3>
 
    ' And so on...
@@ -96,7 +96,7 @@ Public Class NorthwindEmployee
       aTitle = ""
       titleOfCourtesy = ""
       reportsTo = - 1
-   End Sub 'New
+   End Sub
 
 
    Public Sub New(anID As Object)
@@ -142,7 +142,7 @@ Public Class NorthwindEmployee
             Throw
          End Try
       End Try
-   End Sub 'New
+   End Sub
 
    Private ID As Object
    Public ReadOnly Property EmpID() As String
@@ -212,7 +212,7 @@ Friend Class NorthwindDataException
 
    Public Sub New(msg As String)
       MyBase.New(msg)
-   End Sub 'New
+   End Sub
 End Class 'NorthwindDataException
 End Namespace
 ' </snippet2>

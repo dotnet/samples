@@ -18,7 +18,7 @@ Public Class Form1
       End If 
       ' Use the ToString method to format the value as currency ("c").
       cevent.Value = CDec(cevent.Value).ToString("c")
-   End Sub 'DecimalToCurrencyString
+   End Sub
     
     
    Private Sub CurrencyStringToDecimal(sender As Object, cevent As ConvertEventArgs)
@@ -30,7 +30,7 @@ Public Class Form1
       cevent.Value = Decimal.Parse(cevent.Value.ToString, _
       NumberStyles.Currency, nothing)
 
-   End Sub 'CurrencyStringToDecimal
+   End Sub
     
     
    Private Sub BindControl()
@@ -40,7 +40,7 @@ Public Class Form1
       AddHandler b.Format, AddressOf DecimalToCurrencyString
       AddHandler b.Parse, AddressOf CurrencyStringToDecimal
       text1.DataBindings.Add(b)
-   End Sub 'BindControl
+   End Sub
     ' </Snippet1>
 End Class 'Form1 
 

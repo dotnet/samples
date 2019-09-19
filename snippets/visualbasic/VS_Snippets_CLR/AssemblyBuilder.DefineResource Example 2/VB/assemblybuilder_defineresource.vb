@@ -31,7 +31,7 @@ Public Class MyEmitTest
       myAssembly.DefineVersionInfoResource("AssemblySample", "2:0:0:1", "Microsoft Corporation", _
             "@Copyright Microsoft Corp. 1990-2001", ".NET is a trademark of Microsoft Corporation")
       myAssembly.Save("MyEmitAssembly.dll")
-   End Sub 'Main
+   End Sub
    
    ' Create the callee transient dynamic assembly.
    Private Shared Function CreateAssembly(myAppDomain As AppDomain) As Type

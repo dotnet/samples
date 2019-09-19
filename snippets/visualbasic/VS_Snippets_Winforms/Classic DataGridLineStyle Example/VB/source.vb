@@ -12,6 +12,6 @@ Public Class Form1
     ' <Snippet1>
     Private Sub SetGridLineAttributes()
         dataGrid1.GridLineStyle = DataGridLineStyle.None
-    End Sub 'SetGridLineAttributes
+    End Sub
     ' </Snippet1>
 End Class 'Form1

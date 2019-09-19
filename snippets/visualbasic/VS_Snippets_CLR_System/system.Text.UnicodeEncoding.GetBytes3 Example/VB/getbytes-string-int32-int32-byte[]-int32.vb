@@ -21,6 +21,6 @@ Class UnicodeEncodingExample
             Console.Write("[{0}]", b)
         Next b
         Console.WriteLine()
-    End Sub 'Main
+    End Sub
 End Class 'UnicodeEncodingExample
 ' </Snippet1>

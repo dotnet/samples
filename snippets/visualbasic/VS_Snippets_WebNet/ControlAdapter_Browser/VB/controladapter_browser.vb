@@ -17,7 +17,7 @@ Public Class CustomControlAdapter
             ' Render scriptless markup.
         End If
 
-    End Sub 'Render 
+    End Sub
 
 End Class 'CustomControlAdapter
 ' </snippet1>

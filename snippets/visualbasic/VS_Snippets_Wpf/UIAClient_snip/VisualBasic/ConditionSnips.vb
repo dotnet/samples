@@ -62,7 +62,7 @@ Class ConditionSnips
             Console.WriteLine(autoElement.Current.Name)
         Next autoElement
 
-    End Sub 'ConditionExamples
+    End Sub
 
     ' </Snippet120>
     ' <Snippet178> 
@@ -97,7 +97,7 @@ Class ConditionSnips
             Console.WriteLine(autoElement.Current.Name)
         Next autoElement
 
-    End Sub 'StaticConditionExamples
+    End Sub
 
     ' </Snippet178>        
     ' <Snippet176>
@@ -122,7 +122,7 @@ Class ConditionSnips
         Dim conditions As Condition() = conditionEnabledButtons.GetConditions()
         Console.WriteLine("AndCondition has " & conditions.GetLength(0) & " subconditions.")
 
-    End Sub 'AndConditionExample
+    End Sub
 
     ' </Snippet176>
     ' <Snippet175>
@@ -147,7 +147,7 @@ Class ConditionSnips
         Dim conditions As Condition() = conditionButtons.GetConditions()
         Console.WriteLine("OrCondition has " & conditions.GetLength(0) & " subconditions.")
 
-    End Sub 'OrConditionExample
+    End Sub
 
     ' </Snippet175>
 
@@ -172,7 +172,7 @@ Class ConditionSnips
         For Each autoElement In elementCollectionNotButtons
             Console.WriteLine(autoElement.Current.Name)
         Next autoElement
-    End Sub 'NotConditionExample
+    End Sub
     ' </Snippet177>
 
 #End Region

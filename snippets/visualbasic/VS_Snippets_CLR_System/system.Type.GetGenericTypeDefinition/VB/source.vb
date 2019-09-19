@@ -17,7 +17,7 @@ Public Class Test
         
         Dim generic As Type = constructed.GetGenericTypeDefinition()
         DisplayTypeInfo(generic)
-    End Sub 'Main
+    End Sub
     
     Private Shared Sub DisplayTypeInfo(ByVal t As Type) 
         Console.WriteLine(vbCrLf & t.ToString())
@@ -31,7 +31,7 @@ Public Class Test
         For Each tParam As Type In typeArguments
             Console.WriteLine(vbTab & vbTab & tParam.ToString())
         Next tParam
-    End Sub 'DisplayTypeInfo
+    End Sub
 End Class 'Test
 
 ' This example produces the following output:

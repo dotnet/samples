@@ -49,7 +49,7 @@ Namespace RenderChildrenSample
          
          ' Prevent child controls from being created again.
          ChildControlsCreated = True
-      End Sub 'CreateChildControls
+      End Sub
       
       
 ' </Snippet2>
@@ -68,7 +68,7 @@ Namespace RenderChildrenSample
             Next
 
          End If
-      End Sub 'RenderChildren
+      End Sub
       
       
       Protected Overrides Sub Render(output As HtmlTextWriter)

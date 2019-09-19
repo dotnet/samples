@@ -23,7 +23,7 @@ Class Window1
     Public Sub New() 
         InitializeComponent()
     
-    End Sub 'New
+    End Sub
      
     
     Private Sub WindowLoaded(ByVal sender As Object, ByVal e As RoutedEventArgs) 
@@ -78,6 +78,6 @@ Class Window1
         Dim newStroke As New Stroke(strokePoints)
         inkPresenter1.Strokes.Add(newStroke)
     
-    End Sub 'WindowLoaded
+    End Sub
 End Class 'Window1 
 '</Snippet1>

@@ -31,7 +31,7 @@ Class SimpleUsage
     Public Sub New() 
         InitializeComponent()
     
-    End Sub 'New
+    End Sub
 End Class 'SimpleUsage 
 '
 'ToDo: Error processing original source shown below

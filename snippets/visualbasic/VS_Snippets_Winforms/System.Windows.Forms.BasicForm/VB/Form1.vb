@@ -13,7 +13,7 @@ Public Class Form1
     '<snippet4>
     Public Sub New()
 
-    End Sub 'New
+    End Sub
     '</snippet4>  
     '<snippet5>
     Public Shared Sub Main()

@@ -71,7 +71,7 @@ Class MethodBodyDemo
 					      adderInst, _
 					      New Object() {aVal, bVal}))
 
-   End Sub 'Main
+   End Sub
 
 End Class 'MethodBodyDemo
 

@@ -25,7 +25,7 @@ Class Test
         
         End Using
         
-    End Sub 'Main
+    End Sub
 
 End Class
 ' </Snippet1>

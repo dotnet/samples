@@ -68,7 +68,7 @@
         richTextBox1.Clear()
         richTextBox1.MaxLength = 2
         AddMyText("Foo")
-    End Sub 'button1_Click
+    End Sub
 
 
     '<Snippet1>

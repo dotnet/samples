@@ -53,7 +53,7 @@ Namespace Process_Sample
             Catch e As Exception
                 Console.WriteLine($"The following exception was raised: {e.Message}")
             End Try
-        End Sub 'Main
+        End Sub
     End Class 'MyProcessClass
 End Namespace 'Process_Sample
 

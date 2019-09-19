@@ -17,7 +17,7 @@ Class DnsPermissionExample
     Public Shared Sub Main()
         Dim dnsPermissionExampleObj As New DnsPermissionExample()
         dnsPermissionExampleObj.ConstructDnsPermission()
-    End Sub 'Main
+    End Sub
     
 ' <Snippet1>	
     Public Sub ConstructDnsPermission()
@@ -62,7 +62,7 @@ Class DnsPermissionExample
             Console.WriteLine(("Source : " + e.Source))
             Console.WriteLine(("Message : " + e.Message))
         End Try
-    End Sub 'ConstructDnsPermission
+    End Sub
     
     
     Private Sub PrintKeysAndValues(myList As Hashtable)
@@ -73,7 +73,7 @@ Class DnsPermissionExample
             Console.WriteLine(ControlChars.Tab + "{0}:" + ControlChars.Tab + "{1}", myEnumerator.Key, myEnumerator.Value)
         End While
         Console.WriteLine()
-    End Sub 'PrintKeysAndValues
+    End Sub
 
 ' </Snippet1>	
 

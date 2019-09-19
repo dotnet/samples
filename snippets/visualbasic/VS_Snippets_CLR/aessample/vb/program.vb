@@ -23,7 +23,7 @@ Class AesExample
             Console.WriteLine("Original:   {0}", original)
             Console.WriteLine("Round Trip: {0}", roundtrip)
         End Using
-    End Sub 'Main
+    End Sub
 
     '<Snippet2>
     Shared Function EncryptStringToBytes_Aes(ByVal plainText As String, ByVal Key() As Byte, ByVal IV() As Byte) As Byte()

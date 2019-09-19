@@ -64,7 +64,7 @@ Public NotInheritable Class MyDataProtector
     Public Sub New(ByVal appName As String, ByVal primaryPurpose As String, ParamArray specificPurpose() As String)
         MyBase.New(appName, primaryPurpose, specificPurpose)
 
-    End Sub 'New
+    End Sub
 End Class 'MyDataProtector
 '</Snippet5>
 '</Snippet1>

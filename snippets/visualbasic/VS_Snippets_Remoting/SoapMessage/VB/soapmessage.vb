@@ -41,7 +41,7 @@ Public Class MySoapExtension
    ' Save the name of the log file that will save the SOAP messages.
    Public Overrides Sub Initialize(initializer As Object)
       filename = CStr(initializer)
-   End Sub 'Initialize
+   End Sub
 
 ' <Snippet1>
    ' Process the SOAP message received and write to log file.
@@ -58,7 +58,7 @@ Public Class MySoapExtension
          Case Else
                Throw New Exception("invalid stage")
       End Select
-   End Sub 'ProcessMessage
+   End Sub
 
    ' Write the contents of the outgoing SOAP message to the log file.
    Public Sub WriteOutputBeforeSerialize(message As SoapMessage)
@@ -107,7 +107,7 @@ Public Class MySoapExtension
       myStreamWriter.Flush()
       myStreamWriter.Close()
       myFileStream.Close()
-   End Sub 'WriteOutputBeforeSerialize
+   End Sub
 
    ' Write the contents of the incoming SOAP message to the log file.
    Public Sub WriteInputAfterDeserialize(message As SoapMessage)
@@ -128,7 +128,7 @@ Public Class MySoapExtension
       myStreamWriter.Flush()
       myStreamWriter.Close()
       myFileStream.Close()
-   End Sub 'WriteInputAfterDeserialize
+   End Sub
 
 ' </Snippet1>
    ' Write the contents of the outgoing SOAP message to the log file.
@@ -143,7 +143,7 @@ Public Class MySoapExtension
       myFileStream.Close()
       newStream.Position = 0
       Copy(newStream, oldStream)
-   End Sub 'WriteOutputAfterSerialize
+   End Sub
 
    ' Write the contents of the incoming SOAP message to the log file.
    Public Sub WriteInputBeforeDeserialize(message As SoapMessage)
@@ -160,7 +160,7 @@ Public Class MySoapExtension
       myStreamWriter.Close()
       myFileStream.Close()
       newStream.Position = 0
-   End Sub 'WriteInputBeforeDeserialize
+   End Sub
 
    ' Return a new MemoryStream for SOAP processing.
    Public Overrides Function ChainStream(stream As Stream) As Stream
@@ -175,7 +175,7 @@ Public Class MySoapExtension
       Dim myTextWriter = New StreamWriter(toStream)
       myTextWriter.WriteLine(myTextReader.ReadToEnd())
       myTextWriter.Flush()
-   End Sub 'Copy
+   End Sub
 End Class 'MySoapExtension
 
 ' A SoapExtensionAttribute that can be associated with an 
@@ -189,7 +189,7 @@ Public Class MySoapExtensionAttribute
    ' Set the name of the log file where SOAP messages will be stored.
    Public Sub New()
       myFilename = "C:\logClient.txt"
-   End Sub 'New
+   End Sub
 
    ' Return the type of MySoapExtension.
    Public Overrides ReadOnly Property ExtensionType() As Type
@@ -248,7 +248,7 @@ Public Class MathSvc
    <System.Diagnostics.DebuggerStepThroughAttribute()>  _
    Public Sub New()
       Me.Url = "http://localhost/MathSvc_SoapMessage.vb.asmx"
-   End Sub 'New
+   End Sub
 
    Public Function BeginAdd(xValue As System.Single, yValue As System.Single, _
       callback As System.AsyncCallback, asyncState As Object) As System.IAsyncResult

@@ -15,6 +15,6 @@ Class MyArrayRankSample
             Console.WriteLine(("Source: " + e.Source))
             Console.WriteLine(("Message: " + e.Message))
         End Try
-    End Sub 'Main 
+    End Sub
 End Class 'MyArrayRankSample
 ' </Snippet1>

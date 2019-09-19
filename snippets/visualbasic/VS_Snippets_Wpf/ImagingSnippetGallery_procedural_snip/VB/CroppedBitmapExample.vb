@@ -63,7 +63,7 @@ Namespace SDKSample
             myStackPanel.Children.Add(myImage)
             Me.Content = myStackPanel
 
-        End Sub 'New
+        End Sub
     End Class 'CroppedBitmapExample
 End Namespace 'ImagingSnippetGallery
 

@@ -36,5 +36,5 @@ Public Class Form1
             CType(attributes(GetType(CategoryAttribute)), CategoryAttribute)
             Console.WriteLine(myAttribute.Category)
         ' </Snippet2>
-    End Sub 'MyMethod 
+    End Sub
 End Class 'Form1

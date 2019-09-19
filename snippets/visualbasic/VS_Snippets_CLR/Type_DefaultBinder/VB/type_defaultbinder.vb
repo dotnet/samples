@@ -11,13 +11,13 @@ Public Class MyDefaultBinderSample
         Catch e As Exception
             Console.WriteLine("Exception :" + e.Message.ToString())
         End Try
-    End Sub 'Main
+    End Sub
 
     Class [MyClass]
 
         Public Sub HelloWorld()
             Console.WriteLine("Hello World")
-        End Sub 'HelloWorld
+        End Sub
     End Class '[MyClass]
 End Class 'MyDefaultBinderSample 
 ' </Snippet1>

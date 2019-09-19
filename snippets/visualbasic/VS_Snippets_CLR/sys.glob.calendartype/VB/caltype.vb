@@ -11,12 +11,12 @@ Class Sample
       Display(grCal)
       Display(hiCal)
       Display(jaCal)
-   End Sub 'Main
+   End Sub
    
    Shared Sub Display(c As Calendar)
       Dim name As String = c.ToString().PadRight(50, "."c)
       Console.WriteLine("{0} {1}", name, c.AlgorithmType)
-   End Sub 'Display
+   End Sub
 End Class 'Sample
 '
 'This code example produces the following results:

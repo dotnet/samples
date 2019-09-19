@@ -29,6 +29,6 @@ Public Class Example
         rkTest.SetValue("TestName", "TestValue")
         Console.WriteLine("Test value for TestName: {0}", rkTest.GetValue("TestName"))
         rkTest.Close
-    End Sub 'Main
+    End Sub
 End Class 'Example
 '</Snippet1>

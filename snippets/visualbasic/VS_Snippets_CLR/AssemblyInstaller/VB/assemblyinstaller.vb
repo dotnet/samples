@@ -37,6 +37,6 @@ Class AssemblyInstaller_Example
       Catch e As Exception
          Console.WriteLine(e.Message)
       End Try
-   End Sub 'Main
+   End Sub
 End Class 'AssemblyInstaller_Example
 ' </Snippet1>

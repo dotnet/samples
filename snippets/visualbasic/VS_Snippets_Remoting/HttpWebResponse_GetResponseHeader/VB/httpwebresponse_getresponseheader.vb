@@ -25,7 +25,7 @@ Class HttpWebResponseSnippet
         Console.WriteLine("Press any key to continue...")
         Console.ReadLine()
         Return
-    End Sub 'Main
+    End Sub
     
 ' <Snippet1>    
     Public Shared Sub GetPage(url As [String])

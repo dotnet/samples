@@ -41,6 +41,6 @@ Public Class MyContractReference
       Catch e As Exception
          Console.WriteLine("Error is" + e.Message)
       End Try
-   End Sub 'Main
+   End Sub
 End Class 'MyContractReference
 ' </Snippet1>

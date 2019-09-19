@@ -8,7 +8,7 @@ Public Class ROCollection
 
     Public Sub New(sourceList As IList)
         InnerList.AddRange(sourceList)
-    End Sub 'New
+    End Sub
 
 
     Default Public ReadOnly Property Item(index As Integer) As [Object]

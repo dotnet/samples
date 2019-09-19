@@ -26,12 +26,12 @@ Public Class MyCollection
          Me.BaseAdd(CType(de.Key, [String]), de.Value)
       Next de
       Me.IsReadOnly = bReadOnly
-   End Sub 'New
+   End Sub
 
    ' Adds an entry to the collection.
    Public Sub Add(key As [String], value As [Object])
       Me.BaseAdd(key, value)
-   End Sub 'Add
+   End Sub
 
 End Class 'MyCollection
 
@@ -58,14 +58,14 @@ Public Class SamplesNameObjectCollectionBase
       Console.WriteLine("Read-Only Collection:")
       PrintKeysAndValues(myROCol)
 
-   End Sub 'Main
+   End Sub
 
    Public Shared Sub PrintKeysAndValues(myCol As MyCollection)
       Dim i As Integer
       For i = 0 To myCol.Count - 1
          Console.WriteLine("[{0}] : {1}, {2}", i, myCol(i).Key, myCol(i).Value)
       Next i
-   End Sub 'PrintKeysAndValues
+   End Sub
 
 End Class 'SamplesNameObjectCollectionBase 
 

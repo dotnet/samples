@@ -70,12 +70,12 @@ Namespace SDKSample
             myStackPanel.Children.Add(myImage)
             Me.Content = myStackPanel
 
-        End Sub 'New
+        End Sub
 
 
         Public Sub PageLoaded(ByVal sender As Object, ByVal args As RoutedEventArgs)
 
-        End Sub 'PageLoaded
+        End Sub
     End Class 'ChainedBitmapSourcesExample 
 End Namespace
 ' </SnippetChainedBitmapSourcesCodeExampleWholePage>

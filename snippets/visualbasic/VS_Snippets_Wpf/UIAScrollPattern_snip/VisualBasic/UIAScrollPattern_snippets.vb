@@ -12,7 +12,7 @@ Class UIAScrollPattern_snippets
     ''' </summary>
     Public Sub New() 
     
-    End Sub 'New
+    End Sub
     
     
     ' <Snippet100>
@@ -122,7 +122,7 @@ Class UIAScrollPattern_snippets
             ' TO DO: error handling.
         End Try
 
-    End Sub 'ScrollHome
+    End Sub
     ' </Snippet102>
 
     ' <Snippet103>
@@ -156,7 +156,7 @@ Class UIAScrollPattern_snippets
             ' TO DO: error handling.
         End Try
 
-    End Sub 'ScrollToTop
+    End Sub
     ' </Snippet103>
 
     ' <Snippet104>
@@ -337,7 +337,7 @@ Class UIAScrollPattern_snippets
             ' TO DO: error handling.
         End Try
 
-    End Sub 'ScrollElement
+    End Sub
     ' </Snippet106>
     ' <Snippet107>
     '''--------------------------------------------------------------------
@@ -383,7 +383,7 @@ Class UIAScrollPattern_snippets
             ' TO DO: error handling.
         End Try
 
-    End Sub 'ScrollElementHorizontally
+    End Sub
     ' </Snippet107>
 
     ' <Snippet108>
@@ -430,7 +430,7 @@ Class UIAScrollPattern_snippets
             ' TO DO: error handling.
         End Try
 
-    End Sub 'ScrollElementVertically 
+    End Sub
     ' </Snippet108>
 
     '''--------------------------------------------------------------------
@@ -447,6 +447,6 @@ Class UIAScrollPattern_snippets
             ' and call its Run() method to start it.
             Dim app As New UIAScrollPattern_snippets()
         
-        End Sub 'Main
+        End Sub
     End Class 'TestMain
 End Class 'UIAScrollPattern_snippets

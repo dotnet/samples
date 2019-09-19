@@ -58,6 +58,6 @@ Public Class Sample
             End If
         End Try
 
-    End Sub 'Main 
+    End Sub
 End Class 'Sample
 '</snippet1>

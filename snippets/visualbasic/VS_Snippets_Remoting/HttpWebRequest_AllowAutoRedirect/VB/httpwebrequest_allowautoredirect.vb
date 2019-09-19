@@ -53,7 +53,7 @@ Class HttpWebRequest_AllowAutoRedirect
             Console.WriteLine(("Message : " + e.Message))
 	   
         End Try
-    End Sub ' Main
+    End Sub
 End Class ' HttpWebRequest_AllowAutoRedirect
 
 

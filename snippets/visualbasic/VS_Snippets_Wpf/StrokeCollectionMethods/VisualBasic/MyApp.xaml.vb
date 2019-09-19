@@ -23,6 +23,6 @@ Namespace CustomInkControlSample
             'Dim thirdWindow As New Window3()
             'thirdWindow.Show()
 
-        End Sub 'AppStartingUp
+        End Sub
     End Class 'MyApp 
 End Namespace

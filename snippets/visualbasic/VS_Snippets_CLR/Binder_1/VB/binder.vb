@@ -6,7 +6,7 @@ Public Class MyBinder
     Inherits Binder
     Public Sub New()
         MyBase.new()
-    End Sub 'New
+    End Sub
     Private Class BinderState
         Public args() As Object
     End Class 'BinderState
@@ -92,7 +92,7 @@ ContinueFori:
         ReDim args(CType(state, BinderState).args.Length)
         ' Return the args that had been reordered by BindToMethod.
         CType(state, BinderState).args.CopyTo(args, 0)
-    End Sub 'ReorderArgumentArray
+    End Sub
 
     Public Overrides Function SelectMethod(ByVal bindingAttr As BindingFlags, ByVal match() As MethodBase, ByVal types() As Type, ByVal modifiers() As ParameterModifier) As MethodBase
         If match Is Nothing Then
@@ -328,11 +328,11 @@ Public Class MyClass1
 
     Public Overloads Sub MyMethod(ByVal i As Long, ByVal k As Char)
         Console.WriteLine(ControlChars.NewLine & "This is MyMethod(long i, char k).")
-    End Sub 'MyMethod
+    End Sub
 
     Public Overloads Sub MyMethod(ByVal i As Long, ByVal j As Long)
         Console.WriteLine(ControlChars.NewLine & "This is MyMethod(long i, long j).")
-    End Sub 'MyMethod
+    End Sub
 End Class 'MyClass1
 
 
@@ -349,6 +349,6 @@ Public Class Binder_Example
         Console.WriteLine(MyMethod)
         ' Invoke MyMethod.
         myMethod.Invoke(myInstance, BindingFlags.InvokeMethod, New MyBinder(), New [Object]() {CInt(32), CInt(32)}, CultureInfo.CurrentCulture)
-    End Sub 'Main
+    End Sub
 End Class 'Binder_Example
 ' </Snippet1>

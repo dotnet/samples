@@ -44,7 +44,7 @@ Class HttpWebRequest_SendChunked
             Console.WriteLine("Source  :{0}", e.Source)
             Console.WriteLine("Message :{0}", e.Message)
         End Try
-    End Sub 'Main
+    End Sub
      
     Public Shared Sub GetPage(myUri As [String])
        Try
@@ -101,5 +101,5 @@ Class HttpWebRequest_SendChunked
             Console.WriteLine("Source  :{0}", e.Source)
             Console.WriteLine("Message :{0}", e.Message)
         End Try
-    End Sub ' GetPage
+    End Sub
 End Class ' HttpWebRequest_SendChunked 

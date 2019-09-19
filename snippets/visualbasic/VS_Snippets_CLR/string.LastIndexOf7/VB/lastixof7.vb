@@ -27,7 +27,7 @@ Class Sample
          End If
       End While
       Console.Write("{0}{0}{0}", Environment.NewLine)
-   End Sub 'Main 
+   End Sub
 End Class 'Sample
 '
 'This example produces the following results:

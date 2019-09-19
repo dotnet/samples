@@ -81,7 +81,7 @@ Namespace CodeDomSamples
 
             '</Snippet2>
 
-        End Sub 'New 
+        End Sub
     End Class 'CodeTryCatchFinallyExample 
 End Namespace 'CodeDomSamples 
 '</Snippet1>

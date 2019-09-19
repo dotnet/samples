@@ -27,7 +27,7 @@ Public Class Form1
       MakeDataSet()
       myDataGrid.SetDataBinding(myDataSet, "Customers")
       AddCustomDataTableStyle()
-   End Sub 'New
+   End Sub
    
    Private Sub InitializeComponent()
       ' Create the form and its controls.
@@ -58,24 +58,24 @@ Public Class Form1
       Controls.Add(myButton)
       Controls.Add(myDataGrid)
       Controls.Add(myButton1)
-   End Sub 'InitializeComponent
+   End Sub
    
    
    Public Shared Sub Main()
       Application.Run(New Form1())
-   End Sub 'Main
+   End Sub
    
    
 ' <Snippet1>
     Private Sub Button_Click(ByVal sender As Object, ByVal e As EventArgs)
         ' Change the color of 'HeaderBack'.
         myDataTableStyle.HeaderBackColor = Color.LightPink
-    End Sub 'Button_Click
+    End Sub
    
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As EventArgs)
         ' Reset the 'HeaderBack' to its origanal color.
         myDataTableStyle.ResetHeaderBackColor()
-    End Sub 'Button1_Click
+    End Sub
 ' </Snippet1>
 
    Private Sub AddCustomDataTableStyle()
@@ -92,7 +92,7 @@ Public Class Form1
       myDataTableStyle.GridColumnStyles.Add(myDataGridColumnStyle)
       ' Add the 'DataGridTableStyle' to 'DataGrid'.
       myDataGrid.TableStyles.Add(myDataTableStyle)
-   End Sub 'AddCustomDataTableStyle
+   End Sub
    
    
    
@@ -115,5 +115,5 @@ Public Class Form1
       myTable.Rows(2)("CustName") = "David"
       myTable.Rows(3)("CustName") = "Robert"
       myTable.Rows(4)("CustName") = "John"
-   End Sub 'MakeDataSet
+   End Sub
 End Class 'Form1

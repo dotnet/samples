@@ -16,11 +16,11 @@ Public Class Overlapped2
     ' ...
 End Class
 
-Public Class LibWrap
+Friend Class NativeMethods
     ' Declares a managed prototypes for unmanaged functions.
     ' Because Overlapped is a structure, you cannot pass Nothing as a
     ' parameter. Instead, declares an overloaded method.
-    Overloads Declare Ansi Function ReadFile Lib "Kernel32.dll" (
+    Friend Overloads Declare Ansi Function ReadFile Lib "Kernel32.dll" (
         ByVal hndRef As HandleRef,
         ByVal buffer As StringBuilder,
         ByVal numberOfBytesToRead As Integer,
@@ -28,7 +28,7 @@ Public Class LibWrap
         ByRef flag As Overlapped) As Boolean
 
     ' Declares an int instead of a structure reference for 'flag'
-    Overloads Declare Ansi Function ReadFile Lib "Kernel32.dll" (
+    Friend Overloads Declare Ansi Function ReadFile Lib "Kernel32.dll" (
         ByVal hndRef As HandleRef,
         ByVal buffer As StringBuilder,
         ByVal numberOfBytesToRead As Integer,
@@ -37,7 +37,7 @@ Public Class LibWrap
 
     ' Because Overlapped2 is a class, you can pass Nothing as a parameter.
     ' No overloading is needed.
-    Declare Ansi Function ReadFile2 Lib "Kernel32.dll" Alias "ReadFile" (
+    Friend Declare Ansi Function ReadFile2 Lib "Kernel32.dll" Alias "ReadFile" (
         ByVal hndRef As HandleRef,
         ByVal buffer As StringBuilder,
         ByVal numberOfBytesToRead As Integer,
@@ -57,9 +57,9 @@ Public Class App
         Dim read As Integer = 0
         ' Platform invoke holds the reference to HandleRef until the
         ' call ends.
-        LibWrap.ReadFile(hr, buffer, 5, read, IntPtr.Zero)
+        NativeMethods.ReadFile(hr, buffer, 5, read, IntPtr.Zero)
         Console.WriteLine($"Read {read} bytes with struct parameter: {buffer}")
-        LibWrap.ReadFile2(hr, buffer, 5, read, Nothing)
+        NativeMethods.ReadFile2(hr, buffer, 5, read, Nothing)
         Console.WriteLine($"Read {read} bytes with class parameter: {buffer}")
     End Sub
 End Class

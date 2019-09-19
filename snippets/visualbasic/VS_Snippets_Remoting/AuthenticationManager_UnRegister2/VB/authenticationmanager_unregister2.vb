@@ -46,7 +46,7 @@ Namespace Authentication2
       Catch e As Exception
         Console.WriteLine(ControlChars.Cr + " The following exception was raised : {0}", e.Message)
       End Try
-    End Sub 'Main
+    End Sub
 ' <Snippet3>    
     Shared Sub DisplayAllModules()
       Dim registeredModules As IEnumerator = AuthenticationManager.RegisteredModules
@@ -56,7 +56,7 @@ Namespace Authentication2
         Dim currentAuthenticationModule As IAuthenticationModule = CType(registeredModules.Current, IAuthenticationModule)
         Console.WriteLine(ControlChars.Tab + ControlChars.Tab + ControlChars.Tab + " CanPreAuthenticate : {0}", currentAuthenticationModule.CanPreAuthenticate)
       End While 
-    End Sub 'DisplayAllModules
+    End Sub
   End Class 'Class1
 ' </Snippet3>
 End Namespace 'Authentication2

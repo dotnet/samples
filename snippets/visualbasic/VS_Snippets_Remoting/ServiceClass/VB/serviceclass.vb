@@ -73,7 +73,7 @@ Class MyServiceClass
       Catch e As Exception
          Console.WriteLine("Exception:" & e.Message)
       End Try
-   End Sub 'Main
+   End Sub
 
    Public Shared Function CreatePort(PortName As String, _
           BindingName As String, targetNamespace As String) As Port

@@ -18,7 +18,7 @@ Namespace NDP_UE_VB
             Me.HelpLink = "http://msdn.microsoft.com"
             Me.Source = "Exception_Class_Samples"
 
-        End Sub ' New
+        End Sub
     End Class ' LogTableOverflowException
 
     Class LogTable
@@ -26,7 +26,7 @@ Namespace NDP_UE_VB
         Public Sub New(numElements As Integer)
             logArea = New String(numElements) {}
             elemInUse = 0
-        End Sub ' New
+        End Sub
            
         Protected logArea() As String
         Protected elemInUse As Integer
@@ -84,7 +84,7 @@ Namespace NDP_UE_VB
                 Console.WriteLine( vbCrLf & "TargetSite ---" & _
                     vbCrLf & ex.TargetSite.ToString( ) )
             End Try
-        End Sub ' Main
+        End Sub
 
     End Module ' OverflowDemo
 End Namespace ' NDP_UE_VB

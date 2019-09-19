@@ -24,7 +24,7 @@ Public Class XpsCreate
     Shared Sub Main(ByVal args() As String)
         Dim xpsCreate As New XpsCreate()
         xpsCreate.Run()
-    End Sub ' end:Main()
+    End Sub
 
 
     ' -------------------------------- Run -----------------------------------
@@ -73,7 +73,7 @@ Public Class XpsCreate
         ' Normal Completion, show the package names created.
         Dim msg As String = "Created two XPS document packages:" & vbLf & "   - " & packageName & vbLf & "   - " & packageWithPrintTicketName
         MessageBox.Show(msg, "Normal Completion", MessageBoxButtons.OK, MessageBoxIcon.Information)
-    End Sub ' end:Run()
+    End Sub
 
 
     '<SnippetXpsCreateAddPkgContent>
@@ -130,7 +130,7 @@ Public Class XpsCreate
         Catch xpsException As XpsPackagingException
             Throw xpsException
         End Try
-    End Sub ' end:AddPackageContent()
+    End Sub
     '</SnippetXpsCreateAddPkgContent>
 
 
@@ -173,7 +173,7 @@ Public Class XpsCreate
         Catch xpsException As XpsPackagingException
             Throw xpsException
         End Try
-    End Sub ' end:AddDocumentContent()
+    End Sub
     '</SnippetXpsCreateAddDocContent>
 
 
@@ -334,7 +334,7 @@ Public Class XpsCreate
         xmlWriter.WriteEndElement()
         xmlWriter.WriteEndElement()
         xmlWriter.WriteEndElement()
-    End Sub ' end:WritePageContent()
+    End Sub
     '</SnippetXpsCreateWritePageContent>
 
 
@@ -351,7 +351,7 @@ Public Class XpsCreate
                 bytesRead = fileStream.Read(buf, 0, bufSize)
             Loop
         End Using
-    End Sub ' end:WriteToStream()
+    End Sub
 
 
     ' ------------------------- WriteObfuscatedStream ------------------------
@@ -398,6 +398,6 @@ Public Class XpsCreate
                 bytesRead = filestream.Read(buf, 0, bufSize)
             Loop
         End Using
-    End Sub ' end:WriteObfuscatedStream()
+    End Sub
 
 End Class ' end:class XpsCreate

@@ -14,7 +14,7 @@ Public Class Test
      
     Shared Sub Main() 
         Console.WriteLine("Hello")
-    End Sub 'Main
+    End Sub
     
     '<snippet1>
     <WebMethod(), System.Web.Services.Protocols.SoapDocumentMethodAttribute(ParameterStyle := SoapParameterStyle.Bare)>  _

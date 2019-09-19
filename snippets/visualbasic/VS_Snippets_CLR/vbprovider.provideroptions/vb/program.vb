@@ -12,7 +12,7 @@ Class Program
         Console.WriteLine("Press Enter key to exit.")
         Console.ReadLine()
 
-    End Sub 'Main
+    End Sub
 
     Shared Sub DisplayVBCompilerInfo()
         Dim provOptions As New Dictionary(Of String, String)
@@ -27,6 +27,6 @@ Class Program
 
         Console.WriteLine()
 
-    End Sub 'DisplayVBCompilerInfo
+    End Sub
 End Class 'Program
 '</Snippet1>

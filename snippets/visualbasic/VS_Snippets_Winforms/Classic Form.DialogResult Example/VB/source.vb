@@ -62,6 +62,6 @@ Public Class Form1
             ' Optional: Call the Dispose method when you are finished with the dialog box.
             form1.Dispose
         End If
-    End Sub 'CreateMyForm 
+    End Sub
     ' </Snippet1>
 End Class 'Form1 

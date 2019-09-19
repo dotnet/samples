@@ -40,7 +40,7 @@ Public Class SamplesArrayList
           Console.Write( "{0}{1}", mySeparator, obj )
         Next obj
         Console.WriteLine()
-    End Sub 'PrintValues
+    End Sub
 
 End Class
 

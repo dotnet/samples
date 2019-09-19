@@ -37,7 +37,7 @@ Public Class SamplesUnicodeEncoding
       Console.WriteLine("Decoding without error detection:")
       PrintDecodedString(myBytes, u16noED)
 
-   End Sub 'Main
+   End Sub
 
 
    ' Decode the bytes and display the string.
@@ -51,7 +51,7 @@ Public Class SamplesUnicodeEncoding
 
       Console.WriteLine()
 
-   End Sub 'PrintDecodedString 
+   End Sub
 
 End Class 'SamplesUnicodeEncoding
 

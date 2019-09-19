@@ -13,6 +13,6 @@ Public Class MyTypeClass
         Catch e As Exception
             Console.WriteLine(ControlChars.Cr + "An exception occurred: {0}.", e.Message.ToString())
         End Try
-    End Sub 'Main
+    End Sub
 End Class 'MyTypeClass
 ' </Snippet1>

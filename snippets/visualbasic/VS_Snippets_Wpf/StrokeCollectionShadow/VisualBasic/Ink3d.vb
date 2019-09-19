@@ -34,7 +34,7 @@ Public Class Ink3d
         Me.StylusPlugIns.Add(renderer)
         presenter.AttachVisuals(renderer.RootVisual, renderer.DrawingAttributes)
     
-    End Sub 'New
+    End Sub
     
     
     Shared Sub New() 
@@ -42,7 +42,7 @@ Public Class Ink3d
         Dim owner As Type = GetType(Ink3d)
         ClipToBoundsProperty.OverrideMetadata(owner, New FrameworkPropertyMetadata(True))
     
-    End Sub 'New
+    End Sub
     
     
     
@@ -51,7 +51,7 @@ Public Class Ink3d
     Public Sub ClearStrokes() 
         presenter.Strokes.Clear()
     
-    End Sub 'ClearStrokes
+    End Sub
      
     
     
@@ -64,7 +64,7 @@ Public Class Ink3d
         
         stylusPoints.Add(e.GetStylusPoints(Me, stylusPoints.Description))
     
-    End Sub 'OnStylusDown
+    End Sub
      
     
     
@@ -78,7 +78,7 @@ Public Class Ink3d
         End If 
         stylusPoints.Add(e.GetStylusPoints(Me, stylusPoints.Description))
     
-    End Sub 'OnStylusMove
+    End Sub
      
     
     
@@ -94,7 +94,7 @@ Public Class Ink3d
         
         AddStroke()
     
-    End Sub 'OnStylusUp
+    End Sub
      
     
     
@@ -114,7 +114,7 @@ Public Class Ink3d
         
         AddStroke()
     
-    End Sub 'OnMouseLeftButtonUp
+    End Sub
      
     
     
@@ -131,7 +131,7 @@ Public Class Ink3d
         
         stylusPoints.Add(New StylusPoint(pt.X, pt.Y))
     
-    End Sub 'OnMouseLeftButtonDown
+    End Sub
      
     
     
@@ -153,7 +153,7 @@ Public Class Ink3d
         
         stylusPoints.Add(New StylusPoint(pt.X, pt.Y))
     
-    End Sub 'OnMouseMove
+    End Sub
      
     
     
@@ -165,7 +165,7 @@ Public Class Ink3d
         
         stylusPoints = Nothing
     
-    End Sub 'AddStroke
+    End Sub
     
     Private strokesAreShadowed As Boolean
     

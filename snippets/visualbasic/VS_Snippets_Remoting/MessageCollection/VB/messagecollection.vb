@@ -72,5 +72,5 @@ Class MyClass1
 ' </Snippet5>
 ' </Snippet4>
 ' </Snippet3>
-   End Sub 'Main
+   End Sub
 End Class '[MyClass]

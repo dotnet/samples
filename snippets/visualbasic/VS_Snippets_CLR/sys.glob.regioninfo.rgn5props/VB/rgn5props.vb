@@ -12,7 +12,7 @@ Class Sample
       Console.WriteLine("Currency English Name: . . {0}", ri.CurrencyEnglishName)
       Console.WriteLine("Currency Native Name:. . . {0}", ri.CurrencyNativeName)
       Console.WriteLine("Geographical ID: . . . . . {0}", ri.GeoId)
-   End Sub 'Main
+   End Sub
 End Class 'Sample
 '
 'This code example produces the following results:

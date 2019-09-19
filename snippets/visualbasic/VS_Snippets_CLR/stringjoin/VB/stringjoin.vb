@@ -7,7 +7,7 @@ Public Class JoinTest
         Console.WriteLine(MakeLine(1, 6, "  "))
         Console.WriteLine(MakeLine(9, 9, ": "))
         Console.WriteLine(MakeLine(4, 7, "< "))
-    End Sub 'Main
+    End Sub
     
     
     Private Shared Function MakeLine(initVal As Integer, multVal As Integer, sep As String) As String

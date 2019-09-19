@@ -28,12 +28,12 @@ Namespace Samples.AspNet.VB
 
         Public Sub New(ByVal writer As TextWriter)
             MyBase.New(writer)
-        End Sub 'New
+        End Sub
 
 
         Public Sub New(ByVal writer As TextWriter, ByVal tabString As String)
             MyBase.New(writer, tabString)
-        End Sub 'New
+        End Sub
 
         ' <Snippet1>
         ' Override the RenderBeforeTag method to add the 
@@ -106,6 +106,6 @@ Namespace Samples.AspNet.VB
             writer.Write(Message)
             writer.RenderEndTag()
             writer.Write(("<br>" + "The time on the server: " & System.DateTime.Now.ToLongTimeString()))
-        End Sub 'Render 
+        End Sub
     End Class 'ctlMessage
 End Namespace 'HTW_4

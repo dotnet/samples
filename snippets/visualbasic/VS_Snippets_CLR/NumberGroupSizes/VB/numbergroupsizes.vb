@@ -22,7 +22,7 @@ Class NumberFormatInfoSample
       nfi.NumberGroupSizes = mySizes2
       Console.WriteLine(myInt.ToString("N", nfi))
 
-   End Sub 'Main 
+   End Sub
 
 End Class 'NumberFormatInfoSample
 

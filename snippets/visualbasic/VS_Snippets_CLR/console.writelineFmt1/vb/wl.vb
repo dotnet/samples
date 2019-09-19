@@ -54,7 +54,7 @@ Class Sample
                         "(D) Decimal number: . . . . . {0:D}" & vbCrLf & _
                         "(X) Hexadecimal:. . . . . . . {0:X}" & vbCrLf, _
                         Color.Green)
-   End Sub 'Main
+   End Sub
 End Class 'Sample
 '
 'This code example produces the following results:

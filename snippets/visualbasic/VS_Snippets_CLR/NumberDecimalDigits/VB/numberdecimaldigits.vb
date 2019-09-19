@@ -18,7 +18,7 @@ Class NumberFormatInfoSample
       nfi.NumberDecimalDigits = 4
       Console.WriteLine(myInt.ToString("N", nfi))
 
-   End Sub 'Main 
+   End Sub
 
 End Class 'NumberFormatInfoSample
 

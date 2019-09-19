@@ -112,7 +112,7 @@
 '         Console.WriteLine(msgNumber      & floatingVal.ToString("N", ci))
 '         Console.WriteLine(msgPercent     & floatingVal.ToString("P", ci))
 '         Console.WriteLine()
-'     End Sub 'Main
+'     End Sub
 ' End Class 'Sample
 '
 'This code example produces the following results:

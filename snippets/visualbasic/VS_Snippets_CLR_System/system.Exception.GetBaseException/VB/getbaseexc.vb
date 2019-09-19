@@ -8,7 +8,7 @@ Namespace NDP_UE_VB
            
         Public Sub New( message As String, inner As Exception )
             MyBase.New( message, inner )
-        End Sub ' New
+        End Sub
     End Class ' SecondLevelException
 
     Class ThirdLevelException
@@ -16,7 +16,7 @@ Namespace NDP_UE_VB
            
         Public Sub New( message As String, inner As Exception )
             MyBase.New( message, inner )
-        End Sub ' New
+        End Sub
     End Class ' ThirdLevelException
 
     Class NestedExceptions
@@ -57,7 +57,7 @@ Namespace NDP_UE_VB
                 Console.WriteLine( _
                     ex.GetBaseException( ).ToString( ) )
             End Try
-        End Sub ' Main
+        End Sub
            
         ' This sub catches the exception from the called sub
         ' DivideBy0( ) and throws another in response.
@@ -70,7 +70,7 @@ Namespace NDP_UE_VB
                     "Caught the second exception and " & _
                     "threw a third in response.", ex )
             End Try
-        End Sub ' Rethrow
+        End Sub
            
         ' This sub forces a division by 0 and throws a second 
         ' exception.
@@ -84,7 +84,7 @@ Namespace NDP_UE_VB
                     "Forced a division by 0 and threw " & _
                     "a second exception.", ex )
             End Try
-        End Sub ' DivideBy0
+        End Sub
     End Class ' NestedExceptions
 End Namespace ' NDP_UE_VB
 

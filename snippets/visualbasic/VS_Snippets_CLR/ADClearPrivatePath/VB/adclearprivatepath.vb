@@ -29,7 +29,7 @@ Class ADAppendPrivatePath
       
       
       AppDomain.Unload(domain)
-   End Sub 'Main
+   End Sub
 End Class 'ADAppendPrivatePath
 '  </SNIPPET1>
 

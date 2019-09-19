@@ -32,6 +32,6 @@ Public Class myKeyPressClass
             " returns pressed" & ControlChars.CrLf & keyPressCount & _
             " other keys pressed" & ControlChars.CrLf
         ex.Handled = True
-    End Sub 'myKeyCounter
+    End Sub
 End Class 'myKeyPressClass
 ' </Snippet1>

@@ -15,7 +15,7 @@ Namespace ChartControlNameSpace
         <System.STAThread()> _
         Public Shared Sub Main()
             System.Windows.Forms.Application.Run(New Form1())
-        End Sub 'Main
+        End Sub
 
         Public Sub New() 
             ' Create a chart control and add it to the form.
@@ -51,7 +51,7 @@ Namespace ChartControlNameSpace
             legend1.Location = New Point(20, 30)
             legend2 = New CurveLegend(Me, "B")
             legend2.Location = New Point(20, 50)
-        End Sub 'New
+        End Sub
               
         '<Snippet2>
         ' Overridden to return the custom AccessibleObject 
@@ -110,7 +110,7 @@ Namespace ChartControlNameSpace
                 e.Graphics.DrawCurve(Pens.Red, curve2)
             End If 
             e.Graphics.DrawRectangle(Pens.Blue, bounds)
-        End Sub 'OnPaint
+        End Sub
         
         '<Snippet3>
         ' Handle the QueryAccessibilityHelp event.
@@ -132,7 +132,7 @@ Namespace ChartControlNameSpace
                     legend2.Selected = Not legend2.Selected
                 End If
             End If
-        End Sub 'ChartControl_Click
+        End Sub
 
         ' Get an array of the CurveLengends used in the Chart.
         Public ReadOnly Property Legends() As CurveLegend()
@@ -157,7 +157,7 @@ Namespace ChartControlNameSpace
             Public Sub New(ctrl As ChartControl)
                 MyBase.New(ctrl)
                 chartControl = ctrl
-            End Sub 'New
+            End Sub
             
             ' Get the role for the Chart. This is used by accessibility programs.            
             Public Overrides ReadOnly Property Role() As AccessibleRole
@@ -230,7 +230,7 @@ Namespace ChartControlNameSpace
                         chartControl.Legends(childID).Selected = False
                     End If
                 End If
-            End Sub 'SelectChild
+            End Sub
         End Class 'ChartControlAccessibleObject
         '</Snippet4>
 
@@ -245,7 +245,7 @@ Namespace ChartControlNameSpace
             Public Sub New(chart As ChartControl, name As String)
                 Me.chart = chart
                 Me.m_name = name
-            End Sub 'New
+            End Sub
 
             ' Gets the accessibility object for the curve legend.            
             Public ReadOnly Property AccessibilityObject() As AccessibleObject
@@ -349,7 +349,7 @@ Namespace ChartControlNameSpace
                 
                 Public Sub New(curveLegend As CurveLegend)
                     Me.curveLegend = curveLegend
-                End Sub 'New
+                End Sub
                 
                 ' Private property that helps get the reference to the parent ChartControl.                
                 Private ReadOnly Property ChartControl() As ChartControlAccessibleObject

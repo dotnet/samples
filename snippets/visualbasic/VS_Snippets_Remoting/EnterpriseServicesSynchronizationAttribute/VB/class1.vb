@@ -33,7 +33,7 @@ Public Class SynchronizationAttribute_Value
         ' Display the value of the attribute's Value property.
         MsgBox("SynchronizationAttribute.Value: " & attribute.Value)
     
-    End Sub 'ValueExample
+    End Sub
 End Class 'SynchronizationAttribute_Value
 ' </snippet3>
 
@@ -49,5 +49,5 @@ Public Class SynchronizationAttribute_Example
         ' Demonstrate the SynchronizationAttribute properties.
         valueExample.ValueExample()
     
-    End Sub 'Main
+    End Sub
 End Class 'SynchronizationAttribute_Example

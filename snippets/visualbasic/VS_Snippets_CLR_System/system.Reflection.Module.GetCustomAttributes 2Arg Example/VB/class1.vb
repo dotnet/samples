@@ -21,7 +21,7 @@ Namespace ReflectionModule_Examples
             For Each o In attributes
                 Console.WriteLine("Found this attribute on myModule: {0}", o.ToString())
             Next o
-        End Sub 'Main
+        End Sub
     End Class 'MyMainClass
     ' Define a very simple custom attribute.
     <AttributeUsage(AttributeTargets.Class Or AttributeTargets.Module)> _
@@ -30,7 +30,7 @@ Namespace ReflectionModule_Examples
         Private name As String
         Public Sub New(ByVal newName As String)
             name = newName
-        End Sub 'New
+        End Sub
     End Class 'MySimpleAttribute
 End Namespace 'ReflectionModule_Examples
 ' </snippet1>

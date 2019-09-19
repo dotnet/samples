@@ -15,7 +15,7 @@ Class Sample
       Console.Write("String '{0}' is ", str1)
       Console.Write("{0} ", str)
       Console.WriteLine("String '{0}'.", str2)
-   End Sub 'Main
+   End Sub
 End Class 'Sample
 '
 'This example produces the following results:

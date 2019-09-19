@@ -28,6 +28,6 @@ Public Class Class1
         Dim myAttribute As EditorAttribute = CType(attributes(GetType(EditorAttribute)), EditorAttribute)
         Console.WriteLine(("The editor for this class is: " & myAttribute.EditorTypeName))
 
-    End Sub 'Main
+    End Sub
     ' </Snippet2>
 End Class 'Class1 

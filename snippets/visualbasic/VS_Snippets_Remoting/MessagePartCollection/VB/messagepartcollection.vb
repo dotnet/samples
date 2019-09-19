@@ -110,6 +110,6 @@ Class MyClass1
 ' </Snippet7>
 ' </Snippet6>
 ' </Snippet5>
-   End Sub 'Main
+   End Sub
 End Class '[MyClass1]
 ' </Snippet8>

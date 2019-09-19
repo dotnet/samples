@@ -37,5 +37,5 @@ Public Class WebClient_DownloadFile
             ' Display the exception.
             Console.WriteLine(("The following general exception was raised: " + e.Message))
         End Try
-    End Sub 'Main
+    End Sub
 End Class 'WebClient_DownloadFile

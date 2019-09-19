@@ -17,7 +17,7 @@ Partial Class App
         Dim win2 As New AppInCode()
         win2.Show()
 
-    End Sub 'OnStartup 
+    End Sub
 End Class 'App
 
 

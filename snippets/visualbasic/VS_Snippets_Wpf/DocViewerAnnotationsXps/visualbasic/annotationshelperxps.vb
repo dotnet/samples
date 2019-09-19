@@ -95,7 +95,7 @@ Namespace SDKSample
 				_annotService.Enable(_annotService.Store)
 			End If
 
-		End Sub ' end:StartAnnotations()
+		End Sub
 		'</SnippetStartAnnotations>
 
 
@@ -118,7 +118,7 @@ Namespace SDKSample
 				End If
 				_annotService = Nothing
 			End If
-		End Sub ' end:StopAnnotations()
+		End Sub
 		'</SnippetStopAnnotations>
 		'</SnippetStartStopAnnotations>
 

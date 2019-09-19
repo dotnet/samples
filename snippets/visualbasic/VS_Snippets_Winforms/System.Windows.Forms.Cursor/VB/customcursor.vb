@@ -10,7 +10,7 @@ Namespace CustomCursor
       <System.STAThread()> _
       Public Shared Sub Main()
          System.Windows.Forms.Application.Run(New Form1())
-      End Sub 'Main
+      End Sub
 
       Public Sub New()
 
@@ -41,7 +41,7 @@ Namespace CustomCursor
         'and looks for CustomCursor.MyCursor.cur in the assemblies manifest.
         'NOTE: The cursor name is acase sensitive.
         Me.Cursor = New Cursor(Me.GetType(), "MyCursor.cur")
-      End Sub 'New       
+      End Sub
    End Class 'Form1
 End Namespace 'CustomCursor
 '</Snippet1>

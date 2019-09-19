@@ -14,13 +14,13 @@ Namespace SDKSample
         Private Sub Element_MediaOpened(ByVal sender As Object, ByVal e As RoutedEventArgs)
             timelineSlider.Maximum = myMediaElement.NaturalDuration.TimeSpan.TotalMilliseconds
 
-        End Sub 'Element_MediaOpened
+        End Sub
 
 
         Private Sub MediaTimeChanged(ByVal sender As Object, ByVal e As EventArgs)
             timelineSlider.Value = myMediaElement.Position.TotalMilliseconds
 
-        End Sub 'MediaTimeChanged
+        End Sub
         '</SnippetCodeBehindMediaTimelineExampleInline1>
     End Class 'MediaTimelineExample
 End Namespace 'SDKSample

@@ -17,6 +17,6 @@ Public Class Sample
         
         ' Display the DocumentType.
         Console.WriteLine(doc.DocumentType.OuterXml)
-    End Sub 'Main 
+    End Sub
 End Class 'Sample
 ' </Snippet1>

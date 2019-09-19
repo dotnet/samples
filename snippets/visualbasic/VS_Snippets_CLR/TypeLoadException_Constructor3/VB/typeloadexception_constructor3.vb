@@ -20,7 +20,7 @@ Public Class TypeLoadException_Constructor3
       Catch e As Exception
          Console.WriteLine(("Exception: " + ControlChars.Cr + ControlChars.Tab + "Error Message = " + e.Message))
       End Try
-   End Sub 'Main
+   End Sub
 End Class 'TypeLoadException_Constructor3
 
 Class TypeLoadExceptionDemoClass
@@ -34,6 +34,6 @@ Class TypeLoadExceptionDemoClass
          ' Rethrow exception with the exception as inner exception
          Throw New TypeLoadException("This exception was raised due to a call to an invalid method.", e)
       End Try
-   End Sub 'GenerateException
+   End Sub
 End Class 'TypeLoadExceptionDemoClass
 ' </Snippet1>

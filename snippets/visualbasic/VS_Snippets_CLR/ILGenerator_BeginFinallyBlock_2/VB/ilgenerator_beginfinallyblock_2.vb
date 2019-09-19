@@ -116,7 +116,7 @@ Public Class ILGenerator_BeginFinallyBlock
       Dim myObject1 As Object = Activator.CreateInstance(myAddType)
       Dim myObject2() As Object = {15, 15}
       myAddType.InvokeMember("DoAdd", BindingFlags.InvokeMethod, Nothing, myObject1, myObject2)
-   End Sub 'Main
+   End Sub
 End Class 'ILGenerator_BeginFinallyBlock
 ' </Snippet2>
 ' </Snippet1>

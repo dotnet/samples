@@ -211,7 +211,7 @@ Public Class StrongNameIdentityDemo
             Dim consoleInput As String = Console.ReadLine()
             System.Environment.ExitCode = 101
         End Try
-    End Sub 'Main
+    End Sub
 End Class 'StrongNameIdentityDemo
 
 ' </Snippet1>

@@ -33,7 +33,7 @@ Class RijndaelExample
             Console.WriteLine("Error: {0}", e.Message)
         End Try
 
-    End Sub 'Main
+    End Sub
 
     '<Snippet2>
     Shared Function EncryptStringToBytes(ByVal plainText As String, ByVal Key() As Byte, ByVal IV() As Byte) As Byte()

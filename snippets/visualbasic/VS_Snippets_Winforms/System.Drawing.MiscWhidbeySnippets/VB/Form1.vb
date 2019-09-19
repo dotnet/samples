@@ -31,7 +31,7 @@ Class Form1
         Application.EnableVisualStyles()
         Application.Run(New Form1())
 
-    End Sub 'Main
+    End Sub
     
     
     '<snippet1>

@@ -12,7 +12,7 @@ Public Class Sample
     
     Public Shared Sub Main()
         Dim test As New Sample()
-    End Sub 'Main
+    End Sub
     
     Public Sub New()
             Dim doc As New XmlDocument()
@@ -39,7 +39,7 @@ Public Class Sample
             Console.WriteLine("Reading file...")
             ReadFile(filename)
         
-    End Sub 'New
+    End Sub
     
     ' Parse the file and display each node.
     Public Sub ReadFile(filename As String)
@@ -57,7 +57,7 @@ Public Class Sample
                 reader.Close()
             End If
         End Try
-    End Sub 'ReadFile
+    End Sub
      
     Public Shared Function NodeTypeToString(nodetype As XmlNodeType) As String
         Dim sNodeType As String = Nothing

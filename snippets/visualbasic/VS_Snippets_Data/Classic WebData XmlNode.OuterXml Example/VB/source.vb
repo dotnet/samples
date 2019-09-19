@@ -26,6 +26,6 @@ Public Class Sample
         Console.WriteLine("Display the InnerXml property...")
         Console.WriteLine(root.InnerXml)
         
-    End Sub 'Main 
+    End Sub
 End Class 'Sample
 ' </Snippet1>

@@ -22,6 +22,6 @@ Public Class Test
         Console.WriteLine(s)
         data.Close()
         reader.Close()
-    End Sub 'Main
+    End Sub
 End Class 'Test
 '</Snippet1>

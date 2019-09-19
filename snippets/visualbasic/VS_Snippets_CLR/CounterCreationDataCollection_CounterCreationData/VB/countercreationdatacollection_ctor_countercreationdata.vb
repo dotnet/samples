@@ -49,5 +49,5 @@ Public Class CounterCreationExample
             Console.WriteLine("Exception: {0}.", e.Message)
             Return
         End Try
-    End Sub 'Main
+    End Sub
 End Class 'CounterCreationExample

@@ -27,7 +27,7 @@ Namespace DesignerSerializationVisibilityTest
 
         Public Sub New()
             InitializeComponent()
-        End Sub 'New
+        End Sub
 
 
         Protected Overloads Sub Dispose(ByVal disposing As Boolean)
@@ -37,11 +37,11 @@ Namespace DesignerSerializationVisibilityTest
                 End If
             End If
             MyBase.Dispose(disposing)
-        End Sub 'Dispose
+        End Sub
 
 
         Private Sub InitializeComponent()
-        End Sub 'InitializeComponent
+        End Sub
     End Class 'ContentSerializationExampleControl
 
     ' This attribute indicates that the public properties of this object should be listed in the property grid.
@@ -52,7 +52,7 @@ Namespace DesignerSerializationVisibilityTest
         ' This class reads and writes the Location and Size properties from the Control which it is initialized to.
         Friend Sub New(ByVal owner As Control)
             Me.owner = owner
-        End Sub 'New
+        End Sub
 
 
         Public Property Location() As Point

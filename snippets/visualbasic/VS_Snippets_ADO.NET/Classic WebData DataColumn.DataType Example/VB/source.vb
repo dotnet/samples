@@ -14,27 +14,27 @@ Public Function MakeDataTable() As DataTable
     myTable = New DataTable("My Table")
  
     ' Create DataColumn objects of data types.
-    Dim colString As DataColumn = New DataColumn("StringCol")
+    Dim colString As New DataColumn("StringCol")
     colString.DataType = System.Type.GetType("System.String")
     myTable.Columns.Add(colString) 
  
-    Dim colInt32 As DataColumn = New DataColumn("Int32Col")
+    Dim colInt32 As New DataColumn("Int32Col")
     colInt32.DataType = System.Type.GetType("System.Int32")
     myTable.Columns.Add(colInt32)
  
-    Dim colBoolean As DataColumn = New DataColumn("BooleanCol")
+    Dim colBoolean As New DataColumn("BooleanCol")
     colBoolean.DataType = System.Type.GetType("System.Boolean")
     myTable.Columns.Add(colBoolean)
  
-    Dim colTimeSpan As DataColumn = New DataColumn("TimeSpanCol")
+    Dim colTimeSpan As New DataColumn("TimeSpanCol")
     colTimeSpan.DataType = System.Type.GetType("System.TimeSpan")
     myTable.Columns.Add(colTimeSpan)
  
-    Dim colDateTime As DataColumn = New DataColumn("DateTimeCol")
+    Dim colDateTime As New DataColumn("DateTimeCol")
     colDateTime.DataType = System.Type.GetType("System.DateTime")
     myTable.Columns.Add(colDateTime)
  
-    Dim colDecimal As DataColumn = New DataColumn("DecimalCol")
+    Dim colDecimal As New DataColumn("DecimalCol")
     colDecimal.DataType = System.Type.GetType("System.Decimal")
     myTable.Columns.Add(colDecimal)
  

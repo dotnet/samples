@@ -19,7 +19,7 @@ Namespace ReflectionModule_Examples
             Dim myType As Type
             myType = myModule.GetType("ReflectionModule_Examples.MySimpleAttribute")
             Console.WriteLine("IsDefined(MySimpleAttribute) = {0}", myModule.IsDefined(myType, False))
-        End Sub 'Main
+        End Sub
     End Class 'MyMainClass
 
     'A very simple custom attribute.
@@ -30,7 +30,7 @@ Namespace ReflectionModule_Examples
 
         Public Sub New(ByVal newName As String)
             name = newName
-        End Sub 'New
+        End Sub
     End Class 'MySimpleAttribute
 End Namespace 'ReflectionModule_Examples
 '</snippet1>

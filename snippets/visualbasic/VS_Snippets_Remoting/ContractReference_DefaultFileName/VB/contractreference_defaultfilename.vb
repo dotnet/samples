@@ -37,5 +37,5 @@ Public Class DiscoveryDocument_Example
       Console.WriteLine("The URL is: " + myUrl)
 ' </Snippet2>
 ' </Snippet1>
-   End Sub 'Main 
+   End Sub
 End Class 'DiscoveryDocument_Example 

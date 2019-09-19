@@ -24,7 +24,7 @@ Namespace ImageElementExample
         '-------------------^--- Syntax error: ';' expected
         Public Sub New()
 
-        End Sub 'New
+        End Sub
 
 
         Private Sub PageLoaded(ByVal sender As Object, ByVal args As RoutedEventArgs)
@@ -49,6 +49,6 @@ Namespace ImageElementExample
             Grid.SetRow(rotated270, 1)
             transformedGrid.Children.Add(rotated270)
 
-        End Sub 'PageLoaded 
+        End Sub
     End Class 'TransformedImageExample
 End Namespace

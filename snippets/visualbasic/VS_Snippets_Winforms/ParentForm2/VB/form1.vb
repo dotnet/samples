@@ -69,7 +69,7 @@ Public NotInheritable Class Form1
         f2.MdiParent = Me
         ' Display the form.
         f2.Show()
-    End Sub 'button1_Click
+    End Sub
     ' </snippet1>
 
 End Class

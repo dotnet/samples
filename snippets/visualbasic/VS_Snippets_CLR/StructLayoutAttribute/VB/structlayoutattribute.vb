@@ -45,7 +45,7 @@ Namespace InteropSample
          Catch e As Exception
             Console.WriteLine(("Exception : " + e.Message.ToString()))
          End Try
-      End Sub 'Main
+      End Sub
    End Class 'TestApplication
 End Namespace 'InteropSample 
 ' </Snippet3>

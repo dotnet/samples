@@ -24,7 +24,7 @@ Public Class Form1
         InitializeListView1()
         AddHandler Me.Load, AddressOf Form1_Load
     
-    End Sub 'New
+    End Sub
      
     
     
@@ -35,14 +35,14 @@ Public Class Form1
         Me.ClientSize = New System.Drawing.Size(292, 266)
         Me.Name = "Form1"
 
-    End Sub 'InitializeComponent
+    End Sub
      
     <STAThread()>  _
     Public Shared Sub Main() 
         Application.EnableVisualStyles()
         Application.Run(New Form1())
     
-    End Sub 'Main
+    End Sub
     
     
     
@@ -114,7 +114,7 @@ Public Class Form1
         ' Add the controls to the form.
         Me.Controls.Add(indentedListView)
     
-    End Sub 'InitializeIndentedListViewItems 
+    End Sub
     '</snippet2>
 
     ' Declare the ListView and the Label.

@@ -249,7 +249,7 @@ Class TraceTest
             Console.Read()
         End Try
 
-    End Sub 'Main
+    End Sub
 End Class 'TraceTest
 
   '<Snippet33>
@@ -261,7 +261,7 @@ Public Class MyTraceSource
     Public Sub New(ByVal n As String)
         MyBase.New(n)
 
-    End Sub 'New 
+    End Sub
 
     Public Property FirstTraceSourceAttribute() As String
         Get
@@ -309,7 +309,7 @@ Public Class MySourceSwitch
     Public Sub New(ByVal n As String)
         MyBase.New(n)
 
-    End Sub 'New
+    End Sub
 
     Public Property CustomSourceSwitchAttribute() As Integer
         Get
@@ -342,22 +342,22 @@ Public Class TestListener
     Public Sub New(ByVal fileName As String)
         MyBase.New(fileName)
 
-    End Sub 'New
+    End Sub
 
     Public Sub New(ByVal fileName As String, ByVal name As String)
         MyBase.New(fileName, name)
 
-    End Sub 'New
+    End Sub
 
     Public Overrides Sub Write(ByVal s As String)
         MyBase.Write(("TestListener " + s))
 
-    End Sub 'Write
+    End Sub
 
     Public Overrides Sub WriteLine(ByVal s As String)
         MyBase.WriteLine(("TestListener " + s))
 
-    End Sub 'WriteLine
+    End Sub
 
     Protected Overrides Function GetSupportedAttributes() As String()
         ' The following string array will allow the use of 

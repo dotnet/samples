@@ -16,7 +16,7 @@ Public NotInheritable Class App
 
     Shared Sub Main()
         WriteIsolatedStorage()
-    End Sub 'Main
+    End Sub
     Shared Sub WriteIsolatedStorage()
         ' Attempt to create a storage file that is isolated by user and assembly.
         ' IsolatedStorageFilePermission granted to the attribute at the top of this file 

@@ -15,7 +15,7 @@ Namespace Samples.AspNet.VB
         Inherits CheckBoxField
 
         Public Sub New()
-        End Sub 'New
+        End Sub
 
         ' Gets a default value for a basic design-time experience. Since
         ' it would look odd, even at design time, to have more than one

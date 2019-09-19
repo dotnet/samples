@@ -38,7 +38,7 @@ Namespace SDKSample
             myStackPanel.Children.Add(streamImage)
             Me.Content = myStackPanel
 
-        End Sub 'New
+        End Sub
     End Class 'BitmapDecoderExample
 End Namespace
 '</SnippetBitmapDecoderFullPage>

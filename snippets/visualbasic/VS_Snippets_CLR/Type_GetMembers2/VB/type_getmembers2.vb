@@ -15,10 +15,10 @@ Class [MyClass]
    
    
    Public Sub New()
-   End Sub 'New
+   End Sub
    
    Public Sub Myfunction()
-   End Sub 'Myfunction
+   End Sub
 End Class '[MyClass]
 
 Class Type_GetMembers_BindingFlags
@@ -59,7 +59,7 @@ Class Type_GetMembers_BindingFlags
       ''myString' is a Field
 
 
-   End Sub 'Main 
+   End Sub
 End Class 'Type_GetMembers_BindingFlags
 ' </Snippet1>      
 

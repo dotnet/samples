@@ -22,7 +22,7 @@ Namespace Samples.AspNet.VB.Controls
 
         ' Implement a default constructor.
         Public Sub New()
-        End Sub 'New
+        End Sub
 
         ' Some basic state to help track the initialization state of the provider.
         Private initialized As Boolean = False
@@ -69,7 +69,7 @@ Namespace Samples.AspNet.VB.Controls
                 accessConnection = New OleDbConnection(connectionString)
             End If
             initialized = True
-        End Sub 'Initialize
+        End Sub
 ' </snippet2>
 
 ' <snippet3>
@@ -81,7 +81,7 @@ Namespace Samples.AspNet.VB.Controls
                 aRootNode = Nothing
                 MyBase.Clear()
             End SyncLock
-        End Sub 'Clear
+        End Sub
 ' </snippet3>
 
 ' <snippet4>

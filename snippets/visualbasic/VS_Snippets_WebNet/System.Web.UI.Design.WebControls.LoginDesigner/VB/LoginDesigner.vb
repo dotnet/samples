@@ -53,7 +53,7 @@ Namespace Examples.VB.WebControls.Design
             properties("NamingContainer") = _
                 TypeDescriptor.CreateProperty(selectProp.ComponentType, _
                     selectProp, BrowsableAttribute.Yes)
-        End Sub ' PreFilterProperties
+        End Sub
         ' </snippet3>
 
         ' <snippet4>

@@ -45,6 +45,6 @@ Public Class MySoapFaultBindingSample
       Catch e As Exception
          Console.WriteLine("Error occurred : " + e.Message.ToString())
       End Try
-   End Sub 'Main
+   End Sub
 End Class 'MySoapFaultBindingSample
 ' </Snippet1>

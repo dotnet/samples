@@ -69,7 +69,7 @@ Class Sample
         ' This statement is never executed.
         Console.WriteLine("This statement is never executed.")
     
-    End Sub 'Main
+    End Sub
 End Class 'Sample
 '
 'This code example produces the following results:

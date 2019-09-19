@@ -5,7 +5,7 @@ Class Sample
       Console.WriteLine()
       '  <-- Keep this information secure! -->
       Console.WriteLine("MachineName: {0}", Environment.MachineName)
-   End Sub 'Main
+   End Sub
 End Class 'Sample
 '
 'This example produces the following results:

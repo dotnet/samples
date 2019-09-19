@@ -64,7 +64,7 @@ Public Class SamplesArrayList
          Console.WriteLine("   {0}", myStr)
       Next myStr 
 
-   End Sub 'Main
+   End Sub
 
 End Class 'SamplesArrayList 
 

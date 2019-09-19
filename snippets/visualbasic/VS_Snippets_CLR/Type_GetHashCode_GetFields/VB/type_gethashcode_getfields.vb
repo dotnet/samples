@@ -31,6 +31,6 @@ Class FieldsSample
             Console.WriteLine("An exception occurred.")
             Console.WriteLine(("Message: " & e.Message))
         End Try
-    End Sub 'Main
+    End Sub
 End Class 'FieldsSample
 ' </Snippet1>

@@ -4,6 +4,6 @@ Class Sample
    Public Shared Sub Main()
       Console.WriteLine()
       Console.WriteLine("Version: {0}", Environment.Version.ToString())
-   End Sub 'Main
+   End Sub
 End Class 'Sample
 '</snippet1>

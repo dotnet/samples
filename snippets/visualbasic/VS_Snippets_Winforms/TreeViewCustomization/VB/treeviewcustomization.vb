@@ -24,12 +24,12 @@ Public Class Form1
 
         ' Add myTreeView to the form.
         Me.Controls.Add(myTreeView)
-    End Sub 'New
+    End Sub
 
     <STAThreadAttribute()> _
     Shared Sub Main()
         Application.Run(New Form1)
-    End Sub 'Main
+    End Sub
 End Class 'Form1
 
 '<Snippet2>
@@ -47,7 +47,7 @@ Public Class CustomizedTreeView
         ' The ShowLines property must be false for the FullRowSelect 
         ' property to work.
         ShowLines = False
-    End Sub 'New
+    End Sub
 
 
     Protected Overrides Sub OnAfterSelect(ByVal e As TreeViewEventArgs)
@@ -66,7 +66,7 @@ Public Class CustomizedTreeView
         ' Remove the selection. This allows the same node to be
         ' clicked twice in succession to toggle the expansion state.
         SelectedNode = Nothing
-    End Sub 'OnAfterSelect
+    End Sub
 
 End Class 'CustomizedTreeView 
 '</Snippet2>

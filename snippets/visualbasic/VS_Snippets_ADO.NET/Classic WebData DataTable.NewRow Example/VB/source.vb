@@ -12,7 +12,7 @@ Protected DataGrid1 As DataGrid
 ' <Snippet1>
 Private Sub MakeDataTableAndDisplay()
     ' Create new DataTable and DataSource objects.
-    Dim table As DataTable = New DataTable()
+    Dim table As New DataTable()
 
     ' Declare DataColumn and DataRow variables.
     Dim column As DataColumn 

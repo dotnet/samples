@@ -12,19 +12,19 @@ Namespace ExampleComponent
         Inherits System.ComponentModel.Design.ComponentDesigner
 
         Public Sub New()
-        End Sub 'New
+        End Sub
 
         ' This method provides an opportunity to perform processing when a designer is initialized.
         ' The component parameter is the component that the designer is associated with.
         Public Overrides Sub Initialize(ByVal component As System.ComponentModel.IComponent)
             ' Always call the base Initialize method in an override of this method.
             MyBase.Initialize(component)
-        End Sub 'Initialize
+        End Sub
 
         ' This method is invoked when the associated component is double-clicked.
         Public Overrides Sub DoDefaultAction()
             MessageBox.Show("The event handler for the default action was invoked.")
-        End Sub 'DoDefaultAction
+        End Sub
 
         ' This method provides designer verbs.
         Public Overrides ReadOnly Property Verbs() As System.ComponentModel.Design.DesignerVerbCollection
@@ -36,7 +36,7 @@ Namespace ExampleComponent
         ' Event handling method for the example designer verb
         Private Sub onVerb(ByVal sender As Object, ByVal e As EventArgs)
             MessageBox.Show("The event handler for the Example Designer Verb Command was invoked.")
-        End Sub 'onVerb
+        End Sub
     End Class 'ExampleComponentDesigner
 
     ' Provides an example component associated with the example component designer.
@@ -45,7 +45,7 @@ Namespace ExampleComponent
         Inherits System.ComponentModel.Component
 
         Public Sub New()
-        End Sub 'New
+        End Sub
     End Class 'ExampleComponent
 
 End Namespace 'ExampleComponent

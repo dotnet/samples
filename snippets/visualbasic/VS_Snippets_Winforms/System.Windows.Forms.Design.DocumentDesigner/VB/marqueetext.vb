@@ -48,7 +48,7 @@ Partial Public Class MarqueeText
         Me.darkColorValue = Me.BackColor
         Me.lightBrush = New SolidBrush(Me.lightColorValue)
         Me.darkBrush = New SolidBrush(Me.darkColorValue)
-    End Sub 'New
+    End Sub
     ' </snippet140>
 
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''

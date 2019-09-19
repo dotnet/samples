@@ -12,7 +12,7 @@ Public Class Form1
    
    Public Sub New()
       InitializeComponent()
-   End Sub 'New
+   End Sub
    Private flowLayoutPanel3 As FlowLayoutPanel
    Private label2 As Label
    Private button11 As Button
@@ -36,7 +36,7 @@ Public Class Form1
          components.Dispose()
       End If
       MyBase.Dispose(disposing)
-   End Sub 'Dispose
+   End Sub
    
    
    Private Sub InitializeComponent()
@@ -208,13 +208,13 @@ Public Class Form1
       Me.flowLayoutPanel1.ResumeLayout(False)
       Me.flowLayoutPanel1.PerformLayout()
       Me.ResumeLayout(False)
-   End Sub 'InitializeComponent
+   End Sub
     
    
    <STAThread()>  _
    Shared Sub Main()
       Application.EnableVisualStyles()
       Application.Run(New Form1())
-   End Sub 'Main
+   End Sub
 End Class 'Form1
 ' </snippet1>

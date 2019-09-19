@@ -33,7 +33,7 @@ Public Class MyTreeNodeForm
       InitializeComponent()
       AddHandler myButton.Click, AddressOf MyButtonClick
       FillMyTreeView()
-   End Sub 'New
+   End Sub
    
 
    Private Sub MyButtonClick(sender As Object, e As EventArgs)
@@ -58,7 +58,7 @@ Public Class MyTreeNodeForm
       If (selectedNode IsNot Nothing) Then
          SelectNode(selectedNode)
       End If
-   End Sub 'MyButtonClick
+   End Sub
    
    
 ' <Snippet1>
@@ -136,7 +136,7 @@ End Sub
       myTreeView.SelectedImageIndex = 0
       ' Begin repainting the 'TreeView'.
       myTreeView.EndUpdate()
-   End Sub 'FillMyTreeView
+   End Sub
    
    Private Sub InitializeComponent()
       Me.myTreeView = New System.Windows.Forms.TreeView()
@@ -212,12 +212,12 @@ End Sub
       Me.Name = "MyTreeNodeForm"
       Me.Text = "TreeNode class sample"
       Me.ResumeLayout(False)
-   End Sub 'InitializeComponent
+   End Sub
     
    
    Shared Sub Main()
       Application.Run(New MyTreeNodeForm())
-   End Sub 'Main
+   End Sub
 End Class 'MyTreeNodeForm
  _
 Public Class MyCustomerClass
@@ -227,7 +227,7 @@ Public Class MyCustomerClass
    Public Sub New(name As String)
       CustomerName = name
       CustomerOrders = New ArrayList()
-   End Sub 'New
+   End Sub
 End Class 'MyCustomerClass
  _
 Public Class MyOrder
@@ -235,5 +235,5 @@ Public Class MyOrder
    
    Public Sub New(orderID As String)
       Me.OrderID = orderID
-   End Sub 'New
+   End Sub
 End Class 'MyOrder

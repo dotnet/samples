@@ -98,7 +98,7 @@ Class UsingAnonymousIdentificationSection
         aIdEnabled.ToString())
         ' </Snippet11>
 
-    End Sub 'Main
+    End Sub
 End Class 'UsingAnonymousIdentificationSection 
 
 

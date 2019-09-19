@@ -35,7 +35,7 @@ Class Window1
         
         Me.WindowState = WindowState.Maximized
     
-    End Sub 'New
+    End Sub
 
 
     Private Sub EnableElement_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
@@ -45,19 +45,19 @@ Class Window1
             inkSurface.Visibility = Visibility.Visible
         End If
 
-    End Sub 'EnableElement_Click
+    End Sub
      
     
     Private Sub Tick(ByVal sender As Object, ByVal e As EventArgs)
         Me.Title = inkSurface.IsFilterPluginActive.ToString()
 
-    End Sub 'Tick
+    End Sub
     
     
     Private Sub isPluginActive_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
         MessageBox.Show(inkSurface.IsFilterPluginActive.ToString())
 
-    End Sub 'isPluginActive_Click
+    End Sub
     
     
     Private Sub Window1_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Input.KeyEventArgs)
@@ -69,14 +69,14 @@ Class Window1
             inkSurface.ChangeDAOnCustomDR()
         End If
 
-    End Sub 'Window1_KeyDown
+    End Sub
     
     
     
     Private Sub clearInk_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
         inkSurface.ClearInk()
 
-    End Sub 'clearInk_Click
+    End Sub
     
     
     Private Sub addRemovePlugin_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
@@ -87,7 +87,7 @@ Class Window1
             addRemovePlugin.Content = "plugin removed"
         End If
 
-    End Sub 'addRemovePlugin_Click
+    End Sub
     
     
     Private Sub toggleFilter_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
@@ -99,5 +99,5 @@ Class Window1
             toggleFilter.Content = "filter is off"
         End If
 
-    End Sub 'toggleFilter_Click 
+    End Sub
 End Class 'Window1 

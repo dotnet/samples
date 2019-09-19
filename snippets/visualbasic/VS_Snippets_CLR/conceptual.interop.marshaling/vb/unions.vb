@@ -56,7 +56,7 @@ Public Class App
         Dim mu2_2 As New MyUnion2_2()
         mu2_2.str = "*** string ***"
         NativeMethods.TestUnion2(mu2_2, 2)
-    End Sub 'Main
+    End Sub
 End Class 'App
 '</snippet29>
 '</snippet26>

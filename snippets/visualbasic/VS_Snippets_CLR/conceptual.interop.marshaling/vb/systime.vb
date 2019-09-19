@@ -26,7 +26,7 @@ Public Class App
         Dim st As New SystemTime()
         NativeMethods.GetSystemTime(st)
         Console.Write($"The Date is: {st.month} {st.day} {st.year}")
-    End Sub 'Main
+    End Sub
 End Class 'App
 
 ' The program produces output similar to the following:

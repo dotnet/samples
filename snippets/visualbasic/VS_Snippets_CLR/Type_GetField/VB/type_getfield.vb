@@ -40,7 +40,7 @@ Public Class MyFieldInfoClass
             myFieldInfo.GetValue(myFieldObjectA))
         Console.WriteLine("The value of the private field is: '{0}'", _
             myFieldInfo1.GetValue(myFieldObjectB))
-    End Sub 'Main
+    End Sub
 
 End Class 'MyFieldInfoClass
 

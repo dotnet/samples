@@ -22,7 +22,7 @@ Public Class SamplesCharUnicodeInfo
          Console.WriteLine("{0}", CharUnicodeInfo.GetUnicodeCategory(s, i))
       Next i
 
-   End Sub 'Main 
+   End Sub
 
 End Class 'SamplesCharUnicodeInfo
 

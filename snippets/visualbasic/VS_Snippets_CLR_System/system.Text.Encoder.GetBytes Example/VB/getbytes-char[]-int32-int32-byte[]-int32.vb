@@ -32,7 +32,7 @@ Class EncoderExample
             Console.Write("[{0}]", b)
         Next b
         Console.WriteLine()
-    End Sub 'Main
+    End Sub
 End Class 'EncoderExample
 
 'This code example produces the following output.

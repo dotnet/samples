@@ -41,6 +41,6 @@ Public Class CheckRestricted
         Catch e As Exception
             Console.WriteLine(e.Message)
         End Try
-    End Sub 'Main
+    End Sub
 ' </Snippet1>
 End Class 'CheckRestricted

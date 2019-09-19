@@ -168,6 +168,6 @@ Class UsingFormsAuthentication
         Next i
         ' </Snippet14>
 
-    End Sub 'Main 
+    End Sub
 End Class 'UsingFormsAuthentication
 

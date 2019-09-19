@@ -75,6 +75,6 @@
       ' Display the form as top most form.
       topMostForm.TopMost = True
       topMostForm.Show()
-   End Sub 'CreateMyTopMostForm
+   End Sub
    '</Snippet1>
 End Class

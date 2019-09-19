@@ -25,12 +25,12 @@ Class Sample
       Dim ci As New CultureInfo("es-ES", True)
       sb.AppendFormat(ci, "5) {0}", var2)
       Show(sb)
-   End Sub 'Main
+   End Sub
    
    Public Shared Sub Show(sbs As StringBuilder)
       Console.WriteLine(sbs.ToString())
       sb.Length = 0
-   End Sub 'Show
+   End Sub
 End Class 'Sample
 '
 'This example produces the following results:

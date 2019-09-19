@@ -84,7 +84,7 @@ Namespace Examples.VB.WebControls.Design
                 TypeDescriptor.CreateProperty(selectProp.ComponentType, _
                     selectProp, BrowsableAttribute.Yes)
 
-        End Sub ' PreFilterProperties
+        End Sub
         ' </snippet3>
 
         ' <snippet4>
@@ -118,7 +118,7 @@ Namespace Examples.VB.WebControls.Design
             ' Call the base method to generate the markup.
             MyBase.Initialize(component)
 
-        End Sub ' Initialize
+        End Sub
         ' </snippet6>
     End Class ' MyLoginViewDesigner
 End Namespace ' Examples.VB.WebControls.Design

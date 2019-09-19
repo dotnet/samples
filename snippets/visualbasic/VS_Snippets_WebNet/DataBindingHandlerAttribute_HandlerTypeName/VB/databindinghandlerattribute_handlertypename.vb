@@ -32,7 +32,7 @@ Namespace DataBindingHandlerAttributeTest
             Console.Write(("DataBindingHandlerAttribute's HandlerTypeName is : " + _
                myDataBindingHandlerAttribute.HandlerTypeName))
          End If
-      End Sub 'Main
+      End Sub
    End Class 'TestAttributes
 ' </Snippet1>
 End Namespace 'DataBindingHandlerAttributeTest

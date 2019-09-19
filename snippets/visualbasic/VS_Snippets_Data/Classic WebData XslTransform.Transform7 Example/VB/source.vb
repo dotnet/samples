@@ -26,6 +26,6 @@ Public Class Sample
         'Transform the file and send the output to the console.
         xslt.Transform(doc, Nothing, writer, Nothing)
         writer.Close()
-    End Sub 'Main 
+    End Sub
 End Class 'Sample
 ' </Snippet1>

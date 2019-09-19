@@ -32,7 +32,7 @@ Class RealTimeInkControl
         Me.StylusPlugIns.Add(renderer)
         presenter.AttachVisuals(renderer.RootVisual, renderer.DrawingAttributes)
 
-    End Sub 'New
+    End Sub
     
     ' Begin collecting stylus packets.
     Protected Overrides Sub OnStylusDown(ByVal e As StylusDownEventArgs)
@@ -44,7 +44,7 @@ Class RealTimeInkControl
         stylusPoints = New StylusPointCollection(eventPoints.Description)
         stylusPoints.Add(eventPoints)
 
-    End Sub 'OnStylusDown
+    End Sub
     
     ' Collect the stylus packets as the stylus moves.
     Protected Overrides Sub OnStylusMove(ByVal e As StylusEventArgs) 
@@ -52,7 +52,7 @@ Class RealTimeInkControl
         MyBase.OnStylusMove(e)
         stylusPoints.Add(e.GetStylusPoints(Me))
 
-    End Sub 'OnStylusMove
+    End Sub
     
     
     '<Snippet3>
@@ -89,7 +89,7 @@ Class RealTimeInkControl
         End If
         Stylus.Capture(Nothing)
     
-    End Sub 'OnStylusUp
+    End Sub
     
     '</Snippet3>
 
@@ -105,7 +105,7 @@ Class RealTimeInkControl
         Dim recognizer As New GestureRecognizer(gestures)
         '</Snippet4>
 
-    End Sub 'ConstructorSnippet
+    End Sub
     
     Private Sub SetApplicationGestures() 
         '<Snippet5>
@@ -124,7 +124,7 @@ Class RealTimeInkControl
         Dim enableGestures As ReadOnlyCollection(Of ApplicationGesture)
         enableGestures = recognizer.GetEnabledGestures()
         '</Snippet6>
-    End Sub 'SetApplicationGestures 
+    End Sub
 
     '<Snippet8>
     Private Function InterpretScratchoutGesture(ByVal stroke As Stroke) As Boolean
@@ -179,14 +179,14 @@ Class Program
         win.Content = inkControl
         win.Show()
 
-    End Sub 'OnStartingUp
+    End Sub
 
 
     '<STAThread()>  _
     'Shared Sub Main(ByVal args() As String) 
     '    New Program().Run()
 
-    'End Sub 'Main
+    'End Sub
 End Class 'Program
 '<Snippet7>
 

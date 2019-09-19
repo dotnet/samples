@@ -49,5 +49,5 @@ Public Class WebClient_UploadData_Headers
         Catch e As Exception
             Console.WriteLine(("The following exception was raised: " + e.Message))
         End Try
-    End Sub 'Main
+    End Sub
 End Class 'WebClient_UploadData_Headers

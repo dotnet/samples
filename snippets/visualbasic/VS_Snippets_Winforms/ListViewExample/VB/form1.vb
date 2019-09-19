@@ -25,7 +25,7 @@ Namespace ListViewExample
          ' Required for Windows Form Designer support
          '
          InitializeComponent()
-      End Sub 'New
+      End Sub
        
       '
       ' TODO: Add any constructor code after InitializeComponent call
@@ -64,7 +64,7 @@ Namespace ListViewExample
          Me.Name = "Form1"
          Me.Text = "Form1"
          Me.ResumeLayout(False)
-      End Sub 'InitializeComponent
+      End Sub
        
       '
       'ToDo: Error processing original source shown below
@@ -82,7 +82,7 @@ Namespace ListViewExample
         <STAThread()> _
         Shared Sub Main()
             Application.Run(New Form1())
-        End Sub 'Main
+        End Sub
 
 
         '<snippet1>
@@ -150,11 +150,11 @@ Namespace ListViewExample
 
             ' Add the ListView to the control collection.
             Me.Controls.Add(listView1)
-        End Sub 'CreateMyListView
+        End Sub
 
         '</snippet1>
         Private Sub button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles button1.Click
             CreateMyListView()
-        End Sub 'button1_Click
+        End Sub
     End Class 'Form1
 End Namespace 'ListViewExample

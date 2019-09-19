@@ -29,7 +29,7 @@ Public Class SamplesBitVector32
       myBV((myBit1 Or myBit2)) = True
       Console.WriteLine("myBit1 | myBit2 = TRUE " + ControlChars.Tab + "{0}", myBV.ToString())
 
-   End Sub 'Main 
+   End Sub
 
 End Class 'SamplesBitVector32
 

@@ -79,6 +79,6 @@ Namespace Samples.AspNet.VB
             writer.Write(testChars)
             writer.RenderEndTag()
             ' </snippet12>
-        End Sub 'Render
+        End Sub
     End Class 'RenderObjectsWrite
 End Namespace

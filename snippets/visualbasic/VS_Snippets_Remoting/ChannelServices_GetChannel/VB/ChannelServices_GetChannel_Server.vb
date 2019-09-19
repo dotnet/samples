@@ -18,6 +18,6 @@ Namespace RemotingSamples
                      " ChannelServices_GetChannel_Share"), "SayHello", WellKnownObjectMode.Singleton)
          Console.WriteLine("Hit <enter> to exit...")
          Console.ReadLine()
-      End Sub 'Main
+      End Sub
    End Class 'MyChannelServices_Server
 End Namespace 'RemotingSamples

@@ -9,7 +9,7 @@ public class Sample
 Private Shared Sub DemonstrateGetXml()
 	' Create a DataSet with one table 
     ' containing two columns and 10 rows.
-	Dim dataSet As DataSet = New DataSet("dataSet")
+	Dim dataSet As New DataSet("dataSet")
 	Dim table As DataTable = dataSet.Tables.Add("Items")
 	table.Columns.Add("id", Type.GetType("System.Int32"))
 	table.Columns.Add("Item", Type.GetType("System.String"))

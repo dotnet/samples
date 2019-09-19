@@ -22,7 +22,7 @@ Public Class ServiceDescriptionImportWarnings_Enum
       DisplayWarning("ServiceDescriptionImportWarnings_NoMethodsGenerated.wsdl")
       DisplayWarning("ServiceDescriptionImportWarnings_UnsupportedOperationsIgnored.wsdl")
       DisplayWarning("ServiceDescriptionImportWarnings_OptionalExtensionsIgnored.wsdl")
-   End Sub 'Main
+   End Sub
    
    <SecurityPermissionAttribute(SecurityAction.Demand, Unrestricted:=true)> _
    Public Shared Sub DisplayWarning(myWSDLFileName As String)
@@ -61,7 +61,7 @@ Public Class ServiceDescriptionImportWarnings_Enum
       End Select
       Console.WriteLine("Warning : " + myDisplay)
 ' </Snippet1>
-   End Sub 'GenerateException 
+   End Sub
 
 End Class 'ServiceDescriptionImportWarnings_Enum 
 
