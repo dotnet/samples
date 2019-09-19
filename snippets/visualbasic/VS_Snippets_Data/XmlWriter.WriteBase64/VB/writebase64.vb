@@ -8,8 +8,8 @@ Class TestBase64
     Private Const bufferSize As Integer = 4096
 
     Public Shared Sub Main()
- 
-        Dim args() As String = System.Environment.GetCommandLineArgs()
+
+        Dim args As String() = System.Environment.GetCommandLineArgs()
         Dim myTestBase64 As New TestBase64()
         
         ' Check that the usage string is correct.
@@ -80,7 +80,7 @@ Class TestBase64
     Public Shared Sub DecodeOrignalObject(xmlFileName As String, fileNew As FileStream)
 
         Dim buffer(bufferSize - 1) As Byte
-        Dim readByte as integer = 0
+        Dim readByte As Integer = 0
 
         ' Create a file to write the bmp back.
         Dim bw As New BinaryWriter(fileNew)
