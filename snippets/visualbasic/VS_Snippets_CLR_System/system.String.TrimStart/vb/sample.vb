@@ -52,7 +52,7 @@ Public Class TrimExample
    Public Sub Main()
       ' TrimStart Examples
       Dim lineWithLeadingSpaces as String = "   Hello World!"
-	    Dim lineWithLeadingSymbols as String = "$$$$Hello World!"
+	  Dim lineWithLeadingSymbols as String = "$$$$Hello World!"
       Dim lineWithLeadingUnderscores as String = "_____Hello World!"
       Dim lineWithLeadingLetters as String = "xxxxHello World!"
       Dim lineAfterTrimStart = String.Empty
