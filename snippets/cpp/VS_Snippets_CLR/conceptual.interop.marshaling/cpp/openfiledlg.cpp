@@ -5,7 +5,7 @@ using namespace System::Runtime::InteropServices;
 
 //<snippet8>
 // Declare a class member for each structure element.
-[StructLayout(LayoutKind::Sequential, CharSet=CharSet::Auto)]
+[StructLayout(LayoutKind::Sequential, CharSet = CharSet::Auto)]
 public ref class OpenFileName
 {
 public:
@@ -40,11 +40,11 @@ public:
     }
 };
 
-public ref class LibWrap
+private ref class NativeMethods
 {
 public:
     // Declare a managed prototype for the unmanaged function.
-    [DllImport("Comdlg32.dll", CharSet=CharSet::Auto)]
+    [DllImport("Comdlg32.dll", CharSet = CharSet::Auto)]
     static bool GetOpenFileName([In, Out] OpenFileName^ ofn);
 };
 //</snippet8>
@@ -67,7 +67,7 @@ public:
         ofn->title = "Open file called using platform invoke...";
         ofn->defExt = "txt";
 
-        if (LibWrap::GetOpenFileName(ofn))
+        if (NativeMethods::GetOpenFileName(ofn))
         {
             Console::WriteLine("Selected file with full path: {0}", ofn->file);
         }
