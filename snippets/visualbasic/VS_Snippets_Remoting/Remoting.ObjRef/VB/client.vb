@@ -42,5 +42,5 @@ Public Class SampleClient
       Console.WriteLine("Is this object from this AppDomain? {0}", objRefSample.IsFromThisAppDomain())
       Console.WriteLine("Is this object from this process? {0}", objRefSample.IsFromThisProcess())
       ' </Snippet1>
-   End Sub 'Main 
+   End Sub
 End Class 'SampleClient

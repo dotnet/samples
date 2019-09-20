@@ -19,7 +19,7 @@ Class TestForm
       
       ' Displays the border information.
       label1.Text = "The border is " + FormBorderStyle
-   End Sub 'InitMyForm
+   End Sub
    ' </snippet1>
 
    Public Shared Sub Main()

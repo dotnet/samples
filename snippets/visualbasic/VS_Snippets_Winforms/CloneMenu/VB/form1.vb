@@ -74,7 +74,7 @@ Public Class Form1
 
       ' Assign mainMenu2 to the form.
       Menu = mainMenu2
-   End Sub 'CloneMyMainMenu
+   End Sub
    ' </snippet1>
 
    Public Shared Sub Main()

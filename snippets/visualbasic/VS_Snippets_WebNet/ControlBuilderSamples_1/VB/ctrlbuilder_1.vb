@@ -39,7 +39,7 @@ Namespace CustomControlBuildersVB
    ' Override the AppendLiteralString method so that literal
    ' text between rows of controls are ignored.  
    Public Overrides Sub AppendLiteralString(s As String)
-   End Sub 'AppendLiteralString
+   End Sub
  End Class 'MyItemControlBuilder ' Ignores literals between rows.
 ' </Snippet3>
 ' </Snippet2>
@@ -98,7 +98,7 @@ Namespace CustomControlBuildersVB
       If TypeOf obj Is TextBox Then
          items.Add(obj)
       End If
-   End Sub 'AddParsedSubObject
+   End Sub
    
    
    ' Override the CreateChildControls to create any TextBox server control
@@ -108,7 +108,7 @@ Namespace CustomControlBuildersVB
       While myEnumerator.MoveNext()
          Me.Controls.Add(CType(myEnumerator.Current, TextBox))
       End While
-   End Sub 'CreateChildControls 
+   End Sub
  End Class 'MyControl1
 ' </Snippet6>
 End Namespace 'CustomControlBuilders

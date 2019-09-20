@@ -36,12 +36,12 @@ Namespace MyProcessSample
 
             ' Get a process on a remote computer, using the process id and machine name.
             Dim remoteById As Process = Process.GetProcessById(2345, "myComputer")
-        End Sub 'BindToRunningProcesses
+        End Sub
 
         Shared Sub Main()
             Dim myProcess As New MyProcess()
             myProcess.BindToRunningProcesses()
-        End Sub 'Main 
+        End Sub
 
     End Class 'MyProcess
 

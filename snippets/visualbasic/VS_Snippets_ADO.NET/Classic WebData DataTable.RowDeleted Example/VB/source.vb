@@ -12,7 +12,7 @@ Module Module1
 
     ' <Snippet1>
     Private Sub DataTableRowDeleted()
-        Dim customerTable As DataTable = New DataTable("Customers")
+        Dim customerTable As New DataTable("Customers")
         ' add columns
         customerTable.Columns.Add("id", Type.GetType("System.Int32"))
         customerTable.Columns.Add("name", Type.GetType("System.String"))

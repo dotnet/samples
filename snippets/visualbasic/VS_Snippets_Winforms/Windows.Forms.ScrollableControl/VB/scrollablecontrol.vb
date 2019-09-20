@@ -11,7 +11,7 @@ Namespace ScrollableControl
       
       Public Sub New()
          InitializeComponent()
-      End Sub 'New
+      End Sub
       
       
      Private Sub InitializeComponent() '
@@ -48,12 +48,12 @@ Namespace ScrollableControl
          Me.Text = "Form1"
          Me.panel1.ResumeLayout(False)
          Me.ResumeLayout(False)
-      End Sub 'InitializeComponent
+      End Sub
        
       <STAThread()> _
       Shared Sub Main()
          Application.Run(New Form1())
-      End Sub 'Main
+      End Sub
       
 ' <snippet1>
 Private Sub button1_Click(sender As Object, _

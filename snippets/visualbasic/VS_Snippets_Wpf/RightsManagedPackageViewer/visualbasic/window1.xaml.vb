@@ -64,7 +64,7 @@ Namespace SdkSample
 					OpenDocument(_xpsFile)
 				End If
 			End If
-		End Sub ' end:OnOpen()
+		End Sub
 
 
 		'<SnippetRmPkgViewOpenDoc>
@@ -401,7 +401,7 @@ Namespace SdkSample
 		'''   Performs clean up when the application is closed.</summary>
 		Private Overloads Sub OnClosed(ByVal sender As Object, ByVal e As EventArgs)
 			CloseDocument()
-		End Sub ' end:OnClosed()
+		End Sub
 
 
 		' ----------------------------- OnClose ------------------------------
@@ -410,7 +410,7 @@ Namespace SdkSample
 		'''   to close the currently open document.</summary>
 		Private Sub OnClose(ByVal target As Object, ByVal args As ExecutedRoutedEventArgs)
 			CloseDocument()
-		End Sub ' end:OnClose()
+		End Sub
 
 
 		'<SnippetRmPkgViewCloseDoc>
@@ -446,7 +446,7 @@ Namespace SdkSample
 			ShowPrompt("Click 'File | Open...' to select a file to open and view.")
 			rightsBlock.Text = ""
 
-		End Sub ' end:CloseDocument
+		End Sub
 		'</SnippetRmPkgViewCloseDoc>
 		#End Region ' File|Close
 
@@ -458,7 +458,7 @@ Namespace SdkSample
 		'''   shutdown and exit the application.</summary>
 		Private Sub OnExit(ByVal sender As Object, ByVal e As EventArgs)
 			Close() ' invokes OnClosed()
-		End Sub ' end:OnExit()
+		End Sub
 		#End Region ' File|Exit
 
 
@@ -540,7 +540,7 @@ Namespace SdkSample
 		'''   Handles the user "File | Print" menu operation.</summary>
 		Private Sub OnPrint(ByVal target As Object, ByVal args As ExecutedRoutedEventArgs)
 			PrintDocument()
-		End Sub ' end:OnClose()
+		End Sub
 
 
 		' -------------------------- PrintDocument ---------------------------

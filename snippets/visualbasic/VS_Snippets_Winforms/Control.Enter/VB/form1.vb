@@ -25,7 +25,7 @@ Public Class Form1
         ' Required for Windows Form Designer support
         '
         InitializeComponent()
-    End Sub 'New
+    End Sub
 
    
     '/ <summary>
@@ -38,7 +38,7 @@ Public Class Form1
             End If
         End If
         MyBase.Dispose(disposing)
-    End Sub 'Dispose
+    End Sub
    
 
     Private Sub InitializeComponent()
@@ -69,17 +69,17 @@ Public Class Form1
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
-    End Sub 'InitializeComponent
+    End Sub
     
 
     <STAThread()>  _
     Shared Sub Main()
         Application.Run(New Form1())
-    End Sub 'Main
+    End Sub
    
    
     Private Sub button1_Enter(sender As Object, e As System.EventArgs) Handles button1.Enter
-    End Sub 'button1_Enter
+    End Sub
    
    
    
@@ -92,7 +92,7 @@ Public Class Form1
             ' Move the selection pointer to the end of the text of the control.
             textBox1.Select(textBox1.Text.Length, 0)
         End If
-    End Sub 'textBox1_Enter
+    End Sub
    
    
     Private Sub textBox1_Leave(sender As Object, e As System.EventArgs) Handles textBox1.Leave
@@ -100,6 +100,6 @@ Public Class Form1
         textBox1.ForeColor = Color.Black
         textBox1.BackColor = Color.White
         textBox1.Select(0, 0)
-    End Sub 'textBox1_Leave
+    End Sub
 End Class 'Form1 
 '</Snippet1>

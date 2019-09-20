@@ -37,5 +37,5 @@ Public Class MyServerProcessingClient
       Console.WriteLine(myService.HelloMethod("Client Man"))
       Console.WriteLine("Finished remote object call")
       Console.WriteLine()
-   End Sub 'Main
+   End Sub
 End Class 'MyServerProcessingClient

@@ -16,6 +16,6 @@ Public Class Form1
         For Each b In  myBindingBase.Bindings
             Console.WriteLine(b.Control.ToString())
         Next b
-    End Sub 'PrintBoundControls
+    End Sub
     ' </Snippet1>
 End Class 'Form1 

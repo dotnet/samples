@@ -21,7 +21,7 @@ Class DnsHostByAddress
         Else
             myDnsHostByAddress.DisplayHostAddress("207.46.131.199")
         End If
-    End Sub 'Main
+    End Sub
 ' <Snippet1>     
     Public Sub DisplayHostAddress(IpAddressString As [String])
         Try
@@ -69,6 +69,6 @@ Class DnsHostByAddress
             Console.WriteLine(("Source : " + e.Source))
             Console.WriteLine(("Message : " + e.Message))
         End Try
-    End Sub 'DisplayHostAddress
+    End Sub
 ' </Snippet1>
 End Class

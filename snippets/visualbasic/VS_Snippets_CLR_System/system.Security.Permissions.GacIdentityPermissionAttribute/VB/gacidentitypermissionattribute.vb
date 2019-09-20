@@ -23,7 +23,7 @@
 '        Catch e As Exception
 '            Console.WriteLine(e.Message)
 '        End Try
-'    End Sub 'Main
+'    End Sub
 'End Class '[MyClass
 Imports System.Security.Permissions
 
@@ -34,7 +34,7 @@ Public Class Class1
 '</Snippet2>
     Public Sub DoNothing()
         Console.WriteLine("Exiting the library program.")
-    End Sub 'DoNothing
+    End Sub
 End Class 'Class1 
 
 '</Snippet1>

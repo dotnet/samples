@@ -12,7 +12,7 @@ Namespace CachingSamples
         ' Constructor with no arguments 
         ' provided by CacheDependency class.
         Public Sub New()
-        End Sub ' New
+        End Sub
       
         ' Declare a Boolean field named disposedValue.
         ' This will be used by Disposed property.

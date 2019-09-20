@@ -8,7 +8,7 @@ NotInheritable Public Class BadCodeMaintainerAttribute
     
     Public Sub New(developerName As String)
         developer = developerName
-    End Sub 'New
+    End Sub
     
     Public ReadOnly Property DeveloperName() As String
         Get
@@ -27,7 +27,7 @@ NotInheritable Public Class GoodCodeMaintainerAttribute
     
     Public Sub New(developerName As String)
         developer = developerName
-    End Sub 'New
+    End Sub
     
     Public ReadOnly Property DeveloperName() As String
         Get

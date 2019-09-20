@@ -24,7 +24,7 @@ Namespace SDKSample
             ' Initialize the MediaElement property values.
             InitializePropertyValues()
 
-        End Sub 'OnMouseDownPlayMedia
+        End Sub
 
 
         ' Pause the media.
@@ -34,7 +34,7 @@ Namespace SDKSample
             ' The Play method can be used to resume.
             myMediaElement.Pause()
 
-        End Sub 'OnMouseDownPauseMedia
+        End Sub
 
 
         ' Stop the media.
@@ -44,20 +44,20 @@ Namespace SDKSample
             ' the beginning.
             myMediaElement.Stop()
 
-        End Sub 'OnMouseDownStopMedia
+        End Sub
 
 
         ' Change the volume of the media.
         Private Sub ChangeMediaVolume(ByVal sender As Object, ByVal args As RoutedPropertyChangedEventArgs(Of Double))
             myMediaElement.Volume = System.Convert.ToDouble(volumeSlider.Value)
 
-        End Sub 'ChangeMediaVolume
+        End Sub
 
         ' Change the speed of the media.
         Private Sub ChangeMediaSpeedRatio(ByVal sender As Object, ByVal args As RoutedPropertyChangedEventArgs(Of Double))
             myMediaElement.SpeedRatio = System.Convert.ToDouble(speedRatioSlider.Value)
             
-        End Sub 'ChangeMediaSpeedRatio
+        End Sub
 
         ' When the media opens, initialize the "Seek To" slider maximum value
         ' to the total number of miliseconds in the length of the media clip.

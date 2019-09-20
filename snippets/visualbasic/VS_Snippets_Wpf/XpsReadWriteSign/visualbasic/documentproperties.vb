@@ -33,7 +33,7 @@ Namespace SDKSample
 
 			xpsDocument.CoreDocumentProperties.Category = propertiesDialog.Category.Text
 
-		End Sub ' end:WriteProperties()
+		End Sub
 
 		' -------------------------- ReadProperties --------------------------
 		''' <summary>
@@ -61,7 +61,7 @@ Namespace SDKSample
 
 			propertiesDialog.ContentType.Text = xpsDocument.CoreDocumentProperties.ContentType
 			propertiesDialog.Category.Text = xpsDocument.CoreDocumentProperties.Category
-		End Sub ' end:ReadProperties()
+		End Sub
 
 	End Class ' end:class PropertiesUtility
 

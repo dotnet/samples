@@ -23,6 +23,6 @@ Public Class Form1
         End If
         ' Increment myVar.   
         myVar = myVar + 1
-    End Sub 'button1_Click
+    End Sub
     ' </Snippet1>
 End Class 'Form1 

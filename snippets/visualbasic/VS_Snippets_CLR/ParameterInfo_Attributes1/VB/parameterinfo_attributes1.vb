@@ -29,6 +29,6 @@ Public Class ParameterInfo_Attributes
       For i = 0 To myParameters.Length - 1
          Console.WriteLine(ControlChars.Tab + "The {0} parameter has the attribute : {1}", i + 1, myParameters(i).Attributes)
       Next i
-   End Sub 'Main
+   End Sub
 End Class 'ParameterInfo_Attributes
 ' </Snippet1>

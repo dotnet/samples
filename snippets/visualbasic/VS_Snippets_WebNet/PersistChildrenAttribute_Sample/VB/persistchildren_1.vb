@@ -24,14 +24,14 @@ Namespace PersistChildrenSampleVB
    
    Public Sub New()
       Me.New("", "", "")
-   End Sub 'New
+   End Sub
 
     
    Public Sub New(name As String, title As String, employeeAlias As String)
       Me._name = name
       Me._title = title
       Me._alias = employeeAlias
-   End Sub 'New
+   End Sub
    
    Public Property Name() As String
       Get
@@ -147,7 +147,7 @@ End Class 'Employee
          table.Rows.Add(tr)
       Next employee
       Controls.Add(table)
-   End Sub 'CreateChildControls 
+   End Sub
  End Class 'CollectionPropertyControl
 ' </snippet2>
 End Namespace ' PersistChildrenSampleVB

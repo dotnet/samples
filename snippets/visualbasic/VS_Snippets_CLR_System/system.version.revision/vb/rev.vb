@@ -15,7 +15,7 @@ Class Sample
         Console.WriteLine(fmtStd, std.Major, std.Minor, std.Build, std.Revision)
         Console.WriteLine(fmtInt, interim.Major, interim.Minor, interim.Build, _
                           interim.MajorRevision, interim.MinorRevision)
-    End Sub 'Main
+    End Sub
 End Class 'Sample
 
 '

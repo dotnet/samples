@@ -60,7 +60,7 @@ Class Sample
             Console.WriteLine(e)
         End Try
     
-    End Sub 'Main
+    End Sub
 End Class 'Sample
 
 'This code example produces the following results:

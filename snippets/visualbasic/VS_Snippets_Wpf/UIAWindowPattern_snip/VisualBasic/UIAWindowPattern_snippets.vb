@@ -12,7 +12,7 @@ Class UIAWindowPattern_snippets
     ''' </summary>
     Public Sub New() 
     
-    End Sub 'New
+    End Sub
     
     
     ' <Snippet100>
@@ -118,7 +118,7 @@ Class UIAWindowPattern_snippets
             Return
         End Try
 
-    End Sub 'CloseWindow
+    End Sub
     
     ' </Snippet102>
 
@@ -171,7 +171,7 @@ Class UIAWindowPattern_snippets
             ' object is not able to perform the requested action
             Return
         End Try
-    End Sub 'SetVisualState
+    End Sub
 
     ' </Snippet103>
 
@@ -190,7 +190,7 @@ Class UIAWindowPattern_snippets
             targetControl, TreeScope.Element, eventHandler)
         Automation.AddAutomationEventHandler(WindowPattern.WindowOpenedEvent, _
             targetControl, TreeScope.Element, eventHandler)
-    End Sub 'RegisterForEvents
+    End Sub
 
     '''------------------------------------------------------------------------
     ''' <summary>
@@ -218,7 +218,7 @@ Class UIAWindowPattern_snippets
             ' TODO: event handling
             Return
         End If
-    End Sub 'OnWindowOpenOrClose
+    End Sub
     ' </Snippet104>
 
     ' <Snippet105>

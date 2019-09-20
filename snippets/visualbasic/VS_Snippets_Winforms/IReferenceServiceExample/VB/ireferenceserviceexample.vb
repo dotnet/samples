@@ -119,11 +119,11 @@ Namespace IReferenceServiceExample
                 basetypeComponents = New String(0) {}
             End If
             Me.Refresh()
-        End Sub 'DisplayComponentsOfSelectedComponentType
+        End Sub
 
         Private Sub OnSelectionChanged(ByVal sender As Object, ByVal e As EventArgs)
             DisplayComponentsOfSelectedComponentType()
-        End Sub 'OnSelectionChanged
+        End Sub
 
         Protected Overrides Sub OnPaint(ByVal e As System.Windows.Forms.PaintEventArgs)
             e.Graphics.DrawString("IReferenceService Example Control", New Font(FontFamily.GenericMonospace, 9), New SolidBrush(Color.Blue), 5, 5)
@@ -148,7 +148,7 @@ Namespace IReferenceServiceExample
                     e.Graphics.DrawString(basetypeComponents(i), New Font(FontFamily.GenericMonospace, 8), New SolidBrush(Color.Black), 20, 121 + typeComponents.Length * 12 + i * 12)
                 Next i
             End If
-        End Sub 'OnPaint
+        End Sub
 
     End Class 'IReferenceServiceControl
 End Namespace 'IReferenceServiceExample

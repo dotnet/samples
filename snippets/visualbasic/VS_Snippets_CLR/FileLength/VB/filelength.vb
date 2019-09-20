@@ -16,7 +16,7 @@ Public Class FileLength
         For Each f In fiArr
             Console.WriteLine("The size of {0} is {1} bytes.", f.Name, f.Length)
         Next f
-    End Sub 'Main
+    End Sub
 End Class 'FileLength 
 
 'This code produces output similar to the following; 

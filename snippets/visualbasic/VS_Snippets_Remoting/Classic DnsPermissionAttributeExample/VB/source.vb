@@ -22,6 +22,6 @@ Public Class MyClass1
          Console.WriteLine("Access denied")
          Console.WriteLine(securityException.ToString())
       End Try
-   End Sub 'Main 
+   End Sub
 End Class '[MyClass1]
 '</Snippet1>

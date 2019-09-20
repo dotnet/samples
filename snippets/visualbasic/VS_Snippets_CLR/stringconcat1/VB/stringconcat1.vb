@@ -15,7 +15,7 @@ Public Class ConcatTest
         ' concatenate the objects together as a string. To do this,
         ' the ToString method in the objects is called
         Console.WriteLine(String.Concat(o))
-    End Sub 'Main
+    End Sub
 End Class 'ConcatTest
 
 

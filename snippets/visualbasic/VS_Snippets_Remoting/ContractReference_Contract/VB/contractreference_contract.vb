@@ -49,7 +49,7 @@ Namespace ConsoleApplication1
          Catch ex As Exception
             Console.WriteLine("Exception: " + ex.Message)
          End Try
-      End Sub 'Main
+      End Sub
    End Class 'MyClass1
 ' </Snippet1>
 

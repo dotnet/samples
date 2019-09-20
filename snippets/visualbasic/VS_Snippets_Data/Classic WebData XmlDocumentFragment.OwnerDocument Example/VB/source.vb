@@ -27,6 +27,6 @@ Public Class Sample
         
         Console.WriteLine("Display the document fragment...")
         Console.WriteLine(docFrag.OuterXml)
-    End Sub 'Main
+    End Sub
 End Class 'Sample
 ' </Snippet1>

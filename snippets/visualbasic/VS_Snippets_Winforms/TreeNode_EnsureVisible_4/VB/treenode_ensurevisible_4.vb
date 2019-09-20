@@ -28,7 +28,7 @@ Namespace MyTreeNode
          ' Required for Windows Form Designer support.
          InitializeComponent()
          AddTreeNode()
-      End Sub 'New
+      End Sub
 
       ' Clean up any resources being used.
       Protected Overrides Overloads Sub Dispose(disposing As Boolean)
@@ -38,12 +38,12 @@ Namespace MyTreeNode
             End If
          End If
          MyBase.Dispose(disposing)
-      End Sub 'Dispose
+      End Sub
 
       ' The main entry point for the application.
       Shared Sub Main()
          Application.Run(New Form1())
-      End Sub 'Main
+      End Sub
 
       ' Required method for Designer support.
       Private Sub InitializeComponent()
@@ -91,7 +91,7 @@ Namespace MyTreeNode
          Me.Name = "Form1"
          Me.Text = "Demonstrating TreeNode members"
          Me.ResumeLayout(False)
-      End Sub 'InitializeComponent
+      End Sub
 
 
       ' Add TreeNode to the TreeView.
@@ -128,7 +128,7 @@ Namespace MyTreeNode
                                                                      (Order2.myOrderName))
             Next Order2
          Next Customer2
-      End Sub 'AddTreeNode
+      End Sub
 
 ' <Snippet1>
 Private Sub button1_Click(sender As Object, _
@@ -190,7 +190,7 @@ End Sub
 
       Public Sub New(name As String)
          myCustomerName = name
-      End Sub 'New
+      End Sub
    End Class 'Customer
 
    ' Define an Order Class which will be associated to a customer.
@@ -199,6 +199,6 @@ End Sub
 
       Public Sub New(name1 As String)
          myOrderName = name1
-      End Sub 'New
+      End Sub
    End Class 'Order
 End Namespace 'MyTreeNode

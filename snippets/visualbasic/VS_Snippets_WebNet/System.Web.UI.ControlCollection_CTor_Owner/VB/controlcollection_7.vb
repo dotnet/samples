@@ -91,7 +91,7 @@ Namespace ASPNET.Samples.VB
 
             ' Prevent child controls from being created again.
             ChildControlsCreated = True
-        End Sub 'CreateChildControls
+        End Sub
 
 
     End Class

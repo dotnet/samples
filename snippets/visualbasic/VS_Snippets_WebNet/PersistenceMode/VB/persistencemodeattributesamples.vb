@@ -28,7 +28,7 @@ Namespace PersistenceModeAttributeSamples
       
       Public Sub New(author As [String])
          _author = author
-      End Sub 'New
+      End Sub
       
       Public Property Author() As [String]
          Get
@@ -96,7 +96,7 @@ Namespace PersistenceModeAttributeSamples
       Public Overrides Sub DataBind()
          EnsureChildControls()
          MyBase.DataBind()
-      End Sub 'DataBind
+      End Sub
 
 
       Protected Overrides Sub CreateChildControls()
@@ -110,6 +110,6 @@ Namespace PersistenceModeAttributeSamples
          Else
             Me.Controls.Add(New LiteralControl(Me.Author))
          End If
-      End Sub 'CreateChildControls
+      End Sub
    End Class 'MyTemplateControl
 End Namespace 'PersistenceModeAttributeSamples

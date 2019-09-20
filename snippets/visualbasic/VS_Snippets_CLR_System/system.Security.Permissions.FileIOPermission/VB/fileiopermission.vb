@@ -424,7 +424,7 @@ Public Class FileIOPermissionDemo
             Dim consoleInput As String = Console.ReadLine()
             System.Environment.ExitCode = 101
         End Try
-    End Sub 'Main
+    End Sub
 End Class 'FileIOPermissionDemo
 
 
@@ -443,12 +443,12 @@ Friend Class FileIOGenerator
     Public Sub New()
 
         ResetIndex()
-    End Sub 'New
+    End Sub
 
 
     Public Sub ResetIndex()
         fileIndex = 0
-    End Sub 'ResetIndex
+    End Sub
 
     ' Create a file path.
     '<Snippet10>

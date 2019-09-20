@@ -39,7 +39,7 @@ Namespace WriteToSpoolFile
 			anotherStream.Close()
 			'</SnippetAddNamedJob>
 
-		End Sub 'end Main
+		End Sub
 
 	End Class 'end Program class
 

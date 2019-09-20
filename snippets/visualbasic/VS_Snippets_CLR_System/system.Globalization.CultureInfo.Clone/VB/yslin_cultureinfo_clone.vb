@@ -25,7 +25,7 @@ Public Class SamplesCultureInfo
       Console.WriteLine("NFI.CurrencySymbol" + ControlChars.Tab + "{0}" + ControlChars.Tab + ControlChars.Tab + "{1}", myCI.NumberFormat.CurrencySymbol, myCIclone.NumberFormat.CurrencySymbol)
       Console.WriteLine("NFI.NumberDecimalDigits" + ControlChars.Tab + "{0}" + ControlChars.Tab + ControlChars.Tab + "{1}", myCI.NumberFormat.NumberDecimalDigits, myCIclone.NumberFormat.NumberDecimalDigits)
 
-   End Sub 'Main 
+   End Sub
 
 End Class 'SamplesCultureInfo
 

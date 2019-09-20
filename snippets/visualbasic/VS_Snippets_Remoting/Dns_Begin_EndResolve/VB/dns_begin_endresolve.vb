@@ -16,7 +16,7 @@ Class DnsBeginGetHostByName
         
         Public Sub New()
             host = Nothing
-        End Sub 'New
+        End Sub
     End Class 'RequestState
     
     
@@ -49,7 +49,7 @@ Class DnsBeginGetHostByName
             Console.WriteLine(("Source : " + e.Source))
             Console.WriteLine(("Message : " + e.Message))
     End Try
-    End Sub 'Main
+    End Sub
     
     
     Private Shared Sub RespCallback(ar As IAsyncResult)
@@ -68,7 +68,7 @@ Class DnsBeginGetHostByName
             Console.WriteLine(("Source : " + e.Source))
             Console.WriteLine(("Message : " + e.Message))
         End Try
-    End Sub 'RespCallback
+    End Sub
 ' </Snippet2>
 ' </Snippet1>
 

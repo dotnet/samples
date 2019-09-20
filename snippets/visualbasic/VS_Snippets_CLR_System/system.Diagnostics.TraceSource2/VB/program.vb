@@ -108,7 +108,7 @@ Class TraceTest
             Console.Read()
         End Try
 
-    End Sub 'Main
+    End Sub
 
     Public Shared Sub DisplayProperties(ByVal ts As TraceSource)
         Console.WriteLine("TraceSource name = " + ts.Name)
@@ -155,7 +155,7 @@ Class TraceTest
         Next traceListener
         '</Snippet21>
 
-    End Sub 'DisplayProperties
+    End Sub
 End Class 'TraceTest 
 
 '</Snippet1>

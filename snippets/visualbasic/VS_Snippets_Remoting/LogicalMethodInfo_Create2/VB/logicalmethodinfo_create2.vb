@@ -91,6 +91,6 @@ Public Class LogicalMethodInfo_Create
       Else
          Console.WriteLine(ControlChars.Newline + "{0} is synchronous", myLogicalMethodInfo.Name)
       End If 
-   End Sub 'Main
+   End Sub
 End Class 'LogicalMethodInfo_Create
 ' </Snippet1>

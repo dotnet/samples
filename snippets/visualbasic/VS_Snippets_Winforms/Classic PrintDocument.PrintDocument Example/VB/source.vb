@@ -65,5 +65,5 @@ Public Class Form1
         Else
             ev.HasMorePages = False
         End If
-    End Sub 'pd_PrintPage
+    End Sub
 End Class 'Form1

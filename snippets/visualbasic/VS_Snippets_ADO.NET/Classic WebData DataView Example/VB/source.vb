@@ -12,8 +12,8 @@ Protected DataGrid1 As DataGrid
 ' <Snippet1>
 Private Sub DemonstrateDataView()
     ' Create one DataTable with one column.
-    Dim table As DataTable = New DataTable("table")
-    Dim colItem As DataColumn = New DataColumn("item", _
+    Dim table As New DataTable("table")
+    Dim colItem As New DataColumn("item", _
         Type.GetType("System.String"))
     table.Columns.Add(colItem)
 
@@ -29,8 +29,8 @@ Private Sub DemonstrateDataView()
     table.AcceptChanges()
 
     ' Create two DataView objects with the same table.
-    Dim firstView As DataView = New DataView(table)
-    Dim secondView As DataView = New DataView(table)
+    Dim firstView As New DataView(table)
+    Dim secondView As New DataView(table)
     
     ' Change the values in the table.
     table.Rows(0)("item") = "cat"

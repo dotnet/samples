@@ -14,10 +14,10 @@ Class [MyClass]
    
    
    Public Sub New()
-   End Sub 'New
+   End Sub
    
    Public Sub Myfunction()
-   End Sub 'Myfunction
+   End Sub
 End Class '[MyClass]
 
 Class Type_GetMembers
@@ -43,6 +43,6 @@ Class Type_GetMembers
       Catch e As SecurityException
          Console.WriteLine(("Exception : " + e.Message.ToString()))
       End Try
-   End Sub 'Main
+   End Sub
 End Class 'Type_GetMembers
 ' </Snippet1>

@@ -57,7 +57,7 @@ Namespace VisualStyleElementViewer
                 .BorderStyle = BorderStyle.Fixed3D
                 .AutoSize = True
             End With
-        End Sub 'New
+        End Sub
 
         Private Sub ElementViewer_Load(ByVal sender As Object, _
             ByVal e As EventArgs) Handles Me.Load

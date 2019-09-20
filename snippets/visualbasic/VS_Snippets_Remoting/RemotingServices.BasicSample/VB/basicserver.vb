@@ -28,5 +28,5 @@ Public Class Server
             keyState = Console.ReadLine()
         End While
     
-    End Sub 'Main
+    End Sub
 End Class 'Server

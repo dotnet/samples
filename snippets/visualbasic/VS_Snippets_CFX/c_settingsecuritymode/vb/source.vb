@@ -47,7 +47,7 @@ Public Class Test
         '</snippet2>
         b.Security.Message.ClientCredentialType = MessageCredentialType.Certificate
         '</snippet6>
-    End Sub 'MakeMessgeBinding
+    End Sub
     
     
     Private Sub TransportWithMessageBinding() 

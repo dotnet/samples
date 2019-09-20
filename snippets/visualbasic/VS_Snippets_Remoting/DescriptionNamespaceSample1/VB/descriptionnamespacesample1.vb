@@ -147,7 +147,7 @@ Class MyClass1
            & "MathService_new.wsdl")
       Console.WriteLine(ControlChars.NewLine & " This file should be passed " _
          & "to the WSDL tool as input to generate the proxy")
-   End Sub 'Main
+   End Sub
     
 ' <Snippet13>
    ' Creates a Message with name = messageName having one MessagePart 

@@ -38,14 +38,14 @@ Namespace Samples.AspNet.VB
         Public Sub New(ByVal writer As TextWriter)
             MyBase.New(writer)
             Me.writer = writer
-        End Sub 'New
+        End Sub
 
 
         Public Sub New(ByVal writer As TextWriter, ByVal tabString As String)
             MyBase.New(writer, tabString)
 
             Me.writer = writer
-        End Sub 'New
+        End Sub
 
 
         ' <snippet2>

@@ -11,13 +11,13 @@ Namespace Samples.AspNet.VB
     Public Sub New() 
         MyClass.New(DateTime.Now)
     
-    End Sub 'New
+    End Sub
     
     
     Public Sub New(ByVal creationTime As DateTime) 
         _creationTime = creationTime
     
-    End Sub 'New
+    End Sub
     
     Private _creationTime As DateTime
     

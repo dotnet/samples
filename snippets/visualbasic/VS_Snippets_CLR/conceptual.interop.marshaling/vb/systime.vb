@@ -28,7 +28,6 @@ Public Class App
         Console.Write($"The Date is: {st.month} {st.day} {st.year}")
     End Sub
 End Class
-
 ' The program produces output similar to the following:
 '
 ' VB .NET SysTime Sample using Platform Invoke

@@ -21,7 +21,7 @@ Namespace CloneBasicAuthentication
         Public Sub New()
             m_authenticationType = "CloneBasic"
             m_canPreAuthenticate = False
-        End Sub 'New
+        End Sub
         
         ReadOnly Property AuthenticationType() As String Implements IAuthenticationModule.AuthenticationType
             Get
@@ -109,7 +109,7 @@ Namespace CloneBasicAuthentication
             AuthenticationManager.Unregister("Basic")
             ' Get the response from the Uri. 
             GetPage(url, userName, passwd)
-        End Sub 'Main
+        End Sub
 
 
         Public Shared Sub GetPage(ByVal url As [String], ByVal username As String, ByVal passwd As String)
@@ -159,7 +159,7 @@ Namespace CloneBasicAuthentication
             Catch e As Exception
                 Console.WriteLine(ControlChars.Cr + " The following exception was raised : {0}", e.Message)
             End Try
-        End Sub 'GetPage
+        End Sub
 
 
         Public Shared Sub PrintUsage()
@@ -167,6 +167,6 @@ Namespace CloneBasicAuthentication
             Console.WriteLine("   Authorization_ProtectionRealm URLname username password")
             Console.WriteLine(ControlChars.Cr + "Example:")
             Console.WriteLine(ControlChars.Cr + "   Authorization_ProtectionRealm http://www.microsoft.com/net/ george george123")
-        End Sub 'PrintUsage
+        End Sub
     End Class 'Client class ends here.	
 End Namespace 'CloneBasicAuthentication

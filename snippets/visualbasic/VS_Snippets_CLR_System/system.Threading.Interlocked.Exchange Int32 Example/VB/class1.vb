@@ -23,7 +23,7 @@ Namespace InterlockedExchange_Example
                 Thread.Sleep(rnd.Next(0, 1000))
                 myThread.Start()
             Next i
-        End Sub 'Main
+        End Sub
 
         Private Shared Sub MyThreadProc()
             Dim i As Integer

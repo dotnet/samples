@@ -79,6 +79,6 @@ Public Class OidSample
 
       'Return index in the collection to the beginning.
       oe.Reset()
-   End Sub 'Main
+   End Sub
 End Class 'OidSample
 '</SNIPPET1>

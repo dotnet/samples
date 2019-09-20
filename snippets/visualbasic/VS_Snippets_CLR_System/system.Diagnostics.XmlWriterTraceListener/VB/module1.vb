@@ -31,6 +31,6 @@ Class testClass
         ts2.Flush()
         ts2.Close()
     
-    End Sub 'Main
+    End Sub
 End Class 'testClass
 '</Snippet1>

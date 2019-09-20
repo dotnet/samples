@@ -32,6 +32,6 @@ Public Class MyServer
                                              myWellKnownServiceTypeEntryCollection(0).ToString())
       Console.WriteLine("Started the Server, Hit <enter> to exit...")
       Console.ReadLine()
-   End Sub 'Main
+   End Sub
 End Class 'MyServer
 ' </Snippet1>

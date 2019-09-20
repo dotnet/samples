@@ -32,6 +32,6 @@ Class TestClass
 	'The name of the first property of MyClass1 is MyProperty1.
 	'The type of the first property of MyClass1 is System.String.
 
-    End Sub 'Main
+    End Sub
 End Class 'TestClass
 ' </Snippet1>	

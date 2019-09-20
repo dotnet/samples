@@ -31,7 +31,7 @@ Class ADMultiDomain
       'Unload the application domain, which also unloads the assembly.
       AppDomain.Unload(newDomain)
       
-   End Sub 'Main
+   End Sub
 End Class 'ADMultiDomain
 
 Class Worker

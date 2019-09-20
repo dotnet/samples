@@ -48,7 +48,7 @@ Module Program
             xmlTDES.Clear()
         End Try
 
-    End Sub 'Main 
+    End Sub
 End Module 'Program
 
 

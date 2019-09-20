@@ -16,7 +16,7 @@ Namespace CursorSetStyle
       Public Sub New()
          InitializeComponent()
          Me.treeView1.ContextMenu = New ContextMenu(New MenuItem() {New MenuItem("Edit")})
-      End Sub 'New
+      End Sub
       
       
       Private Sub InitializeComponent()
@@ -48,11 +48,11 @@ Namespace CursorSetStyle
          Me.Name = "Form1"
          Me.Text = "Form1"
          Me.ResumeLayout(False)
-      End Sub 'InitializeComponent
+      End Sub
        
       Shared Sub Main() '
          Application.Run(New Form1())
-      End Sub 'Main
+      End Sub
   
       
       

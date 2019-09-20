@@ -23,6 +23,6 @@ Public Class Sample
         
         Console.WriteLine("Display the modified XML...")
         doc.Save(Console.Out)
-    End Sub 'Main 
+    End Sub
 End Class 'Sample
 ' </Snippet1>

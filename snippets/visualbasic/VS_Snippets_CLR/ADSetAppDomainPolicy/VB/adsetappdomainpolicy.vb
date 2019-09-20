@@ -34,6 +34,6 @@ Class ADSetAppDomainPolicy
       End Try
       
       AppDomain.Unload(domain)
-   End Sub 'Main
+   End Sub
 End Class 'ADSetAppDomainPolicy
 ' </SNIPPET1>

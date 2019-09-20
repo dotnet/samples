@@ -32,7 +32,7 @@ Public Class JITAAttribute_Value
         ' Display the value of the attribute's Value property.
         MsgBox("JustInTimeActivationAttribute.Value: " & attribute.Value)
     
-    End Sub 'ValueExample
+    End Sub
 End Class 'JITAAttribute_Value
 ' </snippet3>
 
@@ -49,5 +49,5 @@ Public Class JITAAttribute_Example
         ' Demonstrate the JustInTimeActivationAttribute properties.
         valueExample.ValueExample()
     
-    End Sub 'Main
+    End Sub
 End Class 'JITAAttribute_Example

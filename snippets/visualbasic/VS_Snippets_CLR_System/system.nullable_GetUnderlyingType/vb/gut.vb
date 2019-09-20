@@ -30,7 +30,7 @@ Class Sample
         Dim answer As Type = Nullable.GetUnderlyingType(retval)
         Console.WriteLine("Underlying type ..... {0}", answer)
     
-    End Sub 'Main
+    End Sub
 End Class 'Sample
 '
 'This code example produces the following results:

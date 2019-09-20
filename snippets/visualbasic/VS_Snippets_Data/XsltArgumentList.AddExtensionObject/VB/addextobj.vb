@@ -27,7 +27,7 @@ Public Class Sample
 
 
     
-    End Sub 'Main 
+    End Sub
     
     ' Convert the book price to a new price using the conversion factor.    
     Public Class BookPrice

@@ -20,6 +20,6 @@ Public Class Sample
         If doc.DocumentElement.LastChild.FirstChild.IsReadOnly Then
             Console.WriteLine("Entity reference nodes are always read-only")
         End If 
-    End Sub 'Main
+    End Sub
 End Class 'Sample
 ' </Snippet1>

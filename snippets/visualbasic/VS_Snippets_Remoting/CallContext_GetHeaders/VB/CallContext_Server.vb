@@ -12,6 +12,6 @@ Namespace RemotingSamples
          Console.WriteLine("Server started.")
          Console.WriteLine("Hit enter to terminate...")
          Console.Read()
-      End Sub 'Main
+      End Sub
    End Class 'HelloServer
 End Namespace 'RemotingSamples

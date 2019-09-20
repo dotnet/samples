@@ -95,7 +95,7 @@ NotInheritable Public Class SelectCar
     
     Public Sub New() 
     
-    End Sub 'New
+    End Sub
 End Class 'SelectCar ' Here you put your 
 ' initializations, if necessary.
 

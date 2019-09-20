@@ -94,7 +94,7 @@ Class [MyClass]
       myServiceDescription.Write("MathService_new.wsdl")
       Console.WriteLine(ControlChars.Cr + "Successfully added bindings for SOAP protocol and saved results in file MathService_new.wsdl")
       Console.WriteLine(ControlChars.Cr + " This file should be passed to wsdl tool as input to generate proxy")
-   End Sub 'Main
+   End Sub
     
    ' Creates a Message with name ="messageName" having one MessagePart with name = "partName".
    Public Shared Function CreateMessage(messageName As String, partName As String, element As String, targetNamespace As String) As Message

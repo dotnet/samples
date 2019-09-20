@@ -26,7 +26,7 @@ Public Class ProgrammableValidator
         pminYear = minYear
         pmaxMiles = maxMiles
     
-    End Sub 'New
+    End Sub
     
     
     Public Overrides Function CanValidate( _
@@ -70,7 +70,7 @@ Public Class ProgrammableValidator
             Console.WriteLine(err.ToString())
         End Try
     
-    End Sub 'Validate
+    End Sub
 End Class 'ProgrammableValidator
 
 
@@ -128,7 +128,7 @@ Public Class ProgrammableValidatorAttribute
         pminYear = year
         pmaxMiles = miles
 
-    End Sub 'New 
+    End Sub
     
 
     Public Overrides ReadOnly Property ValidatorInstance() _

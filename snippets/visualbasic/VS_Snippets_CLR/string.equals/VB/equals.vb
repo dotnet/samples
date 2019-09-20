@@ -34,7 +34,7 @@ Class Sample
       Console.WriteLine()
       Console.WriteLine(" 3) String.Equals(String, String)")
       Console.WriteLine("    Is str1 equal to str2?: {0}", [String].Equals(str1, str2))
-   End Sub 'Main
+   End Sub
 End Class 'Sample
 '
 'This example produces the following results:

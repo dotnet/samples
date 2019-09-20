@@ -35,5 +35,5 @@ Class Window1
         
         Me.WindowState = WindowState.Maximized
     
-    End Sub 'New
+    End Sub
 End Class 'Window1 

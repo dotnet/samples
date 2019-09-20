@@ -73,7 +73,7 @@ Class Sample
       
       Dim drives As [String]() = Environment.GetLogicalDrives()
       Console.WriteLine("GetLogicalDrives: {0}", [String].Join(", ", drives))
-   End Sub 'Main
+   End Sub
 End Class 'Sample
 '
 'This example produces results similar to the following:

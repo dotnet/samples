@@ -20,7 +20,7 @@ Class Program
         UnmanagedComClassInstance.MethodWithStringRefParam(var)
 	'</snippet1>
 
-    End Sub 'Main  
+    End Sub
 End Class 'Program
 
 
@@ -29,9 +29,9 @@ Class UnmanagedComClass
 
     Public Sub New()
 
-    End Sub 'New
+    End Sub
 
     Public Sub MethodWithStringRefParam(ByRef var As Object)
 
-    End Sub 'MethodWithStringRefParam
+    End Sub
 End Class 'UnmanagedComClass

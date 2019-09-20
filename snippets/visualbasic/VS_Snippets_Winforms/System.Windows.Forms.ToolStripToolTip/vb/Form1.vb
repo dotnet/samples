@@ -15,13 +15,13 @@ Public Class Form1
    
    Public Sub New()
       InitializeComponent()
-   End Sub 'New
+   End Sub
    
    <STAThread()>  _
    Shared Sub Main()
       Application.EnableVisualStyles()
       Application.Run(New Form1())
-   End Sub 'Main
+   End Sub
    
    
    Private Sub InitializeComponent()
@@ -54,6 +54,6 @@ Public Class Form1
       Me.toolStrip1.ResumeLayout(False)
       Me.ResumeLayout(False)
       Me.PerformLayout()
-   End Sub 'InitializeComponent 
+   End Sub
 End Class 'Form1
 '</snippet1>

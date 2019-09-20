@@ -58,6 +58,6 @@ Public Class MyDiscoveryClientResult
       Catch ex As Exception
          Console.WriteLine("Error is " + ex.Message)
       End Try
-   End Sub 'Main
+   End Sub
 End Class 'MyDiscoveryClientResult
 ' </Snippet1>

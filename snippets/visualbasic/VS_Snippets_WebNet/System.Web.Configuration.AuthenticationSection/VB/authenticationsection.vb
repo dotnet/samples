@@ -86,7 +86,7 @@ Class UsingAuthenticationSection
         currentForms.Domain
         ' </Snippet5>
 
-   End Sub 'Main 
+   End Sub
 End Class 'UsingAuthenticationSection 
 
 

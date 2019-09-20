@@ -23,7 +23,7 @@ Public Shared Sub Main()
             
             Console.WriteLine((ControlChars.Cr + "The Inner Exception is :" + e.InnerException.ToString()))
         End Try
-    End Sub ' Main
+    End Sub
     
 
     Public Sub ConnectHttpServer(connectUri As [String])
@@ -50,5 +50,5 @@ Public Shared Sub Main()
         End Try
 
 ' </Snippet1>
-  End Sub ' ConnectHttpServer
+  End Sub
 End Class ' HttpConnect 

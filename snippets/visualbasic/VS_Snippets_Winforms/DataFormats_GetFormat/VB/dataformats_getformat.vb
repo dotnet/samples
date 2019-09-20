@@ -16,7 +16,7 @@ Public Class DataFormat_GetFormat
       Console.WriteLine(("The Format Name corresponding to the ID " + myFormat.Id.ToString + " is :"))
       Console.WriteLine(myFormat.Name)
 
-   End Sub 'Main 
+   End Sub
 
 End Class 'DataFormat_GetFormat 
 

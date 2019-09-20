@@ -89,7 +89,7 @@ Namespace Examples.VB.WebControls.Design
             properties(namingContainer) = _
                 TypeDescriptor.CreateProperty(selectProp.ComponentType, _
                     selectProp, BrowsableAttribute.Yes)
-        End Sub ' PreFilterProperties
+        End Sub
         ' </snippet3>
     End Class ' MyHierarchicalDataBoundControlDesigner
 End Namespace ' Examples.VB.WebControls.Design

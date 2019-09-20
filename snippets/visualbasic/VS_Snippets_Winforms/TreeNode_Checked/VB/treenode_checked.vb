@@ -18,14 +18,14 @@ Public Class Customer
    Public Sub New(myName As String)
       CustomerName = myName
       CustomerOrders = New ArrayList()
-   End Sub 'New
+   End Sub
 End Class 'Customer
 
 Public Class Order
    Public OrderID As String
    Public Sub New(myOrderID As String)
       Me.OrderID = myOrderID
-   End Sub 'New
+   End Sub
 End Class 'Order
 
 Public Class TreeNode_Bounds
@@ -35,7 +35,7 @@ Public Class TreeNode_Bounds
    Public Sub New()
       InitializeComponent()
       FillMyTreeView()
-   End Sub 'New
+   End Sub
    ' ArrayList object to hold the Customer objects.
    Private customerArray As New ArrayList()
    Private rootNode As TreeNode
@@ -84,7 +84,7 @@ Public Class TreeNode_Bounds
 
       ' Begin repainting the TreeView.
       myTreeView.EndUpdate()
-   End Sub 'FillMyTreeView
+   End Sub
 
 
 ' <Snippet1>
@@ -137,9 +137,9 @@ End Sub
       AddHandler Me.myButton.Click, AddressOf MyButton_Click
       Me.Text = "TreeNode Example"
       Me.ResumeLayout(False)
-   End Sub 'InitializeComponent
+   End Sub
 
    Shared Sub Main()
       Application.Run(New TreeNode_Bounds())
-   End Sub 'Main
+   End Sub
 End Class 'TreeNode_Bounds

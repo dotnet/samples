@@ -21,6 +21,6 @@ Namespace SampleNamespace
          Console.WriteLine("Press enter to end the server process.")
          Console.ReadLine()
          ' </Snippet1>
-      End Sub 'Main 
+      End Sub
    End Class 'SampleServer
 End Namespace 'SampleNamespace

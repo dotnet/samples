@@ -19,7 +19,7 @@ Public Class Form1
         
         ' Prints the event name and event description.
         textBox1.Text = myEvent.Name & ": " & myEvent.Description
-    End Sub 'FindEvent
+    End Sub
     ' </Snippet1>
 End Class 'Form1 
 

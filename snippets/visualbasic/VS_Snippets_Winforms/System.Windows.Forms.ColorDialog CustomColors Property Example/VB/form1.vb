@@ -25,7 +25,7 @@ Namespace WindowsApplication1
          ' Required for Windows Form Designer support
          '
          InitializeComponent()
-      End Sub 'New
+      End Sub
 
       '
       ' TODO: Add any constructor code after InitializeComponent call
@@ -41,7 +41,7 @@ Namespace WindowsApplication1
             End If
          End If
          MyBase.Dispose(disposing)
-      End Sub 'Dispose
+      End Sub
 
 
       Private Sub InitializeComponent()
@@ -62,7 +62,7 @@ Namespace WindowsApplication1
          Me.Name = "Form1"
          Me.Text = "Form1"
          Me.ResumeLayout(False)
-      End Sub 'InitializeComponent
+      End Sub
 
       Private Sub button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles button1.Click
          '<snippet1>
@@ -84,7 +84,7 @@ Namespace WindowsApplication1
          '</snippet1>
          ' Print the custom colors if the user has changed them.
          PrintCustomColors(MyDialog.CustomColors)
-      End Sub 'button1_Click
+      End Sub
 
 
       Private Sub PrintCustomColors(ByVal clrs() As Integer)
@@ -96,7 +96,7 @@ Namespace WindowsApplication1
             Next i
          End If
          writer.Close()
-      End Sub 'PrintCustomColors
+      End Sub
 
       '      private int[] AddCustomColors()
       '      {
@@ -121,6 +121,6 @@ Namespace WindowsApplication1
       <STAThread()> Shared _
       Sub Main()
          Application.Run(New Form1())
-      End Sub 'Main
+      End Sub
    End Class 'Form1 
 End Namespace 'WindowsApplication1

@@ -20,7 +20,7 @@ Public Class Form1
         InitializeComponent()
         
     
-    End Sub 'New
+    End Sub
      
     'Demonstrates the TreeViewHitTest method, TreeViewHitTestInfo and TreeViewHitTestLocations    
     '<snippet1>
@@ -39,7 +39,7 @@ Public Class Form1
         Application.EnableVisualStyles()
         Application.Run(New Form1())
     
-    End Sub 'Main
+    End Sub
     
     
     Private Sub InitializeComponent() 
@@ -114,7 +114,7 @@ Public Class Form1
         CType(Me.pictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
     
-    End Sub 'InitializeComponent
+    End Sub
      
     '<snippet4>
     Private Sub cancelLoadButton_Click(ByVal sender As Object, _

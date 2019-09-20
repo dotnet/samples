@@ -27,7 +27,7 @@ Public Class WebProxy_Interface
     Sub New(proxyUri As Uri)
         
         webProxyUri = proxyUri
-    End Sub 'New 
+    End Sub
     
 
     'Get and Set the Credentials property.
@@ -82,7 +82,7 @@ Public Class WebProxy_Example
         Else
             Console.WriteLine("webproxy is not bypassed")
         End If 
-    End Sub 'Main
+    End Sub
 
     '</Snippet4>
     

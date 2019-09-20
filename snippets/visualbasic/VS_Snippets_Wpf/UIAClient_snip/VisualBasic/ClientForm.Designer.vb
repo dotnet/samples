@@ -16,7 +16,7 @@ Partial Class Form1 '
         End If
         MyBase.Dispose(disposing)
 
-    End Sub 'Dispose
+    End Sub
 
 #Region "Windows Form Designer generated code"
 
@@ -102,7 +102,7 @@ Partial Class Form1 '
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
-    End Sub 'InitializeComponent 
+    End Sub
 
 #End Region
 

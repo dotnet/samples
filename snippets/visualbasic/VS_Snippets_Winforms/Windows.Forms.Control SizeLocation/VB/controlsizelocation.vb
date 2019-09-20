@@ -10,7 +10,7 @@ Namespace ControlMembers
       
       Public Sub New()
          InitializeComponent()
-      End Sub 'New
+      End Sub
       
       Private Sub InitializeComponent()
          Me.button1 = New System.Windows.Forms.Button()
@@ -31,11 +31,11 @@ Namespace ControlMembers
          Me.Name = "Form1"
          Me.Text = "Form1"
          Me.ResumeLayout(False)
-      End Sub 'InitializeComponent
+      End Sub
        
       Shared Sub Main() 
          Application.Run(New Form1())
-      End Sub 'Main
+      End Sub
       
 
       
@@ -82,6 +82,6 @@ End Sub
          'Dim ctrl As Control = CType(sender, Control)
          'MessageBox.Show("Top: " + ctrl.Top.ToString() + ControlChars.Cr + "Bottom: " + ctrl.Bottom.ToString() + ControlChars.Cr + "Left: " + ctrl.Left.ToString() + ControlChars.Cr + "Right: " + ctrl.Right.ToString() + ControlChars.Cr + "Width: " + ctrl.Width.ToString() + ControlChars.Cr + "Height: " + ctrl.Height.ToString() + ControlChars.Cr + "Size: " + ctrl.Size.ToString() + ControlChars.Cr + "Location: " + ctrl.Location.ToString(), "button1 Position", MessageBoxButtons.OKCancel)
          Me.AddOKCancelButtons()
-      End Sub 'button_Click
+      End Sub
    End Class 'Form1 
 End Namespace 'ControlMembers 

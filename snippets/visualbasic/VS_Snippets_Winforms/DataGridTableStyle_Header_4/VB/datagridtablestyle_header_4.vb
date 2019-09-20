@@ -30,7 +30,7 @@ Namespace Datagrid
       
       Public Sub New()
          InitializeComponent()
-      End Sub 'New
+      End Sub
       
       
       ' Clean up resources.
@@ -41,7 +41,7 @@ Namespace Datagrid
             End If
          End If
          MyBase.Dispose(disposing)
-      End Sub 'Dispose
+      End Sub
       
       Private Sub InitializeComponent()
          Me.comboBox1 = New System.Windows.Forms.ComboBox()
@@ -106,11 +106,11 @@ Namespace Datagrid
          Me.Text = "Form1"
          CType(Me.dataGrid1, System.ComponentModel.ISupportInitialize).EndInit()
          Me.ResumeLayout(False)
-      End Sub 'InitializeComponent
+      End Sub
        
        <STAThread()> Shared Sub Main()
          Application.Run(New Form1())
-      End Sub 'Main
+      End Sub
       
       ' Declare objects of DataSet,DataGrid,DataTable.
       Private myDataSet As DataSet
@@ -122,7 +122,7 @@ Namespace Datagrid
          comboBox1.SelectedIndex = 0
          comboBox2.SelectedIndex = 0
          Create_Table()
-      End Sub 'Form1_Load
+      End Sub
       
 ' <Snippet1>
 ' <Snippet2>
@@ -145,7 +145,7 @@ Namespace Datagrid
          myTableStyle.MappingName = "Customers"
          AddHandler myTableStyle.HeaderBackColorChanged, AddressOf HeaderBackColorChangedHandler
          AddHandler myTableStyle.HeaderForeColorChanged, AddressOf HeaderForeColorChangedHandler
-      End Sub 'Create_Table
+      End Sub
       
       
       ' Change header background color.
@@ -161,12 +161,12 @@ Namespace Datagrid
          End Select
          myTableStyle.AlternatingBackColor = Color.LightGray
          dataGrid1.TableStyles.Add(myTableStyle)
-      End Sub 'OnHeaderBackColor_Click
+      End Sub
       
 ' </Snippet4>
         Private Sub HeaderBackColorChangedHandler(ByVal sender As Object, ByVal e As EventArgs)
             MessageBox.Show("Changed Header Background color to : " + comboBox1.SelectedItem.ToString(), "Success", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-        End Sub 'HeaderBackColorChangedHandler
+        End Sub
       
 ' </Snippet3>
       ' Change header forecolor.
@@ -182,12 +182,12 @@ Namespace Datagrid
          End Select
          myTableStyle.AlternatingBackColor = Color.LightGray
          dataGrid1.TableStyles.Add(myTableStyle)
-      End Sub 'OnHeaderForeColor_Click
+      End Sub
       
 ' </Snippet2>
         Private Sub HeaderForeColorChangedHandler(ByVal sender As Object, ByVal e As EventArgs)
             MessageBox.Show("Changed Header Fore color to : " + comboBox2.SelectedItem.ToString(), "Success", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-        End Sub 'HeaderForeColorChangedHandler
+        End Sub
 ' </Snippet1>
    End Class 'Form1
 End Namespace 'Datagrid

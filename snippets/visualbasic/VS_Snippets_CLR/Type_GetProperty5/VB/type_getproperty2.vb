@@ -32,7 +32,7 @@ Public Class MyTypeClass
         Catch ex As Exception
             Console.WriteLine("An exception occurred " + ex.Message.ToString())
         End Try
-    End Sub 'Main
+    End Sub
 End Class 'MyTypeClass
 ' </Snippet1>
 

@@ -14,7 +14,7 @@ Namespace ImageElementExample
 
         Public Sub New()
 
-        End Sub 'New
+        End Sub
 
 
         Private Sub PageLoaded(ByVal sender As Object, ByVal args As RoutedEventArgs)
@@ -50,6 +50,6 @@ Namespace ImageElementExample
             Grid.SetRow(chainImage, 3)
             croppedGrid.Children.Add(chainImage)
 
-        End Sub 'PageLoaded 
+        End Sub
     End Class 'CroppedImageExample
 End Namespace 'ImageElementExample

@@ -81,7 +81,7 @@ Private Sub DemonstrateMergeTable()
     sender As Object, e As DataRowChangeEventArgs)
      Console.WriteLine("Row Changed " & e.Action.ToString() _
         & ControlChars.Tab & e.Row.ItemArray(0).ToString())
- End Sub 'Row_Changed
+ End Sub
  
  Private Sub PrintValues(dataSet As DataSet, label As String)
      Console.WriteLine(ControlChars.Cr & label)

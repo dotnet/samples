@@ -25,7 +25,7 @@ Namespace Process_StandardError
                 GetStandardError(args)
             End If
             Return
-        End Sub 'Main
+        End Sub
 
         Public Shared Sub GetStandardError(args() As String)
             ' <Snippet1>
@@ -42,6 +42,6 @@ Namespace Process_StandardError
                 Console.WriteLine(myStreamReader.ReadLine())
             End Using
             ' </Snippet1>
-        End Sub 'GetStandardError
+        End Sub
     End Class 'Class1
 End Namespace 'Process_StandardError

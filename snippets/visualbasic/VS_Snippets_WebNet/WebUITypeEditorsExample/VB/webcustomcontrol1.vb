@@ -111,5 +111,5 @@ Public Class WebCustomControl1
 
     Protected Overrides Sub Render(ByVal output As HtmlTextWriter)
         output.Write([text])
-    End Sub 'Render
+    End Sub
 End Class 'WebCustomControl1

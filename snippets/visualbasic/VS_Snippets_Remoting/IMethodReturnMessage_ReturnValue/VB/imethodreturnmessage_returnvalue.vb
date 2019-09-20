@@ -43,7 +43,7 @@ Namespace CustomProxySample
          myMarshalByRefObject = CType(Activator.CreateInstance(myType), MarshalByRefObject)
          Dim myObject As ObjRef = RemotingServices.Marshal(myMarshalByRefObject)
          stringUri = myObject.URI
-      End Sub 'New
+      End Sub
       
 ' <Snippet2>
       Public Overrides Function Invoke(myMessage As IMessage) As IMessage
@@ -89,6 +89,6 @@ Namespace CustomProxySample
          Dim myIntValue As Integer = 200
          ' Invoke the remote method.
          myHelloServer.HelloMethod("Hello", myDoubleValue, myIntValue)
-      End Sub 'Main
+      End Sub
    End Class 'ProxySample
 End Namespace 'CustomProxySample

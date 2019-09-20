@@ -10,7 +10,7 @@ Public Class Team
 
   Public Sub New(ByVal name As String)
     _name = name
-  End Sub 'New
+  End Sub
 
   Public ReadOnly Property Name() As String
     Get
@@ -24,7 +24,7 @@ Public Class TeamList
 
   Public Sub New()
 
-  End Sub 'New
+  End Sub
 End Class 'TeamList
 
 
@@ -36,7 +36,7 @@ Public Class Division
     _name = name
     _teams = New TeamList()
 
-  End Sub 'New
+  End Sub
 
   Public ReadOnly Property Name() As String
     Get
@@ -56,7 +56,7 @@ Public Class DivisionList
 
   Public Sub New()
 
-  End Sub 'New
+  End Sub
 End Class 'DivisionList
 
 
@@ -68,7 +68,7 @@ Public Class League
     _name = name
     _divisions = New DivisionList()
 
-  End Sub 'New
+  End Sub
 
   Public ReadOnly Property Name() As String
     Get
@@ -137,6 +137,6 @@ Public Class LeagueList
         d.Teams.Add(New Team("Team Delta"))
         d.Teams.Add(New Team("Team Epsilon"))
 
-  End Sub 'New
+  End Sub
 End Class 'LeagueList
 ' </Snippet3>

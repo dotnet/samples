@@ -44,7 +44,7 @@ Public Class SamplesBitVector32
       Console.WriteLine(ControlChars.Tab + "mySect3: {0}", myBV(mySect3))
       Console.WriteLine(ControlChars.Tab + "mySect4: {0}", myBV(mySect4))
 
-   End Sub 'Main 
+   End Sub
 
 End Class 'SamplesBitVector32
 

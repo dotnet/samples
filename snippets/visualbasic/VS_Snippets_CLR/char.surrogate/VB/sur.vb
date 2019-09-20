@@ -43,7 +43,7 @@ Class Sample
       Console.WriteLine("C3) s1(1) and s1(2)? - {0}", [Char].IsSurrogatePair(s1, 1))
       Console.WriteLine("C4) s1(2) and s1(3)? - {0}", [Char].IsSurrogatePair(s1, 2))
       Console.WriteLine(divider)
-   End Sub 'Main
+   End Sub
 End Class 'Sample
 '
 'This example produces the following results:

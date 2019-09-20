@@ -46,7 +46,7 @@ Class MyInterfaceClass
       Catch e As Exception
          Console.WriteLine(("Exception : " + e.ToString()))
       End Try
-   End Sub 'Main
+   End Sub
 End Class 'MyInterfaceClass 
 ' </Snippet3>
 ' </Snippet2>   

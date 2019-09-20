@@ -26,6 +26,6 @@ Namespace SDKSample
             MyBitmapSourceExampleFrame.Content = New BitmapSourceExample()
             MyBitmapDecoderExampleFrame.Content = New BitmapDecoderExample()
 
-        End Sub 'New
+        End Sub
     End Class 'SampleViewer 
 End Namespace 'ImagingSnippetGallery

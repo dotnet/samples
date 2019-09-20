@@ -17,7 +17,7 @@ Public Class Test
     Public Shared Sub Main()
         Dim t As New Test()
         t.DeserializeObject("XFile.xml")
-    End Sub 'Main
+    End Sub
     
     
     Private Sub DeserializeObject(filename As String)
@@ -35,6 +35,6 @@ Public Class Test
         For Each xel In  x.AllElements
             Console.WriteLine((xel.LocalName & ": " & xel.Value))
         Next xel
-    End Sub 'DeserializeObject
+    End Sub
 End Class 'Test 
 ' </Snippet1>

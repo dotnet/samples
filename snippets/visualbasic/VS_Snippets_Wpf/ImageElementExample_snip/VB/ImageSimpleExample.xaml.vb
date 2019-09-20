@@ -24,7 +24,7 @@ Namespace ImageElementExample
         '-------------------^--- Syntax error: ';' expected
         Public Sub New()
 
-        End Sub 'New
+        End Sub
 
 
         Private Sub PageLoaded(ByVal sender As Object, ByVal args As RoutedEventArgs)
@@ -79,6 +79,6 @@ Namespace ImageElementExample
             ' Add Image to the UI
             myStackPanel.Children.Add(myImage1)
 
-        End Sub 'PageLoaded
+        End Sub
     End Class 'ImageSimpleExample 
 End Namespace

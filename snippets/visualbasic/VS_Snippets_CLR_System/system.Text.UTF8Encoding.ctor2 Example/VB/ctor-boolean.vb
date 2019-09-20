@@ -12,7 +12,7 @@ Class UTF8EncodingExample
         
         Console.WriteLine("utf8EmitBOM:")
         ShowArray(utf8EmitBOM.GetPreamble())
-    End Sub 'Main
+    End Sub
     
     
     Public Shared Sub ShowArray(theArray As Array)
@@ -21,6 +21,6 @@ Class UTF8EncodingExample
             Console.Write("[{0}]", o)
         Next o
         Console.WriteLine()
-    End Sub 'ShowArray
+    End Sub
 End Class 'UTF8EncodingExample
 ' </Snippet1>

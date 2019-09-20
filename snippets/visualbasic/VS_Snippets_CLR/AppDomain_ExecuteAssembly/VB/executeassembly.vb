@@ -13,7 +13,7 @@ Module Test
 
       otherDomain.ExecuteAssembly("MyExecutable.exe")
       ' Prints "MyExecutable running on otherDomain"
-   End Sub 'Main
+   End Sub
 
 End Module 'Test
 ' </Snippet1>

@@ -129,10 +129,10 @@ Class [MyClass]
         Catch e As Exception
             Console.WriteLine(e.Message.ToString())
         End Try
-    End Sub 'PermissionSetDemo
+    End Sub
 
     Overloads Shared Sub Main(ByVal args() As String)
         PermissionSetDemo()
-    End Sub 'Main
+    End Sub
 End Class '[MyClass] 
 '</Snippet1>

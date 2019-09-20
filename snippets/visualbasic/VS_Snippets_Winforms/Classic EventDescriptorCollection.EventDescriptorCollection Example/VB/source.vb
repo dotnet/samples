@@ -14,5 +14,5 @@ Public Class Form1
         ' <Snippet1>
         Dim events As EventDescriptorCollection = TypeDescriptor.GetEvents(button1)
         ' </Snippet1>
-    End Sub 'Method 
+    End Sub
 End Class 'Form1 

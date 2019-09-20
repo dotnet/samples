@@ -53,7 +53,7 @@ Public Class SamplesQueue
             Console.Write("{0}{1}", mySeparator, myObj)
         Next myObj
         Console.WriteLine()
-    End Sub 'PrintValues
+    End Sub
 
 End Class 'SamplesQueue
 

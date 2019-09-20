@@ -75,7 +75,7 @@ Public Class Form1
         Else
             MessageBox.Show("The stored data is not in the Text format.", "Test Result")
         End If
-    End Sub 'TestDataObject
+    End Sub
     ' </snippet1>
 
     Public Shared Sub Main()

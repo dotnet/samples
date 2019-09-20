@@ -21,7 +21,7 @@ Public Class PrivateComponentAttribute_Example
         ' Display some output.
         MsgBox("Private component called successfully.")
     
-    End Sub 'Example
+    End Sub
 End Class 'PrivateComponentAttribute_Example
 ' </snippet1>
 
@@ -35,7 +35,7 @@ Public Class PrivateComponentAttribute_Test
         ' Call a method on the class.
         example.Example()
     
-    End Sub 'Test
+    End Sub
 End Class 'PrivateComponentAttribute_Test
 ' </snippet0>
 
@@ -44,5 +44,5 @@ Public Class Test
     
     Public Shared Sub Main() 
     
-    End Sub 'Main
+    End Sub
 End Class 'Test 

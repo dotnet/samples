@@ -31,7 +31,7 @@ Class HttpWebRequestBeginGetRequest
         ' operation completes. A real world application
         ' could do something useful such as updating its user interface. 
         allDone.WaitOne()
-    End Sub ' Main
+    End Sub
 
     Private Shared Sub GetRequestStreamCallback(ByVal asynchronousResult As IAsyncResult)
         Dim request As HttpWebRequest = CType(asynchronousResult.AsyncState, HttpWebRequest)
@@ -52,7 +52,7 @@ Class HttpWebRequestBeginGetRequest
         Dim result As IAsyncResult = _
             CType(request.BeginGetResponse(AddressOf GetResponseCallback, request), _
             IAsyncResult)
-    End Sub ' ReadRequestStreamCallback
+    End Sub
 
     Private Shared Sub GetResponseCallback(ByVal asynchronousResult As IAsyncResult)
         Dim request As HttpWebRequest = CType(asynchronousResult.AsyncState, HttpWebRequest)
@@ -74,7 +74,7 @@ Class HttpWebRequestBeginGetRequest
         ' Release the HttpWebResponse.
         allDone.Set()
         response.Close()
-    End Sub ' ReadResponseCallback
+    End Sub
             
     '  </Snippet1>
 End Class ' HttpWebRequest_BeginGetRequest

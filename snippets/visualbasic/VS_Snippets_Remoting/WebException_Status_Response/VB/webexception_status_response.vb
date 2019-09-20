@@ -33,5 +33,5 @@ Public Class WebException_Status_Response
             Console.WriteLine(e.Message)
         End Try
         ' </Snippet1>        
-    End Sub 'Main
+    End Sub
 End Class 'WebException_Status_Response

@@ -19,7 +19,7 @@ Class NumberFormatInfoSample
       nfi.CurrencyDecimalSeparator = " "
       Console.WriteLine(myInt.ToString("C", nfi))
 
-   End Sub 'Main 
+   End Sub
 
 End Class 'NumberFormatInfoSample
 

@@ -277,7 +277,7 @@ Namespace EventLogSamples
 
             EventInstanceSamples()
         
-        End Sub 'Main
+        End Sub
 
     End Class 'WriteEvent
 End Namespace 'EventLogSamples

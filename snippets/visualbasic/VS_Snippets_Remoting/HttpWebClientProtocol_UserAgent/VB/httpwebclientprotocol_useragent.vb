@@ -67,7 +67,7 @@ Public Class HttpWebClientProtocolClass
       objMyMath.UserAgent = "My Agent"
       Console.WriteLine("Modified user agent is: " & objMyMath.UserAgent)
 ' </Snippet1>
-   End Sub 'Main 
+   End Sub
 End Class 'HttpWebClientProtocolClass
 
 End Namespace

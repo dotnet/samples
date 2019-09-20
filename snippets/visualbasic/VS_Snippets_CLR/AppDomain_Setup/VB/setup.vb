@@ -21,6 +21,6 @@ Module Test
       ' Create the AppDomain
       Dim newDomain As AppDomain = AppDomain.CreateDomain("newDomain", evidence, setup)
       ' </Snippet1>
-   End Sub 'Main
+   End Sub
 
 End Module 'Test

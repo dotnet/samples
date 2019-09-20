@@ -42,7 +42,7 @@ Namespace Mssc.TransportProtocols.Utilities
       Private Shared Sub MulticastOptionProperties()
         Console.WriteLine(("Current multicast group is: " + mcastOption.Group.ToString()))
         Console.WriteLine(("Current multicast local address is: " + mcastOption.LocalAddress.ToString()))
-      End Sub 'MulticastOptionProperties
+      End Sub
 
 
       ' </Snippet3>
@@ -72,7 +72,7 @@ Namespace Mssc.TransportProtocols.Utilities
         Catch e As Exception
           Console.WriteLine(e.ToString())
         End Try
-      End Sub 'StartMulticast
+      End Sub
 
 
       Private Shared Sub ReceiveBroadcastMessages()
@@ -99,7 +99,7 @@ Namespace Mssc.TransportProtocols.Utilities
         Catch e As Exception
           Console.WriteLine(e.ToString())
         End Try
-      End Sub 'ReceiveBrodcastMessages
+      End Sub
 
 
       Public Shared Sub Main(ByVal args() As String)
@@ -118,7 +118,7 @@ Namespace Mssc.TransportProtocols.Utilities
 
         ' Receive broadcast messages.
         ReceiveBroadcastMessages()
-      End Sub 'Main
+      End Sub
     End Class 'TestMulticastOption
 
   End Module

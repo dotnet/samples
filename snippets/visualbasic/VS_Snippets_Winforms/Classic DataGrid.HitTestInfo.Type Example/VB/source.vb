@@ -14,7 +14,7 @@ Public Class Form1
         ' Use the DataGrid control's HitTest method with the x and y properties.
         myHitTest = dataGrid1.HitTest(e.X, e.Y)
         Console.WriteLine(("Hit " & ReturnHitTest(myHitTest.Type)))
-    End Sub 'dataGrid1_MouseDown
+    End Sub
     
     
     Private Function ReturnHitTest(hit As System.Windows.Forms.DataGrid.HitTestType) As String

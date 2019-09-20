@@ -12,7 +12,7 @@ Namespace SamplesAspNet.Config
         Public Shared Sub Main(ByVal args() As String)
             Dim config As Configuration = WebConfigurationManager.OpenWebConfiguration("/MyApp")
             config.SaveAs("c:\MyApp.web.config", ConfigurationSaveMode.Full, True)
-        End Sub 'Main 
+        End Sub
 
     End Class 
 

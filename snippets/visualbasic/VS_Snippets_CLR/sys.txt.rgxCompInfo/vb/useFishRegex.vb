@@ -35,7 +35,7 @@ Class UseFishRegEx
                 Next j
             Next i
         Next m
-    End Sub 'Main
+    End Sub
 End Class 'UseFishRegEx
 
 '

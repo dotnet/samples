@@ -8,7 +8,7 @@ Class Sample
       Console.WriteLine("Is Thursday the day of the week for {0:d}?: {1}", _
                          dt, dt.DayOfWeek = DayOfWeek.Thursday)
       Console.WriteLine("The day of the week for {0:d} is {1}.", dt, dt.DayOfWeek)
-   End Sub 'Main
+   End Sub
 End Class 'Sample
 '
 'This example produces the following results:

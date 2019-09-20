@@ -59,7 +59,7 @@ Public Class SamplesArrayList
             Console.Write("{0}{1}", mySeparator, myArr(i))
         Next i
         Console.WriteLine()
-    End Sub 'PrintValues
+    End Sub
     
 End Class
 

@@ -24,12 +24,12 @@ Namespace Samples.AspNet.VB
         ' TextWriter constructor.
         Public Sub New(writer As TextWriter)
           MyClass.New(writer, DefaultTabString)
-        End Sub 'New
+        End Sub
 
 
         Public Sub New(writer As TextWriter, tabString As String)
           MyBase.New(writer, tabString)
-        End Sub 'New
+        End Sub
 ' </snippet5>
 
 

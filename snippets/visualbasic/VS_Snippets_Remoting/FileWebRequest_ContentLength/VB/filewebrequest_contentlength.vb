@@ -66,5 +66,5 @@ Class FileWebRequest_ContentLen
                 Console.WriteLine(("The UriFormatException is :" + e.Message))
             End Try
         End If
-    End Sub ' Main
+    End Sub
 End Class ' FileWebRequest_ContentLen

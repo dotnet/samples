@@ -37,7 +37,7 @@ Public Class Test
         ' Display its open constructed base type.
         DisplayGenericTypeInfo(derivedType.BaseType)
     
-    End Sub 'Main
+    End Sub
     
     Private Shared Sub DisplayGenericTypeInfo(ByVal t As Type) 
         Console.WriteLine(vbCrLf & "{0}", t)
@@ -74,7 +74,7 @@ Public Class Test
             Next tParam
         End If
     
-    End Sub 'DisplayGenericTypeInfo
+    End Sub
 End Class 'Test
 
 ' This example produces the following output:

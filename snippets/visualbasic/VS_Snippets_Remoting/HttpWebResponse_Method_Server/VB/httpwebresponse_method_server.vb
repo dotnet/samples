@@ -27,7 +27,7 @@ Class HttpWebResponseSnippet
         Console.WriteLine("Press any key to continue...")
         Console.ReadLine()
         Return
-    End Sub 'Main
+    End Sub
     
     
     Public Shared Sub GetPage(url As [String])
@@ -50,5 +50,5 @@ Class HttpWebResponseSnippet
         End Try
 ' </Snippet1> 
 ' </Snippet2>
-    End Sub 'GetPage
+    End Sub
 End Class 

@@ -13,6 +13,6 @@ Public Class GetDirectoriesTest
         For Each dri In diArr
             Console.WriteLine(dri.Name)
         Next dri
-    End Sub 'Main
+    End Sub
 End Class 'GetDirectoriesTest
 ' </snippet1>

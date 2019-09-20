@@ -142,7 +142,7 @@ Class ParamBuilderDemo
       thePool = CDbl(passMe(0))
       Console.WriteLine("The new amount in the pool is ${0}", thePool)
 
-   End Sub 'Main 
+   End Sub
 
 End Class 'ParamBuilderDemo
 

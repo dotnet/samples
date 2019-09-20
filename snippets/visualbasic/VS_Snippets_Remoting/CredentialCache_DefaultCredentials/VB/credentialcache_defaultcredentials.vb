@@ -63,5 +63,5 @@ Class CredentialCache_DefaultCredentials
         Catch e As Exception
             Console.WriteLine(ControlChars.Cr + "The following exception was raised : {0}", e.Message)
         End Try
-    End Sub 'Main
+    End Sub
 End Class 'CredentialCache_DefaultCredentials

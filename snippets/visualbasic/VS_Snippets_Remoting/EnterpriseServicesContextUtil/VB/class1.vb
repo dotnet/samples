@@ -15,7 +15,7 @@ Public Class ContextUtil_ActivityId
         ' Display the ActivityID associated with the current COM+ context.
         MsgBox("Activity ID: " & ContextUtil.ActivityId.ToString())
 
-    End Sub 'Example
+    End Sub
 End Class 'ContextUtil_ActivityId
 ' </snippet1>
 
@@ -30,7 +30,7 @@ Public Class ContextUtil_ApplicationInstanceId
         MsgBox("Application Instance ID: " & ContextUtil.ApplicationInstanceId.ToString())
 
     
-    End Sub 'Example
+    End Sub
 End Class 'ContextUtil_ApplicationInstanceId
 ' </snippet2>
 
@@ -44,7 +44,7 @@ Public Class ContextUtil_DisableCommit
         ' current COM+ context.
         ContextUtil.DisableCommit()
     
-    End Sub 'Example
+    End Sub
 End Class 'ContextUtil_DisableCommit
 ' </snippet3>
 
@@ -58,7 +58,7 @@ Public Class ContextUtil_EnableCommit
         ' current COM+ context.
         ContextUtil.EnableCommit()
     
-    End Sub 'Example
+    End Sub
 End Class 'ContextUtil_EnableCommit
 ' </snippet4>
 
@@ -72,7 +72,7 @@ Public Class ContextUtil_IsInTransaction
         ' transaction.
         MsgBox("Current context enlisted in transaction: " & ContextUtil.IsInTransaction)
 
-    End Sub 'Example
+    End Sub
 End Class 'ContextUtil_IsInTransaction
 ' </snippet5>
 
@@ -86,7 +86,7 @@ Public Class ContextUtil_IsSecurityEnabled
         ' context.
         MsgBox("Role-based security active in current context: " & ContextUtil.IsSecurityEnabled)
 
-    End Sub 'Example
+    End Sub
 End Class 'ContextUtil_IsSecurityEnabled
 ' </snippet6>
 
@@ -100,7 +100,7 @@ Public Class ContextUtil_TransactionId
         ' is enlisted.
         MsgBox("Transaction ID: " & ContextUtil.TransactionId.ToString())
 
-    End Sub 'Example
+    End Sub
 End Class 'ContextUtil_TransactionId
 ' </snippet7>
 
@@ -111,7 +111,7 @@ Public Class Test
 
     Public Shared Sub Main()
 
-    End Sub 'Main
+    End Sub
 End Class 'Test 
 
 

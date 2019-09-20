@@ -25,7 +25,7 @@ Class Window1
     Public Sub New() 
         'InitializeComponent()
     
-    End Sub 'New
+    End Sub
     
     
     Sub CodeExamples() 
@@ -52,7 +52,7 @@ Class Window1
         End If
         '</Snippet9>
 
-    End Sub 'CodeExamples
+    End Sub
     
     '<Snippet12>
     Private Sub buttonSaveAsClick(ByVal sender As Object, ByVal e As RoutedEventArgs) 
@@ -66,7 +66,7 @@ Class Window1
             fs.Close()
         End If
     
-    End Sub 'buttonSaveAsClick
+    End Sub
     '</Snippet12>
 
     '<Snippet13>
@@ -81,7 +81,7 @@ Class Window1
             fs.Close()
         End If
     
-    End Sub 'buttonLoadClick
+    End Sub
     '</Snippet13>
     'Window1 
 End Class

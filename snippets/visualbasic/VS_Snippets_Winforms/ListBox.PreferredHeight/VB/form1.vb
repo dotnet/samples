@@ -75,6 +75,6 @@
       Next x
       ' Set the height of the ListBox to the preferred height to display all items.
       listBox1.Height = listBox1.PreferredHeight
-   End Sub 'SizeMyListBox
+   End Sub
    '</Snippet1>
 End Class

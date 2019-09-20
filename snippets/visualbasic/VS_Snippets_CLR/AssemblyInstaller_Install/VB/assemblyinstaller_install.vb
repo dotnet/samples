@@ -46,7 +46,7 @@ Class MyInstallClass
       Catch
       End Try
 
-   End Sub 'Main
+   End Sub
 End Class 'MyInstallClass 
 ' </Snippet2>
 ' </Snippet3>

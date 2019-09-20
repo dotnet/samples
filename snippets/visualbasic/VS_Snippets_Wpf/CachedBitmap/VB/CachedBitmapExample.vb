@@ -18,7 +18,7 @@ Namespace SDKSamples
             MyBase.OnStartup(e)
             CreateAndShowMainWindow()
 
-        End Sub 'OnStartup
+        End Sub
 
         Private Sub CreateAndShowMainWindow()
 
@@ -69,7 +69,7 @@ Namespace SDKSamples
             theWindow.Content = myStackPanel
             theWindow.Show()
 
-        End Sub 'CreateAndShowMainWindow
+        End Sub
     End Class 'MyApp
 
     ' Define a static entry class
@@ -81,6 +81,6 @@ Namespace SDKSamples
             Dim app As New MyApp()
             app.Run()
 
-        End Sub 'Main
+        End Sub
     End Class 'EntryClass
 End Namespace 'SDKSamples

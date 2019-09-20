@@ -16,7 +16,7 @@ Namespace SimpleControlSamples
                 Controls(0).RenderControl(output)
                 output.Write("</H2>")
             End If
-        End Sub 'Render
+        End Sub
     End Class 'InnerContent
 End Namespace 'SimpleControlSamples
 ' </Snippet1>

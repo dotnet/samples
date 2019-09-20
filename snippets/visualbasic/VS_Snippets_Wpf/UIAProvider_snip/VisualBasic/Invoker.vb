@@ -53,7 +53,7 @@ Public Class InvokePatternProvider
         rawElementProvider = providerElement
         ProviderControl = control
 
-    End Sub 'New
+    End Sub
 
 
     ''' <summary>
@@ -77,5 +77,5 @@ Public Class InvokePatternProvider
         ' because it is illegal to update the UI from a different thread.
         'Dim onMouseEvent As MouseEventHandler = AddressOf ProviderControl.RootButtonControl_MouseDown
         'ProviderControl.BeginInvoke(onMouseEvent, New Object() {Me, mouseArgs})
-    End Sub 'IInvokeProvider.Invoke
+    End Sub
 End Class 'InvokePatternProvider

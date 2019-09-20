@@ -23,7 +23,7 @@ Public Class SamplesThaiBuddhistCalendar
          Console.WriteLine()
       Next y
 
-   End Sub 'Main 
+   End Sub
 
 End Class 'SamplesThaiBuddhistCalendar
 

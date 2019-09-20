@@ -38,7 +38,7 @@ Public Class SamplesStringCollection
       Console.WriteLine("After clearing the collection:")
       PrintValues(myCol)
 
-   End Sub 'Main
+   End Sub
 
    Public Shared Sub PrintValues(myCol As IEnumerable)
       Dim obj As [Object]
@@ -46,7 +46,7 @@ Public Class SamplesStringCollection
          Console.WriteLine("   {0}", obj)
       Next obj
       Console.WriteLine()
-   End Sub 'PrintValues
+   End Sub
 
 End Class 'SamplesStringCollection 
 

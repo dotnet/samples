@@ -6,7 +6,7 @@ Namespace MiscCompModSamplesVB
     Public Class ComponentChangingEventArgsExample
 
         Public Sub New()
-        End Sub 'New
+        End Sub
 
         '<Snippet1>
         ' This example method creates a ComponentChangingEventArgs using the specified arguments.

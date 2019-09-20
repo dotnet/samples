@@ -78,7 +78,7 @@ Public Class Form1
         AddHandler menuItem1.Click, AddressOf Me.menuItem1_Click
         AddHandler menuItem2.Click, AddressOf Me.menuItem2_Click
 
-    End Sub 'AddContextmenu
+    End Sub
 
 
     Private Sub menuItem1_Click(ByVal sender As Object, ByVal e As System.EventArgs)
@@ -89,7 +89,7 @@ Public Class Form1
 
         ' Display the shortcut menu information in a message box.
         MessageBox.Show(textReport, "The ContextMenu Information")
-    End Sub 'menuItem1_Click
+    End Sub
 
 
     Private Sub menuItem2_Click(ByVal sender As Object, ByVal e As System.EventArgs)
@@ -100,7 +100,7 @@ Public Class Form1
 
         ' Display the shortcut menu information in a message box.
         MessageBox.Show(textReport, "The ContextMenu Information")
-    End Sub 'menuItem2_Click
+    End Sub
     ' </snippet1>
 
 

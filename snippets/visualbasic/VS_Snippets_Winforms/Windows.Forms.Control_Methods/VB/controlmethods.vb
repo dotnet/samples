@@ -9,7 +9,7 @@ Namespace SetBoundsCore
       
       Public Sub New()
          InitializeComponent()
-      End Sub 'New
+      End Sub
       
       Private Sub InitializeComponent()
          ' 
@@ -18,7 +18,7 @@ Namespace SetBoundsCore
          Me.BackColor = System.Drawing.SystemColors.Desktop
          Me.Name = "MyUserControl"
          Me.Size = New System.Drawing.Size(224, 88)
-      End Sub 'InitializeComponent
+      End Sub
        
 
 ' <snippet1>

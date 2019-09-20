@@ -38,7 +38,7 @@ Public Class SamlSecurityTokenProvider
         Me.assertion = assertion
         Me.proofToken = proofToken
 
-    End Sub 'New
+    End Sub
 
 
     '/ <summary>

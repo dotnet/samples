@@ -21,7 +21,7 @@ Public Class Page1
         
         ' Add column to Columns collection.
         ItemsGrid.Columns.AddAt(2, AddColumn)
-    End Sub 'Page_Init 
+    End Sub
     ' </Snippet1>
 End Class 'Page1
 

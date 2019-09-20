@@ -91,7 +91,7 @@ Class Program
             End If
         Next scTemp
 
-    End Sub 'Main 
+    End Sub
 End Class 'Program
 ' This sample displays the following output if the Simple Service
 ' sample is running:

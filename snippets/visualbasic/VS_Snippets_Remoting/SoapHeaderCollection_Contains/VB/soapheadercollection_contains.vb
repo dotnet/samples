@@ -34,7 +34,7 @@ Public Class MySoapExtension
    ' Save the name of the log file that shall save the SOAP messages.
    Public Overrides Sub Initialize(initializer As Object)
       myFilename = CStr(initializer)
-   End Sub 'Initialize
+   End Sub
    
    ' Process the SOAP message received and write to log file.
    Public Overrides Sub ProcessMessage(message As SoapMessage)
@@ -48,7 +48,7 @@ Public Class MySoapExtension
          Case Else
                Throw New Exception("invalid stage")
       End Select
-   End Sub 'ProcessMessage
+   End Sub
    
    ' Write the contents of the outgoing SOAP message to the log file.
    Public Sub WriteOutput(message As SoapClientMessage)
@@ -62,7 +62,7 @@ Public Class MySoapExtension
       myFileStream.Close()
       newStream.Position = 0
       Copy(newStream, oldStream)
-   End Sub 'WriteOutput
+   End Sub
    
    ' Write the contents of the incoming SOAP message to the log file.
    Public Sub WriteInput(message As SoapClientMessage)
@@ -76,7 +76,7 @@ Public Class MySoapExtension
       myStreamWriter.Close()
       myFileStream.Close()
       newStream.Position = 0
-   End Sub 'WriteInput
+   End Sub
    
    ' Return a new 'MemoryStream' instance for SOAP processing.
    Public Overrides Function ChainStream(myStream As Stream) As Stream
@@ -91,7 +91,7 @@ Public Class MySoapExtension
       Dim myTextWriter = New StreamWriter(toStream)
       myTextWriter.WriteLine(myTextReader.ReadToEnd())
       myTextWriter.Flush()
-   End Sub 'Copy
+   End Sub
 End Class 'MySoapExtension
 
 ' A 'SoapExtensionAttribute' that can be associated with web service method.
@@ -105,7 +105,7 @@ Public Class MySoapExtensionAttribute
    Public Sub New()
       MyBase.New()
       myFilename = "C:\logClient.txt"
-   End Sub 'New
+   End Sub
    
    ' Return the type of 'MySoapExtension' class.
    Public Overrides ReadOnly Property ExtensionType() As Type
@@ -193,7 +193,7 @@ Public Class MathService
    <System.Diagnostics.DebuggerStepThroughAttribute()>  _
    Public Sub New()
       Me.Url = "http://localhost/MathService_SoapHeaderCollection.vb.asmx"
-   End Sub 'New
+   End Sub
    
    Public Function BeginAdd(xValue As System.Single, yValue As System.Single, _
          callback As System.AsyncCallback, asyncState As Object) As System.IAsyncResult

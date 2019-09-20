@@ -36,7 +36,7 @@ Namespace CodeDomSamples
             '   End Class
             '</Snippet2>
 
-        End Sub 'New 
+        End Sub
     End Class 'CodeGotoStatementExample 
 End Namespace 'CodeDomSamples
 '</Snippet1>

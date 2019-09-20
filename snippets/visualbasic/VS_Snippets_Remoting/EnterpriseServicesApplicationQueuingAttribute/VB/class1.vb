@@ -31,7 +31,7 @@ Public Class ApplicationQueuingExample
         MsgBox("ApplicationQueuingAttribute.Enabled: " & attribute.Enabled)
 
         ' </snippet2>
-    End Sub 'ApplicationQueuingAttribute_Enabled
+    End Sub
 
 
 
@@ -55,7 +55,7 @@ Public Class ApplicationQueuingExample
         MsgBox("ApplicationQueuingAttribute.QueueListenerEnabled: " & attribute.QueueListenerEnabled)
 
         ' </snippet3>
-    End Sub 'ApplicationQueuingAttribute_QueueListenerEnabled
+    End Sub
 
 
 
@@ -78,7 +78,7 @@ Public Class ApplicationQueuingExample
         ' property.
         MsgBox("ApplicationQueuingAttribute.MaxListenerThreads: " & attribute.MaxListenerThreads)
         ' </snippet4>
-    End Sub 'ApplicationQueuingAttribute_MaxListenerThreads
+    End Sub
 
 End Class 'ApplicationQueuingExample
 
@@ -97,5 +97,5 @@ Public Class TestClient
         'example.ApplicationQueuingAttribute_QueueListenerEnabled()
         'example.ApplicationQueuingAttribute_MaxListenerThreads()
     
-    End Sub 'Main
+    End Sub
 End Class 'TestClient

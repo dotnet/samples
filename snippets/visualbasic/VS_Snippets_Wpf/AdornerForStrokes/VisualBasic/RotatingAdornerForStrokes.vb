@@ -57,7 +57,7 @@ Public Class RotatingStrokesAdorner
 
         strokeBounds = AdornedStrokes.GetBounds()
 
-    End Sub 'New
+    End Sub
     
     
     ''' <summary>
@@ -145,7 +145,7 @@ Public Class RotatingStrokesAdorner
         rotation = New RotateTransform(angle, center.X, center.Y)
         outline.RenderTransform = rotation
 
-    End Sub 'rotateHandle_DragDelta
+    End Sub
     
     
     ''' <summary>
@@ -169,7 +169,7 @@ Public Class RotatingStrokesAdorner
         ' Redraw rotateHandle.
         Me.InvalidateArrange()
 
-    End Sub 'rotateHandle_DragCompleted
+    End Sub
     
     ''' <summary>
     ''' Gets the strokes of the adorned element 

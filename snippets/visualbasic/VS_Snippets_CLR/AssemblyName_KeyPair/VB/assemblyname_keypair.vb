@@ -54,7 +54,7 @@ Public Class AssemblyName_CodeBase
       ' Set the method with name 'Main' as the entry point in the assembly.
       myAssemblyBuilder.SetEntryPoint(myMethodBuilder)
       myAssemblyBuilder.Save(fileName)
-   End Sub 'MakeAssembly
+   End Sub
    
    
    Public Shared Sub Main()
@@ -104,7 +104,7 @@ Public Class AssemblyName_CodeBase
          Console.Write("{0:x2}", pt(i))
       Next i
       End If
-   End Sub 'Main 
+   End Sub
 End Class 'AssemblyName_CodeBase 
 ' </Snippet5>
 ' </Snippet4>

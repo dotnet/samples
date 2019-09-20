@@ -48,7 +48,7 @@ Public Class MyEnumBuilderSample
       Catch e As Exception
          Console.WriteLine("The following is the exception raised: " + e.Message)
       End Try
-   End Sub 'Main
+   End Sub
    
    Private Shared Sub CreateCallee(myAppDomain As AppDomain, access As AssemblyBuilderAccess)
       ' Create a name for the assembly.
@@ -70,7 +70,7 @@ Public Class MyEnumBuilderSample
       Dim myFieldBuilder2 As FieldBuilder = myEnumBuilder.DefineLiteral("FieldTwo", 2)
       
       myEnumBuilder.CreateType()
-   End Sub 'CreateCallee
+   End Sub
 End Class 'MyEnumBuilderSample
 ' </Snippet5>
 ' </Snippet4>

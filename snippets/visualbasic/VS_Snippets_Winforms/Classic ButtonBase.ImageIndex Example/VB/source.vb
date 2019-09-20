@@ -18,6 +18,6 @@ Public Class Form1
         button1.ImageList = ImageList1
         ' Select the image from the ImageList (using the ImageIndex property).    
         button1.ImageIndex = 0
-    End Sub 'AddMyImage
+    End Sub
     ' </Snippet1>
 End Class 'Form1 

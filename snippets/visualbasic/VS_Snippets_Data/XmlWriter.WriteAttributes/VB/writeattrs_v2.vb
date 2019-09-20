@@ -30,6 +30,6 @@ Public Class Sample
       writer.Close()
       reader.Close()
 
-    End Sub 'Main
+    End Sub
 End Class 'Sample
 '</snippet1>

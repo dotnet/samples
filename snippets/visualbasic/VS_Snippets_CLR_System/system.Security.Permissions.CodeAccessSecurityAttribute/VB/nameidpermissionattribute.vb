@@ -18,7 +18,7 @@ Namespace MyPermissionAttribute
 
         Public Sub New(ByVal action As SecurityAction)
             MyBase.New(action)
-        End Sub 'New
+        End Sub
 
 
         Public Property Name() As String

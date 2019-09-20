@@ -8,7 +8,7 @@ Public Class MyTypeDelegator
     Public Sub New(ByVal myType As Type)
         MyBase.New(myType)
         Me.myType = myType
-    End Sub 'New
+    End Sub
     ' Override Type.HasElementTypeImpl().
     Protected Overrides Function HasElementTypeImpl() As Boolean
         ' Determine whether the type is an array.
@@ -53,6 +53,6 @@ Public Class Type_HasElementTypeImpl
         Catch e As Exception
             Console.WriteLine("Exception: {0}", e.Message.ToString())
         End Try
-    End Sub 'Main
+    End Sub
 End Class 'Type_HasElementTypeImpl
 ' </Snippet1>

@@ -7,7 +7,7 @@ Namespace MiscCompModSamples
     Public Class ComponentEventArgsExample
 
         Public Sub New()
-        End Sub 'New
+        End Sub
 
         '<Snippet1>
         ' This example method creates a ComponentEventArgs using the specified argument.

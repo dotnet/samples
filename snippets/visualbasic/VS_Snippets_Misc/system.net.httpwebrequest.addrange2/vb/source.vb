@@ -54,7 +54,7 @@ Class HttpWebRequest_AddRange_int_int
             Console.WriteLine(ControlChars.Cr + "Exception Caught!")
             Console.WriteLine("Message :{0} ", e.Message)
         End Try
-    End Sub ' Main
+    End Sub
 End Class ' HttpWebRequest_AddRange_int_int 
 
 

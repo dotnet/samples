@@ -19,7 +19,7 @@ Class Type_TypeHandle
         Catch e As Exception
             Console.WriteLine("Exception: {0}", e.Message.ToString())
         End Try
-    End Sub 'Main
+    End Sub
 
     Public Shared Sub DisplayTypeHandle(ByVal myTypeHandle As RuntimeTypeHandle)
         ' Get the type from the handle.
@@ -27,6 +27,6 @@ Class Type_TypeHandle
         ' Display the type.
         Console.WriteLine(ControlChars.NewLine + "Displaying the type from the handle:" + ControlChars.NewLine)
         Console.WriteLine("The type is {0}.", myType.ToString())
-    End Sub 'DisplayTypeHandle
+    End Sub
 End Class 'Type_TypeHandle
 ' </Snippet1>

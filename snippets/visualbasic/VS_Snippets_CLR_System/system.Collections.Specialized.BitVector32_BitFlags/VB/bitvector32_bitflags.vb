@@ -27,7 +27,7 @@ Public Class SamplesBitVector32
       Console.WriteLine("   myBit3 = TRUE:   {0}", myBV.ToString())
       myBV(myBit5) = True
       Console.WriteLine("   myBit5 = TRUE:   {0}", myBV.ToString())
-   End Sub 'Main 
+   End Sub
 End Class 'SamplesBitVector32
 
 

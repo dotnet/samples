@@ -12,7 +12,7 @@ Class UIAInvokePattern_snippets
     ''' </summary>
     Public Sub New()
 
-    End Sub 'New
+    End Sub
 
     ' <Snippet101>
     '''--------------------------------------------------------------------
@@ -41,6 +41,6 @@ Class UIAInvokePattern_snippets
         
         invokePattern.Invoke()
     
-    End Sub 'InvokeControl
+    End Sub
     ' </Snippet101>
 End Class 'UIAInvokePattern_snippets 

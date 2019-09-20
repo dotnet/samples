@@ -66,5 +66,5 @@ Class Form1
         Application.SetCompatibleTextRenderingDefault(False)
         Application.Run(New Form1())
     
-    End Sub 'Main
+    End Sub
 End Class 'Form1

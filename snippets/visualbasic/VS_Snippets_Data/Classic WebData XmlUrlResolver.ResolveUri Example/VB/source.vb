@@ -19,6 +19,6 @@ Public Class Sample
         Console.WriteLine(reader.ReadOuterXml())
      End While
         
-  End Sub 'New 
+  End Sub
 End Class 'Sample
 ' </Snippet1>

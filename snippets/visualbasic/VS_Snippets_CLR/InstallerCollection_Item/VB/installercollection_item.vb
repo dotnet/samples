@@ -52,5 +52,5 @@ Public Class InstallerCollection_Item
       Catch e As Exception
          Console.WriteLine("Exception raised : {0}", e.Message)
       End Try
-   End Sub 'Main
+   End Sub
 End Class 'InstallerCollection_Item

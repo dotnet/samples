@@ -32,7 +32,7 @@ Public Class MustRunInClientContextAttribute_Value
         ' Display the value of the attribute's Value property.
         MsgBox("MustRunInClientContextAttribute.Value: " & attribute.Value)
     
-    End Sub 'ValueExample
+    End Sub
 End Class 'MustRunInClientContextAttribute_Value
 ' </snippet3>
 
@@ -49,5 +49,5 @@ Public Class MustRunInClientContextAttribute_Example
         ' Demonstrate the MustRunInClientContextAttribute properties.
         valueExample.ValueExample()
     
-    End Sub 'Main
+    End Sub
 End Class 'MustRunInClientContextAttribute_Example

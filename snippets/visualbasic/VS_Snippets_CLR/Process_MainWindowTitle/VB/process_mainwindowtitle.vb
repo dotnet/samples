@@ -26,6 +26,6 @@ Class MainWindowTitleClass
         Catch e As Exception
             Console.Write($" Message : {e.Message}")
         End Try
-    End Sub 'Main
+    End Sub
 End Class 'MainWindowTitleClass
 ' </Snippet1>

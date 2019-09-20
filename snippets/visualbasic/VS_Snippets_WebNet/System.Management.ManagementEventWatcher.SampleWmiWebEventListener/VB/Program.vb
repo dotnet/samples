@@ -63,7 +63,7 @@ Namespace SamplesAspNet
                     ev("EventMessage"))
             End Select
 
-        End Sub 'DisplayEventInformation .
+        End Sub
 
         ' The main entry point for the application.
         Public Shared Sub Main(ByVal args() As String)
@@ -122,7 +122,7 @@ Namespace SamplesAspNet
                 End Try
             End While
 
-        End Sub 'Main 
+        End Sub
 
     End Class 'SampleWmiWebEventListener 
 

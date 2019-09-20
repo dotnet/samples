@@ -47,7 +47,7 @@ Public Class Test
         Console.WriteLine(vbCrLf & "The definition is the same: {0}", _
             miDef Is mi)
         '</Snippet4>  
-    End Sub 'Main
+    End Sub
       
     Private Shared Sub DisplayGenericMethodInfo(ByVal mi As MethodInfo) 
         Console.WriteLine(vbCrLf & mi.ToString())
