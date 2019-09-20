@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 class Program
 {
-    //<snippet02>
     static void Main()
     {
         //<snippet01>
@@ -53,5 +52,4 @@ class Program
         */
         //</snippet01>
     }
-    //</snippet02>
 }
