@@ -9,6 +9,10 @@ namespace bindings
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public int CurrentPrice = 0;
+        public int CurrentPrice { get; set; } = 0;
+
+        public int StartPrice { get; set; } = 50;
+
+        public DateTime StartDate { get; set; } = DateTime.Now;
     }
 }
