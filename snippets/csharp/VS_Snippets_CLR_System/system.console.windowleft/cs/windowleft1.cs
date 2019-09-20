@@ -8,7 +8,7 @@ public class Example
       ConsoleKeyInfo key;
       bool moved = false;
             
-      Console.BufferWidth = 120;
+      Console.BufferWidth += 4;
       Console.Clear();
       
       ShowConsoleStatistics();
