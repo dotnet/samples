@@ -99,8 +99,6 @@ namespace TransferLearningTF
             Console.WriteLine($"PerClassLogLoss is: {String.Join(" , ", metrics.PerClassLogLoss.Select(c => c.ToString()))}");
             //</SnippetDisplayMetrics>
 
-            mlContext.Model.Save(model, trainingData.Schema, "model.zip");
-
             // <SnippetReturnModel>
             return model;
             // </SnippetReturnModel>
