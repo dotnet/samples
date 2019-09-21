@@ -4,31 +4,29 @@ using System.IO;
 using System.Xml;
 using System.Text;
 
-class TestBase64 {
+public static class TestBase64
+{
 
     private const int bufferSize = 4096;
 
     public static void Main(string[] args)
     {
-
-        var testBase64 = new TestBase64();
-
         // Check that the usage string is correct.
-        if (args.Length < 2 )
+        if (args.Length < 2)
         {
-            testBase64.Usage();
+            TestBase64.Usage();
             return;
         }
 
         var fileOld = new FileStream(args[0], FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
-        testBase64.EncodeXmlFile("temp.xml", fileOld);
+        TestBase64.EncodeXmlFile("temp.xml", fileOld);
 
         var fileNew = new FileStream(args[1], FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite);
 
-        testBase64.DecodeOrignalObject("temp.xml", fileNew);
+        TestBase64.DecodeOrignalObject("temp.xml", fileNew);
 
         // Compare the two files.
-        if (testBase64.CompareResult(fileOld, fileNew))
+        if (TestBase64.CompareResult(fileOld, fileNew))
         {
             Console.WriteLine($"The recreated binary file {args[1]} is the same as {args[0]}");
         }
@@ -46,7 +44,7 @@ class TestBase64 {
 
     // Use the WriteBase64 method to create an XML document.  The object  
     // passed by the user is encoded and included in the document.
-    public void EncodeXmlFile(string xmlFileName, FileStream fileOld)
+    public static void EncodeXmlFile(string xmlFileName, FileStream fileOld)
     {
 
         var buffer = new byte[bufferSize];
@@ -90,7 +88,7 @@ class TestBase64 {
 
     // Use the ReadBase64 method to decode the new XML document 
     // and generate the original object.
-    public void DecodeOrignalObject(string xmlFileName, FileStream fileNew)
+    public static void DecodeOrignalObject(string xmlFileName, FileStream fileNew)
     {
 
         var buffer = new byte[bufferSize];
@@ -114,7 +112,7 @@ class TestBase64 {
     }
 
     // Compare the two files.
-    public bool CompareResult(FileStream fileOld, FileStream fileNew) {
+    public static bool CompareResult(FileStream fileOld, FileStream fileNew) {
 
         int readByteOld = 0;
         int readByteNew = 0;
@@ -156,7 +154,7 @@ class TestBase64 {
     }
 
     // Display the usage statement.
-    public void Usage()
+    public static void Usage()
     {
         Console.WriteLine("TestBase64 sourceFile, targetFile \n");
         Console.WriteLine("For example: TestBase64 winlogon.bmp, target.bmp\n");
