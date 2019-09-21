@@ -2,8 +2,8 @@
 Imports System.Runtime.InteropServices
 
 '<snippet46>
-Public Class LibWrap
-    Public Enum DataType
+Friend Class NativeMethods
+    Friend Enum DataType
         DT_I2 = 1
         DT_I4
         DT_R4
@@ -12,15 +12,15 @@ Public Class LibWrap
     End Enum
 
     ' Uses AsAny when void* is expected.
-    Declare Sub SetData Lib "..\LIB\PInvokeLib.dll" (
+    Friend Declare Sub SetData Lib "..\LIB\PInvokeLib.dll" (
         ByVal t As DataType,
         <MarshalAs(UnmanagedType.AsAny)> ByVal o As Object)
 
     ' Uses overloading when void* is expected.
-    Overloads Declare Sub SetData2 Lib "..\LIB\PInvokeLib.dll" Alias _
+    Friend Overloads Declare Sub SetData2 Lib "..\LIB\PInvokeLib.dll" Alias _
         "SetData" (ByVal t As DataType, ByRef d As Double)
 
-    Overloads Declare Sub SetData2 Lib "..\LIB\PInvokeLib.dll" Alias _
+    Friend Overloads Declare Sub SetData2 Lib "..\LIB\PInvokeLib.dll" Alias _
         "SetData" (ByVal t As DataType, ByVal s As String)
 End Class
 '</snippet46>
@@ -29,17 +29,17 @@ End Class
 Public Class App
     Public Shared Sub Main()
         Console.WriteLine("Calling SetData using AsAny..." + vbNewLine)
-        LibWrap.SetData(LibWrap.DataType.DT_I2, CShort(12))
-        LibWrap.SetData(LibWrap.DataType.DT_I4, CLng(12))
-        LibWrap.SetData(LibWrap.DataType.DT_R4, CSng(12))
-        LibWrap.SetData(LibWrap.DataType.DT_R8, CDbl(12))
-        LibWrap.SetData(LibWrap.DataType.DT_STR, "abcd")
+        NativeMethods.SetData(NativeMethods.DataType.DT_I2, CShort(12))
+        NativeMethods.SetData(NativeMethods.DataType.DT_I4, CLng(12))
+        NativeMethods.SetData(NativeMethods.DataType.DT_R4, CSng(12))
+        NativeMethods.SetData(NativeMethods.DataType.DT_R8, CDbl(12))
+        NativeMethods.SetData(NativeMethods.DataType.DT_STR, "abcd")
 
         Console.WriteLine(vbNewLine + "Calling SetData using overloading...")
         Console.WriteLine(vbNewLine)
         Dim d As Double = 12
-        LibWrap.SetData2(LibWrap.DataType.DT_R8, d)
-        LibWrap.SetData2(LibWrap.DataType.DT_STR, "abcd")
+        NativeMethods.SetData2(NativeMethods.DataType.DT_R8, d)
+        NativeMethods.SetData2(NativeMethods.DataType.DT_STR, "abcd")
     End Sub
 End Class
 '</snippet47>
