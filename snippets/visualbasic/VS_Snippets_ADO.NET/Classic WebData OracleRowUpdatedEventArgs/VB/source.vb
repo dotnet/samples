@@ -31,7 +31,7 @@ Public Class Form1
         
         'Create DataAdapter.
         Dim rAdapter As New OracleDataAdapter(SELECT_ALL, CONNECTION_STRING)
-        Dim cb As OracleCommandBuilder = New OracleCommandBuilder(rAdapter)
+        Dim cb As New OracleCommandBuilder(rAdapter)
         
         'Create and fill DataSet (Select only first 5 rows.).
         Dim rDataSet As New DataSet()

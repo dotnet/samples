@@ -15,7 +15,7 @@ Module Module1
     ' <Snippet1>
     Public Sub CreateDataAdapter(ByVal connectionString As String)
         Using connection As New OleDbConnection(connectionString)
-            Dim adapter As OleDbDataAdapter = New OleDbDataAdapter( _
+            Dim adapter As New OleDbDataAdapter( _
                 "SELECT * FROM Customers WHERE CustomerID = 'ALFKI'", connection)
 
             adapter.InsertCommand = New OleDbCommand( _
@@ -29,7 +29,7 @@ Module Module1
 
             connection.Open()
 
-            Dim custDS As DataSet = New DataSet()
+            Dim custDS As New DataSet()
             adapter.Fill(custDS, "Customers")
 
             Dim custRow As DataRow = custDS.Tables("Customers").NewRow()

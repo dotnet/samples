@@ -32,7 +32,7 @@ Public Class Form1
         
         ' create DataAdapter
         Dim adapter As New SqlDataAdapter(queryString, connectionString)
-        Dim builder As SqlCommandBuilder = New SqlCommandBuilder(adapter)
+        Dim builder As New SqlCommandBuilder(adapter)
         
         ' Create and fill DataSet (select only first 5 rows)
         Dim dataSet As New DataSet()
