@@ -7,26 +7,26 @@ Imports System.Runtime.InteropServices
 Public Structure MyPerson
     Public first As String
     Public last As String
-End Structure 'MyPerson
+End Structure
 
 <StructLayout(LayoutKind.Sequential)>
 Public Structure MyPerson2
     Public person As IntPtr
     Public age As Integer
-End Structure 'MyPerson2
+End Structure
 
 <StructLayout(LayoutKind.Sequential)>
 Public Structure MyPerson3
     Public person As MyPerson
     Public age As Integer
-End Structure 'MyPerson3
+End Structure
 
 <StructLayout(LayoutKind.Sequential)>
 Public Structure MyArrayStruct
     Public flag As Boolean
     <MarshalAs(UnmanagedType.ByValArray, SizeConst:=3)>
     Public vals As Integer()
-End Structure 'MyArrayStruct
+End Structure
 
 Friend Class NativeMethods
     ' Declares managed prototypes for unmanaged functions.
@@ -44,7 +44,7 @@ Friend Class NativeMethods
     Friend Shared Function TestArrayInStruct(
         ByRef myStruct As MyArrayStruct) As Integer
     End Function
-End Class 'LibWrap
+End Class
 
 '</snippet23>
 
@@ -110,6 +110,6 @@ Public Class App
         Console.WriteLine("{0} {1} {2}", myStruct.vals(0),
             myStruct.vals(1), myStruct.vals(2))
     End Sub
-End Class 'App
+End Class
 '</snippet24>
 '</snippet22>

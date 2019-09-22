@@ -1,7 +1,7 @@
 ---
 languages:
 - vb
- products:
+products:
 - dotnet-core
 - windows
 page_type: sample
