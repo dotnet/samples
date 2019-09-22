@@ -108,6 +108,6 @@ Public Class MACTripleDESexample
         End If
 
     End Function 'VerifyFile 
-End Class 'MACTripleDESexample 'end VerifyFile
+End Class
 'end class
 '</SNIPPET1>

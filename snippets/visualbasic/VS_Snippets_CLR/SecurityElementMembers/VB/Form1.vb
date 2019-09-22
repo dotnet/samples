@@ -232,7 +232,7 @@ Class SecurityElementMembers
         Return localXmlElement
 
     End Function 'DestroyTree
-End Class 'SecurityElementMembers
+End Class
 '
 ' This sample produces the following output:
 ' 

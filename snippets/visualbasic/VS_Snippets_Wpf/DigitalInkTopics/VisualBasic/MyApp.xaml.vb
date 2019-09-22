@@ -20,7 +20,7 @@ Class MyApp
 '
 '    public partial class MyApp : Application
 '--------------------^--- Syntax error: ';' expected
-End Class 'MyApp
+End Class
 
 '
 'ToDo: Error processing original source shown below

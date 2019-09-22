@@ -22,5 +22,5 @@ Class UnicodeEncodingExample
         Next c
         Console.WriteLine()
     End Sub
-End Class 'UnicodeEncodingExample
+End Class
 ' </Snippet1>

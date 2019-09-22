@@ -50,4 +50,4 @@ Public Class InstallerCollection_Insert
       ' Install an assembly.
       myTransactedInstaller2.Install(New Hashtable())
    End Sub
-End Class 'InstallerCollection_Insert
+End Class

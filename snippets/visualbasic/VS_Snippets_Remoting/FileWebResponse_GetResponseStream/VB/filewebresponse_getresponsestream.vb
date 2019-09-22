@@ -72,4 +72,4 @@ Class FileWebResponseSnippet
             Console.WriteLine(ControlChars.Cr + "The following exception was raised : {0}", e.Message)
         End Try
     End Sub
-End Class 'FileWebResponseSnippet
+End Class

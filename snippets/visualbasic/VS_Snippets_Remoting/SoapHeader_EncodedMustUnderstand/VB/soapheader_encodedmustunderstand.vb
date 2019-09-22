@@ -38,4 +38,4 @@ Public Class MySoapHeader_EncodedMustUnderstand
             Console.WriteLine("Message: " + e.Message)
         End Try
     End Sub
-End Class 'MySoapHeader_EncodedMustUnderstand
+End Class

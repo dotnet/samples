@@ -49,4 +49,4 @@ Public Class WebClient_OpenWrite2
             Console.WriteLine(("The following exception was raised: " + e.Message))
         End Try
     End Sub
-End Class 'WebClient_OpenWrite2
+End Class

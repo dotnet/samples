@@ -47,6 +47,6 @@ Class MyInstallClass
       End Try
 
    End Sub
-End Class 'MyInstallClass 
+End Class
 ' </Snippet2>
 ' </Snippet3>

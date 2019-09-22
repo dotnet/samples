@@ -130,6 +130,6 @@ Public Class UsingRsaProtectedConfigurationProvider
         Console.Read()
     End Sub
 
-End Class 'UsingRsaProtectedConfigurationProvider
+End Class
 
 '</Snippet1>

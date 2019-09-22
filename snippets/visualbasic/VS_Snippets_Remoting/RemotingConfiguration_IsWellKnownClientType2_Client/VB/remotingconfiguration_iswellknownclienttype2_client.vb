@@ -32,5 +32,5 @@ Public Class Client
 ' </Snippet1>
       Console.WriteLine(myObject.MyMethod("Remote method is called."))
    End Sub
-End Class 'Client
+End Class
 

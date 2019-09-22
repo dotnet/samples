@@ -33,5 +33,5 @@ Imports System.IO
             Console.WriteLine("Exception: " + e.Message)
         End Try
     End Sub
-End Class '[MyClass]
+End Class
 ' </Snippet1>

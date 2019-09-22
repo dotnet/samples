@@ -31,7 +31,7 @@ Public Class Client
       Console.WriteLine("Press enter to end the client application domain.")
       Console.ReadLine()
    End Sub
-End Class 'Client
+End Class
  
 ' <Snippet1>
 ' <Snippet2>
@@ -53,6 +53,6 @@ Public Class MyClientSponsor
       lastRenewal = DateTime.Now
       Return TimeSpan.FromSeconds(20)
    End Function 'Renewal
-End Class 'MyClientSponsor
+End Class
 ' </Snippet2>
 ' </Snippet1>

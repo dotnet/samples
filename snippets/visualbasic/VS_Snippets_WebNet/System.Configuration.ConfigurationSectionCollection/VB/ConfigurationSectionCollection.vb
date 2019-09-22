@@ -93,7 +93,7 @@ Public NotInheritable Class CustomSection
             Me("maxIdleTime") = value
         End Set
     End Property
-End Class 'CustomSection 
+End Class
 
 
 
@@ -381,7 +381,7 @@ Class UsingCustomSectionCollection
         ' Remove()
     End Sub
 
-End Class 'UsingCustomSectionCollection 
+End Class
 ' </Snippet1>
 
 

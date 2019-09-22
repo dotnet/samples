@@ -39,7 +39,7 @@ Class UsingOutputCacheSettingsSection
     ' </Snippet3>
 
    End Sub
-End Class 'UsingOutputCacheSettingsSection 
+End Class
 
 ' UsingOutputCacheSettingsSection class end.
 ' Samples.Aspnet.SystemWebConfiguration namespace end.

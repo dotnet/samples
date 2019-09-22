@@ -104,6 +104,6 @@ Namespace MCursor
 
         End Sub 
 
-    End Class 'Form1
+    End Class
 End Namespace 'MCursor
 '</Snippet1>

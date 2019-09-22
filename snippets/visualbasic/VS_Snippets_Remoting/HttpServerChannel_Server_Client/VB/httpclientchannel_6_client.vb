@@ -57,5 +57,5 @@ Public Class MyHttpClientChannel
          Console.WriteLine("The following exception is raised on client side :" + ex.Message)
       End Try
    End Sub
-End Class 'MyHttpClientChannel
+End Class
 ' </Snippet4>

@@ -62,7 +62,7 @@ Class Alice
 
     End Sub
     '</Snippet2>
-End Class 'Alice
+End Class
 
 Public Class Bob
     Implements IDisposable
@@ -110,5 +110,5 @@ Public Class Bob
     Public Overloads Sub Dispose() Implements IDisposable.Dispose
         rsaKey.Dispose()
     End Sub
-End Class 'Bob
+End Class
 '</Snippet1>

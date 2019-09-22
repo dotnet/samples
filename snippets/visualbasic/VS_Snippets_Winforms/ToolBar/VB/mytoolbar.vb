@@ -175,4 +175,4 @@ End Sub
       Private Sub button2_Click(sender As Object, e As System.EventArgs) Handles button2.Click
          MessageBox.Show(Me.GetButtonList(toolBar1))
       End Sub
-   End Class 'MyToolBar
+   End Class

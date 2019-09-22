@@ -13,4 +13,4 @@ Public Class Page1
         Cache.Insert("DSN", connectionString)
         ' </Snippet1>
     End Sub
-End Class 'Page1 
+End Class

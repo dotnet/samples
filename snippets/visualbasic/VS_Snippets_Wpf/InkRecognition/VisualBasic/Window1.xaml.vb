@@ -48,7 +48,7 @@ Namespace InkRecognition
         Private Sub btnClear_Click(sender As Object, e As RoutedEventArgs)
             theInkCanvas.Strokes.Clear()
         End Sub
-    End Class 'Window1 
+    End Class
 End Namespace
 
 '</Snippet2>

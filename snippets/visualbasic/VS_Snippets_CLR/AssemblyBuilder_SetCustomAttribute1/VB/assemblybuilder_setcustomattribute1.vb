@@ -21,7 +21,7 @@ Public Class MyAttribute
       Me.s = s
       Me.x = x
    End Sub
-End Class 'MyAttribute
+End Class
 
 Class MyApplication
    Public Shared Sub Main()
@@ -53,5 +53,5 @@ Class MyApplication
       Dim helloWorldClass As TypeBuilder = myModule.DefineType("HelloWorld", TypeAttributes.Public)
       Return helloWorldClass.CreateType()
    End Function 'CreateCallee
-End Class 'MyApplication
+End Class
 ' </Snippet1>

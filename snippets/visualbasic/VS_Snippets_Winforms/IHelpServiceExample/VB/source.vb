@@ -29,7 +29,7 @@ Namespace IHelpServiceSample
             Dim hs As IHelpService = CType(Me.Control.Site.GetService(GetType(IHelpService)), IHelpService)
             hs.RemoveContextAttribute("keyword", "IHelpService")
         End Sub
-    End Class 'HelpDesigner
+    End Class
 
     <Designer(GetType(HelpDesigner))> _
     Public Class HelpTestControl
@@ -49,6 +49,6 @@ Namespace IHelpServiceSample
             e.Graphics.DrawString("selected to raise Help topics for", New Font(FontFamily.GenericMonospace, 8), brush, 5, 65)
             e.Graphics.DrawString("the current keyword or keywords", New Font(FontFamily.GenericMonospace, 8), brush, 5, 75)
         End Sub
-    End Class 'HelpTestControl
+    End Class
 End Namespace 'IHelpServiceSample
 '</Snippet1>

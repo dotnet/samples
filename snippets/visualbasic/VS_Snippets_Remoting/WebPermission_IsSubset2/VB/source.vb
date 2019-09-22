@@ -41,4 +41,4 @@ Public Class Sample
       myIsSubsetExample()
    End Sub
    
-End Class 'Sample
+End Class

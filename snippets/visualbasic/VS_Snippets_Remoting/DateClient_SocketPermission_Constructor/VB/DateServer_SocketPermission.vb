@@ -100,4 +100,4 @@ Public Class DateServer
         Console.WriteLine(ControlChars.Tab + "DateServer_SocketPermission " + ChrW(60) + "port" + ChrW(62))
         Console.WriteLine(ControlChars.Tab + "port is the port on which the DateServer is listening")
     End Sub
-End Class 'DateServer
+End Class

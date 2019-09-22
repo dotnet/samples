@@ -51,5 +51,5 @@ Public Class MainClass
     ' M/yy :8/00
     ' dd-MM-yy :17-08-00
     End Sub
-End Class 'MainClass
+End Class
 ' </Snippet1>

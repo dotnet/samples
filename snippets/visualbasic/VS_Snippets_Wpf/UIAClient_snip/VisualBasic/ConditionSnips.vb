@@ -176,5 +176,5 @@ Class ConditionSnips
     ' </Snippet177>
 
 #End Region
-End Class 'ConditionSnips 
+End Class
 '

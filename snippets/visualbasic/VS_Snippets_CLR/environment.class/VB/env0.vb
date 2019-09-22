@@ -74,7 +74,7 @@ Class Sample
       Dim drives As [String]() = Environment.GetLogicalDrives()
       Console.WriteLine("GetLogicalDrives: {0}", [String].Join(", ", drives))
    End Sub
-End Class 'Sample
+End Class
 '
 'This example produces results similar to the following:
 '(Any result that is lengthy or reveals information that should remain 

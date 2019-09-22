@@ -250,7 +250,7 @@ Class TraceTest
         End Try
 
     End Sub
-End Class 'TraceTest
+End Class
 
   '<Snippet33>
 Public Class MyTraceSource
@@ -298,7 +298,7 @@ Public Class MyTraceSource
         Return New String() {"FirstTraceSourceAttribute", "SecondTraceSourceAttribute"}
 
     End Function 'GetSupportedAttributes
-End Class 'MyTraceSource 
+End Class
 '</Snippet33>
 
 '<Snippet34>
@@ -330,7 +330,7 @@ Public Class MySourceSwitch
         Return New String() {"customsourceSwitchattribute"}
 
     End Function 'GetSupportedAttributes
-End Class 'MySourceSwitch
+End Class
 '</Snippet34>
 
 ' Very basic test listener derived from TextWriterTraceListener.
@@ -365,7 +365,7 @@ Public Class TestListener
         Return New String() {"customListenerAttribute"}
 
     End Function 'GetSupportedAttributes
-End Class 'TestListener 
+End Class
 '</Snippet35>
 
 '</Snippet1>

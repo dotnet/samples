@@ -25,7 +25,7 @@ Class Sample
       Console.WriteLine(format, 3, "custom ", dt3)
       Console.WriteLine(vbCrLf & "The custom date and time is created from {0:N0} ticks.", ticks)
    End Sub
-End Class 'Sample
+End Class
 '
 'This example produces the following results:
 '

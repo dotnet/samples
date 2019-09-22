@@ -39,6 +39,6 @@ Namespace CTorNeedsTagAtt
    Protected Overrides Sub Render(output As HtmlTextWriter)
       output.Write("Testing the ConstructorNeedsTagAttribute Class.")
    End Sub
- End Class 'Simple
+ End Class
 ' </Snippet1>
 End Namespace 'CTorNeedsTagAtt

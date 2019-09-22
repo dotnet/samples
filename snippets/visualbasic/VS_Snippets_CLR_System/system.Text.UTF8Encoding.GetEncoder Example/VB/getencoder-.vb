@@ -31,5 +31,5 @@ Class UTF8EncodingExample
         Next b
         Console.WriteLine()
     End Sub
-End Class 'UTF8EncodingExample
+End Class
 ' </Snippet1>

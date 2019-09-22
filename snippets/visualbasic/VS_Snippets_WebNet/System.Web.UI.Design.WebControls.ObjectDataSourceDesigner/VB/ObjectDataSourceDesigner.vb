@@ -18,7 +18,7 @@ Namespace Examples.VB.WebControls.Design
         MyObjectDataSourceDesigner))> _
     Public Class MyObjectDataSource
         Inherits ObjectDataSource
-    End Class ' MyObjectDataSource
+    End Class
     ' </snippet2>
 
     ' Derive a designer that inherits from the ObjectDataSourceDesigner.
@@ -61,6 +61,6 @@ Namespace Examples.VB.WebControls.Design
         End Sub
         ' </snippet4>
 
-    End Class ' MyObjectDataSourceDesigner
+    End Class
 End Namespace ' Examples.VB.WebControls.Design
 ' </snippet1>

@@ -98,4 +98,4 @@ Class ServiceDescription_Sample
          Console.WriteLine("Exception Caught! " + e.Message)
       End Try
    End Sub
-End Class 'ServiceDescription_Sample
+End Class

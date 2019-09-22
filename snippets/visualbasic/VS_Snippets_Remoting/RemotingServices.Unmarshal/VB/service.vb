@@ -25,7 +25,7 @@ Public Class SampleService
         Return objRefTwo
     
     End Function 'GetManuallyMarshaledObject
-End Class 'SampleService
+End Class
 
 
 Public Class SampleTwo
@@ -36,6 +36,6 @@ Public Class SampleTwo
         Console.WriteLine(vbTab + "{0}", s)
     
     End Sub
-End Class 'SampleTwo
+End Class
 
 End Namespace

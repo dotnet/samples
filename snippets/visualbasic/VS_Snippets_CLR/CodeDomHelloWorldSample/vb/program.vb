@@ -149,5 +149,5 @@ Class Program
         Next s
 
     End Sub
-End Class 'Program
+End Class
 '</Snippet1>

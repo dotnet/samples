@@ -63,5 +63,5 @@ Console.WriteLine("Error" + e.ToString())
 End Try
 
 End Sub
-End Class 'UsingIdentitySection ' UsingIdentitySection class end.
+End Class
 ' Samples.Aspnet.SystemWebConfiguration namespace end.

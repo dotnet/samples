@@ -29,6 +29,6 @@ Class MySample
         Console.WriteLine("In event handler")
         signal.Set()
     End Sub
-End Class ' MySample 
+End Class
 
 ' </Snippet1>

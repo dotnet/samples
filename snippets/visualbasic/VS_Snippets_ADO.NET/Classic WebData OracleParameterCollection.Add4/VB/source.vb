@@ -22,4 +22,4 @@ Public Class Form1
         paramCollection.Add("pEmpNo", OracleType.Number, 5, "EmpNo")
     End Sub 
     ' </Snippet1>
-End Class 'Form1 
+End Class

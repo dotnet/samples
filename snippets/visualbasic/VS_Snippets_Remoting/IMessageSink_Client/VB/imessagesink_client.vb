@@ -127,7 +127,7 @@ Namespace MyNameSpace
          Console.WriteLine("MyProxy.Invoke - Finish")
          Return myRetMsg
       End Function 'Invoke
-   End Class 'MyProxy
+   End Class
 
    '
    ' Main class that drives the whole sample
@@ -158,7 +158,7 @@ Namespace MyNameSpace
             Console.WriteLine("myService.HelloMethod FAILED : returned {0}", myReturnString)
          End If
       End Sub
-   End Class 'ProxySample
+   End Class
 End Namespace 'MyNameSpace
 '</Snippet1>
 '</Snippet3>

@@ -42,4 +42,4 @@ Class MyInstallClass
          Console.WriteLine(myException.Message)
       End Try
    End Sub
-End Class 'MyInstallClass
+End Class

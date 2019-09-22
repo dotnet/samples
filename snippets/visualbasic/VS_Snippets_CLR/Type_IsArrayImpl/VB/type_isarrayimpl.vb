@@ -19,7 +19,7 @@ Public Class MyTypeDelegator
         ' Return false if the type is not an array.
         Return False
     End Function 'IsArrayImpl
-End Class 'MyTypeDelegator
+End Class
 
 Public Class Type_IsArrayImpl
     Public Shared Sub Main()
@@ -46,5 +46,5 @@ Public Class Type_IsArrayImpl
             Console.WriteLine("Exception: {0}", e.Message.ToString())
         End Try
     End Sub
-End Class 'Type_IsArrayImpl
+End Class
 ' </Snippet1>

@@ -45,7 +45,7 @@ Public Class CookieExample
     	' </Snippet3>
     End Sub
     ' </Snippet2>
-End Class 'CookieExample 
+End Class
 
 
 

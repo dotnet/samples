@@ -20,7 +20,7 @@
 
          sbe.Compare(compareByte)
       End Sub
-   End Class 'Class1
+   End Class
     _
 
    Class SystemByteExamples
@@ -87,5 +87,5 @@
          End If
       End Sub
       '</Snippet3>
-   End Class 'SystemByteExamples
+   End Class
 End Namespace 'SystemByte_Examples

@@ -44,6 +44,6 @@ Namespace ImageElementExample
             convertedGrid.Children.Add(grayImage)
 
         End Sub
-    End Class 'FormatConvertedExample 
+    End Class
 
 End Namespace

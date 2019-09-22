@@ -96,7 +96,7 @@ Public Class CalculatorService
         serviceHost.Close()
 
     End Sub
-End Class 'CalculatorService
+End Class
 
 ' <snippet1>
 Public Class MyCustomUserNameValidator
@@ -118,5 +118,5 @@ Public Class MyCustomUserNameValidator
 
     End Sub
     ' </snippet2>
-End Class 'MyCustomUserNameValidator
+End Class
 ' </snippet1>

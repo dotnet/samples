@@ -41,6 +41,6 @@ Public Class DataFormats_UnicodeText
 		    Console.WriteLine(e.Message)
         End Try
     End Sub
-End Class 'DataFormats_UnicodeText 
+End Class
 	' </Snippet2>
 	' </Snippet1>

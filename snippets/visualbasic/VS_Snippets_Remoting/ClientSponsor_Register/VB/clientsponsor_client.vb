@@ -55,7 +55,7 @@ Namespace RemotingSamples
          mySponsor.Unregister(myService)
          mySponsor.Close()
       End Sub
-   End Class 'HelloClient
+   End Class
 ' </Snippet2>
 
 

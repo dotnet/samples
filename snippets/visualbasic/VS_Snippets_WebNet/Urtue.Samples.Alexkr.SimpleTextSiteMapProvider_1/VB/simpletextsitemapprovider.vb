@@ -256,7 +256,7 @@ Namespace Samples.AspNet.VB
       End SyncLock
       Return
     End Sub
-  End Class 'SimpleTextSiteMapProvider
+  End Class
   ' </Snippet9>
 End Namespace
 ' </Snippet1>

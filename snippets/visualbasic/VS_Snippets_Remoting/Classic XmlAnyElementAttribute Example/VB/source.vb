@@ -9,7 +9,7 @@ Public Class XClass
     ' Apply the XmlAnyElementAttribute to a field returning an array
     ' of XmlElement objects.
     <XmlAnyElement()> Public AllElements() As XmlElement
-End Class 'XClass
+End Class
 
 
 Public Class Test
@@ -36,5 +36,5 @@ Public Class Test
             Console.WriteLine((xel.LocalName & ": " & xel.Value))
         Next xel
     End Sub
-End Class 'Test 
+End Class
 ' </Snippet1>

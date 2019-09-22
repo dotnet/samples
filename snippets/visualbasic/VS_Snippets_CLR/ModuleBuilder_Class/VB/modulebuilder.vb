@@ -54,7 +54,7 @@ Public Class CodeGenerator
          Return Me.myAssemblyBuilder
       End Get
    End Property
-End Class 'CodeGenerator
+End Class
 
 Public Class TestClass
    <PermissionSetAttribute(SecurityAction.Demand, Name:="FullTrust")> _
@@ -76,5 +76,5 @@ Public Class TestClass
       Dim myObject As Object = Activator.CreateInstance(myType, Nothing, Nothing)
       myMethodInfo.Invoke(myObject, args)
    End Sub
-End Class 'TestClass
+End Class
 ' </Snippet1>

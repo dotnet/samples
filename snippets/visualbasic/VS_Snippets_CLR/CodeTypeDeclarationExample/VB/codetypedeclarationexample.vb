@@ -24,7 +24,7 @@ Namespace CodeDomSamples
          '</Snippet2>
       End Sub
 
-   End Class 'CodeTypeDeclarationExample
+   End Class
 
 End Namespace 'CodeDomSamples 
 

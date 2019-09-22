@@ -10,5 +10,5 @@ Public Class Page1
         Dim link As New HyperLink()
     End Sub
     ' </Snippet1>
-End Class 'Page1 
+End Class
 

@@ -196,4 +196,4 @@ Friend Class HighlightRectangle
 
 #End Region
 
-End Class 'HighlightRectangle 
+End Class

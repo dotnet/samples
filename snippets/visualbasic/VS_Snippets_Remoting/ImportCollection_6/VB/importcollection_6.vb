@@ -72,5 +72,5 @@ Class ServiceDescription_ImportCollection
 ' </Snippet4>
       End If
    End Sub
-End Class 'ServiceDescription_ImportCollection 
+End Class
 ' </snippet1>

@@ -28,5 +28,5 @@
          System.Console.WriteLine(diff2)
          System.Console.WriteLine(date4)
       End Sub
-   End Class 'Class1
+   End Class
 End Namespace 'Subtract

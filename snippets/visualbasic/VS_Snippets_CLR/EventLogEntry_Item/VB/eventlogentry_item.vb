@@ -51,4 +51,4 @@ Class EventLogEntryCollection_Item
          Console.WriteLine("Exception Caught!" + e.Message.ToString())
       End Try
    End Sub
-End Class 'EventLogEntryCollection_Item
+End Class

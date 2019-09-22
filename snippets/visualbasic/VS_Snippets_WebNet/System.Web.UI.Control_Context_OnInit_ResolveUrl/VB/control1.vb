@@ -39,7 +39,7 @@ Namespace CustomControl1
             ' Bubble this event to parent.
             RaiseBubbleEvent(Me, e)
         End Sub
-    End Class 'ChildControl
+    End Class
     _
 
     Public Class MyResolveUrl

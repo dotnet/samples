@@ -57,4 +57,4 @@ Class HttpWebResponseSnippet
         End Try
     End Sub 
 ' </Snippet1>
-End Class 'HttpWebResponseSnippet
+End Class

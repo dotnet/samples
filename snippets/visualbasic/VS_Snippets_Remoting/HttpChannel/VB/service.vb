@@ -25,7 +25,7 @@ Public Class SampleServiceEventArgs
             Return m_Message
         End Get
     End Property
-End Class 'SampleServiceEventArgs
+End Class
 
 
 ' Define the delegate for the event
@@ -54,6 +54,6 @@ Public Class SampleService
         Return True
     
     End Function 'SampleMethod
-End Class 'SampleService
+End Class
 
 End Namespace

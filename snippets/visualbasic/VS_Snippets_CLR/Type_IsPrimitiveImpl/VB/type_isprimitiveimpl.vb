@@ -18,7 +18,7 @@ Public Class MyTypeDelegatorClass
         End If
         Return False
     End Function 'IsPrimitiveImpl
-End Class 'MyTypeDelegatorClass
+End Class
 Public Class MyTypeDemoClass
     Public Shared Sub Main()
         Try
@@ -43,5 +43,5 @@ Public Class MyTypeDemoClass
             Console.WriteLine("Exception: {0}", e.Message.ToString())
         End Try
     End Sub
-End Class 'MyTypeDemoClass
+End Class
 ' </Snippet1>

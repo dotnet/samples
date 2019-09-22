@@ -68,5 +68,5 @@ Public Class Form1
                         " commandType=" & args.StatementType & " recordsAffected=" & _
                         args.RecordsAffected & " status=" & args.Status & ")")
     End Sub
-End Class 'Form1
+End Class
 ' </Snippet1>

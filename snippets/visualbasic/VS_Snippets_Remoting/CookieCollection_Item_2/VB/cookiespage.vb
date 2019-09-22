@@ -125,4 +125,4 @@ Public Class CookiesPage
         myForm.Controls.Remove(placeBirthTextBox)
     
     End Sub
-End Class 'CookiesPage
+End Class

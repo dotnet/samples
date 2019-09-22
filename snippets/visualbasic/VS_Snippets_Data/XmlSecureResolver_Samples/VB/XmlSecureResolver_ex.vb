@@ -83,6 +83,6 @@ xslt.Load("http://serverName/data/xsl/sort.xsl", Nothing, myResolver)
 '</snippet6>
 End Sub
 
-End Class 'XmlSecureResolver_Samples
+End Class
 
 

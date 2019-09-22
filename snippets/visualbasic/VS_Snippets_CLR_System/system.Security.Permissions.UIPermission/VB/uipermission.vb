@@ -132,7 +132,7 @@ Public Class UIPermissionDemo
         End If
 
     End Sub
-End Class 'UIPermissionDemo
+End Class
 '</Snippet6>
 
 ' </Snippet1>

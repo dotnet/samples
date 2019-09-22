@@ -6,7 +6,7 @@ Class MyGetTypeFromCLSID
         Public Sub MyMethod1()
         End Sub
 
-    End Class 'MyClass1
+    End Class
 
     Public Shared Sub Main()
         ' Get the type corresponding to the class MyClass.
@@ -16,5 +16,5 @@ Class MyGetTypeFromCLSID
         Console.WriteLine(("The name of the class is " + myType.ToString()))
         Console.WriteLine(("The ClassId of MyClass is " + myType.GUID.ToString()))
     End Sub
-End Class 'MyGetTypeFromCLSID
+End Class
 ' </Snippet1>

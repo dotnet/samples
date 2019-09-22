@@ -61,6 +61,6 @@ Public Class Sample
    Public Shared Sub Main()
       DoSocketGet("www.contoso.com")
    End Sub
-End Class 'Sample 
+End Class
 
 

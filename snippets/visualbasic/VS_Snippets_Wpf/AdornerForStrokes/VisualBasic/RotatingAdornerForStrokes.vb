@@ -195,5 +195,5 @@ Public Class RotatingStrokesAdorner
         Return visualChildren(index)
     
     End Function 'GetVisualChild
-End Class 'RotatingStrokesAdorner
+End Class
 '</Snippet1>

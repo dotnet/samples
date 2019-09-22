@@ -110,6 +110,6 @@ Class AesExample
         Return plaintext
 
     End Function 'DecryptStringFromBytes_Aes 
-End Class 'AesExample
+End Class
 '</Snippet3>
 '</Snippet1>

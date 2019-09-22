@@ -88,5 +88,5 @@ Class MyServiceClass
       myPort.Extensions.Add(mySoapAddressBinding)
       Return myPort
    End Function 'CreatePort
-End Class 'MyServiceClass
+End Class
 ' </Snippet1>

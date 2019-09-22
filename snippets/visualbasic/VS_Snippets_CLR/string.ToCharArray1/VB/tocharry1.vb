@@ -16,7 +16,7 @@ Class Sample
          Console.WriteLine(c)
       Next c
    End Sub
-End Class 'Sample
+End Class
 '
 'This example produces the following results:
 'The letters in '012wxyz789' are: 'wxyz'

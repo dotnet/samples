@@ -30,6 +30,6 @@ Namespace Examples.System.Net
             dataStream.Close()
             response.Close()
         End Sub
-    End Class 'WebRequestGetExample
+    End Class
 End Namespace
 ' </Snippet1>

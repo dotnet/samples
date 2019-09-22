@@ -70,7 +70,7 @@ Public Class EmployeeInformation
     End Sub
     ' </snippet8>
 
-End Class 'EmployeeInformation
+End Class
 ' </snippet4>
 ' </snippet0>
 
@@ -80,4 +80,4 @@ Public Class Test
     Public Shared Sub Main()
 
     End Sub
-End Class 'Test
+End Class

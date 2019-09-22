@@ -19,7 +19,7 @@ Public Class MyAttribute
    Public Sub New(s As Boolean)
       Me.s = s
    End Sub
-End Class 'MyAttribute
+End Class
 
 Class MyApplication
    
@@ -50,5 +50,5 @@ Class MyApplication
       
       Return helloWorldClass.CreateType()
    End Function 'CreateCallee
-End Class 'MyApplication
+End Class
 ' </Snippet1>

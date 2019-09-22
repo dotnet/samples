@@ -152,4 +152,4 @@ Public Class MyDataGridTextBox
       End If
    End Sub
 ' </Snippet1>
-End Class 'MyDataGridTextBox
+End Class

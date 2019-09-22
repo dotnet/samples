@@ -105,7 +105,7 @@ Public Class SampleWebThreadInformation
     End Sub
     ' </Snippet8>
 
-End Class 'SampleWebThreadInformation
+End Class
 
 
 

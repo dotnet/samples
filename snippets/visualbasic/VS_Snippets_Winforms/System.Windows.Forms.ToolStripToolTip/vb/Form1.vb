@@ -55,5 +55,5 @@ Public Class Form1
       Me.ResumeLayout(False)
       Me.PerformLayout()
    End Sub
-End Class 'Form1
+End Class
 '</snippet1>

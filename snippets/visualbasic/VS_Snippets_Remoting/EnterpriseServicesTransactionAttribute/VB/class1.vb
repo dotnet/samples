@@ -10,24 +10,24 @@ Imports System.Reflection
 <Transaction()>  _
 Public Class TransactionAttribute_Ctor
     Inherits ServicedComponent
-End Class 'TransactionAttribute_Ctor
+End Class
 ' </snippet1>
 
 ' <snippet2>
 <Transaction(TransactionOption.Supported)>  _
 Public Class TransactionAttribute_Ctor_TransactionOption
     Inherits ServicedComponent
-End Class 'TransactionAttribute_Ctor_TransactionOption
+End Class
 
 <Transaction(TransactionOption.Supported, Isolation := TransactionIsolationLevel.Serializable)>  _
 Public Class TransactionAttribute_Ctor_TransactionOption_Isolation
     Inherits ServicedComponent
-End Class 'TransactionAttribute_Ctor_TransactionOption_Isolation
+End Class
 
 <Transaction(TransactionOption.Supported, Isolation := TransactionIsolationLevel.Serializable, Timeout := 30)>  _
 Public Class TransactionAttribute_Ctor_TransactionOption_Isolation_Timeout
     Inherits ServicedComponent
-End Class 'TransactionAttribute_Ctor_TransactionOption_Isolation_Timeout
+End Class
 ' </snippet2>
 
 ' <snippet3>
@@ -49,7 +49,7 @@ Public Class TransactionAttribute_Isolation
         MsgBox("TransactionAttribute.Isolation: " & attribute.Isolation)
     
     End Sub
-End Class 'TransactionAttribute_Isolation
+End Class
 ' </snippet3>
 
 ' <snippet4>
@@ -72,7 +72,7 @@ Public Class TransactionAttribute_Timeout
         MsgBox("TransactionAttribute.Timeout: " & attribute.Timeout)
     
     End Sub
-End Class 'TransactionAttribute_Timeout
+End Class
 ' </snippet4>
 
 ' <snippet5>
@@ -88,7 +88,7 @@ Public Class TransactionAttribute_Value
         MsgBox("TransactionAttribute.Value: " & attribute.Value)
     
     End Sub
-End Class 'TransactionAttribute_Value
+End Class
 ' </snippet5>
 
 ' </snippet0>
@@ -108,4 +108,4 @@ Public Class TransactionAttribute_Example
         'valueExample.ValueExample()
     
     End Sub
-End Class 'TransactionAttribute_Example
+End Class

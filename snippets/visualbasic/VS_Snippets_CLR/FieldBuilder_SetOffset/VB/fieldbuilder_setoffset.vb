@@ -86,5 +86,5 @@ Public Class FieldBuilder_Sample
          Console.WriteLine("Exception Caught: " & e.Message)
       End Try
    End Sub
-End Class 'FieldBuilder_Sample
+End Class
 ' </Snippet1>

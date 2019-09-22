@@ -36,6 +36,6 @@ Public Class EnvironmentSample
     End Sub
     '</Snippet3>		
     
-End Class 'EnvironmentSample
+End Class
 '</Snippet1>
 

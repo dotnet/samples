@@ -15,4 +15,4 @@ Shared Class Program
         Application.Run(New Form1())
     
     End Sub
-End Class 'Program
+End Class

@@ -285,7 +285,7 @@ Class Program
 
 
     End Sub
-End Class 'Program
+End Class
 ' </Snippet4>
 
 '</Snippet1>

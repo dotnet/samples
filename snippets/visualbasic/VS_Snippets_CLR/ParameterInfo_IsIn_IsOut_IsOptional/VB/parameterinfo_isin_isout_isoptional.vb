@@ -86,7 +86,7 @@ Public Class ParameterInfo_IsIn_IsOut_IsOptional
          Console.WriteLine("Could not find a assembly named 'MyAssembly' for the current application domain")
       End If
    End Sub
-End Class 'ParameterInfo_IsIn_IsOut_IsOptional 
+End Class
 ' </Snippet3>
 ' </Snippet2>
 ' </Snippet1>

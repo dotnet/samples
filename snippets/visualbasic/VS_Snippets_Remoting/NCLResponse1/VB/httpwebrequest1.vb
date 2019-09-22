@@ -34,7 +34,7 @@ Imports System.IO
         response.Close()
         readStream.Close()
     End Sub
-End Class 'Test
+End Class
 '
 'The output from this example will vary depending on the value passed into Main 
 'but will be similar to the following:

@@ -30,6 +30,6 @@ Public Class ServerProcess
         Console.ReadLine()
     
     End Sub
-End Class 'ServerProcess
+End Class
 
 

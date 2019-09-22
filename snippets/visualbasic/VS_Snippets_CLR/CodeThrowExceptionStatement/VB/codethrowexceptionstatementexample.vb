@@ -21,7 +21,7 @@ Namespace CodeDomSamples
         '</Snippet2>
       End Sub
 
-   End Class 'CodeThrowExceptionStatementExample 
+   End Class
 
 End Namespace 'CodeDomSamples
 

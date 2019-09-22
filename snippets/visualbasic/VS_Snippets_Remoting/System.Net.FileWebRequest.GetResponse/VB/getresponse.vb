@@ -100,7 +100,7 @@ Namespace Mssc.PluggableProtocols.File
           End If
         End If
       End Sub
-    End Class 'TestGetResponse
+    End Class
 
   End Module
 

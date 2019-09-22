@@ -62,6 +62,6 @@ Namespace CodeDomSamples
             '</Snippet2>
         End Sub
 
-    End Class 'CodeAttachEventStatementExample
+    End Class
 End Namespace 'CodeDomSamples
 '</Snippet1>

@@ -16,7 +16,7 @@ Class Sample
       Console.Write("{0} ", str)
       Console.WriteLine("String '{0}'.", str2)
    End Sub
-End Class 'Sample
+End Class
 '
 'This example produces the following results:
 '

@@ -24,5 +24,5 @@ Class ADGetAssemblies
          Console.WriteLine(assem.ToString())
       Next assem
    End Sub
-End Class 'ADGetAssemblies 
+End Class
 ' </SNIPPET1>

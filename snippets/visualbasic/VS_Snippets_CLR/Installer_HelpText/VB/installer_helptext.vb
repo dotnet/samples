@@ -50,10 +50,10 @@ Public Class MyInstaller
    End Property
 ' </Snippet1>
 
-End Class 'MyInstaller
+End Class
 
 Public Class MyAssembly
    Public Shared Sub Main()
       Console.WriteLine("Use installutil.exe to run the assembly Installer_HelpText.exe")
    End Sub
-End Class 'MyAssembly
+End Class

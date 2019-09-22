@@ -41,4 +41,4 @@ Class Program
         '</snippet5>
 
     End Sub
-End Class 'Program
+End Class

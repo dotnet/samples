@@ -21,5 +21,5 @@ Public Class Form1
         Dim thisGrid As DataGrid = CType(sender, DataGrid)
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

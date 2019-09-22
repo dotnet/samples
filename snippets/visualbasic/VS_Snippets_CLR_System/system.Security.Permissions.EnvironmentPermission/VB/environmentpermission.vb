@@ -251,7 +251,7 @@ Public Class EnvironmentPermissionDemo
         End Try
     
     End Sub
-End Class 'EnvironmentPermissionDemo
+End Class
 
 
 

@@ -86,4 +86,4 @@ Class WebPermission_AcceptConnectList
       End While
    End Sub
 
-End Class 'WebPermission_AcceptConnectList
+End Class

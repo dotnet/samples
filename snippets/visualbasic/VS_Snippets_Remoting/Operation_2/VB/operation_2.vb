@@ -134,4 +134,4 @@ Class MyOperationClass
          Console.WriteLine("The following Exception is raised : " + e.Message)
       End Try
    End Sub
-End Class 'MyOperationClass
+End Class

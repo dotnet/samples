@@ -5,7 +5,7 @@ Class TestFullName
         Dim t As Type = GetType(Array)
         Console.WriteLine("The full name of the Array type is {0}.", t.FullName)
     End Sub
-End Class 'TestFullName
+End Class
 
 ' This example produces the following output:
 '

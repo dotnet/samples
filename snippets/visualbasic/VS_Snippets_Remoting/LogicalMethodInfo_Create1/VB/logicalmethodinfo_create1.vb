@@ -31,7 +31,7 @@ Public Class MyService
    Public Sub MyMethod(inParameter As Integer, ByRef outParameter As Integer)
       outParameter = inParameter
    End Sub
-End Class 'MyService
+End Class
 
 Public Class LogicalMethodInfo_Create
    
@@ -80,5 +80,5 @@ Public Class LogicalMethodInfo_Create
              (ControlChars.Newline + "The return type is {0}", myLogicalMethodInfo.ReturnType)
       End If
    End Sub
-End Class 'LogicalMethodInfo_Create
+End Class
 ' </Snippet1>

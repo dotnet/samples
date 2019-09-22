@@ -33,7 +33,7 @@ NotInheritable Public Class App
         Console.WriteLine("ja-JP Compare: {0} {2} {1}", _
                           s2, s3, sign((ci.Compare(s2, s3) + 1)))
     End Sub
-End Class 'App
+End Class
 
 ' This code produces the following output.
 ' 

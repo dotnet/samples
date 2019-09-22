@@ -50,11 +50,11 @@ End Class
 '</snippet2>
 
 Public Class Class3
-End Class 'Class3
+End Class
 ' for FXCOp.
 
 Public Class Class4
-End Class 'Class4
+End Class
 
 Public Class Class5
-End Class 'Class5
+End Class

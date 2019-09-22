@@ -61,6 +61,6 @@ Class HttpWebRequest_ProtocolVersion
  
         End Try
     End Sub
-End Class ' HttpWebRequest_ProtocolVersion
+End Class
 
 

@@ -21,4 +21,4 @@ Public Class HelloService
       Console.WriteLine("HelloMethod called on HelloService instance {0}.", n_instances)
       Return "Hi, " + name + "."
    End Function 'HelloMethod
-End Class 'HelloService
+End Class

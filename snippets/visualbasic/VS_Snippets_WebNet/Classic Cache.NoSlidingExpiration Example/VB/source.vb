@@ -13,4 +13,4 @@ Public Class Page1
         Cache.Insert("DSN", connectionString, Nothing, DateTime.Now.AddMinutes(2), System.Web.Caching.Cache.NoSlidingExpiration)
         ' </Snippet1>
     End Sub
-End Class 'Page1 
+End Class

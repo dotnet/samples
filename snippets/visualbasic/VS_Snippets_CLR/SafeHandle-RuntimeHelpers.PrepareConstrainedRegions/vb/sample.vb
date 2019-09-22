@@ -78,7 +78,7 @@ NotInheritable Class MySafeHandle
     Public Shared Function NativeAllocateHandle(ByRef someState As MyStruct) As MySafeHandle
 
     End Function
-End Class 'MySafeHandle
+End Class
 
 
 
@@ -87,6 +87,6 @@ Public Class Example
     Shared Sub Main()
 
     End Sub
-End Class 'Example
+End Class
 
 

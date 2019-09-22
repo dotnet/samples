@@ -354,4 +354,4 @@ Class HitTestSampleApp
         myApp.Run()
 
     End Sub
-End Class 'HitTestSampleApp
+End Class

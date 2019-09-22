@@ -24,7 +24,7 @@ Public Class MyAttribute
    Public Sub New(myBool As Boolean)
       Me.myBoolValue = myBool
    End Sub
-End Class 'MyAttribute
+End Class
 
 Class MyApplication
    Private Shared myEnumBuilder As EnumBuilder
@@ -73,6 +73,6 @@ Class MyApplication
       myEnumBuilder.CreateType()
       myEnumBuilder.SetCustomAttribute(myInfo, New Byte() {1, 0, 1})
    End Sub
-End Class 'MyApplication
+End Class
 ' </Snippet2>
 ' </Snippet1>

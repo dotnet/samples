@@ -100,7 +100,7 @@ Public Class ReflectionPermissionDemo
         Console.WriteLine("Result of ToFromXml = " + restrictedMemberAccessPerm.ToString())
 
     End Sub
-End Class 'ReflectionPermissionDemo
+End Class
 '</Snippet6>
 
 ' This code example creates the following output:

@@ -37,7 +37,7 @@ Namespace ExampleComponent
         Private Sub onVerb(ByVal sender As Object, ByVal e As EventArgs)
             MessageBox.Show("The event handler for the Example Designer Verb Command was invoked.")
         End Sub
-    End Class 'ExampleComponentDesigner
+    End Class
 
     ' Provides an example component associated with the example component designer.
     <DesignerAttribute(GetType(ExampleComponentDesigner), GetType(IDesigner))> _
@@ -46,7 +46,7 @@ Namespace ExampleComponent
 
         Public Sub New()
         End Sub
-    End Class 'ExampleComponent
+    End Class
 
 End Namespace 'ExampleComponent
 '</Snippet1>

@@ -7,7 +7,7 @@ Class Sample
       Dim length As Integer = str.Length
       Console.WriteLine("1) The length of '{0}' is {1}", str, length)
    End Sub
-End Class 'Sample
+End Class
 '
 'This example displays the following output:
 '    1) The length of 'abcdefg' is 7

@@ -24,5 +24,5 @@ Class MySample
         ' Write an entry to the log.        
         myLog.WriteEntry(("Writing to event log on " & myLog.MachineName))
     End Sub
-End Class ' MySample
+End Class
 ' </Snippet1>

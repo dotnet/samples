@@ -29,5 +29,5 @@ Class MethodBuilderAssortedMembersDemo
 
    End Sub
 
-End Class 'MethodBuilderAssortedMembersDemo
+End Class
 

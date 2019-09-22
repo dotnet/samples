@@ -157,7 +157,7 @@ End Class
       ' Insert code to access customer record by account number.
   End Sub
   '</Snippet55>
-  End Class ' segregateSnippets54and55
+  End Class
 
   ' New snippet to replace "VbVbcnProcedures#54,55" CREF (How to: Define Multiple Versions of a Procedure)
   '<Snippet72>
@@ -181,7 +181,7 @@ End Class
   Sub postAcct(ByVal custAcct As Integer, ByVal amount As Single)
   '</Snippet53>
   End Sub
-  End Class ' segregateSnippets52and53
+  End Class
 
   ' New snippet to replace "VbVbcnProcedures#52,53" CREF (Procedure Overloading)
   '<Snippet73>
@@ -777,7 +777,7 @@ End Class
 
 
     ' Class CancelEventArgs ' for Snippet5 -- removed to try different approach
-    ' End Class ' for Snippet5 -- removed to try different approach
+    ' End Class
 
     ' Event Closing(ByVal sender As Object, ByVal e As CancelEventArgs) ' for Snippet5 -- removed to try different approach
 

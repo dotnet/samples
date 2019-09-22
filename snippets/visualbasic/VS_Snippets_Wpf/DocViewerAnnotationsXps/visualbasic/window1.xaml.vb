@@ -389,6 +389,6 @@ Namespace SDKSample
 
 		#End Region 'private fields
 
-	End Class ' end:partial class Window1
+	End Class
 
 End Namespace ' end:namespace SDKSample

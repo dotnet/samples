@@ -12,4 +12,4 @@ Public Class Sample
       Math.Round(4.36, 1) ' Returns 4.4
       ' </Snippet1>
    End Sub
-End Class 'Sample
+End Class

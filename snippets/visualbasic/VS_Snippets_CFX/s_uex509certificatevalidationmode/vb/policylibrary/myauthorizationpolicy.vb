@@ -45,7 +45,7 @@ Public Class MyServiceAuthorizationManager
 
     End Function 'CheckAccessCore
     '
-End Class 'MyServiceAuthorizationManager
+End Class
 ' 
 Public Class MyAuthorizationPolicy
     Implements IAuthorizationPolicy
@@ -165,6 +165,6 @@ Public Class MyAuthorizationPolicy
                 bClaimsAdded = value
             End Set
         End Property
-    End Class 'CustomAuthState
-End Class 'MyAuthorizationPolicy 
+    End Class
+End Class
 ' 

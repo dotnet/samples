@@ -27,5 +27,5 @@ Namespace MiscCompModSamples
         End Sub
         '</Snippet1>
 
-    End Class 'ActiveDesignerEventHandlerExample
+    End Class
 End Namespace 'MiscCompModSamples

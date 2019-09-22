@@ -47,4 +47,4 @@ Public Class InstallerCollection_AddRange1
          Console.WriteLine("Exception raised : {0}", e.Message)
       End Try
    End Sub
-End Class 'InstallerCollection_AddRange1
+End Class

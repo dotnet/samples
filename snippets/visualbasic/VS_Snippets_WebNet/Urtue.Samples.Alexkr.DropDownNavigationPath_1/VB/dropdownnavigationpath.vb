@@ -111,6 +111,6 @@ Public Class DropDownNavigationPath
       End If
 
    End Sub
-End Class 'DropDownNavigationPath
+End Class
 End Namespace
 ' </Snippet1>

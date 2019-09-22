@@ -24,4 +24,4 @@ Public Class Form1
         End If
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

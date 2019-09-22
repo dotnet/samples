@@ -106,7 +106,7 @@ Public Class ShortStringDictionary
       End If
    End Sub
 
-End Class 'ShortStringDictionary
+End Class
 
 Public Class SamplesDictionaryBase
     Public Shared Sub Main()

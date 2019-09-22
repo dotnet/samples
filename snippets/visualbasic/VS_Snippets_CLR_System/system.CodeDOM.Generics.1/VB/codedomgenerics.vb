@@ -223,7 +223,7 @@ Class CodeDomGenericsDemo
         Next s
 
     End Sub
-End Class 'CodeDomGenericsDemo 
+End Class
 '
 ' This example generates the following code:
 '------------------------------------------------------------------------------

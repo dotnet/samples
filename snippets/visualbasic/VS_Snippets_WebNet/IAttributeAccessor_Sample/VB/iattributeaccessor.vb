@@ -63,6 +63,6 @@ Namespace AttributeAccessor
       output.Write((" Value='" + Me.Text))
       output.Write(("' Size=" + Me.Width + ">"))
    End Sub
- End Class 'MyTextBox
+ End Class
 End Namespace 'AttributeAccessor
 ' </Snippet1>

@@ -31,7 +31,7 @@ Namespace CrendentialSample
                 Me.authenticationType = authenticationType
                 Me.networkCredentialObj = networkCredentialObj
             End Sub
-        End Class 'CredentialInfo
+        End Class
         
         Private arrayListObj As ArrayList
         
@@ -69,7 +69,7 @@ Namespace CrendentialSample
         End Function 'GetCredential
 ' </Snippet1>	
 
-    End Class 'CredentialList
+    End Class
     
     
     'The 'CredentialTest' is defined to test the 'CredentialList' class.
@@ -113,5 +113,5 @@ Namespace CrendentialSample
                 Console.WriteLine(("Message : " + e.Message))
             End Try
         End Sub
-    End Class 'CredentialTest
+    End Class
 End Namespace 'CrendentialSample

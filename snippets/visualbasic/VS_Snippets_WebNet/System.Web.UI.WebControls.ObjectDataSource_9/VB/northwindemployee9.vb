@@ -67,7 +67,7 @@ Public Class EmployeeLogic
       Return ds
    End Function 'GetAllEmployeesAsDataSet
       
-End Class 'EmployeeLogic 
+End Class
 
 
 Public Class NorthwindEmployee
@@ -122,6 +122,6 @@ Public Class NorthwindEmployee
       End Set
    End Property 
    
-End Class 'NorthwindEmployee
+End Class
 End Namespace
 ' </snippet2>

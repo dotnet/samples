@@ -108,7 +108,7 @@ Public Class SampleWebApplicationInformation
         formatter.IndentationLevel -= 1
         formatter.AppendLine(eventInfo.ToString())
     End Sub
-End Class 'SampleWebApplicationInformation 
+End Class
 
 ' </Snippet9>
 

@@ -129,7 +129,7 @@ Class Sample
          Console.WriteLine(msgFailure, typeName)
       End If
    End Sub
-End Class 'Sample '
+End Class
 'This example produces the following results:
 '
 'This example demonstrates overloads of the TryParse method for

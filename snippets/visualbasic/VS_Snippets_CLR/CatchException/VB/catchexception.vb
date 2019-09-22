@@ -11,7 +11,7 @@ Class ExceptionTestClass
          Console.WriteLine("Generic Exception Handler: {0}", e.ToString())
       End Try
    End Sub
-End Class 'ExceptionTestClass
+End Class
 '
 'This code example produces the following results:
 '

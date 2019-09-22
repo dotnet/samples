@@ -49,7 +49,7 @@ Namespace Samples.AspNet
 
         End Sub
 
-    End Class 'ExternalConfiguration 
+    End Class
 
 End Namespace
 '</Snippet1>

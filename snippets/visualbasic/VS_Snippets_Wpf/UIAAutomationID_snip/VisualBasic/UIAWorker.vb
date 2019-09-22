@@ -280,5 +280,5 @@ Class UIAWorker
     Private Sub Feedback(ByVal outputStr As String) 
     
     End Sub
-End Class 'UIAWorker
+End Class
 

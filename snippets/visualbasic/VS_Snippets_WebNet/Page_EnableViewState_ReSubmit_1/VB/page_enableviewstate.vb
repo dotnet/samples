@@ -25,7 +25,7 @@ Namespace PageSample
          ' Save the view state if there are server controls on the page.
          Page.RegisterViewStateHandler()
       End Sub
-   End Class 'MyForm
+   End Class
 
 ' <Snippet1>
    Public Class WebPage
@@ -82,6 +82,6 @@ Namespace PageSample
          textBoxObj = New TextBox()
          buttonObj = New Button()
       End Sub
-   End Class 'WebPage
+   End Class
 ' </Snippet1>
 End Namespace 'PageSample

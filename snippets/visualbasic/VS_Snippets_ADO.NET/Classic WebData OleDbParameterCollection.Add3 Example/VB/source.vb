@@ -22,4 +22,4 @@ Public Class Form1
         "CustomerID", OleDbType.VarChar, 5)
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

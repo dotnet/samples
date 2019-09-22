@@ -24,5 +24,5 @@ Namespace CustomInkControlSample
             'thirdWindow.Show()
 
         End Sub
-    End Class 'MyApp 
+    End Class
 End Namespace

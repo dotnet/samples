@@ -12,4 +12,4 @@ Public Class SinkProviderData_Client
       Dim server As New mySharedStringClass()
       Console.WriteLine(server.PrintString("Welcome to .NET!."))
    End Sub
-End Class 'SinkProviderData_Client
+End Class

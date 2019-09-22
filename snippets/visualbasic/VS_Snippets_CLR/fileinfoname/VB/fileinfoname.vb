@@ -14,7 +14,7 @@ Public Class NameTest
             Console.WriteLine(fiTemp.Name)
         Next fiTemp
     End Sub
-End Class 'NameTest
+End Class
 'This code produces output similar to the following; 
 'results may vary based on the computer/file structure/etc.:
 '

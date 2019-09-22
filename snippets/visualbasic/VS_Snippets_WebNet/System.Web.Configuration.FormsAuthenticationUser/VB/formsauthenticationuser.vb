@@ -66,6 +66,6 @@ Class UsingFormsAuthenticationUser
         ' </Snippet5>
 
     End Sub
-End Class 'UsingFormsAuthenticationUser 
+End Class
 
 

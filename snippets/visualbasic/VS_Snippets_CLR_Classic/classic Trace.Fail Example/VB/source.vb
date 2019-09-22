@@ -34,4 +34,4 @@ Public Class Form1
         End Select
         ' </Snippet2>
     End Sub
-End Class 'Form1 
+End Class

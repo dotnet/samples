@@ -28,7 +28,7 @@ Public Class ROCollection
         Return InnerList.Contains(value)
     End Function 'Contains
 
-End Class 'ROCollection 
+End Class
 
 
 Public Class SamplesCollectionBase
@@ -98,7 +98,7 @@ Public Class SamplesCollectionBase
         Console.WriteLine()
     End Sub
 
-End Class 'SamplesCollectionBase 
+End Class
 
 
 'This code produces the following output.

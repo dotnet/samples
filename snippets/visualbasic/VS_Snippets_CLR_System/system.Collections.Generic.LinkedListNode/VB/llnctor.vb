@@ -54,7 +54,7 @@ Public Class GenericCollection
 
     End Sub
 
-End Class 'GenericCollection
+End Class
 
 
 'This code produces the following output.

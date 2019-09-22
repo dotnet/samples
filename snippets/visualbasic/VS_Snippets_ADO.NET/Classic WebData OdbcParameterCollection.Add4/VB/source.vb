@@ -22,4 +22,4 @@ Public Class Form1
         "CustomerID", OdbcType.VarChar, 5, "CustomerID")
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

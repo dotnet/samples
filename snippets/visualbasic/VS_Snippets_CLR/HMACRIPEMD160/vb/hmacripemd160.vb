@@ -108,6 +108,6 @@ Public Class HMACRIPEMD160example
         End If
 
     End Function 'VerifyFile 
-End Class 'HMACRIPEMD160example 'end VerifyFile
+End Class
 'end class
 '</SNIPPET1>

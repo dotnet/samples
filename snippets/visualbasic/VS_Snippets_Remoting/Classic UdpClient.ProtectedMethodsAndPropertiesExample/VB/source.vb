@@ -21,7 +21,7 @@ Public Class MyUdpClientDerivedClass
          s.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.Broadcast, 1)
       End If
    End Sub
-End Class 'MyUdpClientDerivedClass
+End Class
  
 
 '</Snippet1>
@@ -32,4 +32,4 @@ Public Class MyUdpClientTestClass
       Dim myUdpClientDerivedClass As New MyUdpClientDerivedClass()
       myUdpClientDerivedClass.UsingProtectedMethods()
    End Sub
-End Class 'MyUdpClientTestClass 
+End Class

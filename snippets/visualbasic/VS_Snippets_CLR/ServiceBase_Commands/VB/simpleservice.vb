@@ -334,5 +334,5 @@ Public Class SimpleService
 #End If
 
     End Sub
-End Class 'SimpleService
+End Class
 '</Snippet1>

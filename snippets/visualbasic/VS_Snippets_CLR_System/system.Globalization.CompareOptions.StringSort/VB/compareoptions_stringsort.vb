@@ -39,7 +39,7 @@ Public Class SamplesCompareOptions
 
       End Function 'Compare 
 
-   End Class 'MyStringComparer
+   End Class
 
 
    Public Shared Sub Main()
@@ -76,7 +76,7 @@ Public Class SamplesCompareOptions
 
    End Sub
 
-End Class 'SamplesCompareOptions 
+End Class
 
 
 'This code produces the following output.

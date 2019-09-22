@@ -29,7 +29,7 @@ Public Class App
         Dim asm As AssemblyBuilder = converter.ConvertTypeLibToAssembly(typeLib, "ExplorerLib.dll", 0, eventHandler, Nothing, Nothing, Nothing, Nothing)
         asm.Save("ExplorerLib.dll")
     End Sub
-End Class 'App
+End Class
  _
 
 Public Class ConversionEventHandler
@@ -43,5 +43,5 @@ Public Class ConversionEventHandler
         ' resolve reference here and return a correct assembly...
         Return Nothing
     End Function 'ResolveRef
-End Class 'ConversionEventHandler
+End Class
 '</snippet1>

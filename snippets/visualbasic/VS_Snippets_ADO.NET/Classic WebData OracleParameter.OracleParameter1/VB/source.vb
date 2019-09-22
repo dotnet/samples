@@ -20,4 +20,4 @@ Public Class Form1
         parameter.Size = 14
     End Sub 
     ' </Snippet1>
-End Class 'Form1 
+End Class

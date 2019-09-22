@@ -54,7 +54,7 @@ Public Class ImportIncludeSample
         compiledSchema.Write(Console.Out, nsmgr)
 
     End Sub
-End Class 'ImportIncludeSample ' Main() 
+End Class
 
 'ImportIncludeSample
 '</snippet1>

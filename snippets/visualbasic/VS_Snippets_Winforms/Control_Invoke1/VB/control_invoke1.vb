@@ -56,7 +56,7 @@ Public Class MyFormControl
       Dim myThreadClassObject As New MyThreadClass(Me)
       myThreadClassObject.Run()
    End Sub
-End Class 'MyFormControl
+End Class
 
 Public Class MyThreadClass
    Private myFormControl1 As MyFormControl
@@ -79,5 +79,5 @@ Public Class MyThreadClass
       Next i
 
    End Sub
-End Class 'MyThreadClass
+End Class
 ' </Snippet1>

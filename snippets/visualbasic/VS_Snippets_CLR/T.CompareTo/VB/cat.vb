@@ -88,7 +88,7 @@ Class Sample
                             resultGeneric, resultNonGeneric)
       End If
    End Sub
-End Class 'Sample
+End Class
 '
 'This example produces the following results:
 '

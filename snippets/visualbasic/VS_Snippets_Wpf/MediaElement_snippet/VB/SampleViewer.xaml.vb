@@ -17,5 +17,5 @@ Namespace MediaElementExample
             InitializeComponent()
 
         End Sub
-    End Class 'SampleViewer 
+    End Class
 End Namespace 'MediaElementExample

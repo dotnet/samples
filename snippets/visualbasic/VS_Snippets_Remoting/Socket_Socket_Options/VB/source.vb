@@ -96,4 +96,4 @@ Public Class Sync_Send_Receive
 
     Public Shared Sub Main()
     End Sub
-End Class 'Sync_Send_Receive 
+End Class

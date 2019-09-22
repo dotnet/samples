@@ -122,6 +122,6 @@ ContinueFor1:
    Public Shared Sub Main()
     Console.WriteLine(DoSocketGet("localhost"))
    End Sub
-End Class 'Sample
+End Class
  '</Snippet1>
 

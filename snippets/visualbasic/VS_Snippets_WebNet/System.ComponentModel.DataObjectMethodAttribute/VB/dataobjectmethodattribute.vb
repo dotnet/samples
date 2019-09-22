@@ -45,7 +45,7 @@ Namespace Samples.AspNet.VB.Controls
       End Set
     End Property
 
-  End Class 'NorthwindEmployee
+  End Class
 ' </snippet2>
 
 ' <snippet3>
@@ -67,7 +67,7 @@ Namespace Samples.AspNet.VB.Controls
       Throw New Exception("The value passed to the delete method is " + employeeID.ToString())
     End Sub
 
-  End Class 'NorthwindData
+  End Class
 ' </snippet3>
 
 End Namespace ' Samples.AspNet.VB.Controls 

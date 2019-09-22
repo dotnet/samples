@@ -49,5 +49,5 @@ NotInheritable Public Class UsingInfiniteTimeSpanConverter
         End Try
     
     End Sub
-End Class 'UsingInfiniteTimeSpanConverter
+End Class
 '</Snippet1>

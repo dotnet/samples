@@ -12,4 +12,4 @@ Public Class MyControl
          Return _message
       End Get
    End Property 
-End Class 'MyControl
+End Class

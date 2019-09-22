@@ -66,7 +66,7 @@ Class Sample
                                title, dspMySingle, dspYourSingle)
         End If
     End Sub
-End Class 'Sample
+End Class
 
 '
 'This code example produces the following results:

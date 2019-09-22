@@ -10,4 +10,4 @@ Public Class PrintServer
       Console.WriteLine("PrintServer.MyPrintMethod {0} {1} {2}", myString, fValue, iValue)
       Return iValue
    End Function 'MyPrintMethod
-End Class 'PrintServer
+End Class

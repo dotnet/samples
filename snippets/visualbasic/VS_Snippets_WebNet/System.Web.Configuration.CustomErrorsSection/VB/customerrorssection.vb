@@ -130,6 +130,6 @@ WebConfigurationManager.OpenWebConfiguration( _
         ' </Snippet12>
 
    End Sub
-End Class 'UsingCustomErrorsSection 
+End Class
 
 

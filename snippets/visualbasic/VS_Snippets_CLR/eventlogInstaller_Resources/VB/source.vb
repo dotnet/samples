@@ -61,5 +61,5 @@
       Public Shared Sub Main()
         Console.WriteLine("Usage: InstallUtil.exe [<install>.exe | <install>.dll]")
       End Sub
-   End Class 'MyEventLogInstaller
+   End Class
 '</Snippet1>

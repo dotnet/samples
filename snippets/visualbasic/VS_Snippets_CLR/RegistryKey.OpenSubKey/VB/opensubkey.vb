@@ -30,5 +30,5 @@ Public Class Example
         Console.WriteLine("Test value for TestName: {0}", rkTest.GetValue("TestName"))
         rkTest.Close
     End Sub
-End Class 'Example
+End Class
 '</Snippet1>

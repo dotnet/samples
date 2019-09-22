@@ -12,5 +12,5 @@ Public Class MyServerImpl
       i = i + 1
       Return "The client requests to " + name + i.ToString() + " time"
    End Function 'MyMethod
-End Class 'MyServerImpl
+End Class
 

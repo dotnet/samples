@@ -32,6 +32,6 @@ Class MyMethodBuilderDemo
 
    End Sub
 
-End Class 'MyMethodBuilderDemo 
+End Class
 
 

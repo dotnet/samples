@@ -130,6 +130,6 @@ Namespace MyProj
 
         End Sub
 
-    End Class 'MyNewQueue
+    End Class
 End Namespace 'MyProj
 ' </Snippet1>

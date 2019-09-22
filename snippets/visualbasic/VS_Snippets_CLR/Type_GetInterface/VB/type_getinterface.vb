@@ -47,7 +47,7 @@ Class MyInterfaceClass
          Console.WriteLine(("Exception : " + e.ToString()))
       End Try
    End Sub
-End Class 'MyInterfaceClass 
+End Class
 ' </Snippet3>
 ' </Snippet2>   
 ' </Snippet1>

@@ -55,7 +55,7 @@ Public Class Example
             End Select
         Next s
     End Sub
-End Class 'Example
+End Class
 
 '
 'This code example produces the following output (some output is omitted):

@@ -43,4 +43,4 @@ Public Class SampleClient
       Console.WriteLine("Is this object from this process? {0}", objRefSample.IsFromThisProcess())
       ' </Snippet1>
    End Sub
-End Class 'SampleClient
+End Class

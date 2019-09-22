@@ -106,4 +106,4 @@ Public Class MyForm
       customerTable.Rows(3)("Customers") = "Cust1"
       customerTable.Rows(4)("Customers") = "Cust2"
    End Sub
-End Class 'MyForm
+End Class

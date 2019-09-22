@@ -51,5 +51,5 @@ Namespace ImageElementExample
             croppedGrid.Children.Add(chainImage)
 
         End Sub
-    End Class 'CroppedImageExample
+    End Class
 End Namespace 'ImageElementExample

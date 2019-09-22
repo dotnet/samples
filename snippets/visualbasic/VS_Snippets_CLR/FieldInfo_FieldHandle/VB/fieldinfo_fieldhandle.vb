@@ -3,7 +3,7 @@ Imports System.Reflection
 
 Public Class [MyClass]
     Public MyField As String = "Microsoft"
-End Class '[MyClass]
+End Class
 
 Public Class FieldInfo_FieldHandle
     Public Shared Sub Main()
@@ -35,5 +35,5 @@ Public Class FieldInfo_FieldHandle
         Console.WriteLine(ControlChars.Cr + "Displaying the field from the handle." + ControlChars.Cr)
         Console.WriteLine("The type is {0}.", myField.ToString())
     End Sub
-End Class 'FieldInfo_FieldHandle
+End Class
 ' </Snippet1>

@@ -54,7 +54,7 @@ Class Test
         ' Release Mutex.
         mut.ReleaseMutex()
     End Sub
-End Class 'MyMainClass
+End Class
 ' The example displays output like the following:
 '       Creating thread owns the Mutex.
 '       Creating thread releases the Mutex.

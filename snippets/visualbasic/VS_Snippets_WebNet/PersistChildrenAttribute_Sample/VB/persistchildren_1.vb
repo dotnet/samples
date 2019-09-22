@@ -61,7 +61,7 @@ Namespace PersistChildrenSampleVB
          _alias = value
       End Set
    End Property
-End Class 'Employee
+End Class
 
 ' <snippet2>
  ' Use the PersistChildren attribute to set the Persist
@@ -148,7 +148,7 @@ End Class 'Employee
       Next employee
       Controls.Add(table)
    End Sub
- End Class 'CollectionPropertyControl
+ End Class
 ' </snippet2>
 End Namespace ' PersistChildrenSampleVB
 ' </snippet1>

@@ -46,4 +46,4 @@ Public Class Installer_Installers
       Console.WriteLine("Parent of myAssembly : {0}", myInstaller1.ToString())
 ' </Snippet2>
 End Sub
-End Class 'Installer_Installers
+End Class

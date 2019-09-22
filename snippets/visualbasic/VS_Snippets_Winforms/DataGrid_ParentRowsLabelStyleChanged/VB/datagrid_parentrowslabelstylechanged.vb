@@ -187,4 +187,4 @@ Public Class MyForm
         MessageBox.Show(myMessage, "ParentRowsVisible information")
     End Sub
     ' </Snippet2>
-End Class 'MyForm 
+End Class

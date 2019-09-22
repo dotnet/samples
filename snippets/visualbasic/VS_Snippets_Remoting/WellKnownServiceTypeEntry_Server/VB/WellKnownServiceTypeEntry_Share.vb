@@ -9,4 +9,4 @@
       Console.WriteLine("'HelloServer.HelloMethod' method is called by : {0}", name)
       Return "Hi! " + name + " is calling 'HelloServer.HelloMethod' method. "
    End Function 'HelloMethod
-End Class 'HelloServer
+End Class

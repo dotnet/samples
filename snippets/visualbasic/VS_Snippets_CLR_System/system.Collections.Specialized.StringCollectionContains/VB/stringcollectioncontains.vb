@@ -33,7 +33,7 @@ Public Class SamplesStringCollection
       Console.WriteLine()
    End Sub
 
-End Class 'SamplesStringCollection 
+End Class
 
 
 'This code produces the following output.

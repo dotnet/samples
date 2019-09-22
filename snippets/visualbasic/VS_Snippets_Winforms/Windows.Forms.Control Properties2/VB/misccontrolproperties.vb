@@ -149,5 +149,5 @@ Namespace CursorSetStyle
 
 
 
-   End Class 'Form1 
+   End Class
 End Namespace 'CursorSetStyle

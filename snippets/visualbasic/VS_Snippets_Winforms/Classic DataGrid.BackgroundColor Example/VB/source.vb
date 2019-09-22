@@ -15,5 +15,5 @@ Public Class Form1
         dataGrid1.BackgroundColor = System.Drawing.Color.Yellow
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

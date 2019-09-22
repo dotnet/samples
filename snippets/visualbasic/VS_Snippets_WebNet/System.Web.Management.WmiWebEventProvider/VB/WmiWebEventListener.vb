@@ -134,7 +134,7 @@ As ManagementBaseObject)
         End While
 
     End Sub
-End Class 'SampleWmiWebEventListener 
+End Class
 
 
 ' </Snippet1>

@@ -829,5 +829,5 @@ Class UsingWebConfigurationManager
 
         Console.Read()
     End Sub
-End Class 'UsingWebConfigurationManager
+End Class
 ' </Snippet1>

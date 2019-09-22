@@ -461,6 +461,6 @@ Namespace SdkSample
 			'Step 5
 		#End Region ' Private Fields
 
-	End Class ' end:partial class Window1
+	End Class
 
 End Namespace ' end:namespace SdkSample

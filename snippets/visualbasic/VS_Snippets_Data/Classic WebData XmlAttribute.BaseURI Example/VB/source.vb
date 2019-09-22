@@ -19,5 +19,5 @@ Public Class Sample
         Console.WriteLine("Base URI of the attribute:  {0}", attr.BaseURI)
         Console.WriteLine("The value of the attribute:  {0}", attr.InnerText)
     End Sub
-End Class 'Sample
+End Class
 ' </Snippet1>

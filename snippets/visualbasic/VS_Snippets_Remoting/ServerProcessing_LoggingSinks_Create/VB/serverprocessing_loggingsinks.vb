@@ -65,7 +65,7 @@ Namespace MyLogging
             myClientChannelSinkProviderNext = Value
          End Set
       End Property
-   End Class 'MyServerProcessingLogClientChannelSinkProviderData
+   End Class
 ' </Snippet2>
 ' </Snippet1>
    
@@ -167,7 +167,7 @@ Namespace MyLogging
 
          End Get
       End Property
-   End Class 'MyLoggingClientChannelSink
+   End Class
  
    <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> _
    Public Class MyServerProcessingLogServerChannelSinkProviderData
@@ -202,7 +202,7 @@ Namespace MyLogging
             myServerChannelSinkProviderNext = Value
          End Set
       End Property
-   End Class 'MyServerProcessingLogServerChannelSinkProviderData
+   End Class
 
    <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> _
    Friend Class LoggingServerChannelSink
@@ -325,7 +325,7 @@ Namespace MyLogging
 
          End Get
       End Property
-   End Class 'LoggingServerChannelSink
+   End Class
 
    Friend Class LoggingHelper
 
@@ -395,7 +395,7 @@ Namespace MyLogging
          streamCopy.Position = 0
          Return streamCopy
       End Function 'CopyStream
-   End Class 'LoggingHelper
+   End Class
 
    Public Interface ILoggingSink
 
@@ -406,6 +406,6 @@ Namespace MyLogging
    ' This class is used as the key to get the ILoggingSink interface
    ' to one of the logging sinks.
    Public Class LoggingSinkKey
-   End Class 'LoggingSinkKey
+   End Class
 
 End Namespace 'MyLogging

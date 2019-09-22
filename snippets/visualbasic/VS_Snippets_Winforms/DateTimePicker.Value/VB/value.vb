@@ -18,4 +18,4 @@ Public Class [MyClass]
       MessageBox.Show(dateTimePicker1.Value.ToString())
    End Sub
 ' </snippet1>
-End Class '[MyClass]
+End Class

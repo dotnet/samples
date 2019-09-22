@@ -80,5 +80,5 @@ Public Class OidSample
       'Return index in the collection to the beginning.
       oe.Reset()
    End Sub
-End Class 'OidSample
+End Class
 '</SNIPPET1>

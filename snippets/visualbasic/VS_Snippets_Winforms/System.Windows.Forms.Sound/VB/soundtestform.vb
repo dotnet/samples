@@ -377,5 +377,5 @@ Public Class SoundTestForm
     Shared Sub Main()
         Application.Run(New SoundTestForm)
     End Sub
-End Class 'SoundTestForm
+End Class
 ' </snippet1>

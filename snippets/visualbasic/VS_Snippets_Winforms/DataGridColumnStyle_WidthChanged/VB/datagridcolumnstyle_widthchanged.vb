@@ -195,5 +195,5 @@ Namespace MyWidthChangedEventExample
                 Console.WriteLine("Message : " + exc.Message.ToString())
             End Try
         End Sub
-   End Class 'MyForm
+   End Class
 End Namespace 'MyWidthChangedEventExample

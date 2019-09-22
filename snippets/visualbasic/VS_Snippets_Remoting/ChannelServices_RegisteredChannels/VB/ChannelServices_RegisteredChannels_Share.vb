@@ -16,5 +16,5 @@ Namespace RemotingSamples
          Console.WriteLine("Hello.HelloMethod : {0}", myName)
          Return "Hi there " + myName
       End Function 'HelloMethod
-   End Class 'HelloServer
+   End Class
 End Namespace 'RemotingSamples

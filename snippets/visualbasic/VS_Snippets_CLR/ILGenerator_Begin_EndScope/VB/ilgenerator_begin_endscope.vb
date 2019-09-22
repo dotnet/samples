@@ -92,5 +92,5 @@ Public Class ILGenerator_Begin_EndScope
          Console.WriteLine("Exception: {0}", e.Message)
       End Try
    End Sub
-End Class 'ILGenerator_Begin_EndScope
+End Class
 ' </Snippet1>

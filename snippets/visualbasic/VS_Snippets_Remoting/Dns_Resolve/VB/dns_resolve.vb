@@ -66,4 +66,4 @@ Class DnsResolve
         End Try
         ' </Snippet1>
     End Sub
-End Class 'DnsResolve 
+End Class

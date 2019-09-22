@@ -32,7 +32,7 @@ Public Class MyService
    Public Function Add(xValue As Integer, yValue As Integer) As Integer
       Return xValue + yValue
    End Function 'Add
-End Class 'MyService
+End Class
 
 Class LogicalMethodInfo_Constructor
 
@@ -73,5 +73,5 @@ Class LogicalMethodInfo_Constructor
    Shared Sub Main()
       Run()
    End Sub
-End Class 'LogicalMethodInfo_Constructor
+End Class
 ' </Snippet1>

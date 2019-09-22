@@ -41,5 +41,5 @@ Class MoreMethodBuilderSnippets
 
    End Sub
 
-End Class 'MoreMethodBuilderSnippets 
+End Class
 

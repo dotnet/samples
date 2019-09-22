@@ -12,5 +12,5 @@ Public Class DeleteTest
         ' Delete the file.
         fi.Delete()
     End Sub
-End Class 'DeleteTest
+End Class
 ' </snippet1>

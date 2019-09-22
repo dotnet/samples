@@ -147,5 +147,5 @@ Partial Class SampleApplicationForm
     Private radioOff As System.Windows.Forms.RadioButton
     Private radioOn As System.Windows.Forms.RadioButton
     Private groupBox1 As System.Windows.Forms.GroupBox
-End Class 'SampleApplicationForm 
+End Class
 

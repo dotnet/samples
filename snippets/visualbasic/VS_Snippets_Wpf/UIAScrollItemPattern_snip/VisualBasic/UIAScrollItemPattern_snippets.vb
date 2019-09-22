@@ -92,5 +92,5 @@ Class UIAScrollItemPattern_snippets
             Dim app As New UIAScrollItemPattern_snippets()
         
         End Sub
-    End Class 'TestMain
-End Class 'UIAScrollItemPattern_snippets
+    End Class
+End Class

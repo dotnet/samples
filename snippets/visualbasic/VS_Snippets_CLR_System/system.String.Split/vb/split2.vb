@@ -11,7 +11,7 @@ Public Class SplitTest
             End If
         Next s
     End Sub
-End Class 'SplitTest
+End Class
 ' The example displays the following output to the console:
 '       This
 '       is

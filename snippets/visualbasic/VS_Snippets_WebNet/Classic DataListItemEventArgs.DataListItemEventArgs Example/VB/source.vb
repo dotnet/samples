@@ -11,4 +11,4 @@ Public Class Form1
         Dim item_arg As New DataListItemEventArgs(e.Item)
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

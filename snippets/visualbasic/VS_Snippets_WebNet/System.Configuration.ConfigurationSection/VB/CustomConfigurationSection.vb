@@ -137,7 +137,7 @@ NotInheritable Public Class CustomSection
             Me("maxIdleTime") = Value
         End Set
     End Property
-End Class 'CustomSection 
+End Class
 '</Snippet1>
 
 
@@ -244,7 +244,7 @@ Class TestingCustomSection
         Console.WriteLine("[Display the new section information]")
         DisplayCustomSectionInformation()
     End Sub
-End Class 'TestingCustomSection 
+End Class
 
 End Namespace
 

@@ -34,5 +34,5 @@ Class DiscoveryClientProtocol_Download
 ' </Snippet1>
 ' </Snippet2>
    End Sub
-End Class 'DiscoveryClientProtocol_Download
+End Class
 

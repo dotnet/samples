@@ -11,12 +11,12 @@ Namespace HighSchool
     Public Class Student
         Public Name As String
         Public ID As Integer
-    End Class 'Student
+    End Class
 
 
     Public Class ClassRoom
         Public Students() As Student
-    End Class 'ClassRoom
+    End Class
 End Namespace 'HighSchool
 
 Namespace College
@@ -29,17 +29,17 @@ Namespace College
         Public University As String
         ' Use extra types to use this field.
         Public Info() As Object
-    End Class 'Graduate
+    End Class
 
 
     Public Class Address
         Public City As String
-    End Class 'Address
+    End Class
 
 
     Public Class Phone
         Public Number As String
-    End Class 'Phone
+    End Class
 
 
     Public Class Run
@@ -164,6 +164,6 @@ Namespace College
                 Console.WriteLine(p.Number)
             Next grad
         End Sub
-    End Class 'Run
+    End Class
 End Namespace 'College
 ' </Snippet1>

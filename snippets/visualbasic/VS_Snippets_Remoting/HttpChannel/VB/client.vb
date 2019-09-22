@@ -37,5 +37,5 @@ Public Class SampleClient
    Private Sub OnSomethingHappened(source As Object, e As SampleServiceEventArgs)
       Console.WriteLine("SomethingHappened event fired: {0}", e.Message)
    End Sub
-End Class 'SampleClient 
+End Class
 ' </Snippet2>

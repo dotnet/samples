@@ -140,6 +140,6 @@ Public Class RemoteConfiguration
         End Try
     
     End Sub
-End Class 'RemoteConfiguration
+End Class
 
 ' </Snippet1>

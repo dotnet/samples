@@ -198,7 +198,7 @@ Public Class MyTcpClientExample
       ' Send and receive data using tcpClient class.
       MyTcpClientCommunicator()
    End Sub
-End Class 'MyTcpClientExample 
+End Class
 ' </Snippet1>
 
 'end class

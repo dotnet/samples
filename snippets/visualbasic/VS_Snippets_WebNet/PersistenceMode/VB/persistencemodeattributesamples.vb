@@ -38,7 +38,7 @@ Namespace PersistenceModeAttributeSamples
             _author = value
          End Set
       End Property
-   End Class 'TemplateItem
+   End Class
    <ParseChildren(True)> Public Class MyTemplateControl
       Inherits Control
       Implements INamingContainer 'ToDo: Add Implements Clauses for implementation methods of these interface(s)
@@ -111,5 +111,5 @@ Namespace PersistenceModeAttributeSamples
             Me.Controls.Add(New LiteralControl(Me.Author))
          End If
       End Sub
-   End Class 'MyTemplateControl
+   End Class
 End Namespace 'PersistenceModeAttributeSamples

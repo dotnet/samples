@@ -67,4 +67,4 @@ Class FileWebRequest_ContentLen
             End Try
         End If
     End Sub
-End Class ' FileWebRequest_ContentLen
+End Class

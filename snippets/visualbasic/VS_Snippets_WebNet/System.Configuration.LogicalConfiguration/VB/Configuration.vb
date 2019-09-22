@@ -78,7 +78,7 @@ Namespace Samples.AspNet
                     Me(CustomSection.configTimeout) = value
                 End Set
             End Property
-        End Class 'CustomSection
+        End Class
 
 
 
@@ -132,7 +132,7 @@ Namespace Samples.AspNet
             Return currentSection
 
         End Function 'GetCustomSection
-    End Class 'CustomConfiguration
+    End Class
 
 End Namespace
 '</Snippet1>

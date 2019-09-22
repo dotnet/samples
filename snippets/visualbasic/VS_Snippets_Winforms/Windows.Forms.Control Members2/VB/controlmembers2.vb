@@ -212,14 +212,14 @@ End Sub
             textBox1.Font = New Font(menuItem.Text, textBox1.Font.Size)
          End If
       End Sub
-   End Class 'Form1
+   End Class
    
    
    
    Public Class CustomerForm
       Inherits Form
       Public UserName As String
-   End Class 'CustomerForm
+   End Class
    
    Public Class Customer
       Public Name As String
@@ -229,13 +229,13 @@ End Sub
       Public Overrides Function ToString() As String
          Return AccountNumber.ToString() + Environment.NewLine + Name
       End Function 'ToString
-   End Class 'Customer
+   End Class
    
    
    
    Public Class AboutDialog
       Inherits Form
       Public FormText As String
-   End Class 'AboutDialog
+   End Class
 
 End Namespace 'ControlMembers3

@@ -84,4 +84,4 @@ Class MyOperationClass
       Console.WriteLine("WSDL file with name 'Operation_IsBoundBy_Output_VB.wsdl' " + _
                                                    "created Successfully")
    End Sub
-End Class 'MyOperationClass
+End Class

@@ -286,4 +286,4 @@ Public Class MyForm
         Next myTableStyle
     End Sub
     ' </Snippet3>
-End Class 'MyForm
+End Class

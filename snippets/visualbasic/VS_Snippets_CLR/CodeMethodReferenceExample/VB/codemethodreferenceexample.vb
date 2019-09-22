@@ -39,6 +39,6 @@ Namespace CodeDomSamples
 
             '</Snippet3>
         End Sub
-    End Class 'CodeMethodReferenceExample 
+    End Class
 End Namespace 'CodeDomSamples
 '</Snippet1>

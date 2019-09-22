@@ -125,5 +125,5 @@ Namespace MyApplication
       Shared Sub Main()
          Application.Run(New MyForm())
       End Sub
-   End Class 'MyForm
+   End Class
 End Namespace 'MyApplication

@@ -68,7 +68,7 @@ Public Class AssemblyName_Constructor
          Console.WriteLine(myAssembly)
       End If
    End Sub
-End Class 'AssemblyName_Constructor 
+End Class
 ' </Snippet3>
 ' </Snippet2>
 ' </Snippet1>

@@ -33,4 +33,4 @@ Public Class MapToPropertySample
       End If
 ' </Snippet1>
    End Sub
-End Class 'MapToPropertySample 
+End Class

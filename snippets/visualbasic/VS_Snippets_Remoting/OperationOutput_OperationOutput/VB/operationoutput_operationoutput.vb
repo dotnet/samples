@@ -118,5 +118,5 @@ Class MyOperationOutputSample
          Console.WriteLine("Message : " & e.Message.ToString())
       End Try
    End Sub
-End Class 'MyOperationOutputSample
+End Class
 ' </Snippet1>

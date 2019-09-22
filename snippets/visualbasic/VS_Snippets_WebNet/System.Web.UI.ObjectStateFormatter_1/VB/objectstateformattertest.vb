@@ -48,4 +48,4 @@ Public Class ObjectStateFormatterTest
    End Function 'LoadControlProperties   
 ' </snippet2>   
 
-End Class 'ObjectStateFormatterTest 
+End Class

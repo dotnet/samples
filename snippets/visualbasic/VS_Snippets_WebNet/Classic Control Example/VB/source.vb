@@ -17,6 +17,6 @@ Namespace SimpleControlSamples
                 output.Write("</H2>")
             End If
         End Sub
-    End Class 'InnerContent
+    End Class
 End Namespace 'SimpleControlSamples
 ' </Snippet1>

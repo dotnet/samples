@@ -163,4 +163,4 @@ Class MySoapClass
       myDescription.Write("AddNumbersOut_vb.wsdl")
       Console.WriteLine(" 'AddNumbersOut.Wsdl' file was generated")
    End Sub
-End Class 'MySoapClass
+End Class

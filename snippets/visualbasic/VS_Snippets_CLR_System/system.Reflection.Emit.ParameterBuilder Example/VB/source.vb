@@ -144,6 +144,6 @@ Class ParamBuilderDemo
 
    End Sub
 
-End Class 'ParamBuilderDemo
+End Class
 
 ' </Snippet1>

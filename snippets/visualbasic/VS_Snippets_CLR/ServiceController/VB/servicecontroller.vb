@@ -285,6 +285,6 @@ Namespace ServiceControllerSample
 
       End Sub
 
-   End Class 'ServiceControllerInfo
+   End Class
     
 End Namespace 'ServiceControllerSample

@@ -63,7 +63,7 @@ Class CustomDynamicRenderer
         Next i
 
     End Sub
-End Class 'CustomDynamicRenderer
+End Class
 '</Snippet1>
 
 '<Snippet2>
@@ -109,7 +109,7 @@ Class CustomStroke
         Next i
 
     End Sub
-End Class 'CustomStroke
+End Class
 '</Snippet2>
 
 '<Snippet3>
@@ -175,5 +175,5 @@ Class FilterPlugin
         rawStylusInput.SetStylusPoints(stylusPoints)
 
     End Sub
-End Class 'FilterPlugin
+End Class
 '</Snippet3>

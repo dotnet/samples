@@ -50,7 +50,7 @@ Public NotInheritable Class App
         End Try
 
     End Sub
-End Class 'App
+End Class
 
 ' This code produces the following output.
 '

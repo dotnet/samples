@@ -20,7 +20,7 @@ Namespace CodeDomSamples
 	'</Snippet2>
       End Sub
 
-   End Class 'CodeBinaryOperatorExpressionExample 
+   End Class
 
 End Namespace 'CodeDomSamples
 

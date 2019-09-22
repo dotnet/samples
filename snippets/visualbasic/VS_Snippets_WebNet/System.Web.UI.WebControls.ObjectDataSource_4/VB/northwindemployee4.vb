@@ -71,7 +71,7 @@ Public Class EmployeeLogic
 
    ' And so on...
 
-End Class 'EmployeeLogic
+End Class
 
 
 Public Class NorthwindEmployee
@@ -209,7 +209,7 @@ Public Class NorthwindEmployee
      Return True
 
    End Function 'Delete
-End Class 'NorthwindEmployee
+End Class
 
 
 Friend Class NorthwindDataException
@@ -218,7 +218,7 @@ Friend Class NorthwindDataException
    Public Sub New(msg As String)
       MyBase.New(msg)
    End Sub
-End Class 'NorthwindDataException
+End Class
 
 End Namespace
 ' </snippet2>

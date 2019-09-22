@@ -130,4 +130,4 @@ Public Class MyForm
         myDataGrid.UnSelect(myDataGrid.CurrentRowIndex)
     End Sub
 ' </Snippet1>
-End Class 'MyForm 
+End Class

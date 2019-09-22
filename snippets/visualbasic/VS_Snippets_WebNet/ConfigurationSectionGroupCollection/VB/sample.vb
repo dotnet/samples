@@ -62,5 +62,5 @@ Class ListSectionGroupCollectionInfo
         indentLevel -= 1
     End Sub
     '</Snippet2>
-End Class 'ListSectionGroupCollectionInfo
+End Class
 '</Snippet1>

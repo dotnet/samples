@@ -39,7 +39,7 @@ Public Class SamplesArray
 
    End Sub
 
-End Class 'SamplesArray
+End Class
 
 
 'This code produces the following output.

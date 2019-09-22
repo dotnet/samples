@@ -32,7 +32,7 @@ Class Sample
       End While
       Console.Write("{0}{0}{0}", Environment.NewLine)
    End Sub
-End Class 'Sample
+End Class
 '
 'This example produces the following results:
 'All occurrences of 't' from position 66 to 32.

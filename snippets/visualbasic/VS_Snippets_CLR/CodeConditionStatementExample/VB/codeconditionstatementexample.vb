@@ -23,7 +23,7 @@ Namespace CodeDomSamples
           '</Snippet2>
       End Sub
 
-   End Class 'CodeConditionStatementExample
+   End Class
 
 End Namespace 'CodeDomSamples 		
         

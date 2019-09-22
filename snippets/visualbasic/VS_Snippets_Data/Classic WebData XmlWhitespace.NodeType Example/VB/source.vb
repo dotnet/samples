@@ -83,5 +83,5 @@ Public Class Sample
         End Select
         Return sNodeType
     End Function 'NodeTypeToString
-End Class 'Sample
+End Class
 ' </Snippet1>

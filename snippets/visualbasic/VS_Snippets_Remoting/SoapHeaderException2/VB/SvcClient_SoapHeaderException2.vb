@@ -6,4 +6,4 @@ Imports System.Web.Services.Protocols
 Public Class SvcClient
    Public Shared Sub Main()
    End Sub
-End Class 'SvcClient
+End Class

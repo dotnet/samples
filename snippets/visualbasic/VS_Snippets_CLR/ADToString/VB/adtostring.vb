@@ -23,6 +23,6 @@ Class ADSetup
       
       AppDomain.Unload(domain)
    End Sub
-End Class 'ADSetup
+End Class
 
 '  </SNIPPET1>

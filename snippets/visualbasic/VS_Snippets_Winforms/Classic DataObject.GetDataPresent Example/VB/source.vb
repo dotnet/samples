@@ -26,6 +26,6 @@ Public Class Form1
         textBox1.Text += "The data type stored in the DataObject is: " + myObject.GetType().Name
     End Sub
     ' </Snippet1>
-End Class 'Form1
+End Class
 
 

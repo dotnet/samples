@@ -45,4 +45,4 @@ cevent As ConvertEventArgs)
    NumberStyles.Currency, nothing)
    End Sub 
     ' </Snippet1>
-End Class 'Form1
+End Class

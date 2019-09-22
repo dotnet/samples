@@ -10,5 +10,5 @@ Class MySample
             Console.WriteLine((ControlChars.Tab & "Entry: " & entry.Message))
         Next entry
     End Sub
-End Class 'MySample
+End Class
 ' </Snippet1>

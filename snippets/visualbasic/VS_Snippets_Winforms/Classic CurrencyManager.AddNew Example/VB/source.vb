@@ -17,4 +17,4 @@ Public Class Form1
         myCurrencyManager.AddNew()
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

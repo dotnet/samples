@@ -21,5 +21,5 @@ Public Class Sample
         Console.WriteLine("Name of the document type:  {0}", doctype.Name)
         Console.WriteLine("The internal subset of the document type:  {0}", doctype.InternalSubset)
     End Sub
-End Class 'Sample
+End Class
 ' </Snippet1>

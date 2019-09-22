@@ -30,4 +30,4 @@ Class Installer1
 
     End Sub
 
-End Class 'Installer1
+End Class

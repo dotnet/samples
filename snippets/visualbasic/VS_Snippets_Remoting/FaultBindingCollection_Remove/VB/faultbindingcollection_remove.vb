@@ -80,7 +80,7 @@ Public Class FaultBindingCollection_Remove
       End If
    End Sub
 
-End Class 'FaultBindingCollection_Remove
+End Class
 ' </Snippet6>
 ' </Snippet5>
 ' </Snippet4>

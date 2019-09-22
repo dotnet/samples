@@ -160,7 +160,7 @@ Class Form1
         Application.Run(New Form1())
     
     End Sub
-End Class 'Form1 
+End Class
 
 
 

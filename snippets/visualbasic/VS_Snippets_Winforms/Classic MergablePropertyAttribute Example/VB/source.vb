@@ -52,4 +52,4 @@ Public Class Form1
             Return 0
         End Get
     End Property
-End Class 'Form1
+End Class

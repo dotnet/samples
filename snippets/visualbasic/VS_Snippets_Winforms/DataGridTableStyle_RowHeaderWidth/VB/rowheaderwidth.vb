@@ -184,4 +184,4 @@ Public Class DataGridTableStyle_RowHeaderWidth
    End Sub
 ' </Snippet2>
 ' </Snippet1>
-End Class 'DataGridTableStyle_RowHeaderWidth
+End Class

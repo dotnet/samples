@@ -32,7 +32,7 @@ Class ADMultiDomain
       AppDomain.Unload(newDomain)
       
    End Sub
-End Class 'ADMultiDomain
+End Class
 
 Class Worker
    Inherits MarshalByRefObject

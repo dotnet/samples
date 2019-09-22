@@ -184,5 +184,5 @@ Public Class InkEraser
         End If
 
     End Sub
-End Class 'InkEraser
+End Class
 '</Snippet1>

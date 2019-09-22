@@ -231,7 +231,7 @@ Namespace ChartControlNameSpace
                     End If
                 End If
             End Sub
-        End Class 'ChartControlAccessibleObject
+        End Class
         '</Snippet4>
 
         ' Inner Class that represents a legend for a curve in the chart.
@@ -432,12 +432,12 @@ Namespace ChartControlNameSpace
                     ChartControl.SelectChild(Me, selection)
                 End Sub
 
-            End Class 'CurveLegendAccessibleObject
+            End Class
             '</Snippet6>
 
-        End Class 'CurveLegend
+        End Class
 
-    End Class 'ChartControl
+    End Class
 
 End Namespace 'ChartControlNameSpace
 '</Snippet1>

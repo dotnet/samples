@@ -222,4 +222,4 @@ Class UsingClientTarget
             msg = e.ToString()
         End Try
     End Sub
-End Class 'UsingClientTarget
+End Class

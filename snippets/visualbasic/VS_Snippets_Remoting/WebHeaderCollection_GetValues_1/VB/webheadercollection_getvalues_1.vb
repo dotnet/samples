@@ -49,4 +49,4 @@ Public Class WebHeaderCollection_GetValues_1
             Console.WriteLine(ControlChars.Cr + " Exception raised : {0}", e.Message)
         End Try
     End Sub
-End Class 'WebHeaderCollection_GetValues_1
+End Class

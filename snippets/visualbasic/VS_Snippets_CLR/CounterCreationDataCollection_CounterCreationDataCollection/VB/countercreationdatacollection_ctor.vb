@@ -48,4 +48,4 @@ Public Class CounterCreationExample
             Return
         End Try
     End Sub
-End Class 'CounterCreationExample
+End Class

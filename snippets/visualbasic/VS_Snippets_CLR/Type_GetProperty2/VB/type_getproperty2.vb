@@ -25,6 +25,6 @@ Module Module1
                 Console.WriteLine("MyProperty does not exist in MyClass.", e.Message.ToString())
             End Try
         End Sub
-    End Class 'MyClass1
+    End Class
 End Module 'Module1
 ' </Snippet1>

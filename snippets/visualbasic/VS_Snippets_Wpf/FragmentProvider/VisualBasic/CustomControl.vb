@@ -452,7 +452,7 @@ Public Class CustomListControl
 
 #End Region
 
-End Class 'CustomListControl 
+End Class
 
 ''' <summary>
 ''' Class for the list items controls.
@@ -608,4 +608,4 @@ Public Class CustomListItem
             ItemProvider = value
         End Set
     End Property
-End Class 'CustomListItem 
+End Class

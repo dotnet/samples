@@ -99,4 +99,4 @@ Public Class MyTypeBuilder
 ' </Snippet3>
       Return helloWorldTypeBuilder.CreateType()
    End Function 'CreateDynamicAssembly
-End Class 'MyTypeBuilder
+End Class

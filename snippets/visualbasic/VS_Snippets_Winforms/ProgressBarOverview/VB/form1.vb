@@ -145,5 +145,5 @@ Namespace ProgressBarEx
 
             CopyWithProgress(tempFiles)
         End Sub
-    End Class 'Form1
+    End Class
 End Namespace 'ProgressBarEx

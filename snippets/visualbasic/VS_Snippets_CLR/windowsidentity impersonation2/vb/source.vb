@@ -90,7 +90,7 @@ Module Module1
                 Console.WriteLine(("Exception occurred. " + ex.Message))
             End Try
         End Sub
-    End Class 'Class1
+    End Class
 End Module
 
 Public NotInheritable Class SafeTokenHandle
@@ -113,5 +113,5 @@ Public NotInheritable Class SafeTokenHandle
         Return CloseHandle(handle)
 
     End Function 'ReleaseHandle
-End Class 'SafeTokenHandle
+End Class
 '</Snippet1>

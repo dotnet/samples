@@ -85,5 +85,5 @@ Public Class UrlsSection
         Return s
     End Function 'SerializeSection
     '</Snippet74>
-End Class 'UrlsSection 
+End Class
 '</Snippet71>

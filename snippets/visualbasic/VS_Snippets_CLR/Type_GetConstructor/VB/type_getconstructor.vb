@@ -30,5 +30,5 @@ Public Class MyClass1
             Console.WriteLine(("Message: " + e.Message))
         End Try
     End Sub
-End Class 'MyClass1
+End Class
 ' </Snippet1>

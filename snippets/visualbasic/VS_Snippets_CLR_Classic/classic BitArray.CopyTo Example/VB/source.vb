@@ -77,7 +77,7 @@ Public Class SamplesBitArray
         Console.WriteLine()
     End Sub
 
-End Class 'SamplesBitArray 
+End Class
 
 
 ' This code produces the following output.

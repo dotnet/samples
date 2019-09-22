@@ -124,7 +124,7 @@ Class MyOperationMessageCollectionSample
          "in the collection " &  myOperationMessageCollection.Output.ToString())
       Console.WriteLine()
    End Sub
-End Class 'MyOperationMessageCollectionSample 
+End Class
 ' </Snippet11>
 ' </Snippet10>
 ' </Snippet9>

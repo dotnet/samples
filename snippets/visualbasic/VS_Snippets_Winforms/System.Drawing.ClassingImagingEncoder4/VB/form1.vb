@@ -70,5 +70,5 @@ Class Example_MultiFrame
         Return Nothing
     
     End Function 'GetEncoderInfo
-End Class 'Example_MultiFrame
+End Class
 ' </snippet4>

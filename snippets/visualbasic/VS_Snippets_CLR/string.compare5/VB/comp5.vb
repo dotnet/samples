@@ -28,7 +28,7 @@ Class Sample
       Console.Write("{0} ", str)
       Console.WriteLine("substring '{0}' in '{1}'.", str2.Substring(4, 2), str2)
    End Sub
-End Class 'Sample
+End Class
 '
 'This example produces the following results:
 '

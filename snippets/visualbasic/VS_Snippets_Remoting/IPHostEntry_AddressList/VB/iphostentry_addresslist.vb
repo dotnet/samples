@@ -49,4 +49,4 @@ Class HostInfoSample
         End Try
     End Sub
 ' </Snippet1>	
-End Class 'HostInfoSample 
+End Class

@@ -182,5 +182,5 @@ Class UIAValuePattern_snippets
             Dim app As New UIAValuePattern_snippets()
         
         End Sub
-    End Class 'TestMain
-End Class 'UIAValuePattern_snippets
+    End Class
+End Class

@@ -21,7 +21,7 @@ Public Class TypeLoadException_Constructor3
          Console.WriteLine(("Exception: " + ControlChars.Cr + ControlChars.Tab + "Error Message = " + e.Message))
       End Try
    End Sub
-End Class 'TypeLoadException_Constructor3
+End Class
 
 Class TypeLoadExceptionDemoClass
    ' A call to this method will raise a TypeLoadException.
@@ -35,5 +35,5 @@ Class TypeLoadExceptionDemoClass
          Throw New TypeLoadException("This exception was raised due to a call to an invalid method.", e)
       End Try
    End Sub
-End Class 'TypeLoadExceptionDemoClass
+End Class
 ' </Snippet1>

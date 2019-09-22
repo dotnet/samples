@@ -32,7 +32,7 @@ Class SimpleUsage
         InitializeComponent()
     
     End Sub
-End Class 'SimpleUsage 
+End Class
 '
 'ToDo: Error processing original source shown below
 '   }

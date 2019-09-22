@@ -32,7 +32,7 @@ Public Class MyCollection
       Me.BaseClear()
    End Sub
 
-End Class 'MyCollection
+End Class
 
 
 Public Class SamplesNameObjectCollectionBase   
@@ -62,7 +62,7 @@ Public Class SamplesNameObjectCollectionBase
       Next i
    End Sub
 
-End Class 'SamplesNameObjectCollectionBase 
+End Class
 
 
 'This code produces the following output.

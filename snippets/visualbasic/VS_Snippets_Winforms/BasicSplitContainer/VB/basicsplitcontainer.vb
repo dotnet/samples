@@ -140,5 +140,5 @@ Private Sub splitContainer1_SplitterMoved(sender As System.Object, e As System.W
     ' When the splitter stops moving, change the cursor back to the default.
     Cursor.Current = System.Windows.Forms.Cursors.Default
 End Sub
-End Class 'Form1
+End Class
 ' </snippet1>

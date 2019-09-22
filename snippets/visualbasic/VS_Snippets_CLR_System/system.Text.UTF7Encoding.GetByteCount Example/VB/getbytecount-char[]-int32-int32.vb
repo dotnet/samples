@@ -16,5 +16,5 @@ Class UTF7EncodingExample
         Dim byteCount As Integer = utf7.GetByteCount(chars, 1, 2)
         Console.WriteLine("{0} bytes needed to encode characters.", byteCount)
     End Sub
-End Class 'UTF7EncodingExample
+End Class
 ' </Snippet1>

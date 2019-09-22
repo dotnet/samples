@@ -189,5 +189,5 @@ Namespace Datagrid
             MessageBox.Show("Changed Header Fore color to : " + comboBox2.SelectedItem.ToString(), "Success", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End Sub
 ' </Snippet1>
-   End Class 'Form1
+   End Class
 End Namespace 'Datagrid

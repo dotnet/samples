@@ -29,4 +29,4 @@ Public Class Form1
       Console.WriteLine(myPropertyDescriptor.GetValue(dt.DefaultView(0)))
    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

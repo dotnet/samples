@@ -25,5 +25,5 @@ Public Class Form1
         MessageBox.Show(("The returned exception is: " & myReturnedException.Message))
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

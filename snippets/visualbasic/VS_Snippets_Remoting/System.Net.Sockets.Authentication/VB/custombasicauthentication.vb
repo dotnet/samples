@@ -165,7 +165,7 @@ Class ClientAuthentication
     End If
     Return
   End Sub
-End Class 'ClientAuthentication 
+End Class
 '</Snippet2>
 
 ' <Snippet6>
@@ -318,7 +318,7 @@ Public Class CustomBasic
 
     Return resourceAuthorization
   End Function 'Authenticate
-End Class 'CustomBasic 
+End Class
 ' </Snippet3>
 ' </Snippet6>
 ' </Snippet1>

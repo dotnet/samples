@@ -51,7 +51,7 @@ Public Class SamplesUnicodeEncoding
 
    End Sub
 
-End Class 'SamplesUnicodeEncoding
+End Class
 
 
 'This code produces the following output.  The question marks take the place of characters that cannot be displayed at the console.

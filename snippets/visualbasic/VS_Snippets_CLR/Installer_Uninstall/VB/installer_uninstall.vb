@@ -28,5 +28,5 @@ Namespace MyAssembly
          Console.WriteLine("Use 'installutil.exe -u' to run the assembly" + _
                                                 " Installer_Uninstall.exe")
       End Sub
-   End Class 'MyInstallerSample
+   End Class
 End Namespace 'MyAssembly

@@ -22,4 +22,4 @@ Public Class Form1
       Dim pIndex As Integer = paramCollection.Add(parameter)
     End Sub 
     ' </Snippet1>
-End Class 'Form1 
+End Class

@@ -126,5 +126,5 @@ Public Class Form1
         Return ContainsNode(node1, node2.Parent)
     End Function 'ContainsNode
 
-End Class 'Form1 
+End Class
 '</Snippet1>

@@ -34,5 +34,5 @@ Public Class Sample
         doc.DocumentElement.LastChild.AppendChild(entityref2)
         Console.WriteLine(entityref2.FirstChild.InnerText)
     End Sub
-End Class 'Sample
+End Class
 ' </Snippet1>

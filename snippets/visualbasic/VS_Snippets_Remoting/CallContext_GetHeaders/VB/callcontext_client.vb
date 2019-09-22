@@ -96,5 +96,5 @@ Namespace RemotingSamples
          Next
 ' </Snippet2>
       End Sub
-   End Class 'HelloClient
+   End Class
 End Namespace 'RemotingSamples

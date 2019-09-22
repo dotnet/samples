@@ -50,6 +50,6 @@ Public Class MyAppDomainManager
             Return mySecurityManager
         End Get
     End Property
-End Class 'MyAppDomainManager 
+End Class
     '</Snippet3>
 '</Snippet1>

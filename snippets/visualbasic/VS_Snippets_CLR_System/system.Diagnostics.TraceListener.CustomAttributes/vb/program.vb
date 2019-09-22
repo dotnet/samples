@@ -40,7 +40,7 @@ Namespace CustomTraceListener
             ts.TraceEvent(TraceEventType.Error, 1, "test error message")
 
         End Sub
-    End Class 'Program
+    End Class
 
     Public Class TestListener
         Inherits TraceListener
@@ -81,7 +81,7 @@ Namespace CustomTraceListener
             Return New String() {"Source"}
 
         End Function 'GetSupportedAttributes
-    End Class 'TestListener 
+    End Class
 End Namespace 'CustomTraceListener
 ' This code example creates the following output:
 '

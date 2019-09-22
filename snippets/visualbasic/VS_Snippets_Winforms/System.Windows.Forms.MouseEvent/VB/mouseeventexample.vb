@@ -222,6 +222,6 @@ Namespace MouseEvent
             panel1.Invalidate()
         End Sub
         
-    End Class 'Form1
+    End Class
 End Namespace
 '</Snippet1>

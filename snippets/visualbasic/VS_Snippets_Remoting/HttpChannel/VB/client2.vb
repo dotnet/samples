@@ -22,5 +22,5 @@ Public Class SampleClient
       Dim service As New SampleService()
       service.SampleMethod()
    End Sub
-End Class 'SampleClient
+End Class
 ' </Snippet3>

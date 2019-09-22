@@ -20,7 +20,7 @@ Namespace Samples.AspNet.VB
         Protected Overrides Function CreateHtmlTextWriter(ByVal writer As TextWriter) As HtmlTextWriter
             Return New HtmlStyledLabelWriter(writer)
         End Function 'CreateHtmlTextWriter
-    End Class 'MyPage
+    End Class
     ' </snippet10> 
 
     ' Create a custom markup writer that overrides two versions

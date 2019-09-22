@@ -74,7 +74,7 @@ Class Sample
         Next sc
     
     End Sub
-End Class 'Sample
+End Class
 
 '
 'Note: This code example was executed on a console whose user interface 

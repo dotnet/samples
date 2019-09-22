@@ -50,7 +50,7 @@ Public Class SamplesStack
         Console.WriteLine()
     End Sub
 
-End Class 'SamplesStack
+End Class
 
 
 ' This code produces the following output.

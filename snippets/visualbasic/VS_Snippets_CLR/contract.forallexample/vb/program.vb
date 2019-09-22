@@ -53,5 +53,5 @@ Class Program
         End Try
 
     End Function 'CheckTypeArray
-End Class 'Program
+End Class
 '</Snippet1>

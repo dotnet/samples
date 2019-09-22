@@ -115,6 +115,6 @@ Namespace SDKSample
         End Sub
         '</SnippetPackageWriteCreatePackage>
 
-    End Class ' end:class PackageWrite
+    End Class
 
 End Namespace ' end:namespace SDKSample

@@ -99,7 +99,7 @@ Class UsingAnonymousIdentificationSection
         ' </Snippet11>
 
     End Sub
-End Class 'UsingAnonymousIdentificationSection 
+End Class
 
 
 ' </Snippet1>

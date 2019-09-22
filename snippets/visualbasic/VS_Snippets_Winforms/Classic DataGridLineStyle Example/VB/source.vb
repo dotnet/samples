@@ -14,4 +14,4 @@ Public Class Form1
         dataGrid1.GridLineStyle = DataGridLineStyle.None
     End Sub
     ' </Snippet1>
-End Class 'Form1
+End Class

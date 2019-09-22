@@ -38,5 +38,5 @@ Public Class IndexOfTest
         
         Loop While True
     End Sub
-End Class 'IndexOfTest
+End Class
 '</snippet1>

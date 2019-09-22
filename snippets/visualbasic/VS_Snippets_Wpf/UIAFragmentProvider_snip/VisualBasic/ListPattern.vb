@@ -99,5 +99,5 @@ Class ListPattern
     #End Region
     Private Members As ISelectionProvider
     ' </Snippet119>
-End Class 'ListPattern 
+End Class
 '

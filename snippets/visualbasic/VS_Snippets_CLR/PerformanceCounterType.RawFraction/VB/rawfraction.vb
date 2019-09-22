@@ -158,7 +158,7 @@ Public Class App
         Console.WriteLine(("   TimeStamp100nSec = " + s.TimeStamp100nSec.ToString()))
         Console.WriteLine("++++++++++++++++++++++")
     End Sub
-End Class 'App 
+End Class
 
 
 

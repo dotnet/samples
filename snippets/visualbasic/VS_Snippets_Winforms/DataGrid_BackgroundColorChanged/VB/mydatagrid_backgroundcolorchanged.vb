@@ -194,4 +194,4 @@ Public Class MyDataGrid
         MessageBox.Show(myString, "Background color information")
     End Sub
 ' </Snippet2>
-End Class 'MyDataGrid 
+End Class

@@ -36,5 +36,5 @@ Public Class ArrayTypeMisMatchConst
          Console.WriteLine("The Inner exception is :" + e.InnerException.ToString())
       End Try
    End Sub
-End Class 'ArrayTypeMisMatchConst
+End Class
 ' </Snippet1>

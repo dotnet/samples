@@ -10,4 +10,4 @@ Public Class MyServerImpl
       Console.WriteLine(name)
       Return "The string from server : " + name
    End Function 'MyMethod
-End Class 'MyServerImpl
+End Class

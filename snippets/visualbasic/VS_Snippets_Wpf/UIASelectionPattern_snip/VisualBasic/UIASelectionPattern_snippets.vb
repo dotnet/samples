@@ -29,7 +29,7 @@ Class UIASelectionPattern_snippets
             Dim app As New UIASelectionPattern_snippets()
         
         End Sub
-    End Class 'TestMain
+    End Class
     
     
     ' <Snippet100>
@@ -198,4 +198,4 @@ Class UIASelectionPattern_snippets
         Return False
     End Function 'GetSelectionObjectProperty
     ' </Snippet104>
-End Class 'UIASelectionPattern_snippets 
+End Class

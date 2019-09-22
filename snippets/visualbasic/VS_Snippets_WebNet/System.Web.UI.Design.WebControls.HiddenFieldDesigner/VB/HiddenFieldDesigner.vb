@@ -16,7 +16,7 @@ Namespace Examples.VB.WebControls.Design
     <Designer(GetType(Examples.VB.WebControls.Design.MyHiddenFieldDesigner))> _
     Public Class MyHiddenField
         Inherits HiddenField
-    End Class ' MyVBHiddenField
+    End Class
     ' </snippet2>
 
     ' Derive a designer that inherits from the HiddenFieldDesigner.
@@ -38,6 +38,6 @@ Namespace Examples.VB.WebControls.Design
 
         End Function ' GetDesignTimeHtml
         ' </snippet3>
-    End Class ' MyHiddenFieldDesigner
+    End Class
 End Namespace ' Examples.VB.WebControls.Design
 ' </snippet1>

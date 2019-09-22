@@ -135,7 +135,7 @@ Public Class ListViewInsertionMarkExample
             Return CType(x, ListViewItem).Index - CType(y, ListViewItem).Index
         End Function 'Compare
 
-    End Class 'ListViewIndexComparer
+    End Class
 
-End Class 'ListViewInsertionMarkExample 
+End Class
 '</Snippet1>

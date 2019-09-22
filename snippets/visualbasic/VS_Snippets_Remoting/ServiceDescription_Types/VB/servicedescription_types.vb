@@ -110,4 +110,4 @@ Class ServiceDescription_Types
       myXmlSchemaElement.SchemaTypeName = schemaTypeName
       Return myXmlSchemaElement
    End Function 'CreateComplexTypeXmlElement
-End Class 'ServiceDescription_Types
+End Class

@@ -318,6 +318,6 @@ Namespace SDKSample
 
 		#End Region 'Private Members
 
-	End Class ' end:partial class Window1
+	End Class
 
 End Namespace ' end:namespace SDKSample

@@ -15,5 +15,5 @@ Class MySample
             Console.WriteLine(("Log: " & log.Log))
         Next log
     End Sub
-End Class ' MySample
+End Class
 ' </Snippet1>

@@ -22,7 +22,7 @@ Namespace NDP_UE_VB
             MyBase.New( String.Format( "{0} - {1}", _
                 overflowMessage, auxMessage ), inner )
         End Sub
-    End Class ' LogTableOverflowException
+    End Class
 
     Class LogTable
        
@@ -49,7 +49,7 @@ Namespace NDP_UE_VB
                     "Record ""{0}"" was not logged.", newRecord ), ex )
             End Try
         End Function ' AddRecord
-        End Class ' LogTable
+        End Class
 
         Module OverflowDemo
            

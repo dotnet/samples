@@ -372,6 +372,6 @@ Namespace TextPointer_Snippets
         End Function
         ' </Snippet_TextRange_LoadSave>
 
-    End Class ' End class Window1
+    End Class
 
 End Namespace ' End namespace TextPointer_Snippets

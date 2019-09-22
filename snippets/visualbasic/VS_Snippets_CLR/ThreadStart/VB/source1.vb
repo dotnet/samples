@@ -25,7 +25,7 @@ Public Class ServerClass
         Console.WriteLine( _
             "The static method called by the worker thread has ended.")
     End Sub
-End Class 'ServerClass
+End Class
 
 Public Class Simple
 
@@ -59,5 +59,5 @@ Public Class Simple
             & "starting the new StaticCaller thread.")
 
     End Sub
-End Class 'Simple
+End Class
 ' </snippet2>

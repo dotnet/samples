@@ -42,5 +42,5 @@ Namespace RemotingSamples
             Console.WriteLine("The Message of exception: " + e.Message)
          End Try
       End Sub
-   End Class 'MyChannelServices_Client
+   End Class
 End Namespace 'RemotingSamples

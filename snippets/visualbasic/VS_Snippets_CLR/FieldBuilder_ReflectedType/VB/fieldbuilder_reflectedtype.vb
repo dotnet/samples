@@ -71,5 +71,5 @@ Public Class FieldBuilder_Sample
                BindingFlags.InvokeMethod, Nothing, helloWorld, Nothing)
       Console.WriteLine("MyClass.MyMethod returned: """ & myObject & """")
    End Sub
-End Class 'FieldBuilder_Sample
+End Class
 ' </Snippet1> 

@@ -100,6 +100,6 @@ Public Class AssemblyName_CodeBase
          Console.WriteLine(Encoding.ASCII.GetString(publicKeyTokenBytes))
       End If
    End Sub
-End Class 'AssemblyName_CodeBase 
+End Class
 ' </Snippet2>
 ' </Snippet1>

@@ -63,6 +63,6 @@ Namespace SDKSample
 			propertiesDialog.Category.Text = xpsDocument.CoreDocumentProperties.Category
 		End Sub
 
-	End Class ' end:class PropertiesUtility
+	End Class
 
 End Namespace ' end:namespace

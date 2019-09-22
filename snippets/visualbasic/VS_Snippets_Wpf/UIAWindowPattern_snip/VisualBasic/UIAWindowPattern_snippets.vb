@@ -268,4 +268,4 @@ Class UIAWindowPattern_snippets
         End If
     End Sub
     ' </Snippet106>
-End Class 'UIAWindowPattern_snippets 
+End Class

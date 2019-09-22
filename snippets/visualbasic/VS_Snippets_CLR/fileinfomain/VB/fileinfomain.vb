@@ -18,7 +18,7 @@ Public Class FileInfoMainTest
             Console.WriteLine(sr.ReadLine())
         End While
     End Sub
-End Class 'FileInfoMainTest
+End Class
 'This code produces output similar to the following; 
 'results may vary based on the computer/file structure/etc.:
 '

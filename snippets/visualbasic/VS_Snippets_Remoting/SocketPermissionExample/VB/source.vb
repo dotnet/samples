@@ -102,6 +102,6 @@ Public Class MySocketPermissionExample
    Public Shared Sub Main()
       MySocketPermissionExample.MySocketPermission()
    End Sub
-End Class 'MySocketPermissionExample
+End Class
 
 

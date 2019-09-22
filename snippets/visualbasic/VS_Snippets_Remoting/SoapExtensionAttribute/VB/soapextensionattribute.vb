@@ -187,4 +187,4 @@ Public Class MathSvc
       Dim results As Object() = Me.EndInvoke(asyncResult)
       Return CType(results(0), System.Single)
    End Function 'EndAdd
-End Class 'MathSvc
+End Class
