@@ -770,7 +770,7 @@ End Class
 
     '****************************************************************************
     '<Snippet1>
-    Function hypotenuse(ByVal side1 As Single, ByVal side2 As Single) As Single
+    Function Hypotenuse(side1 As Single, side2 As Single) As Single
         Return Math.Sqrt((side1 ^ 2) + (side2 ^ 2))
     End Function
     '</Snippet1>
