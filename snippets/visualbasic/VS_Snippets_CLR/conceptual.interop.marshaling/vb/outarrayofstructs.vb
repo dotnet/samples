@@ -7,7 +7,7 @@ Imports System.Runtime.InteropServices
 Public Class MyStruct
     Public buffer As String
     Public someSize As Integer
-End Class 'MyStruct
+End Class
 
 Friend Class NativeMethods
     ' Declares a managed prototype for the unmanaged function.
@@ -15,7 +15,7 @@ Friend Class NativeMethods
     Friend Shared Sub TestOutArrayOfStructs(
         ByRef arrSize As Integer, ByRef outArray As IntPtr)
     End Sub
-End Class 'LibWrap
+End Class
 '</snippet20>
 
 '<snippet21>
@@ -48,6 +48,6 @@ Public Class App
         Next i
         Marshal.FreeCoTaskMem(outArray)
     End Sub
-End Class 'App
+End Class
 '</snippet21>
 '</snippet19>
