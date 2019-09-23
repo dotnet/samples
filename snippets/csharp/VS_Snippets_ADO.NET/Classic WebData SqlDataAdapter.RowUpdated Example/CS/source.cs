@@ -28,7 +28,7 @@ public class Form1: Form
     {
         const string connectionString = 
                   "Integrated Security=SSPI;database=Northwind;server=MSSQL1";
-        const string queryString = "SELECT * FROMProducts";
+        const string queryString = "SELECT * FROM Products";
  
         // create DataAdapter
         SqlDataAdapter adapter = new SqlDataAdapter(queryString, connectionString);
