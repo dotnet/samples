@@ -9,21 +9,6 @@ Imports MSVB = Microsoft.VisualBasic
 '</Snippet56>
 Public Class Class1
 
-
-  '****************************************************************************
-  Class WrapAllOnes
-    '<Snippet67>
-    'Function allOnes(ByVal n As Integer) As Integer()
-    '    Dim i As Integer
-    '    For i = 1 To n - 1
-    '        allOnes(i) = 1
-    '    Next i
-    '    Return allOnes()
-    'End Function
-    '</Snippet67>
-  End Class
-
-
   '****************************************************************************
   '<Snippet66>
   Function allOnes(ByVal n As Integer) As Integer()
