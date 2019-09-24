@@ -7,9 +7,9 @@ Public Class clientSnippets
 
     Public Shared Sub Snippet11()
         ' <Snippet11>
-        Dim binding As CustomBinding = New CustomBinding()
+        Dim binding As New CustomBinding()
         binding.Elements.Add(New HttpTransportBindingElement())
-        Dim paramCollection As BindingParameterCollection = New BindingParameterCollection()
+        Dim paramCollection As New BindingParameterCollection()
 
         binding.CanBuildChannelFactory(Of IRequestChannel)(paramCollection)
         ' </Snippet11>
@@ -17,7 +17,7 @@ Public Class clientSnippets
 
     Public Shared Sub Snippet12()
         ' <Snippet12>
-        Dim binding As CustomBinding = New CustomBinding()
+        Dim binding As New CustomBinding()
         binding.Elements.Add(New HttpTransportBindingElement())
         Dim bindingParameters(1) As Object
 
@@ -33,7 +33,7 @@ Public Class clientSnippets
 
         Dim factory As IChannelFactory(Of IRequestChannel) = binding.BuildChannelFactory(Of IRequestChannel)(bindingParams)
         factory.Open()
-        Dim address As EndpointAddress = New EndpointAddress("http://localhost/channelApp/service")
+        Dim address As New EndpointAddress("http://localhost/channelApp/service")
         Dim channel As IRequestChannel = factory.CreateChannel(address)
         channel.Open()
         Dim request As Message = Message.CreateMessage(MessageVersion.Default, "hello")
