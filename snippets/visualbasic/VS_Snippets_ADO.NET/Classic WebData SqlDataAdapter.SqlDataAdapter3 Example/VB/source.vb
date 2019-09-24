@@ -14,7 +14,7 @@ Module Module1
     Public Function CreateSqlDataAdapter(ByVal commandText As String, _
         ByVal connection As SqlConnection) As SqlDataAdapter
 
-        Dim adapter As SqlDataAdapter = New SqlDataAdapter(commandText, connection)
+        Dim adapter As New SqlDataAdapter(commandText, connection)
 
         adapter.MissingSchemaAction = MissingSchemaAction.AddWithKey
 

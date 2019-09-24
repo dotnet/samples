@@ -6,7 +6,7 @@ Module Module1
 
     Sub Main()
         ' <Snippet1>
-        Dim customerOrders As DataSet = New DataSet("CustomerOrders")
+        Dim customerOrders As New DataSet("CustomerOrders")
 
         Dim ordersTable As DataTable = customerOrders.Tables.Add("Orders")
 

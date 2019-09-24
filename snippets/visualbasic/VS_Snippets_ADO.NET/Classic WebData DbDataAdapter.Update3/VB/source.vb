@@ -16,11 +16,11 @@ Module Module1
         Using connection As New OleDbConnection(connectionString)
             Dim adapter As New OleDbDataAdapter()
             adapter.SelectCommand = New OleDbCommand(queryString, connection)
-            Dim builder As OleDbCommandBuilder = New OleDbCommandBuilder(adapter)
+            Dim builder As New OleDbCommandBuilder(adapter)
 
             connection.Open()
 
-            Dim customers As DataSet = New DataSet
+            Dim customers As New DataSet()
             adapter.Fill(customers)
 
             ' Code to modify data in DataSet here 

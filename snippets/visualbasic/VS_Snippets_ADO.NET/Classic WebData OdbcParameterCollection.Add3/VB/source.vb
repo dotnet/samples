@@ -15,7 +15,7 @@ Public Class Form1
     
     ' <Snippet1>
     Public Sub CreateOdbcParamColl(connection As OdbcConnection)
-      Dim command As OdbcCommand = New OdbcCommand( _
+      Dim command As New OdbcCommand( _
         "SELECT * FROM Customers WHERE CustomerID = ?", connection)
       Dim paramCollection As OdbcParameterCollection = _
         command.Parameters

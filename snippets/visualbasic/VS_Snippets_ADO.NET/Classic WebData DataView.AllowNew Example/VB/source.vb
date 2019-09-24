@@ -11,11 +11,11 @@ Protected DataGrid1 As DataGrid
 
 ' <Snippet1>
 Private Sub AddNew()
-    Dim table As DataTable = New DataTable
+    Dim table As New DataTable()
 
     ' Not shown: code to populate DataTable.
 
-    Dim view As DataView = New DataView(table)
+    Dim view As New DataView(table)
     view.AllowNew = True
     Dim rowView As DataRowView
     rowView = view.AddNew
