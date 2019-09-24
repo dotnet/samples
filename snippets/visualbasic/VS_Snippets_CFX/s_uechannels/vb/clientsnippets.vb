@@ -18,7 +18,7 @@ Public Class clientSnippets
     Public Shared Sub Snippet12()
         ' <Snippet12>
         Dim binding As CustomBinding = New CustomBinding()
-        Binding.Elements.Add(New HttpTransportBindingElement())
+        binding.Elements.Add(New HttpTransportBindingElement())
         Dim bindingParameters(1) As Object
 
         binding.CanBuildChannelFactory(Of IRequestChannel)(bindingParameters)
