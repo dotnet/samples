@@ -12,7 +12,7 @@ Public Class Class1
   '****************************************************************************
   '<Snippet66>
   Function AllOnes(n As Integer) As Integer()
-      Dim iArray(n) As Integer
+      Dim iArray(n - 1) As Integer
       For i = 0 To n - 1
           iArray(i) = 1
       Next
