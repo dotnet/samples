@@ -83,4 +83,4 @@ Class MyTcpClient
    End Sub
 ' </Snippet1>
 
-End Class 'MyTcpClient 
+End Class

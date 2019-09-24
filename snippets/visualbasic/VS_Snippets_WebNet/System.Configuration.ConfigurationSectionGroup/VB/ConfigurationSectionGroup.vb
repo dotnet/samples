@@ -94,7 +94,7 @@ Class UsingConfigurationSectionGroup
         Console.WriteLine(Left(text, 79 - indentLevel * 2))
     End Sub
 
-End Class 'UsingConfigurationSectionGroup 
+End Class
 '</Snippet1>
 
 Class UsingConfigurationSectionGroup2

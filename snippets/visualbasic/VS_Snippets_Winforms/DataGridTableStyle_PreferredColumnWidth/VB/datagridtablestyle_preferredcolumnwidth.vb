@@ -170,5 +170,5 @@ Namespace DataGridTableStyle_PreferredColumnWidthChanged
             End Try
         End Sub
 ' </Snippet1>
-    End Class 'Form1 
+    End Class
 End Namespace 'DataGridTableStyle_PreferredColumnWidthChanged

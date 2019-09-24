@@ -22,5 +22,5 @@ Public Class Sample
             Console.WriteLine("Entity reference nodes are always read-only")
         End If
     End Sub
-End Class 'Sample 
+End Class
 ' </Snippet1>

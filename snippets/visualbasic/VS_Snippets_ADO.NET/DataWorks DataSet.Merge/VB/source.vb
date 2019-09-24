@@ -18,16 +18,16 @@ Module Module1
         Using connection As SqlConnection = New SqlConnection( _
            connectionString)
 
-            Dim adapter As SqlDataAdapter = New SqlDataAdapter( _
+            Dim adapter As New SqlDataAdapter( _
               "SELECT CustomerID, CompanyName FROM Customers", connection)
 
             connection.Open()
 
-            Dim customers As DataSet = New DataSet()
+            Dim customers As New DataSet()
             adapter.FillSchema(customers, SchemaType.Source, "Customers")
             adapter.Fill(customers, "Customers")
 
-            Dim orders As DataSet = New DataSet()
+            Dim orders As New DataSet()
             orders.ReadXml("Orders.xml", XmlReadMode.ReadSchema)
             orders.AcceptChanges()
 

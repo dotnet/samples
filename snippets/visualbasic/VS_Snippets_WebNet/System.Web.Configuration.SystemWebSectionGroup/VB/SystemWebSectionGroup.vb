@@ -766,4 +766,4 @@ Class UsingSystemWebSectionGroup
             msg = e.ToString()
         End Try
     End Sub
-End Class 'UsingSystemWebSectionGroup
+End Class

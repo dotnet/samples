@@ -221,8 +221,8 @@ Namespace UIAAutomationID_snip
                 End Set
             End Property
             Private target As AutomationElement
-        End Class 'TargetApplication
-    End Class 'FindByAutomationID
+        End Class
+    End Class
     '
     'ToDo: Error processing original source shown below
     '    }

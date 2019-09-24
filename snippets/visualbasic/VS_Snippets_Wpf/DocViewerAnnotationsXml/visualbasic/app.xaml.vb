@@ -22,6 +22,6 @@ Namespace SDKSample
 
 		Private _window1 As Window1 = Nothing ' application main window
 
-	End Class ' end:partial class app
+	End Class
 
 End Namespace ' end:namespace SDKSample

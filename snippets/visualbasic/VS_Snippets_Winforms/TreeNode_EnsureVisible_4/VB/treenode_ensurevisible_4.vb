@@ -180,7 +180,7 @@ End Sub
 ' </Snippet3>
 
 
-   End Class 'Form1
+   End Class
 
 
    ' Define a Customer Class.
@@ -191,7 +191,7 @@ End Sub
       Public Sub New(name As String)
          myCustomerName = name
       End Sub
-   End Class 'Customer
+   End Class
 
    ' Define an Order Class which will be associated to a customer.
    Public Class Order
@@ -200,5 +200,5 @@ End Sub
       Public Sub New(name1 As String)
          myOrderName = name1
       End Sub
-   End Class 'Order
+   End Class
 End Namespace 'MyTreeNode

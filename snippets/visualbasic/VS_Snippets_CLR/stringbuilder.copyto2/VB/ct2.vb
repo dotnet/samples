@@ -26,7 +26,7 @@ Class Sample
          Console.WriteLine(dest)
       Next ix
    End Sub
-End Class 'Sample
+End Class
 '
 ' This example produces the following results:
 '

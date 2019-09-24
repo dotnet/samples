@@ -265,5 +265,5 @@ Class UIAGridItemPattern_snippets
             app.Run()
         
         End Sub
-    End Class 'TestMain
-End Class 'UIAGridItemPattern_snippets
+    End Class
+End Class

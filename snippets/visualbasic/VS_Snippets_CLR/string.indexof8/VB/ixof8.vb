@@ -33,7 +33,7 @@ Class Sample
       End While
       Console.WriteLine()
    End Sub
-End Class 'Sample
+End Class
 '
 'This example produces the following results:
 '

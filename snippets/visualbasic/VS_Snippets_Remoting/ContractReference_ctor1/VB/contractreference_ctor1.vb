@@ -45,4 +45,4 @@ Public Class ContractReference_ctor
          Console.WriteLine("Error is " + e.Message)
       End Try
    End Sub
-End Class 'ContractReference_ctor
+End Class

@@ -23,7 +23,7 @@ Class DebugViewTest
         Console.WriteLine("In Main.")
 
     End Sub
-End Class 'DebugViewTest
+End Class
 '<Snippet3>
 <DebuggerDisplay("{value}", Name := "{key}")>  _
 Friend Class KeyValuePairs
@@ -38,7 +38,7 @@ Friend Class KeyValuePairs
         Me.dictionary = dictionary
 
     End Sub
-End Class 'KeyValuePairs
+End Class
 '</Snippet3>
 '<Snippet4>
 '<Snippet5>
@@ -72,8 +72,8 @@ Class MyHashtable
         End Property
         '</Snippet6>
 
-    End Class 'HashtableDebugView
-End Class 'MyHashtable
+    End Class
+End Class
 '</Snippet5>
 '</Snippet1>
 

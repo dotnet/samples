@@ -54,5 +54,5 @@ Public Class MyClient
             Console.WriteLine(myHelloServer.HelloMethod("Bill"))
         End If
     End Sub
-End Class 'MyClient
+End Class
 '</snippet1>

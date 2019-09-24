@@ -100,6 +100,6 @@ Namespace SDKSample
             Return myPixelFormat
 
         End Function 'createPixelFormat
-    End Class 'PixelFormatsExample 
+    End Class
 End Namespace 'ImagingSnippetGallery
 ' </SnippetPixelFormatExample1>

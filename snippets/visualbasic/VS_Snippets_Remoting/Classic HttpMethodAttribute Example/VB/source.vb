@@ -28,12 +28,12 @@ Public Class MyUser
     Public Function EndGetUserName(asyncResult As System.IAsyncResult) As UserName
         Return CType(Me.EndInvoke(asyncResult), UserName)
     End Function 'EndGetUserName
-End Class 'MyUser
+End Class
 
 <XmlRootAttribute(Namespace := "http://tempuri.org/", IsNullable := True)> _
 Public Class UserName
     Public Name As String
     Public Domain As String
 
-End Class 'UserName
+End Class
 ' </Snippet1>

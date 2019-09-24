@@ -25,5 +25,5 @@ Public Class Form1
         dateTimePicker1.ShowUpDown = True
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

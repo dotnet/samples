@@ -167,5 +167,5 @@ Class UIAGridPattern_snippets
             Dim app As New UIAGridPattern_snippets()
         
         End Sub
-    End Class 'TestMain 
-End Class 'UIAGridPattern_snippets 
+    End Class
+End Class

@@ -61,7 +61,7 @@ Class Sample
         End If        
         Console.WriteLine("{0} is {1}read-only.", caption, middle)
     End Sub
-End Class 'Sample
+End Class
 
 '
 'This code example produces the following results:

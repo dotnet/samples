@@ -227,7 +227,7 @@ Namespace SampleDataGridTableStyle
          AddCustomDataTableStyle()
          btnApplyStyles.Enabled = False
       End Sub
-   End Class 'DataGridTableStyle_Sample
+   End Class
 End Namespace 'SampleDataGridTableStyle
 
 

@@ -53,5 +53,5 @@ Public Class Example
             End Select
         Next s
     End Sub
-End Class 'Example
+End Class
 ' </Snippet1>

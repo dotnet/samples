@@ -108,6 +108,6 @@ Public Class HMACSHA5126example
         End If
 
     End Function 'VerifyFile 
-End Class 'HMACSHA5126example 'end VerifyFile
+End Class
 'end class
 '</SNIPPET1>

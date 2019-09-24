@@ -12,5 +12,5 @@ Public Class Client
                                         "tcp://localhost:8085/SayHello"), MyServerImpl)
       Console.WriteLine(myObject.MyMethod("ClientString"))
    End Sub
-End Class 'Client
+End Class
 

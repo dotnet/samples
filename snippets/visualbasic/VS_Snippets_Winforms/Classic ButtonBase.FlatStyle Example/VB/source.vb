@@ -19,4 +19,4 @@ Public Class Form1
         button1.FlatStyle = FlatStyle.Flat
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

@@ -7,7 +7,7 @@ Imports System.Data
 Module Module1
 
     Sub Main()
-        Dim customerOrders As DataSet = new dataset()
+        Dim customerOrders As New DataSet()
 
         ' <Snippet1>
         Dim customerOrdersRelation As DataRelation = _

@@ -12,5 +12,5 @@ Public Class MyServer
         Console.ReadLine()
     End Sub
 
-End Class 'MyServer
+End Class
 '</snippet10>

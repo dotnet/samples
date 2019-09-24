@@ -64,7 +64,7 @@ Namespace Samples
       End Function 'CreateProxy
 ' </Snippet3>
 ' </Snippet2>
-   End Class 'MyProxyAttribute
+   End Class
 
    <MyProxyAttribute()> _
    Public Class CustomServer
@@ -77,7 +77,7 @@ Namespace Samples
       Public Sub HelloMethod(str As String)
          Console.WriteLine("HelloMethod of Server is invoked with message : " + str)
       End Sub
-   End Class 'CustomServer
+   End Class
 ' </Snippet11>
    <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> _
    Public Class MyProxy
@@ -169,8 +169,8 @@ Namespace Samples
          Public Overrides Sub GetObjectData(info As SerializationInfo, context As StreamingContext)
             MyBase.GetObjectData(info, context)
          End Sub
-      End Class 'CustomObjRef
-   End Class 'MyProxy
+      End Class
+   End Class
    
    <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> _
    Public Class ProxySample
@@ -203,6 +203,6 @@ Namespace Samples
          Dim CustomObjRef As ObjRef = myProxyInstance.CreateObjRef(GetType(CustomServer))
          Console.WriteLine("URI of 'ObjRef' object =  " + CustomObjRef.URI)
       End Sub
-   End Class 'ProxySample
+   End Class
 End Namespace 'Samples.AspNet.VB
 ' </Snippet12>

@@ -116,7 +116,7 @@ Public Class SamplesHybridDictionary
 
    End Sub
 
-End Class 'SamplesHybridDictionary 
+End Class
 
 
 'This code produces the following output.

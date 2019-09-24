@@ -19,14 +19,14 @@ Public Class Customer
       CustomerName = myName
       CustomerOrders = New ArrayList()
    End Sub
-End Class 'Customer
+End Class
 
 Public Class Order
    Public OrderID As String
    Public Sub New(myOrderID As String)
       Me.OrderID = myOrderID
    End Sub
-End Class 'Order
+End Class
 
 Public Class TreeNode_Bounds
    Inherits Form
@@ -142,4 +142,4 @@ End Sub
    Shared Sub Main()
       Application.Run(New TreeNode_Bounds())
    End Sub
-End Class 'TreeNode_Bounds
+End Class

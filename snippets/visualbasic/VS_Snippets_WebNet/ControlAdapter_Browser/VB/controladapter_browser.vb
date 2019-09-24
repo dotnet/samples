@@ -19,7 +19,7 @@ Public Class CustomControlAdapter
 
     End Sub
 
-End Class 'CustomControlAdapter
+End Class
 ' </snippet1>
 
 Module MainMod

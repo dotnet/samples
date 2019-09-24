@@ -49,6 +49,6 @@ Namespace Process_Sample
                 Console.WriteLine(e.Message)
             End Try
         End Sub
-    End Class 'MyProcessClass
+    End Class
 End Namespace 'Process_Sample
 ' </Snippet1>

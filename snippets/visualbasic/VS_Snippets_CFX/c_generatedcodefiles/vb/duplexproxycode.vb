@@ -62,6 +62,6 @@ Partial Class SampleDuplexHelloClient
         MyBase.Channel.Hello(greeting)
 
     End Sub
-End Class 'SampleDuplexHelloClient
+End Class
 '</snippet7>
 '</snippet1>

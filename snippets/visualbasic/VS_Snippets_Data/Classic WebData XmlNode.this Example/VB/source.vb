@@ -18,5 +18,5 @@ Public Class Sample
         Console.WriteLine("Display the title element...")
         Console.WriteLine(root("title").OuterXml)
     End Sub
-End Class 'Sample
+End Class
 ' </Snippet1>

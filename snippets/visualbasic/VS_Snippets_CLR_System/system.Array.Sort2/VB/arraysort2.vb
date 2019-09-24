@@ -16,7 +16,7 @@ Public Class SamplesArray
          Return New CaseInsensitiveComparer().Compare(y, x)
       End Function 'IComparer.Compare
 
-   End Class 'myReverserClass
+   End Class
 
 
    Public Shared Sub Main()
@@ -63,7 +63,7 @@ Public Class SamplesArray
 
    End Sub
 
-End Class 'SamplesArray
+End Class
 
 
 'This code produces the following output.

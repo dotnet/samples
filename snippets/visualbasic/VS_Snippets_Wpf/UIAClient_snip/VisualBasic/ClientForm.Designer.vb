@@ -112,5 +112,5 @@ Partial Class Form1 '
     Private label1 As System.Windows.Forms.Label
     Private WithEvents btnMisc As System.Windows.Forms.Button
     Private treeView1 As System.Windows.Forms.TreeView
-End Class 'Form1
+End Class
 

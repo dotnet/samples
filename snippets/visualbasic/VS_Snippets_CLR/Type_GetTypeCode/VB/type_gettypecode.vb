@@ -59,5 +59,5 @@ Namespace TypeCodeNamespace
             Console.WriteLine(e.Message)
          End Try
       End Sub
-   End Class 'MyClass1
+   End Class
 End Namespace 'TypeCodeNamespace

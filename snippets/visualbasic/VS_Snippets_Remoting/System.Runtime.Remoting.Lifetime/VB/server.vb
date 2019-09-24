@@ -32,5 +32,5 @@ Public Class Server
       GC.WaitForPendingFinalizers()
    End Sub
    
-End Class 'Server
+End Class
 ' </Snippet2>

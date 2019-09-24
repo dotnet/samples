@@ -35,6 +35,6 @@ Namespace ConsoleApplication1
             Console.WriteLine(("Exception: " + e.Message))
          End Try
       End Sub
-   End Class 'MyClass1
+   End Class
 ' </Snippet1>
 End Namespace 'ConsoleApplication1 

@@ -9,7 +9,7 @@ Public Class Sample
     <TypeConverter(GetType(MyClassConverter))> _
     Public Class Class1
         ' Insert code here.
-    End Class 'MyClass
+    End Class
     
     ' </Snippet1>
     Public Enum MyPropertyEnum
@@ -19,7 +19,7 @@ Public Class Sample
     End Enum 'MyPropertyEnum
     
     Public Class MyClassConverter
-    End Class 'MyClassConverter
+    End Class
     
     ' <Snippet2>
     
@@ -56,4 +56,4 @@ Public Class Sample
         Next c
         ' </Snippet5>
     End Sub
-End Class 'Sample
+End Class

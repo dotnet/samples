@@ -10,7 +10,7 @@
       'This method is a standin for the real method so that the example will compile
       Private Shared Sub EnsureStage(sms As SoapMessageStage)
       End Sub
-   End Class 'Class1
+   End Class
 
    Public Enum SoapMessageStage
       BeforeSerialize = 1

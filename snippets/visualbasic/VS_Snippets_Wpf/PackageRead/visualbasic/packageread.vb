@@ -142,6 +142,6 @@ Namespace SDKSample
 		End Sub
 		'</SnippetPackageReadExtract>
 
-	End Class ' end:class PackageRead
+	End Class
 
 End Namespace ' end:namespace SDKSample

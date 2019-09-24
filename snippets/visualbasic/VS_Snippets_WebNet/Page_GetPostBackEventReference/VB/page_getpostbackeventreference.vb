@@ -58,7 +58,7 @@ Namespace MyASPNETControls
 	 ' this code creates is clicked.         
          writer.Write(("<a href=""javascript:" + Page.GetPostBackEventReference(Me, "dec") + """>Decrease Number</a>"))
       End Sub
-   End Class 'MyControl
+   End Class
 ' </snippet1>
     _ 
 ' <snippet2>
@@ -102,6 +102,6 @@ Namespace MyASPNETControls
 	 ' this code creates is clicked.         
          writer.Write(("<a href=""javascript:" + Page.GetPostBackEventReference(Me) + """>Increase Number</a>"))
       End Sub
-   End Class 'MyControl1
+   End Class
 ' </snippet2>
 End Namespace 'MyASPNETControls

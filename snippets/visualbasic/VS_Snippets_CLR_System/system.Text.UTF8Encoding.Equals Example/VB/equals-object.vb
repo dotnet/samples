@@ -40,5 +40,5 @@ Class UTF8EncodingExample
         End If
         Console.WriteLine("{0} equivalent encoding.", phrase)
     End Sub
-End Class 'UTF8EncodingExample
+End Class
 ' </Snippet1>

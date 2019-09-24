@@ -52,6 +52,6 @@ Namespace CodeDomSamples
             '</Snippet5>
 
         End Sub
-    End Class 'CodeMultiExample 
+    End Class
 End Namespace 'CodeDomSamples
 '</Snippet1>

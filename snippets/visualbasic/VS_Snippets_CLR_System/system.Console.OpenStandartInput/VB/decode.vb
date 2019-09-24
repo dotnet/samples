@@ -15,5 +15,5 @@ Public Class Decoder
       Console.WriteLine("Decoded string:")
       Console.WriteLine(New String(chars))
    End Sub
-End Class 'Decoder
+End Class
 ' </Snippet1>

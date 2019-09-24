@@ -129,4 +129,4 @@ Public Class UsingDpapiProtectedConfigurationProvider
         Console.Read()
     End Sub
 
-End Class 'UsingDpapiProtectedConfigurationProvider
+End Class

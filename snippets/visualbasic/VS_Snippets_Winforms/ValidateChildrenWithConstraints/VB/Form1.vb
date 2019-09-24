@@ -84,6 +84,6 @@ Namespace ValidateChildrenWithConstraints
         Sub Button1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles button1.Click
             Me.ValidateChildren((ValidationConstraints.ImmediateChildren Or ValidationConstraints.Enabled))
         End Sub
-    End Class 'Form1
+    End Class
 End Namespace 'ValidateChildrenWithConstraints
 '</SNIPPET1>

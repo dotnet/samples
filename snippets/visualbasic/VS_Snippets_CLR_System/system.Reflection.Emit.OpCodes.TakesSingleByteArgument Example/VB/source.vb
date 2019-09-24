@@ -35,5 +35,5 @@ Class TakesSBArgumentExample
 
    ' </Snippet1>  
 
-End Class 'TakesSBArgumentExample 
+End Class
 

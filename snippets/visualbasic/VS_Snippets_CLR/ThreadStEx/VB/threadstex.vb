@@ -6,7 +6,7 @@ Public Class ThreadWork
    Public Shared Sub DoWork()
       Console.WriteLine("Working thread...")
    End Sub
-End Class 'ThreadWork
+End Class
 
 Class ThreadStateTest
    
@@ -22,5 +22,5 @@ Class ThreadStateTest
          Console.WriteLine("Caught: {0}", e.Message)
       End Try
    End Sub
-End Class 'ThreadStateTest
+End Class
 '</Snippet1>

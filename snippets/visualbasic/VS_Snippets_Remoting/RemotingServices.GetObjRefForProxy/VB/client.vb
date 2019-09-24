@@ -46,4 +46,4 @@ Public Class SampleClient
       Console.WriteLine("Can my object cast to a Bitmap? {0}", typeInfo.CanCastTo(GetType(System.Drawing.Bitmap), objRefSample))
       ' </Snippet1>
    End Sub
-End Class 'SampleClient 
+End Class

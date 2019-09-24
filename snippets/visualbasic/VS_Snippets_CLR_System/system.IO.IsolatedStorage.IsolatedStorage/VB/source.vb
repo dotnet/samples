@@ -54,7 +54,7 @@ Namespace ISOCS
             Console.WriteLine("Please enter the URL of your sports site.")
             lp.SportsUrl = Console.ReadLine()
         End Sub
-    End Class 'ConsoleApp
+    End Class
     _
 
     <SecurityPermissionAttribute(SecurityAction.Demand, Flags:=SecurityPermissionFlag.UnmanagedCode)> _
@@ -353,6 +353,6 @@ Namespace ISOCS
                 Return 0.0
             End Try
         End Function 'SetNewPrefsForUser
-    End Class 'LoginPrefs
+    End Class
 End Namespace 'ISOCS
 '</snippet1>

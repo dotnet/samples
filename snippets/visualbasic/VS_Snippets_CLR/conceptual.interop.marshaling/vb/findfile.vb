@@ -23,7 +23,7 @@ Public Class FindData
     Public fileName As String = Nothing
     <MarshalAs(UnmanagedType.ByValTStr, SizeConst:=14)>
     Public alternateFileName As String = Nothing
-End Class 'FindData
+End Class
 
 Friend Class NativeMethods
     ' Declares a managed prototype for the unmanaged function.

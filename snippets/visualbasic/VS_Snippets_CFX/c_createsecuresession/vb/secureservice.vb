@@ -72,7 +72,7 @@ Public Class Test
         Console.ReadLine()
         myServiceHost.Close()
     End Sub
-End Class 'Test
+End Class
 
 <ServiceContract()>  _
 Public Interface ICalculator
@@ -88,4 +88,4 @@ Public Class Calculator
         Return a + b
     
     End Function 'Add
-End Class 'Calculator
+End Class

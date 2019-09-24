@@ -68,4 +68,4 @@ Class MyPortTypeCollectionClass
          Console.WriteLine("Exception: " + e.Message.ToString())
       End Try
    End Sub
-End Class 'MyPortTypeCollectionClass
+End Class

@@ -180,7 +180,7 @@ Namespace Samples.AspNet
             Next i
             Return returnBytes
         End Function 'HexToByte
-    End Class 'TripleDESProtectedConfigurationProvider 
+    End Class
 
 End Namespace
 

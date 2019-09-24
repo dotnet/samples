@@ -26,7 +26,7 @@ Public Class SamplesCompareInfo
 
    End Sub
 
-End Class 'SamplesCompareInfo
+End Class
 
 
 'This code produces the following output.

@@ -43,5 +43,5 @@ Public Class PermissionTest
         CreatePermission()
     
     End Sub
-End Class 'PermissionTest
+End Class
 

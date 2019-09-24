@@ -36,5 +36,5 @@ Public Class Sample
             Next prefix
         Loop While nsmgr.PopScope()
     End Sub
-End Class 'Sample
+End Class
 ' </Snippet1>

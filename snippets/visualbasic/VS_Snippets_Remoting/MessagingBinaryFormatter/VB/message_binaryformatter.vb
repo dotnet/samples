@@ -113,6 +113,6 @@ Namespace MyProj
          ' Catch other exceptions as necessary.
          Return
       End Sub
-   End Class 'MyNewQueue
+   End Class
 End Namespace 'MyProj
 ' </Snippet1>

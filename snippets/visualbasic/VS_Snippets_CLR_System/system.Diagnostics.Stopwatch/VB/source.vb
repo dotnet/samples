@@ -18,5 +18,5 @@ Class Program
         Console.WriteLine( "RunTime " + elapsedTime)
 
     End Sub
-End Class 'Program
+End Class
 '</Snippet1>

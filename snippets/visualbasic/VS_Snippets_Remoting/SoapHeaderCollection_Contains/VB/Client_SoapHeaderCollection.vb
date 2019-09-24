@@ -6,4 +6,4 @@ Public Class Client
       Console.WriteLine(ControlChars.NewLine + "The sum of 10 and 10 is : {0}", _
                                        myService.Add(10, 10).ToString())
    End Sub
-End Class 'Client
+End Class

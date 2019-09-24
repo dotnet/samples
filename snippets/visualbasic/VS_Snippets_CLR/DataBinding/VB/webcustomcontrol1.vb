@@ -236,7 +236,7 @@ Namespace DataBindingTest
          myFile.WriteLine(CharArray, 0, input.Length)
          myFile.Close()
       End Sub
-   End Class 'SimpleDesigner
+   End Class
 '<Snippet21>
    <DefaultProperty("Text"), ToolboxData("<{0}:Simple runat=server></{0}:Simple>"), Designer("DataBindingTest.SimpleDesigner"), DataBindingHandlerAttribute(GetType(System.Web.UI.Design.TextDataBindingHandler))> Public Class SimpleWebControl
 '</Snippet21>
@@ -266,5 +266,5 @@ Namespace DataBindingTest
 '</Snippet22>
          Next attribute
       End Sub
-   End Class 'SimpleWebControl
+   End Class
 End Namespace 'DataBindingTest

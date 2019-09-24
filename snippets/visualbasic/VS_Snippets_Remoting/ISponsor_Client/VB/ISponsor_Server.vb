@@ -12,4 +12,4 @@ Public Class Server
       GC.Collect()
       GC.WaitForPendingFinalizers()
    End Sub
-End Class 'Server
+End Class

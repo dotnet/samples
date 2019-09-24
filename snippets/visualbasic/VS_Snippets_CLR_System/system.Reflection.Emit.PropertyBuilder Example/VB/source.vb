@@ -104,7 +104,7 @@ Class PropertyBuilderDemo
                         custDataType.InvokeMember("CustomerName", BindingFlags.GetProperty, _
                         Nothing, custData, New Object() {}))
    End Sub
-End Class 'PropertyBuilderDemo
+End Class
 
 
 ' --- O U T P U T ---

@@ -47,7 +47,7 @@ Public Class SamplesCalendar
 
    End Sub
 
-End Class 'SamplesCalendar 
+End Class
 
 
 'This code produces the following output.  The results vary depending on the date.

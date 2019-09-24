@@ -41,5 +41,5 @@ Namespace MyAssembly
          Console.WriteLine("Use installutil.exe to run the assembly" + _
                                              " Installer_Rollback.exe")
       End Sub
-   End Class 'MyInstallerSample
+   End Class
 End Namespace 'MyAssembly

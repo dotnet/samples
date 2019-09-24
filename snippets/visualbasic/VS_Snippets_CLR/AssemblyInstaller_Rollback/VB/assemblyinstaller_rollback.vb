@@ -51,4 +51,4 @@ Class AssemblyInstaller_Example
          Console.WriteLine(myException.Message)
       End Try
    End Sub
-End Class 'AssemblyInstaller_Example
+End Class

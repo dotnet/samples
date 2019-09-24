@@ -24,4 +24,4 @@ Public Class Form1
         Next myProperty
     End Sub
     ' </Snippet2>
-End Class 'Form1
+End Class

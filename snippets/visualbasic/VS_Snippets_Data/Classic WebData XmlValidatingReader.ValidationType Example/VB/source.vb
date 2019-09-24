@@ -63,5 +63,5 @@ Public Class Sample
         
         Console.Write(ControlChars.CrLf & ControlChars.Tab & "Validation error: " & args.Message)
     End Sub
-End Class 'Sample
+End Class
 '</Snippet1>

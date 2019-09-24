@@ -43,7 +43,7 @@ Class Sample
       Next c
       Console.WriteLine()
    End Sub
-End Class 'Sample
+End Class
 '
 'str1 = 'INDIGO'
 '

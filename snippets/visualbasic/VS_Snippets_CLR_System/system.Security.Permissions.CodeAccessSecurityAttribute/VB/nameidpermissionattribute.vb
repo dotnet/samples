@@ -40,6 +40,6 @@ Namespace MyPermissionAttribute
                 Return New NameIdPermission(m_name)
             End If
         End Function 'CreatePermission
-    End Class ' NameIdPermissionAttribute
+    End Class
 End Namespace
 '</Snippet1>

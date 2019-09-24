@@ -69,4 +69,4 @@ Public Class ObjectStateFormatterTest
     Private Sub LogEvent(ByVal message As String)
 
     End Sub
-End Class 'ObjectStateFormatterTest 
+End Class

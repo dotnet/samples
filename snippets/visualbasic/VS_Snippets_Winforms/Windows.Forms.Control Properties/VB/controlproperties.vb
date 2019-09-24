@@ -136,5 +136,5 @@ End Sub
       End Sub
 
 
-   End Class 'Form1
+   End Class
 End Namespace 'ControlProperties

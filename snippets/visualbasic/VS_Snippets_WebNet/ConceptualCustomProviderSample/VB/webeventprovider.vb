@@ -170,7 +170,7 @@ Namespace Samples.AspNet.Management
                 Throw New Exception("SampleEventProvider.StoreToFile: " + e.ToString())
             End Try
         End Sub
-    End Class 'SampleBufferedEventProvider
+    End Class
 
 End Namespace
 ' </Snippet1>

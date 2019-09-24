@@ -123,4 +123,4 @@ Public Class Test
         End If
      '</snippet6>
     End Sub
-End Class 'Test
+End Class

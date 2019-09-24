@@ -47,7 +47,7 @@ Class CustomDynamicRenderer
         Next i
     
     End Sub
-End Class 'CustomDynamicRenderer
+End Class
 
 
 Class FilterPlugin
@@ -92,7 +92,7 @@ Class FilterPlugin
         rawStylusInput.SetStylusPoints(stylusPoints)
     
     End Sub
-End Class 'FilterPlugin
+End Class
 
 
 Class TransformPlugin
@@ -135,7 +135,7 @@ Class TransformPlugin
         rawStylusInput.SetStylusPoints(stylusPoints)
     
     End Sub
-End Class 'TransformPlugin
+End Class
 
 
 Public Structure PluginDescription
@@ -184,7 +184,7 @@ Class Stroke3D
         End If
     
     End Sub
-End Class 'Stroke3D
+End Class
 
 
 Public Class StefansStylusControl
@@ -341,4 +341,4 @@ Public Class StefansStylusControl
         Stylus.Capture(Nothing)
     
     End Sub
-End Class 'StefansStylusControl
+End Class

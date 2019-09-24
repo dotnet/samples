@@ -523,6 +523,6 @@ Namespace StrokeSnippets_VB
         ' </Snippet22>
 
         ' </Snippet5>
-    End Class 'MyBorder 
+    End Class
 
 End Namespace

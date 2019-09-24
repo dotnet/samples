@@ -216,7 +216,7 @@ Class Window1
         '</Snippet15>
 
     End Sub
-End Class 'Window1
+End Class
 
 
 '<Snippet8>
@@ -230,5 +230,5 @@ Public Class MyData
         Add("Item 3")
 
     End Sub
-End Class 'MyData
+End Class
 '</Snippet8>

@@ -28,7 +28,7 @@ Public Class SamplesDelegate
          End If
          Return ""
       End Function 'mySignMethod
-   End Class 'mySampleClass
+   End Class
 
    Public Shared Sub Main()
 
@@ -46,7 +46,7 @@ Public Class SamplesDelegate
 
    End Sub
 
-End Class 'SamplesDelegate 
+End Class
 
 
 'This code produces the following output:

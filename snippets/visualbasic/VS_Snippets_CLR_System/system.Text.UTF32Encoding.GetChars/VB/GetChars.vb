@@ -80,7 +80,7 @@ Public Class SamplesUTF32Encoding
 
    End Sub
 
-End Class 'SamplesUTF32Encoding
+End Class
 
 ' </Snippet1>
 

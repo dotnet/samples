@@ -56,7 +56,7 @@ Namespace SDKSample
             Me.Content = myStackPanel
 
         End Sub
-    End Class 'RenderTargetBitmapExample_Encode
+    End Class
 End Namespace 'ImagingSnippetGallery
 
 ' </SnippetRenderTargetBitmapEncodeCodeExampleWholePage>

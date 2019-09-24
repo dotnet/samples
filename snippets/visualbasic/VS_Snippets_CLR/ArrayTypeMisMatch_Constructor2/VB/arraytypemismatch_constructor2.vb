@@ -36,5 +36,5 @@ Public Class ArrayTypeMisMatchConst
          Console.WriteLine(("The Exception Message is : " + e.Message))
       End Try
    End Sub
-End Class 'ArrayTypeMisMatchConst
+End Class
 ' </Snippet1>        

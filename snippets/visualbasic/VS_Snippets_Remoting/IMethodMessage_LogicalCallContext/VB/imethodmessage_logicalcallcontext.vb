@@ -35,7 +35,7 @@ Public Class MyProxyAttribute
                              " and their children")
       End If
    End Function 'CreateInstance
-End Class 'MyProxyAttribute
+End Class
 
 ' MyProxy extends the CLR Remoting RealProxy.
 ' This demonstrate the RealProxy extensiblity.
@@ -76,7 +76,7 @@ Public Class MyProxy
    End Function 'Invoke
 ' </Snippet2>
 
-End Class 'MyProxy
+End Class
 ' </Snippet1>
 Public Class Zip
    Inherits MarshalByRefObject
@@ -88,7 +88,7 @@ Public Class Zip
    Public Function Method1(i As Integer) As Integer
       Return i
    End Function 'Method1
-End Class 'Zip
+End Class
 
 Public Class ProxySample
    <SecurityPermission(SecurityAction.LinkDemand)> _
@@ -98,4 +98,4 @@ Public Class ProxySample
       CallContext.SetData("USER", New Zip())
       myZip.Method1(6)
    End Sub
-End Class 'ProxySample
+End Class

@@ -51,7 +51,7 @@ Imports System.Reflection.Emit
 '       
 '       Console.WriteLine("({0}, {1}) . ({2}, {3}) = {4}.", x1, y1, x2, y2, p1.DotProduct(p2))
 '    End Sub
-' End Class 'Point 
+' End Class
 ' ---
 Class AssemblyBuilderDemo
    
@@ -281,7 +281,7 @@ Class AssemblyBuilderDemo
 
    End Sub
 
-End Class 'AssemblyBuilderDemo
+End Class
 
 
 

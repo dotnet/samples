@@ -42,5 +42,5 @@ Public Class MyContractReference
          Console.WriteLine("Error is" + e.Message)
       End Try
    End Sub
-End Class 'MyContractReference
+End Class
 ' </Snippet1>

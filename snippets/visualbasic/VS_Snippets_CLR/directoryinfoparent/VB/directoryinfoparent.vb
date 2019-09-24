@@ -21,5 +21,5 @@ Public Class MoveToTest
         ' Delete the parent directory.
         di.Delete(True)
     End Sub
-End Class 'MoveToTest
+End Class
 '</snippet1>

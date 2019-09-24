@@ -215,6 +215,6 @@ Namespace SDKSample
 
 		#End Region ' private variables
 
-	End Class ' end:class AnnotationsHelperXps
+	End Class
 
 End Namespace ' end:namespace SDKSample

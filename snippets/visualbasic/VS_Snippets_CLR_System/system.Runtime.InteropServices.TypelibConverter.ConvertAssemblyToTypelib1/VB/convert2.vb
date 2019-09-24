@@ -28,7 +28,7 @@ Public Class App
         Dim typeLib As UCOMICreateITypeLib = CType(converter.ConvertAssemblyToTypeLib(asm, "MyTypeLib.dll", 0, eventHandler), UCOMICreateITypeLib)
         typeLib.SaveAllChanges()
     End Sub
-End Class 'App
+End Class
 
 Public Class ConversionEventHandler
     Implements ITypeLibExporterNotifySink
@@ -42,5 +42,5 @@ Public Class ConversionEventHandler
         Return Nothing
     End Function 'ResolveRef
 
-End Class 'ConversionEventHandler
+End Class
 ' </snippet1>

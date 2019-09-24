@@ -13,5 +13,5 @@ Public Class Form1
         myGrid.GridLineColor = newcolor
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

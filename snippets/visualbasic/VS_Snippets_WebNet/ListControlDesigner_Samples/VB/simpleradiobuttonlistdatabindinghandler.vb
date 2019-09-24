@@ -36,6 +36,6 @@ Namespace Examples.VB.WebControls.Design
             End If
         End Sub
         ' </snippet7>
-    End Class ' SimpleRadioButtonListDataBindingHandler
+    End Class
 End Namespace ' Examples.VB.WebControls.Design
 ' </snippet6>

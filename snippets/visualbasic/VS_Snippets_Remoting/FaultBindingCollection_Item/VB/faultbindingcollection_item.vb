@@ -37,4 +37,4 @@ Public Class FaultBindingCollection_Remove
         ' </Snippet1>
       myServiceDescription.Write(Console.Out)
    End Sub
-End Class 'FaultBindingCollection_Remove
+End Class

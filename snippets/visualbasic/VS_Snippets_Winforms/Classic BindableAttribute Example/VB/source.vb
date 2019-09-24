@@ -66,5 +66,5 @@ Public Class Form1
             ' Insert code here.
         End Set 
     End Property
-End Class 'Form1
+End Class
 

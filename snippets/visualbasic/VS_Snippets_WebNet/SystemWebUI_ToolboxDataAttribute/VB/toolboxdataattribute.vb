@@ -15,7 +15,7 @@ Namespace CustomControls
       'Your code goes here.
     End Sub
     
-  End Class 'MyLabel
+  End Class
   
 End Namespace 'CustomControls
 

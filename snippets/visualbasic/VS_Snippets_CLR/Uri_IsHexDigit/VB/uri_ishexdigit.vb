@@ -31,7 +31,7 @@ Class MyIsHexDigitSample
          Console.WriteLine(e.Message)
       End Try
    End Sub
-End Class 'MyIsHexDigitSample
+End Class
 
 '****** Output *****
 '

@@ -4,7 +4,7 @@ Imports System.Data.SqlClient
 Public Class Sample
 ' <Snippet1>
 Public Sub CreateDataView(table As DataTable) 
-    Dim view As DataView = New DataView(table, "", _
+    Dim view As New DataView(table, "", _
         "ContactName", DataViewRowState.CurrentRows)
 
     AddHandler view.ListChanged, _

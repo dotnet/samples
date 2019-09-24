@@ -211,7 +211,7 @@ Namespace MyPermission
             End If
             Return esd
         End Function 'ToXml
-    End Class ' NameIdPermission 
+    End Class
     '</Snippet11>
 End Namespace
 '</Snippet1>

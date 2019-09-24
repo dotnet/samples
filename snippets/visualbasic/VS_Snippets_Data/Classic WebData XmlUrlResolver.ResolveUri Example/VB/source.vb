@@ -20,5 +20,5 @@ Public Class Sample
      End While
         
   End Sub
-End Class 'Sample
+End Class
 ' </Snippet1>

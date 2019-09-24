@@ -16,7 +16,7 @@ Imports System.Management.Instrumentation
 <System.ComponentModel.RunInstaller(True)> _
 Public Class MyInstaller
     Inherits DefaultManagementProjectInstaller
-End Class 'MyInstaller
+End Class
 
 Namespace WMISample
     ' Create a management instrumentation event class

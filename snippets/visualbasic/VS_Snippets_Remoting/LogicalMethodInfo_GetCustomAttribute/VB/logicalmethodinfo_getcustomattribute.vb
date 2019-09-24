@@ -47,7 +47,7 @@ Public Class MyAttribute
          Return myName
       End Get
    End Property
-End Class 'MyAttribute
+End Class
 
 Public Class MyService
    
@@ -56,7 +56,7 @@ Public Class MyService
                  As<MyAttribute("This is the return sample attribute")> Integer
       Return xValue + yValue
    End Function 'Add
-End Class 'MyService
+End Class
 
 
 Public Class LogicalMethodInfo_GetCustomAttribute
@@ -118,5 +118,5 @@ Public Class LogicalMethodInfo_GetCustomAttribute
          Next i
       End If
    End Sub
-End Class 'LogicalMethodInfo_GetCustomAttribute
+End Class
 ' </Snippet4>

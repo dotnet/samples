@@ -207,4 +207,4 @@ Public Class FaultBindingCollection_Add
       myMessage.Parts.Add(myMessagePart)
       Return myMessage
    End Function 'CreateMessage
-End Class 'FaultBindingCollection_Add
+End Class

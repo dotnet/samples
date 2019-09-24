@@ -20,7 +20,7 @@ Namespace Microsoft.WCF.Documentation
       Console.WriteLine("The caller said: ""{0}""", msg)
       Return "The service greets you: " + msg
     End Function 'SampleMethod
-  End Class 'SampleService
+  End Class
 
   ' The detail type of the specified SOAP fault.
   <DataContractAttribute([Namespace]:="http://microsoft.wcf.documentation")> _
@@ -37,5 +37,5 @@ Namespace Microsoft.WCF.Documentation
         Me.msg = Value
       End Set
     End Property
-  End Class 'SampleFault
+  End Class
 End Namespace

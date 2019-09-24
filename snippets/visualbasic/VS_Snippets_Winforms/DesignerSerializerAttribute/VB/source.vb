@@ -31,6 +31,6 @@ Namespace ExampleControl
             Return Nothing
         End Function 'Serialize
 
-    End Class 'ExampleSerializer
+    End Class
 
 End Namespace 'ExampleControl 

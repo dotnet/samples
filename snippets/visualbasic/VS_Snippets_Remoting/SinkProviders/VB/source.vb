@@ -18,4 +18,4 @@ Public Class SinkProviderSampleClass
         ' </Snippet1>
     End Sub
 
-End Class 'SinkProviderSampleClass
+End Class

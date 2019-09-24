@@ -60,4 +60,4 @@ Class Window1
     
     End Sub
     '</Snippet2>
-End Class 'Window1 
+End Class

@@ -22,7 +22,7 @@ Class SampleClass
       Next url 
    End Sub
 
-End Class 'Class1
+End Class
 '</Snippet1>
 
 Public Class HelloService

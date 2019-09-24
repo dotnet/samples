@@ -29,7 +29,7 @@ Class Sample
       End If
       Console.Write("{0}{0}{0}", Environment.NewLine)
    End Sub
-End Class 'Sample
+End Class
 '
 'This example produces the following results:
 'The last character occurrence from position 44 for 22 characters.

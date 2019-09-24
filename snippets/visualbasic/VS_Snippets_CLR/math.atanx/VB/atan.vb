@@ -33,7 +33,7 @@ Class Sample
       Console.WriteLine(line2, x, y, radians)
       Console.WriteLine(line3, angle)
    End Sub
-End Class 'Sample
+End Class
 '
 'This example produces the following results:
 '

@@ -22,7 +22,7 @@ Namespace CodeDomSamples
     '</Snippet2>
       End Sub
 
-   End Class 'CodeCommentExample
+   End Class
 
 End Namespace 'CodeDomSamples 
 

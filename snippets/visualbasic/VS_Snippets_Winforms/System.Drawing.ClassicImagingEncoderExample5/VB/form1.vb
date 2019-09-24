@@ -51,5 +51,5 @@ Class Example_RotateJPEG
         Return Nothing
     
     End Function 'GetEncoderInfo
-End Class 'Example_RotateJPEG
+End Class
 ' </snippet5>

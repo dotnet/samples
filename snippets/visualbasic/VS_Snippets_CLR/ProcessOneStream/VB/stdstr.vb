@@ -21,4 +21,4 @@ Class Snippet
         End Using
         '</Snippet1>
     End Sub
-End Class 'Snippet
+End Class

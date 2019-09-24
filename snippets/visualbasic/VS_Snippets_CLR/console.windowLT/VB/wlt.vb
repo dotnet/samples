@@ -96,7 +96,7 @@ Class Sample
          Console.CursorVisible = saveCursorVisible
       End Try
    End Sub
-End Class 'Sample ' end Sample
+End Class
 '
 'This example produces results similar to the following:
 '

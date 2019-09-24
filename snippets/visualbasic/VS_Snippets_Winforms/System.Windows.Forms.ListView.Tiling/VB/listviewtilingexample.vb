@@ -81,5 +81,5 @@ Public Class ListViewTilingExample
         Application.Run(New ListViewTilingExample())
     End Sub
 
-End Class 'ListViewTilingExample 
+End Class
 '</Snippet1>

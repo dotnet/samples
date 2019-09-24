@@ -184,7 +184,7 @@ Class HostProtectionExample
         Console.WriteLine(("File: " & e.FullPath & " " & _
             e.ChangeType.ToString()))
     End Sub
-End Class 'HostProtectionExample 
+End Class
 
 '<Snippet5>
 ' The following class is an example of code that exposes 
@@ -214,6 +214,6 @@ Public Class MyControl
             End If
         End If
     End Sub
-End Class 'MyControl
+End Class
 '</Snippet5>
 '</Snippet1>

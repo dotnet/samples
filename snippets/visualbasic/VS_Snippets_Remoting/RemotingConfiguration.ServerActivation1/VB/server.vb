@@ -23,5 +23,5 @@ Public Class ServerClass
 
    End Sub
 
-End Class 'ServerClass
+End Class
 ' </Snippet3>

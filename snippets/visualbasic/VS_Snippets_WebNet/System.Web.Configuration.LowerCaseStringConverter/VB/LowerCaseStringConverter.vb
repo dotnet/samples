@@ -44,7 +44,7 @@ Namespace Samples.AspNet
       Throw New Exception("The method or operation is not implemented.")
     End Function 'GetService
 
-  End Class 'lowerCaseDescContext 
+  End Class
 
   Class UsingLowerCaseStringConverter
     Public Shared Sub Main()

@@ -69,5 +69,5 @@ Public Class Sample
         'Display the XML content to the console.
         Console.Write(doc.InnerXml)
     End Sub
-End Class 'Sample
+End Class
 ' </Snippet1>

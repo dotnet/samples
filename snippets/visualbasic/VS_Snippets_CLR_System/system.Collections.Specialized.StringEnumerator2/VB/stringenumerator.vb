@@ -27,7 +27,7 @@ Public Class SamplesStringEnumerator
 
    End Sub
 
-End Class 'SamplesStringEnumerator 
+End Class
 
 
 'This code produces the following output.

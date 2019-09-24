@@ -17,7 +17,7 @@ Namespace CodeDomSamples
         '</Snippet2>
       End Sub
 
-   End Class 'CodeCastExpressionExample
+   End Class
 
 End Namespace 'CodeDomSamples 
 

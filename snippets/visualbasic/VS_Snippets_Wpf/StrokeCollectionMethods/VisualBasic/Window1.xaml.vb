@@ -103,5 +103,5 @@ Namespace CustomInkControlSample
         Private Sub GetBounds_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
 
         End Sub
-    End Class 'Window1
+    End Class
 End Namespace

@@ -20,5 +20,5 @@ NotInheritable Public Class UsingTypeNameConverter
         End Try
     
     End Sub
-End Class 'UsingTypeNameConverter 
+End Class
 ' </Snippet1>

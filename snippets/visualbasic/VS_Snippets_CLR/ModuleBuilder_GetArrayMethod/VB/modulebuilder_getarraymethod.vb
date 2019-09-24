@@ -63,7 +63,7 @@ Friend Class CodeGenerator
          Return Me.myAssemblyBuilder
       End Get
    End Property
-End Class 'CodeGenerator
+End Class
 
 Public Class TestClass
    <PermissionSetAttribute(SecurityAction.Demand, Name:="FullTrust")> _
@@ -93,4 +93,4 @@ Public Class TestClass
          Next j
       End If
    End Sub
-End Class 'TestClass
+End Class

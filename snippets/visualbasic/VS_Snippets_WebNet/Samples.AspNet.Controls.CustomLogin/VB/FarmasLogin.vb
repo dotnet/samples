@@ -32,7 +32,7 @@ Namespace Samples.AspNet.Controls
             MyBase.CreateChildControls()
 
         End Sub
-    End Class 'CustomLogin
+    End Class
 
     ' A Template that contains the child controls.
     Public Class MyTemplate
@@ -81,6 +81,6 @@ Namespace Samples.AspNet.Controls
             container.Controls.Add(submit)
 
         End Sub
-    End Class 'MyTemplate
+    End Class
 End Namespace
 ' </snippet1>

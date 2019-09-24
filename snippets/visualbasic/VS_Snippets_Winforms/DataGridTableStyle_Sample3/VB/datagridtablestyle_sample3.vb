@@ -235,7 +235,7 @@ Namespace SampleDataGridTableStyle
       End Sub
 ' </Snippet2>
 ' </Snippet1>
-   End Class 'DataGridTableStyle_Sample
+   End Class
 End Namespace 'SampleDataGridTableStyle
 
 

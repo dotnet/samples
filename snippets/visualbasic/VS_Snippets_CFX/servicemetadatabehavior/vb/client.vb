@@ -38,4 +38,4 @@ Public Class Client
       End Try
     End Using
   End Sub
-End Class 'Client
+End Class

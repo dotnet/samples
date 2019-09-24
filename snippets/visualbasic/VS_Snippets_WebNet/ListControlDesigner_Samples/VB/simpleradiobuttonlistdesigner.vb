@@ -75,6 +75,6 @@ Namespace Examples.VB.WebControls.Design
             changedDataSource = True
         End Sub
         ' </snippet4>
-    End Class ' SimpleRadioButtonListDesigner
+    End Class
 End Namespace ' Examples.VB.WebControls.Design
 ' </snippet1>

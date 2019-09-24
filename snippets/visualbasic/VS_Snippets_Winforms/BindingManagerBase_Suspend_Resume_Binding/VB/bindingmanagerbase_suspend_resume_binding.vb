@@ -191,5 +191,5 @@ Public Class Form1
       End Try
    End Sub
 ' </Snippet2>
-End Class 'Form1
+End Class
 

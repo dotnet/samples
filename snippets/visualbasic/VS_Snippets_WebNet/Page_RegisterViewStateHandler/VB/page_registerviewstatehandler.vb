@@ -32,7 +32,7 @@ Namespace PageSample
          ' a page that calls MyForm.
          Page.RegisterViewStateHandler()
       End Sub
-   End Class 'MyForm
+   End Class
 
 ' </Snippet1>
    Public Class WebPage
@@ -90,5 +90,5 @@ Namespace PageSample
          textBoxObj = New TextBox()
          buttonObj = New Button()
       End Sub
-   End Class 'WebPage
+   End Class
 End Namespace 'PageSample

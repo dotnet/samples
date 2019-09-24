@@ -11,7 +11,7 @@ Protected DataGrid1 As DataGrid
 
 ' <Snippet1>
 Private Sub FindValueInDataView(table As DataTable)
-    Dim view As DataView = New DataView(table)
+    Dim view As New DataView(table)
     view.Sort = "Customers"
 
     ' Find the customer named "John Smith".

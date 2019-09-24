@@ -18,7 +18,7 @@ Class [MyClass]
    
    Public Sub Myfunction()
    End Sub
-End Class '[MyClass]
+End Class
 
 Class Type_GetMembers
    
@@ -44,5 +44,5 @@ Class Type_GetMembers
          Console.WriteLine(("Exception : " + e.Message.ToString()))
       End Try
    End Sub
-End Class 'Type_GetMembers
+End Class
 ' </Snippet1>

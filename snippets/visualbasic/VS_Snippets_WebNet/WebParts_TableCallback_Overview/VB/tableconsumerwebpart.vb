@@ -70,8 +70,8 @@ Namespace Samples.AspNet.VB.Controls
                   name, id, allowsMultipleConnections)
 
             End Sub
-        End Class 'TableConsumerConnectionPoint 
-    End Class 'TableConsumerWebPart
+        End Class
+    End Class
 
 End Namespace
 '</Snippet2>

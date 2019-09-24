@@ -99,4 +99,4 @@ Partial Class AppInCode
 
     End Sub
     '</Snippet2>
-End Class 'AppInCode
+End Class

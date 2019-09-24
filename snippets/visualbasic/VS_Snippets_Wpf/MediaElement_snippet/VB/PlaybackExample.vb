@@ -135,5 +135,5 @@ Namespace MediaElementExample
                 args.CanExecute = True
             End If
         End Sub
-    End Class 'PlaybackExample
+    End Class
 End Namespace 'MediaElementExample

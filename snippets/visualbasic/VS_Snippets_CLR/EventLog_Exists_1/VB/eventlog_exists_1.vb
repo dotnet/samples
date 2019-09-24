@@ -21,4 +21,4 @@ Class EventLog_Exists_1
          Console.WriteLine("Exception:" + e.Message)
       End Try
    End Sub
-End Class 'EventLog_Exists_1
+End Class

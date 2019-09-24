@@ -115,5 +115,5 @@ Class RecognizerPlugin
         End If
 
     End Sub
-End Class 'RecognizerPlugin
+End Class
 '</Snippet12>

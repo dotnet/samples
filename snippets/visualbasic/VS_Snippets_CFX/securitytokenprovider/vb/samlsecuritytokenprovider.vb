@@ -79,6 +79,6 @@ Public Class SamlSecurityTokenProvider
         Return New GenericXmlSecurityToken(dom.DocumentElement, proofToken, assertion.Conditions.NotBefore, assertion.Conditions.NotOnOrAfter, samlKeyIdentifierClause, samlKeyIdentifierClause, Nothing)
 
     End Function 'GetTokenCore
-End Class 'SamlSecurityTokenProvider 
+End Class
 ' </snippet1>
 ' </snippet0>

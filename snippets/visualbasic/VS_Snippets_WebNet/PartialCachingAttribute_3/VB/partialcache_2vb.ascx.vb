@@ -26,5 +26,5 @@ Public Class ctlSelect
 
         TimeMsg.Text = DateTime.Now.ToString("T")
     End Sub
-End Class 'ctlSelect
+End Class
 ' </snippet1>

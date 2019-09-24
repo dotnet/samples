@@ -54,5 +54,5 @@ Public Class cstmHtmlTW
         End If
     End Function 'RenderAfterContent
     ' </snippet3>
-End Class 'cstmHtmlTW 
+End Class
 ' </snippet1>

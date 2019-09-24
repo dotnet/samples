@@ -88,6 +88,6 @@ Namespace SDKSample
             myMediaElement.Volume = System.Convert.ToDouble(volumeSlider.Value)
             myMediaElement.SpeedRatio = System.Convert.ToDouble(speedRatioSlider.Value)
         End Sub
-    End Class 'MediaElementExample
+    End Class
 End Namespace 'SDKSample
 ' </SnippetCodeBehindMediaElementExampleWholePage>

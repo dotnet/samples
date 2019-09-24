@@ -388,4 +388,4 @@ Class ConnectionStrings
         RemoveConnectionStrings2()
     
     End Sub
-End Class 'ConnectionStrings
+End Class

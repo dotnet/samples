@@ -46,7 +46,7 @@ Public Class Sample
     Public Sub WriteInput(message As SoapMessage)
         ' method added so sample will compile
     End Sub
-End Class 'Sample
+End Class
 
 Public Class MyEntryClass
 	Public Shared Sub Main()

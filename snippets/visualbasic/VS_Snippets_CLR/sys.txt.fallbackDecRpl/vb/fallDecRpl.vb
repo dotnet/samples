@@ -85,7 +85,7 @@ Class Sample
         Console.WriteLine("Decoded string:""{0}""", decodedString)
     
     End Sub
-End Class 'Sample
+End Class
 '
 'This code example produces the following results:
 '

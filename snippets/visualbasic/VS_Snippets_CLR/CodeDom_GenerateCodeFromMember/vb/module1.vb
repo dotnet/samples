@@ -120,6 +120,6 @@ Class Program
         snippetMethod = New CodeSnippetTypeMember(sw.ToString())
     
     End Sub
-End Class 'Program 
+End Class
 '</Snippet3>
 '</Snippet1>

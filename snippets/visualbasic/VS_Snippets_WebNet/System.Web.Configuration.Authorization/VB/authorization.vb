@@ -127,7 +127,7 @@ Class UsingAuthorizationSection
         ' </Snippet13>
 
    End Sub
-End Class 'UsingAuthorizationSection 
+End Class
 
 
 

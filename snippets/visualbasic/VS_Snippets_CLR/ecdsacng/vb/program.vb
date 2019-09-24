@@ -18,7 +18,7 @@ Class Alice
         End If
 
     End Sub
-End Class 'Alice 
+End Class
 
 
 Public Class Bob
@@ -34,5 +34,5 @@ Public Class Bob
         End Using
 
     End Sub
-End Class 'Bob 
+End Class
 '</Snippet1>

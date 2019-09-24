@@ -31,7 +31,7 @@ Public Class SamplesBitVector32
 
    End Sub
 
-End Class 'SamplesBitVector32
+End Class
 
 
 ' This code produces the following output.

@@ -14,4 +14,4 @@ Public Class MyHelloServer
       Return "Hi there " + myString
    End Function 'myHelloMethod
    
-End Class 'MyHelloServer
+End Class

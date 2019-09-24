@@ -97,5 +97,5 @@ Public Class Form1
          End If ' Call method to save file...
       End If
    End Sub
-End Class 'Form1
+End Class
 '</Snippet1>

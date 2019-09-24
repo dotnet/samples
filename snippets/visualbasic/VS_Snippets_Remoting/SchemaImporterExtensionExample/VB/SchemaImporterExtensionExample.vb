@@ -10,7 +10,7 @@ Public Class Test
         Console.WriteLine("started")
     
     End Sub
-End Class 'Test
+End Class
 
 
 ' Replace MyFakeAbstract with System.Xml.Serialization.Advanced.SchemaImporterExtension
@@ -20,7 +20,7 @@ MustInherit Public Class MyFakeAbstract
     Public Overridable Function ImportschemaType(ByVal name As String, ByVal ns As String, ByVal context As XmlSchemaObject, ByVal schemas As XmlSchemas, ByVal importer As XmlSchemaImporter, ByVal compileUnit As CodeCompileUnit, ByVal mainNamespace As CodeNamespace, ByVal options As CodeGenerationOptions, ByVal codeProvider As CodeDomProvider) As String 
         Return Nothing
     End Function 'ImportschemaType 
-End Class 'MyFakeAbstract
+End Class
 
 Public Class MyExtension
     Inherits MyFakeAbstract

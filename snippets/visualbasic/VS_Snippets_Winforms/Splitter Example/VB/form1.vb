@@ -111,5 +111,5 @@ Namespace SplitterEx
         Shared Sub Main()
             Application.Run(New Form1())
         End Sub
-    End Class 'Form1
+    End Class
 End Namespace 'SplitterEx

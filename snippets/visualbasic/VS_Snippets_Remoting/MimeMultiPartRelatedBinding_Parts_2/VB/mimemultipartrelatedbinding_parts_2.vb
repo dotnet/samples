@@ -57,6 +57,6 @@ Namespace MimeContentBinding_work
          Next i
 ' </Snippet2>
       End Sub
-   End Class 'MyMimeContentClass
+   End Class
 End Namespace 'MimeContentBinding_work
 ' </Snippet1>

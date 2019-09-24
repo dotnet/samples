@@ -27,7 +27,7 @@ Public Class Test
         Return song
     
     End Function
-End Class 'Test 
+End Class
 '</snippet1>
 
 '<snippet2>

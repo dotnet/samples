@@ -68,6 +68,6 @@ Class UsingCustomError
         currentError1.StatusCode = 404
         ' </Snippet5>
    End Sub
-End Class 'UsingCustomError 
+End Class
 
 

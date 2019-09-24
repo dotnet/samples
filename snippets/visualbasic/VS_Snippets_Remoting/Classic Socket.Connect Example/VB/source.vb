@@ -49,4 +49,4 @@ Public Class Sample
         ConnectAndCheck(s, EPHost)
     
     End Sub
-End Class 'Sample
+End Class

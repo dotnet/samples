@@ -45,4 +45,4 @@ Class MyServiceDescriptionCollection
          Console.WriteLine("The following exception was raised: {0}", e.Message.ToString())
       End Try
    End Sub
-End Class 'MyServiceDescriptionCollection
+End Class

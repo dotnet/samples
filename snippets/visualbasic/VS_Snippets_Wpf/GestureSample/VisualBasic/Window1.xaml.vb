@@ -111,7 +111,7 @@ Class Window1
 
     End Sub
     '</Snippet1>
-End Class 'Window1 
+End Class
 
 '
 'ToDo: Error processing original source shown below

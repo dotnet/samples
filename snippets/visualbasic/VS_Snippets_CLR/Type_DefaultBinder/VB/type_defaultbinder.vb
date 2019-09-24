@@ -18,6 +18,6 @@ Public Class MyDefaultBinderSample
         Public Sub HelloWorld()
             Console.WriteLine("Hello World")
         End Sub
-    End Class '[MyClass]
-End Class 'MyDefaultBinderSample 
+    End Class
+End Class
 ' </Snippet1>

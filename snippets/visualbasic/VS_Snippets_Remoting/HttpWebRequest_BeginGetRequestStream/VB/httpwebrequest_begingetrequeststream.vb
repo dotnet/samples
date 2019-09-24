@@ -77,5 +77,5 @@ Class HttpWebRequestBeginGetRequest
     End Sub
             
     '  </Snippet1>
-End Class ' HttpWebRequest_BeginGetRequest
+End Class
     '  </Snippet2>

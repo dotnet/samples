@@ -28,4 +28,4 @@ Class VariousMethodBuilderSnippets
 
    End Sub
 
-End Class 'VariousMethodBuilderSnippets 
+End Class

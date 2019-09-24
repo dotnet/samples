@@ -19,7 +19,7 @@ Namespace CustomProxySample
       Public Sub RaiseException()
          Throw New Exception("Raising an exception.")
       End Sub
-   End Class 'CustomServer
+   End Class
    
    <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> _
    Public Class MyProxy
@@ -49,7 +49,7 @@ Namespace CustomProxySample
          Return myIMethodReturnMessage
       End Function 'Invoke
 ' </Snippet1>
-   End Class 'MyProxy
+   End Class
 
    Public Class ProxySample
       <SecurityPermission(SecurityAction.LinkDemand)> _
@@ -65,5 +65,5 @@ Namespace CustomProxySample
             Console.WriteLine("Exception: " + e.Message)
          End Try
       End Sub
-   End Class 'ProxySample
+   End Class
 End Namespace 'CustomProxySample

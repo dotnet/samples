@@ -116,4 +116,4 @@ Class newListener
       Console.WriteLine("hit any key")
       Console.Read()
    End Sub
-End Class 'newListener
+End Class

@@ -98,5 +98,5 @@ Public Class SampleWebBaseErrorEvent
     End Sub
     ' </Snippet6>
 
-End Class 'SampleWebBaseErrorEvent
+End Class
 ' </Snippet1>

@@ -71,4 +71,4 @@ Class HttpWebRequest_Pipelined
             Console.WriteLine("Message :{0} ", e.Message)
         End Try
     End Sub
-End Class ' HttpWebRequest_Pipelined
+End Class

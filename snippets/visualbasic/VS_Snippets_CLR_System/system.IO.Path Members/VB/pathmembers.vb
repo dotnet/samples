@@ -333,4 +333,4 @@ Public Class PathSnippets
         pathnameSnippets.HasExtension()
         pathnameSnippets.IsPathRooted()
     End Sub
-End Class 'PathSnippets
+End Class

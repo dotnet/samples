@@ -41,4 +41,4 @@ Class DiscoveryDocumentReference_ReadDocument
       End Try
    End Sub
 
-End Class 'DiscoveryDocumentReference_ReadDocument
+End Class

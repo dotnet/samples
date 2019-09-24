@@ -49,6 +49,6 @@ Public Class RecursiveFileProcessor
     Public Shared Sub ProcessFile(ByVal path As String)
         Console.WriteLine("Processed file '{0}'.", path)
     End Sub
-End Class 'RecursiveFileProcessor
+End Class
 '</Snippet2>
 '</Snippet1>

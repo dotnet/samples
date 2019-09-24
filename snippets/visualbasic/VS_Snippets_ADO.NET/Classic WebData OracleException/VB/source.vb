@@ -20,7 +20,7 @@ Public class Sample
       Dim errorMessage As String = "Code: " & e.Code & vbCrLf & _
                                    "Message: " & e.Message
 
-      Dim log As System.Diagnostics.EventLog = New System.Diagnostics.EventLog()
+      Dim log As New System.Diagnostics.EventLog()
       log.Source = "My Application"
       log.WriteEntry(errorMessage)
       Console.WriteLine("An exception occurred. Please contact your system administrator.")

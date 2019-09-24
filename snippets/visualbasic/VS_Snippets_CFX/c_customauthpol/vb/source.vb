@@ -39,7 +39,7 @@ Public Class MyServiceAuthorizationManager
         Return False
     
     End Function 'CheckAccessCore
-End Class 'MyServiceAuthorizationManager
+End Class
 '</snippet2>
 
 '<snippet5>

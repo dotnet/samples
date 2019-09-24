@@ -95,4 +95,4 @@ Public Class DataGridTableStyle_resetcolor
       myDataGridTableStyle.ResetAlternatingBackColor()
    End Sub
 ' </Snippet1>
-End Class 'DataGridTableStyle_resetcolor 
+End Class

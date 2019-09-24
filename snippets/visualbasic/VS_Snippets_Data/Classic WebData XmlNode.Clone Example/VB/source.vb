@@ -21,5 +21,5 @@ Public Class Sample
         Dim clone As XmlNode = root.Clone()
         Console.WriteLine(clone.OuterXml)
     End Sub
-End Class 'Sample
+End Class
 ' </Snippet1>

@@ -54,7 +54,7 @@ Public Class Test
         binst.M()
         binst.M(42)         
     End Sub
-End Class 'Test
+End Class
 
 ' This code example produces the following output:
 ' ------ List the overloads of M in the derived class D ------

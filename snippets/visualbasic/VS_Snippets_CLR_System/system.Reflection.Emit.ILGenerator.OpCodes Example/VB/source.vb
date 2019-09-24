@@ -162,6 +162,6 @@ Class EmitWriteLineDemo
 
    End Sub
 
-End Class 'EmitWriteLineDemo
+End Class
 
 ' </Snippet1>

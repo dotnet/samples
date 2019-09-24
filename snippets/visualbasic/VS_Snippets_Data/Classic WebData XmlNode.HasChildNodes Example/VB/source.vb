@@ -25,5 +25,5 @@ Public Class Sample
             Next i
         End If
     End Sub
-End Class 'Sample
+End Class
 ' </Snippet1>

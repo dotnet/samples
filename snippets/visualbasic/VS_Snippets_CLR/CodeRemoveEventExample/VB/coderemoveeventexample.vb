@@ -18,6 +18,6 @@ Namespace CodeDomSamples
             '</Snippet2>
         End Sub
 
-    End Class 'CodeRemoveEventExample 
+    End Class
 End Namespace 'CodeDomSamples
 '</Snippet1>

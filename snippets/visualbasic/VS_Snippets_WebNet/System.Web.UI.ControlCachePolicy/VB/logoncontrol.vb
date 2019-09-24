@@ -9,5 +9,5 @@ Public Class LogOnControl
    Public user As TextBox
    Public password As TextBox
 
-End Class 'LogOnControl
+End Class
 ' </Snippet2>

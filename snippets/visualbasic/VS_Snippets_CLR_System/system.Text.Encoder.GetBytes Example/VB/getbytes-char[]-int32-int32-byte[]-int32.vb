@@ -33,7 +33,7 @@ Class EncoderExample
         Next b
         Console.WriteLine()
     End Sub
-End Class 'EncoderExample
+End Class
 
 'This code example produces the following output.
 '8 bytes used to encode characters.

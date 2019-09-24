@@ -18,4 +18,4 @@ Public Class Form1
         ControlBox = False
     End Sub
 ' </Snippet1>
-End Class 'Form1 
+End Class

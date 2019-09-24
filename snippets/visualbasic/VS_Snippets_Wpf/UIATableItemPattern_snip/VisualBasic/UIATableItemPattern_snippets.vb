@@ -32,7 +32,7 @@ Class UIATableItemPattern_snippets
             app.Run()
         
         End Sub
-    End Class 'TestMain
+    End Class
     
     
     ' <SnippetStartTarget>
@@ -340,5 +340,5 @@ Class UIATableItemPattern_snippets
         Return Nothing
 
     End Function 'GetPrimaryHeaders
-End Class 'UIATableItemPattern_snippets 
+End Class
 ' </Snippet105>

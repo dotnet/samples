@@ -28,7 +28,7 @@ Namespace AC_Render
             ' are rendered to the page.
             Attributes.Render(output)
         End Sub
-    End Class 'AttribRender
+    End Class
 
 End Namespace 'AC_Render
 ' </Snippet1>

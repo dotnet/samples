@@ -17,7 +17,7 @@ Namespace Examples.VB.WebControls.Design
     <Designer(GetType(Examples.VB.WebControls.Design.SampleLabelDesigner))> _
     Public Class SampleLabel
         Inherits Label
-    End Class ' SampleLabel
+    End Class
     ' </snippet2>
 
     ' Override members of the LabelDesigner.
@@ -63,7 +63,7 @@ Namespace Examples.VB.WebControls.Design
             Return designTimeMarkup
         End Function ' GetDesignTimeHtml
         ' </snippet3>      
-    End Class ' SampleLabelDesigner
+    End Class
 End Namespace ' Examples.VB.WebControls.Design
 ' </snippet1>
 

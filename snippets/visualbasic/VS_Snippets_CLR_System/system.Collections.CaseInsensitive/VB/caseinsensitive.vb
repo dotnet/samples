@@ -45,7 +45,7 @@ Public Class SamplesHashtable
 
    End Sub
 
-End Class 'SamplesHashtable
+End Class
 
 
 'This code produces the following output.  Results vary depending on the system's culture settings.

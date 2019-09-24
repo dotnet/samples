@@ -72,6 +72,6 @@ Public Class FixedValidator
         End Try
 
     End Sub
-End Class 'FixedValidator 
+End Class
 
 ' </Snippet21>

@@ -183,4 +183,4 @@ reader.Close()
         '</snippet8>
     End Sub
 
-End Class 'XslCompiledTransform_Samples
+End Class

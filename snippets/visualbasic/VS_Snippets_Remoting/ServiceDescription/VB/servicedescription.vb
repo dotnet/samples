@@ -71,5 +71,5 @@ Namespace ServiceDescription1
          myOperationBinding.Extensions.Add(mySoapOperationBinding)
          Return myOperationBinding
       End Function 'CreateOperationBinding
-   End Class 'MyService
+   End Class
 End Namespace 'ServiceDescription1

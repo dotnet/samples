@@ -30,6 +30,6 @@ Class Program
         sandbox.ExecuteAssemblyByName("HelloWorld")
     
     End Sub
-End Class 'Program
+End Class
 
 '</Snippet1>

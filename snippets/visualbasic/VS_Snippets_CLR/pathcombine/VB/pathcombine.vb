@@ -38,7 +38,7 @@ Public Class ChangeExtensionTest
         
         Console.WriteLine()
     End Sub
-End Class 'ChangeExtensionTest
+End Class
 ' This code produces output similar to the following:
 '
 ' When you combine 'c:\temp' and 'subdir\file.txt', the result is: 

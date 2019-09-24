@@ -95,5 +95,5 @@ End Sub
 '</snippet1>
 
 
-   End Class 'ImageDrag 
+   End Class
 End Namespace 'DragDrop

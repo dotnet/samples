@@ -172,7 +172,7 @@ Namespace PersTest
 
         End Sub
        ' </snippet2>
-    End Class 'UrlListWebPart 
+    End Class
 
 
     Public Class UrlListExWebPart
@@ -271,6 +271,6 @@ Namespace PersTest
 
         End Sub
         ' </snippet7>
-    End Class 'UrlListExWebPart 
+    End Class
     ' </snippet9>
 End Namespace

@@ -30,5 +30,5 @@ Public Class PingPong
         Console.WriteLine((greetings + " from " + name))
     End Sub
 
-End Class 'PingPong
+End Class
 ' </Snippet3>

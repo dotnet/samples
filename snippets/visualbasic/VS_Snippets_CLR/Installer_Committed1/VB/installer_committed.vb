@@ -46,4 +46,4 @@ Public Class MyInstallerClass
       Console.WriteLine("Usage : installutil.exe Installer_Committed.exe ")
    End Sub
 
-End Class 'MyInstallerClass
+End Class

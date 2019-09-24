@@ -24,7 +24,7 @@ Public Class SamplesTextInfo
 
    End Sub
 
-End Class 'SamplesTextInfo
+End Class
 
 
 'This code produces the following output.

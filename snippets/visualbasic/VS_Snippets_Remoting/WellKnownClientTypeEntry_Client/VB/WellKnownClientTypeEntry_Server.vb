@@ -14,4 +14,4 @@ Public Class MyServer
       Console.WriteLine("Started the Server, Hit <enter> to exit...")
       Console.ReadLine()
    End Sub
-End Class 'MyServer
+End Class

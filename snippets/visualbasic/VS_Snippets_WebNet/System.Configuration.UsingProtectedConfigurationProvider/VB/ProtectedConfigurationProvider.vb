@@ -148,6 +148,6 @@ Namespace Samples.AspNet
 
             Console.Read()
         End Sub
-    End Class 'TestingProtectedConfigurationProvider
+    End Class
 End Namespace
 '</Snippet11>

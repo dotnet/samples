@@ -19,7 +19,7 @@ Class [MyClass]
    
    Public Sub Myfunction()
    End Sub
-End Class '[MyClass]
+End Class
 
 Class Type_GetMembers_BindingFlags
    
@@ -60,6 +60,6 @@ Class Type_GetMembers_BindingFlags
 
 
    End Sub
-End Class 'Type_GetMembers_BindingFlags
+End Class
 ' </Snippet1>      
 

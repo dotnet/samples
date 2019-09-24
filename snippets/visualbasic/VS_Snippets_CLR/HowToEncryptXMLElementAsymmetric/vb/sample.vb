@@ -217,7 +217,7 @@ Class Program
         exml.DecryptDocument()
 
     End Sub
-End Class 'Program
+End Class
 
 
 ' </Snippet1>

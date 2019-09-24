@@ -70,5 +70,5 @@ Class IsLoopbackTest
          Console.WriteLine(("Message : " + e.Message))
       End Try
    End Sub
-End Class 'IsLoopbackTest
+End Class
 ' </Snippet1>

@@ -14,5 +14,5 @@ Public Class Form1
         Dim page_change_args As New DataGridPageChangedEventArgs(e.CommandSource, e.NewPageIndex)
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

@@ -107,7 +107,7 @@ Friend Class UnmanagedClass
 
     End Structure 'HWND
 
-End Class 'UnmanagedClass
+End Class
 
 
 

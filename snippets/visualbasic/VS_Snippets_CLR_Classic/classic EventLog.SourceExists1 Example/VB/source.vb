@@ -19,5 +19,5 @@ Class MySample
         
         Console.WriteLine("Message written to event log.")
     End Sub
-End Class ' MySample
+End Class
 ' </Snippet1>

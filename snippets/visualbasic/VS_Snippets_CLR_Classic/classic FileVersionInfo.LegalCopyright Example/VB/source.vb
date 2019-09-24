@@ -15,5 +15,5 @@ Public Class Form1
         textBox1.Text = "Copyright notice: " & myFileVersionInfo.LegalCopyright
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

@@ -12,7 +12,7 @@ Public Class MyClass1
       j = 2
       Return 0
    End Function 'MyMethod
-End Class 'MyClass1
+End Class
 
 Public Class ParameterInfo_Attributes
    
@@ -30,5 +30,5 @@ Public Class ParameterInfo_Attributes
          Console.WriteLine(ControlChars.Tab + "The {0} parameter has the attribute : {1}", i + 1, myParameters(i).Attributes)
       Next i
    End Sub
-End Class 'ParameterInfo_Attributes
+End Class
 ' </Snippet1>

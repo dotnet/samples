@@ -19,7 +19,7 @@ Public Class MyAttribute
    Public Sub New(myBoolean As Boolean)
       Me.myBoolean = myBoolean
    End Sub
-End Class 'MyAttribute
+End Class
 
 Public Class MyConstructorBuilder
 
@@ -70,5 +70,5 @@ Public Class MyConstructorBuilder
       End Try
       Return myTypeBuilder.CreateType()
    End Function 'MyCreateCallee
-End Class 'MyConstructorBuilder
+End Class
 ' </Snippet1>

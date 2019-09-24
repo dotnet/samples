@@ -92,4 +92,4 @@ Class WebPermissionIsSubset
          Console.Write(ControlChars.Tab + "{0}", myEnumerator1.Current)
       End While
    End Sub
-End Class 'WebPermissionIsSubset
+End Class

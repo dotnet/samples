@@ -105,7 +105,7 @@ Public Class AssemblyName_CodeBase
       Next i
       End If
    End Sub
-End Class 'AssemblyName_CodeBase 
+End Class
 ' </Snippet5>
 ' </Snippet4>
 ' </Snippet3>

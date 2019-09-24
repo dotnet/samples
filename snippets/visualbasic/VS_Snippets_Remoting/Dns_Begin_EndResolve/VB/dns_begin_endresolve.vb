@@ -17,7 +17,7 @@ Class DnsBeginGetHostByName
         Public Sub New()
             host = Nothing
         End Sub
-    End Class 'RequestState
+    End Class
     
     
     Public Shared Sub Main()
@@ -72,4 +72,4 @@ Class DnsBeginGetHostByName
 ' </Snippet2>
 ' </Snippet1>
 
-End Class 'DnsBeginGetHostByName 
+End Class

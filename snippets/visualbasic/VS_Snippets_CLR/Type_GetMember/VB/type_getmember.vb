@@ -85,5 +85,5 @@ Public Class MyMemberSample
             Console.WriteLine("No members match the search criteria.")
         End If
     End Sub
-End Class 'MyMemberSample
+End Class
 ' </Snippet3>

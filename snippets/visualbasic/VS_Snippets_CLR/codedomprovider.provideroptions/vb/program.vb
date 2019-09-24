@@ -46,5 +46,5 @@ Class Program
         Console.WriteLine()
 
     End Sub
-End Class 'Program
+End Class
 '</Snippet1>

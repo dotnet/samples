@@ -15,5 +15,5 @@ Public Class Form1
         myGridColumn.NullText = "Null Text"
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

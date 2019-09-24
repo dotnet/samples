@@ -51,7 +51,7 @@ Class Sample
       WriteAt("All done!", 0, 6)
       Console.WriteLine()
    End Sub
-End Class 'Sample
+End Class
 '
 'This example produces the following results:
 '

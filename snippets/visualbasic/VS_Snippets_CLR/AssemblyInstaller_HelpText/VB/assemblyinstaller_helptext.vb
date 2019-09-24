@@ -46,4 +46,4 @@ Class AssemblyInstaller_Example
          Console.WriteLine(e.Message)
       End Try
    End Sub
-End Class 'AssemblyInstaller_Example
+End Class

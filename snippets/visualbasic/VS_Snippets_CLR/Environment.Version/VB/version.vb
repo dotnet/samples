@@ -5,5 +5,5 @@ Class Sample
       Console.WriteLine()
       Console.WriteLine("Version: {0}", Environment.Version.ToString())
    End Sub
-End Class 'Sample
+End Class
 '</snippet1>

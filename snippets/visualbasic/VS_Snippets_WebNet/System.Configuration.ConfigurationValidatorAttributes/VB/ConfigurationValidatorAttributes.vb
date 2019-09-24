@@ -272,7 +272,7 @@ Public Class SampleSection
         '</Snippet15>
 
     End Sub
-End Class 'SampleSection 
+End Class
 '</Snippet1>
 
 Class TestingSampleConfiguration
@@ -328,4 +328,4 @@ Class TestingSampleConfiguration
         SampleSection.RegexStringValidatorInstance()
         Console.ReadLine()
     End Sub
-End Class 'TestingSampleConfiguration
+End Class

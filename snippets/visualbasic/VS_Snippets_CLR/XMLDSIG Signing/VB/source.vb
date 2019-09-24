@@ -53,5 +53,5 @@ Public Class XMLdsigsample1
       Dim xmlSignature As XmlElement = signedXml.GetXml()
       Console.WriteLine(xmlSignature.OuterXml)
    End Sub
-End Class 'XMLdsigsample1 
+End Class
 '</Snippet1>

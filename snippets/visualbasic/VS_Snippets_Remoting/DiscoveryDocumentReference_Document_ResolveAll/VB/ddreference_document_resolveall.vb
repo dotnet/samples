@@ -51,5 +51,5 @@ Class DiscoveryDocumentReference_Document_ResolveAll
          Console.WriteLine("Exception :{0}", e.Message)
       End Try
    End Sub
-End Class 'DiscoveryDocumentReference_Document_ResolveAll
+End Class
 ' </Snippet2>

@@ -50,6 +50,6 @@ Class Sample
     
        '</snippet2>
     End Sub
-End Class 'Sample 
+End Class
 
 

@@ -68,4 +68,4 @@ Class MyCounterSampleClass
       Console.WriteLine("CounterTimeStamp = " & myCounterSample2.CounterTimeStamp)
 ' </Snippet2>
    End Sub
-End Class 'MyCounterSampleClass
+End Class

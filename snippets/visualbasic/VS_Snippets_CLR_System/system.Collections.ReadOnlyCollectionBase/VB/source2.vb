@@ -27,7 +27,7 @@ Public Class ROCollection
         Return InnerList.Contains(value)
     End Function 'Contains
 
-End Class 'ROCollection 
+End Class
 
 
 Public Class SamplesCollectionBase

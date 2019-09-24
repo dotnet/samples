@@ -31,5 +31,5 @@ Public Class Client
       Console.WriteLine("The Object Url is:" + myEntries(0).ObjectUrl.ToString())
 ' </Snippet1>
    End Sub
-End Class 'Client
+End Class
 

@@ -78,4 +78,4 @@ Public Class MyPage
 ' </Snippet1>
 
    End Sub
-End Class 'MyPage
+End Class

@@ -147,5 +147,5 @@ Public Class App
         Console.WriteLine("++++++++++++++++++++++")
 
     End Sub
-End Class 'App
+End Class
 '</Snippet1>

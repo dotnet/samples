@@ -18,6 +18,6 @@ Namespace MyTextCustomControl
       output.Write("This class uses the DataBindingHandlerAttribute class.")
    End Sub
 
- End Class 'MyTextBox
+ End Class
 End Namespace 'MyTextCustomControl
 ' </Snippet1>

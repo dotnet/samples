@@ -54,7 +54,7 @@ Public Class Form1
         bar1.Start()
     
     End Sub
-End Class 'Form1
+End Class
 
 
 Public Class VerticalProgressBar
@@ -182,5 +182,5 @@ Public Class VerticalProgressBar
         End If
     
     End Sub
-End Class 'VerticalProgressBar
+End Class
 '</Snippet0>

@@ -81,4 +81,4 @@ Class CopyWebPermission
          Console.Write(ControlChars.Tab + "{0}", myEnumerator1.Current)
       End While
    End Sub
-End Class 'CopyWebPermission
+End Class

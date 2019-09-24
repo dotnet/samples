@@ -30,6 +30,6 @@ Namespace SDKSample
             End Select
 
         End Sub
-    End Class 'StretchMediaElementExample 
+    End Class
 End Namespace 'SDKSample
 ' </SnippetMediaElementCSharpExampleWholePage>

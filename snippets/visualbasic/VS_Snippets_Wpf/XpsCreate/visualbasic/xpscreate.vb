@@ -400,4 +400,4 @@ Public Class XpsCreate
         End Using
     End Sub
 
-End Class ' end:class XpsCreate
+End Class

@@ -85,7 +85,7 @@ Class Sample
       Console.WriteLine("{0,2:G} = {1}", overloadNumber, sbs.ToString())
       sb = New StringBuilder(initialValue)
    End Sub
-End Class 'Sample
+End Class
 '
 'This example produces the following results:
 '

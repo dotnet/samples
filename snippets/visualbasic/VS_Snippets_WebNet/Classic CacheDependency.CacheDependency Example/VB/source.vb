@@ -18,4 +18,4 @@ Public Class Page1
         Cache.Insert("ISBNData", Source, dep)
         ' </Snippet1>
     End Sub
-End Class 'Page1 
+End Class

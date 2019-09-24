@@ -31,6 +31,6 @@ Public Class TestClass
       Console.WriteLine("enter to exit")
       Console.Read()
    End Sub
-End Class 'TestClass
+End Class
 
 

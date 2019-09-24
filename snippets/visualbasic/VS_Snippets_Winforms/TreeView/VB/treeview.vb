@@ -75,7 +75,7 @@ Namespace CustomerCodeExamples
                Return Me.custOrders
             End Get
          End Property
-      End Class 'End Customer class
+      End Class
 
 
       Public Class Order
@@ -94,7 +94,7 @@ Namespace CustomerCodeExamples
                Me.ordID = Value
             End Set
          End Property
-      End Class ' End Order class
+      End Class
 
       ' Create a new ArrayList to hold the Customer objects.
       Private customerArray As New ArrayList()
@@ -150,7 +150,7 @@ Namespace CustomerCodeExamples
          Me.FillMyTreeView()
       End Sub
 
-   End Class 'TV1
+   End Class
 
 
    

@@ -60,5 +60,5 @@ Class testClass
         '</Snippet10>
     End Sub
     '</Snippet12>
-End Class 'testClass
+End Class
 '</Snippet1>

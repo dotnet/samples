@@ -197,4 +197,4 @@ Public Class MyForm
       Next i
       Return myDataSet
    End Function 'MakeDataSet
-End Class 'MyForm
+End Class

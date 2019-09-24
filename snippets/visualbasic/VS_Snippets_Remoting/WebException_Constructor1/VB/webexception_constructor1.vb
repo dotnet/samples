@@ -50,4 +50,4 @@ Public shared Sub Main()
 
 ' </Snippet1>
     End Sub
-End Class 'HttpConnect 
+End Class

@@ -21,7 +21,7 @@ Namespace MyTextCustomControl
    Protected Overrides Sub Render(output As HtmlTextWriter)
       output.Write("This class uses the DataBindingHandlerAttribute class.")
    End Sub
- End Class 'MyWebControl
+ End Class
 
 
  Public Class MyDataBindingHandler
@@ -30,6 +30,6 @@ Namespace MyTextCustomControl
    Public Overrides Sub DataBindControl(host As IDesignerHost, myControl As Control)
       CType(myControl, TextBox).Text = "Added by MyDataBindingHandler"
    End Sub
- End Class 'MyDataBindingHandler
+ End Class
 End Namespace 'MyTextCustomControl
 ' </Snippet1>

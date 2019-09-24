@@ -6,7 +6,7 @@ Imports System.Messaging
 Public Class Order
         Public orderId As Integer
         Public orderTime As DateTime
-End Class 'Order
+End Class
 
 
    
@@ -82,6 +82,6 @@ Public Class MyNewQueue
 
         End Sub
 
-End Class 'MyNewQueue
+End Class
 
 ' </Snippet1>

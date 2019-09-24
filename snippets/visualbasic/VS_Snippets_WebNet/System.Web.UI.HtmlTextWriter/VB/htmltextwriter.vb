@@ -63,5 +63,5 @@ Namespace Samples.AspNet.VB
             writer.RenderEndTag()
 
         End Sub
-    End Class 'MyControl
+    End Class
 End Namespace 'ControlTest 

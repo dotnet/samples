@@ -38,7 +38,7 @@ Public Class SamplesTaiwanCalendar
       Console.WriteLine()
    End Sub
 
-End Class 'SamplesTaiwanCalendar 
+End Class
 
 
 'This code produces the following output.

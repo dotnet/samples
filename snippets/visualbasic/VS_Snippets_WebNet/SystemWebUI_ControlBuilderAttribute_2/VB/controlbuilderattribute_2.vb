@@ -24,7 +24,7 @@ Public Class MyVB_Item: Inherits Control
             _message = value
          End Set
       End Property
-   End Class 'MyVB_Item
+   End Class
    
    Public Class VB_CustomParseControlBuilder: Inherits ControlBuilder
 
@@ -35,7 +35,7 @@ Public Class MyVB_Item: Inherits Control
          End If
          Return Nothing
       End Function 'GetChildControlType
-   End Class 'CustomParseControlBuilder
+   End Class
    
    <ControlBuilderAttribute(GetType(VB_CustomParseControlBuilder))>  Public Class MyVB_CustomParse: Inherits Control
       
@@ -63,7 +63,7 @@ Public Class MyVB_Item: Inherits Control
       Protected Overrides Sub Render(output As HtmlTextWriter)        
         output.Write(("<span style='background-color:aqua; color:red; font:8pt tahoma, verdana;'><b>" + CType(_items(SelectedIndex), MyVB_Item).Message + "</b></span>"))
       End Sub
-   End Class 'MyVB_CustomParse 
+   End Class
    
 End Namespace 'CustomControls
 

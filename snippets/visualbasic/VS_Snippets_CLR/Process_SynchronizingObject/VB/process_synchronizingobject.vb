@@ -77,12 +77,12 @@ Namespace process_SynchronizingObject
         Private Sub MyProcessExited(source As Object, e As EventArgs)
             MessageBox.Show("The process has exited.")
         End Sub
-    End Class 'Form1
+    End Class
 
     Public Class MyButton
         Inherits Button
 
-    End Class 'MyButton
+    End Class
     ' </Snippet1>
 
 End Namespace 'process_SynchronizingObject

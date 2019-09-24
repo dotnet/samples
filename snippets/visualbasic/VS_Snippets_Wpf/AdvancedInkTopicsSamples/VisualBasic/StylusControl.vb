@@ -172,6 +172,6 @@ Class InkControl
 
     End Sub
     '</Snippet13>
-End Class 'StylusControl
+End Class
 '</Snippet6>
 

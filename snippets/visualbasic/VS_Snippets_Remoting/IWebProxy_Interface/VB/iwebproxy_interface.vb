@@ -56,7 +56,7 @@ Public Class WebProxy_Interface
        'Never bypass the proxy.
         Return False
     End Function 'IsBypassed 
-End Class 'WebProxy_Interface
+End Class
 
 
 
@@ -86,4 +86,4 @@ Public Class WebProxy_Example
 
     '</Snippet4>
     
-End Class 'WebProxy_Example
+End Class

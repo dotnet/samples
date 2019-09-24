@@ -27,7 +27,7 @@ Namespace NDP_UE_VB
                 usageMsg = value
             End Set
         End Property
-    End Class ' ArgumentUsageAttribute 
+    End Class
 
     Public Class BaseClass
        
@@ -38,7 +38,7 @@ Namespace NDP_UE_VB
             strArray() As String, _
             ParamArray strList() As String)
         End Sub
-    End Class ' BaseClass
+    End Class
 
     Public Class DerivedClass
         Inherits BaseClass
@@ -50,7 +50,7 @@ Namespace NDP_UE_VB
             <ArgumentUsage("Can pass a parameter list or array here.")> _
             ParamArray strList() As String)
         End Sub
-    End Class ' DerivedClass
+    End Class
 
     Class DemoClass
            
@@ -121,7 +121,7 @@ Namespace NDP_UE_VB
             End If
         End Sub
 
-    End Class ' DemoClass
+    End Class
 End Namespace ' NDP_UE_VB
 
 ' This example of Attribute.GetCustomAttribute( ParameterInfo, Type, Boolean )

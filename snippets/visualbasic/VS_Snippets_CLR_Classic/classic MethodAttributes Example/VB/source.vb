@@ -42,5 +42,5 @@ Class AttributesSample
             End If
         Next i
     End Sub
-End Class 'AttributesSample
+End Class
 ' </Snippet1>

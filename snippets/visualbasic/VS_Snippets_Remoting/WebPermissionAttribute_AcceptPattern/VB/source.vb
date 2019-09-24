@@ -46,4 +46,4 @@ Public Class WebPermissionAttribute_AcceptConnect
    Shared Sub Main()
       demoDenySite()
    End Sub
-End Class 'WebPermissionAttribute_AcceptConnect
+End Class

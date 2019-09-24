@@ -426,7 +426,7 @@ Class PropertySnips
             CType(autoElement.GetCurrentPropertyValue(AutomationElement.RuntimeIdProperty), Integer())
         ' </Snippet169>    
     End Sub
-End Class 'PropertySnips 
+End Class
 
 ' <Snippet999>
 '  To be written.

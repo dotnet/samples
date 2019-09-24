@@ -29,4 +29,4 @@ Public Class ManualServer
       Console.ReadLine()
       ' </Snippet2>
    End Sub
-End Class 'ManualServer
+End Class

@@ -32,6 +32,6 @@ Namespace Samples.AspNet.VB
         Return al
     
     End Function 'GetCreateTime
-  End Class 'EmployeeLogic
+  End Class
 End Namespace ' Samples.AspNet.VB
 ' </snippet2>

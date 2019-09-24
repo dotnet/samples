@@ -212,7 +212,7 @@ Public Class StrongNameIdentityDemo
             System.Environment.ExitCode = 101
         End Try
     End Sub
-End Class 'StrongNameIdentityDemo
+End Class
 
 ' </Snippet1>
 

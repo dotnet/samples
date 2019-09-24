@@ -24,5 +24,5 @@ Public Class CreateSubTest
         ' Delete the directory.
         di.Delete(True)
     End Sub
-End Class 'CreateSubTest
+End Class
 ' </snippet1>

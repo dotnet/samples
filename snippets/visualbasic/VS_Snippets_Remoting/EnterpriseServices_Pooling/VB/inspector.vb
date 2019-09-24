@@ -50,7 +50,7 @@ Public Class ObjectInspector
     End Function 'CanBePooled
     ' </snippet5>
 
-End Class 'ObjectInspector
+End Class
 ' </snippet1>
 ' </snippet0>
 
@@ -59,4 +59,4 @@ Public Class Test
     Public Shared Sub Main()
 
     End Sub
-End Class 'Test
+End Class

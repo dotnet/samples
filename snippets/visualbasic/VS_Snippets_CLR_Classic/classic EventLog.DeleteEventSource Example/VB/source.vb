@@ -26,5 +26,5 @@ Class MySample
             EventLog.CreateEventSource("MySource", "MyLog")
         End If
     End Sub
-End Class 'MySample
+End Class
 ' </Snippet1>

@@ -37,5 +37,5 @@ Class MyFindMembersClass
             Return False
         End If
     End Function 'DelegateToSearchCriteria 
-End Class 'MyFindMembersClass
+End Class
 ' </Snippet1>

@@ -79,6 +79,6 @@ Class [MyClass]
             Console.WriteLine(e.Message.ToString())
         End Try
     End Sub
-End Class '[MyClass] 
+End Class
 
 '</Snippet1>

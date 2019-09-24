@@ -27,5 +27,5 @@ Private Sub CreateDataGridGridTableStyle()
    myDataGrid.TableStyles.Add(myGridTableStyle)
 End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

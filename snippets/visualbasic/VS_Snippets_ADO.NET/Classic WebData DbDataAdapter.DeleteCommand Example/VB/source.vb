@@ -11,7 +11,7 @@ Public Class Sample
 Public Shared Function CreateCustomerAdapter( _
     connection As OleDbConnection) As OleDbDataAdapter 
 
-    Dim dataAdapter As OleDbDataAdapter = New OleDbDataAdapter()
+    Dim dataAdapter As New OleDbDataAdapter()
     Dim command As OleDbCommand
     Dim parameter As OleDbParameter
 

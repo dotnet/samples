@@ -77,7 +77,7 @@ Class Sample
         Dim dtString As String = inputDt.ToString(datePatt)
         Console.WriteLine("{0} {1}, Kind = {2}", title, dtString, inputDt.Kind)
     End Sub
-End Class 'Sample
+End Class
 
 '
 'This code example produces the following results:

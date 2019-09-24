@@ -168,5 +168,5 @@ Namespace MyDataGridClass
             End If
         End Sub
 ' </Snippet2>
-    End Class 'MyDataGridClass_FlatMode_ReadOnly
+    End Class
 End Namespace 'MyDataGridClass

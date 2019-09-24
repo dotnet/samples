@@ -3,7 +3,7 @@ Imports System.Reflection
 
 Public Class MyClass1
     Protected myField As String = "A sample protected field."
-End Class 'MyClass1
+End Class
 Public Class MyType_IsAnsiClass
     Public Shared Sub Main()
         Try
@@ -20,5 +20,5 @@ Public Class MyType_IsAnsiClass
             Console.WriteLine("Exception: {0}", e.Message.ToString())
         End Try
     End Sub
-End Class 'MyType_IsAnsiClass
+End Class
 ' </Snippet1>

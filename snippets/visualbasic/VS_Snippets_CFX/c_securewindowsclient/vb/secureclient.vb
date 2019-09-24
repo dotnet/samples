@@ -21,7 +21,7 @@ Public Class Program
         ' CalculatorClass cc = new CalculatorClient("ICalculator_Binding")
         '</snippet1>
     End Sub 
-End Class 'Program
+End Class
 
 
 <System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0"), System.ServiceModel.ServiceContractAttribute([Namespace] := "http://Microsoft.ServiceModel.Samples", ConfigurationName := "ICalculator")>  _
@@ -101,5 +101,5 @@ Public Class CalculatorClient
         Return MyBase.Channel.Divide(n1, n2)
     
     End Function 'Divide
-End Class 'CalculatorClient
+End Class
 '</snippet0>

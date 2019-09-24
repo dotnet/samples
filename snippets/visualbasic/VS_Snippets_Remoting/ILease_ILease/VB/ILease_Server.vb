@@ -15,6 +15,6 @@ Namespace RemotingSamples
          Console.WriteLine("Hit enter to terminate...")
          Console.Read()
       End Sub
-   End Class 'HelloServer
+   End Class
 End Namespace 'RemotingSamples
 ' </Snippet4>

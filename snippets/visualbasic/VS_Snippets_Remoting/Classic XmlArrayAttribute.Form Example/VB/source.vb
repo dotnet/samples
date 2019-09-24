@@ -36,16 +36,16 @@ Public Class Enterprises
             mycompanies = value
         End Set
     End Property
-End Class 'Enterprises
+End Class
  
 Public Class Winery
     Public Name As String
-End Class 'Winery
+End Class
 
 
 Public Class VacationCompany
     Public Name As String
-End Class 'VacationCompany
+End Class
 
 
 Public Class Run
@@ -104,5 +104,5 @@ Public Class Run
             Console.WriteLine(myEnterprises.Companies(i).Name)
         Next i
     End Sub
-End Class 'Run
+End Class
 ' </Snippet1>

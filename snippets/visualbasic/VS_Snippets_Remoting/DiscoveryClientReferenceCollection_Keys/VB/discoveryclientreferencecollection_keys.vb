@@ -71,4 +71,4 @@ Class DiscoveryClientReferenceCollection_Keys
       End If
 ' </Snippet3>
    End Sub
-End Class 'DiscoveryClientReferenceCollection_Keys 
+End Class

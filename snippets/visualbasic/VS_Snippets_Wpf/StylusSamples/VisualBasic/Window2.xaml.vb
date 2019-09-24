@@ -228,7 +228,7 @@ Class Window2
     End Sub
     '</Snippet19>
 
-End Class 'Window2 
+End Class
 '
 'ToDo: Error processing original source shown below
 '    }

@@ -2,7 +2,7 @@
 Imports System.Reflection
 
 Public Class MyDemoClass
-End Class 'MyDemoClass
+End Class
 
 Public Class MyTypeClass
     Public Shared Sub Main()
@@ -14,5 +14,5 @@ Public Class MyTypeClass
             Console.WriteLine(ControlChars.Cr + "An exception occurred: {0}.", e.Message.ToString())
         End Try
     End Sub
-End Class 'MyTypeClass
+End Class
 ' </Snippet1>

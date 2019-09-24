@@ -94,5 +94,5 @@ Class Sample
 'This example plays the first few notes of "Mary Had A Little Lamb" 
 'through the console speaker.
 '
-End Class 'Sample
+End Class
 '</snippet1>

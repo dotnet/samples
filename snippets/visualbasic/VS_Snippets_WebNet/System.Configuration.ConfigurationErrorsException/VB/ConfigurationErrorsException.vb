@@ -35,7 +35,7 @@ NotInheritable Public Class CustomSection
             Me("maxUsers") = value
         End Set
     End Property
-End Class 'CustomSection 
+End Class
 
 
 ' Create the custom section and write it to
@@ -131,6 +131,6 @@ Class UsingConfigurationErrorsException
         ModifyCustomSection()
     
     End Sub
-End Class 'UsingConfigurationErrorsException 
+End Class
 
 ' </Snippet1>

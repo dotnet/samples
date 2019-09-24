@@ -59,4 +59,4 @@ Public Class MyDiscoveryClientResult
          Console.WriteLine("Error is " + e.Message)
       End Try
    End Sub
-End Class 'MyDiscoveryClientResult
+End Class

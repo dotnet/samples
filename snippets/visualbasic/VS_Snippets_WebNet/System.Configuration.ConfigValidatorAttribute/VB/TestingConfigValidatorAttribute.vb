@@ -94,6 +94,6 @@ Class TestingConfigValidatorAttribute
         NotAllowedCars()
     
     End Sub
-End Class 'TestingConfigValidatorAttribute
+End Class
 
 ' </Snippet41>

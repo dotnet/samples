@@ -107,4 +107,4 @@ Public Class HttpConnect
 
 ' </Snippet1>
     End Sub
-End Class ' HttpConnect
+End Class

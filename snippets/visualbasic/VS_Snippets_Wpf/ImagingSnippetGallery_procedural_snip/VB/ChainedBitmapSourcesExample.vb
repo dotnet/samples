@@ -76,6 +76,6 @@ Namespace SDKSample
         Public Sub PageLoaded(ByVal sender As Object, ByVal args As RoutedEventArgs)
 
         End Sub
-    End Class 'ChainedBitmapSourcesExample 
+    End Class
 End Namespace
 ' </SnippetChainedBitmapSourcesCodeExampleWholePage>

@@ -75,6 +75,6 @@ Public Class HttpGetClientProtocolClass
             & myHttpGetClientProtocol.AllowAutoRedirect)
 ' </Snippet1>
     End Sub
-End Class 'HttpGetClientProtocolClass
+End Class
 
 

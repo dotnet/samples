@@ -55,6 +55,6 @@ Class HttpWebRequest_AddRange_int_int
             Console.WriteLine("Message :{0} ", e.Message)
         End Try
     End Sub
-End Class ' HttpWebRequest_AddRange_int_int 
+End Class
 
 

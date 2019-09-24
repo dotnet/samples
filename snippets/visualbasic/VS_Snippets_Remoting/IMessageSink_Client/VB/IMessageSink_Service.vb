@@ -14,4 +14,4 @@ Public Class MyServiceClass
       Console.WriteLine("Press Enter to Exit the Server")
       Console.ReadLine()
    End Sub
-End Class 'MyServiceClass
+End Class

@@ -140,4 +140,4 @@ Public Class MyForm
       ' Add column style collections.
       AddCustomDataTableStyle()
    End Sub
-End Class 'MyForm
+End Class

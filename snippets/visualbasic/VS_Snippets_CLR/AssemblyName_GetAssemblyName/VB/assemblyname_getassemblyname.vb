@@ -21,6 +21,6 @@ Public Class AssemblyName_GetAssemblyName
       Console.WriteLine(vbCrLf & "Displaying assembly information:" & vbCrLf)
       Console.WriteLine(myAssemblyName.ToString())
    End Sub
-End Class 'AssemblyName_GetAssemblyName 
+End Class
 ' </Snippet2>
 ' </Snippet1>

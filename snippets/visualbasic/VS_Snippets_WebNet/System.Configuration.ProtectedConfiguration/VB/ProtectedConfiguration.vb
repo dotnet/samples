@@ -74,5 +74,5 @@ NotInheritable Public Class UsingProtectedConfiguration
         
     End Sub
 
-End Class 'UsingProtectedConfiguration 
+End Class
 ' </Snippet1>

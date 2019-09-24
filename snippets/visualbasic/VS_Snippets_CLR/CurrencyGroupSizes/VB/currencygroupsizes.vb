@@ -25,7 +25,7 @@ Class NumberFormatInfoSample
 
    End Sub
 
-End Class 'NumberFormatInfoSample
+End Class
 
  
 'This code produces the following output.

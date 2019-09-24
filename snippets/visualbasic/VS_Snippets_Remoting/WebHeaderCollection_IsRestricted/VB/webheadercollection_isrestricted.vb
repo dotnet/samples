@@ -43,4 +43,4 @@ Public Class CheckRestricted
         End Try
     End Sub
 ' </Snippet1>
-End Class 'CheckRestricted
+End Class

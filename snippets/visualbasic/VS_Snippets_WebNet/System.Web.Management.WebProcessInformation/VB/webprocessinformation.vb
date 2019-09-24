@@ -92,6 +92,6 @@ Public Class SampleWebProcessInformation
     End Sub
     ' </Snippet7>
 
-End Class 'SampleWebProcessInformation 
+End Class
 
 ' </Snippet1>

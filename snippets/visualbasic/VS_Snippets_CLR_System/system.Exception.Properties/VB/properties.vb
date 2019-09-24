@@ -19,7 +19,7 @@ Namespace NDP_UE_VB
             Me.Source = "Exception_Class_Samples"
 
         End Sub
-    End Class ' LogTableOverflowException
+    End Class
 
     Class LogTable
        
@@ -47,7 +47,7 @@ Namespace NDP_UE_VB
                         newRecord ), ex )
             End Try
         End Function ' AddRecord
-    End Class ' LogTable
+    End Class
 
     Module OverflowDemo
        

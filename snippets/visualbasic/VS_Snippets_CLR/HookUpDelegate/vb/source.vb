@@ -12,7 +12,7 @@ Class ExampleForm
         Me.Text = "Click me"
     
     End Sub
-End Class 'ExampleForm
+End Class
 '</Snippet2>
 
 Class Example

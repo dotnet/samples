@@ -15,5 +15,5 @@ Public Class Form1
         textBox1.Text = "The company name: " & myFileVersionInfo.CompanyName
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

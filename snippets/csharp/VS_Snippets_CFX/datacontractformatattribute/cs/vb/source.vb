@@ -8,7 +8,7 @@ NotInheritable Public Class Test
     Public Shared Sub Main() 
     
     End Sub 
-End Class 'Test
+End Class
 
 '<snippet1>
 <ServiceContract(), DataContractFormat(Style := OperationFormatStyle.Rpc)>  _

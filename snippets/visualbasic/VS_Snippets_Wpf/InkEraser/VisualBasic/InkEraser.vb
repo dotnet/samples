@@ -202,6 +202,6 @@ Namespace MyInkEraser
         '</Snippet3>
 
         '<Snippet7>
-    End Class 'InkEraser 
+    End Class
 End Namespace
 '</Snippet7>

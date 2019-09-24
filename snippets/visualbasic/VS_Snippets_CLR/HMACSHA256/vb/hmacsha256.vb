@@ -108,6 +108,6 @@ Public Class HMACSHA256example
         End If
 
     End Function 'VerifyFile 
-End Class 'HMACSHA256example 'end VerifyFile
+End Class
 'end class
 '</SNIPPET1>

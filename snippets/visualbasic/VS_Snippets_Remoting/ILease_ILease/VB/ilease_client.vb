@@ -89,7 +89,7 @@ Namespace RemotingSamples
          Console.WriteLine("Remote method output is " + myService.HelloMethod("Microsoft"))
          myLease.Unregister(mySponsor)
       End Sub
-   End Class 'HelloClient
+   End Class
 ' </Snippet2>
 
 End Namespace 'RemotingSamples

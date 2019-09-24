@@ -76,6 +76,6 @@ Namespace ImageElementExample
             croppedGrid.Children.Add(clipImage)
 
         End Sub
-    End Class 'CroppedImageExample 
+    End Class
 
 End Namespace

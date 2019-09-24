@@ -74,4 +74,4 @@ Class DnsPermissionExample
         PrintKeysAndValues(permission.ToXml().Attributes)
     End Sub
 ' </Snippet2>
-End Class 'DnsPermissionExample 
+End Class

@@ -57,7 +57,7 @@ Namespace Samples.AspNet.VB.Controls
                 _alias = Value
             End Set
         End Property
-    End Class 'Employee
+    End Class
     ' <snippet2>
     ' Use the ParseChildren attribute to set the ChildrenAsProperties
     ' and DefaultProperty properties. Using this constructor, the

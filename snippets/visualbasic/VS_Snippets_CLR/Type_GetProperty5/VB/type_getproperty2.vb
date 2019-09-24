@@ -12,7 +12,7 @@ Public Class MyPropertyClass
             myPropertyArray(i, j) = Value
         End Set
     End Property
-End Class 'MyPropertyClass
+End Class
 
 Public Class MyTypeClass
     Public Shared Sub Main()
@@ -33,6 +33,6 @@ Public Class MyTypeClass
             Console.WriteLine("An exception occurred " + ex.Message.ToString())
         End Try
     End Sub
-End Class 'MyTypeClass
+End Class
 ' </Snippet1>
 

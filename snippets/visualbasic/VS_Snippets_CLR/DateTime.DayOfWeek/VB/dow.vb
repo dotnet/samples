@@ -9,7 +9,7 @@ Class Sample
                          dt, dt.DayOfWeek = DayOfWeek.Thursday)
       Console.WriteLine("The day of the week for {0:d} is {1}.", dt, dt.DayOfWeek)
    End Sub
-End Class 'Sample
+End Class
 '
 'This example produces the following results:
 '

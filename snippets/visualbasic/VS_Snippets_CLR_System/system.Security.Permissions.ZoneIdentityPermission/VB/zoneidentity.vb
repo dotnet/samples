@@ -111,7 +111,7 @@ Public Class ZoneIdentityPermissionDemo
         End If
 
     End Sub
-End Class 'ZoneIdentityPermissionDemo
+End Class
 '</Snippet6>
 
 ' </Snippet1>

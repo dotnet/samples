@@ -20,4 +20,4 @@ Public Class Sample
         SocketClose()
     
     End Sub
-End Class 'Sample
+End Class
