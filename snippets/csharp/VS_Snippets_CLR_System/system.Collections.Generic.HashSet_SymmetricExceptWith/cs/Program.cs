@@ -4,9 +4,9 @@ using System.Collections.Generic;
 
 class Program
 {
-    //<snippet02>
     static void Main()
     {
+        //<snippet02>
         HashSet<int> lowNumbers = new HashSet<int>();
         HashSet<int> highNumbers = new HashSet<int>();
 
@@ -32,25 +32,23 @@ class Program
         Console.Write("lowNumbers contains {0} elements: ", lowNumbers.Count);
         DisplaySet(lowNumbers);
 
-
-
-    }
-    /* This example provides output similar to the following:
-     * lowNumbers contains 6 elements: { 0 1 2 3 4 5 }
-     * highNumbers contains 7 elements: { 3 4 5 6 7 8 9 }
-     * lowNumbers SymmetricExceptWith highNumbers...
-     * lowNumbers contains 7 elements: { 0 1 2 8 7 6 9 }
-     */
-    //</snippet02>
-
-    private static void DisplaySet(HashSet<int> set)
-    {
-        Console.Write("{");
-        foreach (int i in set)
+        void DisplaySet(HashSet<int> set)
         {
-            Console.Write(" {0}", i);
+            Console.Write("{");
+            foreach (int i in set)
+            {
+                Console.Write(" {0}", i);
+            }
+            Console.WriteLine(" }");
         }
-        Console.WriteLine(" }");
+
+        /* This example provides output similar to the following:
+        * lowNumbers contains 6 elements: { 0 1 2 3 4 5 }
+        * highNumbers contains 7 elements: { 3 4 5 6 7 8 9 }
+        * lowNumbers SymmetricExceptWith highNumbers...
+        * lowNumbers contains 7 elements: { 0 1 2 8 7 6 9 }
+        */
+        //</snippet02>
     }
 }
 //</snippet01>

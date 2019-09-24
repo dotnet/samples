@@ -19,17 +19,17 @@ public struct MyStrStruct2
     public int size;
 }
 
-public class LibWrap
+internal class NativeMethods
 {
     // Declares managed prototypes for unmanaged functions.
     [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
-    public static extern string TestStringAsResult();
+    internal static extern string TestStringAsResult();
 
     [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
-    public static extern void TestStringInStruct(ref MyStrStruct mss);
+    internal static extern void TestStringInStruct(ref MyStrStruct mss);
 
     [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
-    public static extern void TestStringInStructAnsi(ref MyStrStruct2 mss);
+    internal static extern void TestStringInStructAnsi(ref MyStrStruct2 mss);
 }
 //</snippet14>
 
@@ -39,7 +39,7 @@ public class App
     public static void Main()
     {
         // String as result.
-        string str = LibWrap.TestStringAsResult();
+        string str = NativeMethods.TestStringAsResult();
         Console.WriteLine("\nString returned: {0}", str);
 
         // Initializes buffer and appends something to the end so the whole
@@ -52,7 +52,7 @@ public class App
         mss.buffer = buffer.ToString();
         mss.size = mss.buffer.Length;
 
-        LibWrap.TestStringInStruct(ref mss);
+        NativeMethods.TestStringInStruct(ref mss);
         Console.WriteLine("\nBuffer after Unicode function call: {0}",
             mss.buffer);
 
@@ -64,7 +64,7 @@ public class App
         mss2.buffer = buffer2.ToString();
         mss2.size = mss2.buffer.Length;
 
-        LibWrap.TestStringInStructAnsi(ref mss2);
+        NativeMethods.TestStringInStructAnsi(ref mss2);
         Console.WriteLine("\nBuffer after Ansi function call: {0}",
             mss2.buffer);
     }
