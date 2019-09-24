@@ -7,7 +7,7 @@ Public Module TestBase64
 
     Private Const bufferSize As Integer = 4096
 
-    Public Shared Sub Main()
+    Public Sub Main()
 
         Dim args As String() = System.Environment.GetCommandLineArgs()
         
