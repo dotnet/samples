@@ -1,14 +1,14 @@
-﻿using System;
+﻿// <Snippet2>
+using System;
 using System.Threading;
 
 public class RandomNumbers
 {
    public static void Main()
    {
-      // <Snippet2>
       Random rand1 = new Random();
       Random rand2 = new Random();
-      System.Threading.Thread.Sleep(2000);
+      Thread.Sleep(2000);
       Random rand3 = new Random();
       ShowRandomNumbers(rand1);
       ShowRandomNumbers(rand2);
@@ -30,6 +30,6 @@ public class RandomNumbers
       //       28   35  133  224   58
       //    
       //       32  222   43  251   49
-      // </Snippet2>
    }
 }
+// </Snippet2>
