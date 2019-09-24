@@ -13,23 +13,22 @@ public class RandomNumbers
       ShowRandomNumbers(rand1);
       ShowRandomNumbers(rand2);
       ShowRandomNumbers(rand3);
+   }
 
-      void ShowRandomNumbers(Random rand)
-      {
-         Console.WriteLine();
-         byte[] values = new byte[5];
-         rand.NextBytes(values);
-         foreach (byte value in values)
-            Console.Write("{0, 5}", value);
-         Console.WriteLine();   
-      }
-
-      // The example displays the following output to the console:
-      //       28   35  133  224   58
-      //    
-      //       28   35  133  224   58
-      //    
-      //       32  222   43  251   49
+   private static void ShowRandomNumbers(Random rand)
+   {
+      Console.WriteLine();
+      byte[] values = new byte[5];
+      rand.NextBytes(values);
+      foreach (byte value in values)
+         Console.Write("{0, 5}", value);
+      Console.WriteLine();   
    }
 }
+// The example displays the following output to the console:
+//       28   35  133  224   58
+//    
+//       28   35  133  224   58
+//    
+//       32  222   43  251   49
 // </Snippet2>
