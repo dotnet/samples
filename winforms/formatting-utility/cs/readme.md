@@ -34,7 +34,7 @@ The source code includes an MSBuild project file for C# (a .csproj file) that ta
 
    2. Select **Debug** > **Start Debugging** from the Visual Studio menu to build and launch the application.
 
-4. If you are working from the command line:
+5. If you are working from the command line:
 
    1. Navigate to the directory that contains the sample.
 
