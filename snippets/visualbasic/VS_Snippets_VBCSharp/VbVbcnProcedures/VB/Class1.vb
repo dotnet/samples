@@ -712,10 +712,10 @@ End Class
   End Sub
 
   '****************************************************************************
-  Function testhyp() As Single
+  Function TestHyp() As Double
     '<Snippet6>
-    Dim testLength, testHypotenuse As Single
-    testHypotenuse = hypotenuse(testLength, 10.7)
+    Dim testLength, testHypotenuse As Double
+    testHypotenuse = Hypotenuse(testLength, 10.7)
     '</Snippet6>
 
     Return testHypotenuse
