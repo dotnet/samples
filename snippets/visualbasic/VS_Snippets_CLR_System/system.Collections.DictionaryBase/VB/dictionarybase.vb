@@ -107,7 +107,7 @@ Public Class ShortStringDictionary
       End If
    End Sub
 
-End Class 'ShortStringDictionary
+End Class
 
 
 Public Class SamplesDictionaryBase
@@ -203,7 +203,7 @@ Public Class SamplesDictionaryBase
       Console.WriteLine()
     End Sub
 
-End Class 'SamplesDictionaryBase 
+End Class
 
 
 'This code produces the following output.

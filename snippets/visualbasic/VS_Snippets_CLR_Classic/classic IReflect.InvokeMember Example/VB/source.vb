@@ -8,5 +8,5 @@ Public Class MainClass
             BindingFlags.GetProperty, Nothing, Nothing, New [Object](-1) {})
         Console.WriteLine(result.ToString())
     End Sub
-End Class 'MainClass
+End Class
 ' </Snippet1>

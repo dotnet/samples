@@ -21,5 +21,5 @@ Public Class Form1
         dataGrid1.SetDataBinding(SuppliersProducts, "Suppliers")
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

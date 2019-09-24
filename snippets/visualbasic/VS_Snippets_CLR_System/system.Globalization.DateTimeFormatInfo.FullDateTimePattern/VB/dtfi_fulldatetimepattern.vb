@@ -22,7 +22,7 @@ Public Class SamplesDTFI
 
    End Sub
 
-End Class 'SamplesDTFI 
+End Class
 
 'This code produces the following output.  The question marks take the place of native script characters.
 '

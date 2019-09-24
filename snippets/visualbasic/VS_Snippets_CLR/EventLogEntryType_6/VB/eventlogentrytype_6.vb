@@ -79,5 +79,5 @@ Class MyEventLogEntryType
          Console.WriteLine("Exception: {0}", e.Message)
       End Try
    End Sub
-End Class 'MyEventLogEntryType
+End Class
 ' </Snippet1>

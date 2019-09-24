@@ -43,7 +43,7 @@ Namespace CodeDomSerializerSample
          End If
          Return codeObject
       End Function 'Serialize
-   End Class 'MyCodeDomSerializer
+   End Class
 
 '<Snippet2>
    <DesignerSerializer(GetType(MyCodeDomSerializer), GetType(CodeDomSerializer))> _
@@ -59,7 +59,7 @@ Namespace CodeDomSerializerSample
             localProperty = Value
          End Set
       End Property
-   End Class 'MyComponent
+   End Class
 '</Snippet2>
 
 End Namespace
@@ -69,5 +69,5 @@ Namespace CodeDomSerializerSample
    Class CodeDomSerializerStart
       Public Shared Sub Main()
       End Sub
-   End Class 'CodeDomSerializerStart
+   End Class
 End Namespace 'CodeDomSerializerSample

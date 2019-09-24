@@ -9,7 +9,7 @@ Class MyComVisibleType
       Console.WriteLine("MyComVisibleType instantiated!")
    End Sub
 
-End Class 'MyComVisibleType
+End Class
 
 <ComVisible(False)> _
 Class MyComNonVisibleType
@@ -18,7 +18,7 @@ Class MyComNonVisibleType
       Console.WriteLine("MyComNonVisibleType instantiated!")
    End Sub
 
-End Class 'MyComNonVisibleType
+End Class
 
 Module Test
 

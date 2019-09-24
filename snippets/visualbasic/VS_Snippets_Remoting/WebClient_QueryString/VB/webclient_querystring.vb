@@ -54,4 +54,4 @@ Public Class WebClient_QueryString
             Console.WriteLine(("The following Exception was raised: " + e.Message))
         End Try
     End Sub
-End Class 'WebClient_QueryString
+End Class

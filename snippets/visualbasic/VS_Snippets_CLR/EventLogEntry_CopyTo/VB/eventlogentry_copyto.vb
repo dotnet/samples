@@ -60,5 +60,5 @@ Class EventLogEntryCollection_Item
          Console.WriteLine("Exception:{0}", e.Message.ToString())
       End Try
    End Sub
-End Class 'EventLogEntryCollection_Item
+End Class
 ' </Snippet1>

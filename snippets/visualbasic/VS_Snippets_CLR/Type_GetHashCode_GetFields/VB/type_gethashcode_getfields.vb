@@ -32,5 +32,5 @@ Class FieldsSample
             Console.WriteLine(("Message: " & e.Message))
         End Try
     End Sub
-End Class 'FieldsSample
+End Class
 ' </Snippet1>

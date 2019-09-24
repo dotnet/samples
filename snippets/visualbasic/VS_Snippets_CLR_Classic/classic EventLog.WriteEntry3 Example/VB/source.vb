@@ -11,5 +11,5 @@ Class MySample
         EventLog.WriteEntry("MySource", "Writing warning to event log.", _
             EventLogEntryType.Warning)
     End Sub
-End Class ' MySample
+End Class
 ' </Snippet1>

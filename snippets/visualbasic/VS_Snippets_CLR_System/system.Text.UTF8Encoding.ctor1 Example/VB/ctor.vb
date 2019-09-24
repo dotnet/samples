@@ -8,5 +8,5 @@ Class UTF8EncodingExample
         Dim encodingName As String = utf8.EncodingName
         Console.WriteLine("Encoding name: " & encodingName)
     End Sub
-End Class 'UTF8EncodingExample
+End Class
 ' </Snippet1>

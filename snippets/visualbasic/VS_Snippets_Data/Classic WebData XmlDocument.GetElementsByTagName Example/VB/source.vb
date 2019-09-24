@@ -19,5 +19,5 @@ Public Class Sample
             Console.WriteLine(elemList(i).InnerXml)
         Next i
     End Sub
-End Class 'Sample
+End Class
 ' </Snippet1>

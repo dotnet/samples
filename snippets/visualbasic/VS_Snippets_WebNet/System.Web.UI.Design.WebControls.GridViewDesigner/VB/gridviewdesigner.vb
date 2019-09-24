@@ -17,7 +17,7 @@ Namespace Examples.VB.WebControls.Design
     <Designer(GetType(Examples.VB.WebControls.Design.MyGridViewDesigner))> _
     Public Class MyGridView
         Inherits GridView
-    End Class ' MyVBGridView
+    End Class
 
     ' Override members of the GridViewDesigner.
     <ReflectionPermission(SecurityAction.Demand, Flags:=ReflectionPermissionFlag.MemberAccess)> _
@@ -111,6 +111,6 @@ Namespace Examples.VB.WebControls.Design
 
         End Function ' GetDesignTimeHtml
         ' </snippet4>
-    End Class ' MyGridViewDesigner
+    End Class
 End Namespace ' Examples.VB.WebControls.Design
 ' </snippet1>

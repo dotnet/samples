@@ -127,5 +127,5 @@ Class MyOperationFlowSample
 ' </Snippet4>
 ' </Snippet3>
 ' </Snippet2>
-End Class 'MyOperationFlowSample
+End Class
 ' </Snippet1>

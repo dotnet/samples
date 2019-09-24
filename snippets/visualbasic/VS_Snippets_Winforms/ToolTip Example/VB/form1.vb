@@ -105,4 +105,4 @@ Public Class Form1
       toolTip1.SetToolTip(Me.checkBox1, "My checkBox1")
    End Sub
    '</snippet1>
-End Class 'Form1 
+End Class

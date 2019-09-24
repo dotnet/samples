@@ -39,4 +39,4 @@ Public Class Form1
         textBox1.Text = myDesigner.DesignerTypeName
     End Sub
     ' </Snippet2>
-End Class 'Form1 
+End Class

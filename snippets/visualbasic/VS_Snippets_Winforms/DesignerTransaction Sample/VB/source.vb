@@ -65,7 +65,7 @@ Namespace DesignerTransactionSample
             m_Count = 0
         End Sub
 
-    End Class 'DTComponent
+    End Class
 
     Friend Class DTDesigner
         Inherits ComponentDesigner
@@ -164,6 +164,6 @@ Namespace DesignerTransactionSample
             MyBase.Dispose(disposing)
         End Sub
 
-    End Class 'DTDesigner
+    End Class
 End Namespace 'DesignerTransactionSample
 '</Snippet1>

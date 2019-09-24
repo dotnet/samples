@@ -15,4 +15,4 @@ Public Class MyHelloService
       Console.WriteLine("HelloMethod called on MyHelloService instance {0}.", myInstances)
       Return "Hi there " +  myString + "."
    End Function 'HelloMethod
-End Class 'MyHelloService
+End Class

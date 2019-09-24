@@ -36,7 +36,7 @@ Namespace RSACryptoServiceProvider_Examples
                 Console.WriteLine("Invalid signature")
             End If
         End Sub
-    End Class 'MyMainClass
+    End Class
 
     Class Sender
         Private rsaPubParams As RSAParameters
@@ -75,7 +75,7 @@ Namespace RSACryptoServiceProvider_Examples
             rsaCSP.ImportParameters(rsaParams)
             Return rsaCSP.Encrypt(toEncrypt, False)
         End Function 'EncryptData
-    End Class 'Sender
+    End Class
 
     Class Receiver
         Private rsaPubParams As RSAParameters
@@ -123,6 +123,6 @@ Namespace RSACryptoServiceProvider_Examples
 
             Console.WriteLine("RoundTrip: {0}", roundTrip)
         End Sub
-    End Class 'Receiver
+    End Class
 End Namespace 'RSACryptoServiceProvider_Examples
 '</snippet1>

@@ -16,5 +16,5 @@ Public Class Form1
         Next tableStyle
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

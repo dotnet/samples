@@ -67,5 +67,5 @@ Public Class SchemaCollectionSample
         
         Console.Write((ControlChars.CrLf & ControlChars.Tab & "Validation error: " & args.Message))
     End Sub
-End Class 'SchemaCollectionSample
+End Class
 ' </Snippet1>

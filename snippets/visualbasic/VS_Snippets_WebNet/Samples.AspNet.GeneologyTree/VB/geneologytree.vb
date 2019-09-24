@@ -194,7 +194,7 @@ Namespace Samples.AspNet.VB.Controls
         Private Class RootViewNode
             Public Node As TreeNode
             Public Depth As Integer
-        End Class 'RootViewNode
-    End Class 'GeneologyTree
+        End Class
+    End Class
 End Namespace
 ' </snippet2>

@@ -7,5 +7,5 @@
          Console.WriteLine(myMessage)
          Return myMessage
       End Function 'myFunction
-   End Class 'MyHelloService
+   End Class
 End Namespace 'Share

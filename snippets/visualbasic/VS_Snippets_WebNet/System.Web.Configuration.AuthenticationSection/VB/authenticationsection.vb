@@ -87,6 +87,6 @@ Class UsingAuthenticationSection
         ' </Snippet5>
 
    End Sub
-End Class 'UsingAuthenticationSection 
+End Class
 
 

@@ -169,5 +169,5 @@ Class UsingFormsAuthentication
         ' </Snippet14>
 
     End Sub
-End Class 'UsingFormsAuthentication
+End Class
 

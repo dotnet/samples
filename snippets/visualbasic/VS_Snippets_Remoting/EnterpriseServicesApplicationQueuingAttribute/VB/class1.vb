@@ -80,7 +80,7 @@ Public Class ApplicationQueuingExample
         ' </snippet4>
     End Sub
 
-End Class 'ApplicationQueuingExample
+End Class
 
 ' </snippet0>
 
@@ -98,4 +98,4 @@ Public Class TestClient
         'example.ApplicationQueuingAttribute_MaxListenerThreads()
     
     End Sub
-End Class 'TestClient
+End Class

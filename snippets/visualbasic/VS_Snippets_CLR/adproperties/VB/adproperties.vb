@@ -55,5 +55,5 @@ Class ADProperties
         ' Unload the domain.
         AppDomain.Unload(domain)
     End Sub
-End Class 'ADProperties
+End Class
 ' </SNIPPET1>

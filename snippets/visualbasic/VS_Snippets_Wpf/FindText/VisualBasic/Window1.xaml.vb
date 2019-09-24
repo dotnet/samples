@@ -124,5 +124,5 @@ Namespace SDKSample
             Me.Close()
 
         End Sub
-    End Class 'Window1 '
+    End Class
 End Namespace

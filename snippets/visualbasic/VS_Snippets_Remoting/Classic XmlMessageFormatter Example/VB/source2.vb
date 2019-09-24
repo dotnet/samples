@@ -17,5 +17,5 @@ Public Class Order
         ' Insert code here.
  
     End Sub
-End Class 'Order 
+End Class
 ' </Snippet2>

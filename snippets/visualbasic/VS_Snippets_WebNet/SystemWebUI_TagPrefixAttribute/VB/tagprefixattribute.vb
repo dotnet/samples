@@ -38,7 +38,7 @@ Namespace CustomControls
       Protected Overrides Sub Render(writer As HtmlTextWriter)
          writer.Write(("<span style='background-color:aqua; font:8pt tahoma, verdana;'> " + Me.getMessage + "<br>" + "VB version. The time on the server is " + System.DateTime.Now.ToLongTimeString() + "</span>"))
       End Sub
-   End Class 'MyControl
+   End Class
 End Namespace 'CustomControls 
 
 '</snippet1>

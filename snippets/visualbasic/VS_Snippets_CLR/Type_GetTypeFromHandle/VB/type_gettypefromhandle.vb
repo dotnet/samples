@@ -10,7 +10,7 @@
 Imports System.Reflection
 
 Public Class MyClass1
-End Class 'MyClass1
+End Class
 
 Public Class MyClass2
    
@@ -22,4 +22,4 @@ Public Class MyClass2
       Console.WriteLine(("The Names of the Attributes :" + myClass1Type.Attributes.ToString()))
    End Sub
 ' </Snippet1>
-End Class 'MyClass2
+End Class

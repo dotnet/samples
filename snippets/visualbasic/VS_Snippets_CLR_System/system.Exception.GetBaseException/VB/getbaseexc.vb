@@ -9,7 +9,7 @@ Namespace NDP_UE_VB
         Public Sub New( message As String, inner As Exception )
             MyBase.New( message, inner )
         End Sub
-    End Class ' SecondLevelException
+    End Class
 
     Class ThirdLevelException
         Inherits Exception
@@ -17,7 +17,7 @@ Namespace NDP_UE_VB
         Public Sub New( message As String, inner As Exception )
             MyBase.New( message, inner )
         End Sub
-    End Class ' ThirdLevelException
+    End Class
 
     Class NestedExceptions
        
@@ -85,7 +85,7 @@ Namespace NDP_UE_VB
                     "a second exception.", ex )
             End Try
         End Sub
-    End Class ' NestedExceptions
+    End Class
 End Namespace ' NDP_UE_VB
 
 ' This example of Exception.GetBaseException generates the following output.

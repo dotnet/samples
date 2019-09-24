@@ -56,7 +56,7 @@ Public Class MyInstallerClass
    Public Shared Sub Main()
       Console.WriteLine("Usage : installutil.exe Installer.exe ")
    End Sub
-End Class 'MyInstallerClass
+End Class
 ' </Snippet1>
 
 

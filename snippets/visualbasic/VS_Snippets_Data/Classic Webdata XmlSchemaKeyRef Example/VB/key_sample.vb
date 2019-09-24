@@ -96,7 +96,7 @@ Public Class XmlSchemaObjectGenerator
       
       schema.Write(Console.Out)
    End Sub
-End Class 'XmlSchemaObjectGenerator 
+End Class
 
 ' Main() 
 

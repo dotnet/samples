@@ -146,4 +146,4 @@ Class [MyClass]
       myOperation.Messages.Add(output)
       Return myOperation
    End Function 'CreateOperation
-End Class '[MyClass]
+End Class

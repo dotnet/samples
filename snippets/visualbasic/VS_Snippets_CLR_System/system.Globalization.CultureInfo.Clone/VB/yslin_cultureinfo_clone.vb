@@ -27,7 +27,7 @@ Public Class SamplesCultureInfo
 
    End Sub
 
-End Class 'SamplesCultureInfo
+End Class
 
 
 ' This code produces the following output.

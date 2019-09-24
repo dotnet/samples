@@ -71,5 +71,5 @@ Public Class ValidXSD
     Private Shared Sub ShowCompileError(ByVal sender As Object, ByVal e As ValidationEventArgs)
         Console.WriteLine("Validation Error: {0}", e.Message)
     End Sub
-End Class 'ValidXSD
+End Class
 ' </Snippet1>

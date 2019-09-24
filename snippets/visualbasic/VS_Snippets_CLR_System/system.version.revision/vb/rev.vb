@@ -16,7 +16,7 @@ Class Sample
         Console.WriteLine(fmtInt, interim.Major, interim.Minor, interim.Build, _
                           interim.MajorRevision, interim.MinorRevision)
     End Sub
-End Class 'Sample
+End Class
 
 '
 'This code example produces the following results:

@@ -52,4 +52,4 @@ Class HttpWebResponseSnippet
         End Try
 
     End Sub
-End Class 'HttpWebResponseSnippet
+End Class

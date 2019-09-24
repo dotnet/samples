@@ -25,7 +25,7 @@ Public Class Test
          Console.WriteLine("The double is equal to {0}.", dFloatingPoint)
       End Sub
 
-   End Class 'TestClass
+   End Class
    
    
    
@@ -48,5 +48,5 @@ Public Class Test
 
    End Sub
 
-End Class 'Test
+End Class
 ' </Snippet1>

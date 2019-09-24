@@ -55,7 +55,7 @@ Class Sample
                         "(X) Hexadecimal:. . . . . . . {0:X}" & vbCrLf, _
                         Color.Green)
    End Sub
-End Class 'Sample
+End Class
 '
 'This code example produces the following results:
 '

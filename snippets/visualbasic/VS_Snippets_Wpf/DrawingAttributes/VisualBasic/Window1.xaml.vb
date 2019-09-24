@@ -368,4 +368,4 @@ Partial Public Class Window1
     End Sub
 
 
-End Class 'Window1  
+End Class

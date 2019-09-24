@@ -76,5 +76,5 @@ Public NotInheritable Class Form1
         me.Close()
     end sub
 
-End Class 'Form1
+End Class
 ' </Snippet1>

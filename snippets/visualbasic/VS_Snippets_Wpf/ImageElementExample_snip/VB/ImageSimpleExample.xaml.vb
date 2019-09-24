@@ -80,5 +80,5 @@ Namespace ImageElementExample
             myStackPanel.Children.Add(myImage1)
 
         End Sub
-    End Class 'ImageSimpleExample 
+    End Class
 End Namespace

@@ -57,4 +57,4 @@ Public Class CounterCreationDataCollectionExample
          Return
       End Try
    End Sub
-End Class 'CounterCreationDataCollectionExample
+End Class

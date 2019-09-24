@@ -31,5 +31,5 @@ Class X500Sample
             MsgBox(msg)
       End Try
    End Sub
-End Class 'X500Sample
+End Class
 '</SNIPPET1>

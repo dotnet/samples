@@ -118,5 +118,5 @@ Class MyTextBinding
          Console.WriteLine("Exception: {0}", e.Message)
       End Try
    End Sub
-End Class 'MyTextBinding
+End Class
 ' </Snippet1>

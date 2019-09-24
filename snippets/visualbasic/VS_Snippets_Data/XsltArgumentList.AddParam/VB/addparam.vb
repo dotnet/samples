@@ -24,5 +24,5 @@ Public Class Sample
         End Using
 
     End Sub
-End Class 'Sample
+End Class
 '</snippet1>

@@ -55,5 +55,5 @@ Class DnsPermissionExample
 
 ' </Snippet1>	
 
-End Class 'DnsPermissionExample
+End Class
 

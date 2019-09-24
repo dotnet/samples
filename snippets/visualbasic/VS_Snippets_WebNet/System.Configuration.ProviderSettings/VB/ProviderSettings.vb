@@ -71,7 +71,7 @@ Namespace Samples.AspNet
 
             GetProviderSettings()
         End Sub
-    End Class 'UsingProviderSettings
+    End Class
 
 End Namespace
 

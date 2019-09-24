@@ -20,5 +20,5 @@ Public Class Form1
         dgCol.HeaderText = dataCol1.Caption
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

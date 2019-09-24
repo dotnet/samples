@@ -12,7 +12,7 @@ Class MyClass1
             myProperty1 = Value
         End Set
     End Property
-End Class 'MyClass1
+End Class
 
 Public Class MyTypeClass
     Public Shared Sub Main(ByVal args() As String)
@@ -27,7 +27,7 @@ Public Class MyTypeClass
             Console.WriteLine("The property does not exist in MyClass.", e.Message.ToString())
         End Try
     End Sub
-End Class 'MyTypeClass 
+End Class
 ' </Snippet1>
 
 

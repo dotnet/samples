@@ -56,7 +56,7 @@ Namespace Samples.AspNet.VB.Controls
                 _alias = Value
             End Set
         End Property
-    End Class 'Employee
+    End Class
 
     ' <snippet2>
     ' Use this Boolean version of the ParseChildrenAttribute constructor
@@ -140,7 +140,7 @@ Namespace Samples.AspNet.VB.Controls
             Next employee
             Controls.Add(table)
         End Sub
-    End Class 'CollectionPropertyControl
+    End Class
 End Namespace ' ParseChildrenSampleVB_2
 ' </snippet2>
 ' </snippet1>

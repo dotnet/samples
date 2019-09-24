@@ -16,5 +16,5 @@ Class Library
 
     End Sub
     '</Snippet2>
-End Class 'Library 
+End Class
 '</Snippet1>

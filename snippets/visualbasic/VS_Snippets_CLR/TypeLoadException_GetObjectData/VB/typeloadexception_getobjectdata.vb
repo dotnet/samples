@@ -85,6 +85,6 @@ Public Class MyTypeLoadException
       sInfo.AddValue("ErrorDate", ErrorDateTime)
    End Sub
 
-End Class 'MyTypeLoadExceptionChild
+End Class
 ' </Snippet2>
 ' </Snippet1>

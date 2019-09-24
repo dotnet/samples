@@ -30,4 +30,4 @@ Class MyService
          Console.WriteLine("Exception : " & e.Message)
       End Try
    End Sub
-End Class 'MyService
+End Class

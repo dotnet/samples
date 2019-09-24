@@ -12,5 +12,5 @@ Public Class GetFilesTest
             Console.WriteLine(fri.Name)
         Next fri
     End Sub
-End Class 'GetFilesTest
+End Class
 ' </snippet1>

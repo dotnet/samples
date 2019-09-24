@@ -95,5 +95,5 @@ Class XMLSchemaExamples
     Public Shared Sub ValidationCallbackOne(ByVal sender As Object, ByVal args As ValidationEventArgs)
         Console.WriteLine(args.Message)
     End Sub
-End Class 'XMLSchemaExamples
+End Class
 ' </Snippet1>

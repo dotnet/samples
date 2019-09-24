@@ -29,7 +29,7 @@ Public Class MyTypeDelegator
         ' The type is not a reference, array, or pointer type.
         Return False
     End Function 'HasElementTypeImpl
-End Class 'MyTypeDelegator
+End Class
 Public Class Type_HasElementTypeImpl
     Public Shared Sub Main()
         Try
@@ -54,5 +54,5 @@ Public Class Type_HasElementTypeImpl
             Console.WriteLine("Exception: {0}", e.Message.ToString())
         End Try
     End Sub
-End Class 'Type_HasElementTypeImpl
+End Class
 ' </Snippet1>

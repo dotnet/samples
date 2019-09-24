@@ -922,5 +922,5 @@ Class Form1
 
     End Sub
 
-End Class 'Form1
+End Class
 

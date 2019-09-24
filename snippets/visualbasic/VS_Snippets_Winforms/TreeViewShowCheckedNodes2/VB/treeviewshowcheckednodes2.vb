@@ -104,5 +104,5 @@ Public Class Form1
     End Function 'HasCheckedChildNodes
     '</Snippet2>
 
-End Class 'Form1 
+End Class
 '</Snippet1>

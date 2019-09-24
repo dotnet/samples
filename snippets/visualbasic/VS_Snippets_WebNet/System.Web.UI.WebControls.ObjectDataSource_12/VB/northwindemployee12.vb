@@ -81,7 +81,7 @@ Public Class EmployeeLogic
 '</Snippet3>
    ' And so on...
 
-End Class 'EmployeeLogic
+End Class
 
 Public Class NorthwindEmployee
 
@@ -189,7 +189,7 @@ Public Class NorthwindEmployee
 
    End Function 'Update
 
-End Class 'NorthwindEmployee
+End Class
 
 Friend Class NorthwindDataException
    Inherits Exception
@@ -198,6 +198,6 @@ Friend Class NorthwindDataException
       MyBase.New(msg)
    End Sub
 
-End Class 'NorthwindDataException
+End Class
 End Namespace
 ' </snippet2>

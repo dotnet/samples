@@ -19,6 +19,6 @@ Public Class ClientProcess
         Dim returnValue As Boolean = service.UpdateServer(3, 3.14, "Pi")
     
     End Sub
-End Class 'ClientProcess
+End Class
 
 

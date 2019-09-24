@@ -59,5 +59,5 @@ Class ADShadowCopy
       ' Unload the domain.
       AppDomain.Unload(domain)
    End Sub
-End Class 'ADShadowCopy
+End Class
 ' </SNIPPET1>

@@ -8,5 +8,5 @@
    Public Function MyMethod(name As String) As String
       Return "The client requests to " + name
    End Function 'MyMethod
-End Class 'MyServerImpl
+End Class
 

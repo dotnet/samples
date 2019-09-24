@@ -43,5 +43,5 @@
     Public Shared Sub Main()
     End Sub
     Dim myInstaller As New EventLogInstaller()
-   End Class 'MyEventLogInstaller
+   End Class
 ' </Snippet1> 

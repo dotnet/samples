@@ -598,5 +598,5 @@ Namespace DataGridSample
             ' Set alternating background color to selected color.
             myDataGrid.AlternatingBackColor = myColorDialog.Color
         End Sub
-    End Class 'DatGridClass
+    End Class
 End Namespace 'DataGridSample

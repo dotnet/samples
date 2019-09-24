@@ -53,5 +53,5 @@ Partial Class UIAFragmentProviderForm
 #End Region
 
     Private WithEvents button1 As System.Windows.Forms.Button
-End Class 'UIAFragmentProviderForm 
+End Class
 

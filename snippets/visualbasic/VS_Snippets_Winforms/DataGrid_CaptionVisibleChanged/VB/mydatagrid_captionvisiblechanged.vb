@@ -217,4 +217,4 @@ Public Class MyDataGrid
         MessageBox.Show(myString, "Scroll information")
     End Sub
 ' </Snippet3> 
-End Class 'MyDataGrid 
+End Class

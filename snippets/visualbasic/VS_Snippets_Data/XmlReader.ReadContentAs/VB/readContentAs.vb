@@ -48,6 +48,6 @@ Class Typed_Read_Methods
   '</snippet2>
   End Sub
 
-End Class 'Typed_Read_Methods 
+End Class
 
 ' end class.

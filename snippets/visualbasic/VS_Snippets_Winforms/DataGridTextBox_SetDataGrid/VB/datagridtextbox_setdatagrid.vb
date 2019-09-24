@@ -133,4 +133,4 @@ Public Class MyDataGridTextBox
       myDataGridTextBox.SetDataGrid(myDataGrid)
    End Sub
 ' </Snippet2>
-End Class 'MyDataGridTextBox
+End Class

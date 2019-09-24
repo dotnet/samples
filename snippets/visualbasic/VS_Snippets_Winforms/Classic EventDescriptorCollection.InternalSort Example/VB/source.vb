@@ -19,4 +19,4 @@ MustInherit Public Class Coll1
         Me.InternalSort(New String() {"D", "B"})
         ' </Snippet1>
     End Sub
-End Class 'Coll1
+End Class

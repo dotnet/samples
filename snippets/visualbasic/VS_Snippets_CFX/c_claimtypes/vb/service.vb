@@ -75,5 +75,5 @@ Public Class EchoService
         Next claimSet
 
     End Sub
-End Class 'EchoService
+End Class
 ' </snippet1>

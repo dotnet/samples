@@ -10,14 +10,14 @@ Imports System.Reflection
 <EventTrackingEnabled()>  _
 Public Class EventTrackingEnabledAttribute_Ctor
     Inherits ServicedComponent
-End Class 'EventTrackingEnabledAttribute_Ctor
+End Class
 ' </snippet1>
 
 ' <snippet2>
 <EventTrackingEnabled(False)>  _
 Public Class EventTrackingEnabledAttribute_Ctor_Bool
     Inherits ServicedComponent
-End Class 'EventTrackingEnabledAttribute_Ctor_Bool
+End Class
 ' </snippet2>
 
 ' <snippet3>
@@ -33,7 +33,7 @@ Public Class EventTrackingEnabledAttribute_Value
         MsgBox("EventTrackingEnabledAttribute.Value: " & attribute.Value)
     
     End Sub
-End Class 'EventTrackingEnabledAttribute_Value
+End Class
 ' </snippet3>
 
 ' </snippet0>
@@ -50,4 +50,4 @@ Public Class EventTrackingEnabledAttribute_Example
         valueExample.ValueExample()
     
     End Sub
-End Class 'EventTrackingEnabledAttribute_Example
+End Class

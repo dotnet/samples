@@ -320,5 +320,5 @@ Class [MyClass]
     Overloads Shared Sub Main(ByVal args() As String)
         PermissionDemo()
     End Sub
-End Class '[MyClass] 
+End Class
 '</Snippet1>

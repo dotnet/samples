@@ -34,5 +34,5 @@ Partial Class Form1
     End Sub
 
 #End Region
-End Class 'Form1
+End Class
 '

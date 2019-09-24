@@ -123,7 +123,7 @@ Class Sample
         sample.GenerateCSharpCode(outputFileName)
     
     End Sub
-End Class 'Sample
+End Class
 ' A Visual Basic code generator produces the following source code for the preceeding example code:
 'Option Strict Off
 'Option Explicit On

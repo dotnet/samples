@@ -19,5 +19,5 @@ Public Class Form1
     End Sub
 
 ' </Snippet1>    
-End Class 'Form1 
+End Class
 

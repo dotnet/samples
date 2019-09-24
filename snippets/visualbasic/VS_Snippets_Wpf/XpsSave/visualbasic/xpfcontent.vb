@@ -671,6 +671,6 @@ Namespace SDKSampleHelper
 
 		#End Region ' private members
 
-	End Class 'end:class XPFContent
+	End Class
 
 End Namespace ' end:namespace SDKSampleHelper

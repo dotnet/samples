@@ -131,5 +131,5 @@ Public Class CustomGroupBox
         End If
     
     End Sub
-End Class 'CustomGroupBox
+End Class
 '</Snippet0>

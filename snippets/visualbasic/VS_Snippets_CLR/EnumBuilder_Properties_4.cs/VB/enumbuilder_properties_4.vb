@@ -67,7 +67,7 @@ Public Class MyEnumBuilderSample
       
       myEnumBuilder.CreateType()
    End Sub
-End Class 'MyEnumBuilderSample
+End Class
 ' </Snippet4>
 ' </Snippet3>
 ' </Snippet2>

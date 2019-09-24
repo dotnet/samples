@@ -53,7 +53,7 @@ Public Class MyClientFormatterProvider
          nextProvider = value
       End Set
    End Property
-End Class 'MyClientFormatterProvider
+End Class
 
 ' <Snippet2>
 <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> _
@@ -144,8 +144,8 @@ Friend Class MyClientFormatterChannelSink
          Return myKeys
       End Get
    End Property
-End Class 'MyClientFormatterChannelSink
+End Class
 
 Public Class MyKey
-End Class 'MyKey
+End Class
 ' </Snippet2>

@@ -199,4 +199,4 @@ Dim reader As XmlReader = XmlReader.Create(txtReader, settings)
      '</snippet13>
     End Sub
     
-End Class 'XmlReaderSettings_Examples
+End Class

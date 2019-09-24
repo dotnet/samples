@@ -51,6 +51,6 @@ Class UsingSqlCacheDependencySection
         ' </Snippet4>
 
    End Sub
-End Class 'UsingSqlCacheDependencySection 
+End Class
 
 

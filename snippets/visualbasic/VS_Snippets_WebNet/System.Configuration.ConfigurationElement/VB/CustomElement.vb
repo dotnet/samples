@@ -111,7 +111,7 @@ Public Class UrlConfigElement
         Return ret
 
     End Function 'IsModified
-End Class 'UrlConfigElement 
+End Class
 '</Snippet35>
 
 '</Snippet31>

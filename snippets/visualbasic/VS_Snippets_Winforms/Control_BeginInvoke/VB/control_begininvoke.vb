@@ -100,4 +100,4 @@ Public Class MyForm
       myTextBox.Text = "Executed the given delegate"
    End Sub
 ' </Snippet2>
-End Class 'MyForm 
+End Class

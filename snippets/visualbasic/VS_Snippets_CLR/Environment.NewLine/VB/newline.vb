@@ -6,7 +6,7 @@ Class Sample
       Console.WriteLine("NewLine: {0}  first line{0}  second line{0}  third line", _
                              Environment.NewLine)
    End Sub
-End Class 'Sample
+End Class
 '
 'This example produces the following results:
 '

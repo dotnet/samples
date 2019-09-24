@@ -32,7 +32,7 @@ Class Sample
       Console.CursorVisible = saveCursorVisibile
       Console.CursorSize = saveCursorSize
    End Sub
-End Class 'Sample 
+End Class
 '
 'This example produces the following results. Note that these results
 'cannot depict cursor visibility. You must run the example to see the 

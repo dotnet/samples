@@ -25,7 +25,7 @@ Public Class SamplesKoreanCalendar
 
    End Sub
 
-End Class 'SamplesKoreanCalendar
+End Class
 
 
 'This code produces the following output.

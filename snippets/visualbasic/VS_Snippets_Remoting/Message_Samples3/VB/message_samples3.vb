@@ -50,5 +50,5 @@ Namespace MyMessage
             Console.WriteLine("Exception: " + e.Message)
          End Try
       End Sub
-   End Class 'MyClass1
+   End Class
 End Namespace 'MyMessage

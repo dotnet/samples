@@ -52,7 +52,7 @@ Public Class SamplesArray
         Console.WriteLine()
     End Sub
 
-End Class 'SamplesArray
+End Class
 
 
 'This code produces the following output.

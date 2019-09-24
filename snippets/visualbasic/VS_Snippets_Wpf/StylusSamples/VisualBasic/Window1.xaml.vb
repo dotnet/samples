@@ -345,7 +345,7 @@ Class Window1
         Me.textbox1.Text = ""
 
     End Sub
-End Class 'Window1 
+End Class
 'Stylus.Capture(textbox1);
 '
 'ToDo: Error processing original source shown below

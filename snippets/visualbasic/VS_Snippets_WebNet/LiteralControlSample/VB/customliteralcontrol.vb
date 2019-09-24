@@ -84,5 +84,5 @@ Namespace CustomLiteralControl
          writer.Write(builder)
       End Sub
 ' </Snippet3>
-   End Class 'CustomLiteralControlClass 
+   End Class
 End Namespace 'CustomLiteralControl

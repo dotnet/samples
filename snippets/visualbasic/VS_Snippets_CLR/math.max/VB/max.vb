@@ -45,7 +45,7 @@ Class Sample
       Console.WriteLine(str, "UInt32 ", xUint1, xUint2, Math.Max(xUint1, xUint2))
       Console.WriteLine(str, "UInt64 ", xUlong1, xUlong2, Math.Max(xUlong1, xUlong2))
    End Sub
-End Class 'Sample
+End Class
 '
 'This example produces the following results:
 '

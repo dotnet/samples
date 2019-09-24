@@ -264,7 +264,7 @@ Class CalculatorClient
         Return MyBase.Channel.Divide(n1, n2)
 
     End Function 'Divide
-End Class 'CalculatorClient
+End Class
 
 
 Public Class CalculatorService

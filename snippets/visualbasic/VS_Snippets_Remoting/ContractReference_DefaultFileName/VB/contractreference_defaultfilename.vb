@@ -38,4 +38,4 @@ Public Class DiscoveryDocument_Example
 ' </Snippet2>
 ' </Snippet1>
    End Sub
-End Class 'DiscoveryDocument_Example 
+End Class

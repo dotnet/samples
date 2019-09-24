@@ -23,6 +23,6 @@ Namespace TestNamespace
             Console.WriteLine("Just for compiling.")
         
         End Sub
-    End Class 'Test
+    End Class
 End Namespace 'TestNamespace
 

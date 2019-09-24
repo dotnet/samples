@@ -20,5 +20,5 @@ Public Class Sample
         elem = doc.GetElementById("A222")
         Console.WriteLine(elem.OuterXml)
     End Sub
-End Class 'Sample
+End Class
 ' </Snippet1>

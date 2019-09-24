@@ -17,6 +17,6 @@ Public Class SampleService
         Return True
     
     End Function 'SampleMethod
-End Class 'SampleService
+End Class
 
 End Namespace

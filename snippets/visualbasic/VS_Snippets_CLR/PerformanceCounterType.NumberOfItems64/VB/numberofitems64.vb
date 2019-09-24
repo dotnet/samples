@@ -123,5 +123,5 @@ Public Class NumberOfItems64
         Console.WriteLine(("   TimeStamp100nSec = " + s.TimeStamp100nSec.ToString()))
         Console.WriteLine("++++++++++++++++++++++")
     End Sub
-End Class 'NumberOfItems64 
+End Class
 '</snippet1>

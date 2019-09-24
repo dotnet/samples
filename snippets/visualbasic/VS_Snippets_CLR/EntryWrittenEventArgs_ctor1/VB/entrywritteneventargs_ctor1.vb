@@ -34,5 +34,5 @@ Class MySample
           Console.WriteLine("A new entry is written in MyNewLog.")
       End If
    End Sub
-End Class 'MySample
+End Class
 ' </Snippet1>

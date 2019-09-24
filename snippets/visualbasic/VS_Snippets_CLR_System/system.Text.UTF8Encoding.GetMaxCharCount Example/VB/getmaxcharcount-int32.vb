@@ -13,5 +13,5 @@ Class UTF8EncodingExample
             byteCount _
         )
     End Sub
-End Class 'UTF8EncodingExample
+End Class
 ' </Snippet1>

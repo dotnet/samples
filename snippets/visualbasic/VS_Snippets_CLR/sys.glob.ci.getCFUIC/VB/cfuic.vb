@@ -9,7 +9,7 @@ Class Sample
       Console.WriteLine("Console fallback UI culture:. . {0}", _
                          ci.GetConsoleFallbackUICulture().Name)
    End Sub
-End Class 'Sample
+End Class
 '
 'This code example produces the following results:
 '

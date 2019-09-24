@@ -111,7 +111,7 @@ Public Class SampleWebErrorEvent
     End Sub
     ' </Snippet8>
 
-End Class 'SampleWebErrorEvent 
+End Class
 
 
 ' </Snippet1>

@@ -28,7 +28,7 @@ Public Class Server
             MessageQueue.Create(path)
         End If
     End Sub
-End Class 'Server
+End Class
 ' </Snippet1>
 
 Public Class Order

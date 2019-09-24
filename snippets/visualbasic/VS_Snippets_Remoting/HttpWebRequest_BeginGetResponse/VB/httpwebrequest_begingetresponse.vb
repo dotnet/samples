@@ -30,7 +30,7 @@ Public Class RequestState
     streamResponse = Nothing
   End Sub
 
-End Class ' RequestState
+End Class
 
 
 Class HttpWebRequest_BeginGetResponse
@@ -117,5 +117,5 @@ Class HttpWebRequest_BeginGetResponse
   End Sub
 ' </Snippet2>
 ' </Snippet1>
-End Class ' HttpWebRequest_BeginGetResponse 
+End Class
 

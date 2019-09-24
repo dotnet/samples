@@ -16,5 +16,5 @@ Public Class Form1
         Console.WriteLine(("ToString " & myHitTest.ToString()))
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

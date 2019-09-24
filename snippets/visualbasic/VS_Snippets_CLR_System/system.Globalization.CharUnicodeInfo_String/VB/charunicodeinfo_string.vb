@@ -24,7 +24,7 @@ Public Class SamplesCharUnicodeInfo
 
    End Sub
 
-End Class 'SamplesCharUnicodeInfo
+End Class
 
 
 'This code produces the following output.  Some characters might not display at the console.

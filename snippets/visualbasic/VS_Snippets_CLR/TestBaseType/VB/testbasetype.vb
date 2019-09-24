@@ -5,5 +5,5 @@ Class TestType
         Dim t As Type = GetType(Integer)
         Console.WriteLine("{0} inherits from {1}.", t, t.BaseType)
     End Sub
-End Class 'TestType
+End Class
 ' </Snippet1>

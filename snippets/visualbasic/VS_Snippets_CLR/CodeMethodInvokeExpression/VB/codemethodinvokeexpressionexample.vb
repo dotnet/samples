@@ -24,7 +24,7 @@ Namespace CodeDomSamples
          '</Snippet2>
       End Sub
 
-   End Class 'CodeMethodInvokeExpressionExample
+   End Class
 
 End Namespace 'CodeDomSamples 
 

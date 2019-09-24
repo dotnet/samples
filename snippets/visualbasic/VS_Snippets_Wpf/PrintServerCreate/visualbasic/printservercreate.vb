@@ -33,4 +33,4 @@ Public Class PrintServerCreate
 		' </Snippet_CreatePrintServer>
 	End Sub
 
-End Class ' end:class PrintServerCreate
+End Class

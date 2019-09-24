@@ -73,4 +73,4 @@ Public Class Form1
         Me.Text = "Form screen position = " + Me.Location.ToString()
     End Sub
    '</Snippet1>
-End Class 'Form1 
+End Class

@@ -50,7 +50,7 @@ Public Class CustomPageAdapter
         writer.RenderBeginTag("a")
 
     End Sub
-End Class ' CustomPageAdapter
+End Class
 ' </snippet1>
 
 Module MainMod

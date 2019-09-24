@@ -14,5 +14,5 @@ Public Class Form1
         ' Perform some processing.
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

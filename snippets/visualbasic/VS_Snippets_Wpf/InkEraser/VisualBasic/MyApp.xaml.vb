@@ -18,7 +18,7 @@ Namespace MyInkEraser
             mainWindow.Show()
 
         End Sub
-    End Class 'MyApp 
+    End Class
 End Namespace
 '
 'ToDo: Error processing original source shown below

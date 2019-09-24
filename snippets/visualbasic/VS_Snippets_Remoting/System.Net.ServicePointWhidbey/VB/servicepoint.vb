@@ -188,7 +188,7 @@ Namespace Mssc.Services.ConnectionManagement
 
             End Sub
 
-        End Class 'TestServicePoint
+        End Class
 
     End Module
 End Namespace

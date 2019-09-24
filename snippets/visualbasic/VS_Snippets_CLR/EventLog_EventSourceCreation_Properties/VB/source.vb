@@ -124,6 +124,6 @@ Namespace EventLogSamples
             End If
 
         End Sub
-    End Class 'CreateSourceSample
+    End Class
 End Namespace 'EventLogSamples
 '</Snippet1>

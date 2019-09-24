@@ -40,7 +40,7 @@ Namespace NDP_UE_VB
         Public Overrides Function ToString() As String
             Return MyBase.ToString() + ":" + usageMsg
         End Function ' ToString
-    End Class ' ArgumentUsageAttribute
+    End Class
 
     Public Class TestClass
        
@@ -52,7 +52,7 @@ Namespace NDP_UE_VB
             <ArgumentUsage("Can pass a param list or array here.")> _
             ParamArray strList() As String)
         End Sub
-    End Class ' TestClass
+    End Class
 
     Module AttributeTypeIdDemo
        

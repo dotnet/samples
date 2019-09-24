@@ -27,7 +27,7 @@ Class Window2
         WindowState = WindowState.Maximized
     
     End Sub
-End Class 'Window2 
+End Class
 
 Public Class FilteredInkCanvas
     Inherits InkCanvas
@@ -53,4 +53,4 @@ Public Class FilteredInkCanvas
         Me.Strokes.Add(newStroke)
     
     End Sub
-End Class 'FilteredInkCanvas
+End Class

@@ -63,5 +63,5 @@ Public Class MethodBuilderClass
          Console.WriteLine("Exception :{0}", e.Message)
       End Try
    End Sub
-End Class 'MethodBuilderClass
+End Class
 ' </Snippet1>

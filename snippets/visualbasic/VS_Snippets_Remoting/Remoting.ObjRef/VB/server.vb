@@ -19,6 +19,6 @@ Public Class SampleServer
         Console.ReadLine()
     
     End Sub
-End Class 'SampleServer
+End Class
 
 End Namespace

@@ -11,7 +11,7 @@ Namespace NDP_UE_VB
                 "The argument to a function requiring " & _
                 "even input is not divisible by 2." )
         End Sub
-    End Class ' NotEvenException
+    End Class
 
     Module NewExceptionDemo
        

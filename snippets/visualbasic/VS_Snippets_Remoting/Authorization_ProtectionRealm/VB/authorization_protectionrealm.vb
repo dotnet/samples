@@ -82,7 +82,7 @@ Namespace CloneBasicAuthentication
         Function PreAuthenticate(ByVal request As WebRequest, ByVal credentials As ICredentials) As Authorization Implements IAuthenticationModule.PreAuthenticate
             PreAuthenticate = Nothing
         End Function 'PreAuthenticate
-    End Class 'CloneBasic
+    End Class
     ' 'CloneBasic' class ends here.
 
     ' The 'Client' class is defined here to test the above  custom authentication module.
@@ -168,5 +168,5 @@ Namespace CloneBasicAuthentication
             Console.WriteLine(ControlChars.Cr + "Example:")
             Console.WriteLine(ControlChars.Cr + "   Authorization_ProtectionRealm http://www.microsoft.com/net/ george george123")
         End Sub
-    End Class 'Client class ends here.	
+    End Class
 End Namespace 'CloneBasicAuthentication

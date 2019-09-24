@@ -97,7 +97,7 @@ Namespace DiagnoseProblematicPrintJob
 
 		End Sub
 
-	End Class ' end Program class
+	End Class
 
 	Friend Class TroubleSpotter
 		' <SnippetSpotTroubleUsingJobProperties>
@@ -257,7 +257,7 @@ Namespace DiagnoseProblematicPrintJob
 		End Function 'end ReportAvailabilityAtThisTime
 		' </SnippetUsingJobStartAndUntilTimes>
 
-	End Class 'end TroubleSpotter class
+	End Class
 
 	'<SnippetTimeConverter>
 	Friend Class TimeConverter
@@ -279,7 +279,7 @@ Namespace DiagnoseProblematicPrintJob
 
 		End Function ' end ConvertToLocalHumanReadableTime
 
-	End Class 'end TimeConverter class
+	End Class
 	'</SnippetTimeConverter>
 
 End Namespace ' end namespace

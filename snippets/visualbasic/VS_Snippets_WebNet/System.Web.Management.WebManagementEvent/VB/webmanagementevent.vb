@@ -97,6 +97,6 @@ Public Class SampleWebManagementEvent
         "** SampleWebManagementEvent End **")
     End Sub
     ' </Snippet6>
-End Class 'SampleWebManagementEvent 
+End Class
 
 ' </Snippet1>

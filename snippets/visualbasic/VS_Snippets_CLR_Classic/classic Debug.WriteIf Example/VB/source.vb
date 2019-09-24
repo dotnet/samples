@@ -21,5 +21,5 @@ Public Class Form1
         Debug.WriteIf(generalSwitch.TraceVerbose, "My second error message.")
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

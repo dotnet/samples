@@ -95,5 +95,5 @@ Public Class MySample
          End If 
       End While
    End Sub
-End Class 'MySample
+End Class
 ' </Snippet1>

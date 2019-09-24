@@ -52,5 +52,5 @@ Namespace SDKSample
             Me.Content = myStackPanel
 
         End Sub
-    End Class 'ColorConvertedBitmapExample
+    End Class
 End Namespace 'ImagingSnippetGallery

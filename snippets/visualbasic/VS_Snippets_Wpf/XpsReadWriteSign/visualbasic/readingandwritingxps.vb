@@ -296,6 +296,6 @@ Namespace SDKSample
         Private Shared _applicationDir As String
 #End Region ' Private Members
 
-    End Class ' end:class XpsReadWriteUtility
+    End Class
 
 End Namespace ' end:namespace SDKSample

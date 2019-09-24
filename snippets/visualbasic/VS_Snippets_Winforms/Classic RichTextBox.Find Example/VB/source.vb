@@ -25,5 +25,5 @@ Public Class Form1
     End Function
 
 ' </Snippet1>
-End Class 'Form1 
+End Class
 

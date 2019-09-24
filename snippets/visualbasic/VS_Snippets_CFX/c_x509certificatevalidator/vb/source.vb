@@ -24,7 +24,7 @@ Public Class CalculatorService
         Return result
 
     End Function 'Add
-End Class 'CalculatorService
+End Class
 
 
 Class Program
@@ -41,7 +41,7 @@ Class Program
         serviceHost.Close()
 
     End Sub
-End Class 'Program
+End Class
 
 '<snippet1>
 
@@ -73,6 +73,6 @@ Public Class MyX509CertificateValidator
         End If
 
     End Sub
-End Class 'MyX509CertificateValidator
+End Class
 ' </snippet2>
 '</snippet1>

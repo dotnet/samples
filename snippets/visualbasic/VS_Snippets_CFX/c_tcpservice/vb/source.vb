@@ -285,4 +285,4 @@ Class CalculatorClient
         Return MyBase.Channel.CalculateTax(a)
     
     End Function 'CalculateTax
-End Class 'CalculatorClient
+End Class

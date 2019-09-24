@@ -10,7 +10,7 @@ Class MyClass1
             myMessage = Value
         End Set
     End Property
-End Class 'MyClass1
+End Class
 
 Class TestClass
     Shared Sub Main()
@@ -33,5 +33,5 @@ Class TestClass
 	'The type of the first property of MyClass1 is System.String.
 
     End Sub
-End Class 'TestClass
+End Class
 ' </Snippet1>	

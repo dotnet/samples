@@ -56,5 +56,5 @@ Class XMLSchemaExamples
         Dim doc As New XmlDocument()
         Return New XmlNode(0) {doc.CreateTextNode(text)}
     End Function 'TextToNodeArray
-End Class 'XMLSchemaExamples
+End Class
 ' </Snippet1>

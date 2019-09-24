@@ -171,7 +171,7 @@ Namespace Mssc.Services.Authentication
         Return
       End Sub
 
-    End Class 'ClientAuthentication 
+    End Class
     '</Snippet2>
 
     ' <Snippet6>
@@ -321,7 +321,7 @@ Namespace Mssc.Services.Authentication
 
         Return resourceAuthorization
       End Function 'Authenticate
-    End Class 'CustomBasic 
+    End Class
     ' </Snippet3>
     ' </Snippet6>
   End Module

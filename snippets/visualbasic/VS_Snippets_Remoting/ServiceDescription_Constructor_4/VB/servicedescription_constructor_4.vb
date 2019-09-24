@@ -52,5 +52,5 @@ Namespace ServiceDescription1
 ' </Snippet2>
 ' </Snippet1>
       End Sub
-   End Class 'MyService 
+   End Class
 End Namespace 'ServiceDescription1 

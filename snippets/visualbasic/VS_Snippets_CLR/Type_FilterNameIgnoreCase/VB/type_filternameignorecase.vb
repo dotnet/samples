@@ -22,5 +22,5 @@ Public Class MyFilterNameIgnoreCaseSample
             Console.Write("Exception : " + e.Message.Tostring())
         End Try
     End Sub
-End Class 'MyFilterNameIgnoreCaseSample
+End Class
 ' </Snippet1>

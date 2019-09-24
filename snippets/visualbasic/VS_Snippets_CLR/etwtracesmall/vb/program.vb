@@ -17,7 +17,7 @@ Class MyCompanyEventSource
     Public Sub OpenFileStop()
         WriteEvent(3)
     End Sub
-End Class 'MyCompanyEventSource 
+End Class
 '</Snippet2>
 
 '<Snippet3>
@@ -31,6 +31,6 @@ Class Program
         MyCompanyEventSource.Log.OpenFileStop()
 
     End Sub
-End Class 'Program
+End Class
 '</Snippet3>
 '</Snippet1>

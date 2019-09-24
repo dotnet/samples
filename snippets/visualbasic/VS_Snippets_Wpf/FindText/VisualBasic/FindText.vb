@@ -69,7 +69,7 @@ Namespace SDKSample
                 Dim app As New FindText()
                 app.Run()
             End Sub
-        End Class 'TestMain
+        End Class
 
     End Class
 

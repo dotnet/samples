@@ -95,7 +95,7 @@ Public Class MyProxy
 
         Return myReturnMessage
     End Function 'Invoke
-End Class 'MyProxy
+End Class
 ' </Snippet1>
 
 Public Class Client
@@ -128,4 +128,4 @@ Public Class Client
          Console.WriteLine("The Message of exception: " + e.Message)
       End Try
    End Sub
-End Class 'Client
+End Class

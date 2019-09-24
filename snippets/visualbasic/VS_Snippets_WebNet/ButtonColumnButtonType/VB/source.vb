@@ -23,6 +23,6 @@ Public Class Page1
         ItemsGrid.Columns.AddAt(2, AddColumn)
     End Sub
     ' </Snippet1>
-End Class 'Page1
+End Class
 
 

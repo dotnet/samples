@@ -15,5 +15,5 @@ Public Class Form1
         textBox1.Text = "File major part number: " & myFileVersionInfo.FileMajorPart
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

@@ -51,5 +51,5 @@ Class Example_SetTIFFCompression
         Return Nothing
     
     End Function 'GetEncoderInfo
-End Class 'Example_SetTIFFCompression
+End Class
 ' </snippet2>

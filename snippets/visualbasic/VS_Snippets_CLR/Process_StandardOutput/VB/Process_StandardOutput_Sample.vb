@@ -7,4 +7,4 @@ Class Class1
     Shared Sub Main()
         Console.WriteLine("Hello World")
     End Sub
-End Class 'Class1
+End Class

@@ -11,5 +11,5 @@ Public Class ChangeTypeTest
         
         Console.WriteLine("The string value {0} when converted to a Date becomes {1}", s, dt)
     End Sub
-End Class 'ChangeTypeTest
+End Class
 '</snippet1>

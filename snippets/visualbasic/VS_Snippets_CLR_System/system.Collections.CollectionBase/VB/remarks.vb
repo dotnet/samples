@@ -63,7 +63,7 @@ Public Class Int16Collection
       End If
    End Sub
 
-End Class 'Int16Collection
+End Class
 
 
 Public Class SamplesCollectionBase

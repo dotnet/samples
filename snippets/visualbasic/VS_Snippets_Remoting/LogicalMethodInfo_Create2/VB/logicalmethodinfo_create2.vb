@@ -43,7 +43,7 @@ Public Class MyService
       Dim results As Object() = Me.EndInvoke(asyncResult)
       Return CInt(results(0))
    End Function 'EndAdd
-End Class 'MyService
+End Class
 
 Public Class LogicalMethodInfo_Create
    
@@ -92,5 +92,5 @@ Public Class LogicalMethodInfo_Create
          Console.WriteLine(ControlChars.Newline + "{0} is synchronous", myLogicalMethodInfo.Name)
       End If 
    End Sub
-End Class 'LogicalMethodInfo_Create
+End Class
 ' </Snippet1>

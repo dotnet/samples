@@ -21,7 +21,7 @@ Public Class RequestState
       request = Nothing
       streamResponse = Nothing
    End Sub
-End Class 'RequestState
+End Class
 
 
 Class HttpWebRequest_BeginGetResponse
@@ -136,6 +136,6 @@ Class HttpWebRequest_BeginGetResponse
       End Try
       allDone.Set()
    End Sub
-End Class 'HttpWebRequest_BeginGetResponse
+End Class
 
 ' </Snippet1>

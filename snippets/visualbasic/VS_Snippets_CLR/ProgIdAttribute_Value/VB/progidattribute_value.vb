@@ -16,7 +16,7 @@ Namespace InteropSample
       
       Public Sub New()
       End Sub
-   End Class '[MyClass]
+   End Class
 
    Class TestApplication
       
@@ -30,6 +30,6 @@ Namespace InteropSample
             Console.WriteLine(("Exception : " + e.Message.ToString()))
          End Try
       End Sub
-   End Class 'TestApplication
+   End Class
 End Namespace 'InteropSample 
 ' </Snippet1>

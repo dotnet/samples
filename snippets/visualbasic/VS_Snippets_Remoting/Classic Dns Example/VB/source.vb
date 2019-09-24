@@ -12,4 +12,4 @@ Public Class Form1
         Dim hostInfo As IPHostEntry = Dns.GetHostEntry("www.contoso.com")
         ' </Snippet1>
     End Sub
-End Class 'Form1 
+End Class

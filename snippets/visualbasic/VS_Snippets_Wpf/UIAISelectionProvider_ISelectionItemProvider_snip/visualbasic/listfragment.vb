@@ -338,5 +338,5 @@ Namespace CustomControls
 
 		#End Region ' Helper methods
 
-	End Class ' ListProvider class
+	End Class
 End Namespace

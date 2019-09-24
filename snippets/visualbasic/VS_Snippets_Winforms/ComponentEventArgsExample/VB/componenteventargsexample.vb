@@ -21,5 +21,5 @@ Namespace MiscCompModSamples
             Return args
         End Function
         '</Snippet1>
-    End Class 'ComponentEventArgsExample 
+    End Class
 End Namespace 'MiscCompModSamples

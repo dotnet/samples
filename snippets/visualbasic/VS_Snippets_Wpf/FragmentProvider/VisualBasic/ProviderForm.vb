@@ -133,5 +133,5 @@ Partial Class SampleApplicationForm
 
         Dim success As Boolean = customList.Remove(Me.customList.SelectedIndex)
     End Sub
-End Class 'SampleApplicationForm
+End Class
 '

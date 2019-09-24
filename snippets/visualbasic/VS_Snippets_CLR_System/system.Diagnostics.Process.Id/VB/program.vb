@@ -45,5 +45,5 @@ ContinueWhile1:
         End While
 
     End Sub
-End Class 'ProcessDemo
+End Class
 '</Snippet1>

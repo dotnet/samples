@@ -24,7 +24,7 @@ Namespace BatchPrintXPSFiles
 
 		End Sub
 
-	End Class 'end Program class
+	End Class
 
 	Public Class BatchXPSPrinter
 		Public Shared Sub PrintXPS()
@@ -76,6 +76,6 @@ Namespace BatchPrintXPSFiles
 
 		End Sub
 
-	End Class ' end BatchXPSPrinter class
+	End Class
 	'</SnippetBatchPrintXPSFiles>
 End Namespace ' end namespace

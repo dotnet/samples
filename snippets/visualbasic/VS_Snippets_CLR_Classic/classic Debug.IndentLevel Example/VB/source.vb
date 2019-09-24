@@ -19,4 +19,4 @@ Public Class Form1
         Debug.WriteLine("End of list of errors")
         ' </Snippet1>
     End Sub
-End Class 'Form1 
+End Class

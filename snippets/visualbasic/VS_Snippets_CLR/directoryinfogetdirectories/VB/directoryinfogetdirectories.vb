@@ -14,5 +14,5 @@ Public Class GetDirectoriesTest
             Console.WriteLine(dri.Name)
         Next dri
     End Sub
-End Class 'GetDirectoriesTest
+End Class
 ' </snippet1>

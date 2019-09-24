@@ -66,6 +66,6 @@ Namespace Samples.AspNet.VB
            writer.Write("</Font>")
         End If
      End Sub
-  End Class 'DebugInfoControl
+  End Class
 End Namespace
 ' </Snippet1>

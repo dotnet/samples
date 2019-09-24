@@ -22,4 +22,4 @@ Public Class Form1
         End Set
     End Property
     ' </Snippet1>
-End Class 'Form1
+End Class

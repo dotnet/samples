@@ -84,6 +84,6 @@ Namespace CloneBasicAuthentication
             Return Nothing
         End Function 'PreAuthenticate
 
-    End Class 'CloneBasic
+    End Class
 'End of namespace CloneBasicAuthentication
 End Namespace 'CloneBasicAuthentication 

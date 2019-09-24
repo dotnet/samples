@@ -19,7 +19,7 @@ Public Class RequestDeclare
     Public Sub New()
         myFileWebRequest = Nothing
     End Sub
-End Class ' RequestDeclare
+End Class
 
 
 
@@ -94,7 +94,7 @@ Class FileWebRequest_resbeginend
         allDone.Set()
         Console.WriteLine("File reading is over.")
     End Sub
-End Class ' FileWebRequest_resbeginend
+End Class
 
 ' </Snippet2> 
 ' </Snippet1>

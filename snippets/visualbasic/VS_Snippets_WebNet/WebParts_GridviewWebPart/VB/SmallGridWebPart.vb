@@ -133,7 +133,7 @@ Namespace Samples.AspNet.VB.Controls
       Return theField
 
     End Function 'BuildBoundField
-  End Class 'SmallGridWebPart 
+  End Class
 
 End Namespace
 ' </snippet2>

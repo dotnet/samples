@@ -31,5 +31,5 @@ Public Class Sample
       reader.Close()
 
     End Sub
-End Class 'Sample
+End Class
 '</snippet1>

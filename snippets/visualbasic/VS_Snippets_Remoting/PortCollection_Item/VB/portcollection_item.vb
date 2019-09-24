@@ -73,4 +73,4 @@ Class PortCollection_Item
          Console.WriteLine("Exception: " & ex.Message)
       End Try
    End Sub
-End Class 'PortCollection_Item
+End Class

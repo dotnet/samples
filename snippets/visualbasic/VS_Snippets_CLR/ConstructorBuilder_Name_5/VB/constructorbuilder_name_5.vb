@@ -100,5 +100,5 @@ Public Class MyConstructorBuilder
          Console.WriteLine("Could not access Type.")
       End If
    End Sub
-End Class 'MyConstructorBuilder
+End Class
 ' </Snippet1>

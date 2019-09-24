@@ -73,4 +73,4 @@ Public Class WebHeaderCollection_Remove
             Console.WriteLine((ControlChars.Tab + headers.AllKeys(i) + " : " + headers(i)))
         Next i
     End Sub
-End Class 'WebHeaderCollection_Remove
+End Class

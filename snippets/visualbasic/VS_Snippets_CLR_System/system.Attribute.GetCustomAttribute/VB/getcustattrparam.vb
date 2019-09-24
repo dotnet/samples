@@ -27,7 +27,7 @@ Namespace NDP_UE_VB
                 usageMsg = value
             End Set
         End Property
-    End Class ' ArgumentUsageAttribute 
+    End Class
     '</Snippet2>
 
     Public Class BaseClass
@@ -39,7 +39,7 @@ Namespace NDP_UE_VB
             strArray() As String, _
             ParamArray strList() As String)
         End Sub
-    End Class ' BaseClass
+    End Class
 
     Public Class DerivedClass
         Inherits BaseClass
@@ -51,7 +51,7 @@ Namespace NDP_UE_VB
             <ArgumentUsage("Can pass a parameter list or array here.")> _
             ParamArray strList() As String)
         End Sub
-    End Class ' DerivedClass
+    End Class
 
     Module CustomParamDemo
        

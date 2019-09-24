@@ -53,6 +53,6 @@ Class HttpWebRequest_Timeout
 	    
         End Try
     End Sub
-End Class ' HttpWebRequest_Timeout
+End Class
 
 

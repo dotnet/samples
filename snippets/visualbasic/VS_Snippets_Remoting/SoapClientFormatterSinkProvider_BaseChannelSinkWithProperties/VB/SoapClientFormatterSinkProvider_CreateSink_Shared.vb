@@ -10,4 +10,4 @@ Public Class HelloService
    Public Function HelloMethod(name As String) As String
       Return "Hi, " + name
    End Function 'HelloMethod
-End Class 'HelloService
+End Class

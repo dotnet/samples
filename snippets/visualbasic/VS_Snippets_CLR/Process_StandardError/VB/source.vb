@@ -43,5 +43,5 @@ Namespace Process_StandardError
             End Using
             ' </Snippet1>
         End Sub
-    End Class 'Class1
+    End Class
 End Namespace 'Process_StandardError

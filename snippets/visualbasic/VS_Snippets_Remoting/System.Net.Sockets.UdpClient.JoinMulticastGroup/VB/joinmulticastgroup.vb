@@ -39,7 +39,7 @@ Public Class Receive
       End While
       Return Ret
    End Function 'ReceiveUntilStop
-End Class 'Receive
+End Class
 
 ' The following Send class is used by both the ClientOriginator and 
 ' ClientTarget classes to send data to one another.
@@ -95,7 +95,7 @@ Public Class Send
       Return Ret
    End Function 'GetByteArray
 
-End Class 'Send
+End Class
 
 
 ' The ClientTarget class is the receiver of the ClientOriginator 
@@ -155,7 +155,7 @@ Public Class ClientTarget
       ' Exit the multicast conversation. 
       m_ClientTarget.DropMulticastGroup(m_GrpAddr)
    End Sub
-End Class 'ClientTarget
+End Class
 
 
 ' The following ClientOriginator class starts the multicast conversation
@@ -294,5 +294,5 @@ Public Class ClientOriginator
          Console.WriteLine("Unable to Join the multicast group")
       End If
    End Sub
-End Class 'ClientOriginator
+End Class
 ' </Snippet1>

@@ -73,4 +73,4 @@ Class MyHttpBindingClass
       Console.WriteLine _
           ("WSDL file with name 'HttpBinding_ctor_Output_VB.wsdl' file created Successfully")
    End Sub
-End Class 'MyHttpBindingClass
+End Class

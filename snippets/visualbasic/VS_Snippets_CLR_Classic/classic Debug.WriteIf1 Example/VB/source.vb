@@ -21,5 +21,5 @@ Public Class Form1
         Debug.WriteLineIf(generalSwitch.TraceVerbose, " is not a valid value for this method.")
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

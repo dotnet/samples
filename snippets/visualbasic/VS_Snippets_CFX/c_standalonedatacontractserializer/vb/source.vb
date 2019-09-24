@@ -38,7 +38,7 @@ Public Class Test
     <DataContract()>  _
     Public Class LibraryItem
        ' Code not shown.
-    End Class 'LibraryItem
+    End Class
     
     <DataContract()>  _
     Public Class Book

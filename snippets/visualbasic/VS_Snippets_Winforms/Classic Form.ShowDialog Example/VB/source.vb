@@ -83,4 +83,4 @@ Public Class Form1
     Private Sub showButton_Click(sender As Object, e As System.EventArgs)
        ShowMyDialogBox()
     End Sub
-End Class 'Form1 
+End Class

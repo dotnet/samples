@@ -146,4 +146,4 @@ Class PortClass
          Console.WriteLine("Exception " + ex.Message + " occurred")
       End Try
    End Sub
-End Class 'PortClass
+End Class

@@ -44,7 +44,7 @@ Public Class SamplesEncoding
 
    End Sub
 
-End Class 'SamplesEncoding
+End Class
 
 ' The example displays the following output when run on .NET Core:
 '

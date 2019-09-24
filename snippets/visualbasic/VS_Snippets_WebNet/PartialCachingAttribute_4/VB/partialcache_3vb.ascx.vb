@@ -24,6 +24,6 @@ Public Class ctlSelect
         Label1.Text = "You chose: " + state.SelectedItem.Text + " and " + country.SelectedItem.Text + "."
         TimeMsg.Text = DateTime.Now.ToString("T")
     End Sub
-End Class 'ctlSelect
+End Class
 ' </snippet1>
 

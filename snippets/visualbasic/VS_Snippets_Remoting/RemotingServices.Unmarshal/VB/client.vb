@@ -35,4 +35,4 @@ Public Class SampleClient
       objectSampleTwo.PrintMessage("I successfully unmarshaled your ObjRef.  Thanks.")
       ' </Snippet2>
    End Sub
-End Class 'SampleClient
+End Class

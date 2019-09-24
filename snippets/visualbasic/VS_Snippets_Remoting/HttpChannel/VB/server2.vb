@@ -26,4 +26,4 @@ Public Class SampleServer
       Console.ReadLine()
       ' </Snippet4>
    End Sub
-End Class 'SampleServer
+End Class

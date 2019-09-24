@@ -606,5 +606,5 @@ Namespace InsertTextClient
             txtFeedback.Text = s
 
         End Sub
-    End Class 'Window1
+    End Class
 End Namespace

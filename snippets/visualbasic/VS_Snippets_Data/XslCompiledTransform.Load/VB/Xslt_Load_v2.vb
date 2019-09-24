@@ -200,4 +200,4 @@ xslt.Load("http://serverName/data/xsl/order.xsl", XsltSettings.Default, resolver
 '</snippet11>    
 End Sub
 
-End Class 'XslCompiledTransformLoad
+End Class

@@ -86,7 +86,7 @@ Partial Class UIAFragmentProviderForm
         Application.Exit()
 
     End Sub
-End Class 'UIAFragmentProviderForm 
+End Class
 '
 'ToDo: Error processing original source shown below
 '    }

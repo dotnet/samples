@@ -144,7 +144,7 @@ Namespace WindowsApplication1
             Next
             button3.Enabled = False
         End Sub
-    End Class 'Form1
+    End Class
 End Namespace 'WindowsApplication1
 
 ' </Snippet1>

@@ -88,5 +88,5 @@ Namespace MyControlExample
          MessageBox.Show("Visible change event raised!!!")
       End Sub
 ' </Snippet1>
-   End Class 'MyForm 
+   End Class
 End Namespace 'MyControlExample

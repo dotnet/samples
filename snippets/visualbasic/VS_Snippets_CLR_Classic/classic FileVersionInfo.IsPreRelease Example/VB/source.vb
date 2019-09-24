@@ -17,5 +17,5 @@ Public Class Form1
         textBox1.Text = "File is prerelease version " & myFileVersionInfo.IsPreRelease
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

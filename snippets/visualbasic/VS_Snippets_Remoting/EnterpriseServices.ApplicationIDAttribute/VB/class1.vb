@@ -23,7 +23,7 @@ Public Class ApplicationIDAttribute_Value
         MsgBox("ApplicationIDAttribute.Value: " & attribute.Value.ToString())
 
     End Sub
-End Class 'ApplicationIDAttribute_Value
+End Class
 
 ' </snippet0>
 
@@ -39,4 +39,4 @@ Public Class ApplicationIDAttribute_Example
         valueExample.ValueExample()
     
     End Sub
-End Class 'ApplicationIDAttribute_Example
+End Class

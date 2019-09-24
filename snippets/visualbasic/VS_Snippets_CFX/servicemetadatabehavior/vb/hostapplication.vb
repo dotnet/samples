@@ -38,5 +38,5 @@ Namespace Microsoft.WCF.Documentation
         End Try
       End Using
     End Sub
-  End Class 'HostApplication
+  End Class
 End Namespace

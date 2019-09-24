@@ -52,6 +52,6 @@ Namespace MyInkEraser
         Private Sub SaveStrokes(ByVal sender As Object, ByVal e As RoutedEventArgs)
 
         End Sub
-    End Class 'Window1 'string strokes = inkEraser1.SaveStrokes();
+    End Class
 
 End Namespace

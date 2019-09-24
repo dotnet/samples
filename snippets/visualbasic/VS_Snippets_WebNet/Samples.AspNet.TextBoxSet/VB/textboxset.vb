@@ -165,7 +165,7 @@ Namespace Samples.AspNet.Controls.VB
         writer.RenderEndTag()
 
     End Sub
-    End Class 'TextBoxSet 
+    End Class
     '</snippet6>       
 End Namespace
 '</snippet2>

@@ -176,7 +176,7 @@ Public Class MySoapExtension
       myTextWriter.WriteLine(myTextReader.ReadToEnd())
       myTextWriter.Flush()
    End Sub
-End Class 'MySoapExtension
+End Class
 
 ' A SoapExtensionAttribute that can be associated with an 
 ' XML Web service method.
@@ -216,12 +216,12 @@ Public Class MySoapExtensionAttribute
          myFilename = value
       End Set
    End Property
-End Class 'MySoapExtensionAttribute
+End Class
 
 Public Class MySoapHeader
    Inherits SoapHeader
    Public text As String
-End Class 'MySoapHeader
+End Class
 
 <System.Web.Services.WebServiceBindingAttribute( _
    Name := "MathSvcSoap", Namespace := "http://tempuri.org/")>  _
@@ -261,4 +261,4 @@ Public Class MathSvc
       returnValue = CType(results(1), System.Single)
       Return CType(results(0), System.Single)
    End Function 'EndAdd
-End Class 'MathSvc
+End Class

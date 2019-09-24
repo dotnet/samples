@@ -71,5 +71,5 @@ Class MyXmlBinding
          Console.WriteLine("Exception: {0}", e.Message)
       End Try
    End Sub
-End Class 'MyXmlBinding
+End Class
 ' </Snippet1>

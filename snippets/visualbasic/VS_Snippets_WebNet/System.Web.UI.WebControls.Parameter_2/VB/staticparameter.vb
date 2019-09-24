@@ -94,7 +94,7 @@ Public Class StaticParameter
       End If
    End Function
 ' </snippet6>
-End Class ' StaticParameter
+End Class
 
 End Namespace ' Samples.AspNet
 ' </snippet1>

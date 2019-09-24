@@ -105,6 +105,6 @@ Public Class MyNewQueue
 
         End Sub
 
-End Class 'MyNewQueue
+End Class
 
 ' </Snippet1>

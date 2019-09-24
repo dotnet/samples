@@ -38,7 +38,7 @@ Public Class MyClientProvider
             nextProvider = Value
         End Set
     End Property
-End Class 'MyClientProvider
+End Class
 
 <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> _
 Friend Class MyClientChannelSink
@@ -116,7 +116,7 @@ Friend Class MyClientChannelSink
 
         End Get
     End Property
-End Class 'MyClientChannelSink
+End Class
 
 <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> _
 Public Class MyServerProvider
@@ -155,7 +155,7 @@ Public Class MyServerProvider
             nextProvider = Value
         End Set
     End Property
-End Class 'MyServerProvider
+End Class
 
 <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> _
 Friend Class MyServerChannelSink
@@ -242,7 +242,7 @@ Friend Class MyServerChannelSink
 
         End Get
     End Property
-End Class 'MyServerChannelSink
+End Class
 
 Public Class MyKey
-End Class 'MyKey
+End Class

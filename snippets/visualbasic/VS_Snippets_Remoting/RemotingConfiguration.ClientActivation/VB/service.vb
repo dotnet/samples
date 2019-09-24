@@ -30,5 +30,5 @@ Public Class HelloServiceClass
 
    End Function 'HelloMethod
 
-End Class 'HelloServiceClass
+End Class
 ' </Snippet3>

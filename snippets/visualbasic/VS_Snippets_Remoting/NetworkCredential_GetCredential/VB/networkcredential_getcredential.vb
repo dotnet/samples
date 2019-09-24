@@ -55,4 +55,4 @@ Class NetworkCredential_GetCredential
             Console.WriteLine(ControlChars.Cr + "The following exception was raised : {0}", e.Message)
         End Try
     End Sub
-End Class 'NetworkCredential_GetCredential
+End Class

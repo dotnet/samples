@@ -131,5 +131,5 @@ Public Class Form1
         Help.ShowHelp(Me, helpfile, keyword.Text)
     End Sub
     '</Snippet4>
-End Class 'Form1
+End Class
 '</snippet1>

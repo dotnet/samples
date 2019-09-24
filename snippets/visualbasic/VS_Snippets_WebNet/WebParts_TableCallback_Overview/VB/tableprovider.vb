@@ -77,7 +77,7 @@ Namespace Samples.AspNet.VB.Controls
             callback(_table.Rows)
 
         End Sub
-    End Class 'TableProviderWebPart           
+    End Class
 
 End Namespace
 '</Snippet1>

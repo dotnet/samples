@@ -65,7 +65,7 @@ Class Window1
         System.Diagnostics.Debug.WriteLine("")
 
     End Sub
-End Class 'Window1 
+End Class
 
 '<Snippet4>
 Public Class FilterInkCanvas
@@ -77,7 +77,7 @@ Public Class FilterInkCanvas
         Me.StylusPlugIns.Add(filter)
 
     End Sub
-End Class 'FilterInkCanvas
+End Class
 '</Snippet4>
 
 '<Snippet5>
@@ -93,7 +93,7 @@ Public Class DynamicallyFilteredInkCanvas
 
     End Sub
 
-End Class 'DynamicallyFilteredInkCanvas
+End Class
 '</Snippet5>
 
 '<Snippet9>
@@ -121,5 +121,5 @@ Public Class CustomRenderingInkCanvas
         MyBase.OnStrokeCollected(args)
 
     End Sub
-End Class 'CustomRenderingInkCanvas
+End Class
 '</Snippet9>

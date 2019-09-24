@@ -32,5 +32,5 @@ Class testClass
         ts2.Close()
     
     End Sub
-End Class 'testClass
+End Class
 '</Snippet1>

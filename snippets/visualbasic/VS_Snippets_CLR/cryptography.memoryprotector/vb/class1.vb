@@ -67,6 +67,6 @@ Public NotInheritable Class MemoryProtector
         MyBase.New(appName, primaryPurpose, specificPurpose)
 
     End Sub
-End Class 'MemoryProtector
+End Class
 '</Snippet5>
 '</Snippet1>

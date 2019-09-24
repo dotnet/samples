@@ -15,5 +15,5 @@ Class Test
         Console.WriteLine(o)
     
     End Sub
-End Class 'Test
+End Class
 '</Snippet1>

@@ -65,7 +65,7 @@ Namespace SDKSample
             Me.Content = myStackPanel
 
         End Sub
-    End Class 'TransformedBitmapExample
+    End Class
 End Namespace 'ImagingSnippetGallery
 
 ' </SnippetTransformedBitmapCodeExampleWholePage>

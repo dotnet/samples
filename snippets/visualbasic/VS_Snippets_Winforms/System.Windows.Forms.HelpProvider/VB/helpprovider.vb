@@ -114,5 +114,5 @@ Public Class Form1
         Me.Text = "Help Provider Demonstration"
 
     End Sub
-End Class 'Form1
+End Class
 '</Snippet1>

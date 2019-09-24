@@ -55,7 +55,7 @@ Public Class EmployeeLogic
    Public Shared Sub DeleteEmployee(ne As NorthwindEmployee)
    End Sub
 
-End Class 'EmployeeLogic
+End Class
 
 
 Public Class NorthwindEmployee
@@ -167,7 +167,7 @@ Public Class NorthwindEmployee
    Public Function Save() As Boolean
       Return True
    End Function 'Save
-End Class 'NorthwindEmployee
+End Class
 
 
 Friend Class NorthwindDataException
@@ -176,6 +176,6 @@ Friend Class NorthwindDataException
    Public Sub New(msg As String)
       MyBase.New(msg)
    End Sub
-End Class 'NorthwindDataException
+End Class
 End Namespace
 ' </snippet2>

@@ -38,4 +38,4 @@ Public Class TestClass
 ' </Snippet1>
    Return 0
   End Function 'Main
-End Class 'TestClass
+End Class

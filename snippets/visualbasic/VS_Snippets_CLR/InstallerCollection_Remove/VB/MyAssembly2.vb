@@ -32,7 +32,7 @@ Public Class MyInstaller
       MyBase.Uninstall(savedState)
       Console.WriteLine("UnInstall ..." + ControlChars.Newline)
    End Sub
-End Class 'MyInstaller
+End Class
 
 ' An Assembly that has its own installer.
 Public Class MyAssembly1
@@ -40,6 +40,6 @@ Public Class MyAssembly1
    Public Shared Sub Main()
       Console.WriteLine("This assembly is just an example for the Installer" + ControlChars.Newline)
    End Sub
-End Class 'MyAssembly1
+End Class
 
 

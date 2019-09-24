@@ -63,7 +63,7 @@ Public Class EmployeeLogic
       DeleteEmployee(tempEmp)
    End Sub
 
-End Class 'EmployeeLogic
+End Class
 
 Public Class NorthwindEmployee
 
@@ -168,7 +168,7 @@ Public Class NorthwindEmployee
       End If
    End Function 'Delete
 ' </snippet3>
-End Class 'NorthwindEmployee
+End Class
 
 Public Class NorthwindDataException
    Inherits Exception
@@ -177,6 +177,6 @@ Public Class NorthwindDataException
       MyBase.New(msg)
    End Sub
 
-End Class 'NorthwindDataException
+End Class
 End Namespace
 ' </snippet2>

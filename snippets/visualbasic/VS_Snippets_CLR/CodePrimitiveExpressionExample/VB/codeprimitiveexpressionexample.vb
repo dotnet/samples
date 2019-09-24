@@ -18,6 +18,6 @@ Namespace CodeDomSamples
             '</Snippet2>
 
         End Sub
-    End Class 'CodePrimitiveExpressionExample
+    End Class
 End Namespace 'CodeDomSamples
 '</Snippet1>

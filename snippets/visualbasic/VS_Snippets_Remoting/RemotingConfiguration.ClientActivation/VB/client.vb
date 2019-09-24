@@ -31,5 +31,5 @@ Public Class ClientClass
 
    End Sub
 
-End Class 'ClientClass
+End Class
 ' </Snippet1>

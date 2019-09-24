@@ -156,7 +156,7 @@ Namespace Samples.AspNet.VB.Controls
         End Function 'BuildSiteMap
 ' </snippet4>
 
-    End Class 'AccessSiteMapProvider
+    End Class
 
 End Namespace
 ' </snippet1>

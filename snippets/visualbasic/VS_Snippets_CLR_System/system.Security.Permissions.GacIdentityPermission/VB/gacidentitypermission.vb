@@ -207,7 +207,7 @@ Public Class GacIdentityPermissionDemo
             System.Environment.ExitCode = 101
         End Try
     End Sub
-End Class 'GacIdentityPermissionDemo
+End Class
 
 
 

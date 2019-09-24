@@ -64,6 +64,6 @@ Public Class DoubleClickButton
         SetStyle(ControlStyles.StandardClick Or ControlStyles.StandardDoubleClick, True)
     
     End Sub
-End Class 'DoubleClickButton
+End Class
 '</snippet2>
 '</snippet1>

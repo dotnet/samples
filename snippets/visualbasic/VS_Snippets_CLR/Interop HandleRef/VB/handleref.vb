@@ -33,7 +33,7 @@ Public Class Overlapped2
     Private offset As Integer
     Private offsetHigh As Integer
     Private hEvent As IntPtr
-End Class 'Overlapped2
+End Class
 
 
 Public Class LibWrap
@@ -74,7 +74,7 @@ Public Class LibWrap
      <[In](), Out()> ByVal flag As Overlapped2) _
     As Boolean
 
-End Class 'LibWrap
+End Class
 
 Public Class App
     Public Shared Sub Main()
@@ -100,5 +100,5 @@ Public Class App
         Console.WriteLine("Read with class parameter: {0}", buffer)
 
     End Sub
-End Class 'App
+End Class
 ' </Snippet1> 

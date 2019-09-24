@@ -14,5 +14,5 @@ Class InTest
         
         tOut.WriteLine("Buenos Dias, {0}!", name)
     End Sub
-End Class 'InTest
+End Class
 '</snippet1>

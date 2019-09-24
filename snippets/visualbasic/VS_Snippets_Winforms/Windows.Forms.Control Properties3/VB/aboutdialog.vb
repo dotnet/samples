@@ -65,5 +65,5 @@ Private Sub AboutDialog_Load(sender As Object, e As EventArgs) Handles MyBase.Lo
 ' </snippet1>
 
 
-   End Class 'AboutDialog
+   End Class
 End Namespace 'ControlMembers2

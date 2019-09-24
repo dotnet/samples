@@ -72,4 +72,4 @@ Class HttpWebRequest_IfModifiedSince
             Console.WriteLine("Message :{0}", e.Message)
         End Try
     End Sub
-End Class ' HttpWebRequest_IfModifiedSince
+End Class

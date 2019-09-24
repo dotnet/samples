@@ -113,7 +113,7 @@ Namespace MyInstallContextNamespace
             myInstallObject.Rollback( mySavedState )
          End Try
       End Sub
-   End Class 'InstallContext_Example
+   End Class
 End Namespace 'MyInstallContextNamespace
 
 ' </Snippet1>

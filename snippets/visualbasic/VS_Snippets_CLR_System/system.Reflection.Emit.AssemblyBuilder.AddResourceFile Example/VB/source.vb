@@ -82,6 +82,6 @@ Class AsmBuilderGetFileDemo
 
    End Sub
 
-End Class 'AsmBuilderGetFileDemo
+End Class
 
 ' </Snippet1>

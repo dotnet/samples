@@ -7,7 +7,7 @@ Class Sample
                         "on this computer is {0}.", _
                         Environment.ProcessorCount)
    End Sub
-End Class 'Sample
+End Class
 '
 'This example produces the following results:
 '

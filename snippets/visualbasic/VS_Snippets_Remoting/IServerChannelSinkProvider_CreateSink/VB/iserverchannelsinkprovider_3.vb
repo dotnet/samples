@@ -55,4 +55,4 @@ Class MyServerChannelSinkStack
       Console.WriteLine("Number of Uris in second IChannelDataStore: " + _ 
                                                myIChannelDataStore1.ChannelUris.Length.ToString())
    End Sub
-End Class 'MyServerChannelSinkStack
+End Class

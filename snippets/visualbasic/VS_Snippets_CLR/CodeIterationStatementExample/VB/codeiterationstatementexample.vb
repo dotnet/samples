@@ -39,7 +39,7 @@ Namespace CodeDomSamples
         '</Snippet2>      
       End Sub
 
-   End Class 'CodeIterationStatementExample
+   End Class
 
 End Namespace 'CodeDomSamples 
 

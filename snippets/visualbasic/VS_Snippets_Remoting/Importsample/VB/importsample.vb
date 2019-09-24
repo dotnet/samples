@@ -88,5 +88,5 @@ Class MySample
       Next i
    End Sub
 ' </Snippet6>
-End Class 'MySample
+End Class
 ' </Snippet7>

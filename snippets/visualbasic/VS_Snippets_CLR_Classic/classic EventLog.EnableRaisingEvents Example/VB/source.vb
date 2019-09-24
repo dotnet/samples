@@ -25,5 +25,5 @@ Class MySample
     Public Shared Sub MyOnEntryWritten(source As Object, e As EntryWrittenEventArgs)
         Console.WriteLine(("Written: " + e.Entry.Message))
     End Sub
-End Class ' MySample
+End Class
 ' </Snippet1>

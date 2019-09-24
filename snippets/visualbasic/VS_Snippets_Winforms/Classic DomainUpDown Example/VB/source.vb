@@ -52,5 +52,5 @@ Public Class Form1
             ControlChars.Cr & "SelectedItem: " & domainUpDown1.SelectedItem.ToString()))
     End Sub
     ' </Snippet1>
-End Class 'Form1
+End Class
 

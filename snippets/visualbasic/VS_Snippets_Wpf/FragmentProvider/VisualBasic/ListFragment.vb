@@ -402,5 +402,5 @@ Public Class ListProvider
 
 #End Region
 
-End Class 'ListProvider 
+End Class
 '

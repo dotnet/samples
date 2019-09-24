@@ -38,7 +38,7 @@ Public Class SamplesKoreanCalendar
       Console.WriteLine()
    End Sub
 
-End Class 'SamplesKoreanCalendar 
+End Class
 
 
 'This code produces the following output.

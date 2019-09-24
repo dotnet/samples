@@ -74,4 +74,4 @@ Public Class MyForm
       MessageBox.Show("The style releated to the 'Form' has been changed")
    End Sub
 ' </Snippet1>
-End Class 'MyForm
+End Class

@@ -36,5 +36,5 @@ Public Class MyPerformanceCounterInstaller
     End Sub
     Public Shared Sub Main()
     End Sub
-End Class 'MyPerformanceCounterInstaller
+End Class
 ' </Snippet1>

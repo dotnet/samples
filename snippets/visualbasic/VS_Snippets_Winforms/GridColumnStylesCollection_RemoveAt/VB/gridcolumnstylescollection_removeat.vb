@@ -202,4 +202,4 @@ Public Class MyForm
       End If
    End Sub
 ' </Snippet1>
-End Class 'MyForm 
+End Class

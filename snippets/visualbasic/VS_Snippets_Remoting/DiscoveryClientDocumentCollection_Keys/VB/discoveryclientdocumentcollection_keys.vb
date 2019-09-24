@@ -67,5 +67,5 @@ Class DiscoveryClientDocumentCollectionSample_Keys
       End If
 ' </Snippet3>
    End Sub
-End Class 'DiscoveryClientDocumentCollectionSample_Keys
+End Class
 

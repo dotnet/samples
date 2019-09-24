@@ -42,7 +42,7 @@ Public Class SamplesHebrewCalendar
 
    End Sub
 
-End Class 'SamplesHebrewCalendar
+End Class
 
 
 'This code produces the following output.

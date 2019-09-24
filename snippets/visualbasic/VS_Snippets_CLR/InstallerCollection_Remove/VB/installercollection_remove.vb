@@ -70,4 +70,4 @@ Public Class InstallerCollection_Remove
          Console.WriteLine("Exception raised : {0}", e.Message)
       End Try
    End Sub
-End Class 'InstallerCollection_Remove
+End Class

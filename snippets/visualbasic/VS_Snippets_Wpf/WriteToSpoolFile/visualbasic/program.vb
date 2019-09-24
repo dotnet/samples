@@ -41,6 +41,6 @@ Namespace WriteToSpoolFile
 
 		End Sub
 
-	End Class 'end Program class
+	End Class
 
 End Namespace ' end namespace

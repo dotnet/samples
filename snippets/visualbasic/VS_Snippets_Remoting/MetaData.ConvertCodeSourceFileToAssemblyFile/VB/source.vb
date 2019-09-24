@@ -7,5 +7,5 @@ Public Class Test
    Public Shared Sub Main()
       MetaData.ConvertCodeSourceFileToAssemblyFile("CsSource.cs", "testAssm.dll", "")
    End Sub
-End Class 'Test
+End Class
 ' </Snippet1>

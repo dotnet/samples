@@ -44,7 +44,7 @@ Class AccountManager
         Return balance
 
     End Function 'ReadAccountBalance
-End Class 'AccountManager 
+End Class
 
 ' <snippet10>
 ' A CRM Worker
@@ -114,7 +114,7 @@ Public Class Account
         '</snippet13>
     End Sub
     
-End Class 'Account
+End Class
 
 ' </snippet10>
 
@@ -228,7 +228,7 @@ Public Class AccountCompensator
     Public Overrides Sub EndAbort() 
     
     End Sub
-End Class 'AccountCompensator ' nothing to do
+End Class
 ' </snippet29>
 ' </snippet20>
 ' </snippet0>

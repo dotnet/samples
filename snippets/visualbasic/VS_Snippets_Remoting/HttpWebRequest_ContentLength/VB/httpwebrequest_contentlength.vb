@@ -80,4 +80,4 @@ Class HttpWebRequest_ContentLength
             Console.WriteLine(("Message : " + e.Message))
         End Try
     End Sub
-End Class ' HttpWebRequest_ContentLength 
+End Class

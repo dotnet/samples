@@ -411,6 +411,6 @@ Namespace MonthCalender
          checkBox2.Checked = True
       End Sub
       '</Snippet7>
-   End Class 'Form1
+   End Class
 End Namespace 'MonthCalender
 '</Snippet1>

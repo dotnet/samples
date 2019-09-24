@@ -15,4 +15,4 @@ Class Form1
         textBox1.Text = "Comments: " & myFileVersionInfo.Comments
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

@@ -154,6 +154,6 @@ Public Class RegistryPermissionDemo
 
     '</Snippet9>
 
-End Class 'RegistryPermissionDemo
+End Class
 
 '</Snippet1>

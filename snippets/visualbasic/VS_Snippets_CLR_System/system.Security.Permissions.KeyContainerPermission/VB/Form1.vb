@@ -266,5 +266,5 @@ Public Class KeyContainerPermissionDemo
         End Try
 
     End Sub
-End Class 'KeyContainerPermissionDemo
+End Class
 '</Snippet1>

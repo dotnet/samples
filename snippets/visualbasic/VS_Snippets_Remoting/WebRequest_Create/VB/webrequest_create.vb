@@ -51,4 +51,4 @@ Class WebRequest_Create_Uri
             Console.WriteLine("Message  :{0} ", e.Message)
         End Try
     End Sub
-End Class ' WebRequest_Create_Uri
+End Class

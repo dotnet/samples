@@ -30,5 +30,5 @@ Public Class Client
       Console.WriteLine("The Object Url is " + myWellKnownClientType.ObjectUrl)
 ' </Snippet1>
    End Sub
-End Class 'Client 
+End Class
 

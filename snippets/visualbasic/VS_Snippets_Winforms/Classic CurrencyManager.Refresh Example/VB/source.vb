@@ -28,5 +28,5 @@ Public Class Form1
         myCurrencyManager.Refresh()
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

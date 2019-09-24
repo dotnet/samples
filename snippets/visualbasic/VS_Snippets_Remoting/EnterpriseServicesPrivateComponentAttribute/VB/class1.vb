@@ -22,7 +22,7 @@ Public Class PrivateComponentAttribute_Example
         MsgBox("Private component called successfully.")
     
     End Sub
-End Class 'PrivateComponentAttribute_Example
+End Class
 ' </snippet1>
 
 Public Class PrivateComponentAttribute_Test
@@ -36,7 +36,7 @@ Public Class PrivateComponentAttribute_Test
         example.Example()
     
     End Sub
-End Class 'PrivateComponentAttribute_Test
+End Class
 ' </snippet0>
 
 'add Main so code compiles
@@ -45,4 +45,4 @@ Public Class Test
     Public Shared Sub Main() 
     
     End Sub
-End Class 'Test 
+End Class

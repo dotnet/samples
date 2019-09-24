@@ -55,7 +55,7 @@ Public Class SamplesArrayList
         Console.WriteLine(sb)
     End Sub
 '</snippet2>
-End Class 'SamplesArrayList
+End Class
 
 '<snippet6> 
 Public Class ReverseStringComparer 
@@ -69,7 +69,7 @@ Public Class ReverseStringComparer
         Return - [String].Compare(s1, s2)
     
     End Function 'Compare
-End Class 'ReverseStringComparer
+End Class
 '</snippet6>
 
 '</snippet7>

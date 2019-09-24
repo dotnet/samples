@@ -23,4 +23,4 @@ Public Class Form1
         paramCollection.Add("CustomerID", OdbcType.VarChar, 5)
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

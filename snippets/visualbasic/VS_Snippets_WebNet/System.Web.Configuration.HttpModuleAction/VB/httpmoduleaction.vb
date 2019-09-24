@@ -69,6 +69,6 @@ Class UsingHttpModuleAction
         Next currentModule1
         ' </Snippet5>
     End Sub
-End Class 'UsingHttpModuleAction
+End Class
 
 

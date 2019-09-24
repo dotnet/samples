@@ -145,5 +145,5 @@ Public Class TreeViewOwnerDraw
         Return bounds
     End Function 'NodeBounds
 
-End Class 'TreeViewOwnerDraw 
+End Class
 '</Snippet1>

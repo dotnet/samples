@@ -78,7 +78,7 @@ Class WebRequest_Preauthenticate
             Console.WriteLine(ControlChars.Cr + "Message:{0} ", e.Message)
         End Try
     End Sub
-End Class ' WebRequest_Preauthenticate 
+End Class
 
 
 

@@ -22,4 +22,4 @@ Public Class ClientActivatedType
       ' Report our client identity name.
       Return "RemoteMethodCalled. User name : " + WindowsIdentity.GetCurrent().Name
    End Function 'RemoteMethod
-End Class 'ClientActivatedType
+End Class

@@ -30,5 +30,5 @@ Partial Class Window1
         MessageBox.Show("Hello, " + firstName.Text + " " + lastName.Text)
 
     End Sub
-End Class 'Window1
+End Class
 

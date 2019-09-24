@@ -27,7 +27,7 @@ Public Class SamplesHashtable
         Console.WriteLine()
     End Sub
 
-End Class 'SamplesHashtable 
+End Class
 
 
 ' This code produces the following output.

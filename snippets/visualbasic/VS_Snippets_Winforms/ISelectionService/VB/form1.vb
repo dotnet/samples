@@ -57,5 +57,5 @@ Namespace ISelectionServiceExample
 
       Private Sub componentClass1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles componentClass1.Load
       End Sub
-   End Class 'Form1 
+   End Class
 End Namespace 'ISelectionServiceExample

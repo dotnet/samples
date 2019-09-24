@@ -61,7 +61,7 @@ Namespace Samples.AspNet.VB.Controls
             callback(_table.DefaultView(0))
 
         End Sub
-    End Class 'RowProviderWebPart           
+    End Class
 
 End Namespace
 '</Snippet1>

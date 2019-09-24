@@ -43,7 +43,7 @@ Namespace MyProcessSample
             myProcess.BindToRunningProcesses()
         End Sub
 
-    End Class 'MyProcess
+    End Class
 
 End Namespace 'MyProcessSample
 ' </Snippet1>

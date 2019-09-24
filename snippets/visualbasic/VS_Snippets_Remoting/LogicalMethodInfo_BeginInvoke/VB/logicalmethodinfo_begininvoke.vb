@@ -102,5 +102,5 @@ Namespace MyMath
          Dim results As Object() = Me.EndInvoke(asyncResult)
          Return CInt(results(0))
       End Function 'EndAdd
-   End Class 'MyMath
+   End Class
 End Namespace 'MyMath

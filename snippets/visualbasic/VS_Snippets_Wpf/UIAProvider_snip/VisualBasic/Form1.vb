@@ -30,5 +30,5 @@ Partial Class Form1
         InitializeComponent()
 
     End Sub
-End Class 'Form1
+End Class
 '

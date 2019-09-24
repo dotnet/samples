@@ -25,7 +25,7 @@ Public Class Page1
     Public Shared Sub Main
 
     End Sub
-End Class 'Page1
+End Class
 
 Namespace MyMath
 	Public Class Math 

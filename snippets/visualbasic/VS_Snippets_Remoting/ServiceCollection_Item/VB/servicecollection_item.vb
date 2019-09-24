@@ -83,4 +83,4 @@ Class MyClass1
       myServiceDescription.Write("output.wsdl")
 ' </Snippet1>
    End Sub
-End Class 'MyClass1
+End Class

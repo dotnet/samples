@@ -25,5 +25,5 @@ Namespace ImageElementExample
             InitializeComponent()
 
         End Sub
-    End Class 'SampleViewer 
+    End Class
 End Namespace

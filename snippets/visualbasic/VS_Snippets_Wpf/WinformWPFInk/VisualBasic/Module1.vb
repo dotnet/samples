@@ -106,7 +106,7 @@ Class WinformInk
     
     End Sub
     '</SnippetLoadWinforms>
-End Class 'WinformInk 
+End Class
 
 
 Class WPFInk
@@ -213,7 +213,7 @@ Class WPFInk
         Console.WriteLine()
     
     End Sub
-End Class 'WPFInk
+End Class
 
 
 Class Program
@@ -251,4 +251,4 @@ Class Program
         Console.ReadLine()
     
     End Sub
-End Class 'Program
+End Class

@@ -22,4 +22,4 @@ Public Class ServerClass
          Console.WriteLine("The following exception is raised at server side" + ex.Message)
       End Try
    End Sub
-End Class 'ServerClass
+End Class

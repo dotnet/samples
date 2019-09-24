@@ -30,7 +30,7 @@ Public Class Form1
     Shared Sub Main()
         Application.Run(New Form1)
     End Sub
-End Class 'Form1
+End Class
 
 '<Snippet2>
 Public Class CustomizedTreeView
@@ -68,6 +68,6 @@ Public Class CustomizedTreeView
         SelectedNode = Nothing
     End Sub
 
-End Class 'CustomizedTreeView 
+End Class
 '</Snippet2>
 '</Snippet1>

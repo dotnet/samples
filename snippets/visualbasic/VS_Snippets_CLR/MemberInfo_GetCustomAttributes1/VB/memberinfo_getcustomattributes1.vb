@@ -15,7 +15,7 @@ Imports System.Reflection
             Return myName
         End Get
     End Property
-End Class 'MyAttribute
+End Class
 
 ' Define a class that has the custom attribute associated with one of its members.
 Public Class MyClass1
@@ -23,7 +23,7 @@ Public Class MyClass1
     <MyAttribute("This is an example attribute.")> Public Sub MyMethod(ByVal i As Integer)
         Return
     End Sub
-End Class 'MyClass1
+End Class
 
 
 Public Class MemberInfo_GetCustomAttributes
@@ -51,5 +51,5 @@ Public Class MemberInfo_GetCustomAttributes
             Console.WriteLine("An exception occurred: {0}.", e.Message)
         End Try
     End Sub
-End Class 'MemberInfo_GetCustomAttributes
+End Class
 ' </Snippet1>

@@ -131,4 +131,4 @@ Public Class CookieCollection_Item_2
         Console.WriteLine(ChrW(60) + "urlname" + ChrW(62) + " is the name of the CookiesServer.aspx site installed locally")
         Console.WriteLine(ControlChars.Cr + "Example : CookieCollection_Item_2 http://www.MyServer.com/CookiesServer.aspx")
     End Sub
-End Class 'CookieCollection_Item_2 
+End Class

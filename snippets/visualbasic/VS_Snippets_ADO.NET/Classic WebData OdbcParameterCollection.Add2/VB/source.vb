@@ -23,4 +23,4 @@ Public Class Form1
       Dim paramIndex As Integer = paramCollection.Add(paramObject)
     End Sub 
     ' </Snippet1>
-End Class 'Form1 
+End Class

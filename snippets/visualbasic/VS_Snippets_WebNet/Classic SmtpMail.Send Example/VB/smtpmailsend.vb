@@ -36,5 +36,5 @@ Namespace SMTPMailSendExample
          SmtpMail.Send(from, mailto, subject, body)
          '</Snippet2>
       End Sub
-   End Class 'Class1
+   End Class
 End Namespace 'SMTPMailSendExample

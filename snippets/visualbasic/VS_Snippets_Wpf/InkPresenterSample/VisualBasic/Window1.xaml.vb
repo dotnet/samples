@@ -79,5 +79,5 @@ Class Window1
         inkPresenter1.Strokes.Add(newStroke)
     
     End Sub
-End Class 'Window1 
+End Class
 '</Snippet1>

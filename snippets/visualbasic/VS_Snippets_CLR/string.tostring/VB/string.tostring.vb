@@ -16,7 +16,7 @@ Class stringToString
       Console.WriteLine("New str2:      {0}", str2)
       Console.WriteLine("str1 same as str2?: {0}", [Object].ReferenceEquals(str1, str2))
    End Sub
-End Class 'Sample
+End Class
 '
 'This code produces the following output:
 'Original str1: 123

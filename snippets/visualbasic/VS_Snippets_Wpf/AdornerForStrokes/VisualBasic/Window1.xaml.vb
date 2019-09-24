@@ -39,4 +39,4 @@ Partial Class Window1
 
     End Sub
     '</Snippet3>
-End Class 'Window1 
+End Class

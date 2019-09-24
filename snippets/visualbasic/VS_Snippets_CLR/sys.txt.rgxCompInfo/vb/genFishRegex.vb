@@ -28,5 +28,5 @@ Class GenFishRegEx
         Regex.CompileToAssembly(rciList, an)
     
     End Sub
-End Class 'GenFishRegEx
+End Class
 ' </snippet1>

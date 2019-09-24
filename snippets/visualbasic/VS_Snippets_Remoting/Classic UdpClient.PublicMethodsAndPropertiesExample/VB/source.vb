@@ -222,7 +222,7 @@ Public Class MyUdpClientExample
       MyUdpClientCommunicator("EndPointExample")
       MyUdpClientMulticastConfiguration("JoinMultiCastExample")
    End Sub
-End Class 'MyUdpClientExample
+End Class
 
 'end class
 

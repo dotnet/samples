@@ -120,4 +120,4 @@ Public Class MyForm1
       myTable.Rows(3)("CustName") = "Robert"
       myTable.Rows(4)("CustName") = "John"
    End Sub
-End Class 'MyForm1
+End Class
