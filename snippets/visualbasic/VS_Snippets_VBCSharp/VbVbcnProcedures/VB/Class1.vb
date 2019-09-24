@@ -11,11 +11,11 @@ Public Class Class1
 
   '****************************************************************************
   '<Snippet66>
-  Function allOnes(ByVal n As Integer) As Integer()
-      Dim i As Integer, iArray(n) As Integer
+  Function AllOnes(n As Integer) As Integer()
+      Dim iArray(n) As Integer
       For i = 0 To n - 1
           iArray(i) = 1
-      Next i
+      Next
       Return iArray
   End Function
   '</Snippet66>
