@@ -45,7 +45,7 @@ Class Alice
 
     End Sub
     '</Snippet2>
-End Class 'Alice
+End Class
 
 Public Class Bob
     Public bobPublicKey() As Byte
@@ -81,5 +81,5 @@ Public Class Bob
         End Using
 '</Snippet3>
     End Sub
-End Class 'Bob 
+End Class
 '</Snippet1>

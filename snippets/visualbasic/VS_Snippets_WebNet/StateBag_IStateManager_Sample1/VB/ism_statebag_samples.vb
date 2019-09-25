@@ -119,7 +119,7 @@ Namespace StateBagSampleVB
             End While
             Return result
         End Function 'EnumerateViewState
-    End Class 'MyItem 
+    End Class
     ' </Snippet7>
     ' </Snippet8>
 
@@ -200,7 +200,7 @@ Namespace StateBagSampleVB
             output.Write("<br>Enumerating the view state of the custom control<br>")
             output.Write(myItem.EnumerateViewState())
         End Sub
-    End Class 'MyControl
+    End Class
     ' </snippet9>
 End Namespace 'StateBagSampleVB
 ' </snippet1>

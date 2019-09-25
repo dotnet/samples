@@ -127,4 +127,4 @@ Public Class MyDataForm
          myTable.Rows.Add(newRow)
       Next j
    End Sub
-End Class 'MyDataForm
+End Class

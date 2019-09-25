@@ -42,5 +42,5 @@ Public Class EventWatcherPolling
         Return 0
 
     End Function 'Main
-End Class 'EventWatcherPolling
+End Class
 '</Snippet1>

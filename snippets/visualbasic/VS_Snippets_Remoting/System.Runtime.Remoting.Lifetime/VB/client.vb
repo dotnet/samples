@@ -24,7 +24,7 @@ Public Class Client
       Console.ReadLine()
    End Sub
    
-End Class 'Client
+End Class
 
 
 Public Class MyClientSponsor
@@ -49,5 +49,5 @@ Public Class MyClientSponsor
       Return TimeSpan.FromSeconds(4)
    End Function 'Renewal
    
-End Class 'MyClientSponsor
+End Class
 ' </Snippet1>

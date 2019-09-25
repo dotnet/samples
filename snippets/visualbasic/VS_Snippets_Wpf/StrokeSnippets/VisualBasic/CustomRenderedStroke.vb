@@ -84,5 +84,5 @@ Namespace StrokeSnippets_VB
         End Sub
         '</Snippet25>
 
-    End Class 'CustomRenderedStroke 
+    End Class
 End Namespace

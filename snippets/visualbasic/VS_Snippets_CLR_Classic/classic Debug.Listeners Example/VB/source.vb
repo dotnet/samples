@@ -17,4 +17,4 @@ Class Form1
         Debug.Listeners.Add(myWriter)
         ' </Snippet1>
     End Sub
-End Class 'Form1 
+End Class

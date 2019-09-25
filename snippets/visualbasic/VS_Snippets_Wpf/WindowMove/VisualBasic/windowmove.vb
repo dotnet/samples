@@ -441,6 +441,6 @@ Namespace SDKSample
                 Dim app As New WindowMove()
                 app.Run()
             End Sub
-        End Class 'TestMain
-    End Class 'WindowMove
+        End Class
+    End Class
 End Namespace 'SDKSample

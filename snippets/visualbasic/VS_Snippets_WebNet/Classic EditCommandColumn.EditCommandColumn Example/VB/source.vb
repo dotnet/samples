@@ -13,5 +13,5 @@ Public Class Page1
         Dim editcolumn As New EditCommandColumn()
     End Sub
     ' </Snippet1>
-End Class 'Page1
+End Class
 

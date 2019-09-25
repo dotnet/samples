@@ -42,6 +42,6 @@ Namespace UsingItemTemplatesVB
       l.Text = CType(container.DataItem, DataRowView)(column).ToString()
    End Sub
    ' </snippet2>
- End Class 'GenericItem
+ End Class
 End Namespace 'UsingItemTemplatesVB
 ' </snippet1>

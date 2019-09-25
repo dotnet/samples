@@ -36,7 +36,7 @@ Class UseFishRegEx
             Next i
         Next m
     End Sub
-End Class 'UseFishRegEx
+End Class
 
 '
 'This code example produces the following results:

@@ -39,8 +39,8 @@ Public Class Form1
             End Set 
         End Property
         ' Insert any additional code.
-    End Class 'MyControl
+    End Class
     ' </Snippet1>
-End Class 'Form1 
+End Class
 
 

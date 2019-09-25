@@ -258,4 +258,4 @@ Public Class MyForm
    Private Sub myComboBox3_SelectedIndexChanged(sender As Object, e As EventArgs)
      myDataGridBoolColumn.AllowNull = CType(myComboBox3.Items(myComboBox3.SelectedIndex), Boolean)
    End Sub
-End Class 'MyForm
+End Class

@@ -220,6 +220,6 @@ Class PolicyLevelSample
             End If
         End While
     End Sub
-End Class 'PolicyLevelSample 
+End Class
 '</Snippet16>
 '</Snippet1>

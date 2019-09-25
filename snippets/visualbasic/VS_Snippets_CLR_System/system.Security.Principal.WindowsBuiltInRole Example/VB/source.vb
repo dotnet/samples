@@ -46,6 +46,6 @@ Class SecurityPrincipalDemo
         DemonstrateWindowsBuiltInRoleEnum()
 
     End Sub
-End Class 'SecurityPrincipalDemo 
+End Class
 ' </Snippet1>
 

@@ -40,4 +40,4 @@ Public Class WebClient_DownloadData
             Console.WriteLine(("The following general exception was raised: " + e.Message))
         End Try
     End Sub
-End Class 'WebClient_DownloadData
+End Class

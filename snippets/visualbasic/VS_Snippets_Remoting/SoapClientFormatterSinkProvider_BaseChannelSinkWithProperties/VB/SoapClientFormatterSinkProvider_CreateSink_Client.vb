@@ -30,4 +30,4 @@ Public Class ClientClass
          Console.WriteLine("The following exception is raised at client side" + ex.Message)
       End Try
    End Sub
-End Class 'ClientClass
+End Class

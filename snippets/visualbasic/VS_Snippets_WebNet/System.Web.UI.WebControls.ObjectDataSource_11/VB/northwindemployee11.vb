@@ -64,7 +64,7 @@ Public Class EmployeeLogic
 
    ' And so on...
 
-End Class 'EmployeeLogic
+End Class
 ' <snippet4>
 
 Public Class NorthwindEmployee
@@ -162,7 +162,7 @@ Public Class NorthwindEmployee
    End Function 'Delete
 ' </snippet3>
 
-End Class 'NorthwindEmployee
+End Class
 ' </snippet4>
 
 Friend Class NorthwindDataException
@@ -171,7 +171,7 @@ Friend Class NorthwindDataException
    Public Sub New(msg As String)
       MyBase.New(msg)
    End Sub
-End Class 'NorthwindDataException
+End Class
 
 End Namespace
 ' </snippet2>

@@ -83,5 +83,5 @@ End Sub
          'MessageBox.Show("Top: " + ctrl.Top.ToString() + ControlChars.Cr + "Bottom: " + ctrl.Bottom.ToString() + ControlChars.Cr + "Left: " + ctrl.Left.ToString() + ControlChars.Cr + "Right: " + ctrl.Right.ToString() + ControlChars.Cr + "Width: " + ctrl.Width.ToString() + ControlChars.Cr + "Height: " + ctrl.Height.ToString() + ControlChars.Cr + "Size: " + ctrl.Size.ToString() + ControlChars.Cr + "Location: " + ctrl.Location.ToString(), "button1 Position", MessageBoxButtons.OKCancel)
          Me.AddOKCancelButtons()
       End Sub
-   End Class 'Form1 
+   End Class
 End Namespace 'ControlMembers 

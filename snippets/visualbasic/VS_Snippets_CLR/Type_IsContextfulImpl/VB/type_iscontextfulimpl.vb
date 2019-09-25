@@ -18,7 +18,7 @@ Public Class MyTypeDelegatorClass
         End If
         Return False
     End Function 'IsContextfulImpl
-End Class 'MyTypeDelegatorClass
+End Class
 Public Class MyTypeDemoClass
     Public Shared Sub Main()
         Try
@@ -43,10 +43,10 @@ Public Class MyTypeDemoClass
             Console.WriteLine("Exception: {0}", e.Message.ToString())
         End Try
     End Sub
-End Class 'MyTypeDemoClass
+End Class
 ' This class demonstrates the IsContextfulImpl method.
 Public Class MyContextBoundClass
     Inherits ContextBoundObject
     Public myString As String = "This class is used to demonstrate members of the Type class."
-End Class 'MyContextBoundClass
+End Class
 ' </Snippet1>

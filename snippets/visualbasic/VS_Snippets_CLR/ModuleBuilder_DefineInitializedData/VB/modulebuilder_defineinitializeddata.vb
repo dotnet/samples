@@ -39,7 +39,7 @@ Public Class CodeGenerator
          Return Me.myAssemblyBuilder
       End Get
    End Property
-End Class 'CodeGenerator
+End Class
 
 Public Class CallerClass
    Public Shared Sub Main()
@@ -51,4 +51,4 @@ Public Class CallerClass
       Console.WriteLine("The object having the field value is :" + _
                         myInfo.GetValue(myBuilder).ToString())
    End Sub
-End Class 'CallerClass
+End Class

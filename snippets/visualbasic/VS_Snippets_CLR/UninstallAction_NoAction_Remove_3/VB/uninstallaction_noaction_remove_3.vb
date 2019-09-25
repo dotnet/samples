@@ -68,7 +68,7 @@ Public Class MyUninstallActionClass
                         "UninstallAction_NoAction_Remove_3.exe ")
    End Sub
 
-End Class 'MyUninstallActionClass
+End Class
 ' </Snippet1>
 
 

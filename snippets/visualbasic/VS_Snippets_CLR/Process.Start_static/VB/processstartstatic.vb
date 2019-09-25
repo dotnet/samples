@@ -47,7 +47,7 @@ Namespace MyProcessSample
             myProcess.OpenWithArguments()
             myProcess.OpenWithStartInfo()
         End Sub
-    End Class 'MyProcess
+    End Class
 End Namespace 'MyProcessSample
 ' </Snippet1>
 ' <Snippet2>

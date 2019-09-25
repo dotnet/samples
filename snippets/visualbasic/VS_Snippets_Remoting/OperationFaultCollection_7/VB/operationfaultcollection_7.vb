@@ -133,5 +133,5 @@ Public Class MyOperationFaultCollectionSample
          Console.WriteLine("Message : " & e.Message.ToString())
       End Try
    End Sub
-End Class 'MyOperationFaultCollectionSample
+End Class
 ' </Snippet1>

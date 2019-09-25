@@ -83,6 +83,6 @@ Namespace Examples.VB.WebControls.Design
             output.Write(textData)
         End Sub
 
-    End Class ' CustomWebControl
+    End Class
 End Namespace ' Examples.VB.WebControls.Design
 ' </snippet5>

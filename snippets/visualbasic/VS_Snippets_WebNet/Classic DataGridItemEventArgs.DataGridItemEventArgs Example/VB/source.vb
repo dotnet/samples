@@ -13,4 +13,4 @@ Public Class Page1
         Dim DG_event_arg As New DataGridItemEventArgs(e.Item)
     End Sub
     ' </Snippet1>
-End Class 'Page1 
+End Class

@@ -90,7 +90,7 @@ Namespace Samples.AspNet.VB.Controls
 
         End Sub
 
-    End Class 'UpperCaseFilter
+    End Class
 
 End Namespace
 ' </snippet2>

@@ -100,4 +100,4 @@ Class Window1
         End If
 
     End Sub
-End Class 'Window1 
+End Class

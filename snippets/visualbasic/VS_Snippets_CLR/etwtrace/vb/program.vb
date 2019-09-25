@@ -18,14 +18,14 @@ Class MyCompanyEventSource
         Public Const DataBase As EventKeywords = CType(2, EventKeywords)
         Public Const Diagnostic As EventKeywords = CType(4, EventKeywords)
         Public Const Perf As EventKeywords = CType(8, EventKeywords)
-    End Class 'Keywords
+    End Class
     '</Snippet3>
 
     '<Snippet4>
     Public Class Tasks
         Public Const Page As EventTask = CType(1, EventTask)
         Public Const DBQuery As EventTask = CType(1, EventTask)
-    End Class 'Tasks
+    End Class
     '</Snippet2>
     '</Snippet4>
 
@@ -91,7 +91,7 @@ Class MyCompanyEventSource
     End Sub
     '</Snippet12>
     Public Shared Log As New MyCompanyEventSource()
-End Class 'MyCompanyEventSource
+End Class
 
 
 Class Program
@@ -116,5 +116,5 @@ Class Program
         MyCompanyEventSource.Log.Failure("This is a failure 3")
         '</Snippet13>
     End Sub
-End Class 'Program
+End Class
 '</Snippet1>

@@ -111,5 +111,5 @@ Class MyClass1
 ' </Snippet6>
 ' </Snippet5>
    End Sub
-End Class '[MyClass1]
+End Class
 ' </Snippet8>

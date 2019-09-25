@@ -14,7 +14,7 @@ Public Class Class1
         
         Inherits ContainerControl
         ' Insert code here.
-    End Class 'MyForm
+    End Class
     ' </Snippet1>
     ' <Snippet2>
     Public Shared Function Main() As Integer
@@ -32,4 +32,4 @@ Public Class Class1
         Return 0
     End Function 'Main
     ' </Snippet2>
-End Class 'Class1 
+End Class

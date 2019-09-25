@@ -89,7 +89,7 @@ Public Class SampleWebRequestEvent
         formatter.IndentationLevel -= 1
 
     End Sub
-End Class 'SampleWebRequestEvent
+End Class
 
 ' </Snippet6>
 ' </Snippet1>

@@ -56,7 +56,7 @@ Class Program
         Automation.RemoveAllEventHandlers()
     
     End Sub
-End Class 'Program
+End Class
 
 
 Class Reader
@@ -242,7 +242,7 @@ Class Reader
         Return node
     
     End Function 'GetTopLevelWindow
-End Class 'Reader 
+End Class
 ' </Snippet102>
 ' Reader class.
 ' FocusTracker namespace

@@ -140,4 +140,4 @@ Public Class Form1
         DrawTextInARectangle1(e)
 
     End Sub
-End Class 'Form1
+End Class

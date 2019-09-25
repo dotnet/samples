@@ -21,5 +21,5 @@ Public Class Form1
         Debug.WriteLineIf(generalSwitch.TraceVerbose, myObject, category)
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

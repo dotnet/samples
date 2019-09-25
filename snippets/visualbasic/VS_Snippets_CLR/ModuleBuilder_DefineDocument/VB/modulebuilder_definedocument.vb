@@ -37,13 +37,13 @@ Namespace ILGenServer
                                                              CObj(myDocument).ToString())
 
       End Sub
-   End Class 'CodeGenerator
+   End Class
 
    Public Class CallerClass
 
       Public Shared Sub Main()
          Dim myGenerator As New CodeGenerator()
       End Sub
-   End Class 'CallerClass
+   End Class
 End Namespace 'ILGenServer
 ' </Snippet1>

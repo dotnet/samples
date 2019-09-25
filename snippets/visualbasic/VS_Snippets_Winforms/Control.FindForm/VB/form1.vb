@@ -90,4 +90,4 @@ Public Class Form1
       myForm.BackColor = Color.Red
    End Sub
    '</Snippet1>
-End Class 'Form1 
+End Class

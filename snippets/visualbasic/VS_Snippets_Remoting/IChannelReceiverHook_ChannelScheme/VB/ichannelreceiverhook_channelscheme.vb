@@ -40,7 +40,7 @@ Public Class IChannelReceiverHook_ChannelScheme
          Console.WriteLine("Message : " + e.Message)
       End Try
    End Sub
-End Class 'IChannelReceiverHook_ChannelScheme
+End Class
 
 ' <Snippet1>
 ' Implementation of 'IChannelReceiverHook' interface.
@@ -93,5 +93,5 @@ Public Class MyCustomChannel
                                           Implements IChannelReceiverHook.AddHookChannelUri
       ' Null implementation.
    End Sub
-End Class 'MyCustomChannel 
+End Class
 ' </Snippet1>

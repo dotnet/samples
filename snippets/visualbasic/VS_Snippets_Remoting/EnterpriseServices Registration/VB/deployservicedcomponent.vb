@@ -70,4 +70,4 @@ Class DeployServicedComponent
         '</snippet0>
 
     End Sub
-End Class 'DeployServicedComponent
+End Class

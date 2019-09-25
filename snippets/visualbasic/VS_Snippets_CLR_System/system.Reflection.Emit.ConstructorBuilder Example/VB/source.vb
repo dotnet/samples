@@ -133,7 +133,7 @@ Class TestCtorBuilder
       Console.WriteLine("aPoint.y = {0}", myDynamicType.InvokeMember("GetY", BindingFlags.InvokeMethod, Nothing, aPoint, New Object() {}))
       Console.WriteLine("aPoint.z = {0}", myDynamicType.InvokeMember("GetZ", BindingFlags.InvokeMethod, Nothing, aPoint, New Object() {}))
    End Sub
-End Class 'TestCtorBuilder
+End Class
 
 
 

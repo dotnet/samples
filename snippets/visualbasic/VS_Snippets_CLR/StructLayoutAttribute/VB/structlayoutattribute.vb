@@ -23,7 +23,7 @@ Namespace InteropSample
       <FieldOffset(10)> Public wMinute As Short
       <FieldOffset(12)> Public wSecond As Short
       <FieldOffset(14)> Public wMilliseconds As Short
-   End Class 'MySystemTime
+   End Class
 
 
    Friend Class NativeMethods
@@ -31,7 +31,7 @@ Namespace InteropSample
       <DllImport("kernel32.dll")> _
       Friend Shared Sub GetSystemTime(<MarshalAs(UnmanagedType.LPStruct)> ByVal st As MySystemTime)
       End Sub
-   End Class 'NativeMethods
+   End Class
 
    Class TestApplication
 
@@ -46,7 +46,7 @@ Namespace InteropSample
             Console.WriteLine(("Exception : " + e.Message.ToString()))
          End Try
       End Sub
-   End Class 'TestApplication
+   End Class
 End Namespace 'InteropSample 
 ' </Snippet3>
 ' </Snippet2>

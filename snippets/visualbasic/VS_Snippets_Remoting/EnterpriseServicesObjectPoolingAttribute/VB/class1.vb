@@ -10,21 +10,21 @@ Imports System.Reflection
 <ObjectPooling(True)>  _
 Public Class ObjectPoolingAttribute_Ctor_Bool
     Inherits ServicedComponent
-End Class 'ObjectPoolingAttribute_Ctor_Bool
+End Class
 ' </snippet1>
 
 ' <snippet2>
 <ObjectPooling(True, 1, 10)>  _
 Public Class ObjectPoolingAttribute_Ctor_Bool_Int_Int
     Inherits ServicedComponent
-End Class 'ObjectPoolingAttribute_Ctor_Bool_Int_Int
+End Class
 ' </snippet2>
 
 ' <snippet3>
 <ObjectPooling(1, 10)>  _
 Public Class ObjectPoolingAttribute_Ctor_Int_Int
     Inherits ServicedComponent
-End Class 'ObjectPoolingAttribute_Ctor_Int_Int
+End Class
 ' </snippet3>
 
 ' <snippet4>
@@ -46,7 +46,7 @@ Public Class ObjectPoolingAttribute_Enabled
         MsgBox("ObjectPoolingAttribute.Enabled: " & attribute.Enabled)
     
     End Sub
-End Class 'ObjectPoolingAttribute_Enabled
+End Class
 ' </snippet4>
 
 ' </snippet0>
@@ -62,4 +62,4 @@ Public Class ObjectPoolingAttribute_Example
         enabledExample.EnabledExample()
 
     End Sub
-End Class 'ObjectPoolingAttribute_Example
+End Class

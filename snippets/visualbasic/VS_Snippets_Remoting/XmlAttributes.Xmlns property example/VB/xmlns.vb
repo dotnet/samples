@@ -10,7 +10,7 @@ Public Class Student
 
    <XmlNamespaceDeclarationsAttribute()> _   
    Public myNamespaces As XmlSerializerNamespaces
-End Class 'Student
+End Class
  
 
 Public Class Run

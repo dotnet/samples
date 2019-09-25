@@ -85,5 +85,5 @@ Public Class Sample
     Private Shared Sub ValidationCallbackOne(ByVal sender As Object, ByVal args As ValidationEventArgs)
         Console.WriteLine(args.Message)
     End Sub
-End Class 'Sample 
+End Class
 ' </Snippet1>

@@ -64,7 +64,7 @@ Friend Class NestedEnum
       ' Remove the listener for the type resolve events.
       RemoveHandler currentDomain.TypeResolve, resolveHandler 
    End Sub
-End Class 'NestedEnum
+End Class
 
 
 ' Helper class called when a resolve type event is raised.
@@ -90,7 +90,7 @@ Friend Class TypeResolveHandler
       ' Complete the type.		    
       Return m_Module.Assembly
    End Function 'ResolveEvent
-End Class 'TypeResolveHandler
+End Class
 
 ' </Snippet1>
 

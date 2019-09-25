@@ -76,7 +76,7 @@ Partial Class Window1
         Next s
 
     End Sub
-End Class 'Window1 
+End Class
 '</Snippet3>
 
 
@@ -109,4 +109,4 @@ Class CodeSnippet
     
     End Sub
     '</Snippet1>
-End Class 'CodeSnippet
+End Class

@@ -54,5 +54,5 @@ Public Class Form1
         textBox1.Text = trackBar1.Value
     End Sub 
 
-End Class 'Form1
+End Class
 '</Snippet1>

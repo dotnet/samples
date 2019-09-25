@@ -25,7 +25,7 @@ Public Class SamplesCalendar
       Dim LastDay = New System.DateTime(DateTime.Now.Year, 12, 31)
       Console.WriteLine("There are {0} weeks in the current year ({1}).", myCal.GetWeekOfYear(LastDay, myCWR, myFirstDOW), LastDay.Year)
    End Sub
-End Class 'SamplesCalendar
+End Class
 
 
 'This code produces the following output.  Results vary depending on the system date.

@@ -273,5 +273,5 @@ Public Class RootButton
     End Function 'IRawElementProviderFragmentRoot.GetFocus
 
 #End Region
-End Class 'RootButton 
+End Class
 

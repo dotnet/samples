@@ -294,5 +294,5 @@ Class UIAMultipleViewPattern_snippets
             Dim app As New UIAMultipleViewPattern_snippets()
         
         End Sub
-    End Class 'TestMain
-End Class 'UIAMultipleViewPattern_snippets
+    End Class
+End Class

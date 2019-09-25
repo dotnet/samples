@@ -21,4 +21,4 @@ Class MyMainClass
 	'</SNIPPET1>
     
     End Sub
-End Class 'MyMainClass
+End Class

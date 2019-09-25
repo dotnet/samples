@@ -26,4 +26,4 @@ Public Class DiscoveryClientProtocol_Download
       myStream.Close()
 ' </Snippet1>
    End Sub
-End Class 'DiscoveryClientProtocol_Download 
+End Class

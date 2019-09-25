@@ -49,6 +49,6 @@ Class HttpWebRequest_UserAgent
             Console.WriteLine(("Message : " + e.Message))
         End Try
     End Sub
-End Class ' HttpWebRequest_UserAgent
+End Class
 
 

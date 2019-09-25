@@ -26,7 +26,7 @@ Namespace CodeDomSamples
          '</Snippet2>
      End Sub
    
-    End Class 'CodeArgumentReferenceExpressionExample    
+    End Class
 
 End Namespace
 '</Snippet1>

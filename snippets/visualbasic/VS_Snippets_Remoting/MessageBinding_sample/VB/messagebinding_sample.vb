@@ -74,5 +74,5 @@ Class MyClass1
       myOperationBinding.Extensions.Add(mySoapOperationBinding)
       Return myOperationBinding
    End Function 'CreateOperationBinding
-End Class 'MyClass1
+End Class
 ' </Snippet1>

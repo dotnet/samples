@@ -5,7 +5,7 @@ Class Sample
       Console.WriteLine()
       Console.WriteLine("GetFolderPath: {0}", Environment.GetFolderPath(Environment.SpecialFolder.System))
    End Sub
-End Class 'Sample
+End Class
 '
 'This example produces the following results:
 '

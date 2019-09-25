@@ -42,6 +42,6 @@ Namespace CustomCursor
         'NOTE: The cursor name is acase sensitive.
         Me.Cursor = New Cursor(Me.GetType(), "MyCursor.cur")
       End Sub
-   End Class 'Form1
+   End Class
 End Namespace 'CustomCursor
 '</Snippet1>

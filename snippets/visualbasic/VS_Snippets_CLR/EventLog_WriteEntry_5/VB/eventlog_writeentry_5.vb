@@ -50,5 +50,5 @@ Class EventLog_WriteEntry_5
          Console.WriteLine("Exception:{0}", e.Message.ToString())
       End Try
    End Sub
-End Class 'EventLog_WriteEntry_5
+End Class
 

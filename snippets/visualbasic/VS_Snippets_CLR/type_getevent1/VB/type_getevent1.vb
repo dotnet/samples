@@ -29,5 +29,5 @@ Class MyEventExample
             Console.WriteLine("The following exception was raised : {0}", e.Message)
         End Try
     End Sub
-End Class 'MyEventExample
+End Class
 ' </Snippet1>

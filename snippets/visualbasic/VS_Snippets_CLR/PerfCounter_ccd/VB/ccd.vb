@@ -24,4 +24,4 @@ Public Class Snippet
         '</Snippet1>
         
     End Sub
-End Class 'Snippet
+End Class

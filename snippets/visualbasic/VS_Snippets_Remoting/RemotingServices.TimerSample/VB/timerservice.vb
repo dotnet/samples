@@ -25,7 +25,7 @@ Public Class TimerServiceEventArgs
             Return m_Message
         End Get
     End Property
-End Class 'TimerServiceEventArgs
+End Class
 
 
 ' Define the delegate for the event
@@ -105,6 +105,6 @@ Public Class TimerService
         Return lease
     
     End Function 'InitializeLifetimeService
-End Class 'TimerService
+End Class
 
 ' </Snippet3>

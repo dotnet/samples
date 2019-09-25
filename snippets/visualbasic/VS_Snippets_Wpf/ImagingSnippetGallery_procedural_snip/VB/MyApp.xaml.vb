@@ -39,5 +39,5 @@ Namespace SDKSample
             MessageBox.Show("Unhandled exception: " + args.ExceptionObject.ToString())
 
         End Sub
-    End Class 'MyApp
+    End Class
 End Namespace 'ImagingSnippetGallery

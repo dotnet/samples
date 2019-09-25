@@ -23,5 +23,5 @@ Public Class Sample
         writer.Formatting = Formatting.Indented
         root.WriteContentTo(writer)
     End Sub
-End Class 'Sample
+End Class
 ' </Snippet1>

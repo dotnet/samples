@@ -46,7 +46,7 @@ Namespace RemotingSamples
             End Select
             End While
         End Sub
-    End Class 'MyIChannelReceiverChannelDataServerClass
+    End Class
 
 ' <Snippet1>
    Class MyCustomChannel
@@ -139,6 +139,6 @@ Namespace RemotingSamples
          End If
       End Sub
 ' </Snippet5>
-   End Class 'MyCustomChannel 
+   End Class
 ' </Snippet1>
 End Namespace 'RemotingSamples

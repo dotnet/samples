@@ -81,7 +81,7 @@ Friend Class Service
            "client.com")
          '</snippet2>    
     End Sub 
-End Class 'Service
+End Class
 
 
 
@@ -145,6 +145,6 @@ Public Class CalculatorClient
         Return MyBase.Channel.Add(n1, n2)
     
     End Function 'Add
-End Class 'CalculatorClient
+End Class
 
 

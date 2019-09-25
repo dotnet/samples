@@ -41,7 +41,7 @@ Namespace Samples.AspNet.VB
             End If
             Return count
         End Function 'CreateChildControls
-    End Class 'SimpleSpreadsheetControl
+    End Class
 
 
     Public Class SimpleSpreadsheetRow
@@ -106,6 +106,6 @@ Namespace Samples.AspNet.VB
                 writer.Write("<TD>This is a test</TD>")
             End If
         End Sub
-    End Class 'SimpleSpreadsheetRow
+    End Class
 End Namespace
 ' </Snippet2>

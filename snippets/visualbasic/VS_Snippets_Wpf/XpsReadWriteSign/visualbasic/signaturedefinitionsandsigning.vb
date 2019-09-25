@@ -122,6 +122,6 @@ Namespace SDKSample
 
 		'</SnippetSignXpsDocument>
 
-	End Class ' end:class SignatureUtilites
+	End Class
 
 End Namespace ' end:namespace

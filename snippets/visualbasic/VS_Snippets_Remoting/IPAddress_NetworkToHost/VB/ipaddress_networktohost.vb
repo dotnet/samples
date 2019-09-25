@@ -81,4 +81,4 @@ Class NetworkToHostByteSample
         Console.WriteLine("Network byte order to Host byte order of {0} is {1}", networkByte, hostByte)
     End Sub
 ' </Snippet3>	
-End Class 'NetworkToHostByteSample 
+End Class

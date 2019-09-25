@@ -246,6 +246,6 @@ Class Sample
         sample.GenerateVBCode(outputFileName)
 
     End Sub
-End Class 'Sample 
+End Class
 '</Snippet9>
 '</Snippet1>

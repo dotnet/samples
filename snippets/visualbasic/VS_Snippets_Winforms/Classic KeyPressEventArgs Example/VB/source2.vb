@@ -23,5 +23,5 @@ Public Class Form1
         
         Friend Sub myKeyCounter(sender As Object, ex As KeyPressEventArgs)
         End Sub
-    End Class 'myKeyPressClass
-End Class 'Form1 
+    End Class
+End Class

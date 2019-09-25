@@ -5,7 +5,7 @@ Public Class ABaseType
    Public Sub BasePublicMethod(argument1 As Integer)
    End Sub
     
-End Class 'ABaseType 
+End Class
 
 Public Class ADerivedType
    Inherits ABaseType
@@ -13,7 +13,7 @@ Public Class ADerivedType
    ' Violates rule DoNotDecreaseInheritedMemberVisibility.
    Private Shadows Sub BasePublicMethod(argument1 As Integer)
    End Sub
-End Class 'ADerivedType
+End Class
 
 End Namespace
 '</Snippet1>

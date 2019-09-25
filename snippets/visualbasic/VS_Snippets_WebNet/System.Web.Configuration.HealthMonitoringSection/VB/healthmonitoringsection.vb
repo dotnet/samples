@@ -519,7 +519,7 @@ healthMonitoringSection.Rules.Clear()
                 Console.WriteLine("Check your command line for errors.")
             End Try
         End Sub
-    End Class ' UsingHealthMonitoringSection.
+    End Class
     
 End Namespace ' Samples.Aspnet.SystemWebConfiguration
 

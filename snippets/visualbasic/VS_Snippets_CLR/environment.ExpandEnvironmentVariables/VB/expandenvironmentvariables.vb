@@ -12,7 +12,7 @@ Class Sample
       str = Environment.ExpandEnvironmentVariables(query)
       Console.WriteLine("ExpandEnvironmentVariables: {0}  {1}", nl, str)
    End Sub
-End Class 'Sample
+End Class
 '
 'This example produces the following results:
 '

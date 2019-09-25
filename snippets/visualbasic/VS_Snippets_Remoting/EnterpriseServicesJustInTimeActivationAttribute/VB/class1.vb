@@ -10,14 +10,14 @@ Imports System.Reflection
 <JustInTimeActivation()>  _
 Public Class JITAAttribute_Ctor
     Inherits ServicedComponent
-End Class 'JITAAttribute_Ctor
+End Class
 ' </snippet1>
 
 ' <snippet2>
 <JustInTimeActivation(False)>  _
 Public Class JITAAttribute_Ctor_Bool
     Inherits ServicedComponent
-End Class 'JITAAttribute_Ctor_Bool
+End Class
 ' </snippet2>
 
 ' <snippet3>
@@ -33,7 +33,7 @@ Public Class JITAAttribute_Value
         MsgBox("JustInTimeActivationAttribute.Value: " & attribute.Value)
     
     End Sub
-End Class 'JITAAttribute_Value
+End Class
 ' </snippet3>
 
 ' </snippet0>
@@ -50,4 +50,4 @@ Public Class JITAAttribute_Example
         valueExample.ValueExample()
     
     End Sub
-End Class 'JITAAttribute_Example
+End Class

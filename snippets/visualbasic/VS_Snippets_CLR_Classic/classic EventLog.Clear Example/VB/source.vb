@@ -13,5 +13,5 @@ Class MySample
         
         myLog.Clear()
     End Sub
-End Class 'MySample
+End Class
 ' </Snippet1>

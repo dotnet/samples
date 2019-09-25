@@ -10,14 +10,14 @@ Imports System.Reflection
 <MustRunInClientContext()>  _
 Public Class MustRunInClientContextAttribute_Ctor
     Inherits ServicedComponent
-End Class 'MustRunInClientContextAttribute_Ctor
+End Class
 ' </snippet1>
 
 ' <snippet2>
 <MustRunInClientContext(False)>  _
 Public Class MustRunInClientContextAttribute_Ctor_Bool
     Inherits ServicedComponent
-End Class 'MustRunInClientContextAttribute_Ctor_Bool
+End Class
 ' </snippet2>
 
 ' <snippet3>
@@ -33,7 +33,7 @@ Public Class MustRunInClientContextAttribute_Value
         MsgBox("MustRunInClientContextAttribute.Value: " & attribute.Value)
     
     End Sub
-End Class 'MustRunInClientContextAttribute_Value
+End Class
 ' </snippet3>
 
 ' </snippet0>
@@ -50,4 +50,4 @@ Public Class MustRunInClientContextAttribute_Example
         valueExample.ValueExample()
     
     End Sub
-End Class 'MustRunInClientContextAttribute_Example
+End Class

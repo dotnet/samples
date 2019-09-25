@@ -41,4 +41,4 @@ Public Class WebClientSample
     
     End Sub
     '</snippet1>
-End Class 'WebClientSample
+End Class

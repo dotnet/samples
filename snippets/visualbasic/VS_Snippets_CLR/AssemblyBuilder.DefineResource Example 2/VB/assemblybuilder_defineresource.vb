@@ -57,4 +57,4 @@ Public Class MyEmitTest
    End Function 'CreateAssembly
 ' </Snippet2>
 ' </Snippet1>
-End Class 'MyEmitTest 
+End Class

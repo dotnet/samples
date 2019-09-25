@@ -425,7 +425,7 @@ Public Class FileIOPermissionDemo
             System.Environment.ExitCode = 101
         End Try
     End Sub
-End Class 'FileIOPermissionDemo
+End Class
 
 
 ' This class generates FileIOPermission objects.

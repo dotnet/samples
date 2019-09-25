@@ -73,5 +73,5 @@ Class MyPortTypeClass
       myOperation.Messages.Add(output)
       Return myOperation
    End Function 'CreateOperation
-End Class 'MyPortTypeClass
+End Class
 ' </Snippet1>

@@ -5,7 +5,7 @@ Class Sample
       Console.WriteLine()
       Console.WriteLine("StackTrace: '{0}'", Environment.StackTrace)
    End Sub
-End Class 'Sample
+End Class
 '
 'This example produces the following results:
 '

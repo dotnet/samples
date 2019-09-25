@@ -27,5 +27,5 @@ Public Class Sample
         Dim shallow As XmlNode = root.CloneNode(False)
         Console.WriteLine(shallow.OuterXml)
     End Sub
-End Class 'Sample
+End Class
 ' </Snippet1>

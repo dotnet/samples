@@ -69,5 +69,5 @@ Class ShadowedStroke
         MyBase.DrawCore(context, overriddenAttributes)
 
     End Sub
-End Class 'ShadowedStroke
+End Class
 '</Snippet1>

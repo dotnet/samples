@@ -64,7 +64,7 @@ Class Sample
         End If
         Console.WriteLine(format, title, lower, resultPhrase, upper)
     End Sub
-End Class 'Sample
+End Class
 
 '
 'This code example produces the following results:

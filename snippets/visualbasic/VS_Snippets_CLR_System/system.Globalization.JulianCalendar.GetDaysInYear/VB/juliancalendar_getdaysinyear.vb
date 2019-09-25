@@ -37,7 +37,7 @@ Public Class SamplesJulianCalendar
 
    End Sub
 
-End Class 'SamplesJulianCalendar
+End Class
 
 
 'This code produces the following output.

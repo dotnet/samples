@@ -100,5 +100,5 @@ Public Class InstallerCollection_Add
       Console.WriteLine("InstallerCollection_Add executes the installers in each of" + _
       " the given assembly. If /u or /uninstall option is given it uninstalls the assemblies.")
    End Sub
-End Class 'InstallerCollection_Add
+End Class
 ' </Snippet1>

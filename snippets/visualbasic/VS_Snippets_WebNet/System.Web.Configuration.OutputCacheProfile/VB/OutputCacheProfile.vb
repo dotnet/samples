@@ -135,7 +135,7 @@ Class UsingOutputCacheProfile
     ' </Snippet12>
 
    End Sub
-End Class 'UsingOutputCacheProfile 
+End Class
 
 ' UsingOutputCacheProfile class end.
 ' Samples.Aspnet.SystemWebConfiguration namespace end.

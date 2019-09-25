@@ -54,5 +54,5 @@ Class myDiscoveryClient_Results
          Console.WriteLine(e.Message)
       End Try
    End Sub
-End Class 'myDiscoveryClient_Results
+End Class
 ' </Snippet1>

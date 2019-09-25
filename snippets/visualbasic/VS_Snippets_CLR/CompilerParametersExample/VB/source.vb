@@ -218,6 +218,6 @@ Namespace CompilerParametersExample
             End If
         End Sub
 
-    End Class 'CompileClass
+    End Class
 End Namespace
 '</Snippet1>

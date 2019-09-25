@@ -21,5 +21,5 @@ Public Class Sample
         Console.WriteLine("Name of the entity reference:  {0}", entref.Name)
         Console.WriteLine("The entity replacement text:  {0}", entref.InnerText)
     End Sub
-End Class 'Sample
+End Class
 ' </Snippet1>

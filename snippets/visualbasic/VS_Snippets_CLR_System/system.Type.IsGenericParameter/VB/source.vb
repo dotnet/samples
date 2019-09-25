@@ -53,7 +53,7 @@ Public Class Test
         DisplayGenericTypeInfo(GetType(String))
     
     End Sub
-End Class 'Test
+End Class
 
 ' This example produces the following output:
 '

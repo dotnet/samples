@@ -90,6 +90,6 @@ Namespace CodeDomSamples
             '</Snippet3>		
         End Sub
         
-    End Class 'CodeDelegateInvokeExpressionExample 
+    End Class
 End Namespace 'CodeDomSamples
 '</Snippet1>

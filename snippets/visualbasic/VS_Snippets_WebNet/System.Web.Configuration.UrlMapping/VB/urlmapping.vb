@@ -242,4 +242,4 @@ Class UsingUrlMapping
             msg = e.ToString()
         End Try
     End Sub
-End Class 'UsingUrlMapping
+End Class

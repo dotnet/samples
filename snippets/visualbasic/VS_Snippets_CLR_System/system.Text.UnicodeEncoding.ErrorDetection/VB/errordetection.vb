@@ -53,7 +53,7 @@ Public Class SamplesUnicodeEncoding
 
    End Sub
 
-End Class 'SamplesUnicodeEncoding
+End Class
 
 ' </Snippet1>
 

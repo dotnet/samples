@@ -57,5 +57,5 @@ Class DiscoveryClientDocumentCollectionSample
          Console.WriteLine(myObjectCollection1(iIndex))
       Next iIndex
    End Sub
-End Class 'DiscoveryClientDocumentCollectionSample
+End Class
 ' </Snippet1>

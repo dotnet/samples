@@ -59,4 +59,4 @@ Class HttpWebRequest_HaveResponse
             Console.WriteLine("Message :{0}", e.Message)
         End Try
     End Sub
-End Class ' HttpWebRequest_HaveResponse
+End Class

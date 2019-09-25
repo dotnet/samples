@@ -29,5 +29,5 @@ Namespace RemotingSamples
             Console.WriteLine("Message : " + e.Message)
          End Try
       End Sub
-   End Class 'MyIChannelReceiverChannelDataClientClass
+   End Class
 End Namespace 'RemotingSamples

@@ -31,7 +31,7 @@ Class Sample
       Console.WriteLine(sbs.ToString())
       sb.Length = 0
    End Sub
-End Class 'Sample
+End Class
 '
 'This example produces the following results:
 '

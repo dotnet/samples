@@ -63,5 +63,5 @@ Class AsnEncodedDataSample
          MsgBox("Information could not be written out for this certificate.")
       End Try
    End Sub
-End Class 'AsnEncodedDataSample
+End Class
 '</SNIPPET1>

@@ -5,7 +5,7 @@ Class Sample
       Console.WriteLine()
       Console.WriteLine("UserInteractive: {0}", Environment.UserInteractive)
    End Sub
-End Class 'Sample
+End Class
 '
 'This example produces the following results:
 '

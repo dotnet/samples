@@ -4,7 +4,7 @@ Class Sample
    Public Shared Sub Main()
       Console.WriteLine("WorkingSet: {0}", Environment.WorkingSet)
    End Sub
-End Class 'Sample
+End Class
 '
 'This example produces the following results:
 '

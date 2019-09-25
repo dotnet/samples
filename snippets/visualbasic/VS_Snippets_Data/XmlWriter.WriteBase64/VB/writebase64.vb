@@ -3,30 +3,29 @@ Imports System.IO
 Imports System.Xml
 Imports System.Text
 
-Class TestBase64 
+Public Module TestBase64
 
     Private Const bufferSize As Integer = 4096
 
-    Public Shared Sub Main()
- 
-        Dim args() As String = System.Environment.GetCommandLineArgs()
-        Dim myTestBase64 As New TestBase64()
+    Public Sub Main()
+
+        Dim args As String() = System.Environment.GetCommandLineArgs()
         
         ' Check that the usage string is correct.
         If args.Length < 3
-            myTestBase64.Usage()
+            TestBase64.Usage()
             Return
         End If
 
         Dim fileOld As New FileStream(args(1), FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read)
-        myTestBase64.EncodeXmlFile("temp.xml", fileOld)
+        TestBase64.EncodeXmlFile("temp.xml", fileOld)
 
         Dim fileNew As New FileStream(args(2), FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite)
 
-        myTestBase64.DecodeOrignalObject("temp.xml", fileNew)
+        TestBase64.DecodeOrignalObject("temp.xml", fileNew)
 
         ' Compare the two files.
-        If myTestBase64.CompareResult(fileOld, fileNew)
+        If TestBase64.CompareResult(fileOld, fileNew)
             Console.WriteLine($"The recreated binary file {args(2)} is the same as {args(1)}")
         Else
             Console.WriteLine($"The recreated binary file {args(2)} is not the same as {args(1)}")
@@ -41,9 +40,9 @@ Class TestBase64
 
     ' Use the WriteBase64 method to create an XML document.  The object  
     ' passed by the user is encoded and included in the document.
-    Public Shared Sub EncodeXmlFile(xmlFileName As String, fileOld As FileStream)
+    Public Sub EncodeXmlFile(xmlFileName As String, fileOld As FileStream)
 
-        Dim buffer(bufferSize) As Byte
+        Dim buffer(bufferSize - 1) As Byte
         Dim readByte As Integer = 0
 
         Dim xw As New XmlTextWriter(xmlFileName, Encoding.UTF8)
@@ -77,10 +76,10 @@ Class TestBase64
 
     ' Use the ReadBase64 method to decode the new XML document 
     ' and generate the original object.
-    Public Shared Sub DecodeOrignalObject(xmlFileName As String, fileNew As FileStream)
+    Public Sub DecodeOrignalObject(xmlFileName As String, fileNew As FileStream)
 
-        Dim buffer(bufferSize) As Byte
-        Dim readByte as integer = 0
+        Dim buffer(bufferSize - 1) As Byte
+        Dim readByte As Integer = 0
 
         ' Create a file to write the bmp back.
         Dim bw As New BinaryWriter(fileNew)
@@ -106,8 +105,8 @@ Class TestBase64
         Dim count As Integer
         Dim readByte as integer = 0
 
-        Dim bufferOld(bufferSize) As Byte
-        Dim bufferNew(bufferSize) As Byte
+        Dim bufferOld(bufferSize - 1) As Byte
+        Dim bufferNew(bufferSize - 1) As Byte
 
         Dim binaryReaderOld As New BinaryReader(fileOld)
         Dim binaryReaderNew As New BinaryReader(fileNew)
@@ -119,7 +118,7 @@ Class TestBase64
             readByteOld = binaryReaderOld.Read(bufferOld, 0, bufferSize)
             readByteNew = binaryReaderNew.Read(bufferNew, 0, bufferSize)
 
-            If Not (readByteOld = readByteNew)
+            If readByteOld <> readByteNew
                 Return False
             End If
 
@@ -134,10 +133,10 @@ Class TestBase64
     End Function
 
     ' Display the usage statement.
-    Public Shared Sub Usage()
+    Public Sub Usage()
         Console.WriteLine("TestBase64 sourceFile, targetFile")
         Console.WriteLine("For example: TestBase64 winlogon.bmp, target.bmp")
     End Sub
 
-End Class
+End Module
 '</snippet1>

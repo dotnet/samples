@@ -21,7 +21,7 @@ Public Class Test
       Public Sub Print()
          Console.WriteLine("The double is equal to {0}.", dFloatingPoint)
       End Sub
-   End Class 'TestClass
+   End Class
   
    
    Public Shared Sub Main()
@@ -40,5 +40,5 @@ Public Class Test
       MetaData.ConvertTypesToSchemaToFile(types, SdlType.Wsdl, "test.xml")
    End Sub
 
-End Class 'Test
+End Class
 ' </Snippet1>

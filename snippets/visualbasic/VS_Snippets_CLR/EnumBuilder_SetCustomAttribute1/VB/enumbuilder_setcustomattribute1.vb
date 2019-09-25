@@ -26,7 +26,7 @@ Public Class MyAttribute
       Me.myString = myString1
       Me.myInteger = myInteger1
    End Sub
-End Class 'MyAttribute
+End Class
 
 Class MyApplication
    Private Shared myAssemblyBuilder As AssemblyBuilder
@@ -83,6 +83,6 @@ Class MyApplication
       myEnumBuilder.CreateType()
       myEnumBuilder.SetCustomAttribute(myCustomAttributeBuilder)
    End Sub
-End Class 'MyApplication
+End Class
 ' </Snippet2>
 ' </Snippet1>

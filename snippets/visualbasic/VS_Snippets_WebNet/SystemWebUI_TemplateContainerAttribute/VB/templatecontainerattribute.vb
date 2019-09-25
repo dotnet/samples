@@ -69,7 +69,7 @@ Namespace Samples.AspNet.VB.Controls
             End If
         End Sub
 
-    End Class 'VB_TemplatedFirstControl
+    End Class
 
 
     Public Class VB_FirstTemplateContainer
@@ -94,7 +94,7 @@ Namespace Samples.AspNet.VB.Controls
             End Get
         End Property
 
-    End Class 'VB_FirstTemplateContainer
+    End Class
 
 End Namespace 'CustomControls
 

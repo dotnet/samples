@@ -91,5 +91,5 @@ Friend MustInherit Class IArrayContract
         Contract.Ensures(CType(Me, IArray).Count = Contract.OldValue(CType(Me, IArray).Count) - 1)
 
     End Sub
-End Class 'IArrayContract
+End Class
 '</Snippet1>

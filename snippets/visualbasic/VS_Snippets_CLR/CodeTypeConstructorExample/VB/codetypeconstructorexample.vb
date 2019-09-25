@@ -24,6 +24,6 @@ Namespace CodeDomSamples
             '</Snippet2>
 
         End Sub
-    End Class 'CodeTypeConstructorExample 
+    End Class
 End Namespace 'CodeDomSamples
 '</Snippet1>

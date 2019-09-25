@@ -63,4 +63,4 @@ Class WebResponseSnippet
             Console.WriteLine(ControlChars.Cr + "The following exception was raised : {0}", e.Message)
         End Try
     End Sub
-End Class 'WebResponseSnippet
+End Class

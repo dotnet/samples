@@ -92,7 +92,7 @@ Namespace DataGridSample
             Me.Controls.Add(button1)
         End Sub
         'this.SetNewControls(new Control[]{grid, button1});
-    End Class 'Singe
+    End Class
     _
 
     '<snippet1>
@@ -134,7 +134,7 @@ Namespace DataGridSample
                 dv.Sort = colName + " DESC"
             End If
         End Sub
-    End Class 'SortDataGrid
+    End Class
 End Namespace 'DataGridSample 
 
 Module Module1

@@ -14,6 +14,6 @@ Namespace CodeDomSerializerExceptionExampleVB
             '</Snippet1>
         End Sub
 
-    End Class 'CodeDomSerializerExceptionExample
+    End Class
 
 End Namespace 'CodeDomSerializerExceptionExample

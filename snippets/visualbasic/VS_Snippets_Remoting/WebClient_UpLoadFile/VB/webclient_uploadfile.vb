@@ -47,4 +47,4 @@ Public Class WebClient_UpLoadFile
             Console.WriteLine(("The following exception was raised: " & e.Message))
         End Try
     End Sub
-End Class 'WebClient_UpLoadFile
+End Class

@@ -105,7 +105,7 @@ Class EncoderTest
         Next o
         Console.WriteLine(ControlChars.NewLine)
     End Sub
-End Class 'EncoderTest
+End Class
 
 'This code example produces the following output.
 '

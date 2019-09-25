@@ -22,7 +22,7 @@ Public Class RequestDeclare
     Public Sub New()
         myFileWebRequest = Nothing
     End Sub
-End Class ' RequestDeclare
+End Class
 
 
 Class FileWebRequest_reqbeginend
@@ -102,7 +102,7 @@ Class FileWebRequest_reqbeginend
     End Sub
 ' </Snippet2> 
 ' </Snippet1>
-End Class ' FileWebRequest_reqbeginend
+End Class
 
 
 

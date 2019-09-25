@@ -13,7 +13,7 @@ Public Class MyTypeClass
     Protected Function MyMethods2() As [String]
         Return "hello"
     End Function 'MyMethods2
-End Class 'MyTypeClass
+End Class
 Public Class TypeMain
     Public Shared Sub Main()
 
@@ -38,5 +38,5 @@ Public Class TypeMain
             Console.WriteLine((ControlChars.Cr + "The name of the method is " & myMethodInfo.Name & "."))
         Next i
     End Sub
-End Class 'TypeMain	
+End Class
 ' </Snippet1>

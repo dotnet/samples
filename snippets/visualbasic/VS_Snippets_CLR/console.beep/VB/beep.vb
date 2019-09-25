@@ -16,7 +16,7 @@ Class Sample
          Console.WriteLine("Usage: Enter the number of times (between 1 and 9) to beep.")
       End If
    End Sub
-End Class 'Sample 
+End Class
 '
 'This example produces the following results:
 '

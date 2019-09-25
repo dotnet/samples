@@ -44,5 +44,5 @@ Class MySample
       End If
    End Sub
 ' </Snippet2>
-End Class 'MySample
+End Class
 ' </Snippet1>

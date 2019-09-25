@@ -35,5 +35,5 @@ Class GacDemo
         Console.WriteLine(myGacInstalled.ToString())
     End Sub
     '</Snippet6>
-End Class 'GacDemo
+End Class
 '</Snippet1>

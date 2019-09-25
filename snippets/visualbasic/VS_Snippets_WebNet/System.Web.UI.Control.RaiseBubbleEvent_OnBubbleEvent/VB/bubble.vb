@@ -21,7 +21,7 @@ Namespace Bubble
          myWriter.Write("ParentControl")
          RenderChildren(myWriter)
       End Sub
-   End Class 'ParentControl
+   End Class
     _
    ' </snippet1>
    ' <snippet2>
@@ -35,6 +35,6 @@ Namespace Bubble
          ' Bubble this event to parent.
          RaiseBubbleEvent(Me, e)
       End Sub
-   End Class 'ChildControl 
+   End Class
    ' </snippet2>  
 End Namespace 'Bubble

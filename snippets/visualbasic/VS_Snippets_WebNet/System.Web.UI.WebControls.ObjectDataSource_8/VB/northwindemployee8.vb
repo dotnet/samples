@@ -84,7 +84,7 @@ Public Class EmployeeLogic
 ' </snippet3>
 
    ' And so on...
-End Class 'EmployeeLogic
+End Class
 
 
 Public Class NorthwindEmployee
@@ -205,7 +205,7 @@ Public Class NorthwindEmployee
       ' Implement persistence logic.
       Return True
    End Function 'Save
-End Class 'NorthwindEmployee
+End Class
 
 Friend Class NorthwindDataException
    Inherits Exception
@@ -213,6 +213,6 @@ Friend Class NorthwindDataException
    Public Sub New(msg As String)
       MyBase.New(msg)
    End Sub
-End Class 'NorthwindDataException
+End Class
 End Namespace
 ' </snippet2>

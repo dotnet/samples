@@ -304,5 +304,5 @@ Namespace CustomInkControlSample
             inkCanvas1.Children.Add(boundsShape)
         End Sub
         '</Snippet20>
-    End Class 'Window2 
+    End Class
 End Namespace

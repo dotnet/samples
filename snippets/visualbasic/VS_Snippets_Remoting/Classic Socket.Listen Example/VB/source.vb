@@ -29,4 +29,4 @@ Public Class Sample
       Console.WriteLine("enter to exit")
       Console.Read()
    End Sub
-End Class 'Sample 
+End Class

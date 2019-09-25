@@ -26,7 +26,7 @@ Public Class SamplesTextElementEnumerator
 
    End Sub
 
-End Class 'SamplesTextElementEnumerator
+End Class
 
 'This code produces the following output.  The question marks take the place of high and low surrogates.
 '

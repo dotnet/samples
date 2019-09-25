@@ -33,4 +33,4 @@ Public Class SampleClient
       Console.WriteLine("proxy.Add returned {0}.", proxy.Add(2, 3))
       ' </Snippet1>
    End Sub
-End Class 'SampleClient
+End Class

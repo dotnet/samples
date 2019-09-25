@@ -101,5 +101,5 @@ Private Sub button2_Click(sender As Object, e As EventArgs) Handles button2.Clic
 End Sub
 ' </snippet2>
 
-   End Class 'Form1 
+   End Class
 End Namespace 'ToolBarStuff

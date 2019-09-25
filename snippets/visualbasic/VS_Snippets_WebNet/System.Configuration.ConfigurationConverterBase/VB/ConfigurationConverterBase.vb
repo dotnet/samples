@@ -44,7 +44,7 @@ NotInheritable Public Class CustomSection
         End Set
     End Property
 
-End Class 'CustomSection 
+End Class
 
 '<Snippet2>
 
@@ -111,7 +111,7 @@ NotInheritable Public Class TsMinutesConverter
         System.Convert.ToDouble(min))
 
     End Function 'ConvertFrom
-End Class 'TsMinutesConverter
+End Class
 '</Snippet2>
 
 Class UsingConfigutationConverterBase
@@ -203,5 +203,5 @@ Class UsingConfigutationConverterBase
         SerializeCustomSection()
         DeserializeCustomSection()
     End Sub
-End Class 'UsingConfigutationConverterBase
+End Class
 '</Snippet1>

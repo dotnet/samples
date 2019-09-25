@@ -6,7 +6,7 @@ Class Sample
       '  <-- Keep this information secure! -->
       Console.WriteLine("MachineName: {0}", Environment.MachineName)
    End Sub
-End Class 'Sample
+End Class
 '
 'This example produces the following results:
 '(Any result that is lengthy, specific to the machine on which this sample was tested, 

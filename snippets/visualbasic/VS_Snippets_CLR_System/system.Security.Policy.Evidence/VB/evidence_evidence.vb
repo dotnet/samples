@@ -180,5 +180,5 @@ Public Class Evidence_Example
             Environment.ExitCode = 101
         End Try
     End Sub
-End Class 'Evidence_Example
+End Class
 '</Snippet1>

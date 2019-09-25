@@ -64,7 +64,7 @@ Class Sample
       Next i
       Return True
    End Function 'ArraysAreEqual
-End Class 'Sample
+End Class
 '
 'This example produces the following results:
 '

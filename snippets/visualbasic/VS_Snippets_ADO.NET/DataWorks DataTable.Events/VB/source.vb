@@ -12,7 +12,7 @@ Module TestVB
     ' <Snippet1>
     Private Sub DataTableEvents()
 
-        Dim table As DataTable = New DataTable("Customers")
+        Dim table As New DataTable("Customers")
         ' Add two columns, id and name.
         table.Columns.Add("id", Type.GetType("System.Int32"))
         table.Columns.Add("name", Type.GetType("System.String"))

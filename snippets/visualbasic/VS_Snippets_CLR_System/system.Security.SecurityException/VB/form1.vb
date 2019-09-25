@@ -175,5 +175,5 @@ Class EntryPoint
         Console.WriteLine(line)
 
     End Sub
-End Class 'EntryPoint
+End Class
 '</Snippet1>

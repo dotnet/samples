@@ -112,4 +112,4 @@ Public Class MyForm
       MessageBox.Show("The size of the 'Button' control has changed")
    End Sub
 ' </Snippet2>
-End Class 'MyForm 
+End Class

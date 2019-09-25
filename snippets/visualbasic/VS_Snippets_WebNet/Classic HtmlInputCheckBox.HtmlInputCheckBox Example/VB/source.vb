@@ -13,4 +13,4 @@ Public Class Page1
         Dim CheckBox As New HtmlInputCheckBox()
     End Sub
     ' </Snippet2>
-End Class 'Page1 
+End Class

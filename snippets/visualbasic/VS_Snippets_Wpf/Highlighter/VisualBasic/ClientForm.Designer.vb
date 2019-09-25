@@ -133,4 +133,4 @@ Partial Class ClientForm
     Private label2 As System.Windows.Forms.Label
     Private label3 As System.Windows.Forms.Label
     Private colorDialog1 As System.Windows.Forms.ColorDialog
-End Class 'ClientForm
+End Class

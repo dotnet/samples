@@ -90,4 +90,4 @@ Class HttpWebRequest_Proxy
 	    
         End Try
     End Sub
-End Class ' HttpWebRequest_Proxy
+End Class

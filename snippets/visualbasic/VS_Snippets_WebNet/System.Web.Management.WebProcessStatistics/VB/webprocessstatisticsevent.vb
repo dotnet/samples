@@ -171,7 +171,7 @@ Public Class SampleWebProcessStatistics
 
         formatter.AppendLine(eventInfo.ToString())
     End Sub
-End Class 'SampleWebEventHelper
+End Class
 ' </Snippet14>
 
 

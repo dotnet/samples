@@ -73,7 +73,7 @@ Class MethodBodyDemo
 
    End Sub
 
-End Class 'MethodBodyDemo
+End Class
 
 
 ' </Snippet1>

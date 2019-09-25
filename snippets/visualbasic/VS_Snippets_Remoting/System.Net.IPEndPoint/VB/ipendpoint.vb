@@ -225,7 +225,7 @@ Namespace Mssc.Services.ConnectionManagement
         End If
       End Sub
 
-    End Class 'TestIPEndPoint
+    End Class
   End Module
 End Namespace
 '</Snippet1>

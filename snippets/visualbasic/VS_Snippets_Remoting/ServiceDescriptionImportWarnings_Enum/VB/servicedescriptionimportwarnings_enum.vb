@@ -63,5 +63,5 @@ Public Class ServiceDescriptionImportWarnings_Enum
 ' </Snippet1>
    End Sub
 
-End Class 'ServiceDescriptionImportWarnings_Enum 
+End Class
 

@@ -51,7 +51,7 @@ Public Class ServerProcess
 ' </Snippet2>
 ' </Snippet3>
    End Sub
-End Class 'ServerProcess
+End Class
 
 ' Marshal ByRef Object class.
 Public Class MyServiceClass
@@ -60,5 +60,5 @@ Public Class MyServiceClass
    Public Function HelloWorld() As String
       Return "Hello World"
    End Function 'HelloWorld
-End Class 'MyServiceClass
+End Class
 ' </Snippet1>

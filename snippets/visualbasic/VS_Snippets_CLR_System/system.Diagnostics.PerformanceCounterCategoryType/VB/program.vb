@@ -134,7 +134,7 @@ Public Class PerfCounter1
             End Try
 
         End Sub
-    End Class 'Writer
+    End Class
 
 
     Public Class Reader
@@ -214,6 +214,6 @@ Public Class PerfCounter1
             Me.timer1.Start()
 
         End Sub
-    End Class 'Reader
-End Class 'PerfCounter1
+    End Class
+End Class
 '</Snippet1>

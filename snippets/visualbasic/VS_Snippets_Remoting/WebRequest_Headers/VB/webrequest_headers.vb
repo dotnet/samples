@@ -42,5 +42,5 @@ Class WebRequest_Headers
 
     End Sub
 
-End Class ' WebRequest_Headers
+End Class
 

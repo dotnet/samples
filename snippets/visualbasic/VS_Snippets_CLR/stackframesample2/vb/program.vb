@@ -49,5 +49,5 @@ Class Program
         End Try
 
     End Sub
-End Class 'Program
+End Class
 '</Snippet1>

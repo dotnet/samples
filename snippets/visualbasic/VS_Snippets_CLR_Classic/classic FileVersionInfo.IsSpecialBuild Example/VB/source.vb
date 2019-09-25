@@ -17,5 +17,5 @@ Public Class Form1
         textBox1.Text = "File is a special build: " & myFileVersionInfo.IsSpecialBuild
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

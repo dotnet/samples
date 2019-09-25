@@ -76,7 +76,7 @@ Class Sample
         Console.WriteLine(resultFmt, testNames(x), result, testNames(y))
     
     End Sub
-End Class 'Sample
+End Class
 
 '
 'This code example produces the following results:

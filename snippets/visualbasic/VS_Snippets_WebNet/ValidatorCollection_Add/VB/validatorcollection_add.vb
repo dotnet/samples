@@ -70,4 +70,4 @@ Public Class MyPage
       myForm.Controls.Add(myRequiredFieldValidator)
 ' </Snippet1>
    End Sub
- End Class 'MyPage
+ End Class

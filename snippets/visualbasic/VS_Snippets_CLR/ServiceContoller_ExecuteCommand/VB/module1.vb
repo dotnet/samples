@@ -18,5 +18,5 @@ Class Program
         myService.ExecuteCommand(Fix(SimpleServiceCustomCommands.CheckWorker))
     
     End Sub
-End Class 'Program 
+End Class
 '</Snippet1>

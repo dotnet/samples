@@ -43,6 +43,6 @@ Namespace Samples.AspNet.VB.Controls
 
             TimeMsg.Text = DateTime.Now.ToString("G")
         End Sub
-    End Class 'ctlMine
+    End Class
 End Namespace
 ' </snippet1>

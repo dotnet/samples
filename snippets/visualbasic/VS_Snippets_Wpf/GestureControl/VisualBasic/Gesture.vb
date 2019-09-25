@@ -163,7 +163,7 @@ Class RealTimeInkControl
     '</Snippet8>
 
 '<Snippet2>
-End Class 'RealTimeInkControl
+End Class
 '</Snippet2>
 
 Class Program
@@ -187,7 +187,7 @@ Class Program
     '    New Program().Run()
 
     'End Sub
-End Class 'Program
+End Class
 '<Snippet7>
 
 '</Snippet7>

@@ -63,4 +63,4 @@ Public Class WebHeaderCollection_Add
             Console.WriteLine((ControlChars.Tab + headers.AllKeys(i) + " : " + headers(i)))
         Next i
     End Sub
-End Class 'WebHeaderCollection_Add
+End Class

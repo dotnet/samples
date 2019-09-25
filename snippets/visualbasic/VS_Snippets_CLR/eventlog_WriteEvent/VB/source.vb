@@ -279,6 +279,6 @@ Namespace EventLogSamples
         
         End Sub
 
-    End Class 'WriteEvent
+    End Class
 End Namespace 'EventLogSamples
 '</Snippet1>

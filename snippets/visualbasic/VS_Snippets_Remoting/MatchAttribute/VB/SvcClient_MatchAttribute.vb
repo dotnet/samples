@@ -43,7 +43,7 @@ Public Class MatchAttribute_Example
     Public Function EndGetHeaders(ByVal asyncResult As System.IAsyncResult) As Headers
         Return CType(EndInvoke(asyncResult), Headers)
     End Function 'EndGetHeaders
-End Class 'MatchAttribute_Example    
+End Class
 ' <Snippet2>
 ' <Snippet3>
 ' <Snippet4>
@@ -73,7 +73,7 @@ Public Class Headers
 
     <MatchAttribute("H3 ([^=]*)=([^>]*)", Group:=2)> _
     Public Value As String
-End Class 'Headers
+End Class
 ' </Snippet7>
 ' </Snippet6>
 ' </Snippet5>
@@ -117,4 +117,4 @@ Public Class SvcClient
         Console.WriteLine(ControlChars.NewLine + "The H3 html tag has attribute : {0} = {1}", _
                                                         myHeaders.Attribute, myHeaders.Value)
     End Sub
-End Class 'SvcClient
+End Class

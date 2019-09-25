@@ -27,6 +27,6 @@ Public Class TimerServer
         Console.ReadLine()
     
     End Sub
-End Class 'TimerServer
+End Class
 
 ' </Snippet2>

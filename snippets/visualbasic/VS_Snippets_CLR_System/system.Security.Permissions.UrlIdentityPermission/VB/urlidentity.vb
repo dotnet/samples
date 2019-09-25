@@ -92,7 +92,7 @@ Public Class UrlIdentityPermissionDemo
         End If
 
     End Sub
-End Class 'UrlIdentityPermissionDemo
+End Class
 '</Snippet6>
 
 ' </Snippet1>

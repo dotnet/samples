@@ -21,7 +21,7 @@ Public Class ClientActivatedType
       ' report our client identity name
       Return "Hello, " + name + "!"
    End Function 'RemoteMethod
-End Class 'ClientActivatedType
+End Class
 
 Public Class MyLease
    Inherits MarshalByRefObject
@@ -137,5 +137,5 @@ Public Class MyLease
       baseLease.Unregister(sponsor)
    End Sub
    
-End Class 'MyLease
+End Class
 ' </Snippet3>

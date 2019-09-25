@@ -203,5 +203,5 @@ NotInheritable Public Class SoundPermission
     End Function 'Clone 
 #End Region
 
-End Class 'SoundPermission
+End Class
 '</snippet1>

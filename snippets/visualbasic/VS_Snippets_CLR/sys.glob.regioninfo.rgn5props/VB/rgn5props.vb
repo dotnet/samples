@@ -13,7 +13,7 @@ Class Sample
       Console.WriteLine("Currency Native Name:. . . {0}", ri.CurrencyNativeName)
       Console.WriteLine("Geographical ID: . . . . . {0}", ri.GeoId)
    End Sub
-End Class 'Sample
+End Class
 '
 'This code example produces the following results:
 '

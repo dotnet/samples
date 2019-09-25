@@ -29,5 +29,5 @@ Public Class Program
         Console.ReadLine()
     
     End Sub
-End Class 'Program
+End Class
 '</Snippet1>

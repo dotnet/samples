@@ -54,4 +54,4 @@ Public Class WebClient_UpLoadValues
             Console.WriteLine(("The following exception was raised: " + e.Message))
         End Try
     End Sub
-End Class 'WebClient_UpLoadValues
+End Class

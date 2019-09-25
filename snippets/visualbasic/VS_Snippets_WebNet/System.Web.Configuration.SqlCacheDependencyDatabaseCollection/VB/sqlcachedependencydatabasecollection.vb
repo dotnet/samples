@@ -88,5 +88,5 @@ Class UsingSqlCacheDependencyDatabaseCollection
         ' </Snippet10>
 
     End Sub
-End Class 'UsingSqlCacheDependencySection 
+End Class
 

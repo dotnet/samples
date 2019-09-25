@@ -11,14 +11,14 @@ Imports System.Reflection
 <Synchronization()>  _
 Public Class SynchronizationAttribute_Ctor
     Inherits ServicedComponent
-End Class 'SynchronizationAttribute_Ctor
+End Class
 ' </snippet1>
 
 ' <snippet2>
 <Synchronization(SynchronizationOption.Disabled)>  _
 Public Class SynchronizationAttribute_Ctor_SynchronizationOption
     Inherits ServicedComponent
-End Class 'SynchronizationAttribute_Ctor_SynchronizationOption
+End Class
 ' </snippet2>
 
 ' <snippet3>
@@ -34,7 +34,7 @@ Public Class SynchronizationAttribute_Value
         MsgBox("SynchronizationAttribute.Value: " & attribute.Value)
     
     End Sub
-End Class 'SynchronizationAttribute_Value
+End Class
 ' </snippet3>
 
 ' </snippet0>
@@ -50,4 +50,4 @@ Public Class SynchronizationAttribute_Example
         valueExample.ValueExample()
     
     End Sub
-End Class 'SynchronizationAttribute_Example
+End Class

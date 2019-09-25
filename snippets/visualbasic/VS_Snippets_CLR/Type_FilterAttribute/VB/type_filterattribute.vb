@@ -23,5 +23,5 @@ Public Class MyFilterAttributeSample
             Console.Write("Exception :" + e.Message.ToString())
         End Try
     End Sub
-End Class 'MyFilterAttributeSample
+End Class
 ' </Snippet1>

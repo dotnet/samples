@@ -21,6 +21,6 @@ Namespace Examples.VB.WebControls.Design
         SimpleRadioButtonListDataBindingHandler))> _
     Public Class SimpleRadioButtonList
         Inherits RadioButtonList
-    End Class ' SimpleRadioButtonList
+    End Class
 End Namespace ' Examples.VB.WebControls.Design
 ' </snippet5>

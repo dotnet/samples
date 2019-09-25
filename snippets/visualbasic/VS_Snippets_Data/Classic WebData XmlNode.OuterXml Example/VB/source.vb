@@ -27,5 +27,5 @@ Public Class Sample
         Console.WriteLine(root.InnerXml)
         
     End Sub
-End Class 'Sample
+End Class
 ' </Snippet1>

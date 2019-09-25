@@ -34,4 +34,4 @@ Public Class WebException_Status_Response
         End Try
         ' </Snippet1>        
     End Sub
-End Class 'WebException_Status_Response
+End Class

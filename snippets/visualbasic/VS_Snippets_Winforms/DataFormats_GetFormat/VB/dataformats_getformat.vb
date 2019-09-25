@@ -18,6 +18,6 @@ Public Class DataFormat_GetFormat
 
    End Sub
 
-End Class 'DataFormat_GetFormat 
+End Class
 
 ' </Snippet1>

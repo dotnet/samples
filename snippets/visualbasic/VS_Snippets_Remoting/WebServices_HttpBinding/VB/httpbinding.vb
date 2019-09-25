@@ -145,4 +145,4 @@ Class [MyClass]
       myDescription.Write("AddNumbers.wsdl")
       Console.WriteLine("WSDL file with name 'AddNumber.Wsdl' file created Successfully")
    End Sub
-End Class '[MyClass]
+End Class

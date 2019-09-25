@@ -17,7 +17,7 @@ Public Class Teacher
     <XmlArray(ElementName := "ExtraInfo", IsNullable := True)> _
     Public Info() As Object
     Public PhoneInfo As Phone
-End Class 'Teacher
+End Class
 
 
 ' This defines one of the extra types to be included.
@@ -30,7 +30,7 @@ Public Class Address
     Public Sub New(city As String)
         me.City = city
     End Sub
-End Class 'Address
+End Class
  
 
 ' Another extra type to include.
@@ -43,7 +43,7 @@ Public Class Phone
     Public Sub New(phoneNumber As String)
         me.PhoneNumber = phoneNumber
     End Sub
-End Class 'Phone
+End Class
 
 
 ' Another type, derived from Phone.
@@ -58,7 +58,7 @@ Public Class InternationalPhone
     Public Sub New(countryCode As String)
         me.CountryCode = countryCode
     End Sub
-End Class 'InternationalPhone
+End Class
 
 
 Public Class Run
@@ -123,5 +123,5 @@ Public Class Run
         Console.WriteLine(p.PhoneNumber)
         Console.WriteLine(Ip.CountryCode)
     End Sub
-End Class 'Run
+End Class
 ' </Snippet1>

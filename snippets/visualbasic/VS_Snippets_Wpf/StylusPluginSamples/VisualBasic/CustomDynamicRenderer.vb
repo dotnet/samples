@@ -153,4 +153,4 @@ Class CustomDynamicRenderer2
     End Sub
 
     '</Snippet11>
-End Class 'CustomDynamicRenderer
+End Class

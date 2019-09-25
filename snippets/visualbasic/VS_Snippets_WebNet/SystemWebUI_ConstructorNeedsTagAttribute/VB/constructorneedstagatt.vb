@@ -21,6 +21,6 @@ Namespace MyUserControl
       Protected Overrides Sub Render(output As HtmlTextWriter)
         output.Write(("<br>The TagName used for the 'Simple' control is " + "'" + NameTag + "'"))
       End Sub
-   End Class 'Simple
+   End Class
 End Namespace 'MyUserControl
 ' </snippet1>

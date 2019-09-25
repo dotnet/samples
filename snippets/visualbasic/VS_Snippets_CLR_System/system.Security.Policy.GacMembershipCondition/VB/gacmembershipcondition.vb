@@ -200,6 +200,6 @@ Public Class GacMembershipConditionDemo
             System.Environment.ExitCode = 101
         End Try
     End Sub
-End Class 'GacMembershipConditionDemo
+End Class
 
 ' </Snippet1>

@@ -96,7 +96,7 @@ Public Class CalculatorService
         serviceHost.Close()
 
     End Sub
-End Class 'CalculatorService
+End Class
 
 
 Public Class MyServiceAuthorizationManager
@@ -130,7 +130,7 @@ Public Class MyServiceAuthorizationManager
         Return False
 
     End Function 'CheckAccessCore
-End Class 'MyServiceAuthorizationManager
+End Class
 
 
 Public Class MyCustomUserNameValidator
@@ -150,4 +150,4 @@ Public Class MyCustomUserNameValidator
         End If
 
     End Sub
-End Class 'MyCustomUserNameValidator
+End Class

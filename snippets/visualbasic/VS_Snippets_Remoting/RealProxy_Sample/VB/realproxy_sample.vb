@@ -92,7 +92,7 @@ Namespace CustomProxySample
 ' </Snippet3>
 ' </Snippet2>
 ' </Snippet1>
-   End Class 'MyProxy
+   End Class
 
    Public Class ProxySample
       ' Acts as a custom proxy user.
@@ -111,5 +111,5 @@ Namespace CustomProxySample
          Dim myIntrPtr As IntPtr = mProxy.SupportsInterface(myGuid)
          Console.WriteLine("Requested Interface Pointer= " + myIntrPtr.ToInt32().ToString())
       End Sub
-   End Class 'ProxySample
+   End Class
 End Namespace 'CustomProxySample

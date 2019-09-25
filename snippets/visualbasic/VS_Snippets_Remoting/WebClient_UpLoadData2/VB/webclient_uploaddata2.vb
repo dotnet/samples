@@ -42,4 +42,4 @@ Public Class WebClient_UploadData2
             Console.WriteLine(("The following exception was raised: " + e.Message))
         End Try
     End Sub
-End Class 'WebClient_UploadData2
+End Class

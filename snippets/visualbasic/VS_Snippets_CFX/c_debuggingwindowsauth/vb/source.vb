@@ -87,7 +87,7 @@ Public Class Client
         Return "Blah"
     
     End Function 'GetPassword
-End Class 'Client
+End Class
 
 <ServiceContract()>  _
 Public Interface ICalculator

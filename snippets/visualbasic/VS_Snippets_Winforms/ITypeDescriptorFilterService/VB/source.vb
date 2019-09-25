@@ -23,7 +23,7 @@ Namespace ITypeDescriptorFilterSample
 
         Public Sub New()
         End Sub
-    End Class 'ButtonDesignerFilterComponent
+    End Class
 
     ' Provides a designer that can add a ColorCycleButtonDesigner to each 
     ' button in a design time project using the ButtonDesignerFilterService 

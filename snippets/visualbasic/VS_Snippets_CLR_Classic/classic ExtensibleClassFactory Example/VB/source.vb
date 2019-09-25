@@ -39,7 +39,7 @@ End Class
 Namespace ECFSRV32Lib
 
    Public Class BaseComponent
-   End Class 'BaseComponent
+   End Class
    
    Public Class ObjectActivator
       Implements IObjectActivator
@@ -48,7 +48,7 @@ Namespace ECFSRV32Lib
          Implements IObjectActivator.CreateBaseComponent	
          Return 0
       End Function 'CreateBaseComponent
-   End Class 'ObjectActivator
+   End Class
    
    Interface IObjectActivator
       Function CreateBaseComponent(Aggregator As Integer) As Integer

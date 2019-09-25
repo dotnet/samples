@@ -23,7 +23,7 @@ Public Class PurchaseOrder
     Public SubTotal As Decimal
     Public ShipCost As Decimal
     Public TotalCost As Decimal
-End Class 'PurchaseOrder
+End Class
 
 
 Public Class Address
@@ -41,7 +41,7 @@ Public Class Address
     Public City As String
     Public State As String
     Public Zip As String
-End Class 'Address
+End Class
 
 
 Public Class OrderedItem
@@ -57,7 +57,7 @@ Public Class OrderedItem
     Public Sub Calculate()
         LineTotal = UnitPrice * Quantity
     End Sub
-End Class 'OrderedItem
+End Class
 
 
 Public Class Test
@@ -174,6 +174,6 @@ Public Class Test
         Dim attr As System.Xml.XmlAttribute = e.Attr
         Console.WriteLine(("Unknown attribute " & attr.Name & "='" & attr.Value & "'"))
     End Sub
-End Class 'Test
+End Class
 ' </Snippet1>
 

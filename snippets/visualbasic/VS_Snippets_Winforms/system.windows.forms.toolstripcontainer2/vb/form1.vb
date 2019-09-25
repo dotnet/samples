@@ -38,5 +38,5 @@ Public Class Form1
       ' Add the ToolStripContainer to the form.
       Controls.Add(toolStripContainer1)
    End Sub
-End Class 'Form1
+End Class
 ' </Snippet1>

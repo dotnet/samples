@@ -71,7 +71,7 @@ Public Class ProgrammableValidator
         End Try
     
     End Sub
-End Class 'ProgrammableValidator
+End Class
 
 
 
@@ -138,6 +138,6 @@ Public Class ProgrammableValidatorAttribute
             pcolor, pmaxMiles, pminYear)
         End Get
     End Property
-End Class 'ProgrammableValidatorAttribute
+End Class
 
 ' </Snippet31>

@@ -159,5 +159,5 @@ Namespace PrintTicketSample
 		End Sub
 		'</SnippetUIForMergeAndValidatePTUtility>
 
-	End Class 'end Application class
+	End Class
 End Namespace 'end namespace

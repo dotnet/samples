@@ -75,7 +75,7 @@ Public Class Test
         End If
     
     End Sub
-End Class 'Test
+End Class
 
 ' This example produces the following output:
 '

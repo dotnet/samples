@@ -15,4 +15,4 @@ Public Class MyAssemblyResourceApplication
       Dim myEmit As New EmitClass()
       Console.WriteLine(myEmit.Display())
    End Sub
-End Class 'MyAssemblyResourceApplication
+End Class

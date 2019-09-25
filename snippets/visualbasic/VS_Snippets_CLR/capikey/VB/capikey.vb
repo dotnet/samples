@@ -18,5 +18,5 @@ Public Class StoreKey
         'writes out the current key pair used in the rsa instance
         Console.WriteLine("Key is : "  & rsa.ToXmlString(True))
     End Sub
-End Class 'StoreKey
+End Class
 ' </SNIPPET1>

@@ -26,7 +26,7 @@ Public Class SamplesComparer
 
    End Sub
 
-End Class 'SamplesComparer
+End Class
 
 
 'This code produces the following output.

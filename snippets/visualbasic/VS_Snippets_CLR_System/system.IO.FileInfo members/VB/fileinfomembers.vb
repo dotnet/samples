@@ -294,4 +294,4 @@ Public Class FileInfoSnippets
         fileInfoSnippets.CreateText()
         fileInfoSnippets.OpenWriteAndOpenRead()
     End Sub
-End Class 'FileInfoSnippets
+End Class

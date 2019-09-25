@@ -73,5 +73,5 @@ Public Class MyTrustManager
 
     End Sub
     '</Snippet4>
-End Class 'MyTrustManager
+End Class
 '</Snippet1>

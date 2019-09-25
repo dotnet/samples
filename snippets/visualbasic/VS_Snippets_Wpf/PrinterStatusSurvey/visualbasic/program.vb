@@ -50,7 +50,7 @@ Namespace PrinterStatusSurvey
 
 		End Sub
 
-	End Class 'end Program class
+	End Class
 
 	Friend Class TroubleSpotter
 		' <SnippetSpotTroubleUsingQueueProperties>
@@ -166,6 +166,6 @@ Namespace PrinterStatusSurvey
 		End Sub
 		' </SnippetUsingStartAndUntilTimes>
 
-	End Class ' end TroubleSpotter class
+	End Class
 
 End Namespace 'end namespace

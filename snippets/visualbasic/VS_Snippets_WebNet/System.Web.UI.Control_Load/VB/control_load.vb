@@ -22,7 +22,7 @@ Public NotInheritable Class MyControl
       w.Write("<h2>Implementation Of Control</h2>")
       w.Write(("<h3><i><font color=green>Reference : " & CType(Controls(0), LiteralControl).Text + "</font></i></h3>"))
    End Sub
-End Class 'MyControl
+End Class
 
 Public Class MyPage
    Inherits Page
@@ -45,7 +45,7 @@ Public Class MyPage
       ' Add a LiteralControl to ctlOne.
       ctlOne.Controls.Add(New LiteralControl("<h4> MSDN Library <h4>"))
    End Sub
-End Class 'MyPage
+End Class
 
 End Namespace
 ' </Snippet1>

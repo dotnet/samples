@@ -305,6 +305,6 @@ Namespace CustomInkControlSample
 
         End Sub
 
-    End Class 'StrokeCollectionDemo 
+    End Class
 
 End Namespace

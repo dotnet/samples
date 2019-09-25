@@ -37,5 +37,5 @@ Public Class MyClient
          Console.WriteLine(myHelloServerObject.HelloMethod(" Client One"))
       Next i
    End Sub
-End Class 'MyClient 
+End Class
 ' </Snippet1>

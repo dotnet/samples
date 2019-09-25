@@ -25,7 +25,7 @@ Public Class ClassCreator
       Me.creator = name
    End Sub
 
-End Class 'ClassCreator
+End Class
  _ 
 
 ' We will apply this dynamic attribute to our dynamic method.
@@ -46,7 +46,7 @@ Public Class DateLastUpdated
       Me.dateUpdated = theDate
    End Sub
 
-End Class 'DateLastUpdated
+End Class
  _ 
 
 Class MethodBuilderCustomAttributesDemo
@@ -134,6 +134,6 @@ Class MethodBuilderCustomAttributesDemo
 						Nothing, myInstance, New Object() {}))
    End Sub
 
-End Class 'MethodBuilderCustomAttributesDemo
+End Class
 
 ' </Snippet1>

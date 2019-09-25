@@ -176,6 +176,6 @@ Namespace ErrorProvider
             Return false
         End Function 
 
-    End Class 'Form1
+    End Class
 End Namespace 'ErrorProvider 
 '</Snippet1>

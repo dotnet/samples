@@ -55,7 +55,7 @@ Public Class SamplesQueue
         Console.WriteLine()
     End Sub
 
-End Class 'SamplesQueue
+End Class
 
 
 ' This code produces the following output.

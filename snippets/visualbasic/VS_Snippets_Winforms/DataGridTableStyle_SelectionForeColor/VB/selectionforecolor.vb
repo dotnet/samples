@@ -194,5 +194,5 @@ Namespace MyDataGridNamespace
          MessageBox.Show(myString, "Selection fore color information")
 ' </Snippet2>
       End Sub
-   End Class 'MyForm
+   End Class
 End Namespace 'MyDataGridNamespace

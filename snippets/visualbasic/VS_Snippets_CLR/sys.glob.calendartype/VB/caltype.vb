@@ -17,7 +17,7 @@ Class Sample
       Dim name As String = c.ToString().PadRight(50, "."c)
       Console.WriteLine("{0} {1}", name, c.AlgorithmType)
    End Sub
-End Class 'Sample
+End Class
 '
 'This code example produces the following results:
 '

@@ -22,7 +22,7 @@ Public Class Sample
         
         doc.Save(Console.Out)
     End Sub
-End Class 'Sample
+End Class
 ' </Snippet1>
 
     Public Function LoadDocument(ByVal generateXML As Boolean) As XmlDocument

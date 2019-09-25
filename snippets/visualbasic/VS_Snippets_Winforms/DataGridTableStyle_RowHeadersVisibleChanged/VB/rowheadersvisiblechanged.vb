@@ -169,4 +169,4 @@ Public Class MyDataGridTableStyle_RowHeadersVisibleChanged
    End Sub
 ' </Snippet2>
 ' </Snippet1>
-End Class 'MyDataGridTableStyle_RowHeadersVisibleChanged 
+End Class

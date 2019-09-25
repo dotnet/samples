@@ -221,5 +221,5 @@ Class ClientForm
     End Sub
 
 
-End Class 'ClientForm 
+End Class
 

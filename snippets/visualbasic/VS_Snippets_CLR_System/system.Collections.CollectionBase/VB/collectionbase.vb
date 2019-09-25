@@ -64,7 +64,7 @@ Public Class Int16Collection
       End If
    End Sub
 
-End Class 'Int16Collection
+End Class
 
 
 Public Class SamplesCollectionBase
@@ -149,7 +149,7 @@ Public Class SamplesCollectionBase
       Console.WriteLine()
     End Sub
 
-End Class 'SamplesCollectionBase
+End Class
 
 
 'This code produces the following output.

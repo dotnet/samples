@@ -23,5 +23,5 @@ Public Class Test
         data.Close()
         reader.Close()
     End Sub
-End Class 'Test
+End Class
 '</Snippet1>

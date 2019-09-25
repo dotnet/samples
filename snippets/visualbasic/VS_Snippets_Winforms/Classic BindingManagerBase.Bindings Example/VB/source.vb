@@ -18,4 +18,4 @@ Public Class Form1
         Next b
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

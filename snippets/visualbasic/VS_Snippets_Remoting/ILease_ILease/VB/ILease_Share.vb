@@ -25,6 +25,6 @@ Namespace RemotingSamples
          End If
          Return baseLease
       End Function 'InitializeLifetimeService
-   End Class 'HelloService
+   End Class
 End Namespace 'RemotingSamples
 ' </Snippet5>

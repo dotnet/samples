@@ -78,4 +78,4 @@ Public Class Calculator
         Return a + b
     
     End Function 'Add
-End Class 'Calculator
+End Class

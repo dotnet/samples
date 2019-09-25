@@ -55,7 +55,7 @@ Public Class ImageRenderer
         drawingContext.DrawGeometry(imageBrush, Nothing, geometry)
     
     End Sub
-End Class 'ImageRenderer
+End Class
 
 
 Public Class ImageStroke
@@ -96,4 +96,4 @@ Public Class ImageStroke
         drawingContext.DrawGeometry(imageBrush, Nothing, geometry)
     
     End Sub
-End Class 'ImageStroke
+End Class

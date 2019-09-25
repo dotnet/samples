@@ -40,7 +40,7 @@ Namespace Ambiguity
             End Try
             Return
         End Sub
-    End Class 'Myambiguous
+    End Class
 End Namespace
 ' This code produces the following output:
 '

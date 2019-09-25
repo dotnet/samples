@@ -46,7 +46,7 @@ Public Class SamplesSortedList
       Console.WriteLine()
   End Sub
 
-End Class 'SamplesSortedList 
+End Class
 
 
 'This code produces the following output.

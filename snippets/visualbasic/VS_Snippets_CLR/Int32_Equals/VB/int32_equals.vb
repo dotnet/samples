@@ -31,4 +31,4 @@ Class MyInt32_Equals
          Console.WriteLine("Exception :{0}", e.Message.ToString())
       End Try
    End Sub
-End Class 'MyInt32_Equals
+End Class

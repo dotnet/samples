@@ -23,4 +23,4 @@ Public Class Form1
                         "String is: " & myDataObject.GetData("System.String", True).ToString()
     End Sub
     ' </Snippet1>
-End Class 'Form1
+End Class

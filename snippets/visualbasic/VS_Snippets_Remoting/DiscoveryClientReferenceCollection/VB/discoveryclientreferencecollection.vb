@@ -68,5 +68,5 @@ Class MyDiscoveryClientReferenceCollection
       End If
    End Sub
 
-End Class 'MyDiscoveryClientReferenceCollection
+End Class
 ' </Snippet1>

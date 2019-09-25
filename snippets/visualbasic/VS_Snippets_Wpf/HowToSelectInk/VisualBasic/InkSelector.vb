@@ -360,5 +360,5 @@ Public Class InkSelector
     End Property
     '</Snippet6>
 
-End Class 'InkSelector 
+End Class
 '</Snippet1>

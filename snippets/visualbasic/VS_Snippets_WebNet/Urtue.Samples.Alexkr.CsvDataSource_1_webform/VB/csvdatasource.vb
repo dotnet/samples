@@ -72,7 +72,7 @@ Public Class CsvDataSource
       Return CType(al, ICollection)
    End Function 'GetViewNames
 
-End Class 'CsvDataSource
+End Class
 ' </Snippet4>
 
 
@@ -250,7 +250,7 @@ Public Class CsvDataSourceView
       Throw New NotSupportedException()
    End Function 'ExecuteUpdate
 
-End Class 'CsvDataSourceView
+End Class
 ' </Snippet10>
 ' </Snippet5>
 End Namespace

@@ -194,5 +194,5 @@ Class UIATransformPattern_snippets
             Dim app As New UIATransformPattern_snippets()
         
         End Sub
-    End Class 'TestMain
-End Class 'UIATransformPattern_snippets
+    End Class
+End Class

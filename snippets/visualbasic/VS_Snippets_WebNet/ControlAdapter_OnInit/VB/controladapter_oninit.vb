@@ -16,7 +16,7 @@ Public Class CustomControlAdapter
         MyBase.OnInit(e)
 
     End Sub
-End Class 'CustomControlAdapter
+End Class
 ' </snippet1>
 
 Module MainMod

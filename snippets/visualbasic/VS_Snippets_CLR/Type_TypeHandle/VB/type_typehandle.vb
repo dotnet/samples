@@ -3,7 +3,7 @@ Imports System.Reflection
 
 Class [MyClass]
     Public myField As Integer = 10
-End Class '[MyClass]
+End Class
 Class Type_TypeHandle
     Public Shared Sub Main()
         Try
@@ -28,5 +28,5 @@ Class Type_TypeHandle
         Console.WriteLine(ControlChars.NewLine + "Displaying the type from the handle:" + ControlChars.NewLine)
         Console.WriteLine("The type is {0}.", myType.ToString())
     End Sub
-End Class 'Type_TypeHandle
+End Class
 ' </Snippet1>

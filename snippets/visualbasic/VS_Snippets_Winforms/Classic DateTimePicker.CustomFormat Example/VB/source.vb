@@ -16,5 +16,5 @@ Public Class Form1
         dateTimePicker1.CustomFormat = "MMMM dd, yyyy - dddd"
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

@@ -118,4 +118,4 @@ Class IPv6Adresses
       ' Check that this is a loopback address.
       checkIPv6LoopBackAddress("0::1")
    End Sub
-End Class 'IPv6Adresses
+End Class

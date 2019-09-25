@@ -175,7 +175,7 @@ Public Class Form1
         Next
     End Sub
     '</snippet11>
-End Class 'Form1 
+End Class
 
 
 

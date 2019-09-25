@@ -43,7 +43,7 @@ Public Class HelloServiceClass
       Return "Hi there " + name + "."
    End Function 'HelloMethod
 
-End Class 'HelloServiceClass
+End Class
 ' </Snippet3>
 
 ' <Snippet2>
@@ -74,5 +74,5 @@ End Class 'HelloServiceClass
       _principal = p
    End Sub
 
-End Class 'LogicalCallContextData
+End Class
 ' </Snippet2>

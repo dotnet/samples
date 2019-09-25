@@ -58,7 +58,7 @@ Public Class MyInstaller
       Console.WriteLine("The OnCommitted method of MyInstaller called")
    End Sub
 ' </Snippet2>
-End Class 'MyInstaller
+End Class
 
 
 Public Class MyAssembly
@@ -66,4 +66,4 @@ Public Class MyAssembly
    Public Shared Sub Main()
       Console.WriteLine("Use installutil.exe to run the assembly Installer_Committed.exe")
    End Sub
-End Class 'MyAssembly
+End Class

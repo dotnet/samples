@@ -20,4 +20,4 @@ Public Class Client
          Console.WriteLine("Exception :{0}", e.Message)
       End Try
    End Sub
-End Class 'Client
+End Class

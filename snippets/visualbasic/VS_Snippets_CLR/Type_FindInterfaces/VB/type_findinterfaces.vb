@@ -52,6 +52,6 @@ Public Class MyFindInterfacesSample
             Return False
         End If
     End Function 'MyInterfaceFilter 
-End Class 'MyFindInterfacesSample
+End Class
 ' </Snippet1>
 

@@ -34,7 +34,7 @@ Class MyFormatExtension
       Me.Handled = True
       Me.Required = True
    End Sub
-End Class 'MyFormatExtension
+End Class
 
 Class myCollectionSample
    
@@ -134,5 +134,5 @@ Class myCollectionSample
          Console.WriteLine("The following exception was raised: {0}", e.Message.ToString())
       End Try
    End Sub
-End Class 'myCollectionSample
+End Class
 ' </Snippet1>

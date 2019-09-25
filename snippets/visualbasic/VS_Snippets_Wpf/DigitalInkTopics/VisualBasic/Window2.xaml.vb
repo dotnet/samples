@@ -31,4 +31,4 @@ Class Window2
 
     End Sub
     ' </Snippet4>
-End Class 'Window2 
+End Class

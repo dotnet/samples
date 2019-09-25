@@ -17,5 +17,5 @@ Class MySample
         ' Write an informational entry to the event log.    
         EventLog.WriteEntry("MySource", "Writing to event log.")
     End Sub
-End Class ' MySample 
+End Class
 ' </Snippet1>

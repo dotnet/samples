@@ -37,4 +37,4 @@ Public Class ClientClass
          Console.WriteLine(e.Message)
       End Try
    End Sub
-End Class 'ClientClass
+End Class

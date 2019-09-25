@@ -16,7 +16,7 @@ Public Class BadlyConstructedType
     Public Overridable Sub DoSomething()
         Console.WriteLine("Base DoSomething")
     End Sub
-End Class 'BadlyConstructedType
+End Class
 
 
 Public Class DerivedType
@@ -30,7 +30,7 @@ Public Class DerivedType
     Public Overrides Sub DoSomething()
         Console.WriteLine("Derived DoSomething is called - initialized ? {0}", initialized)
     End Sub
-End Class 'DerivedType
+End Class
 
 
 Public Class TestBadlyConstructedType

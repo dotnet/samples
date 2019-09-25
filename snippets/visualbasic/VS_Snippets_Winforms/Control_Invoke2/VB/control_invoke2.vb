@@ -62,7 +62,7 @@ Public Class MyFormControl
       Dim myThreadClassObject As New MyThreadClass(Me)
       myThreadClassObject.Run()
    End Sub
-End Class 'MyFormControl
+End Class
 
 
 ' The following code assumes a 'ListBox' and a 'Button' control are added to a form, 
@@ -80,5 +80,5 @@ Public Class MyThreadClass
       myFormControl1.Invoke(myFormControl1.myDelegate)
    End Sub
 
-End Class 'MyThreadClass
+End Class
 ' </Snippet1>

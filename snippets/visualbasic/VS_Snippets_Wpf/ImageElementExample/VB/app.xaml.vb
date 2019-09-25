@@ -20,5 +20,5 @@ Namespace ImageElementExample
             mainWindow.Show()
 
         End Sub
-    End Class 'app
+    End Class
 End Namespace 'ImageElementExample

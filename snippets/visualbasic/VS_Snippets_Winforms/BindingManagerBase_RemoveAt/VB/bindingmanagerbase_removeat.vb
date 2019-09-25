@@ -104,5 +104,5 @@ Namespace WindowsApplication1
          ' Attach the 'myDataTable' to the DataGrid.
          dataGrid1.DataSource = myDataTable
       End Sub
-   End Class 'Form1
+   End Class
 End Namespace 'WindowsApplication1

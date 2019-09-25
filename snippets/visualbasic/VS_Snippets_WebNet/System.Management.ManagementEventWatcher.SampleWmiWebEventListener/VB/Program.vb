@@ -124,7 +124,7 @@ Namespace SamplesAspNet
 
         End Sub
 
-    End Class 'SampleWmiWebEventListener 
+    End Class
 
 End Namespace
 '</snippet1>

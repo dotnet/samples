@@ -276,7 +276,7 @@ flushInfo)))
         End Try
     End Sub
     ' </Snippet10>
-End Class 'SampleBufferedWebEventProvider
+End Class
 
 
 

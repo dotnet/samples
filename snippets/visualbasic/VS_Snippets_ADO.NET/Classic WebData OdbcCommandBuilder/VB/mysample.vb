@@ -15,14 +15,13 @@ Module Module1
         ByVal connectionString As String, ByVal queryString As String, _
         ByVal tableName As String) As DataSet
 
-        Dim dataSet As DataSet = New DataSet
+        Dim dataSet As New DataSet()
 
         Using connection As New OdbcConnection(connectionString)
             Dim adapter As New OdbcDataAdapter()
             adapter.SelectCommand = _
                 New OdbcCommand(queryString, connection)
-            Dim builder As OdbcCommandBuilder = _
-                New OdbcCommandBuilder(adapter)
+            Dim builder As New OdbcCommandBuilder(adapter)
 
             connection.Open()
 

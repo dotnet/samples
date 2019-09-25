@@ -51,6 +51,6 @@ Public NotInheritable Class CustomBindingCreator
     Shared Sub Main()
 
     End Sub
-End Class 'CustomBindingCreator ' Code not shown.
+End Class
 
 '</snippet0>

@@ -1918,9 +1918,9 @@ Namespace WF_Snippets
                     Return False
                 End Function
 
-            End Class 'End EventPropertyDescriptor
-        End Class ' End EventBindingService
-    End Class ' End Snippets
+            End Class
+        End Class
+    End Class
 End Namespace
 
 

@@ -63,7 +63,7 @@ Namespace Samples.AspNet.VB.Controls
                   name, id, allowsMultipleConnections)
 
             End Sub
-        End Class 'FieldConsumerConnectionPoint 
-    End Class 'FieldConsumerWebPart
+        End Class
+    End Class
     '</Snippet2>
 End Namespace

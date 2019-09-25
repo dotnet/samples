@@ -230,4 +230,4 @@ Class MyClass1
       myOperation.Messages.Add(output)
       Return myOperation
    End Function 'CreateOperation
-End Class 'MyClass1
+End Class

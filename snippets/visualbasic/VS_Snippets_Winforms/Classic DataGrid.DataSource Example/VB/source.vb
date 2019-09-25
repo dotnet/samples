@@ -44,5 +44,5 @@ End Sub
         Return myDataSet
     End Function 'GetDataSetFromDataSource
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

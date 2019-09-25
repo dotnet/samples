@@ -23,5 +23,5 @@ Public Class MyClass1
          Console.WriteLine(securityException.ToString())
       End Try
    End Sub
-End Class '[MyClass1]
+End Class
 '</Snippet1>

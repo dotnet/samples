@@ -23,5 +23,5 @@ Public Class HelloService
       Return "Hi there " + name + "."
    End Function 'HelloMethod
 
-End Class 'HelloService
+End Class
 ' </Snippet4>

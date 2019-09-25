@@ -290,5 +290,5 @@ Class UsingElementInformation
     End Sub
     ' </Snippet89>
 
-End Class 'UsingElementInformation 
+End Class
 

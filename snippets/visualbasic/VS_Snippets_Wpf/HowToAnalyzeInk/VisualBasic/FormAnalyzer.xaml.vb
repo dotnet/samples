@@ -141,5 +141,5 @@ Class FormAnalyzer
         xaml_writingCanvas.Strokes.Clear()
     
     End Sub
-End Class 'FormAnalyzer
+End Class
 '</Snippet2>

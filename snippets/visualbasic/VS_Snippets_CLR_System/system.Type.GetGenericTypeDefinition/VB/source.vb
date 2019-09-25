@@ -32,7 +32,7 @@ Public Class Test
             Console.WriteLine(vbTab & vbTab & tParam.ToString())
         Next tParam
     End Sub
-End Class 'Test
+End Class
 
 ' This example produces the following output:
 '

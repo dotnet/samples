@@ -10,4 +10,4 @@ Public Class Class1
         GlobalProxySelection.Select = New WebProxy(proxyURI)
         ' </Snippet1>
     End Sub
-End Class 'Class1
+End Class

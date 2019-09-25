@@ -48,7 +48,7 @@ Public Class SamplesUTF32Encoding
 
    End Sub
 
-End Class 'SamplesUTF32Encoding
+End Class
 
 
 'This code produces the following output.

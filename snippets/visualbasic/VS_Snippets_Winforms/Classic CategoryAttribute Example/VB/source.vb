@@ -37,4 +37,4 @@ Public Class Form1
             Console.WriteLine(myAttribute.Category)
         ' </Snippet2>
     End Sub
-End Class 'Form1
+End Class

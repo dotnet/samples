@@ -156,7 +156,7 @@ Class TraceTest
         '</Snippet21>
 
     End Sub
-End Class 'TraceTest 
+End Class
 
 '</Snippet1>
 

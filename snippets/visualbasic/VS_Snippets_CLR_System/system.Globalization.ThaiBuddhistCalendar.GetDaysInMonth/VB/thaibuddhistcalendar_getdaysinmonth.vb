@@ -37,7 +37,7 @@ Public Class SamplesThaiBuddhistCalendar
 
    End Sub
 
-End Class 'SamplesThaiBuddhistCalendar
+End Class
 
 
 'This code produces the following output.

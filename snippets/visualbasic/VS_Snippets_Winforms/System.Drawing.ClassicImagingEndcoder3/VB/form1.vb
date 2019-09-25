@@ -61,5 +61,5 @@ Class Example_SetJPEGQuality
         Return Nothing
 
     End Function 'GetEncoderInfo
-End Class 'Example_SetJPEGQuality
+End Class
 ' </snippet3>

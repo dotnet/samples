@@ -119,7 +119,7 @@ Namespace Mssc.TransportProtocols.Utilities
         ' Receive broadcast messages.
         ReceiveBroadcastMessages()
       End Sub
-    End Class 'TestMulticastOption
+    End Class
 
   End Module
 

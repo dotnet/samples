@@ -13,4 +13,4 @@ Public Class Page1
         Cache.Get("MyTextBox.Value")
         ' </Snippet1>
     End Sub
-End Class 'Page1
+End Class

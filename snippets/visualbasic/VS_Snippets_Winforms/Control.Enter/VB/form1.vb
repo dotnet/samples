@@ -101,5 +101,5 @@ Public Class Form1
         textBox1.BackColor = Color.White
         textBox1.Select(0, 0)
     End Sub
-End Class 'Form1 
+End Class
 '</Snippet1>

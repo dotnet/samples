@@ -24,7 +24,7 @@
 '            Console.WriteLine(e.Message)
 '        End Try
 '    End Sub
-'End Class '[MyClass
+'End Class
 Imports System.Security.Permissions
 
 '<Snippet2>
@@ -35,6 +35,6 @@ Public Class Class1
     Public Sub DoNothing()
         Console.WriteLine("Exiting the library program.")
     End Sub
-End Class 'Class1 
+End Class
 
 '</Snippet1>

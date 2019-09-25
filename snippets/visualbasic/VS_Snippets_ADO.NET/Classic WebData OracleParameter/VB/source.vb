@@ -23,4 +23,4 @@ adapter.SelectCommand.Parameters.Add("pEmpNo", OracleType.Int32).Value = 7369
 adapter.Fill(dataSet)
 End Sub 
     ' </Snippet1>
-End Class 'Form1 
+End Class

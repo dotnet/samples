@@ -82,8 +82,8 @@ Namespace ProxySample
                 Return MyBase.Channel.Add(n1, n2)
             
             End Function 'Add
-        End Class 'CalculatorClient 
-    End Class 'Test
+        End Class
+    End Class
 End Namespace 'ProxySample
 
 Namespace ClientSample
@@ -108,5 +108,5 @@ Namespace ClientSample
             Return a + b
         End Function 
         '</snippet2>
-    End Class 'Calculator 
+    End Class
 End Namespace 'ClientSample

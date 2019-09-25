@@ -29,7 +29,7 @@ Public Class RequestState
     request = Nothing
     responseStream = Nothing
   End Sub
-End Class ' RequestState
+End Class
 
 Class WebRequest_BeginGetResponse
   Public Shared allDone As New ManualResetEvent(False)
@@ -120,7 +120,7 @@ Class WebRequest_BeginGetResponse
     End Try
   End Sub
 
-End Class ' WebRequest_BeginGetResponse
+End Class
 
 ' </Snippet2>
 ' </Snippet1>

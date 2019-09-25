@@ -40,4 +40,4 @@ Class [MyClass]
       myServiceDescription = Nothing
       myBinding = Nothing
    End Sub
-End Class '[MyClass]
+End Class

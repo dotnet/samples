@@ -47,7 +47,7 @@ Public Class SamplesStringDictionary
 
    End Sub
 
-End Class 'SamplesStringDictionary 
+End Class
 
 
 'This code produces the following output.

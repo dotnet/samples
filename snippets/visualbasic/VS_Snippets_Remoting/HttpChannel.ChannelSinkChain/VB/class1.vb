@@ -194,5 +194,5 @@ Class CustomChannel
             Return Nothing
          End Get
       End Property
-   End Class 'TransportSink
-End Class 'CustomChannel
+   End Class
+End Class

@@ -38,4 +38,4 @@ Public Class WebPermissionAttribute_AcceptConnect
             Console.WriteLine(("Exception raised : " + e.Message))
         End Try
     End Sub
-End Class ' WebPermissionAttribute_AcceptConnect
+End Class

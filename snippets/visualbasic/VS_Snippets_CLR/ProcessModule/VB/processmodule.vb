@@ -52,4 +52,4 @@ Class MyProcessModuleClass
             Console.WriteLine($"Exception : {e.Message}")
         End Try
     End Sub
-End Class 'MyProcessModuleClass
+End Class

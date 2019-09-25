@@ -35,7 +35,7 @@ Namespace WebPage
          writer.Write(("<br>" + "The time on the server:<br> " + System.DateTime.Now.ToLongTimeString()))
          writer.RenderEndTag()
       End Sub
-   End Class 'MyPage
+   End Class
 	
 
    Public Class MyHtmlTextWriter
@@ -45,7 +45,7 @@ Namespace WebPage
          MyBase.New(writer)
          writer.Write("<font color=blue> 'MyHtmlTextWriter' is used for rendering.</font>")
       End Sub
-   End Class 'MyHtmlTextWriter
+   End Class
 End Namespace 'WebPage
 ' </Snippet2>	
 ' </Snippet1>

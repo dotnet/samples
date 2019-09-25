@@ -83,7 +83,7 @@ Public Class DerivedCollection
       Me.BaseClear()
    End Sub
 
-End Class 'MyCollection
+End Class
 
 
 Public Class SamplesNameObjectCollectionBaseKeys

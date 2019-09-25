@@ -21,5 +21,5 @@ Public Class Form1
         textBox1.Text = myDataObject.GetData(DataFormats.Text).ToString()
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

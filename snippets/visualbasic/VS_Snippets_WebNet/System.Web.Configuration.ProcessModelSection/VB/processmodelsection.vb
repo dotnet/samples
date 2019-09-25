@@ -303,5 +303,5 @@ Class UsingProcessModelSection
             "Error detected in UsingProcessModelSection."
       End Try
    End Sub
-End Class 'UsingProcessModelSection
+End Class
 

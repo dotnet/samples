@@ -44,4 +44,4 @@ Public Class MyUdpClientExample
       End Try
    End Sub 
    '</Snippet1>
-End Class 'MyUdpClientExample
+End Class

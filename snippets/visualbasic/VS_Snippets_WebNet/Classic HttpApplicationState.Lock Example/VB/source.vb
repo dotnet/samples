@@ -15,4 +15,4 @@ Application("MyCount") = Convert.ToInt32(Application("MyCount")) + 1
 Application.UnLock()
 ' </Snippet1>
     End Sub
-End Class 'Page1 
+End Class

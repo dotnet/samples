@@ -48,7 +48,7 @@ Class Sample
         Console.WriteLine(resultFmt, x, result, y)
     
     End Sub
-End Class 'Sample
+End Class
 
 '
 'This code example produces the following results:

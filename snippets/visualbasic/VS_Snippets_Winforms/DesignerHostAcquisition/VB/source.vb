@@ -17,6 +17,6 @@ Namespace DesignerHostTest
             Dim host As IDesignerHost = CType(Me.Component.Site.GetService(GetType(IDesignerHost)), IDesignerHost)
             '</Snippet1>
         End Sub
-    End Class 'DesignerHostDesigner
+    End Class
 End Namespace 'RDTest
 '</Snippet2>

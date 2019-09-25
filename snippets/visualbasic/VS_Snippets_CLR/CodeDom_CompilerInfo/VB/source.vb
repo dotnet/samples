@@ -299,6 +299,6 @@ Namespace CodeDomCompilerInfoSample
          ' </Snippet8> 
       End Sub
 
-   End Class 'CompilerInfoSample
+   End Class
 End Namespace 'CodeDomCompilerInfoSample
 ' </Snippet1>

@@ -379,4 +379,4 @@ Public Class StylusControl
         inkPresenter1.Strokes.Clear()
     
     End Sub
-End Class 'StylusControl
+End Class

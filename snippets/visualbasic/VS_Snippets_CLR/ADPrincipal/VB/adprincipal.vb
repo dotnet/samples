@@ -44,5 +44,5 @@ Class ADPrincipal
 
         End If
     End Sub
-End Class 'ADPrincipal 
+End Class
 ' </SNIPPET1>

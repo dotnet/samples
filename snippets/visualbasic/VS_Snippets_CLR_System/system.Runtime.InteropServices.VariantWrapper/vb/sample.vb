@@ -21,7 +21,7 @@ Class Program
 	'</snippet1>
 
     End Sub
-End Class 'Program
+End Class
 
 
 
@@ -34,4 +34,4 @@ Class UnmanagedComClass
     Public Sub MethodWithStringRefParam(ByRef var As Object)
 
     End Sub
-End Class 'UnmanagedComClass
+End Class

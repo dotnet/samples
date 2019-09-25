@@ -27,5 +27,5 @@ Public Class Sample
         Console.WriteLine(doc.DocumentElement.InnerText)
         
     End Sub 
-End Class 'Sample
+End Class
 ' </Snippet1>

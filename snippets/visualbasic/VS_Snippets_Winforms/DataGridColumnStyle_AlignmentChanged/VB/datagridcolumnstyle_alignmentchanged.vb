@@ -100,5 +100,5 @@ Public Class Form1
       myTable.Rows(3)("CustName") = "Robert"
       myTable.Rows(4)("CustName") = "John"
    End Sub
-End Class 'Form1
+End Class
 

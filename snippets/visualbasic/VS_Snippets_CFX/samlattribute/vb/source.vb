@@ -241,7 +241,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
             Return True
 
         End Function 'IssuedByHomeRealmSTS
-    End Class 'BookStoreSTS
+    End Class
 
     '/ <summary>
     '/ Abstract base class for STS implementations.
@@ -536,7 +536,9 @@ Namespace Microsoft.ServiceModel.Samples.Federation
                 m_appliesTo = value
             End Set
         End Property
-    End Class 'RequestSecurityTokenBase '/ <summary>.
+    End Class
+	
+	'/ <summary>.
     '/ A class that represents a RequestSecurityToken message according to February 2005 WS-Trust
     '/ </summary>
     <ComVisible(False)> _
@@ -826,7 +828,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
             Return ea
 
         End Function 'ProcessAppliesToElement
-    End Class 'RequestSecurityToken
+    End Class
 
     Public Class Constants
         Public Const BookNameHeaderNamespace As String = "http://tempuri.org/"
@@ -845,12 +847,12 @@ Namespace Microsoft.ServiceModel.Samples.Federation
             Public Class Actions
                 Public Const Issue As String = "http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue"
                 Public Const IssueReply As String = "http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue"
-            End Class 'Actions
+            End Class
 
 
             Public Class Attributes
                 Public Const Context As String = "Context"
-            End Class 'Attributes
+            End Class
 
 
             Public Class Elements
@@ -865,13 +867,13 @@ Namespace Microsoft.ServiceModel.Samples.Federation
                 Public Const RequestedUnattachedReference As String = "RequestedUnattachedReference"
                 Public Const RequestedProofToken As String = "RequestedProofToken"
                 Public Const ComputedKey As String = "ComputedKey"
-            End Class 'Elements
+            End Class
 
 
             Public Class ComputedKeyAlgorithms
                 Public Const PSHA1 As String = "http://schemas.xmlsoap.org/ws/2005/02/trust/CK/PSHA1"
-            End Class 'ComputedKeyAlgorithms
-        End Class 'Trust
+            End Class
+        End Class
 
         ' Various constants for WS-Policy.
 
@@ -881,8 +883,8 @@ Namespace Microsoft.ServiceModel.Samples.Federation
 
             Public Class Elements
                 Public Const AppliesTo As String = "AppliesTo"
-            End Class 'Elements
-        End Class 'Policy
+            End Class
+        End Class
 
         ' Various constants for WS-Addressing.
 
@@ -892,9 +894,9 @@ Namespace Microsoft.ServiceModel.Samples.Federation
 
             Public Class Elements
                 Public Const EndpointReference As String = "EndpointReference"
-            End Class 'Elements
-        End Class 'Addressing
-    End Class 'Constants
+            End Class
+        End Class
+    End Class
     '/ <summary>
     '/ A class that represents a RequestSecurityTokenResponse message according to February 2005 WS-Trust.
     '/ </summary>
@@ -1144,7 +1146,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
             writer.WriteEndElement()
             ' wst:RequestSecurityTokenResponse
         End Sub
-    End Class 'RequestSecurityTokenResponse
+    End Class
 
     Public NotInheritable Class FederationUtilities
 
@@ -1211,7 +1213,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
         Private Sub New()
 
         End Sub
-    End Class 'FederationUtilities
+    End Class
 
     Public NotInheritable Class SamlTokenCreator
 
@@ -1319,5 +1321,5 @@ Namespace Microsoft.ServiceModel.Samples.Federation
         Private Sub New()
 
         End Sub
-    End Class 'ServiceConstants
+    End Class
 End Namespace

@@ -486,4 +486,4 @@ Class Window1
         Dim buttonBottom As Double = InkCanvas.GetBottom(button1)
         '</Snippet34>
     End Sub
-End Class 'Window1
+End Class

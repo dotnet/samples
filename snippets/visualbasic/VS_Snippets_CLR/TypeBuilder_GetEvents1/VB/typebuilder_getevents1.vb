@@ -60,5 +60,5 @@ Public Class MyApplication
       helloWorldClass.CreateType()
       Return helloWorldClass
    End Function 'CreateCallee
-End Class 'MyApplication
+End Class
 ' </Snippet1>

@@ -47,7 +47,7 @@ NotInheritable Public Class App
         are.Set()
     
     End Sub
-End Class 'App
+End Class
 
 ' This code produces output similar to the following:
 '

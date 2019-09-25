@@ -17,7 +17,7 @@ Public Class Team
       Return _name
     End Get
   End Property
-End Class 'Team
+End Class
 
 Public Class TeamList
   Inherits ObservableCollection(Of Team)
@@ -25,7 +25,7 @@ Public Class TeamList
   Public Sub New()
 
   End Sub
-End Class 'TeamList
+End Class
 
 
 Public Class Division
@@ -49,7 +49,7 @@ Public Class Division
         Return _teams
       End Get
   End Property
-End Class 'Division
+End Class
 
 Public Class DivisionList
   Inherits ObservableCollection(Of Division)
@@ -57,7 +57,7 @@ Public Class DivisionList
   Public Sub New()
 
   End Sub
-End Class 'DivisionList
+End Class
 
 
 Public Class League
@@ -81,7 +81,7 @@ Public Class League
       Return _divisions
     End Get
   End Property
-End Class 'League
+End Class
 
 
 Public Class LeagueList
@@ -138,5 +138,5 @@ Public Class LeagueList
         d.Teams.Add(New Team("Team Epsilon"))
 
   End Sub
-End Class 'LeagueList
+End Class
 ' </Snippet3>

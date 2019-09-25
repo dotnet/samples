@@ -10,12 +10,12 @@ Namespace HighSchool
     Public Class Student
         Public Name As String
         Public ID As Integer
-    End Class 'Student
+    End Class
     
     
     Public Class MyClass1
         Public Students() As Student
-    End Class 'MyClass1
+    End Class
 End Namespace 'HighSchool
 
 Namespace College
@@ -25,7 +25,7 @@ Namespace College
         Public Sub New()
         End Sub
         Public University As String
-    End Class 'Graduate
+    End Class
     
     
     
@@ -116,6 +116,6 @@ Namespace College
                 Console.Write((g.University & ControlChars.Cr))
             Next grad
         End Sub
-    End Class 'Run
+    End Class
 End Namespace 'College
 ' </Snippet1>

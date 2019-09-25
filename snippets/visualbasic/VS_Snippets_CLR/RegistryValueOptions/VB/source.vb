@@ -19,5 +19,5 @@ Public Class Example
             RegistryValueOptions.DoNotExpandEnvironmentNames))
         Console.WriteLine("Expanded: ""{0}""", rk.GetValue("ExpandValue"))
     End Sub
-End Class 'Example
+End Class
 ' </Snippet1>

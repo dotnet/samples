@@ -529,7 +529,7 @@ Namespace InvokePatternSample
                 Dim app As New InvokePatternApp()
                 app.Run()
             End Sub
-        End Class 'TestMain
+        End Class
 
         '''--------------------------------------------------------------------
         ''' <summary>
@@ -545,7 +545,7 @@ Namespace InvokePatternSample
         End Sub
 #End Region
 
-    End Class 'InvokePatternApp '
+    End Class
 
 End Namespace
 

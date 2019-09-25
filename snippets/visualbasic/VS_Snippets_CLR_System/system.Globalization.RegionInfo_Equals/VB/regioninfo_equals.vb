@@ -23,7 +23,7 @@ Public Class SamplesRegionInfo
 
    End Sub
 
-End Class 'SamplesRegionInfo 
+End Class
 
 
 'This code produces the following output.

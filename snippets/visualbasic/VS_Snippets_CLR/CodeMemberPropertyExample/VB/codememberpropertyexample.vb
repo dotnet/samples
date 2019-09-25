@@ -74,6 +74,6 @@ Namespace CodeDomSamples
             '</Snippet3>
         End Sub
 
-    End Class 'CodeMemberPropertyExample
+    End Class
 End Namespace 'CodeDomSamples
 '</Snippet1>

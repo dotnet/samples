@@ -38,4 +38,4 @@ Public Class MyServerProcessingClient
       Console.WriteLine("Finished remote object call")
       Console.WriteLine()
    End Sub
-End Class 'MyServerProcessingClient
+End Class

@@ -59,7 +59,7 @@ Namespace MyControls
 
             dataSourceEnumerator = data.GetEnumerator()
         End Sub
-    End Class 'MyDataBound
+    End Class
 
     ' MyDataBoundAdapter modifies a MyDataBound control to display a
     ' grid as a list with row separators.
@@ -112,6 +112,6 @@ Namespace MyControls
             Next col
         End Sub
         ' </snippet3>
-    End Class 'MyDataBoundAdapter 
+    End Class
 End Namespace ' MyControls
 ' </snippet1>

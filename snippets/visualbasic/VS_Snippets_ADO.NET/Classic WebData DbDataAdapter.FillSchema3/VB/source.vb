@@ -36,11 +36,11 @@ Module Module1
     Private Function GetCustomerData(ByVal dataTableName As String, _
         ByVal connectionString As String) As DataTable
 
-        Dim table As DataTable = New DataTable(dataTableName)
+        Dim table As New DataTable(dataTableName)
 
         Using connection As SqlConnection = New SqlConnection(connectionString)
 
-            Dim adapter As SqlDataAdapter = New SqlDataAdapter( _
+            Dim adapter New SqlDataAdapter( _
                "SELECT CustomerID, CompanyName, ContactName FROM dbo.Customers", _
                connection)
 

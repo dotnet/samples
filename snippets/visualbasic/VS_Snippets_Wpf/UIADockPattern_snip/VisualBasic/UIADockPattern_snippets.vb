@@ -173,5 +173,5 @@ Class UIADockPattern_snippets
             Dim app As New UIADockPattern_snippets()
         
         End Sub
-    End Class 'TestMain
-End Class 'UIADockPattern_snippets
+    End Class
+End Class

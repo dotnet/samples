@@ -9,21 +9,6 @@ Imports MSVB = Microsoft.VisualBasic
 '</Snippet56>
 Public Class Class1
 
-
-  '****************************************************************************
-  Class WrapAllOnes
-    '<Snippet67>
-    'Function allOnes(ByVal n As Integer) As Integer()
-    '    Dim i As Integer
-    '    For i = 1 To n - 1
-    '        allOnes(i) = 1
-    '    Next i
-    '    Return allOnes()
-    'End Function
-    '</Snippet67>
-  End Class
-
-
   '****************************************************************************
   '<Snippet66>
   Function allOnes(ByVal n As Integer) As Integer()
@@ -157,7 +142,7 @@ End Class
       ' Insert code to access customer record by account number.
   End Sub
   '</Snippet55>
-  End Class ' segregateSnippets54and55
+  End Class
 
   ' New snippet to replace "VbVbcnProcedures#54,55" CREF (How to: Define Multiple Versions of a Procedure)
   '<Snippet72>
@@ -181,7 +166,7 @@ End Class
   Sub postAcct(ByVal custAcct As Integer, ByVal amount As Single)
   '</Snippet53>
   End Sub
-  End Class ' segregateSnippets52and53
+  End Class
 
   ' New snippet to replace "VbVbcnProcedures#52,53" CREF (Procedure Overloading)
   '<Snippet73>
@@ -196,12 +181,11 @@ End Class
 
   '****************************************************************************
   '<Snippet51>
-  Function factorial(ByVal n As Integer) As Integer
+  Function Factorial(n As Integer) As Integer
       If n <= 1 Then
           Return 1
-      Else
-          Return factorial(n - 1) * n
       End If
+      Return Factorial(n - 1) * n
   End Function
   '</Snippet51>
 
@@ -777,7 +761,7 @@ End Class
 
 
     ' Class CancelEventArgs ' for Snippet5 -- removed to try different approach
-    ' End Class ' for Snippet5 -- removed to try different approach
+    ' End Class
 
     ' Event Closing(ByVal sender As Object, ByVal e As CancelEventArgs) ' for Snippet5 -- removed to try different approach
 

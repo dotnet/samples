@@ -31,7 +31,7 @@ Namespace CSClientProviderImplementation
             Console.WriteLine("Press any key to exit.")
             Console.ReadLine()
         End Sub
-    End Class ' CSClientSideImplementationProgram class
+    End Class
 
 
     Friend Class UIAutomationClientSideProviders

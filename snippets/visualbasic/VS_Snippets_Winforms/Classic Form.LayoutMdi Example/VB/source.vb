@@ -26,5 +26,5 @@ Public Class Form1
         Me.LayoutMdi(MdiLayout.Cascade)
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

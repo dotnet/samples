@@ -246,5 +246,5 @@ Class DataGridViewRowPainting
     End Sub
     '</Snippet40>
 
-End Class 'DataGridViewRowPainting
+End Class
 '</Snippet00>

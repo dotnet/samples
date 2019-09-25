@@ -68,6 +68,6 @@ Public Class Example
       ' Create 'MyNestedClass' type.
       Return myNestedClassType.CreateType()
    End Function 'CreateCallee
-End Class 'Example
+End Class
 ' </Snippet2>
 ' </Snippet1>

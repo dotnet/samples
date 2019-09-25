@@ -136,4 +136,4 @@ Public Class MyForm
       myCustomerTable.Rows(0)("Date") = System.DateTime.Now
       myCustomerTable.Rows(1)("Date") = System.DateTime.Today
    End Sub
-End Class 'MyForm
+End Class

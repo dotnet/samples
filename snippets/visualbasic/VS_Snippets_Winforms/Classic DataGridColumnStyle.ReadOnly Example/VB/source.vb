@@ -21,5 +21,5 @@ Public Class Form1
         Next dataColumn
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

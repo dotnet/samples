@@ -31,5 +31,5 @@ Public Class MoveToTest
         End Try
 
     End Sub
-End Class 'MoveToTest
+End Class
 '</snippet1>

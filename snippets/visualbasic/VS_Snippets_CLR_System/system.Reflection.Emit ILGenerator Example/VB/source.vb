@@ -167,7 +167,7 @@ Class TestILGenerator
                         IVType.InvokeMember("DotProduct", BindingFlags.InvokeMethod, _
                         Nothing, aVector1, passMe))
    End Sub
-End Class 'TestILGenerator
+End Class
 
 
 

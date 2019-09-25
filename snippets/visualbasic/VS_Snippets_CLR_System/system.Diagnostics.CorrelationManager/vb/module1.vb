@@ -39,7 +39,7 @@ Class Program
         Trace.CorrelationManager.StopLogicalOperation()
     
     End Sub
-End Class 'Program
+End Class
 ' This sample generates the following output:
 'MyApp Error: 1 : Trace an error event.
 '    LogicalOperationStack=MainThread

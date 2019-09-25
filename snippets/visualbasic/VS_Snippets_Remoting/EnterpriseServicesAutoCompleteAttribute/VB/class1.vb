@@ -38,7 +38,7 @@ Public Class AutoCompleteAttribute_Example
     End Sub
     ' </snippet3>
 
-End Class 'AutoCompleteAttribute_Example
+End Class
 
 ' </snippet0>
 
@@ -54,4 +54,4 @@ Public Class TestClient
         'example.AutoCompleteAttribute_Value()
 
     End Sub
-End Class 'TestClient
+End Class

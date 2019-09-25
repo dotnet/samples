@@ -47,5 +47,5 @@ Public Class HelloServer
       Return "Hi there " + name
    End Function 'HelloMethod
 
-End Class 'HelloServer
+End Class
 ' </Snippet3>

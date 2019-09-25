@@ -41,7 +41,7 @@ Namespace SDKSampleHelper
 			_completed = completed
 			_status = status
 		End Sub
-	End Class ' end:class AsyncSaveEventArgs
+	End Class
 
 
 	' ------------------------- class XpsPrintHelper -------------------------
@@ -678,6 +678,6 @@ Namespace SDKSampleHelper
 		Private _xpsdwActive As XpsDocumentWriter = Nothing
 		#End Region ' Private Data
 
-	End Class ' end:class XpsPrintHelper
+	End Class
 
 End Namespace ' end:namespace SDKSampleHelper

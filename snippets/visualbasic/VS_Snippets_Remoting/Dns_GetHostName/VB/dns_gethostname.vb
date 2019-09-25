@@ -34,4 +34,4 @@ Class DnsHostName
         End Try
 ' </Snippet1>
     End Sub
-End Class 'DnsHostName 
+End Class

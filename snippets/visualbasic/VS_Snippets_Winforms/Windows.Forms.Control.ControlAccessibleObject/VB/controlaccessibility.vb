@@ -118,6 +118,6 @@ Public Sub New()
 End Sub
 ' </snippet2>
 
-   End Class 'MyForm ' 
+   End Class
 
 End Namespace 'ControlAccessibility

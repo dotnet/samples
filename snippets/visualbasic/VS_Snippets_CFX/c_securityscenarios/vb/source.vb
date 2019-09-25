@@ -115,7 +115,7 @@ Namespace BasicAuthentication
             Return "not"
 
         End Function 'ReturnPassword
-    End Class 'BasicService
+    End Class
 End Namespace 'BasicAuthentication
 Namespace SecuredUsingWindows
     Public Class WindowsService
@@ -194,7 +194,7 @@ Namespace SecuredUsingWindows
             Return "not"
 
         End Function 'ReturnPassword
-    End Class 'WindowsService 
+    End Class
 End Namespace 'SecuredUsingWindows
 Namespace SecuredByTransportWithAnonymousClient
     
@@ -264,7 +264,7 @@ Namespace SecuredByTransportWithAnonymousClient
             End Try
             '</snippet6>
         End Sub
-    End Class 'MyService
+    End Class
 End Namespace 'SecuredByTransportWithAnonymousClient 
 
 Namespace SecuredTranserUsingCertificates
@@ -340,7 +340,7 @@ Namespace SecuredTranserUsingCertificates
             End Try
             '</snippet14>
         End Sub
-    End Class 'MyService
+    End Class
 End Namespace 'SecuredTranserUsingCertificates
 
 Namespace SecuredUsingMessageSecurityWithAnonClient
@@ -410,7 +410,7 @@ Namespace SecuredUsingMessageSecurityWithAnonClient
             End Try
             '</snippet15>
         End Sub
-    End Class 'SecureService
+    End Class
 End Namespace 'SecuredUsingMessageSecurityWithAnonClient 
 
 Namespace SecuredUsingMessageSecurityWithUsername
@@ -643,7 +643,7 @@ Namespace SecuredUsingMessageWithWindowsClient
             End Try
             '</snippet18>
         End Sub
-    End Class 'MyService
+    End Class
 End Namespace 'SecuredUsingMessageWithWindowsClient 
 
 
@@ -851,7 +851,7 @@ Namespace ServiceModel
             Return a + b
 
         End Function
-    End Class 'Calculator
+    End Class
     
     
     Public Class Utility
@@ -863,7 +863,7 @@ Namespace ServiceModel
             sh.Description.Behaviors.Add(sb)
         
         End Sub
-    End Class 'Utility 
+    End Class
 End Namespace 'ServiceModel
 
 Namespace ClientCalculator

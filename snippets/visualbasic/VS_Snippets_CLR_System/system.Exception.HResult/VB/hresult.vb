@@ -16,7 +16,7 @@ Namespace NDP_UE_VB
                 message, SecondLevelHResult ), inner )
             HResult = SecondLevelHResult
         End Sub
-    End Class ' SecondLevelException
+    End Class
 
     Module HResultDemo
        

@@ -23,7 +23,7 @@ Module Module1
             Console.WriteLine("Starting row count = {0}", countStart)
 
             ' Get data from the source table as a SqlDataReader.
-            Dim commandSourceData As SqlCommand = New SqlCommand( _
+            Dim commandSourceData As New SqlCommand( _
                "SELECT ProductID, Name, ProductNumber " & _
                "FROM Production.Product;", sourceConnection)
             Dim reader As SqlDataReader = commandSourceData.ExecuteReader

@@ -15,5 +15,5 @@ Public Class CapsLockIndicator
             MessageBox.Show("The Caps Lock key is OFF.")
         End If
     End Sub
-End Class 'CapsLockIndicator
+End Class
 ' </Snippet1>

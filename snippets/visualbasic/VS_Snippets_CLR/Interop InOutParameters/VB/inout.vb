@@ -11,18 +11,18 @@ Public Class OpenFileName
    Public file As String = Nothing
    ' ...
 
-End Class 'OpenFileName
+End Class
 
 Public Class LibWrap
    ' Declare managed prototype for the unmanaged function.
    Declare Unicode Function GetOpenFileName Lib "Comdlg32.dll" ( _
       <[In](), Out()> ByVal ofn As OpenFileName) As Boolean
-End Class 'LibWrap
+End Class
 
 Public Class App
     Public Shared Sub Main()
 
     End Sub
-End Class 'App
+End Class
 
 ' </Snippet1>

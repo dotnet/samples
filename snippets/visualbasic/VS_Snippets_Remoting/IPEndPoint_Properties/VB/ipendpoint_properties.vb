@@ -99,4 +99,4 @@ Class IPEndPointSnippet
             Return Nothing
         End Try
     End Function 'DoSocketGet
-End Class 'IPEndPointSnippet
+End Class

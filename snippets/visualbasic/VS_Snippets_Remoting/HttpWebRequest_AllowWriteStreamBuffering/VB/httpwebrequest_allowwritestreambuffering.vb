@@ -73,4 +73,4 @@ Class HttpWebRequest_AllowWriteStreamBuffering
             Console.WriteLine("Message :{0}", e.Message)
         End Try
     End Sub
-End Class 'HttpWebRequest_AllowWriteStreamBuffering 
+End Class

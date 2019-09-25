@@ -73,4 +73,4 @@ Class MyClass1
 ' </Snippet4>
 ' </Snippet3>
    End Sub
-End Class '[MyClass]
+End Class

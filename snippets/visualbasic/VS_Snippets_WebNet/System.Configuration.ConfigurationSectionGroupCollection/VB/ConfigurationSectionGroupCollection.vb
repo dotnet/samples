@@ -58,7 +58,7 @@ NotInheritable Public Class CustomSection
         End Set
     End Property
 
-End Class 'CustomSection 
+End Class
 
 ' Define a custom section group.
 
@@ -77,7 +77,7 @@ NotInheritable Public Class CustomSectionGroup
       End Get
     End Property
 
-End Class 'CustomSectionGroup 
+End Class
 
 
 Class UsingCustomSectionGroupCollection
@@ -368,6 +368,6 @@ Class UsingCustomSectionGroupCollection
         ' Clear();
 
     End Sub
-End Class 'UsingCustomSectionGroupCollection ' GetGroup();
+End Class
 
 ' </Snippet1>

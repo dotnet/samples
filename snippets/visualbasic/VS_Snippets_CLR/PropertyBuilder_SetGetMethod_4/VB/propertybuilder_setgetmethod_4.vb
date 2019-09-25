@@ -132,5 +132,5 @@ Public Class App
       ' Create the class HelloWorld.
       Return helloWorldTypeBuilder.CreateType()
    End Function 'CreateCallee
-End Class 'App
+End Class
 ' </Snippet4>

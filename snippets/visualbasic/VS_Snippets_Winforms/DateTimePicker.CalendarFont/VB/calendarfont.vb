@@ -17,4 +17,4 @@ Public Class [MyClass]
       dateTimePicker1.CalendarFont = New Font("Courier New", 8.25F, FontStyle.Italic, GraphicsUnit.Point, CType(0, [Byte]))
    End Sub
 ' </snippet1>
-End Class '[MyClass]
+End Class

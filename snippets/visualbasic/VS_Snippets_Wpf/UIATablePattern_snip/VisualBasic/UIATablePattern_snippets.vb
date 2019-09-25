@@ -32,7 +32,7 @@ Class UIATablePattern_snippets
             app.Run()
         
         End Sub
-    End Class 'TestMain
+    End Class
     
     
     ' <SnippetStartTarget>
@@ -318,4 +318,4 @@ Class UIATablePattern_snippets
         MyBase.OnExit(args)
 
     End Sub
-End Class 'UIATablePattern_snippets
+End Class

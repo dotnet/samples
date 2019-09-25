@@ -117,6 +117,6 @@ Namespace ISelectionServiceExample
       Private Sub listBox1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) _
             Handles listBox1.SelectedIndexChanged
       End Sub
-   End Class 'ComponentClass 
+   End Class
 End Namespace 'ISelectionServiceExample
 '</snippet1>

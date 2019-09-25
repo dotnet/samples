@@ -625,4 +625,4 @@ Class TestConfigurationElement2
 
     ' </Snippet9> 
 
-End Class 'TestConfigurationElement 
+End Class

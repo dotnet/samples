@@ -46,5 +46,5 @@ Public Class Sample
         m_success = False
         Console.WriteLine(ControlChars.CrLf & ControlChars.Tab & "Validation error: " & args.Message)
     End Sub
-End Class 'Sample
+End Class
 ' </Snippet1>

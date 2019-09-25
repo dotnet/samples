@@ -71,7 +71,7 @@ Public Class SamplesSortedList
         Console.WriteLine()
     End Sub
 
-End Class 'SamplesSortedList
+End Class
 
 
 'This code produces the following output.  Results vary depending on the system's culture settings.

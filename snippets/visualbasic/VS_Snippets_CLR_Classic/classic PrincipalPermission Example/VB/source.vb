@@ -15,5 +15,5 @@ Class SecurityPrincipalDemo
         Console.WriteLine("Demand succeeded.")
 
     End Sub
-End Class 'SecurityPrincipalDemo
+End Class
 '</Snippet1>

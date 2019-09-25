@@ -60,5 +60,5 @@ Public Class MyInstallerClass
       Console.WriteLine("Usage : installutil.exe Installer_BeforeRollback.exe ")
    End Sub
 
-End Class 'MyInstallerClass
+End Class
 ' </Snippet1>

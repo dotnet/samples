@@ -106,6 +106,6 @@ Class DynamicJumpTableDemo
 
    End Sub
 
-End Class 'DynamicJumpTableDemo
+End Class
 
 ' </Snippet1>

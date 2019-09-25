@@ -63,7 +63,7 @@ Namespace MyCustomWebPart
             _provider = provider
 
         End Sub
-    End Class 'RowConsumerWebPart 
+    End Class
     '</SNIPPET5>
 
     '</SNIPPET2>

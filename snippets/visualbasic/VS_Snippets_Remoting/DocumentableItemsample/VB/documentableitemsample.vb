@@ -31,5 +31,5 @@ Class DocumentableItemSample
    Public Shared Sub PrintDocumentation(myItem As DocumentableItem)
       Console.WriteLine(ControlChars.Tab + myItem.Documentation)
    End Sub
-End Class 'DocumentableItemSample
+End Class
 ' </Snippet1>

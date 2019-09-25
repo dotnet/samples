@@ -20,5 +20,5 @@ Class MainApp
             Console.WriteLine("Message: {0}", e.Message.ToString())
         End Try
     End Sub
-End Class 'MainApp
+End Class
 ' </Snippet1>
