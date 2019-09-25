@@ -11,7 +11,7 @@ Public Class FileReaderException
     End Sub
 End Class
 
-<FlagsAttribute> _
+<Flags()> _
 Public Enum ConnectionState
     Closed = 0
     Open = 1

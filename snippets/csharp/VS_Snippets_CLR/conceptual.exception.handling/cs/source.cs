@@ -11,7 +11,7 @@ public class FileReaderException : Exception
     }
 }
 
-[FlagsAttribute]
+[Flags]
 public enum ConnectionState
 {
     Closed = 0,
