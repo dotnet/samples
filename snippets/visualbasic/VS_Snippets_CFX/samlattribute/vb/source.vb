@@ -319,7 +319,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
         '/ <returns>Proof Token</returns>
         Protected Shared Function CreateProofToken(ByVal keySize As Integer) As BinarySecretSecurityToken
             ' Create an array to store the key bytes.
-            Dim key(keySize / 8) As Byte
+            Dim key(keySize / 8 - 1) As Byte
             ' Create some random bytes.
             Dim random As New RNGCryptoServiceProvider()
             random.GetNonZeroBytes(key)
@@ -763,7 +763,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
                     Dim nBytes As Integer = xr.ReadContentAsBase64(temp, 0, temp.Length)
 
                     ' Allocate a new array of the correct size to hold the provided entropy.
-                    Dim entropy(nBytes) As Byte
+                    Dim entropy(nBytes - 1) As Byte
 
                     ' Copy the entropy from the temporary array into the new array.
                     Dim i As Integer
@@ -1029,9 +1029,9 @@ Namespace Microsoft.ServiceModel.Samples.Federation
         Public Shared Function ComputeCombinedKey(ByVal requestorEntropy() As Byte, ByVal issuerEntropy() As Byte, ByVal keySize As Integer) As Byte()
             Dim kha As KeyedHashAlgorithm = New HMACSHA1(requestorEntropy, True)
 
-            Dim key(keySize / 8) As Byte ' Final key
+            Dim key(keySize / 8 - 1) As Byte ' Final key
             Dim a As Byte() = issuerEntropy ' A(0)
-            Dim b(kha.HashSize / 8 + a.Length) As Byte ' Buffer for A(i) + seed
+            Dim b(kha.HashSize / 8 + a.Length - 1) As Byte ' Buffer for A(i) + seed
             Dim i As Integer
 
             While i < key.Length

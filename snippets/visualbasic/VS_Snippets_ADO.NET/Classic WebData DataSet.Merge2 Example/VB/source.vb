@@ -21,7 +21,7 @@ Private Sub DemonstrateMergeMissingSchema()
         Type.GetType("System.Int32"))
 
     ' DataColumn array to set primary key.
-    Dim keyColumn(1) As DataColumn
+    Dim keyColumn(0) As DataColumn
     Dim row As DataRow
 
     ' Create variable for temporary DataSet. 

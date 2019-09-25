@@ -55,7 +55,7 @@ Class Class1
             categories.Columns.Add(column)
 
             ' Set the primary key on CategoryID.
-            Dim pKey(1) As DataColumn
+            Dim pKey(0) As DataColumn
             pKey(0) = categories.Columns("CategoryID")
             categories.PrimaryKey = pKey
 
