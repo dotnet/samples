@@ -696,10 +696,10 @@ End Class
   End Sub
 
   '****************************************************************************
-  Function testhyp() As Single
+  Function TestHyp() As Double
     '<Snippet6>
-    Dim testLength, testHypotenuse As Single
-    testHypotenuse = hypotenuse(testLength, 10.7)
+    Dim testLength, testHypotenuse As Double
+    testHypotenuse = Hypotenuse(testLength, 10.7)
     '</Snippet6>
 
     Return testHypotenuse
@@ -754,7 +754,7 @@ End Class
 
     '****************************************************************************
     '<Snippet1>
-    Function hypotenuse(ByVal side1 As Single, ByVal side2 As Single) As Single
+    Function Hypotenuse(side1 As Double, side2 As Double) As Double
         Return Math.Sqrt((side1 ^ 2) + (side2 ^ 2))
     End Function
     '</Snippet1>
