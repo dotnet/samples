@@ -21,7 +21,7 @@ public class Form1 : Form
         Console.WriteLine($"Column Count: {columns.Length}");
         for (int i = 0; i < columns.Length; i++)
         {
-            Console.WriteLine(columns[i].ColumnName + columns[i].DataType);
+            Console.WriteLine($"{columns[i].ColumnName} {columns[i].DataType}");
         }
     }
  
