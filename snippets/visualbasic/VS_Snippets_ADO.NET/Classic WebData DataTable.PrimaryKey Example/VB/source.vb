@@ -18,7 +18,7 @@ Protected DataGrid1 As DataGrid
      ' Get the number of elements in the array.
      Console.WriteLine($"Column Count: {columns.Length}")
      For i = 0 To columns.GetUpperBound(0)
-         Console.WriteLine(columns(i).ColumnName & columns(i).DataType.ToString())
+         Console.WriteLine($"{columns(i).ColumnName} {columns(i).DataType}")
      Next
  End Sub
  
