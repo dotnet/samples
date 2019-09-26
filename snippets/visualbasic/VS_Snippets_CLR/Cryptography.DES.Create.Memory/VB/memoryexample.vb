@@ -83,7 +83,7 @@ Module DESSample
                                               CryptoStreamMode.Read)
 
             ' Create buffer to hold the decrypted data.
-            Dim fromEncrypt(Data.Length) As Byte
+            Dim fromEncrypt(Data.Length - 1) As Byte
 
             ' Read the decrypted data out of the crypto stream
             ' and place it into the temporary buffer.

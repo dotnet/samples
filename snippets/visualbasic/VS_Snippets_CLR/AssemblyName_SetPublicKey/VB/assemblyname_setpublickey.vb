@@ -63,7 +63,7 @@ Public Class AssemblyName_CodeBase
       myAssemblyName.Flags = AssemblyNameFlags.PublicKey
       ' Get the whole contents of the 'PublicKey.snk' into a byte array.
       Dim publicKeyStream As FileStream = File.Open("PublicKey.snk", FileMode.Open)
-      Dim publicKey(publicKeyStream.Length) As Byte
+      Dim publicKey(publicKeyStream.Length - 1) As Byte
       publicKeyStream.Read(publicKey, 0, CInt(publicKeyStream.Length))
       ' Provide the assembly with a public key.
       myAssemblyName.SetPublicKey(publicKey)

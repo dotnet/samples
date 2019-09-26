@@ -14,8 +14,8 @@ Module Module1
     Private Sub AddForeignConstraint( _
     ByVal dataSet As DataSet, ByVal table As DataTable)
         Try
-            Dim parentColumns(2) As DataColumn
-            Dim childColumns(2) As DataColumn
+            Dim parentColumns(1) As DataColumn
+            Dim childColumns(1) As DataColumn
             ' Get the tables from the DataSet.
             Dim customersTable As DataTable = _
                 dataSet.Tables("Customers")

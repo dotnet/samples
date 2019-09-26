@@ -4,7 +4,7 @@ Imports System.IO
 Public Class CharsFromStr
     Public Shared Sub Main()
         Dim str As String = "Some number of characters"
-        Dim b(str.Length) As Char
+        Dim b(str.Length - 1) As Char
 
         Using sr As StringReader = New StringReader(str)
             ' Read 13 characters from the string into the array.

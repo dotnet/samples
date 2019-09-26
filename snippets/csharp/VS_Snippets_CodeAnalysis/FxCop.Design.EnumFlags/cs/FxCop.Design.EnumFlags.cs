@@ -16,7 +16,7 @@ namespace DesignLibrary
       All         = Monday| Tuesday | Wednesday | Thursday | Friday
    }
    // Violates rule: DoNotMarkEnumsWithFlags.
-   [FlagsAttribute]
+   [Flags]
    public enum ColorEnumShouldNotHaveFlag 
    {
       None        = 0,

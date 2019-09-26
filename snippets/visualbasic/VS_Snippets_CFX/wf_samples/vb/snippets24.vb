@@ -1140,7 +1140,7 @@ Namespace WF_Snippets
                 ' file opened for shared reads but no writes by anyone
                 fileStream = New FileStream(filename, FileMode.Open, FileAccess.Read, FileShare.Read)
                 fileStream.Seek(0, SeekOrigin.Begin)
-                Dim workflowBytes((CType(fileStream.Length, Integer))) As Byte
+                Dim workflowBytes(CInt(fileStream.Length - 1)) As Byte
 
                 ' get the serialized form
                 fileStream.Read(workflowBytes, 0, workflowBytes.Length)
