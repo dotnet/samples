@@ -34,7 +34,7 @@ public class Form1 : Form
 
         // Create column 1.
         column = new DataColumn();
-        column.DataType = System.Type.GetType("System.String");
+        column.DataType = Type.GetType("System.String");
         column.ColumnName= "FirstName";
 
         // Add the column to the DataTable.Columns collection.
@@ -45,7 +45,7 @@ public class Form1 : Form
  
         // Create column 2 and add it to the array.
         column = new DataColumn();
-        column.DataType = System.Type.GetType("System.String");
+        column.DataType = Type.GetType("System.String");
         column.ColumnName = "LastName";
         table.Columns.Add(column);
 
