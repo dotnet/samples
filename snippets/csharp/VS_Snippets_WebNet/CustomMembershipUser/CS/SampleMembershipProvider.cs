@@ -120,10 +120,7 @@ namespace Samples.AspNet.Membership.CS
       pWriteExceptionsToEventLog = Convert.ToBoolean(GetConfigValue(config["writeExceptionsToEventLog"], "true"));
 
       string temp_format = config["passwordFormat"];
-      if (temp_format == null)
-      {
-        temp_format = "Hashed";
-      }
+      temp_format ??= "Hashed";
 
       switch (temp_format)
       {

@@ -347,10 +347,7 @@ namespace AdvancedInkInputSemples
         protected override void OnStylusMove(StylusEventArgs e)
         {
             // Allocate memory for the StylusPointsCollection, if necessary
-            if (stylusPoints == null)
-            {
-                stylusPoints = new StylusPointCollection();
-            }
+            stylusPoints ??= new StylusPointCollection();
 
             // Add the StylusPoints that have come in since the last call to OnStylusMove
             StylusPointCollection newStylusPoints = e.GetStylusPoints(this, stylusPoints.Description);
@@ -371,10 +368,7 @@ namespace AdvancedInkInputSemples
                 return;
             }
 
-            if (stylusPoints == null)
-            {
-                stylusPoints = new StylusPointCollection();
-            }
+            stylusPoints ??= new StylusPointCollection();
 
             Point pt = e.GetPosition(this);
 
@@ -386,10 +380,7 @@ namespace AdvancedInkInputSemples
         protected override void OnStylusUp(StylusEventArgs e)
         {
             // Allocate memory for the StylusPointsCollection, if necessary
-            if (stylusPoints == null)
-            {
-                stylusPoints = new StylusPointCollection();
-            }
+            stylusPoints ??= new StylusPointCollection();
 
             // Add the StylusPoints that have come in since the last call to OnStylusMove
             StylusPointCollection newStylusPoints = e.GetStylusPoints(this, stylusPoints.Description);

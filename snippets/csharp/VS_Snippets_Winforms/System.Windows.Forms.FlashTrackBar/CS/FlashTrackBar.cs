@@ -391,9 +391,7 @@ namespace Microsoft.Samples.WinForms.Cs.FlashTrackBar {
             }
             // </snippet4>
 
-            if (backgroundDim == null) {
-                backgroundDim = new SolidBrush(Color.FromArgb(DarkenBy, Color.Black));
-            }
+            backgroundDim ??= new SolidBrush(Color.FromArgb(DarkenBy, Color.Black));
 
             Rectangle toDim = ClientRectangle;
             float percentValue = ((float)Value / ((float)Max - (float)Min));

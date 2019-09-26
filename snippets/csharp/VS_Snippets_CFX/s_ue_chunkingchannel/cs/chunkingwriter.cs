@@ -120,10 +120,7 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
 
         public override void WriteBase64(byte[] buffer, int index, int count)
         {
-            if (chunkState == null)
-            {
-                chunkState = new ChunkState();
-            }
+            chunkState ??= new ChunkState();
             int remaining = chunkState.AppendBytes(buffer, index, count);
             if (chunkState.Count == ChunkingUtils.ChunkSize)
             {

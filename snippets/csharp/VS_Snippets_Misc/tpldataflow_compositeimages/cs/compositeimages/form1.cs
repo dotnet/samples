@@ -312,10 +312,7 @@ namespace CompositeImages
             cancellationTokenSource = new CancellationTokenSource();
 
             // Create the image processing network if needed.
-            if (headBlock == null)
-            {
-               headBlock = CreateImageProcessingNetwork();
-            }
+            headBlock ??= CreateImageProcessingNetwork();
 
             // Post the selected path to the network.
             headBlock.Post(dlg.SelectedPath);

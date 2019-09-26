@@ -285,10 +285,7 @@ namespace DCSurrogateSample
                 xsdInventoryImporter = new XsdDataContractImporter();
 
             xsdInventoryImporter = (XsdDataContractImporter)dataContractImporter;
-            if (xsdInventoryImporter.Options == null)
-            {
-                xsdInventoryImporter.Options = new ImportOptions();
-            }
+            xsdInventoryImporter.Options ??= new ImportOptions();
             xsdInventoryImporter.Options.DataContractSurrogate = new InventorySurrogated();
             importer.State.Add(typeof(XsdDataContractImporter), xsdInventoryImporter);
 
