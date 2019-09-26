@@ -38,33 +38,23 @@ namespace socketoption_examples
 
             Console.WriteLine("Tcp Socket configured:");
 
-            Console.WriteLine("  ExclusiveAddressUse {0}",
-                tcpSocket.ExclusiveAddressUse);
+            Console.WriteLine($"  ExclusiveAddressUse {tcpSocket.ExclusiveAddressUse}");
 
-            Console.WriteLine("  LingerState {0}, {1}",
-                tcpSocket.LingerState.Enabled,
-                tcpSocket.LingerState.LingerTime);
+            Console.WriteLine($"  LingerState {tcpSocket.LingerState.Enabled}, {tcpSocket.LingerState.LingerTime}");
 
-            Console.WriteLine("  NoDelay {0}",
-                tcpSocket.NoDelay);
+            Console.WriteLine($"  NoDelay {tcpSocket.NoDelay}");
 
-            Console.WriteLine("  ReceiveBufferSize {0}",
-                tcpSocket.ReceiveBufferSize);
+            Console.WriteLine($"  ReceiveBufferSize {tcpSocket.ReceiveBufferSize}");
 
-            Console.WriteLine("  ReceiveTimeout {0}",
-                tcpSocket.ReceiveTimeout);
+            Console.WriteLine($"  ReceiveTimeout {tcpSocket.ReceiveTimeout}");
 
-            Console.WriteLine("  SendBufferSize {0}",
-                tcpSocket.SendBufferSize);
+            Console.WriteLine($"  SendBufferSize {tcpSocket.SendBufferSize}");
 
-            Console.WriteLine("  SendTimeout {0}",
-                tcpSocket.SendTimeout);
+            Console.WriteLine($"  SendTimeout {tcpSocket.SendTimeout}");
 
-            Console.WriteLine("  Ttl {0}",
-                tcpSocket.Ttl);
+            Console.WriteLine($"  Ttl {tcpSocket.Ttl}");
 
-            Console.WriteLine("  IsBound {0}",
-                tcpSocket.IsBound);
+            Console.WriteLine($"  IsBound {tcpSocket.IsBound}");
 
             Console.WriteLine("");
         }
@@ -82,22 +72,19 @@ namespace socketoption_examples
             udpSocket.MulticastLoopback = false;
 
             Console.WriteLine("Udp Socket configured:");
-            Console.WriteLine("  DontFragment {0}",
-                udpSocket.DontFragment);
-            Console.WriteLine("  EnableBroadcast {0}",
-                udpSocket.EnableBroadcast);
-            Console.WriteLine("  MulticastLoopback {0}",
-                udpSocket.MulticastLoopback);
+            Console.WriteLine($"  DontFragment {udpSocket.DontFragment}");
+            Console.WriteLine($"  EnableBroadcast {udpSocket.EnableBroadcast}");
+            Console.WriteLine($"  MulticastLoopback {udpSocket.MulticastLoopback}");
         }
         //</Snippet2>
 
         [STAThread]
         static void Main(string[] args)
         {
-            Socket t = new Socket(AddressFamily.InterNetwork,
+            var t = new Socket(AddressFamily.InterNetwork,
                 SocketType.Stream,
                 ProtocolType.IP);
-            Socket u = new Socket(AddressFamily.InterNetwork,
+            var u = new Socket(AddressFamily.InterNetwork,
                 SocketType.Dgram,
                 ProtocolType.IP);
 
