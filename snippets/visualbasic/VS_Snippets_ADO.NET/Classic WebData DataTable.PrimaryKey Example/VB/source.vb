@@ -30,7 +30,7 @@ Protected DataGrid1 As DataGrid
 
      ' Create column 1.
      column = New DataColumn()
-     column.DataType = System.Type.GetType("System.String")
+     column.DataType = Type.GetType("System.String")
      column.ColumnName= "FirstName"
 
      ' Add the column to the DataTable.Columns collection.
@@ -40,7 +40,7 @@ Protected DataGrid1 As DataGrid
  
      ' Create column 2 and add it to the array.
      column = New DataColumn()
-     column.DataType = System.Type.GetType("System.String")
+     column.DataType = Type.GetType("System.String")
      column.ColumnName = "LastName"
      table.Columns.Add(column)
 
