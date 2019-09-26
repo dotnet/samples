@@ -269,7 +269,7 @@ namespace ChartControl
             public Rectangle Bounds
             {   
                 get
-				{
+                {
                     return new Rectangle(Location, Size);
                 }
             }
