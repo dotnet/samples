@@ -4,7 +4,7 @@ using System.Data;
 using System.Data.Common;
 using System.Windows.Forms;
 
-public class Form1: Form
+public class Form1 : Form
 {
     protected DataSet DataSet1;
     protected DataGrid dataGrid1;
@@ -18,8 +18,8 @@ public class Form1: Form
         columns = table.PrimaryKey;
 
         // Get the number of elements in the array.
-        Console.WriteLine("Column Count: " + columns.Length);
-        for(int i = 0; i < columns.Length; i++)
+        Console.WriteLine($"Column Count: {columns.Length}");
+        for (int i = 0; i < columns.Length; i++)
         {
             Console.WriteLine(columns[i].ColumnName + columns[i].DataType);
         }
@@ -28,8 +28,8 @@ public class Form1: Form
     private void SetPrimaryKeys()
     {
         // Create a new DataTable and set two DataColumn objects as primary keys.
-        DataTable table = new DataTable();
-        DataColumn[] keys = new DataColumn[2];
+        var table = new DataTable();
+        var keys = new DataColumn[2];
         DataColumn column;
 
         // Create column 1.
