@@ -51,10 +51,10 @@ namespace TransferLearningTF
                             .Append(mlContext.Model.LoadTensorFlowModel(_inceptionTensorFlowModel).
                                 ScoreTensorFlowModel(outputColumnNames: new[] { "softmax2_pre_activation" }, inputColumnNames: new[] { "input" }, addBatchDimensionInput: true))
                             // </SnippetScoreTensorFlowModel>
-                            // <SnippetAddTrainer> 
                             // <SnippetMapValueToKey>
                             .Append(mlContext.Transforms.Conversion.MapValueToKey(outputColumnName: "LabelKey", inputColumnName: "Label"))
                             // </SnippetMapValueToKey>
+                            // <SnippetAddTrainer>
                             .Append(mlContext.MulticlassClassification.Trainers.LbfgsMaximumEntropy(labelColumnName: "LabelKey", featureColumnName: "softmax2_pre_activation"))
                             // </SnippetAddTrainer>
                             // <SnippetMapKeyToValue>
