@@ -259,7 +259,7 @@ namespace ChartControl
             public AccessibleObject AccessibilityObject
             {
                 get
-				{
+                {
                     accObj ??= new CurveLegendAccessibleObject(this);
                     return accObj;
                 }
