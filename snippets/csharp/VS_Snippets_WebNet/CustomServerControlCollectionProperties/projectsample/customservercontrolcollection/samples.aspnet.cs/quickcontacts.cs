@@ -36,7 +36,7 @@ namespace Samples.AspNet.CS.Controls
         {
             get
             {
-				contactsList ??= new ArrayList();
+                contactsList ??= new ArrayList();
                 return contactsList;
             }
         }
