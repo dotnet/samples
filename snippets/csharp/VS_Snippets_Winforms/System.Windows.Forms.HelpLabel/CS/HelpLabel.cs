@@ -152,8 +152,8 @@ namespace Microsoft.Samples.WinForms.Cs.HelpLabel
         //
         private void OnControlEnter(object sender, EventArgs e) 
         {
-		    activeControl = (Control)sender;
-		    Invalidate();
+             activeControl = (Control)sender;
+            Invalidate();
         }
 
         //
