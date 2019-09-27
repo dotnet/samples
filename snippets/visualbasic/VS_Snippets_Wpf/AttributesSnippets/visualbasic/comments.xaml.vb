@@ -12,7 +12,7 @@ Namespace SDKSample
 
 		Public Sub Snippet5()
 			' <!-- <SnippetAttributesSnippet5> -->
-			' Retreive the localization comments from the text block.
+			' Retrieve the localization comments from the text block.
 			Dim comments As String = Localization.GetComments(textBlockLocalized)
 			' <!-- </SnippetAttributesSnippet5> -->
 		End Sub
