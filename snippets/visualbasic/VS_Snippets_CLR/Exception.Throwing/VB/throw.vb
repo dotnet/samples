@@ -14,7 +14,7 @@ Public Class ProcessFile
           fs = New FileStream("c:\temp\data.txt", FileMode.Open)
           Dim sr As New StreamReader(fs)
 
-          'A value is read from the file and output to the console.
+          ' A value is read from the file and output to the console.
           Dim line As String = sr.ReadLine()
           Console.WriteLine(line)
       Catch e As FileNotFoundException
