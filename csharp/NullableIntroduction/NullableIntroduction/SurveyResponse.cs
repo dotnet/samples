@@ -14,7 +14,7 @@ namespace NullableIntroduction
 
         // <SnippetSurveyStatus>
         public bool AnsweredSurvey => surveyResponses != null;
-        public string Answer(int index) => surveyResponses.GetValueOrDefault(index, "No answer")!;
+        public string Answer(int index) => surveyResponses?.GetValueOrDefault(index) ?? "No answer";
         // </SnippetSurveyStatus>
 
         public SurveyResponse(int id) => Id = id;
