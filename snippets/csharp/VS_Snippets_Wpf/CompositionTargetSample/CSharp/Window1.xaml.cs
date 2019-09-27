@@ -51,7 +51,7 @@ namespace CompositionTargetSample
 
         public void MouseMoveHandler(object sender, MouseEventArgs e)
         {
-            // Retreive the coordinates of the mouse button event.
+            // Retrieve the coordinates of the mouse button event.
             _pt = e.GetPosition((UIElement)sender);
         }
     }
