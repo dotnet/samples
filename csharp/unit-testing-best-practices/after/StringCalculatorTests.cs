@@ -11,9 +11,9 @@ namespace UnitTestingBestPracticesAfter
         public void Add_SingleNumber_ReturnsSameNumber()
         {
             var stringCalculator = new StringCalculator();
-            
+
             var actual = stringCalculator.Add("0");
-            
+
             Assert.Equal(0, actual);
         }
         // </SnippetAfterNamingAndMinimallyPassing>
@@ -24,8 +24,8 @@ namespace UnitTestingBestPracticesAfter
         {
             // Arrange
             var stringCalculator = new StringCalculator();
-            
-            // Act         
+
+            // Act
             var actual = stringCalculator.Add("");
 
             // Assert
@@ -38,7 +38,7 @@ namespace UnitTestingBestPracticesAfter
         public void Add_TwoNumbers_ReturnsSumOfNumbers()
         {
             var stringCalculator = CreateDefaultStringCalculator();
-        
+
             var actual = stringCalculator.Add("0,1");
 
             Assert.Equal(1, actual);
@@ -66,7 +66,7 @@ namespace UnitTestingBestPracticesAfter
         {
             var stringCalculator = new StringCalculator();
             const string MAXIMUM_RESULT = "1001";
- 
+
             Action actual = () => stringCalculator.Add(MAXIMUM_RESULT);
 
             Assert.Throws<OverflowException>(actual);
@@ -80,7 +80,7 @@ namespace UnitTestingBestPracticesAfter
         public void Add_InputNullOrAlphabetic_ThrowsArgumentException(string input)
         {
             var stringCalculator = new StringCalculator();
-    
+
             Action actual = () => stringCalculator.Add(input);
 
             Assert.Throws<ArgumentException>(actual);
