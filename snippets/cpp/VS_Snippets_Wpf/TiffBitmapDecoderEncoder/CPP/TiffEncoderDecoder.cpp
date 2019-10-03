@@ -26,7 +26,7 @@ namespace SDKSample {
    private: void CreateAndShowMainWindow () 
             {
 
-               // Create the application's main window
+               // Create the application's main window.
                mainWindow = gcnew System::Windows::Window();
                mainWindow->Title = "TIFF Imaging Sample";
                ScrollViewer^ mySV = gcnew ScrollViewer();
@@ -37,10 +37,10 @@ namespace SDKSample {
                int stride = width / 8;
                array<System::Byte>^ pixels = gcnew array<System::Byte>(height * stride);
 
-               // Define the image palette
+               // Define the image palette.
                BitmapPalette^ myPalette = BitmapPalettes::WebPalette;
 
-               // Creates a new empty image with the pre-defined palette
+               // Creates a new empty image with the pre-defined palette.
 
                //<Snippet2>
                BitmapSource^ image = BitmapSource::Create(width,
@@ -66,13 +66,12 @@ namespace SDKSample {
                //</Snippet4>
 
                //<Snippet1>
-
-               // Open a Stream and decode a TIFF image
+               // Open a Stream and decode a TIFF image.
                Stream^ imageStreamSource = gcnew FileStream("tulipfarm.tif", FileMode::Open, FileAccess::Read, FileShare::Read);
                TiffBitmapDecoder^ decoder = gcnew TiffBitmapDecoder(imageStreamSource, BitmapCreateOptions::PreservePixelFormat, BitmapCacheOption::Default);
                BitmapSource^ bitmapSource = decoder->Frames[0];
 
-               // Draw the Image
+               // Draw the Image.
                Image^ myImage = gcnew Image();
                myImage->Source = bitmapSource;
                myImage->Stretch = Stretch::None;
@@ -81,30 +80,30 @@ namespace SDKSample {
 
                //<Snippet5>
 
-               // Open a Uri and decode a TIFF image
+               // Open a Uri and decode a TIFF image.
                System::Uri^ myUri = gcnew System::Uri("tulipfarm.tif", UriKind::RelativeOrAbsolute);
                TiffBitmapDecoder^ decoder2 = gcnew TiffBitmapDecoder(myUri, BitmapCreateOptions::PreservePixelFormat, BitmapCacheOption::Default);
                BitmapSource^ bitmapSource2 = decoder2->Frames[0];
 
-               // Draw the Image
+               // Draw the Image.
                Image^ myImage2 = gcnew Image();
                myImage2->Source = bitmapSource2;
                myImage2->Stretch = Stretch::None;
                myImage2->Margin = System::Windows::Thickness(20);
                //</Snippet5>
 
-               // Define a StackPanel to host the decoded TIFF images
+               // Define a StackPanel to host the decoded TIFF images.
                StackPanel^ myStackPanel = gcnew StackPanel();
                myStackPanel->Orientation = Orientation::Vertical;
                myStackPanel->VerticalAlignment = VerticalAlignment::Stretch;
                myStackPanel->HorizontalAlignment = HorizontalAlignment::Stretch;
 
-               // Add the Image and TextBlock to the parent Grid
+               // Add the Image and TextBlock to the parent Grid.
                myStackPanel->Children->Add(myImage);
                myStackPanel->Children->Add(myImage2);
                myStackPanel->Children->Add(myTextBlock);
 
-               // Add the StackPanel as the Content of the Parent Window Object
+               // Add the StackPanel as the Content of the Parent Window Object.
                mySV->Content = myStackPanel;
                mainWindow->Content = mySV;
                mainWindow->Show();
