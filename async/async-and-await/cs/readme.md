@@ -17,9 +17,13 @@ This sample is a WPF application written in C# that contains the example method 
 
 The example async function in this sample (named `GetStringAsync`) uses an [HttpClient](https://docs.microsoft.com/dotnet/api/system.net.http.httpclient) method to download the contents of a website.
 
-The code for the MainWindow.xaml.cs file from this sample is included in the topic.
+The code for the *MainWindow.xaml.cs* file from this sample is included in the topic.
 
-## Building the Sample
+## Sample prerequisites
+
+This sample is written in Visual Basic and targets .NET Core 3.0 running on Windows. It requires the [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+
+## Building the sample
 
 To download and run the sample, follow these steps:
 
