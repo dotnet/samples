@@ -23,5 +23,5 @@ steps:
 
 - script: |
     dotnet 
-    dotnet build "$BUILD_SOURCESDIRECTORY/ci/find-projects" -- ../
+    dotnet run "$BUILD_SOURCESDIRECTORY/ci/find-projects" -- ../
   displayName: 'Run find-projects tool'
