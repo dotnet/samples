@@ -17,13 +17,13 @@ steps:
     git clone -c http.extraheader="AUTHORIZATION: bearer $(System.AccessToken)" "https://constructors.visualstudio.com/_git/MicrosoftSamples" "$BUILD_SOURCESDIRECTORY/ci"
   displayName: 'Clone DevOps repo'
 
-- checkout: none
+- checkout: self
   path: dotnet-samples
   displayName: 'Check out dotnet/samples repo'
 
 - script: |
     echo Init dotnet
-    dotnet 
-    echo Try running 
-    dotnet run --project "$BUILD_SOURCESDIRECTORY/ci/find-projects" -- $BUILD_SOURCESDIRECTORY
+    dotnet help &> /dev/null
+    echo Find projects in dotnet-samples folder 
+    dotnet run --project "$BUILD_SOURCESDIRECTORY/ci/find-projects" -- $BUILD_SOURCESDIRECTORY/dotnet-samples/core
   displayName: 'Run find-projects tool'
