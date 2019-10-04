@@ -22,6 +22,8 @@ steps:
   displayName: 'Check out dotnet/samples repo'
 
 - script: |
+    echo Init dotnet
     dotnet 
-    dotnet run "$BUILD_SOURCESDIRECTORY/ci/find-projects" -- ../
+    echo Try running 
+    dotnet run --project "$BUILD_SOURCESDIRECTORY/ci/find-projects" -- $BUILD_SOURCESDIRECTORY
   displayName: 'Run find-projects tool'
