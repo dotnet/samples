@@ -13,13 +13,13 @@ pool:
   vmImage: '$(VMIMAGE)'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    dotnet --info
-  displayName: 'Check .NET Core version'
-
 - script: |
     git clone -c http.extraheader="AUTHORIZATION: bearer $(System.AccessToken)" "https://constructors.visualstudio.com/_git/MicrosoftSamples" "$BUILD_SOURCESDIRECTORY/ci"
   displayName: 'Clone DevOps repo'
+
+- checkout: self
+  path: dotnet-samples
+  displayName: 'Check out dotnet/samples repo'
+
+- script: |
+    dotnet build "$BUILD_SOURCESDIRECTORY/ci/find-projects" -- ../
