@@ -18,9 +18,7 @@ namespace Samples.AspNet.CS.Controls {
         private TreeNode rootNode;
         public TreeNode RootNode {
             get {
-                if (rootNode == null) {
-                    rootNode = new TreeNode(String.Empty);
-                }
+                rootNode ??= new TreeNode(String.Empty);
                 return rootNode;
             }
         }

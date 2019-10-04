@@ -255,10 +255,10 @@ namespace Samples.AspNet.ObjectDataSource
       if (String.IsNullOrEmpty(employee.LastName))
         throw new ArgumentException("LastName cannot be null or an empty string.");
 
-      if (employee.Address    == null) { employee.Address    = String.Empty; }
-      if (employee.City       == null) { employee.City       = String.Empty; }
-      if (employee.Region     == null) { employee.Region     = String.Empty; }
-      if (employee.PostalCode == null) { employee.PostalCode = String.Empty; }
+      employee.Address    ??= String.Empty;
+      employee.City       ??= String.Empty;
+      employee.Region     ??= String.Empty;
+      employee.PostalCode ??= String.Empty;
 
       SqlConnection conn = new SqlConnection(_connectionString);
       SqlCommand    cmd  = new SqlCommand("UPDATE Employees " + 
@@ -305,10 +305,10 @@ namespace Samples.AspNet.ObjectDataSource
       if (String.IsNullOrEmpty(employee.LastName))
         throw new ArgumentException("LastName cannot be null or an empty string.");
 
-      if (employee.Address    == null) { employee.Address    = String.Empty; }
-      if (employee.City       == null) { employee.City       = String.Empty; }
-      if (employee.Region     == null) { employee.Region     = String.Empty; }
-      if (employee.PostalCode == null) { employee.PostalCode = String.Empty; }
+      employee.Address    ??= String.Empty;
+      employee.City       ??= String.Empty;
+      employee.Region     ??= String.Empty;
+      employee.PostalCode ??= String.Empty;
 
       SqlConnection conn = new SqlConnection(_connectionString);
       SqlCommand    cmd  = new SqlCommand("INSERT INTO Employees " + 

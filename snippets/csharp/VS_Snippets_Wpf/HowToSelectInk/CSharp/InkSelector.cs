@@ -183,10 +183,7 @@ public class InkSelector : Label
             return;
         }
 
-        if (stylusPoints == null)
-        {
-            stylusPoints = new StylusPointCollection();
-        }
+        stylusPoints ??= new StylusPointCollection();
 
         Point pt = e.GetPosition(this);
 
@@ -220,10 +217,7 @@ public class InkSelector : Label
     // point data to the IncrementalHitTester.
     protected override void OnStylusUp(StylusEventArgs e)
     {
-        if (stylusPoints == null)
-        {
-            stylusPoints = new StylusPointCollection();
-        }
+        stylusPoints ??= new StylusPointCollection();
         StylusPointCollection collectedPoints = 
             e.GetStylusPoints(this, stylusPoints.Description);
 

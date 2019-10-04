@@ -64,10 +64,7 @@ namespace RecycleItemContainerShippets
         {
             get 
             {
-                if (level2Items == null)
-                {
-                    level2Items = new ObservableCollection<string>();
-                }
+                level2Items ??= new ObservableCollection<string>();
                 return level2Items;
             }
         }
