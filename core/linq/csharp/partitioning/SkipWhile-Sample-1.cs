@@ -5,10 +5,9 @@ namespace Partitioning
 {
     public static class SkipWhileSample1
     {
-        //This sample uses SkipWhile to get the elements of the array starting from the first element
-        //divisible by 3.
-        // 
-        //Output: 
+        // This sample uses SkipWhile to get the elements of the array starting from the first element
+        // divisible by 3.
+        // Output: 
         // All elements starting from first element divisible by 3:
         // 3
         // 9

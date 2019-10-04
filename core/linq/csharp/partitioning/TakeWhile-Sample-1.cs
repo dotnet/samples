@@ -5,10 +5,9 @@ namespace Partitioning
 {
     public static class TakeWhileSample1
     {
-        //This sample uses TakeWhile to return elements starting from the beginning of the array
-        //until a number is read whose value is not less than 6. 
-        // 
-        //Output: 
+        // This sample uses TakeWhile to return elements starting from the beginning of the array
+        // until a number is read whose value is not less than 6. 
+        // Output: 
         // First numbers less than 6:
         // 5
         // 4
