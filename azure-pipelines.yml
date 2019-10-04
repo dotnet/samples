@@ -10,17 +10,16 @@ pr:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: '$(VMIMAGE)'
 
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
-
-- script: |
     dotnet --info
   displayName: 'Check .NET Core version'
+
+- script: |
+    git clone -c http.extraheader="AUTHORIZATION: bearer $(System.AccessToken)" "https://constructors.visualstudio.com/_git/MicrosoftSamples" "$BUILD_SOURCESDIRECTORY/ci"
+  displayName: 'Clone DevOps repo'
