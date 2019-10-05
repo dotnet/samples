@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Buffers;
 using System.IO.Pipelines;
 using System.Net.Sockets;
@@ -69,7 +69,7 @@ namespace Pipes
                     ProcessLine(line);
                 }
 
-                // Tell the PipeReader how much of the buffer we have consumed.
+                // Tell the PipeReader how much of the buffer has been consumed.
                 reader.AdvanceTo(buffer.Start, buffer.End);
 
                 // Stop reading if there's no more data coming.

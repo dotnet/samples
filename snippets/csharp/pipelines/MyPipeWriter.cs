@@ -18,7 +18,7 @@ namespace Pipes
             // Write directly into the buffer.
             int written = Encoding.ASCII.GetBytes("Hello".AsSpan(), memory.Span);
 
-            // Tell the writer how many bytes we wrote.
+            // Tell the writer how many bytes were written.
             writer.Advance(written);
 
             await writer.FlushAsync(cancellationToken);

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Buffers;
 using System.IO.Pipelines;
 using System.Threading;
@@ -170,7 +170,7 @@ namespace Pipes
 
                 if (message != null)
                 {
-                    // This code is broken since we called reader.AdvanceTo() with a position *after* the buffer we captured
+                    // This code is broken since reader.AdvanceTo() was called with a position *after* the buffer was captured
                     break;
                 }
             }

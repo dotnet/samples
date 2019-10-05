@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Concurrent;
 using System.IO.Pipelines;
 using System.Threading;
@@ -14,7 +14,7 @@ namespace Pipes
             var writeScheduler = new SingleThreadPipeScheduler();
             var readScheduler = new SingleThreadPipeScheduler();
 
-            // Tell the Pipe what schedulers to use, we also disable the SynchronizationContext.
+            // Tell the Pipe what schedulers to use and disable the SynchronizationContext.
             var options = new PipeOptions(readerScheduler: readScheduler, writerScheduler: writeScheduler, useSynchronizationContext: false);
             var pipe = new Pipe(options);
         }

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Buffers;
 using System.Collections.Generic;
 using System.Net.Sockets;
@@ -57,7 +57,7 @@ namespace Pipes
                         // Process the line.
                         ProcessLine(buffer, bytesConsumed, lineLength);
 
-                        // Move the bytesConsumed to skip past the line we consumed (including \n).
+                        // Move the bytesConsumed to skip past the line consumed (including \n).
                         bytesConsumed += lineLength + 1;
                     }
                 }

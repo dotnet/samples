@@ -35,7 +35,7 @@ namespace Pipes
                     {
                         if (result.IsCanceled)
                         {
-                            // The read was canceled, we can quit without reading the existing data.
+                            // The read was canceled. You can quit without reading the existing data.
                             break;
                         }
 
@@ -53,7 +53,7 @@ namespace Pipes
                     }
                     finally
                     {
-                        // Since we're processing all messages in the buffer, we can use the remaining buffer's Start and End
+                        // Since all messages in the buffer are being processed, you can use the remaining buffer's Start and End
                         // position to determine consumed and examined.
                         reader.AdvanceTo(buffer.Start, buffer.End);
                     }
@@ -64,6 +64,18 @@ namespace Pipes
                 await reader.CompleteAsync();
             }
         }
+
+        private Task ProcessMessageAsync(Message message)
+        {
+            throw new NotImplementedException();
+        }
+
+        private bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message)
+        {
+            throw new NotImplementedException();
+        }
+
     }
     #endregion
+
 }
