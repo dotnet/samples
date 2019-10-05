@@ -3,6 +3,9 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
+variables:
+  SYSTEM_ACCESSTOKEN: $(System.AccessToken)
+
 trigger:
 - master
 
@@ -14,7 +17,7 @@ pool:
 
 steps:
 - script: |
-    git clone -c http.extraheader="AUTHORIZATION: bearer $(System.AccessToken)" "https://constructors.visualstudio.com/_git/MicrosoftSamples" "$(Agent.BuildDirectory)/ci"
+    git clone -c http.extraheader="AUTHORIZATION: bearer $SYSTEM_ACCESSTOKEN" "https://constructors.visualstudio.com/_git/MicrosoftSamples" "$(Agent.BuildDirectory)/ci"
   displayName: 'Clone DevOps repo'
 
 - checkout: self
