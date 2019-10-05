@@ -13,15 +13,17 @@ pool:
   vmImage: '$(VMIMAGE)'
 
 steps:
+
+- checkout: self
+  path: dotnet-samples
+  persistCredentials: true
+  displayName: 'Check out dotnet/samples repo'
+
 - script: |
     git clone -c http.extraheader="AUTHORIZATION: bearer $SYSTEM_ACCESSTOKEN" "https://constructors.visualstudio.com/_git/MicrosoftSamples" "$(Agent.BuildDirectory)/ci"
   env:
     SYSTEM_ACCESSTOKEN: $(System.AccessToken)
   displayName: 'Clone DevOps repo'
-
-- checkout: self
-  path: dotnet-samples
-  displayName: 'Check out dotnet/samples repo'
 
 - script: |
     echo Init dotnet
