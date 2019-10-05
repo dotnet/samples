@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Buffers;
 using System.Collections.Generic;
 using System.Net.Sockets;
@@ -42,6 +42,7 @@ namespace Pipes
 
                 // Keep track of the amount of buffered bytes
                 bytesBuffered += bytesRead;
+                var linePosition = -1;
 
                 do
                 {
