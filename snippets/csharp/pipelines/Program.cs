@@ -1,9 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Concurrent;
 using System.IO.Pipelines;
-using System.IO.Pipes;
 using System.Threading;
-//using PipeOptions = System.IO.Pipelines.PipeOptions;
 
 namespace Pipes
 {
