@@ -1,13 +1,14 @@
-﻿using System;
+using System;
 using System.Buffers;
 using System.IO.Pipelines;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace Pipes
 {
     class DoNotUse
     {
-        private void Data_loss()
+        private async Task Data_loss(PipeReader reader, CancellationToken cancellationToken)
         {
             // reverted
             #region snippet
@@ -34,7 +35,7 @@ namespace Pipes
             throw new NotImplementedException();
         }
 
-        private void Infinite_loop()
+        private async Task Infinite_loop(PipeReader reader, CancellationToken cancellationToken)
         {
             // reverted
             #region snippet2
@@ -55,7 +56,7 @@ namespace Pipes
             #endregion
         }
 
-        private void Infinite_loop2()
+        private async Task Infinite_loop2(PipeReader reader, CancellationToken cancellationToken)
         {
             // reverted
             #region snippet3
@@ -79,7 +80,7 @@ namespace Pipes
             #endregion
         }
 
-        private Message Unexpected_Hang()
+        private async Task<Message> Unexpected_Hang(PipeReader reader, CancellationToken cancellationToken)
         {
             // reverted
             #region snippet4
@@ -107,7 +108,7 @@ namespace Pipes
             return null;
         }
 
-        private Message Out_of_Memory()
+        private async Task<Message> Out_of_Memory(PipeReader reader, CancellationToken cancellationToken)
         {
             // reverted
             #region snippet5
@@ -135,11 +136,13 @@ namespace Pipes
             return null;
         }
 
-        private Message Memory_Corruption()
+        private async Task<Message> Memory_Corruption(PipeReader reader, CancellationToken cancellationToken)
         {
             // reverted
             #region snippet6
             Environment.FailFast("This code is terrible, don't use it!");
+            Message message = null;
+
             while (true)
             {
                 ReadResult result = await reader.ReadAsync(cancellationToken);
@@ -147,29 +150,32 @@ namespace Pipes
 
                 ReadHeader(ref buffer, out int length);
 
-                if (length > 0)
+                if (length <= buffer.Length)
                 {
                     message = new Message
                     {
                         // Slice the payload from the existing buffer
-                        CorruptedPayload = buffer.Slice(0, length);
-                };
+                        CorruptedPayload = buffer.Slice(0, length)
+                    };
 
-                buffer = buffer.Slice(length);
+                    buffer = buffer.Slice(length);
+                }
+
+                if (result.IsCompleted)
+                {
+                    break;
+                }
+
+                reader.AdvanceTo(buffer.Start, buffer.End);
+
+                if (message != null)
+                {
+                    // This code is broken since we called reader.AdvanceTo() with a position *after* the buffer we captured
+                    break;
+                }
             }
 
-            if (result.IsCompleted)
-            {
-                break;
-            }
-
-            reader.AdvanceTo(buffer.Start, buffer.End);
-
-            if (message != null)
-            {
-                // This code is broken since we called reader.AdvanceTo() with a position *after* the buffer we captured
-                return message;
-            }
+            return message;
         }
         #endregion
 
@@ -187,4 +193,3 @@ namespace Pipes
         #endregion
     }
 }
-
