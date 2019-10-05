@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -13,11 +13,11 @@ namespace Pipes
         async Task WriteHelloAsync(PipeWriter writer, CancellationToken cancellationToken = default)
         {
             // Request at least 5 bytes from the PipeWriter
-            Span<byte> span = writer.GetSpan(5);
-            ReadOnlySpan<char> helloSpan = "Hello".AsSpan();
+            Memory<byte> memory = writer.GetMemory(5);
 
+            // Request at least 5 bytes from the PipeWriter
             // Write directly into the buffer
-            int written = Encoding.ASCII.GetBytes(helloSpan, span);
+            int written = Encoding.ASCII.GetBytes("Hello".AsSpan(), memory.Span);
 
             // Tell the writer how many bytes we wrote
             writer.Advance(written);
