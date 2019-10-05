@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Buffers;
 using System.IO.Pipelines;
 using System.Net.Sockets;
@@ -16,7 +16,7 @@ namespace Pipes
             Task writing = FillPipeAsync(socket, pipe.Writer);
             Task reading = ReadPipeAsync(pipe.Reader);
 
-            return Task.WhenAll(reading, writing);
+            await Task.WhenAll(reading, writing);
         }
 
         async Task FillPipeAsync(Socket socket, PipeWriter writer)
@@ -83,18 +83,19 @@ namespace Pipes
             reader.Complete();
         }
 
-        bool TryReadLine(ref ReadOnlySequence<byte> buffer, out ReadOnlySequence<byte> buffer)
+        bool TryReadLine(ref ReadOnlySequence<byte> buffer, out ReadOnlySequence<byte> line)
         {
             // Look for a EOL in the buffer
             SequencePosition? position = buffer.PositionOf((byte)'\n');
 
             if (position == null)
             {
-                buffer = default;
+                line = default;
                 return false;
             }
 
             // Skip the line + the \n
+            line = buffer.Slice(0, position.Value);
             buffer = buffer.Slice(buffer.GetPosition(1, position.Value));
             return true;
         }
@@ -107,15 +108,10 @@ namespace Pipes
 
         private void dummy()
         {
-            /* NOT REVERTED as you had duplicate reader 
-             * var pipe = new Pipe();
-PipeReader reader = pipe.Reader;
-PipeWriter reader = pipe.Writer;   <-- I changed this line
-*/
             #region snippet2
             var pipe = new Pipe();
             PipeReader reader = pipe.Reader;
-            PipeWriter writer = pipe.Writer;   // @davidfowl approve change
+            PipeWriter writer = pipe.Writer;
             #endregion
         }
 
