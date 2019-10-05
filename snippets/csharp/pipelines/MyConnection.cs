@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 namespace Pipes
 {
     // Reverted.  Recommend formatting for table   --------------------------------------
-    #region snippet
     public class MyConnection
     {
+
+        #region snippet
         private PipeReader reader;
 
         public MyConnection(PipeReader reader)
@@ -64,6 +65,7 @@ namespace Pipes
                 await reader.CompleteAsync();
             }
         }
+        #endregion
 
         private Task ProcessMessageAsync(Message message)
         {
@@ -76,6 +78,5 @@ namespace Pipes
         }
 
     }
-    #endregion
 
 }
