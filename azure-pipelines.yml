@@ -6,8 +6,8 @@
 trigger:
 - master
 
-pr:
-- master
+#pr:
+#- master
 
 pool:
   vmImage: '$(VMIMAGE)'
