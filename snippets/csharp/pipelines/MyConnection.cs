@@ -18,7 +18,7 @@ namespace Pipes
 
         public void Abort()
         {
-            // Cancel the pending read so the the process loop ends without an exception
+            // Cancel the pending read so the process loop ends without an exception.
             reader.CancelPendingRead();
         }
 
@@ -35,17 +35,17 @@ namespace Pipes
                     {
                         if (result.IsCanceled)
                         {
-                            // The read was canceled, we can quit without reading the existing data
+                            // The read was canceled, we can quit without reading the existing data.
                             break;
                         }
 
-                        // Process all messages from the buffer, modifying the input buffer on each iteration
+                        // Process all messages from the buffer, modifying the input buffer on each iteration.
                         while (TryParseMessage(ref buffer, out Message message))
                         {
                             await ProcessMessageAsync(message);
                         }
 
-                        // There's no more data to be processed
+                        // There's no more data to be processed.
                         if (result.IsCompleted)
                         {
                             break;
@@ -54,7 +54,7 @@ namespace Pipes
                     finally
                     {
                         // Since we're processing all messages in the buffer, we can use the remaining buffer's Start and End
-                        // position to determine consumed and examined
+                        // position to determine consumed and examined.
                         reader.AdvanceTo(buffer.Start, buffer.End);
                     }
                 }

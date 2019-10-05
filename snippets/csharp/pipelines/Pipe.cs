@@ -25,7 +25,7 @@ namespace Pipes
 
             while (true)
             {
-                // Allocate at least 512 bytes from the PipeWriter
+                // Allocate at least 512 bytes from the PipeWriter.
                 Memory<byte> memory = writer.GetMemory(minimumBufferSize);
                 try
                 {
@@ -34,7 +34,7 @@ namespace Pipes
                     {
                         break;
                     }
-                    // Tell the PipeWriter how much was read from the Socket
+                    // Tell the PipeWriter how much was read from the Socket.
                     writer.Advance(bytesRead);
                 }
                 catch (Exception ex)
@@ -43,7 +43,7 @@ namespace Pipes
                     break;
                 }
 
-                // Make the data available to the PipeReader
+                // Make the data available to the PipeReader.
                 FlushResult result = await writer.FlushAsync();
 
                 if (result.IsCompleted)
@@ -52,7 +52,7 @@ namespace Pipes
                 }
             }
 
-            // Tell the PipeReader that there's no more data coming
+            // Tell the PipeReader that there's no more data coming.
             writer.Complete();
         }
 
@@ -65,27 +65,27 @@ namespace Pipes
 
                 while (TryReadLine(ref buffer, out ReadOnlySequence<byte> line))
                 {
-                    // Process the line
+                    // Process the line.
                     ProcessLine(line);
                 }
 
-                // Tell the PipeReader how much of the buffer we have consumed
+                // Tell the PipeReader how much of the buffer we have consumed.
                 reader.AdvanceTo(buffer.Start, buffer.End);
 
-                // Stop reading if there's no more data coming
+                // Stop reading if there's no more data coming.
                 if (result.IsCompleted)
                 {
                     break;
                 }
             }
 
-            // Mark the PipeReader as complete
+            // Mark the PipeReader as complete.
             reader.Complete();
         }
 
         bool TryReadLine(ref ReadOnlySequence<byte> buffer, out ReadOnlySequence<byte> line)
         {
-            // Look for a EOL in the buffer
+            // Look for a EOL in the buffer.
             SequencePosition? position = buffer.PositionOf((byte)'\n');
 
             if (position == null)
@@ -94,7 +94,7 @@ namespace Pipes
                 return false;
             }
 
-            // Skip the line + the \n
+            // Skip the line + the \n.
             line = buffer.Slice(0, position.Value);
             buffer = buffer.Slice(buffer.GetPosition(1, position.Value));
             return true;

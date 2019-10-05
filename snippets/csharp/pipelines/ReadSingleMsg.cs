@@ -27,23 +27,23 @@ namespace Pipes
                 {
                     if (TryParseMessage(ref buffer, out Message message))
                     {
-                        // We successfully parsed a single message so mark the start as the parsed buffer as consumed
-                        // TryParseMessage trims the buffer to point to the data after the message was parsed
+                        // We successfully parsed a single message so mark the start as the parsed buffer as consumed.
+                        // TryParseMessage trims the buffer to point to the data after the message was parsed.
                         consumed = buffer.Start;
 
                         // Examined is marked the same as consumed here so that the next call to ReadSingleMessageAsync
-                        // will process the next message if there is one
+                        // will process the next message if there is one.
                         examined = consumed;
 
                         return message;
                     }
 
-                    // There's no more data to be processed
+                    // There's no more data to be processed.
                     if (result.IsCompleted)
                     {
                         if (buffer.Length > 0)
                         {
-                            // We have an incomplete message and there's no more data to process
+                            // We have an incomplete message and there's no more data to process.
                             throw new InvalidDataException("Incomplete message!");
                         }
 

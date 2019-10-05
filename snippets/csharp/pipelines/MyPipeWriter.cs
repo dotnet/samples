@@ -12,14 +12,13 @@ namespace Pipes
         #region snippet
         async Task WriteHelloAsync(PipeWriter writer, CancellationToken cancellationToken = default)
         {
-            // Request at least 5 bytes from the PipeWriter
+            // Request at least 5 bytes from the PipeWriter.
             Memory<byte> memory = writer.GetMemory(5);
 
-            // Request at least 5 bytes from the PipeWriter
-            // Write directly into the buffer
+            // Write directly into the buffer.
             int written = Encoding.ASCII.GetBytes("Hello".AsSpan(), memory.Span);
 
-            // Tell the writer how many bytes we wrote
+            // Tell the writer how many bytes we wrote.
             writer.Advance(written);
 
             await writer.FlushAsync(cancellationToken);
@@ -35,7 +34,7 @@ namespace Pipes
         {
             byte[] helloBytes = Encoding.ASCII.GetBytes("Hello");
 
-            // Write helloBytes to the writer, there's no need to call Advance here (Write does that)
+            // Write helloBytes to the writer, there's no need to call Advance here (Write does that).
             await writer.WriteAsync(helloBytes, cancellationToken);
         }
         #endregion
