@@ -43,9 +43,9 @@ Multi-project samples have instructions in their root directory in
 a `README.md` file.  
 
 Except where noted, all samples build from the command line on
-any platform supported by .NET Core. There are a few samples that are
+any platform supported by .NET Core. There are a few samples that are 
 specific to Visual Studio and require Visual Studio 2017 or later. In 
-addition, some samples show platform specific features and will require 
+addition, some samples show platform-specific features and will require 
 a specific platform. Other samples and snippets require the .NET Framework
 and will run on Windows platforms, and will need the Developer Pack for
 the target Framework version.
@@ -54,11 +54,11 @@ the target Framework version.
 
 If you wish to add a code sample:
 
-1. Your sample **must be part of a buildable project**. Where possible, the projects should build on all platforms supported by .NET Core. Exceptions to this are samples that demonstrate a platform specific feature or platform specific tool.
+1. Your sample **must be part of a buildable project**. Where possible, the projects should build on all platforms supported by .NET Core. Exceptions to this are samples that demonstrate a platform-specific feature or platform-specific tool.
 
 2. Your sample should conform to the [corefx coding style](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/coding-style.md) to maintain consistency.
 
-	- Additionally, we prefer the use of `static` methods rather than instance methods when demonstrating something that doesn't require instantiating a new object.
+    - Additionally, we prefer the use of `static` methods rather than instance methods when demonstrating something that doesn't require instantiating a new object.
 
 3. Your sample should include **appropriate exception handling**. It should handle all exceptions that are likely to be thrown in the context of the sample. For example, a sample that calls the [Console.ReadLine](https://docs.microsoft.com/dotnet/api/system.console.readline) method to retrieve user input should use appropriate exception handling when the input string is passed as an argument to a method. Similarly, if your sample expects a method call to fail, the resulting exception must be handled. Always handle the specific exceptions thrown by the method, rather than base class exceptions such as [Exception](https://docs.microsoft.com/dotnet/api/system.exception) or [SystemException](https://docs.microsoft.com/dotnet/api/system.systemexception).
 
