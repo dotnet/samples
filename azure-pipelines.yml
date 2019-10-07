@@ -6,8 +6,8 @@
 trigger:
 - master
 
-pr: none
-#- master
+pr:
+- master
 
 
 pool:
