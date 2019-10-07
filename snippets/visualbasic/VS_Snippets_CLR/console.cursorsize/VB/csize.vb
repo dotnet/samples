@@ -18,7 +18,7 @@ Class Sample
       Next size
       Console.CursorSize = saveCursorSize
    End Sub
-End Class 'Sample
+End Class
 '
 'This example produces the following results:
 '

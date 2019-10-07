@@ -391,5 +391,5 @@ Public Class Sync_Send_Receive
         Return 0
     
     End Function 'Main 
-End Class 'Sync_Send_Receive
+End Class
 

@@ -44,4 +44,4 @@ Class MyWebPermissionExample
     MySample()
   End Sub
 
-End Class 'WebPermission_regexConstructor 
+End Class

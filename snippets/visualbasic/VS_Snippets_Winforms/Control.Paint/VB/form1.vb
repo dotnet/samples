@@ -93,4 +93,4 @@ Public Class Form1
             pictureBox1.Top, pictureBox1.Right, pictureBox1.Bottom)
     End Sub
     '</Snippet1>
-End Class 'Form1
+End Class

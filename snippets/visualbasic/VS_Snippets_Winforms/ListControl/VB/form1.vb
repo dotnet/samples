@@ -71,7 +71,7 @@ Public Class ListBoxSample3
             ' Dim s = CType(ListBox1.SelectedItem, USState).LongName
         End If
     End Sub
-End Class 'ListBoxSample3
+End Class
 ' </Snippet3>
 
 Public Class USState
@@ -95,5 +95,5 @@ Public Class USState
         End Get
     End Property
 
-End Class 'USState
+End Class
 ' </Snippet1>

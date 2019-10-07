@@ -66,4 +66,4 @@ Class WebPermission_regexConstructor
       Console.Write(ControlChars.Tab + "{0}", myEnumerator1.Current)
     End While
   End Sub
-End Class 'WebPermission_regexConstructor
+End Class

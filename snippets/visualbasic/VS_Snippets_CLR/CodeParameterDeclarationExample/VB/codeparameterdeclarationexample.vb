@@ -39,6 +39,6 @@ Namespace CodeDomSamples
             '</Snippet2>
 
         End Sub
-    End Class 'CodeParameterDeclarationExample
+    End Class
 End Namespace 'CodeDomSamples
 '</Snippet1>

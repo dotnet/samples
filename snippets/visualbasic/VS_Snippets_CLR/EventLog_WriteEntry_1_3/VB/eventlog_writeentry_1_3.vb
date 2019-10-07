@@ -48,4 +48,4 @@ Class MyEventLog
                              myEventID, myCategory)
         ' </Snippet3>
     End Sub
-End Class 'MyEventLog    
+End Class

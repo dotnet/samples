@@ -122,7 +122,7 @@ Class Form1
         Me.ResumeLayout(False)
 
     End Sub
-End Class 'Form1
+End Class
 
 
 Public Class OrderForm
@@ -313,5 +313,5 @@ Public Class OrderForm
         Me.ResumeLayout(False)
     
     End Sub
-End Class 'OrderForm
+End Class
 

@@ -162,7 +162,7 @@ End Sub
    Shared Sub Main()
       Application.Run(New myTreeNodeCollectionForm())
    End Sub
-End Class 'myTreeNodeCollectionForm
+End Class
 
 Public Class MyCustomerClass
    Public CustomerOrders As ArrayList
@@ -172,7 +172,7 @@ Public Class MyCustomerClass
       CustomerName = name
       CustomerOrders = New ArrayList()
    End Sub
-End Class 'MyCustomerClass
+End Class
 
 Public Class MyOrder
    Public OrderID As String
@@ -180,4 +180,4 @@ Public Class MyOrder
    Public Sub New(orderID As String)
       Me.OrderID = orderID
    End Sub
-End Class 'MyOrder
+End Class

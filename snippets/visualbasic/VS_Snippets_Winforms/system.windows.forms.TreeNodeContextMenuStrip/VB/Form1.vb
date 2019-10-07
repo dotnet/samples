@@ -82,4 +82,4 @@ Class myForm
         Me.ResumeLayout(False)
     
     End Sub
-End Class 'myForm
+End Class

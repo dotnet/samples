@@ -26,5 +26,5 @@ Class EventsSample
             Console.WriteLine(("Exception : " + e.Message))
         End Try
     End Sub
-End Class 'EventsSample
+End Class
 ' </Snippet1>

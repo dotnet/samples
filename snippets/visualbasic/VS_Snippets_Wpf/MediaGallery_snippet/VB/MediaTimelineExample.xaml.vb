@@ -22,6 +22,6 @@ Namespace SDKSample
 
         End Sub
         '</SnippetCodeBehindMediaTimelineExampleInline1>
-    End Class 'MediaTimelineExample
+    End Class
 End Namespace 'SDKSample
 ' </SnippetCodeBehindMediaTimelineExampleWholePage>

@@ -13,4 +13,4 @@ Public Class Form1
         Dim args2 As New CommandEventArgs("Sort", "Descending")
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

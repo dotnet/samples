@@ -202,5 +202,5 @@ Class Form1
         Me.PerformLayout()
     
     End Sub
-End Class 'Form1
+End Class
 '</snippet1>

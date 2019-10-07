@@ -41,4 +41,4 @@ Public Class ComponentInstaller_Example
 ' </Snippet2>
       EventLog.Delete("MyEventLog", ".")
    End Sub
-End Class 'ComponentInstaller_Example
+End Class

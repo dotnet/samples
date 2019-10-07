@@ -27,7 +27,7 @@ Class Sample
             Console.WriteLine("The current date and time is {0}.", msg)
         End If
     End Sub
-End Class 'Sample
+End Class
 
 'This code example produces the following results:
 '

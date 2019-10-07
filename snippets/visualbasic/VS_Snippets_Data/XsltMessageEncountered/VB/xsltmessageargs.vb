@@ -27,5 +27,5 @@ Public Class Sample
     Console.WriteLine("Message received: {0}", e.Message)
     
   End Sub
-End Class 'Sample 
+End Class
 '</snippet1>

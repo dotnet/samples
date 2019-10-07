@@ -22,5 +22,5 @@ Public Class Form1
         Debug.WriteLineIf(generalSwitch.TraceError, " Please use a different category.")
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

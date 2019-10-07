@@ -63,5 +63,5 @@ End Sub
 ' </snippet3>
 
 
-   End Class 'MyUserControl 
+   End Class
 End Namespace 'SetBoundsCore

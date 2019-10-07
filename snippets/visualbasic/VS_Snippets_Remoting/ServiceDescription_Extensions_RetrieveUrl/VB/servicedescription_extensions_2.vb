@@ -40,4 +40,4 @@ Class MyServiceDescription
 ' </Snippet1>
    End Sub
 
-End Class 'MyServiceDescription 
+End Class

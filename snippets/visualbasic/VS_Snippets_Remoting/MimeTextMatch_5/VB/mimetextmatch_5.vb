@@ -109,5 +109,5 @@ Class MyMimeTextMatchClass
          Console.WriteLine("Exception: {0}", e.Message)
       End Try
    End Sub
-End Class 'MyMimeTextMatchClass
+End Class
 ' </Snippet1>

@@ -47,7 +47,7 @@ Namespace Samples.AspNet.CS1.Controls
 
         ' Implement method to render the control.
 
-    End Class 'CustomHyperLinkControl
+    End Class
     '</snippet1>    
 End Namespace 'Samples.AspNet.CS1.Controls
 
@@ -95,7 +95,7 @@ Namespace Samples.AspNet.CS2.Controls
 
         ' Implement method to render the control.
 
-    End Class 'CustomHyperLinkControl
+    End Class
     '</snippet2>    
 End Namespace 'Samples.AspNet.CS2.Controls
 
@@ -141,6 +141,6 @@ Namespace Samples.AspNet.CS3.Controls
         End Property
 
         ' Implement method to render the control.
-    End Class 'CustomHyperLinkControl
+    End Class
     '</snippet3>    
 End Namespace 'Samples.AspNet.CS3.Controls

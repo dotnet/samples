@@ -18,4 +18,4 @@ MustInherit Public Class Coll1
         myNewColl = Me.Sort(New String() {"D", "B"})
         ' </Snippet1>
     End Sub
-End Class 'Coll1
+End Class

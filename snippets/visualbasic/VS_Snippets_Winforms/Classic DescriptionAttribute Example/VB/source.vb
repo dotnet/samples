@@ -35,4 +35,4 @@ Public Class Form1
         Console.WriteLine(myAttribute.Description)
         ' </Snippet2>
     End Sub
-End Class 'Form1
+End Class

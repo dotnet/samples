@@ -50,5 +50,5 @@ Namespace ImageElementExample
             transformedGrid.Children.Add(rotated270)
 
         End Sub
-    End Class 'TransformedImageExample
+    End Class
 End Namespace

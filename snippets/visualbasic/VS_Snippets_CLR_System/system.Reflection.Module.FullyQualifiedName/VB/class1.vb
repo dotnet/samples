@@ -14,6 +14,6 @@ Namespace ReflectionModule_Examples
 
             Console.WriteLine("myModule.FullyQualifiedName = {0}", myModule.FullyQualifiedName)
         End Sub
-    End Class 'MyMainClass
+    End Class
 End Namespace 'ReflectionModule_Examples
 ' </snippet1>

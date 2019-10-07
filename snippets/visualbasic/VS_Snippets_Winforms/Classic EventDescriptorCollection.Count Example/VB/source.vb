@@ -18,5 +18,5 @@ Public Class Form1
         textBox1.Text = events.Count.ToString()
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

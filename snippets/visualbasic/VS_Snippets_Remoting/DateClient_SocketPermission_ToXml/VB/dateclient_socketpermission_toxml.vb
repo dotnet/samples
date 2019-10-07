@@ -145,7 +145,7 @@ Public Class DateClient
             Return ""
         End Try
     End Function 'GetDate
-End Class 'DateClient
+End Class
 
 
 'This class is used to demonstrate the caller of the 'GetDate' method for the 'DateClient' object.
@@ -182,4 +182,4 @@ Public Class UserDateClient
         Console.WriteLine(ControlChars.Tab + "The ipaddress argument is the ip address of the Date server.")
         Console.WriteLine(ControlChars.Tab + "The port argument is the port of the Date server.")
     End Sub
-End Class 'UserDateClient
+End Class

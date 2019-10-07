@@ -66,10 +66,7 @@ namespace Microsoft.ServiceModel.Samples
                 {
                     lock (ThisLock)
                     {
-                        if (this.publicKey == null)
-                        {
-                            this.publicKey = this.certificate.PublicKey;
-                        }
+                        this.publicKey ??= this.certificate.PublicKey;
                     }
                 }
                 return this.publicKey;
@@ -321,10 +318,7 @@ namespace Microsoft.ServiceModel.Samples
                 }
             }
 
-            if (result == null)
-            {
-                result = base.CreateSecurityTokenProvider(tokenRequirement);
-            }
+            result ??= base.CreateSecurityTokenProvider(tokenRequirement);
             return result;
         }
     }
@@ -364,10 +358,7 @@ namespace Microsoft.ServiceModel.Samples
                 }
             }
 
-            if (result == null)
-            {
-                result = base.CreateSecurityTokenProvider(tokenRequirement);
-            }
+            result ??= base.CreateSecurityTokenProvider(tokenRequirement);
             return result;
         }
     }

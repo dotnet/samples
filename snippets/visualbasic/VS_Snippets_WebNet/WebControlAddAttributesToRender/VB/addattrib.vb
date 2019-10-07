@@ -30,7 +30,7 @@ Namespace ControlTest
          MyBase.RenderContents(writer)
       End Sub
 
-   End Class 'MyWebControl
+   End Class
 
 End Namespace 'ControlTest
 

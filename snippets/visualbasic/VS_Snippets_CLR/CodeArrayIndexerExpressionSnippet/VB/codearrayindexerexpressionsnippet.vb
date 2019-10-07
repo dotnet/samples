@@ -260,6 +260,6 @@ Namespace CodeDOMSamples
 
             language = 3
         End Sub
-    End Class 'Form1 
+    End Class
 End Namespace 'CodeDOMSamples
 ' </Snippet3>

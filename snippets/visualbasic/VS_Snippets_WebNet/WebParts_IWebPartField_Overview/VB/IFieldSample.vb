@@ -76,7 +76,7 @@ Namespace Samples.AspNet.VB.Controls
     End Sub
     '</SNIPPET3>
 
-  End Class 'FieldProviderWebPart 
+  End Class
 
 
   ' This sample code creates a Web Parts control that acts as a 
@@ -144,7 +144,7 @@ Namespace Samples.AspNet.VB.Controls
 
     End Sub
 
-  End Class 'FieldConsumerWebPart
+  End Class
 
   Public Class FieldConsumerConnectionPoint
     Inherits ConsumerConnectionPoint
@@ -166,7 +166,7 @@ Namespace Samples.AspNet.VB.Controls
 
     End Function
 
-  End Class 'FieldConsumerConnectionPoint
+  End Class
 
 End Namespace  ' Samples.AspNet.VB.Controls
 '</SNIPPET2>

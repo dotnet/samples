@@ -11,5 +11,5 @@ Public Class HelloServer
         Console.WriteLine("HelloMethod : {0}", myName)
         Return "Hi there " + myName
     End Function 'HelloMethod
-End Class 'HelloServer
+End Class
 '</snippet20>

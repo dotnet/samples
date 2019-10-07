@@ -50,4 +50,4 @@ Class FileWebResponseSnippet
         End Try
 ' </Snippet1>
     End Sub
-End Class 'FileWebResponseSnippet
+End Class

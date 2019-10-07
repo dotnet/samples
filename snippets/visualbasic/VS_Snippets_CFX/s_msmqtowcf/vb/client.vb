@@ -26,7 +26,7 @@ Module Client
         lineItem2.quantity = 890
         lineItem2.unitCost = 45.89F
 
-        Dim lineItems(2) As PurchaseOrderLineItem
+        Dim lineItems(1) As PurchaseOrderLineItem
         lineItems(0) = lineItem1
         lineItems(1) = lineItem2
         po.orderLineItems = lineItems

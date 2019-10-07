@@ -50,4 +50,4 @@ Class MyServer
          Console.WriteLine("The following exception is raised on server side : " + ex.Message)
       End Try
    End Sub
-End Class 'MyServer
+End Class

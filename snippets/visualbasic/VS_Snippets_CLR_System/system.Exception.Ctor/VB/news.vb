@@ -18,7 +18,7 @@ Namespace NDP_UE_VB
             MyBase.New(String.Format("{0} - {1}", _
                 auxMessage, notEvenMessage))
         End Sub
-    End Class ' NotEvenException
+    End Class
 
     Module NewSExceptionDemo
        

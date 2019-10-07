@@ -26,5 +26,5 @@ Class ADUnload
          Console.WriteLine("The appdomain MyDomain does not exist.")
       End Try
    End Sub
-End Class 'ADUnload
+End Class
 ' </SNIPPET1>

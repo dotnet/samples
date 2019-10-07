@@ -39,6 +39,6 @@ Namespace AutoResetEvent_Examples
                 Console.WriteLine("{0} reading value: {1}", Thread.CurrentThread.Name, number)
             End While
         End Sub
-    End Class 'MyMainClass
+    End Class
 End Namespace 'AutoResetEvent_Examples
 '</snippet1>

@@ -140,6 +140,6 @@ Public Class UserControl1
 
     Private Sub textBox1_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles textBox1.TextChanged
     End Sub
-End Class 'UserControl1 
+End Class
 '</Snippet1>
 

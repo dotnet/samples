@@ -12,5 +12,5 @@ Public Class Form1
         Dim myItem As New DataListItem(index, ListItemType.Item)
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

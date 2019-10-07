@@ -18,4 +18,4 @@ Public Class Class1
         End If
     End Sub
     ' </Snippet1>
-End Class 'Class1 
+End Class

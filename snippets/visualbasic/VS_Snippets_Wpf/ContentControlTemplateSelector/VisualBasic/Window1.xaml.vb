@@ -23,7 +23,7 @@ Class Window1
         InitializeComponent()
     
     End Sub
-End Class 'Window1
+End Class
 
 
 
@@ -54,5 +54,5 @@ Public Class NumberDataTemplateSelector
         End If
 
     End Function 'SelectTemplate
-End Class 'NumderDataTemplateSelector 
+End Class
 '</Snippet2>

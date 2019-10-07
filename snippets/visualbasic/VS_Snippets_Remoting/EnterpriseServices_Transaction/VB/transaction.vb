@@ -19,7 +19,7 @@ Public Class TransactionalComponent
         ContextUtil.MyTransactionVote = TransactionVote.Commit
     
     End Sub
-End Class 'TransactionalComponent
+End Class
 
 ' </snippet1>
 
@@ -29,4 +29,4 @@ Public Class Test
     Public Shared Sub Main()
 
     End Sub
-End Class 'Test
+End Class

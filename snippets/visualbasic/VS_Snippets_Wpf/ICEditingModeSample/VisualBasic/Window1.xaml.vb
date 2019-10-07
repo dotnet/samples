@@ -93,5 +93,5 @@ Class Window1
         inkCanvas1.EditingMode = InkCanvasEditingMode.Ink
 
     End Sub
-End Class 'Window1
+End Class
 '</Snippet1>

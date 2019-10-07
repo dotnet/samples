@@ -65,5 +65,5 @@ Class TypeBuilderMemberDemo
 									True)
       ' </Snippet4>
    End Sub
-End Class 'TypeBuilderMemberDemo
+End Class
 

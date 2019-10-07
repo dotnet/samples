@@ -38,5 +38,5 @@ Namespace ImageElementExample
             simpleGrid.Children.Add(simpleImage)
 
         End Sub
-    End Class 'SimpleImageExample
+    End Class
 End Namespace 'ImageElementExample

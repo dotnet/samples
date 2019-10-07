@@ -111,5 +111,5 @@ Public Class MyForm
          flag = True
       End If
    End Sub
-End Class 'MyForm
+End Class
 

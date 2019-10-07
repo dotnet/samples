@@ -23,5 +23,5 @@ Namespace MiscCompModSamplesVB
         End Function
         '</Snippet1>
 
-    End Class 'ComponentChangedEventArgsExample 
+    End Class
 End Namespace 'MiscCompModSamples

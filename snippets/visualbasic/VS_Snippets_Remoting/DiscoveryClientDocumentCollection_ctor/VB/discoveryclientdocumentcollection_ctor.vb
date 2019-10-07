@@ -59,4 +59,4 @@ Public Class DiscoveryClientDocumentCollection_Add
          Console.WriteLine(myObjectCollection1(iIndex))
       Next iIndex
    End Sub
-End Class 'DiscoveryClientDocumentCollection_Add 
+End Class

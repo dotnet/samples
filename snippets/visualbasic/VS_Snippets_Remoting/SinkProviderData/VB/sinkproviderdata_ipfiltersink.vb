@@ -127,7 +127,7 @@ Namespace IPFilter
          End While
          Console.WriteLine()
       End Sub
-   End Class 'MySinkProviderData
+   End Class
      ' class MySinkProviderData
 ' </Snippet4>
 ' </Snippet3>
@@ -189,7 +189,7 @@ Namespace IPFilter
                Return myIPAddressObject
             End Get
          End Property
-      End Class 'MyFilter
+      End Class
 
 <SecurityPermission(SecurityAction.Demand)> _
       Public Sub New(myAcceptMode As Boolean, myIServerChannelSink_nextSink As IServerChannelSink)
@@ -282,7 +282,7 @@ Namespace IPFilter
             Return myFilterSet
          End Get
       End Property
-   End Class 'MyIPFilterChannelSink
+   End Class
    ' class MyIPFilterChannelSink
    Public Enum FilterMode
       Accept

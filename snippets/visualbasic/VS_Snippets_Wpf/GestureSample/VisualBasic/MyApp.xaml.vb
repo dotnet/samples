@@ -19,7 +19,7 @@ Class MyApp
         win.Show()
 
     End Sub
-End Class 'MyApp 
+End Class
 '
 'ToDo: Error processing original source shown below
 '    }

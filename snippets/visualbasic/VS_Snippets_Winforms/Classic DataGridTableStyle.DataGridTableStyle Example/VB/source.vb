@@ -18,5 +18,5 @@ Public Class Form1
       dataGrid1.TableStyles.Add(myGridTableStyle)
    End Sub 
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

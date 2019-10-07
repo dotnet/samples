@@ -27,4 +27,4 @@ Public Class ManualClient
       ' </Snippet3>
    End Sub
    
-End Class 'ManualClient 
+End Class

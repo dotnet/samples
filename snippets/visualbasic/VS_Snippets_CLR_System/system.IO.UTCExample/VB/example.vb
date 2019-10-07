@@ -37,7 +37,7 @@ Public Class DirectoryUTCTime
       Directory.SetLastWriteTimeUtc(n, dtime2)
       Console.WriteLine("Changed last write time: {0}", Directory.GetLastWriteTimeUtc(n))
    End Sub
-End Class 'DirectoryUTCTime
+End Class
 
 ' Since this sample deals with dates and times, the output will vary
 ' depending on when you run the executable. Here is one example of the output:

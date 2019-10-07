@@ -211,7 +211,7 @@ Public Class ListViewGroupsExample
                 Return -result
             End If
         End Function 'Compare
-    End Class 'ListViewGroupSorter 
+    End Class
 
-End Class 'ListViewGroupsExample
+End Class
 '</Snippet1>

@@ -33,4 +33,4 @@ Public Class Form1
     ' method added so sample will compile
     Private Sub DecimalToCurrencyString(sender As Object, e As ConvertEventArgs)
     End Sub
-End Class 'Form1
+End Class

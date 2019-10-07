@@ -125,7 +125,7 @@ Public Class SampleWebRequestInformation
     End Sub
     ' </Snippet9>
 
-End Class 'SampleWebRequestInformation
+End Class
 
 
 ' </Snippet1>

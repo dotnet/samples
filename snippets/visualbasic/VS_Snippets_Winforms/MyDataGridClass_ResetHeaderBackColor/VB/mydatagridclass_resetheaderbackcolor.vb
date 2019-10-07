@@ -310,5 +310,5 @@ Namespace MyDataGridClass
             MessageBox.Show("Width of row headers is: " + myRowHeaderWidth.ToString(), "Message", MessageBoxButtons.OK, 	    MessageBoxIcon.Exclamation)
         End Sub
 ' </Snippet6>		
-    End Class 'MyDataGridClass_ResetHeaderBackColor
+    End Class
 End Namespace 'MyDataGridClass

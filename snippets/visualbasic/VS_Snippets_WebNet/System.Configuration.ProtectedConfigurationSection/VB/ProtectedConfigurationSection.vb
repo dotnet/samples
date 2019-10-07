@@ -73,5 +73,5 @@ Class UsingProtectedConfigurationSection
         GetProviderCollection()
     
     End Sub
-End Class 'UsingProtectedConfigurationSection
+End Class
 ' </Snippet1>

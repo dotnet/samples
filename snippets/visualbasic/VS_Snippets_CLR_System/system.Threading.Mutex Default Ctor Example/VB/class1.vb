@@ -55,5 +55,5 @@ Class Test
         ' Release Mutex.
         mut.ReleaseMutex()
     End Sub
-End Class 'MyMainClass
+End Class
 '</Snippet1>

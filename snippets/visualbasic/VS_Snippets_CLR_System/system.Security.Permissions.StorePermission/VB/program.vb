@@ -121,5 +121,5 @@ Public Class X509store2
         IIf(rc, "Yes", "No"))
         '</Snippet7>
     End Sub
-End Class 'X509store2
+End Class
 '</Snippet1>

@@ -70,4 +70,4 @@ Class CredentialCacheSnippet
         Console.WriteLine(ControlChars.Cr + "Username : {0} ,Password : {1} ,Domain : {2}", credential.UserName, credential.Password, credential.Domain)
     End Sub
 ' </Snippet1>
-End Class 'CredentialCacheSnippet
+End Class

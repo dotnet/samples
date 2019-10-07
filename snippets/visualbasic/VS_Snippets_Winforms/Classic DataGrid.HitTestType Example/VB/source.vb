@@ -53,5 +53,5 @@ Public Class Form1
         End Select
     End Function 'ReturnHitTest
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

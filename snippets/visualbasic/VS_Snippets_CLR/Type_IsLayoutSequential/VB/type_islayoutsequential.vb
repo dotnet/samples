@@ -4,7 +4,7 @@ Imports System.ComponentModel
 Imports System.Runtime.InteropServices
 
 Class MyTypeSequential1
-End Class 'MyTypeSequential1
+End Class
 <StructLayoutAttribute(LayoutKind.Sequential)> Class MyTypeSequential2
     Public Shared Sub Main()
         Try
@@ -22,5 +22,5 @@ End Class 'MyTypeSequential1
             Console.WriteLine(ControlChars.Cr + "An exception occurred: {0}", e.Message.ToString())
         End Try
     End Sub
-End Class 'MyTypeSeq2
+End Class
 ' </Snippet1>

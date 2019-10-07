@@ -57,6 +57,6 @@ Namespace Authentication2
         Console.WriteLine(ControlChars.Tab + ControlChars.Tab + ControlChars.Tab + " CanPreAuthenticate : {0}", currentAuthenticationModule.CanPreAuthenticate)
       End While 
     End Sub
-  End Class 'Class1
+  End Class
 ' </Snippet3>
 End Namespace 'Authentication2

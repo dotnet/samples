@@ -17,7 +17,7 @@ Namespace Examples.VB.WebControls.Design
     <Designer(GetType(Examples.VB.WebControls.Design.MyMenuDesigner))> _
     Public Class MyMenu
         Inherits Menu
-    End Class ' MyMenu
+    End Class
     ' </snippet3>
 
     ' Override members of the MenuDesigner.
@@ -107,6 +107,6 @@ Namespace Examples.VB.WebControls.Design
 
         End Sub
         ' </snippet6>
-    End Class ' MyMenuDesigner
+    End Class
 End Namespace ' Examples.VB.WebControls.Design
 ' </snippet1>

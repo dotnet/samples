@@ -111,5 +111,5 @@ End Sub
          Me.SetCursor()
       End Sub
 
-   End Class 'MyCursor 
+   End Class
 End Namespace 'MyCursors 

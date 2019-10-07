@@ -56,6 +56,6 @@ Public Class CounterDataCollectionExample
          Return
       End Try
    End Sub
-End Class 'CounterDataCollectionExample
+End Class
 ' </Snippet2>
 ' </Snippet1>

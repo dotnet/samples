@@ -137,4 +137,4 @@ Public Class MyForm
         MessageBox.Show(myMessage, "ShowParentDetailsButtonClick information")
     End Sub
 ' </Snippet1>
-End Class 'MyForm 
+End Class

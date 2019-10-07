@@ -90,7 +90,7 @@ Public Class DataGridColumnStyle_Header
       myDataGrid.Invalidate()
    End Sub
 ' </Snippet1>
-End Class 'DataGridColumnStyle_Header
+End Class
 
 
 

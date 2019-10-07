@@ -21,4 +21,4 @@ Public Class MyITransportHeadersClient
          Console.WriteLine("The following exception is raised on the client side: " + e.Message)
       End Try
    End Sub
-End Class 'MyITransportHeadersClient
+End Class

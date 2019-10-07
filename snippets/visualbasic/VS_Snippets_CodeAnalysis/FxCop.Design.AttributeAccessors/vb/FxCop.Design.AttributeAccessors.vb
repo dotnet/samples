@@ -12,7 +12,7 @@ NotInheritable Public Class BadCustomAttribute
     Public Sub New(someStringData As String)
         data = someStringData
     End Sub
-End Class 'BadCustomAttribute
+End Class
 
 ' Satisfies rule: Attributes should have accessors for all arguments.
 <AttributeUsage(AttributeTargets.All)>  _

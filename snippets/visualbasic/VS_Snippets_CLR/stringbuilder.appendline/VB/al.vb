@@ -28,7 +28,7 @@ Class Sample
       ' Convert the value of the StringBuilder to a string and display the string.
       Console.WriteLine(sb.ToString())
    End Sub
-End Class 'Sample
+End Class
 '
 'This example produces the following results:
 '

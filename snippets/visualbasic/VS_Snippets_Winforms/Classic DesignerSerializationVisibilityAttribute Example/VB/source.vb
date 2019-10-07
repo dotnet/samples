@@ -42,7 +42,7 @@ Namespace DesignerSerializationVisibilityTest
 
         Private Sub InitializeComponent()
         End Sub
-    End Class 'ContentSerializationExampleControl
+    End Class
 
     ' This attribute indicates that the public properties of this object should be listed in the property grid.
    <TypeConverterAttribute(GetType(System.ComponentModel.ExpandableObjectConverter))> _   
@@ -73,6 +73,6 @@ Namespace DesignerSerializationVisibilityTest
                 owner.Size = Value
             End Set
         End Property
-    End Class 'DimensionData
+    End Class
 End Namespace 'DesignerSerializationVisibilityTest
 ' </Snippet1>

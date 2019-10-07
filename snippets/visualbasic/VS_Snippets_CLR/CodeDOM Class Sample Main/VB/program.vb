@@ -15,5 +15,5 @@ Class Sample
     Shared Sub Main(ByVal args() As String) 
     
     End Sub
-End Class 'Sample
+End Class
 '</Snippet1>

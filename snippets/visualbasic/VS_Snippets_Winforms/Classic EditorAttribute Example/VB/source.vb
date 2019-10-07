@@ -12,7 +12,7 @@ Public Class Class1
         GetType(UITypeEditor))> _
     Public Class MyImage
         ' Insert code here.
-    End Class 'MyImage
+    End Class
     ' </Snippet1>
     ' <Snippet2>
     Public Shared Sub Main()
@@ -30,4 +30,4 @@ Public Class Class1
 
     End Sub
     ' </Snippet2>
-End Class 'Class1 
+End Class

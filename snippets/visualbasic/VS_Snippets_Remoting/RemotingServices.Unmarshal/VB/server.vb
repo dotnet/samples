@@ -22,5 +22,5 @@ Namespace SampleNamespace
          Console.ReadLine()
          ' </Snippet1>
       End Sub
-   End Class 'SampleServer
+   End Class
 End Namespace 'SampleNamespace

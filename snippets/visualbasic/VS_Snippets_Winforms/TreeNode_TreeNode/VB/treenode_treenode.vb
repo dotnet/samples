@@ -77,7 +77,7 @@ Public Class Customer
       CustomerName = myName
       CustomerOrders = New ArrayList()
    End Sub
-End Class 'Customer
+End Class
 
 
 Public Class Order
@@ -86,7 +86,7 @@ Public Class Order
    Public Sub New(myOrderID As String)
       Me.OrderID = myOrderID
    End Sub
-End Class 'Order
+End Class
 
 Private Sub FillTreeView()
    ' Load the images in an ImageList.
@@ -163,4 +163,4 @@ End Sub
    Shared Sub Main()
       Application.Run(New TreeNode_Checked())
    End Sub
-End Class 'TreeNode_Checked
+End Class

@@ -79,7 +79,7 @@ Namespace Samples.AspNet
             writer.WriteEncodedText([Text])
 
         End Sub
-    End Class 'MailLink
+    End Class
 End Namespace
 
 ' </Snippet1>

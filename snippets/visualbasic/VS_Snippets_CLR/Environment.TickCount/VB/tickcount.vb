@@ -12,7 +12,7 @@ Class Sample
 
       Console.WriteLine("TickCount: {0}", result)
    End Sub
-End Class 'Sample
+End Class
 '
 'This example produces the following results:
 '

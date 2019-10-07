@@ -63,5 +63,5 @@ Public Class Form1
         myDataGrid.TableStyles.Add(ts2)
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

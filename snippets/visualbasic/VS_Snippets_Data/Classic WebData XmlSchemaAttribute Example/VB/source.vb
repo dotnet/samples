@@ -60,5 +60,5 @@ Class XMLSchemaExamples
 
         Console.WriteLine(args.Message)
     End Sub
-End Class 'XMLSchemaExamples
+End Class
 ' </Snippet1>

@@ -43,4 +43,4 @@ Class UIAInvokePattern_snippets
     
     End Sub
     ' </Snippet101>
-End Class 'UIAInvokePattern_snippets 
+End Class

@@ -98,7 +98,7 @@ Public Class SampleWebSuccessAuditEvent
         ' </Snippet6>
 
     End Sub
-End Class 'SampleWebSuccessAuditEvent
+End Class
 
 
 ' </Snippet1>

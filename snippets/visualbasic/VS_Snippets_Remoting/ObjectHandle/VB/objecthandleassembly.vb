@@ -16,7 +16,7 @@ Public Class MyType
       Return AppDomain.CurrentDomain.GetHashCode()
    End Function 'GetAppDomainHashCode
 
-End Class 'MyType
+End Class
 
 
 Class Test
@@ -48,5 +48,5 @@ Class Test
 
    End Sub
 
-End Class 'Test 
+End Class
 ' </Snippet1>

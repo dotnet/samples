@@ -8,7 +8,7 @@ Public Class MyType
         Console.WriteLine("MyType instantiated!")
     End Sub
 
-End Class 'MyType
+End Class
 
 Class Test
 
@@ -57,5 +57,5 @@ Class Test
         Return GetType(MyType).Assembly
     End Function 'MyResolveEventHandler
 
-End Class 'Test
+End Class
 ' </Snippet1>

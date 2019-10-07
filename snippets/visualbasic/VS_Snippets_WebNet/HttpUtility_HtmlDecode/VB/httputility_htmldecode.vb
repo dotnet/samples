@@ -27,6 +27,6 @@ Class MyNewClass
       HttpUtility.HtmlDecode(myEncodedString, myWriter)
       Console.Write("Decoded string of the above encoded string is " + myWriter.ToString())
    End Sub
-End Class 'MyNewClass
+End Class
 ' </Snippet2>
 ' </Snippet1>

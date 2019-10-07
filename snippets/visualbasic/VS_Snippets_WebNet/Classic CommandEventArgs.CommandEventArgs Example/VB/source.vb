@@ -13,4 +13,4 @@ Public Class Form1
         Dim args As New CommandEventArgs(e)
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

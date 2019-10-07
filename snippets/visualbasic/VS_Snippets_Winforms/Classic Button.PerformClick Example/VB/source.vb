@@ -25,4 +25,4 @@ Public Class Form1
         myVar = myVar + 1
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

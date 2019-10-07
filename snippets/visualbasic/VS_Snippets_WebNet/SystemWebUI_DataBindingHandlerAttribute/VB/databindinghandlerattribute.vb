@@ -19,7 +19,7 @@ Namespace CustomControls
         'Insert your code here.
       End Sub
       
-    End Class 'MyLabel
+    End Class
    
     Public Class MyDataBindingHandler
       Inherits DataBindingHandler
@@ -28,7 +28,7 @@ Namespace CustomControls
          CType(control, Label).Text = "Added by data binding handler."
       End Sub
       
-    End Class 'MyDataBindingHandler
+    End Class
     
 End Namespace 'CustomControls 
 

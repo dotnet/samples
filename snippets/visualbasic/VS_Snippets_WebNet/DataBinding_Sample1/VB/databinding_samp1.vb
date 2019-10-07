@@ -145,7 +145,7 @@ Namespace DataBindingTest
             myFile.WriteLine(CharArray, 0, input.Length)
             myFile.Close()
         End Sub
-    End Class 'SimpleDesigner
+    End Class
     ' </snippet2>
 End Namespace 'DataBindingTest
 ' </snippet1>

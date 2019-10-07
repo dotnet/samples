@@ -101,6 +101,6 @@ Public Class SampleWebBaseEventCollection
         formatter.IndentationLevel -= 1
 
     End Sub
-End Class 'SampleWebBaseEventCollection
+End Class
 
 ' </Snippet1>

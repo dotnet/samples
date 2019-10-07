@@ -26,7 +26,7 @@ Class Sample
       End If
       Console.WriteLine()
    End Sub
-End Class 'Sample
+End Class
 '
 'The first character occurrence from position 22 for 16 characters.
 '0----+----1----+----2----+----3----+----4----+----5----+----6----+-

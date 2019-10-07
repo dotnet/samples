@@ -16,7 +16,7 @@ Public Class AppendTextTest
             Console.WriteLine(sr.ReadLine())
         End While
     End Sub
-End Class 'AppendTextTest
+End Class
 'This code produces output similar to the following;
 'results may vary based on the computer/file structure/etc.:
 'Add as many lines as you like...

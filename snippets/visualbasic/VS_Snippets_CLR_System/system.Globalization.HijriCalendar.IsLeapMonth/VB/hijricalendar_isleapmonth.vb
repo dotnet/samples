@@ -25,7 +25,7 @@ Public Class SamplesHijriCalendar
 
    End Sub
 
-End Class 'SamplesHijriCalendar
+End Class
 
 
 'This code produces the following output.

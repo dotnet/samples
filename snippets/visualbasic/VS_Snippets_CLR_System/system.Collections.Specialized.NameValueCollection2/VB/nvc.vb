@@ -67,7 +67,7 @@ Public Class SamplesNameValueCollection
         Console.WriteLine()
     End Sub
 
-End Class 'SamplesNameValueCollection 
+End Class
 
 
 'This code produces the following output.

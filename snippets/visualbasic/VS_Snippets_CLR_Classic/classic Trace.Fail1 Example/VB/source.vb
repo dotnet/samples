@@ -44,4 +44,4 @@ Public Class Form1
         myForm.Method(OptionConsts.Second, "not an integer string")
     End Sub
 
-End Class 'Form1 
+End Class

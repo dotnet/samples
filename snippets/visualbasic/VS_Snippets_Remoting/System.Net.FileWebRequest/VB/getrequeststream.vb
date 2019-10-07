@@ -116,7 +116,7 @@ Namespace Mssc.PluggableProtocols.File
 
             End Sub
 
-        End Class 'TestGetRequestStream
+        End Class
 
 
 

@@ -1,0 +1,35 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pr: none
+#- master
+
+
+pool:
+  vmImage: '$(VMIMAGE)'
+
+steps:
+
+- checkout: self
+  path: dotnet-samples
+  persistCredentials: true
+  displayName: 'Check out dotnet/samples repo'
+
+- script: |
+    git clone -c http.extraheader="AUTHORIZATION: bearer $SYSTEM_ACCESSTOKEN" "https://constructors.visualstudio.com/_git/MicrosoftSamples" "$(Agent.BuildDirectory)/ci"
+  env:
+    SYSTEM_ACCESSTOKEN: $(System.AccessToken)
+  displayName: 'Clone DevOps repo'
+
+- script: |
+    echo Init dotnet
+    dotnet help &> /dev/null
+    echo Find projects in dotnet-samples folder 
+    dotnet run -- $(Agent.BuildDirectory)/dotnet-samples/core
+  displayName: 'Run find-projects tool'
+  workingDirectory: $(Agent.BuildDirectory)/ci/find-projects

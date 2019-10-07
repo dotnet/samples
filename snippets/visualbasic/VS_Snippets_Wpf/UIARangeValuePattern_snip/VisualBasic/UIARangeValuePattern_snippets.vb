@@ -268,5 +268,5 @@ Class UIARangeValuePattern_snippets
             Dim app As New UIARangeValuePattern_snippets()
         
         End Sub
-    End Class 'TestMain
-End Class 'UIARangeValuePattern_snippets 
+    End Class
+End Class

@@ -33,4 +33,4 @@ Public Class Form1
             myDefaultLanguage.Culture.EnglishName
     End Sub
     ' </Snippet2>
-End Class 'Form1 
+End Class

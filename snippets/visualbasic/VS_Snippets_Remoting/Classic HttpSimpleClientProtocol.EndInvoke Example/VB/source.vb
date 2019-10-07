@@ -25,6 +25,6 @@ Namespace MyMath
         Public Function EndAdd(asyncResult As IAsyncResult) As Integer
             Return CInt(Me.EndInvoke(asyncResult))
         End Function 'EndAdd
-    End Class 'Math 
+    End Class
 End Namespace 'MyMath
 ' </Snippet2>

@@ -78,4 +78,4 @@ Public Class InvokePatternProvider
         'Dim onMouseEvent As MouseEventHandler = AddressOf ProviderControl.RootButtonControl_MouseDown
         'ProviderControl.BeginInvoke(onMouseEvent, New Object() {Me, mouseArgs})
     End Sub
-End Class 'InvokePatternProvider
+End Class

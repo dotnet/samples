@@ -37,6 +37,6 @@ Namespace SDKSample
             Me.Content = myStackPanel
 
         End Sub
-    End Class 'BitmapSourceExample
+    End Class
 End Namespace
 '</SnippetBitmapSourceFullPage>

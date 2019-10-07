@@ -55,7 +55,7 @@ Namespace Samples.AspNet.Controls.VB
        #End Region
 ' </Snippet3>
 ' </Snippet2>
-    End Class 'SomeDataSource
+    End Class
 
 
     Public Class SomeDataSourceView
@@ -71,6 +71,6 @@ Namespace Samples.AspNet.Controls.VB
        Protected Overrides Function ExecuteSelect(selectArguments As DataSourceSelectArguments) As IEnumerable
           Return Nothing
        End Function 'Select
-    End Class 'SomeDataSourceView
+    End Class
 End Namespace
 ' </Snippet1>

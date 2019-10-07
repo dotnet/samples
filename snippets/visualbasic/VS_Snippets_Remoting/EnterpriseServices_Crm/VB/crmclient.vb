@@ -17,6 +17,6 @@ Public Class CrmClient
         End Try
     
     End Sub
-End Class 'CrmClient
+End Class
 
 ' </snippet30>

@@ -15,4 +15,4 @@ Public Class Form1
         DesktopBounds = tempRect
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

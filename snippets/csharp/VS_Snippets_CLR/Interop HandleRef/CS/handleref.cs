@@ -40,7 +40,7 @@ public class Overlapped2
     IntPtr hEvent;
 }
 
-public class LibWrap
+internal static class NativeMethods
 {
     // to prevent FileStream to be GC-ed before call ends, 
     // its handle should be wrapped in HandleRef
@@ -48,8 +48,8 @@ public class LibWrap
     //BOOL ReadFile(HANDLE hFile, LPVOID lpBuffer, DWORD nNumberOfBytesToRead,
     //				LPDWORD lpNumberOfBytesRead, LPOVERLAPPED lpOverlapped);    
 
-    [DllImport("Kernel32.dll", CharSet=CharSet.Unicode)]
-    public static extern bool ReadFile(
+    [DllImport("Kernel32.dll", CharSet = CharSet.Unicode)]
+    internal static extern bool ReadFile(
         HandleRef hndRef,
         StringBuilder buffer,
         int numberOfBytesToRead,
@@ -59,8 +59,8 @@ public class LibWrap
     // since Overlapped is struct, null can't be passed instead, 
     // we must declare overload method if we will use this 
 
-    [DllImport("Kernel32.dll", CharSet=CharSet.Unicode)]
-    public static extern bool ReadFile(
+    [DllImport("Kernel32.dll", CharSet = CharSet.Unicode)]
+    internal static extern bool ReadFile(
         HandleRef hndRef,
         StringBuilder buffer,
         int numberOfBytesToRead,
@@ -70,8 +70,8 @@ public class LibWrap
     // since Overlapped2 is class, we can pass null as parameter,
     // no overload is needed	
 
-    [DllImport("Kernel32.dll", CharSet=CharSet.Unicode, EntryPoint = "ReadFile")]
-    public static extern bool ReadFile2(
+    [DllImport("Kernel32.dll", CharSet = CharSet.Unicode, EntryPoint = "ReadFile")]
+    internal static extern bool ReadFile2(
         HandleRef hndRef,
         StringBuilder buffer,
         int numberOfBytesToRead,
@@ -83,10 +83,10 @@ public class App
 {
     public static void Main()
     {
-	Run();
+        Run();
     }
-    
-    [SecurityPermissionAttribute(SecurityAction.Demand, Flags=SecurityPermissionFlag.UnmanagedCode)]
+
+    [SecurityPermissionAttribute(SecurityAction.Demand, Flags = SecurityPermissionFlag.UnmanagedCode)]
     public static void Run()
     {
         FileStream fs = new FileStream("HandleRef.txt", FileMode.Open);
@@ -96,9 +96,9 @@ public class App
 
         // platform invoke will hold reference to HandleRef until call ends
 
-        LibWrap.ReadFile(hr, buffer, 5, out read, 0);
+        NativeMethods.ReadFile(hr, buffer, 5, out read, 0);
         Console.WriteLine("Read with struct parameter: {0}", buffer);
-        LibWrap.ReadFile2(hr, buffer, 5, out read, null);
+        NativeMethods.ReadFile2(hr, buffer, 5, out read, null);
         Console.WriteLine("Read with class parameter: {0}", buffer);
 
     }

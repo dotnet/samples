@@ -255,6 +255,6 @@ ByVal formatter As WebEventFormatter)
     End Sub
     ' </Snippet17>
 
-End Class 'SampleWebBaseEvent
+End Class
 
 ' </Snippet1>

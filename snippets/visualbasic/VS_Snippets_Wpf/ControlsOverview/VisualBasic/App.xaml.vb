@@ -18,6 +18,6 @@ Partial Class App
         win2.Show()
 
     End Sub
-End Class 'App
+End Class
 
 

@@ -277,6 +277,6 @@ Public Class FibonacciForm
     Shared Sub Main()
         Application.Run(New FibonacciForm)
     End Sub
-End Class 'FibonacciForm 
+End Class
 
 ' </snippet1>

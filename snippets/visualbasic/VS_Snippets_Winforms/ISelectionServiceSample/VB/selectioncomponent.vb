@@ -117,7 +117,7 @@ Namespace ISelectionServiceExample
             End If
             MyBase.Dispose(disposing)
         End Sub
-    End Class 'SelectionComponent
+    End Class
 
 End Namespace 'ISelectionServiceExample
 '</Snippet1>

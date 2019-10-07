@@ -74,6 +74,6 @@ Public Class HttpPostClientProtocolClass
 ' </Snippet1>
 
    End Sub
-End Class 'HttpPostClientProtocolClass
+End Class
 
 

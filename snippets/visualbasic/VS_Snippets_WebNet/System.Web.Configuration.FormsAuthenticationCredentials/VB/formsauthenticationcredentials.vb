@@ -179,7 +179,7 @@ Class UsingFormsAuthenticationCredentials
 
     End Sub
 
-End Class 'UsingFormsAuthenticationCredentials 
+End Class
 
 
 

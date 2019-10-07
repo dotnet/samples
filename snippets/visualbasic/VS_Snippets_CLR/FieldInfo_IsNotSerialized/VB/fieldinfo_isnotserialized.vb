@@ -9,7 +9,7 @@ Public Class [MyClass]
 
     ' The following field will not be serialized.  
     <NonSerialized()> Public myInt As Integer
-End Class '[MyClass]
+End Class
 
 Public Class Type_IsNotSerializable
 
@@ -31,5 +31,5 @@ Public Class Type_IsNotSerializable
             End If
         Next i
     End Sub
-End Class 'Type_IsNotSerializable
+End Class
 ' </Snippet1>

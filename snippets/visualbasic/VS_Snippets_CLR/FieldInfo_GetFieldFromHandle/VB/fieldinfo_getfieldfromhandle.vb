@@ -26,5 +26,5 @@ Public Class FieldInfo_GetFieldFromHandle
             Console.WriteLine("{0}", myFieldInfo)
         Next i
     End Sub
-End Class 'FieldInfo_GetFieldFromHandle
+End Class
 ' </Snippet1>

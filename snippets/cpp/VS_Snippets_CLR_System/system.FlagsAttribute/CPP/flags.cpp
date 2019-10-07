@@ -13,7 +13,7 @@ public enum class SingleHue : short
 };
 
 // Define an Enum with FlagsAttribute.
-[FlagsAttribute]
+[Flags]
 enum class MultiHue : short
 {
    None = 0,

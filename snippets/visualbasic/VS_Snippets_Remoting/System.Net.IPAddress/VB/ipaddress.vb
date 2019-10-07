@@ -126,7 +126,7 @@ Namespace Mssc.Services.ConnectionManagement
         ' Get additonal address information.
         IPAddressAdditionalInfo()
       End Sub
-    End Class 'TestIPAddress
+    End Class
   End Module
 End Namespace
 ' </Snippet1>

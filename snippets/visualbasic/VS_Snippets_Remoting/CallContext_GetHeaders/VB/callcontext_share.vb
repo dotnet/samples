@@ -25,7 +25,7 @@ Namespace RemotingSamples
          CallContext.SetHeaders(arrHeader)
          Return "HeaderMethod " + name
       End Function 'HeaderMethod
-   End Class 'HelloService
+   End Class
 ' </Snippet3>
 
    ' 'CallContext' and 'ILogicalThreadAffinative' is needed to pass information between threads
@@ -53,6 +53,6 @@ Namespace RemotingSamples
          noOfAccesses = 0
          myIprincipal = p
       End Sub
-   End Class 'MyLogicalCallContextData
+   End Class
 End Namespace 'RemotingSamples
 

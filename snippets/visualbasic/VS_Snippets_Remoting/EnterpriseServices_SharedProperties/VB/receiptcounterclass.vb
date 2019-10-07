@@ -43,7 +43,7 @@ Public Class ReceiptNumberGeneratorClass
     
     End Function 'GetNextReceiptNumber
 
-End Class 'ReceiptNumberGeneratorClass
+End Class
 ' </snippet0>
 
 'added to make it compile
@@ -52,5 +52,5 @@ Public Class Test
     Public Shared Sub Main()
 
     End Sub
-End Class 'Test
+End Class
 

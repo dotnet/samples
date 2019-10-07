@@ -21,5 +21,5 @@ Class Program
         threads(0).IdealProcessor = 0
         threads(0).ProcessorAffinity = CType(1, IntPtr)
     End Sub
-End Class 'Program
+End Class
 '</Snippet1>

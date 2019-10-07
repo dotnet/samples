@@ -32,10 +32,7 @@ namespace Microsoft.WCF.Documentation
         {
             get
             {
-                if (operationCache == null)
-                {
-                    operationCache = OperationContext.Current.Host.Extensions.Find<IOperationCache>();
-                }
+                operationCache ??= OperationContext.Current.Host.Extensions.Find<IOperationCache>();
                 return operationCache;
             }
 		}

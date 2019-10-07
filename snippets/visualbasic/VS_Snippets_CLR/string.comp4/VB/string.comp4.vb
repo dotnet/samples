@@ -26,7 +26,7 @@ Class Sample
       End If
       Return s
    End Function 'symbol
-End Class 'Sample
+End Class
 '
 'This example produces the following results.
 'For en-US: change < dollar

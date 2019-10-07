@@ -123,5 +123,5 @@ Class Read_Write_BinaryMethods
     
     End Sub
  '</snippet4>
-End Class 'Read_Write_BinaryMethods
+End Class
 ' end class.

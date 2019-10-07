@@ -65,5 +65,5 @@ Public Class Class1
     
     End Sub
     '</Snippet10>           
-End Class 'Class1 
+End Class
 '</Snippet1>

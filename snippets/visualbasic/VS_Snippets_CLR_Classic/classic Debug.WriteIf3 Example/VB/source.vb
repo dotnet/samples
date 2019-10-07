@@ -21,5 +21,5 @@ Public Class Form1
         Debug.WriteLineIf(generalSwitch.TraceError, " Object is not valid for this category.")
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

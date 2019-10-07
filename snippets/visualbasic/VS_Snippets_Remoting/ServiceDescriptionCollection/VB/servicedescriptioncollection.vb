@@ -57,5 +57,5 @@ Class MyServiceDescriptionCollection
                  e.Message.ToString())
       End Try
    End Sub
-End Class 'MyServiceDescriptionCollection
+End Class
 ' </Snippet1>

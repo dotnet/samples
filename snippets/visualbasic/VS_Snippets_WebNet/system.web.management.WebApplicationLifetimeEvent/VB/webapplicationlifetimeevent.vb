@@ -86,7 +86,7 @@ Public Class SampleWebApplicationLifetimeEvent
         formatter.IndentationLevel -= 1
 
     End Sub
-End Class 'SampleWebApplicationLifetimeEvent
+End Class
 ' </Snippet5>
 
 ' </Snippet1>

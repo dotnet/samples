@@ -97,4 +97,4 @@ End Sub
      Next table
   End Sub
 ' </Snippet1>
-End Class 'Form1 
+End Class

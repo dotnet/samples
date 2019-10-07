@@ -136,7 +136,7 @@ Class UsingOutputCacheSettingsSection
         '</Snippet12>
 
   End Sub
-End Class 'UsingOutputCacheSettingsSection
+End Class
 
 
 ' UsingOutputCacheSettingsSection class end.

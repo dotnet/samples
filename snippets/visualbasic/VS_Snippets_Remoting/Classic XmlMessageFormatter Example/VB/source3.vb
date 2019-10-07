@@ -27,7 +27,7 @@ Class Client
             MessageQueue.Create(path)
         End If
     End Sub
-End Class 'Client 
+End Class
 ' </Snippet3>
 
 Public Class Order

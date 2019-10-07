@@ -56,5 +56,5 @@ Public Class Program
     Public Sub Run() 
         Main(New String() {})  
     End Sub
-End Class 'Program
+End Class
 '</Snippet1>

@@ -49,7 +49,7 @@ Namespace Logging
             next1 = value
          End Set
       End Property
-   End Class 'LoggingClientChannelSinkProvider
+   End Class
   
    <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> _  
    Friend Class LoggingClientChannelSink
@@ -100,7 +100,7 @@ Namespace Logging
 	  return nothing		
         End Get
         End Property
-   End Class 'LoggingClientChannelSink
+   End Class
     
 ' <Snippet1>
    <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> _
@@ -133,7 +133,7 @@ Namespace Logging
             next2 = value
          End Set
       End Property
-   End Class 'LoggingServerChannelSinkProvider
+   End Class
    
    <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> _ 
    Friend Class LoggingServerChannelSink
@@ -212,6 +212,6 @@ Namespace Logging
 		return nothing		
          End Get
       End Property
-   End Class 'LoggingServerChannelSink
+   End Class
 ' </Snippet1>
 End Namespace 'Logging 

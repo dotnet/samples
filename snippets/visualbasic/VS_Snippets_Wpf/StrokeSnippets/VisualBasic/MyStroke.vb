@@ -179,6 +179,6 @@ Namespace StrokeSnippets_VB
                 End If
             End Set
         End Property
-    End Class 'MyStroke
+    End Class
 
 End Namespace

@@ -6,5 +6,5 @@ Class UnicodeEncodingExample
     Public Shared Sub Main()
         Console.WriteLine("Unicode character size: {0} bytes", UnicodeEncoding.CharSize)
     End Sub
-End Class 'UnicodeEncodingExample
+End Class
 ' </Snippet1>

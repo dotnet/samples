@@ -9,7 +9,7 @@ Public Class MyBinder
     End Sub
     Private Class BinderState
         Public args() As Object
-    End Class 'BinderState
+    End Class
 
     Public Overrides Function BindToField(ByVal bindingAttr As BindingFlags, ByVal match() As FieldInfo, ByVal value As Object, ByVal culture As CultureInfo) As FieldInfo
         If match Is Nothing Then
@@ -319,7 +319,7 @@ ContinueFori:
         End If
         Return False
     End Function 'CanConvertFrom
-End Class 'MyBinder
+End Class
 
 
 Public Class MyClass1
@@ -333,7 +333,7 @@ Public Class MyClass1
     Public Overloads Sub MyMethod(ByVal i As Long, ByVal j As Long)
         Console.WriteLine(ControlChars.NewLine & "This is MyMethod(long i, long j).")
     End Sub
-End Class 'MyClass1
+End Class
 
 
 Public Class Binder_Example
@@ -350,5 +350,5 @@ Public Class Binder_Example
         ' Invoke MyMethod.
         myMethod.Invoke(myInstance, BindingFlags.InvokeMethod, New MyBinder(), New [Object]() {CInt(32), CInt(32)}, CultureInfo.CurrentCulture)
     End Sub
-End Class 'Binder_Example
+End Class
 ' </Snippet1>

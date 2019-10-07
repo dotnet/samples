@@ -121,6 +121,6 @@ Namespace MyDataGridColumnStyle
          myDataTable.Rows(1)("custName") = "Beta"
          myDataTable.Rows(2)("custName") = "Omega"
       End Sub
-   End Class 'MyForm1
+   End Class
 End Namespace 'MyDataGridColumnStyle
 

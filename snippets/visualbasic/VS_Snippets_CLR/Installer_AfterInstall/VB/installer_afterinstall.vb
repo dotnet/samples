@@ -64,11 +64,11 @@ Public Class MyInstaller
    Protected Overrides Sub OnAfterInstall(ByVal savedState As IDictionary)
       MyBase.OnAfterInstall(savedState)
    End Sub
-End Class 'MyInstaller
+End Class
 
 Public Class MyAssembly
    Public Shared Sub Main()
       Console.WriteLine("Use installutil.exe to run the assembly" & _
                                              " Installer_AfterInstall.exe")
    End Sub
-End Class 'MyAssembly
+End Class

@@ -16,4 +16,4 @@ Public Class Sample
       Console.WriteLine("Hit <enter> to exit...")
       Console.ReadLine()
    End Sub
-End Class 'Sample
+End Class

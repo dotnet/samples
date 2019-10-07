@@ -80,4 +80,4 @@ Class MyClass1
          Console.WriteLine("Exception: " + e.Message.ToString())
       End Try
    End Sub
-End Class 'MyClass1
+End Class

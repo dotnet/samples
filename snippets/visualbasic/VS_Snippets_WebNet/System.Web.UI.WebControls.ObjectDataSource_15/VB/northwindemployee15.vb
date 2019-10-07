@@ -28,6 +28,6 @@ Namespace Samples.AspNet.VB
         Return al
     
     End Function 'GetAllEmployees
-  End Class 'EmployeeLogic 
+  End Class
 End Namespace ' Samples.AspNet.VB
 ' </snippet2>

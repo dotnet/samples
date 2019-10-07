@@ -24,7 +24,7 @@ Class Sample
       End If
       Console.WriteLine()
    End Sub
-End Class 'Sample
+End Class
 '
 '
 'Search for a character occurrence from position 33 to 66.

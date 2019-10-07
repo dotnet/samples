@@ -23,6 +23,6 @@ Namespace Samples.AspNet.VB.Controls
          End If 
       End Sub
 
-   End Class 'MyControl
+   End Class
 End Namespace 'MyUserControl
 ' </Snippet1>

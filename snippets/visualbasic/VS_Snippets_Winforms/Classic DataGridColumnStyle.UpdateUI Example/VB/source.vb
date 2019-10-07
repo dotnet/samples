@@ -62,5 +62,5 @@ End Sub
         
         Overloads Protected Overrides Sub Paint(g As System.Drawing.Graphics, bounds As System.Drawing.Rectangle, source As System.Windows.Forms.CurrencyManager, rowNum As Integer)
         End Sub
-    End Class 'MyDataGridColumnStyle
+    End Class
 End Namespace 'MyNameSpace

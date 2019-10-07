@@ -20,7 +20,7 @@ Public Class Test
       
    End Sub
    
-End Class 'Test
+End Class
 
 
 ' A test object that needs to be serialized.
@@ -46,5 +46,5 @@ End Class 'Test
       member5 = "hello world!"
    End Sub
 
-End Class 'TestSimpleObject
+End Class
 ' </Snippet1>

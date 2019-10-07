@@ -17,4 +17,4 @@ Class NoneFieldAddress
     End Sub
 ' </Snippet1>	
 
-End Class 'NoneFieldAddress
+End Class

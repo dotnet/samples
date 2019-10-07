@@ -173,7 +173,7 @@ Public Class SampleEventProvider
         End Try
 
     End Sub
-End Class 'SampleEventProvider
+End Class
 ' </Snippet6>
 
 

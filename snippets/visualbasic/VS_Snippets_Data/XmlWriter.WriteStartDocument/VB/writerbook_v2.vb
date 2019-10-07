@@ -57,5 +57,5 @@ Public Class Sample
      writer.Close()
         
     End Sub
-End Class 'Sample
+End Class
 '</snippet1>

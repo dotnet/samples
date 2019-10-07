@@ -33,5 +33,5 @@ Public Class myKeyPressClass
             " other keys pressed" & ControlChars.CrLf
         ex.Handled = True
     End Sub
-End Class 'myKeyPressClass
+End Class
 ' </Snippet1>

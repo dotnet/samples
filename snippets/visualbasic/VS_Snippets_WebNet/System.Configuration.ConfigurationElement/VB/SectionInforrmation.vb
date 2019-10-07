@@ -322,4 +322,4 @@ Class UsingSectionInformation
     End Sub
     ' </Snippet112>
 
-End Class 'UsingSectionInformation
+End Class

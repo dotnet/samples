@@ -54,7 +54,7 @@ Public Class SamplesArrayList
         Console.WriteLine()
     End Sub
 
-End Class 'SamplesArrayList
+End Class
 
 ' This code produces the following output.
 '

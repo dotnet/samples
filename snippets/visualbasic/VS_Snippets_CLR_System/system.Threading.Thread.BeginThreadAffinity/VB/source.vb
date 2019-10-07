@@ -16,10 +16,10 @@ Friend Class MyUtility
         '
         ' More code that does not have thread affinity.
     End Sub
-End Class 'MyUtility 
+End Class
 '</Snippet1>
 
 Public Class Dummy    
     Public Shared Sub Main() 
     End Sub
-End Class 'Dummy
+End Class

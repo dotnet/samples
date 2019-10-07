@@ -416,7 +416,7 @@ Namespace CustomControls
 		End Sub
 
 		#End Region ' UI Automation related methods
-	End Class ' End class
+	End Class
 
 
 

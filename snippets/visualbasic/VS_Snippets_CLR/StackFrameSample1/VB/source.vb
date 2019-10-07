@@ -35,7 +35,7 @@ Namespace SamplePublic
          End Try
       End Sub
 '</snippet2>
-   End Class 'ConsoleApp
+   End Class
 End Namespace 'StackFramePublic 
 
 Namespace SampleInternal
@@ -70,7 +70,7 @@ Namespace SampleInternal
          End Try
       End Sub
 '</snippet3>
-   End Class 'ClassLevel1
+   End Class
    
    Public Class ClassLevel2
       
@@ -108,7 +108,7 @@ Namespace SampleInternal
          End Try
       End Sub
 '</snippet4>
-   End Class 'ClassLevel2
+   End Class
    
    Public Class ClassLevel3
       
@@ -154,7 +154,7 @@ Namespace SampleInternal
          End Try
       End Sub
 '</snippet5>
-   End Class 'ClassLevel3
+   End Class
    
    Public Class ClassLevel4
       
@@ -193,7 +193,7 @@ Namespace SampleInternal
          End Try
       End Sub
 '</snippet6>
-   End Class 'ClassLevel4
+   End Class
   
    
    Public Class ClassLevel5
@@ -229,14 +229,14 @@ Namespace SampleInternal
          End Try
       End Sub
 '</snippet8>
-   End Class 'ClassLevel5 
+   End Class
   
    
    Public Class ClassLevel6
       Public Sub Level6Method()
          Throw New Exception("An error occurred in the lowest internal class method.")
       End Sub
-   End Class 'ClassLevel6 
+   End Class
 
 End Namespace 'StackFrameInternal
 '</snippet1>

@@ -66,11 +66,11 @@ Public Class MyInstaller
       Console.WriteLine("OnAfterInstall method of MyInstaller called")
       Console.WriteLine("")
    End Sub
-End Class 'MyInstaller
+End Class
 
 Public Class MyAssembly
    Public Shared Sub Main()
       Console.WriteLine("Use installutil.exe to run the assembly " &  _
                                                         "Installer_BeforeInstall.exe")
    End Sub
-End Class 'MyAssembly
+End Class

@@ -99,6 +99,6 @@ Public Class SampleWebFailureAuditEvent
     End Sub
     ' </Snippet6>
 
-End Class 'SampleWebFailureAuditEvent
+End Class
 
 ' </Snippet1>

@@ -129,6 +129,6 @@ Public Class NetworkStream_ASync_Send_Receive
          End If
       End If
    End Sub
-End Class 'NetworkStream_ASync_Send_Receive
+End Class
 
 

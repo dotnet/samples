@@ -208,6 +208,6 @@ Public Class SimpleService
         Trace.WriteLine(DateTime.Now.ToLongTimeString() + " - Exiting the service worker thread.", "Worker")
     
     End Sub
-End Class 'SimpleService
+End Class
 
 ' </Snippet1>

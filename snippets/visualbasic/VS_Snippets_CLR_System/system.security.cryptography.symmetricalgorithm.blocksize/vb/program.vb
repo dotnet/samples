@@ -81,7 +81,7 @@ Class Program
         Next k
 
     End Sub
-End Class 'Program
+End Class
 'This sample produces the following output:
 'AesManaged
 '        Legal min key size = 128

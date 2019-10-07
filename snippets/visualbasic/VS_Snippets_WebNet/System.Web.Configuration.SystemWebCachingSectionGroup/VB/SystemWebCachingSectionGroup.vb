@@ -168,4 +168,4 @@ Class UsingSystemWebCachingSectionGroup
             msg = e.ToString()
         End Try
     End Sub
-End Class 'UsingSystemWebCachingSectionGroup
+End Class

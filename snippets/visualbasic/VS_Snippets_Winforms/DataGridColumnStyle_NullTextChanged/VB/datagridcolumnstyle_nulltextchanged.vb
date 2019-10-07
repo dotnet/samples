@@ -108,6 +108,6 @@ Public Class MyForm
       Next i
       myColumnStyle.NullText = Nothing
    End Sub
-End Class 'MyForm
+End Class
 
 

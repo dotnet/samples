@@ -35,7 +35,7 @@ Public Class CodeGenerator
       myAssemblyBuilder.Save("MyAssembly.dll")
 
    End Sub
-End Class 'CodeGenerator
+End Class
 
 Public Class CallerClass
    
@@ -44,5 +44,5 @@ Public Class CallerClass
       Console.WriteLine("A resource named 'MyResource.resource' has been created and can be " + _
                                                          "viewed  in the 'MyAssembly.dll'")
    End Sub
-End Class 'CallerClass
+End Class
 ' </Snippet1>

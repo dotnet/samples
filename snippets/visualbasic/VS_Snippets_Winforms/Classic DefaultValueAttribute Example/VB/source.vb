@@ -33,4 +33,4 @@ Public Class Form1
         Console.WriteLine(("The default value is: " & myAttribute.Value.ToString()))
         ' </Snippet2>
     End Sub
-End Class 'Form1
+End Class

@@ -9,5 +9,5 @@ Public Class Form1
         Dim MyList As New DataList()
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

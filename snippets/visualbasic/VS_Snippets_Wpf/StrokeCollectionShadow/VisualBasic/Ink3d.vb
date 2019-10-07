@@ -185,4 +185,4 @@ Public Class Ink3d
             Next s
         End Set
     End Property
-End Class 'Ink3d 
+End Class

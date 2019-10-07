@@ -54,4 +54,4 @@ Public Class MySample
          Console.WriteLine("Message : " + e.Message)
       End Try
    End Sub
-End Class 'MySample
+End Class

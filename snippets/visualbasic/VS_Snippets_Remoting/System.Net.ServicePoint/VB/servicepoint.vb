@@ -206,7 +206,7 @@ Namespace Mssc.Services.ConnectionManagement
 
             ' </Snippet7>
 
-        End Class 'TestServicePoint
+        End Class
 
     End Module
 End Namespace

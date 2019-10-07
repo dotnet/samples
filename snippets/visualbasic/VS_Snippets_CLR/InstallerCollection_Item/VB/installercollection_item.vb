@@ -53,4 +53,4 @@ Public Class InstallerCollection_Item
          Console.WriteLine("Exception raised : {0}", e.Message)
       End Try
    End Sub
-End Class 'InstallerCollection_Item
+End Class

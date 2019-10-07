@@ -62,7 +62,7 @@ Namespace SDKSample
             myWindow.Show()
 
         End Sub
-    End Class 'app
+    End Class
 
     ' Define a static entry class
 
@@ -74,5 +74,5 @@ Namespace SDKSample
             app.Run()
 
         End Sub
-    End Class 'EntryClass
+    End Class
 End Namespace 'SDKSample

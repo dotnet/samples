@@ -80,5 +80,5 @@ Class MyTcpListener
       Console.WriteLine(ControlChars.Cr + "Hit enter to continue...")
       Console.Read()
    End Sub
-End Class 'MyTcpListener 
+End Class
 '</Snippet1>

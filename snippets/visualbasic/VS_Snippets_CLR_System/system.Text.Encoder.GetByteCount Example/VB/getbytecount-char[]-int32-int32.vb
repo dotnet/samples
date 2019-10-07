@@ -17,7 +17,7 @@ Class EncoderExample
             uniEncoder.GetByteCount(chars, 0, chars.Length, True)
         Console.WriteLine("{0} bytes needed to encode characters.", byteCount)
     End Sub
-End Class 'EncoderExample
+End Class
 '
 'This example produces the following output.
 '

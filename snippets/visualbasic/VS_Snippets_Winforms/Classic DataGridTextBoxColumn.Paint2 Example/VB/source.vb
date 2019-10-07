@@ -34,7 +34,7 @@ Public Class Form1
          gridCol.PaintCol(g, cellRect, cm, hi.Row, bBrush, fBrush, False)
       End If
    End Sub
-End Class 'Form1 
+End Class
 
 Public Class MyGridColumn
 Inherits DataGridTextBoxColumn

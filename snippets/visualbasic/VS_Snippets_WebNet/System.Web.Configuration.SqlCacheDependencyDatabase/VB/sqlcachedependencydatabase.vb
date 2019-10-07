@@ -79,6 +79,6 @@ Class UsingSqlCacheDependencyDatabase
 
 
    End Sub
-End Class 'UsingSqlCacheDependencyDatabase 
+End Class
 
 

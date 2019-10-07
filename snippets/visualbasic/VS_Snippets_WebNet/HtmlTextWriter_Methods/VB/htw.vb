@@ -108,5 +108,5 @@ Namespace Samples.AspNet.VB
             MyBase.OutputTabs()
         End Sub
         ' </snippet7>
-    End Class 'HTW1 
+    End Class
 End Namespace

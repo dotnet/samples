@@ -96,7 +96,7 @@ Namespace BasicAuthentication
             Return "not"
 
         End Function 'ReturnPassword
-    End Class 'BasicService
+    End Class
 End Namespace 'BasicAuthentication
 Namespace SecuredUsingWindows
     Public Class WindowsService
@@ -163,7 +163,7 @@ Namespace SecuredUsingWindows
             Return "not"
 
         End Function 'ReturnPassword
-    End Class 'WindowsService 
+    End Class
 End Namespace 'SecuredUsingWindows
 Namespace SecuredByTransportWithAnonymousClient
 
@@ -220,7 +220,7 @@ Namespace SecuredByTransportWithAnonymousClient
             cc.Close()
 
         End Sub
-    End Class 'MyService
+    End Class
 End Namespace 'SecuredByTransportWithAnonymousClient 
 
 Namespace SecuredTranserUsingCertificates
@@ -283,7 +283,7 @@ Namespace SecuredTranserUsingCertificates
             cc.Close()
 
         End Sub
-    End Class 'MyService
+    End Class
 End Namespace 'SecuredTranserUsingCertificates
 
 Namespace SecuredUsingMessageSecurityWithAnonClient
@@ -341,7 +341,7 @@ Namespace SecuredUsingMessageSecurityWithAnonClient
             cc.Close()
 
         End Sub
-    End Class 'SecureService
+    End Class
 End Namespace 'SecuredUsingMessageSecurityWithAnonClient 
 
 Namespace SecuredUsingMessageSecurityWithUsername
@@ -415,7 +415,7 @@ Namespace SecuredUsingMessageSecurityWithUsername
             Return "notReally"
 
         End Function 'ReturnPassword
-    End Class 'MyService
+    End Class
 End Namespace 'SecuredUsingMessageSecurityWithUsername
 Namespace SecuredUsingMessageWithCertClient
     
@@ -474,7 +474,7 @@ Namespace SecuredUsingMessageWithCertClient
             cc.Close()
 
         End Sub
-    End Class 'MyService
+    End Class
 End Namespace 'SecuredUsingMessageWithCertClient 
 
 
@@ -530,7 +530,7 @@ Namespace SecuredUsingMessageWithWindowsClient
             cc.Close()
 
         End Sub
-    End Class 'MyService
+    End Class
 End Namespace 'SecuredUsingMessageWithWindowsClient 
 
 
@@ -612,7 +612,7 @@ Namespace MessageSecuritWithKerberosAuth
             cc.Close()
 
         End Sub
-    End Class 'MyService
+    End Class
 End Namespace 'MessageSecuritWithKerberosAuth 
 
 
@@ -705,7 +705,7 @@ Namespace ServiceModel
             Return a + b
 
         End Function
-    End Class 'Calculator
+    End Class
     
     
     Public Class Utility
@@ -717,7 +717,7 @@ Namespace ServiceModel
             sh.Description.Behaviors.Add(sb)
         
         End Sub
-    End Class 'Utility 
+    End Class
 End Namespace 'ServiceModel
 
 Namespace ClientCalculator

@@ -82,6 +82,6 @@ Class MyITransportHeadersClass
    End Sub
 ' </Snippet3>
 ' </Snippet2>
-End Class 'MyITransportHeadersClass
+End Class
 
 ' </Snippet1>

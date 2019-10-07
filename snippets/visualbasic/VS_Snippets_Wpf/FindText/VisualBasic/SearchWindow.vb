@@ -1202,5 +1202,5 @@ Namespace SDKSample
 
         End Sub
 #End Region
-    End Class 'SearchWindow '
+    End Class
 End Namespace

@@ -70,7 +70,7 @@ Public Class MyMethodTracingSwitch
             Return outEnter
         End Get
     End Property
-End Class 'MyMethodTracingSwitch
+End Class
 
 ' </Snippet2>
 ' <Snippet3>
@@ -95,5 +95,5 @@ Public Class Class1
         ' Write another diagnostic message if the switch is set to exiting.
         Debug.WriteLineIf(mySwitch.OutputExit, "Exiting Main")
     End Sub
-End Class 'MyClass
+End Class
 ' </Snippet3>

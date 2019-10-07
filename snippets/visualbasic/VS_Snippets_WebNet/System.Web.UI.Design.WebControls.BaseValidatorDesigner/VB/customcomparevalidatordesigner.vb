@@ -19,7 +19,7 @@ Namespace Examples.VB.WebControls.Design
         SimpleCompareValidatorDesigner))> _
     Public Class SimpleCompareValidator
         Inherits CompareValidator
-    End Class ' SimpleCompareValidator
+    End Class
     ' </snippet2>
 
     ' Derive a designer that inherits from the BaseValidatorDesigner.
@@ -67,7 +67,7 @@ Namespace Examples.VB.WebControls.Design
             Return markup
         End Function
         '</snippet3>
-    End Class ' SimpleCompareValidatorDesigner
+    End Class
 End Namespace ' Examples.VB.WebControls.Design
 ' </snippet1>
 

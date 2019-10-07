@@ -52,4 +52,4 @@ Public Class InstallerCollection_CopyTo
       ' Install an assembly.
       myTransactedInstaller.Install(New Hashtable())
    End Sub
-End Class 'InstallerCollection_CopyTo
+End Class

@@ -14,5 +14,5 @@ Class UTF8EncodingExample
         Dim charCount As Integer = utf8.GetCharCount(bytes, 2, 8)
         Console.WriteLine("{0} characters needed to decode bytes.", charCount)
     End Sub
-End Class 'UTF8EncodingExample
+End Class
 ' </Snippet1>

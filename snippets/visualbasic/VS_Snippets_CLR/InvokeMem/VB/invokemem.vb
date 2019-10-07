@@ -24,7 +24,7 @@ Class MyType
             myField = Value
         End Set
     End Property
-End Class 'MyType
+End Class
 
 Class MyApp
 
@@ -69,5 +69,5 @@ Class MyApp
         v = CType(t.InvokeMember("MyProp", BindingFlags.DeclaredOnly Or BindingFlags.Public Or BindingFlags.NonPublic Or BindingFlags.Instance Or BindingFlags.GetProperty, Nothing, obj, Nothing), Int32)
         Console.WriteLine("MyProp: {0}", v)
     End Sub
-End Class 'MyApp
+End Class
 ' </Snippet1>

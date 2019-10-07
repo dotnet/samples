@@ -14,7 +14,7 @@ Class StrmRdrRead
       Console.WriteLine("The ASCII number of the first character read is {0:D} in decimal and {1:X} in hexadecimal.", FirstChar, FirstChar)
       sr.Close()
    End Sub
-End Class 'StrmRdrRead
+End Class
 '</Snippet1>
     
     

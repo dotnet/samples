@@ -42,5 +42,5 @@ Class MyDynamicAssembly
 
    End Sub
 
-End Class 'MyDynamicAssembly
+End Class
 

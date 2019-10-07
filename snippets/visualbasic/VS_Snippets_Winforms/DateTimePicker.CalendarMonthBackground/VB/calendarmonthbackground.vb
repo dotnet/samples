@@ -16,4 +16,4 @@ Public Class [MyClass]
       dateTimePicker1.CalendarMonthBackground = Color.Aqua
    End Sub 
 ' </snippet1>
-End Class '[MyClass]
+End Class

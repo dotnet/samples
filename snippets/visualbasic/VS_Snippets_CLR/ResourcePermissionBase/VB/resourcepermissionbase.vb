@@ -70,7 +70,7 @@ Imports System.Collections
         Me.PermissionAccessType = GetType(MailslotPermissionAccess)
         Me.TagNames = New String() {"Name", "Machine"}
     End Sub
-End Class 'MailslotPermission
+End Class
 
 <Flags()> Public Enum MailslotPermissionAccess
     None = 0
@@ -125,5 +125,5 @@ End Enum 'MailslotPermissionAccess
     End Function 'GetBaseEntry
 
 
-End Class 'MailslotPermissionEntry
+End Class
 '</snippet1>

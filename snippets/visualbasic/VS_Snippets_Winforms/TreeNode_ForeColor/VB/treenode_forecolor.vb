@@ -231,7 +231,7 @@ End Sub
          Me.myTreeView.LabelEdit = False
       End If
    End Sub
-End Class 'MyTreeNode_FirstNode
+End Class
 
 
 
@@ -243,7 +243,7 @@ Public Class Customer
       CustomerName = myName
       CustomerOrders = New ArrayList()
    End Sub
-End Class 'Customer
+End Class
 
 
 
@@ -253,4 +253,4 @@ Public Class Order
    Public Sub New(myOrderID As String)
       Me.OrderID = myOrderID
    End Sub
-End Class 'Order
+End Class

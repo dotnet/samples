@@ -13,7 +13,7 @@ Class Sample
         Console.WriteLine("byteVal1 equals byteVal2?: {0}", byteVal1.Equals(byteVal2))
         Console.WriteLine("byteVal1 equals objectVal3?: {0}", byteVal1.Equals(objectVal3))
     End Sub
-End Class 'Sample
+End Class
 
 '
 'This code example produces the following results:

@@ -29,7 +29,7 @@ Namespace CustomProxySample
          myIntValue = 100
          Return myString
       End Function 'HelloMethod
-   End Class 'CustomServer
+   End Class
 
 ' <Snippet1>
    <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> _
@@ -75,7 +75,7 @@ Namespace CustomProxySample
          Return myIMethodReturnMessage
       End Function 'Invoke
 ' </Snippet2>
-   End Class 'MyProxy
+   End Class
 ' </Snippet1>
 
    Public Class ProxySample
@@ -90,5 +90,5 @@ Namespace CustomProxySample
          ' Invoke the remote method.
          myHelloServer.HelloMethod("Hello", myDoubleValue, myIntValue)
       End Sub
-   End Class 'ProxySample
+   End Class
 End Namespace 'CustomProxySample

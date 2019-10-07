@@ -216,5 +216,5 @@ Public Class Form1
       Application.EnableVisualStyles()
       Application.Run(New Form1())
    End Sub
-End Class 'Form1
+End Class
 ' </snippet1>

@@ -64,5 +64,5 @@ Class MyOperationClass
 ' </Snippet2>
       Return myOperation
    End Function 'CreateOperation 
-End Class 'MyOperationClass 
+End Class
 ' </Snippet1>

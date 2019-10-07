@@ -49,7 +49,7 @@ NotInheritable Public Class MyResourceType
             Me.number_value = value
         End Set
     End Property
-End Class 'MyResourceType
+End Class
 '</snippet2>
 
 Class Program
@@ -66,6 +66,6 @@ Class Program
         '</snippet5>
         '</snippet3>
     End Sub
-End Class 'Program
+End Class
 ' Do something with claims
 '</snippet0>

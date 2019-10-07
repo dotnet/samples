@@ -15,7 +15,7 @@ Class [MyClass]
             Return myField
         End Get
     End Property
-End Class '[MyClass]
+End Class
 
 
 Class FieldInfo_IsPrivate
@@ -43,5 +43,5 @@ Class FieldInfo_IsPrivate
             Console.WriteLine("Exception : {0} ", e.Message.ToString())
         End Try
     End Sub
-End Class 'FieldInfo_IsPrivate
+End Class
 ' </Snippet1>

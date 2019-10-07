@@ -46,4 +46,4 @@ Public Class WebClient_UpLoadFile
         End Try
     End Sub
 
-End Class 'WebClient_UpLoadFile
+End Class

@@ -69,7 +69,7 @@ Class Sample
                         Color.Green)
       Console.WriteLine(s)
    End Sub
-End Class 'Sample
+End Class
 '
 ' This example displays the following output to the console:
 '

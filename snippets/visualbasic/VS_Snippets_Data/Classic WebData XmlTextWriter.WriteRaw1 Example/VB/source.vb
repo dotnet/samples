@@ -35,5 +35,5 @@ Public Class Sample
         ' Write the XML to file and close the writer.
         writer.Close()
     End Sub
-End Class 'Sample 
+End Class
 ' </Snippet1>

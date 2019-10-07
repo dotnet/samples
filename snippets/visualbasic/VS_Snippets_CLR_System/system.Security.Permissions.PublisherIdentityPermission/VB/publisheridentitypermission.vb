@@ -109,7 +109,7 @@ Public Class PublisherIdentityPermissionDemo
         Console.WriteLine("Result of ToFromXml = " + publisherPerm2.ToString())
 
     End Sub
-End Class 'PublisherIdentityPermissionDemo
+End Class
 '</Snippet6>
 
 '</Snippet1>

@@ -32,7 +32,7 @@ Class Sample
          End Try
       Loop While ch <> "+"c
    End Sub
-End Class 'Sample
+End Class
 '
 'This example produces the following results:
 '

@@ -42,7 +42,7 @@ Public Class SamplesListDictionary
 
    End Sub
 
-End Class 'SamplesListDictionary 
+End Class
 
 
 'This code produces the following output.

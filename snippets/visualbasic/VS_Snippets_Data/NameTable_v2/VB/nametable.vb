@@ -37,4 +37,4 @@ Public Class Sample
 '</snippet1>
     
     End Sub
-End Class 'Sample 
+End Class

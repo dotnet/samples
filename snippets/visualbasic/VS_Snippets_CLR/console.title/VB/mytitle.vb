@@ -10,7 +10,7 @@ Class Sample
                         "  (Press any key to quit.)", Console.Title)
       Console.ReadKey(True)
    End Sub
-End Class 'Sample
+End Class
 '
 'This example produces the following results:
 '

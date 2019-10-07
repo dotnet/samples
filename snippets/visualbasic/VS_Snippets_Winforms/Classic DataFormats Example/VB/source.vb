@@ -32,7 +32,7 @@ Public Class MyClass1
         ' Print the value of the Object in a textBox.
         textBox1.Text = myDereferencedObject.MyObjectValue
     End Sub
-End Class 'MyClass
+End Class
 
 
 ' Creates a new type.
@@ -56,6 +56,6 @@ End Class 'MyClass
             myValue = value
         End Set
     End Property
-End Class 'MyNewObject
+End Class
 
 ' </Snippet1>

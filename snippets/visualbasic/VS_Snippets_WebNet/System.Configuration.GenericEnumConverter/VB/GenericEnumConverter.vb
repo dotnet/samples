@@ -46,5 +46,5 @@ NotInheritable Public Class UsingGenericEnumConverter
         End Try
     
     End Sub
-End Class 'UsingGenericEnumConverter
+End Class
 ' </Snippet1>

@@ -14,7 +14,7 @@ Public Class RequestState
     Public Sub New()
         request = Nothing
     End Sub
-End Class ' RequestState
+End Class
 
 
 Class WebRequest_BeginGetRequeststream
@@ -76,5 +76,5 @@ Class WebRequest_BeginGetRequeststream
             ' Allow the main thread to resume.
             allDone.Set()
     End Sub
-End Class ' WebRequest_BeginGetRequeststream 
+End Class
 ' </Snippet3>

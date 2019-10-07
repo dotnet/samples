@@ -16,13 +16,13 @@ Public Class ConcatTest
         ' the ToString method in the objects is called
         Console.WriteLine(String.Concat(o))
     End Sub
-End Class 'ConcatTest
+End Class
 
 
 ' imagine these test classes are full-fledged objects...
 Class Test1
-End Class 'Test1
+End Class
 
 Class Test2
-End Class 'Test2
+End Class
 '</snippet1>

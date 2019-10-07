@@ -166,7 +166,7 @@ Public Class DataProtect
         Console.WriteLine()
 
     End Sub
-End Class 'DataProtect 
+End Class
 
 
 '</Snippet1>

@@ -31,7 +31,7 @@ Namespace CustomInkControlSample
 
         End Sub
 
-    End Class 'Window3 
+    End Class
 
     '<Snippet33>
     Public Class InkThumbnail

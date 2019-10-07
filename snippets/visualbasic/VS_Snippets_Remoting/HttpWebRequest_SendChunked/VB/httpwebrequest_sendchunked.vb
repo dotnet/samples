@@ -102,4 +102,4 @@ Class HttpWebRequest_SendChunked
             Console.WriteLine("Message :{0}", e.Message)
         End Try
     End Sub
-End Class ' HttpWebRequest_SendChunked 
+End Class

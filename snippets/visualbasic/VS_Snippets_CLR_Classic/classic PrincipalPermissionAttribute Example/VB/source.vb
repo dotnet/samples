@@ -28,5 +28,5 @@ Class SecurityPrincipalDemo
         Console.WriteLine("User is an administrator")
 
     End Sub
-End Class 'SecurityPrincipalDemo
+End Class
 '</Snippet1>

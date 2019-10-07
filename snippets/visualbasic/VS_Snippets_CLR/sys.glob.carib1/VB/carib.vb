@@ -53,7 +53,7 @@ Class Sample
         Console.WriteLine("TwoLetterISORegionName: . . . . {0}", cib.TwoLetterISORegionName)
     
     End Sub
-End Class 'Sample
+End Class
 '
 'This code example produces the following results:
 '

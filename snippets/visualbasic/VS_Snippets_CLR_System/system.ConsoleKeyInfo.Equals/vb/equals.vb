@@ -70,7 +70,7 @@ Class Sample
         Return keyCombo
     
     End Function 'KeyCombination
-End Class 'Sample
+End Class
 
 '
 'This example produces results similar to the following output:

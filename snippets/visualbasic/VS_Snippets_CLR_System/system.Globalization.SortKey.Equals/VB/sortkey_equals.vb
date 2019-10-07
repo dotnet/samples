@@ -57,7 +57,7 @@ Public Class SamplesSortKey
 
    End Sub
 
-End Class 'SamplesSortKey
+End Class
 
 
 'This code produces the following output.

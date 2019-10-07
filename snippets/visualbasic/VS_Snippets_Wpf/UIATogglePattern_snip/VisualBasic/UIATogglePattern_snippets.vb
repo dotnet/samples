@@ -118,5 +118,5 @@ Class UIATogglePattern_snippets
             Dim app As New UIATogglePattern_snippets()
         
         End Sub
-    End Class 'TestMain
-End Class 'UIATogglePattern_snippets
+    End Class
+End Class

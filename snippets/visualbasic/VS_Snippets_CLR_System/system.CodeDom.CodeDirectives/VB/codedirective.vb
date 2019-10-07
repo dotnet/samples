@@ -187,5 +187,5 @@ Class CodeDirectiveDemo
         Next s
 
     End Sub
-End Class 'CodeDirectiveDemo 
+End Class
 '</Snippet1>

@@ -350,4 +350,4 @@ Using reader As XmlReader = XmlReader.Create("books.xml")
 End Using  
 End Sub
 
-End Class 'XmlReader_Samples
+End Class

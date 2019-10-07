@@ -26,5 +26,5 @@ Class UTF7EncodingExample
         Next c
         Console.WriteLine()
     End Sub
-End Class 'UTF7EncodingExample
+End Class
 ' </Snippet1>

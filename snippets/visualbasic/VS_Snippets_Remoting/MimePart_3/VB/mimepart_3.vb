@@ -52,5 +52,5 @@ Public Class MyMimePart
       Console.WriteLine( _
          "MimePart_3_Output_vb.wsdl has been generated successfully.")
    End Sub
-End Class 'MyMimePart
+End Class
 ' </Snippet1>

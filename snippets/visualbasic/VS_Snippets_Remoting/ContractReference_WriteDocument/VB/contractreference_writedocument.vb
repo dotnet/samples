@@ -36,4 +36,4 @@ Public Class DiscoveryDocument_Example
          Console.WriteLine("Exception raised:" + e.Message.ToString())
       End Try
    End Sub
-End Class 'DiscoveryDocument_Example
+End Class

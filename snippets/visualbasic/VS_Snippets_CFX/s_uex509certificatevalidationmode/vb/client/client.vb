@@ -98,4 +98,4 @@ Class Client
         Console.ReadLine()
 
     End Sub
-End Class 'Client
+End Class

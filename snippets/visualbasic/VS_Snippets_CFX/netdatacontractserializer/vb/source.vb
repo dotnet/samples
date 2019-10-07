@@ -632,7 +632,7 @@ Public Class DCSurrogate
         Return New CodeTypeDeclaration()
     
     End Function 
-End Class 'DCSurrogate
+End Class
 
 
 Friend Class MySelector

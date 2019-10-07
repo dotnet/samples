@@ -24,5 +24,5 @@ Class FieldInfo_IsSpecialName
             Console.WriteLine("Exception : {0} ", e.Message.ToString())
         End Try
     End Sub
-End Class 'FieldInfo_IsSpecialName
+End Class
 ' </Snippet1>

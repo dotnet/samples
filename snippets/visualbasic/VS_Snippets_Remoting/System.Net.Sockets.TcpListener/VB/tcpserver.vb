@@ -72,5 +72,5 @@ Class MyTcpListener
       Console.Read()
    End Sub
 
-End Class 'MyTcpListener 
+End Class
 ' </Snippet1>

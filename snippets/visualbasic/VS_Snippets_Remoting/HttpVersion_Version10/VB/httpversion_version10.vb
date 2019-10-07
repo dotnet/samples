@@ -37,6 +37,6 @@ Class HttpVersion_Version10
             Console.WriteLine("Message :{0}", e.Message)
         End Try
     End Sub
-End Class ' HttpVersion_Version10 
+End Class
 
 

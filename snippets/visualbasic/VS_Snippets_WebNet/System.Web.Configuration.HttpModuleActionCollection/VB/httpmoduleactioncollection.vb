@@ -93,5 +93,5 @@ Class UsingHttpModuleActionCollection
         '</Snippet8>
 
    End Sub
-End Class 'UsingHttpModuleActionCollection 
+End Class
 

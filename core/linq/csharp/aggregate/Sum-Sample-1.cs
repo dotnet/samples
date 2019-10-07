@@ -5,8 +5,7 @@ namespace Aggregate
 {
     public static class SumSample1
     {
-        //This sample uses Sum to add all the numbers in an array.
-        // 
+        // This sample uses Sum to add all the numbers in an array.
         // Output: 
         // The sum of the numbers is 45.
         public static void Example()

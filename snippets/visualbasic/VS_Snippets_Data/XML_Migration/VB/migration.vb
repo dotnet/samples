@@ -328,4 +328,4 @@ doc.Load("output.xml")
 '</snippet20>
 End Sub
 
-End Class 'XML_Migration_Samples
+End Class

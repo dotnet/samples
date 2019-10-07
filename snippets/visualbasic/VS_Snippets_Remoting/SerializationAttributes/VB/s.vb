@@ -43,7 +43,7 @@ Public Class Test
 
    End Sub
 
-End Class 'Test
+End Class
 
 
 ' A test object that needs to be serialized.
@@ -75,5 +75,5 @@ End Class 'Test
       Console.WriteLine("member5 = '{0}'", member5)
    End Sub
 
-End Class 'TestSimpleObject
+End Class
 ' </Snippet1>

@@ -26,6 +26,6 @@ Namespace SdkSample
 
 		Private _appWindow As Window1 = Nothing ' application main window
 
-	End Class ' end:partial class App
+	End Class
 
 End Namespace ' end:namespace SdkSample

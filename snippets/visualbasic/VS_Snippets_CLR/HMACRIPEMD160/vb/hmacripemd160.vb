@@ -81,7 +81,7 @@ Public Class HMACRIPEMD160example
         ' Initialize the keyed hash object. 
         Using hmac As New HMACRIPEMD160(key)
             ' Create an array to hold the keyed hash value read from the file.
-            Dim storedHash(hmac.HashSize / 8) As Byte
+            Dim storedHash(hmac.HashSize / 8 - 1) As Byte
             ' Create a FileStream for the source file.
             Using inStream As New FileStream(sourceFile, FileMode.Open)
                 ' Read in the storedHash.
@@ -108,6 +108,6 @@ Public Class HMACRIPEMD160example
         End If
 
     End Function 'VerifyFile 
-End Class 'HMACRIPEMD160example 'end VerifyFile
+End Class
 'end class
 '</SNIPPET1>

@@ -50,7 +50,7 @@ Public Class CodeGenerator
          Return Me.myAssemblyBuilder
       End Get
    End Property
-End Class 'CodeGenerator
+End Class
 
 Public Class CallerClass
    
@@ -62,4 +62,4 @@ Public Class CallerClass
       Dim myMethodInfo As MethodInfo = myBuilder.GetMethod("MyMethod1")
       myMethodInfo.Invoke(Nothing, Nothing)
    End Sub
-End Class 'CallerClass
+End Class

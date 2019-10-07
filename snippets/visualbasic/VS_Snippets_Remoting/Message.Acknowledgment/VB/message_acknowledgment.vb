@@ -146,6 +146,6 @@ Public Class MyNewQueue
             End If
          End Try 
    End Sub
- End Class 'MyNewQueue
+ End Class
 
 ' </Snippet1>

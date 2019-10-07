@@ -28,6 +28,6 @@ Namespace Samples.AspNet.VB.Controls
             Label1.Text = "You chose: " + state.SelectedItem.Text & " and " & country.SelectedItem.Text + "."
             TimeMsg.Text = DateTime.Now.ToString("T")
         End Sub
-    End Class 'ctlSelect
+    End Class
 End Namespace
 ' </snippet1>

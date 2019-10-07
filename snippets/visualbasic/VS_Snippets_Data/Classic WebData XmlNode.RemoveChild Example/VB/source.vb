@@ -21,5 +21,5 @@ Public Class Sample
         Console.WriteLine("Display the modified XML...")
         doc.Save(Console.Out)
     End Sub
-End Class 'Sample
+End Class
 ' </Snippet1>

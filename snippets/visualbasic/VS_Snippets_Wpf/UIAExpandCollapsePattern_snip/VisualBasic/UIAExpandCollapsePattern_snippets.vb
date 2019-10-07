@@ -142,5 +142,5 @@ Class UIAExpandCollapsePattern_snippets
             Dim app As New UIAExpandCollapsePattern_snippets()
         
         End Sub
-    End Class 'TestMain
-End Class 'UIAExpandCollapsePattern_snippets
+    End Class
+End Class

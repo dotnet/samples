@@ -19,5 +19,5 @@ Namespace RemotingSamples
          Console.WriteLine("Hit <enter> to exit...")
          Console.ReadLine()
       End Sub
-   End Class 'MyChannelServices_Server
+   End Class
 End Namespace 'RemotingSamples

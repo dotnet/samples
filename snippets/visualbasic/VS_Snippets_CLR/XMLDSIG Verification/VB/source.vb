@@ -29,5 +29,5 @@ Public Class Verify
          Console.WriteLine("Signature check FAILED")
       End If
    End Sub
-End Class 'Verify
+End Class
 '</Snippet1>

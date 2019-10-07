@@ -68,5 +68,5 @@ Namespace ServiceDescription1
       End Function 'CreateOperation
 ' </Snippet2>
 ' </Snippet1>
-   End Class 'MyService 
+   End Class
 End Namespace 'ServiceDescription1 

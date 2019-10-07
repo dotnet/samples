@@ -69,5 +69,5 @@ Private Sub button1_Click(sender As Object, _
 End Sub
 ' </snippet1>
 
-   End Class 'Form1
+   End Class
 End Namespace 'ScrollableControl

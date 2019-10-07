@@ -116,7 +116,7 @@ Class Form1
         Me.Name = "Form1"
 
     End Sub
-End Class 'Form1 
+End Class
 
 
 

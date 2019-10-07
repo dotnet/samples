@@ -6,9 +6,8 @@ namespace Aggregate
     public static class MaxSample2
     {
 
-        //This sample uses Max to get the length of the longest word in an array.
-        //
-        //Output:
+        // This sample uses Max to get the length of the longest word in an array.
+        // Output:
         // The longest word is 9 characters long.
         public static void Example()
         {

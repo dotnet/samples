@@ -50,12 +50,12 @@ Public Class MyInstaller
    Public Overrides Sub Uninstall(savedState As IDictionary)
       MyBase.Uninstall(savedState)
    End Sub
-End Class 'MyInstaller
+End Class
 
 Public Class MyAssembly
    Public Shared Sub Main()
       Console.WriteLine("Run the assembly Installer_Context.exe using the" + _
                         " installer process 'installutil'")
    End Sub
-End Class 'MyAssembly
+End Class
 

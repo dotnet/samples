@@ -90,7 +90,7 @@ Namespace StrokeSnippets_VB
             End If
 
         End Sub
-    End Class 'Window1
+    End Class
     '
     'ToDo: Error processing original source shown below
     '}

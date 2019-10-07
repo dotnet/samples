@@ -46,6 +46,6 @@ Public Class MyNetworkStream_Sub_Class
    Public Shared Sub Main()
       MyNetworkStream_Sub_Class.DoSomethingSignificant()
    End Sub
-End Class 'MyNetworkStream_Sub_Class
+End Class
 
 

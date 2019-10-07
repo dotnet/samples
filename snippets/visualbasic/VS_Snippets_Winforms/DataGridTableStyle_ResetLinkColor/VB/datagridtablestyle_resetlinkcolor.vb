@@ -239,5 +239,5 @@ Namespace DataGridSample
          ' Set link color to selected color.
          myDataGridTableStyle.LinkColor = myColorDialog.Color
       End Sub
-   End Class 'DatGridClass
+   End Class
 End Namespace 'DataGridSample

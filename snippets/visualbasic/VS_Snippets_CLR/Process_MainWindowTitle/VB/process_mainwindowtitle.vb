@@ -27,5 +27,5 @@ Class MainWindowTitleClass
             Console.Write($" Message : {e.Message}")
         End Try
     End Sub
-End Class 'MainWindowTitleClass
+End Class
 ' </Snippet1>

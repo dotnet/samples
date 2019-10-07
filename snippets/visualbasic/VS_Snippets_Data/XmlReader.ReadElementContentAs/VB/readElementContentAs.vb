@@ -145,4 +145,4 @@ End Using
  '</snippet14>   
 End Sub
 
-End Class 'Read_Typed_Element
+End Class

@@ -68,7 +68,7 @@ NotInheritable Class CustomizedTimeSpanMinutesConverter
     End Function 'ConvertFrom
 
 
-End Class 'CustomTimeSpanMinutesConverter 
+End Class
 
 
 ' Define a custom section.
@@ -167,6 +167,6 @@ NotInheritable Public Class CustomSection
             Me("maxUsers") = Value
         End Set
     End Property
-End Class 'CustomSection 
+End Class
 '</Snippet6>
 

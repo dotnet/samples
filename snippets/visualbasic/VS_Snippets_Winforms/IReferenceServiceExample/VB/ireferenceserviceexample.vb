@@ -150,6 +150,6 @@ Namespace IReferenceServiceExample
             End If
         End Sub
 
-    End Class 'IReferenceServiceControl
+    End Class
 End Namespace 'IReferenceServiceExample
 '</Snippet1>

@@ -323,5 +323,5 @@ Class UIASelectionItemPattern_snippets
             Dim app As New UIASelectionItemPattern_snippets()
 
         End Sub
-    End Class 'TestMain
-End Class 'UIASelectionItemPattern_snippets
+    End Class
+End Class

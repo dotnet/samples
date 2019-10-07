@@ -39,7 +39,7 @@ Public Class Reverser
          stringReversed += argString.Chars(i)
       Next i
    End Sub
-End Class 'Reverser
+End Class
 
 ' <Snippet1>
 <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> _
@@ -85,7 +85,7 @@ Public Class MyProxyClass
       Return myReturnMessage
    End Function 'Invoke
 ' </Snippet2>
-End Class 'MyProxyClass
+End Class
 ' </Snippet1>
 
 Public Class ApplicationClass
@@ -99,4 +99,4 @@ Public Class ApplicationClass
       myReverser.SetString("Hello World!")
       Console.WriteLine("The out result is : {0}", myReverser.GetReversedString())
    End Sub
-End Class 'ApplicationClass
+End Class

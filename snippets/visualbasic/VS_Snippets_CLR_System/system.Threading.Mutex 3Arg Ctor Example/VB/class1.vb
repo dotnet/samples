@@ -52,5 +52,5 @@ Public Class Test
       ' named mutex.
       m.ReleaseMutex()
    End Sub
-End Class 'Test
+End Class
 '</Snippet1>

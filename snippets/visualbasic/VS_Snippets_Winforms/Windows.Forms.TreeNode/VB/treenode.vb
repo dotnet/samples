@@ -108,7 +108,7 @@ Private Sub treeView1_AfterCollapse(sender As Object, _
 End Sub 
 ' </snippet3>
 
-   End Class 'Form1 
+   End Class
 End Namespace 'Foo
 
 

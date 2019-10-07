@@ -36,7 +36,7 @@ Public Class StrokeRenderedEventArgs
             Return currentStrokePoints
         End Get
     End Property
-End Class 'StrokeRenderedEventArgs
+End Class
 
 ' EventHandler for the StrokeRendered event.
 Public Delegate Sub StrokeRenderedEventHandler(ByVal sender As Object, ByVal e As StrokeRenderedEventArgs) 
@@ -194,7 +194,7 @@ Class FilterPlugin
             System.Diagnostics.Debug.WriteLine("   x: " & point.X & " y: " & point.Y)
         Next
     End Sub
-End Class 'FilterPlugin
+End Class
 ' </Snippet1>
 
 Class PacketTracer
@@ -230,7 +230,7 @@ Class PacketTracer
         Return "Not found"
     
     End Function 'GetStylusPointPropertyName
-End Class 'PacketTracer 
+End Class
 
 
 Class CustomPluginSamples
@@ -361,4 +361,4 @@ Class CustomPluginSamples
     
     End Sub
     '</Snippet10>
-End Class 'CustomPluginSamples 
+End Class

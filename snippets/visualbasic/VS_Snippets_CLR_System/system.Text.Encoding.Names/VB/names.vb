@@ -36,7 +36,7 @@ Public Class SamplesEncoding
 
    End Sub
 
-End Class 'SamplesEncoding 
+End Class
 
 
 'This code produces the following output.

@@ -195,7 +195,7 @@ Namespace SdkSample
 			Dim parserContext As New ParserContext()
 			parserContext.BaseUri = PackUriHelper.Create(tempUri)
 
-			' Retreive the fixed document.
+			' Retrieve the fixed document.
 			Dim fixedDocPart As PackagePart = _xpsPackage.GetPart(fixedDocUri)
 			If fixedDocPart IsNot Nothing Then
 				Dim fixedObject As Object = XamlReader.Load(fixedDocPart.GetStream(), parserContext)
@@ -644,6 +644,6 @@ Namespace SdkSample
 		#End Region ' private fields
 
 
-	End Class ' end:partial class Window1
+	End Class
 
 End Namespace ' end:namespace SdkSample

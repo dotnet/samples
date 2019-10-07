@@ -15,7 +15,7 @@ Public Class MyClass1
             ByVal e As CollectionChangeEventArgs)
         
         ' Insert additional code.
-    End Class 'MyCollection
+    End Class
     ' </Snippet1>
     ' <Snippet2>
     Public Shared Function Main() As Integer
@@ -33,4 +33,4 @@ Public Class MyClass1
         Return 0
     End Function 'Main
     ' </Snippet2>
-End Class 'MyClass1
+End Class

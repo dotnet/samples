@@ -14,6 +14,6 @@ Namespace ReflectionModule_Examples
 
             Console.WriteLine("myModule.ToString returns: {0}", myModule.ToString())
         End Sub
-    End Class 'MyMainClass
+    End Class
 End Namespace 'ReflectionModule_Examples
 '</snippet1>

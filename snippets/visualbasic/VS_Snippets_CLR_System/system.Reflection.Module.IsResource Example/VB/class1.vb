@@ -14,6 +14,6 @@ Namespace ReflectionModule_Examples
 
             Console.WriteLine("myModule.IsResource() = {0}", myModule.IsResource())
         End Sub
-    End Class 'MyMainClass
+    End Class
 End Namespace 'ReflectionModule_Examples
 '</snippet1>

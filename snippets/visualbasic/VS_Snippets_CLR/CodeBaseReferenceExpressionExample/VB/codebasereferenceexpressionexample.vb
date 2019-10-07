@@ -17,7 +17,7 @@ Namespace CodeDomSamples
         '</Snippet2>
       End Sub
 
-   End Class 'CodeBaseReferenceExpressionExample ' Creates a method invoke expression
+   End Class
 
 End Namespace 'CodeDomSamples
 

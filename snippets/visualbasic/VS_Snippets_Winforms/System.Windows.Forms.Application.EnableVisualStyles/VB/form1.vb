@@ -32,6 +32,6 @@ Namespace VStyles
             Me.Text = "Application.EnableVisualStyles Example"
         End Sub
 
-    End Class 'Form1
+    End Class
 End Namespace 'VStyles
 '</Snippet1>

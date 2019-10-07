@@ -108,7 +108,7 @@ Public Class SampleWebAuthenticationFailureAuditEvent
         formatter.IndentationLevel -= 1
 
     End Sub
-End Class 'SampleWebAuthenticationFailureAuditEvent
+End Class
 ' </Snippet6>
 
 ' </Snippet1>

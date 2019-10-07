@@ -68,5 +68,5 @@ Class HttpWebRequest_Connection
       Console.WriteLine("Message : {0}", e.Message)
     End Try
   End Sub
-End Class ' HttpWebRequest_Connection
+End Class
 ' </Snippet1>

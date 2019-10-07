@@ -116,4 +116,4 @@ Class ListItemPattern
     End Property
     ' </Snippet114>
 #End Region
-End Class 'ListItemPattern '
+End Class

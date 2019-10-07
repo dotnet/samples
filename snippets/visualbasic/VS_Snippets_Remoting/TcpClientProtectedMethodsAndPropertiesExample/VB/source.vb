@@ -21,4 +21,4 @@ Public Class Example
       End If 
       '</Snippet1>
    End Sub
-End Class 'Example
+End Class

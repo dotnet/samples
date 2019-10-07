@@ -14,7 +14,7 @@ class Example
    };
 
    // Define an Enum with FlagsAttribute.
-   [FlagsAttribute] 
+   [Flags] 
    enum MultiHue : short
    {
       None = 0,

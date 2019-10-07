@@ -135,5 +135,5 @@ Public Class MyMimePartCollection
       myServiceDescription.Write("MimePartCollection_8_output.wsdl")
       Console.WriteLine("MimePartCollection_8_output.wsdl has been generated successfully.")
    End Sub
-End Class 'MyMimePartCollection
+End Class
 

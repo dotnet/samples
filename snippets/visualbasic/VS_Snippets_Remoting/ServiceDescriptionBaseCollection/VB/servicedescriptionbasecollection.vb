@@ -186,4 +186,4 @@ Class ServiceDescription_Sample
       myOperationBinding.Extensions.Add(mySoapOperationBinding)
       Return myOperationBinding
    End Function 'CreateOperationBinding
-End Class 'ServiceDescription_Sample
+End Class

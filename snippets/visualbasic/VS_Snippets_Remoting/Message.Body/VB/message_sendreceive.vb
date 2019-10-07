@@ -11,7 +11,7 @@ Imports System.IO
 Public Class Order
       Public orderId As Integer
       Public orderTime As DateTime
-End Class 'Order
+End Class
 
    
   
@@ -116,6 +116,6 @@ Public Class MyNewQueue
          ' Catch other exceptions as necessary.
          Return
    End Sub
-End Class 'MyNewQueue
+End Class
 
 ' </Snippet1>

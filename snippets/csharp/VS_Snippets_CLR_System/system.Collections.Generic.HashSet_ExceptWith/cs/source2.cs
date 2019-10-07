@@ -1,11 +1,11 @@
-﻿//<snippet03>
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 class Program
 {
     public static void Main()
     {
+        //<snippet03>
         HashSet<string> allVehicles = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
         List<string> someVehicles = new List<string>();
 
@@ -64,50 +64,50 @@ class Program
         {
             Console.WriteLine(vehicle);
         }
-    }
 
-    // Predicate to determine vehicle 'coolness'.
-    private static bool isNotSuperCool(string vehicle)
-    {
-        bool superCool = (vehicle == "Helicopters") || (vehicle == "Motorcycles");
+        // Predicate to determine vehicle 'coolness'.
+        bool isNotSuperCool(string vehicle)
+        {
+            bool superCool = (vehicle == "Helicopters") || (vehicle == "Motorcycles");
 
-        return !superCool;
+            return !superCool;
+        }
+
+        // The program writes the following output to the console.
+        //
+        // The current HashSet contains:
+        //
+        // Planes
+        // Trains
+        // Automobiles
+        //
+        // The updated HashSet contains:
+        //
+        // Planes
+        // Trains
+        // Automobiles
+        // Ships
+        // Motorcycles
+        // Rockets
+        // Helicopters
+        // Submarines
+        //
+        // The 'All' vehicles set contains everything in 'Some' vechicles list.
+        //
+        // The 'All' vehicles set contains 'roCKeTs'
+        //
+        // The excepted HashSet contains:
+        //
+        // Ships
+        // Motorcycles
+        // Rockets
+        // Helicopters
+        // Submarines
+        //
+        // The super cool vehicles are:
+        //
+        // Motorcycles
+        // Helicopters
+        //</snippet03>
     }
 }
-
-// The program writes the following output to the console.
-//
-// The current HashSet contains:
-//
-// Planes
-// Trains
-// Automobiles
-//
-// The updated HashSet contains:
-//
-// Planes
-// Trains
-// Automobiles
-// Ships
-// Motorcycles
-// Rockets
-// Helicopters
-// Submarines
-//
-// The 'All' vehicles set contains everything in 'Some' vechicles list.
-//
-// The 'All' vehicles set contains 'roCKeTs'
-//
-// The excepted HashSet contains:
-//
-// Ships
-// Motorcycles
-// Rockets
-// Helicopters
-// Submarines
-//
-// The super cool vehicles are:
-//
-// Motorcycles
-// Helicopters
-//</snippet03>

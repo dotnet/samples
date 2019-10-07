@@ -14,6 +14,6 @@ Namespace Samples.AspNet.VB.Controls
             ' Display a LightGray BackColor for the CheckBox.
             Me.BackColor = System.Drawing.Color.LightGray
         End Sub
-    End Class 'CustomCheckBoxOnPreRender
+    End Class
 End Namespace
 ' </Snippet2>

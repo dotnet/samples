@@ -47,7 +47,7 @@ Class SamplesNumberFormatInfo
       Console.WriteLine(ControlChars.Tab + "PositiveInfinitySymbol" + ControlChars.Tab + ControlChars.Tab + "{0}", myInv.PositiveInfinitySymbol)
       Console.WriteLine(ControlChars.Tab + "PositiveSign" + ControlChars.Tab + ControlChars.Tab + ControlChars.Tab + "{0}", myInv.PositiveSign)
    End Sub
-End Class 'SamplesNumberFormatInfo
+End Class
 
 
 ' This code produces the following output.

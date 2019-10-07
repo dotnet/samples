@@ -66,7 +66,7 @@ Namespace MyCustomWebPart
             callback(_table.Rows)
 
         End Sub
-    End Class 'RowProviderWebPart 
+    End Class
     '</SNIPPET7>            
     '</SNIPPET1>
 

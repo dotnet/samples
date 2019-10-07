@@ -10,4 +10,4 @@ Public Class MyHelloServer
       Console.WriteLine("MyHelloServer.MyHelloMethod : {0}", name)
       Return "Hello " + name
    End Function 'MyHelloMethod
-End Class 'MyHelloServer
+End Class

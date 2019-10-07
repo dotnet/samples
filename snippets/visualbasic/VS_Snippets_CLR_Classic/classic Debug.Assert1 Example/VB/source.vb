@@ -13,4 +13,4 @@ Public Class Form1
         Debug.Assert(Not (type Is Nothing), "Type parameter is null")
     End Sub
     ' </Snippet1>
-End Class 'Form1 ' Perform some processing.
+End Class

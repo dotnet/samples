@@ -25,5 +25,5 @@ Public Class Sample
         Console.WriteLine(shallow.Name + shallow.OuterXml)
         Console.WriteLine(shallow.ChildNodes.Count)
     End Sub
-End Class 'Sample
+End Class
 ' </Snippet1>

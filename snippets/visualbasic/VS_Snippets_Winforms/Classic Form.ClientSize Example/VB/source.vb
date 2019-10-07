@@ -14,5 +14,5 @@ Public Class Form1
         button1.Size = Me.ClientSize
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

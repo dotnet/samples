@@ -74,4 +74,4 @@ Public Class MySampleClass
       Console.WriteLine("Proxy could be created using " + _
                                  "'wsdl /language:VB SoapHeaderBindingOut_vb.wsdl'.")
    End Sub
-End Class 'MySampleClass
+End Class

@@ -75,5 +75,5 @@ Public Class TimerClient
         Return TimeSpan.FromMinutes(0.5)
     
     End Function 'Renewal
-End Class 'TimerClient
+End Class
 ' </Snippet1>

@@ -35,6 +35,6 @@ Class UsingWebControlsSection
         ' </Snippet1>
 
     End Sub
-End Class 'UsingUrlMapping 
+End Class
 
 

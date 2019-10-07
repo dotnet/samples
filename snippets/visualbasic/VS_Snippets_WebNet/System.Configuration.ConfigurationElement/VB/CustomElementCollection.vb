@@ -173,5 +173,5 @@ Public Class UrlsCollection
         BaseClear()
     End Sub
     '</Snippet69>
-End Class 'UrlsCollection
+End Class
 '</Snippet51>

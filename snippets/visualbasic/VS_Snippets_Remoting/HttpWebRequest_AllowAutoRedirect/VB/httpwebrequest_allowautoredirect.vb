@@ -54,6 +54,6 @@ Class HttpWebRequest_AllowAutoRedirect
 	   
         End Try
     End Sub
-End Class ' HttpWebRequest_AllowAutoRedirect
+End Class
 
 

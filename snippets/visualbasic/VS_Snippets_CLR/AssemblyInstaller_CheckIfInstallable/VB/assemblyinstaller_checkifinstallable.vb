@@ -25,5 +25,5 @@ Class MyCheckIfInstallableClass
 
    End Sub
 
-End Class 'MyCheckIfInstallableClass 
+End Class
 ' </Snippet1> 

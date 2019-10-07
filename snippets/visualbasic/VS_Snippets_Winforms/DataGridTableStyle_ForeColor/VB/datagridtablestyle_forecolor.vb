@@ -138,5 +138,5 @@ Namespace Datagrid
             dataGrid1.TableStyles.Add(myTableStyle)
         End Sub
 ' </Snippet1>
-    End Class 'Form1 
+    End Class
 End Namespace 'Datagrid

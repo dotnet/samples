@@ -186,4 +186,4 @@ Public Class MyDataGrid
         MessageBox.Show(myString, "Table navigation information")
     End Sub
 ' </Snippet2>
-End Class 'MyDataGrid 
+End Class

@@ -211,6 +211,6 @@ Namespace ServiceContainerExample
          groupBox1.Controls.Add(c)
          Return c
       End Function 'CreateNewControl
-   End Class 'Form1
+   End Class
 End Namespace 'ServiceContainerExample
 '</Snippet1>

@@ -240,6 +240,6 @@ Namespace TempConvertServer
                Return Nothing
             End Get
          End Property
-      End Class 'TransportSink
-   End Class 'CustomChannel
+      End Class
+   End Class
 End Namespace 'TempConvertServer

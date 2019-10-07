@@ -40,7 +40,7 @@ Public Class Sample
             Return newprice        
         End Function 'NewPriceFunc
 
-    End Class 'BookPrice
+    End Class
 
-End Class 'Sample
+End Class
 '</snippet1>

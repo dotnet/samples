@@ -16,5 +16,5 @@ Public Class Form1
         Console.WriteLine(("Hashcode " & myHitTest.GetHashCode().ToString()))
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

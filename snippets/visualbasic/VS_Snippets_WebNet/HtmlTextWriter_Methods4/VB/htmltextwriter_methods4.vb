@@ -16,7 +16,7 @@ Namespace Samples.AspNet.VB
         Protected Overrides Function CreateHtmlTextWriter(ByVal writer As TextWriter) As HtmlTextWriter
             Return New htwFour(writer)
         End Function 'CreateHtmlTextWriter
-    End Class 'MyPage
+    End Class
 
 
     <AspNetHostingPermission(SecurityAction.Demand, _
@@ -75,7 +75,7 @@ Namespace Samples.AspNet.VB
                 Return MyBase.RenderAfterTag()
             End If
         End Function 'RenderAfterTag
-    End Class 'htwFour 
+    End Class
     ' </snippet2>
 
 
@@ -107,5 +107,5 @@ Namespace Samples.AspNet.VB
             writer.RenderEndTag()
             writer.Write(("<br>" + "The time on the server: " & System.DateTime.Now.ToLongTimeString()))
         End Sub
-    End Class 'ctlMessage
+    End Class
 End Namespace 'HTW_4

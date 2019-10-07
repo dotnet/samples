@@ -75,7 +75,7 @@ Namespace IMethodCallMessageNS
 
 
 
-   End Class 'MyProxy
+   End Class
 
    ' The class used to obtain Metadata.
    <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> _
@@ -86,7 +86,7 @@ Namespace IMethodCallMessageNS
          Console.WriteLine("MyMarshalByRefClass.MyMethod {0} {1} {2}", str, dbl, i)
          Return 0
       End Function 'MyMethod
-   End Class 'MyMarshalByRefClass
+   End Class
 
 ' </Snippet2>
    ' Main class that drives the whole sample.
@@ -106,6 +106,6 @@ Namespace IMethodCallMessageNS
 
          Console.WriteLine("Sample Done.")
       End Sub
-   End Class 'ProxySample
+   End Class
 End Namespace 'IMethodCallMessageNS
 ' </Snippet1>
