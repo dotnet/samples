@@ -23,7 +23,7 @@ class DelegatesIntro
     }
     static void Main()
     {
-        PerformCalculation perf = new PerformCalculation(Add);
+        var perf = new PerformCalculation(Add);
 
         Console.WriteLine(Calc(Multiply, 5, 5));
         Console.WriteLine(Calc(Add, 2,2));
@@ -36,8 +36,8 @@ class DelegatesIntro
         Console.WriteLine(perf(2,3));
 
         // Keep the console window open in debug mode.
-        System.Console.WriteLine("Press any key to exit.");
-        System.Console.ReadKey();
+        Console.WriteLine("Press any key to exit.");
+        Console.ReadKey();
  
     }
  
@@ -50,13 +50,13 @@ class TestStuff
         static Temp obj = new Temp();
 
         //<Snippet1>
-        // Declare a delegate:
+        // Declare a delegate.
         delegate void Del(int x);
 
-        // Define a named method:
+        // Define a named method.
         void DoWork(int k) { /* ... */ }
 
-        // Instantiate the delegate using the method as a parameter:
+        // Instantiate the delegate using the method as a parameter.
         Del d = obj.DoWork;
         //</Snippet1>
     }
@@ -72,7 +72,7 @@ class TestStuffAgain
     // Declare a method with the same signature as the delegate.
     static void Notify(string name)
     {
-        Console.WriteLine("Notification received for: {0}", name);
+        Console.WriteLine($"Notification received for: {name}");
     }
     //</Snippet13>
 
@@ -93,12 +93,12 @@ class TestStuffAgain
         //<Snippet15>
         // Instantiate Del by using an anonymous method.
         Del del3 = delegate(string name)
-            { Console.WriteLine("Notification received for: {0}", name); };
+            { Console.WriteLine($"Notification received for: {name}"); };
         //</Snippet15>
 
         //<Snippet31>
         // Instantiate Del by using a lambda expression.
-        Del del4 = name =>  { Console.WriteLine("Notification received for: {0}", name); };
+        Del del4 = name =>  { Console.WriteLine($"Notification received for: {name}"); };
         //</Snippet31>
     }
 
@@ -119,13 +119,13 @@ class TestStuffAgain
         // Create a method for a delegate.
         public static void DelegateMethod(string message)
         {
-            System.Console.WriteLine(message);
+            Console.WriteLine(message);
         }
         //</Snippet22>
 
 
         //<Snippet24>
-        public void MethodWithCallback(int param1, int param2, Del callback)
+        public static void MethodWithCallback(int param1, int param2, Del callback)
         {
             callback("The number is: " + (param1 + param2).ToString());
         }
@@ -151,7 +151,7 @@ class TestStuffAgain
             //</Snippet25>
 
             //<Snippet27>
-            MethodClass obj = new MethodClass();
+            var obj = new MethodClass();
             Del d1 = obj.Method1;
             Del d2 = obj.Method2;
             Del d3 = DelegateMethod;
