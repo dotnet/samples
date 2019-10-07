@@ -21,7 +21,8 @@ steps:
   displayName: 'Check out dotnet/samples repo'
 
 - script: |
-    git clone -c http.extraheader="AUTHORIZATION: bearer $SYSTEM_ACCESSTOKEN" "https://constructors.visualstudio.com/_git/MicrosoftSamples" "$(Agent.BuildDirectory)/ci"
+    AUTH=$(echo -n ":$SYSTEM_ACCESSTOKEN" | openssl base64 | tr -d '\n')
+    git clone -c http.extraheader="AUTHORIZATION: basic $AUTH" "https://constructors.visualstudio.com/_git/MicrosoftSamples" "$(Agent.BuildDirectory)/ci"
   env:
     SYSTEM_ACCESSTOKEN: $(System.AccessToken)
   displayName: 'Clone DevOps repo'
