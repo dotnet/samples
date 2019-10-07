@@ -196,7 +196,7 @@ class TestStuffAgain
 
         // OK at compile-time. False if the run-time type of f 
         // is not the same as that of d.
-        System.Console.WriteLine(d == f);
+        Console.WriteLine(d == f);
     }
     //</Snippet30>
 }
@@ -219,21 +219,21 @@ namespace WrapNamedMethods1
             Del d = m.MultiplyNumbers;
 
             // Invoke the delegate object.
-            System.Console.WriteLine("Invoking the delegate using 'MultiplyNumbers':");
+            Console.WriteLine("Invoking the delegate using 'MultiplyNumbers':");
             for (int i = 1; i <= 5; i++)
             {
                 d(i, 2);
             }
 
             // Keep the console window open in debug mode.
-            System.Console.WriteLine("Press any key to exit.");
-            System.Console.ReadKey();
+            Console.WriteLine("Press any key to exit.");
+            Console.ReadKey();
         }
 
         // Declare the associated method.
         void MultiplyNumbers(int m, double n)
         {
-            System.Console.Write(m * n + " ");
+            Console.Write(m * n + " ");
         }
     }
     /* Output:
@@ -255,12 +255,12 @@ namespace WrapNamedMethods2
     {
         public void InstanceMethod()
         {
-            System.Console.WriteLine("A message from the instance method.");
+            Console.WriteLine("A message from the instance method.");
         }
 
         static public void StaticMethod()
         {
-            System.Console.WriteLine("A message from the static method.");
+            Console.WriteLine("A message from the static method.");
         }
     }
 
@@ -268,7 +268,7 @@ namespace WrapNamedMethods2
     {
         static void Main()
         {
-            SampleClass sc = new SampleClass();
+            var sc = new SampleClass();
 
             // Map the delegate to the instance method:
             Del d = sc.InstanceMethod;
@@ -434,12 +434,12 @@ namespace WrapContravariance
             // Define two methods that have the same signature as CustomDel.
             static void Hello(string s)
             {
-                System.Console.WriteLine("  Hello, {0}!", s);
+                Console.WriteLine($"  Hello, {s}!");
             }
 
             static void Goodbye(string s)
             {
-                System.Console.WriteLine("  Goodbye, {0}!", s);
+                Console.WriteLine($"  Goodbye, {s}!");
             }
 
             static void Main()
@@ -580,7 +580,7 @@ namespace WrapContravariance
                 // Print the title of the book.
                 static void PrintTitle(Book b)
                 {
-                    System.Console.WriteLine("   {0}", b.Title);
+                    Console.WriteLine($"   {b.Title}");
                 }
 
                 // Execution starts here.
@@ -592,7 +592,7 @@ namespace WrapContravariance
                     AddBooks(bookDB);
 
                     // Print all the titles of paperbacks:
-                    System.Console.WriteLine("Paperback Book Titles:");
+                    Console.WriteLine("Paperback Book Titles:");
 
                     // Create a new delegate object associated with the static 
                     // method Test.PrintTitle:
@@ -610,7 +610,7 @@ namespace WrapContravariance
                     bookDB.ProcessPaperbackBooks(totaller.AddBookToTotal);
                     //</Snippet18>
 
-                    System.Console.WriteLine("Average Paperback Book Price: ${0:#.##}",
+                    Console.WriteLine("Average Paperback Book Price: ${0:#.##}",
                             totaller.AveragePrice());
                 }
 
