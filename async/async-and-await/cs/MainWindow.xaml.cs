@@ -1,4 +1,3 @@
-﻿
 using System;
 using System.Threading.Tasks;
 using System.Windows;
@@ -33,7 +32,7 @@ namespace AsyncFirstExample
         async Task<int> AccessTheWebAsync()
         { 
             // You need to add a reference to System.Net.Http to declare client.
-            HttpClient client = new HttpClient();
+            var client = new HttpClient();
 
             // GetStringAsync returns a Task<string>. That means that when you await the
             // task you'll get a string (urlContents).
