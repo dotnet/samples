@@ -1,6 +1,6 @@
 ---
 languages:
-- cs
+- csharp
 products:
 - dotnet-core
 - windows
