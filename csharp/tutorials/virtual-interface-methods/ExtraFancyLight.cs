@@ -20,9 +20,9 @@ namespace virtual_interface_methods
         }
         public async Task TurnOnFor(int duration)
         {
-            Console.WriteLine("Extra Fancy  light starting timer function.");
+            Console.WriteLine("Extra Fancy light starting timer function.");
             await Task.Delay(duration);
-            Console.WriteLine("Extra Fancy  light finished custom timer function");
+            Console.WriteLine("Extra Fancy light finished custom timer function");
         }
 
         public override string ToString() => $"The light is {isOn: \"on\", \"off\"}";

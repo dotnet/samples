@@ -10,7 +10,7 @@ namespace virtual_interface_methods
     {
         public virtual async Task Blink(int duration, int repeatCount)
         {
-            Console.WriteLine("using default interface method for blink");
+            Console.WriteLine("using default interface method for IBlinkingLight.Blink");
             for (int count = 0; count < repeatCount; count++)
             {
                 SwitchOn();
@@ -18,7 +18,7 @@ namespace virtual_interface_methods
                 SwitchOff();
                 await Task.Delay(duration);
             }
-            Console.WriteLine("Done with default interface method for blink");
+            Console.WriteLine("Done with default interface method for IBlinkingLight.Blink");
         }
     }
     // </SnippetBlinkingLight>

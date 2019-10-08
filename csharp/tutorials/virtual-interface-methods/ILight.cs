@@ -4,6 +4,7 @@ using System.Text;
 
 namespace virtual_interface_methods
 {
+    // <SnippetPowerStatus>
     public enum PowerStatus
     {
         NoPower,
@@ -12,6 +13,7 @@ namespace virtual_interface_methods
         MidBattery,
         LowBattery
     }
+    // </SnippetPowerStatus>
 
 
     // <SnippetILightInterface>
