@@ -35,10 +35,7 @@ namespace Samples.AspNet.CS.Controls
         {
             get
             {
-                if (authorValue == null)
-                {
-                    authorValue = new Author();
-                }
+                authorValue ??= new Author();
                 return authorValue;
             }
 

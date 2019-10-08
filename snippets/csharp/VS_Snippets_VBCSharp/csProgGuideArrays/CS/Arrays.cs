@@ -7,10 +7,7 @@ class TestRef
     static void FillArray(ref int[] arr)
     {
         // Create the array on demand.
-        if (arr == null)
-        {
-            arr = new int[10];
-        }
+        arr ??= new int[10];
         // Fill the array.
         arr[0] = 1111;
         arr[4] = 5555;

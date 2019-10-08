@@ -18,11 +18,10 @@ namespace CustomSequence
             }
         }
 
-        //This sample calculates the dot product of two integer vectors. It uses a user-created sequence operator,
-        //Combine, to calculate the dot product, passing it a lambda function to multiply two arrays, element by element,
-        //and sum the result.
-        //
-        //Output
+        // This sample calculates the dot product of two integer vectors. It uses a user-created sequence operator,
+        // Combine, to calculate the dot product, passing it a lambda function to multiply two arrays, element by element,
+        // and sum the result.
+        // Output:
         // Dot product: 109
         public static void Example()
         {

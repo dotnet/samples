@@ -5,9 +5,8 @@ namespace Aggregate
 {
     public static class CountSample2
     {
-        //This sample uses Count to get the number of odd ints in the array. 
-        // 
-        //Output: 
+        // This sample uses Count to get the number of odd ints in the array. 
+        // Output: 
         // There are 5 odd numbers in the list.
         public static void Example()
         {

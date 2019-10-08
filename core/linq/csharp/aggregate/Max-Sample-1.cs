@@ -5,9 +5,8 @@ namespace Aggregate
 {
     public static class MaxSample1
     {
-        //This sample uses Max to get the highest number in an array. Note that the method returns a single value.
-        //
-        //Outputs:
+        // This sample uses Max to get the highest number in an array. Note that the method returns a single value.
+        // Outputs:
         // The maximum number is 9.
         public static void Example()
         {

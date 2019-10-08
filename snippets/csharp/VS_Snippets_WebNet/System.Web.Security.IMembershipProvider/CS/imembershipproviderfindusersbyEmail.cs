@@ -115,10 +115,7 @@ public override void Initialize(string name, NameValueCollection config)
       pRequiresUniqueEmail = Convert.ToBoolean(GetConfigValue(config["requiresUniqueEmail"], "true"));
 
       string temp_format = config["passwordFormat"];
-      if (temp_format == null)
-      {
-        temp_format = "Hashed";
-      }
+      temp_format ??= "Hashed";
 
       switch (temp_format)
       {

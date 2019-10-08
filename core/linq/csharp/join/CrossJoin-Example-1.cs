@@ -6,10 +6,9 @@ namespace Join
 {
     public static class CrossJoinExample1
     {
-        //This sample shows how to efficiently join elements of two sequences based on equality between key
-        //expressions over the two.
-        //
-        //Output: 
+        // This sample shows how to efficiently join elements of two sequences based on equality between key
+        // expressions over the two.
+        // Output:
         // Chai: Beverages
         // Chang: Beverages
         // Guarana Fantastica: Beverages
@@ -76,14 +75,13 @@ namespace Join
 
             foreach (var v in q)
             {
-                Console.WriteLine(v.ProductName + ": " + v.Category);
+                Console.WriteLine($"{v.ProductName}: {v.Category}");
             }
         }
 
-        //This sample shows how to efficiently join elements of two sequences based on equality between key
-        //expressions over the two.
-        //
-        //Output: 
+        // This sample shows how to efficiently join elements of two sequences based on equality between key
+        // expressions over the two.
+        // Output: 
         // Chai: Beverages
         // Chang: Beverages
         // Guarana Fantastica: Beverages
@@ -147,7 +145,7 @@ namespace Join
 
             foreach (var v in q)
             {
-                Console.WriteLine(v.ProductName + ": " + v.Category);
+                Console.WriteLine($"{v.ProductName}: {v.Category}");
             }
         }
     }

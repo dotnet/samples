@@ -258,10 +258,9 @@ namespace ChartControl
             // Gets the accessibility object for the curve legend.
             public AccessibleObject AccessibilityObject
             {
-                get {
-                    if (accObj == null) {
-                        accObj = new CurveLegendAccessibleObject(this);
-                    }
+                get
+                {
+                    accObj ??= new CurveLegendAccessibleObject(this);
                     return accObj;
                 }
             }
@@ -269,7 +268,8 @@ namespace ChartControl
             // Gets the bounds for the curve legend.
             public Rectangle Bounds
             {   
-                get {
+                get
+                {
                     return new Rectangle(Location, Size);
                 }
             }

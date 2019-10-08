@@ -280,10 +280,7 @@ namespace SdkSample
                 string number = styleValue.Substring(startIndex, nextIndex - startIndex);
 
                 string unit = ParseWordEnumeration(_fontSizeUnits, styleValue, ref nextIndex);
-                if (unit == null)
-                {
-                    unit = "px"; // Assuming pixels by default
-                }
+                unit ??= "px"; // Assuming pixels by default
 
                 if (mustBeNonNegative && styleValue[startIndex] == '-')
                 {
@@ -947,10 +944,7 @@ namespace SdkSample
                 return;
             }
 
-            if (_styleDefinitions == null)
-            {
-                _styleDefinitions = new List<StyleDefinition>();
-            }
+            _styleDefinitions ??= new List<StyleDefinition>();
 
             string[] simpleSelectors = selector.Split(',');
 

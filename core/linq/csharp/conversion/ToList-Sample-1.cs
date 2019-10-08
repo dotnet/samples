@@ -5,9 +5,8 @@ namespace Conversion
 {
     public static class ToListSample1
     {
-        //This sample uses ToList and query syntax to immediately evaluate a sequence into a List<T>.
-        //
-        //Output:
+        // This sample uses ToList and query syntax to immediately evaluate a sequence into a List<T>.
+        // Output:
         // The sorted word list:
         // apple
         // blueberry
@@ -29,9 +28,8 @@ namespace Conversion
             }
         }
 
-        //This sample uses ToList and method syntax to immediately evaluate a sequence into a List<T>.
-        //
-        //Output:
+        // This sample uses ToList and method syntax to immediately evaluate a sequence into a List<T>.
+        // Output:
         // The sorted word list:
         // apple
         // blueberry
