@@ -51,6 +51,8 @@ namespace tuples
             MemberNameConversions();
 
             TupleEquality.Tests.EqualityTests();
+
+            TupleAsOutVariable();
         }
 
         private static void SimpleTupleEquality()
@@ -240,6 +242,26 @@ namespace tuples
                 sumOfSquares += item * item;
             }
             return (items, total, sumOfSquares);
+        }
+
+        private static void TupleAsOutVariable()
+        {
+            #region 01_TupleAsOutVariable
+            Dictionary<int, (int, string)> dict = new Dictionary<int, (int, string)>();
+            dict.Add(1, (234, "First!"));
+            dict.Add(2, (345, "Second"));
+            dict.Add(3, (456, "Last"));
+
+            // TryGetValue already demonstrates using out parameters
+            dict.TryGetValue(2, out (int num, string place) pair);
+
+            Console.WriteLine($"{pair.num}: {pair.place}");
+
+            /*
+             * Output:
+             * 345: Second
+             */
+            #endregion
         }
     }
 }
