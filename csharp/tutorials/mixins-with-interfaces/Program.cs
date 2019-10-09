@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace virtual_interface_methods
+namespace mixins_with_interfaces
 {
     class Program
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace virtual_interface_methods
+namespace mixins_with_interfaces
 {
     // <SnippetPowerStatus>
     public enum PowerStatus

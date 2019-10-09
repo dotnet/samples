@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using virtual_interface_methods;
+using mixins_with_interfaces;
 
 // This file and namespace contains interim samples that are 
 // included in the text, but aren't part of the fial sample. 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace virtual_interface_methods
+namespace mixins_with_interfaces
 {
     // <SnippetExtraFancyLight>
     public class ExtraFancyLight : IBlinkingLight, ITimerLight, ILight
