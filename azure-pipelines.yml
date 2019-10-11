@@ -17,7 +17,7 @@ jobs:
 
   steps:
 
-  - checkout: none
+  - checkout: self
     path: dotnet-samples
     persistCredentials: true
     displayName: 'Check out dotnet/samples repo'
@@ -27,6 +27,7 @@ jobs:
     displayName: "Clone tools repo"
 
   - script: |
+      sudo apt-get install tree
       tree
     displayName: Tree
 
