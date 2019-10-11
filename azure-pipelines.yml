@@ -20,7 +20,7 @@ jobs:
   - checkout: none
 
   - script: |
-      https://$(toolsuser):$(toolstoken)@dev.azure.com/mseng/TechnicalContent/_git/dotnet-docs-tools
+      git clone https://blah:$(toolstoken)@dev.azure.com/mseng/TechnicalContent/_git/dotnet-docs-tools
     displayName: "Clone tools repo"
 
   - script: |
