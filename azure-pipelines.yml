@@ -26,19 +26,19 @@ jobs:
       git clone https://blah:$(toolstoken)@dev.azure.com/mseng/TechnicalContent/_git/dotnet-docs-tools ../dotnet-docs-tools
     displayName: "Clone tools repo"
 
-
+  - script: |
+      sudo apt-get install tree
+      tree .. -L 2
+    displayName: Tree
 
   - script: |
       echo Init dotnet
       dotnet help &> /dev/null
       echo Find projects in dotnet-samples folder 
-      dotnet run ./dotnet-docs-tools/LocateProjects/LocateProjects/LocateProjects.csproj -- ./dotnet-samples
+      dotnet run ../dotnet-docs-tools/LocateProjects/LocateProjects/LocateProjects.csproj -- ./dotnet-samples
     displayName: 'Compile tool'
 
-  - script: |
-      sudo apt-get install tree
-      tree .. -L 2
-    displayName: Tree
+
 
 - job:
   condition: eq(2,1)
