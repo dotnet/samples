@@ -111,7 +111,6 @@ class Program
     {
         s = s.ToLower();
         return (s.EndsWith(".txt") ||
-            s.EndsWith(".doc") ||
             s.EndsWith(".xls") ||
             s.EndsWith(".xlsx") ||
             s.EndsWith(".pdf") ||
@@ -130,7 +129,7 @@ public class ByFileExtension : IComparer<string>
 {
     string xExt, yExt;
 
-	var caseiComp = new CaseInsensitiveComparer();
+	CaseInsensitiveComparer caseiComp = new CaseInsensitiveComparer();
 
     public int Compare(string x, string y)
     {
