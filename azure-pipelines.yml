@@ -28,14 +28,14 @@ jobs:
 
   - script: |
       sudo apt-get install tree
-      tree ../dotnet-docs-tools
+      tree ../dotnet-docs-tools/LocateProjects/LocateProjects/
     displayName: Tree
 
   - script: |
       echo Init dotnet
       dotnet help &> /dev/null
       echo Find projects in dotnet-samples folder 
-      dotnet run $(Agent.BuildDirectory)/dotnet-docs-tools/LocateProjects/LocateProjects/LocateProjects.csproj -- ./dotnet-samples
+      dotnet run ../dotnet-docs-tools/LocateProjects/LocateProjects/LocateProjects.csproj -- ./dotnet-samples
     displayName: 'Compile tool'
 
 
