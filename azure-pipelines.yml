@@ -35,7 +35,7 @@ jobs:
       echo Init dotnet
       dotnet help &> /dev/null
       echo Find projects in dotnet-samples folder 
-      cd ../dotnet-docs-tools/LocateProjects/LocateProjects/LocateProjects.csproj
+      cd ../dotnet-docs-tools/LocateProjects/LocateProjects/
       dotnet run -- ../dotnet-samples/core
     displayName: 'Compile tool'
 
