@@ -35,7 +35,7 @@ jobs:
     displayName: 'Compile tool'
 
 - job:
-  condition: eq(2,1)
+  condition: eq(1,1)
   displayName: 'Run Windows Tests'
   
 
