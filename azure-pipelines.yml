@@ -28,7 +28,7 @@ jobs:
 
   - script: |
       sudo apt-get install tree
-      tree
+      tree .. -L 2
     displayName: Tree
 
   - script: |
