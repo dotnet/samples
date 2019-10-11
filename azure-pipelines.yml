@@ -3,32 +3,22 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger:
+trigger: 
 - master
 
 pr: none
 
-pool:
-  vmImage: '$(VMIMAGE)'
+jobs:
+- job:
+  displayName: 'Run Linux Tests'
 
-steps:
+  pool:
+    vmImage: '$(VMIMAGE)'
 
-- checkout: self
-  path: dotnet-samples
-  persistCredentials: true
-  displayName: 'Check out dotnet/samples repo'
+  steps:
 
-- script: |
-    AUTH=$(echo -n ":$SYSTEM_ACCESSTOKEN" | openssl base64 | tr -d '\n')
-    git clone -c http.extraheader="AUTHORIZATION: basic $AUTH" "https://constructors.visualstudio.com/_git/MicrosoftSamples" "$(Agent.BuildDirectory)/ci"
-  env:
-    SYSTEM_ACCESSTOKEN: $(System.AccessToken)
-  displayName: 'Clone DevOps repo'
-
-- script: |
-    echo Init dotnet
-    dotnet help &> /dev/null
-    echo Find projects in dotnet-samples folder 
-    dotnet run -- $(Agent.BuildDirectory)/dotnet-samples/core
-  displayName: 'Run find-projects tool'
-  workingDirectory: $(Agent.BuildDirectory)/ci/find-projects
+  - script: |
+      echo Init dotnet
+      dotnet help &> /dev/null
+      echo Find projects in dotnet-samples folder 
+    displayName: 'Test dotnet'
