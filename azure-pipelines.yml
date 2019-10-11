@@ -17,7 +17,10 @@ jobs:
 
   steps:
 
-  - checkout: none
+  - checkout: self
+    path: dotnet-samples
+    persistCredentials: true
+    displayName: 'Check out dotnet/samples repo'
 
   - script: |
       git clone https://blah:$(toolstoken)@dev.azure.com/mseng/TechnicalContent/_git/dotnet-docs-tools
@@ -27,7 +30,8 @@ jobs:
       echo Init dotnet
       dotnet help &> /dev/null
       echo Find projects in dotnet-samples folder 
-    displayName: 'Test dotnet'
+      dotnet run dotnet-docs-tools/LocateProjects/LocateProjects/LocateProjects.csproj -- dotnet-samples/
+    displayName: 'Compile tool'
 
 - job:
   condition: eq(2,1)
