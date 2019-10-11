@@ -30,7 +30,7 @@ jobs:
     displayName: 'Test dotnet'
 
 - job:
-  condition: eq(2 == 1)
+  condition: eq(2,1)
   displayName: 'Run Windows Tests'
   
 
