@@ -27,19 +27,12 @@ jobs:
     displayName: "Clone tools repo"
 
   - script: |
-      sudo apt-get install tree
-      tree .. -L 3
-    displayName: Tree
-
-  - script: |
       echo Init dotnet
       dotnet help &> /dev/null
       echo Find projects in dotnet-samples folder 
       cd ../dotnet-docs-tools/LocateProjects/LocateProjects/
       dotnet run -- $(Agent.BuildDirectory)/dotnet-samples/core
     displayName: 'Compile tool'
-
-
 
 - job:
   condition: eq(2,1)
@@ -51,10 +44,19 @@ jobs:
 
   steps:
 
-  - checkout: none
+  - checkout: self
+    path: dotnet-samples
+    persistCredentials: true
+    displayName: 'Check out dotnet/samples repo'
+
+  - script: |
+      git clone https://blah:$(toolstoken)@dev.azure.com/mseng/TechnicalContent/_git/dotnet-docs-tools ../dotnet-docs-tools
+    displayName: "Clone tools repo"
 
   - script: |
       echo Init dotnet
       dotnet help > NUL
       echo Find projects in dotnet-samples folder 
-    displayName: 'Test dotnet'
+      cd ../dotnet-docs-tools/LocateProjects/LocateProjects/
+      dotnet run -- $(Agent.BuildDirectory)/dotnet-samples/core
+    displayName: 'Compile tool'
