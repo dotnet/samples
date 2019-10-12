@@ -47,7 +47,8 @@ namespace Pipes
                 do
                 {
                     // Look for a EOL in the buffered data.
-                    linePosition = Array.IndexOf(buffer, (byte)'\n', bytesConsumed, bytesBuffered - bytesConsumed);
+                    linePosition = Array.IndexOf(buffer, (byte)'\n', bytesConsumed,
+                     bytesBuffered - bytesConsumed);
 
                     if (linePosition >= 0)
                     {

@@ -34,7 +34,8 @@ namespace Pipes
         {
             byte[] helloBytes = Encoding.ASCII.GetBytes("Hello");
 
-            // Write helloBytes to the writer, there's no need to call Advance here (Write does that).
+            // Write helloBytes to the writer, there's no need to call Advance here 
+            // (Write does that).
             await writer.WriteAsync(helloBytes, cancellationToken);
         }
         #endregion
