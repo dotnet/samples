@@ -2,17 +2,17 @@
 
 class TimePeriod
 {
-   private double seconds;
+   private double _seconds;
 
    public double Hours
    {
-       get { return seconds / 3600; }
-       set {
+       get { return _seconds / 3600; }
+       set { 
           if (value < 0 || value > 24)
              throw new ArgumentOutOfRangeException(
                    $"{nameof(value)} must be between 0 and 24.");
 
-          seconds = value * 3600;
+          _seconds = value * 3600; 
        }
    }
 }

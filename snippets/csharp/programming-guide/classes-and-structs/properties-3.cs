@@ -2,25 +2,25 @@
 
 public class SaleItem
 {
-   string name;
-   decimal cost;
-
+   string _name;
+   decimal _cost;
+   
    public SaleItem(string name, decimal cost)
    {
-      name = name;
-      cost = cost;
+      _name = name;
+      _cost = cost;
    }
 
-   public string Name
+   public string Name 
    {
-      get => name;
-      set => name = value;
+      get => _name;
+      set => _name = value;
    }
 
    public decimal Price
    {
-      get => cost;
-      set => cost = value;
+      get => _cost;
+      set => _cost = value; 
    }
 }
 
