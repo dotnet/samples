@@ -8,7 +8,7 @@ namespace mixins_with_interfaces
     // <SnippetTimerLightFinal>
     public interface ITimerLight : ILight
     {
-        public virtual async Task TurnOnFor(int duration)
+        public async Task TurnOnFor(int duration)
         {
             Console.WriteLine("Using the default interface method for the ITimerLight.TurnOnFor.");
             SwitchOn();

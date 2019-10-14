@@ -22,7 +22,7 @@ namespace mixins_with_interfaces
         void SwitchOn();
         void SwitchOff();
         bool IsOn();
-        public virtual PowerStatus Power() => PowerStatus.NoPower;
+        public PowerStatus Power() => PowerStatus.NoPower;
     }
     // </SnippetILightInterface>
 }
