@@ -46,27 +46,27 @@
         public class Employee
         {
             public static int NumberOfEmployees;
-            private static int counter;
-            private string name;
+            private static int _counter;
+            private string _name;
 
             // A read-write instance property:
             public string Name
             {
-                get { return name; }
-                set { name = value; }
+                get { return _name; }
+                set { _name = value; }
             }
 
             // A read-only static property:
             public static int Counter
             {
-                get { return counter; }
+                get { return _counter; }
             }
 
             // A Constructor:
             public Employee()
             {
                 // Calculate the employee's number:
-                counter = ++NumberOfEmployees;
+                _counter = ++NumberOfEmployees;
             }
         }
 
@@ -96,25 +96,25 @@
         //<Snippet3>
         public class Employee
         {
-            private string name;
+            private string _name;
             public string Name
             {
-                get { return name; }
-                set { name = value; }
+                get { return _name; }
+                set { _name = value; }
             }
         }
 
         public class Manager : Employee
         {
-            private string name;
+            private string _name;
 
             // Notice the use of the new modifier:
             //<Snippet4>
             public new string Name
             //</Snippet4>
             {
-                get { return name; }
-                set { name = value + ", Manager"; }
+                get { return _name; }
+                set { _name = value + ", Manager"; }
             }
         }
 
@@ -250,19 +250,19 @@
         //<Snippet7>
         public class Date
         {
-            private int month = 7;  // Backing store
+            private int _month = 7;  // Backing store
 
             public int Month
             {
                 get
                 {
-                    return month;
+                    return _month;
                 }
                 set
                 {
                     if ((value > 0) && (value < 13))
                     {
-                        month = value;
+                        _month = value;
                     }
                 }
             }
@@ -273,12 +273,12 @@
         //<Snippet8>
         class Person
         {
-            private string name;  // the name field
+            private string _name;  // the name field
             public string Name    // the Name property
             {
                 get
                 {
-                    return name;
+                    return _name;
                 }
             }
         }
@@ -298,12 +298,12 @@
         }
 
         //<Snippet10>
-        private int number;
+        private int _number;
         public int Number
         {
             get
             {
-                return number++;   // Don't do this
+                return _number++;   // Don't do this
             }
         }
         //</Snippet10>
@@ -312,12 +312,12 @@
         //<Snippet11>
         class Employee
         {
-            private string name;
+            private string _name;
             public string Name
             {
                 get
                 {
-                    return name != null ? name : "NA";
+                    return _name != null ? _name : "NA";
                 }
             }
         }
@@ -331,16 +331,16 @@
         //<Snippet12>
         class Person
         {
-            private string name;  // the name field
+            private string _name;  // the name field
             public string Name    // the Name property
             {
                 get
                 {
-                    return name;
+                    return _name;
                 }
                 set
                 {
-                    name = value;
+                    _name = value;
                 }
             }
         }
@@ -398,31 +398,31 @@
         {
             public static int numberOfEmployees;
 
-            private string name;
+            private string _name;
             public string Name  // read-write instance property
             {
                 get
                 {
-                    return name;
+                    return _name;
                 }
                 set
                 {
-                    name = value;
+                    _name = value;
                 }
             }
 
-            private int counter;
+            private int _counter;
             public int Counter  // read-only instance property
             {
                 get
                 {
-                    return counter;
+                    return _counter;
                 }
             }
 
             public Employee()  // constructor
             {
-                counter = ++numberOfEmployees;
+                _counter = ++numberOfEmployees;
             }
         }
 
