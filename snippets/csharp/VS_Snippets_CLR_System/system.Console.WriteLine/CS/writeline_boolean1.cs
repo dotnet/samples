@@ -1,10 +1,10 @@
-﻿// <Snippet4>
-using System;
+﻿using System;
 
 public class Example
 {
    public static void Main()
    {
+      // <Snippet4>
       // Assign 10 random integers to an array.
       Random rnd = new Random();
       int[] numbers = new int[10]; 
@@ -18,6 +18,6 @@ public class Example
          Console.WriteLine(even);
          Console.WriteLine();      
       }
+      // </Snippet4>
    }
 }
-// </Snippet4>
