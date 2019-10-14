@@ -1,11 +1,11 @@
-﻿// <Snippet5>
-using System;
+﻿using System;
 using System.Text;
 
 public class Example
 {
    public static void Main()
    {
+      // <Snippet5>
       StringBuilder sb1 = new StringBuilder("building a string...");
       StringBuilder sb2 = new StringBuilder("building a string...");
       
@@ -17,12 +17,13 @@ public class Example
                         
       Object sb3 = new StringBuilder("building a string...");
       Console.WriteLine("\nsb3.Equals(sb2): {0}", sb3.Equals(sb2));                              
+
+      // The example displays the following output:
+      //       sb1.Equals(sb2): True
+      //       ((Object) sb1).Equals(sb2): False
+      //       Object.Equals(sb1, sb2): False
+      //
+      //       sb3.Equals(sb2): False
+      // </Snippet5>
    }
 }
-// The example displays the following output:
-//       sb1.Equals(sb2): True
-//       ((Object) sb1).Equals(sb2): False
-//       Object.Equals(sb1, sb2): False
-//
-//       sb3.Equals(sb2): False
-// </Snippet5>
