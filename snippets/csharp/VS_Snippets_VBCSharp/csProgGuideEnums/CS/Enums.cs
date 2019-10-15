@@ -60,14 +60,33 @@ namespace Enums
             //<snippet5>
             string s = Enum.GetName(typeof(Day), 4);
             Console.WriteLine(s);
+            // Output: Thursday
 
             Console.WriteLine("The values of the Day Enum are:");
             foreach (int i in Enum.GetValues(typeof(Day)))
                 Console.WriteLine(i);
+            // Output:
+            // The values of the Day Enum are:
+            // 0
+            // 1
+            // 2
+            // 3
+            // 4
+            // 5
+            // 6
 
             Console.WriteLine("The names of the Day Enum are:");
             foreach (string str in Enum.GetNames(typeof(Day)))
                 Console.WriteLine(str);
+            // Output:
+            // The names of the Day Enum are:
+            // Sunday
+            // Monday
+            // Tuesday
+            // Wednesday
+            // Thursday
+            // Friday
+            // Saturday
             //</snippet5>
 
             //<snippet6>

@@ -21,7 +21,7 @@ namespace CsCsrefProgrammingStrings
             // Use the Empty constant instead of the literal "".
             string message3 = System.String.Empty;
 
-            //Initialize with a regular string literal.
+            // Initialize with a regular string literal.
             string oldPath = "c:\\Program Files\\Microsoft Visual Studio 8.0";
 
             // Initialize with a verbatim string literal.
