@@ -12,7 +12,7 @@ public class Example
          Console.WriteLine("True or False: {0}", bln);
       }
 
-      // The example displays the following output:
+      // The example displays an output similar to the following:
       //       True or False: False
       //       True or False: True
       //       True or False: False
