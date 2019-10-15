@@ -137,8 +137,8 @@ namespace MyBuffers
         #region snippet7
         static void EmptySegments()
         {
-            // This logic creates a ReadOnlySequence<byte> with 4 segments but with a length 
-            // of 2 of those segments are empty.
+            // This logic creates a ReadOnlySequence<byte> with 4 segments,
+            // two of which are empty.
             var first = new BufferSegment(new byte[0]);
             var last = first.Append(new byte[] { 97 })
                             .Append(new byte[0]).Append(new byte[] { 98 });
