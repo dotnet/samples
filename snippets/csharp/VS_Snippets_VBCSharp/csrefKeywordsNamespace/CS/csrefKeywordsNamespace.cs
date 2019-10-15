@@ -70,7 +70,19 @@ namespace usingstatement
 {
     class usingTest
     {
+        void UpdatedTestMethod()
+        {
+            // <SnippetModernUsing>
+            using var font1 = new Font("Arial", 10.0f);
+            byte charset = font1.GdiCharSet;
+            // </SnippetModernUsing>
 
+            // <SnippetMultipleUsing>
+            using Font font3 = new Font("Arial", 10.0f), 
+                font4 = new Font("Arial", 10.0f);
+            // Use font3 and font4.
+            // </SnippetMultipleUsing>
+        }
         void TestMethod()
         {
         //<snippet4>
