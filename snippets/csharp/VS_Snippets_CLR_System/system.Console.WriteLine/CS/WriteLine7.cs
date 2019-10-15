@@ -9,6 +9,5 @@ public class Example
    }
 }
 // The example displays output like the following:
-//       Today's date: Friday, April 1, 2016
+//       Today's date: Monday, April 1, 2019
 // </Snippet7>
-
