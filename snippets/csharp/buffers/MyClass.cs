@@ -44,7 +44,7 @@ namespace MyBuffers
         #region snippet5
         bool TryParseHeaderLength(ref ReadOnlySequence<byte> buffer, out int length)
         {
-            // If we don't have enough space, we can't get the length.
+            // If there's not enough space, the length can't be obtained.
             if (buffer.Length < 4)
             {
                 length = 0;
@@ -60,14 +60,14 @@ namespace MyBuffers
             }
             else
             {
-                // We have 4 bytes split across multiple segments, since it's so small we 
-                // can copy it to a stack allocated buffer, this avoids a heap allocation.
+                // There are 4 bytes split across multiple segments. Since it's so small, it 
+                // can be copied to a stack allocated buffer. This avoids a heap allocation.
                 Span<byte> stackBuffer = stackalloc byte[4];
                 lengthSlice.CopyTo(stackBuffer);
                 length = BinaryPrimitives.ReadInt32BigEndian(stackBuffer);
             }
 
-            // Move the buffer 4 bytes ahead
+            // Move the buffer 4 bytes ahead.
             buffer = buffer.Slice(lengthSlice.End);
 
             return true;
@@ -86,30 +86,30 @@ namespace MyBuffers
             {
                 ReadOnlySpan<byte> span = segment.Span;
 
-                // Look for \r in the current segment
+                // Look for \r in the current segment.
                 index = span.IndexOf((byte)'\r');
 
                 if (index != -1)
                 {
-                    // Check next segment for \n
+                    // Check next segment for \n.
                     if (index + 1 >= span.Length)
                     {
                         var next = position;
                         if (!buffer.TryGet(ref next, out ReadOnlyMemory<byte> nextSegment))
                         {
-                            // We're at the end of the sequence
+                            // You're at the end of the sequence.
                             return false;
                         }
                         else if (nextSegment.Span[0] == (byte)'\n')
                         {
-                            //  We found a match
+                            //  A match was found.
                             break;
                         }
                     }
-                    // Check the current segment of \n
+                    // Check the current segment of \n.
                     else if (span[index + 1] == (byte)'\n')
                     {
-                        // Found it
+                        // It was found.
                         break;
                     }
                 }
@@ -119,13 +119,13 @@ namespace MyBuffers
 
             if (index != -1)
             {
-                // Get the position just before the \r\n
+                // Get the position just before the \r\n.
                 var delimeter = buffer.GetPosition(index, previous);
 
-                // Slice the line (excluding \r\n)
+                // Slice the line (excluding \r\n).
                 line = buffer.Slice(buffer.Start, delimeter);
 
-                // Slice the buffer to get the renamining data after the line
+                // Slice the buffer to get the remaining data after the line.
                 buffer = buffer.Slice(buffer.GetPosition(2, delimeter));
                 return true;
             }
@@ -143,13 +143,13 @@ namespace MyBuffers
             var last = first.Append(new byte[] { 97 })
                             .Append(new byte[0]).Append(new byte[] { 98 });
 
-            // Construct the ReadOnlySequence<byte> from the linked list segments
+            // Construct the ReadOnlySequence<byte> from the linked list segments.
             var data = new ReadOnlySequence<byte>(first, 0, last, 1);
 
-            // Slice using numbers
+            // Slice using numbers.
             var sequence1 = data.Slice(0, 2);
 
-            // Slice using SequencePosition pointing at the empty segment
+            // Slice using SequencePosition pointing at the empty segment.
             var sequence2 = data.Slice(data.Start, 2);
 
             Console.WriteLine($"sequence1.Length={sequence1.Length}"); // sequence1.Length=2
@@ -163,7 +163,7 @@ namespace MyBuffers
             // sequence2.FirstSpan.Length=0
             Console.WriteLine($"sequence2.FirstSpan.Length={sequence2.FirstSpan.Length}");
 
-            // The following code prints 0, 1, 0, 1
+            // The following code prints 0, 1, 0, 1.
             SequencePosition position = data.Start;
             while (data.TryGet(ref position, out ReadOnlyMemory<byte> memory))
             {
@@ -218,8 +218,8 @@ namespace MyBuffers
         {
             byte[] helloBytes = Encoding.ASCII.GetBytes("Hello");
 
-            // Write helloBytes to the writer, there's no need to call Advance here.
-            // Write calls Advance.
+            // Write helloBytes to the writer. There's no need to call Advance here
+            // since Write calls Advance.
             writer.Write(helloBytes);
         }
         #endregion
@@ -255,7 +255,7 @@ namespace MyBuffers
                 var index = reader.CurrentSpan.IndexOf(data);
                 if (index != -1)
                 {
-                    // We found it so advance to the position.
+                    // It was found, so advance to the position.
                     reader.Advance(index);
 
                     // Return the position.
