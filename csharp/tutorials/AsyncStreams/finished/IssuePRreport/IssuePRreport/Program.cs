@@ -60,8 +60,12 @@ namespace GitHubActivityReport
             };
 
             // <SnippetEnumerateAsyncStream>
+            int num = 0;
             await foreach (var issue in runPagedQueryAsync(client, PagedIssueQuery, "docs"))
+            {
                 Console.WriteLine(issue);
+                Console.WriteLine($"Received {++num} issues in total");
+            }
             // </SnippetEnumerateAsyncStream>
         }
 
