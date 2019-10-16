@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Buffers;
 using System.Buffers.Binary;
 using System.Text;
@@ -258,7 +258,6 @@ namespace MyBuffers
                     // It was found, so advance to the position.
                     reader.Advance(index);
 
-                    // Return the position.
                     return reader.Position;
                 }
                 // Skip the current segment since there's nothing in it.
