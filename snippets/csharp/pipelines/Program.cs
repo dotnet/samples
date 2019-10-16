@@ -16,7 +16,8 @@ namespace Pipes
 
             // Tell the Pipe what schedulers to use and disable the SynchronizationContext.
             var options = new PipeOptions(readerScheduler: readScheduler,
-             writerScheduler: writeScheduler, useSynchronizationContext: false);
+                                          writerScheduler: writeScheduler,
+                                          useSynchronizationContext: false);
             var pipe = new Pipe(options);
         }
 
