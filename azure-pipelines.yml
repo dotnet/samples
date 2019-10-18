@@ -64,5 +64,7 @@ jobs:
   - powershell: ../dotnet-docs-tools/Get-MSBuildResults.ps1
     env: {
       scantooldir: "../dotnet-docs-tools/LocateProjects/LocateProjects",
-      samplesrootdir: "$(Agent.BuildDirectory)/dotnet-samples/" 
+      samplesrootdir: "$(Agent.BuildDirectory)/dotnet-samples/",
+      rangestart: 0,
+      rangeend: 2
     }
