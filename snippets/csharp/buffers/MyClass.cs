@@ -194,11 +194,9 @@ namespace MyBuffers
         public void Reader1()
         {
         #region snippet8
-            while (!reader.End)
+            while (reader.TryRead(out byte b))
             {
-                var b = reader.CurrentSpan[reader.CurrentSpanIndex];
                 Process(b);
-                reader.Advance(1);
             }
         #endregion
         }
