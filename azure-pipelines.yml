@@ -59,7 +59,7 @@ jobs:
 #      echo Find projects in dotnet-samples folder 
 #      cd ../dotnet-docs-tools/LocateProjects/LocateProjects/
 #      dotnet run -- $(Agent.BuildDirectory)/dotnet-samples/core
-    displayName: 'Compile tool'
+    displayName: 'Init dotnet'
 
   - powershell: ../dotnet-docs-tools/Get-MSBuildResults.ps1
     env: {
@@ -68,3 +68,4 @@ jobs:
       rangestart: 0,
       rangeend: 2
     }
+    displayName: "Run build script"
