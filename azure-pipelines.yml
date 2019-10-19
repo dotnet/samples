@@ -61,7 +61,7 @@ jobs:
 #      dotnet run -- $(Agent.BuildDirectory)/dotnet-samples/core
     displayName: 'Init dotnet'
 
-  - powershell: ../dotnet-docs-tools/Get-MSBuildResults.ps1
+  - powershell: "../dotnet-docs-tools/Get-MSBuildResults.ps1 | ConvertTo-Json | Out-File '.\\output.json'"
     env: {
       scantooldir: "../dotnet-docs-tools/LocateProjects/LocateProjects",
       samplesrootdir: "$(Agent.BuildDirectory)/dotnet-samples/",
@@ -69,3 +69,4 @@ jobs:
       rangeend: 10
     }
     displayName: "Run build script"
+    
