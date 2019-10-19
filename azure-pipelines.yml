@@ -36,7 +36,7 @@ jobs:
     displayName: 'Compile tool'
 
 - job:
-  condition: eq(1,0)
+  condition: eq(1,1)
   displayName: 'Run Windows Tests'
   
   pool:
@@ -64,7 +64,9 @@ jobs:
   - powershell: "../dotnet-docs-tools/Get-MSBuildResults.ps1 | ConvertTo-Json | Out-File '$(Build.ArtifactStagingDirectory)/output.json'"
     env: {
       scantooldir: "../dotnet-docs-tools/LocateProjects/LocateProjects",
-      samplesrootdir: "$(Agent.BuildDirectory)/dotnet-samples/"
+      samplesrootdir: "$(Agent.BuildDirectory)/dotnet-samples/",
+      rangestart: 668,
+      rangeend: 672
     }
     displayName: "Run build script"
 
