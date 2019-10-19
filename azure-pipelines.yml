@@ -64,12 +64,11 @@ jobs:
   - powershell: "../dotnet-docs-tools/Get-MSBuildResults.ps1 | ConvertTo-Json | Out-File '$(Build.ArtifactStagingDirectory)/output.json'"
     env: {
       scantooldir: "../dotnet-docs-tools/LocateProjects/LocateProjects",
-      samplesrootdir: "$(Agent.BuildDirectory)/dotnet-samples/",
-      rangestart: 668,
-      rangeend: 672
+      samplesrootdir: "$(Agent.BuildDirectory)/dotnet-samples/"
     }
     displayName: "Run build script"
 
   - publish: $(Build.ArtifactStagingDirectory)/output.json
     artifact: BuildResults
+    condition: always()
     
