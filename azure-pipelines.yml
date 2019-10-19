@@ -36,7 +36,7 @@ jobs:
     displayName: 'Compile tool'
 
 - job:
-  condition: eq(1,0)
+  condition: eq(1,1)
   displayName: 'Run Windows Tests'
   
   pool:
@@ -66,6 +66,6 @@ jobs:
       scantooldir: "../dotnet-docs-tools/LocateProjects/LocateProjects",
       samplesrootdir: "$(Agent.BuildDirectory)/dotnet-samples/",
       rangestart: 0,
-      rangeend: 2
+      rangeend: 10
     }
     displayName: "Run build script"
