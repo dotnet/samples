@@ -56,7 +56,6 @@ jobs:
   - script: |
       echo Init dotnet
       dotnet help > NUL
-      dotnet build D:\a\1\dotnet-samples\snippets\csharp\VS_Snippets_CLR\conceptual.resources.locating\cs\locatingcs1.csproj
 #      echo Find projects in dotnet-samples folder 
 #      cd ../dotnet-docs-tools/LocateProjects/LocateProjects/
 #      dotnet run -- $(Agent.BuildDirectory)/dotnet-samples/core
