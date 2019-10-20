@@ -35,6 +35,8 @@ namespace AsyncBreakfast
                 }
                 allTasks.Remove(finished);
             }
+            Juice oj = PourOJ();
+            Console.WriteLine("oj is ready");
             Console.WriteLine("Breakfast is ready!");
             // </SnippetAwaitAnyTask>
 
