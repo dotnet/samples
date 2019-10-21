@@ -13,7 +13,7 @@ public class Example
       foreach (var guidString in guidStrings) {
          Guid guid = new Guid(guidString);
          Console.WriteLine("Original string: {0}", guidString);
-         Console.WriteLine("Guid:            {0}", guid);
+         Console.WriteLine($"Guid:            {guid}");
          Console.WriteLine();
       }
 
