@@ -21,7 +21,7 @@ public class Example
             Console.WriteLine("The string to be parsed is null.");   
          }                                   
          catch (FormatException) {
-            Console.WriteLine("Bad format: {0}", stringGuid);
+            Console.WriteLine($"Bad format: {stringGuid}");
          }
       }                                      
 
