@@ -12,7 +12,7 @@ public class Example
       
       // Create a GUID with all zeros and compare it to Empty.
       Byte[] bytes = new Byte[16];
-      Guid guid2 = new Guid(bytes);
+      var guid2 = new Guid(bytes);
       Console.WriteLine(guid2);
       Console.WriteLine("Empty: {0}", guid2 == Guid.Empty);
 
