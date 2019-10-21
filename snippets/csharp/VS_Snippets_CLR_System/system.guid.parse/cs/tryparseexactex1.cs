@@ -19,7 +19,7 @@ public class Example
          if (Guid.TryParseExact(stringGuid, "B", out newGuid))
             Console.WriteLine("Successfully parsed {0}", stringGuid);
          else 
-            Console.WriteLine("Unable to parse '{0}'", stringGuid);
+            Console.WriteLine($"Unable to parse '{stringGuid}'");
       }     
 
       // The example displays output similar to the following:
