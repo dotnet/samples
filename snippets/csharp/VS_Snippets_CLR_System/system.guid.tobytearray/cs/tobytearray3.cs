@@ -12,7 +12,7 @@ public class Example
          Console.Write("{0:X2} ", byt);
 
       Console.WriteLine();
-      Guid guid2 = new Guid(bytes);
+      var guid2 = new Guid(bytes);
       Console.WriteLine("Guid: {0} (Same as First Guid: {1})", guid2, guid2.Equals(guid));
 
       // The example displays output similar to the following:
