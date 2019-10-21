@@ -6,7 +6,7 @@ public class Example
    {
       // <Snippet1>
       Guid guid = Guid.NewGuid();
-      Console.WriteLine("Guid: {0}", guid);
+      Console.WriteLine($"Guid: {guid}");
       Byte[] bytes = guid.ToByteArray();
       foreach (var byt in bytes)
          Console.Write("{0:X2} ", byt);
