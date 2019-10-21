@@ -13,7 +13,7 @@ public class Example
 
       Console.WriteLine();
       var guid2 = new Guid(bytes);
-      Console.WriteLine("Guid: {0} (Same as First Guid: {1})", guid2, guid2.Equals(guid));
+      Console.WriteLine($"Guid: {guid2} (Same as First Guid: {guid2.Equals(guid)})");
 
       // The example displays output similar to the following:
       //
