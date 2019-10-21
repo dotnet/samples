@@ -5,7 +5,7 @@ public class Example
    public static void Main()
    {
       // <Snippet2>
-      Guid g = new Guid(0xA, 0xB, 0xC, 
+      var g = new Guid(0xA, 0xB, 0xC, 
                         new Byte[] { 0, 1, 2, 3, 4, 5, 6, 7 } );
       Console.WriteLine("{0:B}", g);
 
