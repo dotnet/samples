@@ -23,7 +23,7 @@ public class Example
             Console.WriteLine("The string to be parsed is null.");
          }   
          catch (FormatException) {
-            Console.WriteLine("Bad Format: {0}", stringGuid);
+            Console.WriteLine($"Bad Format: {stringGuid}");
          }   
       }     
 
