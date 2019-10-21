@@ -1,9 +1,9 @@
-﻿// <Snippet1>
-using System;
+﻿using System;
 
 class MyClass {
 
    static void Main() {
+      // <Snippet1>
       object o = null;
       object p = null;
       object q = new Object();
@@ -12,18 +12,11 @@ class MyClass {
       p = q;
       Console.WriteLine(Object.ReferenceEquals(p, q));
       Console.WriteLine(Object.ReferenceEquals(o, p));
+
+      // This code produces the following output:
+      //   True
+      //   True
+      //   False
+      // </Snippet1>
    }
 }
-
-
-/*
-
-This code produces the following output.
-
-True
-True
-False
-
-*/
-// </Snippet1>
-

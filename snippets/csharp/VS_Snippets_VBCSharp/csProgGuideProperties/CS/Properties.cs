@@ -46,21 +46,21 @@
         public class Employee
         {
             public static int NumberOfEmployees;
-            private static int counter;
-            private string name;
+            private static int _counter;
+            private string _name;
 
             // A read-write instance property:
             public string Name
             {
-                get => name;
-                set => name = value; 
+                get => _name;
+                set => _name = value; 
             }
 
             // A read-only static property:
-            public static int Counter => counter;
+            public static int Counter => _counter;
 
             // A Constructor:
-            public Employee() => counter = ++NumberOfEmployees; // Calculate the employee's number:            
+            public Employee() => _counter = ++NumberOfEmployees; // Calculate the employee's number:            
         }
 
         class TestEmployee
@@ -89,25 +89,25 @@
         //<Snippet3>
         public class Employee
         {
-            private string name;
+            private string _name;
             public string Name
             {
-                get => name;
-                set => name = value;
+                get => _name;
+                set => _name = value;
             }
         }
 
         public class Manager : Employee
         {
-            private string name;
+            private string _name;
 
             // Notice the use of the new modifier:
             //<Snippet4>
             public new string Name
             //</Snippet4>
             {
-                get => name; 
-                set => name = value + ", Manager";
+                get => _name; 
+                set => _name = value + ", Manager";
             }
         }
 
@@ -159,7 +159,7 @@
 
             public override double Area
             {
-				get => side * side;
+                get => side * side;
                 set => side = System.Math.Sqrt(value);
             }
         }
@@ -173,7 +173,7 @@
 
             public override double Area
             {
-				get => 6 * side * side;                
+                get => 6 * side * side;                
                 set => side = System.Math.Sqrt(value / 6);                
             }
         }
@@ -227,17 +227,16 @@
         //<Snippet7>
         public class Date
         {
-            private int month = 7;  // Backing store
+            private int _month = 7;  // Backing store
 
             public int Month
             {
-                get => month;
-				
+                get => _month;
                 set
                 {
                     if ((value > 0) && (value < 13))
                     {
-                        month = value;
+                        _month = value;
                     }
                 }
             }
@@ -248,8 +247,8 @@
         //<Snippet8>
         class Person
         {
-            private string name;  // the name field
-            public string Name => name;     // the Name property            
+            private string _name;  // the name field
+            public string Name => _name;     // the Name property            
         }
         //</Snippet8>
 
@@ -267,16 +266,16 @@
         }
 
         //<Snippet10>
-        private int number;
-        public int Number => number++;	// Don't do this        
+        private int _number;
+        public int Number => _number++;	// Don't do this        
         //</Snippet10>
 
 
         //<Snippet11>
         class Employee
         {
-            private string name;
-            public string Name => name != null ? name : "NA"; 
+            private string _name;
+            public string Name => _name != null ? _name : "NA"; 
         }
         //</Snippet11>
     }
@@ -288,11 +287,11 @@
         //<Snippet12>
         class Person
         {
-            private string name;  // the name field
+            private string _name;  // the name field
             public string Name    // the Name property
             {
-                get => name;
-                set => name = value;
+                get => _name;
+                set => _name = value;
             }
         }
         //</Snippet12>
@@ -349,21 +348,21 @@
         {
             public static int numberOfEmployees;
 
-            private string name;
+            private string _name;
             public string Name  // read-write instance property
             {
-                get => name;                
-                set => name = value;
+                get => _name;                
+                set => _name = value;
             }
 
-            private int counter;
+            private int _counter;
             public int Counter  // read-only instance property
             {
-                get => counter;
+                get => _counter;
             }
 
             // constructor
-            public Employee() => counter = ++numberOfEmployees; 
+            public Employee() => _counter = ++numberOfEmployees; 
         }
 
         class TestEmployee

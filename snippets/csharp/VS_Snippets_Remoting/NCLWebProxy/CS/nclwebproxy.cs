@@ -44,7 +44,7 @@ public class ExampleForWebProxy
         //<snippet5>
         public static WebProxy CreateProxyWithHostAndPort()
         {
-            return new WebProxy("http://contoso", 80);
+            return new WebProxy("contoso", 80);
         }
         //</snippet5>    
         

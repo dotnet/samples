@@ -204,3 +204,6 @@ _dependentPackages/
 
 # Visual Studio Code
 .vscode/
+
+# Ionide
+.ionide/

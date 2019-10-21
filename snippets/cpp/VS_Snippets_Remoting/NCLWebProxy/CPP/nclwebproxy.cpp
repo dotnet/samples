@@ -45,7 +45,7 @@ WebProxy^ CreateProxyWithHost()
 //<snippet5>
 WebProxy^ CreateProxyWithHostAndPort()
 {
-   return gcnew WebProxy( "http://contoso",80 );
+   return gcnew WebProxy( "contoso",80 );
 }
 //</snippet5>    
 
