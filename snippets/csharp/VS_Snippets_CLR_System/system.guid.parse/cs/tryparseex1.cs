@@ -12,13 +12,11 @@ public class Example
                                originalGuid.ToString("X") };
       
       // Parse each string representation.
-      Guid newGuid;
       foreach (var stringGuid in stringGuids) {
-         if (Guid.TryParse(stringGuid, out newGuid))
-            Console.WriteLine("Converted {0} to a Guid", stringGuid);
+         if (Guid.TryParse(stringGuid, out var newGuid))
+            Console.WriteLine($"Converted {stringGuid} to a Guid");
          else
-            Console.WriteLine("Unable to convert {0} to a Guid", 
-                              stringGuid);
+            Console.WriteLine($"Unable to convert {stringGuid} to a Guid");
       }                                      
 
       // The example displays output similar to the following:
