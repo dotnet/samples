@@ -108,16 +108,13 @@ Namespace Keyboard
         Public Sub Method25()
             ' <snippet25>
             Dim ProcID As Integer
-            ' Start the Calculator application, and store the process id.
-            ProcID = Shell("CALC.EXE", AppWinStyle.NormalFocus)
-            ' Activate the Calculator application.
+            ' Start the Notepad application, and store the process id.
+            ProcID = Shell("NOTEPAD.EXE", AppWinStyle.NormalFocus)
+            ' Activate the Notepad application.
             AppActivate(ProcID)
-            ' Send the keystrokes to the Calculator application.
-            My.Computer.Keyboard.SendKeys("22", True)
-            My.Computer.Keyboard.SendKeys("*", True)
-            My.Computer.Keyboard.SendKeys("44", True)
-            My.Computer.Keyboard.SendKeys("=", True)
-            ' The result is 22 * 44 = 968.
+            ' Send the keystrokes to the Notepad application.
+            My.Computer.Keyboard.SendKeys("I ♥ Visual Basic!", True)
+            ' The sentence I ♥ Visual Basic! is printed on Notepad
             ' </snippet25>
         End Sub
 
