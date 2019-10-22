@@ -5,7 +5,7 @@ public class Example
    public static void Main()
    {
       // <Snippet1>
-      Guid guid = Guid.NewGuid();
+      var guid = Guid.NewGuid();
       Console.WriteLine($"Guid: {guid}");
       var bytes = guid.ToByteArray();
       foreach (var byt in bytes)
