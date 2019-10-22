@@ -17,7 +17,7 @@ public class Example
       foreach (var stringGuid in stringGuids) {
          Guid newGuid;
          if (Guid.TryParseExact(stringGuid, "B", out var newGuid))
-            Console.WriteLine("Successfully parsed {0}", stringGuid);
+            Console.WriteLine($"Successfully parsed {stringGuid}");
          else 
             Console.WriteLine($"Unable to parse '{stringGuid}'");
       }     
