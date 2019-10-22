@@ -8,7 +8,7 @@ class Sample
     {
         //<snippet1>
         // Create and display the value of two GUIDs.
-        g = Guid.NewGuid();
+        var g = Guid.NewGuid();
         Console.WriteLine(g);
         Console.WriteLine(Guid.NewGuid());
         
