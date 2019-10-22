@@ -6,7 +6,7 @@ public class Example
    {
       // <Snippet1>
       // Create a GUID and determine whether it consists of all zeros.
-      Guid guid1 = Guid.NewGuid();
+      var guid1 = Guid.NewGuid();
       Console.WriteLine(guid1);
       Console.WriteLine("Empty: {0}\n", guid1 == Guid.Empty);
       
