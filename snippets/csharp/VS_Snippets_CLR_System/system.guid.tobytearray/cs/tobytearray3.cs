@@ -9,7 +9,7 @@ public class Example
       Console.WriteLine($"Guid: {guid}");
       Byte[] bytes = guid.ToByteArray();
       foreach (var byt in bytes)
-         Console.Write("{0:X2} ", byt);
+         Console.Write($"{byt:X2} ");
 
       Console.WriteLine();
       var guid2 = new Guid(bytes);
