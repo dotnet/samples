@@ -5,7 +5,7 @@ public class Example
    public static void Main()
    {
       // <Snippet2>
-      Guid originalGuid = Guid.NewGuid();
+      var originalGuid = Guid.NewGuid();
       // Create an array of string representations of the GUID.
       string[] stringGuids = { originalGuid.ToString("B"),
                                originalGuid.ToString("D"),
