@@ -10,6 +10,7 @@ pr: none
 
 jobs:
 - job:
+  condition: eq(1,0)
   displayName: 'Run Linux Tests'
 
   pool:
@@ -35,10 +36,9 @@ jobs:
     displayName: 'Compile tool'
 
 - job:
-  condition: eq(1,1)
+  condition: eq(1,0)
   displayName: 'Run Windows Tests'
   
-
   pool:
     vmImage: 'windows-latest'
 
@@ -56,7 +56,19 @@ jobs:
   - script: |
       echo Init dotnet
       dotnet help > NUL
-      echo Find projects in dotnet-samples folder 
-      cd ../dotnet-docs-tools/LocateProjects/LocateProjects/
-      dotnet run -- $(Agent.BuildDirectory)/dotnet-samples/core
-    displayName: 'Compile tool'
+#      echo Find projects in dotnet-samples folder 
+#      cd ../dotnet-docs-tools/LocateProjects/LocateProjects/
+#      dotnet run -- $(Agent.BuildDirectory)/dotnet-samples/core
+    displayName: 'Init dotnet'
+
+  - powershell: "../dotnet-docs-tools/Get-MSBuildResults.ps1 | ConvertTo-Json | Out-File '$(Build.ArtifactStagingDirectory)/output.json'"
+    env: {
+      scantooldir: "../dotnet-docs-tools/LocateProjects/LocateProjects",
+      samplesrootdir: "$(Agent.BuildDirectory)/dotnet-samples/"
+    }
+    displayName: "Run build script"
+
+  - publish: $(Build.ArtifactStagingDirectory)/output.json
+    artifact: BuildResults
+    condition: always()
+    

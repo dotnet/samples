@@ -7,8 +7,7 @@ public class Example
       int caseSwitch = 1;
       // <Snippet1>
       switch (caseSwitch)  
-      {  
-          // The following switch section causes an error.  
+      {
           case 1:  
               Console.WriteLine("Case 1...");  
               break;  
