@@ -14,8 +14,8 @@ public class Example
       // Parse each string representation.
       foreach (var stringGuid in stringGuids) {
          try {     
-            Guid newGuid = Guid.Parse(stringGuid);
-            Console.WriteLine("Converted {0} to a Guid", stringGuid);
+            var newGuid = Guid.Parse(stringGuid);
+            Console.WriteLine($"Converted {stringGuid} to a Guid");
          }   
          catch (ArgumentNullException) {
             Console.WriteLine("The string to be parsed is null.");   
