@@ -8,7 +8,7 @@ public class Example
       // Create a GUID and determine whether it consists of all zeros.
       var guid1 = Guid.NewGuid();
       Console.WriteLine(guid1);
-      Console.WriteLine("Empty: {0}\n", guid1 == Guid.Empty);
+      Console.WriteLine($"Empty: {guid1 == Guid.Empty}\n");
       
       // Create a GUID with all zeros and compare it to Empty.
       Byte[] bytes = new Byte[16];
