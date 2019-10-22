@@ -11,7 +11,7 @@ pr: none
 jobs:
 - job:
   condition: eq(1,0)
-  displayName: 'Run Linux Tests'
+  displayName: 'Run CI on Windows'
 
   pool:
     vmImage: '$(VMIMAGE)'
@@ -36,8 +36,8 @@ jobs:
     displayName: 'Compile tool'
 
 - job:
-  condition: eq(1,0)
-  displayName: 'Run Windows Tests'
+  condition: eq(1,1)
+  displayName: 'Run CI on Windows'
   
   pool:
     vmImage: 'windows-latest'
