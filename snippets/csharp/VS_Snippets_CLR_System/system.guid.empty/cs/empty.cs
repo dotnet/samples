@@ -14,7 +14,7 @@ public class Example
       var bytes = new Byte[16];
       var guid2 = new Guid(bytes);
       Console.WriteLine(guid2);
-      Console.WriteLine("Empty: {0}", guid2 == Guid.Empty);
+      Console.WriteLine($"Empty: {guid2 == Guid.Empty}");
 
       // The example displays output like the following:
       //       11c43ee8-b9d3-4e51-b73f-bd9dda66e29c
