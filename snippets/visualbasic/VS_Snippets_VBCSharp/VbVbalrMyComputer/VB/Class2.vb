@@ -113,7 +113,9 @@ Namespace Keyboard
             ' Activate the Notepad application.
             AppActivate(ProcID)
             ' Send the keystrokes to the Notepad application.
-            My.Computer.Keyboard.SendKeys("I ♥ Visual Basic!", True)
+            My.Computer.Keyboard.SendKeys("I ", True)
+            My.Computer.Keyboard.SendKeys("♥", True)
+            My.Computer.Keyboard.SendKeys(" Visual Basic!", True)
             ' The sentence I ♥ Visual Basic! is printed on Notepad
             ' </snippet25>
         End Sub
