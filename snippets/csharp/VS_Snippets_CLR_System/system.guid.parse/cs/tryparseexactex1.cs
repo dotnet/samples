@@ -16,7 +16,7 @@ public class Example
       // Parse the strings in the array using the "B" format specifier.
       foreach (var stringGuid in stringGuids) {
          Guid newGuid;
-         if (Guid.TryParseExact(stringGuid, "B", out newGuid))
+         if (Guid.TryParseExact(stringGuid, "B", out var newGuid))
             Console.WriteLine("Successfully parsed {0}", stringGuid);
          else 
             Console.WriteLine($"Unable to parse '{stringGuid}'");
