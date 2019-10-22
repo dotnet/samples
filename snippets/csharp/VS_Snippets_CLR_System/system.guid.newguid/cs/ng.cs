@@ -7,7 +7,6 @@ class Sample
     public static void Main()
     {
         //<snippet1>
-        Guid g;
         // Create and display the value of two GUIDs.
         g = Guid.NewGuid();
         Console.WriteLine(g);
