@@ -12,7 +12,7 @@ public class Example
                                "{0xCA761232, 0xED42, 0x11CE, {0xBA, 0xCD, 0x00, 0xAA, 0x00, 0x57, 0xB2, 0x23}}" };
       foreach (var guidString in guidStrings) {
          Guid guid = new Guid(guidString);
-         Console.WriteLine("Original string: {0}", guidString);
+         Console.WriteLine($"Original string: {guidString}");
          Console.WriteLine($"Guid:            {guid}");
          Console.WriteLine();
       }
