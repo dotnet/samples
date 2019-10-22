@@ -7,7 +7,7 @@ public class Example
       // <Snippet4>
       // Define an array of all format specifiers.
       string[] formats = { "N", "D", "B", "P", "X" };
-      Guid guid = Guid.NewGuid();
+      var guid = Guid.NewGuid();
       // Create an array of valid Guid string representations.
       string[] stringGuids = new string[formats.Length];
       for (int ctr = 0; ctr < formats.Length; ctr++)
