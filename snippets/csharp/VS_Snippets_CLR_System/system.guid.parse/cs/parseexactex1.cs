@@ -9,15 +9,15 @@ public class Example
       string[] formats = { "N", "D", "B", "P", "X" };
       var guid = Guid.NewGuid();
       // Create an array of valid Guid string representations.
-      string[] stringGuids = new string[formats.Length];
+      var stringGuids = new string[formats.Length];
       for (int ctr = 0; ctr < formats.Length; ctr++)
          stringGuids[ctr] = guid.ToString(formats[ctr]);
 
       // Parse the strings in the array using the "B" format specifier.
       foreach (var stringGuid in stringGuids) {
          try {
-            Guid newGuid = Guid.ParseExact(stringGuid, "B");
-            Console.WriteLine("Successfully parsed {0}", stringGuid);
+            var newGuid = Guid.ParseExact(stringGuid, "B");
+            Console.WriteLine($"Successfully parsed {stringGuid}");
          }   
          catch (ArgumentNullException) { 
             Console.WriteLine("The string to be parsed is null.");
