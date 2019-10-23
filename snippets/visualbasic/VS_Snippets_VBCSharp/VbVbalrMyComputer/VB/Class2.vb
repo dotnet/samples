@@ -116,7 +116,7 @@ Namespace Keyboard
             My.Computer.Keyboard.SendKeys("I ", True)
             My.Computer.Keyboard.SendKeys("♥", True)
             My.Computer.Keyboard.SendKeys(" Visual Basic!", True)
-            ' The sentence I ♥ Visual Basic! is printed on Notepad
+            ' The sentence I ♥ Visual Basic! is printed on Notepad.
             ' </snippet25>
         End Sub
 
