@@ -296,4 +296,16 @@ Class Classf507460c87d94504b74f3ff825c7d5c4
 
 End Class
 
+Class Class06080bd0415642afbe99a0d83939b0d8
+    ' My.Computer.FileSystem.OpenTextFileWriterMethod
 
+    Public Sub Method23()
+        ' <snippet23>
+        Dim file = My.Computer.FileSystem.OpenTextFileWriter(
+            "c:\test.txt", True, Text.Encoding.Unicode)
+        file.WriteLine("Here is the first string.")
+        file.Close()
+        ' </snippet23>
+    End Sub
+
+End Class
