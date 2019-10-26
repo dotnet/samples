@@ -11,16 +11,16 @@ namespace WordSpell
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
 
-        public Form1()  //constructor
+        public Form1()  // Constructor.
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, System.EventArgs e)
         {
-            Word.Application app = new Word.Application();
+            var app = new Word.Application();
 
-            int errors = 0;
+            var errors = 0;
             if (textBox1.Text.Length > 0)
             {
                 app.Visible = false;
@@ -43,7 +43,7 @@ namespace WordSpell
                     ref optional, ref optional, ref optional, ref optional, ref optional, ref optional,
                     ref optional, ref optional, ref optional, ref optional, ref optional, ref optional);
 
-                label1.Text = errors + " errors corrected ";
+                label1.Text = $"{errors} errors corrected ";
                 object first = 0;
                 object last = doc1.Characters.Count - 1;
                 textBox1.Text = doc1.Range(ref first, ref last).Text;
@@ -61,7 +61,7 @@ namespace WordSpell
 
 
 //-----------------------------------------------------------------------------
-// Form1.Desgner.cs
+// Form1.Designer.cs
 //-----------------------------------------------------------------------------
 namespace Microsoft.Office.Interop
 {
@@ -190,7 +190,7 @@ namespace WordSpell
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing&&(components!=null))
+            if (disposing && (components != null))
             {
                 components.Dispose();
             }
@@ -203,9 +203,9 @@ namespace WordSpell
         /// </summary>
         private void InitializeComponent()
         {
-            this.components=new System.ComponentModel.Container();
-            this.AutoScaleMode=System.Windows.Forms.AutoScaleMode.Font;
-            this.Text="Form1";
+            this.components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Text = "Form1";
 
             //<Snippet7>
             this.textBox1 = new System.Windows.Forms.TextBox();
