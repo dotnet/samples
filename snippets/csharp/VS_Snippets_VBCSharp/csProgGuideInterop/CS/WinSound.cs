@@ -15,7 +15,7 @@ namespace WinSound
             InitializeComponent();
         }
 
-        [System.Runtime.InteropServices.DllImport("winmm.DLL", EntryPoint = "PlaySound", SetLastError = true, CharSet = CharSet.Unicode, ThrowOnUnmappableChar = true)]
+        [DllImport("winmm.DLL", EntryPoint = "PlaySound", SetLastError = true, CharSet = CharSet.Unicode, ThrowOnUnmappableChar = true)]
         private static extern bool PlaySound(string szSound, System.IntPtr hMod, PlaySoundFlags flags);
 
         [System.Flags] 
