@@ -57,7 +57,7 @@
             return avg > 0 ? (int)avg / 10 : 0;
         }
 
-        public void QueryHighScores(int exam, int score)
+        public static void QueryHighScores(int exam, int score)
         {
             var highScores = from student in students
                              where student.ExamScores[exam] > score
@@ -74,8 +74,7 @@
     {
         public static void Main()
         {
-            var sc = new Student();
-            sc.QueryHighScores(1, 90);
+            Student.QueryHighScores(1, 90);
 
             // Keep the console window open in debug mode.
             Console.WriteLine("Press any key to exit");
