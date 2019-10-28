@@ -87,8 +87,7 @@ public class PipeClient
                 {
                     if (plist[j].HasExited)
                     {
-                        Console.WriteLine("Client process[{0}] has exited.",
-                            plist[j].Id);
+                        Console.WriteLine($"Client process[{plist[j].Id}] has exited.");
                         plist[j] = null;
                         i--;    // decrement the process watch count
                     }
