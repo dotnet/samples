@@ -1,17 +1,17 @@
 ﻿'<snippet01>
+Imports System.Diagnostics
 Imports System.IO
 Imports System.IO.Pipes
-Imports System.Text
 Imports System.Security.Principal
-Imports System.Diagnostics
+Imports System.Text
 Imports System.Threading
 
 Public Class PipeClient
     Private Shared numClients As Integer = 4
 
-    Public Shared Sub Main(Args() As String)
-        If Args.Length > 0 Then
-            If Args(0) = "spawnclient" Then
+    Public Shared Sub Main(args() As String)
+        If args.Length > 0 Then
+            If args(0) = "spawnclient" Then
                 Dim pipeClient As New NamedPipeClientStream( _
                     ".", "testpipe", _
                     PipeDirection.InOut, PipeOptions.None, _
@@ -22,7 +22,7 @@ Public Class PipeClient
 
                 '<snippet2>
                 Dim ss As New StreamString(pipeClient)
-                ' Validate the server's signature string
+                ' Validate the server's signature string.
                 If ss.ReadString() = "I am the one true server!" Then
                     ' The client security token is sent with the first write.
                     ' Send the name of the file whose contents are returned
@@ -47,40 +47,39 @@ Public Class PipeClient
 
     ' Helper function to create pipe client processes
     Private Shared Sub StartClients()
-        Dim i As Integer
         Dim currentProcessName As String = Environment.CommandLine
-        Dim plist(numClients) As Process
+        Dim plist(numClients - 1) As Process
 
         Console.WriteLine("Spawning client processes..." + vbNewLine)
 
-        If (currentProcessName.Contains(Environment.CurrentDirectory)) Then
+        If currentProcessName.Contains(Environment.CurrentDirectory) Then
             currentProcessName = currentProcessName.Replace(Environment.CurrentDirectory, String.Empty)
         End If
 
-        ' Remove extra characters when launched from Visual Studio
+        ' Remove extra characters when launched from Visual Studio.
         currentProcessName = currentProcessName.Replace("\", String.Empty)
         currentProcessName = currentProcessName.Replace("""", String.Empty)
-        
-        ' Change extension for .NET Core "dotnet run" returns the DLL, not the host exe:
+
+        ' Change extension for .NET Core "dotnet run" returns the DLL, not the host exe.
         currentProcessName = Path.ChangeExtension(currentProcessName, ".exe")
 
+        Dim i As Integer
         For i = 0 To numClients - 1
             ' Start 'this' program but spawn a named pipe client.
             plist(i) = Process.Start(currentProcessName, "spawnclient")
-        Next i
+        Next
         While i > 0
             For j As Integer = 0 To numClients - 1
-                If Not (plist(j) Is Nothing) Then
+                If plist(j) IsNot Nothing Then
                     If plist(j).HasExited Then
-                        Console.WriteLine("Client process[{0}] has exited.", _
-                            plist(j).Id)
+                        Console.WriteLine($"Client process[{plist(j).Id}] has exited.")
                         plist(j) = Nothing
                         i -= 1    ' decrement the process watch count
                     Else
                         Thread.Sleep(250)
                     End If
                 End If
-            Next j
+            Next
         End While
         Console.WriteLine(vbNewLine + "Client processes finished, exiting.")
     End Sub
@@ -107,7 +106,7 @@ Public Class StreamString
     End Function
 
     Public Function WriteString(outString As String) As Integer
-        Dim outBuffer() As Byte = streamEncoding.GetBytes(outString)
+        Dim outBuffer As Byte() = streamEncoding.GetBytes(outString)
         Dim len As Integer = outBuffer.Length
         If len > UInt16.MaxValue Then
             len = CType(UInt16.MaxValue, Integer)
