@@ -58,7 +58,6 @@ public class PipeClient
     // Helper function to create pipe client processes
     private static void StartClients()
     {
-        int i;
         string currentProcessName = Environment.CommandLine;
         currentProcessName = Path.ChangeExtension(currentProcessName, ".exe");
         Process[] plist = new Process[numClients];
@@ -74,6 +73,7 @@ public class PipeClient
         currentProcessName = currentProcessName.Replace("\\", String.Empty);
         currentProcessName = currentProcessName.Replace("\"", String.Empty);
 
+        int i;
         for (i = 0; i < numClients; i++)
         {
             // Start 'this' program but spawn a named pipe client.
