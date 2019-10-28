@@ -17,7 +17,7 @@ public class PipeClient
         {
             if (args[0] == "spawnclient")
             {
-                NamedPipeClientStream pipeClient =
+                var pipeClient =
                     new NamedPipeClientStream(".", "testpipe",
                         PipeDirection.InOut, PipeOptions.None,
                         TokenImpersonationLevel.Impersonation);
@@ -26,7 +26,7 @@ public class PipeClient
                 pipeClient.Connect();
 
                 //<snippet2>
-                StreamString ss = new StreamString(pipeClient);
+                var ss = new StreamString(pipeClient);
                 // Validate the server's signature string.
                 if (ss.ReadString() == "I am the one true server!")
                 {
@@ -119,7 +119,7 @@ public class StreamString
         int len;
         len = ioStream.ReadByte() * 256;
         len += ioStream.ReadByte();
-        byte[] inBuffer = new byte[len];
+        var inBuffer = new byte[len];
         ioStream.Read(inBuffer, 0, len);
 
         return streamEncoding.GetString(inBuffer);
