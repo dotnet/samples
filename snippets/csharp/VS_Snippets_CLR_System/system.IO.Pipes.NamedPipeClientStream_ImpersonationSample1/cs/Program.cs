@@ -11,11 +11,11 @@ public class PipeClient
 {
     private static int numClients = 4;
 
-    public static void Main(string[] Args)
+    public static void Main(string[] args)
     {
-        if (Args.Length > 0)
+        if (args.Length > 0)
         {
-            if (Args[0] == "spawnclient")
+            if (args[0] == "spawnclient")
             {
                 NamedPipeClientStream pipeClient =
                     new NamedPipeClientStream(".", "testpipe",
