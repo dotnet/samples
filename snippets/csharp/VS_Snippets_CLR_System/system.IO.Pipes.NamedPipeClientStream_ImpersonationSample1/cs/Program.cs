@@ -27,7 +27,7 @@ public class PipeClient
 
                 //<snippet2>
                 StreamString ss = new StreamString(pipeClient);
-                // Validate the server's signature string
+                // Validate the server's signature string.
                 if (ss.ReadString() == "I am the one true server!")
                 {
                     // The client security token is sent with the first write.
@@ -103,7 +103,7 @@ public class PipeClient
     }
 }
 
-// Defines the data protocol for reading and writing strings on our stream
+// Defines the data protocol for reading and writing strings on our stream.
 public class StreamString
 {
     private Stream ioStream;
