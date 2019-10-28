@@ -60,6 +60,7 @@ public class PipeClient
     {
         int i;
         string currentProcessName = Environment.CommandLine;
+        currentProcessName = Path.ChangeExtension(currentProcessName, ".exe");
         Process[] plist = new Process[numClients];
 
         Console.WriteLine("Spawning client processes...\n");
