@@ -60,6 +60,9 @@ Public Class PipeClient
         ' Remove extra characters when launched from Visual Studio
         currentProcessName = currentProcessName.Replace("\", String.Empty)
         currentProcessName = currentProcessName.Replace("""", String.Empty)
+        
+        ' Change extension for .NET Core "dotnet run" returns the DLL, not the host exe:
+        currentProcessName = Path.ChangeExtension(currentProcessName, ".exe")
 
         For i = 0 To numClients - 1
             ' Start 'this' program but spawn a named pipe client.
