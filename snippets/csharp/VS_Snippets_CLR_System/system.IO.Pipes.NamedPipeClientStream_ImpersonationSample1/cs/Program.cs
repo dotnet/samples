@@ -1,10 +1,10 @@
 ﻿//<snippet01>
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.IO.Pipes;
-using System.Text;
 using System.Security.Principal;
-using System.Diagnostics;
+using System.Text;
 using System.Threading;
 
 public class PipeClient
