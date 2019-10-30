@@ -34,6 +34,8 @@ namespace TransferLearningTF
             // <SnippetCallClassifySingleImage>
             ClassifySingleImage(mlContext, model);
             // </SnippetCallClassifySingleImage>
+
+            Console.ReadKey();
         }
 
 
@@ -77,10 +79,10 @@ namespace TransferLearningTF
             // Generate predictions from the test data, to be evaluated
             // <SnippetLoadAndTransformTestData>
             IDataView testData = mlContext.Data.LoadFromTextFile<ImageData>(path: _testTagsTsv, hasHeader: false);
-            IDataView predictions = model.Transform(trainingData);
+            IDataView predictions = model.Transform(testData);
 
             // Create an IEnumerable for the predictions for displaying results
-            IEnumerable<ImagePrediction> imagePredictionData = mlContext.Data.CreateEnumerable<ImagePrediction>(predictions, false);
+            IEnumerable<ImagePrediction> imagePredictionData = mlContext.Data.CreateEnumerable<ImagePrediction>(predictions, true);
             DisplayResults(imagePredictionData);
             // </SnippetLoadAndTransformTestData>
 
