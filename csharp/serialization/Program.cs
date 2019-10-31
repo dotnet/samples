@@ -16,7 +16,7 @@ namespace serialization
             // </Snippet4>
 
             // <Snippet1>
-            Loan TestLoan = new Loan(10000.0, 0.075, 36, "Neil Black");
+            Loan TestLoan = new Loan(10000.0, 7.5, 36, "Neil Black");
             // </Snippet1>
 
             // <Snippet5>
