@@ -105,15 +105,14 @@ namespace TaxiFarePrediction
             var predictionFunction = mlContext.Model.CreatePredictionEngine<TaxiTrip, TaxiTripFarePrediction>(model);
             // </Snippet22>
             //Sample: 
-            //vendor_id,rate_code,passenger_count,trip_time_in_secs,trip_distance,payment_type,fare_amount
-            //VTS,1,1,1140,3.75,CRD,15.5
+            //vendor_id,rate_code,passenger_count,trip_distance,payment_type,fare_amount
+            //VTS,1,1,3.75,CRD,15.5
             // <Snippet23>
             var taxiTripSample = new TaxiTrip()
             {
                 VendorId = "VTS",
                 RateCode = "1",
                 PassengerCount = 1,
-                TripTime = 1140,
                 TripDistance = 3.75f,
                 PaymentType = "CRD",
                 FareAmount = 0 // To predict. Actual/Observed = 15.5
