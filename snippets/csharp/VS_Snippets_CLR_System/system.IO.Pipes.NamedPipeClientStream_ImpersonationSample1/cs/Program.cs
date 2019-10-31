@@ -1,23 +1,23 @@
 ﻿//<snippet01>
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.IO.Pipes;
-using System.Text;
 using System.Security.Principal;
-using System.Diagnostics;
+using System.Text;
 using System.Threading;
 
 public class PipeClient
 {
     private static int numClients = 4;
 
-    public static void Main(string[] Args)
+    public static void Main(string[] args)
     {
-        if (Args.Length > 0)
+        if (args.Length > 0)
         {
-            if (Args[0] == "spawnclient")
+            if (args[0] == "spawnclient")
             {
-                NamedPipeClientStream pipeClient =
+                var pipeClient =
                     new NamedPipeClientStream(".", "testpipe",
                         PipeDirection.InOut, PipeOptions.None,
                         TokenImpersonationLevel.Impersonation);
@@ -26,8 +26,8 @@ public class PipeClient
                 pipeClient.Connect();
 
                 //<snippet2>
-                StreamString ss = new StreamString(pipeClient);
-                // Validate the server's signature string
+                var ss = new StreamString(pipeClient);
+                // Validate the server's signature string.
                 if (ss.ReadString() == "I am the one true server!")
                 {
                     // The client security token is sent with the first write.
@@ -58,8 +58,8 @@ public class PipeClient
     // Helper function to create pipe client processes
     private static void StartClients()
     {
-        int i;
         string currentProcessName = Environment.CommandLine;
+        currentProcessName = Path.ChangeExtension(currentProcessName, ".exe");
         Process[] plist = new Process[numClients];
 
         Console.WriteLine("Spawning client processes...\n");
@@ -73,6 +73,7 @@ public class PipeClient
         currentProcessName = currentProcessName.Replace("\\", String.Empty);
         currentProcessName = currentProcessName.Replace("\"", String.Empty);
 
+        int i;
         for (i = 0; i < numClients; i++)
         {
             // Start 'this' program but spawn a named pipe client.
@@ -86,8 +87,7 @@ public class PipeClient
                 {
                     if (plist[j].HasExited)
                     {
-                        Console.WriteLine("Client process[{0}] has exited.",
-                            plist[j].Id);
+                        Console.WriteLine($"Client process[{plist[j].Id}] has exited.");
                         plist[j] = null;
                         i--;    // decrement the process watch count
                     }
@@ -102,7 +102,7 @@ public class PipeClient
     }
 }
 
-// Defines the data protocol for reading and writing strings on our stream
+// Defines the data protocol for reading and writing strings on our stream.
 public class StreamString
 {
     private Stream ioStream;
@@ -119,7 +119,7 @@ public class StreamString
         int len;
         len = ioStream.ReadByte() * 256;
         len += ioStream.ReadByte();
-        byte[] inBuffer = new byte[len];
+        var inBuffer = new byte[len];
         ioStream.Read(inBuffer, 0, len);
 
         return streamEncoding.GetString(inBuffer);

@@ -16,7 +16,7 @@ namespace serialization
             // </Snippet4>
 
             // <Snippet1>
-            Loan TestLoan = new Loan(10000.0, 0.075, 36, "Neil Black");
+            Loan TestLoan = new Loan(10000.0, 7.5, 36, "Neil Black");
             // </Snippet1>
 
             // <Snippet5>
@@ -35,9 +35,9 @@ namespace serialization
             TestLoan.PropertyChanged += (_, __) => Console.WriteLine($"New customer value: {TestLoan.Customer}");
 
             TestLoan.Customer = "Henry Clay";
-            Console.WriteLine(TestLoan.InterestRate);
-            TestLoan.InterestRate = 7.1;
-            Console.WriteLine(TestLoan.InterestRate);
+            Console.WriteLine(TestLoan.InterestRatePercent);
+            TestLoan.InterestRatePercent = 7.1;
+            Console.WriteLine(TestLoan.InterestRatePercent);
             // </Snippet2>
 
             // <Snippet6>
