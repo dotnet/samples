@@ -7,7 +7,7 @@ namespace DelegatesAndEvents
         public static void Main(string[] args)
         {
             // <SnippetConnectDelegate>
-            Logger.WriteMessage += LogToConsole;
+            Logger.WriteMessage += LoggingMethods.LogToConsole;
             // </SnippetConnectDelegate>
             // <SnippetFileLogger>
             var file = new FileLogger("log.txt");
