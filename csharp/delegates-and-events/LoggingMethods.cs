@@ -2,6 +2,7 @@ using System;
 
 namespace DelegatesAndEvents
 {
+    // <SnippetLogToConsole>
     public static class LoggingMethods
     {
         public static void LogToConsole(string message)
@@ -9,4 +10,5 @@ namespace DelegatesAndEvents
             Console.Error.WriteLine(message);
         }
     }
+    // </SnippetLogToConsole>
 }
