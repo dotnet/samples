@@ -12,7 +12,7 @@ namespace serialization
    public class Loan : INotifyPropertyChanged
     {
         public double LoanAmount { get; set; }
-        public double InterestRate { get; set; }
+        public double InterestRatePercent { get; set; }
 
         // <Snippet4>
         [field:NonSerialized()]
@@ -44,7 +44,7 @@ namespace serialization
                     string customer)
         {
             this.LoanAmount = loanAmount;
-            this.InterestRate = interestRate;
+            this.InterestRatePercent = interestRate;
             this.Term = term;
             this.customer = customer;
         }
