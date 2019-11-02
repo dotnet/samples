@@ -8,30 +8,31 @@ To build/use any of these (using `new-library` as an example):
 
 2. Navigate to the top-level directory:
 
-	`$ cd new-library`
+    `$ cd new-library`
 
 3. Restore packages by typing the following:
 
-	`$ dotnet restore`
+    `$ dotnet restore`
 	
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+    **Note:** Starting with .NET Core 2.0 SDK, you don't have to run [`dotnet restore`](https://docs.microsoft.com/dotnet/core/tools/dotnet-restore) because it's run implicitly by all commands that require a restore to occur, such as `dotnet new`, `dotnet build` and `dotnet run`. It's still a valid command in certain scenarios where doing an explicit restore makes sense, such as [continuous integration builds in Azure DevOps Services](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core) or in build systems that need to explicitly control the time at which the restore occurs.
 	
 		
 4. To build and package the library as a NuGet package, type the following:
 
-	`$ cd src/Library`
-	
-	`$ dotnet build`
-	
-	`$ dotnet pack`
-	
-	Check out the `/bin/Debug` directory to see the generated artifacts and `.nupkg`.
+    ```
+    $ cd src/Library
+    $ dotnet build
+    $ dotnet pack
+    ```
+
+    Check out the `/bin/Debug` directory to see the generated artifacts and `.nupkg`.
 
 5. To run unit tests (only applicable to `new-library`):
 
-	`$ cd ../../test/LibraryTests`
-	
-	`$ dotnet test`
+    ```
+    $ cd ../../test/LibraryTests
+    $ dotnet test
+    ```
 
 And that's it!
 
