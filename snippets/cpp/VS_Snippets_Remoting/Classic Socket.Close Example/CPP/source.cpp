@@ -13,8 +13,17 @@ protected:
    void Method( Socket^ aSocket )
    {
       // <Snippet1>
-      aSocket->Shutdown( SocketShutdown::Both );
-      aSocket->Close();
+      try
+      {
+         aSocket->Shutdown(SocketShutdown::Both);
+         aSocket->Close();
+      }
+      catch (...)
+      {
+         aSocket->Close();
+         throw;
+      }
+
       if ( aSocket->Connected )
       {
          Console::WriteLine( "Winsock error: {0}", Convert::ToString(

@@ -49,6 +49,13 @@ namespace WinSound
                 PlaySound(dialog1.FileName, new System.IntPtr(), PlaySoundFlags.SND_SYNC);
             }
         }
+        
+        private void Form1_Load(object sender, EventArgs e) 
+        { 
+            // Including this empty method in the sample because in the IDE,
+            // when users click on the form, generates code that looks for a default method
+            // with this name. We add it here to prevent confusion for those using the samples.
+        }
     }
 }
 //</Snippet3>
