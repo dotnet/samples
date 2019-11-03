@@ -1,1 +1,1 @@
-seq { for i in 1 .. 10 do yield i * i }
+seq { for i in 1 .. 10 -> i * i }

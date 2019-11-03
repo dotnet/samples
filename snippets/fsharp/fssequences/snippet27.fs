@@ -4,7 +4,7 @@ let isPrime n =
         i > n/2 || (n % i <> 0 && check (i + 1))
     check 2
 
-let seqPrimes = seq { for n in 2 .. 10000 do if isPrime n then yield n }
+let seqPrimes = seq { for n in 2 .. 10000 do if isPrime n then n }
 // Cache the sequence to avoid recomputing the sequence elements.
 let cachedSeq = Seq.cache seqPrimes
 for index in 1..5 do
