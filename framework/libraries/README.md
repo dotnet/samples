@@ -2,13 +2,13 @@
 
 These samples are buildable projects whose source is used for code snippets in [the guide for writing cross-platform libraries](https://docs.microsoft.com/dotnet/core/tutorials/libraries).  They can be built and run using the .NET Core toolchain, and are intended to simply demonstrate how to target and build NuGet packages for different targets.  They aren't examples of how you'd build a real, feature-complete library.
 
-To build/use any of these (using `new-library` as an example):
+To build/use any of these (using `frameworks-library` as an example):
 
 1. Open your favorite Command Line Interface (for example, Cmd.exe or Terminal).
 
 2. Navigate to the top-level directory:
 
-    `$ cd new-library`
+    `$ cd frameworks-library`
 
 3. Restore packages by typing the following:
 
@@ -27,7 +27,7 @@ To build/use any of these (using `new-library` as an example):
 
     Check out the `/bin/Debug` directory to see the generated artifacts and `.nupkg`.
 
-5. To run unit tests (only applicable to `new-library`):
+5. To run unit tests (if applicable):
 
     ```
     $ cd ../../test/LibraryTests
@@ -35,16 +35,6 @@ To build/use any of these (using `new-library` as an example):
     ```
 
 And that's it!
-
-## new-library
-
-The project under `/new-library` targets **only** .NET Core. For that reason,
-this project is stored under the core project directory, so our build server builds it on
-all platforms. Look under https://github.com/dotnet/samples/tree/master/core/libraries/new-library/. <!-- TODO: THIS LINK IS DEAD !! -->
-
-It demonstrates two other things: how to use multiple projects, and how to test.
-
-The sample showcases two libraries.  The first, `DependencyLibrary`, contains functionality that the second, `Library` uses.  The `LibraryTests` test project takes a dependency on `Library` to test that project.
 
 ## frameworks-library
 
