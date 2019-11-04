@@ -6,7 +6,7 @@ namespace PInvokeSamples
     public static class Program
     {
         // Define a delegate that has the same signature as the native function.
-        private delegate int DirClbk(string fName, StatClass stat, int typeFlag);
+        private delegate int DirClbk(string fName, ref StatClass stat, int typeFlag);
 
         // Import the libc and define the method to represent the native function.
         [DllImport("libc.so.6")]
@@ -14,7 +14,7 @@ namespace PInvokeSamples
 
         // Implement the above DirClbk delegate;
         // this one just prints out the filename that is passed to it.
-        private static int DisplayEntry(string fName, StatClass stat, int typeFlag)
+        private static int DisplayEntry(string fName, ref StatClass stat, int typeFlag)
         {
             Console.WriteLine(fName);
             return 0;
