@@ -2,48 +2,39 @@
 
 These samples are buildable projects whose source is used for code snippets in [the guide for writing cross-platform libraries](https://docs.microsoft.com/dotnet/core/tutorials/libraries).  They can be built and run using the .NET Core toolchain, and are intended to simply demonstrate how to target and build NuGet packages for different targets.  They aren't examples of how you'd build a real, feature-complete library.
 
-To build/use any of these (using `new-library` as an example):
+To build/use any of these (using `frameworks-library` as an example):
 
 1. Open your favorite Command Line Interface (for example, Cmd.exe or Terminal).
 
 2. Navigate to the top-level directory:
 
-	`$ cd new-library`
+    `$ cd frameworks-library`
 
 3. Restore packages by typing the following:
 
-	`$ dotnet restore`
+    `$ dotnet restore`
 	
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+    **Note:** Starting with .NET Core 2.0 SDK, you don't have to run [`dotnet restore`](https://docs.microsoft.com/dotnet/core/tools/dotnet-restore) because it's run implicitly by all commands that require a restore to occur, such as `dotnet new`, `dotnet build` and `dotnet run`. It's still a valid command in certain scenarios where doing an explicit restore makes sense, such as [continuous integration builds in Azure DevOps Services](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core) or in build systems that need to explicitly control the time at which the restore occurs.
 	
 		
 4. To build and package the library as a NuGet package, type the following:
 
-	`$ cd src/Library`
-	
-	`$ dotnet build`
-	
-	`$ dotnet pack`
-	
-	Check out the `/bin/Debug` directory to see the generated artifacts and `.nupkg`.
+    ```
+    $ cd src/Library
+    $ dotnet build
+    $ dotnet pack
+    ```
 
-5. To run unit tests (only applicable to `new-library`):
+    Check out the `/bin/Debug` directory to see the generated artifacts and `.nupkg`.
 
-	`$ cd ../../test/LibraryTests`
-	
-	`$ dotnet test`
+5. To run unit tests (if applicable):
+
+    ```
+    $ cd ../../test/LibraryTests
+    $ dotnet test
+    ```
 
 And that's it!
-
-## new-library
-
-The project under `/new-library` targets **only** .NET Core. For that reason,
-this project is stored under the core project directory, so our build server builds it on
-all platforms. Look under https://github.com/dotnet/samples/tree/master/core/libraries/new-library/.
-
-It demonstrates two other things: how to use multiple projects, and how to test.
-
-The sample showcases two libraries.  The first, `DependencyLibrary`, contains functionality that the second, `Library` uses.  The `LibraryTests` test project takes a dependency on `Library` to test that project.
 
 ## frameworks-library
 
