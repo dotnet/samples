@@ -8,9 +8,9 @@ public class Person
 
     public Person(string fname, string mname, string lname)
     {
-       FirstName = fname;
-       MiddleName = mname;
-       LastName = lname;
+        FirstName = fname;
+        MiddleName = mname;
+        LastName = lname;
     }
     // <Snippet1>
     public void Deconstruct(out string fname, out string mname, out string lname)
@@ -25,11 +25,11 @@ public class Person
 
 public class Example
 {
-   public static void Main()
-   {
-       var p = new Person("John", "Quincy", "Adams");
-       // <Snippet2>
-       var (fName, mName, lName) = p;
-       // </Snippet2>
-   }
+    public static void Main()
+    {
+        var p = new Person("John", "Quincy", "Adams");
+        // <Snippet2>
+        var (fName, mName, lName) = p;
+        // </Snippet2>
+    }
 }
