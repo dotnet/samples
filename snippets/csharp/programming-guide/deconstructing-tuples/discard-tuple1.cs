@@ -23,7 +23,7 @@ public class Example
          if (year2 == 2010) {
             population2 = 8175133;
          }
-      return (name, area, year1, population1, year2, population2);
+         return (name, area, year1, population1, year2, population2);
       }
 
       return ("", 0, 0, 0, 0, 0);
