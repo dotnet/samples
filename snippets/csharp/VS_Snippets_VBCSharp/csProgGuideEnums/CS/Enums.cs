@@ -108,7 +108,7 @@ namespace Enums
             //<snippet7>
             // Test value of flags using bitwise AND.
             bool test = (meetingDays & Days.Thursday) == Days.Thursday;
-            Console.WriteLine($"Thursday {test == true ? "is" : "is not"} a meeting day.");
+            Console.WriteLine($"Thursday {(test == true ? "is" : "is not")} a meeting day.");
             // Output: Thursday is a meeting day.
             //</snippet7>
 
