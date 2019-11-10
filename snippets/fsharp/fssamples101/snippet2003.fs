@@ -11,7 +11,7 @@ let CSVFileEnumerator(fileName) =
           while not sr.EndOfStream do
              let line = sr.ReadLine()
              let words = line.Split [|',';' ';'\t'|]
-             yield words }
+             words }
 
 // Now test this out on our test file, iterating the entire file
 let test = CSVFileEnumerator(@"test.csv")
