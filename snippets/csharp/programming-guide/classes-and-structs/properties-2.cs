@@ -18,10 +18,10 @@ public class Example
 {
    public static void Main()
    {
-      var person = new Person("Isabelle", "Butts");
+      var person = new Person("Magnus", "Hedlund");
       Console.WriteLine(person.Name);
    }
 }
 // The example displays the following output:
-//      Isabelle Butts
+//      Magnus Hedlund
 
