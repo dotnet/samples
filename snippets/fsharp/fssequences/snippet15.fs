@@ -1,4 +1,3 @@
-// infiniteSequences.fs
 // generateInfiniteSequence generates sequences of floating point
 // numbers. The sequences generated are computed from the fDenominator
 // function, which has the type (int -> float) and computes the
@@ -7,26 +6,31 @@
 // alternating signs.
 let generateInfiniteSequence fDenominator isAlternating =
     if (isAlternating) then
-        Seq.initInfinite (fun index -> 1.0 /(fDenominator index) * (if (index % 2 = 0) then -1.0 else 1.0))
+        Seq.initInfinite (fun index ->
+            1.0 /(fDenominator index) * (if (index % 2 = 0) then -1.0 else 1.0))
     else
         Seq.initInfinite (fun index -> 1.0 /(fDenominator index))
 
-// The harmonic series is the series of reciprocals of whole numbers.
-let harmonicSeries = generateInfiniteSequence (fun index -> float index) false
 // The harmonic alternating series is like the harmonic series
 // except that it has alternating signs.
 let harmonicAlternatingSeries = generateInfiniteSequence (fun index -> float index) true
+
 // This is the series of reciprocals of the odd numbers.
 let oddNumberSeries = generateInfiniteSequence (fun index -> float (2 * index - 1)) true
+
 // This is the series of recipocals of the squares.
 let squaresSeries = generateInfiniteSequence (fun index -> float (index * index)) false
 
 // This function sums a sequence, up to the specified number of terms.
 let sumSeq length sequence =
+    (0, 0.0)
+    |>
     Seq.unfold (fun state ->
-        let subtotal = snd state + Seq.nth (fst state + 1) sequence
-        if (fst state >= length) then None
-        else Some(subtotal,(fst state + 1, subtotal))) (0, 0.0)
+        let subtotal = snd state + Seq.item (fst state + 1) sequence
+        if (fst state >= length) then
+            None
+        else
+            Some(subtotal, (fst state + 1, subtotal)))
 
 // This function sums an infinite sequence up to a given value
 // for the difference (epsilon) between subsequent terms,
