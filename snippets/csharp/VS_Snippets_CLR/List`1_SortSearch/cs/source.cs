@@ -1,5 +1,4 @@
 ﻿// REDMOND\glennha
-// <Snippet1>
 using System;
 using System.Collections.Generic;
 
@@ -7,6 +6,7 @@ public class Example
 {
     public static void Main()
     {
+        // <Snippet1>
         List<string> dinosaurs = new List<string>();
 
         dinosaurs.Add("Pachycephalosaurus");
@@ -14,13 +14,14 @@ public class Example
         dinosaurs.Add("Mamenchisaurus");
         dinosaurs.Add("Deinonychus");
 
+        Console.WriteLine("Initial list:");
         Console.WriteLine();
         foreach(string dinosaur in dinosaurs)
         {
             Console.WriteLine(dinosaur);
         }
 
-        Console.WriteLine("\nSort");
+        Console.WriteLine("\nSort:");
         dinosaurs.Sort();
 
         Console.WriteLine();
@@ -54,40 +55,39 @@ public class Example
         {
             Console.WriteLine(dinosaur);
         }
+        /* This code example produces the following output:
+
+        Initial list:
+        
+        Pachycephalosaurus
+        Amargasaurus
+        Mamenchisaurus
+        Deinonychus
+
+        Sort:
+
+        Amargasaurus
+        Deinonychus
+        Mamenchisaurus
+        Pachycephalosaurus
+
+        BinarySearch and Insert "Coelophysis":
+
+        Amargasaurus
+        Coelophysis
+        Deinonychus
+        Mamenchisaurus
+        Pachycephalosaurus
+
+        BinarySearch and Insert "Tyrannosaurus":
+
+        Amargasaurus
+        Coelophysis
+        Deinonychus
+        Mamenchisaurus
+        Pachycephalosaurus
+        Tyrannosaurus
+        */
+        // </Snippet1>
     }
 }
-
-/* This code example produces the following output:
-
-Pachycephalosaurus
-Amargasaurus
-Mamenchisaurus
-Deinonychus
-
-Sort
-
-Amargasaurus
-Deinonychus
-Mamenchisaurus
-Pachycephalosaurus
-
-BinarySearch and Insert "Coelophysis":
-
-Amargasaurus
-Coelophysis
-Deinonychus
-Mamenchisaurus
-Pachycephalosaurus
-
-BinarySearch and Insert "Tyrannosaurus":
-
-Amargasaurus
-Coelophysis
-Deinonychus
-Mamenchisaurus
-Pachycephalosaurus
-Tyrannosaurus
- */
-// </Snippet1>
-
-
