@@ -21,7 +21,7 @@ public class Class1
                         elapsedSpan.Days, elapsedSpan.Hours, 
                         elapsedSpan.Minutes, elapsedSpan.Seconds);
 
-      // If run on November 14, 2019, at 6:21pm, this example displays the
+      // This example displays an output similar to the following:
       // following output to the console:
       // 
       // Elapsed from the beginning of the century to Thursday, 14 November 2019 18:21:
