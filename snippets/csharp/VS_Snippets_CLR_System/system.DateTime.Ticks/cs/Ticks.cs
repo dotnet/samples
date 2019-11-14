@@ -22,7 +22,6 @@ public class Class1
                         elapsedSpan.Minutes, elapsedSpan.Seconds);
 
       // This example displays an output similar to the following:
-      // following output to the console:
       // 
       // Elapsed from the beginning of the century to Thursday, 14 November 2019 18:21:
       //    595,448,498,171,000,000 nanoseconds
