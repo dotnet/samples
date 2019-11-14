@@ -20,6 +20,7 @@ public class Class1
       Console.WriteLine("   {0:N0} days, {1} hours, {2} minutes, {3} seconds", 
                         elapsedSpan.Days, elapsedSpan.Hours, 
                         elapsedSpan.Minutes, elapsedSpan.Seconds);
+
       // If run on December 14, 2007, at 15:23, this example displays the
       // following output to the console:
       //    Elapsed from the beginning of the century to Friday, December 14, 2007 3:23 PM:
