@@ -20,14 +20,15 @@ public class Class1
       Console.WriteLine("   {0:N0} days, {1} hours, {2} minutes, {3} seconds", 
                         elapsedSpan.Days, elapsedSpan.Hours, 
                         elapsedSpan.Minutes, elapsedSpan.Seconds);
-      // If run on December 14, 2007, at 15:23, this example displays the
-      // following output to the console:
-      //    Elapsed from the beginning of the century to Friday, December 14, 2007 3:23 PM:
-      //          219,338,580,000,000,000 nanoseconds
-      //          2,193,385,800,000,000 ticks
-      //          219,338,580.00 seconds
-      //          3,655,643.00 minutes
-      //          2,538 days, 15 hours, 23 minutes, 0 seconds
+
+      // This example displays an output similar to the following:
+      // 
+      // Elapsed from the beginning of the century to Thursday, 14 November 2019 18:21:
+      //    595,448,498,171,000,000 nanoseconds
+      //    5,954,484,981,710,000 ticks
+      //    595,448,498.17 seconds
+      //    9,924,141.64 minutes
+      //    6,891 days, 18 hours, 21 minutes, 38 seconds
       // </Snippet1>
    }
 }
