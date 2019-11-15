@@ -25,16 +25,16 @@
 
                 // Specify the second data source.
                 List<Product> products = new List<Product>()
-               {
-                  new Product{Name="Tea",  CategoryID=001},
-                  new Product{Name="Mustard", CategoryID=002},
-                  new Product{Name="Pickles", CategoryID=002},
-                  new Product{Name="Carrots", CategoryID=003},
-                  new Product{Name="Bok Choy", CategoryID=003},
-                  new Product{Name="Peaches", CategoryID=005},
-                  new Product{Name="Melons", CategoryID=005},
-                  new Product{Name="Ice Cream", CategoryID=007},
-                  new Product{Name="Mackerel", CategoryID=012},
+                {
+                    new Product{Name="Tea",  CategoryID=001},
+                    new Product{Name="Mustard", CategoryID=002},
+                    new Product{Name="Pickles", CategoryID=002},
+                    new Product{Name="Carrots", CategoryID=003},
+                    new Product{Name="Bok Choy", CategoryID=003},
+                    new Product{Name="Peaches", CategoryID=005},
+                    new Product{Name="Melons", CategoryID=005},
+                    new Product{Name="Ice Cream", CategoryID=007},
+                    new Product{Name="Mackerel", CategoryID=012},
                 };
                 #endregion
 
