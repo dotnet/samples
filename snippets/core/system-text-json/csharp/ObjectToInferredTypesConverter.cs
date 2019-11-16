@@ -44,18 +44,14 @@ namespace SystemTextJsonSamples
 
             // Use JsonElement as fallback.
             // Newtonsoft uses JArray or JObject.
-            using (JsonDocument document = JsonDocument.ParseValue(ref reader))
-            {
-                return document.RootElement.Clone();
-            }
+            using JsonDocument document = JsonDocument.ParseValue(ref reader);
+            return document.RootElement.Clone();
         }
 
         public override void Write(
             Utf8JsonWriter writer,
             object value,
-            JsonSerializerOptions options)
-        {
-            throw new InvalidOperationException("Should not get here.");
-        }
+            JsonSerializerOptions options) =>
+                throw new InvalidOperationException("Should not get here.");
     }
 }

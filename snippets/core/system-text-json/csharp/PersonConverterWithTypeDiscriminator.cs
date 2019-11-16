@@ -12,10 +12,8 @@ namespace SystemTextJsonSamples
             Employee = 2
         }
 
-        public override bool CanConvert(Type typeToConvert)
-        {
-            return typeof(Person).IsAssignableFrom(typeToConvert);
-        }
+        public override bool CanConvert(Type typeToConvert) =>
+            typeof(Person).IsAssignableFrom(typeToConvert);
 
         public override Person Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
