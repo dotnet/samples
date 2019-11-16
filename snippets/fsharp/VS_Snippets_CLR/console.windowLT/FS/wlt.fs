@@ -1,3 +1,4 @@
+//<snippet1>
 // This example demonstrates the Console.WindowLeft and
 //                               Console.WindowTop properties.
 open System
@@ -84,3 +85,4 @@ let main argv =
         Console.SetBufferSize(saveBufferWidth, saveBufferHeight)
         Console.SetWindowSize(saveWindowWidth, saveWindowHeight)
         Console.CursorVisible <- saveCursorVisible
+//</snippet1>
