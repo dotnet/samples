@@ -45,16 +45,13 @@ namespace SystemTextJsonSamples
         private static void AverageGrades_Alternative(string jsonString)
         {
             // <SnippetAverageGrades2>
-
             double sum = 0;
             int count = 0;
 
             using (JsonDocument document = JsonDocument.Parse(jsonString))
             {
                 JsonElement root = document.RootElement;
-
                 JsonElement studentsElement = root.GetProperty("Students");
-
 
                 count = studentsElement.GetArrayLength();
 

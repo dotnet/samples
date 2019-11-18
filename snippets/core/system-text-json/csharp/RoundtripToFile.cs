@@ -10,12 +10,13 @@ namespace SystemTextJsonSamples
     {
         public static void Run()
         {
+            string jsonString;
             string fileName = "WeatherForecast.json";
             var weatherForecast = WeatherForecastFactories.CreateWeatherForecast();
             weatherForecast.DisplayPropertyValues();
 
             // <SnippetSerialize>
-            string jsonString = JsonSerializer.Serialize(weatherForecast);
+            jsonString = JsonSerializer.Serialize(weatherForecast);
             File.WriteAllText(fileName, jsonString);
             // </SnippetSerialize>
             Console.WriteLine($"The result is in {fileName}\n");
