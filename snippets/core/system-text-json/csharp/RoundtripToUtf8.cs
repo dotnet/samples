@@ -9,11 +9,11 @@ namespace SystemTextJsonSamples
     {
         public static void Run()
         {
-            byte[] jsonUtf8Bytes;
             var weatherForecast = WeatherForecastFactories.CreateWeatherForecast();
             weatherForecast.DisplayPropertyValues();
 
             // <SnippetSerialize>
+            byte[] jsonUtf8Bytes;
             var options = new JsonSerializerOptions
             {
                 WriteIndented = true

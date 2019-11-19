@@ -7,11 +7,11 @@ namespace SystemTextJsonSamples
     {
         public static void Run()
         {
-            string jsonString;
             var weatherForecast = WeatherForecastFactories.CreateWeatherForecastWithPOCOs();
             weatherForecast.DisplayPropertyValues();
 
             // <SnippetSerialize>
+            string jsonString;
             jsonString = JsonSerializer.Serialize(weatherForecast);
             // </SnippetSerialize>
 

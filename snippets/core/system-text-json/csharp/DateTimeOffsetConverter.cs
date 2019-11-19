@@ -10,19 +10,15 @@ namespace SystemTextJsonSamples
         public override DateTimeOffset Read(
             ref Utf8JsonReader reader,
             Type typeToConvert,
-            JsonSerializerOptions options)
-        {
-            return DateTimeOffset.ParseExact(reader.GetString(),
-                "MM/dd/yyyy", CultureInfo.InvariantCulture);
-        }
+            JsonSerializerOptions options) =>
+                DateTimeOffset.ParseExact(reader.GetString(),
+                    "MM/dd/yyyy", CultureInfo.InvariantCulture);
 
         public override void Write(
             Utf8JsonWriter writer,
             DateTimeOffset value,
-            JsonSerializerOptions options)
-        {
-            writer.WriteStringValue(value.ToString(
-                "MM/dd/yyyy", CultureInfo.InvariantCulture));
-        }
+            JsonSerializerOptions options) =>
+                writer.WriteStringValue(value.ToString(
+                    "MM/dd/yyyy", CultureInfo.InvariantCulture));
     }
 }

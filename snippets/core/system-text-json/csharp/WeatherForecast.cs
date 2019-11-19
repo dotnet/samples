@@ -144,13 +144,8 @@ namespace SystemTextJsonSamples
 
     public class HighLowTemps
     {
-        public TemperatureCelsius High { get; set; }
-        public TemperatureCelsius Low { get; set; }
-    }
-
-    public class TemperatureCelsius
-    {
-        public int Celsius { get; set; }
+        public int High { get; set; }
+        public int Low { get; set; }
     }
     // </SnippetWFWithPOCOs>
 
@@ -271,7 +266,7 @@ namespace SystemTextJsonSamples
             Console.WriteLine($"TemperatureRanges:");
             foreach (KeyValuePair<string, HighLowTemps> kvp in wf.TemperatureRanges)
             {
-                Console.WriteLine($"  {kvp.Key} {kvp.Value.Low.Celsius} {kvp.Value.High.Celsius}");
+                Console.WriteLine($"  {kvp.Key} {kvp.Value.Low} {kvp.Value.High}");
             }
             Console.WriteLine($"SummaryWords:");
             foreach (string word in wf.SummaryWords)
@@ -438,8 +433,8 @@ namespace SystemTextJsonSamples
                 DatesAvailable = new List<DateTimeOffset>() { DateTime.Parse("2019-08-01"), DateTime.Parse("2019-08-02") },
                 TemperatureRanges = new Dictionary<string, HighLowTemps>
                     {
-                        { "Cold", new HighLowTemps { High = new TemperatureCelsius { Celsius = 20 }, Low = new TemperatureCelsius { Celsius = -10 } } },
-                        { "Hot", new HighLowTemps { High = new TemperatureCelsius { Celsius = 60 }, Low = new TemperatureCelsius { Celsius = 20 } } }
+                        { "Cold", new HighLowTemps { High = 20, Low = -10 } },
+                        { "Hot", new HighLowTemps { High = 60 , Low = 20 } }
                     },
                 SummaryWords = new string[] { "Cool", "Windy", "Humid" }
             };
