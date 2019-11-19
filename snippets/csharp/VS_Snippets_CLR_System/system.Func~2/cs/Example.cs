@@ -20,15 +20,16 @@ static class Func
       // Output the results to the console.
       foreach (String word in aWords)
          Console.WriteLine(word);
+
+      /*
+      This code example produces the following output:
+                  
+         ORANGE
+         APPLE
+         ARTICLE
+         ELEPHANT
+      */
+      // </Snippet5>
    }
 }      
-/*
-This code example produces the following output:
-            
-   ORANGE
-   APPLE
-   ARTICLE
-   ELEPHANT
-*/
-// </Snippet5>
 
