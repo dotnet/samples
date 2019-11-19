@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Template Intro Sample" SizeToContent="WidthAndHeight" MinWidth="250">
     <Window.Resources>
-        <!--<FinalTemplate-->
+        <!--<FinalTemplate>-->
         <ControlTemplate x:Key="roundbutton" TargetType="Button">
             <Grid>
                 <VisualStateManager.VisualStateGroups>
