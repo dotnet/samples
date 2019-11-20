@@ -9,7 +9,7 @@ Public Class ROCollection
 
     Public Sub New(sourceList As IList)
         InnerList.AddRange(sourceList)
-    End Sub 'New
+    End Sub
 
 
     Default Public ReadOnly Property Item(index As Integer) As [Object]
@@ -28,7 +28,7 @@ Public Class ROCollection
         Return InnerList.Contains(value)
     End Function 'Contains
 
-End Class 'ROCollection 
+End Class
 
 
 Public Class SamplesCollectionBase
@@ -64,7 +64,7 @@ Public Class SamplesCollectionBase
         Console.WriteLine("orange is at index {0}.", myCol.IndexOf("orange"))
         Console.WriteLine()
 
-    End Sub 'Main
+    End Sub
 
 
     ' Uses the Count property and the Item property.
@@ -74,7 +74,7 @@ Public Class SamplesCollectionBase
             Console.WriteLine("   [{0}]:   {1}", i, myCol(i))
         Next i
         Console.WriteLine()
-    End Sub 'PrintIndexAndValues
+    End Sub
 
 
     ' Uses the For Each statement which hides the complexity of the enumerator.
@@ -85,7 +85,7 @@ Public Class SamplesCollectionBase
             Console.WriteLine("   {0}", obj)
         Next obj
         Console.WriteLine()
-    End Sub 'PrintValues1
+    End Sub
 
 
     ' Uses the enumerator. 
@@ -96,9 +96,9 @@ Public Class SamplesCollectionBase
             Console.WriteLine("   {0}", myEnumerator.Current)
         End While
         Console.WriteLine()
-    End Sub 'PrintValues2
+    End Sub
 
-End Class 'SamplesCollectionBase 
+End Class
 
 
 'This code produces the following output.

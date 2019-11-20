@@ -34,7 +34,7 @@ Class Sample
         ' DateTimeKind.Unspecified and display the result.
         myDt = DateTime.SpecifyKind(saveNow, DateTimeKind.Unspecified)
         Display("Unspecified: .....", myDt)
-    End Sub 'Main
+    End Sub
     
     ' Display the value and Kind property of a DateTime structure, the 
     ' DateTime structure converted to local time, and the DateTime 
@@ -68,7 +68,7 @@ Class Sample
         dtString = dispDt.ToString(datePatt)
         Console.WriteLine("  ToUniversalTime: {0}, Kind = {1}", dtString, dispDt.Kind)
         Console.WriteLine()
-    End Sub 'Display
+    End Sub
     
     
     ' Display the value and Kind property for DateTime.Now and DateTime.UtcNow.
@@ -76,8 +76,8 @@ Class Sample
     Public Shared Sub DisplayNow(ByVal title As String, ByVal inputDt As DateTime) 
         Dim dtString As String = inputDt.ToString(datePatt)
         Console.WriteLine("{0} {1}, Kind = {2}", title, dtString, inputDt.Kind)
-    End Sub 'DisplayNow
-End Class 'Sample
+    End Sub
+End Class
 
 '
 'This code example produces the following results:

@@ -48,7 +48,7 @@ Public Class SamplesArrayList
         ' Displays the values of the target Array.
         PrintValues(myTargetArray, " "c)
 
-    End Sub 'Main
+    End Sub
 
     Public Shared Sub PrintValues(myArr() As String, mySeparator As Char)
         Dim i As Integer
@@ -56,9 +56,9 @@ Public Class SamplesArrayList
             Console.Write("{0}{1}", mySeparator, myArr(i))
         Next i
         Console.WriteLine()
-    End Sub 'PrintValues
+    End Sub
 
-End Class 'SamplesArrayList 
+End Class
 
 
 ' This code produces the following output.

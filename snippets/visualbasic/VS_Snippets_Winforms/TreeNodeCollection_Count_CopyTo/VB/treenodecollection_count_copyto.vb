@@ -8,13 +8,11 @@
 ' and displays the count of the collection and the elements of the
 ' array.
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Windows.Forms
 Imports System.Data
-Imports MicroSoft.VisualBasic
 
 Public Class MyForm
    Inherits Form
@@ -26,7 +24,7 @@ Public Class MyForm
 
    Public Sub New()
       InitializeComponent()
-   End Sub 'New
+   End Sub
 
    Protected Overloads Sub Dispose(disposing As Boolean)
       If disposing Then
@@ -35,7 +33,7 @@ Public Class MyForm
          End If
       End If
       MyBase.Dispose(disposing)
-   End Sub 'Dispose
+   End Sub
 
    Private Sub InitializeComponent()
       Me.myTreeView = New TreeView()
@@ -67,12 +65,12 @@ Public Class MyForm
       Me.Name = "MyForm"
       Me.Text = "MyForm"
       Me.ResumeLayout(False)
-   End Sub 'InitializeComponent
+   End Sub
 
    <STAThread()>  _
    Shared  Sub Main()
       Application.Run(New MyForm())
-   End Sub 'Main
+   End Sub
 
 
    Private Sub MyForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -110,4 +108,4 @@ End Sub
 
 
 
-End Class 'MyForm
+End Class

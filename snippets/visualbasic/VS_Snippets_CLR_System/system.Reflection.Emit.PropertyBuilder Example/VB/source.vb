@@ -103,8 +103,8 @@ Class PropertyBuilderDemo
       Console.WriteLine("The customerName field of instance custData has been set to '{0}'.", _
                         custDataType.InvokeMember("CustomerName", BindingFlags.GetProperty, _
                         Nothing, custData, New Object() {}))
-   End Sub 'Main
-End Class 'PropertyBuilderDemo
+   End Sub
+End Class
 
 
 ' --- O U T P U T ---

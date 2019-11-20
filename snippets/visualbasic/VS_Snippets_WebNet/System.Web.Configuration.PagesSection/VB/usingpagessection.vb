@@ -317,6 +317,6 @@ Namespace Samples.Aspnet.SystemWebConfiguration
       End Try
       Console.ReadLine()
     End Sub
-  End Class ' UsingPagesSection.
+  End Class
 End Namespace ' Samples.Aspnet.SystemWebConfiguration
 ' </Snippet1>

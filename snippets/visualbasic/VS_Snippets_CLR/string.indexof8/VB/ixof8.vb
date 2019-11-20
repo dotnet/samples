@@ -32,8 +32,8 @@ Class Sample
          start = at + 1
       End While
       Console.WriteLine()
-   End Sub 'Main
-End Class 'Sample
+   End Sub
+End Class
 '
 'This example produces the following results:
 '

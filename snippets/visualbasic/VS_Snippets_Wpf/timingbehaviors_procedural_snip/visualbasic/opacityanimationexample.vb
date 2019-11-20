@@ -7,7 +7,6 @@
 '
 
 
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Media
@@ -23,8 +22,8 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			' Create a name scope for the page.
 			NameScope.SetNameScope(Me, New NameScope())
 
-			Me.WindowTitle = "Opacity Animation Example"
-			Me.Background = Brushes.White
+			WindowTitle = "Opacity Animation Example"
+			Background = Brushes.White
 
             Dim myStackPanel As New StackPanel With {
                 .Margin = New Thickness(20)
@@ -36,7 +35,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
             Dim opacityAnimatedButton As New Button With {
                 .Name = "opacityAnimatedButton"
             }
-            Me.RegisterName(opacityAnimatedButton.Name, opacityAnimatedButton)
+            RegisterName(opacityAnimatedButton.Name, opacityAnimatedButton)
 			opacityAnimatedButton.Content = "A Button"
 			myStackPanel.Children.Add(opacityAnimatedButton)
 
@@ -78,10 +77,10 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
             Dim opacityBrushPaintedButton As New Button With {
                 .Name = "opacityBrushPaintedButton"
             }
-            Me.RegisterName(opacityBrushPaintedButton.Name, opacityBrushPaintedButton)
+            RegisterName(opacityBrushPaintedButton.Name, opacityBrushPaintedButton)
 			opacityBrushPaintedButton.Content = "A Button"
 			Dim mySolidColorBrush As New SolidColorBrush()
-			Me.RegisterName("mySolidColorBrush", mySolidColorBrush)
+			RegisterName("mySolidColorBrush", mySolidColorBrush)
 			mySolidColorBrush.Color = Colors.Orange
 			opacityBrushPaintedButton.Background = mySolidColorBrush
 			myStackPanel.Children.Add(opacityBrushPaintedButton)
@@ -114,7 +113,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			myBackgroundOpacityBeginStoryboard.Storyboard = myBackgroundOpacityStoryboard
 			myBackgroundOpacityEventTrigger.Actions.Add(myBackgroundOpacityBeginStoryboard)
 
-			Me.Content = myStackPanel
+			Content = myStackPanel
 		End Sub
 	End Class
 End Namespace

@@ -20,10 +20,10 @@ Class MySample
         While Char.ToLower(Convert.ToChar(Console.Read()))<>"q"
             ' Wait.
         End While 
-    End Sub ' Main
+    End Sub
     
     Public Shared Sub MyOnEntryWritten(source As Object, e As EntryWrittenEventArgs)
         Console.WriteLine(("Written: " + e.Entry.Message))
-    End Sub ' MyOnEntryWritten
-End Class ' MySample
+    End Sub
+End Class
 ' </Snippet1>

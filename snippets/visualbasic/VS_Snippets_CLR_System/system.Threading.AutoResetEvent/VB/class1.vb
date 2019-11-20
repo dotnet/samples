@@ -29,7 +29,7 @@ Namespace AutoResetEvent_Examples
 
             'Terminate the reader thread.
             myReaderThread.Abort()
-        End Sub 'Main
+        End Sub
 
         Shared Sub MyReadThreadProc()
             While True
@@ -38,7 +38,7 @@ Namespace AutoResetEvent_Examples
                 myResetEvent.WaitOne()
                 Console.WriteLine("{0} reading value: {1}", Thread.CurrentThread.Name, number)
             End While
-        End Sub 'MyReadThreadProc
-    End Class 'MyMainClass
+        End Sub
+    End Class
 End Namespace 'AutoResetEvent_Examples
 '</snippet1>

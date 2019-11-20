@@ -60,6 +60,6 @@ Public Class DeletingFilesDirectories
         Console.WriteLine("AnotherTopLevelDirectory/InsideDirectory/")
         Console.WriteLine()
 
-    End Sub ' End of main.
+    End Sub
 End Class
 '</snippet4>

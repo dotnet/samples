@@ -29,7 +29,7 @@ Public Class ServerProcess
         Console.WriteLine("**** Press enter to stop this process. ****" + vbLf)
         Console.ReadLine()
     
-    End Sub 'Main
-End Class 'ServerProcess
+    End Sub
+End Class
 
 

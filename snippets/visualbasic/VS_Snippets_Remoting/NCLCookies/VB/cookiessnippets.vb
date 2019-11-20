@@ -43,9 +43,9 @@ Public Class CookieExample
     		Next
     	End Using
     	' </Snippet3>
-    End Sub 'Main
+    End Sub
     ' </Snippet2>
-End Class 'CookieExample 
+End Class
 
 
 

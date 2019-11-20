@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Collections
 Imports System.Windows
 Imports System.Windows.Threading
@@ -27,7 +26,7 @@ Class CustomDynamicRenderer
         prevPoint = New Point(Double.NegativeInfinity, Double.NegativeInfinity)
         MyBase.OnStylusDown(rawStylusInput)
     
-    End Sub 'OnStylusDown
+    End Sub
     
     
     Protected Overrides Sub OnDraw(ByVal drawingContext As DrawingContext, ByVal stylusPoints As StylusPointCollection, ByVal geometry As Geometry, ByVal fillBrush As Brush) 
@@ -47,8 +46,8 @@ Class CustomDynamicRenderer
             End If
         Next i
     
-    End Sub 'OnDraw
-End Class 'CustomDynamicRenderer
+    End Sub
+End Class
 
 
 Class FilterPlugin
@@ -58,19 +57,19 @@ Class FilterPlugin
         MyBase.OnStylusDown(rawStylusInput)
         Filter(rawStylusInput)
     
-    End Sub 'OnStylusDown
+    End Sub
     
     Protected Overrides Sub OnStylusMove(ByVal rawStylusInput As RawStylusInput) 
         MyBase.OnStylusMove(rawStylusInput)
         Filter(rawStylusInput)
     
-    End Sub 'OnStylusMove
+    End Sub
     
     Protected Overrides Sub OnStylusUp(ByVal rawStylusInput As RawStylusInput) 
         MyBase.OnStylusUp(rawStylusInput)
         Filter(rawStylusInput)
     
-    End Sub 'OnStylusUp
+    End Sub
     
     Private Sub Filter(ByVal rawStylusInput As RawStylusInput) 
         Dim stylusPoints As StylusPointCollection = rawStylusInput.GetStylusPoints()
@@ -92,8 +91,8 @@ Class FilterPlugin
         Next i
         rawStylusInput.SetStylusPoints(stylusPoints)
     
-    End Sub 'Filter
-End Class 'FilterPlugin
+    End Sub
+End Class
 
 
 Class TransformPlugin
@@ -103,25 +102,25 @@ Class TransformPlugin
     Public Sub New(ByVal matrix As Matrix) 
         _matrix = matrix
     
-    End Sub 'New
+    End Sub
     
     Protected Overrides Sub OnStylusDown(ByVal rawStylusInput As RawStylusInput) 
         MyBase.OnStylusDown(rawStylusInput)
         Transform(rawStylusInput)
     
-    End Sub 'OnStylusDown
+    End Sub
     
     Protected Overrides Sub OnStylusMove(ByVal rawStylusInput As RawStylusInput) 
         MyBase.OnStylusMove(rawStylusInput)
         Transform(rawStylusInput)
     
-    End Sub 'OnStylusMove
+    End Sub
     
     Protected Overrides Sub OnStylusUp(ByVal rawStylusInput As RawStylusInput) 
         MyBase.OnStylusUp(rawStylusInput)
         Transform(rawStylusInput)
     
-    End Sub 'OnStylusUp
+    End Sub
     
     Private Sub Transform(ByVal rawStylusInput As RawStylusInput) 
         Dim stylusPoints As StylusPointCollection = rawStylusInput.GetStylusPoints()
@@ -135,8 +134,8 @@ Class TransformPlugin
         Next
         rawStylusInput.SetStylusPoints(stylusPoints)
     
-    End Sub 'Transform
-End Class 'TransformPlugin
+    End Sub
+End Class
 
 
 Public Structure PluginDescription
@@ -163,7 +162,7 @@ Class Stroke3D
         brush = New LinearGradientBrush(Colors.Red, Colors.Blue, 20.0)
         pen = New Pen(brush, 2.0)
     
-    End Sub 'New
+    End Sub
     
     
     Protected Overrides Sub DrawCore(ByVal drawingContext As DrawingContext, ByVal drawingAttributes As DrawingAttributes) 
@@ -184,8 +183,8 @@ Class Stroke3D
             MyBase.DrawCore(drawingContext, drawingAttributes)
         End If
     
-    End Sub 'DrawCore
-End Class 'Stroke3D
+    End Sub
+End Class
 
 
 Public Class StefansStylusControl
@@ -208,7 +207,7 @@ Public Class StefansStylusControl
         ClipToBoundsProperty.OverrideMetadata(ownerType, New FrameworkPropertyMetadata(True))
         FocusVisualStyleProperty.OverrideMetadata(ownerType, New FrameworkPropertyMetadata(CType(Nothing, Object)))
     
-    End Sub 'New
+    End Sub
     
     
     Public Sub New() 
@@ -242,7 +241,7 @@ Public Class StefansStylusControl
         ip.AttachVisuals(dr.RootVisual, dr.DrawingAttributes)
         Me.StylusPlugIns.Add(dr)
     
-    End Sub 'New
+    End Sub
     
     
     Public ReadOnly Property Strokes() As StrokeCollection 
@@ -256,7 +255,7 @@ Public Class StefansStylusControl
         inPlugins.Add(pluginToAdd)
         outPlugins.Remove(pluginToAdd)
     
-    End Sub 'Add
+    End Sub
     
     
     Public Sub Remove(ByVal pluginToRemove As PluginDescription) 
@@ -264,7 +263,7 @@ Public Class StefansStylusControl
         inPlugins.Remove(pluginToRemove)
         outPlugins.Add(pluginToRemove)
     
-    End Sub 'Remove
+    End Sub
     
     
     Public Sub MoveUp(ByVal pluginToMoveUp As PluginDescription) 
@@ -276,7 +275,7 @@ Public Class StefansStylusControl
             inPlugins.Insert(index - 1, pluginToMoveUp)
         End If
     
-    End Sub 'MoveUp
+    End Sub
     
     
     Public Sub MoveDown(ByVal pluginToMoveDown As PluginDescription) 
@@ -288,7 +287,7 @@ Public Class StefansStylusControl
             inPlugins.Insert(index + 1, pluginToMoveDown)
         End If
     
-    End Sub 'MoveDown
+    End Sub
     
     
     Public ReadOnly Property InPlugins() As ArrayList 
@@ -309,7 +308,7 @@ Public Class StefansStylusControl
         stylusPoints = New StylusPointCollection(newStylusPoints.Description)
         stylusPoints.Add(newStylusPoints)
     
-    End Sub 'OnStylusDown
+    End Sub
     
     
     Protected Overrides Sub OnStylusMove(ByVal e As StylusEventArgs) 
@@ -319,7 +318,7 @@ Public Class StefansStylusControl
         Dim newStylusPoints As StylusPointCollection = e.GetStylusPoints(Me, stylusPoints.Description)
         stylusPoints.Add(newStylusPoints)
     
-    End Sub 'OnStylusMove
+    End Sub
     
     
     Protected Overrides Sub OnStylusUp(ByVal e As StylusEventArgs) 
@@ -341,5 +340,5 @@ Public Class StefansStylusControl
         stylusPoints = Nothing
         Stylus.Capture(Nothing)
     
-    End Sub 'OnStylusUp
-End Class 'StefansStylusControl
+    End Sub
+End Class

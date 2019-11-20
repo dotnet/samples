@@ -17,7 +17,7 @@ Namespace Examples.VB.WebControls.Design
     <Designer(GetType(Examples.VB.WebControls.Design.MyLoginStatusDesigner))> _
     Public Class MyLoginStatus
         Inherits LoginStatus
-    End Class ' MyLoginStatus
+    End Class
 
     ' Override members of the LoginStatusDesigner.
     Public Class MyLoginStatusDesigner
@@ -70,6 +70,6 @@ Namespace Examples.VB.WebControls.Design
 
         End Function ' GetDesignTimeHtml
         ' </snippet2>
-    End Class ' MyLoginStatusDesigner
+    End Class
 End Namespace ' Examples.VB.WebControls.Design
 ' </snippet1>

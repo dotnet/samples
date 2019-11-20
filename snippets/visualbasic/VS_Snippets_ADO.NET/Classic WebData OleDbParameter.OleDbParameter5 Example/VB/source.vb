@@ -10,7 +10,7 @@ Public Class Sample
 ' <Snippet1>
 
  Public Shared Sub CreateOleDbParameter() 
-    Dim myParameter As OleDbParameter = New OleDbParameter("Description", "Beverages")
+    Dim myParameter As New OleDbParameter("Description", "Beverages")
  End Sub
 ' </Snippet1>
 End Class

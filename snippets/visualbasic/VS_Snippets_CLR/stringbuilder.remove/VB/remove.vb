@@ -24,8 +24,8 @@ Class Sample
       Console.WriteLine(rule1)
       Console.WriteLine(rule2)
       Console.WriteLine("{0}", sb.ToString())
-   End Sub 'Main
-End Class 'Sample
+   End Sub
+End Class
 '
 'This example produces the following results:
 '

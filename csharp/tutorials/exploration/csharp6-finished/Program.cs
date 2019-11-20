@@ -42,7 +42,7 @@ public class Program
         // </SnippetInterpolationMain>
         // <SnippetPhrases>
         var phrase = "the quick brown fox jumps over the lazy dog";
-        var wordLength = from word in phrase.Split(" ") select word.Length;
+        var wordLength = from word in phrase.Split(' ') select word.Length;
         var average = wordLength.Average();
         WriteLine(average);
         // </SnippetPhrases>

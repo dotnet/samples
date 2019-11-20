@@ -38,8 +38,7 @@ Namespace Samples.AspNet.VB.Controls
         End Property
 
         ' The contacts are rendered in an HTML table.
-        Protected Overrides Sub RenderContents( _
-        ByVal writer As HtmlTextWriter)
+        Protected Overrides Sub RenderContents(writer As HtmlTextWriter)
             Dim t As Table = CreateContactsTable()
             If t IsNot Nothing Then
                 t.RenderControl(writer)
@@ -55,12 +54,14 @@ Namespace Samples.AspNet.VB.Controls
                     Dim aContact As Contact = TryCast(item, Contact)
                     If aContact IsNot Nothing Then
                         Dim r As New TableRow
-                        Dim c1 As New TableCell
-                        c1.Text = aContact.Name
+                        Dim c1 As New TableCell With {
+                            .Text = aContact.Name
+                        }
                         r.Controls.Add(c1)
 
-                        Dim c2 As New TableCell
-                        c2.Text = aContact.Email
+                        Dim c2 As New TableCell With {
+                            .Text = aContact.Email
+                        }
                         r.Controls.Add(c2)
 
                         Dim c3 As New TableCell

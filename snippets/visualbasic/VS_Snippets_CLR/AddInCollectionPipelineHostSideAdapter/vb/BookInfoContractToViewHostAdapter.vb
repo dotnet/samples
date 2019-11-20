@@ -1,6 +1,5 @@
 ﻿' <Snippet5>
 
-Imports Microsoft.VisualBasic
 Imports System.AddIn.Pipeline
 Namespace LibraryContractsHostAdapters
 Public Class BookInfoContractToViewHostAdapter

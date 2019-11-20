@@ -33,8 +33,8 @@ Class Sample
       '
       Console.SetWindowSize(origWidth, origHeight)
       Console.WriteLine(m1, Console.WindowWidth, Console.WindowHeight)
-   End Sub 'Main
-End Class 'Sample
+   End Sub
+End Class
 '
 'This example produces the following results:
 '

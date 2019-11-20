@@ -106,7 +106,7 @@ Namespace Samples.Aspnet.SystemWebConfiguration
                 Console.WriteLine("command line for errors.")
             End Try
         End Sub
-    End Class ' UsingTraceSection.
+    End Class
     
 End Namespace ' Samples.Aspnet.SystemWebConfiguration
 

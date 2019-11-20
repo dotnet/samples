@@ -22,8 +22,6 @@
 ' * PARTICULAR PURPOSE.
 ' * 
 ' *****************************************************************************
-Imports System
-
 Friend Class NativeMethods
 
     <System.Runtime.InteropServices.DllImport("user32.dll")> _
@@ -58,5 +56,5 @@ Friend Class NativeMethods
     ' SetWindowPos constants (used by highlight rect)
     Friend Const SWP_NOACTIVATE As Integer = &H10
     Friend Shared HWND_TOPMOST As New IntPtr(-1)
-End Class 'NativeMethods 
+End Class
 

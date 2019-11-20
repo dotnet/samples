@@ -26,7 +26,7 @@ Public Class MyNewQueue
 
             Return
 
-        End Sub 'Main
+        End Sub
 
 
 
@@ -49,7 +49,7 @@ Public Class MyNewQueue
 
             Return
 
-        End Sub 'GetQueuesByCategory
+        End Sub
 
 
 
@@ -72,7 +72,7 @@ Public Class MyNewQueue
 
             Return
 
-        End Sub 'GetQueuesByLabel
+        End Sub
 
 
 
@@ -94,7 +94,7 @@ Public Class MyNewQueue
 
             Return
 
-        End Sub 'GetQueuesByComputer
+        End Sub
 
 
 
@@ -109,7 +109,7 @@ Public Class MyNewQueue
 
             Return
 
-        End Sub 'GetAllPublicQueues
+        End Sub
 
 
  
@@ -140,7 +140,7 @@ Public Class MyNewQueue
 
             Return
 
-        End Sub 'GetPublicQueuesByCriteria
+        End Sub
 
 
  
@@ -162,8 +162,8 @@ Public Class MyNewQueue
 
             Return
 
-        End Sub 'GetPrivateQueues
+        End Sub
 
-End Class 'MyNewQueue
+End Class
 
 ' </Snippet1>

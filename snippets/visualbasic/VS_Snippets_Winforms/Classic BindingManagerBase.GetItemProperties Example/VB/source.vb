@@ -1,7 +1,6 @@
 ﻿Option Explicit
 Option Strict
 
-Imports System
 Imports System.Data
 Imports System.ComponentModel
 Imports System.Windows.Forms
@@ -28,6 +27,6 @@ Public Class Form1
       Dim myPropertyDescriptor As PropertyDescriptor = myPropertyDescriptors("Name")
       Console.WriteLine(myPropertyDescriptor.Name)
       Console.WriteLine(myPropertyDescriptor.GetValue(dt.DefaultView(0)))
-   End Sub 'ShowGetItemProperties
+   End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

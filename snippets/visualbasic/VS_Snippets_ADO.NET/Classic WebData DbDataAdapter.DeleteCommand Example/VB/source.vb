@@ -1,19 +1,17 @@
 ﻿Imports System.Data
 Imports System.Data.OleDb
-Imports Microsoft.VisualBasic
 
 Public Class Sample
 
   Public Shared Sub Main()
   
-
   End Sub
 
 '<Snippet1>
 Public Shared Function CreateCustomerAdapter( _
     connection As OleDbConnection) As OleDbDataAdapter 
 
-    Dim dataAdapter As OleDbDataAdapter = New OleDbDataAdapter()
+    Dim dataAdapter As New OleDbDataAdapter()
     Dim command As OleDbCommand
     Dim parameter As OleDbParameter
 

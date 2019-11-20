@@ -20,7 +20,7 @@ Class DiscoveryClientDocumentCollectionSample_Keys
    
    Shared Sub Main()
       Run()
-   End Sub 'Main
+   End Sub
 
    <PermissionSetAttribute(SecurityAction.Demand, Name := "FullTrust")> _
    Shared Sub Run()
@@ -66,6 +66,6 @@ Class DiscoveryClientDocumentCollectionSample_Keys
                                                                               myStringUrl)
       End If
 ' </Snippet3>
-   End Sub 'Run
-End Class 'DiscoveryClientDocumentCollectionSample_Keys
+   End Sub
+End Class
 

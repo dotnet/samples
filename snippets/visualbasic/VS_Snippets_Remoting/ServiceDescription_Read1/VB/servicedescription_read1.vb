@@ -30,5 +30,5 @@ Class MyService
       Catch e As Exception
          Console.WriteLine("Exception: " + e.Message)
       End Try
-   End Sub 'Main
-End Class 'MyService
+   End Sub
+End Class

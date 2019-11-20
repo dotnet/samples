@@ -6,9 +6,6 @@ Imports System.Reflection
 Imports System.Security.Permissions
 Imports System.Security
 Imports System.IO
-Imports Microsoft.VisualBasic
-
-
 
 Class [MyClass]
 
@@ -44,7 +41,7 @@ Class [MyClass]
         Console.WriteLine("PermitOnly the All permission for " & ControlChars.Lf & ControlChars.Tab & "C:\Documents and Settings\All Users\Application Data\Microsoft\Network.")
 
         PermitOnlyTestMethod()
-    End Sub 'PermitOnlyMethod
+    End Sub
     '</Snippet7>
 
 
@@ -66,14 +63,14 @@ Class [MyClass]
         Catch e As Exception
             Console.WriteLine(("An exception was thrown because of a write demand: " & e.Message))
         End Try
-    End Sub 'PermitOnlyTestMethod
+    End Sub
 
 
     Public Shared Sub TestFailed()
         Console.WriteLine("Executing TestFailed.")
         Console.WriteLine("Throwing an exception.")
         Throw New Exception()
-    End Sub 'TestFailed
+    End Sub
 
     Overloads Shared Sub Main(ByVal args() As String)
         Try
@@ -81,7 +78,7 @@ Class [MyClass]
         Catch e As Exception
             Console.WriteLine(e.Message.ToString())
         End Try
-    End Sub 'Main
-End Class '[MyClass] 
+    End Sub
+End Class
 
 '</Snippet1>

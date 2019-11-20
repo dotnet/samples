@@ -1,6 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
-Imports System.IO
+﻿Imports System.IO
 Imports System.Collections.Generic
 Imports System.IO.Packaging
 Imports System.Xml
@@ -33,6 +31,6 @@ Public Class PrintServerCreate
 		Console.ReadLine()
 
 		' </Snippet_CreatePrintServer>
-	End Sub 'end Run()
+	End Sub
 
-End Class ' end:class PrintServerCreate
+End Class

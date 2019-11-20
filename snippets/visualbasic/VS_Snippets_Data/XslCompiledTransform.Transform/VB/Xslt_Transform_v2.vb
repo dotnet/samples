@@ -11,7 +11,7 @@ Class XslCompiledTransform_Samples
     
     Shared Sub Main() 
     
-    End Sub 'Main
+    End Sub
      
     
 ' Transform files
@@ -24,7 +24,7 @@ xslt.Load("output.xsl")
 ' Execute the transform and output the results to a file.
 xslt.Transform("books.xml", "books.html")
 '</snippet1>    
-End Sub 'XslCompiledTransform_Transform1
+End Sub
      
     
 '==============================//
@@ -45,7 +45,7 @@ Dim writer As XmlWriter = XmlWriter.Create("output.xml", settings)
 xslt.Transform("books.xml", writer)
 writer.Close()
 '</snippet2>    
-End Sub 'XslCompiledTransform_Transform2
+End Sub
      
     
 '==============================//
@@ -63,7 +63,7 @@ xslt.Transform("books.xml", Nothing, writer)
 HTMLoutput = writer.ToString()
 writer.Close()
 '</snippet3>    
-End Sub 'XslCompiledTransform_Transform3
+End Sub
      
     
 '==============================//		
@@ -96,7 +96,7 @@ xslt.Load("http://serverName/data/xsl/sort.xsl", settings, resolver)
 
         End Using
 '</snippet4>    
-End Sub 'XslCompiledTransform_Transform4
+End Sub
     
     
 '==============================//
@@ -117,7 +117,7 @@ Dim writer As XmlWriter = XmlWriter.Create("output.xml", settings)
 xslt.Transform(New XPathDocument("books.xml"), writer)
 writer.Close()
 '</snippet5>    
-End Sub 'XslCompiledTransform_Transform5
+End Sub
      
     
 '==============================//
@@ -134,7 +134,7 @@ Using fs As New FileStream("c:\data\output.xml", FileMode.Create)
     xslt.Transform(New XPathDocument("books.xml"), Nothing, fs)
 End Using
 '</snippet6>    
-End Sub 'XslCompiledTransform_Transform6
+End Sub
      
     
 '==============================//
@@ -159,7 +159,7 @@ xslt.Transform(reader, writer)
 writer.Close()
 reader.Close()
 '</snippet7>    
-  End Sub 'XslCompiledTransform_Transform7 
+  End Sub
 
 '==============================//
     ' Print Names of Temp Files
@@ -181,6 +181,6 @@ reader.Close()
             Console.WriteLine(filename)
         Next filename
         '</snippet8>
-    End Sub 'Print_TempFiles
+    End Sub
 
-End Class 'XslCompiledTransform_Samples
+End Class

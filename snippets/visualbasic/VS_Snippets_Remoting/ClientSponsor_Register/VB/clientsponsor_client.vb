@@ -54,8 +54,8 @@ Namespace RemotingSamples
          ' Unregister the channel.
          mySponsor.Unregister(myService)
          mySponsor.Close()
-      End Sub 'Main
-   End Class 'HelloClient
+      End Sub
+   End Class
 ' </Snippet2>
 
 

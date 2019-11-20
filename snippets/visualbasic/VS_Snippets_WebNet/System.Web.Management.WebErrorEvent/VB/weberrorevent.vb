@@ -28,7 +28,7 @@ Public Class SampleWebErrorEvent
         eventInfo = New StringBuilder()
         eventInfo.Append(String.Format( _
         "Event created at: ", EventTime.ToString()))
-    End Sub 'New
+    End Sub
    
    ' </Snippet2>
    
@@ -45,7 +45,7 @@ Public Class SampleWebErrorEvent
         eventInfo = New StringBuilder()
         eventInfo.Append(String.Format( _
         "Event created at: ", EventTime.ToString()))
-    End Sub 'New
+    End Sub
    
    
    ' </Snippet3>
@@ -58,7 +58,7 @@ Public Class SampleWebErrorEvent
       
       ' Raise the event.
       MyBase.Raise()
-   End Sub 'Raise
+   End Sub
    
    ' </Snippet4>
    ' <Snippet5>
@@ -108,10 +108,10 @@ Public Class SampleWebErrorEvent
         "** SampleWebBaseErrorEvent End **")
 
         formatter.IndentationLevel -= 1
-    End Sub 'FormatCustomEventDetails 
+    End Sub
     ' </Snippet8>
 
-End Class 'SampleWebErrorEvent 
+End Class
 
 
 ' </Snippet1>

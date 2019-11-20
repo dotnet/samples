@@ -14,13 +14,13 @@ Public Class HelloServiceClass
       n_instances += 1
       instanceNum = n_instances
       Console.WriteLine(Me.GetType().Name + " has been created.  Instance # = {0}", instanceNum)
-   End Sub 'New
+   End Sub
 
    
    Protected Overrides Sub Finalize()
       Console.WriteLine("Destroyed instance {0} of HelloServiceClass.", instanceNum)
       MyBase.Finalize()
-   End Sub 'Finalize
+   End Sub
   
    <PermissionSet(SecurityAction.LinkDemand)> _
    Public Function HelloMethod(name As [String]) As [String]
@@ -43,7 +43,7 @@ Public Class HelloServiceClass
       Return "Hi there " + name + "."
    End Function 'HelloMethod
 
-End Class 'HelloServiceClass
+End Class
 ' </Snippet3>
 
 ' <Snippet2>
@@ -72,7 +72,7 @@ End Class 'HelloServiceClass
    Public Sub New(p As IPrincipal)
       _nAccesses = 0
       _principal = p
-   End Sub 'New
+   End Sub
 
-End Class 'LogicalCallContextData
+End Class
 ' </Snippet2>

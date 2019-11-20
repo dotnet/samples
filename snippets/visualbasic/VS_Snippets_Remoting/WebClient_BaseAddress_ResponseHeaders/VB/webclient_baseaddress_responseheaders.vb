@@ -11,8 +11,6 @@
 
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
-
 
 Public Class WebClient_BaseAddress
     
@@ -58,5 +56,5 @@ Public Class WebClient_BaseAddress
         Catch e As Exception
             Console.WriteLine(("The following Exception was raised: " + e.Message))
         End Try
-    End Sub 'Main
-End Class 'WebClient_BaseAddress
+    End Sub
+End Class

@@ -8,8 +8,6 @@
 '-----------------------------------------------------------------------------
 
 
-Imports Microsoft.VisualBasic
-Imports System
 Imports System.IO
 Imports System.IO.Packaging
 Imports System.Windows
@@ -32,7 +30,7 @@ Namespace SDKSample
 			ExtractPackageParts(packagePath, targetDirectory)
 
 			MessageBox.Show("Normal Completion:" & vbLf & "Successfully extracted document and resource parts" & vbLf & "from '" & packagePath & "' zip to new '" & targetDirectory & "' folder.", "End of Program", MessageBoxButton.OK, MessageBoxImage.Information)
-		End Sub ' end:main()
+		End Sub
 
 
 		'  ----------------------- ExtractPackageParts -----------------------
@@ -90,7 +88,7 @@ Namespace SDKSample
 			End Using ' end:using(Package package) - Close & dispose package.
 			'</SnippetPackageReadUsing>
 
-		End Sub ' end:ExtractPackageParts()
+		End Sub
 
 
 		'<SnippetPackageReadExtract>
@@ -122,7 +120,7 @@ Namespace SDKSample
 			Using fileStream As New FileStream(uriFullPartPath.LocalPath, FileMode.Create)
 				CopyStream(packagePart.GetStream(), fileStream)
 			End Using ' end:using(FileStream fileStream) - Close & dispose fileStream.
-		End Sub ' end:ExtractPart()
+		End Sub
 
 
 		'  --------------------------- CopyStream ---------------------------
@@ -141,9 +139,9 @@ Namespace SDKSample
 				target.Write(buf, 0, bytesRead)
 				bytesRead = source.Read(buf, 0, bufSize)
 			Loop
-		End Sub ' end:CopyStream()
+		End Sub
 		'</SnippetPackageReadExtract>
 
-	End Class ' end:class PackageRead
+	End Class
 
 End Namespace ' end:namespace SDKSample

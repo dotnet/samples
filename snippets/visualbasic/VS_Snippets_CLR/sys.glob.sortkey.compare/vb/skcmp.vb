@@ -42,7 +42,7 @@ Class Sample
     ' Compare lowercase and uppercase "abc", using case and using SortKey.
         result = SortKey.Compare(sk1LowerUseCase, sk2UpperUseCase)
         Display(result, "SortKey, Use case", lowerABC, upperABC)
-    End Sub 'Main
+    End Sub
     
     ' Display the results of a comparison.
     Private Shared Sub Display(ByVal compareResult As Integer, _
@@ -63,8 +63,8 @@ Class Sample
             resultPhrase = equalTo
         End If
         Console.WriteLine(format, title, lower, resultPhrase, upper)
-    End Sub 'Display
-End Class 'Sample
+    End Sub
+End Class
 
 '
 'This code example produces the following results:

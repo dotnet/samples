@@ -12,9 +12,9 @@ Module Module1
 ' <Snippet1>
     Private Sub DemonstrateDataView()
         ' Create a DataTable with three columns.
-        Dim table As DataTable = New DataTable("NewTable")
+        Dim table As New DataTable("NewTable")
         Console.WriteLine("Original table name: " & table.TableName)
-        Dim column As DataColumn = New DataColumn("ID", GetType(System.Int32))
+        Dim column As New DataColumn("ID", GetType(System.Int32))
         table.Columns.Add(column)
 
         column = New DataColumn("Category", GetType(System.String))
@@ -59,7 +59,7 @@ Module Module1
         ' Print current table values.
         PrintTableOrView(table, "Current Values in Table")
 
-        Dim view As DataView = New DataView(table)
+        Dim view As New DataView(table)
         view.Sort = "Category"
         PrintTableOrView(view, "Current Values in View")
 

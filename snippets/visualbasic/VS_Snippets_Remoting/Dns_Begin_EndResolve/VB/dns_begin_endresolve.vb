@@ -6,9 +6,6 @@
 '
 
 Imports System.Net
-Imports Microsoft.VisualBasic
-
-
 
 ' <Snippet1>
 ' <Snippet2>
@@ -19,8 +16,8 @@ Class DnsBeginGetHostByName
         
         Public Sub New()
             host = Nothing
-        End Sub 'New
-    End Class 'RequestState
+        End Sub
+    End Class
     
     
     Public Shared Sub Main()
@@ -52,7 +49,7 @@ Class DnsBeginGetHostByName
             Console.WriteLine(("Source : " + e.Source))
             Console.WriteLine(("Message : " + e.Message))
     End Try
-    End Sub 'Main
+    End Sub
     
     
     Private Shared Sub RespCallback(ar As IAsyncResult)
@@ -71,8 +68,8 @@ Class DnsBeginGetHostByName
             Console.WriteLine(("Source : " + e.Source))
             Console.WriteLine(("Message : " + e.Message))
         End Try
-    End Sub 'RespCallback
+    End Sub
 ' </Snippet2>
 ' </Snippet1>
 
-End Class 'DnsBeginGetHostByName 
+End Class

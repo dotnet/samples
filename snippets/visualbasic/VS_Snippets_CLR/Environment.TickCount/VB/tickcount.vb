@@ -11,8 +11,8 @@ Class Sample
       Dim result As Integer = Environment.TickCount And Int32.MaxValue
 
       Console.WriteLine("TickCount: {0}", result)
-   End Sub 'Main
-End Class 'Sample
+   End Sub
+End Class
 '
 'This example produces the following results:
 '

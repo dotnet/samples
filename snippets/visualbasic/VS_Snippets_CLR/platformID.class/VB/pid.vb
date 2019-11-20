@@ -18,8 +18,8 @@ Class Sample
          Case Else
             Console.WriteLine(msg3)
       End Select
-   End Sub 'Main
-End Class 'Sample
+   End Sub
+End Class
 '
 'This example produces the following results:
 '

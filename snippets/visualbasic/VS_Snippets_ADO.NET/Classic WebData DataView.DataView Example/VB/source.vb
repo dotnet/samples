@@ -12,7 +12,7 @@ Protected DataGrid1 As DataGrid
 
 ' <Snippet1>
 Private Sub MakeDataView()
-    Dim view As DataView = New DataView
+    Dim view As New DataView()
 
     view.Table = DataSet1.Tables("Suppliers")
     view.AllowDelete = True

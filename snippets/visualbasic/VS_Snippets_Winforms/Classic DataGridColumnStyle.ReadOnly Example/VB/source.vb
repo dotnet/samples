@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
 
@@ -20,7 +19,7 @@ Public Class Form1
         For Each dataColumn In myDataColumns
             dataGrid1.TableStyles(0).GridColumnStyles(dataColumn.ColumnName).ReadOnly = dataColumn.ReadOnly
         Next dataColumn
-    End Sub 'SetReadOnly
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

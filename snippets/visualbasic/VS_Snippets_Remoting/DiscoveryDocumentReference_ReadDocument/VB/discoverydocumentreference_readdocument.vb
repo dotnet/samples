@@ -9,13 +9,12 @@ Imports System.Web.Services.Discovery
 Imports System.IO
 Imports System.Collections
 Imports System.Security.Permissions
-Imports MicroSoft.VisualBasic
 
 Class DiscoveryDocumentReference_ReadDocument
    
    Shared Sub Main()
       Run()
-   End Sub 'Main
+   End Sub
 
    <PermissionSetAttribute(SecurityAction.Demand, Name := "FullTrust")> _
    Shared Sub Run()
@@ -40,6 +39,6 @@ Class DiscoveryDocumentReference_ReadDocument
       Catch e As Exception
          Console.WriteLine("Exception:{0}", e.Message.ToString())
       End Try
-   End Sub 'Run
+   End Sub
 
-End Class 'DiscoveryDocumentReference_ReadDocument
+End Class

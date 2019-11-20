@@ -10,5 +10,5 @@ Public Class Sample
                                                    WellKnownObjectMode.Singleton)
       Console.WriteLine("Press <enter> to exit...")
       Console.ReadLine()
-   End Sub 'Main
-End Class 'Sample
+   End Sub
+End Class

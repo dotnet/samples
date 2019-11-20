@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
 
@@ -35,5 +34,5 @@ Public Class Form1
         End If
     End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

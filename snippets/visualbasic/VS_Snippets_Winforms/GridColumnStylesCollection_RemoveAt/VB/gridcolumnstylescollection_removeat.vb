@@ -6,7 +6,6 @@
 ' collections are added to it. A Remove button is provided to delete the
 ' CustomerName column style collection.
 
-Imports System
 Imports System.ComponentModel
 Imports System.Data
 Imports System.Drawing
@@ -25,7 +24,7 @@ Public Class MyForm
    Public Sub New()
       InitializeComponent()
       SetUp()
-   End Sub 'New
+   End Sub
    
    
    Private Sub InitializeComponent()
@@ -54,12 +53,12 @@ Public Class MyForm
       ' Add the controls to the form.
       Controls.Add(removeStyle)
       Controls.Add(myDataGrid)
-   End Sub 'InitializeComponent
+   End Sub
    
    
    Public Shared Sub Main()
       Application.Run(New MyForm())
-   End Sub 'Main
+   End Sub
    
    
    Private Sub SetUp()
@@ -68,7 +67,7 @@ Public Class MyForm
       
       ' Associate the data set.
       myDataGrid.SetDataBinding(myDataSet, "Customers")
-   End Sub 'SetUp
+   End Sub
    
    
    ' Create a DataSet with two tables and populate it.
@@ -134,7 +133,7 @@ Public Class MyForm
       Next i
       ' Add column styles collection.
       AddCustomDataTableStyle()
-   End Sub 'MakeDataSet
+   End Sub
    
    
    
@@ -185,7 +184,7 @@ Public Class MyForm
       ' Add the DataGridTableStyle objects to the GridTableStylesCollection.
       myDataGrid.TableStyles.Add(myTableStyle1)
       myDataGrid.TableStyles.Add(myTableStyle2)
-   End Sub 'AddCustomDataTableStyle
+   End Sub
    
 ' <Snippet1>
    Private Sub RemoveColumnStyle_Clicked(sender As Object, e As EventArgs) Handles removeStyle.Click
@@ -201,6 +200,6 @@ Public Class MyForm
          i = myColumns.IndexOf(myDataColumnStyle)
          myColumns.RemoveAt(i)
       End If
-   End Sub 'RemoveColumnStyle_Clicked
+   End Sub
 ' </Snippet1>
-End Class 'MyForm 
+End Class

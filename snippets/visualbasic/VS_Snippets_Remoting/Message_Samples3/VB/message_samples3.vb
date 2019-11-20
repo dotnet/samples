@@ -49,6 +49,6 @@ Namespace MyMessage
          Catch e As Exception
             Console.WriteLine("Exception: " + e.Message)
          End Try
-      End Sub 'Main
-   End Class 'MyClass1
+      End Sub
+   End Class
 End Namespace 'MyMessage

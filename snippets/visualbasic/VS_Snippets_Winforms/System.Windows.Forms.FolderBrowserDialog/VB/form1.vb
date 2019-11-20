@@ -3,7 +3,6 @@
 ' open rich text files (rtf) into the RichTextBox. The example demonstrates 
 ' using the FolderBrowserDialog to set the default directory for opening files.
 ' The OpenFileDialog class is used to open the file.
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 Imports System.IO

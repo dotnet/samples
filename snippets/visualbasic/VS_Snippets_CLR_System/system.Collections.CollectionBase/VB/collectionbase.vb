@@ -29,12 +29,12 @@ Public Class Int16Collection
 
    Public Sub Insert(index As Integer, value As Int16)
       List.Insert(index, value)
-   End Sub 'Insert
+   End Sub
 
 
    Public Sub Remove(value As Int16)
       List.Remove(value)
-   End Sub 'Remove
+   End Sub
 
 
    Public Function Contains(value As Int16) As Boolean
@@ -45,26 +45,26 @@ Public Class Int16Collection
 
    Protected Overrides Sub OnInsert(index As Integer, value As Object)
       ' Insert additional code to be run only when inserting values.
-   End Sub 'OnInsert
+   End Sub
 
 
    Protected Overrides Sub OnRemove(index As Integer, value As Object)
       ' Insert additional code to be run only when removing values.
-   End Sub 'OnRemove
+   End Sub
 
 
    Protected Overrides Sub OnSet(index As Integer, oldValue As Object, newValue As Object)
       ' Insert additional code to be run only when setting values.
-   End Sub 'OnSet
+   End Sub
 
 
    Protected Overrides Sub OnValidate(value As Object)
       If Not GetType(System.Int16).IsAssignableFrom(value.GetType()) Then
          Throw New ArgumentException("value must be of type Int16.", "value")
       End If
-   End Sub 'OnValidate 
+   End Sub
 
-End Class 'Int16Collection
+End Class
 
 
 Public Class SamplesCollectionBase
@@ -115,7 +115,7 @@ Public Class SamplesCollectionBase
       Console.WriteLine("Contents of the collection after removing the element 2:")
       PrintIndexAndValues(myI16)
 
-    End Sub 'Main
+    End Sub
 
 
     ' Uses the Count property and the Item property.
@@ -125,7 +125,7 @@ Public Class SamplesCollectionBase
           Console.WriteLine("   [{0}]:   {1}", i, myCol(i))
       Next i
       Console.WriteLine()
-    End Sub 'PrintIndexAndValues
+    End Sub
 
 
     ' Uses the For Each statement which hides the complexity of the enumerator.
@@ -136,7 +136,7 @@ Public Class SamplesCollectionBase
           Console.WriteLine("   {0}", i16)
       Next i16
       Console.WriteLine()
-    End Sub 'PrintValues1
+    End Sub
 
 
     ' Uses the enumerator. 
@@ -147,9 +147,9 @@ Public Class SamplesCollectionBase
           Console.WriteLine("   {0}", myEnumerator.Current)
       End While
       Console.WriteLine()
-    End Sub 'PrintValues2
+    End Sub
 
-End Class 'SamplesCollectionBase
+End Class
 
 
 'This code produces the following output.

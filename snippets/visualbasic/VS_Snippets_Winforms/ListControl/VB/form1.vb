@@ -1,5 +1,4 @@
 ﻿' <Snippet1>
-Imports System
 Imports System.Windows.Forms
 Imports System.Drawing
 Imports System.Collections
@@ -14,7 +13,7 @@ Public Class ListBoxSample3
     <STAThread()> _
     Shared Sub Main()
         Application.Run(New ListBoxSample3())
-    End Sub 'Main
+    End Sub
 
     Public Sub New()
         Me.ClientSize = New Size(307, 206)
@@ -58,10 +57,10 @@ Public Class ListBoxSample3
 
         ' Ensure the form opens with no rows selected.
         ListBox1.ClearSelected()
-    End Sub 'New
+    End Sub
 
     Private Sub InitializeComponent()
-    End Sub 'InitializeComponent
+    End Sub
 
     ' <Snippet3>
     Private Sub ListBox1_SelectedValueChanged(ByVal sender As Object, ByVal e As EventArgs)
@@ -71,8 +70,8 @@ Public Class ListBoxSample3
             ' the SelectedItem item property:
             ' Dim s = CType(ListBox1.SelectedItem, USState).LongName
         End If
-    End Sub 'ListBox1_SelectedValueChanged
-End Class 'ListBoxSample3
+    End Sub
+End Class
 ' </Snippet3>
 
 Public Class USState
@@ -82,7 +81,7 @@ Public Class USState
     Public Sub New(ByVal strLongName As String, ByVal strShortName As String)
         Me.myShortName = strShortName
         Me.myLongName = strLongName
-    End Sub 'New
+    End Sub
 
     Public ReadOnly Property ShortName() As String
         Get
@@ -96,5 +95,5 @@ Public Class USState
         End Get
     End Property
 
-End Class 'USState
+End Class
 ' </Snippet1>

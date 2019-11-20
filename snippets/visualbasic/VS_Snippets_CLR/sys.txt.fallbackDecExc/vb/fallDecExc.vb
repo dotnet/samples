@@ -92,8 +92,8 @@ Class Sample
         ' This statement is never executed.
         Console.WriteLine("This statement is never executed.")
     
-    End Sub 'Main
-End Class 'Sample
+    End Sub
+End Class
 '
 'This code example produces the following results:
 '

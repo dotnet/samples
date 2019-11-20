@@ -38,6 +38,6 @@ Class MyServiceDescription
          myServiceDescription.RetrievalUrl)
 ' </Snippet2>
 ' </Snippet1>
-   End Sub 'Main 
+   End Sub
 
-End Class 'MyServiceDescription 
+End Class

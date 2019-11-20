@@ -41,9 +41,9 @@ Public Class Test
       Console.WriteLine("After deserialization the object contains: ")
       obj.Print()
 
-   End Sub 'Main
+   End Sub
 
-End Class 'Test
+End Class
 
 
 ' A test object that needs to be serialized.
@@ -64,7 +64,7 @@ End Class 'Test
       member3 = "hello"
       member4 = 3.14159265
       member5 = "hello world!"
-   End Sub 'New
+   End Sub
       
    
    Public Sub Print()      
@@ -73,7 +73,7 @@ End Class 'Test
       Console.WriteLine("member3 = '{0}'", member3)
       Console.WriteLine("member4 = '{0}'", member4)
       Console.WriteLine("member5 = '{0}'", member5)
-   End Sub 'Print
+   End Sub
 
-End Class 'TestSimpleObject
+End Class
 ' </Snippet1>

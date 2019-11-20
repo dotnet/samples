@@ -69,7 +69,7 @@ Public Class UrlsSection
 
         MyBase.DeserializeSection(reader)
         ' Enter your custom processing code here.
-    End Sub 'DeserializeSection
+    End Sub
     '</Snippet73>
 
     '<Snippet74>
@@ -85,5 +85,5 @@ Public Class UrlsSection
         Return s
     End Function 'SerializeSection
     '</Snippet74>
-End Class 'UrlsSection 
+End Class
 '</Snippet71>

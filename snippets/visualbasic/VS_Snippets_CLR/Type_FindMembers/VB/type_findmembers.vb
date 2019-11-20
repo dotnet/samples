@@ -1,7 +1,6 @@
 ﻿' <Snippet1>
 
 Imports System.Reflection
-Imports Microsoft.VisualBasic
 
 Class MyFindMembersClass
 
@@ -26,7 +25,7 @@ Class MyFindMembersClass
         Catch e As Exception
             Console.WriteLine("Exception : " + e.ToString())
         End Try
-    End Sub 'Main
+    End Sub
 
     Public Shared Function DelegateToSearchCriteria _
                             (ByVal objMemberInfo As MemberInfo, _
@@ -38,5 +37,5 @@ Class MyFindMembersClass
             Return False
         End If
     End Function 'DelegateToSearchCriteria 
-End Class 'MyFindMembersClass
+End Class
 ' </Snippet1>

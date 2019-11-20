@@ -1,7 +1,6 @@
 ﻿
 #Region "Using directives"
 
-Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
 Imports System.Drawing
@@ -33,7 +32,7 @@ Class Form1
         Me.ClientSize = New System.Drawing.Size(292, 266)
         Me.Controls.Add(Me.button1)
 
-    End Sub 'New
+    End Sub
 
     ' The following snippet demonstrates the BindingSource.MoveNext, BindingSource.Current,
     ' BindingSource.CurrentItem, BindingSource.Position and the BindingSourceItem.Value members.
@@ -107,7 +106,7 @@ Class Form1
         Application.EnableVisualStyles()
         Application.Run(New Form1())
 
-    End Sub 'Main
+    End Sub
 
     Private Sub InitializeComponent()
         '
@@ -117,7 +116,7 @@ Class Form1
         Me.Name = "Form1"
 
     End Sub
-End Class 'Form1 
+End Class
 
 
 

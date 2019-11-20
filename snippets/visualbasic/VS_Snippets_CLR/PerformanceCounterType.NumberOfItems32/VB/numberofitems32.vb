@@ -22,7 +22,7 @@ Public Class NumberOfItems64
             CollectSamples(samplesList)
             CalculateResults(samplesList)
         End If
-    End Sub 'Main
+    End Sub
 
 
     Private Shared Function SetupCategory() As Boolean
@@ -54,7 +54,7 @@ Public Class NumberOfItems64
         PC = New PerformanceCounter("NumberOfItems32SampleCategory", "NumberOfItems32Sample", False)
 
         PC.RawValue = 0
-    End Sub 'CreateCounters
+    End Sub
 
 
     Private Shared Sub CollectSamples(ByVal samplesList As ArrayList)
@@ -80,7 +80,7 @@ Public Class NumberOfItems64
             End If
             System.Threading.Thread.Sleep(50)
         Next j
-    End Sub 'CollectSamples
+    End Sub
 
 
 
@@ -98,7 +98,7 @@ Public Class NumberOfItems64
             ' Calculate the counter value manually.
             Console.WriteLine("My computed counter value = " + MyComputeCounterValue(CType(samplesList(i), CounterSample), CType(samplesList((i + 1)), CounterSample)).ToString())
         Next i
-    End Sub 'CalculateResults
+    End Sub
 
 
 
@@ -124,8 +124,8 @@ Public Class NumberOfItems64
         Console.WriteLine("   TimeStamp        = " + s.TimeStamp.ToString())
         Console.WriteLine("   TimeStamp100nSec = " + s.TimeStamp100nSec.ToString())
         Console.WriteLine("++++++++++++++++++++++")
-    End Sub 'OutputSample
-End Class 'NumberOfItems64 
+    End Sub
+End Class
 
 
 '</snippet1>

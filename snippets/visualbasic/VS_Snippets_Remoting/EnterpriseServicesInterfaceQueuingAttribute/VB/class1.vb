@@ -25,5 +25,5 @@ Public Class Test
 
     Public Shared Sub Main()
 
-    End Sub 'Main
-End Class 'Test 
+    End Sub
+End Class

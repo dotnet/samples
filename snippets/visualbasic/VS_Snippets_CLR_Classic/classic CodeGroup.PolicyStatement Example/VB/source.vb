@@ -11,5 +11,5 @@ Public Class Sample
         ' <Snippet1>
         codeGroup.PolicyStatement = New PolicyStatement(New NamedPermissionSet("MyPermissionSet"))
         ' </Snippet1>
-    End Sub 'Method 
-End Class 'Sample
+    End Sub
+End Class

@@ -1,9 +1,6 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.ComponentModel
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
-
 
 Public Class Form1
     Inherits Form
@@ -16,7 +13,7 @@ Public Class Form1
         For Each lang In  InputLanguage.InstalledInputLanguages
             textBox1.Text &= lang.Culture.EnglishName & ControlChars.Cr
         Next lang
-    End Sub 'GetLanguages
+    End Sub
     
     ' </Snippet1>
     ' <Snippet2>
@@ -34,6 +31,6 @@ Public Class Form1
         InputLanguage.CurrentInputLanguage = myDefaultLanguage
         textBox1.Text &= "Current input language is now: " & _
             myDefaultLanguage.Culture.EnglishName
-    End Sub 'SetNewCurrentLanguage
+    End Sub
     ' </Snippet2>
-End Class 'Form1 
+End Class

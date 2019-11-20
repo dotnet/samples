@@ -47,7 +47,7 @@ Namespace WinFormGraphics
         End Sub
 
         Private Sub groupBox1_Paint(sender As Object, e As PaintEventArgs)
-            Using p As Pen = New Pen(Color.Black)
+            Using p As New Pen(Color.Black)
 #Region "Example 1 -- Draw A Line"
 
                 ' Draw a solid line starts at point(40,90) and ends at point(240,90).
@@ -79,7 +79,7 @@ New Point(120, 200)}
                 e.Graphics.DrawCurve(p, ps)
 
                 ' Specify a collection of points for the curve.
-                Dim ps2 As Point() = New Point() { _
+                Dim ps2 As New Point() { _
 New Point(150, 250),
 New Point(190, 300),
 New Point(230, 200)}
@@ -103,8 +103,8 @@ New Point(230, 200)}
 
                 ' Restore the pen for the next example.
                 p.EndCap = System.Drawing.Drawing2D.LineCap.NoAnchor
-                Using br As SolidBrush = New SolidBrush(Color.Red)
-                    Using sf As StringFormat = New StringFormat With {
+                Using br As New SolidBrush(Color.Red)
+                    Using sf As New StringFormat With {
                         .FormatFlags = StringFormatFlags.DirectionVertical
                     }
 
@@ -119,8 +119,8 @@ New Point(230, 200)}
 #Region "Example 5 -- Draw A Ellipse With Gradient Brush"
 
                 ' Specify a bound for the ellipse.
-                Dim r As Rectangle = New Rectangle(350, 280, 280, 150)
-                Using br As LinearGradientBrush = New LinearGradientBrush( _
+                Dim r As New Rectangle(350, 280, 280, 150)
+                Using br As New LinearGradientBrush( _
                                         r, Color.Silver,
                                         Color.Black,
                                         LinearGradientMode.Vertical)

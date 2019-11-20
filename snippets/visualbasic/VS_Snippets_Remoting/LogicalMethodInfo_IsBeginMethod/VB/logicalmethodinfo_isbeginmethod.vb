@@ -36,9 +36,9 @@ Public Class IsBeginMethodClass
 
 ' </Snippet1>
 ' </Snippet2>
-   End Sub 'Main
+   End Sub
 
-End Class 'LogicalMethodInfo_BeginInvoke 
+End Class
 
 ' Automatically generated proxy class for Math Web service.
 ' This class can also be found in SoapHttpClientProtocol class example.
@@ -51,7 +51,7 @@ Namespace MyMath
 
       Public Sub New()
          Me.Url = "http://localhost/Math.asmx"
-      End Sub 'New
+      End Sub
 
 
       <System.Web.Services.Protocols.SoapDocumentMethodAttribute( _
@@ -75,5 +75,5 @@ Namespace MyMath
          Dim results As Object() = Me.EndInvoke(asyncResult)
          Return CInt(results(0))
       End Function 'EndAdd
-   End Class 'MyMath
+   End Class
 End Namespace 'MyMath

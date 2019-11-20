@@ -14,18 +14,18 @@ Dim DoubleValue As Double
 Shared Sub Main()
 
     Dim fileName As String = "info.dat"
-    Dim temp As Class1 = new Class1()
+    Dim temp As New Class1()
 
-    Dim fs As FileStream = new FileStream(fileName, FileMode.Create)
-    Dim w As BinaryWriter = new BinaryWriter(fs)
+    Dim fs As New FileStream(fileName, FileMode.Create)
+    Dim w As New BinaryWriter(fs)
 
     temp.Write(w)
 
     w.Close()
     fs.Close()
 
-    fs = new FileStream(fileName, FileMode.Open, FileAccess.Read)
-    Dim r As BinaryReader = new BinaryReader(fs)
+    fs = New FileStream(fileName, FileMode.Open, FileAccess.Read)
+    Dim r As New BinaryReader(fs)
 
     temp.Read(r)
 
@@ -90,7 +90,7 @@ Public Sub Write(ByVal w As System.IO.BinaryWriter) _
     
     ' Write the string value one byte at a time.
     Dim i As Integer
-    For i = 0 To paddedString.Length - 1 Step 1 
+    For i = 0 To paddedString.Length - 1
         w.Write(paddedString(i))
     Next
 

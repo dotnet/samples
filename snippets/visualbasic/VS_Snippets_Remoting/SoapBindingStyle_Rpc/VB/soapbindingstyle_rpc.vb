@@ -97,5 +97,5 @@ Public Class MySoapBindingClass
       Console.WriteLine("'SoapBindingStyleOutput_vb.wsdl' file is generated.")
       Console.WriteLine("Proxy could be created using command" + _
                         " 'wsdl /language:VB SoapBindingStyleOutput_vb.wsdl'")
-   End Sub 'Main
-End Class 'MySoapBindingClass
+   End Sub
+End Class

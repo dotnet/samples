@@ -8,7 +8,6 @@
 ' <Snippet1>
 ' <Snippet2>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
 
 Public Class AssemblyName_GetAssemblyName
    
@@ -21,7 +20,7 @@ Public Class AssemblyName_GetAssemblyName
       Dim myAssemblyName As AssemblyName = AssemblyName.GetAssemblyName("MyAssembly.exe")
       Console.WriteLine(vbCrLf & "Displaying assembly information:" & vbCrLf)
       Console.WriteLine(myAssemblyName.ToString())
-   End Sub 'Main 
-End Class 'AssemblyName_GetAssemblyName 
+   End Sub
+End Class
 ' </Snippet2>
 ' </Snippet1>

@@ -3,7 +3,6 @@
 
 ' <Snippet1>
 Imports System.Text
-Imports Microsoft.VisualBasic
 
 Public Class SamplesUnicodeEncoding   
 
@@ -50,9 +49,9 @@ Public Class SamplesUnicodeEncoding
       Console.Write("Using the decoder       : ")
       Console.WriteLine(myDecodedChars)
 
-   End Sub 'Main 
+   End Sub
 
-End Class 'SamplesUnicodeEncoding
+End Class
 
 
 'This code produces the following output.  The question marks take the place of characters that cannot be displayed at the console.

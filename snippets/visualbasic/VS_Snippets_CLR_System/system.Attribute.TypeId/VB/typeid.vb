@@ -1,7 +1,6 @@
 ﻿'<Snippet1>
 ' Example for the Attribute.TypeId property.
 Imports System.Reflection
-Imports Microsoft.VisualBasic
 
 Namespace NDP_UE_VB
 
@@ -14,7 +13,7 @@ Namespace NDP_UE_VB
         Public Sub New(UsageMsg As String)
             Me.usageMsg = UsageMsg
             Me.GUIDinstance = Guid.NewGuid()
-        End Sub ' New
+        End Sub
 
         ' This is storage for the attribute message and unique ID.
         Protected usageMsg As String
@@ -41,7 +40,7 @@ Namespace NDP_UE_VB
         Public Overrides Function ToString() As String
             Return MyBase.ToString() + ":" + usageMsg
         End Function ' ToString
-    End Class ' ArgumentUsageAttribute
+    End Class
 
     Public Class TestClass
        
@@ -52,8 +51,8 @@ Namespace NDP_UE_VB
             strArray() As String, _
             <ArgumentUsage("Can pass a param list or array here.")> _
             ParamArray strList() As String)
-        End Sub ' TestMethod
-    End Class ' TestClass
+        End Sub
+    End Class
 
     Module AttributeTypeIdDemo
        
@@ -104,7 +103,7 @@ Namespace NDP_UE_VB
                 Console.WriteLine("The parameters information could not " & _
                     "be retrieved for method {0}.", mInfo.Name)
             End If
-        End Sub ' ShowAttributeTypeIds
+        End Sub
 
         Sub Main()
             Console.WriteLine( _
@@ -116,7 +115,7 @@ Namespace NDP_UE_VB
                 "display the attributes and corresponding TypeId values:" )
 
             ShowAttributeTypeIds( )
-        End Sub ' Main
+        End Sub
 
     End Module ' AttributeTypeIdDemo
 End Namespace ' NDP_UE_VB

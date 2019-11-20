@@ -21,7 +21,7 @@ Class SampleClass
       For Each url In  urls
          System.Console.WriteLine("{0}", url)
       Next url 
-   End Sub 'Main
+   End Sub
    
-End Class 'Class1
+End Class
 ' </Snippet1>

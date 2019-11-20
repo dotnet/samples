@@ -485,6 +485,7 @@ Module Module1
         '<Snippet16>
         ' Add the following directive to your file:
         ' Imports System.Linq.Expressions  
+
         Public Class SampleClass
             Shared Function Increment(ByVal arg1 As Integer) As Integer
                 Return arg1 + 1
@@ -517,6 +518,7 @@ Module Module1
         '<Snippet17>
         ' Add the following directive to your file:
         ' Imports System.Linq.Expressions  
+
         Public Class SampleClass
             Public Function AddIntegers(ByVal arg1 As Integer, ByVal arg2 As Integer) As Integer
                 Return (arg1 + arg2)
@@ -806,6 +808,7 @@ Module Module1
         '<Snippet24>
         'Add the following directive to your file:
         ' Imports System.Linq.Expressions   
+
         Dim num As Double = 5.5
         ' This expression represents an increment operation. 
         Dim incrementExpr As Expression = Expression.Increment(
@@ -1022,6 +1025,7 @@ Module Module1
         '<Snippet32>
         ' Add the following directive to the file:
         ' Imports System.Linq.Expressions
+
         Dim test As Boolean = True
 
         ' This expression represents the conditional block.
@@ -1049,6 +1053,7 @@ Module Module1
         '<Snippet33>
         ' Add the following directive to the file:
         ' Imports System.Linq.Expressions
+
         Dim test As Boolean = True
 
         ' This expression represents the conditional block.
@@ -1346,6 +1351,7 @@ Module Module1
         '<Snippet43>
         ' Add the following directive to the file:
         ' Imports System.Linq.Expressions  
+
         ' A label expression of the void type that is the target for Expression.Return().
         Dim returnTarget As LabelTarget = Expression.Label()
 
@@ -1378,6 +1384,7 @@ Module Module1
         '<Snippet44>
         ' Add the following directive to the file:
         ' Imports System.Linq.Expressions  
+
         ' Creating a parameter expression.
         Dim value As ParameterExpression =
             Expression.Parameter(GetType(Integer), "value")

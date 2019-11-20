@@ -1,7 +1,6 @@
 ﻿Option Explicit
 Option Strict
 
-Imports System
 Imports System.Data
 Imports System.Windows.Forms
 
@@ -24,12 +23,12 @@ Public Class Form1
         
         ' Add the delegate for the PositionChanged event.
         AddHandler bmCustomers.PositionChanged, AddressOf Position_Changed
-    End Sub 'BindControl
+    End Sub
     
     
     Private Sub Position_Changed(sender As Object, e As EventArgs)
         ' Print the Position property value when it changes.
         Console.WriteLine(CType(sender, BindingManagerBase).Position)
-    End Sub 'Position_Changed
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

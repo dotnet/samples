@@ -29,7 +29,6 @@
 ' <Snippet1>
 Imports System.Reflection
 Imports System.Web.Services.Protocols
-Imports Microsoft.VisualBasic
 
 Public Class MyService
    Inherits SoapHttpClientProtocol
@@ -44,7 +43,7 @@ Public Class MyService
       Dim results As Object() = Me.EndInvoke(asyncResult)
       Return CInt(results(0))
    End Function 'EndAdd
-End Class 'MyService
+End Class
 
 Public Class LogicalMethodInfo_Create
    
@@ -92,6 +91,6 @@ Public Class LogicalMethodInfo_Create
       Else
          Console.WriteLine(ControlChars.Newline + "{0} is synchronous", myLogicalMethodInfo.Name)
       End If 
-   End Sub 'Main
-End Class 'LogicalMethodInfo_Create
+   End Sub
+End Class
 ' </Snippet1>

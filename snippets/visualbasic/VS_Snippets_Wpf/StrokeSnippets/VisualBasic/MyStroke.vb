@@ -5,7 +5,6 @@ Imports System.Windows.Ink
 Imports System.Windows.Input
 Imports System.Windows.Media
 
-Imports System
 Imports System.Collections.Generic
 Imports System.Text
 
@@ -26,20 +25,20 @@ Namespace StrokeSnippets_VB
             MyBase.New(points)
             initialize()
 
-        End Sub 'New
+        End Sub
         'MoveStylusPoints();
 
         Public Sub New(ByVal stylusPoints As StylusPointCollection, ByVal drawingAttributes As DrawingAttributes)
             MyBase.New(stylusPoints, drawingAttributes)
 
-        End Sub 'New
+        End Sub
 
         'MoveStylusPoints();
 
         Private Sub initialize()
             setTimeStamp()
 
-        End Sub 'initialize
+        End Sub
 
 
         Public Sub MoveStylusPoints()
@@ -54,7 +53,7 @@ Namespace StrokeSnippets_VB
                 i += 1
             End While
 
-        End Sub 'MoveStylusPoints
+        End Sub
 
 
 
@@ -63,7 +62,7 @@ Namespace StrokeSnippets_VB
             Dim sAttr As Attribute = Attribute.GetCustomAttribute(GetType(MyBorder), GetType(GuidAttribute))
             dtGuid = New Guid("03457307-3475-3450-3035-640435034540")
 
-        End Sub 'setTimeStamp
+        End Sub
 
 
         ' <Snippet15>
@@ -74,7 +73,7 @@ Namespace StrokeSnippets_VB
             ' See if the change was a new DrawingAttribute.Color property
             Dim eT As Type = e.NewValue.GetType()
 
-        End Sub 'OnDrawingAttributesChanged
+        End Sub
 
 
 
@@ -113,12 +112,12 @@ Namespace StrokeSnippets_VB
                 context.DrawEllipse(Nothing, New Pen(Brushes.Black, 1), CType(p, Point), 5, 5)
             Next p
 
-        End Sub 'DrawCore
+        End Sub
 
         '</Snippet23>
         Private Sub DrawSelectedStrokeAndPoints(ByVal context As DrawingContext, ByVal overridedAttributes As DrawingAttributes)
 
-        End Sub 'DrawSelectedStrokeAndPoints
+        End Sub
 
 
         ' <Snippet16>
@@ -130,12 +129,12 @@ Namespace StrokeSnippets_VB
             '{
             '    MessageBox.Show("The stroke is now red!");
             '}
-        End Sub 'OnDrawingAttributesReplaced
+        End Sub
 
         ' </Snippet16>
         Private Sub MyStroke_PacketsChanged(ByVal sender As Object, ByVal e As EventArgs)
 
-        End Sub 'MyStroke_PacketsChanged
+        End Sub
 
 
         ' <Snippet17>
@@ -143,12 +142,12 @@ Namespace StrokeSnippets_VB
             ' Notify base class of event
             MyBase.OnStylusPointsChanged(e)
 
-        End Sub 'OnStylusPointsChanged
+        End Sub
 
         ' </Snippet17>
         Private Sub MyStroke_PropertyDataChanged(ByVal sender As Object, ByVal e As PropertyDataChangedEventArgs)
 
-        End Sub 'MyStroke_PropertyDataChanged
+        End Sub
 
 
         ' <Snippet18>
@@ -163,7 +162,7 @@ Namespace StrokeSnippets_VB
                 myColor = Me.DrawingAttributes.Color
             End If
 
-        End Sub 'OnPropertyDataChanged
+        End Sub
         ' </Snippet18>
         Private IsSelected As Boolean
 
@@ -180,6 +179,6 @@ Namespace StrokeSnippets_VB
                 End If
             End Set
         End Property
-    End Class 'MyStroke
+    End Class
 
 End Namespace

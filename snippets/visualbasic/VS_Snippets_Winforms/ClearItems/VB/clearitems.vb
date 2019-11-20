@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -77,6 +76,6 @@ Public Class Form1
 
         ' Clear the File menu items. 
         fileMenu.MenuItems.Clear()
-    End Sub 'InitializeMyMenu
+    End Sub
     ' </snippet1>
 End Class

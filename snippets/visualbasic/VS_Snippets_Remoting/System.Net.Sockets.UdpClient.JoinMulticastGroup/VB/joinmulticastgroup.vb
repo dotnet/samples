@@ -12,11 +12,6 @@ Imports System.Net.Sockets
 Imports System.Text
 Imports System.IO
 Imports System.Threading
-Imports Microsoft.VisualBasic
-
-
-
-
 
 ' The following Receive class is used by both the ClientOriginator and 
 ' the ClientTarget class to receive data from one another..
@@ -44,7 +39,7 @@ Public Class Receive
       End While
       Return Ret
    End Function 'ReceiveUntilStop
-End Class 'Receive
+End Class
 
 ' The following Send class is used by both the ClientOriginator and 
 ' ClientTarget classes to send data to one another.
@@ -71,7 +66,7 @@ Public Class Send
       Thread.Sleep(1000)
       Console.WriteLine(New [String](eom))
       c.Send(GetByteArray(eom), eom.Length, ep)
-   End Sub 'OriginatorSendData
+   End Sub
    
    
    ' The following static method sends data to the ClientOriginator on 
@@ -87,7 +82,7 @@ Public Class Send
       Thread.Sleep(1000)
       Console.WriteLine(New [String](eom))
       c.Send(GetByteArray(eom), eom.Length, ep)
-   End Sub 'TargetSendData
+   End Sub
    
    ' Internal utility 
    Public Shared Function GetByteArray(ChArray() As [Char]) As [Byte]()
@@ -100,7 +95,7 @@ Public Class Send
       Return Ret
    End Function 'GetByteArray
 
-End Class 'Send
+End Class
 
 
 ' The ClientTarget class is the receiver of the ClientOriginator 
@@ -159,8 +154,8 @@ Public Class ClientTarget
       
       ' Exit the multicast conversation. 
       m_ClientTarget.DropMulticastGroup(m_GrpAddr)
-   End Sub 'StartMulticastConversation
-End Class 'ClientTarget
+   End Sub
+End Class
 
 
 ' The following ClientOriginator class starts the multicast conversation
@@ -298,6 +293,6 @@ Public Class ClientOriginator
       Else
          Console.WriteLine("Unable to Join the multicast group")
       End If
-   End Sub 'Main
-End Class 'ClientOriginator
+   End Sub
+End Class
 ' </Snippet1>

@@ -1,6 +1,5 @@
 ﻿' <snippet110>
 ' <snippet120>
-Imports System
 Imports System.ComponentModel
 Imports System.ComponentModel.Design
 Imports System.Diagnostics
@@ -49,7 +48,7 @@ Partial Public Class MarqueeText
         Me.darkColorValue = Me.BackColor
         Me.lightBrush = New SolidBrush(Me.lightColorValue)
         Me.darkBrush = New SolidBrush(Me.darkColorValue)
-    End Sub 'New
+    End Sub
     ' </snippet140>
 
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''

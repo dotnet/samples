@@ -4,15 +4,14 @@
 
     Protected catalog As ListDictionary
     Protected returnValue As String
-    Sub Page_Load(ByVal sender As Object, ByVal e As  _
-        System.EventArgs) Handles Me.Load
+    Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
         Dim cbReference As String
-        cbReference = Page.ClientScript.GetCallbackEventReference(Me, _
+        cbReference = Page.ClientScript.GetCallbackEventReference(Me,
             "arg", "ReceiveServerData", "context")
         Dim callbackScript As String = ""
-        callbackScript &= "function CallServer(arg, context) { " & _
+        callbackScript &= "function CallServer(arg, context) { " &
             cbReference & "} ;"
-        Page.ClientScript.RegisterClientScriptBlock(Me.GetType(), _
+        Page.ClientScript.RegisterClientScriptBlock(Me.GetType(),
             "CallServer", callbackScript, True)
 
         ' Populate List Dictionary with invented database data
@@ -27,7 +26,7 @@
         ListBox1.DataBind()
     End Sub
 
-    Public Sub RaiseCallbackEvent(ByVal eventArgument As String) _
+    Public Sub RaiseCallbackEvent(eventArgument As String) _
     Implements System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent
 
         If catalog(eventArgument) Is Nothing Then

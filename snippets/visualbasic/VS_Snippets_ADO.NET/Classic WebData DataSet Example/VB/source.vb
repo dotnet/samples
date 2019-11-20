@@ -32,7 +32,7 @@ Public Class NorthwindDataSet
             Console.WriteLine("The SqlConnection is open.")
 
             ' Create a SqlCommand to retrieve Suppliers data.
-            Dim suppliersCommand As SqlCommand = New SqlCommand( _
+            Dim suppliersCommand As New SqlCommand( _
                "SELECT SupplierID, CompanyName FROM dbo.Suppliers;", _
                connection)
             suppliersCommand.CommandType = CommandType.Text
@@ -41,16 +41,15 @@ Public Class NorthwindDataSet
             suppliersAdapter.SelectCommand = suppliersCommand
 
             ' Fill the DataSet.
-            Dim dataSet As DataSet = New DataSet("Suppliers")
+            Dim dataSet As New DataSet("Suppliers")
             suppliersAdapter.Fill(dataSet)
 
             ' Create a second SqlDataAdapter and SqlCommand to get
             ' the Products table, a child table of Suppliers. 
-            Dim productsAdapter As SqlDataAdapter = _
-                New SqlDataAdapter()
+            Dim productsAdapter As New SqlDataAdapter()
             productsAdapter.TableMappings.Add("Table", "Products")
 
-            Dim productsCommand As SqlCommand = New SqlCommand( _
+            Dim productsCommand As New SqlCommand( _
                "SELECT ProductID, SupplierID FROM dbo.Products;", _
                connection)
             productsAdapter.SelectCommand = productsCommand
@@ -68,8 +67,7 @@ Public Class NorthwindDataSet
                dataSet.Tables("Suppliers").Columns("SupplierID")
             Dim childColumn As DataColumn = _
                dataSet.Tables("Products").Columns("SupplierID")
-            Dim relation As DataRelation = New _
-               System.Data.DataRelation("SuppliersProducts", _
+            Dim relation As New DataRelation("SuppliersProducts", _
                parentColumn, childColumn)
             dataSet.Relations.Add(relation)
 

@@ -22,9 +22,9 @@ Public Class SamplesTextInfo
       ' Changes a string to titlecase.
       Console.WriteLine("""{0}"" to titlecase: {1}", myString, myTI.ToTitleCase(myString))
 
-   End Sub 'Main 
+   End Sub
 
-End Class 'SamplesTextInfo
+End Class
 
 
 'This code produces the following output.

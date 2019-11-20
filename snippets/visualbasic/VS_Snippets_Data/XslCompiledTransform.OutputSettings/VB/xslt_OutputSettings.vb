@@ -25,6 +25,6 @@ Public Class Sample
         xslt.Transform(doc, writer)
         writer.Close()
     
-    End Sub 'Main 
-End Class 'Sample 
+    End Sub
+End Class
 '</snippet1>

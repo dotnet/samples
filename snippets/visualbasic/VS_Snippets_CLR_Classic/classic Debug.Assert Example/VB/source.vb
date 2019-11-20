@@ -20,5 +20,5 @@ Public Class Form1
         ' Test that the index value is valid. 
         Debug.Assert((index > - 1))
         ' </Snippet1>
-    End Sub 'Method
-End Class 'Form1
+    End Sub
+End Class

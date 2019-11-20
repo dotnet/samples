@@ -11,7 +11,7 @@ Imports System.IO
 Public Class Order
       Public orderId As Integer
       Public orderTime As DateTime
-End Class 'Order
+End Class
 
    
   
@@ -40,7 +40,7 @@ Public Class MyNewQueue
       myNewQueue.ReceiveMessage()
          
       Return
-   End Sub 'Main
+   End Sub
       
       
 
@@ -55,7 +55,7 @@ Public Class MyNewQueue
       Catch e As MessageQueueException
          Console.WriteLine(e.Message)
       End Try
-   End Sub 'CreateQueue
+   End Sub
        
       
 
@@ -84,7 +84,7 @@ Public Class MyNewQueue
       End Try 
          
       Return
-   End Sub 'SendMessage
+   End Sub
       
       
       
@@ -115,7 +115,7 @@ Public Class MyNewQueue
          
          ' Catch other exceptions as necessary.
          Return
-   End Sub 'ReceiveMessage
-End Class 'MyNewQueue
+   End Sub
+End Class
 
 ' </Snippet1>

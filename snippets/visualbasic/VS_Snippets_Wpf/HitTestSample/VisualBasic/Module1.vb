@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Ink
@@ -109,61 +108,61 @@ Class HitTestSampleApp
         
         myWindow.Show()
     
-    End Sub 'OnStartup
+    End Sub
     
     
     Sub rbEraseWithRect_Click(ByVal sender As Object, ByVal e As RoutedEventArgs) 
         _hMode = hMode.EraseWithRect
     
-    End Sub 'rbEraseWithRect_Click
+    End Sub
     
     
     Sub rbEraseWithPoints_Click(ByVal sender As Object, ByVal e As RoutedEventArgs) 
         _hMode = hMode.EraseWithPoints
     
-    End Sub 'rbEraseWithPoints_Click
+    End Sub
     
     
     Sub rbEraseWithStylusShape_Click(ByVal sender As Object, ByVal e As RoutedEventArgs) 
         _hMode = hMode.EraseWithStylusShape
     
-    End Sub 'rbEraseWithStylusShape_Click
+    End Sub
     
     
     Sub rbChangeColorAtPoint_Click(ByVal sender As Object, ByVal e As RoutedEventArgs) 
         _hMode = hMode.ChangeColorAtPoint
     
-    End Sub 'rbChangeColorAtPoint_Click
+    End Sub
     
     
     Sub rbChangeColorWithPoints_Click(ByVal sender As Object, ByVal e As RoutedEventArgs) 
         _hMode = hMode.ChangeColorWithPoints
     
-    End Sub 'rbChangeColorWithPoints_Click
+    End Sub
     
     
     Sub rbChangeColorWithRect_Click(ByVal sender As Object, ByVal e As RoutedEventArgs) 
         _hMode = hMode.ChangeColorWithRect
     
-    End Sub 'rbChangeColorWithRect_Click
+    End Sub
     
     
     Sub rbChangeColorWithStylusShape_Click(ByVal sender As Object, ByVal e As RoutedEventArgs) 
         _hMode = hMode.ChangeColorWithStylusShape
     
-    End Sub 'rbChangeColorWithStylusShape_Click
+    End Sub
     
     
     Sub rbclipWithPoints_Click(ByVal sender As Object, ByVal e As RoutedEventArgs) 
         _hMode = hMode.ClipWithPoints
     
-    End Sub 'rbclipWithPoints_Click
+    End Sub
     
     
     Sub rbClipWithRect_Click(ByVal sender As Object, ByVal e As RoutedEventArgs) 
         _hMode = hMode.ClipWithRect
     
-    End Sub 'rbClipWithRect_Click
+    End Sub
     
     
     Public Enum hMode
@@ -211,7 +210,7 @@ Class HitTestSampleApp
                 EraseWithStylusShape(e.Stroke)
         End Select
     
-    End Sub 'myIC_StrokeCollected
+    End Sub
      
     Private Sub ClipWithRect(ByVal aStroke As Stroke)
         '<Snippet5>
@@ -224,7 +223,7 @@ Class HitTestSampleApp
         inkCanvas1.Strokes.Add(clipResults)
         '</Snippet5>
 
-    End Sub 'ClipWithRect
+    End Sub
 
     Sub ClipWithPoints(ByVal aStroke As Stroke) 
         '<Snippet6>
@@ -241,7 +240,7 @@ Class HitTestSampleApp
         inkCanvas1.Strokes.Add(clipResults)
         '</Snippet6>
 
-    End Sub 'ClipWithPoints
+    End Sub
 
     Sub EraseWithRect(ByVal aStroke As Stroke) 
         '<Snippet4>
@@ -254,7 +253,7 @@ Class HitTestSampleApp
         inkCanvas1.Strokes.Add(eraseResults)
         '</Snippet4>
 
-    End Sub 'EraseWithRect
+    End Sub
 
     Sub EraseWithPoints(ByVal aStroke As Stroke) 
         ' <Snippet1>
@@ -271,7 +270,7 @@ Class HitTestSampleApp
         inkCanvas1.Strokes.Add(eraseResults)
         '</Snippet1>
 
-    End Sub 'EraseWithPoints
+    End Sub
 
     Sub EraseWithStylusShape(ByVal aStroke As Stroke) 
         ' <Snippet2>
@@ -290,7 +289,7 @@ Class HitTestSampleApp
         inkCanvas1.Strokes.Add(eraseResults)
         ' </Snippet2>
 
-    End Sub 'EraseWithStylusShape
+    End Sub
 
     Sub ChangeColorAtPoint(ByVal myStroke As Stroke) 
         ' <Snippet3>
@@ -301,7 +300,7 @@ Class HitTestSampleApp
         End If
         ' </Snippet3>
 
-    End Sub 'ChangeColorAtPoint
+    End Sub
 
     Sub ChangeColorWithPoints(ByVal aStroke As Stroke)
 
@@ -316,7 +315,7 @@ Class HitTestSampleApp
             aStroke.DrawingAttributes.Color = Colors.Purple
         End If
         '</Snippet7>
-    End Sub 'ChangeColorWithPoints
+    End Sub
     
     
     Sub ChangeColorWithRect(ByVal aStroke As Stroke)
@@ -328,7 +327,7 @@ Class HitTestSampleApp
             aStroke.DrawingAttributes.Color = Colors.Purple
         End If
         '</Snippet8>
-    End Sub 'ChangeColorWithRect
+    End Sub
      
     
     Sub ChangeColorWithStylusShape(ByVal aStroke As Stroke)
@@ -346,7 +345,7 @@ Class HitTestSampleApp
             aStroke.DrawingAttributes.Color = Colors.Purple
         End If
         '</Snippet9>
-    End Sub 'ChangeColorWithStylusShape
+    End Sub
      
     
     <System.STAThread()>  _
@@ -354,5 +353,5 @@ Class HitTestSampleApp
         Dim myApp As New HitTestSampleApp()
         myApp.Run()
 
-    End Sub 'Main
-End Class 'HitTestSampleApp
+    End Sub
+End Class

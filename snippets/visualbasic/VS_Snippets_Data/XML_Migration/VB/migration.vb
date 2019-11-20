@@ -12,7 +12,7 @@ Class XML_Migration_Samples
     
     Shared Sub Main() 
     
-    End Sub 'Main
+    End Sub
      
     
 Public Sub XmlReader_Creation_Old() 
@@ -26,7 +26,7 @@ Dim reader As New XmlTextReader("http://serverName/data/books.xml")
 reader.WhitespaceHandling = WhitespaceHandling.None
 reader.XmlResolver = resolver
 '</snippet1>    
-End Sub 'XmlReader_Creation_Old
+End Sub
      
     
 '==============================
@@ -43,7 +43,7 @@ settings.IgnoreWhitespace = True
 settings.XmlResolver = resolver
 Dim reader As XmlReader = XmlReader.Create("http://serverName/data/books.xml", settings)
 '</snippet2>    
-End Sub 'XmlReader_Creation_New
+End Sub
      
 '==============================
 ' 
@@ -56,11 +56,11 @@ AddHandler reader.ValidationEventHandler, AddressOf ValidationCallBack
 While reader.Read()
 End While
 '</snippet3a>
-End Sub 'XML_Validation_Old   
+End Sub
 '<snippet3b>
 Private Shared Sub ValidationCallBack(ByVal sender As Object, ByVal e As ValidationEventArgs) 
   Console.WriteLine("Validation Error: {0}", e.Message)  
-End Sub 'ValidationCallBack
+End Sub
 '</snippet3b>        
     
 '==============================
@@ -75,11 +75,11 @@ Dim reader As XmlReader = XmlReader.Create("books.xml", settings)
 While reader.Read()
 End While
 '</snippet4a>
-End Sub 'XML_Validation_New   
+End Sub
 '<snippet4b>
 Private Shared Sub ValidationCallBack1(ByVal sender As Object, ByVal e As ValidationEventArgs) 
   Console.WriteLine("Validation Error: {0}", e.Message)  
-End Sub 'ValidationCallBack1
+End Sub
 '</snippet4b>     
     
     
@@ -90,7 +90,7 @@ Shared Sub XmlWriter_Creation_Old()
 Dim writer As New XmlTextWriter("books.xml", Encoding.Unicode)
 writer.Formatting = Formatting.Indented
 '</snippet5>    
-End Sub 'XmlWriter_Creation_Old
+End Sub
      
     
 '==============================
@@ -102,7 +102,7 @@ settings.Indent = True
 settings.Encoding = Encoding.Unicode
 Dim writer As XmlWriter = XmlWriter.Create("books.xml", settings)
 '</snippet6>    
-End Sub 'XmlWriter_Creation_New
+End Sub
      
     
 '==============================
@@ -125,7 +125,7 @@ Dim doc As New XPathDocument(filename)
 Dim writer As New XmlTextWriter("output.xml", Nothing)
 xslt.Transform(doc, Nothing, writer, Nothing)
 '</snippet7>    
-End Sub 'XSLT_Old
+End Sub
      
     
 '==============================
@@ -146,7 +146,7 @@ xslt.Load("http://serverName/data/xsl/sort.xsl", XsltSettings.Default, resolver)
 Dim writer As XmlWriter = XmlWriter.Create("output.xml")
 xslt.Transform("books.xml", writer)
 '</snippet8>    
-End Sub 'XSLT_New
+End Sub
      
     
 '==============================
@@ -157,7 +157,7 @@ Dim xslt As New XslTransform()
 xslt.Load("output.xsl")
 xslt.Transform("books.xml", "books.html")
 '</snippet9>    
-End Sub 'XSLT_URI_Old
+End Sub
      
     
 '==============================
@@ -168,7 +168,7 @@ Dim xslt As New XslCompiledTransform()
 xslt.Load("output.xsl")
 xslt.Transform("books.xml", "books.html")
 '</snippet10>    
-End Sub 'XSLT_URI_New
+End Sub
      
     
 '==============================
@@ -180,7 +180,7 @@ Dim resolver As New XmlUrlResolver()
 resolver.Credentials = CredentialCache.DefaultCredentials
 xslt.Load("sort.xsl", resolver)
 '</snippet11>    
-End Sub 'Stylesheet_Credentials_Old
+End Sub
          
     
 '==============================
@@ -192,7 +192,7 @@ Dim resolver As New XmlUrlResolver()
 resolver.Credentials = CredentialCache.DefaultCredentials
 xslt.Load("sort.xsl", XsltSettings.Default, resolver)
 '</snippet12>    
-End Sub 'Stylesheet_Credentials_New
+End Sub
          
     
 '==============================
@@ -216,7 +216,7 @@ Dim writer As New XmlTextWriter("output.xml", Nothing)
 'Transform the file.
 xslt.Transform(New XPathDocument(filename), argList, writer, Nothing)
 '</snippet13>    
-End Sub 'XSLT_Param_Old
+End Sub
      
     
 '==============================
@@ -240,7 +240,7 @@ Dim writer As XmlWriter = XmlWriter.Create("output.xml", Nothing)
 ' Transform the file.
 xslt.Transform(New XPathDocument(filename), argList, writer)
 '</snippet14>    
-End Sub 'XSLT_Param_New
+End Sub
      
     
 '==============================
@@ -251,7 +251,7 @@ Dim xslt As New XslTransform()
 xslt.Load("output.xsl")
 xslt.Transform("books.xml", "books.html")
 '</snippet15>    
-End Sub 'XSLT_Script_Old
+End Sub
      
     
 '==============================
@@ -266,7 +266,7 @@ Dim xslt As New XslCompiledTransform()
 xslt.Load("calc.xsl", settings, New XmlUrlResolver())
 xslt.Transform("books.xml", "books.html")
 '</snippet16>    
-End Sub 'XSLT_Script_New 
+End Sub
 
 '==============================
 ' 
@@ -280,7 +280,7 @@ Dim reader As XmlReader = xslt.Transform(New XPathDocument("books.xml"), Nothing
 ' Load the results into an XPathDocument object.
 Dim doc As XPathDocument = New XPathDocument(reader)
 '</snippet17>
-End Sub 'XSLT_Roundtrip_Old
+End Sub
 
 '==============================
 ' 
@@ -296,7 +296,7 @@ xslt.Transform(New XPathDocument("books.xml"), Nothing, ms)
 ms.Seek(0, SeekOrigin.Begin)
 Dim doc As XPathDocument = New XPathDocument(ms)
 '</snippet18>
-End Sub 'XSLT_Roundtrip_New
+End Sub
 
 '==============================
 ' 
@@ -311,7 +311,7 @@ Dim reader As XmlReader = xslt.Transform(New XPathDocument("books.xml"), Nothing
 Dim doc As XmlDocument = New XmlDocument()
 doc.Load(reader)
 '</snippet19>
-End Sub 'XSLT_DOM_Old
+End Sub
 
 '==============================
 ' 
@@ -326,6 +326,6 @@ xslt.Transform("books.xml", "output.xml")
 Dim doc As XmlDocument = New XmlDocument()
 doc.Load("output.xml")
 '</snippet20>
-End Sub 'XSLT_DOM_New
+End Sub
 
-End Class 'XML_Migration_Samples
+End Class

@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.ComponentModel
 Imports System.Windows.Forms
 
@@ -29,7 +28,7 @@ Public Class Form1
             textBox1.Text = "Data of type " & myType.GetType().Name & _
                 " is not present in the DataObject"
         End If
-    End Sub 'AddMyData3
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

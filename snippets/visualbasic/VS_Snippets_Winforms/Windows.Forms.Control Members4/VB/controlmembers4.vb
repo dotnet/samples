@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Drawing
+﻿Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Windows.Forms
@@ -21,7 +20,7 @@ Namespace ControlMembers4
       
       Public Sub New()
          InitializeComponent()
-      End Sub 'New
+      End Sub
       
       Private Sub InitializeComponent()
          Me.panel1 = New System.Windows.Forms.Panel()
@@ -103,12 +102,12 @@ Namespace ControlMembers4
          Me.Text = "Form2"
          Me.panel1.ResumeLayout(False)
          Me.ResumeLayout(False)
-      End Sub 'InitializeComponent
+      End Sub
       
 <STAThread()> _
 Shared Sub Main()
    Application.Run(New Form2())
-End Sub 'Main
+End Sub
 
 
 ' <snippet1>

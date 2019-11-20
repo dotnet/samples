@@ -2,7 +2,7 @@
 Imports System.Net
 Imports System.Net.Sockets
 Imports System.Text
-Imports Microsoft.VisualBasic
+
  _
 
 Class MyTcpClient
@@ -26,7 +26,7 @@ Class MyTcpClient
       
       ' Connect to server
       Connect(server, message)
-   End Sub 'Main
+   End Sub
    
    
 
@@ -80,7 +80,7 @@ Class MyTcpClient
       
       Console.WriteLine(ControlChars.Cr + " Press Enter to continue...")
       Console.Read()
-   End Sub 'Connect
+   End Sub
 ' </Snippet1>
 
-End Class 'MyTcpClient 
+End Class

@@ -4,8 +4,6 @@
 ' of struct 'Int16'. This compares an instance of 'Int16' with the
 ' passed in object and returns true if they are equal.
 
-Imports Microsoft.VisualBasic
-
 Class MyInt16_Equals
    
    Public Shared Sub Main()
@@ -32,6 +30,6 @@ Class MyInt16_Equals
       Catch e As Exception
          Console.WriteLine("Exception :{0}", e.Message.ToString())
       End Try
-   End Sub 'Main
-End Class 'MyInt16_Equals
+   End Sub
+End Class
 

@@ -8,8 +8,6 @@ Imports System.Net
 Imports System.Security
 Imports System.Security.Permissions
 Imports System.Collections
-Imports Microsoft.VisualBasic
-
 
 Class DnsPermissionExample
     
@@ -31,14 +29,14 @@ Class DnsPermissionExample
             Console.WriteLine(("Source : " + e.Source))
             Console.WriteLine(("Message : " + e.Message))
         End Try
-    End Sub 'Main
+    End Sub
 ' <Snippet1>    
     Private Sub MyUnion()
         ' Create a DnsPermission instance which is the union of the current DnsPermission instance and the specified DnsPermission instance.
         Dim permission As DnsPermission = CType(dnsPermission1.Union(dnsPermission2), DnsPermission)
         ' Print the attributes and values of the union instance of DnsPermission.
         PrintKeysAndValues(permission.ToXml().Attributes)
-    End Sub 'MyUnion
+    End Sub
 ' <Snippet2>    
     Public Sub useDns()
         ' Create a DnsPermission instance.
@@ -55,7 +53,7 @@ Class DnsPermissionExample
         MyUnion()
         Console.WriteLine("Intersection of both instances : ")
         MyIntersection()
-    End Sub 'useDns
+    End Sub
 
     Private Sub PrintKeysAndValues(myList As Hashtable)
         ' Get the enumerator that can iterate through the hash table.
@@ -65,7 +63,7 @@ Class DnsPermissionExample
             Console.WriteLine(ControlChars.Tab + "{0}:" + ControlChars.Tab + "{1}", myEnumerator.Key, myEnumerator.Value)
         End While
         Console.WriteLine()
-    End Sub 'PrintKeysAndValues
+    End Sub
 ' </Snippet1>
 
     Private Sub MyIntersection()
@@ -74,6 +72,6 @@ Class DnsPermissionExample
         Dim permission As DnsPermission = CType(dnsPermission1.Intersect(dnsPermission2), DnsPermission)
         ' Print the attributes and values of the intersection instance of DnsPermission.
         PrintKeysAndValues(permission.ToXml().Attributes)
-    End Sub 'MyIntersection
+    End Sub
 ' </Snippet2>
-End Class 'DnsPermissionExample 
+End Class

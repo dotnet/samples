@@ -1,6 +1,5 @@
 ﻿' Snippet for: F:System.Drawing.Imaging.Encoder.Quality
 ' <snippet3>
-Imports System
 Imports System.Drawing
 Imports System.Drawing.Imaging
 
@@ -45,7 +44,7 @@ Class Example_SetJPEGQuality
         myEncoderParameters.Param(0) = myEncoderParameter
         myBitmap.Save("Shapes075.jpg", myImageCodecInfo, myEncoderParameters)
 
-    End Sub 'Main
+    End Sub
 
     Private Shared Function GetEncoderInfo(ByVal format As ImageFormat) As ImageCodecInfo
         Dim j As Integer
@@ -62,5 +61,5 @@ Class Example_SetJPEGQuality
         Return Nothing
 
     End Function 'GetEncoderInfo
-End Class 'Example_SetJPEGQuality
+End Class
 ' </snippet3>

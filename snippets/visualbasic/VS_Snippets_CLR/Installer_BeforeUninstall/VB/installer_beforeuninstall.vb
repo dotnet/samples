@@ -19,28 +19,28 @@ Public Class MyInstaller
    Sub New()
       MyBase.New()
       AddHandler BeforeUninstall, AddressOf BeforeUninstallEventHandler
-   End Sub 'New
+   End Sub
 
    Private Sub BeforeUninstallEventHandler(sender As Object, e As InstallEventArgs)
       ' Add steps to perform any actions before the Uninstall process.
       Console.WriteLine("Code for BeforeUninstallEventHandler")
-   End Sub 'BeforeUninstallEventHandler
+   End Sub
 ' </Snippet1>
 
    ' Override the 'Install' method.
    Public Overrides Sub Install(savedState As IDictionary)
       MyBase.Install(savedState)
-   End Sub 'Install
+   End Sub
 
    ' Override the 'Commit' method.
    Public Overrides Sub Commit(savedState As IDictionary)
       MyBase.Commit(savedState)
-   End Sub 'Commit
+   End Sub
 
    ' Override the 'Rollback' method.
    Public Overrides Sub Rollback(savedState As IDictionary)
       MyBase.Rollback(savedState)
-   End Sub 'Rollback
+   End Sub
 
    ' Override the 'Uninstall' method.
    Public Overrides Sub Uninstall(savedState As IDictionary)
@@ -48,7 +48,7 @@ Public Class MyInstaller
       Console.WriteLine("")
       Console.WriteLine("Uninstall method of MyInstaller called")
       Console.WriteLine("")
-   End Sub 'Uninstall
+   End Sub
 
    ' Override the 'OnBeforeUninstall' method.
    Protected Overrides Sub OnBeforeUninstall(savedState As IDictionary)
@@ -56,7 +56,7 @@ Public Class MyInstaller
       Console.WriteLine("")
       Console.WriteLine("OnBeforeUninstall method of MyInstaller called")
       Console.WriteLine("")
-   End Sub 'OnBeforeUninstall
+   End Sub
 
    ' Override the 'OnAfterUninstall' method.
    Protected Overrides Sub OnAfterUninstall(savedState As IDictionary)
@@ -64,12 +64,12 @@ Public Class MyInstaller
       Console.WriteLine("")
       Console.WriteLine("OnAfterUninstall method of MyInstaller called")
       Console.WriteLine("")
-   End Sub 'OnAfterUninstall
-End Class 'MyInstaller
+   End Sub
+End Class
 
 Public Class MyAssembly
    Public Shared Sub Main()
       Console.WriteLine("Use 'installutil.exe -u' to run the assembly "& _
                                           " Installer_BeforeUninstall.exe")
-   End Sub 'Main
-End Class 'MyAssembly
+   End Sub
+End Class

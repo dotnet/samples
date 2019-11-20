@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
 Imports System.Drawing
@@ -13,14 +12,14 @@ Public Class Form1
     
     Public Sub New() 
 
-    End Sub 'New
+    End Sub
     
     <STAThread()>  _
     Shared Sub Main() 
         Application.EnableVisualStyles()
         Application.Run(New Form1())
     
-    End Sub 'Main
+    End Sub
     
     
     Private Sub AlignTextWithTextRenderer(ByVal e As PaintEventArgs) 
@@ -140,5 +139,5 @@ Public Class Form1
         'DrawTextAtLocation2(e);
         DrawTextInARectangle1(e)
 
-    End Sub 'Form1_Paint
-End Class 'Form1
+    End Sub
+End Class

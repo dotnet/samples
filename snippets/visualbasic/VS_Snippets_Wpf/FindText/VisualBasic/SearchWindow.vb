@@ -32,7 +32,6 @@
 ' *
 ' *****************************************************************************************
 
-Imports System
 Imports System.Windows
 Imports System.Windows.Automation
 Imports System.Windows.Controls
@@ -452,7 +451,7 @@ Namespace SDKSample
                 Return
             End Try
 
-        End Sub 'New
+        End Sub
 
 
         '--------------------------------------------------------------------
@@ -505,7 +504,7 @@ Namespace SDKSample
             findEditButton.Visibility = Visibility.Visible
             targetResult.Visibility = Visibility.Visible
 
-        End Sub 'StartTargetApplication_Click
+        End Sub
 
 
         '<SnippetStartApp>
@@ -660,7 +659,7 @@ Namespace SDKSample
             TreeScope.Element, onSelectionChanged)
             '</SnippetSelectionChanged>
 
-        End Sub 'FindTextProvider_Click
+        End Sub
         '</SnippetFindTextProvider>
 
         '--------------------------------------------------------------------
@@ -705,7 +704,7 @@ Namespace SDKSample
             documentRange.TextPattern.RangeFromChild(enclosingElement)
             childRange.Select()
 
-        End Sub 'GetEnclosingElement_Click
+        End Sub
 
 
         ' <SnippetGetChildren>
@@ -772,7 +771,7 @@ Namespace SDKSample
             ' Display the information about the child controls.
             targetSelectionDetails.Text = childInformation.ToString()
 
-        End Sub 'GetChildren_Click
+        End Sub
         '</SnippetGetChildren>
 #End Region
 
@@ -816,7 +815,7 @@ Namespace SDKSample
                 searchBackwardButton.IsEnabled = True
             End If
 
-        End Sub 'SearchString_Change
+        End Sub
 
         '--------------------------------------------------------------------
         ' <summary>
@@ -924,7 +923,7 @@ Namespace SDKSample
             ' the window has focus.
             targetWindow.SetFocus()
 
-        End Sub 'SearchDirection_Click
+        End Sub
         '</SnippetSearchTarget>
 #End Region
 
@@ -942,7 +941,7 @@ Namespace SDKSample
             Dim cb As ComboBox = CType(sender, ComboBox)
             navigationUnit = CType(cb.SelectedValue, TextUnit)
 
-        End Sub 'NavigationUnit_Change
+        End Sub
 
         '--------------------------------------------------------------------
         ' <summary>
@@ -977,7 +976,7 @@ Namespace SDKSample
             ' the window has focus.
             targetDocument.SetFocus()
 
-        End Sub 'Navigate_Click
+        End Sub
         ' </SnippetNavigate>
 #End Region
 
@@ -1024,7 +1023,7 @@ Namespace SDKSample
                 targetWindow.SetFocus()
             Next textRange
 
-        End Sub 'ExpandToTextUnit_Change
+        End Sub
 #End Region
 
 #Region "Target Listeners"
@@ -1044,7 +1043,7 @@ Namespace SDKSample
             New TextChangeDelegate(AddressOf NotifyTextChanged), _
             "Text changed, range reset." + vbLf)
 
-        End Sub 'TextChanged
+        End Sub
 
 
         '--------------------------------------------------------------------
@@ -1064,7 +1063,7 @@ Namespace SDKSample
             ' the text control.
             documentRange = targetTextPattern.DocumentRange
 
-        End Sub 'NotifyTextChanged
+        End Sub
 
 
         '--------------------------------------------------------------------
@@ -1083,7 +1082,7 @@ Namespace SDKSample
             clientWindow.Dispatcher.BeginInvoke(DispatcherPriority.Send, _
             New SelectionChangeDelegate(AddressOf NotifySelectionChanged))
 
-        End Sub 'OnTextSelectionChange
+        End Sub
 
 
         '--------------------------------------------------------------------
@@ -1111,7 +1110,7 @@ Namespace SDKSample
             ' Report target selection details.
             DisplaySelectedTextWithAttributes(selectedText)
 
-        End Sub 'NotifySelectionChanged
+        End Sub
 
         ' <SnippetRetrieveMixedAttributes>
         '--------------------------------------------------------------------
@@ -1187,7 +1186,7 @@ Namespace SDKSample
             clientWindow.Dispatcher.BeginInvoke(DispatcherPriority.Send, _
             New ProviderCloseDelegate(AddressOf CloseApp))
 
-        End Sub 'OnTargetClose
+        End Sub
 
 
         '--------------------------------------------------------------------
@@ -1201,7 +1200,7 @@ Namespace SDKSample
             ' Close the client window when the target window is closed.
             clientWindow.Close()
 
-        End Sub 'CloseApp
+        End Sub
 #End Region
-    End Class 'SearchWindow '
+    End Class
 End Namespace

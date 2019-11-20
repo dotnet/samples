@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Globalization
+﻿Imports System.Globalization
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Media
@@ -73,7 +72,7 @@ Namespace SDKSample
 		' Capture the mouse event and hit test the coordinate point value against
 		' the child visual objects.
 		Private Sub MyVisualHost_MouseLeftButtonUp(ByVal sender As Object, ByVal e As System.Windows.Input.MouseButtonEventArgs)
-			' Retreive the coordinates of the mouse button event.
+			' Retrieve the coordinates of the mouse button event.
 			Dim pt As Point = e.GetPosition(CType(sender, UIElement))
 
 			Dim result As HitTestResult = Me.HitTestCore(New PointHitTestParameters(pt))

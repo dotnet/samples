@@ -38,8 +38,8 @@ Namespace CustomControl1
             Context.Trace.Write("The ChildControl's OnClick method is called.")
             ' Bubble this event to parent.
             RaiseBubbleEvent(Me, e)
-        End Sub 'OnClick
-    End Class 'ChildControl
+        End Sub
+    End Class
     _
 
     Public Class MyResolveUrl
@@ -67,7 +67,7 @@ Namespace CustomControl1
             ' path to the Image.
             myImage.ImageUrl = ResolveUrl(Me.ImageUrl)
             myImage.RenderControl(output)
-        End Sub 'Render
+        End Sub
 
         ' </snippet2>
     End Class
@@ -80,7 +80,7 @@ Namespace CustomControl1
 
         Public Sub New()
             MyBase.New("H1")
-        End Sub 'New
+        End Sub
 
 
         Public Property [Text]() As String
@@ -103,7 +103,7 @@ Namespace CustomControl1
             If _text Is Nothing Then
                 _text = "Here is some default text."
             End If
-        End Sub 'OnInit
+        End Sub
         ' </snippet3>       
 
         <System.Security.Permissions.PermissionSetAttribute( _

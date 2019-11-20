@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
 Imports System.ComponentModel
@@ -25,5 +24,5 @@ Private Sub CreateNewDataGridColumn()
    myGridColumnCol.Add(myColumn)
 End Sub 
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

@@ -20,6 +20,6 @@ Class MySample
         myLog.WriteEntry("Writing to event log.")
         
         Console.WriteLine("Message written to event log.")
-    End Sub ' Main
-End Class ' MySample
+    End Sub
+End Class
 ' </Snippet1>

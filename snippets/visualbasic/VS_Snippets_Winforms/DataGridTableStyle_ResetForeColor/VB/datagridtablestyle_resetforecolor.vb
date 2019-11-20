@@ -7,7 +7,6 @@
 ' color is set to blue. When 'Reset ForeColor' button is clicked foreground 
 ' color is reset to its default value. 
 
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 Imports System.Data
@@ -28,7 +27,7 @@ Namespace MyDataGridColumnStyle
          InitializeComponent()
          ' Call 'SetUp' method to bind the controls.
          SetUp()
-      End Sub 'New
+      End Sub
       
       
       Private Sub InitializeComponent()
@@ -68,12 +67,12 @@ Namespace MyDataGridColumnStyle
          Text = "MyForm1"
          CType(myDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
          ResumeLayout(False)
-      End Sub 'InitializeComponent
+      End Sub
       
       
       Shared Sub Main()
          Application.Run(New MyForm1())
-      End Sub 'Main
+      End Sub
       
       
 ' <Snippet1>
@@ -81,25 +80,25 @@ Namespace MyDataGridColumnStyle
             ' Set the foreground color of table.
             myDataGridTableStyle.ForeColor = Color.Blue
             myDataGrid.TableStyles.Add(myDataGridTableStyle)
-        End Sub 'BtnSetForeColor_Click
+        End Sub
       
         Private Sub BtnResetForeColor_Click(ByVal sender As Object, ByVal e As EventArgs)
             ' Reset the foreground color of table to its default value.
             myDataGridTableStyle.ResetForeColor()
-        End Sub 'BtnResetForeColor_Click
+        End Sub
 ' </Snippet1>
 
       Private Sub AddCustomDataTableStyle()
          myDataGridTableStyle = New DataGridTableStyle()
          myDataGridTableStyle.MappingName = "Customers"
-      End Sub 'AddCustomDataTableStyle
+      End Sub
       
       Sub SetUp()
          MakeDataSet()
          ' Bind the datagrid to the dataset.
          myDataGrid.SetDataBinding(myDataSet, "Customers")
          AddCustomDataTableStyle()
-      End Sub 'SetUp
+      End Sub
       
       
       Private Sub MakeDataSet()
@@ -121,7 +120,7 @@ Namespace MyDataGridColumnStyle
          myDataTable.Rows(0)("custName") = "Alpha"
          myDataTable.Rows(1)("custName") = "Beta"
          myDataTable.Rows(2)("custName") = "Omega"
-      End Sub 'MakeDataSet
-   End Class 'MyForm1
+      End Sub
+   End Class
 End Namespace 'MyDataGridColumnStyle
 

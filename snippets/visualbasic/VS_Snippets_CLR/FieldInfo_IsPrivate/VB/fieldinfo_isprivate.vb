@@ -1,7 +1,6 @@
 ﻿' <Snippet1>	
 
 Imports System.Reflection
-Imports Microsoft.VisualBasic
 
 Class [MyClass]
     Private myField As String
@@ -9,14 +8,14 @@ Class [MyClass]
 
     Sub New()
         myField = "Microsoft"
-    End Sub 'New
+    End Sub
 
     ReadOnly Property GetField() As String
         Get
             Return myField
         End Get
     End Property
-End Class '[MyClass]
+End Class
 
 
 Class FieldInfo_IsPrivate
@@ -43,6 +42,6 @@ Class FieldInfo_IsPrivate
         Catch e As Exception
             Console.WriteLine("Exception : {0} ", e.Message.ToString())
         End Try
-    End Sub 'Main
-End Class 'FieldInfo_IsPrivate
+    End Sub
+End Class
 ' </Snippet1>

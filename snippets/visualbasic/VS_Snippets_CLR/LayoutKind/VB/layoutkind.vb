@@ -28,7 +28,7 @@ Imports System.Runtime.InteropServices
       <DllImport("user32.dll", CallingConvention := CallingConvention.StdCall)>  _
       Friend Shared Function PtInRect(ByRef r As Rect, p As Point) As Bool
       End Function	
-   End Class 'NativeMethods
+   End Class
    
    
    Class TestApplication

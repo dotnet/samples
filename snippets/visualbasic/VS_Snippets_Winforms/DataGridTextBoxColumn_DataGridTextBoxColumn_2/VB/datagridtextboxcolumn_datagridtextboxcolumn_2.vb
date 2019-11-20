@@ -6,7 +6,6 @@
 ' it is associated with data source. When the button "Change Appearance" is clicked,
 ' the format of the Date column in the grid is modified to a specific format.
 
-Imports System
 Imports System.ComponentModel
 Imports System.Data
 Imports System.Drawing
@@ -26,7 +25,7 @@ Public Class MyForm
       
       ' Call MyDataSource to bind the controls.
       MyDataSource()
-   End Sub 'New
+   End Sub
    
    Private Sub InitializeComponent()
       ' Create the form and its controls.
@@ -46,12 +45,12 @@ Public Class MyForm
       
       Me.Controls.Add(myButton)
       Me.Controls.Add(myDataGrid)
-   End Sub 'InitializeComponent
+   End Sub
    
    
    Public Shared Sub Main()
       Application.Run(New MyForm())
-   End Sub 'Main
+   End Sub
    
    
    Private Sub MyDataSource()
@@ -60,13 +59,13 @@ Public Class MyForm
       
       ' Bind the DataGrid to the DataSet.
       myDataGrid.SetDataBinding(myDataSet, "Customers")
-   End Sub 'MyDataSource
+   End Sub
    
    
     Private Sub Button_Click(ByVal sender As Object, ByVal e As EventArgs)
         MyAddCustomDataTableStyle()
         myButton.Enabled = False
-    End Sub 'Button_Click
+    End Sub
    
    
 ' <Snippet1>
@@ -98,7 +97,7 @@ Public Class MyForm
       
       ' Add DataGridTableStyle instances to GridTableStylesCollection.
       myDataGrid.TableStyles.Add(myTableStyle)
-   End Sub 'MyAddCustomDataTableStyle
+   End Sub
    
    
 ' </Snippet2>
@@ -136,5 +135,5 @@ Public Class MyForm
       ' Populate date column.
       myCustomerTable.Rows(0)("Date") = System.DateTime.Now
       myCustomerTable.Rows(1)("Date") = System.DateTime.Today
-   End Sub 'CreateDataSet 
-End Class 'MyForm
+   End Sub
+End Class

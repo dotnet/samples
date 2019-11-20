@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
 
 Public Class Fieldinfo_IsPinvoke
     Public myField As String = "A public field"

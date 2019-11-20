@@ -31,7 +31,7 @@ Public Class MyAppDomainManager
             "CustomSecurityManager, Version=1.0.0.3, Culture=neutral, " & _
             "PublicKeyToken=5659fc598c2a503e", "MyNamespace.MySecurityManager")
         Console.WriteLine(" Custom Security Manager Created.")    
-    End Sub 'New
+    End Sub
     
     '<Snippet2>
     Public Overrides Sub InitializeNewDomain(ByVal appDomainInfo _
@@ -40,7 +40,7 @@ Public Class MyAppDomainManager
         Console.WriteLine(AppDomain.CurrentDomain.FriendlyName)
         InitializationFlags = _
             AppDomainManagerInitializationOptions.RegisterWithHost   
-    End Sub 'InitializeNewDomain
+    End Sub
     '</Snippet2>
 
     '<Snippet3>
@@ -50,6 +50,6 @@ Public Class MyAppDomainManager
             Return mySecurityManager
         End Get
     End Property
-End Class 'MyAppDomainManager 
+End Class
     '</Snippet3>
 '</Snippet1>

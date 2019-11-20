@@ -228,14 +228,14 @@ Class CalculatorClient
     Public Sub New(ByVal configurationName As String)
         MyBase.New(configurationName)
 
-    End Sub 'New
+    End Sub
 
 
     Public Sub New(ByVal binding As System.ServiceModel.Channels.Binding, _
         ByVal address As System.ServiceModel.EndpointAddress)
         MyBase.New(binding, address)
 
-    End Sub 'New
+    End Sub
 
 
     Public Function Add(ByVal n1 As Double, ByVal n2 As Double) As Double _
@@ -264,7 +264,7 @@ Class CalculatorClient
         Return MyBase.Channel.Divide(n1, n2)
 
     End Function 'Divide
-End Class 'CalculatorClient
+End Class
 
 
 Public Class CalculatorService

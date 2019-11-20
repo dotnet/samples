@@ -11,7 +11,7 @@ Module Module1
     End Sub
     ' <Snippet1>
     Private Sub DemonstrateDataViewTable()
-        Dim table As DataTable = New DataTable()
+        Dim table As New DataTable()
 
         ' add columns
         Dim column As DataColumn = table.Columns.Add("ProductID", GetType(Integer))
@@ -24,7 +24,7 @@ Module Module1
             table.Rows.Add(New Object() {id, String.Format("product{0}", id)})
         Next id
 
-        Dim view As DataView = New DataView(table)
+        Dim view As New DataView(table)
 
         PrintTable(view.Table, "DataTable")
     End Sub

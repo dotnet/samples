@@ -31,7 +31,7 @@ Public Class Test
         ' snippets 18 
         SampleUserInfo()
     
-    End Sub 'Main
+    End Sub
     
     
     Private Shared Sub SampleToString() 
@@ -48,7 +48,7 @@ Public Class Test
         ' The following outputs "HTTP://www.Contoso.com:80/thick%20and%20thin.htm".
         Console.WriteLine(uriAddress.OriginalString)
     
-    End Sub 'SampleToString
+    End Sub
      '</snippet7>
     
     Private Shared Sub SampleEquals() 
@@ -63,7 +63,7 @@ Public Class Test
         End If
         ' Will output "The two addresses are equal"
      '</snippet8>
-    End Sub 'SampleEquals
+    End Sub
     
     
     Private Shared Sub GetParts() 
@@ -119,7 +119,7 @@ Public Class Test
             Console.WriteLine("The character is not hexadecimal encoded")
         End If
      '</snippet2>
-    End Sub 'HexConversions
+    End Sub
     
     
     
@@ -135,7 +135,7 @@ Public Class Test
         ' Determine the relative Uri.  
         Console.WriteLine("The difference is {0}", address1.MakeRelativeUri(address2))
     
-    End Sub 'SampleMakeRelative
+    End Sub
      '</snippet3>
     
     'CheckSchemeName
@@ -206,7 +206,7 @@ Public Class Test
             Console.WriteLine("{0} is not a well formed Uri", uriString)
         End If
         '</snippet17>
-    End Sub 'SampleCheckSchemeName
+    End Sub
     
     
     Private Shared Sub SampleUserInfo() 
@@ -215,6 +215,6 @@ Public Class Test
         Console.WriteLine(uriAddress.UserInfo)
         Console.WriteLine("Fully Escaped {0}", IIf(uriAddress.UserEscaped, "yes", "no")) 'TODO: For performance reasons this should be changed to nested IF statements
         '</snippet18>
-    End Sub 'SampleUserInfo 
+    End Sub
         
-End Class 'Test
+End Class

@@ -19,7 +19,7 @@ Namespace MyCustomWebPart
         Private Sub GetRowData(ByVal rowData As Object)
             _tableData = CType(rowData, ICollection)
 
-        End Sub 'GetRowData
+        End Sub
 
 
         Protected Overrides Sub OnPreRender(ByVal e As EventArgs)
@@ -29,7 +29,7 @@ Namespace MyCustomWebPart
                 '    _provider.GetRowData(New RowCallback(AddressOf GetRowData))
             End If
 
-        End Sub 'OnPreRender
+        End Sub
 
 
 
@@ -55,15 +55,15 @@ Namespace MyCustomWebPart
                 writer.Write("Not connected")
             End If
 
-        End Sub 'RenderContents
+        End Sub
 
         '<SNIPPET5>
         <ConnectionConsumer("Row")> _
         Public Sub SetConnectionInterface(ByVal provider As IWebPartRow)
             _provider = provider
 
-        End Sub 'SetConnectionInterface
-    End Class 'RowConsumerWebPart 
+        End Sub
+    End Class
     '</SNIPPET5>
 
     '</SNIPPET2>

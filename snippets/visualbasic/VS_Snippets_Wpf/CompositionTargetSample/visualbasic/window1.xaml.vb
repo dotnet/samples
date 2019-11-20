@@ -1,6 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
-Imports System.Diagnostics
+﻿Imports System.Diagnostics
 Imports System.Windows
 Imports System.Windows.Input
 Imports System.Windows.Media
@@ -48,7 +46,7 @@ Namespace CompositionTargetSample
 		'</SnippetCompositionTarget2>
 
 		Public Sub MouseMoveHandler(ByVal sender As Object, ByVal e As MouseEventArgs)
-			' Retreive the coordinates of the mouse button event.
+			' Retrieve the coordinates of the mouse button event.
 			_pt = e.GetPosition(CType(sender, UIElement))
 		End Sub
 	End Class

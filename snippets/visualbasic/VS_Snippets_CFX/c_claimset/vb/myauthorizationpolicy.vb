@@ -158,7 +158,7 @@ Public Class MyAuthorizationPolicy
 
         Public Sub New()
 
-        End Sub 'New
+        End Sub
 
 
         Public Property ClaimsAdded() As Boolean

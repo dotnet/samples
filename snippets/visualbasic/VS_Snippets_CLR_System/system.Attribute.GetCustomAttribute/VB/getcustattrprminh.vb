@@ -2,7 +2,6 @@
 ' Example for the Attribute.GetCustomAttribute( ParameterInfo, Type, Boolean ) 
 ' method.
 Imports System.Reflection
-Imports Microsoft.VisualBasic
 
 Namespace NDP_UE_VB
 
@@ -14,7 +13,7 @@ Namespace NDP_UE_VB
         ' This is the attribute constructor.
         Public Sub New(UsageMsg As String)
             Me.usageMsg = UsageMsg
-        End Sub ' New
+        End Sub
 
         ' usageMsg is storage for the attribute message.
         Protected usageMsg As String
@@ -28,7 +27,7 @@ Namespace NDP_UE_VB
                 usageMsg = value
             End Set
         End Property
-    End Class ' ArgumentUsageAttribute 
+    End Class
 
     Public Class BaseClass
        
@@ -38,8 +37,8 @@ Namespace NDP_UE_VB
             <ArgumentUsage("Must pass an array here.")> _
             strArray() As String, _
             ParamArray strList() As String)
-        End Sub ' TestMethod
-    End Class ' BaseClass
+        End Sub
+    End Class
 
     Public Class DerivedClass
         Inherits BaseClass
@@ -50,8 +49,8 @@ Namespace NDP_UE_VB
             strArray() As String, _
             <ArgumentUsage("Can pass a parameter list or array here.")> _
             ParamArray strList() As String)
-        End Sub ' TestMethod
-    End Class ' DerivedClass
+        End Sub
+    End Class
 
     Class DemoClass
            
@@ -96,7 +95,7 @@ Namespace NDP_UE_VB
                         paramInfo.Name, usageAttr.Message)
                 End If
             Next paramInfo
-        End Sub ' DisplayParameterAttributes
+        End Sub
        
         Public Shared Sub Main()
             Console.WriteLine( _
@@ -120,9 +119,9 @@ Namespace NDP_UE_VB
                     "The parameters information could " & _
                     "not be retrieved for method {0}.", mInfo.Name)
             End If
-        End Sub ' Main
+        End Sub
 
-    End Class ' DemoClass
+    End Class
 End Namespace ' NDP_UE_VB
 
 ' This example of Attribute.GetCustomAttribute( ParameterInfo, Type, Boolean )

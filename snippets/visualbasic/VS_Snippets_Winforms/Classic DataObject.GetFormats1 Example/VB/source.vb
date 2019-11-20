@@ -1,10 +1,6 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
-
-
 
 Public Class Form1
     Inherits Form
@@ -24,6 +20,6 @@ Public Class Form1
         For i = 0 To arrayOfFormats.Length - 1
             textBox1.Text += arrayOfFormats(i) & ControlChars.Cr
         Next i
-    End Sub 'GetAllFormats 
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

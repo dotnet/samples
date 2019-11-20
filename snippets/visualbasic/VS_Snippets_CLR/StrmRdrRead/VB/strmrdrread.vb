@@ -13,8 +13,8 @@ Class StrmRdrRead
       'Display the ASCII number of the character read in both decimal and hexadecimal format.
       Console.WriteLine("The ASCII number of the first character read is {0:D} in decimal and {1:X} in hexadecimal.", FirstChar, FirstChar)
       sr.Close()
-   End Sub 'Main
-End Class 'StrmRdrRead
+   End Sub
+End Class
 '</Snippet1>
     
     

@@ -17,8 +17,6 @@ Imports System.Net
 Imports System.IO
 Imports System.Text
 Imports System.Text.RegularExpressions
-Imports Microsoft.VisualBasic
-
 
 Public Class CookieCollection_Item_1
     
@@ -40,7 +38,7 @@ Public Class CookieCollection_Item_1
         Catch e As Exception
             Console.WriteLine(("Exception raised." + ControlChars.Cr + "Error : " + e.Message))
         End Try
-    End Sub 'Main
+    End Sub
     
     
     Public Shared Sub GetPage(requestUri As Uri)
@@ -103,7 +101,7 @@ Public Class CookieCollection_Item_1
         Catch e As Exception
             Console.WriteLine(("Exception raised." + ControlChars.Cr + "Error : " + e.Message))
         End Try
-    End Sub 'GetPage
+    End Sub
     
     
     Public Shared Sub DisplayCookies(cookies As CookieCollection)
@@ -126,7 +124,7 @@ Public Class CookieCollection_Item_1
         End Try
 ' </Snippet2>
 ' </Snippet1>
-    End Sub 'DisplayCookies
+    End Sub
      
 'The Snippet for 'Count' property of 'CookieCollection' class ends.
 'The Snippet for 'Item(string)' property of 'CookieCollection' class ends.
@@ -136,5 +134,5 @@ Public Class CookieCollection_Item_1
         Console.WriteLine("CookieCollection_Item_1 " + ChrW(60) + "urlname" + ChrW(62))
         Console.WriteLine(ChrW(60) + "urlname" + ChrW(62) + " is the name of the CookiesServer.aspx site installed locally")
         Console.WriteLine(ControlChars.Cr + "Example : CookieCollection_Item_1 http://www.MyServer.com/CookiesServer.aspx")
-    End Sub 'printUsage
-End Class 'CookieCollection_Item_1 
+    End Sub
+End Class

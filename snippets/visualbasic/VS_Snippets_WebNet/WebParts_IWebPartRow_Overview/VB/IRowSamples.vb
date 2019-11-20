@@ -47,7 +47,7 @@ Namespace Samples.AspNet.VB.Controls
       row("ZIP Code") = 98000
       _table.Rows.Add(row)
 
-    End Sub 'New
+    End Sub
 
 
     <ConnectionProvider("Row")> _
@@ -73,7 +73,7 @@ Namespace Samples.AspNet.VB.Controls
 
     End Sub
 
-  End Class 'RowProviderWebPart 
+  End Class
 
 
   ' This sample code creates a Web Parts control that acts as a consumer 
@@ -136,7 +136,7 @@ Namespace Samples.AspNet.VB.Controls
 
     End Sub
 
-  End Class 'RowConsumerWebPart 
+  End Class
 
 End Namespace  ' Samples.AspNet.VB.Controls 
 '</SNIPPET2>

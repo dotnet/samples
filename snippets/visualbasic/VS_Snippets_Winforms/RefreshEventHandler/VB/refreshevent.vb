@@ -1,6 +1,4 @@
-﻿Imports System
-
-Public NotInheritable Class Form1
+﻿Public NotInheritable Class Form1
     Inherits System.Windows.Forms.Form
 
 #Region " Windows Form Designer generated code "

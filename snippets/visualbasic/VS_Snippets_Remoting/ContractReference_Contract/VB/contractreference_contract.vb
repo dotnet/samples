@@ -49,8 +49,8 @@ Namespace ConsoleApplication1
          Catch ex As Exception
             Console.WriteLine("Exception: " + ex.Message)
          End Try
-      End Sub 'Main
-   End Class 'MyClass1
+      End Sub
+   End Class
 ' </Snippet1>
 
 End Namespace 'ConsoleApplication1 

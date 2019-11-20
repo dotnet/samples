@@ -1,10 +1,10 @@
-﻿// <Snippet3>
-using System;
+﻿using System;
 
 public class Example
 {
    public static void Main()
    {
+      // <Snippet3>
       Random rnd = new Random();
       string[] malePetNames = { "Rufus", "Bear", "Dakota", "Fido", 
                                 "Vanya", "Samuel", "Koani", "Volodya", 
@@ -21,10 +21,11 @@ public class Example
       Console.WriteLine("Suggested pet name of the day: ");
       Console.WriteLine("   For a male:     {0}", malePetNames[mIndex]);
       Console.WriteLine("   For a female:   {0}", femalePetNames[fIndex]);
+
+      // The example displays the following output:
+      //       Suggested pet name of the day:
+      //          For a male:     Koani
+      //          For a female:   Maggie
+      // </Snippet3>
    }
 }
-// The example displays the following output:
-//       Suggested pet name of the day:
-//          For a male:     Koani
-//          For a female:   Maggie
-// </Snippet3>

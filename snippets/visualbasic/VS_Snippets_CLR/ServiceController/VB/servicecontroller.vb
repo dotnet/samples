@@ -54,7 +54,7 @@ Namespace ServiceControllerSample
             Console.WriteLine("Exception:")
             Console.WriteLine(e)
          End Try
-      End Sub 'Main
+      End Sub
       
       
       Private Shared Sub CheckAlerterServiceStarted()
@@ -90,7 +90,7 @@ Namespace ServiceControllerSample
 
          ' </snippet1>
 
-      End Sub 'CheckAlerterServiceStarted
+      End Sub
       
       Private Shared Sub ToggleTelNetServiceState()
 
@@ -125,7 +125,7 @@ Namespace ServiceControllerSample
 
          ' </snippet2>
 
-      End Sub 'ToggleTelNetServiceState
+      End Sub
      
       
       
@@ -156,7 +156,7 @@ Namespace ServiceControllerSample
 
          ' </snippet3>
 
-      End Sub 'CheckDependenciesOnEventLogService
+      End Sub
        
       
       Private Shared Sub CheckMessengerServiceDependencies()
@@ -186,7 +186,7 @@ Namespace ServiceControllerSample
 
          ' </snippet4>
 
-      End Sub 'CheckMessengerServiceDependencies
+      End Sub
       
       Private Shared Sub ListDeviceDriverServices()
          
@@ -242,7 +242,7 @@ Namespace ServiceControllerSample
 
          ' </snippet5>
 
-      End Sub 'ListDeviceDriverServices
+      End Sub
       
       Private Shared Sub ListRunningServices()
 
@@ -283,8 +283,8 @@ Namespace ServiceControllerSample
       
          ' </snippet6>
 
-      End Sub 'ListRunningServices 
+      End Sub
 
-   End Class 'ServiceControllerInfo
+   End Class
     
 End Namespace 'ServiceControllerSample

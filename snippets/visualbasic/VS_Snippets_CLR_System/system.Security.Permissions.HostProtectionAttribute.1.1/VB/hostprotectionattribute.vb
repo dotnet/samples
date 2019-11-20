@@ -41,7 +41,7 @@ Class HostProtectionExample
             Code.ToString()))
         Environment.ExitCode = Code
         Environment.Exit(Code)
-    End Sub 'Exit
+    End Sub
     '</Snippet2>
 
     '<Snippet3>
@@ -56,7 +56,7 @@ Class HostProtectionExample
         Console.WriteLine("Executing Debugger.Break.")
         Debugger.Break()
         Debugger.Log(1, "info", "test message")
-    End Sub 'ExecuteBreak
+    End Sub
     '</Snippet3>
 
     '<Snippet4>
@@ -114,7 +114,7 @@ Class HostProtectionExample
         Catch e As Exception
             Console.WriteLine(e.Message)
         End Try
-    End Sub 'WatchFileEvents
+    End Sub
 
     '<Snippet6>
     ' Use the enumeration flags to indicate that this method exposes  
@@ -130,7 +130,7 @@ Class HostProtectionExample
 
         ' Give the new thread a chance to execute.
         Thread.Sleep(1000)
-    End Sub 'StartThread
+    End Sub
     '</Snippet6>
 
     ' Call methods that show the use of the HostProtectionResource enumeration.
@@ -183,8 +183,8 @@ Class HostProtectionExample
         Console.WriteLine("In the OnChanged event handler.")
         Console.WriteLine(("File: " & e.FullPath & " " & _
             e.ChangeType.ToString()))
-    End Sub 'OnChanged
-End Class 'HostProtectionExample 
+    End Sub
+End Class
 
 '<Snippet5>
 ' The following class is an example of code that exposes 
@@ -204,7 +204,7 @@ Public Class MyControl
         Dim isValid As Boolean = LicenseManager.IsValid(GetType(MyControl))
         Console.WriteLine(("The result of the IsValid method call is " & _
             isValid.ToString()))
-    End Sub 'New
+    End Sub
 
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         If disposing Then
@@ -213,7 +213,7 @@ Public Class MyControl
                 license = Nothing
             End If
         End If
-    End Sub 'Dispose
-End Class 'MyControl
+    End Sub
+End Class
 '</Snippet5>
 '</Snippet1>

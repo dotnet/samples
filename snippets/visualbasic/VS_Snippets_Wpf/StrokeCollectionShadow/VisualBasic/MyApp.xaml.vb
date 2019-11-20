@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Windows
 Imports System.Data
 Imports System.Xml
@@ -18,6 +17,6 @@ Namespace StrokeCollectionShadow
             Dim mainWindow As New Window1()
             mainWindow.Show()
 
-        End Sub 'AppStartingUp
-    End Class 'MyApp 
+        End Sub
+    End Class
 End Namespace

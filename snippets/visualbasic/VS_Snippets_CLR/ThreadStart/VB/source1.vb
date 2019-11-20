@@ -13,7 +13,7 @@ Public Class ServerClass
         Thread.Sleep(3000) 
         Console.WriteLine( _
             "The instance method called by the worker thread has ended.")
-    End Sub 'InstanceMethod
+    End Sub
 
     Public Shared Sub StaticMethod()
         Console.WriteLine( _
@@ -24,8 +24,8 @@ Public Class ServerClass
         Thread.Sleep(5000) 
         Console.WriteLine( _
             "The static method called by the worker thread has ended.")
-    End Sub 'StaticMethod
-End Class 'ServerClass
+    End Sub
+End Class
 
 Public Class Simple
 
@@ -58,6 +58,6 @@ Public Class Simple
         Console.WriteLine("The Main() thread calls this after " _
             & "starting the new StaticCaller thread.")
 
-    End Sub 'Main
-End Class 'Simple
+    End Sub
+End Class
 ' </snippet2>

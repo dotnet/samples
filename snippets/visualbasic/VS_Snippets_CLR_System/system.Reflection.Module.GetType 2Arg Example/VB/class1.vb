@@ -16,7 +16,7 @@ Namespace ReflectionModule_Examples
             Dim myType As Type
             myType = myModule.GetType("ReflectionModule_Examples.MyMainClass", False)
             Console.WriteLine("Got type: {0}", myType.ToString())
-        End Sub 'Main
-    End Class 'MyMainClass
+        End Sub
+    End Class
 End Namespace 'ReflectionModule_Examples
 '</snippet1>

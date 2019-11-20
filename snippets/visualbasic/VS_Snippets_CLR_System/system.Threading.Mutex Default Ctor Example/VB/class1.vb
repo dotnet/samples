@@ -5,7 +5,6 @@
 ' AppDomain boundaries.
  
 Imports System.Threading
-Imports Microsoft.VisualBasic
 
 Class Test
     ' Create a new Mutex. The creating thread does not own the
@@ -27,14 +26,14 @@ Class Test
         ' The main thread exits, but the application continues to
         ' run until all foreground threads have exited.
 
-    End Sub 'Main
+    End Sub
 
     Private Shared Sub MyThreadProc()
         Dim i As Integer
         For i = 1 To numIterations
             UseResource()
         Next i
-    End Sub 'MyThreadProc
+    End Sub
 
     ' This method represents a resource that must be synchronized
     ' so that only one thread at a time can enter.
@@ -55,6 +54,6 @@ Class Test
 
         ' Release Mutex.
         mut.ReleaseMutex()
-    End Sub 'UseResource
-End Class 'MyMainClass
+    End Sub
+End Class
 '</Snippet1>

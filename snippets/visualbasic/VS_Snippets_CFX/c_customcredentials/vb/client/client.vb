@@ -16,7 +16,7 @@ Public Class MyClientCredentials
 
     Public Sub New() 
     
-    End Sub 'New
+    End Sub
     
     ' Perform client credentials initialization.    
     Protected Sub New(ByVal other As MyClientCredentials) 

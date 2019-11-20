@@ -44,7 +44,7 @@ NotInheritable Class MySafeHandle
         MyBase.New(IntPtr.Zero, ownsHandle)
         SetHandle(preexistingHandle)
 
-    End Sub 'New
+    End Sub
 
     ' Do not provide a finalizer - SafeHandle's critical finalizer will
     ' call ReleaseHandle for you.
@@ -78,7 +78,7 @@ NotInheritable Class MySafeHandle
     Public Shared Function NativeAllocateHandle(ByRef someState As MyStruct) As MySafeHandle
 
     End Function
-End Class 'MySafeHandle
+End Class
 
 
 
@@ -86,7 +86,7 @@ Public Class Example
 
     Shared Sub Main()
 
-    End Sub 'Main
-End Class 'Example
+    End Sub
+End Class
 
 

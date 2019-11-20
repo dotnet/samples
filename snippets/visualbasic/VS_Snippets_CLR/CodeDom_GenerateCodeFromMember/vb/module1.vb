@@ -59,7 +59,7 @@ Class Program
         End If
         File.Delete(sourceFileName)
     
-    End Sub 'Main
+    End Sub
     
     
     '<Snippet2>
@@ -94,7 +94,7 @@ Class Program
     Shared Sub LogMessage(ByVal [text] As String) 
         Console.WriteLine([text])
     
-    End Sub 'LogMessage
+    End Sub
     
     
     Shared Sub OutputResults(ByVal results As CompilerResults) 
@@ -104,7 +104,7 @@ Class Program
             LogMessage(s)
         Next s
     
-    End Sub 'OutputResults
+    End Sub
     
     '<Snippet3>
     Shared Sub GenCodeFromMember(ByVal provider As CodeDomProvider, ByVal options As CodeGeneratorOptions) 
@@ -119,7 +119,7 @@ Class Program
         provider.GenerateCodeFromMember(method1, sw, options)
         snippetMethod = New CodeSnippetTypeMember(sw.ToString())
     
-    End Sub 'GenCodeFromMember
-End Class 'Program 
+    End Sub
+End Class
 '</Snippet3>
 '</Snippet1>

@@ -6,8 +6,6 @@
 '
 
 Imports System.Net
-Imports Microsoft.VisualBasic
-
 
 Public Class WebException_Status_Response
     
@@ -35,5 +33,5 @@ Public Class WebException_Status_Response
             Console.WriteLine(e.Message)
         End Try
         ' </Snippet1>        
-    End Sub 'Main
-End Class 'WebException_Status_Response
+    End Sub
+End Class

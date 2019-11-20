@@ -10,7 +10,7 @@ Namespace Samples.AspNet.VB.Controls
   Public Class NorthwindEmployee
 
     Public Sub New()
-    End Sub 'New 
+    End Sub
 
     Private _employeeID As Integer
     <DataObjectFieldAttribute(True, True, False)> _
@@ -45,7 +45,7 @@ Namespace Samples.AspNet.VB.Controls
       End Set
     End Property
 
-  End Class 'NorthwindEmployee
+  End Class
 ' </snippet2>
 
 ' <snippet3>
@@ -65,9 +65,9 @@ Namespace Samples.AspNet.VB.Controls
     <DataObjectMethodAttribute(DataObjectMethodType.Delete, True)> _
     Public Sub DeleteEmployeeByID(ByVal employeeID As Integer)
       Throw New Exception("The value passed to the delete method is " + employeeID.ToString())
-    End Sub 'DeleteEmployeeByID
+    End Sub
 
-  End Class 'NorthwindData
+  End Class
 ' </snippet3>
 
 End Namespace ' Samples.AspNet.VB.Controls 

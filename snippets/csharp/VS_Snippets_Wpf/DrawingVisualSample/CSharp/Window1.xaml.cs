@@ -41,7 +41,7 @@ namespace SDKSample
         // the child visual objects.
         void MyVisualHost_MouseLeftButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            // Retreive the coordinates of the mouse button event.
+            // Retrieve the coordinates of the mouse button event.
             System.Windows.Point pt = e.GetPosition((UIElement)sender);
 
             // Initiate the hit test by setting up a hit test result callback method.

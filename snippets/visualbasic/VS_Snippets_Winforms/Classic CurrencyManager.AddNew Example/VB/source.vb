@@ -1,7 +1,6 @@
 ﻿Option Strict
 Option Explicit
 
-Imports System
 Imports System.Data
 Imports System.Windows.Forms
 
@@ -16,6 +15,6 @@ Public Class Form1
         Dim myCurrencyManager As CurrencyManager = _ 
             CType(Me.BindingContext(DataTable1), CurrencyManager)
         myCurrencyManager.AddNew()
-    End Sub 'AddListItem
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

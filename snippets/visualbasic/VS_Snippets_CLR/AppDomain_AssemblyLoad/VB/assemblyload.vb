@@ -20,7 +20,7 @@ Module Test
       
       PrintLoadedAssemblies(currentDomain)
       ' Lists all five assemblies
-   End Sub 'Main
+   End Sub
    
    Sub PrintLoadedAssemblies(domain As AppDomain)
       Console.WriteLine("LOADED ASSEMBLIES:")
@@ -29,12 +29,12 @@ Module Test
          Console.WriteLine(a.FullName)
       Next a
       Console.WriteLine()
-   End Sub 'PrintLoadedAssemblies
+   End Sub
    
    Sub MyAssemblyLoadEventHandler(sender As Object, args As AssemblyLoadEventArgs)
       Console.WriteLine("ASSEMBLY LOADED: " + args.LoadedAssembly.FullName)
       Console.WriteLine()
-   End Sub 'MyAssemblyLoadEventHandler
+   End Sub
 
 End Module 'Test 
 ' </Snippet1>

@@ -1,5 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Web.Services
+
 Public Class Math
     <WebMethod()> _
     Public Function Add(num1 As Integer, num2 As Integer)As Integer

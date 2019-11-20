@@ -19,7 +19,7 @@ Class CodeDirectiveDemo
             Console.WriteLine(("Unexpected exception:" + e.ToString()))
         End Try
 
-    End Sub 'Main
+    End Sub
 
 
     ' Create and compile code containing code directives.
@@ -69,7 +69,7 @@ Class CodeDirectiveDemo
         End If
         File.Delete(sourceFileName)
 
-    End Sub 'DemonstrateCodeDirectives
+    End Sub
 
     Private Shared HashMD5 As New Guid(&H406EA660, &H64CF, &H4C82, &HB6, &HF0, &H42, &HD4, &H81, &H72, &HA7, &H99)
     Private Shared HashSHA1 As New Guid(&HFF1816EC, &H65FF, &H4D10, &H87, &HF7, &H6F, &H49, &H63, &H83, &H34, &H60)
@@ -177,7 +177,7 @@ Class CodeDirectiveDemo
         method2.Statements.Add(codeAssignStatement1)
         method2.Statements.Add(snippet1)
 
-    End Sub 'CreateGraph
+    End Sub
 
     Shared Sub OutputResults(ByVal results As CompilerResults)
         Console.WriteLine(("NativeCompilerReturnValue=" + results.NativeCompilerReturnValue.ToString()))
@@ -186,6 +186,6 @@ Class CodeDirectiveDemo
             Console.WriteLine(s)
         Next s
 
-    End Sub 'OutputResults
-End Class 'CodeDirectiveDemo 
+    End Sub
+End Class
 '</Snippet1>

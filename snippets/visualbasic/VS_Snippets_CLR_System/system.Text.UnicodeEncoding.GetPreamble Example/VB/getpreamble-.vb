@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Text
-Imports Microsoft.VisualBasic
 
 Class UnicodeEncodingExample
     
@@ -21,6 +20,6 @@ Class UnicodeEncodingExample
         For Each b In  byteOrderMark
             Console.Write("[{0}]", b)
         Next b
-    End Sub 'Main
-End Class 'UnicodeEncodingExample
+    End Sub
+End Class
 ' </Snippet1>

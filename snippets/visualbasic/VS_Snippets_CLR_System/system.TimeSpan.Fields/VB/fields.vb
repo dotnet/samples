@@ -1,7 +1,5 @@
 ﻿'<Snippet1>
 ' Example of the TimeSpan fields.
-Imports Microsoft.VisualBasic
-
 Module TimeSpanFieldsDemo
     
     ' Pad the end of a TimeSpan string with spaces if it does not 

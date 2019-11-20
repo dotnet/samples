@@ -96,5 +96,5 @@ Public Class MyDiscoveryClientResult
       Catch e As Exception
          Console.WriteLine("Error is " + e.Message)
       End Try
-   End Sub 'Main
-End Class 'MyDiscoveryClientResult
+   End Sub
+End Class

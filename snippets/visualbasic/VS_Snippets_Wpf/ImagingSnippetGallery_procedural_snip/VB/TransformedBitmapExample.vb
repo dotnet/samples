@@ -1,5 +1,4 @@
 ﻿ ' <SnippetTransformedBitmapCodeExampleWholePage>
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Media
@@ -65,8 +64,8 @@ Namespace SDKSample
             myStackPanel.Children.Add(myImage)
             Me.Content = myStackPanel
 
-        End Sub 'New
-    End Class 'TransformedBitmapExample
+        End Sub
+    End Class
 End Namespace 'ImagingSnippetGallery
 
 ' </SnippetTransformedBitmapCodeExampleWholePage>

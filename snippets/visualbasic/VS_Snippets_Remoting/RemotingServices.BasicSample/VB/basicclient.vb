@@ -10,7 +10,7 @@ Public Class SampleClient
    <SecurityPermission(SecurityAction.LinkDemand)> _
    Public Shared Sub Main()
       Snippet1()
-   End Sub 'Main
+   End Sub
    
    <SecurityPermission(SecurityAction.LinkDemand)> _
    Private Shared Sub Snippet1()
@@ -32,5 +32,5 @@ Public Class SampleClient
       ' Calls a method on the server object.
       Console.WriteLine("proxy.Add returned {0}.", proxy.Add(2, 3))
       ' </Snippet1>
-   End Sub 'Snippet1 
-End Class 'SampleClient
+   End Sub
+End Class

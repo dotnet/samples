@@ -15,7 +15,7 @@ Public Class Form1
         
         ' Print the product major part number.
         textBox1.Text = "Product major part number: " & myFileVersionInfo.ProductMajorPart
-    End Sub 'GetProductMajorPart
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

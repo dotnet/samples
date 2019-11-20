@@ -17,6 +17,6 @@ Namespace Examples.VB.WebControls.Design
         CustomHyperLinkDesigner))> _
     Public Class CustomHyperLink
         Inherits HyperLink
-    End Class ' CustomHyperLink
+    End Class
 End Namespace ' Examples.VB.WebControls.Design
 ' </snippet3>

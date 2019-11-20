@@ -2,6 +2,7 @@
 Imports System.IO
 Imports System.Xml
 Imports System.Xml.Serialization
+
  
 Public Class Student
    <XmlAttributeAttribute()> _
@@ -9,7 +10,7 @@ Public Class Student
 
    <XmlNamespaceDeclarationsAttribute()> _   
    Public myNamespaces As XmlSerializerNamespaces
-End Class 'Student
+End Class
  
 
 Public Class Run

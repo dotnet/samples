@@ -33,8 +33,8 @@ Imports System.IO
         Console.WriteLine(readStream.ReadToEnd())
         response.Close()
         readStream.Close()
-    End Sub 'Main
-End Class 'Test
+    End Sub
+End Class
 '
 'The output from this example will vary depending on the value passed into Main 
 'but will be similar to the following:

@@ -1,10 +1,7 @@
-﻿Imports System
-Imports System.Drawing
+﻿Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
-
 
 Namespace Foo
 
@@ -17,7 +14,7 @@ Namespace Foo
       
       Public Sub New()
          InitializeComponent()
-      End Sub 'New
+      End Sub
 
 '      Protected Overrides Sub Dispose(disposing As Boolean)
 '         If disposing Then
@@ -26,7 +23,7 @@ Namespace Foo
 '            End If
 '         End If
 '         MyBase.Dispose(disposing)
-'      End Sub 'Dispose
+'      End Sub
       
       Private Sub InitializeComponent()
          Me.treeView1 = New System.Windows.Forms.TreeView()
@@ -58,11 +55,11 @@ Namespace Foo
          Me.Name = "Form1"
          Me.Text = "Form1"
          Me.ResumeLayout(False)
-      End Sub 'InitializeComponent
+      End Sub
        
       <STAThread()>Shared Sub Main()
          Application.Run(New Form1())
-      End Sub 'Main
+      End Sub
       
       
 ' <snippet1>
@@ -111,7 +108,7 @@ Private Sub treeView1_AfterCollapse(sender As Object, _
 End Sub 
 ' </snippet3>
 
-   End Class 'Form1 
+   End Class
 End Namespace 'Foo
 
 

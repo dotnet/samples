@@ -21,12 +21,12 @@ Class SecurityPrincipalDemo
             Console.WriteLine(e.Message)
         End Try
 
-    End Sub 'Main
+    End Sub
 
     <PrincipalPermission(SecurityAction.Demand, Role:="Administrators")> _
     Shared Sub CheckAdministrator()
         Console.WriteLine("User is an administrator")
 
-    End Sub 'CheckAdministrator
-End Class 'SecurityPrincipalDemo
+    End Sub
+End Class
 '</Snippet1>

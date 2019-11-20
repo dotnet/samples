@@ -8,43 +8,43 @@ using System.Security.Permissions;
 
 public delegate bool CallBack(int handle, IntPtr param);
 
-public class LibWrap
+internal static class NativeMethods
 {
-	// passing managed object as LPARAM
-	// BOOL EnumWindows(WNDENUMPROC lpEnumFunc, LPARAM lParam);
+    // passing managed object as LPARAM
+    // BOOL EnumWindows(WNDENUMPROC lpEnumFunc, LPARAM lParam);
 
-	[DllImport("user32.dll")]
-	public static extern bool EnumWindows(CallBack cb, IntPtr param);
+    [DllImport("user32.dll")]
+    internal static extern bool EnumWindows(CallBack cb, IntPtr param);
 }
 
 public class App
 {
-	public static void Main()
-	{
-		Run();
-	}
+    public static void Main()
+    {
+        Run();
+    }
 
-        [SecurityPermission(SecurityAction.Demand, UnmanagedCode=true)]
-	public static void Run()
-        {
-		TextWriter tw = System.Console.Out;
-		GCHandle gch = GCHandle.Alloc(tw);
+    [SecurityPermission(SecurityAction.Demand, UnmanagedCode = true)]
+    public static void Run()
+    {
+        TextWriter tw = Console.Out;
+        GCHandle gch = GCHandle.Alloc(tw);
 
-		CallBack cewp = new CallBack(CaptureEnumWindowsProc);
+        CallBack cewp = new CallBack(CaptureEnumWindowsProc);
 
-		// platform invoke will prevent delegate to be garbage collected
-		// before call ends
+        // platform invoke will prevent delegate to be garbage collected
+        // before call ends
 
-		LibWrap.EnumWindows(cewp, GCHandle.ToIntPtr(gch));
-		gch.Free();
-        }
+        NativeMethods.EnumWindows(cewp, GCHandle.ToIntPtr(gch));
+        gch.Free();
+    }
 
-	private static bool CaptureEnumWindowsProc(int handle, IntPtr param)
-	{
-		GCHandle gch = GCHandle.FromIntPtr(param);
-		TextWriter tw = (TextWriter)gch.Target;
-		tw.WriteLine(handle);
-		return true;
-	}
+    private static bool CaptureEnumWindowsProc(int handle, IntPtr param)
+    {
+        GCHandle gch = GCHandle.FromIntPtr(param);
+        TextWriter tw = (TextWriter)gch.Target;
+        tw.WriteLine(handle);
+        return true;
+    }
 }
 // </snippet1>

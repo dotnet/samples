@@ -20,8 +20,8 @@ Public Class MyAttribute
    Public Sub New(s As String, x As Integer)
       Me.s = s
       Me.x = x
-   End Sub 'New
-End Class 'MyAttribute
+   End Sub
+End Class
 
 Class MyApplication
    Public Shared Sub Main()
@@ -36,7 +36,7 @@ Class MyApplication
             Exit For
          End If
       Next index
-   End Sub 'Main
+   End Sub
 
    Private Shared Function CreateCallee(domain As AppDomain) As Type
       Dim myAssemblyName As New AssemblyName()
@@ -53,5 +53,5 @@ Class MyApplication
       Dim helloWorldClass As TypeBuilder = myModule.DefineType("HelloWorld", TypeAttributes.Public)
       Return helloWorldClass.CreateType()
    End Function 'CreateCallee
-End Class 'MyApplication
+End Class
 ' </Snippet1>

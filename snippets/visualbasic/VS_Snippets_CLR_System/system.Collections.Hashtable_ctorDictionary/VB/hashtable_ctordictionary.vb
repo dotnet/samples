@@ -59,9 +59,9 @@ Public Class SamplesHashtable
       Console.WriteLine($"first is in myHT2: {myHT2.ContainsKey("first")}")
       Console.WriteLine($"first is in myHT3: {myHT3.ContainsKey("first")}")
 
-   End Sub 'Main 
+   End Sub
 
-End Class 'SamplesHashtable
+End Class
 
 
 'This code produces the following output.

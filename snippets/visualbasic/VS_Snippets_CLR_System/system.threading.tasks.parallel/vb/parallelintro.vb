@@ -1,5 +1,6 @@
 ﻿'<snippet07>
 Imports System.Threading.Tasks
+
 Module Module1
 
     Sub Main()
@@ -23,6 +24,7 @@ End Module
 
 '<snippet08>
 ' Imports System.Threading.Tasks
+
 Class LoopStateDemo
 
     Sub TestMethod()

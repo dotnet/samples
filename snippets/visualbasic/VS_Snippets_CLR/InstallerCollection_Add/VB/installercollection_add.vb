@@ -92,13 +92,13 @@ Public Class InstallerCollection_Add
       Catch e As Exception
          Console.WriteLine(" Exception raised : {0}", e.Message)
       End Try
-   End Sub 'Main
+   End Sub
 
    Public Shared Sub PrintHelpMessage()
       Console.WriteLine("Usage : InstallerCollection_Add [/u | /uninstall] [option [...]]assembly"+ _
                                                                "[[option [...]] assembly] [...]]")
       Console.WriteLine("InstallerCollection_Add executes the installers in each of" + _
       " the given assembly. If /u or /uninstall option is given it uninstalls the assemblies.")
-   End Sub 'PrintHelpMessage
-End Class 'InstallerCollection_Add
+   End Sub
+End Class
 ' </Snippet1>

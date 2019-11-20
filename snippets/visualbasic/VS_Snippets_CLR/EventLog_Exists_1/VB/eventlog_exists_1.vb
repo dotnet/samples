@@ -20,5 +20,5 @@ Class EventLog_Exists_1
       Catch e As Exception
          Console.WriteLine("Exception:" + e.Message)
       End Try
-   End Sub 'Main
-End Class 'EventLog_Exists_1
+   End Sub
+End Class

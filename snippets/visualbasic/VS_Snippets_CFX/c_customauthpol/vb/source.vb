@@ -39,7 +39,7 @@ Public Class MyServiceAuthorizationManager
         Return False
     
     End Function 'CheckAccessCore
-End Class 'MyServiceAuthorizationManager
+End Class
 '</snippet2>
 
 '<snippet5>
@@ -145,7 +145,7 @@ Public Class MyAuthorizationPolicy
         Public Sub New() 
             bClaimsAdded = False
         
-        End Sub 'New
+        End Sub
         
         
         Public Property ClaimsAdded() As Boolean 

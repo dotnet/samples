@@ -79,13 +79,13 @@ Class Sample
       ' sb.Insert(3, xUInt64) ' 10
       ' sb.Insert(3, xSByte)  ' -11
 
-   End Sub 'Main
+   End Sub
    
    Public Shared Sub Show(overloadNumber As Integer, sbs As StringBuilder)
       Console.WriteLine("{0,2:G} = {1}", overloadNumber, sbs.ToString())
       sb = New StringBuilder(initialValue)
-   End Sub 'Show
-End Class 'Sample
+   End Sub
+End Class
 '
 'This example produces the following results:
 '

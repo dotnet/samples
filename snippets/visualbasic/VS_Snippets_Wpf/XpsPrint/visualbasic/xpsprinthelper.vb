@@ -2,7 +2,6 @@
 ' Copyright (c) Microsoft Corporation. All rights reserved.
 
 
-Imports System
 Imports System.Collections.Generic
 Imports System.IO
 Imports System.IO.Packaging
@@ -42,7 +41,7 @@ Namespace SDKSampleHelper
 			_completed = completed
 			_status = status
 		End Sub
-	End Class ' end:class AsyncSaveEventArgs
+	End Class
 
 
 	' ------------------------- class XpsPrintHelper -------------------------
@@ -105,7 +104,7 @@ Namespace SDKSampleHelper
 			Else
 				PrintVisual(xdwPrint, transformedVisual)
 			End If
-		End Sub ' end:PrintSingleVisual()
+		End Sub
 
 
 		' ----------------------- PrintMultipleVisuals -----------------------
@@ -148,7 +147,7 @@ Namespace SDKSampleHelper
 				' Print content using helper function
 				PrintVisuals(xdwPrint, vc)
 			End If
-		End Sub ' end:PrintMultipleVisuals()
+		End Sub
 
 
 		' ------------------ PrintSingleFlowContentDocument ------------------
@@ -174,7 +173,7 @@ Namespace SDKSampleHelper
 			Else
 				PrintVisualAsync(xdwPrint, visual)
 			End If
-		End Sub ' end:PrintSingleFlowContentDocument()
+		End Sub
 
 
 		' ------------------ PrintSingleFixedContentDocument -----------------
@@ -197,7 +196,7 @@ Namespace SDKSampleHelper
 			Else
 				PrintSingleFixedContentDocument(xdwPrint, fd)
 			End If
-		End Sub ' end:PrintSingleFixedContentDocument()
+		End Sub
 
 
 		'<SnippetPrintMultipleFixedContentDocuments>
@@ -227,7 +226,7 @@ Namespace SDKSampleHelper
 			Else
 				PrintMultipleFixedContentDocuments(xdwPrint, fds)
 			End If
-		End Sub ' end:PrintMultipleFixedContentDocuments()
+		End Sub
 
 		'</SnippetPrintMultipleFixedContentDocuments>
 
@@ -256,7 +255,7 @@ Namespace SDKSampleHelper
 			Else
 				PrintVisualAsync(xdwPrint, visual)
 			End If
-		End Sub ' end:PrintDocumentViewerContent()
+		End Sub
 
 		#End Region ' Print Interface
 
@@ -382,7 +381,7 @@ Namespace SDKSampleHelper
 			For Each v As Visual In vc
 				vToXpsD.WriteAsync(v) 'Write each visual to a single page.
 			Next v
-		End Sub ' end:PrintVisualsAsync()
+		End Sub
 
 
 		' --------------- PrintSingleFlowContentDocumentAsync ----------------
@@ -399,7 +398,7 @@ Namespace SDKSampleHelper
 			AddHandler xpsdw.WritingCompleted, AddressOf AsyncPrintCompleted
 
 			xpsdw.WriteAsync(idp) ' Write the IDP as a document.
-		End Sub ' end:PrintSingleFlowContentDocumentAsync()
+		End Sub
 
 
 		' --------------- PrintSingleFixedContentDocumentAsync ---------------
@@ -437,7 +436,7 @@ Namespace SDKSampleHelper
 			' Write the FixedDocumentSequence as a
 			' collection of documents asynchronously.
 			xpsdw.WriteAsync(fds)
-		End Sub ' end:PrintMultipleFixedContentDocumentsAsync()
+		End Sub
 
 
 		' ---------------------------- CancelAsync ---------------------------
@@ -470,7 +469,7 @@ Namespace SDKSampleHelper
 				Dim asyncInfo As New AsyncPrintEventArgs(result, True)
 				RaiseEvent OnAsyncPrintChange(Me, asyncInfo) ' update display status
 			End If
-		End Sub ' end:AsyncPrintCompleted()
+		End Sub
 
 
 		' ----------------------- AsyncPrintingProgress ----------------------
@@ -490,7 +489,7 @@ Namespace SDKSampleHelper
 			If _activeVtoXPSD IsNot Nothing AndAlso _batchProgress = 3 Then
 				_activeVtoXPSD.EndBatchWrite()
 			End If
-		End Sub ' end:AsyncPrintingProgress()
+		End Sub
 
 		'<SnippetMultipleFixedContentDocuments_WritingPrintTicketRequired>
 
@@ -543,7 +542,7 @@ Namespace SDKSampleHelper
 			' the FixedPage level, the same inheritance-override logic applies
 			' to FixedPage as well.
 
-		End Sub ' end:MultipleFixedContentDocuments_WritingPrintTicketRequired()
+		End Sub
 
 		'</SnippetMultipleFixedContentDocuments_WritingPrintTicketRequired>
 
@@ -679,6 +678,6 @@ Namespace SDKSampleHelper
 		Private _xpsdwActive As XpsDocumentWriter = Nothing
 		#End Region ' Private Data
 
-	End Class ' end:class XpsPrintHelper
+	End Class
 
 End Namespace ' end:namespace SDKSampleHelper

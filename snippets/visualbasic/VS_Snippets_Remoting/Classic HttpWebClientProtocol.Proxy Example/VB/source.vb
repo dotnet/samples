@@ -20,12 +20,12 @@ Public Class Page1
         ' Call the Add XML Web service method.
         Dim total As Integer = math.Add(8, 5)
         ' </Snippet1>
-    End Sub 'Page_Load 
+    End Sub
 
     Public Shared Sub Main
 
     End Sub
-End Class 'Page1
+End Class
 
 Namespace MyMath
 	Public Class Math 

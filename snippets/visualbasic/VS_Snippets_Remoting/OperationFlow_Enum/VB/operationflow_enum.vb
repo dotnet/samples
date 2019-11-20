@@ -95,7 +95,7 @@ Class MyOperationFlowSample
          Console.WriteLine("Source : " & e.Source.ToString())
          Console.WriteLine("Message : " & e.Message.ToString())
       End Try
-   End Sub 'Main
+   End Sub
    ' <Snippet2>
    ' <Snippet3>
    ' <Snippet4>
@@ -121,11 +121,11 @@ Class MyOperationFlowSample
                "receives a message, then sends a correlated message " & _
                "(RequestResponse).")
       End Select
-   End Sub 'DisplayOperationFlowDescription
+   End Sub
 ' </Snippet6>
 ' </Snippet5>
 ' </Snippet4>
 ' </Snippet3>
 ' </Snippet2>
-End Class 'MyOperationFlowSample
+End Class
 ' </Snippet1>

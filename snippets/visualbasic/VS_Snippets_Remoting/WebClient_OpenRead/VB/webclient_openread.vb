@@ -8,8 +8,6 @@
 
 Imports System.Net
 Imports System.IO
-Imports Microsoft.VisualBasic
-
 
 Public Class WebClient_OpenRead
     
@@ -42,5 +40,5 @@ Public Class WebClient_OpenRead
             ' Display the exception.
             Console.WriteLine(("The following general exception was raised: " + e.Message))
         End Try
-    End Sub 'Main
-End Class 'WebClient_OpenRead
+    End Sub
+End Class

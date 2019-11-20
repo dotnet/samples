@@ -1,7 +1,6 @@
 ﻿'<snippet00>
 'A simple example for the DictionaryEntry structure.
 Imports System.Collections
-Imports Microsoft.VisualBasic
 
 Module Example
 

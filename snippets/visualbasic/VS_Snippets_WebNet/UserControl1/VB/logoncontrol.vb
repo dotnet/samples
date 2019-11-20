@@ -11,6 +11,6 @@ Public Class LogOnControl
    
    Public Sub Page_Load(sender As [Object], e As EventArgs)
       Message.Text = "Welcome to a simple User Control!"
-   End Sub 'Page_Load
-End Class 'LogOnControl 
+   End Sub
+End Class
 ' </snippet8>

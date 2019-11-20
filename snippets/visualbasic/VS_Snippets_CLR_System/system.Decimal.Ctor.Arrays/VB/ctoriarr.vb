@@ -1,7 +1,5 @@
 ﻿'<Snippet1>
 ' Example of the Decimal( Integer( ) ) constructor.
-Imports Microsoft.VisualBasic
-
 Module DecimalCtorIArrDemo
 
     ' Get the exception type name; remove the namespace prefix.

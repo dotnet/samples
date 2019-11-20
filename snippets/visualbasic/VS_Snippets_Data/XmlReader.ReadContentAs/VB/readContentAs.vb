@@ -9,7 +9,7 @@ Class Typed_Read_Methods
         ReadContentAsBoolean()
         ReadContentAs()
     
-    End Sub 'Main
+    End Sub
         
     
   Public Shared Sub ReadContentAsBoolean() 
@@ -28,7 +28,7 @@ Class Typed_Read_Methods
             
   End Using
   '</snippet1> 
-  End Sub 'ReadContentAsBoolean
+  End Sub
      
     
   Public Shared Sub ReadContentAs() 
@@ -46,8 +46,8 @@ Class Typed_Read_Methods
             
   End Using
   '</snippet2>
-  End Sub 'ReadContentAs
+  End Sub
 
-End Class 'Typed_Read_Methods 
+End Class
 
 ' end class.

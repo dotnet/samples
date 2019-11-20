@@ -68,7 +68,7 @@ Public Class SampleWebBaseEvent
         customCreatedMsg = String.Format( _
         "Event created at: {0}", DateTime.Now.TimeOfDay.ToString())
 
-    End Sub 'New
+    End Sub
 
     ' </Snippet2>
 
@@ -85,7 +85,7 @@ Public Class SampleWebBaseEvent
         customCreatedMsg = String.Format( _
         "Event created at: {0}", DateTime.Now.TimeOfDay.ToString())
 
-    End Sub 'New
+    End Sub
 
 
     ' </Snippet3>
@@ -99,7 +99,7 @@ Public Class SampleWebBaseEvent
         ' Raise the event.
         MyBase.Raise()
 
-    End Sub 'Raise
+    End Sub
 
     ' </Snippet4>
     ' <Snippet5>
@@ -110,7 +110,7 @@ Public Class SampleWebBaseEvent
         ' Raise the event.
         Raise(evnt)
 
-    End Sub 'CustomRaise
+    End Sub
 
 
     ' </Snippet5>
@@ -252,9 +252,9 @@ ByVal formatter As WebEventFormatter)
         ' </Snippet20>
         formatter.IndentationLevel -= 1
 
-    End Sub 'FormatCustomEventDetails
+    End Sub
     ' </Snippet17>
 
-End Class 'SampleWebBaseEvent
+End Class
 
 ' </Snippet1>

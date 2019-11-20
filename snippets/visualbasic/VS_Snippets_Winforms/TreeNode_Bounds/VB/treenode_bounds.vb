@@ -14,7 +14,6 @@
 ' the child tree nodes display the order numbers assigned to each 
 ' customer.
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -33,7 +32,7 @@ Public Class TreeNode_Bounds
    Public Sub New()
       InitializeComponent()
       FillMyTreeView()
-   End Sub 'New
+   End Sub
    ' ArrayList object to hold the 'Customer' objects.
    Private customerArray As New ArrayList()
 
@@ -62,7 +61,7 @@ Public Class TreeNode_Bounds
 
       ' Begin repainting the TreeView.
       myTreeView.EndUpdate()
-   End Sub 'FillMyTreeView
+   End Sub
 
 
 ' <Snippet1>
@@ -72,15 +71,15 @@ Public Class Customer
    Public Sub New(myName As String)
       CustomerName = myName
       CustomerOrders = New ArrayList()
-   End Sub 'New
-End Class 'Customer
+   End Sub
+End Class
 
 Public Class Order
    Public OrderID As String
    Public Sub New(myOrderID As String)
       Me.OrderID = myOrderID
-   End Sub 'New
-End Class 'Order
+   End Sub
+End Class
 
 Public Sub AddRootNodes()
    ' Add a root node to assign the customer nodes to.
@@ -176,9 +175,9 @@ End Sub
                                     Me.myButton, Me.myComboBox, Me.myTreeView})
       Me.Text = "TreeNode Example"
       Me.ResumeLayout(False)
-   End Sub 'InitializeComponent
+   End Sub
 
    Shared Sub Main()
       Application.Run(New TreeNode_Bounds())
-   End Sub 'Main
-End Class 'TreeNode_Bounds
+   End Sub
+End Class

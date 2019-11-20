@@ -11,7 +11,6 @@
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Configuration.Install
-Imports Microsoft.VisualBasic
 
 <RunInstaller(True)> _
 Public Class MyInstaller
@@ -23,22 +22,22 @@ Public Class MyInstaller
       Dim myHelpText As String = HelpText
       Console.WriteLine("Help Text : ")
       Console.WriteLine(myHelpText)
-   End Sub 'Install
+   End Sub
 
    ' Override the 'Commit' method.
    Public Overrides Sub Commit(ByVal savedState As IDictionary)
       MyBase.Commit(savedState)
-   End Sub 'Commit
+   End Sub
 
    ' Override the 'Rollback' method.
    Public Overrides Sub Rollback(ByVal savedState As IDictionary)
       MyBase.Rollback(savedState)
-   End Sub 'Rollback
+   End Sub
 
    ' Override the 'Uninstall' method.
    Public Overrides Sub Uninstall(ByVal savedState As IDictionary)
       MyBase.Uninstall(savedState)
-   End Sub 'Uninstall
+   End Sub
 
 ' <Snippet1>
    ' Override the property 'HelpText'.
@@ -51,10 +50,10 @@ Public Class MyInstaller
    End Property
 ' </Snippet1>
 
-End Class 'MyInstaller
+End Class
 
 Public Class MyAssembly
    Public Shared Sub Main()
       Console.WriteLine("Use installutil.exe to run the assembly Installer_HelpText.exe")
-   End Sub 'Main
-End Class 'MyAssembly
+   End Sub
+End Class

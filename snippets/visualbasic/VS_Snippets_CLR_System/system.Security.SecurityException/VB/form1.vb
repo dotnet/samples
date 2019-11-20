@@ -18,7 +18,7 @@ Class EntryPoint
         Console.WriteLine("Press the ENTER key to exit.")
         Console.Read()
 
-    End Sub 'Main
+    End Sub
 
     Sub RunCode()
         Try
@@ -62,7 +62,7 @@ Class EntryPoint
             Display(sE.ToString())
             '</Snippet17>
         End Try
-    End Sub 'RunCode
+    End Sub
 
     Sub DemandDeniedPermission()
         Try
@@ -107,7 +107,7 @@ Class EntryPoint
             Display(si.GetString("FirstPermissionThatFailed"))
         End Try
         '</Snippet9>
-    End Sub 'DemandDeniedPermission
+    End Sub
 
     Sub DemandRefusedPermission()
         Try
@@ -136,7 +136,7 @@ Class EntryPoint
             Display("The source is: " & sE.Source)
         End Try
         '</Snippet14>
-    End Sub 'DemandRefusedPermission
+    End Sub
 
     Sub DemandPermitOnly()
         Try
@@ -168,12 +168,12 @@ Class EntryPoint
             '</Snippet16>
         End Try
 
-    End Sub 'DemandPermitOnly
+    End Sub
 
     Sub Display(ByVal line As String)
 
         Console.WriteLine(line)
 
-    End Sub 'Display
-End Class 'EntryPoint
+    End Sub
+End Class
 '</Snippet1>

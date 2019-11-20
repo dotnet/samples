@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Collections
+﻿Imports System.Collections
 Imports System.Drawing
 Imports System.ComponentModel
 Imports System.IO
@@ -83,7 +82,7 @@ Private Sub AddCustomDataTableStyle()
    ' the GridTableStylesCollection. 
    myDataGrid.TableStyles.Add(ts1)
    myDataGrid.TableStyles.Add(ts2)
-End Sub 'AddCustomDataTableStyle
+End Sub
   '</snippet1>
 
   '<snippet2>

@@ -16,20 +16,20 @@ Public Structure MyStrStruct2
     Public size As Integer
 End Structure
 
-Public Class LibWrap
+Friend Class NativeMethods
     ' Declares managed prototypes for unmanaged functions.
     <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
-    Shared Function TestStringAsResult() _
+    Friend Shared Function TestStringAsResult() _
         As String
     End Function
 
     <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
-    Shared Sub TestStringInStruct(
+    Friend Shared Sub TestStringInStruct(
         ByRef mss As MyStrStruct)
     End Sub
 
     <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
-    Shared Sub TestStringInStructAnsi(
+    Friend Shared Sub TestStringInStructAnsi(
         ByRef mss As MyStrStruct2)
     End Sub
 End Class
@@ -39,7 +39,7 @@ End Class
 Public Class App
     Public Shared Sub Main()
         ' String as result.
-        Dim str As String = LibWrap.TestStringAsResult()
+        Dim str As String = NativeMethods.TestStringAsResult()
         Console.WriteLine(vbNewLine + "String returned: {0}", str)
 
         ' Initializes buffer and appends something to the end so the whole
@@ -52,7 +52,7 @@ Public Class App
         mss.buffer = buffer.ToString()
         mss.size = mss.buffer.Length
 
-        LibWrap.TestStringInStruct(mss)
+        NativeMethods.TestStringInStruct(mss)
         Console.WriteLine(vbNewLine + "Buffer after Unicode function call: {0}",
             mss.buffer)
 
@@ -64,7 +64,7 @@ Public Class App
         mss2.buffer = buffer2.ToString()
         mss2.size = mss2.buffer.Length
 
-        LibWrap.TestStringInStructAnsi(mss2)
+        NativeMethods.TestStringInStructAnsi(mss2)
         Console.WriteLine(vbNewLine + "Buffer after Ansi function call: {0}", mss2.buffer)
     End Sub
 End Class

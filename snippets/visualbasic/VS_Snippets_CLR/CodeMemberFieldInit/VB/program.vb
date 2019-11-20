@@ -41,7 +41,7 @@ Class Sample
         samples.Types.Add(targetClass)
         targetUnit.Namespaces.Add(samples)
     
-    End Sub 'New
+    End Sub
     
     
     '/ <summary>
@@ -57,7 +57,7 @@ Class Sample
 
         targetClass.Members.Add(testField)
 
-    End Sub 'AddFields
+    End Sub
      
     
     '/ <summary>
@@ -70,7 +70,7 @@ Class Sample
         
         targetClass.Members.Add(constructor)
     
-    End Sub 'AddConstructor
+    End Sub
     
     
     '/ <summary>
@@ -93,7 +93,7 @@ Class Sample
         start.Statements.Add(New CodeMethodInvokeExpression(New CodeTypeReferenceExpression("System.Console"), "WriteLine", toStringInvoke))
         targetClass.Members.Add(start)
     
-    End Sub 'AddEntryPoint
+    End Sub
     
     '/ <summary>
     '/ Generate CSharp source code from the compile unit.
@@ -109,7 +109,7 @@ Class Sample
             sourceWriter.Dispose()
         End Try
     
-    End Sub 'GenerateCSharpCode
+    End Sub
     
     
     '/ <summary>
@@ -122,8 +122,8 @@ Class Sample
         sample.AddEntryPoint()
         sample.GenerateCSharpCode(outputFileName)
     
-    End Sub 'Main
-End Class 'Sample
+    End Sub
+End Class
 ' A Visual Basic code generator produces the following source code for the preceeding example code:
 'Option Strict Off
 'Option Explicit On

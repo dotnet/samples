@@ -1,7 +1,6 @@
 ﻿'<snippet1>
 ' This example demonstrates the DateTime(Int64) constructor.
 Imports System.Globalization
-Imports Microsoft.VisualBasic
 
 Class Sample
    Public Shared Sub Main()
@@ -25,8 +24,8 @@ Class Sample
       Console.WriteLine(format, 2, "minimum", dt2)
       Console.WriteLine(format, 3, "custom ", dt3)
       Console.WriteLine(vbCrLf & "The custom date and time is created from {0:N0} ticks.", ticks)
-   End Sub 'Main
-End Class 'Sample
+   End Sub
+End Class
 '
 'This example produces the following results:
 '

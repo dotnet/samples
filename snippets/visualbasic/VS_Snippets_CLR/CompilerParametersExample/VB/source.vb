@@ -216,8 +216,8 @@ Namespace CompilerParametersExample
             If provider Is Nothing Then
                 Console.WriteLine("There is no CodeDomProvider for the input language.")
             End If
-        End Sub 'Main 
+        End Sub
 
-    End Class 'CompileClass
+    End Class
 End Namespace
 '</Snippet1>

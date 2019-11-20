@@ -11,8 +11,8 @@ NotInheritable Public Class BadCustomAttribute
     ' the someStringData parameter.
     Public Sub New(someStringData As String)
         data = someStringData
-    End Sub 'New
-End Class 'BadCustomAttribute
+    End Sub
+End Class
 
 ' Satisfies rule: Attributes should have accessors for all arguments.
 <AttributeUsage(AttributeTargets.All)>  _
@@ -22,7 +22,7 @@ NotInheritable Public Class GoodCustomAttribute
     
     Public Sub New(someStringData As String)
         data = someStringData
-    End Sub 'New
+    End Sub
 
     'The constructor parameter and property
     'name are the same except for case.

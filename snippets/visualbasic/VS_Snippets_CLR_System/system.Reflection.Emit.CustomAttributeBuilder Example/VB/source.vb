@@ -23,9 +23,9 @@ Public Class ClassCreator
    
    Public Sub New(name As String)
       Me.creator = name
-   End Sub 'New
+   End Sub
 
-End Class 'ClassCreator
+End Class
  _ 
 
 ' We will apply this dynamic attribute to our dynamic method.
@@ -44,9 +44,9 @@ Public Class DateLastUpdated
    
    Public Sub New(theDate As String)
       Me.dateUpdated = theDate
-   End Sub 'New
+   End Sub
 
-End Class 'DateLastUpdated
+End Class
  _ 
 
 Class MethodBuilderCustomAttributesDemo
@@ -132,8 +132,8 @@ Class MethodBuilderCustomAttributesDemo
       
       Console.WriteLine(myType.InvokeMember("HelloWorld", BindingFlags.InvokeMethod, _
 						Nothing, myInstance, New Object() {}))
-   End Sub 'Main
+   End Sub
 
-End Class 'MethodBuilderCustomAttributesDemo
+End Class
 
 ' </Snippet1>

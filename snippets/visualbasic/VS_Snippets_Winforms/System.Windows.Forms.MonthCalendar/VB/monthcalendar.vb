@@ -1,5 +1,4 @@
 ﻿'<Snippet1>
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 
@@ -12,7 +11,7 @@ Public NotInheritable Class Form1
     <System.STAThread()> _
     Public Shared Sub Main()
         System.Windows.Forms.Application.Run(New Form1)
-    End Sub 'Main
+    End Sub
 
     Public Sub New()
         MyBase.New()

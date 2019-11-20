@@ -209,10 +209,7 @@ namespace Microsoft.ServiceModel.Samples
             if (result != null && result.CompletedSynchronously)
             {
                 // Do not block the user thread.
-                if (this.completeReceiveCallback == null)
-                {
-                    this.completeReceiveCallback = new WaitCallback(CompleteReceiveCallback);
-                }
+                this.completeReceiveCallback ??= new WaitCallback(CompleteReceiveCallback);
                 ThreadPool.QueueUserWorkItem(this.completeReceiveCallback, result);
             }
         }

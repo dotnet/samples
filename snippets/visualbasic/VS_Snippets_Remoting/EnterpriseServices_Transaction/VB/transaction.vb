@@ -18,8 +18,8 @@ Public Class TransactionalComponent
         ' Vote to commit. If any errors occur, this code will not execute.
         ContextUtil.MyTransactionVote = TransactionVote.Commit
     
-    End Sub 'TransactionalMethod 
-End Class 'TransactionalComponent
+    End Sub
+End Class
 
 ' </snippet1>
 
@@ -28,5 +28,5 @@ Public Class Test
 
     Public Shared Sub Main()
 
-    End Sub 'Main
-End Class 'Test
+    End Sub
+End Class

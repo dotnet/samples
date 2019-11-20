@@ -5,7 +5,7 @@ Imports System.Security
 
 Public Class MyClass1
     Public Sub New(ByVal i As Integer)
-    End Sub 'New
+    End Sub
 
     Public Shared Sub Main()
         Try

@@ -135,6 +135,6 @@ namespace N1.N2
 //<Snippet15>
 namespace Library
 {
-    public class C : Alias.Exception { }
+    public class C : Alias::Exception { }
 }
 //</Snippet15>

@@ -1,5 +1,4 @@
 ﻿'<Snippet1>
-Imports System
 Imports System.Windows.Forms
 Imports System.Drawing
 Imports System.Collections
@@ -57,7 +56,7 @@ Namespace ListViewSortFormNamespace
             Me.Text = "Sorted ListView Control"
             ' Resume layout of the form.
             Me.ResumeLayout(False)
-        End Sub 'New
+        End Sub
 
 
         ' ColumnClick event handler.

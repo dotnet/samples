@@ -47,10 +47,7 @@ namespace Microsoft.ServiceModel.Samples
 
                 lock (ThisLock)
                 {
-                    if (manualResetEvent == null)
-                    {
-                        manualResetEvent = new ManualResetEvent(isCompleted);
-                    }
+                    manualResetEvent ??= new ManualResetEvent(isCompleted);
                 }
 
                 return manualResetEvent;

@@ -142,5 +142,5 @@ Class MyMimeTextMatchCollection
       Catch e As Exception
          Console.WriteLine("Exception: {0}", e.Message)
       End Try
-   End Sub 'Main
-End Class 'MyMimeTextMatchCollection
+   End Sub
+End Class

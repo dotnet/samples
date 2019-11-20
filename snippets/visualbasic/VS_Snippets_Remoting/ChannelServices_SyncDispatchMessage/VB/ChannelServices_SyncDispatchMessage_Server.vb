@@ -15,5 +15,5 @@ Public Class Sample
             "ChannelServices_SyncDispatchMessage_Share"), "SayHello", WellKnownObjectMode.SingleCall)
       Console.WriteLine("Hit <enter> to exit...")
       Console.ReadLine()
-   End Sub 'Main
-End Class 'Sample
+   End Sub
+End Class

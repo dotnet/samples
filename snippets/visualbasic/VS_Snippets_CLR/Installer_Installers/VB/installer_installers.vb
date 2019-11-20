@@ -45,5 +45,5 @@ Public Class Installer_Installers
       Dim myInstaller1 As Installer = myAssemblyInstaller.Parent
       Console.WriteLine("Parent of myAssembly : {0}", myInstaller1.ToString())
 ' </Snippet2>
-End Sub 'Main
-End Class 'Installer_Installers
+End Sub
+End Class

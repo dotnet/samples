@@ -1,5 +1,4 @@
 ﻿'<Snippet1>
-Imports System
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.ComponentModel.Design
@@ -20,11 +19,11 @@ Namespace ITypeDescriptorFilterSample
 
         Public Sub New(ByVal container As System.ComponentModel.IContainer)
             container.Add(Me)
-        End Sub 'New
+        End Sub
 
         Public Sub New()
-        End Sub 'New
-    End Class 'ButtonDesignerFilterComponent
+        End Sub
+    End Class
 
     ' Provides a designer that can add a ColorCycleButtonDesigner to each 
     ' button in a design time project using the ButtonDesignerFilterService 

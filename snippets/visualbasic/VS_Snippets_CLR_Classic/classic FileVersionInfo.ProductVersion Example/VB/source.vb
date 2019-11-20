@@ -15,7 +15,7 @@ Public Class Form1
         
         ' Print the product version number.
         textBox1.Text = "Product version number: " & myFileVersionInfo.ProductVersion
-    End Sub 'GetProductVersion
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

@@ -43,7 +43,7 @@ Module Example
          Console.WriteLine(bINITBYTE(j))
          myIntPtr = intptr.op_Explicit(myIntPtr.ToInt32 + 1)
       Next j
-   End Sub 'Main
+   End Sub
 
 
    Private Function GetRandBytes(ByVal iRandSeed As Integer, ByVal iSize As Integer) As Byte()

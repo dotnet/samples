@@ -16,7 +16,7 @@ Class Read_Typed_Element
         ReadElementContentAsObject()
         ReadElementContentAsDouble_1()
     
-    End Sub 'Main
+    End Sub
      
     
     
@@ -27,7 +27,7 @@ Class Read_Typed_Element
       Console.WriteLine(reader.ReadElementContentAsString())
     End Using
   '</snippet1>
-  End Sub 'ReadElementContentAsString_1
+  End Sub
  
     
   Public Shared Sub ReadElementContentAsString_2() 
@@ -37,7 +37,7 @@ Class Read_Typed_Element
       Console.WriteLine(reader.ReadElementContentAsString("stringValue", ""))
     End Using
   '</snippet2>
-  End Sub 'ReadElementContentAsString_2
+  End Sub
      
     
   Public Shared Sub ReadElementContentAsLong_1() 
@@ -48,7 +48,7 @@ Class Read_Typed_Element
       ' Do some processing with the number object.
     End Using
   '</snippet3>
-  End Sub 'ReadElementContentAsLong_1    
+  End Sub
     
     
   Public Shared Sub ReadElementContentAsDateTime_1() 
@@ -62,7 +62,7 @@ Class Read_Typed_Element
       Console.WriteLine([date].ToLongDateString())
     End Using
   '</snippet4>
-  End Sub 'ReadElementContentAsDateTime_1
+  End Sub
      
         
   Public Shared Sub ReadElementContentAs_1() 
@@ -76,7 +76,7 @@ Class Read_Typed_Element
       Console.WriteLine([date].ToLongDateString())
     End Using
   '</snippet5>     
-  End Sub 'ReadElementContentAs_1
+  End Sub
     
     
   Public Shared Sub ReadElementContentAsObject() 
@@ -98,7 +98,7 @@ Class Read_Typed_Element
   price = [Decimal].Add(price, 2.5D)
 
   '</snippet6>      
-  End Sub 'ReadElementContentAsObject
+  End Sub
      
     
   Public Shared Sub ReadElementContentAsDouble_1() 
@@ -109,7 +109,7 @@ Class Read_Typed_Element
       ' Do some processing with the number object.
     End Using
  '</snippet7>   
-  End Sub 'ReadElementContentAsDouble_1 
+  End Sub
 
 Public Shared Sub ReadTypedData1() 
 '<snippet13>	
@@ -128,7 +128,7 @@ Using reader As XmlReader = XmlReader.Create("hireDate.xml", settings)
   Console.WriteLine("Six Month Review Date: {0}", hireDate.AddMonths(6))
 End Using
  '</snippet13>   
-End Sub 'ReadTypedData1 
+End Sub
 
 Public Shared Sub ReadTypedData2() 
 '<snippet14>	
@@ -143,6 +143,6 @@ Using reader As XmlReader = XmlReader.Create("hireDate_1.xml")
   Console.WriteLine("Six Month Review Date: {0}", hireDate.AddMonths(6))
 End Using
  '</snippet14>   
-End Sub 'ReadTypedData2 
+End Sub
 
-End Class 'Read_Typed_Element
+End Class

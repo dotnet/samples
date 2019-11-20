@@ -6,10 +6,9 @@ namespace Element
 {
     public static class FirstSample1
     {
-        //This sample uses First and query syntax to return the first matching element as a Product, 
-        //instead of as a sequence containing a Product.
-        //
-        //Output: 
+        // This sample uses First and query syntax to return the first matching element as a Product, 
+        // instead of as a sequence containing a Product.
+        // Output: 
         // The product with the ProductId of 12 is Queso Manchego La Pastora in the Dairy Products category.
         public static void QuerySyntaxExample()
         {
@@ -25,10 +24,9 @@ namespace Element
                 $"The product with the ProductId of 12 is {product12.ProductName} in the {product12.Category} category.");
         }
 
-        //This sample uses First and method syntax to return the first matching element as a Product, 
-        //instead of as a sequence containing a Product.
-        //
-        //Output: 
+        // This sample uses First and method syntax to return the first matching element as a Product, 
+        // instead of as a sequence containing a Product.
+        // Output:
         // The product with the ProductId of 12 is Queso Manchego La Pastora in the Dairy Products category.
         public static void MethodSyntaxExample()
         {

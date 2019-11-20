@@ -33,7 +33,7 @@ Class UsingProtectedConfigurationSection
             Console.WriteLine(e.ToString())
         End Try
     
-    End Sub 'GetDefaultProvider
+    End Sub
      
     ' </Snippet2>
     
@@ -64,7 +64,7 @@ Class UsingProtectedConfigurationSection
             Console.WriteLine(e.ToString())
         End Try
     
-    End Sub 'GetProviderCollection
+    End Sub
      
     ' </Snippet3>
 
@@ -72,6 +72,6 @@ Class UsingProtectedConfigurationSection
         GetDefaultProvider()
         GetProviderCollection()
     
-    End Sub 'Main
-End Class 'UsingProtectedConfigurationSection
+    End Sub
+End Class
 ' </Snippet1>

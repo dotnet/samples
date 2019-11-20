@@ -3,7 +3,6 @@
 
 ' <Snippet1>
 Imports System.Text
-Imports Microsoft.VisualBasic
 
 Public Class SamplesUTF32Encoding   
 
@@ -33,7 +32,7 @@ Public Class SamplesUTF32Encoding
       PrintCountsAndBytes(myStr, u32Nobom)
       PrintCountsAndBytes(myStr, u32Bom)
 
-   End Sub 'Main
+   End Sub
 
 
    Public Shared Sub PrintCountsAndBytes(s As String, enc As Encoding)
@@ -62,7 +61,7 @@ Public Class SamplesUTF32Encoding
       ' Display all the encoded bytes.
       PrintHexBytes(bytes)
 
-   End Sub 'PrintCountsAndBytes
+   End Sub
 
 
    Public Shared Sub PrintHexBytes(bytes() As Byte)
@@ -77,9 +76,9 @@ Public Class SamplesUTF32Encoding
          Console.WriteLine()
       End If
 
-   End Sub 'PrintHexBytes 
+   End Sub
 
-End Class 'SamplesUTF32Encoding
+End Class
 
 
 'This code produces the following output.

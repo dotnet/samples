@@ -47,14 +47,14 @@ Public Class CodeGenerator
       methodIL.Emit(OpCodes.Stfld, greetingField)
       methodIL.Emit(OpCodes.Ret)
       myTypeBuilder.CreateType()
-   End Sub 'New
+   End Sub
 
    Public ReadOnly Property MyAssembly() As AssemblyBuilder
       Get
          Return Me.myAssemblyBuilder
       End Get
    End Property
-End Class 'CodeGenerator
+End Class
 
 Public Class TestClass
    <PermissionSetAttribute(SecurityAction.Demand, Name:="FullTrust")> _
@@ -75,6 +75,6 @@ Public Class TestClass
       Dim args As Object() = {"Hello."}
       Dim myObject As Object = Activator.CreateInstance(myType, Nothing, Nothing)
       myMethodInfo.Invoke(myObject, args)
-   End Sub 'Main
-End Class 'TestClass
+   End Sub
+End Class
 ' </Snippet1>

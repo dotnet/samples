@@ -1,7 +1,5 @@
 ﻿'<Snippet1>
 ' Example for the Exception.HResult property.
-Imports Microsoft.VisualBasic
-
 Namespace NDP_UE_VB
 
     ' Create the derived exception class.
@@ -17,8 +15,8 @@ Namespace NDP_UE_VB
             MyBase.New( String.Format( "(HRESULT:0x{1:X8}) {0}", _
                 message, SecondLevelHResult ), inner )
             HResult = SecondLevelHResult
-        End Sub ' New
-    End Class ' SecondLevelException
+        End Sub
+    End Class
 
     Module HResultDemo
        
@@ -43,7 +41,7 @@ Namespace NDP_UE_VB
             Catch ex As Exception
                 Console.WriteLine( ex.ToString( ) )
             End Try
-        End Sub ' Main
+        End Sub
 
     End Module ' HResultDemo
 End Namespace ' NDP_UE_VB

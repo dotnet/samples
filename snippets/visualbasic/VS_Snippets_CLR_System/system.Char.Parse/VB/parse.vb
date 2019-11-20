@@ -1,5 +1,4 @@
-﻿imports Microsoft.VisualBasic
-' <snippet15>
+﻿' <snippet15>
 Module ParseSample
 
     Sub Main()

@@ -17,7 +17,7 @@ Namespace Examples.VB.WebControls.Design
     <Designer(GetType(Examples.VB.WebControls.Design.MyLoginDesigner))> _
     Public Class MyLogin
         Inherits Login
-    End Class ' MyLogin
+    End Class
 
     ' Override members of the LoginDesigner.
     <ReflectionPermission(SecurityAction.Demand, Flags:=ReflectionPermissionFlag.MemberAccess)> _
@@ -53,7 +53,7 @@ Namespace Examples.VB.WebControls.Design
             properties("NamingContainer") = _
                 TypeDescriptor.CreateProperty(selectProp.ComponentType, _
                     selectProp, BrowsableAttribute.Yes)
-        End Sub ' PreFilterProperties
+        End Sub
         ' </snippet3>
 
         ' <snippet4>
@@ -102,6 +102,6 @@ Namespace Examples.VB.WebControls.Design
 
         End Function ' GetDesignTimeHtml
         ' </snippet4>
-    End Class ' MyLoginDesigner
+    End Class
 End Namespace ' Examples.VB.WebControls.Design
 ' </snippet1>

@@ -27,10 +27,7 @@ namespace TestToolWindowSearch_UnitTests.MyToolWindowTest
         /// <returns></returns>
         internal static BaseMock GetUiShellInstance()
         {
-            if (uiShellFactory == null)
-            {
-                uiShellFactory = new GenericMockFactory("UiShell", new Type[] { typeof(IVsUIShell), typeof(IVsUIShellOpenDocument) });
-            }
+            uiShellFactory ??= new GenericMockFactory("UiShell", new Type[] { typeof(IVsUIShell), typeof(IVsUIShellOpenDocument) });
             BaseMock uiShell = uiShellFactory.GetInstance();
             return uiShell;
         }

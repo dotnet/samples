@@ -1,5 +1,4 @@
 ﻿ '<snippet1>
-Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
 Imports System.Data
@@ -39,7 +38,7 @@ Class Form1
         bindingNavigator1.BindingSource = bindingSource1
         '</snippet3>
     
-    End Sub 'New
+    End Sub
     '<snippet2>
     Private Sub LoadData() 
         ' The xml to bind to.
@@ -61,7 +60,7 @@ Class Form1
         textBox1.DataBindings.Add("Text", bindingSource1, "name")
         textBox2.DataBindings.Add("Text", bindingSource1, "capital")
     
-    End Sub 'LoadData
+    End Sub
      
     '</snippet2>
     <STAThread()>  _
@@ -69,7 +68,7 @@ Class Form1
         Application.EnableVisualStyles()
         Application.Run(New Form1())
     
-    End Sub 'Main
+    End Sub
     
     
     Private Sub InitializeComponent() 
@@ -202,6 +201,6 @@ Class Form1
         Me.ResumeLayout(False)
         Me.PerformLayout()
     
-    End Sub 'InitializeComponent
-End Class 'Form1
+    End Sub
+End Class
 '</snippet1>

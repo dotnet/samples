@@ -15,7 +15,7 @@ Public Class Example
         Dim newDomain As AppDomain = AppDomain.CreateDomain("MyMultiDomain")
         newDomain.DoCallBack(AddressOf ShowDomainInfo)
     
-    End Sub 'Main
+    End Sub
     
     
     ' This method has the same signature as the CrossAppDomainDelegate,

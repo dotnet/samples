@@ -9,7 +9,6 @@
 '
 
 Imports System.Net
-Imports Microsoft.VisualBasic
 
 ' <Snippet1>
 ' <Snippet2>
@@ -28,7 +27,7 @@ Public Class WebProxy_Interface
     Sub New(proxyUri As Uri)
         
         webProxyUri = proxyUri
-    End Sub 'New 
+    End Sub
     
 
     'Get and Set the Credentials property.
@@ -57,7 +56,7 @@ Public Class WebProxy_Interface
        'Never bypass the proxy.
         Return False
     End Function 'IsBypassed 
-End Class 'WebProxy_Interface
+End Class
 
 
 
@@ -83,8 +82,8 @@ Public Class WebProxy_Example
         Else
             Console.WriteLine("webproxy is not bypassed")
         End If 
-    End Sub 'Main
+    End Sub
 
     '</Snippet4>
     
-End Class 'WebProxy_Example
+End Class

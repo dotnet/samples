@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
 
@@ -14,7 +13,7 @@ Public Class Form1
         dataGrid1.BackColor = System.Drawing.Color.Red
         dataGrid1.AlternatingBackColor = System.Drawing.Color.AliceBlue
         dataGrid1.BackgroundColor = System.Drawing.Color.Yellow
-    End Sub 'SetGridColors
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

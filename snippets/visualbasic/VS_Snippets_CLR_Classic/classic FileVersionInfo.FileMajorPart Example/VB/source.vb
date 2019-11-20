@@ -13,7 +13,7 @@ Public Class Form1
         
         ' Print the file major part number.
         textBox1.Text = "File major part number: " & myFileVersionInfo.FileMajorPart
-    End Sub 'GetFileMajorPart
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

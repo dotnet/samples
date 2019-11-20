@@ -33,7 +33,7 @@ Class TestingConfigValidatorAttribute
             Console.WriteLine(err.ToString())
         End Try
     
-    End Sub 'New
+    End Sub
     
     
     
@@ -54,7 +54,7 @@ Class TestingConfigValidatorAttribute
             Console.WriteLine(err.ToString())
         End Try
     
-    End Sub 'GetCars
+    End Sub
     
     
     
@@ -86,14 +86,14 @@ Class TestingConfigValidatorAttribute
             Console.WriteLine(err.ToString())
         End Try
     
-    End Sub 'NotAllowedCars
+    End Sub
     
     
     Shared Sub Main(ByVal args() As String) 
         GetCars()
         NotAllowedCars()
     
-    End Sub 'Main 
-End Class 'TestingConfigValidatorAttribute
+    End Sub
+End Class
 
 ' </Snippet41>

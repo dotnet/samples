@@ -10,14 +10,14 @@ Imports System.Reflection
 <LoadBalancingSupported()>  _
 Public Class LoadBalancingSupportedAttribute_Ctor
     Inherits ServicedComponent
-End Class 'LoadBalancingSupportedAttribute_Ctor
+End Class
 ' </snippet1>
 
 ' <snippet2>
 <LoadBalancingSupported(False)>  _
 Public Class LoadBalancingSupportedAttribute_Ctor_Bool
     Inherits ServicedComponent
-End Class 'LoadBalancingSupportedAttribute_Ctor_Bool
+End Class
 ' </snippet2>
 
 ' <snippet3>
@@ -32,8 +32,8 @@ Public Class LoadBalancingSupportedAttribute_Value
         ' Display the value of the attribute's Value property.
         MsgBox("LoadBalancingSupportedAttribute.Value: " & attribute.Value)
     
-    End Sub 'ValueExample
-End Class 'LoadBalancingSupportedAttribute_Value
+    End Sub
+End Class
 ' </snippet3>
 
 ' </snippet0>
@@ -48,5 +48,5 @@ Public Class LoadBalancingSupportedAttribute_Example
         ' Demonstrate the LoadBalancingSupportedAttribute properties.
         valueExample.ValueExample()
 
-    End Sub 'Main
-End Class 'LoadBalancingSupportedAttribute_Example
+    End Sub
+End Class

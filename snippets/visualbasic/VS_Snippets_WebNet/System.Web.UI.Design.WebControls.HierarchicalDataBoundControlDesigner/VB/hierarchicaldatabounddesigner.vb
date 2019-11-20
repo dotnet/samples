@@ -20,7 +20,7 @@ Namespace Examples.VB.WebControls.Design
         MyHierarchicalDataBoundControlDesigner))> _
     Public Class MyHierarchicalDataBoundControl
         Inherits HierarchicalDataBoundControl
-    End Class ' MyHierarchicalDataBoundControl
+    End Class
 
     ' Override members of the HierarchicalDataBoundControlDesigner.
     <ReflectionPermission(SecurityAction.Demand, Flags:=ReflectionPermissionFlag.MemberAccess)> _
@@ -89,8 +89,8 @@ Namespace Examples.VB.WebControls.Design
             properties(namingContainer) = _
                 TypeDescriptor.CreateProperty(selectProp.ComponentType, _
                     selectProp, BrowsableAttribute.Yes)
-        End Sub ' PreFilterProperties
+        End Sub
         ' </snippet3>
-    End Class ' MyHierarchicalDataBoundControlDesigner
+    End Class
 End Namespace ' Examples.VB.WebControls.Design
 ' </snippet1>

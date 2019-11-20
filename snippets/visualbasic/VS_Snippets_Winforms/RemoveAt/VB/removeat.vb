@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Drawing
+﻿Imports System.Drawing
 Imports System.Windows.Forms
 
 Class TestForm
@@ -30,7 +29,7 @@ Public Sub InitializeMyMenu()
    
    ' Remove the item "Exit" from the File menu. 
    fileMenu.MenuItems.RemoveAt(2)
-End Sub 'InitializeMyMenu
+End Sub
 ' </snippet1>
 
    Public Shared Sub Main()

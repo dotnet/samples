@@ -8,7 +8,7 @@ Namespace RemoteClient
       Public Overloads Shared Sub Main()
          Dim client As New Client()
          client.RunSnippet()
-      End Sub 'Main
+      End Sub
 
       Public Sub RunSnippet()
 

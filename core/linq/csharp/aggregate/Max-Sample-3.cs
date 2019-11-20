@@ -6,9 +6,8 @@ namespace Aggregate
 {
     public static class MaxSample3
     {
-        //This sample uses Max and query syntax to get the most expensive price among each category's products.
-        //
-        //Output:
+        // This sample uses Max and query syntax to get the most expensive price among each category's products.
+        // Output:
         // The most expensive price for an item in the Beverages category is $263.50.
         // The most expensive price for an item in the Condiments category is $43.90.
         // The most expensive price for an item in the Produce category is $53.00.
@@ -34,9 +33,8 @@ namespace Aggregate
             }
         }
 
-        //This sample uses Max and method syntax to get the most expensive price among each category's products.
-        //
-        //Output:
+        // This sample uses Max and method syntax to get the most expensive price among each category's products.
+        // Output:
         // The most expensive price for an item in the Beverages category is $263.50.
         // The most expensive price for an item in the Condiments category is $43.90.
         // The most expensive price for an item in the Produce category is $53.00.

@@ -2,7 +2,6 @@
 ' Copyright (c) Microsoft Corporation. All rights reserved.
 
 
-Imports System
 Imports System.Collections.ObjectModel
 Imports System.IO
 Imports System.Net
@@ -17,7 +16,6 @@ Imports System.Windows.Media.Imaging
 Imports System.Xml
 Imports System.Security.Permissions
 Imports WinForms = Microsoft.Win32
-Imports Microsoft.VisualBasic
 
 Namespace SdkSample
 	' ========================= partial class Window1 ========================
@@ -77,7 +75,7 @@ Namespace SdkSample
 				menuFileClose.IsEnabled = True
 				imageViewer.Focus()
 			End If
-		End Sub ' end:OnOpen()
+		End Sub
 
 
 		' --------------------------- OpenContent ---------------------------
@@ -320,7 +318,7 @@ Namespace SdkSample
 			rightsBlockTitle.Text = "Rights"
 			rightsBlock.Text = ""
 			ShowPrompt("Click 'File | Open...' to select a file to open and view.")
-		End Sub ' end:CloseContent
+		End Sub
 		#End Region ' File|Close
 
 
@@ -331,7 +329,7 @@ Namespace SdkSample
 		'''   shutdown and exit the application.</summary>
 		Private Sub OnExit(ByVal sender As Object, ByVal e As EventArgs)
 			Close() ' invokes OnClosed()
-		End Sub ' end:OnExit()
+		End Sub
 		#End Region ' File|Exit
 
 
@@ -509,6 +507,6 @@ Namespace SdkSample
 		#End Region ' private fields
 
 
-	End Class ' end:partial class Window1
+	End Class
 
 End Namespace ' end:namespace SdkSample

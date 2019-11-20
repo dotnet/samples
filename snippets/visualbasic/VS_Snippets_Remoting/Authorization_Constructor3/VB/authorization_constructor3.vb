@@ -10,7 +10,6 @@
 ' 
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
 
 Namespace CloneBasicAuthentication
     
@@ -24,7 +23,7 @@ Namespace CloneBasicAuthentication
         Public Sub New()
             m_authenticationType = "CloneBasic"
             m_canPreAuthenticate = False
-        End Sub 'New
+        End Sub
         
         Public ReadOnly Property AuthenticationType() As String Implements IAuthenticationModule.AuthenticationType
             Get
@@ -85,6 +84,6 @@ Namespace CloneBasicAuthentication
             Return Nothing
         End Function 'PreAuthenticate
 
-    End Class 'CloneBasic
+    End Class
 'End of namespace CloneBasicAuthentication
 End Namespace 'CloneBasicAuthentication 

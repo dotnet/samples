@@ -1,7 +1,5 @@
 ﻿'<Snippet2>
 ' Example of the BitConverter.ToInt32 method.
-Imports Microsoft.VisualBasic
-
 Module BytesToInt32Demo
 
     Const formatter As String = "{0,5}{1,17}{2,15}"

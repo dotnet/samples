@@ -11,6 +11,6 @@ Public Class ObjectDisposedExceptionTest
       Catch e As ObjectDisposedException
          Console.WriteLine("Caught: {0}", e.Message)
       End Try
-   End Sub 'Main
-End Class 'ObjectDisposedExceptionTest
+   End Sub
+End Class
 '</Snippet1>

@@ -95,8 +95,8 @@ Public Class CalculatorService
         ' Close the ServiceHost to shutdown the service.
         serviceHost.Close()
 
-    End Sub 'Main
-End Class 'CalculatorService
+    End Sub
+End Class
 
 ' <snippet1>
 Public Class MyCustomUserNameValidator
@@ -116,7 +116,7 @@ Public Class MyCustomUserNameValidator
             Throw New SecurityTokenException("Unknown Username or Password")
         End If
 
-    End Sub 'Validate
+    End Sub
     ' </snippet2>
-End Class 'MyCustomUserNameValidator
+End Class
 ' </snippet1>

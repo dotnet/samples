@@ -10,7 +10,6 @@
 ' <Snippet1>
 Imports System.Web.Services.Description
 Imports System.Xml
-Imports Microsoft.VisualBasic
 
 Class MyPortTypeClass
    Public Shared Sub Main()
@@ -55,7 +54,7 @@ Class MyPortTypeClass
       Catch e As Exception
          Console.WriteLine("Exception: " & e.Message)
       End Try
-   End Sub 'Main
+   End Sub
 
    Public Shared Function CreateOperation(operationName As String, _
          inputMessage As String, outputMessage As String, _
@@ -72,5 +71,5 @@ Class MyPortTypeClass
       myOperation.Messages.Add(output)
       Return myOperation
    End Function 'CreateOperation
-End Class 'MyPortTypeClass
+End Class
 ' </Snippet1>

@@ -49,7 +49,7 @@ Class Sample
         yourSingle = mySingle.GetValueOrDefault(- 333.33F)
         Display("B3", mySingle, yourSingle)
     
-    End Sub 'Main
+    End Sub
      
     
     ' Display the values of two nullable of System.Single structures.
@@ -65,8 +65,8 @@ Class Sample
             Console.WriteLine("{0}) mySingle = [{1}], yourSingle = [{2}]", _
                                title, dspMySingle, dspYourSingle)
         End If
-    End Sub 'Display
-End Class 'Sample
+    End Sub
+End Class
 
 '
 'This code example produces the following results:

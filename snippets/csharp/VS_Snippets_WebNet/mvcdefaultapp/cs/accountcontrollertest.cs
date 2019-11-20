@@ -411,10 +411,7 @@ namespace MvcApplication1.Tests.Controllers
             {
                 get
                 {
-                    if (_identity == null)
-                    {
-                        _identity = new MockIdentity();
-                    }
+                    _identity ??= new MockIdentity();
                     return _identity;
                 }
             }
@@ -441,10 +438,7 @@ namespace MvcApplication1.Tests.Controllers
             {
                 get
                 {
-                    if (_user == null)
-                    {
-                        _user = new MockPrincipal();
-                    }
+                    _user ??= new MockPrincipal();
                     return _user;
                 }
                 set

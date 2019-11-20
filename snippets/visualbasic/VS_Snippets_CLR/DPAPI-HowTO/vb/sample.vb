@@ -10,7 +10,7 @@ Public Module MemoryProtectionSample
     Sub Main()
         Run()
 
-    End Sub 'Main
+    End Sub
 
 
     Sub Run()
@@ -79,7 +79,7 @@ Public Module MemoryProtectionSample
             Console.WriteLine("ERROR: " + e.Message)
         End Try
 
-    End Sub 'Run
+    End Sub
 
 
 
@@ -94,7 +94,7 @@ Public Module MemoryProtectionSample
         ' Encrypt the data in memory. The result is stored in the same array as the original data.
         ProtectedMemory.Protect(Buffer, Scope)
 
-    End Sub 'EncryptInMemoryData
+    End Sub
 
 
     Sub DecryptInMemoryData(ByVal Buffer() As Byte, ByVal Scope As MemoryProtectionScope)
@@ -108,7 +108,7 @@ Public Module MemoryProtectionSample
         ' Decrypt the data in memory. The result is stored in the same array as the original data.
         ProtectedMemory.Unprotect(Buffer, Scope)
 
-    End Sub 'DecryptInMemoryData
+    End Sub
 
 
     Function CreateRandomEntropy() As Byte()
@@ -177,7 +177,7 @@ Public Module MemoryProtectionSample
         End If
 
 
-        Dim inBuffer(Length) As Byte
+        Dim inBuffer(Length - 1) As Byte
         Dim outBuffer() As Byte
 
         ' Read the encrypted data from a stream.

@@ -26,7 +26,7 @@ NotInheritable Public Class Automobile
     Public Year As Integer
     Public Miles As Long
     Public Picture As String
-End Class 'Automobile
+End Class
 
 ' Define a custom section to select a car.
 ' This section contains two properties one
@@ -95,8 +95,9 @@ NotInheritable Public Class SelectCar
     
     Public Sub New() 
     
-    End Sub 'New
-End Class 'SelectCar ' Here you put your 
+    End Sub
+End Class
+' Here you put your 
 ' initializations, if necessary.
 
 ' </Snippet11>

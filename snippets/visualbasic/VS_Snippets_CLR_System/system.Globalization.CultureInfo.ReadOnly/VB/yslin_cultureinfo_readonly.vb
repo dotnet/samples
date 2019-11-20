@@ -51,9 +51,9 @@ Public Class SamplesCultureInfo
          Console.WriteLine("myReadOnlyCI.NumberFormat is writable.")
       End If
 
-   End Sub 'Main 
+   End Sub
 
-End Class 'SamplesCultureInfo
+End Class
 
 
 ' This code produces the following output.

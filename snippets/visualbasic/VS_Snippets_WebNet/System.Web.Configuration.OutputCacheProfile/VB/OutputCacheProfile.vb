@@ -134,8 +134,8 @@ Class UsingOutputCacheProfile
     outputCacheProfile.Enabled = False
     ' </Snippet12>
 
-   End Sub 'Main 
-End Class 'UsingOutputCacheProfile 
+   End Sub
+End Class
 
 ' UsingOutputCacheProfile class end.
 ' Samples.Aspnet.SystemWebConfiguration namespace end.

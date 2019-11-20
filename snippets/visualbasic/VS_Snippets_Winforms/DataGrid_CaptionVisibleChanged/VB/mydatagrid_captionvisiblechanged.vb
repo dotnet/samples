@@ -13,7 +13,6 @@
 ' is set, an event associated with it is raised which is confirmed 
 ' by the message shown by the alert message box. */
 
-Imports System
 Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
@@ -32,7 +31,7 @@ Public Class MyDataGrid
       
       ' Call SetUp to bind the controls.
       SetUp()
-   End Sub 'New
+   End Sub
    
    
    ' Clean up any resources being used.
@@ -43,13 +42,13 @@ Public Class MyDataGrid
          End If
       End If
       MyBase.Dispose(disposing)
-   End Sub 'Dispose
+   End Sub
    
    
    ' Main entry point for the application.
    Shared Sub Main()
       Application.Run(New MyDataGrid())
-   End Sub 'Main
+   End Sub
    
    
    Private Sub InitializeComponent()
@@ -79,7 +78,7 @@ Public Class MyDataGrid
       
       Me.Controls.Add(myButton)
       Me.Controls.Add(myDataGrid)
-   End Sub 'InitializeComponent
+   End Sub
    
    
    Private Sub SetUp()
@@ -87,7 +86,7 @@ Public Class MyDataGrid
       MakeDataSet()
       ' Bind the DataGrid to the DataSet.
       myDataGrid.SetDataBinding(myDataSet, "Person")
-   End Sub 'SetUp
+   End Sub
    
    
    ' Create a DataSet with two tables and populate it.
@@ -151,14 +150,14 @@ Public Class MyDataGrid
          ' Add the row to the 'Detail' table.
          tDet.Rows.Add(newRow2)
       Next i
-   End Sub 'MakeDataSet
+   End Sub
    
    
 ' <Snippet1>
    ' Create an instance of the 'CaptionVisibleChanged' EventHandler.
    Private Sub CallCaptionVisibleChanged()
       AddHandler myDataGrid.CaptionVisibleChanged, AddressOf Grid_CaptionVisibleChanged
-   End Sub 'CallCaptionVisibleChanged
+   End Sub
    
    
    ' Set the 'CaptionVisible' property on click of a button.
@@ -168,7 +167,7 @@ Public Class MyDataGrid
         Else
             myDataGrid.CaptionVisible = True
         End If
-    End Sub 'myButton_Click
+    End Sub
     
    ' Raise the event when 'CaptionVisible' property is changed.
     Private Sub Grid_CaptionVisibleChanged(ByVal sender As Object, ByVal e As EventArgs)
@@ -180,14 +179,14 @@ Public Class MyDataGrid
         myString += IIf(myBool, " ", " not ") + "visible"
         ' Show information about caption of DataGrid. 
         MessageBox.Show(myString, "Caption information")
-    End Sub 'Grid_CaptionVisibleChanged
+    End Sub
    
 ' </Snippet1>
 ' <Snippet2>
    ' Create an instance of the 'CurrentCellChanged' EventHandler.
    Private Sub CallCurrentCellChanged()
       AddHandler myDataGrid.CurrentCellChanged, AddressOf Grid_CurCellChange
-   End Sub 'CallCurrentCellChanged
+   End Sub
    
    
    ' Raise the event when focus on DataGrid cell changes.
@@ -200,14 +199,14 @@ Public Class MyDataGrid
         myString = myString + "(" + myPoint + ")"
         ' Show Co-ordinates when CurrentCellChanged event is raised.
         MessageBox.Show(myString, "Current cell co-ordinates")
-    End Sub 'Grid_CurCellChange
+    End Sub
    
 ' </Snippet2>
 ' <Snippet3>
    ' Create an instance of the 'Scroll' EventHandler.
    Private Sub CallScroll()
       AddHandler myDataGrid.Scroll, AddressOf Grid_Scroll
-   End Sub 'CallScroll
+   End Sub
    
    
    ' Raise the event when DataGrid is scrolled.
@@ -216,6 +215,6 @@ Public Class MyDataGrid
         Dim myString As String = "Scroll event raised, DataGrid is scrolled"
         ' Show the message when scrolling is done.
         MessageBox.Show(myString, "Scroll information")
-    End Sub 'Grid_Scroll
+    End Sub
 ' </Snippet3> 
-End Class 'MyDataGrid 
+End Class

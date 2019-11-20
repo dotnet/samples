@@ -5,8 +5,6 @@ Imports System.Runtime.Remoting.Messaging
 Imports System.Runtime.Remoting.Contexts
 Imports System.Runtime.Remoting.Channels
 Imports System.Security.Permissions
-Imports Microsoft.VisualBasic
-
 
 Public Class SampleService
    Inherits ContextBoundObject
@@ -15,7 +13,7 @@ Public Class SampleService
       Console.WriteLine("SampleService.UpdateServer called: {0}, {1}, {2}", i, d, s)
       Return True
    End Function 'UpdateServer
-End Class 'SampleService
+End Class
 
 
 Public Class ReplicationSinkProp
@@ -33,7 +31,7 @@ Public Class ReplicationSinkProp
    Public Function GetDynamicSink() As IDynamicMessageSink Implements IContributeDynamicSink.GetDynamicSink
       Return New ReplicationSink()
    End Function 'GetDynamicSink
-End Class 'ReplicationSinkProp
+End Class
 
 
 Public Class ReplicationSink
@@ -97,7 +95,7 @@ Public Class ReplicationSink
          Console.WriteLine("The requestMessage is not a MethodCall")
       End Try
    
-   End Sub 'ProcessMessageStart
+   End Sub
    ' </Snippet1>
 
    <SecurityPermission(SecurityAction.LinkDemand, Flags := SecurityPermissionFlag.Infrastructure)> _
@@ -121,5 +119,5 @@ Public Class ReplicationSink
       Catch e As InvalidCastException
          Console.WriteLine("The requestMessage is not a ReturnMessage.")
       End Try
-   End Sub 'ProcessMessageFinish
-End Class 'ReplicationSink
+   End Sub
+End Class

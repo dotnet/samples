@@ -8,7 +8,6 @@
 ' A button on the form toggles sorting availability on the grid.
 '
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -30,7 +29,7 @@ Namespace SampleDataGridTableStyle
          InitializeComponent()
          ' Call SetUp to bind the controls.
          SetUp()
-      End Sub 'New
+      End Sub
 
       Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
          If disposing Then
@@ -39,7 +38,7 @@ Namespace SampleDataGridTableStyle
             End If
          End If
          MyBase.Dispose(disposing)
-      End Sub 'Dispose
+      End Sub
 
       Private Sub InitializeComponent()
          Me.btnApplyStyles = New System.Windows.Forms.Button()
@@ -87,18 +86,18 @@ Namespace SampleDataGridTableStyle
          Me.Text = "DataGridTableStyle_Sample"
          CType(Me.myDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
          Me.ResumeLayout(False)
-      End Sub 'InitializeComponent
+      End Sub
 
       <STAThread()> Shared Sub Main()
          Application.Run(New DataGridTableStyle_Sample())
-      End Sub 'Main
+      End Sub
 
       Private Sub SetUp()
          ' Create a DataSet with two tables and one relation.
          MakeDataSet()
          ' Bind DataGrid to the DataSet.
          myDataGrid.SetDataBinding(myDataSet, "Customers")
-      End Sub 'SetUp
+      End Sub
 
       ' Create a DataSet with two tables and populate it.
       Private Sub MakeDataSet()
@@ -167,7 +166,7 @@ Namespace SampleDataGridTableStyle
                tOrders.Rows.Add(newRow2)
             Next j
          Next i
-      End Sub 'MakeDataSet
+      End Sub
 
 ' <Snippet1>
 ' <Snippet2>
@@ -184,11 +183,11 @@ Namespace SampleDataGridTableStyle
          ' Attach custom event handlers.
          AddHandler myDataGridTableStyle1.AllowSortingChanged, AddressOf AllowSortingChanged_Handler
          myDataGridTableStyle1.MappingName = "Customers"
-      End Sub 'DataGridTableStyle_Sample_Load
+      End Sub
 
       Private Sub AllowSortingChanged_Handler(ByVal sender As Object, ByVal e As EventArgs)
          mylabel.Text = "Sorting Status :" + myDataGridTableStyle1.AllowSorting.ToString()
-      End Sub 'AllowSortingChanged_Handler
+      End Sub
 
       Private Sub btnApplyStyles_Click(ByVal sender As Object, _
                                        ByVal e As EventArgs) Handles btnApplyStyles.Click
@@ -205,10 +204,10 @@ Namespace SampleDataGridTableStyle
          mylabel.Text = "Sorting Status :" + myDataGridTableStyle1.AllowSorting.ToString
          ' Add the DataGridTableStyle to DataGrid.
          myDataGrid.TableStyles.Add(myDataGridTableStyle1)
-      End Sub 'btnApplyStyles_Click
+      End Sub
 ' </Snippet2>
 ' </Snippet1>
-   End Class 'DataGridTableStyle_Sample
+   End Class
 End Namespace 'SampleDataGridTableStyle
 
 

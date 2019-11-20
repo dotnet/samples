@@ -1,0 +1,74 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger: 
+- master
+
+pr: none
+
+jobs:
+- job:
+  condition: eq(1,0)
+  displayName: 'Run CI on Windows'
+
+  pool:
+    vmImage: '$(VMIMAGE)'
+
+  steps:
+
+  - checkout: self
+    path: dotnet-samples
+    persistCredentials: true
+    displayName: 'Check out dotnet/samples repo'
+
+  - script: |
+      git clone https://blah:$(toolstoken)@dev.azure.com/mseng/TechnicalContent/_git/dotnet-docs-tools ../dotnet-docs-tools
+    displayName: "Clone tools repo"
+
+  - script: |
+      echo Init dotnet
+      dotnet help &> /dev/null
+      echo Find projects in dotnet-samples folder 
+      cd ../dotnet-docs-tools/LocateProjects/LocateProjects/
+      dotnet run -- $(Agent.BuildDirectory)/dotnet-samples/core
+    displayName: 'Compile tool'
+
+- job:
+  condition: eq(1,1)
+  displayName: 'Run CI on Windows'
+  
+  pool:
+    vmImage: 'windows-latest'
+
+  steps:
+
+  - checkout: self
+    path: dotnet-samples
+    persistCredentials: true
+    displayName: 'Check out dotnet/samples repo'
+
+  - script: |
+      git clone https://blah:$(toolstoken)@dev.azure.com/mseng/TechnicalContent/_git/dotnet-docs-tools ../dotnet-docs-tools
+    displayName: "Clone tools repo"
+
+  - script: |
+      echo Init dotnet
+      dotnet help > NUL
+#      echo Find projects in dotnet-samples folder 
+#      cd ../dotnet-docs-tools/LocateProjects/LocateProjects/
+#      dotnet run -- $(Agent.BuildDirectory)/dotnet-samples/core
+    displayName: 'Init dotnet'
+
+  - powershell: "../dotnet-docs-tools/Get-MSBuildResults.ps1 | ConvertTo-Json | Out-File '$(Build.ArtifactStagingDirectory)/output.json'"
+    env: {
+      scantooldir: "../dotnet-docs-tools/LocateProjects/LocateProjects",
+      samplesrootdir: "$(Agent.BuildDirectory)/dotnet-samples/"
+    }
+    displayName: "Run build script"
+
+  - publish: $(Build.ArtifactStagingDirectory)/output.json
+    artifact: BuildResults
+    condition: always()
+    

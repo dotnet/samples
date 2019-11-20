@@ -20,9 +20,6 @@
 Imports System.IO
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
-
-
 
 Class HttpWebRequest_SendChunked
    Public Overloads Shared Sub Main()
@@ -47,7 +44,7 @@ Class HttpWebRequest_SendChunked
             Console.WriteLine("Source  :{0}", e.Source)
             Console.WriteLine("Message :{0}", e.Message)
         End Try
-    End Sub 'Main
+    End Sub
      
     Public Shared Sub GetPage(myUri As [String])
        Try
@@ -104,5 +101,5 @@ Class HttpWebRequest_SendChunked
             Console.WriteLine("Source  :{0}", e.Source)
             Console.WriteLine("Message :{0}", e.Message)
         End Try
-    End Sub ' GetPage
-End Class ' HttpWebRequest_SendChunked 
+    End Sub
+End Class

@@ -21,6 +21,6 @@ Public Class Sample
         If entref.IsReadOnly Then
             Console.WriteLine("Entity reference nodes are always read-only")
         End If
-    End Sub 'Main
-End Class 'Sample 
+    End Sub
+End Class
 ' </Snippet1>

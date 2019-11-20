@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 
-Imports Microsoft.VisualBasic
 Imports System.AddIn.Pipeline
 Imports System.AddIn.Contract
 Imports System.Collections.Generic

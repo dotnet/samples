@@ -136,7 +136,7 @@ Public Class OrderItem
         Me.Description = description
         Me.Quantity = quantity
         Me.UnitPrice = unitPrice
-    End Sub 'New
+    End Sub
     
     Public Property Quantity() As Integer 
         Get

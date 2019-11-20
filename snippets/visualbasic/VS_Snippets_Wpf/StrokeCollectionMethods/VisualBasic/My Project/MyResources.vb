@@ -10,7 +10,6 @@
 Option Strict Off
 Option Explicit On
 
-Imports System
 Imports System.IO
 Imports System.Resources
 

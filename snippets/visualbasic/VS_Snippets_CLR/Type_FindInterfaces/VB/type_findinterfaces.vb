@@ -2,7 +2,6 @@
 
 Imports System.Xml
 Imports System.Reflection
-Imports Microsoft.VisualBasic
 
 Public Class MyFindInterfacesSample
     Public Shared Sub Main()
@@ -44,7 +43,7 @@ Public Class MyFindInterfacesSample
         Catch e As Exception
             Console.WriteLine("Exception: " & e.Message)
         End Try
-    End Sub 'Main
+    End Sub
     Public Shared Function MyInterfaceFilter(ByVal typeObj As Type, _
         ByVal criteriaObj As [Object]) As Boolean
         If typeObj.ToString() = criteriaObj.ToString() Then
@@ -53,6 +52,6 @@ Public Class MyFindInterfacesSample
             Return False
         End If
     End Function 'MyInterfaceFilter 
-End Class 'MyFindInterfacesSample
+End Class
 ' </Snippet1>
 

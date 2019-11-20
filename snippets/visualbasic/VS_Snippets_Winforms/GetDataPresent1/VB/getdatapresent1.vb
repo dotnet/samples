@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Windows.Forms
+﻿Imports System.Windows.Forms
 Imports System.Drawing
 Imports System.Drawing.Design
 Imports System.Data
@@ -76,7 +75,7 @@ Public Class Form1
         Else
             MessageBox.Show("The stored data is not in the Text format.", "Test Result")
         End If
-    End Sub 'TestDataObject
+    End Sub
     ' </snippet1>
 
     Public Shared Sub Main()

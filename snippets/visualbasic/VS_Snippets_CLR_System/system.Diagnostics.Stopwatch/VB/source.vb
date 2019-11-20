@@ -17,6 +17,6 @@ Class Program
         Dim elapsedTime As String = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
         Console.WriteLine( "RunTime " + elapsedTime)
 
-    End Sub 'Main
-End Class 'Program
+    End Sub
+End Class
 '</Snippet1>

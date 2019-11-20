@@ -30,8 +30,8 @@ Public Class CopyToTest
         Catch e As Exception
             Console.WriteLine(e.Message)
         End Try
-    End Sub 'Main
-End Class 'CopyToTest
+    End Sub
+End Class
 'This code produces output similar to the following; 
 'results may vary based on the computer/file structure/etc.:
 '

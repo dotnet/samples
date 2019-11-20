@@ -19,7 +19,6 @@
 
 ' <Snippet1>
 Imports System.Web.Services.Description
-Imports Microsoft.VisualBasic
 
 Class MyOperationBindingCollectionSample
 
@@ -134,6 +133,6 @@ Class MyOperationBindingCollectionSample
          Console.WriteLine("Source : " & e.Source.ToString())
          Console.WriteLine("Message : " & e.Message.ToString())
       End Try
-   End Sub 'Main
-End Class 'MyOperationBindingCollectionSample
+   End Sub
+End Class
 ' </Snippet1>

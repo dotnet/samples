@@ -14,7 +14,7 @@ NotInheritable Public Class CustomSection
    
    
    Public Sub New()
-   End Sub 'New
+   End Sub
    
    
     <ConfigurationProperty("fileName", _
@@ -44,7 +44,7 @@ NotInheritable Public Class CustomSection
         End Set
     End Property
 
-End Class 'CustomSection 
+End Class
 
 '<Snippet2>
 
@@ -111,7 +111,7 @@ NotInheritable Public Class TsMinutesConverter
         System.Convert.ToDouble(min))
 
     End Function 'ConvertFrom
-End Class 'TsMinutesConverter
+End Class
 '</Snippet2>
 
 Class UsingConfigutationConverterBase
@@ -141,7 +141,7 @@ Class UsingConfigutationConverterBase
       Catch err As ConfigurationErrorsException
          Console.WriteLine(err.ToString())
       End Try
-   End Sub 'CreateSection
+   End Sub
     
    
    
@@ -170,7 +170,7 @@ Class UsingConfigutationConverterBase
       Catch e As Exception
          Console.WriteLine(e.ToString())
       End Try
-   End Sub 'SerializeCustomSection
+   End Sub
     
    
    ' Read custom section from disk.
@@ -195,13 +195,13 @@ Class UsingConfigutationConverterBase
       Catch e As Exception
          Console.WriteLine(e.ToString())
       End Try
-   End Sub 'DeserializeCustomSection
+   End Sub
    
 
     Public Overloads Shared Sub Main(ByVal args() As String)
         CreateSection()
         SerializeCustomSection()
         DeserializeCustomSection()
-    End Sub 'Main 
-End Class 'UsingConfigutationConverterBase
+    End Sub
+End Class
 '</Snippet1>

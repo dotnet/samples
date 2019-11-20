@@ -26,7 +26,7 @@ Public Class SampleWebApplicationInformation
         eventInfo = New StringBuilder()
         eventInfo.Append(String.Format( _
         "Event created at: {0}", EventTime.ToString()))
-    End Sub 'New
+    End Sub
 
 
     ' </Snippet2>
@@ -39,7 +39,7 @@ Public Class SampleWebApplicationInformation
 
         ' Raise the event.
         MyBase.Raise()
-    End Sub 'Raise
+    End Sub
 
     ' </Snippet3>
     ' <Snippet4>
@@ -107,8 +107,8 @@ Public Class SampleWebApplicationInformation
         formatter.AppendLine(GetApplicationTrustLevel())
         formatter.IndentationLevel -= 1
         formatter.AppendLine(eventInfo.ToString())
-    End Sub 'FormatCustomEventDetails
-End Class 'SampleWebApplicationInformation 
+    End Sub
+End Class
 
 ' </Snippet9>
 

@@ -7,7 +7,7 @@ Class MyType
 
     Public Sub New(ByRef x As Int32)
         x *= 5
-    End Sub 'New
+    End Sub
 
     Public Overrides Function ToString() As [String]
         Return myField.ToString()
@@ -24,7 +24,7 @@ Class MyType
             myField = Value
         End Set
     End Property
-End Class 'MyType
+End Class
 
 Class MyApp
 
@@ -68,6 +68,6 @@ Class MyApp
         t.InvokeMember("MyProp", BindingFlags.DeclaredOnly Or BindingFlags.Public Or BindingFlags.NonPublic Or BindingFlags.Instance Or BindingFlags.SetProperty, Nothing, obj, New [Object]() {2})
         v = CType(t.InvokeMember("MyProp", BindingFlags.DeclaredOnly Or BindingFlags.Public Or BindingFlags.NonPublic Or BindingFlags.Instance Or BindingFlags.GetProperty, Nothing, obj, Nothing), Int32)
         Console.WriteLine("MyProp: {0}", v)
-    End Sub 'Main
-End Class 'MyApp
+    End Sub
+End Class
 ' </Snippet1>

@@ -18,5 +18,5 @@ Public Class Form1
         Debug.Unindent()
         Debug.WriteLine("End of list of errors")
         ' </Snippet1>
-    End Sub 'Method 
-End Class 'Form1 
+    End Sub
+End Class

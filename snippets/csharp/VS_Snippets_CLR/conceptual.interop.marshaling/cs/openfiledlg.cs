@@ -29,11 +29,11 @@ public class OpenFileName
     public string template = null;
 }
 
-public class LibWrap
+internal static class NativeMethods
 {
     // Declare a managed prototype for the unmanaged function.
     [DllImport("Comdlg32.dll", CharSet = CharSet.Auto)]
-    public static extern bool GetOpenFileName([In, Out] OpenFileName ofn);
+    internal static extern bool GetOpenFileName([In, Out] OpenFileName ofn);
 }
 //</snippet8>
 
@@ -54,7 +54,7 @@ public class App
         ofn.title = "Open file called using platform invoke...";
         ofn.defExt = "txt";
 
-        if (LibWrap.GetOpenFileName(ofn))
+        if (NativeMethods.GetOpenFileName(ofn))
         {
             Console.WriteLine("Selected file with full path: {0}", ofn.file);
         }

@@ -41,6 +41,6 @@ End If
 
  ' </Snippet3>
 
-End Sub 'New 
-End Class 'UsingPassportAuthentication
+End Sub
+End Class
 

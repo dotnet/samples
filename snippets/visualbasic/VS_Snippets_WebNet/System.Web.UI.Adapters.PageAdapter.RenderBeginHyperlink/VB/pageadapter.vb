@@ -3,7 +3,6 @@ Imports System.IO
 Imports System.Web
 Imports System.Web.UI
 Imports System.Web.UI.Adapters
-Imports Microsoft.VisualBasic
 
 ' A derived PageAdapter class.
 Public Class CustomPageAdapter
@@ -50,8 +49,8 @@ Public Class CustomPageAdapter
         ' Render the hyperlink opening tag with the added attributes.
         writer.RenderBeginTag("a")
 
-    End Sub ' RenderBeginHyperlink
-End Class ' CustomPageAdapter
+    End Sub
+End Class
 ' </snippet1>
 
 Module MainMod

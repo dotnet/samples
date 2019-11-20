@@ -19,7 +19,7 @@ Module Module1
          Console.WriteLine(" {0,-40}", ci.EnglishName)
       Next ci
 
-   End Sub 'Main 
+   End Sub
 
 
 

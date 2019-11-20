@@ -8,7 +8,7 @@ Public Class SampleSection
     Inherits ConfigurationSection
 
     Public Sub New()
-    End Sub 'New
+    End Sub
 
 
     '<Snippet2>
@@ -156,7 +156,7 @@ Public Class SampleSection
 
         Console.WriteLine("  Absolute max: {0}", absoluteMax)
         Console.WriteLine("  Absolute max: {0}", absoluteMin)
-    End Sub 'DisplayTimeSpanAbsoluteRange
+    End Sub
 
 
     Public Shared Sub TimeStampValidatorInstance()
@@ -182,7 +182,7 @@ Public Class SampleSection
         End Try '
         '</Snippet12>
 
-    End Sub 'TimeStampValidatorInstance
+    End Sub
 
     Public Shared Sub IntegerValidatorInstance()
         '<Snippet13>
@@ -206,7 +206,7 @@ Public Class SampleSection
         End Try '
         '</Snippet13>
 
-    End Sub 'IntegerValidatorInstance
+    End Sub
 
 
     Public Shared Sub StringValidatorInstance()
@@ -231,7 +231,7 @@ Public Class SampleSection
         End Try '
         '</Snippet14>
 
-    End Sub 'StringValidatorInstance
+    End Sub
 
 
     Public Shared Sub RegexStringValidatorInstance()
@@ -271,8 +271,8 @@ Public Class SampleSection
         End Try '
         '</Snippet15>
 
-    End Sub 'RegexStringValidatorInstance
-End Class 'SampleSection 
+    End Sub
+End Class
 '</Snippet1>
 
 Class TestingSampleConfiguration
@@ -292,7 +292,7 @@ Class TestingSampleConfiguration
             Console.WriteLine("  Alias 1: {0}", customSection.Alias)
             Console.WriteLine("  Alias 2: {0}", customSection.Alias2)
         End If
-    End Sub 'ShowDefaults
+    End Sub
 
 
 
@@ -314,7 +314,7 @@ Class TestingSampleConfiguration
 
             Console.WriteLine("  AllowExeDefinition: {0}", customSection.SectionInformation.AllowExeDefinition)
         End If
-    End Sub 'ShowSectionInfo
+    End Sub
 
 
     Public Overloads Shared Sub Main(ByVal args() As String)
@@ -327,5 +327,5 @@ Class TestingSampleConfiguration
         'SampleSection.StringValidatorInstance();
         SampleSection.RegexStringValidatorInstance()
         Console.ReadLine()
-    End Sub 'Main
-End Class 'TestingSampleConfiguration
+    End Sub
+End Class

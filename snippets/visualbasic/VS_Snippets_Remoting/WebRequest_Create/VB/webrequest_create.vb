@@ -11,8 +11,6 @@
 Imports System.Net
 Imports System.IO
 Imports System.Text
-Imports Microsoft.VisualBasic
-
 
 Class WebRequest_Create_Uri
     
@@ -52,5 +50,5 @@ Class WebRequest_Create_Uri
             Console.WriteLine("Source   :{0} ", e.Source)
             Console.WriteLine("Message  :{0} ", e.Message)
         End Try
-    End Sub ' Main 
-End Class ' WebRequest_Create_Uri
+    End Sub
+End Class

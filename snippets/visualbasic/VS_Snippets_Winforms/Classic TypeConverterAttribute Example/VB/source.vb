@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.IO
+﻿Imports System.IO
 Imports System.ComponentModel
 
 
@@ -10,12 +9,12 @@ Public Class Class1
     <TypeConverter(GetType(MyClassConverter))> _
     Public Class ClassA
         ' Insert code here.
-    End Class 'MyClass
+    End Class
     ' </Snippet1>
     
     Public Class MyClassConverter
         Inherits TypeConverter
-    End Class 'MyClassConverter
+    End Class
     
     ' <Snippet2>
     Public Shared Function Main() As Integer
@@ -35,4 +34,4 @@ Public Class Class1
         Return 0
     End Function 'Main
     ' </Snippet2>
-End Class 'Class1 
+End Class

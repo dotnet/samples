@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -39,7 +38,7 @@ Public Class Form1
             End If
         End If
         MyBase.Dispose(disposing)
-    End Sub 'Dispose
+    End Sub
 
 
     ' <summary>
@@ -53,7 +52,7 @@ Public Class Form1
         Me.ClientSize = New System.Drawing.Size(376, 334)
         Me.Name = "Form1"
         Me.Text = "Form1"
-    End Sub 'InitializeComponent
+    End Sub
 
     ' <summary>
     ' The main entry point for the application.
@@ -61,7 +60,7 @@ Public Class Form1
     <STAThread()> _
     Shared Sub Main()
         Application.Run(New Form1())
-    End Sub 'Main
+    End Sub
 
     '<Snippet1>
     ' This example creates a PictureBox control on the form and draws to it. 
@@ -79,7 +78,7 @@ Public Class Form1
 
         ' Add the PictureBox control to the Form.
         Me.Controls.Add(pictureBox1)
-    End Sub 'Form1_Load
+    End Sub
 
 
     Private Sub pictureBox1_Paint(ByVal sender As Object, ByVal e As System.Windows.Forms.PaintEventArgs)
@@ -92,6 +91,6 @@ Public Class Form1
         ' Draw a line in the PictureBox.
         g.DrawLine(System.Drawing.Pens.Red, pictureBox1.Left, _ 
             pictureBox1.Top, pictureBox1.Right, pictureBox1.Bottom)
-    End Sub 'pictureBox1_Paint
+    End Sub
     '</Snippet1>
-End Class 'Form1
+End Class

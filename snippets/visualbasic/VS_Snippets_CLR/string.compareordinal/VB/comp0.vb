@@ -1,7 +1,5 @@
 ﻿'<snippet1>
 ' Sample for String.CompareOrdinal(String, String)
-Imports Microsoft.VisualBasic
-
 Class Sample
    Public Shared Sub Main()
       Dim str1 As [String] = "ABCD"
@@ -17,8 +15,8 @@ Class Sample
       Console.Write("String '{0}' is ", str1)
       Console.Write("{0} ", str)
       Console.WriteLine("String '{0}'.", str2)
-   End Sub 'Main
-End Class 'Sample
+   End Sub
+End Class
 '
 'This example produces the following results:
 '

@@ -1,6 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
+
 Public Class MyTypeDelegatorClass
     Inherits TypeDelegator
     Public myElementType As String = Nothing
@@ -8,7 +8,7 @@ Public Class MyTypeDelegatorClass
     Public Sub New(ByVal myType As Type)
         MyBase.New(myType)
         Me.myType = myType
-    End Sub 'New
+    End Sub
     ' Override the IsPrimitiveImpl method.
     Protected Overrides Function IsPrimitiveImpl() As Boolean
         ' Determine whether the type is a primitive type.
@@ -18,7 +18,7 @@ Public Class MyTypeDelegatorClass
         End If
         Return False
     End Function 'IsPrimitiveImpl
-End Class 'MyTypeDelegatorClass
+End Class
 Public Class MyTypeDemoClass
     Public Shared Sub Main()
         Try
@@ -42,6 +42,6 @@ Public Class MyTypeDemoClass
         Catch e As Exception
             Console.WriteLine("Exception: {0}", e.Message.ToString())
         End Try
-    End Sub 'Main
-End Class 'MyTypeDemoClass
+    End Sub
+End Class
 ' </Snippet1>

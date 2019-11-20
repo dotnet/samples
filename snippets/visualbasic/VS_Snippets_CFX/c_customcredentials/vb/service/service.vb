@@ -16,7 +16,7 @@ Public Class MyClientCredentials
 
     Public Sub New()
 
-    End Sub 'New
+    End Sub
 
     ' Perform client credentials initialization.    
     Protected Sub New(ByVal other As MyClientCredentials)
@@ -139,7 +139,7 @@ Friend Class MyServiceCredentialsSecurityTokenManager
         MyBase.New(credentials)
         Me.credentials = credentials
     
-    End Sub 'New
+    End Sub
     
     
     Public Overrides Function CreateSecurityTokenProvider(ByVal tokenRequirement As SecurityTokenRequirement) _

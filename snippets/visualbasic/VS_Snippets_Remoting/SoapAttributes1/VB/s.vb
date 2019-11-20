@@ -18,9 +18,9 @@ Public Class Test
       formatter.Serialize(stream, obj)
       stream.Close()
       
-   End Sub 'Main
+   End Sub
    
-End Class 'Test
+End Class
 
 
 ' A test object that needs to be serialized.
@@ -44,7 +44,7 @@ End Class 'Test
       member3 = "hello"
       member4 = 3.14159265
       member5 = "hello world!"
-   End Sub 'New
+   End Sub
 
-End Class 'TestSimpleObject
+End Class
 ' </Snippet1>

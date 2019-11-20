@@ -11,7 +11,7 @@ Private Shared Sub ConstraintCollectionChanged()
 	' Demonstrate ConstraintCollection.CollectionChanged event.
 	Try
 		' Create Customers table.
-		Dim customersTable As DataTable = New DataTable("Customers")
+		Dim customersTable As New DataTable("Customers")
 		customersTable.Columns.Add("id", Type.GetType("System.Int32"))
 		customersTable.Columns.Add("Name", Type.GetType("System.String"))
 		AddHandler customersTable.Constraints.CollectionChanged, _ 
@@ -19,7 +19,7 @@ Private Shared Sub ConstraintCollectionChanged()
             AddressOf Collection_Changed)
 
 		' Create Orders table.
-		Dim ordersTable As DataTable = New DataTable("Orders")
+		Dim ordersTable As New DataTable("Orders")
 		ordersTable.Columns.Add("CustID", Type.GetType("System.Int32"))
 		ordersTable.Columns.Add("CustName", Type.GetType("System.String"))
 		AddHandler ordersTable.Constraints.CollectionChanged, _

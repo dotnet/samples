@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
 Imports System.ComponentModel
@@ -31,7 +30,7 @@ Class Form1
         myColumnTextColumn = New DataGridTextBoxColumn(pd, fmt.SortableDateTimePattern)
         ' Add the new DataGridColumnStyle to the GridColumnsCollection.
         dataGrid1.TableStyles(0).GridColumnStyles.Add(myColumnTextColumn)
-    End Sub 'AddColumn
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

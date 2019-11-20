@@ -19,7 +19,7 @@ Partial Class SampleApplicationForm
         End If
         MyBase.Dispose(disposing)
 
-    End Sub 'Dispose
+    End Sub
 
 #Region "Windows Form Designer generated code"
 
@@ -135,7 +135,7 @@ Partial Class SampleApplicationForm
         Me.groupBox1.PerformLayout()
         Me.ResumeLayout(False)
 
-    End Sub 'InitializeComponent 
+    End Sub
 
 #End Region
 
@@ -147,5 +147,5 @@ Partial Class SampleApplicationForm
     Private radioOff As System.Windows.Forms.RadioButton
     Private radioOn As System.Windows.Forms.RadioButton
     Private groupBox1 As System.Windows.Forms.GroupBox
-End Class 'SampleApplicationForm 
+End Class
 

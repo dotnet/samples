@@ -54,8 +54,8 @@ Class Sample
         result = aRingXYZ.StartsWith(capitalARing, True, ci)
         Console.WriteLine(msg3, result)
     
-    End Sub 'Main
-End Class 'Sample
+    End Sub
+End Class
 
 '
 'Note: This code example was executed on a console whose user interface 

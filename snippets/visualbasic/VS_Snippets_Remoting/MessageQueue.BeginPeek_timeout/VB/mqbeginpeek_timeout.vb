@@ -30,7 +30,7 @@ Public Class MyNewQueue
             ' Do other work on the current thread.
             Return
 
-        End Sub 'Main
+        End Sub
 
 
 
@@ -74,7 +74,7 @@ Public Class MyNewQueue
 
             Return
 
-        End Sub 'MyPeekCompleted
+        End Sub
 
-End Class 'MyNewQueue
+End Class
 ' </Snippet1>

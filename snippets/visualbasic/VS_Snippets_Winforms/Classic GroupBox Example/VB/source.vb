@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.ComponentModel
 Imports System.Windows.Forms
 
@@ -41,5 +40,5 @@ Private Sub InitializeMyGroupBox()
 End Sub 
 ' </Snippet1>
 
-End Class 'Form1 
+End Class
 

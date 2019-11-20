@@ -4,8 +4,6 @@
 Imports System.IO
 Imports System.Windows.Forms
 Imports System.Drawing
-Imports System
-
 Public Class TicTacToe
     Inherits System.Windows.Forms.Form
 

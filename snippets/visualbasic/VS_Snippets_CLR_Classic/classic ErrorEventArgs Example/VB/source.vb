@@ -23,7 +23,7 @@ Public Class Form1
         ' Extracts the exception from the ErrorEventArgs and display it.
         Dim myReturnedException As Exception = myErrorEventArgs.GetException()
         MessageBox.Show(("The returned exception is: " & myReturnedException.Message))
-    End Sub 'Main
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

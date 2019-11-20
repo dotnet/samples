@@ -7,8 +7,8 @@ Class Sample
                         Console.BufferHeight)
       Console.WriteLine("The current buffer width is {0} columns.", _
                         Console.BufferWidth)
-   End Sub 'Main
-End Class 'Sample
+   End Sub
+End Class
 '
 'This example produces the following results:
 '

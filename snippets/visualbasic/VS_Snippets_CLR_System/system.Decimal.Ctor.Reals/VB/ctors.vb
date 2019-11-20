@@ -1,7 +1,5 @@
 ﻿'<Snippet1>
 ' Example of the Decimal( Single ) constructor.
-Imports Microsoft.VisualBasic
-
 Module DecimalCtorSDemo
 
     ' Get the exception type name; remove the namespace prefix.

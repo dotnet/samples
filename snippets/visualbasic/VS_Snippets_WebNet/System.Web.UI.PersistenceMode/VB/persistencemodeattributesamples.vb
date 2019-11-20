@@ -28,7 +28,7 @@ Namespace PersistenceModeAttributeSamples
       
       Public Sub New(author As [String])
          _author = author
-      End Sub 'New
+      End Sub
       
       Public Property Author() As [String]
          Get
@@ -38,7 +38,7 @@ Namespace PersistenceModeAttributeSamples
             _author = value
          End Set
       End Property
-   End Class 'TemplateItem
+   End Class
    <ParseChildren(True)> Public Class MyTemplateControl
       Inherits Control
       Implements INamingContainer 'ToDo: Add Implements Clauses for implementation methods of these interface(s)
@@ -96,7 +96,7 @@ Namespace PersistenceModeAttributeSamples
       Public Overrides Sub DataBind()
          EnsureChildControls()
          MyBase.DataBind()
-      End Sub 'DataBind
+      End Sub
 
 
       Protected Overrides Sub CreateChildControls()
@@ -110,6 +110,6 @@ Namespace PersistenceModeAttributeSamples
          Else
             Me.Controls.Add(New LiteralControl(Me.Author))
          End If
-      End Sub 'CreateChildControls
-   End Class 'MyTemplateControl
+      End Sub
+   End Class
 End Namespace 'PersistenceModeAttributeSamples

@@ -20,7 +20,7 @@ namespace SimpleFeedReader
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<NewsService>();
-            services.AddAutoMapper();
+            services.AddAutoMapper(typeof(NewsStoryProfile));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 

@@ -10,7 +10,6 @@ Imports System.Collections
 Imports System.Collections.Specialized
 Imports System.Diagnostics
 Imports System.Runtime.InteropServices
-Imports Microsoft.VisualBasic
 
 Public Class App
    Private Shared PC As PerformanceCounter
@@ -58,7 +57,7 @@ Public Class App
       ' Create the counter.
       PC = New PerformanceCounter("ElapsedTimeSampleCategory", _
             "ElapsedTimeSample", False)
-   End Sub 'CreateCounters
+   End Sub
 
 
 
@@ -139,7 +138,6 @@ Imports System.Collections
 Imports System.Collections.Specialized
 Imports System.Diagnostics
 Imports System.Runtime.InteropServices
-Imports Microsoft.VisualBasic
 
 Public Class App
 

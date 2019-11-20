@@ -28,6 +28,6 @@ Class UnicodeEncodingExample
             Console.Write("[{0}]", b)
         Next b
         Console.WriteLine()
-    End Sub 'Main
-End Class 'UnicodeEncodingExample
+    End Sub
+End Class
 ' </Snippet1>

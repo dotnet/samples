@@ -29,7 +29,7 @@ Public Class SamplesListDictionary
       End If
       Console.WriteLine()
 
-   End Sub 'Main
+   End Sub
 
    Public Shared Sub PrintKeysAndValues(myCol As IDictionary)
 
@@ -40,9 +40,9 @@ Public Class SamplesListDictionary
       Next de
       Console.WriteLine()
 
-   End Sub 'PrintKeysAndValues
+   End Sub
 
-End Class 'SamplesListDictionary 
+End Class
 
 
 'This code produces the following output.

@@ -15,7 +15,7 @@ Public Class MyNetworkStream_Sub_Class
    
    Public Sub New(socket As Socket, ownsSocket As Boolean)
       MyBase.New(socket, ownsSocket)
-   End Sub 'New
+   End Sub
    
    ' Suppose you wanted a property for determining if Socket is connected. You can use
    ' the protected method 'Socket' to return underlying Socket.
@@ -39,13 +39,13 @@ Public Class MyNetworkStream_Sub_Class
    End Property
     
    Public Shared Sub DoSomethingSignificant()
-   End Sub 'DoSomethingSignificant
+   End Sub
     ' Do something significant in here
    
    '</Snippet1>
    Public Shared Sub Main()
       MyNetworkStream_Sub_Class.DoSomethingSignificant()
-   End Sub 'Main 
-End Class 'MyNetworkStream_Sub_Class
+   End Sub
+End Class
 
 

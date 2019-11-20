@@ -30,7 +30,7 @@ NotInheritable Public Class SoundPermission
     Public Sub New(ByVal state As PermissionState) 
         m_specifiedAsUnrestricted = state = PermissionState.Unrestricted
     
-    End Sub 'New    
+    End Sub
     ' This constructor creates and initializes a permission with specific access.        
     Public Sub New(ByVal flags As SoundPermissionState) 
         If Not [Enum].IsDefined(GetType(SoundPermissionState), flags) Then
@@ -39,7 +39,7 @@ NotInheritable Public Class SoundPermission
         m_specifiedAsUnrestricted = False
         m_flags = flags
     
-    End Sub 'New   
+    End Sub
     ' For debugging, return the state of this object as XML.
     Public Overrides Function ToString() As String 
         Return ToXml().ToString()
@@ -161,7 +161,7 @@ NotInheritable Public Class SoundPermission
             End If
         End If
 
-    End Sub 'FromXml
+    End Sub
 
     '</snippet6>
     '<snippet7>
@@ -203,5 +203,5 @@ NotInheritable Public Class SoundPermission
     End Function 'Clone 
 #End Region
 
-End Class 'SoundPermission
+End Class
 '</snippet1>

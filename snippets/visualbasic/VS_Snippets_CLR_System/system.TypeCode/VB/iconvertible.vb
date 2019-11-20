@@ -10,7 +10,7 @@ Module Module1
         Public Sub New(ByVal x As Double, ByVal y As Double)
             Me.x = x
             Me.y = y
-        End Sub 'New
+        End Sub
 
 
         Public Function GetTypeCode() As TypeCode Implements IConvertible.GetTypeCode

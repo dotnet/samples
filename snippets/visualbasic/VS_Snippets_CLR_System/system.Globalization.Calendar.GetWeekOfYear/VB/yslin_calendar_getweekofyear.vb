@@ -24,8 +24,8 @@ Public Class SamplesCalendar
       ' Displays the total number of weeks in the current year.
       Dim LastDay = New System.DateTime(DateTime.Now.Year, 12, 31)
       Console.WriteLine("There are {0} weeks in the current year ({1}).", myCal.GetWeekOfYear(LastDay, myCWR, myFirstDOW), LastDay.Year)
-   End Sub 'Main 
-End Class 'SamplesCalendar
+   End Sub
+End Class
 
 
 'This code produces the following output.  Results vary depending on the system date.

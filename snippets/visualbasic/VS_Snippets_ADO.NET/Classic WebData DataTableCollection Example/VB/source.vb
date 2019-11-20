@@ -1,6 +1,5 @@
 ﻿Imports System.Data
 Imports System.Data.OleDb
-Imports Microsoft.VisualBasic
 
 Public Class Sample
 
@@ -23,7 +22,7 @@ Public Class Sample
  End Sub
 
  Private Sub CreateTable(dataSet As DataSet)
-    Dim newTable As DataTable = new DataTable("table")
+    Dim newTable As New DataTable("table")
     newTable.Columns.Add("ID", Type.GetType("System.Int32"))
     newTable.Columns.Add("Name", Type.GetType("System.String"))
     dataSet.Tables.Add(newTable)

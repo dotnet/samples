@@ -15,9 +15,9 @@ Namespace CodeDomSamples
         
         ' CType(1000,Long)
         '</Snippet2>
-      End Sub 'New 
+      End Sub
 
-   End Class 'CodeCastExpressionExample
+   End Class
 
 End Namespace 'CodeDomSamples 
 

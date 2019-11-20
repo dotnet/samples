@@ -58,8 +58,8 @@ Namespace Samples.AspNet.VB
 
             ' Write the closing tag of the Font element.
             writer.WriteEndTag("font")
-        End Sub 'Render
-    End Class 'FirstControl 
+        End Sub
+    End Class
     ' </snippet3>
 End Namespace 'htw_5
 ' </snippet1>

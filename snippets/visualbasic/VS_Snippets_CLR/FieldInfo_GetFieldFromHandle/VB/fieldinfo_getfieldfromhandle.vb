@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
 
 Public Class FieldInfo_GetFieldFromHandle
     Public x As String
@@ -26,6 +25,6 @@ Public Class FieldInfo_GetFieldFromHandle
             ' Display the FieldInfo of myFieldInfo.
             Console.WriteLine("{0}", myFieldInfo)
         Next i
-    End Sub 'Main
-End Class 'FieldInfo_GetFieldFromHandle
+    End Sub
+End Class
 ' </Snippet1>

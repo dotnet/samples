@@ -33,9 +33,9 @@ Namespace SamplePublic
             Console.WriteLine("-------------------------------------------------")
             Console.WriteLine()
          End Try
-      End Sub 'Main
+      End Sub
 '</snippet2>
-   End Class 'ConsoleApp
+   End Class
 End Namespace 'StackFramePublic 
 
 Namespace SampleInternal
@@ -68,9 +68,9 @@ Namespace SampleInternal
             Console.WriteLine()
             Throw e
          End Try
-      End Sub 'InternalMethod
+      End Sub
 '</snippet3>
-   End Class 'ClassLevel1
+   End Class
    
    Public Class ClassLevel2
       
@@ -106,9 +106,9 @@ Namespace SampleInternal
             Console.WriteLine()
             Throw e
          End Try
-      End Sub 'Level2Method
+      End Sub
 '</snippet4>
-   End Class 'ClassLevel2
+   End Class
    
    Public Class ClassLevel3
       
@@ -152,9 +152,9 @@ Namespace SampleInternal
             Console.WriteLine()
             Throw e
          End Try
-      End Sub 'Level3Method
+      End Sub
 '</snippet5>
-   End Class 'ClassLevel3
+   End Class
    
    Public Class ClassLevel4
       
@@ -191,9 +191,9 @@ Namespace SampleInternal
             Console.WriteLine()
             Throw e
          End Try
-      End Sub 'Level4Method 
+      End Sub
 '</snippet6>
-   End Class 'ClassLevel4
+   End Class
   
    
    Public Class ClassLevel5
@@ -227,16 +227,16 @@ Namespace SampleInternal
             Console.WriteLine()
             Throw e
          End Try
-      End Sub 'Level5Method
+      End Sub
 '</snippet8>
-   End Class 'ClassLevel5 
+   End Class
   
    
    Public Class ClassLevel6
       Public Sub Level6Method()
          Throw New Exception("An error occurred in the lowest internal class method.")
-      End Sub 'Level6Method
-   End Class 'ClassLevel6 
+      End Sub
+   End Class
 
 End Namespace 'StackFrameInternal
 '</snippet1>

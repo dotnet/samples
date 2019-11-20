@@ -11,7 +11,7 @@ Namespace Samples.AspNet.VB
           Return New SessionPageStatePersister(Page)
        End Function 'GetStatePersister
 
-    End Class 'MyPageAdapter
+    End Class
 
 End Namespace
 ' </snippet1>

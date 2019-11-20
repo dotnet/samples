@@ -47,7 +47,7 @@ Class SecurityElementMembers
         Console.WriteLine("This sample completed successfully; " + "press Enter to exit.")
         Console.ReadLine()
 
-    End Sub 'Main
+    End Sub
 
 
     ' Add an attribute to the specified security element.
@@ -138,7 +138,7 @@ Class SecurityElementMembers
 
         Console.WriteLine(outputMessage)
 
-    End Sub 'DisplaySummary
+    End Sub
 
 
     ' Compare the first two occurrences of an attribute 
@@ -155,7 +155,7 @@ Class SecurityElementMembers
             End If
         Next xmlChild
         ' The security elements were created at the exact same time.
-    End Sub 'CompareAttributes
+    End Sub
 
 
     ' Convert the contents of the specified security element 
@@ -183,7 +183,7 @@ Class SecurityElementMembers
             End If
         Next xmlParent
 
-    End Sub 'ConvertToHashTable
+    End Sub
 
 
     ' Delete the specified security element if the current time is past
@@ -232,7 +232,7 @@ Class SecurityElementMembers
         Return localXmlElement
 
     End Function 'DestroyTree
-End Class 'SecurityElementMembers
+End Class
 '
 ' This sample produces the following output:
 ' 

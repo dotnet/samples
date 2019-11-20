@@ -6,7 +6,6 @@
 ' DataGrid. One button sets the Alternating background color of 'DataGrid' 
 ' and other resets it to its default value.
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -45,18 +44,18 @@ Public Class DataGridTableStyle_resetcolor
       Controls.AddRange(New Control() {myButton2, myDataGrid, myButton1})
       Text = "Test DataGridTableStyle.ResetAlternatingBackColor method"
       AddHandler Load, AddressOf DataGridTableStyle_Reset_color
-   End Sub 'InitializeComponent
+   End Sub
    
    Shared Sub Main()
       Application.Run(New DataGridTableStyle_resetcolor())
-   End Sub 'Main
+   End Sub
    
    
    Public Sub New()
       InitializeComponent()
       ' Create and bind DataSet to DataGrid.
       CreateDataSet()
-   End Sub 'New
+   End Sub
    
    Private Sub CreateDataSet()
       ' Create a DataSet
@@ -78,22 +77,22 @@ Public Class DataGridTableStyle_resetcolor
       
       ' Bind the DataGrid to the DataSet.
       myDataGrid.SetDataBinding(myDataSet, "Employee")
-   End Sub 'CreateDataSet
+   End Sub
    
    Private Sub DataGridTableStyle_Reset_color(sender As Object, e As EventArgs)
       myDataGridTableStyle.MappingName = "Employee"
       myDataGrid.TableStyles.Add(myDataGridTableStyle)
-   End Sub 'DataGridTableStyle_Reset_color
+   End Sub
    
 ' <Snippet1>
    Private Sub myButton1_Click(sender As Object, e As EventArgs)
       'Set the 'AlternatingBackColor'.
       myDataGridTableStyle.AlternatingBackColor = Color.Blue
-   End Sub 'myButton1_Click
+   End Sub
    
    Private Sub myButton2_Click(sender As Object, e As EventArgs)
       ' Reset the 'AlternatingBackColor'.
       myDataGridTableStyle.ResetAlternatingBackColor()
-   End Sub 'myButton2_Click
+   End Sub
 ' </Snippet1>
-End Class 'DataGridTableStyle_resetcolor 
+End Class

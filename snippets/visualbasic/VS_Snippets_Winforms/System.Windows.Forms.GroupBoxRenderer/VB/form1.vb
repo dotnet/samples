@@ -5,7 +5,6 @@
 ' TODO: see if you can work DrawParentBackground into here somehow.
 
 '<Snippet0>
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 Imports System.Windows.Forms.VisualStyles
@@ -44,7 +43,7 @@ Class Form1
             Me.Text = "Visual Styles Disabled"
         End If
     
-    End Sub 'New
+    End Sub
      
     <STAThread()>  _
     Shared Sub Main() 
@@ -54,7 +53,7 @@ Class Form1
         Application.EnableVisualStyles()
         Application.Run(New Form1())
     
-    End Sub 'Main
+    End Sub
     
     
     '<snippet3>
@@ -103,7 +102,7 @@ Public Class CustomGroupBox
         panel.Location = New Point(innerRectangle.X + 5, innerRectangle.Y + 5)
         panel.Size = New Size(innerRectangle.Width - 10, innerRectangle.Height - 10)
     
-    End Sub 'New
+    End Sub
     
     
     '<Snippet2>
@@ -118,7 +117,7 @@ Public Class CustomGroupBox
             GroupBoxRenderer.DrawGroupBox(e.Graphics, innerRectangle, state)
         End If
     
-    End Sub 'OnPaint
+    End Sub
     
     '</Snippet2>
     ' Pass added controls to the internal FlowLayoutPanel.
@@ -131,6 +130,6 @@ Public Class CustomGroupBox
             panel.Controls.Add(e.Control)
         End If
     
-    End Sub 'OnControlAdded
-End Class 'CustomGroupBox
+    End Sub
+End Class
 '</Snippet0>

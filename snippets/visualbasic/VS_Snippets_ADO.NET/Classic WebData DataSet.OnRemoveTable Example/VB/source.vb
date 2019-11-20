@@ -24,7 +24,7 @@ End Class
 
 Public Shared Function CreateDataSet() As DerivedDataSet
 	' Create a DataSet with one table containing two columns.
-	Dim derived As DerivedDataSet = New DerivedDataSet()
+	Dim derived As New DerivedDataSet()
 
 	' Add table to DataSet.
 	Dim table As DataTable = derived.Tables.Add("Items")

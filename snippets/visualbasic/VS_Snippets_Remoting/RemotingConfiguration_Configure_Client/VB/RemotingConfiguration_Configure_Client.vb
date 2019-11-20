@@ -11,6 +11,6 @@ Public Class Client
       Dim myObject As MyServerImpl = CType(Activator.GetObject(GetType(MyServerImpl), _ 
                                         "tcp://localhost:8085/SayHello"), MyServerImpl)
       Console.WriteLine(myObject.MyMethod("ClientString"))
-   End Sub 'Main
-End Class 'Client
+   End Sub
+End Class
 

@@ -19,7 +19,7 @@ Class CodeDomGenericsDemo
             LogMessage(("Unexpected Exception:" + e.ToString()))
         End Try
 
-    End Sub 'Main
+    End Sub
 
 
     Shared Sub CreateGenericsCode(ByVal providerName As String, ByVal sourceFileName As String, ByVal assemblyName As String)
@@ -71,7 +71,7 @@ Class CodeDomGenericsDemo
         End If
         File.Delete(sourceFileName)
 
-    End Sub 'CreateGenericsCode
+    End Sub
 
 
     ' Create a CodeDOM graph.
@@ -191,7 +191,7 @@ Class CodeDomGenericsDemo
         class2.Members.Add(methodMain)
         ns.Types.Add(class2)
 
-    End Sub 'CreateGraph
+    End Sub
 
 
     Overloads Shared Function ConsoleWriteLineStatement(ByVal exp As CodeExpression) As CodeStatement
@@ -212,7 +212,7 @@ Class CodeDomGenericsDemo
     Shared Sub LogMessage(ByVal [text] As String)
         Console.WriteLine([text])
 
-    End Sub 'LogMessage
+    End Sub
 
 
     Shared Sub OutputResults(ByVal results As CompilerResults)
@@ -222,8 +222,8 @@ Class CodeDomGenericsDemo
             LogMessage(s)
         Next s
 
-    End Sub 'OutputResults
-End Class 'CodeDomGenericsDemo 
+    End Sub
+End Class
 '
 ' This example generates the following code:
 '------------------------------------------------------------------------------

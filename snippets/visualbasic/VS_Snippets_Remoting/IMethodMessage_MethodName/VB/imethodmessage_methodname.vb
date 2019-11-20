@@ -17,7 +17,6 @@ Imports System.Reflection
 Imports System.Runtime.Remoting.Proxies
 Imports System.Runtime.Remoting.Messaging
 Imports System.Security.Permissions
-Imports MicroSoft.VisualBasic
 
 <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> _
 Public Class Reverser
@@ -30,7 +29,7 @@ Public Class Reverser
    
    Public Sub SetString(temp As String)
       DoReverse(temp)
-   End Sub 'SetString
+   End Sub
    
    ' Exposed reverse as a method to reverse a string.
    Private Sub DoReverse(argString As String)
@@ -39,8 +38,8 @@ Public Class Reverser
       For i = argString.Length - 1 To 0 Step -1
          stringReversed += argString.Chars(i)
       Next i
-   End Sub 'DoReverse
-End Class 'Reverser
+   End Sub
+End Class
 
 ' <Snippet1>
 <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> _
@@ -53,7 +52,7 @@ Public Class MyProxyClass
       MyBase.New(argType)
       myType = argType
       myObjectInstance = Activator.CreateInstance(argType)
-   End Sub 'New
+   End Sub
    
 ' <Snippet2>
    ' Overriding the Invoke method of RealProxy.
@@ -86,7 +85,7 @@ Public Class MyProxyClass
       Return myReturnMessage
    End Function 'Invoke
 ' </Snippet2>
-End Class 'MyProxyClass
+End Class
 ' </Snippet1>
 
 Public Class ApplicationClass
@@ -99,5 +98,5 @@ Public Class ApplicationClass
       
       myReverser.SetString("Hello World!")
       Console.WriteLine("The out result is : {0}", myReverser.GetReversedString())
-   End Sub 'Main
-End Class 'ApplicationClass
+   End Sub
+End Class

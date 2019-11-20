@@ -4,7 +4,6 @@
 ' SaveFileDialog.CreatePrompt, SaveFileDialog.OverwritePrompt, and 
 ' TextBox.Click members.
 '<snippet1>
-Imports System
 Imports System.Drawing
 Imports System.IO
 Imports System.Windows.Forms

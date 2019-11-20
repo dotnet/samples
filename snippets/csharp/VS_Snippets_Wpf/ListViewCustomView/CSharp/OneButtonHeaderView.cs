@@ -72,10 +72,7 @@ namespace SDKSample
             AutomationPeer peer = UIElementAutomationPeer.CreatePeerForElement(b);
 
             //If children is null, we still need to create an empty list to insert the button
-            if (children == null)
-            {
-                children = new List<AutomationPeer>();
-            }
+            children ??= new List<AutomationPeer>();
 
             children.Insert(0, peer);
 

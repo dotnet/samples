@@ -24,7 +24,7 @@ Public Class MyClientFormatterProvider
    Private nextProvider As IClientChannelSinkProvider = Nothing
 
    Public Sub New()
-   End Sub 'New
+   End Sub
 
    Public Function CreateSink(channel As IChannelSender, myUrl As String, _
                      remoteChannelData As Object) As IClientChannelSink _
@@ -53,7 +53,7 @@ Public Class MyClientFormatterProvider
          nextProvider = value
       End Set
    End Property
-End Class 'MyClientFormatterProvider
+End Class
 
 ' <Snippet2>
 <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> _
@@ -67,7 +67,7 @@ Friend Class MyClientFormatterChannelSink
       MyBase.New()
       nextClientSink = nextSink
       nextMessageSink = nextMsgSink
-   End Sub 'New
+   End Sub
 
    Public Sub ProcessMessage(msg As IMessage, requestHeaders As ITransportHeaders, _
                requestStream As Stream, ByRef responseHeaders As ITransportHeaders, _
@@ -75,20 +75,20 @@ Friend Class MyClientFormatterChannelSink
                Implements IClientChannelSink.ProcessMessage
       nextClientSink.ProcessMessage(msg, requestHeaders, requestStream, _
                                     responseHeaders, responseStream)
-   End Sub 'ProcessMessage
+   End Sub
 
    Public Sub AsyncProcessRequest(sinkStack As IClientChannelSinkStack, _
             msg As IMessage, headers As ITransportHeaders, myStream As Stream) _
             Implements IClientChannelSink.AsyncProcessRequest
       sinkStack.Push(Me, Nothing)
       nextClientSink.AsyncProcessRequest(sinkStack, msg, headers, myStream)
-   End Sub 'AsyncProcessRequest
+   End Sub
 
    Public Sub AsyncProcessResponse(sinkStack As IClientResponseChannelSinkStack, _
             state As Object, headers As ITransportHeaders, myStream As Stream) _
             Implements IClientChannelSink.AsyncProcessResponse
       sinkStack.AsyncProcessResponse(headers, myStream)
-   End Sub 'AsyncProcessResponse
+   End Sub
 
    Public Function GetRequestStream(msg As IMessage, headers As ITransportHeaders) As Stream _
          Implements IClientChannelSink.GetRequestStream
@@ -144,8 +144,8 @@ Friend Class MyClientFormatterChannelSink
          Return myKeys
       End Get
    End Property
-End Class 'MyClientFormatterChannelSink
+End Class
 
 Public Class MyKey
-End Class 'MyKey
+End Class
 ' </Snippet2>

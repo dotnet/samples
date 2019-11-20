@@ -40,7 +40,7 @@ Class MyDynamicAssembly
 	' More IL code emission here ...
 	' </Snippet1>
 
-   End Sub 'BuildDynamicMethod
+   End Sub
 
-End Class 'MyDynamicAssembly
+End Class
 

@@ -5,8 +5,8 @@ Class Sample
       Console.WriteLine()
       Console.WriteLine("NewLine: {0}  first line{0}  second line{0}  third line", _
                              Environment.NewLine)
-   End Sub 'Main
-End Class 'Sample
+   End Sub
+End Class
 '
 'This example produces the following results:
 '

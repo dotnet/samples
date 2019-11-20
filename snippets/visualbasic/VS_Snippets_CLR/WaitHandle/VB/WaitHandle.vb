@@ -36,7 +36,7 @@ NotInheritable Public Class App
         Console.WriteLine("Task {0} finished first (time waited={1}).", _
             index + 1,(DateTime.Now - dt).TotalMilliseconds)
     
-    End Sub 'Main
+    End Sub
     
     '</snippet2>
     Shared Sub DoTask(ByVal state As [Object]) 
@@ -46,8 +46,8 @@ NotInheritable Public Class App
         Thread.Sleep(time)
         are.Set()
     
-    End Sub 'DoTask
-End Class 'App
+    End Sub
+End Class
 
 ' This code produces output similar to the following:
 '

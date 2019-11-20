@@ -27,7 +27,7 @@ Public Class Run
         Dim writer As New StreamWriter(filename)
         xSer.Serialize(writer, class1)
         writer.Close()
-    End Sub 'SerializeOrder
+    End Sub
     
     
     ' Return an XmlSerializer to override the root serialization.

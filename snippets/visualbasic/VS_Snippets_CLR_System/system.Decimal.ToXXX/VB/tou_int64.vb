@@ -1,7 +1,5 @@
 ﻿'<Snippet1>
 ' Example of the Decimal.ToInt64 and Decimal.ToUInt64 methods.
-Imports Microsoft.VisualBasic
-
 Module DecimalToU_Int64Demo
 
     Dim formatter As String = "{0,25}{1,22}{2,22}"

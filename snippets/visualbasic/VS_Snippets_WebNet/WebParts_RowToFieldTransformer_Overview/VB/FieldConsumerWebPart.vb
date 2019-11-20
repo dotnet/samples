@@ -20,7 +20,7 @@ Namespace Samples.AspNet.VB.Controls
         Private Sub GetFieldValue(ByVal fieldValue As Object)
             _fieldValue = fieldValue
 
-        End Sub 'GetFieldValue
+        End Sub
 
         Protected Overrides Sub OnPreRender(ByVal e As EventArgs)
             If Not (_provider Is Nothing) Then
@@ -28,7 +28,7 @@ Namespace Samples.AspNet.VB.Controls
             End If
             MyBase.OnPreRender(e)
 
-        End Sub 'OnPreRender
+        End Sub
 
         Protected Overrides Sub RenderContents(ByVal writer As HtmlTextWriter)
 
@@ -44,13 +44,13 @@ Namespace Samples.AspNet.VB.Controls
                 writer.Write("Not connected")
             End If
 
-        End Sub 'RenderContents
+        End Sub
 
         <ConnectionConsumer("Field")> _
         Public Sub SetConnectionInterface(ByVal provider As IWebPartField)
             _provider = provider
 
-        End Sub 'SetConnectionInterface
+        End Sub
 
         Private Class FieldConsumerConnectionPoint
             Inherits ConsumerConnectionPoint
@@ -62,8 +62,8 @@ Namespace Samples.AspNet.VB.Controls
                 MyBase.New(callbackMethod, interfaceType, controlType, _
                   name, id, allowsMultipleConnections)
 
-            End Sub 'New
-        End Class 'FieldConsumerConnectionPoint 
-    End Class 'FieldConsumerWebPart
+            End Sub
+        End Class
+    End Class
     '</Snippet2>
 End Namespace

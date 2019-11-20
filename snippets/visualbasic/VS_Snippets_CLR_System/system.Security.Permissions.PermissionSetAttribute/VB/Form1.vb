@@ -73,7 +73,7 @@ Public Class Form1
         Catch e As Exception
             WriteLine(e.Message)
         End Try
-    End Sub 'ReadFile1
+    End Sub
 
     '<Snippet2>
     <System.Security.Permissions.PermissionSetAttribute( _
@@ -95,7 +95,7 @@ Public Class Form1
         Catch e As Exception
             WriteLine(e.Message)
         End Try
-    End Sub 'ReadFile2
+    End Sub
 
     '<Snippet3>
     <System.Security.Permissions.PermissionSetAttribute( _
@@ -118,7 +118,7 @@ Public Class Form1
         Catch e As Exception
             WriteLine(e.Message)
         End Try
-    End Sub 'ReadFile3
+    End Sub
 #End If
 
     ' Locate the named permission set at the Machine level and return it as

@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -27,7 +26,7 @@ Public Class Form1
       ' Required for Windows Form Designer support
       '
       InitializeComponent()
-   End Sub 'New
+   End Sub
     
    
    '
@@ -71,7 +70,7 @@ Public Class Form1
       Me.Name = "Form1"
       Me.Text = "Form1"
       Me.ResumeLayout(False)
-   End Sub 'InitializeComponent
+   End Sub
     
    '
    'ToDo: Error processing original source shown below
@@ -84,7 +83,7 @@ Public Class Form1
    <STAThread()>  _
    Shared Sub Main()
       Application.Run(New Form1())
-   End Sub 'Main
+   End Sub
    
    
    '<Snippet1>
@@ -97,6 +96,6 @@ Public Class Form1
             e.Cancel = True
          End If ' Call method to save file...
       End If
-   End Sub 'Form1_Closing
-End Class 'Form1
+   End Sub
+End Class
 '</Snippet1>

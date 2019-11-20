@@ -10,9 +10,11 @@ Imports System.Windows.Media
 Imports System.Windows.Media.Imaging
 Imports System.Windows.Navigation
 Imports System.Windows.Shapes
+
 '<snippetCustomersOrdersImportsWpf>
 Imports System.Data.Services.Client
 Imports NorthwindClient.Northwind
+
 '</snippetCustomersOrdersImportsWpf>
 
 Partial Public Class CustomerOrdersWpf2
@@ -38,16 +40,16 @@ Partial Public Class CustomerOrdersWpf2
         ' Create a new collection for binding based on the LINQ query.
         trackedCustomers = New DataServiceCollection(Of Customer)(customerQuery)
 
-            try
-                ' Get the customersViewSource resource and set the binding to the collection.
+        Try
+            ' Get the customersViewSource resource and set the binding to the collection.
             customersViewSource = _
                 CType(Me.FindResource("customersViewSource"), CollectionViewSource)
             customersViewSource.Source = trackedCustomers
             customersViewSource.View.MoveCurrentToFirst()
         Catch ex As DataServiceQueryException
-            MessageBox.Show("The query could not be completed:\n" + ex.ToString())
+            MessageBox.Show($"The query could not be completed:{vbCrLf}{ex.ToString()}")
         Catch ex As InvalidOperationException
-            MessageBox.Show("The following error occurred:\n" + ex.ToString())
+            MessageBox.Show($"The following error occurred:{vbCrLf}{ex.ToString()}")
         End Try
         '</snippetCustomersOrdersDataBindingWpf>
     End Sub

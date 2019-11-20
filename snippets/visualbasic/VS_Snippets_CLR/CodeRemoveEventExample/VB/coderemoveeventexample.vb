@@ -16,8 +16,8 @@ Namespace CodeDomSamples
 
             '   RemoveHandler TestEvent, AddressOf Me.OnMouseEnter            
             '</Snippet2>
-        End Sub 'New 
+        End Sub
 
-    End Class 'CodeRemoveEventExample 
+    End Class
 End Namespace 'CodeDomSamples
 '</Snippet1>

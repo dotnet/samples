@@ -1,6 +1,5 @@
 ﻿Imports System.Data
 Imports System.Data.OleDb
-Imports Microsoft.VisualBasic
 
 Public Class Sample
 
@@ -10,7 +9,7 @@ End Sub
 
 ' <Snippet1>
 Private Shared Sub DataTableRowDeleting()
-	Dim customerTable As DataTable = New DataTable("Customers")
+	Dim customerTable As New DataTable("Customers")
 	' add columns
 	customerTable.Columns.Add( "id", Type.GetType("System.Int32"))
 	customerTable.Columns.Add( "name", Type.GetType("System.String"))

@@ -37,9 +37,9 @@ Public Class SamplesArray
       myArr7.SetValue("one-two-three-zero-one-two-three", myIndices)
       Console.WriteLine("[1,2,3,0,1,2,3]:   {0}", myArr7.GetValue(myIndices))
 
-   End Sub 'Main 
+   End Sub
 
-End Class 'SamplesArray
+End Class
 
 
 'This code produces the following output.

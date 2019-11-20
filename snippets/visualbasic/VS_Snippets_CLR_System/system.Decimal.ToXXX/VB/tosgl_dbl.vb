@@ -1,7 +1,5 @@
 ﻿'<Snippet5>
 ' Example of the Decimal.ToSingle and Decimal.ToDouble methods.
-Imports Microsoft.VisualBasic
-
 Module DecimalToSgl_DblDemo
 
     Dim formatter As String = "{0,30}{1,17}{2,23}"

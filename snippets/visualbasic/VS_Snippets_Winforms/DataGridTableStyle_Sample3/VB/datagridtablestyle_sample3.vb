@@ -7,7 +7,6 @@
 ' DataTable objects, and a DataRelation that relates the two tables. A button
 ' on the form changes the appearance of column headers on the grid.
 '
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -28,7 +27,7 @@ Namespace SampleDataGridTableStyle
          InitializeComponent()
          ' Call SetUp to bind the controls.
          SetUp()
-      End Sub 'New
+      End Sub
 
       Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
          If disposing Then
@@ -37,7 +36,7 @@ Namespace SampleDataGridTableStyle
             End If
          End If
          MyBase.Dispose(disposing)
-      End Sub 'Dispose
+      End Sub
 
       Private Sub InitializeComponent()
          Me.myHeaderLabel = New System.Windows.Forms.Label()
@@ -85,18 +84,18 @@ Namespace SampleDataGridTableStyle
          Me.Text = "DataGridTableStyle_Sample"
          CType(Me.myDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
          Me.ResumeLayout(False)
-      End Sub 'InitializeComponent
+      End Sub
 
       <STAThread()> Shared Sub Main()
          Application.Run(New DataGridTableStyle_Sample())
-      End Sub 'Main
+      End Sub
 
       Private Sub SetUp()
          ' Create a DataSet with two tables and one relation.
          MakeDataSet()
          ' Bind the DataGrid to the DataSet.
          myDataGrid.SetDataBinding(myDataSet, "Customers")
-      End Sub 'SetUp
+      End Sub
 
       ' Create a DataSet with two tables and populate it.
       Private Sub MakeDataSet()
@@ -164,7 +163,7 @@ Namespace SampleDataGridTableStyle
                tOrders.Rows.Add(newRow2)
             Next j
          Next i
-      End Sub 'MakeDataSet
+      End Sub
 
 
 ' <Snippet1>
@@ -179,7 +178,7 @@ Namespace SampleDataGridTableStyle
             btnheader.Text = "Add Header"
          End If
          AddCustomDataTableStyle()
-      End Sub 'DataGridTableStyle_Sample_Load
+      End Sub
 
       Private Sub AddCustomDataTableStyle()
          AddHandler myDataGridTableStyle1.ColumnHeadersVisibleChanged, AddressOf ColumnHeadersVisibleChanged_Handler
@@ -219,11 +218,11 @@ Namespace SampleDataGridTableStyle
 
          ' Add the DataGridTableStyle instances to GridTableStylesCollection.
          myDataGrid.TableStyles.Add(myDataGridTableStyle1)
-      End Sub 'AddCustomDataTableStyle
+      End Sub
 
       Private Sub ColumnHeadersVisibleChanged_Handler(ByVal sender As Object, ByVal e As EventArgs)
          myHeaderLabel.Text = "Header Status :" + myDataGridTableStyle1.ColumnHeadersVisible.ToString()
-      End Sub 'ColumnHeadersVisibleChanged_Handler
+      End Sub
 
       Private Sub btnheader_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnheader.Click
          If myDataGridTableStyle1.ColumnHeadersVisible = True Then
@@ -233,10 +232,10 @@ Namespace SampleDataGridTableStyle
             myDataGridTableStyle1.ColumnHeadersVisible = True
             btnheader.Text = "Remove Header"
          End If
-      End Sub 'btnheader_Click
+      End Sub
 ' </Snippet2>
 ' </Snippet1>
-   End Class 'DataGridTableStyle_Sample
+   End Class
 End Namespace 'SampleDataGridTableStyle
 
 

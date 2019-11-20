@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Drawing
+﻿Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Windows.Forms
@@ -50,7 +49,7 @@ Namespace CustomerCodeExamples
          Me.Text = "TV1"
          Me.ResumeLayout(False)
          Me.components = New System.ComponentModel.Container()
-      End Sub 'InitializeComponent
+      End Sub
 
       '<snippet1>
       Public Class Customer
@@ -76,7 +75,7 @@ Namespace CustomerCodeExamples
                Return Me.custOrders
             End Get
          End Property
-      End Class 'End Customer class
+      End Class
 
 
       Public Class Order
@@ -85,7 +84,7 @@ Namespace CustomerCodeExamples
 
          Public Sub New(ByVal orderid As String)
             Me.ordID = orderid
-         End Sub 'New
+         End Sub
 
          Public Property OrderID() As String
             Get
@@ -95,7 +94,7 @@ Namespace CustomerCodeExamples
                Me.ordID = Value
             End Set
          End Property
-      End Class ' End Order class
+      End Class
 
       ' Create a new ArrayList to hold the Customer objects.
       Private customerArray As New ArrayList()
@@ -143,15 +142,15 @@ Namespace CustomerCodeExamples
 
          ' Begin repainting the TreeView.
          treeView1.EndUpdate()
-      End Sub 'FillMyTreeView
+      End Sub
       '</snippet1>      
 
 
       Private Sub button1_Click(ByVal sender As Object, ByVal e As System.EventArgs)
          Me.FillMyTreeView()
-      End Sub 'button1_Click
+      End Sub
 
-   End Class 'TV1
+   End Class
 
 
    

@@ -1,5 +1,4 @@
 ﻿' <snippet1>
-Imports System
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Diagnostics
@@ -372,11 +371,11 @@ Public Class SoundTestForm
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show
         Me.Text = "Sound API Test Form"
         Me.ResumeLayout(False)
-    End Sub 'InitializeComponent
+    End Sub
 
     <STAThread()> _
     Shared Sub Main()
         Application.Run(New SoundTestForm)
     End Sub
-End Class 'SoundTestForm
+End Class
 ' </snippet1>

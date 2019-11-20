@@ -11,21 +11,21 @@ Imports System.Reflection
 <Transaction(Isolation := TransactionIsolationLevel.Any)>  _
 Public Class TransactionAttribute_IsolationAny
     Inherits ServicedComponent
-End Class 'TransactionAttribute_IsolationAny
+End Class
 
 ' An instance of this class will read only committed data, but non-repeatable
 ' reads and phantom rows are still possible.
 <Transaction(Isolation := TransactionIsolationLevel.ReadCommitted)>  _
 Public Class TransactionAttribute_IsolationReadCommitted
     Inherits ServicedComponent
-End Class 'TransactionAttribute_IsolationReadCommitted
+End Class
 
 ' An instance of this class will read committed and uncommitted data, so dirty
 ' reads, non-repeatable reads, and phantom rows are possible.
 <Transaction(Isolation := TransactionIsolationLevel.ReadUncommitted)>  _
 Public Class TransactionAttribute_IsolationReadUncommitted
     Inherits ServicedComponent
-End Class 'TransactionAttribute_IsolationReadUncommitted
+End Class
 
 ' An instance of this class will read only committed data and place shared
 ' locks on the data, preventing other users from modifying it, but other users
@@ -33,7 +33,7 @@ End Class 'TransactionAttribute_IsolationReadUncommitted
 <Transaction(Isolation := TransactionIsolationLevel.RepeatableRead)>  _
 Public Class TransactionAttribute_IsolationRepeatableRead
     Inherits ServicedComponent
-End Class 'TransactionAttribute_IsolationRepeatableRead
+End Class
 
 ' An instance of this class will read only committed data and place a range
 ' lock on the data set, preventing other users from updating or inserting rows
@@ -41,7 +41,7 @@ End Class 'TransactionAttribute_IsolationRepeatableRead
 <Transaction(Isolation := TransactionIsolationLevel.Serializable)>  _
 Public Class TransactionAttribute_IsolationSerializable
     Inherits ServicedComponent
-End Class 'TransactionAttribute_IsolationSerializable
+End Class
 
 ' </snippet0>
 
@@ -51,5 +51,5 @@ Public Class Test
     
     Public Shared Sub Main() 
     
-    End Sub 'Main
-End Class 'Test 
+    End Sub
+End Class

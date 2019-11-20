@@ -38,7 +38,7 @@ Public Class ctlViewState1
    Public Function GetState() As StateBag
       Return CType(ViewState, StateBag)
    End Function 'GetState
-End Class 'ctlViewState1
+End Class
 
 End Namespace
 

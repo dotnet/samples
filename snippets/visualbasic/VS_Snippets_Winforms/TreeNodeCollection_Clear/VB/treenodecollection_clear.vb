@@ -6,7 +6,6 @@
 ' object contains the customer list and the second object is empty. The user
 ' is provided with the option to add or remove a 'TreeNode'.
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -27,7 +26,7 @@ Public Class myTreeNodeCollectionForm
       AddHandler myButtonAddAll.Click, AddressOf MyButtonAddAllClick
       AddHandler myButtonAdd.Click, AddressOf MyButtonAddClick
       AddHandler myButtonRemoveAll.Click, AddressOf MyButtonRemoveAllClick
-   End Sub 'New
+   End Sub
 
 ' <Snippet2>
 ' <Snippet1>
@@ -58,7 +57,7 @@ End Sub
       myTreeViewCustom.Nodes.Clear()
       ' Add the 'myTreeNodeArray' to the 'myTreeViewBase' TreeView.
       myTreeViewBase.Nodes.AddRange(myTreeNodeArray)
-   End Sub 'MyButtonRemoveAllClick
+   End Sub
    
    Private Sub MyButtonAddClick(sender As Object, e As EventArgs)
       Dim myTreeNodeCollection As TreeNodeCollection = myTreeViewBase.Nodes
@@ -71,7 +70,7 @@ End Sub
             myTreeViewCustom.Nodes.Add(myTreeNode)
          End If
       Next myTreeNode
-   End Sub 'MyButtonAddClick
+   End Sub
    
    Private Sub FillMyTreeView()
       Dim customerArray As New ArrayList()
@@ -113,7 +112,7 @@ End Sub
       myTreeViewBase.SelectedImageIndex = 0
       ' Begin repainting the 'TreeView'.
       myTreeViewBase.EndUpdate()
-   End Sub 'FillMyTreeView
+   End Sub
    
    Private Sub InitializeComponent()
       Me.myTreeViewBase = New TreeView()
@@ -158,12 +157,12 @@ End Sub
       Me.Name = "myTreeNodeCollectionForm"
       Me.Text = "TreeNodeCollection class Sample"
       Me.ResumeLayout(False)
-   End Sub 'InitializeComponent
+   End Sub
    
    Shared Sub Main()
       Application.Run(New myTreeNodeCollectionForm())
-   End Sub 'Main
-End Class 'myTreeNodeCollectionForm
+   End Sub
+End Class
 
 Public Class MyCustomerClass
    Public CustomerOrders As ArrayList
@@ -172,13 +171,13 @@ Public Class MyCustomerClass
    Public Sub New(name As String)
       CustomerName = name
       CustomerOrders = New ArrayList()
-   End Sub 'New
-End Class 'MyCustomerClass
+   End Sub
+End Class
 
 Public Class MyOrder
    Public OrderID As String
    
    Public Sub New(orderID As String)
       Me.OrderID = orderID
-   End Sub 'New
-End Class 'MyOrder
+   End Sub
+End Class

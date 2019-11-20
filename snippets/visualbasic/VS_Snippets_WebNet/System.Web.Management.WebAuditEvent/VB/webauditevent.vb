@@ -25,7 +25,7 @@ Public Class SampleWebAuditEvent
         ' Perform custom initialization.
         customCreatedMsg = String.Format("Event created at: {0}", DateTime.Now.TimeOfDay.ToString())
 
-    End Sub 'New
+    End Sub
     
     ' </Snippet2>
     
@@ -39,7 +39,7 @@ Public Class SampleWebAuditEvent
         customCreatedMsg = String.Format("Event created at: {0}", _
         DateTime.Now.TimeOfDay.ToString())
 
-    End Sub 'New
+    End Sub
     
     ' </Snippet3>
     ' <Snippet4>
@@ -52,7 +52,7 @@ Public Class SampleWebAuditEvent
         ' Raise the event.
         WebBaseEvent.Raise(Me)
     
-    End Sub 'Raise
+    End Sub
     
     ' </Snippet4>
     
@@ -90,8 +90,8 @@ Public Class SampleWebAuditEvent
         
         formatter.IndentationLevel -= 1
     
-    End Sub 'FormatCustomEventDetails 
-End Class 'SampleWebAuditEvent
+    End Sub
+End Class
 ' </Snippet6>
 
 ' </Snippet1>

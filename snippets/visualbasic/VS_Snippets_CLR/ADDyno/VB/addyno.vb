@@ -147,8 +147,8 @@ Class ADDyno
       Console.WriteLine("Executing method 'CountLocalFiles' in {0}...", myObjInstance.ToString())
       
       myFCType.InvokeMember("CountLocalFiles", BindingFlags.InvokeMethod, Nothing, myObjInstance, New Object() {})
-   End Sub 'Main
-End Class 'ADDyno 
+   End Sub
+End Class
 
 
 

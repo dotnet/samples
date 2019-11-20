@@ -14,7 +14,7 @@ Public Class Test
      
     Shared Sub Main() 
         Console.WriteLine("Hello")
-    End Sub 'Main
+    End Sub
     
     '<snippet1>
     <WebMethod(), System.Web.Services.Protocols.SoapDocumentMethodAttribute(ParameterStyle := SoapParameterStyle.Bare)>  _
@@ -27,7 +27,7 @@ Public Class Test
         Return song
     
     End Function
-End Class 'Test 
+End Class
 '</snippet1>
 
 '<snippet2>

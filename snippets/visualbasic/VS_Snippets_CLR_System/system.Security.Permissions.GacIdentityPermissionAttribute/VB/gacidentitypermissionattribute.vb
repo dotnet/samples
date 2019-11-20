@@ -6,13 +6,12 @@
 ' assembly cache.
 ' This console application can be created using the following code.
 
-''Imports System.Security
+'Imports System.Security
 'Imports System.Security.Policy
 'Imports System.Security.Principal
 'Imports System.Security.Permissions
-'Imports Microsoft.VisualBasic
 'Imports ClassLibraryVB
-'
+
 'Class [MyClass]
 '
 '    Overloads Shared Sub Main(ByVal args() As String)
@@ -24,10 +23,9 @@
 '        Catch e As Exception
 '            Console.WriteLine(e.Message)
 '        End Try
-'    End Sub 'Main
-'End Class '[MyClass
+'    End Sub
+'End Class
 Imports System.Security.Permissions
-Imports Microsoft.VisualBasic
 
 '<Snippet2>
 ' Demand that the calling program be in the global assembly cache.
@@ -36,7 +34,7 @@ Public Class Class1
 '</Snippet2>
     Public Sub DoNothing()
         Console.WriteLine("Exiting the library program.")
-    End Sub 'DoNothing
-End Class 'Class1 
+    End Sub
+End Class
 
 '</Snippet1>

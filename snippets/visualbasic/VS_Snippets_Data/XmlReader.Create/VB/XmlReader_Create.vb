@@ -9,7 +9,7 @@ Class XmlReaderSettings_Examples
     
     Shared Sub Main() 
     
-    End Sub 'Main
+    End Sub
     
     ' 
     Shared Sub String_Fragment() 
@@ -31,7 +31,7 @@ Class XmlReaderSettings_Examples
         settings.ConformanceLevel = ConformanceLevel.Fragment
         Dim reader As XmlReader = XmlReader.Create(New StringReader(xmlFrag), settings, context)
       '</snippet1>
-    End Sub 'String_Fragment
+    End Sub
   
     
     ' Load URI with XmlResolver
@@ -53,7 +53,7 @@ Class XmlReaderSettings_Examples
         ' Create the reader.
         Dim reader As XmlReader = XmlReader.Create("http://serverName/data/books.xml", settings)
          '</snippet2>
-    End Sub 'Settings_Resolver
+    End Sub
 
     
     ' DTD Validation
@@ -72,7 +72,7 @@ Class XmlReaderSettings_Examples
         While reader.Read()
         End While
      '</snippet3>
-    End Sub 'Settings_ProhibitDtd
+    End Sub
     
     
     ' <snippet4>
@@ -80,7 +80,7 @@ Class XmlReaderSettings_Examples
     Private Shared Sub ValidationCallBack(ByVal sender As Object, ByVal e As ValidationEventArgs) 
         Console.WriteLine("Validation Error: {0}", e.Message)
     
-    End Sub 'ValidationCallBack
+    End Sub
     
     '</snippet4>
     
@@ -104,7 +104,7 @@ Class XmlReaderSettings_Examples
         While reader.Read()
         End While
        '</snippet5>
-    End Sub 'WrappedReader_Settings
+    End Sub
    
     
     Shared Sub URI() 
@@ -112,7 +112,7 @@ Class XmlReaderSettings_Examples
         ' Create the XmlReader object.
         Dim reader As XmlReader = XmlReader.Create("books.xml")
     '</snippet6>
-    End Sub 'URI
+    End Sub
      
     
     Shared Sub XML_String() 
@@ -124,7 +124,7 @@ Class XmlReaderSettings_Examples
         ' Create the XmlReader object.
         Dim reader As XmlReader = XmlReader.Create(New StringReader(xmlData))
     '</snippet7>
-    End Sub 'XML_String
+    End Sub
      
     
     Shared Sub FileStream() 
@@ -134,7 +134,7 @@ Class XmlReaderSettings_Examples
         ' Create the XmlReader object.
         Dim reader As XmlReader = XmlReader.Create(fs)
     
-    End Sub 'FileStream
+    End Sub
      '</snippet8>
     
     Shared Sub FileStream_Settings() 
@@ -149,7 +149,7 @@ Class XmlReaderSettings_Examples
         ' Create the XmlReader object.
         Dim reader As XmlReader = XmlReader.Create(fs, settings)
      '</snippet9> 
-    End Sub 'FileStream_Settings 
+    End Sub
 
     ' Secure Resolver
     Shared Sub Settings_SecureResolver() 
@@ -165,7 +165,7 @@ settings.XmlResolver = myResolver
 Dim reader As XmlReader = XmlReader.Create("http://serverName/data/books.xml", settings)
 
      '</snippet10>
-    End Sub 'Settings_SecureResolver
+    End Sub
 
     ' 
     Shared Sub GeneralSettings() 
@@ -176,7 +176,7 @@ settings.IgnoreWhitespace = true
 settings.IgnoreComments = true
 Dim reader As XmlReader = XmlReader.Create("books.xml", settings)
      '</snippet11>
-    End Sub 'GeneralSettings
+    End Sub
 
     Shared Sub ChainReaders() 
         '<snippet12>
@@ -187,7 +187,7 @@ settings.Schemas.Add("urn:book-schema", "book.xsd")
 settings.ValidationType = ValidationType.Schema
 Dim outer As XmlReader = XmlReader.Create(inner, settings)  ' XML Schema Validation
      '</snippet12>
-    End Sub 'ChainReaders
+    End Sub
 
     Shared Sub WrapTextReader() 
         '<snippet13>
@@ -197,6 +197,6 @@ settings.Schemas.Add("urn:po-schema", "PO.xsd")
 settings.ValidationType = ValidationType.Schema
 Dim reader As XmlReader = XmlReader.Create(txtReader, settings)
      '</snippet13>
-    End Sub 'WrapTextReader
+    End Sub
     
-End Class 'XmlReaderSettings_Examples
+End Class

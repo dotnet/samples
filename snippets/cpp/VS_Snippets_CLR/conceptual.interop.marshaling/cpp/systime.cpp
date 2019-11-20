@@ -16,12 +16,12 @@ public:
     unsigned short millisecond;
 };
 
-public class LibWrap
+public class NativeMethods
 {
 public:
     // Declares a managed prototype for the unmanaged function using Platform Invoke.
     [DllImport("Kernel32.dll")]
-    static void GetSystemTime([In,Out] SystemTime^ st);
+    static void GetSystemTime([In, Out] SystemTime^ st);
 };
 
 public class App
@@ -31,9 +31,9 @@ public:
     {
         Console::WriteLine("C++/CLI SysTime Sample using Platform Invoke");
         SystemTime^ st = gcnew SystemTime();
-        LibWrap::GetSystemTime(st);
+        NativeMethods::GetSystemTime(st);
         Console::Write("The Date is: ");
-        Console::Write("{0} {1} {2}",  st->month, st->day, st->year);
+        Console::Write("{0} {1} {2}", st->month, st->day, st->year);
     }
 };
 

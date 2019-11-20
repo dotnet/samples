@@ -13,13 +13,13 @@ Module Module1
     ' <Snippet1>
     Public Sub TableCollectionCollectionChanging()
         ' Create a DataSet with two tables
-        Dim dataSet As DataSet = New DataSet()
+        Dim dataSet As New DataSet()
 
         AddHandler dataSet.Tables.CollectionChanging, _
             AddressOf Collection_Changing
 
         ' Create Customer table
-        Dim customersTable As DataTable = New DataTable("Customers")
+        Dim customersTable As New DataTable("Customers")
         customersTable.Columns.Add("customerId", _
             System.Type.GetType("System.Integer")).AutoIncrement = True
         customersTable.Columns.Add("name", _
@@ -28,7 +28,7 @@ Module Module1
             {customersTable.Columns("customerId")}
 
         ' Create Orders table
-        Dim ordersTable As DataTable = New DataTable("Orders")
+        Dim ordersTable As New DataTable("Orders")
         ordersTable.Columns.Add("orderId", _
             System.Type.GetType("System.Integer")).AutoIncrement = True
         ordersTable.Columns.Add("customerId", _

@@ -10,7 +10,7 @@ Class MyProcess
         Me.Close()
         OnExited()
     
-    End Sub 'Stop
+    End Sub
 End Class
 
 Class StartNotePad
@@ -30,6 +30,6 @@ Class StartNotePad
     Private Shared Sub myProcess_HasExited(ByVal sender As Object, ByVal e As System.EventArgs) 
         Console.WriteLine("Process has exited.")
     
-    End Sub 'myProcess_HasExited
+    End Sub
 End Class
 '</Snippet1>

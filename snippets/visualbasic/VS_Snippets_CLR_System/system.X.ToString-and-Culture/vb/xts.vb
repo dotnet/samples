@@ -9,9 +9,10 @@
 ' numeric types are System.Byte, SByte, Int16, Int32, Int64, 
 ' UInt16, UInt32, and UInt64. The floating-point numeric types 
 ' are Decimal, Single, and Double.
-' 
-' ' Imports System.Globalization
+
+' Imports System.Globalization
 ' Imports System.Threading
+
 ' 
 ' Class Sample
 '     Public Shared Sub Main() 
@@ -111,8 +112,8 @@
 '         Console.WriteLine(msgNumber      & floatingVal.ToString("N", ci))
 '         Console.WriteLine(msgPercent     & floatingVal.ToString("P", ci))
 '         Console.WriteLine()
-'     End Sub 'Main
-' End Class 'Sample
+'     End Sub
+' End Class
 '
 'This code example produces the following results:
 '

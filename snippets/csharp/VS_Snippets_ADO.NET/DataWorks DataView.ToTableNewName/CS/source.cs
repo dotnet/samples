@@ -119,7 +119,7 @@ class Program
             }
             // Display the row in the console window.
             Console.WriteLine(output);
-        } //
+        }
         Console.WriteLine();
     }
     // </Snippet1>

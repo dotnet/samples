@@ -1,5 +1,4 @@
 ﻿ '<snippet1>
-Imports System
 Imports System.ComponentModel
 Imports System.Data
 Imports System.Drawing
@@ -91,7 +90,7 @@ Public Class Form1
         cacheChildPosition = True
       
     
-    End Sub 'InitializeControlsAndDataSource
+    End Sub
     
     
     

@@ -1,5 +1,4 @@
 ﻿ ' <SnippetRenderTargetBitmapEncodeCodeExampleWholePage>
-Imports System
 Imports System.IO
 Imports System.Windows
 Imports System.Windows.Controls
@@ -56,8 +55,8 @@ Namespace SDKSample
             myStackPanel.Children.Add(myImage)
             Me.Content = myStackPanel
 
-        End Sub 'New
-    End Class 'RenderTargetBitmapExample_Encode
+        End Sub
+    End Class
 End Namespace 'ImagingSnippetGallery
 
 ' </SnippetRenderTargetBitmapEncodeCodeExampleWholePage>

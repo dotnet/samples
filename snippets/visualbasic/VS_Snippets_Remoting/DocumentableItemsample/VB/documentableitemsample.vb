@@ -8,7 +8,6 @@
 
 ' <Snippet1>
 Imports System.Web.Services.Description
-Imports Microsoft.VisualBasic
 
 Class DocumentableItemSample
    Public Shared Sub Main()
@@ -26,11 +25,11 @@ Class DocumentableItemSample
          Console.WriteLine("Documentation Element for Port Type {0} is ", myBinding.Name)
          PrintDocumentation(myBinding)
       Next myBinding
-   End Sub 'Main
+   End Sub
 
    ' Prints documentation associated with a wsdl element.
    Public Shared Sub PrintDocumentation(myItem As DocumentableItem)
       Console.WriteLine(ControlChars.Tab + myItem.Documentation)
-   End Sub 'PrintDocumentation
-End Class 'DocumentableItemSample
+   End Sub
+End Class
 ' </Snippet1>

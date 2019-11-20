@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.ComponentModel
+﻿Imports System.ComponentModel
 Imports System.Runtime.CompilerServices
 
 '<SnippetDataObject>

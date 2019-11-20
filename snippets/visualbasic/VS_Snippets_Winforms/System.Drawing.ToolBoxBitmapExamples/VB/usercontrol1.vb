@@ -6,14 +6,14 @@ Class Form1
     
     Public Sub New() 
         'InitializeComponent();
-    End Sub 'New
+    End Sub
 
     <STAThread()>  _
     Shared Sub Main() 
         Application.EnableVisualStyles()
         Application.Run(New Form1())
     
-    End Sub 'Main
+    End Sub
     '<snippet4>
     Private Function GetImageOfCustomControl(ByVal userControl As Control) As Image 
         Dim controlImage As Image = Nothing

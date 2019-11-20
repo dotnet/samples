@@ -4,7 +4,6 @@ Option Strict
 
 Imports System.Web
 Imports System.Web.UI
-Imports Microsoft.VisualBasic
 
 Namespace SimpleControlSamples
     Public Class InnerContent
@@ -17,7 +16,7 @@ Namespace SimpleControlSamples
                 Controls(0).RenderControl(output)
                 output.Write("</H2>")
             End If
-        End Sub 'Render
-    End Class 'InnerContent
+        End Sub
+    End Class
 End Namespace 'SimpleControlSamples
 ' </Snippet1>

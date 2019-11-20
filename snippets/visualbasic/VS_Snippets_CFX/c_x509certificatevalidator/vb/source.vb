@@ -24,7 +24,7 @@ Public Class CalculatorService
         Return result
 
     End Function 'Add
-End Class 'CalculatorService
+End Class
 
 
 Class Program
@@ -40,8 +40,8 @@ Class Program
 
         serviceHost.Close()
 
-    End Sub 'Main
-End Class 'Program
+    End Sub
+End Class
 
 '<snippet1>
 
@@ -57,7 +57,7 @@ Public Class MyX509CertificateValidator
 
         Me.allowedIssuerName = allowedIssuerName
 
-    End Sub 'New
+    End Sub
 
     ' </snippet3>
     ' <snippet2>
@@ -72,7 +72,7 @@ Public Class MyX509CertificateValidator
             Throw New SecurityTokenValidationException("Certificate was not issued by a trusted issuer")
         End If
 
-    End Sub 'Validate
-End Class 'MyX509CertificateValidator
+    End Sub
+End Class
 ' </snippet2>
 '</snippet1>

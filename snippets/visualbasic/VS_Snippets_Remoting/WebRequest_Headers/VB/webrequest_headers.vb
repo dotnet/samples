@@ -6,8 +6,6 @@
 Imports System.IO
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
-
 
 Class WebRequest_Headers
     
@@ -42,7 +40,7 @@ Class WebRequest_Headers
 
         End Try
 
-    End Sub ' Main 
+    End Sub
 
-End Class ' WebRequest_Headers
+End Class
 

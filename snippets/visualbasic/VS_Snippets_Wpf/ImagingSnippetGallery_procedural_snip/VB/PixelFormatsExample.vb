@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Media
@@ -67,7 +66,7 @@ Namespace SDKSample
             ' myStackPanel.Children.Add(myTextBlock);
             Me.Content = myStackPanel
 
-        End Sub 'New
+        End Sub
 
         ' <SnippetPixelFormatExample1>
         Public Function createPixelFormat() As PixelFormat
@@ -101,6 +100,6 @@ Namespace SDKSample
             Return myPixelFormat
 
         End Function 'createPixelFormat
-    End Class 'PixelFormatsExample 
+    End Class
 End Namespace 'ImagingSnippetGallery
 ' </SnippetPixelFormatExample1>

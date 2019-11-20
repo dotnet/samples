@@ -13,9 +13,9 @@ Namespace CustomControls
      
     Public Sub New()
       'Your code goes here.
-    End Sub 'New
+    End Sub
     
-  End Class 'MyLabel
+  End Class
   
 End Namespace 'CustomControls
 

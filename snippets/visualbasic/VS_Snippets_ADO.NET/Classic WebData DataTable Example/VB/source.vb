@@ -23,7 +23,7 @@ End Sub
  
 Private Sub MakeParentTable()
     ' Create a new DataTable.
-    Dim table As DataTable = new DataTable("ParentTable")
+    Dim table As New DataTable("ParentTable")
 
     ' Declare variables for DataColumn and DataRow objects.
     Dim column As DataColumn 
@@ -76,7 +76,7 @@ End Sub
  
 Private Sub MakeChildTable()
     ' Create a new DataTable.
-    Dim table As DataTable = New DataTable("childTable")
+    Dim table As New DataTable("childTable")
     Dim column As DataColumn 
     Dim row As DataRow 
  

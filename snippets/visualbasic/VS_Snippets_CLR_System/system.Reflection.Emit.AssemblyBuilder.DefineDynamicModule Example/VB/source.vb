@@ -20,7 +20,7 @@ Class TypeBuilderMemberDemo
       ' this constructor, it can not be saved. 
       Dim myModuleBuilder As ModuleBuilder = myAsmBuilder.DefineDynamicModule("MyModule1")
     ' </Snippet1>
-   End Sub 'DefineDynamicModuleDemo1
+   End Sub
    
    Public Shared Sub DefineDynamicModuleDemo2()
       ' <Snippet2>
@@ -36,7 +36,7 @@ Class TypeBuilderMemberDemo
       Dim myModuleBuilder As ModuleBuilder = myAsmBuilder.DefineDynamicModule("MyModule2", _
 										False)
    ' </Snippet2>
-   End Sub 'DefineDynamicModuleDemo2
+   End Sub
    
    Public Shared Sub DefineDynamicModuleDemo3()
       ' <Snippet3>
@@ -49,7 +49,7 @@ Class TypeBuilderMemberDemo
       Dim myModuleBuilder As ModuleBuilder = myAsmBuilder.DefineDynamicModule("MyModule3", _
 									"MyModule3.dll")
    ' </Snippet3>
-   End Sub 'DefineDynamicModuleDemo3
+   End Sub
    
    Public Shared Sub DefineDynamicModuleDemo4()
       ' <Snippet4>
@@ -64,6 +64,6 @@ Class TypeBuilderMemberDemo
 									"MyModule4.dll", _
 									True)
       ' </Snippet4>
-   End Sub 'DefineDynamicModuleDemo4
-End Class 'TypeBuilderMemberDemo
+   End Sub
+End Class
 

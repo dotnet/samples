@@ -90,8 +90,8 @@ Class MySoapClass
       ' Write the 'ServiceDescription' as a WSDL file.
       myDescription.Write("AddNumbersOut_vb.wsdl")
       Console.WriteLine(" 'AddNumbersOut_vb.Wsdl' file was generated")
-   End Sub 'Main
-End Class 'MySoapClass
+   End Sub
+End Class
 ' </Snippet4>
 ' </Snippet3>
 ' </Snippet2>

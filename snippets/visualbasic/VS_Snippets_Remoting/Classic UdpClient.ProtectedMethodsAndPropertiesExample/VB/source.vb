@@ -9,7 +9,7 @@ Public Class MyUdpClientDerivedClass
    Inherits UdpClient
    
    Public Sub New()
-   End Sub 'New
+   End Sub
    
    Public Sub UsingProtectedMethods()
       
@@ -20,8 +20,8 @@ Public Class MyUdpClientDerivedClass
               'Uses the Socket returned by Client to set an option that is not available using UdpClient.
          s.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.Broadcast, 1)
       End If
-   End Sub 'UsingProtectedMethods 
-End Class 'MyUdpClientDerivedClass
+   End Sub
+End Class
  
 
 '</Snippet1>
@@ -31,5 +31,5 @@ Public Class MyUdpClientTestClass
    Public Shared Sub Main()
       Dim myUdpClientDerivedClass As New MyUdpClientDerivedClass()
       myUdpClientDerivedClass.UsingProtectedMethods()
-   End Sub 'Main
-End Class 'MyUdpClientTestClass 
+   End Sub
+End Class

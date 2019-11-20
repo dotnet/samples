@@ -326,10 +326,7 @@ namespace Microsoft.TestToolWindowSearch
         {
             get
             {
-                if (m_matchCaseOption == null)
-                {
-                    m_matchCaseOption = new WindowSearchBooleanOption("Match case", "Match case", false);
-                }
+                m_matchCaseOption ??= new WindowSearchBooleanOption("Match case", "Match case", false);
                 return m_matchCaseOption;
             }
         }

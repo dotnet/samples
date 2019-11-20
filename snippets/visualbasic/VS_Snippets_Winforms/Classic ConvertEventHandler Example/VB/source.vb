@@ -1,7 +1,6 @@
 ﻿Option Explicit
 Option Strict
 
-Imports System
 Imports System.Data
 Imports System.ComponentModel
 Imports System.Windows.Forms
@@ -41,5 +40,5 @@ Public Class Form1
         text1.DataBindings.Add(b)
     End Sub 
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

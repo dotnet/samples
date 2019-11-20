@@ -27,7 +27,7 @@ Public Class Sample
 
 
     
-    End Sub 'Main 
+    End Sub
     
     ' Convert the book price to a new price using the conversion factor.    
     Public Class BookPrice
@@ -40,7 +40,7 @@ Public Class Sample
             Return newprice        
         End Function 'NewPriceFunc
 
-    End Class 'BookPrice
+    End Class
 
-End Class 'Sample
+End Class
 '</snippet1>

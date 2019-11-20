@@ -47,8 +47,8 @@ Next
 
 ' </Snippet3>
 
-End Sub 'New
-End Class 'UsingHttpModulesSection
+End Sub
+End Class
 
 ' UsingHttpModulesSection class end.
 ' Samples.Aspnet.SystemWebManagement namespace end.

@@ -16,6 +16,6 @@ Public Class Class1
         doc.WriteContentTo(writer)
         writer.Flush()
         Console.WriteLine()
-    End Sub 'WriteXml
+    End Sub
     ' </Snippet1>
-End Class 'Class1 
+End Class

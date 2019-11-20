@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Data
@@ -19,7 +18,7 @@ Class Window2
     Public Sub New()
         InitializeComponent()
 
-    End Sub 'New
+    End Sub
     
     
     ' <Snippet4>
@@ -30,6 +29,6 @@ Class Window2
         m.Scale(1.1, 1.1)
         CType(sender, InkCanvas).Strokes.Transform(m, True)
 
-    End Sub 'RightMouseUpHandler
+    End Sub
     ' </Snippet4>
-End Class 'Window2 
+End Class

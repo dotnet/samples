@@ -3,8 +3,8 @@
 Class Sample
    Public Shared Sub Main()
       Console.WriteLine("WorkingSet: {0}", Environment.WorkingSet)
-   End Sub 'Main
-End Class 'Sample
+   End Sub
+End Class
 '
 'This example produces the following results:
 '

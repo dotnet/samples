@@ -1,6 +1,5 @@
 ﻿' <snippet1>
 ' <snippet2>
-Imports System
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Drawing
@@ -26,7 +25,7 @@ Public Class FibonacciForm
 
     Public Sub New()
         InitializeComponent()
-    End Sub 'New
+    End Sub
 
     ' <snippet13>
     Private Sub startAsyncButton_Click(ByVal sender As System.Object, _
@@ -74,7 +73,7 @@ Public Class FibonacciForm
         ' Disable the Cancel button.
         cancelAsyncButton.Enabled = False
         
-    End Sub 'cancelAsyncButton_Click
+    End Sub
     ' </snippet4>
 
     ' <snippet5>
@@ -93,7 +92,7 @@ Public Class FibonacciForm
         ' object. This is will be available to the 
         ' RunWorkerCompleted eventhandler.
         e.Result = ComputeFibonacci(e.Argument, worker, e)
-    End Sub 'backgroundWorker1_DoWork
+    End Sub
     ' </snippet5>
 
     ' <snippet6>
@@ -127,7 +126,7 @@ Public Class FibonacciForm
 
         ' Disable the Cancel button.
         cancelAsyncButton.Enabled = False
-    End Sub 'backgroundWorker1_RunWorkerCompleted
+    End Sub
     ' </snippet6>
 
     ' <snippet7>
@@ -272,12 +271,12 @@ Public Class FibonacciForm
         CType(Me.numericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
-    End Sub 'InitializeComponent
+    End Sub
 
     <STAThread()> _
     Shared Sub Main()
         Application.Run(New FibonacciForm)
-    End Sub 'Main
-End Class 'FibonacciForm 
+    End Sub
+End Class
 
 ' </snippet1>

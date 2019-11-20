@@ -34,7 +34,7 @@ Namespace CustomProxySample
          myMarshalByRefObject = CType(Activator.CreateInstance(GetType(WinNTSystemInfo)), MarshalByRefObject)
          Dim myObjRef As ObjRef = RemotingServices.Marshal(myMarshalByRefObject)
          m_URI = myObjRef.URI
-      End Sub 'New
+      End Sub
 
       <SecurityPermission(SecurityAction.LinkDemand)> _
       Public Sub New(myType As Type)
@@ -43,7 +43,7 @@ Namespace CustomProxySample
          myMarshalByRefObject = CType(Activator.CreateInstance(myType), MarshalByRefObject)
          Dim myObjRef As ObjRef = RemotingServices.Marshal(myMarshalByRefObject)
          m_URI = myObjRef.URI
-      End Sub 'New
+      End Sub
 
       <SecurityPermission(SecurityAction.LinkDemand)> _
       Public Sub New(myType As Type, targetObject As MarshalByRefObject)
@@ -52,7 +52,7 @@ Namespace CustomProxySample
          myMarshalByRefObject = targetObject
          Dim myObjRef As ObjRef = RemotingServices.Marshal(myMarshalByRefObject)
          m_URI = myObjRef.URI
-      End Sub 'New
+      End Sub
 
       <SecurityPermission(SecurityAction.LinkDemand, Flags := SecurityPermissionFlag.Infrastructure)> _
       Public Overrides Function Invoke(msg As IMessage) As IMessage
@@ -92,7 +92,7 @@ Namespace CustomProxySample
 ' </Snippet3>
 ' </Snippet2>
 ' </Snippet1>
-   End Class 'MyProxy
+   End Class
 
    Public Class ProxySample
       ' Acts as a custom proxy user.
@@ -110,6 +110,6 @@ Namespace CustomProxySample
          Dim myGuid As New Guid("{6C6D65DC-AFD1-11D2-9CB9-0000F87A369E}")
          Dim myIntrPtr As IntPtr = mProxy.SupportsInterface(myGuid)
          Console.WriteLine("Requested Interface Pointer= " + myIntrPtr.ToInt32().ToString())
-      End Sub 'Main
-   End Class 'ProxySample
+      End Sub
+   End Class
 End Namespace 'CustomProxySample

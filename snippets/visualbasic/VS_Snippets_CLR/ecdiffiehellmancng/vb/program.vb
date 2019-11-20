@@ -23,7 +23,7 @@ Class Alice
             Send(aliceKey, "Secret message", encryptedMessage, iv)
             bob.Receive(encryptedMessage, iv)
         End Using
-    End Sub 'Main
+    End Sub
 
 
     '<Snippet2>
@@ -43,9 +43,9 @@ Class Alice
             End Using
         End Using
 
-    End Sub 'Send 
+    End Sub
     '</Snippet2>
-End Class 'Alice
+End Class
 
 Public Class Bob
     Public bobPublicKey() As Byte
@@ -60,7 +60,7 @@ Public Class Bob
             bobKey = bob.DeriveKeyMaterial(CngKey.Import(Alice.alicePublicKey, CngKeyBlobFormat.EccPublicBlob))
         End Using
 
-    End Sub 'New
+    End Sub
 
 
     '<Snippet3>
@@ -80,6 +80,6 @@ Public Class Bob
             End Using
         End Using
 '</Snippet3>
-    End Sub 'Receive
-End Class 'Bob 
+    End Sub
+End Class
 '</Snippet1>

@@ -1,7 +1,5 @@
 ﻿ ' <Snippet1>
 Imports System.Collections
-Imports Microsoft.VisualBasic
-
 
 Public Class SamplesQueue
     
@@ -39,7 +37,7 @@ Public Class SamplesQueue
         ' Displays the Queue.
         Console.Write("Queue values:")
         PrintValues(myQ)
-    End Sub 'Main
+    End Sub
 
     Public Shared Sub PrintValues(myCollection As IEnumerable)
         Dim obj As [Object]
@@ -47,9 +45,9 @@ Public Class SamplesQueue
             Console.Write("    {0}", obj)
         Next obj
         Console.WriteLine()
-    End Sub 'PrintValues
+    End Sub
 
-End Class 'SamplesQueue
+End Class
 
 
 ' This code produces the following output.

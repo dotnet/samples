@@ -23,5 +23,5 @@ Public Class Sample
 
 
     End Function 'Main
-End Class 'Sample
+End Class
 '</Snippet1>

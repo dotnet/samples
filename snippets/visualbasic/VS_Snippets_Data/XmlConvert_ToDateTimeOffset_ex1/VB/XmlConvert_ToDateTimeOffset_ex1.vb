@@ -12,6 +12,6 @@ Module Module1
 	' The format of time must be a subset of the W3C Recommendation for the XML dateTime type
         Dim transaction_time As DateTimeOffset = XmlConvert.ToDateTimeOffset(time)
         Console.WriteLine(transaction_time)
-    End Sub 'Main
+    End Sub
 End Module
 '</snippet1>

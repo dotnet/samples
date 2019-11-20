@@ -277,7 +277,7 @@ Public Class OrderItem
         _description = description
         _quantity = quantity
         _unitPrice = unitPrice
-    End Sub 'New
+    End Sub
         
     Public Overrides Function ToString() As String 
         Return String.Format( _

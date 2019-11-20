@@ -42,7 +42,7 @@ Public Class MACTripleDESexample
             Console.WriteLine("Error: File not found", e)
         End Try
 
-    End Sub 'Main
+    End Sub
 
     ' Computes a keyed hash for a source file and creates a target file with the keyed hash
     ' prepended to the contents of the source file. 
@@ -71,7 +71,7 @@ Public Class MACTripleDESexample
         End Using
         Return
 
-    End Sub 'SignFile
+    End Sub
     ' end SignFile
 
     ' Compares the key in the source file with a new key created for the data portion of the file. If the keys 
@@ -108,6 +108,6 @@ Public Class MACTripleDESexample
         End If
 
     End Function 'VerifyFile 
-End Class 'MACTripleDESexample 'end VerifyFile
+End Class
 'end class
 '</SNIPPET1>

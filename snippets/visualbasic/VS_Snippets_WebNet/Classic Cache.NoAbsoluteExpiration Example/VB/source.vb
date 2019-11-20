@@ -14,5 +14,5 @@ Public Class Page1
         ' <Snippet1>
         Cache.Insert("DSN", connectionString, Nothing, System.Web.Caching.Cache.NoAbsoluteExpiration, TimeSpan.FromSeconds(10))
         ' </Snippet1>
-    End Sub 'Page_Load 
-End Class 'Page1 
+    End Sub
+End Class

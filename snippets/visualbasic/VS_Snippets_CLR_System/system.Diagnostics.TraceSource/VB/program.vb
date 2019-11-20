@@ -249,8 +249,8 @@ Class TraceTest
             Console.Read()
         End Try
 
-    End Sub 'Main
-End Class 'TraceTest
+    End Sub
+End Class
 
   '<Snippet33>
 Public Class MyTraceSource
@@ -261,7 +261,7 @@ Public Class MyTraceSource
     Public Sub New(ByVal n As String)
         MyBase.New(n)
 
-    End Sub 'New 
+    End Sub
 
     Public Property FirstTraceSourceAttribute() As String
         Get
@@ -298,7 +298,7 @@ Public Class MyTraceSource
         Return New String() {"FirstTraceSourceAttribute", "SecondTraceSourceAttribute"}
 
     End Function 'GetSupportedAttributes
-End Class 'MyTraceSource 
+End Class
 '</Snippet33>
 
 '<Snippet34>
@@ -309,7 +309,7 @@ Public Class MySourceSwitch
     Public Sub New(ByVal n As String)
         MyBase.New(n)
 
-    End Sub 'New
+    End Sub
 
     Public Property CustomSourceSwitchAttribute() As Integer
         Get
@@ -330,7 +330,7 @@ Public Class MySourceSwitch
         Return New String() {"customsourceSwitchattribute"}
 
     End Function 'GetSupportedAttributes
-End Class 'MySourceSwitch
+End Class
 '</Snippet34>
 
 ' Very basic test listener derived from TextWriterTraceListener.
@@ -342,22 +342,22 @@ Public Class TestListener
     Public Sub New(ByVal fileName As String)
         MyBase.New(fileName)
 
-    End Sub 'New
+    End Sub
 
     Public Sub New(ByVal fileName As String, ByVal name As String)
         MyBase.New(fileName, name)
 
-    End Sub 'New
+    End Sub
 
     Public Overrides Sub Write(ByVal s As String)
         MyBase.Write(("TestListener " + s))
 
-    End Sub 'Write
+    End Sub
 
     Public Overrides Sub WriteLine(ByVal s As String)
         MyBase.WriteLine(("TestListener " + s))
 
-    End Sub 'WriteLine
+    End Sub
 
     Protected Overrides Function GetSupportedAttributes() As String()
         ' The following string array will allow the use of 
@@ -365,7 +365,7 @@ Public Class TestListener
         Return New String() {"customListenerAttribute"}
 
     End Function 'GetSupportedAttributes
-End Class 'TestListener 
+End Class
 '</Snippet35>
 
 '</Snippet1>

@@ -28,7 +28,7 @@ Class UTF8EncodingExample
         DescribeEquivalence(utf8falsetrue.Equals(utf8true))
         DescribeEquivalence(utf8falsetrue.Equals(utf8truetrue))
         DescribeEquivalence(utf8falsetrue.Equals(utf8falsetrue))
-    End Sub 'Main
+    End Sub
     
     
     Public Shared Sub DescribeEquivalence(isEquivalent As Boolean)
@@ -39,6 +39,6 @@ Class UTF8EncodingExample
             phrase = "Not an"
         End If
         Console.WriteLine("{0} equivalent encoding.", phrase)
-    End Sub 'DescribeEquivalence
-End Class 'UTF8EncodingExample
+    End Sub
+End Class
 ' </Snippet1>

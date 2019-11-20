@@ -14,6 +14,6 @@ Namespace SDKSample
 			mainWindow.Show()
 		End Sub
 
-	End Class ' end:partial class App
+	End Class
 
 End Namespace ' end:namespace SDKSample

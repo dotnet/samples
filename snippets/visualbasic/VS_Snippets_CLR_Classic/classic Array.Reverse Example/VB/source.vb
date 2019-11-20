@@ -1,6 +1,4 @@
 ﻿' <Snippet1>
-Imports Microsoft.VisualBasic
-
 Public Class SamplesArray    
     
     Public Shared Sub Main()
@@ -28,7 +26,7 @@ Public Class SamplesArray
         ' Displays the values of the Array.
         Console.WriteLine("After reversing:")
         PrintIndexAndValues(myArray)
-    End Sub 'Main
+    End Sub
     
     
     

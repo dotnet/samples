@@ -42,7 +42,7 @@ Namespace Samples.AspNet.VB.Controls
             MyDataGrid.DataBind()
 
             TimeMsg.Text = DateTime.Now.ToString("G")
-        End Sub 'Page_Load 
-    End Class 'ctlMine
+        End Sub
+    End Class
 End Namespace
 ' </snippet1>

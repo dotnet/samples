@@ -9,9 +9,6 @@
 Imports System.IO
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
-
-
 
 Class HttpWebRequest_AllowAutoRedirect
     
@@ -56,7 +53,7 @@ Class HttpWebRequest_AllowAutoRedirect
             Console.WriteLine(("Message : " + e.Message))
 	   
         End Try
-    End Sub ' Main
-End Class ' HttpWebRequest_AllowAutoRedirect
+    End Sub
+End Class
 
 

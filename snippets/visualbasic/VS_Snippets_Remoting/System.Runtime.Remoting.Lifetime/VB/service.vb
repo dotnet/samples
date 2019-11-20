@@ -21,7 +21,7 @@ Public Class ClientActivatedType
       ' report our client identity name
       Return "Hello, " + name + "!"
    End Function 'RemoteMethod
-End Class 'ClientActivatedType
+End Class
 
 Public Class MyLease
    Inherits MarshalByRefObject
@@ -36,7 +36,7 @@ Public Class MyLease
          Console.WriteLine("CRUD!")
       End If
       baseLease = oldLease
-   End Sub 'New
+   End Sub
    
    
    Public ReadOnly Property CurrentLeaseTime() As TimeSpan _
@@ -113,7 +113,7 @@ Public Class MyLease
       Implements ILease.Register
       Console.WriteLine("The sponsor {0} has been registered with the current lease.", sponsor)
       baseLease.Register(sponsor)
-   End Sub 'Register
+   End Sub
    
 <SecurityPermission(SecurityAction.Demand, Flags := SecurityPermissionFlag.Infrastructure)> _   
    Overloads Public Sub Register(sponsor As ISponsor, renewalTime As TimeSpan) _
@@ -121,7 +121,7 @@ Public Class MyLease
       Console.WriteLine("The sponsor {0} has been registered with the current lease for {0} milliseconds...", _
                          sponsor, renewalTime.Milliseconds)
       baseLease.Register(sponsor, renewalTime)
-   End Sub 'Register
+   End Sub
    
 <SecurityPermission(SecurityAction.Demand, Flags := SecurityPermissionFlag.Infrastructure)> _   
    Public Function Renew(renewalTime As TimeSpan) As TimeSpan _
@@ -135,7 +135,7 @@ Public Class MyLease
       Implements ILease.Unregister
       Console.WriteLine("The sponsor {0} has been unregistered from the current lease.", sponsor)
       baseLease.Unregister(sponsor)
-   End Sub 'Unregister
+   End Sub
    
-End Class 'MyLease
+End Class
 ' </Snippet3>

@@ -27,7 +27,6 @@ Imports System.Globalization
 Imports System.CodeDom
 Imports System.CodeDom.Compiler
 Imports Microsoft.CSharp
-Imports Microsoft.VisualBasic
 Imports System.ComponentModel
 
 Namespace CodeDomCompilerInfoSample
@@ -76,7 +75,7 @@ Namespace CodeDomCompilerInfoSample
                 DisplayJScriptCompilerInfo()
         End Select
 
-      End Sub 'Main
+      End Sub
       
       
       Shared Sub DisplayCSharpCompilerInfo()
@@ -95,7 +94,7 @@ Namespace CodeDomCompilerInfoSample
          
          ' </Snippet2>
          Console.WriteLine()
-      End Sub 'DisplayCSharpCompilerInfo
+      End Sub
       
       
       Shared Sub DisplayVBCompilerInfo()
@@ -113,7 +112,7 @@ Namespace CodeDomCompilerInfoSample
          
          ' </Snippet3>
          Console.WriteLine()
-      End Sub 'DisplayVBCompilerInfo
+      End Sub
       
       
       Shared Sub DisplayJScriptCompilerInfo()
@@ -138,7 +137,7 @@ Namespace CodeDomCompilerInfoSample
          End Try
          ' </Snippet4>
 
-      End Sub 'DisplayJScriptCompilerInfo
+      End Sub
       
       Shared Sub DisplayCompilerInfoUsingExtension(fileExtension As String)
          ' <Snippet5> 
@@ -178,7 +177,7 @@ Namespace CodeDomCompilerInfoSample
             Console.WriteLine("There is no language provider associated with input file extension ""{0}"".", fileExtension)
          End If
          ' </Snippet5> 
-      End Sub 'DisplayCompilerInfoUsingExtension
+      End Sub
      
       
       Shared Sub DisplayCompilerInfoForLanguage(language As String)
@@ -212,7 +211,7 @@ Namespace CodeDomCompilerInfoSample
          End If
          ' </Snippet6> 
 
-      End Sub 'DisplayCompilerInfoForLanguage
+      End Sub
       
       Shared Sub DisplayCompilerInfoForConfigLanguage(configLanguage As String)
          ' <Snippet7>
@@ -244,7 +243,7 @@ Namespace CodeDomCompilerInfoSample
             Console.WriteLine("There is no provider configured for input language ""{0}"".", configLanguage)
          End If
          ' </Snippet7>
-      End Sub 'DisplayCompilerInfoForConfigLanguage
+      End Sub
       
       
       Shared Sub DisplayAllCompilerInfo()
@@ -298,8 +297,8 @@ Namespace CodeDomCompilerInfoSample
             Console.WriteLine()
          Next info
          ' </Snippet8> 
-      End Sub 'DisplayAllCompilerInfo 
+      End Sub
 
-   End Class 'CompilerInfoSample
+   End Class
 End Namespace 'CodeDomCompilerInfoSample
 ' </Snippet1>

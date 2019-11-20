@@ -1,7 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Reflection
 Imports System.Security
-Imports Microsoft.VisualBasic
 
 Public Class MyFilterAttributeSample
 
@@ -23,6 +22,6 @@ Public Class MyFilterAttributeSample
         Catch e As Exception
             Console.Write("Exception :" + e.Message.ToString())
         End Try
-    End Sub 'Main
-End Class 'MyFilterAttributeSample
+    End Sub
+End Class
 ' </Snippet1>

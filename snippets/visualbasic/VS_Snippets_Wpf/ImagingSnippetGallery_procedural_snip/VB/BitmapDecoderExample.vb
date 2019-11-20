@@ -1,5 +1,4 @@
 ﻿ '<SnippetBitmapDecoderFullPage>
-Imports System
 Imports System.Windows
 Imports System.IO
 Imports System.Windows.Controls
@@ -39,7 +38,7 @@ Namespace SDKSample
             myStackPanel.Children.Add(streamImage)
             Me.Content = myStackPanel
 
-        End Sub 'New
-    End Class 'BitmapDecoderExample
+        End Sub
+    End Class
 End Namespace
 '</SnippetBitmapDecoderFullPage>

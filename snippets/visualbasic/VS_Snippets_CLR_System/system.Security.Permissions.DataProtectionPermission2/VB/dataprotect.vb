@@ -36,7 +36,7 @@ Public Class DataProtect
         Console.ReadKey()
         Return
 
-    End Sub 'Main
+    End Sub
 
 
     ' The following method is intended to demonstrate only the behavior of
@@ -91,7 +91,7 @@ Public Class DataProtect
         rc = sp4.Equals(sp2)
         Console.WriteLine("Does the XML round trip result equal the " + "original permission? " + IIf(rc, "Yes", "No")) 'TODO: For performance reasons this should be changed to nested IF statements
 
-    End Sub 'ShowMembers
+    End Sub
 
     '</Snippet7>
 
@@ -106,7 +106,7 @@ Public Class DataProtect
             PrintValues(encryptedSecret)
         End If
 
-    End Sub 'ProtectData
+    End Sub
 
 
     ' Decrypt the data and store in a byte array.
@@ -117,7 +117,7 @@ Public Class DataProtect
             PrintValues(originalData)
         End If
 
-    End Sub 'UnprotectData
+    End Sub
 
 
     ' Encrypt data in the specified byte array.
@@ -165,8 +165,8 @@ Public Class DataProtect
         Next i
         Console.WriteLine()
 
-    End Sub 'PrintValues
-End Class 'DataProtect 
+    End Sub
+End Class
 
 
 '</Snippet1>

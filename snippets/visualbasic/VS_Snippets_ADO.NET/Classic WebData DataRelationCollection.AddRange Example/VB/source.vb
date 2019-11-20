@@ -1,16 +1,14 @@
 ﻿Imports System.Data
-Imports Microsoft.VisualBasic
-
 
 Public Class SamPle
 
 Shared Sub Main()
 
 	' create a DataSet with two tables
-	Dim dataSet As DataSet = New DataSet()
+	Dim dataSet As New DataSet()
 
 	' create Customer table
-	Dim customersTable As DataTable = New DataTable("Customers")
+	Dim customersTable As New DataTable("Customers")
 	customersTable.Columns.Add("customerId", _
         Type.GetType("System.Int32")).AutoIncrement = true
 	customersTable.Columns.Add("name",       _
@@ -19,7 +17,7 @@ Shared Sub Main()
         { customersTable.Columns("customerId") }
 
 	' create Orders table
-	Dim ordersTable As DataTable = New DataTable("Orders")
+	Dim ordersTable As New DataTable("Orders")
 	ordersTable.Columns.Add("orderId",    _
         Type.GetType("System.Int32")).AutoIncrement = true
 	ordersTable.Columns.Add("customerId", _
@@ -30,8 +28,7 @@ Shared Sub Main()
         { customersTable.Columns("orderId") }
 
 	' create Order Details table
-	Dim orderDetailsTable As DataTable = _
-        New DataTable("OrderDetails")
+	Dim orderDetailsTable As New DataTable("OrderDetails")
 	orderDetailsTable.Columns.Add("orderId",    _
         Type.GetType("System.Int32"))
 	orderDetailsTable.Columns.Add("productId",     _
@@ -58,12 +55,10 @@ End Sub
 
 ' <Snippet1>
 Public Shared Sub AddRelations(dataSet As DataSet)
-	Dim customerOrders As DataRelation = _
-        New DataRelation("CustomerOrders", _
+	Dim customerOrders As New DataRelation("CustomerOrders", _
 	    dataSet.Tables("Customers").Columns("customerId"), _
 	    dataSet.Tables("Orders").Columns("customerId"))
-	Dim orderDetails As DataRelation = _
-        New DataRelation("OrderDetail", _
+	Dim orderDetails As New DataRelation("OrderDetail", _
 	    dataSet.Tables("Orders").Columns("orderId"), _
 	    dataSet.Tables("OrderDetails").Columns("orderId"))
 

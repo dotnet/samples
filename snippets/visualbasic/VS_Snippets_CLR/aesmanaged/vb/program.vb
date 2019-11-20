@@ -24,7 +24,7 @@ Class AesExample
             Console.WriteLine("Round Trip: {0}", roundtrip)
         End Using
 
-    End Sub 'Main
+    End Sub
 
     '<Snippet2>
     Shared Function EncryptStringToBytes_Aes(ByVal plainText As String, ByVal Key() As Byte, ByVal IV() As Byte) As Byte()
@@ -111,6 +111,6 @@ Class AesExample
         Return plaintext
 
     End Function 'DecryptStringFromBytes_Aes 
-End Class 'AesExample
+End Class
 '</Snippet3>
 '</Snippet1>

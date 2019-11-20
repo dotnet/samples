@@ -13,9 +13,8 @@ Module Module1
                                                           SearchOption.AllDirectories)
             ' <Snippet2>
             ' Create a sorted set using the ByFileExtension comparer.
-            Dim mediaFiles1 As SortedSet(Of String) = _
-                New SortedSet(Of String)(New ByFileExtension)
-        ' </Snippet2>
+            Dim mediaFiles1 As New SortedSet(Of String)(New ByFileExtension)
+            ' </Snippet2>
         
             ' Note that there is a SortedSet constructor that takes an IEnumerable,
             ' but to remove the path information they must be added individually.
@@ -26,12 +25,12 @@ Module Module1
             ' </Snippet3>
             
             ' <Snippet4>
-            ' Remove elements that have non-media extensions. See the 'isDoc' method.
+            ' Remove elements that have non-media extensions. See the 'IsDoc' method.
             Console.WriteLine("Remove docs from the set...")
-            Console.WriteLine(vbTab & "Count before: {0}", mediaFiles1.Count.ToString)
-            mediaFiles1.RemoveWhere(AddressOf isDoc)
-            Console.WriteLine(vbTab & "Count after: {0}", mediaFiles1.Count.ToString)
-        ' </Snippet4>
+            Console.WriteLine($"{vbTab}Count before: {mediaFiles1.Count}")
+            mediaFiles1.RemoveWhere(AddressOf IsDoc)
+            Console.WriteLine($"{vbTab}Count after: {mediaFiles1.Count}")
+            ' </Snippet4>
         
             Console.WriteLine()
             
@@ -40,7 +39,7 @@ Module Module1
             Dim aviFiles As SortedSet(Of String) = mediaFiles1.GetViewBetween("avi", "avj")
             Console.WriteLine("AVI files:")
             For Each avi As String In aviFiles
-                Console.WriteLine(vbTab & "{0}", avi)
+                Console.WriteLine($"{vbTab}{avi}")
             Next
             ' </Snippet5>
 
@@ -50,8 +49,7 @@ Module Module1
             Dim files2 As IEnumerable = _
                 Directory.EnumerateFiles("\\archives\2008\media", "*", _
                                       SearchOption.AllDirectories)
-            Dim mediaFiles2 As SortedSet(Of String) = _
-                New SortedSet(Of String)(New ByFileExtension)
+            Dim mediaFiles2 As New SortedSet(Of String)(New ByFileExtension)
             For Each f As String In files2
                 mediaFiles2.Add(f.Substring((f.LastIndexOf("\") + 1)))
             Next
@@ -59,26 +57,23 @@ Module Module1
             ' <Snippet6>
             ' Remove elements in mediaFiles1 that are also in mediaFiles2.
             Console.WriteLine("Remove duplicates (of mediaFiles2) from the set...")
-            Console.WriteLine(vbTab & "Count before: {0}", _
-                    mediaFiles1.Count.ToString)
+            Console.WriteLine($"{vbTab}Count before: {mediaFiles1.Count}")
             mediaFiles1.ExceptWith(mediaFiles2)
-            Console.WriteLine(vbTab & "Count after: {0}", _
-                    mediaFiles1.Count.ToString)
+            Console.WriteLine($"{vbTab}Count after: {mediaFiles1.Count}")
         ' </Snippet6>
 
             Console.WriteLine()
 
             Console.WriteLine("List of mediaFiles1:")
             For Each f As String In mediaFiles1
-                Console.WriteLine(vbTab & "{0}", f)
+                Console.WriteLine($"{vbTab}{f}")
             Next
             
             ' <Snippet7>
             ' Create a set of the sets.
             Dim comparer As IEqualityComparer(Of SortedSet(Of String)) = _
                 SortedSet(Of String).CreateSetComparer()
-            Dim allMedia As HashSet(Of SortedSet(Of String)) = _
-                    New HashSet(Of SortedSet(Of String))(comparer)
+            Dim allMedia As New HashSet(Of SortedSet(Of String))(comparer)
             allMedia.Add(mediaFiles1)
             allMedia.Add(mediaFiles2)
             ' </Snippet7>
@@ -93,20 +88,17 @@ Module Module1
     End Sub
 
     ' <Snippet8>
-    ' Defines a predicate deligate to use
+    ' Defines a predicate delegate to use
     ' for the SortedSet.RemoveWhere method.
-    Private Function isDoc(ByVal s As String) As Boolean
-        If (s.ToLower.EndsWith(".txt") _
-                    OrElse (s.ToLower.EndsWith(".doc") _
-                    OrElse (s.ToLower.EndsWith(".xls") _
-                    OrElse (s.ToLower.EndsWith(".xlsx") _
-                    OrElse (s.ToLower.EndsWith(".pdf") _
-                    OrElse (s.ToLower.EndsWith(".doc") _
-                    OrElse s.ToLower.EndsWith(".docx"))))))) Then
-            Return True
-        Else
-            Return False
-        End If
+    Private Function IsDoc(s As String) As Boolean
+        s = s.ToLower()
+        Return s.EndsWith(".txt") OrElse 
+    			s.EndsWith(".doc") OrElse 
+    			s.EndsWith(".xls") OrElse
+                s.EndsWith(".xlsx") OrElse
+                s.EndsWith(".pdf") OrElse
+                s.EndsWith(".doc") OrElse
+                s.EndsWith(".docx")
     End Function
     ' </Snippet8>
     

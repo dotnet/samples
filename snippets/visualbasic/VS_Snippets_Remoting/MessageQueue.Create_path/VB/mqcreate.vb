@@ -24,7 +24,7 @@ Public Class MyNewQueue
 
             Return
 
-        End Sub 'Main
+        End Sub
 
 
  
@@ -52,7 +52,7 @@ Public Class MyNewQueue
 
             Return
 
-        End Sub 'CreatePublicQueues
+        End Sub
 
 
 
@@ -82,8 +82,8 @@ Public Class MyNewQueue
 
             Return
 
-        End Sub 'CreatePrivateQueues
+        End Sub
 
-End Class 'MyNewQueue
+End Class
 
 ' </Snippet1>

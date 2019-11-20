@@ -18,7 +18,7 @@ Public Class UrlsCollection
             CType(CreateNewElement(), UrlConfigElement)
         ' Add the element to the collection.
         Add(url)
-    End Sub 'New
+    End Sub
     '</Snippet52>
 
     '<Snippet53>    
@@ -135,7 +135,7 @@ Public Class UrlsCollection
     Public Sub Add(ByVal url As UrlConfigElement)
         BaseAdd(url)
         ' Add custom code here.
-    End Sub 'Add
+    End Sub
     '</Snippet64>
 
     '<Snippet65>
@@ -143,7 +143,7 @@ Public Class UrlsCollection
     ByVal element As ConfigurationElement)
         BaseAdd(element, False)
         ' Add custom code here.
-    End Sub 'BaseAdd
+    End Sub
     '</Snippet65>        
 
     '<Snippet66>
@@ -153,25 +153,25 @@ Public Class UrlsCollection
         If BaseIndexOf(url) >= 0 Then
             BaseRemove(url.Name)
         End If
-    End Sub 'Remove
+    End Sub
     '</Snippet66>
 
     '<Snippet67>
     Public Sub RemoveAt(ByVal index As Integer)
         BaseRemoveAt(index)
-    End Sub 'RemoveAt
+    End Sub
     '</Snippet67>
 
     '<Snippet68>
     Public Overloads Sub Remove(ByVal name As String)
         BaseRemove(name)
-    End Sub 'Remove    
+    End Sub
     '</Snippet68>
 
     '<Snippet69>
     Public Sub Clear()
         BaseClear()
-    End Sub 'Clear ' 
+    End Sub
     '</Snippet69>
-End Class 'UrlsCollection
+End Class
 '</Snippet51>

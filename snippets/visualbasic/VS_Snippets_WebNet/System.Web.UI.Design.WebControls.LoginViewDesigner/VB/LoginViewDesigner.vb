@@ -18,7 +18,7 @@ Namespace Examples.VB.WebControls.Design
     <Designer(GetType(Examples.VB.WebControls.Design.MyLoginViewDesigner))> _
     Public Class MyLoginView
         Inherits LoginView
-    End Class ' MyLoginView
+    End Class
 
     ' Override members of the LoginViewDesigner.
     <ReflectionPermission(SecurityAction.Demand, Flags:=ReflectionPermissionFlag.MemberAccess)> _
@@ -84,7 +84,7 @@ Namespace Examples.VB.WebControls.Design
                 TypeDescriptor.CreateProperty(selectProp.ComponentType, _
                     selectProp, BrowsableAttribute.Yes)
 
-        End Sub ' PreFilterProperties
+        End Sub
         ' </snippet3>
 
         ' <snippet4>
@@ -118,8 +118,8 @@ Namespace Examples.VB.WebControls.Design
             ' Call the base method to generate the markup.
             MyBase.Initialize(component)
 
-        End Sub ' Initialize
+        End Sub
         ' </snippet6>
-    End Class ' MyLoginViewDesigner
+    End Class
 End Namespace ' Examples.VB.WebControls.Design
 ' </snippet1>

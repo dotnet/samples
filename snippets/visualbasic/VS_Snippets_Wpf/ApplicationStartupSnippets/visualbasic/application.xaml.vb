@@ -1,7 +1,6 @@
 ﻿'<SnippetStartupCODEBEHIND1>
 '<SnippetHandleStartupCODEBEHIND>
 
-Imports Microsoft.VisualBasic
 Imports System.Windows
 
 Namespace SDKSample

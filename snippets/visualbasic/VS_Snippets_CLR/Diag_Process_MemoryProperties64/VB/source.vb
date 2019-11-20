@@ -66,7 +66,7 @@ Namespace ProcessSample
                 Console.WriteLine($"  Peak paged memory usage of the process    : {peakPagedMem}")
                 Console.WriteLine($"  Peak virtual memory usage of the process  : {peakVirtualMem}")
             End Using
-        End Sub 'Main
+        End Sub
     End Class
 End Namespace
 ' </Snippet1>

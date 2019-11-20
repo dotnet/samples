@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Windows.Forms
+﻿Imports System.Windows.Forms
 Imports System.Data
 
 
@@ -21,7 +20,7 @@ Public Class Form1
             ' Presuming a column named CompanyName exists.
             Console.WriteLine(drv("CompanyName"))
         Next i
-    End Sub 'PrintListItems
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

@@ -32,14 +32,14 @@ Public Class ObjectInspector
     Protected Overrides Sub Activate() 
         MessageBox.Show(String.Format("Now entering..." + vbLf + "Application: {0}" + vbLf + "Instance: {1}" + vbLf + "Context: {2}" + vbLf, ContextUtil.ApplicationId.ToString(), ContextUtil.ApplicationInstanceId.ToString(), ContextUtil.ContextId.ToString()))
     
-    End Sub 'Activate
+    End Sub
     ' </snippet3>
 
     ' <snippet4>
     Protected Overrides Sub Deactivate() 
         MessageBox.Show("Bye Bye!")
     
-    End Sub 'Deactivate
+    End Sub
     ' </snippet4>
 
     ' <snippet5>
@@ -50,7 +50,7 @@ Public Class ObjectInspector
     End Function 'CanBePooled
     ' </snippet5>
 
-End Class 'ObjectInspector
+End Class
 ' </snippet1>
 ' </snippet0>
 
@@ -58,5 +58,5 @@ Public Class Test
 
     Public Shared Sub Main()
 
-    End Sub 'Main
-End Class 'Test
+    End Sub
+End Class

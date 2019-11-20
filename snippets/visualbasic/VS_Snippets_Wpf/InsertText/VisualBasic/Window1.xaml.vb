@@ -58,7 +58,6 @@
 ' *
 ' ****************************************************************************
 
-Imports System
 Imports System.Windows
 Imports System.Diagnostics
 Imports System.Windows.Automation
@@ -99,7 +98,7 @@ Namespace InsertTextClient
         '' --------------------------------------------------------------------
         Public Sub New()
             InitializeComponent()
-        End Sub 'New
+        End Sub
 
 
         '' --------------------------------------------------------------------
@@ -173,7 +172,7 @@ Namespace InsertTextClient
             ' Get our collection of interesting controls.
             textControls = FindTextControlsInTarget()
 
-        End Sub 'btnStartApp_Click
+        End Sub
 
 
         '' --------------------------------------------------------------------
@@ -200,7 +199,7 @@ Namespace InsertTextClient
                     Return
             End Select
 
-        End Sub 'btnInsert_Click
+        End Sub
 
 
         '<SnippetInsertText>
@@ -337,7 +336,7 @@ Namespace InsertTextClient
                 InsertTextUsingWin32(control, s)
             Next control
 
-        End Sub 'SetValueWin32
+        End Sub
 
 
         '' --------------------------------------------------------------------
@@ -450,7 +449,7 @@ Namespace InsertTextClient
                 Feedback(feedbackText.ToString())
             End Try
 
-        End Sub 'InsertTextUsingWin32
+        End Sub
 
 
         '' --------------------------------------------------------------------
@@ -580,7 +579,7 @@ Namespace InsertTextClient
             txtFeedback.Dispatcher.BeginInvoke( _
             DispatcherPriority.Send, _
             New FeedbackDelegate(AddressOf Feedback), "Target closed.")
-        End Sub 'OnTargetClosed
+        End Sub
 
         '' --------------------------------------------------------------------
         ''  <summary>
@@ -594,7 +593,7 @@ Namespace InsertTextClient
             tbkInsert.IsEnabled = e2
             spInsert.IsEnabled = e2
 
-        End Sub 'SetClientControlProperties
+        End Sub
 
 
         '' --------------------------------------------------------------------
@@ -606,6 +605,6 @@ Namespace InsertTextClient
         Private Sub Feedback(ByVal s As String)
             txtFeedback.Text = s
 
-        End Sub 'Feedback
-    End Class 'Window1
+        End Sub
+    End Class
 End Namespace

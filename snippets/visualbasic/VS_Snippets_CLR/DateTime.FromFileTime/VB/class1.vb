@@ -14,7 +14,7 @@ Class Class1
       Dim theApp As New Class1()
       Dim fileAge As System.TimeSpan = theApp.FileAge(fileTime)
       Console.WriteLine("{0}", fileAge)
-   End Sub 'Main
+   End Sub
 
    ' This function takes a file's creation time as an unsigned long,
    ' and returns its age.

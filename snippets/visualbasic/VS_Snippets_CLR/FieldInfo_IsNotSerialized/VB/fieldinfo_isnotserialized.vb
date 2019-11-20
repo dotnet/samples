@@ -2,7 +2,6 @@
 
 Imports System.Reflection
 Imports System.Runtime.Serialization
-Imports Microsoft.VisualBasic
 
 <Serializable()> _
 Public Class [MyClass]
@@ -10,7 +9,7 @@ Public Class [MyClass]
 
     ' The following field will not be serialized.  
     <NonSerialized()> Public myInt As Integer
-End Class '[MyClass]
+End Class
 
 Public Class Type_IsNotSerializable
 
@@ -31,6 +30,6 @@ Public Class Type_IsNotSerializable
                 Console.WriteLine("The {0} field is serializable.", myFields(i))
             End If
         Next i
-    End Sub 'Main
-End Class 'Type_IsNotSerializable
+    End Sub
+End Class
 ' </Snippet1>

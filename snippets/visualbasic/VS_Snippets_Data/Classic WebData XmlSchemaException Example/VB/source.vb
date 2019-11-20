@@ -5,7 +5,6 @@ Option Explicit On
 Imports System.Xml
 Imports System.Xml.Schema
 Imports System.IO
-Imports Microsoft.VisualBasic
 
 Public Class ValidXSD
     Public Shared Sub Main()
@@ -41,11 +40,11 @@ Public Class ValidXSD
             Console.WriteLine("Source = {0}", e.Source)
 
         End Try
-    End Sub 'Main
+    End Sub
 
 
     Private Shared Sub ShowCompileError(ByVal sender As Object, ByVal e As ValidationEventArgs)
         Console.WriteLine("Validation Error: {0}", e.Message)
-    End Sub 'ShowCompileError
-End Class 'ValidXSD
+    End Sub
+End Class
 ' </Snippet1>

@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.CodeDom
+﻿Imports System.CodeDom
 Imports System.ComponentModel
 Imports System.ComponentModel.Design
 Imports System.ComponentModel.Design.Serialization
@@ -13,8 +12,8 @@ Namespace CodeDomSerializerExceptionExampleVB
             '<Snippet1>
             Throw New CodeDomSerializerException("This exception was raised as an example.", New CodeLinePragma("Example.txt", 20))
             '</Snippet1>
-        End Sub 'Main 
+        End Sub
 
-    End Class 'CodeDomSerializerExceptionExample
+    End Class
 
 End Namespace 'CodeDomSerializerExceptionExample

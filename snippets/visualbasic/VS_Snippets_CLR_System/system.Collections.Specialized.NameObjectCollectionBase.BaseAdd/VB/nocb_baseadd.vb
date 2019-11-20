@@ -25,9 +25,9 @@ Public Class MyCollection
       For Each de In  d
          Me.BaseAdd(CType(de.Key, [String]), de.Value)
       Next de
-   End Sub 'New
+   End Sub
 
-End Class 'MyCollection
+End Class
 
 
 Public Class SamplesNameObjectCollectionBase   
@@ -47,9 +47,9 @@ Public Class SamplesNameObjectCollectionBase
          Console.WriteLine("[{0}] : {1}, {2}", i, myCol(i).Key, myCol(i).Value)
       Next i
 
-   End Sub 'Main 
+   End Sub
 
-End Class 'SamplesNameObjectCollectionBase
+End Class
 
 
 'This code produces the following output.

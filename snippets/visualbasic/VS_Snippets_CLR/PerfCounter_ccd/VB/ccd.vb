@@ -23,5 +23,5 @@ Public Class Snippet
         End If
         '</Snippet1>
         
-    End Sub 'Main
-End Class 'Snippet
+    End Sub
+End Class

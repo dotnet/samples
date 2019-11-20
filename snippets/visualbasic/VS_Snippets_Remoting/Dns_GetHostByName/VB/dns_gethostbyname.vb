@@ -7,9 +7,6 @@
 
 Imports System.Net
 Imports System.Net.Sockets
-Imports Microsoft.VisualBasic
-
-
 
 Class DnsHostByName
     
@@ -24,7 +21,7 @@ Class DnsHostByName
         Else
             myDnsHostByName.DisplayHostName("www.microsoft.net")
         End If
-    End Sub 'Main
+    End Sub
      
 ' <Snippet1>
     Public Sub DisplayHostName(hostName As [String])
@@ -65,5 +62,5 @@ Class DnsHostByName
             Console.WriteLine(("Message : " + e.Message))
         End Try
 ' </Snippet1>
-    End Sub 'DisplayHostName
-End Class 'DnsHostByName 
+    End Sub
+End Class

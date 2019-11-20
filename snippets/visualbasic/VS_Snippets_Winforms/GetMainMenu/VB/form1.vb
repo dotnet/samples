@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Drawing
+﻿Imports System.Drawing
 Imports System.ComponentModel
 Imports System.Windows.Forms
 
@@ -92,7 +91,7 @@ Public NotInheritable Class Form1
             ' Display the name of the form in which it is located.
             Label1.Text = menuItem3.GetMainMenu().GetForm().ToString()
         End If
-    End Sub 'InitializeMyMainMenu 
+    End Sub
     '</snippet1>
 
    Public Shared Sub Main()

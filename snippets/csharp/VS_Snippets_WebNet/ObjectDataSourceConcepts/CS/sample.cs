@@ -195,10 +195,10 @@ namespace Samples.AspNet.Controls
       if (String.IsNullOrEmpty(LastName))
         throw new ArgumentException("LastName cannot be null or an empty string.");
 
-      if (Address    == null) { Address    = String.Empty; }
-      if (City       == null) { City       = String.Empty; }
-      if (Region     == null) { Region     = String.Empty; }
-      if (PostalCode == null) { PostalCode = String.Empty; }
+      Address    ?= String.Empty;
+      City       ?= String.Empty;
+      Region     ?= String.Empty;
+      PostalCode ?= String.Empty;
 
       if (!_initialized) { Initialize(); }
 
@@ -249,10 +249,10 @@ namespace Samples.AspNet.Controls
       if (String.IsNullOrEmpty(LastName))
         throw new ArgumentException("LastName cannot be null or an empty string.");
 
-      if (Address    == null) { Address    = String.Empty; }
-      if (City       == null) { City       = String.Empty; }
-      if (Region     == null) { Region     = String.Empty; }
-      if (PostalCode == null) { PostalCode = String.Empty; }
+      Address    ??= String.Empty;
+      City       ??= String.Empty;
+      Region     ??= String.Empty;
+      PostalCode ??= String.Empty;
 
       if (!_initialized) { Initialize(); }
 

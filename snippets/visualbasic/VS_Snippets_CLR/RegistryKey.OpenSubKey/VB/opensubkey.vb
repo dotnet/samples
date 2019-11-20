@@ -1,6 +1,5 @@
 ﻿'<Snippet1>
 Imports Microsoft.Win32
-Imports Microsoft.VisualBasic
 
 Public Class Example
     Public Shared Sub Main()
@@ -30,6 +29,6 @@ Public Class Example
         rkTest.SetValue("TestName", "TestValue")
         Console.WriteLine("Test value for TestName: {0}", rkTest.GetValue("TestName"))
         rkTest.Close
-    End Sub 'Main
-End Class 'Example
+    End Sub
+End Class
 '</Snippet1>

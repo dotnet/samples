@@ -16,5 +16,5 @@ Public Class SomeDataBoundControl
         End Set
     End Property
     
-End Class 'SomeDataBoundControl 
+End Class
 ' </Snippet1>

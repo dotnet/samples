@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.IO
 Imports System.Drawing
 Imports System.Drawing.Printing
@@ -66,5 +65,5 @@ Public Class Form1
         Else
             ev.HasMorePages = False
         End If
-    End Sub 'pd_PrintPage
-End Class 'Form1
+    End Sub
+End Class

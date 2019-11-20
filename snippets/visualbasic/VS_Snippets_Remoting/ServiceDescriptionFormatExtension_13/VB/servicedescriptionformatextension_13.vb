@@ -33,8 +33,8 @@ Class MyFormatExtension
       ' Set the properties.
       Me.Handled = True
       Me.Required = True
-   End Sub 'New
-End Class 'MyFormatExtension
+   End Sub
+End Class
 
 Class myCollectionSample
    
@@ -133,6 +133,6 @@ Class myCollectionSample
       Catch e As Exception
          Console.WriteLine("The following exception was raised: {0}", e.Message.ToString())
       End Try
-   End Sub 'Main
-End Class 'myCollectionSample
+   End Sub
+End Class
 ' </Snippet1>

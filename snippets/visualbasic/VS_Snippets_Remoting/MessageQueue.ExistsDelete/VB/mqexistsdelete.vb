@@ -41,8 +41,8 @@ Public Class MyNewQueue
 
             Return
 
-        End Sub 'Main
+        End Sub
 
-End Class 'MyNewQueue 
+End Class
 
 ' </Snippet1>

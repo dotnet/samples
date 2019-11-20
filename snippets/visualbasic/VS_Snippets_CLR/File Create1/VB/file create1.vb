@@ -7,16 +7,7 @@ Public Class Test
     Dim path As String = "c:\temp\MyTest.txt"
 
     Try
-
-      ' Delete the file if it exists. 
-      If File.Exists(path) Then
-        ' Note that no lock is put on the file and the possibility exists 
-        ' that another process could do something with it between 
-        ' the calls to Exists and Delete.
-        File.Delete(path)
-      End If
-
-      ' Create the file. 
+      ' Create the file, or overwrite if the file exists.
       Using fs As FileStream = File.Create(path)
         Dim info As Byte() = New UTF8Encoding(True).GetBytes("This is some text in the file.")
 

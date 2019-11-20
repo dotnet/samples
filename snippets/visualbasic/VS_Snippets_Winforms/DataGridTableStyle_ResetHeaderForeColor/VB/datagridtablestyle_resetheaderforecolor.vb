@@ -7,7 +7,6 @@
 ' it sets the header fore color. If the user clicks on 'Reset HeaderForeColor'
 ' button it resets the grid 'HeaderForeColor' to its default value.
 
-Imports System
 Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
@@ -30,7 +29,7 @@ Public Class MyForm1
       ' Bind datagrid to the dataset.
       myDataGrid.SetDataBinding(myDataSet, "Customers")
       AddCustomDataTableStyle()
-   End Sub 'New
+   End Sub
    
    
    Private Sub InitializeComponent()
@@ -58,24 +57,24 @@ Public Class MyForm1
       Controls.Add(myButton1)
       Controls.Add(myDataGrid)
       Controls.Add(myButton2)
-   End Sub 'InitializeComponent
+   End Sub
    
    
    Public Shared Sub Main()
       Application.Run(New MyForm1())
-   End Sub 'Main
+   End Sub
    
    
 ' <Snippet1>
     Private Sub myButton1_Click(ByVal sender As Object, ByVal e As EventArgs)
         ' Set the 'HeaderForeColor' property.
         myDataTableStyle.HeaderForeColor = Color.Blue
-    End Sub 'myButton1_Click
+    End Sub
    
     Private Sub myButton2_Click(ByVal sender As Object, ByVal e As EventArgs)
         ' Reset the 'HeaderForeColor' property to its default value.
         myDataTableStyle.ResetHeaderForeColor()
-    End Sub 'myButton2_Click
+    End Sub
    
 ' </Snippet1>
 
@@ -92,7 +91,7 @@ Public Class MyForm1
       myDataTableStyle.GridColumnStyles.Add(myDataGridColumnStyle)
       ' Add the 'DataGridTableStyle' to 'DataGrid'.
       myDataGrid.TableStyles.Add(myDataTableStyle)
-   End Sub 'AddCustomDataTableStyle
+   End Sub
    
    
    ' Create a dataset with one table and populate it.
@@ -120,5 +119,5 @@ Public Class MyForm1
       myTable.Rows(2)("CustName") = "David"
       myTable.Rows(3)("CustName") = "Robert"
       myTable.Rows(4)("CustName") = "John"
-   End Sub 'MakeDataSet
-End Class 'MyForm1
+   End Sub
+End Class

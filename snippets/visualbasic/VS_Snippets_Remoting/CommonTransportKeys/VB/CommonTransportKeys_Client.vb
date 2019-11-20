@@ -19,5 +19,5 @@ Public Class Client
       Catch e As Exception
          Console.WriteLine("Exception :{0}", e.Message)
       End Try
-   End Sub 'Main
-End Class 'Client
+   End Sub
+End Class

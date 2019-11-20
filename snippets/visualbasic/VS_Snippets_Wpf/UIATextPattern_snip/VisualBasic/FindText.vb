@@ -54,7 +54,6 @@
 ' *
 ' ******************************************************************************************
 
-Imports System
 Imports System.Windows
 Imports System.Windows.Documents
 Imports System.Windows.Automation
@@ -91,8 +90,8 @@ Namespace SDKSample
                 ' Create an instance of the sample class and call its Run() method to start it.
                 Dim app As New FindText()
                 app.Run()
-            End Sub 'Main
-        End Class 'TestMain
+            End Sub
+        End Class
 
     End Class
 

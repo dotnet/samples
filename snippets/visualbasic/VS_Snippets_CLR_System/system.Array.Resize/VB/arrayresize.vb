@@ -30,7 +30,7 @@ Public Class SamplesArray
         Console.WriteLine("the string array contains the following values:")
         PrintIndexAndValues(myArr)
 
-    End Sub 'Main
+    End Sub
 
     Public Shared Sub PrintIndexAndValues(myArr() As String)
         Dim i As Integer
@@ -38,9 +38,9 @@ Public Class SamplesArray
             Console.WriteLine("   [{0}] : {1}", i, myArr(i))
         Next i
         Console.WriteLine()
-    End Sub 'PrintIndexAndValues
+    End Sub
 
-End Class 'SamplesArray
+End Class
 
 'This code produces the following output.
 '

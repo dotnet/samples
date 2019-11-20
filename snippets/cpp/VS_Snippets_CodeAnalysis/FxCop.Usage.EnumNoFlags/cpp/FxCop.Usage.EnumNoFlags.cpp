@@ -5,7 +5,7 @@ using namespace System;
 namespace Samples 
 {
     // Violates this rule    
-	[FlagsAttribute]    
+	[Flags]    
 	public enum class Color    
 	{        
 		None   = 0,        

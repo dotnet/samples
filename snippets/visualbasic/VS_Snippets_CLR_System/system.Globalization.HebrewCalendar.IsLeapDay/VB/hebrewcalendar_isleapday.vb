@@ -2,7 +2,6 @@
 
 ' <snippet1>
 Imports System.Globalization
-Imports Microsoft.VisualBasic
 
 Public Class SamplesHebrewCalendar   
    
@@ -41,9 +40,9 @@ Public Class SamplesHebrewCalendar
          Console.WriteLine()
       Next i
 
-   End Sub 'Main 
+   End Sub
 
-End Class 'SamplesHebrewCalendar
+End Class
 
 
 'This code produces the following output.

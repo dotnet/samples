@@ -1,7 +1,6 @@
 ﻿Option Explicit
 Option Strict
 
-Imports System
 Imports System.Data
 Imports System.Windows.Forms
 Imports System.Globalization
@@ -46,4 +45,4 @@ cevent As ConvertEventArgs)
    NumberStyles.Currency, nothing)
    End Sub 
     ' </Snippet1>
-End Class 'Form1
+End Class

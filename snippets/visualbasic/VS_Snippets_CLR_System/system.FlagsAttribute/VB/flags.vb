@@ -10,7 +10,7 @@ Module Example
    End Enum
 
    ' Define an Enum with FlagsAttribute.
-   <FlagsAttribute> 
+   <Flags()> 
    Enum MultiHue As Short
       None = 0
       Black = 1

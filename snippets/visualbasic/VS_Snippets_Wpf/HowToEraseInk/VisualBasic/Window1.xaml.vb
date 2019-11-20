@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Data
@@ -36,5 +35,5 @@ Class Window1
         
         Me.WindowState = WindowState.Maximized
     
-    End Sub 'New
-End Class 'Window1 
+    End Sub
+End Class

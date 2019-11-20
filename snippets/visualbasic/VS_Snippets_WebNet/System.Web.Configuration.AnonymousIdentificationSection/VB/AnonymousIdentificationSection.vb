@@ -98,8 +98,8 @@ Class UsingAnonymousIdentificationSection
         aIdEnabled.ToString())
         ' </Snippet11>
 
-    End Sub 'Main
-End Class 'UsingAnonymousIdentificationSection 
+    End Sub
+End Class
 
 
 ' </Snippet1>

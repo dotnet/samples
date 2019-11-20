@@ -1,6 +1,5 @@
 ﻿
 Imports System.Threading
-Imports System
 Imports System.Runtime.InteropServices
 Imports System.Security.Permissions
 Imports System.Collections
@@ -108,7 +107,7 @@ Friend Class UnmanagedClass
 
     End Structure 'HWND
 
-End Class 'UnmanagedClass
+End Class
 
 
 

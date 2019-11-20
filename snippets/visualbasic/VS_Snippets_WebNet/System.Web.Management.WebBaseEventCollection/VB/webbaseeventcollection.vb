@@ -36,7 +36,7 @@ Public Class SampleWebBaseEventCollection
 
         simulatedEvents.Add(Me)
 
-    End Sub 'New
+    End Sub
      
     
     ' <Snippet3>
@@ -73,7 +73,7 @@ Public Class SampleWebBaseEventCollection
         events = _
         New System.Web.Management.WebBaseEventCollection(simulatedEvents)
     
-    End Sub 'AddEvents
+    End Sub
     
     
     ' </Snippet2>
@@ -100,7 +100,7 @@ Public Class SampleWebBaseEventCollection
 
         formatter.IndentationLevel -= 1
 
-    End Sub 'FormatCustomEventDetails 
-End Class 'SampleWebBaseEventCollection
+    End Sub
+End Class
 
 ' </Snippet1>

@@ -17,5 +17,5 @@ Public Class Class1
         
         wReq.Credentials = myCache
         ' </Snippet1>
-    End Sub 'Method1 
-End Class 'Class
+    End Sub
+End Class

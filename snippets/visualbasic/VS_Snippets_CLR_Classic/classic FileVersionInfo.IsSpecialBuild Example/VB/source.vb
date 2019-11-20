@@ -15,7 +15,7 @@ Public Class Form1
         
         ' Print whether the file is a special build.
         textBox1.Text = "File is a special build: " & myFileVersionInfo.IsSpecialBuild
-    End Sub 'GetIsSpecialBuild
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

@@ -22,7 +22,6 @@
 ' * PARTICULAR PURPOSE.
 ' * 
 ' *****************************************************************************
-Imports System
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.Windows.Forms
@@ -59,7 +58,7 @@ Class UIAWorker
 
         Feedback("Worker created; now listening.")
 
-    End Sub 'New
+    End Sub
 
 
     Private Sub RegisterTargetControls()
@@ -90,7 +89,7 @@ Class UIAWorker
 
         RegisterForEvents()
 
-    End Sub 'RegisterTargetControls
+    End Sub
 
 
     Private Sub RegisterForEvents()
@@ -136,7 +135,7 @@ Class UIAWorker
             Next element 'AutomationPropertyChangedEventHandler rangevalueHandler =
         End Using
         '    new AutomationPropertyChangedEventHandler(OnRangeValueChange);
-    End Sub 'RegisterForEvents
+    End Sub
     'Automation.AddAutomationPropertyChangedEventHandler(
     '    element, TreeScope.Element, rangevalueHandler, RangeValuePattern.
     'Automation.AddAutomationEventHandler(InvokePattern.InvokedEvent,
@@ -158,7 +157,7 @@ Class UIAWorker
         ' Add it to our collection.
         controlStore.Add(element)
 
-    End Sub 'AddToControlStore
+    End Sub
 
 
     ''' <summary>
@@ -192,7 +191,7 @@ Class UIAWorker
             Return
         End Try
 
-    End Sub 'OnInvoke
+    End Sub
 
 
     ''' <summary>
@@ -228,7 +227,7 @@ Class UIAWorker
             Return
         End Try
 
-    End Sub 'OnFocusChange
+    End Sub
     
     
     '''--------------------------------------------------------------------
@@ -264,13 +263,13 @@ Class UIAWorker
     Protected Overloads Overrides Sub Finalize()
         MyBase.Finalize()
 
-    End Sub 'Finalize
+    End Sub
 
 
     Public Sub Shutdown()
         Automation.RemoveAllEventHandlers()
 
-    End Sub 'Shutdown
+    End Sub
 
 
     ''' <summary>
@@ -280,6 +279,6 @@ Class UIAWorker
     ''' <remarks>Must use Invoke so that UI is not being called directly from this thread.</remarks>
     Private Sub Feedback(ByVal outputStr As String) 
     
-    End Sub 'Feedback
-End Class 'UIAWorker
+    End Sub
+End Class
 

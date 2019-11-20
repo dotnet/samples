@@ -7,25 +7,25 @@ Class MyComVisibleType
 
    Public Sub New()
       Console.WriteLine("MyComVisibleType instantiated!")
-   End Sub 'New
+   End Sub
 
-End Class 'MyComVisibleType
+End Class
 
 <ComVisible(False)> _
 Class MyComNonVisibleType
 
    Public Sub New()
       Console.WriteLine("MyComNonVisibleType instantiated!")
-   End Sub 'New
+   End Sub
 
-End Class 'MyComNonVisibleType
+End Class
 
 Module Test
 
    Sub Main()
       CreateComInstance("MyComNonVisibleType")   ' Fail!
       CreateComInstance("MyComVisibleType")      ' OK!
-   End Sub 'Main
+   End Sub
 
    Sub CreateComInstance(typeName As String)
       Try
@@ -35,7 +35,7 @@ Module Test
       Catch e As Exception
          Console.WriteLine(e.Message)
       End Try
-   End Sub 'CreateComInstance
+   End Sub
 
 End Module 'Test
 ' </Snippet1>

@@ -1,5 +1,4 @@
-﻿Imports System
-Namespace UIAITransformProvider_snip
+﻿Namespace UIAITransformProvider_snip
 	Partial Public Class ProviderForm
 		''' <summary>
 		''' Required designer variable.

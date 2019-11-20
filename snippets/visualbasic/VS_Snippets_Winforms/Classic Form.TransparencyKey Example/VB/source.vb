@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
 
@@ -13,7 +12,7 @@ Public Class Form1
         BackColor = Color.Red
         ' Make the background color of form display transparently.
         TransparencyKey = BackColor
-    End Sub 'InitializeMyForm
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

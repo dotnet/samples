@@ -19,7 +19,7 @@ Public Class MyMethodTracingSwitch
     
     Public Sub New(displayName As String, description As String)
         MyBase.New(displayName, description)
-    End Sub 'New
+    End Sub
 
 
     Public Property Level() As MethodTracingSwitchLevel
@@ -55,7 +55,7 @@ Public Class MyMethodTracingSwitch
 
             outExit = True
         End If
-    End Sub 'SetSwitchSetting
+    End Sub
 
 
     Public ReadOnly Property OutputExit() As Boolean
@@ -70,7 +70,7 @@ Public Class MyMethodTracingSwitch
             Return outEnter
         End Get
     End Property
-End Class 'MyMethodTracingSwitch
+End Class
 
 ' </Snippet2>
 ' <Snippet3>
@@ -95,5 +95,5 @@ Public Class Class1
         ' Write another diagnostic message if the switch is set to exiting.
         Debug.WriteLineIf(mySwitch.OutputExit, "Exiting Main")
     End Sub
-End Class 'MyClass
+End Class
 ' </Snippet3>

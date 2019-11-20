@@ -20,9 +20,9 @@ Public Class SamplesRegionInfo
       Console.WriteLine("   CurrencySymbol:               {0}", myRI1.CurrencySymbol)
       Console.WriteLine("   ISOCurrencySymbol:            {0}", myRI1.ISOCurrencySymbol)
 
-   End Sub 'Main 
+   End Sub
 
-End Class 'SamplesRegionInfo
+End Class
 
 
 'This code produces the following output.

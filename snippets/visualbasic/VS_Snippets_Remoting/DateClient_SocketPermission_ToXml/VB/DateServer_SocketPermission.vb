@@ -18,8 +18,6 @@ Imports System.Net.Sockets
 Imports System.Text
 Imports System.Security
 Imports System.Collections
-Imports Microsoft.VisualBasic
-
 
 Public Class DateServer
     
@@ -51,14 +49,14 @@ Public Class DateServer
             Console.WriteLine("Exception caught !!!")
             Console.WriteLine(("Message " + exception.Message))
         End Try
-    End Sub 'Main
+    End Sub
     
     
     Public Sub New()
         asciiEncoding = Encoding.ASCII
         serverSocket = New Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp)
         serverBacklog = 10
-    End Sub 'New
+    End Sub
     
     
     'Return the current date on the client connection.
@@ -101,5 +99,5 @@ Public Class DateServer
         Console.WriteLine("Usage : DateServer_SocketPermission")
         Console.WriteLine(ControlChars.Tab + "DateServer_SocketPermission " + ChrW(60) + "port" + ChrW(62))
         Console.WriteLine(ControlChars.Tab + "port is the port on which the DateServer is listening")
-    End Sub 'PrintUsage
-End Class 'DateServer
+    End Sub
+End Class

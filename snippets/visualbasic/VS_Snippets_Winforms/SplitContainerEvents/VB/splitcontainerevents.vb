@@ -1,13 +1,11 @@
 ﻿' <snippet1>
 ' Compile this example using the following command line:
 ' vbc splitcontainerevents.vb /r:System.Drawing.dll /r:System.Windows.Forms.dll /r:System.dll /r:System.Data.dll
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Windows.Forms
 Imports System.Data
-Imports Microsoft.VisualBasic
 
 ' Create an empty Windows form.
 Public Class Form1
@@ -55,7 +53,7 @@ ResumeLayout(False)
 <STAThread()>  _
 Shared Sub Main()
     Application.Run(New Form1())
-End Sub 'Main
+End Sub
 
     Private Sub SplitContainer1_SplitterMoving(ByVal sender As Object, ByVal e As System.Windows.Forms.SplitterCancelEventArgs) Handles SplitContainer1.SplitterMoving
         ' Define what happens while the splitter is moving.

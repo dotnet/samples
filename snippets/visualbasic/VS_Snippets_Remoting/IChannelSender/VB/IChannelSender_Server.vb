@@ -49,5 +49,5 @@ Class MyServer
       Catch ex As Exception
          Console.WriteLine("The following exception is raised on server side : " + ex.Message)
       End Try
-   End Sub 'Main
-End Class 'MyServer
+   End Sub
+End Class

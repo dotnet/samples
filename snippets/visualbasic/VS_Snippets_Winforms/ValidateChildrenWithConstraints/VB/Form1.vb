@@ -58,32 +58,32 @@ Namespace ValidateChildrenWithConstraints
             SubTextBox1.CausesValidation = True
             FlowPanel1.Controls.Add(SubTextBox1)
             Me.Controls.Add(FlowPanel1)
-        End Sub 'Form1_Load
+        End Sub
 
 
         Sub SubTextBox1_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles SubTextBox1.Validating
             MessageBox.Show("SubTextBox1 Validating!")
-        End Sub 'SubTextBox1_Validating
+        End Sub
 
 
         Sub TextBox1_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles TextBox1.Validating
             MessageBox.Show("TextBox1 Validating!")
-        End Sub 'TextBox1_Validating
+        End Sub
 
 
         Sub TextBox2_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles TextBox2.Validating
             MessageBox.Show("TextBox2 Validating!")
-        End Sub 'TextBox2_Validating
+        End Sub
 
 
         Sub TextBox3_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles TextBox3.Validating
             MessageBox.Show("TextBox3 Validating!")
-        End Sub 'TextBox3_Validating
+        End Sub
 
 
         Sub Button1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles button1.Click
             Me.ValidateChildren((ValidationConstraints.ImmediateChildren Or ValidationConstraints.Enabled))
-        End Sub 'Button1_Click
-    End Class 'Form1
+        End Sub
+    End Class
 End Namespace 'ValidateChildrenWithConstraints
 '</SNIPPET1>

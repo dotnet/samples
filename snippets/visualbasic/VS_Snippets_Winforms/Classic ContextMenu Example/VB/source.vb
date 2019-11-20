@@ -1,7 +1,6 @@
 ﻿Option Explicit
 Option Strict
 
-Imports System
 Imports System.Data
 Imports System.ComponentModel
 Imports System.Windows.Forms
@@ -34,6 +33,6 @@ Public Class Form1
             ' Add the MenuItem to display for the PictureBox.
             contextMenu1.MenuItems.Add(menuItem3)
         End If
-    End Sub 'MyPopupEventHandler '
+    End Sub
     ' </Snippet1>
-End Class 'Form1
+End Class

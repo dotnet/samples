@@ -1,7 +1,6 @@
 ﻿'<Snippet1>
 ' Example for the Decimal.ToString( ) methods.
 Imports System.Globalization
-Imports Microsoft.VisualBasic
 
 Module DecimalToStringDemo
     

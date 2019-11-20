@@ -162,5 +162,5 @@ Class MySoapClass
       ' Write the 'ServiceDescription' object as a WSDL file.
       myDescription.Write("AddNumbersOut_vb.wsdl")
       Console.WriteLine(" 'AddNumbersOut.Wsdl' file was generated")
-   End Sub 'Main
-End Class 'MySoapClass
+   End Sub
+End Class

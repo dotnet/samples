@@ -1,7 +1,6 @@
 ﻿
 ' compile with: -r:system.dll -r:system.windows.forms.dll -r:system.drawing.dll
 Imports System.Windows.Forms
-Imports System
 Imports System.Drawing
 
 Public Class [MyClass]
@@ -9,7 +8,7 @@ Public Class [MyClass]
    
    <STAThread()> Public Shared Sub Main()
       Application.Run(New [MyClass]())
-   End Sub 'Main   
+   End Sub
 ' <snippet1>   
    Public Sub New()
       ' Create a new DateTimePicker.
@@ -18,4 +17,4 @@ Public Class [MyClass]
       dateTimePicker1.CalendarFont = New Font("Courier New", 8.25F, FontStyle.Italic, GraphicsUnit.Point, CType(0, [Byte]))
    End Sub
 ' </snippet1>
-End Class '[MyClass]
+End Class

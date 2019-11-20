@@ -11,6 +11,6 @@ Public Class Form1
     ' <Snippet1>
     Private Sub Command_Button_Click(sender As Object, e As CommandEventArgs)
         Dim args As New CommandEventArgs(e)
-    End Sub 'Command_Button_Click
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

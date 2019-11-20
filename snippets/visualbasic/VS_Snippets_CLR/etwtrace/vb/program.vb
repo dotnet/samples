@@ -18,14 +18,14 @@ Class MyCompanyEventSource
         Public Const DataBase As EventKeywords = CType(2, EventKeywords)
         Public Const Diagnostic As EventKeywords = CType(4, EventKeywords)
         Public Const Perf As EventKeywords = CType(8, EventKeywords)
-    End Class 'Keywords
+    End Class
     '</Snippet3>
 
     '<Snippet4>
     Public Class Tasks
         Public Const Page As EventTask = CType(1, EventTask)
         Public Const DBQuery As EventTask = CType(1, EventTask)
-    End Class 'Tasks
+    End Class
     '</Snippet2>
     '</Snippet4>
 
@@ -33,14 +33,14 @@ Class MyCompanyEventSource
     <[Event](1, Message:="Application Failure: {0}", Level:=EventLevel.Error, Keywords:=Keywords.Diagnostic)> _
     Public Sub Failure(ByVal message As String)
         WriteEvent(1, message)
-    End Sub 'Failure
+    End Sub
     '</Snippet5>
 
     '<Snippet6>
     <[Event](2, Message:="Starting up.", Keywords:=Keywords.Perf, Level:=EventLevel.Informational)> _
     Public Sub Startup()
         WriteEvent(2)
-    End Sub 'Startup
+    End Sub
     '</Snippet6>
 
     '<Snippet7>
@@ -49,7 +49,7 @@ Class MyCompanyEventSource
         If IsEnabled() Then
             WriteEvent(3, ID, url)
         End If
-    End Sub 'PageStart
+    End Sub
     '</Snippet7>
 
     '<Snippet8>
@@ -58,21 +58,21 @@ Class MyCompanyEventSource
         If IsEnabled() Then
             WriteEvent(4, ID)
         End If
-    End Sub 'PageStop
+    End Sub
     '</Snippet8>
 
     '<Snippet9>
     <[Event](5, Opcode:=EventOpcode.Start, Task:=Tasks.DBQuery, Keywords:=Keywords.DataBase, Level:=EventLevel.Informational)> _
     Public Sub DBQueryStart(ByVal sqlQuery As String)
         WriteEvent(5, sqlQuery)
-    End Sub 'DBQueryStart
+    End Sub
     '</Snippet9>
 
     '<Snippet10>
     <[Event](6, Opcode:=EventOpcode.Stop, Task:=Tasks.DBQuery, Keywords:=Keywords.DataBase, Level:=EventLevel.Informational)> _
     Public Sub DBQueryStop()
         WriteEvent(6)
-    End Sub 'DBQueryStop
+    End Sub
     '</Snippet10>
 
     '<Snippet11>
@@ -81,17 +81,17 @@ Class MyCompanyEventSource
         If IsEnabled() Then
             WriteEvent(7, ID)
         End If
-    End Sub 'Mark
+    End Sub
     '</Snippet11>
 
     '<Snippet12>
     <[Event](8)> _
     Public Sub LogColor(ByVal color As MyColor)
         WriteEvent(8, Fix(color))
-    End Sub 'LogColor 
+    End Sub
     '</Snippet12>
     Public Shared Log As New MyCompanyEventSource()
-End Class 'MyCompanyEventSource
+End Class
 
 
 Class Program
@@ -115,6 +115,6 @@ Class Program
         MyCompanyEventSource.Log.Failure("This is a failure 2")
         MyCompanyEventSource.Log.Failure("This is a failure 3")
         '</Snippet13>
-    End Sub 'Main
-End Class 'Program
+    End Sub
+End Class
 '</Snippet1>

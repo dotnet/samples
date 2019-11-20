@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.Windows.Automation
@@ -13,7 +12,7 @@ Class UIADockPattern_snippets
     ''' </summary>
     Public Sub New()
 
-    End Sub 'New
+    End Sub
 
 
     ' <Snippet100>
@@ -156,7 +155,7 @@ Class UIADockPattern_snippets
             ' TO DO: error handling
         End Try
 
-    End Sub 'SetDockPositionOfControl 
+    End Sub
     ' </Snippet103>
 
     '''--------------------------------------------------------------------
@@ -173,6 +172,6 @@ Class UIADockPattern_snippets
             ' and call its Run() method to start it.
             Dim app As New UIADockPattern_snippets()
         
-        End Sub 'Main
-    End Class 'TestMain
-End Class 'UIADockPattern_snippets
+        End Sub
+    End Class
+End Class

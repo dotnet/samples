@@ -1,8 +1,6 @@
-﻿Imports System
-Imports System.Drawing
+﻿Imports System.Drawing
 Imports System.ComponentModel
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
 
 Namespace ControlMembers3
    Public Class Form1
@@ -27,7 +25,7 @@ Namespace ControlMembers3
          cust.Name = "Microsoft"
          cust.AccountNumber = 123456
          Me.Tag = cust
-      End Sub 'New
+      End Sub
       
       Private Sub InitializeComponent()
          Me.button1 = New System.Windows.Forms.Button()
@@ -118,17 +116,17 @@ Namespace ControlMembers3
          Me.Name = "Form1"
          Me.Text = "Form1"
          Me.ResumeLayout(False)
-      End Sub 'InitializeComponent
+      End Sub
        
       <STAThread()> _
       Shared Sub Main() '
          Application.Run(New Form1())
-      End Sub 'Main
+      End Sub
       
       
       Private Sub button1_Click(sender As Object, e As System.EventArgs) Handles button1.Click
          AddButtons()
-      End Sub 'button1_Click
+      End Sub
       
       
       
@@ -213,15 +211,15 @@ End Sub
             ' Update the font used in the text box.
             textBox1.Font = New Font(menuItem.Text, textBox1.Font.Size)
          End If
-      End Sub 'menuItemEditFont_Click
-   End Class 'Form1
+      End Sub
+   End Class
    
    
    
    Public Class CustomerForm
       Inherits Form
       Public UserName As String
-   End Class 'CustomerForm
+   End Class
    
    Public Class Customer
       Public Name As String
@@ -231,13 +229,13 @@ End Sub
       Public Overrides Function ToString() As String
          Return AccountNumber.ToString() + Environment.NewLine + Name
       End Function 'ToString
-   End Class 'Customer
+   End Class
    
    
    
    Public Class AboutDialog
       Inherits Form
       Public FormText As String
-   End Class 'AboutDialog
+   End Class
 
 End Namespace 'ControlMembers3

@@ -177,7 +177,7 @@ Public Class FaultBindingCollection_Add
       
       ' Display the WSDL generated to the console.
       myServiceDescription.Write(Console.Out)
-   End Sub 'Main
+   End Sub
    
    
    Public Shared Function CreateComplexTypeXmlElement(minoccurs As String, maxoccurs As String, name As String, isNillable As Boolean, schemaTypeName As XmlQualifiedName) As XmlSchemaElement
@@ -207,4 +207,4 @@ Public Class FaultBindingCollection_Add
       myMessage.Parts.Add(myMessagePart)
       Return myMessage
    End Function 'CreateMessage
-End Class 'FaultBindingCollection_Add
+End Class

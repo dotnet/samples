@@ -16,6 +16,6 @@ Public Class Class1
             Next i
             reader.MoveToElement() 'Moves the reader back to the element node.
         End If
-    End Sub 'DisplayAttributes
+    End Sub
     ' </Snippet1>
-End Class 'Class1 
+End Class

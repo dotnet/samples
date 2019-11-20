@@ -13,6 +13,6 @@ Public Class Page1
         Dim index As Integer = 0
         Dim setindex As Integer = 1
         Dim myItem As New DataGridItem(index, setindex, ListItemType.Item)
-    End Sub 'Page_Load
+    End Sub
     ' </Snippet1>
-End Class 'Page1 
+End Class

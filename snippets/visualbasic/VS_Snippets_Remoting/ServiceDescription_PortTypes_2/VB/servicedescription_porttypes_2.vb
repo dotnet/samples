@@ -47,7 +47,7 @@ Namespace ServiceDescription1
          Else
             Console.WriteLine("This file is not a WSDL file.")
          End If
-      End Sub 'Main
+      End Sub
        
       ' Creates an Operation for a PortType.
       Public Shared Function CreateOperation(operationName As String, _
@@ -68,5 +68,5 @@ Namespace ServiceDescription1
       End Function 'CreateOperation
 ' </Snippet2>
 ' </Snippet1>
-   End Class 'MyService 
+   End Class
 End Namespace 'ServiceDescription1 

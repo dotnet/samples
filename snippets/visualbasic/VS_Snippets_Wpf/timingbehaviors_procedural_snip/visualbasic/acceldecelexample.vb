@@ -6,7 +6,6 @@
 '
 '
 
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Media
@@ -23,7 +22,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			' Create a name scope for the page.
 			NameScope.SetNameScope(Me, New NameScope())
 
-			Me.WindowTitle = "Acceleration and Deceleration Example"
+            WindowTitle = "Acceleration and Deceleration Example"
 
             Dim myStackPanel As New StackPanel With {
                 .Margin = New Thickness(20)
@@ -35,7 +34,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
             Dim nonAcceleratedOrDeceleratedRectangle As New Rectangle With {
                 .Name = "nonAcceleratedOrDeceleratedRectangle"
             }
-            Me.RegisterName(nonAcceleratedOrDeceleratedRectangle.Name, nonAcceleratedOrDeceleratedRectangle)
+            RegisterName(nonAcceleratedOrDeceleratedRectangle.Name, nonAcceleratedOrDeceleratedRectangle)
             nonAcceleratedOrDeceleratedRectangle.Width = 10
             nonAcceleratedOrDeceleratedRectangle.Height = 20
             Dim mySolidColorBrush As New SolidColorBrush(Color.FromArgb(251, 153, 51, 255))
@@ -46,7 +45,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
             Dim acceleratedRectangle As New Rectangle With {
                 .Name = "acceleratedRectangle"
             }
-            Me.RegisterName(acceleratedRectangle.Name, acceleratedRectangle)
+            RegisterName(acceleratedRectangle.Name, acceleratedRectangle)
             acceleratedRectangle.Width = 10
             acceleratedRectangle.Height = 20
             mySolidColorBrush = New SolidColorBrush(Color.FromArgb(251, 51, 51, 255))
@@ -57,7 +56,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
             Dim deceleratedRectangle As New Rectangle With {
                 .Name = "deceleratedRectangle"
             }
-            Me.RegisterName(deceleratedRectangle.Name, deceleratedRectangle)
+            RegisterName(deceleratedRectangle.Name, deceleratedRectangle)
             deceleratedRectangle.Width = 10
             deceleratedRectangle.Height = 20
             mySolidColorBrush = New SolidColorBrush(Color.FromArgb(251, 51, 255, 102))
@@ -68,7 +67,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
             Dim acceleratedAndDeceleratedRectangle As New Rectangle With {
                 .Name = "acceleratedAndDeceleratedRectangle"
             }
-            Me.RegisterName(acceleratedAndDeceleratedRectangle.Name, acceleratedAndDeceleratedRectangle)
+            RegisterName(acceleratedAndDeceleratedRectangle.Name, acceleratedAndDeceleratedRectangle)
             acceleratedAndDeceleratedRectangle.Width = 10
             acceleratedAndDeceleratedRectangle.Height = 20
             mySolidColorBrush = New SolidColorBrush(Color.FromArgb(251, 204, 255, 51))
@@ -158,8 +157,8 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
             myEventTrigger.Actions.Add(myBeginStoryboard)
             myStackPanel.Triggers.Add(myEventTrigger)
 
-			Me.Content = myStackPanel
+            Content = myStackPanel
 
-		End Sub
+        End Sub
 	End Class
 End Namespace

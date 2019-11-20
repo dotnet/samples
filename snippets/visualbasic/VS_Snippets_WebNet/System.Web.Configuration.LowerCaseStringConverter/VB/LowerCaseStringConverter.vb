@@ -25,7 +25,7 @@ Namespace Samples.AspNet
     Public Overridable Sub OnComponentChanged() _
      Implements System.ComponentModel.ITypeDescriptorContext.OnComponentChanged
       Throw New Exception("The method or operation is not implemented.")
-    End Sub 'OnComponentChanged
+    End Sub
 
     Public Overridable Function OnComponentChanging() As Boolean _
      Implements System.ComponentModel.ITypeDescriptorContext.OnComponentChanging
@@ -44,7 +44,7 @@ Namespace Samples.AspNet
       Throw New Exception("The method or operation is not implemented.")
     End Function 'GetService
 
-  End Class 'lowerCaseDescContext 
+  End Class
 
   Class UsingLowerCaseStringConverter
     Public Shared Sub Main()

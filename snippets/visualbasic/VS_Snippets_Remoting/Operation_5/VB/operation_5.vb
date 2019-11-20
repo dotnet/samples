@@ -38,7 +38,7 @@ Class MyOperationClass
       myDescription.Write("Operation_5_Output_VB.wsdl")
       Console.WriteLine("WSDL file with name 'Operation_5_Output_VB.wsdl'" + _ 
                            "file created Successfully")
-   End Sub 'Main
+   End Sub
    
    Public Shared Function CreateOperation(myOperationName As String, myInputMesg As String, _
                                                          myOutputMesg As String) As Operation
@@ -64,5 +64,5 @@ Class MyOperationClass
 ' </Snippet2>
       Return myOperation
    End Function 'CreateOperation 
-End Class 'MyOperationClass 
+End Class
 ' </Snippet1>

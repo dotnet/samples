@@ -1,6 +1,5 @@
 ﻿
 '<snippet1>
-Imports System
 Imports System.CodeDom
 Imports System.ComponentModel
 Imports System.ComponentModel.Design
@@ -44,7 +43,7 @@ Namespace CodeDomSerializerSample
          End If
          Return codeObject
       End Function 'Serialize
-   End Class 'MyCodeDomSerializer
+   End Class
 
 '<Snippet2>
    <DesignerSerializer(GetType(MyCodeDomSerializer), GetType(CodeDomSerializer))> _
@@ -60,7 +59,7 @@ Namespace CodeDomSerializerSample
             localProperty = Value
          End Set
       End Property
-   End Class 'MyComponent
+   End Class
 '</Snippet2>
 
 End Namespace
@@ -69,6 +68,6 @@ End Namespace
 Namespace CodeDomSerializerSample
    Class CodeDomSerializerStart
       Public Shared Sub Main()
-      End Sub 'Main
-   End Class 'CodeDomSerializerStart
+      End Sub
+   End Class
 End Namespace 'CodeDomSerializerSample

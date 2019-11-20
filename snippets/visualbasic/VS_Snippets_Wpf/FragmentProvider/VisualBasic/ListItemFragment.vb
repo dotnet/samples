@@ -22,7 +22,6 @@
 ' PARTICULAR PURPOSE.
 ' 
 '******************************************************************************
-Imports System
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.Windows.Automation.Provider
@@ -52,7 +51,7 @@ Public Class ListItemProvider
         ContainingListProvider = rootProvider
         ListItemControl = thisItem
 
-    End Sub 'New
+    End Sub
 
 
     ''' <summary>
@@ -230,7 +229,7 @@ Public Class ListItemProvider
             Throw New ElementNotAvailableException()
         End If
         ListItemControl.Container.SelectedIndex = Index
-    End Sub 'SetFocus
+    End Sub
     
     #End Region
 
@@ -242,7 +241,7 @@ Public Class ListItemProvider
     ''' </summary>
     Public Sub AddToSelection() Implements ISelectionItemProvider.AddToSelection
         Throw New InvalidOperationException("Multiple selection is not supported.")
-    End Sub 'AddToSelection
+    End Sub
 
     ''' <summary>
     ''' Specifies whether the item is selected.
@@ -260,7 +259,7 @@ Public Class ListItemProvider
     ''' </summary>
     Public Sub RemoveFromSelection() Implements ISelectionItemProvider.RemoveFromSelection
         Throw New InvalidOperationException("Selection is required for this control.")
-    End Sub 'RemoveFromSelection
+    End Sub
     
     
     ''' <summary>
@@ -269,7 +268,7 @@ Public Class ListItemProvider
     Public Sub Select1() Implements ISelectionItemProvider.Select
         ' For this list box, Focus and Selection are the same.
         SetFocus()
-    End Sub 'Select
+    End Sub
 
     ''' <summary>
     ''' Gets the list box that contains the item.
@@ -283,4 +282,4 @@ Public Class ListItemProvider
     
     #End Region
 
-End Class 'ListItemProvider 
+End Class

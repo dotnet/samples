@@ -48,7 +48,7 @@ Public Class ClientClass
       Console.WriteLine(data.numOfAccesses)
       Console.WriteLine(returnedData.numOfAccesses)
 
-   End Sub 'Main
+   End Sub
 
-End Class 'ClientClass
+End Class
 ' </Snippet1>

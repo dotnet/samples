@@ -1,7 +1,6 @@
 ﻿'<Snippet1>
 Imports System.Reflection
 Imports System.Collections.Generic
-Imports Microsoft.VisualBasic
 
 ' Define a base class with two type parameters.
 Public Class Base(Of T, U)
@@ -38,7 +37,7 @@ Public Class Test
         ' Display its open constructed base type.
         DisplayGenericTypeInfo(derivedType.BaseType)
     
-    End Sub 'Main
+    End Sub
     
     Private Shared Sub DisplayGenericTypeInfo(ByVal t As Type) 
         Console.WriteLine(vbCrLf & "{0}", t)
@@ -75,8 +74,8 @@ Public Class Test
             Next tParam
         End If
     
-    End Sub 'DisplayGenericTypeInfo
-End Class 'Test
+    End Sub
+End Class
 
 ' This example produces the following output:
 '

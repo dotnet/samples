@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.ComponentModel
 Imports System.Windows.Forms
 Imports System.Drawing
@@ -75,6 +74,6 @@ Public Class Form1
         End If
         ' Assign mainMenu1 to the form.
         Me.Menu = mainMenu1
-    End Sub 'CreateMyMenuItems
+    End Sub
     ' </snippet1>
 End Class

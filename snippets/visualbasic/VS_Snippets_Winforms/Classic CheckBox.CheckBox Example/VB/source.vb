@@ -1,7 +1,6 @@
 ﻿Option Explicit
 Option Strict
 
-Imports System
 Imports System.Data
 Imports System.ComponentModel
 Imports System.Windows.Forms
@@ -25,6 +24,6 @@ Public Class Form1
         
         ' Add the check box control to the form.
         Controls.Add(checkBox1)
-    End Sub 'InstantiateMyCheckBox
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

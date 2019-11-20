@@ -37,11 +37,11 @@ Public Class PermissionTest
         permission.AddPermission(System.Net.NetworkInformation.NetworkInformationAccess.Read)
         Console.WriteLine("Access is {0}", permission.Access)
         '</Snippet7>
-    End Sub 'CreatePermission
+    End Sub
     
     Public Shared Sub Main() 
         CreatePermission()
     
-    End Sub 'Main
-End Class 'PermissionTest
+    End Sub
+End Class
 

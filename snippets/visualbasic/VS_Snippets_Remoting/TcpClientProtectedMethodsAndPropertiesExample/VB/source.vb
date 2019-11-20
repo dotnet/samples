@@ -20,5 +20,5 @@ Public Class Example
          Console.WriteLine("client is connected")
       End If 
       '</Snippet1>
-   End Sub 'Main
-End Class 'Example
+   End Sub
+End Class

@@ -1,6 +1,5 @@
 ﻿'<SnippetAddInSideAdapterCode>
 
-Imports System
 Imports System.AddIn.Contract
 Imports System.AddIn.Pipeline
 Imports System.Security.Permissions

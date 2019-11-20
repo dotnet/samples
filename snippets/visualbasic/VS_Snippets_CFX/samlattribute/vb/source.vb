@@ -35,7 +35,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
         Public Sub New()
             MyBase.New(ServiceConstants.SecurityTokenServiceName, FederationUtilities.GetX509TokenFromCert(ServiceConstants.CertStoreName, ServiceConstants.CertStoreLocation, ServiceConstants.CertDistinguishedName), FederationUtilities.GetX509TokenFromCert(ServiceConstants.CertStoreName, ServiceConstants.CertStoreLocation, ServiceConstants.TargetDistinguishedName))
 
-        End Sub 'New
+        End Sub
 
         '/ <summary>
         '/ Overrides the GetIssuedClaims from the SecurityTokenService base class.
@@ -80,7 +80,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
         '</snippet1>
         Public Shared Sub Main()
 
-        End Sub 'Main 
+        End Sub
 
         '/ <summary>
         '/ Wrapper for the Application level check performed at the BookStoreSTS for 
@@ -91,7 +91,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
                 Throw New FaultException(String.Format("Purchase limit not sufficient to purchase '{0}'", bookName))
             End If
 
-        End Sub 'EnsurePurchaseLimitSufficient
+        End Sub
 
 
         '/ <summary>
@@ -241,7 +241,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
             Return True
 
         End Function 'IssuedByHomeRealmSTS
-    End Class 'BookStoreSTS
+    End Class
 
     '/ <summary>
     '/ Abstract base class for STS implementations.
@@ -264,7 +264,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
             Me.issuerTokenValue = issuerToken
             Me.proofKeyEncryptionTokenValue = encryptionToken
 
-        End Sub 'New
+        End Sub
 
         '/ <summary>
         '/ The name of the STS.
@@ -319,7 +319,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
         '/ <returns>Proof Token</returns>
         Protected Shared Function CreateProofToken(ByVal keySize As Integer) As BinarySecretSecurityToken
             ' Create an array to store the key bytes.
-            Dim key(keySize / 8) As Byte
+            Dim key(keySize / 8 - 1) As Byte
             ' Create some random bytes.
             Dim random As New RNGCryptoServiceProvider()
             random.GetNonZeroBytes(key)
@@ -459,7 +459,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
         Protected Sub New()
             MyClass.New(String.Empty, String.Empty, 0, Nothing)
 
-        End Sub 'New
+        End Sub
 
 
         '/ <summary>
@@ -476,7 +476,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
             Me.m_keySize = keySize
             Me.m_appliesTo = appliesTo
 
-        End Sub 'New
+        End Sub
 
         ' Public properties
         '/ <summary>
@@ -536,7 +536,9 @@ Namespace Microsoft.ServiceModel.Samples.Federation
                 m_appliesTo = value
             End Set
         End Property
-    End Class 'RequestSecurityTokenBase '/ <summary>.
+    End Class
+	
+	'/ <summary>.
     '/ A class that represents a RequestSecurityToken message according to February 2005 WS-Trust
     '/ </summary>
     <ComVisible(False)> _
@@ -553,7 +555,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
         Public Sub New()
             MyClass.New(String.Empty, String.Empty, 0, Nothing, Nothing)
 
-        End Sub 'New
+        End Sub
 
 
         '/ <summary>
@@ -568,7 +570,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
             MyBase.New(context, tokenType, keySize, appliesTo) ' Pass first 4 params to base class
             Me.requestorEntropy = entropy
 
-        End Sub 'New
+        End Sub
 
         ' Public properties
         '/ <summary>
@@ -661,7 +663,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
 
             writer.WriteEndElement()
             ' wst:RequestSecurityToken
-        End Sub 'OnWriteBodyContents
+        End Sub
 
 
 
@@ -761,7 +763,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
                     Dim nBytes As Integer = xr.ReadContentAsBase64(temp, 0, temp.Length)
 
                     ' Allocate a new array of the correct size to hold the provided entropy.
-                    Dim entropy(nBytes) As Byte
+                    Dim entropy(nBytes - 1) As Byte
 
                     ' Copy the entropy from the temporary array into the new array.
                     Dim i As Integer
@@ -826,7 +828,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
             Return ea
 
         End Function 'ProcessAppliesToElement
-    End Class 'RequestSecurityToken
+    End Class
 
     Public Class Constants
         Public Const BookNameHeaderNamespace As String = "http://tempuri.org/"
@@ -845,12 +847,12 @@ Namespace Microsoft.ServiceModel.Samples.Federation
             Public Class Actions
                 Public Const Issue As String = "http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue"
                 Public Const IssueReply As String = "http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue"
-            End Class 'Actions
+            End Class
 
 
             Public Class Attributes
                 Public Const Context As String = "Context"
-            End Class 'Attributes
+            End Class
 
 
             Public Class Elements
@@ -865,13 +867,13 @@ Namespace Microsoft.ServiceModel.Samples.Federation
                 Public Const RequestedUnattachedReference As String = "RequestedUnattachedReference"
                 Public Const RequestedProofToken As String = "RequestedProofToken"
                 Public Const ComputedKey As String = "ComputedKey"
-            End Class 'Elements
+            End Class
 
 
             Public Class ComputedKeyAlgorithms
                 Public Const PSHA1 As String = "http://schemas.xmlsoap.org/ws/2005/02/trust/CK/PSHA1"
-            End Class 'ComputedKeyAlgorithms
-        End Class 'Trust
+            End Class
+        End Class
 
         ' Various constants for WS-Policy.
 
@@ -881,8 +883,8 @@ Namespace Microsoft.ServiceModel.Samples.Federation
 
             Public Class Elements
                 Public Const AppliesTo As String = "AppliesTo"
-            End Class 'Elements
-        End Class 'Policy
+            End Class
+        End Class
 
         ' Various constants for WS-Addressing.
 
@@ -892,9 +894,9 @@ Namespace Microsoft.ServiceModel.Samples.Federation
 
             Public Class Elements
                 Public Const EndpointReference As String = "EndpointReference"
-            End Class 'Elements
-        End Class 'Addressing
-    End Class 'Constants
+            End Class
+        End Class
+    End Class
     '/ <summary>
     '/ A class that represents a RequestSecurityTokenResponse message according to February 2005 WS-Trust.
     '/ </summary>
@@ -917,7 +919,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
         Public Sub New()
             MyClass.New(String.Empty, String.Empty, 0, Nothing, Nothing, Nothing, False)
 
-        End Sub 'New
+        End Sub
 
 
         '/ <summary>
@@ -936,7 +938,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
             Me.requestedProofTokenValue = requestedProofToken
             Me.computeKeyValue = computeKey
 
-        End Sub 'New
+        End Sub
 
         ' public properties
         '/ <summary>
@@ -1027,9 +1029,9 @@ Namespace Microsoft.ServiceModel.Samples.Federation
         Public Shared Function ComputeCombinedKey(ByVal requestorEntropy() As Byte, ByVal issuerEntropy() As Byte, ByVal keySize As Integer) As Byte()
             Dim kha As KeyedHashAlgorithm = New HMACSHA1(requestorEntropy, True)
 
-            Dim key(keySize / 8) As Byte ' Final key
+            Dim key(keySize / 8 - 1) As Byte ' Final key
             Dim a As Byte() = issuerEntropy ' A(0)
-            Dim b(kha.HashSize / 8 + a.Length) As Byte ' Buffer for A(i) + seed
+            Dim b(kha.HashSize / 8 + a.Length - 1) As Byte ' Buffer for A(i) + seed
             Dim i As Integer
 
             While i < key.Length
@@ -1143,8 +1145,8 @@ Namespace Microsoft.ServiceModel.Samples.Federation
 
             writer.WriteEndElement()
             ' wst:RequestSecurityTokenResponse
-        End Sub 'OnWriteBodyContents
-    End Class 'RequestSecurityTokenResponse
+        End Sub
+    End Class
 
     Public NotInheritable Class FederationUtilities
 
@@ -1210,8 +1212,8 @@ Namespace Microsoft.ServiceModel.Samples.Federation
 
         Private Sub New()
 
-        End Sub 'New
-    End Class 'FederationUtilities
+        End Sub
+    End Class
 
     Public NotInheritable Class SamlTokenCreator
 
@@ -1302,7 +1304,7 @@ Namespace Microsoft.ServiceModel.Samples.Federation
             IssuerDistinguishedName = ConfigurationManager.AppSettings("issuerDistinguishedName")
             CheckIfLoaded(IssuerDistinguishedName)
 
-        End Sub 'LoadAppSettings
+        End Sub
 
 
         '/ <summary>
@@ -1314,10 +1316,10 @@ Namespace Microsoft.ServiceModel.Samples.Federation
                 Throw New ConfigurationErrorsException("Required Configuration Element(s) missing at BookStoreSTS. Please check the STS configuration file.")
             End If
 
-        End Sub 'CheckIfLoaded
+        End Sub
 
         Private Sub New()
 
-        End Sub 'New
-    End Class 'ServiceConstants
+        End Sub
+    End Class
 End Namespace

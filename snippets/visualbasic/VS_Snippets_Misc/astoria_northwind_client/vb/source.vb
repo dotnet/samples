@@ -7,9 +7,11 @@ Imports System.Collections.Generic
 Imports System.Linq
 Imports System.Text
 Imports System.Data.Services.Client
+
 '<snippetUsingForAttributes>
 Imports System.Data.Services.Common
 Imports NorthwindClient.Northwind
+
 '</snippetUsingForAttributes>
 
 Public Class SourceVb

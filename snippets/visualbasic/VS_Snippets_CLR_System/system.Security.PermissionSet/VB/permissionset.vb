@@ -5,9 +5,6 @@ Imports System.Security.Permissions
 Imports System.Security
 Imports System.IO
 Imports System.Collections
-Imports Microsoft.VisualBasic
-
-
 
 Class [MyClass]
 
@@ -132,10 +129,10 @@ Class [MyClass]
         Catch e As Exception
             Console.WriteLine(e.Message.ToString())
         End Try
-    End Sub 'PermissionSetDemo
+    End Sub
 
     Overloads Shared Sub Main(ByVal args() As String)
         PermissionSetDemo()
-    End Sub 'Main
-End Class '[MyClass] 
+    End Sub
+End Class
 '</Snippet1>

@@ -21,13 +21,13 @@ Namespace Samples.AspNet.VB.Controls
             If Not IsPostBack Then
                 Label1.Text = "The control was generated at:" & DateTime.Now.ToString("T")
             End If
-        End Sub 'Page_Load
+        End Sub
 
 
         Protected Sub SubmitBtn_Click(ByVal Sender As [Object], ByVal e As EventArgs)
             Label1.Text = "You chose: " + state.SelectedItem.Text & " and " & country.SelectedItem.Text + "."
             TimeMsg.Text = DateTime.Now.ToString("T")
-        End Sub 'SubmitBtn_Click
-    End Class 'ctlSelect
+        End Sub
+    End Class
 End Namespace
 ' </snippet1>

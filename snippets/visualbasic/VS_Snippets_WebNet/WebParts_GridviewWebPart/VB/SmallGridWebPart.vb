@@ -34,7 +34,7 @@ Namespace Samples.AspNet.VB.Controls
 
     Public Sub New()
       ExportMode = WebPartExportMode.All
-    End Sub 'New
+    End Sub
 
     ' This override prevents users from closing the control.
     Public Overrides Property AllowClose() As Boolean
@@ -111,7 +111,7 @@ Namespace Samples.AspNet.VB.Controls
 
       Me.Controls.Add(grid)
 
-    End Sub 'CreateChildControls
+    End Sub
 
 
     Private Function BuildParam(ByVal paramName As String, _
@@ -133,7 +133,7 @@ Namespace Samples.AspNet.VB.Controls
       Return theField
 
     End Function 'BuildBoundField
-  End Class 'SmallGridWebPart 
+  End Class
 
 End Namespace
 ' </snippet2>

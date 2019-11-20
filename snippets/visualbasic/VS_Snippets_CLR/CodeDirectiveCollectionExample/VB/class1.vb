@@ -7,7 +7,7 @@ Public Class Class1
     
     Public Sub New() 
     
-    End Sub 'New
+    End Sub
     
     
     ' CodeDirectiveCollection
@@ -63,7 +63,7 @@ Public Class Class1
         ' Removes the CodeDirective at index 0.
         collection.RemoveAt(0)
     
-    End Sub 'CodeDirectiveCollectionExample 
+    End Sub
     '</Snippet10>           
-End Class 'Class1 
+End Class
 '</Snippet1>

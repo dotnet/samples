@@ -15,8 +15,8 @@ Class Sample
       For Each c In arr
          Console.WriteLine(c)
       Next c
-   End Sub 'Main
-End Class 'Sample
+   End Sub
+End Class
 '
 'This example produces the following results:
 'The letters in '012wxyz789' are: 'wxyz'

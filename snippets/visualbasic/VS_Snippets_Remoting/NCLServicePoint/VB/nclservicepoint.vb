@@ -3,6 +3,7 @@ Imports System.Net
 Imports System.Net.Sockets
 Imports System.IO
 Imports System.Threading
+
 Public Class ServicePointExample
 
     ' Pass in the name of the Web page to retrieve.
@@ -29,6 +30,6 @@ Public Class ServicePointExample
         Console.WriteLine(s.ReadToEnd())
         responseStream.Close()
         response.Close()
-    End Sub 'Main
+    End Sub
 End Class
 '</Snippet1>

@@ -78,6 +78,6 @@ Class MyEventLogEntryType
       Catch e As Exception
          Console.WriteLine("Exception: {0}", e.Message)
       End Try
-   End Sub 'Main
-End Class 'MyEventLogEntryType
+   End Sub
+End Class
 ' </Snippet1>

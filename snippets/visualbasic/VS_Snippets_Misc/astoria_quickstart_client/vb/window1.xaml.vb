@@ -1,6 +1,7 @@
 ﻿'<snippetUsing>
 Imports System.Data.Services.Client
 Imports NorthwindClient.Northwind
+
 '</snippetUsing>
 
 Class Window1

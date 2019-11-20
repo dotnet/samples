@@ -15,7 +15,7 @@ NotInheritable Public Class MyResourceType
     ' Constructors
     Public Sub New() 
     
-    End Sub 'New
+    End Sub
     
     Public Sub New(ByVal textVal As String, ByVal numberValue As Integer) 
         Me.textValue = textVal

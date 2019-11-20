@@ -10,4 +10,4 @@ Public Class mySharedStringClass
       Console.WriteLine(myString)
       Return myString.Length
    End Function 'PrintString
-End Class 'mySharedStringClass
+End Class

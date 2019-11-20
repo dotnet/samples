@@ -6,9 +6,6 @@ Imports System.Net
 Imports System.Security
 Imports System.Security.Permissions
 Imports System.IO
-Imports Microsoft.VisualBasic
-
-
 
 Public Class WebPermissionAttribute_AcceptConnect
 
@@ -40,5 +37,5 @@ Public Class WebPermissionAttribute_AcceptConnect
         Catch e As Exception
             Console.WriteLine(("Exception raised : " + e.Message))
         End Try
-    End Sub ' Main
-End Class ' WebPermissionAttribute_AcceptConnect
+    End Sub
+End Class

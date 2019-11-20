@@ -1,7 +1,5 @@
 ﻿'<Snippet3>
 ' Example of the Decimal.ToInt16 and Decimal.ToUInt16 methods.
-Imports Microsoft.VisualBasic
-
 Module DecimalToU_Int16Demo
 
     Dim formatter As String = "{0,16}{1,19}{2,19}"

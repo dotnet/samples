@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.ComponentModel
+﻿Imports System.ComponentModel
 Imports System.ComponentModel.Design
 
 Namespace MiscCompModSamplesVB
@@ -7,7 +6,7 @@ Namespace MiscCompModSamplesVB
     Public Class ComponentChangingEventArgsExample
 
         Public Sub New()
-        End Sub 'New
+        End Sub
 
         '<Snippet1>
         ' This example method creates a ComponentChangingEventArgs using the specified arguments.
@@ -22,5 +21,5 @@ Namespace MiscCompModSamplesVB
         End Function
         '</Snippet1>
 
-    End Class 'ComponentChangingEventArgsExample 
+    End Class
 End Namespace 'MiscCompModSamples

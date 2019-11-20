@@ -1,8 +1,10 @@
 ﻿Imports System.Collections.Generic
 Imports System.Diagnostics
+
 '<snippet02>
 Imports System.Threading
 Imports System.Threading.Tasks
+
 Class SpinLockDemo2
 
     Const N As Integer = 100000

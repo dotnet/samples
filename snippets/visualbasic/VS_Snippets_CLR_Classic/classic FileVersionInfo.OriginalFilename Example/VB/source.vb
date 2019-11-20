@@ -15,6 +15,6 @@ Public Class Form1
         
         ' Print the original file name.
         textBox1.Text = "Original file name: " & myFileVersionInfo.OriginalFilename
-    End Sub 'GetOriginalName
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

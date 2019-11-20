@@ -11,6 +11,6 @@ Public Class Page1
     ' <Snippet2>
     Sub Page_Load(sender As Object, e As EventArgs)
         Dim CheckBox As New HtmlInputCheckBox()
-    End Sub 'Page_Load
+    End Sub
     ' </Snippet2>
-End Class 'Page1 
+End Class

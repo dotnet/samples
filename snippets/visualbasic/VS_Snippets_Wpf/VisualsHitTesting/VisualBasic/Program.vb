@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Windows.Forms
+﻿Imports System.Windows.Forms
 
 Namespace SDKSample
 	Friend NotInheritable Class Program

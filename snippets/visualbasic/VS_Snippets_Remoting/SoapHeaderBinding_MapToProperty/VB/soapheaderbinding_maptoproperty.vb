@@ -32,5 +32,5 @@ Public Class MapToPropertySample
                                           "a specific property in proxy generated class")
       End If
 ' </Snippet1>
-   End Sub 'Main
-End Class 'MapToPropertySample 
+   End Sub
+End Class

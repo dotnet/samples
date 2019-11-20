@@ -11,22 +11,10 @@ class Test
 
         try
         {
-
-            // Delete the file if it exists.
-            if (File.Exists(path))
-            {
-                // Note that no lock is put on the
-                // file and the possibility exists
-                // that another process could do
-                // something with it between
-                // the calls to Exists and Delete.
-                File.Delete(path);
-            }
-
-            // Create the file.
+            // Create the file, or overwrite if the file exists.
             using (FileStream fs = File.Create(path))
             {
-                Byte[] info = new UTF8Encoding(true).GetBytes("This is some text in the file.");
+                byte[] info = new UTF8Encoding(true).GetBytes("This is some text in the file.");
                 // Add some information to the file.
                 fs.Write(info, 0, info.Length);
             }

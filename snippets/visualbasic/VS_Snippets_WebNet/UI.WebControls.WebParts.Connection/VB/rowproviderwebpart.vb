@@ -41,7 +41,7 @@ Namespace MyCustomWebPart
             row("ZIP Code") = 98000
             _table.Rows.Add(row)
 
-        End Sub 'New
+        End Sub
 
         '<SNIPPET6>
         <ConnectionProvider("Row")> _
@@ -65,8 +65,8 @@ Namespace MyCustomWebPart
             Implements IWebPartRow.GetRowData
             callback(_table.Rows)
 
-        End Sub 'GetRowData
-    End Class 'RowProviderWebPart 
+        End Sub
+    End Class
     '</SNIPPET7>            
     '</SNIPPET1>
 

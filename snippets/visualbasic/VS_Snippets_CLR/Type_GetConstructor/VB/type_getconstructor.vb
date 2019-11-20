@@ -1,15 +1,14 @@
 ﻿' <Snippet1>
 Imports System.Reflection
 Imports System.Security
-Imports Microsoft.VisualBasic
 
 Public Class MyClass1
 
     Public Sub New()
-    End Sub 'New
+    End Sub
 
     Public Sub New(ByVal i As Integer)
-    End Sub 'New
+    End Sub
 
     Public Shared Sub Main()
         Try
@@ -30,6 +29,6 @@ Public Class MyClass1
             Console.WriteLine(("Source: " + e.Source))
             Console.WriteLine(("Message: " + e.Message))
         End Try
-    End Sub 'Main
-End Class 'MyClass1
+    End Sub
+End Class
 ' </Snippet1>

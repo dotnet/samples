@@ -17,8 +17,8 @@ Public Class FileInfoMainTest
         While sr.Peek() <> -1
             Console.WriteLine(sr.ReadLine())
         End While
-    End Sub 'Main
-End Class 'FileInfoMainTest
+    End Sub
+End Class
 'This code produces output similar to the following; 
 'results may vary based on the computer/file structure/etc.:
 '

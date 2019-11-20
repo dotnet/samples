@@ -40,7 +40,7 @@ Namespace UE.Samples.Channel
             ' <Snippet5>
             Dim binding As CustomBinding = New CustomBinding()
             binding.Elements.Add(New HttpTransportBindingElement())
-            Dim bindingParameters(2) As Object
+            Dim bindingParameters(1) As Object
 
             Dim listener As IChannelListener(Of IReplyChannel)
             listener = binding.BuildChannelListener(Of IReplyChannel)(bindingParameters)
@@ -69,7 +69,7 @@ Namespace UE.Samples.Channel
             ' <Snippet6>
             Dim binding As CustomBinding = New CustomBinding()
             binding.Elements.Add(New HttpTransportBindingElement())
-            Dim bindingParameters(2) As Object
+            Dim bindingParameters(1) As Object
             Dim listener As IChannelListener(Of IReplyChannel)
             listener = binding.BuildChannelListener(Of IReplyChannel)(New Uri("http://localhost/channelApp"), bindingParameters)
             ' </Snippet6>
@@ -89,7 +89,7 @@ Namespace UE.Samples.Channel
             ' <Snippet8>
             Dim binding As CustomBinding = New CustomBinding()
             binding.Elements.Add(New HttpTransportBindingElement())
-            Dim bindingParameters(2) As Object
+            Dim bindingParameters(1) As Object
             Dim listener As IChannelListener(Of IReplyChannel)
             listener = binding.BuildChannelListener(Of IReplyChannel)(New Uri("http://localhost/channelApp"), "http://localhost/channelApp/service", bindingParameters)
             ' </Snippet8>
@@ -109,7 +109,7 @@ Namespace UE.Samples.Channel
             ' <Snippet10>
             Dim binding As CustomBinding = New CustomBinding()
             binding.Elements.Add(New HttpTransportBindingElement())
-            Dim bindingParameters(2) As Object
+            Dim bindingParameters(1) As Object
             Dim listener As IChannelListener(Of IReplyChannel)
             listener = binding.BuildChannelListener(Of IReplyChannel)(New Uri("http://localhost/channelApp"), "http://localhost/channelApp/service", ListenUriMode.Explicit, bindingParameters)
             '</Snippet10>
@@ -129,7 +129,7 @@ Namespace UE.Samples.Channel
             ' <Snippet14>
             Dim binding As CustomBinding = New CustomBinding()
             binding.Elements.Add(New HttpTransportBindingElement())
-            Dim bindingParameters(2) As Object
+            Dim bindingParameters(1) As Object
 
             binding.CanBuildChannelFactory(Of IReplyChannel)(bindingParameters)
             '</Snippet14>

@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -26,7 +25,7 @@ Public Class Form1
         ' Required for Windows Form Designer support
         '
         InitializeComponent()
-    End Sub 'New
+    End Sub
    
     '/ <summary>
     '/ Clean up any resources being used.
@@ -38,7 +37,7 @@ Public Class Form1
             End If
         End If
         MyBase.Dispose(disposing)
-    End Sub 'Dispose
+    End Sub
 
     '/ <summary>
     '/ Required method for Designer support - do not modify
@@ -70,7 +69,7 @@ Public Class Form1
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
-    End Sub 'InitializeComponent
+    End Sub
   
     '/ <summary>
     '/ The main entry point for the application.
@@ -78,7 +77,7 @@ Public Class Form1
     <STAThread()> _
     Shared Sub Main()
         Application.Run(New Form1())
-    End Sub 'Main
+    End Sub
 
 
     '<Snippet1>
@@ -91,7 +90,7 @@ Public Class Form1
         ' ControlRemoved and ControlAdded are not available at design time.
         AddHandler Me.ControlRemoved, AddressOf Me.Control_Removed
         AddHandler Me.ControlAdded, AddressOf Me.Control_Added
-    End Sub 'Form1_Load
+    End Sub
 
 
     Private Sub Control_Added(ByVal sender As Object, ByVal e As System.Windows.Forms.ControlEventArgs)
@@ -133,4 +132,4 @@ Public Class Form1
         Next tempCtrl
     End Sub
     '</Snippet1>
-End Class 'Form1 
+End Class

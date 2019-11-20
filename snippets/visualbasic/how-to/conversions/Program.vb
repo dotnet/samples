@@ -20,7 +20,7 @@ Module Program
 
     Sub GlobalExample()
         ' <Snippet2>
-        Dim MyCultureInfo As CultureInfo = New CultureInfo("de-DE")
+        Dim MyCultureInfo As New CultureInfo("de-DE")
         Dim MyString As String = "12 Juni 2008"
         Dim MyDateTime As DateTime = DateTime.Parse(MyString, MyCultureInfo)
         Console.WriteLine(MyDateTime)
@@ -31,7 +31,7 @@ Module Program
 
     Sub DefaultValueExample()
         ' <Snippet3>
-        Dim MyCultureInfo As CultureInfo = New CultureInfo("de-DE")
+        Dim MyCultureInfo As New CultureInfo("de-DE")
         Dim MyString As String = "12 Juni 2008"
         Dim MyDateTime As DateTime = DateTime.Parse(MyString, MyCultureInfo,
                                    DateTimeStyles.NoCurrentDateDefault)
@@ -43,7 +43,7 @@ Module Program
 
     Sub ParseExactExample()
         ' <Snippet4>
-        Dim MyCultureInfo As CultureInfo = New CultureInfo("en-US")
+        Dim MyCultureInfo As New CultureInfo("en-US")
         Dim MyString() As String = {" Friday, April 10, 2009", "Friday, April 10, 2009"}
         For Each dateString As String In MyString
             Try

@@ -12,7 +12,6 @@
 
 Imports System.Web.Services.Description
 Imports System.Xml
-Imports Microsoft.VisualBasic
 
 Class MyPortTypeCollectionClass
    
@@ -68,5 +67,5 @@ Class MyPortTypeCollectionClass
       Catch e As Exception
          Console.WriteLine("Exception: " + e.Message.ToString())
       End Try
-   End Sub 'Main
-End Class 'MyPortTypeCollectionClass
+   End Sub
+End Class

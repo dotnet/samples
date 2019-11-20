@@ -17,7 +17,6 @@
 '   changing 'FalseValue' raises the 'FalseValueChanged' and
 '   'AllowNull' changes the 'AllowNullChanged' events respectively.
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -43,7 +42,7 @@ Public Class MyForm
    
    Public Sub New()
       InitializeComponent()
-   End Sub 'New
+   End Sub
    
    
    Protected Overrides OverLoads Sub Dispose(disposing As Boolean)
@@ -53,7 +52,7 @@ Public Class MyForm
          End If
       End If
       MyBase.Dispose(disposing)
-   End Sub 'Dispose
+   End Sub
    
    
    Function CreateSource() As ICollection
@@ -197,13 +196,13 @@ Public Class MyForm
       [Text] = "MyForm"
       CType(myDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
       ResumeLayout(False)
-   End Sub 'InitializeComponent
+   End Sub
     
    
   <STAThread()> Shared _
    Sub Main()
       Application.Run(New MyForm())
-   End Sub 'Main
+   End Sub
    
    
 ' <Snippet1>
@@ -216,28 +215,28 @@ Public Class MyForm
                           AddressOf myDataGridBoolColumn_TrueValueChanged
       AddHandler myDataGridBoolColumn.FalseValueChanged, _
                           AddressOf myDataGridBoolColumn_FalseValueChanged
-   End Sub 'RegisterEventHandlers
+   End Sub
    
    
    ' Event handler for event when 'TrueValue' is property changed.
    Private Sub myDataGridBoolColumn_TrueValueChanged(sender As Object, e As EventArgs)
       MessageBox.Show("The TrueValue property of the DataGridBoolColumn has been changed to " _
                                                     & myDataGridBoolColumn.TrueValue)
-   End Sub 'myDataGridBoolColumn_TrueValueChanged
+   End Sub
    
    
    ' Event handler for event when 'FalseValue' is property changed.
    Private Sub myDataGridBoolColumn_FalseValueChanged(sender As Object, e As EventArgs)
       MessageBox.Show("The FalseValue property of the DataGridBoolColumn has been changed to " _
                                                         & myDataGridBoolColumn.FalseValue)
-   End Sub 'myDataGridBoolColumn_FalseValueChanged
+   End Sub
    
    
    ' Event handler for event when 'AllowNull' is property changed.
    Private Sub myDataGridBoolColumn_AllowNullChanged(sender As Object, e As EventArgs)
       MessageBox.Show("The AllowNull property of DataGridBoolColumn has been changed to " _
                                                           & myDataGridBoolColumn.AllowNull)
-   End Sub 'myDataGridBoolColumn_AllowNullChanged
+   End Sub
    
    
 ' </Snippet3>
@@ -246,17 +245,17 @@ Public Class MyForm
    ' Change the value of 'TrueValue' property to what user specifies.
    Private Sub myComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
      myDataGridBoolColumn.TrueValue = CType(myComboBox1.Items(myComboBox1.SelectedIndex), Boolean)
-   End Sub 'myComboBox1_SelectedIndexChanged
+   End Sub
    
    
    ' Change the value of 'FalseValue' property to what user specifies.
    Private Sub myComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs)
      myDataGridBoolColumn.FalseValue = CType(myComboBox2.Items(myComboBox2.SelectedIndex), Boolean)
-   End Sub 'myComboBox2_SelectedIndexChanged
+   End Sub
    
    
    ' Change the value of 'AllowNull' property to what user specifies.
    Private Sub myComboBox3_SelectedIndexChanged(sender As Object, e As EventArgs)
      myDataGridBoolColumn.AllowNull = CType(myComboBox3.Items(myComboBox3.SelectedIndex), Boolean)
-   End Sub 'myComboBox3_SelectedIndexChanged
-End Class 'MyForm
+   End Sub
+End Class

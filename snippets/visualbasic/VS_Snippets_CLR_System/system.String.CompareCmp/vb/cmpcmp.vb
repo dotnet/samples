@@ -58,7 +58,7 @@ Class Sample
             Console.WriteLine()
         Next sc
     
-    End Sub 'Main
+    End Sub
     
     Protected Shared Sub Test(ByVal x As Integer, ByVal y As Integer, _
                               ByVal comparison As StringComparison, _
@@ -75,8 +75,8 @@ Class Sample
         End If
         Console.WriteLine(resultFmt, testNames(x), result, testNames(y))
     
-    End Sub 'Test
-End Class 'Sample
+    End Sub
+End Class
 
 '
 'This code example produces the following results:

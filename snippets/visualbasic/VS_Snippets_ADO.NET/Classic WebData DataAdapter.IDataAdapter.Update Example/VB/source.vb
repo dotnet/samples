@@ -19,7 +19,7 @@ Module Module1
         ByVal connectionString As String, _
         ByVal queryString As String) As DataSet
 
-        Dim dataSet As DataSet = New DataSet
+        Dim dataSet As New DataSet()
 
         Using connection As New OleDbConnection(connectionString)
             connection.Open()

@@ -1,5 +1,4 @@
 ﻿ '<snippet1>
-Imports System
 Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Text
@@ -84,7 +83,7 @@ Class Form1
             bindingSource1.ResetBindings(False)
         End If
 
-    End Sub 'button1_Click
+    End Sub
     
     '</snippet3>
     <STAThread()>  _

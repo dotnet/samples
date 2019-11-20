@@ -47,5 +47,5 @@ Class MyEventLog
         myLog.WriteEntry("Writing warning to event log.", EventLogEntryType.Warning, _
                              myEventID, myCategory)
         ' </Snippet3>
-    End Sub 'Main
-End Class 'MyEventLog    
+    End Sub
+End Class

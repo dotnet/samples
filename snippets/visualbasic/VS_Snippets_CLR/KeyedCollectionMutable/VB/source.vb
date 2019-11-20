@@ -155,7 +155,7 @@ Public Class MutableKey
     Public Sub New(ByVal newKey As Integer, ByVal newValue As String)
         _key = newKey
         Value = newValue
-    End Sub 'New
+    End Sub
     
     Public Value As String
     Friend Collection As MutableKeys

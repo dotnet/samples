@@ -185,10 +185,7 @@ namespace StrokeCollectionEraseMethods
                 return;
             }
 
-            if (stylusPoints == null)
-            {
-                stylusPoints = new StylusPointCollection();
-            }
+            stylusPoints ??= new StylusPointCollection();
 
             Point pt = e.GetPosition(this);
 
@@ -218,10 +215,7 @@ namespace StrokeCollectionEraseMethods
         // point data to the IncrementalHitTester.
         protected override void OnStylusUp(StylusEventArgs e)
         {
-            if (stylusPoints == null)
-            {
-                stylusPoints = new StylusPointCollection();
-            }
+            stylusPoints ??= new StylusPointCollection();
             StylusPointCollection collectedPoints = e.GetStylusPoints(this, stylusPoints.Description);
 
             stylusPoints.Add(collectedPoints);

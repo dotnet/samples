@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Drawing
+﻿Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Windows.Forms
@@ -26,7 +25,7 @@ Namespace ListViewAfterLabelEditEx
          ' Required for Windows Form Designer support
          '
          InitializeComponent()
-      End Sub 'New
+      End Sub
 
       Private Sub InitializeComponent()
          Dim listViewItem1 As New System.Windows.Forms.ListViewItem(New System.Windows.Forms.ListViewItem.ListViewSubItem() {New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "Item A", System.Drawing.SystemColors.WindowText, System.Drawing.SystemColors.Window, New System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, System.Byte)))}, -1)
@@ -52,7 +51,7 @@ Namespace ListViewAfterLabelEditEx
          Me.Name = "Form1"
          Me.Text = "Form1"
          Me.ResumeLayout(False)
-      End Sub 'InitializeComponent
+      End Sub
 
       '<Snippet1>
       Private Sub MyListView_AfterLabelEdit(ByVal sender As Object, ByVal e As System.Windows.Forms.LabelEditEventArgs) Handles listView1.AfterLabelEdit

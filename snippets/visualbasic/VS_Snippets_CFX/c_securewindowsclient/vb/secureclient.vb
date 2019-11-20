@@ -21,7 +21,7 @@ Public Class Program
         ' CalculatorClass cc = new CalculatorClient("ICalculator_Binding")
         '</snippet1>
     End Sub 
-End Class 'Program
+End Class
 
 
 <System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0"), System.ServiceModel.ServiceContractAttribute([Namespace] := "http://Microsoft.ServiceModel.Samples", ConfigurationName := "ICalculator")>  _
@@ -52,31 +52,31 @@ Public Class CalculatorClient
      
     Public Sub New() 
      '
-    End Sub 'New
+    End Sub
     
     
     Public Sub New(ByVal endpointConfigurationName As String) 
         MyBase.New(endpointConfigurationName)
     
-    End Sub 'New
+    End Sub
     
     
     Public Sub New(ByVal endpointConfigurationName As String, ByVal remoteAddress As String) 
         MyBase.New(endpointConfigurationName, remoteAddress)
     
-    End Sub 'New
+    End Sub
     
     
     Public Sub New(ByVal endpointConfigurationName As String, ByVal remoteAddress As System.ServiceModel.EndpointAddress) 
         MyBase.New(endpointConfigurationName, remoteAddress)
     
-    End Sub 'New
+    End Sub
     
     
     Public Sub New(ByVal binding As System.ServiceModel.Channels.Binding, ByVal remoteAddress As System.ServiceModel.EndpointAddress) 
         MyBase.New(binding, remoteAddress)
     
-    End Sub 'New
+    End Sub
     
     
     Public Function Add(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Add
@@ -101,5 +101,5 @@ Public Class CalculatorClient
         Return MyBase.Channel.Divide(n1, n2)
     
     End Function 'Divide
-End Class 'CalculatorClient
+End Class
 '</snippet0>

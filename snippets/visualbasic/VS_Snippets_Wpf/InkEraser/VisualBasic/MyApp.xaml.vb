@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Windows
 Imports System.Data
 Imports System.Xml
@@ -18,8 +17,8 @@ Namespace MyInkEraser
             Dim mainWindow As New Window1()
             mainWindow.Show()
 
-        End Sub 'AppStartingUp
-    End Class 'MyApp 
+        End Sub
+    End Class
 End Namespace
 '
 'ToDo: Error processing original source shown below

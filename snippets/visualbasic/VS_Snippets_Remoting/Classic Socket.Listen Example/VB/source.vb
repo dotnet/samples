@@ -19,7 +19,7 @@ Public Class Sample
       
       ' start listening
       listenSocket.Listen(backlog)
-   End Sub 'CreateAndListen
+   End Sub
     ' </Snippet1>
    
    <STAThread()>  _
@@ -28,5 +28,5 @@ Public Class Sample
       
       Console.WriteLine("enter to exit")
       Console.Read()
-   End Sub 'Main
-End Class 'Sample 
+   End Sub
+End Class

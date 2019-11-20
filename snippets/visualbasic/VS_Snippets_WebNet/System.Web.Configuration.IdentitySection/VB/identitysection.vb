@@ -62,6 +62,6 @@ Catch e As Exception
 Console.WriteLine("Error" + e.ToString())
 End Try
 
-End Sub 'New
-End Class 'UsingIdentitySection ' UsingIdentitySection class end.
+End Sub
+End Class
 ' Samples.Aspnet.SystemWebConfiguration namespace end.

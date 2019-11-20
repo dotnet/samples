@@ -82,7 +82,7 @@ Class Sample
         result = s2.Split(stringSeparators, 2, StringSplitOptions.RemoveEmptyEntries)
         Show(result)
     
-    End Sub 'Main
+    End Sub
     
     
     ' Display the array of separated strings.
@@ -94,8 +94,8 @@ Class Sample
         Next entry
         Console.Write(vbCrLf & vbCrLf)
     
-    End Sub 'Show
-End Class 'Sample
+    End Sub
+End Class
 '
 'This example produces the following results:
 '

@@ -114,9 +114,9 @@ Namespace Mssc.PluggableProtocols.File
                     writeToFile()
                 End If
 
-            End Sub 'Main
+            End Sub
 
-        End Class 'TestGetRequestStream
+        End Class
 
 
 

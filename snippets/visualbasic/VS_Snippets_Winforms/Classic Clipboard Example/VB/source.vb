@@ -1,7 +1,6 @@
 ﻿Option Explicit
 Option Strict
 
-Imports System
 Imports System.Data
 Imports System.ComponentModel
 Imports System.Windows.Forms
@@ -21,7 +20,7 @@ Public Class Form1
         Else
             textBox2.Text = "No text selected in textBox1"
         End If
-    End Sub 'button1_Click
+    End Sub
      
     Private Sub button2_Click(sender As Object, e As System.EventArgs)
         ' Declares an IDataObject to hold the data returned from the clipboard.
@@ -36,6 +35,6 @@ Public Class Form1
             ' No it is not.
             textBox2.Text = "Could not retrieve data off the clipboard."
         End If
-    End Sub 'button2_Click
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

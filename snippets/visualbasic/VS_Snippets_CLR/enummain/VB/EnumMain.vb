@@ -15,7 +15,7 @@ Public Class EnumTest
         Fahrenheit = 212
     End Enum 
     
-    <FlagsAttribute()> _
+    <Flags()> _
     Enum Colors
         Red = 1
         Green = 2

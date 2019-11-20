@@ -21,8 +21,8 @@ Namespace Samples.AspNet.VB.Controls
             Dim text As String = boundLiteralControl.Text
             output.Write(("<h4>Your Message: " + text + "</h4>"))
          End If 
-      End Sub 'Render  
+      End Sub
 
-   End Class 'MyControl
+   End Class
 End Namespace 'MyUserControl
 ' </Snippet1>

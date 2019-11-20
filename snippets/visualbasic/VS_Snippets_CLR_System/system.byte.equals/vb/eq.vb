@@ -12,8 +12,8 @@ Class Sample
                           byteVal1, byteVal2, objectVal3)
         Console.WriteLine("byteVal1 equals byteVal2?: {0}", byteVal1.Equals(byteVal2))
         Console.WriteLine("byteVal1 equals objectVal3?: {0}", byteVal1.Equals(objectVal3))
-    End Sub 'Main
-End Class 'Sample
+    End Sub
+End Class
 
 '
 'This code example produces the following results:

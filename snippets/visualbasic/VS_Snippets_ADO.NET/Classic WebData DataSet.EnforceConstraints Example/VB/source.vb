@@ -12,9 +12,9 @@ Protected DataGrid1 As DataGrid
 Private Sub DemonstrateEnforceConstraints()
     ' Create a DataSet with one table, one column and 
     ' a UniqueConstraint.
-    Dim dataSet As DataSet = New DataSet("dataSet")
-    Dim table As DataTable = New DataTable("table")
-    Dim column As DataColumn = New DataColumn("col1")
+    Dim dataSet As New DataSet("dataSet")
+    Dim table As New DataTable("table")
+    Dim column As New DataColumn("col1")
     column.Unique = True
     table.Columns.Add(column)
     dataSet.Tables.Add(table)

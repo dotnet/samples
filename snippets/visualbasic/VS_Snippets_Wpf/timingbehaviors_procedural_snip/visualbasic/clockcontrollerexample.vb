@@ -4,7 +4,6 @@
 '  a root clock.
 '
 
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Media
@@ -128,7 +127,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			seekDetailsPanel.Children.Add(seekButton)
 			mainPanel.Children.Add(seekDetailsPanel)
 
-			Me.Content = mainPanel
+			Content = mainPanel
 		End Sub
 
         ' Starts the clock.

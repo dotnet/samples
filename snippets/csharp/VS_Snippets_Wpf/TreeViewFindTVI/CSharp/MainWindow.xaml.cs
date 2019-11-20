@@ -311,10 +311,7 @@ namespace TreeViewFindTVI
         {
             get
             {
-                if (_items == null)
-                {
-                    _items = new ObservableCollection<TestDataItem>();
-                }
+                _items ??= new ObservableCollection<TestDataItem>();
                 return _items;
             }
         }

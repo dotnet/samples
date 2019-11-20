@@ -19,7 +19,7 @@ Public Class WebPermissionAttribute_AcceptConnect
       Dim permissionToCheck As New WebPermission()
       permissionToCheck.AddPermission(NetworkAccess.Accept, uriToCheck)
       permissionToCheck.Demand()
-   End Sub 'CheckAcceptPermission
+   End Sub
    
    
    Public Shared Sub demoDenySite()
@@ -33,11 +33,11 @@ Public Class WebPermissionAttribute_AcceptConnect
       Catch e As SecurityException
          Console.WriteLine(("Exception trying to access private resource:" + e.Message))
       End Try
-   End Sub 'demoDenySite
+   End Sub
     '</Snippet1>
    
    
    Shared Sub Main()
       demoDenySite()
-   End Sub 'Main 
-End Class 'WebPermissionAttribute_AcceptConnect
+   End Sub
+End Class

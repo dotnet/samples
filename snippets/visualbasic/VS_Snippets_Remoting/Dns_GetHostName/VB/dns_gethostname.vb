@@ -14,7 +14,7 @@ Class DnsHostName
     Public Shared Sub Main()
         Dim dnsHostNameObj As New DnsHostName()
         dnsHostNameObj.DisplayLocalHostName()
-    End Sub 'Main
+    End Sub
     
     
 ' <Snippet1>
@@ -33,5 +33,5 @@ Class DnsHostName
             Console.WriteLine(("Message : " + e.Message))
         End Try
 ' </Snippet1>
-    End Sub 'DisplayLocalHostName
-End Class 'DnsHostName 
+    End Sub
+End Class

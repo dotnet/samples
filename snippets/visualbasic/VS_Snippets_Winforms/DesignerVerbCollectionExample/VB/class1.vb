@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.ComponentModel.Design
+﻿Imports System.ComponentModel.Design
 
 <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.Demand, Name:="FullTrust")> _
 Public Class Class1

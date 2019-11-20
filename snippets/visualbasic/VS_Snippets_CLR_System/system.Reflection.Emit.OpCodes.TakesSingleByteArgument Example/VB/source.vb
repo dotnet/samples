@@ -31,9 +31,9 @@ Class TakesSBArgumentExample
 			   OpCodes.TakesSingleByteArgument(CType(theOpCode, OpCode)).ToString())
       Next opCodeFI
 
-   End Sub 'Main
+   End Sub
 
    ' </Snippet1>  
 
-End Class 'TakesSBArgumentExample 
+End Class
 

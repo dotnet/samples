@@ -53,7 +53,7 @@ Namespace Examples.VB.WebControls.Design
             Return designTimeMarkup
 
         End Function ' GetDesignTimeHtml
-    End Class ' CustomHyperLinkDesigner
+    End Class
     ' </snippet1>
 
     ' <snippet2>
@@ -77,8 +77,8 @@ Namespace Examples.VB.WebControls.Design
             End If
 
             MyBase.DataBindControl(designerHost, control)
-        End Sub ' DataBindControl
-    End Class ' CustomHyperLinkDataBindingHandler
+        End Sub
+    End Class
     ' </snippet2>
 End Namespace ' Examples.VB.WebControls.Design
 ' </snippet4>

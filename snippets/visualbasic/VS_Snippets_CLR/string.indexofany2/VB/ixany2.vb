@@ -23,8 +23,8 @@ Class Sample
          Console.Write("(not found)")
       End If
       Console.WriteLine()
-   End Sub 'Main
-End Class 'Sample
+   End Sub
+End Class
 '
 '
 'Search for a character occurrence from position 33 to 66.

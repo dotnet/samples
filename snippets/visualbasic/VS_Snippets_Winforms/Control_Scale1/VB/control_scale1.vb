@@ -13,7 +13,6 @@
 ' displays a message box indicating that the size of the control has 
 ' changed. 
 
-Imports System
 Imports System.ComponentModel
 Imports System.Windows.Forms
 
@@ -28,7 +27,7 @@ Public Class MyForm
    
    Public Sub New()
       InitializeComponent()
-   End Sub 'New
+   End Sub
    
    Protected Overrides Overloads Sub Dispose(disposing As Boolean)
       If disposing Then
@@ -37,7 +36,7 @@ Public Class MyForm
          End If
       End If
       MyBase.Dispose(disposing)
-   End Sub 'Dispose
+   End Sub
    
    Private Sub InitializeComponent()
       Me.myLabel1 = New System.Windows.Forms.Label()
@@ -88,18 +87,18 @@ Public Class MyForm
       Me.Text = "MyForm"
       CType(Me.myNumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
       Me.ResumeLayout(False)
-   End Sub 'InitializeComponent
+   End Sub
    
    <STAThread()>  _
    Shared Sub Main()
       Application.Run(New MyForm())
-   End Sub 'Main
+   End Sub
    
    
 ' <Snippet2>
    Private Sub RegisterEventHandler()
       AddHandler myButton1.SizeChanged, AddressOf MyButton1_SizeChanged
-   End Sub 'RegisterEventHandler
+   End Sub
 
    Private Sub MyButton2_Click(sender As Object, e As EventArgs) 
 ' <Snippet1>
@@ -107,10 +106,10 @@ Public Class MyForm
       Dim scale As Single = CSng(myNumericUpDown1.Value)
       myButton1.Scale(scale)
 ' </Snippet1>
-   End Sub 'MyButton2_Click
+   End Sub
    
    Private Sub MyButton1_SizeChanged(sender As Object, e As EventArgs)
       MessageBox.Show("The size of the 'Button' control has changed")
-   End Sub 'MyButton1_SizeChanged
+   End Sub
 ' </Snippet2>
-End Class 'MyForm 
+End Class

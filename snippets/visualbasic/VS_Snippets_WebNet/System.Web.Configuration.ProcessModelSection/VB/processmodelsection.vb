@@ -302,6 +302,6 @@ Class UsingProcessModelSection
             Dim msgToDisplay As String = _
             "Error detected in UsingProcessModelSection."
       End Try
-   End Sub 'Main 
-End Class 'UsingProcessModelSection
+   End Sub
+End Class
 

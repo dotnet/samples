@@ -23,7 +23,7 @@ Public Class MyNewQueue
 
             Return
 
-        End Sub 'Main
+        End Sub
 
 
         
@@ -52,7 +52,7 @@ Public Class MyNewQueue
 
             Return
 
-        End Sub 'RetrieveDefaultProperties
+        End Sub
 
 
         
@@ -82,7 +82,7 @@ Public Class MyNewQueue
 
             Return
 
-        End Sub 'RetrieveAllProperties
+        End Sub
 
 
         
@@ -120,8 +120,8 @@ Public Class MyNewQueue
 
             Return
 
-        End Sub 'RetrieveSelectedProperties
+        End Sub
 
-End Class 'MyNewQueue
+End Class
 
 ' </Snippet1>

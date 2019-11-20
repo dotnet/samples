@@ -9,7 +9,7 @@ Public Class XClass
     ' Apply the XmlAnyElementAttribute to a field returning an array
     ' of XmlElement objects.
     <XmlAnyElement()> Public AllElements() As XmlElement
-End Class 'XClass
+End Class
 
 
 Public Class Test
@@ -17,7 +17,7 @@ Public Class Test
     Public Shared Sub Main()
         Dim t As New Test()
         t.DeserializeObject("XFile.xml")
-    End Sub 'Main
+    End Sub
     
     
     Private Sub DeserializeObject(filename As String)
@@ -35,6 +35,6 @@ Public Class Test
         For Each xel In  x.AllElements
             Console.WriteLine((xel.LocalName & ": " & xel.Value))
         Next xel
-    End Sub 'DeserializeObject
-End Class 'Test 
+    End Sub
+End Class
 ' </Snippet1>

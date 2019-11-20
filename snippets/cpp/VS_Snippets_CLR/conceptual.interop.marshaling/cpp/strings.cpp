@@ -5,7 +5,7 @@ using namespace System::Runtime::InteropServices;
 
 //<snippet14>
 // Declares a managed structure for each unmanaged structure.
-[StructLayout(LayoutKind::Sequential, CharSet=CharSet::Unicode)]
+[StructLayout(LayoutKind::Sequential, CharSet = CharSet::Unicode)]
 public value struct MyStrStruct
 {
 public:
@@ -13,7 +13,7 @@ public:
     int size;
 };
 
-[StructLayout(LayoutKind::Sequential, CharSet=CharSet::Ansi)]
+[StructLayout(LayoutKind::Sequential, CharSet = CharSet::Ansi)]
 public value struct MyStrStruct2
 {
 public:
@@ -21,7 +21,7 @@ public:
     int size;
 };
 
-public ref class LibWrap
+private ref class NativeMethods
 {
 public:
     // Declares managed prototypes for unmanaged functions.
@@ -43,7 +43,7 @@ public:
     static void Main()
     {
         // String as result.
-        String^ str = LibWrap::TestStringAsResult();
+        String^ str = NativeMethods::TestStringAsResult();
         Console::WriteLine("\nString returned: {0}", str);
 
         // Initializes buffer and appends something to the end so the whole
@@ -56,9 +56,9 @@ public:
         mss.buffer = buffer->ToString();
         mss.size = mss.buffer->Length;
 
-        LibWrap::TestStringInStruct(mss);
-        Console::WriteLine( "\nBuffer after Unicode function call: {0}",
-            mss.buffer );
+        NativeMethods::TestStringInStruct(mss);
+        Console::WriteLine("\nBuffer after Unicode function call: {0}",
+            mss.buffer);
 
         StringBuilder^ buffer2 = gcnew StringBuilder("content", 100);
         buffer2->Append((char)0);
@@ -68,7 +68,7 @@ public:
         mss2.buffer = buffer2->ToString();
         mss2.size = mss2.buffer->Length;
 
-        LibWrap::TestStringInStructAnsi(mss2);
+        NativeMethods::TestStringInStructAnsi(mss2);
         Console::WriteLine("\nBuffer after Ansi function call: {0}",
             mss2.buffer);
     }

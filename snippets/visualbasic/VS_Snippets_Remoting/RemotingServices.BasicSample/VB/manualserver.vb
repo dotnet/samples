@@ -28,5 +28,5 @@ Public Class ManualServer
       Console.WriteLine("Press enter to end the server process.")
       Console.ReadLine()
       ' </Snippet2>
-   End Sub 'Main 
-End Class 'ManualServer
+   End Sub
+End Class

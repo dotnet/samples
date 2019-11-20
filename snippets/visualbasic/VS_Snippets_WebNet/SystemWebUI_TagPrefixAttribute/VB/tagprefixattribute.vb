@@ -37,8 +37,8 @@ Namespace CustomControls
       <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.Demand, Name:="FullTrust")> _
       Protected Overrides Sub Render(writer As HtmlTextWriter)
          writer.Write(("<span style='background-color:aqua; font:8pt tahoma, verdana;'> " + Me.getMessage + "<br>" + "VB version. The time on the server is " + System.DateTime.Now.ToLongTimeString() + "</span>"))
-      End Sub 'Render
-   End Class 'MyControl
+      End Sub
+   End Class
 End Namespace 'CustomControls 
 
 '</snippet1>

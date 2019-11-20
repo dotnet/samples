@@ -13,7 +13,6 @@
 ' For simplicity, this sampel does not handle run-time switching of visual styles.
 
 '<Snippet0>
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 Imports System.Windows.Forms.VisualStyles
@@ -35,7 +34,7 @@ Public Class Form1
         AddHandler button1.Click, AddressOf button1_Click
         Controls.AddRange(New Control() {button1, bar1})
     
-    End Sub 'New
+    End Sub
     
     
     <STAThread()>  _
@@ -47,15 +46,15 @@ Public Class Form1
         Application.EnableVisualStyles()
         Application.Run(New Form1())
     
-    End Sub 'Main
+    End Sub
     
     
     ' Start the VerticalProgressBar.
     Private Sub button1_Click(ByVal sender As Object, ByVal e As EventArgs) 
         bar1.Start()
     
-    End Sub 'button1_Click
-End Class 'Form1
+    End Sub
+End Class
 
 
 Public Class VerticalProgressBar
@@ -83,7 +82,7 @@ Public Class VerticalProgressBar
             Me.Height = 100
         End If
     
-    End Sub 'New
+    End Sub
     
     ' Specify the number of progress bar chunks to base the height on.
     
@@ -121,7 +120,7 @@ Public Class VerticalProgressBar
             Me.Parent.Text = "VerticalProgressBar Disabled"
         End If
     
-    End Sub 'OnPaint
+    End Sub
     
     '</Snippet2>
     '<Snippet4>
@@ -153,7 +152,7 @@ Public Class VerticalProgressBar
                 ClientRectangle.Width - 6, filledRectangleHeight)
         Next i
     
-    End Sub 'SetupProgressBar
+    End Sub
     
     '</Snippet4>
     '<Snippet6>
@@ -171,7 +170,7 @@ Public Class VerticalProgressBar
             progressTimer.Enabled = False
         End If
     
-    End Sub 'progressTimer_Tick
+    End Sub
     
     '</Snippet6>
     ' Start the progress bar.
@@ -182,6 +181,6 @@ Public Class VerticalProgressBar
             MessageBox.Show("VerticalScrollBar requires visual styles")
         End If
     
-    End Sub 'Start
-End Class 'VerticalProgressBar
+    End Sub
+End Class
 '</Snippet0>

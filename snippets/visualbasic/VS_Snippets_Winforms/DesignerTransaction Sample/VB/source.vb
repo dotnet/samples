@@ -1,5 +1,4 @@
 ﻿'<Snippet1>
-Imports System
 Imports System.ComponentModel
 Imports System.ComponentModel.Design
 Imports System.Windows.Forms
@@ -64,9 +63,9 @@ Namespace DesignerTransactionSample
         Private Sub InitializeComponent()
             m_String = "Initial Value"
             m_Count = 0
-        End Sub 'InitializeComponent
+        End Sub
 
-    End Class 'DTComponent
+    End Class
 
     Friend Class DTDesigner
         Inherits ComponentDesigner
@@ -102,7 +101,7 @@ Namespace DesignerTransactionSample
                 AddHandler host.TransactionClosed, AddressOf OnDesignerTransactionClosed
                 notification_mode = True
             End If
-        End Sub 'Initialize
+        End Sub
 
         Private Sub LinkDTNotifications(ByVal sender As Object, ByVal e As EventArgs)
             If notification_mode = False Then
@@ -113,7 +112,7 @@ Namespace DesignerTransactionSample
                     AddHandler host.TransactionClosed, AddressOf OnDesignerTransactionClosed
                 End If
             End If
-        End Sub 'LinkDTNotifications
+        End Sub
 
         Private Sub UnlinkDTNotifications(ByVal sender As Object, ByVal e As EventArgs)
             If notification_mode Then
@@ -124,15 +123,15 @@ Namespace DesignerTransactionSample
                     RemoveHandler host.TransactionClosed, AddressOf Me.OnDesignerTransactionClosed
                 End If
             End If
-        End Sub 'UnlinkDTNotifications
+        End Sub
 
         Private Sub OnDesignerTransactionOpened(ByVal sender As Object, ByVal e As EventArgs)
             System.Windows.Forms.MessageBox.Show("A Designer Transaction was started. (TransactionOpened)")
-        End Sub 'OnDesignerTransactionOpened
+        End Sub
 
         Private Sub OnDesignerTransactionClosed(ByVal sender As Object, ByVal e As DesignerTransactionCloseEventArgs)
             System.Windows.Forms.MessageBox.Show("A Designer Transaction was completed. (TransactionClosed)")
-        End Sub 'OnDesignerTransactionClosed
+        End Sub
 
         Private Sub DoTransaction(ByVal sender As Object, ByVal e As EventArgs)
             Dim host As IDesignerHost = CType(GetService(GetType(IDesignerHost)), IDesignerHost)
@@ -158,13 +157,13 @@ Namespace DesignerTransactionSample
             If (notification_mode) Then
                 System.Windows.Forms.MessageBox.Show("Designer-Initiated Designer Transaction Completed")
             End If
-        End Sub 'DoTransaction
+        End Sub
 
         Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
             UnlinkDTNotifications(Me, New EventArgs())
             MyBase.Dispose(disposing)
-        End Sub 'Dispose
+        End Sub
 
-    End Class 'DTDesigner
+    End Class
 End Namespace 'DesignerTransactionSample
 '</Snippet1>

@@ -26,11 +26,11 @@ Public Structure OSVersionInfo2
     Public CSDVersion As String
 End Structure
 
-Public Class LibWrap
-    Declare Ansi Function GetVersionEx Lib "kernel32" Alias _
+Friend Class NativeMethods
+    Friend Declare Ansi Function GetVersionEx Lib "kernel32" Alias _
         "GetVersionExA" (<[In], Out> ByVal osvi As OSVersionInfo) As Boolean
 
-    Declare Ansi Function GetVersionEx2 Lib "kernel32" Alias _
+    Friend Declare Ansi Function GetVersionEx2 Lib "kernel32" Alias _
         "GetVersionExA" (ByRef osvi As OSVersionInfo2) As Boolean
 End Class
 '</snippet11>
@@ -43,7 +43,7 @@ Public Class App
         Dim osvi As New OSVersionInfo()
         osvi.OSVersionInfoSize = Marshal.SizeOf(osvi)
 
-        LibWrap.GetVersionEx(osvi)
+        NativeMethods.GetVersionEx(osvi)
 
         Console.WriteLine("Class size:    {0}", osvi.OSVersionInfoSize)
         Console.WriteLine("OS Version:    {0}.{1}", osvi.MajorVersion, osvi.MinorVersion)
@@ -53,7 +53,7 @@ Public Class App
         Dim osvi2 As New OSVersionInfo2()
         osvi2.OSVersionInfoSize = Marshal.SizeOf(osvi2)
 
-        LibWrap.GetVersionEx2(osvi2)
+        NativeMethods.GetVersionEx2(osvi2)
         Console.WriteLine("Struct size:   {0}", osvi2.OSVersionInfoSize)
         Console.WriteLine("OS Version:    {0}.{1}", osvi2.MajorVersion, osvi2.MinorVersion)
     End Sub

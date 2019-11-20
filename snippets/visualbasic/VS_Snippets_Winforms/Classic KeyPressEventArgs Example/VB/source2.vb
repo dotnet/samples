@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.ComponentModel
 Imports System.Windows.Forms
 
@@ -14,15 +13,15 @@ Public Class Form1
         InitializeComponent()
         
         AddHandler textBox1.KeyPress, AddressOf myKeyPressHandler.myKeyCounter
-    End Sub 'New
+    End Sub
     
     ' </Snippet2>
     Private Sub InitializeComponent()
-    End Sub 'InitializeComponent
+    End Sub
     
     Public Class myKeyPressClass
         
         Friend Sub myKeyCounter(sender As Object, ex As KeyPressEventArgs)
-        End Sub 'myKeyCounter
-    End Class 'myKeyPressClass
-End Class 'Form1 
+        End Sub
+    End Class
+End Class

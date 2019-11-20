@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Data
@@ -72,7 +71,7 @@ Class Window2
         
         AnimateButton()
     
-    End Sub 'New
+    End Sub
     
     '<Snippet24>
     Sub AnimateButton() 
@@ -89,7 +88,7 @@ Class Window2
         
         buttonTransform.BeginAnimation(TranslateTransform.XProperty, myDoubleAnimation)
     
-    End Sub 'AnimateButton
+    End Sub
     '</Snippet24>
 
     '<Snippet25>
@@ -99,7 +98,7 @@ Class Window2
         Dim element As UIElement = CType(Stylus.DirectlyOver, UIElement)
         output.Text += "The stylus is over " + element.ToString() & vbCr & vbLf
 
-    End Sub 'SynchronizeStylus
+    End Sub
     '</Snippet25>
 
     '<Snippet26>
@@ -111,7 +110,7 @@ Class Window2
         Dim element As UIElement = CType(currentStylus.DirectlyOver, UIElement)
         output.Text += "The stylus is over " + element.ToString() + vbCr + vbLf
 
-    End Sub 'SynchronizeCurrentStylus
+    End Sub
     '</Snippet26>
 
     
@@ -120,7 +119,7 @@ Class Window2
         Dim element As UIElement = CType(Mouse.DirectlyOver, UIElement)
         output.Text += "The stylus is over " + element.ToString() + vbCr + vbLf
     
-    End Sub 'SynchronizeMouse
+    End Sub
     
     
     Private Sub myCanvas_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs)
@@ -133,14 +132,14 @@ Class Window2
             SynchronizeCurrentStylus()
         End If
 
-    End Sub 'myCanvas_KeyDown
+    End Sub
      
     
     Private Sub clearText_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
         output.Text = ""
         recordMouseMove = False
 
-    End Sub 'clearText_Click
+    End Sub
     
     Private i As Integer = 0
     Private recordMouseMove As Boolean = False
@@ -156,12 +155,12 @@ Class Window2
         '    i = 0
         'End If
 
-    End Sub 'myCanvas_MouseMove
+    End Sub
      'Stylus.Synchronize();
     
     Private Sub button1_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
 
-    End Sub 'button1_Click
+    End Sub
     
     'recordMouseMove = true;
     'double buttonPos = Canvas.GetLeft(button1);
@@ -197,7 +196,7 @@ Class Window2
     Private Sub inkCanvas1_StylusDown(ByVal sender As Object, ByVal e As StylusDownEventArgs)
         Dim points As StylusPointCollection = e.StylusDevice.GetStylusPoints(inkCanvas1)
 
-    End Sub 'inkCanvas1_StylusDown
+    End Sub
     
     
     ' To use Loaded event put Loaded="WindowLoaded" attribute in root element of .xaml file.
@@ -216,7 +215,7 @@ Class Window2
             inkCanvas1.Cursor = System.Windows.Input.Cursors.Pen
         End If
 
-    End Sub 'inkCanvas1_StylusInRange
+    End Sub
 
     '</Snippet18>
 
@@ -226,10 +225,10 @@ Class Window2
 
         inkCanvas1.Cursor = System.Windows.Input.Cursors.Arrow
 
-    End Sub 'inkCanvas1_StylusOutOfRange
+    End Sub
     '</Snippet19>
 
-End Class 'Window2 
+End Class
 '
 'ToDo: Error processing original source shown below
 '    }

@@ -3,7 +3,6 @@
 Imports System.IO
 Imports System.Xml
 Imports System.Xml.Serialization
-Imports Microsoft.VisualBasic
 Imports HighSchool
 
 Namespace HighSchool
@@ -11,12 +10,12 @@ Namespace HighSchool
     Public Class Student
         Public Name As String
         Public ID As Integer
-    End Class 'Student
+    End Class
     
     
     Public Class MyClass1
         Public Students() As Student
-    End Class 'MyClass1
+    End Class
 End Namespace 'HighSchool
 
 Namespace College
@@ -24,9 +23,9 @@ Namespace College
         Inherits HighSchool.Student
         
         Public Sub New()
-        End Sub 'New ' Add a new field named University.
+        End Sub
         Public University As String
-    End Class 'Graduate
+    End Class
     
     
     
@@ -36,7 +35,7 @@ Namespace College
             Dim test As New Run()
             test.WriteOverriddenAttributes("College.xml")
             test.ReadOverriddenAttributes("College.xml")
-        End Sub 'Main
+        End Sub
         
         
         Private Sub WriteOverriddenAttributes(filename As String)
@@ -79,7 +78,7 @@ Namespace College
             
             mySerializer.Serialize(myStreamWriter, oMyClass)
             myStreamWriter.Close()
-        End Sub 'WriteOverriddenAttributes
+        End Sub
         
         
         Private Sub ReadOverriddenAttributes(filename As String)
@@ -116,7 +115,7 @@ Namespace College
                 Console.Write((g.ID.ToString & ControlChars.Tab))
                 Console.Write((g.University & ControlChars.Cr))
             Next grad
-        End Sub 'ReadOverriddenAttributes
-    End Class 'Run
+        End Sub
+    End Class
 End Namespace 'College
 ' </Snippet1>

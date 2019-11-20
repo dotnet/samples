@@ -29,7 +29,7 @@ Public Class ShortStringDictionary
 
    Public Sub Add(key As String, value As String)
       Dictionary.Add(key, value)
-   End Sub 'Add
+   End Sub
 
    Public Function Contains(key As String) As Boolean
       Return Dictionary.Contains(key)
@@ -37,7 +37,7 @@ Public Class ShortStringDictionary
 
    Public Sub Remove(key As String)
       Dictionary.Remove(key)
-   End Sub 'Remove
+   End Sub
 
    Protected Overrides Sub OnInsert(key As Object, value As Object)
       If Not GetType(System.String).IsAssignableFrom(key.GetType()) Then
@@ -56,7 +56,7 @@ Public Class ShortStringDictionary
             Throw New ArgumentException("value must be no more than 5 characters in length.", "value")
          End If
       End If
-   End Sub 'OnInsert
+   End Sub
 
    Protected Overrides Sub OnRemove(key As Object, value As Object)
       If Not GetType(System.String).IsAssignableFrom(key.GetType()) Then
@@ -67,7 +67,7 @@ Public Class ShortStringDictionary
             Throw New ArgumentException("key must be no more than 5 characters in length.", "key")
          End If
       End If
-   End Sub 'OnRemove
+   End Sub
 
    Protected Overrides Sub OnSet(key As Object, oldValue As Object, newValue As Object)
       If Not GetType(System.String).IsAssignableFrom(key.GetType()) Then
@@ -86,7 +86,7 @@ Public Class ShortStringDictionary
             Throw New ArgumentException("newValue must be no more than 5 characters in length.", "newValue")
          End If
       End If
-   End Sub 'OnSet
+   End Sub
 
    Protected Overrides Sub OnValidate(key As Object, value As Object)
       If Not GetType(System.String).IsAssignableFrom(key.GetType()) Then
@@ -105,9 +105,9 @@ Public Class ShortStringDictionary
             Throw New ArgumentException("value must be no more than 5 characters in length.", "value")
          End If
       End If
-   End Sub 'OnValidate 
+   End Sub
 
-End Class 'ShortStringDictionary
+End Class
 
 
 Public Class SamplesDictionaryBase
@@ -164,7 +164,7 @@ Public Class SamplesDictionaryBase
       Console.WriteLine("After removing ""Two"":")
       PrintKeysAndValues1(mySSC)
 
-    End Sub 'Main
+    End Sub
 
 
     ' Uses the For Each statement which hides the complexity of the enumerator.
@@ -175,7 +175,7 @@ Public Class SamplesDictionaryBase
           Console.WriteLine("   {0,-5} : {1}", myDE.Key, myDE.Value)
       Next myDE
       Console.WriteLine()
-    End Sub 'PrintKeysAndValues1
+    End Sub
 
 
     ' Uses the enumerator. 
@@ -190,7 +190,7 @@ Public Class SamplesDictionaryBase
           End If
       End While
       Console.WriteLine()
-    End Sub 'PrintKeysAndValues2
+    End Sub
 
 
     ' Uses the Keys property and the Item property.
@@ -201,9 +201,9 @@ Public Class SamplesDictionaryBase
           Console.WriteLine("   {0,-5} : {1}", k, myCol(k))
       Next k
       Console.WriteLine()
-    End Sub 'PrintKeysAndValues3
+    End Sub
 
-End Class 'SamplesDictionaryBase 
+End Class
 
 
 'This code produces the following output.

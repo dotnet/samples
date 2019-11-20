@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
 
 Public Class MyTypeDelegatorClass
     Inherits TypeDelegator
@@ -9,7 +8,7 @@ Public Class MyTypeDelegatorClass
     Public Sub New(ByVal myType As Type)
         MyBase.New(myType)
         Me.myType = myType
-    End Sub 'New
+    End Sub
 
     ' Override IsMarshalByRefImpl.
     Protected Overrides Function IsMarshalByRefImpl() As Boolean
@@ -20,7 +19,7 @@ Public Class MyTypeDelegatorClass
         End If
         Return False
     End Function 'IsMarshalByRefImpl
-End Class 'MyTypeDelegatorClass
+End Class
 
 Public Class MyTypeDemoClass
 
@@ -47,12 +46,12 @@ Public Class MyTypeDemoClass
         Catch e As Exception
             Console.WriteLine("Exception: {0}", e.Message.ToString())
         End Try
-    End Sub 'Main
-End Class 'MyTypeDemoClass
+    End Sub
+End Class
 
 ' This class is used to demonstrate 'IsMarshalByRefImpl' method.
 Public Class MyContextBoundClass
     Inherits ContextBoundObject
     Public myString As String = "This class is used to demonstrate members of the Type class."
-End Class 'MyContextBoundClass
+End Class
 ' </Snippet1>

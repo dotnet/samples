@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
 
@@ -14,7 +13,7 @@ Public Class Form1
         If dataGrid1.HitTest(e.X, e.Y).Equals(DataGrid.HitTestInfo.Nowhere) Then
             Console.WriteLine("Nowhere")
         End If
-    End Sub 'dataGrid1_MouseDown
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

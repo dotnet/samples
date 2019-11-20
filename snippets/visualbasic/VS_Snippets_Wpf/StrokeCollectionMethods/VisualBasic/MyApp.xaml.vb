@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Windows
 Imports System.Data
 Imports System.Xml
@@ -24,6 +23,6 @@ Namespace CustomInkControlSample
             'Dim thirdWindow As New Window3()
             'thirdWindow.Show()
 
-        End Sub 'AppStartingUp
-    End Class 'MyApp 
+        End Sub
+    End Class
 End Namespace

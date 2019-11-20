@@ -56,7 +56,7 @@ Namespace MimeContentBinding_work
             End If
          Next i
 ' </Snippet2>
-      End Sub 'Main 
-   End Class 'MyMimeContentClass
+      End Sub
+   End Class
 End Namespace 'MimeContentBinding_work
 ' </Snippet1>

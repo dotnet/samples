@@ -9,7 +9,7 @@ Module Program
 
     Sub Main(ByVal args() As String)
 
-    End Sub 'Main
+    End Sub
 
 
 

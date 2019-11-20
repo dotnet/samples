@@ -6,9 +6,6 @@
 
 Imports System.Net
 Imports System.Net.Sockets
-Imports Microsoft.VisualBasic
-
-
 
 Class DnsResolve
     
@@ -22,7 +19,7 @@ Class DnsResolve
         Else
             myDnsResolve.DisplayHostAddress("207.46.131.199")
         End If
-    End Sub 'Main
+    End Sub
      
 
     Public Sub DisplayHostAddress(ByVal hostString As [String])
@@ -68,5 +65,5 @@ Class DnsResolve
             Console.WriteLine(("Message : " + e.Message))
         End Try
         ' </Snippet1>
-    End Sub 'DisplayHostAddress
-End Class 'DnsResolve 
+    End Sub
+End Class

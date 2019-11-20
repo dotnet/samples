@@ -41,7 +41,7 @@ Public Class MyTypeBuilder
       Console.WriteLine("Defined Field: " + helloWorldType.GetField("myGreeting").Name)
       Dim myAssemblyBuilder As AssemblyBuilder = CType(helloWorldType.Assembly, AssemblyBuilder)
       myAssemblyBuilder.Save("EmittedAssembly.dll")
-   End Sub 'Main
+   End Sub
 
    ' Declare the interface.
    Public Interface IHello
@@ -99,4 +99,4 @@ Public Class MyTypeBuilder
 ' </Snippet3>
       Return helloWorldTypeBuilder.CreateType()
    End Function 'CreateDynamicAssembly
-End Class 'MyTypeBuilder
+End Class

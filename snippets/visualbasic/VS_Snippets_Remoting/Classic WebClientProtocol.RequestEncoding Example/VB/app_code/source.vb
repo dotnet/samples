@@ -9,7 +9,7 @@ Namespace MyMath
         
         Public Sub New()
             Me.Url = "http://www.contoso.com/math.asmx"
-        End Sub 'New
+        End Sub
         
         <HttpMethodAttribute(GetType(XmlReturnReader), GetType(UrlParameterWriter))> _
         Public Function Add(num1 As String, num2 As String) As Integer
@@ -27,6 +27,6 @@ Namespace MyMath
         Public Function EndAdd(asyncResult As IAsyncResult) As Integer
             Return CInt(Me.EndInvoke(asyncResult))
         End Function 'EndAdd
-    End Class 'Math 
+    End Class
 End Namespace 'MyMath
 

@@ -78,7 +78,7 @@ Module DataflowReversedWords
 
       ' <snippet6>
       ' Process "The Iliad of Homer" by Homer.
-      downloadString.Post("http://www.gutenberg.org/files/6130/6130-0.txt")
+      downloadString.Post("http://www.gutenberg.org/cache/epub/16452/pg16452.txt")
       ' </snippet6>
 
       ' <snippet7>
@@ -95,7 +95,7 @@ Module DataflowReversedWords
 End Module
 
 ' Sample output:
-'Downloading 'http://www.gutenberg.org/files/6130/6130-0.txt'...
+'Downloading 'http://www.gutenberg.org/cache/epub/16452/pg16452.txt'...
 'Creating word list...
 'Filtering word list...
 'Finding reversed words...

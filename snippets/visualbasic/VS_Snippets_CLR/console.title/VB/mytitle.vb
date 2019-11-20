@@ -1,7 +1,5 @@
 ﻿'<snippet1>
 ' This example demonstrates the Console.Title property.
-Imports Microsoft.VisualBasic
-
 Class Sample
    Public Shared Sub Main()
       Console.WriteLine("The current console title is: ""{0}""", Console.Title)
@@ -11,8 +9,8 @@ Class Sample
       Console.WriteLine("Note that the new console title is ""{0}""" & vbCrLf & _
                         "  (Press any key to quit.)", Console.Title)
       Console.ReadKey(True)
-   End Sub 'Main
-End Class 'Sample
+   End Sub
+End Class
 '
 'This example produces the following results:
 '

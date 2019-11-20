@@ -1,5 +1,4 @@
 ﻿ ' <snippet1>
-Imports System
 Imports System.Collections.Generic
 Imports System.Drawing
 Imports System.Drawing.Drawing2D
@@ -478,7 +477,7 @@ Public Class GridStrip
       Me.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
       Me.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table
       Me.ResumeLayout(False)
-   End Sub 'InitializeComponent 
+   End Sub
    
    #End Region
 

@@ -26,6 +26,6 @@ Class VariousMethodBuilderSnippets
 
       ' </Snippet1>
 
-   End Sub 'ContainerMethod 
+   End Sub
 
-End Class 'VariousMethodBuilderSnippets 
+End Class

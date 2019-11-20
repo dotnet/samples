@@ -16,9 +16,9 @@ Public Class SamplesJapaneseCalendar
          Console.WriteLine("Eras[{0}] = {1}", i, myCal.Eras(i))
       Next i
 
-   End Sub 'Main 
+   End Sub
 
-End Class 'SamplesJapaneseCalendar
+End Class
 
 'This code produces the following output.
 '

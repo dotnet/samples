@@ -7,7 +7,6 @@
 Imports System.IO
 Imports System.Web.Services.Protocols
 Imports System.Web.Services
-Imports MicroSoft.VisualBasic
 
 Public Class MySoapExtension
    Inherits SoapExtension
@@ -29,7 +28,7 @@ Public Class MySoapExtension
    ' Save the name of the log file that shall save the SOAP messages.
    Public Overrides Sub Initialize(myInitializer As Object)
       myFileName = CStr(myInitializer)
-   End Sub 'Initialize
+   End Sub
    
    ' Process the SOAP message received and write to log file.
    Public Overrides Sub ProcessMessage(myMessage As SoapMessage)
@@ -45,7 +44,7 @@ Public Class MySoapExtension
          Case Else
                Throw New Exception("invalid stage")
       End Select
-   End Sub 'ProcessMessage
+   End Sub
    
    ' Write the contents of the outgoing SOAP message to the log file.
    Public Sub WriteOutputBeforeSerialize(myMessage As SoapMessage)
@@ -86,7 +85,7 @@ Public Class MySoapExtension
       myStreamWriter.Flush()
       myStreamWriter.Close()
       myFileStream.Close()
-   End Sub 'WriteOutputBeforeSerialize
+   End Sub
    
    ' Write the contents of the incoming SOAP message to the log file.
    Public Sub WriteInputAfterDeserialize(myMessage As SoapMessage)
@@ -108,7 +107,7 @@ Public Class MySoapExtension
       myStreamWriter.Flush()
       myStreamWriter.Close()
       myFileStream.Close()
-   End Sub 'WriteInputAfterDeserialize
+   End Sub
    
    
    ' Write the contents of the outgoing SOAP message to the log file.
@@ -122,7 +121,7 @@ Public Class MySoapExtension
       myFileStream.Close()
       myNewStream.Position = 0
       Copy(myNewStream, myOldStream)
-   End Sub 'WriteOutputAfterSerialize
+   End Sub
    
    ' Write the contents of the incoming SOAP message to the log file.
    Public Sub WriteInputBeforeDeserialize(myMessage As SoapMessage)
@@ -141,7 +140,7 @@ Public Class MySoapExtension
       myStreamWriter.Close()
       myFileStream.Close()
       myNewStream.Position = 0
-   End Sub 'WriteInputBeforeDeserialize
+   End Sub
    
    ' Return a new 'MemoryStream' instance for SOAP processing.
    Public Overrides Function ChainStream(myStream As Stream) As Stream
@@ -156,8 +155,8 @@ Public Class MySoapExtension
       Dim myTextWriter = New StreamWriter(toStream)
       myTextWriter.WriteLine(myTextReader.ReadToEnd())
       myTextWriter.Flush()
-   End Sub 'Copy
-End Class 'MySoapExtension
+   End Sub
+End Class
 
 ' A 'SoapExtensionAttribute' that can be associated with web service method.
 <AttributeUsage(AttributeTargets.Method)>  _
@@ -170,7 +169,7 @@ Public Class MySoapExtensionAttribute
    Public Sub New()
       MyBase.New()
       myFilename = "C:\logClient.txt"
-   End Sub 'New
+   End Sub
    
    ' Return the type of 'MySoapExtension' class.   
    Public Overrides ReadOnly Property ExtensionType() As Type
@@ -197,12 +196,12 @@ Public Class MySoapExtensionAttribute
          myFilename = value
       End Set
    End Property
-End Class 'MySoapExtensionAttribute
+End Class
 
 Public Class MySoapHeader
    Inherits SoapHeader
    Public [myText] As String
-End Class 'MySoapHeader
+End Class
 
 <System.Web.Services.WebServiceBindingAttribute(Name := "MathSvcSoap", _
       [Namespace] := "http://tempuri.org/")>  _
@@ -227,7 +226,7 @@ Public Class MathSvc
    <System.Diagnostics.DebuggerStepThroughAttribute()>  _
    Public Sub New()
       Me.Url = "http://localhost/SoapMessage_Exception.vb.asmx"
-   End Sub 'New
+   End Sub
    
    Public Function BeginAdd(xValue As System.Single, yValue As System.Single, _
                   callback As System.AsyncCallback, asyncState As Object) As System.IAsyncResult
@@ -240,4 +239,4 @@ Public Class MathSvc
       returnValue = CType(results(1), System.Single)
       Return CType(results(0), System.Single)
    End Function 'EndAdd
-End Class 'MathSvc
+End Class

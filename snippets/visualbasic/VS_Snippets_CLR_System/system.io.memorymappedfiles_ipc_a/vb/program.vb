@@ -2,6 +2,7 @@
 Imports System.IO
 Imports System.IO.MemoryMappedFiles
 Imports System.Threading
+
 Module Module1
     ' Process B:
     Sub Main()

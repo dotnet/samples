@@ -7,7 +7,6 @@
 ' 'PropertyDescriptorChanged' event, which then calls user defined EventHandler
 ' function.
 
-Imports System
 Imports System.ComponentModel
 Imports System.Data
 Imports System.Drawing
@@ -24,7 +23,7 @@ Public Class myDataForm
    Public Sub New()
       InitializeComponent()
       SetUp()
-   End Sub 'New
+   End Sub
 
    Private Sub InitializeComponent()
       Text = "PropertyDescriptor Example"
@@ -44,16 +43,16 @@ Public Class myDataForm
       Controls.Add(myButton)
       Controls.Add(myDataGrid)
       Controls.Add(myLabel)
-   End Sub 'InitializeComponent
+   End Sub
 
    Public Shared Sub Main()
       Application.Run(New myDataForm())
-   End Sub 'Main
+   End Sub
 
    Private Sub SetUp()
       MakeDataSet()
       myDataGrid.SetDataBinding(myDataSet, "Orders")
-   End Sub 'SetUp
+   End Sub
 
 ' <Snippet1>
     Private Sub myButton_Click(ByVal sender As Object, ByVal e As EventArgs)
@@ -61,7 +60,7 @@ Public Class myDataForm
             Return
         End If
         AddCustomDataTableStyle()
-    End Sub 'myButton_Click
+    End Sub
 
    Private Sub AddCustomDataTableStyle()
       Dim myTableStyle As New DataGridTableStyle()
@@ -79,11 +78,11 @@ Public Class myDataForm
       ' Add the DataGridTableStyle instance to the GridTableStylesCollection.
       myDataGrid.TableStyles.Add(myTableStyle)
       TablesAlreadyAdded = True
-   End Sub 'AddCustomDataTableStyle
+   End Sub
 
     Private Sub MyPropertyDescriptor_Changed(ByVal sender As Object, ByVal e As EventArgs)
         myLabel.Text = "Property Descriptor Property of DataGridColumnStyle has changed"
-    End Sub 'MyPropertyDescriptor_Changed
+    End Sub
 ' </Snippet1>
 
    Private Sub MakeDataSet()
@@ -99,6 +98,6 @@ Public Class myDataForm
          newRow("Amount") = j * 10
          myTable.Rows.Add(newRow)
       Next j
-   End Sub 'MakeDataSet
-End Class 'myDataForm
+   End Sub
+End Class
 

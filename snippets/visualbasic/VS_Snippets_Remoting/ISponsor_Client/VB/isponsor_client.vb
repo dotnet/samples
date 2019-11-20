@@ -9,7 +9,6 @@
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Lifetime
 Imports System.Security.Permissions
-Imports MicroSoft.VisualBasic
 
 Public Class Client
    <SecurityPermission(SecurityAction.LinkDemand)> _
@@ -31,8 +30,8 @@ Public Class Client
       
       Console.WriteLine("Press enter to end the client application domain.")
       Console.ReadLine()
-   End Sub 'Main
-End Class 'Client
+   End Sub
+End Class
  
 ' <Snippet1>
 ' <Snippet2>
@@ -43,7 +42,7 @@ Public Class MyClientSponsor
    
    Public Sub New()
       lastRenewal = DateTime.Now
-   End Sub 'New
+   End Sub
    
    <SecurityPermission(SecurityAction.LinkDemand, Flags := SecurityPermissionFlag.Infrastructure)> _
    Public Function Renewal(lease As ILease) As TimeSpan Implements ISponsor.Renewal
@@ -54,6 +53,6 @@ Public Class MyClientSponsor
       lastRenewal = DateTime.Now
       Return TimeSpan.FromSeconds(20)
    End Function 'Renewal
-End Class 'MyClientSponsor
+End Class
 ' </Snippet2>
 ' </Snippet1>

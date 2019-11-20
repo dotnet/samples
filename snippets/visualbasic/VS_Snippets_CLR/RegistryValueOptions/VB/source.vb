@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 Imports Microsoft.Win32
-Imports Microsoft.VisualBasic
 
 Public Class Example
     Public Shared Sub Main()
@@ -19,6 +18,6 @@ Public Class Example
             rk.GetValue("ExpandValue", "No Value", _
             RegistryValueOptions.DoNotExpandEnvironmentNames))
         Console.WriteLine("Expanded: ""{0}""", rk.GetValue("ExpandValue"))
-    End Sub 'Main
-End Class 'Example
+    End Sub
+End Class
 ' </Snippet1>

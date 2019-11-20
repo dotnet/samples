@@ -23,6 +23,6 @@ Public Class Sample
             xslt.Transform("order.xml", xslArg, w)
         End Using
 
-    End Sub 'Main 
-End Class 'Sample
+    End Sub
+End Class
 '</snippet1>

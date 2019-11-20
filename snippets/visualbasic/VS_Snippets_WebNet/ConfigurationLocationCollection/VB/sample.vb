@@ -23,5 +23,5 @@ Class DisplayLocationInfo
         Console.WriteLine("Done...")
         Console.ReadLine()
     End Sub
-End Class 'DisplayLocationInfo
+End Class
 '</Snippet1>

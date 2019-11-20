@@ -33,7 +33,7 @@ Public Class ClientClass
       Console.WriteLine("Finished remote object call")
       Console.WriteLine()
 
-   End Sub 'Main
+   End Sub
 
-End Class 'ClientClass
+End Class
 ' </Snippet7>

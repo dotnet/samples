@@ -2,7 +2,6 @@
 
 Option Explicit On
 Option Strict On
-Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
 Imports System.Drawing
@@ -45,7 +44,7 @@ Class Form1
         Me.Text = "Parts Form"
         AddHandler Me.Load, AddressOf Form1_Load
 
-    End Sub 'New
+    End Sub
 
     Sub Form1_Load(ByVal sender As Object, ByVal e As EventArgs)
         InitializeListOfParts()

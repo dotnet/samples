@@ -297,7 +297,7 @@ namespace XMLProcessingApp
         //</Snippet4>
         //************************************************************************************
         //
-        //  Uses filter criteria collection in the UI to retreive specific elements and attributes.
+        //  Uses filter criteria collection in the UI to retrieve specific elements and attributes.
         //
         //************************************************************************************
         public XmlNodeList ApplyFilters(ArrayList conditions, ArrayList operatorSymbols,

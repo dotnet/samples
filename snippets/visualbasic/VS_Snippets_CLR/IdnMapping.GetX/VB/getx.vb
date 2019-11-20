@@ -48,7 +48,7 @@ Class Sample
         nonInternational = idn.GetUnicode(international, 0, international.Length)
         CodePoints(nonInternational, msg8)
         Console.WriteLine(msg9)
-    End Sub 'Main
+    End Sub
     
     ' ----------------------------------------------------------------------------
     Shared Sub CodePoints(ByVal value As String, ByVal title As String) 
@@ -60,8 +60,8 @@ Class Sample
         Console.WriteLine()
         Console.WriteLine()
     
-    End Sub 'CodePoints
-End Class 'Sample
+    End Sub
+End Class
 '
 'This code example produces the following results:
 '

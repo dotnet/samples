@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
 
@@ -20,7 +19,7 @@ Public Class Form1
         ' Insert code to fill tables with columns and data.
         ' Binds the DataGrid to the DataSet, displaying the Suppliers table.
         dataGrid1.SetDataBinding(SuppliersProducts, "Suppliers")
-    End Sub 'BindControls
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

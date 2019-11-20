@@ -1,14 +1,12 @@
 ﻿
 ' compile with: -r:system.dll -r:system.windows.forms.dll
 Imports System.Windows.Forms
-Imports System
-
 Public Class [MyClass]
    Inherits Form
    
    <STAThread()> Public Shared Sub Main()
       Application.Run(New [MyClass]())
-   End Sub 'Main
+   End Sub
  ' <snippet1>  
    Public Sub New()
       ' Create a new DateTimePicker
@@ -18,6 +16,6 @@ Public Class [MyClass]
       
       dateTimePicker1.Value = DateTime.Now.AddDays(1)
       MessageBox.Show(dateTimePicker1.Value.ToString())
-   End Sub 'New
+   End Sub
 ' </snippet1>
-End Class '[MyClass]
+End Class

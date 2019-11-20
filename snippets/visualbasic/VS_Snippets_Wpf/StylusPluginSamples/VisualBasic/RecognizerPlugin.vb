@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Collections.Generic
 Imports System.Collections.ObjectModel
 Imports System.Text
@@ -28,7 +27,7 @@ Class RecognizerPlugin
     Public Sub New()
         recognizer = New GestureRecognizer()
 
-    End Sub 'New
+    End Sub
 
 
     ' <Snippet15>
@@ -43,7 +42,7 @@ Class RecognizerPlugin
             currentStylus = rawStylusInput.StylusDeviceId
         End If
 
-    End Sub 'OnStylusDown
+    End Sub
 
     ' Collect the points as the user draws the stroke.
     Protected Overrides Sub OnStylusMove(ByVal rawStylusInput As RawStylusInput)
@@ -54,7 +53,7 @@ Class RecognizerPlugin
             points.Add(rawStylusInput.GetStylusPoints())
         End If
 
-    End Sub 'OnStylusMove
+    End Sub
 
     ' Collect the points as the user draws the stroke.
     Protected Overrides Sub OnStylusUp(ByVal rawStylusInput As RawStylusInput)
@@ -71,7 +70,7 @@ Class RecognizerPlugin
         points = Nothing
         currentStylus = 0
 
-    End Sub 'OnStylusUp
+    End Sub
     ' </Snippet15>
 
     '<Snippet14>
@@ -85,7 +84,7 @@ Class RecognizerPlugin
             currentStylus = 0
         End If
 
-    End Sub 'OnStylusLeave
+    End Sub
     '</Snippet14>
 
     ' This method is called on the application thread.
@@ -115,6 +114,6 @@ Class RecognizerPlugin
             End If
         End If
 
-    End Sub 'OnStylusUpProcessed 
-End Class 'RecognizerPlugin
+    End Sub
+End Class
 '</Snippet12>

@@ -7,9 +7,8 @@ namespace Aggregate
 {
     public static class MinSample4
     {
-        //This sample uses Min and query syntax to get the products with the lowest price in each category.
-        // 
-        //Output:
+        // This sample uses Min and query syntax to get the products with the lowest price in each category.
+        // Output:
         // The cheapest product in the Beverages category is Guarana Fantastica.
         // The cheapest product in the Condiments category is Aniseed Syrup.
         // The cheapest product in the Produce category is Longlife Tofu.
@@ -35,9 +34,8 @@ namespace Aggregate
             }
         }
 
-        //This sample uses Min and method syntax to get the products with the lowest price in each category.
-        // 
-        //Output:
+        // This sample uses Min and method syntax to get the products with the lowest price in each category.
+        // Output:
         // The cheapest product in the Beverages category is Guarana Fantastica.
         // The cheapest product in the Condiments category is Aniseed Syrup.
         // The cheapest product in the Produce category is Longlife Tofu.

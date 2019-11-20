@@ -28,6 +28,6 @@ Public Class Verify
       Else
          Console.WriteLine("Signature check FAILED")
       End If
-   End Sub 'Main 
-End Class 'Verify
+   End Sub
+End Class
 '</Snippet1>

@@ -1,5 +1,6 @@
 ﻿'<Snippet1>
 Imports System.Device.Location
+
 Module ResolveAddressSync
     '<Snippet2>
 

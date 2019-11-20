@@ -16,9 +16,6 @@ Imports System.Net
 Imports System.Net.Sockets
 Imports System.Text
 Imports System.IO
-Imports Microsoft.VisualBasic
-
-
 
 Public Class HttpConnect
     Inherits WebResponse
@@ -42,18 +39,18 @@ Public Class HttpConnect
         Catch e As Exception
             Console.WriteLine(e)
         End Try
-    End Sub ' Main
+    End Sub
     
     
     ' Default constructor
     Sub New()
-    End Sub ' New
+    End Sub
     
     
     ' Constructor accepting stream as a parameter.
     Sub New(getStream As Stream)
         Me.getStream = getStream
-    End Sub ' New
+    End Sub
     
     
     ' Override 'GetResponseStream' method of the  'WebResponse' class.
@@ -109,5 +106,5 @@ Public Class HttpConnect
       
 
 ' </Snippet1>
-    End Sub ' ConnectHttpServer 
-End Class ' HttpConnect
+    End Sub
+End Class

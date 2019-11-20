@@ -17,18 +17,18 @@ Namespace CustomControls
       
       Public Sub New()
         'Insert your code here.
-      End Sub 'New
+      End Sub
       
-    End Class 'MyLabel
+    End Class
    
     Public Class MyDataBindingHandler
       Inherits DataBindingHandler
       
       Public Overrides Sub DataBindControl(host As IDesignerHost, control As Control)
          CType(control, Label).Text = "Added by data binding handler."
-      End Sub 'DataBindControl
+      End Sub
       
-    End Class 'MyDataBindingHandler
+    End Class
     
 End Namespace 'CustomControls 
 

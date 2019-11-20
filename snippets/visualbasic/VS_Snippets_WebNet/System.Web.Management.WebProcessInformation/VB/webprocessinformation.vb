@@ -30,7 +30,7 @@ Public Class SampleWebProcessInformation
         "Event created at: {0}", _
         EventTime.ToString()))
 
-    End Sub 'New
+    End Sub
    
    ' </Snippet2>
    ' <Snippet3>
@@ -43,7 +43,7 @@ Public Class SampleWebProcessInformation
       
       ' Raise the event.
       MyBase.Raise()
-   End Sub 'Raise
+   End Sub
    
    ' </Snippet3>
    ' <Snippet4>
@@ -89,9 +89,9 @@ Public Class SampleWebProcessInformation
         formatter.AppendLine(GetProcessName())
         formatter.IndentationLevel -= 1
         formatter.AppendLine(eventInfo.ToString())
-    End Sub 'FormatToString
+    End Sub
     ' </Snippet7>
 
-End Class 'SampleWebProcessInformation 
+End Class
 
 ' </Snippet1>

@@ -25,7 +25,6 @@
 '******************************************************************************
 Option Strict Off  ' To prevent warnings with Int function.
 
-Imports System
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.Drawing
@@ -90,7 +89,7 @@ Public Class CustomListControl
         ' Initialize list item collection.
         itemsArray = New ArrayList()
 
-    End Sub 'New
+    End Sub
 
 
     ''' <summary>
@@ -232,7 +231,7 @@ Public Class CustomListControl
     Protected Overrides Sub OnGotFocus(ByVal e As EventArgs)
         OnPaint(New PaintEventArgs(CreateGraphics(), Me.DisplayRectangle))
         MyBase.OnGotFocus(e)
-    End Sub 'OnGotFocus
+    End Sub
 
 
     ''' <summary>
@@ -242,7 +241,7 @@ Public Class CustomListControl
     Protected Overrides Sub OnLostFocus(ByVal e As EventArgs)
         OnPaint(New PaintEventArgs(CreateGraphics(), Me.DisplayRectangle))
         MyBase.OnLostFocus(e)
-    End Sub 'OnLostFocus
+    End Sub
 
 
     ''' <summary>
@@ -291,7 +290,7 @@ Public Class CustomListControl
             End If
         Next i
         e.Dispose()
-    End Sub 'OnPaint
+    End Sub
 
 
     ''' <summary>
@@ -305,7 +304,7 @@ Public Class CustomListControl
             InternalSelect(index)
         End If
 
-    End Sub 'OnMouseDown
+    End Sub
 
 
     ''' <summary>
@@ -397,7 +396,7 @@ Public Class CustomListControl
             ListProvider.OnFocusChange(CType(itemsArray(index), CustomListItem))
         End If
 
-    End Sub 'InternalSelect
+    End Sub
 
 #End Region
 
@@ -449,11 +448,11 @@ Public Class CustomListControl
         End If
         MyBase.WndProc(winMessage)
 
-    End Sub 'WndProc
+    End Sub
 
 #End Region
 
-End Class 'CustomListControl 
+End Class
 
 ''' <summary>
 ''' Class for the list items controls.
@@ -489,7 +488,7 @@ Public Class CustomListItem
         ItemText = [text]
         ItemId = id
         ItemStatus = availability
-    End Sub 'New
+    End Sub
 
     ''' <summary>
     ''' Gets and sets the status of the item (alive if it is still displayed).
@@ -609,4 +608,4 @@ Public Class CustomListItem
             ItemProvider = value
         End Set
     End Property
-End Class 'CustomListItem 
+End Class

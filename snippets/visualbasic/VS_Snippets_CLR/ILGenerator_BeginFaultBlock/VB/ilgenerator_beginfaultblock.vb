@@ -108,6 +108,6 @@ Public Class ILGenerator_BeginFaultBlock
       
       ' Invoke member.
       myAddType.InvokeMember("DoAdd", BindingFlags.InvokeMethod, Nothing, myObject1, myObject2)
-   End Sub 'Main
-End Class 'ILGenerator_BeginFaultBlock
+   End Sub
+End Class
 ' </Snippet1>

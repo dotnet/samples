@@ -42,9 +42,9 @@ Public Class SamplesEncoding
          Console.WriteLine()
       Next ei
 
-   End Sub 'Main 
+   End Sub
 
-End Class 'SamplesEncoding
+End Class
 
 ' The example displays the following output when run on .NET Core:
 '

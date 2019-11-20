@@ -13,8 +13,6 @@
 Imports System.IO
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
-
 
 Class WebRequest_ContentLength
     
@@ -91,5 +89,5 @@ Class WebRequest_ContentLength
             Console.WriteLine(("Source : " + e.Source))
             Console.WriteLine(("Message : " + e.Message))
         End Try
-    End Sub ' Main
-End Class ' WebRequest_ContentLength 
+    End Sub
+End Class

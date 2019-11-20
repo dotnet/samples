@@ -7,7 +7,7 @@ Namespace SMTPMailSendExample
       Shared Sub Main()
          Send1()
          Send2()
-      End Sub 'Main
+      End Sub
 
 
       Public Shared Sub Send1()
@@ -24,7 +24,7 @@ Namespace SMTPMailSendExample
          SmtpMail.SmtpServer = "MyMailServer"
          SmtpMail.Send(myMail)
          '</Snippet1>
-      End Sub 'Send1
+      End Sub
 
       Public Shared Sub Send2()
          '<Snippet2>
@@ -35,6 +35,6 @@ Namespace SMTPMailSendExample
          SmtpMail.SmtpServer = "MyMailServer"
          SmtpMail.Send(from, mailto, subject, body)
          '</Snippet2>
-      End Sub 'Send2
-   End Class 'Class1
+      End Sub
+   End Class
 End Namespace 'SMTPMailSendExample

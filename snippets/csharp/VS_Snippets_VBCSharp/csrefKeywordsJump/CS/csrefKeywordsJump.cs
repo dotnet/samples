@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -47,13 +46,13 @@ namespace csrefKeywordsJump
             switch (n)
             {
                 case 1:
-                    Console.WriteLine("Current value is {0}", 1);
+                    Console.WriteLine("Current value is 1");
                     break;
                 case 2:
-                    Console.WriteLine("Current value is {0}", 2);
+                    Console.WriteLine("Current value is 2");
                     break;
                 case 3:
-                    Console.WriteLine("Current value is {0}", 3);
+                    Console.WriteLine("Current value is 3");
                     break;
                 default:
                     Console.WriteLine("Sorry, invalid selection.");
@@ -127,7 +126,7 @@ namespace csrefKeywordsJump
             }
             if (cost != 0)
             {
-                Console.WriteLine("Please insert {0} cents.", cost);
+                Console.WriteLine($"Please insert {cost} cents.");
             }
             Console.WriteLine("Thank you for your business.");
 
@@ -156,19 +155,19 @@ namespace csrefKeywordsJump
             int count = 0;
             string[,] array = new string[x, y];
 
-            // Initialize the array:
+            // Initialize the array.
             for (int i = 0; i < x; i++)
 
                 for (int j = 0; j < y; j++)
                     array[i, j] = (++count).ToString();
 
-            // Read input:
+            // Read input.
             Console.Write("Enter the number to search for: ");
 
-            // Input a string:
+            // Input a string.
             string myNumber = Console.ReadLine();
 
-            // Search:
+            // Search.
             for (int i = 0; i < x; i++)
             {
                 for (int j = 0; j < y; j++)
@@ -180,11 +179,11 @@ namespace csrefKeywordsJump
                 }
             }
 
-            Console.WriteLine("The number {0} was not found.", myNumber);
+            Console.WriteLine($"The number {myNumber} was not found.");
             goto Finish;
 
         Found:
-            Console.WriteLine("The number {0} is found.", myNumber);
+            Console.WriteLine($"The number {myNumber} is found.");
 
         Finish:
             Console.WriteLine("End of search.");
@@ -237,20 +236,20 @@ namespace csrefKeywordsJump
             int[] numbers = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
             char[] letters = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j' };
 
-            // Outer loop
-            for (int x = 0; x < numbers.Length; x++)
+            // Outer loop.
+            for (int i = 0; i < numbers.Length; i++)
             {
-                Console.WriteLine("num = {0}", numbers[x]);
+                Console.WriteLine($"num = {numbers[i]}");
 
-                // Inner loop
-                for (int y = 0; y < letters.Length; y++)
+                // Inner loop.
+                for (int j = 0; j < letters.Length; j++)
                 {
-                    if (y == x)
+                    if (j == i)
                     {
-                        // Return control to outer loop
+                        // Return control to outer loop.
                         break;
                     }
-                    Console.Write(" {0} ", letters[y]);
+                    Console.Write($" {letters[j]} ");
                 }
                 Console.WriteLine();
             }
@@ -285,4 +284,43 @@ namespace csrefKeywordsJump
          a  b  c  d  e  f  g  h  i
      */
     //</Snippet7>  
+
+    //<snippet8>
+    class BreakFromSwitchInsideLoop
+    {
+        static void Main(string[] args)
+        {
+            // loop 1 to 3
+            for (int i = 1; i <= 3; i++)
+            {
+                switch(i)
+                {
+                    case 1:
+                        Console.WriteLine("Current value is 1");
+                        break;
+                    case 2:
+                        Console.WriteLine("Current value is 2");
+                        break;
+                    case 3:
+                        Console.WriteLine("Current value is 3");
+                        break;
+                    default:
+                        Console.WriteLine("This shouldn't happen.");
+                        break;
+                }
+            }
+
+            // Keep the console open in debug mode.
+            Console.WriteLine("Press any key to exit.");
+            Console.ReadKey();
+        }
+    }
+
+    /*
+     * Output:
+        Current value is 1
+        Current value is 2
+        Current value is 3
+     */
+    //</snippet8>
 }

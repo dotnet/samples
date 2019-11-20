@@ -13,12 +13,12 @@ Namespace Windows.Communication.Foundation.Samples
 
     Public Class Test
         Private Sub New()
-        End Sub 'New
+        End Sub
 
         Shared Sub Main()
             Console.WriteLine("Hello")
             Console.ReadLine()
-        End Sub 'Main
+        End Sub
         Private Class Snippets
             Private Sub Snippet1()
                 '<snippet1>
@@ -35,7 +35,7 @@ Namespace Windows.Communication.Foundation.Samples
                 '</snippet1>
             End Sub
         End Class
-    End Class 'Test
+    End Class
     <System.ServiceModel.ServiceContractAttribute([Namespace]:="http://Microsoft.ServiceModel.Samples")> _
     Public Interface ICalculator
         <System.ServiceModel.OperationContractAttribute(Action:="http://Microsoft.ServiceModel.Samples/ICalculator/Add", ReplyAction:="http://Microsoft.ServiceModel.Samples/ICalculator/AddResponse")> _
@@ -89,7 +89,7 @@ Namespace Windows.Communication.Foundation.Samples
             Return result
         End Function
         ' </snippet2>    
-    End Class 'CalculatorService
+    End Class
     <System.Diagnostics.DebuggerStepThroughAttribute(), _
      System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")> _
     Partial Public Class CalculatorClient

@@ -71,7 +71,7 @@ Class Sample
         list.Sort(turkICComp)
         Display(list, "Turkish culture, ignore case...")
     
-    End Sub 'Main
+    End Sub
     
     Public Shared Sub Display(ByVal lst As List(Of String), ByVal title As String)
         Dim c As Char
@@ -85,8 +85,8 @@ Class Sample
             Console.WriteLine("0x{0:x}", codePoint)
         Next s
         Console.WriteLine()
-    End Sub 'Display
-End Class 'Sample '
+    End Sub
+End Class
 
 'This code example produces the following results:
 '

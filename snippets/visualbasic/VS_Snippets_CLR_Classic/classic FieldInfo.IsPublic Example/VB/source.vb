@@ -1,7 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
-
 
 ' Make two fields.
 Public Class Myfielda
@@ -13,12 +11,12 @@ Public Class Myfielda
             Return SomeField
         End Get
     End Property
-End Class 'Myfielda
+End Class
 
 Public Class Myfieldb
     ' Make a public field.
     Public SomeField As String = "public field"
-End Class 'Myfieldb
+End Class
 
 Public Class Myfieldinfo
 
@@ -48,5 +46,5 @@ Public Class Myfieldinfo
 
         Return 0
     End Function 'Main
-End Class 'Myfieldinfo
+End Class
 ' </Snippet1>

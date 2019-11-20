@@ -43,18 +43,18 @@ Class XMLSchemaExamples
         Dim nsmgr As New XmlNamespaceManager(New NameTable())
         nsmgr.AddNamespace("xs", "http://www.w3.org/2001/XMLSchema")
         compiledSchema.Write(Console.Out, nsmgr)
-    End Sub 'Main
+    End Sub
 
 
     Public Shared Sub ValidationCallbackOne(ByVal sender As Object, ByVal args As ValidationEventArgs)
 
         Console.WriteLine(args.Message)
-    End Sub 'ValidationCallbackOne
+    End Sub
 
 
     Public Shared Function TextToNodeArray(ByVal text As String) As XmlNode()
         Dim doc As New XmlDocument()
         Return New XmlNode(0) {doc.CreateTextNode(text)}
     End Function 'TextToNodeArray
-End Class 'XMLSchemaExamples
+End Class
 ' </Snippet1>

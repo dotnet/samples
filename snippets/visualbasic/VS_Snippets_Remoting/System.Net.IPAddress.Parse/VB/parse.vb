@@ -27,7 +27,7 @@ Class ParseAddress
       End If 
       ' Get the list of the IPv6 addresses associated with the requested host.
       Parse(IPaddress)
-   End Sub 'Main
+   End Sub
     
    
    ' This method calls the IPAddress.Parse method to check the ipAddress 
@@ -59,6 +59,6 @@ Class ParseAddress
          Console.WriteLine(("Source : " + e.Source))
          Console.WriteLine(("Message : " + e.Message))
       End Try
-   End Sub 'parse 
-End Class 'ParseAddress
+   End Sub
+End Class
 ' </Snippet1>

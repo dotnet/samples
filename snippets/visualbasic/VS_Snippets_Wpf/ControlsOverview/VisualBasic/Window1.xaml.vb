@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.Windows
@@ -23,13 +22,13 @@ Partial Class Window1
     Public Sub New()
         InitializeComponent()
 
-    End Sub 'New
+    End Sub
 
 
     Private Sub submit_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
 
         MessageBox.Show("Hello, " + firstName.Text + " " + lastName.Text)
 
-    End Sub 'submit_Click
-End Class 'Window1
+    End Sub
+End Class
 

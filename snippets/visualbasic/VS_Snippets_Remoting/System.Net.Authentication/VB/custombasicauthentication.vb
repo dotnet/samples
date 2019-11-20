@@ -17,7 +17,6 @@ Imports System.Net
 Imports System.IO
 Imports System.Text
 Imports System.Collections
-Imports Microsoft.VisualBasic
 
 Namespace Mssc.Services.Authentication
 
@@ -40,7 +39,7 @@ Namespace Mssc.Services.Authentication
         Console.WriteLine(ControlChars.Cr + ControlChars.Lf + "Use one of the following:")
         Console.WriteLine(ControlChars.Tab + "customBasicAuthentication URL username password domain")
         Console.WriteLine(ControlChars.Tab + "customBasicAuthentication URL username password")
-      End Sub 'showusage
+      End Sub
 
 
       ' <Snippet8>
@@ -56,7 +55,7 @@ Namespace Mssc.Services.Authentication
           Dim currentAuthenticationModule As IAuthenticationModule = CType(registeredModules.Current, IAuthenticationModule)
           Console.WriteLine(ControlChars.Tab + "  CanPreAuthenticate : {0}", currentAuthenticationModule.CanPreAuthenticate)
         End While
-      End Sub 'displayRegisteredModules 
+      End Sub
 
       ' </Snippet8>
       ' The getPage method accesses the selected page and displays its content 
@@ -99,7 +98,7 @@ Namespace Mssc.Services.Authentication
           Console.WriteLine(("Caught Exception: " + e.Message))
           Console.WriteLine(("Stack: " + e.StackTrace))
         End Try
-      End Sub 'getPage
+      End Sub
 
 
       ' The displayPageContent method display the content of the
@@ -121,7 +120,7 @@ Namespace Mssc.Services.Authentication
           bytes = ReceiveStream.Read(read, 0, 512)
         End While
         Console.WriteLine("")
-      End Sub 'displayPageContent
+      End Sub
 
       'Entry point which delegates to C-style main Private Function
       'Public Overloads Sub Main(ByVal args() As String)
@@ -170,9 +169,9 @@ Namespace Mssc.Services.Authentication
           getPage(uri)
         End If
         Return
-      End Sub 'Main
+      End Sub
 
-    End Class 'ClientAuthentication 
+    End Class
     '</Snippet2>
 
     ' <Snippet6>
@@ -195,7 +194,7 @@ Namespace Mssc.Services.Authentication
       Public Sub New()
         m_authenticationType = "Basic"
         m_canPreAuthenticate = False
-      End Sub 'New
+      End Sub
 
       ' Define the authentication type. This type is then used to identify this
       ' custom authentication module. The default is set to Basic.
@@ -322,7 +321,7 @@ Namespace Mssc.Services.Authentication
 
         Return resourceAuthorization
       End Function 'Authenticate
-    End Class 'CustomBasic 
+    End Class
     ' </Snippet3>
     ' </Snippet6>
   End Module

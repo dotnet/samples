@@ -42,7 +42,7 @@ Public Class SampleBufferedWebEventProvider
       ' Instantiate buffer to contain 
       ' local data.
       customInfo = New StringBuilder()
-   End Sub 'New
+   End Sub
     
    
    ' </Snippet8>
@@ -51,7 +51,7 @@ Public Class SampleBufferedWebEventProvider
       customInfo.AppendLine("Perform custom flush")
         StoreToFile(customInfo, _
         logFilePath, FileMode.Append)
-   End Sub 'Flush
+   End Sub
     ' </Snippet9>
    
    ' <Snippet2>
@@ -71,7 +71,7 @@ Public Class SampleBufferedWebEventProvider
         "Buffering: {0}", buffer))
         customInfo.AppendLine(String.Format( _
         "Buffering modality: {0}", bufferModality))
-    End Sub 'Initialize
+    End Sub
    
    ' </Snippet2>
    ' <Snippet3>
@@ -114,7 +114,7 @@ Public Class SampleBufferedWebEventProvider
             StoreToFile(customInfo, _
             logFilePath, FileMode.Append)
         End If
-    End Sub 'ProcessEvent
+    End Sub
    
    ' </Snippet5>
 
@@ -205,7 +205,7 @@ flushInfo)))
         ' Store the information in the specified file.
         StoreToFile(customInfo, logFilePath, _
         FileMode.Append)
-    End Sub 'ProcessEventFlush
+    End Sub
 
     ' </Snippet6>
     ' <Snippet7>
@@ -217,7 +217,7 @@ flushInfo)))
         ' Flush the buffer, if needed.
         Flush()
 
-    End Sub 'Shutdown
+    End Sub
 
     ' </Snippet7>
     ' <Snippet10>
@@ -274,9 +274,9 @@ flushInfo)))
             Throw New Exception( _
             "[SampleEventProvider] StoreToFile: exception.")
         End Try
-    End Sub 'StoreToFile
+    End Sub
     ' </Snippet10>
-End Class 'SampleBufferedWebEventProvider
+End Class
 
 
 

@@ -20,14 +20,14 @@ Namespace ReflectionModule_Examples
             For Each t In tArray
                 Console.WriteLine("Found a module beginning with my*: {0}", t.Name)
             Next t
-        End Sub 'Main
-    End Class 'MyMainClass
+        End Sub
+    End Class
 
     Class MySecondClass
-    End Class 'MySecondClass
+    End Class
 
     'This class does not fit the filter criteria my*
     Class YourClass
-    End Class 'YourClass
+    End Class
 End Namespace 'ReflectionModule_Examples
 '</snippet1>

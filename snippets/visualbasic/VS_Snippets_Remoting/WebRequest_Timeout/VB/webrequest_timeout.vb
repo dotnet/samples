@@ -8,8 +8,6 @@
 Imports System.IO
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
-
 
 Class WebRequest_Timeout
     
@@ -60,5 +58,5 @@ Class WebRequest_Timeout
             Console.WriteLine(ControlChars.Cr + "Exception is raised ")
             Console.WriteLine(ControlChars.Cr + "{0} ", e.Message)
         End Try
-    End Sub ' Main
-End Class ' WebRequest_Timeout
+    End Sub
+End Class

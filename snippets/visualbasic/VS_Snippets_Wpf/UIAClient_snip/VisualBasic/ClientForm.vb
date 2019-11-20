@@ -7,7 +7,6 @@
 ' * 
 ' ************************************************************************************************
 
-Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
 Imports System.Data
@@ -56,7 +55,7 @@ Class Form1
     Public Sub New()
         InitializeComponent()
 
-    End Sub 'New
+    End Sub
 
 
     ' <Snippet181>
@@ -96,7 +95,7 @@ Class Form1
             elementNode = TreeWalker.ControlViewWalker.GetNextSibling(elementNode)
         End While
 
-    End Sub 'WalkControlElements
+    End Sub
 
     ' </Snippet171>
 
@@ -125,7 +124,7 @@ Class Form1
             elementNode = walker.GetNextSibling(elementNode)
         End While
 
-    End Sub 'WalkEnabledElements
+    End Sub
 
     ' </Snippet174>
 
@@ -201,7 +200,7 @@ Class Form1
             Console.WriteLine(element.Current.Name + " was selected.")
         End If
 
-    End Sub 'OnSelect
+    End Sub
     ' </Snippet106>
 
     '''' <summary>
@@ -236,7 +235,7 @@ Class Form1
             Return
         End Try
 
-    End Sub 'button1_Click
+    End Sub
 
     ' <Snippet184>
     ''' <summary>
@@ -299,7 +298,7 @@ Class Form1
             ElementSubscribeButton = elementButton
         End If
 
-    End Sub 'SubscribeToInvoke
+    End Sub
 
 
     ' <Snippet173>
@@ -323,7 +322,7 @@ Class Form1
         End If
         ' TODO Handle any other events that have been subscribed to.
         Console.WriteLine("Event: " & e.EventId.ProgrammaticName)
-    End Sub 'OnUIAutomationEvent
+    End Sub
     ' </Snippet173>
 
     Private Sub ShutdownUIA()
@@ -331,7 +330,7 @@ Class Form1
             Automation.RemoveAutomationEventHandler(InvokePattern.InvokedEvent, ElementSubscribeButton, UIAeventHandler)
         End If
 
-    End Sub 'ShutdownUIA
+    End Sub
     ' </Snippet101>
 
     ' NOTE: ABOVE SHOULD NOT BE CALLED ON THE UI THREAD
@@ -344,7 +343,7 @@ Class Form1
         ' NOTE This should not be done on the UI thread
         ShutdownUIA()
 
-    End Sub 'Form1_FormClosing
+    End Sub
 
 
     ' <Snippet102>
@@ -358,7 +357,7 @@ Class Form1
         focusHandler = New AutomationFocusChangedEventHandler(AddressOf OnFocusChange)
         Automation.AddAutomationFocusChangedEventHandler(focusHandler)
 
-    End Sub 'SubscribeToFocusChange
+    End Sub
 
 
     ''' <summary>
@@ -368,7 +367,7 @@ Class Form1
     ''' <param name="e">Event arguments.</param>
     Private Sub OnFocusChange(ByVal src As Object, ByVal e As AutomationFocusChangedEventArgs)
 
-    End Sub 'OnFocusChange
+    End Sub
 
     ' TODO Add event handling code.
     ' The arguments tell you which elements have lost and received focus.
@@ -381,7 +380,7 @@ Class Form1
             Automation.RemoveAutomationFocusChangedEventHandler(focusHandler)
         End If
 
-    End Sub 'UnsubscribeFocusChange
+    End Sub
     ' </Snippet102>
 
 #End Region
@@ -417,7 +416,7 @@ Class Form1
             pattern.Select()
         End If
 
-    End Sub 'SelectListItem
+    End Sub
     ' </Snippet103>
 
     ' <Snippet104>
@@ -454,7 +453,7 @@ Class Form1
             pattern.AddToSelection()
         End If
 
-    End Sub 'AddListItemToSelection
+    End Sub
     ' </Snippet105>
 #End Region
 
@@ -525,7 +524,7 @@ Class Form1
         ' This is still a valid call, even though the property is in the cache.
         ' Of course, the cached value and the current value are not guaranteed to be the same.
         itemName = elementListItem.Current.Name
-    End Sub 'CachePropertiesByActivate
+    End Sub
 
     ' </Snippet107>
 
@@ -589,7 +588,7 @@ Class Form1
         '  default value (Full), this call would be valid.
         '** bool enabled = elementListItem.Current.IsEnabled; **
 
-    End Sub 'CachePropertiesByPush
+    End Sub
     ' </Snippet108>
 
 
@@ -628,7 +627,7 @@ Class Form1
         Dim helpString As String = _
             CStr(elementList.GetCurrentPropertyValue(AutomationElement.HelpTextProperty))
         ' </Snippet126>
-    End Sub 'MiscPropertyCalls
+    End Sub
 
 
     ' Following is similar to above, but without the redundant comments -- better for a how-to
@@ -648,7 +647,7 @@ Class Form1
         End If
         Dim helpText As String = CStr(help)
 
-    End Sub 'PropertyCallsExample
+    End Sub
     ' </Snippet170>
 
     '** *** Updating the cache *** **
@@ -693,7 +692,7 @@ Class Form1
             End If
         End Using
 
-    End Sub 'SetupComboElement
+    End Sub
 
 
     ''' <summary>
@@ -713,7 +712,7 @@ Class Form1
         Dim selectedItems As AutomationElement() = pattern.Cached.GetSelection()
         selectedItem = selectedItems(0)
 
-    End Sub 'OnListItemSelect
+    End Sub
 
     ' </Snippet109>
 
@@ -756,7 +755,7 @@ Class Form1
             Dim child As AutomationElement = elementList.CachedChildren(0)
             Console.WriteLine(child.CachedParent.Cached.Name)
         End Using
-    End Sub 'CachePropertiesWithScope
+    End Sub
     ' </Snippet119>
 #End Region
 
@@ -859,7 +858,7 @@ Class Form1
         End Try
         ' </Snippet182>
 
-    End Sub 'MiscellaneousCalls 
+    End Sub
 
 #End Region
 
@@ -921,7 +920,7 @@ Class Form1
 
         'ps.SubscribePropertyChange(elementButton)
 
-    End Sub 'btnMisc_Click 
+    End Sub
 
-End Class 'Form1
+End Class
 

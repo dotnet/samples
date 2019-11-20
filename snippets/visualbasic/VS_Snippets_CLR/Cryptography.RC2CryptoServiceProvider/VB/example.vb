@@ -33,7 +33,7 @@ Module MyMainModule
         Dim msDecrypt As New MemoryStream(encryptedBytes)
         Dim csDecrypt As New CryptoStream(msDecrypt, rc2CSP.CreateDecryptor(rc2CSP.Key, rc2CSP.IV), CryptoStreamMode.Read)
 
-        Dim unencryptedBytes(originalBytes.Length) As Byte
+        Dim unencryptedBytes(originalBytes.Length - 1) As Byte
 
         'Read the data out of the crypto stream.
         csDecrypt.Read(unencryptedBytes, 0, unencryptedBytes.Length)

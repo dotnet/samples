@@ -18,5 +18,5 @@ Public Class Class1
             _price = reader.ReadString()
         End If
         ' </Snippet1>
-    End Sub 'Method1
-End Class 'Class1
+    End Sub
+End Class

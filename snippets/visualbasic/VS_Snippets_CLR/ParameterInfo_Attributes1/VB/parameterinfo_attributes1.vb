@@ -5,7 +5,6 @@
 
 ' <Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
 
 Public Class MyClass1
    
@@ -13,7 +12,7 @@ Public Class MyClass1
       j = 2
       Return 0
    End Function 'MyMethod
-End Class 'MyClass1
+End Class
 
 Public Class ParameterInfo_Attributes
    
@@ -30,6 +29,6 @@ Public Class ParameterInfo_Attributes
       For i = 0 To myParameters.Length - 1
          Console.WriteLine(ControlChars.Tab + "The {0} parameter has the attribute : {1}", i + 1, myParameters(i).Attributes)
       Next i
-   End Sub 'Main
-End Class 'ParameterInfo_Attributes
+   End Sub
+End Class
 ' </Snippet1>

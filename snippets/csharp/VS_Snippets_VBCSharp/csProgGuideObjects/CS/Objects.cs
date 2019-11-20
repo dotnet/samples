@@ -914,8 +914,8 @@ class TestPerson
         //<Snippet33>
         class Person
         {
-            private string name = "N/A";
-            private int age = 0;
+            private string _name = "N/A";
+            private int _age = 0;
 
             // Declare a Name property of type string:
             //<Snippet34>
@@ -923,12 +923,12 @@ class TestPerson
             {
                 get
                 {
-                    return name;
+                    return _name;
                 }
                 set
                 {
                     //<Snippet36>
-                    name = value;
+                    _name = value;
                     //</Snippet36>
                 }
             }
@@ -939,12 +939,12 @@ class TestPerson
             {
                 get
                 {
-                    return age;
+                    return _age;
                 }
 
                 set
                 {
-                    age = value;
+                    _age = value;
                 }
             }
 
@@ -998,7 +998,7 @@ class TestPerson
     {
         class Person
         {
-            private string name = "N/A";
+            private string _name = "N/A";
 
 
             //<Snippet87>
@@ -1006,7 +1006,7 @@ class TestPerson
             {
                 get
                 {
-                    return name;
+                    return _name;
                 }
             }
             //</Snippet87>

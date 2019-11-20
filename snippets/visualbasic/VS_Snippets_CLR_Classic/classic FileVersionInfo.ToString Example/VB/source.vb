@@ -15,7 +15,7 @@ Public Class Form1
         
         ' Print all the version information.
         textBox1.Text = myFileVersionInfo.ToString()
-    End Sub 'GetFileVersion2
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

@@ -21,8 +21,8 @@ Public Class Sample
         doc.Load(reader)
         
         doc.Save(Console.Out)
-    End Sub 'Main
-End Class 'Sample
+    End Sub
+End Class
 ' </Snippet1>
 
     Public Function LoadDocument(ByVal generateXML As Boolean) As XmlDocument

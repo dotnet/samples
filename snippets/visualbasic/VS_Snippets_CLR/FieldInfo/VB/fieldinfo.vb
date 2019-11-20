@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
 
 Public Class FieldInfoClass
     Public myField1 As Integer = 0

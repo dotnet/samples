@@ -1,7 +1,6 @@
 ﻿' <snippet1>
 
 ' <snippet2>
-Imports System
 Imports System.Windows.Forms
 ' </snippet2>
 

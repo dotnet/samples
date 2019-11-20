@@ -1,6 +1,5 @@
 ﻿
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -151,7 +150,7 @@ Class Form1
         'Set the drop-down on the DropDownButton.
         dropDownButton2.DropDown = dropDown
 
-    End Sub 'InitializeDropDownMonthCalendar
+    End Sub
 
 
     Public Sub monthCalendar_DateChanged( _

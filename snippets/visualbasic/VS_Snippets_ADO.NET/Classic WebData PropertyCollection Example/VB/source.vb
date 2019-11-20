@@ -28,4 +28,4 @@ Private Sub AddTimeStamp()
     Console.WriteLine(properties("TimeStamp"))
 End Sub 
 ' </Snippet1>
-End Class 'Form1 
+End Class

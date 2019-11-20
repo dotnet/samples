@@ -22,13 +22,13 @@ Class MySample
         myNewLog.WriteEntry("Test message", EventLogEntryType.Information)
 
         signal.WaitOne()
-    End Sub ' Main
+    End Sub
 
 
     Public Shared Sub MyOnEntryWritten(ByVal [source] As Object, ByVal e As EntryWrittenEventArgs)
         Console.WriteLine("In event handler")
         signal.Set()
-    End Sub ' MyOnEntryWritten
-End Class ' MySample 
+    End Sub
+End Class
 
 ' </Snippet1>

@@ -23,9 +23,9 @@ Public Class SamplesCultureInfo
          End If
       Next cal
 
-   End Sub 'Main 
+   End Sub
 
-End Class 'SamplesCultureInfo
+End Class
 
 
 'This code produces the following output.

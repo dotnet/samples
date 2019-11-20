@@ -1,4 +1,5 @@
 ﻿Imports System.Web.Services.Protocols
+
 ' <Snippet1>
 Public Class Sample
     

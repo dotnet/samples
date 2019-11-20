@@ -28,11 +28,11 @@ Public Class Form1
     Overloads Public Shared Function Main(args() As String) As Integer
         Const connectionString As String = _
             "Integrated Security=SSPI;database=Northwind;server=MSSQL1"
-        Const queryString As String = "SELECT * FROMProducts"
+        Const queryString As String = "SELECT * FROM Products"
         
         ' create DataAdapter
         Dim adapter As New SqlDataAdapter(queryString, connectionString)
-        Dim builder As SqlCommandBuilder = New SqlCommandBuilder(adapter)
+        Dim builder As New SqlCommandBuilder(adapter)
         
         ' Create and fill DataSet (select only first 5 rows)
         Dim dataSet As New DataSet()

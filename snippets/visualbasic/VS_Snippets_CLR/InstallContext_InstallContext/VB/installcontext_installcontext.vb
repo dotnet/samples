@@ -47,25 +47,25 @@ Namespace MyInstallContextNamespace
          End If
 ' </Snippet6>
          ' The 'Install procedure should be added here.
-      End Sub 'Install
+      End Sub
 
       Public Overrides Sub Uninstall(mySavedState As IDictionary)
          ' The 'Uninstall' procedure should be added here.
-      End Sub 'Uninstall
+      End Sub
 
       Public Overrides Sub Rollback(mySavedState As IDictionary)
          If myInstallContext.IsParameterTrue("LogtoConsole") = True Then
             myInstallContext.LogMessage("The 'Rollback' method has been called")
          End If
          ' The 'Rollback' procedure should be added here.
-      End Sub 'Rollback
+      End Sub
 
       Public Overrides Sub Commit(mySavedState As IDictionary)
          If myInstallContext.IsParameterTrue("LogtoConsole") = True Then
             myInstallContext.LogMessage("The 'Commit' method has been called")
          End If
          ' The 'Commit' procedure should be added here.
-      End Sub 'Commit
+      End Sub
 
       ' Entry point which delegates to C-style main Private Function
       Public Overloads Shared Sub Main()
@@ -112,8 +112,8 @@ Namespace MyInstallContextNamespace
             ' Call the 'Rollback' method.
             myInstallObject.Rollback( mySavedState )
          End Try
-      End Sub 'Main
-   End Class 'InstallContext_Example
+      End Sub
+   End Class
 End Namespace 'MyInstallContextNamespace
 
 ' </Snippet1>

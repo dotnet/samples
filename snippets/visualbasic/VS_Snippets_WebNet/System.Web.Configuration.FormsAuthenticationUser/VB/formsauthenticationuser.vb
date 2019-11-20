@@ -65,7 +65,7 @@ Class UsingFormsAuthenticationUser
       formsAuthenticationUsers(0).Name = "userName"
         ' </Snippet5>
 
-    End Sub 'Main 
-End Class 'UsingFormsAuthenticationUser 
+    End Sub
+End Class
 
 

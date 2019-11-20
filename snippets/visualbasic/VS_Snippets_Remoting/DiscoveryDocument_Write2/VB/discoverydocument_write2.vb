@@ -52,5 +52,5 @@ Public Class DiscoveryDocument_Example
       Catch e As Exception
          Console.WriteLine("Exception raised : {0}", e.Message.ToString())
       End Try
-   End Sub 'Main
-End Class 'DiscoveryDocument_Example
+   End Sub
+End Class

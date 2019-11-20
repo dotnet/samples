@@ -18,8 +18,8 @@ Public Class MyAttribute
 
    Public Sub New(myBoolean As Boolean)
       Me.myBoolean = myBoolean
-   End Sub 'New
-End Class 'MyAttribute
+   End Sub
+End Class
 
 Public Class MyConstructorBuilder
 
@@ -36,7 +36,7 @@ Public Class MyConstructorBuilder
                                CType(myAttributes1(index), MyAttribute).myBoolean.ToString())
          End If
       Next index
-   End Sub 'Main
+   End Sub
 
    Private Shared Function MyCreateCallee(domain As AppDomain) As Type
       Dim myAssemblyName As New AssemblyName()
@@ -70,5 +70,5 @@ Public Class MyConstructorBuilder
       End Try
       Return myTypeBuilder.CreateType()
    End Function 'MyCreateCallee
-End Class 'MyConstructorBuilder
+End Class
 ' </Snippet1>

@@ -8,7 +8,6 @@
 '
 
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -29,7 +28,7 @@ Namespace MyDataGridClass
       Public Sub New()
          InitializeComponent()
          SetUp()
-      End Sub 'New
+      End Sub
        
       
         Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -39,7 +38,7 @@ Namespace MyDataGridClass
                 End If
             End If
             MyBase.Dispose(disposing)
-        End Sub 'Dispose
+        End Sub
 
         ' <summary>
         ' Required method for Designer support - do not modify
@@ -88,19 +87,19 @@ Namespace MyDataGridClass
             Me.Text = "Grid Control"
             CType(Me.myDataGrid, ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
-        End Sub 'InitializeComponent
+        End Sub
 
         ' <summary>
         ' The main entry point for the application.
         ' </summary>
         <STAThread()> Shared Sub Main()
             Application.Run(New MyDataGridClass_FlatMode_ReadOnly())
-        End Sub 'Main
+        End Sub
 
         Private Sub SetUp()
             MakeDataSet()
             myDataGrid.SetDataBinding(myDataSet, "Customers")
-        End Sub 'SetUp
+        End Sub
 
 
         Private Sub MakeDataSet()
@@ -127,7 +126,7 @@ Namespace MyDataGridClass
             Next i
             ' Give the customer a name.
             myTable.Rows(0)("custName") = "Customer"
-        End Sub 'MakeDataSet
+        End Sub
 
 
 ' <Snippet1> 
@@ -138,7 +137,7 @@ Namespace MyDataGridClass
                 strMessage = "true"
             End If
             MessageBox.Show("Flat mode changed to " + strMessage, "Message", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-        End Sub 'myDataGrid_FlatModeChanged
+        End Sub
 
 
         ' Toggle the 'FlatMode'.
@@ -148,7 +147,7 @@ Namespace MyDataGridClass
             Else
                 myDataGrid.FlatMode = True
             End If
-        End Sub 'button1_Click
+        End Sub
 ' </Snippet1>
 ' <Snippet2>
         ' Check if the 'ReadOnly' property is changed.
@@ -158,7 +157,7 @@ Namespace MyDataGridClass
                 strMessage = "true"
             End If
             MessageBox.Show("Read only changed to " + strMessage, "Message", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-        End Sub 'myDataGrid_ReadOnlyChanged
+        End Sub
 
         ' Toggle the 'ReadOnly' property.
         Private Sub button2_Click(ByVal sender As Object, ByVal e As EventArgs) Handles button2.Click
@@ -167,7 +166,7 @@ Namespace MyDataGridClass
             Else
                 myDataGrid.ReadOnly = True
             End If
-        End Sub 'button2_Click
+        End Sub
 ' </Snippet2>
-    End Class 'MyDataGridClass_FlatMode_ReadOnly
+    End Class
 End Namespace 'MyDataGridClass

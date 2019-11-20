@@ -15,7 +15,7 @@ Public Class Form1
         
         ' Print the product private part number.
         textBox1.Text = "Product private part number: " & myFileVersionInfo.ProductPrivatePart
-    End Sub 'GetProductPrivatePart
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

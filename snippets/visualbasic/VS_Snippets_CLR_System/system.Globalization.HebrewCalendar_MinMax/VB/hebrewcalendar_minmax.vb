@@ -24,9 +24,9 @@ Public Class SamplesCalendar
       Console.Write("MaxSupportedDateTime: {0:D2}/{1:D2}/{2:D4}", myCal.GetMonth(myMax), myCal.GetDayOfMonth(myMax), myCal.GetYear(myMax))
       Console.WriteLine(" (in Gregorian, {0:D2}/{1:D2}/{2:D4})", myGre.GetMonth(myMax), myGre.GetDayOfMonth(myMax), myGre.GetYear(myMax))
 
-   End Sub 'Main 
+   End Sub
 
-End Class 'SamplesCalendar
+End Class
 
 
 'This code produces the following output.

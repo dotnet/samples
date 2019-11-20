@@ -1,5 +1,6 @@
 ﻿' <snippet1>
 Imports System.Reflection
+
 ' Define a module-level attribute.
 <Module: ReflectionModule_Examples.MySimpleAttribute("module-level")> 
 
@@ -17,8 +18,8 @@ Namespace ReflectionModule_Examples
             For Each o In attributes
                 Console.WriteLine("Found this attribute on myModule: {0}", o.ToString())
             Next o
-        End Sub 'Main
-    End Class 'MyMainClass
+        End Sub
+    End Class
     'A very simple custom attribute.
     <AttributeUsage(AttributeTargets.Class Or AttributeTargets.Module)> _
      Public Class MySimpleAttribute
@@ -26,7 +27,7 @@ Namespace ReflectionModule_Examples
         Private name As String
         Public Sub New(ByVal newName As String)
             name = newName
-        End Sub 'New
-    End Class 'MySimpleAttribute
+        End Sub
+    End Class
 End Namespace 'ReflectionModule_Examples
 ' </snippet1>

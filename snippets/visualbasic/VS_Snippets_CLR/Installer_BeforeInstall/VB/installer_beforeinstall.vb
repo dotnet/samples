@@ -20,12 +20,12 @@ Public Class MyInstaller
    Sub New()
       MyBase.New()
       AddHandler BeforeInstall, AddressOf BeforeInstallEventHandler
-   End Sub 'New
+   End Sub
 
    Private Sub BeforeInstallEventHandler(sender As Object, e As InstallEventArgs)
       ' Add steps to perform any actions before the install process.
       Console.WriteLine("Code for BeforeInstallEventHandler")
-   End Sub 'BeforeInstallEventHandler
+   End Sub
 ' </Snippet1>
 
    ' Override the 'Install' method.
@@ -34,22 +34,22 @@ Public Class MyInstaller
       Console.WriteLine("")
       Console.WriteLine("Install method of MyInstaller called")
       Console.WriteLine("")
-   End Sub 'Install
+   End Sub
 
    ' Override the 'Commit' method.
    Public Overrides Sub Commit(savedState As IDictionary)
       MyBase.Commit(savedState)
-   End Sub 'Commit
+   End Sub
 
    ' Override the 'Rollback' method.
    Public Overrides Sub Rollback(savedState As IDictionary)
       MyBase.Rollback(savedState)
-   End Sub 'Rollback
+   End Sub
 
    ' Override the 'Uninstall' method.
    Public Overrides Sub Uninstall(savedState As IDictionary)
       MyBase.Uninstall(savedState)
-   End Sub 'Uninstall
+   End Sub
 
    ' Override the 'OnBeforeInstall' method.
    Protected Overrides Sub OnBeforeInstall(savedState As IDictionary)
@@ -57,7 +57,7 @@ Public Class MyInstaller
       Console.WriteLine("")
       Console.WriteLine("OnBeforeInstall method of MyInstaller called")
       Console.WriteLine("")
-   End Sub 'OnBeforeInstall
+   End Sub
 
    ' Override the 'OnAfterInstall' method.
    Protected Overrides Sub OnAfterInstall(savedState As IDictionary)
@@ -65,12 +65,12 @@ Public Class MyInstaller
       Console.WriteLine("")
       Console.WriteLine("OnAfterInstall method of MyInstaller called")
       Console.WriteLine("")
-   End Sub 'OnAfterInstall
-End Class 'MyInstaller
+   End Sub
+End Class
 
 Public Class MyAssembly
    Public Shared Sub Main()
       Console.WriteLine("Use installutil.exe to run the assembly " &  _
                                                         "Installer_BeforeInstall.exe")
-   End Sub 'Main
-End Class 'MyAssembly
+   End Sub
+End Class

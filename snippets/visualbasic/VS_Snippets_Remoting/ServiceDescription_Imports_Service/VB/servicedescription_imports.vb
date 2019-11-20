@@ -38,5 +38,5 @@ Class MyServiceDescription
             myImportCollection(i).Location)
       Next i
 ' </Snippet1>
-   End Sub 'Main 
-End Class 'MyServiceDescription
+   End Sub
+End Class

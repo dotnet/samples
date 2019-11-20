@@ -1,6 +1,5 @@
 ﻿
 ' <snippet11>
-Imports Microsoft.VisualBasic
 Imports System.ComponentModel
 Imports System.ComponentModel.DataAnnotations
 Imports System.Web.DynamicData

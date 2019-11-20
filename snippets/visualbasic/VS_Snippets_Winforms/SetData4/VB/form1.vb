@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.String
+﻿Imports System.String
 Imports System.Windows.Forms
 Imports System.Drawing
 Imports System.Drawing.Design
@@ -18,7 +17,6 @@ Imports System.Web
 Imports System.Web.RegularExpressions
 Imports System.Web.Services
 Imports System.XML
-Imports Microsoft.VisualBasic
 
 Public Class Form1
     Inherits System.Windows.Forms.Form
@@ -87,6 +85,6 @@ Public Class Form1
         Next i
         ' Show the results in a message box. 
         MessageBox.Show(theResult)
-    End Sub 'SetData4 
+    End Sub
     ' </snippet1>
 End Class

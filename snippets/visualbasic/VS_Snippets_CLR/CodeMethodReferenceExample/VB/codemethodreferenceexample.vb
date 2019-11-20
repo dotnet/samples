@@ -24,7 +24,7 @@ Namespace CodeDomSamples
             Dim methodRef1 As New CodeMethodReferenceExpression(New CodeThisReferenceExpression(), "TestMethod")
             Dim invoke1 As New CodeMethodInvokeExpression(methodRef1, New CodeParameterDeclarationExpression() {})
             constructor1.Statements.Add(invoke1)
-        End Sub 'New
+        End Sub
         '</Snippet2>
 
         Public Sub InvokeExample()
@@ -38,7 +38,7 @@ Namespace CodeDomSamples
             '       Me.TestMethod
 
             '</Snippet3>
-        End Sub 'InvokeExample 
-    End Class 'CodeMethodReferenceExample 
+        End Sub
+    End Class
 End Namespace 'CodeDomSamples
 '</Snippet1>

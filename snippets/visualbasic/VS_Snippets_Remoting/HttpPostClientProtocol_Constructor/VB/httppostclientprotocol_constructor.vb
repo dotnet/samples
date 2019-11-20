@@ -73,7 +73,7 @@ Public Class HttpPostClientProtocolClass
             myHttpPostClientProtocol.AllowAutoRedirect)
 ' </Snippet1>
 
-   End Sub 'Main
-End Class 'HttpPostClientProtocolClass
+   End Sub
+End Class
 
 

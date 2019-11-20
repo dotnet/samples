@@ -10,6 +10,6 @@ Public Class ChangeTypeTest
         Dim dt As DateTime = CType(Convert.ChangeType(s, GetType(DateTime)), DateTime)
         
         Console.WriteLine("The string value {0} when converted to a Date becomes {1}", s, dt)
-    End Sub 'Main
-End Class 'ChangeTypeTest
+    End Sub
+End Class
 '</snippet1>

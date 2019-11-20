@@ -42,7 +42,7 @@ Public Class RemoteConfiguration
             Console.WriteLine("Enter a valid server name.")
         End If
     
-    End Sub 'Main
+    End Sub
     
     
     ' Update the configuration file using the credentials
@@ -80,7 +80,7 @@ Public Class RemoteConfiguration
             Console.WriteLine(err.ToString())
         End Try
 
-    End Sub 'UpdateConfiguration
+    End Sub
     
     
     ' Update the configuration file using the credentials
@@ -118,7 +118,7 @@ Public Class RemoteConfiguration
             Console.WriteLine(err.ToString())
         End Try
 
-    End Sub 'UpdateConfiguration
+    End Sub
     
     
     ' Read the appSettings on the remote server.
@@ -139,7 +139,7 @@ Public Class RemoteConfiguration
             Console.WriteLine(err.ToString())
         End Try
     
-    End Sub 'ReadAppSettings
-End Class 'RemoteConfiguration
+    End Sub
+End Class
 
 ' </Snippet1>

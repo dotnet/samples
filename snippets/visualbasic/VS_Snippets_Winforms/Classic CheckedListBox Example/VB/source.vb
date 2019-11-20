@@ -2,7 +2,6 @@
 Option Explicit
 Option Strict
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -31,7 +30,7 @@ Namespace WindowsApplication1
             
             ' Changes the selection mode from double-click to single click.
             checkedListBox1.CheckOnClick = True
-        End Sub 'New
+        End Sub
         
         
         Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -78,12 +77,12 @@ Namespace WindowsApplication1
             Me.ClientSize = New System.Drawing.Size(563, 273)
             Me.Controls.AddRange(New System.Windows.Forms.Control() {Me.listBox1, Me.button3, Me.button2, Me.button1, Me.textBox1, Me.checkedListBox1})
             Me.Text = "Fruit Order"
-        End Sub 'InitializeComponent
+        End Sub
         
         <STAThread()> _
         Public Shared Sub Main()
             Application.Run(New Form1())
-        End Sub 'Main
+        End Sub
         
         
         ' Adds the string if the text box has data in it.
@@ -95,7 +94,7 @@ Namespace WindowsApplication1
                 End If
                 textBox1.Text = ""
             End If
-        End Sub 'button1_Click
+        End Sub
          
         ' Activates or deactivates the Add button.
         Private Sub textBox1_TextChanged(sender As Object, _
@@ -105,7 +104,7 @@ Namespace WindowsApplication1
             Else
                 button1.Enabled = True
             End If
-        End Sub 'textBox1_TextChanged
+        End Sub
          
         
         ' Moves the checked items from the CheckedListBox to the listBox.
@@ -120,7 +119,7 @@ Namespace WindowsApplication1
             If listBox1.Items.Count > 0 Then
                 button3.Enabled = True
             End If 
-        End Sub 'button2_Click
+        End Sub
         
         ' Activates the move button if there are checked items.
         Private Sub checkedListBox1_ItemCheck(sender As Object, _
@@ -132,7 +131,7 @@ Namespace WindowsApplication1
             Else
                 button2.Enabled = True
             End If
-        End Sub 'checkedListBox1_ItemCheck
+        End Sub
         
         
         ' Saves the items to a file.
@@ -144,8 +143,8 @@ Namespace WindowsApplication1
                 checkedListBox1.SetItemChecked(index, False)
             Next
             button3.Enabled = False
-        End Sub 'button3_Click
-    End Class 'Form1
+        End Sub
+    End Class
 End Namespace 'WindowsApplication1
 
 ' </Snippet1>

@@ -1,7 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Reflection
 Imports System.Security
-Imports Microsoft.VisualBasic
 
 ' Compile this sample using the following command line:
 ' vbc type_getevents.vb /r:"System.Windows.Forms.dll" /r:"System.dll"
@@ -26,6 +25,6 @@ Class EventsSample
         Catch e As Exception
             Console.WriteLine(("Exception : " + e.Message))
         End Try
-    End Sub 'Main
-End Class 'EventsSample
+    End Sub
+End Class
 ' </Snippet1>

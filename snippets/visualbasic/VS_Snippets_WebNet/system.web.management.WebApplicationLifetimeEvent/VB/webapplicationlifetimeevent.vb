@@ -27,7 +27,7 @@ Public Class SampleWebApplicationLifetimeEvent
         String.Format("Event created at: {0}", _
         DateTime.Now.TimeOfDay.ToString())
 
-    End Sub 'New
+    End Sub
     
     ' </Snippet2>
     
@@ -44,7 +44,7 @@ Public Class SampleWebApplicationLifetimeEvent
         customCreatedMsg = _
         String.Format("Event created at: {0}", _
         DateTime.Now.TimeOfDay.ToString())
-    End Sub 'New
+    End Sub
 
     ' </Snippet3>
 
@@ -58,7 +58,7 @@ Public Class SampleWebApplicationLifetimeEvent
         ' Raise the event.
         MyBase.Raise()
     
-    End Sub 'Raise
+    End Sub
     
     ' </Snippet4>
     ' <Snippet5>
@@ -85,8 +85,8 @@ Public Class SampleWebApplicationLifetimeEvent
 
         formatter.IndentationLevel -= 1
 
-    End Sub 'FormatCustomEventDetails 
-End Class 'SampleWebApplicationLifetimeEvent
+    End Sub
+End Class
 ' </Snippet5>
 
 ' </Snippet1>

@@ -107,7 +107,7 @@ Public Class KeyContainerPermissionDemo
         Console.WriteLine("Are the KeyContainerPermissionAccessEntry objects equal? " + _
             keyContainerPermAccEntry3.Equals(keyContainerPermAccEntry2).ToString())
 
-    End Sub 'DisplayAccessEntryMembers
+    End Sub
     '</Snippet11>
 
     Private Shared Sub DisplayPermissionMembers(ByVal keyContainerPermParam As _
@@ -152,7 +152,7 @@ Public Class KeyContainerPermissionDemo
         Console.WriteLine("Is one permission a subset of the other? " + _
             keyContainerPerm4.IsSubsetOf(keyContainerPerm2).ToString())
 
-    End Sub 'DisplayPermissionMembers
+    End Sub
     '</Snippet19>
 
     Private Shared Sub GenKey_SaveInContainer(ByVal containerName As String)
@@ -170,7 +170,7 @@ Public Class KeyContainerPermissionDemo
         Console.WriteLine(vbLf + "Key added to container: " + vbLf + "  {0}", _
             rsa.ToXmlString(True))
 
-    End Sub 'GenKey_SaveInContainer
+    End Sub
 
     Private Shared Sub GetKeyFromContainer(ByVal containerName As String)
         Try
@@ -195,7 +195,7 @@ Public Class KeyContainerPermissionDemo
             Console.WriteLine("Exception thrown:  " + e.Message)
         End Try
 
-    End Sub 'GetKeyFromContainer
+    End Sub
 
     Private Shared Sub DeleteKeyContainer(ByVal containerName As String)
         ' Create the CspParameters object and set the key container 
@@ -214,7 +214,7 @@ Public Class KeyContainerPermissionDemo
         rsa.Clear()
         Console.WriteLine(vbLf + "Key container released.")
 
-    End Sub 'DeleteKeyContainer
+    End Sub
 
     Private Shared Sub DenyOpen()
         Try
@@ -236,7 +236,7 @@ Public Class KeyContainerPermissionDemo
         ' Revert the deny.
         CodeAccessPermission.RevertDeny()
 
-    End Sub 'DenyOpen
+    End Sub
 
     Private Shared Sub DeleteContainer()
         Try
@@ -265,6 +265,6 @@ Public Class KeyContainerPermissionDemo
             Console.WriteLine("Expected exception thrown: " + e.Message)
         End Try
 
-    End Sub 'DeleteContainer
-End Class 'KeyContainerPermissionDemo
+    End Sub
+End Class
 '</Snippet1>

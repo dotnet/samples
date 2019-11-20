@@ -50,7 +50,7 @@ Class Sample
                               "property is ""{0}""." & vbCrLf, ti2.ListSeparator)
         End If
     
-    End Sub 'Main
+    End Sub
     
     Private Shared Sub DisplayReadOnly(ByVal caption As String, ByVal ti As TextInfo)
         Dim middle As String
@@ -60,8 +60,8 @@ Class Sample
             middle = "not "
         End If        
         Console.WriteLine("{0} is {1}read-only.", caption, middle)
-    End Sub 'DisplayReadOnly
-End Class 'Sample
+    End Sub
+End Class
 
 '
 'This code example produces the following results:

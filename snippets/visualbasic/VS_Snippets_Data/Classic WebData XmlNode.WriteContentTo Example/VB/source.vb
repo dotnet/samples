@@ -22,6 +22,6 @@ Public Class Sample
         Dim writer As New XmlTextWriter(Console.Out)
         writer.Formatting = Formatting.Indented
         root.WriteContentTo(writer)
-    End Sub 'Main 
-End Class 'Sample
+    End Sub
+End Class
 ' </Snippet1>

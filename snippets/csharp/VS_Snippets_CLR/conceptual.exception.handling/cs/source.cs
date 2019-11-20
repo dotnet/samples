@@ -11,7 +11,7 @@ public class FileReaderException : Exception
     }
 }
 
-[FlagsAttribute]
+[Flags]
 public enum ConnectionState
 {
     Closed = 0,
@@ -60,7 +60,7 @@ public class ExceptionHandling
 {
     public static void Main()
     {
-        DemoDBClient conn = new DemoDBClient();
+        var conn = new DemoDBClient();
 
         //<snippet2>
         if (conn.State != ConnectionState.Closed)
@@ -93,7 +93,7 @@ class FileRead
         // the stream would ever be null.
         if (fileToRead == null)
         {
-            throw new System.ArgumentNullException();
+            throw new ArgumentNullException();
         }
 
         int b;

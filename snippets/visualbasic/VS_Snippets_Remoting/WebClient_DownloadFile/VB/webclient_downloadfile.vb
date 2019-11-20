@@ -10,8 +10,6 @@
 
 Imports System.Net
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
-
 
 Public Class WebClient_DownloadFile
     
@@ -39,5 +37,5 @@ Public Class WebClient_DownloadFile
             ' Display the exception.
             Console.WriteLine(("The following general exception was raised: " + e.Message))
         End Try
-    End Sub 'Main
-End Class 'WebClient_DownloadFile
+    End Sub
+End Class

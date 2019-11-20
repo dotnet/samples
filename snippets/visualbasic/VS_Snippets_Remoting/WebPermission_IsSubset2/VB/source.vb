@@ -32,13 +32,13 @@ Public Class Sample
       
       'The following statement prints true.
       Console.WriteLine(("Is the second URI a subset of the first one?: " & connectPermission.IsSubsetOf(targetPermission)))
-   End Sub 'myIsSubsetExample
+   End Sub
 
 '</Snippet1>
  
    Public Shared Sub Main()
       ' Verify that the second URI is a subset of the first one.
       myIsSubsetExample()
-   End Sub 'Main
+   End Sub
    
-End Class 'Sample
+End Class

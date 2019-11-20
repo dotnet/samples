@@ -1,7 +1,6 @@
 ﻿' <Snippet1>
 Imports System.IO
 Imports System.Security.Permissions
-Imports Microsoft.VisualBasic
 
 Public Class Watcher
 

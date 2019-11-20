@@ -23,7 +23,7 @@ Public Class MyPage
 
    Public Sub New()
        MyBase.New()
-   End Sub 'New
+   End Sub
 
    Public Sub Page_Load(sender As Object, e As EventArgs)
       If Not Me.IsPostBack Then
@@ -39,7 +39,7 @@ Public Class MyPage
             Response.Write("Page is not valid")
          End If
       End If
-   End Sub 'Page_Load
+   End Sub
 
    Public Sub Page_Init(sender As Object, e As EventArgs)
       myTextBox = New TextBox()
@@ -56,7 +56,7 @@ Public Class MyPage
       myButton.Text = "Submit"
       myRequiredFieldValidator.ControlToValidate = "Number"
       myRequiredFieldValidator.ErrorMessage = "Data entry is Mandatory."
-   End Sub 'Page_Init
+   End Sub
 
    ' Add all the controls to the form.
    Private Sub AddControls()
@@ -69,5 +69,5 @@ Public Class MyPage
       myForm.Controls.Add(myLabel)
       myForm.Controls.Add(myRequiredFieldValidator)
 ' </Snippet1>
-   End Sub 'AddControls
- End Class 'MyPage
+   End Sub
+ End Class

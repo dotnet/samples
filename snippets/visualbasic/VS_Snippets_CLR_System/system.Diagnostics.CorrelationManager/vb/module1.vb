@@ -26,7 +26,7 @@ Class Program
         Thread.Sleep(1000)
         Trace.CorrelationManager.StopLogicalOperation()
     
-    End Sub 'Main
+    End Sub
     
     Public Shared Sub ThreadProc() 
         Dim ts As New TraceSource("MyApp")
@@ -38,8 +38,8 @@ Class Program
         ts.TraceEvent(TraceEventType.Error, 1, "Trace an error event.")
         Trace.CorrelationManager.StopLogicalOperation()
     
-    End Sub 'ThreadProc
-End Class 'Program
+    End Sub
+End Class
 ' This sample generates the following output:
 'MyApp Error: 1 : Trace an error event.
 '    LogicalOperationStack=MainThread

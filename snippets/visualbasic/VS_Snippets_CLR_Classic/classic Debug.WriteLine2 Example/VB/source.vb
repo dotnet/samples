@@ -22,6 +22,6 @@ Public Class Form1
         If generalSwitch.TraceVerbose Then
             Debug.WriteLine("My second error message.", category)
         End If
-    End Sub 'MyErrorMethod 
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

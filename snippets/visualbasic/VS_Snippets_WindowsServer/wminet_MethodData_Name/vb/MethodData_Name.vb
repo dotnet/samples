@@ -54,5 +54,5 @@ Public Class Sample
         Next
 
     End Function 'Main
-End Class 'Sample
+End Class
 '</Snippet1>

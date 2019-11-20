@@ -69,7 +69,7 @@ Public Class SamplesStringCollection
 
       Console.WriteLine("After clearing the collection:")
       PrintValues1(myCol)
-   End Sub 'Main
+   End Sub
 
 
    ' Uses the foreach statement which hides the complexity of the enumerator.
@@ -80,7 +80,7 @@ Public Class SamplesStringCollection
          Console.WriteLine("   {0}", obj)
       Next obj
       Console.WriteLine()
-   End Sub 'PrintValues1
+   End Sub
 
 
    ' Uses the enumerator. 
@@ -91,7 +91,7 @@ Public Class SamplesStringCollection
          Console.WriteLine("   {0}", myEnumerator.Current)
       End While
       Console.WriteLine()
-   End Sub 'PrintValues2
+   End Sub
 
 
    ' Uses the Count and Item properties.
@@ -101,9 +101,9 @@ Public Class SamplesStringCollection
          Console.WriteLine("   {0}", myCol(i))
       Next i
       Console.WriteLine()
-   End Sub 'PrintValues3
+   End Sub
 
-End Class 'SamplesStringCollection 
+End Class
 
 
 'This code produces the following output.

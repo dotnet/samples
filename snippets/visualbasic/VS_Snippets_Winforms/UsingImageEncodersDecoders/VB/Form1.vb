@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
 Imports System.Data
@@ -16,7 +15,7 @@ Public Class Form1
     
     Public Sub New()
         
-    End Sub 'New
+    End Sub
 
 
     <STAThread()> _
@@ -201,7 +200,7 @@ Public Class Form1
         myEncoderParameters.Param(0) = myEncoderParameter
         bmp1.Save("c:\TestPhotoQualityZero.jpg", jpgEncoder, myEncoderParameters)
 
-    End Sub 'VaryQualityLevel
+    End Sub
 
     '</snippet8>
     Private Sub Form1_Load(ByVal sender As Object, ByVal e As EventArgs)

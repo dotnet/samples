@@ -38,7 +38,7 @@ Module EncryptedDataSample1
         ' Output the resulting XML information into a file.
         Dim path As String = "c:\test\MyTest.xml"
         File.WriteAllText(path, ed.GetXml().OuterXml)
-        'End Sub 'Main 'Console.WriteLine(ed.GetXml().OuterXml);
+        'End Sub
     End Sub
 
 End Module

@@ -33,7 +33,7 @@ Namespace DesignLibrary
 
          ' free native resources
 
-      End Sub 'Dispose
+      End Sub
      
       
       Overloads Public Sub Dispose() Implements IDisposable.Dispose
@@ -41,7 +41,7 @@ Namespace DesignLibrary
          Dispose(True)
          GC.SuppressFinalize(Me)
 
-      End Sub 'Dispose
+      End Sub
     
    End Class
 

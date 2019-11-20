@@ -3,7 +3,6 @@
 ' This sample also gives them the ability to preview each element at three different sizes.
 
 ' <Snippet0>
-Imports System
 Imports System.Text
 Imports System.Drawing
 Imports System.Collections.Generic
@@ -58,7 +57,7 @@ Namespace VisualStyleElementViewer
                 .BorderStyle = BorderStyle.Fixed3D
                 .AutoSize = True
             End With
-        End Sub 'New
+        End Sub
 
         Private Sub ElementViewer_Load(ByVal sender As Object, _
             ByVal e As EventArgs) Handles Me.Load

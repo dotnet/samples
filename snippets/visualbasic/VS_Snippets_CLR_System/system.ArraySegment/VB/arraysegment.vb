@@ -34,7 +34,7 @@ Public Class SamplesArray
         Console.WriteLine("After the first array segment is modified, the second array segment now contains:")
         PrintIndexAndValues(myArrSegMid)
 
-    End Sub 'Main
+    End Sub
 
     Public Shared Sub PrintIndexAndValues(arrSeg As ArraySegment(Of String))
         Dim i As Integer
@@ -42,7 +42,7 @@ Public Class SamplesArray
             Console.WriteLine("   [{0}] : {1}", i, arrSeg.Array(i))
         Next i
         Console.WriteLine()
-    End Sub 'PrintIndexAndValues 
+    End Sub
 
     Public Shared Sub PrintIndexAndValues(myArr as String())
         Dim i As Integer
@@ -50,9 +50,9 @@ Public Class SamplesArray
             Console.WriteLine("   [{0}] : {1}", i, myArr(i))
         Next i
         Console.WriteLine()
-    End Sub 'PrintIndexAndValues 
+    End Sub
 
-End Class 'SamplesArray
+End Class
 
 
 'This code produces the following output.

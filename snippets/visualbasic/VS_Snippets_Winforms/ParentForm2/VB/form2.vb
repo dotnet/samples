@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Windows.Forms
+﻿Imports System.Windows.Forms
 Imports System.Drawing
 
 Public NotInheritable Class Form2
@@ -63,7 +62,7 @@ Public NotInheritable Class Form2
         Dim s As String = ParentForm.Name
         ' Display the name in a message box.
         MessageBox.Show("My parent is " + s + ".")
-    End Sub 'button1_Click
+    End Sub
     ' </snippet2>
 
     Private Sub Form2_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load

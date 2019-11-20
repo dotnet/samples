@@ -24,6 +24,6 @@ Public Class Sample
                 Console.WriteLine(root.ChildNodes(i).InnerText)
             Next i
         End If
-    End Sub 'Main
-End Class 'Sample
+    End Sub
+End Class
 ' </Snippet1>

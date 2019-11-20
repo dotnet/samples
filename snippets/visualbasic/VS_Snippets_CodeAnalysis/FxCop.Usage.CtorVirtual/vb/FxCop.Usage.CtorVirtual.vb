@@ -10,13 +10,13 @@ Public Class BadlyConstructedType
         Console.WriteLine("Calling base ctor.")
         ' Violates rule: DoNotCallOverridableMethodsInConstructors.
         DoSomething()
-    End Sub 'New
+    End Sub
     
     ' This will be overridden in the derived type.
     Public Overridable Sub DoSomething()
         Console.WriteLine("Base DoSomething")
-    End Sub 'DoSomething
-End Class 'BadlyConstructedType
+    End Sub
+End Class
 
 
 Public Class DerivedType
@@ -25,19 +25,19 @@ Public Class DerivedType
     Public Sub New()
         Console.WriteLine("Calling derived ctor.")
         initialized = "Yes"
-    End Sub 'New
+    End Sub
     
     Public Overrides Sub DoSomething()
         Console.WriteLine("Derived DoSomething is called - initialized ? {0}", initialized)
-    End Sub 'DoSomething
-End Class 'DerivedType
+    End Sub
+End Class
 
 
 Public Class TestBadlyConstructedType
     
     Public Shared Sub Main()
         Dim derivedInstance As New DerivedType()
-    End Sub 'Main
+    End Sub
 End Class 
 End Namespace
 '</Snippet1>

@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Data
@@ -22,7 +21,7 @@ Namespace MediaElementExample
         Public Sub New()
             InitializeComponent()
 
-        End Sub 'New
+        End Sub
 
 
         Private Sub PlaybackPageLoaded(ByVal element As Object, ByVal args As RoutedEventArgs)
@@ -30,7 +29,7 @@ Namespace MediaElementExample
             AddHandler media.MediaFailed, AddressOf Media_MediaFailed
             volumeSL.Value = 0.5
 
-        End Sub 'PlaybackPageLoaded
+        End Sub
 
 
         '<SnippetUIElementVisibility>
@@ -41,7 +40,7 @@ Namespace MediaElementExample
             media.SpeedRatio = 1.0
             media.Play()
 
-        End Sub 'PlayMedia
+        End Sub
 
         '</SnippetUIElementVisibility>
         Private Sub PauseMedia(ByVal sender As Object, ByVal args As MouseButtonEventArgs)
@@ -50,7 +49,7 @@ Namespace MediaElementExample
 
             media.Pause()
 
-        End Sub 'PauseMedia
+        End Sub
 
 
         Private Sub StopMedia(ByVal sender As Object, ByVal args As MouseButtonEventArgs)
@@ -59,12 +58,12 @@ Namespace MediaElementExample
 
             media.Stop()
 
-        End Sub 'StopMedia
+        End Sub
 
 
         Private Sub RewindMedia(ByVal sender As Object, ByVal args As MouseButtonEventArgs)
 
-        End Sub 'RewindMedia
+        End Sub
 
 
         Private Sub FastForwardMedia(ByVal sender As Object, ByVal args As MouseButtonEventArgs)
@@ -74,7 +73,7 @@ Namespace MediaElementExample
 
             MediaCommands.MuteVolume.Execute(Nothing, media)
 
-        End Sub 'FastForwardMedia
+        End Sub
 
 
         Private Sub MuteMedia(ByVal sender As Object, ByVal args As MouseButtonEventArgs)
@@ -90,7 +89,7 @@ Namespace MediaElementExample
                 media.IsMuted = False
             End If
 
-        End Sub 'MuteMedia
+        End Sub
 
 
         Private Sub ChangeMediaPosition(ByVal sender As Object, ByVal args As RoutedPropertyChangedEventArgs(Of Double))
@@ -102,13 +101,13 @@ Namespace MediaElementExample
                 media.Position += New TimeSpan(0, 0, CType(args.NewValue, Integer))
 
             End If
-        End Sub 'ChangeMediaPosition
+        End Sub
 
         Private Sub ChangeMediaVolume(ByVal sender As Object, ByVal args As RoutedPropertyChangedEventArgs(Of Double))
             If (True) Then
                 media.Volume = args.NewValue
             End If
-        End Sub 'ChangeMediaVolume
+        End Sub
 
 
         Private Sub Media_MediaOpened(ByVal sender As Object, ByVal args As RoutedEventArgs)
@@ -123,18 +122,18 @@ Namespace MediaElementExample
             '}
             'volumeSL.Maximum = 1.0;
             'MediaCommands.TogglePlayPause.Execute(null, media);
-        End Sub 'Media_MediaOpened
+        End Sub
         '<SnippetExceptionRoutedEventArgs>
         Private Sub Media_MediaFailed(ByVal sender As Object, ByVal args As ExceptionRoutedEventArgs)
             If (True) Then
                 MessageBox.Show(args.ErrorException.Message)
             End If
-        End Sub 'Media_MediaFailed
+        End Sub
         '</SnippetExceptionRoutedEventArgs>
         Private Sub QueryMediaCommand(ByVal sender As Object, ByVal args As CanExecuteRoutedEventArgs)
             If (True) Then
                 args.CanExecute = True
             End If
-        End Sub 'QueryMediaCommand
-    End Class 'PlaybackExample
+        End Sub
+    End Class
 End Namespace 'MediaElementExample

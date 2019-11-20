@@ -1,8 +1,6 @@
 ﻿'<Snippet1>
 ' Example for the Exception.HelpLink, Exception.Source,
 ' Exception.StackTrace, and Exception.TargetSite properties.
-Imports Microsoft.VisualBasic
-
 Namespace NDP_UE_VB
 
     ' Derive an exception; the constructor sets the HelpLink and 
@@ -20,15 +18,15 @@ Namespace NDP_UE_VB
             Me.HelpLink = "http://msdn.microsoft.com"
             Me.Source = "Exception_Class_Samples"
 
-        End Sub ' New
-    End Class ' LogTableOverflowException
+        End Sub
+    End Class
 
     Class LogTable
        
         Public Sub New(numElements As Integer)
             logArea = New String(numElements) {}
             elemInUse = 0
-        End Sub ' New
+        End Sub
            
         Protected logArea() As String
         Protected elemInUse As Integer
@@ -49,7 +47,7 @@ Namespace NDP_UE_VB
                         newRecord ), ex )
             End Try
         End Function ' AddRecord
-    End Class ' LogTable
+    End Class
 
     Module OverflowDemo
        
@@ -86,7 +84,7 @@ Namespace NDP_UE_VB
                 Console.WriteLine( vbCrLf & "TargetSite ---" & _
                     vbCrLf & ex.TargetSite.ToString( ) )
             End Try
-        End Sub ' Main
+        End Sub
 
     End Module ' OverflowDemo
 End Namespace ' NDP_UE_VB

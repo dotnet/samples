@@ -3,7 +3,6 @@
 Imports System.IO
 Imports System.IO.IsolatedStorage
 Imports System.Security.Policy
-Imports Microsoft.VisualBasic
 Imports Microsoft.Win32.SafeHandles
 Imports System.Security.Permissions
 
@@ -46,7 +45,7 @@ Namespace ISOCS
                 lp.DeleteFiles()
                 lp.DeleteDirectories()
             End If
-        End Sub 'Main
+        End Sub
 
 
         Shared Sub GatherInfoFromUser(ByVal lp As LoginPrefs)
@@ -54,8 +53,8 @@ Namespace ISOCS
             lp.NewsUrl = Console.ReadLine()
             Console.WriteLine("Please enter the URL of your sports site.")
             lp.SportsUrl = Console.ReadLine()
-        End Sub 'GatherInfoFromUser
-    End Class 'ConsoleApp
+        End Sub
+    End Class
     _
 
     <SecurityPermissionAttribute(SecurityAction.Demand, Flags:=SecurityPermissionFlag.UnmanagedCode)> _
@@ -64,7 +63,7 @@ Namespace ISOCS
         Public Sub New(ByVal myUserName As String)
             userName = myUserName
             myNewPrefs = GetPrefsForUser()
-        End Sub 'New
+        End Sub
         Private userName As String
 
         Private myNewsUrl As String
@@ -231,7 +230,7 @@ Namespace ISOCS
             Catch ex As Exception
                 Console.WriteLine(ex.ToString())
             End Try
-        End Sub 'DeleteFiles
+        End Sub
 
         '</snippet6>
         '<snippet8>  
@@ -265,7 +264,7 @@ Namespace ISOCS
             Catch ex As Exception
                 Console.WriteLine(ex.ToString())
             End Try
-        End Sub 'DeleteDirectories
+        End Sub
 
         '</snippet8>
         '<snippet7>  
@@ -354,6 +353,6 @@ Namespace ISOCS
                 Return 0.0
             End Try
         End Function 'SetNewPrefsForUser
-    End Class 'LoginPrefs
+    End Class
 End Namespace 'ISOCS
 '</snippet1>

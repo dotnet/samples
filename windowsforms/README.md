@@ -58,7 +58,7 @@ Ideally you should migrate all projects in your solution to target .NET Core 3.0
 8. At this point it's a good idea to try and restore/build to make sure all dependencies are properly configured.
 9. [Link the files](#link-files-from-the-old-project) from your existing .NET Framework WinForms project to the .NET Core 3.0 WinForms project.
 10. **Optional** If you have difficulties with compiler linking, you can copy the project files from the .NET Framework WinForms project to the new .NET Core 3.0 WinForms project. 
-    * C# files (files with the `.cs.` extension) are included by default in the .csproj.
+    * C# files (files with the `.cs` extension) are included by default in the .csproj.
     * Other project elements like `EmbeddedResources` can also use globbing.
 
 ### Migration tips

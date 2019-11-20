@@ -67,7 +67,7 @@ Class UsingCustomError
       ' Set the second error StatusCode.
         currentError1.StatusCode = 404
         ' </Snippet5>
-   End Sub 'Main 
-End Class 'UsingCustomError 
+   End Sub
+End Class
 
 

@@ -70,6 +70,6 @@ Public Class FieldBuilder_Sample
       Dim myObject As Object = myType.InvokeMember("MyMethod", _
                BindingFlags.InvokeMethod, Nothing, helloWorld, Nothing)
       Console.WriteLine("MyClass.MyMethod returned: """ & myObject & """")
-   End Sub 'Main
-End Class 'FieldBuilder_Sample
+   End Sub
+End Class
 ' </Snippet1> 

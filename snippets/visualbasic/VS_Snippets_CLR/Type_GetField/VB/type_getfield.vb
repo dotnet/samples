@@ -2,11 +2,10 @@
 ' <Snippet2>
 
 Imports System.Reflection
-Imports Microsoft.VisualBasic
 
 Public Class MyFieldClassA
     Public Field As String = "A Field"
-End Class 'MyFieldClassA
+End Class
 
 Public Class MyFieldClassB
     Private myField As String = "B Field"
@@ -21,7 +20,7 @@ Public Class MyFieldClassB
             End If
         End Set
     End Property
-End Class 'MyFieldClassB
+End Class
 
 
 Public Class MyFieldInfoClass
@@ -41,9 +40,9 @@ Public Class MyFieldInfoClass
             myFieldInfo.GetValue(myFieldObjectA))
         Console.WriteLine("The value of the private field is: '{0}'", _
             myFieldInfo1.GetValue(myFieldObjectB))
-    End Sub 'Main
+    End Sub
 
-End Class 'MyFieldInfoClass
+End Class
 
 ' </Snippet2>
 ' </Snippet1>

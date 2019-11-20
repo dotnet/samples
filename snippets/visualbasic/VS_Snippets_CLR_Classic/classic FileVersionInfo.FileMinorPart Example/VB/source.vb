@@ -13,7 +13,7 @@ Public Class Form1
         
         ' Print the file minor part number.
         textBox1.Text = "File minor part number: " & myFileVersionInfo.FileMinorPart
-    End Sub 'GetFileMinorPart
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

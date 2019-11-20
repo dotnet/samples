@@ -23,5 +23,5 @@ Public Class Class1
         'Transform the data and send the output to the console.
         xslt.Transform(mydata, Nothing, writer, Nothing)
         ' </Snippet1>
-    End Sub 'Method1 
-End Class 'Class1
+    End Sub
+End Class

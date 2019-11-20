@@ -28,22 +28,21 @@ namespace csrefKeywordsModifiers
             var sq = new Square(12);
             Console.WriteLine($"Area of the square = {sq.GetArea()}");
         }
-
-        //<snippet2>        
-        interface I
-        {
-            void M();
-        }
-        abstract class C : I
-        {
-            public abstract void M();
-        }
-        //</snippet2>
-
     }
     // Output: Area of the square = 144
     //</snippet1>
-
+    
+    //<snippet2>        
+    interface I
+    {
+        void M();
+    }
+    abstract class C : I
+    {
+        public abstract void M();
+    }
+    //</snippet2>
+        
     //<snippet3>
     abstract class BaseClass   // Abstract class
     {
@@ -88,10 +87,10 @@ namespace csrefKeywordsModifiers
     // Output: x = 111, y = 161
     //</snippet3>
 }
-//<snippet4>
 
 namespace AccessibilityDomainNamespace
 {
+    //<snippet4>
     public class T1
     {
         public static int publicInt;
@@ -162,8 +161,8 @@ namespace AccessibilityDomainNamespace
             System.Console.ReadKey();
         }
     }
+    //</snippet4>
 }
-//</snippet4>
 
 namespace csrefKeywordsModifiers
 {

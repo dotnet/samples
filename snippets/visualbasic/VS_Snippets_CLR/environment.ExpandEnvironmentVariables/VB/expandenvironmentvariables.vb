@@ -11,8 +11,8 @@ Class Sample
                               "my system root is %SystemRoot%"
       str = Environment.ExpandEnvironmentVariables(query)
       Console.WriteLine("ExpandEnvironmentVariables: {0}  {1}", nl, str)
-   End Sub 'Main
-End Class 'Sample
+   End Sub
+End Class
 '
 'This example produces the following results:
 '

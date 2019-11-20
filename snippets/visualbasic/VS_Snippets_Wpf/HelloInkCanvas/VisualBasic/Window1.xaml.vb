@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Data
@@ -18,7 +17,7 @@ Class Window1
     Public Sub New() 
         'InitializeComponent()
     
-    End Sub 'New
+    End Sub
     
     
     '<Snippet2>
@@ -32,7 +31,7 @@ Class Window1
         inkCanvas1.DefaultDrawingAttributes.IsHighlighter = False
         inkCanvas1.DefaultDrawingAttributes.Height = 2
     
-    End Sub 'Ink
+    End Sub
 
     ' Set the EditingMode to highlighter input.
     Private Sub Highlight(ByVal sender As Object, ByVal e As RoutedEventArgs) 
@@ -44,7 +43,7 @@ Class Window1
         inkCanvas1.DefaultDrawingAttributes.IsHighlighter = True
         inkCanvas1.DefaultDrawingAttributes.Height = 25
     
-    End Sub 'Highlight
+    End Sub
     
     
     ' Set the EditingMode to erase by stroke.
@@ -52,13 +51,13 @@ Class Window1
 
         inkCanvas1.EditingMode = InkCanvasEditingMode.EraseByStroke
     
-    End Sub 'EraseStroke
+    End Sub
     
     ' Set the EditingMode to selection.
     Private Sub [Select](ByVal sender As Object, ByVal e As RoutedEventArgs) 
 
         inkCanvas1.EditingMode = InkCanvasEditingMode.Select
     
-    End Sub 'Select
+    End Sub
     '</Snippet2>
-End Class 'Window1 
+End Class

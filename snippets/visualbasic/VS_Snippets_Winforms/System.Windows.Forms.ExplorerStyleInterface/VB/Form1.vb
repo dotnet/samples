@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
 Imports System.Drawing
@@ -28,7 +27,7 @@ Public Class Form1
         InitializeComponent()
         PopulateTreeView()
     
-    End Sub 'New
+    End Sub
     
     '</snippet2>
     '<snippet3>
@@ -110,7 +109,7 @@ Public Class Form1
         Application.EnableVisualStyles()
         Application.Run(New Form1())
     
-    End Sub 'Main
+    End Sub
     
     
     Private Sub InitializeComponent() 
@@ -198,5 +197,5 @@ Public Class Form1
         Me.splitContainer1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
-    End Sub 'InitializeComponent 
-End Class 'Form1
+    End Sub
+End Class

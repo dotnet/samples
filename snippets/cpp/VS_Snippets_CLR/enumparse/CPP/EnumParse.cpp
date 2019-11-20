@@ -1,7 +1,7 @@
 //<snippet1>
 using namespace System;
 
-[FlagsAttribute]
+[Flags]
 enum class Colors
 {
    Red = 1,

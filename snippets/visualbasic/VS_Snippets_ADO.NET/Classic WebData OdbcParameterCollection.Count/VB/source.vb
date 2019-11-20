@@ -3,8 +3,6 @@ Imports System.Data
 Imports System.Data.Odbc
 Imports System.Data.Common
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
-
 
 Public Class Form1
     Inherits Form
@@ -30,4 +28,4 @@ Public Class Form1
         paramCollection.Clear()
     End Sub 
     ' </Snippet1>
-End Class 'Form1
+End Class

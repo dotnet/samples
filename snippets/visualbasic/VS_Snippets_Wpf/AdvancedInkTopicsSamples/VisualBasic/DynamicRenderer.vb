@@ -1,5 +1,4 @@
 ﻿'<Snippet19>
-Imports System
 Imports System.Windows.Media
 Imports System.Windows
 Imports System.Windows.Input.StylusPlugIns
@@ -25,7 +24,7 @@ Class CustomDynamicRenderer
         prevPoint = New Point(Double.NegativeInfinity, Double.NegativeInfinity)
         MyBase.OnStylusDown(rawStylusInput)
 
-    End Sub 'OnStylusDown
+    End Sub
 
 
     Protected Overrides Sub OnDraw(ByVal drawingContext As DrawingContext, _
@@ -63,8 +62,8 @@ Class CustomDynamicRenderer
             End If
         Next i
 
-    End Sub 'OnDraw
-End Class 'CustomDynamicRenderer
+    End Sub
+End Class
 '</Snippet1>
 
 '<Snippet2>
@@ -81,7 +80,7 @@ Class CustomStroke
         brush = New LinearGradientBrush(Colors.Red, Colors.Blue, 20.0)
         pen = New Pen(brush, 2.0)
 
-    End Sub 'New
+    End Sub
 
 
     Protected Overrides Sub DrawCore(ByVal drawingContext As DrawingContext, _
@@ -109,8 +108,8 @@ Class CustomStroke
             End If
         Next i
 
-    End Sub 'DrawCore
-End Class 'CustomStroke
+    End Sub
+End Class
 '</Snippet2>
 
 '<Snippet3>
@@ -125,7 +124,7 @@ Class FilterPlugin
         ' Restrict the stylus input.
         Filter(rawStylusInput)
 
-    End Sub 'OnStylusDown
+    End Sub
 
 
     Protected Overrides Sub OnStylusMove(ByVal rawStylusInput As RawStylusInput)
@@ -135,7 +134,7 @@ Class FilterPlugin
         ' Restrict the stylus input.
         Filter(rawStylusInput)
 
-    End Sub 'OnStylusMove
+    End Sub
 
 
     Protected Overrides Sub OnStylusUp(ByVal rawStylusInput As RawStylusInput)
@@ -145,7 +144,7 @@ Class FilterPlugin
         ' Restrict the stylus input
         Filter(rawStylusInput)
 
-    End Sub 'OnStylusUp
+    End Sub
 
 
     Private Sub Filter(ByVal rawStylusInput As RawStylusInput)
@@ -175,6 +174,6 @@ Class FilterPlugin
         ' Copy the modified StylusPoints back to the RawStylusInput.
         rawStylusInput.SetStylusPoints(stylusPoints)
 
-    End Sub 'Filter
-End Class 'FilterPlugin
+    End Sub
+End Class
 '</Snippet3>

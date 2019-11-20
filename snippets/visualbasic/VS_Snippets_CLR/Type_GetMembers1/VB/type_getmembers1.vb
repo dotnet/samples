@@ -6,7 +6,6 @@
 
 Imports System.Reflection
 Imports System.Security
-Imports Microsoft.VisualBasic
 
 ' <Snippet1>
 Class [MyClass]
@@ -15,11 +14,11 @@ Class [MyClass]
    
    
    Public Sub New()
-   End Sub 'New
+   End Sub
    
    Public Sub Myfunction()
-   End Sub 'Myfunction
-End Class '[MyClass]
+   End Sub
+End Class
 
 Class Type_GetMembers
    
@@ -44,6 +43,6 @@ Class Type_GetMembers
       Catch e As SecurityException
          Console.WriteLine(("Exception : " + e.Message.ToString()))
       End Try
-   End Sub 'Main
-End Class 'Type_GetMembers
+   End Sub
+End Class
 ' </Snippet1>

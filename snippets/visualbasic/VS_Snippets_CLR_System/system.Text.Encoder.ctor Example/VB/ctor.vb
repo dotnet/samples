@@ -18,8 +18,8 @@ Class EncoderExample
         ' Note that their hash codes differ.
         Console.WriteLine(enc1.GetHashCode())
         Console.WriteLine(enc2.GetHashCode())
-    End Sub 'Main
-End Class 'EncoderExample
+    End Sub
+End Class
 
 'This code example produces the following output.
 'System.Text.EncoderNLS

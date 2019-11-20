@@ -9,10 +9,10 @@ Public Class MyHelloService
       myInstances += 1
       Console.WriteLine("")
        Console.WriteLine("MyHelloService activated - instance # {0}.", myInstances)
-   End Sub 'New
+   End Sub
    
    Public Function HelloMethod(myString As String) As String
       Console.WriteLine("HelloMethod called on MyHelloService instance {0}.", myInstances)
       Return "Hi there " +  myString + "."
    End Function 'HelloMethod
-End Class 'MyHelloService
+End Class

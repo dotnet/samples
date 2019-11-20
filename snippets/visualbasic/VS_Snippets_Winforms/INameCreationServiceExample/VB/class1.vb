@@ -1,5 +1,4 @@
 ﻿'<Snippet1>
-Imports System
 Imports System.ComponentModel.Design
 Imports System.ComponentModel.Design.Serialization
 Imports System.Globalization

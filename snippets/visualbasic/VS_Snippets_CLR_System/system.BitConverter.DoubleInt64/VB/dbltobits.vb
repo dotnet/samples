@@ -1,7 +1,5 @@
 ﻿'<Snippet2>
 ' Example of the BitConverter.DoubleToInt64Bits method.
-Imports Microsoft.VisualBasic
-
 Module DoubleToInt64BitsDemo
 
     Const formatter As String = "{0,25:E16}{1,23:X16}"

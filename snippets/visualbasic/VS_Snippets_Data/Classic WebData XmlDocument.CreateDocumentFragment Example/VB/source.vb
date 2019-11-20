@@ -24,6 +24,6 @@ Public Class Sample
         
         Console.WriteLine("Display the modified XML...")
         Console.WriteLine(doc.OuterXml)
-    End Sub 'Main 
-End Class 'Sample
+    End Sub
+End Class
 ' </Snippet1>

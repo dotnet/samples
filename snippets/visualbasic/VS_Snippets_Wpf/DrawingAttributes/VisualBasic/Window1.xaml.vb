@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.IO
 Imports System.Windows
 Imports System.Windows.Controls
@@ -55,7 +54,7 @@ Partial Public Class Window1
 
         inkCanvas1.DefaultDrawingAttributes = inkDA
 
-    End Sub 'WindowLoaded
+    End Sub
 
 
     ' Create a button called switchHighlighter and use 
@@ -79,7 +78,7 @@ Partial Public Class Window1
             inkCanvas1.DefaultDrawingAttributes = inkDA
         End If
 
-    End Sub 'SwitchHighlighter_Click
+    End Sub
     '</Snippet2>
 
     '</Snippet3>
@@ -134,7 +133,7 @@ Partial Public Class Window1
         'Uncomment the following line to assign custom properties.
         'AssignDrawingAttributesInstrument()
 
-    End Sub 'New
+    End Sub
 
     '<Snippet17>
     Private Sub inkCanvas1_DefaultDrawingAttributesReplaced(ByVal sender As Object, _
@@ -181,7 +180,7 @@ Partial Public Class Window1
 
     Private Sub inkCanvas1_StrokeCollected(ByVal sender As Object, ByVal e As InkCanvasStrokeCollectedEventArgs)
 
-    End Sub 'inkCanvas1_StrokeCollected
+    End Sub
 
     Private Sub SaveStrokes_Click(ByVal sender As [Object], ByVal e As RoutedEventArgs)
 
@@ -191,7 +190,7 @@ Partial Public Class Window1
         'fs.Write(isf, 0, isf.Length)
         'fs.Close()
 
-    End Sub 'SaveStrokes_Click
+    End Sub
 
     Private Sub LoadStrokes_Click(ByVal sender As [Object], ByVal e As RoutedEventArgs)
 
@@ -210,7 +209,7 @@ Partial Public Class Window1
         'Dim strokes As New StrokeCollection(buffer)
         'inkCanvas1.Strokes = strokes
 
-    End Sub 'LoadStrokes_Click 
+    End Sub
     'ChangeAuthorsInk(aGuid, anAuthor, Colors.Red);
 
     '<Snippet5>
@@ -225,7 +224,7 @@ Partial Public Class Window1
         inkDA.AddPropertyData(purposeGuid, penValue)
         highlighterDA.AddPropertyData(purposeGuid, highlighterValue)
 
-    End Sub 'AssignDrawingAttributesInstrument
+    End Sub
 
     ' Change the color of the ink that on the InkCanvas that used the pen.
     Private Sub ChangeColors_Click(ByVal sender As [Object], _
@@ -245,7 +244,7 @@ Partial Public Class Window1
             End If
         Next s
 
-    End Sub 'ChangeColors_Click
+    End Sub
 
     '</Snippet5>
 
@@ -264,7 +263,7 @@ Partial Public Class Window1
         inkCanvas1.Strokes.Clear()
         GetPropertyIds()
 
-    End Sub 'ClearStrokes_Click
+    End Sub
 
     Sub GetPropertyIds()
 
@@ -369,4 +368,4 @@ Partial Public Class Window1
     End Sub
 
 
-End Class 'Window1  
+End Class

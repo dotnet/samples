@@ -38,10 +38,10 @@
 
          ' Add myEventLogInstaller to the Installer collection.
          Installers.Add(myEventLogInstaller)
-      End Sub 'New
+      End Sub
 
     Public Shared Sub Main()
-    End Sub 'Main
+    End Sub
     Dim myInstaller As New EventLogInstaller()
-   End Class 'MyEventLogInstaller
+   End Class
 ' </Snippet1> 

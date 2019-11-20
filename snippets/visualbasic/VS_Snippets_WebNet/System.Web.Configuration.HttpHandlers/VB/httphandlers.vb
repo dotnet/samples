@@ -156,7 +156,7 @@ Next
                 Console.WriteLine("your command line for errors.")
             End Try
         End Sub
-    End Class ' UsingHttpHandlersSection.
+    End Class
     
 End Namespace ' Samples.Aspnet.SystemWebConfiguration
 

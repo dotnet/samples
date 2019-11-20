@@ -54,7 +54,7 @@ Public Class UsingDpapiProtectedConfigurationProvider
         Catch e As Exception
             Console.WriteLine("Exception raised: {0}", e.Message)
         End Try
-    End Sub 'ProtectConfiguration
+    End Sub
 
 
 
@@ -98,7 +98,7 @@ Public Class UsingDpapiProtectedConfigurationProvider
             Console.WriteLine("Exception raised: {0}", e.Message)
         End Try
 
-    End Sub 'UnProtectConfiguration
+    End Sub
 
 
 
@@ -127,6 +127,6 @@ Public Class UsingDpapiProtectedConfigurationProvider
         End Select
 
         Console.Read()
-    End Sub 'Main
+    End Sub
 
-End Class 'UsingDpapiProtectedConfigurationProvider
+End Class

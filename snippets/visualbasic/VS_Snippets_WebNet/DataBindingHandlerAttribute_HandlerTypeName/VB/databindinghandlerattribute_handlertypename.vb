@@ -17,7 +17,7 @@ Namespace DataBindingHandlerAttributeTest
    Public Class SimpleWebControl
       Inherits WebControl
       ' Insert code for class members here
-   End Class 'SimpleWebControl
+   End Class
 
    Class TestAttributes
       
@@ -32,7 +32,7 @@ Namespace DataBindingHandlerAttributeTest
             Console.Write(("DataBindingHandlerAttribute's HandlerTypeName is : " + _
                myDataBindingHandlerAttribute.HandlerTypeName))
          End If
-      End Sub 'Main
-   End Class 'TestAttributes
+      End Sub
+   End Class
 ' </Snippet1>
 End Namespace 'DataBindingHandlerAttributeTest

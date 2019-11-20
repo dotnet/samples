@@ -53,7 +53,7 @@ Public Class InkEraser
             presenter.Strokes.Add(newStrokes)
         End If
     
-    End Sub 'New
+    End Sub
      
     Protected Overrides Sub OnStylusDown(ByVal e As StylusDownEventArgs) 
 
@@ -62,7 +62,7 @@ Public Class InkEraser
 
         InitializeEraserHitTester(points)
 
-    End Sub 'OnStylusDown
+    End Sub
      
     Protected Overrides Sub OnMouseLeftButtonDown(ByVal e As MouseButtonEventArgs) 
 
@@ -78,7 +78,7 @@ Public Class InkEraser
 
         InitializeEraserHitTester(collectedPoints)
 
-    End Sub 'OnMouseLeftButtonDown
+    End Sub
     
     ' Get the IncrementalHitTester from the InkPresenter's 
     ' StrokeCollection and subscribe to its StrokeHitChanged event.
@@ -89,7 +89,7 @@ Public Class InkEraser
         AddHandler eraseTester.StrokeHit, AddressOf eraseTester_StrokeHit
         eraseTester.AddPoints(points)
     
-    End Sub 'InitializeEraserHitTester
+    End Sub
     
     
     Protected Overrides Sub OnStylusMove(ByVal e As StylusEventArgs) 
@@ -97,7 +97,7 @@ Public Class InkEraser
         
         AddPointsToEraserHitTester(points)
     
-    End Sub 'OnStylusMove
+    End Sub
     
     
     Protected Overrides Sub OnMouseMove(ByVal e As MouseEventArgs) 
@@ -117,7 +117,7 @@ Public Class InkEraser
         
         AddPointsToEraserHitTester(collectedPoints)
     
-    End Sub 'OnMouseMove
+    End Sub
     
     
     ' Collect the StylusPackets as the stylus moves.
@@ -127,7 +127,7 @@ Public Class InkEraser
             eraseTester.AddPoints(points)
         End If
     
-    End Sub 'AddPointsToEraserHitTester
+    End Sub
     
     
     ' Unsubscribe from the StrokeHitChanged event when the
@@ -138,7 +138,7 @@ Public Class InkEraser
         
         StopEraseHitTesting(points)
     
-    End Sub 'OnStylusUp
+    End Sub
     
     
     Protected Overrides Sub OnMouseLeftButtonUp(ByVal e As MouseButtonEventArgs) 
@@ -155,7 +155,7 @@ Public Class InkEraser
         
         StopEraseHitTesting(collectedPoints)
     
-    End Sub 'OnMouseLeftButtonUp
+    End Sub
     
     
     Private Sub StopEraseHitTesting(ByVal points As StylusPointCollection) 
@@ -164,7 +164,7 @@ Public Class InkEraser
         RemoveHandler eraseTester.StrokeHit, AddressOf eraseTester_StrokeHit
         eraseTester.EndHitTesting()
     
-    End Sub 'StopEraseHitTesting
+    End Sub
     
     ' When the stylus intersects a stroke, erase that part of
     ' the stroke.  When the stylus dissects a stoke, the 
@@ -183,6 +183,6 @@ Public Class InkEraser
             presenter.Strokes.Remove(strokesToReplace)
         End If
 
-    End Sub 'eraseTester_StrokeHit
-End Class 'InkEraser
+    End Sub
+End Class
 '</Snippet1>

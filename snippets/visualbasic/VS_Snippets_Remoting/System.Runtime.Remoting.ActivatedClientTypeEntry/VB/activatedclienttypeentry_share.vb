@@ -5,11 +5,11 @@ Public Class HelloServer
     Public Sub New(myString As String)
         Console.WriteLine("HelloServer activated")
         Console.WriteLine("Parameter passed to the constructor is " + myString)
-    End Sub 'New
+    End Sub
     
     Public Function HelloMethod(myName As String) As String
         Console.WriteLine("HelloMethod : {0}", myName)
         Return "Hi there " + myName
     End Function 'HelloMethod
-End Class 'HelloServer
+End Class
 '</snippet20>

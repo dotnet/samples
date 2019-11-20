@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.ComponentModel
 Imports System.Windows.Forms
 
@@ -56,4 +55,4 @@ Public Class Form1
             Return 0
         End Get
     End Property
-End Class 'Form1
+End Class

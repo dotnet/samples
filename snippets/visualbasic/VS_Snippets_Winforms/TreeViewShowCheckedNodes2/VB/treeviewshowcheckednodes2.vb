@@ -1,5 +1,4 @@
 ﻿ '<Snippet1>
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 
@@ -47,12 +46,12 @@ Public Class Form1
         Me.Controls.AddRange(New Control() {showCheckedNodesButton, treeView1})
 
         Me.ResumeLayout(False)
-    End Sub 'New
+    End Sub
     
     <STAThreadAttribute()> _
     Shared Sub Main()
         Application.Run(New Form1())
-    End Sub 'Main
+    End Sub
     
     '<Snippet2>
     Private Sub showCheckedNodesButton_Click(ByVal sender As Object, ByVal e As EventArgs)
@@ -75,7 +74,7 @@ Public Class Form1
         RemoveHandler treeView1.BeforeCollapse, AddressOf CheckForCheckedChildren
         ' Enable redrawing of treeView1.
         treeView1.EndUpdate()
-    End Sub 'showCheckedNodesButton_Click
+    End Sub
 
 
     ' Prevent collapse of a node that has checked child nodes.
@@ -83,7 +82,7 @@ Public Class Form1
         If HasCheckedChildNodes(e.Node) Then
             e.Cancel = True
         End If
-    End Sub 'CheckForCheckedChildren
+    End Sub
 
     ' Returns a value indicating whether the specified 
     ' TreeNode has checked child nodes.
@@ -105,5 +104,5 @@ Public Class Form1
     End Function 'HasCheckedChildNodes
     '</Snippet2>
 
-End Class 'Form1 
+End Class
 '</Snippet1>

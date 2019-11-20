@@ -10,6 +10,6 @@ Namespace MyAssembly
       Inherits Installer
       Shared Sub Main()
          Console.WriteLine("Hello World")
-      End Sub 'Main
-   End Class 'MyProjectInstaller
+      End Sub
+   End Class
 End Namespace 'MyAssembly

@@ -28,12 +28,12 @@ Public Class Int16Collection
 
    Public Sub Insert(index As Integer, value As Int16)
       List.Insert(index, value)
-   End Sub 'Insert
+   End Sub
 
 
    Public Sub Remove(value As Int16)
       List.Remove(value)
-   End Sub 'Remove
+   End Sub
 
 
    Public Function Contains(value As Int16) As Boolean
@@ -44,26 +44,26 @@ Public Class Int16Collection
 
    Protected Overrides Sub OnInsert(index As Integer, value As Object)
       ' Insert additional code to be run only when inserting values.
-   End Sub 'OnInsert
+   End Sub
 
 
    Protected Overrides Sub OnRemove(index As Integer, value As Object)
       ' Insert additional code to be run only when removing values.
-   End Sub 'OnRemove
+   End Sub
 
 
    Protected Overrides Sub OnSet(index As Integer, oldValue As Object, newValue As Object)
       ' Insert additional code to be run only when setting values.
-   End Sub 'OnSet
+   End Sub
 
 
    Protected Overrides Sub OnValidate(value As Object)
       If Not GetType(System.Int16).IsAssignableFrom(value.GetType()) Then
          Throw New ArgumentException("value must be of type Int16.", "value")
       End If
-   End Sub 'OnValidate 
+   End Sub
 
-End Class 'Int16Collection
+End Class
 
 
 Public Class SamplesCollectionBase

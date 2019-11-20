@@ -57,7 +57,7 @@ Namespace MyInkEraser
             End If
 
 
-        End Sub 'New
+        End Sub
 
         '</Snippet5>
 
@@ -77,7 +77,7 @@ Namespace MyInkEraser
                 AddressOf eraseTester_StrokeHit
             eraseTester.AddPoints(e.GetStylusPoints(Me))
 
-        End Sub 'OnStylusDown
+        End Sub
         '</Snippet4>
 
         '<Snippet9>
@@ -88,7 +88,7 @@ Namespace MyInkEraser
                 eraseTester.AddPoints(e.GetStylusPoints(Me))
             End If
 
-        End Sub 'OnStylusMove
+        End Sub
         '</Snippet9>
 
         '<Snippet10>
@@ -102,7 +102,7 @@ Namespace MyInkEraser
                 AddressOf eraseTester_StrokeHit
             eraseTester.EndHitTesting()
    
-        End Sub 'OnStylusUp
+        End Sub
         '</Snippet10>
 
 
@@ -126,7 +126,7 @@ Namespace MyInkEraser
                 presenter.Strokes.Remove(strokesToReplace)
             End If
 
-        End Sub 'eraseTester_StrokeHit 
+        End Sub
         '</Snippet2>
 
         '</Snippet6>
@@ -202,6 +202,6 @@ Namespace MyInkEraser
         '</Snippet3>
 
         '<Snippet7>
-    End Class 'InkEraser 
+    End Class
 End Namespace
 '</Snippet7>

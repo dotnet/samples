@@ -2,7 +2,7 @@
 Namespace Samples
 
     ' Violates this rule    
-    <FlagsAttribute()> _
+    <Flags()> _
     Public Enum Color
 
         None = 0

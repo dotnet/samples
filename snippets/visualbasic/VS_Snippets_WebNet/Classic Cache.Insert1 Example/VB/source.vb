@@ -15,5 +15,5 @@ Public Class Page1
         ' <Snippet1>
         Cache.Insert("DSN", connectionString, New CacheDependency(Server.MapPath("myconfig.xml")))
         ' </Snippet1>
-    End Sub 'Page_Load 
-End Class 'Page1 
+    End Sub
+End Class

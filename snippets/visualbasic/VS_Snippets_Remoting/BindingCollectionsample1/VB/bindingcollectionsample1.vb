@@ -8,7 +8,6 @@
 Imports System.Web.Services.Description
 Imports System.Collections
 Imports System.Xml
-Imports Microsoft.VisualBasic
 
 Class [MyClass]
    
@@ -51,5 +50,5 @@ Class [MyClass]
       ' </Snippet3>
       myServiceDescription = Nothing
       myBinding = Nothing
-   End Sub 'Main
-End Class '[MyClass]
+   End Sub
+End Class

@@ -79,7 +79,7 @@ Namespace AspNet.Samples
                 w.ExitStyle(Control.ControlStyle)
             End If
 
-        End Sub 'Render
+        End Sub
         '</snippet3>
 
     End Class

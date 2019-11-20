@@ -13,7 +13,7 @@ namespace Program
         {
             // <Snippet0>
             // <Snippet1>
-            BinaryMessageEncodingBindingElement be = new BinaryMessageEncodingBindingElement();
+            var be = new BinaryMessageEncodingBindingElement();
             // </Snippet1>
             // <Snippet2>
             be.MaxReadPoolSize = 16;
@@ -32,16 +32,16 @@ namespace Program
             // </Snippet6>
 
             // <Snippet7>
-            CustomBinding binding = new CustomBinding();
-            BindingParameterCollection bpCol = new BindingParameterCollection();
-            BindingContext context = new BindingContext(binding, bpCol);
+            var binding = new CustomBinding();
+            var bpCol = new BindingParameterCollection();
+            var context = new BindingContext(binding, bpCol);
             be.BuildChannelFactory<IDuplexChannel>(context);
             // </Snippet7>
 
             // <Snippet8>
-            CustomBinding binding2 = new CustomBinding();
-            BindingParameterCollection bpCol2 = new BindingParameterCollection();
-            BindingContext context2 = new BindingContext(binding2, bpCol2);
+            var binding2 = new CustomBinding();
+            var bpCol2 = new BindingParameterCollection();
+            var context2 = new BindingContext(binding2, bpCol2);
             be.BuildChannelListener<IDuplexChannel>(context2);
             // </Snippet8>
 

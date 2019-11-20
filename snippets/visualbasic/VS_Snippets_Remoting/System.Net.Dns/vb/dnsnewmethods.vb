@@ -1,7 +1,6 @@
 ﻿Imports System.Net
 Imports System.Net.Sockets
 Imports System.Threading
-Imports Microsoft.VisualBasic
 
 Namespace DnsNew
 
@@ -17,7 +16,7 @@ Namespace DnsNew
             myDns.DoGetHostEntry(IPAddress.Parse("127.0.0.1"))
             myDns.DoGetHostAddresses(hostName)
 
-        End Sub 'Main
+        End Sub
         
 
     ' <Snippet1>

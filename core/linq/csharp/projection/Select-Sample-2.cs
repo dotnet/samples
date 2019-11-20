@@ -6,9 +6,8 @@ namespace Projection
 {
     public class SelectSample2
     {
-        //This sample uses select and method syntax to return a sequence of just the names of a list of products.
-        //
-        //Outputs:
+        // This sample uses select and method syntax to return a sequence of just the names of a list of products.
+        // Outputs:
         // Product Names:
         // Chai
         // Chang
@@ -102,9 +101,8 @@ namespace Projection
             }
         }
 
-        //This sample uses select and method syntax to return a sequence of just the names of a list of products.
-        //
-        //Outputs:
+        // This sample uses select and method syntax to return a sequence of just the names of a list of products.
+        // Outputs:
         // Product Names:
         // Chai
         // Chang

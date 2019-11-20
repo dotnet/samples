@@ -25,7 +25,7 @@ Public Class Client
       Console.WriteLine("After Call")
       Console.WriteLine()
 
-   End Sub 'Main 
+   End Sub
 
-End Class 'Client
+End Class
 ' </Snippet5>

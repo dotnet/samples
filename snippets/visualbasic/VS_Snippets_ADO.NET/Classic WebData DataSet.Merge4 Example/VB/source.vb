@@ -2,7 +2,6 @@
 Imports System.Data
 Imports System.Data.Common
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
 
 Public Class Form1
     Inherits Form
@@ -29,7 +28,7 @@ Private Sub DemonstrateMergeTableAddSchema()
     table.Columns.Add(itemColumn)
 
     ' DataColumn array to set primary key.
-    Dim keyCol(1) As DataColumn
+    Dim keyCol(0) As DataColumn
 
     ' Set primary key column.
     keyCol(0) = idColumn

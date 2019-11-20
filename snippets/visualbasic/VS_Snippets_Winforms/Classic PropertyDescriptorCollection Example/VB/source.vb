@@ -1,9 +1,6 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.ComponentModel
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
-
 
 Public Class Form1
     Inherits Form
@@ -14,7 +11,7 @@ Public Class Form1
         ' <Snippet1>
         Dim properties As PropertyDescriptorCollection = TypeDescriptor.GetProperties(button1)
         ' </Snippet1>
-    End Sub 'Method1
+    End Sub
     ' <Snippet2>
     Private Sub MyPropertyCollection()
         ' Creates a new collection and assign it the properties for button1.
@@ -25,6 +22,6 @@ Public Class Form1
         For Each myProperty In  properties
             textBox1.Text &= myProperty.Name & ControlChars.Cr
         Next myProperty
-    End Sub 'MyPropertyCollection 
+    End Sub
     ' </Snippet2>
-End Class 'Form1
+End Class

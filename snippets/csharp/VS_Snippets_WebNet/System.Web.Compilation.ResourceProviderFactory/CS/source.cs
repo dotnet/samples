@@ -64,10 +64,7 @@ namespace CustomResourceProviders
             }
 
             value = GetResourceCache(cultureName)[resourceKey];
-            if (value == null)
-            {
-                value = GetResourceCache(null)[resourceKey];
-            }
+            value ??= GetResourceCache(null)[resourceKey];
             return value;
         }
 
@@ -128,10 +125,7 @@ namespace CustomResourceProviders
             CreateDesignTimeLocalResourceProvider(IServiceProvider serviceProvider)
         {
             // Return an IResourceProvider.
-            if (_localResourceProvider == null)
-            {
-                _localResourceProvider = new CustomDesignTimeLocalResourceProvider();
-            }
+            _localResourceProvider ??= new CustomDesignTimeLocalResourceProvider();
             return _localResourceProvider;
         }
 
@@ -139,10 +133,7 @@ namespace CustomResourceProviders
             CreateDesignTimeLocalResourceWriter(IServiceProvider serviceProvider)
         {
             // Return an IDesignTimeResourceWriter.
-            if (_localResourceWriter == null)
-            {
-                _localResourceWriter = new CustomDesignTimeLocalResourceWriter();
-            }
+            _localResourceWriter ??= new CustomDesignTimeLocalResourceWriter();
             return _localResourceWriter;
         }
 
@@ -151,10 +142,7 @@ namespace CustomResourceProviders
                     string classKey)
         {
             // Return an IResourceProvider.
-            if (_globalResourceProvider == null)
-            {
-                _globalResourceProvider = new CustomDesignTimeGlobalResourceProvider();
-            }
+            _globalResourceProvider ??= new CustomDesignTimeGlobalResourceProvider();
             return _globalResourceProvider;
         }
     }

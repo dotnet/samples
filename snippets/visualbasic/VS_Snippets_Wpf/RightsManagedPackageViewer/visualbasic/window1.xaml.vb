@@ -2,7 +2,6 @@
 ' Copyright (c) Microsoft Corporation. All rights reserved.
 
 
-Imports System
 Imports System.Collections.ObjectModel
 Imports System.IO
 Imports System.IO.Packaging
@@ -19,7 +18,6 @@ Imports System.Windows.Xps.Packaging
 Imports System.Security.Permissions
 Imports System.Xml
 Imports WinForms = Microsoft.Win32
-Imports Microsoft.VisualBasic
 
 Namespace SdkSample
 	' ========================= partial class Window1 ========================
@@ -66,7 +64,7 @@ Namespace SdkSample
 					OpenDocument(_xpsFile)
 				End If
 			End If
-		End Sub ' end:OnOpen()
+		End Sub
 
 
 		'<SnippetRmPkgViewOpenDoc>
@@ -383,7 +381,7 @@ Namespace SdkSample
 			Dim parserContext As New ParserContext()
 			parserContext.BaseUri = PackUriHelper.Create(tempUri)
 
-			' Retreive the fixed document.
+			' Retrieve the fixed document.
 			Dim fixedDocPart As PackagePart = _xpsPackage.GetPart(fixedDocUri)
 			If fixedDocPart IsNot Nothing Then
 				Dim fixedObject As Object = XamlReader.Load(fixedDocPart.GetStream(), parserContext)
@@ -403,7 +401,7 @@ Namespace SdkSample
 		'''   Performs clean up when the application is closed.</summary>
 		Private Overloads Sub OnClosed(ByVal sender As Object, ByVal e As EventArgs)
 			CloseDocument()
-		End Sub ' end:OnClosed()
+		End Sub
 
 
 		' ----------------------------- OnClose ------------------------------
@@ -412,7 +410,7 @@ Namespace SdkSample
 		'''   to close the currently open document.</summary>
 		Private Sub OnClose(ByVal target As Object, ByVal args As ExecutedRoutedEventArgs)
 			CloseDocument()
-		End Sub ' end:OnClose()
+		End Sub
 
 
 		'<SnippetRmPkgViewCloseDoc>
@@ -448,7 +446,7 @@ Namespace SdkSample
 			ShowPrompt("Click 'File | Open...' to select a file to open and view.")
 			rightsBlock.Text = ""
 
-		End Sub ' end:CloseDocument
+		End Sub
 		'</SnippetRmPkgViewCloseDoc>
 		#End Region ' File|Close
 
@@ -460,7 +458,7 @@ Namespace SdkSample
 		'''   shutdown and exit the application.</summary>
 		Private Sub OnExit(ByVal sender As Object, ByVal e As EventArgs)
 			Close() ' invokes OnClosed()
-		End Sub ' end:OnExit()
+		End Sub
 		#End Region ' File|Exit
 
 
@@ -542,7 +540,7 @@ Namespace SdkSample
 		'''   Handles the user "File | Print" menu operation.</summary>
 		Private Sub OnPrint(ByVal target As Object, ByVal args As ExecutedRoutedEventArgs)
 			PrintDocument()
-		End Sub ' end:OnClose()
+		End Sub
 
 
 		' -------------------------- PrintDocument ---------------------------
@@ -626,6 +624,6 @@ Namespace SdkSample
 		#End Region ' private fields
 
 
-	End Class ' end:partial class Window1
+	End Class
 
 End Namespace ' end:namespace SdkSample

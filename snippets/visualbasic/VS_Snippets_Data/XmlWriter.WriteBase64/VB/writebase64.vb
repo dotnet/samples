@@ -3,141 +3,140 @@ Imports System.IO
 Imports System.Xml
 Imports System.Text
 
-class TestBase64 
+Public Module TestBase64
 
-    private const bufferSize as integer = 4096
+    Private Const bufferSize As Integer = 4096
 
-    public shared sub Main() 
- 
-        Dim args() As String = System.Environment.GetCommandLineArgs()
-        Dim myTestBase64 as TestBase64 = new TestBase64()
+    Public Sub Main()
+
+        Dim args As String() = System.Environment.GetCommandLineArgs()
         
-        'Check that the usage string is correct.
-        if (args.Length < 3 ) 
-           myTestBase64.Usage()
-           return
-        end if
+        ' Check that the usage string is correct.
+        If args.Length < 3
+            TestBase64.Usage()
+            Return
+        End If
 
-        Dim fileOld as FileStream = new FileStream(args(1), FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read)
-        myTestBase64.EncodeXmlFile("temp.xml", fileOld)
+        Dim fileOld As New FileStream(args(1), FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read)
+        TestBase64.EncodeXmlFile("temp.xml", fileOld)
 
-        Dim fileNew as FileStream = new FileStream(args(2), FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite)
+        Dim fileNew As New FileStream(args(2), FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite)
 
-        myTestBase64.DecodeOrignalObject("temp.xml", fileNew)
+        TestBase64.DecodeOrignalObject("temp.xml", fileNew)
 
-        'Compare the two files.
-        if (myTestBase64.CompareResult(fileOld, fileNew))
-            Console.WriteLine("The recreated binary file {0} is the same as {1}", args(2), args(1))
-        else 
-            Console.WriteLine("The recreated binary file {0} is not the same as {1}", args(2), args(1))
-        end if
+        ' Compare the two files.
+        If TestBase64.CompareResult(fileOld, fileNew)
+            Console.WriteLine($"The recreated binary file {args(2)} is the same as {args(1)}")
+        Else
+            Console.WriteLine($"The recreated binary file {args(2)} is not the same as {args(1)}")
+        End If
 
         fileOld.Flush()
         fileNew.Flush()
         fileOld.Close()
         fileNew.Close()
 
-    end sub
+    End Sub
 
-    'Use the WriteBase64 method to create an XML document.  The object  
-    'passed by the user is encoded and included in the document.
-    public shared sub EncodeXmlFile(xmlFileName as String, fileOld as FileStream) 
+    ' Use the WriteBase64 method to create an XML document.  The object  
+    ' passed by the user is encoded and included in the document.
+    Public Sub EncodeXmlFile(xmlFileName As String, fileOld As FileStream)
 
-        Dim buffer(bufferSize) as byte
-        Dim readByte as integer=0
+        Dim buffer(bufferSize - 1) As Byte
+        Dim readByte As Integer = 0
 
-        Dim xw as XmlTextWriter = new XmlTextWriter(xmlFileName, Encoding.UTF8)
+        Dim xw As New XmlTextWriter(xmlFileName, Encoding.UTF8)
         xw.WriteStartDocument()
         xw.WriteStartElement("root")
         ' Create a Char writer.
-        Dim br as BinaryReader = new BinaryReader(fileOld)
+        Dim br As New BinaryReader(fileOld)
         ' Set the file pointer to the end.
 
-        try 
-              do 
-                  readByte=br.Read(buffer, 0, bufferSize)
-                  xw.WriteBase64(buffer, 0, readByte)
-              loop while (bufferSize <= readByte )
+        Try
+            Do
+                readByte = br.Read(buffer, 0, bufferSize)
+                xw.WriteBase64(buffer, 0, readByte)
+            Loop While (bufferSize <= readByte)
 
-        catch ex as Exception
-            Dim ex1 as EndOfStreamException = new EndOfStreamException()
+        Catch ex As Exception
+            Dim ex1 As New EndOfStreamException()
 
-            if (ex1.Equals(ex)) 
+            If (ex1.Equals(ex))
                 Console.WriteLine("We are at end of file")
-            else 
+            Else
                 Console.WriteLine(ex)
-            end if
-        end try
+            End If
+        End Try
         xw.WriteEndElement()
         xw.WriteEndDocument()
 
         xw.Flush()
         xw.Close()
-    end sub
+    End Sub
 
-    'Use the ReadBase64 method to decode the new XML document 
-    'and generate the original object.
-    public shared sub DecodeOrignalObject(xmlFileName as String, fileNew as FileStream) 
+    ' Use the ReadBase64 method to decode the new XML document 
+    ' and generate the original object.
+    Public Sub DecodeOrignalObject(xmlFileName As String, fileNew As FileStream)
 
-        Dim buffer(bufferSize) as byte
-        Dim readByte as integer =0
+        Dim buffer(bufferSize - 1) As Byte
+        Dim readByte As Integer = 0
 
-        'Create a file to write the bmp back.
-        Dim bw as BinaryWriter = new BinaryWriter(fileNew)
+        ' Create a file to write the bmp back.
+        Dim bw As New BinaryWriter(fileNew)
 
-        Dim tr as XmlTextReader = new XmlTextReader(xmlFileName)
+        Dim tr As New XmlTextReader(xmlFileName)
         tr.MoveToContent()
         Console.WriteLine(tr.Name)
 
-        do 
-          readByte=tr.ReadBase64(buffer, 0, bufferSize)
-          bw.Write(buffer, 0, readByte)
-        loop while(readByte>=bufferSize)
+        Do
+            readByte = tr.ReadBase64(buffer, 0, bufferSize)
+            bw.Write(buffer, 0, readByte)
+        Loop While (readByte >= bufferSize)
 
         bw.Flush()
 
-    end sub
+    End Sub
 
-    'Compare the two files.
-    public function CompareResult(fileOld as FileStream, fileNew as FileStream) as boolean
+    ' Compare the two files.
+    Public Function CompareResult(fileOld As FileStream, fileNew As FileStream) As Boolean
 
-        Dim readByteOld as integer=0
-        Dim readByteNew as integer=0
-        Dim count as integer
-        Dim readByte as integer=0
+        Dim readByteOld As Integer = 0
+        Dim readByteNew As Integer = 0
+        Dim count As Integer
+        Dim readByte as integer = 0
 
-        Dim bufferOld(bufferSize) as byte
-        Dim bufferNew(bufferSize) as byte
+        Dim bufferOld(bufferSize - 1) As Byte
+        Dim bufferNew(bufferSize - 1) As Byte
 
-        Dim binaryReaderOld as BinaryReader = new BinaryReader(fileOld)
-        Dim binaryReaderNew as BinaryReader = new BinaryReader(fileNew)
+        Dim binaryReaderOld As New BinaryReader(fileOld)
+        Dim binaryReaderNew As New BinaryReader(fileNew)
 
         binaryReaderOld.BaseStream.Seek(0, SeekOrigin.Begin)
         binaryReaderNew.BaseStream.Seek(0, SeekOrigin.Begin)
 
-        do 
-          readByteOld=binaryReaderOld.Read(bufferOld, 0, bufferSize)
-          readByteNew=binaryReaderNew.Read(bufferNew, 0, bufferSize)
+        Do
+            readByteOld = binaryReaderOld.Read(bufferOld, 0, bufferSize)
+            readByteNew = binaryReaderNew.Read(bufferNew, 0, bufferSize)
 
-          if not (readByteOld=readByteNew) 
-              return false
-          end if
+            If readByteOld <> readByteNew
+                Return False
+            End If
 
-          for count=0 to bufferSize-1
-              if not (bufferOld(count)=bufferNew(count)) 
-                  return false
-              end if
-          next
+            For count = 0 To bufferSize - 1
+                If bufferOld(count) <> bufferNew(count)
+                    Return False
+                End If
+            Next
 
-        loop while (count<readByte)
-        return true
-    end function
+        Loop While (count < readByte)
+        Return True
+    End Function
 
-    'Display the usage statement.
-    public shared sub Usage()
+    ' Display the usage statement.
+    Public Sub Usage()
         Console.WriteLine("TestBase64 sourceFile, targetFile")
         Console.WriteLine("For example: TestBase64 winlogon.bmp, target.bmp")
-    end sub
+    End Sub
 
-end class
+End Module
 '</snippet1>

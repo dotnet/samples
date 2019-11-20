@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Collections
-Imports Microsoft.VisualBasic
 
 Public Class SamplesArrayList
 
@@ -43,7 +42,7 @@ Public Class SamplesArrayList
         myIndex = myAL.IndexOf(myString, 11)
         Console.WriteLine("The first occurrence of ""{0}"" between index 11 and the end is at index {1}.", myString, myIndex)
 
-    End Sub 'Main
+    End Sub
 
     Public Shared Sub PrintIndexAndValues(ByVal myList As IEnumerable)
         Dim i As Integer
@@ -53,9 +52,9 @@ Public Class SamplesArrayList
             i = i + 1
         Next obj
         Console.WriteLine()
-    End Sub 'PrintIndexAndValues
+    End Sub
 
-End Class 'SamplesArrayList
+End Class
 
 ' This code produces the following output.
 '

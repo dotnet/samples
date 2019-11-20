@@ -40,7 +40,7 @@ Public Class SamplesArray
         Console.WriteLine("After changing the third element, the read-only IList contains the following values:")
         PrintIndexAndValues(myList)
 
-    End Sub 'Main
+    End Sub
 
     Overloads Public Shared Sub PrintIndexAndValues(myArr() As String)
         Dim i As Integer
@@ -48,7 +48,7 @@ Public Class SamplesArray
             Console.WriteLine("   [{0}] : {1}", i, myArr(i))
         Next i
         Console.WriteLine()
-    End Sub 'PrintIndexAndValues
+    End Sub
 
     Overloads Public Shared Sub PrintIndexAndValues(myList As IList(Of String))
         Dim i As Integer
@@ -56,9 +56,9 @@ Public Class SamplesArray
             Console.WriteLine("   [{0}] : {1}", i, myList(i))
         Next i
         Console.WriteLine()
-    End Sub 'PrintIndexAndValues 
+    End Sub
 
-End Class 'SamplesArray
+End Class
 
 
 'This code produces the following output.

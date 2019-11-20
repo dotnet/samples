@@ -36,6 +36,6 @@ Namespace Examples.VB.WebControls.Design
         End Property ' SelectParameters
         ' </snippet2>
 
-    End Class ' MyDataSourceControl
+    End Class
 End Namespace ' Examples.VB.WebControls.Design
 ' </snippet1>

@@ -8,7 +8,6 @@
 ' assigned to each customer. It also displays selected nodes in a
 ' messagebox.
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.Windows.Forms
@@ -19,15 +18,15 @@ Public Class Customer
    Public Sub New(myName As String)
       CustomerName = myName
       CustomerOrders = New ArrayList()
-   End Sub 'New
-End Class 'Customer
+   End Sub
+End Class
 
 Public Class Order
    Public OrderID As String
    Public Sub New(myOrderID As String)
       Me.OrderID = myOrderID
-   End Sub 'New
-End Class 'Order
+   End Sub
+End Class
 
 Public Class TreeNode_Bounds
    Inherits Form
@@ -36,7 +35,7 @@ Public Class TreeNode_Bounds
    Public Sub New()
       InitializeComponent()
       FillMyTreeView()
-   End Sub 'New
+   End Sub
    ' ArrayList object to hold the Customer objects.
    Private customerArray As New ArrayList()
    Private rootNode As TreeNode
@@ -85,7 +84,7 @@ Public Class TreeNode_Bounds
 
       ' Begin repainting the TreeView.
       myTreeView.EndUpdate()
-   End Sub 'FillMyTreeView
+   End Sub
 
 
 ' <Snippet1>
@@ -138,9 +137,9 @@ End Sub
       AddHandler Me.myButton.Click, AddressOf MyButton_Click
       Me.Text = "TreeNode Example"
       Me.ResumeLayout(False)
-   End Sub 'InitializeComponent
+   End Sub
 
    Shared Sub Main()
       Application.Run(New TreeNode_Bounds())
-   End Sub 'Main
-End Class 'TreeNode_Bounds
+   End Sub
+End Class

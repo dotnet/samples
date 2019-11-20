@@ -17,8 +17,6 @@ Imports System.Net
 Imports System.Text
 Imports System.Net.Sockets
 Imports System.Runtime.InteropServices
-Imports Microsoft.VisualBasic
-
 
 Class IPEndPointSnippet
     
@@ -69,7 +67,7 @@ Class IPEndPointSnippet
             Console.WriteLine("Exception caught!!!")
             Console.WriteLine(("Message : " + e.Message))
         End Try
-    End Sub 'Main
+    End Sub
      
     
     Public Shared Function DoSocketGet(hostIPEndPoint As IPEndPoint, getString As String) As String
@@ -101,4 +99,4 @@ Class IPEndPointSnippet
             Return Nothing
         End Try
     End Function 'DoSocketGet
-End Class 'IPEndPointSnippet
+End Class

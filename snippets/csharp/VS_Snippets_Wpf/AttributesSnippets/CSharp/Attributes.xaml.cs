@@ -16,7 +16,7 @@ namespace SDKSample
         public void Snippet2()
         {
             // <!-- <SnippetAttributesSnippet2> -->
-            // Retreive the localization attributes from the button.
+            // Retrieve the localization attributes from the button.
             string attributes = Localization.GetAttributes(buttonLocalized);
             // <!-- </SnippetAttributesSnippet2> -->
         }

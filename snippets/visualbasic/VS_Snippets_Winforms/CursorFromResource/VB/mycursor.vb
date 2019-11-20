@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Drawing
+﻿Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Windows.Forms
@@ -45,7 +44,7 @@ Private Sub myButton_Click(sender As Object, e As System.EventArgs) Handles myBu
    ' Call the CursorFromResource method and 
    ' display the embedded cursor resource. 
    Me.Cursor = CursorFromResource(GetType(MyCursors.MyCursor), "MyWaitCursor.cur")
-End Sub 'myButton_Click
+End Sub
       
 Private Function CursorFromResource(type As Type, resource As String) As Cursor
    ' Create a cursor from the resource.
@@ -64,13 +63,13 @@ End Function
 Private Sub myButton_MouseEnter(sender As Object, e As System.EventArgs) Handles myButton.MouseEnter
    ' Hide the cursor when the mouse pointer enters the button.
    Cursor.Hide()
-End Sub 'myButton_MouseEnter
+End Sub
       
       
 Private Sub myButton_MouseLeave(sender As Object, e As System.EventArgs) Handles myButton.MouseLeave
    ' Show the cursor when the mouse pointer leaves the button.
    Cursor.Show()
-End Sub 'myButton_MouseLeave
+End Sub
       
 ' </snippet3>
       
@@ -112,5 +111,5 @@ End Sub 'myButton_MouseLeave
          Me.SetCursor()
       End Sub
 
-   End Class 'MyCursor 
+   End Class
 End Namespace 'MyCursors 

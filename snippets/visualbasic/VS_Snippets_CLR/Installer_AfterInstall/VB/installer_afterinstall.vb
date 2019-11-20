@@ -20,13 +20,13 @@ Public Class MyInstaller
    Sub New()
       MyBase.New()
       AddHandler AfterInstall, AddressOf AfterInstallEventHandler
-   End Sub 'New
+   End Sub
 
    Private Sub AfterInstallEventHandler(ByVal sender As Object, _
                                        ByVal e As InstallEventArgs)
       ' Add steps to perform any actions after the install process.
       Console.WriteLine("Code for AfterInstallEventHandler")
-   End Sub 'AfterInstallEventHandler
+   End Sub
 ' </Snippet1>
 
    ' Override the 'Install' method.
@@ -35,22 +35,22 @@ Public Class MyInstaller
       Console.WriteLine("")
       Console.WriteLine("Install method of MyInstaller called")
       Console.WriteLine("")
-   End Sub 'Install
+   End Sub
 
    ' Override the 'Commit' method.
    Public Overrides Sub Commit(ByVal savedState As IDictionary)
       MyBase.Commit(savedState)
-   End Sub 'Commit
+   End Sub
 
    ' Override the 'Rollback' method.
    Public Overrides Sub Rollback(ByVal savedState As IDictionary)
       MyBase.Rollback(savedState)
-   End Sub 'Rollback
+   End Sub
 
    ' Override the 'Uninstall' method.
    Public Overrides Sub Uninstall(ByVal savedState As IDictionary)
       MyBase.Uninstall(savedState)
-   End Sub 'Uninstall
+   End Sub
 
    ' Override the 'OnBeforeInstall' method.
    Protected Overrides Sub OnBeforeInstall(ByVal savedState As IDictionary)
@@ -58,17 +58,17 @@ Public Class MyInstaller
       Console.WriteLine("")
       Console.WriteLine("OnBeforeInstall method of MyInstaller called")
       Console.WriteLine("")
-   End Sub 'OnBeforeInstall
+   End Sub
 
    ' Override the 'OnAfterInstall' method.
    Protected Overrides Sub OnAfterInstall(ByVal savedState As IDictionary)
       MyBase.OnAfterInstall(savedState)
-   End Sub 'OnAfterInstall
-End Class 'MyInstaller
+   End Sub
+End Class
 
 Public Class MyAssembly
    Public Shared Sub Main()
       Console.WriteLine("Use installutil.exe to run the assembly" & _
                                              " Installer_AfterInstall.exe")
-   End Sub 'Main
-End Class 'MyAssembly
+   End Sub
+End Class

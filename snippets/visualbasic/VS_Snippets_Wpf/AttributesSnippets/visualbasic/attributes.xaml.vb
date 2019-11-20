@@ -1,6 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
-Imports System.Windows
+﻿Imports System.Windows
 Imports System.Windows.Controls
 
 Namespace SDKSample
@@ -14,7 +12,7 @@ Namespace SDKSample
 
 		Public Sub Snippet2()
 			' <!-- <SnippetAttributesSnippet2> -->
-			' Retreive the localization attributes from the button.
+			' Retrieve the localization attributes from the button.
 			Dim attributes As String = Localization.GetAttributes(buttonLocalized)
 			' <!-- </SnippetAttributesSnippet2> -->
 		End Sub

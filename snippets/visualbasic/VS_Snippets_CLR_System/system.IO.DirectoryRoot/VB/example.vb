@@ -18,8 +18,8 @@ Public Class DirectoryRoot
       ' Print to console the results.
       Console.WriteLine("Root directory: {0}", Directory.GetDirectoryRoot(dir))
       Console.WriteLine("Current directory: {0}", Directory.GetCurrentDirectory())
-   End Sub 'Main
-End Class 'DirectoryRoot
+   End Sub
+End Class
 ' The output of this sample depends on what value you assign to the variable dir.
 ' If the directory c:\test exists, the output for this sample is:
 ' Root directory: C:\

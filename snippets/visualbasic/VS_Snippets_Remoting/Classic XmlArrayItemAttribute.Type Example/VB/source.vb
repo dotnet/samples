@@ -11,7 +11,7 @@ Public Class Group
      XmlArrayItem(Type := GetType(Person))> _
     Public Staff() As Person
         
-End Class 'Group
+End Class
 
 
 Public Class Person
@@ -54,5 +54,5 @@ Public Class Run
         Dim writer As New StreamWriter(filename)
         xSer.Serialize(writer, myGroup)
     End Sub 
-End Class 'Run
+End Class
 ' </Snippet1>

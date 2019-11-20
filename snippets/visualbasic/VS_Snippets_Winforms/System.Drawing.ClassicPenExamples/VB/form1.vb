@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Drawing
+﻿Imports System.Drawing
 Imports System.Drawing.Drawing2D
 Imports System.Collections
 Imports System.ComponentModel
@@ -230,5 +229,5 @@ Public Class Form1
     Shared Sub Main()
         Application.Run(New Form1)
 
-    End Sub 'Main
+    End Sub
 End Class

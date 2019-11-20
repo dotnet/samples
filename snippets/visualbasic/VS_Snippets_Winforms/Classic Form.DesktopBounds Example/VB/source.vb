@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
 
@@ -14,6 +13,6 @@ Public Class Form1
         Dim tempRect As New Rectangle(50, 50, 100, 100)
         '  Set the bounds of the form using the Rectangle object.
         DesktopBounds = tempRect
-    End Sub 'MoveMyForm
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

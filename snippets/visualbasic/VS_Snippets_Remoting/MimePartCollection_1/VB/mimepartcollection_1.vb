@@ -58,6 +58,6 @@ Public Class MyMimePartCollection
       End If
       myServiceDescription.Write("MimePartCollection_1_Output_VB.wsdl")
       Console.WriteLine("MimePartCollection_1_Output_VB.wsdl has been generated successfully.")
-   End Sub 'Main
-End Class 'MyMimePartCollection
+   End Sub
+End Class
 ' </Snippet1>

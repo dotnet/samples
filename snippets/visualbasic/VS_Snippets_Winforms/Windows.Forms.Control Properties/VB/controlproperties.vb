@@ -1,10 +1,7 @@
-﻿Imports System
-Imports System.Drawing
+﻿Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
-
 
 Namespace ControlProperties
    
@@ -19,7 +16,7 @@ Namespace ControlProperties
          InitializeComponent()
          AddMyGroupBox()
 
-      End Sub 'New
+      End Sub
 
       
       Private Sub InitializeComponent()
@@ -51,7 +48,7 @@ Namespace ControlProperties
          Me.Name = "Form1"
          Me.Text = "Form1"
          Me.ResumeLayout(False)
-      End Sub 'InitializeComponent
+      End Sub
        
 
 '<snippet3>
@@ -126,18 +123,18 @@ End Sub
       
       Shared Sub Main()
          Application.Run(New Form1())
-      End Sub 'Main
+      End Sub
       
       
       Private Sub button1_Click(sender As Object, e As System.EventArgs)
          Me.ResetAllControlsBackColor(Me)
-      End Sub 'button1_Click
+      End Sub
       
       
       Private Sub button2_Click(sender As Object, e As System.EventArgs) Handles button2.Click
          Me.AddMyButton()
-      End Sub 'button2_Click
+      End Sub
 
 
-   End Class 'Form1
+   End Class
 End Namespace 'ControlProperties

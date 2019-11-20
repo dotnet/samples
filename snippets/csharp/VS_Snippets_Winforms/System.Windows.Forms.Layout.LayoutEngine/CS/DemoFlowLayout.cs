@@ -22,10 +22,7 @@ public class DemoFlowPanel : Panel
     {
         get
         {
-            if (layoutEngine == null)
-            {
-                layoutEngine = new DemoFlowLayout();
-            }
+            layoutEngine ??= new DemoFlowLayout();
 
             return layoutEngine;
         }

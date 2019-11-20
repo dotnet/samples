@@ -11,7 +11,8 @@ class Sample
 
         // Establish an event handler to process key press events.
         Console.CancelKeyPress += new ConsoleCancelEventHandler(myHandler);
-        while (true) {
+        while (true)
+        {
             Console.Write("Press any key, or 'X' to quit, or ");
             Console.WriteLine("CTRL+C to interrupt the read operation:");
 
@@ -19,7 +20,7 @@ class Sample
             cki = Console.ReadKey(true);
 
             // Announce the name of the key that was pressed .
-            Console.WriteLine("  Key pressed: {0}\n", cki.Key);
+            Console.WriteLine($"  Key pressed: {cki.Key}\n");
 
             // Exit if the user pressed the 'X' key.
             if (cki.Key == ConsoleKey.X) break;
@@ -30,20 +31,20 @@ class Sample
     {
         Console.WriteLine("\nThe read operation has been interrupted.");
 
-        Console.WriteLine("  Key pressed: {0}", args.SpecialKey);
+        Console.WriteLine($"  Key pressed: {args.SpecialKey}");
 
-        Console.WriteLine("  Cancel property: {0}", args.Cancel);
+        Console.WriteLine($"  Cancel property: {args.Cancel}");
 
         // Set the Cancel property to true to prevent the process from terminating.
         Console.WriteLine("Setting the Cancel property to true...");
         args.Cancel = true;
 
         // Announce the new value of the Cancel property.
-        Console.WriteLine("  Cancel property: {0}", args.Cancel);
+        Console.WriteLine($"  Cancel property: {args.Cancel}");
         Console.WriteLine("The read operation will resume...\n");
     }
 }
-// The example displays output similar to the follwoing:
+// The example displays output similar to the following:
 //    Press any key, or 'X' to quit, or CTRL+C to interrupt the read operation:
 //      Key pressed: J
 //    

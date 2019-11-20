@@ -2,8 +2,6 @@
 ' This code example demonstrates the Console.WriteLine() method.
 ' Formatting for this example uses the "en-US" culture.
 
-Imports Microsoft.VisualBasic
-
 Class Sample
    Public Enum Color
       Yellow = 1
@@ -56,8 +54,8 @@ Class Sample
                         "(D) Decimal number: . . . . . {0:D}" & vbCrLf & _
                         "(X) Hexadecimal:. . . . . . . {0:X}" & vbCrLf, _
                         Color.Green)
-   End Sub 'Main
-End Class 'Sample
+   End Sub
+End Class
 '
 'This code example produces the following results:
 '

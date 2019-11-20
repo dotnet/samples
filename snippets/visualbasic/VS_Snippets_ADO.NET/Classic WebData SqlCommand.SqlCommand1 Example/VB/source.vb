@@ -21,4 +21,4 @@ Public Class Form1
         command.CommandType = CommandType.Text
     End Sub 
     ' </Snippet1>
-End Class 'Form1 
+End Class

@@ -26,7 +26,7 @@ Module Example
         ' Display the short time pattern and string.
         Console.WriteLine($"Short time pattern: ""{dtfi.ShortTimePattern}""")
         Console.WriteLine($"Short time string:  ""{dateAndTime.ToShortTimeString()}{vbCrLf}")
-    End Sub 'Main
+    End Sub
 End Module
 ' The example displays output like the following:
 '       Initialize the DateTime object to May 16, 2001 3:02:15 AM.

@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Collections
-Imports Microsoft.VisualBasic
 
 Public Class SamplesBitArray    
     
@@ -67,7 +66,7 @@ Public Class SamplesBitArray
             Console.Write("{0,8}", obj)
         Next obj
         Console.WriteLine()
-    End Sub 'PrintValues
+    End Sub
 
 End Class
 

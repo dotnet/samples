@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System.Net.Sockets
+﻿Imports System.Net.Sockets
 Imports System.Runtime.Remoting
 Imports System.Runtime.Remoting.Channels
 Imports System.Runtime.Remoting.Channels.Http
@@ -43,5 +42,5 @@ Public Class SampleClient
       Console.WriteLine("Is this object from this AppDomain? {0}", objRefSample.IsFromThisAppDomain())
       Console.WriteLine("Is this object from this process? {0}", objRefSample.IsFromThisProcess())
       ' </Snippet1>
-   End Sub 'Main 
-End Class 'SampleClient
+   End Sub
+End Class

@@ -36,6 +36,6 @@ Public Class MyClient
 ' </Snippet2>
       Console.WriteLine("Press enter to stop this process")
       Console.ReadLine()
-   End Sub 'Main
-End Class 'MyClient
+   End Sub
+End Class
 ' </Snippet1>

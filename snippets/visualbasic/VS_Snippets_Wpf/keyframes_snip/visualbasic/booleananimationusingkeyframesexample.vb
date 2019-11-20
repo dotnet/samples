@@ -2,7 +2,6 @@
 ' Demonstrates a BooleanAnimationUsingKeyFrames. The animation is used to
 ' animate the IsEnabled property of a button.
 
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Shapes

@@ -3,8 +3,6 @@ Imports System.Security
 Imports System.Security.Permissions
 Imports System.Text.RegularExpressions
 Imports System.Collections
-Imports Microsoft.VisualBasic
-
 
 Class MyWebPermissionExample
    
@@ -40,10 +38,10 @@ Class MyWebPermissionExample
     End While
 '</Snippet1>
  
-  End Sub 'MySample
+  End Sub
     
   Public Shared Sub Main()
     MySample()
-  End Sub 'Main
+  End Sub
 
-End Class 'WebPermission_regexConstructor 
+End Class

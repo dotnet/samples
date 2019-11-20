@@ -40,16 +40,16 @@ Public Class SamplesHashtable
         ' Displays the values of the target Array.
         PrintValues(myTargetArray, " "c)
 
-    End Sub 'Main
+    End Sub
 
     Public Shared Sub PrintValues(myArr As String(), mySeparator As Char)
         For i As Integer = 0 To myArr.Length - 1
             Console.Write($"{mySeparator}{myArr(i)}")
         Next i
         Console.WriteLine()
-    End Sub 'PrintValues
+    End Sub
 
-End Class 'SamplesHashtable
+End Class
 
 
 ' This code produces the following output.

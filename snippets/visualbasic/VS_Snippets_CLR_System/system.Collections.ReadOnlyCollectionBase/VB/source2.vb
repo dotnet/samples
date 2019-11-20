@@ -8,7 +8,7 @@ Public Class ROCollection
 
     Public Sub New(sourceList As IList)
         InnerList.AddRange(sourceList)
-    End Sub 'New
+    End Sub
 
 
     Default Public ReadOnly Property Item(index As Integer) As [Object]
@@ -27,7 +27,7 @@ Public Class ROCollection
         Return InnerList.Contains(value)
     End Function 'Contains
 
-End Class 'ROCollection 
+End Class
 
 
 Public Class SamplesCollectionBase

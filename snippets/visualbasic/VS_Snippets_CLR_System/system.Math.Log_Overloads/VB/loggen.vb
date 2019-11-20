@@ -1,7 +1,5 @@
 ﻿'<snippet1>
 ' Example for the Math.Log( Double ) and Math.Log( Double, Double ) methods.
-Imports Microsoft.VisualBasic
-
 Module LogDLogDD
    
     Sub Main()
@@ -20,7 +18,7 @@ Module LogDLogDD
         UseBaseAndArg(1.2, 4.9)
         UseBaseAndArg(4.9, 9.9)
         UseBaseAndArg(9.9, 0.1)
-    End Sub 'Main
+    End Sub
        
     ' Evaluate logarithmic identities that are functions of two arguments.
     Sub UseBaseAndArg(argB As Double, argX As Double)
@@ -42,7 +40,7 @@ Module LogDLogDD
             "Math.Log(Math.E, {0}) * Math.Log({1}) = {2:E16}", _
             argB, argX, Math.Log(Math.E, argB) * Math.Log(argX))
 
-    End Sub 'UseBaseAndArg
+    End Sub
 End Module 'LogDLogDD
 
 ' This example of Math.Log( Double ) and Math.Log( Double, Double )

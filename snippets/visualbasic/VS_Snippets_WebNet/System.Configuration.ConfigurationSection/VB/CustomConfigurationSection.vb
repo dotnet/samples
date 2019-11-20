@@ -52,7 +52,7 @@ NotInheritable Public Class CustomSection
       _Properties.Add(_FileName)
       _Properties.Add(_MaxUsers)
       _Properties.Add(_MaxIdleTime)
-   End Sub 'New
+   End Sub
    
    
    ' This is a key customization. 
@@ -79,7 +79,7 @@ NotInheritable Public Class CustomSection
             Throw New ConfigurationErrorsException( _
             "The property " + propertyName + " is read only.")
       End If
-   End Sub 'ThrowIfReadOnly
+   End Sub
    
    
    
@@ -137,7 +137,7 @@ NotInheritable Public Class CustomSection
             Me("maxIdleTime") = Value
         End Set
     End Property
-End Class 'CustomSection 
+End Class
 '</Snippet1>
 
 
@@ -168,7 +168,7 @@ Class TestingCustomSection
       Catch err As ConfigurationErrorsException
          Console.WriteLine(err.ToString())
       End Try
-   End Sub 'CreateSection
+   End Sub
     
    '</Snippet2>
 
@@ -200,7 +200,7 @@ Class TestingCustomSection
       Catch err As ConfigurationErrorsException
          Console.WriteLine(err.ToString())
       End Try
-   End Sub 'ChangeDefaults
+   End Sub
    
     '</Snippet5>
 
@@ -230,7 +230,7 @@ Class TestingCustomSection
       Catch err As ConfigurationErrorsException
          Console.WriteLine(err.ToString())
       End Try
-   End Sub 'DisplayCustomSectionInformation
+   End Sub
    
    '</Snippet3>
 
@@ -243,8 +243,8 @@ Class TestingCustomSection
         ChangeDefaults()
         Console.WriteLine("[Display the new section information]")
         DisplayCustomSectionInformation()
-    End Sub 'Main
-End Class 'TestingCustomSection 
+    End Sub
+End Class
 
 End Namespace
 

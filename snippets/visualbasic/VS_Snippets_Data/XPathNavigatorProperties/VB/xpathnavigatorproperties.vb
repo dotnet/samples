@@ -2,7 +2,7 @@
 Imports System.Xml.Schema
 Imports System.Xml.XPath
 Imports System.Collections
- 
+
 Class XPathNavigatorProperties
     Shared Sub Main()
 

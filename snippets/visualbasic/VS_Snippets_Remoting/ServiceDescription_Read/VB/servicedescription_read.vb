@@ -79,5 +79,5 @@ Class MyClass1
       Catch e As Exception
          Console.WriteLine("Exception: " + e.Message.ToString())
       End Try
-   End Sub 'Main
-End Class 'MyClass1
+   End Sub
+End Class

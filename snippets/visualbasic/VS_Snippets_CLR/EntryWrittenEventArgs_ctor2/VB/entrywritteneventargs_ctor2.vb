@@ -31,7 +31,7 @@ Class MySample
       Catch e As Exception
          Console.WriteLine("Exception Raised" + e.Message)
       End Try
-   End Sub 'Main
+   End Sub
 
 ' <Snippet2>
    Protected Shared Sub MyOnEntry(source As Object, e As EntryWrittenEventArgs)
@@ -42,7 +42,7 @@ Class MySample
       Else
          Console.WriteLine("The current entry is null")
       End If
-   End Sub 'MyOnEntry
+   End Sub
 ' </Snippet2>
-End Class 'MySample
+End Class
 ' </Snippet1>

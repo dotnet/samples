@@ -10,7 +10,7 @@ Public Class Form1
     Sub Page_Load(sender As Object, e As EventArgs)
         Dim index As Integer = 0
         Dim myItem As New DataListItem(index, ListItemType.Item)
-    End Sub 'Page_Load
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

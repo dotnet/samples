@@ -58,5 +58,5 @@ Public Class DiscoveryClientDocumentCollection_Add
       For iIndex = 0 To myObjectCollection1.Length - 1
          Console.WriteLine(myObjectCollection1(iIndex))
       Next iIndex
-   End Sub 'Main
-End Class 'DiscoveryClientDocumentCollection_Add 
+   End Sub
+End Class

@@ -1,5 +1,4 @@
 ﻿ ' <snippet1>
-Imports System
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Drawing
@@ -44,7 +43,7 @@ Public Class MyControl1
         End If
         MyBase.Dispose(disposing)
 
-    End Sub 'Dispose
+    End Sub
 
 #Region "Component Designer generated code"
 

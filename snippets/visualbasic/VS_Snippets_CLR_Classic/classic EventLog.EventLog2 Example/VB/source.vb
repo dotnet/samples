@@ -4,7 +4,6 @@ Option Strict
 
 Imports System.Diagnostics
 Imports System.Threading
-Imports Microsoft.VisualBasic
 
 Class MySample
     Public Shared Sub Main()
@@ -28,6 +27,6 @@ Class MySample
         For Each entry In  myLog.Entries
             Console.WriteLine((ControlChars.Tab & "Entry: " & entry.Message))
         Next entry
-    End Sub ' Main
-End Class ' MySample
+    End Sub
+End Class
 ' </Snippet1>

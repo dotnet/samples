@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.Windows
@@ -23,8 +22,8 @@ Class Window1
     Public Sub New() 
         InitializeComponent()
     
-    End Sub 'New 
-End Class 'Window1
+    End Sub
+End Class
 
 
 
@@ -55,5 +54,5 @@ Public Class NumberDataTemplateSelector
         End If
 
     End Function 'SelectTemplate
-End Class 'NumderDataTemplateSelector 
+End Class
 '</Snippet2>

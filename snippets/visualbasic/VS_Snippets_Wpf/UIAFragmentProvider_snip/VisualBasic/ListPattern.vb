@@ -22,7 +22,6 @@
 ' * 
 ' ************************************************************************************************
 
-Imports System
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.Windows.Automation.Provider
@@ -45,7 +44,7 @@ Class ListPattern
         MyList = list
         SelectedIndex = index
     
-    End Sub 'New
+    End Sub
     
     ' <Snippet119>
     #Region "ISelectionProvider Members"
@@ -100,5 +99,5 @@ Class ListPattern
     #End Region
     Private Members As ISelectionProvider
     ' </Snippet119>
-End Class 'ListPattern 
+End Class
 '

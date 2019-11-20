@@ -4,6 +4,7 @@ Imports System.Xml
 Imports System.Xml.Serialization
 Imports System.IO
 Imports System.Xml.Schema
+
 Public Class PurchaseOrder
    <XmlArrayItem(DataType:= "gMonth", _
    ElementName:="MyMonths", _

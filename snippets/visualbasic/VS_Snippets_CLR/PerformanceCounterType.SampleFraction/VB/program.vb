@@ -30,7 +30,7 @@ Public Class App
         CollectSamples(samplesList)
         CalculateResults(samplesList)
 
-    End Sub 'Main
+    End Sub
 
 
 
@@ -74,7 +74,7 @@ Public Class App
         perfCounter.RawValue = thisProcess.UserProcessorTime.Ticks
         basePerfCounter.RawValue = thisProcess.TotalProcessorTime.Ticks
 
-    End Sub 'CreateCounters
+    End Sub
 
     Private Shared Sub CollectSamples(ByVal samplesList As ArrayList)
 
@@ -96,7 +96,7 @@ Public Class App
             System.Threading.Thread.Sleep(50)
         Next j
 
-    End Sub 'CollectSamples
+    End Sub
 
 
     Private Shared Sub CalculateResults(ByVal samplesList As ArrayList)
@@ -113,7 +113,7 @@ Public Class App
             Console.WriteLine("My computed counter value = " + MyComputeCounterValue(CType(samplesList(i), CounterSample), CType(samplesList((i + 1)), CounterSample)))
         Next i
 
-    End Sub 'CalculateResults
+    End Sub
 
 
 
@@ -146,6 +146,6 @@ Public Class App
         Console.WriteLine("   TimeStamp100nSec = " + s.TimeStamp100nSec)
         Console.WriteLine("++++++++++++++++++++++")
 
-    End Sub 'OutputSample
-End Class 'App
+    End Sub
+End Class
 '</Snippet1>

@@ -7,7 +7,7 @@ Imports System.Web.Services.Protocols
 Public Class MyHeader
    Inherits SoapHeader
    Public MyValue As String
-End Class 'MyHeader
+End Class
 
 
 Public Class MyWebService
@@ -19,7 +19,7 @@ Public Class MyWebService
     SoapHeader("myHeader", Direction := SoapHeaderDirection.InOut)> _
    Public Sub Hello()
 
-   End Sub 'Hello
-End Class 'MyWebService
+   End Sub
+End Class
 
 ' </Snippet1>

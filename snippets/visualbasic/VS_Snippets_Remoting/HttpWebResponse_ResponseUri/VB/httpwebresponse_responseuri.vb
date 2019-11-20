@@ -4,7 +4,6 @@
 'was redirected by the server. 
 
 Imports System.Net
-Imports Microsoft.VisualBasic
 Imports System.Environment
 
 Class HttpWebResponseSnippet
@@ -25,7 +24,7 @@ Class HttpWebResponseSnippet
         Console.WriteLine("Press any key to continue...")
         Console.ReadLine()
         Return
-    End Sub 'Main
+    End Sub
     
     
     Public Shared Sub GetPage(url As [String])
@@ -52,5 +51,5 @@ Class HttpWebResponseSnippet
         Catch e As Exception
             Console.WriteLine(ControlChars.Cr + "The following exception was raised : {0}", e.Message)
         End Try
-    End Sub 'GetPage
-End Class 'HttpWebResponseSnippet
+    End Sub
+End Class

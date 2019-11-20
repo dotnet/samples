@@ -62,6 +62,6 @@ Class AsnEncodedDataSample
       Catch 
          MsgBox("Information could not be written out for this certificate.")
       End Try
-   End Sub 'Main
-End Class 'AsnEncodedDataSample
+   End Sub
+End Class
 '</SNIPPET1>

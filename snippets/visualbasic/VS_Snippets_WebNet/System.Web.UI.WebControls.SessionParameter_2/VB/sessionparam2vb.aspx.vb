@@ -10,5 +10,5 @@ Partial Class sessionparam2vb_aspx
         empid.Type = TypeCode.Int32
         empid.SessionField = "empid"
         ' </Snippet1>
-    End Sub ' Page_Load
+    End Sub
 End Class

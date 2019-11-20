@@ -18,8 +18,8 @@ Public Class MyAttribute
    
    Public Sub New(s As Boolean)
       Me.s = s
-   End Sub 'New
-End Class 'MyAttribute
+   End Sub
+End Class
 
 Class MyApplication
    
@@ -34,7 +34,7 @@ Class MyApplication
             Exit For
          End If
       Next index
-   End Sub 'Main
+   End Sub
    
    Private Shared Function CreateCallee(domain As AppDomain) As Type
       Dim myAssemblyName As New AssemblyName()
@@ -50,5 +50,5 @@ Class MyApplication
       
       Return helloWorldClass.CreateType()
    End Function 'CreateCallee
-End Class 'MyApplication
+End Class
 ' </Snippet1>

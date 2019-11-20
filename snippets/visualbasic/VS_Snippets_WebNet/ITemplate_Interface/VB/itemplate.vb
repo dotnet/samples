@@ -20,7 +20,7 @@ Namespace UsingItemTemplatesVB
    
    Public Sub New(column As String)
       Me.column = column
-   End Sub 'New
+   End Sub
    
    
    ' <snippet2>
@@ -32,7 +32,7 @@ Namespace UsingItemTemplatesVB
       Dim l As New Literal()
       AddHandler l.DataBinding, AddressOf Me.BindData
       container.Controls.Add(l)
-   End Sub 'InstantiateIn
+   End Sub
    
    ' Create a public method that will handle the
    ' DataBinding event called in the InstantiateIn method.
@@ -40,8 +40,8 @@ Namespace UsingItemTemplatesVB
       Dim l As Literal = CType(sender, Literal)
       Dim container As DataGridItem = CType(l.NamingContainer, DataGridItem)
       l.Text = CType(container.DataItem, DataRowView)(column).ToString()
-   End Sub 'BindData 
+   End Sub
    ' </snippet2>
- End Class 'GenericItem
+ End Class
 End Namespace 'UsingItemTemplatesVB
 ' </snippet1>

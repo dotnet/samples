@@ -9,7 +9,6 @@
 ' event. The SelectionBackColor is reset to its default value with
 ' the 'ResetSelectionBackColor' button.
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -26,7 +25,7 @@ Public Class MyForm
    
    Public Sub New()
       InitializeComponent()
-   End Sub 'New
+   End Sub
    
    
    Protected Overrides Overloads Sub Dispose(disposing As Boolean)
@@ -36,7 +35,7 @@ Public Class MyForm
          End If
       End If
       MyBase.Dispose(disposing)
-   End Sub 'Dispose
+   End Sub
    
 
    ' <summary>
@@ -69,13 +68,13 @@ Public Class MyForm
       Me.Name = "MyForm"
       Me.Text = "MyForm"
       Me.ResumeLayout(False)
-   End Sub 'InitializeComponent 
+   End Sub
 
    Private myDataGrid As New DataGrid()
    
    <STAThread()> Shared Sub Main()
       Application.Run(New MyForm())
-   End Sub 'Main
+   End Sub
    
    
    Private Sub MyForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -90,18 +89,18 @@ Public Class MyForm
       myGridTableStyle.SelectionForeColor = Color.Coral
       myDataGrid.TableStyles.Add(myGridTableStyle)
       AttachSelectionBackColorChanged()
-   End Sub 'MyForm_Load
+   End Sub
    
 ' <Snippet1>   
    Public Sub AttachSelectionBackColorChanged()
       ' Handle the 'SelectionBackColorChanged' event.
       AddHandler myGridTableStyle.SelectionBackColorChanged, AddressOf MyDataGrid_SelectedBackColorChanged
-   End Sub 'AttachSelectionBackColorChanged
+   End Sub
    
    
     Private Sub MyDataGrid_SelectedBackColorChanged(ByVal sender As Object, ByVal e As EventArgs)
         MessageBox.Show("SelectionBackColorChanged event was raised, Color changed to " & myGridTableStyle.SelectionBackColor.ToString())
-    End Sub 'MyDataGrid_SelectedBackColorChanged
+    End Sub
    
 ' </Snippet1>    
    Private Sub MyBackColorButton_Click(sender As Object, e As EventArgs) Handles myBackColorButton.Click
@@ -118,7 +117,7 @@ Public Class MyForm
       myGridTableStyle.SelectionBackColor = myColorDialog.Color
 ' </Snippet2>      
       myDataGrid.Invalidate()
-   End Sub 'MyBackColorButton_Click
+   End Sub
    
    
    Private Sub MyResetButton_Click(sender As Object, e As EventArgs) Handles myResetButton.Click
@@ -126,7 +125,7 @@ Public Class MyForm
       ' Set the SelectionBackColor to the default color.
       myGridTableStyle.ResetSelectionBackColor()
 ' </Snippet3>       
-   End Sub 'MyResetButton_Click
+   End Sub
 
    
    Private Function MakeDataSet() As DataSet
@@ -198,4 +197,4 @@ Public Class MyForm
       Next i
       Return myDataSet
    End Function 'MakeDataSet
-End Class 'MyForm
+End Class

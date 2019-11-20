@@ -1,5 +1,4 @@
 ﻿' <Snippet1>
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 
@@ -14,7 +13,7 @@ Public NotInheritable Class Form1
     <System.STAThread()> _
     Public Shared Sub Main()
         System.Windows.Forms.Application.Run(New Form1)
-    End Sub 'Main
+    End Sub
 
     Public Sub New()
 
@@ -49,7 +48,7 @@ Public NotInheritable Class Form1
         ' in a tooltip, when the mouse hovers over the systray icon.
         notifyIcon1.Text = "Form1 (NotifyIcon example)"
         notifyIcon1.Visible = True
-    End Sub 'New
+    End Sub
     
     Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
         ' Clean up any components being used.
@@ -59,7 +58,7 @@ Public NotInheritable Class Form1
             End If
         End If
         MyBase.Dispose(disposing)
-    End Sub 'Dispose
+    End Sub
 
     Private Sub notifyIcon1_DoubleClick(Sender as object, e as EventArgs) handles notifyIcon1.DoubleClick
         ' Show the form when the user double clicks on the notify icon.
@@ -77,5 +76,5 @@ Public NotInheritable Class Form1
         me.Close()
     end sub
 
-End Class 'Form1
+End Class
 ' </Snippet1>

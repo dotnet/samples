@@ -1,8 +1,6 @@
 ﻿'<Snippet2>
 ' Example of the Decimal( Integer, Integer, Integer, Boolean, Byte ) 
 ' constructor.
-Imports Microsoft.VisualBasic
-
 Module DecimalCtorIIIBByDemo
 
     ' Get the exception type name; remove the namespace prefix.

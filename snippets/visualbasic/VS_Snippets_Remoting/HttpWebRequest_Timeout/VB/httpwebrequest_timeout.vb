@@ -8,9 +8,6 @@
 Imports System.IO
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
-
-
 
 Class HttpWebRequest_Timeout
     
@@ -55,7 +52,7 @@ Class HttpWebRequest_Timeout
             Console.WriteLine(("Message : " + e.Message))
 	    
         End Try
-    End Sub ' Main
-End Class ' HttpWebRequest_Timeout
+    End Sub
+End Class
 
 

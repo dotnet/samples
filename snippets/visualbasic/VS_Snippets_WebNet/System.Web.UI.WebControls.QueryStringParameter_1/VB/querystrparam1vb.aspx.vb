@@ -15,5 +15,5 @@ Partial Class querystrparam1vb_aspx
         Dim employee As New QueryStringParameter("employee", "employee")
         MyAccessDataSource.SelectParameters.Add(employee)
         ' </snippet4>
-    End Sub ' Page_Load
+    End Sub
 End Class

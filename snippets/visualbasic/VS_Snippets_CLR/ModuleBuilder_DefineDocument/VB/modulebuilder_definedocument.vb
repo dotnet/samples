@@ -36,14 +36,14 @@ Namespace ILGenServer
          Console.WriteLine("The object representing the defined document is:" + _
                                                              CObj(myDocument).ToString())
 
-      End Sub 'New
-   End Class 'CodeGenerator
+      End Sub
+   End Class
 
    Public Class CallerClass
 
       Public Shared Sub Main()
          Dim myGenerator As New CodeGenerator()
-      End Sub 'Main
-   End Class 'CallerClass
+      End Sub
+   End Class
 End Namespace 'ILGenServer
 ' </Snippet1>

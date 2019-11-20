@@ -4,9 +4,9 @@ Class MyGetTypeFromCLSID
     Public Class MyClass1
 
         Public Sub MyMethod1()
-        End Sub 'MyMethod1
+        End Sub
 
-    End Class 'MyClass1
+    End Class
 
     Public Shared Sub Main()
         ' Get the type corresponding to the class MyClass.
@@ -15,6 +15,6 @@ Class MyGetTypeFromCLSID
         Dim myGuid As Guid = myType.GUID
         Console.WriteLine(("The name of the class is " + myType.ToString()))
         Console.WriteLine(("The ClassId of MyClass is " + myType.GUID.ToString()))
-    End Sub 'Main 
-End Class 'MyGetTypeFromCLSID
+    End Sub
+End Class
 ' </Snippet1>

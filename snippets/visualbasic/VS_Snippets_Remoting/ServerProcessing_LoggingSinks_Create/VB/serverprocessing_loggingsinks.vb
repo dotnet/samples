@@ -37,11 +37,11 @@ Namespace MyLogging
       Private myClientChannelSinkProviderNext As IClientChannelSinkProvider = Nothing
 
       Public Sub New()
-      End Sub 'New
+      End Sub
 
       Public Sub New(ByVal myIDictionaryProperties As IDictionary, ByVal _
                  myICollectionProviderData As ICollection)
-      End Sub 'New
+      End Sub
 
       Public Function CreateSink(ByVal myChannelSenderData As IChannelSender, ByVal url As String, _
                  ByVal myRemoteChannelData As Object) As IClientChannelSink Implements _
@@ -65,7 +65,7 @@ Namespace MyLogging
             myClientChannelSinkProviderNext = Value
          End Set
       End Property
-   End Class 'MyServerProcessingLogClientChannelSinkProviderData
+   End Class
 ' </Snippet2>
 ' </Snippet1>
    
@@ -80,13 +80,13 @@ Namespace MyLogging
       Public Sub New(ByVal myClientChannelSinkNextSink As IClientChannelSink)
          MyBase.New()
          myNewNextSink = myClientChannelSinkNextSink
-      End Sub 'New
+      End Sub
 
       Public Sub New(ByVal myChannelSenderData As IChannelSender, ByVal url As String,ByVal _
          myRemoteChannelData As Object, ByVal myClientChannelSinkNextSink As IClientChannelSink)
           MyBase.New()
          myNewNextSink = myClientChannelSinkNextSink
-      End Sub 'New
+      End Sub
 
       Public Sub ProcessMessage(ByVal msg As IMessage, ByVal requestHeaders As ITransportHeaders, _
                  ByVal requestStream As Stream, ByRef responseHeaders As ITransportHeaders, _
@@ -99,18 +99,18 @@ Namespace MyLogging
          If myBoolEnabled  Then
             LoggingHelper.PrintResponse(myTextWriterOutput, responseHeaders, responseStream)
          End If
-      End Sub 'ProcessMessage
+      End Sub
 
       Public Sub AsyncProcessRequest(ByVal myClientChannelSinkStack As IClientChannelSinkStack, _
                 ByVal msg As IMessage, ByVal headers As ITransportHeaders, ByVal stream As Stream) _
                  Implements IClientChannelSink.AsyncProcessRequest
-      End Sub 'AsyncProcessRequest
+      End Sub
 
 
       Public Sub AsyncProcessResponse(ByVal myClientChannelSinkStack As IClientResponseChannelSinkStack, _
                 ByVal state As Object, ByVal headers As ITransportHeaders, ByVal stream As Stream) _
                  Implements IClientChannelSink.AsyncProcessResponse
-      End Sub 'AsyncProcessResponse
+      End Sub
 
 
       Public Function GetRequestStream(ByVal msg As IMessage, ByVal headers As ITransportHeaders) As _
@@ -167,7 +167,7 @@ Namespace MyLogging
 
          End Get
       End Property
-   End Class 'MyLoggingClientChannelSink
+   End Class
  
    <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> _
    Public Class MyServerProcessingLogServerChannelSinkProviderData
@@ -175,15 +175,15 @@ Namespace MyLogging
       Private myServerChannelSinkProviderNext As IServerChannelSinkProvider = Nothing
 
       Public Sub New()
-      End Sub 'New
+      End Sub
 
       Public Sub New(ByVal myIDictionaryProperties As IDictionary, ByVal myICollectionProviderData As _
                  ICollection)
-      End Sub 'New
+      End Sub
 
       Public Sub GetChannelData(ByVal channelData As IChannelDataStore) Implements _
                  IServerChannelSinkProvider.GetChannelData
-      End Sub 'GetChannelData
+      End Sub
 
       Public Function CreateSink(ByVal myChannelReceiverData As IChannelReceiver) As _
                 IServerChannelSink Implements IServerChannelSinkProvider.CreateSink
@@ -202,7 +202,7 @@ Namespace MyLogging
             myServerChannelSinkProviderNext = Value
          End Set
       End Property
-   End Class 'MyServerProcessingLogServerChannelSinkProviderData
+   End Class
 
    <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> _
    Friend Class LoggingServerChannelSink
@@ -215,13 +215,13 @@ Namespace MyLogging
       Public Sub New(ByVal myServerChannelSinkNextSink As IServerChannelSink)
           MyBase.New()
           myNewNextSink = myServerChannelSinkNextSink
-      End Sub 'New
+      End Sub
 
       Public Sub New(ByVal myChannelReceiverData As IChannelReceiver, ByVal _
                  myServerChannelSinkNextSink As IServerChannelSink)
          MyBase.New()
          myNewNextSink =  myServerChannelSinkNextSink
-      End Sub 'New
+      End Sub
 ' <Snippet3>
       Public Function ProcessMessage(ByVal myServerChannelSinkStack As IServerChannelSinkStack, _
                   ByVal requestMsg As IMessage, ByVal requestHeaders As ITransportHeaders, ByVal requestStream As Stream, ByRef _
@@ -265,7 +265,7 @@ Namespace MyLogging
       Public Sub AsyncProcessResponse(ByVal myServerChannelSinkStack As IServerResponseChannelSinkStack, _
         ByVal state As Object, ByVal msg As IMessage, ByVal headers As ITransportHeaders, _
         ByVal stream As Stream) Implements IServerChannelSink.AsyncProcessResponse
-      End Sub 'AsyncProcessResponse
+      End Sub
 
       Public Function GetResponseStream(ByVal myServerChannelSinkStack As IServerResponseChannelSinkStack, _
         ByVal state As Object, ByVal msg As IMessage, ByVal headers As ITransportHeaders _
@@ -325,7 +325,7 @@ Namespace MyLogging
 
          End Get
       End Property
-   End Class 'LoggingServerChannelSink
+   End Class
 
    Friend Class LoggingHelper
 
@@ -341,7 +341,7 @@ Namespace MyLogging
             output.WriteLine("------End of Request Message--------")
          End If
          output.Flush()
-      End Sub 'PrintRequest
+      End Sub
 
       Friend Shared Sub PrintResponse(ByVal output As TextWriter, ByVal responseHeaders As _
                 ITransportHeaders, ByRef responseStream As Stream)
@@ -355,14 +355,14 @@ Namespace MyLogging
             output.WriteLine("------End of Response Message-------")
          End If
          output.Flush()
-      End Sub 'PrintResponse
+      End Sub
 
       Private Shared Sub PrintHeaders(ByVal output As TextWriter, ByVal headers As ITransportHeaders)
          Dim header As DictionaryEntry
          For Each header In headers
             output.WriteLine(header.Key + ": " + header.Value.Tostring())
          Next header
-      End Sub 'PrintHeaders
+      End Sub
 
       Private Shared Sub PrintStream(ByVal output As TextWriter, ByRef stream As Stream)
          If Not stream.CanSeek Then
@@ -377,7 +377,7 @@ Namespace MyLogging
             line = sr.ReadLine()
          End While
          stream.Position = startPosition
-      End Sub 'PrintStream
+      End Sub
 
       Private Shared Function CopyStream(ByVal stream As Stream) As Stream
          Dim streamCopy = New MemoryStream()
@@ -395,7 +395,7 @@ Namespace MyLogging
          streamCopy.Position = 0
          Return streamCopy
       End Function 'CopyStream
-   End Class 'LoggingHelper
+   End Class
 
    Public Interface ILoggingSink
 
@@ -406,6 +406,6 @@ Namespace MyLogging
    ' This class is used as the key to get the ILoggingSink interface
    ' to one of the logging sinks.
    Public Class LoggingSinkKey
-   End Class 'LoggingSinkKey
+   End Class
 
 End Namespace 'MyLogging

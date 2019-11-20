@@ -5,11 +5,10 @@ namespace Conversion
 {
     public static class ToDictionarySample1
     {
-        //This sample uses ToDictionary to immediately evaluate a sequence and a 
-        //related key expression into a dictionary.
-        //
-        //Output:
-        //Bob's score: 40 
+        // This sample uses ToDictionary to immediately evaluate a sequence and a 
+        // related key expression into a dictionary.
+        // Output:
+        // Bob's score: 40 
         public static void Example()
         {
             var scoreRecords = new[]

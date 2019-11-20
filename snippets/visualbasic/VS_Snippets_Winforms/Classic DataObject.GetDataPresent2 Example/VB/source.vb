@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
 
@@ -17,8 +16,8 @@ Public Class Form1
         ' Prints whether data is present in text format.
         textBox1.Text = "Data in text format is: " & _
             myDataObject.GetDataPresent(DataFormats.Text).ToString()
-    End Sub 'GetIfPresent
+    End Sub
     ' </Snippet1>
-End Class 'Form1
+End Class
 
 

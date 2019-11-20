@@ -7,7 +7,7 @@ Imports System.Web.Services.Protocols
 Public Class MySoapHeader
    Inherits SoapHeader
    Public number As Integer
-End Class 'MySoapHeader
+End Class
 
 <System.Web.Services.WebServiceBindingAttribute(Name := "MathSvcSoap", _
 Namespace := "http://tempuri.org/")>  _
@@ -29,7 +29,7 @@ Public Class MathSvc
    <System.Diagnostics.DebuggerStepThroughAttribute()>  _
    Public Sub New()
       Me.Url = "http://localhost/MathSvc_SoapHeaderException2.vb.asmx"
-   End Sub 'New
+   End Sub
 
    Public Function BeginAdd(xValue As System.Single, yValue As System.Single, _
       callback As System.AsyncCallback, asyncState As Object) As System.IAsyncResult
@@ -40,4 +40,4 @@ Public Class MathSvc
       Dim results As Object() = Me.EndInvoke(asyncResult)
       Return CType(results(0), System.Single)
    End Function 'EndAdd
-End Class 'MathSvc
+End Class

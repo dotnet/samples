@@ -22,7 +22,7 @@ Public Class MyNewQueue
 
             Return
 
-        End Sub 'Main
+        End Sub
 
 
         
@@ -62,8 +62,8 @@ Public Class MyNewQueue
 
             Return
 
-        End Sub 'CountLowestPriority
+        End Sub
 
-End Class 'MyNewQueue
+End Class
 
 ' </Snippet1>

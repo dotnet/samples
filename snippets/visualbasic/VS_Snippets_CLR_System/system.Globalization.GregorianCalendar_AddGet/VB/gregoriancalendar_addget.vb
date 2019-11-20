@@ -26,7 +26,7 @@ Public Class SamplesGregorianCalendar
       Console.WriteLine("After adding two years and ten months:")
       DisplayValues(myCal, myDT)
 
-   End Sub 'Main
+   End Sub
 
    Public Shared Sub DisplayValues(myCal As Calendar, myDT As DateTime)
       Console.WriteLine("   Era:        {0}", myCal.GetEra(myDT))
@@ -36,9 +36,9 @@ Public Class SamplesGregorianCalendar
       Console.WriteLine("   DayOfMonth: {0}", myCal.GetDayOfMonth(myDT))
       Console.WriteLine("   DayOfWeek:  {0}", myCal.GetDayOfWeek(myDT))
       Console.WriteLine()
-   End Sub 'DisplayValues
+   End Sub
 
-End Class 'SamplesGregorianCalendar 
+End Class
 
 
 'This code produces the following output.

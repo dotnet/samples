@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
 Imports System.Data
@@ -67,5 +66,5 @@ Class Form1
         Application.SetCompatibleTextRenderingDefault(False)
         Application.Run(New Form1())
     
-    End Sub 'Main
-End Class 'Form1
+    End Sub
+End Class

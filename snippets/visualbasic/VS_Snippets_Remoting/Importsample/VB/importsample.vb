@@ -51,7 +51,7 @@ Class MySample
          "WSDL document 'StockQuoteService_vb.wsdl'")
       'Print the import collection to the console.
       PrintImportCollection("StockQuoteService_vb.wsdl")
-   End Sub 'Main
+   End Sub
 
 ' <Snippet3>
 ' <Snippet4>
@@ -86,7 +86,7 @@ Class MySample
          Console.WriteLine("ServiceDescription  : " & _
             myImportCollection(i).ServiceDescription.Name)
       Next i
-   End Sub 'PrintImportCollection
+   End Sub
 ' </Snippet6>
-End Class 'MySample
+End Class
 ' </Snippet7>

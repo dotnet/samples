@@ -1,5 +1,4 @@
-﻿Imports System
-Namespace SDKSample
+﻿Namespace SDKSample
 	Partial Public Class Form1
 		''' <summary>
 		''' Required designer variable.

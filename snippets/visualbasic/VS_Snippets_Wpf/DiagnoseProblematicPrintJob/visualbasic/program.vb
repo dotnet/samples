@@ -1,6 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
-Imports System.Collections.Generic
+﻿Imports System.Collections.Generic
 Imports System.Text
 Imports System.Printing
 Imports System.IO
@@ -97,9 +95,9 @@ Namespace DiagnoseProblematicPrintJob
 			Console.WriteLine(vbLf & "Press Return to end.")
 			Console.ReadLine()
 
-		End Sub ' end Main
+		End Sub
 
-	End Class ' end Program class
+	End Class
 
 	Friend Class TroubleSpotter
 		' <SnippetSpotTroubleUsingJobProperties>
@@ -139,7 +137,7 @@ Namespace DiagnoseProblematicPrintJob
 				Console.WriteLine("The printer needs human intervention.")
 			End If
 
-		End Sub 'end SpotTroubleUsingProperties
+		End Sub
 		' </SnippetSpotTroubleUsingJobProperties>
 
 		' <SnippetSpotTroubleUsingJobAttributes>
@@ -179,7 +177,7 @@ Namespace DiagnoseProblematicPrintJob
 				Console.WriteLine("The printer needs human intervention.")
 			End If
 
-		End Sub 'end SpotTroubleUsingJobAttributes
+		End Sub
 		' </SnippetSpotTroubleUsingJobAttributes>
 
 		'<SnippetHandlePausedJob>
@@ -201,7 +199,7 @@ Namespace DiagnoseProblematicPrintJob
 				End If
 			End If 'end if the queue should be resumed
 
-		End Sub 'end HandlePausedJob
+		End Sub
 		'</SnippetHandlePausedJob>
 
 		'<SnippetReportQueueAndJobAvailability>
@@ -224,7 +222,7 @@ Namespace DiagnoseProblematicPrintJob
 
 			End If 'end if at least one is not available
 
-		End Sub 'end ReportQueueAndJobAvailability
+		End Sub
 		'</SnippetReportQueueAndJobAvailability>
 
 		'<SnippetPrintQueueStartUntil>
@@ -259,7 +257,7 @@ Namespace DiagnoseProblematicPrintJob
 		End Function 'end ReportAvailabilityAtThisTime
 		' </SnippetUsingJobStartAndUntilTimes>
 
-	End Class 'end TroubleSpotter class
+	End Class
 
 	'<SnippetTimeConverter>
 	Friend Class TimeConverter
@@ -281,7 +279,7 @@ Namespace DiagnoseProblematicPrintJob
 
 		End Function ' end ConvertToLocalHumanReadableTime
 
-	End Class 'end TimeConverter class
+	End Class
 	'</SnippetTimeConverter>
 
 End Namespace ' end namespace

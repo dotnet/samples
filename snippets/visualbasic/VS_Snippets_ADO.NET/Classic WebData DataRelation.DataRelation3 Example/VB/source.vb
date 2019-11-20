@@ -25,7 +25,7 @@ Private Sub CreateRelation()
  
     Dim bConstraints As Boolean = True
     ' Create DataRelation.
-    Dim CustOrderRel As DataRelation = New DataRelation( _
+    Dim CustOrderRel As New DataRelation( _
         "CustomersOrders", parentColumns, childColumns,  _
         bConstraints)
 

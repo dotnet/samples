@@ -19,14 +19,14 @@ NotInheritable Public Class MyResourceType
     ' Constructors
     Public Sub New() 
     
-    End Sub 'New
+    End Sub
     
     
     Public Sub New(ByVal text As String, ByVal number As Integer) 
         Me.text_value = text
         Me.number = number
     
-    End Sub 'New
+    End Sub
     
     ' Public properties
     
@@ -49,7 +49,7 @@ NotInheritable Public Class MyResourceType
             Me.number_value = value
         End Set
     End Property
-End Class 'MyResourceType
+End Class
 '</snippet2>
 
 Class Program
@@ -65,7 +65,7 @@ Class Program
         Dim c2 As New Claim("http://example.org/claims/complexcustomclaim", New MyResourceType("Martin", 38), Rights.PossessProperty)
         '</snippet5>
         '</snippet3>
-    End Sub 'Main
-End Class 'Program
+    End Sub
+End Class
 ' Do something with claims
 '</snippet0>

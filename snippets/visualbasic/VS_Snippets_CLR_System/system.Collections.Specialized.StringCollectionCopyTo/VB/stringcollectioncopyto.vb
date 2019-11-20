@@ -27,7 +27,7 @@ Public Class SamplesStringCollection
       Next i
       Console.WriteLine()
 
-   End Sub 'Main
+   End Sub
 
    Public Shared Sub PrintValues(myCol As IEnumerable)
       Dim obj As [Object]
@@ -35,9 +35,9 @@ Public Class SamplesStringCollection
          Console.WriteLine("   {0}", obj)
       Next obj
       Console.WriteLine()
-   End Sub 'PrintValues
+   End Sub
 
-End Class 'SamplesStringCollection 
+End Class
 
 
 'This code produces the following output.

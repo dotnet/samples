@@ -76,7 +76,7 @@ Friend Class MyConstructorBuilder
       Catch ex As Exception
          Console.WriteLine("The following exception has occurred : " + ex.Message)
       End Try
-   End Sub 'New
+   End Sub
 
    Friend ReadOnly Property MyTypeProperty() As Type
       Get
@@ -102,5 +102,5 @@ Friend Class MyConstructorBuilder
       Else
          Console.WriteLine("Could not access Type.")
       End If
-   End Sub 'Main
-End Class 'MyConstructorBuilder
+   End Sub
+End Class

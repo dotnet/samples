@@ -1,5 +1,4 @@
 ﻿'<Snippet1>
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 
@@ -16,7 +15,7 @@ Public Class Form1
     <STAThread()> _
     Shared Sub Main()
         Application.Run(New Form1)
-    End Sub 'Main
+    End Sub
 
     Public Sub New()
         Me.addressTextBox = New System.Windows.Forms.TextBox
@@ -84,7 +83,7 @@ Public Class Form1
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Text = "Help Event Demonstration"
-    End Sub 'New
+    End Sub
 
     Private Sub textBox_HelpRequested(ByVal sender As Object, ByVal hlpevent As System.Windows.Forms.HelpEventArgs) Handles addressTextBox.HelpRequested, cityTextBox.HelpRequested, stateTextBox.HelpRequested, zipTextBox.HelpRequested
         ' This event is raised when the F1 key is pressed or the
@@ -96,6 +95,6 @@ Public Class Form1
         helpLabel.Text = CStr(requestingControl.Tag)
         hlpevent.Handled = True
 
-    End Sub 'textBox_HelpRequested
-End Class 'Form1
+    End Sub
+End Class
 '</Snippet1>

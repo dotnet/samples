@@ -65,8 +65,8 @@ Class Sample
             Console.WriteLine("""{0}""", name)
         Next name
     
-    End Sub 'Main
-End Class 'Sample
+    End Sub
+End Class
 '
 'This code example produces the following results:
 '

@@ -1,12 +1,11 @@
 ﻿'<Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
 
 Class AttributesSample
 
     Public Sub Mymethod(ByVal int1m As Integer, ByRef str2m As String, ByRef str3m As String)
         str2m = "in Mymethod"
-    End Sub 'Mymethod
+    End Sub
 
     Public Shared Function Main(ByVal args() As String) As Integer
         Console.WriteLine("Reflection.MethodBase.Attributes Sample")
@@ -41,6 +40,6 @@ Class AttributesSample
                 Console.WriteLine(fields(i).Name)
             End If
         Next i
-    End Sub 'PrintAttributes
-End Class 'AttributesSample
+    End Sub
+End Class
 '</Snippet1>

@@ -12,7 +12,7 @@ Public Class Form1
     ' <Snippet1>
     Sub Grid_Change(sender As Object, e As DataGridPageChangedEventArgs)
         Dim page_change_args As New DataGridPageChangedEventArgs(e.CommandSource, e.NewPageIndex)
-    End Sub 'Grid_Change
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

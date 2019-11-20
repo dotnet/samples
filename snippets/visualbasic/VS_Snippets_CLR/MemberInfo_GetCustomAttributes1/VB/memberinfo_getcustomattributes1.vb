@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
 
 ' Define a custom attribute with one named parameter.
 <AttributeUsage(AttributeTargets.All)> Public Class MyAttribute
@@ -9,22 +8,22 @@ Imports Microsoft.VisualBasic
 
     Public Sub New(ByVal name As String)
         myName = name
-    End Sub 'New
+    End Sub
 
     Public ReadOnly Property Name() As String
         Get
             Return myName
         End Get
     End Property
-End Class 'MyAttribute
+End Class
 
 ' Define a class that has the custom attribute associated with one of its members.
 Public Class MyClass1
 
     <MyAttribute("This is an example attribute.")> Public Sub MyMethod(ByVal i As Integer)
         Return
-    End Sub 'MyMethod
-End Class 'MyClass1
+    End Sub
+End Class
 
 
 Public Class MemberInfo_GetCustomAttributes
@@ -51,6 +50,6 @@ Public Class MemberInfo_GetCustomAttributes
         Catch e As Exception
             Console.WriteLine("An exception occurred: {0}.", e.Message)
         End Try
-    End Sub 'Main
-End Class 'MemberInfo_GetCustomAttributes
+    End Sub
+End Class
 ' </Snippet1>

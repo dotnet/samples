@@ -20,5 +20,5 @@ Class MyMainClass
         Dim RSACSP As New RSACryptoServiceProvider(cspParams)
 	'</SNIPPET1>
     
-    End Sub 'Main 
-End Class 'MyMainClass
+    End Sub
+End Class

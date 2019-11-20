@@ -69,5 +69,5 @@ Class DeployServicedComponent
         End Try
         '</snippet0>
 
-    End Sub 'Main 
-End Class 'DeployServicedComponent
+    End Sub
+End Class

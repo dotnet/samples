@@ -8,7 +8,7 @@ Public Class Form1: Inherits Form
 ' <Snippet1>
 Private Sub AddColumn(table As DataTable )
     ' Create a new column and set its properties.
-    Dim column As DataColumn = New DataColumn("ID", _
+    Dim column As New DataColumn("ID", _
         Type.GetType("System.Int32"), "", MappingType.Attribute)
     column.DataType = Type.GetType("System.String")
     column.ColumnMapping = MappingType.Element

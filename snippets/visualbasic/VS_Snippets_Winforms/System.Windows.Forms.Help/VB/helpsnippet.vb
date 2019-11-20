@@ -1,5 +1,4 @@
 ﻿'<Snippet1>
-Imports System
 Imports System.Drawing
 Imports System.ComponentModel
 Imports System.Windows.Forms
@@ -20,7 +19,7 @@ Public Class Form1
     <STAThread()> _
     Shared Sub Main()
         Application.Run(New Form1)
-    End Sub 'Main
+    End Sub
     
     Public Sub New()
         Me.showIndex = New System.Windows.Forms.Button
@@ -105,13 +104,13 @@ Public Class Form1
             navigatorCombo.Items.Add(value)
         Next value
         '</Snippet5>
-    End Sub 'New
+    End Sub
 
     '<Snippet2>
     Private Sub showIndex_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles showIndex.Click
         ' Display the index for the Help file.
         Help.ShowHelpIndex(Me, helpfile)
-    End Sub 'showIndex_Click
+    End Sub
     '</Snippet2>
     '<Snippet3>
     Private Sub showHelp_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles showHelp.Click
@@ -124,13 +123,13 @@ Public Class Form1
             navigator = CType(navigatorCombo.SelectedItem, HelpNavigator)
         End If
         Help.ShowHelp(Me, helpfile, navigator, parameterTextBox.Text)
-    End Sub 'showHelp_Click
+    End Sub
     '</Snippet3>
     '<Snippet4>
     Private Sub showKeyword_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles showKeyword.Click
         ' Display Help using the provided keyword. 
         Help.ShowHelp(Me, helpfile, keyword.Text)
-    End Sub 'showKeyword_Click
+    End Sub
     '</Snippet4>
-End Class 'Form1
+End Class
 '</snippet1>

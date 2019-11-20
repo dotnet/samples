@@ -11,7 +11,6 @@
 
 
 
-Imports Microsoft.VisualBasic
 <System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0"), System.ServiceModel.ServiceContractAttribute(Namespace:="http://microsoft.wcf.documentation", ConfigurationName:="SampleDuplexHello", CallbackContract:=GetType(SampleDuplexHelloCallback), SessionMode:=System.ServiceModel.SessionMode.Required)> _
 Public Interface SampleDuplexHello
 

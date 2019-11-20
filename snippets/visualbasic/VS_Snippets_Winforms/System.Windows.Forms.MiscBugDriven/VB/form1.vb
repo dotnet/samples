@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
 Imports System.Data
@@ -20,7 +19,7 @@ Public Class Form1
         InitializeRadioButtons()
 
     
-    End Sub 'New
+    End Sub
     
     Private Sub button1_Click(ByVal sender As Object, ByVal e As EventArgs) _
         Handles button1.Click
@@ -34,7 +33,7 @@ Public Class Form1
         Application.EnableVisualStyles()
         Application.Run(New Form1())
     
-    End Sub 'Main
+    End Sub
     
     '<snippet2>
     Private groupBox1 As GroupBox

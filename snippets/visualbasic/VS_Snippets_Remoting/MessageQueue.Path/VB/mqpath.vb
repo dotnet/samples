@@ -27,7 +27,7 @@ Public Class MyNewQueue
 
             Return
 
-        End Sub 'Main
+        End Sub
 
 
         ' References public queues.
@@ -38,7 +38,7 @@ Public Class MyNewQueue
 
             Return
 
-        End Sub 'SendPublic
+        End Sub
 
 
         ' References private queues.
@@ -49,7 +49,7 @@ Public Class MyNewQueue
 
             Return
 
-        End Sub 'SendPrivate
+        End Sub
 
 
         ' References queues by label.
@@ -60,7 +60,7 @@ Public Class MyNewQueue
 
             Return
 
-        End Sub 'SendByLabel
+        End Sub
 
 
         ' References queues by format name.
@@ -73,7 +73,7 @@ Public Class MyNewQueue
 
             Return
 
-        End Sub 'SendByFormatName
+        End Sub
 
 
         ' References computer journal queues.
@@ -91,7 +91,7 @@ Public Class MyNewQueue
             End While
 
             Return
-        End Sub 'MonitorComputerJournal
+        End Sub
 
 
         ' References queue journal queues.
@@ -110,7 +110,7 @@ Public Class MyNewQueue
             End While
 
             Return
-        End Sub 'MonitorQueueJournal
+        End Sub
 
 
         ' References dead-letter queues.
@@ -127,7 +127,7 @@ Public Class MyNewQueue
 
             Return
 
-        End Sub 'MonitorDeadLetter
+        End Sub
 
 
         ' References transactional dead-letter queues.
@@ -146,8 +146,8 @@ Public Class MyNewQueue
 
             Return
 
-        End Sub 'MonitorTransactionalDeadLetter
+        End Sub
 
-End Class 'MyNewQueue 
+End Class
 
 ' </Snippet1>

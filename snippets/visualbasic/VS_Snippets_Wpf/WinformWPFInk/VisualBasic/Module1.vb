@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.IO
 Imports wpf = System.Windows
 Imports System.Windows.Input
@@ -28,7 +27,7 @@ Class WinformInk
     Public Sub New() 
         theInk = New Ink()
     
-    End Sub 'New
+    End Sub
      
     
     
@@ -42,7 +41,7 @@ Class WinformInk
         stroke1 = theInk.CreateStroke(points)
         stroke2 = theInk.CreateStroke(points)
     
-    End Sub 'CreateStrokes
+    End Sub
     
     
     Public Sub ReportStrokes() 
@@ -58,7 +57,7 @@ Class WinformInk
         
         Console.WriteLine()
     
-    End Sub 'ReportStrokes
+    End Sub
     
     
     ' Test method that proves the Stylus packet data is copied into a stroke.
@@ -70,7 +69,7 @@ Class WinformInk
         
         Console.ReadLine()
     
-    End Sub 'ChangeStylusPoints
+    End Sub
     
     
     Public Function SaveInk() As MemoryStream 
@@ -105,9 +104,9 @@ Class WinformInk
         theInk = New Ink()
         theInk.Load(savedInk.ToArray())
     
-    End Sub 'LoadInkInWinforms
+    End Sub
     '</SnippetLoadWinforms>
-End Class 'WinformInk 
+End Class
 
 
 Class WPFInk
@@ -116,7 +115,7 @@ Class WPFInk
     
     Public Sub New() 
     
-    End Sub 'New
+    End Sub
     
     
     Public Function SaveInk() As MemoryStream 
@@ -150,7 +149,7 @@ Class WPFInk
         
         ReportStrokes()
     
-    End Sub 'ChangeStylusPoints
+    End Sub
     
     
     '<SnippetSaveWPF>
@@ -179,7 +178,7 @@ Class WPFInk
     Public Sub LoadInkInWPF(ByVal inkStream As MemoryStream) 
         strokes = New StrokeCollection(inkStream)
     
-    End Sub 'LoadInkInWPF
+    End Sub
     
     '</SnippetLoadWPF>
     Sub CreateStrokes() 
@@ -193,7 +192,7 @@ Class WPFInk
         strokes.Add(stroke1)
         strokes.Add(stroke2)
     
-    End Sub 'CreateStrokes
+    End Sub
     
     
     Public Sub ReportStrokes() 
@@ -213,8 +212,8 @@ Class WPFInk
         Next stroke
         Console.WriteLine()
     
-    End Sub 'ReportStrokes
-End Class 'WPFInk
+    End Sub
+End Class
 
 
 Class Program
@@ -251,5 +250,5 @@ Class Program
         
         Console.ReadLine()
     
-    End Sub 'Main 
-End Class 'Program
+    End Sub
+End Class

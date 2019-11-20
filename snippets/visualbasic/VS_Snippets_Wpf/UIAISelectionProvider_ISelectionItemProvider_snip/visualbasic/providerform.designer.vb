@@ -1,5 +1,4 @@
-﻿Imports System
-Namespace CustomControls
+﻿Namespace CustomControls
 	Partial Public Class SampleApplicationForm
 		''' <summary>
 		''' Required designer variable.

@@ -1,7 +1,5 @@
 ﻿'<Snippet3>
 ' Example of the BitConverter.GetBytes( Single ) method.
-Imports Microsoft.VisualBasic
-
 Module GetBytesSingleDemo
 
     Const formatter As String = "{0,16:E7}{1,20}"

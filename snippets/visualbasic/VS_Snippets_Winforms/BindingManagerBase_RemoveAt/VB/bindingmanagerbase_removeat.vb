@@ -5,13 +5,11 @@
 ' the selected row from the 'DataGrid' control.
 '
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Windows.Forms
 Imports System.Data
-Imports Microsoft.VisualBasic
 
 Namespace WindowsApplication1
 
@@ -24,7 +22,7 @@ Namespace WindowsApplication1
       Public Sub New()
          InitializeComponent()
          MakeDataTableAndDisplay()
-      End Sub 'New
+      End Sub
       
       Private Sub InitializeComponent()
          dataGrid1 = New DataGrid()
@@ -52,11 +50,11 @@ Namespace WindowsApplication1
          [Text] = "Form1"
          CType(dataGrid1, ISupportInitialize).EndInit()
          ResumeLayout(False)
-      End Sub 'InitializeComponent
+      End Sub
        
       Shared Sub Main()
          Application.Run(New Form1())
-      End Sub 'Main
+      End Sub
       
       
 ' <Snippet1>
@@ -70,7 +68,7 @@ Namespace WindowsApplication1
             MessageBox.Show(ex.Source)
             MessageBox.Show(ex.Message)
          End Try
-      End Sub 'button1_Click
+      End Sub
       
 ' </Snippet1>
       Private Sub MakeDataTableAndDisplay()
@@ -105,6 +103,6 @@ Namespace WindowsApplication1
          Next i
          ' Attach the 'myDataTable' to the DataGrid.
          dataGrid1.DataSource = myDataTable
-      End Sub 'MakeDataTableAndDisplay
-   End Class 'Form1
+      End Sub
+   End Class
 End Namespace 'WindowsApplication1

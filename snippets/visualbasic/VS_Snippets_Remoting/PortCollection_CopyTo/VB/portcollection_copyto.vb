@@ -11,7 +11,6 @@
 
 Imports System.Web.Services.Description
 Imports System.Xml
-Imports Microsoft.VisualBasic
 
 Class PortCollection_3
    Public Shared Sub Main()
@@ -64,5 +63,5 @@ Class PortCollection_3
       Catch ex As Exception
          Console.WriteLine("Exception:" + ex.Message)
       End Try
-   End Sub 'Main
-End Class 'PortCollection_3
+   End Sub
+End Class

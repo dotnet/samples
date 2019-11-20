@@ -1,12 +1,11 @@
 ﻿' <Snippet1>
 Imports System.Reflection
 Imports System.IO
-Imports Microsoft.VisualBasic
 
 <DefaultMemberAttribute("Age")> Public Class [MyClass]
 
     Public Sub Name(ByVal s As String)
-    End Sub 'Name
+    End Sub
 
     Public ReadOnly Property Age() As Integer
         Get
@@ -33,6 +32,6 @@ Imports Microsoft.VisualBasic
         Catch e As Exception
             Console.WriteLine("Exception: " + e.Message)
         End Try
-    End Sub 'Main
-End Class '[MyClass]
+    End Sub
+End Class
 ' </Snippet1>

@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -26,7 +25,7 @@ Public Class Form1
         ' Required for Windows Form Designer support
         '
         InitializeComponent()
-    End Sub 'New
+    End Sub
     
 
     Private Sub InitializeComponent()
@@ -59,13 +58,13 @@ Public Class Form1
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
-    End Sub 'InitializeComponent
+    End Sub
 
    
     <STAThread()> _
     Shared Sub Main()
         Application.Run(New Form1())
-    End Sub 'Main
+    End Sub
 
 
 
@@ -99,4 +98,4 @@ Public Class Form1
         End Try
     End Sub
     '</Snippet1>
-End Class 'Form1 
+End Class

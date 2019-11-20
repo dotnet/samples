@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.ComponentModel
+﻿Imports System.ComponentModel
 Imports System.Diagnostics
 Imports System.Windows
 Imports System.Windows.Markup

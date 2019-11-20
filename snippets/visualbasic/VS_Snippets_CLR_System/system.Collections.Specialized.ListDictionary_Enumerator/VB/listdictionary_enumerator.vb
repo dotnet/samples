@@ -29,7 +29,7 @@ Public Class SamplesListDictionary
       Console.WriteLine("Displays the elements using the Keys, Values, Count, and Item properties:")
       PrintKeysAndValues3(myCol)
 
-   End Sub 'Main
+   End Sub
 
 
    ' Uses the For Each statement which hides the complexity of the enumerator.
@@ -43,7 +43,7 @@ Public Class SamplesListDictionary
       Next de
       Console.WriteLine()
 
-   End Sub 'PrintKeysAndValues
+   End Sub
 
 
    ' Uses the enumerator. 
@@ -57,7 +57,7 @@ Public Class SamplesListDictionary
       End While
       Console.WriteLine()
 
-   End Sub 'PrintKeysAndValues2
+   End Sub
 
 
    ' Uses the Keys, Values, Count, and Item properties.
@@ -72,9 +72,9 @@ Public Class SamplesListDictionary
       Next i
       Console.WriteLine()
 
-   End Sub 'PrintKeysAndValues3
+   End Sub
 
-End Class 'SamplesListDictionary 
+End Class
 
 
 'This code produces the following output.

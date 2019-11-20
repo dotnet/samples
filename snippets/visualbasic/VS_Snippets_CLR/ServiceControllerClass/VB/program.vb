@@ -91,8 +91,8 @@ Class Program
             End If
         Next scTemp
 
-    End Sub 'Main 
-End Class 'Program
+    End Sub
+End Class
 ' This sample displays the following output if the Simple Service
 ' sample is running:
 'Status = Running

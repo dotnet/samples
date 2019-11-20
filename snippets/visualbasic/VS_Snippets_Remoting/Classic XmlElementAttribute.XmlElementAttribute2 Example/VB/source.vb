@@ -4,8 +4,6 @@ Option Explicit
 
 Imports System.IO
 Imports System.Xml.Serialization
-Imports Microsoft.VisualBasic
-
 
 Public Class Orchestra
     Public Instruments() As Instrument
@@ -26,7 +24,7 @@ Public Class Run
         Dim test As New Run()
         test.SerializeObject("Override.xml")
         test.DeserializeObject("Override.xml")
-    End Sub 'Main
+    End Sub
     
     
     Public Sub SerializeObject(filename As String)

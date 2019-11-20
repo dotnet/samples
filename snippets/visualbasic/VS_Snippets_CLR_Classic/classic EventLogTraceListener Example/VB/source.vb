@@ -24,6 +24,6 @@ Public Class Form1
         
         ' Write output to the event log.
         Trace.WriteLine("Test output")
-    End Sub 'Main
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

@@ -11,13 +11,13 @@ Namespace Samples.AspNet.VB
     Public Sub New() 
         MyClass.New(DateTime.Now)
     
-    End Sub 'New
+    End Sub
     
     
     Public Sub New(ByVal creationTime As DateTime) 
         _creationTime = creationTime
     
-    End Sub 'New
+    End Sub
     
     Private _creationTime As DateTime
     
@@ -32,6 +32,6 @@ Namespace Samples.AspNet.VB
         Return al
     
     End Function 'GetCreateTime
-  End Class 'EmployeeLogic
+  End Class
 End Namespace ' Samples.AspNet.VB
 ' </snippet2>

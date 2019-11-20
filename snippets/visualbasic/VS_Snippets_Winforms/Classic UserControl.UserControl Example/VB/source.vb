@@ -1,9 +1,7 @@
 ﻿' <Snippet1>
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 Imports System.ComponentModel
-Imports Microsoft.VisualBasic
 Imports UserControls
 
 Namespace MyApplication    

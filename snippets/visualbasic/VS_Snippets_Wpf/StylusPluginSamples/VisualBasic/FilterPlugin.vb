@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Controls.Primitives
@@ -29,7 +28,7 @@ Public Class StrokeRenderedEventArgs
 
         currentStrokePoints = points
 
-    End Sub 'New
+    End Sub
 
 
     Public ReadOnly Property StrokePoints() As StylusPointCollection
@@ -37,7 +36,7 @@ Public Class StrokeRenderedEventArgs
             Return currentStrokePoints
         End Get
     End Property
-End Class 'StrokeRenderedEventArgs
+End Class
 
 ' EventHandler for the StrokeRendered event.
 Public Delegate Sub StrokeRenderedEventHandler(ByVal sender As Object, ByVal e As StrokeRenderedEventArgs) 
@@ -75,7 +74,7 @@ Class FilterPlugin
 
         End If
 
-    End Sub 'OnStylusDown
+    End Sub
 
 
     Protected Overrides Sub OnStylusMove(ByVal rawStylusInput As RawStylusInput)
@@ -95,7 +94,7 @@ Class FilterPlugin
 
         End If
 
-    End Sub 'OnStylusMove
+    End Sub
 
     Protected Overrides Sub OnStylusUp(ByVal rawStylusInput As RawStylusInput)
 
@@ -120,7 +119,7 @@ Class FilterPlugin
 
         End If
 
-    End Sub 'OnStylusUp
+    End Sub
 
 
     Private Function FilterPackets(ByVal stylusPoints As StylusPointCollection) As StylusPointCollection
@@ -179,14 +178,14 @@ Class FilterPlugin
             OnStrokeRendered(e)
         End If
 
-    End Sub 'OnStylusUpProcessed
+    End Sub
 
 
     Protected Overridable Sub OnStrokeRendered(ByVal e As StrokeRenderedEventArgs)
 
         RaiseEvent StrokeRendered(Me, e)
 
-    End Sub 'OnStrokeRendered
+    End Sub
 
     Public Sub RecordPoints(ByVal points As StylusPointCollection, ByVal name As String)
 
@@ -195,7 +194,7 @@ Class FilterPlugin
             System.Diagnostics.Debug.WriteLine("   x: " & point.X & " y: " & point.Y)
         Next
     End Sub
-End Class 'FilterPlugin
+End Class
 ' </Snippet1>
 
 Class PacketTracer
@@ -213,7 +212,7 @@ Class PacketTracer
             Debug.WriteLine("  name = " + GetStylusPointPropertyName(aProperty))
         Next aProperty
      
-    End Sub 'WriteDescriptionInfo
+    End Sub
 
     ' Use reflection to get the name of currentProperty.
     Private Shared Function GetStylusPointPropertyName(ByVal currentProperty As StylusPointProperty) As String 
@@ -231,7 +230,7 @@ Class PacketTracer
         Return "Not found"
     
     End Function 'GetStylusPointPropertyName
-End Class 'PacketTracer 
+End Class
 
 
 Class CustomPluginSamples
@@ -275,7 +274,7 @@ Class CustomPluginSamples
         ' Copy the modified StylusPoints back to the RawStylusInput
         rawStylusInput.SetStylusPoints(stylusPoints)
     
-    End Sub 'OnStylusDown
+    End Sub
     '</Snippet8>
 
     '<Snippet9>
@@ -317,7 +316,7 @@ Class CustomPluginSamples
         ' Copy the modified StylusPoints back to the RawStylusInput.
         rawStylusInput.SetStylusPoints(stylusPoints)
     
-    End Sub 'OnStylusMove
+    End Sub
     '</Snippet9>
 
     '<Snippet10>
@@ -360,6 +359,6 @@ Class CustomPluginSamples
         ' Copy the modified StylusPoints back to the RawStylusInput.
         rawStylusInput.SetStylusPoints(stylusPoints)
     
-    End Sub 'OnStylusUp
+    End Sub
     '</Snippet10>
-End Class 'CustomPluginSamples 
+End Class

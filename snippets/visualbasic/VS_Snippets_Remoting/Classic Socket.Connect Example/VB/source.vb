@@ -33,7 +33,7 @@ Public Class Sample
         
         Console.WriteLine("Connected: {0}", client.Connected)
     
-    End Sub 'ConnectAndCheck
+    End Sub
      ' </Snippet1>
     
     <STAThread()>  _
@@ -48,5 +48,5 @@ Public Class Sample
         
         ConnectAndCheck(s, EPHost)
     
-    End Sub 'Main
-End Class 'Sample
+    End Sub
+End Class

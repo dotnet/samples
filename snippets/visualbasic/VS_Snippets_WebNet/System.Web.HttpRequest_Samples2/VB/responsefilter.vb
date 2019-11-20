@@ -15,7 +15,7 @@ Namespace Samples.AspNet.VB.Controls
 
         Public Sub New(ByVal sink As Stream)
             strSink = sink
-        End Sub 'New
+        End Sub
 
         ' The following members of Stream must be overriden.  
         Public Overrides ReadOnly Property CanRead() As Boolean
@@ -59,17 +59,17 @@ Namespace Samples.AspNet.VB.Controls
 
         Public Overrides Sub SetLength(ByVal length As Long)
             strSink.SetLength(length)
-        End Sub 'SetLength
+        End Sub
 
 
         Public Overrides Sub Close()
             strSink.Close()
-        End Sub 'Close
+        End Sub
 
 
         Public Overrides Sub Flush()
             strSink.Flush()
-        End Sub 'Flush
+        End Sub
 
 
         Public Overrides Function Read( _
@@ -88,9 +88,9 @@ Namespace Samples.AspNet.VB.Controls
             data = Encoding.ASCII.GetBytes(InputString)
             strSink.Write(data, 0, count)
 
-        End Sub 'Write 
+        End Sub
 
-    End Class 'UpperCaseFilter
+    End Class
 
 End Namespace
 ' </snippet2>

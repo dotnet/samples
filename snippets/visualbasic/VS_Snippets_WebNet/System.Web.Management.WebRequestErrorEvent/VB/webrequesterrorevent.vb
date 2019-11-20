@@ -30,7 +30,7 @@ Public Class SampleWebRequestErrorEvent
         eventInfo.Append(String.Format( _
         "Event created at: ", _
         EventTime.ToString()))
-    End Sub 'New
+    End Sub
    
    ' </Snippet2>
    
@@ -50,7 +50,7 @@ Public Class SampleWebRequestErrorEvent
         eventInfo.Append(String.Format( _
         "Event created at: ", _
         EventTime.ToString()))
-    End Sub 'New
+    End Sub
    
    
    ' </Snippet3>
@@ -63,7 +63,7 @@ Public Class SampleWebRequestErrorEvent
         EventTime.ToString()))
       ' Raise the event.
       MyBase.Raise()
-   End Sub 'Raise
+   End Sub
    
    ' </Snippet4>
    ' <Snippet5>
@@ -112,10 +112,10 @@ Public Class SampleWebRequestErrorEvent
         formatter.AppendLine( _
         "** SampleWebRequestEvent End **")
 
-    End Sub 'FormatCustomEventDetails
+    End Sub
     ' </Snippet8>
 
-End Class 'SampleWebRequestErrorEvent 
+End Class
 
 
 ' </Snippet1>

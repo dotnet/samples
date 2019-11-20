@@ -10,7 +10,7 @@ Namespace Microsoft.WCF.Documentation
     Shared Sub Main()
       Dim app As New HostApplication()
       app.Run()
-    End Sub 'Main
+    End Sub
 
     Private Sub Run()
       ' Create a ServiceHost for the service type and use the base address from configuration.
@@ -37,6 +37,6 @@ Namespace Microsoft.WCF.Documentation
           serviceHost.Close()
         End Try
       End Using
-    End Sub 'Run
-  End Class 'HostApplication
+    End Sub
+  End Class
 End Namespace

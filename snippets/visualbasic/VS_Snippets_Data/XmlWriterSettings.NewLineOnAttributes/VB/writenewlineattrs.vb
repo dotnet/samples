@@ -1,35 +1,35 @@
 ﻿Imports System.IO
 Imports System.Xml
 
-Public class Sample 
+Public Class Sample 
 
-  public shared sub Main() 
+    Public Shared Sub Main() 
   
-    Dim writer as XmlWriter = Nothing
+        Dim writer As XmlWriter = Nothing
 
-    try 
-'<snippet1>
-Dim settings As XmlWriterSettings = New XmlWriterSettings()
-settings.Indent = true
-settings.OmitXmlDeclaration = true
-settings.NewLineOnAttributes = true
+        Try 
+            '<snippet1>
+            Dim settings As New XmlWriterSettings()
+            settings.Indent = True
+            settings.OmitXmlDeclaration = True
+            settings.NewLineOnAttributes = True
        
-writer = XmlWriter.Create(Console.Out, settings)
+            writer = XmlWriter.Create(Console.Out, settings)
 
-writer.WriteStartElement("order")
-writer.WriteAttributeString("orderID", "367A54")
-writer.WriteAttributeString("date", "2001-05-03")
-writer.WriteElementString("price", "19.95")
-writer.WriteEndElement()
+            writer.WriteStartElement("order")
+            writer.WriteAttributeString("orderID", "367A54")
+            writer.WriteAttributeString("date", "2001-05-03")
+            writer.WriteElementString("price", "19.95")
+            writer.WriteEndElement()
 	
-writer.Flush()
-'</snippet1>
+            writer.Flush()
+            '</snippet1>
      
-      Finally
-         If Not (writer Is Nothing) Then
-            writer.Close()
-         End If
-      End Try
+        Finally
+           If writer IsNot Nothing Then
+                writer.Close()
+           End If
+        End Try
 
-   End Sub 
+    End Sub 
 End Class 

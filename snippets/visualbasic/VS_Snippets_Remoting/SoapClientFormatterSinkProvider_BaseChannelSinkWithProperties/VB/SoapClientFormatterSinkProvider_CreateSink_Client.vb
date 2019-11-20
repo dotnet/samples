@@ -29,5 +29,5 @@ Public Class ClientClass
       Catch ex As Exception
          Console.WriteLine("The following exception is raised at client side" + ex.Message)
       End Try
-   End Sub 'Main
-End Class 'ClientClass
+   End Sub
+End Class

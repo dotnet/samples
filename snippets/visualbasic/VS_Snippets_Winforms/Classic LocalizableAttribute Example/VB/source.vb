@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.ComponentModel
+﻿Imports System.ComponentModel
 
 
 Public Class Class1
@@ -27,5 +26,5 @@ Public Class Class1
              ' Insert code here.
         End If
         ' </Snippet2>
-    End Sub 'Method1
-End Class 'Class1 
+    End Sub
+End Class

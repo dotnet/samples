@@ -14,7 +14,7 @@ Class Library
         Dim fileName As String = name
         Dim version As String = String.Empty
 
-    End Sub 'FileNode
+    End Sub
     '</Snippet2>
-End Class 'Library 
+End Class
 '</Snippet1>

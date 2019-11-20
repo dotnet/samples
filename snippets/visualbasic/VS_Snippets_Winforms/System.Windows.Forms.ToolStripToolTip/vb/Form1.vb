@@ -1,5 +1,4 @@
 ﻿ '<snippet1>
-Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
 Imports System.Data
@@ -16,13 +15,13 @@ Public Class Form1
    
    Public Sub New()
       InitializeComponent()
-   End Sub 'New
+   End Sub
    
    <STAThread()>  _
    Shared Sub Main()
       Application.EnableVisualStyles()
       Application.Run(New Form1())
-   End Sub 'Main
+   End Sub
    
    
    Private Sub InitializeComponent()
@@ -55,6 +54,6 @@ Public Class Form1
       Me.toolStrip1.ResumeLayout(False)
       Me.ResumeLayout(False)
       Me.PerformLayout()
-   End Sub 'InitializeComponent 
-End Class 'Form1
+   End Sub
+End Class
 '</snippet1>

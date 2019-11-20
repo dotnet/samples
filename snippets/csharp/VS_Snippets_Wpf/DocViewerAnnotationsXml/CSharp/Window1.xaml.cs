@@ -216,7 +216,8 @@ namespace SDKSample
                 {
                     Stream inputPackageStream = webResponse.GetResponseStream();
                     if (inputPackageStream != null)
-                    {   // Retreive the Package from that stream.
+                    {
+                        // Retrieve the Package from that stream.
                         inputPackage = Package.Open(inputPackageStream);
                     }
                 }

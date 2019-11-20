@@ -6,10 +6,10 @@ Imports System.Runtime.InteropServices
 Public Delegate Function CallBack(
     ByVal handle As Integer, ByVal param As IntPtr) As Boolean
 
-Public Class LibWrap
+Friend Class NativeMethods
     ' Passes a managed object instead of an LPARAM.
     ' Declares a managed prototype for the unmanaged function.
-    Declare Function EnumWindows Lib "user32.dll" (
+    Friend Declare Function EnumWindows Lib "user32.dll" (
         ByVal cb As CallBack, ByVal param As IntPtr) As Boolean
 End Class
 '</snippet40>
@@ -24,7 +24,7 @@ Public Class App
         ' before the call ends.
         Dim cewp As CallBack
         cewp = AddressOf App.CaptureEnumWindowsProc
-        LibWrap.EnumWindows(cewp, GCHandle.op_Explicit(gch))
+        NativeMethods.EnumWindows(cewp, GCHandle.op_Explicit(gch))
         gch.Free()
     End Sub
 

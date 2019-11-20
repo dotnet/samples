@@ -7,7 +7,6 @@
 ' button it changes the GridLineColor to 'blue'. If the user clicks the 
 ' 'Reset GridLineColor' button it changes the GridLineColor to  default color.
 
-Imports System
 Imports System.ComponentModel
 Imports System.Data
 Imports System.Drawing
@@ -28,7 +27,7 @@ Public Class Form1
       MakeDataSet()
       myDataGrid.SetDataBinding(myDataSet, "Customers")
       AddCustomDataTableStyle()
-   End Sub 'New
+   End Sub
    
    
    Private Sub InitializeComponent()
@@ -58,24 +57,24 @@ Public Class Form1
       Me.Controls.Add(myButton)
       Me.Controls.Add(myDataGrid)
       Me.Controls.Add(myButton1)
-   End Sub 'InitializeComponent
+   End Sub
    
    
    Public Shared Sub Main()
       Application.Run(New Form1())
-   End Sub 'Main
+   End Sub
    
    
 ' <Snippet1>
     Private Sub Button_Click(ByVal sender As Object, ByVal e As EventArgs) Handles myButton.Click
         ' Change the 'GridLineColor'.
         myDataTableStyle.GridLineColor = Color.Blue
-    End Sub 'Button_Click
+    End Sub
    
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles myButton1.Click
         ' Reset the 'GridLineColor' to its orginal color.
         myDataTableStyle.ResetGridLineColor()
-    End Sub 'Button1_Click
+    End Sub
 ' </Snippet1>
    
    Private Sub AddCustomDataTableStyle()
@@ -92,7 +91,7 @@ Public Class Form1
       myDataTableStyle.GridColumnStyles.Add(myDataGridColumnStyle)
       ' Add the 'DataGridTableStyle' to 'DataGrid'.
       myDataGrid.TableStyles.Add(myDataTableStyle)
-   End Sub 'AddCustomDataTableStyle
+   End Sub
    
    
    ' Create a DataSet with two tables and populate it.
@@ -117,5 +116,5 @@ Public Class Form1
       myTable.Rows(2)("CustName") = "David"
       myTable.Rows(3)("CustName") = "Robert"
       myTable.Rows(4)("CustName") = "John"
-   End Sub 'MakeDataSet
-End Class 'Form1
+   End Sub
+End Class

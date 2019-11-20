@@ -26,12 +26,12 @@ Namespace CustomLiteralControl
       Private myControlCollection As ControlCollection
       
       Public Sub New()
-      End Sub 'New
+      End Sub
       
       Public Sub New(text As String)
          MyBase.New(text)
          _text = text
-      End Sub 'New
+      End Sub
 ' <Snippet1>
       
       Public Overrides Property Text() As String
@@ -82,7 +82,7 @@ Namespace CustomLiteralControl
          Next i
          builder += "</h3>"
          writer.Write(builder)
-      End Sub 'Render
+      End Sub
 ' </Snippet3>
-   End Class 'CustomLiteralControlClass 
+   End Class
 End Namespace 'CustomLiteralControl

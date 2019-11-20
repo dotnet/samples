@@ -18,6 +18,6 @@ Public Class Sample
         Console.WriteLine("Name of the attribute:  {0}", attr.Name)
         Console.WriteLine("Base URI of the attribute:  {0}", attr.BaseURI)
         Console.WriteLine("The value of the attribute:  {0}", attr.InnerText)
-    End Sub 'Main 
-End Class 'Sample
+    End Sub
+End Class
 ' </Snippet1>

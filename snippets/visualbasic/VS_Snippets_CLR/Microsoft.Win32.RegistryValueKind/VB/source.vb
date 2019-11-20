@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 Imports Microsoft.Win32
-Imports Microsoft.VisualBasic
 
 Public Class Example
     Public Shared Sub Main()
@@ -55,8 +54,8 @@ Public Class Example
                     Console.WriteLine(vbCrLf & " {0} ({1}) = {2}", s, rvk, rk.GetValue(s))
             End Select
         Next s
-    End Sub 'Main
-End Class 'Example
+    End Sub
+End Class
 
 '
 'This code example produces the following output (some output is omitted):

@@ -1,6 +1,5 @@
 ﻿' <SnippetSeekStoryboardExampleWholePage>
 
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Media
@@ -34,7 +33,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			' registering it with the page, so that
 			' it can be targeted by storyboard
 			' animations.
-			Me.RegisterName("myRectangle", myRectangle)
+			RegisterName("myRectangle", myRectangle)
 
 			'
 			' Create an animation and a storyboard to animate the
@@ -64,7 +63,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			buttonPanel.Children.Add(seekStoryboardButton)
 
 			myStackPanel.Children.Add(buttonPanel)
-			Me.Content = myStackPanel
+			Content = myStackPanel
 		End Sub
 
         ' Begins the storyboard.

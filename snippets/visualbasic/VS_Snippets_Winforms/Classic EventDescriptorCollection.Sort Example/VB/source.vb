@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.ComponentModel
 Imports System.Windows.Forms
 
@@ -12,11 +11,11 @@ MustInherit Public Class Coll1
     
     Public Sub New()
         MyBase.New(Nothing)
-    End Sub 'New
+    End Sub
      
     Protected Sub Method()
         ' <Snippet1>
         myNewColl = Me.Sort(New String() {"D", "B"})
         ' </Snippet1>
-    End Sub 'Method 
-End Class 'Coll1
+    End Sub
+End Class

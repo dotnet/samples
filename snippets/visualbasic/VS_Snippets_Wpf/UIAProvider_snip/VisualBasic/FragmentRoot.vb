@@ -22,7 +22,6 @@
 ' * 
 ' ************************************************************************************************
 
-Imports System
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.Windows.Automation.Provider
@@ -71,7 +70,7 @@ Public Class RootButton
         ' Add MouseDown event handler.
         AddHandler Me.MouseDown, AddressOf Me.RootButtonControl_MouseDown
 
-    End Sub 'New
+    End Sub
 
 
 
@@ -93,7 +92,7 @@ Public Class RootButton
         End If
         MyBase.WndProc(m)
 
-    End Sub 'WndProc
+    End Sub
 
 
     ''' <summary>
@@ -104,7 +103,7 @@ Public Class RootButton
         Dim brush As New SolidBrush(myColor)
         e.Graphics.FillRectangle(brush, DisplayRectangle)
 
-    End Sub 'OnPaint
+    End Sub
 
     ''' <summary>
     ''' Handles MouseDown event.
@@ -115,7 +114,7 @@ Public Class RootButton
         ByVal e As MouseEventArgs)
         OnCustomButtonClicked()
         Return
-    End Sub 'RootButtonControl_MouseDown
+    End Sub
 
     '' <Snippet150>
     ''' <summary>
@@ -251,7 +250,7 @@ Public Class RootButton
         '  TODO  See spec for requirements
         Throw New Exception("The method or operation is not implemented.")
 
-    End Sub 'IRawElementProviderFragment.SetFocus
+    End Sub
 
 #End Region
 
@@ -274,5 +273,5 @@ Public Class RootButton
     End Function 'IRawElementProviderFragmentRoot.GetFocus
 
 #End Region
-End Class 'RootButton 
+End Class
 

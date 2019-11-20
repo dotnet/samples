@@ -73,7 +73,7 @@ Namespace Samples.AspNet.VB
             writer.Indent -= 1
             writer.RenderEndTag()
 
-        End Sub 'Render
+        End Sub
         ' </snippet1>
     End Class
 End Namespace

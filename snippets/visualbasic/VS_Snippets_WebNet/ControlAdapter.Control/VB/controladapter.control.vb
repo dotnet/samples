@@ -8,7 +8,7 @@ Public Class CustomControl
 
     ' Add your custom control code.
 
-End Class 'CustomControl
+End Class
 
 Public Class CustomControlAdapter
     Inherits ControlAdapter
@@ -22,7 +22,7 @@ Public Class CustomControlAdapter
 
     ' Override other ControlAdapter member as necessary. 
 
-End Class 'CustomControlAdapter 
+End Class
 ' </snippet1>
 
 Module MainMod

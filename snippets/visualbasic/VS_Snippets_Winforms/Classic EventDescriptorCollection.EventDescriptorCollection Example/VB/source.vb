@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.ComponentModel
 Imports System.Windows.Forms
 
@@ -15,5 +14,5 @@ Public Class Form1
         ' <Snippet1>
         Dim events As EventDescriptorCollection = TypeDescriptor.GetEvents(button1)
         ' </Snippet1>
-    End Sub 'Method 
-End Class 'Form1 
+    End Sub
+End Class

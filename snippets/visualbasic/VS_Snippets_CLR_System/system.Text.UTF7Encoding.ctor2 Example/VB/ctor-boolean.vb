@@ -31,7 +31,7 @@ Class UTF7EncodingExample
         ' Convert back to characters.
         Console.WriteLine("Characters:")
         ShowArray(utf7AllowOptionals.GetChars(bytes2))
-    End Sub 'Main
+    End Sub
     
     
     Public Shared Sub ShowArray(theArray As Array)
@@ -40,7 +40,7 @@ Class UTF7EncodingExample
             Console.Write("[{0}]", o)
         Next o
         Console.WriteLine()
-    End Sub 'ShowArray
-End Class 'UTF7EncodingExample
+    End Sub
+End Class
 
 ' </Snippet1>

@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.ComponentModel
+﻿Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Windows.Forms
 
@@ -10,7 +9,7 @@ Namespace SetBoundsCore
       
       Public Sub New()
          InitializeComponent()
-      End Sub 'New
+      End Sub
       
       Private Sub InitializeComponent()
          ' 
@@ -19,7 +18,7 @@ Namespace SetBoundsCore
          Me.BackColor = System.Drawing.SystemColors.Desktop
          Me.Name = "MyUserControl"
          Me.Size = New System.Drawing.Size(224, 88)
-      End Sub 'InitializeComponent
+      End Sub
        
 
 ' <snippet1>
@@ -64,5 +63,5 @@ End Sub
 ' </snippet3>
 
 
-   End Class 'MyUserControl 
+   End Class
 End Namespace 'SetBoundsCore

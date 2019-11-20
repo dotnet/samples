@@ -42,7 +42,7 @@ Public Class HMACSHA384example
             Console.WriteLine("Error: File not found", e)
         End Try
 
-    End Sub 'Main
+    End Sub
 
     ' Computes a keyed hash for a source file and creates a target file with the keyed hash
     ' prepended to the contents of the source file. 
@@ -71,7 +71,7 @@ Public Class HMACSHA384example
         End Using
         Return
 
-    End Sub 'SignFile
+    End Sub
     ' end SignFile
 
     ' Compares the key in the source file with a new key created for the data portion of the file. If the keys 
@@ -81,7 +81,7 @@ Public Class HMACSHA384example
         ' Initialize the keyed hash object. 
         Using hmac As New HMACSHA384(key)
             ' Create an array to hold the keyed hash value read from the file.
-            Dim storedHash(hmac.HashSize / 8) As Byte
+            Dim storedHash(hmac.HashSize / 8 - 1) As Byte
             ' Create a FileStream for the source file.
             Using inStream As New FileStream(sourceFile, FileMode.Open)
                 ' Read in the storedHash.
@@ -108,6 +108,6 @@ Public Class HMACSHA384example
         End If
 
     End Function 'VerifyFile 
-End Class 'HMACSHA384example 'end VerifyFile
+End Class
 'end class
 '</SNIPPET1>

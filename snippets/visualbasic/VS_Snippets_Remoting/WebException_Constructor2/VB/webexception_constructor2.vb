@@ -12,8 +12,6 @@
 Imports System.Net
 Imports System.Net.Sockets
 Imports System.Text
-Imports Microsoft.VisualBasic
-
 
 Class HttpConnect
 Public shared Sub Main()
@@ -25,7 +23,7 @@ Public shared Sub Main()
         Catch e As WebException
             Console.WriteLine((ControlChars.Cr + "The New Message is:" + e.Message))
         End Try
-    End Sub ' Main
+    End Sub
     
 
     Public Sub ConnectHttpServer(connectUri As [String])
@@ -52,5 +50,5 @@ Public shared Sub Main()
         End Try
 ' </Snippet1>
 
-    End Sub ' ConnectHttpServer
-End Class ' HttpConnect 
+    End Sub
+End Class

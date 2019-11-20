@@ -11,7 +11,6 @@
 ' instance of 'Graphics' class is obtained by calling 'CreateGraphics' method and draws an
 ' ellipse inside the 'TextBox' control.
 
-Imports System
 Imports System.Drawing
 Imports System.ComponentModel
 Imports System.Windows.Forms
@@ -29,7 +28,7 @@ Namespace MyApplication
          InitializeComponent()
          AddClickHandler()
          AddContextMenuChangedHandler()
-      End Sub 'New
+      End Sub
       
       Protected Overrides Overloads Sub Dispose(disposing As Boolean)
          If disposing Then
@@ -38,7 +37,7 @@ Namespace MyApplication
             End If
          End If
          MyBase.Dispose(disposing)
-      End Sub 'Dispose
+      End Sub
       
       Private Sub InitializeComponent()
          Me.myButton = New System.Windows.Forms.Button()
@@ -80,36 +79,36 @@ Namespace MyApplication
          Me.Name = "MyForm"
          Me.Text = "ContextMenu Example"
          Me.ResumeLayout(False)
-      End Sub 'InitializeComponent
+      End Sub
        
 ' <Snippet1>
       Private Sub AddClickHandler()
          AddHandler Me.myTextBox.Click, AddressOf TextBox_Click
-      End Sub 'AddClickHandler
+      End Sub
       
       Private Sub TextBox_Click(sender As Object, e As EventArgs)
          Dim myMenuItems(1) As MenuItem
          myMenuItems(0) = New MenuItem("New", New EventHandler(AddressOf MenuItem_New))
          myMenuItems(1) = New MenuItem("Open", New EventHandler(AddressOf MenuItem_Open))
          Me.myTextBox.ContextMenu = New ContextMenu(myMenuItems)
-      End Sub 'TextBox_Click
+      End Sub
       
       Private Sub MenuItem_New(sender As Object, e As EventArgs)
          MessageBox.Show("New MenuItem is selected from TextBox's shortcut menu.")
-      End Sub 'MenuItem_New
+      End Sub
       
       Private Sub MenuItem_Open(sender As Object, e As EventArgs)
          MessageBox.Show("Open MenuItem is selected from TextBox's shortcut menu.")
-      End Sub 'MenuItem_Open
+      End Sub
 ' </Snippet1>
 ' <Snippet2>
       Private Sub AddContextMenuChangedHandler()
          AddHandler Me.myTextBox.ContextMenuChanged, AddressOf TextBox_ContextMenuChanged
-      End Sub 'AddContextMenuChangedHandler
+      End Sub
 
       Private Sub TextBox_ContextMenuChanged(sender As Object, e As EventArgs)
          MessageBox.Show("Shortcut menu of TextBox is changed.")
-      End Sub 'TextBox_ContextMenuChanged
+      End Sub
 
 ' </Snippet2>
       Private Sub CreateGraphicsButton_Click(sender As Object, e As System.EventArgs) Handles myButton.Click
@@ -120,11 +119,11 @@ Namespace MyApplication
          myGraphics.FillEllipse(Brushes.Goldenrod, 0F, 0F, 230F, 105F)
 ' </Snippet3>
       
-      End Sub 'CreateGraphicsButton_Click
+      End Sub
 
    <STAThread()>  _
       Shared Sub Main()
          Application.Run(New MyForm())
-      End Sub 'Main
-   End Class 'MyForm
+      End Sub
+   End Class
 End Namespace 'MyApplication

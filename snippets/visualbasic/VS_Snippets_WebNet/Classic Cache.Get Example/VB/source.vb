@@ -12,5 +12,5 @@ Public Class Page1
         ' <Snippet1>
         Cache.Get("MyTextBox.Value")
         ' </Snippet1>
-    End Sub 'Page_Load 
-End Class 'Page1
+    End Sub
+End Class

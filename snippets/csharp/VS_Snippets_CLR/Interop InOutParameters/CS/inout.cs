@@ -13,17 +13,16 @@ public class OpenFileName
     // ...
 }
 
-public class LibWrap
+internal static class NativeMethods
 {
     // Declare a managed prototype for the unmanaged function.
     [DllImport("Comdlg32.dll", CharSet = CharSet.Unicode)]
-    public static extern bool GetOpenFileName([In, Out] OpenFileName ofn);
+    internal static extern bool GetOpenFileName([In, Out] OpenFileName ofn);
 }
 
 public class MainMethod
 {
     static void Main()
     { }
-
 }
 // </Snippet1>

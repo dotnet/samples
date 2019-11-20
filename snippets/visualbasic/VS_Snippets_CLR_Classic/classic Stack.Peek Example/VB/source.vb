@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Collections
-Imports Microsoft.VisualBasic
 
 Public Class SamplesStack    
 
@@ -49,9 +48,9 @@ Public Class SamplesStack
             Console.Write("{0}{1}", mySeparator, obj)
         Next obj
         Console.WriteLine()
-    End Sub 'PrintValues
+    End Sub
 
-End Class 'SamplesStack
+End Class
 
 
 ' This code produces the following output.

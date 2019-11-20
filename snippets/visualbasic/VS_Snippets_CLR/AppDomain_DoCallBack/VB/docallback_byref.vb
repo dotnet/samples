@@ -18,7 +18,7 @@ Public Class PingPong
         ' Output:
         '   PING! from default domain
         '   PONG! from default domain
-     End Sub 'Main
+     End Sub
 
     ' Callback will always execute within defaultDomain due to inheritance from
     ' MarshalByRefObject
@@ -28,7 +28,7 @@ Public Class PingPong
             name = "defaultDomain"
         End If
         Console.WriteLine((greetings + " from " + name))
-    End Sub 'MyCallBack
+    End Sub
 
-End Class 'PingPong
+End Class
 ' </Snippet3>

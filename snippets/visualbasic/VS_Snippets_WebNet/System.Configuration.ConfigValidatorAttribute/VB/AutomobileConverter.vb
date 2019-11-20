@@ -105,6 +105,6 @@ NotInheritable Public Class AutomobileConverter
         Return selectedCar
 
     End Function 'ConvertFrom
-End Class 'AutomobileConverter 
+End Class
 
 ' </Snippet1>

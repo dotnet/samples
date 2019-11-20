@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Windows.Forms
+﻿Imports System.Windows.Forms
 
 
 
@@ -22,12 +21,12 @@ Public Class Form1
         ' Uncomment the next line to refresh the CurrencyManager.
         ' RefreshGrid(myArray);
 
-    End Sub 'DemonstrateRefresh
+    End Sub
 
     Private Sub RefreshGrid(dataSource As Object)
         Dim myCurrencyManager As CurrencyManager = CType(Me.BindingContext(dataSource), CurrencyManager)
         myCurrencyManager.Refresh()
-    End Sub 'RefreshGrid
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

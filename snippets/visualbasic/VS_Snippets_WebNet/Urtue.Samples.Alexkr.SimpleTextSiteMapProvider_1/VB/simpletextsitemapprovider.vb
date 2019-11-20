@@ -22,7 +22,7 @@ Namespace Samples.AspNet.VB
     ' A default constructor. The Name property is initialized in the
     ' Initialize method.
     Public Sub New()
-    End Sub 'New
+    End Sub
 
     ' <Snippet2>
     ' Implement the CurrentNode property.
@@ -150,7 +150,7 @@ Namespace Samples.AspNet.VB
         ' Build the site map in memory.
         LoadSiteMapFromStore()
       End SyncLock
-    End Sub 'Initialize
+    End Sub
 
     ' </Snippet7>
     ' Private helper methods
@@ -255,8 +255,8 @@ Namespace Samples.AspNet.VB
         End If
       End SyncLock
       Return
-    End Sub 'LoadSiteMapFromStore
-  End Class 'SimpleTextSiteMapProvider
+    End Sub
+  End Class
   ' </Snippet9>
 End Namespace
 ' </Snippet1>

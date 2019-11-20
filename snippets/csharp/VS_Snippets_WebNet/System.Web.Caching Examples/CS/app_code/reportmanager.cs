@@ -12,10 +12,7 @@ public static class ReportManager
     public static String GetReport()
     {
         string report = HttpRuntime.Cache["MyReport"] as string;
-        if (report == null)
-        {
-            report = GenerateAndCacheReport();
-        }
+        report ??= GenerateAndCacheReport();
         return report;
     }
 

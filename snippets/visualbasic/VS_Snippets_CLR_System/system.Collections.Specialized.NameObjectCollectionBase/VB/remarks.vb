@@ -7,7 +7,7 @@ Public Class DerivedCollection
 
    ' Creates an empty collection.
    Public Sub New()
-   End Sub 'New
+   End Sub
 
    ' Adds elements from an IDictionary into the new collection.
    Public Sub New(d As IDictionary, bReadOnly As Boolean)
@@ -16,7 +16,7 @@ Public Class DerivedCollection
          Me.BaseAdd(CType(de.Key, String), de.Value)
       Next de
       Me.IsReadOnly = bReadOnly
-   End Sub 'New
+   End Sub
 
    ' Gets a key-and-value pair (DictionaryEntry) using an index.
    Default Public ReadOnly Property Item(index As Integer) As DictionaryEntry
@@ -67,24 +67,24 @@ Public Class DerivedCollection
    ' Adds an entry to the collection.
    Public Sub Add(key As String, value As Object)
       Me.BaseAdd(key, value)
-   End Sub 'Add
+   End Sub
 
    ' Removes an entry with the specified key from the collection.
    Overloads Public Sub Remove(key As String)
       Me.BaseRemove(key)
-   End Sub 'Remove
+   End Sub
 
    ' Removes an entry in the specified index from the collection.
    Overloads Public Sub Remove(index As Integer)
       Me.BaseRemoveAt(index)
-   End Sub 'Remove
+   End Sub
 
    ' Clears all the elements in the collection.
    Public Sub Clear()
       Me.BaseClear()
-   End Sub 'Clear
+   End Sub
 
-End Class 'MyCollection
+End Class
 
 
 Public Class SamplesNameObjectCollectionBase

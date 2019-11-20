@@ -39,7 +39,7 @@ Class MoreMethodBuilderSnippets
 
       ' </Snippet1>	
 
-   End Sub 'ContainerMethod
+   End Sub
 
-End Class 'MoreMethodBuilderSnippets 
+End Class
 

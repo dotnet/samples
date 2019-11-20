@@ -33,7 +33,7 @@ Class testClass
         Console.WriteLine("Press the enter key to exit")
         Console.ReadLine()
 
-    End Sub 'Main
+    End Sub
 
     '<Snippet12>
     Private Shared Sub DisplayProperties(ByVal ts As TraceSource)
@@ -60,5 +60,5 @@ Class testClass
         '</Snippet10>
     End Sub
     '</Snippet12>
-End Class 'testClass
+End Class
 '</Snippet1>

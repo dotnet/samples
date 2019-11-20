@@ -30,7 +30,6 @@
 ' <Snippet4>
 Imports System.Reflection
 Imports System.Web.Services.Protocols
-Imports MicroSoft.VisualBasic
 
 ' Define a custom attribute with one named parameter.
 <AttributeUsage(AttributeTargets.Method Or AttributeTargets.ReturnValue, AllowMultiple := True)>  _
@@ -41,14 +40,14 @@ Public Class MyAttribute
    
    Public Sub New(name As String)
       myName = name
-   End Sub 'New
+   End Sub
    
    Public ReadOnly Property Name() As String
       Get
          Return myName
       End Get
    End Property
-End Class 'MyAttribute
+End Class
 
 Public Class MyService
    
@@ -57,7 +56,7 @@ Public Class MyService
                  As<MyAttribute("This is the return sample attribute")> Integer
       Return xValue + yValue
    End Function 'Add
-End Class 'MyService
+End Class
 
 
 Public Class LogicalMethodInfo_GetCustomAttribute
@@ -118,6 +117,6 @@ Public Class LogicalMethodInfo_GetCustomAttribute
             End If
          Next i
       End If
-   End Sub 'Main 
-End Class 'LogicalMethodInfo_GetCustomAttribute
+   End Sub
+End Class
 ' </Snippet4>

@@ -11,6 +11,6 @@ Public Class Form1
     ' <Snippet1>
     Public Shared Sub MyMethod(type As Type, baseType As Type)
         Debug.Assert(Not (type Is Nothing), "Type parameter is null")
-    End Sub 'MyMethod 
+    End Sub
     ' </Snippet1>
-End Class 'Form1 ' Perform some processing.
+End Class

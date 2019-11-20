@@ -23,10 +23,6 @@
 ' ****************************************************************************
 
 Imports System.Windows.Automation
-Imports System
-
-
-
 Public Class ElementStore
 
     ''' <summary>
@@ -128,4 +124,4 @@ Public Class ElementStore
         End Set
     End Property
     Private currentSupportedPatterns() As AutomationPattern
-End Class 'ElementStore
+End Class

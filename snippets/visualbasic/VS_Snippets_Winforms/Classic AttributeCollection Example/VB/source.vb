@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Windows.Forms
+﻿Imports System.Windows.Forms
 Imports System.ComponentModel
 
 
@@ -24,7 +23,7 @@ Public Class Form1
         Else
             textBox1.Text = "button1 does not have a browsable attribute."
         End If
-    End Sub 'ContainsAttribute
+    End Sub
      ' </Snippet1>
     ' <Snippet2>
     Private Sub GetAttributeValue()
@@ -38,6 +37,6 @@ Public Class Form1
         
         ' Prints the value of the attribute in a text box.
         textBox1.Text = myDesigner.DesignerTypeName
-    End Sub 'GetAttributeValue
+    End Sub
     ' </Snippet2>
-End Class 'Form1 
+End Class

@@ -23,7 +23,7 @@ Namespace PageSample
       ' MyForm inherits all the base funcitionality
       ' of the HtmlForm control.
       Public Sub New()
-      End Sub 'New
+      End Sub
       
       ' Override the OnInit method that MyForm inherited from HtmlForm.
       <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.Demand, Name:="FullTrust")> _
@@ -31,8 +31,8 @@ Namespace PageSample
          ' Save the view state if there are server controls on
          ' a page that calls MyForm.
          Page.RegisterViewStateHandler()
-      End Sub 'OnInit
-   End Class 'MyForm
+      End Sub
+   End Class
 
 ' </Snippet1>
    Public Class WebPage
@@ -46,7 +46,7 @@ Namespace PageSample
       
       Public Sub New()
          AddHandler Page.Init, AddressOf Page_Init
-      End Sub 'New
+      End Sub
       
       
       Private Sub Page_Load(sender As Object, e As System.EventArgs)
@@ -61,20 +61,20 @@ Namespace PageSample
          myFormObj.Controls.Add(textBoxObj)
          myFormObj.Controls.Add(buttonObj)
          myFormObj.Controls.Add(label2)
-      End Sub 'Page_Load
+      End Sub
       
       Private Sub Button_Click(sender As Object, e As EventArgs)
          Dim temp As [String] = "<br>Name is " + textBoxObj.Text + "<br>"
          temp += "Saved content of previous page is " + CType(ViewState("name"), String)
          label2.Text = temp
-      End Sub 'Button_Click
+      End Sub
       
       <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.Demand, Name:="FullTrust")> _
       Protected Overrides Sub LoadViewState(viewState As Object)
          If Not (viewState Is Nothing) Then
             MyBase.LoadViewState(viewState)
          End If
-      End Sub 'LoadViewState
+      End Sub
       
       <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.Demand, Name:="FullTrust")> _
       Protected Overrides Function SaveViewState() As Object
@@ -89,6 +89,6 @@ Namespace PageSample
          label2 = New Label()
          textBoxObj = New TextBox()
          buttonObj = New Button()
-      End Sub 'Page_Init
-   End Class 'WebPage
+      End Sub
+   End Class
 End Namespace 'PageSample

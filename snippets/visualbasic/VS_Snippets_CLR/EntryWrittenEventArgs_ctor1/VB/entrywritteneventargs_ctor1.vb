@@ -27,12 +27,12 @@ Class MySample
       Catch e As Exception
          Console.WriteLine("Exception Raised" + e.Message)
       End Try
-   End Sub 'Main
+   End Sub
    Protected Shared Sub MyOnEntry(ByVal source As Object, _
                                   ByVal e As EntryWrittenEventArgs)
       If e.Entry Is Nothing Then
           Console.WriteLine("A new entry is written in MyNewLog.")
       End If
-   End Sub 'MyOnEntry
-End Class 'MySample
+   End Sub
+End Class
 ' </Snippet1>

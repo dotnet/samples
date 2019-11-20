@@ -22,8 +22,8 @@ Class DebugViewTest
         Console.WriteLine(myHashTable.ToString())
         Console.WriteLine("In Main.")
 
-    End Sub 'Main 
-End Class 'DebugViewTest
+    End Sub
+End Class
 '<Snippet3>
 <DebuggerDisplay("{value}", Name := "{key}")>  _
 Friend Class KeyValuePairs
@@ -37,8 +37,8 @@ Friend Class KeyValuePairs
         Me.key = key
         Me.dictionary = dictionary
 
-    End Sub 'New
-End Class 'KeyValuePairs
+    End Sub
+End Class
 '</Snippet3>
 '<Snippet4>
 '<Snippet5>
@@ -54,7 +54,7 @@ Class MyHashtable
 
         Public Sub New(ByVal hashtable As Hashtable)
             Me.hashtable = hashtable
-        End Sub 'New
+        End Sub
 
         '<Snippet6>
         <DebuggerBrowsable(DebuggerBrowsableState.RootHidden)> _
@@ -72,8 +72,8 @@ Class MyHashtable
         End Property
         '</Snippet6>
 
-    End Class 'HashtableDebugView
-End Class 'MyHashtable
+    End Class
+End Class
 '</Snippet5>
 '</Snippet1>
 

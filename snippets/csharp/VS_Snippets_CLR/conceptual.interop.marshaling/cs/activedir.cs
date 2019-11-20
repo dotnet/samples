@@ -25,16 +25,16 @@ public struct DsBrowseInfo
     public int    ObjectClassSize;
 }
 
-public class LibWrap
+internal static class NativeMethods
 {
     // Declares a managed prototype for the unmanaged function.
     [DllImport("dsuiext.dll", CharSet = CharSet.Unicode)]
-    public static extern int DsBrowseForContainerW(ref DsBrowseInfo info);
+    internal static extern int DsBrowseForContainerW(ref DsBrowseInfo info);
 
-    public const int DSBI_ENTIREDIRECTORY = 0x00090000;
-    public const int ADS_FORMAT_WINDOWS = 1;
+    internal const int DSBI_ENTIREDIRECTORY = 0x00090000;
+    internal const int ADS_FORMAT_WINDOWS = 1;
 
-    public enum BrowseStatus
+    internal enum BrowseStatus
     {
         BrowseError = -1,
         BrowseOk = 1,
@@ -58,15 +58,15 @@ class App
             PathSize = DsBrowseInfo.MAX_PATH,
             Caption = "Container Selection Example",
             Title = "Select a container from the list.",
-            ReturnFormat = LibWrap.ADS_FORMAT_WINDOWS,
-            Flags = LibWrap.DSBI_ENTIREDIRECTORY,
+            ReturnFormat = NativeMethods.ADS_FORMAT_WINDOWS,
+            Flags = NativeMethods.DSBI_ENTIREDIRECTORY,
             Root = "LDAP:",
             Path = new string(new char[DsBrowseInfo.MAX_PATH])
         };
 
         // Initialize remaining members...
-        int status = LibWrap.DsBrowseForContainerW(ref dsbi);
-        if ((LibWrap.BrowseStatus)status == LibWrap.BrowseStatus.BrowseOk)
+        int status = NativeMethods.DsBrowseForContainerW(ref dsbi);
+        if ((NativeMethods.BrowseStatus)status == NativeMethods.BrowseStatus.BrowseOk)
         {
             Console.WriteLine(dsbi.Path);
         }

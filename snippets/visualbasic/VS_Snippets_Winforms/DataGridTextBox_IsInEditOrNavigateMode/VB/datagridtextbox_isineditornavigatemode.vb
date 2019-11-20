@@ -9,7 +9,6 @@
 ' 'DataGridTextBox' changes the value of 'IsInEditOrNavigateMode'
 ' from true to false. 
 
-Imports System
 Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
@@ -31,7 +30,7 @@ Public Class MyDataGridTextBox
       
       ' Bind the controls.
       MakeDataSet()
-   End Sub 'New
+   End Sub
    
    ' Clean up any resources being used.
    Protected Overrides Overloads Sub Dispose(disposing As Boolean)
@@ -41,12 +40,12 @@ Public Class MyDataGridTextBox
          End If
       End If
       MyBase.Dispose(disposing)
-   End Sub 'Dispose
+   End Sub
    
    ' Main entry point for the application.
    Shared Sub Main()
       Application.Run(New MyDataGridTextBox())
-   End Sub 'Main
+   End Sub
    
    Private Sub InitializeComponent()
       ' Create the form and its controls.
@@ -85,7 +84,7 @@ Public Class MyDataGridTextBox
       myDataGridTextBox.ForeColor = Color.Red
       myDataGridTextBox.Multiline = True
       myDataGridTextBox.WordWrap = True
-   End Sub 'InitializeComponent
+   End Sub
    
    Private Sub AddCustomDataTableStyle()
       ' Map the DataGridTableStyle to the Table name.
@@ -105,7 +104,7 @@ Public Class MyDataGridTextBox
       
       ' Add the DataGridTableStyle to GridTableStylesCollection.
       myDataGrid.TableStyles.Add(myDataGridTableStyle)
-   End Sub 'AddCustomDataTableStyle
+   End Sub
    
    ' Create a DataSet with a table and populate it.
    Private Sub MakeDataSet()
@@ -138,7 +137,7 @@ Public Class MyDataGridTextBox
                "Person.PersonName")
       ' Set the DataGrid to the DataGridTextBox.
       myDataGridTextBox.SetDataGrid(myDataGrid)
-   End Sub 'MakeDataSet
+   End Sub
 
 ' <Snippet1>
    ' Handle event to show the state of 'IsInEditOrNavigateMode'.
@@ -151,6 +150,6 @@ Public Class MyDataGridTextBox
          ' DataGridTextBox has been edited.
          MessageBox.Show("Editing of DataGridTextBox begun,IsInEditOrNavigateMode = False")
       End If
-   End Sub 'Button_ClickEvent
+   End Sub
 ' </Snippet1>
-End Class 'MyDataGridTextBox
+End Class

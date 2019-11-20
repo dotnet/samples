@@ -8,9 +8,11 @@ public class Example
       // Define two dates.
       DateTime date1 = new DateTime(2010, 1, 1, 8, 0, 15);
       DateTime date2 = new DateTime(2010, 8, 18, 13, 30, 30);
+
       // Calculate the interval between the two dates.
       TimeSpan interval = date2 - date1;
       Console.WriteLine("{0} - {1} = {2}", date2, date1, interval.ToString());
+
       // Display individual properties of the resulting TimeSpan object.
       Console.WriteLine("   {0,-35} {1,20}", "Value of Days Component:", interval.Days);
       Console.WriteLine("   {0,-35} {1,20}", "Total Number of Days:", interval.TotalDays);
@@ -23,7 +25,8 @@ public class Example
       Console.WriteLine("   {0,-35} {1,20:N0}", "Value of Milliseconds Component:", interval.Milliseconds);
       Console.WriteLine("   {0,-35} {1,20:N0}", "Total Number of Milliseconds:", interval.TotalMilliseconds);
       Console.WriteLine("   {0,-35} {1,20:N0}", "Ticks:", interval.Ticks);
-      // the example displays the following output:
+      
+      // This example displays the following output:
       //       8/18/2010 1:30:30 PM - 1/1/2010 8:00:15 AM = 229.05:30:15
       //          Value of Days Component:                             229
       //          Total Number of Days:                   229.229340277778

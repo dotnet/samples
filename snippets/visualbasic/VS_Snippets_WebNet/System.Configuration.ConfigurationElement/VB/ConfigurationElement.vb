@@ -98,7 +98,7 @@ Class TestConfigurationElement2
             Console.WriteLine("[CreateSection: {0}]", e.ToString())
         End Try
 
-    End Sub 'CreateSection
+    End Sub
 
     ' </Snippet1>
 
@@ -133,7 +133,7 @@ Class TestConfigurationElement2
             e.ToString())
         End Try
 
-    End Sub 'AddClearRemoveElementName
+    End Sub
 
 
     ' <Snippet2> 
@@ -185,7 +185,7 @@ Class TestConfigurationElement2
             e.ToString())
         End Try
 
-    End Sub 'GetProperties
+    End Sub
 
     ' </Snippet2> 
 
@@ -238,7 +238,7 @@ Class TestConfigurationElement2
             e.ToString())
         End Try
 
-    End Sub 'LockItem
+    End Sub
 
     ' </Snippet3> 
 
@@ -291,7 +291,7 @@ Class TestConfigurationElement2
             err.ToString())
         End Try
 
-    End Sub 'LockElements
+    End Sub
 
     ' </Snippet4> 
 
@@ -345,7 +345,7 @@ Class TestConfigurationElement2
             err.ToString())
         End Try
 
-    End Sub 'LockAllElementsExcept
+    End Sub
 
     ' </Snippet5> 
 
@@ -404,7 +404,7 @@ Class TestConfigurationElement2
             err.ToString())
         End Try
 
-    End Sub 'ModifyElement
+    End Sub
 
     ' </Snippet6>
 
@@ -443,7 +443,7 @@ Class TestConfigurationElement2
             err.ToString())
         End Try
 
-    End Sub 'ReadOnlyElements
+    End Sub
 
     ' </Snippet7>
 
@@ -480,7 +480,7 @@ Class TestConfigurationElement2
             Console.WriteLine("Section was locked, could not update.")
         End If
 
-    End Sub 'RemoveElement
+    End Sub
 
 
     ' <Snippet8> 
@@ -553,7 +553,7 @@ Class TestConfigurationElement2
             e.ToString())
         End Try
 
-    End Sub 'LockAttributes
+    End Sub
 
     ' </Snippet8> 
 
@@ -621,8 +621,8 @@ Class TestConfigurationElement2
             e.ToString())
         End Try
 
-    End Sub 'LockAllAttributesExcept
+    End Sub
 
     ' </Snippet9> 
 
-End Class 'TestConfigurationElement 
+End Class

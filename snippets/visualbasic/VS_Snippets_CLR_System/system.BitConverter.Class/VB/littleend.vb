@@ -1,7 +1,5 @@
 ﻿'<Snippet2>
 ' Example of the BitConverter.IsLittleEndian field.
-Imports Microsoft.VisualBasic
-
 Module LittleEndDemo
     Sub Main( )
         Console.WriteLine( _

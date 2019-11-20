@@ -16,7 +16,7 @@ Public Class Test
         Console.WriteLine("Starting....")
         t.Run()
     
-    End Sub 'Main
+    End Sub
      
     
     Private Sub Run() 
@@ -72,8 +72,8 @@ Public Class Test
         Console.WriteLine("Press Enter to close the service")
         Console.ReadLine()
         myServiceHost.Close()
-    End Sub 'Run
-End Class 'Test
+    End Sub
+End Class
 
 <ServiceContract()>  _
 Public Interface ICalculator
@@ -89,4 +89,4 @@ Public Class Calculator
         Return a + b
     
     End Function 'Add
-End Class 'Calculator
+End Class

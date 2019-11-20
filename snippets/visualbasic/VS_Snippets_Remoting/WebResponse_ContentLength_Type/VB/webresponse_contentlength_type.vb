@@ -7,7 +7,6 @@
 Imports System.Net
 Imports System.IO
 Imports System.Text
-Imports Microsoft.VisualBasic
 Imports System.Environment
 
 Class WebResponseSnippet
@@ -30,7 +29,7 @@ Class WebResponseSnippet
         Console.ReadLine()
         
         Return
-    End Sub 'Main
+    End Sub
     
     
     Public Shared Sub GetPage(url As [String])
@@ -56,5 +55,5 @@ Class WebResponseSnippet
         Catch e As Exception
             Console.WriteLine(ControlChars.Cr + "The following exception was raised : {0}", e.Message)
         End Try
-    End Sub 'GetPage 
-End Class 'WebResponseSnippet
+    End Sub
+End Class

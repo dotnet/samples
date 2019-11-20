@@ -510,7 +510,7 @@ Public Class OrderEventArgs
         End Class
         ' </snippet104>
         'End Message Filter
-    End Class 'WorkflowViewWrapper
+    End Class
 
     '*******************
     '* Snippets from SpeechApplication

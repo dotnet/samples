@@ -3,7 +3,6 @@ Imports System.Management
 Imports System.CodeDom
 Imports System.IO
 Imports System.CodeDom.Compiler
-Imports Microsoft.VisualBasic
 
 Class GenerateVBCode
 

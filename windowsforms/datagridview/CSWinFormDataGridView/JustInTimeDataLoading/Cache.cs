@@ -305,10 +305,7 @@ namespace CSWinFormDataGridView.JustInTimeDataLoading
         {
             // Store the name of the ID column. This column must contain unique 
             // values so the SQL below will work properly.
-            if (columnToSortBy == null)
-            {
-                columnToSortBy = this.Columns[0].ColumnName;
-            }
+            columnToSortBy ??= this.Columns[0].ColumnName;
 
             if (!this.Columns[columnToSortBy].Unique)
             {

@@ -5,8 +5,6 @@ Imports System.Security
 Imports System.Security.Permissions
 Imports System.Reflection
 Imports MyPermission
-Imports Microsoft.VisualBasic
-
 
 ' Use the command line option '/keyfile' or appropriate project settings to sign this assembly.
 <Assembly: System.Security.AllowPartiallyTrustedCallersAttribute()> 
@@ -20,7 +18,7 @@ Namespace MyPermissionAttribute
 
         Public Sub New(ByVal action As SecurityAction)
             MyBase.New(action)
-        End Sub 'New
+        End Sub
 
 
         Public Property Name() As String
@@ -42,6 +40,6 @@ Namespace MyPermissionAttribute
                 Return New NameIdPermission(m_name)
             End If
         End Function 'CreatePermission
-    End Class ' NameIdPermissionAttribute
+    End Class
 End Namespace
 '</Snippet1>

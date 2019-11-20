@@ -11,7 +11,6 @@
 Imports System.Net
 Imports System.Net.Sockets
 Imports System.Text
-Imports Microsoft.VisualBasic
 
 Class HttpConnect
 Public Shared Sub Main()
@@ -24,7 +23,7 @@ Public Shared Sub Main()
             
             Console.WriteLine((ControlChars.Cr + "The Inner Exception is :" + e.InnerException.ToString()))
         End Try
-    End Sub ' Main
+    End Sub
     
 
     Public Sub ConnectHttpServer(connectUri As [String])
@@ -51,5 +50,5 @@ Public Shared Sub Main()
         End Try
 
 ' </Snippet1>
-  End Sub ' ConnectHttpServer
-End Class ' HttpConnect 
+  End Sub
+End Class

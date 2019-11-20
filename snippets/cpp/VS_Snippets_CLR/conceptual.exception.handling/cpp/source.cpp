@@ -10,7 +10,7 @@ public:
     }
 };
 
-[FlagsAttribute]
+[Flags]
 public enum class ConnectionState
 {
     Closed = 0,

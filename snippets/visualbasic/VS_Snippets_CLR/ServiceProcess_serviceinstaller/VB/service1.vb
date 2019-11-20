@@ -35,7 +35,7 @@ Public Class SimpleService
         CanPauseAndContinue = True
         ServiceName = "SimpleService"
     
-    End Sub 'New
+    End Sub
     
     ' </Snippet2>
     Shared Sub Main() 
@@ -65,7 +65,7 @@ Public Class SimpleService
         serviceTraceListener = Nothing
         myFile.Close()
     
-    End Sub 'Main
+    End Sub
     
     
     Private Sub InitializeComponent() 
@@ -75,7 +75,7 @@ Public Class SimpleService
         Me.ServiceName = "SimpleService"
         Me.CanHandleSessionChangeEvent = False
     
-    End Sub 'InitializeComponent
+    End Sub
     
     
     ' <Snippet3>
@@ -92,7 +92,7 @@ Public Class SimpleService
             Trace.WriteLine(DateTime.Now.ToLongTimeString() + " - Worker thread state = " + workerThread.ThreadState.ToString(), "OnStart")
         End If
     
-    End Sub 'OnStart
+    End Sub
     
     
     
@@ -113,7 +113,7 @@ Public Class SimpleService
             Trace.WriteLine(DateTime.Now.ToLongTimeString() + " - Worker thread state = " + workerThread.ThreadState.ToString(), "OnStop")
         End If
     
-    End Sub 'OnStop
+    End Sub
     
     ' </Snippet4>
     ' <Snippet5>
@@ -130,7 +130,7 @@ Public Class SimpleService
             Trace.WriteLine(DateTime.Now.ToLongTimeString() + " - Worker thread state = " + workerThread.ThreadState.ToString(), "OnPause")
         End If
     
-    End Sub 'OnPause
+    End Sub
     
     ' </Snippet5>
     ' <Snippet6>
@@ -147,7 +147,7 @@ Public Class SimpleService
             Trace.WriteLine(DateTime.Now.ToLongTimeString() + " - Worker thread state = " + workerThread.ThreadState.ToString(), "OnContinue")
         End If
     
-    End Sub 'OnContinue
+    End Sub
     
     ' </Snippet6>
     ' <Snippet7>
@@ -179,7 +179,7 @@ Public Class SimpleService
                 Trace.WriteLine(DateTime.Now.ToLongTimeString() + " - Unrecognized custom command ignored!", "OnCustomCommand")
         End Select
     
-    End Sub 'OnCustomCommand
+    End Sub
     
     ' </Snippet7>
     ' Define a simple method that runs as the worker thread for 
@@ -207,7 +207,7 @@ Public Class SimpleService
         
         Trace.WriteLine(DateTime.Now.ToLongTimeString() + " - Exiting the service worker thread.", "Worker")
     
-    End Sub 'ServiceWorkerMethod
-End Class 'SimpleService
+    End Sub
+End Class
 
 ' </Snippet1>

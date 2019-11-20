@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Text
+﻿Imports System.Text
 Imports System.Windows.Forms
 
 Public Class Form1

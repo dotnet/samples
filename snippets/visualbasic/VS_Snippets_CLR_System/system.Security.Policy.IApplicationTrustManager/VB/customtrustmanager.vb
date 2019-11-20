@@ -71,7 +71,7 @@ Public Class MyTrustManager
             Throw New ArgumentException("Invalid tag")
         End If
 
-    End Sub 'FromXml 
+    End Sub
     '</Snippet4>
-End Class 'MyTrustManager
+End Class
 '</Snippet1>

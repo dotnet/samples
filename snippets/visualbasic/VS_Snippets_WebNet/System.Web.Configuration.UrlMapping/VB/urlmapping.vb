@@ -241,5 +241,5 @@ Class UsingUrlMapping
             ' debugging purposes.
             msg = e.ToString()
         End Try
-    End Sub 'Main
-End Class 'UsingUrlMapping
+    End Sub
+End Class

@@ -122,6 +122,6 @@ Class MyOperationBindingSample
          Console.WriteLine("Source : " & e.Source.ToString())
          Console.WriteLine("Message : " & e.Message.ToString())
       End Try
-   End Sub 'Main
-End Class 'MyOperationBindingSample
+   End Sub
+End Class
 ' </Snippet1>

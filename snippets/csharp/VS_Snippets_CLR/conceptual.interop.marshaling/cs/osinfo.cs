@@ -29,13 +29,13 @@ public struct OSVersionInfo2
     public String CSDVersion;
 }
 
-public class LibWrap
+internal static class NativeMethods
 {
     [DllImport("kernel32")]
-    public static extern bool GetVersionEx([In, Out] OSVersionInfo osvi);
+    internal static extern bool GetVersionEx([In, Out] OSVersionInfo osvi);
 
     [DllImport("kernel32", EntryPoint = "GetVersionEx")]
-    public static extern bool GetVersionEx2(ref OSVersionInfo2 osvi);
+    internal static extern bool GetVersionEx2(ref OSVersionInfo2 osvi);
 }
 //</snippet11>
 
@@ -49,7 +49,7 @@ public class App
         OSVersionInfo osvi = new OSVersionInfo();
         osvi.OSVersionInfoSize = Marshal.SizeOf(osvi);
 
-        LibWrap.GetVersionEx(osvi);
+        NativeMethods.GetVersionEx(osvi);
 
         Console.WriteLine("Class size:    {0}", osvi.OSVersionInfoSize);
         Console.WriteLine("OS Version:    {0}.{1}", osvi.MajorVersion, osvi.MinorVersion);
@@ -59,7 +59,7 @@ public class App
         OSVersionInfo2 osvi2 = new OSVersionInfo2();
         osvi2.OSVersionInfoSize = Marshal.SizeOf(osvi2);
 
-        LibWrap.GetVersionEx2(ref osvi2);
+        NativeMethods.GetVersionEx2(ref osvi2);
         Console.WriteLine("Struct size:   {0}", osvi2.OSVersionInfoSize);
         Console.WriteLine("OS Version:    {0}.{1}", osvi2.MajorVersion, osvi2.MinorVersion);
     }

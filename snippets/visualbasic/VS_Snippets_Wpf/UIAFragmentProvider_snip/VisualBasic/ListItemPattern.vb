@@ -23,7 +23,6 @@
 ' * 
 ' ************************************************************************************************
 
-Imports System
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.Windows.Automation
@@ -49,7 +48,7 @@ Class ListItemPattern
         parentList = parent
         selectedItems = New ArrayList()
     
-    End Sub 'New 
+    End Sub
     
     #Region "ISelectionItemProvider"
     
@@ -63,7 +62,7 @@ Class ListItemPattern
 
         selectedItems.Add(Me)
 
-    End Sub 'AddToSelection ' TODO: Update UI.
+    End Sub
     ' </Snippet111>
     ''' <summary>
     ''' Specifies whether the item is selected.
@@ -89,7 +88,7 @@ Class ListItemPattern
         Implements ISelectionItemProvider.RemoveFromSelection
         selectedItems.Remove(Me)
 
-    End Sub 'RemoveFromSelection
+    End Sub
     ' TODO: Update UI.
     ' </Snippet112>
 
@@ -102,7 +101,7 @@ Class ListItemPattern
         selectedItems.Clear()
         selectedItems.Add(Me)
 
-    End Sub 'Select ' TODO: Update UI.
+    End Sub
     ' </Snippet115>
 
     ''' <summary>
@@ -117,4 +116,4 @@ Class ListItemPattern
     End Property
     ' </Snippet114>
 #End Region
-End Class 'ListItemPattern '
+End Class

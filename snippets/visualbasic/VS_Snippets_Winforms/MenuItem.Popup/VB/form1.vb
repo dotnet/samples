@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -33,7 +32,7 @@ Namespace MenuPopupEx
          ' Required for Windows Form Designer support
          '
          InitializeComponent()
-      End Sub 'New
+      End Sub
        
       '
       ' TODO: Add any constructor code after InitializeComponent call
@@ -49,7 +48,7 @@ Namespace MenuPopupEx
             End If
          End If
          MyBase.Dispose(disposing)
-      End Sub 'Dispose
+      End Sub
 
 
       '
@@ -125,7 +124,7 @@ Namespace MenuPopupEx
          Me.Name = "Form1"
          Me.Text = "Form1"
          Me.ResumeLayout(False)
-      End Sub 'InitializeComponent
+      End Sub
 
       '
       'ToDo: Error processing original source shown below
@@ -138,7 +137,7 @@ Namespace MenuPopupEx
       <STAThread()> _
       Shared Sub Main()
          Application.Run(New Form1())
-      End Sub 'Main
+      End Sub
 
 
       '<Snippet1>
@@ -154,5 +153,5 @@ Namespace MenuPopupEx
          End If
       End Sub
       '</Snippet1>
-   End Class 'Form1 
+   End Class
 End Namespace 'MenuPopupEx

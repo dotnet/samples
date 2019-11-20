@@ -52,7 +52,7 @@ Public Class MyUdpClientExample
             End If
          End If
       End If 
-   End Sub 'MyUdpClientConstructor
+   End Sub
     ' MyUdpClientConnection method is just used to illustrate the different connection methods of UdpClient class.
    Public Shared Sub MyUdpClientConnection(myConnectionType As String)
       
@@ -96,7 +96,7 @@ Public Class MyUdpClientExample
             End If ' Do nothing.
          End If
       End If
-   End Sub 'MyUdpClientConnection
+   End Sub
     
    ' This class demonstrates sending and receiving using a Udp socket.
    Public Shared Sub MyUdpClientCommunicator(mySendType As String)
@@ -164,7 +164,7 @@ Public Class MyUdpClientExample
       Catch e As Exception
          Console.WriteLine(e.ToString())
       End Try
-   End Sub 'MyUdpClientCommunicator
+   End Sub
     
    '</Snippet11>
    
@@ -211,7 +211,7 @@ Public Class MyUdpClientExample
          Else
          End If ' Do nothing.
       End If
-   End Sub 'MyUdpClientMulticastConfiguration
+   End Sub
    
    
    Public Shared Sub Main()
@@ -221,8 +221,8 @@ Public Class MyUdpClientExample
       MyUdpClientConnection("HostNameAndPortNumExample")
       MyUdpClientCommunicator("EndPointExample")
       MyUdpClientMulticastConfiguration("JoinMultiCastExample")
-   End Sub 'Main 
-End Class 'MyUdpClientExample
+   End Sub
+End Class
 
 'end class
 

@@ -65,7 +65,7 @@ Imports System.IO
       Catch e As Exception
          Throw New InstallException("IOException raised", e)
       End Try
-   End Sub 'Rollback
+   End Sub
     ' Perform the remaining rollback activites if no exception raised.
 ' </Snippet3>
 

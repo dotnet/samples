@@ -17,7 +17,7 @@ Class MyDiscoveryClientReferenceCollection
    
    Shared Sub Main()
       Run()
-   End Sub 'Main
+   End Sub
 
    <PermissionSetAttribute(SecurityAction.Demand, Name := "FullTrust")> _
    Shared Sub Run()
@@ -66,7 +66,7 @@ Class MyDiscoveryClientReferenceCollection
           Console.WriteLine("The document reference {0} is part of the collection.", _
               myStringUrl1)
       End If
-   End Sub 'Run
+   End Sub
 
-End Class 'MyDiscoveryClientReferenceCollection
+End Class
 ' </Snippet1>

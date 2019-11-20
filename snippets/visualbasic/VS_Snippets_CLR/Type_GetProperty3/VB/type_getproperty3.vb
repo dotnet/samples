@@ -14,7 +14,7 @@ Module Module1
                 myArray(i, j) = Value
             End Set
         End Property
-    End Class 'MyClass1
+    End Class
 
     Public Class MyTypeClass
         Public Shared Sub Main()
@@ -34,7 +34,7 @@ Module Module1
                 Console.WriteLine("Source : {0}", e.Source.ToString())
                 Console.WriteLine("Message : {0}", e.Message.ToString())
             End Try
-        End Sub 'Main
-    End Class 'MyTypeClass
+        End Sub
+    End Class
 End Module 'Module1
 ' </Snippet1>

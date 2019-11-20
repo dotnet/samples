@@ -1,7 +1,6 @@
 ﻿Option Explicit
 Option Strict
 
-Imports System
 Imports System.Data
 Imports System.Windows.Forms
 
@@ -23,7 +22,7 @@ Public Class Form1
             gridCurrencyManager.CancelCurrentEdit()
             MessageBox.Show("Escape!")
         End If
-    End Sub 'dataGrid1_KeyUp
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

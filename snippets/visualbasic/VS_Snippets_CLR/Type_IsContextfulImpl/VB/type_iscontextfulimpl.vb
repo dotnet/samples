@@ -1,6 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
+
 Public Class MyTypeDelegatorClass
     Inherits TypeDelegator
     Public myElementType As String = Nothing
@@ -8,7 +8,7 @@ Public Class MyTypeDelegatorClass
     Public Sub New(ByVal myType As Type)
         MyBase.New(myType)
         Me.myType = myType
-    End Sub 'New
+    End Sub
     ' Override IsContextfulImpl.
     Protected Overrides Function IsContextfulImpl() As Boolean
         ' Check whether the type is contextful.
@@ -18,7 +18,7 @@ Public Class MyTypeDelegatorClass
         End If
         Return False
     End Function 'IsContextfulImpl
-End Class 'MyTypeDelegatorClass
+End Class
 Public Class MyTypeDemoClass
     Public Shared Sub Main()
         Try
@@ -42,11 +42,11 @@ Public Class MyTypeDemoClass
         Catch e As Exception
             Console.WriteLine("Exception: {0}", e.Message.ToString())
         End Try
-    End Sub 'Main
-End Class 'MyTypeDemoClass
+    End Sub
+End Class
 ' This class demonstrates the IsContextfulImpl method.
 Public Class MyContextBoundClass
     Inherits ContextBoundObject
     Public myString As String = "This class is used to demonstrate members of the Type class."
-End Class 'MyContextBoundClass
+End Class
 ' </Snippet1>

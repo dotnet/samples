@@ -1,13 +1,11 @@
 ﻿' <snippet1>
 ' Compile this example using the following command line:
 ' vbc basicsplitcontainer.vb /r:System.Drawing.dll /r:System.Windows.Forms.dll /r:System.dll /r:System.Data.dll
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Windows.Forms
 Imports System.Data
-Imports Microsoft.VisualBasic
 
 Public Class Form1
     Inherits System.Windows.Forms.Form
@@ -19,7 +17,7 @@ Public Class Form1
    
     Public Sub New()
         InitializeComponent()
-    End Sub 'New
+    End Sub
        
     Private Sub InitializeComponent()
         splitContainer1 = New System.Windows.Forms.SplitContainer()
@@ -125,22 +123,22 @@ Public Class Form1
         splitContainer1.ResumeLayout(False)
         splitContainer2.ResumeLayout(False)
         ResumeLayout(False)
-    End Sub 'InitializeComponent
+    End Sub
        
        
 <STAThread()>  _
 Shared Sub Main()
     Application.Run(New Form1())
-End Sub 'Main
+End Sub
     
 Private Sub splitContainer1_SplitterMoving(sender As System.Object, e As System.Windows.Forms.SplitterCancelEventArgs) Handles splitContainer1.SplitterMoving
     ' As the splitter moves, change the cursor type.
     Cursor.Current = System.Windows.Forms.Cursors.NoMoveVert
-End Sub 'splitContainer1_SplitterMoving
+End Sub
     
 Private Sub splitContainer1_SplitterMoved(sender As System.Object, e As System.Windows.Forms.SplitterEventArgs) Handles splitContainer1.SplitterMoved
     ' When the splitter stops moving, change the cursor back to the default.
     Cursor.Current = System.Windows.Forms.Cursors.Default
-End Sub 'splitContainer1_SplitterMoved
-End Class 'Form1
+End Sub
+End Class
 ' </snippet1>

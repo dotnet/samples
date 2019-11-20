@@ -51,7 +51,7 @@ Public Class SamplesHashtable
            Console.WriteLine(" NOT in the Hashtable.")
         End If
 
-    End Sub 'Main
+    End Sub
 
     Public Shared Sub PrintIndexAndKeysAndValues(myHT As Hashtable)
         Dim i As Integer = 0
@@ -61,9 +61,9 @@ Public Class SamplesHashtable
             i += 1
         Next
         Console.WriteLine()
-    End Sub 'PrintIndexAndKeysAndValues
+    End Sub
 
-End Class 'SamplesHashtable 
+End Class
 
 
 ' This code produces the following output.

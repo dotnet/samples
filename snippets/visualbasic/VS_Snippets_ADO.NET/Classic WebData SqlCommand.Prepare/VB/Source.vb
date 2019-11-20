@@ -17,7 +17,7 @@ Module Module1
     Private Sub SqlCommandPrepareEx(ByVal connectionString As String)
         Using connection As New SqlConnection(connectionString)
             connection.Open()
-            Dim command As SqlCommand = New SqlCommand("", connection)
+            Dim command As New SqlCommand("", connection)
 
             ' Create and prepare an SQL statement.
             command.CommandText = _

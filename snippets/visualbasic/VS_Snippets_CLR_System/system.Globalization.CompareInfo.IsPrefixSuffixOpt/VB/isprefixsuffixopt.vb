@@ -27,9 +27,9 @@ Public Class SamplesCompareInfo
       Console.WriteLine("   With Ordinal                      : {0}", myComp.IsPrefix(myStr2, myXfix, CompareOptions.Ordinal))
       Console.WriteLine("   With IgnoreCase                   : {0}", myComp.IsPrefix(myStr2, myXfix, CompareOptions.IgnoreCase))
 
-   End Sub 'Main 
+   End Sub
 
-End Class 'SamplesCompareInfo
+End Class
 
 
 'This code produces the following output.

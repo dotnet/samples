@@ -4,9 +4,6 @@ Imports System.Security
 Imports System.Security.Policy
 Imports System.Security.Permissions
 Imports System.Globalization
-Imports Microsoft.VisualBasic
-
-
 
 Public Class Evidence_Example
 
@@ -182,6 +179,6 @@ Public Class Evidence_Example
             Console.WriteLine(e.ToString())
             Environment.ExitCode = 101
         End Try
-    End Sub 'Main
-End Class 'Evidence_Example
+    End Sub
+End Class
 '</Snippet1>

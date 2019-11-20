@@ -23,9 +23,9 @@ Public Class Test
        
       Public Sub Print()
          Console.WriteLine("The double is equal to {0}.", dFloatingPoint)
-      End Sub 'Print
+      End Sub
 
-   End Class 'TestClass
+   End Class
    
    
    
@@ -46,7 +46,7 @@ Public Class Test
       Dim fs As New FileStream("test.xml", FileMode.OpenOrCreate)
       MetaData.ConvertTypesToSchemaToStream(types, SdlType.Wsdl, fs)
 
-   End Sub 'Main
+   End Sub
 
-End Class 'Test
+End Class
 ' </Snippet1>

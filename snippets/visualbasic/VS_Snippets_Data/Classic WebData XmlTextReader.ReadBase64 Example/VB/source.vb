@@ -4,7 +4,6 @@ Option Strict
 
 Imports System.IO
 Imports System.Xml
-Imports Microsoft.VisualBasic
 
 Public Class Sample
    Private Const filename As String = "binary.xml"
@@ -57,6 +56,6 @@ Public Class Sample
             reader.Close()
          End If
       End Try
-   End Sub 'Main 
-End Class 'Sample
+   End Sub
+End Class
 ' </Snippet1>

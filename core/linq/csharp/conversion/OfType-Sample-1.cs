@@ -5,9 +5,8 @@ namespace Conversion
 {
     public static class OfTypeSample1
     {
-        //This sample uses OfType to return only the elements of the array that are of type double.
-        //
-        //Output:
+        // This sample uses OfType to return only the elements of the array that are of type double.
+        // Output:
         // Numbers stored as doubles:
         // 1
         // 7 

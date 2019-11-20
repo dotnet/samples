@@ -22,6 +22,6 @@ Class XmlSchemaObject
       
       s.Items.Add(elem)
       s.Write(Console.Out)
-   End Sub 'Main 
-End Class 'XmlSchemaObject
+   End Sub
+End Class
 '</Snippet1>

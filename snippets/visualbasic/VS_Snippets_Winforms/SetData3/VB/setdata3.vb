@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.ComponentModel
 Imports System.Windows.Forms
 Imports System.Drawing
@@ -34,7 +33,7 @@ Private Sub SetData3()
    
    ' Displays the result.
    MessageBox.Show(myMessageText, "The Test Result")
-End Sub 'SetData3
+End Sub
 ' </snippet1>
     Public Shared Sub Main()
        System.Windows.Forms.Application.Run(New Form1())

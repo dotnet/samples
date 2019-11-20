@@ -10,7 +10,7 @@ Protected DataGrid1 As DataGrid
 
 ' <Snippet1>
 Private Sub CreateDataSet()
-    Dim  dataSet As DataSet = New DataSet("aNewDataSet")
+    Dim  dataSet As New DataSet("aNewDataSet")
 
     ' Create two DataTable objects using a function.
     Dim table1 As DataTable = MakeTable("idTable1", "thing1")
@@ -27,7 +27,7 @@ Private Function MakeTable(c1Name As String, c2Name As String) _
     Dim table As New DataTable
     
     ' Add two DataColumns
-    Dim column As DataColumn = New DataColumn( _
+    Dim column As New DataColumn( _
         c1Name, System.Type.GetType("System.Integer"))
     table.Columns.Add(column)
     column = New DataColumn(c2Name, _

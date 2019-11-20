@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
 Imports System.ComponentModel
@@ -16,6 +15,6 @@ Public Class Form1
         
         dgt.BeginEdit(myCol, 1)
         dgt.EndEdit(myCol, 1, True)
-    End Sub 'EditTable
+    End Sub
     ' </Snippet1>
-End Class 'Form1
+End Class

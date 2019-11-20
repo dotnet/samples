@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
 
 ' Define a custom attribute with one named parameter.
 <AttributeUsage(AttributeTargets.Parameter)> Public Class MyAttribute

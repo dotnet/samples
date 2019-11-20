@@ -4,14 +4,14 @@ using System.Text;
 using System.Runtime.InteropServices;
 
 //<snippet2>
-public class LibWrap
+internal static class NativeMethods
 {
     [DllImport("Kernel32.dll", CharSet = CharSet.Auto)]
-    public static extern int GetSystemDirectory(
+    internal static extern int GetSystemDirectory(
         StringBuilder sysDirBuffer, int size);
 
     [DllImport("Kernel32.dll", CharSet = CharSet.Auto)]
-    public static extern IntPtr GetCommandLine();
+    internal static extern IntPtr GetCommandLine();
 }
 //</snippet2>
 
@@ -22,10 +22,10 @@ public class App
     {
         // Call GetSystemDirectory.
         StringBuilder sysDirBuffer = new StringBuilder(256);
-        LibWrap.GetSystemDirectory(sysDirBuffer, sysDirBuffer.Capacity);
+        NativeMethods.GetSystemDirectory(sysDirBuffer, sysDirBuffer.Capacity);
         // ...
         // Call GetCommandLine.
-        IntPtr cmdLineStr = LibWrap.GetCommandLine();
+        IntPtr cmdLineStr = NativeMethods.GetCommandLine();
         string commandLine = Marshal.PtrToStringAuto(cmdLineStr);
     }
 }

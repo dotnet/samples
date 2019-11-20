@@ -11,7 +11,6 @@
 Imports System.Runtime.InteropServices
 Imports System.Security.Principal
 Imports System.Security.Permissions
-Imports Microsoft.VisualBasic
 Imports Microsoft.Win32.SafeHandles
 Imports System.Runtime.ConstrainedExecution
 Imports System.Security
@@ -93,8 +92,8 @@ Module Module1
             Catch ex As Exception
                 Console.WriteLine(("Exception occurred. " + ex.Message))
             End Try
-        End Sub 'Main 
-    End Class 'Class1
+        End Sub
+    End Class
 End Module
 
 Public NotInheritable Class SafeTokenHandle
@@ -103,7 +102,7 @@ Public NotInheritable Class SafeTokenHandle
     Private Sub New()
         MyBase.New(True)
 
-    End Sub 'New
+    End Sub
 
     Private Declare Auto Function LogonUser Lib "advapi32.dll" (ByVal lpszUsername As [String], _
             ByVal lpszDomain As [String], ByVal lpszPassword As [String], _
@@ -117,5 +116,5 @@ Public NotInheritable Class SafeTokenHandle
         Return CloseHandle(handle)
 
     End Function 'ReleaseHandle
-End Class 'SafeTokenHandle
+End Class
 '</Snippet1>

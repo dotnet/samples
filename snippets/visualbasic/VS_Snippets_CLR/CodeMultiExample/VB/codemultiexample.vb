@@ -6,7 +6,7 @@ Namespace CodeDomSamples
     Public Class CodeMultiExample
 
         Public Sub New()
-        End Sub 'New
+        End Sub
 
         Public Sub CodeEventReferenceExample()
             '<Snippet2>
@@ -17,7 +17,7 @@ Namespace CodeDomSamples
 
             '       Me.TestEvent
             '</Snippet2>
-        End Sub 'CodeEventReferenceExample
+        End Sub
 
         Public Sub CodeIndexerExample()
             '<Snippet3>						
@@ -27,7 +27,7 @@ Namespace CodeDomSamples
 
             '       Me(1)            		
             '</Snippet3>
-        End Sub 'CodeIndexerExample
+        End Sub
 
         Public Sub CodeDirectionExample()
             '<Snippet4>			
@@ -40,7 +40,7 @@ Namespace CodeDomSamples
 
             '      Me.TestMethod("TestParameter")
             '</Snippet4>			
-        End Sub 'CodeDirectionExample
+        End Sub
 
         Public Sub CreateExpressionExample()
             '<Snippet5>
@@ -51,7 +51,7 @@ Namespace CodeDomSamples
             '       New Date
             '</Snippet5>
 
-        End Sub 'CreateExpressionExample 
-    End Class 'CodeMultiExample 
+        End Sub
+    End Class
 End Namespace 'CodeDomSamples
 '</Snippet1>

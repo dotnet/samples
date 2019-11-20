@@ -30,6 +30,6 @@ Public Class MoveToTest
             ' di.Delete(True)        
         End Try
 
-    End Sub 'Main
-End Class 'MoveToTest
+    End Sub
+End Class
 '</snippet1>

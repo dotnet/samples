@@ -23,8 +23,8 @@ Public Class MyAttribute
    
    Public Sub New(myBool As Boolean)
       Me.myBoolValue = myBool
-   End Sub 'New
-End Class 'MyAttribute
+   End Sub
+End Class
 
 Class MyApplication
    Private Shared myEnumBuilder As EnumBuilder
@@ -46,7 +46,7 @@ Class MyApplication
       Catch e As Exception
          Console.WriteLine("The following exception is raised:" + e.Message)
       End Try
-   End Sub 'Main
+   End Sub
    
    Private Shared Sub CreateCallee(domain As AppDomain)
       Dim myAssemblyName As New AssemblyName()
@@ -72,7 +72,7 @@ Class MyApplication
       
       myEnumBuilder.CreateType()
       myEnumBuilder.SetCustomAttribute(myInfo, New Byte() {1, 0, 1})
-   End Sub 'CreateCallee 
-End Class 'MyApplication
+   End Sub
+End Class
 ' </Snippet2>
 ' </Snippet1>

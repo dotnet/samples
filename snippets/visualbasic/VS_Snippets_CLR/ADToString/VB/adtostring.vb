@@ -22,7 +22,7 @@ Class ADSetup
       Console.WriteLine()
       
       AppDomain.Unload(domain)
-   End Sub 'Main 
-End Class 'ADSetup
+   End Sub
+End Class
 
 '  </SNIPPET1>

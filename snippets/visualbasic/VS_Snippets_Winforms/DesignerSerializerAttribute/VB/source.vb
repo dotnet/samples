@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Collections
+﻿Imports System.Collections
 Imports System.ComponentModel
 Imports System.ComponentModel.Design
 Imports System.ComponentModel.Design.Serialization
@@ -22,7 +21,7 @@ Namespace ExampleControl
         Inherits System.ComponentModel.Design.Serialization.CodeDomSerializer
 
         Public Sub New()
-        End Sub 'New
+        End Sub
 
         Public Overrides Function Deserialize(ByVal manager As System.ComponentModel.Design.Serialization.IDesignerSerializationManager, ByVal codeObject As Object) As Object
             Return Nothing
@@ -32,6 +31,6 @@ Namespace ExampleControl
             Return Nothing
         End Function 'Serialize
 
-    End Class 'ExampleSerializer
+    End Class
 
 End Namespace 'ExampleControl 

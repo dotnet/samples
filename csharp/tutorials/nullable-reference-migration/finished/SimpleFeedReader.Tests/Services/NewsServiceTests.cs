@@ -17,8 +17,8 @@ namespace SimpleFeedReader.Tests.Services
 
         public NewsServiceTests()
         {
-            var mockMapper = new MapperConfiguration(cfg =>
-                cfg.AddProfile(new NewsStoryProfile()));
+            var mockMapper = new MapperConfiguration(cfg => cfg.AddProfile<NewsStoryProfile>());
+            mockMapper.AssertConfigurationIsValid();
             IMapper mapper = mockMapper.CreateMapper();
 
             _newsService = new NewsService(mapper);

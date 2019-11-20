@@ -18,9 +18,6 @@
 Imports System.IO
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
-
-
 
 Class HttpWebRequest_AllowWriteStreamBuffering
     Public Shared Sub Main()
@@ -75,5 +72,5 @@ Class HttpWebRequest_AllowWriteStreamBuffering
             Console.WriteLine("Source  :{0}", e.Source)
             Console.WriteLine("Message :{0}", e.Message)
         End Try
-    End Sub 'Main
-End Class 'HttpWebRequest_AllowWriteStreamBuffering 
+    End Sub
+End Class

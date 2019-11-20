@@ -1,5 +1,4 @@
 ﻿ 'This is a list of commonly used namespaces for a pane.
-Imports System
 Imports System.Windows
 Imports System.Windows.Documents
 Imports System.Windows.Controls
@@ -14,7 +13,7 @@ Namespace ImageElementExample
         Inherits Page
         Public Sub New()
 
-        End Sub 'New
+        End Sub
 
 
         Private Sub PageLoaded(ByVal sender As Object, ByVal args As RoutedEventArgs)
@@ -38,6 +37,6 @@ Namespace ImageElementExample
             Grid.SetRow(simpleImage, 1)
             simpleGrid.Children.Add(simpleImage)
 
-        End Sub 'PageLoaded 
-    End Class 'SimpleImageExample
+        End Sub
+    End Class
 End Namespace 'ImageElementExample

@@ -5,9 +5,8 @@ namespace Conversion
 {
     public static class ToArraySample1
     {
-        //This sample uses ToArray and query syntax to immediately evaluate a sequence into an array.
-        //
-        //Output:
+        // This sample uses ToArray and query syntax to immediately evaluate a sequence into an array.
+        // Output:
         // Every other double from highest to lowest:
         // 4.1
         // 2.3
@@ -29,9 +28,8 @@ namespace Conversion
             }
         }
 
-        //This sample uses ToArray and method syntax to immediately evaluate a sequence into an array.
-        //
-        //Output:
+        // This sample uses ToArray and method syntax to immediately evaluate a sequence into an array.
+        // Output:
         // Every other double from highest to lowest:
         // 4.1
         // 2.3

@@ -246,31 +246,31 @@ Class CalculatorClient
     Implements ICalculator
 
     Public Sub New() 
-    End Sub 'New
+    End Sub
     
     
     Public Sub New(ByVal endpointConfigurationName As String) 
         MyBase.New(endpointConfigurationName)
     
-    End Sub 'New
+    End Sub
     
     
     Public Sub New(ByVal endpointConfigurationName As String, ByVal remoteAddress As String) 
         MyBase.New(endpointConfigurationName, remoteAddress)
     
-    End Sub 'New
+    End Sub
     
     
     Public Sub New(ByVal endpointConfigurationName As String, ByVal remoteAddress As System.ServiceModel.EndpointAddress) 
         MyBase.New(endpointConfigurationName, remoteAddress)
     
-    End Sub 'New
+    End Sub
     
     
     Public Sub New(ByVal binding As System.ServiceModel.Channels.Binding, ByVal remoteAddress As System.ServiceModel.EndpointAddress) 
         MyBase.New(binding, remoteAddress)
     
-    End Sub 'New
+    End Sub
     
     
     Public Function Divide(ByVal a As Double, ByVal b As Double) As Double _
@@ -285,4 +285,4 @@ Class CalculatorClient
         Return MyBase.Channel.CalculateTax(a)
     
     End Function 'CalculateTax
-End Class 'CalculatorClient
+End Class

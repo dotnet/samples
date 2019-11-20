@@ -1,5 +1,4 @@
 ﻿ '<snippet1>
-Imports System
 Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Text
@@ -25,7 +24,7 @@ Public Class Form1
         Me.ResumeLayout(False)
         Me.PerformLayout()
     
-    End Sub 'New
+    End Sub
     
     
     ' Handle the double click event.
@@ -64,7 +63,7 @@ Public Class DoubleClickButton
         ' Set the style so a double click event occurs.
         SetStyle(ControlStyles.StandardClick Or ControlStyles.StandardDoubleClick, True)
     
-    End Sub 'New
-End Class 'DoubleClickButton
+    End Sub
+End Class
 '</snippet2>
 '</snippet1>

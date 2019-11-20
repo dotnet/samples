@@ -39,7 +39,6 @@
 ' *
 ' ****************************************************************************
 
-Imports System
 Imports System.ComponentModel
 Imports System.Windows
 Imports System.Windows.Documents
@@ -89,7 +88,7 @@ Namespace InvokePatternSample
         '''--------------------------------------------------------------------
         Private Sub ChildElementsAdded(ByVal sender As Object, ByVal e As StructureChangedEventArgs)
             clientWindow.Dispatcher.BeginInvoke(DispatcherPriority.Background, New DispatcherOperationCallback(AddressOf NotifyChildElementsAdded), Nothing)
-        End Sub 'ChildElementsAdded
+        End Sub
 
 
         '''--------------------------------------------------------------------
@@ -115,7 +114,7 @@ Namespace InvokePatternSample
         '''--------------------------------------------------------------------
         Private Sub onTargetClose(ByVal sender As Object, ByVal e As AutomationEventArgs)
             clientWindow.Dispatcher.BeginInvoke(DispatcherPriority.Background, New DispatcherOperationCallback(AddressOf CloseApp), Nothing)
-        End Sub 'onTargetClose
+        End Sub
 
 
         '''--------------------------------------------------------------------
@@ -165,7 +164,7 @@ Namespace InvokePatternSample
 
             ' Iterate through the controls in the target application.
             FindTreeViewsInTarget()
-        End Sub 'OnStartup
+        End Sub
 
 
         '''--------------------------------------------------------------------
@@ -263,7 +262,7 @@ Namespace InvokePatternSample
             clientWindow.Content = clientScrollViewer
             clientWindow.Show()
 
-        End Sub 'CreateWindow
+        End Sub
 
 
         '''--------------------------------------------------------------------
@@ -300,7 +299,7 @@ Namespace InvokePatternSample
                 FindTreeViewDescendants(targetTreeViewElements(elementIndex), elementIndex)
             Next elementIndex
 
-        End Sub 'FindTreeViewsInTarget
+        End Sub
 
 
         '<Snippet1100>
@@ -412,7 +411,7 @@ Namespace InvokePatternSample
                 elementNode = TreeWalker.ControlViewWalker.GetNextSibling(elementNode)
             End While
 
-        End Sub 'FindTreeViewDescendants
+        End Sub
 
         '</Snippet1100>
         '''--------------------------------------------------------------------
@@ -430,7 +429,7 @@ Namespace InvokePatternSample
             End If
             t.Toggle()
             statusText.Text = "Element toggled " + t.Current.ToggleState.ToString()
-        End Sub 'Toggle_Click
+        End Sub
 
         '<Snippet1102>
         '''--------------------------------------------------------------------
@@ -455,7 +454,7 @@ Namespace InvokePatternSample
             End If
             targetInvokePattern.Invoke()
             statusText.Text = "Button invoked."
-        End Sub 'Invoke_Click
+        End Sub
 
         '</Snippet1102>
         '''--------------------------------------------------------------------
@@ -486,7 +485,7 @@ Namespace InvokePatternSample
                 ' The current state of the element is LeafNode.
                 Output("Unable to expand or collapse the element.")
             End Try
-        End Sub 'ExpandCollapse_Click
+        End Sub
 
 
         '''--------------------------------------------------------------------
@@ -503,7 +502,7 @@ Namespace InvokePatternSample
             clientWindow.Dispatcher.BeginInvoke( _
             DispatcherPriority.Background, _
             New OutputDelegate(AddressOf NotifyTargetEvent), message)
-        End Sub 'Output
+        End Sub
 
         '''--------------------------------------------------------------------
         ''' <summary>
@@ -514,7 +513,7 @@ Namespace InvokePatternSample
         Private Sub NotifyTargetEvent(ByVal arg As String)
             Dim message As String = DirectCast(arg, String)
             statusText.Text = message
-        End Sub 'NotifyTextChanged
+        End Sub
 
         '''--------------------------------------------------------------------
         ''' <summary>
@@ -529,8 +528,8 @@ Namespace InvokePatternSample
                 ' and call its Run() method to start it.
                 Dim app As New InvokePatternApp()
                 app.Run()
-            End Sub 'Main
-        End Class 'TestMain
+            End Sub
+        End Class
 
         '''--------------------------------------------------------------------
         ''' <summary>
@@ -543,10 +542,10 @@ Namespace InvokePatternSample
                 Automation.RemoveAllEventHandlers()
             End If
             MyBase.OnExit(e)
-        End Sub 'OnExit
+        End Sub
 #End Region
 
-    End Class 'InvokePatternApp '
+    End Class
 
 End Namespace
 

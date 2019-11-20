@@ -32,8 +32,8 @@ NotInheritable Public Class App
         ' Display the result using ja-JP Compare of coté < côte. 
         Console.WriteLine("ja-JP Compare: {0} {2} {1}", _
                           s2, s3, sign((ci.Compare(s2, s3) + 1)))
-    End Sub 'Main
-End Class 'App
+    End Sub
+End Class
 
 ' This code produces the following output.
 ' 

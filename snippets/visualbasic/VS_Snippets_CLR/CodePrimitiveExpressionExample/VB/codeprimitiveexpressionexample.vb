@@ -17,7 +17,7 @@ Namespace CodeDomSamples
             Dim nullPrimitive As New CodePrimitiveExpression(Nothing)
             '</Snippet2>
 
-        End Sub 'New 
-    End Class 'CodePrimitiveExpressionExample
+        End Sub
+    End Class
 End Namespace 'CodeDomSamples
 '</Snippet1>

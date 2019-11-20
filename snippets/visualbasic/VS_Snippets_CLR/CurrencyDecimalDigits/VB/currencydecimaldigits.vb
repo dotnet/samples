@@ -18,9 +18,9 @@ Class NumberFormatInfoSample
       nfi.CurrencyDecimalDigits = 4
       Console.WriteLine(myInt.ToString("C", nfi))
 
-   End Sub 'Main 
+   End Sub
 
-End Class 'NumberFormatInfoSample
+End Class
 
 
 ' This code produces the following output.

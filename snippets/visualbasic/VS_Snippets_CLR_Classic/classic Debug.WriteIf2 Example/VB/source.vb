@@ -20,7 +20,7 @@ Public Class Form1
         
         ' Write a second message if the TraceSwitch level is set to Error or higher.
         Debug.WriteLineIf(generalSwitch.TraceError, " Please use a different category.")
-    End Sub 'MyErrorMethod
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

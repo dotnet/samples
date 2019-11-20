@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Windows
 Imports System.Data
 Imports System.Xml
@@ -18,7 +17,7 @@ Partial Class App
         Dim win2 As New AppInCode()
         win2.Show()
 
-    End Sub 'OnStartup 
-End Class 'App
+    End Sub
+End Class
 
 

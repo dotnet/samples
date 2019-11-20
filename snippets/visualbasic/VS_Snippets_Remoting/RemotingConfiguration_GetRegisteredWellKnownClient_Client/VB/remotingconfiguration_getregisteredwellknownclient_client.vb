@@ -30,6 +30,6 @@ Public Class Client
       Console.WriteLine("The Object type is:" + myEntries(0).ObjectType.ToString())
       Console.WriteLine("The Object Url is:" + myEntries(0).ObjectUrl.ToString())
 ' </Snippet1>
-   End Sub 'Main 
-End Class 'Client
+   End Sub
+End Class
 

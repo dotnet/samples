@@ -24,6 +24,6 @@ Public Class Sample
         Dim shallow As XmlDocument = CType(doc.CloneNode(False), XmlDocument)
         Console.WriteLine(shallow.Name + shallow.OuterXml)
         Console.WriteLine(shallow.ChildNodes.Count)
-    End Sub 'Main 
-End Class 'Sample
+    End Sub
+End Class
 ' </Snippet1>

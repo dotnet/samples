@@ -27,11 +27,11 @@ public class FindData
     public string alternateFileName = null;
 }
 
-public class LibWrap
+internal static class NativeMethods
 {
     // Declares a managed prototype for the unmanaged function.
     [DllImport("Kernel32.dll", CharSet = CharSet.Auto)]
-    public static extern IntPtr FindFirstFile(
+    internal static extern IntPtr FindFirstFile(
         string fileName, [In, Out] FindData findFileData);
 }
 //</snippet17>
@@ -42,7 +42,7 @@ public class App
     public static void Main()
     {
         FindData fd = new FindData();
-        IntPtr handle = LibWrap.FindFirstFile("C:\\*.*", fd);
+        IntPtr handle = NativeMethods.FindFirstFile("C:\\*.*", fd);
         Console.WriteLine($"The first file: {fd.fileName}");
     }
 }

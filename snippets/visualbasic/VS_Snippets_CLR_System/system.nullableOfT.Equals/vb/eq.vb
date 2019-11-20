@@ -29,8 +29,8 @@ Class Sample
             Console.Write("are not")
         End If
         Console.WriteLine(" equal.")
-    End Sub 'Main 
-End Class 'Sample
+    End Sub
+End Class
 
 '
 'This code example produces the following results:

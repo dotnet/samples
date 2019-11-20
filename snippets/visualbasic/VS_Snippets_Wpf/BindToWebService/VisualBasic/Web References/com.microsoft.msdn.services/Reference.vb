@@ -13,12 +13,10 @@
 ' 
 
 
-Imports Microsoft.VisualBasic
 Imports System.Diagnostics
 Imports System.Web.Services
 Imports System.ComponentModel
 Imports System.Web.Services.Protocols
-Imports System
 Imports System.Xml.Serialization
 
 Namespace BindtoContentService.com.microsoft.msdn.services

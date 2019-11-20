@@ -38,7 +38,6 @@
 ' * PARTICULAR PURPOSE.
 ' * 
 ' *****************************************************************************
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 Imports System.Windows.Automation
@@ -90,7 +89,7 @@ Class ClientForm
         Dim UIAutoThread As New Thread(threadDelegate)
         UIAutoThread.Start()
 
-    End Sub 'New
+    End Sub
 
 
 
@@ -104,7 +103,7 @@ Class ClientForm
         focusHandler = New AutomationFocusChangedEventHandler(AddressOf OnFocusChanged)
         Automation.AddAutomationFocusChangedEventHandler(focusHandler)
 
-    End Sub 'StartListening
+    End Sub
 
 
     ''' <summary>
@@ -114,7 +113,7 @@ Class ClientForm
         eventTimer.Stop()
         Automation.RemoveAutomationFocusChangedEventHandler(focusHandler)
 
-    End Sub 'StopListening
+    End Sub
 
 
 
@@ -137,7 +136,7 @@ Class ClientForm
             UpdateHighlight()
         End If
 
-    End Sub 'OnFocusChanged
+    End Sub
 
 
     ''' <summary>
@@ -152,7 +151,7 @@ Class ClientForm
                 CInt(focusedRect.Width), CInt(focusedRect.Height))
             .Visible = True
         End With
-    End Sub 'UpdateHighlight
+    End Sub
 
 
     ''' <summary>
@@ -166,7 +165,7 @@ Class ClientForm
 
         UpdateHighlight()
 
-    End Sub 'OnTimerTick
+    End Sub
 
 
     ''' <summary>
@@ -188,7 +187,7 @@ Class ClientForm
             useTimer = False
         End If
 
-    End Sub 'tbInterval_ValueChanged
+    End Sub
 
 
     ''' <summary>
@@ -202,7 +201,7 @@ Class ClientForm
 
         Application.Exit()
 
-    End Sub 'btnExit_Click
+    End Sub
 
 
 
@@ -219,8 +218,8 @@ Class ClientForm
         Dim UIAutoThread As New Thread(threadDelegate)
         UIAutoThread.Start()
 
-    End Sub 'ClientForm_FormClosing
+    End Sub
 
 
-End Class 'ClientForm 
+End Class
 

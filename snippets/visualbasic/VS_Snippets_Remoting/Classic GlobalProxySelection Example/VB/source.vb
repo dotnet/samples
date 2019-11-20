@@ -9,5 +9,5 @@ Public Class Class1
         Dim proxyURI As New Uri("http://webproxy:80")
         GlobalProxySelection.Select = New WebProxy(proxyURI)
         ' </Snippet1>
-    End Sub 'Method1 
-End Class 'Class1
+    End Sub
+End Class

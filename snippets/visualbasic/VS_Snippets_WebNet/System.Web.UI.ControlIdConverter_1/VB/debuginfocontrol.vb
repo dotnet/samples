@@ -11,12 +11,12 @@ Namespace Samples.AspNet.VB
 
 
      Public Sub New()
-     End Sub 'New
+     End Sub
 
 
      Public Sub New(controlID As String)
         ControlID = controlID
-     End Sub 'New
+     End Sub
 
 
      <DefaultValue(""), TypeConverter(GetType(ControlIDConverter))>  _
@@ -65,7 +65,7 @@ Namespace Samples.AspNet.VB
            End If
            writer.Write("</Font>")
         End If
-     End Sub 'Render
-  End Class 'DebugInfoControl
+     End Sub
+  End Class
 End Namespace
 ' </Snippet1>

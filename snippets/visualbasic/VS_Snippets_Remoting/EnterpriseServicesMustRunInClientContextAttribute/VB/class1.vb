@@ -10,14 +10,14 @@ Imports System.Reflection
 <MustRunInClientContext()>  _
 Public Class MustRunInClientContextAttribute_Ctor
     Inherits ServicedComponent
-End Class 'MustRunInClientContextAttribute_Ctor
+End Class
 ' </snippet1>
 
 ' <snippet2>
 <MustRunInClientContext(False)>  _
 Public Class MustRunInClientContextAttribute_Ctor_Bool
     Inherits ServicedComponent
-End Class 'MustRunInClientContextAttribute_Ctor_Bool
+End Class
 ' </snippet2>
 
 ' <snippet3>
@@ -32,8 +32,8 @@ Public Class MustRunInClientContextAttribute_Value
         ' Display the value of the attribute's Value property.
         MsgBox("MustRunInClientContextAttribute.Value: " & attribute.Value)
     
-    End Sub 'ValueExample
-End Class 'MustRunInClientContextAttribute_Value
+    End Sub
+End Class
 ' </snippet3>
 
 ' </snippet0>
@@ -49,5 +49,5 @@ Public Class MustRunInClientContextAttribute_Example
         ' Demonstrate the MustRunInClientContextAttribute properties.
         valueExample.ValueExample()
     
-    End Sub 'Main
-End Class 'MustRunInClientContextAttribute_Example
+    End Sub
+End Class

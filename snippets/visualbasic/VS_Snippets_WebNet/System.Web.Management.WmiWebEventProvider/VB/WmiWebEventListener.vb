@@ -72,7 +72,7 @@ As ManagementBaseObject)
                 ev("EventMessage"))
         End Select
 
-    End Sub 'DisplayEventInformation
+    End Sub
 
     ' End DisplayEventInformation.
     ' The main entry point for the application.
@@ -133,8 +133,8 @@ As ManagementBaseObject)
             End Try
         End While
 
-    End Sub 'Main 
-End Class 'SampleWmiWebEventListener 
+    End Sub
+End Class
 
 
 ' </Snippet1>

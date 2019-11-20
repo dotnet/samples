@@ -3,7 +3,6 @@
 
 ' <Snippet1>
 Imports System.Text
-Imports Microsoft.VisualBasic
 
 Public Class SamplesEncoding   
 
@@ -34,7 +33,7 @@ Public Class SamplesEncoding
       PrintCountsAndBytes(myChars, u16BE)
       PrintCountsAndBytes(myChars, u32)
 
-   End Sub 'Main
+   End Sub
 
 
    Public Shared Sub PrintCountsAndBytes(chars() As Char, enc As Encoding)
@@ -56,7 +55,7 @@ Public Class SamplesEncoding
       ' Display all the encoded bytes.
       PrintHexBytes(bytes)
 
-   End Sub 'PrintCountsAndBytes
+   End Sub
 
 
    Public Shared Sub PrintHexBytes(bytes() As Byte)
@@ -71,9 +70,9 @@ Public Class SamplesEncoding
          Console.WriteLine()
       End If
 
-   End Sub 'PrintHexBytes 
+   End Sub
 
-End Class 'SamplesEncoding
+End Class
 
 
 'This code produces the following output.

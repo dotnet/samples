@@ -22,7 +22,7 @@ Namespace CTorNeedsTagAtt
    
    Public Sub New(tag As String)
       Me.NameTag = tag
-   End Sub 'New
+   End Sub
    
    Private UserMessage As String = Nothing
    
@@ -38,7 +38,7 @@ Namespace CTorNeedsTagAtt
       
    Protected Overrides Sub Render(output As HtmlTextWriter)
       output.Write("Testing the ConstructorNeedsTagAttribute Class.")
-   End Sub 'Render
- End Class 'Simple
+   End Sub
+ End Class
 ' </Snippet1>
 End Namespace 'CTorNeedsTagAtt

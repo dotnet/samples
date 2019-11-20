@@ -150,7 +150,7 @@ Public Class Sync_Send_Receive
         s.SendTo(msg, endPoint)
         s.Close()
     
-    End Sub 'SendTo1
+    End Sub
     
     '</Snippet5>
     '<Snippet6>  
@@ -166,7 +166,7 @@ Public Class Sync_Send_Receive
         s.SendTo(msg, SocketFlags.None, endPoint)
         s.Close()
     
-    End Sub 'SendTo2
+    End Sub
     
     '</Snippet6>
     '<Snippet7>	
@@ -182,7 +182,7 @@ Public Class Sync_Send_Receive
         s.SendTo(msg, msg.Length, SocketFlags.None, endPoint)
         s.Close()
     
-    End Sub 'SendTo3
+    End Sub
     
     '</Snippet7>
     '<Snippet8>
@@ -198,7 +198,7 @@ Public Class Sync_Send_Receive
         s.SendTo(msg, 0, msg.Length, SocketFlags.None, endPoint)
         s.Close()
     
-    End Sub 'SendTo4
+    End Sub
     
     
     '</Snippet8>
@@ -224,7 +224,7 @@ Public Class Sync_Send_Receive
         s.ReceiveFrom(msg, senderRemote)
         s.Close()
     
-    End Sub 'ReceiveFrom1
+    End Sub
     
     '</Snippet9>
     '<Snippet10>  
@@ -247,7 +247,7 @@ Public Class Sync_Send_Receive
         s.ReceiveFrom(msg, SocketFlags.None, senderRemote)
         s.Close()
     
-    End Sub 'ReceiveFrom2
+    End Sub
     
     '</Snippet10>
     '<Snippet11>	
@@ -270,7 +270,7 @@ Public Class Sync_Send_Receive
         s.ReceiveFrom(msg, msg.Length, SocketFlags.None, senderRemote)
         s.Close()
     
-    End Sub 'ReceiveFrom3
+    End Sub
     
     '</Snippet11>
     '<Snippet12>
@@ -292,7 +292,7 @@ Public Class Sync_Send_Receive
         s.ReceiveFrom(msg, 0, msg.Length, SocketFlags.None, senderRemote)
         s.Close()
     
-    End Sub 'ReceiveFrom4
+    End Sub
     
     '</Snippet12>
     
@@ -331,7 +331,7 @@ Public Class Sync_Send_Receive
         End While
         myThread4.Join()
     
-    End Sub 'RunUdpTests
+    End Sub
      
     'Main tests the snippets.
     ' To test tcp - run 2 instances source /s runs server, source /c runs client.
@@ -391,5 +391,5 @@ Public Class Sync_Send_Receive
         Return 0
     
     End Function 'Main 
-End Class 'Sync_Send_Receive
+End Class
 

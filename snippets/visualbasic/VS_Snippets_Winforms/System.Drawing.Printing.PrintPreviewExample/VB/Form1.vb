@@ -1,5 +1,4 @@
 ﻿ '<snippet0>
-Imports System
 Imports System.Drawing
 Imports System.IO
 Imports System.Drawing.Printing

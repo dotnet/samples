@@ -7,7 +7,6 @@ Imports System.IO
 Imports System.Net
 Imports System.Net.Sockets
 Imports System.Threading
-Imports Microsoft.VisualBasic
 
 Public Class NetworkStream_ASync_Send_Receive
    
@@ -74,7 +73,7 @@ Public Class NetworkStream_ASync_Send_Receive
       Catch exception As Exception
          Console.WriteLine(("Exception Thrown: " + exception.ToString()))
       End Try
-   End Sub 'MySample
+   End Sub
    
    
    '<Snippet4>
@@ -83,7 +82,7 @@ Public Class NetworkStream_ASync_Send_Receive
       
       Dim myNetworkStream As NetworkStream = CType(ar.AsyncState, NetworkStream)
       myNetworkStream.EndWrite(ar)
-   End Sub 'myWriteCallBack
+   End Sub
    
    
    '</Snippet4>
@@ -109,7 +108,7 @@ Public Class NetworkStream_ASync_Send_Receive
       
       ' Print out the received message to the console.
       Console.WriteLine(("You received the following message : " + myCompleteMessage))
-   End Sub 'myReadCallBack
+   End Sub
    
    '</Snippet5>
 
@@ -129,7 +128,7 @@ Public Class NetworkStream_ASync_Send_Receive
             Console.WriteLine(("Must use 'yes' to allow the NetworkStream to own the Socket or " + ControlChars.NewLine + " 'no' to prohibit NetworkStream from owning the Socket. "))
          End If
       End If
-   End Sub 'Main 
-End Class 'NetworkStream_ASync_Send_Receive
+   End Sub
+End Class
 
 

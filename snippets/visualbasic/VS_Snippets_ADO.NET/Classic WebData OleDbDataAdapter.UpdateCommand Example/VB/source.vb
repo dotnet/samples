@@ -6,7 +6,7 @@ Imports System.Data.OleDb
 Module Module1
 
     Sub Main()
-        Dim cnn As OleDbConnection = New OleDbConnection("Provider=sqloledb;Data Source=(local);Initial Catalog=Northwind;" _
+        Dim cnn As New OleDbConnection("Provider=sqloledb;Data Source=(local);Initial Catalog=Northwind;" _
             & "Integrated Security=SSPI")
         Dim da As OleDbDataAdapter = CreateCustomerAdapter(cnn)
         Console.WriteLine(da.ToString)
@@ -19,7 +19,7 @@ Module Module1
     Private Function CreateCustomerAdapter( _
         ByVal connection As OleDbConnection) As OleDbDataAdapter
 
-        Dim dataAdapter As OleDbDataAdapter = New OleDbDataAdapter()
+        Dim dataAdapter As New OleDbDataAdapter()
         Dim command As OleDbCommand
         Dim parameter As OleDbParameter
 

@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
     ' <Snippet1>
@@ -34,8 +33,8 @@ Public Class Form1
          ' Invoke the Paint method to paint the cell with the brushes.
          gridCol.PaintCol(g, cellRect, cm, hi.Row, bBrush, fBrush, False)
       End If
-   End Sub 'PaintCell
-End Class 'Form1 
+   End Sub
+End Class
 
 Public Class MyGridColumn
 Inherits DataGridTextBoxColumn

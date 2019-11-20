@@ -9,7 +9,7 @@ Class XslCompiledTransformLoad
     
     Shared Sub Main() 
     
-    End Sub 'Main 
+    End Sub
     
 ' Load with XPathDocument.
 Shared Sub XslCompiledTransform_Load1() 
@@ -17,7 +17,7 @@ Shared Sub XslCompiledTransform_Load1()
 Dim xslt As New XslCompiledTransform()
 xslt.Load(New XPathDocument("http://serverName/data/xsl/sort.xsl"))
 '</snippet1>
-End Sub 'XslCompiledTransform_Load1
+End Sub
 
     
 '==============================//
@@ -34,7 +34,7 @@ resolver.Credentials = CredentialCache.DefaultCredentials
 ' Load the style sheet.
 xslt.Load("http://serverName/data/xsl/sort.xsl", Nothing, resolver)
 '</snippet2>    
-End Sub 'XslCompiledTransform_Load2
+End Sub
      
 '==============================//
 ' Load reader with resolver & settings
@@ -55,7 +55,7 @@ Dim settings As New XsltSettings(False, True)
 ' Load the style sheet.
 xslt.Load(reader, settings, resolver)
 '</snippet3>    
-End Sub 'XslCompiledTransform_Load3
+End Sub
      
 '==============================//
 ' Load with XPathDocument and credentials
@@ -76,7 +76,7 @@ resolver.Credentials = myCred
 Dim xslt As New XslCompiledTransform()
 xslt.Load(New XPathDocument("http://serverName/data/xsl/sort.xsl"), XsltSettings.Default, resolver)
 '</snippet4>    
-End Sub 'XslCompiledTransform_Load4
+End Sub
     
 '==============================//
 ' Load with XmlReader
@@ -90,7 +90,7 @@ reader.ReadToDescendant("xsl:stylesheet")
 Dim xslt As New XslCompiledTransform()
 xslt.Load(reader)
 '</snippet5>    
-End Sub 'XslCompiledTransform_Load5
+End Sub
        
 '==============================//
 ' Load with script enabled.
@@ -103,7 +103,7 @@ Dim settings As New XsltSettings(False, True)
 Dim xslt As New XslCompiledTransform()
 xslt.Load("sort.xsl", settings, New XmlUrlResolver())
 '</snippet6>    
-End Sub 'XslCompiledTransform_Load6
+End Sub
      
 '==============================//
 ' Load with default XSLT settings.
@@ -113,7 +113,7 @@ Shared Sub XslCompiledTransform_Load7()
 Dim xslt As New XslCompiledTransform()
 xslt.Load("sort.xsl", XsltSettings.Default, New XmlUrlResolver())
 '</snippet7>    
-End Sub 'XslCompiledTransform_Load7
+End Sub
      
 '==============================//
 ' Load with trusted XSLT settings.
@@ -134,7 +134,7 @@ resolver.Credentials = myCred
 Dim xslt As New XslCompiledTransform()
 xslt.Load("http://serverName/data/script.xsl", XsltSettings.TrustedXslt, resolver)
 '</snippet8>    
-End Sub 'XslCompiledTransform_Load8
+End Sub
      
 '==============================//
 ' Load with script enabled.
@@ -151,7 +151,7 @@ Dim resolver As New XmlSecureResolver(New XmlUrlResolver(), "http://serverName/d
 Dim xslt As New XslCompiledTransform()
 xslt.Load("http://serverName/data/sort.xsl", settings, resolver)
 '</snippet9>    
-End Sub 'XslCompiledTransform_Load9 
+End Sub
 
 '==============================//
 ' 
@@ -172,7 +172,7 @@ Dim writer As XmlWriter = XmlWriter.Create("output.xml", settings)
 xslt.Transform("books.xml", writer)
 writer.Close()
 '</snippet10>    
-End Sub 'XslCompiledTransform_Debug
+End Sub
 
 '==============================//
 ' Load w/ cache
@@ -198,6 +198,6 @@ Dim xslt As XslCompiledTransform = New XslCompiledTransform()
 xslt.Load("http://serverName/data/xsl/order.xsl", XsltSettings.Default, resolver)
 
 '</snippet11>    
-End Sub 'Cache
+End Sub
 
-End Class 'XslCompiledTransformLoad
+End Class

@@ -1,5 +1,4 @@
 ﻿ '<Snippet1>
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Ink
@@ -17,7 +16,7 @@ Class Window1
             inkCanvas1.SetEnabledGestures(New ApplicationGesture() {ApplicationGesture.ScratchOut})
         End If
 
-    End Sub 'New
+    End Sub
 
     Private Sub inkCanvas1_Gesture(ByVal sender As Object, ByVal e As InkCanvasGestureEventArgs)
 
@@ -38,6 +37,6 @@ Class Window1
             End If
         End If
 
-    End Sub 'inkCanvas1_Gesture
-End Class 'Window1
+    End Sub
+End Class
 '</Snippet1>

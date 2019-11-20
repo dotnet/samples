@@ -1,12 +1,8 @@
-﻿
-Imports System
-Imports System.Drawing
+﻿Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Windows.Forms
 Imports System.Data
-Imports Microsoft.VisualBasic
-
 
 Namespace TN_Checked
     

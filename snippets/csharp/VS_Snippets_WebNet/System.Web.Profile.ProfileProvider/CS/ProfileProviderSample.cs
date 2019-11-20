@@ -454,7 +454,7 @@ namespace Samples.AspNet.Profile
 
   private void SetZipCode(int uniqueID, string zipCode)
   {
-    if (zipCode == null) { zipCode = String.Empty; }
+    zipCode ??= String.Empty;
 
     OdbcConnection conn = new OdbcConnection(connectionString);
     OdbcCommand cmd = new OdbcCommand("DELETE FROM ProfileData WHERE UniqueID = ?", conn);

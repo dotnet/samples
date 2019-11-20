@@ -1,5 +1,4 @@
 ﻿'<Snippet0>
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 Imports System.Windows.Forms.VisualStyles
@@ -28,7 +27,7 @@ Namespace SimpleControlRenderingSample
         Public Sub New()
             Me.Location = New Point(50, 50)
             Me.Size = New Size(40, 40)
-        End Sub 'New
+        End Sub
 
         '<Snippet10>
         ' Render the drop-down arrow with or without visual styles.

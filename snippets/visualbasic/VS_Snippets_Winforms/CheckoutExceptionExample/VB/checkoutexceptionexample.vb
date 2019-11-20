@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.ComponentModel.Design
+﻿Imports System.ComponentModel.Design
 
 Namespace MiscCompModSamples
 

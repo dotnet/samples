@@ -219,7 +219,7 @@ profileSection.Enabled = false
                 Console.WriteLine("command line for errors.")
             End Try
         End Sub
-    End Class ' UsingProfileSection.
+    End Class
     
 End Namespace ' Samples.Aspnet.SystemWebConfiguration
 

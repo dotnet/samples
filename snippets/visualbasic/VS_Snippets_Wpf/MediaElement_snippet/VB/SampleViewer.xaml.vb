@@ -1,5 +1,4 @@
 ﻿ 'This is a list of commonly used namespaces for a pane.
-Imports System
 Imports System.Windows
 Imports System.Windows.Documents
 Imports System.Windows.Controls
@@ -17,6 +16,6 @@ Namespace MediaElementExample
         Public Sub New()
             InitializeComponent()
 
-        End Sub 'New
-    End Class 'SampleViewer 
+        End Sub
+    End Class
 End Namespace 'MediaElementExample

@@ -4,8 +4,8 @@ Class Sample
    Public Shared Sub Main()
       Console.WriteLine()
       Console.WriteLine("StackTrace: '{0}'", Environment.StackTrace)
-   End Sub 'Main
-End Class 'Sample
+   End Sub
+End Class
 '
 'This example produces the following results:
 '

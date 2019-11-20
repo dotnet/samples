@@ -5,7 +5,6 @@
 'will respond with a challenge string which is extracted using 'GetResponse' method.
 
 Imports System.Net
-Imports Microsoft.VisualBasic
 Imports System.Environment
 
 Class HttpWebResponseSnippet
@@ -26,7 +25,7 @@ Class HttpWebResponseSnippet
         Console.WriteLine("Press any key to continue...")
         Console.ReadLine()
         Return
-    End Sub 'Main
+    End Sub
     
 ' <Snippet1>    
     Public Shared Sub GetPage(url As [String])
@@ -58,4 +57,4 @@ Class HttpWebResponseSnippet
         End Try
     End Sub 
 ' </Snippet1>
-End Class 'HttpWebResponseSnippet
+End Class

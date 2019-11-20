@@ -7,8 +7,6 @@
 
 Imports System.Net
 Imports System.Net.Sockets
-Imports Microsoft.VisualBasic
-
 
 Class HostInfoSample
     
@@ -23,7 +21,7 @@ Class HostInfoSample
         Else
             hostInfoSampleObj.GetIpAddressList("www.microsoft.net")
         End If
-    End Sub 'Main
+    End Sub
 ' <Snippet1>	     
     Public Sub GetIpAddressList(hostString As [String])
         Try
@@ -49,6 +47,6 @@ Class HostInfoSample
             Console.WriteLine(("Source : " + e.Source))
             Console.WriteLine(("Message : " + e.Message))
         End Try
-    End Sub 'GetIpAddressList
+    End Sub
 ' </Snippet1>	
-End Class 'HostInfoSample 
+End Class

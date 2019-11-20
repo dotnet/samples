@@ -6,7 +6,7 @@ using namespace System::Runtime::InteropServices;
 //<snippet40>
 public delegate bool CallBack(int handle, IntPtr param);
 
-public ref class LibWrap
+private ref class NativeMethods
 {
 public:
     // Passes a managed object as an LPARAM type.
@@ -28,7 +28,7 @@ public:
 
         // Platform invoke prevents the delegate from being garbage
         // collected before the call ends.
-        LibWrap::EnumWindows(cewp, (IntPtr)gch);
+        NativeMethods::EnumWindows(cewp, (IntPtr)gch);
         gch.Free();
     }
 

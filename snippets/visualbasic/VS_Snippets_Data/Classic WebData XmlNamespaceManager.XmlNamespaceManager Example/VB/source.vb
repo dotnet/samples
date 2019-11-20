@@ -21,5 +21,5 @@ Public Class Class1
             Console.WriteLine("XmlNamespaceManager Prefix:{0}",             nsmanager.LookupPrefix(nsmanager.NameTable.Get(reader.NamespaceURI)))
         End While
         ' </Snippet1>
-    End Sub 'Method1
-End Class 'Class1 
+    End Sub
+End Class

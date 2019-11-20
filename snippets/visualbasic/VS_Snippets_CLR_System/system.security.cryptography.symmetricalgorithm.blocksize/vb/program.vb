@@ -80,8 +80,8 @@ Class Program
             Console.WriteLine(vbTab + "Legal max block size = " + k.MaxSize)
         Next k
 
-    End Sub 'Main 
-End Class 'Program
+    End Sub
+End Class
 'This sample produces the following output:
 'AesManaged
 '        Legal min key size = 128

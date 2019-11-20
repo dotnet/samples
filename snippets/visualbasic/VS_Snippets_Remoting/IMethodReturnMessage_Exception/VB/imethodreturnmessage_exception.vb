@@ -18,8 +18,8 @@ Namespace CustomProxySample
       
       Public Sub RaiseException()
          Throw New Exception("Raising an exception.")
-      End Sub 'RaiseException
-   End Class 'CustomServer
+      End Sub
+   End Class
    
    <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> _
    Public Class MyProxy
@@ -32,7 +32,7 @@ Namespace CustomProxySample
          myMarshalByRefObject = CType(Activator.CreateInstance(myType), MarshalByRefObject)
          Dim myObjRef As ObjRef = RemotingServices.Marshal(myMarshalByRefObject)
          _URI = myObjRef.URI
-      End Sub 'New
+      End Sub
       
 ' <Snippet1>
       Public Overrides Function Invoke(myMessage As IMessage) As IMessage
@@ -49,7 +49,7 @@ Namespace CustomProxySample
          Return myIMethodReturnMessage
       End Function 'Invoke
 ' </Snippet1>
-   End Class 'MyProxy
+   End Class
 
    Public Class ProxySample
       <SecurityPermission(SecurityAction.LinkDemand)> _
@@ -64,6 +64,6 @@ Namespace CustomProxySample
          Catch e As Exception
             Console.WriteLine("Exception: " + e.Message)
          End Try
-      End Sub 'Main
-   End Class 'ProxySample
+      End Sub
+   End Class
 End Namespace 'CustomProxySample

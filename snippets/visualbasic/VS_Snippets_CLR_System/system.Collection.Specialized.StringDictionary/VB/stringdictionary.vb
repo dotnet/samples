@@ -59,7 +59,7 @@ Public Class SamplesStringDictionary
       Console.WriteLine("The collection contains the following elements after it is cleared:")
       PrintKeysAndValues1(myCol)
 
-   End Sub 'Main
+   End Sub
 
 
    ' Uses the For Each statement which hides the complexity of the enumerator.
@@ -71,7 +71,7 @@ Public Class SamplesStringDictionary
          Console.WriteLine("   {0,-25} {1}", de.Key, de.Value)
       Next de
       Console.WriteLine()
-   End Sub 'PrintKeysAndValues1
+   End Sub
 
 
    ' Uses the enumerator. 
@@ -85,7 +85,7 @@ Public Class SamplesStringDictionary
          Console.WriteLine("   {0,-25} {1}", de.Key, de.Value)
       End While
       Console.WriteLine()
-   End Sub 'PrintKeysAndValues2
+   End Sub
 
 
    ' Uses the Keys, Values, Count, and Item properties.
@@ -99,9 +99,9 @@ Public Class SamplesStringDictionary
          Console.WriteLine("   {0,-5} {1,-25} {2}", i, myKeys(i), myCol(myKeys(i)))
       Next i
       Console.WriteLine()
-   End Sub 'PrintKeysAndValues3
+   End Sub
 
-End Class 'SamplesStringDictionary 
+End Class
 
 
 'This code produces the following output.

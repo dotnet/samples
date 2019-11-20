@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
 
 ' Define one writable property and one not writable.
 Public Class Mypropertya

@@ -29,7 +29,7 @@ NotInheritable Public Class UsingProtectedConfiguration
             Console.WriteLine( _
             "Provider description: {0}", provider.Description)
         Next provider
-   End Sub 'GetProviders
+   End Sub
     ' </Snippet3>
 
    <PermissionSet( _
@@ -60,7 +60,7 @@ NotInheritable Public Class UsingProtectedConfiguration
         "Protected section name: {0}", protectedSectionName)
         ' </Snippet6>
 
-    End Sub 'GetProviderName
+    End Sub
    
    
     Public Shared Sub Main(ByVal args() As String)
@@ -72,7 +72,7 @@ NotInheritable Public Class UsingProtectedConfiguration
         ' Get the providers' collection.
         GetProviders()
         
-    End Sub 'Main 
+    End Sub
 
-End Class 'UsingProtectedConfiguration 
+End Class
 ' </Snippet1>

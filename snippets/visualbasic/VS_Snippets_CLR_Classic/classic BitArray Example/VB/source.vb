@@ -50,7 +50,7 @@ Public Class SamplesBitArray
         Console.WriteLine("   Values:")
         PrintValues(myBA5, 8)
 
-    End Sub 'Main
+    End Sub
 
     Public Shared Sub PrintValues(myList As IEnumerable, myWidth As Integer)
         Dim i As Integer = myWidth
@@ -64,9 +64,9 @@ Public Class SamplesBitArray
             Console.Write("{0,8}", obj)
         Next obj
         Console.WriteLine()
-    End Sub 'PrintValues
+    End Sub
 
-End Class 'SamplesBitArray 
+End Class
 
 
 ' This code produces the following output.

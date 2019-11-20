@@ -15,5 +15,5 @@ Public Class Class1
         Dim doc1 As XmlDocument = imp.CreateDocument()
         Dim doc2 As XmlDocument = imp.CreateDocument()
         ' </Snippet1>
-    End Sub 'Method1 
-End Class 'Class1
+    End Sub
+End Class

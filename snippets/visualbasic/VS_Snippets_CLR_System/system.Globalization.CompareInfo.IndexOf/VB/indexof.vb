@@ -2,7 +2,6 @@
 
 ' <snippet1>
 Imports System.Globalization
-Imports Microsoft.VisualBasic
 
 Public Class SamplesCompareInfo
 
@@ -49,7 +48,7 @@ Public Class SamplesCompareInfo
       PrintMarker("            Ü : ", myComp.IndexOf(myStr, "Ü"c, CompareOptions.IgnoreCase), myComp.LastIndexOf(myStr, "Ü"c, CompareOptions.IgnoreCase))
       PrintMarker("            ü : ", myComp.IndexOf(myStr, "ü"c, CompareOptions.IgnoreCase), myComp.LastIndexOf(myStr, "ü"c, CompareOptions.IgnoreCase))
 
-   End Sub 'Main
+   End Sub
 
    Public Shared Sub PrintMarker(Prefix As [String], First As Integer, Last As Integer)
 
@@ -84,9 +83,9 @@ Public Class SamplesCompareInfo
 
       End If 
 
-   End Sub 'PrintMarker
+   End Sub
 
-End Class 'SamplesCompareInfo 
+End Class
 
 
 'This code produces the following output.

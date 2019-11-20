@@ -3,7 +3,6 @@ Imports System.Data
 Imports System.Data.Odbc
 Imports System.Data.Common
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
 
 Public Class Form1
     Inherits Form
@@ -22,7 +21,7 @@ Public Class Form1
          Dim errorMessage As String = "Message: " & e.Message & vbCrLf & _
                                       "Source: " & e.Source
 
-        Dim log As System.Diagnostics.EventLog = New System.Diagnostics.EventLog()
+        Dim log As New System.Diagnostics.EventLog()
         log.Source = "My Application"
         log.WriteEntry(errorMessage)
         Console.WriteLine("An exception occurred. Please contact your system administrator.")

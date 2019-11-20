@@ -12,7 +12,7 @@ NotInheritable Public Class CustomSection
     
     Public Sub New() 
     
-    End Sub 'New
+    End Sub
     
     
     <ConfigurationProperty("fileName", DefaultValue:="default.txt", IsRequired:=True, IsKey:=False), StringValidator(InvalidCharacters:=" ~!@#$%^&*()[]{}/;'""|\", MinLength:=1, MaxLength:=60)> _
@@ -35,7 +35,7 @@ NotInheritable Public Class CustomSection
             Me("maxUsers") = value
         End Set
     End Property
-End Class 'CustomSection 
+End Class
 
 
 ' Create the custom section and write it to
@@ -62,7 +62,7 @@ Class UsingConfigurationErrorsException
             config.Save(ConfigurationSaveMode.Full)
         End If
 
-    End Sub 'New
+    End Sub
     
     
     ' <Snippet2>
@@ -124,13 +124,13 @@ Class UsingConfigurationErrorsException
             ' </Snippet8>    
         End Try
 
-    End Sub 'ModifyCustomSection
+    End Sub
     ' </Snippet2>
 
     Shared Sub Main(ByVal args() As String) 
         ModifyCustomSection()
     
-    End Sub 'Main
-End Class 'UsingConfigurationErrorsException 
+    End Sub
+End Class
 
 ' </Snippet1>

@@ -33,9 +33,9 @@ Public Class SamplesHijriCalendar
       Console.WriteLine("   Month is {0}.", myCal.GetMonth(myDT))
       Console.WriteLine("   Day is {0}.", myCal.GetDayOfMonth(myDT))
 
-   End Sub 'Main 
+   End Sub
 
-End Class 'SamplesHijriCalendar
+End Class
 
 
 'This code produces the following output.  Results vary depending on the registry settings.

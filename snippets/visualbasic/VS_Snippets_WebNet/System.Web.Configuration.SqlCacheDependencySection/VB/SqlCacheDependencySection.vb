@@ -50,7 +50,7 @@ Class UsingSqlCacheDependencySection
         sqlDs.Enabled = False
         ' </Snippet4>
 
-   End Sub 'Main 
-End Class 'UsingSqlCacheDependencySection 
+   End Sub
+End Class
 
 

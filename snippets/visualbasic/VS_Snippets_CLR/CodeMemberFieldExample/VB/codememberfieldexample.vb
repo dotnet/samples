@@ -32,7 +32,7 @@ Namespace CodeDomSamples
             ' End Class
 
             '</Snippet2>
-        End Sub 'New 
-    End Class 'CodeMemberFieldExample 
+        End Sub
+    End Class
 End Namespace 'CodeDomSamples
 '</Snippet1>

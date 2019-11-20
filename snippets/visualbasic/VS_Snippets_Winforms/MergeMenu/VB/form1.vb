@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Drawing
+﻿Imports System.Drawing
 Imports System.ComponentModel
 Imports System.Windows.Forms
 
@@ -72,7 +71,7 @@ Public Class Form1
 
         ' Assign mainMenu1 to the form.
         Me.Menu = mainMenu1
-    End Sub 'InitializeMyMainMenu
+    End Sub
     ' </snippet1>
 
     Public Shared Sub Main()

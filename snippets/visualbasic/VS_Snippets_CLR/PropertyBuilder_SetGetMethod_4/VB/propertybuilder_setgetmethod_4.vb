@@ -47,7 +47,7 @@ Public Class App
       Dim myAssembly As AssemblyBuilder = CType(helloWorldType.Assembly, AssemblyBuilder)
       ' Save to disk.
       myAssembly.Save("EmittedAssembly.dll")
-   End Sub 'Main
+   End Sub
 
 
    ' Create the callee transient dynamic assembly.
@@ -132,5 +132,5 @@ Public Class App
       ' Create the class HelloWorld.
       Return helloWorldTypeBuilder.CreateType()
    End Function 'CreateCallee
-End Class 'App
+End Class
 ' </Snippet4>

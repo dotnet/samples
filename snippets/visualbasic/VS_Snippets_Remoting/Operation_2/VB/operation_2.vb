@@ -133,5 +133,5 @@ Class MyOperationClass
       Catch e As Exception
          Console.WriteLine("The following Exception is raised : " + e.Message)
       End Try
-   End Sub 'Main
-End Class 'MyOperationClass
+   End Sub
+End Class

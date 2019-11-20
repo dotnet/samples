@@ -20,7 +20,7 @@ Namespace MyAssembly
          MyBase.Install(mySavedState)
          ' Code maybe written for installation of an application.
          Console.WriteLine("The Install method of 'MyInstallerSample' has been called")
-      End Sub 'Install
+      End Sub
 ' </Snippet1>
 
 ' <Snippet2>
@@ -29,12 +29,12 @@ Namespace MyAssembly
          MyBase.Commit(mySavedState)
          Console.WriteLine("The Commit method of 'MyInstallerSample'" + _
                                                       "has been called")
-      End Sub 'Commit
+      End Sub
 ' </Snippet2>
 
       Shared Sub Main()
          Console.WriteLine("Use installutil.exe to run the assembly" + _
                                              " Installer_Install.exe")
-      End Sub 'Main
-   End Class 'MyInstallerSample
+      End Sub
+   End Class
 End Namespace 'MyAssembly

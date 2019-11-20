@@ -1,6 +1,5 @@
 ﻿' <snippet1>
 ' <snippet2>
-Imports System
 Imports System.ComponentModel
 Imports System.Threading
 Imports System.Windows.Forms
@@ -198,7 +197,7 @@ Public Class Form1
       Me.Text = "Form1"
       Me.ResumeLayout(False)
       Me.PerformLayout()
-   End Sub 'InitializeComponent 
+   End Sub
    
    #End Region
    

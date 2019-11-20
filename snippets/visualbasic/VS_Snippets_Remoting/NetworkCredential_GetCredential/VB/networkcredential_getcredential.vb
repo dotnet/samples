@@ -8,7 +8,6 @@
 '  otherwise an exception is thrown.
 
 Imports System.Net
-Imports Microsoft.VisualBasic
 
 Class NetworkCredential_GetCredential
     
@@ -28,7 +27,7 @@ Class NetworkCredential_GetCredential
         Console.WriteLine(ControlChars.Cr + ControlChars.Cr + "Press 'Enter' to continue...")
         Console.ReadLine()
         Return
-    End Sub 'Main
+    End Sub
     
     
     Public Shared Sub GetPage(url As String, userName As String, password As String)
@@ -55,5 +54,5 @@ Class NetworkCredential_GetCredential
         Catch e As Exception
             Console.WriteLine(ControlChars.Cr + "The following exception was raised : {0}", e.Message)
         End Try
-    End Sub 'GetPage
-End Class 'NetworkCredential_GetCredential
+    End Sub
+End Class

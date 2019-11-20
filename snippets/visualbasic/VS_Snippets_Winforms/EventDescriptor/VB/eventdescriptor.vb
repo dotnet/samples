@@ -1,5 +1,4 @@
-﻿imports Microsoft.VisualBasic
-Imports System.ComponentModel
+﻿Imports System.ComponentModel
 
 Public NotInheritable Class Form1
     Inherits System.Windows.Forms.Form

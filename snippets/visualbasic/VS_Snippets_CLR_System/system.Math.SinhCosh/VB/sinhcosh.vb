@@ -1,7 +1,5 @@
 ﻿'<snippet1>
 ' Example for the hyperbolic Math.Sinh( Double ) and Math.Cosh( Double ) methods.
-Imports Microsoft.VisualBasic
-
 Module SinhCosh
    
     Sub Main()
@@ -31,7 +29,7 @@ Module SinhCosh
 
         UseTwoArgs(0.1, 1.2)
         UseTwoArgs(1.2, 4.9)
-    End Sub 'Main
+    End Sub
       
     ' Evaluate hyperbolic identities with a given argument.
     Sub UseSinhCosh(arg As Double)
@@ -63,7 +61,7 @@ Module SinhCosh
             "(Math.Cosh({0}))^2 + (Math.Sinh({0}))^2 = {1:E16}", _
             arg, coshArg * coshArg + sinhArg * sinhArg)
 
-    End Sub 'UseSinhCosh
+    End Sub
        
     ' Evaluate hyperbolic identities that are functions of two arguments.
     Sub UseTwoArgs(argX As Double, argY As Double)
@@ -88,7 +86,7 @@ Module SinhCosh
             "                         Math.Cosh({0}) = {1:E16}", _
             argX + argY, Math.Cosh((argX + argY)))
 
-    End Sub 'UseTwoArgs
+    End Sub
 End Module 'SinhCosh
 
 ' This example of hyperbolic Math.Sinh( Double ) and Math.Cosh( Double )

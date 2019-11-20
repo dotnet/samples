@@ -1,5 +1,4 @@
 ﻿'<snippet1>
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -25,7 +24,7 @@ Namespace ISelectionServiceExample
 
       Public Sub New()
          InitializeComponent()
-      End Sub 'New
+      End Sub
 
       Private Sub InitializeComponent()
          Me.listBox1 = New System.Windows.Forms.ListBox()
@@ -42,7 +41,7 @@ Namespace ISelectionServiceExample
          Me.Name = "ComponentClass"
          Me.Size = New System.Drawing.Size(608, 296)
          Me.ResumeLayout(False)
-      End Sub ' InitializeComponent
+      End Sub
 
       Public Overrides Property Site() As ISite
          Get
@@ -87,7 +86,7 @@ Namespace ISelectionServiceExample
             End If
          End If
          MyBase.Dispose(disposing)
-      End Sub 'Dispose
+      End Sub
 
 '<snippet3> 
       ' This is the OnSelectionChanged handler method.  This method calls
@@ -95,7 +94,7 @@ Namespace ISelectionServiceExample
       '  handler that made the call and the type of the event argument. 
       Private Sub OnSelectionChanged(ByVal sender As Object, ByVal args As EventArgs)
          OnUserChange("OnSelectionChanged", args.ToString())
-      End Sub 'OnSelectionChanged
+      End Sub
 
 '</snippet3>
 '<snippet5>
@@ -104,20 +103,20 @@ Namespace ISelectionServiceExample
      '   handler that made the call and the type of the event argument. 
       Private Sub OnSelectionChanging(ByVal sender As Object, ByVal args As EventArgs)
          OnUserChange("OnSelectionChanging", args.ToString())
-      End Sub 'OnSelectionChanging
+      End Sub
 '</snippet5>
 
       ' In this sample, all event handlers call this method
       Private Sub OnUserChange(ByVal text1 As String, ByVal text2 As String)
          listBox1.Items.Add(("Called " + text1 + " using " + text2 + "."))
-      End Sub 'OnUserChange
+      End Sub
 
       Private Sub ComponentClass_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-      End Sub 'ComponentClass_Load
+      End Sub
 
       Private Sub listBox1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) _
             Handles listBox1.SelectedIndexChanged
-      End Sub 'listBox1_SelectedIndexChanged
-   End Class 'ComponentClass 
+      End Sub
+   End Class
 End Namespace 'ISelectionServiceExample
 '</snippet1>

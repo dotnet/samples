@@ -50,5 +50,5 @@ Class AssemblyInstaller_Example
       Catch myException As Exception
          Console.WriteLine(myException.Message)
       End Try
-   End Sub 'Main 
-End Class 'AssemblyInstaller_Example
+   End Sub
+End Class

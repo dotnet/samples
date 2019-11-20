@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Globalization
+﻿Imports System.Globalization
 Imports System.ComponentModel
 Imports System.Windows.Forms
 
@@ -20,7 +19,7 @@ Public Class SampleClass
     ' Provides the Set portion of MyProperty.
     Public Sub SetMyProperty(myControl As Control, value As String)
         ' Insert code here.
-    End Sub 'SetMyProperty
+    End Sub
 
     ' When you inherit from IExtenderProvider, you must implement the 
     ' CanExtend method. 

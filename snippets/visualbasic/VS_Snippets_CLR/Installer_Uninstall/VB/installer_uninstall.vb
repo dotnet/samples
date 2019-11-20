@@ -21,12 +21,12 @@ Namespace MyAssembly
             MyBase.Uninstall(mySavedState)
             Console.WriteLine("The Uninstall method of 'MyInstallerSample' has been called")
          End If
-      End Sub 'Uninstall
+      End Sub
 ' </Snippet1>
 
       Shared Sub Main()
          Console.WriteLine("Use 'installutil.exe -u' to run the assembly" + _
                                                 " Installer_Uninstall.exe")
-      End Sub 'Main
-   End Class 'MyInstallerSample
+      End Sub
+   End Class
 End Namespace 'MyAssembly

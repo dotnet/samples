@@ -1,7 +1,8 @@
-﻿imports System.Net
-imports System.IO
-imports System.Text
-imports System.ComponentModel
+﻿Imports System.Net
+Imports System.IO
+Imports System.Text
+Imports System.ComponentModel
+
 '  NCLWebClientAsync
 Namespace Examples.WebClientSnippets
 

@@ -95,6 +95,6 @@ Namespace RemotingSamples
             Console.WriteLine("Value in Header '{0}' is '{1}'.",myHeader.Name,myHeader.Value)
          Next
 ' </Snippet2>
-      End Sub 'Main 
-   End Class 'HelloClient
+      End Sub
+   End Class
 End Namespace 'RemotingSamples

@@ -13,7 +13,7 @@ Public Class Form1
 
         ' Print the company name.
         textBox1.Text = "The company name: " & myFileVersionInfo.CompanyName
-    End Sub 'GetCompanyName
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

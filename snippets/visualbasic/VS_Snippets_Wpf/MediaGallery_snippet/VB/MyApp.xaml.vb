@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Windows
 Imports System.Windows.Navigation
 Imports System.Data
@@ -14,5 +13,5 @@ Namespace SDKSample
 
     Class MyApp
         Inherits Application 
-    End Class 'MyApp
+    End Class
 End Namespace 'SDKSample

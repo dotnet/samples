@@ -28,7 +28,7 @@ Public Class SampleWebManagementEvent
         eventInfo = New StringBuilder()
         eventInfo.Append(String.Format( _
         "Event created at: ", EventTime.ToString()))
-    End Sub 'New
+    End Sub
    
    ' </Snippet2>
    
@@ -46,7 +46,7 @@ Public Class SampleWebManagementEvent
         eventInfo = New StringBuilder()
         eventInfo.Append(String.Format( _
         "Event created at: ", EventTime.ToString()))
-    End Sub 'New
+    End Sub
    
    
    ' </Snippet3>
@@ -58,7 +58,7 @@ Public Class SampleWebManagementEvent
         "Event raised at: ", EventTime.ToString()))
       ' Raise the event.
       MyBase.Raise()
-   End Sub 'Raise
+   End Sub
    
    ' </Snippet4>
    
@@ -95,8 +95,8 @@ Public Class SampleWebManagementEvent
 
         formatter.AppendLine( _
         "** SampleWebManagementEvent End **")
-    End Sub 'FormatCustomEventDetails
+    End Sub
     ' </Snippet6>
-End Class 'SampleWebManagementEvent 
+End Class
 
 ' </Snippet1>

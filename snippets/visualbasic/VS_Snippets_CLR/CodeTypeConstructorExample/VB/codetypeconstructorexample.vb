@@ -23,7 +23,7 @@ Namespace CodeDomSamples
             '   End Class
             '</Snippet2>
 
-        End Sub 'New 
-    End Class 'CodeTypeConstructorExample 
+        End Sub
+    End Class
 End Namespace 'CodeDomSamples
 '</Snippet1>

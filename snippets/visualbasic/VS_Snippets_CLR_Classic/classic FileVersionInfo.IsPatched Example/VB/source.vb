@@ -15,7 +15,7 @@ Public Class Form1
         
         ' Print whether the file has a patch installed.
         textBox1.Text = "File has patch installed: " & myFileVersionInfo.IsPatched
-    End Sub 'GetIsPatched
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

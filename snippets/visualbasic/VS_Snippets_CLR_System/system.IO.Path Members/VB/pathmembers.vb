@@ -20,7 +20,7 @@ Public Class PathSnippets
         ' ChangeExtension(C:\mydir\, '.old') returns 'C:\mydir\.old'
         ' </Snippet1>
         Console.WriteLine()
-    End Sub 'ChangeExtension
+    End Sub
 
     Public Sub Combine()
         ' <Snippet2>
@@ -41,7 +41,7 @@ Public Class PathSnippets
         ' Combine('  C:\mydir1', ' mydir3') returns '  C:\mydir1\ mydir3'
         ' </Snippet2>
         Console.WriteLine()
-    End Sub 'Combine
+    End Sub
 
 
     Public Sub GetDirectoryName()
@@ -70,7 +70,7 @@ Public Class PathSnippets
         ' GetDirectoryName('C:\') returns ''
         ' </Snippet3>
         Console.WriteLine()
-    End Sub 'GetDirectoryName
+    End Sub
 
 
     Public Sub GetExtension()
@@ -91,7 +91,7 @@ Public Class PathSnippets
         ' GetExtension('C:\mydir.old\') returns ''
         ' </Snippet4>
         Console.WriteLine()
-    End Sub 'GetExtension
+    End Sub
 
 
     Public Sub GetFileName()
@@ -112,7 +112,7 @@ Public Class PathSnippets
         ' GetFileName('C:\mydir\') returns ''
         ' </Snippet5>
         Console.WriteLine()
-    End Sub 'GetFileName
+    End Sub
 
 
     Public Sub GetFileNameWithoutExtension()
@@ -133,7 +133,7 @@ Public Class PathSnippets
         ' GetFileName('C:\mydir\') returns ''
         ' </Snippet6>
         Console.WriteLine()
-    End Sub 'GetFileNameWithoutExtension
+    End Sub
 
 
     Public Sub GetFullPath()
@@ -162,7 +162,7 @@ Public Class PathSnippets
         ' GetFullPath('\mydir') returns 'C:\mydir'
         ' </Snippet7>
         Console.WriteLine()
-    End Sub 'GetFullPath
+    End Sub
 
 
     Public Sub GetPathRoot()
@@ -188,7 +188,7 @@ Public Class PathSnippets
         ' GetPathRoot('C:\mydir\myfile.ext') returns 'C:\'
         ' </Snippet8>
         Console.WriteLine()
-    End Sub 'GetPathRoot
+    End Sub
 
 
 
@@ -215,7 +215,7 @@ Public Class PathSnippets
         ' File 'D:\Documents and Settings\cliffc\Local Settings\Temp\8\tmp38.tmp' now has size 20 bytes
         ' </Snippet9>
         Console.WriteLine()
-    End Sub 'GetTempFileName
+    End Sub
 
 
 
@@ -233,7 +233,7 @@ Public Class PathSnippets
         ' D:\Documents and Settings\cliffc\Local Settings\Temp\8\ contains 6 files
         ' </Snippet10>
         Console.WriteLine()
-    End Sub 'GetTempPath
+    End Sub
 
 
 
@@ -260,7 +260,7 @@ Public Class PathSnippets
         ' HasExtension('C:\mydir.ext\') returns False
         ' </Snippet11>
         Console.WriteLine()
-    End Sub 'HasExtension
+    End Sub
 
 
     Public Sub IsPathRooted()
@@ -286,7 +286,7 @@ Public Class PathSnippets
         ' IsPathRooted('mydir\sudir\') returns False
         ' </Snippet12>
         Console.WriteLine()
-    End Sub 'IsPathRooted
+    End Sub
 
 
     Public Sub StaticProperties()
@@ -313,7 +313,7 @@ Public Class PathSnippets
         ' Path.VolumeSeparatorChar=:
         ' </Snippet13>
         Console.WriteLine()
-    End Sub 'StaticProperties
+    End Sub
 
 
     Public Shared Sub Main()
@@ -332,5 +332,5 @@ Public Class PathSnippets
         pathnameSnippets.GetTempPath()
         pathnameSnippets.HasExtension()
         pathnameSnippets.IsPathRooted()
-    End Sub 'Main
-End Class 'PathSnippets
+    End Sub
+End Class

@@ -24,5 +24,5 @@ Public Class Class1
         End While 
     End Sub 
     ' </Snippet1>
-End Class 'Class1
+End Class
 

@@ -81,7 +81,7 @@ Namespace MyMath
 
       Public Sub New()
          Me.Url = "http://localhost/Math.asmx"
-      End Sub 'New
+      End Sub
 
       <System.Web.Services.Protocols.SoapDocumentMethodAttribute( _
          "http://tempuri.org/Add", _
@@ -102,5 +102,5 @@ Namespace MyMath
          Dim results As Object() = Me.EndInvoke(asyncResult)
          Return CInt(results(0))
       End Function 'EndAdd
-   End Class 'MyMath
+   End Class
 End Namespace 'MyMath

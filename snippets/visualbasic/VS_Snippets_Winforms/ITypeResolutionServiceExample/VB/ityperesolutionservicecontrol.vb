@@ -1,5 +1,4 @@
 ﻿ '<Snippet1>
-Imports System
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.ComponentModel.Design
@@ -8,7 +7,6 @@ Imports System.Reflection
 Imports System.Text
 Imports System.Windows.Forms
 Imports System.Windows.Forms.Design
-Imports Microsoft.VisualBasic
 
 ' This control provides an example design-time user interface to 
 ' the ITypeResolutionService.
@@ -291,7 +289,7 @@ Public Class WindowMessageDesigner
         Else
             Me.DefWndProc(m)
         End If
-    End Sub 'WndProc
+    End Sub
 
     Public Overrides Sub DoDefaultAction()
     End Sub

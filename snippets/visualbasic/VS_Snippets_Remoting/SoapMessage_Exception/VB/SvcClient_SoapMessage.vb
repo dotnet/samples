@@ -2,5 +2,5 @@
 
 Public Class SvcClient
    Public Shared Sub Main()
-   End Sub 'Main
-End Class 'SvcClient
+   End Sub
+End Class

@@ -69,7 +69,7 @@ Namespace TempConvertServer
          ' new System.Runtime.Remoting.Channels.Tcp.TcpChannel(8085);
 
          System.Console.WriteLine(channel.GetUrlsForUri("TempConverter")(0))
-      End Sub 'Main
+      End Sub
 
       Private dataStore As ChannelDataStore
       Private wantsListen As Boolean
@@ -87,7 +87,7 @@ Namespace TempConvertServer
          dataStore = New ChannelDataStore(Nothing)
          wantsListen = True
          socket = ""
-      End Sub 'New
+      End Sub
 
 
       Public Sub New(ByVal portNum As Integer)
@@ -100,13 +100,13 @@ Namespace TempConvertServer
          dataStore = New ChannelDataStore(Nothing)
          wantsListen = False
          socket = "http://localhost:" + portNum.ToString()
-      End Sub 'New
+      End Sub
 
 
       Public Sub New(ByVal properties As IDictionary, _
                       ByVal clientSinkProvider As IClientChannelSinkProvider, _
                       ByVal serverSinkProvider As IServerChannelSinkProvider)
-      End Sub 'New
+      End Sub
 
       Public ReadOnly Property ChannelName() As String _
                       Implements IChannelReceiver.ChannelName
@@ -162,12 +162,12 @@ Namespace TempConvertServer
 
       Public Sub StartListening(ByVal data As Object) _
                       Implements IChannelReceiver.StartListening
-      End Sub 'StartListening
+      End Sub
 
 
       Public Sub StopListening(ByVal data As Object) _
                       Implements IChannelReceiver.StopListening
-      End Sub 'StopListening
+      End Sub
 
 
       Public Function Parse(ByVal url As String, _
@@ -204,7 +204,7 @@ Namespace TempConvertServer
 
          Public Sub New(ByVal nSink As IServerChannelSink)
             nextSink = nSink
-         End Sub 'New
+         End Sub
 
 
          ' I am not implementing these because they are
@@ -215,7 +215,7 @@ Namespace TempConvertServer
                                          ByVal headers As ITransportHeaders, _
                                          ByVal stream As Stream) _
                                          Implements IServerChannelSink.AsyncProcessResponse
-         End Sub 'AsyncProcessResponse
+         End Sub
 
 
          Public Function GetResponseStream(ByVal sinkStack As IServerResponseChannelSinkStack, _
@@ -240,6 +240,6 @@ Namespace TempConvertServer
                Return Nothing
             End Get
          End Property
-      End Class 'TransportSink
-   End Class 'CustomChannel
+      End Class
+   End Class
 End Namespace 'TempConvertServer

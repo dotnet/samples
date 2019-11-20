@@ -6,9 +6,8 @@ namespace Join
 {
     public static class GroupJoinExample1
     {
-        //Using a group join you can get all the products that match a given category bundled as a sequence. 
-        //
-        //Output: 
+        // Using a group join you can get all the products that match a given category bundled as a sequence. 
+        // Output: 
         // Beverages:
         //    Chai
         //    Chang
@@ -83,15 +82,13 @@ namespace Join
                 Console.WriteLine(v.Category + ":");
                 foreach (var p in v.Products)
                 {
-                    Console.WriteLine("   " + p.ProductName);
+                    Console.WriteLine($"   {p.ProductName}");
                 }
             }
         }
 
-        //Using a group join you can get all the products that match a given category bundled as a sequence. 
-        //
-        //Output: 
-        //Output: 
+        // Using a group join you can get all the products that match a given category bundled as a sequence. 
+        // Output:
         // Beverages:
         //    Chai
         //    Chang
@@ -160,10 +157,10 @@ namespace Join
 
             foreach (var v in q)
             {
-                Console.WriteLine(v.Category + ":");
+                Console.WriteLine($"{v.Category}:");
                 foreach (var p in v.Products)
                 {
-                    Console.WriteLine("   " + p.ProductName);
+                    Console.WriteLine($"   {p.ProductName}");
                 }
             }
         }

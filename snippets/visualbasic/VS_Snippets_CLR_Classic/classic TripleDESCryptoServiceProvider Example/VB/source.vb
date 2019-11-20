@@ -36,4 +36,4 @@ Private Shared Sub EncryptData(inName As String, outName As String, _
     encStream.Close()
 End Sub
 ' </Snippet1>
-End Class 'Sample 
+End Class

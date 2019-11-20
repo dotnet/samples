@@ -1,5 +1,4 @@
 ﻿'<Snippet1>
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 
@@ -42,24 +41,24 @@ Public Class ListViewInsertionMarkExample
         ' Initialize the form.
         Me.Text = "ListView Insertion Mark Example"
         Me.Controls.Add(myListView)
-    End Sub 'New
+    End Sub
     '</Snippet2>
 
     <STAThread()> _
     Shared Sub Main()
         Application.EnableVisualStyles()
         Application.Run(New ListViewInsertionMarkExample())
-    End Sub 'Main
+    End Sub
     
     ' Starts the drag-and-drop operation when an item is dragged.
     Private Sub myListView_ItemDrag(sender As Object, e As ItemDragEventArgs)
         myListView.DoDragDrop(e.Item, DragDropEffects.Move)
-    End Sub 'myListView_ItemDrag
+    End Sub
     
     ' Sets the target drop effect.
     Private Sub myListView_DragEnter(sender As Object, e As DragEventArgs)
         e.Effect = e.AllowedEffect
-    End Sub 'myListView_DragEnter
+    End Sub
     
     '<Snippet3>
     ' Moves the insertion mark as the item is dragged.
@@ -88,13 +87,13 @@ Public Class ListViewInsertionMarkExample
         ' over the dragged item, the targetIndex value is -1 and
         ' the insertion mark disappears.
         myListView.InsertionMark.Index = targetIndex
-    End Sub 'myListView_DragOver
+    End Sub
     '</Snippet3>
 
     ' Removes the insertion mark when the mouse leaves the control.
     Private Sub myListView_DragLeave(sender As Object, e As EventArgs)
         myListView.InsertionMark.Index = -1
-    End Sub 'myListView_DragLeave
+    End Sub
     
     ' Moves the item to the location of the insertion mark.
     Private Sub myListView_DragDrop(sender As Object, e As DragEventArgs)
@@ -125,7 +124,7 @@ Public Class ListViewInsertionMarkExample
         ' Remove the original copy of the dragged item.
         myListView.Items.Remove(draggedItem)
 
-    End Sub 'myListView_DragDrop
+    End Sub
     
     ' Sorts ListViewItem objects by index.    
     Private Class ListViewIndexComparer
@@ -136,7 +135,7 @@ Public Class ListViewInsertionMarkExample
             Return CType(x, ListViewItem).Index - CType(y, ListViewItem).Index
         End Function 'Compare
 
-    End Class 'ListViewIndexComparer
+    End Class
 
-End Class 'ListViewInsertionMarkExample 
+End Class
 '</Snippet1>

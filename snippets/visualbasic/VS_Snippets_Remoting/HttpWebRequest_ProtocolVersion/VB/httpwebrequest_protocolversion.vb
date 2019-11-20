@@ -11,9 +11,6 @@
 Imports System.IO
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
-
-
 
 Class HttpWebRequest_ProtocolVersion
     
@@ -63,7 +60,7 @@ Class HttpWebRequest_ProtocolVersion
             Console.WriteLine(("Message : " + e.Message))
  
         End Try
-    End Sub ' Main
-End Class ' HttpWebRequest_ProtocolVersion
+    End Sub
+End Class
 
 

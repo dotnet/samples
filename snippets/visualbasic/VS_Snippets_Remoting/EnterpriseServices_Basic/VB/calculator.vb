@@ -13,13 +13,13 @@ Public Class Calculator
         Return x + y
     
     End Function 'Add
-End Class 'Calculator
+End Class
 ' </snippet0>
 
 Public Class Test
     
     Public Shared Sub Main() 
     
-    End Sub 'Main
-End Class 'Test 
+    End Sub
+End Class
 

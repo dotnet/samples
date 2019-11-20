@@ -10,14 +10,14 @@ Public Class Teacher
     Public Name As String
     
     Public Sub New()
-    End Sub 'New 
+    End Sub
     ' Note that the Info field returns an array of objects.
     ' Any object can be added to the array by adding the
     ' object type to the array passed to the extraTypes argument. 
     <XmlArray(ElementName := "ExtraInfo", IsNullable := True)> _
     Public Info() As Object
     Public PhoneInfo As Phone
-End Class 'Teacher
+End Class
 
 
 ' This defines one of the extra types to be included.
@@ -25,12 +25,12 @@ Public Class Address
     Public City As String
     
     Public Sub New()
-    End Sub 'New
+    End Sub
     
     Public Sub New(city As String)
         me.City = city
-    End Sub 'New
-End Class 'Address
+    End Sub
+End Class
  
 
 ' Another extra type to include.
@@ -38,12 +38,12 @@ Public Class Phone
     Public PhoneNumber As String
     
     Public Sub New()
-    End Sub 'New
+    End Sub
     
     Public Sub New(phoneNumber As String)
         me.PhoneNumber = phoneNumber
-    End Sub 'New
-End Class 'Phone
+    End Sub
+End Class
 
 
 ' Another type, derived from Phone.
@@ -53,12 +53,12 @@ Public Class InternationalPhone
     
     
     Public Sub New()
-    End Sub 'New
+    End Sub
      
     Public Sub New(countryCode As String)
         me.CountryCode = countryCode
-    End Sub 'New
-End Class 'InternationalPhone
+    End Sub
+End Class
 
 
 Public Class Run
@@ -67,7 +67,7 @@ Public Class Run
         Dim test As New Run()
         test.SerializeObject("Teacher.xml")
         test.DeserializeObject("Teacher.xml")
-    End Sub 'Main
+    End Sub
     
     
     Private Sub SerializeObject(filename As String)
@@ -96,7 +96,7 @@ Public Class Run
         
         mySerializer.Serialize(myStreamWriter, teacher)
         myStreamWriter.Close()
-    End Sub 'SerializeObject
+    End Sub
     
     
     Private Sub DeserializeObject(filename As String)
@@ -122,6 +122,6 @@ Public Class Run
         Console.WriteLine(a.City)
         Console.WriteLine(p.PhoneNumber)
         Console.WriteLine(Ip.CountryCode)
-    End Sub 'DeserializeObject
-End Class 'Run
+    End Sub
+End Class
 ' </Snippet1>

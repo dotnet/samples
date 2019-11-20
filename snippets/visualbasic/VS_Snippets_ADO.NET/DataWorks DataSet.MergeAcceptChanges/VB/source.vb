@@ -17,7 +17,7 @@ Module Module1
         Using connection As SqlConnection = New SqlConnection( _
            connectionString)
 
-            Dim adapter As SqlDataAdapter = New SqlDataAdapter( _
+            Dim adapter As New SqlDataAdapter( _
               "SELECT CustomerID, CompanyName FROM Customers", connection)
             Dim dataSet As New DataSet
 

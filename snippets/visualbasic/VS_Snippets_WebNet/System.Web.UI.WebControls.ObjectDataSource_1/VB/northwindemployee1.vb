@@ -50,12 +50,12 @@ Public Class EmployeeLogic
       If Not retval Then
          Throw New NorthwindDataException("UpdateEmployee failed.")
       End If
-   End Sub 'UpdateEmployeeInfo
+   End Sub
 
    Public Shared Sub DeleteEmployee(ne As NorthwindEmployee)
-   End Sub 'DeleteEmployee
+   End Sub
 
-End Class 'EmployeeLogic
+End Class
 
 
 Public Class NorthwindEmployee
@@ -68,7 +68,7 @@ Public Class NorthwindEmployee
       aTitle = ""
       titleOfCourtesy = ""
       reportsTo = - 1
-   End Sub 'New
+   End Sub
 
 
    Public Sub New(anID As Object)
@@ -110,7 +110,7 @@ Public Class NorthwindEmployee
             Throw
          End Try
       End Try
-   End Sub 'New
+   End Sub
 
    Private ID As Object
 
@@ -167,7 +167,7 @@ Public Class NorthwindEmployee
    Public Function Save() As Boolean
       Return True
    End Function 'Save
-End Class 'NorthwindEmployee
+End Class
 
 
 Friend Class NorthwindDataException
@@ -175,7 +175,7 @@ Friend Class NorthwindDataException
 
    Public Sub New(msg As String)
       MyBase.New(msg)
-   End Sub 'New
-End Class 'NorthwindDataException
+   End Sub
+End Class
 End Namespace
 ' </snippet2>

@@ -1,8 +1,10 @@
 ﻿' <SnippetImportsUsing>
+
 Option Explicit On
 Option Strict On
 Imports System.Data.Objects
 Imports System.Globalization
+
 ' </SnippetImportsUsing>
 
 

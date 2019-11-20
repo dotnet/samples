@@ -51,7 +51,7 @@ Class GetObjectDataDemo
          myFileStream.Close()
          Console.WriteLine("Deserialized exception has ErrorDateTime = " + myException.ErrorDateTime.ToString())
       End Try
-   End Sub 'Main
+   End Sub
 End Class
 
 ' This class overrides the GetObjectData method and initializes
@@ -69,13 +69,13 @@ Public Class MyTypeLoadException
 
    Public Sub New(myDateTime As DateTime)
       _errorDateTime = myDateTime
-   End Sub 'New
+   End Sub
 
    Protected Sub New(sInfo As SerializationInfo, sContext As StreamingContext)
       MyBase.New(sInfo, sContext)
       ' Reconstitute the deserialized information into the instance.
       _errorDateTime = sInfo.GetDateTime("ErrorDate")
-   End Sub 'New
+   End Sub
 
    ' GetObjectData overrides must always have a demand for SerializationFormatter.
    <SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter:=true)> _
@@ -83,8 +83,8 @@ Public Class MyTypeLoadException
       MyBase.GetObjectData(sInfo, sContext)
       ' Add a value to the Serialization information.
       sInfo.AddValue("ErrorDate", ErrorDateTime)
-   End Sub 'GetObjectData
+   End Sub
 
-End Class 'MyTypeLoadExceptionChild
+End Class
 ' </Snippet2>
 ' </Snippet1>

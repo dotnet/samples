@@ -3130,10 +3130,7 @@ namespace WorkflowApplicationExample
             // declare the hasCompleted variable
             if (this.CompletionCondition != null)
             {
-                if (this.hasCompleted == null)
-                {
-                    this.hasCompleted = new Variable<bool>();
-                }
+                this.hasCompleted ??= new Variable<bool>();
 
                 metadata.AddImplementationVariable(this.hasCompleted);
             }
@@ -3197,10 +3194,7 @@ namespace WorkflowApplicationExample
                 }
                 else
                 {
-                    if (this.onConditionComplete == null)
-                    {
-                        this.onConditionComplete = new CompletionCallback<bool>(OnConditionComplete);
-                    }
+                    this.onConditionComplete ??= new CompletionCallback<bool>(OnConditionComplete);
                     context.ScheduleActivity(CompletionCondition, this.onConditionComplete);
                 }
             }

@@ -2,7 +2,6 @@
 ' <Snippet0>
 
 
-Imports Microsoft.VisualBasic
 Imports System.Collections.Generic
 Imports System.ServiceModel
 Imports System.Text

@@ -9,7 +9,6 @@
 Imports System.IO
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
 
 ' <Snippet1>
 
@@ -68,6 +67,6 @@ Class HttpWebRequest_Connection
       Console.WriteLine("Source :{0} ", e.Source)
       Console.WriteLine("Message : {0}", e.Message)
     End Try
-  End Sub ' Main
-End Class ' HttpWebRequest_Connection
+  End Sub
+End Class
 ' </Snippet1>

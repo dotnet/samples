@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
 
@@ -21,11 +20,11 @@ Namespace MyNameSpace
             Catch e As ApplicationException
                 Console.WriteLine(e.Message)
             End Try
-        End Sub 'CheckCurrencyManager
+        End Sub
         ' </Snippet1>
 
         Overloads Protected Overrides Sub Edit(source As System.Windows.Forms.CurrencyManager, rowNum As Integer, bounds As System.Drawing.Rectangle, readOnly1 As Boolean, displayText As String, cellIsVisiblen As Boolean)
-        End Sub 'Edit
+        End Sub
          
         
         Protected Overrides Function Commit(dataSource As System.Windows.Forms.CurrencyManager, rowNum As Integer) As Boolean
@@ -49,14 +48,14 @@ Namespace MyNameSpace
         
         
         Protected Overrides Sub Abort(rowNum As Integer)
-        End Sub 'Abort
+        End Sub
          
         
         Overloads Protected Overrides Sub Paint(g As System.Drawing.Graphics, bounds As System.Drawing.Rectangle, source As System.Windows.Forms.CurrencyManager, rowNum As Integer, b As Boolean)
-        End Sub 'Paint
+        End Sub
         
         
         Overloads Protected Overrides Sub Paint(g As System.Drawing.Graphics, bounds As System.Drawing.Rectangle, source As System.Windows.Forms.CurrencyManager, rowNum As Integer)
-        End Sub 'Paint 
-    End Class 'MyDataGridColumnStyle
+        End Sub
+    End Class
 End Namespace 'MyNameSpace

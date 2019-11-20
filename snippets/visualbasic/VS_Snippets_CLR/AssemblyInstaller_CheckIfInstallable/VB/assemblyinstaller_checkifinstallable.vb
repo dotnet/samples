@@ -23,7 +23,7 @@ Class MyCheckIfInstallableClass
        Catch 
       End Try
 
-   End Sub 'Main
+   End Sub
 
-End Class 'MyCheckIfInstallableClass 
+End Class
 ' </Snippet1> 

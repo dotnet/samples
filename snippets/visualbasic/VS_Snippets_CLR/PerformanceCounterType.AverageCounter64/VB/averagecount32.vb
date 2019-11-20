@@ -25,7 +25,7 @@ Public Class App
             CalculateResults(samplesList)
         End If
 
-    End Sub 'Main
+    End Sub
 
     Private Shared Function SetupCategory() As Boolean
         If Not PerformanceCounterCategory.Exists("AverageCounter64SampleCategory") Then
@@ -67,7 +67,7 @@ Public Class App
 
         avgCounter64Sample.RawValue = 0
         avgCounter64SampleBase.RawValue = 0
-    End Sub 'CreateCounters
+    End Sub
 
     '<Snippet3>
     Private Shared Sub CollectSamples(ByVal samplesList As ArrayList)
@@ -93,7 +93,7 @@ Public Class App
             End If
             System.Threading.Thread.Sleep(50)
         Next j
-    End Sub 'CollectSamples
+    End Sub
     '</Snippet3>
 
     Private Shared Sub CalculateResults(ByVal samplesList As ArrayList)
@@ -109,7 +109,7 @@ Public Class App
             ' Calculate the counter value manually.
             Console.WriteLine("My computed counter value = " + MyComputeCounterValue(CType(samplesList(i), CounterSample), CType(samplesList((i + 1)), CounterSample)).ToString())
         Next i
-    End Sub 'CalculateResults
+    End Sub
 
     '++++++++//++++++++//++++++++//++++++++//++++++++//++++++++//++++++++//++++++++
     '	Description - This counter type shows how many items are processed, on average,
@@ -145,6 +145,6 @@ Public Class App
         Console.WriteLine(("   TimeStamp        = " + s.TimeStamp.ToString()))
         Console.WriteLine(("   TimeStamp100nSec = " + s.TimeStamp100nSec.ToString()))
         Console.WriteLine("++++++++++++++++++++++")
-    End Sub 'OutputSample
-End Class 'App
+    End Sub
+End Class
 '</snippet1>

@@ -8,7 +8,6 @@
 ' columns.
 
 
-Imports System
 Imports System.ComponentModel
 Imports System.Data
 Imports System.Drawing
@@ -29,7 +28,7 @@ Public Class MyForm
       
       ' Call MyDataSource to bind the controls.
       MyDataSource()
-   End Sub 'New
+   End Sub
    
    Private Sub InitializeComponent()
       ' Create the form and its controls.
@@ -49,12 +48,12 @@ Public Class MyForm
       
       Me.Controls.Add(resetButton)
       Me.Controls.Add(myDataGrid)
-   End Sub 'InitializeComponent
+   End Sub
    
    
    Public Shared Sub Main()
       Application.Run(New MyForm())
-   End Sub 'Main
+   End Sub
    
    
    Private Sub MyDataSource()
@@ -62,7 +61,7 @@ Public Class MyForm
       MakeDataSet()
       ' Bind the DataGrid to the DataSet.
       myDataGrid.SetDataBinding(myDataSet, "Customers")
-   End Sub 'MyDataSource
+   End Sub
    
    
 ' <Snippet1>
@@ -72,7 +71,7 @@ Public Class MyForm
 
         ' Reset the property descriptor of column styles collection.
         myColumns.ResetPropertyDescriptors()
-    End Sub 'ResetButton_Click
+    End Sub
    
 ' </Snippet1>
    
@@ -106,7 +105,7 @@ Public Class MyForm
       
       ' Add DataGridTableStyle instances to GridTableStylesCollection.
       myDataGrid.TableStyles.Add(myTableStyle)
-   End Sub 'AddCustomDataTableStyle
+   End Sub
    
    
    Private Sub MakeDataSet()
@@ -140,5 +139,5 @@ Public Class MyForm
       
       ' Add column style collections.
       AddCustomDataTableStyle()
-   End Sub 'MakeDataSet
-End Class 'MyForm
+   End Sub
+End Class

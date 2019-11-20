@@ -1,7 +1,6 @@
 ﻿Option Explicit
 Option Strict
 
-Imports System
 Imports System.Data
 Imports System.ComponentModel
 Imports System.Windows.Forms
@@ -26,6 +25,6 @@ Public Class Form1
         Else
             vScrollBar1.Visible = True
         End If
-    End Sub 'DisplayScrollBars
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

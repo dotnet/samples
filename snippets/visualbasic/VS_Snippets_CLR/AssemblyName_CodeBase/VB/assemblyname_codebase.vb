@@ -15,7 +15,6 @@
 ' <Snippet3>
 ' <Snippet4>
 
-Imports Microsoft.VisualBasic
 Imports System.Reflection
 Imports System.Threading
 Imports System.IO
@@ -45,7 +44,7 @@ Public Class AssemblyName_CodeBase
       ' Set the method with name 'Main' as the entry point in the assembly.
       myAssemblyBuilder.SetEntryPoint(myMethodBuilder)
       myAssemblyBuilder.Save(fileName)
-   End Sub 'MakeAssembly
+   End Sub
    
    
    Public Shared Sub Main()

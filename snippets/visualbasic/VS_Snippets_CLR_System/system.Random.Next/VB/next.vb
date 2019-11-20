@@ -1,7 +1,5 @@
 ﻿'<Snippet1>
 ' Example of the Random.Next( ) methods.
-Imports Microsoft.VisualBasic
-
 Module  RandomNextDemo
 
     ' Generate random numbers with no bounds specified.

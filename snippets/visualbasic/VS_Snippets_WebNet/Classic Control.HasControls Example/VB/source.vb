@@ -18,5 +18,5 @@ Public Class Form1
             Next i
         End If
          ' </Snippet1>
-    End Sub 'Method
-End Class 'Form1
+    End Sub
+End Class

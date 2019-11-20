@@ -55,7 +55,7 @@ Public Class UsingRsaProtectedConfigurationProvider
             "Can't get the section {0}", _
             connStrings.SectionInformation.Name)
       End If
-   End Sub 'ProtectConfiguration
+   End Sub
     
    
    
@@ -99,7 +99,7 @@ Public Class UsingRsaProtectedConfigurationProvider
             "Can't get the section {0}", _
             connStrings.SectionInformation.Name)
       End If
-   End Sub 'UnProtectConfiguration
+   End Sub
    
    
    
@@ -128,8 +128,8 @@ Public Class UsingRsaProtectedConfigurationProvider
         End Select
 
         Console.Read()
-    End Sub 'Main
+    End Sub
 
-End Class 'UsingRsaProtectedConfigurationProvider
+End Class
 
 '</Snippet1>

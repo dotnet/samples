@@ -9,8 +9,6 @@
 Imports System.IO
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
-
 
 Class WebRequest_Proxy
     
@@ -97,5 +95,5 @@ Class WebRequest_Proxy
             Console.WriteLine(ControlChars.Cr + "Exception is raised ")
             Console.WriteLine(ControlChars.Cr + "{0} ", e.Message)
         End Try
-    End Sub ' Main
-End Class ' WebRequest_Proxy
+    End Sub
+End Class

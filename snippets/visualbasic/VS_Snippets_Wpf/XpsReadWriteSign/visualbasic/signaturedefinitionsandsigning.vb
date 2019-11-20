@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Windows
+﻿Imports System.Windows
 Imports System.Windows.Xps.Packaging
 Imports System.Security.Cryptography
 Imports System.Security.Cryptography.X509Certificates
@@ -50,7 +49,7 @@ Namespace SDKSample
 
 			Next doc ' end:foreach (IXpsFixedDocumentReader
 
-		End Sub ' end:IterateSignatureDefinitions()
+		End Sub
 
 		'</SnippetIterateSignatureDefinitions>
 
@@ -94,7 +93,7 @@ Namespace SDKSample
 				End If
 			Next sig ' end:foreach (XpsDigitalSignature
 
-		End Sub ' end:IterateSignatures()
+		End Sub
 
 
 		'<SnippetSignXpsDocument>
@@ -119,10 +118,10 @@ Namespace SDKSample
 				xpsDocument.SignDigitally(cert, True, XpsDigSigPartAlteringRestrictions.None)
 			End If
 
-		End Sub ' end:SignXps()
+		End Sub
 
 		'</SnippetSignXpsDocument>
 
-	End Class ' end:class SignatureUtilites
+	End Class
 
 End Namespace ' end:namespace

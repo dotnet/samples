@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 Imports System.IO
-Imports Microsoft.VisualBasic
 
 Public Class Test
     Public Shared Sub Main()

@@ -1,6 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
+
 Public Class MyTypeDelegator
     Inherits TypeDelegator
     Public myElementType As String = Nothing
@@ -8,7 +8,7 @@ Public Class MyTypeDelegator
     Public Sub New(ByVal myType As Type)
         MyBase.New(myType)
         Me.myType = myType
-    End Sub 'New
+    End Sub
     ' Override IsArrayImpl().
     Protected Overrides Function IsArrayImpl() As Boolean
         ' Determine whether the type is an array.
@@ -19,7 +19,7 @@ Public Class MyTypeDelegator
         ' Return false if the type is not an array.
         Return False
     End Function 'IsArrayImpl
-End Class 'MyTypeDelegator
+End Class
 
 Public Class Type_IsArrayImpl
     Public Shared Sub Main()
@@ -45,6 +45,6 @@ Public Class Type_IsArrayImpl
         Catch e As Exception
             Console.WriteLine("Exception: {0}", e.Message.ToString())
         End Try
-    End Sub 'Main
-End Class 'Type_IsArrayImpl
+    End Sub
+End Class
 ' </Snippet1>

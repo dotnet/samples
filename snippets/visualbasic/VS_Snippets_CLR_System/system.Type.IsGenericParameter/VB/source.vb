@@ -1,7 +1,6 @@
 ﻿'<Snippet1>
 Imports System.Reflection
 Imports System.Collections.Generic
-Imports Microsoft.VisualBasic
 
 Public Class Test
     Private Shared Sub DisplayGenericTypeInfo(ByVal t As Type) 
@@ -53,8 +52,8 @@ Public Class Test
         ' Display information for an ordinary type.
         DisplayGenericTypeInfo(GetType(String))
     
-    End Sub 'Main
-End Class 'Test
+    End Sub
+End Class
 
 ' This example produces the following output:
 '

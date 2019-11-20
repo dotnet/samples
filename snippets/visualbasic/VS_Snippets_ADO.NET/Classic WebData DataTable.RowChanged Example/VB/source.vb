@@ -12,7 +12,7 @@ Module Module1
 
     ' <Snippet1>
     Private Sub DataTableRowChanged()
-        Dim custTable As DataTable = New DataTable("Customers")
+        Dim custTable As New DataTable("Customers")
         ' add columns
         custTable.Columns.Add("id", Type.GetType("System.Int32"))
         custTable.Columns.Add("name", Type.GetType("System.String"))

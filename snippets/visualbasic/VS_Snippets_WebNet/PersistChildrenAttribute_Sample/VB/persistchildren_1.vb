@@ -24,14 +24,14 @@ Namespace PersistChildrenSampleVB
    
    Public Sub New()
       Me.New("", "", "")
-   End Sub 'New
+   End Sub
 
     
    Public Sub New(name As String, title As String, employeeAlias As String)
       Me._name = name
       Me._title = title
       Me._alias = employeeAlias
-   End Sub 'New
+   End Sub
    
    Public Property Name() As String
       Get
@@ -61,7 +61,7 @@ Namespace PersistChildrenSampleVB
          _alias = value
       End Set
    End Property
-End Class 'Employee
+End Class
 
 ' <snippet2>
  ' Use the PersistChildren attribute to set the Persist
@@ -147,8 +147,8 @@ End Class 'Employee
          table.Rows.Add(tr)
       Next employee
       Controls.Add(table)
-   End Sub 'CreateChildControls 
- End Class 'CollectionPropertyControl
+   End Sub
+ End Class
 ' </snippet2>
 End Namespace ' PersistChildrenSampleVB
 ' </snippet1>

@@ -25,7 +25,7 @@ Class ServiceDescription_Sample
       Dim myPortTypeCollection As PortTypeCollection = myServiceDescription.PortTypes
       MyMethod(myPortTypeCollection)
       myServiceDescription.Write("Output.Wsdl")
-   End Sub 'Main
+   End Sub
    
 ' <Snippet1>
    Public Shared Sub MyMethod(myServiceCollection As _
@@ -159,7 +159,7 @@ Class ServiceDescription_Sample
             End If
          End If
       End If
-   End Sub 'MyMethod
+   End Sub
 ' </Snippet1>
    
    Public Shared Function CreateOperationBinding(operation As String, _
@@ -186,4 +186,4 @@ Class ServiceDescription_Sample
       myOperationBinding.Extensions.Add(mySoapOperationBinding)
       Return myOperationBinding
    End Function 'CreateOperationBinding
-End Class 'ServiceDescription_Sample
+End Class

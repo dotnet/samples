@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Globalization
+﻿Imports System.Globalization
 Imports System.Windows.Forms
 ' <Snippet1>
 Public Class Form1:Inherits Form

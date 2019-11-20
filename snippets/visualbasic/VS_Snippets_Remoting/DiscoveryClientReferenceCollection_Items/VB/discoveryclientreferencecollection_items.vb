@@ -75,5 +75,5 @@ Public Class DiscoveryClientReferenceCollection_Keys
       For iIndex = 0 To myObjectCollection1.Length - 1
          Console.WriteLine(myObjectCollection1(iIndex))
       Next iIndex
-   End Sub 'Main
-End Class 'DiscoveryClientReferenceCollection_Keys
+   End Sub
+End Class

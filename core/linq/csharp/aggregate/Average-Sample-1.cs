@@ -5,9 +5,8 @@ namespace Aggregate
 {
     public static class AverageSample1
     {
-        //This sample uses Average to get the average of all numbers in an array.
-        //
-        //Outputs:
+        // This sample uses Average to get the average of all numbers in an array.
+        // Outputs:
         // The average number is 4.5.
         public static void Example()
         {

@@ -74,6 +74,6 @@ Namespace Samples.Aspnet.SystemWebConfiguration
 
     End Sub
 
-  End Class ' UsingHttpCookiesSection.
+  End Class
     
 End Namespace ' Samples.Aspnet.SystemWebConfiguration

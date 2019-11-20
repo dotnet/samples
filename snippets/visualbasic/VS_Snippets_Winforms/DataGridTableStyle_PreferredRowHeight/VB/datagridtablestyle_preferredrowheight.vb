@@ -4,7 +4,6 @@
 ' class. It adds a DataGrid, Button and a TextBox to a form. It changes the 
 ' 'PreferredRowHeight' property by taking the value entered in the textbox.
 
-Imports System
 Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
@@ -23,7 +22,7 @@ Public Class myDataForm
       InitializeComponent()
       ' Call SetUp to bind the controls.
       SetUp()
-   End Sub 'New
+   End Sub
    
    Private Sub InitializeComponent()
       ' Create the form and its controls.
@@ -48,11 +47,11 @@ Public Class myDataForm
       Controls.Add(myDataGrid)
       Controls.Add(myLabel)
       Text = "PreferredRowHeight example"
-   End Sub 'InitializeComponent
+   End Sub
    
    Public Shared Sub Main()
       Application.Run(New myDataForm())
-   End Sub 'Main
+   End Sub
    
    Private Sub SetUp()
       ' Create a DataSet with a table.
@@ -63,7 +62,7 @@ Public Class myDataForm
       myTableStyle = New DataGridTableStyle()
       ' Map DataGridTableStyle to a DataTable.
       myTableStyle.MappingName = "Orders"
-   End Sub 'SetUp
+   End Sub
    
    
     Private Sub myButton_Click(ByVal sender As Object, ByVal e As EventArgs)
@@ -87,7 +86,7 @@ Public Class myDataForm
         Catch ex As Exception
             MessageBox.Show(ex.Message & "Enter Integer only .")
         End Try
-    End Sub 'myButton_Click
+    End Sub
    
    ' Create a DataSet with a table and populate it.
    Private Sub MakeDataSet()
@@ -106,5 +105,5 @@ Public Class myDataForm
          ' Add the row to the Orders table.
          myTable.Rows.Add(newRow)
       Next j
-   End Sub 'MakeDataSet
-End Class 'myDataForm
+   End Sub
+End Class

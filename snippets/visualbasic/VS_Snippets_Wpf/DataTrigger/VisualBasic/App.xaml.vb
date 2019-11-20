@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Windows
+﻿Imports System.Windows
 
 Public Class app
     Inherits Application

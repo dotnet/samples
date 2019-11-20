@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Drawing
+﻿Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Windows.Forms
@@ -170,10 +169,10 @@ End Sub
 
       Private Sub button1_Click(sender As Object, e As System.EventArgs) Handles button1.Click
          AddToolbarButtons(Me.toolBar1)
-      End Sub 'button1_Click
+      End Sub
       
       
       Private Sub button2_Click(sender As Object, e As System.EventArgs) Handles button2.Click
          MessageBox.Show(Me.GetButtonList(toolBar1))
-      End Sub 'button2_Click
-   End Class 'MyToolBar
+      End Sub
+   End Class

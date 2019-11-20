@@ -39,5 +39,5 @@ Imports System.Web.Services.Discovery
 ' </Snippet3>
       Console.WriteLine("Namespace for the referenced service description is : {0}", ContractReference.Namespace)
 ' </Snippet4>
-   End Sub 'Main
-End Class 'myContractReferenceSample
+   End Sub
+End Class

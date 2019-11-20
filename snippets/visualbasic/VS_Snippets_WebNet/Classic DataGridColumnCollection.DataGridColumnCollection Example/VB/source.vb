@@ -14,7 +14,7 @@ Public Class Form1
     Sub Page_Init(sender As Object, e As EventArgs)
         Dim myList As New ArrayList()
         Dim myColumnCollection As New DataGridColumnCollection(ItemsGrid, myList)
-    End Sub 'Page_Init
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

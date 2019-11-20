@@ -19,7 +19,7 @@ Class UsingConfigurationSectionGroup
 
         ' Display the section groups.
         ShowSectionGroupCollectionInfo(sectionGroups)
-    End Sub 'Main
+    End Sub
     '</Snippet10>
 
     Shared Sub ShowSectionGroupCollectionInfo( _
@@ -30,7 +30,7 @@ Class UsingConfigurationSectionGroup
         For Each group In sectionGroups
             ShowSectionGroupInfo(group)
         Next group
-    End Sub 'ShowSectionGroupCollectionInfo
+    End Sub
 
     '<Snippet2>
     Shared Sub ShowSectionGroupInfo( _
@@ -84,7 +84,7 @@ Class UsingConfigurationSectionGroup
         indent("")
         indentLevel -= 1
 
-    End Sub 'ShowSectionGroupInfo
+    End Sub
     '</Snippet2>
     Shared Sub indent(ByVal text As String)
         Dim i As Integer
@@ -92,9 +92,9 @@ Class UsingConfigurationSectionGroup
             Console.Write("  ")
         Next i
         Console.WriteLine(Left(text, 79 - indentLevel * 2))
-    End Sub 'getSpacer
+    End Sub
 
-End Class 'UsingConfigurationSectionGroup 
+End Class
 '</Snippet1>
 
 Class UsingConfigurationSectionGroup2
@@ -116,7 +116,7 @@ Class UsingConfigurationSectionGroup2
         Console.WriteLine( _
         "Forced declaration for the group: {0}", _
         sectionGroup.Name)
-    End Sub 'ForceDeclaration
+    End Sub
 
     '</Snippet12>
     '<Snippet13>
@@ -129,7 +129,7 @@ Class UsingConfigurationSectionGroup2
         Console.WriteLine( _
         "Forced declaration for the group: {0} is {1}", _
         sectionGroup.Name, force.ToString())
-    End Sub 'ForceDeclaration
+    End Sub
 
     '</Snippet13>
 

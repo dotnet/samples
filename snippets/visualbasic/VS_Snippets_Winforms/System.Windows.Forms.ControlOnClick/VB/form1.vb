@@ -1,7 +1,6 @@
 ﻿' This example demonstrates overriding the OnClick method of a 
 ' custom TextBox control.
 
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 

@@ -9,6 +9,7 @@ Imports System.Security
 Imports System.Security.Permissions
 Imports System.IO
 Imports System.Text.RegularExpressions
+
  
 Public Class WebPermissionAttribute_Connect
    
@@ -23,7 +24,7 @@ Public Class WebPermissionAttribute_Connect
       Dim permissionToCheck As New WebPermission()
       permissionToCheck.AddPermission(NetworkAccess.Connect, uriToCheck)
       permissionToCheck.Demand()
-   End Sub 'CheckConnectPermission
+   End Sub
    
    
    Public Shared Sub demoDenySite()
@@ -38,11 +39,11 @@ Public Class WebPermissionAttribute_Connect
       Catch e As SecurityException
          Console.WriteLine(("Expected exception" + e.Message))
       End Try
-   End Sub 'demoDenySite
+   End Sub
     
    
    '</Snippet1>
    Shared Sub Main()
       demoDenySite()
-   End Sub 'Main 
-End Class 'WebPermissionAttribute_ConnectConnect
+   End Sub
+End Class

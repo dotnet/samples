@@ -10,11 +10,11 @@ Namespace RemotingSamples
       
       Public Sub New()
          Console.WriteLine("HelloServer activated")
-      End Sub 'New
+      End Sub
       
       Public Function HelloMethod(myName As String) As String
          Console.WriteLine("Hello.HelloMethod : {0}", myName)
          Return "Hi there " + myName
       End Function 'HelloMethod
-   End Class 'HelloServer
+   End Class
 End Namespace 'RemotingSamples

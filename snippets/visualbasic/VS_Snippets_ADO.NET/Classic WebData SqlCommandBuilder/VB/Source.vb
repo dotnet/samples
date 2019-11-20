@@ -14,11 +14,11 @@ Module Module1
 
             Dim adapter As New SqlDataAdapter()
             adapter.SelectCommand = New SqlCommand(queryString, connection)
-            Dim builder As SqlCommandBuilder = New SqlCommandBuilder(adapter)
+            Dim builder As New SqlCommandBuilder(adapter)
 
             connection.Open()
 
-            Dim dataSet As DataSet = New DataSet
+            Dim dataSet As New DataSet()
             adapter.Fill(dataSet, tableName)
 
             ' Code to modify data in DataSet here 

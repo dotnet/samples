@@ -1,5 +1,4 @@
 ﻿'<snippet1>
-Imports System
 Imports System.Drawing
 Imports System.ComponentModel
 Imports System.Windows.Forms
@@ -32,7 +31,7 @@ Public Class Form1
         ' Assigns the graphics object to use in the draw options.
         myGraphics = Graphics.FromHwnd(panel1.Handle)
 
-    End Sub 'New
+    End Sub
 
     Private Sub InitializeComponent()
 

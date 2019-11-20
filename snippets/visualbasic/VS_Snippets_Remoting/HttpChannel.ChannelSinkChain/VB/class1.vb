@@ -33,7 +33,7 @@ Class CustomChannel
       Dim channel As New CustomChannel(8085)
       channel.AddHookChannelUri("TempConverter")            
       System.Console.WriteLine(channel.ChannelSinkChain)
-   End Sub 'Main
+   End Sub
    
    Private dataStore As ChannelDataStore
    Private wantsToListenVar As Boolean
@@ -48,7 +48,7 @@ Class CustomChannel
       dataStore = New ChannelDataStore(Nothing)
       wantsToListenVar = True
       socket = ""
-   End Sub 'New
+   End Sub
    
    
    Public Sub New(portNum As Integer)
@@ -58,11 +58,11 @@ Class CustomChannel
       dataStore = New ChannelDataStore(Nothing)
       wantsToListenVar = False
       socket = "http://localhost:" + portNum.ToString()
-   End Sub 'New
+   End Sub
    
    
    Public Sub New(properties As IDictionary, clientSinkProvider As IClientChannelSinkProvider, serverSinkProvider As IServerChannelSinkProvider)
-   End Sub 'New
+   End Sub
    
    
    
@@ -95,7 +95,7 @@ Class CustomChannel
             Throw New System.Runtime.Remoting.RemotingException(msg)
          End If
       End If
-   End Sub 'AddHookChannelUri
+   End Sub
    
    
    Public ReadOnly Property WantsToListen() As Boolean Implements IChannelReceiverHook.WantsToListen
@@ -129,11 +129,11 @@ Class CustomChannel
    
    
    Public Sub StartListening(data As Object) Implements IChannelReceiver.StartListening
-   End Sub 'StartListening
+   End Sub
     
    
    Public Sub StopListening(data As Object) Implements IChannelReceiver.StopListening
-   End Sub 'StopListening
+   End Sub
     
    
    Public Function Parse(url As String, ByRef objectURI As String) As String Implements IChannel.Parse
@@ -165,13 +165,13 @@ Class CustomChannel
        
       Public Sub New(nextSink As IServerChannelSink)
          [next] = nextSink
-      End Sub 'New
+      End Sub
       
       
       ' I am not implementing these because they are
       ' not needed for my snippet but they must be here.
       Public Sub AsyncProcessResponse(sinkStack As IServerResponseChannelSinkStack, state As Object, msg As IMessage, headers As ITransportHeaders, stream As Stream) Implements IServerChannelSink.AsyncProcessResponse
-      End Sub 'AsyncProcessResponse
+      End Sub
       
       
       
@@ -194,5 +194,5 @@ Class CustomChannel
             Return Nothing
          End Get
       End Property
-   End Class 'TransportSink
-End Class 'CustomChannel
+   End Class
+End Class

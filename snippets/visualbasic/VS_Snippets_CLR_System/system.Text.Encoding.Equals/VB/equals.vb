@@ -16,9 +16,9 @@ Public Class SamplesEncoding
       ' Check their equality.
       Console.WriteLine("e1 equals e2? {0}", e1.Equals(e2))
 
-   End Sub 'Main 
+   End Sub
 
-End Class 'SamplesEncoding
+End Class
 
 
 'This code produces the following output.

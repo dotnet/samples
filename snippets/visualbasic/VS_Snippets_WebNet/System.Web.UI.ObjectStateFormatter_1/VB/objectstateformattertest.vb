@@ -29,7 +29,7 @@ Public Class ObjectStateFormatterTest
       Dim base64StateString As String = formatter.Serialize(controlProperties)
 
 ' </snippet1>      
-   End Sub 'Main
+   End Sub
 
    
    
@@ -48,4 +48,4 @@ Public Class ObjectStateFormatterTest
    End Function 'LoadControlProperties   
 ' </snippet2>   
 
-End Class 'ObjectStateFormatterTest 
+End Class

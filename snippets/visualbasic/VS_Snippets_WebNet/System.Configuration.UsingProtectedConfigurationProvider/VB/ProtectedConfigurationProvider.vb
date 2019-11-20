@@ -57,7 +57,7 @@ Namespace Samples.AspNet
                 "Can't get the section {0}", _
                 connStrings.SectionInformation.Name)
             End If
-        End Sub 'ProtectConfiguration
+        End Sub
 
 
         ' Unprotect the connectionStrings section.
@@ -102,7 +102,7 @@ Namespace Samples.AspNet
                 "Can't get the section {0}", _
                 connStrings.SectionInformation.Name)
             End If
-        End Sub 'UnProtectConfiguration
+        End Sub
 
 
 
@@ -147,7 +147,7 @@ Namespace Samples.AspNet
             End Select
 
             Console.Read()
-        End Sub 'Main 
-    End Class 'TestingProtectedConfigurationProvider
+        End Sub
+    End Class
 End Namespace
 '</Snippet11>

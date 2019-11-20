@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
 Imports System.Data
@@ -47,7 +46,7 @@ Class Form1
         Application.SetCompatibleTextRenderingDefault(False)
         Application.Run(New Form1())
     
-    End Sub 'Main
+    End Sub
     
     Private WithEvents button1 As System.Windows.Forms.Button
     Private imageList1 As System.Windows.Forms.ImageList
@@ -123,7 +122,7 @@ Class Form1
         Me.ResumeLayout(False)
 
     End Sub
-End Class 'Form1
+End Class
 
 
 Public Class OrderForm
@@ -313,6 +312,6 @@ Public Class OrderForm
         Me.panel2.PerformLayout()
         Me.ResumeLayout(False)
     
-    End Sub 'InitializeComponent 
-End Class 'OrderForm
+    End Sub
+End Class
 

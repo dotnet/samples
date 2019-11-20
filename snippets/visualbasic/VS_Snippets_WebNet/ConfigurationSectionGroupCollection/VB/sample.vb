@@ -28,7 +28,7 @@ Class ListSectionGroupCollectionInfo
             Dim mySectionGroup As System.Configuration.ConfigurationSectionGroup = CType(mySectionGroupCollection(mySectionGroupName), System.Configuration.ConfigurationSectionGroup)
             ShowSectionGroupInfo(mySectionGroup)
         Next mySectionGroupName
-    End Sub 'ShowSectionGroupCollectionInfo
+    End Sub
     '</Snippet9>
     '<Snippet2>
     Shared Sub ShowSectionGroupInfo(mySectionGroup As System.Configuration.ConfigurationSectionGroup)
@@ -60,7 +60,7 @@ Class ListSectionGroupCollectionInfo
         ShowSectionGroupCollectionInfo(mySectionGroupCollection)
         '</Snippet8>
         indentLevel -= 1
-    End Sub 'ShowSectionGroupInfo
+    End Sub
     '</Snippet2>
-End Class 'ListSectionGroupCollectionInfo
+End Class
 '</Snippet1>

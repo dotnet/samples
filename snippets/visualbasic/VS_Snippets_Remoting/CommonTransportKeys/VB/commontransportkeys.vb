@@ -49,7 +49,7 @@ Namespace Logging
             next1 = value
          End Set
       End Property
-   End Class 'LoggingClientChannelSinkProvider
+   End Class
   
    <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> _  
    Friend Class LoggingClientChannelSink
@@ -60,27 +60,27 @@ Namespace Logging
       Public Sub New(localNextSink As IClientChannelSink)
          MyBase.new()
          nextSink1 = localNextSink
-      End Sub 'New
+      End Sub
 
       Public Sub ProcessMessage(msg As IMessage, requestHeaders As ITransportHeaders, _ 
                  requestStream As Stream, ByRef responseHeaders As ITransportHeaders, _ 
                  ByRef responseStream As Stream) implements IClientChannelSink.ProcessMessage
               nextSink1.ProcessMessage _ 
                          (msg, requestHeaders, requestStream, responseHeaders, responseStream)
-      End Sub 'ProcessMessage
+      End Sub
       
       Public Sub AsyncProcessRequest(sinkStack As IClientChannelSinkStack, msg As IMessage, _ 
                  headers As ITransportHeaders, stream1 As Stream) _ 
                  Implements IClientChannelSink.AsyncProcessRequest
          sinkStack.Push(Me, Nothing)
          nextSink1.AsyncProcessRequest(sinkStack, msg, headers, stream1)
-      End Sub 'AsyncProcessRequest
+      End Sub
 
       Public Sub AsyncProcessResponse(sinkStack As IClientResponseChannelSinkStack, _ 
                   state As Object, headers As ITransportHeaders, stream1 As Stream) _ 
                                     implements IClientChannelSink.AsyncProcessResponse
          sinkStack.AsyncProcessResponse(headers, stream1)
-      End Sub 'AsyncProcessResponse
+      End Sub
       
       Public Function GetRequestStream(msg As IMessage, headers As ITransportHeaders) _ 
                              As Stream Implements IClientChannelSink.GetRequestStream
@@ -100,7 +100,7 @@ Namespace Logging
 	  return nothing		
         End Get
         End Property
-   End Class 'LoggingClientChannelSink
+   End Class
     
 ' <Snippet1>
    <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> _
@@ -109,11 +109,11 @@ Namespace Logging
       Private next2 As IServerChannelSinkProvider = Nothing
       
       Public Sub New(properties As IDictionary, providerData As ICollection)
-      End Sub 'New
+      End Sub
       
       Public Sub GetChannelData(channelData As IChannelDataStore) _ 
                                   Implements IServerChannelSinkProvider.GetChannelData
-      End Sub 'GetChannelData
+      End Sub
       
       Public Function CreateSink(channel1 As IChannelReceiver) As IServerChannelSink _ 
                                         Implements IServerChannelSinkProvider.CreateSink
@@ -133,7 +133,7 @@ Namespace Logging
             next2 = value
          End Set
       End Property
-   End Class 'LoggingServerChannelSinkProvider
+   End Class
    
    <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> _ 
    Friend Class LoggingServerChannelSink
@@ -145,7 +145,7 @@ Namespace Logging
       Public Sub New(localNextSink As IServerChannelSink)
          MyBase.new()
          nextSink2 = localNextSink
-      End Sub 'New
+      End Sub
       
      Public Function ProcessMessage(   ByVal sinkStack As IServerChannelSinkStack, _
          ByVal requestMsg As IMessage, _
@@ -191,7 +191,7 @@ Namespace Logging
               state As Object, msg As IMessage, headers As ITransportHeaders, stream1 As Stream) _ 
                                        Implements IServerChannelSink.AsyncProcessResponse
          sinkStack.AsyncProcessResponse(msg, headers, stream1)
-      End Sub 'AsyncProcessResponse
+      End Sub
       
       Public Function GetResponseStream(sinkStack As IServerResponseChannelSinkStack, _ 
                   state As Object, msg As IMessage, headers As ITransportHeaders) As Stream _ 
@@ -212,6 +212,6 @@ Namespace Logging
 		return nothing		
          End Get
       End Property
-   End Class 'LoggingServerChannelSink
+   End Class
 ' </Snippet1>
 End Namespace 'Logging 

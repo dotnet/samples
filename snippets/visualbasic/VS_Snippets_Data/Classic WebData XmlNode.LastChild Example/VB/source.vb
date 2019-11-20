@@ -19,6 +19,6 @@ Public Class Sample
         
         Console.WriteLine("Display the price element...")
         Console.WriteLine(root.LastChild.OuterXml)
-    End Sub 'Main
-End Class 'Sample
+    End Sub
+End Class
 ' </Snippet1>

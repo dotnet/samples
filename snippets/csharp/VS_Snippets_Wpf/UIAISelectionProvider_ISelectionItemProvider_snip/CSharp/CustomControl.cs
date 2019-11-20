@@ -637,11 +637,7 @@ namespace CustomControls
         {
             get
             {
-                if (ItemProvider == null)
-                {
-                    ItemProvider = new ListItemProvider(ItemOwnerList.Provider, this);
-                                        
-                }
+                ItemProvider ??= new ListItemProvider(ItemOwnerList.Provider, this);                                        
                 return ItemProvider;
             }
             set

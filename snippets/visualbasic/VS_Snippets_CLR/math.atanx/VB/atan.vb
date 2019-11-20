@@ -32,8 +32,8 @@ Class Sample
       Console.WriteLine(line1, Environment.NewLine)
       Console.WriteLine(line2, x, y, radians)
       Console.WriteLine(line3, angle)
-   End Sub 'Main
-End Class 'Sample
+   End Sub
+End Class
 '
 'This example produces the following results:
 '

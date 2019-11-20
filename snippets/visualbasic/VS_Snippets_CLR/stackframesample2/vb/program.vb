@@ -17,7 +17,7 @@ Class Program
         Console.WriteLine("Press Enter to exit.")
         Console.ReadLine()
 
-    End Sub 'Main
+    End Sub
 
     Private Shared Sub Method1()
         Try
@@ -33,7 +33,7 @@ Class Program
             Throw e
         End Try
 
-    End Sub 'Method1
+    End Sub
 
     Private Shared Sub Method2(ByVal count As Integer)
         Try
@@ -48,6 +48,6 @@ Class Program
             Throw e
         End Try
 
-    End Sub 'Method2
-End Class 'Program
+    End Sub
+End Class
 '</Snippet1>

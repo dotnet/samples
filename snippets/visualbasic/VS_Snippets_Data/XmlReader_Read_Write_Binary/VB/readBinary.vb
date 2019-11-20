@@ -12,7 +12,7 @@ Class Read_Write_BinaryMethods
        Base64EncodeImageFile()
        Base64DecodeImageFile()
     
-    End Sub 'Main
+    End Sub
      
     '<snippet1>
     Public Shared Sub BinHexEncodeImageFile() 
@@ -40,7 +40,7 @@ Class Read_Write_BinaryMethods
 
         End Using
      
-    End Sub 'BinHexEncodeImageFile
+    End Sub
     
     '</snippet1>
     '<snippet2>
@@ -66,7 +66,7 @@ Class Read_Write_BinaryMethods
             
         End Using
     
-    End Sub 'BinHexDecodeImageFile
+    End Sub
     
     '</snippet2>
     '<snippet3>
@@ -95,7 +95,7 @@ Class Read_Write_BinaryMethods
 
         End Using
      
-    End Sub 'Base64EncodeImageFile
+    End Sub
     
     '</snippet3>
     '<snippet4>
@@ -121,7 +121,7 @@ Class Read_Write_BinaryMethods
             
         End Using
     
-    End Sub 'Base64DecodeImageFile
+    End Sub
  '</snippet4>
-End Class 'Read_Write_BinaryMethods
+End Class
 ' end class.

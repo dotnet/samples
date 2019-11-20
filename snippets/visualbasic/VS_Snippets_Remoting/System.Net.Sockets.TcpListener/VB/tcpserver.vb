@@ -3,8 +3,6 @@ Imports System.IO
 Imports System.Net
 Imports System.Net.Sockets
 Imports System.Text
-Imports Microsoft.VisualBasic
-
 
 Class MyTcpListener
 
@@ -72,7 +70,7 @@ Class MyTcpListener
       
       Console.WriteLine(ControlChars.Cr + "Hit enter to continue....")
       Console.Read()
-   End Sub 'Main
+   End Sub
 
-End Class 'MyTcpListener 
+End Class
 ' </Snippet1>

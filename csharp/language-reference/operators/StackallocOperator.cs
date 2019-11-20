@@ -6,7 +6,7 @@ namespace operators
     {
         public static void Examples()
         {
-            Console.WriteLine("No snippets with output");
+            StackallocInNestedExpressions();
         }
 
         private static void AssignToPointer()
@@ -51,6 +51,15 @@ namespace operators
             Span<int> second = stackalloc int[] { 1, 2, 3 };
             ReadOnlySpan<int> third = stackalloc[] { 1, 2, 3 };
             // </SnippetStackallocInit>
+        }
+
+        private static void StackallocInNestedExpressions()
+        {
+            // <SnippetNested>
+            Span<int> numbers = stackalloc[] { 1, 2, 3, 4, 5, 6 };
+            var ind = numbers.IndexOfAny(stackalloc[] { 2, 4, 6 ,8 });
+            Console.WriteLine(ind);  // output: 1
+            // </SnippetNested>
         }
     }
 }

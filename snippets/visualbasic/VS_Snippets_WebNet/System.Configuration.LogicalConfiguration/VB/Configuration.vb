@@ -19,7 +19,7 @@ Namespace Samples.AspNet
 
         Public Sub New()
 
-        End Sub 'New
+        End Sub
        
 
         ' Define a custom section.
@@ -78,7 +78,7 @@ Namespace Samples.AspNet
                     Me(CustomSection.configTimeout) = value
                 End Set
             End Property
-        End Class 'CustomSection
+        End Class
 
 
 
@@ -108,7 +108,7 @@ Namespace Samples.AspNet
             ' Save the changes.
             config.Save()
 
-        End Sub 'CreateCustomSection
+        End Sub
 
 
         ' Get the custom section stored in 
@@ -132,7 +132,7 @@ Namespace Samples.AspNet
             Return currentSection
 
         End Function 'GetCustomSection
-    End Class 'CustomConfiguration
+    End Class
 
 End Namespace
 '</Snippet1>

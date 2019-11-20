@@ -370,7 +370,7 @@ Namespace Samples.AspNet.VB.Controls
             Dim b As New Button()
             b.Text = "New Button"
             RootDesigner.AddControlToDocument(b, Nothing, ControlLocation.Last)
-        End Sub 'AddButton
+        End Sub
 
         Public Sub AddNewButton()
             ' Add your custom button.

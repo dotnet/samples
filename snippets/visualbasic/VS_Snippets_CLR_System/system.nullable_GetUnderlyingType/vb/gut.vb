@@ -12,7 +12,7 @@ Class Sample
         Public Function MyMethod() As Nullable(Of Integer)
             Return 0
         End Function
-    End Class 'Example
+    End Class
     
 ' 
 '   Use reflection to obtain a Type object for the Example type.
@@ -30,8 +30,8 @@ Class Sample
         Dim answer As Type = Nullable.GetUnderlyingType(retval)
         Console.WriteLine("Underlying type ..... {0}", answer)
     
-    End Sub 'Main
-End Class 'Sample
+    End Sub
+End Class
 '
 'This code example produces the following results:
 '

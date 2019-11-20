@@ -15,7 +15,7 @@ class Test
                 File.Delete(path);
             }
 
-            using (StreamWriter sw = new StreamWriter(path))
+            using (StreamWriter sw = new StreamWriter(new FileStream(path, FileMode.CreateNew)))
             {
                 sw.WriteLine("This");
                 sw.WriteLine("is some text");

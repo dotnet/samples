@@ -34,28 +34,28 @@ Public Class MyInstaller
       End If
 ' </Snippet1>
       Console.WriteLine("")
-   End Sub 'Install
+   End Sub
 
    ' Override the 'Commit' method.
    Public Overrides Sub Commit(savedState As IDictionary)
       MyBase.Commit(savedState)
-   End Sub 'Commit
+   End Sub
 
    ' Override the 'Rollback' method.
    Public Overrides Sub Rollback(savedState As IDictionary)
       MyBase.Rollback(savedState)
-   End Sub 'Rollback
+   End Sub
 
    ' Override the 'Uninstall' method.
    Public Overrides Sub Uninstall(savedState As IDictionary)
       MyBase.Uninstall(savedState)
-   End Sub 'Uninstall
-End Class 'MyInstaller
+   End Sub
+End Class
 
 Public Class MyAssembly
    Public Shared Sub Main()
       Console.WriteLine("Run the assembly Installer_Context.exe using the" + _
                         " installer process 'installutil'")
-   End Sub 'Main
-End Class 'MyAssembly
+   End Sub
+End Class
 

@@ -6,11 +6,11 @@ Public Class MyServerImpl
    Public Sub New()
       i = 0
       Console.WriteLine("Server Activated...")
-   End Sub 'New
+   End Sub
    
    Public Function MyMethod(name As String) As String
       i = i + 1
       Return "The client requests to " + name + i.ToString() + " time"
    End Function 'MyMethod
-End Class 'MyServerImpl
+End Class
 

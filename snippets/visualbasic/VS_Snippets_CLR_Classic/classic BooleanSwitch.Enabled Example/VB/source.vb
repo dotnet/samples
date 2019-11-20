@@ -18,7 +18,7 @@ Public Class Form1
         If dataSwitch.Enabled Then
             Console.WriteLine(("Error happened at " + location))
         End If
-    End Sub 'MyMethod
+    End Sub
     
     'Entry point which delegates to C-style main Private Function
     Public Overloads Shared Sub Main()
@@ -28,7 +28,7 @@ Public Class Form1
     Overloads Public Shared Sub Main(args() As String)
         'Run the method that writes an error message specifying the location of the error.
         MyMethod("in Main")
-    End Sub 'Main
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Drawing
+﻿Imports System.Drawing
 Imports System.Drawing.Printing
 Imports System.Windows.Forms
 
@@ -13,7 +12,7 @@ Public Class Form1
     <STAThread()> _
     Shared Sub Main()
         Application.Run(New Form1)
-    End Sub 'Main
+    End Sub
 
     Public Sub New()
         MyBase.New()

@@ -53,5 +53,5 @@ Public Class MySample
          Console.WriteLine("Source : " + e.Source)
          Console.WriteLine("Message : " + e.Message)
       End Try
-   End Sub 'Main
-End Class 'MySample
+   End Sub
+End Class

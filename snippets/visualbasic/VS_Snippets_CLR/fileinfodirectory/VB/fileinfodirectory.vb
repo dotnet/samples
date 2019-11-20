@@ -19,8 +19,8 @@ Public Class DirectoryTest
         For Each info In fsi
             Console.WriteLine(info.Name)
         Next info
-    End Sub 'Main
-End Class 'DirectoryTest
+    End Sub
+End Class
 
 'This code produces output similar to the following; 
 'results may vary based on the computer/file structure/etc.:

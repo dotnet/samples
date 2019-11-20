@@ -30,8 +30,8 @@ Class MyIsHexDigitSample
       Catch e As Exception
          Console.WriteLine(e.Message)
       End Try
-   End Sub 'Main
-End Class 'MyIsHexDigitSample
+   End Sub
+End Class
 
 '****** Output *****
 '

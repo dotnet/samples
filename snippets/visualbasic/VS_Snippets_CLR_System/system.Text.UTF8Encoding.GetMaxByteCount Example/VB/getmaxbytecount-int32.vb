@@ -12,6 +12,6 @@ Class UTF8EncodingExample
             maxByteCount, _
             charCount _
         )
-    End Sub 'Main
-End Class 'UTF8EncodingExample
+    End Sub
+End Class
 ' </Snippet1>

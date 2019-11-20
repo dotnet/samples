@@ -17,6 +17,6 @@ Public Class StoreKey
         ' rsa.PersistKeyInCsp = false;
         'writes out the current key pair used in the rsa instance
         Console.WriteLine("Key is : "  & rsa.ToXmlString(True))
-    End Sub 'Main
-End Class 'StoreKey
+    End Sub
+End Class
 ' </SNIPPET1>

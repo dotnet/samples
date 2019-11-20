@@ -11,8 +11,6 @@
 Imports System.IO
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
-
 
 Class HttpWebRequest_Referer
      Public Overloads Shared Sub Main()
@@ -34,7 +32,7 @@ Class HttpWebRequest_Referer
             Console.WriteLine(ControlChars.Cr + "Exception Caught!")
             Console.WriteLine("Message :{0}", e.Message)
         End Try
-    End Sub ' Main
+    End Sub
     
     Public Shared Sub GetPage(myUri As [String])
         Try
@@ -74,5 +72,5 @@ Class HttpWebRequest_Referer
             Console.WriteLine(ControlChars.Cr + "Exception Caught!")
             Console.WriteLine("Message :{0} ", e.Message)
         End Try
-    End Sub ' GetPage 
-End Class ' HttpWebRequest_Referer
+    End Sub
+End Class

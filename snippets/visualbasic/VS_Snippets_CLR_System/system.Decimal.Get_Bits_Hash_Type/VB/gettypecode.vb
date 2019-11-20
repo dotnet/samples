@@ -1,7 +1,5 @@
 ﻿'<Snippet3>
 ' Example of the Decimal.GetTypeCode method. 
-Imports Microsoft.VisualBasic
-
 Module DecimalGetTypeCodeDemo
     
     Sub Main( )

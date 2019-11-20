@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.Windows
@@ -32,8 +31,8 @@ Class SimpleUsage
     Public Sub New() 
         InitializeComponent()
     
-    End Sub 'New
-End Class 'SimpleUsage 
+    End Sub
+End Class
 '
 'ToDo: Error processing original source shown below
 '   }

@@ -39,7 +39,7 @@ Module RSACSPExample
             'not succeed.
             Console.WriteLine("Encryption failed.")
         End Try
-    End Sub 'Main
+    End Sub
 
 
     Function RSAEncrypt(ByVal DataToEncrypt() As Byte, ByVal RSAKeyInfo As RSAParameters, ByVal DoOAEPPadding As Boolean) As Byte()

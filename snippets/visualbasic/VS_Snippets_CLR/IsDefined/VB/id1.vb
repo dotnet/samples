@@ -1,6 +1,5 @@
 ﻿'<Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
 
 ' Add an AssemblyDescription attribute.
 <Assembly: AssemblyDescription("A sample description")> 

@@ -67,7 +67,7 @@ Class UsingElementInformation
         Console.WriteLine("Urls element is a collection? {0}", _
         isCollection.ToString())
     
-    End Sub 'IsElementCollection
+    End Sub
     ' </Snippet81>
 
     ' <Snippet82>
@@ -92,7 +92,7 @@ Class UsingElementInformation
         Console.WriteLine("Url element is locked? {0}", _
         isLocked.ToString())
     
-    End Sub 'IsElementLocked
+    End Sub
     ' </Snippet82>
 
     ' <Snippet83>
@@ -117,7 +117,7 @@ Class UsingElementInformation
         Console.WriteLine("Url element is present? {0}", _
         isPresent.ToString())
     
-    End Sub 'IsElementPresent
+    End Sub
     
     ' </Snippet83>
 
@@ -144,7 +144,7 @@ Class UsingElementInformation
         Console.WriteLine("Urls element line number: {0}", _
         ln.ToString())
     
-    End Sub 'GetElementLineNumber
+    End Sub
     
     ' </Snippet84>
 
@@ -176,7 +176,7 @@ Class UsingElementInformation
             prop.Name, prop.Type.ToString())
         Next prop
     
-    End Sub 'GetElementProperties
+    End Sub
     
     ' </Snippet85>
 
@@ -204,7 +204,7 @@ Class UsingElementInformation
         Console.WriteLine( _
         "Url element source file: {0}", sourceFile)
     
-    End Sub 'GetElementSource
+    End Sub
     
     ' </Snippet86>
 
@@ -232,7 +232,7 @@ Class UsingElementInformation
         Console.WriteLine("Url element type: {0}", _
         elType.ToString())
     
-    End Sub 'GetElementType
+    End Sub
     
     ' </Snippet87>
 
@@ -261,7 +261,7 @@ Class UsingElementInformation
         Console.WriteLine("Url element validator: {0}", _
         elValidator.ToString())
     
-    End Sub 'GetElementValidator    
+    End Sub
     ' </Snippet88>
 
     ' <Snippet89>
@@ -287,8 +287,8 @@ Class UsingElementInformation
         errors.Count.ToString())
 
     
-    End Sub 'GetElementErrors 
+    End Sub
     ' </Snippet89>
 
-End Class 'UsingElementInformation 
+End Class
 

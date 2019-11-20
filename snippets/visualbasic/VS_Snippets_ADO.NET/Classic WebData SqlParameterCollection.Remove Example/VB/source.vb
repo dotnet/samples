@@ -22,6 +22,6 @@ Public Class Form1
         If command.Parameters.Contains(param) Then
             command.Parameters.Remove(param)
         End If
-    End Sub 'SearchSqlParams
+    End Sub
     ' </Snippet1>
-End Class 'Form1
+End Class

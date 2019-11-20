@@ -25,7 +25,7 @@ Public Class SampleService
         Return objRefTwo
     
     End Function 'GetManuallyMarshaledObject
-End Class 'SampleService
+End Class
 
 
 Public Class SampleTwo
@@ -35,7 +35,7 @@ Public Class SampleTwo
         Console.WriteLine("This message was received from the client:")
         Console.WriteLine(vbTab + "{0}", s)
     
-    End Sub 'PrintMessage
-End Class 'SampleTwo
+    End Sub
+End Class
 
 End Namespace

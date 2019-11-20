@@ -22,7 +22,6 @@
 ' 
 '***********************************************************************************************
 
-Imports System
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.Drawing
@@ -53,7 +52,7 @@ Public Class ListProvider
         OwnerListControl = control
         WindowHandle = control.Handle
 
-    End Sub 'New
+    End Sub
 
 #Region "IRawElementProviderSimple Members"
 
@@ -208,7 +207,7 @@ Public Class ListProvider
         Implements IRawElementProviderFragment.SetFocus
 
         Throw New Exception("The method is not implemented.")
-    End Sub 'SetFocus
+    End Sub
 
 #End Region
 
@@ -336,7 +335,7 @@ Public Class ListProvider
                 listItem.Provider, args)
         End If
 
-    End Sub 'OnFocusChange
+    End Sub
 
     ''' <summary>
     ''' Responds to a selection change by raising an event.
@@ -351,7 +350,7 @@ Public Class ListProvider
                 listItem.Provider, args)
         End If
 
-    End Sub 'OnSelectionChange
+    End Sub
 
 
     ' <Snippet101>
@@ -375,7 +374,7 @@ Public Class ListProvider
                 CType(list.Provider, IRawElementProviderSimple), args)
         End If
 
-    End Sub 'OnStructureChangeAdd
+    End Sub
 
 
     ''' <summary>
@@ -398,10 +397,10 @@ Public Class ListProvider
                 CType(list.Provider, IRawElementProviderSimple), args)
         End If
 
-    End Sub 'OnStructureChangeRemove
+    End Sub
     ' </Snippet101>        
 
 #End Region
 
-End Class 'ListProvider 
+End Class
 '

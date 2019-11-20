@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Drawing
+﻿Imports System.Drawing
 Imports System.ComponentModel
 Imports System.Windows.Forms
 
@@ -18,7 +17,7 @@ Namespace ControlMembers6
       Public Sub New()
          InitializeComponent()
          textBox1.Enabled = checkBox1.Checked
-      End Sub 'New
+      End Sub
       
       
       Protected Overrides Overloads Sub Dispose(disposing As Boolean)
@@ -28,7 +27,7 @@ Namespace ControlMembers6
             End If
          End If
          MyBase.Dispose(disposing)
-      End Sub 'Dispose
+      End Sub
       
 
       Private Sub InitializeComponent()
@@ -89,17 +88,17 @@ Namespace ControlMembers6
          Me.Name = "Form1"
          Me.Text = "Form1"
          Me.ResumeLayout(False)
-      End Sub 'InitializeComponent
+      End Sub
        
       <STAThread()> _
       Shared Sub Main()
          Application.Run(New Form1())
-      End Sub 'Main
+      End Sub
       
       
       Private Sub button1_Click(sender As Object, e As System.EventArgs) Handles button1.Click
          Me.ControlSetFocus(Me.textBox1)
-      End Sub 'button1_Click
+      End Sub
       
       
 '<snippet1>
@@ -126,12 +125,12 @@ End Sub
       
       Private Sub checkBox1_CheckedChanged(sender As Object, e As System.EventArgs) Handles checkBox1.CheckedChanged
          textBox1.Enabled = checkBox1.Checked
-      End Sub 'checkBox1_CheckedChanged
+      End Sub
       
       
       Private Sub button2_Click(sender As Object, e As System.EventArgs) Handles button2.Click
          Me.ControlSelect(Me.textBox1)
-      End Sub 'button2_Click
+      End Sub
       
       
 '<snippet3>
@@ -157,13 +156,13 @@ End Function
       
       Private Sub button4_Click(sender As Object, e As System.EventArgs) Handles button4.Click
          Me.EnableDoubleBuffering()
-      End Sub 'button4_Click
+      End Sub
       
       
       Private Sub button3_Click(sender As Object, e As System.EventArgs) Handles button3.Click
          MessageBox.Show(Me.DoubleBufferingEnabled().ToString())
          Me.ScaleChildControls()
-      End Sub 'button3_Click
+      End Sub
       
       
       

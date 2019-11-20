@@ -59,6 +59,6 @@ Class EventLogEntryCollection_Item
       Catch e As Exception
          Console.WriteLine("Exception:{0}", e.Message.ToString())
       End Try
-   End Sub 'Main
-End Class 'EventLogEntryCollection_Item
+   End Sub
+End Class
 ' </Snippet1>

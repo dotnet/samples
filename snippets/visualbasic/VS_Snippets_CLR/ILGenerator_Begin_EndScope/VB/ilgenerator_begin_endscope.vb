@@ -13,7 +13,6 @@
 Imports System.Reflection
 Imports System.Reflection.Emit
 Imports System.Security.Permissions
-Imports MicroSoft.VisualBasic
 
 Public Class ILGenerator_Begin_EndScope
    <PermissionSetAttribute(SecurityAction.Demand, Name:="FullTrust")> _
@@ -92,6 +91,6 @@ Public Class ILGenerator_Begin_EndScope
       Catch e As Exception
          Console.WriteLine("Exception: {0}", e.Message)
       End Try
-   End Sub 'Main
-End Class 'ILGenerator_Begin_EndScope
+   End Sub
+End Class
 ' </Snippet1>

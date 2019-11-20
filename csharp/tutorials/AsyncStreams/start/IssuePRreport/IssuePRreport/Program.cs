@@ -137,15 +137,15 @@ namespace GitHubActivityReport
             var value = Environment.GetEnvironmentVariable(item);
             if (string.IsNullOrWhiteSpace(value))
             {
+                if (!string.IsNullOrWhiteSpace(defaultValue))
+                {
+                    return defaultValue;
+                }
+                
                 if (!string.IsNullOrWhiteSpace(error))
                 {
                     Console.WriteLine(error);
                     Environment.Exit(0);
-                }
-
-                if (!string.IsNullOrWhiteSpace(defaultValue))
-                {
-                    return defaultValue;
                 }
             }
             return value;

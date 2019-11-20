@@ -1,5 +1,4 @@
-﻿Imports System
-Namespace GetSupportedPatterns
+﻿Namespace GetSupportedPatterns
 	Partial Public Class Form1
 		''' <summary>
 		''' Required designer variable.

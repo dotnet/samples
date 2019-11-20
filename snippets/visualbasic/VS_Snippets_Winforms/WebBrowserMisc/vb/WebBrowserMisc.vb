@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Windows.Forms
+﻿Imports System.Windows.Forms
 Imports System.Security.Permissions
 
 <PermissionSetAttribute(SecurityAction.Demand, Name:="FullTrust")> _

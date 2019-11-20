@@ -4,7 +4,6 @@
 ' On clicking the "Unselect Row" button, the selected row of
 ' the Datagrid is unselected.
 
-Imports System
 Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
@@ -19,7 +18,7 @@ Public Class MyForm
    Public Sub New()
       InitializeComponent()
       SetUp()
-   End Sub 'New
+   End Sub
    
    
    ' Clean up any resources being used.
@@ -30,12 +29,12 @@ Public Class MyForm
          End If
       End If
       MyBase.Dispose(disposing)
-   End Sub 'Dispose
+   End Sub
    
    
    Public Shared Sub Main()
       Application.Run(New MyForm())
-   End Sub 'Main
+   End Sub
    
    
    Private Sub InitializeComponent()
@@ -60,13 +59,13 @@ Public Class MyForm
       
       Me.Controls.Add(unselectButton)
       Me.Controls.Add(myDataGrid)
-   End Sub 'InitializeComponent
+   End Sub
    
    
    Private Sub SetUp()
       MakeDataSet()
       myDataGrid.SetDataBinding(myDataSet, "Person")
-   End Sub 'SetUp
+   End Sub
    
    
    ' Create a DataSet with two tables and populate it.
@@ -121,7 +120,7 @@ Public Class MyForm
          ' Add the row to the 'Detail' table.
          detailTable.Rows.Add(newRow2)
       Next i
-   End Sub 'MakeDataSet
+   End Sub
    
    
 ' <Snippet1>
@@ -129,6 +128,6 @@ Public Class MyForm
     Private Sub UnselectRow_Clicked(ByVal sender As Object, ByVal e As EventArgs)
         ' Unselect the current row from the Datagrid
         myDataGrid.UnSelect(myDataGrid.CurrentRowIndex)
-    End Sub 'UnselectRow_Clicked
+    End Sub
 ' </Snippet1>
-End Class 'MyForm 
+End Class

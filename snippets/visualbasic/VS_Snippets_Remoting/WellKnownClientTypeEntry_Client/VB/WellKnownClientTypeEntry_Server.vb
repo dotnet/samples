@@ -13,5 +13,5 @@ Public Class MyServer
       RemotingConfiguration.RegisterWellKnownServiceType(myWellKnownServiceTypeEntry)
       Console.WriteLine("Started the Server, Hit <enter> to exit...")
       Console.ReadLine()
-   End Sub 'Main
-End Class 'MyServer
+   End Sub
+End Class

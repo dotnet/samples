@@ -31,8 +31,8 @@ Class ADMultiDomain
       'Unload the application domain, which also unloads the assembly.
       AppDomain.Unload(newDomain)
       
-   End Sub 'Main
-End Class 'ADMultiDomain
+   End Sub
+End Class
 
 Class Worker
    Inherits MarshalByRefObject

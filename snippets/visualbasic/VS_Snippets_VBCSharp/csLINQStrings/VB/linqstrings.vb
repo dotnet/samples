@@ -271,7 +271,7 @@ Module Module1
                               """ or """ & searchTerm3 & """")
         End Sub
 
-    End Class 'class UnusedSnippet
+    End Class
 
 
     Class AlphabetizeLists

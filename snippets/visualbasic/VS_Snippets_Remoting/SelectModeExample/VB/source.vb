@@ -3,7 +3,6 @@ Imports System.Text
 Imports System.IO
 Imports System.Net
 Imports System.Net.Sockets
-Imports Microsoft.VisualBasic
 
 Public Class Sample
    
@@ -57,11 +56,11 @@ Public Class Sample
          bytes = s.Receive(RecvBytes, RecvBytes.Length, 0)
          strRetPage = strRetPage + ASCII.GetString(RecvBytes, 0, bytes)
       End While 
-   End Sub 'DoSocketGet
+   End Sub
    
    Public Shared Sub Main()
       DoSocketGet("www.contoso.com")
-   End Sub 'Main
-End Class 'Sample 
+   End Sub
+End Class
 
 

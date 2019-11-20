@@ -29,8 +29,8 @@ Class Sample
       Catch e As TimeoutException
          Console.WriteLine(e)
       End Try
-   End Sub 'Main
-End Class 'Sample
+   End Sub
+End Class
 '
 'This example produces the following results:
 '

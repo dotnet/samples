@@ -14,7 +14,7 @@ Imports System.Net
 Imports System.Security
 Imports System.Security.Permissions
 Imports System.Collections
-Imports Microsoft.VisualBasic
+
  _
 
 Class WebPermission_FromToXml
@@ -29,7 +29,7 @@ Class WebPermission_FromToXml
       Catch e As Exception
          Console.WriteLine(("Exception : " + e.Message))
       End Try
-   End Sub 'Main
+   End Sub
     
    
    Public Sub CallXml()
@@ -55,7 +55,7 @@ Class WebPermission_FromToXml
       Console.WriteLine("The Attributes and Values of 'WebPermission' instance after reconstruction are: " + ControlChars.Cr)
       ' Display the Attributes and values of the XML encoded instances.
       PrintKeysAndValues(myWebPermission2.ToXml().Attributes)
-   End Sub 'CallXml
+   End Sub
    
    
    Private Sub PrintKeysAndValues(myHashtable As Hashtable)
@@ -66,5 +66,5 @@ Class WebPermission_FromToXml
          Console.WriteLine(ControlChars.Tab + "{0}:" + ControlChars.Tab + "{1}", myEnumerator.Key, myEnumerator.Value)
       End While
       Console.WriteLine()
-   End Sub 'PrintKeysAndValues
-End Class 'WebPermission_FromToXml
+   End Sub
+End Class

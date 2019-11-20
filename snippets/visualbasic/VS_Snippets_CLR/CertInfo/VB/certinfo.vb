@@ -3,10 +3,6 @@ Imports System.Security.Cryptography
 Imports System.Security.Permissions
 Imports System.IO
 Imports System.Security.Cryptography.X509Certificates
-Imports Microsoft.VisualBasic
-
-
-
 
 Class CertInfo
 
@@ -14,7 +10,7 @@ Class CertInfo
     Friend Shared Function ReadFile(ByVal fileName As String) As Byte()
         Dim f As New FileStream(fileName, FileMode.Open, FileAccess.Read)
         Dim size As Integer = Fix(f.Length)
-        Dim data(size) As Byte
+        Dim data(size - 1) As Byte
         size = f.Read(data, 0, size)
         f.Close()
         Return data

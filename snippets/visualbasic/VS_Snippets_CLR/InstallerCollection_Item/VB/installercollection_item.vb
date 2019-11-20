@@ -11,7 +11,6 @@ Imports System.ComponentModel
 Imports System.Collections
 Imports System.Configuration.Install
 Imports System.IO
-Imports Microsoft.VisualBasic
 
 Public Class InstallerCollection_Item
    
@@ -53,5 +52,5 @@ Public Class InstallerCollection_Item
       Catch e As Exception
          Console.WriteLine("Exception raised : {0}", e.Message)
       End Try
-   End Sub 'Main
-End Class 'InstallerCollection_Item
+   End Sub
+End Class

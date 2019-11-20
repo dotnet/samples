@@ -25,5 +25,5 @@ Public Class DiscoveryClientProtocol_Download
             ("The MIME encoding of the downloaded discovery document: " & myEncoding)
       myStream.Close()
 ' </Snippet1>
-   End Sub 'Main
-End Class 'DiscoveryClientProtocol_Download 
+   End Sub
+End Class

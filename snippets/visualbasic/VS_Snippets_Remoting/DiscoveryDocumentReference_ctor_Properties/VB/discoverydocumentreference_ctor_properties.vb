@@ -46,5 +46,5 @@ Public Class DiscoveryDocumentReference_ctor_Properties
         Catch e As Exception
             Console.WriteLine("Exception: {0}", e.Message.ToString())
         End Try
-    End Sub 'Main
-End Class 'DiscoveryDocumentReference_ctor_Properties
+    End Sub
+End Class

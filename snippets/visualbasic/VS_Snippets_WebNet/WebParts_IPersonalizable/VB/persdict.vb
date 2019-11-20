@@ -85,7 +85,7 @@ Namespace PersTest
 
             Controls.Add(_list)
 
-        End Sub 'CreateChildControls
+        End Sub
 
 
         Private Sub OnClickAddButton(ByVal sender As Object, ByVal e As EventArgs)
@@ -107,14 +107,14 @@ Namespace PersTest
 
             OnUrlAdded()
 
-        End Sub 'OnClickAddButton
+        End Sub
 
 
         Protected Overridable Sub OnUrlAdded()
             _listDirty = True
             ChildControlsCreated = False
 
-        End Sub 'OnUrlAdded
+        End Sub
 
 
         Protected Overrides Sub RenderContents(ByVal writer As HtmlTextWriter)
@@ -133,7 +133,7 @@ Namespace PersTest
 
             MyBase.RenderContents(writer)
 
-        End Sub 'RenderContents
+        End Sub
 
 
         Public Overridable ReadOnly Property IsDirty() As Boolean _
@@ -158,7 +158,7 @@ Namespace PersTest
             End If
             '       Return False
 
-        End Sub 'Load
+        End Sub
 
         ' </snippet1>
         ' <snippet2>
@@ -170,9 +170,9 @@ Namespace PersTest
                 state("userUrls") = New PersonalizationEntry(_userUrls, PersonalizationScope.User)
             End If
 
-        End Sub 'Save
+        End Sub
        ' </snippet2>
-    End Class 'UrlListWebPart 
+    End Class
 
 
     Public Class UrlListExWebPart
@@ -201,7 +201,7 @@ Namespace PersTest
             MyBase.OnUrlAdded()
             SetPersonalizationDirty()
 
-        End Sub 'OnUrlAdded
+        End Sub
 
         ' </snippet3>
         Protected Overrides Sub RenderContents(ByVal writer As HtmlTextWriter)
@@ -212,7 +212,7 @@ Namespace PersTest
             writer.Write(_trackingLog)
             writer.Write("</pre>")
 
-        End Sub 'RenderContents
+        End Sub
 
 
         Public Overrides Sub Load(ByVal state As PersonalizationDictionary)
@@ -221,7 +221,7 @@ Namespace PersTest
             End If
             MyBase.Load(state)
 
-        End Sub 'Load
+        End Sub
 
 
         Public Overrides Sub Save(ByVal state As PersonalizationDictionary)
@@ -230,7 +230,7 @@ Namespace PersTest
             End If
             MyBase.Save(state)
 
-        End Sub 'Save
+        End Sub
         ' <snippet8>
 
         ReadOnly Property TracksChanges() As Boolean Implements ITrackingPersonalizable.TracksChanges
@@ -245,7 +245,7 @@ Namespace PersTest
             _loading = True
             _trackingLog = "1. BeginLoad" + vbCr + vbLf
 
-        End Sub 'ITrackingPersonalizable.BeginLoad
+        End Sub
 
         ' </snippet4>
         ' <snippet5>
@@ -253,7 +253,7 @@ Namespace PersTest
             _saving = True
             _trackingLog += "3. BeginSave" + vbCr + vbLf
 
-        End Sub 'ITrackingPersonalizable.BeginSave
+        End Sub
 
         ' </snippet5>
         ' <snippet6>
@@ -261,7 +261,7 @@ Namespace PersTest
             _loading = False
             _trackingLog += "2. EndLoad" + vbCr + vbLf
 
-        End Sub 'ITrackingPersonalizable.EndLoad
+        End Sub
 
         ' </snippet6>
         ' <snippet7>
@@ -269,8 +269,8 @@ Namespace PersTest
             _saving = False
             _trackingLog += "4. EndSave"
 
-        End Sub 'ITrackingPersonalizable.EndSave
+        End Sub
         ' </snippet7>
-    End Class 'UrlListExWebPart 
+    End Class
     ' </snippet9>
 End Namespace

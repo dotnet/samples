@@ -8,6 +8,6 @@ Class UnicodeEncodingExample
         Dim charCount As Integer = 2
         Dim maxByteCount As Integer = uni.GetMaxByteCount(charCount)
         Console.WriteLine("Maximum of {0} bytes needed to encode {1} characters.", maxByteCount, charCount)
-    End Sub 'Main
-End Class 'UnicodeEncodingExample
+    End Sub
+End Class
 ' </Snippet1>

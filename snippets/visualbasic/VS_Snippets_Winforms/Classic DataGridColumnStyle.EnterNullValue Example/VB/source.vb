@@ -1,5 +1,4 @@
-﻿imports System
-imports System.Data
+﻿imports System.Data
 imports System.Drawing
 imports System.Windows.Forms
 
@@ -17,7 +16,7 @@ Namespace MyNameSpace
         ' </Snippet1>
        
         Protected Overloads Overrides Sub Edit(source As System.Windows.Forms.CurrencyManager, rowNum As Integer, bounds As System.Drawing.Rectangle, readOnly1 As Boolean, displayText As String, cellIsVisiblen As Boolean)
-        End Sub 'Edit
+        End Sub
          
         
         Protected Overrides Function Commit(dataSource As System.Windows.Forms.CurrencyManager, rowNum As Integer) As Boolean
@@ -41,14 +40,14 @@ Namespace MyNameSpace
         
         
         Protected Overrides Sub Abort(rowNum As Integer)
-        End Sub 'Abort
+        End Sub
          
         
         Overloads Protected Overrides Sub Paint(g As System.Drawing.Graphics, bounds As System.Drawing.Rectangle, source As System.Windows.Forms.CurrencyManager, rowNum As Integer, b As Boolean)
-        End Sub 'Paint
+        End Sub
         
         
         Overloads Protected Overrides Sub Paint(g As System.Drawing.Graphics, bounds As System.Drawing.Rectangle, source As System.Windows.Forms.CurrencyManager, rowNum As Integer)
-        End Sub 'Paint 
-    End Class 'MyDataGridColumnStyle
+        End Sub
+    End Class
 End Namespace 'MyNameSpace

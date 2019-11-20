@@ -87,7 +87,7 @@ Public Class Client
         Return "Blah"
     
     End Function 'GetPassword
-End Class 'Client
+End Class
 
 <ServiceContract()>  _
 Public Interface ICalculator
@@ -127,31 +127,31 @@ Class CalculatorClient
 
     Public Sub New()
 
-    End Sub 'New
+    End Sub
 
 
     Public Sub New(ByVal endpointConfigurationName As String)
         MyBase.New(endpointConfigurationName)
 
-    End Sub 'New
+    End Sub
 
 
     Public Sub New(ByVal endpointConfigurationName As String, ByVal remoteAddress As String)
         MyBase.New(endpointConfigurationName, remoteAddress)
 
-    End Sub 'New
+    End Sub
 
 
     Public Sub New(ByVal endpointConfigurationName As String, ByVal remoteAddress As System.ServiceModel.EndpointAddress)
         MyBase.New(endpointConfigurationName, remoteAddress)
 
-    End Sub 'New
+    End Sub
 
 
     Public Sub New(ByVal binding As System.ServiceModel.Channels.Binding, ByVal remoteAddress As System.ServiceModel.EndpointAddress)
         MyBase.New(binding, remoteAddress)
 
-    End Sub 'New
+    End Sub
 
 
     Public Function Add(ByVal a As Double, ByVal b As Double) As Double

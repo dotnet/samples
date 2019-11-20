@@ -177,9 +177,9 @@ Class UsingFormsAuthenticationCredentials
         formsAuthenticationCredentials.Users.AllKeys
         ' </Snippet17>
 
-    End Sub 'Main
+    End Sub
 
-End Class 'UsingFormsAuthenticationCredentials 
+End Class
 
 
 

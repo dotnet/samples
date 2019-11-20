@@ -1,5 +1,4 @@
 ﻿' <Snippet2>
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Media

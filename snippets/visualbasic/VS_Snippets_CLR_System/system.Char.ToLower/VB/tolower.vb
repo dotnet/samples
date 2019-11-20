@@ -1,5 +1,4 @@
-﻿imports Microsoft.VisualBasic
-' <snippet16>
+﻿' <snippet16>
 Module ToLowerSample
 
     Sub Main()

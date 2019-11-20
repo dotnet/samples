@@ -82,5 +82,5 @@ Class MyClass1
       ' Write to a new WSDL file.
       myServiceDescription.Write("output.wsdl")
 ' </Snippet1>
-   End Sub 'Main
-End Class 'MyClass1
+   End Sub
+End Class

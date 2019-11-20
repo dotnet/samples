@@ -3,7 +3,7 @@ using namespace System;
  
 namespace Samples 
 {    
-	[FlagsAttribute]    
+	[Flags]    
 	public enum class Days    
 	{        
 		None        = 0,        

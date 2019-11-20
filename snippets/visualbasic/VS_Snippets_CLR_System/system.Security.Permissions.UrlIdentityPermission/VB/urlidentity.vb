@@ -12,7 +12,7 @@ Public Class UrlIdentityPermissionDemo
         IntersectDemo()
         ToFromXmlDemo()
 
-    End Sub 'Main
+    End Sub
 
 
     ' <Snippet2>
@@ -34,7 +34,7 @@ Public Class UrlIdentityPermissionDemo
             Console.WriteLine(permIdPerm2.Url + " is not a subset of " + permIdPerm1.Url)
         End If
 
-    End Sub 'IsSubsetOfDemo
+    End Sub
 
     ' </Snippet3>
     ' <Snippet4>
@@ -53,7 +53,7 @@ Public Class UrlIdentityPermissionDemo
             Console.WriteLine("The intersection of " + permIdPerm1.Url + " and " + vbLf + vbTab + permIdPerm2.Url + " is null." + vbLf)
         End If
 
-    End Sub 'IntersectDemo
+    End Sub
 
 
 
@@ -71,7 +71,7 @@ Public Class UrlIdentityPermissionDemo
             Console.WriteLine("The copy succeeded:  " + permIdPerm2.ToString() + " " + vbLf)
         End If
 
-    End Sub 'CopyDemo
+    End Sub
 
     '</Snippet5>
     '<Snippet6>
@@ -91,8 +91,8 @@ Public Class UrlIdentityPermissionDemo
             Console.WriteLine(permIdPerm1.ToString())
         End If
 
-    End Sub 'ToFromXmlDemo 
-End Class 'UrlIdentityPermissionDemo
+    End Sub
+End Class
 '</Snippet6>
 
 ' </Snippet1>

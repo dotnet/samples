@@ -13,7 +13,6 @@
 ' <Snippet1>
 Imports System.Web.Services.Description
 Imports System.Xml
-Imports Microsoft.VisualBasic
 
 Class MyServiceClass
    
@@ -81,7 +80,7 @@ Class MyServiceClass
       Catch e As Exception
          Console.WriteLine("Exception: " & e.Message.ToString())
       End Try
-   End Sub 'Main
+   End Sub
    
    
    Public Shared Function CreatePort(PortName As String, _
@@ -97,5 +96,5 @@ Class MyServiceClass
       myPort.Extensions.Add(mySoapAddressBinding)
       Return myPort
    End Function 'CreatePort
-End Class 'MyServiceClass
+End Class
 ' </Snippet1>

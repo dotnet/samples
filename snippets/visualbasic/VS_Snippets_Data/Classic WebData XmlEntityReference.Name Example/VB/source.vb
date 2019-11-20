@@ -20,6 +20,6 @@ Public Class Sample
         Dim entref As XmlEntityReference = CType(doc.DocumentElement.LastChild.FirstChild, XmlEntityReference)
         Console.WriteLine("Name of the entity reference:  {0}", entref.Name)
         Console.WriteLine("The entity replacement text:  {0}", entref.InnerText)
-    End Sub 'Main
-End Class 'Sample
+    End Sub
+End Class
 ' </Snippet1>

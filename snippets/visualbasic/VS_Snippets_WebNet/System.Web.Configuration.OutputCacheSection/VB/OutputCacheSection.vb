@@ -71,8 +71,8 @@ Class UsingOutputCacheSection
         As New System.Web.Configuration.OutputCacheSection()
         ' </Snippet7>
 
-    End Sub 'Main
+    End Sub
 
-End Class 'UsingOutputCacheSection 
+End Class
 ' UsingOutputCacheSection class end.
 ' Samples.Aspnet.SystemWebConfiguration namespace end.

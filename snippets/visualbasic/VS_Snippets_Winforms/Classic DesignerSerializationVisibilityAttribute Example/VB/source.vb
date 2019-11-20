@@ -1,5 +1,4 @@
 ﻿' <Snippet1>
-Imports System
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.ComponentModel.Design
@@ -28,7 +27,7 @@ Namespace DesignerSerializationVisibilityTest
 
         Public Sub New()
             InitializeComponent()
-        End Sub 'New
+        End Sub
 
 
         Protected Overloads Sub Dispose(ByVal disposing As Boolean)
@@ -38,12 +37,12 @@ Namespace DesignerSerializationVisibilityTest
                 End If
             End If
             MyBase.Dispose(disposing)
-        End Sub 'Dispose
+        End Sub
 
 
         Private Sub InitializeComponent()
-        End Sub 'InitializeComponent
-    End Class 'ContentSerializationExampleControl
+        End Sub
+    End Class
 
     ' This attribute indicates that the public properties of this object should be listed in the property grid.
    <TypeConverterAttribute(GetType(System.ComponentModel.ExpandableObjectConverter))> _   
@@ -53,7 +52,7 @@ Namespace DesignerSerializationVisibilityTest
         ' This class reads and writes the Location and Size properties from the Control which it is initialized to.
         Friend Sub New(ByVal owner As Control)
             Me.owner = owner
-        End Sub 'New
+        End Sub
 
 
         Public Property Location() As Point
@@ -74,6 +73,6 @@ Namespace DesignerSerializationVisibilityTest
                 owner.Size = Value
             End Set
         End Property
-    End Class 'DimensionData
+    End Class
 End Namespace 'DesignerSerializationVisibilityTest
 ' </Snippet1>

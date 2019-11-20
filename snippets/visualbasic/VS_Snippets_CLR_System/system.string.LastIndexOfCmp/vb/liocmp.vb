@@ -73,8 +73,8 @@ Class Sample
             Console.WriteLine(resultFmt, sc, loc)
         Next sc
     
-    End Sub 'Main
-End Class 'Sample
+    End Sub
+End Class
 
 '
 'Note: This code example was executed on a console whose user interface 

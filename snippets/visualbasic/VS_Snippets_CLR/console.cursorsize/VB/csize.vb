@@ -1,7 +1,5 @@
 ﻿'<snippet1>
 ' This example demonstrates the Console.CursorSize property.
-Imports Microsoft.VisualBasic
-
 Class Sample
    Public Shared Sub Main()
       Dim m0 As String = "This example increments the cursor size from " & _
@@ -19,8 +17,8 @@ Class Sample
          Console.ReadKey()
       Next size
       Console.CursorSize = saveCursorSize
-   End Sub 'Main
-End Class 'Sample
+   End Sub
+End Class
 '
 'This example produces the following results:
 '

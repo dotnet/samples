@@ -2,7 +2,6 @@
 Imports System.Reflection
 Imports System.Security
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
 
 Class EventsSample
 
@@ -24,6 +23,6 @@ Class EventsSample
         Catch e As Exception
             Console.WriteLine("Exception: " + e.Message)
         End Try
-    End Sub 'Main
-End Class 'EventsSample
+    End Sub
+End Class
 ' </Snippet1>

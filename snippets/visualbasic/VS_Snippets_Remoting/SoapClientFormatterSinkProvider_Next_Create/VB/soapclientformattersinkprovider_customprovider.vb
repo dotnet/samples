@@ -12,10 +12,10 @@ Public Class MyClientProvider
     Private nextProvider As IClientChannelSinkProvider = Nothing
 
     Public Sub New()
-    End Sub 'New
+    End Sub
 
     Public Sub New(ByVal properties As IDictionary, ByVal providerData As ICollection)
-    End Sub 'New
+    End Sub
 
     Public Function CreateSink(ByVal channel As IChannelSender, ByVal myUrl As String, _
                ByVal remoteChannelData As Object) As IClientChannelSink Implements _
@@ -38,7 +38,7 @@ Public Class MyClientProvider
             nextProvider = Value
         End Set
     End Property
-End Class 'MyClientProvider
+End Class
 
 <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> _
 Friend Class MyClientChannelSink
@@ -49,33 +49,33 @@ Friend Class MyClientChannelSink
     Public Sub New(ByVal nextSink As IClientChannelSink)
       MyBase.New()
         nextClientSink = nextSink
-    End Sub 'New
+    End Sub
 
     Public Sub New(ByVal channel As IChannelSender, ByVal url As String, ByVal remoteChannelData As _
                                                    Object, ByVal nextSink As IClientChannelSink)
         MyBase.New()
         nextClientSink = nextSink
-    End Sub 'New
+    End Sub
 
     Public Sub ProcessMessage(ByVal msg As IMessage, ByVal requestHeaders As ITransportHeaders, _
                      ByVal requestStream As Stream, ByRef responseHeaders As ITransportHeaders, _
                       ByRef responseStream As Stream) Implements IClientChannelSink.ProcessMessage
         nextClientSink.ProcessMessage(msg, requestHeaders, requestStream, responseHeaders, _
                                                                            responseStream)
-    End Sub 'ProcessMessage
+    End Sub
 
     Public Sub AsyncProcessRequest(ByVal sinkStack As IClientChannelSinkStack, ByVal msg As IMessage, _
                                     ByVal headers As ITransportHeaders, ByVal stream As Stream) _
                                     Implements IClientChannelSink.AsyncProcessRequest
         sinkStack.Push(Me, Nothing)
         nextClientSink.AsyncProcessRequest(sinkStack, msg, headers, stream)
-    End Sub 'AsyncProcessRequest
+    End Sub
 
     Public Sub AsyncProcessResponse(ByVal sinkStack As IClientResponseChannelSinkStack, _
                ByVal state As Object, ByVal headers As ITransportHeaders, ByVal stream As Stream) _
                   Implements IClientChannelSink.AsyncProcessResponse
         sinkStack.AsyncProcessResponse(headers, stream)
-    End Sub 'AsyncProcessResponse
+    End Sub
 
     Public Function GetRequestStream(ByVal msg As IMessage, ByVal headers As ITransportHeaders) As _
                                              Stream Implements IClientChannelSink.GetRequestStream
@@ -116,7 +116,7 @@ Friend Class MyClientChannelSink
 
         End Get
     End Property
-End Class 'MyClientChannelSink
+End Class
 
 <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> _
 Public Class MyServerProvider
@@ -124,14 +124,14 @@ Public Class MyServerProvider
     Private nextProvider As IServerChannelSinkProvider = Nothing
 
     Public Sub New()
-    End Sub 'New
+    End Sub
 
     Public Sub New(ByVal properties As IDictionary, ByVal providerData As ICollection)
-    End Sub 'New
+    End Sub
 
     Public Sub GetChannelData(ByVal channelData As IChannelDataStore) Implements _
                                                 IServerChannelSinkProvider.GetChannelData
-    End Sub 'GetChannelData
+    End Sub
 
     Public Function CreateSink(ByVal channel As IChannelReceiver) As IServerChannelSink Implements _
                                                             IServerChannelSinkProvider.CreateSink
@@ -155,7 +155,7 @@ Public Class MyServerProvider
             nextProvider = Value
         End Set
     End Property
-End Class 'MyServerProvider
+End Class
 
 <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> _
 Friend Class MyServerChannelSink
@@ -166,12 +166,12 @@ Friend Class MyServerChannelSink
     Public Sub New(ByVal nextSink As IServerChannelSink)
         MyBase.New()
         nextServerSink = nextSink
-    End Sub 'New
+    End Sub
 
     Public Sub New(ByVal channel As IChannelReceiver, ByVal nextSink As IServerChannelSink)
         MyBase.New()
         nextServerSink = nextSink
-    End Sub 'New
+    End Sub
 
 
     Public Function ProcessMessage(ByVal sinkStack As IServerChannelSinkStack, ByVal requestMsg As IMessage , _
@@ -201,7 +201,7 @@ Friend Class MyServerChannelSink
          ByVal state As Object, ByVal msg As IMessage, ByVal headers As ITransportHeaders, ByVal _
                            stream As Stream) Implements IServerChannelSink.AsyncProcessResponse
         sinkStack.AsyncProcessResponse(msg, headers, stream)
-    End Sub 'AsyncProcessResponse
+    End Sub
 
     Public Function GetResponseStream(ByVal sinkStack As IServerResponseChannelSinkStack, ByVal state _
             As Object, ByVal msg As IMessage, ByVal headers As ITransportHeaders) As Stream _
@@ -242,7 +242,7 @@ Friend Class MyServerChannelSink
 
         End Get
     End Property
-End Class 'MyServerChannelSink
+End Class
 
 Public Class MyKey
-End Class 'MyKey
+End Class

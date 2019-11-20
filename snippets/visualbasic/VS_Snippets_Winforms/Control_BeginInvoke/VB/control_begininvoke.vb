@@ -10,7 +10,6 @@
 ' clicked a delegate is called asynchronously using 'BeginInvoke' which will display
 ' a message in the 'TextBox'.
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -27,7 +26,7 @@ Public Class MyForm
    Public Sub New()
       ' Required for Windows Form Designer support.
       InitializeComponent()
-   End Sub 'New
+   End Sub
    
    Protected Overrides Overloads Sub Dispose(disposing As Boolean)
       If disposing Then
@@ -36,7 +35,7 @@ Public Class MyForm
          End If
       End If
       MyBase.Dispose(disposing)
-   End Sub 'Dispose
+   End Sub
    
    
    Private Sub InitializeComponent()
@@ -64,12 +63,12 @@ Public Class MyForm
       Me.Controls.Add(myTextBox)
       Me.Controls.Add(myButton)
       Me.Controls.Add(invokeButton)
-   End Sub 'InitializeComponent
+   End Sub
    
    <STAThread()>  _
    Public Shared Sub Main()
       Application.Run(New MyForm())
-   End Sub 'Main
+   End Sub
    
 ' <Snippet1>
    Delegate Sub MyDelegate(myControl As Label, myArg2 As String)
@@ -80,14 +79,14 @@ Public Class MyForm
       myArray(0) = New Label()
       myArray(1) = "Enter a Value"
       myTextBox.BeginInvoke(New MyDelegate(AddressOf DelegateMethod), myArray)
-   End Sub 'Button_Click
+   End Sub
    
    Public Sub DelegateMethod(myControl As Label, myCaption As String)
       myControl.Location = New Point(16, 16)
       myControl.Size = New Size(80, 25)
       myControl.Text = myCaption
       Me.Controls.Add(myControl)
-   End Sub 'DelegateMethod
+   End Sub
    
 ' </Snippet1>
 ' <Snippet2>
@@ -95,10 +94,10 @@ Public Class MyForm
    
    Private Sub Invoke_Click(sender As Object, e As EventArgs)
       myTextBox.BeginInvoke(New InvokeDelegate(AddressOf InvokeMethod))
-   End Sub 'Invoke_Click
+   End Sub
    
    Public Sub InvokeMethod()
       myTextBox.Text = "Executed the given delegate"
-   End Sub 'InvokeMethod
+   End Sub
 ' </Snippet2>
-End Class 'MyForm 
+End Class

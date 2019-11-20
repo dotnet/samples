@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Windows
 Imports System.Windows.Ink
 Imports System.Windows.Controls
@@ -44,7 +43,7 @@ Class Window1
         Dim flicksEnabled As Boolean = Stylus.GetIsFlicksEnabled(canvas1)
         '</Snippet6>
 
-    End Sub 'New
+    End Sub
     
     Private Sub TouchFeedbackSnippets()
 
@@ -78,13 +77,13 @@ Class Window1
             inkCanvas1.SetEnabledGestures(gestures)
         End If
         '</Snippet3>
-    End Sub 'OnLoad
+    End Sub
 
 
     ' Sample event handler:  
     Private Sub button1_click(ByVal sender As Object, ByVal e As RoutedEventArgs)
 
-    End Sub 'button1_click
+    End Sub
 
 
 
@@ -110,9 +109,9 @@ Class Window1
 
         End If
 
-    End Sub 'inkCanvas1_Gesture
+    End Sub
     '</Snippet1>
-End Class 'Window1 
+End Class
 
 '
 'ToDo: Error processing original source shown below

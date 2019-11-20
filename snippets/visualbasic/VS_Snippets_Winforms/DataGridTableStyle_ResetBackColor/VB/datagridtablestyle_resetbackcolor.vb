@@ -6,7 +6,6 @@
 ' pink. When the user clicks on 'ResetBackColor' button, then the value 
 ' of DataGridBackColor is set to its default value.
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.Windows.Forms
@@ -28,7 +27,7 @@ Public Class MyForm
       ' Bind the DataGrid to the DataSet.
       myDataGrid.SetDataBinding(myDataSet, "customerTable")
       AddCustomColumnStyle()
-   End Sub 'New
+   End Sub
    
    
    ' Initialilze form and its controls.
@@ -57,7 +56,7 @@ Public Class MyForm
       Name = "Form1"
       Text = "Reset BackColor"
       ResumeLayout(False)
-   End Sub 'InitializeComponent
+   End Sub
    
 ' <Snippet1>
    Private Sub AddCustomColumnStyle()
@@ -71,18 +70,18 @@ Public Class MyForm
       myColumnStyle.Width = 250
       myTableStyle.GridColumnStyles.Add(myColumnStyle)
       myDataGrid.TableStyles.Add(myTableStyle)
-   End Sub 'AddCustomColumnStyle
+   End Sub
    
    
    Private Sub myButton1_Click(sender As Object, e As EventArgs)
       ' Reset the background color.
       myTableStyle.ResetBackColor()
-   End Sub 'myButton1_Click
+   End Sub
 ' </Snippet1>
    
    Shared Sub Main()
       Application.Run(New MyForm())
-   End Sub 'Main
+   End Sub
    
    
    
@@ -106,5 +105,5 @@ Public Class MyForm
       customerTable.Rows(2)("Customers") = "Omega"
       customerTable.Rows(3)("Customers") = "Cust1"
       customerTable.Rows(4)("Customers") = "Cust2"
-   End Sub 'MakeDataSet
-End Class 'MyForm
+   End Sub
+End Class

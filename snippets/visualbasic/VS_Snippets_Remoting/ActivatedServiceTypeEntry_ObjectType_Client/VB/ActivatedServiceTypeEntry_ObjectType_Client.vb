@@ -19,5 +19,5 @@ Public Class MyClient
          Console.WriteLine("Calling remote object")
          Console.WriteLine(myHelloServer.HelloMethod("Bill"))
       End If
-   End Sub 'Main
-End Class 'MyClient
+   End Sub
+End Class

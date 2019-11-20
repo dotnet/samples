@@ -25,6 +25,6 @@ Class MySample
             ' Create the event source to make next try successful.
             EventLog.CreateEventSource("MySource", "MyLog")
         End If
-    End Sub 'Main
-End Class 'MySample
+    End Sub
+End Class
 ' </Snippet1>

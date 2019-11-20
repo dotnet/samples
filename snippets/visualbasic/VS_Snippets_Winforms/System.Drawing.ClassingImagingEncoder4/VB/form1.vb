@@ -1,6 +1,5 @@
 ﻿ ' Snippet for: F:System.Drawing.Imaging.Encoder.SaveFlag
 ' <snippet4>
-Imports System
 Imports System.Drawing
 Imports System.Drawing.Imaging
 
@@ -54,7 +53,7 @@ Class Example_MultiFrame
         myEncoderParameters.Param(0) = myEncoderParameter
         multi.SaveAdd(myEncoderParameters)
     
-    End Sub 'Main
+    End Sub
     
     Private Shared Function GetEncoderInfo(ByVal mimeType As String) As ImageCodecInfo 
         Dim j As Integer
@@ -71,5 +70,5 @@ Class Example_MultiFrame
         Return Nothing
     
     End Function 'GetEncoderInfo
-End Class 'Example_MultiFrame
+End Class
 ' </snippet4>

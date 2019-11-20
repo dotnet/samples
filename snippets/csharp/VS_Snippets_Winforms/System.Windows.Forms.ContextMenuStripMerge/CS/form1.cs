@@ -25,10 +25,7 @@ public class Form1 : Form
     {
         InitializeComponent();
 
-        if (components == null)
-        {
-            components = new Container();
-        }
+        components ??= new Container();
         cmsBase = new ContextMenuStrip(components);
         cmsItemsToMerge = new ContextMenuStrip(components);
 

@@ -1,6 +1,5 @@
 ﻿
 
-Imports System
 Imports System.Data
 Imports System.ComponentModel
 Imports System.Windows.Forms
@@ -20,12 +19,12 @@ Public Class Form1
       richTextBox1.Size = New System.Drawing.Size(100, 100)
       
       Me.Controls.Add(richTextBox1)
-   End Sub 'New
+   End Sub
    
    ' <Snippet1>
    Private Sub Link_Clicked(sender As Object, e As System.Windows.Forms.LinkClickedEventArgs)
       System.Diagnostics.Process.Start(e.LinkText)
-   End Sub 'Link_Clicked
+   End Sub
    ' </Snippet1>
 
    '/ <summary>
@@ -34,5 +33,5 @@ Public Class Form1
    <STAThread()>  _
    Shared Sub Main()
       Application.Run(New Form1())
-   End Sub 'Main
-End Class 'Form1 
+   End Sub
+End Class

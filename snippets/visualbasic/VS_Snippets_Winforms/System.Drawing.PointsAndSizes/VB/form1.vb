@@ -3,7 +3,6 @@ Option Explicit On
 
 
 Imports System.Drawing
-Imports System
 Imports System.Windows.Forms
 
 ' The following code example demonstrates how to override the  

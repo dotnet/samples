@@ -25,6 +25,6 @@ Public Class ManualClient
          Console.WriteLine("SampleWellKnown is currently not available.  The server probably called Disconnect().")
       End Try
       ' </Snippet3>
-   End Sub 'Main
+   End Sub
    
-End Class 'ManualClient 
+End Class

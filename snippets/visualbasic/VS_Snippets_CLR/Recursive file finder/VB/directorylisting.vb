@@ -23,7 +23,7 @@ Public Class RecursiveFileProcessor
                 End If
             End If
         Next path
-    End Sub 'Main
+    End Sub
 
 
     ' Process all files in the directory passed in, recurse on any directories 
@@ -43,12 +43,12 @@ Public Class RecursiveFileProcessor
             ProcessDirectory(subdirectory)
         Next subdirectory
 
-    End Sub 'ProcessDirectory
+    End Sub
 
     ' Insert logic for processing found files here.
     Public Shared Sub ProcessFile(ByVal path As String)
         Console.WriteLine("Processed file '{0}'.", path)
-    End Sub 'ProcessFile
-End Class 'RecursiveFileProcessor
+    End Sub
+End Class
 '</Snippet2>
 '</Snippet1>

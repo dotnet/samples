@@ -17,7 +17,7 @@ Namespace GetFileSystemEntries
             snippets.GetLogicalDrives()
             snippets.GetParent(path)
             snippets.Move("C:\proof", "C:\Temp")
-        End Sub 'Main
+        End Sub
 
         Sub PrintFileSystemEntries(ByVal path As String)
             Try

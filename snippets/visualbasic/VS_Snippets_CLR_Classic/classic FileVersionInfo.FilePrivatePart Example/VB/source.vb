@@ -15,7 +15,7 @@ Public Class Form1
         
         ' Print the file private part number.
         textBox1.Text = "File private part number: " & myFileVersionInfo.FilePrivatePart
-    End Sub 'GetFilePrivatePart
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

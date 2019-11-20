@@ -44,8 +44,8 @@ Namespace CompositionSampleControls
          Me.Controls.Add(box)
          
          Me.Controls.Add(New LiteralControl("</h3>"))
-      End Sub 'CreateChildControls
+      End Sub
       ' </snippet2>
-   End Class 'Composition1 
+   End Class
 End Namespace 'CompositionSampleControls 
   

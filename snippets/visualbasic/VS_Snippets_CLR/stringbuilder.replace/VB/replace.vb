@@ -25,7 +25,7 @@ Class Sample
       sb.Replace("dog", "fox", 15, 20) ' Some "dog" -> "fox"
       Console.WriteLine("Final value:")
       Show(sb)
-   End Sub 'Main
+   End Sub
    
    Public Shared Sub Show(sbs As StringBuilder)
       Dim rule1 As String = "0----+----1----+----2----+----3----+----4---"
@@ -35,8 +35,8 @@ Class Sample
       Console.WriteLine(rule2)
       Console.WriteLine("{0}", sbs.ToString())
       Console.WriteLine()
-   End Sub 'Show
-End Class 'Sample
+   End Sub
+End Class
 '
 'This example produces the following results:
 '

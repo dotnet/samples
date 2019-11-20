@@ -34,8 +34,8 @@ Namespace Examples.VB.WebControls.Design
                 simpleControl.Items.Clear()
                 simpleControl.Items.Add("Data-bound Radio Button.")
             End If
-        End Sub ' DataBindControl
+        End Sub
         ' </snippet7>
-    End Class ' SimpleRadioButtonListDataBindingHandler
+    End Class
 End Namespace ' Examples.VB.WebControls.Design
 ' </snippet6>

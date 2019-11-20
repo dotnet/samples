@@ -1,5 +1,4 @@
-﻿Imports System
-Namespace UIAIToggleProvider_snip
+﻿Namespace UIAIToggleProvider_snip
 	Partial Public Class ProviderForm
 		''' <summary>
 		''' Required designer variable.

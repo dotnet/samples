@@ -1,8 +1,6 @@
 ﻿'<Snippet1>
 Imports System.Reflection
 Imports System.Collections.Generic
-Imports Microsoft.VisualBasic
-
 
 Public Class Test
     Public Shared Sub Main() 
@@ -19,7 +17,7 @@ Public Class Test
         
         Dim generic As Type = constructed.GetGenericTypeDefinition()
         DisplayTypeInfo(generic)
-    End Sub 'Main
+    End Sub
     
     Private Shared Sub DisplayTypeInfo(ByVal t As Type) 
         Console.WriteLine(vbCrLf & t.ToString())
@@ -33,8 +31,8 @@ Public Class Test
         For Each tParam As Type In typeArguments
             Console.WriteLine(vbTab & vbTab & tParam.ToString())
         Next tParam
-    End Sub 'DisplayTypeInfo
-End Class 'Test
+    End Sub
+End Class
 
 ' This example produces the following output:
 '

@@ -74,7 +74,7 @@ Namespace CodeDomSamples
             '  End Class
             '</Snippet2>
 
-        End Sub 'New 
+        End Sub
 
 
         Public Sub DelegateInvokeOnlyType()
@@ -88,8 +88,8 @@ Namespace CodeDomSamples
 
             '   RaiseEvent TestEvent(Me, New System.EventArgs())            
             '</Snippet3>		
-        End Sub 'DelegateInvokeOnlyType
+        End Sub
         
-    End Class 'CodeDelegateInvokeExpressionExample 
+    End Class
 End Namespace 'CodeDomSamples
 '</Snippet1>

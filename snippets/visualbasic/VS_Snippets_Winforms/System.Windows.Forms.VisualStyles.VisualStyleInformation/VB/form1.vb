@@ -2,7 +2,6 @@
 ' all of the visual style values in a ListView.
 
 ' <Snippet0>
-Imports System
 Imports System.Drawing
 Imports System.Text
 Imports System.Reflection

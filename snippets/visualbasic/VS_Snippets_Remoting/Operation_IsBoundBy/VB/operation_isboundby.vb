@@ -83,5 +83,5 @@ Class MyOperationClass
       myServiceDescription.Write("Operation_IsBoundBy_Output_VB.wsdl")
       Console.WriteLine("WSDL file with name 'Operation_IsBoundBy_Output_VB.wsdl' " + _
                                                    "created Successfully")
-   End Sub 'Main
-End Class 'MyOperationClass
+   End Sub
+End Class

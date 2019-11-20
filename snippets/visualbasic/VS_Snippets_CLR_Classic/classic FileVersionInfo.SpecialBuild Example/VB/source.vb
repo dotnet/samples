@@ -15,7 +15,7 @@ Public Class Form1
         
         ' Print the special build information.
         textBox1.Text = "Special build information: " & myFileVersionInfo.SpecialBuild
-    End Sub 'GetSpecialBuild
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

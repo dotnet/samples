@@ -47,7 +47,7 @@ Public Class SamplesNameValueCollection
         Console.WriteLine("The collection contains the following elements after it is cleared:")
         PrintKeysAndValues(myCol)
 
-    End Sub 'Main
+    End Sub
 
     Public Shared Sub PrintKeysAndValues(myCol As NameValueCollection)
         Console.WriteLine("   KEY        VALUE")
@@ -56,7 +56,7 @@ Public Class SamplesNameValueCollection
             Console.WriteLine("   {0,-10} {1}", s, myCol(s))
         Next s
         Console.WriteLine()
-    End Sub 'PrintKeysAndValues
+    End Sub
 
     Public Shared Sub PrintKeysAndValues2(myCol As NameValueCollection)
         Console.WriteLine("   [INDEX] KEY        VALUE")
@@ -65,9 +65,9 @@ Public Class SamplesNameValueCollection
             Console.WriteLine("   [{0}]     {1,-10} {2}", i, myCol.GetKey(i), myCol.Get(i))
         Next i
         Console.WriteLine()
-    End Sub 'PrintKeysAndValues2
+    End Sub
 
-End Class 'SamplesNameValueCollection 
+End Class
 
 
 'This code produces the following output.

@@ -3,7 +3,6 @@ Imports System.IO
 Imports System.Net
 Imports System.Net.Sockets
 Imports System.Threading
-Imports Microsoft.VisualBasic
 
 Public Class Sync_Send_Receive
 
@@ -43,7 +42,7 @@ Public Class Sync_Send_Receive
 
         Console.WriteLine(("If data remains to be sent, this application will stay open for " + CType(s.GetSocketOption(SocketOptionLevel.Socket, SocketOptionName.Linger), LingerOption).LingerTime.ToString()))
         s.Close()
-    End Sub 'SetSocketOptions
+    End Sub
     '</Snippet2>
 
     Public Shared Sub CheckProperties()
@@ -92,9 +91,9 @@ Public Class Sync_Send_Receive
         If s.Blocking Then
             Console.WriteLine("Socket was set to Blocking mode successfully")
         End If
-    End Sub 'CheckProperties
+    End Sub
     '</Snippet5>
 
     Public Shared Sub Main()
-    End Sub 'Main
-End Class 'Sync_Send_Receive 
+    End Sub
+End Class

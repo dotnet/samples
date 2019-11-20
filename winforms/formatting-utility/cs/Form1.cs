@@ -37,7 +37,7 @@ namespace Formatter
 
       private void Form1_Load(object sender, EventArgs e)
       {
-         // Disable Value text box.
+         // Disable OK button.
          OKButton.Enabled = false;
 
          // Add label to status bar.
@@ -57,9 +57,9 @@ namespace Formatter
 
          // Populate CultureNames list box with culture names
       CultureInfo[] cultures = CultureInfo.GetCultures(CultureTypes.AllCultures);
-      // Define a string array so that we can sort and modify the names.
-      List<String> names = new List<String>();
-      int currentIndex = 0;                    // Index of the current culture.
+      // Define a string list so that we can sort and modify the names.
+      var names = new List<string>();
+      var currentIndex = 0;                    // Index of the current culture.
 
       foreach (var culture in cultures)
          names.Add(culture.Name);
@@ -96,8 +96,7 @@ namespace Formatter
             pDesignator = String.Empty;
 
          // For regex pattern for date and time components.
-         pattern = @"^\s*\S+\s+\S+\s+\S+(\s+\S+)?(?<!" + amDesignator + "|" + 
-                   aDesignator + "|" + pmDesignator + "|" + pDesignator + @")\s*$";
+         pattern = @$"^\s*\S+\s+\S+\s+\S+(\s+\S+)?(?<!{amDesignator}|{aDesignator}|{pmDesignator}|{pDesignator})\s*$";
 
          // Select NumberBox for numeric string and populate combo box.
          this.NumberBox.Checked = true;
@@ -128,7 +127,7 @@ namespace Formatter
             cultureName = String.Empty;
          culture = CultureInfo.CreateSpecificCulture(cultureName);
 
-         // Parse string as date
+         // Parse string as date.
          if (this.DateBox.Checked) {
             DateTime dat = DateTime.MinValue;
             DateTimeOffset dto = DateTimeOffset.MinValue;
@@ -162,11 +161,9 @@ namespace Formatter
                      return;
                   }
                }
-            }            // Format date value.
-            if (hasOffset)
-               this.Result.Text = dto.ToString(this.FormatStrings.Text, culture);
-            else
-               this.Result.Text = dat.ToString(this.FormatStrings.Text, culture);
+            }
+            // Format date value.
+            this.Result.Text = (hasOffset ? dto : dat).ToString(this.FormatStrings.Text, culture);
          }
          else {
             // Handle formatting of a number.
@@ -241,10 +238,7 @@ namespace Formatter
             label.Text = String.Empty;
             valueInfo = false;
          }
-         if (String.IsNullOrEmpty(Value.Text))
-            OKButton.Enabled = false;
-         else
-            OKButton.Enabled = true;
+         OKButton.Enabled = !string.IsNullOrEmpty(Value.Text);
       }
 
       private void FormatStrings_SelectedIndexChanged(object sender, EventArgs e)

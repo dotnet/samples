@@ -13,7 +13,7 @@ Module Module1
     ' <Snippet1>
     Private Sub GetRowsByFilter()
 
-        Dim customerTable As DataTable = New DataTable("Customers")
+        Dim customerTable As New DataTable("Customers")
 
         ' Add columns
         customerTable.Columns.Add("id", GetType(Integer))

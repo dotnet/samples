@@ -23,11 +23,11 @@ Public Class FindData
     Public fileName As String = Nothing
     <MarshalAs(UnmanagedType.ByValTStr, SizeConst:=14)>
     Public alternateFileName As String = Nothing
-End Class 'FindData
+End Class
 
-Public Class LibWrap
+Friend Class NativeMethods
     ' Declares a managed prototype for the unmanaged function.
-    Declare Auto Function FindFirstFile Lib "Kernel32.dll" (
+    Friend Declare Auto Function FindFirstFile Lib "Kernel32.dll" (
         ByVal fileName As String, <[In], Out> ByVal findFileData As _
         FindData) As IntPtr
 End Class
@@ -37,7 +37,7 @@ End Class
 Public Class App
     Public Shared Sub Main()
         Dim fd As New FindData()
-        Dim handle As IntPtr = LibWrap.FindFirstFile("C:\*.*", fd)
+        Dim handle As IntPtr = NativeMethods.FindFirstFile("C:\*.*", fd)
         Console.WriteLine($"The first file: {fd.fileName}")
     End Sub
 End Class

@@ -1,10 +1,10 @@
-﻿// <Snippet3>
-using System;
+﻿using System;
 
 public class Example
 {
    public static void Main()
    {
+      // <Snippet3>
       byte value1 = 12;
       int value2 = 12;
       
@@ -15,8 +15,9 @@ public class Example
                         object1, object1.GetType().Name,
                         object2, object2.GetType().Name,
                         object1.Equals(object2));
+
+      // The example displays the following output:
+      //        12 (Byte) = 12 (Int32): False
+      // </Snippet3>
    }
 }
-// The example displays the following output:
-//        12 (Byte) = 12 (Int32): False
-// </Snippet3>

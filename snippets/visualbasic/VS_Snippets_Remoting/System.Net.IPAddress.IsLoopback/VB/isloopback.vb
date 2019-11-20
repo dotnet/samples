@@ -33,7 +33,7 @@ Class IsLoopbackTest
       Else
         parse(args(1))
       End If 
-   End Sub 'Main
+   End Sub
    
    
    ' This method calls the IPAddress.Parse method to check whether the 
@@ -69,6 +69,6 @@ Class IsLoopbackTest
          Console.WriteLine(("Source : " + e.Source))
          Console.WriteLine(("Message : " + e.Message))
       End Try
-   End Sub 'parse 
-End Class 'IsLoopbackTest
+   End Sub
+End Class
 ' </Snippet1>

@@ -1,5 +1,4 @@
 ﻿' <snippet1>
-Imports System
 Imports System.Windows.Forms
 
 Public Class Form1
@@ -10,7 +9,7 @@ Public Class Form1
         Dim tb As New TextBox()
         Me.Controls.Add(tb)
         AddHandler tb.KeyPress, AddressOf keypressed
-    End Sub 'New
+    End Sub
 
     Private Sub keypressed(ByVal o As [Object], ByVal e As KeyPressEventArgs)
         ' The keypressed method uses the KeyChar property to check 
@@ -22,10 +21,10 @@ Public Class Form1
         If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Return) Then
             e.Handled = True
         End If
-    End Sub 'keypressed
+    End Sub
 
     Public Shared Sub Main()
         Application.Run(New Form1())
-    End Sub 'Main
-End Class 'Form1
+    End Sub
+End Class
 ' </snippet1>

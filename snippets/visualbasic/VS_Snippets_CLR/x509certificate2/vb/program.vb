@@ -47,7 +47,7 @@ Class Program
         Console.WriteLine("Press the Enter key to exit.")
         Console.ReadLine()
 
-    End Sub 'Main
+    End Sub
 
     '<Snippet2>
     Private Shared Function GetCertificateFromStore(ByVal certName As String) As X509Certificate2
@@ -163,7 +163,7 @@ Class Program
             aesManaged.Dispose()
         End Try
 
-    End Sub 'EncryptFile
+    End Sub
 
 
     ' </Snippet3>
@@ -284,8 +284,8 @@ Class Program
         End Try
 
 
-    End Sub 'DecryptFile 
-End Class 'Program
+    End Sub
+End Class
 ' </Snippet4>
 
 '</Snippet1>

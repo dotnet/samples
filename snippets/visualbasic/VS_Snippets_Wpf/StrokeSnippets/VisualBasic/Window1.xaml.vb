@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.IO
 Imports System.Reflection
 Imports System.Windows
@@ -27,28 +26,28 @@ Namespace StrokeSnippets_VB
             'border1.Background = Brushes.Green
             root.Children.Add(border1)
 
-        End Sub 'New
+        End Sub
 
 
         ' Remove touched stroke points
         Private Sub button1Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
             border1.state = MyBorder.sMode.clip
 
-        End Sub 'button1Click
+        End Sub
 
 
         ' Remove touched strokes
         Private Sub button2Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
             border1.state = MyBorder.sMode.remove
 
-        End Sub 'button2Click
+        End Sub
 
 
         ' Remove encircled strokes
         Private Sub button3Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
             border1.state = MyBorder.sMode.surround
 
-        End Sub 'button3Click
+        End Sub
 
 
         ' Add strokes to collection
@@ -56,7 +55,7 @@ Namespace StrokeSnippets_VB
             border1.state = MyBorder.sMode.add
             border1.shadow = False
 
-        End Sub 'button4Click
+        End Sub
 
 
         ' Add shadowed strokes to collection
@@ -64,7 +63,7 @@ Namespace StrokeSnippets_VB
             border1.state = MyBorder.sMode.add
             border1.shadow = True
 
-        End Sub 'button5Click
+        End Sub
 
 
         Private Sub button6Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
@@ -76,7 +75,7 @@ Namespace StrokeSnippets_VB
                 button6.Content = "FtC: off"
             End If
 
-        End Sub 'button6Click
+        End Sub
 
         Private mode As DrawingMode = DrawingMode.Solid
 
@@ -90,8 +89,8 @@ Namespace StrokeSnippets_VB
                 mode = DrawingMode.Solid
             End If
 
-        End Sub 'ToggleDrawingMode_Click
-    End Class 'Window1
+        End Sub
+    End Class
     '
     'ToDo: Error processing original source shown below
     '}

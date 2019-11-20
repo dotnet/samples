@@ -2,7 +2,6 @@
 ' Copyright (c) Microsoft Corporation. All rights reserved.
 
 
-Imports System
 Imports System.Diagnostics
 Imports System.Windows
 Imports System.Windows.Input
@@ -22,11 +21,11 @@ Namespace SdkSample
 			' Create the application window (as defined in Window1.xaml).
 			_appWindow = New Window1()
 			_appWindow.Show()
-		End Sub ' end:AppStartup()
+		End Sub
 
 
 		Private _appWindow As Window1 = Nothing ' application main window
 
-	End Class ' end:partial class App
+	End Class
 
 End Namespace ' end:namespace SdkSample

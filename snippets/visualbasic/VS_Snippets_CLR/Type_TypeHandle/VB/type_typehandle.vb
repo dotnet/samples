@@ -1,9 +1,9 @@
 ﻿' <Snippet1>	
 Imports System.Reflection
-Imports Microsoft.VisualBasic
+
 Class [MyClass]
     Public myField As Integer = 10
-End Class '[MyClass]
+End Class
 Class Type_TypeHandle
     Public Shared Sub Main()
         Try
@@ -19,7 +19,7 @@ Class Type_TypeHandle
         Catch e As Exception
             Console.WriteLine("Exception: {0}", e.Message.ToString())
         End Try
-    End Sub 'Main
+    End Sub
 
     Public Shared Sub DisplayTypeHandle(ByVal myTypeHandle As RuntimeTypeHandle)
         ' Get the type from the handle.
@@ -27,6 +27,6 @@ Class Type_TypeHandle
         ' Display the type.
         Console.WriteLine(ControlChars.NewLine + "Displaying the type from the handle:" + ControlChars.NewLine)
         Console.WriteLine("The type is {0}.", myType.ToString())
-    End Sub 'DisplayTypeHandle
-End Class 'Type_TypeHandle
+    End Sub
+End Class
 ' </Snippet1>

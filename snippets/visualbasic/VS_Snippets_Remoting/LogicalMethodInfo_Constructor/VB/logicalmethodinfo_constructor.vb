@@ -26,14 +26,13 @@
 Imports System.Reflection
 Imports System.Security.Permissions
 Imports System.Web.Services.Protocols
-Imports Microsoft.VisualBasic
 
 Public Class MyService
    
    Public Function Add(xValue As Integer, yValue As Integer) As Integer
       Return xValue + yValue
    End Function 'Add
-End Class 'MyService
+End Class
 
 Class LogicalMethodInfo_Constructor
 
@@ -69,10 +68,10 @@ Class LogicalMethodInfo_Constructor
       Console.WriteLine(ControlChars.Tab + "The sum of 10 and 10 is : {0}", _
                                     myLogicalMethodInfo.Invoke(service, New Object() {10, 10}))
 
-   End Sub 'Run
+   End Sub
    
    Shared Sub Main()
       Run()
-   End Sub 'Main
-End Class 'LogicalMethodInfo_Constructor
+   End Sub
+End Class
 ' </Snippet1>

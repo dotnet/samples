@@ -7,7 +7,6 @@ Imports System.IO
 Imports System.Net
 Imports System.Net.Sockets
 Imports System.Threading
-Imports Microsoft.VisualBasic
 
 Public Class NetworkStream_Sync_Send_Receive
    
@@ -80,7 +79,7 @@ Public Class NetworkStream_Sync_Send_Receive
       Catch exception As Exception
          Console.WriteLine(("Exception Thrown: " + exception.ToString()))
       End Try
-   End Sub 'MySample
+   End Sub
    
    'Entry point which delegates to C-style main Private Function
    Public Overloads Shared Sub Main()
@@ -99,7 +98,7 @@ Public Class NetworkStream_Sync_Send_Receive
             Console.WriteLine(("Must use 'yes' to allow the NetworkStream to own the Socket or " + ControlChars.NewLine + " 'no' to prohibit NetworkStream from owning the Socket. "))
          End If
       End If
-   End Sub 'Main 
-End Class 'NetworkStream_Sync_Send_Receive
+   End Sub
+End Class
 
 

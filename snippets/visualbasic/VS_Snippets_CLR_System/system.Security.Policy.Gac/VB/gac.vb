@@ -2,7 +2,6 @@
 Imports System.Security.Policy
 Imports System.Security
 Imports System.Security.Permissions
-Imports Microsoft.VisualBasic
 
 Class GacDemo
     <STAThread()> _
@@ -34,7 +33,7 @@ Class GacDemo
 
         '<Snippet6>
         Console.WriteLine(myGacInstalled.ToString())
-    End Sub 'Main 
+    End Sub
     '</Snippet6>
-End Class 'GacDemo
+End Class
 '</Snippet1>

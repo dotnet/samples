@@ -164,7 +164,7 @@ Public Class MathSvc
    <System.Diagnostics.DebuggerStepThroughAttribute()> _
    Public Sub New()
       Me.Url = "http://localhost/MathSvc_SoapExtensionAttribute_vb.asmx"
-   End Sub 'New
+   End Sub
    
    
    <System.Web.Services.Protocols.SoapDocumentMethodAttribute _
@@ -187,4 +187,4 @@ Public Class MathSvc
       Dim results As Object() = Me.EndInvoke(asyncResult)
       Return CType(results(0), System.Single)
    End Function 'EndAdd
-End Class 'MathSvc
+End Class

@@ -27,8 +27,8 @@ Namespace AC_Render
             ' attributes that the page adds, and their values,
             ' are rendered to the page.
             Attributes.Render(output)
-        End Sub 'Render
-    End Class 'AttribRender
+        End Sub
+    End Class
 
 End Namespace 'AC_Render
 ' </Snippet1>

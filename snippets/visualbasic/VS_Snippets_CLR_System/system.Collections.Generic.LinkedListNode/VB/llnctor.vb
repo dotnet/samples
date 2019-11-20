@@ -26,7 +26,7 @@ Public Class GenericCollection
         Console.WriteLine("After adding red and yellow ....")
         DisplayProperties(lln)
 
-    End Sub 'Main
+    End Sub
 
     Public Shared Sub DisplayProperties(lln As LinkedListNode(Of String))
 
@@ -52,9 +52,9 @@ Public Class GenericCollection
 
         Console.WriteLine()
 
-    End Sub 'DisplayProperties 
+    End Sub
 
-End Class 'GenericCollection
+End Class
 
 
 'This code produces the following output.

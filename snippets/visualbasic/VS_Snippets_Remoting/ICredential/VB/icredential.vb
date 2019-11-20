@@ -10,7 +10,6 @@
 
 Imports System.Net
 Imports System.Collections
-Imports Microsoft.VisualBasic
 
 Namespace CrendentialSample
     
@@ -31,21 +30,21 @@ Namespace CrendentialSample
                 Me.uriObj = uriObj
                 Me.authenticationType = authenticationType
                 Me.networkCredentialObj = networkCredentialObj
-            End Sub 'New
-        End Class 'CredentialInfo
+            End Sub
+        End Class
         
         Private arrayListObj As ArrayList
         
         
         Public Sub New()
             arrayListObj = New ArrayList()
-        End Sub 'New
+        End Sub
         
         
         Public Sub Add(uriObj As Uri, authenticationType As [String], credential As NetworkCredential)
             ' adds a 'CredentialInfo' object into a list
             arrayListObj.Add(New CredentialInfo(uriObj, authenticationType, credential))
-        End Sub 'Add
+        End Sub
         
         ' Remove the 'CredentialInfo' object from the list which matches to the given 'Uri' and 'AuthenticationType'
         Public Sub Remove(uriObj As Uri, authenticationType As [String])
@@ -56,7 +55,7 @@ Namespace CrendentialSample
                     arrayListObj.RemoveAt(index)
                 End If
             Next index
-        End Sub 'Remove
+        End Sub
         
         Public Function GetCredential(uriObj As Uri, authenticationType As [String]) As NetworkCredential  Implements ICredentials.GetCredential
             Dim index As Integer
@@ -70,7 +69,7 @@ Namespace CrendentialSample
         End Function 'GetCredential
 ' </Snippet1>	
 
-    End Class 'CredentialList
+    End Class
     
     
     'The 'CredentialTest' is defined to test the 'CredentialList' class.
@@ -87,7 +86,7 @@ Namespace CrendentialSample
             Console.Write("Enter Domain name : ")
             domainname = Console.ReadLine()
             GetPage(urlString, username, password, domainname)
-        End Sub 'Main
+        End Sub
         
         
         Public Shared Sub GetPage(urlString As String, UserName As String, password As String, DomainName As String)
@@ -113,6 +112,6 @@ Namespace CrendentialSample
                 Console.WriteLine("Exception caught !!!")
                 Console.WriteLine(("Message : " + e.Message))
             End Try
-        End Sub 'GetPage
-    End Class 'CredentialTest
+        End Sub
+    End Class
 End Namespace 'CrendentialSample

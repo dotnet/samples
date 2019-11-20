@@ -13,6 +13,6 @@ Class Form1
 
         ' Print the comments in a text box.
         textBox1.Text = "Comments: " & myFileVersionInfo.Comments
-    End Sub 'GetComments
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

@@ -29,7 +29,7 @@ Public Class SamplesArrayList
         Console.WriteLine("The string array contains the following values:")
         PrintIndexAndValues(myArr)
 
-    End Sub 'Main
+    End Sub
 
     Overloads Public Shared Sub PrintIndexAndValues(myList As ArrayList)
         Dim i As Integer = 0
@@ -39,7 +39,7 @@ Public Class SamplesArrayList
             i = i + 1
         Next o
         Console.WriteLine()
-    End Sub 'PrintIndexAndValues
+    End Sub
 
     Overloads Public Shared Sub PrintIndexAndValues(myArr() As String)
         Dim i As Integer
@@ -47,9 +47,9 @@ Public Class SamplesArrayList
             Console.WriteLine("        [{0}]:    {1}", i, myArr(i))
         Next i
         Console.WriteLine()
-    End Sub 'PrintIndexAndValues
+    End Sub
 
-End Class 'SamplesArrayList
+End Class
 
 
 'This code produces the following output.

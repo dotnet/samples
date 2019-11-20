@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Windows.Forms
+﻿Imports System.Windows.Forms
 Imports System.Data
 
 
@@ -17,6 +16,6 @@ Public Class Form1
             myCurrencyManager.RemoveAt(0)
         End If
         
-    End Sub 'RemoveFromList
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

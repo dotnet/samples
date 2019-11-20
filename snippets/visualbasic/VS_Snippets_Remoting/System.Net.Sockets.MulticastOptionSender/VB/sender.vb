@@ -13,7 +13,6 @@
 Imports System.Net.Sockets
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
 
 Namespace Mssc.TransportProtocols.Utilities
 
@@ -53,7 +52,7 @@ Namespace Mssc.TransportProtocols.Utilities
         Catch e As Exception
           Console.WriteLine((ControlChars.Lf + e.ToString()))
         End Try
-      End Sub 'JoinMulticast
+      End Sub
 
 
       Shared Sub BroadcastMessage(ByVal message As String)
@@ -69,7 +68,7 @@ Namespace Mssc.TransportProtocols.Utilities
         End Try
 
         mcastSocket.Close()
-      End Sub 'BrodcastMessage
+      End Sub
 
 
       Public Shared Sub Main(ByVal args() As String)
@@ -85,8 +84,8 @@ Namespace Mssc.TransportProtocols.Utilities
 
         ' Broadcast the message to the listener.
         BroadcastMessage("Hello multicast listener.")
-      End Sub 'Main
-    End Class 'TestMulticastOption
+      End Sub
+    End Class
 
   End Module
 

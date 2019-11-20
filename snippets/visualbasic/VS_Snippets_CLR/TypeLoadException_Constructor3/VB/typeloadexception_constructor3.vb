@@ -6,7 +6,6 @@
 '  an exception. A new exception is thrown with this exception as an 
 '  inner exception.
 
-Imports Microsoft.VisualBasic
 ' <Snippet1>
 Imports System.Runtime.InteropServices
 
@@ -21,8 +20,8 @@ Public Class TypeLoadException_Constructor3
       Catch e As Exception
          Console.WriteLine(("Exception: " + ControlChars.Cr + ControlChars.Tab + "Error Message = " + e.Message))
       End Try
-   End Sub 'Main
-End Class 'TypeLoadException_Constructor3
+   End Sub
+End Class
 
 Class TypeLoadExceptionDemoClass
    ' A call to this method will raise a TypeLoadException.
@@ -35,6 +34,6 @@ Class TypeLoadExceptionDemoClass
          ' Rethrow exception with the exception as inner exception
          Throw New TypeLoadException("This exception was raised due to a call to an invalid method.", e)
       End Try
-   End Sub 'GenerateException
-End Class 'TypeLoadExceptionDemoClass
+   End Sub
+End Class
 ' </Snippet1>

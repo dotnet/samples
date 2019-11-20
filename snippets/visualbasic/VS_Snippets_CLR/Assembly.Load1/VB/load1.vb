@@ -12,5 +12,5 @@ Class Class1
 			Console.WriteLine(oType.Name)
 		Next oType
 	End Sub	'LoadSample
-End Class 'Class1
+End Class
 ' </Snippet1>

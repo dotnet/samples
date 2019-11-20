@@ -21,7 +21,7 @@ Namespace MyProcessSample
             Catch e As Exception
                 Console.WriteLine((e.Message))
             End Try
-        End Sub 'Main
+        End Sub
     End Class
 End Namespace
 ' </Snippet1>

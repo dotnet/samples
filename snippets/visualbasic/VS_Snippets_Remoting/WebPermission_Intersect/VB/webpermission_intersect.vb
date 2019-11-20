@@ -18,7 +18,7 @@ Imports System.Net
 Imports System.Security
 Imports System.Security.Permissions
 Imports System.Collections
-Imports Microsoft.VisualBasic
+
  _
 
 Class WebPermissionIntersect
@@ -32,7 +32,7 @@ Class WebPermissionIntersect
       Catch e As Exception
          Console.WriteLine(("Exception : " + e.Message))
       End Try
-   End Sub 'Main
+   End Sub
    
    
    Public Sub CreateIntersect()
@@ -71,7 +71,7 @@ Class WebPermissionIntersect
       
       Console.WriteLine(ControlChars.Cr + "Attributes and Values of  the WebPermission instance after the Intersect are:" + ControlChars.Cr)
       Console.WriteLine(myWebPermission3.ToXml().ToString())
-   End Sub 'CreateIntersect
+   End Sub
     
    ' </Snippet3>
    
@@ -89,5 +89,5 @@ Class WebPermissionIntersect
       While myEnumerator1.MoveNext()
          Console.Write(ControlChars.Tab + "{0}", myEnumerator1.Current)
       End While
-   End Sub 'PrintKeysAndValues
-End Class 'WebPermissionIntersect
+   End Sub
+End Class

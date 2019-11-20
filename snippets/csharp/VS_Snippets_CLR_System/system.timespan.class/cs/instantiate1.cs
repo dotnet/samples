@@ -26,7 +26,9 @@ public class Example
    {
       // <Snippet3>
       TimeSpan interval = new TimeSpan(2, 14, 18);
-      Console.WriteLine(interval.ToString());              // Displays "02:14:18".
+      Console.WriteLine(interval.ToString());              
+      
+      // Displays "02:14:18".
       // </Snippet3>
    }   
    
@@ -37,6 +39,7 @@ public class Example
       DateTime arrival = new DateTime(2010, 6, 13, 22, 47, 0);
       TimeSpan travelTime = arrival - departure;  
       Console.WriteLine("{0} - {1} = {2}", arrival, departure, travelTime);      
+      
       // The example displays the following output:
       //       6/13/2010 10:47:00 PM - 6/12/2010 6:32:00 PM = 1.04:15:00
       // </Snippet4>
@@ -59,6 +62,7 @@ public class Example
             Console.WriteLine("'{0}' is outside the range of a TimeSpan.", value);
          }   
       }
+      
       // The example displays the following output:
       //       '12' --> 12.00:00:00
       //       Unable to parse '31.'

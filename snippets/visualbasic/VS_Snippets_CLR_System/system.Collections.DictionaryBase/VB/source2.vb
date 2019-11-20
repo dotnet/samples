@@ -28,7 +28,7 @@ Public Class ShortStringDictionary
 
    Public Sub Add(key As String, value As String)
       Dictionary.Add(key, value)
-   End Sub 'Add
+   End Sub
 
    Public Function Contains(key As String) As Boolean
       Return Dictionary.Contains(key)
@@ -36,7 +36,7 @@ Public Class ShortStringDictionary
 
    Public Sub Remove(key As String)
       Dictionary.Remove(key)
-   End Sub 'Remove
+   End Sub
 
    Protected Overrides Sub OnInsert(key As Object, value As Object)
       If Not GetType(System.String).IsAssignableFrom(key.GetType()) Then
@@ -55,7 +55,7 @@ Public Class ShortStringDictionary
             Throw New ArgumentException("value must be no more than 5 characters in length.", "value")
          End If
       End If
-   End Sub 'OnInsert
+   End Sub
 
    Protected Overrides Sub OnRemove(key As Object, value As Object)
       If Not GetType(System.String).IsAssignableFrom(key.GetType()) Then
@@ -66,7 +66,7 @@ Public Class ShortStringDictionary
             Throw New ArgumentException("key must be no more than 5 characters in length.", "key")
          End If
       End If
-   End Sub 'OnRemove
+   End Sub
 
    Protected Overrides Sub OnSet(key As Object, oldValue As Object, newValue As Object)
       If Not GetType(System.String).IsAssignableFrom(key.GetType()) Then
@@ -85,7 +85,7 @@ Public Class ShortStringDictionary
             Throw New ArgumentException("newValue must be no more than 5 characters in length.", "newValue")
          End If
       End If
-   End Sub 'OnSet
+   End Sub
 
    Protected Overrides Sub OnValidate(key As Object, value As Object)
       If Not GetType(System.String).IsAssignableFrom(key.GetType()) Then
@@ -104,9 +104,9 @@ Public Class ShortStringDictionary
             Throw New ArgumentException("value must be no more than 5 characters in length.", "value")
          End If
       End If
-   End Sub 'OnValidate 
+   End Sub
 
-End Class 'ShortStringDictionary
+End Class
 
 Public Class SamplesDictionaryBase
     Public Shared Sub Main()

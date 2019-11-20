@@ -4,7 +4,7 @@ Imports System.Reflection
 Public Class TestClass
     ' Define a field.
     Private field As String = "private field"
-End Class 'Myfield
+End Class
 
 Public Module Example
     Public Sub Main()

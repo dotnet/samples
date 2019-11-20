@@ -4,11 +4,9 @@
 ' It stores the object in the form of the 'Dif' format in the 'DataObject'. 
 ' Then it checks whether the data stored in 'Dif' format is present or not.
 
-Imports System
 Imports System.Data
 Imports System.Windows.Forms
 Imports System.IO
-Imports Microsoft.VisualBasic
 
 Public Class DataFormats_Dif
    
@@ -31,5 +29,5 @@ Public Class DataFormats_Dif
       Catch e As Exception
          Console.WriteLine(("The Exception is:" + e.Message))
       End Try
-   End Sub 'Main
-End Class 'DataFormats_Dif
+   End Sub
+End Class

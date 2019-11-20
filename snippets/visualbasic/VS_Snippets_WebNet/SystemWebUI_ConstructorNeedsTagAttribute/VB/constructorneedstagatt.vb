@@ -15,12 +15,12 @@ Namespace MyUserControl
       
       Public Sub New(tag As [String])
         Me.NameTag = tag
-      End Sub 'New
+      End Sub
       
       <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.Demand, Name:="FullTrust")> _
       Protected Overrides Sub Render(output As HtmlTextWriter)
         output.Write(("<br>The TagName used for the 'Simple' control is " + "'" + NameTag + "'"))
-      End Sub 'Render
-   End Class 'Simple
+      End Sub
+   End Class
 End Namespace 'MyUserControl
 ' </snippet1>

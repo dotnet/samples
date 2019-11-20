@@ -21,6 +21,6 @@ Public Class SampleClient
       RemotingConfiguration.RegisterWellKnownClientType(GetType(SampleService), "http://localhost:9000/MySampleService/SampleService.soap")
       Dim service As New SampleService()
       service.SampleMethod()
-   End Sub 'Main
-End Class 'SampleClient
+   End Sub
+End Class
 ' </Snippet3>

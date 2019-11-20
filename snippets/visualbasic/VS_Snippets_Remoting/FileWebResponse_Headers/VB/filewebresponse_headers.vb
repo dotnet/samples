@@ -5,7 +5,6 @@
 'It then prints out all the response headers ( name -value pairs) onto the console 
 
 Imports System.Net
-Imports Microsoft.VisualBasic
 Imports System.Environment
 
 
@@ -26,7 +25,7 @@ Class FileWebResponseSnippet
         Console.WriteLine("Press any key to continue...")
         Console.ReadLine()
         Return
-    End Sub 'Main
+    End Sub
     
 ' <Snippet1>
     Public Shared Sub GetPage(url As [String])
@@ -55,5 +54,5 @@ Class FileWebResponseSnippet
         End Try
 ' </Snippet1>
 
-    End Sub 'GetPage
-End Class 'FileWebResponseSnippet
+    End Sub
+End Class

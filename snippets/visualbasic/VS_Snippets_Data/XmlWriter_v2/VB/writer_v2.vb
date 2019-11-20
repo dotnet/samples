@@ -7,7 +7,7 @@ Class Whidbey_Write_Methods
     
     Shared Sub Main() 
     
-    End Sub 'Main
+    End Sub
      
     ' WriteQName();
     
@@ -31,7 +31,7 @@ Using writer As XmlWriter = XmlWriter.Create("data.xml")
   writer.Flush()
 End Using
 '</snippet1>    
-End Sub 'WriteDateTime
+End Sub
          
 
 Public Shared Sub CreateURI() 
@@ -43,7 +43,7 @@ Using writer As XmlWriter = XmlWriter.Create("output.xml")
   writer.Flush()
 End Using
 '</snippet2>    
-End Sub 'CreateURI     
+End Sub
        
 Public Shared Sub Create_Console() 
 '<snippet3>	
@@ -54,7 +54,7 @@ Using writer As XmlWriter = XmlWriter.Create(Console.Out)
   writer.Flush()
 End Using
 '</snippet3>    
-End Sub 'Create_Console     
+End Sub
     
 Public Shared Sub Create_StringWriter() 
 '<snippet4>	
@@ -71,7 +71,7 @@ Using writer As XmlWriter = XmlWriter.Create(sw, settings)
   Dim output As String = sw.ToString()
 End Using
  '</snippet4>    
-End Sub 'Create_StringWriter
+End Sub
          
 Public Shared Sub WriteQName() 
 '<snippet5>	
@@ -90,7 +90,7 @@ Using writer As XmlWriter = XmlWriter.Create(Console.Out, settings)
   writer.WriteEndElement()
 End Using
 '</snippet5>    
-End Sub 'WriteQName
+End Sub
      
     
 ' # 6 placeholder for XmlQualfieldName.Empty snippet
@@ -108,7 +108,7 @@ Using writer As XmlWriter = XmlWriter.Create("books.xml", settings)
   writer.Flush()
 End Using
 '</snippet7>    
-End Sub 'GenericCreate
+End Sub
          
 Public Shared Sub Output1() 
 '<snippet8>	
@@ -117,7 +117,7 @@ settings.Indent = True
 settings.IndentChars = vbTab
 Dim writer As XmlWriter = XmlWriter.Create("books.xml", settings)
 '</snippet8>    
-End Sub 'Output1     
+End Sub
     
 Public Shared Sub Output2() 
 '<snippet9>	
@@ -126,7 +126,7 @@ settings.Indent = True
 settings.NewLineOnAttributes = True
 Dim writer As XmlWriter = XmlWriter.Create("books.xml", settings)
 '</snippet9>    
-End Sub 'Output2
+End Sub
          
 Public Shared Sub Attrs1() 
 '<snippet10>
@@ -139,7 +139,7 @@ Using writer As XmlWriter = XmlWriter.Create(Console.Out, settings)
         writer.WriteEndElement()
 End Using
 '</snippet10>    
-End Sub 'Attrs1
+End Sub
         
 Public Shared Sub Attrs2() 
 '<snippet11>
@@ -155,7 +155,7 @@ Using writer As XmlWriter = XmlWriter.Create(Console.Out, settings)
 	writer.WriteEndElement()
 End Using
 '</snippet11>    
-End Sub 'Attrs2
+End Sub
         
 Public Shared Sub Attrs3() 
 '<snippet12>
@@ -169,7 +169,7 @@ Using writer As XmlWriter = XmlWriter.Create(Console.Out, settings)
 	writer.WriteEndElement()
 End Using
 '</snippet12>   
-End Sub 'Attrs3
+End Sub
         
 Public Shared Sub Elems1() 
 Dim writer As XmlWriter = XmlWriter.Create(Console.Out)
@@ -177,7 +177,7 @@ Dim writer As XmlWriter = XmlWriter.Create(Console.Out)
 writer.WriteElementString("price", "19.95")
 '</snippet13>
 writer.Flush()
-End Sub 'Elems1
+End Sub
         
 Public Shared Sub Elems2() 
 Dim writer As XmlWriter = XmlWriter.Create(Console.Out)
@@ -188,7 +188,7 @@ writer.WriteElementString("price", "19.95")
 writer.WriteEndElement()
 '</snippet14>
 writer.Flush()
-End Sub 'Elems2
+End Sub
         
 Public Shared Sub Elems3() 
 '<snippet15>
@@ -201,7 +201,7 @@ Dim writer As XmlWriter = XmlWriter.Create("newBook.xml")
 writer.WriteNode(reader, True)
 writer.Flush()
 '</snippet15>    
-End Sub 'Elems3
+End Sub
          
 Public Shared Sub TypedWrite() 
 ' Create a reader and position it on the book node.
@@ -214,7 +214,7 @@ writer.WriteValue(reader.ReadElementContentAsDouble() * 1.15)
 writer.WriteEndElement()
 '</snippet16>
 writer.Flush()    
-End Sub 'TypedWrite    
+End Sub
     
 Public Shared Sub Namespace1() 
 Dim writer As XmlWriter = XmlWriter.Create(Console.Out)
@@ -228,7 +228,7 @@ writer.WriteEndElement()
 writer.WriteEndElement()
  '</snippet17>
 writer.Flush()    
-End Sub 'Namespace1
+End Sub
         
 Public Shared Sub Namespace2() 
 Dim writer As XmlWriter = XmlWriter.Create(Console.Out)
@@ -240,7 +240,7 @@ writer.WriteEndElement()
 writer.WriteEndElement()
 '</snippet18>
 writer.Flush()    
-End Sub 'Namespace2
+End Sub
         
 Public Shared Sub Namespace3() 
 Dim writer As XmlWriter = XmlWriter.Create(Console.Out)
@@ -251,6 +251,6 @@ writer.WriteEndElement()
 writer.WriteEndElement()
 '</snippet19>
 writer.Flush()    
-End Sub 'Namespace3
+End Sub
 
-End Class 'Whidbey_Write_Methods 
+End Class

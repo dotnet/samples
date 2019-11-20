@@ -15,7 +15,6 @@
 Imports System.Web.Services.Description
 Imports System.Collections
 Imports System.Xml
-Imports Microsoft.VisualBasic
 
 Class MyClass1
    Public Shared Sub Main()
@@ -111,6 +110,6 @@ Class MyClass1
 ' </Snippet7>
 ' </Snippet6>
 ' </Snippet5>
-   End Sub 'Main
-End Class '[MyClass1]
+   End Sub
+End Class
 ' </Snippet8>

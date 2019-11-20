@@ -22,9 +22,9 @@ Public Class SamplesCharUnicodeInfo
          Console.WriteLine("{0}", CharUnicodeInfo.GetUnicodeCategory(s, i))
       Next i
 
-   End Sub 'Main 
+   End Sub
 
-End Class 'SamplesCharUnicodeInfo
+End Class
 
 
 'This code produces the following output.  Some characters might not display at the console.

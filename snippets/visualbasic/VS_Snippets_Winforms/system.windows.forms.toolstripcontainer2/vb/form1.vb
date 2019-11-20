@@ -1,5 +1,4 @@
 ﻿ ' <Snippet1>
-Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
 Imports System.Data
@@ -18,13 +17,13 @@ Public Class Form1
    
    Public Sub New()
       InitializeComponent()
-   End Sub 'New
+   End Sub
    
    <STAThread()>  _
    Shared Sub Main()
       Application.EnableVisualStyles()
       Application.Run(New Form1())
-   End Sub 'Main
+   End Sub
    
    
    Private Sub InitializeComponent()
@@ -38,6 +37,6 @@ Public Class Form1
       toolStripContainer1.TopToolStripPanel.Controls.Add(toolStrip1)
       ' Add the ToolStripContainer to the form.
       Controls.Add(toolStripContainer1)
-   End Sub 'InitializeComponent 
-End Class 'Form1
+   End Sub
+End Class
 ' </Snippet1>

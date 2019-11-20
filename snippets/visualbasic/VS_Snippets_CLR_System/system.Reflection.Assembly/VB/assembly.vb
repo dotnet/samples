@@ -13,7 +13,7 @@
          c1.Snippet9()
          c1.Snippet10()
          c1.Snippet11()
-     End Sub 'Main
+     End Sub
 
    Public Sub Snippet2()
       ' <Snippet2>

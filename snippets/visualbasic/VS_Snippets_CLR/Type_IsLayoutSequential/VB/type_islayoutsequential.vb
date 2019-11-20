@@ -2,9 +2,9 @@
 Imports System.Reflection
 Imports System.ComponentModel
 Imports System.Runtime.InteropServices
-Imports Microsoft.VisualBasic
+
 Class MyTypeSequential1
-End Class 'MyTypeSequential1
+End Class
 <StructLayoutAttribute(LayoutKind.Sequential)> Class MyTypeSequential2
     Public Shared Sub Main()
         Try
@@ -21,6 +21,6 @@ End Class 'MyTypeSequential1
         Catch e As Exception
             Console.WriteLine(ControlChars.Cr + "An exception occurred: {0}", e.Message.ToString())
         End Try
-    End Sub 'Main
-End Class 'MyTypeSeq2
+    End Sub
+End Class
 ' </Snippet1>

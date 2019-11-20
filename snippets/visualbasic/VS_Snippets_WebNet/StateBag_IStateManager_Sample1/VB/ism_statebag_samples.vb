@@ -30,7 +30,7 @@ Namespace StateBagSampleVB
             _message = mesg
             _viewstate = New StateBag()
             _viewstate.Add("message", _message)
-        End Sub 'New
+        End Sub
 
         ' <Snippet2>
         ' Create a Message property that reads from and writes
@@ -58,7 +58,7 @@ Namespace StateBagSampleVB
             If Not (savedState Is Nothing) Then
                 CType(_viewstate, IStateManager).LoadViewState(savedState)
             End If
-        End Sub 'LoadViewState
+        End Sub
         ' </Snippet3>
         ' <Snippet4>
         ' Implement the SaveViewState method. If the StateBag
@@ -88,7 +88,7 @@ Namespace StateBagSampleVB
         ' _viewstate property.
         Sub TrackViewState() Implements IStateManager.TrackViewState
             CType(_viewstate, IStateManager).TrackViewState()
-        End Sub 'IStateManager.TrackViewState
+        End Sub
         ' </Snippet5>
         ' <snippet6>
         ' Implement the IsTrackingViewState method for this class 
@@ -119,7 +119,7 @@ Namespace StateBagSampleVB
             End While
             Return result
         End Function 'EnumerateViewState
-    End Class 'MyItem 
+    End Class
     ' </Snippet7>
     ' </Snippet8>
 
@@ -138,7 +138,7 @@ Namespace StateBagSampleVB
 
         Public Sub New()
             myItem = New MyItem("Hello World!")
-        End Sub 'New
+        End Sub
 
         ' Override the LoadViewState method of the Control class.
         Protected Overrides Sub LoadViewState(ByVal savedState As Object)
@@ -151,7 +151,7 @@ Namespace StateBagSampleVB
                     CType(myItem, IStateManager).LoadViewState(myState(1))
                 End If
             End If
-        End Sub 'LoadViewState
+        End Sub
         ' Override the TrackViewState method of the Control class
         ' to call the version of this method that was 
         ' implemented in the MyItem class.
@@ -160,7 +160,7 @@ Namespace StateBagSampleVB
             If Not (myItem Is Nothing) Then
                 CType(myItem, IStateManager).TrackViewState()
             End If
-        End Sub 'TrackViewState
+        End Sub
 
         ' Override the SaveViewState method of the Control class to
         ' call the version of this method that was implemented by
@@ -183,7 +183,7 @@ Namespace StateBagSampleVB
 
         Public Sub SetMessage(ByVal mesg As String)
             myItem.Message = mesg
-        End Sub 'SetMessage
+        End Sub
 
 
         Public Function GetMessage() As String
@@ -199,8 +199,8 @@ Namespace StateBagSampleVB
             output.Write("<br>")
             output.Write("<br>Enumerating the view state of the custom control<br>")
             output.Write(myItem.EnumerateViewState())
-        End Sub 'Render
-    End Class 'MyControl
+        End Sub
+    End Class
     ' </snippet9>
 End Namespace 'StateBagSampleVB
 ' </snippet1>

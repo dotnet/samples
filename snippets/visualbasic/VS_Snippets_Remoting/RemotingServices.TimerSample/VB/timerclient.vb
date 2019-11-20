@@ -26,7 +26,7 @@ Public Class TimerClient
     Public Shared Sub Main() 
         Dim myClient As New TimerClient()
     
-    End Sub 'Main
+    End Sub
     
     <SecurityPermission(SecurityAction.LinkDemand, Flags := SecurityPermissionFlag.Infrastructure)> _
     Public Sub New() 
@@ -61,13 +61,13 @@ Public Class TimerClient
         Console.WriteLine("Press enter to end the client process.")
         Console.ReadLine()
     
-    End Sub 'New
+    End Sub
     
     
     Private Sub OnTimerExpired(ByVal [source] As Object, ByVal e As TimerServiceEventArgs) 
         Console.WriteLine("TimerHelper.OnTimerExpired: {0}", e.Message)
     
-    End Sub 'OnTimerExpired
+    End Sub
     
     <SecurityPermission(SecurityAction.LinkDemand, Flags := SecurityPermissionFlag.Infrastructure)> _
     Public Function Renewal(ByVal lease As ILease) As TimeSpan Implements ISponsor.Renewal
@@ -75,5 +75,5 @@ Public Class TimerClient
         Return TimeSpan.FromMinutes(0.5)
     
     End Function 'Renewal
-End Class 'TimerClient
+End Class
 ' </Snippet1>

@@ -5,7 +5,6 @@
 '   method and 'RowHeaderWidthChanged' event of 'DataGridTableStyle'
 '   class. It changes the row header width on button click 
 '   and resets the row header width. 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -24,7 +23,7 @@ Public Class DataGridTableStyle_RowHeaderWidth
          End If
       End If
       MyBase.Dispose(disposing)
-   End Sub 'Dispose
+   End Sub
    
 
    Private Sub InitializeComponent()
@@ -70,7 +69,7 @@ Public Class DataGridTableStyle_RowHeaderWidth
       CallEventLoader()
       CType(Me.myDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
       Me.ResumeLayout(False)
-   End Sub 'InitializeComponent
+   End Sub
 
    Private IdCol = New DataGridTextBoxColumn() 
 
@@ -79,7 +78,7 @@ Public Class DataGridTableStyle_RowHeaderWidth
    
    <STAThread()> Shared  Sub Main()
       Application.Run(New DataGridTableStyle_RowHeaderWidth())
-   End Sub 'Main
+   End Sub
    
    Private myDataGridTableStyle As New DataGridTableStyle()
    Private myDataGrid As DataGrid
@@ -90,7 +89,7 @@ Public Class DataGridTableStyle_RowHeaderWidth
       InitializeComponent()
       ' Create and bind DataSet to DataGrid.
       CreateNBindDataSet()
-   End Sub 'New
+   End Sub
    
    
    Private Sub CreateNBindDataSet()
@@ -127,7 +126,7 @@ Public Class DataGridTableStyle_RowHeaderWidth
       
       ' Bind the DataGrid to the DataSet.
       myDataGrid.SetDataBinding(myDataSet, "Employee")
-   End Sub 'CreateNBindDataSet
+   End Sub
    
    
    Private Sub DataGridTableStyle_RowHeaderWidth_Load(sender As Object, e As EventArgs)
@@ -156,33 +155,33 @@ Public Class DataGridTableStyle_RowHeaderWidth
       myDataGrid.TableStyles.Add(myDataGridTableStyle)
       myDataGridTableStyle.GridLineColor = Color.Red
       AttachRowHeaderWidthChanged()
-   End Sub 'DataGridTableStyle_RowHeaderWidth_Load
+   End Sub
    
    
 ' <Snippet1>
 ' <Snippet2>
    Private Sub CallEventLoader()
       AddHandler Load, AddressOf DataGridTableStyle_RowHeaderWidth_Load
-   End Sub 'CallEventLoader
+   End Sub
    
    
    Public Sub AttachRowHeaderWidthChanged()
       AddHandler myDataGridTableStyle.RowHeaderWidthChanged, AddressOf MyDelegateRowHeaderChanged
-   End Sub 'AttachRowHeaderWidthChanged
+   End Sub
    
     Private Sub MyDelegateRowHeaderChanged(ByVal sender As Object, ByVal e As EventArgs)
         MessageBox.Show("Row header width is changed")
-    End Sub 'MyDelegateRowHeaderChanged
+    End Sub
    
    
    Private Sub button1_Click(sender As Object, e As EventArgs) Handles button1.Click
       myDataGridTableStyle.RowHeaderWidth = 30
-   End Sub 'button1_Click
+   End Sub
    
    
    Private Sub button2_Click(sender As Object, e As EventArgs) Handles button2.Click
       MessageBox.Show("Row header width is: " & myDataGridTableStyle.RowHeaderWidth)
-   End Sub 'button2_Click
+   End Sub
 ' </Snippet2>
 ' </Snippet1>
-End Class 'DataGridTableStyle_RowHeaderWidth
+End Class

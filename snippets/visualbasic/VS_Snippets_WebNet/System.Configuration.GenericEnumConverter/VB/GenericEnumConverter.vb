@@ -18,7 +18,7 @@ NotInheritable Public Class UsingGenericEnumConverter
             Console.WriteLine(e.Message)
         End Try
     
-    End Sub 'GetPermission
+    End Sub
     
     
     Public Shared Sub SetPermission() 
@@ -45,6 +45,6 @@ NotInheritable Public Class UsingGenericEnumConverter
             Console.WriteLine(e.Message)
         End Try
     
-    End Sub 'SetPermission
-End Class 'UsingGenericEnumConverter
+    End Sub
+End Class
 ' </Snippet1>

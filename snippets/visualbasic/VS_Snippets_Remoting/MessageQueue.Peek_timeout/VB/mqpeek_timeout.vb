@@ -25,7 +25,7 @@ Imports System.Messaging
 
             Return
 
-        End Sub 'Main
+        End Sub
 
 
         '
@@ -73,6 +73,6 @@ Imports System.Messaging
 
         End Function 'IsQueueEmpty 
 
-End Class 'MyNewQueue
+End Class
 
 ' </Snippet1>

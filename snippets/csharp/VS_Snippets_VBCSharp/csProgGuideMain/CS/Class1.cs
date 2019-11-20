@@ -3,19 +3,19 @@
 
 
     //<Snippet16>
-    //Add a using directive for System if the directive isn't already present.
+    // Add a using directive for System if the directive isn't already present.
 
     public class Functions
     {
         public static long Factorial(int n)
         {
-            // Test for invalid input
+            // Test for invalid input.
             if ((n < 0) || (n > 20))
             {
                 return -1;
             }
 
-            // Calculate the factorial iteratively rather than recursively:
+            // Calculate the factorial iteratively rather than recursively.
             long tempResult = 1;
             for (int i = 1; i <= n; i++)
             {
@@ -29,11 +29,11 @@
     {
         static int Main(string[] args)
         {
-            // Test if input arguments were supplied:
+            // Test if input arguments were supplied.
             if (args.Length == 0)
             {
-                System.Console.WriteLine("Please enter a numeric argument.");
-                System.Console.WriteLine("Usage: Factorial <num>");
+                Console.WriteLine("Please enter a numeric argument.");
+                Console.WriteLine("Usage: Factorial <num>");
                 return 1;
             }
 
@@ -42,10 +42,10 @@
             // num = int.Parse(args[0]);
             int num;
             bool test = int.TryParse(args[0], out num);
-            if (test == false)
+            if (!test)
             {
-                System.Console.WriteLine("Please enter a numeric argument.");
-                System.Console.WriteLine("Usage: Factorial <num>");
+                Console.WriteLine("Please enter a numeric argument.");
+                Console.WriteLine("Usage: Factorial <num>");
                 return 1;
             }
 
@@ -54,9 +54,9 @@
 
             // Print result.
             if (result == -1)
-                System.Console.WriteLine("Input must be >= 0 and <= 20.");
+                Console.WriteLine("Input must be >= 0 and <= 20.");
             else
-                System.Console.WriteLine("The Factorial of {0} is {1}.", num, result);
+                Console.WriteLine($"The Factorial of {num} is {result}.");
 
             return 0;
         }
@@ -71,12 +71,12 @@
     { 
         static void Main(string[] args)
         {
-            // The Length property provides the number of array elements
-            System.Console.WriteLine("parameter count = {0}", args.Length);
+            // The Length property provides the number of array elements.
+            Console.WriteLine($"parameter count = {args.Length}");
 
             for (int i = 0; i < args.Length; i++)
             {
-                System.Console.WriteLine("Arg[{0}] = [{1}]", i, args[i]);
+                Console.WriteLine($"Arg[{i}] = [{args[i]}]");
             }
         }
     }
@@ -94,11 +94,11 @@
     {
         static void Main(string[] args)
         {
-            System.Console.WriteLine("Number of command line parameters = {0}", args.Length);
+            Console.WriteLine($"Number of command line parameters = {args.Length}");
 
             foreach (string s in args)
             {
-                System.Console.WriteLine(s);
+                Console.WriteLine(s);
             }
         }
     }
@@ -116,11 +116,9 @@
     {
         static void Main(string[] args)
         {
-            // Display the number of command line arguments:
-            System.Console.WriteLine(args.Length);
+            // Display the number of command line arguments.
+            Console.WriteLine(args.Length);
         }
     }
     //</Snippet17>
-
-
 }

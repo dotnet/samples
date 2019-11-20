@@ -27,6 +27,6 @@ Class GenFishRegEx
         ' Compile the regular expression.
         Regex.CompileToAssembly(rciList, an)
     
-    End Sub 'Main
-End Class 'GenFishRegEx
+    End Sub
+End Class
 ' </snippet1>

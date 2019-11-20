@@ -2,13 +2,14 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
-  </PropertyGroup>
-
-  <PropertyGroup>
-    <LangVersion>7.3</LangVersion>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <LangVersion>8.0</LangVersion>
     <StartupObject>operators.Program</StartupObject>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MSTest.TestFramework" Version="2.0.0" />
+  </ItemGroup>
 
 </Project>

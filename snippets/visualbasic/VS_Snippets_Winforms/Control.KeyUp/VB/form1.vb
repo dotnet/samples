@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -25,7 +24,7 @@ Public Class Form1
         ' Required for Windows Form Designer support
         '
         InitializeComponent()
-    End Sub 'New
+    End Sub
     
    
     '/ <summary>
@@ -38,7 +37,7 @@ Public Class Form1
             End If
         End If
         MyBase.Dispose(disposing)
-    End Sub 'Dispose
+    End Sub
 
 
     '/ <summary>
@@ -64,7 +63,7 @@ Public Class Form1
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
-    End Sub 'InitializeComponent
+    End Sub
 
     '/ <summary>
     '/ The main entry point for the application.
@@ -72,11 +71,11 @@ Public Class Form1
     <STAThread()> _
     Shared Sub Main()
         Application.Run(New Form1())
-    End Sub 'Main
+    End Sub
 
 
     Private Sub textBox1_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles textBox1.MouseUp
-    End Sub 'textBox1_MouseUp
+    End Sub
 
 
 
@@ -92,6 +91,6 @@ Public Class Form1
             ' Display a pop-up help topic to assist the user.
             Help.ShowPopup(textBox1, "Enter your first name", New Point(textBox1.Right, Me.textBox1.Bottom))
         End If
-    End Sub 'textBox1_KeyUp
+    End Sub
     '</Snippet1>
 End Class

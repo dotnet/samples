@@ -2,7 +2,6 @@
 
 ' <Snippet1>
 Imports System.Text
-Imports Microsoft.VisualBasic
 
 Public Class SamplesUTF32Encoding   
 
@@ -58,7 +57,7 @@ Public Class SamplesUTF32Encoding
          Console.WriteLine(e.Message)
       End Try
 
-   End Sub 'Main
+   End Sub
 
 
    Public Shared Sub PrintCountsAndChars(bytes() As Byte, enc As Encoding)
@@ -79,9 +78,9 @@ Public Class SamplesUTF32Encoding
       enc.GetChars(bytes, 0, bytes.Length, chars, 0)
       Console.WriteLine(chars)
 
-   End Sub 'PrintCountsAndChars 
+   End Sub
 
-End Class 'SamplesUTF32Encoding
+End Class
 
 ' </Snippet1>
 

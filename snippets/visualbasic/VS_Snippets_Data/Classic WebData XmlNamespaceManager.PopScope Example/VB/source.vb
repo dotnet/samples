@@ -9,7 +9,7 @@ Public Class Sample
     
     Public Shared Sub Main()
         Dim test As New Sample()
-    End Sub 'Main
+    End Sub
     
     Public Sub New()
         ' Create the XmlNamespaceManager.
@@ -25,7 +25,7 @@ Public Class Sample
         
         Console.WriteLine("Show all the prefix/namespace pairs in the XmlNamespaceManager...")
         ShowAllNamespaces(nsmgr)
-    End Sub 'New
+    End Sub
     
     
     Private Sub ShowAllNamespaces(nsmgr As XmlNamespaceManager)
@@ -35,6 +35,6 @@ Public Class Sample
                 Console.WriteLine("Prefix={0}, Namespace={1}", prefix, nsmgr.LookupNamespace(prefix))
             Next prefix
         Loop While nsmgr.PopScope()
-    End Sub 'ShowAllNamespaces
-End Class 'Sample
+    End Sub
+End Class
 ' </Snippet1>

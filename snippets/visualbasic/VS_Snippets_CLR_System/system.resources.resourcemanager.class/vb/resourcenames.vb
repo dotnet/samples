@@ -5,7 +5,7 @@ Option Strict On
 Imports System.IO
 Imports System.Reflection
 Imports System.Resources
- 
+
 Module Example
    Public Sub Main()
       If Environment.GetCommandLineArgs.Length = 1 Then 

@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Data
@@ -71,7 +70,7 @@ Class Window1
         ShowPreferredPasteFormats()
         PointEraseStrokes()
 
-    End Sub 'New
+    End Sub
     'AddTextBlock();
 
 
@@ -80,13 +79,13 @@ Class Window1
 
         Me.Title = inkCanvas1.ActiveEditingMode.ToString()
 
-    End Sub 'inkCanvas1_ActiveEditingModeChanged
+    End Sub
     '</Snippet36>
 
     Private Sub positionButtonButton_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
         AttachedPropertiesSnippets()
 
-    End Sub 'positionButtonButton_Click
+    End Sub
 
 
     Sub ShowPreferredPasteFormats()
@@ -98,7 +97,7 @@ Class Window1
         inkCanvas1.PreferredPasteFormats = formats
         '</Snippet26>
 
-    End Sub 'ShowPreferredPasteFormats
+    End Sub
 
     '<Snippet20>
     Private Sub inkCanvas1_EditingModeInvertedChanged(ByVal sender As Object, ByVal e As RoutedEventArgs)
@@ -109,7 +108,7 @@ Class Window1
             erasingModeLabel.Text = "Erase by stroke"
         End If
 
-    End Sub 'inkCanvas1_EditingModeInvertedChanged
+    End Sub
     '</Snippet20>
 
     '<Snippet21>
@@ -121,7 +120,7 @@ Class Window1
             modeLabel.Text = "select"
         End If
 
-    End Sub 'inkCanvas1_EditingModeChanged
+    End Sub
     '</Snippet21>
 
     ' <Snippet19>
@@ -130,7 +129,7 @@ Class Window1
 
         inkCanvas1.Select(Nothing, Nothing)
 
-    End Sub 'inkCanvas1_SelectionMoved
+    End Sub
     ' </Snippet19>
 
     ' <Snippet18>
@@ -138,7 +137,7 @@ Class Window1
 
         Me.Title = "Stroke erased " + inkCanvas1.Strokes.Count.ToString()
 
-    End Sub 'inkCanvas1_StrokeErased
+    End Sub
     ' </Snippet18>
 
     '<Snippet23>
@@ -146,7 +145,7 @@ Class Window1
 
         inkCanvas1.Select(Nothing, Nothing)
 
-    End Sub 'inkCanvas1_SelectionResized
+    End Sub
     '</Snippet23>
 
     ' <Snippet16>
@@ -181,7 +180,7 @@ Class Window1
         ' Create a the new rectangle with the appropriate width and height.
         e.NewRectangle = New Rect(e.NewRectangle.X, e.NewRectangle.Y, resizeWidth, resizeHeight)
 
-    End Sub 'inkCanvas1_SelectionResizing
+    End Sub
 
 
     ' Keep track of the selection bounds.
@@ -189,7 +188,7 @@ Class Window1
 
         selectionBounds = inkCanvas1.GetSelectionBounds()
 
-    End Sub 'inkCanvas1_SelectionChanged
+    End Sub
     ' </Snippet16>
 
     '<Snippet15>
@@ -202,7 +201,7 @@ Class Window1
         player1 = inkCanvas1.Strokes
         player2 = New StrokeCollection()
 
-    End Sub 'InitializePlayersCanvases
+    End Sub
 
 
     ' Use a different "inking surface" for each player.
@@ -214,7 +213,7 @@ Class Window1
             inkCanvas1.Strokes = player1
         End If
 
-    End Sub 'switchPlayersButton_Click
+    End Sub
 
 
     Private Sub inkCanvas1_StrokesReplaced(ByVal sender As Object, _
@@ -226,7 +225,7 @@ Class Window1
             Title = "Player two's turn"
         End If
 
-    End Sub 'inkCanvas1_StrokesReplaced
+    End Sub
     '</Snippet15>
 
     ' <Snippet14>
@@ -244,7 +243,7 @@ Class Window1
             End If
         Next aStroke
 
-    End Sub 'inkCanvas1_SelectionChanging
+    End Sub
     ' </Snippet14>
 
     '<Snippet13>
@@ -255,7 +254,7 @@ Class Window1
         Dim newRect As Rect = e.NewRectangle
         e.NewRectangle = New Rect(newRect.X, e.OldRectangle.Y, newRect.Width, newRect.Height)
 
-    End Sub 'inkCanvas1_SelectionMoving
+    End Sub
     '</Snippet13>
 
     Private Sub changeColorsOfSelectionButton_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
@@ -279,11 +278,11 @@ Class Window1
         Next element
         '</Snippet12>
 
-    End Sub 'changeColorsOfSelectionButton_Click
+    End Sub
 
     Private Sub inkCanvas1_StrokeErasing(ByVal sender As Object, ByVal e As InkCanvasStrokeErasingEventArgs)
 
-    End Sub 'inkCanvas1_StrokeErasing
+    End Sub
 
 
 
@@ -293,7 +292,7 @@ Class Window1
             MessageBox.Show(s.StylusPoints.Description.PropertyCount.ToString())
         Next s
 
-    End Sub 'comparePointDescriptionsButton_Click
+    End Sub
 
 
     Private Sub changePointDescriptionsButton_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
@@ -305,7 +304,7 @@ Class Window1
                  New StylusPointPropertyInfo(StylusPointProperties.NormalPressure), _
                  New StylusPointPropertyInfo(StylusPointProperties.TipButton)})
         '</Snippet9>    
-    End Sub 'changePointDescriptionsButton_Click
+    End Sub
 
 
 
@@ -322,7 +321,7 @@ Class Window1
             End If
         End Try
         '</Snippet10>
-    End Sub 'SaveStrokes 
+    End Sub
 
     '<Snippet22>
     Private currentTimeGuid As New Guid("12345678-1234-1234-1234-123456789012")
@@ -332,7 +331,7 @@ Class Window1
 
         e.Stroke.AddPropertyData(currentTimeGuid, DateTime.Now)
 
-    End Sub 'inkCanvas1_StrokeCollected
+    End Sub
     '</Snippet22>
 
     Sub AddTextBlock()
@@ -353,12 +352,12 @@ Class Window1
                             inkCanvas1.GetEnabledGestures()
         '</Snippet24>
 
-    End Sub 'AddTextBlock
+    End Sub
 
     Private Sub inkCanvas1_StylusDown(ByVal sender As Object, ByVal e As StylusDownEventArgs)
         Dim desc As StylusPointDescription = e.GetStylusPoints(inkCanvas1, inkCanvas1.DefaultStylusPointDescription).Description
 
-    End Sub 'inkCanvas1_StylusDown
+    End Sub
 
 
     Sub DisableMoveAndResize()
@@ -366,7 +365,7 @@ Class Window1
         inkCanvas1.ResizeEnabled = False
         inkCanvas1.MoveEnabled = False
         '</Snippet7>
-    End Sub 'DisableMoveAndResize
+    End Sub
 
 
     Sub UseCustomCursorOnInkCanvas()
@@ -374,7 +373,7 @@ Class Window1
         inkCanvas1.UseCustomCursor = True
         inkCanvas1.Cursor = Cursors.Pen
         '</Snippet5>
-    End Sub 'UseCustomCursorOnInkCanvas
+    End Sub
 
 
     Sub PointEraseStrokes()
@@ -382,14 +381,14 @@ Class Window1
         inkCanvas1.EditingModeInverted = InkCanvasEditingMode.EraseByPoint
         inkCanvas1.EraserShape = New EllipseStylusShape(5, 5)
         '</Snippet6>
-    End Sub 'PointEraseStrokes
+    End Sub
 
 
     Private Sub selectElementsButton_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
         '<Snippet2>
         inkCanvas1.Select(inkCanvas1.Strokes, New UIElement() {textbox1, button1})
         '</Snippet2>
-    End Sub 'selectElementsButton_Click
+    End Sub
 
 
     Private Sub copyButton_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
@@ -398,7 +397,7 @@ Class Window1
         inkCanvas1.CopySelection()
         '</Snippet3>
 
-    End Sub 'copyButton_Click
+    End Sub
 
     Private Sub cutSelectionButton_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
         '<Snippet4>
@@ -406,7 +405,7 @@ Class Window1
         inkCanvas1.CutSelection()
         '</Snippet4>
 
-    End Sub 'cutSelectionButton_Click
+    End Sub
 
     '<Snippet1>
     Private Sub copyXamlButton_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
@@ -417,7 +416,7 @@ Class Window1
         Dim rectangleData As New DataObject(DataFormats.Xaml, rectString)
         Clipboard.SetDataObject(rectangleData)
 
-    End Sub 'copyXamlButton_Click
+    End Sub
 
 
     Private Sub pasteButton_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
@@ -426,7 +425,7 @@ Class Window1
             inkCanvas1.Paste(New Point(100, 100))
         End If
 
-    End Sub 'pasteButton_Click
+    End Sub
     '</Snippet1>
 
     Private Sub Window1_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Input.KeyEventArgs)
@@ -451,7 +450,7 @@ Class Window1
             inkCanvas1.DefaultDrawingAttributes.IsHighlighter = Not inkCanvas1.DefaultDrawingAttributes.IsHighlighter
         End If
 
-    End Sub 'Window1_KeyDown
+    End Sub
 
 
     Sub AttachedPropertiesSnippets()
@@ -486,5 +485,5 @@ Class Window1
         '<Snippet34>
         Dim buttonBottom As Double = InkCanvas.GetBottom(button1)
         '</Snippet34>
-    End Sub 'AttachedPropertiesSnippets 
-End Class 'Window1
+    End Sub
+End Class

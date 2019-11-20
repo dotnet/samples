@@ -6,7 +6,7 @@
       Public Sub New(ByVal inFile As String, ByVal outFile As String)
          inputFileName = CStr(inFile.Clone())
          outputFileName = CStr(outFile.Clone())
-      End Sub 'New
+      End Sub
 
       '<Snippet3>
       Public Sub DecodeWithCharArray()
@@ -245,7 +245,7 @@
             Case Else
                System.Console.WriteLine("First arg must be -d or -e")
          End Select
-      End Sub 'Main
+      End Sub
 
    End Class
 End Namespace

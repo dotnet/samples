@@ -31,6 +31,6 @@ Public Class Client
       Console.WriteLine("The Object Uri :" + myWellKnownClientType.ObjectUrl)
 ' </Snippet1>
       Console.WriteLine(myObject.MyMethod("Remote method is called."))
-   End Sub 'Main
-End Class 'Client
+   End Sub
+End Class
 

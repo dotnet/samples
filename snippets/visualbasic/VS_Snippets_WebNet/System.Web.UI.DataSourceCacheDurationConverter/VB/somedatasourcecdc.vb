@@ -52,7 +52,7 @@ Namespace Samples.AspNet.VB.Controls
         ' Continue implementation of data source control.
         ' ...
         
-    End Class 'SomeDataSource 
+    End Class
 ' </Snippet1>    
 
     Class SdsCache
@@ -62,6 +62,6 @@ Namespace Samples.AspNet.VB.Controls
         Public Enabled As Boolean = True
 
         Public Expiry As DataSourceCacheExpiry = DataSourceCacheExpiry.Absolute
-    End Class 'SdsCache
+    End Class
     
 End Namespace

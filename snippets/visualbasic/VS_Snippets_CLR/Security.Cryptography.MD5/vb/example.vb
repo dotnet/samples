@@ -21,7 +21,7 @@ Class Program
                 Console.WriteLine("The hashes are not same.")
             End If
         End Using
-    End Sub 'Main
+    End Sub
 
 
 
@@ -62,7 +62,7 @@ Class Program
         End If
 
     End Function 'VerifyMd5Hash
-End Class 'Program 
+End Class
 ' This code example produces the following output:
 '
 ' The MD5 hash of Hello World! is: ed076287532e86365e841e92bfc50d8c.

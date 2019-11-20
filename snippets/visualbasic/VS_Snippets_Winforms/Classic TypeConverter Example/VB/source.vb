@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Drawing
+﻿Imports System.Drawing
 Imports System.ComponentModel
 
 
@@ -10,7 +9,7 @@ Public Class Sample
     <TypeConverter(GetType(MyClassConverter))> _
     Public Class Class1
         ' Insert code here.
-    End Class 'MyClass
+    End Class
     
     ' </Snippet1>
     Public Enum MyPropertyEnum
@@ -20,7 +19,7 @@ Public Class Sample
     End Enum 'MyPropertyEnum
     
     Public Class MyClassConverter
-    End Class 'MyClassConverter
+    End Class
     
     ' <Snippet2>
     
@@ -40,13 +39,13 @@ Public Class Sample
         Dim c As Color = Color.Red
         Console.WriteLine(TypeDescriptor.GetConverter(c).ConvertToString(c))
         ' </Snippet3>
-    End Sub 'Method1
+    End Sub
      
     Public Sub Method2()
         ' <Snippet4>
         Dim c As Color = CType(TypeDescriptor.GetConverter(GetType(Color)).ConvertFromString("Red"), Color)
         ' </Snippet4>
-    End Sub 'Method2
+    End Sub
      
     
     Public Sub Method3()
@@ -56,5 +55,5 @@ Public Class Sample
             Console.WriteLine(TypeDescriptor.GetConverter(c).ConvertToString(c))
         Next c
         ' </Snippet5>
-    End Sub 'Method3 
-End Class 'Sample
+    End Sub
+End Class

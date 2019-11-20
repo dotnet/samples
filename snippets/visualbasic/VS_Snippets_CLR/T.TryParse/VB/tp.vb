@@ -116,7 +116,7 @@ Class Sample
       ' UInt64
       result = UInt64.TryParse("11", NumberStyles.Integer, Nothing, uint64Val)
       Show(result, "UInt64", uint64Val.ToString())
-   End Sub 'Main
+   End Sub
    
    
    Protected Shared Sub Show(parseResult As Boolean, typeName As String, parseValue As String)
@@ -128,8 +128,8 @@ Class Sample
       Else
          Console.WriteLine(msgFailure, typeName)
       End If
-   End Sub 'Show
-End Class 'Sample '
+   End Sub
+End Class
 'This example produces the following results:
 '
 'This example demonstrates overloads of the TryParse method for

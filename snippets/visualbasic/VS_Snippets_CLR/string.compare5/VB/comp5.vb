@@ -1,7 +1,6 @@
 ﻿'<snippet1>
 ' Sample for String.Compare(String, Int32, String, Int32, Int32, Boolean, CultureInfo)
 Imports System.Globalization
-Imports Microsoft.VisualBasic
 
 Class Sample
    
@@ -28,8 +27,8 @@ Class Sample
       Console.Write("Substring '{0}' in '{1}' is ", str1.Substring(4, 2), str1)
       Console.Write("{0} ", str)
       Console.WriteLine("substring '{0}' in '{1}'.", str2.Substring(4, 2), str2)
-   End Sub 'Main
-End Class 'Sample
+   End Sub
+End Class
 '
 'This example produces the following results:
 '

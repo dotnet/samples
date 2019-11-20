@@ -5,16 +5,16 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <RootNamespace>CSWinFormDataGridView</RootNamespace>
     <AssemblyName>CSWinFormDataGridView</AssemblyName>
-
+    <UseWindowsForms>true</UseWindowsForms>
     <!-- Don't automatically generate assembly info attributes
-         found in AssemblyInfo.cs. This property is useful for 
+         found in AssemblyInfo.cs. This property is useful for
          applications ported from NetFx, which may have used
          AssemblyInfo.cs -->
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Data.SqlClient" Version="4.6.1" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.7.0" />
   </ItemGroup>
 
   <!-- By default, all .cs and .resx files in the current
@@ -59,11 +59,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="CustomDataGridViewColumn\ReadMe.txt" />
-    <Content Include="DataGridViewPaging\ReadMe.txt" />
-    <Content Include="EditingControlHosting\ReadMe.txt" />
-    <Content Include="JustInTimeDataLoading\ReadMe.txt" />
-    <Content Include="MultipleLayeredColumnHeader\ReadMe.txt" />
+    <Content Include="CustomDataGridViewColumn\ReadMe.md" />
+    <Content Include="DataGridViewPaging\ReadMe.md" />
+    <Content Include="EditingControlHosting\ReadMe.md" />
+    <Content Include="JustInTimeDataLoading\ReadMe.md" />
+    <Content Include="MultipleLayeredColumnHeader\ReadMe.md" />
   </ItemGroup>
 
 </Project>

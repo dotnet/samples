@@ -96,12 +96,12 @@ Public Class MySocketPermissionExample
       
       ' Perform all socket operations in here.
       s.Close()
-   End Sub 'MySocketPermission
+   End Sub
     '</Snippet1>
    
    Public Shared Sub Main()
       MySocketPermissionExample.MySocketPermission()
-   End Sub 'Main 
-End Class 'MySocketPermissionExample
+   End Sub
+End Class
 
 

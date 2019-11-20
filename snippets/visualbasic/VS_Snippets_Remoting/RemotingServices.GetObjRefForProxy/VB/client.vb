@@ -5,7 +5,6 @@ Imports System.Runtime.Remoting.Channels.Http
 Imports System.Runtime.Remoting.Messaging
 Imports System.Runtime.Remoting.Lifetime
 Imports System.Security.Permissions
-Imports Microsoft.VisualBasic
 Imports SampleNamespace
 
 Public Class SampleClient
@@ -46,5 +45,5 @@ Public Class SampleClient
       
       Console.WriteLine("Can my object cast to a Bitmap? {0}", typeInfo.CanCastTo(GetType(System.Drawing.Bitmap), objRefSample))
       ' </Snippet1>
-   End Sub 'Main
-End Class 'SampleClient 
+   End Sub
+End Class

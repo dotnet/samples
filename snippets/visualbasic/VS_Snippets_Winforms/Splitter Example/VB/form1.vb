@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -27,7 +26,7 @@ Namespace SplitterEx
          InitializeComponent()
          
          CreateMySplitControls()
-      End Sub 'New
+      End Sub
        
       '
       ' TODO: Add any constructor code after InitializeComponent call
@@ -57,7 +56,7 @@ Namespace SplitterEx
          
          ' Add the controls in reverse order to the form to ensure proper location.
          Me.Controls.AddRange(New Control() {listView1, splitter1, treeView1})
-      End Sub 'CreateMySplitControls
+      End Sub
       
       '</snippet1>
       '/ <summary>
@@ -70,7 +69,7 @@ Namespace SplitterEx
                 End If
             End If
             MyBase.Dispose(disposing)
-        End Sub 'Dispose
+        End Sub
 
 
         '
@@ -94,7 +93,7 @@ Namespace SplitterEx
             Me.ClientSize = New System.Drawing.Size(384, 365)
             Me.Name = "Form1"
             Me.Text = "Form1"
-        End Sub 'InitializeComponent
+        End Sub
 
         '
         'ToDo: Error processing original source shown below
@@ -111,6 +110,6 @@ Namespace SplitterEx
         '/ </summary>
         Shared Sub Main()
             Application.Run(New Form1())
-        End Sub 'Main
-    End Class 'Form1
+        End Sub
+    End Class
 End Namespace 'SplitterEx

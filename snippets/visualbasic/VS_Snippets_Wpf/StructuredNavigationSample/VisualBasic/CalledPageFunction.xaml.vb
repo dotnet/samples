@@ -1,7 +1,6 @@
 ﻿'<SnippetCalledPageFunctionCODEBEHIND1>
 '<SnippetAcceptsInitialDataCODEBEHIND1>
 '<SnippetReturnCODEBEHIND1>
-Imports System
 Imports System.Windows
 Imports System.Windows.Navigation
 

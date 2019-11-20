@@ -12,11 +12,11 @@ Namespace Samples.AspNet.Configuration
         Inherits ConfigurationValidatorAttribute
 
         Public Sub New()
-        End Sub 'New
+        End Sub
 
         Public Sub New(ByVal validator As Type)
             MyBase.New(validator)
-        End Sub 'New
+        End Sub
 
         Public Shadows ReadOnly Property _
         ValidatorType() As Type

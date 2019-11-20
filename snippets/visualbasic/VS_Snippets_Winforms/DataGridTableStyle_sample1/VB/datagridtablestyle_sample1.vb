@@ -8,7 +8,6 @@
 ' on the form changes data and appearance of the grid by setting the
 ' MappingName and GridLineStyle.
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -30,7 +29,7 @@ Namespace SampleDataGridTableStyle
          InitializeComponent()
          ' Call SetUp to bind the controls.
          SetUp()
-      End Sub 'New
+      End Sub
 
       Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
          If disposing Then
@@ -39,7 +38,7 @@ Namespace SampleDataGridTableStyle
             End If
          End If
          MyBase.Dispose(disposing)
-      End Sub 'Dispose
+      End Sub
 
       Private Sub InitializeComponent()
          Me.btnApplyStyles = New System.Windows.Forms.Button()
@@ -76,18 +75,18 @@ Namespace SampleDataGridTableStyle
          Me.Text = "DataGridTableStyle_Sample"
          CType(Me.myDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
          Me.ResumeLayout(False)
-      End Sub 'InitializeComponent
+      End Sub
 
       <STAThread()> Shared Sub Main()
          Application.Run(New DataGridTableStyle_Sample())
-      End Sub 'Main
+      End Sub
 
       Private Sub SetUp()
          ' Create a DataSet with two tables and one relation.
          MakeDataSet()
          ' Bind the DataGrid to the DataSet.
          myDataGrid.SetDataBinding(myDataSet, "Customers")
-      End Sub 'SetUp
+      End Sub
 
 ' <Snippet1>
 ' <Snippet2>
@@ -132,15 +131,15 @@ Namespace SampleDataGridTableStyle
 
          ' Add the DataGridTableStyle object to GridTableStylesCollection.
          myDataGrid.TableStyles.Add(myDataGridTableStyle1)
-      End Sub 'AddCustomDataTableStyle
+      End Sub
 
       Private Sub MappingNameChanged_Handler(ByVal sender As Object, ByVal e As EventArgs)
          MessageBox.Show("MappingName Changed", "DataGridTableStyle")
-      End Sub 'MappingNameChanged_Handler
+      End Sub
 
       Private Sub GridLineStyleChanged_Handler(ByVal sender As Object, ByVal e As EventArgs)
          MessageBox.Show("GridLineStyle  Changed", "DataGridTableStyle")
-      End Sub 'GridLineStyleChanged_Handler
+      End Sub
 ' </Snippet2>
 ' </Snippet1>
 
@@ -213,15 +212,15 @@ Namespace SampleDataGridTableStyle
                tOrders.Rows.Add(newRow2)
             Next j
          Next i
-      End Sub 'MakeDataSet
+      End Sub
 
 
       Private Sub btnApplyStyles_Click(ByVal sender As Object, _
              ByVal e As EventArgs) Handles btnApplyStyles.Click
          AddCustomDataTableStyle()
          btnApplyStyles.Enabled = False
-      End Sub 'btnApplyStyles_Click
-   End Class 'DataGridTableStyle_Sample
+      End Sub
+   End Class
 End Namespace 'SampleDataGridTableStyle
 
 

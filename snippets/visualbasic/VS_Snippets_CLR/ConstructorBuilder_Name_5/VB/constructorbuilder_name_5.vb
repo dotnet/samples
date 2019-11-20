@@ -73,7 +73,7 @@ Public Class MyConstructorBuilder
       myILGenerator2.Emit(OpCodes.Ret)
       myModuleBuilder.CreateGlobalFunctions()
       myType1 = myTypeBuilder.CreateType()
-   End Sub 'New
+   End Sub
    
    Public ReadOnly Property MyTypeProperty() As Type
       Get
@@ -99,6 +99,6 @@ Public Class MyConstructorBuilder
        Else
          Console.WriteLine("Could not access Type.")
       End If
-   End Sub 'Main
-End Class 'MyConstructorBuilder
+   End Sub
+End Class
 ' </Snippet1>

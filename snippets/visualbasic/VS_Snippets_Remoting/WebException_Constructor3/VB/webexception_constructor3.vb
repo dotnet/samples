@@ -11,7 +11,6 @@
 Imports System.Net
 Imports System.Net.Sockets
 Imports System.Text
-Imports Microsoft.VisualBasic
 
 Class HttpConnect
 Public Shared Sub Main()
@@ -23,7 +22,7 @@ Public Shared Sub Main()
             Console.WriteLine((ControlChars.Cr + "The New Message is:" + e.Message))
             Console.WriteLine((ControlChars.Cr + "The Status is :" + e.Status.ToString()))
         End Try
-    End Sub ' Main
+    End Sub
     
 
     Public Sub ConnectHttpServer(connectUri As [String])
@@ -51,5 +50,5 @@ Public Shared Sub Main()
 
 ' </Snippet1>
 
-    End Sub ' ConnectHttpServer
-End Class ' HttpConnect 
+    End Sub
+End Class

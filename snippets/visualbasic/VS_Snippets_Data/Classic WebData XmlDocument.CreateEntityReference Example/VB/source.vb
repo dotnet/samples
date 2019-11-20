@@ -33,6 +33,6 @@ Public Class Sample
         Dim entityref2 As XmlEntityReference = doc.CreateEntityReference("p")
         doc.DocumentElement.LastChild.AppendChild(entityref2)
         Console.WriteLine(entityref2.FirstChild.InnerText)
-    End Sub 'Main 
-End Class 'Sample
+    End Sub
+End Class
 ' </Snippet1>

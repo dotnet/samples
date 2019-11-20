@@ -55,7 +55,7 @@ Public Class CounterDataCollectionExample
          Console.WriteLine("Exception: {0}.", e.Message)
          Return
       End Try
-   End Sub 'Main
-End Class 'CounterDataCollectionExample
+   End Sub
+End Class
 ' </Snippet2>
 ' </Snippet1>

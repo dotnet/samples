@@ -8,27 +8,28 @@ Imports System.Security.Permissions
 Public Delegate Function CallBack(ByVal handle As Integer, ByVal param As IntPtr) As Boolean
 
 
-Module LibWrap
+Friend Module NativeMethods
 
     ' passing managed object as LPARAM
     ' BOOL EnumWindows(WNDENUMPROC lpEnumFunc, LPARAM lParam);
-    <DllImport("user32.dll")> _
-    Function EnumWindows(ByVal cb As CallBack, ByVal param As IntPtr) As Boolean
+    <DllImport("user32.dll")>
+    Friend Function EnumWindows(ByVal cb As CallBack, ByVal param As IntPtr) As Boolean
     End Function
-End Module 'LibWrap
+End Module
 
 
 Module App
 
     Sub Main()
-	Run()
+
+        Run()
 
     End Sub
 
-    <SecurityPermission(SecurityAction.Demand, UnmanagedCode:=true)> _
+    <SecurityPermission(SecurityAction.Demand, UnmanagedCode:=True)>
     Sub Run()
 
-        Dim tw As TextWriter = System.Console.Out
+        Dim tw As TextWriter = Console.Out
         Dim gch As GCHandle = GCHandle.Alloc(tw)
 
         Dim cewp As CallBack
@@ -36,7 +37,7 @@ Module App
 
         ' platform invoke will prevent delegate to be garbage collected
         ' before call ends
-        LibWrap.EnumWindows(cewp, GCHandle.ToIntPtr(gch))
+        NativeMethods.EnumWindows(cewp, GCHandle.ToIntPtr(gch))
         gch.Free()
 
     End Sub

@@ -53,7 +53,7 @@ Module Program
 
         Console.ReadLine()
 
-    End Sub 'Main
+    End Sub
 
 End Module 'Program
 
@@ -169,7 +169,7 @@ Module XMLEncryptionSubs
         ''''''''''''''''''''''''''''''''''''''''''''''''
         EncryptedXml.ReplaceElement(elementToEncrypt, edElement, False)
 
-    End Sub 'Encrypt
+    End Sub
 
 
     Sub Decrypt(ByVal Doc As XmlDocument, ByVal Alg As RSA, ByVal KeyName As String)
@@ -194,7 +194,7 @@ Module XMLEncryptionSubs
         ' Decrypt the element.
         exml.DecryptDocument()
 
-    End Sub 'Decrypt 
+    End Sub
 End Module 'XMLEncryptionSubs
 
 

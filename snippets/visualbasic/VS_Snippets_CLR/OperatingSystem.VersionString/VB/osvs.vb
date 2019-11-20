@@ -9,8 +9,8 @@ Class Sample
 
       Console.WriteLine("This operating system is {0}", os.VersionString)
 
-   End Sub 'Main
-End Class 'Sample
+   End Sub
+End Class
 '
 'This example produces the following results:
 '

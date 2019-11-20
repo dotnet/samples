@@ -67,7 +67,7 @@ Module Program
             Console.WriteLine(e.Message)
         End Try
 
-    End Sub 'Main
+    End Sub
 
 
     Sub Encrypt(ByVal Doc As XmlDocument, ByVal ElementToEncryptName As String, ByVal Cert As X509Certificate2)

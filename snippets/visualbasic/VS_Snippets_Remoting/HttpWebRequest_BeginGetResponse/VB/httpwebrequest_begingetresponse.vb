@@ -13,9 +13,6 @@ Imports System.Net
 Imports System.IO
 Imports System.Text
 Imports System.Threading
-Imports Microsoft.VisualBasic
-
-
 
 Public Class RequestState
   ' This class stores the State of the request
@@ -31,9 +28,9 @@ Public Class RequestState
     requestData = New StringBuilder("")
     request = Nothing
     streamResponse = Nothing
-  End Sub ' New
+  End Sub
 
-End Class ' RequestState
+End Class
 
 
 Class HttpWebRequest_BeginGetResponse
@@ -71,7 +68,7 @@ Class HttpWebRequest_BeginGetResponse
       Console.WriteLine("Press any key to continue..........")
       Console.Read()
     End Try
-  End Sub ' Main
+  End Sub
   
   Private Shared Sub RespCallback(asynchronousResult As IAsyncResult)
     Try
@@ -89,7 +86,7 @@ Class HttpWebRequest_BeginGetResponse
       Console.WriteLine(ControlChars.Cr + "Message:{0}", e.Message)
       Console.WriteLine(ControlChars.Cr + "Status:{0}", e.Status)
     End Try 
-  End Sub ' RespCallback
+  End Sub
   
   Private Shared Sub ReadCallBack(asyncResult As IAsyncResult)
     Try
@@ -117,8 +114,8 @@ Class HttpWebRequest_BeginGetResponse
       Console.WriteLine(ControlChars.Cr + "Message:{0}", e.Message)
       Console.WriteLine(ControlChars.Cr + "Status:{0}", e.Status)
     End Try 
-  End Sub ' ReadCallBack
+  End Sub
 ' </Snippet2>
 ' </Snippet1>
-End Class ' HttpWebRequest_BeginGetResponse 
+End Class
 

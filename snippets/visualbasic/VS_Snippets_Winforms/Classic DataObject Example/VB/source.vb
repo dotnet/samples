@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
 Imports System.ComponentModel
@@ -30,7 +29,7 @@ Public Class Form1
             textBox1.Text = "Data of type " & myType.ToString() & _
                 " is not present in the DataObject"
         End If
-    End Sub 'AddMyData3
+    End Sub
     
     ' </Snippet1>
     ' <Snippet2>
@@ -40,6 +39,6 @@ Public Class Form1
         
         ' Prints the string in a text box.
         textBox1.Text = myDataObject.GetData(DataFormats.Text).ToString()
-    End Sub 'GetMyData2
+    End Sub
     ' </Snippet2>
-End Class 'Form1 
+End Class

@@ -1,5 +1,4 @@
 ﻿' <Snippet1>
-Imports System
 Imports System.ComponentModel
 Imports System.ComponentModel.Design
 Imports System.Drawing
@@ -16,7 +15,7 @@ Namespace IDesignerHostExample
         Inherits System.ComponentModel.Component
 
         Public Sub New()
-        End Sub 'New
+        End Sub
 
         Protected Overloads Sub Dispose(ByVal disposing As Boolean)
             MyBase.Dispose(disposing)
@@ -32,7 +31,7 @@ Namespace IDesignerHostExample
         Private component_ As System.ComponentModel.IComponent
 
         Public Sub New()
-        End Sub 'New
+        End Sub
 
         Public Sub DoDefaultAction() Implements IDesigner.DoDefaultAction
             ListComponents()

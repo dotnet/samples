@@ -1,7 +1,5 @@
 ﻿'<snippet1>
 ' Example for the hyperbolic Math.Tanh( Double ) method.
-Imports Microsoft.VisualBasic
-
 Module DemoTanh
    
     Sub Main()
@@ -25,7 +23,7 @@ Module DemoTanh
 
         UseTwoArgs(0.1, 1.2)
         UseTwoArgs(1.2, 4.9)
-    End Sub 'Main
+    End Sub
        
     ' Evaluate hyperbolic identities with a given argument.
     Sub UseTanh(arg As Double)
@@ -47,7 +45,7 @@ Module DemoTanh
         Console.WriteLine( _
             "                       Math.Tanh({0}) = {1:E16}", _
             2.0 * arg, Math.Tanh((2.0 * arg)))
-    End Sub 'UseTanh
+    End Sub
        
     ' Evaluate a hyperbolic identity that is a function of two arguments.
     Sub UseTwoArgs(argX As Double, argY As Double)
@@ -62,7 +60,7 @@ Module DemoTanh
             "                       Math.Tanh({0}) = {1:E16}", _
             argX + argY, Math.Tanh(argX + argY))
 
-    End Sub 'UseTwoArgs
+    End Sub
 End Module 'DemoTanh
 
 ' This example of hyperbolic Math.Tanh( Double )

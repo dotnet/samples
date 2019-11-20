@@ -34,17 +34,17 @@ public struct MyArrayStruct
     public int[] vals;
 }
 
-public class LibWrap
+internal static class NativeMethods
 {
     // Declares a managed prototype for unmanaged function.
     [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
-    public static extern int TestStructInStruct(ref MyPerson2 person2);
+    internal static extern int TestStructInStruct(ref MyPerson2 person2);
 
     [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
-    public static extern int TestStructInStruct3(MyPerson3 person3);
+    internal static extern int TestStructInStruct3(MyPerson3 person3);
 
     [DllImport("..\\LIB\\PinvokeLib.dll", CallingConvention = CallingConvention.Cdecl)]
-    public static extern int TestArrayInStruct(ref MyArrayStruct myStruct);
+    internal static extern int TestArrayInStruct(ref MyArrayStruct myStruct);
 }
 //</snippet23>
 
@@ -70,7 +70,7 @@ public class App
         Console.WriteLine("first = {0}, last = {1}, age = {2}",
             personName.first, personName.last, personAll.age);
 
-        int res = LibWrap.TestStructInStruct(ref personAll);
+        int res = NativeMethods.TestStructInStruct(ref personAll);
 
         MyPerson personRes =
             (MyPerson)Marshal.PtrToStructure(personAll.person,
@@ -87,7 +87,7 @@ public class App
         person3.person.first = "John";
         person3.person.last = "Evans";
         person3.age = 27;
-        LibWrap.TestStructInStruct3(person3);
+        NativeMethods.TestStructInStruct3(person3);
 
         // Structure with an embedded array.
         MyArrayStruct myStruct = new MyArrayStruct();
@@ -103,7 +103,7 @@ public class App
         Console.WriteLine("{0} {1} {2}", myStruct.vals[0],
             myStruct.vals[1], myStruct.vals[2]);
 
-        LibWrap.TestArrayInStruct(ref myStruct);
+        NativeMethods.TestArrayInStruct(ref myStruct);
         Console.WriteLine("\nStructure with array after call:");
         Console.WriteLine(myStruct.flag);
         Console.WriteLine("{0} {1} {2}", myStruct.vals[0],

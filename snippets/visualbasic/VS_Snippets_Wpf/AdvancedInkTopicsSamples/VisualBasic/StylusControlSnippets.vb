@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.Windows.Controls
@@ -37,7 +36,7 @@ Namespace StylusControlSnippets
         '</Snippet18>
 
         '<Snippet15>
-    End Class 'StylusControl
+    End Class
     '</Snippet15>
 End Namespace 'StylusControlSnippets 
 
@@ -55,5 +54,5 @@ Namespace snippets2
 
         End Sub
         '</Snippet16>
-    End Class 'StylusControl 
+    End Class
 End Namespace 'snippets2

@@ -16,7 +16,7 @@ Class Sample
          Console.Clear()
          Console.WriteLine(e.Message)
       End Try
-   End Sub 'WriteAt
+   End Sub
    
    Public Shared Sub Main()
       ' Clear the screen, then save the top and left coordinates.
@@ -50,8 +50,8 @@ Class Sample
       '
       WriteAt("All done!", 0, 6)
       Console.WriteLine()
-   End Sub 'Main
-End Class 'Sample
+   End Sub
+End Class
 '
 'This example produces the following results:
 '

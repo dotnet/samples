@@ -40,7 +40,7 @@ Namespace Samples
       Inherits ProxyAttribute
 
       Public Sub New()
-      End Sub 'New
+      End Sub
 
 ' <Snippet1>
       ' Create an instance of ServicedComponentProxy
@@ -64,7 +64,7 @@ Namespace Samples
       End Function 'CreateProxy
 ' </Snippet3>
 ' </Snippet2>
-   End Class 'MyProxyAttribute
+   End Class
 
    <MyProxyAttribute()> _
    Public Class CustomServer
@@ -72,12 +72,12 @@ Namespace Samples
 
       Public Sub New()
          Console.WriteLine("CustomServer Base Class constructor called")
-      End Sub 'New
+      End Sub
 
       Public Sub HelloMethod(str As String)
          Console.WriteLine("HelloMethod of Server is invoked with message : " + str)
-      End Sub 'HelloMethod
-   End Class 'CustomServer
+      End Sub
+   End Class
 ' </Snippet11>
    <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> _
    Public Class MyProxy
@@ -92,7 +92,7 @@ Namespace Samples
                CType(Activator.CreateInstance(GetType(CustomServer)), MarshalByRefObject)
          Dim myObjRef As ObjRef = RemotingServices.Marshal(myMarshalByRefObject)
          myUri = myObjRef.URI
-      End Sub 'New
+      End Sub
 
       Public Sub New(type1 As Type)
          MyBase.New(type1)
@@ -100,7 +100,7 @@ Namespace Samples
          myMarshalByRefObject = CType(Activator.CreateInstance(type1), MarshalByRefObject)
          Dim myObjRef As ObjRef = RemotingServices.Marshal(myMarshalByRefObject)
          myUri = myObjRef.URI
-      End Sub 'New
+      End Sub
 
       Public Sub New(type1 As Type, targetObject As MarshalByRefObject)
          MyBase.New(type1)
@@ -108,7 +108,7 @@ Namespace Samples
          myMarshalByRefObject = targetObject
          Dim myObjRef As ObjRef = RemotingServices.Marshal(myMarshalByRefObject)
          myUri = myObjRef.URI
-      End Sub 'New
+      End Sub
 
 ' <Snippet4>
 ' <Snippet5>
@@ -154,7 +154,7 @@ Namespace Samples
       Public Overrides Sub GetObjectData(info As SerializationInfo, context As StreamingContext)
          ' Add your custom data if any here.
          MyBase.GetObjectData(info, context)
-      End Sub 'GetObjectData
+      End Sub
 ' </Snippet7>
       <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> _
       Public Class CustomObjRef
@@ -162,15 +162,15 @@ Namespace Samples
          Public Sub New(myMarshalByRefObject As MarshalByRefObject, serverType As Type)
             MyBase.New(myMarshalByRefObject, serverType)
             Console.WriteLine("ObjRef 'Constructor' called")
-         End Sub 'New
+         End Sub
 
          ' Override this method to store custom data.
          <SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter:=true)> _
          Public Overrides Sub GetObjectData(info As SerializationInfo, context As StreamingContext)
             MyBase.GetObjectData(info, context)
-         End Sub 'GetObjectData
-      End Class 'CustomObjRef
-   End Class 'MyProxy
+         End Sub
+      End Class
+   End Class
    
    <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> _
    Public Class ProxySample
@@ -202,7 +202,7 @@ Namespace Samples
          Console.WriteLine("Create an objRef object to be marshalled across Application Domains...")
          Dim CustomObjRef As ObjRef = myProxyInstance.CreateObjRef(GetType(CustomServer))
          Console.WriteLine("URI of 'ObjRef' object =  " + CustomObjRef.URI)
-      End Sub 'Main
-   End Class 'ProxySample
+      End Sub
+   End Class
 End Namespace 'Samples.AspNet.VB
 ' </Snippet12>

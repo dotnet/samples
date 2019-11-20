@@ -27,17 +27,17 @@ public struct MyUnion2_2
     public string str;
 }
 
-public class LibWrap
+internal static class NativeMethods
 {
     // Declares managed prototypes for unmanaged function.
     [DllImport("..\\LIB\\PInvokeLib.dll")]
-    public static extern void TestUnion(MyUnion u, int type);
+    internal static extern void TestUnion(MyUnion u, int type);
 
     [DllImport("..\\LIB\\PInvokeLib.dll")]
-    public static extern void TestUnion2(MyUnion2_1 u, int type);
+    internal static extern void TestUnion2(MyUnion2_1 u, int type);
 
     [DllImport("..\\LIB\\PInvokeLib.dll")]
-    public static extern void TestUnion2(MyUnion2_2 u, int type);
+    internal static extern void TestUnion2(MyUnion2_2 u, int type);
 }
 //</snippet28>
 
@@ -48,18 +48,18 @@ public class App
     {
         MyUnion mu = new MyUnion();
         mu.i = 99;
-        LibWrap.TestUnion(mu, 1);
+        NativeMethods.TestUnion(mu, 1);
 
         mu.d = 99.99;
-        LibWrap.TestUnion(mu, 2);
+        NativeMethods.TestUnion(mu, 2);
 
         MyUnion2_1 mu2_1 = new MyUnion2_1();
         mu2_1.i = 99;
-        LibWrap.TestUnion2(mu2_1, 1);
+        NativeMethods.TestUnion2(mu2_1, 1);
 
         MyUnion2_2 mu2_2 = new MyUnion2_2();
         mu2_2.str = "*** string ***";
-        LibWrap.TestUnion2(mu2_2, 2);
+        NativeMethods.TestUnion2(mu2_2, 2);
     }
 }
 //</snippet29>

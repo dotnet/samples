@@ -5,14 +5,14 @@ Imports System.ServiceModel
 <ServiceContract()>  _
 Interface IMath
     <OperationContract()>  _
-    Function Add(ByVal A As Double, ByVal B As Double) As Double 
+    Function Add(a As Double, b As Double) As Double 
 End Interface 
 
-public class Math
+Public Class Math
     Implements IMath
 
-    Function Add(ByVal A As Double, ByVal B As Double) As Double Implements IMath.Add
-       Return A + B
+    Function Add(a As Double, b As Double) As Double Implements IMath.Add
+       Return a + b
     End Function
 End Class
 
@@ -24,25 +24,24 @@ Public Class Test
         ' This code is written by an application developer.
         ' Create a channel factory.
         Dim myBinding As New BasicHttpBinding
-	Dim myEndpoint As New EndpointAddress("http://localhost/MathService/Ep1")
+        Dim myEndpoint As New EndpointAddress("http://localhost/MathService/Ep1")
 
-        Dim myChannelFactory As ChannelFactory(Of IMath) = _
-        New ChannelFactory(Of IMath) (myBinding, myEndpoint) 
+        Dim myChannelFactory As New ChannelFactory(Of IMath)(myBinding, myEndpoint)
 
-        'Create a channel.
+        ' Create a channel.
         Dim wcfClient1 As IMath = myChannelFactory.CreateChannel()
         Dim s As Integer = wcfClient1.Add(3, 39)
         Console.WriteLine(s.ToString())
-	Dim clientChannel As IClientChannel = CType(wcfClient1, IClientChannel)
+    	Dim clientChannel As IClientChannel = CType(wcfClient1, IClientChannel)
         clientChannel.Close()
 
         ' Create another channel
         Dim wcfClient2 As IMath = myChannelFactory.CreateChannel()
         s = wcfClient2.Add(15, 27)
         Console.WriteLine(s.ToString())
-	clientChannel = CType(wcfClient2, IClientChannel)
+	    clientChannel = CType(wcfClient2, IClientChannel)
         clientChannel.Close()
-	myChannelFactory.Close()
+	    myChannelFactory.Close()
     End Sub
 End Class
 ' </snippet1>

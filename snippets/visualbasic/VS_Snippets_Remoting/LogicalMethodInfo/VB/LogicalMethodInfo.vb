@@ -26,7 +26,7 @@ Public Class MySoapExtension
    ' Save the name of the log file that shall save the SOAP messages.
    Public Overrides Sub Initialize(initializer As Object)
       filename = CStr(initializer)
-   End Sub 'Initialize
+   End Sub
 
    ' Process the SOAP message received and write to log file.
    Public Overrides Sub ProcessMessage(message As SoapMessage)
@@ -40,7 +40,7 @@ Public Class MySoapExtension
          Case Else
                Throw New Exception("invalid stage")
       End Select
-   End Sub 'ProcessMessage
+   End Sub
 
    ' Write the contents of the outgoing SOAP message to the log file.
    Public Sub WriteOutput(message As SoapClientMessage)
@@ -54,7 +54,7 @@ Public Class MySoapExtension
       myFileStream.Close()
       newStream.Position = 0
       Copy(newStream, oldStream)
-   End Sub 'WriteOutput
+   End Sub
 
    ' Write the contents of the incoming SOAP message to the log file.
    Public Sub WriteInput(message As SoapClientMessage)
@@ -68,7 +68,7 @@ Public Class MySoapExtension
       Copy(newStream, myFileStream)
       myFileStream.Close()
       newStream.Position = 0
-   End Sub 'WriteInput
+   End Sub
 
    ' Return a new 'MemoryStream' instance for SOAP processing.
    Public Overrides Function ChainStream(stream As Stream) As Stream
@@ -83,8 +83,8 @@ Public Class MySoapExtension
       Dim myTextWriter = New StreamWriter(toStream)
       myTextWriter.WriteLine(myTextReader.ReadToEnd())
       myTextWriter.Flush()
-   End Sub 'Copy
-End Class 'MySoapExtension
+   End Sub
+End Class
 
 ' A 'SoapExtensionAttribute' that can be associated with web service method.
 <AttributeUsage(AttributeTargets.Method)>  _
@@ -97,7 +97,7 @@ Public Class MySoapExtensionAttribute
    Public Sub New()
       MyBase.New
       filename = "C:\logClient.txt"
-   End Sub 'New
+   End Sub
 
    ' Return the type of 'MySoapExtension' class.
    Public Overrides ReadOnly Property ExtensionType() As Type
@@ -124,7 +124,7 @@ Public Class MySoapExtensionAttribute
          myFilename = value
       End Set
    End Property
-End Class 'MySoapExtensionAttribute
+End Class
 
 <System.Web.Services.WebServiceBindingAttribute(Name := "MathSvcSoap", _
                                [Namespace] := "http://tempuri.org/")>  _
@@ -134,7 +134,7 @@ Public Class MathSvc
    <System.Diagnostics.DebuggerStepThroughAttribute()>  _
    Public Sub New()
       Me.Url = "http://localhost/MathSvc_LogicalMethodInfo.vb.asmx"
-   End Sub 'New
+   End Sub
 
    <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/Add", _
          Use := System.Web.Services.Description.SoapBindingUse.Literal, _
@@ -154,4 +154,4 @@ Public Class MathSvc
       Dim results As Object() = Me.EndInvoke(asyncResult)
       Return CType(results(0), System.Single)
    End Function 'EndAdd
-End Class 'MathSvc
+End Class

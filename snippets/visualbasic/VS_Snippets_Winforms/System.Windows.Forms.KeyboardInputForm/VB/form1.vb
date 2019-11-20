@@ -2,7 +2,6 @@
 ' different levels of user input control.
 
 ' <Snippet0>
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 

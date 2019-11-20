@@ -1,5 +1,4 @@
 ﻿' <Snippet1>
-Imports Microsoft.VisualBasic
 Imports System.Configuration
 
 ' Define a UrlsSection custom section that contains a 

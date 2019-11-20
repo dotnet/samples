@@ -87,7 +87,7 @@ Friend Class MyConstructorBuilder
                  ("Declaration type : " + myParameterInfo(i).Member.DeclaringType.ToString())
       Next i
 ' </Snippet4>
-   End Sub 'New 
+   End Sub
    
    Friend ReadOnly Property MyTypeProperty() As Type
       Get
@@ -112,5 +112,5 @@ Friend Class MyConstructorBuilder
       Else
          Console.WriteLine("Could not access Type.")
       End If
-   End Sub 'Main
-End Class 'MyConstructorBuilder
+   End Sub
+End Class

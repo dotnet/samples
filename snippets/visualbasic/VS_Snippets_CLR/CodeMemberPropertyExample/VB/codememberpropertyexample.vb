@@ -48,7 +48,7 @@ Namespace CodeDomSamples
             '     End Property
             ' End Class
             '</Snippet2>
-        End Sub 'New
+        End Sub
 
         Public Sub SpecificExample()
             '<Snippet3>			
@@ -72,8 +72,8 @@ Namespace CodeDomSamples
             '     End Property
 
             '</Snippet3>
-        End Sub 'SpecificExample 
+        End Sub
 
-    End Class 'CodeMemberPropertyExample
+    End Class
 End Namespace 'CodeDomSamples
 '</Snippet1>

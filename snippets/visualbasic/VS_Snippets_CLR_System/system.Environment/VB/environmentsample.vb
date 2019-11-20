@@ -23,19 +23,19 @@ Public Class EnvironmentSample
         Console.WriteLine("WS 3:" + Environment.WorkingSet.ToString())
         '</Snippet6>											 			 
         
-    End Sub 'Main
+    End Sub
     
     '<Snippet3>		
     Shared Sub OuterMethod()
         InnerMethod()
-    End Sub 'OuterMethod
+    End Sub
     
     
     Shared Sub InnerMethod()
         Console.WriteLine(("StackTrace after calling Main()->OuterMethod()->InnerMethod():" + Environment.StackTrace))
-    End Sub 'InnerMethod
+    End Sub
     '</Snippet3>		
     
-End Class 'EnvironmentSample
+End Class
 '</Snippet1>
 

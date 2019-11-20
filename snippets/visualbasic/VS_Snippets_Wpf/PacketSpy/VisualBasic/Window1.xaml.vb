@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Data
@@ -60,7 +59,7 @@ Class Window1
         ClonePoints()
         StylusPropertySnippets()
     
-    End Sub 'New
+    End Sub
      
     'CompareDescriptions();
     'MessageBox.Show(StylusPoint.MinXYValue.ToString() & ", " +
@@ -71,7 +70,7 @@ Class Window1
             GetTabletStylusPointProperties()
         End If
 
-    End Sub 'Window1_KeyDown
+    End Sub
     
     
     ' <Snippet21>
@@ -92,7 +91,7 @@ Class Window1
             normalPressureInfo.WriteLine("  Res = {0}", propertyInfo.Resolution.ToString())
         End If
 
-    End Sub 'inkCanvas1_StylusMove
+    End Sub
     
     ' </Snippet21>
 
@@ -109,7 +108,7 @@ Class Window1
         InkCanvas.SetLeft(circle, firstPoint.X)
         inkCanvas1.Children.Add(circle)
 
-    End Sub 'inkCanvas1_StylusDown    
+    End Sub
     '</Snippet13>
 
     Sub ValidateMinMaxX(ByVal point As StylusPoint) 
@@ -125,7 +124,7 @@ Class Window1
         point.X = x
         '</Snippet14>
 
-    End Sub 'ValidateMinMaxX
+    End Sub
 
     '<Snippet15>
     Private Sub inkCanvas1_StylusSystemGesture(ByVal sender As Object, ByVal e As StylusSystemGestureEventArgs)
@@ -140,7 +139,7 @@ Class Window1
                 ' Do something else.
         End Select
 
-    End Sub 'inkCanvas1_StylusSystemGesture
+    End Sub
     
     '</Snippet15>
 
@@ -160,7 +159,7 @@ Class Window1
         MessageBox.Show(properties.ToString())
         '</Snippet27>
 
-    End Sub 'GetTabletStylusPointProperties
+    End Sub
 
     
     ' To use Loaded event put Loaded="WindowLoaded" attribute in root element of .xaml file.
@@ -187,7 +186,7 @@ Class Window1
 
         'collection.Add(myRectVisual)
     
-    End Sub 'DrawRect
+    End Sub
      
     
     Private Sub StylusMoveEventHandler(ByVal sender As Object, ByVal e As StylusEventArgs) 
@@ -196,12 +195,12 @@ Class Window1
         WriteStylusPointValues(points)
         WriteDescriptionInfo(points)
     
-    End Sub 'StylusMoveEventHandler
+    End Sub
     
     
     Private Sub StylusEventHandler(ByVal sender As Object, ByVal e As StylusEventArgs) 
     
-    End Sub 'StylusEventHandler
+    End Sub
     
     
     
@@ -224,7 +223,7 @@ Class Window1
         
         Dim points As StylusPointCollection = currentStylus.GetStylusPoints(inkCanvas1, description3)
         '</Snippet26>
-    End Sub 'GetDescriptionFromStylusDevice
+    End Sub
 
     
     '<Snippet2>
@@ -255,7 +254,7 @@ Class Window1
 
         descriptionOutput.Text = descriptionStringWriter.ToString()
 
-    End Sub 'WriteDescriptionInfo
+    End Sub
     
     '</Snippet2>
     '<Snippet3>
@@ -297,7 +296,7 @@ Class Window1
 
         packetOutput.Text = packetWriter.ToString()
 
-    End Sub 'WriteStylusPointValues
+    End Sub
     
     '</Snippet3>
     '<Snippet4>
@@ -360,7 +359,7 @@ Class Window1
             point.SetPropertyValue(StylusPointProperties.PitchRotation, 1000)
         End If
         '</Snippet12>
-    End Sub 'StylusPointConstructor
+    End Sub
 
     
     ' All equality tests pass
@@ -410,7 +409,7 @@ Class Window1
             MessageBox.Show("The two StylusPoint objects are equal.")
         End If
         '</Snippet10>
-    End Sub 'TestStylusPointsEquality
+    End Sub
 
     
     Sub StylusPointCollectionSnippets()
@@ -426,7 +425,7 @@ Class Window1
         'points.RemoveAt(0);
         Dim point As New StylusPoint(400, 300)
 
-    End Sub 'StylusPointCollectionSnippets
+    End Sub
      'points.Insert(3, point);
     'points.Insert(2, point);
     
@@ -438,7 +437,7 @@ Class Window1
         
         Dim points As New StylusPointCollection(New StylusPoint() {stylusPoint1, stylusPoint2})
         '</Snippet28>    
-    End Sub 'StylusPointCollectionConstructor
+    End Sub
     
 
     
@@ -471,7 +470,7 @@ Class Window1
         
         Dim points2 As StylusPointCollection = points.Reformat(common)
         '</Snippet17>    
-    End Sub 'DescriptionSnippets
+    End Sub
 
 
     Sub ClonePoints() 
@@ -497,7 +496,7 @@ Class Window1
         stroke2.DrawingAttributes.Color = Colors.Red
         inkCanvas1.Strokes.Add(stroke2)
         '</Snippet18>
-    End Sub 'ClonePoints
+    End Sub
 
     
     
@@ -533,13 +532,13 @@ Class Window1
             MessageBox.Show("description2 is not a subset of description1.")
         End If
         '</Snippet24>
-    End Sub 'CompareDescriptions
+    End Sub
 
     
     Private Sub points_Changed(ByVal sender As Object, ByVal e As EventArgs)
         MessageBox.Show("The SylusPointCollection changed")
 
-    End Sub 'points_Changed
+    End Sub
     
     ' The OnStylusDown method is to demonstrate how to create
     ' a StylusPointCollection to collect stylus points in a custom control.
@@ -558,7 +557,7 @@ Class Window1
         stylusPoints = New StylusPointCollection(eventPoints.Description, eventPoints.Count)
         stylusPoints.Add(eventPoints)
     
-    End Sub 'OnStylusDown
+    End Sub
     '</Snippet19>
 
     Sub StylusPropertySnippets()
@@ -568,10 +567,10 @@ Class Window1
         Dim guid As New Guid("12345678-1234-1234-1234-123456789012")
         Dim newlyDefinedProperty As New StylusPointProperty(guid, False)
         '</Snippet25>
-    End Sub 'StylusPropertySnippets
+    End Sub
 
     
     Sub StylusPropertyInfoSnippets() 
     
-    End Sub 'StylusPropertyInfoSnippets
+    End Sub
 End Class 

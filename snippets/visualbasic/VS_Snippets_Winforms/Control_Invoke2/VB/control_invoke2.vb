@@ -6,7 +6,6 @@
 ' on the thread that owns the underlying handle of the form. When user clicks on button
 ' the above delegate is executed using 'Invoke' method.
 
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 Imports System.Threading
@@ -36,12 +35,12 @@ Public Class MyFormControl
       Controls.AddRange(New Control() {myListBox, myButton})
       Text = " 'Control_Invoke' example"
       myDelegate = New AddListItem(AddressOf AddListItemMethod)
-   End Sub 'New
+   End Sub
 
    Shared Sub Main()
       Dim myForm As New MyFormControl()
       myForm.ShowDialog()
-   End Sub 'Main
+   End Sub
 
    Public Sub AddListItemMethod()
       Dim myItem As String
@@ -52,18 +51,18 @@ Public Class MyFormControl
          myListBox.Update()
          Thread.Sleep(300)
       Next i
-   End Sub 'AddListItemMethod
+   End Sub
 
    Private Sub Button_Click(sender As Object, e As EventArgs)
       myThread = New Thread(New ThreadStart(AddressOf ThreadFunction))
       myThread.Start()
-   End Sub 'Button_Click
+   End Sub
 
    Private Sub ThreadFunction()
       Dim myThreadClassObject As New MyThreadClass(Me)
       myThreadClassObject.Run()
-   End Sub 'ThreadFunction
-End Class 'MyFormControl
+   End Sub
+End Class
 
 
 ' The following code assumes a 'ListBox' and a 'Button' control are added to a form, 
@@ -73,13 +72,13 @@ Public Class MyThreadClass
 
    Public Sub New(myForm As MyFormControl)
       myFormControl1 = myForm
-   End Sub 'New
+   End Sub
 
    Public Sub Run()
       ' Execute the specified delegate on the thread that owns
       ' 'myFormControl1' control's underlying window handle.
       myFormControl1.Invoke(myFormControl1.myDelegate)
-   End Sub 'Run
+   End Sub
 
-End Class 'MyThreadClass
+End Class
 ' </Snippet1>

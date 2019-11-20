@@ -24,7 +24,6 @@ Imports System.Globalization
 Imports System.Reflection.Emit
 Imports System.Configuration.Assemblies
 Imports System.Text
-Imports Microsoft.VisualBasic
 
 Public Class AssemblyName_CodeBase
    
@@ -48,7 +47,7 @@ Public Class AssemblyName_CodeBase
       ' Set the method with name 'Main' as the entry point in the assembly.
       myAssemblyBuilder.SetEntryPoint(myMethodBuilder)
       myAssemblyBuilder.Save(fileName)
-   End Sub 'MakeAssembly
+   End Sub
    
    
    Public Shared Sub Main()
@@ -64,7 +63,7 @@ Public Class AssemblyName_CodeBase
       myAssemblyName.Flags = AssemblyNameFlags.PublicKey
       ' Get the whole contents of the 'PublicKey.snk' into a byte array.
       Dim publicKeyStream As FileStream = File.Open("PublicKey.snk", FileMode.Open)
-      Dim publicKey(publicKeyStream.Length) As Byte
+      Dim publicKey(publicKeyStream.Length - 1) As Byte
       publicKeyStream.Read(publicKey, 0, CInt(publicKeyStream.Length))
       ' Provide the assembly with a public key.
       myAssemblyName.SetPublicKey(publicKey)
@@ -100,7 +99,7 @@ Public Class AssemblyName_CodeBase
          Dim publicKeyTokenBytes As Byte() = myAssembly.GetName().GetPublicKeyToken()
          Console.WriteLine(Encoding.ASCII.GetString(publicKeyTokenBytes))
       End If
-   End Sub 'Main 
-End Class 'AssemblyName_CodeBase 
+   End Sub
+End Class
 ' </Snippet2>
 ' </Snippet1>

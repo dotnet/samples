@@ -15,7 +15,7 @@ Public Class Form1
         
         ' Print the file name.
         textBox1.Text = "File name: " & myFileVersionInfo.FileName
-    End Sub 'GetFileName
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

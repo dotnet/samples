@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
 Imports System.ComponentModel
@@ -16,7 +15,7 @@ Public Class Form1
         Dim pd As PropertyDescriptor
         pd = dataGrid1.TableStyles(0).GridColumnStyles(0).PropertyDescriptor
         Console.WriteLine(pd.ToString())
-    End Sub 'GetPropertyDescriptor
+    End Sub
     
     
     Private Sub CreateNewDataGridColumnStyle()
@@ -28,7 +27,7 @@ Public Class Form1
         Dim pd As PropertyDescriptor = myCurrencyManager.GetItemProperties()("City")
         Dim myColumn As New DataGridTextBoxColumn(pd)
         myGridColumnCol.Add(myColumn)
-    End Sub 'CreateNewDataGridColumnStyle
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

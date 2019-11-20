@@ -33,7 +33,7 @@ Namespace SDKSample
 		' Capture the mouse event and hit test the coordinate point value against
 		' the child visual objects.
 		Private Sub MyVisualHost_MouseLeftButtonUp(ByVal sender As Object, ByVal e As MouseButtonEventArgs)
-			' Retreive the coordinates of the mouse button event.
+			' Retrieve the coordinates of the mouse button event.
 			Dim pt As Point = e.GetPosition(CType(sender, UIElement))
 
 			' Initiate the hit test by setting up a hit test result callback method.

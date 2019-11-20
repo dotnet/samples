@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.ComponentModel
+﻿Imports System.ComponentModel
 Imports System.ComponentModel.Design
 
 Namespace MiscCompModSamples
@@ -24,5 +23,5 @@ Namespace MiscCompModSamples
         End Sub
         '</Snippet1>
 
-    End Class 'ComponentChangedEventHandlerExample 
+    End Class
 End Namespace 'MiscCompModSamples

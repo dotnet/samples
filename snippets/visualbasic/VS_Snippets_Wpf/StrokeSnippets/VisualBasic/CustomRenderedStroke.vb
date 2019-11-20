@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.Windows
@@ -24,14 +23,14 @@ Namespace StrokeSnippets_VB
         Public Sub New(ByVal points As StylusPointCollection)
             MyBase.New(points)
 
-        End Sub 'New
+        End Sub
 
 
 
         Public Sub New(ByVal stylusPoints As StylusPointCollection, ByVal drawingAttributes As DrawingAttributes)
             MyBase.New(stylusPoints, drawingAttributes)
 
-        End Sub 'New
+        End Sub
 
 
         '<Snippet25>
@@ -82,8 +81,8 @@ Namespace StrokeSnippets_VB
                 Next p
             End If
 
-        End Sub 'DrawCore
+        End Sub
         '</Snippet25>
 
-    End Class 'CustomRenderedStroke 
+    End Class
 End Namespace

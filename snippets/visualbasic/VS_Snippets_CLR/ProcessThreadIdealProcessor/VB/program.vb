@@ -20,6 +20,6 @@ Class Program
         ' Set the properties on the first ProcessThread in the collection
         threads(0).IdealProcessor = 0
         threads(0).ProcessorAffinity = CType(1, IntPtr)
-    End Sub 'Main
-End Class 'Program
+    End Sub
+End Class
 '</Snippet1>

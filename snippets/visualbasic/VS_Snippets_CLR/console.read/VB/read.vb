@@ -1,7 +1,5 @@
 ﻿'<snippet1>
 ' This example demonstrates the Console.Read() method.
-Imports Microsoft.VisualBasic
-
 Class Sample
    Public Shared Sub Main()
       Dim m1 As String = _
@@ -33,8 +31,8 @@ Class Sample
             Console.WriteLine(m1)
          End Try
       Loop While ch <> "+"c
-   End Sub 'Main
-End Class 'Sample
+   End Sub
+End Class
 '
 'This example produces the following results:
 '

@@ -9,28 +9,13 @@ Imports MSVB = Microsoft.VisualBasic
 '</Snippet56>
 Public Class Class1
 
-
-  '****************************************************************************
-  Class WrapAllOnes
-    '<Snippet67>
-    'Function allOnes(ByVal n As Integer) As Integer()
-    '    Dim i As Integer
-    '    For i = 1 To n - 1
-    '        allOnes(i) = 1
-    '    Next i
-    '    Return allOnes()
-    'End Function
-    '</Snippet67>
-  End Class
-
-
   '****************************************************************************
   '<Snippet66>
-  Function allOnes(ByVal n As Integer) As Integer()
-      Dim i As Integer, iArray(n) As Integer
+  Function AllOnes(n As Integer) As Integer()
+      Dim iArray(n - 1) As Integer
       For i = 0 To n - 1
           iArray(i) = 1
-      Next i
+      Next
       Return iArray
   End Function
   '</Snippet66>
@@ -157,7 +142,7 @@ End Class
       ' Insert code to access customer record by account number.
   End Sub
   '</Snippet55>
-  End Class ' segregateSnippets54and55
+  End Class
 
   ' New snippet to replace "VbVbcnProcedures#54,55" CREF (How to: Define Multiple Versions of a Procedure)
   '<Snippet72>
@@ -181,7 +166,7 @@ End Class
   Sub postAcct(ByVal custAcct As Integer, ByVal amount As Single)
   '</Snippet53>
   End Sub
-  End Class ' segregateSnippets52and53
+  End Class
 
   ' New snippet to replace "VbVbcnProcedures#52,53" CREF (Procedure Overloading)
   '<Snippet73>
@@ -196,12 +181,11 @@ End Class
 
   '****************************************************************************
   '<Snippet51>
-  Function factorial(ByVal n As Integer) As Integer
+  Function Factorial(n As Integer) As Integer
       If n <= 1 Then
           Return 1
-      Else
-          Return factorial(n - 1) * n
       End If
+      Return Factorial(n - 1) * n
   End Function
   '</Snippet51>
 
@@ -712,10 +696,10 @@ End Class
   End Sub
 
   '****************************************************************************
-  Function testhyp() As Single
+  Function TestHyp() As Double
     '<Snippet6>
-    Dim testLength, testHypotenuse As Single
-    testHypotenuse = hypotenuse(testLength, 10.7)
+    Dim testLength, testHypotenuse As Double
+    testHypotenuse = Hypotenuse(testLength, 10.7)
     '</Snippet6>
 
     Return testHypotenuse
@@ -770,14 +754,14 @@ End Class
 
     '****************************************************************************
     '<Snippet1>
-    Function hypotenuse(ByVal side1 As Single, ByVal side2 As Single) As Single
+    Function Hypotenuse(side1 As Double, side2 As Double) As Double
         Return Math.Sqrt((side1 ^ 2) + (side2 ^ 2))
     End Function
     '</Snippet1>
 
 
     ' Class CancelEventArgs ' for Snippet5 -- removed to try different approach
-    ' End Class ' for Snippet5 -- removed to try different approach
+    ' End Class
 
     ' Event Closing(ByVal sender As Object, ByVal e As CancelEventArgs) ' for Snippet5 -- removed to try different approach
 

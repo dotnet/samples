@@ -22,9 +22,9 @@ Namespace CodeDomSamples
          '    Inherits BaseType
          ' End Class
          '</Snippet2>
-      End Sub 'New 
+      End Sub
 
-   End Class 'CodeTypeDeclarationExample
+   End Class
 
 End Namespace 'CodeDomSamples 
 

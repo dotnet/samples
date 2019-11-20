@@ -2,8 +2,6 @@
 Imports System.Security
 Imports System.Security.Permissions
 Imports System.Net
-Imports Microsoft.VisualBasic
-
 
 '<Snippet1>
 ' Uses the DnsPermissionAttribute to restrict access only to those who have permission.
@@ -24,6 +22,6 @@ Public Class MyClass1
          Console.WriteLine("Access denied")
          Console.WriteLine(securityException.ToString())
       End Try
-   End Sub 'Main 
-End Class '[MyClass1]
+   End Sub
+End Class
 '</Snippet1>

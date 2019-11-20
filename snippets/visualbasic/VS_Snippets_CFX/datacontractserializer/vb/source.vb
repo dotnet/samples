@@ -606,7 +606,7 @@ Public Class PurchaseOrderV3
     Friend PurchaseDate As DateTime
     <DataMember()>  _
     Friend OrderId As Integer
-End Class 'PurchaseOrderV3
+End Class
 
 
 Public Class DCSurrogate

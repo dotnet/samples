@@ -5,7 +5,6 @@
 ' When the Check box is checked, the 'ReadOnly' property of 
 ' 'DataGridTableStyle' is changed. 
 
-Imports System
 Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
@@ -21,7 +20,7 @@ Public Class Form1
       InitializeComponent()
       MakeDataSet()
       AddTableStyle()
-   End Sub 'New
+   End Sub
    
    
    Private Sub InitializeComponent()
@@ -43,12 +42,12 @@ Public Class Form1
       Name = "Form1"
       Text = "Test 'ReadOnleChanged' Event of 'DataGridTableStyle' class"
       ResumeLayout(False)
-   End Sub 'InitializeComponent
+   End Sub
    
    
    Public Shared Sub Main()
       Application.Run(New Form1())
-   End Sub 'Main
+   End Sub
    
    
    ' Create a DataSet with a table and populate it.
@@ -84,7 +83,7 @@ Public Class Form1
       Dim idKeyRestraint As New UniqueConstraint(myColumn)
       customerTable.Constraints.Add(idKeyRestraint)
       myDataSet1.EnforceConstraints = True
-   End Sub 'MakeDataSet
+   End Sub
    
 ' <Snippet1>
    Protected Sub AddTableStyle()
@@ -94,12 +93,12 @@ Public Class Form1
       myDataGrid1.DataSource = myDataSet1.Tables(0)
       AddHandler myDataGridTableStyle.ReadOnlyChanged, AddressOf MyReadOnlyChangedEventHandler
       myDataGrid1.TableStyles.Add(myDataGridTableStyle)
-   End Sub 'AddTableStyle
+   End Sub
    
    ' Handle the 'ReadOnlyChanged' event.
    Private Sub MyReadOnlyChangedEventHandler(sender As Object, e As EventArgs)
       MessageBox.Show("ReadOnly property is changed")
-   End Sub 'MyReadOnlyChangedEventHandler
+   End Sub
 
    ' Handle the check box's CheckedChanged event
    Private Sub myCheckBox1_CheckedChanged(sender As Object, e As EventArgs)
@@ -108,6 +107,6 @@ Public Class Form1
       Else
          myDataGridTableStyle.ReadOnly = True
       End If
-   End Sub 'myCheckBox1_CheckedChanged
+   End Sub
 ' </Snippet1>
-End Class 'Form1
+End Class

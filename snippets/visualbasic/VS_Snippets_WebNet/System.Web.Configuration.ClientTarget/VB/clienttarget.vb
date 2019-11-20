@@ -221,5 +221,5 @@ Class UsingClientTarget
             ' debugging purposes.
             msg = e.ToString()
         End Try
-    End Sub 'Main
-End Class 'UsingClientTarget
+    End Sub
+End Class

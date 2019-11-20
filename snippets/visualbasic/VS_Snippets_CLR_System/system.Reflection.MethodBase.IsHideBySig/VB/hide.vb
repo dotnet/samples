@@ -53,8 +53,8 @@ Public Class Test
         Dim binst As B = dinst
         binst.M()
         binst.M(42)         
-    End Sub 'Main
-End Class 'Test
+    End Sub
+End Class
 
 ' This code example produces the following output:
 ' ------ List the overloads of M in the derived class D ------

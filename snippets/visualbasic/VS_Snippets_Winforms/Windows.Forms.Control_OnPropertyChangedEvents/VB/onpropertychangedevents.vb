@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Drawing
+﻿Imports System.Drawing
 Imports System.Windows.Forms
 
 Namespace PropChanged
@@ -12,7 +11,7 @@ Namespace PropChanged
       
       Public Sub New()
          InitializeComponent()
-      End Sub 'New
+      End Sub
        
       Private Sub InitializeComponent()
          Me.currencyTextBox = New PropChanged.MyTextBox()
@@ -42,13 +41,13 @@ Namespace PropChanged
          Me.Name = "Form1"
          Me.Text = "Form1"
          Me.ResumeLayout(False)
-      End Sub 'InitializeComponent
+      End Sub
 
       <STAThread()> _
       Shared Sub Main() 
          Application.Run(New Form1())
-      End Sub 'Main
-   End Class 'Form1
+      End Sub
+   End Class
 
 
    Public Class MyTextBox

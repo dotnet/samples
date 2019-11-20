@@ -21,7 +21,7 @@ Class Sample
             New Note(Tone.D, Duration.HALF)}
       ' Play the song
       Play(Mary)
-   End Sub 'Main
+   End Sub
    
    ' Play the notes in a song.
    Protected Shared Sub Play(tune() As Note)
@@ -33,7 +33,7 @@ Class Sample
             Console.Beep(CInt(n.NoteTone), CInt(n.NoteDuration))
          End If
       Next n
-   End Sub 'Play 
+   End Sub
    ' Define the frequencies of notes in an octave, as well as 
    ' silence (rest).
    
@@ -74,7 +74,7 @@ Class Sample
       Public Sub New(frequency As Tone, time As Duration)
          toneVal = frequency
          durVal = time
-      End Sub 'New
+      End Sub
       
       ' Define properties to return the note's tone and duration.
       Public ReadOnly Property NoteTone() As Tone
@@ -94,5 +94,5 @@ Class Sample
 'This example plays the first few notes of "Mary Had A Little Lamb" 
 'through the console speaker.
 '
-End Class 'Sample
+End Class
 '</snippet1>

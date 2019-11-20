@@ -1,7 +1,5 @@
 ﻿'<Snippet1>
 ' Example of the Decimal( Integer ) constructor.
-Imports Microsoft.VisualBasic
-
 Module DecimalCtorIDemo
 
     ' Create a Decimal object and display its value.

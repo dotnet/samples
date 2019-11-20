@@ -48,7 +48,7 @@ Namespace Process_Sample
                 Console.WriteLine("The following exception was raised: ")
                 Console.WriteLine(e.Message)
             End Try
-        End Sub 'Main
-    End Class 'MyProcessClass
+        End Sub
+    End Class
 End Namespace 'Process_Sample
 ' </Snippet1>

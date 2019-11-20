@@ -13,7 +13,6 @@ Imports System.Runtime.Remoting.Channels.Tcp
 Imports System.Runtime.Remoting.Proxies
 Imports System.Runtime.Remoting.Messaging
 Imports System.Security.Permissions
-Imports Microsoft.VisualBasic
 
 ' <Snippet1>
 ' Create a custom 'RealProxy'.
@@ -32,7 +31,7 @@ Public Class MyProxy
       ' Get the 'URI' property of 'ObjRef' and store it.
       myURIString = myObjRef.URI
       Console.WriteLine("URI :{0}", myObjRef.URI)
-   End Sub 'New
+   End Sub
 
 <SecurityPermissionAttribute(SecurityAction.LinkDemand, Flags:=SecurityPermissionFlag.Infrastructure)> _
    Public Overrides Function Invoke(ByVal myIMessage As IMessage) As IMessage
@@ -96,7 +95,7 @@ Public Class MyProxy
 
         Return myReturnMessage
     End Function 'Invoke
-End Class 'MyProxy
+End Class
 ' </Snippet1>
 
 Public Class Client
@@ -128,5 +127,5 @@ Public Class Client
          Console.WriteLine("The source of exception: " + e.Source)
          Console.WriteLine("The Message of exception: " + e.Message)
       End Try
-   End Sub 'Main
-End Class 'Client
+   End Sub
+End Class

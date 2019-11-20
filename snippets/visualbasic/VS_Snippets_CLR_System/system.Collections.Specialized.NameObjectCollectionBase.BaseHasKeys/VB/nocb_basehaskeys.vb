@@ -21,12 +21,12 @@ Public Class MyCollection
 
    ' Creates an empty collection.
    Public Sub New()
-   End Sub 'New
+   End Sub
 
    ' Adds an entry to the collection.
    Public Sub Add(key As [String], value As [Object])
       Me.BaseAdd(key, value)
-   End Sub 'Add
+   End Sub
 
    ' Gets a value indicating whether the collection contains keys that are not a null reference.
    Public ReadOnly Property HasKeys() As [Boolean]
@@ -35,7 +35,7 @@ Public Class MyCollection
       End Get
    End Property
 
-End Class 'MyCollection
+End Class
 
 
 Public Class SamplesNameObjectCollectionBase   
@@ -56,16 +56,16 @@ Public Class SamplesNameObjectCollectionBase
       PrintKeysAndValues(myCol)
       Console.WriteLine("HasKeys? {0}", myCol.HasKeys)
 
-   End Sub 'Main
+   End Sub
 
    Public Shared Sub PrintKeysAndValues(myCol As MyCollection)
       Dim i As Integer
       For i = 0 To myCol.Count - 1
          Console.WriteLine("[{0}] : {1}, {2}", i, myCol(i).Key, myCol(i).Value)
       Next i
-   End Sub 'PrintKeysAndValues
+   End Sub
 
-End Class 'SamplesNameObjectCollectionBase 
+End Class
 
 
 'This code produces the following output.

@@ -36,17 +36,17 @@ Public Class Sample
     
     Public Overrides Sub Initialize(o As Object)
         ' method added so sample will compile
-    End Sub 'Initialize     
+    End Sub
     
 
     Public Sub WriteOutput(message As SoapMessage)
         ' method added so sample will compile
-    End Sub 'WriteOutput     
+    End Sub
     
     Public Sub WriteInput(message As SoapMessage)
         ' method added so sample will compile
-    End Sub 'WriteInput 
-End Class 'Sample
+    End Sub
+End Class
 
 Public Class MyEntryClass
 	Public Shared Sub Main()

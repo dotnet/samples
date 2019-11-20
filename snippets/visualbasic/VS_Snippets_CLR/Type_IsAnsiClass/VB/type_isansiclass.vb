@@ -1,9 +1,9 @@
 ﻿' <Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
+
 Public Class MyClass1
     Protected myField As String = "A sample protected field."
-End Class 'MyClass1
+End Class
 Public Class MyType_IsAnsiClass
     Public Shared Sub Main()
         Try
@@ -19,6 +19,6 @@ Public Class MyType_IsAnsiClass
         Catch e As Exception
             Console.WriteLine("Exception: {0}", e.Message.ToString())
         End Try
-    End Sub 'Main
-End Class 'MyType_IsAnsiClass
+    End Sub
+End Class
 ' </Snippet1>

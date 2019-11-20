@@ -42,7 +42,7 @@ Public Class CookiesPage
         AddHandler [Error], AddressOf UnhandledException
         AddHandler Init, AddressOf PageInit
     
-    End Sub 'New
+    End Sub
     
     
     ' Create the controls for the web page.
@@ -57,14 +57,14 @@ Public Class CookiesPage
         myForm = New HtmlForm()
         myForm.Method = "POST"
     
-    End Sub 'PageInit
+    End Sub
     
     
     
     Private Sub UnhandledException(ByVal Sender As [Object], ByVal e As EventArgs) 
         Response.Write("There was an unhandled exception on this page")
     
-    End Sub 'UnhandledException
+    End Sub
     
     
     Private Sub GenerateCookies(ByVal Sender As [Object], ByVal e As EventArgs) 
@@ -106,7 +106,7 @@ Public Class CookiesPage
             Response.Write(Request.Cookies("UserName").Value + " , was born on " + Request.Cookies("DateOfBirth").Value + " at " + Request.Cookies("PlaceOfBirth").Value)
         End If
     
-    End Sub 'GenerateCookies
+    End Sub
     
     
     Protected Sub AddControls() 
@@ -115,7 +115,7 @@ Public Class CookiesPage
         myForm.Controls.Add(dateBirthTextBox)
         myForm.Controls.Add(placeBirthTextBox)
     
-    End Sub 'AddControls
+    End Sub
     
     
     Protected Sub RemoveControls() 
@@ -124,5 +124,5 @@ Public Class CookiesPage
         myForm.Controls.Remove(dateBirthTextBox)
         myForm.Controls.Remove(placeBirthTextBox)
     
-    End Sub 'RemoveControls
-End Class 'CookiesPage
+    End Sub
+End Class

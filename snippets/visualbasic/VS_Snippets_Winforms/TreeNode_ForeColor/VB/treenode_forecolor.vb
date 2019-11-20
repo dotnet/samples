@@ -20,7 +20,6 @@
 
 
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -44,7 +43,7 @@ Public Class MyTreeNode_FirstNode
    Public Sub New()
       InitializeComponent()
       FillMyTreeView()
-   End Sub 'New
+   End Sub
 
    ' ArrayList object to hold the 'Customer' objects.
    Private myCustomerArrayList As New ArrayList()
@@ -92,7 +91,7 @@ Public Class MyTreeNode_FirstNode
       If myTreeView.Nodes(0).IsExpanded = False Then
          myTreeView.Nodes(0).Expand()
       End If
-   End Sub 'FillMyTreeView
+   End Sub
 
    Private Sub InitializeComponent()
       Me.myMenuItem = New MenuItem()
@@ -146,12 +145,12 @@ Public Class MyTreeNode_FirstNode
       Me.Text = "Form1"
       Me.myGroupBox.ResumeLayout(False)
       Me.ResumeLayout(False)
-   End Sub 'InitializeComponent
+   End Sub
 
 
    Shared Sub Main()
       Application.Run(New MyTreeNode_FirstNode())
-   End Sub 'Main
+   End Sub
 
 
 ' <Snippet1>
@@ -191,7 +190,7 @@ End Sub
    ' Save the tree node under the mouse pointer.
    Private Sub TreeView1_MouseDown(ByVal sender As Object, ByVal e As MouseEventArgs) Handles myTreeView.MouseDown
       mySelectedNode = myTreeView.GetNodeAt(e.X, e.Y)
-   End Sub 'TreeView1_MouseDown
+   End Sub
 
 
    Private Sub MenuItem1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles myMenuItem.Click
@@ -208,7 +207,7 @@ End Sub
       Else
          MessageBox.Show(("No tree node selected or selected node is a " + "root node. Editing of root nodes is not allowed." + "Invalid selection"))
       End If
-   End Sub 'MenuItem1_Click
+   End Sub
 
 
    Private Sub TreeView1_AfterLabelEdit(ByVal sender As Object, ByVal e As NodeLabelEditEventArgs) Handles myTreeView.AfterLabelEdit
@@ -231,8 +230,8 @@ End Sub
          End If
          Me.myTreeView.LabelEdit = False
       End If
-   End Sub 'TreeView1_AfterLabelEdit
-End Class 'MyTreeNode_FirstNode
+   End Sub
+End Class
 
 
 
@@ -243,8 +242,8 @@ Public Class Customer
    Public Sub New(myName As String)
       CustomerName = myName
       CustomerOrders = New ArrayList()
-   End Sub 'New
-End Class 'Customer
+   End Sub
+End Class
 
 
 
@@ -253,5 +252,5 @@ Public Class Order
 
    Public Sub New(myOrderID As String)
       Me.OrderID = myOrderID
-   End Sub 'New
-End Class 'Order
+   End Sub
+End Class

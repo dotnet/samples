@@ -24,5 +24,5 @@ Public Class Server
          Console.WriteLine("***** Press 0 to exit this service *****")
          keyState = Console.ReadLine()
       End While
-   End Sub 'Main
-End Class 'Server
+   End Sub
+End Class

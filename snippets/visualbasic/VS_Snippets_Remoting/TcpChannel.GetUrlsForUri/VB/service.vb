@@ -10,7 +10,7 @@ Public Class HelloService
         Console.WriteLine("")
         Console.WriteLine("HelloService activated - instance # {0}.", n_instances)
     
-    End Sub 'New
+    End Sub
     
     
     
@@ -19,7 +19,7 @@ Public Class HelloService
         n_instances -= 1
         MyBase.Finalize()
     
-    End Sub 'Finalize
+    End Sub
     
     
     
@@ -29,4 +29,4 @@ Public Class HelloService
         Return "Hi there " + name + "."
     
     End Function 'HelloMethod
-End Class 'HelloService
+End Class

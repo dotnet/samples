@@ -97,7 +97,7 @@ Class ServiceDescription_Types
       Catch e As Exception
          Console.WriteLine("Exception Caught! " + e.Message)
       End Try
-   End Sub 'Main
+   End Sub
    
    ' This function creates a XmlComplex Element.
    Public Shared Function CreateComplexTypeXmlElement( _
@@ -110,4 +110,4 @@ Class ServiceDescription_Types
       myXmlSchemaElement.SchemaTypeName = schemaTypeName
       Return myXmlSchemaElement
    End Function 'CreateComplexTypeXmlElement
-End Class 'ServiceDescription_Types
+End Class

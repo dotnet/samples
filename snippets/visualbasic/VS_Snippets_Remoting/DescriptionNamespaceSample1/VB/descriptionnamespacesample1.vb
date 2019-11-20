@@ -26,7 +26,6 @@
 Imports System.Web.Services.Description
 Imports System.Collections
 Imports System.Xml
-Imports Microsoft.VisualBasic
 
 Class MyClass1
    
@@ -148,7 +147,7 @@ Class MyClass1
            & "MathService_new.wsdl")
       Console.WriteLine(ControlChars.NewLine & " This file should be passed " _
          & "to the WSDL tool as input to generate the proxy")
-   End Sub 'Main
+   End Sub
     
 ' <Snippet13>
    ' Creates a Message with name = messageName having one MessagePart 
@@ -231,4 +230,4 @@ Class MyClass1
       myOperation.Messages.Add(output)
       Return myOperation
    End Function 'CreateOperation
-End Class 'MyClass1
+End Class

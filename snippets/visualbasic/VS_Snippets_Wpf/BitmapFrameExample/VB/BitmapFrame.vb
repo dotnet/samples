@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Collections.Generic
 Imports System.IO
 Imports System.Windows
@@ -22,7 +21,7 @@ Namespace SDKSample
             MyBase.OnStartup(e)
             CreateAndShowMainWindow()
 
-        End Sub 'OnStartup
+        End Sub
 
         <SecurityPermissionAttribute(SecurityAction.Demand, Flags:=SecurityPermissionFlag.UnmanagedCode)> Private Sub CreateAndShowMainWindow()
 
@@ -176,8 +175,8 @@ Namespace SDKSample
             theWindow.Content = mySV
             theWindow.Show()
 
-        End Sub 'CreateAndShowMainWindow
-    End Class 'MyApp
+        End Sub
+    End Class
 
     ' Define a static entry class
 
@@ -188,7 +187,7 @@ Namespace SDKSample
             Dim app As New MyApp()
             app.Run()
 
-        End Sub 'Main
-    End Class 'EntryClass
+        End Sub
+    End Class
 
 End Namespace 'SDKSample

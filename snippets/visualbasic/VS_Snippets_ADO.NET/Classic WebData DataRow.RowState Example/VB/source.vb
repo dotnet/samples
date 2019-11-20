@@ -36,8 +36,8 @@ Private Sub DemonstrateRowState()
  
  Private Function MakeTable() As DataTable
     ' Make a simple table with one column.
-    Dim table As DataTable = New DataTable("table")
-    Dim dcFirstName As DataColumn = New DataColumn( _
+    Dim table As New DataTable("table")
+    Dim dcFirstName As New DataColumn( _
         "FirstName", Type.GetType("System.String"))
     table.Columns.Add(dcFirstName)
     MakeTable = table

@@ -15,7 +15,7 @@ Imports System.Web.Services.Discovery
 Class DiscoveryClientProtocol_Download
    Shared Sub Main()
       Run()
-   End Sub 'Main
+   End Sub
 
    <PermissionSetAttribute(SecurityAction.Demand, Name := "FullTrust")> _
    Shared Sub Run()
@@ -33,6 +33,6 @@ Class DiscoveryClientProtocol_Download
       myStream.Close()
 ' </Snippet1>
 ' </Snippet2>
-   End Sub 'Run
-End Class 'DiscoveryClientProtocol_Download
+   End Sub
+End Class
 

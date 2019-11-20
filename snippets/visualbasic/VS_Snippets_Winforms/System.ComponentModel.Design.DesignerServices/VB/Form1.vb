@@ -1,6 +1,5 @@
 ﻿' <snippet1>
 ' <snippet2>
-Imports System
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.ComponentModel.Design
@@ -114,7 +113,7 @@ Public Class DemoControl
         ' ctor that takes a type.
         Public Sub New(ByVal toolType As Type)
             MyBase.New(toolType)
-        End Sub 'New
+        End Sub
 
 
         ' And you must provide this special constructor for serialization.
@@ -123,7 +122,7 @@ Public Class DemoControl
         ' Serialize methods to add that data.  
         Sub New(ByVal info As SerializationInfo, ByVal context As StreamingContext)
             Deserialize(info, context)
-        End Sub 'New
+        End Sub
 
 
         ' This implementation sets the new control's Text and 
@@ -234,7 +233,7 @@ Public Class DemoControlDesigner
         ' Set up the BackColor value that will be displayed.
         Me.Control.BackColor = Color.AliceBlue
 
-    End Sub 'Initialize 
+    End Sub
     ' </snippet5>
 
     ' <snippet6>

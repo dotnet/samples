@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
 
@@ -46,7 +45,7 @@ Public Class Form1
         
         ' Display the form as a modal dialog box.
         form1.ShowDialog()
-    End Sub 'CreateMyForm
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

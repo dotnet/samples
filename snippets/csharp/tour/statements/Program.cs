@@ -138,9 +138,9 @@ namespace Statements
            return;
         }
 
-        static System.Collections.Generic.IEnumerable<int> Range(int from, int to) 
+        static System.Collections.Generic.IEnumerable<int> Range(int start, int end) 
         {
-            for (int i = from; i < to; i++) 
+            for (int i = start; i < end; i++) 
             {
                 yield return i;
             }

@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.Windows.Automation
@@ -14,7 +13,7 @@ Class UIATableItemPattern_snippets
     ''' </summary>
     Public Sub New()
 
-    End Sub 'New
+    End Sub
 
     '''--------------------------------------------------------------------
     ''' <summary>
@@ -32,8 +31,8 @@ Class UIATableItemPattern_snippets
             
             app.Run()
         
-        End Sub 'Main
-    End Class 'TestMain
+        End Sub
+    End Class
     
     
     ' <SnippetStartTarget>
@@ -181,7 +180,7 @@ Class UIATableItemPattern_snippets
         Automation.AddAutomationFocusChangedEventHandler( _
         tableItemFocusChangedListener)
 
-    End Sub 'SetTableItemEventListeners    
+    End Sub
     ' </Snippet102>
 
     ' <Snippet103>
@@ -248,7 +247,7 @@ Class UIATableItemPattern_snippets
         Dim itemRowSpan As Integer = tableItemPattern.Current.RowSpan
         Dim itemColumnSpan As Integer = tableItemPattern.Current.ColumnSpan
 
-    End Sub 'OnTableItemFocusChange
+    End Sub
 
 
     '''--------------------------------------------------------------------
@@ -261,7 +260,7 @@ Class UIATableItemPattern_snippets
         Automation.RemoveAllEventHandlers()
         MyBase.OnExit(args)
 
-    End Sub 'OnExit
+    End Sub
     ' </Snippet103>
 
     ' <Snippet104>
@@ -341,5 +340,5 @@ Class UIATableItemPattern_snippets
         Return Nothing
 
     End Function 'GetPrimaryHeaders
-End Class 'UIATableItemPattern_snippets 
+End Class
 ' </Snippet105>

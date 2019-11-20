@@ -52,6 +52,6 @@ Namespace RemotingSamples
          Else
             Console.WriteLine(myProxy.HelloMethod("Caveman"))
          End If
-      End Sub 'Main
-   End Class 'MyChannelServices_Client
+      End Sub
+   End Class
 End Namespace 'RemotingSamples

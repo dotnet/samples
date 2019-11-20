@@ -9,7 +9,7 @@ NotInheritable Public Class CustomSection
    
    
    Public Sub New()
-   End Sub 'New
+   End Sub
    
     <ConfigurationProperty("fileName", _
     DefaultValue:="default.txt", _
@@ -58,7 +58,7 @@ NotInheritable Public Class CustomSection
         End Set
     End Property
 
-End Class 'CustomSection 
+End Class
 
 ' Define a custom section group.
 
@@ -67,7 +67,7 @@ NotInheritable Public Class CustomSectionGroup
    
    
    Public Sub New()
-   End Sub 'New
+   End Sub
 
    
    Public ReadOnly Property Custom() As CustomSection
@@ -77,7 +77,7 @@ NotInheritable Public Class CustomSectionGroup
       End Get
     End Property
 
-End Class 'CustomSectionGroup 
+End Class
 
 
 Class UsingCustomSectionGroupCollection
@@ -107,7 +107,7 @@ Class UsingCustomSectionGroupCollection
       Catch err As ConfigurationErrorsException
          Console.WriteLine(err.ToString())
       End Try
-   End Sub 'CreateSectionGroup
+   End Sub
     
    
    '<Snippet2>
@@ -134,7 +134,7 @@ Class UsingCustomSectionGroupCollection
     '   Catch err As ConfigurationErrorsException
     '      Console.WriteLine(err.ToString())
     '   End Try
-    'End Sub 'GetAllKeys
+    'End Sub
    
    '</Snippet2>
    '<Snippet3>
@@ -153,7 +153,7 @@ Class UsingCustomSectionGroupCollection
       Catch err As ConfigurationErrorsException
          Console.WriteLine(err.ToString())
       End Try
-   End Sub 'Clear
+   End Sub
    
    '</Snippet3>
 
@@ -190,7 +190,7 @@ Class UsingCustomSectionGroupCollection
       Catch err As ConfigurationErrorsException
          Console.WriteLine(err.ToString())
       End Try
-   End Sub 'GetGroup
+   End Sub
    
     '</Snippet4>
 
@@ -222,7 +222,7 @@ Class UsingCustomSectionGroupCollection
       Catch err As ConfigurationErrorsException
          Console.WriteLine(err.ToString())
       End Try
-   End Sub 'GetEnumerator
+   End Sub
    
    '</Snippet5>
    
@@ -251,7 +251,7 @@ Class UsingCustomSectionGroupCollection
       Catch err As ConfigurationErrorsException
          Console.WriteLine(err.ToString())
       End Try
-   End Sub 'GetKeys
+   End Sub
       
    '</Snippet7>
 
@@ -282,7 +282,7 @@ Class UsingCustomSectionGroupCollection
       Catch err As ConfigurationErrorsException
          Console.WriteLine(err.ToString())
       End Try
-   End Sub 'GetItems
+   End Sub
 
    '</Snippet8>
 
@@ -314,7 +314,7 @@ Class UsingCustomSectionGroupCollection
       Catch err As ConfigurationErrorsException
          Console.WriteLine(err.ToString())
       End Try
-   End Sub 'Remove
+   End Sub
    
    '</Snippet9>
    
@@ -352,7 +352,7 @@ Class UsingCustomSectionGroupCollection
       Catch err As ConfigurationErrorsException
          Console.WriteLine(err.ToString())
       End Try
-   End Sub 'AddSection
+   End Sub
    
    
    ' Exercise the collection.
@@ -367,7 +367,7 @@ Class UsingCustomSectionGroupCollection
         ' Remove();
         ' Clear();
 
-    End Sub 'Main ' GetAllKeys();
-End Class 'UsingCustomSectionGroupCollection ' GetGroup();
+    End Sub
+End Class
 
 ' </Snippet1>

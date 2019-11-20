@@ -11,13 +11,12 @@
 Imports System.Web.Services.Discovery
 Imports System.Collections
 Imports System.Security.Permissions
-Imports MicroSoft.VisualBasic
 
 Class DiscoveryDocumentReference_Document_ResolveAll
    
    Shared Sub Main()
       Run()
-   End Sub 'Main
+   End Sub
 
    <PermissionSetAttribute(SecurityAction.Demand, Name := "FullTrust")> _
    Shared Sub Run()
@@ -51,6 +50,6 @@ Class DiscoveryDocumentReference_Document_ResolveAll
       Catch e As Exception
          Console.WriteLine("Exception :{0}", e.Message)
       End Try
-   End Sub 'Run
-End Class 'DiscoveryDocumentReference_Document_ResolveAll
+   End Sub
+End Class
 ' </Snippet2>

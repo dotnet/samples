@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Collections
-Imports Microsoft.VisualBasic
 
 Public Class SamplesSortedList    
     
@@ -26,7 +25,7 @@ Public Class SamplesSortedList
         ' Displays the updated values of the SortedList.
         Console.WriteLine("After replacing the value at index 3 and index 4,")
         PrintIndexAndKeysAndValues(mySL)
-    End Sub 'Main
+    End Sub
     
     
     

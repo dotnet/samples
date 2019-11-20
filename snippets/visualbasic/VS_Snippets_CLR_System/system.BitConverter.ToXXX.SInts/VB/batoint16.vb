@@ -1,7 +1,5 @@
 ﻿'<Snippet1>
 ' Example of the BitConverter.ToInt16 method.
-Imports Microsoft.VisualBasic
-
 Module BytesToInt16Demo
 
     Const formatter As String = "{0,5}{1,17}{2,10}"

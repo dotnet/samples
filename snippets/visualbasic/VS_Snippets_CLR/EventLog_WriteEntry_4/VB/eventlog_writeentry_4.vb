@@ -29,5 +29,5 @@ Class EventLog_WriteEntry_4
       Catch e As Exception
          Console.WriteLine("Exception:{0}", e.Message.ToString())
       End Try
-   End Sub 'Main
-End Class 'EventLog_WriteEntry_4
+   End Sub
+End Class

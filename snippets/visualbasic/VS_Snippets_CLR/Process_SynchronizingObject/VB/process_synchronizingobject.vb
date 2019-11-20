@@ -18,7 +18,7 @@ Namespace process_SynchronizingObject
 
         Public Sub New()
             InitializeComponent()
-        End Sub 'New
+        End Sub
 
         Protected Overloads Overrides Sub Dispose(disposing As Boolean)
             If disposing Then
@@ -27,7 +27,7 @@ Namespace process_SynchronizingObject
                 End If
             End If
             MyBase.Dispose(disposing)
-        End Sub 'Dispose
+        End Sub
 
         Private Sub InitializeComponent()
             Me.button1 = New process_SynchronizingObject.MyButton()
@@ -50,11 +50,11 @@ Namespace process_SynchronizingObject
             Me.Name = "Form1"
             Me.Text = "Form1"
             Me.ResumeLayout(False)
-        End Sub 'InitializeComponent
+        End Sub
 
         <STAThread()> Shared Sub Main()
             Application.Run(New Form1())
-        End Sub 'Main
+        End Sub
 
         ' <Snippet1>
         Private button1 As MyButton
@@ -72,17 +72,17 @@ Namespace process_SynchronizingObject
                 MessageBox.Show("Waiting for the process 'mspaint' to exit....")
                 myProcess.WaitForExit()
             End Using
-        End Sub 'button1_Click
+        End Sub
 
         Private Sub MyProcessExited(source As Object, e As EventArgs)
             MessageBox.Show("The process has exited.")
-        End Sub 'MyProcessExited
-    End Class 'Form1
+        End Sub
+    End Class
 
     Public Class MyButton
         Inherits Button
 
-    End Class 'MyButton
+    End Class
     ' </Snippet1>
 
 End Namespace 'process_SynchronizingObject

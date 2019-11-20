@@ -17,7 +17,7 @@ Namespace Examples.VB.WebControls.Design
     <Designer(GetType(Examples.VB.WebControls.Design.MyDetailsViewDesigner))> _
     Public Class MyDetailsView
         Inherits DetailsView
-    End Class ' MyVBDetailsView
+    End Class
 
     ' Override members of the DetailsViewDesigner.
     <ReflectionPermission(SecurityAction.Demand, Flags:=ReflectionPermissionFlag.MemberAccess)> _
@@ -49,7 +49,7 @@ Namespace Examples.VB.WebControls.Design
             properties("NamingContainer") = _
                 TypeDescriptor.CreateProperty(selectProp.ComponentType, _
                     selectProp, BrowsableAttribute.Yes)
-        End Sub ' PreFilterProperties
+        End Sub
         ' </snippet3>
 
         ' <snippet4>
@@ -120,6 +120,6 @@ Namespace Examples.VB.WebControls.Design
 
         End Function ' GetDesignTimeHtml
         ' </snippet4>
-    End Class ' MyDetailsViewDesigner
+    End Class
 End Namespace ' Examples.VB.WebControls.Design
 ' </snippet1>

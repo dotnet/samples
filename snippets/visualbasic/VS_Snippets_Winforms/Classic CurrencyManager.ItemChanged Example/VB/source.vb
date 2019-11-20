@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.Windows.Forms
 
 Public Class Form1
@@ -18,18 +17,18 @@ Public Class Form1
         AddHandler myCurrencyManager.PositionChanged, AddressOf CurrencyManager_PositionChanged
         ' Set the initial Position of the control.
         myCurrencyManager.Position = 0
-    End Sub 'BindControl
+    End Sub
     
     
     Private Sub CurrencyManager_PositionChanged(sender As Object, e As System.EventArgs)
         Dim myCurrencyManager As CurrencyManager = CType(sender, CurrencyManager)
         Console.WriteLine(("Position Changed " & myCurrencyManager.Position))
-    End Sub 'CurrencyManager_PositionChanged
+    End Sub
     
     
     Private Sub CurrencyManager_ItemChanged(sender As Object, e As System.Windows.Forms.ItemChangedEventArgs)
         Dim myCurrencyManager As CurrencyManager = CType(sender, CurrencyManager)
         Console.WriteLine(("Item Changed " & myCurrencyManager.Position))
-    End Sub 'CurrencyManager_ItemChanged
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

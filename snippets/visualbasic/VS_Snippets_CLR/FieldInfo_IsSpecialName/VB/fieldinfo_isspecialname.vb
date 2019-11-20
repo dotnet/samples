@@ -1,7 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Reflection
 Imports System.ComponentModel.Design
-Imports Microsoft.VisualBasic
 
 Class FieldInfo_IsSpecialName
 
@@ -24,6 +23,6 @@ Class FieldInfo_IsSpecialName
         Catch e As Exception
             Console.WriteLine("Exception : {0} ", e.Message.ToString())
         End Try
-    End Sub 'Main
-End Class 'FieldInfo_IsSpecialName
+    End Sub
+End Class
 ' </Snippet1>

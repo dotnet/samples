@@ -18,7 +18,7 @@
 /csharp/**  @BillWagner
 
 # ML.NET samples:
-/machine-learning/**  @JRAlexander
+/machine-learning/**  @natke
 
 #### Snippets (under samples)
 # C++ snippets
@@ -26,6 +26,6 @@
 # C# Snippets:
 /snippets/csharp/** @BillWagner
 # Visual Basic snippets:
-/snippets/visualbasic/** @rpetrusha
+/snippets/visualbasic/** @BillWagner
 # F# Snippets:
 /snippets/fsharp/** @cartermp

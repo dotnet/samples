@@ -1,6 +1,4 @@
 ﻿' <Snippet2>
-Imports Microsoft.VisualBasic
-
 Public Class Order
     
     Public itemId As Integer
@@ -18,6 +16,6 @@ Public Class Order
         ' Add order to the database.
         ' Insert code here.
  
-    End Sub 'ShipItems 
-End Class 'Order 
+    End Sub
+End Class
 ' </Snippet2>

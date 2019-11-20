@@ -1,6 +1,7 @@
 ﻿'<snippet04>
 Imports System.Threading
 Imports System.Threading.Tasks
+
 Module ContuationOptionsDemo
     ' Demonstrated features:
     '   TaskContinuationOptions

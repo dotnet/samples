@@ -2,7 +2,6 @@
 Option Explicit
 Option Strict
 
-Imports System
 Imports System.Windows.Forms
 
 Public Class MyClass1
@@ -32,8 +31,8 @@ Public Class MyClass1
         
         ' Print the value of the Object in a textBox.
         textBox1.Text = myDereferencedObject.MyObjectValue
-    End Sub 'MyClipboardMethod
-End Class 'MyClass
+    End Sub
+End Class
 
 
 ' Creates a new type.
@@ -45,7 +44,7 @@ End Class 'MyClass
     ' Creates a default constructor for the class.
     Public Sub New()
         myValue = "This is the value of the class"
-    End Sub 'New
+    End Sub
     
     ' Creates a property to retrieve or set the value.
     
@@ -57,6 +56,6 @@ End Class 'MyClass
             myValue = value
         End Set
     End Property
-End Class 'MyNewObject
+End Class
 
 ' </Snippet1>

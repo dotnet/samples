@@ -14,13 +14,13 @@ Namespace Samples.AspNet.VB
 
         Public Sub New(ByVal writer As TextWriter)
             MyBase.New(writer)
-        End Sub 'New
+        End Sub
 
 
 
         Public Sub New(ByVal writer As TextWriter, ByVal tabString As String)
             MyBase.New(writer, tabString)
-        End Sub 'New
+        End Sub
 
 
         ' <snippet1>
@@ -108,5 +108,5 @@ Namespace Samples.AspNet.VB
             MyBase.OutputTabs()
         End Sub
         ' </snippet7>
-    End Class 'HTW1 
+    End Class
 End Namespace

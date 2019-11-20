@@ -245,7 +245,7 @@ Public Class XMLHelperMethods
 
     '************************************************************************************
     '
-    '  Uses filter criteria collection in the UI to retreive specific elements and attributes.
+    '  Uses filter criteria collection in the UI to retrieve specific elements and attributes.
     '
     '************************************************************************************
     Public Function ApplyFilters(ByVal conditions As ArrayList, ByVal operatorSymbols As ArrayList, ByVal values As ArrayList, ByVal doc As XmlDocument, ByVal matchString As String) As XmlNodeList

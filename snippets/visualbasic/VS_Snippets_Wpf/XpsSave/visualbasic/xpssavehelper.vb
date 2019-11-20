@@ -2,7 +2,6 @@
 ' Copyright (c) Microsoft Corporation. All rights reserved.
 
 
-Imports System
 Imports System.Collections.Generic
 Imports System.IO
 Imports System.IO.Packaging
@@ -41,7 +40,7 @@ Namespace SDKSampleHelper
 			_completed = completed
 			_status = status
 		End Sub
-	End Class ' end:class AsyncSaveEventArgs
+	End Class
 
 
 
@@ -150,7 +149,7 @@ Namespace SDKSampleHelper
 				' Close the pakcage
 				_xpsDocument.Close()
 			End If
-		End Sub ' end:SaveMultipleFixedContentDocuments()
+		End Sub
 
 		' Save content displayed in a DocumentViewer Control
 		Public Sub SaveDocumentViewerContent(ByVal dv As DocumentViewer, ByVal containerName As String, ByVal async As Boolean)
@@ -169,7 +168,7 @@ Namespace SDKSampleHelper
 				SaveSingleFlowContentDocument(xdwSave, dv.Document.DocumentPaginator)
 				_xpsDocument.Close() ' Close the package
 			End If
-		End Sub ' end:SaveDocumentViewerContent()
+		End Sub
 
 		#End Region
 
@@ -250,7 +249,7 @@ Namespace SDKSampleHelper
 			For Each v As Visual In vc
 				vToXpsD.WriteAsync(v) ' Write each visual to single page.
 			Next v
-		End Sub ' end:SaveVisualsAsync()
+		End Sub
 
 
 		'<SnippetWriteAsyncToXpsWithDocumentPaginator>
@@ -371,7 +370,7 @@ Namespace SDKSampleHelper
 		Private _xpsdwActive As XpsDocumentWriter
 		#End Region ' Private Data
 
-	End Class ' end:class SaveHelper
+	End Class
 
 End Namespace ' end:namespace SDKSampleHelper
 

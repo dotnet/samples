@@ -10,7 +10,6 @@
 Imports System.Diagnostics
 Imports System.ComponentModel
 Imports System.IO
-Imports Microsoft.VisualBasic
 
 Namespace Process_StandardError
 
@@ -26,7 +25,7 @@ Namespace Process_StandardError
                 GetStandardError(args)
             End If
             Return
-        End Sub 'Main
+        End Sub
 
         Public Shared Sub GetStandardError(args() As String)
             ' <Snippet1>
@@ -43,6 +42,6 @@ Namespace Process_StandardError
                 Console.WriteLine(myStreamReader.ReadLine())
             End Using
             ' </Snippet1>
-        End Sub 'GetStandardError
-    End Class 'Class1
+        End Sub
+    End Class
 End Namespace 'Process_StandardError

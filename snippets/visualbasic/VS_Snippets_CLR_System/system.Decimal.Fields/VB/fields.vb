@@ -1,7 +1,5 @@
 ﻿'<Snippet1>
 ' Example of the Decimal fields.
-Imports Microsoft.VisualBasic
-
 Module DecimalFieldsDemo
     
     Sub Main( )

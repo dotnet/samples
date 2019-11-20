@@ -73,18 +73,12 @@ namespace Samples.AspNet.CS.Controls
             Pair p = new Pair(name, url);
             if (WebPartManager.Personalization.Scope == PersonalizationScope.Shared)
             {
-                if (_sharedUrls == null)
-                {
-                    _sharedUrls = new ArrayList();
-                }
+                _sharedUrls ??= new ArrayList();
                 _sharedUrls.Add(p);
             }
             else
             {
-                if (_userUrls == null)
-                {
-                    _userUrls = new ArrayList();
-                }
+                _userUrls ??= new ArrayList();
                 _userUrls.Add(p);
             }
 

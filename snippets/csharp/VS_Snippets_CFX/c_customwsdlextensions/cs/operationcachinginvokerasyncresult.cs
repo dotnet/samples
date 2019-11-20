@@ -125,10 +125,7 @@ namespace Microsoft.WCF.Documentation
 
 				lock (this)
 				{
-					if (manualResetEvent == null)
-					{
-						manualResetEvent = new ManualResetEvent(isCompleted);
-					}
+					manualResetEvent ??= new ManualResetEvent(isCompleted);
 				}
 
 				return manualResetEvent;

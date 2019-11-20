@@ -41,7 +41,7 @@ Public Class PerfCounter1
             Console.WriteLine("Sample failed with exception: " + e.ToString())
         End Try
 
-    End Sub 'Main
+    End Sub
 
 
     Public Class Writer
@@ -58,7 +58,7 @@ Public Class PerfCounter1
             Me.finalCount = 0
             AddHandler timer1.Elapsed, AddressOf Me.OnTimer1
 
-        End Sub 'New
+        End Sub
 
         '<Snippet4>
         Public Shared Sub CreateCounters()
@@ -80,7 +80,7 @@ Public Class PerfCounter1
             End If
             '</Snippet3>
 
-        End Sub 'CreateCounters
+        End Sub
         '</Snippet4>
 
 
@@ -100,13 +100,13 @@ Public Class PerfCounter1
 
             Me.timer1.Start()
 
-        End Sub 'StartCounters
+        End Sub
 
 
         Public Sub CloseTimer()
             Me.timer1.Close()
 
-        End Sub 'CloseTimer
+        End Sub
 
 
         Public Shared Sub DeleteCounters()
@@ -117,7 +117,7 @@ Public Class PerfCounter1
                 Console.WriteLine(e.ToString())
             End Try
 
-        End Sub 'DeleteCounters
+        End Sub
 
 
         Private Sub OnTimer1(ByVal sender As Object, ByVal args As ElapsedEventArgs)
@@ -133,8 +133,8 @@ Public Class PerfCounter1
                 Console.WriteLine("Unexpected exception thrown :" + e.ToString())
             End Try
 
-        End Sub 'OnTimer1
-    End Class 'Writer
+        End Sub
+    End Class
 
 
     Public Class Reader
@@ -153,7 +153,7 @@ Public Class PerfCounter1
             Me.finalCount = 0
             AddHandler timer1.Elapsed, AddressOf Me.OnTimer1
 
-        End Sub 'New
+        End Sub
 
 
         Public Sub Finish()
@@ -161,7 +161,7 @@ Public Class PerfCounter1
             Me.timer1.Close()
             PerformanceCounter.CloseSharedResources()
 
-        End Sub 'Finish
+        End Sub
 
 
         Private Sub OnTimer1(ByVal sender As Object, ByVal args As ElapsedEventArgs)
@@ -194,7 +194,7 @@ Public Class PerfCounter1
                 Me.signal.Set()
             End Try
 
-        End Sub 'OnTimer1
+        End Sub
 
 
         Public Sub StartCounters()
@@ -213,7 +213,7 @@ Public Class PerfCounter1
 
             Me.timer1.Start()
 
-        End Sub 'StartCounters
-    End Class 'Reader
-End Class 'PerfCounter1
+        End Sub
+    End Class
+End Class
 '</Snippet1>

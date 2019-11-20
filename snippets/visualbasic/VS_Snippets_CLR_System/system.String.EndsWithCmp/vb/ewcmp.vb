@@ -34,7 +34,7 @@ Class Sample
             Console.WriteLine()
         Next sc
     
-    End Sub 'Main
+    End Sub
     
     
     Protected Shared Sub Test(ByVal x As String, ByVal y As String, _
@@ -47,8 +47,8 @@ Class Sample
         End If
         Console.WriteLine(resultFmt, x, result, y)
     
-    End Sub 'Test
-End Class 'Sample
+    End Sub
+End Class
 
 '
 'This code example produces the following results:

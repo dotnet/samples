@@ -28,7 +28,7 @@ Public Class SamplesDelegate
          End If
          Return ""
       End Function 'mySignMethod
-   End Class 'mySampleClass
+   End Class
 
    Public Shared Sub Main()
 
@@ -44,9 +44,9 @@ Public Class SamplesDelegate
       Console.WriteLine("{0} is {1}; use the sign ""{2}"".", - 3, myD1(- 3), myD2(- 3))
       Console.WriteLine("{0} is {1}; use the sign ""{2}"".", 0, myD1(0), myD2(0))
 
-   End Sub 'Main
+   End Sub
 
-End Class 'SamplesDelegate 
+End Class
 
 
 'This code produces the following output:

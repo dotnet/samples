@@ -43,14 +43,14 @@ Public Class CodeGenerator
       myModuleBuilder.CreateGlobalFunctions()
 ' </Snippet2>
 ' </Snippet1>
-   End Sub 'New 
+   End Sub
    
    Public ReadOnly Property MyAssembly() As AssemblyBuilder
       Get
          Return Me.myAssemblyBuilder
       End Get
    End Property
-End Class 'CodeGenerator
+End Class
 
 Public Class CallerClass
    
@@ -61,5 +61,5 @@ Public Class CallerClass
       Console.WriteLine("Invoking the global method...")
       Dim myMethodInfo As MethodInfo = myBuilder.GetMethod("MyMethod1")
       myMethodInfo.Invoke(Nothing, Nothing)
-   End Sub 'Main
-End Class 'CallerClass
+   End Sub
+End Class

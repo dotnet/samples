@@ -3,8 +3,6 @@ Imports System.Windows.Forms
 Imports System.Drawing.Drawing2D
 Imports System.Drawing.Imaging
 Imports System.Runtime.InteropServices
-Imports System
-
 <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.Demand, Name:="FullTrust")> _
 Public Class Form1
     Inherits System.Windows.Forms.Form

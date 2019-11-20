@@ -1,7 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Reflection
 Imports System.Security
-Imports Microsoft.VisualBasic
 
 Public Class MyFilterNameIgnoreCaseSample
     Public Shared Sub Main()
@@ -22,6 +21,6 @@ Public Class MyFilterNameIgnoreCaseSample
         Catch e As Exception
             Console.Write("Exception : " + e.Message.Tostring())
         End Try
-    End Sub 'Main
-End Class 'MyFilterNameIgnoreCaseSample
+    End Sub
+End Class
 ' </Snippet1>

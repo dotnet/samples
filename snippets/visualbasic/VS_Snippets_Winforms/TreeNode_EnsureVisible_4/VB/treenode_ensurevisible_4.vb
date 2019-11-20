@@ -8,7 +8,6 @@
 ' class. It creates a TreeView, adds 10 TreeNode objects to it and
 ' expands node1,collapses node1 and makes a clone to Node 9 and add it to Node7.
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -29,7 +28,7 @@ Namespace MyTreeNode
          ' Required for Windows Form Designer support.
          InitializeComponent()
          AddTreeNode()
-      End Sub 'New
+      End Sub
 
       ' Clean up any resources being used.
       Protected Overrides Overloads Sub Dispose(disposing As Boolean)
@@ -39,12 +38,12 @@ Namespace MyTreeNode
             End If
          End If
          MyBase.Dispose(disposing)
-      End Sub 'Dispose
+      End Sub
 
       ' The main entry point for the application.
       Shared Sub Main()
          Application.Run(New Form1())
-      End Sub 'Main
+      End Sub
 
       ' Required method for Designer support.
       Private Sub InitializeComponent()
@@ -92,7 +91,7 @@ Namespace MyTreeNode
          Me.Name = "Form1"
          Me.Text = "Demonstrating TreeNode members"
          Me.ResumeLayout(False)
-      End Sub 'InitializeComponent
+      End Sub
 
 
       ' Add TreeNode to the TreeView.
@@ -129,7 +128,7 @@ Namespace MyTreeNode
                                                                      (Order2.myOrderName))
             Next Order2
          Next Customer2
-      End Sub 'AddTreeNode
+      End Sub
 
 ' <Snippet1>
 Private Sub button1_Click(sender As Object, _
@@ -181,7 +180,7 @@ End Sub
 ' </Snippet3>
 
 
-   End Class 'Form1
+   End Class
 
 
    ' Define a Customer Class.
@@ -191,8 +190,8 @@ End Sub
 
       Public Sub New(name As String)
          myCustomerName = name
-      End Sub 'New
-   End Class 'Customer
+      End Sub
+   End Class
 
    ' Define an Order Class which will be associated to a customer.
    Public Class Order
@@ -200,6 +199,6 @@ End Sub
 
       Public Sub New(name1 As String)
          myOrderName = name1
-      End Sub 'New
-   End Class 'Order
+      End Sub
+   End Class
 End Namespace 'MyTreeNode

@@ -10,7 +10,7 @@ Public Class StateObject
    Public const BUFFER_SIZE As Integer = 1024
    Public buffer(BUFFER_SIZE) As byte
    Public sb As New StringBuilder()
-End Class 'StateObject
+End Class
 '</Snippet11>
  _
 Public Class Async_Send_Receive
@@ -38,7 +38,7 @@ Public Class Async_Send_Receive
       Catch e As Exception
          Console.WriteLine(e.ToString())
       End Try
-   End Sub 'Connect
+   End Sub
 '</Snippet1>
    
    Public Shared Sub Listen()
@@ -62,7 +62,7 @@ Public Class Async_Send_Receive
       Catch e As Exception
          Console.WriteLine(e.ToString())
       End Try
-   End Sub 'Listen
+   End Sub
 '</Snippet2>
    
    Public Shared Sub SendTo()
@@ -86,7 +86,7 @@ Public Class Async_Send_Receive
       Catch e As Exception
          Console.WriteLine(e.ToString())
       End Try
-   End Sub 'SendTo
+   End Sub
 '</Snippet3>
    
    Public Shared Sub ReceiveFrom()
@@ -113,7 +113,7 @@ Public Class Async_Send_Receive
       Catch e As Exception
          Console.WriteLine(e.ToString())
       End Try
-   End Sub 'ReceiveFrom
+   End Sub
 '</Snippet4>
    Public Shared Sub ReceiveFrom1()
       
@@ -139,7 +139,7 @@ Public Class Async_Send_Receive
       Catch e As Exception
          Console.WriteLine(e.ToString())
       End Try
-   End Sub 'ReceiveFrom
+   End Sub
 '</Snippet41>    
 
 '<Snippet5>
@@ -153,7 +153,7 @@ Public Class Async_Send_Receive
       so2.workSocket = s
       Dim buff As Byte() = Encoding.ASCII.GetBytes("This is a test")
       s.BeginSend(buff, 0, buff.Length, 0, New AsyncCallback(AddressOf Async_Send_Receive.Send_Callback), so2)
-   End Sub 'Connect_Callback
+   End Sub
    
 '</Snippet5>
 
@@ -168,7 +168,7 @@ Public Class Async_Send_Receive
       Console.WriteLine(("The size of the message sent was :" + send.ToString()))
       
       s.Close()
-   End Sub 'Send_Callback
+   End Sub
 '</Snippet6>	
    
 '<Snippet7>
@@ -179,7 +179,7 @@ Public Class Async_Send_Receive
       Dim so2 As New StateObject()
       so2.workSocket = s2
       s2.BeginReceive(so2.buffer, 0, StateObject.BUFFER_SIZE, 0, New AsyncCallback(AddressOf Async_Send_Receive.Read_Callback), so2)
-   End Sub 'Listen_Callback
+   End Sub
    
 '</Snippet7>
    
@@ -203,7 +203,7 @@ Public Class Async_Send_Receive
          End If
          s.Close()
       End If
-   End Sub 'Read_Callback
+   End Sub
 '</Snippet8>
    
    Public Shared Sub SendTo_Callback(ar As IAsyncResult)
@@ -216,7 +216,7 @@ Public Class Async_Send_Receive
       Console.WriteLine(("The size of the message sent was :" + send.ToString()))
       
       s.Close()
-   End Sub 'SendTo_Callback
+   End Sub
 '</Snippet9>
    
    Public Shared Sub ReceiveFrom_Callback(ar As IAsyncResult)
@@ -244,10 +244,10 @@ Public Class Async_Send_Receive
          End If
          s.Close()
       End If 
-   End Sub 'ReceiveFrom_Callback
+   End Sub
    
 '</Snippet10>
    
    Public Shared Sub Main()
-   End Sub 'Main
-End Class 'Async_Send_Receive 
+   End Sub
+End Class

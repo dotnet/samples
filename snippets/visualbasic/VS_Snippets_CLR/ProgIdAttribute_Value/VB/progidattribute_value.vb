@@ -15,8 +15,8 @@ Namespace InteropSample
    Public Class [MyClass]
       
       Public Sub New()
-      End Sub 'New
-   End Class '[MyClass]
+      End Sub
+   End Class
 
    Class TestApplication
       
@@ -29,7 +29,7 @@ Namespace InteropSample
          Catch e As Exception
             Console.WriteLine(("Exception : " + e.Message.ToString()))
          End Try
-      End Sub 'Main
-   End Class 'TestApplication
+      End Sub
+   End Class
 End Namespace 'InteropSample 
 ' </Snippet1>

@@ -15,7 +15,7 @@ Protected DataGrid1 As DataGrid
     Console.WriteLine(table.Locale.LCID)
 
     ' Create a new CultureInfo for the United Kingdom.
-    Dim myCultureInfo As CultureInfo = New CultureInfo("en-gb")
+    Dim myCultureInfo As New CultureInfo("en-gb")
     table.Locale = myCultureInfo
 
     ' Print the new LCID.

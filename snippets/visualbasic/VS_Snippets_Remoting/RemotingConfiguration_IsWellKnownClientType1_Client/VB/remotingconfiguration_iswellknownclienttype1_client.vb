@@ -29,6 +29,6 @@ Public Class Client
       Console.WriteLine("The Object type is " + myWellKnownClientType.ObjectType.ToString())
       Console.WriteLine("The Object Url is " + myWellKnownClientType.ObjectUrl)
 ' </Snippet1>
-   End Sub 'Main
-End Class 'Client 
+   End Sub
+End Class
 

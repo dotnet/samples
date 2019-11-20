@@ -14,8 +14,6 @@
 Imports System.Collections.Specialized
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
-
 
 Public Class WebClient_UpLoadValues2
     
@@ -59,5 +57,5 @@ Public Class WebClient_UpLoadValues2
         Catch e As Exception
             Console.WriteLine(("The following exception was raised: " + e.Message))
         End Try
-    End Sub 'Main
-End Class 'WebClient_UpLoadValues2
+    End Sub
+End Class

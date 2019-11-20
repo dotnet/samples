@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Data
 Imports System.ComponentModel
 Imports System.Windows.Forms
@@ -22,7 +21,7 @@ Public Class Form1
             textBox1.Font = fontDialog1.Font
             textBox1.ForeColor = fontDialog1.Color
         End If
-    End Sub 'button1_Click
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

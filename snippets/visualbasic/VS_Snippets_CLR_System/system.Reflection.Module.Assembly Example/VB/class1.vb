@@ -14,7 +14,7 @@ Namespace ReflectionModule_Examples
 
             Dim myAssembly As [Assembly] = myModule.Assembly
             Console.WriteLine("myModule.Assembly = {0}.", myAssembly.FullName)
-        End Sub 'Main
-    End Class 'MyMainClass
+        End Sub
+    End Class
 End Namespace 'ReflectionModule_Examples
 ' </snippet1>

@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Collections.Generic
 Imports System.Windows.Forms
 
@@ -15,5 +14,5 @@ Shared Class Program
         Application.EnableVisualStyles()
         Application.Run(New Form1())
     
-    End Sub 'Main
-End Class 'Program
+    End Sub
+End Class

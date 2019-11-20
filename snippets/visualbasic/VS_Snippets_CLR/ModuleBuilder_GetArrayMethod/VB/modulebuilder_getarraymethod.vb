@@ -56,14 +56,14 @@ Friend Class CodeGenerator
       myTypeBuilder.CreateType()
 ' </Snippet1>
 ' </Snippet2>
-   End Sub 'New
+   End Sub
 
    Public ReadOnly Property MyBuilder() As AssemblyBuilder
       Get
          Return Me.myAssemblyBuilder
       End Get
    End Property
-End Class 'CodeGenerator
+End Class
 
 Public Class TestClass
    <PermissionSetAttribute(SecurityAction.Demand, Name:="FullTrust")> _
@@ -92,5 +92,5 @@ Public Class TestClass
             Console.WriteLine("Array element {0} : {1} ", j, mySortedArray(j))
          Next j
       End If
-   End Sub 'Main
-End Class 'TestClass
+   End Sub
+End Class

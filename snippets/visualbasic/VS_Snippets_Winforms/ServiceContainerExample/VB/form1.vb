@@ -1,5 +1,4 @@
 ﻿'<Snippet1>
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -57,7 +56,7 @@ Namespace ServiceContainerExample
       Public Sub New()
          m_MyServiceContainer = New ServiceContainer()
          InitializeComponent()
-      End Sub 'New
+      End Sub
 
       Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
          If disposing Then
@@ -66,7 +65,7 @@ Namespace ServiceContainerExample
             End If
          End If
          MyBase.Dispose(disposing)
-      End Sub 'Dispose
+      End Sub
 
 
 #Region "Component Designer generated code"
@@ -147,12 +146,12 @@ Namespace ServiceContainerExample
          Me.Text = "Form1"
          Me.groupBox1.ResumeLayout(False)
          Me.ResumeLayout(False)
-      End Sub 'InitializeComponent
+      End Sub
 #End Region
 
       Public Shared Sub Main()
             Application.Run(New Form1())
-      End Sub 'Main
+      End Sub
 
       Private Sub radioButton1_CheckedChanged(ByVal sender As Object, _
             ByVal e As System.EventArgs) Handles radioButton4.CheckedChanged, _
@@ -164,7 +163,7 @@ Namespace ServiceContainerExample
 '<Snippet2>
          m_MyServiceContainer.AddService(GetType(Control), sender)
 '</Snippet2>
-      End Sub 'radioButton1_CheckedChanged
+      End Sub
 
       Private Sub button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) _
                     Handles button1.Click
@@ -175,7 +174,7 @@ Namespace ServiceContainerExample
             ' Update the text of whichever control is currently selected.
             c.Text = "Button1 clicked"
          End If
-      End Sub 'button1_Click
+      End Sub
 
 
       Private Sub button2_Click(ByVal sender As Object, ByVal e As System.EventArgs) _
@@ -193,7 +192,7 @@ Namespace ServiceContainerExample
           m_MyServiceContainer.AddService(GetType(Control), New ServiceCreatorCallback( _
                     AddressOf CreateNewControl))
 '</Snippet3>
-     End Sub 'button2_Click
+     End Sub
 
      '  If the application arrives at this method, it means that in button1_Click(),
      '   GetService() was passed the service that corresponds to button2.  This has
@@ -212,6 +211,6 @@ Namespace ServiceContainerExample
          groupBox1.Controls.Add(c)
          Return c
       End Function 'CreateNewControl
-   End Class 'Form1
+   End Class
 End Namespace 'ServiceContainerExample
 '</Snippet1>

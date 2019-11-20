@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Collections.Generic
 Imports System.IO
 Imports System.Windows
@@ -22,7 +21,7 @@ Namespace SDKSample
             MyBase.OnStartup(e)
             CreateAndShowMainWindow()
 
-        End Sub 'OnStartup
+        End Sub
 
         Private Sub CreateAndShowMainWindow()
 
@@ -97,8 +96,8 @@ Namespace SDKSample
             myWindow.Content = mySV
             myWindow.Show()
 
-        End Sub 'CreateAndShowMainWindow
-    End Class 'app
+        End Sub
+    End Class
 
     ' Define a static entry class
 
@@ -109,6 +108,6 @@ Namespace SDKSample
             Dim app As New app()
             app.Run()
 
-        End Sub 'Main
-    End Class 'EntryClass
+        End Sub
+    End Class
 End Namespace 'SDKSample

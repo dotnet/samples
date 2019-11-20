@@ -7,8 +7,6 @@ Imports System.Net
 Imports System.Security
 Imports System.Security.Permissions
 Imports System.Collections
-Imports Microsoft.VisualBasic
-
 
 Class DnsPermissionExample
     
@@ -26,7 +24,7 @@ Class DnsPermissionExample
             Console.WriteLine(("Source : " + e.Source))
             Console.WriteLine(("Message : " + e.Message))
         End Try
-    End Sub 'Main
+    End Sub
     
     
 ' <Snippet1>	
@@ -42,7 +40,7 @@ Class DnsPermissionExample
         PrintKeysAndValues(myPermission.ToXml().Attributes)
         Console.WriteLine("Attribute and values of copied instance :")
         PrintKeysAndValues(myPermissionCopy.ToXml().Attributes)
-    End Sub 'UseDns
+    End Sub
     
     
     Private Sub PrintKeysAndValues(myHashtable As Hashtable)
@@ -53,9 +51,9 @@ Class DnsPermissionExample
             Console.WriteLine(ControlChars.Tab + "{0}:" + ControlChars.Tab + "{1}", myEnumerator.Key, myEnumerator.Value)
         End While
         Console.WriteLine()
-    End Sub 'PrintKeysAndValues
+    End Sub
 
 ' </Snippet1>	
 
-End Class 'DnsPermissionExample
+End Class
 

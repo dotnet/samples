@@ -39,7 +39,7 @@ Public Class GenericProcedures
     End Sub
     '</Snippet13>
 
-End Class ' GenericProcedures
+End Class
 
     Public Sub ByteTest()
         ' For topic Byte Data Type

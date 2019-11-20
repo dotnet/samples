@@ -4,7 +4,6 @@
 ' The 'VisibleChanged' event is raised when the 'Visible' property value of
 ' 'Label' control has changed.
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -21,7 +20,7 @@ Namespace MyControlExample
 
       Public Sub New()
          InitializeComponent()
-      End Sub 'New
+      End Sub
 
       Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
          If disposing Then
@@ -30,7 +29,7 @@ Namespace MyControlExample
             End If
          End If
          MyBase.Dispose(disposing)
-      End Sub 'Dispose
+      End Sub
 
       Private Sub InitializeComponent()
          Me.myLabel = New Label()
@@ -66,28 +65,28 @@ Namespace MyControlExample
          Me.Text = "VisibleChanged example"
          Me.ResumeLayout(False)
          AddVisibleChangedEventHandler()
-      End Sub 'InitializeComponent
+      End Sub
 
       <STAThread()> _
       Shared Sub Main()
          Application.Run(New MyForm())
-      End Sub 'Main
+      End Sub
 
 
 ' <Snippet1>
       Private Sub Button_HideLabel(ByVal sender As Object, ByVal e As EventArgs)
          myLabel.Visible = False
-      End Sub 'Button_HideLabel
+      End Sub
 
 
       Private Sub AddVisibleChangedEventHandler()
          AddHandler myLabel.VisibleChanged, AddressOf Label_VisibleChanged
-      End Sub 'AddVisibleChangedEventHandler
+      End Sub
 
 
       Private Sub Label_VisibleChanged(ByVal sender As Object, ByVal e As EventArgs)
          MessageBox.Show("Visible change event raised!!!")
-      End Sub 'Label_VisibleChanged
+      End Sub
 ' </Snippet1>
-   End Class 'MyForm 
+   End Class
 End Namespace 'MyControlExample

@@ -63,6 +63,6 @@ Public Class HashDirectory
         Next i
         Console.WriteLine()
 
-    End Sub 'PrintByteArray
+    End Sub
 End Class
 '</SNIPPET1>

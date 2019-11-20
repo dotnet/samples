@@ -7,7 +7,6 @@
 ' button is clicked.
 
 
-Imports System
 Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
@@ -24,7 +23,7 @@ Public Class myDataForm
    Public Sub New()
       InitializeComponent()
       SetUp()
-   End Sub 'New
+   End Sub
    
    Private Sub InitializeComponent()
       ' Create the form and its controls.
@@ -52,11 +51,11 @@ Public Class myDataForm
       Controls.Add(myLabel)
       Text = "ResetHeaderFont example"
 
-   End Sub 'InitializeComponent
+   End Sub
    
    Public Shared Sub Main()
       Application.Run(New myDataForm())
-   End Sub 'Main
+   End Sub
    
    Private Sub SetUp()
       ' Create a DataSet with a table.
@@ -67,7 +66,7 @@ Public Class myDataForm
       myTableStyle = New DataGridTableStyle()
       ' Map DataGridTableStyle to a DataTable.
       myTableStyle.MappingName = "Orders"
-   End Sub 'SetUp
+   End Sub
    
 ' <Snippet1>
     Private Sub MySetButton_Click(ByVal sender As Object, ByVal e As EventArgs)
@@ -75,12 +74,12 @@ Public Class myDataForm
         myTableStyle.HeaderFont = New Font("Impact", 10)
         ' Add the DataGridTableStyle instance to the GridTableStylesCollection. 
         myDataGrid.TableStyles.Add(myTableStyle)
-    End Sub 'MySetButton_Click
+    End Sub
    
     Private Sub MyResetButton_Click(ByVal sender As Object, ByVal e As EventArgs)
         ' Reset the Header Font to its default value.
         myTableStyle.ResetHeaderFont()
-    End Sub 'MyResetButton_Click
+    End Sub
 ' </Snippet1>
 
    Private Sub MakeDataSet()
@@ -99,5 +98,5 @@ Public Class myDataForm
          ' Add the row to the Orders table.
          myTable.Rows.Add(newRow)
       Next j
-   End Sub 'MakeDataSet
-End Class 'myDataForm
+   End Sub
+End Class

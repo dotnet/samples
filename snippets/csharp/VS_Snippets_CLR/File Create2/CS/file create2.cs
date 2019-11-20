@@ -9,16 +9,10 @@ class Test
     {
         string path = @"c:\temp\MyTest.txt";
 
-        // Delete the file if it exists.
-        if (File.Exists(path)) 
-        {
-            File.Delete(path);
-        }
-
-        // Create the file.
+        // Create the file, or overwrite if the file exists.
         using (FileStream fs = File.Create(path, 1024)) 
         {
-            Byte[] info = new UTF8Encoding(true).GetBytes("This is some text in the file.");
+            byte[] info = new UTF8Encoding(true).GetBytes("This is some text in the file.");
             // Add some information to the file.
             fs.Write(info, 0, info.Length);
         }

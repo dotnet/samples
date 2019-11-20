@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.IO
 Imports System.Windows
 Imports System.Windows.Controls
@@ -31,7 +30,7 @@ Namespace CustomInkControlSample
             AddHandler presenter.Strokes.PropertyDataChanged, _
                 AddressOf Strokes_PropertyDataChanged
 
-        End Sub 'New
+        End Sub
 
         '<Snippet29>
         Private Sub Strokes_PropertyDataChanged(ByVal sender As Object, _
@@ -58,7 +57,7 @@ Namespace CustomInkControlSample
             presenter.Strokes.Save(fs)
             fs.Close()
 
-        End Sub 'SaveStrokes
+        End Sub
 
 
         ' Open "strokes.isf" and get the time the StrokeCollection was saved.
@@ -88,7 +87,7 @@ Namespace CustomInkControlSample
                 End If
             End If
 
-        End Sub 'LoadStrokes
+        End Sub
 
         ' This snippet illustrates the Clip and Erase methods.
         ' It assumes that there is a Stroke called lasso, and an Inkpresenter called presenter.
@@ -104,7 +103,7 @@ Namespace CustomInkControlSample
 
             presenter.Strokes.Erase(strokePoints)
 
-        End Sub 'EraseStrokes
+        End Sub
 
         '</Snippet2>
 
@@ -119,7 +118,7 @@ Namespace CustomInkControlSample
             Dim strokePoints() As Point = CType(lasso.StylusPoints, Point())
             presenter.Strokes.Clip(strokePoints)
 
-        End Sub 'ClipStrokes
+        End Sub
 
         '</Snippet13>
         '<Snippet14>
@@ -144,7 +143,7 @@ Namespace CustomInkControlSample
 
             CopyStrokeCollection(presenter.Strokes)
 
-        End Sub 'CopyStrokes
+        End Sub
 
 
         '<Snippet5>
@@ -167,7 +166,7 @@ Namespace CustomInkControlSample
                 Lasso = Nothing
             End If
 
-        End Sub 'ClearSelection
+        End Sub
 
 
         '<Snippet15>
@@ -181,7 +180,7 @@ Namespace CustomInkControlSample
                 s.DrawingAttributes.Color = Colors.Purple
             Next s
 
-        End Sub 'SelectStrokes 
+        End Sub
         '</Snippet15>
 
 
@@ -198,7 +197,7 @@ Namespace CustomInkControlSample
 
             MessageBox.Show("StrokeCollection.Extract has been removed.")
 
-        End Sub 'ExtractStrokes
+        End Sub
         'if (lasso == null)
         '{
         '    return;
@@ -226,7 +225,7 @@ Namespace CustomInkControlSample
             EraseStrokes(Lasso)
             Lasso = Nothing
 
-        End Sub 'EraseStrokes
+        End Sub
 
 
         Public Sub EraseStrokesWithRect()
@@ -271,7 +270,7 @@ Namespace CustomInkControlSample
             ClipStrokes(Lasso)
             Lasso = Nothing
 
-        End Sub 'ClipStrokes
+        End Sub
 
 
         ' Erase the ink that intersects the lasso.
@@ -280,7 +279,7 @@ Namespace CustomInkControlSample
             ErasePath(Lasso)
             Lasso = Nothing
 
-        End Sub 'ErasePath
+        End Sub
 
 
         '<Snippet16>
@@ -296,7 +295,7 @@ Namespace CustomInkControlSample
 
             presenter.Strokes.Remove(strokes)
 
-        End Sub 'RemoveStrokes
+        End Sub
 
         '</Snippet16>
         Public Sub RemoveStrokesHelper()
@@ -304,8 +303,8 @@ Namespace CustomInkControlSample
             RemoveStrokes(ConvertToPointArray(Lasso.StylusPoints))
             Lasso = Nothing
 
-        End Sub 'RemoveStrokes
+        End Sub
 
-    End Class 'StrokeCollectionDemo 
+    End Class
 
 End Namespace

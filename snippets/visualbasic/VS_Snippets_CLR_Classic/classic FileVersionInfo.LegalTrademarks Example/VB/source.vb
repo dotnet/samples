@@ -15,7 +15,7 @@ Public Class Form1
         
         ' Print the trademarks.
         textBox1.Text = "Trademarks: " & myFileVersionInfo.LegalTrademarks
-    End Sub 'GetTrademarks
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

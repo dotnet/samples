@@ -19,6 +19,6 @@ Public Class Sample
         'This displays the node <Person SSN="A222" Name="Tom"/>.
         elem = doc.GetElementById("A222")
         Console.WriteLine(elem.OuterXml)
-    End Sub 'Main 
-End Class 'Sample
+    End Sub
+End Class
 ' </Snippet1>

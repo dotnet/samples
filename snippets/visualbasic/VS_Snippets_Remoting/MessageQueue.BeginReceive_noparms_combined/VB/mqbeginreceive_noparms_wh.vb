@@ -40,7 +40,7 @@ Public Class MyNewQueue
 
             Return
 
-        End Sub 'Main
+        End Sub
 
 
 
@@ -72,8 +72,8 @@ Public Class MyNewQueue
 
             Return
 
-        End Sub 'MyReceiveCompleted
+        End Sub
 
-End Class 'MyNewQueue
+End Class
 
 ' </Snippet2>

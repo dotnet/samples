@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
 Imports System.Data
@@ -16,7 +15,7 @@ Public Class Form1
 
         CreateBitmapAtRuntime()
     
-    End Sub 'New
+    End Sub
     
     
     <STAThread()>  _
@@ -25,7 +24,7 @@ Public Class Form1
         Application.SetCompatibleTextRenderingDefault(False)
         Application.Run(New Form1())
     
-    End Sub 'Main
+    End Sub
     
     
 
@@ -52,4 +51,4 @@ Public Class Form1
     
     End Sub 
 '</snippet1>
-End Class 'Form1
+End Class

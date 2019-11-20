@@ -4,9 +4,9 @@ using System.Collections.Generic;
 
 class Program
 {
-    //<snippet02>
     static void Main()
     {
+        //<snippet02>
         HashSet<int> lowNumbers = new HashSet<int>();
         HashSet<int> allNumbers = new HashSet<int>();
 
@@ -59,33 +59,34 @@ class Program
             lowNumbers.IsProperSubsetOf(allNumbers));
         Console.WriteLine("allNumbers is a proper superset of lowNumbers: {0}",
             allNumbers.IsProperSupersetOf(lowNumbers));
-    }
-    /* This code example produces output similar to the following:
-     * lowNumbers contains 4 elements: { 1 2 3 4 }
-     * allNumbers contains 10 elements: { 0 1 2 3 4 5 6 7 8 9 }
-     * lowNumbers overlaps allNumbers: True
-     * allNumbers and lowNumbers are equal sets: False
-     * lowNumbers is a subset of allNumbers: True
-     * allNumbers is a superset of lowNumbers: True
-     * lowNumbers is a proper subset of allNumbers: True
-     * allNumbers is a proper superset of lowNumbers: True
-     * allNumbers contains 4 elements: { 1 2 3 4 }
-     * allNumbers and lowNumbers are equal sets: True
-     * lowNumbers is a subset of allNumbers: True
-     * allNumbers is a superset of lowNumbers: True
-     * lowNumbers is a proper subset of allNumbers: False
-     * allNumbers is a proper superset of lowNumbers: False
-     */
-    //</snippet02>
 
-    private static void DisplaySet(HashSet<int> set)
-    {
-        Console.Write("{");
-        foreach (int i in set)
+        void DisplaySet(HashSet<int> set)
         {
-            Console.Write(" {0}", i);
+            Console.Write("{");
+            foreach (int i in set)
+            {
+                Console.Write(" {0}", i);
+            }
+            Console.WriteLine(" }");
         }
-        Console.WriteLine(" }");
+
+        /* This code example produces output similar to the following:
+        * lowNumbers contains 4 elements: { 1 2 3 4 }
+        * allNumbers contains 10 elements: { 0 1 2 3 4 5 6 7 8 9 }
+        * lowNumbers overlaps allNumbers: True
+        * allNumbers and lowNumbers are equal sets: False
+        * lowNumbers is a subset of allNumbers: True
+        * allNumbers is a superset of lowNumbers: True
+        * lowNumbers is a proper subset of allNumbers: True
+        * allNumbers is a proper superset of lowNumbers: True
+        * allNumbers contains 4 elements: { 1 2 3 4 }
+        * allNumbers and lowNumbers are equal sets: True
+        * lowNumbers is a subset of allNumbers: True
+        * allNumbers is a superset of lowNumbers: True
+        * lowNumbers is a proper subset of allNumbers: False
+        * allNumbers is a proper superset of lowNumbers: False
+        */
+        //</snippet02>
     }
 }
 //</snippet01>

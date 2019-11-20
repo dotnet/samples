@@ -29,7 +29,7 @@ Public Class SampleWebThreadInformation
         ' Perform custom initialization.
         eventInfo = New StringBuilder()
         eventInfo.Append(String.Format("Event created at: {0}", EventTime.ToString()))
-    End Sub 'New
+    End Sub
    
    
    ' </Snippet2>
@@ -42,7 +42,7 @@ Public Class SampleWebThreadInformation
         "Event raised at: {0}", EventTime.ToString()))
       ' Raise the event.
       MyBase.Raise()
-   End Sub 'Raise
+   End Sub
    
    ' </Snippet3>
    ' <Snippet4>
@@ -102,10 +102,10 @@ Public Class SampleWebThreadInformation
         formatter.IndentationLevel -= 1
 
         formatter.AppendLine(eventInfo.ToString())
-    End Sub 'FormatCustomEventDetails 
+    End Sub
     ' </Snippet8>
 
-End Class 'SampleWebThreadInformation
+End Class
 
 
 

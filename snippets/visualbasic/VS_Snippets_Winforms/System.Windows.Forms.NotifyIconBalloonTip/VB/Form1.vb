@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
 Imports System.Drawing
@@ -69,7 +68,7 @@ Class Form1
         End If
         MyBase.Dispose(disposing)
 
-    End Sub 'Dispose
+    End Sub
 
 #Region "Windows Form Designer generated code"
 
@@ -96,7 +95,7 @@ Class Form1
         Me.Text = "Form1"
         Me.ResumeLayout(False)
 
-    End Sub 'InitializeComponent 
+    End Sub
 
 #End Region
 

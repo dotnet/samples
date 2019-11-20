@@ -10,7 +10,6 @@
 
 Imports System.Reflection
 Imports System.Collections
-Imports Microsoft.VisualBasic
 
 Class MyInterfaceClass
 
@@ -47,8 +46,8 @@ Class MyInterfaceClass
       Catch e As Exception
          Console.WriteLine(("Exception : " + e.ToString()))
       End Try
-   End Sub 'Main
-End Class 'MyInterfaceClass 
+   End Sub
+End Class
 ' </Snippet3>
 ' </Snippet2>   
 ' </Snippet1>

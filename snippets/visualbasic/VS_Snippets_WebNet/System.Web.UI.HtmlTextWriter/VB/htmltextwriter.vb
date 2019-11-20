@@ -62,6 +62,6 @@ Namespace Samples.AspNet.VB
             writer.Indent -= 1
             writer.RenderEndTag()
 
-        End Sub 'Render
-    End Class 'MyControl
+        End Sub
+    End Class
 End Namespace 'ControlTest 

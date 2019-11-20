@@ -18,7 +18,7 @@ Public Class ReflectionPermissionDemo
         Console.WriteLine("Press the Enter key to exit.")
         Console.ReadLine()
 
-    End Sub 'Main
+    End Sub
 
     ' IsSubsetOf determines whether the current permission is a subset of the specified permission.
     '<Snippet2>
@@ -35,7 +35,7 @@ Public Class ReflectionPermissionDemo
             " is not a subset of " + memberAccessPerm.Flags.ToString())
         End If
 
-    End Sub 'IsSubsetOfDemo
+    End Sub
 
     '</Snippet2>
     ' Union creates a new permission that is the union of the current permission and the specified permission.
@@ -54,7 +54,7 @@ Public Class ReflectionPermissionDemo
             CType(reflectionPerm3, ReflectionPermission).Flags.ToString())
         End If
 
-    End Sub 'UnionDemo
+    End Sub
 
 
     '</Snippet3>
@@ -74,7 +74,7 @@ Public Class ReflectionPermissionDemo
                 restrictedMemberAccessPerm.Flags.ToString() + " is null.")
         End If
 
-    End Sub 'IntersectDemo
+    End Sub
 
 
     '</Snippet4>
@@ -85,7 +85,7 @@ Public Class ReflectionPermissionDemo
         Dim restrictedMemberAccessPerm As ReflectionPermission = CType(memberAccessPerm.Copy(), ReflectionPermission)
         Console.WriteLine("Result of copy = " + restrictedMemberAccessPerm.ToString())
 
-    End Sub 'CopyDemo
+    End Sub
 
     '</Snippet5>
     ' ToXml creates an XML encoding of the permission and its current state;
@@ -99,8 +99,8 @@ Public Class ReflectionPermissionDemo
         restrictedMemberAccessPerm.FromXml(memberAccessPerm.ToXml())
         Console.WriteLine("Result of ToFromXml = " + restrictedMemberAccessPerm.ToString())
 
-    End Sub 'ToFromXmlDemo
-End Class 'ReflectionPermissionDemo
+    End Sub
+End Class
 '</Snippet6>
 
 ' This code example creates the following output:

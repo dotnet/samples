@@ -17,8 +17,6 @@
 Imports System.Net
 Imports System.IO
 Imports System.Text
-Imports Microsoft.VisualBasic
-
 
 Class CredentialCache_DefaultCredentials
     
@@ -65,5 +63,5 @@ Class CredentialCache_DefaultCredentials
         Catch e As Exception
             Console.WriteLine(ControlChars.Cr + "The following exception was raised : {0}", e.Message)
         End Try
-    End Sub 'Main
-End Class 'CredentialCache_DefaultCredentials
+    End Sub
+End Class

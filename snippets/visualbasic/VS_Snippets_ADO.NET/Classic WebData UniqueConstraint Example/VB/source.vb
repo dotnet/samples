@@ -12,7 +12,7 @@ Module Module1
 
     ' <Snippet1>
     Public Sub CreateDataTable()
-        Dim dataTable As DataTable = New DataTable
+        Dim dataTable As New DataTable()
         dataTable.Columns.Add("CustomerID", Type.GetType("System.String"))
         dataTable.Columns.Add("CompanyName", Type.GetType("System.String"))
 

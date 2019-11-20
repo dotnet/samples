@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
 
 Public Class MainClass
     Public Overloads Shared Sub Main(ByVal args() As String)
@@ -8,6 +7,6 @@ Public Class MainClass
         Dim result As [Object] = tDate.InvokeMember("Now", _
             BindingFlags.GetProperty, Nothing, Nothing, New [Object](-1) {})
         Console.WriteLine(result.ToString())
-    End Sub 'Main
-End Class 'MainClass
+    End Sub
+End Class
 ' </Snippet1>

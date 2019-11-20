@@ -32,8 +32,8 @@ Class EncoderExample
             Console.Write("[{0}]", b)
         Next b
         Console.WriteLine()
-    End Sub 'Main
-End Class 'EncoderExample
+    End Sub
+End Class
 
 'This code example produces the following output.
 '8 bytes used to encode characters.

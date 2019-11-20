@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.Windows.Forms
 
 
@@ -20,6 +19,6 @@ Public Class Form1
             gridCurrencyManager.EndCurrentEdit()
             MessageBox.Show("End Edit")
         End If
-    End Sub 'dataGrid1_KeyUp
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

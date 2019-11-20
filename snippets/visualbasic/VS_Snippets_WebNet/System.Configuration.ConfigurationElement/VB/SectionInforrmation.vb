@@ -45,7 +45,7 @@ Class UsingSectionInformation
         Console.WriteLine("Parent section : {0}", _
         parentSection.SectionInformation.Name)
     
-    End Sub 'GetParentSection
+    End Sub
     ' </Snippet92>
 
     ' <Snippet93>
@@ -59,7 +59,7 @@ Class UsingSectionInformation
         Console.WriteLine("Section xml:")
         Console.WriteLine(sectionXml)
 
-    End Sub 'GetSectionXml
+    End Sub
      
     ' </Snippet93>
 
@@ -97,7 +97,7 @@ Class UsingSectionInformation
         Console.WriteLine("Decrypted section:")
         Console.WriteLine(sectionXml)
     
-    End Sub 'ProtectSection
+    End Sub
      
     ' </Snippet94>
 
@@ -148,7 +148,7 @@ Class UsingSectionInformation
         allowOverride.ToString())
         ' </Snippet99>  
 
-    End Sub 'GetAllowProperties
+    End Sub
     
     
     ' <Snippet100>  
@@ -162,7 +162,7 @@ Class UsingSectionInformation
         Console.WriteLine("Inherit in child apps: {0}", _
         inheritInChildApps.ToString())
 
-    End Sub 'GetInheritInChildApps    
+    End Sub
     ' </Snippet100>  
 
     Public Shared Sub GetIsProperties() 
@@ -210,7 +210,7 @@ Class UsingSectionInformation
         protect.ToString())
         ' </Snippet106>
 
-    End Sub 'GetIsProperties
+    End Sub
     
     
     ' <Snippet107>
@@ -224,7 +224,7 @@ Class UsingSectionInformation
         Console.WriteLine("Section name: {0}", _
         sectionNameProperty)
     
-    End Sub 'GetSectionNameProperty
+    End Sub
     ' </Snippet107>
     
     ' <Snippet108>
@@ -243,7 +243,7 @@ Class UsingSectionInformation
             pp.ToString())
         End If
 
-    End Sub 'GetProtectionProvider
+    End Sub
     ' </Snippet108>
     
     ' <Snippet109>
@@ -257,7 +257,7 @@ Class UsingSectionInformation
         Console.WriteLine("Section type: {0}", _
         restartOnChange.ToString())
 
-    End Sub 'RestartOnExternalChanges
+    End Sub
     ' </Snippet109>
 
     ' <Snippet110>
@@ -269,7 +269,7 @@ Class UsingSectionInformation
         sInfo.SectionName
         Console.WriteLine("Section type: {0}", _
         sectionName)
-    End Sub 'GetSectionName
+    End Sub
     ' </Snippet110>
     
     ' <Snippet111>
@@ -281,7 +281,7 @@ Class UsingSectionInformation
         Console.WriteLine("Section type: {0}", _
         sectionType)
     
-    End Sub 'GetSectionType
+    End Sub
     ' </Snippet111>
     
     ' <Snippet112>
@@ -319,7 +319,7 @@ Class UsingSectionInformation
         Console.WriteLine("Decrypted section:")
         Console.WriteLine(sectionXml)
     
-    End Sub 'UnProtectSection 
+    End Sub
     ' </Snippet112>
 
-End Class 'UsingSectionInformation
+End Class

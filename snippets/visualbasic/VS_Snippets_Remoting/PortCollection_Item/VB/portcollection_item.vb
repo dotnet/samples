@@ -13,7 +13,6 @@
 ' description file.
 
 Imports System.Web.Services.Description
-Imports Microsoft.VisualBasic
 
 Class PortCollection_Item
     Public Shared Sub Main()
@@ -73,5 +72,5 @@ Class PortCollection_Item
       Catch ex As Exception
          Console.WriteLine("Exception: " & ex.Message)
       End Try
-   End Sub 'Main
-End Class 'PortCollection_Item
+   End Sub
+End Class

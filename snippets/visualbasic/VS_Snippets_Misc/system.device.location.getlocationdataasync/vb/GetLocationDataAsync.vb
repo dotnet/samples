@@ -1,5 +1,6 @@
 ﻿'<Snippet1>
 Imports System.Device.Location
+
 Module GetLocationEvent
     '<Snippet2>
     Public Class CLocation

@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Media
@@ -27,6 +26,6 @@ Namespace SDKSample
             MyBitmapSourceExampleFrame.Content = New BitmapSourceExample()
             MyBitmapDecoderExampleFrame.Content = New BitmapDecoderExample()
 
-        End Sub 'New
-    End Class 'SampleViewer 
+        End Sub
+    End Class
 End Namespace 'ImagingSnippetGallery

@@ -7,6 +7,6 @@ Class UTF7EncodingExample
         Dim utf7 As New UTF7Encoding()
         Dim encodingName As String = utf7.EncodingName
         Console.WriteLine("Encoding name: " & encodingName)
-    End Sub 'Main
-End Class 'UTF7EncodingExample
+    End Sub
+End Class
 ' </Snippet1>

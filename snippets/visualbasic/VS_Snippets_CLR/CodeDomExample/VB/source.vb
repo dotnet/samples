@@ -8,7 +8,6 @@ Imports System.Drawing
 Imports System.IO
 Imports System.Windows.Forms
 Imports Microsoft.CSharp
-Imports Microsoft.VisualBasic
 Imports Microsoft.JScript
 
 ' This example demonstrates building a Hello World program graph 

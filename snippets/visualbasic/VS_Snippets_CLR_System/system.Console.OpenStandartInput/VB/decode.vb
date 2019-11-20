@@ -14,6 +14,6 @@ Public Class Decoder
       Dim chars As Char() = Encoding.UTF7.GetChars(bytes, 0, outputLength)
       Console.WriteLine("Decoded string:")
       Console.WriteLine(New String(chars))
-   End Sub 'Main
-End Class 'Decoder
+   End Sub
+End Class
 ' </Snippet1>

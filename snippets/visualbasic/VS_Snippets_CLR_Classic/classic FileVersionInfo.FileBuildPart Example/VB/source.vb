@@ -13,6 +13,6 @@ Public Class Form1
         
         ' Print the file build number.
         textBox1.Text = "File build number: " & myFileVersionInfo.FileBuildPart
-    End Sub 'GetFileBuildPart
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

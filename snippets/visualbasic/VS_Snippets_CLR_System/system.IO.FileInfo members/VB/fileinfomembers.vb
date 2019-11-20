@@ -1,7 +1,7 @@
 ﻿' <Snippet12>
 Imports System.IO
 Imports System.Runtime.Serialization.Formatters.Binary
-Imports Microsoft.VisualBasic
+
 ' </Snippet12>
 
 Public Class FileInfoSnippets
@@ -28,7 +28,7 @@ Public Class FileInfoSnippets
         ' C:\autoexec.bat has attributes of Archive
         ' </Snippet1>
         Console.WriteLine()
-    End Sub 'Attributes
+    End Sub
     Public Sub CreationTime()
         ' <Snippet2>
         Dim fileName As String = "C:\autoexec.bat"
@@ -50,7 +50,7 @@ Public Class FileInfoSnippets
         ' C:\autoexec.bat is now created at 8/17/2004 7:30:13 PM
         ' </Snippet2>
         Console.WriteLine()
-    End Sub 'CreationTime
+    End Sub
 
 
     Public Sub DirectoryName()
@@ -68,7 +68,7 @@ Public Class FileInfoSnippets
         ' C:\TMP\log.txt has a directory name of C:\TMP
         ' </Snippet3>
         Console.WriteLine()
-    End Sub 'DirectoryName
+    End Sub
 
 
     Public Sub Directory()
@@ -87,7 +87,7 @@ Public Class FileInfoSnippets
         ' C:\autoexec.bat is in a directory of 24 files.
         ' </Snippet4>
         Console.WriteLine()
-    End Sub 'Directory
+    End Sub
 
 
     Public Sub ExtensionAndName()
@@ -112,7 +112,7 @@ Public Class FileInfoSnippets
         ' pagefile.sys
         ' </Snippet5>
         Console.WriteLine()
-    End Sub 'ExtensionAndName
+    End Sub
 
 
     Public Sub LastAccessTime()
@@ -136,7 +136,7 @@ Public Class FileInfoSnippets
         ' C:\autoexec.bat now was last accessed at 8/17/2004 11:30:13 AM
         ' </Snippet6>
         Console.WriteLine()
-    End Sub 'LastAccessTime
+    End Sub
 
 
     Public Sub LastWriteTime()
@@ -160,7 +160,7 @@ Public Class FileInfoSnippets
         ' C:\autoexec.bat now was last written to at 8/17/2004 11:30:13 AM
         ' </Snippet7>
         Console.WriteLine()
-    End Sub 'LastWriteTime
+    End Sub
 
 
     Public Sub Length()
@@ -198,7 +198,7 @@ Public Class FileInfoSnippets
         ' 196568     UpdatePatch.log
         ' </Snippet8>
         Console.WriteLine()
-    End Sub 'Length
+    End Sub
 
 
     Public Sub AppendTextAndOpenText()
@@ -228,7 +228,7 @@ Public Class FileInfoSnippets
         ' The text in the file
         ' </Snippet9>
         Console.WriteLine()
-    End Sub 'AppendTextAndOpenText
+    End Sub
 
 
     Public Sub CreateText()
@@ -248,7 +248,7 @@ Public Class FileInfoSnippets
         ' File 'myFile' now has size 20 bytes
         ' </Snippet10>
         Console.WriteLine()
-    End Sub 'CreateText
+    End Sub
 
 
     Public Sub OpenWriteAndOpenRead()
@@ -278,7 +278,7 @@ Public Class FileInfoSnippets
         ' Value read    9/9/2005 3:46:24 PM
         ' </Snippet11>
         Console.WriteLine()
-    End Sub 'OpenWriteAndOpenRead
+    End Sub
     Public Shared Sub Main()
         Console.WriteLine()
         Dim fileInfoSnippets As New FileInfoSnippets()
@@ -293,5 +293,5 @@ Public Class FileInfoSnippets
         fileInfoSnippets.AppendTextAndOpenText()
         fileInfoSnippets.CreateText()
         fileInfoSnippets.OpenWriteAndOpenRead()
-    End Sub 'Main
-End Class 'FileInfoSnippets
+    End Sub
+End Class

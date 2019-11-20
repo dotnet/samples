@@ -13,7 +13,7 @@ Public Class Form1
         
         ' Print the copyright notice.
         textBox1.Text = "Copyright notice: " & myFileVersionInfo.LegalCopyright
-    End Sub 'GetCopyright
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

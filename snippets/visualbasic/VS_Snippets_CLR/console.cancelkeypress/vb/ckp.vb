@@ -16,7 +16,7 @@ Class Sample
             cki = Console.ReadKey(True)
             
             ' Announce the name of the key that was pressed .
-            Console.WriteLine("  Key pressed: {0}" & vbCrLf, cki.Key)
+            Console.WriteLine($"  Key pressed: {cki.Key}{vbCrLf}")
             
             ' Exit if the user pressed the 'X' key.
             If cki.Key = ConsoleKey.X Then Exit While
@@ -25,19 +25,19 @@ Class Sample
 
     Protected Shared Sub myHandler(ByVal sender As Object, _
                                    ByVal args As ConsoleCancelEventArgs) 
-        Console.WriteLine(vbCrLf & "The read operation has been interrupted.")
+        Console.WriteLine($"{vbCrLf}The read operation has been interrupted.")
         
-        Console.WriteLine("  Key pressed: {0}", args.SpecialKey)
+        Console.WriteLine($"  Key pressed: {args.SpecialKey}")
         
-        Console.WriteLine("  Cancel property: {0}", args.Cancel)
+        Console.WriteLine($"  Cancel property: {args.Cancel}")
         
         ' Set the Cancel property to true to prevent the process from terminating.
         Console.WriteLine("Setting the Cancel property to true...")
         args.Cancel = True
         
         ' Announce the new value of the Cancel property.
-        Console.WriteLine("  Cancel property: {0}", args.Cancel)
-        Console.WriteLine("The read operation will resume..." & vbCrLf)
+        Console.WriteLine($"  Cancel property: {args.Cancel}")
+        Console.WriteLine($"The read operation will resume...{vbCrLf}")
     End Sub
 End Class
 ' The example diplays output similar to the following:

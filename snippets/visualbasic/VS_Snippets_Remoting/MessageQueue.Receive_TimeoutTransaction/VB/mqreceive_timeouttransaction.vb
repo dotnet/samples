@@ -28,7 +28,7 @@ Namespace MyProj
 
             Return
 
-        End Sub 'Main
+        End Sub
 
 
         '**************************************************
@@ -59,7 +59,7 @@ Namespace MyProj
 
             Return
 
-        End Sub 'SendMessageTransactional
+        End Sub
 
 
         '**************************************************
@@ -128,8 +128,8 @@ Namespace MyProj
 
             Return
 
-        End Sub 'ReceiveMessageTransactional
+        End Sub
 
-    End Class 'MyNewQueue
+    End Class
 End Namespace 'MyProj
 ' </Snippet1>

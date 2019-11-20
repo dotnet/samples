@@ -50,7 +50,6 @@
 ' *
 ' *****************************************************************************
 
-Imports System
 Imports System.Windows
 Imports System.Windows.Documents
 Imports System.Windows.Automation
@@ -162,7 +161,7 @@ Namespace SDKSample
 
             End Try
 
-        End Sub 'OnStartingUp
+        End Sub
         ' </Snippet1301>
 
         '' <summary>
@@ -215,7 +214,7 @@ Namespace SDKSample
 
             window.Content = informationPanel
             window.Show()
-        End Sub 'CreateWindow
+        End Sub
 
         '<Snippet1300>
         '' <summary>
@@ -429,7 +428,7 @@ Namespace SDKSample
         Protected Overrides Sub OnExit(ByVal e As ExitEventArgs)
             Automation.RemoveAllEventHandlers()
             MyBase.OnExit(e)
-        End Sub 'OnShuttingDown
+        End Sub
 
         '' <summary>
         '' Launch the sample application.
@@ -441,7 +440,7 @@ Namespace SDKSample
                 ' Create an instance of the sample class.
                 Dim app As New WindowMove()
                 app.Run()
-            End Sub 'Main
-        End Class 'TestMain
-    End Class 'WindowMove
+            End Sub
+        End Class
+    End Class
 End Namespace 'SDKSample

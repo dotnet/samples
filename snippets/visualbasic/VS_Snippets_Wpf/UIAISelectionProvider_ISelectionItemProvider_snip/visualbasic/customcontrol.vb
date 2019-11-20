@@ -25,7 +25,6 @@
 ' ************************************************************************************************
 
 
-Imports System
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.Drawing
@@ -417,7 +416,7 @@ Namespace CustomControls
 		End Sub
 
 		#End Region ' UI Automation related methods
-	End Class ' End class
+	End Class
 
 
 

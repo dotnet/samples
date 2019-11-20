@@ -1,16 +1,14 @@
 ﻿' <Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
-
 
 'Make two fields, one public and one read-only.
 Public Class Myfielda
     Public field As String = "A - public modifiable field"
-End Class 'Myfielda
+End Class
 
 Public Class Myfieldb
     Public ReadOnly field As String = "B - readonly field"
-End Class 'Myfieldb
+End Class
 
 Public Class Myfieldinfo
     Public Shared Function Main() As Integer
@@ -40,5 +38,5 @@ Public Class Myfieldinfo
 
         Return 0
     End Function 'Main
-End Class 'Myfieldinfo
+End Class
 ' </Snippet1>

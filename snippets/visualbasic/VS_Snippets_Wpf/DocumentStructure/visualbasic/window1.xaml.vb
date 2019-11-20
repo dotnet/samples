@@ -57,7 +57,7 @@ Namespace SdkSample
 				End Using ' end:using StreamReader(flush and close)
 				ShowPrompt("")
 			End If
-		End Sub ' end:OnOpen()
+		End Sub
 
 
 		' --------------------------- OpenDocument ---------------------------
@@ -113,7 +113,7 @@ Namespace SdkSample
 		'''   Performs clean up when the application is closed.</summary>
 		Private Overloads Sub OnClosed(ByVal sender As Object, ByVal e As EventArgs)
 			CloseDocument()
-		End Sub ' end:OnClosed()
+		End Sub
 
 
 		' ----------------------------- OnClose ------------------------------
@@ -122,7 +122,7 @@ Namespace SdkSample
 		'''   to close the currently open document.</summary>
 		Private Sub OnClose(ByVal target As Object, ByVal args As ExecutedRoutedEventArgs)
 			CloseDocument()
-		End Sub ' end:OnClose()
+		End Sub
 
 
 		' -------------------------- CloseDocument ---------------------------
@@ -142,7 +142,7 @@ Namespace SdkSample
 			menuFilePrint.IsEnabled = False
 			menuFileClose.IsEnabled = False
 			Me.Title = "DocumentStructure Sample"
-		End Sub ' end:CloseDocument
+		End Sub
 		#End Region ' File|Close
 
 
@@ -178,7 +178,7 @@ Namespace SdkSample
 			' Add the document structure resource elements
 			' to create a new structured XPS document.
 			AddDocumentStructure(xpsUnstructuredFile, _fixedPageStructures, xpsTargetFile) ' target structured doc -  structure definitions -  source unstructured doc
-		End Sub ' end:OnAddStructure()
+		End Sub
 
 
 		' ----------------------- AddDocumentStructure -----------------------
@@ -275,7 +275,7 @@ Namespace SdkSample
 
 			ShowDescription(_descriptionString(4) & _descriptionString(5))
 			ShowPrompt(_descriptionString(5))
-		End Sub ' end:AddDocumentStructure
+		End Sub
 		#End Region ' File|Add Structure...
 
 
@@ -285,7 +285,7 @@ Namespace SdkSample
 		'''   Handles the user "File | Print" menu operation.</summary>
 		Private Sub OnPrint(ByVal target As Object, ByVal args As ExecutedRoutedEventArgs)
 			PrintDocument()
-		End Sub ' end:OnClose()
+		End Sub
 
 
 		' -------------------------- PrintDocument ---------------------------
@@ -297,7 +297,7 @@ Namespace SdkSample
 			End If
 			DocViewer.Print()
 
-		End Sub ' end:PrintDocument()
+		End Sub
 		#End Region ' File|Print
 
 
@@ -308,7 +308,7 @@ Namespace SdkSample
 		'''   shutdown and exit the application.</summary>
 		Private Sub OnExit(ByVal sender As Object, ByVal e As EventArgs)
 			Close() ' invokes OnClosed()
-		End Sub ' end:OnExit()
+		End Sub
 		#End Region ' File|Exit
 
 
@@ -363,7 +363,7 @@ Namespace SdkSample
 			Loop While bytesRead > 0
 
 			srcStream.Close()
-		End Sub ' end:WriteStream()
+		End Sub
 
 
 		' ------------------------- ShowPrompt(string) -----------------------
@@ -461,6 +461,6 @@ Namespace SdkSample
 			'Step 5
 		#End Region ' Private Fields
 
-	End Class ' end:partial class Window1
+	End Class
 
 End Namespace ' end:namespace SdkSample

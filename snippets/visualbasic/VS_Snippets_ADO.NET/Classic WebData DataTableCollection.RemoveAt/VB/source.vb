@@ -14,10 +14,10 @@ Module Module1
     Public Sub DataTableCollectionRemoveAt()
         ' Create a DataSet with two tables and then
         ' remove the tables from the collection using RemoveAt.
-        Dim dataSet As DataSet = New DataSet()
+        Dim dataSet As New DataSet()
 
         ' Create Customer table.
-        Dim customerTable As DataTable = New DataTable("Customers")
+        Dim customerTable As New DataTable("Customers")
         customerTable.Columns.Add("customerId", _
             GetType(Integer)).AutoIncrement = True
         customerTable.Columns.Add("name", GetType(String))
@@ -25,7 +25,7 @@ Module Module1
             {customerTable.Columns("customerId")}
 
         ' Create Orders table.
-        Dim ordersTable As DataTable = New DataTable("Orders")
+        Dim ordersTable As New DataTable("Orders")
         ordersTable.Columns.Add("orderId", _
             GetType(Integer)).AutoIncrement = True
         ordersTable.Columns.Add("customerId", GetType(Integer))

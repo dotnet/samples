@@ -30,7 +30,7 @@ Public Class EchoService
 
     Public Sub Dispose() Implements IDisposable.Dispose
 
-    End Sub 'Dispose
+    End Sub
 
 
     
@@ -75,5 +75,5 @@ Public Class EchoService
         Next claimSet
 
     End Sub
-End Class 'EchoService
+End Class
 ' </snippet1>

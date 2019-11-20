@@ -1,5 +1,6 @@
 ﻿'<Snippet1>
 Imports System.Threading
+
 Public Class Test
    Public Shared Sub Main()
       ' Create the named mutex. Only one system object named 

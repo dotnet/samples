@@ -24,7 +24,7 @@ Public Class MySecurityManager
     Public Sub New()
         Console.WriteLine(" Creating MySecurityManager.")
 
-    End Sub 'New
+    End Sub
 
 
     '<Snippet2>

@@ -40,7 +40,7 @@ Namespace Samples.AspNet
             Else
                 _viewPath = Path.Combine(currentRequest.MapPath(currentRequest.ApplicationPath), viewPath)
             End If
-        End Sub 'New
+        End Sub
 
 
         ' Starting with the rootNode, recursively build a list of
@@ -77,7 +77,7 @@ Namespace Samples.AspNet
                     "presents data in an authenticated, localhost context.")
             End If
         End Function 'Select
-    End Class 'FileSystemDataSourceView
+    End Class
     ' </Snippet3>
     ' <Snippet4>
 
@@ -193,7 +193,7 @@ Namespace Samples.AspNet
             ' If FileSystemObj is any other kind of FileSystemInfo, ignore it.
             Return Nothing
         End Function 'GetParent
-    End Class 'FileSystemHierarchyData
+    End Class
     ' </Snippet10>
     ' </Snippet5>
 End Namespace

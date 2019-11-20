@@ -1,5 +1,4 @@
 ﻿ '<Snippet2>
-Imports System
 Imports System.IO
 Imports System.Windows
 Imports System.Windows.Ink
@@ -14,7 +13,7 @@ Class Window1
     Public Sub New() 
         InitializeComponent()
     
-    End Sub 'New
+    End Sub
 
     '<Snippet3>
     Private Sub InkCanvas_PreviewMouseDown(ByVal sender As Object, _
@@ -56,7 +55,7 @@ Class Window1
             End If
         End If
 
-    End Sub 'OnMouseDown
+    End Sub
     '</Snippet3>
 
     Private Sub InkCanvas_Drop(ByVal sender As Object, _
@@ -80,7 +79,7 @@ Class Window1
         ic.Strokes.Add(strokes)
         ic.Select(strokes)
 
-    End Sub 'OnDrop
+    End Sub
 
     ' Helper method that transletes the specified strokes.
     Sub TranslateStrokes(ByVal strokes As StrokeCollection, _
@@ -90,7 +89,7 @@ Class Window1
         mat.Translate(x, y)
         strokes.Transform(mat, False)
 
-    End Sub 'TranslateStrokes
+    End Sub
     
     
     Private Sub switchToSelect(ByVal sender As Object, _
@@ -99,7 +98,7 @@ Class Window1
         ic1.EditingMode = InkCanvasEditingMode.Select
         ic2.EditingMode = InkCanvasEditingMode.Select
 
-    End Sub 'switchToSelect
+    End Sub
     
     
     Private Sub switchToInk(ByVal sender As Object, _
@@ -108,7 +107,7 @@ Class Window1
         ic1.EditingMode = InkCanvasEditingMode.Ink
         ic2.EditingMode = InkCanvasEditingMode.Ink
 
-    End Sub 'switchToInk
+    End Sub
 
-End Class 'Window1
+End Class
 '</Snippet2>

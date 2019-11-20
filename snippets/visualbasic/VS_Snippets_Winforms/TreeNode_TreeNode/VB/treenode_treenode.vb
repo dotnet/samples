@@ -13,7 +13,6 @@
 '   child tree nodes display the order numbers assigned to each customer. 
 
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.Windows.Forms
@@ -35,7 +34,7 @@ Public Class TreeNode_Checked
    Public Sub New()
       InitializeComponent()
       FillMyTreeView()
-   End Sub 'New
+   End Sub
    ' ArrayList object to hold the 'Customer' objects.
    Private customerArray As New ArrayList()
    
@@ -65,7 +64,7 @@ Public Class TreeNode_Checked
       
       ' Begin repainting the TreeView.
       myTreeView.EndUpdate()
-   End Sub 'FillMyTreeView
+   End Sub
    
    
    
@@ -77,8 +76,8 @@ Public Class Customer
    Public Sub New(myName As String)
       CustomerName = myName
       CustomerOrders = New ArrayList()
-   End Sub 'New
-End Class 'Customer
+   End Sub
+End Class
 
 
 Public Class Order
@@ -86,8 +85,8 @@ Public Class Order
    
    Public Sub New(myOrderID As String)
       Me.OrderID = myOrderID
-   End Sub 'New
-End Class 'Order
+   End Sub
+End Class
 
 Private Sub FillTreeView()
    ' Load the images in an ImageList.
@@ -158,10 +157,10 @@ End Sub
       Me.Name = "Form1"
       Me.Text = "TreeNode Example"
       Me.ResumeLayout(True)
-   End Sub 'InitializeComponent
+   End Sub
    
    
    Shared Sub Main()
       Application.Run(New TreeNode_Checked())
-   End Sub 'Main
-End Class 'TreeNode_Checked
+   End Sub
+End Class

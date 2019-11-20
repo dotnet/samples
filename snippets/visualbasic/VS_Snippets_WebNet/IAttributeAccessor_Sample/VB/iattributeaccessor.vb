@@ -46,7 +46,7 @@ Namespace AttributeAccessor
    ' are set to values defined in the page.
    Public Sub SetAttribute(name As String, value1 As String) Implements IAttributeAccessor.SetAttribute
       ViewState(name) = value1
-   End Sub 'SetAttribute
+   End Sub
    
    ' </snippet2>
    ' <snippet3>
@@ -62,7 +62,7 @@ Namespace AttributeAccessor
       output.Write(("<input type=text id= " + Me.UniqueID))
       output.Write((" Value='" + Me.Text))
       output.Write(("' Size=" + Me.Width + ">"))
-   End Sub 'Render
- End Class 'MyTextBox
+   End Sub
+ End Class
 End Namespace 'AttributeAccessor
 ' </Snippet1>

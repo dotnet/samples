@@ -12,7 +12,6 @@
 '   and 'order' as its child nodes. It also provides option for the user to change the font
 '   and text of the node.
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -34,7 +33,7 @@ Public Class MyTreeNodeForm
       InitializeComponent()
       AddHandler myButton.Click, AddressOf MyButtonClick
       FillMyTreeView()
-   End Sub 'New
+   End Sub
    
 
    Private Sub MyButtonClick(sender As Object, e As EventArgs)
@@ -59,7 +58,7 @@ Public Class MyTreeNodeForm
       If (selectedNode IsNot Nothing) Then
          SelectNode(selectedNode)
       End If
-   End Sub 'MyButtonClick
+   End Sub
    
    
 ' <Snippet1>
@@ -137,7 +136,7 @@ End Sub
       myTreeView.SelectedImageIndex = 0
       ' Begin repainting the 'TreeView'.
       myTreeView.EndUpdate()
-   End Sub 'FillMyTreeView
+   End Sub
    
    Private Sub InitializeComponent()
       Me.myTreeView = New System.Windows.Forms.TreeView()
@@ -213,13 +212,13 @@ End Sub
       Me.Name = "MyTreeNodeForm"
       Me.Text = "TreeNode class sample"
       Me.ResumeLayout(False)
-   End Sub 'InitializeComponent
+   End Sub
     
    
    Shared Sub Main()
       Application.Run(New MyTreeNodeForm())
-   End Sub 'Main
-End Class 'MyTreeNodeForm
+   End Sub
+End Class
  _
 Public Class MyCustomerClass
    Public CustomerOrders As ArrayList
@@ -228,13 +227,13 @@ Public Class MyCustomerClass
    Public Sub New(name As String)
       CustomerName = name
       CustomerOrders = New ArrayList()
-   End Sub 'New
-End Class 'MyCustomerClass
+   End Sub
+End Class
  _
 Public Class MyOrder
    Public OrderID As String
    
    Public Sub New(orderID As String)
       Me.OrderID = orderID
-   End Sub 'New
-End Class 'MyOrder
+   End Sub
+End Class

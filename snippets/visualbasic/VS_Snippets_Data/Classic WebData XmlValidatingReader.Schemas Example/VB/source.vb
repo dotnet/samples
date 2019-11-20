@@ -5,7 +5,6 @@ Option Explicit
 Imports System.IO
 Imports System.Xml
 Imports System.Xml.Schema
-Imports Microsoft.VisualBasic
 
 Public Class SchemaCollectionSample
     Private doc1 As String = "booksSchema.xml"
@@ -30,11 +29,11 @@ Public Class SchemaCollectionSample
             Validate(doc2, xsc) 'Should fail.   
             Validate(doc3, xsc) 'Should fail. 
         
-    End Sub 'New
+    End Sub
     
     Public Shared Sub Main()
         Dim validation As New SchemaCollectionSample()
-    End Sub 'Main
+    End Sub
     
     Private Sub Validate(filename As String, xsc As XmlSchemaCollection)
         
@@ -60,13 +59,13 @@ Public Class SchemaCollectionSample
             'Close the reader.
             vreader.Close()
 
-    End Sub 'Validate
+    End Sub
        
     
     Private Sub ValidationCallBack(sender As Object, args As ValidationEventArgs)
         m_success = False
         
         Console.Write((ControlChars.CrLf & ControlChars.Tab & "Validation error: " & args.Message))
-    End Sub 'ValidationCallBack 
-End Class 'SchemaCollectionSample
+    End Sub
+End Class
 ' </Snippet1>

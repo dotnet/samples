@@ -9,7 +9,6 @@
 ' <Snippet1>
 Imports System.Reflection
 Imports System.Reflection.Emit
-Imports MicroSoft.VisualBasic
 
 Public Class MethodBuilderClass
 
@@ -63,6 +62,6 @@ Public Class MethodBuilderClass
       Catch e As Exception
          Console.WriteLine("Exception :{0}", e.Message)
       End Try
-   End Sub 'Main
-End Class 'MethodBuilderClass
+   End Sub
+End Class
 ' </Snippet1>

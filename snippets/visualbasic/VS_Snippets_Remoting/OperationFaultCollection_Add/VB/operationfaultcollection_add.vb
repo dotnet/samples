@@ -8,7 +8,6 @@ Imports System.Web.Services.Description
 Imports System.Xml
 Imports System.Xml.Schema
 Imports System.Xml.Serialization
-Imports Microsoft.VisualBasic
 
 Public Class MyFaultCollectionSample
    Public Shared Sub Main()

@@ -1,6 +1,5 @@
 ﻿' <snippet1>
 ' <snippet2>
-Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
 Imports System.ComponentModel.Design
@@ -426,7 +425,7 @@ Namespace AttributesDemoControlLibrary
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
-        End Sub 'InitializeComponent 
+        End Sub
 
 #End Region
 

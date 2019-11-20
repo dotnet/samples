@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.ComponentModel
 Imports System.Windows.Forms
 
@@ -18,7 +17,7 @@ Public Class Form1
         
         ' Add the scroll bar to the form.
         Controls.Add(hScrollBar1)
-    End Sub 'InitializeMyScrollBar
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

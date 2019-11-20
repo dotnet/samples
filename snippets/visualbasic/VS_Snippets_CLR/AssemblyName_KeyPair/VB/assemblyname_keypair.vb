@@ -31,8 +31,6 @@ Imports System.Globalization
 Imports System.Reflection.Emit
 Imports System.Configuration.Assemblies
 Imports System.Text
-Imports Microsoft.VisualBasic
-
 
 Public Class AssemblyName_CodeBase
    
@@ -56,7 +54,7 @@ Public Class AssemblyName_CodeBase
       ' Set the method with name 'Main' as the entry point in the assembly.
       myAssemblyBuilder.SetEntryPoint(myMethodBuilder)
       myAssemblyBuilder.Save(fileName)
-   End Sub 'MakeAssembly
+   End Sub
    
    
    Public Shared Sub Main()
@@ -106,8 +104,8 @@ Public Class AssemblyName_CodeBase
          Console.Write("{0:x2}", pt(i))
       Next i
       End If
-   End Sub 'Main 
-End Class 'AssemblyName_CodeBase 
+   End Sub
+End Class
 ' </Snippet5>
 ' </Snippet4>
 ' </Snippet3>

@@ -2,7 +2,6 @@
 ' Copyright (c) Microsoft Corporation. All rights reserved.
 
 
-Imports System
 Imports System.Windows
 Imports System.Windows.Xps.Packaging
 Imports System.Xml
@@ -66,7 +65,7 @@ Namespace SDKSample
 			docWriter.Commit()
 			docSeqWriter.Commit()
 			_fontDictionary.Clear()
-		End Sub ' end:Create()
+		End Sub
 		'</SnippetCreateAndWriteToXpsDocument>
 
 
@@ -115,7 +114,7 @@ Namespace SDKSample
                     Next font
                 Next page
             Next docReader
-        End Sub ' end:IterateXpsPackageParts()
+        End Sub
         '</SnippetIterateXpsPackageParts>
 
 #End Region ' Public Methods
@@ -175,7 +174,7 @@ Namespace SDKSample
             writer.WriteAttributeString("UnicodeString", text)
             writer.WriteAttributeString("Fill", "#FFFFE4C4")
             writer.WriteEndElement()
-        End Sub ' end:AddGlyphRun()
+        End Sub
 
 
         ' --------------------------- GetXpsFont() ---------------------------
@@ -246,7 +245,7 @@ Namespace SDKSample
             writer.WriteEndElement() 'ImageBrush
             writer.WriteEndElement() 'Path.Fill
             writer.WriteEndElement() 'Path
-        End Sub ' end:AddImage()
+        End Sub
 
 
         ' --------------------------- GetXpsImage() --------------------------
@@ -297,6 +296,6 @@ Namespace SDKSample
         Private Shared _applicationDir As String
 #End Region ' Private Members
 
-    End Class ' end:class XpsReadWriteUtility
+    End Class
 
 End Namespace ' end:namespace SDKSample

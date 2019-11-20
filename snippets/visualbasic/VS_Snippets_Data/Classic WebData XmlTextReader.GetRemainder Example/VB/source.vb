@@ -54,6 +54,6 @@ Public Class Sample
         Console.WriteLine("Done.")
         reader.Close()
         reader2.Close()
-    End Sub 'Main
-End Class 'Sample
+    End Sub
+End Class
 ' </Snippet1>

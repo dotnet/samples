@@ -13,8 +13,6 @@
 Imports System.Net
 Imports System.IO
 Imports System.Text
-Imports Microsoft.VisualBasic
-
 
 Public Class WebClient_OpenWrite2
     
@@ -50,5 +48,5 @@ Public Class WebClient_OpenWrite2
         Catch e As Exception
             Console.WriteLine(("The following exception was raised: " + e.Message))
         End Try
-    End Sub 'Main
-End Class 'WebClient_OpenWrite2
+    End Sub
+End Class

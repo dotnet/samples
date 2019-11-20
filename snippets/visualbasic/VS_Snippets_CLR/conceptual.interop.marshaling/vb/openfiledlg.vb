@@ -27,9 +27,9 @@ Public Class OpenFileName
     Public template As String = Nothing
 End Class
 
-Public Class LibWrap
+Friend Class NativeMethods
     ' Declare managed prototype for the unmanaged function.
-    Declare Auto Function GetOpenFileName Lib "Comdlg32.dll" (
+    Friend Declare Auto Function GetOpenFileName Lib "Comdlg32.dll" (
        <[In], Out> ByVal ofn As OpenFileName) As Boolean
 End Class
 '</snippet8>
@@ -50,7 +50,7 @@ Public Class App
         ofn.title = "Open file called using platform invoke..."
         ofn.defExt = "txt"
 
-        If LibWrap.GetOpenFileName(ofn) Then
+        If NativeMethods.GetOpenFileName(ofn) Then
             Console.WriteLine($"Selected file with full path: {ofn.file}")
         End If
     End Sub

@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Data
@@ -30,7 +29,7 @@ Class Window1
     Public Sub New() 
         InitializeComponent()
     
-    End Sub 'New
+    End Sub
     
     
     Private Sub WindowLoaded(ByVal sender As Object, ByVal e As RoutedEventArgs) 
@@ -65,34 +64,34 @@ Class Window1
         inkCanvas1 = New InkCanvas()
         root.Children.Add(inkCanvas1)
     
-    End Sub 'WindowLoaded
+    End Sub
     
     
     Private Sub eraseByPointEditingMode_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
 
         inkCanvas1.EditingMode = InkCanvasEditingMode.EraseByPoint
 
-    End Sub 'eraseByPointEditingMode_Click
+    End Sub
     
     
     Private Sub eraseByStrokeEditingMode_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
 
         inkCanvas1.EditingMode = InkCanvasEditingMode.EraseByStroke
 
-    End Sub 'eraseByStrokeEditingMode_Click
+    End Sub
     
     
     Private Sub selectEditingMode_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
 
         inkCanvas1.EditingMode = InkCanvasEditingMode.Select
 
-    End Sub 'selectEditingMode_Click
+    End Sub
     
     
     Private Sub inkEditingMode_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
 
         inkCanvas1.EditingMode = InkCanvasEditingMode.Ink
 
-    End Sub 'inkEditingMode_Click
-End Class 'Window1
+    End Sub
+End Class
 '</Snippet1>

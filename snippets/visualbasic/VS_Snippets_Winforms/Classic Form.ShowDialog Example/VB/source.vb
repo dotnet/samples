@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.ComponentModel
 Imports System.Windows.Forms
 Imports System.Drawing
@@ -77,11 +76,11 @@ Public Class Form1
             txtResult.Text = "Cancelled"
         End If
         testDialog.Dispose()
-    End Sub 'ShowMyDialogBox
+    End Sub
     '</Snippet1>
 
 
     Private Sub showButton_Click(sender As Object, e As System.EventArgs)
        ShowMyDialogBox()
     End Sub
-End Class 'Form1 
+End Class

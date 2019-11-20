@@ -11,5 +11,5 @@ Public Class Server
       Console.WriteLine("Garbage Collecting.")
       GC.Collect()
       GC.WaitForPendingFinalizers()
-   End Sub 'Main
-End Class 'Server
+   End Sub
+End Class

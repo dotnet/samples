@@ -116,7 +116,7 @@ Namespace Mssc.Services.ConnectionManagement
 
         Console.WriteLine("Press any key to continue.")
         Console.ReadLine()
-      End Sub 'displayEndpointInfo
+      End Sub
 
       '</Snippet3>
       ' The following method determines the server endpoint and then 
@@ -197,7 +197,7 @@ Namespace Mssc.Services.ConnectionManagement
       Private Shared Sub showusage()
         Console.WriteLine("Enter the server name as follows:")
         Console.WriteLine(ControlChars.Tab + "vb_ipendpoint servername")
-      End Sub 'showusage
+      End Sub
 
       ' This is the program entry point. It allows the user to enter 
       ' a server name that is used to locate its current homepage.
@@ -223,9 +223,9 @@ Namespace Mssc.Services.ConnectionManagement
             Console.WriteLine("Input string format not allowed.")
           End If
         End If
-      End Sub 'Main
+      End Sub
 
-    End Class 'TestIPEndPoint
+    End Class
   End Module
 End Namespace
 '</Snippet1>

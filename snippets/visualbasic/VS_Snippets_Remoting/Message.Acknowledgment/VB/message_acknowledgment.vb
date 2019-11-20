@@ -32,7 +32,7 @@ Public Class MyNewQueue
          End If
          
          Return
-   End Sub 'Main
+   End Sub
       
       
       ' Creates a new queue.
@@ -47,7 +47,7 @@ Public Class MyNewQueue
          Catch e As MessageQueueException
             Console.WriteLine(e.Message)
          End Try
-   End Sub 'CreateQueue
+   End Sub
        
       
       
@@ -69,7 +69,7 @@ Public Class MyNewQueue
          myQueue.Send(myMessage)
          
          Return
-   End Sub 'SendMessage
+   End Sub
       
       
       
@@ -145,7 +145,7 @@ Public Class MyNewQueue
                Console.WriteLine(e.Message)
             End If
          End Try 
-   End Sub 'ReceiveAcknowledgment ' Handle other causes of invalid operation exception.
- End Class 'MyNewQueue
+   End Sub
+ End Class
 
 ' </Snippet1>

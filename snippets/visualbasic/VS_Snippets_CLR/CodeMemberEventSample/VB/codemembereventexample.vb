@@ -43,7 +43,7 @@ Namespace CodeDomSamples
             ' End Class
             '</Snippet2>
 
-        End Sub 'New 
-    End Class 'CodeMemberEventExample
+        End Sub
+    End Class
 End Namespace 'CodeDomSamples
 '</Snippet1>

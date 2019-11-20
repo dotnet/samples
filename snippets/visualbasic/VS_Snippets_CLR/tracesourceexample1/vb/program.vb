@@ -51,6 +51,6 @@ Class TraceTest
         mySource.TraceEvent(TraceEventType.Error, 4, "Error message.")
         mySource.TraceInformation("Informational message.")
     
-    End Sub 'Activity3
+    End Sub
 End Class
 '</Snippet1>

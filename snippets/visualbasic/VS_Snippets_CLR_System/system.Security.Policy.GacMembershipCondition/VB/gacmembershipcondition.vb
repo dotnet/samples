@@ -199,7 +199,7 @@ Public Class GacMembershipConditionDemo
             Dim consoleInput As String = Console.ReadLine()
             System.Environment.ExitCode = 101
         End Try
-    End Sub 'Main
-End Class 'GacMembershipConditionDemo
+    End Sub
+End Class
 
 ' </Snippet1>

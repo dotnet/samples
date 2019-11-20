@@ -14,7 +14,7 @@ Public Class UIPermissionDemo
         IntersectDemo()
         ToFromXmlDemo()
 
-    End Sub 'Main
+    End Sub
 
 
     ' <Snippet2>
@@ -31,7 +31,7 @@ Public Class UIPermissionDemo
         uiPerm2 = New UIPermission(UIPermissionClipboard.OwnClipboard)
         CheckIsSubsetOfClipBoard(uiPerm1, uiPerm2)
 
-    End Sub 'IsSubsetOfDemo
+    End Sub
 
     Private Shared Sub CheckIsSubsetOfWindow(ByVal uiPerm1 As UIPermission, ByVal uiPerm2 As UIPermission)
         If uiPerm1.IsSubsetOf(uiPerm2) Then
@@ -46,7 +46,7 @@ Public Class UIPermissionDemo
             Console.WriteLine(uiPerm2.Window.ToString() + " is not a subset of " + uiPerm1.Window.ToString())
         End If
 
-    End Sub 'CheckIsSubsetOfWindow
+    End Sub
 
     Private Shared Sub CheckIsSubsetOfClipBoard(ByVal uiPerm1 As UIPermission, ByVal uiPerm2 As UIPermission)
         If uiPerm1.IsSubsetOf(uiPerm2) Then
@@ -61,7 +61,7 @@ Public Class UIPermissionDemo
             Console.WriteLine(uiPerm2.Clipboard.ToString() + " is not a subset of " + uiPerm1.Clipboard.ToString())
         End If
 
-    End Sub 'CheckIsSubsetOfClipBoard
+    End Sub
 
     ' </Snippet2>
     ' <Snippet3>
@@ -78,7 +78,7 @@ Public Class UIPermissionDemo
             Console.WriteLine("The union of " + uiPerm1.Window.ToString() + " and " + vbLf + vbTab + uiPerm2.Window.ToString() + " is null." + vbLf)
         End If
 
-    End Sub 'UnionDemo
+    End Sub
 
     ' </Snippet3>
     ' <Snippet4>
@@ -94,7 +94,7 @@ Public Class UIPermissionDemo
         Console.WriteLine("The intersection of " + uiPerm1.Window.ToString() + " and " + vbLf + vbTab + uiPerm2.Window.ToString() + " is " + p3.Window.ToString() + vbLf)
         Console.WriteLine("The intersection of " + uiPerm1.Clipboard.ToString() + " and " + vbLf + vbTab + uiPerm2.Clipboard.ToString() + " is " + p3.Clipboard.ToString() + vbLf)
 
-    End Sub 'IntersectDemo
+    End Sub
 
 
     '</Snippet4>
@@ -111,7 +111,7 @@ Public Class UIPermissionDemo
             Console.WriteLine("The copy succeeded:  " + uiPerm2.ToString() + " " + vbLf)
         End If
 
-    End Sub 'CopyDemo
+    End Sub
 
     '</Snippet5>
     '<Snippet6>
@@ -131,8 +131,8 @@ Public Class UIPermissionDemo
             Console.WriteLine(uiPerm1.ToString())
         End If
 
-    End Sub 'ToFromXmlDemo 
-End Class 'UIPermissionDemo
+    End Sub
+End Class
 '</Snippet6>
 
 ' </Snippet1>

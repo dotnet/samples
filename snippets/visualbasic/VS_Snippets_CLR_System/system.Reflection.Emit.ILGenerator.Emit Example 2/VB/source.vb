@@ -104,8 +104,8 @@ Class DynamicJumpTableDemo
 						 BindingFlags.InvokeMethod, Nothing, _
 					         myInstance, New Object() {theValue}))
 
-   End Sub 'Main
+   End Sub
 
-End Class 'DynamicJumpTableDemo
+End Class
 
 ' </Snippet1>

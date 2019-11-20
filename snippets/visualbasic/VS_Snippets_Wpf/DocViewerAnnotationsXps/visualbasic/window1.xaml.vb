@@ -61,7 +61,7 @@ Namespace SDKSample
 				OpenDocument(dialog.FileName)
 			End If
 
-		End Sub ' end:OnOpen()
+		End Sub
 
 
 		' ------------------------- GetContentFolder -------------------------
@@ -223,7 +223,7 @@ Namespace SDKSample
 			Dim parserContext As New ParserContext()
 			parserContext.BaseUri = PackUriHelper.Create(tempUri)
 
-			' Retreive the fixed document.
+			' Retrieve the fixed document.
 			Dim fixedDocPart As PackagePart = _xpsPackage.GetPart(fixedDocUri)
 			If fixedDocPart IsNot Nothing Then
 				Dim fixedObject As Object = XamlReader.Load(fixedDocPart.GetStream(), parserContext)
@@ -242,7 +242,7 @@ Namespace SDKSample
 		'''   shutdown and exit the application.</summary>
 		Private Sub OnExit(ByVal sender As Object, ByVal e As EventArgs)
 			Close() ' invokes OnClosed()
-		End Sub ' end:OnExit()
+		End Sub
 
 
 		' ----------------------------- OnClosed -----------------------------
@@ -250,7 +250,7 @@ Namespace SDKSample
 		'''   Performs clean up when the application is closed.</summary>
 		Private Overloads Sub OnClosed(ByVal sender As Object, ByVal e As EventArgs)
 			CloseDocument()
-		End Sub ' end:OnClosed()
+		End Sub
 
 
 		' ----------------------------- OnClose ------------------------------
@@ -259,7 +259,7 @@ Namespace SDKSample
 		'''   to close the currently open document.</summary>
 		Private Sub OnClose(ByVal target As Object, ByVal args As ExecutedRoutedEventArgs)
 			CloseDocument()
-		End Sub ' end:OnClose()
+		End Sub
 
 
 		' --------------------------- CloseDocument --------------------------
@@ -289,7 +289,7 @@ Namespace SDKSample
 			menuViewAnnotations.IsEnabled = False
 			menuViewIncreaseZoom.IsEnabled = False
 			menuViewDecreaseZoom.IsEnabled = False
-		End Sub ' end:CloseDocument
+		End Sub
 
 
 		' ----------------------------- OnPrint ------------------------------
@@ -297,7 +297,7 @@ Namespace SDKSample
 		'''   Handles the user "File | Print" menu operation.</summary>
 		Private Sub OnPrint(ByVal target As Object, ByVal args As ExecutedRoutedEventArgs)
 			PrintDocument()
-		End Sub ' end:OnClose()
+		End Sub
 
 
 		' -------------------------- PrintDocument ---------------------------
@@ -344,7 +344,7 @@ Namespace SDKSample
 				End If
 				'</SnippetDocViewAnnXpsPrint>
 			End If
-		End Sub ' end:PrintDocument()
+		End Sub
 
 
 		' -------------------------- ShowAnnotations -------------------------
@@ -354,7 +354,7 @@ Namespace SDKSample
 			If _annotHelper IsNot Nothing Then
 				_annotHelper.StartAnnotations()
 			End If
-		End Sub ' end:ShowAnnotations()
+		End Sub
 
 
 		' ------------------------- HideAnnotations --------------------------
@@ -364,7 +364,7 @@ Namespace SDKSample
 			If _annotHelper IsNot Nothing Then
 				_annotHelper.StopAnnotations()
 			End If
-		End Sub ' end:HideAnnotations()
+		End Sub
 
 
 		' ----------------------- DocViewer attribute ------------------------
@@ -389,6 +389,6 @@ Namespace SDKSample
 
 		#End Region 'private fields
 
-	End Class ' end:partial class Window1
+	End Class
 
 End Namespace ' end:namespace SDKSample

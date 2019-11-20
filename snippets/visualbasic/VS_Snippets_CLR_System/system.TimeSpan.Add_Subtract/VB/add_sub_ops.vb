@@ -1,7 +1,5 @@
 ﻿'<Snippet2>
 ' Example of the TimeSpan Addition and Subtraction operators.
-Imports Microsoft.VisualBasic
-
 Module TimeSpanAddSubOpsDemo
     
     Const dataFmt As String = "{0,-38}{1,24}"

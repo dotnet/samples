@@ -1,6 +1,4 @@
-﻿Imports System
-Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
+﻿Imports System.Windows.Forms
 
 Public Class Form1
     Inherits Form

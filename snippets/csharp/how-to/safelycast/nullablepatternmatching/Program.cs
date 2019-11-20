@@ -7,9 +7,6 @@ namespace nullablepatternmatching
     {
         static void Main(string[] args)
         {
-            // Use the as operator with a value type.
-            // Note the implicit conversion to int? in 
-            // the method body.
             int i = 5;
             PatternMatchingNullable(i);
 

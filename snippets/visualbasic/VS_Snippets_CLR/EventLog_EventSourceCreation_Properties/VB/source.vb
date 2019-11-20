@@ -123,7 +123,7 @@ Namespace EventLogSamples
                 Console.WriteLine("Event source was registered successfully!")
             End If
 
-        End Sub 'Main
-    End Class 'CreateSourceSample
+        End Sub
+    End Class
 End Namespace 'EventLogSamples
 '</Snippet1>

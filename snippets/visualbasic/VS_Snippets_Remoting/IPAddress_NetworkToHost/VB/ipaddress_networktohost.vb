@@ -8,8 +8,6 @@
 '
 
 Imports System.Net
-Imports Microsoft.VisualBasic
-
 
 Class NetworkToHostByteSample
     
@@ -54,7 +52,7 @@ Class NetworkToHostByteSample
             Console.WriteLine(("Source : " + e.Source))
             Console.WriteLine(("Message : " + e.Message))
         End Try
-    End Sub 'Main
+    End Sub
     
     
 ' <Snippet1>	
@@ -63,7 +61,7 @@ Class NetworkToHostByteSample
         ' Converts a short value from network byte order to host byte order.
         hostByte = IPAddress.NetworkToHostOrder(networkByte)
         Console.WriteLine("Network byte order to Host byte order of {0} is {1}", networkByte, hostByte)
-    End Sub 'NetworkToHostOrder_Short    
+    End Sub
 ' </Snippet1>	
 
 ' <Snippet2>	
@@ -72,7 +70,7 @@ Class NetworkToHostByteSample
         ' Converts an integer value from network byte order to host byte order.
         hostByte = IPAddress.NetworkToHostOrder(networkByte)
         Console.WriteLine("Network byte order to Host byte order of {0} is {1}", networkByte, hostByte)
-    End Sub 'NetworkToHostOrder_Integer
+    End Sub
 ' </Snippet2>	    
 
 ' <Snippet3>	
@@ -81,6 +79,6 @@ Class NetworkToHostByteSample
         ' Converts a long value from network byte order to host byte order.
         hostByte = IPAddress.NetworkToHostOrder(networkByte)
         Console.WriteLine("Network byte order to Host byte order of {0} is {1}", networkByte, hostByte)
-    End Sub 'NetworkToHostOrder_Long
+    End Sub
 ' </Snippet3>	
-End Class 'NetworkToHostByteSample 
+End Class

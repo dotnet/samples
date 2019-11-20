@@ -10,7 +10,7 @@ Class Sample
     
     Shared Sub Main() 
     
-    End Sub 'Main
+    End Sub
     
     
     
@@ -29,7 +29,7 @@ Class Sample
 
             '</snippet1>
 
-    End Sub 'XmlUrlResolver_Credentials1
+    End Sub
     
 
     
@@ -49,7 +49,7 @@ Class Sample
         resolver.Credentials = myCred
     
        '</snippet2>
-    End Sub 'XmlUrlResolver_Credentials2 
-End Class 'Sample 
+    End Sub
+End Class
 
 

@@ -39,6 +39,6 @@ Public Class WebClientSample
         End Try
         
     
-    End Sub 'Main
+    End Sub
     '</snippet1>
-End Class 'WebClientSample
+End Class

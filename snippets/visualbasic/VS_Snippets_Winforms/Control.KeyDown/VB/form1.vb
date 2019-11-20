@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -25,7 +24,7 @@ Public Class Form1
         ' Required for Windows Form Designer support
         '
         InitializeComponent()
-    End Sub 'New
+    End Sub
     
     '/ <summary>
     '/ Clean up any resources being used.
@@ -37,7 +36,7 @@ Public Class Form1
             End If
         End If
         MyBase.Dispose(disposing)
-    End Sub 'Dispose
+    End Sub
    
 
     Private Sub InitializeComponent()
@@ -59,12 +58,12 @@ Public Class Form1
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
-    End Sub 'InitializeComponent
+    End Sub
     
     <STAThread()>  _
     Shared Sub Main()
         Application.Run(New Form1())
-    End Sub 'Main
+    End Sub
    
    
     '<Snippet1>
@@ -94,7 +93,7 @@ Public Class Form1
         If Control.ModifierKeys = Keys.Shift Then
             nonNumberEntered = true
         End If
-    End Sub 'textBox1_KeyDown
+    End Sub
    
    
     ' This event occurs after the KeyDown event and can be used 
@@ -106,6 +105,6 @@ Public Class Form1
             ' Stop the character from being entered into the control since it is non-numerical.
             e.Handled = True
         End If
-    End Sub 'textBox1_KeyPress
+    End Sub
 '</Snippet1>
-End Class 'Form1 
+End Class

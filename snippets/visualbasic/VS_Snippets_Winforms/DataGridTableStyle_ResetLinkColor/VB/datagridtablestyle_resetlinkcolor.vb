@@ -10,7 +10,6 @@
 '  Buttons are provided on form to demonstrate setting link color
 '  and 'ResetLinkColor' method.
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -42,7 +41,7 @@ Namespace DataGridSample
          InitializeComponent()
          ' Setup GridControl data.
          SetUp()
-      End Sub 'New
+      End Sub
       
       
       ' <summary>
@@ -55,7 +54,7 @@ Namespace DataGridSample
             End If
          End If
          MyBase.Dispose(disposing)
-      End Sub 'Dispose
+      End Sub
 
       ' <summary>
 
@@ -113,7 +112,7 @@ Namespace DataGridSample
          CType(Me.myDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
          Me.groupBox3.ResumeLayout(False)
          Me.ResumeLayout(False)
-      End Sub 'InitializeComponent 
+      End Sub
 
       Private myDataGridTableStyle As New DataGridTableStyle()
       
@@ -122,14 +121,14 @@ Namespace DataGridSample
       '/ </summary>
       <STAThread()>  Shared Sub Main()
          Application.Run(New DatGridClass())
-      End Sub 'Main
+      End Sub
       
       Private Sub SetUp()
          ' Create a 'DataSet' with two tables and one relation.
          MakeDataSet()
          ' Bind the 'DataGrid' to the 'DataSet'. 
          myDataGrid.SetDataBinding(myDataSet, "Customers")
-      End Sub 'SetUp
+      End Sub
       
       ' Create a 'DataSet' with two tables and populate it.
       Private Sub MakeDataSet()
@@ -209,7 +208,7 @@ Namespace DataGridSample
                tOrders.Rows.Add(newRow2)
             Next j
          Next i
-      End Sub 'MakeDataSet
+      End Sub
       
       Private Sub btnResetLinkColor_Click(sender As Object, e As EventArgs) Handles btnResetLinkColor.Click
 ' <Snippet1>
@@ -225,7 +224,7 @@ Namespace DataGridSample
          ' Show information about changes in color setting.  
          MessageBox.Show(myString, "Link line color information")
 ' </Snippet1>
-      End Sub 'btnResetLinkColor_Click
+      End Sub
 
       Private Sub btnSetLinkColor_Click(sender As Object, e As EventArgs) Handles btnSetLinkColor.Click
          ' Creates a common color dialog box.
@@ -239,6 +238,6 @@ Namespace DataGridSample
          myColorDialog.ShowDialog()
          ' Set link color to selected color.
          myDataGridTableStyle.LinkColor = myColorDialog.Color
-      End Sub 'btnSetLinkColor_Click
-   End Class 'DatGridClass
+      End Sub
+   End Class
 End Namespace 'DataGridSample

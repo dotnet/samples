@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
 
@@ -37,7 +36,7 @@ Public Class Form1
         Else
             Console.WriteLine("BeginEdit failed")
         End If
-    End Sub 'EditGrid
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

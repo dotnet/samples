@@ -52,7 +52,7 @@ Public Class SampleEventProvider
         ' to buffer.
         maxMsgNumber = 10
     
-    End Sub 'New
+    End Sub
      
     ' More custom initialization goes here.
     ' </Snippet2>
@@ -89,7 +89,7 @@ Public Class SampleEventProvider
         ' Clear the buffer.
         msgBuffer.Clear()
     
-    End Sub 'Flush
+    End Sub
      
     ' </Snippet3>
     ' <Snippet4>
@@ -97,7 +97,7 @@ Public Class SampleEventProvider
     Public Overrides Sub Shutdown() 
         Flush()
     
-    End Sub 'Shutdown
+    End Sub
     
     ' </Snippet4>
     ' <Snippet5>
@@ -115,7 +115,7 @@ Public Class SampleEventProvider
             Flush()
         End If
 
-    End Sub 'ProcessEvent
+    End Sub
     
     
     ' </Snippet5>
@@ -172,8 +172,8 @@ Public Class SampleEventProvider
             e.ToString())
         End Try
 
-    End Sub 'StoreToFile
-End Class 'SampleEventProvider
+    End Sub
+End Class
 ' </Snippet6>
 
 

@@ -20,7 +20,7 @@ Module Module1
             connection.Open()
 
             ' Create the Command.
-            Dim command As OleDbCommand = New OleDbCommand()
+            Dim command As New OleDbCommand()
 
             ' Set the Connection, CommandText and Parameters.
             command.Connection = connection

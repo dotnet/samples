@@ -1,7 +1,5 @@
 ﻿'This is a list of commonly used namespaces for a window.
 
-Imports Microsoft.VisualBasic
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Documents

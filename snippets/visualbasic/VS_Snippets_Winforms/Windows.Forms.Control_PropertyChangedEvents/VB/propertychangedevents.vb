@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Drawing
+﻿Imports System.Drawing
 Imports System.ComponentModel
 Imports System.Windows.Forms
 
@@ -12,7 +11,7 @@ Namespace PropChanged
       
       Public Sub New()
          InitializeComponent()
-      End Sub 'New
+      End Sub
        
       
       Private Sub InitializeComponent()
@@ -35,13 +34,13 @@ Namespace PropChanged
          Me.Name = "Form1"
          Me.Text = "Form1"
          Me.ResumeLayout(False)
-      End Sub 'InitializeComponent
+      End Sub
        
       
       <STAThread()> _
       Shared Sub Main()
          Application.Run(New Form1())
-      End Sub 'Main
+      End Sub
       
       
 ' <snippet1>

@@ -31,7 +31,7 @@ Class ADPrincipal
 
         ' Wait for user input before terminating.
         Console.ReadLine()
-    End Sub 'Main
+    End Sub
 
 
     Shared Sub PrintPrincipalInformation()
@@ -43,6 +43,6 @@ Class ADPrincipal
             Console.WriteLine()
 
         End If
-    End Sub 'PrintPrincipalInformation
-End Class 'ADPrincipal 
+    End Sub
+End Class
 ' </SNIPPET1>

@@ -10,8 +10,6 @@
 Imports System.IO
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
-
 
 Class HttpWebRequest_Pipelined
     Public Overloads Shared Sub Main()
@@ -33,7 +31,7 @@ Class HttpWebRequest_Pipelined
             Console.WriteLine(ControlChars.Cr + "Exception Caught!")
             Console.WriteLine("Message :{0}", e.Message)
         End Try
-    End Sub 'Main
+    End Sub
     
     Public Shared Sub GetPage(myUri As [String])
         Try
@@ -72,5 +70,5 @@ Class HttpWebRequest_Pipelined
             Console.WriteLine(ControlChars.Cr + "Exception Caught!")
             Console.WriteLine("Message :{0} ", e.Message)
         End Try
-    End Sub ' GetPage 
-End Class ' HttpWebRequest_Pipelined
+    End Sub
+End Class

@@ -18,13 +18,13 @@ Public Class UrlConfigElement
         Url = newUrl
         Port = newPort
 
-    End Sub 'New
+    End Sub
 
     '</Snippet32>
     ' Default constructor, will use default values as defined
     Public Sub New()
 
-    End Sub 'New
+    End Sub
 
 
     ' Constructor allowing name to be specified, will take the
@@ -32,7 +32,7 @@ Public Class UrlConfigElement
     Public Sub New(ByVal elementName As String)
         Name = elementName
 
-    End Sub 'New
+    End Sub
 
 
     <ConfigurationProperty("name", _
@@ -89,7 +89,7 @@ Public Class UrlConfigElement
         MyBase.DeserializeElement(reader, _
             serializeCollectionKey)
         ' Enter your custom processing code here.
-    End Sub 'DeserializeElement
+    End Sub
     '</Snippet33>
 
     ' <Snippet34>
@@ -111,7 +111,7 @@ Public Class UrlConfigElement
         Return ret
 
     End Function 'IsModified
-End Class 'UrlConfigElement 
+End Class
 '</Snippet35>
 
 '</Snippet31>

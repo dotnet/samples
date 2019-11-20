@@ -1,6 +1,5 @@
 ﻿' for MISC snippets only; do not wrap entire file with a snippet tag.
 
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 

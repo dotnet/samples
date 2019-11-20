@@ -132,7 +132,7 @@ Namespace DataBindingTest
                 myHtmlControlDesignBehavior.SetAttribute(myStringReplace2, myDataBindingExpression2)
                 Dim index As Integer = myStringReplace2.IndexOf("-"c)
             End While ' while loop ends
-        End Sub 'OnBindingsCollectionChanged
+        End Sub
         ' </snippet6>
         Public Sub WriteToFile(ByVal input As String)
             ' The WriteToFile custom method writes
@@ -144,8 +144,8 @@ Namespace DataBindingTest
             Dim CharArray As Char() = encoder.GetChars(ByteArray)
             myFile.WriteLine(CharArray, 0, input.Length)
             myFile.Close()
-        End Sub 'WriteToFile
-    End Class 'SimpleDesigner
+        End Sub
+    End Class
     ' </snippet2>
 End Namespace 'DataBindingTest
 ' </snippet1>

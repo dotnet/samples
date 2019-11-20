@@ -4,7 +4,7 @@ using System;
 public class EnumTest {
     enum Days { Saturday, Sunday, Monday, Tuesday, Wednesday, Thursday, Friday };
     enum BoilingPoints { Celsius = 100, Fahrenheit = 212 };
-    [FlagsAttribute]
+    [Flags]
     enum Colors { Red = 1, Green = 2, Blue = 4, Yellow = 8 };
 
     public static void Main() {

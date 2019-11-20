@@ -5,9 +5,8 @@ namespace Generation
 {
     public static class RepeatExample1
     {
-        //This sample uses Repeat to generate a sequence that contains the number 7 seven times.
-        //
-        //Output: 
+        // This sample uses Repeat to generate a sequence that contains the number 7 seven times.
+        // Output: 
         // 7
         // 7
         // 7

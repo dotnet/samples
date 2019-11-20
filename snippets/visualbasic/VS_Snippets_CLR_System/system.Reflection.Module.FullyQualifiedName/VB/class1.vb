@@ -13,7 +13,7 @@ Namespace ReflectionModule_Examples
             Dim myModule As [Module] = moduleArray(0)
 
             Console.WriteLine("myModule.FullyQualifiedName = {0}", myModule.FullyQualifiedName)
-        End Sub 'Main
-    End Class 'MyMainClass
+        End Sub
+    End Class
 End Namespace 'ReflectionModule_Examples
 ' </snippet1>

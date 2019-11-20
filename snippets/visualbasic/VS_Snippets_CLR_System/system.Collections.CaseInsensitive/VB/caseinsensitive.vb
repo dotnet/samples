@@ -43,9 +43,9 @@ Public Class SamplesHashtable
       Console.WriteLine("first is in myHT3: {0}", myHT3.ContainsKey("first"))
       Console.WriteLine("first is in myHT4: {0}", myHT4.ContainsKey("first"))
 
-   End Sub 'Main 
+   End Sub
 
-End Class 'SamplesHashtable
+End Class
 
 
 'This code produces the following output.  Results vary depending on the system's culture settings.

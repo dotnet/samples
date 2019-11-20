@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Drawing
+﻿Imports System.Drawing
 Imports System.Drawing.Design
 Imports System.ComponentModel
 Imports System.Windows.Forms
@@ -13,7 +12,7 @@ Public Class Class1
         GetType(UITypeEditor))> _
     Public Class MyImage
         ' Insert code here.
-    End Class 'MyImage
+    End Class
     ' </Snippet1>
     ' <Snippet2>
     Public Shared Sub Main()
@@ -29,6 +28,6 @@ Public Class Class1
         Dim myAttribute As EditorAttribute = CType(attributes(GetType(EditorAttribute)), EditorAttribute)
         Console.WriteLine(("The editor for this class is: " & myAttribute.EditorTypeName))
 
-    End Sub 'Main
+    End Sub
     ' </Snippet2>
-End Class 'Class1 
+End Class

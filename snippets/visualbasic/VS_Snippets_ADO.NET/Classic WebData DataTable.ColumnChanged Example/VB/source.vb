@@ -1,6 +1,5 @@
 ﻿Imports System.Data
 Imports System.Data.OleDb
-Imports Microsoft.VisualBasic
 
 Public Class Sample
 
@@ -10,7 +9,7 @@ End Sub
 
 ' <Snippet1>
 Private Shared Sub DataTableColumnChanged()
-	Dim custTable As DataTable = New DataTable("Customers")
+	Dim custTable As New DataTable("Customers")
 	' add columns
 	custTable.Columns.Add("id", Type.GetType("System.Int32"))
 	custTable.Columns.Add("name", Type.GetType("System.String"))

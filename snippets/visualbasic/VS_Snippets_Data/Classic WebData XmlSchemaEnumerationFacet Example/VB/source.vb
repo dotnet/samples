@@ -70,11 +70,11 @@ Class XMLSchemaExamples
         Dim nsmgr As New XmlNamespaceManager(New NameTable())
         nsmgr.AddNamespace("xs", "http://www.w3.org/2001/XMLSchema")
         compiledSchema.Write(Console.Out, nsmgr)
-    End Sub 'Main
+    End Sub
 
 
     Public Shared Sub ValidationCallbackOne(ByVal sender As Object, ByVal args As ValidationEventArgs)
         Console.WriteLine(args.Message)
-    End Sub 'ValidationCallbackOne
-End Class 'XMLSchemaExamples
+    End Sub
+End Class
 ' </Snippet1>

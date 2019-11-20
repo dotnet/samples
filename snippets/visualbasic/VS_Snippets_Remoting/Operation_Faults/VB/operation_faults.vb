@@ -41,5 +41,5 @@ Public Class MyOperationClass
       myServiceDescription.Write("Operation_Faults_Output_VB.wsdl")
       Console.WriteLine _
            ("WSDL file with name 'Operation_Faults_Output_VB.wsdl' file created Successfully")
-   End Sub 'Main
-End Class 'MyOperationClass
+   End Sub
+End Class

@@ -17,7 +17,7 @@ Namespace Examples.VB.WebControls.Design
     <Designer(GetType(Examples.VB.WebControls.Design.MyPanelContainerDesigner))> _
     Public Class MyPanelContainer
         Inherits Panel
-    End Class ' MyPanelContainer
+    End Class
     ' </snippet2>
 
     ' Override members of the PanelContainerDesigner.
@@ -68,8 +68,8 @@ Namespace Examples.VB.WebControls.Design
 
             MyBase.Initialize(component)
 
-        End Sub ' Initialize
+        End Sub
         ' </snippet5>
-    End Class ' MyPanelContainerDesigner
+    End Class
 End Namespace ' Examples.VB.WebControls.Design
 ' </snippet1>

@@ -17,8 +17,8 @@ Class Alice
             End Using
         End If
 
-    End Sub 'Main
-End Class 'Alice 
+    End Sub
+End Class
 
 
 Public Class Bob
@@ -33,6 +33,6 @@ Public Class Bob
                 End If
         End Using
 
-    End Sub 'Receive
-End Class 'Bob 
+    End Sub
+End Class
 '</Snippet1>

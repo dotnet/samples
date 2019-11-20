@@ -12,8 +12,6 @@
 Imports System.Net
 Imports System.IO
 Imports System.Text
-Imports Microsoft.VisualBasic
-
 
 Class HttpWebRequest_IfModifiedSince
     
@@ -73,5 +71,5 @@ Class HttpWebRequest_IfModifiedSince
             Console.WriteLine("Source  :{0}", e.Source)
             Console.WriteLine("Message :{0}", e.Message)
         End Try
-    End Sub ' Main 
-End Class ' HttpWebRequest_IfModifiedSince
+    End Sub
+End Class

@@ -7,12 +7,12 @@ Namespace Ambiguity
         'The first overload is typed to an Int32
         Overloads Public Shared Sub Mymethod(number As Int32)
             Console.WriteLine("I am from 'Int32' method")
-        End Sub 'Mymethod
+        End Sub
 
         'The second overload is typed to a string
         Overloads Public Shared Sub Mymethod(alpha As String)
             Console.WriteLine("I am from 'string' method.")
-        End Sub 'Mymethod
+        End Sub
 
         Public Shared Sub Main()
             Try
@@ -39,8 +39,8 @@ Namespace Ambiguity
                 Console.WriteLine(vbNewLine + "Some other exception.")
             End Try
             Return
-        End Sub 'Main
-    End Class 'Myambiguous
+        End Sub
+    End Class
 End Namespace
 ' This code produces the following output:
 '

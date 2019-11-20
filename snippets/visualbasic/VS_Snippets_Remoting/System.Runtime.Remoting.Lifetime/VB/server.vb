@@ -11,7 +11,7 @@ Public Class Server
    Public Shared Sub Main()
       Dim myServer As New Server()
       myServer.Run()
-   End Sub 'Main
+   End Sub
 
 <SecurityPermission(SecurityAction.Demand, Flags:=SecurityPermissionFlag.Infrastructure)> _ 
    Public Sub Run()
@@ -30,7 +30,7 @@ Public Class Server
       Console.WriteLine("GC'ing.")
       GC.Collect()
       GC.WaitForPendingFinalizers()
-   End Sub 'Run
+   End Sub
    
-End Class 'Server
+End Class
 ' </Snippet2>

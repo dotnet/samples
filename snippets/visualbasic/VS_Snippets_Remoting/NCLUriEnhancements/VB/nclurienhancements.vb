@@ -26,7 +26,7 @@ Public Class Test
         ' IsBaseOf
         SampleIsBaseOf()
     
-    End Sub 'Main
+    End Sub
     
     
     
@@ -50,7 +50,7 @@ Public Class Test
         Dim combinedUri As New Uri(absoluteUri, relativeUri)
         Console.WriteLine(combinedUri.AbsoluteUri)
     
-    End Sub 'SampleConstructor
+    End Sub
      '</snippet2>
     
     ' OriginalString
@@ -68,7 +68,7 @@ Public Class Test
         ' The following outputs "HTTP://www.ConToso.com:80//thick%20and%20thin.htm".
         Console.WriteLine(uriAddress.OriginalString)
     
-    End Sub 'SampleOriginalString
+    End Sub
      '</snippet3>
     
     ' DNSSafeHost
@@ -84,7 +84,7 @@ Public Class Test
         ' The following outputs "fe80::200:39ff:fe36:1a2d%254".
         Console.WriteLine(address.DnsSafeHost)
     
-    End Sub 'SampleDNSSafeHost
+    End Sub
      '</snippet4>
     
     
@@ -105,7 +105,7 @@ Public Class Test
             Console.WriteLine("{0} is not equal to {1}", address2.ToString(), address3.ToString())
         End If
      '</snippet5>
-    End Sub 'SampleOperatorEqual
+    End Sub
     
     
     ' IsBaseOf
@@ -122,5 +122,5 @@ Public Class Test
             Console.WriteLine("{0} is the base of {1}", baseUri, uriAddress)
         End If
      '</snippet6>
-    End Sub 'SampleIsBaseOf
-End Class 'Test
+    End Sub
+End Class

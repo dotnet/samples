@@ -3,17 +3,17 @@ Namespace UsageLibrary
 Public Class ABaseType
    
    Public Sub BasePublicMethod(argument1 As Integer)
-   End Sub 'BasePublicMethod
+   End Sub
     
-End Class 'ABaseType 
+End Class
 
 Public Class ADerivedType
    Inherits ABaseType
    
    ' Violates rule DoNotDecreaseInheritedMemberVisibility.
    Private Shadows Sub BasePublicMethod(argument1 As Integer)
-   End Sub 'BasePublicMethod
-End Class 'ADerivedType
+   End Sub
+End Class
 
 End Namespace
 '</Snippet1>

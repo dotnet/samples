@@ -85,6 +85,6 @@ Public Class FieldBuilder_Sample
       Catch e As Exception
          Console.WriteLine("Exception Caught: " & e.Message)
       End Try
-   End Sub 'Main
-End Class 'FieldBuilder_Sample
+   End Sub
+End Class
 ' </Snippet1>

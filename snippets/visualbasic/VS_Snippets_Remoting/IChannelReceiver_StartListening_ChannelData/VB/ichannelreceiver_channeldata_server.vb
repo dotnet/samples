@@ -45,8 +45,8 @@ Namespace RemotingSamples
                   continueOption = False
             End Select
             End While
-        End Sub 'Main
-    End Class 'MyIChannelReceiverChannelDataServerClass
+        End Sub
+    End Class
 
 ' <Snippet1>
    Class MyCustomChannel
@@ -73,7 +73,7 @@ Namespace RemotingSamples
          ' Create the thread 'myThread'.
          myThread = New Thread(New ThreadStart(AddressOf myTcpListener.Start))
          Me.StartListening(Nothing)
-         End Sub 'New
+         End Sub
 
          Public ReadOnly Property ChannelName() As String Implements IChannelReceiver.ChannelName
          Get
@@ -126,7 +126,7 @@ Namespace RemotingSamples
              myListening = True
              Console.WriteLine("Server Started Listening !!!")
          End If
-      End Sub 'StartListening
+      End Sub
 ' </Snippet4>
 
 ' <Snippet5>
@@ -137,8 +137,8 @@ Namespace RemotingSamples
              myListening = False
              Console.WriteLine("Server Stopped Listening !!!")
          End If
-      End Sub 'StopListening
+      End Sub
 ' </Snippet5>
-   End Class 'MyCustomChannel 
+   End Class
 ' </Snippet1>
 End Namespace 'RemotingSamples

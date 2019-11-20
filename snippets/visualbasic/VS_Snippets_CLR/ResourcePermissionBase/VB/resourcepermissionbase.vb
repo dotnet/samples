@@ -10,20 +10,20 @@ Imports System.Collections
 
     Public Sub New()
         SetNames()
-    End Sub 'New
+    End Sub
 
 
     Public Sub New(ByVal state As PermissionState)
         MyBase.New(state)
         SetNames()
-    End Sub 'New
+    End Sub
 
 
     '<Snippet2>
     Public Sub New(ByVal permissionAccess As MailslotPermissionAccess, ByVal name As String, ByVal machineName1 As String)
         SetNames()
         Me.AddPermissionAccess(New MailslotPermissionEntry(permissionAccess, name, machineName1))
-    End Sub 'New
+    End Sub
 
 
     Public Sub New(ByVal permissionAccessEntries() As MailslotPermissionEntry)
@@ -36,7 +36,7 @@ Imports System.Collections
         While index < permissionAccessEntries.Length
             Me.AddPermissionAccess(permissionAccessEntries(index))
         End While
-    End Sub 'New 
+    End Sub
     '</Snippet2>
 
     Public ReadOnly Property PermissionEntries() As ArrayList
@@ -53,24 +53,24 @@ Imports System.Collections
 
     Friend Overloads Sub AddPermissionAccess(ByVal entry As MailslotPermissionEntry)
         MyBase.AddPermissionAccess(entry.GetBaseEntry())
-    End Sub 'AddPermissionAccess
+    End Sub
 
 
     Friend Shadows Sub Clear()
         MyBase.Clear()
-    End Sub 'Clear
+    End Sub
 
 
     Friend Overloads Sub RemovePermissionAccess(ByVal entry As MailslotPermissionEntry)
         MyBase.RemovePermissionAccess(entry.GetBaseEntry())
-    End Sub 'RemovePermissionAccess
+    End Sub
 
 
     Private Sub SetNames()
         Me.PermissionAccessType = GetType(MailslotPermissionAccess)
         Me.TagNames = New String() {"Name", "Machine"}
-    End Sub 'SetNames
-End Class 'MailslotPermission
+    End Sub
+End Class
 
 <Flags()> Public Enum MailslotPermissionAccess
     None = 0
@@ -88,14 +88,14 @@ End Enum 'MailslotPermissionAccess
         Me.permissionAccessVar = permissionAccess
         Me.nameVar = name
         Me.machineNameVar = machineName1
-    End Sub 'New
+    End Sub
 
 
     Friend Sub New(ByVal baseEntry As ResourcePermissionBaseEntry)
         Me.permissionAccessVar = CType(baseEntry.PermissionAccess, MailslotPermissionAccess)
         Me.nameVar = baseEntry.PermissionAccessPath(0)
         Me.machineNameVar = baseEntry.PermissionAccessPath(1)
-    End Sub 'New
+    End Sub
 
 
     Public ReadOnly Property Name() As String
@@ -125,5 +125,5 @@ End Enum 'MailslotPermissionAccess
     End Function 'GetBaseEntry
 
 
-End Class 'MailslotPermissionEntry
+End Class
 '</snippet1>

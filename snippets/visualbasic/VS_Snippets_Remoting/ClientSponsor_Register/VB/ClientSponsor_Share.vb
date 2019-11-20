@@ -13,5 +13,5 @@ Namespace RemotingSamples
          Console.WriteLine("Hello " + name)
          Return "Hello " + name
       End Function 'HelloMethod
-   End Class 'HelloService
+   End Class
 End Namespace 'RemotingSamples

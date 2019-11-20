@@ -12,8 +12,6 @@
 '
 
 Imports System.Net
-Imports Microsoft.VisualBasic
-
 
 Public Class WebHeaderCollection_Remove
     
@@ -63,7 +61,7 @@ Public Class WebHeaderCollection_Remove
             Console.WriteLine(e.Message)
         End Try
 
-    End Sub 'Main
+    End Sub
 ' </Snippet1>   
     
     Public Shared Sub printHeaders(headers As WebHeaderCollection)
@@ -74,5 +72,5 @@ Public Class WebHeaderCollection_Remove
         For i = 0 To headers.Count - 1
             Console.WriteLine((ControlChars.Tab + headers.AllKeys(i) + " : " + headers(i)))
         Next i
-    End Sub 'printHeaders 
-End Class 'WebHeaderCollection_Remove
+    End Sub
+End Class

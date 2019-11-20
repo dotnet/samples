@@ -1,7 +1,6 @@
 ﻿'<Snippet1>
 Imports System.Reflection
 Imports System.Collections.Generic
-Imports Microsoft.VisualBasic
 
 Public Class Test
     Public Shared Sub Main()

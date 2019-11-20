@@ -23,9 +23,9 @@ Public Class SamplesSortKey
       Console.WriteLine("Comparing ""llama"" in en-US and in es-ES with international sort : {0}", SortKey.Compare(mySK1, mySK2))
       Console.WriteLine("Comparing ""llama"" in en-US and in es-ES with traditional sort   : {0}", SortKey.Compare(mySK1, mySK3))
 
-   End Sub 'Main 
+   End Sub
 
-End Class 'SamplesSortKey
+End Class
 
 
 'This code produces the following output.

@@ -19,7 +19,7 @@ Public Class Server
             Dim newOrder As Order = CType(queue.Receive().Body, Order)
             newOrder.ShipItems()
         End While
-    End Sub 'Main
+    End Sub
     
     
     ' Creates the queue if it does not already exist.
@@ -27,8 +27,8 @@ Public Class Server
         If Not MessageQueue.Exists(path) Then
             MessageQueue.Create(path)
         End If
-    End Sub 'EnsureQueueExists
-End Class 'Server
+    End Sub
+End Class
 ' </Snippet1>
 
 Public Class Order

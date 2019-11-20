@@ -15,7 +15,7 @@ Class DiscoveryClientDocumentCollectionSample
    
    Shared Sub Main()
       Run()
-   End Sub 'Main
+   End Sub
 
    <PermissionSetAttribute(SecurityAction.Demand, Name := "FullTrust")> _
    Shared Sub Run()
@@ -56,6 +56,6 @@ Class DiscoveryClientDocumentCollectionSample
       For iIndex = 0 To myObjectCollection1.Length - 1
          Console.WriteLine(myObjectCollection1(iIndex))
       Next iIndex
-   End Sub 'Run
-End Class 'DiscoveryClientDocumentCollectionSample
+   End Sub
+End Class
 ' </Snippet1>

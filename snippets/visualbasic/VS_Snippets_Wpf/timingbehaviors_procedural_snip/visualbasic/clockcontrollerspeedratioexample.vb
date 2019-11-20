@@ -4,7 +4,6 @@
 '  the speed of a clock
 '
 
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Media
@@ -91,7 +90,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			' List for speed changes.
 			AddHandler myControllableClock.CurrentGlobalSpeedInvalidated, AddressOf myControllableClock_currentGlobalSpeedInvalidated
 
-			Me.Content = mainPanel
+			Content = mainPanel
 		End Sub
 
 

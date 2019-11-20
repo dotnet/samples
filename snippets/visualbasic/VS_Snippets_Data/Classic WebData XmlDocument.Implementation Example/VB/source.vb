@@ -15,5 +15,5 @@ Public Class Class1
         doc1.Load("books.xml")
         Dim doc2 As XmlDocument = doc1.Implementation.CreateDocument()
         ' </Snippet1>
-    End Sub 'Method1 
-End Class 'Class1
+    End Sub
+End Class

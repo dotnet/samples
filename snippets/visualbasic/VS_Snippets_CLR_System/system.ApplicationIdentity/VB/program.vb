@@ -51,10 +51,10 @@ Public Class Program
         '</Snippet6>
         Console.Read()
     
-    End Sub 'Main
+    End Sub
     
     Public Sub Run() 
         Main(New String() {})  
-    End Sub 'Run
-End Class 'Program
+    End Sub
+End Class
 '</Snippet1>

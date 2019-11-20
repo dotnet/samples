@@ -16,7 +16,7 @@ Imports System.Web.Services.Discovery
 Class DiscoveryClientReferenceCollection_Keys
    Shared Sub Main()
       Run()
-   End Sub 'Main
+   End Sub
 
    <PermissionSetAttribute(SecurityAction.Demand, Name := "FullTrust")> _
    Shared Sub Run()
@@ -70,5 +70,5 @@ Class DiscoveryClientReferenceCollection_Keys
           " collection.", myStringUrl1)
       End If
 ' </Snippet3>
-   End Sub 'Run
-End Class 'DiscoveryClientReferenceCollection_Keys 
+   End Sub
+End Class

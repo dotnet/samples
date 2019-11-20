@@ -16,7 +16,7 @@ Partial Class Form1 '
         End If
         MyBase.Dispose(disposing)
 
-    End Sub 'Dispose
+    End Sub
 
 #Region "Windows Form Designer generated code"
 
@@ -102,7 +102,7 @@ Partial Class Form1 '
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
-    End Sub 'InitializeComponent 
+    End Sub
 
 #End Region
 
@@ -112,5 +112,5 @@ Partial Class Form1 '
     Private label1 As System.Windows.Forms.Label
     Private WithEvents btnMisc As System.Windows.Forms.Button
     Private treeView1 As System.Windows.Forms.TreeView
-End Class 'Form1
+End Class
 

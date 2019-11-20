@@ -1,7 +1,5 @@
 ﻿'<Snippet2>
 ' Example of the Buffer.SetByte method.
-Imports Microsoft.VisualBasic
-
 Module SetByteDemo
 
     ' Display the array contents in hexadecimal.

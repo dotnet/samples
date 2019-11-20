@@ -25,5 +25,5 @@ Public Class SampleServer
       Console.WriteLine("** Press enter to end the server process. **")
       Console.ReadLine()
       ' </Snippet4>
-   End Sub 'Main 
-End Class 'SampleServer
+   End Sub
+End Class

@@ -7,7 +7,6 @@
 ' Adds the same binding back again into the instance and writes to another temporary file.
 
 Imports System.Web.Services.Description
-Imports Microsoft.VisualBasic
 
 Class [MyClass]
    
@@ -40,5 +39,5 @@ Class [MyClass]
       ' </Snippet4>
       myServiceDescription = Nothing
       myBinding = Nothing
-   End Sub 'Main 
-End Class '[MyClass]
+   End Sub
+End Class

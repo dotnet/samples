@@ -23,7 +23,7 @@ Imports System.Reflection.Emit
 '       
 '       Me.x = ix
 '       Me.y = iy
-'    End Sub 'New
+'    End Sub
 '     
 '    
 '    Public Function DotProduct(p As Point) As Integer
@@ -50,8 +50,8 @@ Imports System.Reflection.Emit
 '       Dim p2 As New Point(x2, y2)
 '       
 '       Console.WriteLine("({0}, {1}) . ({2}, {3}) = {4}.", x1, y1, x2, y2, p1.DotProduct(p2))
-'    End Sub 'Main
-' End Class 'Point 
+'    End Sub
+' End Class
 ' ---
 Class AssemblyBuilderDemo
    
@@ -279,9 +279,9 @@ Class AssemblyBuilderDemo
       myType.InvokeMember("PointMain", BindingFlags.InvokeMethod, _
 			  Nothing, ptInstance, New Object() {})
 
-   End Sub 'Main
+   End Sub
 
-End Class 'AssemblyBuilderDemo
+End Class
 
 
 

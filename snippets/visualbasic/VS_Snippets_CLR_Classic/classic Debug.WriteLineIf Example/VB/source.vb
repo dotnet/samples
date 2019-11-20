@@ -17,7 +17,7 @@ Public Class Form1
         
         ' Write a second message if the TraceSwitch level is set to Verbose.
         Debug.WriteLineIf(generalSwitch.TraceVerbose, "My second error message.")
-    End Sub 'MyErrorMethod
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

@@ -8,8 +8,6 @@
 
 Imports System.IO
 Imports System.Net
-Imports Microsoft.VisualBasic
-
 
 Class HttpWebRequest_AddRange_int
     
@@ -36,7 +34,7 @@ Class HttpWebRequest_AddRange_int
             Console.WriteLine(ControlChars.Cr + "Exception Caught!")
             Console.WriteLine("Message :{0} ", e.Message)
         End Try
-    End Sub ' Main
-End Class ' HttpWebRequest_AddRange_int
+    End Sub
+End Class
 
 

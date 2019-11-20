@@ -10,7 +10,6 @@ Public Class Test
                 sw.WriteLine("Hello")
                 sw.WriteLine("And")
                 sw.WriteLine("Welcome")
-                sw.Flush()
            End Using
         End If
 

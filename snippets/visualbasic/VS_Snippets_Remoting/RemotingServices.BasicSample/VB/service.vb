@@ -15,6 +15,6 @@ Public Class SampleWellKnown
         Return a + b
     
     End Function 'Add
-End Class 'SampleWellKnown
+End Class
 
 End Namespace

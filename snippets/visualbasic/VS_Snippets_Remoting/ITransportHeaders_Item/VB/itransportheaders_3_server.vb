@@ -79,9 +79,9 @@ Class MyITransportHeadersClass
       Catch ex As Exception
          Console.WriteLine("The following exception is raised on the server side: " + ex.Message)
       End Try
-   End Sub 'Main
+   End Sub
 ' </Snippet3>
 ' </Snippet2>
-End Class 'MyITransportHeadersClass
+End Class
 
 ' </Snippet1>

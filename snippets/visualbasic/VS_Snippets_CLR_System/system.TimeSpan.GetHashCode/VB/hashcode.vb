@@ -1,7 +1,5 @@
 ﻿'<Snippet1>
 ' Example for the TimeSpan.GetHashCode( ) method.
-Imports Microsoft.VisualBasic
-
 Module GetHashCode
     
     Sub DisplayHashCode( interval As TimeSpan )

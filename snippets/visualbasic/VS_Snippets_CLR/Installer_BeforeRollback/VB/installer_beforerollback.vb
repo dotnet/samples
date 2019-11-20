@@ -22,7 +22,7 @@ Public Class MyInstallerClass
       AddHandler Me.BeforeRollback, AddressOf MyInstaller_BeforeRollBack
       ' Attach the 'AfterRollback' event.
       AddHandler Me.AfterRollback, AddressOf MyInstaller_AfterRollback
-   End Sub 'New
+   End Sub
 
 
    ' Event handler for 'BeforeRollback' event.
@@ -30,35 +30,35 @@ Public Class MyInstallerClass
       Console.WriteLine("")
       Console.WriteLine("BeforeRollback Event occurred.")
       Console.WriteLine("")
-   End Sub 'MyInstaller_BeforeRollBack
+   End Sub
 
    ' Event handler for 'AfterRollback' event.
    Private Sub MyInstaller_AfterRollback(sender As Object, e As InstallEventArgs)
       Console.WriteLine("")
       Console.WriteLine("AfterRollback Event occurred.")
       Console.WriteLine("")
-   End Sub 'MyInstaller_AfterRollback
+   End Sub
 
    ' Override the 'Install' method.
    Public Overrides Sub Install(savedState As IDictionary)
       MyBase.Install(savedState)
       ' Explicitly throw an exception so that roll back is called.
       Throw New ArgumentException("Arg Exception")
-   End Sub 'Install
+   End Sub
 
    ' Override the 'Commit' method.
    Public Overrides Sub Commit(savedState As IDictionary)
       MyBase.Commit(savedState)
-   End Sub 'Commit
+   End Sub
 
    ' Override the 'Rollback' method.
    Public Overrides Sub Rollback(savedState As IDictionary)
       MyBase.Rollback(savedState)
-   End Sub 'Rollback
+   End Sub
 
    Public Shared Sub Main()
       Console.WriteLine("Usage : installutil.exe Installer_BeforeRollback.exe ")
-   End Sub 'Main
+   End Sub
 
-End Class 'MyInstallerClass
+End Class
 ' </Snippet1>

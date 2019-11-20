@@ -3,7 +3,6 @@ Imports System.Data
 Imports System.Data.OleDb
 Imports System.Data.Common
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
 
 Public Class Form1
     Inherits Form
@@ -31,7 +30,7 @@ Public Class Form1
                             & "SQLState: " & e.Errors(i).SQLState & ControlChars.Cr
          Next i
 
-        Dim log As System.Diagnostics.EventLog = New System.Diagnostics.EventLog()
+        Dim log As New System.Diagnostics.EventLog()
         log.Source = "My Application"
         log.WriteEntry(errorMessages)
         Console.WriteLine("An exception occurred. Please contact your system administrator.")

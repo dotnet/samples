@@ -23,7 +23,7 @@ Public Class UnmanagedAttribute
     ' Set the unmanaged type in the constructor.
     Public Sub New(ByVal type As UnmanagedType) 
         thisType = type
-    End Sub 'New
+    End Sub
     
     ' Define a property to get and set the UnmanagedType value.
     Public Property Win32Type() As UnmanagedType 
@@ -34,7 +34,7 @@ Public Class UnmanagedAttribute
             thisType = Win32Type
         End Set
     End Property
-End Class 'UnmanagedAttribute 
+End Class
 
 ' Create a class for an imported Win32 unmanaged function.
 Public Class Win32
@@ -44,7 +44,7 @@ Public Class Win32
                                       ByVal caption As String, _
                                       ByVal type As Integer) As Integer
     End Function 'MessageBox
-End Class 'Win32
+End Class
 
 Public Class AClass
     ' Add some attributes to Win32CallMethod.
@@ -52,8 +52,8 @@ Public Class AClass
      Unmanaged(UnmanagedType.User)>  _
     Public Sub Win32CallMethod() 
         Win32.MessageBox(0, "This is an unmanaged call.", "Caution!", 0)    
-    End Sub 'Win32CallMethod
-End Class 'AClass
+    End Sub
+End Class
 
 Class DemoClass
     Shared Sub Main(ByVal args() As String) 
@@ -80,8 +80,8 @@ Class DemoClass
                 End If
             Next attr
         End If
-    End Sub 'Main
-End Class 'DemoClass
+    End Sub
+End Class
 
 '
 'This code example produces the following results. 

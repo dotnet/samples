@@ -1,7 +1,6 @@
 ﻿'<snippet1>
 Imports System.IO
 Imports System.Xml
-Imports Microsoft.VisualBasic
 
 public class Sample
 

@@ -29,7 +29,7 @@ Public Class ObjectStateFormatterTest
         Dim base64StateString As String = formatter.Serialize(controlProperties)
 
         ' </snippet1>      
-    End Sub 'Main
+    End Sub
 
 
 
@@ -69,4 +69,4 @@ Public Class ObjectStateFormatterTest
     Private Sub LogEvent(ByVal message As String)
 
     End Sub
-End Class 'ObjectStateFormatterTest 
+End Class

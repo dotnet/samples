@@ -3,7 +3,6 @@ Option Explicit On
 
 Imports System.Drawing.Drawing2D
 Imports System.Drawing
-Imports System
 Imports System.Windows.Forms
 
 <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.Demand, Name:="FullTrust")> _

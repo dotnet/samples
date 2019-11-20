@@ -1,6 +1,5 @@
 ﻿' <Snippet6>
 
-Imports Microsoft.VisualBasic
 Namespace LibraryContractsAddInAdapters
 
 Public Class BookInfoAddInAdapter

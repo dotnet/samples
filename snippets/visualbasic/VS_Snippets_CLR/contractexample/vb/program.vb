@@ -72,7 +72,7 @@ Friend MustInherit Class IArrayContract
     Sub Clear() Implements IArray.Clear
         Contract.Ensures(CType(Me, IArray).Count = 0)
 
-    End Sub 'IArray.Clear
+    End Sub
 
 
     '<Snippet5>
@@ -81,7 +81,7 @@ Friend MustInherit Class IArrayContract
         Contract.Requires(index <= CType(Me, IArray).Count) ' For inserting immediately after the end.
         Contract.Ensures(CType(Me, IArray).Count = Contract.OldValue(CType(Me, IArray).Count) + 1)
 
-    End Sub 'IArray.Insert
+    End Sub
     '</Snippet5>
 
 
@@ -90,6 +90,6 @@ Friend MustInherit Class IArrayContract
         Contract.Requires(index < CType(Me, IArray).Count)
         Contract.Ensures(CType(Me, IArray).Count = Contract.OldValue(CType(Me, IArray).Count) - 1)
 
-    End Sub 'IArray.RemoveAt
-End Class 'IArrayContract
+    End Sub
+End Class
 '</Snippet1>

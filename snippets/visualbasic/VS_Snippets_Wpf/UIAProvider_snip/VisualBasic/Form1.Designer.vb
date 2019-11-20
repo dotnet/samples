@@ -17,7 +17,7 @@ Partial Class Form1
         End If
         MyBase.Dispose(disposing)
 
-    End Sub 'Dispose
+    End Sub
 
 #Region "Windows Form Designer generated code"
 
@@ -31,8 +31,8 @@ Partial Class Form1
         'Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         'Me.Text = "Form1"
 
-    End Sub 'InitializeComponent
+    End Sub
 
 #End Region
-End Class 'Form1
+End Class
 '

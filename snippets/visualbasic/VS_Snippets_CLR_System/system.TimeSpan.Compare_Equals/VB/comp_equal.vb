@@ -1,8 +1,6 @@
 ﻿'<Snippet2>
 ' Example of the TimeSpan.Compare( TimeSpan, TimeSpan ) and 
 ' TimeSpan.Equals( TimeSpan, TimeSpan ) methods.
-Imports Microsoft.VisualBasic
-
 Module TSCompareEqualsDemo
     
     Const dataFmt As String = "{0,-38}{1}"

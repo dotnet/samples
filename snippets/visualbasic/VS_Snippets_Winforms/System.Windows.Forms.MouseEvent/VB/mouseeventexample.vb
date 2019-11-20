@@ -1,5 +1,4 @@
 ﻿'<Snippet1>
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 
@@ -27,7 +26,7 @@ Namespace MouseEvent
         <System.STAThread()>  _
         Public Shared Sub Main()
             System.Windows.Forms.Application.Run(New Form1())
-        End Sub 'Main
+        End Sub
 
         Public Sub New()
 
@@ -124,7 +123,7 @@ Namespace MouseEvent
             label8.Text = "SystemInformation.MouseWheelScrollLines: " + SystemInformation.MouseWheelScrollLines.ToString()
             label9.Text = "SystemInformation.NativeMouseWheelSupport: " + SystemInformation.NativeMouseWheelSupport.ToString()
             '</Snippet6>
-        End Sub 'New
+        End Sub
 
         '<Snippet2>    
         Private Sub panel1_MouseDown(sender As Object, e As System.Windows.Forms.MouseEventArgs) Handles panel1.MouseDown
@@ -223,6 +222,6 @@ Namespace MouseEvent
             panel1.Invalidate()
         End Sub
         
-    End Class 'Form1
+    End Class
 End Namespace
 '</Snippet1>

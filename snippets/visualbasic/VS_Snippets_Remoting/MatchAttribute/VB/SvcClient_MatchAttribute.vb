@@ -16,7 +16,6 @@
 ' parsed with the help of 'MatchAttribute' class and the contents
 ' are available in the 'Headers' instance returned by 'GetHeaders'
 ' method.
-Imports Microsoft.VisualBasic
 ' <Snippet1>
 Imports System.Web.Services.Protocols
 
@@ -26,7 +25,7 @@ Public Class MatchAttribute_Example
 
     Public Sub New()
         Url = "http://localhost"
-    End Sub 'New
+    End Sub
 
     <HttpMethodAttribute(GetType(TextReturnReader), GetType(UrlParameterWriter))> _
     Public Function GetHeaders() As Headers
@@ -44,7 +43,7 @@ Public Class MatchAttribute_Example
     Public Function EndGetHeaders(ByVal asyncResult As System.IAsyncResult) As Headers
         Return CType(EndInvoke(asyncResult), Headers)
     End Function 'EndGetHeaders
-End Class 'MatchAttribute_Example    
+End Class
 ' <Snippet2>
 ' <Snippet3>
 ' <Snippet4>
@@ -74,7 +73,7 @@ Public Class Headers
 
     <MatchAttribute("H3 ([^=]*)=([^>]*)", Group:=2)> _
     Public Value As String
-End Class 'Headers
+End Class
 ' </Snippet7>
 ' </Snippet6>
 ' </Snippet5>
@@ -117,5 +116,5 @@ Public Class SvcClient
         Next i
         Console.WriteLine(ControlChars.NewLine + "The H3 html tag has attribute : {0} = {1}", _
                                                         myHeaders.Attribute, myHeaders.Value)
-    End Sub 'Main
-End Class 'SvcClient
+    End Sub
+End Class

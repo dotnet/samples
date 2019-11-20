@@ -8,7 +8,6 @@
 Imports System.Net
 Imports System.IO
 Imports System.Text
-Imports Microsoft.VisualBasic
 Imports System.Environment
 
 
@@ -67,5 +66,5 @@ Class FileWebRequest_ContentLen
                 Console.WriteLine(("The UriFormatException is :" + e.Message))
             End Try
         End If
-    End Sub ' Main
-End Class ' FileWebRequest_ContentLen
+    End Sub
+End Class

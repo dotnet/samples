@@ -3,7 +3,6 @@ Imports System.Text
 Imports System.IO
 Imports System.Net
 Imports System.Net.Sockets
-Imports Microsoft.VisualBasic
 
 Public Class GetSocket
    
@@ -89,6 +88,6 @@ Public Class GetSocket
       Dim result As String = SocketSendReceive(host, port)
       
       Console.WriteLine(result)
-   End Sub 'Main
+   End Sub
 End Class  
 '</Snippet1>

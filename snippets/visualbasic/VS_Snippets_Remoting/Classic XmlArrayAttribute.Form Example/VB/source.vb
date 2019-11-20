@@ -36,16 +36,16 @@ Public Class Enterprises
             mycompanies = value
         End Set
     End Property
-End Class 'Enterprises
+End Class
  
 Public Class Winery
     Public Name As String
-End Class 'Winery
+End Class
 
 
 Public Class VacationCompany
     Public Name As String
-End Class 'VacationCompany
+End Class
 
 
 Public Class Run
@@ -53,7 +53,7 @@ Public Class Run
     Public Shared Sub Main()
         Dim test As New Run()
         test.WriteEnterprises("MyEnterprises.xml")
-    End Sub 'Main
+    End Sub
     
     
     Public Sub WriteEnterprises(filename As String)
@@ -88,7 +88,7 @@ Public Class Run
         ' Serializes the class, and closes the TextWriter.
         mySerializer.Serialize(writer, myEnterprises, ns)
         writer.Close()
-    End Sub 'WriteEnterprises
+    End Sub
     
     
     Public Sub ReadEnterprises(filename As String)
@@ -103,6 +103,6 @@ Public Class Run
         For i = 0 To myEnterprises.Companies.Length - 1
             Console.WriteLine(myEnterprises.Companies(i).Name)
         Next i
-    End Sub 'ReadEnterprises
-End Class 'Run
+    End Sub
+End Class
 ' </Snippet1>

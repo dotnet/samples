@@ -5,8 +5,8 @@ Class Sample
       Console.WriteLine()
       '  <-- Keep this information secure! -->
       Console.WriteLine("SystemDirectory: {0}", Environment.SystemDirectory)
-   End Sub 'Main
-End Class 'Sample
+   End Sub
+End Class
 '
 'This example produces the following results:
 '

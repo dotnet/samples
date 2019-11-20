@@ -36,7 +36,7 @@ Module Module1
         Console.WriteLine("   With myCIintl.CompareInfo.Compare: {0}", myCIintl.CompareInfo.Compare("llegar", "lugar"))
         Console.WriteLine("   With myCItrad.CompareInfo.Compare: {0}", myCItrad.CompareInfo.Compare("llegar", "lugar"))
 
-    End Sub 'Main 
+    End Sub
 
 
 

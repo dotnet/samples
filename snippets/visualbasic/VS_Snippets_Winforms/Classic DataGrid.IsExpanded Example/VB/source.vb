@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
 
@@ -21,7 +20,7 @@ Public Class Form1
                 Console.WriteLine(("Row " & i & " was expanded"))
             End If
         Next i
-    End Sub 'TextExpanded
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

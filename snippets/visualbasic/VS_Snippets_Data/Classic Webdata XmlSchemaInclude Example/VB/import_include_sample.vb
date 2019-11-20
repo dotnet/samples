@@ -18,7 +18,7 @@ Public Class ImportIncludeSample
             End If
         End If
         Console.WriteLine(args.Message)
-    End Sub 'ValidationCallBack
+    End Sub
 
 
     Public Shared Sub Main()
@@ -53,8 +53,8 @@ Public Class ImportIncludeSample
         nsmgr.AddNamespace("xs", "http://www.w3.org/2001/XMLSchema")
         compiledSchema.Write(Console.Out, nsmgr)
 
-    End Sub 'Main 
-End Class 'ImportIncludeSample ' Main() 
+    End Sub
+End Class
 
 'ImportIncludeSample
 '</snippet1>

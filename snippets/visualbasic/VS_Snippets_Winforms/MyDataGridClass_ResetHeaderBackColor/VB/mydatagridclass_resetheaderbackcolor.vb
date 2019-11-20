@@ -13,7 +13,6 @@
 '	Displays the 'RowHeaderWidth', depending on the selection of 
 '	buttons.
 '
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -50,7 +49,7 @@ Namespace MyDataGridClass
         Public Sub New()
             InitializeComponent()
             SetUp()
-        End Sub 'New
+        End Sub
 
         ' <summary>
         ' Clean up any resources being used.
@@ -62,7 +61,7 @@ Namespace MyDataGridClass
                 End If
             End If
             MyBase.Dispose(disposing)
-        End Sub 'Dispose
+        End Sub
 
 
 
@@ -185,20 +184,20 @@ Namespace MyDataGridClass
             Me.Text = "Grid Control"
             CType(Me.myDataGrid, ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
-        End Sub 'InitializeComponent
+        End Sub
 
         ' <summary>
         ' The main entry point for the application.
         ' </summary>
         <STAThread()> Shared Sub Main()
             Application.Run(New MyDataGridClass_ResetHeaderBackColor())
-        End Sub 'Main
+        End Sub
 
         Private Sub SetUp()
             MakeDataSet()
             myDataGrid.SetDataBinding(myDataSet, "Customers")
             myDataGrid.ReadOnly = True
-        End Sub 'SetUp
+        End Sub
 
 
         Private Sub MakeDataSet()
@@ -225,7 +224,7 @@ Namespace MyDataGridClass
             Next i
             ' Give the customer a name.
             myTable.Rows(0)("custName") = "Customer"
-        End Sub 'MakeDataSet
+        End Sub
 
 ' <Snippet1>		
         Private Sub button1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles button1.Click
@@ -240,12 +239,12 @@ Namespace MyDataGridClass
             myColorDialog.ShowDialog()
             ' Set the header background color.   
             myDataGrid.HeaderBackColor = myColorDialog.Color
-        End Sub 'button1_Click
+        End Sub
 
         ' Reset the header background color.
         Private Sub button2_Click(ByVal sender As Object, ByVal e As EventArgs) Handles button2.Click
             myDataGrid.ResetHeaderBackColor()
-        End Sub 'button2_Click
+        End Sub
 
 ' </Snippet1>		
 ' <Snippet2>
@@ -261,31 +260,31 @@ Namespace MyDataGridClass
             myColorDialog.ShowDialog()
             ' Set the header foreground color.
             myDataGrid.HeaderForeColor = myColorDialog.Color
-        End Sub 'button3_Click
+        End Sub
 
         ' Reset the header foregroundcolor.
         Private Sub button4_Click(ByVal sender As Object, ByVal e As EventArgs) Handles button4.Click
             myDataGrid.ResetHeaderForeColor()
-        End Sub 'button4_Click
+        End Sub
 
 ' </Snippet2>
 ' <Snippet3>
         ' Set the header font to Arial with size 20.
         Private Sub button6_Click(ByVal sender As Object, ByVal e As EventArgs) Handles button6.Click
             myDataGrid.HeaderFont = New Font("Arial", 20)
-        End Sub 'button6_Click
+        End Sub
 
         ' Reset the header font.
         Private Sub button5_Click(ByVal sender As Object, ByVal e As EventArgs) Handles button5.Click
             myDataGrid.ResetHeaderFont()
-        End Sub 'button5_Click
+        End Sub
 
 ' </Snippet3>
 ' <Snippet4>
         ' Select the first row.
         Private Sub button7_Click(ByVal sender As Object, ByVal e As EventArgs) Handles button7.Click
             myDataGrid.Select(0)
-        End Sub 'button7_Click
+        End Sub
 
         ' <Snippet5>
         ' Check if the first row is selected.
@@ -295,12 +294,12 @@ Namespace MyDataGridClass
             Else
                 MessageBox.Show("Row not selected", "Message", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             End If
-        End Sub 'button8_Click
+        End Sub
 
         ' Deselect the first row.
         Private Sub button11_Click(ByVal sender As Object, ByVal e As EventArgs) Handles button11.Click
             myDataGrid.UnSelect(0)
-        End Sub 'button11_Click
+        End Sub
 
 ' </Snippet4>
 ' </Snippet5>
@@ -309,7 +308,7 @@ Namespace MyDataGridClass
         Private Sub button9_Click(ByVal sender As Object, ByVal e As EventArgs) Handles button9.Click
             Dim myRowHeaderWidth As Int32 = myDataGrid.RowHeaderWidth
             MessageBox.Show("Width of row headers is: " + myRowHeaderWidth.ToString(), "Message", MessageBoxButtons.OK, 	    MessageBoxIcon.Exclamation)
-        End Sub 'button9_Click
+        End Sub
 ' </Snippet6>		
-    End Class 'MyDataGridClass_ResetHeaderBackColor
+    End Class
 End Namespace 'MyDataGridClass

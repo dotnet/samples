@@ -54,7 +54,7 @@ Public Class DropDownNavigationPath
       Else
          MyBase.InitializeItem(item)
       End If
-   End Sub 'InitializeItem
+   End Sub
 
    ' </Snippet2>
    ' <Snippet3>
@@ -98,7 +98,7 @@ Public Class DropDownNavigationPath
 
          item.Controls.Add(ddList)
       End If
-   End Sub 'AddDropDownListAfterCurrentNode
+   End Sub
 
    ' </Snippet3>
    ' The sender is the DropDownList.
@@ -110,7 +110,7 @@ Public Class DropDownNavigationPath
          Context.Response.Redirect(ddL.SelectedValue)
       End If
 
-   End Sub 'DropDownNavPathEventHandler
-End Class 'DropDownNavigationPath
+   End Sub
+End Class
 End Namespace
 ' </Snippet1>

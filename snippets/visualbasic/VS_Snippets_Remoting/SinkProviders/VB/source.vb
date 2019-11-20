@@ -16,6 +16,6 @@ Public Class SinkProviderSampleClass
 
         ChannelServices.RegisterChannel(New HttpChannel(prop, clientChain, serverChain))
         ' </Snippet1>
-    End Sub 'Main 
+    End Sub
 
-End Class 'SinkProviderSampleClass
+End Class

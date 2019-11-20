@@ -52,6 +52,6 @@ Public Class XMLdsigsample1
       ' Get the XML representation of the signature.
       Dim xmlSignature As XmlElement = signedXml.GetXml()
       Console.WriteLine(xmlSignature.OuterXml)
-   End Sub 'Main
-End Class 'XMLdsigsample1 
+   End Sub
+End Class
 '</Snippet1>

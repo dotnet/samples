@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Windows
 Imports System.Windows.Navigation
 Imports System.Windows.Controls
@@ -16,7 +15,7 @@ Namespace SDKSample
         Public Sub New()
             AddHandler AppDomain.CurrentDomain.UnhandledException, AddressOf CurrentDomain_UnhandledException
 
-        End Sub 'New
+        End Sub
 
 
         Sub myAppStartup(ByVal sender As Object, ByVal e As StartupEventArgs)
@@ -25,7 +24,7 @@ Namespace SDKSample
             MainWindow = myWindow
             myWindow.Show()
 
-        End Sub 'myAppStartup
+        End Sub
 
 
         Private Sub CurrentDomain_UnhandledException(ByVal sender As Object, ByVal args As UnhandledExceptionEventArgs)
@@ -39,6 +38,6 @@ Namespace SDKSample
             End Try
             MessageBox.Show("Unhandled exception: " + args.ExceptionObject.ToString())
 
-        End Sub 'CurrentDomain_UnhandledException
-    End Class 'MyApp
+        End Sub
+    End Class
 End Namespace 'ImagingSnippetGallery

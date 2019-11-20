@@ -26,7 +26,7 @@ Class IPv6Adresses
       Catch e As Exception
          Console.WriteLine(("[printIPv6LoopBackAddress] Exception: " + e.ToString()))
       End Try
-   End Sub 'printIPv6LoopBackAddress
+   End Sub
    
    ' </Snippet1>
    ' <Snippet2>
@@ -48,7 +48,7 @@ Class IPv6Adresses
       Catch e As Exception
          Console.WriteLine(("[printIPv6AnyAddress] Exception: " + e.ToString()))
       End Try
-   End Sub 'printIPv6AnyAddress
+   End Sub
    
    ' </Snippet2>
    ' <Snippet3>
@@ -70,7 +70,7 @@ Class IPv6Adresses
       Catch e As Exception
          Console.WriteLine(("[printIPv6NoneAddress] Exception: " + e.ToString()))
       End Try
-   End Sub 'printIPv6NoneAddress
+   End Sub
    
    ' </Snippet3>
    ' <Snippet4>
@@ -96,7 +96,7 @@ Class IPv6Adresses
       Catch e As Exception
          Console.WriteLine(("[printIPv6LoopBackAddress] Exception: " + e.ToString()))
       End Try
-   End Sub 'checkIPv6LoopBackAddress
+   End Sub
    
    ' </Snippet4>
    Overloads Private Shared Sub Main(args() As String)
@@ -117,5 +117,5 @@ Class IPv6Adresses
       
       ' Check that this is a loopback address.
       checkIPv6LoopBackAddress("0::1")
-   End Sub 'Main 
-End Class 'IPv6Adresses
+   End Sub
+End Class

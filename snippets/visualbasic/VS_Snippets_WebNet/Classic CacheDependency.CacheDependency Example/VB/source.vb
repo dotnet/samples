@@ -17,5 +17,5 @@ Public Class Page1
 	Dim dep As New CacheDependency(Server.MapPath("isbn.xml"))
         Cache.Insert("ISBNData", Source, dep)
         ' </Snippet1>
-    End Sub 'Page_Load 
-End Class 'Page1 
+    End Sub
+End Class

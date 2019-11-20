@@ -2,9 +2,6 @@
 ' This sample demonstrates the use of the SecurityPermissionAttribute.
 Imports System.Security.Permissions
 Imports System.Security
-Imports Microsoft.VisualBasic
-
-
 
 Class [MyClass]
 
@@ -16,7 +13,7 @@ Class [MyClass]
         Catch e As Exception
             Console.WriteLine(e.Message.ToString())
         End Try
-    End Sub 'PermissionDemo
+    End Sub
 
 
 
@@ -71,7 +68,7 @@ Class [MyClass]
         Console.WriteLine("Executing DenySecurityPermissions.")
         Console.WriteLine("Denied all permissions individually.")
         TestSecurityPermissions()
-    End Sub 'DenySecurityPermissions
+    End Sub
 
 
     ' This method demonstrates the use of SecurityPermissionFlag.AllFlags to deny all security permissions.
@@ -80,7 +77,7 @@ Class [MyClass]
         Console.WriteLine(ControlChars.Lf & "Executing DenyAllSecurityPermissions.")
         Console.WriteLine("Denied all permissions using SecurityPermissionFlag.AllFlags.")
         TestSecurityPermissions()
-    End Sub 'DenyAllSecurityPermissions
+    End Sub
 
 
     ' This method demonstrates the effect of not denying security permissions.
@@ -88,7 +85,7 @@ Class [MyClass]
         Console.WriteLine(ControlChars.Lf & "Executing DoNotDenySecurityPermissions.")
         Console.WriteLine("No permissions have been denied.")
         DemandSecurityPermissions()
-    End Sub 'DoNotDenySecurityPermissions
+    End Sub
 
 
     Public Shared Sub TestSecurityPermissions()
@@ -201,14 +198,14 @@ Class [MyClass]
         Catch e As Exception
             Console.WriteLine(("Demand for SecurityPermissionFlag.UnmanagedCode failed: " & e.Message))
         End Try
-    End Sub 'TestSecurityPermissions
+    End Sub
 
 
     Public Shared Sub TestFailed()
         Console.WriteLine("In TestFailed method.")
         Console.WriteLine("Throwing an exception.")
         Throw New Exception()
-    End Sub 'TestFailed
+    End Sub
 
 '<Snippet18>
     Public Shared Sub DemandSecurityPermissions()
@@ -317,11 +314,11 @@ Class [MyClass]
         Catch e As Exception
             Console.WriteLine(("Demand for SecurityPermissionFlag.UnmanagedCode failed: " & e.Message))
         End Try
-    End Sub 'DemandSecurityPermissions
+    End Sub
 '</Snippet18>
 
     Overloads Shared Sub Main(ByVal args() As String)
         PermissionDemo()
-    End Sub 'Main
-End Class '[MyClass] 
+    End Sub
+End Class
 '</Snippet1>

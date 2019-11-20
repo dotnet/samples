@@ -87,7 +87,7 @@ Namespace Samples.AspNet.VB.Controls
 
     End Function
 
-  End Class 'TableProviderWebPart
+  End Class
 
   ' The connection point for the provider control.
   <AspNetHostingPermission(SecurityAction.Demand, _
@@ -175,7 +175,7 @@ Namespace Samples.AspNet.VB.Controls
 
     End Sub
 
-  End Class 'TableConsumer
+  End Class
 
   ' The connection point for the consumer control.
   <AspNetHostingPermission(SecurityAction.Demand, _
@@ -193,7 +193,7 @@ Namespace Samples.AspNet.VB.Controls
         id, allowsMultipleConnections)
 
     End Sub
-  End Class 'TableConsumerConnectionPoint
+  End Class
 
 End Namespace  ' Samples.AspNet.CS.Controls
 '</SNIPPET2>

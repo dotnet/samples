@@ -1,5 +1,4 @@
 ﻿'<snippet1>
-Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
 Imports System.Data
@@ -76,7 +75,7 @@ Namespace BehaviorServiceSample
         Private Sub InitializeComponent()
             Me.Name = "UserControl1"
             Me.Size = New System.Drawing.Size(170, 156)
-        End Sub 'InitializeComponent
+        End Sub
     End Class
 
     '<snippet2>

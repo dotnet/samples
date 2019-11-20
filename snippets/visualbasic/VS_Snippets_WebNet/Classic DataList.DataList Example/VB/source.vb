@@ -7,7 +7,7 @@ Public Class Form1
     ' <Snippet1>
     Sub Page_Load(sender As Object, e As EventArgs)
         Dim MyList As New DataList()
-    End Sub 'Page_Load
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

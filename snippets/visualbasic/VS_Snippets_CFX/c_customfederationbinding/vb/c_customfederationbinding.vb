@@ -46,11 +46,11 @@ Public NotInheritable Class CustomBindingCreator
     ' defines static methods.
     Private Sub New()
 
-    End Sub 'New
+    End Sub
 
     Shared Sub Main()
 
-    End Sub 'Main
-End Class 'CustomBindingCreator ' Code not shown.
+    End Sub
+End Class
 
 '</snippet0>

@@ -15,7 +15,7 @@ Public Class Form1
         
         ' Print the internal name.
         textBox1.Text = "Internal name: " & myFileVersionInfo.InternalName
-    End Sub 'GetInternalName
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

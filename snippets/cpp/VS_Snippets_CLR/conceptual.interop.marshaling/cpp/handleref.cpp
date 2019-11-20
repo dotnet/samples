@@ -19,7 +19,7 @@ public ref class Overlapped2
     // ...
 };
 
-public ref class LibWrap
+private ref class NativeMethods
 {
 public:
     // Declares managed prototypes for unmanaged functions.
@@ -31,7 +31,7 @@ public:
         StringBuilder^ buffer,
         int numberOfBytesToRead,
         int numberOfBytesRead,
-        Overlapped% flag );
+        Overlapped% flag);
 
     [DllImport("Kernel32.dll")]
     static bool ReadFile(
@@ -39,11 +39,11 @@ public:
         StringBuilder^ buffer,
         int numberOfBytesToRead,
         int% numberOfBytesRead,
-        IntPtr flag ); // Declares an int instead of a structure reference.
+        IntPtr flag); // Declares an int instead of a structure reference.
 
     // Because Overlapped2 is a class, you can pass null as parameter.
     // No overloading is needed.
-    [DllImport("Kernel32.dll", EntryPoint="ReadFile")]
+    [DllImport("Kernel32.dll", EntryPoint = "ReadFile")]
     static bool ReadFile2(
         HandleRef hndRef,
         StringBuilder^ buffer,
@@ -67,9 +67,9 @@ public:
         int read = 0;
         // Platform invoke holds a reference to HandleRef until the call
         // ends.
-        LibWrap::ReadFile(hr, buffer, 5, read, IntPtr::Zero);
+        NativeMethods::ReadFile(hr, buffer, 5, read, IntPtr::Zero);
         Console::WriteLine("Read {0} bytes with struct parameter: {1}", read, buffer);
-        LibWrap::ReadFile2(hr, buffer, 5, read, nullptr);
+        NativeMethods::ReadFile2(hr, buffer, 5, read, nullptr);
         Console::WriteLine("Read {0} bytes with class parameter: {1}", read, buffer);
     }
 };

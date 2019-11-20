@@ -15,7 +15,7 @@ Public Class Form1
         
         ' Print the private build number.
         textBox1.Text = "Private build number: " & myFileVersionInfo.PrivateBuild
-    End Sub 'GetPrivateBuild
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

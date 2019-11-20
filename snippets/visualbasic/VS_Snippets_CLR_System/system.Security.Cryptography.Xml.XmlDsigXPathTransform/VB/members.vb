@@ -26,7 +26,7 @@ Class Class1
         Console.WriteLine("This sample completed successfully; " + "press Enter to exit.")
         Console.ReadLine()
 
-    End Sub 'Main
+    End Sub
 
 
     ' Encrypt the text in the specified XmlDocument.
@@ -132,7 +132,7 @@ Class Class1
             End If 
         Next i
 
-    End Sub 'ShowTransformProperties
+    End Sub
 
 
     ' Create an XML document for the dsig namespace.

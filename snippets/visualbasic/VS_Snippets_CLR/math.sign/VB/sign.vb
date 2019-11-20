@@ -27,7 +27,7 @@ Class Sample
       '
       Console.WriteLine("{0}The following type is not CLS-compliant.", nl)
       Console.WriteLine(str, "SByte  ", xSbyte1, Test(Math.Sign(xSbyte1)))
-   End Sub 'Main
+   End Sub
    '
    Public Shared Function Test([compare] As Integer) As [String]
       If [compare] = 0 Then
@@ -38,7 +38,7 @@ Class Sample
          Return "greater than"
       End If
    End Function 'Test
-End Class 'Sample 
+End Class
 '
 'This example produces the following results:
 '

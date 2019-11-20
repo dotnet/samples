@@ -13,7 +13,7 @@ Public Class ZoneIdentityPermissionDemo
         IntersectDemo()
         ToFromXmlDemo()
 
-    End Sub 'Main
+    End Sub
 
 
     ' <Snippet2>
@@ -36,7 +36,7 @@ Public Class ZoneIdentityPermissionDemo
             Console.WriteLine(zoneIdPerm2.SecurityZone.ToString() + " is not a subset of " + zoneIdPerm1.SecurityZone.ToString())
         End If
 
-    End Sub 'IsSubsetOfDemo
+    End Sub
 
     ' </Snippet2>
     ' <Snippet3>
@@ -53,7 +53,7 @@ Public Class ZoneIdentityPermissionDemo
             Console.WriteLine("The union of " + zoneIdPerm1.SecurityZone.ToString() + " and " + vbLf + vbTab + zoneIdPerm2.SecurityZone.ToString() + " is null." + vbLf)
         End If
 
-    End Sub 'UnionDemo
+    End Sub
 
     ' </Snippet3>
     ' <Snippet4>
@@ -72,7 +72,7 @@ Public Class ZoneIdentityPermissionDemo
             Console.WriteLine("The intersection of " + zoneIdPerm1.SecurityZone.ToString() + " and " + vbLf + vbTab + zoneIdPerm2.SecurityZone.ToString() + " is null." + vbLf)
         End If
 
-    End Sub 'IntersectDemo
+    End Sub
 
 
 
@@ -90,7 +90,7 @@ Public Class ZoneIdentityPermissionDemo
             Console.WriteLine("The copy succeeded:  " + zoneIdPerm2.ToString() + " " + vbLf)
         End If
 
-    End Sub 'CopyDemo
+    End Sub
 
     '</Snippet5>
     '<Snippet6>
@@ -110,8 +110,8 @@ Public Class ZoneIdentityPermissionDemo
             Console.WriteLine(zoneIdPerm1.ToString())
         End If
 
-    End Sub 'ToFromXmlDemo 
-End Class 'ZoneIdentityPermissionDemo
+    End Sub
+End Class
 '</Snippet6>
 
 ' </Snippet1>

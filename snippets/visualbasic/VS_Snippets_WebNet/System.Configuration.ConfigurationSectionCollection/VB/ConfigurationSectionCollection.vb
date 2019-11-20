@@ -43,7 +43,7 @@ Public NotInheritable Class CustomSection
         _Properties.Add(_FileName)
         _Properties.Add(_MaxUsers)
         _Properties.Add(_MaxIdleTime)
-    End Sub 'New
+    End Sub
 
 
     ' This is a key customization. 
@@ -93,7 +93,7 @@ Public NotInheritable Class CustomSection
             Me("maxIdleTime") = value
         End Set
     End Property
-End Class 'CustomSection 
+End Class
 
 
 
@@ -125,7 +125,7 @@ Class UsingCustomSectionCollection
         Catch err As ConfigurationErrorsException
             Console.WriteLine(err.ToString())
         End Try
-    End Sub 'CreateSection
+    End Sub
 
 
     '<Snippet2>
@@ -151,7 +151,7 @@ Class UsingCustomSectionCollection
         Catch err As ConfigurationErrorsException
             Console.WriteLine(err.ToString())
         End Try
-    End Sub 'GetAllKeys
+    End Sub
 
 
     '</Snippet2>
@@ -172,7 +172,7 @@ Class UsingCustomSectionCollection
         Catch err As ConfigurationErrorsException
             Console.WriteLine(err.ToString())
         End Try
-    End Sub 'Clear
+    End Sub
 
 
     '</Snippet3>
@@ -202,7 +202,7 @@ Class UsingCustomSectionCollection
         Catch err As ConfigurationErrorsException
             Console.WriteLine(err.ToString())
         End Try
-    End Sub 'GetSection
+    End Sub
 
     '</Snippet4>
     '<Snippet5>
@@ -234,7 +234,7 @@ Class UsingCustomSectionCollection
         Catch err As ConfigurationErrorsException
             Console.WriteLine(err.ToString())
         End Try
-    End Sub 'GetEnumerator
+    End Sub
 
     '</Snippet5>
 
@@ -263,7 +263,7 @@ Class UsingCustomSectionCollection
         Catch err As ConfigurationErrorsException
             Console.WriteLine(err.ToString())
         End Try
-    End Sub 'GetKeys
+    End Sub
 
 
     '</Snippet7>
@@ -296,7 +296,7 @@ Class UsingCustomSectionCollection
         Catch err As ConfigurationErrorsException
             Console.WriteLine(err.ToString())
         End Try
-    End Sub 'GetItems
+    End Sub
 
 
     '</Snippet8>
@@ -325,7 +325,7 @@ Class UsingCustomSectionCollection
         Catch err As ConfigurationErrorsException
             Console.WriteLine(err.ToString())
         End Try
-    End Sub 'Remove
+    End Sub
 
     '</Snippet9>
 
@@ -361,7 +361,7 @@ Class UsingCustomSectionCollection
         Catch err As ConfigurationErrorsException
             Console.WriteLine(err.ToString())
         End Try
-    End Sub 'AddSection
+    End Sub
 
 
     '</Snippet10>
@@ -379,9 +379,9 @@ Class UsingCustomSectionCollection
         GetItems()
         ' Clear()
         ' Remove()
-    End Sub 'Main 
+    End Sub
 
-End Class 'UsingCustomSectionCollection 
+End Class
 ' </Snippet1>
 
 

@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Windows.Forms
 
 
@@ -14,30 +13,30 @@ Public Class Form1
         ' Print the new value of the current object.
         Console.Write("Current Changed: ")
         Console.WriteLine(CType(sender, BindingManagerBase).Current)
-    End Sub 'BindingManagerBase_CurrentChanged
+    End Sub
     
     
     Private Sub MoveNext()
         ' Increment the Position property value by one.
         myBindingManagerBase.Position += 1
-    End Sub 'MoveNext
+    End Sub
     
     
     Private Sub MovePrevious()
         ' Decrement the Position property value by one.
         myBindingManagerBase.Position -= 1
-    End Sub 'MovePrevious
+    End Sub
     
     
     Private Sub MoveFirst()
         ' Go to the first item in the list.
         myBindingManagerBase.Position = 0
-    End Sub 'MoveFirst
+    End Sub
     
     
     Private Sub MoveLast()
         ' Go to the last row in the list.
         myBindingManagerBase.Position = myBindingManagerBase.Count - 1
-    End Sub 'MoveLast
+    End Sub
     ' </Snippet1>
-End Class 'Form1
+End Class

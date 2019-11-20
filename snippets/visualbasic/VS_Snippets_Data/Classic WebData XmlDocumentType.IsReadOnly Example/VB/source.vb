@@ -22,6 +22,6 @@ Public Class Sample
         If doctype.IsReadOnly Then
             Console.WriteLine("Document type nodes are always read-only")
         End If 
-    End Sub 'Main
-End Class 'Sample
+    End Sub
+End Class
 ' </Snippet1>

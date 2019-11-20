@@ -1,4 +1,5 @@
 ﻿Imports System.ServiceModel
+
 '<snippetCustomIQueryableFeeds>
 Imports System.Collections.Generic
 Imports System.Data.Services

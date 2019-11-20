@@ -12,23 +12,22 @@ Public Class SystemTime
     Public minute As Short
     Public second As Short
     Public millisecond As Short
-End Class 'SystemTime
+End Class
 
-Public Class LibWrap
+Friend Class NativeMethods
     ' Declares a managed prototype for the unmanaged function.
-    Declare Sub GetSystemTime Lib "Kernel32.dll" (
+    Friend Declare Sub GetSystemTime Lib "Kernel32.dll" (
         <[In](), Out()> ByVal st As SystemTime)
-End Class 'LibWrap
+End Class
 
 Public Class App
     Public Shared Sub Main()
         Console.WriteLine("VB .NET SysTime Sample using Platform Invoke")
         Dim st As New SystemTime()
-        LibWrap.GetSystemTime(st)
-        Console.Write("The Date is: {0} {1} {2}", st.month, st.day, st.year)
-    End Sub 'Main
-End Class 'App
-
+        NativeMethods.GetSystemTime(st)
+        Console.Write($"The Date is: {st.month} {st.day} {st.year}")
+    End Sub
+End Class
 ' The program produces output similar to the following:
 '
 ' VB .NET SysTime Sample using Platform Invoke

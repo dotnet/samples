@@ -15,8 +15,8 @@ Public Class AppendTextTest
         While sr.Peek() <> -1
             Console.WriteLine(sr.ReadLine())
         End While
-    End Sub 'Main
-End Class 'AppendTextTest
+    End Sub
+End Class
 'This code produces output similar to the following;
 'results may vary based on the computer/file structure/etc.:
 'Add as many lines as you like...

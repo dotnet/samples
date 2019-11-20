@@ -26,17 +26,17 @@ Public Class MyUninstallActionClass
       myInstaller.Source = Console.ReadLine()
       Installers.Add(myInstaller)
       MyBase.Install(savedState)
-   End Sub 'Install
+   End Sub
 
    ' Override the 'Commit' method.
    Public Overrides Sub Commit(savedState As IDictionary)
       MyBase.Commit(savedState)
-   End Sub 'Commit
+   End Sub
 
    ' Override the 'Rollback' method.
    Public Overrides Sub Rollback(savedState As IDictionary)
       MyBase.Rollback(savedState)
-   End Sub 'Rollback
+   End Sub
 
 ' <Snippet3>
 ' <Snippet2>
@@ -57,7 +57,7 @@ Public Class MyUninstallActionClass
       End If
       Installers.Add(myInstaller)
       MyBase.Uninstall(savedState)
-   End Sub 'Uninstall
+   End Sub
 ' </Snippet2>
 ' </Snippet3>
 
@@ -66,9 +66,9 @@ Public Class MyUninstallActionClass
                         "UninstallAction_NoAction_Remove_3.exe ")
       Console.WriteLine("Syntax for uninstall: installutil.exe /u " + _
                         "UninstallAction_NoAction_Remove_3.exe ")
-   End Sub 'Main
+   End Sub
 
-End Class 'MyUninstallActionClass
+End Class
 ' </Snippet1>
 
 

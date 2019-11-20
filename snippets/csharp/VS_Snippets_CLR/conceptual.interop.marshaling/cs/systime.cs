@@ -15,11 +15,11 @@ public class SystemTime
     public ushort millisecond;
 }
 
-public class LibWrap
+internal static class NativeMethods
 {
     // Declares a managed prototype for the unmanaged function using Platform Invoke.
     [DllImport("Kernel32.dll")]
-    public static extern void GetSystemTime([In, Out] SystemTime st);
+    internal static extern void GetSystemTime([In, Out] SystemTime st);
 }
 
 public class App
@@ -28,9 +28,9 @@ public class App
     {
         Console.WriteLine("C# SysTime Sample using Platform Invoke");
         SystemTime st = new SystemTime();
-        LibWrap.GetSystemTime(st);
+        NativeMethods.GetSystemTime(st);
         Console.Write("The Date is: ");
-        Console.Write("{0} {1} {2}", st.month, st.day, st.year);
+        Console.Write($"{st.month} {st.day} {st.year}");
     }
 }
 

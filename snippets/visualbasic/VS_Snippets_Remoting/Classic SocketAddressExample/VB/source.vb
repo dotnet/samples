@@ -20,7 +20,7 @@ Public Class MySerializeExample
       Console.WriteLine(("The address family of socketAddress is: " + socketAddress.Family.ToString()))
       'Checks the underlying buffer size.
       Console.WriteLine(("The size of the underlying buffer is: " + socketAddress.Size.ToString()))
-   End Sub 'MySerializeIPEndPointClassMethod
+   End Sub
     
    '</Snippet1>
    Public Shared Sub Main()
@@ -28,7 +28,7 @@ Public Class MySerializeExample
       ' For our example, we will use the default constructor.
       MySerializeIPEndPointClassMethod()
       
-   End Sub 'Main 
+   End Sub
 End Class 
 
 

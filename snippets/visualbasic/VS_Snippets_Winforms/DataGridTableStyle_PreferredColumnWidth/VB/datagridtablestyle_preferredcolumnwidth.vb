@@ -6,7 +6,6 @@
 ' DataGrid and applies 'DataGridTableStyle' to it.
 ' Event Handler has been attached to handle 'PreferredColumnWidthChanged' event.
 
-Imports System
 Imports System.ComponentModel
 Imports System.Windows.Forms
 Imports System.Data
@@ -25,7 +24,7 @@ Namespace DataGridTableStyle_PreferredColumnWidthChanged
             End If
          End If
          MyBase.Dispose(disposing)
-      End Sub 'Dispose
+      End Sub
       
 
       Private Sub InitializeComponent()
@@ -64,15 +63,15 @@ Namespace DataGridTableStyle_PreferredColumnWidthChanged
          Me.Name = "Form1"
          Me.Text = "Form1"
          Me.ResumeLayout(False)
-      End Sub 'InitializeComponent
+      End Sub
 
       <STAThread()>  Shared Sub Main() 
          Application.Run(New Form1())
-      End Sub 'Main
+      End Sub
       
       Public Sub New()
          InitializeComponent()
-      End Sub 'New
+      End Sub
       
       Private Withevents myButton As System.Windows.Forms.Button
       Private myColWidth As System.Windows.Forms.TextBox
@@ -109,7 +108,7 @@ Namespace DataGridTableStyle_PreferredColumnWidthChanged
             myEmpTable.Rows(4)("EmpName") = "Delta"
             ' Bind DataGrid to DataSet.
             myDataGrid.SetDataBinding(myDataSet, "Employee")
-        End Sub 'CreateAndBindDataSet
+        End Sub
 
 
         Private Sub Form1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -130,12 +129,12 @@ Namespace DataGridTableStyle_PreferredColumnWidthChanged
             myColWidth.Text = ""
             myDataGrid.TableStyles.Add(myDataGridTableStyle)
             AddHandler myDataGridTableStyle.PreferredColumnWidthChanged, AddressOf MyDelegatePreferredColWidthChanged
-        End Sub 'Form1_Load
+        End Sub
 
 
         Private Sub MyDelegatePreferredColWidthChanged(ByVal sender As Object, ByVal e As EventArgs)
             MessageBox.Show("Preferred Column width has changed")
-        End Sub 'MyDelegatePreferredColWidthChanged
+        End Sub
 
 
         Private Sub myButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles myButton.Click
@@ -169,7 +168,7 @@ Namespace DataGridTableStyle_PreferredColumnWidthChanged
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
             End Try
-        End Sub 'myButton_Click
+        End Sub
 ' </Snippet1>
-    End Class 'Form1 
+    End Class
 End Namespace 'DataGridTableStyle_PreferredColumnWidthChanged

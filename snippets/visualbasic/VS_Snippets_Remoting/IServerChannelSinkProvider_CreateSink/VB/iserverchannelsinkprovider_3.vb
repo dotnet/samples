@@ -22,7 +22,7 @@ Class MyServerChannelSinkStack
       Dim myNewServerChannelSinkStack As New MyServerChannelSinkStack()
       myNewServerChannelSinkStack.MyCreateSinkMethod()
       myNewServerChannelSinkStack.MyGetChannelDataMethod()
-   End Sub 'Main
+   End Sub
    
    Public Sub MyCreateSinkMethod()
       Console.Write("Press Enter to set sink providers and create sinks")
@@ -40,7 +40,7 @@ Class MyServerChannelSinkStack
 ' </Snippet3>
 ' </Snippet1>
       Console.WriteLine("Two sink providers have been set")
-   End Sub 'MyCreateSinkMethod
+   End Sub
    
    Public Sub MyGetChannelDataMethod()
 ' <Snippet2>
@@ -54,5 +54,5 @@ Class MyServerChannelSinkStack
                                                 myIChannelDataStore.ChannelUris.Length.ToString())
       Console.WriteLine("Number of Uris in second IChannelDataStore: " + _ 
                                                myIChannelDataStore1.ChannelUris.Length.ToString())
-   End Sub 'MyGetChannelDataMethod
-End Class 'MyServerChannelSinkStack
+   End Sub
+End Class

@@ -1,6 +1,5 @@
 ﻿ ' Snippet for: F:System.Drawing.Imaging.Encoder.Transformation
 ' <snippet5>
-Imports System
 Imports System.Drawing
 Imports System.Drawing.Imaging
 
@@ -35,7 +34,7 @@ Class Example_RotateJPEG
         myEncoderParameters.Param(0) = myEncoderParameter
         myBitmap.Save("ShapesR90.jpg", myImageCodecInfo, myEncoderParameters)
     
-    End Sub 'Main
+    End Sub
     
     Private Shared Function GetEncoderInfo(ByVal mimeType As String) As ImageCodecInfo 
         Dim j As Integer
@@ -52,5 +51,5 @@ Class Example_RotateJPEG
         Return Nothing
     
     End Function 'GetEncoderInfo
-End Class 'Example_RotateJPEG
+End Class
 ' </snippet5>

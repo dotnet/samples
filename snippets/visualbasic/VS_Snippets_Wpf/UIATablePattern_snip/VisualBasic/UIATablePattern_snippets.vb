@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.Windows.Automation
@@ -14,7 +13,7 @@ Class UIATablePattern_snippets
     ''' </summary>
     Public Sub New()
 
-    End Sub 'New
+    End Sub
 
     '''--------------------------------------------------------------------
     ''' <summary>
@@ -32,8 +31,8 @@ Class UIATablePattern_snippets
             
             app.Run()
         
-        End Sub 'Main
-    End Class 'TestMain
+        End Sub
+    End Class
     
     
     ' <SnippetStartTarget>
@@ -305,7 +304,7 @@ Class UIATablePattern_snippets
         Console.WriteLine(tablePattern.Current.RowCount.ToString())
         Console.WriteLine(tablePattern.Current.ColumnCount.ToString())
 
-    End Sub 'GetRowColumnCounts    
+    End Sub
     ' </Snippet103>
 
     '''--------------------------------------------------------------------
@@ -318,5 +317,5 @@ Class UIATablePattern_snippets
         Automation.RemoveAllEventHandlers()
         MyBase.OnExit(args)
 
-    End Sub 'OnExit
-End Class 'UIATablePattern_snippets
+    End Sub
+End Class

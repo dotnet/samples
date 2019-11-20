@@ -1,10 +1,7 @@
-﻿Imports System
-Imports System.Drawing
+﻿Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
-
 
 Namespace DragDrop
     
@@ -14,7 +11,7 @@ Namespace DragDrop
       
       Shared Sub Main()
          Application.Run(New Form1())
-      End Sub 'Main
+      End Sub
 
       Private Sub InitializeComponent()
          Me.SuspendLayout()
@@ -26,7 +23,7 @@ Namespace DragDrop
          Me.Name = "ImageDrag"
          Me.Text = "ImageDrag"
          Me.ResumeLayout(False)
-      End Sub 'InitializeComponent 
+      End Sub
 
 
 
@@ -98,5 +95,5 @@ End Sub
 '</snippet1>
 
 
-   End Class 'ImageDrag 
+   End Class
 End Namespace 'DragDrop

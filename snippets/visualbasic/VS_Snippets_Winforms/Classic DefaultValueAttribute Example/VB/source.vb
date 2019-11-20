@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.ComponentModel
 Imports System.Windows.Forms
 
@@ -33,5 +32,5 @@ Public Class Form1
                 CType(attributes(GetType(DefaultValueAttribute)), DefaultValueAttribute)
         Console.WriteLine(("The default value is: " & myAttribute.Value.ToString()))
         ' </Snippet2>
-    End Sub 'Method 
-End Class 'Form1
+    End Sub
+End Class

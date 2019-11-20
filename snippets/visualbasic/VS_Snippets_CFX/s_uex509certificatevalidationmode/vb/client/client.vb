@@ -97,5 +97,5 @@ Class Client
         Console.WriteLine("Press <ENTER> to terminate client.")
         Console.ReadLine()
 
-    End Sub 'Main
-End Class 'Client
+    End Sub
+End Class

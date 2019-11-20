@@ -20,6 +20,6 @@ Public Class Sample
         Dim doctype As XmlDocumentType = doc.DocumentType
         Console.WriteLine("Name of the document type:  {0}", doctype.Name)
         Console.WriteLine("The internal subset of the document type:  {0}", doctype.InternalSubset)
-    End Sub 'Main 
-End Class 'Sample
+    End Sub
+End Class
 ' </Snippet1>

@@ -20,4 +20,4 @@ Public Class Form1
         parameter.Direction = ParameterDirection.Output
     End Sub 
     ' </Snippet1>
-End Class 'Form1 
+End Class

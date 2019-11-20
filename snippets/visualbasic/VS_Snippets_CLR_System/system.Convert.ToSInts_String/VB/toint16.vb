@@ -2,7 +2,6 @@
 ' Example of the Convert.ToInt16( String ) and 
 ' Convert.ToInt16( String, IFormatProvider ) methods.
 Imports System.Globalization
-Imports Microsoft.VisualBasic
 
 Module ToInt16ProviderDemo
 

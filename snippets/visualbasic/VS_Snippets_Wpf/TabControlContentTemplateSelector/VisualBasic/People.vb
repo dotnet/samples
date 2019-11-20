@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Collections.ObjectModel
+﻿Imports System.Collections.ObjectModel
 
 Public Class People
     Inherits ObservableCollection(Of Person)

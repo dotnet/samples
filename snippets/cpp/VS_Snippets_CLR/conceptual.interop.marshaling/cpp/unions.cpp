@@ -14,7 +14,7 @@ public:
     double d;
 };
 
-[StructLayout(LayoutKind::Explicit, Size=128)]
+[StructLayout(LayoutKind::Explicit, Size = 128)]
 public value struct MyUnion2_1
 {
 public:
@@ -26,11 +26,11 @@ public:
 public value struct MyUnion2_2
 {
 public:
-    [MarshalAs(UnmanagedType::ByValTStr, SizeConst=128)]
+    [MarshalAs(UnmanagedType::ByValTStr, SizeConst = 128)]
     String^ str;
 };
 
-public ref class LibWrap
+private ref class NativeMethods
 {
 public:
     // Declares managed prototypes for unmanaged function.
@@ -53,18 +53,18 @@ public:
     {
         MyUnion mu;// = new MyUnion();
         mu.i = 99;
-        LibWrap::TestUnion(mu, 1);
+        NativeMethods::TestUnion(mu, 1);
 
         mu.d = 99.99;
-        LibWrap::TestUnion(mu, 2);
+        NativeMethods::TestUnion(mu, 2);
 
         MyUnion2_1 mu2_1;// = new MyUnion2_1();
         mu2_1.i = 99;
-        LibWrap::TestUnion2(mu2_1, 1);
+        NativeMethods::TestUnion2(mu2_1, 1);
 
         MyUnion2_2 mu2_2;// = new MyUnion2_2();
         mu2_2.str = "*** string ***";
-        LibWrap::TestUnion2(mu2_2, 2);
+        NativeMethods::TestUnion2(mu2_2, 2);
     }
 };
 //</snippet29>

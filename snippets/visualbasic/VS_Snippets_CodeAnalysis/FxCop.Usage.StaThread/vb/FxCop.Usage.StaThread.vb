@@ -8,7 +8,7 @@ Public Class MyForm
 
    Public Sub New()
       Me.Text = "Hello World!"
-   End Sub 'New
+   End Sub
     
    ' Satisfies rule: MarkWindowsFormsEntryPointsWithStaThread.
    <STAThread()> _

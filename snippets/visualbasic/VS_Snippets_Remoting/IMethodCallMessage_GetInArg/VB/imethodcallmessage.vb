@@ -33,7 +33,7 @@ Namespace IMethodCallMessageNS
          ' This constructor forwards the call to base RealProxy.
          ' RealProxy uses the Type to generate a transparent proxy.
          MyBase.New(myType)
-      End Sub 'New
+      End Sub
 
 ' <Snippet2>
       Public Overrides Function Invoke(ByVal myIMessage As IMessage) As IMessage
@@ -75,7 +75,7 @@ Namespace IMethodCallMessageNS
 
 
 
-   End Class 'MyProxy
+   End Class
 
    ' The class used to obtain Metadata.
    <PermissionSet(SecurityAction.Demand, Name:="FullTrust")> _
@@ -86,7 +86,7 @@ Namespace IMethodCallMessageNS
          Console.WriteLine("MyMarshalByRefClass.MyMethod {0} {1} {2}", str, dbl, i)
          Return 0
       End Function 'MyMethod
-   End Class 'MyMarshalByRefClass
+   End Class
 
 ' </Snippet2>
    ' Main class that drives the whole sample.
@@ -105,7 +105,7 @@ Namespace IMethodCallMessageNS
          Dim myReturnValue As Object = myMarshalByRefClassObj.MyMethod("Microsoft", 1.2, 6)
 
          Console.WriteLine("Sample Done.")
-      End Sub 'Main
-   End Class 'ProxySample
+      End Sub
+   End Class
 End Namespace 'IMethodCallMessageNS
 ' </Snippet1>

@@ -15,7 +15,7 @@ Public Class Form1
         
         ' Print the product build part number.
         textBox1.Text = "Product build part number: " & myFileVersionInfo.ProductBuildPart
-    End Sub 'GetProductBuildPart
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

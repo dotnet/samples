@@ -16,8 +16,6 @@ Imports System.IO
 Imports System.Diagnostics
 Imports System.Threading
 Imports System.ComponentModel
-Imports Microsoft.VisualBasic
-
 
 Namespace ProcessAsyncStreamSamples
    
@@ -216,6 +214,6 @@ Namespace ProcessAsyncStreamSamples
             Console.WriteLine("Exception:")
             Console.WriteLine(e.ToString())
          End Try
-      End Sub 'Main
+      End Sub
    End Class  'ProcessSampleMain
 End Namespace 'Process_AsyncStream_Sample

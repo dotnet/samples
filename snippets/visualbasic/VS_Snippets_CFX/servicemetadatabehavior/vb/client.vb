@@ -37,5 +37,5 @@ Public Class Client
         wcfClient.Close()
       End Try
     End Using
-  End Sub 'Main
-End Class 'Client
+  End Sub
+End Class

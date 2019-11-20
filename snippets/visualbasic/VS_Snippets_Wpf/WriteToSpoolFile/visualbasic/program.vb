@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Text
+﻿Imports System.Text
 Imports System.Printing
 Imports System.IO
 
@@ -40,8 +39,8 @@ Namespace WriteToSpoolFile
 			anotherStream.Close()
 			'</SnippetAddNamedJob>
 
-		End Sub 'end Main
+		End Sub
 
-	End Class 'end Program class
+	End Class
 
 End Namespace ' end namespace

@@ -8,8 +8,6 @@
 
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
-
 
 Public Class WebClient_DownloadData
     
@@ -41,5 +39,5 @@ Public Class WebClient_DownloadData
             ' Display the exception.
             Console.WriteLine(("The following general exception was raised: " + e.Message))
         End Try
-    End Sub 'Main
-End Class 'WebClient_DownloadData
+    End Sub
+End Class

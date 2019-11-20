@@ -2,6 +2,7 @@
 Imports System.IO
 Imports System.Net
 Imports System.Text
+
 Namespace Examples.System.Net
     Public Class WebRequestGetExample
 
@@ -28,7 +29,7 @@ Namespace Examples.System.Net
             reader.Close()
             dataStream.Close()
             response.Close()
-        End Sub 'Main
-    End Class 'WebRequestGetExample
+        End Sub
+    End Class
 End Namespace
 ' </Snippet1>

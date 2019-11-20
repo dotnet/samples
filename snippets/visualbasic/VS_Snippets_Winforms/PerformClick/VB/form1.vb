@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Windows.Forms
+﻿Imports System.Windows.Forms
 Imports System.Drawing
 Imports System.Drawing.Design
 Imports System.Data
@@ -77,16 +76,16 @@ Public Class Form1
 
         ' Perform a click on the File menu item.
         menuItem1.PerformClick()
-    End Sub 'CreateMyMenu
+    End Sub
 
 
     Private Sub menuItem1_Click(ByVal sender As Object, ByVal e As System.EventArgs)
         MessageBox.Show("You clicked the File menu.", "The Event Information")
-    End Sub 'menuItem1_Click
+    End Sub
 
 
     Private Sub menuItem2_Click(ByVal sender As Object, ByVal e As System.EventArgs)
         MessageBox.Show("You clicked the Edit menu.", "The Event Information")
-    End Sub 'menuItem2_Click
+    End Sub
     ' </snippet1>
 End Class

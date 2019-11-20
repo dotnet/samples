@@ -44,7 +44,7 @@ Public Class Class1
         '<Snippet6>
         ' Copies the contents of the collection beginning at index 0 to the specified CodeStatement array.
         ' 'statements' is a CodeStatement array.
-        Dim statementArray(collection.Count) As CodeStatement
+        Dim statementArray(collection.Count - 1) As CodeStatement
         collection.CopyTo(statementArray, 0)
         '</Snippet6>
 

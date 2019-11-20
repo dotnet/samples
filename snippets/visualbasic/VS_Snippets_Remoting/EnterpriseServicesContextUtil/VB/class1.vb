@@ -15,8 +15,8 @@ Public Class ContextUtil_ActivityId
         ' Display the ActivityID associated with the current COM+ context.
         MsgBox("Activity ID: " & ContextUtil.ActivityId.ToString())
 
-    End Sub 'Example
-End Class 'ContextUtil_ActivityId
+    End Sub
+End Class
 ' </snippet1>
 
 ' <snippet2>
@@ -30,8 +30,8 @@ Public Class ContextUtil_ApplicationInstanceId
         MsgBox("Application Instance ID: " & ContextUtil.ApplicationInstanceId.ToString())
 
     
-    End Sub 'Example
-End Class 'ContextUtil_ApplicationInstanceId
+    End Sub
+End Class
 ' </snippet2>
 
 ' <snippet3>
@@ -44,8 +44,8 @@ Public Class ContextUtil_DisableCommit
         ' current COM+ context.
         ContextUtil.DisableCommit()
     
-    End Sub 'Example
-End Class 'ContextUtil_DisableCommit
+    End Sub
+End Class
 ' </snippet3>
 
 ' <snippet4>
@@ -58,8 +58,8 @@ Public Class ContextUtil_EnableCommit
         ' current COM+ context.
         ContextUtil.EnableCommit()
     
-    End Sub 'Example
-End Class 'ContextUtil_EnableCommit
+    End Sub
+End Class
 ' </snippet4>
 
 ' <snippet5>
@@ -72,8 +72,8 @@ Public Class ContextUtil_IsInTransaction
         ' transaction.
         MsgBox("Current context enlisted in transaction: " & ContextUtil.IsInTransaction)
 
-    End Sub 'Example
-End Class 'ContextUtil_IsInTransaction
+    End Sub
+End Class
 ' </snippet5>
 
 ' <snippet6>
@@ -86,8 +86,8 @@ Public Class ContextUtil_IsSecurityEnabled
         ' context.
         MsgBox("Role-based security active in current context: " & ContextUtil.IsSecurityEnabled)
 
-    End Sub 'Example
-End Class 'ContextUtil_IsSecurityEnabled
+    End Sub
+End Class
 ' </snippet6>
 
 ' <snippet7>
@@ -100,8 +100,8 @@ Public Class ContextUtil_TransactionId
         ' is enlisted.
         MsgBox("Transaction ID: " & ContextUtil.TransactionId.ToString())
 
-    End Sub 'Example
-End Class 'ContextUtil_TransactionId
+    End Sub
+End Class
 ' </snippet7>
 
 ' </snippet0>
@@ -111,7 +111,7 @@ Public Class Test
 
     Public Shared Sub Main()
 
-    End Sub 'Main
-End Class 'Test 
+    End Sub
+End Class
 
 

@@ -162,11 +162,8 @@ namespace ASPNet.Design.Samples_CS
             if (!viewName.Equals(_defaultViewName))
                 return null;
 
-            if (_view == null)
-            {
-                _view = new CustomDesignDataSourceView(this,
-                    _defaultViewName);
-            }
+            _view ??= new CustomDesignDataSourceView(this,
+                _defaultViewName);
 
             return _view;
         }

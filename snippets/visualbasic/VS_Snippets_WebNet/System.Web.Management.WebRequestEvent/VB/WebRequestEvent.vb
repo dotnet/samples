@@ -30,7 +30,7 @@ Public Class SampleWebRequestEvent
         "Event created at: {0}", _
         EventTime.ToString())
 
-    End Sub 'New
+    End Sub
     
     ' </Snippet2>
     
@@ -49,7 +49,7 @@ Public Class SampleWebRequestEvent
         "Event created at: {0}", _
         EventTime.ToString())
 
-    End Sub 'New
+    End Sub
     
     ' </Snippet3>
 
@@ -64,7 +64,7 @@ Public Class SampleWebRequestEvent
         ' Raise the event.
         MyBase.Raise()
     
-    End Sub 'Raise
+    End Sub
     
     ' </Snippet4>
     
@@ -88,8 +88,8 @@ Public Class SampleWebRequestEvent
 
         formatter.IndentationLevel -= 1
 
-    End Sub 'FormatCustomEventDetails 
-End Class 'SampleWebRequestEvent
+    End Sub
+End Class
 
 ' </Snippet6>
 ' </Snippet1>

@@ -89,6 +89,6 @@ Namespace Examples.VB.WebControls.Design
         End Property ' LevelSubMenuStyles
         ' </snippet5>
 
-    End Class ' MyMenuControl
+    End Class
 End Namespace ' Examples.VB.WebControls.Design
 ' </snippet1>

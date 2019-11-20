@@ -25,14 +25,14 @@ Public Class MyCollection
       For Each de In  d
          Me.BaseAdd(CType(de.Key, [String]), de.Value)
       Next de
-   End Sub 'New
+   End Sub
 
    ' Clears all the elements in the collection.
    Public Sub Clear()
       Me.BaseClear()
-   End Sub 'Clear
+   End Sub
 
-End Class 'MyCollection
+End Class
 
 
 Public Class SamplesNameObjectCollectionBase   
@@ -53,16 +53,16 @@ Public Class SamplesNameObjectCollectionBase
       Console.WriteLine("After clearing the collection (Count = {0}):", myCol.Count)
       PrintKeysAndValues(myCol)
 
-   End Sub 'Main
+   End Sub
 
    Public Shared Sub PrintKeysAndValues(myCol As MyCollection)
       Dim i As Integer
       For i = 0 To myCol.Count - 1
          Console.WriteLine("[{0}] : {1}, {2}", i, myCol(i).Key, myCol(i).Value)
       Next i
-   End Sub 'PrintKeysAndValues
+   End Sub
 
-End Class 'SamplesNameObjectCollectionBase 
+End Class
 
 
 'This code produces the following output.

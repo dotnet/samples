@@ -42,7 +42,7 @@ Class UsingWebConfigurationManager
       End While
       
       Console.WriteLine()
-   End Sub 'GetSection1
+   End Sub
    
    
    ' </Snippet2>
@@ -85,7 +85,7 @@ Class UsingWebConfigurationManager
          Dim errorMsg As String = e.ToString()
          Console.WriteLine(errorMsg)
       End Try
-   End Sub 'GetSection2
+   End Sub
    
    
    ' </Snippet5>
@@ -120,7 +120,7 @@ Class UsingWebConfigurationManager
       End While
       
       Console.WriteLine()
-   End Sub 'GetWebApplicationSection
+   End Sub
    
    
    ' </Snippet6>
@@ -149,7 +149,7 @@ Class UsingWebConfigurationManager
       End While
       
       Console.WriteLine()
-   End Sub 'GetConnectionStrings
+   End Sub
    
    
    ' </Snippet7>
@@ -179,7 +179,7 @@ Class UsingWebConfigurationManager
       End While
       
       Console.WriteLine()
-   End Sub 'GetAppSettings
+   End Sub
    
    
    ' </Snippet8>
@@ -211,7 +211,7 @@ Class UsingWebConfigurationManager
 
         ' Display machine.config path.
         Console.WriteLine("[File path: {0}]", config.FilePath)
-    End Sub 'OpenMachineConfiguration1
+    End Sub
 
 
     ' </Snippet9>
@@ -241,7 +241,7 @@ Class UsingWebConfigurationManager
 
         ' Display machine.config path.
         Console.WriteLine("[File path: {0}]", config.FilePath)
-    End Sub 'OpenMachineConfiguration2
+    End Sub
 
 
     ' </Snippet10>
@@ -271,7 +271,7 @@ Class UsingWebConfigurationManager
 
         ' Display machine.config path.
         Console.WriteLine("[File path: {0}]", config.FilePath)
-    End Sub 'OpenMachineConfiguration3
+    End Sub
 
 
     ' </Snippet11>
@@ -306,7 +306,7 @@ Class UsingWebConfigurationManager
 
         ' Display machine.config path.
         Console.WriteLine("[File path: {0}]", config.FilePath)
-    End Sub 'OpenMachineConfiguration4
+    End Sub
 
 
     ' </Snippet12>
@@ -343,7 +343,7 @@ Class UsingWebConfigurationManager
 
         ' Display machine.config path.
         Console.WriteLine("[File path: {0}]", config.FilePath)
-    End Sub 'OpenMachineConfiguration5
+    End Sub
     
    
    ' </Snippet13>
@@ -372,7 +372,7 @@ Class UsingWebConfigurationManager
       Next key
       
       Console.WriteLine()
-   End Sub 'OpenWebConfiguration1
+   End Sub
    
    
    ' </Snippet14>
@@ -404,7 +404,7 @@ Class UsingWebConfigurationManager
       Next key
       
       Console.WriteLine()
-   End Sub 'OpenWebConfiguration2
+   End Sub
    
    
    ' </Snippet15>
@@ -436,7 +436,7 @@ Class UsingWebConfigurationManager
       Next key
       
       Console.WriteLine()
-   End Sub 'OpenWebConfiguration3
+   End Sub
    
    
    ' </Snippet16>
@@ -467,7 +467,7 @@ Class UsingWebConfigurationManager
       Next key
       
       Console.WriteLine()
-   End Sub 'OpenWebConfiguration4
+   End Sub
    
    
    ' </Snippet17>
@@ -510,7 +510,7 @@ Class UsingWebConfigurationManager
       Next key
       
       Console.WriteLine()
-   End Sub 'OpenWebConfiguration5
+   End Sub
    
    ' </Snippet18>
    ' <Snippet19>
@@ -550,7 +550,7 @@ Class UsingWebConfigurationManager
       Next key
       
       Console.WriteLine()
-   End Sub 'OpenWebConfiguration6
+   End Sub
    
    ' </Snippet19>
    ' <Snippet20>
@@ -652,7 +652,7 @@ Class UsingWebConfigurationManager
       End Try
       
       Console.WriteLine()
-   End Sub 'OpenMappedWebConfiguration1
+   End Sub
    
    
     ' </Snippet21>
@@ -700,7 +700,7 @@ Class UsingWebConfigurationManager
       End Try
       
       Console.WriteLine()
-   End Sub 'OpenMappedWebConfiguration2
+   End Sub
    
    
     ' </Snippet22>
@@ -748,7 +748,7 @@ Class UsingWebConfigurationManager
       End Try
       
       Console.WriteLine()
-   End Sub 'OpenMappedWebConfiguration3
+   End Sub
    
    
    ' </Snippet23>
@@ -828,6 +828,6 @@ Class UsingWebConfigurationManager
         End Select
 
         Console.Read()
-    End Sub 'Main 
-End Class 'UsingWebConfigurationManager
+    End Sub
+End Class
 ' </Snippet1>

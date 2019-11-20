@@ -11,5 +11,5 @@ Public Class SinkProviderData_Client
       RemotingConfiguration.Configure("client.exe.config")
       Dim server As New mySharedStringClass()
       Console.WriteLine(server.PrintString("Welcome to .NET!."))
-   End Sub 'Main
-End Class 'SinkProviderData_Client
+   End Sub
+End Class

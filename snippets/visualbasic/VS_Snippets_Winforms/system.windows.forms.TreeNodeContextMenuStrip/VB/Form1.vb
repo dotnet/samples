@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Windows.Forms
 Imports System.Drawing
 Imports System.Collections
@@ -14,7 +13,7 @@ Class myForm
         InitializeComponent()
         InitializeMenuTreeView()
     
-    End Sub 'New 
+    End Sub
     
     '<snippet1>
     ' Declare the TreeView and ContextMenuStrip
@@ -68,7 +67,7 @@ Class myForm
         Application.EnableVisualStyles()
         Application.Run(New myForm())
     
-    End Sub 'Main
+    End Sub
     
     
     Private Sub InitializeComponent() 
@@ -82,5 +81,5 @@ Class myForm
         Me.Name = "myForm"
         Me.ResumeLayout(False)
     
-    End Sub 'InitializeComponent 
-End Class 'myForm
+    End Sub
+End Class

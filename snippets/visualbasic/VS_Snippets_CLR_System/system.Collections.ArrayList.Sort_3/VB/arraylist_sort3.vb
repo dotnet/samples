@@ -2,7 +2,6 @@
 
 ' <Snippet1>
 Imports System.Collections
-Imports Microsoft.VisualBasic
 
 Public Class SamplesArrayList
 
@@ -15,7 +14,7 @@ Public Class SamplesArrayList
          Return New CaseInsensitiveComparer().Compare(y, x)
       End Function 'IComparer.Compare
 
-   End Class 'myReverserClass
+   End Class
 
    Public Shared Sub Main()
 
@@ -46,7 +45,7 @@ Public Class SamplesArrayList
       Console.WriteLine("After sorting from index 1 to index 3 with the reverse case-insensitive comparer:")
       PrintIndexAndValues(myAL)
 
-   End Sub 'Main
+   End Sub
 
    Public Shared Sub PrintIndexAndValues(myList As IEnumerable)
       Dim i As Integer = 0
@@ -56,9 +55,9 @@ Public Class SamplesArrayList
          i = i + 1
       Next obj
       Console.WriteLine()
-   End Sub 'PrintIndexAndValues
+   End Sub
 
-End Class 'SamplesArrayList 
+End Class
 
 
 'This code produces the following output.

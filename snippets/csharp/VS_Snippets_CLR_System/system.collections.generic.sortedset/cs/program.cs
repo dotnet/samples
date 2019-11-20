@@ -4,7 +4,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 
-
 class Program
 {
     static void Main(string[] args)
@@ -18,8 +17,7 @@ class Program
 
             // <Snippet2>
             // Create a sorted set using the ByFileExtension comparer.
-            SortedSet<string> mediaFiles1 =
-                new SortedSet<string>(new ByFileExtension());
+            var mediaFiles1 = new SortedSet<string>(new ByFileExtension());
             // </Snippet2>
 
             // Note that there is a SortedSet constructor that takes an IEnumerable,
@@ -33,11 +31,11 @@ class Program
 
             // <Snippet4>
             // Remove elements that have non-media extensions.
-            // See the 'isDoc' method.
+            // See the 'IsDoc' method.
             Console.WriteLine("Remove docs from the set...");
-            Console.WriteLine("\tCount before: {0}", mediaFiles1.Count.ToString());
-            mediaFiles1.RemoveWhere(isDoc);
-            Console.WriteLine("\tCount after: {0}", mediaFiles1.Count.ToString());
+            Console.WriteLine($"\tCount before: {mediaFiles1.Count}");
+            mediaFiles1.RemoveWhere(IsDoc);
+            Console.WriteLine($"\tCount after: {mediaFiles1.Count}");
             // </Snippet4>
 
 
@@ -50,7 +48,7 @@ class Program
             Console.WriteLine("AVI files:");
             foreach (string avi in aviFiles)
             {
-                Console.WriteLine("\t{0}", avi);
+                Console.WriteLine($"\t{avi}");
             }
             // </Snippet5>
 
@@ -61,7 +59,7 @@ class Program
                 Directory.EnumerateFiles(@"\\archives\2008\media",
                     "*", SearchOption.AllDirectories);
 
-            SortedSet<string> mediaFiles2 = new SortedSet<string>(new ByFileExtension());
+            var mediaFiles2 = new SortedSet<string>(new ByFileExtension());
 
             foreach (string f in files2)
             {
@@ -71,9 +69,9 @@ class Program
             // <Snippet6>
             // Remove elements in mediaFiles1 that are also in mediaFiles2.
             Console.WriteLine("Remove duplicates (of mediaFiles2) from the set...");
-            Console.WriteLine("\tCount before: {0}", mediaFiles1.Count.ToString());
+            Console.WriteLine($"\tCount before: {mediaFiles1.Count}");
             mediaFiles1.ExceptWith(mediaFiles2);
-            Console.WriteLine("\tCount after: {0}", mediaFiles1.Count.ToString());
+            Console.WriteLine($"\tCount after: {mediaFiles1.Count}");
             // </Snippet6>
 
             Console.WriteLine();
@@ -81,7 +79,7 @@ class Program
             Console.WriteLine("List of mediaFiles1:");
             foreach (string f in mediaFiles1)
             {
-                Console.WriteLine("\t{0}",f);
+                Console.WriteLine($"\t{f}");
             }
 
             // <Snippet7>
@@ -89,8 +87,7 @@ class Program
             IEqualityComparer<SortedSet<string>> comparer =
                 SortedSet<string>.CreateSetComparer();
 
-            HashSet<SortedSet<string>> allMedia =
-                new HashSet<SortedSet<string>>(comparer);
+            var allMedia = new HashSet<SortedSet<string>>(comparer);
             allMedia.Add(mediaFiles1);
             allMedia.Add(mediaFiles2);
             // </Snippet7>
@@ -110,22 +107,15 @@ class Program
     // <Snippet8>
     // Defines a predicate delegate to use
     // for the SortedSet.RemoveWhere method.
-    private static bool isDoc(string s)
+    private static bool IsDoc(string s)
     {
-        if (s.ToLower().EndsWith(".txt") ||
-            s.ToLower().EndsWith(".doc") ||
-            s.ToLower().EndsWith(".xls") ||
-            s.ToLower().EndsWith(".xlsx") ||
-            s.ToLower().EndsWith(".pdf") ||
-            s.ToLower().EndsWith(".doc") ||
-            s.ToLower().EndsWith(".docx"))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        s = s.ToLower();
+        return (s.EndsWith(".txt") ||
+            s.EndsWith(".xls") ||
+            s.EndsWith(".xlsx") ||
+            s.EndsWith(".pdf") ||
+            s.EndsWith(".doc") ||
+            s.EndsWith(".docx"));
     }
     // </Snippet8>
 

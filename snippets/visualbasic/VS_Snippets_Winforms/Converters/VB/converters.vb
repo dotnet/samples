@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.ComponentModel
+﻿Imports System.ComponentModel
 
 Namespace ConvertersVB
    
@@ -225,6 +224,6 @@ Console.WriteLine(TypeDescriptor.GetConverter(m).ConvertToString(m))
 
 	    '============================================================
 
-        End Sub 'Main 
+        End Sub
     End Class
     End Namespace 'TypeCon 

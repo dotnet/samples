@@ -140,7 +140,7 @@ Namespace CustomControls
             For y = 0 To Columns - 1
                 appendCell(row, rowNumber, y)
             Next y
-        End Sub 'createNewRow
+        End Sub
 
 
         Protected Sub appendCell(ByVal row As TableRow, ByVal rowNumber As Integer, ByVal cellNumber As Integer)
@@ -168,7 +168,7 @@ Namespace CustomControls
             End If
 
             row.Cells.Add(cell)
-        End Sub 'appendCell
+        End Sub
 
         ' Called at runtime when a child object is added to the collection.
         Protected Overrides Sub AddParsedSubObject(ByVal obj As Object)
@@ -177,7 +177,7 @@ Namespace CustomControls
             If Not (cell Is Nothing) Then
                 _cellObjects.Add(cell.CellID, cell)
             End If
-        End Sub 'AddParsedSubObject
+        End Sub
 
 
         Protected Overrides Sub OnPreRender(ByVal e As EventArgs)
@@ -200,7 +200,7 @@ Namespace CustomControls
                     _table.Rows(i).Cells.RemoveAt((_table.Rows(i).Cells.Count - 1))
                 End While
             Next i
-        End Sub 'OnPreRender
+        End Sub
 
 
         <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.Demand, Name:="FullTrust")> _

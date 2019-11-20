@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Windows.Forms
+﻿Imports System.Windows.Forms
 
 Public Class Form1
     Inherits System.Windows.Forms.Form
@@ -62,7 +61,7 @@ Public Class Form1
         MessageBox.Show(("Now that autoConvert is true, you can convert " + myDataObject.GetData("System.String", _
              True).ToString() + " to string format."), "Message #2")
 
-    End Sub 'GetDataPresent3
+    End Sub
     ' </snippet1>
 
     Public Shared Sub Main()

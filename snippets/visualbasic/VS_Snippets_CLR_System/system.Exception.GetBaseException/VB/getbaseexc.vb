@@ -1,7 +1,5 @@
 ﻿'<Snippet1>
 ' Example for the Exception.GetBaseException method.
-Imports Microsoft.VisualBasic
-
 Namespace NDP_UE_VB
 
     ' Define two derived exceptions to demonstrate nested exceptions.
@@ -10,16 +8,16 @@ Namespace NDP_UE_VB
            
         Public Sub New( message As String, inner As Exception )
             MyBase.New( message, inner )
-        End Sub ' New
-    End Class ' SecondLevelException
+        End Sub
+    End Class
 
     Class ThirdLevelException
         Inherits Exception
            
         Public Sub New( message As String, inner As Exception )
             MyBase.New( message, inner )
-        End Sub ' New
-    End Class ' ThirdLevelException
+        End Sub
+    End Class
 
     Class NestedExceptions
        
@@ -59,7 +57,7 @@ Namespace NDP_UE_VB
                 Console.WriteLine( _
                     ex.GetBaseException( ).ToString( ) )
             End Try
-        End Sub ' Main
+        End Sub
            
         ' This sub catches the exception from the called sub
         ' DivideBy0( ) and throws another in response.
@@ -72,7 +70,7 @@ Namespace NDP_UE_VB
                     "Caught the second exception and " & _
                     "threw a third in response.", ex )
             End Try
-        End Sub ' Rethrow
+        End Sub
            
         ' This sub forces a division by 0 and throws a second 
         ' exception.
@@ -86,8 +84,8 @@ Namespace NDP_UE_VB
                     "Forced a division by 0 and threw " & _
                     "a second exception.", ex )
             End Try
-        End Sub ' DivideBy0
-    End Class ' NestedExceptions
+        End Sub
+    End Class
 End Namespace ' NDP_UE_VB
 
 ' This example of Exception.GetBaseException generates the following output.

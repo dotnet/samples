@@ -6,14 +6,12 @@
 '
 
 
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Media
 Imports System.Windows.Media.Animation
 Imports System.Windows.Shapes
 Imports System.Windows.Media.Imaging
-Imports Microsoft.VisualBasic
 
 Namespace Microsoft.Samples.Animation.TimingBehaviors
 	Public Class FillBehaviorExample
@@ -53,7 +51,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
             Dim deactivateAnimationRectangle As New Rectangle With {
                 .Name = "deactivateAnimationRectangle"
             }
-            Me.RegisterName(deactivateAnimationRectangle.Name, deactivateAnimationRectangle)
+            RegisterName(deactivateAnimationRectangle.Name, deactivateAnimationRectangle)
 			deactivateAnimationRectangle.Width = 20
 			deactivateAnimationRectangle.Height = 20
 			mySolidColorBrush = New SolidColorBrush(Color.FromArgb(170,51,51,255))
@@ -72,7 +70,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
             Dim holdEndAnimationRectangle As New Rectangle With {
                 .Name = "holdEndAnimationRectangle"
             }
-            Me.RegisterName(holdEndAnimationRectangle.Name, holdEndAnimationRectangle)
+            RegisterName(holdEndAnimationRectangle.Name, holdEndAnimationRectangle)
 			holdEndAnimationRectangle.Width = 20
 			holdEndAnimationRectangle.Height = 20
 			mySolidColorBrush = New SolidColorBrush(Color.FromArgb(170,51,51,255))
@@ -116,7 +114,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
             Dim myButton As New Button With {
                 .Name = "myButton"
             }
-            Me.RegisterName(myButton.Name, myButton)
+            RegisterName(myButton.Name, myButton)
 			myButton.Margin = New Thickness(0,30,0,0)
 			myButton.Content = "Restart Animations"
 			myButton.HorizontalAlignment = HorizontalAlignment.Left
@@ -137,7 +135,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
             myEventTrigger.Actions.Add(myBeginStoryboard)
 			myStackPanel.Triggers.Add(myEventTrigger)
 
-			Me.Content = myStackPanel
+			Content = myStackPanel
 		End Sub
 	End Class
 End Namespace

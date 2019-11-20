@@ -45,7 +45,7 @@ Class ConnectionStrings
         ' Save the configuration file.
         config.Save(ConfigurationSaveMode.Modified)
     
-    End Sub 'New
+    End Sub
      
     ' </Snippet1>
     ' <Snippet2>
@@ -84,7 +84,7 @@ Class ConnectionStrings
         Next i
         ' </Snippet3>
 
-    End Sub 'ShowConnectionStrings
+    End Sub
 
     ' </Snippet2>
     
@@ -124,7 +124,7 @@ Class ConnectionStrings
         
         Console.WriteLine("Connection string added.")
     
-    End Sub 'AddConnectionStrings
+    End Sub
      
     ' </Snippet7>
     
@@ -149,7 +149,7 @@ Class ConnectionStrings
         
         Console.WriteLine("Connection strings cleared.")
     
-    End Sub 'ClearConnectionStrings
+    End Sub
      
     
     ' </Snippet9>
@@ -189,7 +189,7 @@ Class ConnectionStrings
             Console.WriteLine(err.ToString())
         End Try
     
-    End Sub 'GetIndex
+    End Sub
     
     '</Snippet10>
     
@@ -235,7 +235,7 @@ Class ConnectionStrings
             Console.WriteLine(err.ToString())
         End Try
     
-    End Sub 'RemoveConnectionStrings
+    End Sub
     
     '</Snippet11>
 
@@ -271,7 +271,7 @@ Class ConnectionStrings
             Console.WriteLine(err.ToString())
         End Try
     
-    End Sub 'RemoveConnectionStrings2
+    End Sub
     
     '</Snippet12>
 
@@ -306,7 +306,7 @@ Class ConnectionStrings
             Console.WriteLine(err.ToString())
         End Try
     
-    End Sub 'RemoveConnectionStrings3
+    End Sub
     
     '</Snippet13>
 
@@ -340,7 +340,7 @@ Class ConnectionStrings
             Console.WriteLine(err.ToString())
         End Try
     
-    End Sub 'GetItems
+    End Sub
     
     '</Snippet14>
 
@@ -374,7 +374,7 @@ Class ConnectionStrings
             Console.WriteLine(err.ToString())
         End Try
     
-    End Sub 'GetItems2
+    End Sub
     
     '</Snippet15>
     Shared Sub Main(ByVal args() As String) 
@@ -387,5 +387,5 @@ Class ConnectionStrings
         ' GetIndex();
         RemoveConnectionStrings2()
     
-    End Sub 'Main 
-End Class 'ConnectionStrings
+    End Sub
+End Class

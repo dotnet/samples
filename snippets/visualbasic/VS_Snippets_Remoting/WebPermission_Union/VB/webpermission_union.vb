@@ -14,7 +14,7 @@ Imports System.Net
 Imports System.Security
 Imports System.Security.Permissions
 Imports System.Collections
-Imports Microsoft.VisualBasic
+
  _
 
 Class WebPermissionUnion
@@ -29,7 +29,7 @@ Class WebPermissionUnion
       Catch e As Exception
          Console.WriteLine(("Exception : " + e.Message))
       End Try
-   End Sub 'Main
+   End Sub
    
    
    Public Sub CreateUnion()
@@ -57,7 +57,7 @@ Class WebPermissionUnion
       Console.WriteLine(ControlChars.Cr + "Attributes and values of the WebPermission after the Union are : ")
       ' Display the attributes,values and children.
       Console.WriteLine(myWebPermission3.ToXml().ToString())
-   End Sub 'CreateUnion
+   End Sub
     
    ' </Snippet2>
    
@@ -75,5 +75,5 @@ Class WebPermissionUnion
       While myEnumerator1.MoveNext()
          Console.Write(ControlChars.Tab + "{0}", myEnumerator1.Current)
       End While
-   End Sub 'PrintKeysAndValues 
-End Class 'WebPermissionUnion
+   End Sub
+End Class

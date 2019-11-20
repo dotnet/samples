@@ -14,7 +14,7 @@ Namespace Samples.AspNet.VB
           Return New Samples.AspNet.VB.StreamPageStatePersister(Page)
        End Function 'GetStatePersister
 
-    End Class 'MyPageAdapter
+    End Class
 
 End Namespace
 ' </snippet5>

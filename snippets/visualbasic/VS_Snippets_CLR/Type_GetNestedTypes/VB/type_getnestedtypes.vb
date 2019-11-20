@@ -4,12 +4,12 @@ Imports System.Reflection
 Public Class MyClass1
     Public Class NestClass
         Public Shared myPublicInt As Integer = 0
-    End Class 'NestClass
+    End Class
 
     Public Structure NestStruct
         Public myPublicInt As Integer
     End Structure 'NestStruct
-End Class 'MyClass1
+End Class
 
 Public Class MyMainClass
     Public Shared Sub Main()
@@ -26,6 +26,6 @@ Public Class MyMainClass
         Catch e As Exception
             Console.WriteLine("Error", e.Message.ToString())
         End Try
-    End Sub 'Main
-End Class 'MyMainClass
+    End Sub
+End Class
 ' </Snippet1>

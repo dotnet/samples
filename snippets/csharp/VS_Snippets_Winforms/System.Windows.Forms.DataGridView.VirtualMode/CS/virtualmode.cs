@@ -137,12 +137,9 @@ public class Form1 : Form
         if (e.RowIndex < this.customers.Count)
         {
             // If the user is editing a new row, create a new Customer object.
-            if (this.customerInEdit == null)
-            {
-                this.customerInEdit = new Customer(
-                    ((Customer)this.customers[e.RowIndex]).CompanyName,
-                    ((Customer)this.customers[e.RowIndex]).ContactName);
-            }
+            this.customerInEdit ??= new Customer(
+                ((Customer)this.customers[e.RowIndex]).CompanyName,
+                ((Customer)this.customers[e.RowIndex]).ContactName);
             customerTmp = this.customerInEdit;
             this.rowInEdit = e.RowIndex;
         }

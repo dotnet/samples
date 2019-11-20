@@ -11,5 +11,5 @@ Public Class Sample
       Math.Round(4.35, 1) ' Returns 4.4
       Math.Round(4.36, 1) ' Returns 4.4
       ' </Snippet1>
-   End Sub 'Method 
-End Class 'Sample
+   End Sub
+End Class

@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.Windows.Automation
@@ -13,7 +12,7 @@ Class UIAValuePattern_snippets
     ''' </summary>
     Public Sub New()
 
-    End Sub 'New
+    End Sub
 
 
     ' <Snippet100>
@@ -163,7 +162,7 @@ Class UIAValuePattern_snippets
             End If
         End If
 
-    End Sub 'InsertText
+    End Sub
     '</Snippet103>
 
 
@@ -182,6 +181,6 @@ Class UIAValuePattern_snippets
             ' and call its Run() method to start it.
             Dim app As New UIAValuePattern_snippets()
         
-        End Sub 'Main
-    End Class 'TestMain
-End Class 'UIAValuePattern_snippets
+        End Sub
+    End Class
+End Class

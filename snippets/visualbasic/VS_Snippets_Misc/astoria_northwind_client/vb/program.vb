@@ -4,6 +4,7 @@ Imports System.Reflection
 Imports System.Windows.Forms
 Imports System.IO
 Imports NorthwindClient
+
 Module Program
     Sub Main()
         'Dim newSync As New CustomerOrdersCustom()

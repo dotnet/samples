@@ -28,7 +28,7 @@ Public Class SamplesArrayList
         Console.WriteLine("After reversing:")
         PrintValues(myAL)
 
-    End Sub 'Main
+    End Sub
 
     Public Shared Sub PrintValues(myList As IEnumerable)
         Dim obj As [Object]
@@ -36,9 +36,9 @@ Public Class SamplesArrayList
             Console.WriteLine("   {0}", obj)
         Next obj
         Console.WriteLine()
-    End Sub 'PrintValues
+    End Sub
 
-End Class 'SamplesArrayList
+End Class
 
 
 ' This code produces the following output.

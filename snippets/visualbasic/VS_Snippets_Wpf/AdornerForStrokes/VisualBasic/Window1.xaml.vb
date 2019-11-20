@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.Windows
@@ -27,7 +26,7 @@ Partial Class Window1
     Public Sub New()
         InitializeComponent()
 
-    End Sub 'New
+    End Sub
 
     '<Snippet3>
     Private Sub Window_Loaded(ByVal sender As Object, ByVal e As RoutedEventArgs)
@@ -38,6 +37,6 @@ Partial Class Window1
 
         adornerLayer.Add(adorner)
 
-    End Sub 'Window_Loaded
+    End Sub
     '</Snippet3>
-End Class 'Window1 
+End Class

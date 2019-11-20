@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.ComponentModel
 Imports System.Windows.Forms
 
@@ -37,7 +36,7 @@ Public Class Form1
             ' Insert code here.
         End If
         ' </Snippet2>
-    End Sub 'Method1
+    End Sub
     
     
     
@@ -48,5 +47,5 @@ Public Class Form1
             ' Insert code here.
         End If 
         ' </Snippet3>
-    End Sub 'Method2
-End Class 'Form1 
+    End Sub
+End Class

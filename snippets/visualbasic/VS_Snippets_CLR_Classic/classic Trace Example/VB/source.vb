@@ -15,7 +15,7 @@ Class Test
         Trace.WriteLine("Exiting Main")
         Trace.Unindent()
         
-    End Sub 'Main
+    End Sub
 
 End Class
 '</Snippet1>

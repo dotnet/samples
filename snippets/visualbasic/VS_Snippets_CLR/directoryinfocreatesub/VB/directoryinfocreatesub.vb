@@ -23,6 +23,6 @@ Public Class CreateSubTest
 
         ' Delete the directory.
         di.Delete(True)
-    End Sub 'Main
-End Class 'CreateSubTest
+    End Sub
+End Class
 ' </snippet1>

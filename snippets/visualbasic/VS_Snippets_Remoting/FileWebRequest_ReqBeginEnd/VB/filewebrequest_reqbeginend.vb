@@ -11,8 +11,6 @@ Imports System.Net
 Imports System.IO
 Imports System.Text
 Imports System.Threading
-Imports Microsoft.VisualBasic
-
 
 ' <Snippet1>
 ' <Snippet2>
@@ -23,8 +21,8 @@ Public Class RequestDeclare
     
     Public Sub New()
         myFileWebRequest = Nothing
-    End Sub ' New
-End Class ' RequestDeclare
+    End Sub
+End Class
 
 
 Class FileWebRequest_reqbeginend
@@ -70,7 +68,7 @@ Class FileWebRequest_reqbeginend
             End Try
 
         End If 
-    End Sub 'Main
+    End Sub
     
     
     Private Shared Sub ReadCallback(ar As IAsyncResult)
@@ -101,10 +99,10 @@ Class FileWebRequest_reqbeginend
             Console.WriteLine(("ApplicationException is :" + e.Message))
         End Try
 
-    End Sub ' ReadCallback 
+    End Sub
 ' </Snippet2> 
 ' </Snippet1>
-End Class ' FileWebRequest_reqbeginend
+End Class
 
 
 

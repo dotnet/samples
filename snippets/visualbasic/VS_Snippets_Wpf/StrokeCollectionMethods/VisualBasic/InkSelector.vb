@@ -1,5 +1,4 @@
 ﻿ '<Snippet3>
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 'Imports System.Windows.Design
@@ -71,14 +70,14 @@ Namespace CustomInkControlSample
             AddHandler inkDA.AttributeChanged, AddressOf DrawingAttributesChanged
             AddHandler selectDA.AttributeChanged, AddressOf DrawingAttributesChanged
 
-        End Sub 'New
+        End Sub
 
         Shared Sub New()
             ' Allow ink to be drawn only within the bounds of the control.
             Dim owner As Type = GetType(InkSelector)
             ClipToBoundsProperty.OverrideMetadata(owner, New FrameworkPropertyMetadata(True))
 
-        End Sub 'New
+        End Sub
 
         ' Prepare to collect stylus packets. If Mode is set to Select,  
         ' get the IncrementalHitTester from the InkPresenter's 
@@ -98,7 +97,7 @@ Namespace CustomInkControlSample
 
             InitializeHitTester(eventPoints)
 
-        End Sub 'OnStylusDown
+        End Sub
 
 
         Protected Overrides Sub OnMouseLeftButtonDown(ByVal e As MouseButtonEventArgs)
@@ -121,7 +120,7 @@ Namespace CustomInkControlSample
 
             InitializeHitTester(collectedPoints)
 
-        End Sub 'OnMouseLeftButtonDown
+        End Sub
 
         '<Snippet17>
         Private Sub InitializeHitTester(ByVal collectedPoints As StylusPointCollection)
@@ -146,7 +145,7 @@ Namespace CustomInkControlSample
                 selectionTester.AddPoints(collectedPoints)
             End If
 
-        End Sub 'InitializeHitTester
+        End Sub
         '</Snippet17>
 
         ' Collect the stylus packets as the stylus moves.
@@ -159,7 +158,7 @@ Namespace CustomInkControlSample
             stylusPoints.Add(collectedPoints)
             AddPointsToHitTester(collectedPoints)
 
-        End Sub 'OnStylusMove
+        End Sub
 
 
         Protected Overrides Sub OnMouseMove(ByVal e As MouseEventArgs)
@@ -186,7 +185,7 @@ Namespace CustomInkControlSample
 
             AddPointsToHitTester(collectedPoints)
 
-        End Sub 'OnMouseMove
+        End Sub
 
 
         Private Sub AddPointsToHitTester(ByVal collectedPoints As StylusPointCollection)
@@ -197,7 +196,7 @@ Namespace CustomInkControlSample
                 selectionTester.AddPoints(collectedPoints)
             End If
 
-        End Sub 'AddPointsToHitTester
+        End Sub
 
         ' When the user lifts the stylus, create a Stroke from the
         ' collected stylus packetList and add it to the InkPresenter.
@@ -218,7 +217,7 @@ Namespace CustomInkControlSample
 
             Stylus.Capture(Nothing)
 
-        End Sub 'OnStylusUp
+        End Sub
 
 
         Protected Overrides Sub OnMouseLeftButtonUp(ByVal e As MouseButtonEventArgs)
@@ -243,7 +242,7 @@ Namespace CustomInkControlSample
 
             Mouse.Capture(Nothing)
 
-        End Sub 'OnMouseLeftButtonUp
+        End Sub
 
 
         '<Snippet38>
@@ -267,7 +266,7 @@ Namespace CustomInkControlSample
                 selectionTester.EndHitTesting()
             End If
 
-        End Sub 'AddStrokeToPresenter
+        End Sub
 
         '</Snippet38>
 
@@ -288,7 +287,7 @@ Namespace CustomInkControlSample
                 selectedStrokes.Remove(unselectedStroke)
             Next unselectedStroke
 
-        End Sub 'selectionHT_StrokeHitChanged
+        End Sub
         '</Snippet18>
 
         '<Snippet19>
@@ -298,7 +297,7 @@ Namespace CustomInkControlSample
             presenter.Strokes.Clear()
             lassoPath = Nothing
 
-        End Sub 'ClearStrokes
+        End Sub
         '</Snippet19>
 
         ' Property to indicate whether the user is inputting or

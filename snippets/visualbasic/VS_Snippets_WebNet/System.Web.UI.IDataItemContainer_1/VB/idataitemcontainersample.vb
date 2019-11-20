@@ -41,7 +41,7 @@ Namespace Samples.AspNet.VB
             End If
             Return count
         End Function 'CreateChildControls
-    End Class 'SimpleSpreadsheetControl
+    End Class
 
 
     Public Class SimpleSpreadsheetRow
@@ -54,7 +54,7 @@ Namespace Samples.AspNet.VB
         Public Sub New(ByVal itemIndex As Integer, ByVal o As Object)
             dataObj = o
             _itemIndex = itemIndex
-        End Sub 'New
+        End Sub
 
         Public Overridable ReadOnly Property Data() As Object
             Get
@@ -105,7 +105,7 @@ Namespace Samples.AspNet.VB
             Else
                 writer.Write("<TD>This is a test</TD>")
             End If
-        End Sub 'RenderContents
-    End Class 'SimpleSpreadsheetRow
+        End Sub
+    End Class
 End Namespace
 ' </Snippet2>

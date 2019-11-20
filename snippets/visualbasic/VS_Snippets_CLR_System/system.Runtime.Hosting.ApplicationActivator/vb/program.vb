@@ -35,13 +35,13 @@ Public Class Program
         '</Snippet4>
         Console.Read()
 
-    End Sub 'Main
+    End Sub
 
     <SecurityPermission(SecurityAction.LinkDemand, ControlDomainPolicy:=True)> _
     Public Sub Run()
         Main(New String() {})
         Console.ReadLine()
 
-    End Sub 'Run
-End Class 'Program
+    End Sub
+End Class
 '</Snippet1>

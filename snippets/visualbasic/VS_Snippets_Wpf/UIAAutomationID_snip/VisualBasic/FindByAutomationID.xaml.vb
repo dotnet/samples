@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Data
@@ -24,7 +23,7 @@ Namespace UIAAutomationID_snip
 
         Public Sub New()
             InitializeComponent()
-        End Sub 'New
+        End Sub
 
 
         Private Sub btnStartTarget_Click(ByVal src As Object, ByVal e As RoutedEventArgs)
@@ -33,14 +32,14 @@ Namespace UIAAutomationID_snip
                 Throw New ApplicationException("Unable to start target application.")
             End If
 
-        End Sub 'btnStartTarget_Click
+        End Sub
 
 
         Private Sub btnFindElement_Click(ByVal src As Object, ByVal e As RoutedEventArgs)
             Dim targetElements As AutomationElementCollection = FindElementFromAutomationID(targetApp, tbAutomationID.Text)
             System.Windows.MessageBox.Show(targetElements.Count.ToString())
 
-        End Sub 'btnFindElement_Click
+        End Sub
 
 
         ' <Snippet100>
@@ -118,7 +117,7 @@ Namespace UIAAutomationID_snip
             Dim workerThread As New Thread(threadDelegate)
             workerThread.Start()
 
-        End Sub 'CreateUIAThread
+        End Sub
 
 
         '''--------------------------------------------------------------------
@@ -131,7 +130,7 @@ Namespace UIAAutomationID_snip
 
             uiautoWorker = New UIAWorker(targetApp)
 
-        End Sub 'CreateUIAWorker
+        End Sub
 
         Private uiautoWorker As UIAWorker
 
@@ -185,7 +184,7 @@ Namespace UIAAutomationID_snip
                 WriteToScript(storedItem.AutomationID, storedItem.EventID)
             Next storedItem
 
-        End Sub 'Playback
+        End Sub
 
 
         '''--------------------------------------------------------------------
@@ -208,7 +207,7 @@ Namespace UIAAutomationID_snip
             ' purposes of this example we just write to the console.
             Console.WriteLine(automationID + " - " + eventID)
 
-        End Sub 'WriteToScript
+        End Sub
         ' </SnippetPlayback>
 
         Class TargetApplication
@@ -222,8 +221,8 @@ Namespace UIAAutomationID_snip
                 End Set
             End Property
             Private target As AutomationElement
-        End Class 'TargetApplication
-    End Class 'FindByAutomationID
+        End Class
+    End Class
     '
     'ToDo: Error processing original source shown below
     '    }

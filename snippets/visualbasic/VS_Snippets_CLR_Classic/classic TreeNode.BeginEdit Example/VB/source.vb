@@ -60,4 +60,4 @@ Private Sub treeView1_AfterLabelEdit(sender As Object, _
 End Sub 
 ' </Snippet1>
 
-End Class 'Form1 
+End Class

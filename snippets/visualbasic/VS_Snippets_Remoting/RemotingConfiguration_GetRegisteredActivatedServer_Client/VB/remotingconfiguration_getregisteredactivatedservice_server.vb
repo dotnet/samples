@@ -35,5 +35,5 @@ Public Class ServerClass
 ' </Snippet1>
       Console.WriteLine("Press enter to stop this process.")
       Console.ReadLine()
-   End Sub 'Main
-End Class 'ServerClass
+   End Sub
+End Class

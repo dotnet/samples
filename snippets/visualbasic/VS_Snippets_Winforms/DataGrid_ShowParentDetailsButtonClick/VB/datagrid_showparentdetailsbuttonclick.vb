@@ -4,7 +4,6 @@
 ' event of 'DataGrid' class. On the click of "ParentDetailsButton" button in the
 ' Datagrid, a message is displayed.
 
-Imports System
 Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
@@ -18,7 +17,7 @@ Public Class MyForm
    Public Sub New()
       InitializeComponent()
       SetUp()
-   End Sub 'New
+   End Sub
    
    ' Clean up any resources being used.
    Protected Overrides overloads Sub Dispose(disposing As Boolean)
@@ -28,12 +27,12 @@ Public Class MyForm
          End If
       End If
       MyBase.Dispose(disposing)
-   End Sub 'Dispose
+   End Sub
    
    
    Public Shared Sub Main()
       Application.Run(New MyForm())
-   End Sub 'Main
+   End Sub
    
    
    Private Sub InitializeComponent()
@@ -55,7 +54,7 @@ Public Class MyForm
       CallShowParentDetailsButtonClick()
       
       Me.Controls.Add(myDataGrid)
-   End Sub 'InitializeComponent
+   End Sub
    
    
    Private Sub SetUp()
@@ -63,7 +62,7 @@ Public Class MyForm
       MakeDataSet()
       ' Bind the DataGrid to the DataSet.
       myDataGrid.SetDataBinding(myDataSet, "Person")
-   End Sub 'SetUp
+   End Sub
    
    
    ' Create a DataSet with two tables and populate it.
@@ -120,14 +119,14 @@ Public Class MyForm
          ' Add the row to the 'Detail' table.
          detailTable.Rows.Add(newRow2)
       Next i
-   End Sub 'MakeDataSet
+   End Sub
    
    
 ' <Snippet1>
    Private Sub CallShowParentDetailsButtonClick()
       AddHandler myDataGrid.ShowParentDetailsButtonClick, AddressOf _
                                               DataGridShowParentDetailsButtonClick_Clicked
-   End Sub 'CallShowParentDetailsButtonClick
+   End Sub
    
    
    ' raise the event when ParentDetailsButton is clicked.
@@ -136,6 +135,6 @@ Public Class MyForm
 
         ' Show the message when event is raised.
         MessageBox.Show(myMessage, "ShowParentDetailsButtonClick information")
-    End Sub 'DataGridShowParentDetailsButtonClick_Clicked
+    End Sub
 ' </Snippet1>
-End Class 'MyForm 
+End Class

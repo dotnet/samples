@@ -71,7 +71,7 @@ Namespace Mssc.Services.ConnectionManagement
                 Console.WriteLine("UseNagleAlgorithm = " + sp.UseNagleAlgorithm.ToString())
                 Console.WriteLine("Expect 100-continue = " + sp.Expect100Continue.ToString())
                 '</Snippet9>
-            End Sub 'ShowProperties
+            End Sub
 
 
 
@@ -116,7 +116,7 @@ Namespace Mssc.Services.ConnectionManagement
                         res.Close()
                     End If
                 End Try
-            End Sub 'makeWebRequest
+            End Sub
 
             ' </Snippet6>
 
@@ -124,7 +124,7 @@ Namespace Mssc.Services.ConnectionManagement
             Private Shared Sub showUsage()
                 Console.WriteLine("Enter the proxy name as follows:")
                 Console.WriteLine(ControlChars.Tab + "vb_servicepoint proxyName")
-            End Sub 'showusage
+            End Sub
 
             ' <Snippet7>
             ' This is the program entry point. It allows the user to enter 
@@ -202,11 +202,11 @@ Namespace Mssc.Services.ConnectionManagement
                 ' used to create the previous ServicePoint object.
                 makeWebRequest(hashCode, "http://msdn.microsoft.com/library/")
 
-            End Sub 'Main
+            End Sub
 
             ' </Snippet7>
 
-        End Class 'TestServicePoint
+        End Class
 
     End Module
 End Namespace

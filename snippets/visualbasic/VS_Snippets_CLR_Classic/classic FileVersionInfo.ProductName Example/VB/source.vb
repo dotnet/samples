@@ -15,7 +15,7 @@ Public Class Form1
         
         ' Print the product name.
         textBox1.Text = "Product name: " & myFileVersionInfo.ProductName
-    End Sub 'GetProductName
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Windows
 Imports System.Data
 Imports System.Xml
@@ -32,8 +31,8 @@ Class MyApp
         Dim mainWindow As New Window1()
         mainWindow.Show()
 
-    End Sub 'AppStartup
-End Class 'MyApp 
+    End Sub
+End Class
 '
 'ToDo: Error processing original source shown below
 '    }

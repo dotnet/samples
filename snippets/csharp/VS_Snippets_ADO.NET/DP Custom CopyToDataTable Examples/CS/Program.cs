@@ -327,10 +327,7 @@ namespace DP_Custom_CopyToDataTable_Examples
             }
 
             // Create a new table if the input table is null.
-            if (table == null)
-            {
-                table = new DataTable(typeof(T).Name);
-            }
+            table ??= new DataTable(typeof(T).Name);
 
             // Initialize the ordinal map and extend the table schema based on type T.
             table = ExtendTable(table, typeof(T));
@@ -360,10 +357,7 @@ namespace DP_Custom_CopyToDataTable_Examples
         public DataTable ShredPrimitive(IEnumerable<T> source, DataTable table, LoadOption? options)
         {
             // Create a new table if the input table is null.
-            if (table == null)
-            {
-                table = new DataTable(typeof(T).Name);
-            }
+            table ??= new DataTable(typeof(T).Name);
 
             if (!table.Columns.Contains("Value"))
             {

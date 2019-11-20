@@ -72,7 +72,7 @@ Public Class EmployeeLogic
 
       ' Call the true implementation.
       InsertNewEmployee(tempEmployee)
-   End Sub 'InsertNewEmployeeWrapper
+   End Sub
 
 
    Public Shared Sub InsertNewEmployee(ne As NorthwindEmployee)
@@ -80,11 +80,11 @@ Public Class EmployeeLogic
       If Not retval Then
          Throw New NorthwindDataException("InsertNewEmployee failed.")
       End If
-   End Sub 'InsertNewEmployee
+   End Sub
 ' </snippet3>
 
    ' And so on...
-End Class 'EmployeeLogic
+End Class
 
 
 Public Class NorthwindEmployee
@@ -96,7 +96,7 @@ Public Class NorthwindEmployee
       aTitle = ""
       titleOfCourtesy = ""
       reportsTo = - 1
-   End Sub 'New
+   End Sub
 
 
    Public Sub New(anID As Object)
@@ -142,7 +142,7 @@ Public Class NorthwindEmployee
             Throw
          End Try
       End Try
-   End Sub 'New
+   End Sub
 
    Private ID As Object
    Public ReadOnly Property EmpID() As String
@@ -205,14 +205,14 @@ Public Class NorthwindEmployee
       ' Implement persistence logic.
       Return True
    End Function 'Save
-End Class 'NorthwindEmployee
+End Class
 
 Friend Class NorthwindDataException
    Inherits Exception
 
    Public Sub New(msg As String)
       MyBase.New(msg)
-   End Sub 'New
-End Class 'NorthwindDataException
+   End Sub
+End Class
 End Namespace
 ' </snippet2>

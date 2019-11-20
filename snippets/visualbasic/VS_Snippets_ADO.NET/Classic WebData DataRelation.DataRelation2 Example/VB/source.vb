@@ -24,7 +24,7 @@ Private Sub CreateRelation()
         "Orders").Columns("OrdID")
 
     ' Create DataRelation.
-    Dim CustOrderRel As DataRelation = New DataRelation( _
+    Dim CustOrderRel As New DataRelation( _
         "CustomersOrders", parentColumns, childColumns)
 
     ' Add the relation to the DataSet.

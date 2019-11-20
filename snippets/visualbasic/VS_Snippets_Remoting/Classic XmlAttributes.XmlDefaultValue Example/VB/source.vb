@@ -21,7 +21,7 @@ Public Class Run
         Dim test As New Run()
         test.SerializeObject("OverrideDefaultValue.xml")
         test.DeserializeObject("OverrideDefaultValue.xml")
-    End Sub 'Main
+    End Sub
     
     
     ' Return an XmlSerializer used for overriding. 

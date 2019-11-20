@@ -13,5 +13,5 @@ Public Class MyServiceClass
       RemotingConfiguration.RegisterActivatedServiceType(GetType(MyHelloService))
       Console.WriteLine("Press Enter to Exit the Server")
       Console.ReadLine()
-   End Sub 'Main
-End Class 'MyServiceClass
+   End Sub
+End Class

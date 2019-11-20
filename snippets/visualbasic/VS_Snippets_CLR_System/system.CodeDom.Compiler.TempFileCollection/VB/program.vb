@@ -40,7 +40,7 @@ Class Program
             Console.WriteLine(e.Message)
         End Try
     
-    End Sub 'Main 
-End Class 'Program
+    End Sub
+End Class
 
 '</Snippet1>

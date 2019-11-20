@@ -8,7 +8,6 @@
 ' handler function.
 '
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.Windows.Forms
@@ -30,7 +29,7 @@ Public Class MyForm
       MakeDataSet()
       myDataGrid.SetDataBinding(myDataSet, "CustTable")
       myCurrencyManager = CType(Me.BindingContext(myDataSet, "CustTable"), CurrencyManager)
-   End Sub 'New
+   End Sub
 
    Private Sub InitializeComponent()
       myDataGrid = New DataGrid()
@@ -50,11 +49,11 @@ Public Class MyForm
       ClientSize = New Size(360, 273)
       Controls.AddRange(New Control() {myButton, myDataGrid})
       Text = "NullTextChanged "
-   End Sub 'InitializeComponent
+   End Sub
 
    Shared Sub Main()
       Application.Run(New MyForm())
-   End Sub 'Main
+   End Sub
 
    Private Sub MakeDataSet()
       myDataSet = New DataSet("myDataSet")
@@ -77,7 +76,7 @@ Public Class MyForm
       custTable.Rows(1)("Customers") = "Beta"
       custTable.Rows(2)("Customers") = "Omega"
       AddCustomColumnStyle()
-   End Sub 'MakeDataSet
+   End Sub
 
 ' <Snippet1>
    Private Sub AddCustomColumnStyle()
@@ -86,7 +85,7 @@ Public Class MyForm
       AddHandler myColumnStyle.NullTextChanged, AddressOf columnStyle_NullTextChanged
       myTableStyle.GridColumnStyles.Add(myColumnStyle)
       myDataGrid.TableStyles.Add(myTableStyle)
-   End Sub 'AddCustomColumnStyle
+   End Sub
 
    ' NullTextChanged event handler of DataGridColumnStyle.
    Private Sub columnStyle_NullTextChanged(ByVal sender As Object, ByVal e As EventArgs)
@@ -96,7 +95,7 @@ Public Class MyForm
          myDataGrid(myCell) = Nothing
       Next i
       MessageBox.Show("NullTextChanged Event is handled")
-   End Sub 'columnStyle_NullTextChanged
+   End Sub
 ' </Snippet1>
 
    Private Sub button_Click(ByVal sender As Object, ByVal e As EventArgs)
@@ -108,7 +107,7 @@ Public Class MyForm
          myDataGrid(myCell) = ""
       Next i
       myColumnStyle.NullText = Nothing
-   End Sub 'button_Click
-End Class 'MyForm
+   End Sub
+End Class
 
 

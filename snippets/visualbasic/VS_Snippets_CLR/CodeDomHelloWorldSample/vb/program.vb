@@ -54,7 +54,7 @@ Class Program
         End If
         File.Delete(sourceFileName)
 
-    End Sub 'Main
+    End Sub
 
 
     '<Snippet2>
@@ -137,7 +137,7 @@ Class Program
     Shared Sub LogMessage(ByVal [text] As String)
         Console.WriteLine([text])
 
-    End Sub 'LogMessage
+    End Sub
 
 
     Shared Sub OutputResults(ByVal results As CompilerResults)
@@ -148,6 +148,6 @@ Class Program
             LogMessage(s)
         Next s
 
-    End Sub 'OutputResults
-End Class 'Program
+    End Sub
+End Class
 '</Snippet1>

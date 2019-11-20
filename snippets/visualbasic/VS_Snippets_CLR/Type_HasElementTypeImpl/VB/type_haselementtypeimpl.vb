@@ -1,6 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
+
 Public Class MyTypeDelegator
     Inherits TypeDelegator
     Public myElementType As String = Nothing
@@ -8,7 +8,7 @@ Public Class MyTypeDelegator
     Public Sub New(ByVal myType As Type)
         MyBase.New(myType)
         Me.myType = myType
-    End Sub 'New
+    End Sub
     ' Override Type.HasElementTypeImpl().
     Protected Overrides Function HasElementTypeImpl() As Boolean
         ' Determine whether the type is an array.
@@ -29,7 +29,7 @@ Public Class MyTypeDelegator
         ' The type is not a reference, array, or pointer type.
         Return False
     End Function 'HasElementTypeImpl
-End Class 'MyTypeDelegator
+End Class
 Public Class Type_HasElementTypeImpl
     Public Shared Sub Main()
         Try
@@ -53,6 +53,6 @@ Public Class Type_HasElementTypeImpl
         Catch e As Exception
             Console.WriteLine("Exception: {0}", e.Message.ToString())
         End Try
-    End Sub 'Main
-End Class 'Type_HasElementTypeImpl
+    End Sub
+End Class
 ' </Snippet1>

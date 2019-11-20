@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Windows
 Imports System.Data
 Imports System.Xml
@@ -20,5 +19,5 @@ Class MyApp
 
         'Dim secondWindow As New Window2()
         'secondWindow.Show()
-    End Sub 'AppStartup 
-End Class 'MyApp 
+    End Sub
+End Class

@@ -67,7 +67,7 @@ Namespace Samples.AspNet.Controls.VB
         ' Raise the DataBound event.
             OnDataBound(EventArgs.Empty)
 
-    End Sub 'PerformSelect
+    End Sub
 
     '</snippet3>
     '<snippet4>
@@ -82,7 +82,7 @@ Namespace Samples.AspNet.Controls.VB
         ' collection to elements of the data-bound control.
         PerformDataBinding(retrievedData)
 
-    End Sub 'OnDataSourceViewSelectCallback
+    End Sub
 
     '</snippet4>        
     '<snippet5>
@@ -125,7 +125,7 @@ Namespace Samples.AspNet.Controls.VB
             Next dataItem
         End If
 
-    End Sub 'PerformDataBinding
+    End Sub
 
     '</snippet5>                
     '<snippet6>
@@ -164,8 +164,8 @@ Namespace Samples.AspNet.Controls.VB
 
         writer.RenderEndTag()
 
-    End Sub 'Render
-    End Class 'TextBoxSet 
+    End Sub
+    End Class
     '</snippet6>       
 End Namespace
 '</snippet2>

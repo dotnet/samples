@@ -15,6 +15,6 @@ Class UTF8EncodingExample
         Console.WriteLine(UTF8b.GetHashCode())
         Console.WriteLine(UTF8c.GetHashCode())
         Console.WriteLine(UTF8d.GetHashCode())
-    End Sub 'Main
-End Class 'UTF8EncodingExample
+    End Sub
+End Class
 ' </Snippet1>

@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
 
@@ -12,7 +11,7 @@ Public Class Form1
     ' <Snippet1>
     Private Sub SetGridLineColor(myGrid As DataGrid, newcolor As System.Drawing.Color)
         myGrid.GridLineColor = newcolor
-    End Sub 'SetGridLineColor
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

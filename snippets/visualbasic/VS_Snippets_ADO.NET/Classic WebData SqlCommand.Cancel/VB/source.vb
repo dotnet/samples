@@ -42,7 +42,7 @@ Module Module1
                 Command.CommandText = "SELECT * FROM TestCancel"
                 Dim reader As SqlDataReader = Command.ExecuteReader()
 
-                Dim rThread2 As Thread = New Thread( _
+                Dim rThread2 As New Thread( _
                     New ThreadStart(AddressOf Thread_Cancel))
 
                 rThread2.Start()

@@ -8,8 +8,6 @@
 
 Imports System.IO
 Imports System.Net
-Imports Microsoft.VisualBasic
-
 
 Class HttpWebRequest_UserAgent
    Shared Sub Main()
@@ -50,7 +48,7 @@ Class HttpWebRequest_UserAgent
             Console.WriteLine(("Source  : " + e.Source))
             Console.WriteLine(("Message : " + e.Message))
         End Try
-    End Sub ' Main 
-End Class ' HttpWebRequest_UserAgent
+    End Sub
+End Class
 
 

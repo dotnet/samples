@@ -32,7 +32,7 @@ Public Class SamplesCalendar
       Console.WriteLine("After adding 5 to each component of the DateTime:")
       DisplayValues(myCal, myDT)
 
-   End Sub 'Main
+   End Sub
 
    Public Shared Sub DisplayValues(myCal As Calendar, myDT As DateTime)
       Console.WriteLine("   Era:          {0}", myCal.GetEra(myDT))
@@ -46,9 +46,9 @@ Public Class SamplesCalendar
       Console.WriteLine("   Second:       {0}", myCal.GetSecond(myDT))
       Console.WriteLine("   Milliseconds: {0}", myCal.GetMilliseconds(myDT))
       Console.WriteLine()
-   End Sub 'DisplayValues
+   End Sub
 
-End Class 'SamplesCalendar 
+End Class
 
 
 'This code produces the following output.

@@ -8,7 +8,6 @@
 ' For simplicity, this sample does not handle run-time switching of visual styles.
 
 '<Snippet0>
-Imports System
 Imports System.Text
 Imports System.Drawing
 Imports System.Windows.Forms

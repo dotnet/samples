@@ -42,16 +42,16 @@ Public Class SamplesArray
         Console.WriteLine("   Original: The DateTimeFormatInfo.DateSeparator for {0} is {1}.", arrCI(3).Name, arrCI(3).DateTimeFormat.DateSeparator)
         Console.WriteLine("      Clone: The DateTimeFormatInfo.DateSeparator for {0} is {1}.", arrCIClone(3).Name, arrCIClone(3).DateTimeFormat.DateSeparator)
 
-    End Sub 'Main
+    End Sub
 
     Public Shared Sub PrintIndexAndValues(myArray As Array)
         Dim i As Integer
         For i = myArray.GetLowerBound(0) To myArray.GetUpperBound(0)
             Console.WriteLine(vbTab + "[{0}]:" + vbTab + "{1}", i, myArray.GetValue(i))
         Next i
-    End Sub 'PrintIndexAndValues 
+    End Sub
 
-End Class 'SamplesArray
+End Class
 
 
 'This code produces the following output.

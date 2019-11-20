@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
 
@@ -13,7 +12,7 @@ Public Class Form1
    Public Shared Sub Main()
       Dim f1 As New Form1()
       f1.myDataSet = New DataSet("myDataSet")
-   End Sub 'Main
+   End Sub
     
     ' <Snippet1>
 Private Sub CreateDataGridGridTableStyle()
@@ -26,7 +25,7 @@ Private Sub CreateDataGridGridTableStyle()
    myGridTableStyle = New DataGridTableStyle(myCurrencyManager)
    ' Add the table style to the collection of a DataGrid.
    myDataGrid.TableStyles.Add(myGridTableStyle)
-End Sub 'CreateDataGridGridTableStyle
+End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

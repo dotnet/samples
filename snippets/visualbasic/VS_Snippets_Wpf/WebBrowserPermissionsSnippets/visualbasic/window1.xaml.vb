@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Windows
+﻿Imports System.Windows
 Imports System.Security.Permissions
 
 Namespace WindowsApplication1

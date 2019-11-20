@@ -78,9 +78,9 @@ Public Class FaultBindingCollection_Remove
             Console.WriteLine("Error while reversing")
          End If
       End If
-   End Sub 'Main 
+   End Sub
 
-End Class 'FaultBindingCollection_Remove
+End Class
 ' </Snippet6>
 ' </Snippet5>
 ' </Snippet4>

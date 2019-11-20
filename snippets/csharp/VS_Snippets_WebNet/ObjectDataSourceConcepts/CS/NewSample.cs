@@ -206,10 +206,10 @@ namespace Samples.AspNet.ObjectDataSource
       if (String.IsNullOrEmpty(LastName))
         throw new ArgumentException("LastName cannot be null or an empty string.");
 
-      if (Address    == null) { Address    = String.Empty; }
-      if (City       == null) { City       = String.Empty; }
-      if (Region     == null) { Region     = String.Empty; }
-      if (PostalCode == null) { PostalCode = String.Empty; }
+      Address    ??= String.Empty;
+      City       ??= String.Empty;
+      Region     ??= String.Empty;
+      PostalCode ??= String.Empty;
 
       SqlConnection conn = new SqlConnection(_connectionString);
       SqlCommand    cmd  = new SqlCommand("UPDATE Employees " + 
@@ -317,10 +317,10 @@ namespace Samples.AspNet.ObjectDataSource
       if (String.IsNullOrEmpty(original_LastName))
         throw new ArgumentException("LastName cannot be null or an empty string.");
 
-      if (original_Address    == null) { original_Address    = String.Empty; }
-      if (original_City       == null) { original_City       = String.Empty; }
-      if (original_Region     == null) { original_Region     = String.Empty; }
-      if (original_PostalCode == null) { original_PostalCode = String.Empty; }
+      original_Address    ??= String.Empty;
+      original_City       ??= String.Empty;
+      original_Region     ??= String.Empty;
+      original_PostalCode ??= String.Empty;
 
       string sqlCmd = "DELETE FROM Employees WHERE EmployeeID = @original_EmployeeID " + 
                       " AND LastName = @original_LastName AND FirstName = @original_FirstName " +
@@ -373,15 +373,15 @@ namespace Samples.AspNet.ObjectDataSource
       if (String.IsNullOrEmpty(LastName))
         throw new ArgumentException("LastName cannot be null or an empty string.");
 
-      if (Address    == null) { Address    = String.Empty; }
-      if (City       == null) { City       = String.Empty; }
-      if (Region     == null) { Region     = String.Empty; }
-      if (PostalCode == null) { PostalCode = String.Empty; }
+      Address    ??= String.Empty;
+      City       ??= String.Empty;
+      Region     ??= String.Empty;
+      PostalCode ??= String.Empty;
 
-      if (original_Address    == null) { original_Address    = String.Empty; }
-      if (original_City       == null) { original_City       = String.Empty; }
-      if (original_Region     == null) { original_Region     = String.Empty; }
-      if (original_PostalCode == null) { original_PostalCode = String.Empty; }
+      original_Address    ??= String.Empty;
+      original_City       ??= String.Empty;
+      original_Region     ??= String.Empty;
+      original_PostalCode ??= String.Empty;
 
       string sqlCmd = "UPDATE Employees " + 
                       "  SET FirstName = @FirstName, LastName = @LastName, " + 

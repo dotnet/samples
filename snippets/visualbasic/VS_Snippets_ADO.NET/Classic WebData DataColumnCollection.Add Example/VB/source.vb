@@ -12,7 +12,7 @@ Private Sub AddDataColumn()
     Dim columns As DataColumnCollection = _
         DataSet1.Tables("Orders").Columns
  
-    Dim column As DataColumn = New DataColumn
+    Dim column As New DataColumn()
     With column
        .DataType = System.Type.GetType("System.Decimal")
        .ColumnName = "ItemPrice"

@@ -16,12 +16,12 @@ Public Class cstmHtmlTW
 
     Public Sub New(ByVal writer As TextWriter)
         MyBase.New(writer)
-    End Sub 'New
+    End Sub
 
 
     Public Sub New(ByVal writer As TextWriter, ByVal tabString As String)
         MyBase.New(writer, tabString)
-    End Sub 'New
+    End Sub
 
 
     ' <snippet2>
@@ -54,5 +54,5 @@ Public Class cstmHtmlTW
         End If
     End Function 'RenderAfterContent
     ' </snippet3>
-End Class 'cstmHtmlTW 
+End Class
 ' </snippet1>

@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Windows
+﻿Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Media
 Imports System.Windows.Media.Animation
@@ -35,19 +34,19 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			Get
 				Return theClock
 			End Get
-			Set(ByVal value As Clock)
-				If theClock IsNot Nothing Then
-					RemoveHandler theClock.CurrentTimeInvalidated, AddressOf onClockTimeInvalidated
+            Set(value As Clock)
+                If theClock IsNot Nothing Then
+                    RemoveHandler theClock.CurrentTimeInvalidated, AddressOf onClockTimeInvalidated
 
-				End If
+                End If
 
-				theClock = value
+                theClock = value
 
-				If theClock IsNot Nothing Then
-					AddHandler theClock.CurrentTimeInvalidated, AddressOf onClockTimeInvalidated
-				End If
-			End Set
-		End Property
+                If theClock IsNot Nothing Then
+                    AddHandler theClock.CurrentTimeInvalidated, AddressOf onClockTimeInvalidated
+                End If
+            End Set
+        End Property
 
         Private Sub onClockTimeInvalidated(sender As Object, args As EventArgs)
             SetValue(CurrentTimeProperty, theClock.CurrentTime)

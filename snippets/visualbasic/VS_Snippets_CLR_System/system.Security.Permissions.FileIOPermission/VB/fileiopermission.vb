@@ -5,7 +5,6 @@
 Imports System.Security
 Imports System.Security.Permissions
 Imports System.Collections
-Imports Microsoft.VisualBasic
 
 <Assembly: CLSCompliant(True)> 
 
@@ -425,8 +424,8 @@ Public Class FileIOPermissionDemo
             Dim consoleInput As String = Console.ReadLine()
             System.Environment.ExitCode = 101
         End Try
-    End Sub 'Main
-End Class 'FileIOPermissionDemo
+    End Sub
+End Class
 
 
 ' This class generates FileIOPermission objects.
@@ -444,12 +443,12 @@ Friend Class FileIOGenerator
     Public Sub New()
 
         ResetIndex()
-    End Sub 'New
+    End Sub
 
 
     Public Sub ResetIndex()
         fileIndex = 0
-    End Sub 'ResetIndex
+    End Sub
 
     ' Create a file path.
     '<Snippet10>

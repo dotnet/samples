@@ -8,7 +8,7 @@ Class XmlReader_Samples
     
     Shared Sub Main() 
     
-    End Sub 'Main
+    End Sub
      
     
 Shared Sub AttributeCount() 
@@ -26,7 +26,7 @@ If reader.HasAttributes Then
   reader.MoveToElement() 
 End If
 '</snippet1>    
-End Sub 'AttributeCount
+End Sub
     
 '==============================
 ' 
@@ -36,7 +36,7 @@ Dim reader As XmlReader = XmlReader.Create("books.xml")
 reader.ReadToFollowing("book")
 Dim isbn As String = reader.GetAttribute(2)
  '</snippet2>
-End Sub 'GetAttribute1
+End Sub
     
 '==============================//
 ' 
@@ -47,7 +47,7 @@ reader.ReadToFollowing("book")
 Dim isbn As String = reader.GetAttribute("ISBN")
 Console.WriteLine("The ISBN value: " + isbn)
 '</snippet3>    
-End Sub 'GetAttribute2
+End Sub
        
 '==============================//
 ' 
@@ -65,7 +65,7 @@ If reader.HasAttributes Then
   reader.MoveToElement() 'Moves the reader back to the element node.
 End If
 '</snippet4>    
-End Sub 'MoveToAttribute1
+End Sub
         
 '==============================//
 ' 
@@ -77,7 +77,7 @@ reader.MoveToFirstAttribute()
 Dim genre As String = reader.Value
 Console.WriteLine("The genre value: " + genre)
 '</snippet5>    
-End Sub 'MoveToFirstAttribute    
+End Sub
     
 '==============================//
 ' 
@@ -94,7 +94,7 @@ If reader.HasAttributes Then
   reader.MoveToElement()
 End If
 '</snippet6>    
-End Sub 'MoveToNextAttribute
+End Sub
      
     
 '==============================//
@@ -106,7 +106,7 @@ reader.ReadToDescendant("book")
 Dim isbn As String = reader("ISBN")
 Console.WriteLine("The ISBN value: " + isbn)
 '</snippet7>    
-End Sub 'Item
+End Sub
      
     
 '==============================//
@@ -142,7 +142,7 @@ While reader.Read()
   End Select
 End While
 '</snippet8>    
-End Sub 'Node_Value
+End Sub
         
     
 '==============================//
@@ -165,7 +165,7 @@ While reader.Read()
 End While
 reader.Close()
 '</snippet9>    
-End Sub 'NamespaceURI
+End Sub
      
     
 '==============================
@@ -188,7 +188,7 @@ While reader.Read()
   End If
 End While
 '</snippet10>    
-End Sub 'IsStartElement
+End Sub
      
     
 '==============================
@@ -211,7 +211,7 @@ Using reader As XmlReader = XmlReader.Create("book3.xml")
   reader.ReadEndElement()            
 End Using
 '</snippet11>    
-End Sub 'ReadEndElement
+End Sub
     
 '==============================
 ' 
@@ -240,7 +240,7 @@ Using reader As XmlReader = XmlReader.Create("2books.xml")
 
 End Using
 '</snippet12>    
-End Sub 'ReadInnerXml
+End Sub
      
     
 '==============================
@@ -268,7 +268,7 @@ Using reader As XmlReader = XmlReader.Create("books.xml", settings)
 
 End Using
 '</snippet13>    
-End Sub 'ReadSubtree
+End Sub
      
     
 '==============================
@@ -299,7 +299,7 @@ Using reader As XmlReader = XmlReader.Create("2books.xml")
 
 End Using
 '</snippet14>    
-End Sub 'ReadtoDescendant
+End Sub
      
     
 '==============================
@@ -313,7 +313,7 @@ Using reader As XmlReader = XmlReader.Create("books.xml")
   Loop While reader.ReadToNextSibling("book")
 End Using
 '</snippet15>    
-End Sub 'ReadToFollowing
+End Sub
      
     
 '==============================
@@ -333,7 +333,7 @@ Using reader As XmlReader = XmlReader.Create("book1.xml", settings)
   End While
 End Using
 '</snippet16>    
-End Sub 'HasValue 
+End Sub
 
 '==============================
 ' 
@@ -348,6 +348,6 @@ Using reader As XmlReader = XmlReader.Create("books.xml")
   End While
 '</snippet17>  
 End Using  
-End Sub 'IsStartElement_2 
+End Sub
 
-End Class 'XmlReader_Samples
+End Class

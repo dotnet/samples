@@ -15,7 +15,6 @@ Imports System.ComponentModel
 Imports System.Collections
 Imports System.Configuration.Install
 Imports System.IO
-Imports Microsoft.VisualBasic
 
 Public Class InstallerCollection_Insert
    
@@ -50,5 +49,5 @@ Public Class InstallerCollection_Insert
       
       ' Install an assembly.
       myTransactedInstaller2.Install(New Hashtable())
-   End Sub 'Main
-End Class 'InstallerCollection_Insert
+   End Sub
+End Class

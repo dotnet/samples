@@ -9,8 +9,8 @@ public class Sample
 
 Private Shared Sub DemonstrateMergeFailedEvent()
 	' Create a DataSet with one table containing two columns.
-	Dim dataSet AS DataSet = New DataSet("dataSet")
-	Dim table As DataTable = New DataTable("Items")
+	Dim dataSet As New DataSet("dataSet")
+	Dim table As New DataTable("Items")
 	
 	' Add table to the DataSet.
 	dataSet.Tables.Add(table)

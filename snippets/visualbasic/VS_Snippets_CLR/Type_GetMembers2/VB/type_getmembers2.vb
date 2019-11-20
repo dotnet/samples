@@ -7,7 +7,6 @@
 
 Imports System.Reflection
 Imports System.Security
-Imports Microsoft.VisualBasic
 
 ' <Snippet1>
 Class [MyClass]
@@ -16,11 +15,11 @@ Class [MyClass]
    
    
    Public Sub New()
-   End Sub 'New
+   End Sub
    
    Public Sub Myfunction()
-   End Sub 'Myfunction
-End Class '[MyClass]
+   End Sub
+End Class
 
 Class Type_GetMembers_BindingFlags
    
@@ -60,7 +59,7 @@ Class Type_GetMembers_BindingFlags
       ''myString' is a Field
 
 
-   End Sub 'Main 
-End Class 'Type_GetMembers_BindingFlags
+   End Sub
+End Class
 ' </Snippet1>      
 

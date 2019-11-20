@@ -1,7 +1,5 @@
 ﻿'<snippet1>
 ' Example for the Math.Exp( Double ) method.
-Imports Microsoft.VisualBasic
-
 Module ExpDemo
    
     Sub Main()
@@ -26,7 +24,7 @@ Module ExpDemo
         UseTwoArgs(0.1, 1.2)
         UseTwoArgs(1.2, 4.9)
         UseTwoArgs(4.9, 9.9)
-    End Sub 'Main
+    End Sub
        
     ' Evaluate logarithmic/exponential identity with a given argument.
     Sub UseLnExp(arg As Double)
@@ -36,7 +34,7 @@ Module ExpDemo
             vbCrLf & "      Math.Exp(Math.Log({0})) = {1:E16}" + _
             vbCrLf & "      Math.Log(Math.Exp({0})) = {2:E16}", _
             arg, Math.Exp(Math.Log(arg)), Math.Log(Math.Exp(arg)))
-    End Sub 'UseLnExp
+    End Sub
        
     ' Evaluate exponential identities that are functions of two arguments.
     Sub UseTwoArgs(argX As Double, argY As Double)
@@ -62,7 +60,7 @@ Module ExpDemo
             argX, argY, Math.Pow(argX, argY), _
             Math.Exp((argY * Math.Log(argX))))
 
-    End Sub 'UseTwoArgs
+    End Sub
 End Module 'ExpDemo
 
 ' This example of Math.Exp( Double ) generates the following output.

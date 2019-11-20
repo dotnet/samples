@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Data
@@ -30,9 +29,9 @@ Namespace CustomInkControlSample
             inkCanvas1.Background = Brushes.Green
 
 
-        End Sub 'New
+        End Sub
 
-    End Class 'Window3 
+    End Class
 
     '<Snippet33>
     Public Class InkThumbnail

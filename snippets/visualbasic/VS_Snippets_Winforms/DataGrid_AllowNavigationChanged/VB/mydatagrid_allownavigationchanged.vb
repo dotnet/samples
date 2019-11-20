@@ -12,7 +12,6 @@
 ' an event associated with it is fired and is confirmed by the
 ' message shown by the alert message box. 
 
-Imports System
 Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
@@ -31,7 +30,7 @@ Public Class MyDataGrid
       
       ' Call SetUp to bind the controls.
       SetUp()
-   End Sub 'New
+   End Sub
 
    ' Clean up any resources being used.
    Protected Overrides Overloads Sub Dispose(disposing As Boolean)
@@ -41,12 +40,12 @@ Public Class MyDataGrid
          End If
       End If
       MyBase.Dispose(disposing)
-   End Sub 'Dispose
+   End Sub
 
    ' Main entry point for the application.
    Shared Sub Main()
       Application.Run(New MyDataGrid())
-   End Sub 'Main
+   End Sub
 
    Private Sub InitializeComponent()
       ' Create the form and its controls.
@@ -74,7 +73,7 @@ Public Class MyDataGrid
       
       Me.Controls.Add(myButton)
       Me.Controls.Add(myDataGrid)
-   End Sub 'InitializeComponent
+   End Sub
    
    
    Private Sub SetUp()
@@ -82,7 +81,7 @@ Public Class MyDataGrid
       MakeDataSet()
       ' Bind the DataGrid to the DataSet.
       myDataGrid.SetDataBinding(myDataSet, "Person")
-   End Sub 'SetUp
+   End Sub
    
    
    ' Create a DataSet with two tables and populate it.
@@ -142,14 +141,14 @@ Public Class MyDataGrid
          ' Add the row to the 'Detail' table.
          tDet.Rows.Add(newRow2)
       Next i
-   End Sub 'MakeDataSet
+   End Sub
    
    
 ' <Snippet1>
    ' Create an instance of the 'AllowNavigationChanged' EventHandler.
    Private Sub CallAllowNavigationChanged()
       AddHandler myDataGrid.AllowNavigationChanged, AddressOf Grid_AllowNavChange
-   End Sub 'CallAllowNavigationChanged
+   End Sub
    
    
    ' Set the 'AllowNavigation' property on click of a button.
@@ -159,7 +158,7 @@ Public Class MyDataGrid
         Else
             myDataGrid.AllowNavigation = True
         End If
-    End Sub 'myButton_Click
+    End Sub
     
    ' Raise the event when 'AllowNavigation' property is changed.
     Private Sub Grid_AllowNavChange(ByVal sender As Object, ByVal e As EventArgs)
@@ -169,14 +168,14 @@ Public Class MyDataGrid
         myString = myString + IIF(mybool, "is", "is not") + "allowed"
         ' Show information about navigation.
         MessageBox.Show(myString, "Navigation information")
-    End Sub 'Grid_AllowNavChange
+    End Sub
    
 ' </Snippet1>
 ' <Snippet2>
    ' Create an instance of the 'Navigate' NavigateEventHandler.
    Private Sub CallNavigate()
       AddHandler myDataGrid.Navigate, AddressOf Grid_Navigate
-   End Sub 'CallNavigate
+   End Sub
    
    
    ' Raise the event when navigating to another table.
@@ -185,6 +184,6 @@ Public Class MyDataGrid
         Dim myString As String = "Navigate event raised, moved to another table"
         ' Show the message when navigating to another table.
         MessageBox.Show(myString, "Table navigation information")
-    End Sub 'Grid_Navigate
+    End Sub
 ' </Snippet2>
-End Class 'MyDataGrid 
+End Class

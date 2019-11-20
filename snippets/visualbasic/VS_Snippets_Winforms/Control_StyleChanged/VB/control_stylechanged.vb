@@ -7,7 +7,6 @@
 ' with the 'StyleChanged' event pops a message box indicating
 ' the same.
 
-Imports System
 Imports System.ComponentModel
 Imports System.Windows.Forms
 
@@ -19,7 +18,7 @@ Public Class MyForm
 
    Public Sub New()
       InitializeComponent()
-   End Sub 'New
+   End Sub
 
    Protected Overrides Overloads Sub Dispose(disposing As Boolean)
       If disposing Then
@@ -28,7 +27,7 @@ Public Class MyForm
          End If
       End If
       MyBase.Dispose(disposing)
-   End Sub 'Dispose
+   End Sub
 
    Private Sub InitializeComponent()
       Me.myButton1 = New System.Windows.Forms.Button()
@@ -48,31 +47,31 @@ Public Class MyForm
       AddHandler Me.Load, AddressOf MyForm_Load
       RegisterEventHandler()
       Me.ResumeLayout(False)
-   End Sub 'InitializeComponent
+   End Sub
 
    <STAThread()>  _
    Shared Sub Main()
       Application.Run(New MyForm())
-   End Sub 'Main
+   End Sub
 
    Private Sub MyButton1_Click(sender As Object, e As EventArgs)
       MessageBox.Show("The 'Control' has been clicked")
-   End Sub 'MyButton1_Click
+   End Sub
 
 ' <Snippet1>
    ' Set the 'FixedHeight' and 'FixedWidth' styles to false.
    Private Sub MyForm_Load(sender As Object, e As EventArgs)
       Me.SetStyle(ControlStyles.FixedHeight, False)
       Me.SetStyle(ControlStyles.FixedWidth, False)
-   End Sub 'MyForm_Load
+   End Sub
 
    Private Sub RegisterEventHandler()
       AddHandler Me.StyleChanged, AddressOf MyForm_StyleChanged
-   End Sub 'RegisterEventHandler
+   End Sub
 
    ' Handle the 'StyleChanged' event for the 'Form'.
    Private Sub MyForm_StyleChanged(sender As Object, e As EventArgs)
       MessageBox.Show("The style releated to the 'Form' has been changed")
-   End Sub 'MyForm_StyleChanged
+   End Sub
 ' </Snippet1>
-End Class 'MyForm
+End Class

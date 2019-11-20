@@ -1,5 +1,4 @@
 ﻿ ' <SnippetMediaElementCSharpExampleWholePage>
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Documents
@@ -30,7 +29,7 @@ Namespace SDKSample
                     myMediaElement.Stretch = Stretch.UniformToFill
             End Select
 
-        End Sub 'OnClickChangeStretch
-    End Class 'StretchMediaElementExample 
+        End Sub
+    End Class
 End Namespace 'SDKSample
 ' </SnippetMediaElementCSharpExampleWholePage>

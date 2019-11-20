@@ -19,7 +19,7 @@ Public Class SampleClient
    
    Public Shared Sub Main()
       Dim client As New SampleClient()
-   End Sub 'Main
+   End Sub
 
    <PermissionSet(SecurityAction.LinkDemand)> _
    Public Sub New()
@@ -31,11 +31,11 @@ Public Class SampleClient
       ' The server will fire the SomethingHappened event in SampleMethod()
       service.SampleMethod()
       RemoveHandler service.SomethingHappened, eventHandler
-   End Sub 'New
+   End Sub
    
    
    Private Sub OnSomethingHappened(source As Object, e As SampleServiceEventArgs)
       Console.WriteLine("SomethingHappened event fired: {0}", e.Message)
-   End Sub 'OnSomethingHappened
-End Class 'SampleClient 
+   End Sub
+End Class
 ' </Snippet2>

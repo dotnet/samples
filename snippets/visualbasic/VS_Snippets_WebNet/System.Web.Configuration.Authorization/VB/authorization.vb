@@ -126,8 +126,8 @@ Class UsingAuthorizationSection
         authorizationRuleCollection.Get(0)
         ' </Snippet13>
 
-   End Sub 'Main
-End Class 'UsingAuthorizationSection 
+   End Sub
+End Class
 
 
 

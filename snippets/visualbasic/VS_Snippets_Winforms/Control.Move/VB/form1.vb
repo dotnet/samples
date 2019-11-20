@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -24,7 +23,7 @@ Public Class Form1
         ' Required for Windows Form Designer support
         '
         InitializeComponent()
-    End Sub 'New
+    End Sub
     
    
     '/ <summary>
@@ -37,7 +36,7 @@ Public Class Form1
             End If
         End If
         MyBase.Dispose(disposing)
-    End Sub 'Dispose
+    End Sub
    
    
     '/ <summary>
@@ -51,7 +50,7 @@ Public Class Form1
         Me.ClientSize = New System.Drawing.Size(344, 270)
         Me.Name = "Form1"
         Me.Text = "Form1"
-    End Sub 'InitializeComponent
+    End Sub
    
    
     '/ <summary>
@@ -60,11 +59,11 @@ Public Class Form1
     <STAThread()>  _
     Shared Sub Main()
         Application.Run(New Form1())
-    End Sub 'Main
+    End Sub
    
    
     Private Sub Form1_Resize(sender As Object, e As System.EventArgs) Handles MyBase.Resize
-    End Sub 'Form1_Resize
+    End Sub
    
    
     '<Snippet1>
@@ -74,4 +73,4 @@ Public Class Form1
         Me.Text = "Form screen position = " + Me.Location.ToString()
     End Sub
    '</Snippet1>
-End Class 'Form1 
+End Class

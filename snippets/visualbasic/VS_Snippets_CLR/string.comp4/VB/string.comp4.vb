@@ -13,7 +13,7 @@ Class Sample
       
       relation = symbol([String].Compare(str1, str2, False, New CultureInfo("cs-CZ")))
       Console.WriteLine("For cs-CZ: {0} {1} {2}", str1, relation, str2)
-   End Sub 'Main
+   End Sub
    
    Private Shared Function symbol(r As Integer) As [String]
       Dim s As [String] = "="
@@ -26,7 +26,7 @@ Class Sample
       End If
       Return s
    End Function 'symbol
-End Class 'Sample
+End Class
 '
 'This example produces the following results.
 'For en-US: change < dollar

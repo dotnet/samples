@@ -21,11 +21,11 @@ Public Class Sample
     ' Transform the file.
     xslt.Transform(doc, argList, XmlWriter.Create("output.xml"))
     
-  End Sub 'Main     
+  End Sub
     
   Private Shared Sub MessageCallBack(ByVal sender As Object, ByVal e As XsltMessageEncounteredEventArgs) 
     Console.WriteLine("Message received: {0}", e.Message)
     
-  End Sub 'MessageCallBack
-End Class 'Sample 
+  End Sub
+End Class
 '</snippet1>

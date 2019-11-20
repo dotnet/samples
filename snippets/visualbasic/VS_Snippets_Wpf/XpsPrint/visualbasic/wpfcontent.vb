@@ -5,7 +5,6 @@
 ' DocumentViewer content used by the XpsPrint SDK sample.
 
 
-Imports System
 Imports System.Collections.Generic
 Imports System.IO
 Imports System.IO.Packaging
@@ -657,7 +656,7 @@ Namespace SDKSampleHelper
 			Dim yScale As Double = (printableHeight - yMargin * 2) / printableHeight
 
 			fp.RenderTransform = New MatrixTransform(xScale, 0, 0, yScale, xMargin, yMargin)
-		End Sub ' end:PerformTransform()
+		End Sub
 
 		#End Region ' Create FixedPage methods
 
@@ -678,7 +677,7 @@ Namespace SDKSampleHelper
 			shape.Margin = thick
 			shape.Width = rx * 2
 			shape.Height = ry * 2
-		End Sub ' end:SetEllipse()
+		End Sub
 
 
 		' --------------------- AdjustFlowDocumentToPage ---------------------
@@ -747,6 +746,6 @@ Namespace SDKSampleHelper
 
 		#End Region ' private members
 
-	End Class 'end:class WPFContent
+	End Class
 
 End Namespace ' end:namespace SDKSampleHelper

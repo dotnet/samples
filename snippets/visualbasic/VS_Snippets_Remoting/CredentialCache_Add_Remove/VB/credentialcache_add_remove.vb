@@ -7,7 +7,6 @@
 'is no longer needed.
 
 Imports System.Net
-Imports Microsoft.VisualBasic
 Imports System.Environment
 
 Class CredentialCacheSnippet
@@ -32,7 +31,7 @@ Class CredentialCacheSnippet
         Console.WriteLine(" Press any key to continue...")
         Console.ReadLine()
         Return
-    End Sub 'Main
+    End Sub
     
     Public Shared Sub GetPage(url As String, userName As String, password As String, domainName As String)
 
@@ -73,5 +72,5 @@ Class CredentialCacheSnippet
         Catch e As Exception
             Console.WriteLine(ControlChars.Cr + "The following exception was raised : {0}", e.Message)
         End Try
-    End Sub 'GetPage
-End Class 'CredentialCacheSnippet
+    End Sub
+End Class

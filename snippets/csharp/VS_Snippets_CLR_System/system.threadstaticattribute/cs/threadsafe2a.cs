@@ -74,37 +74,37 @@ public class Example
 }
 // The example displays output similar to the following:
 //    Thread 1 finished random number generation.
-//    Total = 1,000,556.7483, Mean = 0.5003, n = 2,000,000
+//    Sum = 1,000,556.7483, Mean = 0.5003, n = 2,000,000
 //    
 //    Thread 6 finished random number generation.
-//    Total = 999,704.3865, Mean = 0.4999, n = 2,000,000
+//    Sum = 999,704.3865, Mean = 0.4999, n = 2,000,000
 //    
 //    Thread 2 finished random number generation.
-//    Total = 999,680.8904, Mean = 0.4998, n = 2,000,000
+//    Sum = 999,680.8904, Mean = 0.4998, n = 2,000,000
 //    
 //    Thread 10 finished random number generation.
-//    Total = 999,437.5132, Mean = 0.4997, n = 2,000,000
+//    Sum = 999,437.5132, Mean = 0.4997, n = 2,000,000
 //    
 //    Thread 8 finished random number generation.
-//    Total = 1,000,663.7789, Mean = 0.5003, n = 2,000,000
+//    Sum = 1,000,663.7789, Mean = 0.5003, n = 2,000,000
 //    
 //    Thread 4 finished random number generation.
-//    Total = 999,379.5978, Mean = 0.4997, n = 2,000,000
+//    Sum = 999,379.5978, Mean = 0.4997, n = 2,000,000
 //    
 //    Thread 5 finished random number generation.
-//    Total = 1,000,011.0605, Mean = 0.5000, n = 2,000,000
+//    Sum = 1,000,011.0605, Mean = 0.5000, n = 2,000,000
 //    
 //    Thread 9 finished random number generation.
-//    Total = 1,000,637.4556, Mean = 0.5003, n = 2,000,000
+//    Sum = 1,000,637.4556, Mean = 0.5003, n = 2,000,000
 //    
 //    Thread Main finished random number generation.
-//    Total = 1,000,676.2381, Mean = 0.5003, n = 2,000,000
+//    Sum = 1,000,676.2381, Mean = 0.5003, n = 2,000,000
 //    
 //    Thread 3 finished random number generation.
-//    Total = 999,951.1025, Mean = 0.5000, n = 2,000,000
+//    Sum = 999,951.1025, Mean = 0.5000, n = 2,000,000
 //    
 //    Thread 7 finished random number generation.
-//    Total = 1,000,844.5217, Mean = 0.5004, n = 2,000,000
+//    Sum = 1,000,844.5217, Mean = 0.5004, n = 2,000,000
 //    
 //    22,000,000 random numbers were generated.
 // </Snippet1>

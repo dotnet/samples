@@ -35,9 +35,9 @@ Public Class MyCollection
       For Each de In  d
          Me.BaseAdd(CType(de.Key, [String]), de.Value)
       Next de
-   End Sub 'New
+   End Sub
 
-End Class 'MyCollection
+End Class
 
 
 Public Class SamplesNameObjectCollectionBase   
@@ -58,16 +58,16 @@ Public Class SamplesNameObjectCollectionBase
       Console.WriteLine("The value at index 0 is {0}.", myCol(0).Value)
       Console.WriteLine("The value associated with the key ""green"" is {0}.", myCol("green"))
 
-   End Sub 'Main
+   End Sub
 
    Public Shared Sub PrintKeysAndValues(myCol As MyCollection)
       Dim i As Integer
       For i = 0 To myCol.Count - 1
          Console.WriteLine("[{0}] : {1}, {2}", i, myCol(i).Key, myCol(i).Value)
       Next i
-   End Sub 'PrintKeysAndValues
+   End Sub
 
-End Class 'SamplesNameObjectCollectionBase 
+End Class
 
 
 'This code produces the following output.

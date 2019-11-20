@@ -21,7 +21,7 @@ Public Class SamplesUTF32Encoding
       CompareEncodings(u32ft, "u32ft")
       CompareEncodings(u32ff, "u32ff")
 
-   End Sub 'Main
+   End Sub
 
 
    Public Shared Sub CompareEncodings(a As UTF32Encoding, name As String)
@@ -46,9 +46,9 @@ Public Class SamplesUTF32Encoding
       Console.WriteLine("{0} and u32fft : {1}", name, a.Equals(u32fft))
       Console.WriteLine("{0} and u32fff : {1}", name, a.Equals(u32fff))
 
-   End Sub 'CompareEncodings 
+   End Sub
 
-End Class 'SamplesUTF32Encoding
+End Class
 
 
 'This code produces the following output.

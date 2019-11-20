@@ -7,15 +7,15 @@ Imports System.Runtime.InteropServices
 Public Class MyStruct
     Public buffer As String
     Public someSize As Integer
-End Class 'MyStruct
+End Class
 
-Public Class LibWrap
+Friend Class NativeMethods
     ' Declares a managed prototype for the unmanaged function.
     <DllImport("..\LIB\PinvokeLib.dll", CallingConvention:=CallingConvention.Cdecl)>
-    Shared Sub TestOutArrayOfStructs(
+    Friend Shared Sub TestOutArrayOfStructs(
         ByRef arrSize As Integer, ByRef outArray As IntPtr)
     End Sub
-End Class 'LibWrap
+End Class
 '</snippet20>
 
 '<snippet21>
@@ -24,13 +24,13 @@ Public Class App
         Console.WriteLine(vbNewLine + "Using marshal class" + vbNewLine)
         UsingMarshaling()
         'Visual Basic 2005 cannot use unsafe code.
-    End Sub 'Main
+    End Sub
 
     Public Shared Sub UsingMarshaling()
         Dim arrSize As Integer
         Dim outArray As IntPtr
 
-        LibWrap.TestOutArrayOfStructs(arrSize, outArray)
+        NativeMethods.TestOutArrayOfStructs(arrSize, outArray)
         Dim manArray(arrSize - 1) As MyStruct
         Dim current As IntPtr = outArray
         Dim i As Integer
@@ -47,7 +47,7 @@ Public Class App
                 buffer, manArray(i).someSize)
         Next i
         Marshal.FreeCoTaskMem(outArray)
-    End Sub 'UsingMarshal
-End Class 'App
+    End Sub
+End Class
 '</snippet21>
 '</snippet19>

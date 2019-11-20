@@ -144,5 +144,5 @@ Class [MyClass]
       ' Write the 'ServiceDescription' as a WSDL file.
       myDescription.Write("AddNumbers.wsdl")
       Console.WriteLine("WSDL file with name 'AddNumber.Wsdl' file created Successfully")
-   End Sub 'Main
-End Class '[MyClass]
+   End Sub
+End Class

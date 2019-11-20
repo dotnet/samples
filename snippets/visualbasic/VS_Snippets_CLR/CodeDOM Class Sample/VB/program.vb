@@ -3,7 +3,6 @@ Imports System.Reflection
 Imports System.IO
 Imports System.CodeDom
 Imports System.CodeDom.Compiler
-Imports Microsoft.VisualBasic
 
 ' This code example creates a graph using a CodeCompileUnit and  
 ' generates source code for the graph using the VBCodeProvider.
@@ -34,7 +33,7 @@ Class Sample
         samples.Types.Add(targetClass)
         targetUnit.Namespaces.Add(samples)
 
-    End Sub 'New
+    End Sub
 
     '</Snippet2>
     ' Adds two fields to the class.
@@ -60,7 +59,7 @@ Class Sample
             "The height of the object."))
         targetClass.Members.Add(heightValueField)
 
-    End Sub 'AddFields
+    End Sub
     '</Snippet3>
 
     ' Add three properties to the class.
@@ -116,7 +115,7 @@ Class Sample
             New CodeMethodReturnStatement(areaExpression))
         targetClass.Members.Add(areaProperty)
 
-    End Sub 'AddProperties
+    End Sub
     '</Snippet4>
 
     ' Adds a method to the class. This method multiplies values stored 
@@ -153,7 +152,7 @@ Class Sample
         toStringMethod.Statements.Add(returnStatement)
         targetClass.Members.Add(toStringMethod)
 
-    End Sub 'AddMethod
+    End Sub
     '</Snippet5>
 
     ' Add a constructor to the class.
@@ -184,7 +183,7 @@ Class Sample
             New CodeArgumentReferenceExpression("height")))
         targetClass.Members.Add(constructor)
 
-    End Sub 'AddConstructor
+    End Sub
     '</Snippet6>
 
     ' Add an entry point to the class.
@@ -215,7 +214,7 @@ Class Sample
             "WriteLine", toStringInvoke))
         targetClass.Members.Add(start)
 
-    End Sub 'AddEntryPoint
+    End Sub
     '</Snippet7>
 
     ' Generate Visual Basic source code from the compile unit.
@@ -232,7 +231,7 @@ Class Sample
             sourceWriter.Dispose()
         End Try
 
-    End Sub 'GenerateVBCode
+    End Sub
     '</Snippet8>
 
     ' Create the CodeDOM graph and generate the code.
@@ -246,7 +245,7 @@ Class Sample
         sample.AddEntryPoint()
         sample.GenerateVBCode(outputFileName)
 
-    End Sub 'Main
-End Class 'Sample 
+    End Sub
+End Class
 '</Snippet9>
 '</Snippet1>

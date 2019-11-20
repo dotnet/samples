@@ -3,7 +3,6 @@ Imports System.Data
 Imports System.Data.OleDb
 Imports System.Data.Common
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
 
 Public Class Form1
     Inherits Form
@@ -21,4 +20,3 @@ Public Class Form1
  End Sub
 ' </Snippet1>
 End Class
-

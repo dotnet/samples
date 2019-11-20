@@ -4,8 +4,6 @@
 ' of struct 'Int32'. This compares an instance of 'Int32' with the
 ' passed in object and returns true if they are equal.
 
-Imports Microsoft.VisualBasic
-
 Class MyInt32_Equals
    
    Public Shared Sub Main()
@@ -32,5 +30,5 @@ Class MyInt32_Equals
       Catch e As Exception
          Console.WriteLine("Exception :{0}", e.Message.ToString())
       End Try
-   End Sub 'Main
-End Class 'MyInt32_Equals
+   End Sub
+End Class

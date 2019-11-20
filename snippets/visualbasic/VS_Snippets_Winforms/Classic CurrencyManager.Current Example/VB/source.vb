@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.Windows.Forms
 
 
@@ -18,6 +17,6 @@ Public Class Form1
         myDataRowView = CType(myCurrencyManager.Current, DataRowView)
         ' Print the column named ContactName.
         Console.WriteLine(myDataRowView("ContactName"))
-    End Sub 'GetCurrentItem
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

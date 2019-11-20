@@ -19,6 +19,6 @@ Class MainApp
             Console.WriteLine("Source: {0}", e.Source.ToString())
             Console.WriteLine("Message: {0}", e.Message.ToString())
         End Try
-    End Sub 'Main 
-End Class 'MainApp
+    End Sub
+End Class
 ' </Snippet1>

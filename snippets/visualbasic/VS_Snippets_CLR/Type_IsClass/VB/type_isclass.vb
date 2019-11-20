@@ -1,9 +1,8 @@
 ﻿' <Snippet1>
 Imports System.Reflection
-Imports Microsoft.VisualBasic
 
 Public Class MyDemoClass
-End Class 'MyDemoClass
+End Class
 
 Public Class MyTypeClass
     Public Shared Sub Main()
@@ -14,6 +13,6 @@ Public Class MyTypeClass
         Catch e As Exception
             Console.WriteLine(ControlChars.Cr + "An exception occurred: {0}.", e.Message.ToString())
         End Try
-    End Sub 'Main
-End Class 'MyTypeClass
+    End Sub
+End Class
 ' </Snippet1>

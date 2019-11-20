@@ -47,7 +47,7 @@ Namespace Samples.AspNet
             pName = name
             pKeyFilePath = config("keyContainerName")
             ReadKey(KeyFilePath)
-        End Sub 'Initialize
+        End Sub
 
 
         '<Snippet3> 
@@ -139,7 +139,7 @@ Namespace Samples.AspNet
             sw.WriteLine(ByteToHex(des.Key))
             sw.WriteLine(ByteToHex(des.IV))
             sw.Close()
-        End Sub 'CreateKey
+        End Sub
 
 
 
@@ -153,7 +153,7 @@ Namespace Samples.AspNet
             Dim ivValue As String = sr.ReadLine()
             des.Key = HexToByte(keyValue)
             des.IV = HexToByte(ivValue)
-        End Sub 'ReadKey
+        End Sub
 
 
 
@@ -180,7 +180,7 @@ Namespace Samples.AspNet
             Next i
             Return returnBytes
         End Function 'HexToByte
-    End Class 'TripleDESProtectedConfigurationProvider 
+    End Class
 
 End Namespace
 

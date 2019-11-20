@@ -6,9 +6,8 @@ namespace Join
 {
     public static class CrossJoinWithGroupJoinExample1
     {
-        //The group join operator is more general than join, as this slightly more verbose version of the cross join sample shows.
-        //
-        //Output: 
+        // The group join operator is more general than join, as this slightly more verbose version of the cross join sample shows.
+        // Output: 
         // Chai: Beverages
         // Chang: Beverages
         // Guarana Fantastica: Beverages
@@ -77,13 +76,12 @@ namespace Join
 
             foreach (var v in q)
             {
-                Console.WriteLine(v.ProductName + ": " + v.Category);
+                Console.WriteLine($"{v.ProductName}: {v.Category}");
             }
         }
 
-        //The group join operator is more general than join, as this slightly more verbose version of the cross join sample shows.
-        //
-        //Output: 
+        // The group join operator is more general than join, as this slightly more verbose version of the cross join sample shows.
+        // Output: 
         // Chai: Beverages
         // Chang: Beverages
         // Guarana Fantastica: Beverages
@@ -150,7 +148,7 @@ namespace Join
 
             foreach (var v in q)
             {
-                Console.WriteLine(v.ProductName + ": " + v.Category);
+                Console.WriteLine($"{v.ProductName}: {v.Category}");
             }
         }
     }

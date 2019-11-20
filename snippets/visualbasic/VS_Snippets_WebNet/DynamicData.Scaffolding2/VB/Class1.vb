@@ -52,7 +52,7 @@ Public Class Registration
         ' </Snippet4>
 
     End Sub
-End Class 'Registration
+End Class
 
 Public Class AdventureWorksLTDataContext
 

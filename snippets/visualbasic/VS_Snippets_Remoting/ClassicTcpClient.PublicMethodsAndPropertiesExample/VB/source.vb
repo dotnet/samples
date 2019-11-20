@@ -38,7 +38,7 @@ Public Class MyTcpClientExample
                 End If ' do nothing
             End If
         End If
-    End Sub 'MyTcpClientConstructor
+    End Sub
     
    ' MyTcpClientConnection class is just used to illustrate the different connection methods of the TcpClient class.
    Public Shared Sub MyTcpClientConnection(myConnectionType As String)
@@ -78,7 +78,7 @@ Public Class MyTcpClientExample
                 End If ' Do nothing.
             End If
         End If
-    End Sub 'MyTcpClientConnection
+    End Sub
 
     ' MyTcpClientPropertySetter is just used to illustrate setting and getting various properties of the TcpClient class.
     Public Shared Sub MyTcpClientPropertySetter()
@@ -140,7 +140,7 @@ Public Class MyTcpClientExample
       End If
       ' </Snippet13>
       tcpClient.Close()
-   End Sub 'MyTcpClientPropertySetter
+   End Sub
    
    
    Public Shared Sub MyTcpClientCommunicator()
@@ -181,7 +181,7 @@ Public Class MyTcpClientExample
  
       ' Uses the Close public method to close the network stream and socket.
       tcpClient.Close()
-   End Sub 'MyTcpClientCommunicator
+   End Sub
     ' </Snippet14>
    
    Public Shared Sub Main()
@@ -197,8 +197,8 @@ Public Class MyTcpClientExample
       
       ' Send and receive data using tcpClient class.
       MyTcpClientCommunicator()
-   End Sub 'Main 
-End Class 'MyTcpClientExample 
+   End Sub
+End Class
 ' </Snippet1>
 
 'end class

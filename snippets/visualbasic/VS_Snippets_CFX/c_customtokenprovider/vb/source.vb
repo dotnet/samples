@@ -35,7 +35,7 @@ Friend Class MyClientCredentialsSecurityTokenManager
         MyBase.New(credentials)
         Me.credentials = credentials
     
-    End Sub 'New
+    End Sub
     
     
     Public Overrides Function CreateSecurityTokenProvider(ByVal tokenRequirement As SecurityTokenRequirement) As SecurityTokenProvider 

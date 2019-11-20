@@ -22,7 +22,7 @@ Public Class App
             CollectSamples(samplesList)
             CalculateResults(samplesList)
         End If
-    End Sub 'Main
+    End Sub
 
 
     Private Shared Function SetupCategory() As Boolean
@@ -55,7 +55,7 @@ Public Class App
         PC = New PerformanceCounter("RateOfCountsPerSecond32SampleCategory", "RateOfCountsPerSecond32Sample", False)
 
         PC.RawValue = 0
-    End Sub 'CreateCounters
+    End Sub
 
 
     Private Shared Sub CollectSamples(ByVal samplesList As ArrayList)
@@ -82,7 +82,7 @@ Public Class App
             End If
             System.Threading.Thread.Sleep(50)
         Next j
-    End Sub 'CollectSamples
+    End Sub
 
 
     Private Shared Sub CalculateResults(ByVal samplesList As ArrayList)
@@ -99,7 +99,7 @@ Public Class App
             ' Calculate the counter value manually.
             Console.WriteLine("My computed counter value = " + MyComputeCounterValue(CType(samplesList(i), CounterSample), CType(samplesList((i + 1)), CounterSample)).ToString())
         Next i
-    End Sub 'CalculateResults
+    End Sub
 
 
 
@@ -145,7 +145,7 @@ Public Class App
         Console.WriteLine(("   TimeStamp        = " + s.TimeStamp.ToString()))
         Console.WriteLine(("   TimeStamp100nSec = " + s.TimeStamp100nSec.ToString()))
         Console.WriteLine("++++++++++++++++++++++")
-    End Sub 'OutputSample
-End Class 'App 
+    End Sub
+End Class
 
 '</snippet1>

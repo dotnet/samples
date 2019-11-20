@@ -1,7 +1,5 @@
 ﻿'<snippet1>
 ' This example demonstrates the Console.CursorVisible property.
-Imports Microsoft.VisualBasic
-
 Class Sample
    Public Shared Sub Main()
       Dim m1 As String = vbCrLf & "The cursor is {0}." & _
@@ -33,8 +31,8 @@ Class Sample
       End While
       Console.CursorVisible = saveCursorVisibile
       Console.CursorSize = saveCursorSize
-   End Sub 'Main
-End Class 'Sample 
+   End Sub
+End Class
 '
 'This example produces the following results. Note that these results
 'cannot depict cursor visibility. You must run the example to see the 

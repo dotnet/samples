@@ -1,7 +1,6 @@
 ﻿'<snippet5>
 Imports System.Diagnostics
 Imports System.IO
-Imports Microsoft.VisualBasic
 
 Module TWTLConWriterNameMod
 

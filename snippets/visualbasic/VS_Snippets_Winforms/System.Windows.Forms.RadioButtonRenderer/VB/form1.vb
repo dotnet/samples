@@ -8,7 +8,6 @@
 
 
 '<Snippet0>
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 Imports System.Windows.Forms.VisualStyles
@@ -81,7 +80,7 @@ Namespace RadioButtonRendererSample
                 .Text = "Click here"
                 .Font = SystemFonts.IconTitleFont
             End With
-        End Sub 'New
+        End Sub
 
         '<Snippet2>
         ' Define the text bounds so that the text rectangle 

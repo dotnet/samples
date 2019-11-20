@@ -1,6 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
-Imports System.Collections.Generic
+﻿Imports System.Collections.Generic
 Imports System.Text
 Imports System.Printing
 Imports System.Collections
@@ -50,9 +48,9 @@ Namespace PrinterStatusSurvey
 
 			'</SnippetSurveyQueues>
 
-		End Sub 'end Main
+		End Sub
 
-	End Class 'end Program class
+	End Class
 
 	Friend Class TroubleSpotter
 		' <SnippetSpotTroubleUsingQueueProperties>
@@ -102,7 +100,7 @@ Namespace PrinterStatusSurvey
 			' The following method is defined in the complete example.
 			ReportAvailabilityAtThisTime(statusReport, pq)
 
-		End Sub 'end SpotTroubleUsingProperties
+		End Sub
 		' </SnippetSpotTroubleUsingQueueProperties>
 
 		' <SnippetSpotTroubleUsingQueueAttributes>
@@ -168,6 +166,6 @@ Namespace PrinterStatusSurvey
 		End Sub
 		' </SnippetUsingStartAndUntilTimes>
 
-	End Class ' end TroubleSpotter class
+	End Class
 
 End Namespace 'end namespace

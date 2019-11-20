@@ -1,5 +1,4 @@
 ﻿ '<Snippet1>
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Media
@@ -79,7 +78,7 @@ Public Class InkSelector
         presenter.AttachVisuals(renderer.RootVisual, _
             renderer.DrawingAttributes)
 
-    End Sub 'New
+    End Sub
 
 
     Shared Sub New()
@@ -88,7 +87,7 @@ Public Class InkSelector
         ClipToBoundsProperty.OverrideMetadata(owner, _
             New FrameworkPropertyMetadata(True))
 
-    End Sub 'New
+    End Sub
 
     ' Prepare to collect stylus packets. If Mode is set to Select,  
     ' get the IncrementalHitTester from the InkPresenter'newStroke 
@@ -107,7 +106,7 @@ Public Class InkSelector
 
         InitializeHitTester(eventPoints)
 
-    End Sub 'OnStylusDown
+    End Sub
 
 
     Protected Overrides Sub OnMouseLeftButtonDown(ByVal e As MouseButtonEventArgs)
@@ -129,7 +128,7 @@ Public Class InkSelector
 
         InitializeHitTester(collectedPoints)
 
-    End Sub 'OnMouseLeftButtonDown
+    End Sub
 
 
     '<Snippet9>
@@ -154,7 +153,7 @@ Public Class InkSelector
             selectionTester.AddPoints(collectedPoints)
         End If
 
-    End Sub 'InitializeHitTester
+    End Sub
     '</Snippet9>
 
     ' Collect the stylus packets as the stylus moves.
@@ -168,7 +167,7 @@ Public Class InkSelector
         stylusPoints.Add(collectedPoints)
         AddPointsToHitTester(collectedPoints)
 
-    End Sub 'OnStylusMove
+    End Sub
 
 
     Protected Overrides Sub OnMouseMove(ByVal e As MouseEventArgs)
@@ -195,7 +194,7 @@ Public Class InkSelector
 
         AddPointsToHitTester(collectedPoints)
 
-    End Sub 'OnMouseMove
+    End Sub
 
 
     '<Snippet10>
@@ -210,7 +209,7 @@ Public Class InkSelector
             selectionTester.AddPoints(collectedPoints)
         End If
 
-    End Sub 'AddPointsToHitTester
+    End Sub
     '</Snippet10>
 
     ' When the user lifts the stylus, create a Stroke from the
@@ -234,7 +233,7 @@ Public Class InkSelector
 
         Stylus.Capture(Nothing)
 
-    End Sub 'OnStylusUp
+    End Sub
 
 
     Protected Overrides Sub OnMouseLeftButtonUp(ByVal e As MouseButtonEventArgs)
@@ -259,7 +258,7 @@ Public Class InkSelector
 
         Mouse.Capture(Nothing)
 
-    End Sub 'OnMouseLeftButtonUp
+    End Sub
 
 
     Private Sub AddStrokeToPresenter()
@@ -284,7 +283,7 @@ Public Class InkSelector
         End If
         '</Snippet12>
 
-    End Sub 'AddStrokeToPresenter
+    End Sub
 
     '<Snippet11>
     Private Sub selectionTester_SelectionChanged(ByVal sender As Object, _
@@ -305,7 +304,7 @@ Public Class InkSelector
             selectedStrokes.Remove(unselectedStroke)
         Next unselectedStroke
 
-    End Sub 'selectionTester_SelectionChanged
+    End Sub
     '</Snippet11>
 
     '<Snippet5>
@@ -342,7 +341,7 @@ Public Class InkSelector
         presenter.AttachVisuals(renderer.RootVisual, _
                                 renderer.DrawingAttributes)
 
-    End Sub 'DrawingAttributesChanged 
+    End Sub
     '</Snippet7>
 
     '<Snippet6>
@@ -361,5 +360,5 @@ Public Class InkSelector
     End Property
     '</Snippet6>
 
-End Class 'InkSelector 
+End Class
 '</Snippet1>

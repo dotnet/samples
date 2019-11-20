@@ -8,7 +8,6 @@
 ' EventHandler function.
 '
 
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 Imports System.Data
@@ -29,7 +28,7 @@ Namespace MyDataGridColumnStyle
       Public Sub New()
          InitializeComponent()
          SetUp()
-      End Sub 'New
+      End Sub
 
       Private Sub InitializeComponent()
          myDataGrid = New DataGrid()
@@ -44,11 +43,11 @@ Namespace MyDataGridColumnStyle
          Controls.AddRange(New Control() {myDataGrid, myButton})
          Name = "MyForm1"
          Text = "DataGridColumnStyle"
-      End Sub 'InitializeComponent
+      End Sub
 
       Shared Sub Main()
          Application.Run(New MyForm1())
-      End Sub 'Main
+      End Sub
 
 ' <Snippet1>
         Private Sub Button_Click(ByVal sender As Object, ByVal e As EventArgs)
@@ -59,7 +58,7 @@ Namespace MyDataGridColumnStyle
                 myDataGridColumnStyle.ReadOnly = True
                 myButton.Text = "Make column read/write"
             End If
-        End Sub 'Button_Click
+        End Sub
 
       Private Sub AddCustomDataTableStyle()
          myDataGridTableStyle = New DataGridTableStyle()
@@ -72,18 +71,18 @@ Namespace MyDataGridColumnStyle
          myDataGridTableStyle.GridColumnStyles.Add(myDataGridColumnStyle)
          ' Add the 'DataGridTableStyle' instance to the 'DataGrid'.
          myDataGrid.TableStyles.Add(myDataGridTableStyle)
-      End Sub 'AddCustomDataTableStyle
+      End Sub
 
         Private Sub myDataGridColumnStyle_ReadOnlyChanged(ByVal sender As Object, ByVal e As EventArgs)
             MessageBox.Show("'Readonly' property is changed")
-        End Sub 'myDataGridColumnStyle_ReadOnlyChanged
+        End Sub
 ' </Snippet1>
 
       Sub SetUp()
          MakeDataSet()
          myDataGrid.SetDataBinding(myDataSet, "Customers")
          AddCustomDataTableStyle()
-      End Sub 'SetUp
+      End Sub
 
       Private Sub MakeDataSet()
          myDataSet = New DataSet("myDataSet")
@@ -101,8 +100,8 @@ Namespace MyDataGridColumnStyle
          myDataTable.Rows(0)("custName") = "Alpha"
          myDataTable.Rows(1)("custName") = "Beta"
          myDataTable.Rows(2)("custName") = "Omega"
-      End Sub 'MakeDataSet
-   End Class 'MyForm1
+      End Sub
+   End Class
 End Namespace 'MyDataGridColumnStyle
 
 

@@ -2,8 +2,6 @@
 ' This example demonstrates the Char.IsLowSurrogate() method
 '                                    IsHighSurrogate() method
 '                                    IsSurrogatePair() method
-Imports Microsoft.VisualBasic
-
 Class Sample
    Public Shared Sub Main()
       Dim cHigh As Char = ChrW(&HD800)
@@ -45,8 +43,8 @@ Class Sample
       Console.WriteLine("C3) s1(1) and s1(2)? - {0}", [Char].IsSurrogatePair(s1, 1))
       Console.WriteLine("C4) s1(2) and s1(3)? - {0}", [Char].IsSurrogatePair(s1, 2))
       Console.WriteLine(divider)
-   End Sub 'Main
-End Class 'Sample
+   End Sub
+End Class
 '
 'This example produces the following results:
 '

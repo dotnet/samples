@@ -1,5 +1,6 @@
 ﻿'<snippet1>
 Imports System.Console
+
 Module Module1
    Public Sub DisplayProducts(ByVal table As DataTable)
       Dim productNames = From products In table.AsEnumerable() Select products("ProductName")

@@ -3,7 +3,6 @@ Imports System.Data
 Imports System.Web
 Imports System.Web.Security
 Imports System.Web.UI
-Imports Microsoft.VisualBasic
 
 ' Module that sets Response.SubStatusCode in PostAuthenticateRequest event handler.
 Namespace Samples

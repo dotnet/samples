@@ -19,13 +19,13 @@ Namespace PageSample
       Inherits HtmlForm
       
       Public Sub New()
-      End Sub 'New
+      End Sub
       
       Protected Overrides Sub OnInit(e As EventArgs)
          ' Save the view state if there are server controls on the page.
          Page.RegisterViewStateHandler()
-      End Sub 'OnInit
-   End Class 'MyForm
+      End Sub
+   End Class
 
 ' <Snippet1>
    Public Class WebPage
@@ -38,7 +38,7 @@ Namespace PageSample
       
       Public Sub New()
          AddHandler Page.Init, AddressOf Page_Init
-      End Sub 'New
+      End Sub
       
       
       Private Sub Page_Load(sender As Object, e As System.EventArgs)
@@ -55,19 +55,19 @@ Namespace PageSample
          myFormObj.Controls.Add(textBoxObj)
          myFormObj.Controls.Add(buttonObj)
          myFormObj.Controls.Add(label2)
-      End Sub 'Page_Load
+      End Sub
       
       Private Sub Button_Click(sender As Object, e As EventArgs)
          Dim temp As [String] = "<br>Name is " + textBoxObj.Text + "<br>"
          temp += "Saved content of previous page is " + CType(ViewState("name"), String)
          label2.Text = temp
-      End Sub 'Button_Click
+      End Sub
       
       Protected Overrides Sub LoadViewState(viewState As Object)
          If Not (viewState Is Nothing) Then
             MyBase.LoadViewState(viewState)
          End If
-      End Sub 'LoadViewState
+      End Sub
       
       Protected Overrides Function SaveViewState() As Object
          ViewState("name") = textBoxObj.Text
@@ -81,7 +81,7 @@ Namespace PageSample
          label2 = New Label()
          textBoxObj = New TextBox()
          buttonObj = New Button()
-      End Sub 'Page_Init
-   End Class 'WebPage
+      End Sub
+   End Class
 ' </Snippet1>
 End Namespace 'PageSample

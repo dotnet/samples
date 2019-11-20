@@ -1,8 +1,8 @@
-﻿' System.Web.Services.Description.ServiceDescriptionImportStyle
+﻿' System.Web.Services.Description.ServiceDescriptionImportstyle
 ' System.Web.Services.Description.ServiceDescriptionImportStyle.Client
 
-'   The following program demonstrates the 'ServiceDescriptionImportStyle'
-'   enumeration and 'Client' member of 'ServiceDescriptionImportStyle' in 
+'   The following program demonstrates the 'ServiceDescriptionImportstyle'
+'   enumeration and 'Client' member of 'ServiceDescriptionImportstyle' in 
 '   'System.Web.Services.Description' namespace. It creates a 
 '   ServiceDescriptionImporter object from a .wsdl file and demonstrates
 '   the usage of Client.
@@ -20,13 +20,13 @@ Namespace MyServiceDescription
             myImporter.ProtocolName = "Soap"
             myImporter.AddServiceDescription(myServiceDescription, "", "")
 ' <Snippet2>
-            Dim myStyle As ServiceDescriptionImportStyle = myImporter.Style
+            Dim myStyle As ServiceDescriptionImportstyle = myImporter.Style
             Console.WriteLine("Import style: " + myStyle.ToString())
 ' </Snippet2>
          Catch e As Exception
             Console.WriteLine("Following exception was thrown: " + e.ToString())
          End Try
-      End Sub 'Main
-   End Class 'MyImporter
+      End Sub
+   End Class
 End Namespace 'MyServiceDescription
 ' </Snippet1>

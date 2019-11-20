@@ -67,7 +67,7 @@ Public Class EmployeeLogic
       Return ds
    End Function 'GetAllEmployeesAsDataSet
       
-End Class 'EmployeeLogic 
+End Class
 
 
 Public Class NorthwindEmployee
@@ -77,7 +77,7 @@ Public Class NorthwindEmployee
       Me.aFirstName = aFirstName
       Me.aLastName = aLastName
       Me.aAddress = anAddress
-   End Sub 'New
+   End Sub
    
    Private ID As Object   
    Public ReadOnly Property EmpID() As String
@@ -122,6 +122,6 @@ Public Class NorthwindEmployee
       End Set
    End Property 
    
-End Class 'NorthwindEmployee
+End Class
 End Namespace
 ' </snippet2>

@@ -10,8 +10,8 @@ Public Class SplitTest
                 Console.WriteLine(s)
             End If
         Next s
-    End Sub 'Main
-End Class 'SplitTest
+    End Sub
+End Class
 ' The example displays the following output to the console:
 '       This
 '       is

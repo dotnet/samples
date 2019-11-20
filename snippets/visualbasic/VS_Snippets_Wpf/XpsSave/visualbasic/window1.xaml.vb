@@ -2,7 +2,6 @@
 ' Copyright (c) Microsoft Corporation. All rights reserved.
 
 
-Imports System
 Imports System.IO
 Imports System.IO.Packaging
 Imports System.Windows
@@ -136,7 +135,7 @@ Namespace SDKSample
 					saveHelper.SaveMultipleFixedContentDocuments(newContainerPath, async)
 					Exit Select
 			End Select ' end:switch (currentMode)
-		End Sub ' end:ButtonHelperSave()
+		End Sub
 
 
 		' ------------------------- OnBtnCancelClick -------------------------
@@ -173,7 +172,7 @@ Namespace SDKSample
 				AsyncSaveStatus.Text = asyncInformation.Status
 				AsyncSaveProgress.Value += 10
 			End If
-		End Sub ' end:AsyncSaveEvent()
+		End Sub
 
 
 		' -------------------- GetContainerPathFromDialog --------------------
@@ -258,7 +257,7 @@ Namespace SDKSample
 					LoadDocumentViewer(_contentDir & "\ViewFixedDocumentSequence.xps")
 					UIEnabled(True, True, False)
 			End Select
-		End Sub ' end:UpdateUI()
+		End Sub
 
 
 		'<SnippetXpsSaveLoadFixedContent>
@@ -295,7 +294,7 @@ Namespace SDKSample
 			' Leave the new _xpsPackage open for DocumentViewer
 			' to access additional required resources.
 
-		End Sub ' end:LoadDocumentViewer()
+		End Sub
 		'</SnippetXpsSaveLoadFixedContent>
 
 
@@ -319,6 +318,6 @@ Namespace SDKSample
 
 		#End Region 'Private Members
 
-	End Class ' end:partial class Window1
+	End Class
 
 End Namespace ' end:namespace SDKSample

@@ -17,5 +17,5 @@ Public Class EventSample
         MessageBox.Show(query.QueryString)
 
     End Function 'Main
-End Class 'EventSample
+End Class
 '</Snippet1>

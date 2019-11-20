@@ -9,7 +9,7 @@ Class newListener
       ' Set Exclusive Address Use for the underlying socket.
       t.ExclusiveAddressUse = True
       Console.WriteLine("ExclusiveAddressUse value is {0}", t.ExclusiveAddressUse)
-   End Sub 'GetSetExclusiveAddressUse
+   End Sub
    
    ' </Snippet2>
    ' <Snippet3>
@@ -18,7 +18,7 @@ Class newListener
       ' specified backlog.
       t.Start(backlog)
       Console.WriteLine("started listening")
-   End Sub 'DoStart
+   End Sub
    ' </Snippet3>
    ' <Snippet4>
    ' Thread signal.
@@ -39,7 +39,7 @@ Class newListener
       ' Wait until a connection is made and processed before 
       ' continuing.
       clientConnected.WaitOne()
-   End Sub 'DoBeginAcceptSocket
+   End Sub
    
    
    ' Process the client connection.
@@ -57,7 +57,7 @@ Class newListener
       
       ' Signal the calling thread to continue.
       clientConnected.Set()
-   End Sub 'DoAcceptSocketCallback
+   End Sub
    ' </Snippet4>
    ' <Snippet5>
    ' Thread signal.
@@ -79,7 +79,7 @@ Class newListener
       ' Wait until a connection is made and processed before 
       ' continuing.
       tcpClientConnected.WaitOne()
-   End Sub 'DoBeginAcceptTcpClient
+   End Sub
    
    
    ' Process the client connection.
@@ -97,7 +97,7 @@ Class newListener
       
       ' Signal the calling thread to continue.
       tcpClientConnected.Set()
-   End Sub 'DoAcceptTcpClientCallback
+   End Sub
     
    ' </Snippet5>
    <STAThread()>  _
@@ -115,5 +115,5 @@ Class newListener
       
       Console.WriteLine("hit any key")
       Console.Read()
-   End Sub 'Main
-End Class 'newListener
+   End Sub
+End Class

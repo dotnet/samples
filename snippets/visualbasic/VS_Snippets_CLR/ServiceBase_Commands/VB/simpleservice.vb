@@ -69,7 +69,7 @@ Public Class SimpleService
         ServiceName = "Simple Service"
         System.Diagnostics.EventLog.WriteEntry("SimpleService", DateTime.Now.ToLongTimeString())
 
-    End Sub 'New
+    End Sub
 
     ' </Snippet2>
     Shared Sub Main()
@@ -84,7 +84,7 @@ Public Class SimpleService
         System.Diagnostics.EventLog.WriteEntry("SimpleService.Main", DateTime.Now.ToLongTimeString() + " - Service main method exiting...")
 #End If
 
-    End Sub 'Main
+    End Sub
 
 
 
@@ -137,7 +137,7 @@ Public Class SimpleService
             End If
         End If
 
-    End Sub 'OnStart
+    End Sub
 
     ' </Snippet3>
     ' <Snippet4>
@@ -162,7 +162,7 @@ Public Class SimpleService
         ' Indicate a successful exit.
         Me.ExitCode = 0
 
-    End Sub 'OnStop
+    End Sub
 
     ' </Snippet4>
     ' <Snippet5>
@@ -184,7 +184,7 @@ Public Class SimpleService
 #End If
         End If
 
-    End Sub 'OnPause
+    End Sub
 
     ' </Snippet5>
     '<Snippet11>
@@ -193,7 +193,7 @@ Public Class SimpleService
         System.Diagnostics.EventLog.WriteEntry("SimpleService.OnShutdown", DateTime.Now.ToLongTimeString() + " - Stopping the SimpleService.")
 #End If
 
-    End Sub 'OnShutdown
+    End Sub
 
     '</Snippet11>
     ' <Snippet6>
@@ -214,7 +214,7 @@ Public Class SimpleService
 #End If
         End If
 
-    End Sub 'OnContinue
+    End Sub
 
     ' </Snippet6>
     ' <Snippet7>
@@ -251,7 +251,7 @@ Public Class SimpleService
 #End If
         End Select
 
-    End Sub 'OnCustomCommand
+    End Sub
 
     ' </Snippet7>
     '<Snippet9>
@@ -296,7 +296,7 @@ Public Class SimpleService
             Case Else
         End Select
 
-    End Sub 'OnSessionChange
+    End Sub
 
     '</Snippet9>
     ' Define a simple method that runs as the worker thread for 
@@ -333,6 +333,6 @@ Public Class SimpleService
         System.Diagnostics.EventLog.WriteEntry("SimpleService.WorkerThread", DateTime.Now.ToLongTimeString() + " - Exiting the service worker thread.")
 #End If
 
-    End Sub 'ServiceWorkerMethod 
-End Class 'SimpleService
+    End Sub
+End Class
 '</Snippet1>

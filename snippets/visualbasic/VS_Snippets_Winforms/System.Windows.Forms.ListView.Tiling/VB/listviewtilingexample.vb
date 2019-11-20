@@ -1,5 +1,4 @@
 ﻿'<Snippet1>
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 
@@ -65,7 +64,7 @@ Public Class ListViewTilingExample
         Me.Controls.Add(myListView)
         Me.Size = new System.Drawing.Size(430, 330)
         Me.Text = "ListView Tiling Example"
-    End Sub 'New
+    End Sub
     
     ' Clean up any resources being used.        
     Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -80,7 +79,7 @@ Public Class ListViewTilingExample
     Shared Sub Main()
         Application.EnableVisualStyles()
         Application.Run(New ListViewTilingExample())
-    End Sub 'Main
+    End Sub
 
-End Class 'ListViewTilingExample 
+End Class
 '</Snippet1>

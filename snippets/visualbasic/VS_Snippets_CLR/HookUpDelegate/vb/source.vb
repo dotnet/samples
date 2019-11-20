@@ -11,15 +11,15 @@ Class ExampleForm
     Public Sub New() 
         Me.Text = "Click me"
     
-    End Sub 'New
-End Class 'ExampleForm
+    End Sub
+End Class
 '</Snippet2>
 
 Class Example
     Public Shared Sub Main() 
         Dim ex As New Example()
         ex.HookUpDelegate()
-    End Sub 'Main
+    End Sub
         
     Private Sub HookUpDelegate() 
         ' Load an assembly, for example using the Assembly.Load

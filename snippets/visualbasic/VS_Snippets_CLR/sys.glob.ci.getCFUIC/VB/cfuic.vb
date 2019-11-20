@@ -8,8 +8,8 @@ Class Sample
       Console.WriteLine("Culture name: . . . . . . . . . {0}", ci.Name)
       Console.WriteLine("Console fallback UI culture:. . {0}", _
                          ci.GetConsoleFallbackUICulture().Name)
-   End Sub 'Main
-End Class 'Sample
+   End Sub
+End Class
 '
 'This code example produces the following results:
 '

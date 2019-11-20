@@ -13,8 +13,6 @@
 
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
-
 
 Public Class WebClient_UpLoadFile
     
@@ -46,6 +44,6 @@ Public Class WebClient_UpLoadFile
         Catch e As Exception
             Console.WriteLine(("The following exception was raised: " & e.Message))
         End Try
-    End Sub 'Main
+    End Sub
 
-End Class 'WebClient_UpLoadFile
+End Class

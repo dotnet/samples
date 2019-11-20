@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Runtime.InteropServices
-Imports Microsoft.VisualBasic
 
 ' The Demo class is has the AutoLayout attribute.
 <StructLayoutAttribute(LayoutKind.Auto)> _

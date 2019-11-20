@@ -37,7 +37,7 @@ Public Class PublisherIdentityPermissionDemo
         IntersectDemo()
         ToFromXmlDemo()
 
-    End Sub 'Main
+    End Sub
 
     ' IsSubsetOf determines whether the current permission is a subset of the specified permission.
     '<Snippet2>
@@ -51,7 +51,7 @@ Public Class PublisherIdentityPermissionDemo
             " is not a subset of " + publisherPerm1.Certificate.Subject.ToString())
         End If
 
-    End Sub 'IsSubsetOfDemo
+    End Sub
 
     '</Snippet2>
     ' Union creates a new permission that is the union of the current permission and the specified permission.
@@ -67,7 +67,7 @@ Public Class PublisherIdentityPermissionDemo
             CType(publisherPerm3, PublisherIdentityPermission).Certificate.Subject.ToString())
         End If
 
-    End Sub 'UnionDemo
+    End Sub
 
 
     '</Snippet3>
@@ -84,7 +84,7 @@ Public Class PublisherIdentityPermissionDemo
             " and " + publisherPerm2.Certificate.Subject.ToString() + " is null.")
         End If
 
-    End Sub 'IntersectDemo
+    End Sub
 
 
     '</Snippet4>
@@ -97,7 +97,7 @@ Public Class PublisherIdentityPermissionDemo
         publisherPerm2 = CType(publisherPerm1.Copy(), PublisherIdentityPermission)
         Console.WriteLine("Result of copy = " + publisherPerm2.ToString())
 
-    End Sub 'CopyDemo
+    End Sub
     '</Snippet7>
     '</Snippet5>
     ' ToXml creates an XML encoding of the permission and its current state;
@@ -108,8 +108,8 @@ Public Class PublisherIdentityPermissionDemo
         publisherPerm2.FromXml(publisherPerm1.ToXml())
         Console.WriteLine("Result of ToFromXml = " + publisherPerm2.ToString())
 
-    End Sub 'ToFromXmlDemo
-End Class 'PublisherIdentityPermissionDemo
+    End Sub
+End Class
 '</Snippet6>
 
 '</Snippet1>

@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Diagnostics
-Imports Microsoft.VisualBasic
 
 Class MySample
     Public Shared Sub Main()
@@ -10,6 +9,6 @@ Class MySample
         For Each entry In  myNewLog.Entries
             Console.WriteLine((ControlChars.Tab & "Entry: " & entry.Message))
         Next entry
-    End Sub 'Main
-End Class 'MySample
+    End Sub
+End Class
 ' </Snippet1>

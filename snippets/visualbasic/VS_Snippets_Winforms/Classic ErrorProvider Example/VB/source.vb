@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.ComponentModel
 Imports System.Windows.Forms
 
@@ -21,7 +20,7 @@ Public Class Form1
         errorProvider1.DataMember = dataTable1.TableName
         errorProvider1.ContainerControl = Me
         errorProvider1.BlinkRate = 200
-    End Sub 'InitializeComponent
+    End Sub
      '...
     ' Since the ErrorProvider control does not have a visible component,
     ' it does not need to be added to the form. 
@@ -37,7 +36,7 @@ Public Class Form1
                 row.SetColumnError("PostalCode", "Postal Code required")
             End If
         Next row
-    End Sub 'buttonSave_Click
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

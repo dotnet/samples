@@ -765,5 +765,5 @@ Class UsingSystemWebSectionGroup
             ' debugging purposes.
             msg = e.ToString()
         End Try
-    End Sub 'Main 
-End Class 'UsingSystemWebSectionGroup
+    End Sub
+End Class

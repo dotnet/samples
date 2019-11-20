@@ -8,7 +8,6 @@ Imports System.Windows.Forms
 Imports System.Data
 Imports System.IO
 Imports Microsoft.CSharp
-Imports Microsoft.VisualBasic
 Imports Microsoft.JScript
 
 
@@ -35,7 +34,7 @@ Namespace CodeDOMSamples
             InitializeComponent()
 
             cu = CreateGraph()
-        End Sub 'New
+        End Sub
 
 
         ' <Snippet2>
@@ -106,7 +105,7 @@ Namespace CodeDOMSamples
 
             ' Output the contents of the string writer to the textbox	
             Me.textBox1.Text = sw.ToString()
-        End Sub 'OutputGraph
+        End Sub
 
 
         Protected Overloads Sub Dispose(ByVal disposing As Boolean)
@@ -116,7 +115,7 @@ Namespace CodeDOMSamples
                 End If
             End If
             MyBase.Dispose(disposing)
-        End Sub 'Dispose
+        End Sub
 
 
         '/ <summary>
@@ -203,24 +202,24 @@ Namespace CodeDOMSamples
             Me.Text = "CodeDOM Samples Framework"
             Me.groupBox1.ResumeLayout(False)
             Me.ResumeLayout(False)
-        End Sub 'InitializeComponent
+        End Sub
 
 
         Private Sub ShowCode()
             Me.textBox1.Text = ""
-        End Sub 'ShowCode
+        End Sub
 
 
         ' Show code button
         Private Sub button2_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles button2.Click
             ShowCode()
-        End Sub 'button2_Click
+        End Sub
 
 
         ' Generate and show code button
         Private Sub button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles button1.Click
             OutputGraph()
-        End Sub 'button1_Click
+        End Sub
 
 
         ' Csharp language selection button
@@ -230,7 +229,7 @@ Namespace CodeDOMSamples
             radioButton3.Checked = False
 
             language = 1
-        End Sub 'radioButton1_CheckedChanged
+        End Sub
 
 
         ' Visual Basic language selection button
@@ -240,7 +239,7 @@ Namespace CodeDOMSamples
             radioButton3.Checked = False
 
             language = 2
-        End Sub 'radioButton2_CheckedChanged
+        End Sub
 
 
         ' JScript language selection button
@@ -250,7 +249,7 @@ Namespace CodeDOMSamples
             radioButton3.Checked = True
 
             language = 3
-        End Sub 'radioButton3_CheckedChanged
-    End Class 'Form1 
+        End Sub
+    End Class
 End Namespace 'CodeDOMSamples
 ' </Snippet3>

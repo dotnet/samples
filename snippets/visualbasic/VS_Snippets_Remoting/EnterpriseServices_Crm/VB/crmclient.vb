@@ -16,7 +16,7 @@ Public Class CrmClient
             account.Dispose()
         End Try
     
-    End Sub 'Main 
-End Class 'CrmClient
+    End Sub
+End Class
 
 ' </snippet30>

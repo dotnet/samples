@@ -19,8 +19,8 @@ Public Class ThreadWork
       Console.WriteLine("Thread - still alive and working.")
       Thread.Sleep(1000)
       Console.WriteLine("Thread - finished working.")
-   End Sub 'DoWork
-End Class 'ThreadWork
+   End Sub
+End Class
 
 
 Class ThreadAbortTest
@@ -33,6 +33,6 @@ Class ThreadAbortTest
       myThread.Abort()
       myThread.Join()
       Console.WriteLine("Main ending.")
-   End Sub 'Main
-End Class 'ThreadAbortTest
+   End Sub
+End Class
 '</Snippet1>

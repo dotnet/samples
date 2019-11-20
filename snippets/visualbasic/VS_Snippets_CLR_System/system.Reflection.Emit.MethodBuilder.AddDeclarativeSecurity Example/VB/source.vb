@@ -30,8 +30,8 @@ Class MyMethodBuilderDemo
 
       '</Snippet1>
 
-   End Sub 'BuildDynMethod
+   End Sub
 
-End Class 'MyMethodBuilderDemo 
+End Class
 
 

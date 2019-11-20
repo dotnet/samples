@@ -37,5 +37,5 @@ Public Class MySoapHeader_EncodedMustUnderstand
             Console.WriteLine("Source: " + e.Source)
             Console.WriteLine("Message: " + e.Message)
         End Try
-    End Sub 'Main
-End Class 'MySoapHeader_EncodedMustUnderstand
+    End Sub
+End Class

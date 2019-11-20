@@ -8,7 +8,6 @@
 
 Imports System.Net
 Imports System.Collections
-Imports Microsoft.VisualBasic
 Imports System.Environment
 
 Class CredentialCacheSnippet
@@ -35,7 +34,7 @@ Class CredentialCacheSnippet
         Console.WriteLine("Press any key to continue...")
         Console.ReadLine()
         Return
-    End Sub 'Main
+    End Sub
     
     Public Shared Sub GetPage(url As String, userName As String, password As String, domainName As String)
 ' <Snippet1>
@@ -74,10 +73,10 @@ Class CredentialCacheSnippet
             Console.WriteLine(ControlChars.Cr + "The following exception was raised : {0}", e.Message)
         End Try
 
-    End Sub 'GetPage
+    End Sub
     
     Public Shared Sub Display(credential As NetworkCredential)
         Console.WriteLine(ControlChars.Cr + "Username : {0} ,Password : {1} ,Domain : {2}", credential.UserName, credential.Password, credential.Domain)
-    End Sub 'Display
+    End Sub
 ' </Snippet1>
-End Class 'CredentialCacheSnippet
+End Class

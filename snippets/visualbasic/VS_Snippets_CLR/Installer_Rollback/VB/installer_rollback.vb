@@ -26,7 +26,7 @@ Namespace MyAssembly
          Dim myException As New Exception()
          Console.WriteLine("Exception thrown during Installation")
          Throw myException
-      End Sub 'Install
+      End Sub
 
 ' <Snippet1>
       ' Override 'Rollback' method of Installer class.
@@ -34,12 +34,12 @@ Namespace MyAssembly
          MyBase.Rollback(mySavedState)
          Console.WriteLine("The Rollback method of 'MyInstallerSample'" + _
                                                       " has been called")
-      End Sub 'Rollback
+      End Sub
 ' </Snippet1>
 
       Shared Sub Main()
          Console.WriteLine("Use installutil.exe to run the assembly" + _
                                              " Installer_Rollback.exe")
-      End Sub 'Main
-   End Class 'MyInstallerSample
+      End Sub
+   End Class
 End Namespace 'MyAssembly

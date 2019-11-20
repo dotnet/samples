@@ -11,7 +11,7 @@ Namespace MyProcessSample
 
             ' Display the contents of the favorites folder in the browser.
             Process.Start(myFavoritesPath)
-        End Sub 'OpenApplication
+        End Sub
 
         ' Opens urls and .html documents using Internet Explorer.
         Sub OpenWithArguments()
@@ -22,7 +22,7 @@ Namespace MyProcessSample
             ' Start a Web page using a browser associated with .html and .asp files.
             Process.Start("IExplore.exe", "C:\myPath\myFile.htm")
             Process.Start("IExplore.exe", "C:\myPath\myFile.asp")
-        End Sub 'OpenWithArguments
+        End Sub
 
         ' Uses the ProcessStartInfo class to start new processes,
         ' both in a minimized mode.
@@ -35,7 +35,7 @@ Namespace MyProcessSample
             startInfo.Arguments = "www.northwindtraders.com"
 
             Process.Start(startInfo)
-        End Sub 'OpenWithStartInfo
+        End Sub
 
         Shared Sub Main()
             ' Get the path that stores favorite links.
@@ -46,8 +46,8 @@ Namespace MyProcessSample
             myProcess.OpenApplication(myFavoritesPath)
             myProcess.OpenWithArguments()
             myProcess.OpenWithStartInfo()
-        End Sub 'Main
-    End Class 'MyProcess
+        End Sub
+    End Class
 End Namespace 'MyProcessSample
 ' </Snippet1>
 ' <Snippet2>

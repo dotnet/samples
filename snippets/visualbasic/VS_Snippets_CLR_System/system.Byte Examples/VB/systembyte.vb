@@ -19,8 +19,8 @@
          sbe.ParseByte()
 
          sbe.Compare(compareByte)
-      End Sub 'Main
-   End Class 'Class1
+      End Sub
+   End Class
     _
 
    Class SystemByteExamples
@@ -30,7 +30,7 @@
       ' c'tor()
       Public Sub New()
          MemberByte = 0
-      End Sub 'New
+      End Sub
 
 
       ' The following example demonstrates using the MinValue and MaxValue fields to
@@ -48,7 +48,7 @@
          Else
             Console.WriteLine("The value {0} is outside of the range of possible Byte values.", numberToSet.ToString())
          End If
-      End Sub 'MinMaxFields
+      End Sub
 
       '</Snippet1>
       ' The following example converts the string representation of a byte
@@ -65,7 +65,7 @@
             Console.WriteLine("Exception: {0}", e.Message)
          End Try
       ' </Snippet2>
-      End Sub 'ParseByte
+      End Sub
 
       ' The following example checks to see whether a byte passed in is
       '  greater than, less than, or equal to the member byte.
@@ -85,7 +85,7 @@
                Console.WriteLine("{0} is equal to the MemberByte value {1}", myByte.ToString(), MemberByte.ToString())
             End If
          End If
-      End Sub 'Compare 
+      End Sub
       '</Snippet3>
-   End Class 'SystemByteExamples
+   End Class
 End Namespace 'SystemByte_Examples

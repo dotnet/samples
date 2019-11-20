@@ -19,14 +19,14 @@ Namespace Samples.AspNet.VB.Controls
 
         Public Sub New()
             Me.New("", "", "")
-        End Sub 'New
+        End Sub
 
 
         Public Sub New(ByVal name As String, ByVal title As String, ByVal employeeAlias As String)
             Me._name = name
             Me._title = title
             Me._alias = employeeAlias
-        End Sub 'New
+        End Sub
 
         Public Property Name() As String
             Get
@@ -56,7 +56,7 @@ Namespace Samples.AspNet.VB.Controls
                 _alias = Value
             End Set
         End Property
-    End Class 'Employee
+    End Class
 
     ' <snippet2>
     ' Use this Boolean version of the ParseChildrenAttribute constructor
@@ -139,8 +139,8 @@ Namespace Samples.AspNet.VB.Controls
                 table.Rows.Add(tr)
             Next employee
             Controls.Add(table)
-        End Sub 'CreateChildControls 
-    End Class 'CollectionPropertyControl
+        End Sub
+    End Class
 End Namespace ' ParseChildrenSampleVB_2
 ' </snippet2>
 ' </snippet1>

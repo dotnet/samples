@@ -66,15 +66,15 @@ Namespace Examples.VB.WebControls.Design
 
             simpleRadioButtonList = CType(component, SimpleRadioButtonList)
             MyBase.Initialize(component)
-        End Sub ' Initialize
+        End Sub
         ' </snippet3>   
 
         ' <snippet4>        
         ' If the data source changes, set a Boolean variable.
         Public Overrides Sub OnDataSourceChanged()
             changedDataSource = True
-        End Sub ' OnDataSourceChanged
+        End Sub
         ' </snippet4>
-    End Class ' SimpleRadioButtonListDesigner
+    End Class
 End Namespace ' Examples.VB.WebControls.Design
 ' </snippet1>

@@ -1,6 +1,5 @@
 ﻿' <Snippet1>
 Imports System.Collections
-Imports Microsoft.VisualBasic
 
 Public Class SamplesArrayList    
 
@@ -28,7 +27,7 @@ Public Class SamplesArrayList
         Console.Write("   Values:")
         PrintValues(myAL)
 
-    End Sub 'Main
+    End Sub
 
     Public Shared Sub PrintValues(myList As IEnumerable)
         Dim obj As [Object]
@@ -36,7 +35,7 @@ Public Class SamplesArrayList
             Console.Write("   {0}", obj)
         Next obj
         Console.WriteLine()
-    End Sub 'PrintValues
+    End Sub
 
 End Class
 

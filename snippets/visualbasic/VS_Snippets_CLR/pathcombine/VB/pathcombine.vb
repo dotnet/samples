@@ -18,7 +18,7 @@ Public Class ChangeExtensionTest
         CombinePaths(path4, path2)
         CombinePaths(path5, path2)
         CombinePaths(path6, path2)
-    End Sub 'Main
+    End Sub
 
     Private Shared Sub CombinePaths(p1 As String, p2 As String)
         
@@ -37,8 +37,8 @@ Public Class ChangeExtensionTest
         End Try
         
         Console.WriteLine()
-    End Sub 'CombinePaths
-End Class 'ChangeExtensionTest
+    End Sub
+End Class
 ' This code produces output similar to the following:
 '
 ' When you combine 'c:\temp' and 'subdir\file.txt', the result is: 

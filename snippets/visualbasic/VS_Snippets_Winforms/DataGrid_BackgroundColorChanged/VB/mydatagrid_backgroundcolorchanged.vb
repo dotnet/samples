@@ -14,7 +14,6 @@
 ' is raised which is confirmed by the message shown by the
 ' alert message box.
 
-Imports System
 Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
@@ -33,7 +32,7 @@ Public Class MyDataGrid
       
       ' Call SetUp to bind the controls.
       SetUp()
-   End Sub 'New
+   End Sub
    
    
    ' Clean up any resources being used.
@@ -44,13 +43,13 @@ Public Class MyDataGrid
          End If
       End If
       MyBase.Dispose(disposing)
-   End Sub 'Dispose
+   End Sub
    
    
    ' Main entry point for the application.
    Shared Sub Main()
       Application.Run(New MyDataGrid())
-   End Sub 'Main
+   End Sub
    
    
    Private Sub InitializeComponent()
@@ -80,7 +79,7 @@ Public Class MyDataGrid
       
       Me.Controls.Add(myButton)
       Me.Controls.Add(myDataGrid)
-   End Sub 'InitializeComponent
+   End Sub
    
    
    Private Sub SetUp()
@@ -88,7 +87,7 @@ Public Class MyDataGrid
       MakeDataSet()
       ' Bind the DataGrid to the DataSet.
       myDataGrid.SetDataBinding(myDataSet, "Person")
-   End Sub 'SetUp
+   End Sub
    
    
    ' Create a DataSet with two tables and populate it.
@@ -148,14 +147,14 @@ Public Class MyDataGrid
          ' Add the row to the 'Detail' table.
          tDet.Rows.Add(newRow2)
       Next i
-   End Sub 'MakeDataSet
+   End Sub
    
    
 ' <Snippet1>
    ' Create an instance of the 'BackButtonClick' EventHandler.
    Private Sub CallBackButtonClick()
       AddHandler myDataGrid.BackButtonClick, AddressOf Grid_BackClick
-   End Sub 'CallBackButtonClick
+   End Sub
    
    
    ' Raise the event when 'BackButton' on child table is clicked.
@@ -164,14 +163,14 @@ Public Class MyDataGrid
         Dim myString As String = "BackButtonClick event raised, showing parent table"
         ' Show information about Back button.
         MessageBox.Show(myString, "Back button information")
-    End Sub 'Grid_BackClick
+    End Sub
    
 ' </Snippet1>
 ' <Snippet2>
    ' Create an instance of the 'BackgroundColorChanged' EventHandler.
    Private Sub CallBackgroundColorChanged()
       AddHandler myDataGrid.BackgroundColorChanged, AddressOf Grid_ColChange
-   End Sub 'CallBackgroundColorChanged
+   End Sub
    
    
    ' Set the 'BackgroundColor' property on click of button.
@@ -181,7 +180,7 @@ Public Class MyDataGrid
         Else
             myDataGrid.BackgroundColor = Color.Yellow
         End If
-    End Sub 'myButton_Click
+    End Sub
    
    
    ' Raise the event when 'Background' color of DataGrid changes.
@@ -193,6 +192,6 @@ Public Class MyDataGrid
         myString += myColor.ToString()
         ' Show information about background color setting.
         MessageBox.Show(myString, "Background color information")
-    End Sub 'Grid_ColChange
+    End Sub
 ' </Snippet2>
-End Class 'MyDataGrid 
+End Class

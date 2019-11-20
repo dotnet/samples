@@ -48,27 +48,26 @@ public:
 
 int main()
 {
-   
-   //Creates a new TestSimpleObject object.
+   // Creates a new TestSimpleObject object.
    TestSimpleObject^ obj = gcnew TestSimpleObject;
    Console::WriteLine( "Before serialization the Object* contains: " );
    obj->Print();
-   
-   //Opens a file and serializes the object into it in binary format.
+
+   // Opens a file and serializes the object into it in binary format.
    Stream^ stream = File::Open( "data.xml", FileMode::Create );
    SoapFormatter^ formatter = gcnew SoapFormatter;
-   
+
    //BinaryFormatter* formatter = new BinaryFormatter();
    formatter->Serialize( stream, obj );
    stream->Close();
-   
-   //Empties obj.
+
+   // Empties obj.
    obj = nullptr;
-   
-   //Opens file S"data.xml" and deserializes the object from it.
+
+   // Opens file S"data.xml" and deserializes the object from it.
    stream = File::Open( "data.xml", FileMode::Open );
    formatter = gcnew SoapFormatter;
-   
+
    //formatter = new BinaryFormatter();
    obj = dynamic_cast<TestSimpleObject^>(formatter->Deserialize( stream ));
    stream->Close();

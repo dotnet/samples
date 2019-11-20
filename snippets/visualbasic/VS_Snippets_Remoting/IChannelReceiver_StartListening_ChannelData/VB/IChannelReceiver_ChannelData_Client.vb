@@ -28,6 +28,6 @@ Namespace RemotingSamples
          Catch e As Exception
             Console.WriteLine("Message : " + e.Message)
          End Try
-      End Sub 'Main
-   End Class 'MyIChannelReceiverChannelDataClientClass
+      End Sub
+   End Class
 End Namespace 'RemotingSamples

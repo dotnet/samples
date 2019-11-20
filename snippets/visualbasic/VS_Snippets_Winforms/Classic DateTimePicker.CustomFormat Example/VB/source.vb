@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
@@ -15,7 +14,7 @@ Public Class Form1
         ' Set the Format type and the CustomFormat string.
         dateTimePicker1.Format = DateTimePickerFormat.Custom
         dateTimePicker1.CustomFormat = "MMMM dd, yyyy - dddd"
-    End Sub 'SetMyCustomFormat
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

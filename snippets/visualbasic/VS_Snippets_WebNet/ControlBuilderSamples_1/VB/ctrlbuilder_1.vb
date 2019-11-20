@@ -39,8 +39,8 @@ Namespace CustomControlBuildersVB
    ' Override the AppendLiteralString method so that literal
    ' text between rows of controls are ignored.  
    Public Overrides Sub AppendLiteralString(s As String)
-   End Sub 'AppendLiteralString
- End Class 'MyItemControlBuilder ' Ignores literals between rows.
+   End Sub
+ End Class
 ' </Snippet3>
 ' </Snippet2>
 ' <Snippet4>
@@ -55,7 +55,7 @@ Namespace CustomControlBuildersVB
    Public Overrides Function AllowWhitespaceLiterals() As Boolean
       Return False
    End Function 'AllowWhitespaceLiterals
- End Class 'NoWhiteSpaceControlBuilder 
+ End Class
 ' </Snippet4>
 ' <snippet5>
  ' Using the NowWhiteSpaceControlBuilder with a simple control.
@@ -66,14 +66,14 @@ Namespace CustomControlBuildersVB
    Level:=AspNetHostingPermissionLevel.Minimal)> _
  Public NotInheritable Class MyNonWhiteSpaceControl
    Inherits Control
- End Class 'MyNonWhiteSpaceControl
+ End Class
 
  ' A simple custom control to compare with MyNonWhiteSpaceControl.
  <AspNetHostingPermission(SecurityAction.Demand, _
    Level:=AspNetHostingPermissionLevel.Minimal)> _
  Public NotInheritable Class WhiteSpaceControl
    Inherits Control
- End Class 'WhiteSpaceControl 
+ End Class
 ' </snippet5>   
 
 
@@ -98,7 +98,7 @@ Namespace CustomControlBuildersVB
       If TypeOf obj Is TextBox Then
          items.Add(obj)
       End If
-   End Sub 'AddParsedSubObject
+   End Sub
    
    
    ' Override the CreateChildControls to create any TextBox server control
@@ -108,8 +108,8 @@ Namespace CustomControlBuildersVB
       While myEnumerator.MoveNext()
          Me.Controls.Add(CType(myEnumerator.Current, TextBox))
       End While
-   End Sub 'CreateChildControls 
- End Class 'MyControl1
+   End Sub
+ End Class
 ' </Snippet6>
 End Namespace 'CustomControlBuilders
 ' </snippet1>

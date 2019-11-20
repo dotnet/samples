@@ -9,6 +9,6 @@ Class UnicodeEncodingExample
         Dim uni As New UnicodeEncoding()
         Dim charCount As Integer = uni.GetCharCount(bytes, 2, 8)
         Console.WriteLine("{0} characters needed to decode bytes.", charCount)
-    End Sub 'Main
-End Class 'UnicodeEncodingExample
+    End Sub
+End Class
 ' </Snippet1>

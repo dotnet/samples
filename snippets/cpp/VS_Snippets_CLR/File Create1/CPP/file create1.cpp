@@ -7,13 +7,7 @@ int main()
 {
    String^ path = "c:\\temp\\MyTest.txt";
    
-   // Delete the file if it exists.
-   if ( File::Exists( path ) )
-   {
-      File::Delete( path );
-   }
-
-   // Create the file.
+   // Create the file, or overwrite if the file exists.
    FileStream^ fs = File::Create( path );
    try
    {

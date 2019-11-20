@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Drawing
+﻿Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Windows.Forms
@@ -13,7 +12,7 @@ Namespace ISelectionServiceExample
 
       Public Sub New()
          InitializeComponent()
-      End Sub 'New
+      End Sub
 
       Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
          If disposing Then
@@ -22,7 +21,7 @@ Namespace ISelectionServiceExample
             End If
          End If
          MyBase.Dispose(disposing)
-      End Sub 'Dispose
+      End Sub
 
 
 #Region "Windows Form Designer generated code"
@@ -44,19 +43,19 @@ Namespace ISelectionServiceExample
          Me.Name = "Form1"
          Me.Text = "Form1"
          Me.ResumeLayout(False)
-      End Sub 'InitializeComponent
+      End Sub
 #End Region
 
       Private Sub Form1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-      End Sub 'Form1_Load
+      End Sub
 
       ' The main entry point for the application.
       Public Shared Sub Main()
          Application.Run(New Form1())
-      End Sub 'Main
+      End Sub
 
       Private Sub componentClass1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles componentClass1.Load
-      End Sub 'componentClass1_Load
-   End Class 'Form1 
+      End Sub
+   End Class
 End Namespace 'ISelectionServiceExample

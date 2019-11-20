@@ -15,8 +15,8 @@ Public Class CustomControlAdapter
         ' which raises the control Init event.
         MyBase.OnInit(e)
 
-    End Sub 'OnInit
-End Class 'CustomControlAdapter
+    End Sub
+End Class
 ' </snippet1>
 
 Module MainMod

@@ -38,7 +38,7 @@ Namespace MyASPNETControls
          If eventArgument = "dec" Then
             Number = Number - 1
          End If
-      End Sub 'RaisePostBackEvent
+      End Sub
       
       <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.Demand, Name:="FullTrust")> _ 
       Protected Overrides Sub Render(writer As HtmlTextWriter)
@@ -57,8 +57,8 @@ Namespace MyASPNETControls
 	 ' dec to the RaisePostBackEvent method when the link
 	 ' this code creates is clicked.         
          writer.Write(("<a href=""javascript:" + Page.GetPostBackEventReference(Me, "dec") + """>Decrease Number</a>"))
-      End Sub 'Render
-   End Class 'MyControl
+      End Sub
+   End Class
 ' </snippet1>
     _ 
 ' <snippet2>
@@ -89,7 +89,7 @@ Namespace MyASPNETControls
       Public Sub RaisePostBackEvent(eventArgument As String) Implements IPostBackEventHandler.RaisePostBackEvent
 
          Number = Number + 1
-      End Sub 'RaisePostBackEvent
+      End Sub
       
       <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.Demand, Name:="FullTrust")> _
       Protected Overrides Sub Render(writer As HtmlTextWriter)
@@ -101,7 +101,7 @@ Namespace MyASPNETControls
 	 ' inc to the RaisePostBackEvent method when the link
 	 ' this code creates is clicked.         
          writer.Write(("<a href=""javascript:" + Page.GetPostBackEventReference(Me) + """>Increase Number</a>"))
-      End Sub 'Render
-   End Class 'MyControl1
+      End Sub
+   End Class
 ' </snippet2>
 End Namespace 'MyASPNETControls

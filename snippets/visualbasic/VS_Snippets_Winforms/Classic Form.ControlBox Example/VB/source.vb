@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.ComponentModel
 Imports System.Windows.Forms
 
@@ -17,6 +16,6 @@ Public Class Form1
         StartPosition = FormStartPosition.CenterScreen
         ' Remove the control box so the form will only display client area.
         ControlBox = False
-    End Sub 'CreateMyBorderlesWindow
+    End Sub
 ' </Snippet1>
-End Class 'Form1 
+End Class

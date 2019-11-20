@@ -92,6 +92,6 @@ Class UsingHttpModuleActionCollection
         End If
         '</Snippet8>
 
-   End Sub 'Main 
-End Class 'UsingHttpModuleActionCollection 
+   End Sub
+End Class
 

@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-'<Snippet1>
+﻿'<Snippet1>
 ' friend_unsigned_A.vb
 ' Compile with: 
 ' Vbc /target:library friend_unsigned_A.vb

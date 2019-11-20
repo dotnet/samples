@@ -4,7 +4,6 @@ Imports System.Runtime.Remoting.Lifetime
 Imports System.Runtime.Remoting.Channels
 Imports System.Runtime.Remoting.Channels.Http
 Imports System.Security.Permissions
-Imports Microsoft.VisualBasic
 
 Public Class Client
 <SecurityPermission(SecurityAction.Demand)> _
@@ -23,9 +22,9 @@ Public Class Client
       
       Console.WriteLine("Press Enter to end the client application domain.")
       Console.ReadLine()
-   End Sub 'Main
+   End Sub
    
-End Class 'Client
+End Class
 
 
 Public Class MyClientSponsor
@@ -37,7 +36,7 @@ Public Class MyClientSponsor
    Public Sub New()
       Console.WriteLine("Activateing client...")
       lastRenewal = Now
-   End Sub 'New
+   End Sub
       
 <SecurityPermission(SecurityAction.Demand, Flags := SecurityPermissionFlag.Infrastructure)> _
    Public Function Renewal(lease As ILease) As TimeSpan _
@@ -50,5 +49,5 @@ Public Class MyClientSponsor
       Return TimeSpan.FromSeconds(4)
    End Function 'Renewal
    
-End Class 'MyClientSponsor
+End Class
 ' </Snippet1>

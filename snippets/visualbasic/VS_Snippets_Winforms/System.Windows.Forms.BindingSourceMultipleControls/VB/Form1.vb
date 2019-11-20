@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
 Imports System.Data
@@ -75,7 +74,7 @@ Public Class Form1
             True, DataSourceUpdateMode.OnPropertyChanged)
 
     
-    End Sub 'InitializeControlsAndDataSource
+    End Sub
     
     '</snippet3>
     '<snippet2>

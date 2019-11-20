@@ -108,6 +108,6 @@ Class MyMimeTextMatchClass
       Catch e As Exception
          Console.WriteLine("Exception: {0}", e.Message)
       End Try
-   End Sub 'Main
-End Class 'MyMimeTextMatchClass
+   End Sub
+End Class
 ' </Snippet1>

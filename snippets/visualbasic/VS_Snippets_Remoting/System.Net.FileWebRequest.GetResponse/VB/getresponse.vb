@@ -26,7 +26,7 @@ Namespace Mssc.PluggableProtocols.File
       Private Shared Sub showUsage()
         Console.WriteLine(ControlChars.Lf + "Please enter file name:")
         Console.WriteLine("Usage: cs_getresponse <systemname>/<sharedfoldername>/<filename>")
-      End Sub 'showUsage
+      End Sub
 
 
       Private Shared Function makeFileRequest(ByVal fileName As String) As Boolean
@@ -87,7 +87,7 @@ Namespace Mssc.PluggableProtocols.File
         Catch e As UriFormatException
           Console.WriteLine(("The UriFormatException: " + e.Message))
         End Try
-      End Sub 'readFile
+      End Sub
 
       'Entry point which delegates to C-style main Private Function
       Public Shared Sub Main(ByVal args() As String)
@@ -99,8 +99,8 @@ Namespace Mssc.PluggableProtocols.File
             readFile()
           End If
         End If
-      End Sub 'Main
-    End Class 'TestGetResponse
+      End Sub
+    End Class
 
   End Module
 

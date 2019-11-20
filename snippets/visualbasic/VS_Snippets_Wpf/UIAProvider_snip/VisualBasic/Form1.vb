@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
 Imports System.Data
@@ -30,6 +29,6 @@ Partial Class Form1
 
         InitializeComponent()
 
-    End Sub 'New
-End Class 'Form1
+    End Sub
+End Class
 '

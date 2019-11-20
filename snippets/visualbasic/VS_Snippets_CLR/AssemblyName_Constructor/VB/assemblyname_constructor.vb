@@ -18,7 +18,6 @@
 Imports System.Reflection
 Imports System.Threading
 Imports System.Reflection.Emit
-Imports Microsoft.VisualBasic
 
 Public Class AssemblyName_Constructor
    
@@ -41,7 +40,7 @@ Public Class AssemblyName_Constructor
       ' Set the method with name 'Main' as the entry point in the assembly.
       myAssemblyBuilder.SetEntryPoint(myMethodBuilder)
       myAssemblyBuilder.Save(fileName)
-   End Sub 'MakeAssembly
+   End Sub
    
    
    Public Shared Sub Main()
@@ -68,8 +67,8 @@ Public Class AssemblyName_Constructor
          Console.WriteLine(ControlChars.Cr + "Displaying the assembly name" + ControlChars.Cr)
          Console.WriteLine(myAssembly)
       End If
-   End Sub 'Main 
-End Class 'AssemblyName_Constructor 
+   End Sub
+End Class
 ' </Snippet3>
 ' </Snippet2>
 ' </Snippet1>

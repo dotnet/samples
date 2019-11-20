@@ -4,7 +4,6 @@
 'It creates a web request and queries for a response. 
 
 Imports System.Net
-Imports Microsoft.VisualBasic
 Imports System.Environment
 
 Class HttpWebResponseSnippet
@@ -25,7 +24,7 @@ Class HttpWebResponseSnippet
         Console.WriteLine("Press any key to continue...")
         Console.ReadLine()
         Return
-    End Sub 'Main
+    End Sub
     
 ' <Snippet1>	
 ' <Snippet2>	    

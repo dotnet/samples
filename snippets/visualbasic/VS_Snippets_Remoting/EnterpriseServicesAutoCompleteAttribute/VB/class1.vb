@@ -13,14 +13,14 @@ Public Class AutoCompleteAttribute_Example
     <AutoComplete()>  _
     Public Sub AutoCompleteAttribute_Ctor() 
     
-    End Sub 'AutoCompleteAttribute_Ctor
+    End Sub
     ' </snippet1>
 
     ' <snippet2>
     <AutoComplete(True)>  _
     Public Sub AutoCompleteAttribute_Ctor_Bool() 
     
-    End Sub 'AutoCompleteAttribute_Ctor_Bool
+    End Sub
     ' </snippet2>
 
     ' <snippet3>
@@ -35,10 +35,10 @@ Public Class AutoCompleteAttribute_Example
         ' Display the value of the attribute's Value property.
         MsgBox("AutoCompleteAttribute.Value: " & attribute.Value)
     
-    End Sub 'AutoCompleteAttribute_Value
+    End Sub
     ' </snippet3>
 
-End Class 'AutoCompleteAttribute_Example
+End Class
 
 ' </snippet0>
 
@@ -53,5 +53,5 @@ Public Class TestClient
         ' Demonstrate the AutoCompleteAttribute properties.
         'example.AutoCompleteAttribute_Value()
 
-    End Sub 'Main
-End Class 'TestClient
+    End Sub
+End Class

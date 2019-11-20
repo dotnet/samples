@@ -41,5 +41,5 @@ Class MyInstallClass
       Catch myException As Exception
          Console.WriteLine(myException.Message)
       End Try
-   End Sub 'Main
-End Class 'MyInstallClass
+   End Sub
+End Class

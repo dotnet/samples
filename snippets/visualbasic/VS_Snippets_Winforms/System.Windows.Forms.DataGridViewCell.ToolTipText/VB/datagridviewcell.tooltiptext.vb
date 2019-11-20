@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Windows.Forms
+﻿Imports System.Windows.Forms
 
 Class Form1
     Inherits Form
@@ -9,7 +8,7 @@ Class Form1
     <STAThreadAttribute()> _
     Public Shared Sub Main()
         Application.Run(New Form1())
-    End Sub 'Main
+    End Sub
 
     Public Sub New()
         Me.dataGridView1.Dock = DockStyle.Fill
@@ -37,7 +36,7 @@ Class Form1
         Me.Controls.Add(Me.dataGridView1)
         Me.Text = "DataGridView cell ToolTip demo"
 
-    End Sub 'New
+    End Sub
 
     '<Snippet1>
     ' Sets the ToolTip text for cells in the Rating column.
@@ -64,7 +63,7 @@ Class Form1
 
         End If
 
-    End Sub 'dataGridView1_CellFormatting
+    End Sub
     '</Snippet1>
 
-End Class 'Form1
+End Class

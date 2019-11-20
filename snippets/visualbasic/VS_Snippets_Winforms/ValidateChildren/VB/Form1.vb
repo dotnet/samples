@@ -1,5 +1,4 @@
 ﻿'<SNIPPET1>
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 
@@ -14,7 +13,7 @@ Public Class Form1
     Private Overloads Shared Sub Main(ByVal args() As String)
         Application.EnableVisualStyles()
         Application.Run(New Form1())
-    End Sub 'Main
+    End Sub
 
     Private WithEvents FirstNameBox, LastNameBox As TextBox
     Private WithEvents ValidateButton As Button

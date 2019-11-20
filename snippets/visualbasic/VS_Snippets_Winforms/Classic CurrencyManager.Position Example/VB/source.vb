@@ -1,5 +1,4 @@
-﻿imports System
-imports System.Windows.Forms
+﻿imports System.Windows.Forms
 
 
 Public Class Form1

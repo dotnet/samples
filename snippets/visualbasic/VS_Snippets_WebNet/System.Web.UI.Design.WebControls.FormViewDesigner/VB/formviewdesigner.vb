@@ -17,7 +17,7 @@ Namespace Examples.VB.WebControls.Design
     <Designer(GetType(Examples.VB.WebControls.Design.MyFormViewDesigner))> _
     Public Class MyFormView
         Inherits FormView
-    End Class ' MyFormView
+    End Class
 
     ' Override members of the FormViewDesigner.
     Public Class MyFormViewDesigner
@@ -103,6 +103,6 @@ Namespace Examples.VB.WebControls.Design
 
         End Function ' GetDesignTimeHtml
         ' </snippet4>
-    End Class ' MyFormViewDesigner
+    End Class
 End Namespace ' Examples.VB.WebControls.Design
 ' </snippet1>

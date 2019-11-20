@@ -22,9 +22,9 @@ Namespace CodeDomSamples
 
          ' Me.Dispose(true)
          '</Snippet2>
-      End Sub 'New 
+      End Sub
 
-   End Class 'CodeMethodInvokeExpressionExample
+   End Class
 
 End Namespace 'CodeDomSamples 
 

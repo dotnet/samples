@@ -29,14 +29,8 @@ namespace AdvancedInkInputSemples
 
         protected override void OnDraw(DrawingContext drawingContext, StylusPointCollection stylusPoints, Geometry geometry, Brush fillBrush)
         {
-            if (brush == null)
-            {
-                brush = new LinearGradientBrush(Colors.Red, Colors.Blue, 20d);
-            }
-            if (pen == null)
-            {
-                pen = new Pen(brush, 2d);
-            }
+            brush ??= new LinearGradientBrush(Colors.Red, Colors.Blue, 20d);
+            pen ??= new Pen(brush, 2d);
             for (int i = 0; i < stylusPoints.Count; i++)
             {
                 Point pt = (Point)stylusPoints[i];

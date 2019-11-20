@@ -9,8 +9,6 @@
 
 Imports System.Collections.Specialized
 Imports System.Net
-Imports Microsoft.VisualBasic
-
 
 Public Class WebClient_QueryString
     
@@ -55,5 +53,5 @@ Public Class WebClient_QueryString
         Catch e As Exception
             Console.WriteLine(("The following Exception was raised: " + e.Message))
         End Try
-    End Sub 'Main
-End Class 'WebClient_QueryString
+    End Sub
+End Class

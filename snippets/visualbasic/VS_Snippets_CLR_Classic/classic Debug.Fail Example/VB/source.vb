@@ -38,5 +38,5 @@ Public Class Form1
                 result = 1.0
         End Select
         ' </Snippet2>
-    End Sub 'Method
-End Class 'Form1 
+    End Sub
+End Class

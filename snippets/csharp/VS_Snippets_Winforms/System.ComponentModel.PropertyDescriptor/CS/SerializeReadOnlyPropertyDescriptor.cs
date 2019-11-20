@@ -136,13 +136,10 @@ namespace ReadOnlyPropertyDescriptorTest
         {
             if (existing == null)
             {
-                throw new ArgumentNullException("existing");
+                throw new ArgumentNullException(nameof(existing));
             }
 
-            if (newAttrs == null)
-            {
-                newAttrs = new Attribute[0];
-            }
+            newAttrs ??= new Attribute[0];
 
             Attribute[] attributes;
 

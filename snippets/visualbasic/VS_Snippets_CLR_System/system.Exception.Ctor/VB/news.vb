@@ -1,7 +1,5 @@
 ﻿ '<Snippet2>
 ' Example for the Exception( String ) constructor( String ).
-Imports Microsoft.VisualBasic
-
 Namespace NDP_UE_VB
 
     ' Derive an exception with a specifiable message.
@@ -14,13 +12,13 @@ Namespace NDP_UE_VB
            
         Public Sub New()
             MyBase.New(notEvenMessage)
-        End Sub ' New
+        End Sub
            
         Public Sub New(auxMessage As String)
             MyBase.New(String.Format("{0} - {1}", _
                 auxMessage, notEvenMessage))
-        End Sub ' New
-    End Class ' NotEvenException
+        End Sub
+    End Class
 
     Module NewSExceptionDemo
        
@@ -41,7 +39,7 @@ Namespace NDP_UE_VB
 
             CalcHalf2(30)
             CalcHalf2(33)
-        End Sub ' Main
+        End Sub
            
         ' Half throws a base exception if the input is not even.
         Function Half(input As Integer) As Integer
@@ -77,7 +75,7 @@ Namespace NDP_UE_VB
             Catch ex As Exception
                 Console.WriteLine( ex.ToString( ) )
             End Try
-        End Sub ' CalcHalf
+        End Sub
            
            
         ' CalcHalf2 calls Half2 and catches any thrown exceptions.
@@ -91,7 +89,7 @@ Namespace NDP_UE_VB
             Catch ex As Exception
                 Console.WriteLine( ex.ToString( ) )
             End Try
-        End Sub ' CalcHalf2
+        End Sub
 
     End Module ' NewSExceptionDemo
 End Namespace ' NDP_UE_VB

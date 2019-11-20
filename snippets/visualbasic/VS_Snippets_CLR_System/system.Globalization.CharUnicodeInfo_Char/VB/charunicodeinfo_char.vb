@@ -2,7 +2,6 @@
 
 ' <snippet1>
 Imports System.Globalization
-Imports Microsoft.VisualBasic
 
 Public Class SamplesCharUnicodeInfo   
 
@@ -37,7 +36,7 @@ Public Class SamplesCharUnicodeInfo
       Console.Write("U+2788 CIRCLED SANS-SERIF DIGIT NINE   ")
       PrintProperties(ChrW(&H2788))
 
-   End Sub 'Main
+   End Sub
 
    Public Shared Sub PrintProperties(c As Char)
       Console.Write(" {0,-3}", c)
@@ -45,9 +44,9 @@ Public Class SamplesCharUnicodeInfo
       Console.Write(" {0,-5}", CharUnicodeInfo.GetDigitValue(c))
       Console.Write(" {0,-5}", CharUnicodeInfo.GetDecimalDigitValue(c))
       Console.WriteLine("{0}", CharUnicodeInfo.GetUnicodeCategory(c))
-   End Sub 'PrintProperties
+   End Sub
 
-End Class 'SamplesCharUnicodeInfo 
+End Class
 
 
 'This code produces the following output.  Some characters might not display at the console.

@@ -32,5 +32,5 @@ Public Class MyServerClass
                    WellKnownObjectMode.SingleCall)
       Console.WriteLine("Press enter to stop this process.")
       Console.ReadLine()
-   End Sub 'Main
-End Class 'MyServerClass
+   End Sub
+End Class

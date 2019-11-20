@@ -9,10 +9,10 @@ Public Class MyAssemblyResourceApplication
        Catch Ex As TypeLoadException
          Console.WriteLine("Unable to load EmitClass type from MyEmitTestAssembly.dll!")
       End Try
-   End Sub 'Main
+   End Sub
    
    Private Shared Sub CallEmitMethod()
       Dim myEmit As New EmitClass()
       Console.WriteLine(myEmit.Display())
-   End Sub 'CallEmitMethod
-End Class 'MyAssemblyResourceApplication
+   End Sub
+End Class

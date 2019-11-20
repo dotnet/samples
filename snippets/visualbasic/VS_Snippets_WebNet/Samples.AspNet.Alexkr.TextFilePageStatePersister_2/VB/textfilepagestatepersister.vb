@@ -17,7 +17,7 @@ Namespace Samples.AspNet.VB
 
         Public Sub New(ByVal page As Page)
             MyBase.New(page)
-        End Sub 'New
+        End Sub
 
         ' <snippet2>
         '
@@ -48,7 +48,7 @@ Namespace Samples.AspNet.VB
             ' </snippet4>
             reader.Close()
             stateStream.Close()
-        End Sub ' Load
+        End Sub
 
         ' </snippet2>
         ' <snippet3>
@@ -81,7 +81,7 @@ Namespace Samples.AspNet.VB
                     Throw New InvalidOperationException("Session needed for StreamPageStatePersister.")
                 End If
             End If
-        End Sub 'Save
+        End Sub
         ' </snippet3>
         ' Return a secure Stream for your environment.
         Private Function GetSecureStream() As Stream

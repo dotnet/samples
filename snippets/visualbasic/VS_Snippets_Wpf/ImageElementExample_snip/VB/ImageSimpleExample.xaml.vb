@@ -1,5 +1,4 @@
 ﻿ 'This is a list of commonly used namespaces for a pane.
-Imports System
 Imports System.Windows
 Imports System.Windows.Documents
 Imports System.Windows.Controls
@@ -25,7 +24,7 @@ Namespace ImageElementExample
         '-------------------^--- Syntax error: ';' expected
         Public Sub New()
 
-        End Sub 'New
+        End Sub
 
 
         Private Sub PageLoaded(ByVal sender As Object, ByVal args As RoutedEventArgs)
@@ -80,6 +79,6 @@ Namespace ImageElementExample
             ' Add Image to the UI
             myStackPanel.Children.Add(myImage1)
 
-        End Sub 'PageLoaded
-    End Class 'ImageSimpleExample 
+        End Sub
+    End Class
 End Namespace

@@ -21,7 +21,7 @@ Public Class TestClass
       
       ' start listening and process connections here.
       listener.Start()
-   End Sub 'listenerOption
+   End Sub
    
    ' </Snippet1>
    <STAThread()>  _
@@ -30,7 +30,7 @@ Public Class TestClass
       
       Console.WriteLine("enter to exit")
       Console.Read()
-   End Sub 'Main 
-End Class 'TestClass
+   End Sub
+End Class
 
 

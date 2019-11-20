@@ -16,6 +16,6 @@ Public Class Class1
                 Console.WriteLine(" {0}={1}", reader.Name, reader.Value)
             End While
         End If
-    End Sub 'DisplayAttributes
+    End Sub
     ' </Snippet1>
-End Class 'Class1 
+End Class

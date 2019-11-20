@@ -13,7 +13,7 @@ Public Class Form1
         
         ' Print the file description.
         textBox1.Text = "File description: " & myFileVersionInfo.FileDescription
-    End Sub 'GetFileDescription
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

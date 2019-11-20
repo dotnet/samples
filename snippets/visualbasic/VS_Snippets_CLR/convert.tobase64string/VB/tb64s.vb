@@ -57,7 +57,7 @@ Class Sample
       
       ' 6) Is outArray equal to inArray?
       Console.WriteLine(step6, ArraysAreEqual(inArray, outArray))
-   End Sub 'Main
+   End Sub
    
    
    Public Shared Function ArraysAreEqual(a1() As Byte, a2() As Byte) As Boolean
@@ -72,7 +72,7 @@ Class Sample
       Next i
       Return True
    End Function 'ArraysAreEqual
-End Class 'Sample
+End Class
 '
 'This example produces the following results:
 '

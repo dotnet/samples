@@ -5,10 +5,9 @@ namespace Partitioning
 {
     public static class TakeWhileSample2
     {
-        //This sample uses TakeWhile to return elements starting from the beginning of the array
-        //until a number is hit that is less than its position in the array.
-        // 
-        //Output: 
+        // This sample uses TakeWhile to return elements starting from the beginning of the array
+        // until a number is hit that is less than its position in the array.
+        // Output: 
         // First numbers not less than their position:
         // 5
         // 4

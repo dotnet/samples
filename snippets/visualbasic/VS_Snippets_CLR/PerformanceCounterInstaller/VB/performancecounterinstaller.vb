@@ -33,8 +33,8 @@ Public Class MyPerformanceCounterInstaller
         Catch e As Exception
             Me.Context.LogMessage("Error occurred :" + e.Message)
         End Try
-    End Sub 'New
+    End Sub
     Public Shared Sub Main()
-    End Sub 'Main
-End Class 'MyPerformanceCounterInstaller
+    End Sub
+End Class
 ' </Snippet1>

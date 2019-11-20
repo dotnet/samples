@@ -19,9 +19,9 @@ Public Class SamplesCalendar
       Dim myMax As DateTime = myCal.MaxSupportedDateTime
       Console.WriteLine("MaxSupportedDateTime: {0:D2}/{1:D2}/{2:D4}", myCal.GetMonth(myMax), myCal.GetDayOfMonth(myMax), myCal.GetYear(myMax))
 
-   End Sub 'Main 
+   End Sub
 
-End Class 'SamplesCalendar
+End Class
 
 
 'This code produces the following output.

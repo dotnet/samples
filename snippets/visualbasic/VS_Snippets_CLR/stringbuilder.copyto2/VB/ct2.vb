@@ -25,8 +25,8 @@ Class Sample
          Console.Write("    ")
          Console.WriteLine(dest)
       Next ix
-   End Sub 'Main
-End Class 'Sample
+   End Sub
+End Class
 '
 ' This example produces the following results:
 '

@@ -72,5 +72,5 @@ NotInheritable Public Class CustomTimeSpanMinutesConverter
     End Function 'ConvertFrom
     '</Snippet5>
 
-End Class 'CustomTimeSpanMinutesConverter 
+End Class
 '</Snippet1>

@@ -1787,7 +1787,7 @@ Namespace WF_Snippets
 
             Public Function SerializeToolboxItem(ByVal toolboxItem As ToolboxItem) As Object Implements IToolboxService.SerializeToolboxItem
                 Dim components As IComponent() = toolboxItem.CreateComponents()
-                Dim activities(components.Length) As Activity
+                Dim activities(components.Length - 1) As Activity
                 components.CopyTo(activities, 0)
 
                 Return CompositeActivityDesigner.SerializeActivitiesToDataObject(Me.provider, activities)
@@ -1918,9 +1918,9 @@ Namespace WF_Snippets
                     Return False
                 End Function
 
-            End Class 'End EventPropertyDescriptor
-        End Class ' End EventBindingService
-    End Class ' End Snippets
+            End Class
+        End Class
+    End Class
 End Namespace
 
 

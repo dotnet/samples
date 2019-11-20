@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.ComponentModel
+﻿Imports System.ComponentModel
 Imports System.ComponentModel.Design
 
 Namespace MiscCompModSamples
@@ -7,7 +6,7 @@ Namespace MiscCompModSamples
     Public Class ActiveDesignerEventHandlerExample
 
         Public Sub New()
-        End Sub 'New
+        End Sub
 
         '<Snippet1>
         Public Sub LinkActiveDesignerEvent(ByVal eventService As IDesignerEventService)
@@ -28,5 +27,5 @@ Namespace MiscCompModSamples
         End Sub
         '</Snippet1>
 
-    End Class 'ActiveDesignerEventHandlerExample
+    End Class
 End Namespace 'MiscCompModSamples

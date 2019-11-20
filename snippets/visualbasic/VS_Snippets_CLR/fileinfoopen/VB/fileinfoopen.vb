@@ -25,8 +25,8 @@ Public Class OpenTest
 
         ' Close the file so it can be deleted.
         fs.Close()
-    End Sub 'Main
-End Class 'OpenTest
+    End Sub
+End Class
 'This code produces output similar to the following; 
 'results may vary based on the computer/file structure/etc.:
 '

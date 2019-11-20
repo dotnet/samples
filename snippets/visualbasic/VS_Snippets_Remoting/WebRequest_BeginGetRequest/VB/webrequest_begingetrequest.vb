@@ -6,7 +6,6 @@ Imports System.Net
 Imports System.IO
 Imports System.Text
 Imports System.Threading
-Imports Microsoft.VisualBasic
 
 Public Class RequestState
     ' This class stores the request state of the request.
@@ -14,8 +13,8 @@ Public Class RequestState
     
     Public Sub New()
         request = Nothing
-    End Sub ' New
-End Class ' RequestState
+    End Sub
+End Class
 
 
 Class WebRequest_BeginGetRequeststream
@@ -58,7 +57,7 @@ Class WebRequest_BeginGetRequeststream
             streamRead.Close()
             ' Release the HttpWebResponse Resource.
              myWebResponse.Close()
-    End Sub ' Main
+    End Sub
      
     Private Shared Sub ReadCallback(asynchronousResult As IAsyncResult)
             Dim myRequestState As RequestState = CType(asynchronousResult.AsyncState, RequestState)
@@ -76,6 +75,6 @@ Class WebRequest_BeginGetRequeststream
             streamResponse.Close()
             ' Allow the main thread to resume.
             allDone.Set()
-    End Sub ' ReadCallback 
-End Class ' WebRequest_BeginGetRequeststream 
+    End Sub
+End Class
 ' </Snippet3>

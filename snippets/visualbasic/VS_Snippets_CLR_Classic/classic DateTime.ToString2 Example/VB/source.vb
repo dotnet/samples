@@ -50,6 +50,6 @@ Public Class MainClass
     ' dddd, MMMM dd :Thursday, August 17
     ' M/yy :8/00
     ' dd-MM-yy :17-08-00
-    End Sub 'Main 
-End Class 'MainClass
+    End Sub
+End Class
 ' </Snippet1>

@@ -5,6 +5,7 @@ Imports System.Data.SqlServerCe
 Imports System.Diagnostics
 Imports System.IO
 Imports System.Threading.Tasks.Dataflow
+
 ' </snippet1>
 
 ' Demonstrates how to use batched dataflow blocks to improve

@@ -2,7 +2,6 @@
 ' in Visual Studio 2005 documentation.
 
 ' <Snippet0>
-Imports System
 Imports System.Drawing
 Imports System.ComponentModel
 Imports System.Windows.Forms

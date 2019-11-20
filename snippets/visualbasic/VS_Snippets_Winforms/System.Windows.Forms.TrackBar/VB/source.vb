@@ -1,5 +1,4 @@
 ﻿' <Snippet1>
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 
@@ -12,7 +11,7 @@ Public Class Form1
     <System.STAThread()> _
     Public Shared Sub Main()
         System.Windows.Forms.Application.Run(New Form1)
-    End Sub 'Main
+    End Sub
 
     Public Sub New()
         Me.textBox1 = New System.Windows.Forms.TextBox
@@ -46,7 +45,7 @@ Public Class Form1
         ' The SmallChange property sets how many positions to move
         ' if the keyboard arrows are used to move the slider.
         trackBar1.SmallChange = 2
-    End Sub 'New
+    End Sub
 
     Private Sub trackBar1_Scroll(ByVal sender As Object, _
                     ByVal e As System.EventArgs) Handles trackBar1.Scroll
@@ -55,5 +54,5 @@ Public Class Form1
         textBox1.Text = trackBar1.Value
     End Sub 
 
-End Class 'Form1
+End Class
 '</Snippet1>

@@ -22,7 +22,6 @@
 ' Effect of each property can be seen on 'DataGrid'.
 
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -70,7 +69,7 @@ Namespace DataGridSample
          InitializeComponent()
          ' Setup GridControl data.
          SetUp()
-      End Sub 'New
+      End Sub
       
       
       ' <summary>
@@ -83,7 +82,7 @@ Namespace DataGridSample
                 End If
             End If
             MyBase.Dispose(disposing)
-        End Sub 'Dispose
+        End Sub
 
         ' <summary>
         ' </summary>
@@ -285,14 +284,14 @@ Namespace DataGridSample
             Me.groupBox4.ResumeLayout(False)
             CType(Me.myDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
-        End Sub 'InitializeComponent
+        End Sub
 
         ' <summary>
         ' The main entry point for the application.
         ' </summary>
         <STAThread()> Shared Sub Main()
             Application.Run(New DatGridClass())
-        End Sub 'Main
+        End Sub
 
         Private Sub SetUp()
             ' Create a 'DataSet' with two tables and one relation.
@@ -300,7 +299,7 @@ Namespace DataGridSample
             ' Bind the 'DataGrid' to the 'DataSet'. The data member
             ' specifies that the 'Customers Table' should be displayed.
             myDataGrid.SetDataBinding(myDataSet, "Customers")
-        End Sub 'SetUp
+        End Sub
 
         ' Create a 'DataSet' with two tables and populate it.
         Private Sub MakeDataSet()
@@ -376,7 +375,7 @@ Namespace DataGridSample
                     tOrders.Rows.Add(newRow2)
                 Next j
             Next i
-        End Sub 'MakeDataSet
+        End Sub
 
         Private Sub btnSetSelectionBkColor_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnSeSelectiontBkColor.Click
 ' <Snippet1> 
@@ -393,7 +392,7 @@ Namespace DataGridSample
             ' Set selection background color to selected color.
             myDataGrid.SelectionBackColor = myColorDialog.Color
   ' </Snippet1>
-      End Sub 'btnSetSelectionBkColor_Click
+      End Sub
         Private Sub btnResetSelectionBkColor_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnResetSelectionBkColor.Click
 ' <Snippet2>
             ' String variable used to show message.
@@ -408,7 +407,7 @@ Namespace DataGridSample
             ' Show information about changes in color setting.  
             MessageBox.Show(myString, "Selection background color information")
   ' </Snippet2>    
-      End Sub 'btnResetSelectionBkColor_Click
+      End Sub
 
         Private Sub btnSetSelectionForeColor_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnSetSelectionForeColor.Click
 ' <Snippet3>
@@ -425,7 +424,7 @@ Namespace DataGridSample
             ' Set selection foreground color to selected color.
             myDataGrid.SelectionForeColor = myColorDialog.Color
   ' </Snippet3>        
-      End Sub 'btnSetSelectionForeColor_Click
+      End Sub
       
         Private Sub btnResetSelectionForeColor_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnResetSelectionForeColor.Click
 ' <Snippet4>
@@ -441,7 +440,7 @@ Namespace DataGridSample
             ' Show information about changes in color setting.  
             MessageBox.Show(myString, "Selection foreground color information")
    ' </Snippet4> 
-      End Sub 'btnResetSelectionForeColor_Click
+      End Sub
 
         Private Sub btnSetForeColor_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnSetForeColor.Click
 ' <Snippet5>
@@ -458,7 +457,7 @@ Namespace DataGridSample
             ' Set foreground color to selected color.
             myDataGrid.ForeColor = myColorDialog.Color
   ' </Snippet5> 
-    End Sub 'btnSetForeColor_Click
+    End Sub
 
         Private Sub btnResetForeColor_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnResetForeColor.Click
 ' <Snippet6>
@@ -474,7 +473,7 @@ Namespace DataGridSample
             ' Show information about changes in color setting.  
             MessageBox.Show(myString, "Foreground color information")
   ' </Snippet6>   
-         End Sub 'btnResetForeColor_Click
+         End Sub
 
         Private Sub btnSetBkColor_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnSetBkColor.Click
             ' Creates a common color dialog box.
@@ -489,7 +488,7 @@ Namespace DataGridSample
             myColorDialog.ShowDialog()
             ' Set background color to selected color.
             myDataGrid.BackColor = myColorDialog.Color
-        End Sub 'btnSetBkColor_Click
+        End Sub
 
         Private Sub btnResetBkColor_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnResetBkColor.Click
 ' <Snippet7>
@@ -505,7 +504,7 @@ Namespace DataGridSample
             ' Show information about changes in color setting.  
             MessageBox.Show(myString, "Background color information")
  ' </Snippet7>   
-      End Sub 'btnResetBkColor_Click
+      End Sub
 
         Private Sub btnResetGridLineColor_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnResetGridLineColor.Click
 ' <Snippet8>
@@ -521,7 +520,7 @@ Namespace DataGridSample
             ' Show information about changes in color setting.  
             MessageBox.Show(myString, "Grid line color information")
  ' </Snippet8>      
-      End Sub 'btnResetGridLineColor_Click
+      End Sub
 
         Private Sub btnResetLinkColor_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnResetLinkColor.Click
 ' <Snippet9>
@@ -537,7 +536,7 @@ Namespace DataGridSample
             ' Show information about changes in color setting.  
             MessageBox.Show(myString, "Link line color information")
 ' </Snippet9>
-       End Sub 'btnResetLinkColor_Click
+       End Sub
 
         Private Sub btnResetAlternatingBackColor_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnResetAlternatingBackColor.Click
 ' <Snippet10>
@@ -553,7 +552,7 @@ Namespace DataGridSample
             ' Show information about changes in color setting.  
             MessageBox.Show(myString, "Alternating back color information")
  ' </Snippet10>  
-      End Sub 'btnResetAlternatingBackColor_Click
+      End Sub
 
         Private Sub btnSetGridLineColor_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnSetGridLineColor.Click
             ' Creates a common color dialog box.
@@ -568,7 +567,7 @@ Namespace DataGridSample
             myColorDialog.ShowDialog()
             ' Set grid line color to selected color.
             myDataGrid.GridLineColor = myColorDialog.Color
-        End Sub 'btnSetGridLineColor_Click
+        End Sub
 
         Private Sub btnSetLinkColor_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnSetLinkColor.Click
             ' Creates a common color dialog box.
@@ -583,7 +582,7 @@ Namespace DataGridSample
             myColorDialog.ShowDialog()
             ' Set link color to selected color.
             myDataGrid.LinkColor = myColorDialog.Color
-        End Sub 'btnSetLinkColor_Click
+        End Sub
 
         Private Sub btnSetAlternatingBkColor_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnSetAlternatingBkColor.Click
             ' Creates a common color dialog box.
@@ -598,6 +597,6 @@ Namespace DataGridSample
             myColorDialog.ShowDialog()
             ' Set alternating background color to selected color.
             myDataGrid.AlternatingBackColor = myColorDialog.Color
-        End Sub 'btnSetAlternatingBkColor_Click
-    End Class 'DatGridClass
+        End Sub
+    End Class
 End Namespace 'DataGridSample

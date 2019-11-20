@@ -6,9 +6,8 @@ namespace Aggregate
 {
     public static class AverageSample2
     {
-        //This sample uses Average to get the average length of the words in the array.
-        //
-        //Outputs:
+        // This sample uses Average to get the average length of the words in the array.
+        // Outputs:
         // The average word length is 6.66666666666667 characters.
         public static void Example()
         {
@@ -16,15 +15,14 @@ namespace Aggregate
 
             double averageLength = words.Average(w => w.Length);
 
-            Console.WriteLine("The average word length is {0} characters.", averageLength);
+            Console.WriteLine($"The average word length is {averageLength} characters.");
         }
     }
 
     public static class AverageSample3
     {
-        //This sample uses Average and query syntax to get the average price of each category's products.
-        //
-        //Outputs:
+        // This sample uses Average and query syntax to get the average price of each category's products.
+        // Outputs:
         // The average price for a product in the Beverages category is $37.98.
         // The average price for a product in the Condiments category is $23.06.
         // The average price for a product in the Produce category is $32.37.
@@ -48,9 +46,8 @@ namespace Aggregate
             }
         }
 
-        //This sample uses Average and method syntax to get the average price of each category's products.
-        //
-        //Outputs:
+        // This sample uses Average and method syntax to get the average price of each category's products.
+        // Outputs:
         // The average price for a product in the Beverages category is $37.98.
         // The average price for a product in the Condiments category is $23.06.
         // The average price for a product in the Produce category is $32.37.

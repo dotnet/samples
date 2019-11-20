@@ -9,8 +9,6 @@
 '------------------------------------------------------------------------------
 
 
-Imports Microsoft.VisualBasic
-Imports System
 Namespace My.Resources
 
 

@@ -21,7 +21,7 @@ Public Class MyInstallerClass
       AddHandler Me.Committed, AddressOf MyInstaller_Committed
       ' Attach the 'Committing' event.
       AddHandler Me.Committing, AddressOf MyInstaller_Committing
-   End Sub 'New
+   End Sub
 
    ' Event handler for 'Committing' event.
    Private Sub MyInstaller_Committing(ByVal sender As Object, _
@@ -29,7 +29,7 @@ Public Class MyInstallerClass
       Console.WriteLine("")
       Console.WriteLine("Committing Event occurred.")
       Console.WriteLine("")
-   End Sub 'MyInstaller_Committing
+   End Sub
 
    ' Event handler for 'Committed' event.
    Private Sub MyInstaller_Committed(ByVal sender As Object, _
@@ -37,26 +37,26 @@ Public Class MyInstallerClass
       Console.WriteLine("")
       Console.WriteLine("Committed Event occurred.")
       Console.WriteLine("")
-   End Sub 'MyInstaller_Committed
+   End Sub
 
    ' Override the 'Install' method.
    Public Overrides Sub Install(ByVal savedState As IDictionary)
       MyBase.Install(savedState)
-   End Sub 'Install
+   End Sub
 
    ' Override the 'Commit' method.
    Public Overrides Sub Commit(ByVal savedState As IDictionary)
       MyBase.Commit(savedState)
-   End Sub 'Commit
+   End Sub
 
    ' Override the 'Rollback' method.
    Public Overrides Sub Rollback(ByVal savedState As IDictionary)
       MyBase.Rollback(savedState)
-   End Sub 'Rollback
+   End Sub
    Public Shared Sub Main()
       Console.WriteLine("Usage : installutil.exe Installer.exe ")
-   End Sub 'Main
-End Class 'MyInstallerClass
+   End Sub
+End Class
 ' </Snippet1>
 
 

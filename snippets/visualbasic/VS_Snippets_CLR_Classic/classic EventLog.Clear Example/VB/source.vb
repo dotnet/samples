@@ -12,6 +12,6 @@ Class MySample
         myLog.Log = "myNewLog"
         
         myLog.Clear()
-    End Sub 'Main
-End Class 'MySample
+    End Sub
+End Class
 ' </Snippet1>

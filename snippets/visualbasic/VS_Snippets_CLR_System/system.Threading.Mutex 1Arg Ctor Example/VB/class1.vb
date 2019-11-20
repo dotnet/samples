@@ -25,14 +25,14 @@ Class Test
 
         Console.WriteLine("Creating thread releases the Mutex." & vbCrLf)
         mut.ReleaseMutex()
-    End Sub 'Main
+    End Sub
 
     Private Shared Sub MyThreadProc()
         Dim i As Integer
         For i = 1 To numIterations
             UseResource()
         Next i
-    End Sub 'MyThreadProc
+    End Sub
 
     ' This method represents a resource that must be synchronized
     ' so that only one thread at a time can enter.
@@ -53,8 +53,8 @@ Class Test
 
         ' Release Mutex.
         mut.ReleaseMutex()
-    End Sub 'UseResource
-End Class 'MyMainClass
+    End Sub
+End Class
 ' The example displays output like the following:
 '       Creating thread owns the Mutex.
 '       Creating thread releases the Mutex.

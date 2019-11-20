@@ -1,5 +1,4 @@
 ﻿ '<Snippet1>
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 
@@ -40,11 +39,11 @@ Public Class Form1
         Me.Controls.Add(treeView1)
 
         Me.ResumeLayout(False)
-    End Sub 'New
+    End Sub
 
     Shared Sub Main()
         Application.Run(New Form1)
-    End Sub 'Main
+    End Sub
 
     '<Snippet2>
     Private Sub treeView1_ItemDrag(ByVal sender As Object, ByVal e As ItemDragEventArgs)
@@ -57,14 +56,14 @@ Public Class Form1
         ElseIf e.Button = MouseButtons.Right Then
             DoDragDrop(e.Item, DragDropEffects.Copy)
         End If
-    End Sub 'treeView1_ItemDrag
+    End Sub
     '</Snippet2>
 
     ' Set the target drop effect to the effect 
     ' specified in the ItemDrag event handler.
     Private Sub treeView1_DragEnter(ByVal sender As Object, ByVal e As DragEventArgs)
         e.Effect = e.AllowedEffect
-    End Sub 'treeView1_DragEnter
+    End Sub
 
     ' Select the node under the mouse pointer to indicate the 
     ' expected drop location.
@@ -74,7 +73,7 @@ Public Class Form1
 
         ' Select the node at the mouse position.
         treeView1.SelectedNode = treeView1.GetNodeAt(targetPoint)
-    End Sub 'treeView1_DragOver
+    End Sub
 
     Private Sub treeView1_DragDrop(ByVal sender As Object, ByVal e As DragEventArgs)
 
@@ -107,7 +106,7 @@ Public Class Form1
             ' to show the dropped node.
             targetNode.Expand()
         End If
-    End Sub 'treeView1_DragDrop
+    End Sub
 
     ' Determine whether one node is a parent 
     ' or ancestor of a second node.
@@ -127,5 +126,5 @@ Public Class Form1
         Return ContainsNode(node1, node2.Parent)
     End Function 'ContainsNode
 
-End Class 'Form1 
+End Class
 '</Snippet1>

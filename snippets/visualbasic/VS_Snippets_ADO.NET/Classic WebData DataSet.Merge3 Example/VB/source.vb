@@ -2,7 +2,6 @@
 Imports System.Data
 Imports System.Data.Common
 Imports System.Windows.Forms
-Imports Microsoft.VisualBasic
 
 Public Class Form1
     Inherits Form
@@ -26,7 +25,7 @@ Private Sub DemonstrateMergeTable()
     table.Columns.Add(c2)
 
     ' DataColumn array to set primary key.
-    Dim keyCol(1) As DataColumn
+    Dim keyCol(0) As DataColumn
 
     ' Set primary key column.
     keyCol(0) = c1
@@ -82,7 +81,7 @@ Private Sub DemonstrateMergeTable()
     sender As Object, e As DataRowChangeEventArgs)
      Console.WriteLine("Row Changed " & e.Action.ToString() _
         & ControlChars.Tab & e.Row.ItemArray(0).ToString())
- End Sub 'Row_Changed
+ End Sub
  
  Private Sub PrintValues(dataSet As DataSet, label As String)
      Console.WriteLine(ControlChars.Cr & label)

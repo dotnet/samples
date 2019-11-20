@@ -9,7 +9,6 @@ Imports System.Security.Permissions
 Imports System.IO
 Imports System.Security.Policy
 Imports System.Collections
-Imports Microsoft.VisualBasic
 
 <assembly: System.Reflection.AssemblyKeyFile("Key.snk")>
 
@@ -26,7 +25,7 @@ Namespace MyPermission
 
         Public Sub New(ByVal name As String)
             m_name = name
-        End Sub 'New
+        End Sub
 
 
         Public Sub New(ByVal state As PermissionState)
@@ -37,7 +36,7 @@ Namespace MyPermission
             Else
                 Throw New ArgumentException("Invalid permission state.")
             End If
-        End Sub 'New 
+        End Sub
 
         Public Property Name() As String
             Get
@@ -190,7 +189,7 @@ Namespace MyPermission
 
             Dim elName As String = e.Attribute("Name")
             m_name = IIf(elName Is Nothing, Nothing, elName)
-        End Sub 'FromXml
+        End Sub
 
         '</Snippet10>
         '<Snippet11>
@@ -212,7 +211,7 @@ Namespace MyPermission
             End If
             Return esd
         End Function 'ToXml
-    End Class ' NameIdPermission 
+    End Class
     '</Snippet11>
 End Namespace
 '</Snippet1>

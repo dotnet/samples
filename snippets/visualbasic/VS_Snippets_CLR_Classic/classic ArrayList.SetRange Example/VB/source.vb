@@ -36,7 +36,7 @@ Public Class SamplesArrayList
         Console.WriteLine("Index 0 through 4 now contains:")
         PrintValues(mySubAL, vbTab)
 
-    End Sub 'Main
+    End Sub
 
     Public Shared Sub PrintValues(myList As IEnumerable, mySeparator As Char)
         Dim obj As [Object]
@@ -44,9 +44,9 @@ Public Class SamplesArrayList
             Console.Write("{0}{1}", mySeparator, obj)
         Next obj
         Console.WriteLine()
-    End Sub 'PrintValues
+    End Sub
 
-End Class 'SamplesArrayList 
+End Class
 
 
 ' This code produces the following output.

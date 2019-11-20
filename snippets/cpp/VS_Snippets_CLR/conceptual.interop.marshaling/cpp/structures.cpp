@@ -4,7 +4,7 @@ using namespace System::Runtime::InteropServices;
 
 //<snippet23>
 // Declares a managed structure for each unmanaged structure.
-[StructLayout(LayoutKind::Sequential, CharSet=CharSet::Ansi)]
+[StructLayout(LayoutKind::Sequential, CharSet = CharSet::Ansi)]
 public value struct MyPerson
 {
 public:
@@ -33,11 +33,11 @@ public value struct MyArrayStruct
 {
 public:
     bool flag;
-    [MarshalAs(UnmanagedType::ByValArray, SizeConst=3)]
+    [MarshalAs(UnmanagedType::ByValArray, SizeConst = 3)]
     array<int>^ vals;
 };
 
-public ref class LibWrap
+private ref class NativeMethods
 {
 public:
     // Declares a managed prototype for unmanaged function.
@@ -75,11 +75,11 @@ public:
         Console::WriteLine("first = {0}, last = {1}, age = {2}",
             personName.first, personName.last, personAll.age);
 
-        int res = LibWrap::TestStructInStruct(personAll);
+        int res = NativeMethods::TestStructInStruct(personAll);
 
         MyPerson personRes =
             (MyPerson)Marshal::PtrToStructure(personAll.person,
-            MyPerson::typeid);
+                MyPerson::typeid);
 
         Marshal::FreeCoTaskMem(buffer);
 
@@ -92,7 +92,7 @@ public:
         person3.person.first = "John";
         person3.person.last = "Evans";
         person3.age = 27;
-        LibWrap::TestStructInStruct3(person3);
+        NativeMethods::TestStructInStruct3(person3);
 
         // Structure with an embedded array.
         MyArrayStruct myStruct;// = new MyArrayStruct();
@@ -108,7 +108,7 @@ public:
         Console::WriteLine("{0} {1} {2}", myStruct.vals[0],
             myStruct.vals[1], myStruct.vals[2]);
 
-        LibWrap::TestArrayInStruct(myStruct);
+        NativeMethods::TestArrayInStruct(myStruct);
         Console::WriteLine("\nStructure with array after call:");
         Console::WriteLine(myStruct.flag);
         Console::WriteLine("{0} {1} {2}", myStruct.vals[0],

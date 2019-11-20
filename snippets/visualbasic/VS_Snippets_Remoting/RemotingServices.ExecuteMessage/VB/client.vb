@@ -18,7 +18,7 @@ Public Class ClientProcess
         Console.WriteLine("Connected to SampleService")
         Dim returnValue As Boolean = service.UpdateServer(3, 3.14, "Pi")
     
-    End Sub 'Main
-End Class 'ClientProcess
+    End Sub
+End Class
 
 

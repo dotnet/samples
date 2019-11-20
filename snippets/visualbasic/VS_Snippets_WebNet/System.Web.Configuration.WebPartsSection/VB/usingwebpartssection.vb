@@ -131,7 +131,7 @@ Next
         Console.WriteLine("command line for errors.")
       End Try
     End Sub
-  End Class ' UsingWebPartsSection.
+  End Class
 End Namespace ' Samples.Aspnet.SystemWebConfiguration
 
 ' </Snippet1>

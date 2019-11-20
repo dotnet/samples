@@ -1,7 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Reflection
 Imports System.Security
-Imports Microsoft.VisualBasic
 
 ' Compile this sample using the following command line:
 ' vbc type_getevent.vb /r:"System.Windows.Forms.dll" /r:"System.dll"
@@ -26,6 +25,6 @@ Class MyEventExample
         Catch e As Exception
             Console.WriteLine("The following exception was raised : {0}", e.Message)
         End Try
-    End Sub 'Main
-End Class 'MyEventExample
+    End Sub
+End Class
 ' </Snippet1>

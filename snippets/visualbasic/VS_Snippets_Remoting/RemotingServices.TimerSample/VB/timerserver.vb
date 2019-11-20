@@ -26,7 +26,7 @@ Public Class TimerServer
         Console.WriteLine("Press enter to end the server process.")
         Console.ReadLine()
     
-    End Sub 'Main
-End Class 'TimerServer
+    End Sub
+End Class
 
 ' </Snippet2>

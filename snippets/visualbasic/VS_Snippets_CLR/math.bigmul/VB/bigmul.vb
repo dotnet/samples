@@ -9,8 +9,8 @@ Class Sample
       longResult = Math.BigMul(int1, int2)
       Console.WriteLine("Calculate the product of two Int32 values:")
       Console.WriteLine("{0} * {1} = {2}", int1, int2, longResult)
-   End Sub 'Main
-End Class 'Sample
+   End Sub
+End Class
 '
 'This example produces the following results:
 'Calculate the product of two Int32 values:

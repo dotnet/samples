@@ -14,7 +14,7 @@ Imports System.Net
 Imports System.Security
 Imports System.Security.Permissions
 Imports System.Collections
-Imports Microsoft.VisualBasic
+
  _
 
 Class CopyWebPermission
@@ -29,7 +29,7 @@ Class CopyWebPermission
       Catch e As Exception
          Console.WriteLine(("Exception : " + e.Message))
       End Try
-   End Sub 'Main
+   End Sub
    
    
    Public Sub CreateCopy()
@@ -62,7 +62,7 @@ Class CopyWebPermission
       Console.WriteLine(ControlChars.Cr + "Copied Instance Attributes and Values are :" + ControlChars.Cr)
       ' Display the Attributes,Values and Children of the XML encoded copied instance.
       PrintKeysAndValues(myWebPermission2.ToXml().Attributes, myWebPermission2.ToXml().Children)
-   End Sub 'CreateCopy
+   End Sub
    
    
    Private Sub PrintKeysAndValues(myHashtable As Hashtable, myList As IEnumerable)
@@ -80,5 +80,5 @@ Class CopyWebPermission
       While myEnumerator1.MoveNext()
          Console.Write(ControlChars.Tab + "{0}", myEnumerator1.Current)
       End While
-   End Sub 'PrintKeysAndValues
-End Class 'CopyWebPermission
+   End Sub
+End Class

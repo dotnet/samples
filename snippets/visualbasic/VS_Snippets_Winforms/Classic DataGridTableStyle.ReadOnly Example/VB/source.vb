@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
 Imports System.ComponentModel
@@ -15,7 +14,7 @@ Public Class Form1
         For Each tableStyle In  dataGrid1.TableStyles
             Console.WriteLine(tableStyle.ReadOnly)
         Next tableStyle
-    End Sub 'PrintReadOnlyValues
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

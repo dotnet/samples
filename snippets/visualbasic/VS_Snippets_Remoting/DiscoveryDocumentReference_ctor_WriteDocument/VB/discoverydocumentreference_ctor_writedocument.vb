@@ -12,7 +12,6 @@ Imports System.Xml
 Imports System.Web.Services.Discovery
 Imports System.IO
 Imports System.Collections
-Imports MicroSoft.VisualBasic
 
 Public Class DiscoveryDocumentReference_ctor_WriteDocument
 
@@ -52,6 +51,6 @@ Public Class DiscoveryDocumentReference_ctor_WriteDocument
         Catch e As Exception
             Console.WriteLine("Exception: {0}", e.Message.ToString())
         End Try
-    End Sub 'Main
-End Class 'DiscoveryDocumentReference_ctor_WriteDocument
+    End Sub
+End Class
 ' </Snippet1>

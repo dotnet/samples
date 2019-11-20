@@ -5,7 +5,6 @@
 'and content type of the entity body in the response onto the console 
 
 Imports System.Net
-Imports Microsoft.VisualBasic
 Imports System.Environment
 
 
@@ -27,7 +26,7 @@ Class FileWebResponseSnippet
         Console.WriteLine("Press any key to continue...")
         Console.ReadLine()
         Return
-    End Sub 'Main
+    End Sub
     
 ' <Snippet1>
 ' <Snippet2>
@@ -51,5 +50,5 @@ Class FileWebResponseSnippet
         End Try
 ' </Snippet1>
 ' </Snippet2>
-    End Sub 'GetPage 
-End Class 'FileWebResponseSnippet 
+    End Sub
+End Class

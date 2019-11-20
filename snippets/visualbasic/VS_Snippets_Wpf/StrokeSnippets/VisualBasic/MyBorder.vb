@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Collections
 Imports System.IO
 Imports System.Runtime.InteropServices
@@ -108,7 +107,7 @@ Namespace StrokeSnippets_VB
 
             StrokeConstructorSample()
 
-        End Sub 'New
+        End Sub
 
 
         Shared Sub New()
@@ -116,7 +115,7 @@ Namespace StrokeSnippets_VB
             Dim owner As Type = GetType(MyBorder)
             ClipToBoundsProperty.OverrideMetadata(owner, New FrameworkPropertyMetadata(True))
 
-        End Sub 'New
+        End Sub
 
 
 
@@ -152,7 +151,7 @@ Namespace StrokeSnippets_VB
 
             e.Handled = True
 
-        End Sub 'OnStylusDown
+        End Sub
 
 
         ' Collect the StylusPackets as the stylus moves.
@@ -166,7 +165,7 @@ Namespace StrokeSnippets_VB
 
             e.Handled = True
 
-        End Sub 'OnStylusMove
+        End Sub
 
 
         ' Unsubscribe from the StrokeHitChanged event when the
@@ -250,7 +249,7 @@ Namespace StrokeSnippets_VB
 
             e.Handled = True
 
-        End Sub 'OnStylusUp
+        End Sub
 
 
         '<Snippet27>
@@ -258,7 +257,7 @@ Namespace StrokeSnippets_VB
 
             MessageBox.Show("stylus points changed")
 
-        End Sub 'StylusPoints_Changed
+        End Sub
 
         '</Snippet27>
         '<Snippet28>
@@ -266,7 +265,7 @@ Namespace StrokeSnippets_VB
 
             MessageBox.Show("stylus points changed")
 
-        End Sub 'myNewStroke_StylusPointsChanged
+        End Sub
 
         '</Snippet28>
         '<Snippet29>
@@ -274,28 +273,28 @@ Namespace StrokeSnippets_VB
 
             MessageBox.Show("stylus points replaced")
 
-        End Sub 'myNewStroke_StylusPointsReplaced
+        End Sub
 
         '</Snippet29>
         Sub CompareStrokePoints(ByVal aStroke As Stroke)
 
-        End Sub 'CompareStrokePoints
+        End Sub
 
 
 
         Private Sub myNewStroke_PropertyDataChanged(ByVal sender As Object, ByVal e As PropertyDataChangedEventArgs)
 
-        End Sub 'myNewStroke_PropertyDataChanged
+        End Sub
 
 
         Private Sub myNewStroke_DrawingAttributesReplaced(ByVal sender As Object, ByVal e As DrawingAttributesReplacedEventArgs)
 
-        End Sub 'myNewStroke_DrawingAttributesReplaced
+        End Sub
 
 
         Private Sub myNewStroke_DrawingAttributesChanged(ByVal sender As Object, ByVal e As PropertyDataChangedEventArgs)
 
-        End Sub 'myNewStroke_DrawingAttributesChanged
+        End Sub
 
 
         ' When the stylus clips a stroke,
@@ -435,7 +434,7 @@ Namespace StrokeSnippets_VB
                 myInkPresenter.Strokes.Remove(e.HitStroke)
             End If
             ' </Snippet10> 
-        End Sub 'myIHT_StrokeIntersectionChanged
+        End Sub
 
 
         ' When the stylus encircles a stroke,
@@ -451,7 +450,7 @@ Namespace StrokeSnippets_VB
                 stroke.Selected = False
             Next stroke
             'stroke.DrawingAttributes.Color = Colors.Green;
-        End Sub 'myIHT_StrokeHitChanged
+        End Sub
 
 
         ' Remove the encircled stroke.
@@ -474,7 +473,7 @@ Namespace StrokeSnippets_VB
                 s.Mode = mode
             Next s
 
-        End Sub 'ChangeDrawingMode
+        End Sub
 
 
         Private Sub StrokeConstructorSample()
@@ -498,7 +497,7 @@ Namespace StrokeSnippets_VB
             myInkPresenter.Strokes.Add(NewStroke)
             ' </Snippet2>
 
-        End Sub 'StrokeConstructorSample
+        End Sub
 
         ' <Snippet5>
 
@@ -524,6 +523,6 @@ Namespace StrokeSnippets_VB
         ' </Snippet22>
 
         ' </Snippet5>
-    End Class 'MyBorder 
+    End Class
 
 End Namespace

@@ -21,8 +21,8 @@ Public NotInheritable Class MyControl
    Protected Overrides Sub Render(w As HtmlTextWriter)
       w.Write("<h2>Implementation Of Control</h2>")
       w.Write(("<h3><i><font color=green>Reference : " & CType(Controls(0), LiteralControl).Text + "</font></i></h3>"))
-   End Sub 'Render
-End Class 'MyControl
+   End Sub
+End Class
 
 Public Class MyPage
    Inherits Page
@@ -37,15 +37,15 @@ Public Class MyPage
    ' event handler for this version of the page.
    Public Sub New()
       AddHandler Load, AddressOf Page_Load
-   End Sub 'New
+   End Sub
    
 ' </snippet2>
    Private Sub Page_Load(sender As Object, e As System.EventArgs)
       Page.Controls.Add(ctlOne)
       ' Add a LiteralControl to ctlOne.
       ctlOne.Controls.Add(New LiteralControl("<h4> MSDN Library <h4>"))
-   End Sub 'Page_Load
-End Class 'MyPage
+   End Sub
+End Class
 
 End Namespace
 ' </Snippet1>

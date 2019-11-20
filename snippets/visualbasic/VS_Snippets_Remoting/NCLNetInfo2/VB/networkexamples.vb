@@ -18,7 +18,7 @@ Public Class NetworkingExample
             Console.WriteLine("{0}", t.State)
         Next t
     
-    End Sub 'GetTcpConnections
+    End Sub
     
     '</Snippet1>
     '<Snippet2>
@@ -37,7 +37,7 @@ Public Class NetworkingExample
         Next t 
         Console.WriteLine("There are {0} established TCP connections.", establishedConnections)
     
-    End Sub 'CountTcpConnections
+    End Sub
     
     '</Snippet2>
     '<Snippet3>
@@ -50,7 +50,7 @@ Public Class NetworkingExample
             Console.WriteLine(e.ToString())
         Next e
     
-    End Sub 'DisplayActiveUdpListeners
+    End Sub
     
     '</Snippet3>
     '<Snippet4>
@@ -73,7 +73,7 @@ Public Class NetworkingExample
             Console.WriteLine("  Interface type .......................... : {0}", adapter.NetworkInterfaceType)
         Next adapter
     
-    End Sub 'ShowNetworkInterfaces
+    End Sub
     
     '</Snippet4>
     '<Snippet5>
@@ -85,7 +85,7 @@ Public Class NetworkingExample
         Console.WriteLine("  Maximum Transmission Timeout............. : {0}", tcpstat.MaximumTransmissionTimeout)
         Console.WriteLine("  Maximum connections ............. : {0}", tcpstat.MaximumConnections)
     
-    End Sub 'ShowTcpTimeouts
+    End Sub
     
     '</Snippet5>
     '<Snippet6>
@@ -102,7 +102,7 @@ Public Class NetworkingExample
         Console.WriteLine("      Reset ............................... : {0}", tcpstat.ResetConnections)
         Console.WriteLine("      Errors .............................. : {0}", tcpstat.ErrorsReceived)
     
-    End Sub 'ShowTcpConnectionStatistics
+    End Sub
     
     '</Snippet6>
     '<Snippet7>
@@ -116,7 +116,7 @@ Public Class NetworkingExample
         Console.WriteLine("      Retransmitted ....................... : {0}", tcpstat.SegmentsResent)
         Console.WriteLine("      Resent with reset ................... : {0}", tcpstat.ResetsSent)
     
-    End Sub 'ShowTcpSegmentData
+    End Sub
     
     '</Snippet7>
     '<Snippet8>     
@@ -132,7 +132,7 @@ Public Class NetworkingExample
             Console.WriteLine("     Bytes received ........................: {0}", stats.BytesReceived)
         Next adapter
     
-    End Sub 'ShowInterfaceByteCounts
+    End Sub
     
     '</Snippet8>
     '<Snippet9>     
@@ -147,7 +147,7 @@ Public Class NetworkingExample
             Console.WriteLine("     Unicast Packets Received ..............: {0}", stats.UnicastPacketsReceived)
         Next adapter
     
-    End Sub 'ShowUnicastCounts
+    End Sub
     
     '</Snippet9>
     '<Snippet10>     
@@ -163,7 +163,7 @@ Public Class NetworkingExample
             Console.WriteLine("     Non Unicast Packets Received ..........: {0}", stats.NonUnicastPacketsReceived)
         Next adapter
     
-    End Sub 'ShowNonUnicastCounts
+    End Sub
     
     '</Snippet10>
     '<Snippet11>     
@@ -178,7 +178,7 @@ Public Class NetworkingExample
             Console.WriteLine("     Outgoing Packets Discarded ............: {0}", stats.OutgoingPacketsDiscarded)
         Next adapter
     
-    End Sub 'ShowPacketDiscards
+    End Sub
     
     '</Snippet11>
     '<Snippet12>     
@@ -194,7 +194,7 @@ Public Class NetworkingExample
             Console.WriteLine("     Incoming Unknown Protocol Errors ......: {0}", stats.IncomingUnknownProtocolPackets)
         Next adapter
     
-    End Sub 'ShowPacketErrors
+    End Sub
     
     '</Snippet12>
     '<Snippet13>     
@@ -209,7 +209,7 @@ Public Class NetworkingExample
             Console.WriteLine("     Output queue length....................: {0}", stats.OutputQueueLength)
         Next adapter
     
-    End Sub 'ShowInterfaceSpeedAndQueue
+    End Sub
     
     '</Snippet13>
     '<Snippet14>
@@ -222,7 +222,7 @@ Public Class NetworkingExample
         Console.WriteLine("  Routes .................................. : {0}", ipstat.NumberOfRoutes)
         Console.WriteLine("  Default TTL ............................. : {0}", ipstat.DefaultTtl)
     
-    End Sub 'ShowIPStatistics
+    End Sub
     
     '</Snippet14>
     '<Snippet15>
@@ -235,7 +235,7 @@ Public Class NetworkingExample
         Console.WriteLine("      Delivered ........................... : {0}", ipstat.ReceivedPacketsDelivered)
         Console.WriteLine("      Discarded ........................... : {0}", ipstat.ReceivedPacketsDiscarded)
     
-    End Sub 'ShowInboundIPStatistics
+    End Sub
     
     '</Snippet15>
     '<Snippet16>
@@ -247,7 +247,7 @@ Public Class NetworkingExample
         Console.WriteLine("      Address Errors ...................... : {0}", ipstat.ReceivedPacketsWithAddressErrors)
         Console.WriteLine("      Unknown Protocol Errors ............. : {0}", ipstat.ReceivedPacketsWithUnknownProtocol)
     
-    End Sub 'ShowInboundIPErrors
+    End Sub
     
     '</Snippet16>
     '<Snippet17>
@@ -260,7 +260,7 @@ Public Class NetworkingExample
         Console.WriteLine("      No Routing Discards ................. : {0}", ipstat.OutputPacketsWithNoRoute)
         Console.WriteLine("      Routing Entry Discards .............. : {0}", ipstat.OutputPacketRoutingDiscards)
     
-    End Sub 'ShowOutboundIPStatistics
+    End Sub
     
     '</Snippet17>
     '<Snippet18>
@@ -274,7 +274,7 @@ Public Class NetworkingExample
         Console.WriteLine("      Packets Fragmented .................. : {0}", ipstat.PacketsFragmented)
         Console.WriteLine("      Fragment Failures ................... : {0}", ipstat.PacketFragmentFailures)
     
-    End Sub 'ShowFragmentationStatistics
+    End Sub
     
     '</Snippet18>
     '<Snippet20>
@@ -283,7 +283,7 @@ Public Class NetworkingExample
         Dim statistics As IcmpV4Statistics = properties.GetIcmpV4Statistics()
         Console.WriteLine("  Messages ............................ Sent: {0,-10}   Received: {1,-10}", statistics.MessagesSent, statistics.MessagesReceived)
     
-    End Sub 'ShowIcmpV4MessageData
+    End Sub
     
     '</Snippet20>
     '<Snippet21>
@@ -293,7 +293,7 @@ Public Class NetworkingExample
         Console.WriteLine("  Echo Requests ....................... Sent: {0,-10}   Received: {1,-10}", statistics.EchoRequestsSent, statistics.EchoRequestsReceived)
         Console.WriteLine("  Echo Replies ........................ Sent: {0,-10}   Received: {1,-10}", statistics.EchoRepliesSent, statistics.EchoRepliesReceived)
     
-    End Sub 'ShowIcmpV4EchoData
+    End Sub
     
     '</Snippet21>      
     '<Snippet22>
@@ -302,7 +302,7 @@ Public Class NetworkingExample
         Dim statistics As IcmpV4Statistics = properties.GetIcmpV4Statistics()
         Console.WriteLine("  Errors .............................. Sent: {0,-10}   Received: {1,-10}", statistics.ErrorsSent, statistics.ErrorsReceived)
     
-    End Sub 'ShowIcmpV4ErrorData
+    End Sub
     
     '</Snippet22>     
     '<Snippet23>
@@ -311,7 +311,7 @@ Public Class NetworkingExample
         Dim statistics As IcmpV4Statistics = properties.GetIcmpV4Statistics()
         Console.WriteLine("  Destination Unreachables ............ Sent: {0,-10}   Received: {1,-10}", statistics.DestinationUnreachableMessagesSent, statistics.DestinationUnreachableMessagesReceived)
     
-    End Sub 'ShowIcmpV4UnreachableData
+    End Sub
     
     '</Snippet23>     
     '<Snippet24>
@@ -320,7 +320,7 @@ Public Class NetworkingExample
         Dim statistics As IcmpV4Statistics = properties.GetIcmpV4Statistics()
         Console.WriteLine("  Source Quenches ..................... Sent: {0,-10}   Received: {1,-10}", statistics.SourceQuenchesSent, statistics.SourceQuenchesReceived)
     
-    End Sub 'ShowSourceQuenchData
+    End Sub
     
     '</Snippet24>  
     '<Snippet25>
@@ -329,7 +329,7 @@ Public Class NetworkingExample
         Dim statistics As IcmpV4Statistics = properties.GetIcmpV4Statistics()
         Console.WriteLine("  Redirects ........................... Sent: {0,-10}   Received: {1,-10}", statistics.RedirectsSent, statistics.RedirectsReceived)
     
-    End Sub 'ShowRedirectsData
+    End Sub
     
     '</Snippet25>  
     '<Snippet26>
@@ -338,7 +338,7 @@ Public Class NetworkingExample
         Dim statistics As IcmpV4Statistics = properties.GetIcmpV4Statistics()
         Console.WriteLine("  TimeExceeded ........................ Sent: {0,-10}   Received: {1,-10}", statistics.TimeExceededMessagesSent, statistics.TimeExceededMessagesReceived)
     
-    End Sub 'ShowTimeExceededData
+    End Sub
     
     '</Snippet26>  
     '<Snippet27>
@@ -347,7 +347,7 @@ Public Class NetworkingExample
         Dim statistics As IcmpV4Statistics = properties.GetIcmpV4Statistics()
         Console.WriteLine("  Parameter Problems .................. Sent: {0,-10}   Received: {1,-10}", statistics.ParameterProblemsSent, statistics.ParameterProblemsReceived)
     
-    End Sub 'ShowParameterData
+    End Sub
     
     
     '</Snippet27>
@@ -358,7 +358,7 @@ Public Class NetworkingExample
         Console.WriteLine("  Timestamp Requests .................. Sent: {0,-10}   Received: {1,-10}", statistics.TimestampRequestsSent, statistics.TimestampRequestsReceived)
         Console.WriteLine("  Timestamp Replies ................... Sent: {0,-10}   Received: {1,-10}", statistics.TimestampRepliesSent, statistics.TimestampRepliesReceived)
     
-    End Sub 'ShowTimestampData
+    End Sub
     
     
     '</Snippet28>  
@@ -369,7 +369,7 @@ Public Class NetworkingExample
         Console.WriteLine("  Address Mask Requests ............... Sent: {0,-10}   Received: {1,-10}", statistics.AddressMaskRequestsSent, statistics.AddressMaskRequestsReceived)
         Console.WriteLine("  Address Mask Replies ................ Sent: {0,-10}   Received: {1,-10}", statistics.AddressMaskRepliesSent, statistics.AddressMaskRepliesReceived)
     
-    End Sub 'ShowAddressMaskData
+    End Sub
     
     
     '</Snippet29>  
@@ -381,7 +381,7 @@ Public Class NetworkingExample
         Console.WriteLine("  Echo Requests ....................... Sent: {0,-10}   Received: {1,-10}", statistics.EchoRequestsSent, statistics.EchoRequestsReceived)
         Console.WriteLine("  Echo Replies ........................ Sent: {0,-10}   Received: {1,-10}", statistics.EchoRepliesSent, statistics.EchoRepliesReceived)
     
-    End Sub 'ShowIcmpV6EchoData
+    End Sub
     
     
     '</Snippet30>      
@@ -391,7 +391,7 @@ Public Class NetworkingExample
         Dim statistics As IcmpV6Statistics = properties.GetIcmpV6Statistics()
         Console.WriteLine("  Errors .............................. Sent: {0,-10}   Received: {1,-10}", statistics.ErrorsSent, statistics.ErrorsReceived)
     
-    End Sub 'ShowIcmpV6ErrorData
+    End Sub
     
     
     '</Snippet31>     
@@ -401,7 +401,7 @@ Public Class NetworkingExample
         Dim statistics As IcmpV6Statistics = properties.GetIcmpV6Statistics()
         Console.WriteLine("  Destination Unreachables ............ Sent: {0,-10}   Received: {1,-10}", statistics.DestinationUnreachableMessagesSent, statistics.DestinationUnreachableMessagesReceived)
     
-    End Sub 'ShowIcmpV6UnreachableData
+    End Sub
     
     
     '</Snippet32>     
@@ -411,7 +411,7 @@ Public Class NetworkingExample
         Dim statistics As IcmpV6Statistics = properties.GetIcmpV6Statistics()
         Console.WriteLine("  Messages ............................ Sent: {0,-10}   Received: {1,-10}", statistics.MessagesSent, statistics.MessagesReceived)
     
-    End Sub 'ShowIcmpV6MessageData
+    End Sub
     
     
     '</Snippet33>
@@ -424,7 +424,7 @@ Public Class NetworkingExample
         Console.WriteLine("  Reductions ........................... Sent: {0,-10}   Received: {1,-10}", statistics.MembershipReductionsSent, statistics.MembershipReductionsReceived)
         Console.WriteLine("  Reports .............................. Sent: {0,-10}   Received: {1,-10}", statistics.MembershipReportsSent, statistics.MembershipReportsReceived)
     
-    End Sub 'ShowIcmpV6MembershipData
+    End Sub
     
     
     '</Snippet34>  
@@ -436,7 +436,7 @@ Public Class NetworkingExample
         Console.WriteLine("  Advertisements ...................... Sent: {0,-10}   Received: {1,-10}", statistics.NeighborAdvertisementsSent, statistics.NeighborAdvertisementsReceived)
         Console.WriteLine("  Solicits ............................ Sent: {0,-10}   Received: {1,-10}", statistics.NeighborSolicitsSent, statistics.NeighborSolicitsReceived)
     
-    End Sub 'ShowIcmpV6NeighborData
+    End Sub
     
     '</Snippet35>
     '<Snippet36>
@@ -445,7 +445,7 @@ Public Class NetworkingExample
         Dim statistics As IcmpV6Statistics = properties.GetIcmpV6Statistics()
         Console.WriteLine(" Too Big Packet ........................ Sent: {0,-10}   Received: {1,-10}", statistics.PacketTooBigMessagesSent, statistics.PacketTooBigMessagesReceived)
     
-    End Sub 'ShowIcmpV6BigPacketData
+    End Sub
     
     
     '</Snippet36>     
@@ -456,7 +456,7 @@ Public Class NetworkingExample
         Dim statistics As IcmpV6Statistics = properties.GetIcmpV6Statistics()
         Console.WriteLine("  Redirects ........................... Sent: {0,-10}   Received: {1,-10}", statistics.RedirectsSent, statistics.RedirectsReceived)
     
-    End Sub 'ShowIcmpV6RedirectsData
+    End Sub
     
     
     '</Snippet37>  
@@ -466,7 +466,7 @@ Public Class NetworkingExample
         Dim statistics As IcmpV6Statistics = properties.GetIcmpV6Statistics()
         Console.WriteLine("  TimeExceeded ........................ Sent: {0,-10}   Received: {1,-10}", statistics.TimeExceededMessagesSent, statistics.TimeExceededMessagesReceived)
     
-    End Sub 'ShowIcmpV6TimeExceededData
+    End Sub
     
     
     '</Snippet38>  
@@ -476,7 +476,7 @@ Public Class NetworkingExample
         Dim statistics As IcmpV6Statistics = properties.GetIcmpV6Statistics()
         Console.WriteLine("  Parameter Problems .................. Sent: {0,-10}   Received: {1,-10}", statistics.ParameterProblemsSent, statistics.ParameterProblemsReceived)
     
-    End Sub 'ShowIcmpV6ParameterData
+    End Sub
     
     
     '</Snippet39>
@@ -488,7 +488,7 @@ Public Class NetworkingExample
         Console.WriteLine("  Advertisements ....................... Sent: {0,-10}   Received: {1,-10}", statistics.RouterAdvertisementsSent, statistics.RouterAdvertisementsReceived)
         Console.WriteLine("  Solicits ............................. Sent: {0,-10}   Received: {1,-10}", statistics.RouterSolicitsSent, statistics.RouterSolicitsReceived)
     
-    End Sub 'ShowIcmpV6RouterData
+    End Sub
     
     
     '</Snippet40> 
@@ -505,7 +505,7 @@ Public Class NetworkingExample
             Console.WriteLine("  Dynamically configured DNS .............. : {0}", properties.IsDynamicDnsEnabled)
         Next adapter
     
-    End Sub 'DisplayDnsConfiguration
+    End Sub
     
     '</Snippet41> 
     '<Snippet42>
@@ -525,7 +525,7 @@ Public Class NetworkingExample
             End If
         Next adapter
     
-    End Sub 'DisplayDnsAddresses
+    End Sub
     
     '</Snippet42> 
     '<Snippet43>
@@ -555,7 +555,7 @@ Public Class NetworkingExample
             Console.WriteLine("  No anycast addresses were found.")
             Console.WriteLine()
         End if
-    End Sub 'DisplayAnycastAddresses
+    End Sub
     
     '</Snippet43> 
     '<Snippet44>
@@ -586,7 +586,7 @@ Public Class NetworkingExample
             Console.WriteLine()
         End if
     
-    End Sub 'DisplayMulticastAddresses
+    End Sub
     
     '</Snippet44> 
     '<Snippet45>
@@ -628,7 +628,7 @@ Public Class NetworkingExample
             End If
         Next adapter
     
-    End Sub 'DisplayUnicastAddresses
+    End Sub
     
     '</Snippet45> 
     
@@ -651,7 +651,7 @@ Public Class NetworkingExample
             End If
         Next adapter
     
-    End Sub 'DisplayDhcpServerAddresses
+    End Sub
     
     '</Snippet46> 
     '<Snippet47>
@@ -672,7 +672,7 @@ Public Class NetworkingExample
             End If
         Next adapter
     
-    End Sub 'DisplayGatewayAddresses
+    End Sub
     
     '</Snippet47> 
     
@@ -710,7 +710,7 @@ Public Class NetworkingExample
         ContinueForEach1:
         Next adapter
     
-    End Sub 'DisplayIPv4NetworkInterfaces
+    End Sub
     
     '</Snippet48>
     '<Snippet49>
@@ -754,7 +754,7 @@ Public Class NetworkingExample
             Console.WriteLine()
         End if
     
-    End Sub 'DisplayIPv6NetworkInterfaces
+    End Sub
     
     '</Snippet49>
     
@@ -777,7 +777,7 @@ Public Class NetworkingExample
             End If
         Next adapter
     
-    End Sub 'DisplayWinsServerAddresses
+    End Sub
     
     '</Snippet50> 
     '<Snippet51> 
@@ -796,7 +796,7 @@ Public Class NetworkingExample
             Console.WriteLine("  Multicast................................ : {0}", adapter.SupportsMulticast)
         Next adapter
     
-    End Sub 'DisplayTypeAndAddress
+    End Sub
     
     '</Snippet51> 
     
@@ -847,5 +847,5 @@ Public Class NetworkingExample
         ShowTimeExceededData()
 '         ShowIcmpV6ParameterData ()
     
-    End Sub 'Main 
-End Class 'NetworkingExample '           GetTcpConnections();
+    End Sub
+End Class

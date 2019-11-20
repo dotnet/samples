@@ -7,7 +7,7 @@ Namespace Applications.ConsoleApps
             Console.WriteLine()
             Dim s = Console.ReadLine()
             ShowWords(s)
-            Console.Write("\nPress any key to continue... ")
+            Console.Write($"{vbCrLf}Press any key to continue... ")
             Console.ReadKey()
         End Sub
 

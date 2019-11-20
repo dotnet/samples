@@ -10,7 +10,7 @@ Public Class MyServer
         RemotingConfiguration.RegisterActivatedServiceType(GetType(HelloServer))
         Console.WriteLine("Press enter to stop this process")
         Console.ReadLine()
-    End Sub 'Main
+    End Sub
 
-End Class 'MyServer
+End Class
 '</snippet10>

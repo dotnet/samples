@@ -50,7 +50,7 @@ Class Sample
       ' 4) Are the input and output Byte arrays equivalent?
       Console.WriteLine("4) The output Byte array is equal to the input Byte array: {0}", _
                             ArraysAreEqual(byteArray1, byteArray2))
-   End Sub 'Main
+   End Sub
    
    Public Shared Function ArraysAreEqual(a1() As Byte, a2() As Byte) As Boolean
       If a1.Length <> a2.Length Then
@@ -64,7 +64,7 @@ Class Sample
       Next i
       Return True
    End Function 'ArraysAreEqual
-End Class 'Sample
+End Class
 '
 'This example produces the following results:
 '

@@ -33,7 +33,7 @@ Public Class SampleWebProcessStatistics
         ' type.
         processStatistics = New WebProcessStatistics()
     
-    End Sub 'New
+    End Sub
      
     ' </Snippet2>
 
@@ -49,7 +49,7 @@ Public Class SampleWebProcessStatistics
         ControlChars.Lf, EventTime.ToString()))
         ' Raise the event.
         MyBase.Raise()
-    End Sub 'Raise
+    End Sub
 
     ' </Snippet4>
     ' <Snippet5>
@@ -170,8 +170,8 @@ Public Class SampleWebProcessStatistics
         formatter.IndentationLevel -= 1
 
         formatter.AppendLine(eventInfo.ToString())
-    End Sub 'FormatCustomEventDetails 
-End Class 'SampleWebEventHelper
+    End Sub
+End Class
 ' </Snippet14>
 
 

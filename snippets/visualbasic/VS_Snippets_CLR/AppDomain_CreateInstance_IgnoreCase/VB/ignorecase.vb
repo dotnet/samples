@@ -9,7 +9,7 @@ Module Test
    Sub Main()
       InstantiateINT32(False)	' Failed!
       InstantiateINT32(True)	' OK!
-   End Sub 'Main
+   End Sub
 
    Sub InstantiateINT32(ignoreCase As Boolean)
       Try
@@ -29,7 +29,7 @@ Module Test
       Catch e As TypeLoadException
          Console.WriteLine(e.Message)
       End Try
-   End Sub 'InstantiateINT32
+   End Sub
 
 End Module 'Test
 ' </Snippet1>

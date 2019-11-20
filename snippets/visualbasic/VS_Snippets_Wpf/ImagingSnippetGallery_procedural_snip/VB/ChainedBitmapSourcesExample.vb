@@ -1,6 +1,5 @@
 ﻿ ' <SnippetChainedBitmapSourcesCodeExampleWholePage>
 'This is a list of commonly used namespaces for a pane.
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Media
@@ -71,12 +70,12 @@ Namespace SDKSample
             myStackPanel.Children.Add(myImage)
             Me.Content = myStackPanel
 
-        End Sub 'New
+        End Sub
 
 
         Public Sub PageLoaded(ByVal sender As Object, ByVal args As RoutedEventArgs)
 
-        End Sub 'PageLoaded
-    End Class 'ChainedBitmapSourcesExample 
+        End Sub
+    End Class
 End Namespace
 ' </SnippetChainedBitmapSourcesCodeExampleWholePage>

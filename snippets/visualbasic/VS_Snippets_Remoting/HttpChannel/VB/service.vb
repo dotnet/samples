@@ -17,7 +17,7 @@ Public Class SampleServiceEventArgs
     Public Sub New(ByVal message As String) 
         m_Message = message
     
-    End Sub 'New
+    End Sub
     
     
     Public ReadOnly Property Message() As String 
@@ -25,7 +25,7 @@ Public Class SampleServiceEventArgs
             Return m_Message
         End Get
     End Property
-End Class 'SampleServiceEventArgs
+End Class
 
 
 ' Define the delegate for the event
@@ -54,6 +54,6 @@ Public Class SampleService
         Return True
     
     End Function 'SampleMethod
-End Class 'SampleService
+End Class
 
 End Namespace

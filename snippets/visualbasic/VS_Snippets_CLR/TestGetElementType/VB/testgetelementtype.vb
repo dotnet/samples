@@ -14,8 +14,8 @@ Class TestGetElementType
         Else
             Console.WriteLine("The element type of {0} is {1}.", newMe, t2.ToString())
         End If
-    End Sub 'Main
-End Class 'TestGetElementType
+    End Sub
+End Class
 
 ' This code produces the following output:
 '

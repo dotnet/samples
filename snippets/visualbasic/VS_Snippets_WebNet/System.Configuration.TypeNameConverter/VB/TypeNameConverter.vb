@@ -19,6 +19,6 @@ NotInheritable Public Class UsingTypeNameConverter
             Console.WriteLine(e.Message)
         End Try
     
-    End Sub 'GetTypeName
-End Class 'UsingTypeNameConverter 
+    End Sub
+End Class
 ' </Snippet1>

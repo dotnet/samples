@@ -7,7 +7,7 @@ Public Class JoinTest
         Console.WriteLine(MakeLine(1, 6, "  "))
         Console.WriteLine(MakeLine(9, 9, ": "))
         Console.WriteLine(MakeLine(4, 7, "< "))
-    End Sub 'Main
+    End Sub
     
     
     Private Shared Function MakeLine(initVal As Integer, multVal As Integer, sep As String) As String
@@ -21,7 +21,7 @@ Public Class JoinTest
         Next i
         Return [String].Join(sep, sArr)
     End Function 'MakeLine
-End Class 'JoinTest
+End Class
 ' The example displays the following output:
 '       0  , 5  , 10 , 15 , 20 , 25 , 30 , 35 , 40 , 45
 '       6    12   18   24   30   36   42   48   54   60

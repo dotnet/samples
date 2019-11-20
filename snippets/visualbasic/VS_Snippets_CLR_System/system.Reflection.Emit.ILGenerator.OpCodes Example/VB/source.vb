@@ -160,8 +160,8 @@ Class EmitWriteLineDemo
 			  BindingFlags.InvokeMethod, _
 			  Nothing, ptInstance, Nothing)
 
-   End Sub 'Main
+   End Sub
 
-End Class 'EmitWriteLineDemo
+End Class
 
 ' </Snippet1>

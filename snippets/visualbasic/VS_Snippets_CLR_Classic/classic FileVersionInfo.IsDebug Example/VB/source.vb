@@ -15,6 +15,6 @@ Public Class Form1
         
         ' Print whether the file contains debugging information.
         textBox1.Text = "File contains debugging information: " & myFileVersionInfo.IsDebug
-    End Sub 'GetIsDebug
+    End Sub
     ' </Snippet1>
-End Class 'Form1
+End Class

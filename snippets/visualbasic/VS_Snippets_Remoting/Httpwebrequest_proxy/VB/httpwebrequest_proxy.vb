@@ -11,9 +11,6 @@
 Imports System.IO
 Imports System.Net
 Imports System.Text
-Imports Microsoft.VisualBasic
-
-
 
 Class HttpWebRequest_Proxy
     
@@ -92,5 +89,5 @@ Class HttpWebRequest_Proxy
             Console.WriteLine(ControlChars.Cr + "{0} ", e.Message)
 	    
         End Try
-    End Sub ' Main
-End Class ' HttpWebRequest_Proxy
+    End Sub
+End Class

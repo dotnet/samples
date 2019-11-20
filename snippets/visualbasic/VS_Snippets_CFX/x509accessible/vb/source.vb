@@ -46,7 +46,7 @@ Namespace BasicAuthentication
             ' Close the service. 
             myServiceHost.Close()
 
-        End Sub 'Run
+        End Sub
 
         Public Shared Sub ClientRun() 
             
@@ -83,7 +83,7 @@ Namespace BasicAuthentication
             cc.Close()
 
 
-        End Sub 'ClientRun
+        End Sub
 
 
         Private Shared Function ReturnUsername() As String
@@ -96,7 +96,7 @@ Namespace BasicAuthentication
             Return "not"
 
         End Function 'ReturnPassword
-    End Class 'BasicService
+    End Class
 End Namespace 'BasicAuthentication
 Namespace SecuredUsingWindows
     Public Class WindowsService
@@ -124,7 +124,7 @@ Namespace SecuredUsingWindows
             myServiceHost.Close()
 
 
-        End Sub 'Run
+        End Sub
 
 
         Public Shared Sub RunClient()
@@ -151,7 +151,7 @@ Namespace SecuredUsingWindows
             cc.Close()
 
 
-        End Sub 'RunClient
+        End Sub
 
         Private Shared Function ReturnUsername() As String
             Return ""
@@ -163,7 +163,7 @@ Namespace SecuredUsingWindows
             Return "not"
 
         End Function 'ReturnPassword
-    End Class 'WindowsService 
+    End Class
 End Namespace 'SecuredUsingWindows
 Namespace SecuredByTransportWithAnonymousClient
 
@@ -191,7 +191,7 @@ Namespace SecuredByTransportWithAnonymousClient
             ' Close the service.
             myServiceHost.Close()
 
-        End Sub 'Run
+        End Sub
 
 
 
@@ -219,8 +219,8 @@ Namespace SecuredByTransportWithAnonymousClient
             ' Close the client.
             cc.Close()
 
-        End Sub 'RunClient 
-    End Class 'MyService
+        End Sub
+    End Class
 End Namespace 'SecuredByTransportWithAnonymousClient 
 
 Namespace SecuredTranserUsingCertificates
@@ -250,7 +250,7 @@ Namespace SecuredTranserUsingCertificates
             ' Close the service.
             myServiceHost.Close()
 
-        End Sub 'Run
+        End Sub
 
 
 
@@ -282,8 +282,8 @@ Namespace SecuredTranserUsingCertificates
             ' Close the client.
             cc.Close()
 
-        End Sub 'ClientRun 
-    End Class 'MyService
+        End Sub
+    End Class
 End Namespace 'SecuredTranserUsingCertificates
 
 Namespace SecuredUsingMessageSecurityWithAnonClient
@@ -315,7 +315,7 @@ Namespace SecuredUsingMessageSecurityWithAnonClient
             ' Close the service.
             myServiceHost.Close()
 
-        End Sub 'Run
+        End Sub
 
 
 
@@ -340,8 +340,8 @@ Namespace SecuredUsingMessageSecurityWithAnonClient
             ' Close the client.
             cc.Close()
 
-        End Sub 'ClientRun 
-    End Class 'SecureService
+        End Sub
+    End Class
 End Namespace 'SecuredUsingMessageSecurityWithAnonClient 
 
 Namespace SecuredUsingMessageSecurityWithUsername
@@ -372,7 +372,7 @@ Namespace SecuredUsingMessageSecurityWithUsername
             ' Close the service. 
             myServiceHost.Close()
 
-        End Sub 'Run
+        End Sub
 
 
         Private Sub ClientRun()
@@ -402,7 +402,7 @@ Namespace SecuredUsingMessageSecurityWithUsername
             ' Close the client.
             cc.Close()
 
-        End Sub 'ClientRun
+        End Sub
 
 
         Private Function ReturnUsername() As String
@@ -415,7 +415,7 @@ Namespace SecuredUsingMessageSecurityWithUsername
             Return "notReally"
 
         End Function 'ReturnPassword
-    End Class 'MyService
+    End Class
 End Namespace 'SecuredUsingMessageSecurityWithUsername
 Namespace SecuredUsingMessageWithCertClient
     
@@ -446,7 +446,7 @@ Namespace SecuredUsingMessageWithCertClient
             ' Close the service.
             myServiceHost.Close()
 
-        End Sub 'Run
+        End Sub
 
 
         Private Sub ClientRun()
@@ -473,8 +473,8 @@ Namespace SecuredUsingMessageWithCertClient
             ' Close the client.
             cc.Close()
 
-        End Sub 'ClientRun 
-    End Class 'MyService
+        End Sub
+    End Class
 End Namespace 'SecuredUsingMessageWithCertClient 
 
 
@@ -504,7 +504,7 @@ Namespace SecuredUsingMessageWithWindowsClient
             ' Close the service.
             myServiceHost.Close()
 
-        End Sub 'Run
+        End Sub
 
 
 
@@ -529,8 +529,8 @@ Namespace SecuredUsingMessageWithWindowsClient
             ' Close the client.
             cc.Close()
 
-        End Sub 'ClientRun 
-    End Class 'MyService
+        End Sub
+    End Class
 End Namespace 'SecuredUsingMessageWithWindowsClient 
 
 
@@ -577,7 +577,7 @@ Namespace MessageSecuritWithKerberosAuth
             ' Close the service. 
             myServiceHost.Close()
 
-        End Sub 'Run
+        End Sub
 
 
 
@@ -611,8 +611,8 @@ Namespace MessageSecuritWithKerberosAuth
             ' Close the client.
             cc.Close()
 
-        End Sub 'ClientRun 
-    End Class 'MyService
+        End Sub
+    End Class
 End Namespace 'MessageSecuritWithKerberosAuth 
 
 
@@ -650,7 +650,7 @@ Namespace SecuredUsingMessageSecurityWithInteroperableCertClient
             ' Close the service.
             myServiceHost.Close()
 
-        End Sub 'Run
+        End Sub
 
 
         Private Sub ClientRun()
@@ -705,7 +705,7 @@ Namespace ServiceModel
             Return a + b
 
         End Function
-    End Class 'Calculator
+    End Class
     
     
     Public Class Utility
@@ -716,8 +716,8 @@ Namespace ServiceModel
             sb.HttpGetUrl = New Uri("http://localhost:8008/metadata")
             sh.Description.Behaviors.Add(sb)
         
-        End Sub 'EnableMex
-    End Class 'Utility 
+        End Sub
+    End Class
 End Namespace 'ServiceModel
 
 Namespace ClientCalculator

@@ -1,7 +1,6 @@
 ﻿
 #Region "Using directives"
 
-Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
 Imports System.Drawing
@@ -286,7 +285,7 @@ Class Form1
         Application.EnableVisualStyles()
         Application.Run(New Form1())
 
-    End Sub 'Main
+    End Sub
 
 
     Private Sub InitializeComponent()
@@ -294,7 +293,7 @@ Class Form1
         Me.ClientSize = New System.Drawing.Size(292, 266)
         Me.Name = "Form1"
 
-    End Sub 'InitializeComponent
+    End Sub
 
     ' The following example demonstrates handling the ItemSelectionChanged event.
 

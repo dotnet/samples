@@ -8,7 +8,6 @@
 ' user defined EventHandler function and displays a message on form.
 '
 
-Imports System
 Imports System.ComponentModel
 Imports System.Data
 Imports System.Drawing
@@ -26,7 +25,7 @@ Public Class myDataForm
       InitializeComponent()
       MakeDataSet()
       myDataGrid.SetDataBinding(myDataSet, "Orders")
-   End Sub 'New
+   End Sub
 
    Private Sub InitializeComponent()
       Me.Text = "HeaderTextChanged Example"
@@ -49,18 +48,18 @@ Public Class myDataForm
       Controls.Add(myButton)
       Controls.Add(myDataGrid)
       Controls.Add(myLabel)
-   End Sub 'InitializeComponent
+   End Sub
 
    Public Shared Sub Main()
       Application.Run(New myDataForm())
-   End Sub 'Main
+   End Sub
 
     Private Sub myButton_Click(ByVal sender As Object, ByVal e As EventArgs)
         If TablesAlreadyAdded Then
             Return
         End If
         AddCustomDataTableStyle()
-    End Sub 'myButton_Click
+    End Sub
 
 ' <Snippet1>
    Private Sub AddCustomDataTableStyle()
@@ -80,11 +79,11 @@ Public Class myDataForm
       myTableStyle.GridColumnStyles.Add(myColumnStyle)
       myDataGrid.TableStyles.Add(myTableStyle)
       TablesAlreadyAdded = True
-   End Sub 'AddCustomDataTableStyle
+   End Sub
 
     Private Sub MyHeaderText_Changed(ByVal sender As Object, ByVal e As EventArgs)
         myLabel.Text = "Header Descriptor Property of DataGridColumnStyle has changed"
-    End Sub 'MyHeaderText_Changed
+    End Sub
 ' </Snippet1>
 
    Private Sub MakeDataSet()
@@ -101,6 +100,6 @@ Public Class myDataForm
          newRow("Amount") = j * 10 + j * 0.1
          myTable.Rows.Add(newRow)
       Next j
-   End Sub 'MakeDataSet
-End Class 'myDataForm
+   End Sub
+End Class
 

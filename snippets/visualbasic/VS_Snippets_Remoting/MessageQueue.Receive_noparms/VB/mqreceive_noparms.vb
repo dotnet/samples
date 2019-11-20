@@ -6,7 +6,7 @@ Imports System.Messaging
     Public Class Order
         Public orderId As Integer
         Public orderTime As DateTime
-    End Class 'Order
+    End Class
 
 
    
@@ -33,7 +33,7 @@ Imports System.Messaging
 
             Return
 
-        End Sub 'Main
+        End Sub
 
 
         '
@@ -55,7 +55,7 @@ Imports System.Messaging
 
             Return
 
-        End Sub 'SendMessage
+        End Sub
 
 
         '
@@ -97,8 +97,8 @@ Imports System.Messaging
 
             Return
 
-        End Sub 'ReceiveMessage
+        End Sub
 
-End Class 'MyNewQueue
+End Class
 
 ' </Snippet1>

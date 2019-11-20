@@ -13,7 +13,7 @@ Namespace ControlTest
       
       Public Sub New()
          MyBase.New(HtmlTextWriterTag.Span)
-      End Sub 'New      
+      End Sub
       
       <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.Demand, Name:="FullTrust")> _
       Protected Overrides Sub AddAttributesToRender(writer As HtmlTextWriter)
@@ -22,15 +22,15 @@ Namespace ControlTest
          writer.AddStyleAttribute(HtmlTextWriterStyle.Color, "Red")
          MyBase.AddAttributesToRender(writer)
 
-      End Sub 'AddAttributesToRender       
+      End Sub
 
       <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.Demand, Name:="FullTrust")> _
       Protected Overrides Sub RenderContents(writer As HtmlTextWriter)
          writer.Write("Custom Contents")
          MyBase.RenderContents(writer)
-      End Sub 'RenderContents
+      End Sub
 
-   End Class 'MyWebControl
+   End Class
 
 End Namespace 'ControlTest
 

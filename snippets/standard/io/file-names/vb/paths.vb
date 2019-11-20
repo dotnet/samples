@@ -38,9 +38,9 @@ Public Module Example
 
       If args.Length < 1 Then
          Console.WriteLine("Launching again, after setting current directory to D:\FY2018")
-         Dim currentExe As Uri = New Uri(Assembly.GetExecutingAssembly().GetName().CodeBase, UriKind.Absolute)
+         Dim currentExe As New Uri(Assembly.GetExecutingAssembly().GetName().CodeBase, UriKind.Absolute)
          Dim commandLine As String = $"/C cd D:\FY2018 & ""{currentExe.LocalPath}"" stop"
-         Dim psi As ProcessStartInfo = New ProcessStartInfo("cmd", commandLine) 
+         Dim psi As New ProcessStartInfo("cmd", commandLine) 
          Process.Start(psi).WaitForExit()
 
          Console.WriteLine("Sub process returned:")

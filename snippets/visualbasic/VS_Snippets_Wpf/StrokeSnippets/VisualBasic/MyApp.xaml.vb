@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Windows
 Imports System.Data
 Imports System.Xml
@@ -27,8 +26,8 @@ Namespace StrokeSnippets_VB
             Dim mainWindow As New Window1()
             mainWindow.Show()
 
-        End Sub 'AppStartingUp
-    End Class 'MyApp 
+        End Sub
+    End Class
     '
     'ToDo: Error processing original source shown below
     '    }

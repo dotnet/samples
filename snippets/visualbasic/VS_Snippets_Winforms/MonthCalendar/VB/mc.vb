@@ -1,12 +1,10 @@
 ﻿' <Snippet1>
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
 Imports System.Windows.Forms
 Imports System.Data
 Imports System.IO
-Imports Microsoft.VisualBasic
 
 Namespace MonthCalender
    ' Summary description for Form1.
@@ -54,7 +52,7 @@ Namespace MonthCalender
          Next day
          comboBox1.SelectedItem = comboBox1.Items(comboBox1.Items.IndexOf(monthCalendar1.FirstDayOfWeek.ToString()))
          loadDates()
-      End Sub 'New
+      End Sub
       
       
       ' Form overrides dispose to clean up the component list.
@@ -235,12 +233,12 @@ Namespace MonthCalender
          Me.Name = "Form1"
          Me.Text = "Form1"
          Me.ResumeLayout(False)
-      End Sub 'InitializeComponent
+      End Sub
        
       ' The main entry point for the application.
       Public Shared Sub Main()
          Application.Run(New Form1())
-      End Sub 'Main
+      End Sub
       
       '<Snippet8>
       Private Sub checkBox1_CheckedChanged(sender As Object, e As System.EventArgs)
@@ -249,7 +247,7 @@ Namespace MonthCalender
          Else
             monthCalendar1.ShowToday = False
          End If
-      End Sub 'checkBox1_CheckedChanged
+      End Sub
       '</Snippet8>
        
       '<Snippet9>   
@@ -259,7 +257,7 @@ Namespace MonthCalender
          Else
             monthCalendar1.ShowTodayCircle = False
          End If
-      End Sub 'checkBox2_CheckedChanged
+      End Sub
       '</Snippet9>
        
       Private Sub dateTimePicker1_ValueChanged(sender As Object, e As EventArgs)
@@ -269,7 +267,7 @@ Namespace MonthCalender
             End If
             monthCalendar1.MinDate = dateTimePicker1.Value
          End If
-      End Sub 'dateTimePicker1_ValueChanged
+      End Sub
       
       
       Private Sub dateTimePicker2_ValueChanged(sender As Object, e As EventArgs)
@@ -279,7 +277,7 @@ Namespace MonthCalender
             End If
             monthCalendar1.MaxDate = dateTimePicker2.Value
          End If
-      End Sub 'dateTimePicker2_ValueChanged
+      End Sub
       
       Private Sub textBox1_keypress(sender As Object, k As KeyPressEventArgs)
          k.Handled = True
@@ -289,25 +287,25 @@ Namespace MonthCalender
          If k.KeyChar = ControlChars.Lf Then
             monthCalendar1.Focus()
          End If
-      End Sub 'textBox1_keypress
+      End Sub
       
       Private Sub textBox1_Validate(sender As Object, c As CancelEventArgs)
          If Integer.Parse(textBox1.Text) < 1 Or Integer.Parse(textBox1.Text) > 365 Then
             MessageBox.Show("Max Selection Count must be greater than zero and less than 366.")
             c.Cancel = True
          End If
-      End Sub 'textBox1_Validate
+      End Sub
       
       '<Snippet5>
       Private Sub textBox1_LostFocus(sender As Object, e As EventArgs)
          monthCalendar1.MaxSelectionCount = Integer.Parse(textBox1.Text)
-      End Sub 'textBox1_LostFocus
+      End Sub
       '</Snippet5>
       
       '<Snippet6>
       Private Sub comboBox1_SelectedIndexChanged(sender As Object, e As System.EventArgs)
          monthCalendar1.FirstDayOfWeek = CType(comboBox1.SelectedIndex, Day)
-      End Sub 'comboBox1_SelectedIndexChanged
+      End Sub
       '</Snippet6>
       
       Private Sub monthCalendar1_DateSelected(ByVal sender As Object, ByVal e As System.Windows.Forms.DateRangeEventArgs)
@@ -316,7 +314,7 @@ Namespace MonthCalender
             label4.Text += " to " + monthCalendar1.SelectionEnd.ToShortDateString()
          End If
          textBox2.Enabled = True
-      End Sub 'monthCalendar1_DateSelected
+      End Sub
 
 
       Private Sub button1_Click(ByVal sender As Object, ByVal e As System.EventArgs)
@@ -330,7 +328,7 @@ Namespace MonthCalender
          textBox2.Enabled = False
          button1.Enabled = False
          button3.Enabled = True
-      End Sub 'button1_Click
+      End Sub
 
 
       Private Sub textBox2_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs)
@@ -340,7 +338,7 @@ Namespace MonthCalender
          Else
             button1.Enabled = True
          End If
-      End Sub 'textBox2_TextChanged
+      End Sub
 
       Private Sub this_Closing(ByVal Sender As Object, ByVal c As CancelEventArgs)
          Dim myOutputStream As StreamWriter = File.CreateText("myDates.txt")
@@ -351,7 +349,7 @@ Namespace MonthCalender
          End While
          myOutputStream.Flush()
          myOutputStream.Close()
-      End Sub 'this_Closing
+      End Sub
 
 
       Private Sub listBox1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs)
@@ -360,7 +358,7 @@ Namespace MonthCalender
          Else
             button2.Enabled = False
          End If
-      End Sub 'listBox1_SelectedIndexChanged
+      End Sub
 
       '<Snippet2>
       ' The following method uses Add to add dates that are 
@@ -381,7 +379,7 @@ Namespace MonthCalender
             File.Delete("myDates.txt")
          Catch fnfe As FileNotFoundException
          End Try
-      End Sub 'loadDates
+      End Sub
       '</Snippet2>
 
       '<Snippet3>   
@@ -392,7 +390,7 @@ Namespace MonthCalender
          If listBox1.Items.Count = 0 Then
             button3.Enabled = False
          End If
-      End Sub 'button2_Click
+      End Sub
       '</Snippet3>
 
       '<Snippet4>
@@ -401,7 +399,7 @@ Namespace MonthCalender
          monthCalendar1.UpdateBoldedDates()
          listBox1.Items.Clear()
          button3.Enabled = False
-      End Sub 'button3_Click
+      End Sub
       '</Snippet4>
 
       '<Snippet7> 
@@ -411,8 +409,8 @@ Namespace MonthCalender
 
          checkBox1.Checked = True
          checkBox2.Checked = True
-      End Sub 'setCalendarLook
+      End Sub
       '</Snippet7>
-   End Class 'Form1
+   End Class
 End Namespace 'MonthCalender
 '</Snippet1>

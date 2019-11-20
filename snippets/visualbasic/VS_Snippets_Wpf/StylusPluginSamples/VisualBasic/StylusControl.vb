@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Controls.Primitives
@@ -36,7 +35,7 @@ Public Class StylusControl
         Dim owner As Type = GetType(StylusControl)
         ClipToBoundsProperty.OverrideMetadata(owner, New FrameworkPropertyMetadata(True))
     
-    End Sub 'New
+    End Sub
     
     
     Public Sub New() 
@@ -65,7 +64,7 @@ Public Class StylusControl
         recoPlugin = New RecognizerPlugin()
         'Me.StylusPlugIns.Add(recoPlugin)
     
-    End Sub 'New
+    End Sub
 
     Public Sub ChangeDAOnCustomDR() 
         If Not StylusPlugIns.Contains(cdr) Then
@@ -74,7 +73,7 @@ Public Class StylusControl
         
         cdr.DrawingAttributes.Color = Colors.Red
 
-    End Sub 'ChangeDAOnCustomDR
+    End Sub
     
     Private Sub filterPlugin1_StrokeRendered(ByVal sender As Object, ByVal e As StrokeRenderedEventArgs)
 
@@ -82,7 +81,7 @@ Public Class StylusControl
         Dim newStroke As New Stroke(e.StrokePoints, currentAttributes)
         inkPresenter1.Strokes.Add(newStroke)
 
-    End Sub 'filterPlugin1_StrokeRendered
+    End Sub
     
     Private stylus1 As StylusDevice = Nothing
     Private stylus2 As StylusDevice = Nothing
@@ -96,12 +95,12 @@ Public Class StylusControl
             stylus2 = e.StylusDevice
         End If
     
-    End Sub 'OnStylusInRange
+    End Sub
      
 
     Protected Overrides Sub OnStylusOutOfRange(ByVal e As StylusEventArgs) 
     
-    End Sub 'OnStylusOutOfRange
+    End Sub
     
 
     Private Sub AttatchDynamicRenderer() 
@@ -122,13 +121,13 @@ Public Class StylusControl
         inkPresenter1.AttachVisuals(dynamicRenderer1.RootVisual, dynamicRenderer1.DrawingAttributes)
         '</Snippet3>
 
-    End Sub 'AttatchDynamicRenderer
+    End Sub
     
 
     
     Private Sub DrawRect(ByVal rect As Rect) 
     
-    End Sub 'DrawRect
+    End Sub
 
     Public Property FilterEnabled() As Boolean 
         Get
@@ -206,7 +205,7 @@ Public Class StylusControl
         End If
         '</Snippet7>
 
-    End Sub 'PluginCollectionSnippets
+    End Sub
 
     '<Snippet4>
     Public Sub MoveDownPlugIn(ByVal pluginToMoveDown As StylusPlugIn) 
@@ -219,7 +218,7 @@ Public Class StylusControl
             StylusPlugIns.Insert(index + 1, pluginToMoveDown)
         End If
     
-    End Sub 'MoveDownPlugIn
+    End Sub
     
     '</Snippet4>
     
@@ -238,7 +237,7 @@ Public Class StylusControl
 
         stylusPoints.Add(collectedPoints)
 
-    End Sub 'OnMouseLeftButtonDown
+    End Sub
     
     
     Protected Overrides Sub OnStylusDown(ByVal e As StylusDownEventArgs) 
@@ -259,7 +258,7 @@ Public Class StylusControl
         
         stylusPoints.Add(eventPoints)
     
-    End Sub 'OnStylusDown
+    End Sub
      
     
     
@@ -273,7 +272,7 @@ Public Class StylusControl
         Dim newStylusPoints As StylusPointCollection = e.GetStylusPoints(Me, stylusPoints.Description)
         stylusPoints.Add(newStylusPoints)
     
-    End Sub 'OnStylusMove
+    End Sub
     
     
     Protected Overrides Sub OnMouseMove(ByVal e As MouseEventArgs) 
@@ -297,7 +296,7 @@ Public Class StylusControl
         
         stylusPoints.Add(collectedPoints)
     
-    End Sub 'OnMouseMove
+    End Sub
     
     
     Protected Overrides Sub OnStylusUp(ByVal e As StylusEventArgs) 
@@ -323,7 +322,7 @@ Public Class StylusControl
         ' Release stylus capture
         Stylus.Capture(Nothing)
     
-    End Sub 'OnStylusUp
+    End Sub
     
     'Protected Overrides Sub OnMouseLeftButtonUp(ByVal e As MouseButtonEventArgs)
 
@@ -372,12 +371,12 @@ Public Class StylusControl
         
         dynamicRenderer1.Reset(currentStylus, stylusPoints)
     
-    End Sub 'ToggleSelect
+    End Sub
     '</Snippet13>
 
     Public Sub ClearInk() 
 
         inkPresenter1.Strokes.Clear()
     
-    End Sub 'ClearInk
-End Class 'StylusControl
+    End Sub
+End Class

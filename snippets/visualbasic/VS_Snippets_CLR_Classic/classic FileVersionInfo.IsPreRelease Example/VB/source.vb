@@ -15,7 +15,7 @@ Public Class Form1
         
         ' Print whether the file is a prerelease version.
         textBox1.Text = "File is prerelease version " & myFileVersionInfo.IsPreRelease
-    End Sub 'GetIsPreRelease
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

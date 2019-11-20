@@ -18,9 +18,9 @@ Namespace CodeDomSamples
          ' (1 + 2)
 
 	'</Snippet2>
-      End Sub 'New 
+      End Sub
 
-   End Class 'CodeBinaryOperatorExpressionExample 
+   End Class
 
 End Namespace 'CodeDomSamples
 

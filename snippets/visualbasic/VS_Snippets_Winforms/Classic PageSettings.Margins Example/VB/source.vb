@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Drawing
+﻿Imports System.Drawing
 Imports System.Drawing.Printing
 Imports System.IO
 Imports System.Windows.Forms
@@ -30,7 +29,7 @@ Public Class Sample
      Catch ex As Exception
          MessageBox.Show(ex.Message)
      End Try
- End Sub 'Printing
+ End Sub
        
 ' </Snippet1>
 

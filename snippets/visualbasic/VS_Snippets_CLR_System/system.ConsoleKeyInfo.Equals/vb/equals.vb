@@ -44,7 +44,7 @@ Class Sample
             cki1 = Console.ReadKey(True)
         Loop While cki1.Key <> ConsoleKey.Escape
     
-    End Sub 'Main
+    End Sub
     ' Note: This example requires the Escape (Esc) key.
     
     ' The KeyCombination() method creates a string that specifies what 
@@ -70,7 +70,7 @@ Class Sample
         Return keyCombo
     
     End Function 'KeyCombination
-End Class 'Sample
+End Class
 
 '
 'This example produces results similar to the following output:

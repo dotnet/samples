@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.ComponentModel
 Imports System.Windows.Forms
 Imports System.Drawing
@@ -35,5 +34,5 @@ Public Class Form1
             CType(attributes(GetType(DescriptionAttribute)), DescriptionAttribute)
         Console.WriteLine(myAttribute.Description)
         ' </Snippet2>
-    End Sub 'Method 
-End Class 'Form1
+    End Sub
+End Class

@@ -8,8 +8,8 @@ Class Sample
       Console.WriteLine("1)     {0}", s)
       Console.WriteLine("2)     {0}", s.Remove(3))
       Console.WriteLine("3)     {0}", s.Remove(3, 3))
-   End Sub 'Main
-End Class 'Sample
+   End Sub
+End Class
 '
 'This example produces the following results:
 '

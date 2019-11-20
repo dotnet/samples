@@ -36,7 +36,7 @@ Class Sample
         ' Display the key data of the two sort keys.
         DisplayKeyData(sk1, ignoreCase)
         DisplayKeyData(sk2, useCase)
-    End Sub 'Main
+    End Sub
     
     Public Shared Sub DisplayKeyData(ByVal sk As SortKey, ByVal title As String) 
         Console.Write("Key Data - {0}: ", title)
@@ -45,8 +45,8 @@ Class Sample
             Console.Write("0x{0} ", CUInt(keyDatum))
         Next keyDatum
         Console.WriteLine()
-    End Sub 'DisplayKeyData
-End Class 'Sample
+    End Sub
+End Class
 
 '
 'This code example produces the following results:

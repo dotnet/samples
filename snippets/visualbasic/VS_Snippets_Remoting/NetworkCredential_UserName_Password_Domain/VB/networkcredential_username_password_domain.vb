@@ -9,8 +9,6 @@
 ' 
 
 Imports System.Net
-Imports Microsoft.VisualBasic
-
 
 Class CredentialCacheSnippet
     
@@ -31,7 +29,7 @@ Class CredentialCacheSnippet
         Console.WriteLine(ControlChars.Cr + ControlChars.Cr + "Press 'Enter key' to continue...")
         Console.ReadLine()
         Return
-    End Sub 'Main
+    End Sub
     
     
     Public Shared Sub GetPage(url As String, username As String, passwd As String, domain As String)
@@ -65,5 +63,5 @@ Class CredentialCacheSnippet
         Catch e As Exception
             Console.WriteLine(ControlChars.Cr + "The following exception was raised : {0}", e.Message)
         End Try
-  End Sub 'GetPage 
-End Class 'CredentialCacheSnippet 
+  End Sub
+End Class

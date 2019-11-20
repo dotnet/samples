@@ -19,7 +19,7 @@ Imports System.Security
 Imports System.Security.Permissions
 Imports System.Collections
 Imports System.Text.RegularExpressions
-Imports Microsoft.VisualBasic
+
  _
 
 Class WebPermissionIsSubset
@@ -36,7 +36,7 @@ Class WebPermissionIsSubset
       Catch e As Exception
          Console.WriteLine(("Exception : " + e.Message))
       End Try
-   End Sub 'Main
+   End Sub
    
    
    Public Sub CheckSubset()
@@ -74,7 +74,7 @@ Class WebPermissionIsSubset
       ' Prints the attributes , values and childrens of XML encoded instances.
       Console.WriteLine(ControlChars.Cr + "Attributes and Values of third WebPermission instance are : ")
       PrintKeysAndValues(myWebPermission3.ToXml().Attributes, myWebPermission3.ToXml().Children)
-   End Sub 'CheckSubset
+   End Sub
    
    
    Private Sub PrintKeysAndValues(myHashtable As Hashtable, myList As IEnumerable)
@@ -91,5 +91,5 @@ Class WebPermissionIsSubset
       While myEnumerator1.MoveNext()
          Console.Write(ControlChars.Tab + "{0}", myEnumerator1.Current)
       End While
-   End Sub 'PrintKeysAndValues
-End Class 'WebPermissionIsSubset
+   End Sub
+End Class

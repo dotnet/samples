@@ -16,7 +16,7 @@ Public Class SamplesArray
          Return New CaseInsensitiveComparer().Compare(y, x)
       End Function 'IComparer.Compare
 
-   End Class 'myReverserClass
+   End Class
 
 
    Public Shared Sub Main()
@@ -50,7 +50,7 @@ Public Class SamplesArray
       Console.WriteLine("After sorting the entire Array using the reverse case-insensitive comparer:")
       PrintKeysAndValues(myKeys, myValues)
 
-   End Sub 'Main
+   End Sub
 
 
    Public Shared Sub PrintKeysAndValues(myKeys() As [String], myValues() As [String])
@@ -61,9 +61,9 @@ Public Class SamplesArray
       Next i
       Console.WriteLine()
 
-   End Sub 'PrintKeysAndValues
+   End Sub
 
-End Class 'SamplesArray
+End Class
 
 
 'This code produces the following output.

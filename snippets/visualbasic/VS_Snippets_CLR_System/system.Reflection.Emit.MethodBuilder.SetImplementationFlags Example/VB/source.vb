@@ -27,7 +27,7 @@ Class MethodBuilderAssortedMembersDemo
       ' Create an ILGenerator for the MethodBuilder and emit MSIL here ...
       ' </Snippet1>
 
-   End Sub 'MemberSnippets
+   End Sub
 
-End Class 'MethodBuilderAssortedMembersDemo
+End Class
 

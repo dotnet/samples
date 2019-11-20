@@ -1,5 +1,4 @@
 ﻿// <Snippet1>
-Imports Microsoft.VisualBasic
 Imports MyCompany.Employees
 Imports System.Collections.Generic
 

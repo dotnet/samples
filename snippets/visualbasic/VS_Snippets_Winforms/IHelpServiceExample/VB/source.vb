@@ -1,5 +1,4 @@
 ﻿'<Snippet1>
-Imports System
 Imports System.ComponentModel
 Imports System.ComponentModel.Design
 Imports System.Drawing
@@ -13,7 +12,7 @@ Namespace IHelpServiceSample
         Inherits System.Windows.Forms.Design.ControlDesigner
 
         Public Sub New()
-        End Sub 'New
+        End Sub
 
         Public Overrides ReadOnly Property Verbs() As System.ComponentModel.Design.DesignerVerbCollection
             Get
@@ -24,13 +23,13 @@ Namespace IHelpServiceSample
         Private Sub addKeyword(ByVal sender As Object, ByVal e As EventArgs)
             Dim hs As IHelpService = CType(Me.Control.Site.GetService(GetType(IHelpService)), IHelpService)
             hs.AddContextAttribute("keyword", "IHelpService", HelpKeywordType.F1Keyword)
-        End Sub 'addKeyword
+        End Sub
 
         Private Sub removeKeyword(ByVal sender As Object, ByVal e As EventArgs)
             Dim hs As IHelpService = CType(Me.Control.Site.GetService(GetType(IHelpService)), IHelpService)
             hs.RemoveContextAttribute("keyword", "IHelpService")
-        End Sub 'removeKeyword
-    End Class 'HelpDesigner
+        End Sub
+    End Class
 
     <Designer(GetType(HelpDesigner))> _
     Public Class HelpTestControl
@@ -39,7 +38,7 @@ Namespace IHelpServiceSample
         Public Sub New()
             Me.Size = New Size(320, 100)
             Me.BackColor = Color.White
-        End Sub 'New
+        End Sub
 
         Protected Overrides Sub OnPaint(ByVal e As System.Windows.Forms.PaintEventArgs)
             Dim brush As New SolidBrush(Color.Blue)
@@ -49,7 +48,7 @@ Namespace IHelpServiceSample
             e.Graphics.DrawString("Press F1 while this component is", New Font(FontFamily.GenericMonospace, 8), brush, 5, 55)
             e.Graphics.DrawString("selected to raise Help topics for", New Font(FontFamily.GenericMonospace, 8), brush, 5, 65)
             e.Graphics.DrawString("the current keyword or keywords", New Font(FontFamily.GenericMonospace, 8), brush, 5, 75)
-        End Sub 'OnPaint
-    End Class 'HelpTestControl
+        End Sub
+    End Class
 End Namespace 'IHelpServiceSample
 '</Snippet1>

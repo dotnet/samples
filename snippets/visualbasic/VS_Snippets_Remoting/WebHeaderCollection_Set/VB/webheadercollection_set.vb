@@ -12,9 +12,6 @@
 '
 
 Imports System.Net
-Imports Microsoft.VisualBasic
-
-
 
 Public Class WebHeaderCollection_Set
     
@@ -51,7 +48,7 @@ Public Class WebHeaderCollection_Set
         Catch e As Exception
             Console.WriteLine(e.Message)
         End Try
-    End Sub 'Main
+    End Sub
 ' </Snippet1>    
     
     Public Shared Sub PrintHeaders(headers As WebHeaderCollection)
@@ -63,5 +60,5 @@ Public Class WebHeaderCollection_Set
         For i = 0 To headers.Count - 1
             Console.WriteLine((ControlChars.Tab + headers.AllKeys(i) + " : " + headers(i)))
         Next i
-    End Sub 'PrintHeaders
-End Class 'WebHeaderCollection_Set
+    End Sub
+End Class

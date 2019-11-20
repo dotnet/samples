@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.ComponentModel
 Imports System.Windows.Forms
 Imports System.Drawing
@@ -21,7 +20,7 @@ Public Sub InitMyForm()
    StartPosition = FormStartPosition.CenterScreen
    ' Displays the position information.
    label1.Text = "The start position is " + StartPosition
-End Sub 'InitMyForm
+End Sub
 ' </snippet1>
 Public Shared Sub Main()
    System.Windows.Forms.Application.Run(New Form1())

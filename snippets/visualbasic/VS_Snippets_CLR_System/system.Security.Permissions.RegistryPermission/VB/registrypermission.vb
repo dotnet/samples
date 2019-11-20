@@ -23,7 +23,7 @@ Public Class RegistryPermissionDemo
         ToFromXmlDemo()
         SetGetPathListDemo()
 
-    End Sub 'Main
+    End Sub
     '<Snippet2>
     ' IsSubsetOf determines whether the current permission is a subset of the specified permission.
     Private Shared Function IsSubsetOfDemo() As Boolean
@@ -154,6 +154,6 @@ Public Class RegistryPermissionDemo
 
     '</Snippet9>
 
-End Class 'RegistryPermissionDemo
+End Class
 
 '</Snippet1>

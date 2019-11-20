@@ -36,6 +36,6 @@ Public Class MyClient
       For i = 0 To 4
          Console.WriteLine(myHelloServerObject.HelloMethod(" Client One"))
       Next i
-   End Sub 'Main
-End Class 'MyClient 
+   End Sub
+End Class
 ' </Snippet1>

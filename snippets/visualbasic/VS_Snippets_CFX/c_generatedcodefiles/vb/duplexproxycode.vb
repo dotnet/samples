@@ -61,7 +61,7 @@ Partial Class SampleDuplexHelloClient
     Public Sub Hello(ByVal greeting As String) Implements SampleDuplexHello.Hello
         MyBase.Channel.Hello(greeting)
 
-    End Sub 'Hello
-End Class 'SampleDuplexHelloClient
+    End Sub
+End Class
 '</snippet7>
 '</snippet1>

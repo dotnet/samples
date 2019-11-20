@@ -1,6 +1,4 @@
 ﻿' <Snippet1>
-Imports Microsoft.VisualBasic
-
 Class MyArrayRankSample
     Public Shared Sub Main()
         Try
@@ -17,6 +15,6 @@ Class MyArrayRankSample
             Console.WriteLine(("Source: " + e.Source))
             Console.WriteLine(("Message: " + e.Message))
         End Try
-    End Sub 'Main 
-End Class 'MyArrayRankSample
+    End Sub
+End Class
 ' </Snippet1>

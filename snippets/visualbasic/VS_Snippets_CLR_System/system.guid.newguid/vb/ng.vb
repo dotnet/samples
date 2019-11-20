@@ -7,8 +7,8 @@ Class Sample
         g = Guid.NewGuid()
         Console.WriteLine(g)
         Console.WriteLine(Guid.NewGuid())
-    End Sub 'Main
-End Class 'Sample
+    End Sub
+End Class
 '
 'This code example produces the following results:
 '

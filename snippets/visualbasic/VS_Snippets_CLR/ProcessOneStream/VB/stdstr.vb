@@ -20,5 +20,5 @@ Class Snippet
             compiler.WaitForExit()
         End Using
         '</Snippet1>
-    End Sub 'Main
-End Class 'Snippet
+    End Sub
+End Class

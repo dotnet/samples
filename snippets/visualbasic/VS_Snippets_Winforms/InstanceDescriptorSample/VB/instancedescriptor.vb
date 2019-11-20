@@ -1,5 +1,4 @@
 ﻿'<snippet1>
-Imports System
 Imports System.ComponentModel
 Imports System.ComponentModel.Design.Serialization
 Imports System.Drawing
@@ -54,7 +53,7 @@ Namespace Microsoft.Samples.InstanceDescriptorSample
          P1 = point1
          P2 = point2
          P3 = point3
-      End Sub 'New
+      End Sub
 
       ' A TypeConverter for the Triangle object.  Note that you can make it internal,
       '  private, or any scope you want and the designers will still be able to use

@@ -5,7 +5,6 @@
 ' DocumentViewer content used by the XpsSave SDK sample.
 
 
-Imports System
 Imports System.Collections.Generic
 Imports System.IO
 Imports System.IO.Packaging
@@ -654,7 +653,7 @@ Namespace SDKSampleHelper
 			shape.Margin = thick
 			shape.Width = rx * 2
 			shape.Height = ry * 2
-		End Sub ' end:SetEllipse()
+		End Sub
 
 
 		#Region "private members"
@@ -672,6 +671,6 @@ Namespace SDKSampleHelper
 
 		#End Region ' private members
 
-	End Class 'end:class XPFContent
+	End Class
 
 End Namespace ' end:namespace SDKSampleHelper

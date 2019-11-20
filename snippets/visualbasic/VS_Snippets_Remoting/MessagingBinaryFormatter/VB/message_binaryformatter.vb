@@ -31,7 +31,7 @@ Namespace MyProj
          myNewQueue.ReceiveMessage()
          
          Return
-      End Sub 'Main
+      End Sub
       
       
       '**************************************************
@@ -47,7 +47,7 @@ Namespace MyProj
          Catch e As MessageQueueException
             Console.WriteLine(e.Message)
          End Try
-      End Sub 'CreateQueue
+      End Sub
        
       
       '**************************************************
@@ -73,7 +73,7 @@ Namespace MyProj
          End Try 
          
          Return
-      End Sub 'SendMessage
+      End Sub
       
       
       
@@ -112,7 +112,7 @@ Namespace MyProj
          
          ' Catch other exceptions as necessary.
          Return
-      End Sub 'ReceiveMessage
-   End Class 'MyNewQueue
+      End Sub
+   End Class
 End Namespace 'MyProj
 ' </Snippet1>

@@ -25,7 +25,7 @@ Public Class MyNewQueue
          myNewQueue.ReceiveMessage()
          
          Return
-      End Sub 'Main
+      End Sub
       
       
       
@@ -53,7 +53,7 @@ Public Class MyNewQueue
          myQueue.Send(myMessage)
          
          Return
-      End Sub 'SendMessage
+      End Sub
       
       
       
@@ -88,7 +88,7 @@ Public Class MyNewQueue
          
          ' Catch other exceptions as necessary.
          Return
-      End Sub 'ReceiveMessage
-   End Class 'MyNewQueue
+      End Sub
+   End Class
 
 ' </Snippet1>

@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Windows.Forms
+﻿Imports System.Windows.Forms
 Imports System.Drawing
 Imports System.Drawing.Design
 Imports System.Data
@@ -83,7 +82,7 @@ Public Class Form1
         Else
             MessageBox.Show("Data of the specified type was not stored " + "in the data object.")
         End If
-    End Sub 'GetData2
+    End Sub
     ' </snippet1>
 
     Public Shared Sub Main()

@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Drawing
+﻿Imports System.Drawing
 Imports System.Windows.Forms
 
 Class TestForm
@@ -32,7 +31,7 @@ Public Sub InitializeMyMenu()
    Dim indexValue As String = fileMenu.MenuItems.IndexOf(exitProgram).ToString()
    ' Display the result in a message box.
    MessageBox.Show("The index of the Exit menu item = " + indexValue, "MenuItem Information")
-End Sub 'InitializeMyMenu
+End Sub
 ' </snippet1>
 
    Public Shared Sub Main()

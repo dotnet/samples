@@ -1,8 +1,6 @@
 ﻿'<Snippet1>
 ' Example of the TimeSpan.Duration( ) and TimeSpan.Negate( ) methods,
 ' and the TimeSpan Unary Negation and Unary Plus operators.
-Imports Microsoft.VisualBasic
-
 Module DuraNegaUnaryDemo
 
     Const dataFmt As String = "{0,22}{1,22}{2,22}"

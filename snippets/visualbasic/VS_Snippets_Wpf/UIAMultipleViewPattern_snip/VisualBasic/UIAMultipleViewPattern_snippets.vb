@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.Windows.Automation
@@ -24,7 +23,7 @@ Class UIAMultipleViewPattern_snippets
         
         Dim i As Integer = GetCurrentViewProperty(targetControl(0))
     
-    End Sub 'New
+    End Sub
      
     
     ' <Snippet100>
@@ -215,7 +214,7 @@ Class UIAMultipleViewPattern_snippets
                 ' TO DO: error handling
             End Try
         End If
-    End Sub 'SetView    
+    End Sub
     ' </Snippet104>
 
     ' <Snippet105>
@@ -294,6 +293,6 @@ Class UIAMultipleViewPattern_snippets
             ' and call its Run() method to start it.
             Dim app As New UIAMultipleViewPattern_snippets()
         
-        End Sub 'Main
-    End Class 'TestMain
-End Class 'UIAMultipleViewPattern_snippets
+        End Sub
+    End Class
+End Class

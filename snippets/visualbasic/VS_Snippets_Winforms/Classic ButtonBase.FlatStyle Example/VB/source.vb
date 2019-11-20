@@ -1,7 +1,6 @@
 ﻿Option Explicit
 Option Strict
 
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 
@@ -18,6 +17,6 @@ Public Class Form1
         button1.TextAlign = ContentAlignment.MiddleLeft
         ' Give the button a flat appearance.
         button1.FlatStyle = FlatStyle.Flat
-    End Sub 'SetMyButtonProperties
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

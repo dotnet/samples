@@ -30,11 +30,11 @@ The source code includes an MSBuild project file for C# (a .csproj file) that ta
 
 4. If you are using Visual Studio 2019:
 
-   1. In Visual Studio, select **Open a project or solution** (or **File** -> **Open** --> **Project/Solution** from the Visual Studio menu.
+   1. In Visual Studio, select **Open a project or solution** (or **File** > **Open** > **Project/Solution** from the Visual Studio menu.
 
-   2. Select **Debug** --> **Start Debugging** from the Visual Studio menu to build and launch the application.
+   2. Select **Debug** > **Start Debugging** from the Visual Studio menu to build and launch the application.
 
-4. If you are working from the command line:
+5. If you are working from the command line:
 
    1. Navigate to the directory that contains the sample.
 

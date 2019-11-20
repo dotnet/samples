@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Input
@@ -21,6 +20,6 @@ Namespace ImageElementExample
             Dim mainWindow As New SampleViewer()
             mainWindow.Show()
 
-        End Sub 'AppStartingUp
-    End Class 'MyApp
+        End Sub
+    End Class
 End Namespace

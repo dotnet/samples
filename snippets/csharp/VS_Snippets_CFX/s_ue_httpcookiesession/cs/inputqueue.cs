@@ -527,10 +527,7 @@ namespace Microsoft.ServiceModel.Samples
 
             if (dispatchLater)
             {
-                if (onDispatchCallback == null)
-                {
-                    onDispatchCallback = new WaitCallback(OnDispatchCallback);
-                }
+                onDispatchCallback ??= new WaitCallback(OnDispatchCallback);
 
                 ThreadPool.QueueUserWorkItem(onDispatchCallback, this);
             }
@@ -589,10 +586,7 @@ namespace Microsoft.ServiceModel.Samples
         {
             if (dequeuedCallback != null)
             {
-                if (onInvokeDequeuedCallback == null)
-                {
-                    onInvokeDequeuedCallback = OnInvokeDequeuedCallback;
-                }
+                onInvokeDequeuedCallback ??= OnInvokeDequeuedCallback;
 
                 ThreadPool.QueueUserWorkItem(onInvokeDequeuedCallback, dequeuedCallback);
             }

@@ -16,7 +16,7 @@ Public Class CsvDataSource
    Inherits DataSourceControl
 
    Public Sub New()
-   End Sub 'New
+   End Sub
 
    ' The comma-separated value file to retrieve data from.
    Public Property FileName() As String
@@ -72,7 +72,7 @@ Public Class CsvDataSource
       Return CType(al, ICollection)
    End Function 'GetViewNames
 
-End Class 'CsvDataSource
+End Class
 ' </Snippet4>
 
 
@@ -85,7 +85,7 @@ Public Class CsvDataSourceView
 
    Public Sub New(owner As IDataSource, name As String)
        MyBase.New(owner, DefaultViewName)
-   End Sub 'New
+   End Sub
 
    ' The data source view is named. However, the CsvDataSource
    ' only supports one view, so the name is ignored, and the
@@ -250,7 +250,7 @@ Public Class CsvDataSourceView
       Throw New NotSupportedException()
    End Function 'ExecuteUpdate
 
-End Class 'CsvDataSourceView
+End Class
 ' </Snippet10>
 ' </Snippet5>
 End Namespace

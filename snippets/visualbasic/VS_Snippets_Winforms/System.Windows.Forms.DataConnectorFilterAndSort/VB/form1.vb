@@ -1,7 +1,6 @@
 ﻿
 #Region "Using directives"
 
-Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
 Imports System.Data
@@ -98,14 +97,14 @@ Class Form1
         Me.ResumeLayout(False)
         Me.PerformLayout()
     
-    End Sub 'InitializeComponent
+    End Sub
      
     
     
     Sub Form1_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
         InitializeSortedFilteredBindingSource()
     
-    End Sub 'Form1_Load
+    End Sub
     
     ' The following code example demonstrates BindingSource.Filter and
     ' BindingSource.Sort members.  

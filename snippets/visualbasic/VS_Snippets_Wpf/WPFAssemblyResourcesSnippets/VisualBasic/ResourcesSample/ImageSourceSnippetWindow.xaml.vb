@@ -1,6 +1,5 @@
 ﻿'<SnippetSetImageSourceCODEBEHIND1>
 
-Imports System
 Imports System.Windows.Media.Imaging
 '</SnippetSetImageSourceCODEBEHIND1>
 Imports System.IO

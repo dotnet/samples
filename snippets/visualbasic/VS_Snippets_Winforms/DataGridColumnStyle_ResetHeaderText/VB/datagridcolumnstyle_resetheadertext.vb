@@ -6,7 +6,6 @@
 ' 'DataGrid'.On clicking the set button,the Header Text is set. The reset
 ' button resets the HeaderText to its default value.
 
-Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
 Imports System.Data
@@ -43,16 +42,16 @@ Public Class DataGridColumnStyle_Header
       Name = "DataGridColumnStyle_Width"
       Text = "Change Header Text"
       AddHandler Load, AddressOf DataGridColumnStyle_Reset_Header
-   End Sub 'InitializeComponent
+   End Sub
 
    Shared Sub Main()
       Application.Run(New DataGridColumnStyle_Header())
-   End Sub 'Main
+   End Sub
 
    Public Sub New()
       InitializeComponent()
       CreateDataSet()
-   End Sub 'New
+   End Sub
 
    Private Sub CreateDataSet()
       Dim myDataSet As New DataSet("myDataSet")
@@ -68,7 +67,7 @@ Public Class DataGridColumnStyle_Header
          myEmpTable.Rows.Add(newRow1)
       Next i
       myDataGrid.SetDataBinding(myDataSet, "Employee")
-   End Sub 'CreateDataSet
+   End Sub
 
    Private Sub DataGridColumnStyle_Reset_Header(ByVal sender As Object, ByVal e As EventArgs)
       myDataGridTableStyle.MappingName = "Employee"
@@ -76,22 +75,22 @@ Public Class DataGridColumnStyle_Header
       myDataGridColumnStyle.Width = 50
       myDataGridTableStyle.GridColumnStyles.Add(myDataGridColumnStyle)
       myDataGrid.TableStyles.Add(myDataGridTableStyle)
-   End Sub 'DataGridColumnStyle_Reset_Header
+   End Sub
 
 ' <Snippet1>
    Private Sub SetHeaderText(ByVal sender As Object, ByVal e As EventArgs)
       ' Set the HeaderText property.
       myDataGridColumnStyle.HeaderText = "Emp ID"
       myDataGrid.Invalidate()
-   End Sub 'SetHeaderText
+   End Sub
 
    Private Sub ResetHeaderText(ByVal sender As Object, ByVal e As EventArgs)
       ' Reset the HeaderText property to its default value.
       myDataGridColumnStyle.ResetHeaderText()
       myDataGrid.Invalidate()
-   End Sub 'ResetHeaderText
+   End Sub
 ' </Snippet1>
-End Class 'DataGridColumnStyle_Header
+End Class
 
 
 

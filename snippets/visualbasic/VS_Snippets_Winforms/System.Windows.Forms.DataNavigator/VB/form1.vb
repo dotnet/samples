@@ -1,5 +1,4 @@
 ﻿ '<snippet1>
-Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
 Imports System.Data
@@ -39,7 +38,7 @@ Public Class Form1
         Me.Size = New Size(800, 200)
         AddHandler Me.Load, AddressOf Form1_Load
 
-    End Sub 'New
+    End Sub
 
 
     Private Sub Form1_Load(ByVal sender As Object, ByVal e As EventArgs)
@@ -70,7 +69,7 @@ Public Class Form1
             connection.Dispose()
         End Try
 
-    End Sub 'Form1_Load
+    End Sub
 
 
     <STAThread()> _

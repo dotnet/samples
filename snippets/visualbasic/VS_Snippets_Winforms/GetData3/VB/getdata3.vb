@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Windows.Forms
+﻿Imports System.Windows.Forms
 Imports System.Drawing
 Imports System.Drawing.Design
 Imports System.Data
@@ -83,7 +82,7 @@ Public Class Form1
         ' Displays the string in a text box with autoConvert equal to true.
         Dim myData As String = "The data is " + myDataObject.GetData("System.String", True).ToString()
         MessageBox.Show(myData, "Message #2")
-    End Sub 'GetData3
+    End Sub
     ' </snippet1>
 
     Public Shared Sub Main()

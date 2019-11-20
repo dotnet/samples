@@ -1,7 +1,5 @@
 ﻿'<snippet1>
 ' Example for the Math.E field.
-Imports Microsoft.VisualBasic
-
 Module EField
        
     Sub Main()
@@ -17,7 +15,7 @@ Module EField
             "and stop when delta < 1.0E-15" & vbCrLf )
           
         CalcPowerSeries()
-    End Sub 'Main
+    End Sub
        
     ' Approximate E with a power series.
     Sub CalcPowerSeries()
@@ -45,7 +43,7 @@ Module EField
                 Exit For
             End If
         Next n
-    End Sub 'CalcPowerSeries
+    End Sub
     End Module 'EField
 
 ' This example of Math.E = 2.7182818284590451E+000

@@ -1,7 +1,6 @@
 ﻿Option Explicit
 Option Strict
 
-Imports System
 Imports System.Data
 Imports System.ComponentModel
 Imports System.Windows.Forms
@@ -18,7 +17,7 @@ Public Class Form1
         ' Exchange commented line and note the difference.
         Me.isDataSaved = True
         'Me.isDataSaved = False
-    End Sub 'OtherInitialize
+    End Sub
     
     Private Sub Form1_Closing(sender As Object, e As _
        System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
@@ -29,6 +28,6 @@ Public Class Form1
             e.Cancel = False
             MessageBox.Show("Goodbye.")
         End If
-    End Sub 'Form1_Closing
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class

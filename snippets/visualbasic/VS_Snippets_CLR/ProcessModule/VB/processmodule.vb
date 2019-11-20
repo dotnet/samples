@@ -51,5 +51,5 @@ Class MyProcessModuleClass
         Catch e As Exception
             Console.WriteLine($"Exception : {e.Message}")
         End Try
-    End Sub 'Main
-End Class 'MyProcessModuleClass
+    End Sub
+End Class

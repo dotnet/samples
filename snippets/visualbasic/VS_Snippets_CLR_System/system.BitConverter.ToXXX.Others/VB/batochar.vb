@@ -1,7 +1,5 @@
 ﻿'<Snippet2>
 ' Example of the BitConverter.ToChar method.
-Imports Microsoft.VisualBasic
-
 Module BytesToCharDemo
 
     Const formatter As String = "{0,5}{1,17}{2,8}"

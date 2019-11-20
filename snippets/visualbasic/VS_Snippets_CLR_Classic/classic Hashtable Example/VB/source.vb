@@ -17,7 +17,7 @@ Public Class SamplesHashtable
         Console.WriteLine("  Keys and Values:")
         PrintKeysAndValues(myHT)
 
-    End Sub 'Main
+    End Sub
 
     Public Shared Sub PrintKeysAndValues(myHT As Hashtable)
         Console.WriteLine(vbTab + "-KEY-" + vbTab + "-VALUE-")
@@ -25,9 +25,9 @@ Public Class SamplesHashtable
             Console.WriteLine(vbTab + "{0}:" + vbTab + "{1}", de.Key, de.Value)
         Next
         Console.WriteLine()
-    End Sub 'PrintKeysAndValues
+    End Sub
 
-End Class 'SamplesHashtable 
+End Class
 
 
 ' This code produces the following output.

@@ -21,7 +21,7 @@ Public Class Sample
         ' of UTF-16 encoded characters named UTF16.txt.
         DecoderConvert("UTF8.txt", "UTF16.txt", Encoding.UTF8)
     
-    End Sub 'Main
+    End Sub
     
     ' --------------------------------------------------------------------------------------------
     ' Use the Encoder.Convert() method to convert a file of characters to a file of encoded bytes.
@@ -78,7 +78,7 @@ Public Class Sample
         fs.Close()
         inputFile.Close()
     
-    End Sub 'EncoderConvert
+    End Sub
     
     ' --------------------------------------------------------------------------------------------
     ' Use the Decoder.Convert() method to convert a file of encoded bytes to a file of characters.
@@ -135,7 +135,7 @@ Public Class Sample
         fs.Close()
         inputFile.Close()
     
-    End Sub 'DecoderConvert
+    End Sub
     
     ' --------------------------------------------------------------------------------------------
     ' Create a large file of UTF-16 encoded Unicode characters. 
@@ -158,8 +158,8 @@ Public Class Sample
         Next c
         file.Close()
     
-    End Sub 'CreateTestFile
-End Class 'Sample
+    End Sub
+End Class
 
 '
 'This code example produces the following results:

@@ -9,14 +9,14 @@ Public Class MyType
       Console.Write("Created an instance of MyType in an AppDomain with the ")
       Console.WriteLine("hashcode {0}", AppDomain.CurrentDomain.GetHashCode())
       Console.WriteLine("")
-   End Sub 'New
+   End Sub
    
    
    Public Function GetAppDomainHashCode() As Integer
       Return AppDomain.CurrentDomain.GetHashCode()
    End Function 'GetAppDomainHashCode
 
-End Class 'MyType
+End Class
 
 
 Class Test
@@ -46,7 +46,7 @@ Class Test
       Console.WriteLine(testObj.GetAppDomainHashCode())
 ' </Snippet2>
 
-   End Sub 'Main 
+   End Sub
 
-End Class 'Test 
+End Class
 ' </Snippet1>

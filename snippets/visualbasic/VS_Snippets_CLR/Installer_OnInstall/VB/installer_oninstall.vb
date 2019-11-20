@@ -21,24 +21,24 @@ Public Class MyInstaller
    ' Override the 'Install' method.
    Public Overrides Sub Install(savedState As IDictionary)
       MyBase.Install(savedState)
-   End Sub 'Install
+   End Sub
 
    ' Override the 'Commit' method.
    Public Overrides Sub Commit(savedState As IDictionary)
       MyBase.Commit(savedState)
-   End Sub 'Commit
+   End Sub
    
    
    ' Override the 'Rollback' method.
    Public Overrides Sub Rollback(savedState As IDictionary)
       MyBase.Rollback(savedState)
-   End Sub 'Rollback
+   End Sub
    
    
    ' Override the 'Uninstall' method.
    Public Overrides Sub Uninstall(savedState As IDictionary)
       MyBase.Uninstall(savedState)
-   End Sub 'Uninstall
+   End Sub
    
 ' <Snippet1>
    ' Override the 'OnBeforeInstall' method.
@@ -46,7 +46,7 @@ Public Class MyInstaller
       MyBase.OnBeforeInstall(savedState)
       ' Add steps to be done before the installation starts.
       Console.WriteLine("OnBeforeInstall method of MyInstaller called")
-   End Sub 'OnBeforeInstall
+   End Sub
 ' </Snippet1>
 
 ' <Snippet2>
@@ -55,13 +55,13 @@ Public Class MyInstaller
       MyBase.OnAfterInstall(savedState)
       ' Add steps to be done after the installation is over.
       Console.WriteLine("OnAfterInstall method of MyInstaller called")
-   End Sub 'OnAfterInstall
+   End Sub
 ' </Snippet2>
-End Class 'MyInstaller
+End Class
 
 
 Public Class MyAssembly
    Public Shared Sub Main()
       Console.WriteLine("Use installutil.exe to run the assembly Installer_OnInstall.exe")
-   End Sub 'Main
-End Class 'MyAssembly
+   End Sub
+End Class

@@ -9,10 +9,10 @@ Protected dataGrid1 As DataGrid
 ' <Snippet1>
 Private Sub CalcColumns()
      Dim rate As Single = .0862
-     dim table as DataTable = New DataTable 
+     Dim table As New DataTable()
  
      ' Create the first column.
-     Dim priceColumn As DataColumn = New DataColumn
+     Dim priceColumn As New DataColumn()
      With priceColumn
          .DataType = System.Type.GetType("System.Decimal")
          .ColumnName = "price"
@@ -20,7 +20,7 @@ Private Sub CalcColumns()
      End With
      
      ' Create the second, calculated, column.
-     Dim taxColumn As DataColumn = New DataColumn
+     Dim taxColumn As New DataColumn()
      With taxColumn
          .DataType = System.Type.GetType("System.Decimal")
          .ColumnName = "tax"
@@ -28,7 +28,7 @@ Private Sub CalcColumns()
      End With
      
     ' Create third column
-     Dim totalColumn As DataColumn = New DataColumn
+     Dim totalColumn As New DataColumn()
      With totalColumn
          .DataType = System.Type.GetType("System.Decimal")
          .ColumnName = "total"

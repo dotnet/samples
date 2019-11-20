@@ -22,7 +22,7 @@ Public Class Test
 
     ' Open the stream and read it back.
     Using fs As FileStream = File.Open(filePath, FileMode.Open, FileAccess.Read)
-      Dim b(1024) As Byte
+      Dim b(1023) As Byte
       Dim temp As UTF8Encoding = New UTF8Encoding(True)
 
       ' Display the information on the console. 

@@ -18,6 +18,6 @@ Public Class Sample
         For i = 0 To elemList.Count - 1
             Console.WriteLine(elemList(i).InnerXml)
         Next i
-    End Sub 'Main 
-End Class 'Sample
+    End Sub
+End Class
 ' </Snippet1>

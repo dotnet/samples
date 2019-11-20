@@ -49,7 +49,7 @@ Namespace CodeDomSamples
             '   End Class
             '</Snippet2>
 
-        End Sub 'New 
-    End Class 'CodePropertySetValueExample 
+        End Sub
+    End Class
 End Namespace 'CodeDomSamples
 '</Snippet1>

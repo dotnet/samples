@@ -30,7 +30,6 @@
 ' * 
 ' ************************************************************************************************
 
-Imports System
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.Windows.Automation.Provider
@@ -78,7 +77,7 @@ Class ParentList
         myItems = New ArrayList()
         SelectItem(-1)
 
-    End Sub 'New
+    End Sub
 
 
     ' <Snippet122>
@@ -92,7 +91,7 @@ Class ParentList
             AutomationInteropProvider.RaiseAutomationEvent(InvokePatternIdentifiers.InvokedEvent, provider, args)
         End If
 
-    End Sub 'RaiseInvokeEvent
+    End Sub
 
     ' </Snippet122>
 
@@ -108,7 +107,7 @@ Class ParentList
             AutomationInteropProvider.RaiseAutomationPropertyChangedEvent(provider, args)
         End If
     
-    End Sub 'RaiseEnabledEvent
+    End Sub
     
     ' </Snippet123>
     ''' <summary>
@@ -190,7 +189,7 @@ Class ParentList
             End If
         End If
 
-    End Sub 'Select
+    End Sub
     ' </Snippet118>      
     #End Region
 
@@ -216,7 +215,7 @@ Class ParentList
         End If
         MyBase.WndProc(m)
 
-    End Sub 'WndProc
+    End Sub
 
     ' </Snippet116>
     ''' <summary>
@@ -227,7 +226,7 @@ Class ParentList
         OnPaint(New PaintEventArgs(CreateGraphics(), Me.DisplayRectangle))
         MyBase.OnGotFocus(e)
 
-    End Sub 'OnGotFocus
+    End Sub
 
 
     ''' <summary>
@@ -238,7 +237,7 @@ Class ParentList
         OnPaint(New PaintEventArgs(CreateGraphics(), Me.DisplayRectangle))
         MyBase.OnLostFocus(e)
 
-    End Sub 'OnLostFocus
+    End Sub
 
 
     ''' <summary>
@@ -249,7 +248,7 @@ Class ParentList
     Public Sub PaintMe(ByVal sender As [Object], ByVal args As PaintEventArgs)
         OnPaint(args)
 
-    End Sub 'PaintMe
+    End Sub
 
 
     ''' <summary>
@@ -290,7 +289,7 @@ Class ParentList
         Next item
         e.Dispose()
 
-    End Sub 'OnPaint
+    End Sub
 
 
     ''' <summary>
@@ -306,7 +305,7 @@ Class ParentList
             Me.Refresh()
         End If
 
-    End Sub 'OnMouseDown
+    End Sub
 
 
     ''' <summary>
@@ -507,7 +506,7 @@ Class ParentList
         Implements IRawElementProviderFragment.SetFocus
 
         Throw New Exception("The method is not implemented.")
-    End Sub 'IRawElementProviderFragment.SetFocus
+    End Sub
 
 #End Region
 
@@ -607,4 +606,4 @@ Class ParentList
 
 #End Region
 
-End Class 'ParentList 
+End Class

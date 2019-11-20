@@ -1,5 +1,4 @@
 ﻿' <Snippet1>
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 
@@ -17,9 +16,9 @@ Class Program
         win.Content = ic
         win.Show()
 
-    End Sub 'OnStartup
+    End Sub
 
-End Class 'Program
+End Class
 
 Module Module1
 

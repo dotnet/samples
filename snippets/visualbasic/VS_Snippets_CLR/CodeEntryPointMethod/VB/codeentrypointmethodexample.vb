@@ -41,7 +41,7 @@ Namespace CodeDomSamples
       End Function 'BuildHelloWorldGraph 		
       '</Snippet2>
 
-   End Class 'CodeEntryPointMethodExample
+   End Class
 
 End Namespace 'CodeDomSamples
 '</Snippet1>

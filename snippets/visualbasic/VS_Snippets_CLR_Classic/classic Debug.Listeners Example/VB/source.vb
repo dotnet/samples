@@ -16,5 +16,5 @@ Class Form1
         Dim myWriter As New TextWriterTraceListener(System.Console.Out)
         Debug.Listeners.Add(myWriter)
         ' </Snippet1>
-    End Sub 'Method 
-End Class 'Form1 
+    End Sub
+End Class

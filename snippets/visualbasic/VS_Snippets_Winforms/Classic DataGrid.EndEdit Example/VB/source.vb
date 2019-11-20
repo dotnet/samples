@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Data
+﻿Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
 
@@ -24,4 +23,4 @@ Private Sub EditValue()
 End Sub 
 
 ' </Snippet1>
-End Class 'Form1 
+End Class

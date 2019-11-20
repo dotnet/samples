@@ -15,7 +15,7 @@ Public Class Form1
         
         ' Print whether the version is a private build.
         textBox1.Text = "Version is a private build: " & myFileVersionInfo.IsPrivateBuild
-    End Sub 'GetIsPrivateBuild
+    End Sub
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

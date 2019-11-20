@@ -12,7 +12,6 @@
 ' 'ResetSelectionForeColor'.
 
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
@@ -27,7 +26,7 @@ Namespace MyDataGridNamespace
       
       Public Sub New()
          InitializeComponent()
-      End Sub 'New
+      End Sub
       
       
       Protected Overrides Overloads Sub Dispose(disposing As Boolean)
@@ -37,7 +36,7 @@ Namespace MyDataGridNamespace
             End If
          End If
          MyBase.Dispose(disposing)
-      End Sub 'Dispose
+      End Sub
 
       Private Sub InitializeComponent()
          Me.myDataGrid = New System.Windows.Forms.DataGrid()
@@ -91,7 +90,7 @@ Namespace MyDataGridNamespace
          CType(Me.myDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
          Me.groupBox1.ResumeLayout(False)
          Me.ResumeLayout(False)
-      End Sub 'InitializeComponent 
+      End Sub
 
       Private customersStyle As New DataGridTableStyle()
       Private groupBox1 As System.Windows.Forms.GroupBox '
@@ -101,14 +100,14 @@ Namespace MyDataGridNamespace
       
       <STAThread()>  Shared Sub Main()
          Application.Run(New MyForm())
-      End Sub 'Main
+      End Sub
       
       
       Private Sub MyFormLoad(sender As Object, e As EventArgs) Handles MyBase.Load
          myDataGrid.SetDataBinding(MakeDataSet(), "Customers")
          ' Add data grid control to form.
          Controls.Add(myDataGrid)
-      End Sub 'MyFormLoad
+      End Sub
       
       Private Function MakeDataSet() As DataSet
          ' Create a DataSet.
@@ -178,7 +177,7 @@ Namespace MyDataGridNamespace
          ' Set selection fore color to selected color.
          customersStyle.SelectionForeColor = myColorDialog.Color
 ' </Snippet1>
-      End Sub 'button1_Click
+      End Sub
 
       Private Sub button2_Click(sender As Object, e As EventArgs) Handles button2.Click
 ' <Snippet2>
@@ -194,6 +193,6 @@ Namespace MyDataGridNamespace
          ' Show information about changes in color setting.  
          MessageBox.Show(myString, "Selection fore color information")
 ' </Snippet2>
-      End Sub 'button2_Click 
-   End Class 'MyForm
+      End Sub
+   End Class
 End Namespace 'MyDataGridNamespace

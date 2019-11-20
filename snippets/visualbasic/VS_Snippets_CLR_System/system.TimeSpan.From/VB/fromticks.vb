@@ -1,7 +1,5 @@
 ﻿'<Snippet1>
 ' Example of the TimeSpan.FromTicks( Long ) method.
-Imports Microsoft.VisualBasic
-
 Module FromTicksDemo
 
     Sub GenTimeSpanFromTicks( ticks As Long )

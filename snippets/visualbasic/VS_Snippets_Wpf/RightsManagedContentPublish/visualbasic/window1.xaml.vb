@@ -2,7 +2,6 @@
 ' Copyright (c) Microsoft Corporation. All rights reserved.
 
 
-Imports System
 Imports System.IO
 Imports System.IO.Packaging
 Imports System.Net
@@ -17,7 +16,6 @@ Imports System.Windows.Media.Imaging
 Imports System.Windows.Xps.Packaging
 Imports System.Xml
 Imports WinForms = Microsoft.Win32
-Imports Microsoft.VisualBasic
 
 Namespace SdkSample
 	' ========================= partial class Window1 ========================
@@ -69,7 +67,7 @@ Namespace SdkSample
 				OpenContent(dialog.FileName)
 			End If
 
-		End Sub ' end:OnOpen()
+		End Sub
 
 
 		' --------------------------- OpenContent ---------------------------
@@ -122,7 +120,7 @@ Namespace SdkSample
 		'''   Performs clean up when the application is closed.</summary>
 		Private Overloads Sub OnClosed(ByVal sender As Object, ByVal e As EventArgs)
 			CloseContent()
-		End Sub ' end:OnClosed()
+		End Sub
 
 
 		' ----------------------------- OnClose ------------------------------
@@ -131,7 +129,7 @@ Namespace SdkSample
 		'''   to close the currently open document.</summary>
 		Private Sub OnClose(ByVal target As Object, ByVal args As ExecutedRoutedEventArgs)
 			CloseContent()
-		End Sub ' end:OnClose()
+		End Sub
 
 
 		' --------------------------- CloseContent --------------------------
@@ -152,7 +150,7 @@ Namespace SdkSample
 			' Close the XrML file.
 			CloseXrML()
 
-		End Sub ' end:CloseContent
+		End Sub
 		#End Region ' File|Close
 
 
@@ -191,7 +189,7 @@ Namespace SdkSample
 				OpenXrML(dialog.FileName)
 			End If
 
-		End Sub ' end:OnRights()
+		End Sub
 
 
 		' ----------------------------- OpenXrML -----------------------------
@@ -239,7 +237,7 @@ Namespace SdkSample
 				WriteStatus("Closed '" & _xrmlFilename & "'")
 				_xrmlFilename = Nothing
 			End If
-		End Sub ' end:CloseXrML
+		End Sub
 		#End Region ' File|Rights...
 
 
@@ -271,7 +269,7 @@ Namespace SdkSample
 			WriteStatus("Publishing '" & _rmContentFilename & "'.")
 			PublishRMContent(_contentFilepath, _xrmlFilepath, dialog.FileName)
 
-		End Sub ' end:OnPublish()
+		End Sub
 
 
 		' ------------------------ PublishRMContent --------------------------
@@ -444,7 +442,7 @@ Namespace SdkSample
 		'''   shutdown and exit the application.</summary>
 		Private Sub OnExit(ByVal sender As Object, ByVal e As EventArgs)
 			Close() ' invokes OnClosed()
-		End Sub ' end:OnExit()
+		End Sub
 		#End Region ' File|Exit
 
 
@@ -580,6 +578,6 @@ Namespace SdkSample
 		#End Region ' private fields
 
 
-	End Class ' end:partial class Window1
+	End Class
 
 End Namespace ' end:namespace SdkSample

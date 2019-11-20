@@ -5,7 +5,6 @@
 ' When the user clicks on the 'Change Mapping Name' button, it changes
 ' mapping name and generates 'MappingNameChanged' event.
 
-Imports System
 Imports System.Drawing
 Imports System.Collections
 Imports System.Windows.Forms
@@ -22,7 +21,7 @@ Public Class MyForm
    Public Sub New()
       InitializeComponent()
       SetUp()
-   End Sub 'New
+   End Sub
 
    Private Sub InitializeComponent()
       myDataGrid = New DataGrid()
@@ -46,16 +45,16 @@ Public Class MyForm
       Name = "Form1"
       Text = "MappingNameChanged Event"
       ResumeLayout(False)
-   End Sub 'InitializeComponent
+   End Sub
 
    Shared Sub Main()
       Application.Run(New MyForm())
-   End Sub 'Main
+   End Sub
 
    Private Sub SetUp()
       MakeDataSet()
       myDataGrid.SetDataBinding(myDataSet, "Orders")
-   End Sub 'SetUp
+   End Sub
 
    Private Sub MakeDataSet()
       myDataSet = New DataSet("myDataSet")
@@ -75,7 +74,7 @@ Public Class MyForm
          myTable.Rows.Add(newRow)
       Next j
       AddCustomColumnStyle()
-   End Sub 'MakeDataSet
+   End Sub
 
 ' <Snippet1>
    Private Sub AddCustomColumnStyle()
@@ -88,12 +87,12 @@ Public Class MyForm
       myDataGrid.TableStyles.Add(myTableStyle)
       AddHandler myColumnStyle.MappingNameChanged, AddressOf columnStyle_MappingNameChanged
       flag = True
-   End Sub 'AddCustomColumnStyle
+   End Sub
 
    ' MappingNameChanged event handler of DataGridColumnStyle.
    Private Sub columnStyle_MappingNameChanged(ByVal sender As Object, ByVal e As EventArgs)
       MessageBox.Show("Mapping Name changed")
-   End Sub 'columnStyle_MappingNameChanged
+   End Sub
 ' </Snippet1>
 
    Private Sub button_Click(ByVal sender As Object, ByVal e As EventArgs)
@@ -111,6 +110,6 @@ Public Class MyForm
          Me.Refresh()
          flag = True
       End If
-   End Sub 'button_Click
-End Class 'MyForm
+   End Sub
+End Class
 

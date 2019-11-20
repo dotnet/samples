@@ -1,5 +1,4 @@
 ﻿
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Data
@@ -66,7 +65,7 @@ Class Window1
         onTabletMenu.Items.Add(touchingMenu)
     
     '<Snippet7>
-    End Sub 'New
+    End Sub
     '</Snippet7>
 
     '<Snippet22>
@@ -76,7 +75,7 @@ Class Window1
         Dim pos As Point = e.GetPosition(textbox1)
         textbox1.AppendText("X: " & pos.X & " Y: " & pos.Y & vbLf)
 
-    End Sub 'textbox1_PreviewStylusUp
+    End Sub
     '</Snippet22>
 
     '<Snippet20>
@@ -89,7 +88,7 @@ Class Window1
             textbox1.AppendText("Pen is not inverted" & vbLf)
         End If
 
-    End Sub 'textbox1_PreviewStylusOutOfRange
+    End Sub
     
     '</Snippet20>
     '<Snippet21>
@@ -102,7 +101,7 @@ Class Window1
             textbox1.AppendText("Pen is not inverted" & vbLf)
         End If
 
-    End Sub 'textbox1_PreviewStylusInRange
+    End Sub
     '</Snippet21>
 
     '<Snippet17>
@@ -111,7 +110,7 @@ Class Window1
 
         textbox1.AppendText(e.SystemGesture.ToString() & vbLf)
 
-    End Sub 'textbox1_PreviewStylusSystemGesture
+    End Sub
     '</Snippet17>
 
     '<Snippet16>
@@ -121,7 +120,7 @@ Class Window1
         Dim pos As Point = e.GetPosition(textbox1)
         textbox1.AppendText("X: " & pos.X & " Y: " & pos.Y & vbLf)
 
-    End Sub 'textbox1_PreviewStylusMove
+    End Sub
     
     '</Snippet16>
     '<Snippet15>
@@ -132,7 +131,7 @@ Class Window1
         element = CType(Stylus.DirectlyOver, Object)
         textbox1.AppendText(element.ToString() & vbLf)
 
-    End Sub 'Window1_PreviewStylusInAirMove
+    End Sub
     
     '</Snippet15>
 
@@ -142,7 +141,7 @@ Class Window1
 
         textbox1.AppendText(e.StylusButton.Name & vbLf)
 
-    End Sub 'textbox1_PreviewStylusButtonUp
+    End Sub
     '</Snippet14>
 
     '<Snippet13>
@@ -151,7 +150,7 @@ Class Window1
 
         textbox1.AppendText(e.StylusButton.Name & vbLf)
 
-    End Sub 'textbox1_PreviewStylusButtonDown
+    End Sub
     '</Snippet13>
     
     '<Snippet12>
@@ -160,7 +159,7 @@ Class Window1
 
         textbox1.AppendText(e.SystemGesture.ToString() & vbLf)
 
-    End Sub 'textbox1_StylusSystemGesture
+    End Sub
     '</Snippet12>
 
     '<Snippet11>
@@ -177,7 +176,7 @@ Class Window1
 
         Clipboard.SetDataObject(textbox1.SelectedText)
 
-    End Sub 'textbox1_StylusButtonUp
+    End Sub
     '</Snippet11>
 
     '<snippet10>
@@ -186,7 +185,7 @@ Class Window1
 
         textbox1.Background = Brushes.White
 
-    End Sub 'textbox1_LostStylusCapture
+    End Sub
     
     
     Private Sub textbox1_GotStylusCapture(ByVal sender As Object, ByVal e As StylusEventArgs) _
@@ -194,7 +193,7 @@ Class Window1
 
         textbox1.Background = Brushes.Red
 
-    End Sub 'textbox1_GotStylusCapture
+    End Sub
     
     '</snippet10>
     Private Sub PressAndHoldSnippets() 
@@ -203,7 +202,7 @@ Class Window1
             Stylus.SetIsPressAndHoldEnabled(horizontalSlider1, True)
         End If
         '</Snippet9>
-    End Sub 'PressAndHoldSnippets 
+    End Sub
     
     '<Snippet4>
     Private originalColor As Brush
@@ -213,7 +212,7 @@ Class Window1
 
         button1.Background = originalColor
 
-    End Sub 'button1_StylusLeave
+    End Sub
     
     Private Sub button1_StylusEnter(ByVal sender As Object, ByVal e As StylusEventArgs) _
         Handles button1.StylusEnter
@@ -221,7 +220,7 @@ Class Window1
         originalColor = button1.Background
         button1.Background = Brushes.Gray
 
-    End Sub 'button1_StylusEnter
+    End Sub
     '</Snippet4>
 
     '<Snippet5>
@@ -234,7 +233,7 @@ Class Window1
             capturedElement.ReleaseStylusCapture()
         End If
 
-    End Sub 'Window1_PreviewStylusDown
+    End Sub
     '</Snippet5>
 
     '<Snippet3>
@@ -245,7 +244,7 @@ Class Window1
         element = CType(Stylus.DirectlyOver, Object)
         textbox1.AppendText(element.ToString() & vbLf)
 
-    End Sub 'Window1_StylusInAirMove
+    End Sub
     '</Snippet3>
 
     '<Snippet2>
@@ -263,7 +262,7 @@ Class Window1
             textbox1.ContextMenu = Nothing
         End If
 
-    End Sub 'textbox1_StylusButtonDown
+    End Sub
     
     '</Snippet2>
     ' Close the context menu when the user taps on another part of the
@@ -272,7 +271,7 @@ Class Window1
 
         textbox1.ContextMenu = Nothing
 
-    End Sub 'textbox1_PreviewStylusDown
+    End Sub
     
     
     '<Snippet1>
@@ -281,7 +280,7 @@ Class Window1
 
         Stylus.Capture(textbox1)
 
-    End Sub 'textbox1_StylusDown
+    End Sub
     
     
     Private Sub textbox1_StylusMove(ByVal sender As Object, ByVal e As StylusEventArgs) _
@@ -290,7 +289,7 @@ Class Window1
         Dim pos As Point = e.GetPosition(textbox1)
         textbox1.AppendText("X: " & pos.X.ToString() & " Y: " & pos.Y.ToString() & vbLf)
 
-    End Sub 'textbox1_StylusMove
+    End Sub
 
 
     Private Sub textbox1_StylusUp(ByVal sender As Object, ByVal e As StylusEventArgs) _
@@ -298,7 +297,7 @@ Class Window1
 
         Stylus.Capture(textbox1, CaptureMode.None)
 
-    End Sub 'textbox1_StylusUp
+    End Sub
 
     '</Snippet1>
     '<Snippet8>
@@ -312,14 +311,14 @@ Class Window1
             textbox1.SelectedText = ""
         End If
 
-    End Sub 'TextBoxStylusUp
+    End Sub
 
     '</Snippet8>
     Private Sub WriteEventName(ByVal name As String)
         textbox1.AppendText(name & vbLf)
         textbox1.ScrollToEnd()
 
-    End Sub 'WriteEventName
+    End Sub
     'this.CaretIndex = this.Text.Length - 1;
 
     '<Snippet23>
@@ -345,8 +344,8 @@ Class Window1
     Private Sub Button1Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
         Me.textbox1.Text = ""
 
-    End Sub 'Button1Click 
-End Class 'Window1 
+    End Sub
+End Class
 'Stylus.Capture(textbox1);
 '
 'ToDo: Error processing original source shown below

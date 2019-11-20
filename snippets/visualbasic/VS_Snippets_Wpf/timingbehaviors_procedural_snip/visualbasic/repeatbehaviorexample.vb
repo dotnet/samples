@@ -5,13 +5,11 @@
 '
 
 
-Imports System
 Imports System.Windows
 Imports System.Windows.Controls
 Imports System.Windows.Media
 Imports System.Windows.Shapes
 Imports System.Windows.Media.Animation
-Imports Microsoft.VisualBasic
 
 Namespace Microsoft.Samples.Animation.TimingBehaviors
 	Partial Public Class RepeatBehaviorExample
@@ -21,12 +19,12 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
 			' Create a name scope for the page.
 			NameScope.SetNameScope(Me, New NameScope())
 
-			Me.WindowTitle = "RepeatBehavior Example"
+			WindowTitle = "RepeatBehavior Example"
 
             Dim myBorder As New Border With {
                 .HorizontalAlignment = HorizontalAlignment.Stretch
             }
-            Me.Content = myBorder
+            Content = myBorder
 
             Dim myStackPanel As New StackPanel With {
                 .Margin = New Thickness(20)
@@ -55,7 +53,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
             Dim foreverRepeatingRectangle As New Rectangle With {
                 .Name = "foreverRepeatingRectangle"
             }
-            Me.RegisterName(foreverRepeatingRectangle.Name, foreverRepeatingRectangle)
+            RegisterName(foreverRepeatingRectangle.Name, foreverRepeatingRectangle)
 			mySolidColorBrush = New SolidColorBrush(Color.FromArgb(170,51,51,255))
 			foreverRepeatingRectangle.Fill = mySolidColorBrush
 			foreverRepeatingRectangle.Width = 50
@@ -73,7 +71,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
             Dim fourSecondsRepeatingRectangle As New Rectangle With {
                 .Name = "fourSecondsRepeatingRectangle"
             }
-            Me.RegisterName(fourSecondsRepeatingRectangle.Name, fourSecondsRepeatingRectangle)
+            RegisterName(fourSecondsRepeatingRectangle.Name, fourSecondsRepeatingRectangle)
 			fourSecondsRepeatingRectangle.Fill= mySolidColorBrush
 			fourSecondsRepeatingRectangle.Width = 50
 			fourSecondsRepeatingRectangle.Height = 20
@@ -88,7 +86,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
             Dim twiceRepeatingRectangle As New Rectangle With {
                 .Name = "twiceRepeatingRectangle"
             }
-            Me.RegisterName(twiceRepeatingRectangle.Name, twiceRepeatingRectangle)
+            RegisterName(twiceRepeatingRectangle.Name, twiceRepeatingRectangle)
 			twiceRepeatingRectangle.Fill = mySolidColorBrush
 			twiceRepeatingRectangle.Width = 50
 			twiceRepeatingRectangle.Height = 20
@@ -103,7 +101,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
             Dim halfRepeatingRectangle As New Rectangle With {
                 .Name = "halfRepeatingRectangle"
             }
-            Me.RegisterName(halfRepeatingRectangle.Name, halfRepeatingRectangle)
+            RegisterName(halfRepeatingRectangle.Name, halfRepeatingRectangle)
 
 			halfRepeatingRectangle.Fill = mySolidColorBrush
 			halfRepeatingRectangle.Width = 50
@@ -119,7 +117,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
             Dim oneSecondRepeatingRectangle As New Rectangle With {
                 .Name = "oneSecondRepeatingRectangle"
             }
-            Me.RegisterName(oneSecondRepeatingRectangle.Name, oneSecondRepeatingRectangle)
+            RegisterName(oneSecondRepeatingRectangle.Name, oneSecondRepeatingRectangle)
 			oneSecondRepeatingRectangle.Fill = mySolidColorBrush
 			oneSecondRepeatingRectangle.Width = 50
 			oneSecondRepeatingRectangle.Height = 20
@@ -204,14 +202,14 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
             Dim myRestartButton As New Button With {
                 .Name = "restartButton"
             }
-            Me.RegisterName(myRestartButton.Name, myRestartButton)
+            RegisterName(myRestartButton.Name, myRestartButton)
 			myRestartButton.Content = "Start Animations"
 			myStackPanel1.Children.Add(myRestartButton)
 
             Dim myStopButton As New Button With {
                 .Name = "stopButton"
             }
-            Me.RegisterName(myStopButton.Name, myStopButton)
+            RegisterName(myStopButton.Name, myStopButton)
 			myStopButton.Content = "Stop"
 			mySolidColorBrush = New SolidColorBrush(Color.FromArgb(102,153,0,255))
 			myStopButton.Background = mySolidColorBrush
@@ -223,7 +221,7 @@ Namespace Microsoft.Samples.Animation.TimingBehaviors
             Dim myBeginStoryboard As New BeginStoryboard With {
                 .Name = "myBeginStoryboard"
             }
-            Me.RegisterName(myBeginStoryboard.Name,myBeginStoryboard)
+            RegisterName(myBeginStoryboard.Name,myBeginStoryboard)
 			myBeginStoryboard.Storyboard = myStoryboard
 
             Dim myEventTrigger As New EventTrigger With {

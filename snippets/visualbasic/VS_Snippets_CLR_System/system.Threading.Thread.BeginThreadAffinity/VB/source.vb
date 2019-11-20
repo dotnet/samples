@@ -15,11 +15,11 @@ Friend Class MyUtility
         Thread.EndThreadAffinity()
         '
         ' More code that does not have thread affinity.
-    End Sub 'PerformTask
-End Class 'MyUtility 
+    End Sub
+End Class
 '</Snippet1>
 
 Public Class Dummy    
     Public Shared Sub Main() 
-    End Sub 'Main
-End Class 'Dummy
+    End Sub
+End Class

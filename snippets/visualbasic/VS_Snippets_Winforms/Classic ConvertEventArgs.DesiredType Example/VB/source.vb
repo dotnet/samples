@@ -1,7 +1,6 @@
 ﻿Option Explicit
 Option Strict
 
-Imports System
 Imports System.Data
 Imports System.ComponentModel
 Imports System.Globalization
@@ -30,5 +29,5 @@ Public Class Form1
     NumberStyles.Currency, nothing)
    End Sub 
     ' </Snippet1>
-End Class 'Form1 
+End Class
 

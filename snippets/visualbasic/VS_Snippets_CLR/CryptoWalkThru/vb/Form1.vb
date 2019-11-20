@@ -1,7 +1,6 @@
 ﻿Imports System.IO
 Imports System.Security.Cryptography
 Imports System.Xml
-Imports Microsoft.VisualBasic
 Imports System.Diagnostics
 
 Public Class Form1

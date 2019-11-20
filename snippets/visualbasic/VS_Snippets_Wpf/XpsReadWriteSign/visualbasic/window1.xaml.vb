@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Windows
+﻿Imports System.Windows
 Imports System.Windows.Forms
 Imports System.Windows.Controls
 Imports System.Windows.Data
@@ -122,7 +121,7 @@ Namespace SDKSample
                 End If
             End Using
             EnableMenuItems()
-        End Sub ' end:OpenCommandHandler()
+        End Sub
 
 
         ' ----------------------- OutlineCommandHandler ----------------------
@@ -135,7 +134,7 @@ Namespace SDKSample
             If _xpsDocument IsNot Nothing Then
                 _xpsReadWriteUtility.IterateXpsPackageParts(_xpsDocument, treeView, _fileName)
             End If
-        End Sub ' end:OutlineCommandHandler()
+        End Sub
 
 
         ' ---------------------- SignatureCommandHandler ---------------------
@@ -154,7 +153,7 @@ Namespace SDKSample
                 _xpsDocument.Close()
                 _xpsDocument = New XpsDocument(_fileName, FileAccess.ReadWrite)
             End If
-        End Sub ' end:SignatureCommandHandler()
+        End Sub
 
         ' ---------------------- ThumbnailCommandHandler ---------------------
         ''' <summary>
@@ -171,7 +170,7 @@ Namespace SDKSample
                 _xpsDocument.Close()
                 _xpsDocument = New XpsDocument(_fileName, FileAccess.ReadWrite)
             End If
-        End Sub ' end:ThumbnailCommandHandler()
+        End Sub
 
         ' ------------------------- NewCommandHandler ------------------------
         ''' <summary>
@@ -218,7 +217,7 @@ Namespace SDKSample
             End Using
 
             EnableMenuItems()
-        End Sub ' end:NewCommandHandler()
+        End Sub
 
 
         ' ---------------------- ProportiesCommandHandler --------------------
@@ -231,7 +230,7 @@ Namespace SDKSample
             Using properties As New PropertiesDialog(_xpsDocument)
                 properties.ShowDialog()
             End Using
-        End Sub ' end:ProportiesCommandHandler()
+        End Sub
 
 
         ' ------------------------ CloseCommandHandler -----------------------
@@ -242,7 +241,7 @@ Namespace SDKSample
         Private Sub CloseCommandHandler(sender As Object, e As ExecutedRoutedEventArgs)
 			Me.Close()
 			EnableMenuItems()
-		End Sub ' end:CloseCommandHandler()
+		End Sub
 
 
 		' ------------------------ AddCommandBindings ------------------------
@@ -254,7 +253,7 @@ Namespace SDKSample
 			Dim cmdBindings As New CommandBinding(command)
 			AddHandler cmdBindings.Executed, handler
 			CommandBindings.Add(cmdBindings)
-		End Sub ' end:AddCommandBindings()
+		End Sub
 
 
 		' -------------------------- EnableMenuItems -------------------------
@@ -272,7 +271,7 @@ Namespace SDKSample
 				OutlineMenuItem.IsEnabled = False
 				ThumbnailItem.IsEnabled = False
 			End If
-		End Sub ' end:EnableMenuItems()
+		End Sub
 		#End Region ' Private Methods
 
 		#Region "Private Members"
@@ -284,6 +283,6 @@ Namespace SDKSample
 		Private Shared ThumbnailCommand As RoutedCommand
 		#End Region '  Private Members
 
-	End Class ' end:partial class Window1
+	End Class
 
 End Namespace ' end:namespace

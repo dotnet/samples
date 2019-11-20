@@ -23,7 +23,7 @@ Public Class Test
 
 		'Open the stream and read it back.
 		fs = fi.Open(FileMode.Open, FileAccess.Read)
-		Dim b(1024) As byte
+		Dim b(1023) As byte
 		Dim temp As UTF8Encoding = New UTF8Encoding(true)
 
 		Do While fs.Read(b,0,b.Length) > 0

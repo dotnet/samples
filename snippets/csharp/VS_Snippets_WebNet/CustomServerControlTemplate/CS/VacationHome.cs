@@ -103,10 +103,7 @@ namespace Samples.AspNet.CS.Controls
             ownerValue = new TemplateOwner();
 
             ITemplate temp = templateValue;
-            if (temp == null)
-            {
-                temp = new DefaultTemplate();
-            }
+            temp ??= new DefaultTemplate();
 
             temp.InstantiateIn(ownerValue);
             this.Controls.Add(ownerValue);

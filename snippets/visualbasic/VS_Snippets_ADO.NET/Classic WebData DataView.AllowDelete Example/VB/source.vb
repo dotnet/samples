@@ -11,7 +11,7 @@ Protected DataGrid1 As DataGrid
 
 ' <Snippet1>
 Private Sub CheckAllowDelete(rowToDelete As DataRow)
-    Dim view As DataView = New DataView(DataSet1.Tables("Suppliers"))
+    Dim view As New DataView(DataSet1.Tables("Suppliers"))
     If view.AllowDelete Then
     rowToDelete.Delete()
     End If

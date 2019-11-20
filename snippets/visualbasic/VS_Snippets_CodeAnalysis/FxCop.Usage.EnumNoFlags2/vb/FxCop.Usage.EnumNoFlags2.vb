@@ -1,7 +1,7 @@
 ﻿'<Snippet1>
 Namespace Samples
 
-    <FlagsAttribute()> _
+    <Flags()> _
     Public Enum Days
 
         None = 0

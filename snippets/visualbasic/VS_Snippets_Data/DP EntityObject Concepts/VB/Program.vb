@@ -1,6 +1,7 @@
 ﻿Imports System.Data
 Imports System.Data.Objects
 Imports System.Data.Objects.DataClasses
+
 Namespace Microsoft.Samples.Edm
     Module Program
         Sub Main()

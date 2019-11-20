@@ -1,9 +1,6 @@
 ﻿' <Snippet1>
 Imports System.Security
 Imports System.Security.Permissions
-Imports Microsoft.VisualBasic
-
-
 
 Public Class GacIdentityPermissionDemo
 
@@ -209,8 +206,8 @@ Public Class GacIdentityPermissionDemo
             Dim consoleInput As String = Console.ReadLine()
             System.Environment.ExitCode = 101
         End Try
-    End Sub 'Main
-End Class 'GacIdentityPermissionDemo
+    End Sub
+End Class
 
 
 

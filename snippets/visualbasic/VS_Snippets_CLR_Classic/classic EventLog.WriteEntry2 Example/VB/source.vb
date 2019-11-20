@@ -13,6 +13,6 @@ Class MySample
         
         ' Write an informational entry to the event log.    
         myLog.WriteEntry("Writing warning to event log.", EventLogEntryType.Warning)
-    End Sub ' Main 
-End Class ' MySample
+    End Sub
+End Class
 ' </Snippet1>

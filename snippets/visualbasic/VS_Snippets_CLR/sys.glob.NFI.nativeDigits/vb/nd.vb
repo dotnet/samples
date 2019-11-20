@@ -17,8 +17,8 @@ Class Sample
         Next s
         Console.WriteLine()
     
-    End Sub 'Main
-End Class 'Sample
+    End Sub
+End Class
 
 'This code example produces the following results:
 '

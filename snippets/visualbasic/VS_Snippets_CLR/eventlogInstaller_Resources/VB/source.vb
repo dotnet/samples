@@ -56,10 +56,10 @@
          ' Add myEventLogInstaller to the installer collection.
          Installers.Add(myEventLogInstaller)
 
-      End Sub 'New
+      End Sub
 
       Public Shared Sub Main()
         Console.WriteLine("Usage: InstallUtil.exe [<install>.exe | <install>.dll]")
-      End Sub 'Main
-   End Class 'MyEventLogInstaller
+      End Sub
+   End Class
 '</Snippet1>

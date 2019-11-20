@@ -8,7 +8,7 @@ Public Class Page1
     ' <Snippet1>
     Sub Page_Load(sender As Object, e As EventArgs)
         Dim link As New HyperLink()
-    End Sub 'Page_Load
+    End Sub
     ' </Snippet1>
-End Class 'Page1 
+End Class
 
