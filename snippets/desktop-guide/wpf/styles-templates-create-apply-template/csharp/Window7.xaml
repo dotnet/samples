@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Template Intro Sample" SizeToContent="WidthAndHeight" MinWidth="250">
     <Window.Resources>
-        <!--<SnippetFinalTemplate-->
+        <!--<FinalTemplate>-->
         <ControlTemplate x:Key="roundbutton" TargetType="Button">
             <Grid>
                 <VisualStateManager.VisualStateGroups>
@@ -34,7 +34,7 @@
                 <ContentPresenter x:Name="contentPresenter" HorizontalAlignment="Center" VerticalAlignment="Center" />
             </Grid>
         </ControlTemplate>
-        <!--</SnippetFinalTemplate-->
+        <!--</FinalTemplate>-->
     </Window.Resources>
     <StackPanel Margin="10">
         <Label>Unstyled Button</Label>

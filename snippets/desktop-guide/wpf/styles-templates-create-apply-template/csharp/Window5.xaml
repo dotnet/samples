@@ -13,14 +13,14 @@
                 <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
             </Grid>
             <ControlTemplate.Triggers>
-                <!--<SnippetMouseOver-->
+                <!--<SnippetMouseOver>-->
                 <Trigger Property="IsMouseOver" Value="true">
                     <Setter Property="Fill" TargetName="backgroundElement" Value="AliceBlue"/>
                 </Trigger>
                 <!--</SnippetMouseOver>-->
             </ControlTemplate.Triggers>
         </ControlTemplate>
-        <!--<SnippetCleanTemplate-->
+        <!--<SnippetCleanTemplate>-->
         <ControlTemplate x:Key="roundbutton" TargetType="Button">
             <Grid>
                 <Ellipse x:Name="backgroundElement" Fill="{TemplateBinding Background}" Stroke="{TemplateBinding Foreground}" />
