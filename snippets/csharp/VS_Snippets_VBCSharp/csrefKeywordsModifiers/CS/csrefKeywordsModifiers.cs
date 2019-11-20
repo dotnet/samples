@@ -228,8 +228,7 @@ namespace csrefKeywordsModifiers
         protected virtual void RaiseSampleEvent()
         {
             // Raise the event by using the () operator.
-            if (SampleEvent != null)
-                SampleEvent(this, new SampleEventArgs("Hello"));
+            SampleEvent?.Invoke(this, new SampleEventArgs("Hello"));
         }
     }
     //</snippet7>
