@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SimpleCalculator2</RootNamespace>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <StartupObject>SimpleCalculator2.Program</StartupObject>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ExtendedOperations\**" />
+    <Compile Remove="MefCalculator\**" />
+    <EmbeddedResource Remove="ExtendedOperations\**" />
+    <EmbeddedResource Remove="MefCalculator\**" />
+    <None Remove="ExtendedOperations\**" />
+    <None Remove="MefCalculator\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Composition" Version="4.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="ExtendedOperations\ExtendedOperations.vbproj">
+      <Private>false</Private>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="MefCalculator\MefCalculator.vbproj">
+      <Private>true</Private>
+    </ProjectReference>
+  </ItemGroup>
+
+  <PropertyGroup>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+  
+</Project>

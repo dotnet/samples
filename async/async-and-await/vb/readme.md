@@ -1,17 +1,17 @@
 ---
 languages:
 - vb
-products:
+ products:
 - dotnet-core
 - windows
 page_type: sample
-name: "Async Sample: Asynchronous Programming with Async and Await in Visual Basic"
+name: "Async Sample: Asynchronous Programming with Async and Await"
 urlFragment: "async-and-await-vb"
 description: "A .NET Core WPF application that contains the example method from Asynchronous Progamming with Async and Await in Visual Basic."
 ---
-# Async programming with async and await in Visual Basic
+# Introduction
 
-This sample is a WPF application written in Visual Basic that contains the example method from [Asynchronous Progamming with Async and Await in Visual Basic](https://docs.microsoft.com/dotnet/visual-basic/programming-guide/concepts/async/). The article gives an overview of asynchronous programming, including when to use it and how to write an Async method. This sample contains an Async function that is used as an illustration.
+This sample is a WPF application that contains the example method from [Asynchronous Progamming with Async and Await in Visual Basic](https://docs.microsoft.com/dotnet/visual-basic/programming-guide/concepts/async/). The topic gives an overview of asynchronous programming, including when to use it and how to write an Async method. This sample contains an Async function that is used as an illustration.
 
 [Async](https://docs.microsoft.com/dotnet/visual-basic/language-reference/modifiers/async) and [Await](https://docs.microsoft.com/dotnet/visual-basic/language-reference/operators/await-operator) provide all the advantages of traditional asynchronous programming, but with much less effort from the developer. The compiler does the difficult work that the developer used to do, yet the code retains a logical structure that resembles synchronous code.
 

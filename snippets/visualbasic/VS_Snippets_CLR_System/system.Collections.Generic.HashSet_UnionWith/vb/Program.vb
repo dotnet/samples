@@ -6,6 +6,7 @@ Class Program
     '<snippet02>
     Shared Sub Main()
 
+        '<snippet03>
         Dim evenNumbers As HashSet(Of Integer) = New HashSet(Of Integer)()
         Dim oddNumbers As HashSet(Of Integer) = New HashSet(Of Integer)()
 
@@ -17,6 +18,7 @@ Class Program
             ' Populate oddNumbers with only odd numbers.
             oddNumbers.Add((i * 2) + 1)
         Next i
+        '</snippet03>
 
         Console.Write("evenNumbers contains {0} elements: ", evenNumbers.Count)
         DisplaySet(evenNumbers)
