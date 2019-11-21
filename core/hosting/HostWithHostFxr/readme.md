@@ -8,7 +8,8 @@ Key Features
 
 Demonstrates how to locate and initialize .NET Core 3.0 from a non-.NET Core process and subsequently load and call into  a .NET Core assembly.
 
-The `nethost` header and library are part of the Microsoft.NETCore.DotNetAppHost package and are also installed as a runtime pack by the .NET SDK. The library should be deployed alongside the host. This sample uses the files installed with the .NET SDK.
+The `nethost` header and library are part of the `Microsoft.NETCore.DotNetAppHost` package and are also installed as a runtime pack by the .NET SDK. The library should be deployed alongside the host. This sample uses the files installed with the .NET SDK.  
+*Note: The `Microsoft.NETCore.DotNetAppHost` package is just a meta package which itself doesn't contain the files. It only references RID specific packages which do. So for example the package with the actual files for `linux-x64` is `runtime.linux-x64.Microsoft.NETCore.DotNetAppHost`.*
 
 The `coreclr_delegates.h` and `hostfxr.h` files are copied from the [core-setup](https://github.com/dotnet/core-setup) repo.
 
