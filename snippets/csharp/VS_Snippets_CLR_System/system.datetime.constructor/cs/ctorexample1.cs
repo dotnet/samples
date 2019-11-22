@@ -29,7 +29,7 @@ public class Example
          // <Snippet3>
          DateTime date1 = new DateTime(2010, 8, 18, 16, 32, 0);
          Console.WriteLine(date1.ToString());
-         // The example displays the following output:
+         // The example displays the following output, in this case for en-us culture:
          //      8/18/2010 4:32:00 PM
          // </Snippet3>
       }
@@ -39,7 +39,7 @@ public class Example
          // <Snippet5>
          DateTime date1 = new DateTime(2010, 8, 18, 16, 32, 18, 500);
          Console.WriteLine(date1.ToString("M/dd/yyyy h:mm:ss.fff tt"));
-         // The example displays the following output:
+         // The example displays the following output, in this case for en-us culture:
          //      8/18/2010 4:32:18.500 PM
          // </Snippet5>
       }
@@ -49,7 +49,7 @@ public class Example
          // <Snippet7>
          DateTime date1 = new DateTime(2010, 8, 18, 16, 32, 0, DateTimeKind.Local);
          Console.WriteLine("{0} {1}", date1, date1.Kind);
-         // The example displays the following output:
+         // The example displays the following output, in this case for en-us culture:
          //      8/18/2010 4:32:00 PM Local
          // </Snippet7>
       }
@@ -60,7 +60,7 @@ public class Example
          DateTime date1 = new DateTime(2010, 8, 18, 16, 32, 18, 500, 
                                        DateTimeKind.Local);
          Console.WriteLine("{0:M/dd/yyyy h:mm:ss.fff tt} {1}", date1, date1.Kind);
-         // The example displays the following output:
+         // The example displays the following output, in this case for en-us culture:
          //      8/18/2010 4:32:18.500 PM Local
          // </Snippet8>
       }
