@@ -227,9 +227,8 @@ namespace csrefKeywordsModifiers
         // to enable derived classes to raise the event.
         protected virtual void RaiseSampleEvent()
         {
-            // Raise the event by using the () operator.
-            if (SampleEvent != null)
-                SampleEvent(this, new SampleEventArgs("Hello"));
+            // Raise the event in a thread-safe manner using the ?. operator.
+            SampleEvent?.Invoke(this, new SampleEventArgs("Hello"));
         }
     }
     //</snippet7>
