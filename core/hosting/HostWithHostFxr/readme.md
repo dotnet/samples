@@ -18,7 +18,7 @@ Additional comments are contained in source and project files.
 Prerequisites
 ------------
 
-* .NET Core 3.0 (at least Preview 7) - [https://dot.net](https://github.com/dotnet/core-sdk#installers-and-binaries)
+* .NET Core SDK 3.0 - https://dotnet.microsoft.com/download
 
 * C++ compiler
   * Windows: `cl.exe`
