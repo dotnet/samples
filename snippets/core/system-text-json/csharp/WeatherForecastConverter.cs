@@ -8,6 +8,7 @@ namespace SystemTextJsonSamples
     {
         public override WeatherForecast Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
+            // Location for OnDeserializing "callback" code.
             Console.WriteLine("OnDeserializing");
             if (reader.TokenType != JsonTokenType.StartObject)
             {
@@ -20,7 +21,13 @@ namespace SystemTextJsonSamples
             {
                 if (reader.TokenType == JsonTokenType.EndObject)
                 {
+                    // Location for OnDeserialized "callback" code.
                     Console.WriteLine("OnDeserialized");
+                    // Check for required fields set by values in JSON
+                    if (wf.Date == default(DateTimeOffset))
+                    {
+                        throw new JsonException("Required property not received in the JSON");
+                    };
                     return wf;
                 }
 
@@ -31,9 +38,10 @@ namespace SystemTextJsonSamples
                     switch (propertyName)
                     {
                         case "Date":
+                            // Avoid exception on getting null in JSON for a non-null value type.
                             if (reader.TokenType == JsonTokenType.Null)
                             {
-                                wf.Date = DateTimeOffset.MinValue;
+                                wf.Date = DateTimeOffset.Now;
                             }
                             else
                             {
@@ -47,6 +55,7 @@ namespace SystemTextJsonSamples
                             break;
                         case "Summary":
                             string summary = reader.GetString();
+                            // Ignore properties in JSON based on criteria evaluated at runtime.
                             if (wf.TemperatureCelsius != 0)
                             {
                                 wf.Summary = summary;
@@ -61,6 +70,7 @@ namespace SystemTextJsonSamples
 
         public override void Write(Utf8JsonWriter writer, WeatherForecast wf, JsonSerializerOptions options)
         {
+            // Location for OnSerializing "callback" code.
             Console.WriteLine("OnSerializing");
 
             writer.WriteStartObject();
@@ -74,8 +84,8 @@ namespace SystemTextJsonSamples
 
             writer.WriteEndObject();
 
+            // Location for Onserialized "callback" code.
             Console.WriteLine("OnSerialized");
-
         }
     }
 }

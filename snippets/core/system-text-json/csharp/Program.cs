@@ -79,6 +79,9 @@ namespace SystemTextJsonSamples
             Console.WriteLine("\n============================= Custom converter inferred types to Object\n");
             ConvertInferredTypesToObject.Run();
 
+            Console.WriteLine("\n============================= Custom converter long to string\n");
+            ConvertLongToString.Run();
+
             Console.WriteLine("\n============================= Callbacks\n");
             Callbacks.Run();
 

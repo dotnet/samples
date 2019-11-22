@@ -13,6 +13,14 @@ namespace SystemTextJsonSamples
     }
     // </SnippetWF>
 
+    public class WeatherForecastWithLong
+    {
+        public DateTimeOffset Date { get; set; }
+        [JsonConverter(typeof(LongToStringConverter))]
+        public long TemperatureCelsius { get; set; }
+        public string Summary { get; set; }
+    }
+
     // <SnippetWFWithDefault>
     public class WeatherForecastWithDefault
     {
@@ -171,6 +179,12 @@ namespace SystemTextJsonSamples
             Console.WriteLine();
         }
 
+        public static void DisplayPropertyValues(this WeatherForecastWithLong wf)
+        {
+            Utilities.DisplayPropertyValues(wf);
+            Console.WriteLine();
+        }
+
         public static void DisplayPropertyValues(this WeatherForecastWithDefault wf)
         {
             Utilities.DisplayPropertyValues(wf);
@@ -281,6 +295,17 @@ namespace SystemTextJsonSamples
         public static WeatherForecast CreateWeatherForecast()
         {
             var weatherForecast = new WeatherForecast
+            {
+                Date = DateTime.Parse("2019-08-01"),
+                TemperatureCelsius = 25,
+                Summary = "Hot"
+            };
+            return weatherForecast;
+        }
+
+        public static WeatherForecastWithLong CreateWeatherForecastWithLong()
+        {
+            var weatherForecast = new WeatherForecastWithLong
             {
                 Date = DateTime.Parse("2019-08-01"),
                 TemperatureCelsius = 25,
