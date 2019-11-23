@@ -24,7 +24,7 @@ Public Class Test
         ' This code is written by an application developer.
         ' Create a channel factory.
         Dim myBinding As New BasicHttpBinding
-	Dim myEndpoint As New EndpointAddress("http://localhost/MathService/Ep1")
+        Dim myEndpoint As New EndpointAddress("http://localhost/MathService/Ep1")
 
         Dim myChannelFactory As ChannelFactory(Of IMath) = _
         New ChannelFactory(Of IMath) (myBinding, myEndpoint) 

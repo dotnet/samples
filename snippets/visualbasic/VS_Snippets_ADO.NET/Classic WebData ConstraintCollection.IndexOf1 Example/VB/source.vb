@@ -17,7 +17,7 @@ Private Sub RemoveConstraint _
         End If
 
     Catch e As Exception
-	' Process exception and return.
+    ' Process exception and return.
         Console.WriteLine("Exception of type {0} occurred.", _
             e.GetType().ToString())
     End Try
