@@ -45,7 +45,7 @@ Public Class SamPle
         For Each table in dataSet.Tables 
             Console.WriteLine(table.TableName)
             For Each column In table.Columns 
-                Console.WriteLine("${column.ColumnName} ")
+                Console.WriteLine($"{column.ColumnName} ")
             Next
             Console.WriteLine()
         Next
