@@ -1,10 +1,10 @@
-﻿// <Snippet2>
-using System;
+﻿using System;
 
 public class SamplesArray2
 {
     public static void Main()
     {
+        // <Snippet2>
         // Creates and initializes a new three-dimensional Array of type Int32.
         Array myArr = Array.CreateInstance(typeof(Int32), 2, 3, 4);
         for (int i = myArr.GetLowerBound(0); i <= myArr.GetUpperBound(0); i++)
@@ -30,44 +30,42 @@ public class SamplesArray2
         // Displays the contents of the Array.
         Console.WriteLine("The Array contains the following values:");
         PrintValues(myArr);
-    }
 
-
-    public static void PrintValues(Array myArr)
-    {
-        System.Collections.IEnumerator myEnumerator = myArr.GetEnumerator();
-        int i = 0;
-        int cols = myArr.GetLength(myArr.Rank - 1);
-        while (myEnumerator.MoveNext())
+        void PrintValues(Array myArray)
         {
-            if (i < cols)
+            System.Collections.IEnumerator myEnumerator = myArray.GetEnumerator();
+            int i = 0;
+            int cols = myArray.GetLength(myArray.Rank - 1);
+            while (myEnumerator.MoveNext())
             {
-                i++;
+                if (i < cols)
+                {
+                    i++;
+                }
+                else
+                {
+                    Console.WriteLine();
+                    i = 1;
+                }
+                Console.Write("\t{0}", myEnumerator.Current);
             }
-            else
-            {
-                Console.WriteLine();
-                i = 1;
-            }
-            Console.Write("\t{0}", myEnumerator.Current);
+            Console.WriteLine();
         }
-        Console.WriteLine();
+        // This code produces the following output.
+
+        // The Array has 3 dimension(s) and a total of 24 elements.
+        //     Length    Lower    Upper
+        // 0:  2    0    1
+        // 1:  3    0    2
+        // 2:  4    0    3
+        //
+        // The Array contains the following values:
+        //    0      1      2      3
+        //    10     11     12     13
+        //    20     21     22     23
+        //    100    101    102    103
+        //    110    111    112    113
+        //    120    121    122    123
+        // </Snippet2>
     }
 }
-/* 
-This code produces the following output.
-
-The Array has 3 dimension(s) and a total of 24 elements.
-    Length    Lower    Upper
-0:    2    0    1
-1:    3    0    2
-2:    4    0    3
-The Array contains the following values:
-    0    1    2    3
-    10    11    12    13
-    20    21    22    23
-    100    101    102    103
-    110    111    112    113
-    120    121    122    123
-*/
-// </Snippet2>

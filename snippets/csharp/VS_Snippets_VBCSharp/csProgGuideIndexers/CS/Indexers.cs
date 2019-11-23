@@ -208,38 +208,38 @@ namespace Wrap2
     //<Snippet5>
     public class BaseClass
     {
-        private string name = "Name-BaseClass";
-        private string id = "ID-BaseClass";
+        private string _name = "Name-BaseClass";
+        private string _id = "ID-BaseClass";
 
         public string Name
         {
-            get { return name; }
+            get { return _name; }
             set { }
         }
 
         public string Id
         {
-            get { return id; }
+            get { return _id; }
             set { }
         }
     }
 
     public class DerivedClass : BaseClass
     {
-        private string name = "Name-DerivedClass";
-        private string id = "ID-DerivedClass";
+        private string _name = "Name-DerivedClass";
+        private string _id = "ID-DerivedClass";
 
         new public string Name
         {
             get
             {
-                return name;
+                return _name;
             }
 
-            // Using "protected" would make the set accessor not accessible. 
+            // Using "protected" would make the set accessor not accessible.
             set
             {
-                name = value;
+                _name = value;
             }
         }
 
@@ -249,11 +249,11 @@ namespace Wrap2
         {
             get
             {
-                return id;
+                return _id;
             }
             set
             {
-                id = value;
+                _id = value;
             }
         }
     }
@@ -291,17 +291,17 @@ class Test
 {
 
     //<Snippet6>
-    private string name = "Hello";
+    private string _name = "Hello";
 
     public string Name
     {
         get
         {
-            return name;
+            return _name;
         }
         protected set
         {
-            name = value;
+            _name = value;
         }
     }
     //</Snippet6>

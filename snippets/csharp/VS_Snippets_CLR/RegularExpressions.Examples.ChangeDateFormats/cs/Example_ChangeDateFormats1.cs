@@ -18,7 +18,7 @@ public class Class1
    {
       try {
          return Regex.Replace(input, 
-               "\\b(?<month>\\d{1,2})/(?<day>\\d{1,2})/(?<year>\\d{2,4})\\b",
+                @"\b(?<month>\d{1,2})/(?<day>\d{1,2})/(?<year>\d{2,4})\b",
                "${day}-${month}-${year}", RegexOptions.None,
                TimeSpan.FromMilliseconds(150));
       }         

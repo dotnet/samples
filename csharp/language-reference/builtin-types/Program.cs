@@ -9,6 +9,14 @@ namespace builtin_types
             Console.WriteLine("======== Unmanaged types =========");
             UnmanagedTypes.Main();
             Console.WriteLine();
+
+            Console.WriteLine("====== Nullable value types ======");
+            NullableValueTypes.Examples();
+            Console.WriteLine();
+
+            Console.WriteLine("============ char type ===========");
+            CharType.Examples();
+            Console.WriteLine();
         }
     }
 }

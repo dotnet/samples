@@ -3,33 +3,72 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger:
+trigger: 
 - master
 
 pr: none
-#- master
 
+jobs:
+- job:
+  condition: eq(1,0)
+  displayName: 'Run CI on Windows'
 
-pool:
-  vmImage: '$(VMIMAGE)'
+  pool:
+    vmImage: '$(VMIMAGE)'
 
-steps:
+  steps:
 
-- checkout: self
-  path: dotnet-samples
-  persistCredentials: true
-  displayName: 'Check out dotnet/samples repo'
+  - checkout: self
+    path: dotnet-samples
+    persistCredentials: true
+    displayName: 'Check out dotnet/samples repo'
 
-- script: |
-    git clone -c http.extraheader="AUTHORIZATION: bearer $SYSTEM_ACCESSTOKEN" "https://constructors.visualstudio.com/_git/MicrosoftSamples" "$(Agent.BuildDirectory)/ci"
-  env:
-    SYSTEM_ACCESSTOKEN: $(System.AccessToken)
-  displayName: 'Clone DevOps repo'
+  - script: |
+      git clone https://blah:$(toolstoken)@dev.azure.com/mseng/TechnicalContent/_git/dotnet-docs-tools ../dotnet-docs-tools
+    displayName: "Clone tools repo"
 
-- script: |
-    echo Init dotnet
-    dotnet help &> /dev/null
-    echo Find projects in dotnet-samples folder 
-    dotnet run -- $(Agent.BuildDirectory)/dotnet-samples/core
-  displayName: 'Run find-projects tool'
-  workingDirectory: $(Agent.BuildDirectory)/ci/find-projects
+  - script: |
+      echo Init dotnet
+      dotnet help &> /dev/null
+      echo Find projects in dotnet-samples folder 
+      cd ../dotnet-docs-tools/LocateProjects/LocateProjects/
+      dotnet run -- $(Agent.BuildDirectory)/dotnet-samples/core
+    displayName: 'Compile tool'
+
+- job:
+  condition: eq(1,1)
+  displayName: 'Run CI on Windows'
+  
+  pool:
+    vmImage: 'windows-latest'
+
+  steps:
+
+  - checkout: self
+    path: dotnet-samples
+    persistCredentials: true
+    displayName: 'Check out dotnet/samples repo'
+
+  - script: |
+      git clone https://blah:$(toolstoken)@dev.azure.com/mseng/TechnicalContent/_git/dotnet-docs-tools ../dotnet-docs-tools
+    displayName: "Clone tools repo"
+
+  - script: |
+      echo Init dotnet
+      dotnet help > NUL
+#      echo Find projects in dotnet-samples folder 
+#      cd ../dotnet-docs-tools/LocateProjects/LocateProjects/
+#      dotnet run -- $(Agent.BuildDirectory)/dotnet-samples/core
+    displayName: 'Init dotnet'
+
+  - powershell: "../dotnet-docs-tools/Get-MSBuildResults.ps1 | ConvertTo-Json | Out-File '$(Build.ArtifactStagingDirectory)/output.json'"
+    env: {
+      scantooldir: "../dotnet-docs-tools/LocateProjects/LocateProjects",
+      samplesrootdir: "$(Agent.BuildDirectory)/dotnet-samples/"
+    }
+    displayName: "Run build script"
+
+  - publish: $(Build.ArtifactStagingDirectory)/output.json
+    artifact: BuildResults
+    condition: always()
+    

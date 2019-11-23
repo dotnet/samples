@@ -1,10 +1,10 @@
-﻿// <Snippet2>
-using System;
+﻿using System;
 
 public class Example
 {
    public static void Main()
    {
+      // <Snippet2>
       object[] values = { (int) 12, (long) 10653, (byte) 12, (sbyte) -5,
                          16.3, "string" }; 
       foreach (var value in values) {
@@ -23,17 +23,14 @@ public class Example
          else
             Console.WriteLine("'{0}' is another data type.", value);
       }
+
+      // The example displays the following output:
+      //    12 is a 32-bit integer.
+      //    10653 is a 32-bit integer.
+      //    12 is an unsigned byte.
+      //    -5 is a signed byte.
+      //    16.3 is a double-precision floating point.
+      //    'string' is another data type.
+      // </Snippet2>
    }
 }
-// The example displays the following output:
-//    12 is a 32-bit integer.
-//    10653 is a 32-bit integer.
-//    12 is an unsigned byte.
-//    -5 is a signed byte.
-//    16.3 is a double-precision floating point.
-//    'string' is another data type.
-// </Snippet2>
-
-
-
-

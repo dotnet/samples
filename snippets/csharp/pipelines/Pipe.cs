@@ -52,8 +52,8 @@ namespace Pipes
                 }
             }
 
-            // Tell the PipeReader that there's no more data coming.
-            writer.Complete();
+             // By completing PipeWriter, tell the PipeReader that there's no more data coming.
+            await writer.CompleteAsync();
         }
 
         async Task ReadPipeAsync(PipeReader reader)
@@ -80,7 +80,7 @@ namespace Pipes
             }
 
             // Mark the PipeReader as complete.
-            reader.Complete();
+            await reader.CompleteAsync();
         }
 
         bool TryReadLine(ref ReadOnlySequence<byte> buffer, out ReadOnlySequence<byte> line)

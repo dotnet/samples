@@ -1,6 +1,6 @@
 # C# Events Sample
 
-This sample is created during the [Delegates and Events topic](../../../docs/csharp/delegates-events.md)
+This sample is created during the [Delegates and Events topic](https://docs.microsoft.com/dotnet/csharp/delegates-events)
 for learning C# features. Please see that topic for detailed steps on the code
 for this sample.
 

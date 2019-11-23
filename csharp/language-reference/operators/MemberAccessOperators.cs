@@ -114,12 +114,12 @@ namespace operators
         private static void IndexFromEnd()
         {
             // <SnippetIndexFromEnd>
-            var xs = new[] { 0, 10, 20, 30, 40 };
-            var last = xs[^1];
+            int[] xs = new[] { 0, 10, 20, 30, 40 };
+            int last = xs[^1];
             Console.WriteLine(last);  // output: 40
 
             var lines = new List<string> { "one", "two", "three", "four" };
-            var prelast = lines[^2];
+            string prelast = lines[^2];
             Console.WriteLine(prelast);  // output: three
             
             string word = "Twenty";
@@ -132,14 +132,14 @@ namespace operators
         private static void Ranges()
         {
             // <SnippetRanges>
-            var numbers = new[] { 0, 10, 20, 30, 40, 50 };
+            int[] numbers = new[] { 0, 10, 20, 30, 40, 50 };
             int start = 1;
             int amountToTake = 3;
-            var subset = numbers[start..(start + amountToTake)];
+            int[] subset = numbers[start..(start + amountToTake)];
             Display(subset);  // output: 10 20 30
 
             int margin = 1;
-            var inner = numbers[margin..^margin];
+            int[] inner = numbers[margin..^margin];
             Display(inner);  // output: 10 20 30 40
 
             string line = "one two three";
@@ -155,16 +155,16 @@ namespace operators
         private static void RangesOptional()
         {
             // <SnippetRangesOptional>
-            var numbers = new[] { 0, 10, 20, 30, 40, 50 };
+            int[] numbers = new[] { 0, 10, 20, 30, 40, 50 };
             int amountToDrop = numbers.Length / 2;
 
-            var rightHalf = numbers[amountToDrop..];
+            int[] rightHalf = numbers[amountToDrop..];
             Display(rightHalf);  // output: 30 40 50
 
-            var leftHalf = numbers[..^amountToDrop];
+            int[] leftHalf = numbers[..^amountToDrop];
             Display(leftHalf);  // output: 0 10 20
 
-            var all = numbers[..];
+            int[] all = numbers[..];
             Display(all);  // output: 0 10 20 30 40 50
 
             void Display<T>(IEnumerable<T> xs) => Console.WriteLine(string.Join(" ", xs));

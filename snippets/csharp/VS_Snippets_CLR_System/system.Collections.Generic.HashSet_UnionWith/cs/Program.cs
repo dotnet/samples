@@ -5,7 +5,7 @@ class Program
 {
     static void Main()
     {
-        //<snippet01>
+        //<snippet02>
         //<snippet03>
         HashSet<int> evenNumbers = new HashSet<int>();
         HashSet<int> oddNumbers = new HashSet<int>();
@@ -50,6 +50,6 @@ class Program
         * numbers UnionWith oddNumbers...
         * numbers contains 10 elements: { 0 2 4 6 8 1 3 5 7 9 }
         */
-        //</snippet01>
+        //</snippet02>
     }
 }
