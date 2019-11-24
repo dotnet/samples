@@ -14,9 +14,8 @@ Public Class Sample
     
         Catch e As Exception
             ' Process exception and return.
-            Console.WriteLine($"Exception of type {e.GetType().ToString()} occurred.")
+            Console.WriteLine($"Exception of type {e.GetType()} occurred.")
         End Try
      End Sub
     ' </Snippet1>
 End Class
-
