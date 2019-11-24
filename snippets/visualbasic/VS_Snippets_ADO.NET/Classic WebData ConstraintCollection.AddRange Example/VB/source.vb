@@ -23,7 +23,7 @@ Public Class Sample
 
         Catch ex As Exception
             ' Process exception and return.
-            Console.WriteLine($"Exception of type {ex.GetType().ToString()} occurred.")
+            Console.WriteLine($"Exception of type {ex.GetType()} occurred.")
         End Try
     End Sub
     ' </Snippet1>
