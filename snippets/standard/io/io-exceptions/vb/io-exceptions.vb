@@ -34,8 +34,8 @@ Module Program
         Catch e As IOException When (e.HResult And &h0000FFFF) = 80
             Console.WriteLine("The file already exists.")
         Catch e As IOException
-            Console.WriteLine($"An exception occurred:\nError code: " +
-                              $"{e.HResult And &h0000FFFF}\nMessage: {e.Message}")
+            Console.WriteLine($"An exception occurred:{vbCrLf}Error code: " +
+                              $"{e.HResult And &h0000FFFF}{vbCrLf}Message: {e.Message}")
         End Try
         Return Nothing
     End Function
