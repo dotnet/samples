@@ -10,10 +10,9 @@ Public Class Sample
             Dim ordersTable As DataTable = dataSet.Tables("Orders")
 
             ' Create unique and foreign key constraints.
-            Dim uniqueConstraint As New _
-                UniqueConstraint(customersTable.Columns("CustomerID"))
-            Dim fkConstraint As New _
-                ForeignKeyConstraint("CustOrdersConstraint", _
+            Dim uniqueConstraint As New UniqueConstraint( _
+                customersTable.Columns("CustomerID"))
+            Dim fkConstraint As New ForeignKeyConstraint("CustOrdersConstraint", _
                 customersTable.Columns("CustomerID"), _
                 ordersTable.Columns("CustomerID"))
 
