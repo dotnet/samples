@@ -27,8 +27,7 @@ Public Class Sample
                 AddressOf Collection_Changed)
 
             ' Create unique constraint.
-            Dim constraint As New _
-                UniqueConstraint(customersTable.Columns("id"))
+            Dim constraint As New UniqueConstraint(customersTable.Columns("id"))
             customersTable.Constraints.Add(constraint)
 
             ' Create unique constraint and specify as primary key.
@@ -44,7 +43,7 @@ Public Class Sample
  
         Catch ex As Exception
             ' Process exception and return.
-            Console.WriteLine($"Exception of type {ex.GetType().ToString()} occurred.")
+            Console.WriteLine($"Exception of type {ex.GetType()} occurred.")
     End Try
 End Sub
 
