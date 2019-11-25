@@ -3,23 +3,33 @@ using System.Text.Json;
 
 namespace SystemTextJsonSamples
 {
-    public class ConvertLongToString
+    public class ConvertInferredTypesToObject
     {
         public static void Run()
         {
             string jsonString;
 
             // Serialize to create input JSON
-            var weatherForecast = WeatherForecastFactories.CreateWeatherForecastWithLong();
+            var weatherForecast = WeatherForecastFactories.CreateWeatherForecast();
             var serializeOptions = new JsonSerializerOptions
             {
                 WriteIndented = true
             };
+            serializeOptions.WriteIndented = true;
             jsonString = JsonSerializer.Serialize(weatherForecast, serializeOptions);
-            Console.WriteLine($"JSON output:\n{jsonString}\n");
+            Console.WriteLine($"JSON input:\n{jsonString}\n");
 
-            weatherForecast = JsonSerializer.Deserialize<WeatherForecastWithLong>(jsonString);
-            weatherForecast.DisplayPropertyValues();
+            // Deserialize without converter
+            // Properties are JsonElement type.
+            WeatherForecastWithObjectProperties weatherForecastWithObjectProperties = JsonSerializer.Deserialize<WeatherForecastWithObjectProperties>(jsonString);
+            weatherForecastWithObjectProperties.DisplayPropertyValues();
+
+            // <SnippetRegister>
+            var deserializeOptions = new JsonSerializerOptions();
+            deserializeOptions.Converters.Add(new ObjectToInferredTypesConverter());
+            // </SnippetRegister>
+            weatherForecastWithObjectProperties = JsonSerializer.Deserialize<WeatherForecastWithObjectProperties>(jsonString, deserializeOptions);
+            weatherForecastWithObjectProperties.DisplayPropertyValues();
         }
     }
 }
