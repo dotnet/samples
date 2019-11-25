@@ -47,8 +47,8 @@ namespace SystemTextJsonSamples
                 writer.WriteEndObject();
 
                 writer.Flush();
-                // </SnippetSerialize>
             }
+            // </SnippetSerialize>
             Console.WriteLine($"Output file is {outputFileName}");
         }
     }
