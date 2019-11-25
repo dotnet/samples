@@ -8,8 +8,6 @@ namespace SystemTextJsonSamples
     class Utf8ReaderFromFile
     {
         private static readonly byte[] s_nameUtf8 = Encoding.UTF8.GetBytes("name");
-        private static readonly byte[] s_universityUtf8 = Encoding.UTF8.GetBytes("University");
-
         public static void Run()
         {
             // Read as UTF-16 and transcode to UTF-8 to convert to a Span<byte>
@@ -36,11 +34,11 @@ namespace SystemTextJsonSamples
                         total++;
                         break;
                     case JsonTokenType.PropertyName:
-                        if (json.ValueSpan.SequenceEqual(s_nameUtf8))
+                        if (json.ValueTextEquals(s_nameUtf8))
                         {
                             // Assume valid JSON, known schema
                             json.Read();
-                            if (json.ValueSpan.EndsWith(s_universityUtf8))
+                            if (json.GetString().EndsWith("University"))
                             {
                                 count++;
                             }
