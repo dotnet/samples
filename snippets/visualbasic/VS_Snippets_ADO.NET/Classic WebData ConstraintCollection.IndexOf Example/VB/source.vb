@@ -18,7 +18,7 @@ Private Sub RemoveConstraint _
         End If
 
     Catch ex As Exception
-	' Process exception and return.
+    ' Process exception and return.
         Console.WriteLine(ex.Message)
     End Try
 End Sub

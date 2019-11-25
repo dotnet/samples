@@ -15,7 +15,7 @@ Private Sub CreateDataTable()
     column = table.Columns.Add( _
         "CustomerID", System.Type.GetType("System.Int32"))
     column.Unique = True
-	
+
     'CustomerName column
     column = table.Columns.Add( _
         "CustomerName", System.Type.GetType("System.String"))
