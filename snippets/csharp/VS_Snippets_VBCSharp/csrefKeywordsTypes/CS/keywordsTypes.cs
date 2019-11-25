@@ -153,23 +153,6 @@ namespace csrefKeywordsMethodParams
     */
     //</snippet5>
 
-    //<snippet9>
-    // Mixing types in expressions
-    class MixedTypes
-    {
-        static void Main()
-        {
-            int x = 3;
-            float y = 4.5f;
-            short z = 5;
-            double w = 1.7E+3;
-            // Result of the 2nd argument is a double:
-            Console.WriteLine("The sum is {0}", x + y + z + w);
-        }
-    }
-    // Output: The sum is 1712.5
-    //</snippet9>
-
     //<snippet10>
     public class EnumTest
     {
@@ -242,26 +225,6 @@ namespace csrefKeywordsMethodParams
        5
     */
     //</snippet12>
-
-    //<snippet13>
-    class FloatTest 
-    {
-        static void Main() 
-        {
-            int x = 3;
-            float y = 4.5f;
-            short z = 5;
-            var result = x * y / z;
-            Console.WriteLine("The result is {0}", result);
-            Type type = result.GetType();
-            Console.WriteLine("result is of type {0}", type.ToString());
-        }
-    }
-    /* Output: 
-      The result is 2.7
-      result is of type System.Single //'float' is alias for 'Single'
-     */
-    //</snippet13>
 
     //<snippet14>
     interface ISampleInterface
@@ -404,24 +367,6 @@ namespace csrefKeywordsMethodParams
                 Console.WriteLine("Name={0}, Phone={1}", item.Name, item.Phone);
             }
             //</snippet18>
-        }
-    }
-    
-    class CharTest
-    {
-        static void Main()
-        {
-            //<snippet19>
-            var chars = new char[4];
-
-            chars[0] = 'X';        // Character literal
-            chars[1] = '\x0058';   // Hexadecimal
-            chars[2] = (char)88;   // Cast from integral type
-            chars[3] = '\u0058';   // Unicode
-            
-            Console.Write(string.Join(" ", chars));
-            // Output: X X X X
-            //</snippet19>
         }
     }
 }
