@@ -2,7 +2,7 @@
 
 Module Program
     Sub Main(args As String())
-	    Dim sw = OpenStream(".\textfile.txt")
+        Dim sw = OpenStream(".\textfile.txt")
         If sw Is Nothing Then Return
 
         sw.WriteLine("This is the first line.")
@@ -11,7 +11,7 @@ Module Program
     End Sub
 
    Function OpenStream(path As String) As StreamWriter
-        If path is Nothing Then
+        If path Is Nothing Then
             Console.WriteLine("You did not supply a file path.")
             Return Nothing
         End If
@@ -34,8 +34,8 @@ Module Program
         Catch e As IOException When (e.HResult And &h0000FFFF) = 80
             Console.WriteLine("The file already exists.")
         Catch e As IOException
-            Console.WriteLine($"An exception occurred:\nError code: " +
-                              $"{e.HResult And &h0000FFFF}\nMessage: {e.Message}")
+            Console.WriteLine($"An exception occurred:{vbCrLf}Error code: " +
+                              $"{e.HResult And &h0000FFFF}{vbCrLf}Message: {e.Message}")
         End Try
         Return Nothing
     End Function
