@@ -15,39 +15,38 @@ namespace SystemTextJsonSamples
             string jsonString = File.ReadAllText(inputFileName);
 
             var writerOptions = new JsonWriterOptions
-            { 
-                Indented = true 
-            };
-
-            var documentOptions = new JsonDocumentOptions 
-            { 
-                CommentHandling = JsonCommentHandling.Skip 
-            };
-
-            using (FileStream fs = File.Create(outputFileName))
-            using (var writer = new Utf8JsonWriter(fs, options: writerOptions))
-            using (JsonDocument document = JsonDocument.Parse(jsonString, documentOptions))
             {
-                JsonElement root = document.RootElement;
+                Indented = true
+            };
 
-                if (root.ValueKind == JsonValueKind.Object)
-                {
-                    writer.WriteStartObject();
-                }
-                else
-                {
-                    return;
-                }
+            var documentOptions = new JsonDocumentOptions
+            {
+                CommentHandling = JsonCommentHandling.Skip
+            };
 
-                foreach (JsonProperty property in root.EnumerateObject())
-                {
-                    property.WriteTo(writer);
-                }
+            using FileStream fs = File.Create(outputFileName);
+            using var writer = new Utf8JsonWriter(fs, options: writerOptions);
+            using JsonDocument document = JsonDocument.Parse(jsonString, documentOptions);
 
-                writer.WriteEndObject();
+            JsonElement root = document.RootElement;
 
-                writer.Flush();
+            if (root.ValueKind == JsonValueKind.Object)
+            {
+                writer.WriteStartObject();
             }
+            else
+            {
+                return;
+            }
+
+            foreach (JsonProperty property in root.EnumerateObject())
+            {
+                property.WriteTo(writer);
+            }
+
+            writer.WriteEndObject();
+
+            writer.Flush();
             // </SnippetSerialize>
             Console.WriteLine($"Output file is {outputFileName}");
         }
