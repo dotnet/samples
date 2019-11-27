@@ -17,6 +17,10 @@ namespace builtin_types
             Console.WriteLine("============ char type ===========");
             CharType.Examples();
             Console.WriteLine();
+
+            Console.WriteLine("============ bool type ===========");
+            BoolType.Examples();
+            Console.WriteLine();
         }
     }
 }
