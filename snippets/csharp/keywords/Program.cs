@@ -14,8 +14,6 @@ namespace keywords
             IterationKeywordsExamples.Examples();
             Console.WriteLine("=================    readonly Keyword Examples ======================");
             ReadonlyKeywordExamples.Examples();
-            Console.WriteLine("=================    true and false literals examples ===============");
-            TrueFalseLiteralsExamples.Examples();
         }
     }
 }
