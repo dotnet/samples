@@ -21,7 +21,7 @@ Namespace SequenceExamples
             words.Aggregate(Function(ByVal current, ByVal word) word & " " & current)
 
             ' Display the output.
-            MsgBox(reversed)
+            Console.WriteLine(reversed)
         End Sub
 
         ' This code produces the following output:
@@ -41,7 +41,7 @@ Namespace SequenceExamples
                                IIf(number Mod 2 = 0, total + 1, total))
 
             ' Display the output.
-            MsgBox("The number of even integers is " & numEven)
+            Console.WriteLine($"The number of even integers is {numEven}")
         End Sub
 
         ' This code produces the following output:
@@ -62,7 +62,7 @@ Namespace SequenceExamples
                              Function(ByVal fruit) fruit.ToUpper())
 
             ' Display the output.
-            MsgBox("The fruit with the longest name is " & longestName)
+            Console.WriteLine($"The fruit with the longest name is {longestName}")
         End Sub
 
         ' This code produces the following output:
@@ -92,7 +92,7 @@ Namespace SequenceExamples
 
                 ' Display the output.
                 Dim text As String = IIf(allNames, "All", "Not all")
-                MsgBox(text & " pet names start with 'B'.")
+                Console.WriteLine($"{text} pet names start with 'B'.")
             End Sub
 
             ' This code produces the following output:
@@ -160,7 +160,7 @@ Namespace SequenceExamples
 
                 ' Display the output.
                 Dim text As String = IIf(hasElements, "not ", "")
-                MsgBox("The list is " & text & "empty.")
+                Console.WriteLine($"The list is {text}empty.")
 
                 ' This code produces the following output:
                 '
@@ -233,7 +233,7 @@ Namespace SequenceExamples
 
                 ' Display the output.
                 Dim text As String = IIf(unvaccinated, "are", "are not")
-                MsgBox("There " & text & " unvaccinated animals over age 1.")
+                Console.WriteLine($"There {text} unvaccinated animals over age 1.")
             End Sub
 
             ' This code produces the following output:
@@ -285,7 +285,7 @@ Namespace SequenceExamples
             output.AppendLine("query2 has been created.")
 
             ' Display the output.
-            MsgBox(output.ToString())
+            Console.WriteLine(output.ToString())
         End Sub
 
         ' This code produces the following output:
@@ -307,7 +307,7 @@ Namespace SequenceExamples
             Dim avg As Double = grades.Average()
 
             ' Display the output.
-            MsgBox("The average grade is " & avg)
+            Console.WriteLine($"The average grade is {avg}")
 
             ' This code produces the following output:
             '
@@ -324,7 +324,7 @@ Namespace SequenceExamples
             Dim avg As Nullable(Of Double) = longs.Average()
 
             ' Display the output.
-            MsgBox("The average is " & avg.ToString)
+            Console.WriteLine($"The average is {avg}")
 
             ' This code produces the following output:
             '
@@ -343,7 +343,7 @@ Namespace SequenceExamples
             numbers.Average(Function(number) Convert.ToInt64(number))
 
             ' Display the output.
-            MsgBox("The average is " & avg)
+            Console.WriteLine($"The average is {avg}")
 
             ' This code produces the following output:
             '
@@ -361,7 +361,7 @@ Namespace SequenceExamples
             Dim avg As Double = fruits.Average(Function(s) s.Length)
 
             ' Display the output.
-            MsgBox("The average string length is " & avg)
+            Console.WriteLine($"The average string length is {avg}")
 
             ' This code produces the following output:
             '
@@ -394,7 +394,7 @@ Namespace SequenceExamples
             Next
 
             ' Display the output.
-            MsgBox(output.ToString())
+            Console.WriteLine(output.ToString())
 
             ' This code produces the following output:
             '
@@ -450,7 +450,7 @@ Namespace SequenceExamples
                 Next
 
                 ' Display the output.
-                MsgBox(output.ToString())
+                Console.WriteLine(output.ToString())
             End Sub
 
             ' This code produces the following output:
@@ -483,7 +483,7 @@ Namespace SequenceExamples
                 Next
 
                 ' Display the output.
-                MsgBox(output.ToString())
+                Console.WriteLine(output.ToString())
 
                 ' This code produces the following output:
                 '
@@ -514,7 +514,7 @@ Namespace SequenceExamples
             Dim text As String = IIf(hasMango, "does", "does not")
 
             ' Display the output.
-            MsgBox("The array " & text & " contain " & fruit)
+            Console.WriteLine($"The array {text} contain {fruit}")
 
             ' This code produces the following output:
             '
@@ -533,9 +533,9 @@ Namespace SequenceExamples
                 ' Count the number of items in the array.
                 Dim numberOfFruits As Integer = fruits.Count()
                 ' Display the output.
-                MsgBox("There are " & numberOfFruits & " fruits in the collection.")
+                Console.WriteLine($"There are {numberOfFruits} fruits in the collection.")
             Catch e As OverflowException
-                MsgBox("The count is too large to store as an Int32. Try using LongCount() instead.")
+                Console.WriteLine("The count is too large to store as an Int32. Try using LongCount() instead.")
             End Try
 
             ' This code produces the following output:
@@ -563,9 +563,9 @@ Namespace SequenceExamples
                     Dim numberUnvaccinated As Integer =
                 pets.Count(Function(p) p.Vaccinated = False)
                     ' Display the output.
-                    MsgBox("There are " & numberUnvaccinated & " unvaccinated animals.")
+                    Console.WriteLine($"There are {numberUnvaccinated} unvaccinated animals.")
                 Catch e As OverflowException
-                    MsgBox("The count is too large to store as an Int32. Try using LongCount() instead.")
+                    Console.WriteLine("The count is too large to store as an Int32. Try using LongCount() instead.")
                 End Try
 
             End Sub
@@ -600,7 +600,7 @@ Namespace SequenceExamples
                 Next
 
                 ' Display the output.
-                MsgBox(output.ToString())
+                Console.WriteLine(output.ToString())
             End Sub
 
             ' This code produces the following output:
@@ -623,7 +623,7 @@ Namespace SequenceExamples
             Next
 
             ' Display the output.
-            MsgBox(output.ToString())
+            Console.WriteLine(output.ToString())
 
             ' This code produces the following output:
             '
@@ -656,7 +656,7 @@ Namespace SequenceExamples
                 Next
 
                 ' Display the output.
-                MsgBox(output1.ToString())
+                Console.WriteLine(output1.ToString())
 
                 ' Create an empty List.
                 Dim pets2 As New List(Of Pet)
@@ -669,7 +669,7 @@ Namespace SequenceExamples
                 Next
 
                 ' Display the output.
-                MsgBox(output2.ToString())
+                Console.WriteLine(output2.ToString())
             End Sub
 
             ' This code produces the following output:
@@ -700,7 +700,7 @@ Namespace SequenceExamples
             Next
 
             ' Display the output.
-            MsgBox(output.ToString)
+            Console.WriteLine(output.ToString)
 
             ' This code produces the following output:
             '
@@ -726,7 +726,7 @@ Namespace SequenceExamples
             Dim name As String = names.ElementAt(random.Next(0, names.Length))
 
             ' Display the output.
-            MsgBox("The name chosen at random is " & name)
+            Console.WriteLine($"The name chosen at random is {name}")
 
             ' This code produces the following output:
             '
@@ -750,7 +750,7 @@ Namespace SequenceExamples
             Dim text As String = If(String.IsNullOrEmpty(name), "[THERE IS NO NAME AT THIS INDEX]", name)
 
             ' Display the output.
-            MsgBox("The name chosen at index " & index & " is " & text)
+            Console.WriteLine("The name chosen at index {index} is {text}")
 
             ' This code produces the following output:
             '
@@ -796,7 +796,7 @@ Namespace SequenceExamples
             Next
 
             ' Display the output.
-            MsgBox(output.ToString())
+            Console.WriteLine(output.ToString())
 
             ' This code produces the following output:
             '
@@ -829,7 +829,7 @@ Namespace SequenceExamples
             Next
 
             ' Display the output.
-            MsgBox(output.ToString())
+            Console.WriteLine(output.ToString())
 
             ' This code produces the following output:
             '
@@ -853,7 +853,7 @@ Namespace SequenceExamples
             Dim first As Integer = numbers.First()
 
             ' Display the output.
-            MsgBox(first)
+            Console.WriteLine(first)
 
             ' This code produces the following output:
             '
@@ -871,7 +871,7 @@ Namespace SequenceExamples
             Dim first As Integer = numbers.First(Function(number) number > 80)
 
             ' Display the output.
-            MsgBox(first)
+            Console.WriteLine(first)
 
             ' This code produces the following output:
             '
@@ -891,7 +891,7 @@ Namespace SequenceExamples
             Dim first As Integer = numbers.FirstOrDefault()
 
             ' Display the output.
-            MsgBox(first)
+            Console.WriteLine(first)
 
             ' This code produces the following output:
             '
@@ -910,7 +910,7 @@ Namespace SequenceExamples
             names.FirstOrDefault(Function(name) name.Length > 20)
 
             ' Display the output.
-            MsgBox("The first long name is " & firstLongName)
+            Console.WriteLine($"The first long name is {firstLongName}")
 
             ' Select the first string in the array whose length is greater than 30,
             ' or a default value if there are no such strings in the array.
@@ -919,7 +919,7 @@ Namespace SequenceExamples
 
             Dim text As String = IIf(String.IsNullOrEmpty(firstVeryLongName), "not a", "a")
 
-            MsgBox("There is " & text & " name longer than 30 characters.")
+            Console.WriteLine($"There is {text} name longer than 30 characters.")
 
             ' This code produces the following output:
             '
@@ -938,11 +938,11 @@ Namespace SequenceExamples
             If firstMonth1 = 0 Then
                 firstMonth1 = 1
             End If
-            MsgBox(String.Format("The value of the firstMonth1 variable is {0}", firstMonth1))
+            Console.WriteLine($"The value of the firstMonth1 variable is {firstMonth1}")
 
             ' Setting the default value to 1 by using DefaultIfEmpty() in the query.
             Dim firstMonth2 As Integer = months.DefaultIfEmpty(1).First()
-            MsgBox(String.Format("The value of the firstMonth2 variable is {0}", firstMonth2))
+            Console.WriteLine($"The value of the firstMonth2 variable is {firstMonth2}")
 
             ' This code produces the following output:
             '
@@ -988,7 +988,7 @@ Namespace SequenceExamples
                 Next
 
                 ' Display the output.
-                MsgBox(output.ToString)
+                Console.WriteLine(output.ToString)
             End Sub
 
             ' This code produces the following output:
@@ -1032,7 +1032,7 @@ Namespace SequenceExamples
                 Next
 
                 ' Display the output.
-                MsgBox(output.ToString)
+                Console.WriteLine(output.ToString)
 
                 ' This code produces the following output:
                 '
@@ -1086,7 +1086,7 @@ Namespace SequenceExamples
                 Next
 
                 ' Display the output.
-                MsgBox(output.ToString)
+                Console.WriteLine(output.ToString)
             End Sub
 
             ' This code produces the following output:
@@ -1148,7 +1148,7 @@ Namespace SequenceExamples
                 Next
 
                 ' Display the output.
-                MsgBox(output.ToString)
+                Console.WriteLine(output.ToString)
             End Sub
 
             ' This code produces the following output:
@@ -1222,7 +1222,7 @@ Namespace SequenceExamples
                 Next
 
                 ' Display the output.
-                MsgBox(output.ToString)
+                Console.WriteLine(output.ToString)
             End Sub
 
             ' This code produces the following output:
@@ -1255,7 +1255,7 @@ Namespace SequenceExamples
             Next
 
             ' Display the output.
-            MsgBox(output.ToString)
+            Console.WriteLine(output.ToString)
 
             ' This code produces the following output:
             '
@@ -1307,7 +1307,7 @@ Namespace SequenceExamples
                 Next
 
                 ' Display the output.
-                MsgBox(output.ToString)
+                Console.WriteLine(output.ToString)
             End Sub
 
             ' This code produces the following output:
@@ -1333,7 +1333,7 @@ Namespace SequenceExamples
             Dim last As Integer = numbers.Last()
 
             ' Display the result.
-            MsgBox(last)
+            Console.WriteLine(last)
 
             ' This code produces the following output:
             '
@@ -1352,7 +1352,7 @@ Namespace SequenceExamples
             Dim last As Integer = numbers.Last(Function(num) num > 80)
 
             ' Display the result.
-            MsgBox(last)
+            Console.WriteLine(last)
 
             ' This code produces the following output:
             '
@@ -1372,7 +1372,7 @@ Namespace SequenceExamples
             Dim last As String = fruits.LastOrDefault()
 
             ' Display the result.
-            MsgBox(IIf(String.IsNullOrEmpty(last),
+            Console.WriteLine(IIf(String.IsNullOrEmpty(last),
                    "<string is Nothing or empty>",
                    last))
 
@@ -1404,7 +1404,7 @@ Namespace SequenceExamples
             output.AppendLine("The last number that rounds to 40 is " & text)
 
             ' Display the output.
-            MsgBox(output.ToString)
+            Console.WriteLine(output.ToString)
 
             ' This code produces the following output:
             '
@@ -1422,11 +1422,11 @@ Namespace SequenceExamples
             If lastDay1 = 0 Then
                 lastDay1 = 1
             End If
-            MsgBox(String.Format("The value of the lastDay1 variable is {0}", lastDay1))
+            Console.WriteLine($"The value of the lastDay1 variable is {lastDay1}")
 
             ' Setting the default value to 1 by using DefaultIfEmpty() in the query.
             Dim lastDay2 As Integer = daysOfMonth.DefaultIfEmpty(1).Last()
-            MsgBox(String.Format("The value of the lastDay2 variable is {0}", lastDay2))
+            Console.WriteLine($"The value of the lastDay2 variable is {lastDay2}")
 
             ' This code produces the following output:
             '
@@ -1447,7 +1447,7 @@ Namespace SequenceExamples
             Dim count As Long = fruits.LongCount()
 
             ' Display the result.
-            MsgBox("There are " & count & " fruits in the collection.")
+            Console.WriteLine($"There are {count} fruits in the collection.")
 
             ' This code produces the following output:
             '
@@ -1476,7 +1476,7 @@ Namespace SequenceExamples
             pets.LongCount(Function(pet) pet.Age > Age)
 
                 ' Display the result.
-                MsgBox("There are " & count & " animals over age " & Age)
+                Console.WriteLine($"There are {count} animals over age {Age}")
             End Sub
 
             ' This code produces the following output:
@@ -1498,7 +1498,7 @@ Namespace SequenceExamples
             Dim max As Long = longs.Max()
 
             ' Display the result.
-            MsgBox("The largest number is " & max)
+            Console.WriteLine($"The largest number is {max}")
 
             ' This code produces the following output:
             '
@@ -1516,7 +1516,7 @@ Namespace SequenceExamples
             Dim max As Nullable(Of Double) = doubles.Max()
 
             ' Display the result.
-            MsgBox("The largest number is " & max)
+            Console.WriteLine($"The largest number is {max}")
 
             ' This code produces the following output:
             '
@@ -1565,7 +1565,7 @@ Namespace SequenceExamples
                 Dim max As Pet = pets.Max()
 
                 ' Display the result.
-                MsgBox("The 'maximum' animal is " & max.Name)
+                Console.WriteLine($"The 'maximum' animal is {max.Name}")
             End Sub
 
             ' This code produces the following output:
@@ -1597,7 +1597,7 @@ Namespace SequenceExamples
                                               pet.Age + pet.Name.Length)
 
                 ' Display the result.
-                MsgBox("The maximum pet age plus name length is " & max)
+                Console.WriteLine($"The maximum pet age plus name length is {max}")
             End Sub
 
             ' This code produces the following output:
@@ -1618,7 +1618,7 @@ Namespace SequenceExamples
             Dim min As Double = doubles.Min()
 
             ' Display the result.
-            MsgBox("The smallest number is " & min)
+            Console.WriteLine($"The smallest number is {min}")
 
             ' This code produces the following output:
             '
@@ -1632,7 +1632,7 @@ Namespace SequenceExamples
             Dim min As Nullable(Of Integer) = grades.Min()
 
             ' Display the output.
-            MsgBox("The lowest grade is " & min)
+            Console.WriteLine($"The lowest grade is {min}")
 
             ' This code produces the following output:
             '
@@ -1681,7 +1681,7 @@ Namespace SequenceExamples
                 Dim min As Pet = pets.Min()
 
                 ' Display the result.
-                MsgBox("The 'minimum' pet is " & min.Name)
+                Console.WriteLine($"The 'minimum' pet is {min.Name}")
             End Sub
 
             ' This code produces the following output:
@@ -1711,7 +1711,7 @@ Namespace SequenceExamples
                 Dim min As Integer = pets.Min(Function(pet) pet.Age)
 
                 ' Display the result.
-                MsgBox("The youngest pet is age " & min)
+                Console.WriteLine($"The youngest pet is age {min}")
             End Sub
 
             ' This code produces the following output:
@@ -1756,7 +1756,7 @@ Namespace SequenceExamples
             Next
 
             ' Display the output.
-            MsgBox(output.ToString())
+            Console.WriteLine(output.ToString())
 
             ' This code produces the following output:
             '
@@ -1797,7 +1797,7 @@ Namespace SequenceExamples
             Next
 
             ' Display the output.
-            MsgBox(output.ToString())
+            Console.WriteLine(output.ToString())
         End Sub
 
         ' This code produces the following output:
@@ -1944,7 +1944,7 @@ Namespace SequenceExamples
             Next
 
             ' Display the output.
-            MsgBox(output.ToString())
+            Console.WriteLine(output.ToString())
         End Sub
 
         ' This code produces the following output:
@@ -1972,7 +1972,7 @@ Namespace SequenceExamples
             Next
 
             ' Display the output.
-            MsgBox(output.ToString())
+            Console.WriteLine(output.ToString())
 
             ' This code produces the following output:
             '
@@ -2003,7 +2003,7 @@ Namespace SequenceExamples
             Next
 
             ' Display the output.
-            MsgBox(output.ToString())
+            Console.WriteLine(output.ToString())
 
             ' This code produces the following output:
             '
@@ -2045,7 +2045,7 @@ Namespace SequenceExamples
             Next
 
             ' Display the output.
-            MsgBox(output.ToString())
+            Console.WriteLine(output.ToString())
 
             ' This code produces the following output:
             '
@@ -2068,7 +2068,7 @@ Namespace SequenceExamples
             Next
 
             ' Display the output.
-            MsgBox(output.ToString())
+            Console.WriteLine(output.ToString())
 
             ' This code produces the following output:
             '
@@ -2105,7 +2105,7 @@ Namespace SequenceExamples
             Next
 
             ' Display the output.
-            MsgBox(output.ToString())
+            Console.WriteLine(output.ToString())
 
             ' This code produces the following output:
             '
@@ -2162,7 +2162,7 @@ Namespace SequenceExamples
                 Next
 
                 ' Display the output.
-                MsgBox(output.ToString())
+                Console.WriteLine(output.ToString())
             End Sub
 
             ' This code produces the following output:
@@ -2218,7 +2218,7 @@ Namespace SequenceExamples
                 Next
 
                 ' Display the output.
-                MsgBox(output.ToString())
+                Console.WriteLine(output.ToString())
             End Sub
             ' </Snippet78>
         End Class
@@ -2261,7 +2261,7 @@ Namespace SequenceExamples
                 Next
 
                 ' Display the output.
-                MsgBox(output.ToString())
+                Console.WriteLine(output.ToString())
             End Sub
 
             ' This code produces the following output:
@@ -2298,7 +2298,7 @@ Namespace SequenceExamples
 
                 ' Display the output.
                 Dim text As String = IIf(equal, "are", "are not")
-                MsgBox("The lists " & text & " equal.")
+                Console.WriteLine($"The lists {text} equal.")
 
             End Sub
 
@@ -2329,7 +2329,7 @@ Namespace SequenceExamples
 
                 ' Display the output.
                 Dim text As String = IIf(equal, "are", "are not")
-                MsgBox("The lists " & text & " equal.")
+                Console.WriteLine($"The lists {text} equal.")
 
                 ' This code produces the following output:
                 '
@@ -2350,7 +2350,7 @@ Namespace SequenceExamples
             Dim result As String = fruits1.Single()
 
             ' Display the result.
-            MsgBox("First query: " & result)
+            Console.WriteLine($"First query: {result}")
             ' </Snippet79>
 
             ' <Snippet80>
@@ -2367,7 +2367,7 @@ Namespace SequenceExamples
             End Try
 
             ' Display the result.
-            MsgBox("Second query: " & result)
+            Console.WriteLine($"Second query: {result}")
 
             ' This code produces the following output:
             '
@@ -2387,7 +2387,7 @@ Namespace SequenceExamples
             fruits.Single(Function(fruit) fruit.Length > 10)
 
             ' Display the result.
-            MsgBox("First query: " & result)
+            Console.WriteLine($"First query: {result}")
             ' </Snippet81>
 
             ' <Snippet82>
@@ -2402,7 +2402,7 @@ Namespace SequenceExamples
             End Try
 
             ' Display the result.
-            MsgBox("Second query: " & result)
+            Console.WriteLine($"Second query: {result}")
 
             ' This code produces the following output:
             '
@@ -2422,7 +2422,7 @@ Namespace SequenceExamples
             Dim result As String = fruits1.SingleOrDefault()
 
             ' Display the result.
-            MsgBox("First array: " & result)
+            Console.WriteLine($"First array: {result}")
             ' </Snippet83>
 
             ' <Snippet84>
@@ -2437,7 +2437,7 @@ Namespace SequenceExamples
             ' Display the result.
             Dim output As String =
             IIf(String.IsNullOrEmpty(result), "No single item found", result)
-            MsgBox("Second array: " & output)
+            Console.WriteLine($"Second array: {output}")
 
             ' This code produces the following output:
             '
@@ -2457,7 +2457,7 @@ Namespace SequenceExamples
             fruits.SingleOrDefault(Function(fruit) fruit.Length > 10)
 
             ' Display the result.
-            MsgBox("First array: " & fruit1)
+            Console.WriteLine($"First array: {fruit1}")
             ' </Snippet85>
 
             ' <Snippet86>
@@ -2468,7 +2468,7 @@ Namespace SequenceExamples
             ' Display the result.
             Dim output As String =
             IIf(String.IsNullOrEmpty(fruit2), "No single item found", fruit2)
-            MsgBox("Second array: " & output)
+            Console.WriteLine($"Second array: {output}")
 
             ' This code produces the following output:
             '
@@ -2486,11 +2486,11 @@ Namespace SequenceExamples
             If pageNumber1 = 0 Then
                 pageNumber1 = 1
             End If
-            MsgBox(String.Format("The value of the pageNumber1 variable is {0}", pageNumber1))
+            Console.WriteLine($"The value of the pageNumber1 variable is {pageNumber1}")
 
             ' Setting the default value to 1 by using DefaultIfEmpty() in the query.
             Dim pageNumber2 As Integer = pageNumbers.DefaultIfEmpty(1).Single()
-            MsgBox(String.Format("The value of the pageNumber2 variable is {0}", pageNumber2))
+            Console.WriteLine($"The value of the pageNumber2 variable is {pageNumber2}")
 
             ' This code produces the following output:
 
@@ -2518,7 +2518,7 @@ Namespace SequenceExamples
             For Each grade As Integer In lowerGrades
                 output.AppendLine(grade)
             Next
-            MsgBox(output.ToString())
+            Console.WriteLine(output.ToString())
 
             ' This code produces the following output:
             '
@@ -2549,7 +2549,7 @@ Namespace SequenceExamples
             For Each grade As Integer In lowerGrades
                 output.AppendLine(grade)
             Next
-            MsgBox(output.ToString())
+            Console.WriteLine(output.ToString())
 
             ' This code produces the following output:
             '
@@ -2577,7 +2577,7 @@ Namespace SequenceExamples
             For Each amount As Integer In query
                 output.AppendLine(amount)
             Next
-            MsgBox(output.ToString())
+            Console.WriteLine(output.ToString())
 
             ' This code produces the following output:
             '
@@ -2610,7 +2610,7 @@ Namespace SequenceExamples
                                                          pkg.Weight)
 
                 ' Display the result.
-                MsgBox("The total weight of the packages is: " & totalWeight)
+                Console.WriteLine($"The total weight of the packages is: {totalWeight}")
             End Sub
 
             ' This code produces the following output:
@@ -2629,7 +2629,7 @@ Namespace SequenceExamples
             Dim sum As Single = numbers.Sum()
 
             ' Display the output.
-            MsgBox("The sum of the numbers is " & sum)
+            Console.WriteLine($"The sum of the numbers is {sum}")
 
             ' This code produces the following output:
             '
@@ -2647,7 +2647,7 @@ Namespace SequenceExamples
             Dim sum As Nullable(Of Single) = points.Sum()
 
             ' Display the output.
-            MsgBox("Total points earned: " & sum)
+            Console.WriteLine($"Total points earned: {sum}")
 
             ' This code produces the following output:
             '
@@ -2675,7 +2675,7 @@ Namespace SequenceExamples
             For Each grade As Integer In topThreeGrades
                 output.AppendLine(grade)
             Next
-            MsgBox(output.ToString())
+            Console.WriteLine(output.ToString())
 
             ' This code produces the following output:
             '
@@ -2705,7 +2705,7 @@ Namespace SequenceExamples
             For Each fruit As String In query
                 output.AppendLine(fruit)
             Next
-            MsgBox(output.ToString())
+            Console.WriteLine(output.ToString())
 
             ' This code produces the following output:
             '
@@ -2734,7 +2734,7 @@ Namespace SequenceExamples
             For Each fruit As String In query
                 output.AppendLine(fruit)
             Next
-            MsgBox(output.ToString())
+            Console.WriteLine(output.ToString())
 
             ' This code produces the following output:
             '
@@ -2768,7 +2768,7 @@ Namespace SequenceExamples
             For Each fruit As String In query
                 output.AppendLine(fruit)
             Next
-            MsgBox(output.ToString())
+            Console.WriteLine(output.ToString())
 
             ' This code produces the following output:
             '
@@ -2814,7 +2814,7 @@ Namespace SequenceExamples
             For Each fruit As String In query
                 output.AppendLine(fruit)
             Next
-            MsgBox(output.ToString())
+            Console.WriteLine(output.ToString())
         End Sub
 
         ' This code produces the following output:
@@ -2858,7 +2858,7 @@ Namespace SequenceExamples
                 For Each company As String In companies
                     output.AppendLine(company)
                 Next
-                MsgBox(output.ToString())
+                Console.WriteLine(output.ToString())
             End Sub
 
             ' This code produces the following output:
@@ -2907,7 +2907,7 @@ Namespace SequenceExamples
                                   kvp.Value.Company & ", " &
                                   kvp.Value.Weight & " pounds")
                 Next
-                MsgBox(output.ToString())
+                Console.WriteLine(output.ToString())
             End Sub
 
             ' This code produces the following output:
@@ -2941,7 +2941,7 @@ Namespace SequenceExamples
             For Each length As Integer In lengths
                 output.AppendLine(length)
             Next
-            MsgBox(output.ToString())
+            Console.WriteLine(output.ToString())
 
             ' This code produces the following output:
             '
@@ -3010,7 +3010,7 @@ Namespace SequenceExamples
             Next
 
             ' Display the output.
-            MsgBox(output.ToString())
+            Console.WriteLine(output.ToString())
         End Sub
 
         ' This code produces the following output:
@@ -3045,7 +3045,7 @@ Namespace SequenceExamples
             For Each num As Integer In union
                 output.AppendLine(num & " ")
             Next
-            MsgBox(output.ToString())
+            Console.WriteLine(output.ToString())
 
             ' This code produces the following output:
             '
@@ -3080,7 +3080,7 @@ Namespace SequenceExamples
             For Each fruit As String In query
                 output.AppendLine(fruit)
             Next
-            MsgBox(output.ToString())
+            Console.WriteLine(output.ToString())
 
             ' This code produces the following output:
             '
@@ -3105,7 +3105,7 @@ Namespace SequenceExamples
             For Each number As Integer In query
                 output.AppendLine(number)
             Next
-            MsgBox(output.ToString())
+            Console.WriteLine(output.ToString())
 
             ' This code produces the following output:
             '
@@ -3217,7 +3217,7 @@ Namespace SequenceExamples
             For Each grade As Integer In topGrades
                 output.AppendLine(grade)
             Next
-            MsgBox(output.ToString())
+            Console.WriteLine(output.ToString())
 
             ' This code produces the following output:
             '
@@ -3251,7 +3251,7 @@ Namespace SequenceExamples
             For Each grade As Integer In bottomThreeGrades
                 output.AppendLine(grade)
             Next
-            MsgBox(output.ToString())
+            Console.WriteLine(output.ToString())
 
             ' This code produces the following output:
             '
