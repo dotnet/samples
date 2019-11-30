@@ -750,7 +750,7 @@ Namespace SequenceExamples
             Dim text As String = If(String.IsNullOrEmpty(name), "[THERE IS NO NAME AT THIS INDEX]", name)
 
             ' Display the output.
-            Console.WriteLine("The name chosen at index {index} is {text}")
+            Console.WriteLine($"The name chosen at index {index} is {text}")
 
             ' This code produces the following output:
             '
