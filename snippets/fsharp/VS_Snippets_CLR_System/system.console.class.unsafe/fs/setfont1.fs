@@ -17,17 +17,6 @@ type (*internal*) COORD =
     val mutable Y: int16
 
     internal new(x : int16, y : int16) = { X = x; Y = y }
-// [<StructLayout(LayoutKind.Sequential)>]
-// type internal COORD(x : int16, y : int16) =
-//     member 
-//     val mutable X: short
-//     val mutable Y: short
-
-//     internal new(short x, short y) =
-//     {
-//       X = x;
-//       Y = y
-//     }
  
 [<Struct>]
 [<StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)>]
@@ -39,15 +28,6 @@ type (*internal*) CONSOLE_FONT_INFO_EX =
     val mutable FontWeight : int
     [<MarshalAs(UnmanagedType.ByValTStr, SizeConst = 32)>]
     val mutable FaceName : string
-
-    // internal new() = {
-    //     cbSize = (uint32)0
-    //     nFont = (uint32)0
-    //     dwFontSize = COORD((int16)0, (int16)0)
-    //     FontFamily = 0
-    //     FontWeight = 0
-    //     FaceName = null
-    // }
 
 [<DllImport("kernel32.dll", SetLastError = true)>]
 extern IntPtr internal GetStdHandle(int nStdHandle)
@@ -64,10 +44,6 @@ extern bool internal SetCurrentConsoleFontEx(
     bool maximumWindow,
     CONSOLE_FONT_INFO_EX consoleCurrentFontEx)
 
-let debug method value =
-    method value |> ignore
-    value
-
 [<EntryPoint>]
 let main argv =
     let fontName = "Lucida Console";
@@ -78,7 +54,7 @@ let main argv =
             info.cbSize <- uint32 (Marshal.SizeOf(info));
             let mutable tt = false;
             // First determine whether there's already a TrueType font.
-            if (GetCurrentConsoleFontEx(hnd, false, info) |> debug (fun x ->  printf "%s")) 
+            if (GetCurrentConsoleFontEx(hnd, false, info)) 
                 then
                     let tt = ((info.FontFamily) &&& TMPF_TRUETYPE) = TMPF_TRUETYPE
                     if (tt)
@@ -90,10 +66,6 @@ let main argv =
                             let mutable newInfo = CONSOLE_FONT_INFO_EX()
                             newInfo.cbSize <- uint32 (Marshal.SizeOf(newInfo))          
                             newInfo.FontFamily <- TMPF_TRUETYPE
-                            // // let ptr = Marshal.StringToBSTR(newInfo.FaceName)
-                            // let ptr = IntPtr(newInfo.FaceName)
-                            
-                            // Marshal.Copy(fontName.ToCharArray(), 0, ptr, fontName.Length)
                             newInfo.FaceName <- fontName
                             // Get some settings from current font.
                             newInfo.dwFontSize <- COORD(info.dwFontSize.X, info.dwFontSize.Y)
