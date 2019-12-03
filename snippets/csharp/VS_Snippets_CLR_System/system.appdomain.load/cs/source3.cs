@@ -11,9 +11,9 @@ class AppDomain2
 
         Console.WriteLine("Host domain: " + AppDomain.CurrentDomain.FriendlyName);
         Console.WriteLine("child domain: " + domain.FriendlyName);
-        AppDomain.Unload(domain);
         try
         {
+            AppDomain.Unload(domain);
             Console.WriteLine();
             Console.WriteLine("Host domain: " + AppDomain.CurrentDomain.FriendlyName);
             // The following statement creates an exception because the domain no longer exists.
