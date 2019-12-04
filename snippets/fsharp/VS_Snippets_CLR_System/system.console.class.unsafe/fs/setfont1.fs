@@ -52,15 +52,12 @@ let main argv =
         then
             let mutable info = CONSOLE_FONT_INFO_EX()
             info.cbSize <- uint32 (Marshal.SizeOf(info))
-            let mutable tt = false
             // First determine whether there's already a TrueType font.
             if (GetCurrentConsoleFontEx(hnd, false, info)) 
                 then
-                    let tt = ((info.FontFamily) &&& TMPF_TRUETYPE) = TMPF_TRUETYPE
-                    if (tt)
+                    if (((info.FontFamily) &&& TMPF_TRUETYPE) = TMPF_TRUETYPE)
                         then
                            Console.WriteLine("The console already is using a TrueType font.")
-                           0
                         else
                             // Set console font to Lucida Console.
                             let mutable newInfo = CONSOLE_FONT_INFO_EX()
@@ -72,13 +69,12 @@ let main argv =
                             newInfo.FontWeight <- info.FontWeight
                             SetCurrentConsoleFontEx(hnd, false, newInfo) |> ignore
                             Console.WriteLine("The console is now using a TrueType font.")
-
-                            0
                 else 
-                    Console.WriteLine("TODO: Call failed to GetCurrentConsoleFontEx.")
-                    0
+                    ()
     else
-        Console.WriteLine("TODO: Call failed to GetStdHandle.")
-        0
-   
+        ()
+
+    // Return zero for success
+    0
+
 // </Snippet3>
