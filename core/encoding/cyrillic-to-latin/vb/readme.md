@@ -5,7 +5,7 @@ products:
 - dotnet-core
 page_type: sample
 name: ".NET Core Cyrillic to Latin Transliteration Utility (Visual Basic)"
-urlFragment: "cyrillic-transliteration-cs"
+urlFragment: "cyrillic-transliteration-vb"
 description: "A .NET Core console application written in Visual Basic that uses the encoding fallback functionality to transliterate Cyrillic to Latin characters."
 ---
 cyrillic-to-latin is a command-line utility that transliterates modern Cyrillic characters 
