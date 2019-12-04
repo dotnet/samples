@@ -3,12 +3,12 @@ open System
 open System.Runtime.InteropServices
 
 [<LiteralAttribute>]
-let STD_OUTPUT_HANDLE = -11;
+let STD_OUTPUT_HANDLE = -11
 [<LiteralAttribute>]
-let TMPF_TRUETYPE = 4;
+let TMPF_TRUETYPE = 4
 [<LiteralAttribute>]
-let LF_FACESIZE = 32;
-let INVALID_HANDLE_VALUE = IntPtr(-1);
+let LF_FACESIZE = 32
+let INVALID_HANDLE_VALUE = IntPtr(-1)
 
 [<Struct>]
 [<StructLayout(LayoutKind.Sequential)>]
@@ -46,13 +46,13 @@ extern bool internal SetCurrentConsoleFontEx(
 
 [<EntryPoint>]
 let main argv =
-    let fontName = "Lucida Console";
-    let hnd = GetStdHandle(STD_OUTPUT_HANDLE);
+    let fontName = "Lucida Console"
+    let hnd = GetStdHandle(STD_OUTPUT_HANDLE)
     if hnd <> INVALID_HANDLE_VALUE
         then
             let mutable info = CONSOLE_FONT_INFO_EX()
-            info.cbSize <- uint32 (Marshal.SizeOf(info));
-            let mutable tt = false;
+            info.cbSize <- uint32 (Marshal.SizeOf(info))
+            let mutable tt = false
             // First determine whether there's already a TrueType font.
             if (GetCurrentConsoleFontEx(hnd, false, info)) 
                 then
