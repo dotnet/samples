@@ -5,10 +5,10 @@ the .NET documentation. There are several different projects that
 are organized in sub-folders. These sub-folders are organized similarly
 to the organization of the docs for .NET. Some of the articles will have more than one sample associated with them.
 
-The content team tracks issues for .NET documentation in the [dotnet/docs](https://github.com/dotnet/docs) and [dotnet/dotnet-api-docs](https://github.com/dotnet/dotnet-api-docs) repositories. Issues are turned off on this repository. File issues against existing samples and suggestions for new samples in those repositories. If you're not sure where, choose [dotnet/docs](https://github.com/dotnet/docs/issues). This process keeps the issues associated with the articles that explain the concepts for each sample. The best process is to file an issue from the feedback control at the bottom of each docs page: 
+The content team tracks issues for .NET documentation in the [dotnet/docs](https://github.com/dotnet/docs) and [dotnet/dotnet-api-docs](https://github.com/dotnet/dotnet-api-docs) repositories. Issues are turned off on this repository. File issues against existing samples and suggestions for new samples in those repositories. If you're not sure where, choose [dotnet/docs](https://github.com/dotnet/docs/issues). This process keeps the issues associated with the articles that explain the concepts for each sample. The best process is to file an issue from the feedback control at the bottom of each docs page:
+
 - For existing samples, file the issue on the page with the sample. 
 - To suggest new samples, file the issue on the index page where you want to see the new sample.
-
 
 There are two classes of code in this repository:
 
@@ -56,13 +56,14 @@ If you wish to add a code sample:
 
 1. Your sample **must be part of a buildable project**. Where possible, the projects should build on all platforms supported by .NET Core. Exceptions to this are samples that demonstrate a platform-specific feature or platform-specific tool.
 
-2. Your sample should conform to the [corefx coding style](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/coding-style.md) to maintain consistency.
+2. Your sample should conform to the [runtime coding style](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/coding-style.md) to maintain consistency.
 
     - Additionally, we prefer the use of `static` methods rather than instance methods when demonstrating something that doesn't require instantiating a new object.
 
 3. Your sample should include **appropriate exception handling**. It should handle all exceptions that are likely to be thrown in the context of the sample. For example, a sample that calls the [Console.ReadLine](https://docs.microsoft.com/dotnet/api/system.console.readline) method to retrieve user input should use appropriate exception handling when the input string is passed as an argument to a method. Similarly, if your sample expects a method call to fail, the resulting exception must be handled. Always handle the specific exceptions thrown by the method, rather than base class exceptions such as [Exception](https://docs.microsoft.com/dotnet/api/system.exception) or [SystemException](https://docs.microsoft.com/dotnet/api/system.systemexception).
 
 4. If your sample builds a standalone package, you must include the runtimes used by our CI build system, in addition to any runtimes used by your sample:
+
     - `win7-x64`
     - `win8-x64`
     - `win81-x64`
@@ -74,8 +75,8 @@ To create a sample:
 
 1. File an [issue](https://github.com/dotnet/docs/issues) or add a comment to an existing one that you are working on it.
 2. Write the topic that explains the concepts demonstrated in your sample (example: `docs/standard/linq/where-clause.md`).
-3. Write your sample (example: `WhereClause-Sample1.cs`).
-4. Create a Program.cs with a Main entry point that calls your samples. If there is already one there, add the call to your sample:
+3. Write your sample (example: *WhereClause-Sample1.cs*).
+4. Create a *Program.cs* with a Main entry point that calls your samples. If there is already one there, add the call to your sample:
 
     ```csharp
     public class Program
@@ -94,7 +95,6 @@ To create a sample:
 
 To build and run your sample:
 
-
 1. Go to the sample folder and build to check for errors:
 
     ```console
@@ -106,7 +106,6 @@ To build and run your sample:
     dotnet run
     ```
 
-3. Add a readme.md to the root directory of your sample. 
+3. Add a *README.md* to the root directory of your sample. 
 
    This should include a brief description of the code, and refer people to the article that references the sample.
-
