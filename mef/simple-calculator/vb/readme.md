@@ -5,12 +5,12 @@ products:
 - dotnet-core
 - windows
 page_type: sample
-name: "MEF Sample: Simple Calculator"
+name: "MEF Sample: Simple Calculator (Visual Basic)"
 urlFragment: "simple-calculator-vb"
 description: "A .NET Core console application that contains the example method from Simple Calculator MEF Application in Visual Basic."
 ---
 
-# MEF Sample: Simple Calculator
+# MEF Sample: Simple Calculator (Visual Basic)
 
 The simplest way to see what Managed Extensibility Framework can do is to build a simple MEF application. In this example, you build a very simple calculator named SimpleCalculator. The goal of SimpleCalculator is to create a console application that accepts basic arithmetic commands, in the form "5+3" or "6-2", and returns the correct answers. Using MEF, you will be able to add new operators without changing the application code.
 
@@ -22,7 +22,7 @@ To download and run the sample, follow these steps:
 
 1. Download and unzip the sample.
 
-2. In Visual Studio (2019 or later):
+2. In Visual Studio 2019 or later:
 
     1. On the menu bar, choose **File** > **Open** > **Project/Solution**.
 
@@ -38,4 +38,4 @@ To download and run the sample, follow these steps:
 
 ## More information
  
-  - https://docs.microsoft.com/en-us/dotnet/framework/mef/
+  - https://docs.microsoft.com/dotnet/framework/mef/
