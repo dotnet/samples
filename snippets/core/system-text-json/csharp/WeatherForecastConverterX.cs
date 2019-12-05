@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 
 namespace SystemTextJsonSamples
 {
-    public class WeatherForecastConverter : JsonConverter<WeatherForecast>
+    public class WeatherForecastConverterX : JsonConverter<WeatherForecast>
     {
         public override WeatherForecast Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {

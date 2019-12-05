@@ -13,6 +13,7 @@ namespace SystemTextJsonSamples
     }
     // </SnippetWF>
 
+    // <SnippetWFWithLong>
     public class WeatherForecastWithLong
     {
         public DateTimeOffset Date { get; set; }
@@ -20,6 +21,7 @@ namespace SystemTextJsonSamples
         public long TemperatureCelsius { get; set; }
         public string Summary { get; set; }
     }
+    // </SnippetWFWithLong>
 
     // <SnippetWFWithDefault>
     public class WeatherForecastWithDefault
