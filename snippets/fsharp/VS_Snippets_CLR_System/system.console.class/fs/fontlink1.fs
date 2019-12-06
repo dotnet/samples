@@ -30,14 +30,7 @@ let main argv =
                | _ -> [||]
             
             // Determine whether SimSun is a linked font.
-            let toAdd = 
-               if Array.FindIndex(fonts, fun s -> s.IndexOf("SimSun", StringComparison.OrdinalIgnoreCase) >=0) >= 0
-               then
-                  Console.WriteLine("Font is already linked.")
-                  false
-               else
-                  // Font is not a linked font.
-                  true
+            let toAdd = not (Array.Exists(fonts, fun s -> s.IndexOf("SimSun", StringComparison.OrdinalIgnoreCase) >=0))
                
             (fonts, kind, toAdd)
          else
@@ -46,15 +39,18 @@ let main argv =
 
       if toAdd
       then 
+         // Font is not a linked font.
          let newFonts = Array.append fonts [|newFont|]
 
          // Change REG_SZ to REG_MULTI_SZ.
          if kind = RegistryValueKind.String
-         then
-            key.DeleteValue(valueName, false)
+         then key.DeleteValue(valueName, false)
 
          key.SetValue(valueName, newFonts, RegistryValueKind.MultiString)
          Console.WriteLine("SimSun added to the list of linked fonts.")
+      else
+         Console.WriteLine("Font is already linked.")
+
    
    if not (isNull key) then key.Close()
    0
