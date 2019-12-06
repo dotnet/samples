@@ -23,6 +23,16 @@ namespace SystemTextJsonSamples
     }
     // </SnippetWFWithLong>
 
+    // <SnippetWFWithTemperatureAttribute>
+    public class WeatherForecastWithTemperatureAttribute
+    {
+        public DateTimeOffset Date { get; set; }
+        [JsonConverter(typeof(OmitOutOfRangeTemperatureConverter))]
+        public int TemperatureCelsius { get; set; }
+        public string Summary { get; set; }
+    }
+    // </SnippetWFWithTemperatureAttribute>
+
     // <SnippetWFWithDefault>
     public class WeatherForecastWithDefault
     {
@@ -187,6 +197,12 @@ namespace SystemTextJsonSamples
             Console.WriteLine();
         }
 
+        public static void DisplayPropertyValues(this WeatherForecastWithTemperatureAttribute wf)
+        {
+            Utilities.DisplayPropertyValues(wf);
+            Console.WriteLine();
+        }
+
         public static void DisplayPropertyValues(this WeatherForecastWithDefault wf)
         {
             Utilities.DisplayPropertyValues(wf);
@@ -308,6 +324,17 @@ namespace SystemTextJsonSamples
         public static WeatherForecastWithLong CreateWeatherForecastWithLong()
         {
             var weatherForecast = new WeatherForecastWithLong
+            {
+                Date = DateTime.Parse("2019-08-01"),
+                TemperatureCelsius = 25,
+                Summary = "Hot"
+            };
+            return weatherForecast;
+        }
+
+        public static WeatherForecastWithTemperatureAttribute CreateWeatherForecastWithTemperatureAttribute()
+        {
+            var weatherForecast = new WeatherForecastWithTemperatureAttribute
             {
                 Date = DateTime.Parse("2019-08-01"),
                 TemperatureCelsius = 25,

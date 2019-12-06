@@ -91,6 +91,12 @@ namespace SystemTextJsonSamples
             Console.WriteLine("\n============================= Null value to nonnullable type\n");
             DeserializeNullToNonnullableType.Run();
 
+            Console.WriteLine("\n============================= Immutable struct\n");
+            RoundtripImmutableStruct.Run();
+
+            Console.WriteLine("\n============================= Runtime property exclusion\n");
+            SerializeRuntimePropertyExclusion.Run();
+
             Console.WriteLine("\n============================= JsonDocument data access\n");
             JsonDocumentDataAccess.Run();
 

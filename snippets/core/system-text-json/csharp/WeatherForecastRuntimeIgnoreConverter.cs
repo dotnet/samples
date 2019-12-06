@@ -4,12 +4,13 @@ using System.Text.Json.Serialization;
 
 namespace SystemTextJsonSamples
 {
-    public class WeatherForecastConverterX : JsonConverter<WeatherForecast>
+    public class WeatherForecastRuntimeIgnoreConverter : JsonConverter<WeatherForecast>
     {
-        public override WeatherForecast Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+        public override WeatherForecast Read(
+            ref Utf8JsonReader reader, 
+            Type typeToConvert, 
+            JsonSerializerOptions options)
         {
-            // Location for OnDeserializing "callback" code.
-            Console.WriteLine("OnDeserializing");
             if (reader.TokenType != JsonTokenType.StartObject)
             {
                 throw new JsonException();
@@ -21,13 +22,6 @@ namespace SystemTextJsonSamples
             {
                 if (reader.TokenType == JsonTokenType.EndObject)
                 {
-                    // Location for OnDeserialized "callback" code.
-                    Console.WriteLine("OnDeserialized");
-                    // Check for required fields set by values in JSON
-                    if (wf.Date == default(DateTimeOffset))
-                    {
-                        throw new JsonException("Required property not received in the JSON");
-                    };
                     return wf;
                 }
 
@@ -38,16 +32,8 @@ namespace SystemTextJsonSamples
                     switch (propertyName)
                     {
                         case "Date":
-                            // Avoid exception on getting null in JSON for a non-null value type.
-                            if (reader.TokenType == JsonTokenType.Null)
-                            {
-                                wf.Date = DateTimeOffset.Now;
-                            }
-                            else
-                            {
-                                DateTimeOffset date = reader.GetDateTimeOffset();
-                                wf.Date = date;
-                            }
+                            DateTimeOffset date = reader.GetDateTimeOffset();
+                            wf.Date = date;
                             break;
                         case "TemperatureCelsius":
                             int temperatureCelsius = reader.GetInt32();
@@ -55,11 +41,7 @@ namespace SystemTextJsonSamples
                             break;
                         case "Summary":
                             string summary = reader.GetString();
-                            // Ignore properties in JSON based on criteria evaluated at runtime.
-                            if (wf.TemperatureCelsius != 0)
-                            {
-                                wf.Summary = summary;
-                            }
+                            wf.Summary = string.IsNullOrWhiteSpace(summary) ? "N/A" : summary;
                             break;
                     }
                 }
@@ -77,15 +59,12 @@ namespace SystemTextJsonSamples
 
             writer.WriteString("Date", wf.Date);
             writer.WriteNumber("TemperatureCelsius", wf.TemperatureCelsius);
-            if (wf.TemperatureCelsius != 0)
+            if (!string.IsNullOrWhiteSpace(wf.Summary) && wf.Summary != "N/A")
             {
                 writer.WriteString("Summary", wf.Summary);
             }
 
             writer.WriteEndObject();
-
-            // Location for Onserialized "callback" code.
-            Console.WriteLine("OnSerialized");
         }
     }
 }
