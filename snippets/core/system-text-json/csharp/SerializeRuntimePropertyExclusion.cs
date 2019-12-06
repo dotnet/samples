@@ -19,7 +19,7 @@ namespace SystemTextJsonSamples
             jsonString = JsonSerializer.Serialize(wf, serializeOptions);
             Console.WriteLine($"JSON output:\n{jsonString}\n");
 
-            wf.TemperatureCelsius = 91;
+            wf.Summary = "N/A";
             wf.DisplayPropertyValues();
             serializeOptions = new JsonSerializerOptions();
             serializeOptions.Converters.Add(new WeatherForecastRuntimeIgnoreConverter());
