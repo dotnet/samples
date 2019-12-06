@@ -5,7 +5,7 @@ using System.Text.Json.Serialization;
 
 namespace SystemTextJsonSamples
 {
-    public class Callbacks
+    public class RoundtripCallbacks
     {
         public static void Run()
         {

@@ -3,7 +3,7 @@ using System.Text.Json;
 
 namespace SystemTextJsonSamples
 {
-    public class ConvertLongToString
+    public class RoundtripLongToString
     {
         public static void Run()
         {
