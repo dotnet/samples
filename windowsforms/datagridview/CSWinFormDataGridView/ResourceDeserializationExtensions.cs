@@ -13,13 +13,7 @@ namespace CSWinFormDataGridView
         /// <summary>
         /// Returns an image deserialized from a string resource to work around https://github.com/dotnet/corefx/issues/26745
         /// </summary>
-        public static Image GetImage(this ResourceManager resourceManager, string name)
-        {
-            var imageString = resourceManager.GetString(name);
-            using (var ms = new MemoryStream(Convert.FromBase64String(imageString)))
-            {
-                return Image.FromStream(ms);
-            }
-        }
+        public static Image GetImage(this ResourceManager resourceManager, string name) =>
+            (Bitmap)resourceManager.GetObject(name);
     }
 }
