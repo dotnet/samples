@@ -79,7 +79,7 @@
             // toolStripButtonFirst
             // 
             this.toolStripButtonFirst.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButtonFirst.Image = resources.GetImage("toolStripButtonFirst.Image");
+            this.toolStripButtonFirst.Image = (System.Drawing.Bitmap)resources.GetObject("toolStripButtonFirst.Image");
             this.toolStripButtonFirst.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonFirst.Name = "toolStripButtonFirst";
             this.toolStripButtonFirst.Size = new System.Drawing.Size(59, 22);
@@ -89,7 +89,7 @@
             // toolStripButtonPrev
             // 
             this.toolStripButtonPrev.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButtonPrev.Image = resources.GetImage("toolStripButtonPrev.Image");
+            this.toolStripButtonPrev.Image = (System.Drawing.Bitmap)resources.GetObject("toolStripButtonPrev.Image");
             this.toolStripButtonPrev.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonPrev.Name = "toolStripButtonPrev";
             this.toolStripButtonPrev.Size = new System.Drawing.Size(79, 22);
@@ -99,7 +99,7 @@
             // toolStripButtonNext
             // 
             this.toolStripButtonNext.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButtonNext.Image = resources.GetImage("toolStripButtonNext.Image");
+            this.toolStripButtonNext.Image = (System.Drawing.Bitmap)resources.GetObject("toolStripButtonNext.Image");
             this.toolStripButtonNext.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonNext.Name = "toolStripButtonNext";
             this.toolStripButtonNext.Size = new System.Drawing.Size(61, 22);
@@ -109,7 +109,7 @@
             // toolStripButtonLast
             // 
             this.toolStripButtonLast.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButtonLast.Image = resources.GetImage("toolStripButtonLast.Image");
+            this.toolStripButtonLast.Image = (System.Drawing.Bitmap)resources.GetObject("toolStripButtonLast.Image");
             this.toolStripButtonLast.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonLast.Name = "toolStripButtonLast";
             this.toolStripButtonLast.Size = new System.Drawing.Size(58, 22);
