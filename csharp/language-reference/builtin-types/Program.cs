@@ -21,6 +21,10 @@ namespace builtin_types
             Console.WriteLine("============ bool type ===========");
             BoolType.Examples();
             Console.WriteLine();
+
+            Console.WriteLine("========= Enumeration types ======");
+            EnumType.Examples();
+            Console.WriteLine();
         }
     }
 }
