@@ -44,7 +44,7 @@ namespace builtin_types
                 // Output:
                 // Is there a meeting on Tuesday: False
 
-                Days a = (Days)37;
+                var a = (Days)37;
                 Console.WriteLine(a);
                 // Output:
                 // Monday, Wednesday, Saturday
@@ -65,13 +65,13 @@ namespace builtin_types
         {
             public static void Main()
             {
-                var a = Season.Autumn;
+                Season a = Season.Autumn;
                 Console.WriteLine($"Integral value of {a} is {(int)a}");  // output: Integral value of Autumn is 2
 
-                Season b = (Season)1;
+                var b = (Season)1;
                 Console.WriteLine(b);  // output: Summer
 
-                Season c = (Season)4;
+                var c = (Season)4;
                 Console.WriteLine(c);  // output: 4
             }
         }
