@@ -50,7 +50,7 @@ namespace builtin_types
                 // Monday, Wednesday, Saturday
             }
         }
-        // <SnippetFlags>
+        // </SnippetFlags>
 
         // <SnippetConversions>
         public enum Season
