@@ -8,13 +8,13 @@ open System.Text
 
 type uint = uint32
 
-let RoundDownToMultipleOf (b:uint) (u:uint) : uint =
+let roundDownToMultipleOf (b:uint) (u:uint) : uint =
     u - (u % b)
 
-let RoundUpToMultipleOf (b:uint) (u:uint) : uint =
-    RoundDownToMultipleOf b u |> (+) b
+let roundUpToMultipleOf (b:uint) (u:uint) : uint =
+    roundDownToMultipleOf b u |> (+) b
 
-let DisplayRange (start:uint) (``end``:uint) : unit =
+let displayRange (start:uint) (``end``:uint) : unit =
 
     let mutable upperRange : uint = 0x10FFFFu
     let mutable surrogateStart : uint = 0xD800u
@@ -41,8 +41,8 @@ let DisplayRange (start:uint) (``end``:uint) : unit =
     if ((start < surrogateStart && ``end`` > surrogateStart) || (start >= surrogateStart && start <= surrogateEnd ))
     then raise (ArgumentException(String.Format("0x{0:X5}-0x{1:X5} includes the surrogate pair range 0x{2:X5}-0x{3:X5}", 
                                                start, ``end``, surrogateStart, surrogateEnd)))
-    let last = RoundUpToMultipleOf 0x10u ``end``
-    let first = RoundDownToMultipleOf 0x10u start
+    let last = roundUpToMultipleOf 0x10u ``end``
+    let first = roundDownToMultipleOf 0x10u start
 
     let rows = (last - first) / 0x10u
 
@@ -138,7 +138,7 @@ let main args =
                         Console.OutputEncoding.EncodingName,
                         Console.OutputEncoding.CodePage)
             
-                DisplayRange rangeStart rangeEnd
+                displayRange rangeStart rangeEnd
         with 
         | :? ArgumentException as ex -> Console.WriteLine(ex.Message)
     finally
