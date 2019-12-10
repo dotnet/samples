@@ -1,4 +1,6 @@
 ﻿// <Snippet1>
+module Example
+
 open System
 open System.IO
 

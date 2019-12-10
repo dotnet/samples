@@ -1,6 +1,7 @@
-﻿
-// dump a range of Unicode characters as a 16x16 array
+﻿// dump a range of Unicode characters as a 16x16 array
 // <Snippet4>
+module DisplayChars
+
 open System
 open System.IO
 open System.Globalization
@@ -8,76 +9,71 @@ open System.Text
 
 type uint = uint32
 
-let roundDownToMultipleOf (b:uint) (u:uint) : uint =
-    u - (u % b)
+let roundDownToMultipleOf (b: uint) (u: uint): uint = u - (u % b)
 
-let roundUpToMultipleOf (b:uint) (u:uint) : uint =
-    roundDownToMultipleOf b u |> (+) b
+let roundUpToMultipleOf (b: uint) (u: uint): uint = roundDownToMultipleOf b u |> (+) b
 
-let displayRange (start:uint) (``end``:uint) : unit =
+let displayRange (start: uint) (``end``: uint): unit =
 
-    let mutable upperRange : uint = 0x10FFFFu
-    let mutable surrogateStart : uint = 0xD800u
-    let mutable surrogateEnd : uint = 0xDFFFu
-   
-    let mutable start = start
-    let mutable ``end`` = ``end``
-    if ``end`` <= start
-    then
-        let t = start
-        start <- ``end``
-        ``end`` <- t
+    let upperRange = 0x10FFFFu
+    let surrogateStart = 0xD800u
+    let surrogateEnd = 0xDFFFu
+
+    let start, ``end`` =
+        if ``end`` <= start then ``end``, start
+        else start, ``end``
 
     // Check whether the start or end range is outside of last plane.
-    if start > upperRange
-    then
-        raise (ArgumentException(String.Format("0x{0:X5} is outside the upper range of Unicode code points (0x{1:X5})", start, upperRange)))
-    if ``end`` > upperRange
-    then
-        raise (ArgumentException(String.Format("0x{0:X5} is outside the upper range of Unicode code points (0x{0:X5})",
-                                               ``end``, upperRange)))
+    if start > upperRange then
+        invalidArg "start"
+            (String.Format("0x{0:X5} is outside the upper range of Unicode code points (0x{1:X5})", start, upperRange))
+    if ``end`` > upperRange then
+        invalidArg "end"
+            (String.Format("0x{0:X5} is outside the upper range of Unicode code points (0x{0:X5})", ``end``, upperRange))
 
     // Since we're using 21-bit code points, we can't use U+D800 to U+DFFF.
-    if ((start < surrogateStart && ``end`` > surrogateStart) || (start >= surrogateStart && start <= surrogateEnd ))
-    then raise (ArgumentException(String.Format("0x{0:X5}-0x{1:X5} includes the surrogate pair range 0x{2:X5}-0x{3:X5}", 
-                                               start, ``end``, surrogateStart, surrogateEnd)))
+    if ((start < surrogateStart && ``end`` > surrogateStart) || (start >= surrogateStart && start <= surrogateEnd)) then
+        raise
+            (ArgumentException
+                (String.Format
+                    ("0x{0:X5}-0x{1:X5} includes the surrogate pair range 0x{2:X5}-0x{3:X5}", start, ``end``,
+                     surrogateStart, surrogateEnd)))
     let last = roundUpToMultipleOf 0x10u ``end``
     let first = roundDownToMultipleOf 0x10u start
 
     let rows = (last - first) / 0x10u
 
-    for r in 0u..(rows - 1u) do
+    for r in 0u .. (rows - 1u) do
         // Display the row header.
-        Console.Write("{0:x5} ", first + 0x10u * uint32 r)
+        printf "%05x " (first + 0x10u * uint32 r)
 
-        for c in 0u..(0x10u - 1u) do
-            let cur = (first + 0x10u * r + c);
-            if cur  < start then
-               Console.Write(" {0} ", Convert.ToChar(0x20))
-            elif ``end`` < cur then
-               Console.Write(" {0} ", Convert.ToChar(0x20));
+        for c in 0u .. (0x10u - 1u) do
+            let cur = (first + 0x10u * r + c)
+            if cur < start || ``end`` < cur then
+                printf " %c " (Convert.ToChar 0x20)
             else
                 // the cast to int is safe, since we know that val <= upperRange.
-                let chars = Char.ConvertFromUtf32( (int) cur)
+                let chars = Char.ConvertFromUtf32((int) cur)
                 // Display a space for code points that are not valid characters.
                 if CharUnicodeInfo.GetUnicodeCategory(chars.[0]) = UnicodeCategory.OtherNotAssigned then
-                    Console.Write(" {0} ", Convert.ToChar(0x20))
-                // Display a space for code points in the private use area.
-                else if CharUnicodeInfo.GetUnicodeCategory(chars.[0]) = UnicodeCategory.PrivateUse then
-                    Console.Write(" {0} ", Convert.ToChar(0x20))
-                else if chars.Length > 1 && CharUnicodeInfo.GetUnicodeCategory(chars, 0) = UnicodeCategory.OtherNotAssigned then
-                    Console.Write(" {0} ", Convert.ToChar(0x20))
+                    printf " %c " (Convert.ToChar 0x20)
                 else
-                    Console.Write(" {0} ", chars)
+                    // Display a space for code points in the private use area.
+                    if CharUnicodeInfo.GetUnicodeCategory(chars.[0]) = UnicodeCategory.PrivateUse then
+                        printf " %c " (Convert.ToChar 0x20)
+                    else if chars.Length > 1
+                            && CharUnicodeInfo.GetUnicodeCategory(chars, 0) = UnicodeCategory.OtherNotAssigned then
+                        printf " %c " (Convert.ToChar 0x20)
+                    else printf " %s " chars
 
-            match c with 
-            | 3u | 11u -> Console.Write("-")
-            | 7u -> Console.Write("--")
+            match c with
+            | 3u
+            | 11u -> printf "-"
+            | 7u -> printf "--"
             | _ -> ()
 
         Console.WriteLine()
-        if (0u < r && r % 0x10u = 0u) then
-            Console.WriteLine()
+        if (0u < r && r % 0x10u = 0u) then Console.WriteLine()
 
 
 
@@ -91,61 +87,54 @@ let main args =
 
     try
         try
-            let setOutputEncodingToUnicode = 
+            let setOutputEncodingToUnicode =
                 match args.Length with
                 | 2 ->
                     rangeStart <- uint.Parse(args.[0], NumberStyles.HexNumber)
                     rangeEnd <- uint.Parse(args.[1], NumberStyles.HexNumber)
                     Some true
                 | 3 ->
-                    if not <| uint.TryParse(args.[0], NumberStyles.HexNumber, null, &rangeStart)
-                    then raise (ArgumentException(String.Format("{0} is not a valid hexadecimal number.", args.[0])))
-                    
-                    if not <| uint.TryParse(args.[1], NumberStyles.HexNumber, null, &rangeEnd)
-                    then raise (ArgumentException(String.Format("{0} is not a valid hexadecimal number.", args.[1])))
-                    
+                    if not <| uint.TryParse(args.[0], NumberStyles.HexNumber, null, &rangeStart) then
+                        invalidArg "args" (String.Format("{0} is not a valid hexadecimal number.", args.[0]))
+
+                    if not <| uint.TryParse(args.[1], NumberStyles.HexNumber, null, &rangeEnd) then
+                        invalidArg "args" (String.Format("{0} is not a valid hexadecimal number.", args.[1]))
+
                     match bool.TryParse args.[2] with
                     | true, value -> Some value
                     | false, _ -> Some true
                 | _ ->
-                    Console.WriteLine("Usage: {0} <{1}> <{2}> [{3}]", 
-                          Environment.GetCommandLineArgs().[0], 
-                          "startingCodePointInHex", 
-                          "endingCodePointInHex", 
-                          "<setOutputEncodingToUnicode?{true|false, default:false}>")
+                    printfn "Usage: %s <%s> <%s> [%s]" (Environment.GetCommandLineArgs().[0]) "startingCodePointInHex"
+                        "endingCodePointInHex" "<setOutputEncodingToUnicode?{true|false, default:false}>"
                     None
-                    //   return;
+
             match setOutputEncodingToUnicode with
             | None -> ()
-            | Some setOutputEncodingToUnicode -> 
-                if setOutputEncodingToUnicode
-                then
+            | Some setOutputEncodingToUnicode ->
+                if setOutputEncodingToUnicode then
                     // This won't work before .NET Framework 4.5.
                     try
                         // Set encoding using endianness of this system.
-                        // We're interested in displaying individual Char objects, so 
+                        // We're interested in displaying individual Char objects, so
                         // we don't want a Unicode BOM or exceptions to be thrown on
                         // invalid Char values.
-                        Console.OutputEncoding <- UnicodeEncoding(not BitConverter.IsLittleEndian, false); 
-                        Console.WriteLine("\nOutput encoding set to UTF-16")
-                   
-                    with :? IOException -> 
-                        Console.WriteLine("Output encoding set to UTF-8")
+                        Console.OutputEncoding <- UnicodeEncoding(not BitConverter.IsLittleEndian, false)
+                        printfn "\nOutput encoding set to UTF-16"
+
+                    with :? IOException ->
+                        printfn "Output encoding set to UTF-8"
                         Console.OutputEncoding <- UTF8Encoding()
-                else 
-                    Console.WriteLine(
-                        "The console encoding is {0} (code page {1})", 
-                        Console.OutputEncoding.EncodingName,
-                        Console.OutputEncoding.CodePage)
-            
+                else
+                    printfn "The console encoding is %s (code page %i)" (Console.OutputEncoding.EncodingName)
+                        (Console.OutputEncoding.CodePage)
+
                 displayRange rangeStart rangeEnd
-        with 
-        | :? ArgumentException as ex -> Console.WriteLine(ex.Message)
+        with :? ArgumentException as ex -> Console.WriteLine(ex.Message)
     finally
         // Restore console environment.
-        Console.OutputEncoding <- originalOutputEncoding;
-    0
-
+        Console.OutputEncoding <- originalOutputEncoding
+    0 
+    
 // If the example is run with the command line
 //       DisplayChars 0400 04FF true
 // the example displays the Cyrillic character set as follows:
