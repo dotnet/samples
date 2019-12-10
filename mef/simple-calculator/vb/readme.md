@@ -38,4 +38,4 @@ To download and run the sample, follow these steps:
 
 ## More information
  
-  - https://docs.microsoft.com/dotnet/framework/mef/
+- https://docs.microsoft.com/dotnet/framework/mef/
