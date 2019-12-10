@@ -64,7 +64,7 @@ Module Example
       sw.Stop()
       Console.WriteLine("   {0:N0} matches in {1}", matches, sw.Elapsed)
       
-      ' Read all sentnces with compiled regex.
+      ' Read all sentences with compiled regex.
       Console.WriteLine("All Sentences with Compiled Regex:")
       sw = Stopwatch.StartNew()
       Dim compAll As New Regex(pattern, 

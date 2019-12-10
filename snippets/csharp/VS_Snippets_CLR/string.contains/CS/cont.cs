@@ -16,7 +16,7 @@ class Example
                 Console.WriteLine("'{0} begins at character position {1}",
                               s2, index + 1);                              
         }
-        // This example display the following output:
+        // This example displays the following output:
         //    'fox' is in the string 'The quick brown fox jumps over the lazy dog': True
         //    'fox begins at character position 17
         //</snippet1>        

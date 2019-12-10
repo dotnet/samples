@@ -62,7 +62,7 @@ public class Example
       sw.Stop();
       Console.WriteLine("   {0:N0} matches in {1}", matches, sw.Elapsed);
       
-      // Read all sentnces with compiled regex.
+      // Read all sentences with compiled regex.
       Console.WriteLine("All Sentences with Compiled Regex:");
       sw = Stopwatch.StartNew();
       Regex compAll = new Regex(pattern, 
