@@ -9,11 +9,11 @@ open System.Text
 
 type uint = uint32
 
-let roundDownToMultipleOf (b: uint) (u: uint): uint = u - (u % b)
+let inline roundDownToMultipleOf b u = u - (u % b)
 
-let roundUpToMultipleOf (b: uint) (u: uint): uint = roundDownToMultipleOf b u |> (+) b
+let inline roundUpToMultipleOf b u = roundDownToMultipleOf b u |> (+) b
 
-let displayRange (start: uint) (``end``: uint): unit =
+let displayRange (start: uint) (``end``: uint) =
 
     let upperRange = 0x10FFFFu
     let surrogateStart = 0xD800u
@@ -45,7 +45,7 @@ let displayRange (start: uint) (``end``: uint): unit =
 
     for r in 0u .. (rows - 1u) do
         // Display the row header.
-        printf "%05x " (first + 0x10u * uint32 r)
+        printf "%05x " (first + 0x10u * r)
 
         for c in 0u .. (0x10u - 1u) do
             let cur = (first + 0x10u * r + c)
@@ -133,8 +133,8 @@ let main args =
     finally
         // Restore console environment.
         Console.OutputEncoding <- originalOutputEncoding
-    0 
-    
+    0
+
 // If the example is run with the command line
 //       DisplayChars 0400 04FF true
 // the example displays the Cyrillic character set as follows:
