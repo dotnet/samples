@@ -9,8 +9,6 @@ namespace SystemTextJsonSamples
     {
         private const string XName = "X";
         private const string YName = "Y";
-        private static readonly JsonEncodedText _keyName = JsonEncodedText.Encode(XName, encoder: null);
-        private static readonly JsonEncodedText _valueName = JsonEncodedText.Encode(YName, encoder: null);
 
         public override ImmutablePoint Read(
             ref Utf8JsonReader reader,
@@ -107,7 +105,8 @@ namespace SystemTextJsonSamples
             ImmutablePoint value,
             JsonSerializerOptions options)
         {
-            JsonSerializer.Serialize(writer, value); // note: "options" not passed in
+            // Don't pass in options when recursively calling Serialize.
+            JsonSerializer.Serialize(writer, value);
         }
     }
 }
