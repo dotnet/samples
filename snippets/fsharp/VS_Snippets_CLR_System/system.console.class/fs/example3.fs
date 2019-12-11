@@ -106,8 +106,8 @@ let main args =
 
                     Some
                         {| setOutputEncodingToUnicode = setOutputEncodingToUnicode
-                           rangeStart = parseHexNumberOrThrow args.[0] "args"
-                           rangeEnd = parseHexNumberOrThrow args.[1] "args" |}
+                           rangeStart = parseHexNumberOrThrow args.[0] "rangeStart"
+                           rangeEnd = parseHexNumberOrThrow args.[1] "rangeEnd" |}
                 | _ ->
                     printfn "Usage: %s <%s> <%s> [%s]" (Environment.GetCommandLineArgs().[0]) "startingCodePointInHex"
                         "endingCodePointInHex" "<setOutputEncodingToUnicode?{true|false, default:false}>"
