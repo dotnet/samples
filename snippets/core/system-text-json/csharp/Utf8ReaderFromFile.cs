@@ -11,16 +11,11 @@ namespace SystemTextJsonSamples
         public static void Run()
         {
             // Read as UTF-16 and transcode to UTF-8 to convert to a Span<byte>
-            //***The following code also works with the Utf8 file.
-            
             string fileName = "Universities.json";
             string jsonString = File.ReadAllText(fileName);
             ReadOnlySpan<byte> jsonReadOnlySpan = Encoding.UTF8.GetBytes(jsonString);
 
             // Or ReadAllBytes if the file encoding is UTF-8:
-            //***But this code doesn't work with the UTF-16 file
-            //System.Text.Json.JsonReaderException: '0xEF' is an invalid start of a value. LineNumber: 0 | BytePositionInLine: 0.
-
             //string fileName = "UniversitiesUtf8.json";
             //ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(fileName);
 

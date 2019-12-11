@@ -14,7 +14,8 @@ namespace SystemTextJsonSamples
             // Place "before" code here (OnDeserializing), but note that there is no access here to the POCO instance.
             Console.WriteLine("OnDeserializing");
 
-            WeatherForecast value = JsonSerializer.Deserialize<WeatherForecast>(ref reader); // note: "options" not passed in
+            // Don't pass in options when recursively calling Deserialize.
+            WeatherForecast value = JsonSerializer.Deserialize<WeatherForecast>(ref reader);
 
             // Place "after" code here (OnDeserialized)
             Console.WriteLine("OnDeserialized");
@@ -29,7 +30,8 @@ namespace SystemTextJsonSamples
             // Place "before" code here (OnSerializing)
             Console.WriteLine("OnSerializing");
 
-            JsonSerializer.Serialize(writer, value); // note: "options" not passed in
+            // Don't pass in options when recursively calling Serialize.
+            JsonSerializer.Serialize(writer, value);
 
             // Place "after" code here (OnSerialized)
             Console.WriteLine("OnSerialized");

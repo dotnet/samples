@@ -11,7 +11,8 @@ namespace SystemTextJsonSamples
             Type type,
             JsonSerializerOptions options)
         {
-            WeatherForecast value = JsonSerializer.Deserialize<WeatherForecast>(ref reader); // note: "options" not passed in
+            // Don't pass in options when recursively calling Deserialize.
+            WeatherForecast value = JsonSerializer.Deserialize<WeatherForecast>(ref reader);
 
             // Check for required fields set by values in JSON
             if (value.Date == default)
@@ -25,7 +26,8 @@ namespace SystemTextJsonSamples
             Utf8JsonWriter writer,
             WeatherForecast value, JsonSerializerOptions options)
         {
-            JsonSerializer.Serialize(writer, value); // note: "options" not passed in
+            // Don't pass in options when recursively calling Serialize.
+            JsonSerializer.Serialize(writer, value);
         }
     }
 }
