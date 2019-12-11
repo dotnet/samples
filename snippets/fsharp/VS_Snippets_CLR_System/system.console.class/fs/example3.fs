@@ -79,39 +79,44 @@ let displayRange (start: uint) (``end``: uint) =
 
 [<EntryPoint>]
 let main args =
-    let mutable rangeStart = 0u
-    let mutable rangeEnd = 0u
-    // let mutable setOutputEncodingToUnicode = true
     // Get the current encoding so we can restore it.
     let originalOutputEncoding = Console.OutputEncoding
 
     try
         try
-            let setOutputEncodingToUnicode =
+            let parsedArgs =
                 match args.Length with
                 | 2 ->
-                    rangeStart <- uint.Parse(args.[0], NumberStyles.HexNumber)
-                    rangeEnd <- uint.Parse(args.[1], NumberStyles.HexNumber)
-                    Some true
+                    Some
+                        {| setOutputEncodingToUnicode = true
+                           rangeStart = uint.Parse(args.[0], NumberStyles.HexNumber)
+                           rangeEnd = uint.Parse(args.[1], NumberStyles.HexNumber) |}
                 | 3 ->
-                    if not <| uint.TryParse(args.[0], NumberStyles.HexNumber, null, &rangeStart) then
-                        invalidArg "args" (String.Format("{0} is not a valid hexadecimal number.", args.[0]))
+                    let parseHexNumberOrThrow (value: string) parameterName =
+                        (uint.TryParse(value, NumberStyles.HexNumber, null))
+                        |> function
+                        | (false, _) ->
+                            invalidArg parameterName (String.Format("{0} is not a valid hexadecimal number.", value))
+                        | (true, value) -> value
 
-                    if not <| uint.TryParse(args.[1], NumberStyles.HexNumber, null, &rangeEnd) then
-                        invalidArg "args" (String.Format("{0} is not a valid hexadecimal number.", args.[1]))
+                    let setOutputEncodingToUnicode =
+                        match bool.TryParse args.[2] with
+                        | true, value -> value
+                        | false, _ -> true
 
-                    match bool.TryParse args.[2] with
-                    | true, value -> Some value
-                    | false, _ -> Some true
+                    Some
+                        {| setOutputEncodingToUnicode = setOutputEncodingToUnicode
+                           rangeStart = parseHexNumberOrThrow args.[0] "args"
+                           rangeEnd = parseHexNumberOrThrow args.[1] "args" |}
                 | _ ->
                     printfn "Usage: %s <%s> <%s> [%s]" (Environment.GetCommandLineArgs().[0]) "startingCodePointInHex"
                         "endingCodePointInHex" "<setOutputEncodingToUnicode?{true|false, default:false}>"
                     None
 
-            match setOutputEncodingToUnicode with
+            match parsedArgs with
             | None -> ()
-            | Some setOutputEncodingToUnicode ->
-                if setOutputEncodingToUnicode then
+            | Some parsedArgs ->
+                if parsedArgs.setOutputEncodingToUnicode then
                     // This won't work before .NET Framework 4.5.
                     try
                         // Set encoding using endianness of this system.
@@ -128,7 +133,7 @@ let main args =
                     printfn "The console encoding is %s (code page %i)" (Console.OutputEncoding.EncodingName)
                         (Console.OutputEncoding.CodePage)
 
-                displayRange rangeStart rangeEnd
+                displayRange parsedArgs.rangeStart parsedArgs.rangeEnd
         with :? ArgumentException as ex -> Console.WriteLine(ex.Message)
     finally
         // Restore console environment.
