@@ -207,3 +207,6 @@ _dependentPackages/
 
 # Ionide
 .ionide/
+
+# Fake
+.fake/
