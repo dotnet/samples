@@ -5,7 +5,7 @@ using System.Text.Json.Serialization;
 
 namespace SystemTextJsonSamples
 {
-    public class ConvertPolymorphic
+    public class RoundtripPolymorphic
     {
         public static void Run()
         {
