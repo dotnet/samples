@@ -11,7 +11,7 @@ public class Example
       Array.Sort(files);
       
       // Display the files to the current output source to the console.
-      Console.WriteLine("First display of filenames to the console:");
+      Console.Out.WriteLine("First display of filenames to the console:");
       Array.ForEach(files, s => Console.Out.WriteLine(s));   
       Console.Out.WriteLine();
 
