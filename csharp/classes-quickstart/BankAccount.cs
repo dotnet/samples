@@ -70,10 +70,12 @@ namespace classes
         {
             var report = new System.Text.StringBuilder();
 
-            report.AppendLine("Date\tAmount\tNote");
+            decimal balance = 0;
+            report.AppendLine("Date\t\tAmount\tBalance\tNote");
             foreach (var item in allTransactions)
             {
-                report.AppendLine($"{item.Date.ToShortDateString()}\t{item.Amount}\t{item.Notes}");
+                balance += item.Amount;
+                report.AppendLine($"{item.Date.ToShortDateString()}\t{item.Amount}\t{balance}\t{item.Notes}");
             }
 
             return report.ToString();
