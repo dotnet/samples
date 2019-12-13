@@ -1,0 +1,42 @@
+languages:
+    - vb
+products:
+    - dotnet-core
+    - windows
+page_type: sample
+name: ".NET Core WinForms Sudoku"
+urlFragment: "Sudoku-vb"
+description: "Sudoku is a number puzzle game, played on a nine by nine cell grid"
+# Sudoku
+## Requires
+- Visual Studio 2019 Version 16.5.0 Preview 1.0 or later
+- .Net Core 3.1
+
+## License
+- MIT
+
+## Technologies
+  - Windows Forms
+  - dotnet-core
+
+## Topics
+- Puzzle Game
+
+## Updated
+- 12/12/2019
+
+## Description
+
+<p><img id="182016" src="Sudoku-VB-2019-12-12-211405.jpg" alt="" width="274" height="252"></p>
+<p>&nbsp;</p>
+<p><a href="http://www.scproject.biz/sudoku.php" target="_blank"><span style="font-size:small">Online JavaScript version</span></a></p>
+<p>&nbsp;</p>
+<p><span style="font-size:small">Sudoku is a number puzzle game, played on a nine by nine cell grid. Within thatgrid there are nine sub-regions consisting of three cells by three cells. In this&nbsp;version there are three levels of difficulty, which are Most
+ clues, Medium clues,&nbsp;and Least clues.</span><br>
+<span style="font-size:small">Most clues gives you five random numbers from each nine cell horizontal row.Medium clues gives you four random numbers from each nine cell horizontal row.Least clues gives you three random numbers from each nine cell horizontal
+ row.</span><br>
+<span style="font-size:small">The object of the game is to fill the remaining cells with the integers one to&nbsp;nine. But each horizontal row can only contain one instance of each integer, andeach vertical row can only contain one instance of each integer.
+ There is alsothe further added constraint that each sub-region can also only contain one instance&nbsp;of each integer.</span><br>
+<span style="font-size:small">In a new game, the given numbers (clues) are rendered in red text. The numbersthat you enter are rendered in black text. There is a Solution button, which when&nbsp;clicked, reveals the correct answer to the puzzle. Any numbers
+ that you have addedthat are correctly placed, remain rendered with black text. Any cells that wereempty or had an incorrect integer will display the correct integer rendered inblue text.</span><br>
+<span style="font-size:small">You have won the game if after clicking the Solution button all of the numbers&nbsp;are rendered in either black or red text.</span></p>
