@@ -71,13 +71,31 @@ namespace SystemTextJsonSamples
             RegisterConverterWithAttributeOnType.Run();
 
             Console.WriteLine("\n============================= Custom converter Dictionary with TKey = Enum\n");
-            ConvertDictionaryTkeyEnumTValue.Run();
+            RoundtripDictionaryTkeyEnumTValue.Run();
 
             Console.WriteLine("\n============================= Custom converter Polymorphic\n");
-            ConvertPolymorphic.Run();
+            RoundtripPolymorphic.Run();
 
             Console.WriteLine("\n============================= Custom converter inferred types to Object\n");
-            ConvertInferredTypesToObject.Run();
+            DeserializeInferredTypesToObject.Run();
+
+            Console.WriteLine("\n============================= Custom converter long to string\n");
+            RoundtripLongToString.Run();
+
+            Console.WriteLine("\n============================= Callbacks\n");
+            RoundtripCallbacks.Run();
+
+            Console.WriteLine("\n============================= Required property\n");
+            DeserializeRequiredProperty.Run();
+
+            Console.WriteLine("\n============================= Null value to nonnullable type\n");
+            DeserializeNullToNonnullableType.Run();
+
+            Console.WriteLine("\n============================= Immutable struct\n");
+            RoundtripImmutableStruct.Run();
+
+            Console.WriteLine("\n============================= Runtime property exclusion\n");
+            SerializeRuntimePropertyExclusion.Run();
 
             Console.WriteLine("\n============================= JsonDocument data access\n");
             JsonDocumentDataAccess.Run();
