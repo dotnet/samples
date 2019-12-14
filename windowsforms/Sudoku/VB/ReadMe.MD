@@ -2,7 +2,7 @@
 languages:
 - vb
 products:
-    - dotnet-core
+- dotnet-core
     - windows
 page_type: sample
 name: ".NET Core WinForms Sudoku"
