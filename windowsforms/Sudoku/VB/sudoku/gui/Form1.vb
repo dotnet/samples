@@ -1,4 +1,4 @@
-Public Class Form1
+﻿Public Class Form1
 
     Private WithEvents Game As New Game
     Private ReadOnly r As New Random
@@ -15,7 +15,6 @@ Public Class Form1
     End Sub
 
 #End If
-
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DataGridView1.Rows.Add(9)
