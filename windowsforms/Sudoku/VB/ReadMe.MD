@@ -32,7 +32,7 @@ description: "Sudoku is a number puzzle game, played on a nine by nine cell grid
 ## Description
 
 ![Sudoku image](Sudoku-VB.jpg)
-<p><a href="http://www.scproject.biz/sudoku.php" target="_blank"><span style="font-size:small">Online JavaScript version</span></a></p>
+[Online JavaScript version](http://www.scproject.biz/sudoku.php).
 <p>&nbsp;</p>
 <p><span style="font-size:small">Sudoku is a number puzzle game, played on a nine by nine cell grid. Within thatgrid there are nine sub-regions consisting of three cells by three cells. In this&nbsp;version there are three levels of difficulty, which are Most
  clues, Medium clues,&nbsp;and Least clues.</span><br>
