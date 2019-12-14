@@ -41,4 +41,4 @@ The object of the game is to fill the remaining cells with the numbers from one 
  There is also the further added constraint that each sub-region can also only contain one instance of each number.
 In a new game, the given numbers (clues) are rendered in red text. The numbers that you enter are rendered in black text. There is a Solution button, which when clicked, reveals the correct answer to the puzzle. Any numbers that you have added that are correctly placed, remain rendered with black text. Any cells that were empty or had an incorrect number will display the correct number rendered in blue text.
  that you have addedthat are correctly placed, remain rendered with black text. Any cells that wereempty or had an incorrect integer will display the correct integer rendered inblue text.</span><br>
-<span style="font-size:small">You have won the game if after clicking the Solution button all of the numbers&nbsp;are rendered in either black or red text.</span></p>
+You win the game if after clicking the Solution button, all of the numbers are rendered in either black or red text.
