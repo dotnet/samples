@@ -31,7 +31,7 @@ description: "Sudoku is a number puzzle game, played on a nine by nine cell grid
 
 ## Description
 
-<p><img id="182016" src="Sudoku-VB-2019-12-12-211405.jpg" alt="" width="274" height="252"></p>
+![Sudoku image](Sudoku-VB.jpg)
 <p>&nbsp;</p>
 <p><a href="http://www.scproject.biz/sudoku.php" target="_blank"><span style="font-size:small">Online JavaScript version</span></a></p>
 <p>&nbsp;</p>
