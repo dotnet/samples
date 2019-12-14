@@ -6,7 +6,7 @@ products:
 - windows
 page_type: sample
 name: ".NET Core WinForms Sudoku (Visual Basic)"
-urlFragment: "Sudoku-vb"
+urlFragment: "sudoku-vb"
 description: "Sudoku is a number puzzle game, played on a nine by nine cell grid"
 ---
 # Sudoku
