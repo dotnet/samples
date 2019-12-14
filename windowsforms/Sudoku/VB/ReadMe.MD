@@ -8,6 +8,7 @@ page_type: sample
 name: ".NET Core WinForms Sudoku"
 urlFragment: "Sudoku-vb"
 description: "Sudoku is a number puzzle game, played on a nine by nine cell grid"
+---
 # Sudoku
 ## Requires
 - Visual Studio 2019 Version 16.5.0 Preview 1.0 or later
