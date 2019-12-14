@@ -1,6 +1,6 @@
 ---
 languages:
-    - vb
+- vb
 products:
     - dotnet-core
     - windows
