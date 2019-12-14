@@ -1,4 +1,4 @@
-Public Class Game
+﻿Public Class Game
 
     Public Event ShowClues(grid()() As Integer)
     Public Event ShowSolution(grid()() As Integer)
@@ -33,13 +33,14 @@ Public Class Game
                     grid(y)(x) = Nothing
                     Dim si As Integer = (y \ 3) * 3 + (x \ 3)
                     Dim useful() As Integer = HRow(y).Intersect(VRow(x)).Intersect(ThreeSquare(si)).ToArray
-                    If useful.Count = 0 Then Continue Do
-                    Dim randomNumber As Integer = useful(r.Next(0, useful.Count))
-                    HRow(y).Remove(randomNumber)
-                    VRow(x).Remove(randomNumber)
-                    ThreeSquare(si).Remove(randomNumber)
-                    grid(y)(x) = randomNumber
-                    If y = 8 And x = 8 Then Exit Do
+                    If useful.Any Then
+                        Dim randomNumber As Integer = useful(r.Next(0, useful.Count))
+                        HRow(y).Remove(randomNumber)
+                        VRow(x).Remove(randomNumber)
+                        ThreeSquare(si).Remove(randomNumber)
+                        grid(y)(x) = randomNumber
+                        If y = 8 AndAlso x = 8 Then Exit Do
+                    End If
                 Next
             Next
         Loop
