@@ -34,7 +34,6 @@ description: "Sudoku is a number puzzle game, played on a nine by nine cell grid
 ![Sudoku image](Sudoku-VB.jpg)
 [Online JavaScript version](http://www.scproject.biz/sudoku.php).
 Sudoku is a number puzzle game, played on a nine by nine cell grid. Within that grid, there are nine sub-regions consisting of three cells by three cells. In this version, there are three levels of difficulty, which are Most clues, Medium clues, and Least clues.
- clues, Medium clues,&nbsp;and Least clues.</span><br>
 <span style="font-size:small">Most clues gives you five random numbers from each nine cell horizontal row.Medium clues gives you four random numbers from each nine cell horizontal row.Least clues gives you three random numbers from each nine cell horizontal
 The object of the game is to fill the remaining cells with the numbers from one to nine. But each horizontal row can only contain one instance of each number, and each vertical row can only contain one instance of each number.
  There is alsothe further added constraint that each sub-region can also only contain one instance&nbsp;of each integer.</span><br>
