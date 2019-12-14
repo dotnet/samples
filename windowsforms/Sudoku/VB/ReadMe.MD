@@ -3,7 +3,7 @@ languages:
 - vb
 products:
 - dotnet-core
-    - windows
+- windows
 page_type: sample
 name: ".NET Core WinForms Sudoku"
 urlFragment: "Sudoku-vb"
