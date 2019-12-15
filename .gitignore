@@ -210,3 +210,4 @@ _dependentPackages/
 
 # Fake
 .fake/
+/windowsforms/Sudoku/VB/.editorconfig
