@@ -1,11 +1,11 @@
-﻿//<snippet01>
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 class Program
 {
     static void Main()
     {
+        //<snippet01>
         List<String> names = new List<String>();
         names.Add("Bruce");
         names.Add("Alfred");
@@ -21,21 +21,22 @@ class Program
         {
             Console.WriteLine(name);
         });
-    }
 
-    private static void Print(string s)
-    {
-        Console.WriteLine(s);
+        void Print(string s)
+        {
+            Console.WriteLine(s);
+        }
+
+        /* This code will produce output similar to the following:
+        * Bruce
+        * Alfred
+        * Tim
+        * Richard
+        * Bruce
+        * Alfred
+        * Tim
+        * Richard
+        */
+        //</snippet01>
     }
 }
-/* This code will produce output similar to the following:
- * Bruce
- * Alfred
- * Tim
- * Richard
- * Bruce
- * Alfred
- * Tim
- * Richard
- */
-//</snippet01>
