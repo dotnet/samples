@@ -1,4 +1,3 @@
-// REDMOND\glennha
 //<Snippet1>
 using namespace System;
 using namespace System::Collections::Generic;

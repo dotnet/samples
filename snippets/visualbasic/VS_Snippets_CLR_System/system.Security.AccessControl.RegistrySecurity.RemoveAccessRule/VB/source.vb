@@ -1,5 +1,4 @@
-﻿' Created by REDMOND\glennha
-'<Snippet1>
+﻿'<Snippet1>
 Option Explicit
 Imports System.Security.AccessControl
 Imports System.Security.Principal

@@ -1,5 +1,4 @@
-﻿ 'Types:System.Threading.WaitHandle Vendor: Richter (converted to VB by GlennHa)
-'<snippet1>
+﻿'<snippet1>
 Imports System.Threading
 
 NotInheritable Public Class App

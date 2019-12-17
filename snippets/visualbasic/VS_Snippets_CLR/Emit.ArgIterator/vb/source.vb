@@ -1,5 +1,4 @@
-﻿' Created 4-5-2006 by GlennHa from sample code by HaiboLuo...Thx, Haibo!
-'<Snippet1>
+﻿'<Snippet1>
 Imports System.Reflection
 Imports System.Reflection.Emit
 

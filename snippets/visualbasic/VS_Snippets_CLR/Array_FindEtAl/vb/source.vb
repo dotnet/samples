@@ -1,5 +1,4 @@
-﻿' REDMOND\glennha
-' <Snippet1>
+﻿' <Snippet1>
 Public Class DinoDiscoverySet
 
     Public Shared Sub Main()

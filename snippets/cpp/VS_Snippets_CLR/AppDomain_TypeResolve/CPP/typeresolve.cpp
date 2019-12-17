@@ -1,5 +1,3 @@
-// REDMOND\glennha
-// VSWhidbey 445288
 // <Snippet1>
 #using <System.dll>
 #using <System.Windows.Forms.dll>

@@ -1,4 +1,3 @@
-// Rewritten Aug 2005 REDMOND\glennha
 // System::Reflection::Emit::AssemblyBuilder.DefineVersionInfoResource()
 
 // This code example shows how to use the AssemblyBuilder::DefineVersionInfoResource method
@@ -118,7 +117,7 @@ int main()
    //
    attributeType = AssemblyCopyrightAttribute::typeid;
    ctor = attributeType->GetConstructor(ctorParameters);
-   ctorArgs = gcnew array<Object^> { "© My Example Company 1991-2005" };
+   ctorArgs = gcnew array<Object^> { "ï¿½ My Example Company 1991-2005" };
    attribute = gcnew CustomAttributeBuilder(ctor, ctorArgs);
    myAssembly->SetCustomAttribute(attribute);
 

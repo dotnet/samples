@@ -1,5 +1,4 @@
-﻿' Rewritten Aug 2005 REDMOND\glennha
-' System.Reflection.Emit.AssemblyBuilder.DefineVersionInfoResource()
+﻿' System.Reflection.Emit.AssemblyBuilder.DefineVersionInfoResource()
 
 ' This code example shows how to use the AssemblyBuilder.DefineVersionInfoResource method
 ' to add Windows version information to a dynamic assembly. The code example builds an 

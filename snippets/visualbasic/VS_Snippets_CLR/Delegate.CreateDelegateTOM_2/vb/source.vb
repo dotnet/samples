@@ -1,5 +1,4 @@
-﻿' REDMOND\glennha
-' Showing all the things D(A) can bind to.
+﻿' Showing all the things D(A) can bind to.
 '
 '<Snippet1>
 Imports System.Reflection
