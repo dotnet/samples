@@ -415,7 +415,7 @@ namespace csrefKeywordsModifiers
             // Direct access to public members.
             p.x = 10;
             p.y = 15;
-            Console.WriteLine($"x = {p.x}, y = {p,y}"); 
+            Console.WriteLine($"x = {p.x}, y = {p.y}"); 
         }
     }
     // Output: x = 10, y = 15
