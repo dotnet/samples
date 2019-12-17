@@ -4,13 +4,13 @@ languages:
 products:
 - dotnet-core
 page_type: sample
-name: "Diagnostic Scenarios"
+name: "DiagnosticScenarios sample debug target"
 urlFragment: "diagnostic-scenarios"
 description: "A .NET Core sample with methods that trigger undesirable behaviors to diagnose."
 ---
 # DiagnosticScenarios sample debug target
 
-This sample is for the [diagnostics tutorials](https://docs.microsoft.com/dotnet/core/diagnostics/tutorial/diagnostic-scenarios) in the .NET Core Guide.
+This sample is for the [diagnostics tutorials](https://docs.microsoft.com/dotnet/core/diagnostics/) in the .NET Core Guide.
 
 The scenarios are implemented using a `webapi` target with methods that trigger undesirable behaviors for us to diagnose.
 
