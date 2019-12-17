@@ -10,7 +10,7 @@ description: "A .NET Core sample with methods that trigger undesirable behaviors
 ---
 # Diagnostic scenarios sample debug target
 
-The sample debug target is a simple `webapi` application. The sample triggers undesirable behaviors for the [.NET Core diagnostics tutorials](https://docs.microsoft.com/dotnet/core/diagnostics/index.md#net-core-diagnostics-tutorials) to diagnose.
+The sample debug target is a simple `webapi` application. The sample triggers undesirable behaviors for the [.NET Core diagnostics tutorials](https://docs.microsoft.com/dotnet/core/diagnostics/index#net-core-diagnostics-tutorials) to diagnose.
 
 ## Build and run the target
 
