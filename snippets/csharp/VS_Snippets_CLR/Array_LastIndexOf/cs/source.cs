@@ -1,5 +1,4 @@
-﻿// REDMOND\glennha
-using System;
+﻿using System;
 
 public class Example
 {

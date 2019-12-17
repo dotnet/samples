@@ -1,5 +1,4 @@
-﻿// REDMOND\glennha
-// Example code for How to: Discover and Manipulate Generic Types
+﻿// Example code for How to: Discover and Manipulate Generic Types
 //<Snippet1>
 using System;
 using System.Reflection;

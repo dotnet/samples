@@ -1,7 +1,4 @@
-﻿// Simplified 1/17/06 GlennHa
-// System.Reflection.Emit.ModuleBuilder.DefineEnum
-
-// <Snippet1>
+﻿// <Snippet1>
 using System;
 using System.Reflection;
 using System.Reflection.Emit;
