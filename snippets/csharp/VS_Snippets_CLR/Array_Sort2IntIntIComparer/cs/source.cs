@@ -1,5 +1,4 @@
-﻿// REDMOND\glennha
-// <Snippet1>
+﻿// <Snippet1>
 using System;
 using System.Collections.Generic;
 
