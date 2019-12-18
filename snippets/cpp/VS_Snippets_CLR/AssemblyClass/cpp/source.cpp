@@ -1,4 +1,3 @@
-// GlennHa 1/23/06
 //<Snippet1>
 using namespace System;
 using namespace System::Reflection;

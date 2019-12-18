@@ -1,4 +1,3 @@
-//Types:System.Activator Vendor: Richter (xlated to cpp by glennha)
 //<snippet1>
 using namespace System;
 using namespace System::Reflection;

@@ -1,5 +1,3 @@
-//Types:System.AppDomain,System.AppDomainSetup Vendor: Richter
-//Translated by REDMOND\glennha
 //<snippet1>
 using namespace System;
 using namespace System::Reflection;

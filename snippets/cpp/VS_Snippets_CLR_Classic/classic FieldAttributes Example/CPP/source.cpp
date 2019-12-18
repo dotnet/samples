@@ -1,4 +1,3 @@
-// Updated for 406827 REDMOND\glennha
 // <Snippet1>
 using namespace System;
 using namespace System::Reflection;
