@@ -7,7 +7,7 @@ Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "sudoku", "sudoku\sudoku.vbp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0D16807B-8542-45E0-9A46-279D8DFA26AC}"
 	ProjectSection(SolutionItems) = preProject
-		ReadMe.MD.Old = ReadMe.MD.Old
+		readme.md = readme.md
 		Sudoku-VB.jpg = Sudoku-VB.jpg
 	EndProjectSection
 EndProject
