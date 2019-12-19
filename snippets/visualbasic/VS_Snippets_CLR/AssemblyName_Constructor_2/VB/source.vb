@@ -1,5 +1,4 @@
-﻿' REDMOND\glennha
-' Simplified snippet per SuzCook tech review.
+﻿' Simplified snippet per SuzCook tech review.
 ' <Snippet1>
 Imports System.Reflection
 

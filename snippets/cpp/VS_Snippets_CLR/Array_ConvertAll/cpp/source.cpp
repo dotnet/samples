@@ -1,4 +1,3 @@
-// REDMOND\glennha
 // <Snippet1>
 #using <System.Drawing.dll>
 

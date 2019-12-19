@@ -1,5 +1,4 @@
-﻿' Created by REDMOND\glennha
-'<Snippet1>
+﻿'<Snippet1>
 Imports System.Reflection
 
 ' A generic class with a field whose type is specified by the 

@@ -1,4 +1,3 @@
-// Completely rewrote sample 2/15/06 GlennHa
 // <Snippet1>
 using namespace System;
 using namespace System::Reflection;

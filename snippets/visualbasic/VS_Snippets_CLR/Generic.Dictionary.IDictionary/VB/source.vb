@@ -1,5 +1,4 @@
-﻿' REDMOND\glennha
-' Do not use snippets 31 & 32 with snippet 21; snippet 21 goes 
+﻿' Do not use snippets 31 & 32 with snippet 21; snippet 21 goes 
 ' with snippet 2, which already provides enough context. (2 and
 ' 21 were originally one snippet, but had to be split when 31 
 ' was added, because I don't trust overlapping snippets any

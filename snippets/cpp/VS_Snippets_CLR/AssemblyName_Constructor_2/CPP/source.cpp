@@ -1,4 +1,3 @@
-// REDMOND\glennha
 // Simplified snippet per SuzCook tech review.
 // <Snippet1>
 using namespace System;

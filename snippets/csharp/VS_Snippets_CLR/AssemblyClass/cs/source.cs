@@ -1,5 +1,4 @@
-﻿// GlennHa 1/23/06
-//<Snippet1>
+﻿//<Snippet1>
 using System;
 using System.Reflection;
 using System.Security.Permissions;

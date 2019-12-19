@@ -1,5 +1,4 @@
-﻿// REDMOND\glennha
-// VSWhidbey 445288
+﻿// VSWhidbey 445288
 // <Snippet1>
 using System;
 using System.Reflection;
