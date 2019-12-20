@@ -16,7 +16,7 @@ The sample debug target is a simple `webapi` application. The sample triggers un
 
 After downloading the source, you can easily run the webapi using:
 
-```console
+```dotnetcli
 dotnet build
 dotnet run
 ```
