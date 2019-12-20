@@ -1,11 +1,11 @@
-﻿// <snippet01>
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 class Program
 {
     static void Main()
     {
+        //<snippet01>
         //<snippet02>
         //<snippet03>
         HashSet<int> evenNumbers = new HashSet<int>();
@@ -34,6 +34,7 @@ class Program
 
         Console.Write("numbers contains {0} elements: ", numbers.Count);
         DisplaySet(numbers);
+        //</snippet02>
 
         void DisplaySet(HashSet<int> set)
         {
@@ -51,7 +52,6 @@ class Program
         * numbers UnionWith oddNumbers...
         * numbers contains 10 elements: { 0 2 4 6 8 1 3 5 7 9 }
         */
-        //</snippet02>
+        //</snippet01>
     }
 }
-// </snippet01>

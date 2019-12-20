@@ -1,6 +1,3 @@
-// Simplified 1/17/06 GlennHa
-// System.Reflection.Emit.ModuleBuilder.DefineEnum
-
 // <Snippet1>
 using namespace System;
 using namespace System::Reflection;

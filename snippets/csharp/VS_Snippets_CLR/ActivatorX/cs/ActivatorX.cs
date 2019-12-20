@@ -1,5 +1,4 @@
-﻿//Types:System.Activator Vendor: Richter (xlated to c# by glennha)
-//<snippet1>
+﻿//<snippet1>
 using System;
 using System.Reflection;
 using System.Text;

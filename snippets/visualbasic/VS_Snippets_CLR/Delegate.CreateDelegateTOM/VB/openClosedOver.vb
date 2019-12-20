@@ -1,5 +1,4 @@
-﻿' REDMOND\glennha
-' All four permutations of instance/Shared with open/closed.
+﻿' All four permutations of instance/Shared with open/closed.
 '
 '<Snippet1>
 Imports System.Reflection

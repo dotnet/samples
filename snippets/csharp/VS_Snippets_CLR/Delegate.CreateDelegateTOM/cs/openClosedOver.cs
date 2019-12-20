@@ -1,5 +1,4 @@
-﻿// REDMOND\glennha
-// All four permutations of instance/static with open/closed.
+﻿// All four permutations of instance/static with open/closed.
 //
 //<Snippet1>
 using System;

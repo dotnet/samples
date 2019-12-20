@@ -1,5 +1,4 @@
-﻿' REDMOD\glennha
-' <Snippet1>
+﻿' <Snippet1>
 Imports System.Reflection
 
 ' Define two classes to use in the demonstration, a base class and 

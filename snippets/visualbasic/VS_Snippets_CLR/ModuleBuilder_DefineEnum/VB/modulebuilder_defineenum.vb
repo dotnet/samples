@@ -1,5 +1,4 @@
-﻿' Simplified 1/17/06 GlennHa
-' System.Reflection.Emit.ModuleBuilder.DefineEnum
+﻿' System.Reflection.Emit.ModuleBuilder.DefineEnum
 
 ' <Snippet1>
 Imports System.Reflection

@@ -1,4 +1,3 @@
-// REDMOND\glennha
 //<Snippet1>
 using namespace System;
 using namespace System::Reflection;
@@ -153,8 +152,8 @@ public:
 
         // Create a delegate that represents the dynamic method. 
         // Creating the delegate completes the method, and any further 
-        // attempts to change the method — for example, by adding more
-        // MSIL — are ignored. 
+        // attempts to change the method ï¿½ for example, by adding more
+        // MSIL ï¿½ are ignored. 
         // 
         // The following code binds the method to a new instance
         // of the Example class whose private test field is set to 42.

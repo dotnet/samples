@@ -1,5 +1,4 @@
-﻿' REDMOND\glennha
-' VSWhidbey 445288
+﻿' VSWhidbey 445288
 ' <Snippet1>
 Option Strict On
 Option Explicit On
