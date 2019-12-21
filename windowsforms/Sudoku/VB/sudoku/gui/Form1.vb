@@ -3,19 +3,6 @@
     Private WithEvents Game As New Game
     Private ReadOnly _r As New Random
 
-#If NETCOREAPP Then
-
-    <STAThread>
-    Public Shared Sub Main()
-        Application.EnableVisualStyles()
-        Application.SetCompatibleTextRenderingDefault(False)
-        Dim f As New Form1()
-        Application.Run(f)
-        f.Dispose()
-    End Sub
-
-#End If
-
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DataGridView1.Rows.Add(9)
         ComboBox1.SelectedIndex = 0
