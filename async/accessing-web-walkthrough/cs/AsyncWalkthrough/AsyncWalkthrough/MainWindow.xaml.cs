@@ -50,7 +50,7 @@ namespace AsyncWalkthrough
                 total += urlContents.Length;
             }
             // Display the total count for all of the websites.
-            resultsTextBox.Text += $"\r\rTotal bytes returned:  {total}\n";
+            resultsTextBox.Text += $"\n\nTotal bytes returned:  {total}\n";
         }
 
         private List<string> SetUpUrlList()
