@@ -9,7 +9,7 @@ namespace SystemTextJsonSamples
     {
         public static void Run()
         {
-            var weatherForecast = WeatherForecastFactories.CreateWeatherForecast();
+            WeatherForecast weatherForecast = WeatherForecastFactories.CreateWeatherForecast();
             weatherForecast.DisplayPropertyValues();
 
             // <SnippetSerialize>

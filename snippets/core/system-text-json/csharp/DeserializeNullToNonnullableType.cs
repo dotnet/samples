@@ -12,34 +12,30 @@ namespace SystemTextJsonSamples
             string jsonString;
             var wf = WeatherForecastFactories.CreateWeatherForecast();
 
-            var serializeOptions = new JsonSerializerOptions();
-            serializeOptions.WriteIndented = true;
-            serializeOptions.Converters.Add(new DateTimeOffsetNullHandlingConverter());
-            jsonString = JsonSerializer.Serialize(wf, serializeOptions);
+            var options = new JsonSerializerOptions();
+            options.WriteIndented = true;
+            options.Converters.Add(new DateTimeOffsetNullHandlingConverter());
+            jsonString = JsonSerializer.Serialize(wf, options);
             Console.WriteLine($"JSON with valid Date:\n{jsonString}\n");
 
-            var deserializeOptions = new JsonSerializerOptions();
-            deserializeOptions.Converters.Add(new DateTimeOffsetNullHandlingConverter());
-            wf = JsonSerializer.Deserialize<WeatherForecast>(jsonString, deserializeOptions);
+            wf = JsonSerializer.Deserialize<WeatherForecast>(jsonString, options);
             wf.DisplayPropertyValues();
 
             jsonString = @"{""Date"": null,""TemperatureCelsius"": 25,""Summary"":""Hot""}";
             Console.WriteLine($"JSON with null Date:\n{jsonString}\n");
 
-            // The missing-date JSON deserializes with error if the converter isn't used.
+            // The null-date JSON deserializes with error if the converter isn't used.
             try
             {
                 wf = JsonSerializer.Deserialize<WeatherForecast>(jsonString);
             }
-            catch (Exception ex)
+            catch (JsonException ex)
             {
                 Console.WriteLine($"Exception thrown: {ex.Message}\n");
             }
 
             Console.WriteLine("Deserialize with converter");
-            deserializeOptions = new JsonSerializerOptions();
-            deserializeOptions.Converters.Add(new DateTimeOffsetNullHandlingConverter());
-            wf = JsonSerializer.Deserialize<WeatherForecast>(jsonString, deserializeOptions);
+            wf = JsonSerializer.Deserialize<WeatherForecast>(jsonString, options);
             wf.DisplayPropertyValues();
         }
     }

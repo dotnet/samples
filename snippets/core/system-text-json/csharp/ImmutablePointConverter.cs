@@ -1,14 +1,28 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
 namespace SystemTextJsonSamples
 {
     public class ImmutablePointConverter : JsonConverter<ImmutablePoint>
-
     {
-        private const string XName = "X";
-        private const string YName = "Y";
+        private readonly JsonEncodedText XName = JsonEncodedText.Encode("X");
+        private readonly JsonEncodedText YName = JsonEncodedText.Encode("Y");
+
+        private readonly JsonConverter<int> _intConverter;
+
+        public ImmutablePointConverter(JsonSerializerOptions options)
+        {
+            if (options?.GetConverter(typeof(int)) is JsonConverter<int> intConverter)
+            {
+                _intConverter = intConverter;
+            }
+            else
+            {
+                throw new InvalidOperationException();
+            }
+        }
 
         public override ImmutablePoint Read(
             ref Utf8JsonReader reader,
@@ -27,55 +41,10 @@ namespace SystemTextJsonSamples
             bool ySet = false;
 
             // Get the first property.
-            reader.Read();
-            if (reader.TokenType != JsonTokenType.PropertyName)
-            {
-                throw new JsonException();
-            }
-
-            string propertyName = reader.GetString();
-            if (propertyName == XName)
-            {
-                x = ReadProperty(ref reader, options);
-                xSet = true;
-            }
-            else if (propertyName == YName)
-            {
-                y = ReadProperty(ref reader, options);
-                ySet = true;
-            }
-            else
-            {
-                throw new JsonException();
-            }
+            ReadXorY(ref reader, options, ref x, ref xSet, ref y, ref ySet);
 
             // Get the second property.
-            reader.Read();
-            if (reader.TokenType != JsonTokenType.PropertyName)
-            {
-                throw new JsonException();
-            }
-
-            propertyName = reader.GetString();
-            if (propertyName == XName)
-            {
-                x = ReadProperty(ref reader, options);
-                xSet = true;
-            }
-            else if (propertyName == YName)
-            {
-                y = ReadProperty(ref reader, options);
-                ySet = true;
-            }
-            else
-            {
-                throw new JsonException();
-            }
-
-            if (!xSet || !ySet)
-            {
-                throw new JsonException();
-            }
+            ReadXorY(ref reader, options, ref x, ref xSet, ref y, ref ySet);
 
             reader.Read();
 
@@ -87,17 +56,36 @@ namespace SystemTextJsonSamples
             return new ImmutablePoint(x, y);
         }
 
-        public int ReadProperty(ref Utf8JsonReader reader, JsonSerializerOptions options)
+        private void ReadXorY(ref Utf8JsonReader reader, JsonSerializerOptions options, ref int x, ref bool xSet, ref int y, ref bool ySet)
         {
-            if (options?.GetConverter(typeof(int)) is JsonConverter<int> intConverter)
+            reader.Read();
+            if (reader.TokenType != JsonTokenType.PropertyName)
             {
-                reader.Read();
-                return intConverter.Read(ref reader, typeof(int), options);
+                throw new JsonException();
+            }
+
+            if (reader.ValueTextEquals(XName.EncodedUtf8Bytes))
+            {
+                x = ReadProperty(ref reader, options);
+                xSet = true;
+            }
+            else if (reader.ValueTextEquals(YName.EncodedUtf8Bytes))
+            {
+                y = ReadProperty(ref reader, options);
+                ySet = true;
             }
             else
             {
                 throw new JsonException();
             }
+        }
+
+        private int ReadProperty(ref Utf8JsonReader reader, JsonSerializerOptions options)
+        {
+            Debug.Assert(reader.TokenType == JsonTokenType.PropertyName);
+
+            reader.Read();
+            return _intConverter.Read(ref reader, typeof(int), options);
         }
 
         public override void Write(

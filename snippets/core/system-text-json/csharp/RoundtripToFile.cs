@@ -12,7 +12,7 @@ namespace SystemTextJsonSamples
         {
             string jsonString;
             string fileName = "WeatherForecast.json";
-            var weatherForecast = WeatherForecastFactories.CreateWeatherForecast();
+            WeatherForecast weatherForecast = WeatherForecastFactories.CreateWeatherForecast();
             weatherForecast.DisplayPropertyValues();
 
             // <SnippetSerialize>

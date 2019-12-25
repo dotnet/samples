@@ -7,7 +7,7 @@ namespace SystemTextJsonSamples
     {
         public static void Run()
         {
-            var weatherForecast = WeatherForecastFactories.CreateWeatherForecast();
+            WeatherForecast weatherForecast = WeatherForecastFactories.CreateWeatherForecast();
             byte[] jsonUtf8Bytes = JsonSerializer.SerializeToUtf8Bytes(
                 weatherForecast,
                 new JsonSerializerOptions { WriteIndented = true });

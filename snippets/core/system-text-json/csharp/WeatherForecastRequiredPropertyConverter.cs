@@ -18,7 +18,7 @@ namespace SystemTextJsonSamples
             if (value.Date == default)
             {
                 throw new JsonException("Required property not received in the JSON");
-            };
+            }
             return value;
         }
 

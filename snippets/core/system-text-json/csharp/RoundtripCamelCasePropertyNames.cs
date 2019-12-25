@@ -8,7 +8,7 @@ namespace SystemTextJsonSamples
         public static void Run()
         {
             string jsonString;
-            var weatherForecast = WeatherForecastFactories.CreateWeatherForecastWithPropertyNameAttribute();
+            WeatherForecastWithPropertyNameAttribute weatherForecast = WeatherForecastFactories.CreateWeatherForecastWithPropertyNameAttribute();
             weatherForecast.DisplayPropertyValues();
 
             // <SnippetSerialize>

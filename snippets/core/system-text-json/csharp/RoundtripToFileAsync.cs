@@ -12,7 +12,7 @@ namespace SystemTextJsonSamples
         {
             string fileName = "WeatherForecastAsync.json";
             string fileNameUtf8 = "WeatherForecastAsyncUtf8";
-            var weatherForecast = WeatherForecastFactories.CreateWeatherForecast();
+            WeatherForecast weatherForecast = WeatherForecastFactories.CreateWeatherForecast();
             weatherForecast.DisplayPropertyValues();
 
             // <SnippetSerialize>
@@ -44,10 +44,8 @@ namespace SystemTextJsonSamples
                 //System.Text.Json.JsonException: '0xEF' is invalid after a single JSON value. Expected end of data.
                 //weatherForecast = await JsonSerializer.DeserializeAsync<WeatherForecast>(fs);
             }
-            // </SnippetDeserialize>
+
             weatherForecast.DisplayPropertyValues();
-
-
         }
     }
 }

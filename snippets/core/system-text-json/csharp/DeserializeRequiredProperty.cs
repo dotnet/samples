@@ -12,15 +12,13 @@ namespace SystemTextJsonSamples
             string jsonString;
             var wf = WeatherForecastFactories.CreateWeatherForecast();
 
-            var serializeOptions = new JsonSerializerOptions();
-            serializeOptions.WriteIndented = true;
-            serializeOptions.Converters.Add(new WeatherForecastRequiredPropertyConverter());
-            jsonString = JsonSerializer.Serialize(wf, serializeOptions);
+            var options = new JsonSerializerOptions();
+            options.WriteIndented = true;
+            options.Converters.Add(new WeatherForecastRequiredPropertyConverter());
+            jsonString = JsonSerializer.Serialize(wf, options);
             Console.WriteLine($"JSON with Date:\n{jsonString}\n");
 
-            var deserializeOptions = new JsonSerializerOptions();
-            deserializeOptions.Converters.Add(new WeatherForecastRequiredPropertyConverter());
-            wf = JsonSerializer.Deserialize<WeatherForecast>(jsonString, deserializeOptions);
+            wf = JsonSerializer.Deserialize<WeatherForecast>(jsonString, options);
             wf.DisplayPropertyValues();
 
             jsonString = @"{""TemperatureCelsius"": 25,""Summary"":""Hot""}";
@@ -34,11 +32,9 @@ namespace SystemTextJsonSamples
             Console.WriteLine("Deserialize with converter");
             try
             {
-                deserializeOptions = new JsonSerializerOptions();
-                deserializeOptions.Converters.Add(new WeatherForecastRequiredPropertyConverter());
-                wf = JsonSerializer.Deserialize<WeatherForecast>(jsonString, deserializeOptions);
+                wf = JsonSerializer.Deserialize<WeatherForecast>(jsonString, options);
             }
-            catch (Exception ex)
+            catch (JsonException ex)
             {
                 Console.WriteLine($"Exception thrown: {ex.Message}\n");
             }

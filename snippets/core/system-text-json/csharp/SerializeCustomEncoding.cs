@@ -12,7 +12,7 @@ namespace SystemTextJsonSamples
         public static void Run()
         {
             string jsonString;
-            var weatherForecast = WeatherForecastFactories.CreateWeatherForecastCyrillic();
+            WeatherForecast weatherForecast = WeatherForecastFactories.CreateWeatherForecastCyrillic();
             weatherForecast.DisplayPropertyValues();
 
             Console.WriteLine("Default serialization - non-ASCII escaped");

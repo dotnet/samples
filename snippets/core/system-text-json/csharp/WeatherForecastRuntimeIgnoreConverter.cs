@@ -27,7 +27,7 @@ namespace SystemTextJsonSamples
 
                 if (reader.TokenType == JsonTokenType.PropertyName)
                 {
-                    var propertyName = reader.GetString();
+                    string propertyName = reader.GetString();
                     reader.Read();
                     switch (propertyName)
                     {

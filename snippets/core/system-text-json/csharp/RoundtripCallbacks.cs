@@ -21,7 +21,6 @@ namespace SystemTextJsonSamples
             // </SnippetSerialize>
 
             Console.WriteLine($"JSON output:\n{jsonString}\n");
-            //jsonString = @"{""Date"": null,""TemperatureCelsius"": 25,""Summary"":""Hot""}";
 
             // <SnippetDeserialize>
             var deserializeOptions = new JsonSerializerOptions();
