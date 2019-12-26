@@ -88,13 +88,21 @@ namespace SystemTextJsonSamples
             return _intConverter.Read(ref reader, typeof(int), options);
         }
 
+        private void WriteProperty(Utf8JsonWriter writer, int value, JsonEncodedText name, JsonSerializerOptions options)
+        {
+            writer.WritePropertyName(name);
+            _intConverter.Write(writer, value, options);
+        }
+
         public override void Write(
             Utf8JsonWriter writer,
             ImmutablePoint value,
             JsonSerializerOptions options)
         {
-            // Don't pass in options when recursively calling Serialize.
-            JsonSerializer.Serialize(writer, value);
+            writer.WriteStartObject();
+            WriteProperty(writer, value.X, XName, options);
+            WriteProperty(writer, value.Y, YName, options);
+            writer.WriteEndObject();
         }
     }
 }
