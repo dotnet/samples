@@ -16,6 +16,7 @@ If you're new to .NET Core, here are a few resources to help you understand the 
 | [Matching Game](matching-game) | This sample demonstrates simple event handling and timers in a .NET Core 3 WinForms application |
 | [DataGridView Sample](datagridview) | This sample demonstrates DataGridView usage in .NET Core 3 |
 | [Graphics Sample](graphics) | This sample demonstrates using GDI+ APIs via the Graphics type in .NET Core 3 |
+| [Sudoku Sample](winforms-core) | This sample demonstrates creating a game using event handling and the Graphics type in .NET Core 3 |
 
 ## Getting Started
 
