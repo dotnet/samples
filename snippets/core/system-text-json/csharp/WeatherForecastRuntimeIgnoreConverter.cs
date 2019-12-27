@@ -52,9 +52,6 @@ namespace SystemTextJsonSamples
 
         public override void Write(Utf8JsonWriter writer, WeatherForecast wf, JsonSerializerOptions options)
         {
-            // Location for OnSerializing "callback" code.
-            Console.WriteLine("OnSerializing");
-
             writer.WriteStartObject();
 
             writer.WriteString("Date", wf.Date);

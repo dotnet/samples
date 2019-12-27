@@ -41,23 +41,6 @@ namespace SystemTextJsonSamples
             bool ySet = false;
 
             // Get the first property.
-            ReadXorY(ref reader, options, ref x, ref xSet, ref y, ref ySet);
-
-            // Get the second property.
-            ReadXorY(ref reader, options, ref x, ref xSet, ref y, ref ySet);
-
-            reader.Read();
-
-            if (reader.TokenType != JsonTokenType.EndObject)
-            {
-                throw new JsonException();
-            }
-
-            return new ImmutablePoint(x, y);
-        }
-
-        private void ReadXorY(ref Utf8JsonReader reader, JsonSerializerOptions options, ref int x, ref bool xSet, ref int y, ref bool ySet)
-        {
             reader.Read();
             if (reader.TokenType != JsonTokenType.PropertyName)
             {
@@ -78,21 +61,50 @@ namespace SystemTextJsonSamples
             {
                 throw new JsonException();
             }
-        }
 
-        private int ReadProperty(ref Utf8JsonReader reader, JsonSerializerOptions options)
-        {
-            Debug.Assert(reader.TokenType == JsonTokenType.PropertyName);
+            // Get the second property.
+            reader.Read();
+            if (reader.TokenType != JsonTokenType.PropertyName)
+            {
+                throw new JsonException();
+            }
+
+            if (xSet && reader.ValueTextEquals(YName.EncodedUtf8Bytes))
+            {
+                y = ReadProperty(ref reader, options);
+            }
+            else if (ySet && reader.ValueTextEquals(XName.EncodedUtf8Bytes))
+            {
+                x = ReadProperty(ref reader, options);
+            }
+            else
+            {
+                throw new JsonException();
+            }
 
             reader.Read();
-            return _intConverter.Read(ref reader, typeof(int), options);
-        }
 
-        private void WriteProperty(Utf8JsonWriter writer, int value, JsonEncodedText name, JsonSerializerOptions options)
-        {
-            writer.WritePropertyName(name);
-            _intConverter.Write(writer, value, options);
-        }
+                if (reader.TokenType != JsonTokenType.EndObject)
+                {
+                    throw new JsonException();
+                }
+
+                return new ImmutablePoint(x, y);
+            }
+
+            private int ReadProperty(ref Utf8JsonReader reader, JsonSerializerOptions options)
+            {
+                Debug.Assert(reader.TokenType == JsonTokenType.PropertyName);
+
+                reader.Read();
+                return _intConverter.Read(ref reader, typeof(int), options);
+            }
+
+            private void WriteProperty(Utf8JsonWriter writer, JsonEncodedText name, int value, JsonSerializerOptions options)
+            {
+                writer.WritePropertyName(name);
+                _intConverter.Write(writer, value, options);
+            }
 
         public override void Write(
             Utf8JsonWriter writer,
@@ -100,8 +112,8 @@ namespace SystemTextJsonSamples
             JsonSerializerOptions options)
         {
             writer.WriteStartObject();
-            WriteProperty(writer, value.X, XName, options);
-            WriteProperty(writer, value.Y, YName, options);
+            WriteProperty(writer, XName, value.X, options);
+            WriteProperty(writer, YName, value.Y, options);
             writer.WriteEndObject();
         }
     }
