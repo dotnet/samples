@@ -3,7 +3,7 @@ using System.Text.Json;
 
 namespace SystemTextJsonSamples
 {
-    class ConvertPolymorphic
+    public class ConvertPolymorphic
     {
         public static void Run()
         {
