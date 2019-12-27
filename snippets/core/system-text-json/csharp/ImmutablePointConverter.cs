@@ -84,27 +84,27 @@ namespace SystemTextJsonSamples
 
             reader.Read();
 
-                if (reader.TokenType != JsonTokenType.EndObject)
-                {
-                    throw new JsonException();
-                }
-
-                return new ImmutablePoint(x, y);
-            }
-
-            private int ReadProperty(ref Utf8JsonReader reader, JsonSerializerOptions options)
+            if (reader.TokenType != JsonTokenType.EndObject)
             {
-                Debug.Assert(reader.TokenType == JsonTokenType.PropertyName);
-
-                reader.Read();
-                return _intConverter.Read(ref reader, typeof(int), options);
+                throw new JsonException();
             }
 
-            private void WriteProperty(Utf8JsonWriter writer, JsonEncodedText name, int value, JsonSerializerOptions options)
-            {
-                writer.WritePropertyName(name);
-                _intConverter.Write(writer, value, options);
-            }
+            return new ImmutablePoint(x, y);
+        }
+
+        private int ReadProperty(ref Utf8JsonReader reader, JsonSerializerOptions options)
+        {
+            Debug.Assert(reader.TokenType == JsonTokenType.PropertyName);
+
+            reader.Read();
+            return _intConverter.Read(ref reader, typeof(int), options);
+        }
+
+        private void WriteProperty(Utf8JsonWriter writer, JsonEncodedText name, int value, JsonSerializerOptions options)
+        {
+            writer.WritePropertyName(name);
+            _intConverter.Write(writer, value, options);
+        }
 
         public override void Write(
             Utf8JsonWriter writer,

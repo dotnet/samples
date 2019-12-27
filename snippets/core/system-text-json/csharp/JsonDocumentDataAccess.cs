@@ -73,6 +73,5 @@ namespace SystemTextJsonSamples
             // </SnippetAverageGrades2>
 
         }
-
     }
 }
