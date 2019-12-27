@@ -28,7 +28,7 @@ namespace SystemTextJsonSamples
             // <SnippetLanguageSets>
             options = new JsonSerializerOptions
             {
-                Encoder = JavaScriptEncoder.Create(UnicodeRanges.Cyrillic, UnicodeRanges.GreekExtended),
+                Encoder = JavaScriptEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.Cyrillic),
                 WriteIndented = true
             };
             jsonString = JsonSerializer.Serialize(weatherForecast, options);
@@ -40,6 +40,7 @@ namespace SystemTextJsonSamples
             // <SnippetSelectedCharacters>
             var encoderSettings = new TextEncoderSettings();
             encoderSettings.AllowCharacters('\u0436', '\u0430');
+            encoderSettings.AllowRange(UnicodeRanges.BasicLatin);
             options = new JsonSerializerOptions
             {
                 Encoder = JavaScriptEncoder.Create(encoderSettings),
