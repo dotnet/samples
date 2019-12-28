@@ -3,7 +3,7 @@ using System.Text.Json;
 
 namespace SystemTextJsonSamples
 {
-    class RoundtripCamelCasePropertyNames
+    public class RoundtripCamelCasePropertyNames
     {
         public static void Run()
         {

@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 
 namespace SystemTextJsonSamples
 {
-    class RoundtripEnumAsString
+    public class RoundtripEnumAsString
     {
         public static void Run()
         {

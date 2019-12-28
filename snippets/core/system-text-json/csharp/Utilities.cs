@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SystemTextJsonSamples
 {
-    class Utilities
+    public class Utilities
     {
         public static void DisplayPropertyValues(object o)
         {

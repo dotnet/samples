@@ -5,7 +5,7 @@ using System.Text.Json;
 
 namespace SystemTextJsonSamples
 {
-    class RoundtripToUtf8
+    public class RoundtripToUtf8
     {
         public static void Run()
         {

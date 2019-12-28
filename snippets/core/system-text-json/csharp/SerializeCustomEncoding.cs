@@ -7,7 +7,7 @@ using System.Text.Unicode;
 
 namespace SystemTextJsonSamples
 {
-    class SerializeCustomEncoding
+    public class SerializeCustomEncoding
     {
         public static void Run()
         {

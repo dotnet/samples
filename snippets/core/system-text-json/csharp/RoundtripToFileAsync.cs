@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SystemTextJsonSamples
 {
-    class RoundtripToFileAsync
+    public class RoundtripToFileAsync
     {
         public static async Task RunAsync()
         {

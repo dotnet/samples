@@ -5,7 +5,7 @@ using System.Text.Json;
 
 namespace SystemTextJsonSamples
 {
-    class RoundtripPropertyNamingPolicy
+    public class RoundtripPropertyNamingPolicy
     {
         public static void Run()
         {

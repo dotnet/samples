@@ -5,7 +5,7 @@ using System.Text.Json;
 
 namespace SystemTextJsonSamples
 {
-    class Utf8ReaderFromFile
+    public class Utf8ReaderFromFile
     {
         private static readonly byte[] s_nameUtf8 = Encoding.UTF8.GetBytes("name");
         public static void Run()

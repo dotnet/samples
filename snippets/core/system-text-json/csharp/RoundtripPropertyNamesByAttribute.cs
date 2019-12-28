@@ -3,7 +3,7 @@ using System.Text.Json;
 
 namespace SystemTextJsonSamples
 {
-    class RoundtripPropertyNamesByAttribute
+    public class RoundtripPropertyNamesByAttribute
     {
         public static void Run()
         {

@@ -4,7 +4,7 @@ using System.Text.Json;
 
 namespace SystemTextJsonSamples
 {
-    class JsonDocumentDataAccess
+    public class JsonDocumentDataAccess
     {
         public static void Run()
         {

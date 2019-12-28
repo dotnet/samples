@@ -5,7 +5,7 @@ using System.Text.Unicode;
 
 namespace SystemTextJsonSamples
 {
-    class SerializeExcludePropertiesByAttribute
+    public class SerializeExcludePropertiesByAttribute
     {
         public static void Run()
         {

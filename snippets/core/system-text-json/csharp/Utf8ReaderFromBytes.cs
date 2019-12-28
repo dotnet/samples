@@ -3,7 +3,7 @@ using System.Text.Json;
 
 namespace SystemTextJsonSamples
 {
-    class Utf8ReaderFromBytes
+    public class Utf8ReaderFromBytes
     {
         public static void Run()
         {

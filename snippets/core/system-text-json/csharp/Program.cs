@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace SystemTextJsonSamples
 {
-    class Program
+    public class Program
     {
         static async Task Main(string[] args)
         {
