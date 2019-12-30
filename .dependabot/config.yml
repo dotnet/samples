@@ -39,6 +39,12 @@ update_configs:
     directory: "/csharp/serialization" # serialization.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
+    directory: "/async/async-and-await/cs" # AsyncFirstExampleCS.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/async/async-and-await/vb" # AsyncFirstExampleVB.vbproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
     directory: "/core/console-apps/fibonacci-msbuild" # Hello.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
@@ -46,6 +52,9 @@ update_configs:
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/core/console-apps/HelloMsBuild" # Hello.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/diagnostics/DiagnosticScenarios" # DiagnosticScenarios.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/core/extensions/DllMapDemo" # Demo.csproj
@@ -72,6 +81,9 @@ update_configs:
     directory: "/csharp/getting-started/console-webapiclient" # webapiclient.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
+    directory: "/csharp/language-reference/builtin-types" # builtin-types.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
     directory: "/csharp/language-reference/operators" # operators.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
@@ -85,6 +97,9 @@ update_configs:
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/csharp/safe-efficient-code/ref-readonly-struct" # ref-readonly-struct.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/csharp/tutorials/mixins-with-interfaces" # mixins-with-interfaces.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/csharp/tutorials/RangesIndexes" # RangesIndexes.csproj
@@ -129,7 +144,13 @@ update_configs:
     directory: "/machine-learning/tutorials/TransferLearningTF" # TransferLearningTF.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
+    directory: "/mef/simple-calculator/vb" # SimpleCalculator2.vbproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
     directory: "/snippets/csharp/attributes" # attributes.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/csharp/buffers" # MyBuffers.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/snippets/csharp/keywords" # keywords.csproj
@@ -144,10 +165,16 @@ update_configs:
     directory: "/snippets/csharp/new-in-7" # new-in-7.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
+    directory: "/snippets/csharp/pipelines" # Pipes.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
     directory: "/snippets/csharp/properties" # properties.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/snippets/csharp/System.DateTime" # SystemDateTimeReference.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/csharp/tuples" # tuples.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/snippets/csharp/xunit-test" # xunit-test.csproj
@@ -160,6 +187,9 @@ update_configs:
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/windowsforms/graphics/WinFormGraphics" # WinFormGraphics.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/windowsforms/graphics/WinFormGraphics_vb" # winformgraphics_vb.vbproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/windowsforms/helloworld-links/FullFxApp" # FullFxApp.csproj
@@ -178,6 +208,9 @@ update_configs:
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/windowsforms/matching-game/MatchingGame" # MatchingGameCS.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/windowsforms/matching-game/MatchingGame_vb" # matchinggame_VB.vbproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/windowsforms/MSIX-WindowsForms/CoreWinFormsApp1" # CoreWinFormsApp1.csproj
@@ -202,6 +235,12 @@ update_configs:
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/wpf/WPF-WinRT/WPF-WinRT-NetFx" # WPF-WinRT-NetFx.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/encoding/cyrillic-to-latin/cs" # CyrillicToLatin.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/core/encoding/cyrillic-to-latin/vb" # CyrillicToLatin.vbproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/core/extensions/AppWithPlugin/AppWithPlugin" # AppWithPlugin.csproj
@@ -396,7 +435,16 @@ update_configs:
     directory: "/framework/docker/MVCRandomAnswerGenerator/MVCRandomAnswerGenerator" # MVCRandomAnswerGenerator.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
+    directory: "/mef/simple-calculator/vb/ExtendedOperations" # ExtendedOperations.vbproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/mef/simple-calculator/vb/MefCalculator" # MefCalculator.vbproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
     directory: "/snippets/core/deploying/xml" # invariant.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/core/system-text-json/csharp" # SystemTextJsonSamples.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/snippets/csharp/how-to/conversions" # conversions.csproj
@@ -409,9 +457,6 @@ update_configs:
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/snippets/csharp/programming-guide/lambda-expressions" # lambda-expressions.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/snippets/csharp/programming-guide/nullable-types" # nullable-types.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/snippets/csharp/programming-guide/ref-returns" # ref-returns.csproj
@@ -430,9 +475,6 @@ update_configs:
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/snippets/csharp/tour/delegates" # delegates.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/snippets/csharp/tour/enums" # enums.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/snippets/csharp/tour/hello" # hello.csproj
@@ -4362,6 +4404,42 @@ update_configs:
     directory: "/snippets/csharp/VS_Snippets_Wpf/XpsSave/CSharp" # XpsSave.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
+    directory: "/snippets/desktop-guide/wpf/data-binding-overview/csharp" # bindings.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/desktop-guide/wpf/data-binding-overview/vb" # bindings.vbproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp" # CSharpExample.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/desktop-guide/wpf/styles-and-templates-intro/vb" # VBExample.vbproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp" # CSharpExample.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/fsharp/VS_Snippets_CLR_Classic/classic Console Example/FS" # source.fsproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/fsharp/VS_Snippets_CLR_System/system.char.class/fs" # grapheme1.fsproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/fsharp/VS_Snippets_CLR_System/system.console.class/fs" # example3.fsproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/fsharp/VS_Snippets_CLR_System/system.console.class/fs" # fontlink1.fsproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/fsharp/VS_Snippets_CLR_System/system.console.class/fs" # normalize1.fsproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/fsharp/VS_Snippets_CLR_System/system.console.class/fs" # unicode1.fsproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/fsharp/VS_Snippets_CLR_System/system.console.class.unsafe/fs" # setfont1.fsproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
     directory: "/snippets/standard/buffers/memory-t/owner" # owner.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
@@ -4381,6 +4459,63 @@ update_configs:
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/snippets/standard/buffers/memory-t/void-returning-async" # void-returning-async.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/standard/data/sqlite/AggregateFunctionSample" # AggregateFunctionSample.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/standard/data/sqlite/AsyncSample" # AsyncSample.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/standard/data/sqlite/BackupSample" # BackupSample.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/standard/data/sqlite/BatchingSample" # BatchingSample.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/standard/data/sqlite/BulkInsertSample" # BulkInsertSample.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/standard/data/sqlite/CollationSample" # CollationSample.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/standard/data/sqlite/DapperSample" # DapperSample.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/standard/data/sqlite/DateAndTimeSample" # DateAndTimeSample.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/standard/data/sqlite/DirtyReadSample" # DirtyReadSample.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/standard/data/sqlite/EncryptionSample" # EncryptionSample.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/standard/data/sqlite/ExtensionsSample" # ExtensionsSample.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/standard/data/sqlite/HelloWorldSample" # HelloWorldSample.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/standard/data/sqlite/InMemorySample" # InMemorySample.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/standard/data/sqlite/InteropSample" # InteropSample.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/standard/data/sqlite/RegularExpressionSample" # RegularExpressionSample.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/standard/data/sqlite/ResultMetadataSample" # ResultMetadataSample.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/standard/data/sqlite/ScalarFunctionSample" # ScalarFunctionSample.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/standard/data/sqlite/StreamingSample" # StreamingSample.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/standard/data/sqlite/SystemLibrarySample" # SystemLibrarySample.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/snippets/standard/io/io-exceptions/cs" # io-exceptions.csproj
@@ -7989,15 +8124,6 @@ update_configs:
     directory: "/snippets/standard/datetime/calendars/specify-era/vb" # vb.vbproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/snippets/standard/datetime/json/datetime-converter-examples/example1" # example1.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/snippets/standard/datetime/json/datetime-converter-examples/example2" # example2.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
-    directory: "/snippets/standard/datetime/json/datetime-converter-examples/example3" # example3.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
     directory: "/snippets/visualbasic/api/system/environment/getenvironmentvariables" # getenvironmentvariables.vbproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
@@ -8305,6 +8431,15 @@ update_configs:
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/snippets/csharp/VS_Snippets_WebNet/CustomServerControlCollectionProperties/projectsample/customservercontrolcollection/samples.aspnet.vb" # samples.aspnet.vb.vbproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/standard/datetime/json/csharp/datetime-converter-examples/example1" # example1.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/standard/datetime/json/csharp/datetime-converter-examples/example2" # example2.csproj
+    update_schedule: "live"
+  - package_manager: "dotnet:nuget"
+    directory: "/snippets/standard/datetime/json/csharp/datetime-converter-examples/example3" # example3.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
     directory: "/snippets/visualbasic/VS_Snippets_WebNet/CustomServerControlCollectionProperties/projectsample/customservercontrolcollection/samples.aspnet.cs" # samples.aspnet.cs.csproj
