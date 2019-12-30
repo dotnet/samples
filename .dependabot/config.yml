@@ -465,9 +465,6 @@ update_configs:
     directory: "/snippets/csharp/tour-of-async/AsyncBreakfast-V3" # AsyncBreakfast.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
-    directory: "/snippets/csharp/tuples" # tuples.csproj
-    update_schedule: "live"
-  - package_manager: "dotnet:nuget"
     directory: "/snippets/csharp/tutorials/attributes" # attributes.csproj
     update_schedule: "live"
   - package_manager: "dotnet:nuget"
