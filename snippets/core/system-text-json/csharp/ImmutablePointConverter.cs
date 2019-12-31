@@ -100,20 +100,20 @@ namespace SystemTextJsonSamples
             return _intConverter.Read(ref reader, typeof(int), options);
         }
 
-        private void WriteProperty(Utf8JsonWriter writer, JsonEncodedText name, int value, JsonSerializerOptions options)
+        private void WriteProperty(Utf8JsonWriter writer, JsonEncodedText name, int intValue, JsonSerializerOptions options)
         {
             writer.WritePropertyName(name);
-            _intConverter.Write(writer, value, options);
+            _intConverter.Write(writer, intValue, options);
         }
 
         public override void Write(
             Utf8JsonWriter writer,
-            ImmutablePoint value,
+            ImmutablePoint point,
             JsonSerializerOptions options)
         {
             writer.WriteStartObject();
-            WriteProperty(writer, XName, value.X, options);
-            WriteProperty(writer, YName, value.Y, options);
+            WriteProperty(writer, XName, point.X, options);
+            WriteProperty(writer, YName, point.Y, options);
             writer.WriteEndObject();
         }
     }

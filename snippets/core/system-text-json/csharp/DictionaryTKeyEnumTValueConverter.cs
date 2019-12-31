@@ -69,13 +69,13 @@ namespace SystemTextJsonSamples
                     throw new JsonException();
                 }
 
-                Dictionary<TKey, TValue> value = new Dictionary<TKey, TValue>();
+                Dictionary<TKey, TValue> dictionary = new Dictionary<TKey, TValue>();
 
                 while (reader.Read())
                 {
                     if (reader.TokenType == JsonTokenType.EndObject)
                     {
-                        return value;
+                        return dictionary;
                     }
 
                     // Get the key.
@@ -107,7 +107,7 @@ namespace SystemTextJsonSamples
                     }
 
                     // Add to dictionary.
-                    value.Add(key, v);
+                    dictionary.Add(key, v);
                 }
 
                 throw new JsonException();
@@ -115,12 +115,12 @@ namespace SystemTextJsonSamples
 
             public override void Write(
                 Utf8JsonWriter writer, 
-                Dictionary<TKey, TValue> value, 
+                Dictionary<TKey, TValue> dictionary, 
                 JsonSerializerOptions options)
             {
                 writer.WriteStartObject();
 
-                foreach (KeyValuePair<TKey, TValue> kvp in value)
+                foreach (KeyValuePair<TKey, TValue> kvp in dictionary)
                 {
                     writer.WritePropertyName(kvp.Key.ToString());
 

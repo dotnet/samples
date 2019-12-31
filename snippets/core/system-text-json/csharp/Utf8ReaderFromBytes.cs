@@ -37,9 +37,9 @@ namespace SystemTextJsonSamples
 
                     case JsonTokenType.Number:
                         {
-                            int value = reader.GetInt32();
+                            int intValue = reader.GetInt32();
                             Console.Write(" ");
-                            Console.Write(value);
+                            Console.Write(intValue);
                             break;
                         }
 

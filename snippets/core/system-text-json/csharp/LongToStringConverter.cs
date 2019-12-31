@@ -23,9 +23,9 @@ namespace SystemTextJsonSamples
             return reader.GetInt64();
         }
 
-        public override void Write(Utf8JsonWriter writer, long value, JsonSerializerOptions options)
+        public override void Write(Utf8JsonWriter writer, long longValue, JsonSerializerOptions options)
         {
-            writer.WriteStringValue(value.ToString());
+            writer.WriteStringValue(longValue.ToString());
         }
     }
 }
