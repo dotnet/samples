@@ -28,6 +28,7 @@ namespace SystemTextJsonSamples
     {
         public WeatherForecastWithDefault()
         {
+            Date = DateTimeOffset.Parse("2001-01-01");
             Summary = "No summary";
         }
         public DateTimeOffset Date { get; set; }
