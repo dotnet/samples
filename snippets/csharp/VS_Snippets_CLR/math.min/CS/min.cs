@@ -7,7 +7,6 @@ class Sample
     {
         //<snippet1>
         string str = "{0}: The lesser of {1,3} and {2,3} is {3}.";
-        string nl = Environment.NewLine;
 
         byte     xByte1    = 1,    xByte2    = 51;	
         short    xShort1   = -2,   xShort2   = 52;
@@ -23,7 +22,7 @@ class Sample
         uint     xUint1    = 103, xUint2   = 113;
         ulong    xUlong1   = 104, xUlong2  = 114;
 
-        Console.WriteLine("{0}Display the lesser of two values:{0}", nl);
+        Console.WriteLine("Display the lesser of two values:\n");
         Console.WriteLine(str, "Byte   ", xByte1, xByte2, Math.Min(xByte1, xByte2));
         Console.WriteLine(str, "Int16  ", xShort1, xShort2, Math.Min(xShort1, xShort2));
         Console.WriteLine(str, "Int32  ", xInt1, xInt2, Math.Min(xInt1, xInt2));
@@ -32,8 +31,7 @@ class Sample
         Console.WriteLine(str, "Double ", xDouble1, xDouble2, Math.Min(xDouble1, xDouble2));
         Console.WriteLine(str, "Decimal", xDecimal1, xDecimal2, Math.Min(xDecimal1, xDecimal2));
      
-        //
-        Console.WriteLine("{0}The following types are not CLS-compliant:{0}", nl);
+        Console.WriteLine("\nThe following types are not CLS-compliant:\n");
         Console.WriteLine(str, "SByte  ", xSbyte1, xSbyte2, Math.Min(xSbyte1, xSbyte2));
         Console.WriteLine(str, "UInt16 ", xUshort1, xUshort2, Math.Min(xUshort1, xUshort2));
         Console.WriteLine(str, "UInt32 ", xUint1, xUint2, Math.Min(xUint1, xUint2));

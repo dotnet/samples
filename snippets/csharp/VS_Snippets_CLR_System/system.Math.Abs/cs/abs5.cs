@@ -9,7 +9,7 @@ public class Example
       foreach (long value in values)
       {
          try {
-            Console.WriteLine("Abs({0}) = {1}", value, Math.Abs(value));
+            Console.WriteLine($"Abs({value}) = {Math.Abs(value)}");
          }   
          catch (OverflowException) {
             Console.WriteLine("Unable to calculate the absolute value of {0}.", 

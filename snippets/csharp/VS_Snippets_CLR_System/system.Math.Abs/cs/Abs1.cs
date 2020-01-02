@@ -8,7 +8,7 @@ public class Example
       decimal[] decimals = { Decimal.MaxValue, 12.45M, 0M, -19.69M, 
                              Decimal.MinValue };
       foreach (decimal value in decimals)
-         Console.WriteLine("Abs({0}) = {1}", value, Math.Abs(value));
+         Console.WriteLine($"Abs({value}) = {Math.Abs(value)}");
 
       // The example displays the following output:
       //       Abs(79228162514264337593543950335) = 79228162514264337593543950335

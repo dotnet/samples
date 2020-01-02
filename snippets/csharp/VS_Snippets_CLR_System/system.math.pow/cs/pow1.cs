@@ -7,8 +7,7 @@ public class Example
       // <Snippet1>
       int value = 2;
       for (int power = 0; power <= 32; power++)
-         Console.WriteLine("{0}^{1} = {2:N0} (0x{2:X})", 
-                           value, power, (long)Math.Pow(value, power));
+         Console.WriteLine($"{value}^{power} = {(long)Math.Pow(value, power):N0} (0x{(long)Math.Pow(value, power):X})");
 
       // The example displays the following output:
       //     2^0 = 1 (0x1)

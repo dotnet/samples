@@ -8,7 +8,7 @@ public class Example
       float[] values= { Single.MaxValue, 16.354e-12F, 15.098123F, 0F, 
                         -19.069713F, -15.058e17F, Single.MinValue };
       foreach (float value in values)
-         Console.WriteLine("Abs({0}) = {1}", value, Math.Abs(value));
+         Console.WriteLine($"Abs({value}) = {Math.Abs(value)}");
 
       // The example displays the following output:
       //       Abs(3.402823E+38) = 3.402823E+38
