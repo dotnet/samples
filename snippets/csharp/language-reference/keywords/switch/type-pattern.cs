@@ -10,7 +10,7 @@ class Example
     {
         int[] values = { 2, 4, 6, 8, 10 };
         ShowCollectionInformation(values);
-        
+
         var names = new List<string>();
         names.AddRange( new string[] { "Adam", "Abigail", "Bertrand", "Bridgette" } );
         ShowCollectionInformation(names);
@@ -18,7 +18,7 @@ class Example
         List<int> numbers = null;
         ShowCollectionInformation(numbers);
     }
-   
+
     private static void ShowCollectionInformation(object coll)
     {
         switch (coll)
@@ -28,7 +28,7 @@ class Example
                break;
             case IEnumerable<int> ieInt:
                Console.WriteLine($"Average: {ieInt.Average(s => s)}");
-               break;   
+               break;
             case IList list:
                Console.WriteLine($"{list.Count} items");
                break;
@@ -37,13 +37,13 @@ class Example
                foreach (var e in ie) 
                   result += $"{e} ";
                Console.WriteLine(result);
-               break;   
+               break;
             case null:
                // Do nothing for a null.
                break;
             default:
                Console.WriteLine($"A instance of type {coll.GetType().Name}");
-               break;   
+               break;
         }
     }
 }
