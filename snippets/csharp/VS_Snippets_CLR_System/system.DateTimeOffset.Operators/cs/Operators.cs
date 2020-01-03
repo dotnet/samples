@@ -95,7 +95,7 @@ public class Class1
                              new TimeSpan(1, 0, 0, 0);
       Console.WriteLine(timeWithOffset.ToString());
        
-      timeWithOffset = new DateTime(2008, 1, 1, 2, 30, 0)
+      timeWithOffset = new DateTime(2008, 1, 1, 2, 30, 0);
       Console.WriteLine(timeWithOffset.ToString());
       // The example produces the following output if run on 3/20/2007 
       // at 6:25 PM on a computer in the U.S. Pacific Daylight Time zone:

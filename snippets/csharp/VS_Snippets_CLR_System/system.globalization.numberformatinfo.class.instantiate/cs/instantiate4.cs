@@ -14,7 +14,7 @@ public class Example
       nfi = CultureInfo.InvariantCulture.NumberFormat;
       Console.WriteLine(nfi.IsReadOnly);               
       
-      nfi = New NumberFormatInfo();
+      nfi = new NumberFormatInfo();
       Console.WriteLine(nfi.IsReadOnly);               
    }
 }

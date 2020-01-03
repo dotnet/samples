@@ -33,8 +33,7 @@
 
             foreach (var student in students)
             {
-                Console.WriteLine($"The average score of {student.FirstName} {student.LastName} is 
-                    {student.ExamScores.Average()}.");
+                Console.WriteLine($"The average score of {student.FirstName} {student.LastName} is {student.ExamScores.Average()}.");
             }
 
             //Keep console window open in debug mode

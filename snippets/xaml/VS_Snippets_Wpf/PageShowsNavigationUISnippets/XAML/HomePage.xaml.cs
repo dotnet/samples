@@ -21,8 +21,6 @@ namespace PageShowsNavigationUISnippetSample_CSharp
             InitializeComponent();
 
             this.SizeChanged += new SizeChangedEventHandler(HomePage_SizeChanged);
-
-            this.r
         }
 
         void HomePage_SizeChanged(object sender, SizeChangedEventArgs e)

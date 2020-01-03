@@ -61,7 +61,6 @@ namespace LS_Queries_CS
                 entity.Discount = 0.1F;
             }
         }
-        }
         //</Snippet4>
         
     }
