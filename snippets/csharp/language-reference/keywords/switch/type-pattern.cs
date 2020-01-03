@@ -51,5 +51,3 @@ class Example
 //     An array with 5 elements.
 //     4 items
 // </Snippet1>
-
-
