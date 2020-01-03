@@ -37,7 +37,7 @@ class Example
             IEnumerable ie = (IEnumerable) coll;
             string result = "";
             foreach (var e in ie) 
-               result += "${e} ";
+               result += $"{e} ";
             Console.WriteLine(result);
         }
         else if (coll == null) { 
@@ -52,5 +52,3 @@ class Example
 //     An array with 5 elements.
 //     4 items
 // </Snippet1>
-
-
