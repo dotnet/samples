@@ -12,7 +12,7 @@ class Example
         ShowCollectionInformation(values);
 
         var names = new List<string>();
-        names.AddRange( new string[] { "Adam", "Abigail", "Bertrand", "Bridgette" } );
+        names.AddRange(new string[] { "Adam", "Abigail", "Bertrand", "Bridgette" });
         ShowCollectionInformation(names);
 
         List<int> numbers = null;
