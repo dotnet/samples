@@ -31,7 +31,7 @@ public struct StoreInfo
             delta = local.GetAdjustmentRules()[local.GetAdjustmentRules().Length - 1].DaylightDelta;
 
          if (tz.IsDaylightSavingTime(TimeZoneInfo.ConvertTime(DateTime.Now.Date + time, local, tz)))
-            storeDelta = tz.GetAdjustmentRules()[local.GetAdjustmentRules().Length - 1].DaylightDelta;
+            storeDelta = tz.GetAdjustmentRules()[tz.GetAdjustmentRules().Length - 1].DaylightDelta;
 
          TimeSpan comparisonTime = time + (offset - tz.BaseUtcOffset).Negate() + (delta - storeDelta).Negate();
          return comparisonTime >= open & comparisonTime <= close;
