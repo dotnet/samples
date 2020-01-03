@@ -35,7 +35,7 @@ class Example
             case IEnumerable ie:
                string result = "";
                foreach (var e in ie) 
-                  result += "${e} ";
+                  result += $"{e} ";
                Console.WriteLine(result);
                break;   
             case null:
