@@ -52,5 +52,3 @@ class Example
 //     4 items
 //     Null passed to this method.
 // </Snippet1>
-
-
