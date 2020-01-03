@@ -5,29 +5,20 @@ public class Example
    public static void Main()
    {
       // <Snippet5>
-      Console.Write("Number of random numbers to generate: ");
-      String line = Console.ReadLine();
-      uint numbers = 0;
       Random rnd = new Random();
       
-      if (! UInt32.TryParse(line, out numbers))
-         numbers = 10;
-      
-      for (uint ctr = 1; ctr <= numbers; ctr++)
-         Console.WriteLine("{0,15:N0}", rnd.Next());
+      Console.WriteLine("Generating 10 random numbers:");
+                        
+      for (uint ctr = 1; ctr <= 10; ctr++)
+         Console.WriteLine($"{rnd.Next(),15:N0}");
 
-      // The example displays output like the following when asked to generate
-      // 15 random numbers:
-      //       Number of random numbers to generate: 15
+      // The example displays output like the following:
+      //
+      //     Generating 10 random numbers:                  
       //         1,733,189,596
       //           566,518,090
       //         1,166,108,546
       //         1,931,426,514
-      //         1,341,108,291
-      //         1,012,698,049
-      //           890,578,409
-      //         1,377,589,722
-      //         2,108,384,181
       //         1,532,939,448
       //           762,207,767
       //           815,074,920
