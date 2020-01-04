@@ -1,5 +1,4 @@
-﻿// <Snippet3>
-// Place this code into a console project called ArgsEcho to build the argsecho.exe target
+﻿// Place this code into a console project called ArgsEcho to build the argsecho.exe target
 
 using System;
 
@@ -21,4 +20,3 @@ namespace StartArgs
         }
     }
 }
-// </Snippet3>

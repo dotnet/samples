@@ -1,5 +1,4 @@
-﻿//<snippet2>
-using System;
+﻿using System;
 using System.IO;
 using System.Diagnostics;
 
@@ -28,4 +27,3 @@ class StandardOutputExample
         Console.ReadLine();
     }
 }
-//</snippet2>

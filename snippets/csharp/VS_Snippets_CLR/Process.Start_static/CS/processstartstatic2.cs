@@ -1,5 +1,4 @@
-﻿// <Snippet2>
-// Place this code into a console project called StartArgsEcho. It depends on the
+﻿// Place this code into a console project called StartArgsEcho. It depends on the
 // console application named argsecho.exe.
 
 using System;
@@ -59,4 +58,3 @@ namespace StartArgsEcho
         }
     }
 }
-// </Snippet2>

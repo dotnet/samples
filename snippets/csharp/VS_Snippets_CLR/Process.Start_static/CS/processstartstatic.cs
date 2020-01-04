@@ -1,5 +1,4 @@
-﻿// <Snippet1>
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.ComponentModel;
 
@@ -57,4 +56,3 @@ namespace MyProcessSample
         }
     }
 }
-// </Snippet1>

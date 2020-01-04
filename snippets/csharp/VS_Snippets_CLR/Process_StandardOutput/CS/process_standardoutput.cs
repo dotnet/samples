@@ -1,5 +1,4 @@
-﻿//<snippet1>
-using System;
+﻿using System;
 using System.IO;
 using System.Diagnostics;
 
@@ -34,4 +33,3 @@ class IORedirExample
         }
     }
 }
-//</snippet1>
