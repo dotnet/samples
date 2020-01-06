@@ -13,4 +13,3 @@ namespace WarningEx
 	}
     }
 }
-

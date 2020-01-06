@@ -106,4 +106,3 @@ public class Class1
     }
 }
 // </Snippet3>
-

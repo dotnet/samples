@@ -40,4 +40,3 @@ public class Example
 //          Unable to parse '08/18/2014'
 //          '01/02/2015' --> 1. helmikuuta 2015
 // </Snippet15>
-

@@ -42,4 +42,3 @@ public class Example
 //          Local date and time: 19.06.2015 10:35:50, Local
 //          UTC date and time: 19.06.2015 17:35:50, Utc
 // </Snippet3>
-

@@ -39,4 +39,3 @@ switch (option) {
 // </Snippet2>
  }
 }
-

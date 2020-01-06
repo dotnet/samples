@@ -711,6 +711,3 @@ namespace DataViewSamples
 
     }
 }
-
-
-

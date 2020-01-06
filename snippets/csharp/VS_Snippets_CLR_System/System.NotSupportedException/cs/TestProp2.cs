@@ -50,4 +50,3 @@ public class FileUtilities
 // The example displays the following output:
 //       Filename: .\TestFile.dat, Encoding: Unknown
 // </Snippet4>
-

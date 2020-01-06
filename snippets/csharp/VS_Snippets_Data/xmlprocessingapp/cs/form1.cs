@@ -838,6 +838,3 @@ namespace XMLProcessingApp
     }
 
     }
-
-
-

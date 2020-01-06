@@ -96,7 +96,3 @@ namespace SDKSample
     }
 }
 // </SnippetMatrixAnimationUsingPathWholePage>
-
-
-
-

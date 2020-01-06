@@ -48,4 +48,3 @@ public struct Dog
 //       Jane
 //       Alaskan Malamute
 // </Snippet10>
-

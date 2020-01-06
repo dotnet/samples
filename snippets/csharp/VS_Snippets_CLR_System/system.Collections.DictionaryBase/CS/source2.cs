@@ -127,7 +127,3 @@ public class SamplesDictionaryBase
         // </Snippet3>
     }
 }
-
-
-
-

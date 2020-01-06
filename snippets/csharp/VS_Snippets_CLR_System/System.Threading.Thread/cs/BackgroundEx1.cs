@@ -38,4 +38,3 @@ public class Example
 //       Thread 3: Elapsed 0.51 seconds
 //       Main thread (1) exiting...
 // </Snippet3>
-

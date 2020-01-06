@@ -348,12 +348,3 @@ namespace System.Windows.Forms.ToolStripExamplesCS
 	} 
 }
 //</snippet1>
-
-
-
-
-
-
-
-
-

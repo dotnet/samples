@@ -143,4 +143,3 @@ namespace AdavancedInkTopicsSamples
     }
     //</Snippet9>
 }
-

@@ -91,4 +91,3 @@ namespace Examples.CS.WebControls.Design
     } // MyHierarchicalDataBoundControlDesigner
 } // Examples.CS.WebControls.Design
 // </snippet1>
-

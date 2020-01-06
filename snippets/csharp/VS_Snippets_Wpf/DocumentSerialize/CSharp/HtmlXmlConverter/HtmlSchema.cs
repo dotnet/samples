@@ -766,4 +766,3 @@ namespace SdkSample
         #endregion Private Fields
     }
 }
-

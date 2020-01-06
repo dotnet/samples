@@ -80,4 +80,3 @@ namespace Snippets
         { return a + b; }
     }
 }
-

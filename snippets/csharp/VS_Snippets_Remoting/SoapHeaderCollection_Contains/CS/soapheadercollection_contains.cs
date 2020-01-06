@@ -236,4 +236,3 @@ public class MathService : System.Web.Services.Protocols.SoapHttpClientProtocol
       return ((System.Single)(results[0]));
    }
 }
-

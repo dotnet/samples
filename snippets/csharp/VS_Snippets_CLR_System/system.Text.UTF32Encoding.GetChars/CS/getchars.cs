@@ -90,5 +90,3 @@ BE array with LE encoding : System.Text.UTF32Encoding :Invalid byte was found at
 LE array with BE encoding : System.Text.UTF32Encoding :Invalid byte was found at byte index 3.
 
 */
-
-

@@ -104,4 +104,3 @@ namespace Examples.CS.WebControls.Design
     } // MyLoginDesigner
 } // Examples.CS.WebControls.Design
 // </snippet1>
-

@@ -75,4 +75,3 @@ class Example_MultiFrame
     }
 }
         // </snippet4>
-

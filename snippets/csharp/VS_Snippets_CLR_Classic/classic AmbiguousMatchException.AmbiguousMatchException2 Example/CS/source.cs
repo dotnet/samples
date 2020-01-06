@@ -63,4 +63,3 @@ namespace Ambiguity
 // System.Reflection.AmbiguousMatchException
 // Ambiguous match found.
 // </Snippet1>
-

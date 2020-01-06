@@ -33,4 +33,3 @@ namespace MS.ASPNET.Samples
 	}
 	// </snippet1>
 }
-

@@ -27,4 +27,3 @@
  mySyncdAL is synchronized.
  */ 
 // </Snippet1>
-

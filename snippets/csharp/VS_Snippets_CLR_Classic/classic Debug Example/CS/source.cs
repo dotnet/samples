@@ -19,4 +19,3 @@ class Test
     }
 }
 // </Snippet1>
-

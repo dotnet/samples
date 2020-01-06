@@ -31,4 +31,3 @@ public class Example
 //       Int32.Equals is inherited: True
 //       Object.Equals is inherited: False
 // </Snippet2>
-

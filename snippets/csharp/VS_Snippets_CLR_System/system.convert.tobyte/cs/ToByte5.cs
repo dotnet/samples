@@ -38,4 +38,3 @@ public class Example
 //     '255' --> 255
 //     '   16  ' --> 16
 // </Snippet15>
-

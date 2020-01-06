@@ -78,5 +78,3 @@ public static class Test
     }       
 }
 //</snippet1>
-
-

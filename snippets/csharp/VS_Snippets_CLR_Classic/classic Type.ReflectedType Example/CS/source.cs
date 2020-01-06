@@ -16,4 +16,3 @@ public abstract class MyClassA
     }
 }
 // </Snippet1>
-

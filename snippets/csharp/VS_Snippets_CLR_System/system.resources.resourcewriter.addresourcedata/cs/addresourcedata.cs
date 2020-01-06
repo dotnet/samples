@@ -25,4 +25,3 @@ public class Example
 //       Integer2: 2064
 //       Integer1: 1032
 // </Snippet1>      
-      

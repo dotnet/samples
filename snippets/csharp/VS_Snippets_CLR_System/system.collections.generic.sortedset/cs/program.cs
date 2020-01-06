@@ -151,5 +151,3 @@ public class ByFileExtension : IComparer<string>
 }
 // </Snippet9>
 // </Snippet1>
-
-

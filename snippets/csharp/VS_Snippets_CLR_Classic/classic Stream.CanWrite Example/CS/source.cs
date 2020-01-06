@@ -20,4 +20,3 @@
  //To get the output message "MyFile.txt can be both written to and read from.",
  //change the FileAccess parameter to ReadWrite in the FileStream constructor.
 // </Snippet1>
-

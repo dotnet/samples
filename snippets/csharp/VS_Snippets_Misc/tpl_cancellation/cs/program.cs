@@ -118,7 +118,3 @@ namespace CancellationWithOCE
     }
 }
     //</snippet03>
-
-
-   
-    

@@ -57,4 +57,3 @@ for (int i = 0; i < httpModules.Count; i++)
 } // UsingHttpModulesSection class end.
 
 } // Samples.Aspnet.SystemWebManagement namespace end.
-

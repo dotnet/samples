@@ -44,4 +44,3 @@ m_protected          False    False    True     False    False
 m_protected_public   False    False    False    True     False
  */
 // </Snippet1>
-

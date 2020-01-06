@@ -92,4 +92,3 @@ public class Example
 //       
 //       TestClass.Equals(TestClass, TestClass)
 // </Snippet2>
-

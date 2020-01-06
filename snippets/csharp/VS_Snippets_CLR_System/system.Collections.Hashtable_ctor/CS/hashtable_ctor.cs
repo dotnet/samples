@@ -1,4 +1,4 @@
-// The following code example creates hash tables using different Hashtable
+﻿// The following code example creates hash tables using different Hashtable
 // constructors and demonstrates the differences in the behavior of the hash
 // tables, even if each one contains the same elements.
 
@@ -107,4 +107,3 @@ first is in myHT4: False
 */
 
 // </Snippet1>
-

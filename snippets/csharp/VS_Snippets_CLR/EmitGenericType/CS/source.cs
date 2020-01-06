@@ -312,5 +312,3 @@ Type parameter TSecond:
     Base type constraint: ExampleBase
  */
 //</Snippet1>
-
-

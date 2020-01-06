@@ -22,4 +22,3 @@ public class Example
 //       Index was outside the bounds of the array.
 //       at Example.Main()
 // </Snippet9>
-

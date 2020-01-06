@@ -261,5 +261,3 @@ namespace Microsoft.Samples.KeyFrameExamples
     }
 }
 // </SnippetKeyTimesExampleUsingWholePage>
-
-

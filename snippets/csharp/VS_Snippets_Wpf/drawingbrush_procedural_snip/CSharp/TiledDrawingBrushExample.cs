@@ -80,5 +80,3 @@ namespace Microsoft.Samples.DrawingBrushExamples
     }
 }
 // </SnippetTiledDrawingBrushExampleWholePage>
-
-

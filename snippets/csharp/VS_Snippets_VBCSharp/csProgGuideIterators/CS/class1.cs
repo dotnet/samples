@@ -305,6 +305,3 @@ class Example28
     }
     //</Snippet28>
 }
-
-
-

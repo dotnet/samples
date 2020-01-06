@@ -26,5 +26,3 @@ public class Example
 //       Mean:    50.02
 //       N:       1,000,000
 // </Snippet1>
-
-

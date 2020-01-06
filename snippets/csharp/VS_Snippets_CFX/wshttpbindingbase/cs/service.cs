@@ -178,5 +178,3 @@ namespace WSHttpBindingSample
     }
     //</snippet0>
 }
-
-

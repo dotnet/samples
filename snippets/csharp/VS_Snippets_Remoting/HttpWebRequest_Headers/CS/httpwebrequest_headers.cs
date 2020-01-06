@@ -59,5 +59,3 @@ class HttpWebRequest_Headers
 		}
 	}
 }
-
-

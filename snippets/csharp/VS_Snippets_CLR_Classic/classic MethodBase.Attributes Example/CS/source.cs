@@ -51,4 +51,3 @@ class AttributesSample
     }
 }
 //</Snippet1>
-

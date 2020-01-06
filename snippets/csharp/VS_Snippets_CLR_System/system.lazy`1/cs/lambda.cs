@@ -68,4 +68,3 @@ class LargeObject
 
     public long[] Data = new long[100000000];
 }
-

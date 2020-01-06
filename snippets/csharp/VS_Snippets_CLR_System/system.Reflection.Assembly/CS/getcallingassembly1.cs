@@ -43,4 +43,3 @@ namespace SecondAssembly
 // "OtherMethod executing assembly: SecondAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
 // "OtherMethod called from: FirstAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
 // </Snippet4>
-

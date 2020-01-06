@@ -48,9 +48,3 @@ class PerfCounterCatCreateMod
     //</snippet2>
 }
 //</snippet1>
-
-
-
-
-
-

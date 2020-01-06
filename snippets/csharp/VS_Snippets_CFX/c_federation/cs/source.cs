@@ -276,4 +276,3 @@ public class STS_B_AuthorizationManager : ServiceAuthorizationManager
     //</snippet6>
 
 }
-

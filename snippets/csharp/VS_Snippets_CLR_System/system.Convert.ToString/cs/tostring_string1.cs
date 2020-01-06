@@ -20,4 +20,3 @@ public class Example
 //       str1 is interned: False
 //       str1 and str2 are the same reference: True
 // </Snippet2>
-

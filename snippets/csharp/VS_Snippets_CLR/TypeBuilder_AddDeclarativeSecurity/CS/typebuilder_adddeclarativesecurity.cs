@@ -50,5 +50,3 @@ namespace CustomAttribute_Sample
    }
 }
 // </Snippet1>
-
-

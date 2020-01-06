@@ -124,4 +124,3 @@ public class Example
 //          Indexed:      False
 //       
 //       Accessibility of the System.Collections.Generic.List`1.Item property: public
-

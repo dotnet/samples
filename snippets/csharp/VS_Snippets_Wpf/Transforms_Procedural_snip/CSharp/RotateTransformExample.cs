@@ -89,5 +89,3 @@ namespace SDKSample
         }
     }
 }
-
-

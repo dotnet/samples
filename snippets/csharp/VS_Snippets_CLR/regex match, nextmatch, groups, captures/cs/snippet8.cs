@@ -50,4 +50,3 @@ class Example
 //       Group2='car'
 //       Capture0='car', Position=21
 //</snippet8>
-

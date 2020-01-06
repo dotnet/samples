@@ -122,5 +122,3 @@ class Example
    }
 }
 // </Snippet1>
-
-

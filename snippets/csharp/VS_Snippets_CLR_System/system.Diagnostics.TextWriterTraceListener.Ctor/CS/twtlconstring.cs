@@ -49,4 +49,3 @@ class TWTLConStringMod
     }
 }
 //</snippet3>
-

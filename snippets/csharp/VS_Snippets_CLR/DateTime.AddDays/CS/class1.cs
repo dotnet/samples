@@ -15,4 +15,3 @@ class Class1
 //       Today: Wednesday
 //       36 days from today: Thursday
 // </Snippet1>
-

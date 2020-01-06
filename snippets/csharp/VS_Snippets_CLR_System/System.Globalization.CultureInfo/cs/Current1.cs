@@ -18,4 +18,3 @@ public class Example
 //     The current culture is en-US
 //     The two CultureInfo objects are equal: True
 // </Snippet1>
-

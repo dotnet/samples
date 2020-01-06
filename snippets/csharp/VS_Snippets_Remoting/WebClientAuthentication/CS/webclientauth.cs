@@ -22,11 +22,3 @@ public class WebClientAuthSample {
 	}    
 	//</snippet1>
 }
-
-
-
-
-
-
-
-

@@ -42,4 +42,3 @@ public class Example
 //       Today is Wednesday, May 24, 2017
 //       Today's hours of leisure: 5
 // </Snippet >
-

@@ -97,6 +97,3 @@ public class GetSocket
 }
 
 //</Snippet1>
- 
-
-

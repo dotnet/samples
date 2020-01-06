@@ -62,4 +62,3 @@ namespace Microsoft.Samples.BuiltInConfiguration
         
     }
 }
-

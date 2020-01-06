@@ -50,4 +50,3 @@ public class Example
        Console.WriteLine();
    }
 }
-

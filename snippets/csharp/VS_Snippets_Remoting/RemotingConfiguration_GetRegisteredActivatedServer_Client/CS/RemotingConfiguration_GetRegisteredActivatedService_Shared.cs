@@ -12,5 +12,3 @@
             return  "The client requests to "+name;
         }
     }
-
-

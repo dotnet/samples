@@ -26,5 +26,3 @@ public class Remarks
         // </snippet01>
     }
 }
-
-

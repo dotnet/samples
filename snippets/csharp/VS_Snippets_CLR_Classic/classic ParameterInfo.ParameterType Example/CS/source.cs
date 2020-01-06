@@ -47,4 +47,3 @@ For parameter # 1, the ParameterType is - System.String&
 For parameter # 2, the ParameterType is - System.String&
  */
 // </Snippet1>
-

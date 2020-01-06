@@ -67,6 +67,3 @@ namespace PictureBoxSixeModeCS
         }
     }
 }
-
-
-

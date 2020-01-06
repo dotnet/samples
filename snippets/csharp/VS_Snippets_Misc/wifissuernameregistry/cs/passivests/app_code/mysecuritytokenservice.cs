@@ -152,4 +152,3 @@ public class MySecurityTokenService : SecurityTokenService
         return outputIdentity;
     }
 }
-

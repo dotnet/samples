@@ -20,4 +20,3 @@ public class WriteResources {
    }
 }
 // </Snippet1>
-

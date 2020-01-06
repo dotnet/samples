@@ -13,4 +13,3 @@ namespace NamingLibrary
     }
 }
 //</Snippet1>
-

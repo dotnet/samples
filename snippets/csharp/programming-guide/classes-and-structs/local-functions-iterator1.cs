@@ -37,4 +37,3 @@ class Example
 //    Parameter name: end must be less than or equal to 100.
 //       at Sequence.<GetNumericRange>d__1.MoveNext() in Program.cs:line 23
 //       at Example.Main() in Program.cs:line 43
-

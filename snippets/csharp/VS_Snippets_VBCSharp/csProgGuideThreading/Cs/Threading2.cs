@@ -114,6 +114,3 @@ namespace WrapSynchronization2
     }
     //</Snippet16>
 }
-
-
-

@@ -29,4 +29,3 @@ class Example
 //       Member GetType declared by System.Object
 //       Member Value declared by System.Empty
 // </Snippet1>
-

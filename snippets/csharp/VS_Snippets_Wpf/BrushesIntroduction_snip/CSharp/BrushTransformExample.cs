@@ -94,5 +94,3 @@ namespace BrushesIntroduction
     }
 }
 // </SnippetBrushTransformExampleWholePage> 
-
-

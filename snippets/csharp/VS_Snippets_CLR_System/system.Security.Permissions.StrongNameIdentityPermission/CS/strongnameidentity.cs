@@ -232,5 +232,3 @@ public class StrongNameIdentityDemo
 }
 
 // </Snippet1>
-
-

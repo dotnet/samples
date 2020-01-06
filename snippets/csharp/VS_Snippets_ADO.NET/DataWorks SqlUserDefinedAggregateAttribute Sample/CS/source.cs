@@ -28,4 +28,3 @@ public class Concatenate : Microsoft.SqlServer.Server.IBinarySerialize
             
    }
 }
-        

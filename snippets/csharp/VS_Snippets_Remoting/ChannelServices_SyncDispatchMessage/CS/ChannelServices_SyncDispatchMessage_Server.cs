@@ -21,4 +21,3 @@ public class Sample {
       Console.ReadLine();            
    }
 }
-

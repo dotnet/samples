@@ -23,4 +23,3 @@ public class Example
 //     The current UI culture is en-US
 //     The current UI culture is now sl-SI
 // </Snippet4>
-

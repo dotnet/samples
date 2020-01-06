@@ -84,4 +84,3 @@ class HttpWebRequest_AllowWriteStreamBuffering
 		}
 	}
 }
-	

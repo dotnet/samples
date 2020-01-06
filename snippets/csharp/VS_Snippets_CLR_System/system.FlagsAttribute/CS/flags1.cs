@@ -74,4 +74,3 @@ public class Example
 //    Household 2 has: None
 //    Household 3 has: Cell, Internet
 // </Snippet2>
-

@@ -144,6 +144,3 @@ public class Example
 //     Try Block Offset: 9
 //</Snippet7>
 //</Snippet1>
-
-
-

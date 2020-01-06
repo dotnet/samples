@@ -58,4 +58,3 @@ class XMLSchemaExamples
     }
 }
 // </Snippet1>
-

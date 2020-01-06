@@ -248,4 +248,3 @@ namespace System.Windows.Forms.ToolStripControlHostExample
 	}
 	//</snippet13>
 }
-

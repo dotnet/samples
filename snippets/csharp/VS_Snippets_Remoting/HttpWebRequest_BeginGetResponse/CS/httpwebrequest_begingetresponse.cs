@@ -147,8 +147,3 @@ class HttpWebRequest_BeginGetResponse
 // </Snippet1>
 
 }
-
-
-
-
-

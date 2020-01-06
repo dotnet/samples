@@ -51,4 +51,3 @@ public class Example
 //          Contains Generic Paramters: True
 //          Generic Type Definition: True
 // </Snippet5>
-

@@ -92,7 +92,3 @@ namespace Microsoft.ServiceModel.Samples
         }
     }
 }
-
-	
-  
-

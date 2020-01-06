@@ -47,4 +47,3 @@ public class Example
 //       Object 2 Cancel callback
 //       Object 1 Cancel callback
 // </Snippet2>
-

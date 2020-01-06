@@ -46,5 +46,3 @@ public class Example
 Found: X = 275, Y = 395
  */
 //</Snippet1>
-
-

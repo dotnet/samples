@@ -162,6 +162,3 @@ public class Form1: Form
     }
     // </snippet2>
 }
-
-
-

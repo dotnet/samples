@@ -41,4 +41,3 @@ The ar-SA culture supports the following calendars:
 
 */
 // </snippet1>
-

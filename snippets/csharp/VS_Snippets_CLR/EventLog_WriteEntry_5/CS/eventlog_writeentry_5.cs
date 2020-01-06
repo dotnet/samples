@@ -64,5 +64,3 @@ class EventLog_WriteEntry_5
       }
    }
 }
-
-

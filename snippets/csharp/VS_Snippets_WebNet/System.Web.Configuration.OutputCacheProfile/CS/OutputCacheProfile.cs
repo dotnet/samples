@@ -152,4 +152,3 @@ namespace Samples.Aspnet.SystemWebConfiguration
     } // UsingOutputCacheProfile class end.
     
 } // Samples.Aspnet.SystemWebConfiguration namespace end.
-

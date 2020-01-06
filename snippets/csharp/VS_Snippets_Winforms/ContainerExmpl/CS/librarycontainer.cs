@@ -259,4 +259,3 @@ namespace InterfaceSample
 	}
 	//</snippet2>
 }
-

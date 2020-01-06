@@ -86,4 +86,3 @@ class HttpWebRequest_Referer
 		}
 	}
 }
-	

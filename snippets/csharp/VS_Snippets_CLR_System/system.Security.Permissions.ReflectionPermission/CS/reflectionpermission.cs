@@ -128,5 +128,3 @@ public class ReflectionPermissionDemo
 //Press the Enter key to exit.
 
 //</Snippet1>
-
-

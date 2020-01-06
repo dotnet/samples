@@ -85,6 +85,3 @@ public class Form1:
         ConstructFromResourceSaveAsGif(e);
     }
 }
-
-
-

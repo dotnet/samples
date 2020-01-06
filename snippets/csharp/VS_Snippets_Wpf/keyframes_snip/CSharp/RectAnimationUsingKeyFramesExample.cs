@@ -108,4 +108,3 @@ namespace Microsoft.Samples.KeyFrameExamples
     }
 }
 // </SnippetRectAnimationUsingKeyFramesWholePage>
-

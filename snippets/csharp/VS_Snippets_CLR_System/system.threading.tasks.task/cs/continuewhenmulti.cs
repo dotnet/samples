@@ -69,4 +69,3 @@ class ContinueWhenMultiDemo
     }
 }
 //</snippet05>
-

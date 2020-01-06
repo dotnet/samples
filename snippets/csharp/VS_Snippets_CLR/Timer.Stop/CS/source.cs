@@ -201,6 +201,3 @@ Test 100/100    100 test runs completed.
 Control thread waited 77 times for an event to complete.
  */
 //</Snippet1>
-
-
-

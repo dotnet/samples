@@ -316,5 +316,3 @@ Gear (quantity 175) was replaced by Gear, (quantity 1175).
 The order list was cleared.
  */
 //</Snippet1>
-
-

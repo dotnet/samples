@@ -93,4 +93,3 @@ namespace OverviewSnippets
         static Data GetData() { return new Data(); }
     }
 }
-

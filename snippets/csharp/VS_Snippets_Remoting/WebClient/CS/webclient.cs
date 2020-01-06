@@ -35,8 +35,3 @@ public class WebClientSample
         //</snippet1>
     }        
 }
-
-
-
-
-

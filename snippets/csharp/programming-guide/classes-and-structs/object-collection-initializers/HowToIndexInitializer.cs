@@ -42,4 +42,3 @@ namespace object_collection_initializers
     }
     // </SnippetHowToIndexInitializer>
 }
-

@@ -121,5 +121,3 @@ namespace BrushesIntroduction
     }
 }
 // </SnippetGraphicsMMGradientAnimationExamplesWholePage>
-
-

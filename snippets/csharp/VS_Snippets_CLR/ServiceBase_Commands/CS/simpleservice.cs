@@ -418,4 +418,3 @@ namespace SimpleService
     }
 }
 //</Snippet1>
-

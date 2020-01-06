@@ -24,5 +24,3 @@ public class Example
     } //Main
 } //Example
 // </Snippet1>
-
-

@@ -12,4 +12,3 @@ private void PrintCurrentInputLanguage() {
    
 // </Snippet1>
 }
-

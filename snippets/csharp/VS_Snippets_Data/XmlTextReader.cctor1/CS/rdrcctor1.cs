@@ -37,5 +37,3 @@ public class Sample {
   }
 } // End class
 //</snippet1>
-
-

@@ -52,8 +52,3 @@ public class Simple
 //       ServerClass.StaticMethod is running on another thread.
 //       The worker thread has been canceled. Press any key to exit.
 //</snippet14>
-
-
-
-
-

@@ -18,4 +18,3 @@ public class SamplesStringDictionary
         // </Snippet2>
     }
 }
-

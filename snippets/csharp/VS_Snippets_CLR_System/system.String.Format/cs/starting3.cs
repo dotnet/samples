@@ -23,6 +23,4 @@ class Example
        //      2015       1,148,203
        // </Snippet33>
    }
-}  
-
-
+}

@@ -138,4 +138,3 @@ namespace AsyncReturnTypes
 
 // All done, exiting button-click event handler.
 //</snippet10>
-

@@ -39,9 +39,3 @@ public class MyTypeClass
     }
 }
 // </Snippet1>
-
-
-			
-			
-
-

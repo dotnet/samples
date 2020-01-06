@@ -98,4 +98,3 @@ public class class1
         // </snippet41>
     }
 }
-

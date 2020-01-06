@@ -384,5 +384,3 @@ public Customer CloneCustomer(string serializedCustomer)
         }
     }
 }
-
-

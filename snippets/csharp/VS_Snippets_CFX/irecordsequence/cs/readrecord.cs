@@ -157,4 +157,3 @@ class ReadRecordsSample
 	}
 //</snippet1>
 }
-

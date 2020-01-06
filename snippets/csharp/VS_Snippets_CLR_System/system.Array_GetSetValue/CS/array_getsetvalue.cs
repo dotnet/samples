@@ -52,4 +52,3 @@ This code produces the following output.
 */
 
 // </Snippet1>
-

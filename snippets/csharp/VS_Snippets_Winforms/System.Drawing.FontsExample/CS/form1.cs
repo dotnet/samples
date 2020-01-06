@@ -184,6 +184,3 @@ this.Controls.Add(this.Button2);
     }
 
 }
-
-
-

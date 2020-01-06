@@ -151,4 +151,3 @@ public void HighlightCheckedNodes()
       Application.Run(new TreeNode_Bounds());
    }
 }
-

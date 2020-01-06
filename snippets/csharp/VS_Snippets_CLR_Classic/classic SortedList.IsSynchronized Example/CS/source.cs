@@ -28,4 +28,3 @@
  mySyncdSL is synchronized.
  */ 
  // </Snippet1>
-

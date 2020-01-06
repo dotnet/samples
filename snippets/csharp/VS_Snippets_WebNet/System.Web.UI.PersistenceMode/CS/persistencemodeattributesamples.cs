@@ -121,5 +121,3 @@ namespace PersistenceModeAttributeSamples
         }
     }
 }
-
-  

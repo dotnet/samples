@@ -44,4 +44,3 @@ public class Example
 //     Culture of task 6 on thread 11 is pt-BR
 //     Culture of task 4 on thread 10 is pt-BR
 // </Snippet14>
-

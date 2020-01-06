@@ -46,4 +46,3 @@ public class TypeMain
     }
 }
 // </Snippet1>
-

@@ -25,4 +25,3 @@ class UTF7EncodingExample {
     }
 }
 // </Snippet1>
-

@@ -28,4 +28,3 @@ public class Example
 //       Module: type_tostring.exe.
 //       Fully qualified name: MyNamespace.MyClass.
 // </Snippet1>				
-

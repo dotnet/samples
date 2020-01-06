@@ -137,4 +137,3 @@ class Test
 //    delegate
 //    delegate
 // </Snippet1>  
-

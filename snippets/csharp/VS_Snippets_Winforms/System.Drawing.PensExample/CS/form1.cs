@@ -174,7 +174,3 @@ public class Form1:
         ShowLineJoin(e);
     }
 }
-
-
-
-

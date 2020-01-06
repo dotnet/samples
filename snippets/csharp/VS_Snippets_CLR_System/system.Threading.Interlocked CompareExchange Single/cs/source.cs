@@ -104,5 +104,3 @@ public class Test
 Thread safe: 17039.57  Ordinary float: 15706.44
  */
 //</Snippet1>
-
-

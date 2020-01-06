@@ -620,4 +620,3 @@ sourceFile);
         }
     }
 }
-

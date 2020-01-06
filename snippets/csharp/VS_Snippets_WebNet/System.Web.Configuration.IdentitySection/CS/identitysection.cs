@@ -68,4 +68,3 @@ Console.WriteLine("Error" + e.ToString());
 } // UsingIdentitySection class end.
 
 } // Samples.Aspnet.SystemWebConfiguration namespace end.
-

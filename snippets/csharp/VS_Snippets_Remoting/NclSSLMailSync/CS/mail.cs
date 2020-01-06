@@ -37,4 +37,3 @@ namespace Examples.SmtpExamples.Sync
 	}
 
 }
-

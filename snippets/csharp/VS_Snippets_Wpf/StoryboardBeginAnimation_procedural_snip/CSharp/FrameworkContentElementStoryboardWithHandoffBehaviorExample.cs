@@ -126,5 +126,3 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
     }
 }
 // </SnippetFrameworkContentElementStoryboardWithHandoffBehaviorExampleWholePage>
-
-

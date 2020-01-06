@@ -45,4 +45,3 @@ public class Example
 //       LongTimePattern: HH:mm:ss
 //       FullDateTimePattern: dddd, MMMM dd, yyyy HH:mm:ss
 // </Snippet14>
-

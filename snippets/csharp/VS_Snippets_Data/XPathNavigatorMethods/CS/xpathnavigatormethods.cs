@@ -1208,6 +1208,3 @@ class XPathNavigatorMethods
     }
     #endregion
 }
-
-
-

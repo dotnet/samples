@@ -108,5 +108,3 @@ class Program
             + "Integrated Security=true";
     }
 }
-
-

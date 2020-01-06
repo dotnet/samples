@@ -100,4 +100,3 @@ namespace Examples.NegotiateStreamExample
     //</snippet6>
 }
 //</snippet0>
-

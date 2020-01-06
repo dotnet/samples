@@ -248,4 +248,3 @@ public class PerfCounter1
     }
 }
 //</Snippet1>
-

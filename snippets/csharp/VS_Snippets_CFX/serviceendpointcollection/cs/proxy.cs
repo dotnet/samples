@@ -44,4 +44,3 @@ public partial class AddClient : System.ServiceModel.ClientBase<IAdd>, IAdd
 
 
 // </Snippet1>
-   

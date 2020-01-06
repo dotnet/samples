@@ -20,4 +20,3 @@ public class Example
 //       Original String: This is   text with   far  too   much   white space.
 //       Replacement String: This is text with far too much white space.
 // </Snippet6>
-

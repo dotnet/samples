@@ -26,4 +26,3 @@ public class MyClass2
 // </Snippet1>
    }
 }
-

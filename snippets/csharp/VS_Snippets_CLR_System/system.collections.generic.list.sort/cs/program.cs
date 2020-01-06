@@ -131,5 +131,3 @@ public class Example
     }
 }
 //</snippet1>
-
-

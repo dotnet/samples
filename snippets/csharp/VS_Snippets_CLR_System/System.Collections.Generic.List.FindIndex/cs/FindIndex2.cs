@@ -59,4 +59,3 @@ public class Example
 //       'J' starts at index 3
 //       'Ju' starts at index 5
 // </Snippet2>
-

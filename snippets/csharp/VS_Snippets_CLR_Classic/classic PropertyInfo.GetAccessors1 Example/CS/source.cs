@@ -85,4 +85,3 @@ class Example
 //       ----------
 //       The Caption property: The Modified Caption
 // </Snippet1>
-

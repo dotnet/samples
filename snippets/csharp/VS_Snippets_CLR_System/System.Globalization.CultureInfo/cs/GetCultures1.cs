@@ -38,4 +38,3 @@ public class Example
 //     
 //     There are no replacement cultures.
 // </Snippet5>
-

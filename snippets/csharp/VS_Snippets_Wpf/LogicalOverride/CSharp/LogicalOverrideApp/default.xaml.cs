@@ -16,5 +16,3 @@ namespace SDKSample
         }
     }
 }
-
-

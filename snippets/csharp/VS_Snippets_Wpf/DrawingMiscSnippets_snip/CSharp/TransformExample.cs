@@ -95,4 +95,3 @@ namespace SDKSample
 }
 
 // </SnippetDrawingGroupTransformExampleWholePage>
-

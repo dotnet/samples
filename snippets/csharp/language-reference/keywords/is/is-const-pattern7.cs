@@ -35,4 +35,3 @@ class Program
 // The example displays output like the following:
 //      The value is 6!
 // </Snippet7>
-

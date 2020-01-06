@@ -52,7 +52,3 @@ class Example_SetColorDepth
     }
 }
         // </snippet1>
-
-
-        
-       

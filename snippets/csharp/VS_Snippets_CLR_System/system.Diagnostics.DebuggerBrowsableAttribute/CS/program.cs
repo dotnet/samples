@@ -80,4 +80,3 @@ class MyHashtable : Hashtable
 }
 //</Snippet5>
 //</Snippet1>
-

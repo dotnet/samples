@@ -676,7 +676,3 @@ class FileStreamDemo
         }
         //</snippet11>
     }
-
-
-
-

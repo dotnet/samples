@@ -100,4 +100,3 @@ public bool ValidEmailAddress(string emailAddress, out string errorMessage)
 // </Snippet1>
 // </Snippet2>
 }
-

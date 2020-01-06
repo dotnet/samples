@@ -53,5 +53,3 @@ namespace CustomControls
 }
 
 // </snippet1>
-
-

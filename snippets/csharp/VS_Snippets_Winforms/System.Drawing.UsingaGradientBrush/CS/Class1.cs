@@ -307,6 +307,4 @@ public class class1
         e.Graphics.FillRectangle(linGrBrush, 0, 60, 200, 50);
     }
     // </snippet31>
-} 
-
-
+}

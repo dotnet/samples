@@ -22,4 +22,3 @@ public partial class Customer
 
 
 //</Snippet1>
-

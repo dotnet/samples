@@ -47,4 +47,3 @@ public class Course
 
 public class Location
 {}
-

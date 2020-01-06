@@ -57,4 +57,3 @@ public class Example
 //       Thread 'Sleeping2' aborted.
 //       Thread 'Sleeping2' executing finally block.
 // </Snippet1>
-

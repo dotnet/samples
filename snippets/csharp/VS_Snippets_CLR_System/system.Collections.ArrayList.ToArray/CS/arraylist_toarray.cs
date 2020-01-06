@@ -76,4 +76,3 @@ The string array contains the following values:
 */
 
 // </Snippet1>
-

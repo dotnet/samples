@@ -90,4 +90,3 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
  
 }
 //</SnippetTimelineCurrentGlobalSpeedInvalidatedExampleWholePage>
-

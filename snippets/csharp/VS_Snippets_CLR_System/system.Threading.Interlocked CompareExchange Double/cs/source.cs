@@ -104,5 +104,3 @@ public class Test
 Thread safe: 998068.049623744  Ordinary Double: 759775.417190589
  */
 //</Snippet1>
-
-

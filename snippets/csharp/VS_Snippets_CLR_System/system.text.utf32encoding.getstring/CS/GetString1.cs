@@ -24,4 +24,3 @@ public class Example
 // The example displays the following output:
 //        ?It was the best of times, it was the worst of times...
 // </Snippet2>
-

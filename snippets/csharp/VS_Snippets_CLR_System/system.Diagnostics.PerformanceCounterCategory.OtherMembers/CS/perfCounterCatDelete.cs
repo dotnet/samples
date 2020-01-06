@@ -44,4 +44,3 @@ class PerfCounterCatDeleteMod
     //</snippet6>
 }
 //</snippet5>
-

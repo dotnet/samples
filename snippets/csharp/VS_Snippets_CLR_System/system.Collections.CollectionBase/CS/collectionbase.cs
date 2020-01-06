@@ -184,4 +184,3 @@ Contents of the collection after removing the element 2:
 */
 
 // </Snippet1>
-

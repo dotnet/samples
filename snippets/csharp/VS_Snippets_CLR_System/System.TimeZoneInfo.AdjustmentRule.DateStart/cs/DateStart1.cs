@@ -109,4 +109,3 @@ public class Example
 //             Supports DST: False
 //             No adjustment rules defined.
 // </Snippet1>
-

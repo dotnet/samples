@@ -66,5 +66,3 @@ public class Example
 //     Formatting using the fr-FR culture on thread 1.
 //     163 025 412,32 €   18 905 365,59 €
 // </Snippet2>
-
-

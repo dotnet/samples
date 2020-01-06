@@ -54,4 +54,3 @@ class Example
 //          Source: Property
 //          HResult: Property
 // </Snippet1>
-

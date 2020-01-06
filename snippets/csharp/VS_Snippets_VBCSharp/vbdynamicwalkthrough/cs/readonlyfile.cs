@@ -134,5 +134,3 @@ namespace DynamicWalkthrough
         //</Snippet5>
     }
 }
-
-

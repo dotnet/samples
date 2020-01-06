@@ -78,4 +78,3 @@ private void DateTimePicker_FontChanged(object sender, EventArgs e)
 // </Snippet2>
 
 }
-

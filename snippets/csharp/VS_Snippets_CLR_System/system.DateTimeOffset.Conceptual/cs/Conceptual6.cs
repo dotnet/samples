@@ -63,7 +63,3 @@ internal struct TimeWithTimeZone
    DateTime Time;
 }
 // </Snippet6>
-
-
-
-

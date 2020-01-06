@@ -368,5 +368,3 @@ namespace DCSurrogateSample
         #endregion
     }
 }
-
-

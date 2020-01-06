@@ -38,4 +38,3 @@ is mapped to a specific property in proxy class or not.
 // </Snippet1>
    }
 }
-

@@ -121,4 +121,3 @@ orange is at index 4.
 */
 
 // </Snippet1>
-

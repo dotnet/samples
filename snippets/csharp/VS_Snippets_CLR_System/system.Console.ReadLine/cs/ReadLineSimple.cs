@@ -20,4 +20,3 @@ public class Example
 //     Press any key to continue...
 
 // </Snippet6>
-

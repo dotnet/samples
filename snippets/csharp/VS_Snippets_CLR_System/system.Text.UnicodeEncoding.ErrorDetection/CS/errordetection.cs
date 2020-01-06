@@ -74,5 +74,3 @@ Decoding without error detection:
    Decoded string:
 
 */
-
-

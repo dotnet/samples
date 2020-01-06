@@ -50,4 +50,3 @@ namespace Microsoft.Samples.PersistenceParticipants
         }
     }
 }
-

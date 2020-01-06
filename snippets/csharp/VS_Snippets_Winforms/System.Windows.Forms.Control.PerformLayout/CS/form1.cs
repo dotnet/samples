@@ -151,8 +151,3 @@ public class LayoutControl:
 }
 
 	//</snippet1>
-
-
-
-
-

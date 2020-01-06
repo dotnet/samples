@@ -39,5 +39,3 @@ class Example
 //       D is not a passing grade.
 //       F is not a passing grade.
 //</snippet18>
-
-

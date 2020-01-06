@@ -71,4 +71,3 @@ public class SamplesArray
 //
 //The object to search for (6) is at index 2.
 // </Snippet1>
-

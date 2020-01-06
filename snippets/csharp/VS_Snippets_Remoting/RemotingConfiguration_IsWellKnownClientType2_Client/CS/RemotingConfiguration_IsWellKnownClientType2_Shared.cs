@@ -14,4 +14,3 @@ using System.Runtime.Remoting;
          return "The string from server : " + name;
      }
    }
-

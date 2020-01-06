@@ -131,6 +131,3 @@ Initial value of indexed instance property(17): 'String number 17'
 Final value of indexed instance property(17): 'New value for string number 17'
  */
 //</Snippet1>
-
-
-

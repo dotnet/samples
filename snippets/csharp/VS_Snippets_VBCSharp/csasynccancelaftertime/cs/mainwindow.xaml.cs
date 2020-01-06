@@ -120,5 +120,3 @@ namespace CancelAfterTime
     // Downloads canceled.
 }
 //</snippet2>
-
-

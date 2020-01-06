@@ -42,4 +42,3 @@ namespace Samples.Aspnet.SystemWebConfiguration
   } // UsingOutputCacheSettingsSection class end.
   
 } // Samples.Aspnet.SystemWebConfiguration namespace end.
-

@@ -50,4 +50,3 @@ public class MyFieldInfoClass
 }
 // </Snippet2>
 // </Snippet1>
-

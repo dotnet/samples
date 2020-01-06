@@ -148,5 +148,3 @@ namespace cs_querying
     // </Snippet8>
 
 }
-
-

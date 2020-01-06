@@ -93,4 +93,3 @@ class AsyncResultSample : IAsyncResult
 
 }
 // </Snippet1>
-

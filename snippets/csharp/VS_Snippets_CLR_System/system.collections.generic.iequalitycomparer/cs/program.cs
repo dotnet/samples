@@ -80,7 +80,3 @@ class BoxEqualityComparer : IEqualityComparer<Box>
 //
 //    The dictionary contains 2 Box objects.
 // </Snippet1>
-
-
-
-

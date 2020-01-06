@@ -129,5 +129,3 @@ namespace SDKSample
     }
     //</Snippet5>
 }
-
-

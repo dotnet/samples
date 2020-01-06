@@ -49,4 +49,3 @@ public class Example
 //       Capital: Capital
 //       LCity: Largest City
 // </Snippet1>
-

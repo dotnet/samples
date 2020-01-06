@@ -28,4 +28,3 @@ public class Example
 //       Unable to parse ''.
 //       Unable to parse 'ABCDEF'.
 // </Snippet1>
-

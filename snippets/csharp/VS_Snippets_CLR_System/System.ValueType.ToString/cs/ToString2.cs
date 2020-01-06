@@ -35,4 +35,3 @@ namespace Corporate.EmployeeObjects
 //     Corporate.EmployeeObjects.EmployeeA
 //     Robert
 // </Snippet1>
-

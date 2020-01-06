@@ -253,8 +253,3 @@ public class Form1:
     }
 
 }
-
-
-
-
-

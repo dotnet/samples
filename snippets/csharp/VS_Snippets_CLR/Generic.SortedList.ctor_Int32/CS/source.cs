@@ -35,6 +35,3 @@ Key = rtf, Value = wordpad.exe
 Key = txt, Value = notepad.exe
  */
 //</Snippet1>
-
-
-

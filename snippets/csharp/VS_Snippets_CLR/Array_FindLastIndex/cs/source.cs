@@ -62,5 +62,3 @@ Array.FindLastIndex(dinosaurs, 4, EndsWithSaurus): 1
 Array.FindLastIndex(dinosaurs, 4, 3, EndsWithSaurus): -1
  */
 // </Snippet1>
-
-

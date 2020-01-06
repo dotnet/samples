@@ -101,9 +101,3 @@ namespace SDKSample
     }
 }
 // </SnippetMatrixAnimationUsingPathDoesRotateWithTangentWholePage>
-
-
-
-
-
-

@@ -18,4 +18,3 @@ private void GetSelectedIndex(DataGridTableStyle myGridTable)
 
 // </Snippet1>
 }
-

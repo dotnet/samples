@@ -164,4 +164,3 @@ namespace CustomHttpHeaderSample
         }
     }
 }
-

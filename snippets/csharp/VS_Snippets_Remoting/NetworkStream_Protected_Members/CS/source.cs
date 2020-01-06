@@ -46,4 +46,3 @@ public class MyNetworkStream_Sub_Class : NetworkStream
     }
 
 }
-

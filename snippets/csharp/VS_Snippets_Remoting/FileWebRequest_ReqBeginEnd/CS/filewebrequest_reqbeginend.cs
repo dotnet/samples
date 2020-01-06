@@ -115,8 +115,3 @@ using System.Threading;
 // </Snippet2>
 // </Snippet1>
 	}
-
-
-
-
-

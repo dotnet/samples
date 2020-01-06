@@ -43,6 +43,3 @@ public static OleDbDataAdapter CreateCustomerAdapter(OleDbConnection conn)
 }
 //</Snippet1>
 }
-
-
-

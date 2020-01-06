@@ -63,6 +63,3 @@ public class PrimeNumberGenerator
    }
 }
 // </Snippet2>
-
-
-

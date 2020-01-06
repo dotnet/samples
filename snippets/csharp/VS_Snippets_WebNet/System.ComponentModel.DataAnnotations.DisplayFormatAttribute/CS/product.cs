@@ -35,4 +35,3 @@ public class ProductMetaData
 }
 
 // </Snippet1>
- 

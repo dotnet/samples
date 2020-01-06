@@ -148,5 +148,3 @@ namespace SDKSample
 
 }
 // </SnippetRotateAnimationUsingPathWholePage>
-
-

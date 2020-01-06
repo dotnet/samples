@@ -19,4 +19,3 @@ public class Example
 //       
 //       10.201438 = 10.2014389
 // </Snippet10>
-

@@ -68,4 +68,3 @@ class Program
     }
     // </Snippet1>
 }
-

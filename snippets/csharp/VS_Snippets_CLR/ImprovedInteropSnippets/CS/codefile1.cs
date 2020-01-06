@@ -17,5 +17,3 @@ namespace MyNamespace
 }
 
 // </Snippet1>
-
-

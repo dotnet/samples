@@ -18,4 +18,3 @@ public class Example
       // </SnippetQAInterpolated2>
    }
 }
-

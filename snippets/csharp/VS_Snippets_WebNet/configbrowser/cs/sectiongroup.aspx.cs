@@ -28,4 +28,3 @@ public partial class SectionGroup : System.Web.UI.Page
         // </Snippet42>
     }
 }
-

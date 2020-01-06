@@ -42,4 +42,3 @@ class Example
 //     -9223372036854775808    Little       00-00-00-00-00-00-00-80
 //      9223372036854775807    Little       FF-FF-FF-FF-FF-FF-FF-7F
 // </Snippet1>
-

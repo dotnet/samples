@@ -45,5 +45,3 @@ private void Grid_Navigate(object sender, NavigateEventArgs e){
 }
    //</Snippet1>
 }
-
-

@@ -247,7 +247,3 @@ public class MyUdpClientExample{
      } 
   
  } //end class
-
-
-
-

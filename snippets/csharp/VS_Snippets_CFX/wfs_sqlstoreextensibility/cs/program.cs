@@ -137,4 +137,3 @@ namespace Microsoft.Samples.SQLStoreExtensibility
 //</Snippet1>        
     }
 }
-

@@ -100,6 +100,3 @@ namespace SDKSample
     }
 }
 // </SnippetDrawingGroupOpacityMaskExampleWholePage>
-
-
-

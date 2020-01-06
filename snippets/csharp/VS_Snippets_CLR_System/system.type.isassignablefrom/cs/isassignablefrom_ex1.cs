@@ -28,4 +28,3 @@ public class Example
 // The example displays the following output:
 //        True
 // </Snippet1>
-

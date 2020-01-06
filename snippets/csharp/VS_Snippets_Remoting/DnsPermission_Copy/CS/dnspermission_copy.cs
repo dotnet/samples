@@ -56,4 +56,3 @@ class DnsPermissionExample {
    }
 // </Snippet1>
 };
-

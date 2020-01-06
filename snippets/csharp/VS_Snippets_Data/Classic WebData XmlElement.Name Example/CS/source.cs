@@ -24,4 +24,3 @@ public class Sample
 // This code produces the following output.
 // bk:ISBN = 1-861001-57-5  namespaceURI=urn:samples
    // </Snippet1>
-

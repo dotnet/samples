@@ -59,6 +59,3 @@ public class ScrambleList : ArrayList
 //
 // 5, 2, 8, 9, 6, 1, 7, 0, 4, 3, <end>
 //</Snippet2>
-
-
-

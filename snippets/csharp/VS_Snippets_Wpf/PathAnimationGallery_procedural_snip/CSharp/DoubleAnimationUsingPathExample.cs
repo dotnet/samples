@@ -119,8 +119,3 @@ namespace SDKSample
 
 }
 // </SnippetDoubleAnimationUsingPathWholePage>
-
-
-
-
-

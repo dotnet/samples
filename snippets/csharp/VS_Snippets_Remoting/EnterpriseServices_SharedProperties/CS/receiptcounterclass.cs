@@ -43,4 +43,3 @@ public class ReceiptNumberGeneratorClass
     }
 }
 // </snippet0>
-

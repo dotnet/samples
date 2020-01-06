@@ -101,10 +101,3 @@ namespace SDKSample
     }
 }
 // </SnippetMatrixAnimationUsingPathOffsetCumulativeWholePage>
-
-
-
-
-
-
-

@@ -16,6 +16,3 @@ public class ClientProcess{
         bool returnValue = service.UpdateServer(3, 3.14, "Pi");
 	}
 }
-
-
-

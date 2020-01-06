@@ -61,5 +61,3 @@ namespace Samples.AspNet.CS
 // </snippet8>
     }
 }
-
-

@@ -56,6 +56,3 @@ public class SamplesCollectionBase
         // </Snippet2>
     }
 }
-
-
-

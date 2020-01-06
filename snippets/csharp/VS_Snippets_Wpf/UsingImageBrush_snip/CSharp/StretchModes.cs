@@ -71,5 +71,3 @@ namespace Microsoft.Samples.Graphics.UsingImageBrush
     }
 }
 // </SnippetImageBrushStretchModesExampleWholePage>
-
-

@@ -20,6 +20,3 @@ public class Example
 // The example displays the following output:
 //       No value is greater than 4.
 // </Snippet9>
-
-
-

@@ -68,4 +68,3 @@ public class Example
 //       Total midpoint values:      50,000 (0.100 %)
 //       Total number of values: 50,206,378
 // </Snippet4>
-

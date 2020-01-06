@@ -514,8 +514,3 @@ public class Form1:
         }
         //</snippetConstructor>
 }
-
-
-
-
-

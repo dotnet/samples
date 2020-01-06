@@ -105,8 +105,3 @@ namespace Microsoft.Samples.KeyFrameExamples
     }
 }
 // </SnippetPointAnimationUsingKeyFramesWholePage>
-
-
-
-
-

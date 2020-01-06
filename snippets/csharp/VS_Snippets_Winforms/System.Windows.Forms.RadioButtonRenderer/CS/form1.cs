@@ -161,5 +161,3 @@ namespace RadioButtonRendererSample
     }
 }
 //</Snippet0>
-
-

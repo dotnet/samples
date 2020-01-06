@@ -232,5 +232,3 @@ o1.MyMethod(22): 2794
 o2.Number: 5280
  */
 //</Snippet1>
-
-

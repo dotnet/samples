@@ -79,4 +79,3 @@ class XSDInference
         //</snippet4>
 	}  
 }
-

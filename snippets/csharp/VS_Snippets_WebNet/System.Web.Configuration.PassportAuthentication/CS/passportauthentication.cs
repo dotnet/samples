@@ -45,4 +45,3 @@ if (!authenticationSection.SectionInformation.IsLocked)
 }
 
 }
-

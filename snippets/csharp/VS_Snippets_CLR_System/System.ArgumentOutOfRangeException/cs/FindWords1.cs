@@ -43,5 +43,3 @@ public class Example
 //          'short'
 //          'sentence'
 // </Snippet19>
-
-

@@ -67,6 +67,3 @@ public static void DoSocketGet(string server)
    }
 
 }
- 
-
-

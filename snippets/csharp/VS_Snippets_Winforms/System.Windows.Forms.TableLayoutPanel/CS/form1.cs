@@ -800,5 +800,3 @@ public class DemoTableLayoutPanel : TableLayoutPanel
 }
 // </snippet100>
 // </snippet1>
-
-

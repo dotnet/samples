@@ -901,7 +901,3 @@ class FileIteration
         //</snippet42>
     }
 }
-
-
-
-

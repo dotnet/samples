@@ -41,4 +41,3 @@ public class Example
 //   明治23/9/8 (Gregorian 9/8/1890
 //   明治23/9/8 (Gregorian 9/8/1890
 //   明治23/9/8 (Gregorian 9/8/1890
-

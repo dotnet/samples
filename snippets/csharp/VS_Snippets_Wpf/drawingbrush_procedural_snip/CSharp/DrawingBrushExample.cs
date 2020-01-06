@@ -72,4 +72,3 @@ namespace Microsoft.Samples.DrawingBrushExamples
     }
 }
 // </SnippetDrawingBrushExampleWholePage>
-

@@ -52,6 +52,3 @@ public sealed class AppEventSource : EventSource
   [Event(2)]
   public void MainPageInitialized() { WriteEvent(2); }
 }
-
-
-

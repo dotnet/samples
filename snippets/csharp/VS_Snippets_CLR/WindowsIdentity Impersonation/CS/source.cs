@@ -113,4 +113,3 @@ public sealed class SafeTokenHandle : SafeHandleZeroOrMinusOneIsInvalid
 
 
 //</Snippet1>
-

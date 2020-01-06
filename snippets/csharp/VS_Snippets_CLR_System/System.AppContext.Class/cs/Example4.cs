@@ -36,5 +36,3 @@ namespace App
    //       'archæ' not found in 'The archaeologist'
    // </Snippet5>
 }
-
-

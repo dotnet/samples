@@ -43,5 +43,3 @@ namespace CompositionSampleControls {
        // </snippet2>
     }
 }
-
-  

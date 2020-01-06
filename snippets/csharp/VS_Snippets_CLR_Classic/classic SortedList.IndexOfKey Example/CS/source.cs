@@ -49,4 +49,3 @@
  The value "three" is at index 3.
  */ 
  // </Snippet1>
-

@@ -39,4 +39,3 @@ public class Test {
 // <elem>Text containing &lt;markup/&gt; will have char(&lt;) and char(&gt;) escaped.</elem>
 // <elem>Text containing <markup />.</elem>
 // </Snippet1>
-

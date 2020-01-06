@@ -11,4 +11,3 @@ public class ExtraneousInfo
 }
 
 // </Snippet1>
-

@@ -327,13 +327,3 @@ namespace StrokeCollectionEraseMethods
 
     }
 }
-
-
-
-
-
-
-
-
-
-

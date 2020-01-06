@@ -113,4 +113,3 @@ public class Class2
     //</Snippet24>
 
 }
-

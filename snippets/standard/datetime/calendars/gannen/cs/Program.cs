@@ -27,7 +27,3 @@ public class Example
 }
 // The example displays the following output:
 //    Japanese calendar date: 平成元年8月18日 (Gregorian: Friday, August 18, 1989)
-
-
-
-

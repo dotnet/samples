@@ -24,4 +24,3 @@ namespace Classic_OdbcConnection.OdbcConnectionCS
 		// </Snippet1>
 	}
 }
-

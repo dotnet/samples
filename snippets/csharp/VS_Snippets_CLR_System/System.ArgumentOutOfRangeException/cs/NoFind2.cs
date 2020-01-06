@@ -27,4 +27,3 @@ public class Example
 //       Second word is blue
 //       Second word is citizen
 // </Snippet18>
-

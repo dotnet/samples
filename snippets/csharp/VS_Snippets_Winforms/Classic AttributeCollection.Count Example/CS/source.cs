@@ -18,4 +18,3 @@ private void GetCount() {
 
 // </Snippet1>
 }
-

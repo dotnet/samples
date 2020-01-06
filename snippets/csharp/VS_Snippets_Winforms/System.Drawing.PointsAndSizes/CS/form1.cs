@@ -271,10 +271,3 @@ public class Form1: myForm
         Application.Run(new Form1());
     }
 }
-
-
-
-
-
-
-

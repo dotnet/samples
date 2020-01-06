@@ -157,4 +157,3 @@ public class Calculator : ICalculator
         return a + b;
     }
 }
-

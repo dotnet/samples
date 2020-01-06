@@ -316,6 +316,3 @@ The first element is: a
 The first element is: a
  */
 //</Snippet1>
-
-
-

@@ -88,4 +88,3 @@ System.Text.UTF32Encoding : 8   12  :FF FE 00 00 B2 03 00 00 FF FC 04 00
 */
 
 // </Snippet1>
-

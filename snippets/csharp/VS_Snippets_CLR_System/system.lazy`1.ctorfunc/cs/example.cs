@@ -106,4 +106,3 @@ Exception: Throw only ONCE.
 Press Enter to end the program
  */
 //</SnippetAll>
-

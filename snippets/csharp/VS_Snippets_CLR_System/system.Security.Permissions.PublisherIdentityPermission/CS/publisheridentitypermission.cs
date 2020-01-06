@@ -121,6 +121,3 @@ public class PublisherIdentityPermissionDemo
 }
 
 //</Snippet1>
-
-
-

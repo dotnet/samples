@@ -54,4 +54,3 @@ public class Example
 public class SimpleClass
 { }
 // </Snippet1>
-

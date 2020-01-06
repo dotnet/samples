@@ -76,5 +76,3 @@ public class DataRetriever : MarshalByRefObject
 //     Thread 4 is running in app domain 'Domain2'
 //     288,66 €
 // </Snippet4>
-
-

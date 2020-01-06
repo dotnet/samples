@@ -20,8 +20,3 @@ class FieldAttribTest
         // </snippet1>
     }
 }
-
-
-
-
-

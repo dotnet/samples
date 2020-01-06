@@ -61,6 +61,3 @@ class HttpWebRequest_AllowAutoRedirect
 		}
 	}
 }
-
-	
-

@@ -28,4 +28,3 @@ namespace VbPowerPacksShapeMouseDownCS
     // </Snippet1>
 }
     }
-

@@ -265,4 +265,3 @@ public class SystemDrawingWorkingWithImages : Form
         // </snippet81>
     }
 }
-

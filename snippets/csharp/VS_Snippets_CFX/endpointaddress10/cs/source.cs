@@ -58,4 +58,3 @@ namespace Microsoft.ServiceModel.Samples
         }
     }
 }
-

@@ -342,4 +342,3 @@ namespace Testing
     //</Snippet35>
 }
 //</Snippet1>
-

@@ -90,6 +90,3 @@ public class MyMnemonicButton:Button
 }
 //</snippet1>
 //</snippet2>
-
-
-

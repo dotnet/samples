@@ -1181,4 +1181,3 @@ namespace SdkSample
     }// end:partial class ThumbViewer
 
 }// end:namespace SdkSample
-

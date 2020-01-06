@@ -28,4 +28,3 @@ namespace ContentControlSimple
         //</Snippet4>
     }
 }
-

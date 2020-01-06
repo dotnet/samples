@@ -40,4 +40,3 @@ class Mypropertyinfo
 //       Myproperty.Caption = Default caption
 //       PropertyAttributes - None
 // </Snippet1>
-

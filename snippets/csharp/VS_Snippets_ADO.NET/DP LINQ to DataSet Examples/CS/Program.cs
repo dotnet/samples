@@ -2716,6 +2716,3 @@ namespace LINQtoDataSetSamples
 
     }
 }
-
-
-

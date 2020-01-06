@@ -50,6 +50,3 @@ class PerfCounterCatPropsMod
     //</snippet8>
 }
 //</snippet7>
-
-
-

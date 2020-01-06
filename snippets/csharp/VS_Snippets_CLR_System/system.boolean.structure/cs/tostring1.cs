@@ -16,4 +16,3 @@ public class Example
 //       It is raining: False
 //       The bus is late: True
 // </Snippet3>
-

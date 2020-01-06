@@ -89,4 +89,3 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
  
 }
 //</SnippetTimelineCurrentTimeInvalidatedExampleWholePage>
-

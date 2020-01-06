@@ -220,4 +220,3 @@ namespace InkEraserDemo
         //{
         //    return presenter.Strokes.SaveBase64(PersistenceFormat.InkSerializedFormat, CompressionMode.Maximum);
         //}
-

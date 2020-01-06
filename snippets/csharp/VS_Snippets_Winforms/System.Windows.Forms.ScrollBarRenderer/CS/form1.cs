@@ -371,10 +371,3 @@ namespace ScrollBarRendererSample
     }
 }
 //</Snippet0>
-
-
-
-
-
-
-

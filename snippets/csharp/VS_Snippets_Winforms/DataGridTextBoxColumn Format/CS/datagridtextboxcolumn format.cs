@@ -25,4 +25,3 @@ private void ChangeColumnCultureInfo(){
 }
 // </Snippet1>
 }
-

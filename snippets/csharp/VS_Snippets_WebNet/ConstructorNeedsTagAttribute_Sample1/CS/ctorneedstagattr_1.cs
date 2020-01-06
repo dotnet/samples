@@ -48,5 +48,3 @@ namespace CTorNeedsTagAtt
    }      
 // </Snippet1>
 }
-
-  

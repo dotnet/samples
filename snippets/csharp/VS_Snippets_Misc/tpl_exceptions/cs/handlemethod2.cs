@@ -31,6 +31,3 @@ public class CustomException : Exception
 // The example displays the following output:
 //        This exception is expected!
 // </Snippet16>
-
-
-

@@ -30,4 +30,3 @@ public class Example
 //       4
 //       3
 // </Snippet2>
-

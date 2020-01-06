@@ -142,5 +142,4 @@ namespace Samples.AspNet.Configuration
         }
     }
 
-} 
-
+}

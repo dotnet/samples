@@ -206,4 +206,3 @@ namespace CustomCodeAttributes_Examples4
     }
     //</snippet17>
 }
-

@@ -140,4 +140,3 @@ class XPathNavigatorProperties
     }
     #endregion
 }
-

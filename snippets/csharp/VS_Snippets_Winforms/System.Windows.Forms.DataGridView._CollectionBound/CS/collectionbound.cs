@@ -130,6 +130,3 @@ public class EnumsAndComboBox : Form
 
 }
 //</snippet00>
-
-
-

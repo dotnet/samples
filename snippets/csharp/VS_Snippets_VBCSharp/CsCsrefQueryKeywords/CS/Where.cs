@@ -102,5 +102,3 @@ class WhereSample2
     //Output: 4 8 6 2 0
     //</snippet7>
 }
-
-

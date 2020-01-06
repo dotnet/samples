@@ -37,5 +37,3 @@ class RSACSPSample
         // </Snippet1>
     }
 }
-
-

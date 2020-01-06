@@ -141,6 +141,3 @@ public class Dummy
         rwl.ExitUpgradeableReadLock();
     }
 }
-
-
-

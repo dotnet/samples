@@ -44,4 +44,3 @@ namespace ProgrammingGuide
 // The example displays the following output:
 //      The result is 108. 
 // </Snippet1>
-

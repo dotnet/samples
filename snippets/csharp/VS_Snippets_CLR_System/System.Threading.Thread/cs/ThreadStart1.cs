@@ -45,4 +45,3 @@ public class Example
 //       Thread 3: Elapsed 4.07 seconds
 //       Thread 3: Elapsed 4.58 seconds
 // </Snippet1>
-

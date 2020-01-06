@@ -36,5 +36,3 @@ public class Example
 // The example displays the following output:
 //    1000, 2000
 // </Snippet7>
-
-

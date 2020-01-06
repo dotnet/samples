@@ -44,6 +44,3 @@ namespace ActivationContextSample
     }
 }
 //</Snippet1>
-
-
-

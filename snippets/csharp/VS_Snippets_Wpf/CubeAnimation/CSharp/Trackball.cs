@@ -241,4 +241,3 @@ namespace DemoDev
         private bool _translating;
     }
 }
-

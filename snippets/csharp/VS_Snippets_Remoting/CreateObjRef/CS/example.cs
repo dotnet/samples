@@ -115,4 +115,3 @@ public class LocalObject : MarshalByRefObject  {
    }
 }
 // </Snippet1>
-

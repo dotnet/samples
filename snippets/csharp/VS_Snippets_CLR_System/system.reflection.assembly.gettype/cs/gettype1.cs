@@ -46,4 +46,3 @@ namespace Transportation
 //       ConsumesFuel (type System.Boolean)
 //       Living (type System.Boolean)
 // </Snippet1>
-

@@ -151,6 +151,3 @@ ObfuscationAttribute properties for: Type2.MethodA
    ApplyToMembers: True
  */
 //</Snippet1>
-
-
-

@@ -43,4 +43,3 @@ public class TestMethodInfo
 //
 // MagicClass.ItsMagic() returned: 900
 // </Snippet1>
-

@@ -22,4 +22,3 @@ namespace ProductSalesAnomalyDetection
     }
     // </SnippetDeclareTypes>
 }
-

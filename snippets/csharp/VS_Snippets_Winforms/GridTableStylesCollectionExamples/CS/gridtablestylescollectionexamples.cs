@@ -172,5 +172,3 @@ private void AddCustomDataTableStyle(){
    //</snippet6>
 
 }
-
-

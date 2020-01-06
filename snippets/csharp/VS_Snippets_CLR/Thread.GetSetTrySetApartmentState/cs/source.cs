@@ -48,6 +48,3 @@ Try to change state: False
 ThreadStateException occurs if apartment state is set after starting thread.
  */
 //</Snippet1>
-
-
-

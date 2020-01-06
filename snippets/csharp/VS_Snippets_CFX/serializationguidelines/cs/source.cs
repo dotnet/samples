@@ -243,5 +243,3 @@ namespace MiscCodeExamples
     //</snippet8>      
 
 }
-
-

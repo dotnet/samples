@@ -122,4 +122,3 @@ class Program
     }
     // </Snippet1>
 }
-

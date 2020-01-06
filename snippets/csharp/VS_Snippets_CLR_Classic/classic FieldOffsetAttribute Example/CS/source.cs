@@ -12,4 +12,3 @@ using System.Runtime.InteropServices;
  [FieldOffset(32)] public ulong ProcessorType;
  }
 // </Snippet1>
-

@@ -38,4 +38,3 @@ namespace ProviderOptions
     }
 }
 //</Snippet1>
-

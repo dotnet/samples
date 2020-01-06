@@ -26,4 +26,3 @@ namespace InSourceSuppression
    }
 }
 //</Snippet1>
-

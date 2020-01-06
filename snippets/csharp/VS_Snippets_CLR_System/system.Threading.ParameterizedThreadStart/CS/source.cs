@@ -32,5 +32,3 @@ public class Work
 //       Static thread procedure. Data='42'
 //       Instance thread procedure. Data='The answer.'
 // </Snippet1>
-
-

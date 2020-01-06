@@ -35,4 +35,3 @@ public class Example
 //       '9 532 978,07' --> 9532978.07 (fr-FR)
 //       '9 532 978,07': FormatException (Invariant)
 // </Snippet4>
-

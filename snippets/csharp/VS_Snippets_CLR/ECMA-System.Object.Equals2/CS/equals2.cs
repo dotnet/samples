@@ -92,4 +92,3 @@ class Example
 //       Point(5, 5, 2) = Point(5, 5, 2): True
 //       Point(5, 5, 2) = Point(5, 5, -1): False
 // </Snippet1>
-

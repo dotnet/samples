@@ -27,4 +27,3 @@ public class Example
 //     The current UI culture is English (United States) [en-US]
 //     The current culture is English (United States) [en-US]
 // </Snippet1>
-

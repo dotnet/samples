@@ -10,4 +10,3 @@ namespace Samples
     }
 }
 //</Snippet1>
-

@@ -206,10 +206,3 @@ namespace BindToWebService {
 	}
  }
 //</snippet1>
-
-
-
-
-
-
-

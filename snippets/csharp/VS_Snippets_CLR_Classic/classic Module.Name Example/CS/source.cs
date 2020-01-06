@@ -20,4 +20,3 @@ using System;
  Module ScopeName is modname.exe
  */
 // </Snippet1>
-

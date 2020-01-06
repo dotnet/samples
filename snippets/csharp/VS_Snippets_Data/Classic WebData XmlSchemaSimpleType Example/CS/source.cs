@@ -90,4 +90,3 @@ class XMLSchemaExamples
     }
 }
 // </Snippet1>
-

@@ -582,4 +582,3 @@ namespace P2PContacts
 
     } //end class 
 } //end namespace
-

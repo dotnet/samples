@@ -14,4 +14,3 @@ interface IMyInterface2
     //Insert code here.
 }
 // </Snippet1>
-

@@ -97,7 +97,3 @@ Calling from 'AppDomainX.exe' to 'AD #2'.
 Failed call; this is expected.
  */
 //</snippet1>
-
-
-
-

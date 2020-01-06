@@ -26,4 +26,3 @@ public void InitMyForm()
       Application.Run(new TestForm());
    }
 }
-

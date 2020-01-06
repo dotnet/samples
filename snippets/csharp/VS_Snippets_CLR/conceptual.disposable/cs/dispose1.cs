@@ -25,4 +25,3 @@ public class Disposable : IDisposable
    // </Snippet8>
    {}
 }
-

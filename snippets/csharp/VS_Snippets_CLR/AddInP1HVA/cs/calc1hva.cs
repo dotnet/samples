@@ -10,4 +10,3 @@ namespace CalcHVAs
     }
 }
 // </Snippet1>
-

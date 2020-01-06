@@ -41,4 +41,3 @@ This example displays the following output.
       00 00 FE FF
 */
 // </Snippet1>
-

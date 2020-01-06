@@ -245,5 +245,3 @@ namespace ExtensionMethodsDemo1
     C.MethodB()
  */
 //</snippet5>
-    
-

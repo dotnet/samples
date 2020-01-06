@@ -107,4 +107,3 @@ class HttpWebRequest_Proxy
     }
   }
 }
-

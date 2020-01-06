@@ -48,4 +48,3 @@ public class Example
 // The example displays output like the following:
 //       5 ping attempts failed
 // </Snippet3>
-

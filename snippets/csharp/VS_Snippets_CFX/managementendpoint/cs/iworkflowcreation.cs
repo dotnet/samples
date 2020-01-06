@@ -20,4 +20,3 @@ namespace Microsoft.Samples.WF.ManagementEndpoint
     }
 
 }
-

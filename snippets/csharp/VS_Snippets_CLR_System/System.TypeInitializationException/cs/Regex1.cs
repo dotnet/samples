@@ -28,4 +28,3 @@ public class Example
 //       at System.Text.RegularExpressions.Regex..ctor(String pattern)
 //       at Example.Main()
 // </Snippet4>
-

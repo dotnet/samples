@@ -45,4 +45,3 @@ public class Example
 //       { 1000, 2000 }
 //       { 1,000, 2,000 }
 // </Snippet8>
-

@@ -112,4 +112,3 @@ namespace Microsoft.Samples.WF.ResumeBookmarkEndpoint
     }
 
 }
-

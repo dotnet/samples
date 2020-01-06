@@ -13,4 +13,3 @@ using System;
             return "The string from client is " + name;
         }
     }
-

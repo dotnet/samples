@@ -119,8 +119,3 @@ namespace Microsoft.Samples.KeyFrameExamples
     }
 }
 // </SnippetBooleanAnimationUsingKeyFramesWholePage>
-
-
-
-
-

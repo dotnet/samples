@@ -45,6 +45,3 @@ class HttpVersion_Version10
 		}
 	}
 }
-
-	
-

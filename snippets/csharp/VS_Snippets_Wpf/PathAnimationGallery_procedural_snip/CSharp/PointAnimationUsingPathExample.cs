@@ -92,5 +92,3 @@ namespace SDKSample
 
 }
 // </SnippetPointAnimationUsingPathWholePage>
-
-

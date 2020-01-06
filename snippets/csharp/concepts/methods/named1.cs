@@ -44,7 +44,3 @@ abstract class Motorcycle
    // Derived classes must implement this.
    public abstract double GetTopSpeed(); 
 }
-
-
-
-

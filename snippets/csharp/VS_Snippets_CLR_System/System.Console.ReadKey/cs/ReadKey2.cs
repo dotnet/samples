@@ -19,4 +19,3 @@ public class Example
 //     The time: 11/11/2015 at 4:02 PM:
 //     The time zone: Pacific Standard Time
 // </Snippet2>
-

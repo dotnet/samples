@@ -48,4 +48,3 @@
  The object to search for (6) is at index 3.
  */ 
 // </Snippet1>
-

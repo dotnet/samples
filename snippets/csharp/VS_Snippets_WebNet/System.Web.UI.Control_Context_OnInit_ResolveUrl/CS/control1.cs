@@ -101,5 +101,4 @@ namespace CustomControl1
       writer.Write(_text);
    } 
  }
-}   
-
+}

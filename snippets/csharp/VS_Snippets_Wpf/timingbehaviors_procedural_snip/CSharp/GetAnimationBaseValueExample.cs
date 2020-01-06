@@ -83,4 +83,3 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
  
 }
 //</SnippetGetAnimationBaseValueExampleWholePage>
-

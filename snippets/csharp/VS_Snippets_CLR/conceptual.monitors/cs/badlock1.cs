@@ -55,4 +55,3 @@ public class Example
 //    Exception Message(s):
 //    Object synchronization method was called from an unsynchronized block of code.
 // </Snippet2>
-

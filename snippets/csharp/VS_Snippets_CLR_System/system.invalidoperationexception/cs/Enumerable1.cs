@@ -17,4 +17,3 @@ public class Example
 //       at System.Linq.Enumerable.Average(IEnumerable`1 source)
 //       at Example.Main()
 // </Snippet6>
-

@@ -74,5 +74,3 @@ public class Form1:
 	}
 	//</snippet1>
 }
-
-

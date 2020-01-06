@@ -255,7 +255,3 @@ public class Form1:
         //ChangePageUnit(e);
     }
 }
-
-
-
-

@@ -91,4 +91,3 @@ class HttpWebRequest_Accept
       }
    }
 }
-   

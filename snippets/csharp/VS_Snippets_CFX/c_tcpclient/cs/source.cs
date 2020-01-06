@@ -182,5 +182,3 @@ namespace Microsoft.Security.Samples
     }
 
 }
-
-

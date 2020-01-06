@@ -44,5 +44,3 @@ namespace MyUserControl
 // </Snippet1>    
 
 }
-
-  

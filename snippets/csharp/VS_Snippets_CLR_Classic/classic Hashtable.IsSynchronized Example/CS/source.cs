@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
  using System;
  using System.Collections;
  public class SamplesHashtable
@@ -29,4 +29,3 @@
  mySyncdHT is synchronized.
  */ 
 // </Snippet1>
-

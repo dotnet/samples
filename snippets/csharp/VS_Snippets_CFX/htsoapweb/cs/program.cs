@@ -120,4 +120,3 @@ namespace Microsoft.ServiceModel.Samples.BasicWebProgramming
     }
 }
 // </Snippet13>
-

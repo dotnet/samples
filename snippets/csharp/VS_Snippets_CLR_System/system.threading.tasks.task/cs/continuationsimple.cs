@@ -51,4 +51,3 @@ class ContinuationSimpleDemo
     }
 }
 //</snippet03>
-

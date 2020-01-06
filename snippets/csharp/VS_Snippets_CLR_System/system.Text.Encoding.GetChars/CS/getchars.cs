@@ -68,4 +68,3 @@ LE array with LE encoding : System.Text.UTF32Encoding : 5   12  :za??ß
 */
 
 // </Snippet1>
-

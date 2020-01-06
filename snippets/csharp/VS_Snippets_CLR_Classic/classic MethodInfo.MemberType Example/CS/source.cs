@@ -49,4 +49,3 @@ class MyMethodInfo
     }
 }
 // </Snippet1>
-

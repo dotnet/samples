@@ -33,8 +33,3 @@ class ParmInfoTest
         Console.WriteLine("Called 'MethodName'");
     }
 }
-
-
-
-
-

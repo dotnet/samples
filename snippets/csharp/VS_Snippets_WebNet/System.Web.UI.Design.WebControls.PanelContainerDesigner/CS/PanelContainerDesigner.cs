@@ -74,4 +74,3 @@ namespace Examples.CS.WebControls.Design
     } // MyPanelContainerDesigner
 } // Examples.CS.WebControls.Design
 // </snippet1>
-

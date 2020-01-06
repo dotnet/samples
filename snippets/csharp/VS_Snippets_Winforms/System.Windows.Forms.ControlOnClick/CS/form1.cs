@@ -67,5 +67,3 @@ public class SingleClickTextBox: TextBox
 
 }
 //</snippet1>
-
-

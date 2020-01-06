@@ -74,4 +74,3 @@ class HttpWebRequest_HaveResponse
 		}
 	}	
 }
-	
