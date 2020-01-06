@@ -3,12 +3,12 @@ using System.Text.Json;
 
 namespace SystemTextJsonSamples
 {
-    class RoundtripPropertyNamesByAttribute
+    public class RoundtripPropertyNamesByAttribute
     {
         public static void Run()
         {
             string jsonString;
-            var weatherForecast = WeatherForecastFactories.CreateWeatherForecastWithPropertyNameAttribute();
+            WeatherForecastWithPropertyNameAttribute weatherForecast = WeatherForecastFactories.CreateWeatherForecastWithPropertyNameAttribute();
             weatherForecast.DisplayPropertyValues();
 
             // <SnippetSerialize>

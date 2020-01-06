@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text.Json;
-using System.Text.Json.Serialization;
-using System.Xml.Schema;
 
 namespace SystemTextJsonSamples
 {
@@ -17,12 +15,11 @@ namespace SystemTextJsonSamples
 
             var serializeOptions = new JsonSerializerOptions();
             serializeOptions.WriteIndented = true;
-            //serializeOptions.Converters.Add(new WeatherForecastRequiredPropertyConverter());
             jsonString = JsonSerializer.Serialize(points, serializeOptions);
             Console.WriteLine($"JSON output:\n{jsonString}\n");
 
             var deserializeOptions = new JsonSerializerOptions();
-            deserializeOptions.Converters.Add(new ImmutablePointConverter());
+            deserializeOptions.Converters.Add(new ImmutablePointConverter(deserializeOptions));
             points = JsonSerializer.Deserialize<List<ImmutablePoint>>(jsonString, deserializeOptions);
             Console.WriteLine("Deserialized object values");
             foreach (ImmutablePoint point in points)
@@ -31,5 +28,4 @@ namespace SystemTextJsonSamples
             }
         }
     }
-   
 }

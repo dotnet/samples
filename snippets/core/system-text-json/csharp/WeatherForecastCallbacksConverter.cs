@@ -11,27 +11,28 @@ namespace SystemTextJsonSamples
             Type type,
             JsonSerializerOptions options)
         {
-            // Place "before" code here (OnDeserializing), but note that there is no access here to the POCO instance.
+            // Place "before" code here (OnDeserializing),
+            // but note that there is no access here to the POCO instance.
             Console.WriteLine("OnDeserializing");
 
             // Don't pass in options when recursively calling Deserialize.
-            WeatherForecast value = JsonSerializer.Deserialize<WeatherForecast>(ref reader);
+            WeatherForecast forecast = JsonSerializer.Deserialize<WeatherForecast>(ref reader);
 
             // Place "after" code here (OnDeserialized)
             Console.WriteLine("OnDeserialized");
 
-            return value;
+            return forecast;
         }
 
         public override void Write(
             Utf8JsonWriter writer,
-            WeatherForecast value, JsonSerializerOptions options)
+            WeatherForecast forecast, JsonSerializerOptions options)
         {
             // Place "before" code here (OnSerializing)
             Console.WriteLine("OnSerializing");
 
             // Don't pass in options when recursively calling Serialize.
-            JsonSerializer.Serialize(writer, value);
+            JsonSerializer.Serialize(writer, forecast);
 
             // Place "after" code here (OnSerialized)
             Console.WriteLine("OnSerialized");

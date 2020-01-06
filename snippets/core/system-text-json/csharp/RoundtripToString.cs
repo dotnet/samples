@@ -3,11 +3,11 @@ using System.Text.Json;
 
 namespace SystemTextJsonSamples
 {
-    class RoundtripToString
+    public class RoundtripToString
     {
         public static void Run()
         {
-            var weatherForecast = WeatherForecastFactories.CreateWeatherForecastWithPOCOs();
+            WeatherForecastWithPOCOs weatherForecast = WeatherForecastFactories.CreateWeatherForecastWithPOCOs();
             weatherForecast.DisplayPropertyValues();
 
             // <SnippetSerialize>

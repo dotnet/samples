@@ -4,12 +4,12 @@ using System.Text.Json.Serialization;
 
 namespace SystemTextJsonSamples
 {
-    class RoundtripEnumAsString
+    public class RoundtripEnumAsString
     {
         public static void Run()
         {
             string jsonString;
-            var weatherForecast = WeatherForecastFactories.CreateWeatherForecastWithEnum();
+            WeatherForecastWithEnum weatherForecast = WeatherForecastFactories.CreateWeatherForecastWithEnum();
             weatherForecast.DisplayPropertyValues();
 
             var options = new JsonSerializerOptions

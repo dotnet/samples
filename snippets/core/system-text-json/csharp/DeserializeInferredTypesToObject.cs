@@ -10,12 +10,11 @@ namespace SystemTextJsonSamples
             string jsonString;
 
             // Serialize to create input JSON
-            var weatherForecast = WeatherForecastFactories.CreateWeatherForecast();
+            WeatherForecast weatherForecast = WeatherForecastFactories.CreateWeatherForecast();
             var serializeOptions = new JsonSerializerOptions
             {
                 WriteIndented = true
             };
-            serializeOptions.WriteIndented = true;
             jsonString = JsonSerializer.Serialize(weatherForecast, serializeOptions);
             Console.WriteLine($"JSON input:\n{jsonString}\n");
 

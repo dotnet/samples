@@ -16,9 +16,9 @@ namespace SystemTextJsonSamples
 
         public override void Write(
             Utf8JsonWriter writer,
-            DateTimeOffset value,
+            DateTimeOffset dateTimeValue,
             JsonSerializerOptions options) =>
-                writer.WriteStringValue(value.ToString(
+                writer.WriteStringValue(dateTimeValue.ToString(
                     "MM/dd/yyyy", CultureInfo.InvariantCulture));
     }
 }

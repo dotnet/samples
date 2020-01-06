@@ -12,22 +12,22 @@ namespace SystemTextJsonSamples
             JsonSerializerOptions options)
         {
             // Don't pass in options when recursively calling Deserialize.
-            WeatherForecast value = JsonSerializer.Deserialize<WeatherForecast>(ref reader);
+            WeatherForecast forecast = JsonSerializer.Deserialize<WeatherForecast>(ref reader);
 
             // Check for required fields set by values in JSON
-            if (value.Date == default)
+            if (forecast.Date == default)
             {
                 throw new JsonException("Required property not received in the JSON");
-            };
-            return value;
+            }
+            return forecast;
         }
 
         public override void Write(
             Utf8JsonWriter writer,
-            WeatherForecast value, JsonSerializerOptions options)
+            WeatherForecast forecast, JsonSerializerOptions options)
         {
             // Don't pass in options when recursively calling Serialize.
-            JsonSerializer.Serialize(writer, value);
+            JsonSerializer.Serialize(writer, forecast);
         }
     }
 }

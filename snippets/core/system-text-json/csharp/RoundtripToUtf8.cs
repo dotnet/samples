@@ -5,11 +5,11 @@ using System.Text.Json;
 
 namespace SystemTextJsonSamples
 {
-    class RoundtripToUtf8
+    public class RoundtripToUtf8
     {
         public static void Run()
         {
-            var weatherForecast = WeatherForecastFactories.CreateWeatherForecast();
+            WeatherForecast weatherForecast = WeatherForecastFactories.CreateWeatherForecast();
             weatherForecast.DisplayPropertyValues();
 
             // <SnippetSerialize>

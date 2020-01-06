@@ -3,7 +3,7 @@ using System.Text.Json;
 
 namespace SystemTextJsonSamples
 {
-    class RoundtripExtensionData
+    public class RoundtripExtensionData
     {
         public static void Run()
         {
@@ -44,7 +44,7 @@ namespace SystemTextJsonSamples
             Console.WriteLine($"JSON input:\n{jsonString}\n");
 
             // <SnippetDeserialize>
-            var weatherForecast = JsonSerializer.Deserialize<WeatherForecastWithExtensionData>(jsonString);
+            WeatherForecastWithExtensionData weatherForecast = JsonSerializer.Deserialize<WeatherForecastWithExtensionData>(jsonString);
             weatherForecast.DisplayPropertyValues();
             // </SnippetDeserialize>
 

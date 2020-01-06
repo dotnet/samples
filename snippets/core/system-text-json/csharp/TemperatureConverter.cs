@@ -14,8 +14,8 @@ namespace SystemTextJsonSamples
 
         public override void Write(
             Utf8JsonWriter writer,
-            Temperature value,
+            Temperature temperature,
             JsonSerializerOptions options) =>
-                writer.WriteStringValue(value.ToString());
+                writer.WriteStringValue(temperature.ToString());
     }
 }
