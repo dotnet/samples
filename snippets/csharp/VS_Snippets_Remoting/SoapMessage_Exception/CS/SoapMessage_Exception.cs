@@ -1,5 +1,4 @@
-﻿
-/*
+﻿/*
    The program extends the 'SoapExtension' class to create a class 
    that is used to log the SOAP messages transferred for a web service 
    method invocation. Whenever this method is invoked on the client 

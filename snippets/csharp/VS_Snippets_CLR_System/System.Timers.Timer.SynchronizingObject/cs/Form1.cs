@@ -1,7 +1,4 @@
-﻿
-
-
-namespace SynchronizingObjectCS1
+﻿namespace SynchronizingObjectCS1
 {
     // <Snippet1>
     using System;

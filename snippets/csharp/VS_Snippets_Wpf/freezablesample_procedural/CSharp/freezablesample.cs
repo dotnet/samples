@@ -1,5 +1,4 @@
-﻿
-/*
+﻿/*
 
    This sample demonstrates the Freezable class.
 

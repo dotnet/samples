@@ -1,6 +1,4 @@
-﻿
-
-using System.Drawing.Printing;
+﻿using System.Drawing.Printing;
 using System;
 using System.Windows.Forms;
 using System.Drawing;

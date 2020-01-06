@@ -1,5 +1,4 @@
-﻿
-// <Snippet45>
+﻿// <Snippet45>
 using System;
 
 class TestMotorcycle : Motorcycle

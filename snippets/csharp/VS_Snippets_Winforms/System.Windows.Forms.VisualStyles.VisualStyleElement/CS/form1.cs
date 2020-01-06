@@ -1,5 +1,4 @@
-﻿
-// This sample can go in the VisualStyleElement class overview or a conceptual topic
+﻿// This sample can go in the VisualStyleElement class overview or a conceptual topic
 // to give the new user a chance to view what each of the defined elements looks like. 
 // This sample also gives them the ability to preview each element at three different sizes.
 

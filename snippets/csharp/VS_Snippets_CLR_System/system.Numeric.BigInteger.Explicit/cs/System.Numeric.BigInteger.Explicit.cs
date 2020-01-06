@@ -1,5 +1,4 @@
-﻿
-// Illustrates explicit BigInteger conversions defined
+﻿// Illustrates explicit BigInteger conversions defined
 // using the op_Explicit method.
 
 using System;

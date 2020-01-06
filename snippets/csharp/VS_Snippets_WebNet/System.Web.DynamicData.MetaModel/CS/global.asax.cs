@@ -1,5 +1,4 @@
-﻿
-    public static void RegisterRoutes(RouteCollection routes) {
+﻿    public static void RegisterRoutes(RouteCollection routes) {
         
         // <Snippet99>
         MetaModel model = new MetaModel();

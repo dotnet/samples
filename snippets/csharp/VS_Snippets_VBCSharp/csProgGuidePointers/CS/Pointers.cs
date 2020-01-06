@@ -1,5 +1,4 @@
-﻿
-//<Snippet4>
+﻿//<Snippet4>
 class ClassConvert
 {
     static void Main() 

@@ -1,5 +1,4 @@
-﻿
-// Notice that the sample is conditionally compiled for Everett vs.
+﻿// Notice that the sample is conditionally compiled for Everett vs.
 // Whidbey builds.  Whidbey introduced new APIs that are not available
 // in Everett.  Snippet IDs do not overlap between Whidbey and Everett;
 // Snippet #1 is Everett, Snippet #2 and #3 are Whidbey.

@@ -1,6 +1,4 @@
-﻿
-
-// <Snippet1>
+﻿// <Snippet1>
 using System;
 
 namespace EventSample

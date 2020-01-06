@@ -1,5 +1,4 @@
-﻿
-// <Snippet102> 
+﻿// <Snippet102> 
 using System;
 using System.Windows.Automation;
 using System.Reflection;

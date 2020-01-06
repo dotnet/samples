@@ -1,5 +1,4 @@
-﻿
-// <snippet1>
+﻿// <snippet1>
 
 /* File name: emptyControlCollection.cs. */
 

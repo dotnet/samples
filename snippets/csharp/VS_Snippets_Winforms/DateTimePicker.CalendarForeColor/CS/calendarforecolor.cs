@@ -1,5 +1,4 @@
-﻿
-// compile with: -r:system.dll -r:system.windows.forms.dll -r:system.drawing.dll
+﻿// compile with: -r:system.dll -r:system.windows.forms.dll -r:system.drawing.dll
 using System.Windows.Forms;
 using System;
 using System.Drawing;

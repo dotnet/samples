@@ -1,5 +1,4 @@
-﻿
-//<snippet10>
+﻿//<snippet10>
 // Use this code inside a project created with the Visual C# > Windows Desktop > Console Application template.
 // Replace the code in Program.cs with this code.
 

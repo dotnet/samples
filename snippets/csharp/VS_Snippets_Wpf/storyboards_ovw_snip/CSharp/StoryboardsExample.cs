@@ -1,5 +1,4 @@
-﻿
-// <Snippet100>
+﻿// <Snippet100>
 using System;
 using System.Windows;
 using System.Windows.Controls;

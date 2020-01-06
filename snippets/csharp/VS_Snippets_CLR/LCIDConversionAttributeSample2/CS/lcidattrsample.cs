@@ -1,5 +1,4 @@
-﻿
-namespace LCIDConversion
+﻿namespace LCIDConversion
 { 
 	//<Snippet1>
 	using System;

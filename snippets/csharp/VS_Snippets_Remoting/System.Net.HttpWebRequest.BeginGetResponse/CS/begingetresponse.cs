@@ -1,5 +1,4 @@
-﻿
- /** 
+﻿ /** 
   * File name: Begingetresponse.cs
   * This program shows how to use BeginGetResponse and EndGetResponse methods of the 
   * HttpWebRequest class. It also shows how to create a customized timeout.

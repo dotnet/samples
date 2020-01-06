@@ -1,5 +1,4 @@
-﻿
-// <SnippetSimpleRadialGradientExampleWholePage>
+﻿// <SnippetSimpleRadialGradientExampleWholePage>
 
 using System;
 using System.Windows;

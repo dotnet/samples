@@ -1,5 +1,4 @@
-﻿
-//using System;  prefer to fully qualified all but the most extremely long references
+﻿//using System;  prefer to fully qualified all but the most extremely long references
 
 //<Snippet1>
 class TempRecord

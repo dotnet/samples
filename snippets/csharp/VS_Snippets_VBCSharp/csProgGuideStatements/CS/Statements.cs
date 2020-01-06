@@ -1,5 +1,4 @@
-﻿
-namespace CsCsrefProgrammingStatements
+﻿namespace CsCsrefProgrammingStatements
 {
     //---------------------------------------------------------------------------
     public class SimpleStatements

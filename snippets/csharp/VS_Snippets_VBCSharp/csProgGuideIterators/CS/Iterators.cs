@@ -1,7 +1,4 @@
-﻿
-
-
-//<Snippet8>
+﻿//<Snippet8>
 // Declare the collection:
 public class SampleCollection
 {

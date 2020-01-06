@@ -1,5 +1,4 @@
-﻿
-// dump a range of Unicode characters as a 16x16 array
+﻿// dump a range of Unicode characters as a 16x16 array
 // <Snippet4>
 using System;
 using System.IO;

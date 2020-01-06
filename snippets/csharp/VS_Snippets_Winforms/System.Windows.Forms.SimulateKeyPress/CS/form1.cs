@@ -1,5 +1,4 @@
-﻿
-// <Snippet0>
+﻿// <Snippet0>
 using System;
 using System.Runtime.InteropServices;
 using System.Drawing;

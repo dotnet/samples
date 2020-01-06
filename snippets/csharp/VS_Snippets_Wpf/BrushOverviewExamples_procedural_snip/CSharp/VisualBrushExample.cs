@@ -1,5 +1,4 @@
-﻿
-// <SnippetGraphicsMMVisualBrushAsRectangleBackgroundExampleWholePage>
+﻿// <SnippetGraphicsMMVisualBrushAsRectangleBackgroundExampleWholePage>
 using System;
 using System.Windows;
 using System.Windows.Controls;

@@ -1,5 +1,4 @@
-﻿
-// <snippet11>
+﻿// <snippet11>
 using System;
 using System.Globalization;
 using System.Threading;

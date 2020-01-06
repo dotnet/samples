@@ -1,5 +1,4 @@
-﻿
-//<Snippet18>
+﻿//<Snippet18>
 #define DEBUG
 //</Snippet18>
 

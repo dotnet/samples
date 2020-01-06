@@ -1,5 +1,4 @@
-﻿
-// NCLMailPerms
+﻿// NCLMailPerms
 
 using System;
 using System.Net;

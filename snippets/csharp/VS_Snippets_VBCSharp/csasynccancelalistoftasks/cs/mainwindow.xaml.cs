@@ -1,5 +1,4 @@
-﻿
-//<snippet12>
+﻿//<snippet12>
 using System;
 using System.Collections.Generic;
 using System.Linq;
