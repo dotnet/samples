@@ -1,7 +1,7 @@
 ﻿namespace SystemTextJsonSamples
 {
     // <SnippetImmutablePoint>
-    public struct ImmutablePoint
+    public readonly struct ImmutablePoint
     {
         public ImmutablePoint(int x, int y)
         {

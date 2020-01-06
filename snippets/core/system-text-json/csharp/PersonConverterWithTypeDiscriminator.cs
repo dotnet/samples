@@ -40,21 +40,13 @@ namespace SystemTextJsonSamples
                 throw new JsonException();
             }
 
-            Person person;
             TypeDiscriminator typeDiscriminator = (TypeDiscriminator)reader.GetInt32();
-            switch (typeDiscriminator)
+            Person person = typeDiscriminator switch
             {
-                case TypeDiscriminator.Customer:
-                    person = new Customer();
-                    break;
-
-                case TypeDiscriminator.Employee:
-                    person = new Employee();
-                    break;
-
-                default:
-                    throw new JsonException();
-            }
+                TypeDiscriminator.Customer => new Customer(),
+                TypeDiscriminator.Employee => new Employee(),
+                _ => throw new JsonException()
+            };
 
             while (reader.Read())
             {
