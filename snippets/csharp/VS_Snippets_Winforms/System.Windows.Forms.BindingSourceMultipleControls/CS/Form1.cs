@@ -133,7 +133,6 @@ namespace MultipleControls
             set1.Tables[0].Rows.Add("milk");
             set1.Tables[0].Rows.Add("orange juice");
 
-            
             // Add the control data bindings.
             dataGridView1.DataSource = set1;
             dataGridView1.DataMember = "Menu";

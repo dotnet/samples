@@ -18,7 +18,6 @@ namespace Microsoft.Samples.CustomControls
     public partial class ColorPickerDialog : Window
     {
 
-
         public ColorPickerDialog()
         {
             InitializeComponent();
@@ -33,7 +32,6 @@ namespace Microsoft.Samples.CustomControls
             Hide();
 
         }
-
 
         private void cancelButtonClicked(object sender, RoutedEventArgs e)
         {
@@ -60,7 +58,6 @@ namespace Microsoft.Samples.CustomControls
             base.OnClosing(e);
         }
 
-
         private Color m_color = new Color();
         private Color startingColor = new Color();
 
@@ -86,7 +83,6 @@ namespace Microsoft.Samples.CustomControls
             }
 
         }        
-
 
     }
 }

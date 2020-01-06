@@ -11,7 +11,6 @@ namespace Samples.AspNet.CS.Controls
     using System.Web.UI.WebControls.WebParts;
     using System.Collections;
 
-    
     public class TableConsumer : WebPart
     {
         private IWebPartTable _provider;

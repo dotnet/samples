@@ -20,10 +20,8 @@ public class ImportIncludeSample
         Console.WriteLine(args.Message);
     }
 
-
     public static void Main()
     {
-
 
         XmlSchema schema = new XmlSchema();
         schema.ElementFormDefault = XmlSchemaForm.Qualified;

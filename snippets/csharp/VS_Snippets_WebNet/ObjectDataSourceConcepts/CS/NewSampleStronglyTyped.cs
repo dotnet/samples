@@ -75,12 +75,10 @@ namespace Samples.AspNet.ObjectDataSource
 
     private string _connectionString;
 
-
     public NorthwindEmployeeData()
     {
       Initialize();
     }
-
 
     public void Initialize()
     {
@@ -96,7 +94,6 @@ namespace Samples.AspNet.ObjectDataSource
       _connectionString = 
         ConfigurationManager.ConnectionStrings["Northwind"].ConnectionString;
     }
-
 
     // Select all employees.
 
@@ -151,7 +148,6 @@ namespace Samples.AspNet.ObjectDataSource
       return employees;
     }
 
-
     //////////
     // Verify that only valid columns are specified in the sort expression to avoid a SQL Injection attack.
 
@@ -181,7 +177,6 @@ namespace Samples.AspNet.ObjectDataSource
       }
     }
 
-
     private NorthwindEmployee GetNorthwindEmployeeFromReader(SqlDataReader reader)
     {
       NorthwindEmployee employee = new NorthwindEmployee();
@@ -204,8 +199,6 @@ namespace Samples.AspNet.ObjectDataSource
 
       return employee;
     }
-
-
 
     // Select an employee.
 
@@ -242,7 +235,6 @@ namespace Samples.AspNet.ObjectDataSource
 
       return employees;
     }
-  
 
     //
     // Update the Employee by ID.
@@ -295,7 +287,6 @@ namespace Samples.AspNet.ObjectDataSource
       return result;
     }
 
-
     // Insert an Employee.
 
     public int InsertEmployee(NorthwindEmployee employee)
@@ -346,7 +337,6 @@ namespace Samples.AspNet.ObjectDataSource
 
       return newEmployeeID;
     }
-
 
     //
     // Delete the Employee by ID.

@@ -19,7 +19,6 @@ namespace Microsoft.Samples.PerFrameAnimations
             
         }
 
-
         protected override void OnStartup(StartupEventArgs e)
         {
            
@@ -29,9 +28,6 @@ namespace Microsoft.Samples.PerFrameAnimations
             
             base.OnStartup(e);
         }
-
-
-
 
     }
 

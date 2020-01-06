@@ -7,9 +7,6 @@ using System.Data.Linq.SqlClient;
 using System.Runtime.Serialization;
 using System.Data.SqlClient;
 
-
-
-
 namespace cs_test20730build
 {
     class Program
@@ -18,7 +15,6 @@ namespace cs_test20730build
         {
 
           //  Northwnd db = new Northwnd(@"c:\northwnd.mdf");
-
 
             // <Snippet1>
 // DataContext takes a connection string. 
@@ -40,12 +36,6 @@ foreach (var cust in query)
             // <Snippet3>
             db.ExecuteCommand("UPDATE Products SET UnitPrice = UnitPrice + 1.00");
             // </Snippet3>
-
-
-
-
-
-
 
             // <Snippet4>
             string connString = @"Data Source=.\SQLEXPRESS;AttachDbFilename=c:\northwind.mdf;
@@ -87,12 +77,6 @@ foreach (var cust in query)
             nwindConn.Close();
             // </Snippet4>
 
-
-
-
-
-
-
             Console.ReadLine();
 
         } //end of Main
@@ -106,7 +90,6 @@ foreach (var cust in query)
         }
         // </Snippet2>
 
-        
        void method()
         {            
             // <Snippet5>
@@ -120,11 +103,7 @@ foreach (var cust in query)
                     cust.City);
             // </Snippet5>
         }
-            
-
-       
 
     }
-    
 
 }

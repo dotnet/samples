@@ -4,7 +4,6 @@ using System;
 using System.Security;
 using System.Security.Permissions;
 
-
 public class StrongNameIdentityDemo
 {
     // Public key
@@ -77,7 +76,6 @@ public class StrongNameIdentityDemo
         {
             Console.WriteLine("An expected exception was thrown: " + e.Message);
         }
-
 
         return returnValue;
 
@@ -178,7 +176,6 @@ public class StrongNameIdentityDemo
             Console.Out.WriteLine("Intersect demo failed.");
         ret = retTmp && ret;
 
-
         // Call the Copy demo.
         if (retTmp = CopyDemo()) Console.Out.WriteLine("Copy demo completed successfully");
         else
@@ -193,13 +190,7 @@ public class StrongNameIdentityDemo
 
         Console.WriteLine("********************************************************\n");
 
-
         return (ret);
-
-
-
-
-
 
     }
     // Test harness.

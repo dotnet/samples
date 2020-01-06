@@ -21,7 +21,6 @@ namespace Microsoft.Samples.BrushExamples
             this.Content = mainPanel;
         
         }
-                 
 
         // <SnippetGraphicsMMVisualBrushAsRectangleBackgroundExample>
         private void visualBrushAsRectangleFillExample(Panel mainPanel)
@@ -69,8 +68,7 @@ namespace Microsoft.Samples.BrushExamples
             // </SnippetGraphicsMMVisualBrushAsRectangleBackgroundExample1>
             
             mainPanel.Children.Add(myRectangle);
-    
-    
+
         }
         // </SnippetGraphicsMMVisualBrushAsRectangleBackgroundExample>
     

@@ -66,7 +66,6 @@ public partial class DocGetTable : System.Web.UI.Page
 
         Customer row = (Customer)GetDataItem();
 
-
         StringBuilder addressList = new StringBuilder();
 
         foreach (CustomerAddress childRow in row.CustomerAddresses)

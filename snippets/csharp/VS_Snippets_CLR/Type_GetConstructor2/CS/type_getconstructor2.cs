@@ -3,7 +3,6 @@ using System;
 using System.Reflection;
 using System.Security;
 
-
 public class MyClass1
 {
     public MyClass1(int i){}

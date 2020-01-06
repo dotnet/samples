@@ -184,9 +184,6 @@ namespace UIAValuePattern_snip
         }
         //</Snippet103>
 
-        
-        
-        
         ///--------------------------------------------------------------------
         /// <summary>
         /// The main entry point for the application.

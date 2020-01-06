@@ -57,7 +57,6 @@ public class Form1 : System.Windows.Forms.Form
 		this.customersBindingSource.ListChanged +=
 			new ListChangedEventHandler(customersBindingSource_ListChanged);
 
-		
 		// Attach the BindingSource to the DataGridView.
 		this.customersDataGridView.DataSource =
 			this.customersBindingSource;
@@ -101,8 +100,6 @@ public class Form1 : System.Windows.Forms.Form
 		status.Text = e.ListChangedType.ToString();
 	}
 	// </snippet9>
-
-	
 
 	[STAThread]
 	static void Main()

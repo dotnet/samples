@@ -23,7 +23,6 @@ public class Group
    [XmlElement(DataType = "hexBinary")]
    public byte [] HexBytes;
 
-
    [XmlElement(DataType = "boolean")]
    public bool IsActive;
 
@@ -54,7 +53,6 @@ public class Run
        test.SerializeObject("FirstDoc.xml");
        test.DeserializeObject("FirstDoc.xml");
     }
-
 
    public void SerializeObject(string filename)
    {

@@ -68,7 +68,6 @@ namespace Microsoft.ServiceModel.Samples
               Console.Read();
               client2.Abort();
             }
-          
 
             Console.WriteLine();
             Console.WriteLine("Press <ENTER> to terminate client.");

@@ -3,7 +3,6 @@
 // MessageBox.Show(string, string, MessageBoxButton, MessageBoxIcon) 
 // method.
 
-
 using System.Windows.Forms;
 
 public class Form1: System.Windows.Forms.Form

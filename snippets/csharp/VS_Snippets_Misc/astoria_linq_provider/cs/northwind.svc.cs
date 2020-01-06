@@ -55,7 +55,6 @@ namespace NorthwindService
         }
     
         public int Key {get; set;}
-        
 
         public string Prop { get; set;}
             

@@ -11,8 +11,6 @@ using System.Windows.Media;
 using System.Windows.Shapes;
 using System.Windows.Media.Animation;
 
-
-
 namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
 {
     public partial class SeekExample : Page
@@ -122,8 +120,7 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
             rectangleWidthIndicator.Text = myRectangle.Width.ToString(); 
             aPanel.Children.Add(rectangleWidthIndicator);
             seekPanel.Children.Add(aPanel);
-            
-            
+
             // Create some controls to enable the
             // user to specify a seek position.
             
@@ -136,8 +133,7 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
             seekDestination.Text = "0";
             aPanel.Children.Add(seekDestination);       
             seekPanel.Children.Add(aPanel);
-            
-            
+
             Button seekButton = new Button();
             seekButton.Content = "Seek";
             seekButton.Click += new RoutedEventHandler(seekButton_Clicked);
@@ -250,9 +246,7 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
             currentTimeIndicator.Text = myStoryboard.GetCurrentTime(this).ToString();
             
         }
-        
-        
-        
+
     }
 }
 // </SnippetSeekExampleUsingWholePage>

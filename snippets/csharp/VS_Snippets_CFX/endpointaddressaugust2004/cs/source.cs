@@ -35,7 +35,6 @@ namespace Microsoft.ServiceModel.Samples
             return result;
         }
 
-
         public static void Main()
         {
             // <Snippet1>

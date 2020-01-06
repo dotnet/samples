@@ -26,7 +26,6 @@ public class ROCollection : ReadOnlyCollectionBase  {
 
 }
 
-
 public class SamplesCollectionBase  {
 
    public static void Main()  {

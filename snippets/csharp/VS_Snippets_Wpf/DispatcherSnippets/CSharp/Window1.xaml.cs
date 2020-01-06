@@ -14,7 +14,6 @@ using System.Windows.Threading;
 using System.Timers;
 using System.Security.Permissions;
 
-
 namespace DispatcherSnippets
 {
     /// <summary>
@@ -66,7 +65,6 @@ namespace DispatcherSnippets
         {
          //   Window dialog = new Window();
           ///  dialog.ShowDialog();
-
 
         }
 
@@ -149,10 +147,6 @@ namespace DispatcherSnippets
             Dispatcher.PushFrame(frame);
         }
 
-
-
-
-
         public void UpdateLabel()
         {
           //  DoEvents2();
@@ -165,7 +159,6 @@ namespace DispatcherSnippets
 
             DispatcherFrame frame = f as DispatcherFrame;
 
-
             Thread.Sleep(2000);
             if (count < 5)
             {
@@ -175,8 +168,6 @@ namespace DispatcherSnippets
             {
                // frame.Continue = false;
             }
-
-
 
             return null;
         }

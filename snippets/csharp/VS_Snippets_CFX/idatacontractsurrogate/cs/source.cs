@@ -24,7 +24,6 @@ class program
 
     }
 
-
     static  DataContractSerializer CreateSurrogateSerializer()  
     {
         // Create an instance of the DataContractSerializer. The 
@@ -152,7 +151,6 @@ class program
         {
             fs4.Dispose();
         }
-        
 
         Console.WriteLine( "\t  To see the results of schema export and import,");
         Console.WriteLine(" see SAMPLE.XSD and SAMPLE.CS." );
@@ -161,9 +159,7 @@ class program
         Console.ReadLine();
     }
 
-
 }
-
 
 // This is the Employee (outer) type used in the sample.
 
@@ -179,7 +175,6 @@ public decimal salary ;
     [DataMember()]
     public Person person;
 }
-
 
 // This is the Person (inner) type used in the sample.
 // Note that it is a legacy XmlSerializable type and not a DataContract type.
@@ -304,8 +299,6 @@ public object GetObjectToSerialize(object obj, Type targetType)
         // generated type in some way.
         return typeDeclaration;
     }
-
-
 
         public object GetCustomDataToExport(Type clrType, Type dataContractType)
         {

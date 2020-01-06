@@ -78,7 +78,6 @@ namespace WSHttpBindingSample
 	        binding1.MaxBufferPoolSize;
 	    // </Snippet6>
 
-
 	    // <Snippet7>
 	    long maxReceivedMessageSize =
 		binding1.MaxReceivedMessageSize;
@@ -127,9 +126,6 @@ namespace WSHttpBindingSample
 	    BindingElementCollection bindingElements = 
 			    binding1.CreateBindingElements();
 	    // </Snippet16>
-
-
-
 
             // Set WSHttpBinding binding property values
             binding1.Name = "Binding1";

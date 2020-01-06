@@ -57,7 +57,6 @@ namespace System.Drawing.ClassicFontFamilyCS
 		}
 		#endregion
 
-
         // Snippet for: M:System.Drawing.FontFamily.Equals(System.Object)
         // <snippet1>
         public void Equals_Example(PaintEventArgs e)
@@ -73,7 +72,6 @@ namespace System.Drawing.ClassicFontFamilyCS
             MessageBox.Show(equalFonts.ToString());
         }
         // </snippet1>
-
 
         // Snippet for: M:System.Drawing.FontFamily.GetCellAscent(System.Drawing.FontStyle)
         // <snippet2>
@@ -94,7 +92,6 @@ namespace System.Drawing.ClassicFontFamilyCS
         }
         // </snippet2>
 
-
         // Snippet for: M:System.Drawing.FontFamily.GetCellDescent(System.Drawing.FontStyle)
         // <snippet3>
         public void GetCellDescent_Example(PaintEventArgs e)
@@ -113,7 +110,6 @@ namespace System.Drawing.ClassicFontFamilyCS
                 new PointF(0, 0));
         }
         // </snippet3>
-
 
         // Snippet for: M:System.Drawing.FontFamily.GetEmHeight(System.Drawing.FontStyle)
         // <snippet4>
@@ -163,8 +159,6 @@ namespace System.Drawing.ClassicFontFamilyCS
             }
         // </snippet5>
 
-
-
         // Snippet for: M:System.Drawing.FontFamily.GetHashCode
         // <snippet6>
         public void GetHashCode_Example(PaintEventArgs e)
@@ -183,7 +177,6 @@ namespace System.Drawing.ClassicFontFamilyCS
                 new PointF(0, 0));
         }
         // </snippet6>
-
 
         // Snippet for: M:System.Drawing.FontFamily.GetLineSpacing(System.Drawing.FontStyle)
         // <snippet7>
@@ -204,7 +197,6 @@ namespace System.Drawing.ClassicFontFamilyCS
         }
         // </snippet7>
 
-
         // Snippet for: M:System.Drawing.FontFamily.GetName(System.Int32)
         // <snippet8>
         public void GetName_Example(PaintEventArgs e)
@@ -223,7 +215,6 @@ namespace System.Drawing.ClassicFontFamilyCS
                 new PointF(0, 0));
         }
         // </snippet8>
-
 
         // Snippet for: M:System.Drawing.FontFamily.IsStyleAvailable(System.Drawing.FontStyle)
         // <snippet9>
@@ -248,7 +239,6 @@ namespace System.Drawing.ClassicFontFamilyCS
             }
         }
         // </snippet9>
-
 
         // Snippet for: M:System.Drawing.FontFamily.ToString
         // <snippet10>

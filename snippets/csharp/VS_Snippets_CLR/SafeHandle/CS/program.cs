@@ -142,7 +142,6 @@ namespace SafeHandleDemo
             // SafeHandle records the fact that we've called Dispose.
         }
 
-
         [SecurityPermission(SecurityAction.Demand, UnmanagedCode = true)]
         public byte[] ReadContents(int length)
         {

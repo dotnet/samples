@@ -10,8 +10,6 @@
  *tag prefix as follows: <tagprefix:controlname  runat = "server" /> 
  */
 
-
-
 // <snippet1>
 
 using System;
@@ -20,7 +18,6 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 [assembly:TagPrefix("CustomControls", "custom")]
-
 
 namespace CustomControls
 {

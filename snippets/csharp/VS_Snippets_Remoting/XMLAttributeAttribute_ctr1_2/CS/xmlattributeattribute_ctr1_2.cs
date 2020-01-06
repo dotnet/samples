@@ -49,8 +49,7 @@ public class XMLAttributeAttribute_ctr1
                                                 new XmlAttributeAttribute();
       myXmlAttributeAttribute.AttributeName="Name";
       myXmlAttributes.XmlAttribute = myXmlAttributeAttribute;
-      
-      
+
       // Add to the XmlAttributeOverrides. Specify the member name.
       myXmlAttributeOverrides.Add(typeof(Student), "StudentName", 
                                                       myXmlAttributes);
@@ -81,8 +80,7 @@ public class XMLAttributeAttribute_ctr1
       XmlAttributeAttribute myXmlBookAttributeAttribute = 
                                            new XmlAttributeAttribute("Name");
       myXmlBookAttributes.XmlAttribute = myXmlBookAttributeAttribute;
-      
-      
+
       // Add to the XmlAttributeOverrides. Specify the member name.
       myXmlBookAttributeOverrides.Add(typeof(Book), "BookName", 
                                              myXmlBookAttributes);

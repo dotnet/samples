@@ -15,7 +15,6 @@ public class Sample
             1, true, false, true, 
             true, false, true, true));
 
-
         foreach (ManagementObject service in s.Get()) 
         {
             // show the service

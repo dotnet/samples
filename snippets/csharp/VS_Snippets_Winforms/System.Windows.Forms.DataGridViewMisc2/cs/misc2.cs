@@ -105,7 +105,6 @@ public class Form1 : Form
     }
     //</snippet50>
 
-
     //<snippet60>
     public DataGridViewRow CloneWithValues(DataGridViewRow row)
     {

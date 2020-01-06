@@ -6,7 +6,6 @@ using System.Linq;
 using Excel = Microsoft.Office.Interop.Excel;
 using Word = Microsoft.Office.Interop.Word;
 
-
 namespace OfficeProgramminWalkthruComplete
 {
     class Walkthrough

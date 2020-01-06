@@ -42,8 +42,6 @@ class RSACSPSample
             //default, allowing the key to be persisted. 
             RSACryptoServiceProvider RSAalg = new RSACryptoServiceProvider(cspParams);
 
-          
-
             //Indicate that the key was persisted.
             Console.WriteLine("The RSA key was persisted in the container, \"{0}\".", ContainerName);
         }

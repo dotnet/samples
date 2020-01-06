@@ -14,7 +14,6 @@ namespace ControlProps
     /// Interaction logic for Pane1.xaml
     /// </summary>
 
-
     public partial class Pane1 : StackPanel
     {
 
@@ -40,7 +39,6 @@ namespace ControlProps
             }
         }
         //</Snippet1>
-
 
         //<Snippet2>
         void ChangeForeground(object sender, RoutedEventArgs e)
@@ -111,7 +109,6 @@ namespace ControlProps
         }
         //</Snippet5>
 
-
         //<Snippet6>
         void ChangeFontWeight(object sender, RoutedEventArgs e)
         {
@@ -161,7 +158,6 @@ namespace ControlProps
             }
         }
         //</Snippet8>
-
 
         //<Snippet9>
         void ChangeVerticalContentAlignment(object sender, RoutedEventArgs e)

@@ -28,7 +28,6 @@ namespace AsyncExampleWPF_WhenAll
             InitializeComponent();
         }
 
-
         private async void startButton_Click(object sender, RoutedEventArgs e)
         {
             resultsTextBox.Clear();
@@ -42,7 +41,6 @@ namespace AsyncExampleWPF_WhenAll
 
             resultsTextBox.Text += "\r\nControl returned to startButton_Click.\r\n";
         }
-
 
         private async Task SumPageSizesAsync()
         {
@@ -97,7 +95,6 @@ namespace AsyncExampleWPF_WhenAll
                 string.Format("\r\n\r\nTotal bytes returned:  {0}\r\n", total);
         }
 
-
         private List<string> SetUpURLList()
         {
             List<string> urls = new List<string> 
@@ -116,8 +113,6 @@ namespace AsyncExampleWPF_WhenAll
             return urls;
         }
 
-
-
         // The actions from the foreach loop are moved to this async method.
         //<snippet1>
         private async Task<int> ProcessURLAsync(string url)
@@ -127,7 +122,6 @@ namespace AsyncExampleWPF_WhenAll
             return byteArray.Length;
         }
         //</snippet1>
-
 
         private async Task<byte[]> GetURLContentsAsync(string url)
         {
@@ -152,7 +146,6 @@ namespace AsyncExampleWPF_WhenAll
             return content.ToArray();
 
         }
-
 
         private void DisplayResults(string url, byte[] content)
         {

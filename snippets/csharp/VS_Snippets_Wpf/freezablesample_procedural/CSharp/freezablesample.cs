@@ -19,14 +19,12 @@ namespace Microsoft.Samples.Animation.LocalAnimations
     // Displays the sample.
     public class MyApp : Application
     {
-        
 
         protected override void OnStartup (StartupEventArgs e)
         {
             base.OnStartup(e);
             CreateAndShowMainWindow();
         }
-
 
         private void CreateAndShowMainWindow ()
         {
@@ -40,8 +38,7 @@ namespace Microsoft.Samples.Animation.LocalAnimations
             myWindow.Show();
         }
     }
-    
-    
+
     public class FreezableExample : Page
     {
     
@@ -50,8 +47,7 @@ namespace Microsoft.Samples.Animation.LocalAnimations
         public FreezableExample()
         {
            this.WindowTitle = "Freezable Example";
-          
-            
+
             myMainPanel = new StackPanel();
             UnFrozenExample();
             FrozenExample();
@@ -68,8 +64,7 @@ namespace Microsoft.Samples.Animation.LocalAnimations
             Button myButton = new Button();
             SolidColorBrush myBrush = new SolidColorBrush(Colors.Yellow);
             myButton.Background = myBrush;  
-            
-            
+
             // Changes the button's background to red.
             myBrush.Color = Colors.Red;
             // </SnippetUnFrozenExampleShort>
@@ -126,8 +121,7 @@ namespace Microsoft.Samples.Animation.LocalAnimations
             // </SnippetExceptionExample>
 
             myMainPanel.Children.Add(myButton);        
-        
-        
+
         }
 
         private void checkIsFrozenExample()
@@ -146,7 +140,6 @@ namespace Microsoft.Samples.Animation.LocalAnimations
             
             myButton.Background = myBrush;
 
-
             if (myBrush.IsFrozen) // Evaluates to true.
             {
                 // If the brush is frozen, create a clone and
@@ -162,17 +155,12 @@ namespace Microsoft.Samples.Animation.LocalAnimations
                 myBrush.Color = Colors.Red;
             }
 
-
             // </SnippetCheckIsFrozenExample>
 
             myMainPanel.Children.Add(myButton);
 
-
         }    
-     
-        
-        
-        
+
         private void CloneExample()
         {
         
@@ -188,8 +176,7 @@ namespace Microsoft.Samples.Animation.LocalAnimations
                 // Makes the brush unmodifiable.
                 myBrush.Freeze();
             }
-                        
-            
+
             myButton.Background = myBrush;  
             
             // If you need to modify a frozen brush,
@@ -206,16 +193,10 @@ namespace Microsoft.Samples.Animation.LocalAnimations
             // makes the button change to red.
             myButton.Background = myBrushClone;
             // </SnippetCloneExample>
-            
-            
-            
+
             myMainPanel.Children.Add(myButton);
         }
 
-
-     
-    
-    
     }
     
     // <SnippetCreateInstanceCoreExample>
@@ -228,17 +209,13 @@ namespace Microsoft.Samples.Animation.LocalAnimations
             return new MyFreezable();      
         }
 
-
         // ...
         // Other code for the MyFreezableClass.
         // ...
-        
-        
+
     }
     
     // </SnippetCreateInstanceCoreExample>    
-    
-    
 
     // Starts the application.
     internal sealed class EntryClass

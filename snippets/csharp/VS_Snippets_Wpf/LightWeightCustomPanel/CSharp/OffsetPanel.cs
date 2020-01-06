@@ -178,7 +178,6 @@ namespace OffsetPanel
             public static readonly DependencyProperty OffsetLeftProperty
                 = DependencyProperty.RegisterAttached("OffsetLeft", typeof(double), typeof(OffsetPanel), new FrameworkPropertyMetadata(Double.NaN, FrameworkPropertyMetadataOptions.AffectsParentArrange));
 
-
             public static double GetOffsetLeft(DependencyObject d)
             {
                 if (d == null) { throw new ArgumentNullException("d"); }

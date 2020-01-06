@@ -5,8 +5,6 @@ using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 //using GFUDemo_CS;
 
-
-
 namespace TestProject1
 {
     /// <summary>
@@ -61,8 +59,6 @@ namespace TestProject1
         // public void MyTestCleanup() { }
         //
         #endregion
-
-
 
         [TestMethod]
         public void DefaultAutomobileIsInitializedCorrectly()

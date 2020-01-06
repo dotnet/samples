@@ -24,7 +24,6 @@ public sealed class CustomSection : ConfigurationSection
 
     }
 
-
     [ConfigurationProperty("name",
      DefaultValue = "Contoso",
      IsRequired = true,
@@ -73,8 +72,6 @@ public sealed class CustomSection : ConfigurationSection
             this["port"] = value;
         }
     }
-
-
 
 }
 //</Snippet1>
@@ -225,7 +222,6 @@ class UsingConfigurationClass
     }
     //</Snippet4>
 
-
     // Show how use the AppSettings and ConnectionStrings 
     // properties.
     static void GetSections(string section)
@@ -360,8 +356,7 @@ class UsingConfigurationClass
             bool hasFile = config.HasFile;
             Console.WriteLine("Has file: {0}", hasFile.ToString());
             //</Snippet9>
-                   
-              
+
             //<Snippet10>
             ConfigurationSectionGroupCollection
                 groups = config.SectionGroups;
@@ -372,7 +367,6 @@ class UsingConfigurationClass
                // Console.WriteLine("Group Type: {0}", group.Type);
             }
             //</Snippet10>
-                  
 
             //<Snippet11>
             ConfigurationSectionCollection
@@ -442,7 +436,6 @@ class UsingConfigurationClass
             string appName =
                 Environment.GetCommandLineArgs()[0];
 
-
             // Get user selection.
             while (true)
             {
@@ -488,7 +481,6 @@ class UsingConfigurationClass
                         // Show how to obtain configuration file information.
                         GetConfigurationInformation();
                         break;
-
 
                     default:
                         UserMenu();

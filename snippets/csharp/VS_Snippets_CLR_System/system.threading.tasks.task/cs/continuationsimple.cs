@@ -28,7 +28,6 @@ class ContinuationSimpleDemo
             .ContinueWith(antecendent => action("gamma"))
             .Wait();
 
-
         Func<int, int> negate =
             (n) =>
             {
@@ -42,7 +41,6 @@ class ContinuationSimpleDemo
             .ContinueWith(antecendent => negate(antecendent.Result))		// Antecedent result feeds into continuation
             .ContinueWith(antecendent => negate(antecendent.Result))
             .Wait();
-
 
         // Creating a sequence of tasks where you can mix and match the types
         Console.WriteLine("\nCreating a sequence of tasks where you can mix and match the types");

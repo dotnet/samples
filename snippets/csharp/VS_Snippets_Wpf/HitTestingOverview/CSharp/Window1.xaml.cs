@@ -146,7 +146,6 @@ namespace SDKSample
         }
         // </Snippet106>
 
-
         public void ProcessHitTestResultsList() { }
     }
 

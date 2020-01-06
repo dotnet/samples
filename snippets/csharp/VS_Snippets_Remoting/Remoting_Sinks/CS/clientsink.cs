@@ -12,7 +12,6 @@ public class ClientSink : BaseChannelSinkWithProperties, IClientChannelSink
     // This class inherits from BaseChannelSinkWithPropertes
     // to get an implementation of IChannelSinkBase.
 
-
 // <snippet21>
     // The next sink in the chain.
     private IClientChannelSink nextSink;
@@ -82,7 +81,6 @@ public class ClientSink : BaseChannelSinkWithProperties, IClientChannelSink
         throw new NotImplementedException();
     }
 // </snippet26>
-
 
     // Constructor
     [SecurityPermission(SecurityAction.LinkDemand)]

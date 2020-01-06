@@ -36,7 +36,6 @@
             }
         }
 
-        
         private void grid_Enter(object sender, EventArgs e) 
         {
             myGrid.CurrentCell = new DataGridCell(2,2);
@@ -165,7 +164,6 @@
         {
             count ++;
         }
-
 
         // This will work only with a DataSet or DataTable.
         // The code is not compatible with IBindingList implementations.

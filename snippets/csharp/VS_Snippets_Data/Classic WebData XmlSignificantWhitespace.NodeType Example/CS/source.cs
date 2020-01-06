@@ -21,8 +21,7 @@
                    "<first-name>Eva</first-name>"+
                    "<last-name>Corets</last-name>" + 
                    "</author>"); 
- 
-        
+
        Console.WriteLine("InnerText before...");
        Console.WriteLine(doc.DocumentElement.InnerText);
  

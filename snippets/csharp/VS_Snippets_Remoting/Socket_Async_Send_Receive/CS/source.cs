@@ -5,7 +5,6 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 
-
 //<Snippet11>
 public class StateObject{
      public Socket workSocket = null;
@@ -19,7 +18,6 @@ public class Async_Send_Receive{
 
 public static ManualResetEvent allDone = new ManualResetEvent(false);
 
-	
 public static void Connect(){
 //<Snippet1>
 	IPHostEntry lipa = Dns.Resolve("host.contoso.com");
@@ -251,7 +249,6 @@ public static void ReceiveFrom_Callback(IAsyncResult ar){
 	EndPoint tempRemoteEP = (EndPoint)sender;
 
        int read = s.EndReceiveFrom(ar, ref tempRemoteEP); 
-
 
 	if (read > 0) {
             so.sb.Append(Encoding.ASCII.GetString(so.buffer, 0, read));

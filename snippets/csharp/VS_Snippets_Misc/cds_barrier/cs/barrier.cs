@@ -84,9 +84,7 @@ namespace BarrierSimple
 
 class BarrierDemo
 {
-    
 
-    
         static byte[][] data = new byte[10][];
         static byte[][] results = new byte[10][]; 
       
@@ -103,8 +101,7 @@ class BarrierDemo
                 if (someCondition)
                     success = true;
             });       
-        
-            
+
         // Define the work that each thread will perform. (Threads do not
         // have to all execute the same method.)
         void CrunchNumbers(int partitionNum)
@@ -141,7 +138,5 @@ class BarrierDemo
 
      byte[] ProcessData(byte[] input)
         { return new byte[2]; }
-
-
 
 }

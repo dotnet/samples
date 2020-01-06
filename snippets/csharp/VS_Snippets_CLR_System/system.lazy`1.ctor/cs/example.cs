@@ -19,7 +19,6 @@ class Program
         //lazyLargeObject = new Lazy<LargeObject>(LazyThreadSafetyMode.ExecutionAndPublication);
         //</SnippetNewLazy>
 
-
         Console.WriteLine(
             "\r\nLargeObject is not created until you access the Value property of the lazy" +
             "\r\ninitializer. Press Enter to create LargeObject.");
@@ -46,7 +45,6 @@ class Program
         Console.WriteLine("\r\nPress Enter to end the program");
         Console.ReadLine();
     }
-
 
     static void ThreadProc(object state)
     {

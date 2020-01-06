@@ -38,7 +38,6 @@
        PrintValues( myStack, '\t' );
     }
 
-
     public static void PrintValues( IEnumerable myCollection, char mySeparator )  {
        foreach ( Object obj in myCollection )
           Console.Write( "{0}{1}", mySeparator, obj );

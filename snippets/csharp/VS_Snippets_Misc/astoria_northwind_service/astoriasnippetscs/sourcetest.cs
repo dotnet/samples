@@ -4,8 +4,7 @@ using System;
 
 namespace AstoriaSnippetsCS
 {
-    
-    
+
     /// <summary>
     ///This is a test class for SourceTest and is intended
     ///to contain all SourceTest Unit Tests
@@ -13,7 +12,6 @@ namespace AstoriaSnippetsCS
     [TestClass()]
     public class SourceTest
     {
-
 
         private TestContext testContextInstance;
 
@@ -62,7 +60,6 @@ namespace AstoriaSnippetsCS
         //}
         //
         #endregion
-
 
         /// <summary>
         ///A test for SelectCustomerAddressNonEntity

@@ -259,7 +259,6 @@ namespace ManipulationXNA
         // </Snippet_GamePiece_PrivateProperties>
         
         /** Manipulation and Inertia events ********/
-
         // <Snippet_GamePiece_OnManipulationStarted>
         #region OnManipulationStarted
         private void OnManipulationStarted(object sender, Manipulation2DStartedEventArgs e)

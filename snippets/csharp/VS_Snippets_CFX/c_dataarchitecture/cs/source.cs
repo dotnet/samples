@@ -94,12 +94,10 @@ namespace Samples
     //</snippet6>
     {
 
-
         public FileMessage( string someFileName)
         {
             throw new NotImplementedException();
         }
-
 
         public override MessageVersion Version
         {

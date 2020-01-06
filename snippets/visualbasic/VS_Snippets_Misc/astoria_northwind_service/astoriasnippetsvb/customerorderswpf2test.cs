@@ -5,8 +5,7 @@ using System.Windows.Markup;
 
 namespace AstoriaSnippetsVB
 {
-    
-    
+
     /// <summary>
     ///This is a test class for CustomerOrdersWpf2Test and is intended
     ///to contain all CustomerOrdersWpf2Test Unit Tests
@@ -14,7 +13,6 @@ namespace AstoriaSnippetsVB
     [TestClass()]
     public class CustomerOrdersWpf2Test
     {
-
 
         private TestContext testContextInstance;
 
@@ -63,7 +61,6 @@ namespace AstoriaSnippetsVB
         //}
         //
         #endregion
-
 
         /// <summary>
         ///A test for CustomerOrdersWpf2 Constructor

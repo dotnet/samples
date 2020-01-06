@@ -199,7 +199,6 @@ public class Form1:
 		}
 	}
 
-
 	private void CheckForDigits(object sender, KeyPressEventArgs e)
 	{
 
@@ -212,13 +211,11 @@ public class Form1:
 			e.Handled = true;
 		}
 	}
-	
 
 	public static void Main()
 	{
 		Application.Run(new Form1());
 	}
-
 
 }
 //</snippet1>

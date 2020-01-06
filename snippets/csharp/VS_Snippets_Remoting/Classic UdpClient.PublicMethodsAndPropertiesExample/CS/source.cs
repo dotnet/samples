@@ -110,7 +110,6 @@ public class MyUdpClientExample{
   // This class demonstrates sending and receiving using a Udp socket.
   public static void MyUdpClientCommunicator(string mySendType){
 
-   
    if (mySendType == "EndPointExample"){
 
    	// <Snippet8>

@@ -205,7 +205,6 @@ namespace SdkSample
 
         #endregion Internal Methods
 
-        
         // ---------------------------------------------------------------------
         //
         //  Internal Properties
@@ -216,13 +215,11 @@ namespace SdkSample
 
         #endregion Internal Indexers
 
-
         // ---------------------------------------------------------------------
         //
         // Private Methods
         //
         // ---------------------------------------------------------------------
-
 
         #region Private Methods
 

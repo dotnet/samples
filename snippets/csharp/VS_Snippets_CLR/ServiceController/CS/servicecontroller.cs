@@ -194,7 +194,6 @@ namespace ServiceControllerSample
 
          Console.WriteLine();
 
-      
          // <snippet4>
          ServiceController sc = new ServiceController("Messenger");
          ServiceController[] scServices= sc.ServicesDependedOn;
@@ -314,6 +313,5 @@ namespace ServiceControllerSample
          // </snippet6>
       }
 
-     
    }
 }

@@ -43,7 +43,6 @@ class WindowsIdentityMembers
     }
 	        //</Snippet2>
 
- 
     // Create a WindowsIdentity object for the user represented by the
     // specified account token and authentication type.
             //<Snippet4>

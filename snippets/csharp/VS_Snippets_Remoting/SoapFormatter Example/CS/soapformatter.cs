@@ -8,7 +8,6 @@ using System.Runtime.Serialization;
 // System.Runtime.Serialization.Formatters.Soap.dll assembly.
 using System.Runtime.Serialization.Formatters.Soap;
 
-
 class App 
 {
     [STAThread]
@@ -49,7 +48,6 @@ class App
         }
     }
 
-   
     static void Deserialize() 
     {
         // Declare the hashtable reference.

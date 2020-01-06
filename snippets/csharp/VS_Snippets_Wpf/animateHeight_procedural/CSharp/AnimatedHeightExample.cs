@@ -15,8 +15,7 @@ namespace Microsoft.Samples.Animation.AnimatedTransformations
 {       
     public class AnimatedHeightExample : Page
     {        
-    
-    
+
         private Storyboard myStoryboard; 
         
         public AnimatedHeightExample()

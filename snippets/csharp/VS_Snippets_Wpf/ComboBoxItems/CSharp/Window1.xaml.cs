@@ -18,7 +18,6 @@ namespace ComboBox_Index
             InitializeComponent();
         }
 
-
         private void GetThirdCity_Click(object sender, RoutedEventArgs e)
         {
             ObservableCollection<string> itemCollection =
@@ -61,8 +60,6 @@ namespace ComboBox_Index
                  (cbi.Content.ToString()) + ".";
         }
         //</Snippet2>           
-
- 
 
     }
 

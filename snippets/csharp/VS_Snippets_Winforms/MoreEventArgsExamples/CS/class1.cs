@@ -49,7 +49,6 @@ namespace MoreEventArgsExamples
         }
         //</Snippet3>
 
-        
         //<Snippet4>
         public ToolboxComponentsCreatingEventArgs CreateToolboxComponentsCreatingEventArgs(System.ComponentModel.Design.IDesignerHost host)
         {

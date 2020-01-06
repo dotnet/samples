@@ -3,7 +3,6 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Windows.Forms.VisualStyles;
 
-
 public class Form1 : Form
 {
 
@@ -42,7 +41,6 @@ public class Form1 : Form
     }
     //</snippet1>
 
-
     //<snippet2>
     public void DrawVisualStyleElement_Button_PushButton2(PaintEventArgs e)
     {
@@ -61,7 +59,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet2>
-
 
     //<snippet3>
     public void DrawVisualStyleElement_Button_PushButton3(PaintEventArgs e)
@@ -82,7 +79,6 @@ public class Form1 : Form
     }
     //</snippet3>
 
-
     //<snippet4>
     public void DrawVisualStyleElement_Button_PushButton4(PaintEventArgs e)
     {
@@ -101,7 +97,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet4>
-
 
     //<snippet5>
     public void DrawVisualStyleElement_Button_PushButton5(PaintEventArgs e)
@@ -122,7 +117,6 @@ public class Form1 : Form
     }
     //</snippet5>
 
-
     //<snippet6>
     public void DrawVisualStyleElement_Button_RadioButton1(PaintEventArgs e)
     {
@@ -141,7 +135,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet6>
-
 
     //<snippet7>
     public void DrawVisualStyleElement_Button_RadioButton2(PaintEventArgs e)
@@ -162,7 +155,6 @@ public class Form1 : Form
     }
     //</snippet7>
 
-
     //<snippet8>
     public void DrawVisualStyleElement_Button_RadioButton3(PaintEventArgs e)
     {
@@ -181,7 +173,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet8>
-
 
     //<snippet9>
     public void DrawVisualStyleElement_Button_RadioButton4(PaintEventArgs e)
@@ -202,7 +193,6 @@ public class Form1 : Form
     }
     //</snippet9>
 
-
     //<snippet10>
     public void DrawVisualStyleElement_Button_RadioButton5(PaintEventArgs e)
     {
@@ -221,7 +211,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet10>
-
 
     //<snippet11>
     public void DrawVisualStyleElement_Button_RadioButton6(PaintEventArgs e)
@@ -242,7 +231,6 @@ public class Form1 : Form
     }
     //</snippet11>
 
-
     //<snippet12>
     public void DrawVisualStyleElement_Button_RadioButton7(PaintEventArgs e)
     {
@@ -261,7 +249,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet12>
-
 
     //<snippet13>
     public void DrawVisualStyleElement_Button_RadioButton8(PaintEventArgs e)
@@ -282,7 +269,6 @@ public class Form1 : Form
     }
     //</snippet13>
 
-
     //<snippet14>
     public void DrawVisualStyleElement_Button_CheckBox1(PaintEventArgs e)
     {
@@ -301,7 +287,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet14>
-
 
     //<snippet15>
     public void DrawVisualStyleElement_Button_CheckBox2(PaintEventArgs e)
@@ -322,7 +307,6 @@ public class Form1 : Form
     }
     //</snippet15>
 
-
     //<snippet16>
     public void DrawVisualStyleElement_Button_CheckBox3(PaintEventArgs e)
     {
@@ -341,7 +325,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet16>
-
 
     //<snippet17>
     public void DrawVisualStyleElement_Button_CheckBox4(PaintEventArgs e)
@@ -362,7 +345,6 @@ public class Form1 : Form
     }
     //</snippet17>
 
-
     //<snippet18>
     public void DrawVisualStyleElement_Button_CheckBox5(PaintEventArgs e)
     {
@@ -381,7 +363,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet18>
-
 
     //<snippet19>
     public void DrawVisualStyleElement_Button_CheckBox6(PaintEventArgs e)
@@ -402,7 +383,6 @@ public class Form1 : Form
     }
     //</snippet19>
 
-
     //<snippet20>
     public void DrawVisualStyleElement_Button_CheckBox7(PaintEventArgs e)
     {
@@ -421,7 +401,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet20>
-
 
     //<snippet21>
     public void DrawVisualStyleElement_Button_CheckBox8(PaintEventArgs e)
@@ -442,7 +421,6 @@ public class Form1 : Form
     }
     //</snippet21>
 
-
     //<snippet22>
     public void DrawVisualStyleElement_Button_CheckBox9(PaintEventArgs e)
     {
@@ -461,7 +439,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet22>
-
 
     //<snippet23>
     public void DrawVisualStyleElement_Button_CheckBox10(PaintEventArgs e)
@@ -482,7 +459,6 @@ public class Form1 : Form
     }
     //</snippet23>
 
-
     //<snippet24>
     public void DrawVisualStyleElement_Button_CheckBox11(PaintEventArgs e)
     {
@@ -501,7 +477,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet24>
-
 
     //<snippet25>
     public void DrawVisualStyleElement_Button_CheckBox12(PaintEventArgs e)
@@ -522,7 +497,6 @@ public class Form1 : Form
     }
     //</snippet25>
 
-
     //<snippet26>
     public void DrawVisualStyleElement_Button_GroupBox1(PaintEventArgs e)
     {
@@ -541,7 +515,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet26>
-
 
     //<snippet27>
     public void DrawVisualStyleElement_Button_GroupBox2(PaintEventArgs e)
@@ -562,7 +535,6 @@ public class Form1 : Form
     }
     //</snippet27>
 
-
     //<snippet28>
     public void DrawVisualStyleElement_Button_UserButton1(PaintEventArgs e)
     {
@@ -581,7 +553,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet28>
-
 
     //<snippet29>
     public void DrawVisualStyleElement_ComboBox_DropDownButton1(PaintEventArgs e)
@@ -602,7 +573,6 @@ public class Form1 : Form
     }
     //</snippet29>
 
-
     //<snippet30>
     public void DrawVisualStyleElement_ComboBox_DropDownButton2(PaintEventArgs e)
     {
@@ -621,7 +591,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet30>
-
 
     //<snippet31>
     public void DrawVisualStyleElement_ComboBox_DropDownButton3(PaintEventArgs e)
@@ -642,7 +611,6 @@ public class Form1 : Form
     }
     //</snippet31>
 
-
     //<snippet32>
     public void DrawVisualStyleElement_ComboBox_DropDownButton4(PaintEventArgs e)
     {
@@ -661,7 +629,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet32>
-
 
     //<snippet33>
     public void DrawVisualStyleElement_Page_Up1(PaintEventArgs e)
@@ -682,7 +649,6 @@ public class Form1 : Form
     }
     //</snippet33>
 
-
     //<snippet34>
     public void DrawVisualStyleElement_Page_Up2(PaintEventArgs e)
     {
@@ -701,7 +667,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet34>
-
 
     //<snippet35>
     public void DrawVisualStyleElement_Page_Up3(PaintEventArgs e)
@@ -722,7 +687,6 @@ public class Form1 : Form
     }
     //</snippet35>
 
-
     //<snippet36>
     public void DrawVisualStyleElement_Page_Up4(PaintEventArgs e)
     {
@@ -741,7 +705,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet36>
-
 
     //<snippet37>
     public void DrawVisualStyleElement_Page_Down1(PaintEventArgs e)
@@ -762,7 +725,6 @@ public class Form1 : Form
     }
     //</snippet37>
 
-
     //<snippet38>
     public void DrawVisualStyleElement_Page_Down2(PaintEventArgs e)
     {
@@ -781,7 +743,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet38>
-
 
     //<snippet39>
     public void DrawVisualStyleElement_Page_Down3(PaintEventArgs e)
@@ -802,7 +763,6 @@ public class Form1 : Form
     }
     //</snippet39>
 
-
     //<snippet40>
     public void DrawVisualStyleElement_Page_Down4(PaintEventArgs e)
     {
@@ -821,7 +781,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet40>
-
 
     //<snippet41>
     public void DrawVisualStyleElement_Page_UpHorizontal1(PaintEventArgs e)
@@ -842,7 +801,6 @@ public class Form1 : Form
     }
     //</snippet41>
 
-
     //<snippet42>
     public void DrawVisualStyleElement_Page_UpHorizontal2(PaintEventArgs e)
     {
@@ -861,7 +819,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet42>
-
 
     //<snippet43>
     public void DrawVisualStyleElement_Page_UpHorizontal3(PaintEventArgs e)
@@ -882,7 +839,6 @@ public class Form1 : Form
     }
     //</snippet43>
 
-
     //<snippet44>
     public void DrawVisualStyleElement_Page_UpHorizontal4(PaintEventArgs e)
     {
@@ -901,7 +857,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet44>
-
 
     //<snippet45>
     public void DrawVisualStyleElement_Page_DownHorizontal1(PaintEventArgs e)
@@ -922,7 +877,6 @@ public class Form1 : Form
     }
     //</snippet45>
 
-
     //<snippet46>
     public void DrawVisualStyleElement_Page_DownHorizontal2(PaintEventArgs e)
     {
@@ -941,7 +895,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet46>
-
 
     //<snippet47>
     public void DrawVisualStyleElement_Page_DownHorizontal3(PaintEventArgs e)
@@ -962,7 +915,6 @@ public class Form1 : Form
     }
     //</snippet47>
 
-
     //<snippet48>
     public void DrawVisualStyleElement_Page_DownHorizontal4(PaintEventArgs e)
     {
@@ -981,7 +933,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet48>
-
 
     //<snippet49>
     public void DrawVisualStyleElement_Spin_Up1(PaintEventArgs e)
@@ -1002,7 +953,6 @@ public class Form1 : Form
     }
     //</snippet49>
 
-
     //<snippet50>
     public void DrawVisualStyleElement_Spin_Up2(PaintEventArgs e)
     {
@@ -1021,7 +971,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet50>
-
 
     //<snippet51>
     public void DrawVisualStyleElement_Spin_Up3(PaintEventArgs e)
@@ -1042,7 +991,6 @@ public class Form1 : Form
     }
     //</snippet51>
 
-
     //<snippet52>
     public void DrawVisualStyleElement_Spin_Up4(PaintEventArgs e)
     {
@@ -1061,7 +1009,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet52>
-
 
     //<snippet53>
     public void DrawVisualStyleElement_Spin_Down1(PaintEventArgs e)
@@ -1082,7 +1029,6 @@ public class Form1 : Form
     }
     //</snippet53>
 
-
     //<snippet54>
     public void DrawVisualStyleElement_Spin_Down2(PaintEventArgs e)
     {
@@ -1101,7 +1047,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet54>
-
 
     //<snippet55>
     public void DrawVisualStyleElement_Spin_Down3(PaintEventArgs e)
@@ -1122,7 +1067,6 @@ public class Form1 : Form
     }
     //</snippet55>
 
-
     //<snippet56>
     public void DrawVisualStyleElement_Spin_Down4(PaintEventArgs e)
     {
@@ -1141,7 +1085,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet56>
-
 
     //<snippet57>
     public void DrawVisualStyleElement_Spin_UpHorizontal1(PaintEventArgs e)
@@ -1162,7 +1105,6 @@ public class Form1 : Form
     }
     //</snippet57>
 
-
     //<snippet58>
     public void DrawVisualStyleElement_Spin_UpHorizontal2(PaintEventArgs e)
     {
@@ -1181,7 +1123,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet58>
-
 
     //<snippet59>
     public void DrawVisualStyleElement_Spin_UpHorizontal3(PaintEventArgs e)
@@ -1202,7 +1143,6 @@ public class Form1 : Form
     }
     //</snippet59>
 
-
     //<snippet60>
     public void DrawVisualStyleElement_Spin_UpHorizontal4(PaintEventArgs e)
     {
@@ -1221,7 +1161,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet60>
-
 
     //<snippet61>
     public void DrawVisualStyleElement_Spin_DownHorizontal1(PaintEventArgs e)
@@ -1242,7 +1181,6 @@ public class Form1 : Form
     }
     //</snippet61>
 
-
     //<snippet62>
     public void DrawVisualStyleElement_Spin_DownHorizontal2(PaintEventArgs e)
     {
@@ -1261,7 +1199,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet62>
-
 
     //<snippet63>
     public void DrawVisualStyleElement_Spin_DownHorizontal3(PaintEventArgs e)
@@ -1282,7 +1219,6 @@ public class Form1 : Form
     }
     //</snippet63>
 
-
     //<snippet64>
     public void DrawVisualStyleElement_Spin_DownHorizontal4(PaintEventArgs e)
     {
@@ -1301,7 +1237,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet64>
-
 
     // DrawVisualStyleElementScrollBarArrowButton1
     //System.Windows.Forms.VisualStyleElementExamples#65
@@ -1324,7 +1259,6 @@ public class Form1 : Form
     }
     //</snippet65>
 
-
     // DrawVisualStyleElementScrollBarArrowButton2
     //System.Windows.Forms.VisualStyleElementExamples#66
     //<snippet66>
@@ -1345,7 +1279,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet66>
-
 
     // DrawVisualStyleElementScrollBarArrowButton3
     //System.Windows.Forms.VisualStyleElementExamples#67
@@ -1368,7 +1301,6 @@ public class Form1 : Form
     }
     //</snippet67>
 
-
     // DrawVisualStyleElementScrollBarArrowButton4
     //System.Windows.Forms.VisualStyleElementExamples#68
     //<snippet68>
@@ -1389,7 +1321,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet68>
-
 
     // DrawVisualStyleElementScrollBarArrowButton5
     //System.Windows.Forms.VisualStyleElementExamples#69
@@ -1412,7 +1343,6 @@ public class Form1 : Form
     }
     //</snippet69>
 
-
     // DrawVisualStyleElementScrollBarArrowButton6
     //System.Windows.Forms.VisualStyleElementExamples#70
     //<snippet70>
@@ -1433,7 +1363,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet70>
-
 
     // DrawVisualStyleElementScrollBarArrowButton7
     //System.Windows.Forms.VisualStyleElementExamples#71
@@ -1456,7 +1385,6 @@ public class Form1 : Form
     }
     //</snippet71>
 
-
     // DrawVisualStyleElementScrollBarArrowButton8
     //System.Windows.Forms.VisualStyleElementExamples#72
     //<snippet72>
@@ -1477,7 +1405,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet72>
-
 
     // DrawVisualStyleElementScrollBarArrowButton9
     //System.Windows.Forms.VisualStyleElementExamples#73
@@ -1500,7 +1427,6 @@ public class Form1 : Form
     }
     //</snippet73>
 
-
     // DrawVisualStyleElementScrollBarArrowButton10
     //System.Windows.Forms.VisualStyleElementExamples#74
     //<snippet74>
@@ -1521,7 +1447,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet74>
-
 
     // DrawVisualStyleElementScrollBarArrowButton11
     //System.Windows.Forms.VisualStyleElementExamples#75
@@ -1544,7 +1469,6 @@ public class Form1 : Form
     }
     //</snippet75>
 
-
     // DrawVisualStyleElementScrollBarArrowButton12
     //System.Windows.Forms.VisualStyleElementExamples#76
     //<snippet76>
@@ -1565,7 +1489,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet76>
-
 
     // DrawVisualStyleElementScrollBarArrowButton13
     //System.Windows.Forms.VisualStyleElementExamples#77
@@ -1588,7 +1511,6 @@ public class Form1 : Form
     }
     //</snippet77>
 
-
     // DrawVisualStyleElementScrollBarArrowButton14
     //System.Windows.Forms.VisualStyleElementExamples#78
     //<snippet78>
@@ -1609,7 +1531,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet78>
-
 
     // DrawVisualStyleElementScrollBarArrowButton15
     //System.Windows.Forms.VisualStyleElementExamples#79
@@ -1632,7 +1553,6 @@ public class Form1 : Form
     }
     //</snippet79>
 
-
     // DrawVisualStyleElementScrollBarArrowButton16
     //System.Windows.Forms.VisualStyleElementExamples#80
     //<snippet80>
@@ -1653,7 +1573,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet80>
-
 
     // DrawVisualStyleElementScrollBarThumbButtonHorizontal1
     //System.Windows.Forms.VisualStyleElementExamples#81
@@ -1676,7 +1595,6 @@ public class Form1 : Form
     }
     //</snippet81>
 
-
     // DrawVisualStyleElementScrollBarThumbButtonHorizontal2
     //System.Windows.Forms.VisualStyleElementExamples#82
     //<snippet82>
@@ -1697,7 +1615,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet82>
-
 
     // DrawVisualStyleElementScrollBarThumbButtonHorizontal3
     //System.Windows.Forms.VisualStyleElementExamples#83
@@ -1720,7 +1637,6 @@ public class Form1 : Form
     }
     //</snippet83>
 
-
     // DrawVisualStyleElementScrollBarThumbButtonHorizontal4
     //System.Windows.Forms.VisualStyleElementExamples#84
     //<snippet84>
@@ -1741,7 +1657,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet84>
-
 
     // DrawVisualStyleElementScrollBarThumbButtonVertical1
     //System.Windows.Forms.VisualStyleElementExamples#85
@@ -1764,7 +1679,6 @@ public class Form1 : Form
     }
     //</snippet85>
 
-
     // DrawVisualStyleElementScrollBarThumbButtonVertical2
     //System.Windows.Forms.VisualStyleElementExamples#86
     //<snippet86>
@@ -1785,7 +1699,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet86>
-
 
     // DrawVisualStyleElementScrollBarThumbButtonVertical3
     //System.Windows.Forms.VisualStyleElementExamples#87
@@ -1808,7 +1721,6 @@ public class Form1 : Form
     }
     //</snippet87>
 
-
     // DrawVisualStyleElementScrollBarThumbButtonVertical4
     //System.Windows.Forms.VisualStyleElementExamples#88
     //<snippet88>
@@ -1829,7 +1741,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet88>
-
 
     // DrawVisualStyleElementScrollBarRightTrackHorizontal1
     //System.Windows.Forms.VisualStyleElementExamples#89
@@ -1852,7 +1763,6 @@ public class Form1 : Form
     }
     //</snippet89>
 
-
     // DrawVisualStyleElementScrollBarRightTrackHorizontal2
     //System.Windows.Forms.VisualStyleElementExamples#90
     //<snippet90>
@@ -1873,7 +1783,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet90>
-
 
     // DrawVisualStyleElementScrollBarRightTrackHorizontal3
     //System.Windows.Forms.VisualStyleElementExamples#91
@@ -1896,7 +1805,6 @@ public class Form1 : Form
     }
     //</snippet91>
 
-
     // DrawVisualStyleElementScrollBarRightTrackHorizontal4
     //System.Windows.Forms.VisualStyleElementExamples#92
     //<snippet92>
@@ -1917,7 +1825,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet92>
-
 
     // DrawVisualStyleElementScrollBarLeftTrackHorizontal1
     //System.Windows.Forms.VisualStyleElementExamples#93
@@ -1940,7 +1847,6 @@ public class Form1 : Form
     }
     //</snippet93>
 
-
     // DrawVisualStyleElementScrollBarLeftTrackHorizontal2
     //System.Windows.Forms.VisualStyleElementExamples#94
     //<snippet94>
@@ -1961,7 +1867,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet94>
-
 
     // DrawVisualStyleElementScrollBarLeftTrackHorizontal3
     //System.Windows.Forms.VisualStyleElementExamples#95
@@ -1984,7 +1889,6 @@ public class Form1 : Form
     }
     //</snippet95>
 
-
     // DrawVisualStyleElementScrollBarLeftTrackHorizontal4
     //System.Windows.Forms.VisualStyleElementExamples#96
     //<snippet96>
@@ -2005,7 +1909,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet96>
-
 
     // DrawVisualStyleElementScrollBarLowerTrackVertical1
     //System.Windows.Forms.VisualStyleElementExamples#97
@@ -2028,7 +1931,6 @@ public class Form1 : Form
     }
     //</snippet97>
 
-
     // DrawVisualStyleElementScrollBarLowerTrackVertical2
     //System.Windows.Forms.VisualStyleElementExamples#98
     //<snippet98>
@@ -2049,7 +1951,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet98>
-
 
     // DrawVisualStyleElementScrollBarLowerTrackVertical3
     //System.Windows.Forms.VisualStyleElementExamples#99
@@ -2072,7 +1973,6 @@ public class Form1 : Form
     }
     //</snippet99>
 
-
     // DrawVisualStyleElementScrollBarLowerTrackVertical4
     //System.Windows.Forms.VisualStyleElementExamples#100
     //<snippet100>
@@ -2093,7 +1993,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet100>
-
 
     // DrawVisualStyleElementScrollBarUpperTrackVertical1
     //System.Windows.Forms.VisualStyleElementExamples#101
@@ -2116,7 +2015,6 @@ public class Form1 : Form
     }
     //</snippet101>
 
-
     // DrawVisualStyleElementScrollBarUpperTrackVertical2
     //System.Windows.Forms.VisualStyleElementExamples#102
     //<snippet102>
@@ -2137,7 +2035,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet102>
-
 
     // DrawVisualStyleElementScrollBarUpperTrackVertical3
     //System.Windows.Forms.VisualStyleElementExamples#103
@@ -2160,7 +2057,6 @@ public class Form1 : Form
     }
     //</snippet103>
 
-
     // DrawVisualStyleElementScrollBarUpperTrackVertical4
     //System.Windows.Forms.VisualStyleElementExamples#104
     //<snippet104>
@@ -2181,7 +2077,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet104>
-
 
     // DrawVisualStyleElementScrollBarGripperHorizontal1
     //System.Windows.Forms.VisualStyleElementExamples#105
@@ -2204,7 +2099,6 @@ public class Form1 : Form
     }
     //</snippet105>
 
-
     // DrawVisualStyleElementScrollBarGripperVertical1
     //System.Windows.Forms.VisualStyleElementExamples#106
     //<snippet106>
@@ -2225,7 +2119,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet106>
-
 
     // DrawVisualStyleElementScrollBarSizeBox1
     //System.Windows.Forms.VisualStyleElementExamples#107
@@ -2248,7 +2141,6 @@ public class Form1 : Form
     }
     //</snippet107>
 
-
     // DrawVisualStyleElementScrollBarSizeBox2
     //System.Windows.Forms.VisualStyleElementExamples#108
     //<snippet108>
@@ -2269,7 +2161,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet108>
-
 
     // DrawVisualStyleElementTabTabItem1
     //System.Windows.Forms.VisualStyleElementExamples#109
@@ -2292,7 +2183,6 @@ public class Form1 : Form
     }
     //</snippet109>
 
-
     // DrawVisualStyleElementTabTabItem2
     //System.Windows.Forms.VisualStyleElementExamples#110
     //<snippet110>
@@ -2313,7 +2203,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet110>
-
 
     // DrawVisualStyleElementTabTabItem3
     //System.Windows.Forms.VisualStyleElementExamples#111
@@ -2336,7 +2225,6 @@ public class Form1 : Form
     }
     //</snippet111>
 
-
     // DrawVisualStyleElementTabTabItem4
     //System.Windows.Forms.VisualStyleElementExamples#112
     //<snippet112>
@@ -2357,7 +2245,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet112>
-
 
     // DrawVisualStyleElementTabTabItemLeftEdge1
     //System.Windows.Forms.VisualStyleElementExamples#113
@@ -2380,7 +2267,6 @@ public class Form1 : Form
     }
     //</snippet113>
 
-
     // DrawVisualStyleElementTabTabItemLeftEdge2
     //System.Windows.Forms.VisualStyleElementExamples#114
     //<snippet114>
@@ -2401,7 +2287,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet114>
-
 
     // DrawVisualStyleElementTabTabItemLeftEdge3
     //System.Windows.Forms.VisualStyleElementExamples#115
@@ -2424,7 +2309,6 @@ public class Form1 : Form
     }
     //</snippet115>
 
-
     // DrawVisualStyleElementTabTabItemLeftEdge4
     //System.Windows.Forms.VisualStyleElementExamples#116
     //<snippet116>
@@ -2445,7 +2329,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet116>
-
 
     // DrawVisualStyleElementTabTabItemRightEdge1
     //System.Windows.Forms.VisualStyleElementExamples#117
@@ -2468,7 +2351,6 @@ public class Form1 : Form
     }
     //</snippet117>
 
-
     // DrawVisualStyleElementTabTabItemRightEdge2
     //System.Windows.Forms.VisualStyleElementExamples#118
     //<snippet118>
@@ -2489,7 +2371,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet118>
-
 
     // DrawVisualStyleElementTabTabItemRightEdge3
     //System.Windows.Forms.VisualStyleElementExamples#119
@@ -2512,7 +2393,6 @@ public class Form1 : Form
     }
     //</snippet119>
 
-
     // DrawVisualStyleElementTabTabItemRightEdge4
     //System.Windows.Forms.VisualStyleElementExamples#120
     //<snippet120>
@@ -2533,7 +2413,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet120>
-
 
     // DrawVisualStyleElementTabTabItemBothEdges1
     //System.Windows.Forms.VisualStyleElementExamples#121
@@ -2556,7 +2435,6 @@ public class Form1 : Form
     }
     //</snippet121>
 
-
     // DrawVisualStyleElementTabTopTabItem1
     //System.Windows.Forms.VisualStyleElementExamples#122
     //<snippet122>
@@ -2577,7 +2455,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet122>
-
 
     // DrawVisualStyleElementTabTopTabItem2
     //System.Windows.Forms.VisualStyleElementExamples#123
@@ -2600,7 +2477,6 @@ public class Form1 : Form
     }
     //</snippet123>
 
-
     // DrawVisualStyleElementTabTopTabItem3
     //System.Windows.Forms.VisualStyleElementExamples#124
     //<snippet124>
@@ -2621,7 +2497,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet124>
-
 
     // DrawVisualStyleElementTabTopTabItem4
     //System.Windows.Forms.VisualStyleElementExamples#125
@@ -2644,7 +2519,6 @@ public class Form1 : Form
     }
     //</snippet125>
 
-
     // DrawVisualStyleElementTabTopTabItemLeftEdge1
     //System.Windows.Forms.VisualStyleElementExamples#126
     //<snippet126>
@@ -2665,7 +2539,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet126>
-
 
     // DrawVisualStyleElementTabTopTabItemLeftEdge2
     //System.Windows.Forms.VisualStyleElementExamples#127
@@ -2688,7 +2561,6 @@ public class Form1 : Form
     }
     //</snippet127>
 
-
     // DrawVisualStyleElementTabTopTabItemLeftEdge3
     //System.Windows.Forms.VisualStyleElementExamples#128
     //<snippet128>
@@ -2709,7 +2581,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet128>
-
 
     // DrawVisualStyleElementTabTopTabItemLeftEdge4
     //System.Windows.Forms.VisualStyleElementExamples#129
@@ -2732,7 +2603,6 @@ public class Form1 : Form
     }
     //</snippet129>
 
-
     // DrawVisualStyleElementTabTopTabItemRightEdge1
     //System.Windows.Forms.VisualStyleElementExamples#130
     //<snippet130>
@@ -2753,7 +2623,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet130>
-
 
     // DrawVisualStyleElementTabTopTabItemRightEdge2
     //System.Windows.Forms.VisualStyleElementExamples#131
@@ -2776,7 +2645,6 @@ public class Form1 : Form
     }
     //</snippet131>
 
-
     // DrawVisualStyleElementTabTopTabItemRightEdge3
     //System.Windows.Forms.VisualStyleElementExamples#132
     //<snippet132>
@@ -2797,7 +2665,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet132>
-
 
     // DrawVisualStyleElementTabTopTabItemRightEdge4
     //System.Windows.Forms.VisualStyleElementExamples#133
@@ -2820,7 +2687,6 @@ public class Form1 : Form
     }
     //</snippet133>
 
-
     // DrawVisualStyleElementTabTopTabItemBothEdges1
     //System.Windows.Forms.VisualStyleElementExamples#134
     //<snippet134>
@@ -2841,7 +2707,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet134>
-
 
     // DrawVisualStyleElementTabPane1
     //System.Windows.Forms.VisualStyleElementExamples#135
@@ -2864,7 +2729,6 @@ public class Form1 : Form
     }
     //</snippet135>
 
-
     // DrawVisualStyleElementTabBody1
     //System.Windows.Forms.VisualStyleElementExamples#136
     //<snippet136>
@@ -2885,7 +2749,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet136>
-
 
     // DrawVisualStyleElementExplorerBarHeaderBackground1
     //System.Windows.Forms.VisualStyleElementExamples#137
@@ -2908,7 +2771,6 @@ public class Form1 : Form
     }
     //</snippet137>
 
-
     // DrawVisualStyleElementExplorerBarHeaderClose1
     //System.Windows.Forms.VisualStyleElementExamples#138
     //<snippet138>
@@ -2929,7 +2791,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet138>
-
 
     // DrawVisualStyleElementExplorerBarHeaderClose2
     //System.Windows.Forms.VisualStyleElementExamples#139
@@ -2952,7 +2813,6 @@ public class Form1 : Form
     }
     //</snippet139>
 
-
     // DrawVisualStyleElementExplorerBarHeaderClose3
     //System.Windows.Forms.VisualStyleElementExamples#140
     //<snippet140>
@@ -2973,7 +2833,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet140>
-
 
     // DrawVisualStyleElementExplorerBarHeaderPin1
     //System.Windows.Forms.VisualStyleElementExamples#141
@@ -2996,7 +2855,6 @@ public class Form1 : Form
     }
     //</snippet141>
 
-
     // DrawVisualStyleElementExplorerBarHeaderPin2
     //System.Windows.Forms.VisualStyleElementExamples#142
     //<snippet142>
@@ -3017,7 +2875,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet142>
-
 
     // DrawVisualStyleElementExplorerBarHeaderPin3
     //System.Windows.Forms.VisualStyleElementExamples#143
@@ -3040,7 +2897,6 @@ public class Form1 : Form
     }
     //</snippet143>
 
-
     // DrawVisualStyleElementExplorerBarHeaderPin4
     //System.Windows.Forms.VisualStyleElementExamples#144
     //<snippet144>
@@ -3061,7 +2917,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet144>
-
 
     // DrawVisualStyleElementExplorerBarHeaderPin5
     //System.Windows.Forms.VisualStyleElementExamples#145
@@ -3084,7 +2939,6 @@ public class Form1 : Form
     }
     //</snippet145>
 
-
     // DrawVisualStyleElementExplorerBarHeaderPin6
     //System.Windows.Forms.VisualStyleElementExamples#146
     //<snippet146>
@@ -3105,7 +2959,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet146>
-
 
     // DrawVisualStyleElementExplorerBarIEBarMenu1
     //System.Windows.Forms.VisualStyleElementExamples#147
@@ -3128,7 +2981,6 @@ public class Form1 : Form
     }
     //</snippet147>
 
-
     // DrawVisualStyleElementExplorerBarIEBarMenu2
     //System.Windows.Forms.VisualStyleElementExamples#148
     //<snippet148>
@@ -3149,7 +3001,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet148>
-
 
     // DrawVisualStyleElementExplorerBarIEBarMenu3
     //System.Windows.Forms.VisualStyleElementExamples#149
@@ -3172,7 +3023,6 @@ public class Form1 : Form
     }
     //</snippet149>
 
-
     // DrawVisualStyleElementExplorerBarNormalGroupBackground1
     //System.Windows.Forms.VisualStyleElementExamples#150
     //<snippet150>
@@ -3193,7 +3043,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet150>
-
 
     // DrawVisualStyleElementExplorerBarNormalGroupCollapse1
     //System.Windows.Forms.VisualStyleElementExamples#151
@@ -3216,7 +3065,6 @@ public class Form1 : Form
     }
     //</snippet151>
 
-
     // DrawVisualStyleElementExplorerBarNormalGroupCollapse2
     //System.Windows.Forms.VisualStyleElementExamples#152
     //<snippet152>
@@ -3237,7 +3085,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet152>
-
 
     // DrawVisualStyleElementExplorerBarNormalGroupCollapse3
     //System.Windows.Forms.VisualStyleElementExamples#153
@@ -3260,7 +3107,6 @@ public class Form1 : Form
     }
     //</snippet153>
 
-
     // DrawVisualStyleElementExplorerBarNormalGroupExpand1
     //System.Windows.Forms.VisualStyleElementExamples#154
     //<snippet154>
@@ -3281,7 +3127,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet154>
-
 
     // DrawVisualStyleElementExplorerBarNormalGroupExpand2
     //System.Windows.Forms.VisualStyleElementExamples#155
@@ -3304,7 +3149,6 @@ public class Form1 : Form
     }
     //</snippet155>
 
-
     // DrawVisualStyleElementExplorerBarNormalGroupExpand3
     //System.Windows.Forms.VisualStyleElementExamples#156
     //<snippet156>
@@ -3325,7 +3169,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet156>
-
 
     // DrawVisualStyleElementExplorerBarNormalGroupHead1
     //System.Windows.Forms.VisualStyleElementExamples#157
@@ -3348,7 +3191,6 @@ public class Form1 : Form
     }
     //</snippet157>
 
-
     // DrawVisualStyleElementExplorerBarSpecialGroupBackground1
     //System.Windows.Forms.VisualStyleElementExamples#158
     //<snippet158>
@@ -3369,7 +3211,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet158>
-
 
     // DrawVisualStyleElementExplorerBarSpecialGroupCollapse1
     //System.Windows.Forms.VisualStyleElementExamples#159
@@ -3392,7 +3233,6 @@ public class Form1 : Form
     }
     //</snippet159>
 
-
     // DrawVisualStyleElementExplorerBarSpecialGroupCollapse2
     //System.Windows.Forms.VisualStyleElementExamples#160
     //<snippet160>
@@ -3413,7 +3253,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet160>
-
 
     // DrawVisualStyleElementExplorerBarSpecialGroupCollapse3
     //System.Windows.Forms.VisualStyleElementExamples#161
@@ -3436,7 +3275,6 @@ public class Form1 : Form
     }
     //</snippet161>
 
-
     // DrawVisualStyleElementExplorerBarSpecialGroupExpand1
     //System.Windows.Forms.VisualStyleElementExamples#162
     //<snippet162>
@@ -3457,7 +3295,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet162>
-
 
     // DrawVisualStyleElementExplorerBarSpecialGroupExpand2
     //System.Windows.Forms.VisualStyleElementExamples#163
@@ -3480,7 +3317,6 @@ public class Form1 : Form
     }
     //</snippet163>
 
-
     // DrawVisualStyleElementExplorerBarSpecialGroupExpand3
     //System.Windows.Forms.VisualStyleElementExamples#164
     //<snippet164>
@@ -3501,7 +3337,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet164>
-
 
     // DrawVisualStyleElementExplorerBarSpecialGroupHead1
     //System.Windows.Forms.VisualStyleElementExamples#165
@@ -3524,7 +3359,6 @@ public class Form1 : Form
     }
     //</snippet165>
 
-
     // DrawVisualStyleElementHeaderItem1
     //System.Windows.Forms.VisualStyleElementExamples#166
     //<snippet166>
@@ -3545,7 +3379,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet166>
-
 
     // DrawVisualStyleElementHeaderItem2
     //System.Windows.Forms.VisualStyleElementExamples#167
@@ -3568,7 +3401,6 @@ public class Form1 : Form
     }
     //</snippet167>
 
-
     // DrawVisualStyleElementHeaderItem3
     //System.Windows.Forms.VisualStyleElementExamples#168
     //<snippet168>
@@ -3589,7 +3421,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet168>
-
 
     // DrawVisualStyleElementHeaderItemLeft1
     //System.Windows.Forms.VisualStyleElementExamples#169
@@ -3612,7 +3443,6 @@ public class Form1 : Form
     }
     //</snippet169>
 
-
     // DrawVisualStyleElementHeaderItemLeft2
     //System.Windows.Forms.VisualStyleElementExamples#170
     //<snippet170>
@@ -3633,7 +3463,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet170>
-
 
     // DrawVisualStyleElementHeaderItemLeft3
     //System.Windows.Forms.VisualStyleElementExamples#171
@@ -3656,7 +3485,6 @@ public class Form1 : Form
     }
     //</snippet171>
 
-
     // DrawVisualStyleElementHeaderItemRight1
     //System.Windows.Forms.VisualStyleElementExamples#172
     //<snippet172>
@@ -3677,7 +3505,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet172>
-
 
     // DrawVisualStyleElementHeaderItemRight2
     //System.Windows.Forms.VisualStyleElementExamples#173
@@ -3700,7 +3527,6 @@ public class Form1 : Form
     }
     //</snippet173>
 
-
     // DrawVisualStyleElementHeaderItemRight3
     //System.Windows.Forms.VisualStyleElementExamples#174
     //<snippet174>
@@ -3721,7 +3547,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet174>
-
 
     // DrawVisualStyleElementHeaderSortArrow1
     //System.Windows.Forms.VisualStyleElementExamples#175
@@ -3744,7 +3569,6 @@ public class Form1 : Form
     }
     //</snippet175>
 
-
     // DrawVisualStyleElementHeaderSortArrow2
     //System.Windows.Forms.VisualStyleElementExamples#176
     //<snippet176>
@@ -3765,7 +3589,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet176>
-
 
     // DrawVisualStyleElementListViewItem1
     //System.Windows.Forms.VisualStyleElementExamples#177
@@ -3788,7 +3611,6 @@ public class Form1 : Form
     }
     //</snippet177>
 
-
     // DrawVisualStyleElementListViewItem2
     //System.Windows.Forms.VisualStyleElementExamples#178
     //<snippet178>
@@ -3809,7 +3631,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet178>
-
 
     // DrawVisualStyleElementListViewItem3
     //System.Windows.Forms.VisualStyleElementExamples#179
@@ -3832,7 +3653,6 @@ public class Form1 : Form
     }
     //</snippet179>
 
-
     // DrawVisualStyleElementListViewItem4
     //System.Windows.Forms.VisualStyleElementExamples#180
     //<snippet180>
@@ -3853,7 +3673,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet180>
-
 
     // DrawVisualStyleElementListViewItem5
     //System.Windows.Forms.VisualStyleElementExamples#181
@@ -3876,7 +3695,6 @@ public class Form1 : Form
     }
     //</snippet181>
 
-
     // DrawVisualStyleElementListViewGroup1
     //System.Windows.Forms.VisualStyleElementExamples#182
     //<snippet182>
@@ -3897,7 +3715,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet182>
-
 
     // DrawVisualStyleElementListViewDetail1
     //System.Windows.Forms.VisualStyleElementExamples#183
@@ -3920,7 +3737,6 @@ public class Form1 : Form
     }
     //</snippet183>
 
-
     // DrawVisualStyleElementListViewSortedDetail1
     //System.Windows.Forms.VisualStyleElementExamples#184
     //<snippet184>
@@ -3941,7 +3757,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet184>
-
 
     // DrawVisualStyleElementListViewEmptyText1
     //System.Windows.Forms.VisualStyleElementExamples#185
@@ -3964,7 +3779,6 @@ public class Form1 : Form
     }
     //</snippet185>
 
-
     // DrawVisualStyleElementMenuBandNewApplicationButton1
     //System.Windows.Forms.VisualStyleElementExamples#186
     //<snippet186>
@@ -3985,7 +3799,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet186>
-
 
     // DrawVisualStyleElementMenuBandNewApplicationButton2
     //System.Windows.Forms.VisualStyleElementExamples#187
@@ -4008,7 +3821,6 @@ public class Form1 : Form
     }
     //</snippet187>
 
-
     // DrawVisualStyleElementMenuBandNewApplicationButton3
     //System.Windows.Forms.VisualStyleElementExamples#188
     //<snippet188>
@@ -4029,7 +3841,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet188>
-
 
     // DrawVisualStyleElementMenuBandNewApplicationButton4
     //System.Windows.Forms.VisualStyleElementExamples#189
@@ -4052,7 +3863,6 @@ public class Form1 : Form
     }
     //</snippet189>
 
-
     // DrawVisualStyleElementMenuBandNewApplicationButton5
     //System.Windows.Forms.VisualStyleElementExamples#190
     //<snippet190>
@@ -4073,7 +3883,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet190>
-
 
     // DrawVisualStyleElementMenuBandNewApplicationButton6
     //System.Windows.Forms.VisualStyleElementExamples#191
@@ -4096,7 +3905,6 @@ public class Form1 : Form
     }
     //</snippet191>
 
-
     // DrawVisualStyleElementMenuBandSeparator1
     //System.Windows.Forms.VisualStyleElementExamples#192
     //<snippet192>
@@ -4117,7 +3925,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet192>
-
 
     // DrawVisualStyleElementMenuItem1
     //System.Windows.Forms.VisualStyleElementExamples#193
@@ -4140,7 +3947,6 @@ public class Form1 : Form
     }
     //</snippet193>
 
-
     // DrawVisualStyleElementMenuItem2
     //System.Windows.Forms.VisualStyleElementExamples#194
     //<snippet194>
@@ -4161,7 +3967,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet194>
-
 
     // DrawVisualStyleElementMenuItem3
     //System.Windows.Forms.VisualStyleElementExamples#195
@@ -4184,7 +3989,6 @@ public class Form1 : Form
     }
     //</snippet195>
 
-
     // DrawVisualStyleElementMenuDropDown1
     //System.Windows.Forms.VisualStyleElementExamples#196
     //<snippet196>
@@ -4205,7 +4009,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet196>
-
 
     // DrawVisualStyleElementMenuBarItem1
     //System.Windows.Forms.VisualStyleElementExamples#197
@@ -4228,7 +4031,6 @@ public class Form1 : Form
     }
     //</snippet197>
 
-
     // DrawVisualStyleElementMenuBarDropDown1
     //System.Windows.Forms.VisualStyleElementExamples#198
     //<snippet198>
@@ -4249,7 +4051,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet198>
-
 
     // DrawVisualStyleElementMenuChevron1
     //System.Windows.Forms.VisualStyleElementExamples#199
@@ -4272,7 +4073,6 @@ public class Form1 : Form
     }
     //</snippet199>
 
-
     // DrawVisualStyleElementMenuSeparator1
     //System.Windows.Forms.VisualStyleElementExamples#200
     //<snippet200>
@@ -4293,7 +4093,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet200>
-
 
     // DrawVisualStyleElementProgressBarBar1
     //System.Windows.Forms.VisualStyleElementExamples#201
@@ -4316,7 +4115,6 @@ public class Form1 : Form
     }
     //</snippet201>
 
-
     // DrawVisualStyleElementProgressBarBarVertical1
     //System.Windows.Forms.VisualStyleElementExamples#202
     //<snippet202>
@@ -4337,7 +4135,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet202>
-
 
     // DrawVisualStyleElementProgressBarChunk1
     //System.Windows.Forms.VisualStyleElementExamples#203
@@ -4360,7 +4157,6 @@ public class Form1 : Form
     }
     //</snippet203>
 
-
     // DrawVisualStyleElementProgressBarChunkVertical1
     //System.Windows.Forms.VisualStyleElementExamples#204
     //<snippet204>
@@ -4381,7 +4177,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet204>
-
 
     // DrawVisualStyleElementRebarGripper1
     //System.Windows.Forms.VisualStyleElementExamples#205
@@ -4404,7 +4199,6 @@ public class Form1 : Form
     }
     //</snippet205>
 
-
     // DrawVisualStyleElementRebarGripperVertical1
     //System.Windows.Forms.VisualStyleElementExamples#206
     //<snippet206>
@@ -4425,7 +4219,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet206>
-
 
     // DrawVisualStyleElementRebarBand1
     //System.Windows.Forms.VisualStyleElementExamples#207
@@ -4448,7 +4241,6 @@ public class Form1 : Form
     }
     //</snippet207>
 
-
     // DrawVisualStyleElementRebarChevron1
     //System.Windows.Forms.VisualStyleElementExamples#208
     //<snippet208>
@@ -4469,7 +4261,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet208>
-
 
     // DrawVisualStyleElementRebarChevron2
     //System.Windows.Forms.VisualStyleElementExamples#209
@@ -4492,7 +4283,6 @@ public class Form1 : Form
     }
     //</snippet209>
 
-
     // DrawVisualStyleElementRebarChevron3
     //System.Windows.Forms.VisualStyleElementExamples#210
     //<snippet210>
@@ -4513,7 +4303,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet210>
-
 
     // DrawVisualStyleElementRebarChevronVertical1
     //System.Windows.Forms.VisualStyleElementExamples#211
@@ -4536,7 +4325,6 @@ public class Form1 : Form
     }
     //</snippet211>
 
-
     // DrawVisualStyleElementRebarChevronVertical2
     //System.Windows.Forms.VisualStyleElementExamples#212
     //<snippet212>
@@ -4557,7 +4345,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet212>
-
 
     // DrawVisualStyleElementRebarChevronVertical3
     //System.Windows.Forms.VisualStyleElementExamples#213
@@ -4580,7 +4367,6 @@ public class Form1 : Form
     }
     //</snippet213>
 
-
     // DrawVisualStyleElementStartPanelUserPane1
     //System.Windows.Forms.VisualStyleElementExamples#214
     //<snippet214>
@@ -4601,7 +4387,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet214>
-
 
     // DrawVisualStyleElementStartPanelMorePrograms1
     //System.Windows.Forms.VisualStyleElementExamples#215
@@ -4624,7 +4409,6 @@ public class Form1 : Form
     }
     //</snippet215>
 
-
     // DrawVisualStyleElementStartPanelMoreProgramsArrow1
     //System.Windows.Forms.VisualStyleElementExamples#216
     //<snippet216>
@@ -4645,7 +4429,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet216>
-
 
     // DrawVisualStyleElementStartPanelMoreProgramsArrow2
     //System.Windows.Forms.VisualStyleElementExamples#217
@@ -4668,7 +4451,6 @@ public class Form1 : Form
     }
     //</snippet217>
 
-
     // DrawVisualStyleElementStartPanelMoreProgramsArrow3
     //System.Windows.Forms.VisualStyleElementExamples#218
     //<snippet218>
@@ -4689,7 +4471,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet218>
-
 
     // DrawVisualStyleElementStartPanelProgList1
     //System.Windows.Forms.VisualStyleElementExamples#219
@@ -4712,7 +4493,6 @@ public class Form1 : Form
     }
     //</snippet219>
 
-
     // DrawVisualStyleElementStartPanelProgListSeparator1
     //System.Windows.Forms.VisualStyleElementExamples#220
     //<snippet220>
@@ -4733,7 +4513,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet220>
-
 
     // DrawVisualStyleElementStartPanelPlaceList1
     //System.Windows.Forms.VisualStyleElementExamples#221
@@ -4756,7 +4535,6 @@ public class Form1 : Form
     }
     //</snippet221>
 
-
     // DrawVisualStyleElementStartPanelPlaceListSeparator1
     //System.Windows.Forms.VisualStyleElementExamples#222
     //<snippet222>
@@ -4777,7 +4555,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet222>
-
 
     // DrawVisualStyleElementStartPanelLogOff1
     //System.Windows.Forms.VisualStyleElementExamples#223
@@ -4800,7 +4577,6 @@ public class Form1 : Form
     }
     //</snippet223>
 
-
     // DrawVisualStyleElementStartPanelLogOffButtons1
     //System.Windows.Forms.VisualStyleElementExamples#224
     //<snippet224>
@@ -4821,7 +4597,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet224>
-
 
     // DrawVisualStyleElementStartPanelLogOffButtons2
     //System.Windows.Forms.VisualStyleElementExamples#225
@@ -4844,7 +4619,6 @@ public class Form1 : Form
     }
     //</snippet225>
 
-
     // DrawVisualStyleElementStartPanelLogOffButtons3
     //System.Windows.Forms.VisualStyleElementExamples#226
     //<snippet226>
@@ -4865,7 +4639,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet226>
-
 
     // DrawVisualStyleElementStartPanelUserPicture1
     //System.Windows.Forms.VisualStyleElementExamples#227
@@ -4888,7 +4661,6 @@ public class Form1 : Form
     }
     //</snippet227>
 
-
     // DrawVisualStyleElementStartPanelPreview1
     //System.Windows.Forms.VisualStyleElementExamples#228
     //<snippet228>
@@ -4909,7 +4681,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet228>
-
 
     // DrawVisualStyleElementStatusBar1
     //System.Windows.Forms.VisualStyleElementExamples#229
@@ -4932,7 +4703,6 @@ public class Form1 : Form
     }
     //</snippet229>
 
-
     // DrawVisualStyleElementStatusPane1
     //System.Windows.Forms.VisualStyleElementExamples#230
     //<snippet230>
@@ -4953,7 +4723,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet230>
-
 
     // DrawVisualStyleElementStatusGripperPane1
     //System.Windows.Forms.VisualStyleElementExamples#231
@@ -4976,7 +4745,6 @@ public class Form1 : Form
     }
     //</snippet231>
 
-
     // DrawVisualStyleElementStatusGripper1
     //System.Windows.Forms.VisualStyleElementExamples#232
     //<snippet232>
@@ -4997,7 +4765,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet232>
-
 
     // DrawVisualStyleElementTaskBandGroupCount1
     //System.Windows.Forms.VisualStyleElementExamples#233
@@ -5020,7 +4787,6 @@ public class Form1 : Form
     }
     //</snippet233>
 
-
     // DrawVisualStyleElementTaskBandFlashButton1
     //System.Windows.Forms.VisualStyleElementExamples#234
     //<snippet234>
@@ -5041,7 +4807,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet234>
-
 
     // DrawVisualStyleElementTaskBandFlashButtonGroupMenu1
     //System.Windows.Forms.VisualStyleElementExamples#235
@@ -5064,7 +4829,6 @@ public class Form1 : Form
     }
     //</snippet235>
 
-
     // DrawVisualStyleElementTaskbarClockTime1
     //System.Windows.Forms.VisualStyleElementExamples#236
     //<snippet236>
@@ -5085,7 +4849,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet236>
-
 
     // DrawVisualStyleElementTaskbarBackgroundBottom1
     //System.Windows.Forms.VisualStyleElementExamples#237
@@ -5108,7 +4871,6 @@ public class Form1 : Form
     }
     //</snippet237>
 
-
     // DrawVisualStyleElementTaskbarBackgroundRight1
     //System.Windows.Forms.VisualStyleElementExamples#238
     //<snippet238>
@@ -5129,7 +4891,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet238>
-
 
     // DrawVisualStyleElementTaskbarBackgroundTop1
     //System.Windows.Forms.VisualStyleElementExamples#239
@@ -5152,7 +4913,6 @@ public class Form1 : Form
     }
     //</snippet239>
 
-
     // DrawVisualStyleElementTaskbarBackgroundLeft1
     //System.Windows.Forms.VisualStyleElementExamples#240
     //<snippet240>
@@ -5173,7 +4933,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet240>
-
 
     // DrawVisualStyleElementTaskbarSizingBarBottom1
     //System.Windows.Forms.VisualStyleElementExamples#241
@@ -5196,7 +4955,6 @@ public class Form1 : Form
     }
     //</snippet241>
 
-
     // DrawVisualStyleElementTaskbarSizingBarRight1
     //System.Windows.Forms.VisualStyleElementExamples#242
     //<snippet242>
@@ -5217,7 +4975,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet242>
-
 
     // DrawVisualStyleElementTaskbarSizingBarTop1
     //System.Windows.Forms.VisualStyleElementExamples#243
@@ -5240,7 +4997,6 @@ public class Form1 : Form
     }
     //</snippet243>
 
-
     // DrawVisualStyleElementTaskbarSizingBarLeft1
     //System.Windows.Forms.VisualStyleElementExamples#244
     //<snippet244>
@@ -5261,9 +5017,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet244>
-
-
-   
 
     // DrawVisualStyleElementToolBarButton1
     //System.Windows.Forms.VisualStyleElementExamples#246
@@ -5286,7 +5039,6 @@ public class Form1 : Form
     }
     //</snippet246>
 
-
     // DrawVisualStyleElementToolBarButton2
     //System.Windows.Forms.VisualStyleElementExamples#247
     //<snippet247>
@@ -5307,7 +5059,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet247>
-
 
     // DrawVisualStyleElementToolBarButton3
     //System.Windows.Forms.VisualStyleElementExamples#248
@@ -5330,7 +5081,6 @@ public class Form1 : Form
     }
     //</snippet248>
 
-
     // DrawVisualStyleElementToolBarButton4
     //System.Windows.Forms.VisualStyleElementExamples#249
     //<snippet249>
@@ -5351,7 +5101,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet249>
-
 
     // DrawVisualStyleElementToolBarButton5
     //System.Windows.Forms.VisualStyleElementExamples#250
@@ -5374,7 +5123,6 @@ public class Form1 : Form
     }
     //</snippet250>
 
-
     // DrawVisualStyleElementToolBarButton6
     //System.Windows.Forms.VisualStyleElementExamples#251
     //<snippet251>
@@ -5395,7 +5143,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet251>
-
 
     // DrawVisualStyleElementToolBarDropDownButton1
     //System.Windows.Forms.VisualStyleElementExamples#252
@@ -5418,7 +5165,6 @@ public class Form1 : Form
     }
     //</snippet252>
 
-
     // DrawVisualStyleElementToolBarDropDownButton2
     //System.Windows.Forms.VisualStyleElementExamples#253
     //<snippet253>
@@ -5439,7 +5185,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet253>
-
 
     // DrawVisualStyleElementToolBarDropDownButton3
     //System.Windows.Forms.VisualStyleElementExamples#254
@@ -5462,7 +5207,6 @@ public class Form1 : Form
     }
     //</snippet254>
 
-
     // DrawVisualStyleElementToolBarDropDownButton4
     //System.Windows.Forms.VisualStyleElementExamples#255
     //<snippet255>
@@ -5483,7 +5227,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet255>
-
 
     // DrawVisualStyleElementToolBarDropDownButton5
     //System.Windows.Forms.VisualStyleElementExamples#256
@@ -5506,7 +5249,6 @@ public class Form1 : Form
     }
     //</snippet256>
 
-
     // DrawVisualStyleElementToolBarDropDownButton6
     //System.Windows.Forms.VisualStyleElementExamples#257
     //<snippet257>
@@ -5527,7 +5269,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet257>
-
 
     // DrawVisualStyleElementToolBarSplitButton1
     //System.Windows.Forms.VisualStyleElementExamples#258
@@ -5550,7 +5291,6 @@ public class Form1 : Form
     }
     //</snippet258>
 
-
     // DrawVisualStyleElementToolBarSplitButton2
     //System.Windows.Forms.VisualStyleElementExamples#259
     //<snippet259>
@@ -5571,7 +5311,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet259>
-
 
     // DrawVisualStyleElementToolBarSplitButton3
     //System.Windows.Forms.VisualStyleElementExamples#260
@@ -5594,7 +5333,6 @@ public class Form1 : Form
     }
     //</snippet260>
 
-
     // DrawVisualStyleElementToolBarSplitButton4
     //System.Windows.Forms.VisualStyleElementExamples#261
     //<snippet261>
@@ -5615,7 +5353,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet261>
-
 
     // DrawVisualStyleElementToolBarSplitButton5
     //System.Windows.Forms.VisualStyleElementExamples#262
@@ -5638,7 +5375,6 @@ public class Form1 : Form
     }
     //</snippet262>
 
-
     // DrawVisualStyleElementToolBarSplitButton6
     //System.Windows.Forms.VisualStyleElementExamples#263
     //<snippet263>
@@ -5659,7 +5395,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet263>
-
 
     // DrawVisualStyleElementToolBarSplitButtonDropDown1
     //System.Windows.Forms.VisualStyleElementExamples#264
@@ -5682,7 +5417,6 @@ public class Form1 : Form
     }
     //</snippet264>
 
-
     // DrawVisualStyleElementToolBarSplitButtonDropDown2
     //System.Windows.Forms.VisualStyleElementExamples#265
     //<snippet265>
@@ -5703,7 +5437,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet265>
-
 
     // DrawVisualStyleElementToolBarSplitButtonDropDown3
     //System.Windows.Forms.VisualStyleElementExamples#266
@@ -5726,7 +5459,6 @@ public class Form1 : Form
     }
     //</snippet266>
 
-
     // DrawVisualStyleElementToolBarSplitButtonDropDown4
     //System.Windows.Forms.VisualStyleElementExamples#267
     //<snippet267>
@@ -5747,7 +5479,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet267>
-
 
     // DrawVisualStyleElementToolBarSplitButtonDropDown5
     //System.Windows.Forms.VisualStyleElementExamples#268
@@ -5770,7 +5501,6 @@ public class Form1 : Form
     }
     //</snippet268>
 
-
     // DrawVisualStyleElementToolBarSplitButtonDropDown6
     //System.Windows.Forms.VisualStyleElementExamples#269
     //<snippet269>
@@ -5791,7 +5521,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet269>
-
 
     // DrawVisualStyleElementToolBarSeparatorHorizontal1
     //System.Windows.Forms.VisualStyleElementExamples#270
@@ -5814,7 +5543,6 @@ public class Form1 : Form
     }
     //</snippet270>
 
-
     // DrawVisualStyleElementToolBarSeparatorVertical1
     //System.Windows.Forms.VisualStyleElementExamples#271
     //<snippet271>
@@ -5835,7 +5563,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet271>
-
 
     // DrawVisualStyleElementToolTipStandard1
     //System.Windows.Forms.VisualStyleElementExamples#272
@@ -5858,7 +5585,6 @@ public class Form1 : Form
     }
     //</snippet272>
 
-
     // DrawVisualStyleElementToolTipStandard2
     //System.Windows.Forms.VisualStyleElementExamples#273
     //<snippet273>
@@ -5879,7 +5605,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet273>
-
 
     // DrawVisualStyleElementToolTipStandardTitle1
     //System.Windows.Forms.VisualStyleElementExamples#274
@@ -5902,7 +5627,6 @@ public class Form1 : Form
     }
     //</snippet274>
 
-
     // DrawVisualStyleElementToolTipBalloon1
     //System.Windows.Forms.VisualStyleElementExamples#275
     //<snippet275>
@@ -5923,7 +5647,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet275>
-
 
     // DrawVisualStyleElementToolTipBalloon2
     //System.Windows.Forms.VisualStyleElementExamples#276
@@ -5946,7 +5669,6 @@ public class Form1 : Form
     }
     //</snippet276>
 
-
     // DrawVisualStyleElementToolTipBalloonTitle1
     //System.Windows.Forms.VisualStyleElementExamples#277
     //<snippet277>
@@ -5967,7 +5689,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet277>
-
 
     // DrawVisualStyleElementToolTipClose1
     //System.Windows.Forms.VisualStyleElementExamples#278
@@ -5990,7 +5711,6 @@ public class Form1 : Form
     }
     //</snippet278>
 
-
     // DrawVisualStyleElementToolTipClose2
     //System.Windows.Forms.VisualStyleElementExamples#279
     //<snippet279>
@@ -6011,7 +5731,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet279>
-
 
     // DrawVisualStyleElementToolTipClose3
     //System.Windows.Forms.VisualStyleElementExamples#280
@@ -6034,7 +5753,6 @@ public class Form1 : Form
     }
     //</snippet280>
 
-
     // DrawVisualStyleElementTrackBarTrack1
     //System.Windows.Forms.VisualStyleElementExamples#281
     //<snippet281>
@@ -6055,7 +5773,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet281>
-
 
     // DrawVisualStyleElementTrackBarTrackVertical1
     //System.Windows.Forms.VisualStyleElementExamples#282
@@ -6078,7 +5795,6 @@ public class Form1 : Form
     }
     //</snippet282>
 
-
     // DrawVisualStyleElementTrackBarThumb1
     //System.Windows.Forms.VisualStyleElementExamples#283
     //<snippet283>
@@ -6099,7 +5815,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet283>
-
 
     // DrawVisualStyleElementTrackBarThumb2
     //System.Windows.Forms.VisualStyleElementExamples#284
@@ -6122,7 +5837,6 @@ public class Form1 : Form
     }
     //</snippet284>
 
-
     // DrawVisualStyleElementTrackBarThumb3
     //System.Windows.Forms.VisualStyleElementExamples#285
     //<snippet285>
@@ -6143,7 +5857,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet285>
-
 
     // DrawVisualStyleElementTrackBarThumb4
     //System.Windows.Forms.VisualStyleElementExamples#286
@@ -6166,7 +5879,6 @@ public class Form1 : Form
     }
     //</snippet286>
 
-
     // DrawVisualStyleElementTrackBarThumb5
     //System.Windows.Forms.VisualStyleElementExamples#287
     //<snippet287>
@@ -6187,7 +5899,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet287>
-
 
     // DrawVisualStyleElementTrackBarThumbBottom1
     //System.Windows.Forms.VisualStyleElementExamples#288
@@ -6210,7 +5921,6 @@ public class Form1 : Form
     }
     //</snippet288>
 
-
     // DrawVisualStyleElementTrackBarThumbBottom2
     //System.Windows.Forms.VisualStyleElementExamples#289
     //<snippet289>
@@ -6231,7 +5941,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet289>
-
 
     // DrawVisualStyleElementTrackBarThumbBottom3
     //System.Windows.Forms.VisualStyleElementExamples#290
@@ -6254,7 +5963,6 @@ public class Form1 : Form
     }
     //</snippet290>
 
-
     // DrawVisualStyleElementTrackBarThumbBottom4
     //System.Windows.Forms.VisualStyleElementExamples#291
     //<snippet291>
@@ -6275,7 +5983,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet291>
-
 
     // DrawVisualStyleElementTrackBarThumbBottom5
     //System.Windows.Forms.VisualStyleElementExamples#292
@@ -6298,7 +6005,6 @@ public class Form1 : Form
     }
     //</snippet292>
 
-
     // DrawVisualStyleElementTrackBarThumbTop1
     //System.Windows.Forms.VisualStyleElementExamples#293
     //<snippet293>
@@ -6319,7 +6025,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet293>
-
 
     // DrawVisualStyleElementTrackBarThumbTop2
     //System.Windows.Forms.VisualStyleElementExamples#294
@@ -6342,7 +6047,6 @@ public class Form1 : Form
     }
     //</snippet294>
 
-
     // DrawVisualStyleElementTrackBarThumbTop3
     //System.Windows.Forms.VisualStyleElementExamples#295
     //<snippet295>
@@ -6363,7 +6067,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet295>
-
 
     // DrawVisualStyleElementTrackBarThumbTop4
     //System.Windows.Forms.VisualStyleElementExamples#296
@@ -6386,7 +6089,6 @@ public class Form1 : Form
     }
     //</snippet296>
 
-
     // DrawVisualStyleElementTrackBarThumbTop5
     //System.Windows.Forms.VisualStyleElementExamples#297
     //<snippet297>
@@ -6407,7 +6109,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet297>
-
 
     // DrawVisualStyleElementTrackBarThumbVertical1
     //System.Windows.Forms.VisualStyleElementExamples#298
@@ -6430,7 +6131,6 @@ public class Form1 : Form
     }
     //</snippet298>
 
-
     // DrawVisualStyleElementTrackBarThumbVertical2
     //System.Windows.Forms.VisualStyleElementExamples#299
     //<snippet299>
@@ -6451,7 +6151,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet299>
-
 
     // DrawVisualStyleElementTrackBarThumbVertical3
     //System.Windows.Forms.VisualStyleElementExamples#300
@@ -6474,7 +6173,6 @@ public class Form1 : Form
     }
     //</snippet300>
 
-
     // DrawVisualStyleElementTrackBarThumbVertical4
     //System.Windows.Forms.VisualStyleElementExamples#301
     //<snippet301>
@@ -6495,7 +6193,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet301>
-
 
     // DrawVisualStyleElementTrackBarThumbVertical5
     //System.Windows.Forms.VisualStyleElementExamples#302
@@ -6518,7 +6215,6 @@ public class Form1 : Form
     }
     //</snippet302>
 
-
     // DrawVisualStyleElementTrackBarThumbLeft1
     //System.Windows.Forms.VisualStyleElementExamples#303
     //<snippet303>
@@ -6539,7 +6235,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet303>
-
 
     // DrawVisualStyleElementTrackBarThumbLeft2
     //System.Windows.Forms.VisualStyleElementExamples#304
@@ -6562,7 +6257,6 @@ public class Form1 : Form
     }
     //</snippet304>
 
-
     // DrawVisualStyleElementTrackBarThumbLeft3
     //System.Windows.Forms.VisualStyleElementExamples#305
     //<snippet305>
@@ -6583,7 +6277,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet305>
-
 
     // DrawVisualStyleElementTrackBarThumbLeft4
     //System.Windows.Forms.VisualStyleElementExamples#306
@@ -6606,7 +6299,6 @@ public class Form1 : Form
     }
     //</snippet306>
 
-
     // DrawVisualStyleElementTrackBarThumbLeft5
     //System.Windows.Forms.VisualStyleElementExamples#307
     //<snippet307>
@@ -6627,7 +6319,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet307>
-
 
     // DrawVisualStyleElementTrackBarThumbRight1
     //System.Windows.Forms.VisualStyleElementExamples#308
@@ -6650,7 +6341,6 @@ public class Form1 : Form
     }
     //</snippet308>
 
-
     // DrawVisualStyleElementTrackBarThumbRight2
     //System.Windows.Forms.VisualStyleElementExamples#309
     //<snippet309>
@@ -6671,7 +6361,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet309>
-
 
     // DrawVisualStyleElementTrackBarThumbRight3
     //System.Windows.Forms.VisualStyleElementExamples#310
@@ -6694,7 +6383,6 @@ public class Form1 : Form
     }
     //</snippet310>
 
-
     // DrawVisualStyleElementTrackBarThumbRight4
     //System.Windows.Forms.VisualStyleElementExamples#311
     //<snippet311>
@@ -6715,7 +6403,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet311>
-
 
     // DrawVisualStyleElementTrackBarThumbRight5
     //System.Windows.Forms.VisualStyleElementExamples#312
@@ -6738,7 +6425,6 @@ public class Form1 : Form
     }
     //</snippet312>
 
-
     // DrawVisualStyleElementTrackBarTicks1
     //System.Windows.Forms.VisualStyleElementExamples#313
     //<snippet313>
@@ -6759,7 +6445,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet313>
-
 
     // DrawVisualStyleElementTrackBarTicksVertical1
     //System.Windows.Forms.VisualStyleElementExamples#314
@@ -6782,7 +6467,6 @@ public class Form1 : Form
     }
     //</snippet314>
 
-
     // DrawVisualStyleElementTreeViewItem1
     //System.Windows.Forms.VisualStyleElementExamples#315
     //<snippet315>
@@ -6803,7 +6487,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet315>
-
 
     // DrawVisualStyleElementTreeViewItem2
     //System.Windows.Forms.VisualStyleElementExamples#316
@@ -6826,7 +6509,6 @@ public class Form1 : Form
     }
     //</snippet316>
 
-
     // DrawVisualStyleElementTreeViewItem3
     //System.Windows.Forms.VisualStyleElementExamples#317
     //<snippet317>
@@ -6847,7 +6529,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet317>
-
 
     // DrawVisualStyleElementTreeViewItem4
     //System.Windows.Forms.VisualStyleElementExamples#318
@@ -6870,7 +6551,6 @@ public class Form1 : Form
     }
     //</snippet318>
 
-
     // DrawVisualStyleElementTreeViewItem5
     //System.Windows.Forms.VisualStyleElementExamples#319
     //<snippet319>
@@ -6891,7 +6571,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet319>
-
 
     // DrawVisualStyleElementTreeViewGlyph1
     //System.Windows.Forms.VisualStyleElementExamples#320
@@ -6914,7 +6593,6 @@ public class Form1 : Form
     }
     //</snippet320>
 
-
     // DrawVisualStyleElementTreeViewGlyph2
     //System.Windows.Forms.VisualStyleElementExamples#321
     //<snippet321>
@@ -6935,7 +6613,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet321>
-
 
     // DrawVisualStyleElementTreeViewBranch1
     //System.Windows.Forms.VisualStyleElementExamples#322
@@ -6958,7 +6635,6 @@ public class Form1 : Form
     }
     //</snippet322>
 
-
     // DrawVisualStyleElementTextBoxTextEdit1
     //System.Windows.Forms.VisualStyleElementExamples#323
     //<snippet323>
@@ -6979,7 +6655,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet323>
-
 
     // DrawVisualStyleElementTextBoxTextEdit2
     //System.Windows.Forms.VisualStyleElementExamples#324
@@ -7002,7 +6677,6 @@ public class Form1 : Form
     }
     //</snippet324>
 
-
     // DrawVisualStyleElementTextBoxTextEdit3
     //System.Windows.Forms.VisualStyleElementExamples#325
     //<snippet325>
@@ -7023,7 +6697,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet325>
-
 
     // DrawVisualStyleElementTextBoxTextEdit4
     //System.Windows.Forms.VisualStyleElementExamples#326
@@ -7046,7 +6719,6 @@ public class Form1 : Form
     }
     //</snippet326>
 
-
     // DrawVisualStyleElementTextBoxTextEdit5
     //System.Windows.Forms.VisualStyleElementExamples#327
     //<snippet327>
@@ -7067,7 +6739,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet327>
-
 
     // DrawVisualStyleElementTextBoxTextEdit6
     //System.Windows.Forms.VisualStyleElementExamples#328
@@ -7090,7 +6761,6 @@ public class Form1 : Form
     }
     //</snippet328>
 
-
     // DrawVisualStyleElementTextBoxTextEdit7
     //System.Windows.Forms.VisualStyleElementExamples#329
     //<snippet329>
@@ -7111,7 +6781,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet329>
-
 
     // DrawVisualStyleElementTextBoxCaret1
     //System.Windows.Forms.VisualStyleElementExamples#330
@@ -7134,7 +6803,6 @@ public class Form1 : Form
     }
     //</snippet330>
 
-
     // DrawVisualStyleElementTrayNotifyBackground1
     //System.Windows.Forms.VisualStyleElementExamples#331
     //<snippet331>
@@ -7155,7 +6823,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet331>
-
 
     // DrawVisualStyleElementTrayNotifyAnimateBackground1
     //System.Windows.Forms.VisualStyleElementExamples#332
@@ -7178,7 +6845,6 @@ public class Form1 : Form
     }
     //</snippet332>
 
-
     // DrawVisualStyleElementWindowCaption1
     //System.Windows.Forms.VisualStyleElementExamples#333
     //<snippet333>
@@ -7199,7 +6865,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet333>
-
 
     // DrawVisualStyleElementWindowCaption2
     //System.Windows.Forms.VisualStyleElementExamples#334
@@ -7222,7 +6887,6 @@ public class Form1 : Form
     }
     //</snippet334>
 
-
     // DrawVisualStyleElementWindowCaption3
     //System.Windows.Forms.VisualStyleElementExamples#335
     //<snippet335>
@@ -7243,7 +6907,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet335>
-
 
     // DrawVisualStyleElementWindowSmallCaption1
     //System.Windows.Forms.VisualStyleElementExamples#336
@@ -7266,7 +6929,6 @@ public class Form1 : Form
     }
     //</snippet336>
 
-
     // DrawVisualStyleElementWindowSmallCaption2
     //System.Windows.Forms.VisualStyleElementExamples#337
     //<snippet337>
@@ -7287,7 +6949,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet337>
-
 
     // DrawVisualStyleElementWindowSmallCaption3
     //System.Windows.Forms.VisualStyleElementExamples#338
@@ -7310,7 +6971,6 @@ public class Form1 : Form
     }
     //</snippet338>
 
-
     // DrawVisualStyleElementWindowMinCaption1
     //System.Windows.Forms.VisualStyleElementExamples#339
     //<snippet339>
@@ -7331,7 +6991,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet339>
-
 
     // DrawVisualStyleElementWindowMinCaption2
     //System.Windows.Forms.VisualStyleElementExamples#340
@@ -7354,7 +7013,6 @@ public class Form1 : Form
     }
     //</snippet340>
 
-
     // DrawVisualStyleElementWindowMinCaption3
     //System.Windows.Forms.VisualStyleElementExamples#341
     //<snippet341>
@@ -7375,7 +7033,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet341>
-
 
     // DrawVisualStyleElementWindowSmallMinCaption1
     //System.Windows.Forms.VisualStyleElementExamples#342
@@ -7398,7 +7055,6 @@ public class Form1 : Form
     }
     //</snippet342>
 
-
     // DrawVisualStyleElementWindowSmallMinCaption2
     //System.Windows.Forms.VisualStyleElementExamples#343
     //<snippet343>
@@ -7419,7 +7075,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet343>
-
 
     // DrawVisualStyleElementWindowSmallMinCaption3
     //System.Windows.Forms.VisualStyleElementExamples#344
@@ -7442,7 +7097,6 @@ public class Form1 : Form
     }
     //</snippet344>
 
-
     // DrawVisualStyleElementWindowMaxCaption1
     //System.Windows.Forms.VisualStyleElementExamples#345
     //<snippet345>
@@ -7463,7 +7117,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet345>
-
 
     // DrawVisualStyleElementWindowMaxCaption2
     //System.Windows.Forms.VisualStyleElementExamples#346
@@ -7486,7 +7139,6 @@ public class Form1 : Form
     }
     //</snippet346>
 
-
     // DrawVisualStyleElementWindowMaxCaption3
     //System.Windows.Forms.VisualStyleElementExamples#347
     //<snippet347>
@@ -7507,7 +7159,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet347>
-
 
     // DrawVisualStyleElementWindowSmallMaxCaption1
     //System.Windows.Forms.VisualStyleElementExamples#348
@@ -7530,7 +7181,6 @@ public class Form1 : Form
     }
     //</snippet348>
 
-
     // DrawVisualStyleElementWindowSmallMaxCaption2
     //System.Windows.Forms.VisualStyleElementExamples#349
     //<snippet349>
@@ -7551,7 +7201,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet349>
-
 
     // DrawVisualStyleElementWindowSmallMaxCaption3
     //System.Windows.Forms.VisualStyleElementExamples#350
@@ -7574,7 +7223,6 @@ public class Form1 : Form
     }
     //</snippet350>
 
-
     // DrawVisualStyleElementWindowFrameLeft1
     //System.Windows.Forms.VisualStyleElementExamples#351
     //<snippet351>
@@ -7595,7 +7243,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet351>
-
 
     // DrawVisualStyleElementWindowFrameLeft2
     //System.Windows.Forms.VisualStyleElementExamples#352
@@ -7618,7 +7265,6 @@ public class Form1 : Form
     }
     //</snippet352>
 
-
     // DrawVisualStyleElementWindowFrameRight1
     //System.Windows.Forms.VisualStyleElementExamples#353
     //<snippet353>
@@ -7639,7 +7285,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet353>
-
 
     // DrawVisualStyleElementWindowFrameRight2
     //System.Windows.Forms.VisualStyleElementExamples#354
@@ -7662,7 +7307,6 @@ public class Form1 : Form
     }
     //</snippet354>
 
-
     // DrawVisualStyleElementWindowFrameBottom1
     //System.Windows.Forms.VisualStyleElementExamples#355
     //<snippet355>
@@ -7683,7 +7327,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet355>
-
 
     // DrawVisualStyleElementWindowFrameBottom2
     //System.Windows.Forms.VisualStyleElementExamples#356
@@ -7706,7 +7349,6 @@ public class Form1 : Form
     }
     //</snippet356>
 
-
     // DrawVisualStyleElementWindowSmallFrameLeft1
     //System.Windows.Forms.VisualStyleElementExamples#357
     //<snippet357>
@@ -7727,7 +7369,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet357>
-
 
     // DrawVisualStyleElementWindowSmallFrameLeft2
     //System.Windows.Forms.VisualStyleElementExamples#358
@@ -7750,7 +7391,6 @@ public class Form1 : Form
     }
     //</snippet358>
 
-
     // DrawVisualStyleElementWindowSmallFrameRight1
     //System.Windows.Forms.VisualStyleElementExamples#359
     //<snippet359>
@@ -7771,7 +7411,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet359>
-
 
     // DrawVisualStyleElementWindowSmallFrameRight2
     //System.Windows.Forms.VisualStyleElementExamples#360
@@ -7794,7 +7433,6 @@ public class Form1 : Form
     }
     //</snippet360>
 
-
     // DrawVisualStyleElementWindowSmallFrameBottom1
     //System.Windows.Forms.VisualStyleElementExamples#361
     //<snippet361>
@@ -7815,7 +7453,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet361>
-
 
     // DrawVisualStyleElementWindowSmallFrameBottom2
     //System.Windows.Forms.VisualStyleElementExamples#362
@@ -7838,7 +7475,6 @@ public class Form1 : Form
     }
     //</snippet362>
 
-
     // DrawVisualStyleElementWindowSysButton1
     //System.Windows.Forms.VisualStyleElementExamples#363
     //<snippet363>
@@ -7859,7 +7495,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet363>
-
 
     // DrawVisualStyleElementWindowSysButton2
     //System.Windows.Forms.VisualStyleElementExamples#364
@@ -7882,7 +7517,6 @@ public class Form1 : Form
     }
     //</snippet364>
 
-
     // DrawVisualStyleElementWindowSysButton3
     //System.Windows.Forms.VisualStyleElementExamples#365
     //<snippet365>
@@ -7903,7 +7537,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet365>
-
 
     // DrawVisualStyleElementWindowSysButton4
     //System.Windows.Forms.VisualStyleElementExamples#366
@@ -7926,7 +7559,6 @@ public class Form1 : Form
     }
     //</snippet366>
 
-
     // DrawVisualStyleElementWindowMdiSysButton1
     //System.Windows.Forms.VisualStyleElementExamples#367
     //<snippet367>
@@ -7947,7 +7579,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet367>
-
 
     // DrawVisualStyleElementWindowMdiSysButton2
     //System.Windows.Forms.VisualStyleElementExamples#368
@@ -7970,7 +7601,6 @@ public class Form1 : Form
     }
     //</snippet368>
 
-
     // DrawVisualStyleElementWindowMdiSysButton3
     //System.Windows.Forms.VisualStyleElementExamples#369
     //<snippet369>
@@ -7991,7 +7621,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet369>
-
 
     // DrawVisualStyleElementWindowMdiSysButton4
     //System.Windows.Forms.VisualStyleElementExamples#370
@@ -8014,7 +7643,6 @@ public class Form1 : Form
     }
     //</snippet370>
 
-
     // DrawVisualStyleElementWindowMinButton1
     //System.Windows.Forms.VisualStyleElementExamples#371
     //<snippet371>
@@ -8035,7 +7663,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet371>
-
 
     // DrawVisualStyleElementWindowMinButton2
     //System.Windows.Forms.VisualStyleElementExamples#372
@@ -8058,7 +7685,6 @@ public class Form1 : Form
     }
     //</snippet372>
 
-
     // DrawVisualStyleElementWindowMinButton3
     //System.Windows.Forms.VisualStyleElementExamples#373
     //<snippet373>
@@ -8079,7 +7705,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet373>
-
 
     // DrawVisualStyleElementWindowMinButton4
     //System.Windows.Forms.VisualStyleElementExamples#374
@@ -8102,7 +7727,6 @@ public class Form1 : Form
     }
     //</snippet374>
 
-
     // DrawVisualStyleElementWindowMdiMinButton1
     //System.Windows.Forms.VisualStyleElementExamples#375
     //<snippet375>
@@ -8123,7 +7747,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet375>
-
 
     // DrawVisualStyleElementWindowMdiMinButton2
     //System.Windows.Forms.VisualStyleElementExamples#376
@@ -8146,7 +7769,6 @@ public class Form1 : Form
     }
     //</snippet376>
 
-
     // DrawVisualStyleElementWindowMdiMinButton3
     //System.Windows.Forms.VisualStyleElementExamples#377
     //<snippet377>
@@ -8167,7 +7789,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet377>
-
 
     // DrawVisualStyleElementWindowMdiMinButton4
     //System.Windows.Forms.VisualStyleElementExamples#378
@@ -8190,7 +7811,6 @@ public class Form1 : Form
     }
     //</snippet378>
 
-
     // DrawVisualStyleElementWindowMaxButton1
     //System.Windows.Forms.VisualStyleElementExamples#379
     //<snippet379>
@@ -8211,7 +7831,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet379>
-
 
     // DrawVisualStyleElementWindowMaxButton2
     //System.Windows.Forms.VisualStyleElementExamples#380
@@ -8234,7 +7853,6 @@ public class Form1 : Form
     }
     //</snippet380>
 
-
     // DrawVisualStyleElementWindowMaxButton3
     //System.Windows.Forms.VisualStyleElementExamples#381
     //<snippet381>
@@ -8255,7 +7873,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet381>
-
 
     // DrawVisualStyleElementWindowMaxButton4
     //System.Windows.Forms.VisualStyleElementExamples#382
@@ -8278,7 +7895,6 @@ public class Form1 : Form
     }
     //</snippet382>
 
-
     // DrawVisualStyleElementWindowCloseButton1
     //System.Windows.Forms.VisualStyleElementExamples#383
     //<snippet383>
@@ -8299,7 +7915,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet383>
-
 
     // DrawVisualStyleElementWindowCloseButton2
     //System.Windows.Forms.VisualStyleElementExamples#384
@@ -8322,7 +7937,6 @@ public class Form1 : Form
     }
     //</snippet384>
 
-
     // DrawVisualStyleElementWindowCloseButton3
     //System.Windows.Forms.VisualStyleElementExamples#385
     //<snippet385>
@@ -8343,7 +7957,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet385>
-
 
     // DrawVisualStyleElementWindowCloseButton4
     //System.Windows.Forms.VisualStyleElementExamples#386
@@ -8366,7 +7979,6 @@ public class Form1 : Form
     }
     //</snippet386>
 
-
     // DrawVisualStyleElementWindowSmallCloseButton1
     //System.Windows.Forms.VisualStyleElementExamples#387
     //<snippet387>
@@ -8387,7 +7999,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet387>
-
 
     // DrawVisualStyleElementWindowSmallCloseButton2
     //System.Windows.Forms.VisualStyleElementExamples#388
@@ -8410,7 +8021,6 @@ public class Form1 : Form
     }
     //</snippet388>
 
-
     // DrawVisualStyleElementWindowSmallCloseButton3
     //System.Windows.Forms.VisualStyleElementExamples#389
     //<snippet389>
@@ -8431,7 +8041,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet389>
-
 
     // DrawVisualStyleElementWindowSmallCloseButton4
     //System.Windows.Forms.VisualStyleElementExamples#390
@@ -8454,7 +8063,6 @@ public class Form1 : Form
     }
     //</snippet390>
 
-
     // DrawVisualStyleElementWindowMdiCloseButton1
     //System.Windows.Forms.VisualStyleElementExamples#391
     //<snippet391>
@@ -8475,7 +8083,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet391>
-
 
     // DrawVisualStyleElementWindowMdiCloseButton2
     //System.Windows.Forms.VisualStyleElementExamples#392
@@ -8498,7 +8105,6 @@ public class Form1 : Form
     }
     //</snippet392>
 
-
     // DrawVisualStyleElementWindowMdiCloseButton3
     //System.Windows.Forms.VisualStyleElementExamples#393
     //<snippet393>
@@ -8519,7 +8125,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet393>
-
 
     // DrawVisualStyleElementWindowMdiCloseButton4
     //System.Windows.Forms.VisualStyleElementExamples#394
@@ -8542,7 +8147,6 @@ public class Form1 : Form
     }
     //</snippet394>
 
-
     // DrawVisualStyleElementWindowRestoreButton1
     //System.Windows.Forms.VisualStyleElementExamples#395
     //<snippet395>
@@ -8563,7 +8167,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet395>
-
 
     // DrawVisualStyleElementWindowRestoreButton2
     //System.Windows.Forms.VisualStyleElementExamples#396
@@ -8586,7 +8189,6 @@ public class Form1 : Form
     }
     //</snippet396>
 
-
     // DrawVisualStyleElementWindowRestoreButton3
     //System.Windows.Forms.VisualStyleElementExamples#397
     //<snippet397>
@@ -8607,7 +8209,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet397>
-
 
     // DrawVisualStyleElementWindowRestoreButton4
     //System.Windows.Forms.VisualStyleElementExamples#398
@@ -8630,7 +8231,6 @@ public class Form1 : Form
     }
     //</snippet398>
 
-
     // DrawVisualStyleElementWindowMdiRestoreButton1
     //System.Windows.Forms.VisualStyleElementExamples#399
     //<snippet399>
@@ -8651,7 +8251,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet399>
-
 
     // DrawVisualStyleElementWindowMdiRestoreButton2
     //System.Windows.Forms.VisualStyleElementExamples#400
@@ -8674,7 +8273,6 @@ public class Form1 : Form
     }
     //</snippet400>
 
-
     // DrawVisualStyleElementWindowMdiRestoreButton3
     //System.Windows.Forms.VisualStyleElementExamples#401
     //<snippet401>
@@ -8695,7 +8293,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet401>
-
 
     // DrawVisualStyleElementWindowMdiRestoreButton4
     //System.Windows.Forms.VisualStyleElementExamples#402
@@ -8718,7 +8315,6 @@ public class Form1 : Form
     }
     //</snippet402>
 
-
     // DrawVisualStyleElementWindowHelpButton1
     //System.Windows.Forms.VisualStyleElementExamples#403
     //<snippet403>
@@ -8739,7 +8335,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet403>
-
 
     // DrawVisualStyleElementWindowHelpButton2
     //System.Windows.Forms.VisualStyleElementExamples#404
@@ -8762,7 +8357,6 @@ public class Form1 : Form
     }
     //</snippet404>
 
-
     // DrawVisualStyleElementWindowHelpButton3
     //System.Windows.Forms.VisualStyleElementExamples#405
     //<snippet405>
@@ -8783,7 +8377,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet405>
-
 
     // DrawVisualStyleElementWindowHelpButton4
     //System.Windows.Forms.VisualStyleElementExamples#406
@@ -8806,7 +8399,6 @@ public class Form1 : Form
     }
     //</snippet406>
 
-
     // DrawVisualStyleElementWindowMdiHelpButton1
     //System.Windows.Forms.VisualStyleElementExamples#407
     //<snippet407>
@@ -8827,7 +8419,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet407>
-
 
     // DrawVisualStyleElementWindowMdiHelpButton2
     //System.Windows.Forms.VisualStyleElementExamples#408
@@ -8850,7 +8441,6 @@ public class Form1 : Form
     }
     //</snippet408>
 
-
     // DrawVisualStyleElementWindowMdiHelpButton3
     //System.Windows.Forms.VisualStyleElementExamples#409
     //<snippet409>
@@ -8871,7 +8461,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet409>
-
 
     // DrawVisualStyleElementWindowMdiHelpButton4
     //System.Windows.Forms.VisualStyleElementExamples#410
@@ -8894,7 +8483,6 @@ public class Form1 : Form
     }
     //</snippet410>
 
-
     // DrawVisualStyleElementWindowHorizontalScroll1
     //System.Windows.Forms.VisualStyleElementExamples#411
     //<snippet411>
@@ -8915,7 +8503,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet411>
-
 
     // DrawVisualStyleElementWindowHorizontalScroll2
     //System.Windows.Forms.VisualStyleElementExamples#412
@@ -8938,7 +8525,6 @@ public class Form1 : Form
     }
     //</snippet412>
 
-
     // DrawVisualStyleElementWindowHorizontalScroll3
     //System.Windows.Forms.VisualStyleElementExamples#413
     //<snippet413>
@@ -8959,7 +8545,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet413>
-
 
     // DrawVisualStyleElementWindowHorizontalScroll4
     //System.Windows.Forms.VisualStyleElementExamples#414
@@ -8982,7 +8567,6 @@ public class Form1 : Form
     }
     //</snippet414>
 
-
     // DrawVisualStyleElementWindowHorizontalThumb1
     //System.Windows.Forms.VisualStyleElementExamples#415
     //<snippet415>
@@ -9003,7 +8587,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet415>
-
 
     // DrawVisualStyleElementWindowHorizontalThumb2
     //System.Windows.Forms.VisualStyleElementExamples#416
@@ -9026,7 +8609,6 @@ public class Form1 : Form
     }
     //</snippet416>
 
-
     // DrawVisualStyleElementWindowHorizontalThumb3
     //System.Windows.Forms.VisualStyleElementExamples#417
     //<snippet417>
@@ -9047,7 +8629,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet417>
-
 
     // DrawVisualStyleElementWindowHorizontalThumb4
     //System.Windows.Forms.VisualStyleElementExamples#418
@@ -9070,7 +8651,6 @@ public class Form1 : Form
     }
     //</snippet418>
 
-
     // DrawVisualStyleElementWindowVerticalScroll1
     //System.Windows.Forms.VisualStyleElementExamples#419
     //<snippet419>
@@ -9091,7 +8671,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet419>
-
 
     // DrawVisualStyleElementWindowVerticalScroll2
     //System.Windows.Forms.VisualStyleElementExamples#420
@@ -9114,7 +8693,6 @@ public class Form1 : Form
     }
     //</snippet420>
 
-
     // DrawVisualStyleElementWindowVerticalScroll3
     //System.Windows.Forms.VisualStyleElementExamples#421
     //<snippet421>
@@ -9135,7 +8713,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet421>
-
 
     // DrawVisualStyleElementWindowVerticalScroll4
     //System.Windows.Forms.VisualStyleElementExamples#422
@@ -9158,7 +8735,6 @@ public class Form1 : Form
     }
     //</snippet422>
 
-
     // DrawVisualStyleElementWindowVerticalThumb1
     //System.Windows.Forms.VisualStyleElementExamples#423
     //<snippet423>
@@ -9179,7 +8755,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet423>
-
 
     // DrawVisualStyleElementWindowVerticalThumb2
     //System.Windows.Forms.VisualStyleElementExamples#424
@@ -9202,7 +8777,6 @@ public class Form1 : Form
     }
     //</snippet424>
 
-
     // DrawVisualStyleElementWindowVerticalThumb3
     //System.Windows.Forms.VisualStyleElementExamples#425
     //<snippet425>
@@ -9223,7 +8797,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet425>
-
 
     // DrawVisualStyleElementWindowVerticalThumb4
     //System.Windows.Forms.VisualStyleElementExamples#426
@@ -9246,7 +8819,6 @@ public class Form1 : Form
     }
     //</snippet426>
 
-
     // DrawVisualStyleElementWindowDialog1
     //System.Windows.Forms.VisualStyleElementExamples#427
     //<snippet427>
@@ -9267,7 +8839,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet427>
-
 
     // DrawVisualStyleElementWindowCaptionSizingTemplate1
     //System.Windows.Forms.VisualStyleElementExamples#428
@@ -9290,7 +8861,6 @@ public class Form1 : Form
     }
     //</snippet428>
 
-
     // DrawVisualStyleElementWindowSmallCaptionSizingTemplate1
     //System.Windows.Forms.VisualStyleElementExamples#429
     //<snippet429>
@@ -9311,7 +8881,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet429>
-
 
     // DrawVisualStyleElementWindowFrameLeftSizingTemplate1
     //System.Windows.Forms.VisualStyleElementExamples#430
@@ -9334,7 +8903,6 @@ public class Form1 : Form
     }
     //</snippet430>
 
-
     // DrawVisualStyleElementWindowSmallFrameLeftSizingTemplate1
     //System.Windows.Forms.VisualStyleElementExamples#431
     //<snippet431>
@@ -9355,7 +8923,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet431>
-
 
     // DrawVisualStyleElementWindowFrameRightSizingTemplate1
     //System.Windows.Forms.VisualStyleElementExamples#432
@@ -9378,7 +8945,6 @@ public class Form1 : Form
     }
     //</snippet432>
 
-
     // DrawVisualStyleElementWindowSmallFrameRightSizingTemplate1
     //System.Windows.Forms.VisualStyleElementExamples#433
     //<snippet433>
@@ -9399,7 +8965,6 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet433>
-
 
     // DrawVisualStyleElementWindowFrameBottomSizingTemplate1
     //System.Windows.Forms.VisualStyleElementExamples#434
@@ -9422,7 +8987,6 @@ public class Form1 : Form
     }
     //</snippet434>
 
-
     // DrawVisualStyleElementWindowSmallFrameBottomSizingTemplate1
     //System.Windows.Forms.VisualStyleElementExamples#435
     //<snippet435>
@@ -9443,6 +9007,5 @@ public class Form1 : Form
                  this.Font, Brushes.Black, new Point(10, 10));
     }
     //</snippet435>
-
 
 }

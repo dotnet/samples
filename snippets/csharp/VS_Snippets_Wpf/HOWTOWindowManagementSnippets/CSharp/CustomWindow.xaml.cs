@@ -20,7 +20,6 @@ namespace HOWTOWindowManagementSnippets
             Application.Current.MainWindow = mainWindow;
             //</SnippetSettingMainWindowInCodeCODEBEHIND>
 
-
             //<SnippetGetAllWindows>
             foreach( Window window in Application.Current.Windows ) {
               Console.WriteLine(window.Title);

@@ -10,7 +10,6 @@ using System.Windows.Xps.Packaging;
 using System.IO;
 using System.IO.Packaging;
 
-
 namespace SDKSample
 {
     /// <summary>
@@ -42,7 +41,6 @@ namespace SDKSample
                                                         96, 96,
                                                         PixelFormats.Default);
 
-            
             FixedPage fixedPage = (FixedPage)page.Visual;
             fixedPage.Measure(new Size(page.Size.Width, page.Size.Height) );
             fixedPage.Arrange(new Rect( new Size(page.Size.Width, page.Size.Height)) );

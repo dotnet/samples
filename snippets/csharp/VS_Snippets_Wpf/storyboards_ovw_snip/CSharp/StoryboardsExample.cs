@@ -9,7 +9,6 @@ using System.Windows.Data;
 using System.Windows.Shapes;
 using System.Windows.Input;
 
-
 namespace Microsoft.Samples.Animation
 {
     public class StoryboardsExample : Page

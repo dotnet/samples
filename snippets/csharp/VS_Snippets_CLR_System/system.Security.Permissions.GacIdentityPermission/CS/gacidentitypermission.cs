@@ -184,7 +184,6 @@ public class GacIdentityPermissionDemo
         else Console.Out.WriteLine("Intersect demo failed.");
         returnCode = tempReturnCode && returnCode;
 
-
         // Call the Copy demo.
         if (tempReturnCode = CopyDemo())Console.Out.WriteLine("Copy demo completed successfully.");
         else Console.Out.WriteLine("Copy demo failed.");

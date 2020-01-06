@@ -8,7 +8,6 @@ using System.Windows.Media;
 using System.Windows.Media.Media3D;
 using System.Windows.Shapes;
 
-
 namespace HitTest3D
 {
     /// <summary>
@@ -197,8 +196,6 @@ namespace HitTest3D
         }
         //</SnippetHitTest3D3DN13>
 
-
- 
     }
 }
 

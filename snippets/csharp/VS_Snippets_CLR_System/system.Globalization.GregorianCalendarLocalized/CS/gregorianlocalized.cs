@@ -1,10 +1,8 @@
 ﻿// The following code example prints a DateTime using a GregorianCalendar that is localized.
 
-
 // <snippet1>
 using System;
 using System.Globalization;
-
 
 public class SamplesGregorianCalendar  {
 

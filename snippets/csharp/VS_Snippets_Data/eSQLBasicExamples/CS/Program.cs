@@ -76,7 +76,6 @@ namespace eSQLExamplesCS
             //</snippetPolymorphicQuery>
         }
 
-
         static private void Transactions()
         {
             //<snippetTransactionsWithEntityClient>
@@ -103,7 +102,6 @@ namespace eSQLExamplesCS
             //</snippetTransactionsWithEntityClient>
 
         }
-
 
         static private void ComplexTypeWithEntityCommand()
         {
@@ -698,7 +696,6 @@ namespace eSQLExamplesCS
             //</snippetESQLPagingWithObjectQuery>
         }
 
-       
         //string esqlQuery = @"SELECT VALUE Product FROM AdventureWorksEntities.Product AS Product";
         //<snippeteSQLStructuralTypes>
         static void ExecuteStructuralTypeQuery(string esqlQuery)
@@ -765,8 +762,7 @@ namespace eSQLExamplesCS
             }
         }
         //</snippeteSQLStructuralTypes>
-        
-        
+
         //string esqlQuery = @"SELECT REF(p) FROM AdventureWorksEntities.Product as p";
         //<snippeteSQLRefTypes>
                 static void ExecuteRefTypeQuery(string esqlQuery)
@@ -837,8 +833,7 @@ namespace eSQLExamplesCS
                     }
                 }
                 //</snippeteSQLRefTypes>
-        
-        
+
                 //string esqlQuery = @"SELECT VALUE AVG(p.ListPrice) FROM AdventureWorksEntities.Product as p";
                 //<snippeteSQLPrimitiveTypes>
                 static void ExecutePrimitiveTypeQuery(string esqlQuery)

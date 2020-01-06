@@ -14,7 +14,6 @@ using System.Configuration;
 using System.Messaging;
 using System.Security.Principal;
 
-
 namespace Microsoft.ServiceModel.Samples
 {
     // Define a service contract. 

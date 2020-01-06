@@ -28,7 +28,6 @@ public class Client {
    }
 }
 
-
 public class MyClientSponsor : MarshalByRefObject, ISponsor {
 
    private DateTime lastRenewal;

@@ -43,7 +43,6 @@ namespace Samples.AspNet.CS.Controls
             }
         }
 
-
         // The contacts are rendered in an HTML table.
         protected override void RenderContents(
             HtmlTextWriter writer)
@@ -78,7 +77,6 @@ namespace Samples.AspNet.CS.Controls
                         TableCell c2 = new TableCell();
                         c2.Text = aContact.Email;
                         r.Controls.Add(c2);
-
 
                         TableCell c3 = new TableCell();
                         c3.Text = aContact.Phone;

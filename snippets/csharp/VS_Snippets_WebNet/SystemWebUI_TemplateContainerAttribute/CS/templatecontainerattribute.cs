@@ -21,7 +21,6 @@ namespace Samples.AspNet.CS.Controls
 			base.OnDataBinding(e);
 		}
 
-
 		[TemplateContainer(typeof(FirstTemplateContainer))]
 		public ITemplate FirstTemplate
 		{
@@ -80,7 +79,6 @@ namespace Samples.AspNet.CS.Controls
 		}
 
 	}
-
 
     public class FirstTemplateContainer : Control, INamingContainer
     {

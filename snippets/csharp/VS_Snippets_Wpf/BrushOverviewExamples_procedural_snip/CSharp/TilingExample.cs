@@ -7,14 +7,12 @@ using System.Windows.Shapes;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
-
 namespace Microsoft.Samples.BrushExamples
 {
 
     public class TilingExample : Page
     {
-    
-        
+
         public TilingExample()
         {
 
@@ -23,14 +21,11 @@ namespace Microsoft.Samples.BrushExamples
             mainPanel.Orientation = Orientation.Horizontal;
             createTilingExample(mainPanel);
             this.Content = mainPanel;
-        
 
         }
-        
-        
+
         private void createTilingExample(Panel mainPanel)
         {
-
 
             Border rectangleBorder = new Border();
             rectangleBorder.BorderBrush = Brushes.Black;
@@ -65,8 +60,7 @@ namespace Microsoft.Samples.BrushExamples
             mainPanel.Children.Add(rectangleBorder);            
         
         }
-        
-  
+
     }
 
 }

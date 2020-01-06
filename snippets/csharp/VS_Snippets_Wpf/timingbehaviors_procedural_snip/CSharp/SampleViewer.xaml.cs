@@ -5,7 +5,6 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Navigation;
 
-
 namespace Microsoft.Samples.Animation.TimingBehaviors
 {
     public partial class SampleViewer : Page
@@ -66,7 +65,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
                 new FrameworkPropertyMetadata(
                     (Nullable<TimeSpan>)null,
                     new PropertyChangedCallback(currentTime_Changed)));
-
 
         private static void currentTime_Changed(DependencyObject d,
             DependencyPropertyChangedEventArgs args)

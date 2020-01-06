@@ -35,7 +35,6 @@ public class Example
       Console.WriteLine("   Generic Type Definition: {0}\n",
                         t.IsGenericTypeDefinition);                 
 
-
    }
 }
 // The example displays the following output:

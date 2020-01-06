@@ -28,7 +28,6 @@ namespace My
 				}
 		}
 
-
         protected override void RenderContents(HtmlTextWriter writer) {
             if (_provider != null) {
                 PropertyDescriptorCollection props = _provider.Schema;

@@ -82,8 +82,6 @@ namespace Microsoft.Samples.WorkflowServicesSamples.EchoWorkflowService
             return service;
         }
 
-
-
         static void Main(string[] args)
         {
             // <Snippet03>

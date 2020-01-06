@@ -5,7 +5,6 @@ public class Form1
 {
     protected DataSet DataSet1;
 
-
     // <Snippet1>
     private void AddForeignConstraint(DataSet dataSet)
     {

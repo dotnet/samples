@@ -12,7 +12,6 @@ public class ServerSink : BaseChannelSinkWithProperties, IServerChannelSink
     // This class inherits from BaseChannelSinkWithPropertes
     // to get an implementation of IChannelSinkBase.
 
-
 // <snippet61>
     // The next sink in the chain.
     private IServerChannelSink nextSink;
@@ -90,10 +89,8 @@ public class ServerSink : BaseChannelSinkWithProperties, IServerChannelSink
       nextSink = sink;
     }
 
-
 }
 // </snippet60>
-
 
 // <snippet70>
 public class ServerSinkProvider : IServerChannelSinkProvider

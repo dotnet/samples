@@ -64,7 +64,6 @@ public class UrlIdentityPermissionDemo
                 " and \n\t" + permIdPerm2.Url + " is null.\n");
         }
 
-
     }
     //</Snippet4>
     //<Snippet5>
@@ -89,7 +88,6 @@ public class UrlIdentityPermissionDemo
     // permission with the specified state from the XML encoding.
     private static void ToFromXmlDemo()
     {
-
 
         UrlIdentityPermission permIdPerm1 = new UrlIdentityPermission("http://www.fourthcoffee.com/process/*");
         UrlIdentityPermission permIdPerm2 = new UrlIdentityPermission(PermissionState.None);

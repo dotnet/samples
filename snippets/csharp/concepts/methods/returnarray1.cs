@@ -1,6 +1,5 @@
 ﻿// <Snippet101>
 
-
 using System;
 
 public class Example

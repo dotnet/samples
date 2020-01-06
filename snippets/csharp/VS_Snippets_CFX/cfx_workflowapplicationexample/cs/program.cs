@@ -60,7 +60,6 @@ using System.Activities.Validation;
 // From other projects
 // 1000 - ReadInt from GettingStarted
 
-
 namespace WorkflowApplicationExample
 {
 
@@ -89,8 +88,6 @@ namespace WorkflowApplicationExample
             Console.WriteLine("Waiting...");
             Console.ReadKey();
         }
-
-        
 
         private static void RunWorkflow(Activity wf)
         {
@@ -183,7 +180,6 @@ namespace WorkflowApplicationExample
             // Wait for Completed to arrive and signal that
             // the workflow is complete so the host can resume.
             syncEvent.WaitOne();
-
 
         }
 
@@ -1164,7 +1160,6 @@ namespace WorkflowApplicationExample
             // Run the workflow.
             wfApp.Run();
 
-
             //</snippet36>
         }
 
@@ -1232,7 +1227,6 @@ namespace WorkflowApplicationExample
 
             // Run the workflow.
             wfApp.Run();
-
 
             //</snippet37>
         }
@@ -1320,7 +1314,6 @@ namespace WorkflowApplicationExample
 
             // Run the workflow.
             wfApp.Run();
-
 
             //</snippet38>
         }
@@ -2684,7 +2677,6 @@ namespace WorkflowApplicationExample
                 instanceUnloaded.Set();
             };
 
-
             //This call is not required 
             //Calling persist here captures the application durably before it has been started
             application.Persist();
@@ -2930,13 +2922,9 @@ namespace WorkflowApplicationExample
 
             wfApp.Run();
 
-
         }
 
-
-
     }
-
 
     // Support for snippets that use Workflow1
     class Workflow1 : Activity
@@ -2970,7 +2958,6 @@ namespace WorkflowApplicationExample
         }
     }
     //</snippet62>
-
 
     //<snippet120>
     public sealed class Divide : CodeActivity
@@ -3249,8 +3236,5 @@ namespace WorkflowApplicationExample
             throw new NotImplementedException();
         }
     }
-
-    
-
 
 }

@@ -19,8 +19,7 @@ namespace ButtonAlign
 		// To use PaneLoaded put Loaded="PaneLoaded" in root element of .xaml file.
 		// private void PaneLoaded(object sender, EventArgs e) {}
 		// Sample event handler: 
-		
- 
+
         //<Snippet2>       
 		void OnClick1(object sender, RoutedEventArgs e)
 		{
@@ -38,7 +37,6 @@ namespace ButtonAlign
 			btn2.Background = Brushes.LightBlue;
 		}
         //</Snippet2>        
-			
-		
+
    }
 }

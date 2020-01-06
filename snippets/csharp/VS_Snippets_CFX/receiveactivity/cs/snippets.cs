@@ -9,7 +9,6 @@ using System.Collections.Generic;
 using System.Xml;
 using System.ServiceModel.Channels;
 
-
 namespace ReceiveActivitySnippets
 {
     class snippets
@@ -221,11 +220,6 @@ namespace ReceiveActivitySnippets
         }
         static readonly string contextHeaderName = "Context";
         static readonly string contextHeaderNamespace = "http://schemas.microsoft.com/ws/2006/05/context";
-
-
-       
-
-        
 
         [ServiceContract]
         public interface IShippingQuote

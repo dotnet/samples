@@ -72,6 +72,5 @@ namespace LightSwitchApplication
         }
         //</Snippet6>
 
-
     }
 }

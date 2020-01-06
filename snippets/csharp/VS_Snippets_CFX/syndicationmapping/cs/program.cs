@@ -12,8 +12,7 @@ namespace FeedMapping
     {
         static void Main(string[] args)
         {
-            
-            
+
             //SyndicationFeed feed = new SyndicationFeed("My Feed Title", "My Feed Description", new Uri("http://MyFeedURI"));
             //feed.Copyright = new TextSyndicationContent("Copyright 2007");
             //feed.Language = "EN-US";
@@ -106,7 +105,6 @@ namespace FeedMapping
             //feedElement.InnerText = "Feed Element Text";
             //feed.ElementExtensions.Add(feedElement);
             //*/
-
 
             //Atom10FeedFormatter atomFormatter = feed.GetAtom10Formatter();
             //Rss20FeedFormatter rssFormatter = feed.GetRss20Formatter();

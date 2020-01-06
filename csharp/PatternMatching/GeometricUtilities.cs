@@ -81,7 +81,6 @@ namespace PatternMatching
         }
         #endregion
 
-
         #region 07_ComputeDegenerateShapes
         public static double ComputeArea_Version3(object shape)
         {

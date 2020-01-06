@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace ChunkIt
 {
     // Static class to contain the extension methods.
@@ -226,7 +225,6 @@ namespace ChunkIt
         // on different threads.
         static IEnumerable<IGrouping<string, KeyValPair>> query;
 
-
         static void Main(string[] args)
         {
             // Initialize the source sequence with an array initializer.
@@ -245,7 +243,6 @@ namespace ChunkIt
             // Create the query by using our user-defined query operator.
             query = list.ChunkBy(p => p.Key);
 
-            
             // ChunkBy returns IGrouping objects, therefore a nested
             // foreach loop is required to access the elements in each "chunk".
             foreach (var item in query)

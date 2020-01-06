@@ -134,7 +134,6 @@ class ADDyno
 
 	AppDomain curDomain = Thread.GetDomain();	
 
-
 	// Create a new AppDomain, with the current directory as the base.
 
 	Console.WriteLine("Current Directory: {0}", Environment.CurrentDirectory);
@@ -159,7 +158,6 @@ class ADDyno
 	Console.WriteLine("Loading '{0}' from '{1}'...", executableName,
 			  myDomain.BaseDirectory.ToString());
 
-
 	BindingFlags bFlags = (BindingFlags.Public | BindingFlags.CreateInstance |
 			       BindingFlags.Instance);
 
@@ -172,8 +170,7 @@ class ADDyno
 
 	myFCType.InvokeMember("CountLocalFiles", BindingFlags.InvokeMethod, null,
 				myObjInstance, new object[] { });
-			
-		
+
    }
 
 }

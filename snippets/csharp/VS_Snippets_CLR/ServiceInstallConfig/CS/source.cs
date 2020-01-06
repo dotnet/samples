@@ -149,7 +149,6 @@ namespace ServiceChangeSample
                         startMode);
                     scInfo += Environment.NewLine;
 
-                        
                     // See Win32_Service schema for ChangeStartMode input values.
                     String [] startArgs = {startMode};
 
@@ -326,7 +325,6 @@ namespace ServiceChangeSample
                 textBox.Text += Environment.NewLine + scInfo;
             }
         }
-
 
         public ServiceSampleForm()
         {

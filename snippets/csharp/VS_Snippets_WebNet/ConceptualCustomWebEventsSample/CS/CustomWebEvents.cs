@@ -5,7 +5,6 @@ using System.Web.Management;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-
 namespace Samples.AspNet.Management
 {
 

@@ -46,7 +46,6 @@ public class SamplesEncoding  {
 
    }
 
-
    public static void PrintCountsAndBytes( String s, Encoding enc )  {
 
       // Display the name of the encoding used.
@@ -67,7 +66,6 @@ public class SamplesEncoding  {
       PrintHexBytes( bytes );
 
    }
-
 
    public static void PrintCountsAndBytes( String s, int index, int count, Encoding enc )  {
 
@@ -90,7 +88,6 @@ public class SamplesEncoding  {
       PrintHexBytes( bytes );
 
    }
-
 
    public static void PrintHexBytes( byte[] bytes )  {
 

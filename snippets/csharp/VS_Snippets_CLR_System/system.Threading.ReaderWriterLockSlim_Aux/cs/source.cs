@@ -29,8 +29,7 @@ public class Dummy
            EventLog performanceLog = new EventLog();
            performanceLog.Source = "MySource";
            //</Snippet2>
-   
-   
+
            rwLock.EnterReadLock();
            //<Snippet11>
            int readCt = rwLock.CurrentReadCount;
@@ -47,8 +46,7 @@ public class Dummy
                              Thread.CurrentThread.ManagedThreadId));
            //</Snippet21>
            rwLock.ExitReadLock();
-   
-   
+
            rwLock.EnterUpgradeableReadLock();
            //<Snippet22>
            Debug.Assert(!rwLock.IsUpgradeableReadLockHeld,
@@ -56,8 +54,7 @@ public class Dummy
                              Thread.CurrentThread.ManagedThreadId));
            //</Snippet22>
            rwLock.ExitUpgradeableReadLock();
-   
-   
+
            rwLock.EnterWriteLock();
            //<Snippet23>
            Debug.Assert(!rwLock.IsWriteLockHeld, 
@@ -65,8 +62,7 @@ public class Dummy
                              Thread.CurrentThread.ManagedThreadId));
            //</Snippet23>
            rwLock.ExitWriteLock();
-   
-   
+
            rwLock.EnterReadLock();
            // Order of the following three statements is critical! We queue a
            // writer first, so it will block on the reader. Then we queue an

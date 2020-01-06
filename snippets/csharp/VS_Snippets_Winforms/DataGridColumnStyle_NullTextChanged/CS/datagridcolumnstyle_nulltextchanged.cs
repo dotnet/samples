@@ -41,8 +41,7 @@
                myDataGrid.Name = "myDataGrid";
                myDataGrid.CaptionText   = "DataGridColumn ";
                myDataGrid.Size = new Size(130,93);
-               
-               
+
                myButton.Location =   new Point(60,208);
                myButton.Size = new Size(130, 20);
                myButton.Text  = "Delete Column Values";
@@ -52,7 +51,6 @@
                Controls.AddRange(new Control[] {myButton,myDataGrid});
                Text =   "NullTextChanged ";
             }
-            
 
             static void Main() 
             {

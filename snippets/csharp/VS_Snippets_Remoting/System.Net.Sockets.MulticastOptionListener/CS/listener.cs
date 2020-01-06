@@ -6,14 +6,12 @@
 // 4) System.Net.Sockets.MulticastOption.LocalAddress;
 // </Internal>
 
-
 //<Snippet1>
 
 using System;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
-
 
 // This is the listener example that shows how to use the MulticastOption class. 
 // In particular, it shows how to use the MulticastOption(IPAddress, IPAddress) 
@@ -94,8 +92,7 @@ namespace Mssc.TransportProtocols.Utilities
       byte[] bytes = new Byte[100];
       IPEndPoint groupEP = new IPEndPoint(mcastAddress, mcastPort);
       EndPoint remoteEP = (EndPoint) new IPEndPoint(IPAddress.Any,0);
-		
-     
+
       try 
       {      
         while (!done) 
@@ -108,8 +105,7 @@ namespace Mssc.TransportProtocols.Utilities
           Console.WriteLine("Received broadcast from {0} :\n {1}\n",
             groupEP.ToString(),
             Encoding.ASCII.GetString(bytes,0,bytes.Length));
-          
-          
+
         }
 
         mcastSocket.Close();

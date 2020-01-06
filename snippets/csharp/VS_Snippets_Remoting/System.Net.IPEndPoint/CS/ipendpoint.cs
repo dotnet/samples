@@ -11,13 +11,10 @@
 // System.Net.IPEndPoint.Create (Snippet5);
 // </Internal>
 
-
 //<Snippet1>
 
 // This example uses the IPEndPoint class and its members to display the home page 
 // of the server selected by the user.
-
-
 
 using System;
 using System.Text;
@@ -25,7 +22,6 @@ using System.IO;
 using System.Net;
 using System.Net.Sockets;
 using System.Text.RegularExpressions;
-
 
 namespace Mssc.Services.ConnectionManagement
 {
@@ -159,7 +155,6 @@ namespace Mssc.Services.ConnectionManagement
         {
           IPEndPoint endpoint = new IPEndPoint(address, port);
 
-            
           tempSocket = 
             new Socket(endpoint.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
 
@@ -195,7 +190,6 @@ namespace Mssc.Services.ConnectionManagement
       return serializedSocketAddress;
 
     }
-
 
     // The requestServerHomePage method obtains the server's home page and returns
     // its content.

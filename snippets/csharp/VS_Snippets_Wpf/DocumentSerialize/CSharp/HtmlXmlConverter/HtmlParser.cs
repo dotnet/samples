@@ -67,7 +67,6 @@ using System.Text;
 // reading a table and ignore them otherwise? This may be too much of a load on the parser, I think it's better if the converter
 // deals with it
 
-
 namespace SdkSample
 {
     /// <summary>
@@ -541,7 +540,6 @@ namespace SdkSample
         }
 
         #endregion Private Methods
-
 
         // ---------------------------------------------------------------------
         //

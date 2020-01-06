@@ -43,7 +43,6 @@ namespace LibraryContractsHostAdapters
             return _contract.Description();
         }
 
-
         internal Library.IBookInfoContract GetSourceContract() {
             return _contract;
         }

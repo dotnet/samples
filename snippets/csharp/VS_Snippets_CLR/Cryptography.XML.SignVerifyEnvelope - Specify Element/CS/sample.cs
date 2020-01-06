@@ -101,8 +101,6 @@ public class SignVerifyEnvelope
 
         }
 
-
-
         // Add an RSAKeyValue KeyInfo (optional; helps recipient find key to validate).
         KeyInfo keyInfo = new KeyInfo();
         keyInfo.AddClause(new RSAKeyValue((RSA)Key));
@@ -117,7 +115,6 @@ public class SignVerifyEnvelope
 
         // Append the element to the XML document.
         doc.DocumentElement.AppendChild(doc.ImportNode(xmlDigitalSignature, true));
-
 
         if (doc.FirstChild is XmlDeclaration)
         {

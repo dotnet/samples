@@ -92,7 +92,6 @@ namespace GetMainMenu
 			MenuItem menuItem3 = new MenuItem();
 			MenuItem menuItem4 = new MenuItem();
 
-   
 			// Set the caption for the menu items.
 			menuItem1.Text = "File";
 			menuItem2.Text = "Edit";

@@ -86,7 +86,6 @@ namespace SDKSample
             buttonPanel.Children.Add(stopButton);
             myStackPanel.Children.Add(buttonPanel);
             this.Content = myStackPanel;        
-            
 
         }
 

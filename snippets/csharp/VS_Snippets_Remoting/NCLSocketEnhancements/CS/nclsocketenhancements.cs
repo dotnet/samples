@@ -18,7 +18,6 @@ namespace Example
         internal StringBuilder sb = new StringBuilder();  
     }
 
-
     public class Test
     {
 
@@ -40,7 +39,6 @@ namespace Example
 
         // Thread signal.
         public static ManualResetEvent allDone = new ManualResetEvent(false);
-   
 
         public static void Main(string[] args)
         {
@@ -92,8 +90,7 @@ namespace Example
         // <snippet6>
             // This server waits for a connection and then uses asynchronous operations to
             // accept the connection with initial data sent from the client.
-                 
-            
+
             // Establish the local endpoint for the socket.
         
             IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());
@@ -124,7 +121,6 @@ namespace Example
             }
       
         }
-
 
         public static void AcceptReceiveCallback(IAsyncResult ar) 
         {
@@ -185,8 +181,6 @@ namespace Example
                 allDone.WaitOne();
             }
         }
-
-
 
         public static void AcceptReceiveDataCallback(IAsyncResult ar) 
         {
@@ -275,8 +269,6 @@ namespace Example
             // Signal the main thread to continue.
             allDone.Set();
         }
-      
-
 
         public static void AsynchronousClient()
         {
@@ -295,10 +287,6 @@ namespace Example
             ClientDisconnect();
         }
 
-
-
-
-
         private static void ClientSendCallback(IAsyncResult ar) 
         {
             // Retrieve the socket from the state object.
@@ -313,7 +301,6 @@ namespace Example
             // Signal that all bytes have been sent.
             sendDone.Set();
         }
-
 
         // <snippet9>
         public static void AsynchronousFileSend()
@@ -348,7 +335,6 @@ namespace Example
             client.Close();
         }
 
-
         private static void FileSendCallback(IAsyncResult ar)
         {
             // Retrieve the socket from the state object.
@@ -360,7 +346,6 @@ namespace Example
         }
         // </snippet9>
 
-    
         // <snippet10>
         public static void AsynchronousFileSendWithBuffers()
         {
@@ -402,7 +387,6 @@ namespace Example
             client.Shutdown(SocketShutdown.Both);
             client.Close();
         }
-
 
         private static void AsynchronousFileSendCallback(IAsyncResult ar)
         {
@@ -472,7 +456,6 @@ namespace Example
             }
         }   
 
-
         public static void ClientDisconnect()
         {
         //<snippet11>
@@ -511,7 +494,6 @@ namespace Example
             else
                 Console.WriteLine("We're disconnected");
         }
-
 
         private static void DisconnectCallback(IAsyncResult ar)
         { 
@@ -576,7 +558,6 @@ namespace Example
             }
         }
 
-
         public static void SynchronousClient()
         {
             // The following methods set up a socket and demonstrate the use of a new Sockets method.
@@ -599,7 +580,6 @@ namespace Example
             // Show synchronous disconnect
             SynchronousDisconnect();
         }
-
 
         private static void SetSocketOptions()
         {
@@ -628,9 +608,6 @@ namespace Example
             client.Shutdown(SocketShutdown.Both);
             client.Close();
         }
-
-
-
 
         private static void FileSend()
         {
@@ -697,7 +674,6 @@ namespace Example
 
         // </snippet4>
         }    
-
 
         public static void SynchronousDisconnect()
         {

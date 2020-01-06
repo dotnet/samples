@@ -2,7 +2,6 @@
   *File name: WebEventProvider.cs
   *Purpose: Shows how to build a custom event provider. 
   **/
-
 // <Snippet1>
 
 using System;
@@ -12,7 +11,6 @@ using System.Web.Management;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Web;
-
 
  namespace Samples.AspNet.Management
  {
@@ -59,7 +57,6 @@ using System.Web;
             StoreToFile(customInfo, logFilePath, FileMode.Append);
         }
         // </Snippet9>
-
 
         // <Snippet2>
         // Initializes the provider.
@@ -208,7 +205,6 @@ using System.Web;
                 "EventsDiscardedSinceLastNotification: {0}",
                 GetEventsDiscardedSinceLastNotification(flushInfo)));
 
-           
             // Read each buffered event and send it to the
             // Application Log.
             foreach (WebBaseEvent eventRaised in flushInfo.Events)

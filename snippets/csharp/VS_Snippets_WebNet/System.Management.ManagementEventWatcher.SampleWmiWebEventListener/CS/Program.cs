@@ -116,7 +116,6 @@ namespace SamplesAspNet
             Console.WriteLine(
                 "Listener started. Enter Cntl-C to terminate");
 
-
             while (true)
             {
                 try

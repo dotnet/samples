@@ -20,7 +20,6 @@ namespace Microsoft.Samples.CustomControls
             AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(currentDomain_UnhandledException);
         }
 
-
         protected override void OnStartup(StartupEventArgs e)
         {
            
@@ -30,8 +29,6 @@ namespace Microsoft.Samples.CustomControls
             
             base.OnStartup(e);
         }
-
-
 
         private void currentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs args)
         {

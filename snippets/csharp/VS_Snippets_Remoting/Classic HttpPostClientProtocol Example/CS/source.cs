@@ -5,7 +5,6 @@ using System;
 using System.Web.Services.Protocols;
 using System.Web.Services;
 
-
 public class MyMath : System.Web.Services.Protocols.HttpPostClientProtocol
 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]

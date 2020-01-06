@@ -2,7 +2,6 @@
 using System;
 using System.Configuration;
 
-
 class UsingConfigurationCollectionAttribute
 {
 
@@ -28,7 +27,6 @@ class UsingConfigurationCollectionAttribute
                 config.Sections.Add("MyUrls", myUrlsSection);
             }
 
-           
             // Save the application configuration file.
             myUrlsSection.SectionInformation.ForceSave = true;
             config.Save(ConfigurationSaveMode.Modified);

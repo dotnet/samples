@@ -145,7 +145,6 @@ public class ListenerBasic
     }
     // </snippet4>
 
-
     // <snippet6>
     public static bool RemoveAllPrefixes(HttpListener listener)
     {
@@ -461,7 +460,6 @@ public class ListenerBasic
         }
         // </snippet20>
 
-
         // <snippet21>
         // Displays the header information that accompanied a request.
     public static void DisplayWebHeaderCollection(HttpListenerRequest request)
@@ -488,8 +486,7 @@ public class ListenerBasic
     // <snippet22>
     public static void ShowSendFormat (HttpListenerResponse response)
     {
-        
-    
+
     }
     // </snippet22>
 
@@ -621,7 +618,6 @@ public class ListenerBasic
         //SimpleListenerCookieExample(prefixes);
         // SimpleListenerCookieExample(prefixes);
         SimpleCookieExample(prefixes);
-
 
       //  NonblockingListener( prefixes);
 /*

@@ -19,7 +19,6 @@ using System.Security.Permissions;
 using System.Xml;
 using WinForms = Microsoft.Win32;
 
-
 namespace SdkSample
 {
     // ========================= partial class Window1 ========================
@@ -37,7 +36,6 @@ namespace SdkSample
                 "Click 'File | Open...' to select a file to open and view.");
         }
         #endregion constructor
-
 
         #region File|Open...
         // ------------------------------ OnOpen ------------------------------
@@ -69,7 +67,6 @@ namespace SdkSample
                     OpenDocument(_xpsFile);
             }
         }// end:OnOpen()
-
 
         //<SnippetRmPkgViewOpenDoc>
         // --------------------------- OpenDocument ---------------------------
@@ -105,7 +102,6 @@ namespace SdkSample
                     MessageBoxButton.OK, MessageBoxImage.Error);
                 return false;
             }
-
 
             // Get the document's PackageStore into which
             // new user annotations will be added and saved.
@@ -143,7 +139,6 @@ namespace SdkSample
             return true;
         }// end:OpenDocument()
         //</SnippetRmPkgViewOpenDoc>
-
 
         // ---------------------- OpenEncryptedDocument -----------------------
         /// <summary>
@@ -394,7 +389,6 @@ namespace SdkSample
             return null;
         }// end:GetFixedDocumentSequenceUri()
 
-
         // --------------------------- GetPackage -----------------------------
         /// <summary>
         ///   Returns the XPS package contained within a given file.</summary>
@@ -424,7 +418,6 @@ namespace SdkSample
 
             return inputPackage;
         }// end:GetPackage()
-
 
         // ------------------------ GetFixedDocument --------------------------
         /// <summary>
@@ -459,7 +452,6 @@ namespace SdkSample
         }// end:GetFixedDocument()
         #endregion File|Open...
 
-
         #region File|Close
         // ----------------------------- OnClosed -----------------------------
         /// <summary>
@@ -469,7 +461,6 @@ namespace SdkSample
             CloseDocument();
         }// end:OnClosed()
 
-
         // ----------------------------- OnClose ------------------------------
         /// <summary>
         ///   Handles the user "File | Close" menu operation
@@ -478,7 +469,6 @@ namespace SdkSample
         {
             CloseDocument();
         }// end:OnClose()
-
 
         //<SnippetRmPkgViewCloseDoc>
         // --------------------------- CloseDocument --------------------------
@@ -522,7 +512,6 @@ namespace SdkSample
         //</SnippetRmPkgViewCloseDoc>
         #endregion File|Close
 
-
         #region File|Exit
         // ------------------------------ OnExit ------------------------------
         /// <summary>
@@ -533,7 +522,6 @@ namespace SdkSample
             Close();        // invokes OnClosed()
         }// end:OnExit()
         #endregion File|Exit
-
 
         #region Utilities
         // ------------------------- GetContentFolder -------------------------
@@ -565,7 +553,6 @@ namespace SdkSample
             return contentDir;
         }// end:GetContentFolder()
 
-
         // ------------------------------ Filename ----------------------------
         /// <summary>
         ///   Returns just the filename from a given path and filename.</summary>
@@ -586,7 +573,6 @@ namespace SdkSample
             return filepath.Remove(0, slashIndex + 1);
         }
 
-
         // --------------------------- ShowStatus -----------------------------
         /// <summary>
         ///   Adds a line of text to the statusBlock.</summary>
@@ -596,7 +582,6 @@ namespace SdkSample
         {
             statusBlock.Text += status + "\n";
         }
-
 
         // ---------------------------- ShowPrompt ----------------------------
         /// <summary>
@@ -608,7 +593,6 @@ namespace SdkSample
             promptBlock.Text = prompt;
         }
 
-
         // ----------------------------- OnPrint ------------------------------
         /// <summary>
         ///   Handles the user "File | Print" menu operation.</summary>
@@ -616,7 +600,6 @@ namespace SdkSample
         {
             PrintDocument();
         }// end:OnClose()
-
 
         // -------------------------- PrintDocument ---------------------------
         /// <summary>
@@ -626,7 +609,6 @@ namespace SdkSample
             if (docViewer == null)  return;
             docViewer.Print();
         }
-
 
         // --------------------- OnWindowsAuthentication ----------------------
         /// <summary>
@@ -638,7 +620,6 @@ namespace SdkSample
             _authentication = AuthenticationType.Windows;
         }
 
-
         // --------------------- OnPassportAuthentication ---------------------
         /// <summary>
         ///   Sets rights management for Windows authentication.</summary>
@@ -648,7 +629,6 @@ namespace SdkSample
             menuViewPassport.IsChecked = true;
             _authentication = AuthenticationType.Passport;
         }
-
 
         // -------------------- GetDefaultWindowsUserName() -------------------
         /// <summary>
@@ -682,7 +662,6 @@ namespace SdkSample
             return ((string)result.Properties["mail"][0]);
         }// end:GetDefaultWindowsUserName()
 
-
         // ----------------------- DocViewer attribute ------------------------
         /// <summary>
         ///   Gets the current DocumentViewer.</summary>
@@ -692,7 +671,6 @@ namespace SdkSample
                 { return docViewer; }  // "docViewer" declared in Window1.xaml
         }
         #endregion Utilities
-
 
         #region private fields
         private string      _xpsFile=null;      // XPS doc path and filename.
@@ -705,7 +683,6 @@ namespace SdkSample
         private readonly string _fixedDocumentSequenceContentType =
             "application/vnd.ms-package.xps-fixeddocumentsequence+xml";
         #endregion private fields
-
 
     }// end:partial class Window1
 

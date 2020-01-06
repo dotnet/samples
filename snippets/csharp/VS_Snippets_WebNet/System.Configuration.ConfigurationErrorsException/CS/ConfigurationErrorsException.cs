@@ -49,7 +49,6 @@ namespace Samples.AspNet
 
     }
 
-
     // Create the custom section and write it to
     // the configuration file.
     class UsingConfigurationErrorsException
@@ -145,7 +144,6 @@ namespace Samples.AspNet
             ModifyCustomSection();
         }
 
-    
     }
 }
 // </Snippet1>

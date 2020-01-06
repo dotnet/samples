@@ -12,7 +12,6 @@ public class Form1:
 		//This call is required by the Windows Form Designer.
 		InitializeComponent();
 
-
 		//Add any initialization after the InitializeComponent() call
 
 	}

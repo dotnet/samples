@@ -129,7 +129,6 @@ namespace Example
                     
         }
 
-        
         // MakeRelative
         private static void SampleMakeRelative()
         {
@@ -158,7 +157,6 @@ namespace Example
                   
             Console.WriteLine(address1.HostNameType);
          //</snippet9>
-
 
          //<snippet10>
             Uri address2 =  new Uri("file://server/filename.ext");

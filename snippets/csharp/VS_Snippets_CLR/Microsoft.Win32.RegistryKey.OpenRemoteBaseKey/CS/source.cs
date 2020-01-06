@@ -4,7 +4,6 @@ using System.IO;
 using System.Security.Permissions;
 using Microsoft.Win32;
 
-
 class RemoteKey
 {
     static void Main(string[] args)

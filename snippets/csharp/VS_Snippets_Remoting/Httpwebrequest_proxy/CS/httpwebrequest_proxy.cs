@@ -8,7 +8,6 @@ Proxy object.
 Note:No credentials are required if the Proxy does not require any authentication.
 */
 
-
 using System;
 using System.IO;
 using System.Net;

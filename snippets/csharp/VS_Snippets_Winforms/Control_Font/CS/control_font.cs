@@ -44,7 +44,6 @@ public class MyFormControl : Form
       myForm.ShowDialog();
    }
 
-
 // <Snippet1>
 private void myButton_Click(object sender, EventArgs e)
 {
@@ -77,7 +76,6 @@ private void DateTimePicker_FontChanged(object sender, EventArgs e)
 // </Snippet3>
 }
 // </Snippet2>
-
 
 }
 

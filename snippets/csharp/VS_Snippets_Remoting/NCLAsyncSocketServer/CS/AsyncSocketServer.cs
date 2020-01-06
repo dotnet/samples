@@ -16,8 +16,6 @@ using System.Threading;
 
 //Example: AsyncSocketServer.exe 500 1024 ipv4 8000
 
-
-
 namespace AsyncSocketSample
 {
     // This class is designed for use as the object to be assigned to the SocketAsyncEventArgs.UserToken property. 
@@ -40,8 +38,6 @@ namespace AsyncSocketSample
         }
 
     }
-
-
 
     //<Snippet1>
     // This class creates a single large buffer which can be divided up 
@@ -109,7 +105,6 @@ namespace AsyncSocketSample
     }
     //</Snippet1>
 
-    
     //<Snippet2>
     // Represents a collection of reusable SocketAsyncEventArgs objects.  
     class SocketAsyncEventArgsPool
@@ -156,7 +151,6 @@ namespace AsyncSocketSample
 
     }
     //</Snippet2>
-    
 
     //<Snippet3>
     // Implements the connection logic for the socket server.  
@@ -247,7 +241,6 @@ namespace AsyncSocketSample
             Console.WriteLine("Press any key to terminate the server process....");
             Console.ReadKey();
         }
-
 
         // Begins an operation to accept a connection request from the client 
         //
@@ -426,7 +419,6 @@ namespace AsyncSocketSample
                 string addressFamily = args[2].ToLower();
                 port = int.Parse(args[3]);
 
-
                 if (numConnections <= 0)
                 {
                     throw new ArgumentException("The number of connections specified must be greater than 0");
@@ -468,7 +460,6 @@ namespace AsyncSocketSample
             Server server = new Server(numConnections, receiveSize);
             server.Init();
             server.Start(localEndPoint);
-
 
         }
     }

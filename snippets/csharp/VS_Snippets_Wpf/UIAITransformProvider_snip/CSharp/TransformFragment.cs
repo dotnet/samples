@@ -9,7 +9,6 @@ using System.Runtime.InteropServices;
 using MS.Win32;
 using System.Collections;
 
-
 namespace UIAITransformProvider_snip
 {
     public class TransformProvider : IRawElementProviderSimple, ITransformProvider
@@ -345,8 +344,6 @@ namespace UIAITransformProvider_snip
         }
         // </SnippetRotate>
 
-
-                    
         // Rotation code to be implemented.    
         //int degrees = (int)degreesToRotate;
 
@@ -364,7 +361,6 @@ namespace UIAITransformProvider_snip
             //controlCorners[3] = new Point(0, this.customControl.Height);
 
             //Point[] controlCornersNew = new Point[4];
-
 
             //for (int loop = 0; loop <= 3; loop++)
             //{
@@ -384,7 +380,6 @@ namespace UIAITransformProvider_snip
             //    this.customControl.Width = height;
             //    this.customControl.Height = width;
             //}));
-
 
         #endregion ITransformProvider Members
 

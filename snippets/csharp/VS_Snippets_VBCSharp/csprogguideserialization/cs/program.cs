@@ -28,12 +28,10 @@ public class XMLWrite
         WriteXML();
     }
 
-
     public class Book
     {
         public String title; 
     }
-
 
     public static void WriteXML()
     {

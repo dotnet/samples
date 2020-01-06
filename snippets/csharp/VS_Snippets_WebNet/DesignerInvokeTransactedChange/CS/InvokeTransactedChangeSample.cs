@@ -131,7 +131,6 @@ namespace ASPNet.Samples
         }
     }
 
-
     // Create a designer class for the SampleControl
     [System.Security.Permissions.SecurityPermission(
         System.Security.Permissions.SecurityAction.Demand, 

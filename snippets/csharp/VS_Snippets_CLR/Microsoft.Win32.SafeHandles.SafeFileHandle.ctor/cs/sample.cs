@@ -14,14 +14,12 @@ class SafeHandlesExample
 
             UnmanagedFileLoader loader = new UnmanagedFileLoader("example.xml");
 
-
         }
         catch (Exception e)
         {
             Console.WriteLine(e);
         }
         Console.ReadLine();
-
 
     }
 }
@@ -45,15 +43,12 @@ class UnmanagedFileLoader
       uint dwShareMode, IntPtr lpSecurityAttributes, uint dwCreationDisposition,
       uint dwFlagsAndAttributes, IntPtr hTemplateFile);
 
-
     private SafeFileHandle handleValue = null;
-
 
     public UnmanagedFileLoader(string Path)
     {
         Load(Path);
     }
-
 
     public void Load(string Path)
     {

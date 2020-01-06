@@ -276,7 +276,6 @@ public class DataGridViewColumnDemo : Form
     }
     //</snippet140>
 
-
     //<snippet145>
     private void ToolTips()
     {
@@ -332,7 +331,6 @@ public class DataGridViewColumnDemo : Form
         column.Width = 60;
     }
     //</snippet108>
-
 
     //<snippet109>
     // AutoSize the third column.

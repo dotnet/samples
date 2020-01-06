@@ -24,8 +24,7 @@ namespace ComboBoxColumnSample2
     {
         AdventureWorksLT2008DataSetTableAdapters.CustomerTableAdapter ctadapter = new AdventureWorksLT2008DataSetTableAdapters.CustomerTableAdapter();
             AdventureWorksLT2008DataSet.CustomerDataTable dt = new AdventureWorksLT2008DataSet.CustomerDataTable();
-            
-        
+
         public Window1()
         {
             InitializeComponent();
@@ -35,12 +34,8 @@ namespace ComboBoxColumnSample2
             DG1.DataContext = dt;
             cbc1.ItemsSource = dt;
             CB.DataContext = dt;
-            
-
-           
 
         }
-
 
         public class Customer
         {
@@ -51,7 +46,6 @@ namespace ComboBoxColumnSample2
             //private OrderStatus _orderstatus;
             //private BitmapImage bi = new BitmapImage(new Uri("empphoto.jpg"));
 
-            
             public string FirstName { get; set; }
             public string LastName { get; set; }
             public Uri Email { get; set; }
@@ -66,13 +60,10 @@ namespace ComboBoxColumnSample2
 
         public ObservableCollection<Customer> GetData()
         {
-            
-
 
             OrderStatus[] custstatus = {OrderStatus.New, OrderStatus.Received, OrderStatus.None, OrderStatus.Shipped, OrderStatus.New, OrderStatus.Processing,
                                       OrderStatus.Received, OrderStatus.None, OrderStatus.Shipped, OrderStatus.New};
             bool[] IsGoldMember = { true, true, false, true, false, true, true, false, true, false };
-
 
             ObservableCollection<Customer> customers = new ObservableCollection<Customer>();
 
@@ -92,9 +83,6 @@ namespace ComboBoxColumnSample2
             return customers;
 
         }
-
-
-
 
     }
     public enum OrderStatus { None, New, Processing, Shipped, Received };

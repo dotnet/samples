@@ -3,7 +3,6 @@
 // GetPathList, AddPathList, and SetPathList methods
 // of the RegistryPermission class.
 
-
 using System;
 using System.Security;
 using System.Security.Permissions;

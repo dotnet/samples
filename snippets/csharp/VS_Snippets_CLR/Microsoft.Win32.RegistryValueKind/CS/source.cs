@@ -27,7 +27,6 @@ public class Example
         // the output from this value with the previous string value.
         rk.SetValue("ExpandedStringValue", "The path is %PATH%", RegistryValueKind.ExpandString);
 
-
         // Display all name/value pairs stored in the test key, with each
         // registry data type in parentheses.
         //

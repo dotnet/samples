@@ -25,7 +25,6 @@ namespace SDKSamples
             myBorder.Margin = new Thickness(0, 60, 0, 20);
             myBorder.Padding = new Thickness(20);
 
-
             // Assign the border a name so that
             // it can be targeted by a Storyboard.
             this.RegisterName(

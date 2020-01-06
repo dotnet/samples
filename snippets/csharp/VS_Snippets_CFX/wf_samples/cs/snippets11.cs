@@ -346,7 +346,6 @@ namespace WF_Snippets
             //<snippet171>
             workflowRuntime.WorkflowResumed += OnWorkflowResume;
             //</snippet171>
-            
 
             //<snippet172>
             if (workflowSuspended)

@@ -61,7 +61,6 @@ class XMLSchemaExamples
         elementUSState.Name = "state";
         elementUSState.SchemaTypeName = new XmlQualifiedName("string", "http://www.w3.org/2001/XMLSchema");
 
-
         // <xs:element name="zipcode" type="xs:positiveInteger"/>
         XmlSchemaElement elementZipcode = new XmlSchemaElement();
         sequence2.Items.Add(elementZipcode);

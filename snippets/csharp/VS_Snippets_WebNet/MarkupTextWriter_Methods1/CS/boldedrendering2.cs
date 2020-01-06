@@ -20,7 +20,6 @@ namespace Samples.AspNet.CS
              writer.AddStyleAttribute(HtmlTextWriterStyle.Color, "Blue");
              writer.RenderBeginTag(HtmlTextWriterTag.Font);
 
-
 // <snippet5>
              // Use the Write(string, object) method to
              // render a formatted string and an object in it.

@@ -34,7 +34,6 @@ namespace CancelATask
         {
             InitializeComponent();
         }
-        
 
         private async void startButton_Click(object sender, RoutedEventArgs e)
         {
@@ -68,7 +67,6 @@ namespace CancelATask
             cts = null; 
         }
 
-
         //<snippet2>
         // ***Add an event handler for the Cancel button.
         private void cancelButton_Click(object sender, RoutedEventArgs e)
@@ -79,7 +77,6 @@ namespace CancelATask
             }
         }
         //</snippet2>
-
 
         //<snippet5>
         // ***Provide a parameter for the CancellationToken.
@@ -111,7 +108,6 @@ namespace CancelATask
     // Ready to download.
 
     // Length of the downloaded string: 158125.
-
 
     // Or, if you cancel:
 

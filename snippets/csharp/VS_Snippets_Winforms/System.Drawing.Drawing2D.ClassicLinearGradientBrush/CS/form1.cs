@@ -57,7 +57,6 @@ namespace System.Drawing.Drawing2D.ClassicLinearGradientBrushCS
 		}
 		#endregion
 
-
         // Snippet for: M:System.Drawing.Drawing2D.LinearGradientBrush.Clone
         // <snippet1>
         private void CloneExample(PaintEventArgs e)
@@ -86,7 +85,6 @@ namespace System.Drawing.Drawing2D.ClassicLinearGradientBrushCS
         }
         // </snippet1>
 
-
         // Snippet for: M:System.Drawing.Drawing2D.LinearGradientBrush.MultiplyTransform(System.Drawing.Drawing2D.Matrix,System.Drawing.Drawing2D.MatrixOrder)
         // <snippet2>
         private void MultiplyTransformExample(PaintEventArgs e)
@@ -114,7 +112,6 @@ namespace System.Drawing.Drawing2D.ClassicLinearGradientBrushCS
             e.Graphics.FillEllipse(myLGBrush, 20, 150, 380, 50);
         }
         // </snippet2>
-
 
         // Snippet for: M:System.Drawing.Drawing2D.LinearGradientBrush.ResetTransform
         // <snippet3>
@@ -148,7 +145,6 @@ namespace System.Drawing.Drawing2D.ClassicLinearGradientBrushCS
         }
         // </snippet3>
 
-
         // Snippet for: M:System.Drawing.Drawing2D.LinearGradientBrush.RotateTransform(System.Single,System.Drawing.Drawing2D.MatrixOrder)
         // <snippet4>
         private void RotateTransformExample(PaintEventArgs e)
@@ -173,7 +169,6 @@ namespace System.Drawing.Drawing2D.ClassicLinearGradientBrushCS
             e.Graphics.FillEllipse(myLGBrush, 20, 150, 200, 100);
         }
         // </snippet4>
-
 
         // Snippet for: M:System.Drawing.Drawing2D.LinearGradientBrush.ScaleTransform(System.Single,System.Single,System.Drawing.Drawing2D.MatrixOrder)
         // <snippet5>
@@ -200,7 +195,6 @@ namespace System.Drawing.Drawing2D.ClassicLinearGradientBrushCS
         }
         // </snippet5>
 
-
         // Snippet for: M:System.Drawing.Drawing2D.LinearGradientBrush.SetBlendTriangularShape(System.Single,System.Single)
         // <snippet6>
         private void SetBlendTriangularShapeExample(PaintEventArgs e)
@@ -223,7 +217,6 @@ namespace System.Drawing.Drawing2D.ClassicLinearGradientBrushCS
             e.Graphics.FillEllipse(myLGBrush, myRect);
         }
         // </snippet6>
-
 
         // Snippet for: M:System.Drawing.Drawing2D.LinearGradientBrush.SetSigmaBellShape(System.Single,System.Single)
         // <snippet7>
@@ -249,7 +242,6 @@ namespace System.Drawing.Drawing2D.ClassicLinearGradientBrushCS
             e.Graphics.FillEllipse(myLGBrush, myRect);
         }
         // </snippet7>
-
 
         // Snippet for: M:System.Drawing.Drawing2D.LinearGradientBrush.TranslateTransform(System.Single,System.Single,System.Drawing.Drawing2D.MatrixOrder)
         // <snippet8>

@@ -145,7 +145,6 @@ public class Run
       XmlSerializer mySerializer =  
       new XmlSerializer(myMapping);
 
-
       // Reading the file requires an  XmlTextReader.
       XmlTextReader reader= 
       new XmlTextReader(filename);

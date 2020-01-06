@@ -22,7 +22,6 @@ namespace CS
             //</Snippet11>
         }
 
-
         //---------------------------------------------------------------------
         //<Snippet4>
         private void customersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -50,7 +49,6 @@ namespace CS
         }
         //</Snippet4>
 
-
         //---------------------------------------------------------------------
         //<Snippet5>
         private void DeleteOrders()
@@ -72,7 +70,6 @@ namespace CS
             }
         }
         //</Snippet5>
-
 
         //---------------------------------------------------------------------
         //<Snippet6>
@@ -96,7 +93,6 @@ namespace CS
         }
         //</Snippet6>
 
-
         //---------------------------------------------------------------------
         //<Snippet7>
         private void AddNewCustomers()
@@ -118,7 +114,6 @@ namespace CS
             }
         }
         //</Snippet7>
-
 
         //---------------------------------------------------------------------
         //<Snippet8>
@@ -142,13 +137,11 @@ namespace CS
         }
         //</Snippet8>
 
-
         //---------------------------------------------------------------------
         public Form2()
         {
             InitializeComponent();
         }
-
 
         //---------------------------------------------------------------------
         private void Form2_Load(object sender, EventArgs e)
@@ -159,7 +152,6 @@ namespace CS
             // TODO: This line of code loads data into the 'northwindDataSet.Customers' table. You can move, or remove it, as needed.
             this.customersTableAdapter.Fill(this.northwindDataSet.Customers);
         }
-
 
         //---------------------------------------------------------------------
         //<Snippet27>
@@ -219,7 +211,6 @@ namespace CS
             }
         }
         //</Snippet27>
-
 
     }
 }

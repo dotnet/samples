@@ -55,7 +55,6 @@ namespace LINQAndFiles
     }
     //</snippet1>
 
-    
     //<snippet2>
     class QuerySize
     {
@@ -180,7 +179,6 @@ namespace LINQAndFiles
                 Console.WriteLine("{0}: {1} bytes", v.FullName, v.Length);
             }
 
-
             // Group the files according to their size, leaving out
             // files that are less than 200000 bytes. 
             var querySizeGroups =
@@ -191,7 +189,6 @@ namespace LINQAndFiles
                 where fileGroup.Key >= 2
                 orderby fileGroup.Key descending
                 select fileGroup;
-
 
             foreach (var filegroup in querySizeGroups)
             {
@@ -412,7 +409,6 @@ namespace LINQAndFiles
     }
     //</snippet5>
 
-
     //<snippet6>
     class QueryDuplicateFileNames
     {
@@ -512,7 +508,6 @@ namespace LINQAndFiles
 
             PageOutput<PortableKey, string>(queryDupFiles);
         }
-
 
         // A generic method to page the output of the QueryDuplications methods
         // Here the type of the group must be specified explicitly. "var" cannot

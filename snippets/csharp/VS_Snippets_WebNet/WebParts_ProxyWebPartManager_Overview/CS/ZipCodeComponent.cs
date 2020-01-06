@@ -18,7 +18,6 @@ namespace Samples.AspNet.CS.Controls
     string ZipCode { get; set;}
   }
 
-
   [AspNetHostingPermission(SecurityAction.Demand,
     Level = AspNetHostingPermissionLevel.Minimal)]
   [AspNetHostingPermission(SecurityAction.InheritanceDemand,
@@ -70,7 +69,6 @@ namespace Samples.AspNet.CS.Controls
     }
 
   }
-
 
   [AspNetHostingPermission(SecurityAction.Demand,
     Level = AspNetHostingPermissionLevel.Minimal)]

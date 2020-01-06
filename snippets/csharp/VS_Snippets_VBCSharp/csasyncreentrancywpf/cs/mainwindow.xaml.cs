@@ -28,7 +28,6 @@ namespace WebsiteDownloadWPF
             InitializeComponent();
         }
 
-
         //<snippet2>
         private async void StartButton_Click(object sender, RoutedEventArgs e)
         {
@@ -45,7 +44,6 @@ namespace WebsiteDownloadWPF
             }
         }
         //</snippet2>
-
 
         private async Task AccessTheWebAsync()
         {
@@ -75,7 +73,6 @@ namespace WebsiteDownloadWPF
                 string.Format("\r\n\r\nTOTAL bytes returned:  {0}\r\n", total);
         }
 
-
         private List<string> SetUpURLList()
         {
             List<string> urls = new List<string> 
@@ -91,7 +88,6 @@ namespace WebsiteDownloadWPF
             };
             return urls;
         }
-
 
         private void DisplayResults(string url, byte[] content, int pos)
         {

@@ -6,8 +6,6 @@ using System.ServiceModel;
 using System.ServiceModel.Channels;
 using System.Xml;
 
-
-
 namespace SendActivitySnippets
 {
     class snippets
@@ -77,7 +75,6 @@ namespace SendActivitySnippets
     }
     class Snippets2
     {
-        
 
         //SendActivity.BeforeSend
         //<snippet3>
@@ -119,7 +116,6 @@ namespace SendActivitySnippets
             //</snippet7>
         }
 
-
         //SendActivity.Context
         //<snippet8>
         static public void ApplyContext(SendActivity activity, IDictionary<string, string> context)
@@ -130,7 +126,6 @@ namespace SendActivitySnippets
             }
         }
         //</snippet8>
-
 
         //SendActivity.CustomAddress
         static string contextHeaderName = "";

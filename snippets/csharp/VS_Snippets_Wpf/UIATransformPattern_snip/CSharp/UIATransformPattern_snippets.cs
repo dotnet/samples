@@ -195,7 +195,6 @@ namespace UIATransformPattern_snip
         }
         // </Snippet104>
 
-
         ///--------------------------------------------------------------------
         /// <summary>
         /// The main entry point for the application.

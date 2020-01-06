@@ -6,7 +6,6 @@ namespace Samples.AspNet.CS {
   using System.Web.UI;
   using System.Web.UI.WebControls;
 
-
   [DefaultProperty("ControlID")]
   public class DebugInfoControl : Control {
 
@@ -42,7 +41,6 @@ namespace Samples.AspNet.CS {
       }
 
       Control ctrl = this.FindControl(ControlID);
-
 
       if (ctrl == null) {
         writer.Write("<Font Color='Red'>Could not find control " +  ControlID + " in Naming Container.</Font>");

@@ -15,7 +15,6 @@ class Test
             // Add some information to the file.
             fs.Write(info, 0, info.Length);
         }
-        
 
         // Open the stream and read it back.
         using (FileStream fs = File.Open(path, FileMode.Open)) 

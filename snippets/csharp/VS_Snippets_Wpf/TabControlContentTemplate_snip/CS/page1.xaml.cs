@@ -11,7 +11,6 @@ using System.ComponentModel;
 namespace TabControl
 {
 
-
     public partial class Page1 : Window
     {
         public Page1()
@@ -48,6 +47,5 @@ namespace TabControl
         }
 
     }
-
 
 }

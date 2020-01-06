@@ -40,7 +40,6 @@ namespace MyProject
 			return;
 		}
 
-
 		//**************************************************
 		// Sends an Order to a queue.
 		//**************************************************
@@ -61,7 +60,6 @@ namespace MyProject
 
 			return;
 		}
-
 
 		//**************************************************
 		// Receives a message containing an Order.

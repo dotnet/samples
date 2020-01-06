@@ -2,7 +2,6 @@
 using System.Runtime.InteropServices;
 using System;
 
-
 // Declare a class member for each structure element.
 [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
 public class OpenFileName

@@ -43,7 +43,6 @@ class Program
             // Encrypt the "creditcard" element.
             Encrypt(xmlDoc, "creditcard", "EncryptedElement1", rsaKey, "rsaKey");
 
-
             // Save the XML document.
             // <snippet16>
             xmlDoc.Save("test.xml");
@@ -71,7 +70,6 @@ class Program
             // Clear the RSA key.
             rsaKey.Clear();
         }
-
 
         Console.ReadLine();
     }

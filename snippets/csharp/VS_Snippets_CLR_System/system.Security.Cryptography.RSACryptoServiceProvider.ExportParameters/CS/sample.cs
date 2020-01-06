@@ -13,13 +13,11 @@ class RSACSPSample
             using (RSACryptoServiceProvider RSA = new RSACryptoServiceProvider())
             {
 
-
                 //Export the key information to an RSAParameters object.
                 //Pass false to export the public key information or pass
                 //true to export public and private key information.
                 RSAParameters RSAParams = RSA.ExportParameters(false);
             }
-
 
         }
         catch (CryptographicException e)

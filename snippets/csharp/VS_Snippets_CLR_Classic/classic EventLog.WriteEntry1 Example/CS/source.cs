@@ -20,12 +20,10 @@ class MySample{
             // The source is created.  Exit the application to allow it to be registered.
             return;
         }
-                
-      
+
         // Write an informational entry to the event log.    
         EventLog.WriteEntry("MySource", "Writing to event log.");
-        
-        
+
     }
 }
 

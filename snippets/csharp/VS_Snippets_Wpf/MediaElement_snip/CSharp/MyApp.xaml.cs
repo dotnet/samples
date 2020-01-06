@@ -7,7 +7,6 @@ using System.Data;
 using System.Xml;
 using System.Configuration;
 
-
 namespace MediaElementExample
 {
 	/// <summary>

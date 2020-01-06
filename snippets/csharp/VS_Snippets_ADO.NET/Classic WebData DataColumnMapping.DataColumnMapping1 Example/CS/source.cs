@@ -7,7 +7,6 @@ public class Form1: Form
 {
     protected DataSet DataSet1;
 
-
     // <Snippet1>
     public void CreateDataColumnMapping() 
     {

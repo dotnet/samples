@@ -1,7 +1,6 @@
 ﻿// System.Diagnostics.EventLogEntryCollection.Count
 // System.Diagnostics.EventLogEntryCollection.Item
 
-
 /*
    The following example demonstrates 'Item','Count' properties of 
    EventLogEntryCollection class.A new Source for eventlog 'MyNewLog' is created.

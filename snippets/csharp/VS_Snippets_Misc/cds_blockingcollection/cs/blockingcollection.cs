@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-
 namespace OverviewSnippets
 {
     using System;
@@ -22,7 +21,6 @@ namespace OverviewSnippets
             // A bounded collection. It can hold no more 
             // than 100 items at once.
             BlockingCollection<Data> dataItems = new BlockingCollection<Data>(100);
-
 
             // A simple blocking consumer with no cancellation.
             Task.Run(() => 

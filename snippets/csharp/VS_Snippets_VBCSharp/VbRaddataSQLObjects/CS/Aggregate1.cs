@@ -11,12 +11,10 @@ public struct CountVowels
     // count only the vowels in the passed-in strings
     private SqlInt32 countOfVowels;
 
-
     public void Init()
     {
         countOfVowels = 0;
     }
-
 
     public void Accumulate(SqlString value)
     {
@@ -39,12 +37,10 @@ public struct CountVowels
         }
     }
 
-
     public void Merge(CountVowels value)
     {
         Accumulate(value.Terminate());
     }
-
 
     public SqlString Terminate()
     {
@@ -52,7 +48,6 @@ public struct CountVowels
     }
 }
 //</Snippet2>
-
 
 //-----------------------------------------------------------------------------
 //<Snippet6>

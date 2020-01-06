@@ -28,7 +28,6 @@ namespace Microsoft.Samples.SQLStoreExtensibility
             void start();
         }
 
-
         // Counting Workflow inplements a workflow that waits for a client to call its Start
         // method. Once called, the workflow counts from 0 to 29, incrementing the counter
         // every 2 seconds. After every counter increment the workflow persists.
@@ -77,7 +76,6 @@ namespace Microsoft.Samples.SQLStoreExtensibility
             };
         }
 
-
         public class SaveCounter : CodeActivity
         {
             public InArgument<Int32> Counter { get; set; }
@@ -88,7 +86,6 @@ namespace Microsoft.Samples.SQLStoreExtensibility
                 Console.WriteLine("Counter = " + currentCount);
             }
         }
-
 
         class CounterStatus : PersistenceParticipant
         {

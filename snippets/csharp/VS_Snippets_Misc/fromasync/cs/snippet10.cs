@@ -28,7 +28,6 @@ public class SimpleWebExample
           }
       });
 
-
       for (int i = 0; i < urls.Length; i++)
       {
           webClients[i] = new WebClient();

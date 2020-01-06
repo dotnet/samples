@@ -51,12 +51,10 @@ namespace Highlighter
         internal const int SW_SHOWNA = 8;
         internal const int WS_EX_TOOLWINDOW = 0x00000080;
 
-
         // SetWindowPos constants (used by highlight rect)
         internal const int SWP_NOACTIVATE = 0x0010;
         internal static readonly IntPtr HWND_TOPMOST = new IntPtr(-1);
-    
-    
+
     }
 }
 

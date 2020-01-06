@@ -148,7 +148,6 @@ namespace EventLogSamples
         }
         //</Snippet6>
 
-
         static void WriteEventSample1()
         {
             //<Snippet7>

@@ -8,7 +8,6 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Collections;
 
-
 namespace CustomControls
 
 {
@@ -33,7 +32,6 @@ namespace CustomControls
      }
     }
 
-
     public class CustomParseControlBuilder : ControlBuilder 
     /* Class name: CustomParserControlBuilder.
      * Defines the functions and data to be used in building custom controls. 
@@ -50,7 +48,6 @@ namespace CustomControls
         return null;
       }
     }
-
 
     [ 
        ControlBuilderAttribute(typeof(CustomParseControlBuilder)) 

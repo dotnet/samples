@@ -269,7 +269,6 @@ namespace MakeConstTest
             VerifyCSharpDiagnostic(testCode);
         }
 
-
         [DataTestMethod]
         [DataRow(LocalIntCouldBeConstant, LocalIntCouldBeConstantFixed, 10, 13),
          DataRow(ConstantIsString, ConstantIsStringFixed, 10, 13),

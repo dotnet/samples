@@ -43,8 +43,6 @@ namespace Samples
 
     //</snippet2>
 
-
-
     public class Test
     {
         public static void Main()
@@ -64,9 +62,6 @@ namespace Samples
             binding1.CloseTimeout = modifiedCloseTimeout;
 	    //</snippet5>
 
-            
-
-
             //<snippet4>
 
             //<snippet6>
@@ -76,7 +71,6 @@ namespace Samples
                 host.AddServiceEndpoint(typeof(ICalculator),binding1, baseAddress);
 
             //</snippet6>
-
 
                 host.Open();
             }	
@@ -96,8 +90,6 @@ namespace Samples
             //</snippet7>
 
         }
-
-       
 
     }
 }

@@ -39,7 +39,6 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
             }
         }
 
-
         #region IOperationBehavior Members
 
         public void AddBindingParameters(OperationDescription description, BindingParameterCollection parameters)

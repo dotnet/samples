@@ -26,7 +26,6 @@ namespace GeneratPathExample
             GenerateXPath(t, mi2);
             GenerateXPath(t, mi3);
 
-
             // Get the type of the second class that defines a data contract.
             Type t2 = typeof(Line);
 
@@ -45,13 +44,11 @@ namespace GeneratPathExample
             NameTable nt = new NameTable();
             XmlNamespaceManager xname = new XmlNamespaceManager(nt);
 
-
             // Generate the query and print it.
             string query = XPathQueryGenerator.CreateFromDataContractSerializer(
                 t, mi, out xname);
             Console.WriteLine(query);
             Console.WriteLine();
-
 
             // Display the namespaces and prefixes used in the data contract.
             foreach (string s in xname)

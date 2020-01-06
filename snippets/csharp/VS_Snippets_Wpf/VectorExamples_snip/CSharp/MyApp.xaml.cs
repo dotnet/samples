@@ -9,7 +9,6 @@ using System.Windows.Navigation;
 
 namespace Microsoft.Samples.VectorExamples
 {
-    
 
     public partial class MyApp : Application
     {
@@ -28,7 +27,6 @@ namespace Microsoft.Samples.VectorExamples
               
           myWindow.Show();
 
-        
         }
         
         private void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs args)

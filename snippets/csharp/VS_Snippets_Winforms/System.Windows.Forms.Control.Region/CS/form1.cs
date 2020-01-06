@@ -3,7 +3,6 @@
 // This example demonstrates using the Control.Region property by 
 // creating a round button.  
 
-
 using System;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;

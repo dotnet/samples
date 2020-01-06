@@ -177,8 +177,6 @@ public class STS_B_AuthorizationManager : ServiceAuthorizationManager
         return new X509Certificate2();
     }
 
-
-
     public SamlSecurityToken ReturnSamlSecurityToken()
     {
         string proofToken = "1";
@@ -210,7 +208,6 @@ public class STS_B_AuthorizationManager : ServiceAuthorizationManager
         //</snippet3>
         return samlToken;
     }
-
 
     private SamlSecurityToken CreateSamlToken(string proofToken, string issuerToken,
         string samlConditions, string samlSubjectNameFormat, string samlSubjectEmailAddress,

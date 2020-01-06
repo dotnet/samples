@@ -11,7 +11,6 @@ using System.Threading;
 using System.Reflection;
 using System.Reflection.Emit;
 
-
 public class MyApplication
 {
    public delegate void MyEvent(Object temp);

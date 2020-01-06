@@ -54,7 +54,6 @@ namespace AsyncTracer
                 String.Format("\r\nLength of the downloaded string: {0}.\r\n", contentLength);
         }
 
-
         async Task<int> AccessTheWebAsync()
         {
             resultsTextBox.Text += "\r\nTWO:   Entering AccessTheWebAsync.";
@@ -121,7 +120,6 @@ namespace AsyncTracer
 
 // Length of the downloaded string: 33946.
 
-
 namespace Outline
 {
     public partial class MainWindow : Window
@@ -139,7 +137,6 @@ namespace Outline
             //resultsTextBox.Text +=
                 String.Format("\r\nLength of the downloaded string: {0}.\r\n", contentLength);
         }
-
 
         async Task<int> AccessTheWebAsync()
         {

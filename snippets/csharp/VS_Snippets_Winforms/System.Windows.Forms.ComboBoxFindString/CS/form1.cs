@@ -9,7 +9,6 @@
 // FindStringExact(searchString, index) method is the last index of 
 // the array,the code throws an exception.
 
-
 //<snippet0>
 using System.Windows.Forms;
 
@@ -41,11 +40,8 @@ public class Form1:
 		Application.Run(new Form1());
 	}
 
-   
 	internal System.Windows.Forms.Label Label1;
-    
-    
-    
+
 	//<snippet3>
 
 	// Declare and initialize the text box.

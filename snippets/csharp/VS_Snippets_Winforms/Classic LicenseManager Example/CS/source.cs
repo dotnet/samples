@@ -3,7 +3,6 @@ using System;
 using System.ComponentModel;
 using System.Windows.Forms;
 
-
 // Adds the LicenseProviderAttribute to the control.
 [LicenseProvider(typeof(LicFileLicenseProvider))]
 public class MyControl : Control 

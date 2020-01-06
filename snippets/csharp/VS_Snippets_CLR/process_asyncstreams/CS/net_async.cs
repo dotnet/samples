@@ -18,7 +18,6 @@ using System.Diagnostics;
 using System.Threading;
 using System.ComponentModel;
 
-
 namespace ProcessAsyncStreamSamples
 {
 
@@ -211,7 +210,6 @@ namespace ProcessAsyncStreamSamples
     }
 } 
 // </Snippet2>
-
 
 namespace ProcessAsyncStreamSamples
 {

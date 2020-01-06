@@ -51,8 +51,6 @@ namespace BalloonTip
         }
         //</snippet4>
 
-      
-
         /// <summary>
         /// Required designer variable.
         /// </summary>

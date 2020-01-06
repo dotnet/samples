@@ -30,7 +30,6 @@ public partial class istylesheetcs : System.Web.UI.Page
         label1.MergeStyle(labelStyle);
         label1.Text = "This is what the labelCssStyle looks like.";
 
-
         // Create a Style object for the <BODY> section of the Web page.
         Style bodyStyle = new Style();
 

@@ -22,7 +22,6 @@ namespace Samples.Aspnet.SystemWebConfiguration
           (System.Web.Configuration.OutputCacheSettingsSection)webConfig.GetSection(
           configPath);
 
-         
 // </Snippet1>
 
 // <Snippet2>

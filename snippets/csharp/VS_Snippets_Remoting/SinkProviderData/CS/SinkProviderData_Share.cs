@@ -3,7 +3,6 @@
    properties 'Children', 'Name', 'Properties'.
 */
 
-
 using System;
 public class mySharedStringClass : MarshalByRefObject
 {

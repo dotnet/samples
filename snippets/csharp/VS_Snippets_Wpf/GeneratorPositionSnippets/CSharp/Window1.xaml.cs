@@ -11,7 +11,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-
 namespace GeneratorPositionSnippets {
   /// <summary>
   /// Interaction logic for Window1.xaml

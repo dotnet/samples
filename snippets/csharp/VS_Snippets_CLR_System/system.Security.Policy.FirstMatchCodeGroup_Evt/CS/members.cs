@@ -241,7 +241,6 @@ class Members
         Console.WriteLine(rootElement.ToString());
     }
 
-
     // Print the properties of the specified code group to the console.
     private static void PrintCodeGroup(CodeGroup codeGroup)
     {

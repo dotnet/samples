@@ -5,7 +5,6 @@ using System.Web.Configuration;
 using System.Web;
 using System.Web.SessionState;
 
-
 namespace Samples.AspNet.Session
 {
 
@@ -14,11 +13,9 @@ namespace Samples.AspNet.Session
 
     private SessionStateSection pConfig = null;
 
-
     //
     // IHttpModule Members
     //
-
 
     //
     // IHttpModule.Init
@@ -36,7 +33,6 @@ namespace Samples.AspNet.Session
       }
     }
 
-
     //
     // IHttpModule.Dispose
     //
@@ -45,15 +41,9 @@ namespace Samples.AspNet.Session
     {
     }
 
-
-
-
     //
     // ISessionIDManager Members
     //
-
-
-
 
     //
     // ISessionIDManager.Initialize
@@ -62,7 +52,6 @@ namespace Samples.AspNet.Session
     public void Initialize()
     {
     }
-
 
     //
     // ISessionIDManager.InitializeRequest
@@ -83,9 +72,6 @@ namespace Samples.AspNet.Session
         return context.Response.IsRequestBeingRedirected;
       }
     }
-
-
-
 
     //
     // ISessionIDManager.GetSessionID
@@ -135,7 +121,6 @@ namespace Samples.AspNet.Session
     }
   //</Snippet4>
 
-
     //
     // ISessionIDManager.SaveSessionID
     //
@@ -160,7 +145,6 @@ namespace Samples.AspNet.Session
       }
     }
   //</Snippet5>
-
 
     //
     // ISessionIDManager.Validate

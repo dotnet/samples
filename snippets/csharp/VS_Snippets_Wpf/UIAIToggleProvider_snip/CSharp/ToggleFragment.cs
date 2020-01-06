@@ -9,7 +9,6 @@ using System.Runtime.InteropServices;
 using MS.Win32;
 using System.Collections;
 
-
 namespace UIAIToggleProvider_snip
 {
     public class ToggleProvider : IRawElementProviderSimple, IToggleProvider
@@ -163,7 +162,6 @@ namespace UIAIToggleProvider_snip
             }));
         }
         // </SnippetToggle>
-
 
         #endregion IToggleProvider Members
 

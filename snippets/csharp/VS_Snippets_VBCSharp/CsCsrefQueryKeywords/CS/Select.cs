@@ -29,7 +29,6 @@ namespace SelectClause
     //Output: 97 92 81
     //</Snippet8>
 
-
     //<Snippet9>
     class SelectSample2
     {
@@ -88,7 +87,6 @@ namespace SelectClause
             new ContactInfo {ID=113, Email="SvenMort@Contoso.com", Phone="206-555-1130"},
             new ContactInfo {ID=114, Email="CesarGar@Contoso.com", Phone="206-555-0521"}
         };
-
 
         static void Main(string[] args)
         {

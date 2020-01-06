@@ -18,13 +18,10 @@ using System.Windows.Markup;
 namespace Microsoft.Samples.CustomControls
 {
 
-
-
     #region SpectrumSlider
 
     public class SpectrumSlider : Slider
     {
-
 
         static SpectrumSlider()
         {
@@ -33,16 +30,12 @@ namespace Microsoft.Samples.CustomControls
                 new FrameworkPropertyMetadata(typeof(SpectrumSlider))); 
         }
 
-
         private LinearGradientBrush pickerBrush;
-
-
 
         private static readonly DependencyProperty SelectedColorProperty =
             DependencyProperty.Register
             ("SelectedColor", typeof(Color), typeof(SpectrumSlider),
             new PropertyMetadata(System.Windows.Media.Colors.Transparent));
-
 
         public Color SelectedColor
         {
@@ -68,14 +61,12 @@ namespace Microsoft.Samples.CustomControls
 
         }
 
-
         public override void OnApplyTemplate()
         {
 
             base.OnApplyTemplate();
             m_spectrumDisplay = GetTemplateChild(SpectrumDisplayName) as Rectangle;
-            
-            
+
             if (!colorsInitialized)
             {
 
@@ -85,10 +76,8 @@ namespace Microsoft.Samples.CustomControls
 
         }
 
-
         private void updateColorSpectrum()
         {
-
 
             if (m_spectrumDisplay != null)
             {
@@ -103,8 +92,6 @@ namespace Microsoft.Samples.CustomControls
             }
         }
 
-
-
         private void createSpectrum()
         {
 
@@ -112,7 +99,6 @@ namespace Microsoft.Samples.CustomControls
             pickerBrush.StartPoint = new Point(0.5, 0);
             pickerBrush.EndPoint = new Point(0.5, 1);
             pickerBrush.ColorInterpolationMode = ColorInterpolationMode.SRgbLinearInterpolation;
-
 
             List<Color> colorsList = ColorUtilities.GenerateHsvSpectrum();
             double stopIncrement = (double)1 / colorsList.Count;
@@ -128,7 +114,6 @@ namespace Microsoft.Samples.CustomControls
 
         }
 
-
         private static string SpectrumDisplayName = "PART_SpectrumDisplay";
         private Rectangle m_spectrumDisplay;
         private bool colorsInitialized = false;
@@ -136,7 +121,6 @@ namespace Microsoft.Samples.CustomControls
     }
 
     #endregion SpectrumSlider
-
 
     #region ColorUtilities
 
@@ -278,7 +262,6 @@ namespace Microsoft.Samples.CustomControls
 
             List<Color> colorsList = new List<Color>(8);
 
-
             for (int i = 0; i < 59; i++)
             {
 
@@ -290,7 +273,6 @@ namespace Microsoft.Samples.CustomControls
             }
             colorsList.Add(ColorUtilities.ConvertHsvToRgb(0, 1, 1));
 
-
             return colorsList;
 
         }
@@ -298,7 +280,6 @@ namespace Microsoft.Samples.CustomControls
     }
 
     #endregion ColorUtilities
-
 
     // Describes a color in terms of
     // Hue, Saturation, and Value (brightness)
@@ -331,7 +312,6 @@ namespace Microsoft.Samples.CustomControls
                 new FrameworkPropertyMetadata(typeof(ColorThumb))); 
         }
 
-
         public static readonly DependencyProperty ThumbColorProperty =
         DependencyProperty.Register
         ("ThumbColor", typeof(Color), typeof(ColorThumb),
@@ -346,8 +326,6 @@ namespace Microsoft.Samples.CustomControls
         DependencyProperty.Register
         ("PointerOutlineBrush", typeof(Brush), typeof(ColorThumb),
             new FrameworkPropertyMetadata(null));
-
-
 
         public Color ThumbColor
         {
@@ -386,9 +364,7 @@ namespace Microsoft.Samples.CustomControls
             }
         }
 
-
     }
     #endregion ColorThumb
-
 
 }

@@ -75,8 +75,7 @@ namespace Samples.AspNet
                 // <Snippet5>
                 Console.WriteLine("  Name: {0}", cs.Name);
                 // </Snippet5>
-             
-                
+
                 // <Snippet6>
                 Console.WriteLine("  Provider Name: {0}", 
                     cs.ProviderName);
@@ -87,7 +86,6 @@ namespace Samples.AspNet
 
         }
         // </Snippet2>
-        
 
         // <Snippet7>
         // Add a connection string to the connection
@@ -127,7 +125,6 @@ namespace Samples.AspNet
         }
         // </Snippet7>
 
-
         // <Snippet9>
         // Clear connection strings collection.
         static void ClearConnectionStrings()
@@ -147,7 +144,6 @@ namespace Samples.AspNet
             config.Save(ConfigurationSaveMode.Modified);
 
             Console.WriteLine("Connection strings cleared.");
-
 
         }
         // </Snippet9>
@@ -187,7 +183,6 @@ namespace Samples.AspNet
             }
         }
         //</Snippet10>
-
 
         //<Snippet11>
         static void RemoveConnectionStrings()
@@ -252,7 +247,6 @@ namespace Samples.AspNet
 
                 // Remove the element.
                     csCollection.Remove("ConnStr0");
-               
 
                 // Save the configuration file.
                 config.Save(ConfigurationSaveMode.Modified);

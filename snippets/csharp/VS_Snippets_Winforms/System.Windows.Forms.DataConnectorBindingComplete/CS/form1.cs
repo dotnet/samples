@@ -48,7 +48,6 @@ class Form1 : Form
 		//Bind the textbox to the PartPrice value with currency formatting.
 		textBox3.DataBindings.Add("Text", BindingSource1, "PartPrice", true,
 			DataSourceUpdateMode.OnPropertyChanged, 0, "C");
-			
 
 		// Handle the BindingComplete event for BindingSource1 and 
 		// the partNameBinding.

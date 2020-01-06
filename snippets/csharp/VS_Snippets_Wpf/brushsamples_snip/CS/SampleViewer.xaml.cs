@@ -5,10 +5,8 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Navigation;
 
-
 namespace Microsoft.Samples.Brushes
 {
-
 
     public partial class SampleViewer : Page
     {
@@ -17,7 +15,6 @@ namespace Microsoft.Samples.Brushes
         {
             InitializeComponent();
         }
-    
-    
+
     }
 }

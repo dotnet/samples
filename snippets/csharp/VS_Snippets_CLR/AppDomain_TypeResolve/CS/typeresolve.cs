@@ -31,7 +31,6 @@ class Test
         TypeBuilder tb = mb.DefineType("Example");
         tb.CreateType();
 
-
         // First, try to load the type without saving the dynamic 
         // assembly and without hooking up the TypeResolve event. The
         // type cannot be loaded.

@@ -10,6 +10,5 @@ namespace Ribbon
     public partial class app : Application
     {
 
-
     }
 }

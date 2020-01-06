@@ -18,7 +18,6 @@ class Program
     // Method that takes an out parameter:
     public void MethodA(int i, out int o) { o = 100;}
 
-
   static void Main(string[] args)
   {
     MethodInfo mInfo;

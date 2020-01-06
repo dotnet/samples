@@ -61,7 +61,6 @@ namespace SDKSamples
 
             RenderTargetBitmap bi = new RenderTargetBitmap(pixelWidth, pixelHeight, dpiX, dpiY, PixelFormats.Pbgra32);
 
-
             Rectangle rect = new Rectangle();
             rect.Width = width;
             rect.Height = height;

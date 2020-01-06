@@ -20,7 +20,6 @@ namespace Windows.Communication.Foundation.Samples
             Console.ReadLine();
         }
 
-
         private class Snippets
         {
             private void Snippet1()
@@ -61,7 +60,6 @@ namespace Windows.Communication.Foundation.Samples
         double Divide(double n1, double n2);
     }
 
-   
     public class CalculatorService : ICalculator
     {
         public double Add(double n1, double n2) { return n1 + n2; }
@@ -126,7 +124,6 @@ namespace Windows.Communication.Foundation.Samples
                 base(binding, remoteAddress)
         {
         }
-
 
         public double Add(double n1, double n2)
         {

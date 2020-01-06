@@ -3,7 +3,6 @@
 // The following code example demonstrates using the ListBox.Sort method
 // by inheriting from the ListBox class and overriding the Sort method.
 
-
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -47,7 +46,6 @@ public class Form1:
 		Application.Run(new Form1());
 	}
 
-    
 	private void Button1_Click(System.Object sender, System.EventArgs e)
 	{
 		// Set the Sorted property to True to raise the overridden Sort

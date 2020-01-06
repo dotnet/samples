@@ -45,7 +45,6 @@ public class Form1:
 	private void InitializeComponent()
 	{
 
-
 		//Form1
 		//
 		this.ClientSize = new System.Drawing.Size(292, 266);
@@ -100,8 +99,7 @@ public class Form1:
 		this.RadioButton3.Text = "Cross";
 		this.RadioButton3.Tag = Cursors.Cross;
 		this.RadioButton3.TextAlign = ContentAlignment.MiddleCenter;
-		
-		
+
 		// Add the radio buttons to the GroupBox.  
 		this.GroupBox1.Controls.Add(this.RadioButton1);
 		this.GroupBox1.Controls.Add(this.RadioButton2);

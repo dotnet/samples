@@ -46,7 +46,6 @@ namespace MaskedTextBoxDataCSharp
             dataConnect = new SqlDataAdapter("SELECT * FROM Employees", sc);
             dataConnect.Fill(employeesTable, "Employees");
 
-            
             // Now bind MaskedTextBox to appropriate field. Note that we must create the Binding objects
             // before adding them to the control - otherwise, we won't get a Format event on the 
             // initial load. 

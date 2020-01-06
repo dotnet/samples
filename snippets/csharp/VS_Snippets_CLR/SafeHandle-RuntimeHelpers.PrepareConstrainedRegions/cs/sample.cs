@@ -71,7 +71,6 @@ namespace SafeHandleExample
         public static extern MySafeHandle NativeAllocateHandle(ref MyStruct someState);
     }
 
-
     public class Example
     {
         static void Main()
@@ -79,6 +78,5 @@ namespace SafeHandleExample
         }
     }
 
-   
 }
 

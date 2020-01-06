@@ -4,8 +4,7 @@ using System;
 
 namespace AstoriaSnippetsVB
 {
-    
-    
+
     /// <summary>
     ///This is a test class for CustomerAddressTest and is intended
     ///to contain all CustomerAddressTest Unit Tests
@@ -13,7 +12,6 @@ namespace AstoriaSnippetsVB
     [TestClass()]
     public class CustomerAddressTest
     {
-
 
         private TestContext testContextInstance;
 
@@ -62,7 +60,6 @@ namespace AstoriaSnippetsVB
         //}
         //
         #endregion
-
 
         /// <summary>
         ///A test for CustomerAddress Constructor

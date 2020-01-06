@@ -38,7 +38,6 @@ namespace ThreeDSizeSample
 			switch (li.Name)
 			{   //begin switch
 
-
                 case "rb1":
                     {
                         //<SnippetMil3dSize3DN2>
@@ -245,8 +244,6 @@ namespace ThreeDSizeSample
                         size1 = Size3D.Empty;
                         // size1 is now empty
 
-
-             
                         // Displaying Results
                         syntaxString = "size1 = Size3D.Empty;";
                         resultType = "Size3D";
@@ -300,7 +297,6 @@ namespace ThreeDSizeSample
             } //end switch
 	
         }
-
 
         // Displays the results of the operation
         private void ShowResults(String resultValue, String syntax, String resultType, String opString)

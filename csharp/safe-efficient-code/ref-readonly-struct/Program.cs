@@ -61,7 +61,6 @@ namespace SafeEfficientCode
         }
         #endregion
 
-
         #region ReadOnlyInArgument
         private static double CalculateDistance3(in ReadonlyPoint3D point1, in ReadonlyPoint3D point2 = default)
         {

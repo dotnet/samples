@@ -31,10 +31,8 @@ using System.Runtime.InteropServices;
 
 //[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]
 
-
 //This attribute describes where any theme specific and generic resource dictionaries can be found.
 [assembly: ThemeInfo(ResourceDictionaryLocation.None, ResourceDictionaryLocation.SourceAssembly)]
-
 
 // Version information for an assembly consists of the following four values:
 //

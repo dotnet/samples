@@ -8,7 +8,6 @@
   * The using the AcceptList and ConnectList properties it displays the URLs that have 
   * the Accept and Connect permission set, respectively.
 */
-
 using System;
 using System.Net;
 using System.Security;

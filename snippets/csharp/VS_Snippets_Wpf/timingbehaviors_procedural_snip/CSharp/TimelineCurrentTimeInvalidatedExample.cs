@@ -19,9 +19,7 @@ using System.Windows.Input;
 namespace Microsoft.Samples.Animation.TimingBehaviors
 {
 
-    
     public class TimelineCurrentTimeInvalidatedExample : Page {
-        
 
         private TextBlock currentTimeTextBlock;
         public TimelineCurrentTimeInvalidatedExample()
@@ -75,7 +73,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             // Start the storyboard.
             theStoryboard.Begin(animatedRectangle, true);
 
-                   
         }
         
         private void storyboard_CurrentTimeInvalidated(object sender, EventArgs e)
@@ -87,9 +84,7 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             // Update the TextBlock with the storyboard's current time.
             currentTimeTextBlock.Text = storyboardClock.CurrentTime.ToString();       
         }
-        
 
- 
     }
  
 }

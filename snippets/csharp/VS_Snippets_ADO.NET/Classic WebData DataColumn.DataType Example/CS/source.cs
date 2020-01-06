@@ -43,7 +43,6 @@ public DataTable MakeDataTable(){
     colByteArray.DataType = System.Type.GetType("System.Byte[]");
     myTable.Columns.Add(colByteArray);
 
-
     // Populate one row with values.
     myNewRow = myTable.NewRow();
 

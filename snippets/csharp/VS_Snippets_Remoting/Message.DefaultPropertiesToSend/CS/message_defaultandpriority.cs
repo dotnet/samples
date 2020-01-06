@@ -34,7 +34,6 @@ namespace MyProject
 			return;
 		}
 
-
 		//**************************************************
 		// Sends a string message to a queue.
 		//**************************************************
@@ -57,13 +56,11 @@ namespace MyProject
 			// Set the priority of the message.
 			myMessage.Priority = priority;
 
-
 			// Send the Order to the queue.
 			myQueue.Send(myMessage);
 
 			return;
 		}
-
 
 		//**************************************************
 		// Receives a message.

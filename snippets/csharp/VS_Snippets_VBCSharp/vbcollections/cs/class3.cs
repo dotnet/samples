@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 
-
 public class Class3
 {
     // Collections (C# and Visual Basic)
@@ -87,7 +86,6 @@ public class Class3
     }
     //</Snippet31>
 
-
     //<Snippet32>
     private static void ListColors()
     {
@@ -100,7 +98,6 @@ public class Class3
         Console.WriteLine();
         // Output: red blue green
     }
-
 
     // Collection class.
     public class AllColors : System.Collections.IEnumerable
@@ -159,7 +156,6 @@ public class Class3
         public string Name { get; set; }
     }
     //</Snippet32>
-
 
     //<Snippet33>
     private static void ListEvenNumbers()

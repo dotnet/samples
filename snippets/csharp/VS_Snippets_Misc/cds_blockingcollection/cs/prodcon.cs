@@ -149,7 +149,6 @@ namespace ProdConsumerCS
             SimplePriorityQueue<int, int> queue = new SimplePriorityQueue<int, int>(priorityCount);
             var bc = new BlockingCollection<KeyValuePair<int, int>>(queue, 50);
 
-
             CancellationTokenSource cts = new CancellationTokenSource();
 
             Task.Run(() =>

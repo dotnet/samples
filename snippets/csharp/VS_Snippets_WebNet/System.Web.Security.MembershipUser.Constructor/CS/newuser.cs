@@ -42,7 +42,6 @@ CREATE TABLE Users
 
 */
 
-
 namespace Samples.AspNet.Membership
 {
 
@@ -61,8 +60,6 @@ namespace Samples.AspNet.Membership
 
     private MachineKeySection machineKey;
 
-
-
     //
     // Database connection string.
     //
@@ -73,9 +70,6 @@ namespace Samples.AspNet.Membership
     {
       get { return pConnectionStringSettings.ConnectionString; }
     }
-
-
-
 
     //
     // System.Configuration.Provider.ProviderBase.Initialize Method
@@ -143,13 +137,11 @@ namespace Samples.AspNet.Membership
         throw new ProviderException("Connection string cannot be blank.");
       }
 
-
       // Get encryption and decryption key information from the configuration.
       Configuration cfg =
         WebConfigurationManager.OpenWebConfiguration(System.Web.Hosting.HostingEnvironment.ApplicationVirtualPath);
       machineKey = (MachineKeySection)cfg.GetSection("system.web/machineKey");
     }
-
 
     //
     // A helper function to retrieve config values from the configuration file.
@@ -162,7 +154,6 @@ namespace Samples.AspNet.Membership
 
       return configValue;
     }
-
 
     //
     // System.Web.Security.MembershipProvider properties.
@@ -245,7 +236,6 @@ namespace Samples.AspNet.Membership
     }
     // </Snippet2>
 
-
     // <Snippet3>
     private bool pRequiresQuestionAndAnswer;
 
@@ -254,7 +244,6 @@ namespace Samples.AspNet.Membership
       get { return pRequiresQuestionAndAnswer; }
     }
     // </Snippet3>
-
 
     //
     // System.Web.Security.MembershipProvider methods.
@@ -283,7 +272,6 @@ namespace Samples.AspNet.Membership
         else
           throw new MembershipPasswordException("Change password canceled due to new password validation failure.");
 
-
       OdbcConnection conn = new OdbcConnection(ConnectionString);
       OdbcCommand cmd = new OdbcCommand("UPDATE Users " +
                 " SET Password = ?, LastPasswordChangedDate = ? " +
@@ -294,7 +282,6 @@ namespace Samples.AspNet.Membership
       cmd.Parameters.Add("@Username", OdbcType.VarChar, 255).Value = username;
       cmd.Parameters.Add("@OldPassword", OdbcType.VarChar, 128).Value = oldPwd;
       cmd.Parameters.Add("@ApplicationName", OdbcType.VarChar, 255).Value = ApplicationName;
-
 
       int rowsAffected = 0;
 
@@ -322,8 +309,6 @@ namespace Samples.AspNet.Membership
     }
     // </Snippet4>
 
-
-
     //
     // MembershipProvider.ChangePasswordQuestionAndAnswer
     //
@@ -349,7 +334,6 @@ namespace Samples.AspNet.Membership
       cmd.Parameters.Add("@Username", OdbcType.VarChar, 255).Value = username;
       cmd.Parameters.Add("@Password", OdbcType.VarChar, 128).Value = password;
       cmd.Parameters.Add("@ApplicationName", OdbcType.VarChar, 255).Value = ApplicationName;
-
 
       int rowsAffected = 0;
 
@@ -377,9 +361,6 @@ namespace Samples.AspNet.Membership
     }
     // </Snippet5>
 
-
-
-
     //
     // MembershipProvider.CreateUser
     //
@@ -404,7 +385,6 @@ namespace Samples.AspNet.Membership
         status = MembershipCreateStatus.InvalidPassword;
         return null;
       }
-
 
       if (RequiresUniqueEmail && GetUserNameByEmail(email) != "")
       {
@@ -486,7 +466,6 @@ namespace Samples.AspNet.Membership
           conn.Close();
         }
 
-
         return GetUser(username, false);
       }
       else
@@ -494,12 +473,9 @@ namespace Samples.AspNet.Membership
         status = MembershipCreateStatus.DuplicateUserName;
       }
 
-
       return null;
     }
     // </Snippet1>
-
-
 
     //
     // MembershipProvider.DeleteUser
@@ -547,13 +523,9 @@ namespace Samples.AspNet.Membership
     }
     // </Snippet7>
 
-
-
-
     //
     // MembershipProvider.GetAllUsers
     //
-
 
     public override MembershipUserCollection GetAllUsers(int pageIndex, int pageSize, out int totalRecords)
     {
@@ -613,11 +585,6 @@ namespace Samples.AspNet.Membership
       return users;
     }
 
-
-
-
-
-
     //
     // MembershipProvider.GetNumberOfUsersOnline
     //
@@ -656,9 +623,6 @@ namespace Samples.AspNet.Membership
       return numOnline;
     }
     // </Snippet8>
-
-
-
 
     //
     // MembershipProvider.GetPassword
@@ -719,14 +683,12 @@ namespace Samples.AspNet.Membership
         conn.Close();
       }
 
-
       if (RequiresQuestionAndAnswer && !CheckPassword(answer, passwordAnswer))
       {
         UpdateFailureCount(username, "passwordAnswer");
 
         throw new MembershipPasswordException("Incorrect password answer.");
       }
-
 
       if (PasswordFormat == MembershipPasswordFormat.Encrypted)
       {
@@ -736,8 +698,6 @@ namespace Samples.AspNet.Membership
       return password;
     }
     // </Snippet9>
-
-
 
     //
     // MembershipProvider.GetUser
@@ -797,7 +757,6 @@ namespace Samples.AspNet.Membership
       return u;
     }
 
-
     //
     // GetUserFromReader
     // A helper function that takes the current row from the OdbcDataReader
@@ -852,8 +811,6 @@ namespace Samples.AspNet.Membership
     }
     // </Snippet10>
 
-
-
     //
     // MembershipProvider.GetUserNameByEmail
     //
@@ -889,14 +846,9 @@ namespace Samples.AspNet.Membership
     }
     // </Snippet11>
 
-
-
-
-
     //
     // MembershipProvider.ResetPassword
     //
-
 
     // <Snippet12>
     public override string ResetPassword(string username, string answer)
@@ -925,7 +877,6 @@ namespace Samples.AspNet.Membership
           throw args.FailureInformation;
         else
           throw new MembershipPasswordException("Reset password canceled due to password validation failure.");
-
 
       OdbcConnection conn = new OdbcConnection(ConnectionString);
       OdbcCommand cmd = new OdbcCommand("SELECT PasswordAnswer, IsLockedOut FROM Users " +
@@ -997,8 +948,6 @@ namespace Samples.AspNet.Membership
     }
     // </Snippet12>
 
-
-
     //
     // MembershipProvider.UpdateUser
     //
@@ -1018,7 +967,6 @@ namespace Samples.AspNet.Membership
       cmd.Parameters.Add("@Username", OdbcType.VarChar, 255).Value = user.UserName;
       cmd.Parameters.Add("@ApplicationName", OdbcType.VarChar, 255).Value = ApplicationName;
 
-
       try
       {
         conn.Open();
@@ -1035,8 +983,6 @@ namespace Samples.AspNet.Membership
       }
     }
     // </Snippet13>
-
-
 
     //
     // MembershipProvider.ValidateUser
@@ -1103,7 +1049,6 @@ namespace Samples.AspNet.Membership
     }
     // </Snippet14>
 
-
     public override MembershipUserCollection FindUsersByName(string usernameToMatch, int pageIndex, int pageSize, out int totalRecords)
     {
       OdbcConnection conn = new OdbcConnection(ConnectionString);
@@ -1163,7 +1108,6 @@ namespace Samples.AspNet.Membership
 
       return users;
     }
-
 
     public override MembershipUserCollection FindUsersByEmail(string emailToMatch, int pageIndex, int pageSize, out int totalRecords)
     {
@@ -1225,7 +1169,6 @@ namespace Samples.AspNet.Membership
       return users;
     }
 
-
     //
     // MembershipProvider.UnlockUser
     //
@@ -1263,7 +1206,6 @@ namespace Samples.AspNet.Membership
 
       return false;
     }
-
 
     //
     // MembershipProvider.GetUser(object, bool)
@@ -1320,9 +1262,6 @@ namespace Samples.AspNet.Membership
 
       return u;
     }
-
-
-
 
     //
     // UpdateFailureCount
@@ -1459,7 +1398,6 @@ namespace Samples.AspNet.Membership
       }
     }
 
-
     //
     // CheckPassword
     //   Compares password values based on the MembershipPasswordFormat.
@@ -1490,7 +1428,6 @@ namespace Samples.AspNet.Membership
       return false;
     }
 
-
     //
     // EncodePassword
     //   Encrypts, Hashes, or leaves the password clear based on the PasswordFormat.
@@ -1520,7 +1457,6 @@ namespace Samples.AspNet.Membership
 
       return encodedPassword;
     }
-
 
     //
     // UnEncodePassword

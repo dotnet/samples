@@ -36,7 +36,6 @@ namespace CsCsrefProgrammingAttributes
         //</Snippet1>
     }
 
-
     //---------------------------------------------------------------------------
     class WrapCustomAttributes
     {
@@ -77,7 +76,6 @@ namespace CsCsrefProgrammingAttributes
 
     }
 
-
     //---------------------------------------------------------------------------
     namespace WrapCustomAttributes2
     {
@@ -110,7 +108,6 @@ namespace CsCsrefProgrammingAttributes
         //</Snippet5>
     }
 
-
     //---------------------------------------------------------------------------
     class WrapDisambiguating
     {
@@ -123,7 +120,6 @@ namespace CsCsrefProgrammingAttributes
             return 0;
         }
         //</Snippet6>
-
 
         //<Snippet7>
         // default: applies to method
@@ -139,7 +135,6 @@ namespace CsCsrefProgrammingAttributes
         int Method3() { return 0; }
         //</Snippet7>
 
-
         //<Snippet8>
         [Guid("12345678-1234-1234-1234-123456789abc"), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
         interface ISampleInterface
@@ -150,7 +145,6 @@ namespace CsCsrefProgrammingAttributes
         }
         //</Snippet8>
     }
-
 
     //---------------------------------------------------------------------------
 
@@ -236,8 +230,6 @@ namespace CsCsrefProgrammingAttributes
     */
     //</Snippet11>
 
-
-
     //---------------------------------------------------------------------------
     namespace WrapUnion
     {
@@ -260,7 +252,6 @@ namespace CsCsrefProgrammingAttributes
             public byte b;
         }
         //</Snippet12>
-
 
         //<Snippet13>
 	// Add a using directive for System.Runtime.InteropServices.
@@ -289,7 +280,6 @@ namespace CsCsrefProgrammingAttributes
         //</Snippet13>
     }
 
-
     //---------------------------------------------------------------------------
     class WrapConditional
     {
@@ -300,7 +290,6 @@ namespace CsCsrefProgrammingAttributes
             // ...
         }
         //</Snippet15>
-
 
         //<Snippet16>
         [Conditional("A")]
@@ -315,7 +304,6 @@ namespace CsCsrefProgrammingAttributes
             // Code to execute when both A and B are defined...
         }
         //</Snippet16>
-
 
         //<Snippet17>
         [Conditional("DEBUG")]
@@ -339,7 +327,6 @@ namespace CsCsrefProgrammingAttributes
             }
         }
         //</Snippet17>
-
 
         //<Snippet19>
         class Trace
@@ -374,7 +361,6 @@ namespace CsCsrefProgrammingAttributes
         //</Snippet19>
     }
 
-
     //---------------------------------------------------------------------------
     namespace WrapObsolete
     {
@@ -403,7 +389,6 @@ namespace CsCsrefProgrammingAttributes
         }
         //</Snippet20>
     }
-
 
     //---------------------------------------------------------------------------
     namespace WrapAttributeUsage
@@ -455,7 +440,6 @@ namespace CsCsrefProgrammingAttributes
         }
         //</Snippet22>
     }
-
 
     //---------------------------------------------------------------------------
     class WrapUsingAttributes

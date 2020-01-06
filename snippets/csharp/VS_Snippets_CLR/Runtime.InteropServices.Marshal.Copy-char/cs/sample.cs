@@ -20,7 +20,6 @@ class Example
         // int size = Marshal.SizeOf(managedArray[0]) * managedArray.Length;  // Incorrect
         int size = Marshal.SystemDefaultCharSize * managedArray.Length;       // Correct
 
-
         IntPtr pnt = Marshal.AllocHGlobal(size);
 
         try
@@ -45,8 +44,6 @@ class Example
             // Free the unmanaged memory.
             Marshal.FreeHGlobal(pnt);
         }
-
-
 
     }
 

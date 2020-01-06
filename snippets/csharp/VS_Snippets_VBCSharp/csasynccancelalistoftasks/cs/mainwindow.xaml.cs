@@ -33,7 +33,6 @@ namespace CancelAListOfTasks
             InitializeComponent();
         }
 
-
         private async void startButton_Click(object sender, RoutedEventArgs e)
         {
             // Instantiate the CancellationTokenSource.
@@ -62,7 +61,6 @@ namespace CancelAListOfTasks
             cts = null;
         }
 
-
         // Add an event handler for the Cancel button.
         private void cancelButton_Click(object sender, RoutedEventArgs e)
         {
@@ -71,7 +69,6 @@ namespace CancelAListOfTasks
                 cts.Cancel();
             }
         }
-
 
         // Provide a parameter for the CancellationToken.
         // ***Change the return type to Task because the method has no return statement.
@@ -104,7 +101,6 @@ namespace CancelAListOfTasks
             }
             //</snippet9>
         }
-
 
         //<snippet7>
         // ***Add a method that creates a list of web addresses.
@@ -142,7 +138,6 @@ namespace CancelAListOfTasks
     //Length of the downloaded string: 145790.
 
     //Downloads complete.
-
 
     // Sample output if you choose to cancel:
 

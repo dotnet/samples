@@ -2,7 +2,6 @@
   *File name: WebRequestEvent.cs
   *Purpose: Implements a custom Web request event type.
   **/
-  
 // <Snippet1>
 
 using System;
@@ -38,7 +37,6 @@ namespace SamplesAspNet
         }
         // </Snippet2>
 
-
         // <Snippet3>
         // Invoked in case of events identified 
         // by their event code.and 
@@ -73,7 +71,6 @@ namespace SamplesAspNet
             base.Raise();
         }
         // </Snippet4>
-
 
         // <Snippet6>
         //Formats Web request event information.

@@ -22,14 +22,12 @@ namespace Microsoft.ServiceModel.Samples
         }
     }
 
-
     [ServiceContract(Namespace = "Microsoft.ServiceModel.Samples")]
     interface ICalculator
     {
         [OperationContract]
         double Add(double n1, double n2);
     }
-
 
     public class Calculator : ICalculator
     {

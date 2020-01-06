@@ -28,7 +28,6 @@ namespace MyProject
             return;
         }
 
-
         //**************************************************
         // Creates public transactional queues and sends a 
         // message.
@@ -71,7 +70,6 @@ namespace MyProject
             return;
 
         }
-
 
         //**************************************************
         // Creates private queues and sends a message.

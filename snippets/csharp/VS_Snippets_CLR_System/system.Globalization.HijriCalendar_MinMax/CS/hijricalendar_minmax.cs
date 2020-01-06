@@ -4,7 +4,6 @@
 using System;
 using System.Globalization;
 
-
 public class SamplesCalendar  {
 
    public static void Main()  {

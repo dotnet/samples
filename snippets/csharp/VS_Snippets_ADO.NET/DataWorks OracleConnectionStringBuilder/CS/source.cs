@@ -14,7 +14,6 @@ class Program
         OracleConnectionStringBuilder builder =
             new OracleConnectionStringBuilder(GetConnectionString());
 
-
         // Note that the input connection string used the 
         // Server key, but the new connection string uses
         // the well-known Data Source key instead.

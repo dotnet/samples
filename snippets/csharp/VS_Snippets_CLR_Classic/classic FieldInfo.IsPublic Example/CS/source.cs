@@ -2,7 +2,6 @@
 using System;
 using System.Reflection;
 
-
  // Make two fields.
 public
     class Myfielda // private

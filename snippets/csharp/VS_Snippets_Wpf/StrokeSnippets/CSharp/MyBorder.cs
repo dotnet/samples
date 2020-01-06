@@ -147,7 +147,6 @@ namespace StrokeSnippets_CS
 
         }
 
-       
         // Prepare to collect stylus packets. Get the 
         // IncrementalHitTester from the InkPresenter's 
         // StrokeCollection and subscribe to its StrokeHitChanged event.
@@ -455,9 +454,7 @@ namespace StrokeSnippets_CS
                     //myContext.Close();
                     //myVisuals.Add(myVisual);
 
-
                     // Do I have to do something here to display the revised InkPresenter?
-
 
                     // Open the file to hold strokes
                     // if the file already exists, overwrite it

@@ -90,7 +90,6 @@ public class Form1:
 
     #endregion
 
-
     // <snippet3Intro>
     // The following code example demonstrates constructing how to construct 
     // a new Bitmap from a file.
@@ -133,7 +132,6 @@ public class Form1:
             MessageBox.Show("There was an error." + 
                 "Check the path to the bitmap.");
         }
-
 
     }
     //</snippet4>
@@ -248,7 +246,6 @@ public class Form1:
         }
     
     //</snippet5>
-
 
     public static void Main()
     {

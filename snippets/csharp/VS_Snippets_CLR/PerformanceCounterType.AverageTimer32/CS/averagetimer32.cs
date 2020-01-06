@@ -190,7 +190,6 @@ public class App
 #else
 // Build sample for Whidbey or higher.
 
-
 //<snippet2>
 
 using System;
@@ -224,9 +223,6 @@ public class App
         CollectSamples(samplesList);
         CalculateResults(samplesList);
     }
-
-
-
 
     private static bool SetupCategory()
     {
@@ -279,7 +275,6 @@ public class App
         BPC.RawValue = 0;
     }
 
-
     private static void CollectSamples(ArrayList samplesList)
     {
 
@@ -322,8 +317,6 @@ public class App
 
         }
     }
-
-
 
     //++++++++//++++++++//++++++++//++++++++//++++++++//++++++++//+++++++
     // PERF_AVERAGE_TIMER

@@ -53,7 +53,6 @@ public class Example
             Console.WriteLine(aPart);
         }
 
-
         // Check the list for part #1734. This calls the IEquatable.Equals method
         // of the Part class, which checks the PartId for equality.
         Console.WriteLine("\nContains: Part with Id=1734: {0}",

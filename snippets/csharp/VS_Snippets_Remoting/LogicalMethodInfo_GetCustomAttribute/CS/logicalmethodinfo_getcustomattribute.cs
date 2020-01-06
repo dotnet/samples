@@ -9,8 +9,6 @@
 // System.Web.Services.Protocols.LogicalMethodInfo.ReturnTypeCustomAttributeProvider
 // System.Web.Services.Protocols.LogicalMethodInfo.CustomAttributeProvider
 
-
-
 /*
    This following example demonstrates the 'MethodInfo',
    'ReturnTypeCustomAttributeProvider', 'CustomAttributeProvider',

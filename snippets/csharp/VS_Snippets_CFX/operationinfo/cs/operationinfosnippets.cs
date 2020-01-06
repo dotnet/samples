@@ -100,7 +100,5 @@ namespace OperationInfoSnippets
             //</snippet9>
         }
 
-
-
     }
 }

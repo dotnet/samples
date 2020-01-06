@@ -3,7 +3,6 @@ using System;
 
 [assembly:CLSCompliant(true)]
 
-
 public class Number<T> where T : struct
 {
    // use Double as the underlying type, since its range is a superset of

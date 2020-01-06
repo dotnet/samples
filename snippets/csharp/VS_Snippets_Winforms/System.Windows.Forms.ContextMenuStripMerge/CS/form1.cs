@@ -35,7 +35,6 @@ public class Form1 : Form
         cmsBase.Items.Add("three");
         cmsBase.Items.Add("four");
 
-
         // cmsItemsToMerge contains the items to merge.
         cmsItemsToMerge.Items.Add("one");
         cmsItemsToMerge.Items.Add("two");
@@ -56,7 +55,6 @@ public class Form1 : Form
         CreateCombo();
 
     }
-
 
     #region ComboBox switching code.
     private void CreateCombo()
@@ -278,8 +276,6 @@ public class Form1 : Form
             item.MergeAction = MergeAction.Replace;
         }
 
-
-
     }
     #endregion
 
@@ -299,7 +295,6 @@ public class Form1 : Form
             item.MergeAction = MergeAction.MatchOnly;
             item.DropDownItems.Add("subitem from \"" + item.Text + " " + item.ShortcutKeyDisplayString + "\"");
         }
-
 
     }
     #endregion

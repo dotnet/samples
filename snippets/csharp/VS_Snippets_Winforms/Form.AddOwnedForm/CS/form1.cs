@@ -95,7 +95,6 @@ namespace FormAddOwnedFormEx
 			Application.Run(new Form1());
 		}
 
-      
       private void button1_Click(object sender, System.EventArgs e)
       {
          ShowMyOwnedForm();

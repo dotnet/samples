@@ -2,7 +2,6 @@
 // This is a simple example for VisualStyleInformation that displays
 // all of the visual style values in a ListView.
 
-
 using System;
 using System.Drawing;
 using System.Text;

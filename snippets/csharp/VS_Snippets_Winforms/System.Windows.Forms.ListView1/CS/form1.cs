@@ -5,7 +5,6 @@
 // and ListView.HeaderStyle members and the SelectedIndexCollection and
 // SelectedListViewItemCollection classes.
 
- 
 using System.Windows.Forms;
 using System.Drawing;
 using System;
@@ -48,8 +47,6 @@ public class Form1:
 		this.Name = "Form1";
 		this.Text = "Breakfast Menu";
 		this.ResumeLayout(false);
-		
-		
 
 	}
 
@@ -120,7 +117,6 @@ public class Form1:
 	// property or you can access them through the items' indices,  
 	// using the SelectedIndices property.  The following methods show
 	// the two approaches.
-
 
 	//<snippet2>
 	// Uses the SelectedItems property to retrieve and tally the price 

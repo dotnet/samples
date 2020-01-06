@@ -63,7 +63,6 @@ public class Example
         parts.Add(new Part() {  PartId = 1334 });
         parts.Add(new Part() { PartName = "banana seat", PartId = 1444 });
         parts.Add(new Part() { PartName = "cassette", PartId = 1534 });
-       
 
         // Write out the parts in the list. This will call the overridden 
         // ToString method in the Part class.
@@ -73,12 +72,10 @@ public class Example
             Console.WriteLine(aPart);
         }
 
-
         // Call Sort on the list. This will use the 
         // default comparer, which is the Compare method 
         // implemented on Part.
         parts.Sort();
-
 
         Console.WriteLine("\nAfter sort by part number:");
         foreach (Part aPart in parts)

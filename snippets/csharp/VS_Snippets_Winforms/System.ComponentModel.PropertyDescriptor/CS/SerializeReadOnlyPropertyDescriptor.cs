@@ -42,7 +42,6 @@ namespace ReadOnlyPropertyDescriptorTest
             }
         }
 
-        
         // The type converter for this property.
         // A translator can overwrite with its own converter.
         public override TypeConverter Converter
@@ -53,7 +52,6 @@ namespace ReadOnlyPropertyDescriptorTest
             }
         }
 
-        
         // Returns the property editor 
         // A translator can overwrite with its own editor.
         public override object GetEditor(Type editorBaseType)
@@ -83,7 +81,6 @@ namespace ReadOnlyPropertyDescriptorTest
             return this._pd.CanResetValue(component);
         }
 
-     
         public override object GetValue(object component)
         {
             return this._pd.GetValue(component);
@@ -129,7 +126,6 @@ namespace ReadOnlyPropertyDescriptorTest
             return new AttributeCollection(AppendAttributes(existing, newAttrs));
         }
 
-        
         static public Attribute[] AppendAttributes(
             AttributeCollection existing, 
             params Attribute[] newAttrs)

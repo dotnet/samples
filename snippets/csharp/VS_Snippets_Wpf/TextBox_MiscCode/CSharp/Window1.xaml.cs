@@ -21,7 +21,6 @@ namespace TextBox_MiscCode
         {
             InitializeComponent();
 
-            
         }
 
         void WindowLoaded(object sender, RoutedEventArgs args)

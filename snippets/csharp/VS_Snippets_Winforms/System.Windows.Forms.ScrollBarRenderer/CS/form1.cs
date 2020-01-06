@@ -6,7 +6,6 @@
 // This sample simulates a horizontal scroll bar. 
 // For simplicity, this sample does not handle runtime switching of visual styles.
 
-
 //<Snippet0>
 using System;
 using System.Drawing;

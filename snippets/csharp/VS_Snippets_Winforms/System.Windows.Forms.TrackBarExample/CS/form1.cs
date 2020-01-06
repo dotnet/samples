@@ -103,7 +103,6 @@ public class Form1:
 			new System.EventHandler(TrackBar1_ValueChanged);
 		this.Controls.Add(this.TrackBar1);
 	}
-	
 
 	// Handle the TrackBar.ValueChanged event by calculating a value for
 	// TextBox1 based on the TrackBar value.  

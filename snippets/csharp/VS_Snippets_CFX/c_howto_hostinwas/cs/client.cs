@@ -4,7 +4,6 @@
 using System;
 using System.ServiceModel;
 
-
 namespace Microsoft.ServiceModel.Samples
 {
 
@@ -84,8 +83,6 @@ namespace Microsoft.ServiceModel.Samples
         }
     }
     //</snippet1222>
-
-
 
     //<snippet1223>
     //Client implementation code.

@@ -78,7 +78,6 @@ namespace SDKSample
           //</SnippetRelativeSource>
       }
 
-
     //<Snippet1>
     private void OnPageLoaded(object sender, EventArgs e)
     {

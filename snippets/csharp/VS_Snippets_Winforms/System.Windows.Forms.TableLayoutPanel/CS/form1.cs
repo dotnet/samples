@@ -85,7 +85,6 @@ public class Form1 : System.Windows.Forms.Form
     }
     // </snippet3>
 
-
     // <snippet4>
     private void getRowBtn_Click(
 		System.Object sender, 
@@ -377,7 +376,6 @@ public class Form1 : System.Windows.Forms.Form
         }
     }
     // </snippet15>
-
 
 	/// <summary>
 	/// The main entry point for the application.

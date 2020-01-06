@@ -8,7 +8,6 @@ using System.Windows.Shapes;
 using System.Collections.ObjectModel;
 using System.Collections.Generic;
 
-
 namespace SDKSample
 {
     /// <summary>

@@ -154,7 +154,6 @@ namespace GDIPlusPort
         }
         //</snippet2>
 
-
         //<snippet3>
         private void GetSupportedParameters(PaintEventArgs e)
         {

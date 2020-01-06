@@ -9,7 +9,6 @@ class Program
     // Method to get:
     public void MethodA() { }
 
-
     static void Main(string[] args)
     {
 

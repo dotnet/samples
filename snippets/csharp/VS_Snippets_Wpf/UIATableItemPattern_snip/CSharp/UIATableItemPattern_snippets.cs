@@ -374,6 +374,5 @@ namespace UIATableItemPattern_snip
         }
         // </Snippet105>
 
-
     }
 }

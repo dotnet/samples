@@ -212,7 +212,6 @@ namespace HitTestSample_CS
             }
         }
 
-
         private void ClipWithRect(Stroke aStroke)
         {
             //<Snippet5>

@@ -9,7 +9,6 @@ using System.Windows.Media;
 namespace Microsoft.Samples.Graphics.UsingImageBrush
 {
 
-
     public partial class TilingExample : Page
     {
 
@@ -17,7 +16,6 @@ namespace Microsoft.Samples.Graphics.UsingImageBrush
     {
 
     }
-
 
     }
 }

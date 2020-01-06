@@ -55,7 +55,6 @@ namespace Example
             //</snippet1>    
         } //SampleTryCreate
 
-
         // Constructor
         private static void SampleConstructor()
         {
@@ -112,7 +111,6 @@ namespace Example
             Console.WriteLine(address.DnsSafeHost);
             //</snippet4>
         }
-
 
         // operator == and !==
         private static void SampleOperatorEqual()

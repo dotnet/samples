@@ -33,7 +33,6 @@ namespace MyCursors
 			base.Dispose( disposing );
 		}
 
-
 // <snippet1>
 private void SetCursor()
 {
@@ -52,7 +51,6 @@ private void SetCursor()
 }
 // </snippet1>
 
-		
 // <snippet2>
 private void myButton_Click(object sender, System.EventArgs e)
 {
@@ -79,7 +77,6 @@ private Cursor CursorFromResource(Type type, string resource)
 }
 // </snippet2>
 
-
 // <snippet3>
 private void myButton_MouseEnter(object sender, System.EventArgs e)
 {
@@ -93,7 +90,6 @@ private void myButton_MouseLeave(object sender, System.EventArgs e)
    Cursor.Show();
 }
 // </snippet3>
-
 
 		#region Windows Form Designer generated code
 		private void InitializeComponent()
@@ -141,7 +137,6 @@ private void myButton_MouseLeave(object sender, System.EventArgs e)
 		{
 			this.SetCursor();
 		}
-
 
 	} // end class
 } // end namespace

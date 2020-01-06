@@ -13,7 +13,6 @@ using System.Web.UI.HtmlControls;
 using System.Xml.Linq;
 using System.Web.DynamicData;
 
-
 public partial class QueryableFilterRepeaterSample : System.Web.UI.Page 
 {
     protected MetaTable table;

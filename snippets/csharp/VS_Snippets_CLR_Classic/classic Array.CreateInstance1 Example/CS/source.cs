@@ -14,8 +14,7 @@
        Console.WriteLine( "The two-dimensional Array contains the following values:" );
        PrintValues( my2DArray );
     }
- 
- 
+
     public static void PrintValues( Array myArr )  {
        System.Collections.IEnumerator myEnumerator = myArr.GetEnumerator();
        int i = 0;

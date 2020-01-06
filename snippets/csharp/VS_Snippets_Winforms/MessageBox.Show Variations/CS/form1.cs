@@ -270,7 +270,6 @@ namespace MessageBox_CS
 	}
 	//</snippet5>
 
-
         //<snippet6>
         private void DisplayMessageBoxText()
         {
@@ -278,7 +277,6 @@ namespace MessageBox_CS
         }
 
         //</snippet6>
-
 
 	}
 }

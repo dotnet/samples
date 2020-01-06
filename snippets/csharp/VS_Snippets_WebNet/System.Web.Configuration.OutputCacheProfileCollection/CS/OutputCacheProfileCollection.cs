@@ -32,7 +32,6 @@ namespace Samples.Aspnet.SystemWebConfiguration
       
 // </Snippet1>
 
-
 // <Snippet2>
         // Execute the Add method.
         System.Web.Configuration.OutputCacheProfile outputCacheProfile0 =
@@ -49,8 +48,7 @@ namespace Samples.Aspnet.SystemWebConfiguration
             webConfig.Save();
         }
 // </Snippet2>
-                        
- 
+
 // <Snippet3>
         // Execute the Clear method.
         outputCacheProfiles.Clear();
@@ -70,7 +68,6 @@ namespace Samples.Aspnet.SystemWebConfiguration
           outputCacheProfiles["MyCacheProfile"];
 
 // </Snippet5>
-    
 
 // <Snippet6>
         // Get the key with the specified index.
@@ -83,7 +80,6 @@ namespace Samples.Aspnet.SystemWebConfiguration
         outputCacheProfiles.RemoveAt(0);
 
 // </Snippet7>
-
 
 // <Snippet8>
         // Remove the output profile with the specified name.

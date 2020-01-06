@@ -524,7 +524,6 @@ public class DemoControlDesigner : ControlDesigner
         }
     }
 
-
     // <snippet15>
     void ChangeService_ComponentChanged(
         object sender,
@@ -813,7 +812,6 @@ public class DemoControlDesigner : ControlDesigner
                     "DemoControl References");
             }
         }
-
 
         // This method uses the ITypeResolutionService.GetPathOfAssembly
         // method to display the path of the executing assembly.

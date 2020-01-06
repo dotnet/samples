@@ -12,7 +12,6 @@
   * the URLs of the first and second WebPermission instances. 
   * Finally, the attributes, values and children of that instance are displayed.
 */
-
 using System;
 using System.Net;
 using System.Security;

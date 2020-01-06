@@ -15,7 +15,6 @@ using System.Windows.Xps.Packaging;
 using System.Windows.Xps.Serialization;
 using SDKSample;
 
-
 namespace SDKSampleHelper
 {
     // ----------------------- class AsyncSaveEventArgs -----------------------
@@ -42,7 +41,6 @@ namespace SDKSampleHelper
             _status = status;
         }
     }// end:class AsyncSaveEventArgs
-
 
     // ------------------------- class XpsPrintHelper -------------------------
     public class XpsPrintHelper
@@ -83,7 +81,6 @@ namespace SDKSampleHelper
             return printDialog;
         }// end:GetPrintDialog()
 
-
         // ------------------------- PrintSingleVisual ------------------------
         /// <summary>
         ///   Prints a single visual element.</summary>
@@ -108,7 +105,6 @@ namespace SDKSampleHelper
             else
                 PrintVisual(xdwPrint, transformedVisual);
         }// end:PrintSingleVisual()
-
 
         // ----------------------- PrintMultipleVisuals -----------------------
         /// <summary>
@@ -152,7 +148,6 @@ namespace SDKSampleHelper
                 PrintVisuals(xdwPrint, vc);
         }// end:PrintMultipleVisuals()
 
-
         // ------------------ PrintSingleFlowContentDocument ------------------
         /// <summary>
         ///   Prints the content of a single flow document.</summary>
@@ -179,7 +174,6 @@ namespace SDKSampleHelper
                 PrintVisualAsync(xdwPrint, visual);
         }// end:PrintSingleFlowContentDocument()
 
-
         // ------------------ PrintSingleFixedContentDocument -----------------
         /// <summary>
         ///   Prints the content of a single fixed document.</summary>
@@ -201,7 +195,6 @@ namespace SDKSampleHelper
             else
                 PrintSingleFixedContentDocument(xdwPrint, fd);
         }// end:PrintSingleFixedContentDocument()
-
 
 		//<SnippetPrintMultipleFixedContentDocuments>
 
@@ -237,7 +230,6 @@ namespace SDKSampleHelper
 
 		//</SnippetPrintMultipleFixedContentDocuments>
 
-
         // -------------------- PrintDocumentViewerContent --------------------
         /// <summary>
         ///   Prints the content displayed in a
@@ -267,7 +259,6 @@ namespace SDKSampleHelper
 
         #endregion // Print Interface
 
-
         #region Synchronous Print Methods
 
         // ------------------------- PrintVisualAsync -------------------------
@@ -282,7 +273,6 @@ namespace SDKSampleHelper
         {
             xpsdw.Write(v);     // Write visual to single page
         }
-
 
         // --------------------------- PrintVisuals ---------------------------
         /// <summary>
@@ -307,7 +297,6 @@ namespace SDKSampleHelper
             // End writing multiple visuals
             vToXpsD.EndBatchWrite();
         }
-
 
         // ------------------ PrintSingleFlowContentDocument ------------------
         /// <summary>
@@ -337,7 +326,6 @@ namespace SDKSampleHelper
             xpsdw.Write(fd);    // Write the FixedDocument as a document.
         }
 
-
         // ---------------- PrintMultipleFixedContentDocuments ----------------
         /// <summary>
         ///   Synchronously prints multiple fixed documents from a given
@@ -353,7 +341,6 @@ namespace SDKSampleHelper
         }
 
         #endregion // Synchronous Print Methods
-
 
         #region Asynchronous Print Methods
 
@@ -374,7 +361,6 @@ namespace SDKSampleHelper
 
             xpsdw.WriteAsync(v);    // Write the visual to a single page.
         }
-
 
         // ------------------------- PrintVisualsAsync ------------------------
         /// <summary>
@@ -408,7 +394,6 @@ namespace SDKSampleHelper
             }
         }// end:PrintVisualsAsync()
 
-
         // --------------- PrintSingleFlowContentDocumentAsync ----------------
         /// <summary>
         ///   Initiates asynchronous output of a given paginated
@@ -428,7 +413,6 @@ namespace SDKSampleHelper
             xpsdw.WriteAsync(idp);  // Write the IDP as a document.
         }// end:PrintSingleFlowContentDocumentAsync()
 
-
         // --------------- PrintSingleFixedContentDocumentAsync ---------------
         /// <summary>
         ///   Initiates asynchronous print of a given fixed
@@ -447,7 +431,6 @@ namespace SDKSampleHelper
 
             xpsdw.WriteAsync(fd);   // Print the FixedDocument.
         }
-
 
         // -------------- PrintMultipleFixedContentDocumentsAsync -------------
         /// <summary>
@@ -473,7 +456,6 @@ namespace SDKSampleHelper
             xpsdw.WriteAsync(fds);
         }// end:PrintMultipleFixedContentDocumentsAsync()
 
-
         // ---------------------------- CancelAsync ---------------------------
         /// <summary>
         ///   Cancels the current asynchronous print opertion.</summary>
@@ -483,7 +465,6 @@ namespace SDKSampleHelper
         }
 
         #endregion // Asynchronous Print Methods
-
 
         #region Async Event Handlers
 
@@ -509,7 +490,6 @@ namespace SDKSampleHelper
                 OnAsyncPrintChange(this, asyncInfo);  // update display status
             }
         }// end:AsyncPrintCompleted()
-
 
         // ----------------------- AsyncPrintingProgress ----------------------
         /// <summary>
@@ -623,7 +603,6 @@ namespace SDKSampleHelper
             return pt;
         }// end:CreateFixedDocumentSequencePrintTicket()
 
-
         // ------------------ CreateFixedDocumentPrintTicket ------------------
         /// <summary>
         ///   Creates a FixedDocument compatible PrintTicket.</summary>
@@ -652,7 +631,6 @@ namespace SDKSampleHelper
         }// end:CreateFixedDocumentPrintTicket()
 
         #endregion // Async Event Handlers
-
 
         #region Helper Methods
 
@@ -689,7 +667,6 @@ namespace SDKSampleHelper
             return xpsdw;
         }// end:GetPrintXpsDocumentWriter(PrintQueue)
 
-
         // -------------------- GetPrintXpsDocumentWriter() -------------------
         // <SnippetPageMediaSize>
         /// <summary>
@@ -724,9 +701,7 @@ namespace SDKSampleHelper
         }// end:PerformTransform()
         // </SnippetPageMediaSize>
 
-
         #endregion // Helper Methods
-
 
         #region Private Data
         private int                   _batchProgress = 0;

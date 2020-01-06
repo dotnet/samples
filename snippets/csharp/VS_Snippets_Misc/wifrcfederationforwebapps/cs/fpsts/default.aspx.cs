@@ -10,7 +10,6 @@
 //
 //-----------------------------------------------------------------------------
 
-
 using System;
 using System.IdentityModel;
 using System.IdentityModel.Configuration;
@@ -34,7 +33,6 @@ namespace PassiveFlowSTS
                 return ( ( Page.User ) != null && ( Page.User.Identity ) != null && ( Page.User.Identity.IsAuthenticated ) );
             }
         }
-
 
         /// <summary>
         /// We perform WS-Federation passive protocol logic in this method and call out to the appropriate request handlers. 

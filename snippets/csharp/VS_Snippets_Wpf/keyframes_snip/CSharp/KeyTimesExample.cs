@@ -31,7 +31,6 @@ namespace Microsoft.Samples.KeyFrameExamples
 
             this.Content = mainPanel;
 
-
         }
 
         private void createKeyTimeTimeSpanExample()
@@ -259,7 +258,6 @@ namespace Microsoft.Samples.KeyFrameExamples
             mainPanel.Children.Add(aRectangle);
 
         }
-
 
     }
 }

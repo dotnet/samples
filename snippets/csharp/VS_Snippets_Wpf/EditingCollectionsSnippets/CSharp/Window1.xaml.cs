@@ -26,7 +26,6 @@ namespace EditingCollectionsSnippets
             InitializeComponent();
         }
 
-
         private void edit_Click(object sender, RoutedEventArgs e)
         {
             if (itemsControl.SelectedItem == null)

@@ -4,8 +4,6 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
 
-
-
 public class Form1:
     System.Windows.Forms.Form
 
@@ -365,7 +363,6 @@ public class Form1:
         e.Graphics.DrawImage(image2, 20.0F, 20.0F);
     }
     //</snippet7>
-
 
     [STAThread]
     public static void Main()

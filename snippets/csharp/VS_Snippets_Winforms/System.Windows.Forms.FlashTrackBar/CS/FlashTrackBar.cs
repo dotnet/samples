@@ -35,7 +35,6 @@ namespace Microsoft.Samples.WinForms.Cs.FlashTrackBar {
         private Brush backgroundDim = null;
         private byte darkenBy = 200;
 
-
         public FlashTrackBar() {
             //
             // Required for Windows Form Designer support
@@ -112,7 +111,6 @@ namespace Microsoft.Samples.WinForms.Cs.FlashTrackBar {
             return !(endColor == Color.LimeGreen);
         }
 
-
         [
             Category("Flash"),
             Editor(typeof(FlashTrackBarDarkenByEditor), typeof(UITypeEditor)),
@@ -186,8 +184,6 @@ namespace Microsoft.Samples.WinForms.Cs.FlashTrackBar {
         public bool ShouldSerializeStartColor() {
             return !(startColor == Color.Red);
         }
-
-
 
         [
             Category("Flash"),
@@ -398,7 +394,6 @@ namespace Microsoft.Samples.WinForms.Cs.FlashTrackBar {
             int nonDimLength = (int)(percentValue * (float)toDim.Width);
             toDim.X += nonDimLength;
             toDim.Width -= nonDimLength;
-
 
             string text = Text;
             string toDisplay = null;

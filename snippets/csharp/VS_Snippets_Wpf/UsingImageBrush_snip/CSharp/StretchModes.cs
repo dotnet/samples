@@ -67,7 +67,6 @@ namespace Microsoft.Samples.Graphics.UsingImageBrush
             Margin = new Thickness(20);
             Title = "ImageBrush Stretch Modes";
 
-
         }
     }
 }

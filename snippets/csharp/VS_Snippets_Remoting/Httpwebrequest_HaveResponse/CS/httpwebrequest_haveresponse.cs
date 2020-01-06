@@ -12,12 +12,10 @@ else a message 'The response is not received' is displayed to the console.
 
 */
 
- 
 using System;
 using System.IO;
 using System.Net;
 using System.Text;
-
 
 class HttpWebRequest_HaveResponse
 {

@@ -16,11 +16,9 @@ public class HelloServiceClass : MarshalByRefObject {
       Console.WriteLine(this.GetType().Name + " has been created.  Instance # = {0}", instanceNum);
    }
 
-
    ~HelloServiceClass() {
       Console.WriteLine("Destroyed instance {0} of HelloServiceClass.", instanceNum);      
    }
-
 
    [PermissionSet(SecurityAction.LinkDemand)]
    public String HelloMethod(String name) {

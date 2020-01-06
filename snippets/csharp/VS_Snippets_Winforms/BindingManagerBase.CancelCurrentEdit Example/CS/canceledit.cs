@@ -150,6 +150,5 @@ namespace CancelEdit
                 new Binding("Text", myDataView, "myCol"));
         }
 
-
     }
 }

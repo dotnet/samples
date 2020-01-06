@@ -4,7 +4,6 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.ComponentModel;
 
-
 public class Form1: Form
 {
  protected DataGrid dataGrid1;

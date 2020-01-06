@@ -54,7 +54,6 @@ public class Box
     }
 }
 
-
 class BoxEqualityComparer : IEqualityComparer<Box>
 {
     public bool Equals(Box b1, Box b2)

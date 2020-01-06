@@ -88,7 +88,6 @@ public partial class Vehicle : IExtensibleDataObject
 //</snippet3>
 }
 
-
 //<snippet4>
 [DataContract]
 [Serializable]

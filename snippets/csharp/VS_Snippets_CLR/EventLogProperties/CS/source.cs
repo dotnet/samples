@@ -28,7 +28,6 @@ namespace EventLogSamples
             }
         }
 
-
         // Prompt the user for the overflow policy setting.
         static void GetNewOverflowSetting(ref OverflowAction newOverflow,
             ref Int32 numDays)
@@ -71,7 +70,6 @@ namespace EventLogSamples
             }
             Console.WriteLine();
         }
-
 
         // <Snippet2>
         static void DisplayEventLogProperties()

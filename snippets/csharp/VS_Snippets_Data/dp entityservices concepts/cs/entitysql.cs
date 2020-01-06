@@ -32,7 +32,6 @@ namespace Microsoft.Samples.Entity
             TestProduct(queryString, pc);
             pc.Clear();
 
-
             /*
             //<snippetSelectProduct>
             SELECT VALUE Product FROM AdventureWorksEntities.Products AS Product
@@ -560,14 +559,12 @@ namespace Microsoft.Samples.Entity
             TestProduct(queryString, pc);
             pc.Clear();
 
-
             /*
             //<snippetREF>
             SELECT VALUE REF(p).Name FROM AdventureWorksEntities.Products as p
             //</snippetREF>
             */
             queryString = @"SELECT VALUE REF(p).Name FROM AdventureWorksEntities.Products as p";
-
 
             /*
             //<snippetREF2>
@@ -847,7 +844,6 @@ namespace Microsoft.Samples.Entity
             TestProduct(queryString, pc);
             pc.Clear();
         }
-
 
         static void TestProduct(string esqlQuery, Dictionary<string, object> parametes)
         {

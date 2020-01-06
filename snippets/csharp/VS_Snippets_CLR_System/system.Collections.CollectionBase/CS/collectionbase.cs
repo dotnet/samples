@@ -55,7 +55,6 @@ public class Int16Collection : CollectionBase  {
 
 }
 
-
 public class SamplesCollectionBase  {
 
    public static void Main()  {

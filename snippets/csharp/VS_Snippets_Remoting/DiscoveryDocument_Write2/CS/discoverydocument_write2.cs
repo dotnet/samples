@@ -34,10 +34,8 @@ public class DiscoveryDocument_Example
             FileStream( "log.txt", FileMode.OpenOrCreate, FileAccess.Write );
          StreamWriter myStreamWriter = new StreamWriter( myFileStream );
 
-
          XmlTextWriter myXmlTextWriter = new XmlTextWriter( myStreamWriter );
          myDiscoveryDocument.Write( myXmlTextWriter );
-
 
          myXmlTextWriter.Flush();
          myXmlTextWriter.Close();

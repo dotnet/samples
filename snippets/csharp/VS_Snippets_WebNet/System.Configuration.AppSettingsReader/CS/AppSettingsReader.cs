@@ -3,7 +3,6 @@ using System;
 using System.Collections.Specialized;
 using System.Configuration;
 
-
     class UsingAppSettingsReader
     {
         // <Snippet2>

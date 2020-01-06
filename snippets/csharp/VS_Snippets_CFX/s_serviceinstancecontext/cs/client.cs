@@ -48,7 +48,6 @@ namespace Microsoft.ServiceModel.Samples
                 Console.WriteLine("Test");
                 wcfClient.GetIncomingChannels();
                 wcfClient.Close(); // close the client object.
-          
 
             }
             catch (TimeoutException timeProblem)

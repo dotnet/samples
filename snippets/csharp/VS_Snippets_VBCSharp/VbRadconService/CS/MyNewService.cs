@@ -17,7 +17,6 @@ public class Service1: System.ServiceProcess.ServiceBase
 	}
 }
 
-
 public class MyNewService: System.ServiceProcess.ServiceBase
 {
 	//<Snippet1>
@@ -31,12 +30,10 @@ public class MyNewService: System.ServiceProcess.ServiceBase
 	}
 	//</Snippet1>
 
-
 	//<Snippet16>
 	private System.ComponentModel.IContainer components;
 	private System.Diagnostics.EventLog eventLog1;
 	//</Snippet16>
-
 
 	[System.Diagnostics.DebuggerStepThrough()]
 	void InitializeComponent()
@@ -44,7 +41,6 @@ public class MyNewService: System.ServiceProcess.ServiceBase
 		components = new System.ComponentModel.Container();
 		this.ServiceName = "MyNewService";
 	}
-
 
 	//<Snippet2>
 	public MyNewService()
@@ -61,7 +57,6 @@ public class MyNewService: System.ServiceProcess.ServiceBase
 	}
 	//</Snippet2>
 
-
 	//<Snippet3>
 	protected override void OnStart(string[] args)
 	{
@@ -69,14 +64,12 @@ public class MyNewService: System.ServiceProcess.ServiceBase
 	}
 	//</Snippet3>
 
-
 	//<Snippet4>
 	protected override void OnStop()
 	{
 		eventLog1.WriteEntry("In OnStop.");
 	}
 	//</Snippet4>
-
 
 	//<Snippet5>
 	protected override void OnContinue()
@@ -87,14 +80,12 @@ public class MyNewService: System.ServiceProcess.ServiceBase
 
 }
 
-
 //*******************************************************************
 //<Snippet7>
 public class UserService1 : System.ServiceProcess.ServiceBase  
 {
 }
 //</Snippet7>
-
 
 //*******************************************************************
 namespace WrapUserService1
@@ -111,14 +102,12 @@ namespace WrapUserService1
 		}
 		//</Snippet8>
 
-
 		//<Snippet9>
 		public static void Main()
 		{
 			System.ServiceProcess.ServiceBase.Run(new UserService1());
 		}
 		//</Snippet9>
-
 
 		//<Snippet10>
 		protected override void OnStart(string[] args)
@@ -128,7 +117,6 @@ namespace WrapUserService1
 		//</Snippet10>
 	}
 }
-
 
 //*******************************************************************
 class UserService2:System.ServiceProcess.ServiceBase
@@ -156,7 +144,6 @@ class UserService2:System.ServiceProcess.ServiceBase
 		eventLog1.Log = "MyLog";
 	}
 	//</Snippet14>
-
 
 	//<Snippet15>
 	protected override void OnStart(string[] args)

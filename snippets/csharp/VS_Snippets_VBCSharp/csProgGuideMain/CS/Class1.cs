@@ -1,7 +1,6 @@
 ﻿namespace CsCsrefProgrammingMain
 {
 
-
     //<Snippet16>
     // Add a using directive for System if the directive isn't already present.
 
@@ -65,7 +64,6 @@
     // output reads: The factorial of 3 is 6.
     //</Snippet16>
 
-
     //<Snippet9>
     class CommandLine
     { 
@@ -88,7 +86,6 @@
     */
     //</Snippet9>
 
-
     //<Snippet11>
     class CommandLine2
     {
@@ -109,7 +106,6 @@
         Mary
     */
     //</Snippet11>
-
 
     //<Snippet17>
     class TestClass

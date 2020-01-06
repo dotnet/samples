@@ -35,7 +35,6 @@ namespace whats_new
             Console.WriteLine($"Name: {person.FirstName} {person.LastName}\nAge: {person.Age}");
             // </SnippetJsonSerializeCall>
 
-
             //await TLS.ConnectCloudFlare();
 
             //Cipher.Run();

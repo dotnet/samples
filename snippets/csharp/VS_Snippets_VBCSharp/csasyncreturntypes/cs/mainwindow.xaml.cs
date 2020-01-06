@@ -104,7 +104,6 @@ namespace AsyncReturnTypes
         }
         //</snippet1>
 
-
         //<snippet5>
         // TASK EXAMPLE
         async Task Task_MethodAsync()

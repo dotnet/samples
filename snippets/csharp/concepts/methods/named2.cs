@@ -26,8 +26,6 @@ class TestMotorcycle : Motorcycle
    }
 }
 
-
-
 abstract class Motorcycle
 {
    // Anyone can call this.

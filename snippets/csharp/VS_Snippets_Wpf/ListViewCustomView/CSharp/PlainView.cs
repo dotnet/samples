@@ -38,7 +38,6 @@ namespace SDKSample
           set { SetValue(ItemWidthProperty, value); }
       }
 
-  
       public static readonly DependencyProperty ItemHeightProperty =
           WrapPanel.ItemHeightProperty.AddOwner(typeof(PlainView));
 
@@ -48,7 +47,6 @@ namespace SDKSample
           set { SetValue(ItemHeightProperty, value); }
       }
 
-  
       protected override object DefaultStyleKey
       {
           get 

@@ -18,7 +18,6 @@ namespace TPL_Intro
             Console.ReadKey();
         }
 
-
         static void SimpleTaskCreation()
         {
             //<snippet01>
@@ -148,10 +147,7 @@ namespace TPL_Intro
 
             System.IO.File.WriteAllText(@"C:\reportFolder\report.txt", reportData.Result);
 
-
-
             //</snippet05>
-
 
             //<snippet06>
             Task[] tasks = new Task[3]
@@ -215,13 +211,9 @@ namespace TPL_Intro
              */
             //</snippet08>
 
-
             var t = Task<int>.Factory.StartNew(() => 1);
 
         }
-
-
-
 
     }
 }

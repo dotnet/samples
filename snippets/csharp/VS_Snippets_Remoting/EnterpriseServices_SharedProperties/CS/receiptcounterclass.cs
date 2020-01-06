@@ -3,7 +3,6 @@ using System;
 using System.EnterpriseServices;
 using System.Reflection;
 
-
 [assembly: ApplicationName("ReceiptNumberGenerator")] 
 [assembly: ApplicationActivation(ActivationOption.Library)] 
 

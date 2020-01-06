@@ -8,7 +8,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
-
 namespace ImageElementExample
 {
    public partial class CroppedImageExample : Page
@@ -56,7 +55,6 @@ namespace ImageElementExample
          croppedGrid.Children.Add(chainImage);
 
       }
-
 
    }
 }

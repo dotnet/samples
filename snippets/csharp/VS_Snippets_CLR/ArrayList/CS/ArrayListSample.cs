@@ -34,11 +34,9 @@ public class SamplesArrayList  {
 		PrintValues ("Reverse" , myAL );
 		//</snippet4>
 
-
 		//<snippet5> 
 		string [] names = (string[]) myAL.ToArray (typeof(string));
 		//</snippet5>
-
 
 	}
 	//<snippet2> 

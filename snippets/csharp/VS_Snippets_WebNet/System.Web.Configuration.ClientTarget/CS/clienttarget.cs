@@ -13,7 +13,6 @@ namespace Samples.AspNet
     private static string alias, userAgent, msg;
     private static ClientTarget clientTarget;
 
-
     static void Main(string[] args)
     {
        string inputStr = String.Empty;
@@ -138,7 +137,6 @@ namespace Samples.AspNet
                   "Alias:      {0}\nUser Agent: {1}\n",
                   alias, userAgent);
 
-            
             Console.Write(msg);
 
             break;
@@ -237,7 +235,6 @@ namespace Samples.AspNet
 
             Console.Write(allClientTargets.ToString());
             break;
-
 
           default:
             // Option is not allowed..

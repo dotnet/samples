@@ -64,7 +64,6 @@ namespace CSDataIsolationLevel {
       }
    }
 
-
    static class NonrepeatableReadThreads {
       public static void NonrepeatableReadFirstThread(String connStrig, IsolationLevel level) {
          Console.WriteLine("Begin the NonrepeatableReadFirstThread.....");
@@ -130,7 +129,6 @@ namespace CSDataIsolationLevel {
       }
    }
 
-
    static class PhantomReadThreads {
       public static void PhantomReadFirstThread(String connStrig, IsolationLevel level) {
          Console.WriteLine("Begin the PhantomReadFirstThread.....");
@@ -195,7 +193,6 @@ namespace CSDataIsolationLevel {
          Console.WriteLine("Exit from the PhantomReadSecondThread.....");
       }
    }
-
 
    // Demonstrates if the specific transaction allows the following behaviors:
    // 1. Dirty reads;
@@ -360,7 +357,6 @@ namespace CSDataIsolationLevel {
 
          return true;
       }
-
 
       // If there's no table [dbo].[Products] in DbDataIsolationLevel, create the table; or recreate it.
       public static Boolean CreateTable(String connString) {

@@ -29,6 +29,5 @@ namespace VbPowerPacksShapeDefaultBorderCS
             // </Snippet1>
         }
 
-        
     }
 }

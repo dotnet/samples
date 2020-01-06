@@ -19,7 +19,6 @@ using System.Globalization;
 using System.Collections;
 using System.Windows.Markup;
 
-
 namespace SDKSample
 {
     // ============================ class ThemeWindow =============================
@@ -45,7 +44,6 @@ namespace SDKSample
             }
         }
 
-
         // ------------------------- OnStyleSelected --------------------------
         /// <summary>
         ///   Replaces the default StickyNote style when a new
@@ -69,7 +67,6 @@ namespace SDKSample
             service.Disable();
             service.Enable(service.Store);
         }
-
 
         #region Boilerplate Annotations Code
 
@@ -97,7 +94,6 @@ namespace SDKSample
             }
         }// end:OnLoaded
 
-
         // ---------------------------- OnUnLoaded ----------------------------
         /// <summary>
         ///   Turns Annotations off.</summary>
@@ -123,7 +119,6 @@ namespace SDKSample
         #endregion Boilerplate Annotations Code
 
     }// end:partial class ThemeWindow
-
 
     // =============== class ResourceEntryToComboItemConverter ================
     [ValueConversion(typeof(System.Collections.ObjectModel.Collection<StyleMetaData>),
@@ -160,7 +155,6 @@ namespace SDKSample
             return filtered;
         }// end:Convert
 
-
         // --------------------------- ConvertBack ----------------------------
         public object ConvertBack(object value, Type targetType,
                                   object parameter, CultureInfo culture)
@@ -169,7 +163,6 @@ namespace SDKSample
         }
 
     }// end:class ResourceEntryToComboItemConverter
-
 
     // ========================= class StyleMetaData ==========================
     /// <summary>
@@ -195,6 +188,5 @@ namespace SDKSample
         public Style Value;
 
     }// end:class StyleMetaData
-
 
 }// end:namespace SdkSample

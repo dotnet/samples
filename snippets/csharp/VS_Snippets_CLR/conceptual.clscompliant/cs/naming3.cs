@@ -34,12 +34,10 @@ public class Converter
 //    Naming3.cs(8,18): (Location of symbol related to previous error)
 // </Snippet19>
 
-
 public class Example
 {
    public static void Main()
    {
-
 
    }
 }  

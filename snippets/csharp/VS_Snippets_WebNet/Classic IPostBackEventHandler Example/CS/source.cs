@@ -19,15 +19,13 @@ namespace CustomControls {
             Click(this, e);
          }   
       }
-      
-      
+
       // Define the method of IPostBackEventHandler that raises change events.
       public void RaisePostBackEvent(string eventArgument){
          
          OnClick(new EventArgs());
       }
-      
-      
+
       protected override void Render(HtmlTextWriter output) {
          output.Write("<INPUT TYPE = submit name = " + this.UniqueID + 
             " Value = 'Click Me' />");   

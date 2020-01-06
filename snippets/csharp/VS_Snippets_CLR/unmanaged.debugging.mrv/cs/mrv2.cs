@@ -25,7 +25,6 @@ public class Example
 }
 // </Snippet2>
 
-
 public class MathLib
 {
    public static double GetComputedValue(int val1, double val2)

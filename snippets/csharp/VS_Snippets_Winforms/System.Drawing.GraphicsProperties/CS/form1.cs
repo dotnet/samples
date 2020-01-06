@@ -138,7 +138,6 @@ public class Form1:
     }
     //</snippet2>
 
-    
     // The following code example demonstrates the effect of changing
     // the PageUnit property.
 

@@ -42,7 +42,6 @@ namespace InkCanvasSamples
             changeColorsOfSelectionButton.Click += new RoutedEventHandler(changeColorsOfSelectionButton_Click);
             replaceStrokeButton.Click += new RoutedEventHandler(switchPlayersButton_Click);
 
-
             inkCanvas1.StylusDown += new StylusDownEventHandler(inkCanvas1_StylusDown);
             inkCanvas1.StrokeCollected += new InkCanvasStrokeCollectedEventHandler(inkCanvas1_StrokeCollected);
 
@@ -74,7 +73,6 @@ namespace InkCanvasSamples
             //AddTextBlock();
         }
 
-        
         // <Snippet36>
         void inkCanvas1_ActiveEditingModeChanged(object sender, RoutedEventArgs e)
         {
@@ -150,7 +148,6 @@ namespace InkCanvasSamples
             inkCanvas1.Select(null, null);
         }
         //</Snippet23>
-
 
         // <Snippet16>
         Rect selectionBounds;
@@ -264,7 +261,6 @@ namespace InkCanvasSamples
             
         }
         //</Snippet13>
-
 
         void changeColorsOfSelectionButton_Click(object sender, RoutedEventArgs e)
         {

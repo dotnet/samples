@@ -7,7 +7,6 @@ using System.Windows.Navigation;
 using System.Xml;
 using System.Configuration;
 
-
 namespace Styles
 {
     /// <summary>

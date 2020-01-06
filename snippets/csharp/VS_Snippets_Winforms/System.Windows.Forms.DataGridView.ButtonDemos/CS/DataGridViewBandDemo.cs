@@ -107,7 +107,6 @@ public class DataGridViewBandDemo : Form
         boringRecipe = true;
     }
 
-
     void AddButton(Button button, string buttonLabel,
         EventHandler handler)
     {

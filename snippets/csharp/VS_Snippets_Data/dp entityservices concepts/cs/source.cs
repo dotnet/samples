@@ -15,7 +15,6 @@ using System.Data.Objects.DataClasses;
 //</snippetIncludes>
 using System.Linq;
 
-
 namespace Microsoft.Samples.Entity
 {
     class Source
@@ -70,7 +69,6 @@ namespace Microsoft.Samples.Entity
                 WHERE [order].Contact.ContactID = @customer";
 
             int customerId = 364;
-            
 
             using (AdventureWorksEntities context =
                 new AdventureWorksEntities())
@@ -116,7 +114,6 @@ namespace Microsoft.Samples.Entity
             //</snippetPolymorphicQuery>
         }
 
-
         static public void Transactions()
         {
             //<snippetTransactionsWithEntityClient>
@@ -147,7 +144,6 @@ namespace Microsoft.Samples.Entity
             //</snippetTransactionsWithEntityClient>
 
         }
-
 
         static public void ComplexTypeWithEntityCommand()
         {
@@ -337,7 +333,6 @@ namespace Microsoft.Samples.Entity
                       NAVIGATE(address, AdventureWorksModel.FK_SalesOrderHeader_Address_BillToAddressID) 
                       AS soh) FROM AdventureWorksEntities.Addresses AS address";
 
-                    
                     cmd.CommandText = esqlQuery;
 
                     // Execute the command.
@@ -615,7 +610,6 @@ namespace Microsoft.Samples.Entity
             //</snippetESQLPagingWithObjectQuery>
         }
 
-
         //string esqlQuery = @"SELECT VALUE Product FROM AdventureWorksEntities.Products AS Product";
         //<snippeteSQLStructuralTypes>
         static void ExecuteStructuralTypeQuery(string esqlQuery)
@@ -675,7 +669,6 @@ namespace Microsoft.Samples.Entity
             }
         }
         //</snippeteSQLStructuralTypes>
-
 
         //string esqlQuery = @"SELECT REF(p) FROM AdventureWorksEntities.Products as p";
         //<snippeteSQLRefTypes>
@@ -740,7 +733,6 @@ namespace Microsoft.Samples.Entity
             }
         }
         //</snippeteSQLRefTypes>
-
 
         //string esqlQuery = @"SELECT VALUE AVG(p.ListPrice) FROM AdventureWorksEntities.Products as p";
         //<snippeteSQLPrimitiveTypes>

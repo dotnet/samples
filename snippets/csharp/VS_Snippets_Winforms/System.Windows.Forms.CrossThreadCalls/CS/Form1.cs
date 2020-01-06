@@ -212,7 +212,6 @@ namespace CrossThreadDemo
 
 		#endregion
 
-
 		[STAThread]
 		static void Main()
 		{

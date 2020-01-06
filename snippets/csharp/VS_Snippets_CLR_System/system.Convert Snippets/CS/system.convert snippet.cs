@@ -150,7 +150,6 @@ namespace BasicSnippetC {
 				System.Console.WriteLine(
 					"Overflow in double-to-double conversion.");
 			}
-			
 
 		}
 		//</Snippet5>

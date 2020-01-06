@@ -197,7 +197,6 @@ namespace Microsoft.ServiceModel.Samples
     }
     //</snippet5>
 
-
     // Define a service contract.
     [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]
     public interface ICalculator

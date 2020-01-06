@@ -14,7 +14,6 @@ namespace CsCsrefProgrammingReflection
             System.Console.WriteLine(type);
             //</Snippet1>
 
-
             //<Snippet2>
             // Using Reflection to get information from an Assembly:
             System.Reflection.Assembly info = typeof(System.Int32).Assembly;

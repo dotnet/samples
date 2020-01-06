@@ -37,9 +37,7 @@ namespace Microsoft.Samples.CustomControls
             w.StartingColor = Colors.Blue;
             MessageBox.Show(w.ShowDialog().ToString());
 
-
         }
-
 
     }
 }

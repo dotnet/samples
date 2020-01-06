@@ -10,7 +10,6 @@ using System.Windows.Xps.Packaging;
 using Microsoft.Win32;
 using SDKSampleHelper;
 
-
 namespace SDKSample
 {
     // ------------------------- partial class Window1 ------------------------
@@ -25,7 +24,6 @@ namespace SDKSample
             _contentDir = GetContentFolder();
             InitializeComponent();
         }
-
 
         // ------------------------- GetContentFolder -------------------------
         /// <summary>
@@ -56,7 +54,6 @@ namespace SDKSample
             return contentDir;
         }// end:GetContentFolder()
 
-
         // --------------------------- WindowLoaded ---------------------------
         /// <summary>
         ///   Called when the windows is initially loaded to display.</summary>
@@ -65,7 +62,6 @@ namespace SDKSample
             currentMode = eGuiMode.SingleVisual;
             cbMode.SelectedIndex = (int)currentMode;
         }
-
 
         #region Button Event Handlers
         // -------------------------- OnBtnSaveClick --------------------------
@@ -76,7 +72,6 @@ namespace SDKSample
             ButtonHelperSave(false);
         }
 
-
         // ----------------------- OnBtnSaveAsyncClick ------------------------
         /// <summary>
         ///   Called when the "Save (asynchronous)" button is clicked.</summary>
@@ -84,7 +79,6 @@ namespace SDKSample
         {
             ButtonHelperSave(true);
         }
-
 
         // ------------------------- ButtonHelperSave -------------------------
         /// <summary>
@@ -159,7 +153,6 @@ namespace SDKSample
             }// end:switch (currentMode)
         }// end:ButtonHelperSave()
 
-
         // ------------------------- OnBtnCancelClick -------------------------
         /// <summary>
         ///   Called when the asynchronous save
@@ -170,7 +163,6 @@ namespace SDKSample
         }
 
         #endregion // Button Event Handlers
-
 
         // -------------------------- AsyncSaveEvent --------------------------
         /// <summary>
@@ -202,7 +194,6 @@ namespace SDKSample
             }
         }// end:AsyncSaveEvent()
 
-
         // -------------------- GetContainerPathFromDialog --------------------
         /// <summary>
         ///   Dislays a Save As... dialog for the user to choose the path and
@@ -226,7 +217,6 @@ namespace SDKSample
             }
         }
 
-
         // ---------------------------- UIEnabled -----------------------------
         /// <summary>
         ///   Enables or disables the "Save synchronous", "Save
@@ -247,7 +237,6 @@ namespace SDKSample
             this.ApplyTemplate();
         }
 
-
         // -------------------------- OnCbModeChange --------------------------
         /// <summary>
         ///   Handles user changes to the combobox selection.</summary>
@@ -260,7 +249,6 @@ namespace SDKSample
             // Update window mode based on user selection
             UpdateUI((eGuiMode)cbMode.SelectedIndex);
         }
-
 
         // ------------------------------ UpdateUI ----------------------------
         /// <summary>
@@ -299,7 +287,6 @@ namespace SDKSample
                     break;
             }
         }// end:UpdateUI()
-
 
         //<SnippetXpsSaveLoadFixedContent>
         // ------------------------- LoadDocumentViewer -----------------------
@@ -340,7 +327,6 @@ namespace SDKSample
 
         }// end:LoadDocumentViewer()
         //</SnippetXpsSaveLoadFixedContent>
-
 
         #region Private Members
 

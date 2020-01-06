@@ -29,7 +29,6 @@ public class DiscoveryDocument_Example
          // Create an object of the 'DiscoveryDocument'.
          DiscoveryDocument myDiscoveryDocument = new DiscoveryDocument();
 
-
 // <Snippet2>
          // Display the 'Namespace' field.
          Console.WriteLine( "The namespace is : " +DiscoveryDocument.Namespace );
@@ -53,7 +52,6 @@ public class DiscoveryDocument_Example
          }
 // </Snippet4>
 // </Snippet3>
-
 
 // <Snippet5>
          // Enumerate the 'References' in the DiscoveryDocument.

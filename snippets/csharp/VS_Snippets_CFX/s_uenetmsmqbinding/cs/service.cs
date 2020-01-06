@@ -57,7 +57,6 @@ namespace UE.ServiceModel.Samples
             Console.WriteLine("Received Divide({0},{1}) - result: {2}", n1, n2, result);
         }
 
-
         // Host the service within this EXE console application.
         public static void Main()
         {

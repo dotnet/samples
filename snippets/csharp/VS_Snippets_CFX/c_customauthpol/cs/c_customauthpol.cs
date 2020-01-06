@@ -42,7 +42,6 @@ namespace Samples
   }
   //</snippet2>
 
-
   //<snippet5>
   public class MyAuthorizationPolicy : IAuthorizationPolicy
   {
@@ -101,8 +100,7 @@ namespace Samples
 		// Should never get here, but just in case, return true.
 		bRet = true;
 	  }
-	  
-	  
+
 	  return bRet;
 	}
 	//</snippet6>
@@ -173,7 +171,6 @@ namespace Samples
 	  return result;
 	}
   }
-
 
   class Program
   {

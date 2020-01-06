@@ -33,7 +33,6 @@ class UsingSqlCacheDependencyDatabase
             sqlDs.Databases[0];
 
 // </Snippet1>
-              
 
 // <Snippet2>
 
@@ -45,7 +44,6 @@ class UsingSqlCacheDependencyDatabase
 
 // </Snippet2>
 
-                
 // <Snippet3>
 
         // Get the current Name property value.
@@ -55,8 +53,7 @@ class UsingSqlCacheDependencyDatabase
         sqlCdd.Name = "ConfigElementName";
 
 // </Snippet3>
-        
-        
+
 // <Snippet4>
 
         // Get the current ConnectionStringName property value.
@@ -66,7 +63,6 @@ class UsingSqlCacheDependencyDatabase
         sqlCdd.ConnectionStringName = "DataBaseName";
 
 // </Snippet4>
-
 
 // <Snippet5>
         SqlCacheDependencyDatabase dbElement0 =

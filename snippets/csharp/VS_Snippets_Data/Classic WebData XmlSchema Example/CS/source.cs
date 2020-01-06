@@ -34,7 +34,6 @@ class XMLSchemaExamples
         elementBrownDog.Name = "brownDog";
         elementBrownDog.SubstitutionGroup = new XmlQualifiedName("dog");
 
-
         // <xs:element name="pets">
         XmlSchemaElement elementPets = new XmlSchemaElement();
         schema.Items.Add(elementPets);

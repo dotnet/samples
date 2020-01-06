@@ -137,7 +137,6 @@ public class Worker : MarshalByRefObject
         }
     }
 
-
     // The entry point for the code example.
     static void Main()
     {
@@ -193,7 +192,6 @@ public class Worker : MarshalByRefObject
         // of Worker, skipping JIT visibility checks. The call fails when
         // the method is invoked.
         w.AccessPrivateMethod(true);
-
 
         // Unload the application domain. Add RestrictedMemberAccess to the
         // grant set, and use it to create an application domain in which

@@ -42,7 +42,6 @@ namespace BrushesIntroduction
             examplePanel.Children.Add(exampleRectangle);
         }
 
-
         private void createLinearGradientBrushExample(Panel examplePanel)
         {
 
@@ -63,7 +62,6 @@ namespace BrushesIntroduction
 
             examplePanel.Children.Add(exampleRectangle);
         }
-
 
         private void createRadialGradientBrushExample(Panel examplePanel)
         {
@@ -106,7 +104,6 @@ namespace BrushesIntroduction
 
             examplePanel.Children.Add(exampleRectangle);
         }
-
 
         private void createVisualBrushExample(Panel examplePanel)
         {
@@ -196,8 +193,6 @@ namespace BrushesIntroduction
 
             examplePanel.Children.Add(exampleRectangle);
         }
-
-
 
     }
 }

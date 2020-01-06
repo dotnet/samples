@@ -5,8 +5,6 @@ using System.Text;
 using System.Data.Linq;
 using System.Data.Linq.Mapping;
 
-
-
 namespace cs_overridedefault
 {
     class Program
@@ -15,7 +13,6 @@ namespace cs_overridedefault
         {
         }
 
-        
     }
     // <Snippet3>
     public partial class Customer

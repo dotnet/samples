@@ -13,7 +13,6 @@ namespace TN_Checked
       private System.Windows.Forms.Button button1;
       private System.ComponentModel.Container components = null;
 
-
       public Form1()
       {
          InitializeComponent();
@@ -73,7 +72,6 @@ namespace TN_Checked
 
       }
 
-
 		[STAThread]
 		static void Main() 
 		{
@@ -111,7 +109,6 @@ private void node_AfterCheck(object sender, TreeViewEventArgs e)
    }
 }
 //</snippet1>
-
 
       private void button1_Click(object sender, System.EventArgs e)
       {

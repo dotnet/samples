@@ -24,7 +24,6 @@ public sealed partial class MainPage : Page
 }
 // </Snippet2>
 
-
 public class Page 
 {
    public void InitializeComponent() {}       

@@ -71,7 +71,6 @@ public class Form1:
 	// Add this method to a form containing a ListBox control named ListBox1.
 	// Call the method in the constructor or Load method of the form.
 
-
 	//<snippet1>
 
 	// The following method displays the default font, 
@@ -98,7 +97,6 @@ public class Form1:
 // To use this example create a new form and paste this class 
 // forming the same file, after the form class in the same file.  
 // Add a button of type FunButton to the form. 
-
 
 //<snippet2>
 public class FunButton:

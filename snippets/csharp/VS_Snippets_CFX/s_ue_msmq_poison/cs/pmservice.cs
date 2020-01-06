@@ -128,7 +128,6 @@ namespace Microsoft.ServiceModel.Samples
         void SubmitPurchaseOrder(PurchaseOrder po);
     }
 
-
     // Service class that implements the service contract.
     // Added code to write output to the console window.
     [ServiceBehavior(AddressFilterMode=AddressFilterMode.Any)]
@@ -140,7 +139,6 @@ namespace Microsoft.ServiceModel.Samples
             Orders.Add(po);
             Console.WriteLine("Processing {0} ", po);
         }
-
 
         // Host the service within this EXE console application.
         public static void Main()

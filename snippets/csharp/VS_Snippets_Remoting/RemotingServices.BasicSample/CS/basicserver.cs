@@ -7,7 +7,6 @@ using System.Runtime.Remoting.Channels.Http;
 using System.Threading;
 using SampleNamespace;
 
-
 public class Server {
     public static void Main(string[] args) {
         string serverConfigFile = "basicserver.exe.config";

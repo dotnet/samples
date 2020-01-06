@@ -15,8 +15,7 @@ namespace Microsoft.Samples.BrushExamples
 
     public class OpacityExample : Page
     {
-    
-        
+
         public OpacityExample()
         {
             this.WindowTitle = "Opacity Example";

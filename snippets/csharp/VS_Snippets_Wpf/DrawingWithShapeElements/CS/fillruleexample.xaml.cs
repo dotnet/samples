@@ -10,14 +10,12 @@ using System.Windows.Media.Animation;
 namespace Microsoft.Samples.Graphics
 {
 
-
     public partial class FillRuleExample : Page
     {
         public FillRuleExample()
         {
             InitializeComponent();
-        
-        
+
         }
     }
 }

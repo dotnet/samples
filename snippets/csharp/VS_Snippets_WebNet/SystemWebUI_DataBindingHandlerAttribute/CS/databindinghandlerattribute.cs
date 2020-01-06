@@ -8,7 +8,6 @@ using System.Web.UI.WebControls;
 using System.ComponentModel;
 using System.ComponentModel.Design;
 
-
 namespace CustomControls
 {
   [

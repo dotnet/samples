@@ -7,7 +7,6 @@
 // This sample mimics the RadioButton control. Might want to come up with a better
 // customization sample that actually does something different from the RadioButton.
 
-
 //<Snippet0>
 using System;
 using System.Drawing;

@@ -83,7 +83,6 @@
             // Use with Parallel.ForEach
             Parallel.ForEach(partitioner, (i) => Console.WriteLine(i));
 
-
             // Use with PLINQ
             var query = from num in partitioner.AsParallel()
                         where num % 2 == 0

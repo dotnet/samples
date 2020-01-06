@@ -33,8 +33,7 @@
        // Displays the values of the Array.
        PrintValues( myTargetArray, ' ' );
     }
- 
- 
+
     public static void PrintValues( Array myArr, char mySeparator )  {
        System.Collections.IEnumerator myEnumerator = myArr.GetEnumerator();
        int i = 0;
@@ -92,8 +91,7 @@
        Console.WriteLine( "\nAfter copying to the target array from index 3:" );
        PrintIndexAndValues( myArrayTwo );
     }
- 
- 
+
     public static void PrintIndexAndValues( Array myArray )  {
        for ( int i = myArray.GetLowerBound(0); i <= myArray.GetUpperBound(0); i++ )
           Console.WriteLine( "\t[{0}]:\t{1}", i, myArray.GetValue( i ) );

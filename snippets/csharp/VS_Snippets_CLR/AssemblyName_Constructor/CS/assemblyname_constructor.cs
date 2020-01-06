@@ -55,7 +55,6 @@ public class AssemblyName_Constructor
    public static void Main()
    {
 
-
       // Create a dynamic assembly with name 'MyAssembly' and build version '1.0.0.2001'.
       AssemblyName myAssemblyName = new AssemblyName(); 
       myAssemblyName.Name = "MyAssembly";

@@ -64,7 +64,6 @@ namespace CustomWinControls
             Application.Run(new SimpleForm());
         }
 
-
     }
 }
 // </snippet10>

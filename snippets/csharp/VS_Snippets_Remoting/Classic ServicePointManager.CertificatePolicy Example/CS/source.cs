@@ -37,7 +37,6 @@ public class Form1: Form
     {}
 }
 
-
 // Class added so sample will compile
 public class MyCertificatePolicy : ICertificatePolicy
 {

@@ -11,7 +11,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Xml;
 
-
 namespace FindGeneratedItems
 {
     /// <summary>
@@ -25,7 +24,6 @@ namespace FindGeneratedItems
         {
             InitializeComponent();
         }
-        
 
         private void ControlTemplateFindElement(object sender, RoutedEventArgs e)
         {

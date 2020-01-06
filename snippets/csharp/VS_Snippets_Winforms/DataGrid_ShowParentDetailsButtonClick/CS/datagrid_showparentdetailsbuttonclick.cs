@@ -17,7 +17,6 @@ public class MyForm : Form
    private DataGrid myDataGrid;
    private DataSet myDataSet;
 
-
    public MyForm()
    {
       InitializeComponent();
@@ -51,7 +50,6 @@ public class MyForm : Form
       this.Name              = "DataGridForm";
       this.Text              = "Testing DataGrid Events";
       this.MaximizeBox       = false;
-
 
       myDataGrid.Location    = new Point(20, 70);
       myDataGrid.Size        = new Size(250, 170);

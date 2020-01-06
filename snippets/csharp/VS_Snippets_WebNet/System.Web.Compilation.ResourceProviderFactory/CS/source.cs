@@ -68,7 +68,6 @@ namespace CustomResourceProviders
             return value;
         }
 
-
         IResourceReader IResourceProvider.ResourceReader
         {
             get
@@ -86,7 +85,6 @@ namespace CustomResourceProviders
             }
         }
     }
-
 
     internal sealed class CustomResourceReader : IResourceReader
     {
@@ -113,7 +111,6 @@ namespace CustomResourceProviders
     }
     // </Snippet2>
 
-    
     public class CustomDesignTimeResourceProviderFactory :
         DesignTimeResourceProviderFactory
     {
@@ -156,7 +153,6 @@ namespace CustomResourceProviders
             return null;
         }
 
-
         IResourceReader IResourceProvider.ResourceReader
         {
             get
@@ -187,7 +183,6 @@ namespace CustomResourceProviders
         {
             return null;
         }
-
 
         IResourceReader IResourceProvider.ResourceReader
         {

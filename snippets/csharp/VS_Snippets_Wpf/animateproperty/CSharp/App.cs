@@ -10,8 +10,7 @@ using System.Windows.Controls;
 
 namespace Microsoft.Samples.Animation.LocalAnimations
 {
-  
-    
+
     // Displays the sample.
     public class app : Application
     {

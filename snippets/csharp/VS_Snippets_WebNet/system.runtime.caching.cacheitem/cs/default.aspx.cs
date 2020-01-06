@@ -10,8 +10,7 @@ using System.IO;
 
 public partial class _Default : System.Web.UI.Page
 {
-   
-    
+
     protected void Button1_Click(object sender, EventArgs e)
     {
         ObjectCache cache = MemoryCache.Default;
@@ -38,7 +37,6 @@ public partial class _Default : System.Web.UI.Page
             cache.Set(fileContents, policy);
         }
         Label1.Text = (fileContents.Value as string);
-
 
     }
 }

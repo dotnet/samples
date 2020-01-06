@@ -66,7 +66,6 @@ namespace Microsoft.Security.Samples
     public class Cities4 : Dictionary<string, int> { }
     // </Snippet10>
 
-
     // <Snippet11>
     [DataContract]
     public class Student
@@ -107,7 +106,6 @@ namespace Microsoft.Security.Samples
     {
     }
 
-
     [ServiceContract]
     public interface ICatalog
     {
@@ -124,7 +122,6 @@ namespace Microsoft.Security.Samples
             Twain.Title = "Huckleberry Finn";
             booksProperty_Value.Add(Twain);
         }
-
 
         private CustomList<Book> booksProperty_Value;
         public CustomList<Book> BooksProperty
@@ -203,7 +200,6 @@ namespace Microsoft.Security.Samples
         //private int firstMember;
     }
 
-
     // <Snippet1>
     [DataContract(Name="Customer")]
     public class Customer1
@@ -223,7 +219,6 @@ namespace Microsoft.Security.Samples
         public ICollection<Address> addresses;
     }
     // </Snippet1>
-
 
     // <Snippet2>
     [CollectionDataContract] 
@@ -300,7 +295,6 @@ namespace Microsoft.Security.Samples
         //code omitted
     }
     // </Snippet6>
-
 
     // <Snippet7>
     [DataContract]

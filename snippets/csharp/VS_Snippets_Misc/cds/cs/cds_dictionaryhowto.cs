@@ -177,9 +177,6 @@ namespace DictionaryHowTo
             Console.WriteLine();
         }
 
-        
-
-
         // This method shows how to retrieve a value from the dictionary,
         // when you expect that the key/value pair already exists,
         // and then possibly update the dictionary with a new value for the key.

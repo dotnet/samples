@@ -18,7 +18,6 @@ public class CertSelect
                 foreach (X509Extension extension in collection[i].Extensions)
                 {
                     Console.WriteLine(extension.Oid.FriendlyName + "(" + extension.Oid.Value + ")");
-   
 
                     if (extension.Oid.FriendlyName == "Key Usage")
                     {

@@ -4,10 +4,8 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 
-
 namespace Microsoft.Samples.Animation.TimingBehaviors
 {
-
 
     public partial class AnimateThenSetPropertyExample : Page
     {
@@ -57,7 +55,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             Button4BackgroundBrush.Color = Colors.Blue;
         }    
         // </SnippetGraphicsMMButton4Handler>         
-        
-        
+
     }
 }

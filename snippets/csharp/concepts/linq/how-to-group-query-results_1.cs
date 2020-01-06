@@ -59,8 +59,6 @@
             return avg > 0 ? (int)avg / 10 : 0;
         }
 
-        
-
         public void QueryHighScores(int exam, int score)
         {
             var highScores = from student in students

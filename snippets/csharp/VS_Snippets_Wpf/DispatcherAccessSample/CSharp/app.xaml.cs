@@ -4,7 +4,6 @@ using System.Data;
 using System.Xml;
 using System.Configuration;
 
-
 namespace SDKSamples
 {
     /// <summary>

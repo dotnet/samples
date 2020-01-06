@@ -53,7 +53,6 @@ public class CookiesPage : Page {
 		myForm.Method = "POST";
 	}
 
-
 	private void UnhandledException(Object Sender, EventArgs e) {
 		Response.Write("There was an unhandled exception on this page");
 	}

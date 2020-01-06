@@ -55,7 +55,6 @@ public class Example
             Console.WriteLine(aPart);
         }
 
-      
         // Check the list for part #1734. This calls the IEquatable.Equals method
         // of the Part class, which checks the PartId for equality.
         Console.WriteLine("\nContains(\"1734\"): {0}",
@@ -65,7 +64,6 @@ public class Example
         Console.WriteLine("\nInsert(2, \"1834\")");
         parts.Insert(2, new Part() { PartName = "brake lever", PartId = 1834 });
 
-        
         //Console.WriteLine();
         foreach (Part aPart in parts)
         {

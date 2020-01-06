@@ -52,7 +52,6 @@ namespace AspNet.Samples
 			// the control's Text property value.
 			String value = Control.Text;
 
-			
             // Create a Boolean variable, named attTest,
             // to test whether the Style attribute is 
             // valid in the page that the control is

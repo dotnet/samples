@@ -4,8 +4,7 @@ using System.Configuration;
 using System.Web.ClientServices.Providers;
 
 namespace ClientAppServicesDemo.Properties {
-    
-    
+
     internal sealed class Settings : ApplicationSettingsBase 
     {
         

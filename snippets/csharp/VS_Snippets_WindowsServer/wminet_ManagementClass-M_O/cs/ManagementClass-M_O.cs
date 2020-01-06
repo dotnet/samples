@@ -16,7 +16,6 @@ public class Sample
             null, System.TimeSpan.MaxValue, true);    
         ManagementClass c = new ManagementClass(p,o);
 
-
         // Get the methods in the class
         MethodDataCollection methods =
             c.Methods;

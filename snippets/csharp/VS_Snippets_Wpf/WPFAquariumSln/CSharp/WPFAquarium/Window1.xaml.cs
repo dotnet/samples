@@ -8,7 +8,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WPFAquariumObjects;
 
-
 namespace WPFAquarium
 {
   /// <summary>

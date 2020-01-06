@@ -4,8 +4,6 @@ using System.Data.Sql;
 using System.Data.SqlTypes;
 using Microsoft.SqlServer.Server;
 
-
-
 public sealed partial class SqlDataRecordTester
 {
    private SqlDataRecordTester()
@@ -72,7 +70,5 @@ SqlContext.Pipe.Send(record);
    
 }
 //
-
-
 
 }

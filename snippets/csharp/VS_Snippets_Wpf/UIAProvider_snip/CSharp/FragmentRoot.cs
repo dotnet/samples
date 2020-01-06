@@ -31,7 +31,6 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Diagnostics;
 
-
 namespace ElementProvider 
 {
     class RootButton : Control, IRawElementProviderFragmentRoot    
@@ -44,7 +43,6 @@ namespace ElementProvider
         //IntPtr ownerFormHandle;
         InvokePatternProvider myInvokePatternProvider = null;
         IntPtr myHWND;
-        
 
         /// <summary>
         /// Constructor.
@@ -72,7 +70,6 @@ namespace ElementProvider
 
         }
 
-        
         /// <summary>
         /// Handles WM_GETOBJECT message; others are passed to base handler.
         /// </summary>
@@ -131,8 +128,6 @@ namespace ElementProvider
         }
 // </Snippet150>
 
-
-        
         #region IRawElementProviderSimple
 
         // <Snippet101>
@@ -290,8 +285,6 @@ namespace ElementProvider
         }
 
         #endregion
-
-        
 
     }
 }

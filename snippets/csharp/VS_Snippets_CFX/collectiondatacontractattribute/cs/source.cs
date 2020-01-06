@@ -39,7 +39,6 @@ namespace Microsoft.Security.Samples
     }
     //</snippet2>
 
-
     [ServiceContract]
     public interface ICatalog
     {
@@ -56,7 +55,6 @@ namespace Microsoft.Security.Samples
             Twain.Title = "Huckleberry Finn";
             booksProperty_Value.Add(Twain);
         }
- 
 
         private CustomList<Book> booksProperty_Value;
         public CustomList<Book> BooksProperty
@@ -118,7 +116,6 @@ namespace Microsoft.Security.Samples
             sh.Description.Behaviors.Find<ServiceDebugBehavior>().IncludeExceptionDetailInFaults = true;
         }
     }
-
 
     [DataContract]
     public class Book

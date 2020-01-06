@@ -72,7 +72,6 @@ public class Tokens : IEnumerable
         }
     }
 
-
     //<Snippet4>
     // Test Tokens, TokenEnumerator
     static void Main()
@@ -89,7 +88,6 @@ public class Tokens : IEnumerable
     //</Snippet4>
 }
 //</Snippet1>
-
 
 //-----------------------------------------------------------------------------
 class Test

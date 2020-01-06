@@ -44,7 +44,6 @@ class MyApplication
       }
    }
 
-
    private static Type CreateCallee(AppDomain domain)
    {
       AssemblyName myAssemblyName = new AssemblyName();

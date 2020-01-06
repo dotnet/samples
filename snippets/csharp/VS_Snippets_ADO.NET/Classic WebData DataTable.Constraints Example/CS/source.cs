@@ -7,7 +7,6 @@ public class Form1
 {
     protected DataSet DataSet1;
 
-
     // <Snippet1>
     private void CreateConstraint(DataSet dataSet, 
         string table1, string table2, string column1, string column2)

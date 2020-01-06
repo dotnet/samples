@@ -15,7 +15,6 @@ public class TraceExtension {}
 	  private string myFilename;
 	  private int myPriority;
 
-
 	  // Set the name of the log file were SOAP messages will be stored.
 	  public TraceExtensionAttribute() : base()
 	  {

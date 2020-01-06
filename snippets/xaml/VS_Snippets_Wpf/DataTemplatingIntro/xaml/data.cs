@@ -10,7 +10,6 @@ namespace SDKSample
       private int priority;
       private TaskType type;
 
-
       public event PropertyChangedEventHandler PropertyChanged;
 
       public Task()

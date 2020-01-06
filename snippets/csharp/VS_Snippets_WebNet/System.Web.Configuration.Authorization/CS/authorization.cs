@@ -41,14 +41,12 @@ namespace Samples.Aspnet.SystemWebConfiguration
                 new System.Web.Configuration.AuthorizationRule(action);
             // </Snippet4>
 
-
             // <Snippet5>
             // Create a new 'AuthorizationSection' object.
            AuthorizationSection newauthorizationSection = 
                new System.Web.Configuration.AuthorizationSection();
 
             // </Snippet5>
-
 
             // <Snippet6>
             // Using the AuthorizationRuleCollection Add method.
@@ -100,7 +98,6 @@ namespace Samples.Aspnet.SystemWebConfiguration
                 authorizationRule);
             // </Snippet11>
 
-
             // <Snippet12>
             // Show how to access the Rules elements.
             StringBuilder rules = new StringBuilder();
@@ -138,11 +135,9 @@ namespace Samples.Aspnet.SystemWebConfiguration
                 authorizationRuleCollection.Get(0);
             // </Snippet13>
 
-
         }
 
     }
-
 
 } 
 

@@ -27,10 +27,8 @@ public class App
     private static bool SetupCategory()
     {
 
-
         if (!PerformanceCounterCategory.Exists("RateOfCountsPerSecond64SampleCategory"))
         {
-
 
             CounterCreationDataCollection CCDC = new CounterCreationDataCollection();
 
@@ -102,7 +100,6 @@ public class App
             OutputSample((CounterSample)samplesList[i]);
             OutputSample((CounterSample)samplesList[i + 1]);
 
-
             // Use .NET to calculate the counter value.
             Console.WriteLine(".NET computed counter value = " +
                 CounterSampleCalculator.ComputeCounterValue((CounterSample)samplesList[i],
@@ -112,7 +109,6 @@ public class App
             Console.WriteLine("My computed counter value = " +
                 MyComputeCounterValue((CounterSample)samplesList[i],
                 (CounterSample)samplesList[i + 1]));
-
 
         }
     }

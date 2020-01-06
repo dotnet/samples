@@ -13,7 +13,6 @@ namespace SDKSample
         public CreateColorsFromExample()
         {
 
-
             // Add Image to the UI
             StackPanel myStackPanel = new StackPanel();
             //myStackPanel.Children.Add(myImage);

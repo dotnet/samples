@@ -24,7 +24,6 @@ namespace Samples.AspNet
                 "system.web/anonymousIdentification");
             // </Snippet2>
 
-
             // <Snippet3>
             // Get Cookieless.
             System.Web.HttpCookieMode cookieless =
@@ -80,7 +79,6 @@ namespace Samples.AspNet
                 cookieTimeout.ToString());
             // </Snippet9>
 
-
             // <Snippet10>
             // Get Domain.
             string domain =
@@ -98,7 +96,6 @@ namespace Samples.AspNet
                 aIdEnabled.ToString());
             // </Snippet11>
 
-           
         }
 
     }

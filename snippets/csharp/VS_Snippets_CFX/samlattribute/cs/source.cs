@@ -176,7 +176,6 @@ namespace Microsoft.ServiceModel.Samples.Federation
             return false;
         }
 
-
         /// <summary>
         /// Helper function to check if SAML Token was issued by HomeRealmSTS.
         /// </summary>
@@ -274,7 +273,6 @@ namespace Microsoft.ServiceModel.Samples.Federation
             get { return this.stsName; }
         }
 
-
         /// <summary>
         /// The SecurityToken used to sign tokens the STS issues.
         /// </summary>
@@ -292,7 +290,6 @@ namespace Microsoft.ServiceModel.Samples.Federation
         }
 
 		#region Abstract methods
-        
 
         /// <summary>
         /// Abstract method for setting up claims in the SAML Token issued by the STS
@@ -521,7 +518,6 @@ namespace Microsoft.ServiceModel.Samples.Federation
             set { m_tokenType = value; }
         }
 
-
         /// <summary>
         /// The size of the requested proof key.
         /// The value of the wst:RequestSecurityToken/wst:KeySize element from RequestSecurityToken messages.
@@ -676,7 +672,6 @@ namespace Microsoft.ServiceModel.Samples.Federation
 
             writer.WriteEndElement(); // wst:RequestSecurityToken
         }
-
 
         // Private methods
 
@@ -1214,7 +1209,6 @@ namespace Microsoft.ServiceModel.Samples.Federation
                 if (store != null) store.Close();
             }
         }
-
 
         #region GetX509TokenFromCert()
         /// <summary>

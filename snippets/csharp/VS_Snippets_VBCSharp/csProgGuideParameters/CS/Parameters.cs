@@ -97,7 +97,6 @@ namespace CsCsrefProgrammingParameters
             }
             //</Snippet5>
 
-
             //<Snippet6>
             static void Main()
             {
@@ -244,6 +243,5 @@ namespace CsCsrefProgrammingParameters
         }
         //</Snippet10>
     }
-
 
 }

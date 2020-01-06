@@ -10,14 +10,12 @@
   * After a HttpWebRequest object is created, its BeginGetResponse method is used to start 
   * the asynchronous response phase.
   * Finally, the EndGetResponse method is used to end the asynchronous response phase .*/
-
 // <Snippet1>
 using System;
 using System.Net;
 using System.IO;
 using System.Text;
 using System.Threading;
-
 
 public class RequestState
 {
@@ -61,7 +59,6 @@ class HttpWebRequest_BeginGetResponse
       // Create a HttpWebrequest object to the desired URL. 
       HttpWebRequest myHttpWebRequest= (HttpWebRequest)WebRequest.Create("http://www.contoso.com");
 
-    
   /**
     * If you are behind a firewall and you do not have your browser proxy setup
     * you need to use the following proxy creation code.
@@ -78,12 +75,10 @@ class HttpWebRequest_BeginGetResponse
       // object.
       myHttpWebRequest.Proxy=myProxy;
     ***/
-
       // Create an instance of the RequestState and assign the previous myHttpWebRequest
       // object to its request field.  
       RequestState myRequestState = new RequestState();  
       myRequestState.request = myHttpWebRequest;
-
 
       // Start the asynchronous request.
       IAsyncResult result=

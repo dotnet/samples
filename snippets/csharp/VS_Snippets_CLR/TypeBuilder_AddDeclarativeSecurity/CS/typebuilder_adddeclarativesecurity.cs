@@ -32,7 +32,6 @@ namespace CustomAttribute_Sample
          TypeBuilder myTypeBuilder = myModuleBuilder.DefineType("MyDynamicClass",
             TypeAttributes.Public);
 
-
          // Create a permission set and add a security permission
          // with the ControlEvidence flag.
          //
@@ -44,7 +43,6 @@ namespace CustomAttribute_Sample
          // as a declarative security demand.
          //
          myTypeBuilder.AddDeclarativeSecurity(SecurityAction.Demand, myPermissionSet);
-
 
          Type myType = myTypeBuilder.CreateType();
          myAssemblyBuilder.Save("EmittedAssembly.dll");

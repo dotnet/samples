@@ -3,7 +3,6 @@ using System.Configuration;
 using System.Web;
 using System.Web.Configuration;
 
-
 class UsingPassportAuthentication
 {
 
@@ -22,7 +21,6 @@ System.Web.Configuration.AuthenticationSection authenticationSection = (System.W
 PassportAuthentication passport = authenticationSection.Passport;
 
 // </Snippet1>
-
 
 // <Snippet2>
 

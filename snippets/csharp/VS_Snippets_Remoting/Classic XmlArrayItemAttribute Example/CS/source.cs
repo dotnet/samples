@@ -42,7 +42,6 @@ public class Run
       test.DeserializeObject("TypeDoc.xml");
    }
 
-
    public void SerializeObject(string filename)
    {
       // Creates a new XmlSerializer.

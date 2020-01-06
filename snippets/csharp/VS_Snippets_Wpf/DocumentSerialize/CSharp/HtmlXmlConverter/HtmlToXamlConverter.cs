@@ -1794,7 +1794,6 @@ namespace SdkSample
             return spannedColumnIndex;
         }
 
-
         /// <summary>
         /// Used for clearing activeRowSpans array in the beginning/end of each tbody
         /// </summary>
@@ -1825,7 +1824,6 @@ namespace SdkSample
                 activeRowSpans.Add(0);
             }
         }
-
 
         /// <summary>
         /// Calculates width of next TD element based on starting position of current element and it's width, which
@@ -1861,7 +1859,6 @@ namespace SdkSample
 
             return nextColumnStart;
         }
-
 
         private static double GetColumnWidth(XmlElement htmlTDElement)
         {

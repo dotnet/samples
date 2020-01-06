@@ -6,7 +6,6 @@ using System.Configuration;
 using System.ServiceModel;
 using System.ServiceModel.Description;
 
-
 namespace UE.ServiceModel.Samples
 {
     public class Snippets
@@ -75,7 +74,6 @@ namespace UE.ServiceModel.Samples
 		// </Snippet8>
 	}
 
-
 	public static void Snippet9()
 	{
 		// <Snippet9>
@@ -85,6 +83,5 @@ namespace UE.ServiceModel.Samples
 	}
 
     }
-
 
 }

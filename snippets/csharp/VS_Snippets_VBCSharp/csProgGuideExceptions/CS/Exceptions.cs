@@ -25,8 +25,6 @@ namespace CsCsrefProgrammingExceptions
         }
         //</Snippet1>
 
-        
-
         //<Snippet2>
         static void TestCatch()
         {
@@ -77,7 +75,6 @@ namespace CsCsrefProgrammingExceptions
         }
         //</Snippet3>
 
-
         //<Snippet4>
         static void TestFinally()
         {
@@ -118,7 +115,6 @@ namespace CsCsrefProgrammingExceptions
             Console.ReadKey();
         }
     }
-
 
     //-------------------------------------------------------------------------
     //<Snippet5>
@@ -169,7 +165,6 @@ namespace CsCsrefProgrammingExceptions
         }
     }
 
-
     //-------------------------------------------------------------------------
     class ExceptionHandling
     {
@@ -190,7 +185,6 @@ namespace CsCsrefProgrammingExceptions
             }
             //</Snippet6>
 
-
             //<Snippet7>
             try
             {
@@ -201,7 +195,6 @@ namespace CsCsrefProgrammingExceptions
                 // Code to execute after the try block goes here.
             }
             //</Snippet7>
-
 
             //<Snippet8>
             try
@@ -219,7 +212,6 @@ namespace CsCsrefProgrammingExceptions
             }
             //</Snippet8>
 
-
             //<Snippet10>
             try
             {
@@ -233,7 +225,6 @@ namespace CsCsrefProgrammingExceptions
                 throw;     
             }
             //</Snippet10>
-
 
             //<Snippet11>
             System.IO.FileStream file = null;
@@ -254,9 +245,7 @@ namespace CsCsrefProgrammingExceptions
             //</Snippet11>
         }
 
-
         static void LogError(System.Exception ex){}
-
 
         //<Snippet9>
         int GetInt(int[] array, int index)
@@ -274,7 +263,6 @@ namespace CsCsrefProgrammingExceptions
         //</Snippet9>
 
     }
-
 
     //-------------------------------------------------------------------------
     
@@ -294,7 +282,6 @@ namespace CsCsrefProgrammingExceptions
             //</Snippet12>
         }
 
-            
         //<Snippet13>
         class ProgramLog
         {
@@ -312,7 +299,6 @@ namespace CsCsrefProgrammingExceptions
         }
         //</Snippet13>
 
-
         //<Snippet14>
         static int GetValueFromArray(int[] array, int index)
         {
@@ -328,8 +314,6 @@ namespace CsCsrefProgrammingExceptions
         }
         //</Snippet14>
 
-
-        
     }
 
     //<Snippet15>
@@ -347,7 +331,6 @@ namespace CsCsrefProgrammingExceptions
     }
     //</Snippet15>
 
-
     //-------------------------------------------------------------------------
     class UsingTryFinally
     {
@@ -363,7 +346,6 @@ namespace CsCsrefProgrammingExceptions
             file.Close();
         }
         //</Snippet16>
-
 
         //<Snippet17>
         static void CodeWithCleanup()

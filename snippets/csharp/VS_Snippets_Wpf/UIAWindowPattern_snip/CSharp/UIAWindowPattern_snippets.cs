@@ -306,6 +306,5 @@ namespace UIAWindowPattern_snip
         }
         // </Snippet106>
 
-
     }
 }

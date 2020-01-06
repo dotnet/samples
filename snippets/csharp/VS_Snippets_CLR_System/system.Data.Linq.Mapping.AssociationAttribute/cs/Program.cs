@@ -12,13 +12,10 @@ namespace cs_testbed
     {
         static void Main(string[] args)
         {
-            
 
-            
             Northwnd db = new Northwnd(@"c:\northwnd.mdf");
             Console.ReadLine();
         }
 
-        
     }
 }

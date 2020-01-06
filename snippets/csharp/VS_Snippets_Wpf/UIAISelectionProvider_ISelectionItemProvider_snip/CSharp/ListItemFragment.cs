@@ -43,7 +43,6 @@ namespace CustomControls
         // ArrayList that represents the collection of ListItems.
         ArrayList selectedItems;
 
-       
         /// <summary>
         /// Constructor.
         /// </summary>
@@ -58,7 +57,6 @@ namespace CustomControls
             selectedItems = new ArrayList();
         }
 
-        
         /// <summary>
         /// Gets the index of the item within the list.
         /// </summary>
@@ -70,7 +68,6 @@ namespace CustomControls
             }
         }
 
-        
         #region IRawElementProviderSimple Members
 
         /// <summary>
@@ -237,7 +234,6 @@ namespace CustomControls
             }
             return null;
         }
-
 
         /// <summary>
         /// Responds to a client request to set the focus to this control. 

@@ -74,8 +74,7 @@ namespace PageSample
          if(viewState != null)
             base.LoadViewState(viewState);
       }
- 
-      
+
       [System.Security.Permissions.PermissionSet(System.Security.Permissions.SecurityAction.Demand, Name="FullTrust")] 
       protected override object SaveViewState()
       {

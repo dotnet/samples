@@ -25,7 +25,6 @@ class Example
         // </snippet17>
     }
 
-
     public static void TrimEnd1()
     {
         // <snippet18>

@@ -32,22 +32,17 @@ namespace Samples.AspNet
             return result;
         }
 
-
-
         public override bool CanConvertTo(
             ITypeDescriptorContext ctx, Type type)
         {
             return (type == typeof(Automobile));
         }
 
-
         public override bool CanConvertFrom(
             ITypeDescriptorContext ctx, Type type)
         {
             return (type == typeof(Automobile));
         }
-
-
 
         public override object ConvertTo(
             ITypeDescriptorContext ctx, CultureInfo ci,
@@ -93,8 +88,7 @@ namespace Samples.AspNet
                 carSpecs[(int)Automobile.specification.miles].ToString();
             string year =
                 carSpecs[(int)Automobile.specification.year].ToString();
-            
-           
+
             selectedCar.Make = 
                 make.Substring(make.IndexOf(":")+1);
             selectedCar.Color = 
@@ -106,7 +100,6 @@ namespace Samples.AspNet
             
             return selectedCar;
         }
-
 
     }
 

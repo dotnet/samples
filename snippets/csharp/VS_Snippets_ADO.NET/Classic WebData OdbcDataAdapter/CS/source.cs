@@ -9,7 +9,6 @@ class Program
         //string connectionString = "Driver={Microsoft Access Driver (*.mdb)};DBQ=C:\\Samples\\Northwind.mdb";
     }
 
-
     // <Snippet1>
     public DataSet GetDataSetFromAdapter(
         DataSet dataSet, string connectionString, string queryString)

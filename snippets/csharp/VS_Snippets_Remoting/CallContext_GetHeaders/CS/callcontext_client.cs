@@ -21,7 +21,6 @@ using System.Runtime.Remoting.Contexts;
 using System.Security;
 using System.Security.Principal;
 
-
 namespace RemotingSamples
 {
 
@@ -35,7 +34,6 @@ namespace RemotingSamples
          TcpChannel myChannel = new TcpChannel ();
          ChannelServices.RegisterChannel(myChannel);
          RemotingConfiguration.RegisterActivatedClientType(typeof(HelloService),"Tcp://localhost:8082");
-
 
          GenericIdentity myIdentity = new GenericIdentity("Bob");
          GenericPrincipal myPrincipal = new GenericPrincipal(myIdentity,new string[] {"Level1"});

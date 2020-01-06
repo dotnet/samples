@@ -28,7 +28,6 @@ class BasicDataEntryForm : System.Windows.Forms.Form
         base.Dispose(disposing);
     }
 
-
     public override string ToString()
     {
         return "Basic Data Entry Form";
@@ -43,8 +42,6 @@ class BasicDataEntryForm : System.Windows.Forms.Form
     {
         this.Close();
     }
-
-
 
     private void InitializeComponent()
     {

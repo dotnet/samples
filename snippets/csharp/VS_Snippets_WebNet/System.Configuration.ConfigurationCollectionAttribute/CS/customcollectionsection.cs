@@ -3,7 +3,6 @@
 using System;
 using System.Configuration;
 
-
 //<Snippet2>
 // Define a custom section that contains a custom
 // UrlsCollection collection of custom UrlConfigElement elements.

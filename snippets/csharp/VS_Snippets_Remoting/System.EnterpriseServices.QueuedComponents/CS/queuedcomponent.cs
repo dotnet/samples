@@ -4,8 +4,6 @@ using System.EnterpriseServices;
 using System.Runtime.InteropServices;
 using System.Reflection;
 
-  
-
 [assembly: ApplicationName("Queued Component")]
 [assembly: ApplicationID("AC6F4BE6-66E5-4a94-8162-A7F850150F9F")]
 [assembly: ApplicationActivation(ActivationOption.Server)]

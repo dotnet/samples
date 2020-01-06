@@ -2,7 +2,6 @@
   *File name: WebBaseEvent.cs
   *Purpose: Implements a custom WebBaseEvent type
   **/
-  
 // <Snippet1>
 
 using System;
@@ -20,7 +19,6 @@ namespace SamplesAspNet
 
         // Store firing record info.
         private static string firingRecordInfo;
-
 
         // <Snippet22>
         // Implements the IWebEventCustomEvaluator.CanFire 
@@ -59,7 +57,6 @@ namespace SamplesAspNet
         }
         //</Snippet22>
 
-
         // <Snippet2>
         // Invoked in case of events identified only by 
         // their event code.
@@ -73,7 +70,6 @@ namespace SamplesAspNet
             EventTime.ToString());
         }
         // </Snippet2>
-
 
         // <Snippet3>
         // Invoked in case of events identified by their 
@@ -147,8 +143,6 @@ namespace SamplesAspNet
             return eventSequence;
         }
         // </Snippet8>
-
-
 
         // <Snippet9>
         // Gets the event source.

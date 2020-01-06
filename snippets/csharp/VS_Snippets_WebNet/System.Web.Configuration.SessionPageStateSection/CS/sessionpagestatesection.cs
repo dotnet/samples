@@ -38,7 +38,6 @@ namespace Microsoft.Samples.AspNet.Configuration
 
             Console.Write(msg);
 
-
             if (!sessionPageState.IsReadOnly())
             {
                 // Double current history size.

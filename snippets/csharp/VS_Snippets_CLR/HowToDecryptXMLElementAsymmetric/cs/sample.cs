@@ -63,9 +63,7 @@ class Program
 			rsaKey.Clear();
 		}
 
-
 		Console.ReadLine();
-
 
 	}
 

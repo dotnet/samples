@@ -104,7 +104,6 @@ namespace CS_lazy
     {
         public DataInitializedFromDb(SqlDataReader reader) { }
         public int Count { get; private set; }
-        
 
     }
     class MyClass3
@@ -133,9 +132,7 @@ namespace CS_lazy
     }
     class LazyProgram
     {
-       
 
-        
         static void Main(string[] args)
         {
            // LazyAndThreadLocal();
@@ -249,10 +246,6 @@ namespace CS_lazy
           
     }
 
-    
-    
-
-    
 }
 
 namespace HowToSnippets

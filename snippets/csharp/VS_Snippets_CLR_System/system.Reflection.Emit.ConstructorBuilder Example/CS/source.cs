@@ -35,7 +35,6 @@ class TestCtorBuilder {
 	   FieldBuilder zField = pointTypeBld.DefineField("z", typeof(int),
                                                           FieldAttributes.Public);
 
-
            Type objType = Type.GetType("System.Object"); 
            ConstructorInfo objCtor = objType.GetConstructor(new Type[0]);
 
@@ -152,7 +151,6 @@ class TestCtorBuilder {
 
 	   aPoint = myDTctor.Invoke(aPargs);
            Console.WriteLine("aPoint is type {0}.", aPoint.GetType());
-	   	   
 
 	   // Finally, let's reflect on the instance of our new type - aPoint - and
 	   // make sure everything proceeded according to plan.
@@ -175,8 +173,6 @@ class TestCtorBuilder {
 							null,
 							aPoint,
 							new object[0]));
-
-	    
 
 	   // +++ OUTPUT +++
 	   // Some information about my new Type 'Point':

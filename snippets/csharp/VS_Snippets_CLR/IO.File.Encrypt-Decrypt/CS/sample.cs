@@ -33,7 +33,6 @@ namespace FileSystemExample
             Console.ReadLine();
         }
 
-
         // Encrypt a file.
         public static void AddEncryption(string FileName)
         {

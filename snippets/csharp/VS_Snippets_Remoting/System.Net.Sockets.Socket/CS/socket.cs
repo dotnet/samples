@@ -5,8 +5,6 @@
   * the content of its home page. If no server name is passed as argument to this 
   * program, it sends the request to the current machine.
   * */
-  
-  
  //<Snippet1>
 using System;
 using System.Text;

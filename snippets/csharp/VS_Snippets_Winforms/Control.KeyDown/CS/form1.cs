@@ -82,7 +82,6 @@ namespace ControlKeyDownEx
             Application.Run(new Form1());
         }
 
-
         //<Snippet1>
         // Boolean flag used to determine when a character other than a number is entered.
         private bool nonNumberEntered = false;

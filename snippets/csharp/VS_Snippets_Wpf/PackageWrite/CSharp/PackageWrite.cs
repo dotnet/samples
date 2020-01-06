@@ -8,12 +8,10 @@
 //   containing content, resource, and relationship parts.
 //-----------------------------------------------------------------------------
 
-
 using System;
 using System.IO;
 using System.IO.Packaging;
 using System.Windows;
-
 
 namespace SDKSample
 {
@@ -31,7 +29,6 @@ namespace SDKSample
         private const string ResourceRelationshipType =
             @"http://schemas.microsoft.com/opc/2006/sample/required-resource";
 
-
         //  ------------------------------ Main -------------------------------
         public static void Main()
         {
@@ -43,7 +40,6 @@ namespace SDKSample
                 packagePath + "' zip file.", "End of Program",
                 MessageBoxButton.OK, MessageBoxImage.Information);
         }// end:main()
-
 
         //<SnippetPackageWriteCreatePackage>
         //  -------------------------- CreatePackage --------------------------
@@ -121,7 +117,6 @@ namespace SDKSample
             //</SnippetPackageWriteUsingPackage>
 
         }// end:CreatePackage()
-
 
         //  --------------------------- CopyStream ---------------------------
         /// <summary>

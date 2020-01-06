@@ -38,7 +38,6 @@ public class Example
 //       Ford     Model T    1909       2           4
 // </Snippet2>
 
-
 [Serializable()] public class Automobile
 {
    private string carMake;

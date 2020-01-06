@@ -21,8 +21,6 @@ namespace SnippetsPart1
         static void Main() { }
     }
 
-
-
     [ServiceContract]
     public interface IHelloContract
     {
@@ -53,8 +51,6 @@ namespace SnippetsPart1
     }
     //</snippet1>
 
-
-    
     public class RunService
     {
         private void Run()

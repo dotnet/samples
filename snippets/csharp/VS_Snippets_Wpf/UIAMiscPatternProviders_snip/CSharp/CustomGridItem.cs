@@ -4,7 +4,6 @@ using System.Text;
 using System.Windows.Automation;
 using System.Windows.Automation.Provider;
 
-
 namespace ElementProvider
 {
     class CustomGridItem : IRawElementProviderFragment, IGridItemProvider
@@ -24,7 +23,6 @@ namespace ElementProvider
             ItemRow = row;
             ItemContainingGrid = ownerGrid;
         }
-
 
         #region IGridItemProvider Members
 
@@ -47,7 +45,6 @@ namespace ElementProvider
             }
         }
 // </Snippet105>
-
 
         /// <summary>
         /// Gets the number of columns spanned by the item.
@@ -98,7 +95,6 @@ namespace ElementProvider
             }
             return null;
         }
-
 
         object IRawElementProviderSimple.GetPropertyValue(int propertyId)
         {

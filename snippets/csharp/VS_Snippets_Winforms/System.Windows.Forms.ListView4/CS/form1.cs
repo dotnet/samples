@@ -5,8 +5,6 @@
 // called ListView1, on a form, with the View property set to Details.  
 // The form also requires a button called button1.
 
- 
-
 using System.Windows.Forms;
 
 public class Form1:
@@ -90,7 +88,6 @@ public class Form1:
 		ListView1.Items[0].Selected = true;
 	}
         //</snippet2>
-
 
 	private void Button1_Click(System.Object sender, System.EventArgs e)
 	{

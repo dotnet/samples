@@ -12,13 +12,10 @@ namespace Samples.AspNet
     public class CustomConfiguration
     {
 
-   
-
         public CustomConfiguration()
         {
             
         }
-
 
         // Define a custom section.
         public class CustomSection : ConfigurationSection
@@ -30,7 +27,6 @@ namespace Samples.AspNet
 
             const string configTimeout = "aTimeout";
 
-            
             [ConfigurationProperty(CustomSection.configString,
 
                 DefaultValue = "default")]
@@ -43,8 +39,6 @@ namespace Samples.AspNet
                 set { base[CustomSection.configString] = value; }
 
             }
-
-
 
             [ConfigurationProperty(CustomSection.configInteger,
 
@@ -59,8 +53,6 @@ namespace Samples.AspNet
 
             }
 
-
-
             [ConfigurationProperty(CustomSection.configTimeout)]
 
             public TimeSpan aTimeout
@@ -73,7 +65,6 @@ namespace Samples.AspNet
             }
 
         }
-
 
         // Create a custom section and save it in the
         // application configuration file.
@@ -103,7 +94,6 @@ namespace Samples.AspNet
 
             section.aString = "Hello World";
 
-
             // Save the changes.
 
             config.Save();
@@ -115,14 +105,11 @@ namespace Samples.AspNet
         public string GetCustomSection()
         {
 
-
             Configuration config =
                 WebConfigurationManager.OpenWebConfiguration("/ConfigSite");
 
-            
             CustomSection section =
                 config.Sections["CustomSection"] as CustomSection;
-
 
             string currentSection = string.Empty;
 

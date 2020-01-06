@@ -11,7 +11,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-
 namespace ThemeReourcesControlLibrary
 {
     /// <summary>
@@ -46,7 +45,6 @@ namespace ThemeReourcesControlLibrary
         }
 
     }
-
 
     //This is a dummy class with no ControlTemplate.  It exists just so the
     //ComponentResourceKey snippet can reference NumericUpDown

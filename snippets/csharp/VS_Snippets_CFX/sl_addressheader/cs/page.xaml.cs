@@ -22,7 +22,6 @@ using System.IO;
 using System.Json;
 using System.Text;
 
-
 namespace SL_AddressHeader
 {
     public partial class Page : UserControl
@@ -98,8 +97,6 @@ namespace SL_AddressHeader
             AddressHeaderCollection addressHeaderCollection1 = endpointAddressWithHeaders.Headers;
             string txtHeaders = addressHeaderCollection1.Contains(addressHeader1).ToString();
             txtOutput3.Text = txtHeaders;
-
-
 
             txtOutput4.Text = value.ToString();
             //txtOutput5.Text = txtOutput5;

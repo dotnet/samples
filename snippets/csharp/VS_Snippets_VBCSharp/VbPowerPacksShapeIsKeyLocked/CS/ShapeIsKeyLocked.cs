@@ -8,7 +8,6 @@ using System.Text;
 using System.Windows.Forms;
 using Microsoft.VisualBasic.PowerPacks;
 
-
 namespace VbPowerPacksShapeIsKeyLockedCS
 {
     public partial class ShapeIsKeyLocked : Form

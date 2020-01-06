@@ -32,7 +32,6 @@ internal class Win32
     public static extern int SHAutoCompleteHRESULT(IntPtr hwndEdit, SHAutoCompleteFlags dwFlags);
 }
 
-
 static class Program
 {
     static void Main()
@@ -69,7 +68,6 @@ static class Program
         int HRESULT = Win32.SHAutoCompleteHRESULT(iPtr, Win32.SHAutoCompleteFlags.SHACF_DEFAULT);
 
         Console.WriteLine("HRESULT handled: " + HRESULT.ToString());
-
 
     }
 }

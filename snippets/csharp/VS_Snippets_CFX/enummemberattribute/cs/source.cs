@@ -85,8 +85,6 @@ namespace Windows.Communication.Foundation.Samples
 
         }
 
-
-
         private void Serialize(string path)
         {
             Console.WriteLine("Serializing...");

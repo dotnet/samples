@@ -27,7 +27,6 @@ public class Circle
 }
 // </Snippet1>
 
-
 class Program
 {
    static void Main()

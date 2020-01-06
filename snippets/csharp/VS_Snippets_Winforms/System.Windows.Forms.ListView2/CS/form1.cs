@@ -4,7 +4,6 @@
 // members, along with instances of the ListViewCheckedItemCollection, 
 // and ItemCheckEventArgs classes
 
-
 using System.Windows.Forms;
 using System.Drawing;
 using System;
@@ -23,7 +22,6 @@ public class Form1:
 		this.ListView1.ItemCheck += 
 			new ItemCheckEventHandler(ListView1_ItemCheck2);
 
-		
 	}
 
 	internal System.Windows.Forms.ListView ListView1;
@@ -145,7 +143,6 @@ public class Form1:
 		TextBox1.Text = price.ToString();
 	}
 	//</snippet2>
-
 
 	//<snippet3>
 	// Handles the ItemChecked event.  The method loops through all the 

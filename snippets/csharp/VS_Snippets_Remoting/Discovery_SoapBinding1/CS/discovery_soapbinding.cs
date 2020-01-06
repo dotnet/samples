@@ -9,8 +9,7 @@
  * of type 'SoapBinding' is created. The properties are set.
  * Finally the created 'SoapBinding' is added to 'DiscoveryClientProtocol'.
 */
-  
-  
+
 // <Snippet1>
 
 using System;

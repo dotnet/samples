@@ -47,7 +47,6 @@ class Program
         if (Doc == null)
             throw new ArgumentNullException("Doc");
 
-        
         // Create a new EncryptedXml object.
         // <snippet3>
         EncryptedXml exml = new EncryptedXml(Doc);

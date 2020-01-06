@@ -12,7 +12,6 @@ namespace SAM
     public class Global : System.Web.HttpApplication
     {
 
-
         //<Snippet1>
         //<Snippet7>
         void Application_Start(object sender, EventArgs e)

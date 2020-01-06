@@ -31,7 +31,6 @@ class Example
             stack.PushRange(array);
         }, i * numItems, CancellationToken.None, TaskCreationOptions.DenyChildAttach, TaskScheduler.Default)).ToArray());
 
-
         int numTotalElements = 4 * numItems;
         int[] resultBuffer = new int[numTotalElements];
         await Task.WhenAll(Enumerable.Range(0, numParallelTasks).Select(i => Task.Factory.StartNew(obj =>

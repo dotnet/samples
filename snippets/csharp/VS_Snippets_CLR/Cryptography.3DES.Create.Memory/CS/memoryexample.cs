@@ -77,7 +77,6 @@ namespace AesManaged_Examples
                 }
             }
 
-
             // Return the encrypted bytes from the memory stream.
             return retVal;
         }
@@ -121,7 +120,6 @@ namespace AesManaged_Examples
                     }
                 }
             }
-
 
             return plaintext;
 

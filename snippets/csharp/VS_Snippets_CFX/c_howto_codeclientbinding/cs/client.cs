@@ -113,7 +113,6 @@ namespace Microsoft.ServiceModel.Samples
             //Specify the address to be used for the client.
             EndpointAddress address = 
                new EndpointAddress("http://localhost/servicemodelsamples/service.svc");
-            
 
             // Create a client that is configured with this address and binding.
             CalculatorClient client = new CalculatorClient(binding, address);

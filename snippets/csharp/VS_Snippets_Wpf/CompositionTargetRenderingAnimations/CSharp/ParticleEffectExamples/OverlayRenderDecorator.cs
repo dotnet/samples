@@ -49,8 +49,6 @@
         }
     }
 
-
-
     /// <summary>
     /// OverlayRenderDecorator provides a simple overlay graphics mechanism similar 
     /// to OnRender called OnOverlayRender
@@ -65,7 +63,6 @@
         //this will be a visual child, but not a logical child.  as the last child, it can 'overlay' graphics
         // by calling back to us with OnOverlayRender
         private OverlayRenderDecoratorOverlayVisual _overlayVisual;
-
 
         //-------------------------------------------------------------------
         //
@@ -90,7 +87,6 @@
         }
 
         #endregion
-
 
         //-------------------------------------------------------------------
         //
@@ -184,7 +180,6 @@
                 return (IEnumerator)l.GetEnumerator();
             }
         }
-
 
         #endregion
 
@@ -281,7 +276,6 @@
         }
 
         #endregion
-
 
     }
 

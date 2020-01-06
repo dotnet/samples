@@ -67,8 +67,6 @@ namespace Snippets
         //</snippet0>
     }
 
-
-
     [ServiceContract]
     interface ICalculator
     {

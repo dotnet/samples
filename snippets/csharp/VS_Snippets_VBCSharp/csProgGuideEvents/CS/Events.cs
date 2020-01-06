@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-
 //-----------------------------------------------------------------------------
 //<Snippet1>
 
@@ -182,9 +181,6 @@ namespace BaseClassEvents
 
 //--------------------------------------------------------------------------------------
 
-
-
-
 //<Snippet2>
 namespace DotNetEvents
 {
@@ -282,7 +278,6 @@ namespace DotNetEvents
 }
 //</Snippet2>
 
-
 namespace Winforms
 {
     using System.Windows.Forms;
@@ -336,13 +331,8 @@ namespace ExplicitEvents
         }
     }
 
-
     //</Snippet20>
 }
-
-
-
-
 
 namespace WrapEvent
 {
@@ -445,8 +435,6 @@ namespace WrapEvent
     }
     //</Snippet7>
 }
-
-
 
 //-----------------------------------------------------------------------------
 namespace WrapHash
@@ -563,8 +551,6 @@ namespace WrapHash
     //</Snippet9>
 }
 
-
-
 //-----------------------------------------------------------------------------
 //<Snippet10>
 namespace WrapTwoInterfaceEvents
@@ -583,7 +569,6 @@ namespace WrapTwoInterfaceEvents
         // the shape.
         event EventHandler OnDraw;
     }
-
 
     // Base class event publisher inherits two
     // interfaces, each with an OnDraw event
@@ -637,7 +622,6 @@ namespace WrapTwoInterfaceEvents
                 }
             }
 
-
         }
 
         // For the sake of simplicity this one method
@@ -681,7 +665,6 @@ namespace WrapTwoInterfaceEvents
             Console.WriteLine("Sub2 receives the IShape event.");
         }
     }
-
 
     public class Program
     {

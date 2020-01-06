@@ -6,7 +6,6 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 
-
 namespace UpdateBindings
 {
     //<snippet1>
@@ -23,7 +22,6 @@ namespace UpdateBindings
         // This is the DataGridView control that displays the contents 
         // of the list.
         private CustomerControl customerControl1 = new CustomerControl();
-
 
         // This is the BindingSource used to bind the list to the control.
         private BindingSource customersBindingSource = new BindingSource();

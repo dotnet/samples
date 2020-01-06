@@ -5,7 +5,6 @@
 // are combinations of other colors on systems with 256 or less colors. 
 // The dialog also shows the handling of a HelpRequest event.
 
-
 using System.Windows.Forms;
 using System.Drawing;
 
@@ -72,8 +71,7 @@ public class Form1:
 		this.ColorDialog1.HelpRequest 
 			+= new System.EventHandler(ColorDialog1_HelpRequest);
 	}
-	
-	
+
 	// This method opens the dialog and checks the DialogResult value. 
 	// If the result is OK, the text box's background color will be changed 
 	// to the user-selected color.

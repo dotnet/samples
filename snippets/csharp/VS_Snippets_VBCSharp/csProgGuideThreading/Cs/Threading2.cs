@@ -25,7 +25,6 @@
 //    }
 //}
 
-
 //-----------------------------------------------------------------------------
 namespace WrapSynchronization
 {
@@ -63,7 +62,6 @@ namespace WrapSynchronization
             }
             //</Snippet14>
 
-
             //<Snippet15>
             System.Object obj = (System.Object)x;
             System.Threading.Monitor.Enter(obj);
@@ -78,10 +76,8 @@ namespace WrapSynchronization
             //</Snippet15>
         }
 
-
     }
 }
-
 
 //-----------------------------------------------------------------------------
 namespace WrapSynchronization2

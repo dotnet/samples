@@ -12,12 +12,10 @@ public partial class Address
 }
 //</Snippet2>
 
-
 //<Snippet3>
 [DisplayColumn("LastName")]
 public partial class Customer
 {
-
 
 }
 //</Snippet3>

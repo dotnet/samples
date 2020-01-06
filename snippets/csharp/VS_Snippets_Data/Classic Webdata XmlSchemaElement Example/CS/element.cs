@@ -28,13 +28,11 @@ class XMLSchemaExamples
         elementRedDog.Name = "redDog";
         elementRedDog.SubstitutionGroup = new XmlQualifiedName("dog");
 
-
         // <xs:element name="brownDog" substitutionGroup ="dog" />
         XmlSchemaElement elementBrownDog = new XmlSchemaElement();
         schema.Items.Add(elementBrownDog);
         elementBrownDog.Name = "brownDog";
         elementBrownDog.SubstitutionGroup = new XmlQualifiedName("dog");
-
 
         // <xs:element name="pets">
         XmlSchemaElement elementPets = new XmlSchemaElement();

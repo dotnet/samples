@@ -124,8 +124,6 @@ namespace System.Windows.Forms.ToolStripExamplesCS
 			
 		}
 
-		
-
 		// The following example demonstrates setting the drop-down property
 		// for a ToolStripDropDownItem.
 		//<snippet5>
@@ -135,7 +133,6 @@ namespace System.Windows.Forms.ToolStripExamplesCS
 		internal ToolStripButton buttonRed;
 		internal ToolStripButton buttonBlue;
 		internal ToolStripButton buttonYellow;
-
 
 		private void InitializeDropDownButton()
 		{
@@ -174,7 +171,6 @@ namespace System.Windows.Forms.ToolStripExamplesCS
 				{ buttonRed, buttonBlue, buttonYellow });
 			toolStrip1.Items.Add(dropDownButton1);
 		}
-
 
 		// Handle the buttons' click event by setting the foreground color of the
 		// form to the foreground color of the button that is clicked.
@@ -264,7 +260,6 @@ namespace System.Windows.Forms.ToolStripExamplesCS
 				movingToolStrip.Items.Add(changeDirectionButton);
 		}
 
-
 		private void changeDirectionButton_Click(object sender, EventArgs e)
 		{
 
@@ -283,9 +278,6 @@ namespace System.Windows.Forms.ToolStripExamplesCS
 
 		}
 		//</snippet4>
-
-
-		
 
 		// This demonstrates ToolStripStatusLabel.BorderSides 
 		// and ToolStripStatusLabel.BorderStyle.
@@ -328,7 +320,6 @@ namespace System.Windows.Forms.ToolStripExamplesCS
 			//</snippet7>
 		}
 
-
 		private void SetCustomerRenderInManagerMode()
 		{
 			//<snippet8>
@@ -338,7 +329,6 @@ namespace System.Windows.Forms.ToolStripExamplesCS
 		}
 
 	}
-
 
 //<snippet1>
 // Extend the ToolStripRenderer class.

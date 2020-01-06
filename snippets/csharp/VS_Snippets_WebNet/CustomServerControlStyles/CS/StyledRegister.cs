@@ -277,7 +277,6 @@ namespace Samples.AspNet.CS.Controls
             EnsureChildControls();
         }
 
-
         protected override void CreateChildControls()
         {
             Controls.Clear();

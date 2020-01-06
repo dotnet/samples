@@ -12,7 +12,6 @@ using System.Web.Services.Description;
 using System.Xml;
 using System.IO;
 
-
 class MyService
 {
    static void Main()

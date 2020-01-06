@@ -8,7 +8,6 @@
 // System.Windows.Forms.TreeNode.FullPath
 // System.Windows.Forms.TreeView.PathSeparator
 
-
 /*
    The following example demonstrates the  properties 'FirstNode',
    'ForeColor', 'IsEditing','IsExpanded' and 'IsSelected', the methods
@@ -27,7 +26,6 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 using System.Data;
-
 
 public class MyTreeNode_FirstNode : Form
 {
@@ -142,7 +140,6 @@ public class MyTreeNode_FirstNode : Form
 		this.myContextMenu.MenuItems.AddRange(new MenuItem[] {
 																				  this.myMenuItem});
 
-
 		this.myGroupBox.Controls.AddRange(new Control[] {
 																			this.myButton,
 																			this.myCheckBox});
@@ -204,7 +201,6 @@ private void myButton_Click(object sender, System.EventArgs e)
      + "% of the total tree nodes in the tree view control.");
 }
 // </Snippet2>
-
 
 	// Save the tree node under the mouse pointer.
 	private void TreeView1_MouseDown(object sender,MouseEventArgs e)

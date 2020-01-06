@@ -5,7 +5,6 @@ public class Base<T, U> { }
 public class Derived<V> : Base<int, V> { }
 // </Snippet1>
 
-
 // <Snippet2>
 public class Outermost<T>
 {

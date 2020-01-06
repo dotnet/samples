@@ -3,7 +3,6 @@
   * Exercise the IPAddress IPv6None, IPv6Any, and IPv6Loopback properties.
   * Usage: cs_nal.exe.
   **/
-
 using System;
 using System.Net;
 using System.Net.Sockets;

@@ -109,8 +109,6 @@ namespace WF_Snippets
         { }
         private void OnRejected(object sender, ExternalDataEventArgs e)
         { }
-        
-        
 
         // <snippet305>
         [ExternalDataExchange]
@@ -125,13 +123,10 @@ namespace WF_Snippets
         }
         // </snippet305>
 
-        
-
         public class HelperClass {
             public int SomeProperty;    
         }
 
-       
        // <snippet307>
        [RuleRead("helper/SomeProperty", RuleAttributeTarget.Parameter)]
        public void DoSomething(HelperClass helper)
@@ -144,9 +139,7 @@ namespace WF_Snippets
        //Placeholder for the API_REFERENCE snippet I need to write
        //This one appears in  System.Workflow.Activities.Rules.RuleSet 
        int Boglot302 = 5; 
-       
 
-               
         //The HelperClass class is declared just above snippet 307     
         // <snippet309>
         [RuleWrite("helper/SomeProperty", RuleAttributeTarget.Parameter)]
@@ -155,9 +148,7 @@ namespace WF_Snippets
             helper.SomeProperty = 3;
         }
         // </snippet309>
-        
-        
-              
+
         [System.Diagnostics.DebuggerNonUserCode()]
         private void SecondInitializeComponent()
         {
@@ -210,6 +201,5 @@ namespace WF_Snippets
         }
     }
     // </snippet310>
-
 
 }

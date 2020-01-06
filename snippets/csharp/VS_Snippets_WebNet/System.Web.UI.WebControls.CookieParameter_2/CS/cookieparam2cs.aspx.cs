@@ -20,7 +20,6 @@ public partial class cookieparam2cs_aspx : System.Web.UI.Page
             Response.Cookies.Add(new HttpCookie("loginname", "ndavolio"));
             Response.Cookies.Add(new HttpCookie("lastvisit", DateTime.Now.ToString()));
 
-
             // You can add a CookieParameter to the SqlDataSource control's
             // SelectParameters collection programmatically.
             CookieParameter cookieParam = new CookieParameter();

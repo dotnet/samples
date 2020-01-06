@@ -4,14 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Data.Linq.Mapping;
 
-
 namespace cs_inherit
 {
     class Program
     {
         static void Main(string[] args)
         {
-
 
         }
     }
@@ -44,7 +42,6 @@ namespace cs_inherit
     }
     // </Snippet1>
 
-
     // <Snippet2>
     // Unmapped and not queryable.
     class A {  }
@@ -65,6 +62,5 @@ namespace cs_inherit
     // Unmapped and not queryable.
     class E: D {  }
     // </Snippet2>
-
 
 }

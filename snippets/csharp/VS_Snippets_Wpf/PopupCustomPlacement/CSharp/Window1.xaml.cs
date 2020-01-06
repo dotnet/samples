@@ -7,7 +7,6 @@ using System.Windows.Documents;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
-
 namespace SDKSample
 {
   /// <summary>
@@ -25,7 +24,6 @@ namespace SDKSample
                 new CustomPopupPlacementCallback(placePopup);
             //</SnippetDelegateDefinition> 
         }
-
 
         private void onClick(object sender, RoutedEventArgs args)
         {
@@ -49,7 +47,6 @@ namespace SDKSample
             return ttplaces;
         }
         //</SnippetDelegateInstance>
-
 
     }
   

@@ -9,7 +9,6 @@ public class Form1: Form
     protected DataSet DataSet1;
     protected DataGrid dataGrid1;
 
-
     // <Snippet1>
     // Put the next line into the Declarations section.
     private System.Data.DataSet dataSet;

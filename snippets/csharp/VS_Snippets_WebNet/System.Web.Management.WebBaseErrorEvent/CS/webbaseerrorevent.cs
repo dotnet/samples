@@ -3,7 +3,6 @@
   *Purpose: Implements a custom SampleWebBaseErrorEvent type
   *by inheriting from the System.Web.Management.WebBaseErrorEvent class.
   **/
-
 // <Snippet1>
 
 using System;
@@ -32,7 +31,6 @@ namespace SamplesAspNet
         }
         // </Snippet2>
 
-
         // <Snippet3>
         // Invoked in case of events identified by their event code and 
         // related event detailed code.
@@ -48,7 +46,6 @@ namespace SamplesAspNet
 
         // </Snippet3>
 
-
         // <Snippet4>
         // Raises the SampleWebBaseErrorEvent.
         public override void Raise()
@@ -63,7 +60,6 @@ namespace SamplesAspNet
         }
         // </Snippet4>
 
-
         // <Snippet5>
         // Obtains the current thread information.
         public Exception GetErrorException()
@@ -71,7 +67,6 @@ namespace SamplesAspNet
             return (ErrorException);
         }
         // </Snippet5>
-
 
         // <Snippet6>
         //Formats Web request event information.

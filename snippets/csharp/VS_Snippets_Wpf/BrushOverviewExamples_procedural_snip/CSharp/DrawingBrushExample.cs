@@ -20,7 +20,6 @@ namespace Microsoft.Samples.BrushExamples
             this.Content = mainPanel;
         
         }
-                 
 
         // <SnippetGraphicsMMDrawingBrushAsButtonBackgroundExample>
         private void canvasBackgroundExample(Panel mainPanel)
@@ -50,8 +49,7 @@ namespace Microsoft.Samples.BrushExamples
             // </SnippetGraphicsMMDrawingBrushAsButtonBackgroundExample1>
             
             mainPanel.Children.Add(myButton);
-    
-    
+
         }
         // </SnippetGraphicsMMDrawingBrushAsButtonBackgroundExample>
     

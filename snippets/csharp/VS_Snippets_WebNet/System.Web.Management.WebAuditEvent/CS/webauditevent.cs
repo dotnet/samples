@@ -3,7 +3,6 @@
   *Purpose: Implements a custom WebAuditEvent type
   *by inheriting from the System.Web.Management.WebAuditEvent class.
   **/
-  
 // <Snippet1>
 
 using System;
@@ -29,7 +28,6 @@ namespace SamplesAspNet
               DateTime.Now.TimeOfDay.ToString());
         }
         // </Snippet2>
-
 
         // <Snippet3>
         // Invoked in case of events identified by their event code.and 
@@ -59,7 +57,6 @@ namespace SamplesAspNet
         }
         // </Snippet4>
 
-
         // <Snippet5>
         // Obtains the current thread information.
         public WebRequestInformation GetRequestInformation()
@@ -69,7 +66,6 @@ namespace SamplesAspNet
             return RequestInformation;
         }
         // </Snippet5>
-
 
         // <Snippet6>
         //Formats Web request event information.

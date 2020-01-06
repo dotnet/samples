@@ -93,7 +93,6 @@ public class Form1:
 
 	#endregion
 
-	
 	public static void Main()
 	{
 		Application.Run(new Form1());

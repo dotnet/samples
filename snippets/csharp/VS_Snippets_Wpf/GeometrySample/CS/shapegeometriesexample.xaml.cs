@@ -10,7 +10,6 @@ using System.Windows.Data;
 namespace Microsoft.Samples.Graphics.Geometries
 {
 
-
     public partial class ShapeGeometriesExample : Page
     {
        

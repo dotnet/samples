@@ -12,7 +12,6 @@ using System.Reflection;
 using System.Globalization;
 using System.Text;
 
-
 namespace Reflection
 {
     public sealed partial class MainPage : Page

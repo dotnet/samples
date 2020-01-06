@@ -5,7 +5,6 @@ using System.Drawing;
 using System.Drawing.Printing;
 using System.Windows.Forms;
 
-
 public partial class Form1 : System.Windows.Forms.Form
 {
     private System.ComponentModel.Container components;
@@ -76,7 +75,6 @@ public partial class Form1 : System.Windows.Forms.Form
         else
             ev.HasMorePages = false;
     }
-
 
     // The Windows Forms Designer requires the following procedure.
     private void InitializeComponent()

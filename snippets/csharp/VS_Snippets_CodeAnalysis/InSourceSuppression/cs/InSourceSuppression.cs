@@ -9,7 +9,6 @@ namespace InSourceSuppression
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "args")]
         static void Main(string[] args) { }
 
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage",
         "CA1806:DoNotIgnoreMethodResults", MessageId = "System.Guid")]
         public static bool IsValidGuid(string guid)

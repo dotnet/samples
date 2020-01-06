@@ -102,7 +102,6 @@
             _timeTracker = null;
         }
 
-
         private void OnMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             if (_timeTracker != null)

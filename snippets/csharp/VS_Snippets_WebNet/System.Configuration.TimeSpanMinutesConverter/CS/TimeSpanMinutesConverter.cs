@@ -6,7 +6,6 @@ using System.Configuration;
 using System.Globalization;
 using System.ComponentModel;
 
-
 public sealed class CustomTimeSpanMinutesConverter :
     ConfigurationConverterBase
 {

@@ -43,7 +43,6 @@ namespace Samples.AspNet.SessionState
       pIsReadonly    = isReadonly;
     }
 
-
     //<Snippet2>
     public int Timeout
     {
@@ -61,14 +60,12 @@ namespace Samples.AspNet.SessionState
     }
     //</Snippet2>
 
-
     //<Snippet3>
     public string SessionID
     {
       get { return pId; }
     }
     //</Snippet3>
-
 
     //<Snippet4>
     public bool IsNewSession
@@ -77,14 +74,12 @@ namespace Samples.AspNet.SessionState
     }
     //</Snippet4>
 
-
     //<Snippet5>
     public SessionStateMode Mode
     {
       get { return pMode; }
     }
     //</Snippet5>
-
 
     //<Snippet6>
     public bool IsCookieless
@@ -93,14 +88,12 @@ namespace Samples.AspNet.SessionState
     }
     //</Snippet6>
 
-
     //<Snippet7>
     public HttpCookieMode CookieMode
     {
       get { return pCookieMode; }
     }
     //</Snippet7>
-
 
     //<Snippet8>
     //
@@ -130,7 +123,6 @@ namespace Samples.AspNet.SessionState
     }
     //</Snippet9>
 
-
     //<Snippet10>
     //
     // Session.CodePage exists only to support legacy ASP compatibility. ASP.NET developers should use
@@ -153,14 +145,12 @@ namespace Samples.AspNet.SessionState
     }
     //</Snippet10>
 
-
     //<Snippet12>
     public HttpStaticObjectsCollection StaticObjects
     {
       get { return pStaticObjects; }
     }
     //</Snippet12>
-
 
     //<Snippet13>
     public object this[string name]
@@ -170,7 +160,6 @@ namespace Samples.AspNet.SessionState
     }
     //</Snippet13>
 
-
     //<Snippet14>
     public object this[int index]
     {
@@ -178,7 +167,6 @@ namespace Samples.AspNet.SessionState
       set { pSessionItems[index] = value; }
     }
     //</Snippet14>
-        
 
     //<Snippet15>
     public void Add(string name, object value)
@@ -187,7 +175,6 @@ namespace Samples.AspNet.SessionState
     }
     //</Snippet15>
 
-
     //<Snippet16>
     public void Remove(string name)
     {
@@ -195,14 +182,12 @@ namespace Samples.AspNet.SessionState
     }
     //</Snippet16>
 
-
     //<Snippet17>
     public void RemoveAt(int index)
     {
       pSessionItems.RemoveAt(index);
     }
     //</Snippet17>
-
 
     //<Snippet18>
     public void Clear()
@@ -216,16 +201,12 @@ namespace Samples.AspNet.SessionState
     }
     //</Snippet18>
 
-
-
     //<Snippet19>
     public int Count
     {
       get { return pSessionItems.Count; }
     }
     //</Snippet19>
-
-
 
     //<Snippet20>
     public NameObjectCollectionBase.KeysCollection Keys
@@ -234,14 +215,12 @@ namespace Samples.AspNet.SessionState
     }
     //</Snippet20>
 
-
     //<Snippet21>
     public IEnumerator GetEnumerator()
     {
       return pSessionItems.GetEnumerator();
     }
     //</Snippet21>
-
 
     //<Snippet22>
     public void CopyTo(Array items, int index)
@@ -251,7 +230,6 @@ namespace Samples.AspNet.SessionState
     }
     //</Snippet22>
 
-
     //<Snippet23>
     public object SyncRoot
     {
@@ -259,14 +237,12 @@ namespace Samples.AspNet.SessionState
     }
     //</Snippet23>
 
-
     //<Snippet24>
     public bool IsReadOnly
     {
       get { return pIsReadonly; }
     }
     //</Snippet24>
-
 
     //<Snippet25>
     public bool IsSynchronized

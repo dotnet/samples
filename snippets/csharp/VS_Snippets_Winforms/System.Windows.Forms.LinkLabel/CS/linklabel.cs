@@ -33,7 +33,6 @@ public class Form1 : System.Windows.Forms.Form
         
         this.linkLabel1.TabIndex = 0;
         this.linkLabel1.TabStop = true;
-        
 
         // Add an event handler to do something when the links are clicked.
         this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);

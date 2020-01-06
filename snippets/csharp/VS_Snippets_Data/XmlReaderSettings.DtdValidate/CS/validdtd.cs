@@ -17,7 +17,6 @@ public class Sample {
     // Create the XmlReader object.
     XmlReader reader = XmlReader.Create("itemDTD.xml", settings);
 
-
     // Parse the file. 
     while (reader.Read());
     

@@ -5,7 +5,6 @@ using System.Windows.Data;
 using System.Windows.Media;
 using System.Windows.Input;
 
-
 namespace SDKSamples
 {
     /// <summary>

@@ -37,7 +37,6 @@ class XMLSchemaExamples
         restriction2.BaseTypeName = new XmlQualifiedName("int", "http://www.w3.org/2001/XMLSchema");
         simpleType2.Content = restriction2;
 
-
         // <xs:element name="size" type="StringOrIntType"/>
         XmlSchemaElement elementSize = new XmlSchemaElement();
         elementSize.Name = "size";

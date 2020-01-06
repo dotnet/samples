@@ -55,7 +55,6 @@ public class MyFileNotFoundException : Exception
 }
 //</snippet4>
 
-
 public class ExceptionHandling
 {
     public static void Main()

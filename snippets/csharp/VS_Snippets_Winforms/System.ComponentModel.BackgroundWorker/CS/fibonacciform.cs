@@ -216,7 +216,6 @@ namespace BackgroundWorkerExample
         }
         // </snippet10>
 
-
 		#region Windows Form Designer generated code
 		
         private void InitializeComponent()

@@ -58,7 +58,6 @@ public class SampleBuildProvider : BuildProvider
         return details.ToString();
     }
 
-
     // Define the build provider implementation of the GenerateCode method.
     public override void GenerateCode(AssemblyBuilder assemBuilder)
     {

@@ -18,7 +18,6 @@
 ///    !    StartListening
 ///    !    StopListening
 
-
 /// Bug Notes [01-26-04][Mon]
 /// AddHookChannelUri does not pick up port.
 /// Ctor() would be usable if AddHookChannelUri could be 
@@ -27,7 +26,6 @@
 /// StopListening works, StartListening does not restart
 /// listening -- client fails. These two are likely to be 
 /// used as a pair and are therefore unusable.
-
 
 //<snippet20>
 using System;

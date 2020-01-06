@@ -10,8 +10,6 @@ using System.Data;
 using System.Xml;
 using System.Configuration;
 
-
-
 namespace SDKSample
 {
     /// <summary>
@@ -29,9 +27,7 @@ namespace SDKSample
         
         public SeekAlignedToLastTickExample()
         {
-        
- 
-        
+
             this.WindowTitle = "Controlling a Storyboard";
             this.Background = Brushes.White;
 
@@ -56,8 +52,7 @@ namespace SDKSample
             myClock = myDoubleAnimation.CreateClock();
             myRectangle.ApplyAnimationClock(Rectangle.WidthProperty, myClock);
             myClock.Controller.Stop();
- 
-            
+
             //
             // Create some buttons to control the storyboard
             // and a panel to contain them.
@@ -118,8 +113,7 @@ namespace SDKSample
             rectangleWidthIndicator.Text = myRectangle.Width.ToString(); 
             aPanel.Children.Add(rectangleWidthIndicator);
             seekPanel.Children.Add(aPanel);
-            
-            
+
             // Create some controls to enable the
             // user to specify a seek position.
             
@@ -132,8 +126,7 @@ namespace SDKSample
             seekDestination.Text = "0";
             aPanel.Children.Add(seekDestination);       
             seekPanel.Children.Add(aPanel);
-            
-            
+
             Button seekButton = new Button();
             seekButton.Content = "Seek";
             seekButton.Click += new RoutedEventHandler(seekButton_Clicked);
@@ -244,9 +237,7 @@ namespace SDKSample
             currentTimeIndicator.Text = myClock.CurrentTime.ToString();
             
         }
-        
-        
-        
+
     }
 }
 // </SnippetClockControllerSeekExample>

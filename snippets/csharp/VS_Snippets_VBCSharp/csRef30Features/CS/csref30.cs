@@ -62,7 +62,6 @@ namespace csrefLINQExamples
         public List<int> ExamScores;
     }
 
-
     // <snippet1>
     class SimpleLambda
     {
@@ -119,7 +118,6 @@ namespace csrefLINQExamples
 
     // var
 
-   
 //varTest removed to csrefKeywordsTypes
 
     //<snippet4>
@@ -174,8 +172,6 @@ namespace csrefLINQExamples
 
     //#5 moved to csrefKeywordsContextual#9
 
-
-
     //auto-impl props
     //<snippet28>
     class LightweightCustomer
@@ -199,7 +195,6 @@ namespace csrefLINQExamples
 
     //Return Subsets of Element Properties
 
-   
         //<snippet31>
         class AnonymousTypes
         {
@@ -232,7 +227,6 @@ namespace csrefLINQExamples
             Zabokritski, Eugene
        */
         //</snippet31>
-
 
     class ImplicitTyping
     {   // How to use implicitly typed locals
@@ -432,7 +426,6 @@ namespace csrefLINQExamples
         }
         static List<Customer> customers = new List<Customer>();
 
-
         //<snippet43>
         static void Main()
         {
@@ -459,7 +452,6 @@ namespace csrefLINQExamples
         }
         //</snippet43>
     }
-
 
     //<snippet44>
     class ImplicitlyTypedLocals2
@@ -488,9 +480,6 @@ namespace csrefLINQExamples
      */
     //</snippet44>
 
-    
-
-   
     //<snippet65>
     class AnonymousMethodTest
     {
@@ -582,7 +571,6 @@ namespace csrefLINQExamples
 
             var myQuery = app.QueryMethod1(ref nums);
 
-
             //execute myQuery
             foreach (string s in myQuery)
             {
@@ -610,7 +598,6 @@ namespace csrefLINQExamples
     }
     //</snippet80>
 
-    
     class Container
     {
         
@@ -647,7 +634,6 @@ namespace csrefLINQExamples
 
     class CSHarp30
     {
-        
 
         //<snippet82>
         class Product2

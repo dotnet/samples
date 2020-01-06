@@ -45,8 +45,7 @@ namespace Microsoft.ServiceModel.Samples
 			base.Channel.SubmitPurchaseOrder(po);
 		}
 	}
-		
-	
+
     class Program
     {
         static void Main(string[] args)

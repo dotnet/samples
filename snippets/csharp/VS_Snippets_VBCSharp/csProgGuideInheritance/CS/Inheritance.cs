@@ -37,7 +37,6 @@ class TestPaint : System.Windows.Forms.Form
     //</Snippet35>
 }
 
-
 //<Snippet1>
 // compile with: csc -target:library abstractshape.cs
 public abstract class Shape
@@ -75,7 +74,6 @@ public abstract class Shape
     }
 }
 //</Snippet1>
-
 
 //<Snippet2>
 // compile with: csc -target:library -reference:abstractshape.dll shapes.cs
@@ -142,7 +140,6 @@ public class Rectangle : Shape
 }
 //</Snippet2>
 
-
 //<Snippet3>
 // compile with: csc -reference:abstractshape.dll;shapes.dll shapetest.cs
 class TestClass
@@ -170,7 +167,6 @@ class TestClass
     Rectangle #1 Area = 20.00
 */
 //</Snippet3>
-
 
 class CarStuff
 {
@@ -246,7 +242,6 @@ class CarStuff
     }
 }
 
-
 //<Snippet8>
 interface IDimensions
 {
@@ -304,7 +299,6 @@ class Box : IDimensions
     Width: 20
 */
 //</Snippet8>
-
 
 namespace WrapBox
 {
@@ -375,7 +369,6 @@ namespace WrapBox
     //</Snippet9>
 }
 
-
 class Test
 {
     interface IMetricDimensions
@@ -405,7 +398,6 @@ class Test
         float IMetricDimensions.Width() => widthInches * 2.54f;
         //</Snippet10>
 
-
         //<Snippet11>
         public static void Test()
         {
@@ -422,7 +414,6 @@ class Test
 }
 }
 
-
 namespace WrapExample
 {
     // Inheritance (C# Programming Guide)
@@ -430,7 +421,6 @@ namespace WrapExample
     public class A {}
     public class B : A {}
 
-    
     //</Snippet12>
     class Program
     {
@@ -443,7 +433,6 @@ namespace WrapExample
     }
 }
 
-
 namespace WrapA
 {
     //<Snippet13>
@@ -454,14 +443,12 @@ namespace WrapA
     //</Snippet13>
 }
 
-
 //<Snippet14>
 public abstract class A
 {
     public abstract void DoWork(int i);
 }
 //</Snippet14>
-
 
 namespace WrapD
 {
@@ -490,7 +477,6 @@ namespace WrapD
     //</Snippet15>
 }
 
-
 namespace WrapD2
 {
     //<Snippet16>
@@ -501,12 +487,10 @@ namespace WrapD2
     //</Snippet16>
 }
 
-
 public abstract class C
 {
     public virtual void DoWork() { }
 }
-
 
 //<Snippet17>
 public class D : C
@@ -514,7 +498,6 @@ public class D : C
     public sealed override void DoWork() { }
 }
 //</Snippet17>
-
 
 class TestPolyHidden
 {
@@ -552,7 +535,6 @@ class TestPolyHidden
     }
 }
 
-
 class TestPolyVirtual
 {
     //<Snippet20>
@@ -586,7 +568,6 @@ class TestPolyVirtual
     }
 }
 
-
 namespace WrapClasses
 {
     //<Snippet22>
@@ -599,7 +580,6 @@ namespace WrapClasses
         public override void DoWork() { }
     }
     //</Snippet22>
-
 
     //<Snippet23>
     public class C : B
@@ -646,7 +626,6 @@ namespace WrapClasses
     }
 }
 
-
 class TestGraphics
 {
     //<Snippet27>
@@ -664,7 +643,6 @@ class TestGraphics
     }
     //</Snippet28>
 }
-
 
 class TestGraphics2
 {
@@ -684,7 +662,6 @@ class TestGraphics2
     }
     //</Snippet30>
 }
-
 
 class TestGraphics3
 {
@@ -712,7 +689,6 @@ class TestGraphics3
         }
     }
 }
-
 
 class TestSelection
 {
@@ -742,7 +718,6 @@ class TestSelection
         //</Snippet34>
     }
 }
-
 
 class OverrideToString
 {
@@ -778,7 +753,6 @@ class OverrideToString
     }
 }
 
-
 class TestExplicitInterface1
 {
     //<Snippet39>
@@ -796,7 +770,6 @@ class Test
         srfc.Paint();
     }
 }
-
 
 interface IControl
 {
@@ -847,7 +820,6 @@ class TestExplicitInterface2
     }
     //</Snippet40>
 
-
     void test()
     {
         //<Snippet41>
@@ -888,7 +860,6 @@ class TestExplicitInterface2
     //</Snippet43>
 }
 
-
 namespace WrapInterfaces
 {
     //<Snippet47>
@@ -918,7 +889,6 @@ namespace WrapInterfaces
     public class Minivan : Car
     {       
     }
-    
 
     namespace SimpleInheritance
     {
@@ -964,7 +934,6 @@ namespace WrapInterfaces
             {
                 currentID = 0;
             }
-
 
             protected int GetNextID()
             {
@@ -1149,7 +1118,6 @@ namespace Polymorphism_Overview
      */
     //</Snippet50> 
 
-        
 }
 
 namespace ExplicitConversion
@@ -1191,7 +1159,6 @@ namespace ExplicitConversion
 namespace RainyDay
 {
 
-    
     class JustInCase
     {
         static void Main()
@@ -1199,7 +1166,6 @@ namespace RainyDay
             //<Snippet52>
             Console.WriteLine("Saving for a rainy day.");
             //</Snippet52>  
-
 
             //<Snippet53>    
             Console.WriteLine("Saving for a rainy day.");
@@ -1217,7 +1183,6 @@ namespace RainyDay
 
     }      
 }
-
 
 //<snippet70>
 namespace OverrideAndNew
@@ -1240,7 +1205,6 @@ namespace OverrideAndNew
             // Base - Method1
             // Base - Method2
 
-
             // The following two calls do what you would expect. They call
             // the methods that are defined in DerivedClass.
             dc.Method1();
@@ -1248,7 +1212,6 @@ namespace OverrideAndNew
             // Output:
             // Derived - Method1
             // Derived - Method2
-
 
             // The following two calls produce different results for the 
             // method defined by using override (Method1) and the
@@ -1260,7 +1223,6 @@ namespace OverrideAndNew
             // Base - Method2
         }
     }
-
 
     class BaseClass
     {
@@ -1402,13 +1364,10 @@ namespace pieces
                 Console.WriteLine("Derived - Method2");
             }
 
-
         }
 
     }
 }
-
-
 
 //<snippet78>
 namespace OverrideAndNew2
@@ -1544,7 +1503,6 @@ namespace OverrideAndNew2
         // Carries seven people.
         //</snippet77>
     }
-
 
     //<snippet71>
     // Define the base class, Car. The class defines two methods, DescribeCar

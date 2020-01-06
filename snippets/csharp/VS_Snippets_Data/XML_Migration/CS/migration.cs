@@ -58,7 +58,6 @@ private static void ValidationCallBack(object sender, ValidationEventArgs e) {
 }
 //</snippet3b>
 
-
 //==============================
 // 
 static void XML_Validation_New() {
@@ -76,7 +75,6 @@ private static void ValidationCallBack1(object sender, ValidationEventArgs e) {
     Console.WriteLine("Validation Error: {0}", e.Message);
 }
 //</snippet4b>
-
 
 //==============================
 // 
@@ -171,7 +169,6 @@ xslt.Load("sort.xsl", resolver);
 //</snippet11>
 }
 
-
 //==============================
 // 
 static void Stylesheet_Credentials_New() {    
@@ -182,7 +179,6 @@ resolver.Credentials = CredentialCache.DefaultCredentials;
 xslt.Load("sort.xsl", XsltSettings.Default, resolver);
 //</snippet12>
 }
-
 
 //==============================
 // 

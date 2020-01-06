@@ -26,7 +26,6 @@ namespace Microsoft.Security.Samples
             myBinding.Security.Message.ClientCredentialType =
                 MessageCredentialType.Windows;
 
-            
             // Create the Type instances for later use and the URI for 
             // the base address.
             Type contractType = typeof(ICalculator);

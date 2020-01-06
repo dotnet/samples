@@ -18,8 +18,6 @@ using System.Drawing;
 using System.Collections;
 using System.Windows.Forms;
 
-
-
 public class TreeNode_Checked : Form
 {
 	private int rootImageIndex;
@@ -65,7 +63,6 @@ public class TreeNode_Checked : Form
 		myTreeView.EndUpdate();
 	}
 
-	
 // <Snippet1>  
 
 public class Customer
@@ -142,7 +139,6 @@ private void FillTreeView()
 	}
 }
 // </Snippet1>  
-
 
    private void InitializeComponent()
    {

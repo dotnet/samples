@@ -5,7 +5,6 @@ using System;
 using System.Net;
 using System.Net.Sockets;
 
-
 public class MyNetworkStream_Sub_Class : NetworkStream
 {
 
@@ -42,14 +41,11 @@ public class MyNetworkStream_Sub_Class : NetworkStream
           
     }
 
-
-
     public static void Main()
     {
         MyNetworkStream_Sub_Class.DoSomethingSignificant();
 
     }
-
 
 }
 

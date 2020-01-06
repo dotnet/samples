@@ -5,7 +5,6 @@ using System.Net.PeerToPeer.Collaboration;
 using System.Net.PeerToPeer;
 using System.Threading;
 
-
 namespace P2PContacts
 {
     class P2PContacts
@@ -79,8 +78,7 @@ namespace P2PContacts
 
 //            Exit;
         }
-        
-        
+
         //------------------------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------------------------
         // <Snippet1>

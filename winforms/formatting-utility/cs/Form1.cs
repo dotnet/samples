@@ -171,7 +171,6 @@ namespace Formatter
             BigInteger bigintToFormat = BigInteger.Zero;
             double floatToFormat;
 
-            
             // Format a floating point value.
             if (Value.Text.Contains(decimalSeparator) || Value.Text.ToUpper(CultureInfo.InvariantCulture).Contains("E")) {
                   try {

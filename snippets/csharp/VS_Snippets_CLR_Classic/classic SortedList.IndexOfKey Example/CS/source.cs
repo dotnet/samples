@@ -25,8 +25,7 @@
        String myValue = "three";
        Console.WriteLine( "The value \"{0}\" is at index {1}.", myValue, mySL.IndexOfValue( myValue ) );
     }
- 
- 
+
     public static void PrintIndexAndKeysAndValues( SortedList myList )  {
        Console.WriteLine( "\t-INDEX-\t-KEY-\t-VALUE-" );
        for ( int i = 0; i < myList.Count; i++ )  {

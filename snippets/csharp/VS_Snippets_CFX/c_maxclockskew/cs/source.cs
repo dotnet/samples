@@ -87,7 +87,6 @@ namespace Examples
 
         }
 
-
     }
 
     [ServiceContract]

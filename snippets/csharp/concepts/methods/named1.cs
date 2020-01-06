@@ -28,8 +28,6 @@ class TestMotorcycle : Motorcycle
 //      Travel time: approx. 3 hours
 // </Snippet45>
 
-
-
 abstract class Motorcycle
 {
    // Anyone can call this.

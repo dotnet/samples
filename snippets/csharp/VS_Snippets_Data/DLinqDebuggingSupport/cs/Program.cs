@@ -12,7 +12,6 @@ namespace cs_debuggingsupport
         static void Main(string[] args)
         {
 
-
             Northwnd db = new Northwnd(@"c:\northwnd.mdf");
 
             // <Snippet1>

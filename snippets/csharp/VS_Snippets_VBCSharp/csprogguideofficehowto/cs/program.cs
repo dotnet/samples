@@ -220,13 +220,11 @@ namespace OfficeProgrammingWalkthrough
             var excelApp = new Microsoft.Office.Interop.Excel.Application();
             var myFormat = Microsoft.Office.Interop.Excel.XlRangeAutoFormat.xlRangeAutoFormatAccounting1;
 
-
             // Using named and optional arguments, you can supply arguments for
             // only the parameters for which you do not want to use the default 
             // value, and omit arguments for the other parameters. In the following
             // call, a value is sent for only one parameter.
             excelApp.get_Range("A1", "B4").AutoFormat( Format: myFormat );
-
 
             // In Visual C# 2008 and earlier versions, you need to supply an argument for
             // every parameter. The following call supplies a value for the first

@@ -25,7 +25,6 @@ public class Form1 :
         printDocument1.Print();
     }
 
-
     Bitmap memoryImage;
 
     private void CaptureScreen()
@@ -42,8 +41,6 @@ public class Form1 :
     {
         e.Graphics.DrawImage(memoryImage, 0, 0);
     }
-
-  
 
     public static void Main()
     {

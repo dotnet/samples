@@ -14,7 +14,6 @@ using System.Text;
 using System.Windows.Forms;
 #endregion
 
-
 namespace CSWinFormDataGridView.CustomDataGridViewColumn
 {
     class MaskedTextBoxCell : DataGridViewTextBoxCell
@@ -172,7 +171,6 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
                 this.promptChar = value;
             }
         }
-
 
         /// <summary>
         /// A boolean indicating whether to include prompt characters in

@@ -8,7 +8,6 @@ using System.Windows.Media.Animation;
 namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
 {
 
-
     // Uses a storyboard to animate the properties
     // of two buttons.
     public class StoryboardExample : Page

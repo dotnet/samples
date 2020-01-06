@@ -6,7 +6,6 @@ using System.ServiceModel;
 using System.ServiceModel.Description;
 using System.ServiceModel.Channels;
 
-
 namespace Service
 {
     class Program

@@ -9,7 +9,6 @@ using System.IO;
 using System.Text;
 
 class WebResponseSnippet {
-    
 
    public static void Main(string[] args) 
    {

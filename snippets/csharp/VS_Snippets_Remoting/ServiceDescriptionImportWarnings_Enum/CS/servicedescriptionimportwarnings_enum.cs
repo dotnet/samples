@@ -27,8 +27,6 @@ public class ServiceDescriptionImportWarnings_Enum
       DisplayWarning("ServiceDescriptionImportWarnings_OptionalExtensionsIgnored.wsdl");
    }
 
-
-
    [SecurityPermissionAttribute(SecurityAction.Demand, Unrestricted=true)]
    public static void DisplayWarning(string myWSDLFileName) 
    {

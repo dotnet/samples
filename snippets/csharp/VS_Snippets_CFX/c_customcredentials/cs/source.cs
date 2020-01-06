@@ -175,7 +175,6 @@ namespace Microsoft.ServiceModel.Samples
     }
     //</snippet5>
 
-
     //<snippet7>
     public class MyClientCredentialsConfigHandler : ClientCredentialsElement
     {

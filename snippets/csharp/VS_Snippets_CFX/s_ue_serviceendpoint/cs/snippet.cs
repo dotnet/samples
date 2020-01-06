@@ -2,7 +2,6 @@
 using System.ServiceModel;
 using System.ServiceModel.Description;
 
-
 namespace ServiceEndpointSnippets
 {
     class MyEndpointBehavior : IEndpointBehavior

@@ -50,7 +50,6 @@ class RegGetDef
                 break;
         }
 
-
         // Attempt to retrieve a value that does not exist; the specified
         // default value is returned.
         string def = (string)rk.GetValue("notavalue", "The default to return");

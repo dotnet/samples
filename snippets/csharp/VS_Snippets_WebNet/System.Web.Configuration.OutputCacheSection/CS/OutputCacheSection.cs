@@ -24,9 +24,6 @@ namespace Samples.Aspnet.SystemWebConfiguration
 
 // </Snippet1>
 
-
-                
-
 // <Snippet3>
 
     // Get the current EnabledOutputCache.
@@ -59,7 +56,6 @@ namespace Samples.Aspnet.SystemWebConfiguration
     outputCacheSection.OmitVaryStar = false;
 
     // </Snippet5>
-
 
     // <Snippet6>
 

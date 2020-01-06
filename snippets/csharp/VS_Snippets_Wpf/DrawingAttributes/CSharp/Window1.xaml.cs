@@ -8,13 +8,11 @@ using System.Windows.Media;
 using System.Windows.Shapes;
 using System.Windows.Ink;
 
-
 namespace DrawingAttributesSample
 {
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-
 
     public partial class Window1 : Window
     {
@@ -191,7 +189,6 @@ namespace DrawingAttributesSample
             this.Title = "default attribute changed";
         }
 
-
         //<Snippet4>
         Guid currentTimeGuid = new Guid("12345678-1234-1234-1234-123456789012");
 
@@ -213,7 +210,6 @@ namespace DrawingAttributesSample
             //FileStream fs = new FileStream("strokes.isf", FileMode.Create);
             //fs.Write(isf, 0, isf.Length);
             //fs.Close();
-
 
         }
 
@@ -288,7 +284,6 @@ namespace DrawingAttributesSample
             GetPropertyIDs(); 
         }
 
-
         void inkCanvas1_StrokeCollected(object sender, InkCanvasStrokeCollectedEventArgs e)
         {
  //           SaveAuthor(inkCanvas1.DefaultDrawingAttributes, aGuid, currentAuthor);
@@ -348,7 +343,6 @@ namespace DrawingAttributesSample
                 MessageBox.Show("The DrawingAttributes are not equal");
             }
         //</Snippet11>
-
 
         //<Snippet12>
             if (attributes1.Equals(attributes2))

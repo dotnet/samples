@@ -25,7 +25,6 @@ public class Sample
         // add a RowDeleting event handler for the table.
         customerTable.RowDeleting += new DataRowChangeEventHandler( Row_Deleting );
 
-
         // add ten rows
         for( int id=1; id<=10; id++)
         {

@@ -125,7 +125,6 @@ class ParallelSchedulerDemo2
                     _tasks = null;
                 }
             }
-        
 
     }
 }

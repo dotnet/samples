@@ -38,8 +38,6 @@ public sealed partial class MainPage : Page
     }
 }
 
-
-
 public class Page 
 {
    public void InitializeComponent() {}       

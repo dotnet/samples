@@ -66,7 +66,6 @@ namespace ServiceModel.Sample
             ServiceHost serviceHost = new ServiceHost(service, baseAddress);
             // </Snippet1>
 
-
             // Open the ServiceHostBase to create listeners and start listening for messages.
             serviceHost.Open();
 

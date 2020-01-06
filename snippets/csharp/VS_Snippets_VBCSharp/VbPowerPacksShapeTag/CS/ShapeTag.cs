@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-
 namespace VbPowerPacksShapeTagCS
 {
     public partial class ShapeTag : Form
@@ -39,6 +38,5 @@ namespace VbPowerPacksShapeTagCS
         }
         // </Snippet1>
     }
-
 
 }

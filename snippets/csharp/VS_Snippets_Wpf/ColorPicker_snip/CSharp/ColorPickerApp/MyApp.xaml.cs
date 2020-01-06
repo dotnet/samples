@@ -19,8 +19,6 @@ namespace ColorPickerApp
             mainWindow.Show();
         }
 
-
-
     }
     public class ColorGradientConverter : IValueConverter
     {

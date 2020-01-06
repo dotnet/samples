@@ -337,7 +337,6 @@ namespace Microsoft.ServiceModel.Samples
         }
     }
 
-
     class InterceptingDuplexSessionChannel : InterceptingDuplexChannel, IDuplexSessionChannel
     {
         IDuplexSessionChannel innerSessionChannel;

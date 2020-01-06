@@ -37,7 +37,6 @@ public class SamplesArray  {
       myIndex = Array.LastIndexOf( myArray, myString, 10, 6 );
       Console.WriteLine( "The last occurrence of \"{0}\" between index 5 and index 10 is at index {1}.", myString, myIndex );
 
-
       void PrintIndexAndValues( Array anArray )  {
          for ( int i = anArray.GetLowerBound(0); i <= anArray.GetUpperBound(0); i++ )
             Console.WriteLine( "\t[{0}]:\t{1}", i, anArray.GetValue( i ) );

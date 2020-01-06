@@ -35,7 +35,6 @@
 
         private TimeTracker _timeTracker;
 
-
         #region Dependency Properties
         public static readonly DependencyProperty RadiusProperty =
             DependencyProperty.Register(
@@ -188,7 +187,6 @@
             }
         }
 
-
         public bool BounceOffContainer
         {
             get { return _bounceOffContainer; }
@@ -255,7 +253,6 @@
             }
         } 
         #endregion
-
 
         public FireworkEffect()
             : base()

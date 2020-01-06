@@ -154,7 +154,6 @@ namespace send_generics_csharp
             Console.WriteLine("{0}", ASCII.GetString(bigBuffer));
             //</Snippet4>
 
-
         return 1;
         }
             

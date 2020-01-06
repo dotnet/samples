@@ -109,7 +109,6 @@ namespace CS
             return this.CompanyName + " (" + this.CustomerID + ")";
         }
 
-
         public string origCustomerID;
         public string origCompanyName;
         public string origContactName;

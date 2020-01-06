@@ -11,7 +11,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Interop;
 
-
 namespace CorePseudocode {
     public class Cache : Object {
         internal void StoreInfoAboutChild(object z) {}
@@ -25,7 +24,6 @@ namespace CorePseudocode {
             new ComponentResourceKey(typeof(MyAssemblyResources), "part_ViewBox");
 //</SnippetCRKCode>
     }
-
 
     public class myElement : UIElement {
         private List<UIElement> _visualChildren;
@@ -95,7 +93,6 @@ protected override Size MeasureOverride(Size availableSize)
 }
 //</SnippetFEMeasureOverride>
 }
-
 
     class ClockwiseSpinEventManager : WeakEventManager {
         protected override void StartListening(object source)

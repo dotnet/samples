@@ -6,10 +6,8 @@ using System.IO.Log;
 using System.Collections.Generic;
 using System.Text;
 
-
 namespace MyFileRecordSequence
 {
-
 
 class ReadRecordsSample 
 {

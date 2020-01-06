@@ -50,15 +50,12 @@ namespace BasicAuthentication
             
             // Close the service. 
             myServiceHost.Close();
-            
-
 
         }
 
         public static void ClientRun()
         {
 
-            
             // Create the binding.
             WSHttpBinding myBinding = new WSHttpBinding();
             myBinding.Security.Mode = SecurityMode.Transport;
@@ -92,8 +89,6 @@ namespace BasicAuthentication
 
             // Close the client.
             cc.Close();
-            
-
 
         }
 
@@ -136,8 +131,6 @@ namespace SecuredUsingWindows
 
             // Close the service.
             myServiceHost.Close();
-            
-
 
         }
 
@@ -167,8 +160,6 @@ namespace SecuredUsingWindows
 
             // Close the client.
             cc.Close();
-            
-
 
         }
         private static string ReturnUsername()
@@ -212,8 +203,6 @@ namespace SecuredByTransportWithAnonymousClient
 
             // Close the service.
             myServiceHost.Close();
-            
-
 
         }
     
@@ -244,8 +233,6 @@ namespace SecuredByTransportWithAnonymousClient
 
             // Close the client.
             cc.Close();
-            
-
 
         }
     }
@@ -281,8 +268,6 @@ namespace SecuredTranserUsingCertificates
             
             // Close the service.
             myServiceHost.Close();
-            
-
 
         }
 
@@ -307,7 +292,6 @@ namespace SecuredTranserUsingCertificates
             CalculatorClient cc =
                 new CalculatorClient(myBinding, ea);
 
-
             // The client must specify a certificate trusted by the server.
             //<snippet1>
             cc.ClientCredentials.ClientCertificate.SetCertificate(
@@ -322,7 +306,6 @@ namespace SecuredTranserUsingCertificates
 
             // Close the client.
             cc.Close();
-            
 
         }
     }
@@ -363,8 +346,6 @@ namespace SecuredUsingMessageSecurityWithAnonClient
             
             // Close the service.
             myServiceHost.Close();
-            
-
 
         }
 
@@ -392,8 +373,6 @@ namespace SecuredUsingMessageSecurityWithAnonClient
 
             // Close the client.
             cc.Close();
-            
-
 
         }
     }
@@ -434,7 +413,6 @@ namespace SecuredUsingMessageSecurityWithUsername
 
             // Close the service. 
             myServiceHost.Close();
-            
 
         }
 
@@ -468,7 +446,6 @@ namespace SecuredUsingMessageSecurityWithUsername
 
             // Close the client.
             cc.Close();
-            
 
         }
 
@@ -519,8 +496,6 @@ namespace SecuredUsingMessageWithCertClient
             
             // Close the service.
             myServiceHost.Close();
-            
-
 
         }
         private void ClientRun()
@@ -554,8 +529,6 @@ namespace SecuredUsingMessageWithCertClient
 
             // Close the client.
             cc.Close();
-            
-
 
         }
 
@@ -592,8 +565,6 @@ namespace SecuredUsingMessageWithWindowsClient
 
             // Close the service.
             myServiceHost.Close();
-            
-
 
         }
 
@@ -621,9 +592,6 @@ namespace SecuredUsingMessageWithWindowsClient
 
             // Close the client.
             cc.Close();
-            
-
-
 
         }
     }
@@ -676,9 +644,6 @@ namespace MessageSecuritWithKerberosAuth
 
             // Close the service. 
             myServiceHost.Close();
-            
-
-
 
         }
         private void ClientRun()
@@ -715,9 +680,6 @@ namespace MessageSecuritWithKerberosAuth
 
             // Close the client.
             cc.Close();
-            
-
-
 
         }
     }
@@ -763,8 +725,6 @@ namespace SecuredUsingMessageSecurityWithInteroperableCertClient
 
             // Close the service.
             myServiceHost.Close();
-            
-
 
         }
         private void ClientRun()
@@ -810,8 +770,6 @@ namespace SecuredUsingMessageSecurityWithInteroperableCertClient
 
             // Close the client.
             cc.Close();
-            
-
 
         }
 

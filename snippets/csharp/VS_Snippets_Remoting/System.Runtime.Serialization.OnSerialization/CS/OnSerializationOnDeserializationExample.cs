@@ -63,7 +63,6 @@
         }
     }
 
-
     // This is the object that will be serialized and deserialized.
     [Serializable()]
     public class TestSimpleObject
@@ -145,7 +144,6 @@
     // member4 = 'This value was set after deserialization.'
     // </snippet1>
 
-
     public class ExampleCode
     {
 
@@ -154,7 +152,6 @@
             // Empty constructor to get around security checks.
         }
 
-
         // <snippet2>
         [OnSerializing]
         private void SetValuesOnSerializing(StreamingContext context)
@@ -162,7 +159,6 @@
             // Code not shown.
         }
         // </snippet2>
-
 
         // <snippet3>
         [OnSerialized]

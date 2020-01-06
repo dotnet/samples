@@ -4,7 +4,6 @@ using System.Data.SqlTypes;
 using Microsoft.SqlServer.Server;
 using System.Text;
 
-
 [Serializable]
 [Microsoft.SqlServer.Server.SqlUserDefinedType(Format.Native,
      IsByteOrdered=true,  
@@ -126,5 +125,4 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
         return true;
     }
 
-    
 }

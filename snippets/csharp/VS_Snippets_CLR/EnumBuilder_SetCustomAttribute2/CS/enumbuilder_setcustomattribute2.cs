@@ -18,7 +18,6 @@ using System.Threading;
 using System.Reflection;
 using System.Reflection.Emit;
 
-
 [AttributeUsage(AttributeTargets.All, AllowMultiple = false)]
 public class MyAttribute : Attribute
 {

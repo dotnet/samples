@@ -7,7 +7,6 @@ public class Form1: Form
 {
     protected DataTableMapping tableMapping;
 
-
     // <Snippet1>
 
     public void ShowColumnMappings() 

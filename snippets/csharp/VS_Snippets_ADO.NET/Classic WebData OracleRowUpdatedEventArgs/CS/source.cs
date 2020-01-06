@@ -10,7 +10,6 @@ public class Form1: Form
   private DataSet DataSet1;
   private DataGrid dataGrid1;
 
-
 // <Snippet1>
 // handler for RowUpdating event
  private static void OnRowUpdating(object sender, OracleRowUpdatingEventArgs e) {

@@ -122,7 +122,6 @@ namespace DragDropSnippets
         // </snippetGiveFeedback>
         #endregion
 
-
         #region DropTarget
         
         // <snippetDragEnterLeave>

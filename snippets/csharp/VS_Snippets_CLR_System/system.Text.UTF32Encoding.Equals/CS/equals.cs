@@ -24,7 +24,6 @@ public class SamplesUTF32Encoding  {
 
    }
 
-
    public static void CompareEncodings( UTF32Encoding a, String name )  {
 
       // Create different instances of UTF32Encoding using the ctor with three parameters.

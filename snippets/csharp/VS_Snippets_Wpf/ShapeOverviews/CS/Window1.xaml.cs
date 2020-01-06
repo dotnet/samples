@@ -23,9 +23,6 @@ namespace AvalonTemplate
 	    public void ShowVars()
         {
 
-
-
-
     }
 	}
 }

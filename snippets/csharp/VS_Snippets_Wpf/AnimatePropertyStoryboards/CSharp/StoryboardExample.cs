@@ -8,7 +8,6 @@ using System.Windows.Media.Animation;
 namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
 {
 
-
     // Uses a storyboard to animate the properties
     // of two buttons.
     public class StoryboardExample : Page
@@ -68,7 +67,6 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
                     myWidthAnimatedButtonStoryboard.Begin(myWidthAnimatedButton);
                 };
 
-            
             myStackPanel.Children.Add(myWidthAnimatedButton);
 
             //
@@ -115,7 +113,6 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
                     myColorAnimatedButtonStoryboard.Begin(myColorAnimatedButton);
                 };
 
-          
             myStackPanel.Children.Add(myColorAnimatedButton);
             this.Content = myStackPanel;
 

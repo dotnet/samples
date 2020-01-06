@@ -114,7 +114,6 @@ using Microsoft.Win32;
         }
         // </snippet1>
 
-        
         private static string GetUserName()
         {
             return @"sharriso1\Jane";

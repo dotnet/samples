@@ -30,7 +30,6 @@ public class Example
    }
 }
 
-
 public class T
 {}
 

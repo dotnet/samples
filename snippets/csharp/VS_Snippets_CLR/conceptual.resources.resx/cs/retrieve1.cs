@@ -54,7 +54,6 @@ public class CarDisplayApp : Form
 }
 // </Snippet3>
 
-
 [Serializable()] public class Automobile
 {
    private string carMake;

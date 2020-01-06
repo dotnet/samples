@@ -26,7 +26,6 @@ namespace BindingGroupSnippets
                 stackPanel1.BindingGroup.BeginEdit();
             }
 
-            
         }
         //</SnippetCommitEdit>
 

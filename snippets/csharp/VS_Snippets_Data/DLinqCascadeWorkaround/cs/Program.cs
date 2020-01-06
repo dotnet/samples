@@ -59,8 +59,7 @@ namespace cs_cascadeworkaround
             {
                 Console.WriteLine("There was no parent in the Orders collection.");
             }
-            
-            
+
             // Display progress.
             Console.WriteLine("Order section finished.");
             Console.ReadLine();

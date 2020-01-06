@@ -27,7 +27,6 @@ class Program
 		// which will then be imbedded in the XML document.  
 		RSA rsaKey = new RSACryptoServiceProvider();
 
-
 		try
 		{
 			// Encrypt the "creditcard" element.
@@ -94,7 +93,6 @@ class Program
 		// Construct an EncryptedData object and populate
 		// it with the desired encryption information.
 		////////////////////////////////////////////////
-
 
 		EncryptedData edElement = new EncryptedData();
 		edElement.Type = EncryptedXml.XmlEncElementUrl;

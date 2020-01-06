@@ -39,13 +39,11 @@ namespace Samples.AspNet.CS.Controls
     ]
     public class ControlWithButtonTasks : Panel { }
 
-
     // Declare a custom button to add dynamically at design time.
     public class NewButton : Button
     {
         public NewButton() { Text = "NewButton"; }
     }
-
 
     // This control designer is used to read xml files from the project.
 	[System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.Demand, Name="FullTrust")]
@@ -366,7 +364,6 @@ namespace Samples.AspNet.CS.Controls
             RootDesigner.AddControlToDocument(b, null, ControlLocation.First);
         }
 
-
         public void AddNewButton()
         {
             // Add your custom button.
@@ -383,7 +380,6 @@ namespace Samples.AspNet.CS.Controls
 
             RootDesigner.AddControlToDocument(b, null, ControlLocation.Last);
         }
-
 
         // Create the action list for this control.
         private class MyList3 : DesignerActionList

@@ -85,7 +85,6 @@ namespace Microsoft.ServiceModel.Samples
             this.interceptor.OnExportPolicy(exporter, context);
         }
 
-
         class NullMessageInterceptor : ChannelMessageInterceptor
         {
             public override ChannelMessageInterceptor Clone()

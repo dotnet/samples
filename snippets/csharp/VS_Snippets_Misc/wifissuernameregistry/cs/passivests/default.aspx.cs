@@ -10,11 +10,9 @@
 //
 //-----------------------------------------------------------------------------
 
-
 using System;
 using System.IdentityModel.Services;
 using System.Security.Claims;
-
 
 namespace PassiveSTS
 {

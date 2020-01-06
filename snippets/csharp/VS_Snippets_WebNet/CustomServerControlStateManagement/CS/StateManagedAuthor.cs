@@ -109,7 +109,6 @@ namespace Samples.AspNet.CS.Controls
             }
         }
 
-
         public override string ToString()
         {
             return ToString(CultureInfo.InvariantCulture);

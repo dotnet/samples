@@ -6,8 +6,7 @@ namespace MyMath {
     using System;
     using System.Web.Services.Protocols;
     using System.Web.Services;
-    
-    
+
     [System.Web.Services.WebServiceBindingAttribute(Name="MyMathSoap", Namespace="http://www.contoso.com/")]
     public class MyMath : System.Web.Services.Protocols.SoapHttpClientProtocol {
         

@@ -19,7 +19,6 @@ class MyMethodBuilderDemo {
 	TypeBuilder myTypeBuilder = myModBuilder.DefineType("MyType",
 				    	TypeAttributes.Public);
 
-						
 	MethodBuilder myMethod1 = myTypeBuilder.DefineMethod("MyMethod",
 						MethodAttributes.Public, 
 						typeof(int),
@@ -34,8 +33,6 @@ class MyMethodBuilderDemo {
 	
 	//</Snippet1>
 
-
- 	
    }
 
 }

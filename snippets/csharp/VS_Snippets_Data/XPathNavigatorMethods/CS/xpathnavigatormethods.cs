@@ -53,7 +53,6 @@ class XPathNavigatorMethods
         //</snippet2>
     }
 
-
     static void XPathNavigatorMethods_AppendChild3()
     {
         // XPathNavigator.AppendChile(XmlReader)
@@ -89,7 +88,6 @@ class XPathNavigatorMethods
         XmlDocument childNodes = new XmlDocument();
         childNodes.Load(new StringReader("<pages xmlns=\"http://www.contoso.com/books\">100</pages>"));
         XPathNavigator childNodesNavigator = childNodes.CreateNavigator();
-
 
         if(childNodesNavigator.MoveToChild("pages", "http://www.contoso.com/books")) 
         {

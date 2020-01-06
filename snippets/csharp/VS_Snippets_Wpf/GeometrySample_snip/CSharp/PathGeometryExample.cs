@@ -146,7 +146,6 @@ namespace SDKSample
 
         }
 
-
         private Path TwoLineSegments()
         {
             // <Snippet49>

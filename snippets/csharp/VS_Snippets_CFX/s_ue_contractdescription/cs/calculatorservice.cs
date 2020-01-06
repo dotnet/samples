@@ -117,7 +117,6 @@ namespace Server
             }
             // </Snippet7>
 
-            
             // <Snippet8>
             string name = cd.Name;
             Console.WriteLine("\tName: {0}", name);

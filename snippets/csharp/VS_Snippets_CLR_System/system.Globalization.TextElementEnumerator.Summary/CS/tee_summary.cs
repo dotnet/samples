@@ -1,10 +1,8 @@
 ﻿// The following code example shows the values returned by TextElementEnumerator.
 
-
 // <snippet1>
 using System;
 using System.Globalization;
-
 
 public class SamplesTextElementEnumerator  {
 

@@ -6,7 +6,6 @@ public class Class2
     // Collections (C# and Visual Basic)
     // e76533a9-5033-4a0b-b003-9c2be60d185b
 
-
     public void Process()
     {
         IterateThruDictionary();
@@ -66,7 +65,6 @@ public class Class2
     }
     //</Snippet21>
 
-
     //<Snippet22>
     private static Dictionary<string, Element> BuildDictionary2()
     {
@@ -84,7 +82,6 @@ public class Class2
     }
     //</Snippet22>
 
-
     //<Snippet23>
     private static void FindInDictionary(string symbol)
     {
@@ -101,7 +98,6 @@ public class Class2
         }
     }
     //</Snippet23>
-
 
     //<Snippet24>
     private static void FindInDictionary2(string symbol)

@@ -187,7 +187,6 @@ using System.Net;
             // by IE settings.  If you do webProxy get defaultProxy reads manual setting (proxy address and 
             // bypass - doesn't matter what the config file has.
 
-        
             // if construct with global select
         
             // See what proxy is used for resource.
@@ -195,9 +194,7 @@ using System.Net;
             Console.WriteLine("GetProxy  returned for {0} is {1}.", resource, resourceProxy);
         
         }
-  
-  
-  
+
         public static void Underline()
         {
             Console.WriteLine ("=======================================");
@@ -211,8 +208,7 @@ using System.Net;
             //   DisplayProxyProperties(new WebProxy());
             //   Console.WriteLine ("\n\nAuto-only - default ctor"); Underline();
             //   CheckAutoProxyForRequest(resource);
-            
-          
+
             Console.WriteLine ("\n\nAuto-only - GlobalProxySelection.Select"); Underline();
             CheckAutoGlobalProxyForRequest(resource);
               /*
@@ -230,9 +226,7 @@ using System.Net;
 
                Console.WriteLine("Auto and Invalid script");
                CheckAutoProxyAndScriptForRequest(resource, new Uri("http://sharriso1/wpadx.dat"));
-            
-            
-          
+
             // check snippet 6
            CheckAutoProxyForRequest( resource);
  

@@ -42,7 +42,6 @@ namespace MyProject
 			return;
 		}
 
-
 		//***************************************************
 		// Provides an event handler for the ReceiveCompleted
 		// event.

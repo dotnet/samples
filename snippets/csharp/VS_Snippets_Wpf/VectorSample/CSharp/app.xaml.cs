@@ -12,9 +12,7 @@ namespace VectorSample
 
     public partial class app : Application
     {
-        
- 
- 
+
         public app()
         {
  

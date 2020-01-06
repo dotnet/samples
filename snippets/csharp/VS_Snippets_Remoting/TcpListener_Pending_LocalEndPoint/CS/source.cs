@@ -37,8 +37,7 @@ public class MyTcpListenerExample {
                tcpClient.Close();
 
 		     }
-                  
-              
+
 	        tcpListener.Stop();
 
                }

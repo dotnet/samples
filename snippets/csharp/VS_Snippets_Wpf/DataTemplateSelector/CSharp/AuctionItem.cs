@@ -10,7 +10,6 @@ namespace SDKSample
         private ObservableCollection<string> images;
         private SpecialFeatures specialFeatures;
         private int currentPrice;
-      
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -24,7 +23,6 @@ namespace SDKSample
                 OnPropertyChanged("Description");
             }
         }
-
 
         public ObservableCollection<string> Images
         {

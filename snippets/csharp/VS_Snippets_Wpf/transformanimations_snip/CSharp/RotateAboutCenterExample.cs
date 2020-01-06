@@ -11,7 +11,6 @@ using System.Windows.Media;
 using System.Windows.Shapes;
 using System.Windows.Media.Animation;
 
-
 namespace Microsoft.Samples.Animation
 {
     public partial class RotateAboutCenterExample : Page
@@ -30,7 +29,6 @@ namespace Microsoft.Samples.Animation
             myButton.RenderTransformOrigin = new Point(0.5,0.5);
             myButton.HorizontalAlignment = HorizontalAlignment.Left;
             myButton.Content = "Hello World";
-
 
             RotateTransform myRotateTransform = new RotateTransform(0);
             myButton.RenderTransform = myRotateTransform;

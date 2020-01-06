@@ -22,7 +22,6 @@ namespace ProducerConsumer
         static int additions = 0;
         static int subtractions = 0;
 
-
         static void Main(string[] args)
         {
 
@@ -55,7 +54,6 @@ namespace ProducerConsumer
 
                 collection.Add(ticks);
 
-
                 // Counter for demonstration purposes only.
                 additions++;
 
@@ -64,7 +62,6 @@ namespace ProducerConsumer
 
                 // Thread.SpinWait(100000); 
 
-
             }
 
             // Important!!! Tell consumers that no more items will be added.
@@ -72,7 +69,6 @@ namespace ProducerConsumer
 
             Console.WriteLine("Done adding: {0} items", additions);
         }
-
 
         static void RunConsumer(Object stateInfo)
         {
@@ -136,7 +132,6 @@ namespace BlockingCollectionExamples
     class Blocking
     {
 
-
         private static BlockingCollection<Data> blockingCollection = new BlockingCollection<Data>(10);
 
         // Some data to add.
@@ -172,7 +167,6 @@ namespace BlockingCollectionExamples
             Console.WriteLine("Done");
         }
 
-
     }
 }
 //</snippet03>
@@ -187,8 +181,6 @@ namespace Demos
     using System.Linq;
     using System.Threading;
     using System.Threading.Tasks;
-
-
 
     //<snippet08>
   
@@ -246,11 +238,7 @@ namespace Demos
             results[taskNumber] = (double)((double)total / data[taskNumber].Length);
             Console.WriteLine("results[{0}] = {1}", taskNumber, results[taskNumber]);
 
-            
         }
-
-        
-        
 
         // In this example, we simply take the average and compare it to other partitions.
         // In a real-world application, this would be a more computationally expensive
@@ -300,7 +288,6 @@ namespace Demos
     class MyBarrierOld
     {
         const int P = 4;
-
 
         static void Main()
         {
@@ -578,7 +565,6 @@ namespace Demos
     //</snippet15>
 
     }
-
 
 class Test5
 {

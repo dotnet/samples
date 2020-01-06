@@ -20,6 +20,5 @@ private void SetBoolColumnValues(){
    myGridColumn.NullValue = Convert.DBNull;
 }
 
- 
 // </Snippet1>
 }

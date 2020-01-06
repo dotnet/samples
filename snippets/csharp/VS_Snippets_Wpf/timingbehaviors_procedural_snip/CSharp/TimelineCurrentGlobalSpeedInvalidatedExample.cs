@@ -19,9 +19,7 @@ using System.Windows.Input;
 namespace Microsoft.Samples.Animation.TimingBehaviors
 {
 
-    
     public class TimelineCurrentGlobalSpeedInvalidatedExample : Page {
-        
 
         private TextBlock currentTimeTextBlock;
         public TimelineCurrentGlobalSpeedInvalidatedExample()
@@ -87,9 +85,7 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             // Update the TextBlock with the time of its parent.
             currentTimeTextBlock.Text = doubleAnimationClock.Parent.CurrentTime.ToString();       
         }
-        
 
- 
     }
  
 }

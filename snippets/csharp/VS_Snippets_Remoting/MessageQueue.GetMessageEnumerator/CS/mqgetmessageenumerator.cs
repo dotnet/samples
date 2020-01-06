@@ -29,7 +29,6 @@ namespace MyProject
 			return;
 		}
 
-
 		//**************************************************
 		// Iterates through messages in a queue and examines
 		// their priority.

@@ -12,7 +12,6 @@ using System.Configuration.Install;
 [RunInstaller(true)]
 public class MyInstaller : Installer
 {
-   
 
    public override void Install(IDictionary savedState)
    {

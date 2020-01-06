@@ -11,8 +11,7 @@ using System.Windows.Forms;
      private Font printFont;
      private StreamReader streamToPrint;
      static string filePath;
- 
- 
+
      public PrintingExample() 
      {
          Printing();

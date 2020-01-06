@@ -77,7 +77,6 @@ namespace IBindingList_Doc
 
 		}
 
-
 	}
 
 	// sample for IEditableObject
@@ -251,7 +250,6 @@ namespace IBindingList_Doc
 			List.Remove(value);
 		}
 
-        
 		protected virtual void OnListChanged(ListChangedEventArgs ev) 
 		{
 			if (onListChanged != null) 
@@ -259,7 +257,6 @@ namespace IBindingList_Doc
 				onListChanged(this, ev);
 			}
 		}
-        
 
 		protected override void OnClear() 
 		{
@@ -298,8 +295,7 @@ namespace IBindingList_Doc
                 
 				oldcust.Parent = null;
 				newcust.Parent = this;
-                
-				
+
 				OnListChanged(new ListChangedEventArgs(ListChangedType.ItemAdded, index));
 			}
 		}
@@ -312,7 +308,6 @@ namespace IBindingList_Doc
             
 			OnListChanged(new ListChangedEventArgs(ListChangedType.ItemChanged, index));
 		}
-        
 
 		// Implements IBindingList.
 		bool IBindingList.AllowEdit 
@@ -345,7 +340,6 @@ namespace IBindingList_Doc
 			get { return false ; }
 		}
 
-
 		// Events.
 		public event ListChangedEventHandler ListChanged 
 		{
@@ -367,7 +361,6 @@ namespace IBindingList_Doc
 			return c;
 		}
 
-
 		// Unsupported properties.
 		bool IBindingList.IsSorted 
 		{ 
@@ -379,12 +372,10 @@ namespace IBindingList_Doc
 			get { throw new NotSupportedException(); }
 		}
 
-
 		PropertyDescriptor IBindingList.SortProperty 
 		{ 
 			get { throw new NotSupportedException(); }
 		}
-
 
 		// Unsupported Methods.
 		void IBindingList.AddIndex(PropertyDescriptor property) 

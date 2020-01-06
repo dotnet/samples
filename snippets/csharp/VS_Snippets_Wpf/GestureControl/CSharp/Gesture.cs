@@ -160,7 +160,6 @@ namespace GestureControl
         }
         //</Snippet8>
 
-
     //<Snippet2>
     } //end class
     //</Snippet2>

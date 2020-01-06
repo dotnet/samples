@@ -128,7 +128,6 @@ namespace CloneBasicAuthenticationClient
 			}
 		}
 
-
 	} 	
 }
 

@@ -19,7 +19,6 @@ public class ClientClass {
       //Enter data into the CallContext
       CallContext.SetData("test data", data);
 
-      
       Console.WriteLine(data.numOfAccesses);
 
       ChannelServices.RegisterChannel(new TcpChannel());
@@ -33,7 +32,6 @@ public class ClientClass {
           Console.WriteLine("Could not locate server.");
           return;
       }
-
 
       // call remote method
       Console.WriteLine();

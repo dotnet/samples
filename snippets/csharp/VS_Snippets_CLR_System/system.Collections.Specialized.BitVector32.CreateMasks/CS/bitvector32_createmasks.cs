@@ -1,10 +1,8 @@
 ﻿// The following code example shows how to create and use masks.
 
-
 // <snippet1>
 using System;
 using System.Collections.Specialized;
-
 
 public class SamplesBitVector32  {
 

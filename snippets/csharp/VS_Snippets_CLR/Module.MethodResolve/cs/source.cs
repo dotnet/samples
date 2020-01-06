@@ -100,7 +100,6 @@ namespace ResolveMethodExample
                 Console.WriteLine("{0}: {1}", ex.GetType(), ex.Message); 
             }
 
-
             // Case 2: A non-generic method call that is dependent on its generic context.
             //
             // Create and display a MethodInfo representing the MemberRef of the 
@@ -134,7 +133,6 @@ namespace ResolveMethodExample
                 Console.WriteLine("{0}: {1}", ex.GetType(), ex.Message); 
             }
 
-
             // Case 3: A generic method call that is independent of its generic context.
             //
             // Create and display a MethodInfo representing the MethodSpec of the 
@@ -159,7 +157,6 @@ namespace ResolveMethodExample
             // context, so the token can also be resolved by the simpler overload.
             miResolved2 = (MethodInfo) mod.ResolveMethod((int)Tokens.Case3);
 
-
             // Case 4: A non-generic method call that is independent of its generic context.
             //
             // Create and display a MethodInfo representing the MethodDef of the 
@@ -182,7 +179,6 @@ namespace ResolveMethodExample
             // The method call in this case does not depend on any enclosing generic
             // context, so the token can also be resolved by the simpler overload.
             miResolved2 = (MethodInfo) mod.ResolveMethod((int)Tokens.Case4);
-
 
             // Case 5: Generic method call in a non-generic context.
             //

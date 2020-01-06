@@ -57,7 +57,6 @@ namespace UIAIToggleProvider_snip
 
             //}
 
-
         }
 
         #region Private/Internal methods

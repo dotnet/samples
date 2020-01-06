@@ -62,6 +62,5 @@ namespace Microsoft.ServiceModel.Samples
             client.Close();
         }
 
-
     }
 }

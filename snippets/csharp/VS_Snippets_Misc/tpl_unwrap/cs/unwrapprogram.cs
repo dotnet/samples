@@ -26,7 +26,6 @@ class IntroSnippets
     }
     //</snippet01>
 
-   
     static void Main()
     {
         //<snippet02>
@@ -46,7 +45,6 @@ class IntroSnippets
         Console.WriteLine(t.Result);
         //</snippet03>
 
-
         Console.ReadKey();
     }
 
@@ -61,9 +59,7 @@ class IntroSnippets
     
 }
 
-
 //<snippet04>
-
 
 namespace Unwrap
 {

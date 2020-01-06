@@ -7,8 +7,6 @@
       'Reset ForeColor' button is clicked foreground color is reset to its default value. 
    */
 
-
-
     using System;
     using System.Drawing;
     using System.Windows.Forms;

@@ -31,7 +31,6 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using System.Collections;
 
-
 namespace ElementProvider
 {
     class MyListItem : IRawElementProviderFragment

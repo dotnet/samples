@@ -64,7 +64,6 @@ public class Account : ServicedComponent
         }
     }
 
-
     // A boolean data member that determines whether to commit or abort the transaction.
     private bool commit;
 
@@ -79,8 +78,6 @@ public class Account : ServicedComponent
             commit = value;
         }
     }
-
-
 
     // Debit the account, 
     public void DebitAccount (int ammount)
@@ -124,7 +121,6 @@ public class Account : ServicedComponent
 
 }
 // </snippet10>
-
 
 // <snippet20>
 // A CRM Compensator

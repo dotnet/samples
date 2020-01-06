@@ -31,8 +31,7 @@
        PrintValues( myBA2, 8 );
        Console.WriteLine();
     }
- 
- 
+
     public static void PrintValues( IEnumerable myList, int myWidth )  {
        int i = myWidth;
        foreach ( Object obj in myList ) {

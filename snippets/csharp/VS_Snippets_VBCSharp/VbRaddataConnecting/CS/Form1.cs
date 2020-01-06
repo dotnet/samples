@@ -75,7 +75,6 @@ namespace ObjectBindingWalkthrough
         }
         //</Snippet4>
 
-
         private void LoadOrders(Customer currentCustomer)
         {
             NorthwindDataSet.OrdersDataTable orderData = 

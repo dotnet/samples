@@ -14,7 +14,6 @@ using System.Text;
 using System.Windows.Forms;
 #endregion
 
-
 namespace CSWinFormDataGridView.CustomDataGridViewColumn
 {
     /// <summary>
@@ -51,7 +50,6 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
             return value ? DataGridViewTriState.True
                          : DataGridViewTriState.False;
         }
-
 
         /// <summary>
         /// The template cell that will be used for this column by default,
@@ -130,7 +128,6 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
                 }
             }
         }
-
 
         /// <summary>
         /// By default, the MaskedTextBox uses the underscore (_) character

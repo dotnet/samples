@@ -88,7 +88,6 @@ namespace Unsecured
         double Add(double a, double b);
     }
 
-
     public class Calculator : ICalculator
     {
         public double Add(double a, double b)

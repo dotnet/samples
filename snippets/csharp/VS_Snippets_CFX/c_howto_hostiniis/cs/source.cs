@@ -47,7 +47,6 @@ namespace Microsoft.ServiceModel.Samples
     //</snippet12>
 //</snippet1>
 
-
     public class Test
     {
         public static void Main()

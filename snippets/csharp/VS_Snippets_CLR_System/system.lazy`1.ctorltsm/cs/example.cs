@@ -14,7 +14,6 @@ class Program
         lazyLargeObject = new Lazy<LargeObject>(LazyThreadSafetyMode.PublicationOnly);
         //</SnippetNewLazy>
 
-
         // Create and start 3 threads, passing the same blocking event to all of them.
         ManualResetEvent startingGate = new ManualResetEvent(false);
         Thread[] threads = { new Thread(ThreadProc), new Thread(ThreadProc), new Thread(ThreadProc) };
@@ -46,7 +45,6 @@ class Program
         Console.WriteLine("Press Enter to end the program");
         Console.ReadLine();
     }
-
 
     static void ThreadProc(object state)
     {

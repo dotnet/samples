@@ -27,7 +27,6 @@ public class Example
                      aTimer.Interval);
         aTimer.Enabled = true;
 
-        
         Console.WriteLine("Press the Enter key to exit the program... ");
         Console.ReadLine();
         foreach (var item in eventlog)

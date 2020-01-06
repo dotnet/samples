@@ -58,7 +58,6 @@ namespace Snippets
             //</snippet15>
         }
 
-
         static void Main()
         {
 
@@ -123,9 +122,6 @@ namespace Snippets
             LocalClientSecuritySettings clone =
                 settings.Clone();
             // </Snippet14>
-
-
-
 
         }
     }

@@ -14,11 +14,8 @@ namespace ControlProps
     /// Interaction logic for Pane1.xaml
     /// </summary>
 
-
     public partial class Pane1 : StackPanel
     {
-
-
 
         // To use PaneLoaded put Loaded="PaneLoaded" in root element of .xaml file.
         // private void PaneLoaded(object sender, EventArgs e) {}

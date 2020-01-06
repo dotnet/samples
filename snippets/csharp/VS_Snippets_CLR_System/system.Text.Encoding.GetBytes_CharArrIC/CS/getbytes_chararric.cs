@@ -35,7 +35,6 @@ public class SamplesEncoding  {
 
    }
 
-
    public static void PrintCountsAndBytes( char[] chars, int index, int count, Encoding enc )  {
 
       // Display the name of the encoding used.
@@ -60,7 +59,6 @@ public class SamplesEncoding  {
       PrintHexBytes( bytes );
 
    }
-
 
    public static void PrintHexBytes( byte[] bytes )  {
 

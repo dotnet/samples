@@ -10,8 +10,6 @@ public class Form1: Form
     protected DataSet DataSet1;
     protected DataGrid dataGrid1;
 
-
-
     private void DemonstrateDataView()
     {
         // Create one DataTable with one column.

@@ -69,7 +69,6 @@ namespace Samples.AspNet
 
         }
 
-
         static void Main(string[] args)
         {
 

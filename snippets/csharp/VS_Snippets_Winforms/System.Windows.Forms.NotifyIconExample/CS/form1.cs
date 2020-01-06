@@ -80,7 +80,6 @@ public class Form1:
 		NotifyIcon1.Click +=new System.EventHandler(NotifyIcon1_Click);
 	}
 
-
 	// When user clicks the left mouse button display the shortcut menu.  
 	// Use the SystemInformation.PrimaryMonitorMaximizedWindowSize property
 	// to place the menu at the lower corner of the screen.

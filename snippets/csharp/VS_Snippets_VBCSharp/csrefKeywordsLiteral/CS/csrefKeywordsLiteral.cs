@@ -55,7 +55,6 @@ namespace NullExamples
             // Returns true.
             Console.WriteLine("null == null is {0}", null == null);
 
-
             // A value type cannot be null
             // int i = null; // Compiler error!
 

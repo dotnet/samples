@@ -123,7 +123,6 @@ namespace EventLogSamples
                         mySourceData.Source, sourceLog);
                 }
             }
-        
 
             if (registerSource)
             {

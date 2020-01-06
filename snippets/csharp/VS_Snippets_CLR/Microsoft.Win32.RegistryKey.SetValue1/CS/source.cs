@@ -25,7 +25,6 @@ public class Example
         // the overload that allows you to specify RegistryValueKind.
         rk.SetValue("StringValue", "The path is %PATH%");
 
-
         // Display all name/value pairs stored in the test key, with each
         // registry data type in parentheses.
         //

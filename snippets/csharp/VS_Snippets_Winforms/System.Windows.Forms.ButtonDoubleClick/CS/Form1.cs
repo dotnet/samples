@@ -27,7 +27,6 @@ namespace MouseRollBackSingleClick
            
         }
 
-        
         // Handle the double click event.
         void button1_DoubleClick(object sender, EventArgs e)
         {
@@ -49,7 +48,6 @@ namespace MouseRollBackSingleClick
             Application.Run(new Form1());
         }
 
-        
     }
 //<snippet2>
     public class DoubleClickButton : Button

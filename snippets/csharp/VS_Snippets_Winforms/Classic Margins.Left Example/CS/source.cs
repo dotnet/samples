@@ -11,7 +11,6 @@ public class Sample : Form {
     protected string printer;
     protected Font printFont;
 
-
 // <Snippet1>
  public void Printing()
  {

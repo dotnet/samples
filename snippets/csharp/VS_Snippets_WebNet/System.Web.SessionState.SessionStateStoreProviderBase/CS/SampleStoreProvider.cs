@@ -11,7 +11,6 @@ using System.Data.Odbc;
 using System.Diagnostics;
 using System.IO;
 
-
 /*
 This session state store provider supports the following schema:
 
@@ -60,7 +59,6 @@ namespace Samples.AspNet.Session
       "An exception occurred. Please contact your administrator.";
     private string pApplicationName;
 
-
     //
     // If false, exceptions are thrown to the caller. If true,
     // exceptions are written to the event log.
@@ -74,7 +72,6 @@ namespace Samples.AspNet.Session
       set { pWriteExceptionsToEventLog = value; }
     }
 
-
     //
     // The ApplicationName property is used to differentiate sessions
     // in the data source by application.
@@ -84,7 +81,6 @@ namespace Samples.AspNet.Session
     {
       get { return pApplicationName; }
     }
-
 
     public override void Initialize(string name, NameValueCollection config)
     {
@@ -107,14 +103,12 @@ namespace Samples.AspNet.Session
       // Initialize the abstract base class.
       base.Initialize(name, config);
 
-
       //
       // Initialize the ApplicationName property.
       //
 
       pApplicationName = 
         System.Web.Hosting.HostingEnvironment.ApplicationVirtualPath;
-
 
       //
       // Get <sessionState> configuration element.
@@ -125,7 +119,6 @@ namespace Samples.AspNet.Session
       pConfig = 
         (SessionStateSection)cfg.GetSection("system.web/sessionState");
 
-      
       //
       // Initialize connection string.
       //
@@ -141,7 +134,6 @@ namespace Samples.AspNet.Session
 
       connectionString = pConnectionStringSettings.ConnectionString;
 
-
       //
       // Initialize WriteExceptionsToEventLog
       //
@@ -155,7 +147,6 @@ namespace Samples.AspNet.Session
       }
     }
 
-
     //
     // SessionStateStoreProviderBase members
     //
@@ -163,7 +154,6 @@ namespace Samples.AspNet.Session
     public override void Dispose()
     {
     }
-
 
     //
     // SessionStateProviderBase.SetItemExpireCallback
@@ -173,7 +163,6 @@ namespace Samples.AspNet.Session
     {
       return false;
     }
-
 
     //
     // SessionStateProviderBase.SetAndReleaseItemExclusive
@@ -267,7 +256,6 @@ namespace Samples.AspNet.Session
       }
     }
 
-
     //
     // SessionStateProviderBase.GetItem
     //
@@ -283,7 +271,6 @@ namespace Samples.AspNet.Session
         out lockAge, out lockId, out actionFlags);
     }
 
-
     //
     // SessionStateProviderBase.GetItemExclusive
     //
@@ -298,7 +285,6 @@ namespace Samples.AspNet.Session
       return GetSessionStoreItem(true, context, id, out locked, 
         out lockAge, out lockId, out actionFlags);
     }
-
 
     //
     // GetSessionStoreItem is called by both the GetItem and 
@@ -405,7 +391,6 @@ namespace Samples.AspNet.Session
         }
         reader.Close();
 
-
         // If the returned session item is expired, 
         // delete the record from the data source.
         if (deleteData)   
@@ -465,9 +450,6 @@ namespace Samples.AspNet.Session
 
       return item;
     }
-
-
-
 
     //
     // Serialize is called by the SetAndReleaseItemExclusive method to 
@@ -555,7 +537,6 @@ namespace Samples.AspNet.Session
       }      
     }
 
-
     //
     // SessionStateProviderBase.RemoveItem
     //
@@ -594,8 +575,6 @@ namespace Samples.AspNet.Session
         conn.Close();
       } 
     }
-
-
 
     //
     // SessionStateProviderBase.CreateUninitializedItem
@@ -647,7 +626,6 @@ namespace Samples.AspNet.Session
       }
     }
 
-
     //
     // SessionStateProviderBase.CreateNewStoreData
     //
@@ -660,8 +638,6 @@ namespace Samples.AspNet.Session
         SessionStateUtility.GetSessionStaticObjects(context),
         timeout);
     }
-
-
 
     //
     // SessionStateProviderBase.ResetItemTimeout
@@ -702,7 +678,6 @@ namespace Samples.AspNet.Session
       }
     }
 
-
     //
     // SessionStateProviderBase.InitializeRequest
     //
@@ -711,7 +686,6 @@ namespace Samples.AspNet.Session
     {
     }
 
-
     //
     // SessionStateProviderBase.EndRequest
     //
@@ -719,7 +693,6 @@ namespace Samples.AspNet.Session
     public override void EndRequest(HttpContext context)
     {
     }
-
 
     //
     // WriteToEventLog

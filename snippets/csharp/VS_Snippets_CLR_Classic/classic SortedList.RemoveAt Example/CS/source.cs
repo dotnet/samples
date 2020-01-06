@@ -35,8 +35,7 @@
        Console.WriteLine( "After removing the element at index 5:" );
        PrintKeysAndValues( mySL );
     }
- 
- 
+
     public static void PrintKeysAndValues( SortedList myList )  {
        Console.WriteLine( "\t-KEY-\t-VALUE-" );
        for ( int i = 0; i < myList.Count; i++ )  {

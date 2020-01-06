@@ -32,8 +32,6 @@ public class Example
 }
 // </Snippet8>
 
-
-
 [Serializable] public struct PersonTable
 {
    public readonly int nColumns;

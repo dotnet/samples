@@ -9,7 +9,6 @@ using System.Windows.Navigation;
 namespace Microsoft.Samples.Graphics.Geometries
 {
 
-
     public partial class app : Application
     {
     
@@ -27,7 +26,6 @@ namespace Microsoft.Samples.Graphics.Geometries
             this.MainWindow = myWindow;
             base.OnStartup(e);       
         }
-       
-        
+
     }
 }

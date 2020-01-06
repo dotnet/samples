@@ -9,7 +9,6 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Reflection;
 using System.Security.Permissions;
 
-
 // Person is a serializable base class.
 [Serializable]
 public class Person
@@ -130,7 +129,6 @@ public class Manager : Employee, ISerializable
         return String.Format("{0} -> {1}", title, base.ToString());
     }
 }
-
 
 public sealed class App
 {

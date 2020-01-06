@@ -38,7 +38,6 @@ namespace AsyncOperationManagerExample
         private int progressCounter;
         private int progressInterval = 100;
 
-
         #endregion // Private fields
 
         /////////////////////////////////////////////////////////////
@@ -65,7 +64,6 @@ namespace AsyncOperationManagerExample
                 new EventHandler(listView1_SelectedIndexChanged);
 		}
 
-		
 		protected override void Dispose( bool disposing )
 		{
 			if( disposing )
@@ -79,7 +77,6 @@ namespace AsyncOperationManagerExample
 		}
 
         #endregion // Construction and destruction
-
 
         /////////////////////////////////////////////////////////////
         //
@@ -545,7 +542,6 @@ namespace AsyncOperationManagerExample
 			Application.Run(new PrimeNumberCalculatorMain());
         }
 
-
     }
 
     // <snippet30>
@@ -936,7 +932,6 @@ namespace AsyncOperationManagerExample
             // will cause an exception to be thrown.
         }
         // </snippet26>
-
 
         #endregion
 

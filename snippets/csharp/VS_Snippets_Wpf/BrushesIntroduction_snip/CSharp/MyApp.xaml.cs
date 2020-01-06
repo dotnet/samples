@@ -6,10 +6,8 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.IO;
 
-
 namespace BrushesIntroduction
 {
-
 
     public partial class MyApp : Application
     {
@@ -21,7 +19,6 @@ namespace BrushesIntroduction
             myNavigationWindow.Navigate(new SampleViewer());
             myNavigationWindow.Show();
         }
-        
 
         private void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs args)
         {
@@ -35,12 +32,10 @@ namespace BrushesIntroduction
             {
             
             }
-            
-            
+
             MessageBox.Show("Unhandled exception: " + args.ExceptionObject.ToString());
         }     
     
     }
-
 
 }

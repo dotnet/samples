@@ -5,7 +5,6 @@ using System.Windows.Media;
 using System.Windows.Input;
 using System.Collections.Generic;
 
-
 namespace MyAquarium {
 
   public partial class MyCode : Page {

@@ -33,7 +33,6 @@ namespace QueueResults
             InitializeComponent();
         }
 
-
         //<snippet2>
         private async void StartButton_Click(object sender, RoutedEventArgs e)
         {
@@ -57,7 +56,6 @@ namespace QueueResults
             }
         }
         //</snippet2>
-
 
         //<snippet3>
         private async Task<char> AccessTheWebAsync(char grp)
@@ -84,7 +82,6 @@ namespace QueueResults
         }
         //</snippet3>
 
-
         //<snippet4>
         private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] contentTasks, char grp)
         {
@@ -109,7 +106,6 @@ namespace QueueResults
         }
         //</snippet4>
 
-
         // ***Add a parameter for the group label.
         private void DisplayResults(string url, byte[] content, int pos, char grp)
         {
@@ -121,7 +117,6 @@ namespace QueueResults
             // Display position in the URL list, the URL, and the number of bytes.
             ResultsTextBox.Text += string.Format("\r\n{0}-{1}. {2,-58} {3,8}", grp, pos + 1, displayURL, content.Length);
         }
-
 
         private List<string> SetUpURLList()
         {

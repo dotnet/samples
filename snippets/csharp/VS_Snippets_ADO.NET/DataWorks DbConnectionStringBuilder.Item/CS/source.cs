@@ -2,7 +2,6 @@
 using System.Data;
 using System.Data.Common;
 
-
 class Program
 {
     // <Snippet1>

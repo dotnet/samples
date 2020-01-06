@@ -3,8 +3,7 @@ namespace Samples.AspNet.CS.Controls {
     using System;
     using System.Web.UI;
     using System.Web.UI.WebControls;
-    
-    
+
     public class SomeDataBoundControl : DataBoundControl
     {
         // Implementation of a custom data source control.

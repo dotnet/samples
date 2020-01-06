@@ -7,8 +7,6 @@ using System.Windows.Media;
 using System.Windows.Shapes;
 using System.Windows.Navigation;
 
-
-
 namespace FrameSnips
 {
     /// <summary>
@@ -56,7 +54,6 @@ namespace FrameSnips
 	   //<SnippetFrameNavigateUriObject>
             myFrame.Navigate(new Uri("http://www.yahoo.com"),myFrame);
            //</SnippetFrameNavigateUriObject>
- 
 
            //<SnippetFrameNavigateRefresh>
            myFrame.Refresh();
@@ -67,7 +64,6 @@ namespace FrameSnips
         {
             
         }
-        
 
     }
 }

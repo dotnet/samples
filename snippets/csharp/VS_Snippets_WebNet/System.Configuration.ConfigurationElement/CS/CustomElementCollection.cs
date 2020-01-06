@@ -44,7 +44,6 @@ namespace Samples.AspNet
         }
         //</Snippet54>
 
-
         //<Snippet55>
         protected override 
             ConfigurationElement CreateNewElement(
@@ -54,7 +53,6 @@ namespace Samples.AspNet
         }
         //</Snippet55>
 
-
         //<Snippet56>
         protected override Object 
             GetElementKey(ConfigurationElement element)
@@ -62,7 +60,6 @@ namespace Samples.AspNet
             return ((UrlConfigElement)element).Name;
         }
         //</Snippet56>
-
 
         // <Snippet57>
         public new string AddElementName
@@ -102,7 +99,6 @@ namespace Samples.AspNet
             get { return base.Count; }
         }
         //</Snippet60>
-
 
         //<Snippet61>
         public UrlConfigElement this[int index]

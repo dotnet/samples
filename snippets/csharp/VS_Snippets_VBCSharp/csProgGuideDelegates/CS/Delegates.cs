@@ -30,7 +30,6 @@ class DelegatesIntro
         PerformCalculation p = (a,b) => a * b;
         p = (n,b) => n = 5 * n;
         Console.WriteLine(p(6,6));
-        
 
         perf = Multiply;
         Console.WriteLine(perf(2,3));
@@ -76,7 +75,6 @@ class TestStuffAgain
     }
     //</Snippet13>
 
-
     public void DoWork()
     {
         //<Snippet14>
@@ -88,7 +86,6 @@ class TestStuffAgain
         // C# 2.0 provides a simpler way to declare an instance of Del.
         Del del2 = Notify;
         //</Snippet32>
-
 
         //<Snippet15>
         // Instantiate Del by using an anonymous method.
@@ -102,18 +99,15 @@ class TestStuffAgain
         //</Snippet31>
     }
 
-
     //<Snippet20>
     public delegate int PerformCalculation(int x, int y);
     //</Snippet20>
-
 
     class DelegateExamples
     {
         //<Snippet21>
         public delegate void Del(string message);
         //</Snippet21>
-
 
         //<Snippet22>
         // Create a method for a delegate.
@@ -123,7 +117,6 @@ class TestStuffAgain
         }
         //</Snippet22>
 
-
         //<Snippet24>
         public static void MethodWithCallback(int param1, int param2, Del callback)
         {
@@ -131,10 +124,8 @@ class TestStuffAgain
         }
         //</Snippet24>
 
-
         void Method1(string message) { }
         void Method2(string message) { }
-
 
         void DoWork()
         {
@@ -175,7 +166,6 @@ class TestStuffAgain
         }
     }
 
-
     //<Snippet26>
     public class MethodClass
     {
@@ -183,7 +173,6 @@ class TestStuffAgain
         public void Method2(string message) { }
     }
     //</Snippet26>
-
 
     //<Snippet30>
     delegate void Delegate1();
@@ -200,7 +189,6 @@ class TestStuffAgain
     }
     //</Snippet30>
 }
-
 
 //-----------------------------------------------------------------------------
 namespace WrapNamedMethods1
@@ -242,7 +230,6 @@ namespace WrapNamedMethods1
     */
     //</Snippet2>
 }
-
 
 //-----------------------------------------------------------------------------
 namespace WrapNamedMethods2
@@ -323,7 +310,6 @@ namespace WrapCovariance
     }
     //</Snippet9>
 }
-
 
 //-----------------------------------------------------------------------------
 namespace WrapContravariance
@@ -414,11 +400,7 @@ namespace WrapContravariance
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
 
-
-
     }
-
-
 
     //-----------------------------------------------------------------------------
     namespace WrapContravariance
@@ -491,7 +473,6 @@ namespace WrapContravariance
         //</Snippet11>
     }
 
-
     //-----------------------------------------------------------------------------
     namespace WrapDelegateBookstore
     {
@@ -549,7 +530,6 @@ namespace WrapContravariance
                 }
             }
         }
-
 
         // Using the Bookstore classes:
         namespace BookTestClient

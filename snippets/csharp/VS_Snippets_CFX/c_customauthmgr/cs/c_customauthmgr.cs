@@ -63,7 +63,6 @@ namespace Samples
 	}
   }
 
-
   class Program
   {
 	public static void Main()

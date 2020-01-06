@@ -31,7 +31,6 @@ namespace Coding_Conventions_Examples
                 PerformanceCounterCategory();
             //</snippet1>
 
-
             int val1 = 1;
             int val2 = 2;
             int val3 = 3;
@@ -46,7 +45,6 @@ namespace Coding_Conventions_Examples
             // The following declaration creates a query. It does not run
             // the query.
             //</snippet3>
-
 
             // Save snippet 4 and 5 for possible additions in program structure.
 
@@ -118,7 +116,6 @@ namespace Coding_Conventions_Examples
             // Preferred syntax. Note that you cannot use var here instead of string[].
             string[] vowels1 = { "a", "e", "i", "o", "u" };
 
-
             // If you use explicit instantiation, you can use var.
             var vowels2 = new string[] { "a", "e", "i", "o", "u" };
 
@@ -128,7 +125,6 @@ namespace Coding_Conventions_Examples
             vowels3[1] = "e";
             // And so on.
             //</snippet13>
-
 
             //<snippet15>
             // In the Main method, create an instance of Del.
@@ -162,14 +158,12 @@ namespace Coding_Conventions_Examples
                 }
             }
 
-
             // You can do the same thing with a using statement.
             using (Font font2 = new Font("Arial", 10.0f))
             {
                 byte charset = font2.GdiCharSet;
             }
             //</snippet17>
-
 
             //<snippet18>
             Console.Write("Enter a dividend: ");
@@ -219,7 +213,6 @@ namespace Coding_Conventions_Examples
             // Save 24 in case we add an exxample to Static Members.
 
             ExampleClass.totalInstances = 1;
-            
 
             var customers = new List<Customer> 
             {
@@ -263,7 +256,6 @@ namespace Coding_Conventions_Examples
 
             // #30 is in class CompoundFrom
 
-
             var customerDistributorNames =
                 from customer in customers
                 join distributor in distributors on customer.City equals distributor.City
@@ -306,7 +298,6 @@ namespace Coding_Conventions_Examples
         }
         //</snippet16>
     }
-
 
     class Name
     {
@@ -441,7 +432,6 @@ namespace Coding_Conventions_WF2
         }
     }
 }
-
 
 namespace Coding_Conventions_WF2
 {

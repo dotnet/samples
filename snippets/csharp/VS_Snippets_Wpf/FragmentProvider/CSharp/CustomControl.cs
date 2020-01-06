@@ -80,7 +80,6 @@ namespace CustomControls
             itemsArray = new ArrayList();
         }
 
-
         /// <summary>
         /// Gets the maximum number of items the list can accommodate. For this example, this is constrained
         /// by the size of the window so that we do not have to handle scrolling.
@@ -229,7 +228,6 @@ namespace CustomControls
         }
 
         #endregion Public Methods
-
 
         #region Private/Internal methods
 
@@ -419,7 +417,6 @@ namespace CustomControls
 
         #endregion Private/Internal methods
 
-
         #region UI Automation related methods
 
         /// <summary>
@@ -479,8 +476,6 @@ namespace CustomControls
         #endregion UI Automation related methods
     }  // End class
 
-
-    
     public class CustomListItem 
     {
         bool ItemIsSelected = false;
@@ -629,7 +624,6 @@ namespace CustomControls
             }
         }
 
-        
         /// <summary>
         /// Gets and sets the UI Automation provider for the item.
         /// </summary>
@@ -645,7 +639,6 @@ namespace CustomControls
                 ItemProvider = value;
             }
         }
-        
-         
+
     }
 }

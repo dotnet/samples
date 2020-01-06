@@ -71,7 +71,6 @@ using System.Threading;
       public void Run()
       {
 
-
          for (int i = 1; i <= 5; i++)
          {
             myString = "Step number " + i.ToString() + " executed";

@@ -43,8 +43,7 @@ namespace XMLProcessingApp
             {
                 _doc = _xmlHelperMethods.LoadDocument(generateXML);
             }
-            
-            
+
             if (_doc == null)
             {
                 MessageBox.Show("Unable to load XML file or schema. The XML file or schema validation file does not exist. Consider generating the XML file and/or schema file");
@@ -69,7 +68,6 @@ namespace XMLProcessingApp
             xmlTreeView.ExpandAll();  
         }
 
-        
         //************************************************************************************
         //
         // Helper method for populating the TreeView control with the elements of the XML file.
@@ -226,7 +224,6 @@ namespace XMLProcessingApp
             editGenreTextBox.Text = genre;
         }
 
- 
         //************************************************************************************
         //
         // Add an XML Element to the XMLDocument object.
@@ -288,7 +285,6 @@ namespace XMLProcessingApp
                 MessageBox.Show("Please load the XML first by using the Load XML tab");
             }
 
- 
         }
 
         //************************************************************************************
@@ -839,38 +835,7 @@ namespace XMLProcessingApp
             RemoveFilter();
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
-
-
-
-
 
     }
 

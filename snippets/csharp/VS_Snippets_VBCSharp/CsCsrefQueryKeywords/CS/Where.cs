@@ -29,7 +29,6 @@ namespace Where
     //Output: 4 1 3 2 0
     //</snippet5>
 
-
     //<snippet6>
 class WhereSample2
 {

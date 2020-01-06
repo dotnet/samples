@@ -14,7 +14,6 @@ using System.Windows.Media.Animation;
 using System.Windows.Documents;
 using System.Windows.Input;
 
-
 namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
 {
     public class FrameworkContentElementStoryboardWithHandoffBehaviorExample : 
@@ -51,13 +50,11 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
             // animations.      
             this.RegisterName("animatedTransform", animatedTransform);             
             animatedSpecialEffect.Transform = animatedTransform;
-            
-            
+
             // Apply the text effect to the run.
             theText.TextEffects = new TextEffectCollection();
             theText.TextEffects.Add(animatedSpecialEffect);
-            
-            
+
             // Create a paragraph to contain the run.
             Paragraph animatedParagraph = new Paragraph(theText);
             animatedParagraph.Background = Brushes.LightGray;           
@@ -90,8 +87,6 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
                 new MouseButtonEventHandler(document_mouseRightButtonDown);
             
         }
-              
-        
 
         // When the user left-clicks, use the 
         // SnapshotAndReplace HandoffBehavior when applying the animation.        
@@ -99,8 +94,7 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
         {
         
             Point clickPoint = Mouse.GetPosition(this);
-            
-      
+
             // Animate to the target point.
             xAnimation.To = clickPoint.X; 
             yAnimation.To = clickPoint.Y;
@@ -119,7 +113,6 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
         // Compose HandoffBehavior when applying the animation.
         private void document_mouseRightButtonDown(object sender, MouseButtonEventArgs e)
         {
-        
 
             Point clickPoint = Mouse.GetPosition(this);
 
@@ -127,13 +120,8 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
             xAnimation.To = clickPoint.X;
             yAnimation.To = clickPoint.Y;
             myStoryboard.Begin(this, HandoffBehavior.Compose);  
-            
-                    
-        }        
-        
-   
 
- 
+        }        
 
     }
 }

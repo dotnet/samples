@@ -2,7 +2,6 @@
 // and the TextBoxBase.ScrollToCaret,  and TextBox.HideSelection methods.
 // It also demonstrates and handling the TextBox.Click event.
 
-
 using System.Windows.Forms;
 
 public class Form1:
@@ -62,7 +61,6 @@ public class Form1:
 		this.RichTextBox1.TabIndex = 0;
 		this.RichTextBox1.Text = "and the text will be added here.";
 		//
-
 
 		//Form1
 		//

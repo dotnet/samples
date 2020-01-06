@@ -25,7 +25,6 @@ namespace CS
         }
         //</Snippet23>
 
-
         //---------------------------------------------------------------------
         //<Snippet24>
         private void UpdateCustomer(Customer cust)
@@ -56,7 +55,6 @@ namespace CS
         }
         //</Snippet24>
 
-
         //---------------------------------------------------------------------
         //<Snippet25>
         private void DeleteCustomer(Customer cust)
@@ -76,7 +74,6 @@ namespace CS
         }
         //</Snippet25>
 
-
         //---------------------------------------------------------------------
         private void customersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -95,13 +92,11 @@ namespace CS
             //</Snippet9>
         }
 
-
         //---------------------------------------------------------------------
         public Form3()
         {
             InitializeComponent();
         }
-
 
         //---------------------------------------------------------------------
         private void Form3_Load(object sender, EventArgs e)

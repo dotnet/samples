@@ -10,7 +10,6 @@ using System.Runtime.Serialization;
 
 using System.Text;
 
-
 namespace Microsoft.WCF.Documentation
 {
     public class Snippets
@@ -34,8 +33,7 @@ namespace Microsoft.WCF.Documentation
                 new Uri
 		    ("http://localhost:8003/servicemodelsamples/service/incode/identity"),
 		    endpointIdentity, addressHeaders);
-	    
-	    
+
             // </Snippet2>
         }
 
@@ -218,7 +216,6 @@ namespace Microsoft.WCF.Documentation
             // </Snippet12>          
         }
 
-
 	public static void SnippetAnonymousUri()
 	{
 		//<Snippet13>
@@ -257,7 +254,6 @@ namespace Microsoft.WCF.Documentation
 		AddressHeaderCollection headerCollection = endpointAddress.Headers;
 		//</Snippet14>
 	}
-
 
 	public static void SnippetIdentity()
 	{
@@ -301,7 +297,6 @@ namespace Microsoft.WCF.Documentation
 		//</Snippet16>
 	}
 
-
 	public static void SnippetIsNone()
 	{
 
@@ -322,7 +317,6 @@ namespace Microsoft.WCF.Documentation
 		 bool isNone = endpointAddress.IsNone;
 		//</Snippet17>
 	}
-
 
 	public static void SnippetNoneUri()
 	{
@@ -407,7 +401,6 @@ namespace Microsoft.WCF.Documentation
 		int hashCode = endpointAddress.GetHashCode();
 		//</Snippet21>
 	}	
-
 
 	public static void Snippetop_Inequality()
 	{
@@ -668,8 +661,6 @@ namespace Microsoft.WCF.Documentation
 	    // </Snippet34>
 
 	}
-
-
 
     }
 }

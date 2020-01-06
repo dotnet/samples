@@ -108,8 +108,7 @@ namespace LINQGettingStarted_1
             //</snippet6>            
         }
     }
-    
-    
+
     //<snippet7>
     class Student
     {
@@ -245,7 +244,6 @@ namespace LINQGettingStarted_1
           </student>
        </Root>
     */
-    
 
     //<snippet10>
     class FormatQuery
@@ -596,7 +594,6 @@ namespace LINQGettingStarted_1
         }
         //</snippet31>
 
-
         class BasicQueryOperations
         {
             class Customer 
@@ -612,7 +609,6 @@ namespace LINQGettingStarted_1
                 public string City { get; set; }
                 public int ID { get; set; }
             }
-
 
             static void Main()
             {
@@ -630,7 +626,6 @@ namespace LINQGettingStarted_1
                                          where cust.City == "London"
                                          select cust;
               //</snippet24>
-                                        
 
               IEnumerable<Customer> queryLondonCustomers2 = 
                                         from cust in customers

@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
  using System;
  using System.Collections;
  public class SamplesHashtable
@@ -29,8 +29,7 @@
        Console.WriteLine("After removing \"lazy\":");
        PrintKeysAndValues(myHT);
     }
- 
- 
+
     public static void PrintKeysAndValues(Hashtable myHT)
     {
        foreach (DictionaryEntry de in myHT)

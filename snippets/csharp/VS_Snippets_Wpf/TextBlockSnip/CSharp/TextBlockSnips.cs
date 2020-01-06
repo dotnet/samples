@@ -37,11 +37,9 @@ namespace SDKSample
             myTextBlock.Text = "Hello, world!";
             // </Snippet1>
 
-
             // Add child element to the parent StackPanel
             myStackPanel.Children.Add(myTextBlock);
-       
-          
+
             // Add the StackPanel as the Content of the Parent Window Object
             mainWindow.Content = myStackPanel;
             mainWindow.Show ();

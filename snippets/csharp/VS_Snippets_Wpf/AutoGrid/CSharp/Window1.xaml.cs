@@ -23,11 +23,7 @@ namespace SDKSample
 
         }
 
-
-
-
         /////////////////// Event Handlers
-
 
 //<SnippetRoutedPropertyChangedEvent>
         private void OnChildrenCountChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
@@ -76,9 +72,7 @@ namespace SDKSample
             t.Text = columnCount.ToString();
         }
 
-
     }
-
 
      /// <summary>
     /// AutoIndexingGrid - sample implementation of auto indexing, row primary grid

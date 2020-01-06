@@ -4,7 +4,6 @@ using System.ServiceModel;
 namespace Samples
 {
 
-
    //<snippet1>
    [ServiceContract]
    public class CalculatorService
@@ -35,7 +34,6 @@ namespace Samples
    } 
 
     //</snippet1>
-
 
     public class Test
     {

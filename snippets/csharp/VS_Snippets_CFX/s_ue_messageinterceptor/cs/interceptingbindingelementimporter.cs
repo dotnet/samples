@@ -9,7 +9,6 @@ using System.ServiceModel;
 using System.ServiceModel.Channels;
 using System.Xml;
 
-
 namespace Microsoft.ServiceModel.Samples
 {
     public abstract class InterceptingBindingElementImporter: IPolicyImportExtension

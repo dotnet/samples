@@ -31,8 +31,7 @@ namespace VbPowerPacksDataRepeaterLayoutCS
             this.employeesTableAdapter.Fill(this.northwindDataSet.Employees);
 
         }
-        
-        
+
         private void button1_Click(object sender, EventArgs e)
         {
             // <Snippet1>

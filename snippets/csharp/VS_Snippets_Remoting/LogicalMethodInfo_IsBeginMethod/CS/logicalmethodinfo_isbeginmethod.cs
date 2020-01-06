@@ -10,7 +10,6 @@ using System;
 using System.Reflection;
 using System.Web.Services.Protocols;
 
-
 public class IsBeginMethodClass
 {
    public static void Main()

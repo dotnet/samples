@@ -15,8 +15,7 @@ namespace Microsoft.Samples.MatrixExamples
 
     public class MatrixExample : Page
     {
-    
-        
+
         public MatrixExample()
         {
             
@@ -67,9 +66,7 @@ namespace Microsoft.Samples.MatrixExamples
             identityExampleText.Text = 
                 identityExample().ToString();
             mainPanel.Children.Add(identityExampleText);   
-            
-          
-            
+
             TextBlock appendExampleText = new TextBlock();
             appendExampleText.Text = 
                 appendExample().ToString();
@@ -139,8 +136,6 @@ namespace Microsoft.Samples.MatrixExamples
 
         }
         // </SnippetMatrixInverseExample_csharp>
-        
-
 
         // <SnippetMatrixRotateExample_csharp>
         private Matrix rotateExample()
@@ -158,7 +153,6 @@ namespace Microsoft.Samples.MatrixExamples
         }
         // </SnippetMatrixRotateExample_csharp>    
 
-
         // <SnippetMatrixRotateAboutPointExample_csharp>
         private Matrix rotateAboutPointExample()
         {
@@ -175,8 +169,6 @@ namespace Microsoft.Samples.MatrixExamples
         }
         // </SnippetMatrixRotateAboutPointExample_csharp>        
 
-
-
         // <SnippetMatrixPrependRotateExamples_csharp>
         // <SnippetMatrixPrependRotateExample_csharp>
         private Matrix prependRotateExample()
@@ -191,7 +183,6 @@ namespace Microsoft.Samples.MatrixExamples
             return myMatrix;
         }
         // </SnippetMatrixPrependRotateExample_csharp>
-
 
         // <SnippetMatrixPrependRotateAboutPointExample_csharp>
         private Matrix prependRotateAboutPointExample()
@@ -209,8 +200,7 @@ namespace Microsoft.Samples.MatrixExamples
         // </SnippetMatrixPrependRotateAboutPointExample_csharp>
         
         // </SnippetMatrixPrependRotateExamples_csharp>
-        
-        
+
         // <SnippetMatrixScaleExamples_csharp>
         
         private Matrix scaleExample()
@@ -243,8 +233,7 @@ namespace Microsoft.Samples.MatrixExamples
         }        
         
         // </SnippetMatrixScaleExamples_csharp>
- 
- 
+
         // <SnippetMatrixPrependScaleExamples_csharp>
         
         private Matrix scalePrependExample()
@@ -283,8 +272,7 @@ namespace Microsoft.Samples.MatrixExamples
         {
         
              Matrix myMatrix = new Matrix(5, 10, 15, 20, 25, 30);
-             
-             
+
              //
              // Transform a point.
              //            
@@ -320,13 +308,10 @@ namespace Microsoft.Samples.MatrixExamples
              // myVectorArray[0] becomes (450, 650).
              // myVectorArray[1] becomes (675, 1000).             
              myMatrix.Transform(myVectorArray);   
-                   
-        
+
         }
         // </SnippetMatrixTransformExamples_csharp>
- 
-       
-       
+
         // <SnippetMatrixDeterminantExample_csharp>
         private Double determinantExample()
         {
@@ -339,7 +324,6 @@ namespace Microsoft.Samples.MatrixExamples
                
         }
         // </SnippetMatrixDeterminantExample_csharp>
-        
 
         // <SnippetMatrixIdentityExample_csharp>
         private Matrix identityExample()
@@ -349,22 +333,16 @@ namespace Microsoft.Samples.MatrixExamples
             // (1,0,0,1,0,0). 
             Matrix myMatrix = Matrix.Identity;
 
-
             Matrix m = new Matrix(1,0,0,1,0,0);
 
             return myMatrix;
-            
-               
+
         }
         // </SnippetMatrixIdentityExample_csharp>
-        
-
-        
 
         // <SnippetMatrixAppendExample_csharp>        
         private Matrix appendExample()
         {
-
 
             Matrix matrix1 = new Matrix(5, 10, 15, 20, 25, 30);
             Matrix matrix2 = new Matrix(2, 4, 6, 8, 10, 12);
@@ -390,11 +368,9 @@ namespace Microsoft.Samples.MatrixExamples
             
             // Returns
             return myMatrix.GetHashCode();
-               
-        
+
         }
          // </SnippetMatrixGetHashCodeExample_csharp>
-         
 
         // <SnippetMatrixMultiplicationExample_csharp>        
         private void multiplicationExample()
@@ -409,12 +385,10 @@ namespace Microsoft.Samples.MatrixExamples
             // matrixResult2 is also
             // equal to (70,100,150,220,240,352) 
             Matrix matrixResult2 = matrix1 * matrix2;
-            
 
         }
         // </SnippetMatrixMultiplicationExample_csharp> 
-        
-        
+
         // <SnippetMatrixEqualityExample_csharp>        
         private void equalityExample()
         {
@@ -432,8 +406,7 @@ namespace Microsoft.Samples.MatrixExamples
 
         }
         // </SnippetMatrixEqualityExample_csharp>    
-        
-        
+
         // <SnippetMatrixParseExample_csharp>
         private Matrix parseExample()
         {
@@ -453,8 +426,7 @@ namespace Microsoft.Samples.MatrixExamples
             Matrix myMatrix = new Matrix(5, 10, 15, 20, 25, 30);
             
             myMatrix.Translate(5, 10);
-            
-            
+
             // myMatrix is equal to (5, 10, 15, 20, 30, 40).
             return myMatrix;
               
@@ -468,8 +440,7 @@ namespace Microsoft.Samples.MatrixExamples
             Matrix myMatrix = new Matrix(5, 10, 15, 20, 25, 30);
             
             myMatrix.TranslatePrepend(5, 10);
-            
-            
+
             // myMatrix is equal to (5, 10, 15, 20, 200, 280).
             return myMatrix;
               
@@ -483,8 +454,7 @@ namespace Microsoft.Samples.MatrixExamples
             Matrix myMatrix = new Matrix(5, 10, 15, 20, 25, 30);
             
             myMatrix.Skew(45, 180);
-            
-            
+
             // myMatrix is equal to (15, 10, 35, 20, 55, 30).
             return myMatrix;
               
@@ -498,8 +468,7 @@ namespace Microsoft.Samples.MatrixExamples
             Matrix myMatrix = new Matrix(5, 10, 15, 20, 25, 30);
             
             myMatrix.SkewPrepend(45, 180);
-            
-            
+
             // myMatrix is equal to (5, 10, 20, 30, 25, 30).
             return myMatrix;
               
@@ -509,7 +478,6 @@ namespace Microsoft.Samples.MatrixExamples
         // <SnippetMatrixPrependExample_csharp>
         private Matrix prependExample()
         {
-            
 
             Matrix matrix1 = new Matrix(5, 10, 15, 20, 25, 30);
             Matrix matrix2 = new Matrix(2, 4, 6, 8, 10, 12);
@@ -519,7 +487,6 @@ namespace Microsoft.Samples.MatrixExamples
             // matrix1 is equal to (70,100,150,220,255,370). 
             return matrix1;
 
-              
         }
         // </SnippetMatrixPrependExample_csharp>                  
 

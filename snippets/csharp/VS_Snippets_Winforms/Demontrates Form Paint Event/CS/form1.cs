@@ -16,8 +16,6 @@ namespace Demo1_CS
 		/// Required designer variable.
 		/// </summary>
 		private System.ComponentModel.Container components = null;
-		
-
 
 	public Form1()
 		{
@@ -33,8 +31,6 @@ namespace Demo1_CS
 			RcDraw = new Rectangle(0, 0, 0, 0);
 
 		}
-
-
 
 		/// <summary>
 		/// Clean up any resources being used.
@@ -137,6 +133,5 @@ namespace Demo1_CS
 
 		//</snippet1>
 
-		
 	}
 }

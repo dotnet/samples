@@ -4,7 +4,6 @@ using System.Collections;
 using System.Collections.Generic;
 //</Snippet20>
 
-
 // Iterators (C# and Visual Basic)
 // f45331db-d595-46ec-9142-551d3d1eb1a7
 
@@ -31,7 +30,6 @@ class Example21
     }
     //</Snippet21>
 }
-
 
 class Example22
 {
@@ -62,7 +60,6 @@ class Example22
     }
     //</Snippet22>
 }
-
 
 class Example23
 {
@@ -96,8 +93,6 @@ class Example23
     }
     //</Snippet23>
 }
-
-
 
 class Example24
 {
@@ -196,9 +191,7 @@ class Example24
     //</Snippet24>
 }
 
-
 // Snippets 25, 26, and 27 do not apply in C#.
-
 
 class Example28
 {

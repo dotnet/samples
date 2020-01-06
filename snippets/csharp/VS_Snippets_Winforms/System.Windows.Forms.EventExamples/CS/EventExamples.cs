@@ -3,9 +3,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.ComponentModel;
 
-
 public class Form1 : Form {
-
 
 [STAThread]
 public static void Main(){ 
@@ -6596,7 +6594,6 @@ private void ProgressBar1_RightToLeftLayoutChanged(Object sender, EventArgs e) {
 
 }
 //</snippet519>
-
 
 //<snippet521>
 private void PropertyGrid1_TextChanged(Object sender, EventArgs e) {

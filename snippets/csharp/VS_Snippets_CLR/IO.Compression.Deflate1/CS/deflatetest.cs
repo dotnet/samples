@@ -11,7 +11,6 @@ public class Program
         
         DirectoryInfo directorySelected = new DirectoryInfo(directoryPath);
            Compress(directorySelected);
-    	
 
         foreach (FileInfo fileToDecompress in directorySelected.GetFiles("*.cmp"))
         {
@@ -21,8 +20,7 @@ public class Program
 
     public static void Compress(DirectoryInfo directorySelected)
     {
-        
-     
+
         foreach (FileInfo file in directorySelected.GetFiles("*.xml"))
         using (FileStream originalFileStream = file.OpenRead())
         {

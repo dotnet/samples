@@ -138,7 +138,6 @@ namespace MyDataGridNamespace
          // Add the DataGridTableStyle objects to the collection.
          myDataGrid.TableStyles.Add (customersStyle);
 
-
          // Create two columns and add them to the first table.
          DataColumn cCustID = new DataColumn("CustID", typeof(int));
          DataColumn cCustName = new DataColumn("CustName");
@@ -146,7 +145,6 @@ namespace MyDataGridNamespace
          tCustomers.Columns.Add(cCustID);
          tCustomers.Columns.Add(cCustName);
          tCustomers.Columns.Add(cCurrent);
-         
 
          // Create three columns, and add them to the second table.
          DataColumn cID = new DataColumn("CustID", typeof(int));

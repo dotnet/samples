@@ -12,7 +12,6 @@ public struct Point : INullable
     private Int32 m_y;
     private bool is_Null;
 
-
     public Int32 X
     {
         get
@@ -24,7 +23,6 @@ public struct Point : INullable
             m_x = value;
         }
     }
-
 
     public Int32 Y
     {
@@ -38,7 +36,6 @@ public struct Point : INullable
         }
     }
 
-
     public bool IsNull
     {
         get
@@ -46,7 +43,6 @@ public struct Point : INullable
             return is_Null;
         }
     }
-
 
     public static Point Null
     {
@@ -57,7 +53,6 @@ public struct Point : INullable
             return (pt);
         }
     }
-
 
     public override string ToString()
     {
@@ -70,7 +65,6 @@ public struct Point : INullable
             return this.m_x + ":" + this.m_y;
         }
     }
-
 
     public static Point Parse(SqlString s)
     {
@@ -88,7 +82,6 @@ public struct Point : INullable
         pt.Y = Convert.ToInt32(xy[1]);
         return (pt);
     }
-
 
     public SqlString Quadrant()
     {
@@ -129,7 +122,6 @@ public struct Point : INullable
     }
 }
 //</Snippet5>
-
 
 //-----------------------------------------------------------------------------
 //<Snippet12>

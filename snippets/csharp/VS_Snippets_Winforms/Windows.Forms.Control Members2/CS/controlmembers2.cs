@@ -167,7 +167,6 @@ namespace ControlMembers3
          AddButtons();
       }
 
-
 // <snippet1>
 private void menuItemHelpAbout_Click(object sender, EventArgs e)
 {
@@ -183,7 +182,6 @@ private void menuItemHelpAbout_Click(object sender, EventArgs e)
    g.FillRectangle(Brushes.Blue, 10, 10, 50, 50);
 }
 // </snippet1>
-
 
 // <snippet2>
 private void AddButtons()
@@ -224,17 +222,11 @@ private void menuItemEdit_Popup(object sender, EventArgs e)
 }
 // </snippet4>
 
-
-
-
 private void menuItemEditInsertCustomerInfo_Click(object sender, EventArgs e)
 {
    // Insert the customer information into the text box.
    this.textBox1.Text += ((Customer)this.Tag).ToString();
 }
-
-
-
 
       private void menuItemEditFont_Click(object sender, System.EventArgs e)
       {
@@ -255,8 +247,6 @@ private void menuItemEditInsertCustomerInfo_Click(object sender, EventArgs e)
          }
       }
 
-      
-   
    }
 
    public class CustomerForm : Form
@@ -274,9 +264,7 @@ private void menuItemEditInsertCustomerInfo_Click(object sender, EventArgs e)
          return AccountNumber.ToString() + "\r\n" + Name;
       }
 
-      
    }
-
 
    public class AboutDialog : Form
    {

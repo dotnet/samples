@@ -6,7 +6,6 @@
 // it will be visible to anyone viewing the screen.
 // On Windows Vista and later this sample must be run as an administrator. 
 
-
 using System;
 using System.Runtime.InteropServices;
 using System.Security.Principal;
@@ -14,7 +13,6 @@ using System.Security.Permissions;
 using Microsoft.Win32.SafeHandles;
 using System.Runtime.ConstrainedExecution;
 using System.Security;
-
 
 public class ImpersonationDemo
 {

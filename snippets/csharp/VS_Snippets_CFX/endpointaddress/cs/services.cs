@@ -35,6 +35,5 @@ namespace Microsoft.WCF.Documentation
             return result;
         }
 
-        
     }
 }

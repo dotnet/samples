@@ -4,7 +4,6 @@
 // </copyright>
 //---------------------------------------------------------------------------
 
-
 using System;
 using System.Collections.Generic;
 using System.Windows;
@@ -12,7 +11,6 @@ using System.Windows.Input;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Media3D;
-
 
 namespace DemoDev
 {
@@ -96,7 +94,6 @@ namespace DemoDev
             }
         }
 
-
         private void MouseMoveHandler(object sender, System.Windows.Input.MouseEventArgs e)
         {
             if (!Enabled) return;
@@ -144,7 +141,6 @@ namespace DemoDev
         {
             if (!Enabled) return;
             e.Handled = true;
-
 
             if (Keyboard.IsKeyDown(Key.F1) == true)
             {

@@ -19,7 +19,6 @@ public class UsingDpapiProtectedConfigurationProvider
       string provider =
           "DataProtectionConfigurationProvider";
 
-
       // Get the section to protect.
       ConfigurationSection connStrings =
           config.ConnectionStrings;
@@ -62,11 +61,9 @@ public class UsingDpapiProtectedConfigurationProvider
 
   }
 
-
   // Unprotect the connectionStrings section.
   private static void UnProtectConfiguration()
   {
-
 
     try
     {
@@ -74,7 +71,6 @@ public class UsingDpapiProtectedConfigurationProvider
       System.Configuration.Configuration config =
               ConfigurationManager.OpenExeConfiguration(
               ConfigurationUserLevel.None);
-
 
       // Get the section to unprotect.
       ConfigurationSection connStrings =
@@ -116,7 +112,6 @@ public class UsingDpapiProtectedConfigurationProvider
     }
   }
 
-
   public static void Main(string[] args)
   {
 
@@ -149,6 +144,5 @@ public class UsingDpapiProtectedConfigurationProvider
     Console.Read();
 
   }
-
 
 }

@@ -21,7 +21,6 @@ public partial class ReadWriteCache : System.Web.UI.Page
         System.Configuration.Configuration config =
           System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration("~/");
 
-
         // <Snippet2>
         System.Web.Configuration.CacheSection cacheSection =
             (System.Web.Configuration.CacheSection)config.GetSection(
@@ -34,7 +33,6 @@ public partial class ReadWriteCache : System.Web.UI.Page
             cacheSection.PrivateBytesLimit + 10;
         // </Snippet6>
 
-      
         // <Snippet7>
         // Increase memory limit.
         cacheSection.PercentagePhysicalMemoryUsedLimit = 
@@ -46,7 +44,6 @@ public partial class ReadWriteCache : System.Web.UI.Page
         cacheSection.PrivateBytesPollTime =
             cacheSection.PrivateBytesPollTime + TimeSpan.FromMinutes(1);
         // </Snippet8>
-       
 
         // <Snippet3>
         // Enable or disable memory collection.
@@ -71,7 +68,6 @@ public partial class ReadWriteCache : System.Web.UI.Page
         // Get the application configuration file.
         System.Configuration.Configuration config =
           System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration("~/");
-
 
         System.Web.Configuration.CacheSection cacheSection =
             (System.Web.Configuration.CacheSection)config.GetSection(

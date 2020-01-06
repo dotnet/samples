@@ -3,7 +3,6 @@
   using System.Web.Services.Protocols;
   using System.IO;
 
-
   // Define a SOAP Extension that traces the SOAP request and SOAP response
   // for the XML Web service method, the SOAP extension is applied to.
 
@@ -34,7 +33,6 @@
         filename = (string) initializer;
     }
 
-
     //  If the SoapMessageStage is such that the SoapRequest or SoapResponse is still in the SOAP 
     //  format to be sent or received over the wire, save it out to filename passed in using the SoapExtensionAttribute
     public override void ProcessMessage(SoapMessage message) {
@@ -58,7 +56,6 @@
             throw new Exception("invalid stage");
         }
     }
-
 
     // Save the Stream representing the SOAP request or SOAP response into a local memory buffer
     public override Stream ChainStream( Stream stream ){

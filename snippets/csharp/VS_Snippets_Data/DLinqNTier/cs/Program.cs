@@ -8,10 +8,8 @@ using System.Runtime.Serialization;
 using System.Xml;
 using System.IO;
 
-
 namespace cs_kathytest081707c
 {
-    
 
     class Program
     {
@@ -72,7 +70,6 @@ namespace cs_kathytest081707c
             }
             // </Snippet3>
 
-
         }
 
         void method4()
@@ -105,7 +102,6 @@ namespace cs_kathytest081707c
         }
 
         // s5 is skipped
-
 
         //void method6()
         //{
@@ -200,7 +196,6 @@ namespace cs_kathytest081707c
 
         }
 
-        
     }
 
     partial class Northwind_Simplified : Northwnd
@@ -267,25 +262,8 @@ namespace cs_kathytest081707c
 	{
 		OnCreated();
 	}
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     }
-
-
 
     class SerializeHelper
     {

@@ -17,7 +17,6 @@ namespace VbPowerPacksShapeMouseDownCS
             InitializeComponent();
         }
 
-        
     // <Snippet1>
     private void rectangleShape1_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
     {

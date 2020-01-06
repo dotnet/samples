@@ -15,7 +15,6 @@ using System.Windows.Shapes;
 // Walkthrough: Adding Search to a Tool Window
 // f78c4892-8060-49c4-8ecd-4360f1b4d133
 
-
 namespace Microsoft.TestToolWindowSearch
 {
     /// <summary>

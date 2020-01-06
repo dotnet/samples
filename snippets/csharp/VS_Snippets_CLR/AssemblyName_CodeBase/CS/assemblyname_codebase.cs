@@ -61,8 +61,6 @@ public class AssemblyName_CodeBase
    public static void Main()
    {
 
-
-
       // Create a dynamic assembly with name 'MyAssembly' and build version '1.0.0.2001'.
       AssemblyName myAssemblyName = new AssemblyName();
       // Set the codebase to the physical directory were the assembly resides.

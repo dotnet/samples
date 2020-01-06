@@ -7,7 +7,6 @@ using System.Data.Common;
 public class Sample
 {
 
-
 // <Snippet1>
  public void ShowOracleException() 
  {

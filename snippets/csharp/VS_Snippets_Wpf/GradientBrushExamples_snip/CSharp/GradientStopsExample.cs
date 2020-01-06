@@ -20,13 +20,11 @@ namespace Microsoft.Samples.GradientBrushExamples
             myMainPanel = new StackPanel();
             
             createTransparentGradientStopExample();
-  
- 
+
             this.Content = myMainPanel;
             
         }
-        
-        
+
         private void createTransparentGradientStopExample()
         {
             // <SnippetTransparentGradientStopExample1CSharp>

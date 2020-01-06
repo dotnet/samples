@@ -66,7 +66,6 @@ public class DateServer {
 											 "192.168.144.238",
 											 SocketPermission.AllPorts);
 
-
         // Second 'SocketPermission' ip-address is '192.168.144.239' for 'All' transport types and 
         // for 'All' ports for the ip-address.
 		socketPermission.AddPermission(NetworkAccess.Accept,

@@ -22,15 +22,13 @@ namespace TPL
             Console.ReadKey();
         }
 
-        
         class Test
         {
             public string Name { get; set; }
             public double Number { get; set; }
 
         }
-       
-        
+
         static void DoSomeWork(int val)
         {
             // Pretend to do something.
@@ -55,7 +53,6 @@ namespace TPL
             Thread.SpinWait(1000000); // ticks, not milliseconds 
             return DateTime.Now.Millisecond;
         }
-
 
         static string[] GetAllFiles(string str)
         {
@@ -108,12 +105,10 @@ namespace TPL
             // Assume this is a user-entered string.
             string path = @"C:\";
 
-
             Task<string[]>[] tasks = new Task<string[]>[3];
             tasks[0] = Task<string[]>.Factory.StartNew(() => GetAllFiles(path));
             tasks[1] = Task<string[]>.Factory.StartNew(() => GetValidExtensions(path));
             tasks[2] = Task<string[]>.Factory.StartNew(() => new string[10]);
-
 
             //int index = Task.WaitAny(tasks2);
             //double d = tasks2[index].Result;
@@ -134,7 +129,6 @@ namespace TPL
  // 14 was deleted, probably because it duplicated cancellation snippet
 
    // 15 was moved to tpl_cancellation and so number is available in tpl
-
 
     //<snippet16>    
     public class TreeWalk
@@ -163,8 +157,6 @@ namespace TPL
             public Tree<T> Right;
             public T Data;
         }
-
-
 
         // By using tasks explcitly.
         public static void DoTree<T>(Tree<T> tree, Action<T> action)
@@ -208,10 +200,8 @@ namespace TPL
 
     //</snippet17>
 
-
     class InvokeDemo
     {
-
 
         static void MethodA() { }
         static void MethodB() { }
@@ -220,8 +210,6 @@ namespace TPL
         static void Process(int i) { }
         static void DoSomeWork() { }
         static void DoSomeOtherWork() { }
-       
-
 
         static int[] sourceCollection = new int[10] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
@@ -256,13 +244,11 @@ namespace TPL
             Parallel.Invoke(() => DoSomeWork(), () => DoSomeOtherWork());
             //</snippet21>
 
-            
         }
     }
 
     //}
 
-   
 }
 
 

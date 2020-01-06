@@ -99,7 +99,6 @@ namespace Owner_Draw_CS2
 			this.menuItem1.Text = "";
 			this.menuItem1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.menuItem1_DrawItem);
 
-																					  																
 			// 
 			// menuItem2
 			// 
@@ -139,7 +138,6 @@ private void menuItem1_DrawItem(object sender, System.Windows.Forms.DrawItemEven
 
 }
 //</snippet1>
-
 
 		private void menuItem2_DrawItem(object sender, System.Windows.Forms.DrawItemEventArgs e)
 		{

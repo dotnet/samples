@@ -73,7 +73,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             delayedBeginTimeRectangle.HorizontalAlignment = HorizontalAlignment.Left;
             myStackPanel.Children.Add(delayedBeginTimeRectangle);
 
-
             myTextBlock = new TextBlock();
             myTextBlock.Text = "\nParent Timeline BeginTime: \"0:0:5\" \nAnimation BeginTime: \"0:0:5\" ";
             myStackPanel.Children.Add(myTextBlock);
@@ -102,7 +101,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             myDoubleAnimation.Duration = new Duration( TimeSpan.FromMilliseconds(2000));
             myDoubleAnimation.FillBehavior = FillBehavior.HoldEnd;
 
-
             //
             //  Create an animation with a 5 second delay in the start time.
             //
@@ -114,7 +112,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             myDelayedDoubleAnimation.To = 400;
             myDelayedDoubleAnimation.Duration = new Duration( TimeSpan.FromMilliseconds(2000));
             myDelayedDoubleAnimation.FillBehavior = FillBehavior.HoldEnd;
-
 
             //
             //  Create an animation with a 5 second delay in both the parent and

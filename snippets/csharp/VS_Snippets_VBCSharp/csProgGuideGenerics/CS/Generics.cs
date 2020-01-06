@@ -29,7 +29,6 @@ namespace CsCsrefProgrammingGenerics
     }
     //</Snippet1>
 
-
     class TestGenericList2
     {
         private class ExampleClass { }
@@ -43,7 +42,6 @@ namespace CsCsrefProgrammingGenerics
             //</Snippet7>
         }
     }
-
 
     //---------------------------------------------------------------------------
     namespace WrapOverview
@@ -109,7 +107,6 @@ namespace CsCsrefProgrammingGenerics
         }
         //</Snippet2>
 
-
         //<Snippet3>
         class TestGenericList
         {
@@ -132,7 +129,6 @@ namespace CsCsrefProgrammingGenerics
         }
         //</Snippet3>
     }
-
 
     //---------------------------------------------------------------------------
     public class WrapBenefits
@@ -184,7 +180,6 @@ namespace CsCsrefProgrammingGenerics
         }
     }
 
-
     //---------------------------------------------------------------------------
     public class WrapParameters
     {
@@ -211,7 +206,6 @@ namespace CsCsrefProgrammingGenerics
         }
 
     }//WrapParameters
-
 
     //---------------------------------------------------------------------------
     public class WrapConstraints
@@ -315,7 +309,6 @@ namespace CsCsrefProgrammingGenerics
         }
         //</Snippet11>
 
-
         interface IEmployee { }
 
         //<Snippet12>
@@ -324,7 +317,6 @@ namespace CsCsrefProgrammingGenerics
             // ...
         }
         //</Snippet12>
-
 
         //<Snippet13>
         public static void OpTest<T>(T s, T t) where T : class
@@ -340,7 +332,6 @@ namespace CsCsrefProgrammingGenerics
         }
         //</Snippet13>
 
-
         //<Snippet14>
         class List<T>
         {
@@ -348,13 +339,11 @@ namespace CsCsrefProgrammingGenerics
         }
         //</Snippet14>
 
-
         //<Snippet15>
         //Type parameter V is used as a type constraint.
         public class SampleClass<T, U, V> where T : V { }
         //</Snippet15>
     }
-
 
     //---------------------------------------------------------------------------
     namespace WrapClasses
@@ -373,7 +362,6 @@ namespace CsCsrefProgrammingGenerics
         class NodeOpen<T> : BaseNodeGeneric<T> { }
         //</Snippet16>
 
-
         //<Snippet17>
         //No error
         class Node1 : BaseNodeGeneric<int> { }
@@ -384,7 +372,6 @@ namespace CsCsrefProgrammingGenerics
         //Generates an error
         //class Node3 : T {}
         //</Snippet17>
-
 
         //<Snippet18>
         class BaseNodeMultiple<T, U> { }
@@ -399,12 +386,10 @@ namespace CsCsrefProgrammingGenerics
         //class Node6<T> : BaseNodeMultiple<T, U> {} 
         //</Snippet18>
 
-
         //<Snippet19>
         class NodeItem<T> where T : System.IComparable<T>, new() { }
         class SpecialNodeItem<T> : NodeItem<T> where T : System.IComparable<T>, new() { }
         //</Snippet19>
-
 
         //<Snippet20>
         class SuperKeyType<K, V, U>
@@ -428,7 +413,6 @@ namespace CsCsrefProgrammingGenerics
             //</Snippet21>
         }
     }
-
 
     //---------------------------------------------------------------------------
     class WrapInterfaces
@@ -468,7 +452,6 @@ namespace CsCsrefProgrammingGenerics
         class SampleClass2<T> : IBaseInterface2<T, string> { }  //No error
         //</Snippet34>
     }
-
 
     //---------------------------------------------------------------------------
     namespace WrapMethods
@@ -515,7 +498,6 @@ namespace CsCsrefProgrammingGenerics
         }
         //</Snippet25>
 
-
         //<Snippet26>
         class GenericList<T>
         {
@@ -529,7 +511,6 @@ namespace CsCsrefProgrammingGenerics
             void SampleMethod<U>() { }
         }
         //</Snippet26>
-
 
         class Test2
         {
@@ -553,7 +534,6 @@ namespace CsCsrefProgrammingGenerics
             //</Snippet28>
         }
     }
-
 
     //---------------------------------------------------------------------------
     namespace WrapArrays
@@ -596,7 +576,6 @@ namespace CsCsrefProgrammingGenerics
         //</Snippet35>
     }
 
-
     //---------------------------------------------------------------------------
     class WrapDelegates
     {
@@ -632,7 +611,6 @@ namespace CsCsrefProgrammingGenerics
         //</Snippet39>
     }
 
-
     //---------------------------------------------------------------------------
     class WrapDelegates2
     {
@@ -663,7 +641,6 @@ namespace CsCsrefProgrammingGenerics
         }
         //</Snippet40>
     }
-
 
     //---------------------------------------------------------------------------
     //<Snippet41>
@@ -750,8 +727,6 @@ namespace CsCsrefProgrammingGenerics
     }
     //</Snippet41>
 
-
-
     //---------------------------------------------------------------------------
     class WrapRuntime
     {
@@ -784,7 +759,6 @@ namespace CsCsrefProgrammingGenerics
             //</Snippet46>
         }
     }
-
 
     //---------------------------------------------------------------------------
     class WrapAttributes
@@ -832,6 +806,5 @@ namespace CsCsrefProgrammingGenerics
         //public class CustomAtt<T> : System.Attribute {}  //Error
         //</Snippet53>
     }
-
 
 }

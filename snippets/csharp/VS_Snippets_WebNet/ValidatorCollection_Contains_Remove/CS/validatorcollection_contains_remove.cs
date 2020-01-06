@@ -73,7 +73,6 @@ public class MyPage : Page
       this.Validators.Add(myRequiredFieldValidator);
       myForm.Controls.Add(myLabel);
 
-
       // Remove the RequiredFieldValidator.
       if(Validators.Contains(myRequiredFieldValidator))
       {

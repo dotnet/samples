@@ -8,7 +8,6 @@ using System.Text;
 using Word = Microsoft.Office.Interop.Word;
 //</Snippet4>
 
-
 namespace OfficeHowTo
 {
     class WordProgram

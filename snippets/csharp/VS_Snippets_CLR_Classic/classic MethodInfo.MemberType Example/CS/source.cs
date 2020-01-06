@@ -15,8 +15,7 @@ class MyMethodInfo
   
         // Get and display the MemberType property.
         MemberTypes Mymembertypes = Mymethodinfo.MemberType;
-      
- 
+
         if (MemberTypes.Constructor == Mymembertypes)
         {
             Console.WriteLine("MemberType is of type All.");

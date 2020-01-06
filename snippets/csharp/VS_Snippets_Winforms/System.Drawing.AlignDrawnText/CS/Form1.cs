@@ -42,8 +42,6 @@ namespace AlignText
             //</snippet20>
         }
 
-
-
         private void AlignTextWithDrawString(PaintEventArgs e)
         {
             //<snippet10>

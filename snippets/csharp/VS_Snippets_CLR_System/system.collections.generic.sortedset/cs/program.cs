@@ -38,7 +38,6 @@ class Program
             Console.WriteLine($"\tCount after: {mediaFiles1.Count}");
             // </Snippet4>
 
-
             Console.WriteLine();
 
             // <Snippet5>
@@ -118,7 +117,6 @@ class Program
             s.EndsWith(".docx"));
     }
     // </Snippet8>
-
 
 }
 

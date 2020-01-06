@@ -17,7 +17,6 @@ public class Page1: Page
        AddColumn.CommandName="Add";
        AddColumn.ButtonType = ButtonColumnType.PushButton;
 
-
        // Add column to Columns collection.
        ItemsGrid.Columns.AddAt(2, AddColumn);
 

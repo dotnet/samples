@@ -13,7 +13,6 @@ namespace WF_Snippets
      * Snippets from Technologies/BasicWorkflows and Technologies/Communication
      */
 
-
     /****************
      * Snippets from BasicWorkflows/SimpleStateMachineWorkflow
      */
@@ -189,8 +188,6 @@ namespace WF_Snippets
     /*************************
      * Snippets from Communication/CorrelatedLocalService
      */
-    
-    
 
     class Snippets20 : SequentialWorkflowActivity
     {
@@ -328,7 +325,6 @@ namespace WF_Snippets
      * Snippets from Communications/Listen
      */
     interface IOrderService { }
-
 
     // <snippet209>
     class OrderServiceImpl : IOrderService
@@ -634,6 +630,5 @@ namespace WF_Snippets
     }
     public partial class WebServicePublishWorkflow_WebService : System.Web.Services.Protocols.SoapHttpClientProtocol {
     }
-
 
 }

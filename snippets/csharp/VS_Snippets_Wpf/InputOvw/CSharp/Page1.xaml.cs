@@ -33,8 +33,6 @@ namespace Input_Ovw
             inputButton.Click += new RoutedEventHandler(OnOverviewButtonClick);
             //</SnippetInput_OvwHandlingInputCodeBehind>
 
-
-
             //<SnippetInput_OvwKeyboardExampleUICodeBehind>
             // Create the UI elements.
             StackPanel keyboardStackPanel = new StackPanel();
@@ -50,9 +48,6 @@ namespace Input_Ovw
             // Attach event handler.
             keyboardButton1.KeyDown += new KeyEventHandler(OnButtonKeyDown);
             //</SnippetInput_OvwKeyboardExampleUICodeBehind>
-
- 
-
 
             //<SnippetInput_OvwMouseExampleUICodeBehind>
             // Create the UI elements.
@@ -159,7 +154,6 @@ namespace Input_Ovw
         }
         //</SnippetInput_OvwMouseExampleLeaveHandler>
 
-
         //<SnippetInput_OvwTextInputHandlersCodeBehind>
         private void OnTextInputKeyDown(object sender, KeyEventArgs e)
         {
@@ -181,8 +175,6 @@ namespace Input_Ovw
             MessageBox.Show("Pretend this opens a file");
         }
         //</SnippetInput_OvwTextInputHandlersCodeBehind>
-
-
 
         private void handler1(object sender, MouseButtonEventArgs e)
         {

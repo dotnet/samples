@@ -21,7 +21,6 @@ class XMLSchemaExamples
         someattribute1.Name = "someattribute1";
         someattribute1.SchemaTypeName = new XmlQualifiedName("integer", "http://www.w3.org/2001/XMLSchema");
 
-
         // <xs:attribute name="someattribute2" type="xs:string"/>
         XmlSchemaAttribute someattribute2 = new XmlSchemaAttribute();
         myAttributeGroup.Attributes.Add(someattribute2);

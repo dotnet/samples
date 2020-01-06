@@ -40,7 +40,6 @@ public class SamplesUnicodeEncoding  {
 
    }
 
-
    // Decode the bytes and display the string.
    public static void PrintDecodedString( byte[] bytes, Encoding enc )  {
 

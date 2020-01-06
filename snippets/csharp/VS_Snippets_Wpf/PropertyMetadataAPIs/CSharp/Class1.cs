@@ -8,7 +8,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.IO;
 
-
 namespace PropertyMetadataAPIs
 {
   public class MyCustomPropertyMetadata : PropertyMetadata
@@ -53,7 +52,6 @@ namespace PropertyMetadataAPIs
           new MyCustomPropertyMetadata("I am special",null,null,true)
       );
   }
-
 
   public class Gauge : Control
   {

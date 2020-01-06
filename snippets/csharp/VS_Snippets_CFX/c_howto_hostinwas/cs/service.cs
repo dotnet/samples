@@ -46,7 +46,6 @@ namespace Samples
 
     //</snippet1122>
 
-
     public class Test
     {
         public static void Main()

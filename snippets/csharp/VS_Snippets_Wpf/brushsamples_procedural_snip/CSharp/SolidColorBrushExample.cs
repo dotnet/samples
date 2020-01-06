@@ -60,11 +60,8 @@ namespace Microsoft.Samples.BrushExamples
             // </Snippet_graphicsmm_ScrgbNotation1> 
             myStackPanel.Children.Add(myScRGBRectangle);
 
-
-
             this.Content = myStackPanel;
         }
-        
-        
+
     }
 }

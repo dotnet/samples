@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-
 namespace cs_mismatch
 {
     class Program
@@ -80,7 +79,6 @@ namespace cs_mismatch
 
         }
 
-
     }
     // <Snippet1>
     class C1
@@ -105,11 +103,8 @@ namespace cs_mismatch
         }
     }
     // </Snippet4>
-    
-
 
 }
-
 
 namespace ns
 {

@@ -6,7 +6,6 @@
    for the grid.
 */
 
-
 using System;
 using System.Drawing;
 using System.Collections;

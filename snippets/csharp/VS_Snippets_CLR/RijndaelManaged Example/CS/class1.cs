@@ -76,7 +76,6 @@ namespace RijndaelManaged_Example
                 }
             }
 
-
             // Return the encrypted bytes from the memory stream.
             return encrypted;
 

@@ -13,7 +13,6 @@ using System.Xml;
 using System.IO;
 using System.Collections.Generic;
 
-
 namespace SDKSample
 {
     // ----------------------------- Class Window1 ----------------------------
@@ -78,7 +77,6 @@ namespace SDKSample
             // Add the Close Command
             AddCommandBindings(ApplicationCommands.Close, CloseCommandHandler);
 
-
         }
         #endregion
 
@@ -133,7 +131,6 @@ namespace SDKSample
             EnableMenuItems();
         }// end:OpenCommandHandler()
 
-
         // ----------------------- OutlineCommandHandler ----------------------
         /// <summary>
         ///   Iterates through the parts of an XpsDocument initializing
@@ -148,7 +145,6 @@ namespace SDKSample
                     _xpsDocument, treeView, _fileName);
             }
         }// end:OutlineCommandHandler()
-
 
         // ---------------------- SignatureCommandHandler ---------------------
         /// <summary>
@@ -249,7 +245,6 @@ namespace SDKSample
             EnableMenuItems();
         }// end:NewCommandHandler()
 
-
         // ---------------------- ProportiesCommandHandler --------------------
         /// <summary>
         ///   File|Properties handler - Opens a dialog to display the
@@ -263,7 +258,6 @@ namespace SDKSample
             properties.ShowDialog();
         }// end:ProportiesCommandHandler()
 
-
         // ------------------------ CloseCommandHandler -----------------------
         /// <summary>
         ///   File|Close handler - Closes current XPS document.</summary>
@@ -274,7 +268,6 @@ namespace SDKSample
             this.Close();
             EnableMenuItems();
         }// end:CloseCommandHandler()
-
 
         // ------------------------ AddCommandBindings ------------------------
         /// <summary>
@@ -287,7 +280,6 @@ namespace SDKSample
             cmdBindings.Executed += handler;
             CommandBindings.Add(cmdBindings);
         }// end:AddCommandBindings()
-
 
         // -------------------------- EnableMenuItems -------------------------
         /// <summary>

@@ -8,8 +8,6 @@ using System.Windows.Media;
 using System.Threading;
 using System.Windows.Threading;
 
-
-
 namespace SDKSamples
 {
     public partial class Window1 : Window
@@ -52,7 +50,6 @@ namespace SDKSamples
         }
         //</SnippetDispatcherObjectAccessCheckAccess>
 
-
         // Uses the DispatcherObject.VerifyAccess method to determine if 
         // the calling thread has access to the thread the UI object is on.
         private void TryToUpdateButtonVerifyAccess(object uiObject)
@@ -87,7 +84,6 @@ namespace SDKSamples
                 }
             }
         }
-
 
         private void threadStartingCheckAccess()
         {
@@ -124,7 +120,6 @@ namespace SDKSamples
             _backgroundThreadID = backgroundThread.ManagedThreadId;
             lblBackgroundThreadID.Content = _backgroundThreadID.ToString();
         }
-
 
         private void UpdateButtonUI(Button theButton)
         {

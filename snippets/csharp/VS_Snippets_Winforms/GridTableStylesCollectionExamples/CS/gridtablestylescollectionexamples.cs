@@ -6,7 +6,6 @@ using System.IO;
 using System.Data;
 using System.Windows.Forms;
 
-
 public class DataGridTableStuff:Form
 {
 
@@ -132,11 +131,9 @@ private void AddCustomDataTableStyle(){
    }
    //</snippet4>
 
-
    //<snippet5>
    private void AddArray()
    {
-   
 
    /* Get three CurrencyManager objects used to construct 
    DataGridTableSTyle objects. */
@@ -148,7 +145,6 @@ private void AddCustomDataTableStyle(){
 
    CurrencyManager productsManager = (CurrencyManager)
    this.BindingContext[myDataSet, "Customers"];
-
 
    DataGridTableStyle gridCustomers = 
    new DataGridTableStyle(customersManager);

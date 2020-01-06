@@ -49,7 +49,6 @@ namespace SDKSample
             // BitmapSource (chain the BitmapSource objects together).
             newFormatedBitmapSource.Source = myBitmapImage;
 
-
             // Set the new format to Gray32Float (grayscale).
             newFormatedBitmapSource.DestinationFormat = createPixelFormat();
             newFormatedBitmapSource.EndInit();

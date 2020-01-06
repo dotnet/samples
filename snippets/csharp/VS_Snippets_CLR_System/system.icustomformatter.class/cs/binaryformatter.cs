@@ -26,7 +26,6 @@ public class BinaryFormatter : IFormatProvider, ICustomFormatter
       // are not supported).
       if (! String.IsNullOrEmpty(format))
          thisFmt = format.Length > 1 ? format.Substring(0, 1) : format;
-         
 
       // Get a byte array representing the numeric value.
       byte[] bytes;

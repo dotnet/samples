@@ -54,8 +54,6 @@ namespace Samples.AspNet.Membership.CS
             this.CustomerID = customerID;
         }
 
-
-
     }
 }
 //</Snippet1>

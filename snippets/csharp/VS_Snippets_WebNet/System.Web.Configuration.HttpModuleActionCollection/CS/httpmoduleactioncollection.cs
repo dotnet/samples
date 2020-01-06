@@ -61,7 +61,6 @@ class UsingHttpModuleActionCollection
 
         //</Snippet4>
 
-
         //<Snippet5>
         // Set the module object.
         HttpModuleAction ModuleAction2 = 
@@ -76,7 +75,6 @@ class UsingHttpModuleActionCollection
         }
 
         //</Snippet5>
-
 
         //<Snippet6>
 

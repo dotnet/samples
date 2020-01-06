@@ -21,7 +21,6 @@ using System.Net.Http;
 // Add the following using directive.
 using System.Threading;
 
-
 namespace ProcessTasksAsTheyFinish
 {
     public partial class MainWindow : Window
@@ -58,7 +57,6 @@ namespace ProcessTasksAsTheyFinish
             cts = null;
         }
 
-
         private void cancelButton_Click(object sender, RoutedEventArgs e)
         {
             if (cts != null)
@@ -66,7 +64,6 @@ namespace ProcessTasksAsTheyFinish
                 cts.Cancel();
             }
         }
-
 
         async Task AccessTheWebAsync(CancellationToken ct)
         {
@@ -108,7 +105,6 @@ namespace ProcessTasksAsTheyFinish
             }
         }
 
-
         private List<string> SetUpURLList()
         {
             List<string> urls = new List<string> 
@@ -123,7 +119,6 @@ namespace ProcessTasksAsTheyFinish
             };
             return urls;
         }
-
 
         async Task<int> ProcessURL(string url, HttpClient client, CancellationToken ct)
         {

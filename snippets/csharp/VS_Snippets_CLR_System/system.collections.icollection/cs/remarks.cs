@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 
-
 public class Remarks
 {
     public static void Main()

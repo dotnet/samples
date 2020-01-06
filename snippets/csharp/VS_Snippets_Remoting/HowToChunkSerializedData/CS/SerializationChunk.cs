@@ -67,12 +67,10 @@ public class SongStream : IXmlSerializable
      return new XmlQualifiedName("songStream", ns);
     }
 
-
     void IXmlSerializable.WriteXml(System.Xml.XmlWriter writer)
     {
        // This is the chunking code.
        // ASP.NET buffering must be turned off for this to work.
- 
 
      int bufferSize = 4096;
      char[] songBytes = new char[bufferSize];
@@ -107,7 +105,6 @@ public class SongStream : IXmlSerializable
 
     }
 
-
     System.Xml.Schema.XmlSchema IXmlSerializable.GetSchema()
     {
      throw new System.NotImplementedException();
@@ -122,7 +119,6 @@ public class SongStream : IXmlSerializable
 //</snippet2>
 
 public delegate void ProgressMade(double Progress);
-
 
 //<snippet3>
 public class SongFile : IXmlSerializable

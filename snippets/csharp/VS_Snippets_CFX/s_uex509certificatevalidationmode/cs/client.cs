@@ -30,7 +30,6 @@ using System.ServiceModel;
 using System.ServiceModel.Security;
 using System.Security.Principal;
 
-
 namespace Microsoft.ServiceModel.Samples
 {
     //The service contract is defined in generatedwcfClient.cs, generated from the service by the svcutil tool.

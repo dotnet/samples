@@ -29,6 +29,5 @@ namespace HowToResourceDictionaries
             //</Snippet3>
         }
 
-       
     }
 }

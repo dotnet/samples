@@ -41,8 +41,6 @@ namespace CTorNeedsTagAtt
             }
          }                
 
-
-
          protected override void Render(HtmlTextWriter output) 
          {
             output.Write("Testing the ConstructorNeedsTagAttribute Class.");

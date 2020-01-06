@@ -80,7 +80,6 @@ namespace Samples.AspNet.CS.Controls
             }
         }
 
-
         [
         Bindable(true),
         Category("Appearance"),

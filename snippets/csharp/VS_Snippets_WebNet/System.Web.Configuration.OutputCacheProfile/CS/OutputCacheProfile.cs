@@ -76,9 +76,7 @@ namespace Samples.Aspnet.SystemWebConfiguration
           System.Web.UI.OutputCacheLocation.Server;
 
 // </Snippet5>
-                
 
-                
 // <Snippet7>
 
       // Get the current SqlDependency.
@@ -149,8 +147,7 @@ namespace Samples.Aspnet.SystemWebConfiguration
         false;
 
 // </Snippet12>
-          
- 
+
         }
     } // UsingOutputCacheProfile class end.
     

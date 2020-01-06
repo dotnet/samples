@@ -7,7 +7,6 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization;
 using System.Security.Permissions;
 
-
 // There should be only one instance of this type per AppDomain.
 [Serializable]
 [PermissionSet(SecurityAction.Demand, Name="FullTrust")]
@@ -64,7 +63,6 @@ public sealed class Singleton : ISerializable
     // because it is never called.
 }
 
-
 [Serializable]
 [PermissionSet(SecurityAction.Demand, Name="FullTrust")]
 [SecurityPermissionAttribute(SecurityAction.LinkDemand, 
@@ -83,7 +81,6 @@ internal sealed class SingletonSerializationHelper : IObjectReference
         return Singleton.GetSingleton();
     }
 }
-
 
 class App 
 {

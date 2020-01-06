@@ -156,7 +156,6 @@ namespace SecuredUsingWindows
             myServiceHost.Close();
             //</snippet3>
 
-
         }
 
         public static void RunClient()
@@ -618,7 +617,6 @@ namespace SecuredUsingMessageWithCertClient
             myServiceHost.Close();
             //</snippet10>
 
-
         }
         private void ClientRun()
         {
@@ -706,7 +704,6 @@ namespace SecuredUsingMessageWithWindowsClient
             // Close the service.
             myServiceHost.Close();
             //</snippet11>
-
 
         }
 

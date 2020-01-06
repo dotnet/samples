@@ -90,7 +90,6 @@ namespace Contextmnu2
 			// Display the starting message.
 			MessageBox.Show("Right-click the form to display the shortcut menu items");
 
-
 			// Add functionality to the menu items. 
 			menuItem1.Click += new System.EventHandler(this.menuItem1_Click);
 			menuItem2.Click += new System.EventHandler(this.menuItem2_Click);

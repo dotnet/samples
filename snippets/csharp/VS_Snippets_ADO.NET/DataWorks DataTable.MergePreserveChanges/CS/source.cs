@@ -89,7 +89,6 @@ class Program
         PrintValues(modifiedTable, "Merged data (don't preserve changes)");
     }
 
-
     private static void PrintValues(DataTable table, string label)
     {
         // Display the values in the supplied DataTable:

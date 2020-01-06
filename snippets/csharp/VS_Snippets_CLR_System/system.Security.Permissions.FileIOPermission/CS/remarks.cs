@@ -33,7 +33,6 @@ public class FileIOPermissionDemo
                 Console.WriteLine("\t" + path);
             }
 
-
             // Test the Write list
             fileIOPerm1.SetPathList(FileIOPermissionAccess.Write, "C:\\temp");
 
@@ -72,7 +71,6 @@ public class FileIOPermissionDemo
             {
                 Console.WriteLine("\t" + path);
             }
-
 
             // Test the Write list
             fileIOPerm1.SetPathList(FileIOPermissionAccess.Write, new string[] {"C:\\temp", "C:\\Documents"});

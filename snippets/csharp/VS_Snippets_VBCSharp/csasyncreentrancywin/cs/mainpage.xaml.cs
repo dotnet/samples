@@ -19,7 +19,6 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Net.Http;
 
-
 namespace WebsiteDownloadWin
 {
     public sealed partial class MainPage : Page
@@ -43,7 +42,6 @@ namespace WebsiteDownloadWin
                 ResultsTextBox.Text += "\r\nDownloads failed.";
             }
         }
-
 
         private async Task AccessTheWebAsync()
         {
@@ -73,7 +71,6 @@ namespace WebsiteDownloadWin
                 string.Format("\r\n\r\nTOTAL bytes returned:  {0}\r\n", total);
         }
 
-
         private List<string> SetUpURLList()
         {
             List<string> urls = new List<string> 
@@ -89,7 +86,6 @@ namespace WebsiteDownloadWin
             };
             return urls;
         }
-
 
         private void DisplayResults(string url, byte[] content, int pos)
         {

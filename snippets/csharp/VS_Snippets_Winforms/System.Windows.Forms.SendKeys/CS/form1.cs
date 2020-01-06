@@ -72,7 +72,6 @@ public class Form1:
 
 	#endregion
 
-
 	//<snippet1>
 
 	// Clicking Button1 causes a message box to appear.
@@ -80,7 +79,6 @@ public class Form1:
 	{
 		MessageBox.Show("Click here!");
 	}
-
 
 	// Use the SendKeys.Send method to raise the Button1 click event 
 	// and display the message box.
@@ -92,7 +90,6 @@ public class Form1:
 		SendKeys.Send("{ENTER}");
 	}
 	//</snippet1>
-
 
 	[System.STAThreadAttribute]
 	public static void Main()

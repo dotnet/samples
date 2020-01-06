@@ -21,8 +21,7 @@ namespace Microsoft.Samples.PerFrameAnimations
 
         //timing variables
         private TimeSpan _lastRender;
-        
-        
+
         public FrameIndependentFollowExample()
             : base()
         {
@@ -36,12 +35,10 @@ namespace Microsoft.Samples.PerFrameAnimations
         private void UpdateRectangle(object sender, EventArgs e)
         {
 
-
             RenderingEventArgs renderArgs = (RenderingEventArgs)e;
             Double deltaTime = (renderArgs.RenderingTime - _lastRender).TotalSeconds;
             _lastRender = renderArgs.RenderingTime;
-            
-            
+
             Point location = new Point(Canvas.GetLeft(followRectangle), Canvas.GetTop(followRectangle));           
             
             //find vector toward mouse location
@@ -62,13 +59,11 @@ namespace Microsoft.Samples.PerFrameAnimations
             Canvas.SetLeft(followRectangle, location.X);
             Canvas.SetTop(followRectangle, location.Y);
         }
-        
 
         private void UpdateLastMousePosition(object sender, System.Windows.Input.MouseEventArgs e)
         {
             _lastMousePosition = e.GetPosition(containerCanvas);
         }
-        
-       
+
     }
 }

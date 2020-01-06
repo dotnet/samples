@@ -18,7 +18,6 @@ namespace CS
             WSDualHttpBinding binding = new WSDualHttpBinding();
             // </Snippet1>
 
-
             // <Snippet2>
             string configName = "string";
             WSDualHttpBinding bindingString = new WSDualHttpBinding(configName);
@@ -28,7 +27,6 @@ namespace CS
             WSDualHttpBinding bindingSecurityMode =
                 new WSDualHttpBinding(WSDualHttpSecurityMode.Message);
             // </Snippet3>
-
 
             /*            String clientBaseAddress = "http://localhost:8080/Discovery/" + Guid.NewGuid().ToString();
                         Uri clientBaseAddressUri = new Uri(clientBaseAddress);
@@ -102,9 +100,6 @@ namespace CS
             // <Snippet22>
             long maxReceivedMessageSize = binding.MaxReceivedMessageSize;
             // </Snippet22>
-
-
-
 
             binding.Security.Mode = WSDualHttpSecurityMode.None;
 

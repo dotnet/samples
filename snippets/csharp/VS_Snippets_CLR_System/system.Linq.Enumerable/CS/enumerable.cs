@@ -1800,7 +1800,6 @@ namespace SequenceExamples
             }
         }
 
-
         public static void OrderByIComparer()
         {
 

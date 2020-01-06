@@ -32,7 +32,6 @@ namespace MyProject
 			return;
 		}
 
-
 		//**************************************************
 		// Sends a message to a queue.
 		//**************************************************
@@ -53,7 +52,6 @@ namespace MyProject
 
 			return;
 		}
-
 
 		//**************************************************
 		// Receives a message from a queue.

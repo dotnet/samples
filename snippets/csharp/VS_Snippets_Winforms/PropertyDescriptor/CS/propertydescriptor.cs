@@ -5,7 +5,6 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using System.Data;
 
-
 namespace PropertyDescriptor
 {
 	/// <summary>
@@ -115,6 +114,5 @@ textBox1.Text += myProperty.Category + '\n';
 
 		}
 
-		
 	}
 }

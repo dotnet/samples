@@ -32,14 +32,12 @@ namespace SdkSample
 
         #endregion Constructors
 
-
         // ------------------------------------------------------------
         //
         // Public Dependancy Properties
         //
         // ------------------------------------------------------------
         #region Public Dependancy Properties
-
 
         /// <summary>
         /// Source of the image to use when the ImageButton is in normal state.
@@ -56,7 +54,6 @@ namespace SdkSample
             obj.SetValue(SourceProperty, value);
         }
 
-
         /// <summary>
         /// Source of the image to use when the ImageButton is in hover state.
         /// </summary>
@@ -71,7 +68,6 @@ namespace SdkSample
         {
             obj.SetValue(HoverSourceProperty, value);
         }
-
 
         /// <summary>
         /// Source of the image to use when the ImageButton is in the select state.

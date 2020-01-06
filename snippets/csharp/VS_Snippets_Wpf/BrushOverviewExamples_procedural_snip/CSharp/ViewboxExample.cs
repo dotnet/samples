@@ -7,14 +7,12 @@ using System.Windows.Shapes;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
-
 namespace Microsoft.Samples.BrushExamples
 {
 
     public class ViewboxExample : Page
     {
-    
-        
+
         public ViewboxExample()
         {
 
@@ -24,11 +22,9 @@ namespace Microsoft.Samples.BrushExamples
             createViewboxExample(mainPanel);
             this.Content = mainPanel;
         }
-        
-        
+
         private void createViewboxExample(Panel mainPanel)
         {
-
 
             Border rectangleBorder = new Border();
             rectangleBorder.BorderBrush = Brushes.Black;
@@ -56,8 +52,7 @@ namespace Microsoft.Samples.BrushExamples
             myImageBrush.Stretch = Stretch.Fill;
             myImageBrush.AlignmentX = AlignmentX.Center;
             myImageBrush.AlignmentY = AlignmentY.Center;
-            
-  
+
             // Use the ImageBrush to paint the rectangle's background.
             myRectangle.Fill = myImageBrush;
             // </SnippetGraphicsMMTileBrushViewboxWithStretchTiling>
@@ -66,8 +61,7 @@ namespace Microsoft.Samples.BrushExamples
             mainPanel.Children.Add(rectangleBorder);            
         
         }
-        
-  
+
     }
 
 }

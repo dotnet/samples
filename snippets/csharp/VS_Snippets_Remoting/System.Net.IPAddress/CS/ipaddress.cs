@@ -63,8 +63,6 @@ namespace Mssc.Services.ConnectionManagement
           // Display the server IP address in byte format.
           Console.Write("AddressBytes: ");
 
-
-
 //<Snippet2>
           Byte[] bytes = curAdd.GetAddressBytes();
           for (int i = 0; i < bytes.Length; i++) 
@@ -115,7 +113,6 @@ namespace Mssc.Services.ConnectionManagement
         Console.WriteLine("[IPAddresses] Exception: " + e.ToString());
       }
     }
-
 
     public static void Main(string[] args) 
     {

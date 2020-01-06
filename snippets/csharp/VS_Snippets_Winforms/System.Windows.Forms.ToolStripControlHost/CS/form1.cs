@@ -152,7 +152,6 @@ namespace System.Windows.Forms.ToolStripControlHostExample
 			//Set the drop-down on the DropDownButton.
 			dropDownButton2.DropDown = dropDown;
 		}
-		
 
 		private void monthCalendar_DateChanged(object sender, DateRangeEventArgs e)
 		{

@@ -82,12 +82,10 @@
          }
 // </Snippet1>
 
-
          static void Main() 
          {
             Application.Run(new MyForm());
          }
-
 
          private void MakeDataSet()
          {

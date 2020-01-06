@@ -39,7 +39,6 @@ class EncoderTest {
         Console.WriteLine("Fourth character:");
         ShowArray(fourthchar);
 
-
         // Now, encode characters using an Encoder object.
         Encoder encoder = encoding.GetEncoder();
         Console.WriteLine("Using Encoder\n-------------");

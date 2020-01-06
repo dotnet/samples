@@ -19,8 +19,6 @@ namespace RichText_DD_cs
 		/// </summary>
 		private System.ComponentModel.Container components = null;
 
-
-
 public Form1()
 {
    //
@@ -28,7 +26,6 @@ public Form1()
    //
    InitializeComponent();
 
-		
    // Sets the control to allow drops, and then adds the necessary event handlers.
    this.richTextBox1.AllowDrop = true;
    this.richTextBox1.DragEnter += new DragEventHandler(this.richTextBox1_DragEnter);
@@ -39,7 +36,6 @@ public Form1()
    // Add code here to populate the ListBox1 with paths to text files.
 
 }
-
 
 //<snippet1>
 private void Form1_Load(object sender, EventArgs e) 
@@ -79,8 +75,6 @@ private void richTextBox1_DragDrop(object sender, DragEventArgs e)
 }
 
 //</snippet1>
-
-
 
 		/// <summary>
 		/// Clean up any resources being used.
@@ -145,7 +139,6 @@ private void richTextBox1_DragDrop(object sender, DragEventArgs e)
 		{
 			Application.Run(new Form1());
 		}
-
 
 	}
 }

@@ -17,8 +17,6 @@ public enum FoodType
    High
 }
 
-
- 
 public class Run
 {
    public static void Main()
@@ -51,8 +49,7 @@ public class Run
       // Create the XmlSerializer, and return it.
       return new XmlSerializer(typeof(Food), xOver);
    }
-   
- 
+
    public void SerializeObject(string filename)
    {
       // Create an instance of the XmlSerializer class.

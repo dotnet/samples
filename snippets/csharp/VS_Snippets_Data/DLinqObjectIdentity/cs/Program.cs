@@ -23,7 +23,6 @@ namespace cs_objectidentity
                  select cust).First();
             // </Snippet1>
 
-        
         }
 
         void method2()
@@ -42,7 +41,6 @@ namespace cs_objectidentity
                  where ord.Customer.CustomerID == "BONAP"
                  select ord).First().Customer;
             // </Snippet2>
-        
 
         }
     }

@@ -1,6 +1,5 @@
 ﻿// The following code example demonstrates several of the properties and methods of NameValueCollection.
 
-
 // <snippet1>
 using System;
 using System.Collections;
@@ -61,7 +60,6 @@ public class SamplesNameValueCollection  {
          Console.WriteLine( "   [{0}]     {1,-10} {2}", i, myCol.GetKey(i), myCol.Get(i) );
       Console.WriteLine();
    }
-
 
 }
 

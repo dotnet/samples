@@ -21,7 +21,6 @@
 // System.Web.UI.DataBindingHandlerAttribute
 // System.Web.UI.DataBindingHandlerAttribute.IsDefaultAttribute().
 
-
 /*The following example demonstrates the  members of 'DataBinding' and 
 ' 'DataBindingCollection'.A new control 'SimpleWebControl'  is created 
    and a 'Designer' attribute is attached to it which actually refers to the 
@@ -67,7 +66,6 @@ using System.Collections;
 
 namespace DataBindingTest
 {
-
 
  public class SimpleDesigner : System.Web.UI.Design.ControlDesigner
    {

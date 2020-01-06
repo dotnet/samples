@@ -44,8 +44,7 @@ public class Example
    private void GetRandomNumbers()
    {
       double result = 0.0;
-      
-       
+
       for (int ctr = 0; ctr < 2000000; ctr++)
       {
          lock (lockObj) {

@@ -50,7 +50,6 @@ namespace MatchingGame
             }
         } 
 
-
         public Form1()
         {
             InitializeComponent();

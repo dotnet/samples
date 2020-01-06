@@ -6,7 +6,6 @@ using System.Xml.Serialization;
 using System.Xml;
 using System.Xml.Schema;
 
-
 [XmlRoot(Namespace = "http://www.cohowinery.com")]
 public class Group{
    public string GroupName;

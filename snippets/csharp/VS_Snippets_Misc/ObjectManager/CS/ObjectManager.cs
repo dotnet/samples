@@ -76,7 +76,6 @@ public sealed class ObjectWalker : IEnumerable, IEnumerator {
    }
 }
 
-
 public sealed class App {
    // Define some fields in the class to test the ObjectWalker.
    public String name = "Fred";

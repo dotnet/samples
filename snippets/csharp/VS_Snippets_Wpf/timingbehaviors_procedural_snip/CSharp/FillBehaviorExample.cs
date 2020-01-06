@@ -43,7 +43,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             myTextBlock.Text = "FillBehavior = \"Deactivate\"";
             myStackPanel.Children.Add( myTextBlock );
 
-
             //
             //  Create the first rectangle to animate.
             //

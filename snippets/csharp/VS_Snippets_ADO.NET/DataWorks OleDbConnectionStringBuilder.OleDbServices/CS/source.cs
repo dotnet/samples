@@ -15,7 +15,6 @@ class Program
     private const int DBPROPVAL_OS_ENABLEALL = -1;
     private const int DBPROPVAL_OS_DISABLEALL = 0;
 
-
     static void Main()
     {
         OleDbConnectionStringBuilder builder =

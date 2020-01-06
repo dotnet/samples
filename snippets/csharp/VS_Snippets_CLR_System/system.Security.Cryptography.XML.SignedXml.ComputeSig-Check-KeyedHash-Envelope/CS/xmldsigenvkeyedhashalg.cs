@@ -52,7 +52,6 @@ public class SignVerifyEnvelope
         }
     }
 
-
     // Sign an XML file and save the signature in a new file.
     public static void SignXmlFile(string FileName, string SignedFileName, KeyedHashAlgorithm Key)
     {
@@ -88,8 +87,7 @@ public class SignVerifyEnvelope
 
         // Append the element to the XML document.
         doc.DocumentElement.AppendChild(doc.ImportNode(xmlDigitalSignature, true));
-		
-		
+
         if (doc.FirstChild is XmlDeclaration)  
         {
             doc.RemoveChild(doc.FirstChild);
@@ -128,7 +126,6 @@ public class SignVerifyEnvelope
         // Check the signature and return the result.
         return signedXml.CheckSignature(Key);
     }
-
 
     // Create example data to sign.
     public static void CreateSomeXml(string FileName)

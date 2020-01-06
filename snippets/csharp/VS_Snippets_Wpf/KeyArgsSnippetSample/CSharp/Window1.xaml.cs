@@ -7,7 +7,6 @@ using System.Windows.Media;
 using System.Windows.Shapes;
 using System.Windows.Input;
 
-
 namespace KeyArgsSnippetSample
 {
     /// <summary>
@@ -25,7 +24,6 @@ namespace KeyArgsSnippetSample
         private void KeyHandler(object sender, KeyEventArgs e)
         {
             btnKeyStates.Content = e.KeyStates.ToString();
-
 
             //<SnippetKeyEventArgsKeyStatesDown>
             // A bitwise AND operation is used in the comparison.
@@ -90,8 +88,6 @@ namespace KeyArgsSnippetSample
                 btnToggled.Background = Brushes.AliceBlue;
             }
 
-
-
             if (e.IsDown)
             {
                 if (e.IsRepeat)
@@ -99,7 +95,6 @@ namespace KeyArgsSnippetSample
                     btnIsRepeat.Background = Brushes.Red;
                 }
             }
-
 
             //<SnippetKeyEventArgsIsDown>
             // e is an instance of KeyEventArgs.
@@ -126,7 +121,6 @@ namespace KeyArgsSnippetSample
                 btnIsDown.Background = Brushes.AliceBlue;
             }
             //</SnippetKeyEventArgsKeyBoardIsKeyDown>
-
 
             if (e.IsUp)
             {

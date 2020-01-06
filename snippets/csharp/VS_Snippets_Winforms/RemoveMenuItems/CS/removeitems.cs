@@ -97,7 +97,6 @@ namespace RemoveMenuItemCS1
 		}
 		// </snippet1>
 
-
 		static void Main() 
 		{
 			Application.Run(new Form1());

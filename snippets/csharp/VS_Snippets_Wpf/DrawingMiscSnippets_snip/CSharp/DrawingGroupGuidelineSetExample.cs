@@ -160,7 +160,6 @@ namespace SDKSample
 
         }
 
-
 	}
 }
 // </SnippetGraphicsMMDrawingGroupGuidelineSetExampleWholePage>

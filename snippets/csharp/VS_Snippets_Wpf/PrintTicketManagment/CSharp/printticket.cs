@@ -103,7 +103,6 @@ namespace PrintTicketSample
             Console.WriteLine();
         }
 
-
         [STAThread]
         static public void Main(string[] args)
         {

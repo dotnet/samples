@@ -1,10 +1,8 @@
 ﻿// The following code example displays the value of MonthDayPattern for selected cultures.
 
-
 // <snippet1>
 using System;
 using System.Globalization;
-
 
 public class SamplesDTFI  {
 

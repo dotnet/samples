@@ -15,8 +15,7 @@
        Console.WriteLine( "The three-dimensional Array contains the following values:" );
        PrintValues( my3DArray );
     }
- 
- 
+
     public static void PrintValues( Array myArr )  {
        System.Collections.IEnumerator myEnumerator = myArr.GetEnumerator();
        int i = 0;

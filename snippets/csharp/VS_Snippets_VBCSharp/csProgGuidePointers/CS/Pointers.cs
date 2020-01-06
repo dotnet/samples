@@ -143,7 +143,6 @@ class TestCopy
 */
 //</Snippet18>
 
-
 class TestFixed1
 {
 	//<Snippet19>
@@ -203,7 +202,6 @@ namespace N
         /// </summary>
         public X() { }
 
-
         /// <summary>
         /// Enter description here for the second constructor.
         /// ID string generated is "M:N.X.#ctor(System.Int32)".
@@ -211,13 +209,11 @@ namespace N
         /// <param name="i">Describe parameter.</param>
         public X(int i) { }
 
-
         /// <summary>
         /// Enter description here for field q.
         /// ID string generated is "F:N.X.q".
         /// </summary>
         public string q;
-
 
         /// <summary>
         /// Enter description for constant PI.
@@ -225,14 +221,12 @@ namespace N
         /// </summary>
         public const double PI = 3.14;
 
-
         /// <summary>
         /// Enter description for method f.
         /// ID string generated is "M:N.X.f".
         /// </summary>
         /// <returns>Describe return value.</returns>
         public int f() { return 1; }
-
 
         /// <summary>
         /// Enter description for method bb.
@@ -244,7 +238,6 @@ namespace N
         /// <returns>Describe return value.</returns>
         public int bb(string s, ref int y, void* z) { return 1; }
 
-
         /// <summary>
         /// Enter description for method gg.
         /// ID string generated is "M:N.X.gg(System.Int16[],System.Int32[0:,0:])". 
@@ -253,7 +246,6 @@ namespace N
         /// <param name="array">Describe parameter.</param>
         /// <returns>Describe return value.</returns>
         public int gg(short[] array1, int[,] array) { return 0; }
-
 
         /// <summary>
         /// Enter description for operator.
@@ -264,20 +256,17 @@ namespace N
         /// <returns>Describe return value.</returns>
         public static X operator +(X x, X xx) { return x; }
 
-
         /// <summary>
         /// Enter description for property.
         /// ID string generated is "P:N.X.prop".
         /// </summary>
         public int prop { get { return 1; } set { } }
 
-
         /// <summary>
         /// Enter description for event.
         /// ID string generated is "E:N.X.d".
         /// </summary>
         public event D d;
-
 
         /// <summary>
         /// Enter description for property.
@@ -287,13 +276,11 @@ namespace N
         /// <returns></returns>
         public int this[string s] { get { return 1; } }
 
-
         /// <summary>
         /// Enter description for class Nested.
         /// ID string generated is "T:N.X.Nested".
         /// </summary>
         public class Nested { }
-
 
         /// <summary>
         /// Enter description for delegate.
@@ -301,7 +288,6 @@ namespace N
         /// </summary>
         /// <param name="i">Describe parameter.</param>
         public delegate void D(int i);
-
 
         /// <summary>
         /// Enter description for operator.
@@ -314,7 +300,6 @@ namespace N
     }
 }
 //</Snippet21>
-
 
 //-----------------------------------------------------------------------------
 //<Snippet22>
@@ -348,7 +333,6 @@ class TestUnsafe
     }
 }
 //</Snippet22>
-
 
 //-----------------------------------------------------------------------------
 //<Snippet23>

@@ -67,7 +67,6 @@ namespace Microsoft.Samples.ChannelCache.EchoWorkflowClient
             Console.ReadLine();
         }
 
-
         static void OnCompleted(WorkflowApplicationCompletedEventArgs completedArgs)
         {            
             completeEvent.Set();

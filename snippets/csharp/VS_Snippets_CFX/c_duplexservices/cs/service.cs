@@ -23,7 +23,6 @@ namespace Microsoft.ServiceModel.Samples
         void DivideBy(double n);
     }
 
-    
     public interface ICalculatorDuplexCallback
     {
         [OperationContract(IsOneWay = true)]

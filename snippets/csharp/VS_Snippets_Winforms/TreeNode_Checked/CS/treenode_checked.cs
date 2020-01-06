@@ -93,7 +93,6 @@ public class TreeNode_Bounds : Form
    
    }
 
-
 // <Snippet1> 
 public void HighlightCheckedNodes()
 {
@@ -120,13 +119,11 @@ public void HighlightCheckedNodes()
 }
 // </Snippet1>
 
-
    private void MyButton_Click(object sender,EventArgs e)
    {  
       HighlightCheckedNodes();
    }
 
-   
    private void InitializeComponent()
    {
       this.myTreeView = new System.Windows.Forms.TreeView();

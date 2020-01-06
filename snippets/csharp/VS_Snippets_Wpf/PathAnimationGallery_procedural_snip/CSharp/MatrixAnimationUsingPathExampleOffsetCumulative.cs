@@ -7,7 +7,6 @@ using System.Windows.Media.Animation;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-
 namespace SDKSample
 {
 

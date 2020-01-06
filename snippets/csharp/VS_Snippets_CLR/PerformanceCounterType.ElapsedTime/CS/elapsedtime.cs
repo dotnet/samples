@@ -142,7 +142,6 @@ public class App
         CollectSamples();
     }
 
-   
     public static void CollectSamples()
     {
         const String categoryName = "ElapsedTimeSampleCategory";
@@ -211,7 +210,6 @@ public class App
         Console.WriteLine("Elapsed time = " + DateTime.Now.Subtract(Start).ToString());
     }
 
-	
     private static void OutputSample(CounterSample s)
     {
         Console.WriteLine("\r\n+++++++++++");

@@ -15,7 +15,6 @@ namespace mixins_with_interfaces
     }
     // </SnippetPowerStatus>
 
-
     // <SnippetILightInterface>
     public interface ILight
     {

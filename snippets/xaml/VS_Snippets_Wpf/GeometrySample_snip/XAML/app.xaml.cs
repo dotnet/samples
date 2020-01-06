@@ -9,7 +9,6 @@ using System.Windows.Navigation;
 namespace Microsoft.Samples.Graphics.Geometries
 {
 
-
     public partial class app : Application
     {
     

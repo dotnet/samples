@@ -17,7 +17,6 @@ namespace ControlMembers4
       private System.Windows.Forms.MenuItem menuItem2;
       private System.Windows.Forms.MenuItem menuItem3;
       private System.Windows.Forms.Label label1;
-      
 
       private System.ComponentModel.Container components = null;
 
@@ -145,13 +144,10 @@ namespace ControlMembers4
          Application.Run(new Form2());
       }
 
-
       private void Form2_DoubleClick(object sender, System.EventArgs e)
       {
          this.MakeLabelVisible();
       }
-
-
 
 // <snippet1>
 private void MakeLabelVisible()

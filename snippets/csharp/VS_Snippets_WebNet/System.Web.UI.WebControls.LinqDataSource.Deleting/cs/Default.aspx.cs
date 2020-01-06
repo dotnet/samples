@@ -16,7 +16,6 @@ public partial class _Default : System.Web.UI.Page
 
     }
 
-
     //<Snippet1>
     protected void LinqDataSource_Deleting(object sender, LinqDataSourceDeleteEventArgs e)
     {

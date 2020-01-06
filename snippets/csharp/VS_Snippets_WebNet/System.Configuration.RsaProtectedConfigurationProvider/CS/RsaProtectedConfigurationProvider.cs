@@ -57,7 +57,6 @@ public class UsingRsaProtectedConfigurationProvider
               
     }
 
-
     // Unprotect the connectionStrings section.
     private static void UnProtectConfiguration()
     {
@@ -104,7 +103,6 @@ public class UsingRsaProtectedConfigurationProvider
 
     }
 
-
     public static void Main(string[] args)
     {
 
@@ -137,7 +135,6 @@ public class UsingRsaProtectedConfigurationProvider
         Console.Read();
             
     }
-
 
 }
 // </Snippet1>

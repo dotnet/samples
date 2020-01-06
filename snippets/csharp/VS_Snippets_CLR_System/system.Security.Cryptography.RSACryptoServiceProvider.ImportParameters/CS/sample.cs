@@ -26,7 +26,6 @@ class RSACSPSample
                 }
             }
 
-
         }
         catch (CryptographicException e)
         {

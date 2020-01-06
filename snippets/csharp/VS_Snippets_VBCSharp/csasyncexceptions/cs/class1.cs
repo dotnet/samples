@@ -72,7 +72,6 @@ namespace winformcs
         //   Task IsFaulted:  False
         //</Snippet2>
 
-
         // Snippet3 in VB is equivalent to Snippet4 in C#.
 
         //<Snippet4>

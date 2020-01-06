@@ -16,8 +16,6 @@ namespace Microsoft.Samples.Graphics.UsingImageBrush
     public partial class app : Application
     {
 
-
-
         void AppStartingUp(object sender, StartupEventArgs e)
         {
             AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
@@ -26,8 +24,7 @@ namespace Microsoft.Samples.Graphics.UsingImageBrush
             mainWindow.Show();
             mainWindow.Height = 600;
             MainWindow.Width = 800;
-            
-            
+
         }
 
         private void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs args)

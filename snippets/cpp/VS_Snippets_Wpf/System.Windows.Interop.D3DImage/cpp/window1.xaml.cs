@@ -142,7 +142,6 @@ namespace D3DHost
             }
         }
 
-       
         void CompositionTarget_Rendering(object sender, EventArgs e)
         {
             RenderingEventArgs args = (RenderingEventArgs)e;
@@ -163,13 +162,11 @@ namespace D3DHost
                     HRESULT.Check(Render());
                     d3dimg.AddDirtyRect(new Int32Rect(0, 0, d3dimg.PixelWidth, d3dimg.PixelHeight));
                     d3dimg.Unlock();
-                    
 
                     _lastRender = args.RenderingTime;
                 }
             }
         }
-    
 
         DispatcherTimer _sizeTimer;
         DispatcherTimer _adapterTimer;

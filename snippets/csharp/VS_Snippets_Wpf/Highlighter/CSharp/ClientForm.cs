@@ -45,7 +45,6 @@ using System.Windows.Automation;
 using System.Threading;
 using System.Timers;
 
-
 namespace Highlighter
 {
     /// <summary>
@@ -98,7 +97,6 @@ namespace Highlighter
             UIAutoThread.Start();
         }
 
-
         /// <summary>
         /// Subscribe to UI Automation events.
         /// </summary>
@@ -119,7 +117,6 @@ namespace Highlighter
             eventTimer.Stop();
             Automation.RemoveAutomationFocusChangedEventHandler(focusHandler);
         }
-
 
         /// <summary>
         /// Responds to focus changes. Starts the timer so that the highlight 
@@ -205,7 +202,6 @@ namespace Highlighter
         {
             Application.Exit();
         }
-
 
         /// <summary>
         /// Responds to form closing. Unsubscribes to UI Automation events.

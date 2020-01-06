@@ -8,7 +8,6 @@ using System.Windows.Shapes;
 namespace Microsoft.Samples.Graphics.UsingImageBrush
 {
 
-
     public partial class StretchModes : Page
     {
         public StretchModes()

@@ -70,7 +70,6 @@ public class Run
       writer.Close();
    }
 
-
    public void SerializeOverride(string filename)
    {
       // Create an instance of the XmlSerializer class that

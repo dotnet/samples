@@ -29,7 +29,6 @@ class Sample
 //</snippet1>
     }
 
-
     // Resolver with specific credentials
     static void XmlUrlResolver_Credentials2()
     {
@@ -48,6 +47,5 @@ class Sample
 
         //</snippet2>
     }
-
 
 }

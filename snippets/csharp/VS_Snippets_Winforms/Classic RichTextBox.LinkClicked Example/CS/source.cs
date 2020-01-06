@@ -25,7 +25,6 @@ public class Form1: Form
    }
    // </Snippet1>
 
-   
    /// <summary>
    /// The main entry point for the application.
    /// </summary>

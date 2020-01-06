@@ -45,7 +45,6 @@ class MainClass
 */
 //</Snippet8>
 
-
 public class ListClass : System.Collections.IEnumerable
 {
    // private int max = 0;
@@ -60,7 +59,6 @@ public class ListClass : System.Collections.IEnumerable
     }
     //</Snippet2>
 
-
     //<Snippet3>
     static void Main()
     {
@@ -74,7 +72,6 @@ public class ListClass : System.Collections.IEnumerable
     }
     //</Snippet3>
 
-
     //<Snippet4>
     // Implementing the enumerable pattern
     public System.Collections.IEnumerable SampleIterator(int start, int end)
@@ -85,7 +82,6 @@ public class ListClass : System.Collections.IEnumerable
         }
     }
     //</Snippet4>
-
 
     void test()
     {
@@ -101,7 +97,6 @@ public class ListClass : System.Collections.IEnumerable
     }
 }
 
-
 public class TestClass : System.Collections.IEnumerable
 {
     //<Snippet6>
@@ -114,7 +109,6 @@ public class TestClass : System.Collections.IEnumerable
     }
     //</Snippet6>
 
-
     void test()
     {
         //<Snippet7>
@@ -126,7 +120,6 @@ public class TestClass : System.Collections.IEnumerable
         //</Snippet7>
     }
 }
-
 
 //<Snippet1>
 public class DaysOfTheWeek : System.Collections.IEnumerable
@@ -176,7 +169,6 @@ namespace UsingIterators
             // Output: 0 1 2 3 4 5 6 7 8 9
             System.Console.WriteLine();
 
-
             // Using a named iterator.
             ListClass test = new ListClass();
 
@@ -186,7 +178,6 @@ namespace UsingIterators
             }
             // Output: 1 2 3 4 5 6 7 8 9 10
             System.Console.WriteLine();
-
 
             // Using multiple yield statements.
             foreach (string element in new TestClass())

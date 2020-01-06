@@ -6,7 +6,6 @@ using System.Text;
 using System.Windows.Forms;
 using System.Collections;
 
-
 namespace System_Windows_Forms_UpdateBinding
 {
 	class Form1 : Form

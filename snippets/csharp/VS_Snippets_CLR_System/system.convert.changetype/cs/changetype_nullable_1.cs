@@ -9,7 +9,6 @@ public class Example
       double dValue1 = (double) Convert.ChangeType(intValue1, typeof(Double), null);
       Console.WriteLine("{0} ({1})--> {2} ({3})", intValue1, intValue1.GetType().Name,
                         dValue1, dValue1.GetType().Name);
-      
 
       float fValue1 = 16.3478f;
       int? intValue2 = (int) fValue1; 

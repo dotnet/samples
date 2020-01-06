@@ -165,7 +165,6 @@ namespace DataContractSerializerExample
     }
     //</snippet3>
 
-
     //<snippet4>
     [DataContract(Name = "PurchaseOrder", Namespace = "urn:www.Microsoft.com")]
     public class PurchaseOrder : IExtensibleDataObject
@@ -293,7 +292,6 @@ namespace DataContractSerializerExample
         }
     }
     //</snippet4>
-
 
     //<snippet5>
     public sealed class ShowWriteStartObject

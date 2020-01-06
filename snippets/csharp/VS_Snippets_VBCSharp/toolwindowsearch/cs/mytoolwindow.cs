@@ -50,14 +50,12 @@ namespace Microsoft.TestToolWindowSearch
             base.Content = new MyControl();
         }
 
-
         //<Snippet2>
         public override bool SearchEnabled
         {
             get { return true; }
         }
         //</Snippet2>
-
 
         //<Snippet4>
         public override IVsSearchTask CreateSearch(uint dwCookie, IVsSearchQuery pSearchQuery, IVsSearchCallback pSearchCallback)
@@ -155,7 +153,6 @@ namespace Microsoft.TestToolWindowSearch
         }
         //</Snippet4>
 
-
         internal class TestSearchTask2 : VsSearchTask
         {
             private MyToolWindow m_toolWindow;
@@ -224,7 +221,6 @@ namespace Microsoft.TestToolWindowSearch
                     // If the search string contains the filter string, filter the content array.
                     string filterString = "lines:\"even\"";
 
-
                     if (this.SearchQuery.SearchString.Contains(filterString))
                     {
                         // Retain only the even items in the array.
@@ -287,7 +283,6 @@ namespace Microsoft.TestToolWindowSearch
             }
         }
 
-
         //<Snippet5>
         public override void ProvideSearchSettings(IVsUIDataSource pSearchSettings)
         {
@@ -301,7 +296,6 @@ namespace Microsoft.TestToolWindowSearch
             Utilities.SetValue(pSearchSettings, SearchSettingsDataSource.SearchProgressTypeProperty.Name, (uint)VSSEARCHPROGRESSTYPE.SPT_DETERMINATE);
             //</Snippet6>
         }
-
 
         //<Snippet9>
         private IVsEnumWindowSearchOptions m_optionsEnum;

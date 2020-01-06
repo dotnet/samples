@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Reflection;
 
-
 class Example
 {
    internal static TextBlock b;

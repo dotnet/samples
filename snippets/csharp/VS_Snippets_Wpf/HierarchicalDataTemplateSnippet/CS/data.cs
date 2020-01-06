@@ -8,7 +8,6 @@ using System.Windows.Shapes;
 using System.Collections.ObjectModel;
 using System.Collections.Generic;
 
-
 namespace SDKSample
 {
     public class League
@@ -18,7 +17,6 @@ namespace SDKSample
             _name = name;
             _divisions = new List<Division>();
         }
-
 
         string _name;
 
@@ -115,7 +113,6 @@ namespace SDKSample
                 return null;
             }
         }
-
 
     }
 }

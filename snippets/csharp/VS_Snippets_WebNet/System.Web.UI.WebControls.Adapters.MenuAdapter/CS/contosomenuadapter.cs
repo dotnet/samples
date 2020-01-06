@@ -46,7 +46,6 @@ namespace Contoso
         }
         //</Snippet3>
 
-
         // Return the menu path at the current location.
         //<Snippet4>
         protected override object SaveAdapterControlState()

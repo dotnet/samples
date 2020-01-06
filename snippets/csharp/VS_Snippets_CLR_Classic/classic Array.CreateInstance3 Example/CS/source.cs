@@ -19,8 +19,7 @@
        Console.WriteLine( "The four-dimensional Array contains the following values:" );
        PrintValues( my4DArray );
     }
- 
- 
+
     public static void PrintValues( Array myArr )  {
        System.Collections.IEnumerator myEnumerator = myArr.GetEnumerator();
        int i = 0;

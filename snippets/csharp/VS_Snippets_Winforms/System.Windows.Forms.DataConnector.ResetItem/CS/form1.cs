@@ -62,7 +62,6 @@ public class Form1 : System.Windows.Forms.Form
         // Bind the list to the BindingSource.
         this.customersBindingSource.DataSource = customerList;
 
-        
         // Attach the BindingSource to the DataGridView.
         this.customersDataGridView.DataSource = 
             this.customersBindingSource;
@@ -88,7 +87,6 @@ public class Form1 : System.Windows.Forms.Form
     }
     // </snippet7>
 
-   
     [STAThread]
     static void Main()
     {

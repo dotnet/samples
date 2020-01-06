@@ -33,7 +33,6 @@ namespace Samples.AspNet.CS.Controls
       @"[CompanyName] = @CompanyName, [ContactName] = @ContactName, " +
       @"[Phone] = @Phone WHERE [CustomerID] = @CustomerID";
 
-
     public SmallGridWebPart()
     {
        ExportMode = WebPartExportMode.All;

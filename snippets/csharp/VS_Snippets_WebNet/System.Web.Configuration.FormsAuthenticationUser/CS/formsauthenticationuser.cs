@@ -31,11 +31,9 @@ namespace Samples.Aspnet.SystemWebConfiguration
 
             // </Snippet1>
 
-
             // <Snippet2>
            
             // </Snippet2>
-
 
             // <Snippet3>
 
@@ -77,7 +75,6 @@ namespace Samples.Aspnet.SystemWebConfiguration
             formsAuthenticationUsers[0].Name = "userName";
 
             // </Snippet5>
-
 
         }
 

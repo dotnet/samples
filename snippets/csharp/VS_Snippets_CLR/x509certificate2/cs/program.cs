@@ -38,7 +38,6 @@ namespace X509CertEncrypt
                 Console.ReadLine();
             }
 
-
             // Encrypt the file using the public key from the certificate.
             EncryptFile(originalFile, (RSACryptoServiceProvider)cert.PublicKey.Key);
 

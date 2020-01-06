@@ -17,9 +17,7 @@ namespace Samples.AspNet.CS
         {
         }
 
-
         private static DataTable table;
-
 
         private DataTable CreateData()
         {

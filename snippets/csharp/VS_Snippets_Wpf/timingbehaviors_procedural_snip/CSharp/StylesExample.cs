@@ -10,14 +10,11 @@ using System.Windows.Media;
 using System.Windows.Shapes;
 using System.Windows.Media.Animation;
 
-
 namespace Microsoft.Samples.Animation.TimingBehaviors
 {
     public partial class StylesExample : Page
     {
-    
-    
-    
+
         public StylesExample()
         {
         
@@ -39,8 +36,7 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
            BeginStoryboard myBeginStoryboard = new BeginStoryboard();
            Storyboard myStoryboard = new Storyboard();
            myBeginStoryboard.Storyboard = myStoryboard;
-           
-           
+
            DoubleAnimation myDoubleAnimation = new DoubleAnimation();
        Storyboard.SetTargetProperty(myDoubleAnimation, new PropertyPath(Button.OpacityProperty));
        myDoubleAnimation.From = 1.0;

@@ -2,7 +2,6 @@
 using System.Web;
 using System.Web.UI;
 
-
 public class Page1: Page
 {
 

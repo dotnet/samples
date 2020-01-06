@@ -101,7 +101,6 @@ namespace SimpleServiceSample
                     "OnStart");
             }
 
-
         }
  
         // <Snippet4>

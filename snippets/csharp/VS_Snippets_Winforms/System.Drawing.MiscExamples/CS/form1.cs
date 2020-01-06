@@ -232,7 +232,6 @@ public class Form1:
     }
     //</snippet5>
 
-
     // The following code example demonstrates how to use the KnownColor enum
     // to print out the name and colors of all its values. This example is 
     // designed to be used with Windows Forms. Create a form and paste
@@ -348,8 +347,6 @@ public class Form1:
         e.Graphics.DrawImage(bmp, new Point(30, 30));
     }
     //</snippet9>
- 
-
 
     // The following code example demonstrates how to use the 
     // TranslateTransform method. This example is designed to be used 
@@ -385,9 +382,6 @@ public class Form1:
     }
     //</snippet10>
 
-
-   
-
     [STAThread]
     public static void Main()
     {
@@ -421,7 +415,6 @@ public class Form1:
                 12.0F, FontStyle.Bold);
     }
     //</snippet11>
-
 
 // The following code example demonstrates how to construct a Region
     // using the RegionData class. This example is designed to be used with Windows

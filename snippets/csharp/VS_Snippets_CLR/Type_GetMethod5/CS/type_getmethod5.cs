@@ -13,12 +13,10 @@ class Program
 
     public unsafe void MethodA(int* i) { }
 
-
     public void MethodA(ref int r) {}
 
     // Method that takes an out parameter.
     public void MethodA(int i, out int o) { o = 100; }
-
 
   static void Main(string[] args)
   {

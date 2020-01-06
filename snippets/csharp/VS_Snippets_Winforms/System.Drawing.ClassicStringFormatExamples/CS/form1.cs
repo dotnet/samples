@@ -57,7 +57,6 @@ namespace System.Drawing.ClassicStringFormatExamplesCS
 		}
 		#endregion
 
-
         // Snippet for: M:System.Drawing.StringFormat.GetTabStops(System.Single@)
         // <snippet1>
         public void GetSetTabStopsExample1(PaintEventArgs e)
@@ -98,7 +97,6 @@ namespace System.Drawing.ClassicStringFormatExamplesCS
         }
         // </snippet1>
 
-
         // Snippet for: M:System.Drawing.StringFormat.SetDigitSubstitution(System.Int32,System.Drawing.StringDigitSubstitute)
         // <snippet2>
         public void SetDigitSubExample(PaintEventArgs e)
@@ -108,8 +106,7 @@ namespace System.Drawing.ClassicStringFormatExamplesCS
             Font         myFont = new Font("Courier New", 12);
             StringFormat myStringFormat = new StringFormat();
             string       myString = "0 1 2 3 4 5 6 7 8 9";
-                     
-               
+
             // Arabic (0x0C01) digits.
                      
             // Use National substitution method.
@@ -143,7 +140,6 @@ namespace System.Drawing.ClassicStringFormatExamplesCS
                 myFont, blueBrush, new PointF(10.0f, 120.0f), myStringFormat);
         }
         // </snippet2>
-
 
         // Snippet for: M:System.Drawing.StringFormat.SetMeasurableCharacterRanges(System.Drawing.CharacterRange[])
         // <snippet3>
@@ -189,8 +185,7 @@ namespace System.Drawing.ClassicStringFormatExamplesCS
             // Paint the regions.
             for (i = 0; i < charRegions.Length; i++)
                 g.FillRegion(redBrush, charRegions[i]);   
-           
-                     
+
             // Repeat the above steps, but include trailing spaces in the char
             // range measurement by setting the appropriate string format flag.
             strFormat.FormatFlags = StringFormatFlags.MeasureTrailingSpaces;
@@ -198,8 +193,7 @@ namespace System.Drawing.ClassicStringFormatExamplesCS
                 layoutRectB, strFormat);
             g.DrawString(str, tnrFont, Brushes.Blue, layoutRectB, strFormat);
             g.DrawRectangle(Pens.Black, layoutRectB);
-             
-            
+
             for (i = 0; i < charRegions.Length; i++)
                 g.FillRegion(redBrush, charRegions[i]);   
            
@@ -220,7 +214,6 @@ namespace System.Drawing.ClassicStringFormatExamplesCS
             
         }
         // </snippet3>
-
 
         // Snippet for: M:System.Drawing.StringFormat.SetTabStops(System.Single,System.Single[])
         // <snippet4>
@@ -260,7 +253,6 @@ namespace System.Drawing.ClassicStringFormatExamplesCS
             }
         }
         // </snippet4>
-
 
         // Snippet for: M:System.Drawing.StringFormat.ToString
         // <snippet5>

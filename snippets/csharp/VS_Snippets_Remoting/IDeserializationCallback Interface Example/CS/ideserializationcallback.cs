@@ -36,7 +36,6 @@ class Circle : IDeserializationCallback
     }
 }
 
-
 class Class1 
 {
     [STAThread]
@@ -73,7 +72,6 @@ class Class1
         }
     }
 
-   
     static void Deserialize() 
     {
         // Declare the Circle reference.

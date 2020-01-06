@@ -2,7 +2,6 @@
 using System;
 using System.Resources;
 
-
 public class WriteResources {
    public static void Main(string[] args) {
       

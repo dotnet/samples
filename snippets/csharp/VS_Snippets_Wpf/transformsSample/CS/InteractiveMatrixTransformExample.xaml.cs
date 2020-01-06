@@ -9,7 +9,6 @@ using System.Windows.Media.Animation;
 
 namespace Microsoft.Samples.Graphics.Transforms
 {
- 
 
     public partial class InteractiveMatrixTransformExample : Page
     {
@@ -25,11 +24,8 @@ namespace Microsoft.Samples.Graphics.Transforms
 
 		}
 
-
 		private void updateMatrixTransform()
 		{
-
-  
 
 			Matrix myMatrix = new Matrix();
 
@@ -43,8 +39,6 @@ namespace Microsoft.Samples.Graphics.Transforms
 			myMatrixTransform.Matrix = myMatrix;
 
 		}
-
-
 
     }
 }

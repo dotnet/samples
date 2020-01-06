@@ -30,8 +30,7 @@ namespace Microsoft.Samples.BrushExamples
             fromArgbExample();
             this.Content = myMainPanel;
         }
-        
-        
+
         private void predefinedBrushExample()
         {
 
@@ -79,8 +78,7 @@ namespace Microsoft.Samples.BrushExamples
                     
             myButton.Background = mySolidColorBrush;
             // </SnippetSolidColorBrushfromScRgbExample1CSharp>
-            
-            
+
             myMainPanel.Children.Add(myButton);
               
         }    
@@ -103,8 +101,7 @@ namespace Microsoft.Samples.BrushExamples
                     
             myButton.Background = mySolidColorBrush;
             // </SnippetSolidColorBrushfromArgbExample1CSharp>
-            
-            
+
             myMainPanel.Children.Add(myButton);
               
         }            

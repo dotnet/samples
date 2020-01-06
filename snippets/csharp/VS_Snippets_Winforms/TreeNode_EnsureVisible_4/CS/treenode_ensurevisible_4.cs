@@ -163,7 +163,6 @@ private void button1_Click(object sender, System.EventArgs e)
 }
 // </Snippet1>
 
-      
 // <Snippet2>
 private void button3_Click(object sender, System.EventArgs e)
 {
@@ -178,7 +177,6 @@ private void button3_Click(object sender, System.EventArgs e)
 }
 // </Snippet2>
 
-      
 // <Snippet3>
 private void button4_Click(object sender, System.EventArgs e)
 {
@@ -194,7 +192,6 @@ private void button4_Click(object sender, System.EventArgs e)
      " tree node cloned and added to " + treeView1.Nodes[0].Text);
 }
 // </Snippet3>
-
 
    }
 

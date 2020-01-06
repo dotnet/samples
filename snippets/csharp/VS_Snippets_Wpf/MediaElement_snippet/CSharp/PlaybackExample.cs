@@ -107,7 +107,6 @@ namespace MediaElementExample
             media.Volume = args.NewValue;
         }
 
-
         private void Media_MediaOpened(object sender, System.EventArgs args)
         {
             //if (media.Player.NaturalDuration.HasTimeSpan)

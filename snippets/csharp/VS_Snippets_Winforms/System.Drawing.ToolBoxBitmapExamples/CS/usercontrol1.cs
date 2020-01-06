@@ -37,7 +37,6 @@ using System.ComponentModel;
 
     }
 
-
 // The following code example demonstrates how to use the 
 // ToolBoxBitmapAttribute#ctor(string) costructor to set stop.bmp as the
 // toolbox icon for the StopSignControl. This example assumes
@@ -158,7 +157,6 @@ public class StopSignControl2:
 
 }
 //</snippet2>
-
 
 // The following code example demonstrates how to use the 
 // ToolBoxBitmapAttribute#ctor(type) constructor to set the icon of the button control

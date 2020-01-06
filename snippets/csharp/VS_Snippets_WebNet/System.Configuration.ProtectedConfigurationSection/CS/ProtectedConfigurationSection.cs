@@ -38,7 +38,6 @@ namespace Samples.Aspnet
         }
         // </Snippet2>
 
-
         // <Snippet3>
         static void GetProviderCollection()
         {

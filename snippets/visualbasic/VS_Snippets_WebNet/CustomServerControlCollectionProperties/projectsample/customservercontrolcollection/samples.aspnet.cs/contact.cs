@@ -18,7 +18,6 @@ namespace Samples.AspNet.CS.Controls
         private string emailValue;
         private string phoneValue;
 
-
         public Contact()
             : this(String.Empty, String.Empty, String.Empty)
         {

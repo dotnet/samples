@@ -17,7 +17,6 @@ using System.Xml;
 using System.Security.Permissions;
 using WinForms = Microsoft.Win32;
 
-
 namespace SdkSample
 {
     // ========================= partial class Window1 ========================
@@ -35,7 +34,6 @@ namespace SdkSample
                 "Click 'File | Open...' to select a file to open and view.");
         }
         #endregion constructor
-
 
         #region File|Open...
         // ------------------------------ OnOpen ------------------------------
@@ -83,7 +81,6 @@ namespace SdkSample
             }
         }// end:OnOpen()
 
-
         // --------------------------- OpenContent ---------------------------
         /// <summary>
         ///   Loads and displays a given content file.</summary>
@@ -130,7 +127,6 @@ namespace SdkSample
 
             return true;
         }// end:OpenContent()
-
 
         // ---------------------- OpenEncryptedContent -----------------------
         /// <summary>
@@ -352,9 +348,7 @@ namespace SdkSample
             return true;
         }// end:OpenEncryptedContent()
 
-
         #endregion File|Open...
-
 
         #region File|Close
         // ----------------------------- OnClosed -----------------------------
@@ -365,7 +359,6 @@ namespace SdkSample
             CloseContent();
         }
 
-
         // ----------------------------- OnClose ------------------------------
         /// <summary>
         ///   Handles the user "File | Close" menu operation
@@ -374,7 +367,6 @@ namespace SdkSample
         {
             CloseContent();
         }
-
 
         // --------------------------- CloseContent --------------------------
         /// <summary>
@@ -400,7 +392,6 @@ namespace SdkSample
         }// end:CloseContent
         #endregion File|Close
 
-
         #region File|Exit
         // ------------------------------ OnExit ------------------------------
         /// <summary>
@@ -411,7 +402,6 @@ namespace SdkSample
             Close();        // invokes OnClosed()
         }// end:OnExit()
         #endregion File|Exit
-
 
         #region Utilities
 
@@ -481,7 +471,6 @@ namespace SdkSample
             return contentDir;
         }// end:GetContentFolder()
 
-
         // ------------------------------ Filename ----------------------------
         /// <summary>
         ///   Returns just the filename from a given path and filename.</summary>
@@ -502,7 +491,6 @@ namespace SdkSample
             return filepath.Remove(0, slashIndex + 1);
         }
 
-
         // --------------------------- ShowStatus -----------------------------
         /// <summary>
         ///   Adds a line of text to the statusBlock.</summary>
@@ -512,7 +500,6 @@ namespace SdkSample
         {
             statusBlock.Text += status + "\n";
         }
-
 
         // ---------------------------- ShowPrompt ----------------------------
         /// <summary>
@@ -524,7 +511,6 @@ namespace SdkSample
             promptBlock.Text = prompt;
         }
 
-
         // --------------------- OnWindowsAuthentication ----------------------
         /// <summary>
         ///   Sets rights management for Windows authentication.</summary>
@@ -535,7 +521,6 @@ namespace SdkSample
             _authentication = AuthenticationType.Windows;
         }
 
-
         // --------------------- OnPassportAuthentication ---------------------
         /// <summary>
         ///   Sets rights management for Windows authentication.</summary>
@@ -545,7 +530,6 @@ namespace SdkSample
             menuViewPassport.IsChecked = true;
             _authentication = AuthenticationType.Passport;
         }
-
 
         // -------------------- GetDefaultWindowsUserName() -------------------
         /// <summary>
@@ -579,7 +563,6 @@ namespace SdkSample
             return ((string)result.Properties["mail"][0]);
         }// end:GetDefaultWindowsUserName()
 
-
         // ----------------------- ImageViewer attribute ------------------------
         /// <summary>
         ///   Gets the Image viewer control.</summary>
@@ -590,14 +573,12 @@ namespace SdkSample
         }
         #endregion Utilities
 
-
         #region private fields
         private string      _contentFile=null;  // content path and filename.
         private AuthenticationType _authentication = AuthenticationType.Windows;
         private static SecureEnvironment _secureEnv = null;
         private static String _currentUserId = GetDefaultWindowsUserName();
         #endregion private fields
-
 
     }// end:partial class Window1
 

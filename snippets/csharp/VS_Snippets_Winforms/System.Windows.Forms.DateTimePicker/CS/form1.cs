@@ -71,12 +71,10 @@ public class Form1:
 		Application.Run(new Form1());
 	}
 
-    
 	//<snippet1>
 
 	// Declare the DateTimePicker.
 	internal System.Windows.Forms.DateTimePicker DateTimePicker1;
-
 
 	private void InitializeDateTimePicker()
 	{
@@ -124,6 +122,5 @@ public class Form1:
 	}
 	//</snippet2>
 
-    
 }
 

@@ -5,10 +5,8 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Navigation;
 
-
 namespace Microsoft.Samples.Animation.TimingBehaviors
 {
-
 
     public partial class SampleViewer : Page
     {
@@ -17,15 +15,12 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
         {
             InitializeComponent();
         }
-    
-    
+
     }
-    
-    
+
     public class ElapsedTimeControl : Control
     {
-    
-    
+
         private Clock theClock;
         private Nullable<TimeSpan> previousTime;
     
@@ -60,8 +55,7 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
         {
             SetValue(CurrentTimeProperty, theClock.CurrentTime);
         }
-        
-        
+
         public static readonly DependencyProperty CurrentTimeProperty =
             DependencyProperty.Register(
                 "CurrentTime", 
@@ -70,8 +64,7 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
                 new FrameworkPropertyMetadata(
                     (Nullable<TimeSpan>)null, 
                     new PropertyChangedCallback(currentTime_Changed)));
-                
-        
+
         private static void currentTime_Changed(DependencyObject d, 
             DependencyPropertyChangedEventArgs args)
         {
@@ -96,10 +89,7 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
         public static readonly DependencyProperty CurrentTimeAsStringProperty =
             DependencyProperty.Register("CurrentTimeAsString", typeof(string), 
                 typeof(ElapsedTimeControl));
-                
-  
-        
-        
+
     }
 
 }

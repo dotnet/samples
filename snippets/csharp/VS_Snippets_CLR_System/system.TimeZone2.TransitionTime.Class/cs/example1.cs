@@ -75,7 +75,6 @@ public class TransitionTimeExamples
       }   
    } 
 
-
    private static TimeZoneInfo.AdjustmentRule GetAdjustment(TimeZoneInfo.AdjustmentRule[] adjustments,
                                                      int year)
    {                                                  

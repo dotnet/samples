@@ -21,7 +21,6 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using System.Data;
 
-
 public class TreeNode_Bounds : Form
 {
    private TreeView myTreeView;
@@ -114,7 +113,6 @@ public void AddRootNodes()
 }
 // </Snippet1>  
 
-
 // <Snippet2> 
    private void Button1_Click(object sender,EventArgs e)
    {
@@ -144,7 +142,6 @@ public void AddRootNodes()
       myTreeView.ItemHeight = myNodeHeight + 4;
    }
 // </Snippet2>
-
 
    private void InitializeComponent()
    {

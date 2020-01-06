@@ -3,7 +3,6 @@ using System.Text;
 using System.Printing;
 using System.IO;
 
-
 namespace WriteToSpoolFile
 {
     class Program

@@ -99,7 +99,6 @@ namespace MyLogRecordSequence
             // for advancing the base of the log. The amount of space can be in percentage or in terms of bytes 
             // which is rounded off to the nearest containers in CLFS. The default is 35 percent.
 
-            
             policy.PinnedTailThreshold = new PolicyUnit(10, PolicyUnitType.Percentage);
 
             // Set the maximum extents the log can have.
@@ -195,7 +194,6 @@ namespace MyLogRecordSequence
             Console.WriteLine("Done...");
         }
         // </Snippet5>
-
 
         // Read the records added to the log. 
         public void ReadRecords()

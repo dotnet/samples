@@ -16,7 +16,6 @@ public class Example
         string greeting = rl.GetString("Greeting");
         outputBlock.Text += String.Format("{0}\n", String.IsNullOrEmpty(greeting) ? "Здравствуйте" :  greeting);
 
-        
         // Display greeting using fr-FR resources.
         ResourceContext ctx = new Windows.ApplicationModel.Resources.Core.ResourceContext();
         ctx.Languages =  new string[] { "fr-FR" } ;

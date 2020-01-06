@@ -221,7 +221,6 @@ namespace Samples.AspNet.CS.Controls
             EnsureChildControls();
         }
 
-
         protected override void CreateChildControls()
         {
             Controls.Clear();
@@ -262,7 +261,6 @@ namespace Samples.AspNet.CS.Controls
             this.Controls.Add(emailValidator);
             this.Controls.Add(submitButton);
         }
-
 
         protected override void Render(HtmlTextWriter writer)
         {

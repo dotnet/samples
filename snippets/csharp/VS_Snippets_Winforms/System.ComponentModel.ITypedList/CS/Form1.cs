@@ -20,7 +20,6 @@ namespace ITypedListCS
         private DataGridView dataGridView1;
         private Button button1;
         private Button button2;
-        
 
         public Form1()
         {

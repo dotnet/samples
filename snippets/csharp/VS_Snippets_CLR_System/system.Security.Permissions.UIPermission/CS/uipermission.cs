@@ -144,7 +144,6 @@ public class UIPermissionDemo
     private static void ToFromXmlDemo()
     {
 
-
         UIPermission uiPerm1 = new UIPermission(UIPermissionWindow.SafeTopLevelWindows);
         UIPermission uiPerm2 = new UIPermission(PermissionState.None);
         uiPerm2.FromXml(uiPerm1.ToXml());

@@ -2,7 +2,6 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-
 public class Form1:
     System.Windows.Forms.Form
 

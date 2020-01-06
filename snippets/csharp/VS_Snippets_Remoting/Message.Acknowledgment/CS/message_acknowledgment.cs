@@ -66,7 +66,6 @@ namespace MyProject
 			
 		}
 
-
 		//**************************************************
 		// Sends a string message to a queue.
 		//**************************************************
@@ -89,7 +88,6 @@ namespace MyProject
 			return;
 		}
 
-
 		//**************************************************
 		// Receives a message containing an Order.
 		//**************************************************
@@ -101,7 +99,6 @@ namespace MyProject
 
 			myQueue.MessageReadPropertyFilter.CorrelationId = true;
 
-
 			// Set the formatter to indicate body contains an Order.
 			myQueue.Formatter = new XmlMessageFormatter(new Type[]
 				{typeof(string)});
@@ -112,7 +109,6 @@ namespace MyProject
 			{
 				// Receive and format the message. 
 				Message myMessage =	myQueue.Receive(); 
-
 
 				// Display message information.
 				Console.WriteLine("____________________________________________");

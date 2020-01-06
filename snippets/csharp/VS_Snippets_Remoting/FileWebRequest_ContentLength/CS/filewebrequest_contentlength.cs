@@ -12,8 +12,6 @@ using System;
 using System.IO;
 using System.Text;
 
-
-
      class FileWebRequest_ContentLen
      {
         public static void Main(String[] args)

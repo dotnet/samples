@@ -65,7 +65,6 @@ namespace Microsoft.ServiceModel.Samples
                 
                 CustomBinding binding = new CustomBinding(msmqBindingElement);
 
-
                 serviceHost.AddServiceEndpoint(typeof(IOrderProcessor), binding, @"msmq.formatname:DIRECT=OS:.\private$\Orders");
 
                 serviceHost.Open();

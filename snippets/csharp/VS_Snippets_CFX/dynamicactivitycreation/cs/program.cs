@@ -79,7 +79,6 @@ namespace Microsoft.Samples.DynamicActivityCreation
             return numbers;
         }
 
-
         static Activity CreateAverageCalculationWorkflow()
         {
             // <Snippet0>

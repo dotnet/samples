@@ -16,8 +16,7 @@ namespace BrushesIntroduction
     /// </summary>
     public partial class GradientBrushesExample : Page
     {
-        
-        
+
        public GradientBrushesExample()
        {
             InitializeComponent();

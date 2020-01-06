@@ -19,7 +19,6 @@ namespace CsCsrefProgrammingObjects
     }
     //</Snippet1>
 
-
     //-----------------------------------------------------------------------------
     //<Snippet2>
     // Declare and initialize struct objects.
@@ -49,7 +48,6 @@ namespace CsCsrefProgrammingObjects
     */
     //</Snippet2>
 
-
     //-----------------------------------------------------------------------------
     //<Snippet3>
     // Declare a struct object without "new".
@@ -75,7 +73,6 @@ namespace CsCsrefProgrammingObjects
     }
     // Output: Coords 1: x = 10, y = 20
     //</Snippet3>
-
 
     //-----------------------------------------------------------------------------
     namespace WrapCoords
@@ -130,7 +127,6 @@ namespace CsCsrefProgrammingObjects
         //</Snippet4>
     }
 
-
     //-----------------------------------------------------------------------------
     namespace WrapCoordsDefaultConstructorOnly
     {
@@ -148,7 +144,6 @@ namespace CsCsrefProgrammingObjects
         }
         //</Snippet5>
     }
-
 
     //-----------------------------------------------------------------------------
     namespace WrapConstructorCalls
@@ -182,7 +177,6 @@ namespace CsCsrefProgrammingObjects
             //</Snippet7>
         }
     }
-
 
     //-----------------------------------------------------------------------------
     namespace WrapPerson3
@@ -238,7 +232,6 @@ namespace CsCsrefProgrammingObjects
         //</Snippet84>
     }
 
-
     //-----------------------------------------------------------------------------
     namespace WrapPerson
     {
@@ -264,7 +257,6 @@ namespace CsCsrefProgrammingObjects
         // Output:  Name: , Age: 0
         //</Snippet8>
     }
-
 
     //-----------------------------------------------------------------------------
     //<Snippet9>
@@ -332,7 +324,6 @@ namespace CsCsrefProgrammingObjects
     */
     //</Snippet9>
 
-
     namespace WrapShapeAndCircle
     {
         abstract class Shape
@@ -357,7 +348,6 @@ namespace CsCsrefProgrammingObjects
         //</Snippet78>
     }
 
-
     //-----------------------------------------------------------------------------
     //This snippet used by more than one topic
     //<Snippet11>
@@ -369,7 +359,6 @@ namespace CsCsrefProgrammingObjects
         public static double e = Math.E;  //2.71828...
     }
     //</Snippet11>
-
 
     //-----------------------------------------------------------------------------
     //<Snippet12>
@@ -405,7 +394,6 @@ namespace CsCsrefProgrammingObjects
     // Output: New count: 101
     //</Snippet12>
 
-
     //-----------------------------------------------------------------------------
     //<Snippet14>
     class SimpleClass
@@ -421,8 +409,6 @@ namespace CsCsrefProgrammingObjects
         }
     }
     //</Snippet14>
-
-
 
     //-----------------------------------------------------------------------------
     //<Snippet15>
@@ -501,8 +487,6 @@ namespace CsCsrefProgrammingObjects
    */
     //</Snippet15>
 
-
-
     //-----------------------------------------------------------------------------
     //<Snippet16>
 class Person
@@ -568,7 +552,6 @@ class TestPerson
 // Charles is 41
     //</Snippet16>
 
-
     //-----------------------------------------------------------------------------
     namespace WrapCoords2
     {
@@ -610,7 +593,6 @@ class TestPerson
         //</Snippet17>
     }
 
-
     //-----------------------------------------------------------------------------
     //<Snippet18>
     partial interface ITest
@@ -634,8 +616,6 @@ class TestPerson
     }
     //</Snippet18>
 
-
-
     //-----------------------------------------------------------------------------
     //<Snippet19>
     partial class ClassWithNestedClass
@@ -649,13 +629,11 @@ class TestPerson
     }
     //</Snippet19>
 
-
     //-----------------------------------------------------------------------------
     //<Snippet20>
     public partial class A { }
     //public class A { }  // Error, must also be marked partial
     //</Snippet20>
-
 
     //-----------------------------------------------------------------------------
     class Planet { }
@@ -667,7 +645,6 @@ class TestPerson
     partial class Earth : IRevolve { }
     //</Snippet21>
 
-
     //<Snippet23>
     [SerializableAttribute]
     partial class Moon { }
@@ -676,13 +653,11 @@ class TestPerson
     partial class Moon { }
     //</Snippet23>
 
-
     class WrapEquivs
     {
         //<Snippet22>
         class Earth : Planet, IRotate, IRevolve { }
         //</Snippet22>
-
 
         //<Snippet24>
         [SerializableAttribute]
@@ -690,7 +665,6 @@ class TestPerson
         class Moon { }
         //</Snippet24>
     }
-
 
     //<Snippet25>
     class Container
@@ -705,7 +679,6 @@ class TestPerson
         }
     }
     //</Snippet25>
-
 
     //<Snippet26>
     public partial class Employee
@@ -723,7 +696,6 @@ class TestPerson
     }
     //</Snippet26>
 
-
     //-----------------------------------------------------------------------------
     //<Snippet27>
     class CompanyInfo
@@ -733,7 +705,6 @@ class TestPerson
         //...
     }
     //</Snippet27>
-
 
     namespace WrapCompanyInfo
     {
@@ -746,7 +717,6 @@ class TestPerson
         }
         //</Snippet28>	
     }
-
 
     //-----------------------------------------------------------------------------
     public delegate void EventType();
@@ -769,7 +739,6 @@ class TestPerson
     }
     //</Snippet29>
 
-
     class TestAutomobile
     {
         void Test()
@@ -780,8 +749,6 @@ class TestPerson
             //</Snippet30>
         }
     }
-
-
 
     //-----------------------------------------------------------------------------
     //<Snippet31>
@@ -857,7 +824,6 @@ class TestPerson
      */
     //</Snippet31>
 
-
     //-----------------------------------------------------------------------------
     //<Snippet32>
     class TheClass
@@ -906,7 +872,6 @@ class TestPerson
         Struct field = Not Changed
     */
     //</Snippet32>
-
 
     //-----------------------------------------------------------------------------
     namespace WrapPerson2
@@ -992,14 +957,12 @@ class TestPerson
         //</Snippet33>
     }
 
-
     //-----------------------------------------------------------------------------
     namespace WrapPerson4
     {
         class Person
         {
             private string _name = "N/A";
-
 
             //<Snippet87>
             public string Name
@@ -1013,7 +976,6 @@ class TestPerson
         }
     }
 
-
     //-----------------------------------------------------------------------------
     //<Snippet39>
     public struct PostalAddress
@@ -1022,7 +984,6 @@ class TestPerson
     }
     //</Snippet39>
 
-
     //-----------------------------------------------------------------------------
     //<Snippet79>
     public class Customer
@@ -1030,7 +991,6 @@ class TestPerson
         //Fields, properties, methods and events go here...
     }
     //</Snippet79>
-
 
     class Test
     {
@@ -1053,7 +1013,6 @@ class TestPerson
         }
     }
 
-
     //-----------------------------------------------------------------------------
     //<Snippet83>
     public class Manager : Employee
@@ -1062,7 +1021,6 @@ class TestPerson
         // New Manager fields, properties, methods and events go here...
     }
     //</Snippet83>
-
 
     //-----------------------------------------------------------------------------
     //<Snippet40>
@@ -1133,7 +1091,6 @@ class TestPerson
         }
         //</Snippet74>
     }
-
 
     //-----------------------------------------------------------------------------
     //<Snippet42>
@@ -1221,7 +1178,6 @@ class TestPerson
         static void UseParams(params int[] list) { }
         //</Snippet51>
 
-
         void Test()
         {
             char i = 'a';
@@ -1244,7 +1200,6 @@ class TestPerson
         }
     }
 
-
     //-----------------------------------------------------------------------------
     //<Snippet53>
     public class Taxi
@@ -1265,7 +1220,6 @@ class TestPerson
         }
     }
     //</Snippet53>
-
 
     //-----------------------------------------------------------------------------
     namespace WrapEmployee
@@ -1310,7 +1264,6 @@ class TestPerson
             }
         }
         //</Snippet56>
-
 
         class WrapEmployeeAndManager
         {
@@ -1357,7 +1310,6 @@ class TestPerson
             }
         }
     }
-
 
     //-----------------------------------------------------------------------------
     //<Snippet61>
@@ -1419,7 +1371,6 @@ class TestPerson
     }
     //</Snippet61>
 
-
     class TestCalendarDate 
     {
         static void test()
@@ -1439,7 +1390,6 @@ class TestPerson
     }
     //</Snippet63>
 
-
     //<Snippet64>
     class Calendar1
     {
@@ -1447,14 +1397,12 @@ class TestPerson
     }
     //</Snippet64>
 
-
     //<Snippet65>
     class Calendar2
     {
         public const int Months = 12, Weeks = 52, Days = 365;
     }
     //</Snippet65>
-
 
     //<Snippet66>
     class Calendar3
@@ -1467,7 +1415,6 @@ class TestPerson
         public const double DaysPerMonth = (double) Days / (double) Months;
     }
     //</Snippet66>
-
 
     class Calendar
     {
@@ -1482,7 +1429,6 @@ class TestPerson
             Console.WriteLine(birthstones.ToString());
         }
     }
-
 
     //-----------------------------------------------------------------------------
     namespace WrapContainer1
@@ -1542,7 +1488,6 @@ class TestPerson
         }
     }
 
-
     //-----------------------------------------------------------------------------
     //<Snippet72>
     public class Bicycle
@@ -1550,7 +1495,6 @@ class TestPerson
         public void Pedal() { }
     }
     //</Snippet72>
-
 
     //<Snippet73>
     // public class:
@@ -1569,7 +1513,6 @@ class TestPerson
         }
     }
     //</Snippet73>
-
 
     //-----------------------------------------------------------------------------
     //<Snippet85>
@@ -1611,7 +1554,6 @@ class TestPerson
         First's destructor is called.
     */
     //</Snippet85>
-
 
     //-----------------------------------------------------------------------------
     //<Snippet86>
@@ -1687,7 +1629,6 @@ namespace RainyDay
         }
     }
    //</Snippet89>  
-     
 
     //<Snippet90>
     namespace TestReferenceEquality
@@ -1796,13 +1737,11 @@ namespace RainyDay
     */
     //</Snippet90>  
 
-
     class RD
     {
         static void Main() 
         {
 
-            
             //<Snippet91>
             Console.WriteLine("Saving for a rainy day");
             //</Snippet91>  

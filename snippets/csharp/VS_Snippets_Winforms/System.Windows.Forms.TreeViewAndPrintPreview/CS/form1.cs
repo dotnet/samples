@@ -148,7 +148,6 @@ public class Form1:
 	}
 	//</snippet2>
 
-
 	// The following code example assumes the form contains a TreeView
 	// object named TreeView1 that contains TreeNode objects. Each 
 	// TreeNode objects Tag property must be set to a fully-qualified
@@ -158,12 +157,10 @@ public class Form1:
 	// TreeNode1.Tag to  c:\myDocuments\recipe.doc and 
 	// TreeNode1.Text to recipe.doc.
 
-
 	// It also assumes the form contains a PrintPreviewDialog object 
 	// named PrintPreviewDialog1 and a button named Button1. To run this 
 	// example call the InitializePrintPreviewDialog method in the form's 
 	// constructor.
-
 
 	//<snippet3>
 

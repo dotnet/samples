@@ -87,8 +87,6 @@ namespace SDKSample
 
             this.Content = mainPanel;
 
-            
-
         }
     }
 }

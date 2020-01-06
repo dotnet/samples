@@ -4,7 +4,6 @@ using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
 
-
 public class Group
 {
    // This attribute will be overridden.
@@ -42,7 +41,6 @@ public class Run
        writer.Close();
 
    }
-
 
    private XmlSerializer CreateOverrideSerializer(){
    	

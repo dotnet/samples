@@ -60,7 +60,6 @@ public class ExplicitConversion
       Console.WriteLine();
       // </Snippet2>
 
-
       // <Snippet3>
       // BigInteger to Double conversion.
       BigInteger goodDouble = (BigInteger) 102.43e22;
@@ -127,7 +126,6 @@ public class ExplicitConversion
       }
       Console.WriteLine();
       // </Snippet5>
-
 
       // <Snippet6>
       // BigInteger to Int64 conversion.

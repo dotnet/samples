@@ -7,8 +7,6 @@ using System.Text;
 using System.Windows.Forms;
 using KeyedCollectionsEx;
 
-
-
 namespace KeyedCollectionsEx
 {
     public partial class Form1 : Form
@@ -121,7 +119,6 @@ namespace KeyedCollectionsEx
         }
         
     }
-
 
     public class OrderForm : Form
     {

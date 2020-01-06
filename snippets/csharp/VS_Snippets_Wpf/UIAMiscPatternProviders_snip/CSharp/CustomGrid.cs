@@ -31,7 +31,6 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Diagnostics;
 
-
 namespace ElementProvider 
 {
     class CustomGrid : Control, IRawElementProviderFragmentRoot, IGridProvider  
@@ -76,7 +75,6 @@ namespace ElementProvider
             gridItems[1, 1] = new CustomGridItem("15 cents", 1, 1, (IRawElementProviderSimple)this);
         }
 
-        
         /// <summary>
         /// Handles WM_GETOBJECT message; others are passed to base handler.
         /// </summary>
@@ -133,10 +131,7 @@ namespace ElementProvider
             }
         }
 
-
-        
         #region IRawElementProviderSimple
-
 
         /// <summary>
         /// Returns the object that supports the specified pattern.
@@ -277,11 +272,7 @@ namespace ElementProvider
             throw new Exception("The method or operation is not implemented.");
         }
 
-
         #endregion
-
-
-
 
         #region IGridProvider Members
 // <Snippet101> 

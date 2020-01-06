@@ -2,13 +2,11 @@
 using System.Collections;
 using System.Web.UI;
 
-
 // Compile this same using the following command line:
 //   csc /t:exe /out:objectstateformattertest.exe objectstateformattertest.cs
 public class ObjectStateFormatterTest {
 
     public static void Main () {
-
 
     string SortDirection = "ASC";
     string SelectedColumn = "Employee";
@@ -29,7 +27,6 @@ public class ObjectStateFormatterTest {
     string base64StateString = formatter.Serialize(controlProperties);
 // </snippet1>
     }
-
 
 // <snippet2>
     private ICollection LoadControlProperties (string serializedProperties) {

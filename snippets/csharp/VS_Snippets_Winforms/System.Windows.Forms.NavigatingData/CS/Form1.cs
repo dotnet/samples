@@ -42,7 +42,6 @@ namespace NavigatingData
             this.Load += new EventHandler(Form1_Load);
             this.customersBindingSource.PositionChanged += new EventHandler(customersBindingSource_PositionChanged);
 
-
         }
         [STAThread]
         static void Main()
@@ -86,7 +85,6 @@ namespace NavigatingData
                 new SqlDataAdapter("Select * from Customers", connectionString);
                      
             DataTable customerTable = new DataTable();
-            
 
             // Fill the table with the contents of the customer table.
             customersDataAdapter.Fill(customerTable);

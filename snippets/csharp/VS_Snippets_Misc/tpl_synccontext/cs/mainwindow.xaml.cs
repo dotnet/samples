@@ -40,7 +40,6 @@ namespace WPF_CS1
             image.Width = largeImagePixelWidth;
             image.Height = largeImagePixelHeight;
 
-
         }
 
         private void button_Click(object sender, RoutedEventArgs e)

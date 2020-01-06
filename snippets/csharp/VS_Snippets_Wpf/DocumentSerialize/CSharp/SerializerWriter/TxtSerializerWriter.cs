@@ -51,7 +51,6 @@ namespace SdkSample
             throw new NotSupportedException();
         }
 
-
         /// <summary>
         /// Asynchronous Write a single DependencyObject and close package
         /// </summary>
@@ -59,7 +58,6 @@ namespace SdkSample
         {
             throw new NotSupportedException();
         }
-
 
         /// <summary>
         /// Asynchronous Write a single DependencyObject and close package
@@ -171,7 +169,6 @@ namespace SdkSample
         {
             throw new NotSupportedException();
         }
-
 
         /// <summary>
         /// Write a single FixedDocument and close package
@@ -318,7 +315,6 @@ namespace SdkSample
             List<GlyphRun> glyphrunList = new List<GlyphRun>();
             WalkVisualTree(glyphrunList, objectTree);
 
-  
             try
             {
                 // NOTE:  this is not gaurenteed to get the text in any reasonable order
@@ -372,7 +368,6 @@ namespace SdkSample
             }
         }
 
- 
         private string GetTextFromVisual(DependencyObject visual)
         {
             string result = "";
@@ -397,8 +392,7 @@ namespace SdkSample
             }
             return result;
         }
- 
-            
+
         private Stream _stream;
         private TextWriter _writer;
     }

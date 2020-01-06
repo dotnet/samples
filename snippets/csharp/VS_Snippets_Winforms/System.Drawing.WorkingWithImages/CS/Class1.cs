@@ -184,7 +184,6 @@ public class SystemDrawingWorkingWithImages : Form
     // e956242a-1e5b-4217-a3cf-5f3fb45d00ba
     // How to: Create Thumbnail Images
 
-   
     // <snippet71>
     public bool ThumbnailCallback()
     {

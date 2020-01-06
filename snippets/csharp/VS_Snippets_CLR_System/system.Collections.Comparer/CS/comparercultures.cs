@@ -5,7 +5,6 @@ using System;
 using System.Collections;
 using System.Globalization;
 
-
 public class SamplesComparer  {
 
    public static void Main()  {

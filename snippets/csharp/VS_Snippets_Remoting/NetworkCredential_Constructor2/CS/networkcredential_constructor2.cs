@@ -42,8 +42,7 @@ class NetworkCredentialSnippet {
       Console.WriteLine("\n\nCredentials Domain : {0} , UserName : {1} , Password : {2}",
       myCredentials.Domain, myCredentials.UserName, myCredentials.Password);
       Console.WriteLine("\n\nRequest to Url is sent.Waiting for response...");
-      
-      
+
       // Send the request and wait for a response.
       WebResponse myWebResponse = myWebRequest.GetResponse(); 
       

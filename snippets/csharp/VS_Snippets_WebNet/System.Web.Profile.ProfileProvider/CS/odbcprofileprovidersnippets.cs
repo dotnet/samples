@@ -15,7 +15,6 @@ public class SnippetProfileProvider: ProfileProvider
 		base.Initialize(name, config);
 	}
 
-
 	//
 	// System.Configuration.SettingsProvider.ApplicationName
 	//
@@ -27,8 +26,6 @@ public class SnippetProfileProvider: ProfileProvider
 		get { return pApplicationName; }
 		set { pApplicationName = value; }
 	} 
-
-
 
 	//
 	// System.Configuration.SettingsProvider methods.
@@ -45,8 +42,6 @@ public class SnippetProfileProvider: ProfileProvider
 		return new SettingsPropertyValueCollection();
 	}
 
-
-
 	//
 	// SettingsProvider.SetPropertyValues
 	//
@@ -56,9 +51,6 @@ public class SnippetProfileProvider: ProfileProvider
 	{
 
 	}
-
-
-
 
 	//
 	// ProfileProvider.DeleteProfiles(ProfileInfoCollection)
@@ -82,7 +74,6 @@ public override int DeleteProfiles(string[] usernames)
 }
 //</Snippet2>
 
-
 	//
 	// ProfileProvider.DeleteInactiveProfiles
 	//
@@ -95,7 +86,6 @@ public override int DeleteInactiveProfiles(
 	return 0;
 }
 //</Snippet3>
-
 
 	//
 	// ProfileProvider.FindProfilesByUserName

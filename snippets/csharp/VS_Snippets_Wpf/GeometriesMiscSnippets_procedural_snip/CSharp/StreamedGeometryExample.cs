@@ -56,8 +56,6 @@ namespace SDKSample
             return geometry;
         }
 
-
-
     }
 }
 // </SnippetStreamedGeometryExampleWholePage>

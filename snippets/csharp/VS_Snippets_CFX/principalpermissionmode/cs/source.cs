@@ -13,8 +13,6 @@ using System.Threading;
 using System.Web.Security;
 //</snippet0>
 
-
-
 namespace Samples
 {
     public class Test
@@ -43,7 +41,6 @@ namespace Samples
         }
     }
 
-
     public class Calculator
     {
         //<snippet2>
@@ -55,7 +52,6 @@ namespace Samples
         }
         //</snippet2>
 
-
         //<snippet10>
         // Only a client authenticated with a valid certificate that has the 
         // specified subject name and thumbprint can call this method.
@@ -66,7 +62,6 @@ namespace Samples
             return a * b;
         }
         //</snippet10>
-
 
         //<snippet4>
         // Only a client authenticated with a valid certificate that has the 

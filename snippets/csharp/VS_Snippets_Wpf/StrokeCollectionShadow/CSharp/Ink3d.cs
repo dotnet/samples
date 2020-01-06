@@ -45,15 +45,12 @@ namespace StrokeCollectionShadow
 
         }
 
-    
         // Remove all the strokes from the control.
         public void ClearStrokes()
         {
             presenter.Strokes.Clear();
-            
 
         }
-
 
         protected override void OnStylusDown(StylusDownEventArgs e)
         {
@@ -66,8 +63,6 @@ namespace StrokeCollectionShadow
 
         }
 
-
-
         protected override void OnStylusMove(StylusEventArgs e)
         {
 
@@ -78,8 +73,6 @@ namespace StrokeCollectionShadow
             stylusPoints.Add(e.GetStylusPoints(this, stylusPoints.Description));
 
         }
-
-
 
         protected override void OnStylusUp(StylusEventArgs e)
         {
@@ -93,7 +86,6 @@ namespace StrokeCollectionShadow
             AddStroke();
 
         }
-
 
         protected override void OnMouseLeftButtonUp(MouseButtonEventArgs e)
         {
@@ -112,7 +104,6 @@ namespace StrokeCollectionShadow
 
         }
 
-
         protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
         {
 
@@ -127,8 +118,6 @@ namespace StrokeCollectionShadow
             stylusPoints.Add(new StylusPoint(pt.X, pt.Y));
 
         }
-
-
 
         protected override void OnMouseMove(MouseEventArgs e)
         {
@@ -146,7 +135,6 @@ namespace StrokeCollectionShadow
             stylusPoints.Add(new StylusPoint(pt.X, pt.Y));
 
         }
-
 
         private void AddStroke()
         {
@@ -179,6 +167,5 @@ namespace StrokeCollectionShadow
             }
         }
 
-       
     }
 }

@@ -13,7 +13,6 @@ class Program
     }
     //</SnippetFactoryFunc>
 
-
     static void Main()
     {
         // The lazy initializer is created here. LargeObject is not created until the 
@@ -25,7 +24,6 @@ class Program
         // same result as the previous line: 
         //lazyLargeObject = new Lazy<LargeObject>(InitLargeObject, LazyThreadSafetyMode.None);
         //</SnippetNewLazy>
-
 
         Console.WriteLine(
             "\r\nLargeObject is not created until you access the Value property of the lazy" +

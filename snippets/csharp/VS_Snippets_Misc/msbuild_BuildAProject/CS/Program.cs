@@ -15,7 +15,6 @@ namespace BuildAProjectCS
 
             // Point to the path that contains the .NET Framework 2.0 CLR and tools
             engine.BinPath = @"c:\windows\microsoft.net\framework\v2.0.xxxxx";
-            
 
             // Instantiate a new FileLogger to generate build log
             FileLogger logger = new FileLogger();

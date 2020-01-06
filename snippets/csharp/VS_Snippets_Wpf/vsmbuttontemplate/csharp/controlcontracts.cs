@@ -76,6 +76,4 @@ namespace VSMButtonTemplate
     }
     //</SnippetButtonContract>
 
-
-
 }

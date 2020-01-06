@@ -113,7 +113,6 @@ public class class1
     }
     // </snippet13>
 
-
     // <snippet14>
     public void CustomizePathGradientBrush(PaintEventArgs e)
     {
@@ -290,7 +289,6 @@ public class class1
         e.Graphics.FillEllipse(linGrBrush, 10, 100, 200, 100);
     }
     // </snippet23>
-
 
     // da4690e7-5fac-4fd2-b3f0-5cb35c165b92
     // How to: Apply Gamma Correction to a Gradient

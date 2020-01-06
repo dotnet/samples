@@ -77,7 +77,6 @@ namespace Microsoft.ServiceModel.Samples
         }
         // </Snippet14>
 
-
         public string MediaType
         {
             get
@@ -129,7 +128,6 @@ namespace Microsoft.ServiceModel.Samples
         // </Snippet13>
 
         #endregion
-
 
         public override BindingElement Clone()
         {

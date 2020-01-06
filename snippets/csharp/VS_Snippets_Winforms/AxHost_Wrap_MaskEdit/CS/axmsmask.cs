@@ -57,7 +57,6 @@ namespace AxMSMask
         }
         // </snippet1>
 
-
         [System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
         [System.Runtime.InteropServices.DispIdAttribute(1)]
         public virtual MSMask.ClipModeConstants ClipMode
@@ -892,8 +891,6 @@ namespace AxMSMask
             {
             }
         }
-
-
 
         internal void RaiseOnOLEDragDrop(object sender, MaskEdBoxEvents_OLEDragDropEvent e)
         {

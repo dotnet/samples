@@ -185,7 +185,6 @@ namespace ObjectBindingWalkthrough
 
     }
 
-
     /// <summary>
     /// A collection of Order objects
     /// </summary>

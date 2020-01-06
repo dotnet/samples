@@ -6,7 +6,6 @@ using System.Diagnostics;
 using System.Windows;
 using System.Windows.Input;
 
-
 namespace SDKSample
 {
     // ========================== partial class app =========================
@@ -24,7 +23,6 @@ namespace SDKSample
             _window1 = new Window1();
             _window1.Show();
         }// end:AppStartup()
-
 
         private Window1 _window1 = null;            // application main window
 

@@ -47,8 +47,7 @@ namespace MyModule
 		void GetItems( [In, MarshalAs( UnmanagedType.BStr )] String bstrLocation, 
 			[Out, MarshalAs( UnmanagedType.SafeArray, 
 					  SafeArraySubType = VarEnum.VT_VARIANT )] out Object[] Items );
-                
-                
+
 		[DispId(3)]
 		void GetItemDescriptions( [In] String bstrLocation, 
 			[In, Out, MarshalAs( UnmanagedType.SafeArray )] ref Object[] varDescriptions );
