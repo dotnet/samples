@@ -162,6 +162,10 @@ csharp_prefer_simple_default_expression = true:suggestion
 # Analyzers
 dotnet_code_quality.ca1802.api_surface = private, internal
 
+# Visual Basic files
+[*.vb]
+visual_basic_preferred_modifier_order = Partial,Default,Private,Protected,Public,Friend,NotOverridable,Overridable,MustOverride,Overloads,Overrides,MustInherit,NotInheritable,Static,Shared,Shadows,ReadOnly,WriteOnly,Dim,Const,WithEvents,Widening,Narrowing,Custom,Async:suggestion
+
 # C++ Files
 [*.{cpp,h,in}]
 curly_bracket_next_line = true
