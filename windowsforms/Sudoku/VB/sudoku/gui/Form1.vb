@@ -1,7 +1,7 @@
 ﻿Public Class Form1
 
     Private WithEvents Game As New Game
-    Private ReadOnly _r As New Random
+    Private ReadOnly _R As New Random
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DataGridView1.Rows.Add(9)
@@ -10,7 +10,7 @@
     End Sub
 
     Private Sub btnNew_Click(sender As Object, e As EventArgs) Handles btnNew.Click
-        Game.NewGame(_r)
+        Game.NewGame(_R)
     End Sub
 
     Private Sub DataGridView1_Paint(sender As Object, e As PaintEventArgs) Handles DataGridView1.Paint
@@ -32,7 +32,7 @@
         For y As Integer = 0 To 8
             Dim cells As New List(Of Integer)(New Integer() {1, 2, 3, 4, 5, 6, 7, 8, 9})
             For c As Integer = 1 To 9 - (5 - ComboBox1.SelectedIndex)
-                Dim randomNumber As Integer = cells(_r.Next(0, cells.Count))
+                Dim randomNumber As Integer = cells(_R.Next(0, cells.Count))
                 cells.Remove(randomNumber)
             Next
             For x As Integer = 0 To 8

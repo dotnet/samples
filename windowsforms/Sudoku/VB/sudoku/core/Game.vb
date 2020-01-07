@@ -3,25 +3,25 @@
     Public Event ShowClues(grid()() As Integer)
     Public Event ShowSolution(grid()() As Integer)
 
-    Private ReadOnly _hRow(8) As List(Of Integer)
-    Private ReadOnly _vRow(8) As List(Of Integer)
-    Private ReadOnly _threeSquare(8) As List(Of Integer)
-    Private ReadOnly _grid(8)() As Integer
+    Private ReadOnly _HRow(8) As List(Of Integer)
+    Private ReadOnly _VRow(8) As List(Of Integer)
+    Private ReadOnly _ThreeSquare(8) As List(Of Integer)
+    Private ReadOnly _Grid(8)() As Integer
 
-    Private _r As Random
+    Private _R As Random
 
     Public Sub NewGame(rn As Random)
-        Me._r = rn
+        _R = rn
         createNewGame()
     End Sub
 
     Private Sub initializeLists()
         For x As Integer = 0 To 8
-            _hRow(x) = New List(Of Integer)(New Integer() {1, 2, 3, 4, 5, 6, 7, 8, 9})
-            _vRow(x) = New List(Of Integer)(New Integer() {1, 2, 3, 4, 5, 6, 7, 8, 9})
-            _threeSquare(x) = New List(Of Integer)(New Integer() {1, 2, 3, 4, 5, 6, 7, 8, 9})
+            _HRow(x) = New List(Of Integer)(New Integer() {1, 2, 3, 4, 5, 6, 7, 8, 9})
+            _VRow(x) = New List(Of Integer)(New Integer() {1, 2, 3, 4, 5, 6, 7, 8, 9})
+            _ThreeSquare(x) = New List(Of Integer)(New Integer() {1, 2, 3, 4, 5, 6, 7, 8, 9})
             Dim row(8) As Integer
-            _grid(x) = row
+            _Grid(x) = row
         Next
     End Sub
 
@@ -30,28 +30,28 @@
             initializeLists()
             For y As Integer = 0 To 8
                 For x As Integer = 0 To 8
-                    _grid(y)(x) = Nothing
+                    _Grid(y)(x) = Nothing
                     Dim si As Integer = (y \ 3) * 3 + (x \ 3)
-                    Dim useful() As Integer = _hRow(y).Intersect(_vRow(x)).Intersect(_threeSquare(si)).ToArray
+                    Dim useful() As Integer = _HRow(y).Intersect(_VRow(x)).Intersect(_ThreeSquare(si)).ToArray
                     If useful.Any Then
-                        Dim randomNumber As Integer = useful(_r.Next(0, useful.Count))
-                        _hRow(y).Remove(randomNumber)
-                        _vRow(x).Remove(randomNumber)
-                        _threeSquare(si).Remove(randomNumber)
-                        _grid(y)(x) = randomNumber
+                        Dim randomNumber As Integer = useful(_R.Next(0, useful.Count))
+                        _HRow(y).Remove(randomNumber)
+                        _VRow(x).Remove(randomNumber)
+                        _ThreeSquare(si).Remove(randomNumber)
+                        _Grid(y)(x) = randomNumber
                         If y = 8 AndAlso x = 8 Then Exit Do
                     End If
                 Next
             Next
         Loop
 
-        RaiseEvent ShowClues(_grid)
+        RaiseEvent ShowClues(_Grid)
 
     End Sub
 
     Public Sub showGridSolution()
 
-        RaiseEvent ShowSolution(_grid)
+        RaiseEvent ShowSolution(_Grid)
 
     End Sub
 

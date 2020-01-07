@@ -15,7 +15,7 @@
     <OptionInfer>Off</OptionInfer>
     <OptionStrict>On</OptionStrict>
     <Version>1.0.1</Version>
-    <ApplicationIcon>suboku_icon.ico</ApplicationIcon>
+    <ApplicationIcon>Sudoku_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <NoWarn />
