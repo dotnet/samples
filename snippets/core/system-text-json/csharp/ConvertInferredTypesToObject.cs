@@ -3,7 +3,7 @@ using System.Text.Json;
 
 namespace SystemTextJsonSamples
 {
-    public class DeserializeInferredTypesToObject
+    public class ConvertInferredTypesToObject
     {
         public static void Run()
         {

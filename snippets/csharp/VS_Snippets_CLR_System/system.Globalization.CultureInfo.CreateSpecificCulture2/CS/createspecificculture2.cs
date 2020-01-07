@@ -145,7 +145,7 @@ public class NamePropertyComparer<T> : IComparer<T>
 //    zh-Hant      Chinese (Traditional)                   zh-HK
 //    zu           isiZulu                                 zu-ZA
 // The example displays output like the following on a Unix-based system. The output has been cropped for brevity.
-CULTURE                                              SPECIFIC CULTURE
+//    CULTURE                                              SPECIFIC CULTURE
 //                 Invariant Language (Invariant Country)
 //    af           Afrikaans                               af-ZA
 //    agq          Aghem                                   agq-CM

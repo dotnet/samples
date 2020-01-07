@@ -46,5 +46,3 @@ public class Example
         return length;    
     }
 }
-
-/

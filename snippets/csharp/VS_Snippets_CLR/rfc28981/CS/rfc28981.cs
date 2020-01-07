@@ -12,8 +12,7 @@ public class rfc2898test
     // Decrypt edata1 with key k2 using symmetric decryption, creating data2.
     // data2 should equal data1.
 
-    private const string usageText = "Usage: RFC2898 <password>\nYou must 
-specify the password for encryption.\n";
+    private const string usageText = "Usage: RFC2898 <password>\nYou must specify the password for encryption.\n";
     public static void Main(string[] passwordargs)
     {
         //If no file name is specified, write usage text.
@@ -37,8 +36,7 @@ RNGCryptoServiceProvider())
             //data1 can be a string or contents of a file.
             string data1 = "Some test data";
             //<SNIPPET3>
-            //The default iteration count is 1000 so the two methods use the 
-same iteration count.
+            //The default iteration count is 1000 so the two methods use the same iteration count.
             int myIterations = 1000;
             //</SNIPPET6>		
             //<SNIPPET2>

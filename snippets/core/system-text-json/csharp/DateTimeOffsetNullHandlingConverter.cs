@@ -22,10 +22,10 @@ namespace SystemTextJsonSamples
 
         public override void Write(
             Utf8JsonWriter writer, 
-            DateTimeOffset value, 
+            DateTimeOffset dateTimeValue, 
             JsonSerializerOptions options)
         {
-            writer.WriteStringValue(value);
+            writer.WriteStringValue(dateTimeValue);
         }
     }
 }

@@ -7,12 +7,12 @@ using System.Text.Unicode;
 
 namespace SystemTextJsonSamples
 {
-    class SerializeCustomEncoding
+    public class SerializeCustomEncoding
     {
         public static void Run()
         {
             string jsonString;
-            var weatherForecast = WeatherForecastFactories.CreateWeatherForecastCyrillic();
+            WeatherForecast weatherForecast = WeatherForecastFactories.CreateWeatherForecastCyrillic();
             weatherForecast.DisplayPropertyValues();
 
             Console.WriteLine("Default serialization - non-ASCII escaped");
@@ -28,7 +28,7 @@ namespace SystemTextJsonSamples
             // <SnippetLanguageSets>
             options = new JsonSerializerOptions
             {
-                Encoder = JavaScriptEncoder.Create(UnicodeRanges.Cyrillic, UnicodeRanges.GreekExtended),
+                Encoder = JavaScriptEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.Cyrillic),
                 WriteIndented = true
             };
             jsonString = JsonSerializer.Serialize(weatherForecast, options);
@@ -40,6 +40,7 @@ namespace SystemTextJsonSamples
             // <SnippetSelectedCharacters>
             var encoderSettings = new TextEncoderSettings();
             encoderSettings.AllowCharacters('\u0436', '\u0430');
+            encoderSettings.AllowRange(UnicodeRanges.BasicLatin);
             options = new JsonSerializerOptions
             {
                 Encoder = JavaScriptEncoder.Create(encoderSettings),

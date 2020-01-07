@@ -3,7 +3,7 @@ using System.Text.Json;
 
 namespace SystemTextJsonSamples
 {
-    public class RoundtripDictionaryTkeyEnumTValue
+    public class ConvertDictionaryTkeyEnumTValue
     {
         public static void Run()
         {
