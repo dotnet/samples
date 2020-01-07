@@ -16,8 +16,7 @@ namespace StringLibraryTest
             {
                 bool result = word.StartsWithUpper();
                 Assert.IsTrue(result,
-                       String.Format("Expected for '{0}': true; Actual: {1}",
-                                     word, result));
+                       $"Expected for '{word}': true; Actual: {result}");
             }
         }
 
@@ -31,8 +30,7 @@ namespace StringLibraryTest
             {
                 bool result = word.StartsWithUpper();
                 Assert.IsFalse(result,
-                       String.Format("Expected for '{0}': false; Actual: {1}",
-                                     word, result));
+                       $"Expected for '{word}': false; Actual: {result}");
             }
         }
 
