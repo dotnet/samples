@@ -47,6 +47,6 @@ There is also the further added constraint that each sub-region can also only co
 In a new game, the given numbers (clues) are rendered in red text. The numbers that you enter are rendered in black text.
 
 There is a Solution button, which when clicked, reveals the correct answer to the puzzle. Any numbers that you have added that are correctly placed, remain rendered with black text. Any cells that were empty or had an incorrect number will display the correct number rendered in blue text.
-Any cells that were empty or had an incorrect integer will display the correct integer rendered inblue text.</span><br>
+Any cells that were empty or had an incorrect integer will display the correct integer rendered inblue text.
 
 You win the game if after clicking the Solution button, all of the numbers are rendered in either black or red text.
