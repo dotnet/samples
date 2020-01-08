@@ -10,7 +10,7 @@ namespace SystemTextJsonSamples
         private static readonly byte[] s_nameUtf8 = Encoding.UTF8.GetBytes("name");
         public static void Run()
         {
-            // Read as UTF-16 and transcode to UTF-8 to convert to a Span<byte>
+            // Read as UTF-16 and transcode to UTF-8 to convert to a ReadOnlySpan<byte>
             string fileName = "Universities.json";
             string jsonString = File.ReadAllText(fileName);
             ReadOnlySpan<byte> jsonReadOnlySpan = Encoding.UTF8.GetBytes(jsonString);
@@ -22,11 +22,11 @@ namespace SystemTextJsonSamples
             int count = 0;
             int total = 0;
 
-            var json = new Utf8JsonReader(jsonReadOnlySpan, isFinalBlock: true, state: default);
+            var reader = new Utf8JsonReader(jsonReadOnlySpan);
 
-            while (json.Read())
+            while (reader.Read())
             {
-                JsonTokenType tokenType = json.TokenType;
+                JsonTokenType tokenType = reader.TokenType;
 
                 switch (tokenType)
                 {
@@ -34,11 +34,11 @@ namespace SystemTextJsonSamples
                         total++;
                         break;
                     case JsonTokenType.PropertyName:
-                        if (json.ValueTextEquals(s_nameUtf8))
+                        if (reader.ValueTextEquals(s_nameUtf8))
                         {
                             // Assume valid JSON, known schema
-                            json.Read();
-                            if (json.GetString().EndsWith("University"))
+                            reader.Read();
+                            if (reader.GetString().EndsWith("University"))
                             {
                                 count++;
                             }

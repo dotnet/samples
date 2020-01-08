@@ -68,13 +68,13 @@ namespace SystemTextJsonSamples
             {
                 WriteIndented = true
             };
-            Console.WriteLine(JsonSerializer.Serialize(forecasts, options));
+            jsonString = JsonSerializer.Serialize(forecasts, options);
             // </SnippetSerializeInterface>
+            Console.WriteLine($"{jsonString}\n");
 
             WeatherForecastWithPrevious weatherForecastWithPrevious = WeatherForecastFactories.CreateWeatherForecastWithPrevious();
             WeatherForecastWithPreviousAsObject weatherForecastWithPreviousAsObject = WeatherForecastFactories.CreateWeatherForecastWithPreviousAsObject();
 
-            Console.WriteLine();
             Console.WriteLine("Second level derived class properties included only for object properties");
             // <SnippetSerializeSecondLevel>
             options = new JsonSerializerOptions
