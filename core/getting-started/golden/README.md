@@ -22,7 +22,6 @@ dotnet build
 `dotnet restore` ([see note](#dotnet-restore-note)) installs all the dependencies for this sample into the current directory.
 `dotnet build` creates the output assembly (or assemblies).
 
-
 Next, change to the `app` directory and run those same
 two commands again.
 
