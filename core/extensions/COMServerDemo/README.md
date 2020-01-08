@@ -10,7 +10,6 @@ Additional comments are contained in source and project files.
 
 ## Build and Run
 
-
 The project will only build and run on the Windows platform. You can build and run the example either by registering the COM server or by using registration-free COM.
 
 ### Registered COM
