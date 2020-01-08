@@ -24,8 +24,8 @@ These APIs can be used to implement custom native library resolution logic, incl
 
 1. Use the .NET Core SDK to build the project via `dotnet build`.
 
-3. Build the native component `NewLib.cpp` as a dynamic library, using the platform's native toolset.
+1. Build the native component `NewLib.cpp` as a dynamic library, using the platform's native toolset.
 
     Place the generated native library (`NewLib.dll` / `libNewLib.so` / `libNewLib.dylib`) in the `dotnet build` output directory.
 
-4. Run the app with `dotnet run`
+1. Run the app with `dotnet run`

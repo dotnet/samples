@@ -6,7 +6,7 @@ for this sample.
 
 ## Key Features
 
-This sample demonstrates File I/O, async features, and terminal input and output. 
+This sample demonstrates File I/O, async features, and terminal input and output.
 
 ## Build and Run
 
