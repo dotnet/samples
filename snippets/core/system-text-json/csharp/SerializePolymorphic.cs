@@ -44,30 +44,37 @@ namespace SystemTextJsonSamples
             // </SnippetSerializeGetType>
             Console.WriteLine($"JSON output:\n{jsonString}\n");
 
-            Console.WriteLine("Serializing an interface");
+            Console.WriteLine("Extra properties on interface implementations included only for object properties");
             // <SnippetSerializeInterface>
-            var myImplementation = new MyImplementation
+            var forecasts = new Forecasts
             {
-                Count = 5,
-                Name = "Implementation"
-            };
-
-            var polymorphicObject = new PolymorphicTestInterface
-            {
-                MyInterface = myImplementation,
-                MyObject = myImplementation
+                Monday = new Forecast
+                {
+                    Date = DateTime.Parse("2020-01-06"),
+                    TemperatureCelsius = 10,
+                    Summary = "Cool",
+                    WindSpeed = 8
+                },
+                Tuesday = new Forecast
+                {
+                    Date = DateTime.Parse("2020-01-07"),
+                    TemperatureCelsius = 11,
+                    Summary = "Rainy",
+                    WindSpeed = 10
+                }
             };
 
             options = new JsonSerializerOptions
             {
                 WriteIndented = true
             };
-            Console.WriteLine(JsonSerializer.Serialize(polymorphicObject, options));
+            Console.WriteLine(JsonSerializer.Serialize(forecasts, options));
             // </SnippetSerializeInterface>
 
             WeatherForecastWithPrevious weatherForecastWithPrevious = WeatherForecastFactories.CreateWeatherForecastWithPrevious();
             WeatherForecastWithPreviousAsObject weatherForecastWithPreviousAsObject = WeatherForecastFactories.CreateWeatherForecastWithPreviousAsObject();
 
+            Console.WriteLine();
             Console.WriteLine("Second level derived class properties included only for object properties");
             // <SnippetSerializeSecondLevel>
             options = new JsonSerializerOptions
