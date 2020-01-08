@@ -8,6 +8,7 @@ namespace SystemTextJsonSamples
     public class Utf8ReaderFromFile
     {
         private static readonly byte[] s_nameUtf8 = Encoding.UTF8.GetBytes("name");
+        private static ReadOnlySpan<byte> Utf8Bom => new byte[] { 0xEF, 0xBB, 0xBF };
         public static void Run()
         {
             // Read as UTF-16 and transcode to UTF-8 to convert to a ReadOnlySpan<byte>
@@ -18,6 +19,12 @@ namespace SystemTextJsonSamples
             // Or ReadAllBytes if the file encoding is UTF-8:
             //string fileName = "UniversitiesUtf8.json";
             //ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(fileName);
+
+            // Read past the UTF-8 BOM bytes if a BOM exists.
+            if (jsonReadOnlySpan.StartsWith(Utf8Bom))
+            {
+                jsonReadOnlySpan = jsonReadOnlySpan.Slice(Utf8Bom.Length);
+            }
 
             int count = 0;
             int total = 0;

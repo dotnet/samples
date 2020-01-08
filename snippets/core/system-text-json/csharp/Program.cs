@@ -107,6 +107,7 @@ namespace SystemTextJsonSamples
 
             Console.WriteLine("\n============================= Utf8Reader from file\n");
             Utf8ReaderFromFile.Run();
+
             string jsonString = File.ReadAllText("Universities.json");
             ValueTextEqualsExample.Run(Encoding.UTF8.GetBytes(jsonString));
 
