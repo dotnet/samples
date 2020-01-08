@@ -68,7 +68,7 @@ Filter sequences using `Where`.
 ## setoperators
 
 Learn about set operations such as `Distinct`, `Except`, `Intersect`,
-and `Union`. 
+and `Union`.
 
 ## Build and Run
 

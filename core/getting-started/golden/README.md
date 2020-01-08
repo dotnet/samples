@@ -29,7 +29,7 @@ After that, type this command:
 
 `dotnet run`
 
-`dotnet run` runs the output executable. 
+`dotnet run` runs the output executable.
 
 To run the tests, change to the `test-library` directory and
 type the following three commands:

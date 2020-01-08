@@ -1,6 +1,6 @@
 # WPF Hello World sample with linked files
 
-This sample shows how to use linked files to share the source code of a WPF application based on .NET 
+This sample shows how to use linked files to share the source code of a WPF application based on .NET
 Framework with a .NET Core 3.0 project.
 
 To share source code, you can use the `Link` attribute in most of the project elements:

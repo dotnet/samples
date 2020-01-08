@@ -1,6 +1,6 @@
 # MultipleLayeredColumnHeader Sample
 
-This sample demonstrates how to display multiple layer column headers on the 
+This sample demonstrates how to display multiple layer column headers on the
 DataGridView contorl.
 
 ```
@@ -34,7 +34,7 @@ DataGridView contorl.
 
 1. Adjust the text alignment on the column headers to make the text display at the center of the bottom:
 
-    ```CSharp    
+    ```CSharp
         this.dataGridView1.ColumnHeadersDefaultCellStyle.Alignment =
             DataGridViewContentAlignment.BottomCenter;
     ```

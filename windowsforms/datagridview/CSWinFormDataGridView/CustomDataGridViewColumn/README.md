@@ -16,7 +16,7 @@ There are six standard DataGridViewColumn types for use as follows:
 However, developers may want to use a different control for editing on the column,
 e.g. MarkedTextBox, DateTimePicker etc. This feature can be achieved in two ways:
 
-1. Create a custom DataGridViewColumn; 
+1. Create a custom DataGridViewColumn;
 
    The code in this CustomDataGridViewColumn sample demonstrates how to do this.
 
@@ -26,8 +26,8 @@ e.g. MarkedTextBox, DateTimePicker etc. This feature can be achieved in two ways
 
 ## Creation
 
-1. Create a MaskedTextBoxEditingControl class derive from MaskedTextBox class 
-   and IDataGridViewEditingControl class, see the code in the 
+1. Create a MaskedTextBoxEditingControl class derive from MaskedTextBox class
+   and IDataGridViewEditingControl class, see the code in the
    MaskedTextBoxEditingControl.cs file for the implementation details.
 
 2. Create a MaskedTextBoxCell class derive from DataGridViewTextBoxCell class,

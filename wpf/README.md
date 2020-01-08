@@ -25,7 +25,7 @@ See [WPF Samples](https://www.github.com/Microsoft/wpf-samples) repo for additio
 
 ### Prerequisites and getting the tools
 
-Install Visual Studio 2019 preview from [https://visualstudio.microsoft.com/vs/preview](https://visualstudio.microsoft.com/vs/preview), selecting the **.NET desktop development** workload with the options: **.NET Framwork 4.7.2 development tools** and **.NET Core 2.2 development tools**. 
+Install Visual Studio 2019 preview from [https://visualstudio.microsoft.com/vs/preview](https://visualstudio.microsoft.com/vs/preview), selecting the **.NET desktop development** workload with the options: **.NET Framwork 4.7.2 development tools** and **.NET Core 2.2 development tools**.
 
 Install either the [preview build](https://dotnet.microsoft.com/download/dotnet-core/3.0) of the .NET Core 3.0 SDK or the latest daily build available in the [dotnet/code-sdk repo](https://github.com/dotnet/core-sdk).
 
