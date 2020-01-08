@@ -45,4 +45,4 @@ To download and run the sample, follow these steps:
 
 ## More information
 
-- https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/async/
+- <https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/async/>
