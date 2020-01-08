@@ -44,10 +44,31 @@ namespace SystemTextJsonSamples
             // </SnippetSerializeGetType>
             Console.WriteLine($"JSON output:\n{jsonString}\n");
 
+            Console.WriteLine("Serializing an interface");
+            // <SnippetSerializeInterface>
+            var myImplementation = new MyImplementation
+            {
+                Count = 5,
+                Name = "Implementation"
+            };
+
+            var polymorphicObject = new PolymorphicTestInterface
+            {
+                MyInterface = myImplementation,
+                MyObject = myImplementation
+            };
+
+            options = new JsonSerializerOptions
+            {
+                WriteIndented = true
+            };
+            Console.WriteLine(JsonSerializer.Serialize(polymorphicObject, options));
+            // </SnippetSerializeInterface>
+
             WeatherForecastWithPrevious weatherForecastWithPrevious = WeatherForecastFactories.CreateWeatherForecastWithPrevious();
             WeatherForecastWithPreviousAsObject weatherForecastWithPreviousAsObject = WeatherForecastFactories.CreateWeatherForecastWithPreviousAsObject();
 
-            Console.WriteLine("GetType() type parameter - second level derived class properties included only for object properties");
+            Console.WriteLine("Second level derived class properties included only for object properties");
             // <SnippetSerializeSecondLevel>
             options = new JsonSerializerOptions
             {
