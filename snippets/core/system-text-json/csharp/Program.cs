@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace SystemTextJsonSamples
@@ -105,6 +107,8 @@ namespace SystemTextJsonSamples
 
             Console.WriteLine("\n============================= Utf8Reader from file\n");
             Utf8ReaderFromFile.Run();
+            string jsonString = File.ReadAllText("Universities.json");
+            ValueTextEqualsExample.Run(Encoding.UTF8.GetBytes(jsonString));
 
             Console.WriteLine("\n============================= Utf8Reader from byte array\n");
             Utf8ReaderFromBytes.Run();
