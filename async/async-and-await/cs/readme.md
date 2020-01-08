@@ -43,6 +43,6 @@ To download and run the sample, follow these steps:
 
    2. At the command line, type `dotnet run`.
 
- ## More Information
+## More information
 
   - https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/async/
