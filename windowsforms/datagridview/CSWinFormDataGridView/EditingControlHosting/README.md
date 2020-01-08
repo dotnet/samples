@@ -27,7 +27,6 @@ e.g. MarkedTextBox, DateTimePicker etc. This feature can be achieved in two ways
    
    This sample demonstrates how to do this.
    
-
 ## Code Logic
 
 1. Create an instance of the editing control, in this sample the editing control
@@ -49,8 +48,6 @@ e.g. MarkedTextBox, DateTimePicker etc. This feature can be achieved in two ways
 7. Handle the EditingControlShowing event to pass the focus to the MaskedTextBox
    when begin editing with keystrokes.
 
-
 ## References
 
 - [DataGridView Class](https://docs.microsoft.com/dotnet/api/system.windows.forms.datagridview)
-
