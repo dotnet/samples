@@ -2,7 +2,7 @@
 
 Beginning with [.NET Core 3.0](https://github.com/dotnet/core-sdk#installers-and-binaries), you can build Windows Forms applications.
 
-## Why build WinForms applications on top of .NET Core?
+## Why build WinForms applications on top of .NET Core
 
 If you're new to .NET Core, here are a few resources to help you understand the advantages of .NET Core for building Windows applications:
 
