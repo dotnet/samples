@@ -69,7 +69,6 @@ Ideally you should migrate all projects in your solution to target .NET Core 3.0
     * Other project elements like `EmbeddedResources` can also use globbing.
     * XAML files need to be included using the `<Page />` element. Remember that globbing is allowed, so you can add all XAML files from a given folder with a single `<Page Include=Views\*.xaml />` element.
 
-
 ### Migration tips
 
 **Configure Assembly File generation**
