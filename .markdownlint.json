@@ -6,26 +6,8 @@
     },
     "MD033": {
         "allowed_elements": [
-            "a",
-            "blockquote",
-            "br",
-            "code",
-            "em",
-            "h4",
             "kbd",
-            "li",
-            "ol",
-            "p",
-            "pre",
-            "sup",
-            "table",
-            "tbody",
-            "td",
-            "th",
-            "thead",
-            "tr",
-            "u",
-            "ul"
+            "sup"
         ]
     },
     "MD034": false,
