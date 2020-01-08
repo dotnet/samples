@@ -70,7 +70,7 @@ Filter sequences using `Where`.
 Learn about set operations such as `Distinct`, `Except`, `Intersect`,
 and `Union`. 
 
-# Build and Run
+## Build and Run
 
 To build and run the sample, type the following two commands in any of the subdirectories:
 
