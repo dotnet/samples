@@ -5,8 +5,6 @@
 /// </summary>
 public class Global_asax
 {
-	public Global_asax()
-	{
 	//<snippet2>
     void Application_Start(Object sender, EventArgs e)
         {
@@ -23,5 +21,4 @@ public class Global_asax
         Application["UserCount"] = Int32.Parse(Application["UserCount"].ToString()) + 1;
     }
     //</snippet2>
-	}
 }
