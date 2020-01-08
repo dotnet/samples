@@ -24,7 +24,6 @@ e.g. MarkedTextBox, DateTimePicker etc. This feature can be achieved in two ways
    the editing control when the editing completes. For the details of this
    approach, please refer to the EditingControlHosting sample.
 
-
 ## Creation
 
 1. Create a MaskedTextBoxEditingControl class derive from MaskedTextBox class 
