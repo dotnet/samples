@@ -40,7 +40,6 @@ Group items into sub-sequences.
 Combine multiple sequences into a single sequence
 by matching values on properties.
 
-
 ## ordering
 
 Sort sequences.
