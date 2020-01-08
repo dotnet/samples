@@ -25,7 +25,7 @@ discard unused data when retrieving new values from the database.
 
 1. Retrieve the row count of the data in the database and set the RowCount property for the DataGridView.
 
-1.  Handle the CellValueNeeded event to retrieve the requested cell value from the data store or the Customer object currently in edit.
+1. Handle the CellValueNeeded event to retrieve the requested cell value from the data store or the Customer object currently in edit.
 
 ## References
 

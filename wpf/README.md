@@ -56,14 +56,14 @@ There is no tooling available to help with project migration. In order to migrat
 Ideally you should migrate all projects in your solution to target .NET Core 3.0 and/or .NET Standard 2.0. The first step to migrate will be to retarget the application's entry point (i.e. 'head' project) and maintain your existing references.
 
 1. Start from a working Solution. You must be able to open the solution in Visual Studio and double check that you can build and run without any issues.
-2. If your solution also has server side projects, such as ASP.NET, we recommend splitting your solution into different server and client solutions. For this effort, work with the client solution only.
-3. Add a new .NET Core 3.0 WPF project to the solution. Adding this project to a sibling folder to your existing 'head' project will make it easier to port references later (using relative paths to other projects or assemblies in the solution)
-4. If your 'head' project uses NuGet packages, you must add the same NuGet packages to the new project. The new SDK-Style projects only support the PackageReference format for adding NuGet package references. If your existing project is using `packages.config`, you must migrate to the new format. You can use the Migrator Tool described [here](https://docs.microsoft.com/nuget/reference/migrate-packages-config-to-package-reference) to automate this process.
-6. Copy the `PackageReference` elements generated in the previous step from the original project into the new project's .csproj file.
-7. Copy the `ProjectReference` elements from the original project. Note: The new project format does not use the `Name` and `ProjectGuid` elements so you can safely delete those.
-8. At this point it's a good idea to try and restore/build to make sure all dependencies are properly configured.
-9. [Link the files](#link-files-from-the-old-project) from your existing .NET Framework WPF project to the .NET Core 3.0 WPF project.
-10. **Optional** If you have difficulties with compiler linking, you can copy the project files from the .NET Framework WPF project to the new .NET Core 3.0 WPF project.
+1. If your solution also has server side projects, such as ASP.NET, we recommend splitting your solution into different server and client solutions. For this effort, work with the client solution only.
+1. Add a new .NET Core 3.0 WPF project to the solution. Adding this project to a sibling folder to your existing 'head' project will make it easier to port references later (using relative paths to other projects or assemblies in the solution)
+1. If your 'head' project uses NuGet packages, you must add the same NuGet packages to the new project. The new SDK-Style projects only support the PackageReference format for adding NuGet package references. If your existing project is using `packages.config`, you must migrate to the new format. You can use the Migrator Tool described [here](https://docs.microsoft.com/nuget/reference/migrate-packages-config-to-package-reference) to automate this process.
+1. Copy the `PackageReference` elements generated in the previous step from the original project into the new project's .csproj file.
+1. Copy the `ProjectReference` elements from the original project. Note: The new project format does not use the `Name` and `ProjectGuid` elements so you can safely delete those.
+1. At this point it's a good idea to try and restore/build to make sure all dependencies are properly configured.
+1. [Link the files](#link-files-from-the-old-project) from your existing .NET Framework WPF project to the .NET Core 3.0 WPF project.
+1. **Optional** If you have difficulties with compiler linking, you can copy the project files from the .NET Framework WPF project to the new .NET Core 3.0 WPF project.
 
     * C# files (files with the `.cs.` extension) are included by default in the .csproj.
     * Other project elements like `EmbeddedResources` can also use globbing.
