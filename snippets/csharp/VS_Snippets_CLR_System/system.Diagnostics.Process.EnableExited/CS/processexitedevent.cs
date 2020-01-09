@@ -47,8 +47,7 @@ class PrintProcessClass
     }
 
     public static async Task Main(string[] args)
-    {
-        
+    {        
         // Verify that an argument has been entered.
         if (args.Length <= 0)
         {
@@ -58,7 +57,7 @@ class PrintProcessClass
 
         // Create the process and print the document.
         PrintProcessClass myPrintProcess = new PrintProcessClass();
-        await myPrintProcess.PrintDoc(args[0]);        
+        await myPrintProcess.PrintDoc(args[0]);
     }
 }
 //</snippet1>
