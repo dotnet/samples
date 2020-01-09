@@ -274,20 +274,17 @@ namespace client
 	       channel.Close();
        }
 
-       public static void Snippet34()
-       {
-            // <Snippet34>
-            class Program : ChannelFactory<IService1Channel>
+        // <Snippet34>
+        class Program : ChannelFactory<IService1Channel>
+        {
+            static void Main(string[] args)
             {
-                static void Main(string[] args)
-                {
-                    IService1Channel channel = CreateChannel("BasicHttpBinding_IService1");
-                    channel.Open();
+                IService1Channel channel = CreateChannel("BasicHttpBinding_IService1");
+                channel.Open();
 
-                    channel.Close();
-                }
+                channel.Close();
             }
-           // </Snippet34>
-       }
+        }
+        // </Snippet34>
     }
 }

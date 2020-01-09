@@ -3,7 +3,7 @@ namespace Utilities
 {
    public class StringLibrary
    {
-      public static Version { get; } = new Version("1.0");
+      public static Version Version { get; } = new Version("1.0");
       
       public static String GetEndOfLineCharacter()
       {
