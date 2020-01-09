@@ -1,19 +1,17 @@
 ﻿//<snippet1>
 using System;
 using System.Diagnostics;
-using System.Threading;
+using System.Threading.Tasks;
 
 class PrintProcessClass
 {
     private Process myProcess;
-    private int elapsedTime;
-    private bool eventHandled;
+    private TaskCompletionSource<bool> eventHandled;
 
     // Print a file with any known extension.
-    public void PrintDoc(string fileName)
+    public async Task PrintDoc(string fileName)
     {
-        elapsedTime = 0;
-        eventHandled = false;
+        eventHandled = new TaskCompletionSource<bool>();
 
         using (myProcess = new Process())
         {
@@ -34,32 +32,23 @@ class PrintProcessClass
             }
 
             // Wait for Exited event, but not more than 30 seconds.
-            const int SleepAmount = 100;
-            while (!eventHandled)
-            {
-                elapsedTime += SleepAmount;
-                if (elapsedTime > 30000)
-                {
-                    break;
-                }
-                
-                Thread.Sleep(SleepAmount);
-            }
+            await Task.WhenAny(eventHandled.Task,Task.Delay(30000));            
         }
     }
 
     // Handle Exited event and display process information.
     private void myProcess_Exited(object sender, System.EventArgs e)
-    {
-        eventHandled = true;
+    {        
         Console.WriteLine(
             $"Exit time    : {myProcess.ExitTime}\n" +
             $"Exit code    : {myProcess.ExitCode}\n" +
-            $"Elapsed time : {elapsedTime}");
+            $"Elapsed time : {Math.Round((myProcess.ExitTime - myProcess.StartTime).TotalMilliseconds)}");
+        eventHandled.TrySetResult(true);
     }
 
-    public static void Main(string[] args)
+    public static async Task Main(string[] args)
     {
+        
         // Verify that an argument has been entered.
         if (args.Length <= 0)
         {
@@ -69,7 +58,7 @@ class PrintProcessClass
 
         // Create the process and print the document.
         PrintProcessClass myPrintProcess = new PrintProcessClass();
-        myPrintProcess.PrintDoc(args[0]);
+        await myPrintProcess.PrintDoc(args[0]);        
     }
 }
 //</snippet1>
