@@ -11,9 +11,9 @@ namespace WebAPIClient
     {
         private static readonly HttpClient client = new HttpClient();
 
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            var repositories = ProcessRepositories().Result;
+            var repositories = await ProcessRepositories();
 
             foreach (var repo in repositories)
             {
