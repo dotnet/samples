@@ -47,7 +47,7 @@ class PrintProcessClass
     }
 
     public static async Task Main(string[] args)
-    {        
+    {
         // Verify that an argument has been entered.
         if (args.Length <= 0)
         {
