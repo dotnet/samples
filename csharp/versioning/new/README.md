@@ -6,8 +6,8 @@ for this sample.
 
 ## Key Features
 
-This sample contains code demonstrating the use of 
-the `new` modifier when versioning .NET libraries
+This sample contains code demonstrating the use of
+the `new` modifier when versioning .NET libraries.
 
 ## Build and Run
 
