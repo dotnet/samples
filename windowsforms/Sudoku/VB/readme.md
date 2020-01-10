@@ -13,20 +13,24 @@ description: "Sudoku is a number puzzle game, played on a nine by nine cell grid
 
 ## Requires
 
-- Visual Studio 2019 Version 16.5.0 Preview 1.0 or later to edit the GUI in the solution designer and you need to enable the designer in the Visual Studio Preview. Go to Tools > Options > Environment > Preview Features and select the Use the preview Windows Forms designer for .NET Core apps option. 
+- Visual Studio 2019 Version 16.5.0 Preview 1.0 or later to edit the GUI in the solution designer and you need to enable the designer in the Visual Studio Preview. Go to Tools > Options > Environment > Preview Features and select the Use the preview Windows Forms designer for .NET Core apps option.
 - .NET Core 3.1
 
 ## License
+
 - MIT
 
 ## Technologies
-  - Windows Forms
-  - dotnet-core
+
+- Windows Forms
+- dotnet-core
 
 ## Topics
+
 - Puzzle Game
 
 ## Updated
+
 - 12/12/2019
 
 ## Description
@@ -36,7 +40,8 @@ description: "Sudoku is a number puzzle game, played on a nine by nine cell grid
 [Online JavaScript version](http://www.scproject.biz/sudoku.php).
 
 Sudoku is a number puzzle game, played on a nine by nine cell grid. Within that grid, there are nine sub-regions consisting of three cells by three cells. In this version, there are three levels of difficulty, which are Most clues, Medium clues, and Least clues.
-- Most clues gives you five random numbers from each nine cell horizontal row. 
+
+- Most clues gives you five random numbers from each nine cell horizontal row.
 - Medium clues gives you four random numbers from each nine cell horizontal row.
 - Least clues gives you three random numbers from each nine cell horizontal row.
 
@@ -47,6 +52,6 @@ There is also the further added constraint that each sub-region can also only co
 In a new game, the given numbers (clues) are rendered in red text. The numbers that you enter are rendered in black text.
 
 There is a Solution button, which when clicked, reveals the correct answer to the puzzle. Any numbers that you have added that are correctly placed, remain rendered with black text. Any cells that were empty or had an incorrect number will display the correct number rendered in blue text.
-Any cells that were empty or had an incorrect integer will display the correct integer rendered inblue text.
+Any cells that were empty or had an incorrect integer will display the correct integer rendered in blue text.
 
 You win the game if after clicking the Solution button, all of the numbers are rendered in either black or red text.
