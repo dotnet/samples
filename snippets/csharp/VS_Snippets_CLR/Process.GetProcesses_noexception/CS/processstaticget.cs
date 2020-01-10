@@ -23,7 +23,6 @@ namespace MyProcessSample
             // This will throw an exception if there is no such process.
             Process localById = Process.GetProcessById(1234);
 
-
             // Get processes running on a remote computer. Note that this
             // and all the following calls will timeout and throw an exception
             // if "myComputer" and 169.0.0.0 do not exist on your local network.

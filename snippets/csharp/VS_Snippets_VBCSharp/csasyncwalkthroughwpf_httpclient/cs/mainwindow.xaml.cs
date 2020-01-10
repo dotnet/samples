@@ -19,7 +19,6 @@ using System.Net.Http;
 using System.IO;
 using System.Net;
 
-
 namespace AsyncExampleWPF
 {
     public partial class MainWindow : Window
@@ -48,7 +47,6 @@ namespace AsyncExampleWPF
             // Reenable the button in case you want to run the operation again.
             startButton.IsEnabled = true;
         }
-
 
         private async Task SumPageSizesAsync()
         {
@@ -87,7 +85,6 @@ namespace AsyncExampleWPF
                 string.Format("\r\n\r\nTotal bytes returned:  {0}\r\n", total);
         }
 
-
         private List<string> SetUpURLList()
         {
             List<string> urls = new List<string> 
@@ -105,7 +102,6 @@ namespace AsyncExampleWPF
             };
             return urls;
         }
-
 
         private void DisplayResults(string url, byte[] content)
         {

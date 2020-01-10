@@ -1,5 +1,4 @@
-﻿
-namespace IndexersSamples.Common
+﻿namespace IndexersSamples.Common
 {
     public class Measurements
     {

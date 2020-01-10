@@ -39,7 +39,6 @@ namespace SDKSample
 
 	    }
 
-
     }
 }
 // </SnippetMediaElementCSharpExampleWholePage>

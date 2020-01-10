@@ -11,7 +11,6 @@ namespace WindowsFormsApplication2
 {
     public partial class Form1 : Form
     {
-        
 
         public Form1()
         {
@@ -55,7 +54,6 @@ namespace WindowsFormsApplication2
             openFileDialog1.ShowDialog();
         }
         //</snippet1>
-
 
         /// <summary>
         /// The main entry point for the application.

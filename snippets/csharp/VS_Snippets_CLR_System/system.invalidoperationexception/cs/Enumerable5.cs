@@ -20,4 +20,3 @@ public class Example
 //       at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source, Func`2 predicate)
 //       at Example.Main()
 // </Snippet10>
-

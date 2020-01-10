@@ -3,7 +3,6 @@ using System;
 using Microsoft.Win32.SafeHandles;
 using System.Runtime.InteropServices;
 
-
 class SafeHandlesExample
 {
 
@@ -18,7 +17,6 @@ class SafeHandlesExample
             Console.WriteLine("Mutex created. Press Enter to release it.");
             Console.ReadLine();
 
-
         }
         catch (Exception e)
         {
@@ -32,13 +30,11 @@ class SafeHandlesExample
 
         Console.ReadLine();
 
-
     }
 }
 
 class UnmanagedMutex 
 {
-
 
     // Use interop to call the CreateMutex function.
     // For more information about CreateMutex,
@@ -47,14 +43,11 @@ class UnmanagedMutex
     static extern SafeWaitHandle CreateMutex(IntPtr lpMutexAttributes, bool bInitialOwner,
     string lpName);
 
-
     // Use interop to call the ReleaseMutex function.
     // For more information about ReleaseMutex,
     // see the unmanaged MSDN reference library.
     [DllImport("kernel32.dll")]
     public static extern bool ReleaseMutex(SafeWaitHandle hMutex);
-
-
 
     private SafeWaitHandle handleValue = null;
     private IntPtr mutexAttrValue = IntPtr.Zero;
@@ -64,7 +57,6 @@ class UnmanagedMutex
     {
         nameValue = Name;
     }
-
 
     public void Create()
     {
@@ -111,7 +103,6 @@ class UnmanagedMutex
         }
 
     }
-
 
     public void Release()
     {

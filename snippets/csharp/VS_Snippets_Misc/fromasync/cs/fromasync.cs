@@ -267,7 +267,6 @@ namespace APM_Task
         }
         //</snippet08>    
 
-
     }
 
     #region snippet09
@@ -327,7 +326,6 @@ namespace APM_Task
     }
     #endregion
 } //end APM_Task namespace
-
 
 class FileStreamDemo
 {
@@ -573,8 +571,6 @@ class FileStreamDemo
             return "processed";
         }
 
-    
-
         //<snippet11>
         void ProcessFilesAsync()
         {
@@ -601,7 +597,6 @@ class FileStreamDemo
             }
             Console.WriteLine("All tasks have been added.");
             // Do some work here.
-
 
             try
             {
@@ -681,7 +676,3 @@ class FileStreamDemo
         }
         //</snippet11>
     }
-
-
-
-

@@ -13,4 +13,3 @@ private void PrintStartupPath() {
 
 // </Snippet1>
 }
-

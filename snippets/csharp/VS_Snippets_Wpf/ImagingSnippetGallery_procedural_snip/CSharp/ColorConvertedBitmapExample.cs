@@ -13,7 +13,6 @@ namespace SDKSample
         public ColorConvertedBitmapExample()
         {
 
-
             //How to use ColorConvertedBitmap
             string jpegFile = "sampleImages/WaterLilies.jpg";
             Stream imageStream = new FileStream(jpegFile, FileMode.Open, FileAccess.Read, FileShare.Read);       
@@ -33,7 +32,6 @@ namespace SDKSample
 
             // sourceColorContext= bsrcFrame.ColorContext;
             // ColorContext sourceColorContext = new ColorContext();
-
 
             ColorContext destColorContext = new ColorContext(System.Windows.Media.PixelFormats.Indexed1);
             ColorConvertedBitmap ccb = new ColorConvertedBitmap(bsrc, sourceColorContext, destColorContext, PixelFormats.Bgr24);

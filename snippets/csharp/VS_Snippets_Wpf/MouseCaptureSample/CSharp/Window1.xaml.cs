@@ -8,7 +8,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Input;
 
-
 namespace SDKSamples
 {
     /// <summary>
@@ -125,7 +124,6 @@ namespace SDKSamples
             }
         }
 
-
         private void ButtonPreviewMouseUp(object sender, MouseEventArgs e)
         {
             Button source = e.Source as Button;
@@ -172,7 +170,6 @@ namespace SDKSamples
             }
         }
 
-
         private void OnRadioButtonSelected(object sender, RoutedEventArgs e)
         {
             RadioButton source = e.Source as RadioButton;
@@ -214,8 +211,6 @@ namespace SDKSamples
         {
             _changeColorOnMouseWheel = false;
         }
-
-
 
         //private fields
         bool _enlargeOnMouseOver = false;

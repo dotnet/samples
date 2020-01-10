@@ -18,7 +18,6 @@ namespace SDKSample
     public Binding myBinding;
     public DockPanel dp;
 
-
     //<Snippet2>
     public void OnClick(Object obj, RoutedEventArgs args)
     {
@@ -99,7 +98,6 @@ namespace SDKSample
       win.Show();
     }
 
-
     void button3_Click(object sender, RoutedEventArgs e)
     {
         BindingOperations.ClearBinding(myText, TextBlock.TextProperty);
@@ -114,8 +112,6 @@ namespace SDKSample
 
     }
   }
-
-  
 
   internal sealed class MainEntry
   {

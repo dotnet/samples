@@ -31,7 +31,6 @@
             Console.ReadLine();
         }
 
-
         static void DOP()
         {
             var source = Enumerable.Range(0, 100000);
@@ -42,7 +41,6 @@
             //</snippet5>
 
         }
-
 
         static void Test()
         {
@@ -72,7 +70,6 @@
                                   select city)
                                     .Take(1000);
 
-
             var finalResult = from city in orderedCities2.AsUnordered()
                               join p in people.AsParallel() on city.Name equals p.CityName into details
                               from c in details
@@ -81,7 +78,6 @@
             foreach (var city in finalResult) { /*...*/ }
             //</snippet6>
             //...
-
 
             ////…
             //You can write the same query in method based syntax as follows:
@@ -159,9 +155,6 @@
                 Console.Write("{0} ", item);
         }
 
-
-
-
         static void OrderedQuery3()
         {
             //<Snippet13>
@@ -173,7 +166,6 @@
                                where num % 8 == 0
                                orderby num
                                select num;
-
 
             // use foreach to preserve query ordering
             foreach (var v in orderedQuery)
@@ -393,7 +385,6 @@
     }
     //</snippet18>
 
-
     //<snippet23>
     namespace MergeOptions
     {
@@ -440,8 +431,6 @@
     }
     //</snippet23>
 
-
-
     //<snippet31>
     namespace PLINQAggregation
     {
@@ -466,7 +455,6 @@
                 // calculate the mean average. Average is a predefined
                 // aggregation operator, along with Max, Min and Count.
                 double mean = source.AsParallel().Average();
-
 
                 // We use the overload that is unique to ParallelEnumerable. The 
                 // third Func parameter combines the results from each thread.
@@ -493,8 +481,6 @@
     }
     //</snippet31>
 
-
-
     partial class PLINQProgram
     {
         
@@ -513,7 +499,6 @@
         {
             ////Call methods here.
             TestDataSource();
-
 
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
@@ -783,7 +768,6 @@
         }
         //</snippet15>
 
-
         static void NestedLoops()
         {
             var date = DateTime.Now;
@@ -795,7 +779,6 @@
                     select new { cust, order };
             //</snippet20>
         }
-
 
         //<snippet22>
         // Paste into PLINQDataSample class.
@@ -809,7 +792,6 @@
                                 .ToList();
         }
         //</snippet22>
-
 
         //<snippet24>
         // Paste into PLINQDataSample class.
@@ -841,7 +823,6 @@ class FileIteration
         {
             // Using the raw string array here. See PLINQ Data Sample.
             string[] customers = GetCustomersAsStrings().ToArray();
-
 
             // First, we must simulate some currupt input.
             customers[54] = "###";
@@ -920,7 +901,3 @@ class FileIteration
         //</snippet42>
     }
 }
-
-
-
-

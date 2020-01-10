@@ -37,5 +37,3 @@ public partial class Window1 : Window
     }
     //</Snippet2>
 }
-
-

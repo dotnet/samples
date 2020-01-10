@@ -1,20 +1,16 @@
-﻿
-
-using System;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Shapes;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
-
 namespace Microsoft.Samples.BrushExamples
 {
 
     public class StretchExample : Page
     {
-    
-        
+
         public StretchExample()
         {
 
@@ -23,11 +19,9 @@ namespace Microsoft.Samples.BrushExamples
             mainPanel.Orientation = Orientation.Horizontal;
             createNoStretchExample(mainPanel);
             this.Content = mainPanel;
-        
 
         }
-        
-        
+
         private void createNoStretchExample(Panel mainPanel)
         {
 
@@ -58,8 +52,7 @@ namespace Microsoft.Samples.BrushExamples
             mainPanel.Children.Add(myRectangle);            
         
         }
-        
-  
+
     }
 
 }

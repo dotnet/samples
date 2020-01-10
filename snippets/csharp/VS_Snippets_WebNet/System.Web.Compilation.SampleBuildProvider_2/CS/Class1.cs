@@ -30,7 +30,6 @@ public class SampleBuildProvider : BuildProvider
         get { return _compilerType; }
     }
 
-
     // Define the build provider implementation of the GenerateCode method.
     public override void GenerateCode(AssemblyBuilder assemBuilder)
     {

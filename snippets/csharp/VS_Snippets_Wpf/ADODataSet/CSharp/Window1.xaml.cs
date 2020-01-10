@@ -10,7 +10,6 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 
-
 namespace SDKSample
 {
   /// <summary>

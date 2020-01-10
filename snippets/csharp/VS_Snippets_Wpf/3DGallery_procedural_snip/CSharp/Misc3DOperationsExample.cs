@@ -10,12 +10,10 @@ namespace SDKSample
     public class Misc3DOperationsExample : Page
     {
 
-
         public Misc3DOperationsExample()
         {
 
             StackPanel mainPanel = new StackPanel();
-
 
             TextBlock subtract3DPointsExampleText = new TextBlock();
             subtract3DPointsExampleText.Text = "subtract3DPointsExample: " + subtract3DPointsExample();
@@ -36,9 +34,6 @@ namespace SDKSample
             this.Content = mainPanel;
         }
 
-
-
-        
         private string subtract3DPointsExample()
         {
             // <SnippetSubtract3DPointsExample_csharp>

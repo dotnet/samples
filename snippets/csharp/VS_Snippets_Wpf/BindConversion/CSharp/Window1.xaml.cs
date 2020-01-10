@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Globalization;
 using System.ComponentModel;
 using System.Windows;
@@ -77,7 +76,6 @@ namespace SDKSample
               RelativeSourceMode.FindAncestor, typeof(ItemsControl), 2);
           //</SnippetRelativeSource>
       }
-
 
     //<Snippet1>
     private void OnPageLoaded(object sender, EventArgs e)

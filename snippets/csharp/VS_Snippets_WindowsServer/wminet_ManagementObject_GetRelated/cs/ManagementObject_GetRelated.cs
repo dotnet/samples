@@ -2,7 +2,6 @@
 using System; 
 using System.Management; 
 
-
 public class Sample 
 { 
     public static void Main(string[] args) 

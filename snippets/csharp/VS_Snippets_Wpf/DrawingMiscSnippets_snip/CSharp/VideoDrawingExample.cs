@@ -13,8 +13,7 @@ namespace SDKSample
     {
         public VideoDrawingExample()
         {
-                
-                
+
             // <SnippetVideoDrawingExampleInline>
             //
             // Create a VideoDrawing.
@@ -45,7 +44,6 @@ namespace SDKSample
             // </SnippetVideoDrawingExampleInline6>
             
             // </SnippetVideoDrawingExampleInline>
-
 
             // <SnippetRepeatingVideoDrawingExampleInline>
             //
@@ -113,7 +111,6 @@ namespace SDKSample
             this.Background = Brushes.White;
             this.Content = exampleBorder;
         }
-
 
     }
 }

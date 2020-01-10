@@ -151,8 +151,7 @@ namespace AttributesDemoControlTest
 			((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.timer1)).BeginInit();
-			
-			
+
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();

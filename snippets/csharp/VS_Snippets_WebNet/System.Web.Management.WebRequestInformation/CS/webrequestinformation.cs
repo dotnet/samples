@@ -3,7 +3,6 @@
   *Purpose: Implements a custom type to 
  * access the request information. 
   **/
-
 // <Snippet1>
 
 using System;
@@ -36,7 +35,6 @@ namespace SamplesAspNet
                 EventTime.ToString()));
         }
         // </Snippet2>
-
 
         // <Snippet3>
         // Instantiate events identified by 
@@ -148,4 +146,3 @@ namespace SamplesAspNet
     }
 }
 // </Snippet1>
-

@@ -10,15 +10,12 @@ using System.Windows.Media.Animation;
 namespace Microsoft.Samples.Graphics
 {
 
-
     public partial class LineExample : Page
     {
         public LineExample()
         {
             InitializeComponent();
         }
-
-
 
     }
 }

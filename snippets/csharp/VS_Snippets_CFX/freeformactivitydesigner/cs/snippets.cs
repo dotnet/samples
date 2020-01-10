@@ -3,7 +3,6 @@ using System.ComponentModel.Design;
 using System.Workflow.ComponentModel;
 using System.Workflow.ComponentModel.Design;
 
-
 namespace FreeformActivityDesignerSnippets
 {
     //<snippet0>
@@ -39,6 +38,5 @@ namespace FreeformActivityDesignerSnippets
         }
         //</snippet0>
 
-        
     }
 }

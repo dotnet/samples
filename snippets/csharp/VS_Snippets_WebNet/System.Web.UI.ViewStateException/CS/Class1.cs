@@ -31,7 +31,6 @@ public class ObjectStateFormatterTest
         // </snippet1>
     }
 
-
     // <snippet2>
     private ICollection LoadControlProperties(string serializedProperties)
     {
@@ -75,6 +74,5 @@ public class ObjectStateFormatterTest
     {
 
     }
-    
 
 }

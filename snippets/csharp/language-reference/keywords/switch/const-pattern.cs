@@ -26,5 +26,3 @@ class Program
 // The example displays output like the following:
 //       The middle of the work week.
 // </Snippet1>
-
-

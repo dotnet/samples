@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 
 public class SamplesHashtable
@@ -17,4 +17,3 @@ public class SamplesHashtable
         // </Snippet2>
     }
 }
-

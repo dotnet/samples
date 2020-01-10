@@ -2,7 +2,6 @@
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-
 namespace Samples.AspNet.CS.Controls 
 {
     // <Snippet2>    

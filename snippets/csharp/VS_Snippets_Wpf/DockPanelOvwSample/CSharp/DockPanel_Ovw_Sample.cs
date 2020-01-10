@@ -82,7 +82,6 @@ namespace SDKSample
             myTextBlock5.Text = "This content will Fill the remaining space";
             myBorder5.Child = myTextBlock5;
 
-
             // Add child elements to the DockPanel Children collection
             myDockPanel.Children.Add(myBorder1);
             myDockPanel.Children.Add(myBorder2);

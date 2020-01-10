@@ -12,7 +12,6 @@ using System.Net.Sockets;
 using System.Xml;
 using System.Diagnostics;
 
-
 namespace CryptoWalkThru
 {
     public partial class Form1 : Form
@@ -47,7 +46,6 @@ const string keyName = "Key01";
             InitializeComponent();
 
         }
-
 
         private void Close_Click(object sender, EventArgs e)
         {
@@ -293,7 +291,6 @@ private void DecryptFile(string inFile)
             int blockSizeBytes = rjndl.BlockSize / 8;
             byte[] data = new byte[blockSizeBytes];
 
-
             // By decrypting a chunk a time,
             // you can save memory and
             // accommodate large files.
@@ -375,8 +372,6 @@ void buttonImportPublicKey_Click(object sender, System.EventArgs e)
 }
 // </Snippet9>
 #endregion
-
-
 
 }
 }

@@ -38,8 +38,6 @@ namespace ColumnsArtSample
 
             DG1.DataContext = ordertable;
 
-    
-
         }
     }
 }

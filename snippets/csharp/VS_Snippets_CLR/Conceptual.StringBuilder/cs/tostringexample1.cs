@@ -25,4 +25,3 @@ public class Example
 //          1. receeve
 //          2. receive
 // </Snippet10>
-         

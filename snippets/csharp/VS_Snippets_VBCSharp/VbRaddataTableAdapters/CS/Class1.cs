@@ -17,29 +17,24 @@ namespace CS
             //</Snippet7>
         }
 
-
         //---------------------------------------------------------------------
         void Test()
         {
             NorthwindDataSet northwindDataSet1 = new NorthwindDataSet();
-            
 
             //<Snippet3>
             NorthwindDataSetTableAdapters.CustomersTableAdapter customersTableAdapter1;
             customersTableAdapter1 = new NorthwindDataSetTableAdapters.CustomersTableAdapter();
             //</Snippet3>
 
-
             //<Snippet4>
             customersTableAdapter1.Fill(northwindDataSet1.Customers);
             //</Snippet4>
-
 
             //<Snippet5>
             NorthwindDataSet.CustomersDataTable newCustomersTable;
             newCustomersTable = customersTableAdapter1.GetData();
             //</Snippet5>
-
 
             //<Snippet6>
             NorthwindDataSetTableAdapters.QueriesTableAdapter scalarQueriesTableAdapter;

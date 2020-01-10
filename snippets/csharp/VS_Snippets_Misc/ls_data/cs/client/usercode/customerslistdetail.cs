@@ -100,7 +100,6 @@ namespace LightSwitchApplication
             }
             this.DataWorkspace.SharePointData.SaveChanges();
 
-
         }
         //</Snippet11>
         //<Snippet12>
@@ -122,7 +121,6 @@ namespace LightSwitchApplication
                 }
             }
             handled = true;
-
 
         }
         //</Snippet12>

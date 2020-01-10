@@ -9,7 +9,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Windows.Controls;
 
-
 namespace SDKSample
 {
     /// <summary>
@@ -25,7 +24,6 @@ namespace SDKSample
             _applicationDir = applicationDir;
         }
         #endregion Constructor
-
 
         #region Public Methods
 
@@ -76,7 +74,6 @@ namespace SDKSample
             _fontDictionary.Clear();
         }// end:Create()
         //</SnippetCreateAndWriteToXpsDocument>
-
 
         //<SnippetIterateXpsPackageParts>
         // --------------------- IterateXpsPackageParts() ---------------------
@@ -134,7 +131,6 @@ namespace SDKSample
 
         #endregion Public Methods
 
-
         #region Private Methods
         // ------------------------- BeginFixedPage() -------------------------
         /// <summary>
@@ -154,7 +150,6 @@ namespace SDKSample
             xmlWriter.WriteAttributeString("Width",   "816");
             xmlWriter.WriteAttributeString("Height", "1056");
         }
-
 
         // --------------------------- EndFixedPage) --------------------------
         /// <summary>
@@ -202,7 +197,6 @@ namespace SDKSample
             writer.WriteEndElement();
         }// end:AddGlyphRun()
 
-
         // --------------------------- GetXpsFont() ---------------------------
         /// <summary>
         ///   Returns the relative path to a font part in the package.</summary>
@@ -238,7 +232,6 @@ namespace SDKSample
             }
             return packageFontUri;
         }// end:GetXpsFont()
-
 
         // ---------------------------- AddImage() ----------------------------
         /// <summary>
@@ -293,7 +286,6 @@ namespace SDKSample
             writer.WriteEndElement(); //Path
         }// end:AddImage()
 
-
         // --------------------------- GetXpsImage() --------------------------
         /// <summary>
         ///   Copies a given image to a specified XPS page.</summary>
@@ -319,7 +311,6 @@ namespace SDKSample
             xpsImage.Commit();
             return xpsImage.Uri.ToString();
         }
-
 
         // ------------------------ AddUriToTreeView() ------------------------
         /// <summary>

@@ -228,7 +228,6 @@ namespace ToolStripDropDownCS
         }
         // </snippet11>
 
-
         #region Windows Form Designer generated code
 
         private void InitializeComponent()

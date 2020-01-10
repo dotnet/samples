@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 
-
 namespace Microsoft.WebProgrammingModel.Samples
 {
     class Snippets

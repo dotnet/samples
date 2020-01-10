@@ -73,7 +73,6 @@ public class Words
         }
     }
 
-
     private int CountInString(
         string SourceString,
         string CompareString)

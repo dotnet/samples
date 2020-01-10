@@ -49,7 +49,6 @@ class Program
 }
 // </Snippet2>
 
-
 namespace MyCompany.Employees
 {
    public class UILibrary
@@ -92,4 +91,3 @@ namespace MyCompany.Employees
       }
    }
 }
-

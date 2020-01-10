@@ -73,7 +73,6 @@ namespace SdkSample
 
         }// end:AddCommandHandlers()
 
-
         public static RoutedCommand Exit
             { get { return DeclareCommand(ref _Exit, "FileExit"); } }
 
@@ -118,7 +117,6 @@ namespace SdkSample
         }// end:DeclareCommand()
         #endregion Command Handlers
 
-
         #region Initialize and Terminate
         // ---------------------- InitializeThumbViewer -----------------------
         private void InitializeThumbViewer(object sender, System.EventArgs args)
@@ -135,20 +133,17 @@ namespace SdkSample
             Debug.Assert(FDPV.Document == null);
         }// end:InitializeThumbViewer()
 
-
         // ------------------------------ OnExit ------------------------------
         private void OnExit(object target, ExecutedRoutedEventArgs args)
         {
             ShutDown();
         }
 
-
         // ------------------------ ClosedThumbViewer -------------------------
         void ClosedThumbViewer(object sender, EventArgs e)
         {
             ShutDown();
         }
-
 
         // ----------------------------- ShutDown -----------------------------
         void ShutDown()
@@ -167,7 +162,6 @@ namespace SdkSample
         }// end:ShutDown()
         #endregion Initialize and Terminate
 
-
         #region Load and Save Documents
         // ------------------------------ OnOpen ------------------------------
         private static void OnOpen(object target, ExecutedRoutedEventArgs args)
@@ -178,7 +172,6 @@ namespace SdkSample
                 tv.CreateThumbs();
             }
         }
-
 
         // --------------------------- OpenDocument ---------------------------
         public bool OpenDocument(string fileName)
@@ -198,7 +191,6 @@ namespace SdkSample
             fileName = dialog.FileName;
             return OpenFile(fileName);
         }// end:OpenDocument()
-
 
         // ------------------------- GetContentFolder -------------------------
         /// <summary>
@@ -228,7 +220,6 @@ namespace SdkSample
             // directory if we're executing somewhere else).
             return contentDir;
         }// end:GetContentFolder()
-
 
         // ----------------------------- OpenFile -----------------------------
         private bool OpenFile(string fileName)
@@ -309,7 +300,6 @@ namespace SdkSample
             return true;
         }// end:OpenFile()
 
-
         //<SnippetDocSerCloseFile>
         // ---------------------------- CloseFile -----------------------------
         private void CloseFile()
@@ -325,7 +315,6 @@ namespace SdkSample
             }
         }
         //</SnippetDocSerCloseFile>
-
 
         // ---------------------------- CopyStream ----------------------------
         /// <summary>
@@ -355,13 +344,11 @@ namespace SdkSample
             src.Seek(originalPosition, SeekOrigin.Begin);
         }// end:CopyStream()
 
-
         // -------------------------- OpenFileFilter --------------------------
         private string OpenFileFilter
         {
             get { return "XAML FlowDocuments (*.xaml)|*.xaml"; }
         }
-
 
         // ---------------------------- OnNewQuery ----------------------------
         private static void OnNewQuery(
@@ -369,7 +356,6 @@ namespace SdkSample
         {
             args.CanExecute = true;
         }
-
 
         // --------------------------- CreateThumbs ---------------------------
         public void CreateThumbs()
@@ -392,7 +378,6 @@ namespace SdkSample
             FDPV.Focus();
         }
 
-
         // --------------------------- AddPageThumb ---------------------------
         private void AddPageThumb(int pageIndex, bool isDisplayed)
         {
@@ -413,7 +398,6 @@ namespace SdkSample
             ThumbList.Items.Add(thumbBorder);
         }
 
-
         // ---------------------- CalculateMaxThumbnails ----------------------
         private int CalculateMaxThumbnails()
         {
@@ -421,7 +405,6 @@ namespace SdkSample
             int numColumns = (int)(ThumbList.ActualWidth/ (_thumbnailWidth));
             return (Math.Max(numRows, 1) * Math.Max(numColumns, 1));
         }
-
 
         // -------------------------- CreatePageThumb -------------------------
         private StackPanel CreatePageThumb(
@@ -451,7 +434,6 @@ namespace SdkSample
             return null;
         }
 
-
         // ----------------------- CreateThumbBorder --------------------------
         private Border CreateThumbBorder(int pageNumber)
         {
@@ -464,7 +446,6 @@ namespace SdkSample
             OuterBorder.Tag = pageNumber;
             return OuterBorder;
         }
-
 
         // -------------------- PrepareBorderForDisplay -----------------------
         private void PrepareBorderForDisplay(Border border)
@@ -491,7 +472,6 @@ namespace SdkSample
             border.ContextMenu = cm;
         }// end:PrepareBorderForDisplay()
 
-
         // ---------------------------- OnSaveAs ------------------------------
         /// <summary>
         ///   Occurs when the user clicks File | Save As..."</summary>
@@ -499,7 +479,6 @@ namespace SdkSample
         {
             SaveDocumentAsFile(null);
         }
-
 
         // ----------------------- SaveDocumentAsFile -------------------------
         public bool SaveDocumentAsFile(string fileName)
@@ -529,7 +508,6 @@ namespace SdkSample
             // Save the document to the specified file.
             return SaveToFile(fileName);
         }// end:SaveDocumentAsFile()
-
 
         // --------------------------- SaveToFile -----------------------------
         /// <summary>
@@ -628,7 +606,6 @@ namespace SdkSample
             //</SnippetDocSerializeLinked2>
         }// end:SaveToFile()
 
-
         //<SnippetDocSerializeFileFilter>
         // ------------------------ PlugInFileFilter --------------------------
         /// <summary>
@@ -669,7 +646,6 @@ namespace SdkSample
 
         #endregion Load and Save Documents
 
-
         #region Public Properties
         public IDocumentPaginatorSource Document
         {
@@ -677,7 +653,6 @@ namespace SdkSample
             set { FDPV.Document = value; }
         }
         #endregion Public Properties
-
 
         #region Private Fields
         private double _rotateAngle = 0;
@@ -698,7 +673,6 @@ namespace SdkSample
         string _fileName = "";
         #endregion Private Fields
 
-
         #region Event Handling
 
         // ----------------------- PaginationCompleted ------------------------
@@ -708,7 +682,6 @@ namespace SdkSample
                 new DispatcherOperationCallback(
                     delegate { RefreshThumbnails(); return null; } ), null );
         }
-
 
         // ------------------------ SplitterEndResize -------------------------
         /// <summary>
@@ -732,7 +705,6 @@ namespace SdkSample
             TrackerRect.Visibility = Visibility.Hidden;
         }
 
-
         // ------------------------- AdjustMarkSizes --------------------------
         private void AdjustMarkSizes(StackPanel sp)
         {
@@ -750,7 +722,6 @@ namespace SdkSample
             if (tb != null)
                 tb.Width = btn.Width - 8;
         }
-
 
         // ------------------------ IncrementPathData -------------------------
         private void IncrementPathData(System.Windows.Shapes.Path path, double p)
@@ -778,7 +749,6 @@ namespace SdkSample
             lSegRTRT.Point = new System.Windows.Point(p - 2, 0);
         }
 
-
         // ------------------------- miEnlarge_Click --------------------------
         void miEnlarge_Click(object sender, RoutedEventArgs e)
         {
@@ -786,7 +756,6 @@ namespace SdkSample
             _thumbnailWidth  *= 2;
             RefreshThumbnailSizes();
         }
-
 
         // ------------------------- miReduce_Click ---------------------------
         void miReduce_Click(object sender, RoutedEventArgs e)
@@ -796,14 +765,12 @@ namespace SdkSample
             RefreshThumbnailSizes();
         }
 
-
         // ------------------------- miRotate_Click ---------------------------
         void miRotate_Click(object sender, RoutedEventArgs e)
         {
             _rotateAngle = (_rotateAngle + 90) % 360;
             RotateThumbnails();
         }
-
 
         // ---------------------- RefreshThumbnailSizes -----------------------
         private void RefreshThumbnailSizes()
@@ -824,7 +791,6 @@ namespace SdkSample
             // Refresh thumbnails
             RefreshThumbnails();
         }
-
 
         // ------------------------ RefreshThumbnails -------------------------
         private void RefreshThumbnails()
@@ -860,7 +826,6 @@ namespace SdkSample
             }
             RefreshThumbnailDisplay();
         }
-
 
         // --------------------- RefreshThumbnailDisplay ----------------------
         void RefreshThumbnailDisplay()
@@ -907,7 +872,6 @@ namespace SdkSample
             }
         }// end:RefreshThumbnailDisplay()
 
-
         // ------------------- InvalidateDisplayedThumbs() --------------------
         void InvalidateDisplayedThumbs()
         {
@@ -935,7 +899,6 @@ namespace SdkSample
             }
         }// end:InvalidateDisplayedThumbs()
 
-
         // ----------------------- RotateThumbnails() -------------------------
         private void RotateThumbnails()
         {
@@ -947,7 +910,6 @@ namespace SdkSample
                 img.LayoutTransform = rt;
             }
         }
-
 
         // ------------------------ ThumbnailClick() --------------------------
         void ThumbnailClick(object sender, MouseButtonEventArgs e)
@@ -962,7 +924,6 @@ namespace SdkSample
             //TrackerRect.Visibility = Visibility.Visible;
             FDPV.GoToPage(int.Parse(OuterBorder.Tag.ToString()));
         }
-
 
         // ------------------------ OnAddBookmark() ---------------------------
         void OnAddBookmark(object sender, RoutedEventArgs args)
@@ -981,7 +942,6 @@ namespace SdkSample
             }
             //AddBookmarkOrComment(BookmarkList);
         }
-
 
         // -------------------------- OnAddComment ----------------------------
         void OnAddComment(object sender, RoutedEventArgs args)
@@ -1005,7 +965,6 @@ namespace SdkSample
             //    converter.ConvertToInvariantString(color.Value);
         }
 
-
         //<SnippetDocSerContentChanged>
         // ------------------ _annStore_StoreContentChanged -------------------
         void _annStore_StoreContentChanged(object sender, StoreContentChangedEventArgs e)
@@ -1026,7 +985,6 @@ namespace SdkSample
             }
         }
         //</SnippetDocSerContentChanged>
-
 
         // ----------------------- AddBookmarkOrComment -----------------------
         private void AddBookmarkOrComment(ListBox collection, Annotation ann)
@@ -1116,7 +1074,6 @@ namespace SdkSample
             }
         }// end:AddBookmarkOrComment()
 
-
         //<SnippetDocSerDelete>
         // ------------------------- DeleteMark_Click -------------------------
         void DeleteMark_Click(object sender, RoutedEventArgs e)
@@ -1139,7 +1096,6 @@ namespace SdkSample
             Util.FlushDispatcher();
         }
         //</SnippetDocSerDelete>
-
 
         // -------------------------- GoToMark_Click --------------------------
         void GoToMark_Click(object sender, RoutedEventArgs e)
@@ -1173,7 +1129,6 @@ namespace SdkSample
             }
         }
 
-
         // ---------------------- SetStatusOfContextMenu ----------------------
         void SetStatusOfContextMenu(object sender, RoutedEventArgs args)
         {
@@ -1182,7 +1137,6 @@ namespace SdkSample
 
             cm_Bookmark.IsEnabled = true;
         }
-
 
         private static double _articleZoomValue = 110;
 
@@ -1196,7 +1150,6 @@ namespace SdkSample
             Slider zoomSlider = sender as Slider;
             if (zoomSlider != null)  zoomSlider.Value = _articleZoomValue;
         }
-
 
         // ---------------------- ZoomSlider_ValueChanged ---------------------
         /// <summary>
@@ -1228,4 +1181,3 @@ namespace SdkSample
     }// end:partial class ThumbViewer
 
 }// end:namespace SdkSample
-

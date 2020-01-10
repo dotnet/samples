@@ -7,8 +7,6 @@ using System.IO;
 using System.IdentityModel.Claims;
 //</snippet0>
 
-
-
 namespace Samples
 {
 
@@ -22,7 +20,6 @@ namespace Samples
             return a + b;
         }
         //</snippet1>
-
 
         //<snippet2>
         // Only a client authenticated with a valid certificate that has the 

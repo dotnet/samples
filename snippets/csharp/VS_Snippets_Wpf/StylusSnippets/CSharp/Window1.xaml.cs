@@ -8,7 +8,6 @@ using System.Windows.Media;
 using System.Windows.Shapes;
 using System.Collections;
 
-
 namespace StylusSnippets_CS
 {
     /// <summary>
@@ -55,7 +54,6 @@ namespace StylusSnippets_CS
             }
         }
         // </Snippet24>
-
 
         void button1_StylusUp(object sender, StylusEventArgs e)
         {

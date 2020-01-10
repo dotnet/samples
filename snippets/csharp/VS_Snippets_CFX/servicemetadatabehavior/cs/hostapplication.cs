@@ -22,7 +22,6 @@ namespace Microsoft.WCF.Documentation
       app.Run();
     }
 
-
     private void SnippetEnableHelpPage()
     {
         // see C_HowToSecureEndpoint\cs
@@ -33,7 +32,6 @@ namespace Microsoft.WCF.Documentation
         //sb.EnableHelpPage= true;
         //sb.HttpsGetUrl = new Uri("https://myMachineName:8036/myEndpoint");
         //myServiceHost.Description.Behaviors.Add(sb);
-            
 
     }
 
@@ -52,7 +50,6 @@ namespace Microsoft.WCF.Documentation
           sb.HttpsGetUrl = new Uri("https://myMachineName:8036/myEndpoint");
           myServiceHost.Description.Behaviors.Add(sb);
  */
-
 
       }
 

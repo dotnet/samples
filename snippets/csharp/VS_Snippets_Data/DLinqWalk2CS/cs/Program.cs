@@ -19,10 +19,6 @@ namespace cs_walk2
             // Get a typed table to run queries.
             Table<Customer> Customers = db.GetTable<Customer>();
 
-
-
-
-
             // <Snippet3>
             // Query for customers who have placed orders.
             var custQuery = 
@@ -73,8 +69,6 @@ namespace cs_walk2
     }
     // </Snippet4>
 
-
-
     [Table(Name = "Customers")]
     public class Customer
     {
@@ -92,9 +86,6 @@ namespace cs_walk2
             set { this._Orders.Assign(value); }
         }
         // </Snippet2>
-
-
-
 
         private string _CustomerID;
         [Column(IsPrimaryKey = true, Storage = "_CustomerID")]

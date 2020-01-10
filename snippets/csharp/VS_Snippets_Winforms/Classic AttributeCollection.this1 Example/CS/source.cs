@@ -21,4 +21,3 @@ private void PrintIndexItem2() {
 
 // </Snippet1>
 }
-

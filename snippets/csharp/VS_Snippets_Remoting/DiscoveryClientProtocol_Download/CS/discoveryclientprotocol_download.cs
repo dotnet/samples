@@ -41,6 +41,4 @@ class DiscoveryClientProtocol_Download
 // </Snippet1>
 // </Snippet2>
    }
-} 
-
-
+}

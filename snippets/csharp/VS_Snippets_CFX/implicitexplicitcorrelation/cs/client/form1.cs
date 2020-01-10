@@ -107,6 +107,5 @@ namespace Microsoft.Samples.ImplicitExplicitCorrelation.Client
                         
         }
 
-                
     }
 }

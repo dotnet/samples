@@ -676,4 +676,3 @@ namespace WindowsApplication2
     // </snippet100>
     // </snippet70>
 }
-

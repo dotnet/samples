@@ -105,7 +105,6 @@ public class ShortStringDictionary : DictionaryBase  {
 
 }
 
-
 public class SamplesDictionaryBase  {
 
    public static void Main()  {
@@ -243,4 +242,3 @@ After removing "Two":
 */
 
 // </Snippet1>
-

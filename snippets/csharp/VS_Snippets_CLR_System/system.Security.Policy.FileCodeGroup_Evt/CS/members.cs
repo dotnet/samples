@@ -215,7 +215,6 @@ class Members
         Console.WriteLine(rootElement.ToString());
     }
 
-
     // Print the properties of the specified code group to the console.
     private static void PrintCodeGroup(CodeGroup codeGroup)
     {
@@ -263,7 +262,6 @@ class Members
         Console.Write("The code group has the following security policy: ");
         Console.WriteLine(ResolveEvidence(codeGroup));
 
-        
         int childCount = codeGroup.Children.Count;
         if (childCount > 0 )
         {

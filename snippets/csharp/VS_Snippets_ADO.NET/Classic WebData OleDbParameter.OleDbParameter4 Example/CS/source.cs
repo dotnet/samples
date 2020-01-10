@@ -9,7 +9,6 @@ class Program
     {
     }
 
-
     // <Snippet1>
     public void CreateOleDbParameter()
     {

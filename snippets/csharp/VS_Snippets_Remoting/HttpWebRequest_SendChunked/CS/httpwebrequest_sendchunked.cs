@@ -13,13 +13,10 @@ Note:This program requires http://localhost/CodeSnippetTest.asp as Command line 
      '(501) Not implemented' is returned.
 */
 
-
- 
 using System;
 using System.IO;
 using System.Net;
 using System.Text;
-
 
 class HttpWebRequest_SendChunked
 {

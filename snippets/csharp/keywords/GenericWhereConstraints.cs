@@ -42,7 +42,6 @@ namespace keywords
 #nullable restore
     // </SnippetNotNull>
 
-
     // <Snippet5>
     public class MyGenericClass<T> where T : IComparable<T>, new()
     {
@@ -169,7 +168,6 @@ namespace keywords
     //Type parameter V is used as a type constraint.
     public class SampleClass<T, U, V> where T : V { }
     // </Snippet14>
-
 
     public static class UnmanagedExtensions
     {

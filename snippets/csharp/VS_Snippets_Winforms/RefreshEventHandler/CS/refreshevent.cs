@@ -100,7 +100,6 @@ protected static void OnRefresh(System.ComponentModel.RefreshEventArgs e)
 }
 //</snippet1>
 
-
 	}
 
 	class Control : Component 
@@ -120,8 +119,5 @@ protected static void OnRefresh(System.ComponentModel.RefreshEventArgs e)
 			}
 		}
 	}
-
-
-
 
 }

@@ -23,7 +23,6 @@ namespace CS
             textBox1.Text = northwindDataSet.Customers[3].ContactName;
             //</Snippet3>
 
-
             //<Snippet6>
             string custID = "ALFKI";
             NorthwindDataSet.OrdersRow[] orders;
@@ -33,7 +32,6 @@ namespace CS
 
             MessageBox.Show(orders.Length.ToString());
             //</Snippet6>
-
 
             //<Snippet7>
             int orderID = 10707;
@@ -46,7 +44,6 @@ namespace CS
             //</Snippet7>
         }
 
-
         //---------------------------------------------------------------------
         void TestTyped()
         {
@@ -55,7 +52,6 @@ namespace CS
             string customerIDValue = northwindDataSet.Customers[0].CustomerID;
             //</Snippet4>
         }
-
 
         //---------------------------------------------------------------------
         void TestUnTyped()
@@ -68,13 +64,11 @@ namespace CS
             //</Snippet5>
         }
 
-
         //---------------------------------------------------------------------
         public Form1()
         {
             InitializeComponent();
         }
-
 
         private void customersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {

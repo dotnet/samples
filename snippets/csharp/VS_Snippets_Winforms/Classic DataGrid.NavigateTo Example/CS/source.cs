@@ -21,6 +21,5 @@ namespace DataGrid.NavigateTo
         }
         // </Snippet1>
 
-
     }
 }

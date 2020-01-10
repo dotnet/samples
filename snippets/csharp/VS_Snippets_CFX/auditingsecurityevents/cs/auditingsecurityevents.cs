@@ -58,7 +58,6 @@ namespace Microsoft.ServiceModel.Samples
             return result;
         }
 
-
         // Host the service within this EXE console application.
         //<snippet1>
         public static void Main()

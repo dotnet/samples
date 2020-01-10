@@ -15,7 +15,6 @@ public class AuthorsAttribute : Attribute
       _authorName2 = name2;
    }
 
-
    public string AuthorName1 
    {
       get { return _authorName1; }

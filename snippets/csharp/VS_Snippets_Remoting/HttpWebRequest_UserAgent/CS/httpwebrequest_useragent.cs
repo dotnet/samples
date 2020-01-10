@@ -58,6 +58,3 @@ class HttpWebRequest_UserAgent
 		}
 	}
 }
-
-	
-

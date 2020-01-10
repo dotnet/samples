@@ -322,4 +322,3 @@ public class LinesCurvesAndShapes : Form
         // </snippet124>
     }
 }
-

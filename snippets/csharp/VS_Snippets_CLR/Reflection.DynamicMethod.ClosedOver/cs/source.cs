@@ -69,7 +69,6 @@ public class Demo
         // thing on the stack, so return from the call.
         ilg.Emit(OpCodes.Ret);
 
-
         // Create a delegate that uses changeID in the ordinary
         // way, as a static method that takes an instance of
         // Example and an int.
@@ -111,7 +110,6 @@ public class Demo
         );
 
         Console.WriteLine("Final value of id: {0}", ex.ID);
-
 
         // Now repeat the process with a class that derives
         // from Example.

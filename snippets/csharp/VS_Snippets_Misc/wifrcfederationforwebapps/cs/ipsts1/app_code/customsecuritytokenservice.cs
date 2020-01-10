@@ -10,7 +10,6 @@
 //
 //-----------------------------------------------------------------------------
 
-
 using System;
 using System.Collections.Generic;
 using System.IdentityModel;
@@ -58,7 +57,6 @@ namespace PassiveFlowIPSTS1
             // the RP that requests the token and then use that for _encryptingCreds
             _encryptingCreds = new X509EncryptingCredentials(CertificateUtil.GetCertificate(StoreName.My, StoreLocation.LocalMachine, ENCRYPTING_CERTIFICATE_NAME));
         }
-
 
         /// <summary>
         /// This method returns the configuration for the token issuance request. The configuration

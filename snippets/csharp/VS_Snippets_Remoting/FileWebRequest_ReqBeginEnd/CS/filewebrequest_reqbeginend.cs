@@ -8,7 +8,6 @@
   a stream object is obtained which is used to write into the file.
 */
 
-
 using System;
 using System.Net;
 using System.IO;
@@ -106,7 +105,6 @@ using System.Threading;
 			  Console.WriteLine("\nThe String you entered was successfully written into the file.");
 	   	  Console.WriteLine("\nPress Enter to continue.");	
 
-
          }
         catch(ApplicationException e)
 		  {
@@ -117,8 +115,3 @@ using System.Threading;
 // </Snippet2>
 // </Snippet1>
 	}
-
-
-
-
-

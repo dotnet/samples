@@ -35,7 +35,6 @@ namespace Example
         { }
     }
 
-
 }
 
 //<snippet2>
@@ -68,7 +67,6 @@ namespace GenericTypes
         // Code not shown.
     }
     //</snippet3>
-
 
     //<snippet4>
     [DataContract]

@@ -9,4 +9,3 @@ public class Example
       // Throws an ArgumentException.
    }
 }
-

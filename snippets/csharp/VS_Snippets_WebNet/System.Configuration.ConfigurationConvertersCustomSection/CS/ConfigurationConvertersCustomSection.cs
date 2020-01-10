@@ -142,7 +142,6 @@ namespace Samples.AspNet
         }
         //</Snippet4>
 
-
         //<Snippet5>
 
         public enum Permissions
@@ -171,7 +170,6 @@ namespace Samples.AspNet
         }
         //</Snippet5>
 
-        
         //<Snippet6>
         [ConfigurationProperty("maxUsers", DefaultValue="infinite")]
         [TypeConverter(typeof(InfiniteIntConverter))]

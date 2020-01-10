@@ -26,7 +26,6 @@ namespace WPFCrossThreadCS
             InitializeComponent();
         }
 
- 
         // <Snippet1>
         private async void threadExampleBtn_Click(object sender, RoutedEventArgs e)
         {

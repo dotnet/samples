@@ -18,4 +18,3 @@ public class SamplesArrayList
         // </Snippet2>
     }
 }
-

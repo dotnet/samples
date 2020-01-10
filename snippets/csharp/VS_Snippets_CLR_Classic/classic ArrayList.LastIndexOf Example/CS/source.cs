@@ -70,4 +70,3 @@
  The last occurrence of "the" between index 10 and index 5 is at index 10.
  */ 
 // </Snippet1>
-

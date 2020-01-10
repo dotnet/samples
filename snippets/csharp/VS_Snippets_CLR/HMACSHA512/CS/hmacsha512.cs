@@ -88,7 +88,6 @@ public class HMACSHA512example
         return;
     } // end SignFile
 
-
     // Compares the key in the source file with a new key created for the data portion of the file. If the keys 
     // compare the data has not been tampered with.
     public static bool VerifyFile(byte[] key, String sourceFile)

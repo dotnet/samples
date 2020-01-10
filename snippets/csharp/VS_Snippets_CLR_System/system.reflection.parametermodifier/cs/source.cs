@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Reflection;
 
 class ParmInfoTest
@@ -34,8 +33,3 @@ class ParmInfoTest
         Console.WriteLine("Called 'MethodName'");
     }
 }
-
-
-
-
-

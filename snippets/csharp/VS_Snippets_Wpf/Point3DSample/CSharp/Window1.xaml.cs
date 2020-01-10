@@ -23,7 +23,6 @@ namespace ThreeDPointSample
             InitializeComponent();
         }
 
- 	    
         // This method performs the Point3D operations
         //<SnippetMil3DPoints3DN1>
         private void PerformOperation(object sender, RoutedEventArgs e)
@@ -259,7 +258,6 @@ namespace ThreeDPointSample
                         //</SnippetMil3DPoints3DN12>
                         break;
                     }
-    
 
                 case "rb11":
                     {
@@ -293,7 +291,6 @@ namespace ThreeDPointSample
                         areEqual = point1.Equals(point2);
                         // areEqual is False.  point2 is a Point3D structure, but it is not equal to point1.	
 
-
                         // Displaying Results
                         syntaxString = "areEqual = point1.Equals(point2);;";
                         resultType = "Boolean";
@@ -302,7 +299,6 @@ namespace ThreeDPointSample
                         //</SnippetMil3DPoints3DN14>
                         break;
                     }
-                
 
                 case "rb13":
                     {
@@ -372,7 +368,6 @@ namespace ThreeDPointSample
 
                         pointResult = vector1 - point1;
                         //  pointResult is equal to (10, 25, 39)
-
 
                         // Displaying Results
                         syntaxString = "areNotEqual = (point1 != point2);";
@@ -457,7 +452,6 @@ namespace ThreeDPointSample
 
             vector3DResult = point3D1 - point3D2;
             // vector3DResult is equal to 
-
 
             // Subtracts a Vector3D from a Point3D using the static Subtract method
             // Returns a Point3D

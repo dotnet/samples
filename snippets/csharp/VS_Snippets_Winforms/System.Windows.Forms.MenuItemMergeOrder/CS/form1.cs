@@ -2,8 +2,6 @@
 // The following code example demonstrates using the MenuItem 
 // Merge-Order property to control the way a merged menu is displayed.
 
-
-
 using System.Windows.Forms;
 
 public class Form1:
@@ -61,7 +59,6 @@ public class Form1:
 		this.saveItem.Index = 2;
 		this.saveItem.Text = "Save";
 
-
 		// Set the merge order of fileItem to 2 so it has a lower priority 
 		// on the merged menu.
 		this.fileItem.MergeOrder = 2;
@@ -69,7 +66,6 @@ public class Form1:
 		//Add the new items to the fileItem menu item collection.
 		this.fileItem.MenuItems.AddRange(new MenuItem[]
 			{this.newItem, this.openItem, this.saveItem});
-		
 
 		// Initalize the optionsMenu item and its contents.
 		this.optionsMenu.Index = 1;
@@ -139,7 +135,5 @@ public class Form1:
 		Application.Run(new Form1());
 	}
 
-
 }
 //</snippet1>
-

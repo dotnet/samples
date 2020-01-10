@@ -46,7 +46,5 @@ using System.Threading.Tasks;
             Console.WriteLine("Method=alpha, Thread={0}", Thread.CurrentThread.ManagedThreadId);
         }
 
-
     }
 //</snippet01>
-

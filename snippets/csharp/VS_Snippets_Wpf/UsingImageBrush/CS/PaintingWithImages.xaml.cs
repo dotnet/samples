@@ -9,7 +9,6 @@ using System.Windows.Media;
 namespace Microsoft.Samples.Graphics.UsingImageBrush
 {
 
-
     public partial class PaintingWithImages : Page
     {
 

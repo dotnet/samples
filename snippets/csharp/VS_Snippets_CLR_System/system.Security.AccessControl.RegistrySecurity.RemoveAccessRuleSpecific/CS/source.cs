@@ -106,6 +106,3 @@ Current access rules:
 
 */
 //</Snippet1>
-
-
-

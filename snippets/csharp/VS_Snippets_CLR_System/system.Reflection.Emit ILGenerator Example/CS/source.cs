@@ -5,7 +5,6 @@ using System.Threading;
 using System.Reflection;
 using System.Reflection.Emit;
 
-
 class TestILGenerator {
  
   	public static Type DynamicDotProductGen() {
@@ -36,7 +35,6 @@ class TestILGenerator {
 	   FieldBuilder zField = ivTypeBld.DefineField("z", typeof(int),
                                                        FieldAttributes.Private);
 
-
            Type objType = Type.GetType("System.Object"); 
            ConstructorInfo objCtor = objType.GetConstructor(new Type[0]);
 
@@ -57,7 +55,6 @@ class TestILGenerator {
            ctorIL.Emit(OpCodes.Ldarg_3);
            ctorIL.Emit(OpCodes.Stfld, zField); 
 	   ctorIL.Emit(OpCodes.Ret); 
-
 
 	   // This method will find the dot product of the stored vector
 	   // with another.
@@ -143,7 +140,6 @@ class TestILGenerator {
 
 	   mthdIL.Emit(OpCodes.Ret);
 
-
  	   ivType = ivTypeBld.CreateType();
 
 	   return ivType;
@@ -178,8 +174,6 @@ class TestILGenerator {
 						  null,
 						  aVector1,
 						  passMe));
-
-	    
 
 	   // +++ OUTPUT +++
 	   // ---

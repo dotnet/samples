@@ -23,8 +23,7 @@
        Console.WriteLine( "The Array contains the following values:" );
        PrintValues( myArray );
     }
- 
- 
+
     public static void PrintValues( Array myArr )  {
        System.Collections.IEnumerator myEnumerator = myArr.GetEnumerator();
        int i = 0;
@@ -53,4 +52,3 @@
      43    44    45    46    47
  */
 // </Snippet1>
-

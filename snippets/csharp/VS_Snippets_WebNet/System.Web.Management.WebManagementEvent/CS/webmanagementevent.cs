@@ -2,7 +2,6 @@
   *File name: WebManagementEvent.cs
   *Purpose: Implements a custom WebManagementEvent type
   **/
-  
 // <Snippet1>
 
 using System;
@@ -33,7 +32,6 @@ namespace Samples.AspNet.Management
                 EventTime.ToString()));
         }
         // </Snippet2>
-
 
         // <Snippet3>
         // Invoked in case of events identified 
@@ -67,7 +65,6 @@ namespace Samples.AspNet.Management
         }
         // </Snippet4>
 
-
         // <Snippet5>
         // Obtains the current process information.
         public string GetProcessInfo()
@@ -83,7 +80,6 @@ namespace Samples.AspNet.Management
             return tempPi.ToString();
         }
         // </Snippet5>
-
 
         // <Snippet6>
         public override void FormatCustomEventDetails(
@@ -110,4 +106,3 @@ namespace Samples.AspNet.Management
 
 }
 // </Snippet1>
-

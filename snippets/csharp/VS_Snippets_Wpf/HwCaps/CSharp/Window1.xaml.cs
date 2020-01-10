@@ -124,7 +124,6 @@ namespace HwCaps_CS
                 textbox1.AppendText("No match for current tablet device\n\n");
             }
 
-
             // <Snippet17>
             // Is the collection thread safe?        
             if (!myTabletDeviceCollection.IsSynchronized)
@@ -330,12 +329,10 @@ namespace HwCaps_CS
 
                 textbox1.AppendText("\n");
 
-
                 // <Snippet1>
                 // Get the capabilities of the current tablet device
                 TabletHardwareCapabilities myHWCaps = myTabletDevice.TabletHardwareCapabilities;
                 // </Snippet1>
-
 
                 // <Snippet26>
                 if ((Tablet.CurrentTabletDevice.TabletHardwareCapabilities

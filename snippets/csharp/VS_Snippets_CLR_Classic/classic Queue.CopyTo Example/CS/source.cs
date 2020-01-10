@@ -43,8 +43,7 @@
        Console.WriteLine( "The new standard array contains the following:" );
        PrintValues( myStandardArray, ' ' );
     }
- 
- 
+
     public static void PrintValues( Array myArr, char mySeparator )  {
        foreach ( Object myObj in myArr )  {
           Console.Write( "{0}{1}", mySeparator, myObj );
@@ -63,4 +62,3 @@
 
  */ 
 // </Snippet1>
-

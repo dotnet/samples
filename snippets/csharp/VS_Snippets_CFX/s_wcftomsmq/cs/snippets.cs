@@ -36,7 +36,6 @@ namespace Microsoft.ServiceModel.Samples
             po.orderLineItems[0] = lineItem1;
             po.orderLineItems[1] = lineItem2;
 
-
             MsmqMessage<PurchaseOrder> ordermsg = new MsmqMessage<PurchaseOrder>(po);
             using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Required))
             {

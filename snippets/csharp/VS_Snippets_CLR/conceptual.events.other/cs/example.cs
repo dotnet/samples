@@ -1,6 +1,4 @@
-﻿
-
-// <Snippet1>
+﻿// <Snippet1>
 using System;
 
 namespace EventSample
@@ -189,7 +187,6 @@ namespace EventSample
             }
         }
     }
-
 
     // The driver class that hooks up the event handling method of
     // WakeMeUp to the alarm event of an Alarm object using a delegate.

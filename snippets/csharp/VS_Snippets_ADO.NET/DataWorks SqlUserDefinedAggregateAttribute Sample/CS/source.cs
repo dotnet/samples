@@ -6,7 +6,6 @@ using System.Data.SqlTypes;
 using System.Text;
 using Microsoft.SqlServer.Server;
 
-
 [Serializable]
 [Microsoft.SqlServer.Server.SqlUserDefinedAggregate(
    Microsoft.SqlServer.Server.Format.UserDefined, 
@@ -29,4 +28,3 @@ public class Concatenate : Microsoft.SqlServer.Server.IBinarySerialize
             
    }
 }
-        

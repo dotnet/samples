@@ -11,7 +11,6 @@ method and the error message along with the response obtained from the InternetS
 console.
 */
 
-
 using System;
 using System.Net;
 using System.Net.Sockets;
@@ -63,7 +62,6 @@ public class HttpConnect : WebResponse{
 		  return getStream;
 		}
 
-
     	public void ConnectHttpServer(String connectUri)
         {
 // <Snippet1>
@@ -92,10 +90,7 @@ public class HttpConnect : WebResponse{
 			 // Receive the information sent by the server.
 			 Int32 bytesReceived = connectSocket.Receive(recvBytes, recvBytes.Length, 0);
 			 String headerString = ASCII.GetString(recvBytes, 0, bytesReceived);
-			
 
-
-			
 			// Check whether 'status 404' is there or not in the information sent by server.
 			if(headerString.IndexOf("404")!=-1)
 			{	 
@@ -109,7 +104,6 @@ public class HttpConnect : WebResponse{
 
 				// Throw the 'WebException' object with a message string, message status,InnerException and WebResponse
 				throw new WebException("The Requested page is not found.",myException,WebExceptionStatus.ProtocolError,myWebResponse);
- 
 
 			}
 

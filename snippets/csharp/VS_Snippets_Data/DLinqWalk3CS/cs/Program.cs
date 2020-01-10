@@ -96,6 +96,5 @@ namespace cs_walk3
 
         }
 
-        
     }
 }

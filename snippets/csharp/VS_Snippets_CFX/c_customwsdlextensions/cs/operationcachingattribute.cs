@@ -25,7 +25,6 @@ namespace Microsoft.WCF.Documentation
             get { return isCacheable; }
         }
 
-
         #region IOperationBehavior Members
 
         public void AddBindingParameters(OperationDescription description, BindingParameterCollection parameters)

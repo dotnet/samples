@@ -16,7 +16,6 @@ public class Remarks
         myHashtable.Add("dib", "paint.exe");
         myHashtable.Add("rtf", "wordpad.exe");
 
-
         // When you use foreach to enumerate hash table elements,
         // the elements are retrieved as KeyValuePair objects.
         // <snippet01>
@@ -27,5 +26,3 @@ public class Remarks
         // </snippet01>
     }
 }
-
-

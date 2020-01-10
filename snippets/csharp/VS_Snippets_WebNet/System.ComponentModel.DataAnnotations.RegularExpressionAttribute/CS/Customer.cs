@@ -3,12 +3,10 @@ using System;
 using System.Web.DynamicData;
 using System.ComponentModel.DataAnnotations;
 
-
 [MetadataType(typeof(CustomerMetaData))]
 public partial class Customer
 {
 
-   
 }
 
 public class CustomerMetaData

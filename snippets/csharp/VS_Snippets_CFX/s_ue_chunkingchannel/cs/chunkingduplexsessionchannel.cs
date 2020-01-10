@@ -360,7 +360,6 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
             get { return innerChannel.Session; }
         }
 
-        
         #endregion
 
         #region IInputChannel advanced members

@@ -145,7 +145,6 @@ namespace Microsoft.WCF.Documentation
     }
     //</snippet1>
 
-
 		public void ExportEndpoint(WsdlExporter exporter, WsdlEndpointConversionContext context) 
     {
       Console.WriteLine("ExportEndpoint called.");

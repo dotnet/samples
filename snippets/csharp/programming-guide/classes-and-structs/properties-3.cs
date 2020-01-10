@@ -34,6 +34,3 @@ class Program
 }
 // The example displays output like the following:
 //       Shoes: sells for $19.95
-
-
-

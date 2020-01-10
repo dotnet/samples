@@ -8,8 +8,6 @@
 	returns the type referenced by the specified type handle.
 */
 
-
-
 using System;
 using System.Reflection;
 
@@ -28,4 +26,3 @@ public class MyClass2
 // </Snippet1>
    }
 }
-

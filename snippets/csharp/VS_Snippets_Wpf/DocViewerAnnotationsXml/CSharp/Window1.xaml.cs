@@ -17,7 +17,6 @@ using System.Windows.Xps;
 using System.Windows.Xps.Packaging;
 using WinForms = System.Windows.Forms;
 
-
 namespace SDKSample
 {
     // ========================= partial class Window1 ========================
@@ -30,7 +29,6 @@ namespace SDKSample
         {
             InitializeComponent();
         }
-
 
         // ------------------------------ OnOpen ------------------------------
         /// <summary>
@@ -70,7 +68,6 @@ namespace SDKSample
                 OpenDocument(dialog.FileName);
 
         }// end:OnOpen()
-
 
         // --------------------------- OpenDocument ---------------------------
         /// <summary>
@@ -143,7 +140,6 @@ namespace SDKSample
             return true;
         }// end:OpenDocument()
 
-
         // ------------------- GetFixedDocumentSequenceUri --------------------
         /// <summary>
         ///   Returns the part URI of first FixedDocumentSequence
@@ -164,7 +160,6 @@ namespace SDKSample
             // Return null if a FixedDocumentSequence isn't found.
             return null;
         }// end:GetFixedDocumentSequenceUri()
-
 
         // ------------------------- GetContentFolder -------------------------
         /// <summary>
@@ -194,7 +189,6 @@ namespace SDKSample
             // directory if we're executing somewhere else).
             return contentDir;
         }// end:GetContentFolder()
-
 
         // --------------------------- GetPackage -----------------------------
         /// <summary>
@@ -226,7 +220,6 @@ namespace SDKSample
             return inputPackage;
         }// end:GetPackage()
 
-
         //<SnippetDocViewXmlStartStopAnnotat>
         //<SnippetDocViewXmlStartAnnotations>
         // ------------------------ StartAnnotations --------------------------
@@ -254,7 +247,6 @@ namespace SDKSample
             _annotService.Enable(_annotStore);
         }// end:StartAnnotations()
         //</SnippetDocViewXmlStartAnnotations>
-
 
         //<SnippetDocViewXmlStopAnnotations>
         // ------------------------ StopAnnotations ---------------------------
@@ -284,7 +276,6 @@ namespace SDKSample
         //</SnippetDocViewXmlStopAnnotations>
         //</SnippetDocViewXmlStartStopAnnotat>
 
-
         // ------------------------------ OnExit ------------------------------
         /// <summary>
         ///   Handles the user File|Exit menu selection to
@@ -294,7 +285,6 @@ namespace SDKSample
             Close();        // invokes OnClosed()
         }// end:OnExit()
 
-
         // ----------------------------- OnClosed -----------------------------
         /// <summary>
         ///   Performs clean up when the application is closed.</summary>
@@ -302,7 +292,6 @@ namespace SDKSample
         {
             CloseDocument();
         }// end:OnClosed()
-
 
         // ----------------------------- OnClose ------------------------------
         /// <summary>
@@ -312,7 +301,6 @@ namespace SDKSample
         {
             CloseDocument();
         }// end:OnClose()
-
 
         // --------------------------- CloseDocument --------------------------
         /// <summary>
@@ -344,7 +332,6 @@ namespace SDKSample
             menuViewDecreaseZoom.IsEnabled = false;
         }// end:CloseDocument
 
-
         // ----------------------------- OnPrint ------------------------------
         /// <summary>
         ///   Handles the user "File | Print" menu operation.</summary>
@@ -352,7 +339,6 @@ namespace SDKSample
         {
             PrintDocument();
         }// end:OnClose()
-
 
         // -------------------------- PrintDocument ---------------------------
         /// <summary>
@@ -407,7 +393,6 @@ namespace SDKSample
             }
         }// end:PrintDocument()
 
-
         // -------------------------- ShowAnnotations -------------------------
         /// <summary>
         ///   Enables and displays user annotations.</summary>
@@ -417,7 +402,6 @@ namespace SDKSample
                 StartAnnotations();
         }
 
-
         // ------------------------- HideAnnotations --------------------------
         /// <summary>
         ///   Disables and hides user annotations.</summary>
@@ -425,7 +409,6 @@ namespace SDKSample
         {
             StopAnnotations();
         }
-
 
         // ------------------ GetAnnotationDocumentPaginator ------------------
         /// <summary>
@@ -441,7 +424,6 @@ namespace SDKSample
             return new AnnotationDocumentPaginator(
                                             fds.DocumentPaginator, _annotStore);
         }
-
 
         #region private fields
 

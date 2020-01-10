@@ -9,7 +9,6 @@ using System.Windows.Shapes;
 using System.Collections.Generic;
 using System.Collections;
 
-
 namespace Microsoft.Samples.PerFrameAnimations
 {
     /// <summary>

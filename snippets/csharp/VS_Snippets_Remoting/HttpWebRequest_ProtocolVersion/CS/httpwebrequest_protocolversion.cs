@@ -67,6 +67,3 @@ class HttpWebRequest_ProtocolVersion
 		}
 	}
 }
-
-	
-

@@ -8,7 +8,6 @@
 
 // Might want to think of a better, more realistic/solution-oriented example. 
 
-
 //<Snippet0>
 using System;
 using System.Drawing;

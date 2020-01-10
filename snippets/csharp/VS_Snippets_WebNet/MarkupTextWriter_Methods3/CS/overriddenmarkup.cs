@@ -37,7 +37,6 @@ namespace Samples.AspNet.CS
         }
 // </snippet3>
 
-
 // <snippet4>
         // If a <font> element is to be rendered, check whether it contains
         // a size attribute. If it does not, add one and set its value to

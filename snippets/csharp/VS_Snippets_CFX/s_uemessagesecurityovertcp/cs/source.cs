@@ -19,7 +19,6 @@ namespace Windows.Communication.Foundation.Samples
             Console.ReadLine();
         }
 
-
         private class Snippets
         {
             private string ReturnUserName() { return "SHH"; }

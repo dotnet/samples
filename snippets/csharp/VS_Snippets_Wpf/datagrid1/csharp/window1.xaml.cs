@@ -38,11 +38,7 @@ namespace DataGrid1
             //Set the DataGrid's DataContext to be a filled DataTable
             CustomerGrid.DataContext = custDataTable;
             //</Snippet2>
-            
-          
-           
 
-            
         }
     }
 }

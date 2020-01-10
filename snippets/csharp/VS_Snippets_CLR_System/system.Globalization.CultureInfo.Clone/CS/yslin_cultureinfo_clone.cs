@@ -1,10 +1,8 @@
 ﻿// The following code example shows that CultureInfo.Clone also clones the DateTimeFormatInfo and NumberFormatInfo instances associated with the CultureInfo.
 
-
 // <snippet1>
 using System;
 using System.Globalization;
-
 
 public class SamplesCultureInfo  {
 

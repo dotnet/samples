@@ -59,7 +59,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         #endregion
 
-
         // Snippet for: M:System.Drawing.Graphics.FillRectangle(System.Drawing.Brush,System.Drawing.Rectangle)
         // <snippet111>
         private void FillRectangleRectangle(PaintEventArgs e)
@@ -76,7 +75,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         // </snippet111>
 
-
         // Snippet for: M:System.Drawing.Graphics.FillRectangle(System.Drawing.Brush,System.Drawing.RectangleF)
         // <snippet112>
         private void FillRectangleRectangleF(PaintEventArgs e)
@@ -92,7 +90,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
             e.Graphics.FillRectangle(blueBrush, rect);
         }
         // </snippet112>
-
 
         // Snippet for: M:System.Drawing.Graphics.FillRectangle(System.Drawing.Brush,System.Int32,System.Int32,System.Int32,System.Int32)
         // <snippet113>
@@ -113,7 +110,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         // </snippet113>
 
-
         // Snippet for: M:System.Drawing.Graphics.FillRectangle(System.Drawing.Brush,System.Single,System.Single,System.Single,System.Single)
         // <snippet114>
         private void FillRectangleFloat(PaintEventArgs e)
@@ -133,7 +129,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         // </snippet114>
 
-
         // Snippet for: M:System.Drawing.Graphics.FillRectangles(System.Drawing.Brush,System.Drawing.Rectangle[])
         // <snippet115>
         private void FillRectanglesRectangle(PaintEventArgs e)
@@ -150,7 +145,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         // </snippet115>
 
-
         // Snippet for: M:System.Drawing.Graphics.FillRectangles(System.Drawing.Brush,System.Drawing.RectangleF[])
         // <snippet116>
         private void FillRectanglesRectangleF(PaintEventArgs e)
@@ -166,7 +160,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
             e.Graphics.FillRectangles(blueBrush, rects);
         }
         // </snippet116>
-
 
         // Snippet for: M:System.Drawing.Graphics.FillRegion(System.Drawing.Brush,System.Drawing.Region)
         // <snippet117>
@@ -186,7 +179,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
             e.Graphics.FillRegion(blueBrush, fillRegion);
         }
         // </snippet117>
-
 
         // Snippet for: M:System.Drawing.Graphics.FromHdc(System.IntPtr)
         // <snippet118>
@@ -211,7 +203,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         // </snippet118>
 
-
         // Snippet for: M:System.Drawing.Graphics.FromHwnd(System.IntPtr)
         // <snippet119>
         private void FromHwndHwnd(PaintEventArgs e)
@@ -230,7 +221,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
             newGraphics.Dispose();
         }
         // </snippet119>
-
 
         // Snippet for: M:System.Drawing.Graphics.FromImage(System.Drawing.Image)
         // <snippet120>
@@ -253,7 +243,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
             newGraphics.Dispose();
         }
         // </snippet120>
-
 
         // Snippet for: M:System.Drawing.Graphics.GetHalftonePalette
         // <snippet121>
@@ -296,7 +285,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         // </snippet121>
 
-
         // Snippet for: M:System.Drawing.Graphics.GetHdc
         // <snippet122>
         public class GDI
@@ -331,7 +319,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         // </snippet122>
 
-
         // Snippet for: M:System.Drawing.Graphics.GetNearestColor(System.Drawing.Color)
         // <snippet123>
         private void GetNearestColorColor(PaintEventArgs e)
@@ -351,7 +338,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
             e.Graphics.FillEllipse(realBrush, 0, 100, 200, 100);
         }
         // </snippet123>
-
 
         // Snippet for: M:System.Drawing.Graphics.IntersectClip(System.Drawing.Rectangle)
         // <snippet124>
@@ -380,7 +366,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         // </snippet124>
 
-
         // Snippet for: M:System.Drawing.Graphics.IntersectClip(System.Drawing.RectangleF)
         // <snippet125>
         private void IntersectClipRectangleF1(PaintEventArgs e)
@@ -407,7 +392,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
             e.Graphics.DrawRectangle(new Pen(Color.Red), Rectangle.Round(intersectRectF));
         }
         // </snippet125>
-
 
         // Snippet for: M:System.Drawing.Graphics.IntersectClip(System.Drawing.Region)
         // <snippet126>
@@ -438,7 +422,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         // </snippet126>
 
-
         // Snippet for: M:System.Drawing.Graphics.IsVisible(System.Drawing.Point)
         // <snippet127>
         private void IsVisiblePoint(PaintEventArgs e)
@@ -467,7 +450,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
             }
         }
         // </snippet127>
-
 
         // Snippet for: M:System.Drawing.Graphics.IsVisible(System.Drawing.PointF)
         // <snippet128>
@@ -498,7 +480,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         // </snippet128>
 
-
         // Snippet for: M:System.Drawing.Graphics.IsVisible(System.Drawing.Rectangle)
         // <snippet129>
         private void IsVisibleRectangle(PaintEventArgs e)
@@ -524,7 +505,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         // </snippet129>
 
-
         // Snippet for: M:System.Drawing.Graphics.IsVisible(System.Drawing.RectangleF)
         // <snippet130>
         private void IsVisibleRectangleF(PaintEventArgs e)
@@ -549,7 +529,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
             }
         }
         // </snippet130>
-
 
         // Snippet for: M:System.Drawing.Graphics.IsVisible(System.Int32,System.Int32)
         // <snippet131>
@@ -577,7 +556,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
             }
         }
         // </snippet131>
-
 
         // Snippet for: M:System.Drawing.Graphics.IsVisible(System.Int32,System.Int32,System.Int32,System.Int32)
         // <snippet132>
@@ -610,7 +588,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         // </snippet132>
 
-
         // Snippet for: M:System.Drawing.Graphics.IsVisible(System.Single,System.Single)
         // <snippet133>
         private void IsVisibleFloat(PaintEventArgs e)
@@ -637,7 +614,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
             }
         }
         // </snippet133>
-
 
         // Snippet for: M:System.Drawing.Graphics.IsVisible(System.Single,System.Single,System.Single,System.Single)
         // <snippet134>
@@ -669,7 +645,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
             }
         }
         // </snippet134>
-
 
         // Snippet for: M:System.Drawing.Graphics.MeasureCharacterRanges(System.String,System.Drawing.Font,System.Drawing.RectangleF,System.Drawing.StringFormat)
         // <snippet135>
@@ -712,7 +687,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         // </snippet135>
 
-
         // Snippet for: M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font)
         // <snippet136>
         private void MeasureStringMin(PaintEventArgs e)
@@ -733,7 +707,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
             e.Graphics.DrawString(measureString, stringFont, Brushes.Black, new PointF(0, 0));
         }
         // </snippet136>
-
 
         // Snippet for: M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font,System.Drawing.PointF,System.Drawing.StringFormat)
         // <snippet137>
@@ -765,7 +738,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         // </snippet137>
 
-
         // Snippet for: M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font,System.Drawing.SizeF)
         // <snippet138>
         private void MeasureStringSizeF(PaintEventArgs e)
@@ -789,7 +761,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
             e.Graphics.DrawString(measureString, stringFont, Brushes.Black, new PointF(0, 0));
         }
         // </snippet138>
-
 
         // Snippet for: M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font,System.Drawing.SizeF,System.Drawing.StringFormat)
         // <snippet139>
@@ -818,7 +789,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
             e.Graphics.DrawString(measureString, stringFont, Brushes.Black, new PointF(0, 0), newStringFormat);
         }
         // </snippet139>
-
 
         // Snippet for: M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font,System.Drawing.SizeF,System.Drawing.StringFormat,System.Int32@,System.Int32@)
         // <snippet140>
@@ -854,7 +824,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         // </snippet140>
 
-
         // Snippet for: M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font,System.Int32)
         // <snippet141>
         private void MeasureStringWidth(PaintEventArgs e)
@@ -878,7 +847,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
             e.Graphics.DrawString(measureString, stringFont, Brushes.Black, new PointF(0, 0));
         }
         // </snippet141>
-
 
         // Snippet for: M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font,System.Int32,System.Drawing.StringFormat)
         // <snippet142>
@@ -908,7 +876,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         // </snippet142>
 
-
         // Snippet for: M:System.Drawing.Graphics.MultiplyTransform(System.Drawing.Drawing2D.Matrix)
         // <snippet143>
         private void MultiplyTransformMatrix(PaintEventArgs e)
@@ -935,7 +902,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         // </snippet143>
 
-
         // Snippet for: M:System.Drawing.Graphics.MultiplyTransform(System.Drawing.Drawing2D.Matrix,System.Drawing.Drawing2D.MatrixOrder)
         // <snippet144>
         private void MultiplyTransformMatrixOrder(PaintEventArgs e)
@@ -961,7 +927,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
             e.Graphics.DrawEllipse(new Pen(Color.Blue, 3), -80, -40, 160, 80);
         }
         // </snippet144>
-
 
         // Snippet for: M:System.Drawing.Graphics.ReleaseHdc(System.IntPtr)
         // <snippet145>
@@ -994,7 +959,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         // </snippet145>
 
-
         // Snippet for: M:System.Drawing.Graphics.ResetClip
         // <snippet146>
         private void IntersectClipRectangleF2(PaintEventArgs e)
@@ -1022,7 +986,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         // </snippet146>
 
-
         // Snippet for: M:System.Drawing.Graphics.ResetTransform
         // <snippet147>
         private void SaveRestore1(PaintEventArgs e)
@@ -1045,7 +1008,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
             e.Graphics.FillRectangle(new SolidBrush(Color.Blue), 0, 0, 100, 100);
         }
         // </snippet147>
-
 
         // Snippet for: M:System.Drawing.Graphics.Restore(System.Drawing.Drawing2D.GraphicsState)
         // <snippet148>
@@ -1070,7 +1032,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         // </snippet148>
 
-
         // Snippet for: M:System.Drawing.Graphics.RotateTransform(System.Single)
         // <snippet149>
         private void RotateTransformAngle(PaintEventArgs e)
@@ -1087,7 +1048,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         // </snippet149>
 
-
         // Snippet for: M:System.Drawing.Graphics.RotateTransform(System.Single,System.Drawing.Drawing2D.MatrixOrder)
         // <snippet150>
         private void RotateTransformAngleMatrixOrder(PaintEventArgs e)
@@ -1103,7 +1063,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
             e.Graphics.DrawEllipse(new Pen(Color.Blue, 3), 0, 0, 200, 80);
         }
         // </snippet150>
-
 
         // Snippet for: M:System.Drawing.Graphics.Save
         // <snippet151>
@@ -1128,7 +1087,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         // </snippet151>
 
-
         // Snippet for: M:System.Drawing.Graphics.ScaleTransform(System.Single,System.Single)
         // <snippet152>
         private void ScaleTransformFloat(PaintEventArgs e)
@@ -1145,7 +1103,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         // </snippet152>
 
-
         // Snippet for: M:System.Drawing.Graphics.ScaleTransform(System.Single,System.Single,System.Drawing.Drawing2D.MatrixOrder)
         // <snippet153>
         private void ScaleTransformFloatMatrixOrder(PaintEventArgs e)
@@ -1161,7 +1118,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
             e.Graphics.DrawRectangle(new Pen(Color.Blue, 3), 50, 0, 100, 40);
         }
         // </snippet153>
-
 
         // Snippet for: M:System.Drawing.Graphics.SetClip(System.Drawing.Drawing2D.GraphicsPath)
         // <snippet154>
@@ -1180,7 +1136,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         // </snippet154>
 
-
         // Snippet for: M:System.Drawing.Graphics.SetClip(System.Drawing.Drawing2D.GraphicsPath,System.Drawing.Drawing2D.CombineMode)
         // <snippet155>
         private void SetClipPathCombine(PaintEventArgs e)
@@ -1197,7 +1152,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
             e.Graphics.FillRectangle(new SolidBrush(Color.Black), 0, 0, 500, 300);
         }
         // </snippet155>
-
 
         // Snippet for: M:System.Drawing.Graphics.SetClip(System.Drawing.Graphics)
         // <snippet156>
@@ -1221,7 +1175,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         // </snippet156>
 
-
         // Snippet for: M:System.Drawing.Graphics.SetClip(System.Drawing.Graphics,System.Drawing.Drawing2D.CombineMode)
         // <snippet157>
         private void SetClipGraphicsCombine(PaintEventArgs e)
@@ -1244,7 +1197,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         // </snippet157>
 
-
         // Snippet for: M:System.Drawing.Graphics.SetClip(System.Drawing.Rectangle)
         // <snippet158>
         private void SetClipRectangle(PaintEventArgs e)
@@ -1260,7 +1212,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
             e.Graphics.FillRectangle(new SolidBrush(Color.Black), 0, 0, 500, 300);
         }
         // </snippet158>
-
 
         // Snippet for: M:System.Drawing.Graphics.SetClip(System.Drawing.Rectangle,System.Drawing.Drawing2D.CombineMode)
         // <snippet159>
@@ -1278,7 +1229,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         // </snippet159>
 
-
         // Snippet for: M:System.Drawing.Graphics.SetClip(System.Drawing.RectangleF)
         // <snippet160>
         private void SetClipRectangleF(PaintEventArgs e)
@@ -1294,7 +1244,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
             e.Graphics.FillRectangle(new SolidBrush(Color.Black), 0, 0, 500, 300);
         }
         // </snippet160>
-
 
         // Snippet for: M:System.Drawing.Graphics.SetClip(System.Drawing.RectangleF,System.Drawing.Drawing2D.CombineMode)
         // <snippet161>
@@ -1312,7 +1261,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         // </snippet161>
 
-
         // Snippet for: M:System.Drawing.Graphics.SetClip(System.Drawing.Region,System.Drawing.Drawing2D.CombineMode)
         // <snippet162>
         private void SetClipRegionCombine(PaintEventArgs e)
@@ -1328,7 +1276,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
             e.Graphics.FillRectangle(new SolidBrush(Color.Black), 0, 0, 500, 300);
         }
         // </snippet162>
-
 
         // Snippet for: M:System.Drawing.Graphics.TransformPoints(System.Drawing.Drawing2D.CoordinateSpace,System.Drawing.Drawing2D.CoordinateSpace,System.Drawing.Point[])
         // <snippet163>
@@ -1355,7 +1302,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         // </snippet163>
 
-
         // Snippet for: M:System.Drawing.Graphics.TransformPoints(System.Drawing.Drawing2D.CoordinateSpace,System.Drawing.Drawing2D.CoordinateSpace,System.Drawing.PointF[])
         // <snippet164>
         private void TransformPointsPointF(PaintEventArgs e)
@@ -1381,7 +1327,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         // </snippet164>
 
-
         // Snippet for: M:System.Drawing.Graphics.TranslateClip(System.Int32,System.Int32)
         // <snippet165>
         private void TranslateClipInt(PaintEventArgs e)
@@ -1402,7 +1347,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
             e.Graphics.FillRectangle(new SolidBrush(Color.Black), 0, 0, 500, 300);
         }
         // </snippet165>
-
 
         // Snippet for: M:System.Drawing.Graphics.TranslateClip(System.Single,System.Single)
         // <snippet166>
@@ -1425,7 +1369,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         // </snippet166>
 
-
         // Snippet for: M:System.Drawing.Graphics.TranslateTransform(System.Single,System.Single)
         // <snippet167>
         private void TranslateTransformAngle(PaintEventArgs e)
@@ -1442,7 +1385,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
         }
         // </snippet167>
 
-
         // Snippet for: M:System.Drawing.Graphics.TranslateTransform(System.Single,System.Single,System.Drawing.Drawing2D.MatrixOrder)
         // <snippet168>
         private void TranslateTransformAngleMatrixOrder(PaintEventArgs e)
@@ -1458,7 +1400,6 @@ namespace System.Drawing.ClassicGraphicsExamples3CS
             e.Graphics.DrawEllipse(new Pen(Color.Blue, 3), 0, 0, 200, 80);
         }
         // </snippet168>
-
 
         /// <summary>
         /// The main entry point for the application.

@@ -23,4 +23,3 @@ public class Example
 //       Returning from an asynchronous method
 //       Value returned from the aynnc operation: 100
 //       About to exit the program
-      

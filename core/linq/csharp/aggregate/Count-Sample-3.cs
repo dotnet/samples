@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 
-
 namespace Aggregate
 {
     public static class CountSample3

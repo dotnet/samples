@@ -58,7 +58,6 @@ namespace System.Drawing.ClassicTextureBrushExamplesCS
 		}
 		#endregion
 
-
         // Snippet for: M:System.Drawing.TextureBrush.Clone
         // <snippet1>
         public void Clone_Example(PaintEventArgs e)
@@ -74,7 +73,6 @@ namespace System.Drawing.ClassicTextureBrushExamplesCS
             e.Graphics.FillRectangle(cloneBrush, 0, 0, 100, 100);
         }
         // </snippet1>
-
 
         // Snippet for: M:System.Drawing.TextureBrush.MultiplyTransform(System.Drawing.Drawing2D.Matrix)
         // <snippet2>
@@ -96,7 +94,6 @@ namespace System.Drawing.ClassicTextureBrushExamplesCS
         }
         // </snippet2>
 
-
         // Snippet for: M:System.Drawing.TextureBrush.MultiplyTransform(System.Drawing.Drawing2D.Matrix,System.Drawing.Drawing2D.MatrixOrder)
         // <snippet3>
         public void MultiplyTransform_Example2(PaintEventArgs e)
@@ -116,7 +113,6 @@ namespace System.Drawing.ClassicTextureBrushExamplesCS
             e.Graphics.FillRectangle(tBrush, 0, 110, 100, 100);
         }
         // </snippet3>
-
 
         // Snippet for: M:System.Drawing.TextureBrush.ResetTransform
         // <snippet4>
@@ -140,7 +136,6 @@ namespace System.Drawing.ClassicTextureBrushExamplesCS
         }
         // </snippet4>
 
-
         // Snippet for: M:System.Drawing.TextureBrush.RotateTransform(System.Single)
         // <snippet5>
         public void RotateTransform_Example1(PaintEventArgs e)
@@ -156,7 +151,6 @@ namespace System.Drawing.ClassicTextureBrushExamplesCS
             e.Graphics.FillRectangle(tBrush, 0, 0, 100, 100);
         }
         // </snippet5>
-
 
         // Snippet for: M:System.Drawing.TextureBrush.RotateTransform(System.Single,System.Drawing.Drawing2D.MatrixOrder)
         // <snippet6>
@@ -174,7 +168,6 @@ namespace System.Drawing.ClassicTextureBrushExamplesCS
         }
         // </snippet6>
 
-
         // Snippet for: M:System.Drawing.TextureBrush.ScaleTransform(System.Single,System.Single)
         // <snippet7>
         public void ScaleTransform_Example1(PaintEventArgs e)
@@ -190,7 +183,6 @@ namespace System.Drawing.ClassicTextureBrushExamplesCS
             e.Graphics.FillRectangle(tBrush, 0, 0, 100, 100);
         }
         // </snippet7>
-
 
         // Snippet for: M:System.Drawing.TextureBrush.ScaleTransform(System.Single,System.Single,System.Drawing.Drawing2D.MatrixOrder)
         // <snippet8>
@@ -208,7 +200,6 @@ namespace System.Drawing.ClassicTextureBrushExamplesCS
         }
         // </snippet8>
 
-
         // Snippet for: M:System.Drawing.TextureBrush.TranslateTransform(System.Single,System.Single)
         // <snippet9>
         public void TranslateTransform_Example1(PaintEventArgs e)
@@ -224,7 +215,6 @@ namespace System.Drawing.ClassicTextureBrushExamplesCS
             e.Graphics.FillRectangle(tBrush, 0, 0, 100, 100);
         }
             // </snippet9>
-
 
             // Snippet for: M:System.Drawing.TextureBrush.TranslateTransform(System.Single,System.Single,System.Drawing.Drawing2D.MatrixOrder)
             // <snippet10>

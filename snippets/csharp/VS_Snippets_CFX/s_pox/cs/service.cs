@@ -22,7 +22,6 @@ namespace CustomHttpHeaderSample
         void ProcessTypedInput(string input);
     }
 
-
     public class Program : IUntypedService, ITypedService
     {
         static ServiceHost serviceHost;
@@ -165,4 +164,3 @@ namespace CustomHttpHeaderSample
         }
     }
 }
-

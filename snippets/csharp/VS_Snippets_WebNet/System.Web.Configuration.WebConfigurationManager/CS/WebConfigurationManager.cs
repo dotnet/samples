@@ -11,9 +11,7 @@ namespace Samples.Aspnet
     class UsingWebConfigurationManager
     {
 
-
         // Methods to access a section at runtime. 
-
 
         // <Snippet2>
 
@@ -52,8 +50,6 @@ namespace Samples.Aspnet
 
         // </Snippet2>
 
-
-      
         // <Snippet5>
 
        // Show the use of GetSection(string, string). 
@@ -173,7 +169,6 @@ namespace Samples.Aspnet
 
         // <Snippet8>
 
-   
         // Show the use of the AppSettings property
         // to get the application settings. 
         static void GetAppSettings()
@@ -205,11 +200,9 @@ namespace Samples.Aspnet
 
         // </Snippet8>
 
-
         // Methods to access configuration files 
         // not at runtime. These methods are
         // used to edit configuration files.
-
 
         // <Snippet9>
 
@@ -406,7 +399,6 @@ namespace Samples.Aspnet
             KeyValueConfigurationCollection appSettings =
                  config.AppSettings.Settings;
 
-
             // Loop through the collection and
             // display the appSettings key, value pairs.
             Console.WriteLine("[appSettings for app at: {0}]", "/configTest");
@@ -438,7 +430,6 @@ namespace Samples.Aspnet
             // Get the appSettings.
             KeyValueConfigurationCollection appSettings =
                  config.AppSettings.Settings;
-
 
             // Loop through the collection and
             // display the appSettings key, value pairs.
@@ -493,7 +484,6 @@ namespace Samples.Aspnet
 
         // </Snippet16>
 
-
         // <Snippet17>
 
         // Show how to use OpenWebConfiguration(string, string, 
@@ -516,7 +506,6 @@ namespace Samples.Aspnet
             KeyValueConfigurationCollection appSettings =
                  config.AppSettings.Settings;
 
-
             // Loop through the collection and
             // display the appSettings key, value pairs.
             Console.WriteLine("[appSettings for Web app on server: myServer]");
@@ -530,7 +519,6 @@ namespace Samples.Aspnet
         }
 
         // </Snippet17>
-
 
         // <Snippet18>
 
@@ -559,7 +547,6 @@ namespace Samples.Aspnet
             // Get the appSettings.
             KeyValueConfigurationCollection appSettings =
                  config.AppSettings.Settings;
-
 
             // Loop through the collection and
             // display the appSettings key, value pairs.
@@ -861,7 +848,6 @@ namespace Samples.Aspnet
                     GetWebApplicationSection();
                     break;
 
-
                 case "3":
                     OpenMachineConfiguration1();
                     break;
@@ -925,7 +911,6 @@ namespace Samples.Aspnet
                 case "18":
                     GetConnectionStrings();
                     break;
-
 
                 default:
                     Console.WriteLine("Unknown selection");

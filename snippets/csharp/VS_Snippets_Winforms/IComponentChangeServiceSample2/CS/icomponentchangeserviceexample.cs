@@ -173,4 +173,3 @@ namespace IComponentChangeServiceExample
     }
 }
 //</Snippet1>
-

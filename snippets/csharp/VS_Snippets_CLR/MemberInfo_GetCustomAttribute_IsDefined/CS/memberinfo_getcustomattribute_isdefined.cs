@@ -65,4 +65,3 @@ public class MemberInfo_GetCustomAttributes_IsDefined
     }
 }
 // </Snippet1>
-

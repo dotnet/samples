@@ -46,7 +46,6 @@ namespace Microsoft.ServiceModel.Samples
 			return result;
         }
 
-
         public double Subtract(double n1, double n2)
         {
             double result = n1 - n2;
@@ -54,7 +53,6 @@ namespace Microsoft.ServiceModel.Samples
             Console.WriteLine("Return: {0}", result);
             return result;
         }
-
 
         public double Multiply(double n1, double n2)
         {
@@ -64,7 +62,6 @@ namespace Microsoft.ServiceModel.Samples
             return result;
         }
 
-		
         public double Divide(double n1, double n2)
         {
             double result = n1 / n2;
@@ -170,7 +167,6 @@ namespace Microsoft.ServiceModel.Samples
                     // This point should not be reached, but just in case...
                     bRet = true;
                 }
-
 
                 return bRet;
             }

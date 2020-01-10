@@ -5,7 +5,6 @@ using System;
 using System.Collections;
 using System.Globalization;
 
-
 public class SamplesCompareOptions  {
 
    private class MyStringComparer: IComparer {

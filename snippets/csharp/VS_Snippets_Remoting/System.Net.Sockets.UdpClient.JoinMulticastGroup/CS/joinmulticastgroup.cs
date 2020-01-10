@@ -16,11 +16,9 @@ using System.Text;
 using System.IO;
 using System.Threading;
 
-
 namespace Mssc.TransportProtocols.Utilities
 {
 
-            
   // The following Receive class is used by both the ClientOriginator and 
   // the ClientTarget class to receive data from one another..
   public class Receive
@@ -105,7 +103,6 @@ namespace Mssc.TransportProtocols.Utilities
     }
   }
 
-
   // The ClientTarget class is the receiver of the ClientOriginator 
   // messages. The StartMulticastConversation method contains the 
   // logic for exchanging data between the ClientTarget and its 
@@ -165,7 +162,6 @@ namespace Mssc.TransportProtocols.Utilities
       m_ClientTarget.DropMulticastGroup(m_GrpAddr);
     }
   } 
-
 
   // The following ClientOriginator class starts the multicast conversation
   // with the ClientTarget class.. 

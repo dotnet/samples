@@ -2,7 +2,6 @@
 using System;
 using System.Security.Cryptography.X509Certificates;
 
-
 public class X509
 {
 
@@ -14,7 +13,6 @@ public class X509
 
         // Load the certificate into an X509Certificate object.
         X509Certificate cert = new X509Certificate(Certificate);
-
 
         byte[] certData = cert.Export(X509ContentType.Cert);
 

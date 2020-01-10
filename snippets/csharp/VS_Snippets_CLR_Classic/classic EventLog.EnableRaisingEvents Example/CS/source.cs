@@ -5,7 +5,6 @@ using System.Threading;
               
 class MySample{
 
-
     public static void Main(){
     
         EventLog myNewLog = new EventLog();
@@ -13,8 +12,7 @@ class MySample{
         
         myNewLog.EntryWritten += new EntryWrittenEventHandler(MyOnEntryWritten);
         myNewLog.EnableRaisingEvents = true;
-        
-        
+
         Console.WriteLine("Press \'q\' to quit.");
         // Wait for the EntryWrittenEvent or a quit command.
         while(Console.Read() != 'q'){

@@ -19,4 +19,3 @@ public class Example
 //    
 //    100.10142 = 100.10141999999999
 // </Snippet10>
-

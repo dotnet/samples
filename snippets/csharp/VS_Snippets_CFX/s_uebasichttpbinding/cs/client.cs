@@ -57,7 +57,6 @@ namespace UE.ServiceModel.Samples
 		    // </Snippet35>
 	    }
 
-
 	    static void SnippetSupportedRequestProtectionLevel()
 	    {
 		    // <Snippet34>
@@ -252,7 +251,6 @@ namespace UE.ServiceModel.Samples
 
 	    // </Snippet17>
 	    }
- 
 
 	    static void SnippetMaxBufferPoolSize ()
 	    {
@@ -282,8 +280,7 @@ namespace UE.ServiceModel.Samples
 	    // </Snippet40>
 		
 	}
-	
-	
+
         static void Main()
         {
 	    int i = 0;
@@ -300,7 +297,6 @@ namespace UE.ServiceModel.Samples
 	    
 	    // </Snippet13>
 
-	    
             binding.Name = "binding1";
             binding.HostNameComparisonMode = HostNameComparisonMode.StrongWildcard;
             binding.Security.Mode = BasicHttpSecurityMode.None;
@@ -338,7 +334,6 @@ namespace UE.ServiceModel.Samples
             Console.WriteLine("Press <ENTER> to terminate client.");
             ((IChannel)channel).Close();
             Console.ReadLine();
-
 
         }
     }

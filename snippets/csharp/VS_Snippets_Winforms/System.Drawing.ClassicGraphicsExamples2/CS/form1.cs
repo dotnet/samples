@@ -140,7 +140,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
         }
         // </snippet55>
 
-
         // Snippet for: M:System.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Drawing.RectangleF)
         // <snippet56>
         public void DrawImageRectF(PaintEventArgs e)
@@ -156,7 +155,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
             e.Graphics.DrawImage(newImage, rect);
         }
         // </snippet56>
-
 
         // Snippet for: M:System.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Drawing.RectangleF,System.Drawing.RectangleF,System.Drawing.GraphicsUnit)
         // <snippet57>
@@ -178,7 +176,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
         }
         // </snippet57>
 
-
         // Snippet for: M:System.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Int32,System.Int32)
         // <snippet58>
         public void DrawImage2Int(PaintEventArgs e)
@@ -195,7 +192,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
             e.Graphics.DrawImage(newImage, x, y);
         }
         // </snippet58>
-
 
         // Snippet for: M:System.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Int32,System.Int32,System.Drawing.Rectangle,System.Drawing.GraphicsUnit)
         // <snippet59>
@@ -218,7 +214,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
         }
         // </snippet59>
 
-
         // Snippet for: M:System.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Int32,System.Int32,System.Int32,System.Int32)
         // <snippet60>
         public void DrawImage4Int(PaintEventArgs e)
@@ -240,7 +235,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
         }
         // </snippet60>
 
-
         // Snippet for: M:System.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Single,System.Single)
         // <snippet61>
         public void DrawImage2Float(PaintEventArgs e)
@@ -257,7 +251,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
             e.Graphics.DrawImage(newImage, x, y);
         }
         // </snippet61>
-
 
         // Snippet for: M:System.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Single,System.Single,System.Drawing.RectangleF,System.Drawing.GraphicsUnit)
         // <snippet62>
@@ -280,7 +273,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
         }
         // </snippet62>
 
-
         // Snippet for: M:System.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Single,System.Single,System.Single,System.Single)
         // <snippet63>
         public void DrawImage4Float(PaintEventArgs e)
@@ -302,7 +294,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
         }
         // </snippet63>
 
-
         // Snippet for: M:System.Drawing.Graphics.DrawImageUnscaled(System.Drawing.Image,System.Drawing.Point)
         // <snippet64>
         public void DrawImageUnscaledPoint(PaintEventArgs e)
@@ -318,7 +309,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
             e.Graphics.DrawImageUnscaled(newImage, ulCorner);
         }
         // </snippet64>
-
 
         // Snippet for: M:System.Drawing.Graphics.DrawImageUnscaled(System.Drawing.Image,System.Int32,System.Int32)
         // <snippet65>
@@ -337,7 +327,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
         }
         // </snippet65>
 
-
         // Snippet for: M:System.Drawing.Graphics.DrawLine(System.Drawing.Pen,System.Drawing.Point,System.Drawing.Point)
         // <snippet66>
         public void DrawLinePoint(PaintEventArgs e)
@@ -355,7 +344,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
         }
         // </snippet66>
 
-
         // Snippet for: M:System.Drawing.Graphics.DrawLine(System.Drawing.Pen,System.Drawing.PointF,System.Drawing.PointF)
         // <snippet67>
         public void DrawLinePointF(PaintEventArgs e)
@@ -372,7 +360,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
             e.Graphics.DrawLine(blackPen, point1, point2);
         }
         // </snippet67>
-
 
         // Snippet for: M:System.Drawing.Graphics.DrawLine(System.Drawing.Pen,System.Int32,System.Int32,System.Int32,System.Int32)
         // <snippet68>
@@ -393,7 +380,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
         }
         // </snippet68>
 
-
         // Snippet for: M:System.Drawing.Graphics.DrawLine(System.Drawing.Pen,System.Single,System.Single,System.Single,System.Single)
         // <snippet69>
         public void DrawLineFloat(PaintEventArgs e)
@@ -412,7 +398,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
             e.Graphics.DrawLine(blackPen, x1, y1, x2, y2);
         }
         // </snippet69>
-
 
         // Snippet for: M:System.Drawing.Graphics.DrawLines(System.Drawing.Pen,System.Drawing.Point[])
         // <snippet70>
@@ -436,7 +421,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
         }
         // </snippet70>
 
-
         // Snippet for: M:System.Drawing.Graphics.DrawLines(System.Drawing.Pen,System.Drawing.PointF[])
         // <snippet71>
         public void DrawLinesPointF(PaintEventArgs e)
@@ -459,7 +443,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
         }
         // </snippet71>
 
-
         // Snippet for: M:System.Drawing.Graphics.DrawPath(System.Drawing.Pen,System.Drawing.Drawing2D.GraphicsPath)
         // <snippet72>
         public void DrawPathEllipse(PaintEventArgs e)
@@ -476,7 +459,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
             e.Graphics.DrawPath(blackPen, graphPath);
         }
         // </snippet72>
-
 
         // Snippet for: M:System.Drawing.Graphics.DrawPie(System.Drawing.Pen,System.Drawing.Rectangle,System.Single,System.Single)
         // <snippet73>
@@ -498,7 +480,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
         }
         // </snippet73>
 
-
         // Snippet for: M:System.Drawing.Graphics.DrawPie(System.Drawing.Pen,System.Drawing.RectangleF,System.Single,System.Single)
         // <snippet74>
         public void DrawPieRectangleF(PaintEventArgs e)
@@ -518,7 +499,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
             e.Graphics.DrawPie(blackPen, rect, startAngle, sweepAngle);
         }
         // </snippet74>
-
 
         // Snippet for: M:System.Drawing.Graphics.DrawPie(System.Drawing.Pen,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
         // <snippet75>
@@ -543,7 +523,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
         }
         // </snippet75>
 
-
         // Snippet for: M:System.Drawing.Graphics.DrawPie(System.Drawing.Pen,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
         // <snippet76>
         public void DrawPieFloat(PaintEventArgs e)
@@ -566,7 +545,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
             e.Graphics.DrawPie(blackPen, x, y, width, height, startAngle, sweepAngle);
         }
         // </snippet76>
-
 
         // Snippet for: M:System.Drawing.Graphics.DrawPolygon(System.Drawing.Pen,System.Drawing.Point[])
         // <snippet77>
@@ -600,7 +578,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
         }
         // </snippet77>
 
-
         // Snippet for: M:System.Drawing.Graphics.DrawPolygon(System.Drawing.Pen,System.Drawing.PointF[])
         // <snippet78>
         public void DrawPolygonPoint(PaintEventArgs e)
@@ -633,7 +610,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
         }
         // </snippet78>
 
-
         // Snippet for: M:System.Drawing.Graphics.DrawRectangle(System.Drawing.Pen,System.Drawing.Rectangle)
         // <snippet79>
         public void DrawRectangleRectangle(PaintEventArgs e)
@@ -649,7 +625,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
             e.Graphics.DrawRectangle(blackPen, rect);
         }
         // </snippet79>
-
 
         // Snippet for: M:System.Drawing.Graphics.DrawRectangle(System.Drawing.Pen,System.Int32,System.Int32,System.Int32,System.Int32)
         // <snippet80>
@@ -670,7 +645,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
         }
         // </snippet80>
 
-
         // Snippet for: M:System.Drawing.Graphics.DrawRectangle(System.Drawing.Pen,System.Single,System.Single,System.Single,System.Single)
         // <snippet81>
         public void DrawRectangleFloat(PaintEventArgs e)
@@ -689,7 +663,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
             e.Graphics.DrawRectangle(blackPen, x, y, width, height);
         }
         // </snippet81>
-
 
         // Snippet for: M:System.Drawing.Graphics.DrawRectangles(System.Drawing.Pen,System.Drawing.Rectangle[])
         // <snippet82>
@@ -712,7 +685,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
         }
         // </snippet82>
 
-
         // Snippet for: M:System.Drawing.Graphics.DrawRectangles(System.Drawing.Pen,System.Drawing.RectangleF[])
         // <snippet83>
         public void DrawRectanglesRectangleF(PaintEventArgs e)
@@ -734,7 +706,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
         }
         // </snippet83>
 
-
         // Snippet for: M:System.Drawing.Graphics.DrawString(System.String,System.Drawing.Font,System.Drawing.Brush,System.Drawing.PointF)
         // <snippet84>
         public void DrawStringPointF(PaintEventArgs e)
@@ -754,7 +725,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
             e.Graphics.DrawString(drawString, drawFont, drawBrush, drawPoint);
         }
         // </snippet84>
-
 
         // Snippet for: M:System.Drawing.Graphics.DrawString(System.String,System.Drawing.Font,System.Drawing.Brush,System.Drawing.PointF,System.Drawing.StringFormat)
         // <snippet85>
@@ -779,7 +749,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
             e.Graphics.DrawString(drawString, drawFont, drawBrush, drawPoint, drawFormat);
         }
         // </snippet85>
-
 
         // Snippet for: M:System.Drawing.Graphics.DrawString(System.String,System.Drawing.Font,System.Drawing.Brush,System.Drawing.RectangleF)
         // <snippet86>
@@ -808,7 +777,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
             e.Graphics.DrawString(drawString, drawFont, drawBrush, drawRect);
         }
         // </snippet86>
-
 
         // Snippet for: M:System.Drawing.Graphics.DrawString(System.String,System.Drawing.Font,System.Drawing.Brush,System.Drawing.RectangleF,System.Drawing.StringFormat)
         // <snippet87>
@@ -842,7 +810,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
         }
         // </snippet87>
 
-
         // Snippet for: M:System.Drawing.Graphics.DrawString(System.String,System.Drawing.Font,System.Drawing.Brush,System.Single,System.Single)
         // <snippet88>
         public void DrawStringFloat(PaintEventArgs e)
@@ -863,7 +830,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
             e.Graphics.DrawString(drawString, drawFont, drawBrush, x, y);
         }
         // </snippet88>
-
 
         // Snippet for: M:System.Drawing.Graphics.DrawString(System.String,System.Drawing.Font,System.Drawing.Brush,System.Single,System.Single,System.Drawing.StringFormat)
         // <snippet89>
@@ -890,7 +856,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
         }
         // </snippet89>
 
-
         // Snippet for: M:System.Drawing.Graphics.EndContainer(System.Drawing.Drawing2D.GraphicsContainer)
         // <snippet90>
         public void EndContainerState(PaintEventArgs e)
@@ -913,9 +878,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
         }
         // </snippet90>
 
-
-        
-
         // Snippet for: M:System.Drawing.Graphics.ExcludeClip(System.Drawing.Region)
         // <snippet91>
         public void ExcludeClipRegion(PaintEventArgs e)
@@ -935,7 +897,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
         }
         // </snippet91>
 
-
         // Snippet for: M:System.Drawing.Graphics.ExcludeClip(System.Drawing.Rectangle)
         // <snippet92>
         public void ExcludeClipRectangle(PaintEventArgs e)
@@ -951,7 +912,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
             e.Graphics.FillRectangle(new SolidBrush(Color.Blue), 0, 0, 300, 300);
         }
         // </snippet92>
-
 
         // Snippet for: M:System.Drawing.Graphics.FillClosedCurve(System.Drawing.Brush,System.Drawing.Point[])
         // <snippet93>
@@ -972,7 +932,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
             e.Graphics.FillClosedCurve(redBrush, points);
         }
         // </snippet93>
-
 
         // Snippet for: M:System.Drawing.Graphics.FillClosedCurve(System.Drawing.Brush,System.Drawing.Point[],System.Drawing.Drawing2D.FillMode)
         // <snippet94>
@@ -996,7 +955,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
             e.Graphics.FillClosedCurve(redBrush, points, newFillMode);
         }
         // </snippet94>
-
 
         // Snippet for: M:System.Drawing.Graphics.FillClosedCurve(System.Drawing.Brush,System.Drawing.Point[],System.Drawing.Drawing2D.FillMode,System.Single)
         // <snippet95>
@@ -1024,7 +982,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
         }
         // </snippet95>
 
-
         // Snippet for: M:System.Drawing.Graphics.FillClosedCurve(System.Drawing.Brush,System.Drawing.PointF[])
         // <snippet96>
         public void FillClosedCurvePointF(PaintEventArgs e)
@@ -1044,7 +1001,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
             e.Graphics.FillClosedCurve(redBrush, points);
         }
         // </snippet96>
-
 
         // Snippet for: M:System.Drawing.Graphics.FillClosedCurve(System.Drawing.Brush,System.Drawing.PointF[],System.Drawing.Drawing2D.FillMode)
         // <snippet97>
@@ -1068,7 +1024,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
             e.Graphics.FillClosedCurve(redBrush, points, newFillMode);
         }
         // </snippet97>
-
 
         // Snippet for: M:System.Drawing.Graphics.FillClosedCurve(System.Drawing.Brush,System.Drawing.PointF[],System.Drawing.Drawing2D.FillMode,System.Single)
         // <snippet98>
@@ -1096,7 +1051,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
         }
         // </snippet98>
 
-
         // Snippet for: M:System.Drawing.Graphics.FillEllipse(System.Drawing.Brush,System.Drawing.Rectangle)
         // <snippet99>
         public void FillEllipseRectangle(PaintEventArgs e)
@@ -1116,7 +1070,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
             e.Graphics.FillEllipse(redBrush, rect);
         }
         // </snippet99>
-
 
         // Snippet for: M:System.Drawing.Graphics.FillEllipse(System.Drawing.Brush,System.Drawing.RectangleF)
         // <snippet100>
@@ -1138,7 +1091,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
         }
         // </snippet100>
 
-
         // Snippet for: M:System.Drawing.Graphics.FillEllipse(System.Drawing.Brush,System.Int32,System.Int32,System.Int32,System.Int32)
         // <snippet101>
         public void FillEllipseInt(PaintEventArgs e)
@@ -1157,7 +1109,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
             e.Graphics.FillEllipse(redBrush, x, y, width, height);
         }
         // </snippet101>
-
 
         // Snippet for: M:System.Drawing.Graphics.FillEllipse(System.Drawing.Brush,System.Single,System.Single,System.Single,System.Single)
         // <snippet102>
@@ -1178,7 +1129,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
         }
         // </snippet102>
 
-
         // Snippet for: M:System.Drawing.Graphics.FillPath(System.Drawing.Brush,System.Drawing.Drawing2D.GraphicsPath)
         // <snippet103>
         public void FillPathEllipse(PaintEventArgs e)
@@ -1195,7 +1145,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
             e.Graphics.FillPath(redBrush, graphPath);
         }
         // </snippet103>
-
 
         // Snippet for: M:System.Drawing.Graphics.FillPie(System.Drawing.Brush,System.Drawing.Rectangle,System.Single,System.Single)
         // <snippet104>
@@ -1216,7 +1165,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
             e.Graphics.FillPie(redBrush, rect, startAngle, sweepAngle);
         }
         // </snippet104>
-
 
         // Snippet for: M:System.Drawing.Graphics.FillPie(System.Drawing.Brush,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
         // <snippet105>
@@ -1241,7 +1189,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
         }
         // </snippet105>
 
-
         // Snippet for: M:System.Drawing.Graphics.FillPie(System.Drawing.Brush,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
         // <snippet106>
         public void FillPieFloat(PaintEventArgs e)
@@ -1265,7 +1212,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
         }
         // </snippet106>
 
-
         // Snippet for: M:System.Drawing.Graphics.FillPolygon(System.Drawing.Brush,System.Drawing.Point[])
         // <snippet107>
         public void FillPolygonPoint(PaintEventArgs e)
@@ -1288,7 +1234,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
             e.Graphics.FillPolygon(blueBrush, curvePoints);
         }
         // </snippet107>
-
 
         // Snippet for: M:System.Drawing.Graphics.FillPolygon(System.Drawing.Brush,System.Drawing.Point[],System.Drawing.Drawing2D.FillMode)
         // <snippet108>
@@ -1316,7 +1261,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
         }
         // </snippet108>
 
-
         // Snippet for: M:System.Drawing.Graphics.FillPolygon(System.Drawing.Brush,System.Drawing.PointF[])
         // <snippet109>
         public void FillPolygonPointF(PaintEventArgs e)
@@ -1339,7 +1283,6 @@ namespace System.Drawing.ClassicGraphicsExamples2CS
             e.Graphics.FillPolygon(blueBrush, curvePoints);
         }
         // </snippet109>
-
 
         // Snippet for: M:System.Drawing.Graphics.FillPolygon(System.Drawing.Brush,System.Drawing.PointF[],System.Drawing.Drawing2D.FillMode)
         // <snippet110>

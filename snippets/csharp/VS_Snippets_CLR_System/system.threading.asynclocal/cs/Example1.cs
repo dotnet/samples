@@ -52,4 +52,3 @@ class Example
 //   Exiting AsyncMethodB.
 //      Expected 'Value 1', got 'Value 1', ThreadLocal value is ''
 // </Snippet1>
-

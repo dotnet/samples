@@ -16,4 +16,3 @@ public class Example
 // The example displays the following output:
 //       one, , two
 // </Snippet9>
-

@@ -14,7 +14,6 @@ class Program
         return large;
     }
     //</SnippetFactoryFunc>
-    
 
     static void Main()
     {
@@ -29,7 +28,6 @@ class Program
         //lazyLargeObject = new Lazy<LargeObject>(InitLargeObject, 
         //                               LazyThreadSafetyMode.ExecutionAndPublication);
         //</SnippetNewLazy>
-
 
         Console.WriteLine(
             "\r\nLargeObject is not created until you access the Value property of the lazy" +
@@ -53,7 +51,6 @@ class Program
         Console.WriteLine("\r\nPress Enter to end the program");
         Console.ReadLine();
     }
-
 
     static void ThreadProc(object state)
     {
@@ -102,4 +99,3 @@ Initialized by thread 3; last used by thread 5.
 Press Enter to end the program
  */
 //</SnippetAll>
-

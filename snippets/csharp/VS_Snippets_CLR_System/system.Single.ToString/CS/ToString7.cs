@@ -18,4 +18,3 @@ public class Example
 //       $1,764.38
 //       1,764.379
 // </Snippet7>
-

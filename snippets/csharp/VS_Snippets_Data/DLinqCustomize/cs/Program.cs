@@ -22,7 +22,6 @@ namespace cs_maketables
     }
     // </Snippet1>
 
-
 // <Snippet2>
 [Table(Name="Customers")]
 public class customer
@@ -34,8 +33,6 @@ public class customer
 // </Snippet2>
 
 }
-
-
 
 // <Snippet3>
 [Table(Name = "Customers")]

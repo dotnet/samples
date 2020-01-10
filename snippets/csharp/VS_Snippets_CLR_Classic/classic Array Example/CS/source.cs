@@ -38,7 +38,6 @@ public class SamplesArray
         PrintValues(myObjArray);
     }
 
-
     public static void PrintValues(Object[] myArr)
     {
         foreach (Object i in myArr)

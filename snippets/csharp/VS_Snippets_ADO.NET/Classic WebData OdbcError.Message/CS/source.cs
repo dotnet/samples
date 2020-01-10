@@ -10,7 +10,6 @@ public class Form1: Form
   protected DataSet dataSet;
   protected DataGrid dataGrid;
 
-
 // <Snippet1>
  public void DisplayOdbcErrorCollection(OdbcException exception) 
  {

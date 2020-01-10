@@ -35,4 +35,3 @@ public class Example
 //     ArgumentException: 7 is not an even number
 //     Parameter name: num
 //</snippet3>
-

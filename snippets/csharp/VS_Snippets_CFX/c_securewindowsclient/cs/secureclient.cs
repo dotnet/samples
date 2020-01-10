@@ -59,7 +59,6 @@ namespace Client
         }
     }
 
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples", ConfigurationName = "ICalculator")]
     public interface ICalculator

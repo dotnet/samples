@@ -6,14 +6,12 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.IO;
 
-
 namespace CSClientProviderImplementation
 {
     class CSClientSideImplementationProgram
     {
         [DllImport("kernel32.dll")]
         static extern IntPtr GetConsoleWindow();
-
 
         static void Main(string[] args)
         {
@@ -35,7 +33,6 @@ namespace CSClientProviderImplementation
             Console.ReadLine();
         }
     }  // CSClientSideImplementationProgram class
-
 
     class UIAutomationClientSideProviders
     {

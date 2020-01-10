@@ -2635,6 +2635,5 @@ namespace QueryableExamples
         }
         #endregion
 
-
     }
 }

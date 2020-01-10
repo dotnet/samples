@@ -29,7 +29,6 @@ public class XpsCreate
         xpsCreate.Run();
     }// end:Main()
 
-
     // -------------------------------- Run -----------------------------------
     /// <summary>
     ///   Creates two XpsDocument packages, the first without a PrintTicket
@@ -80,7 +79,6 @@ public class XpsCreate
         MessageBox.Show(msg, "Normal Completion",
             MessageBoxButtons.OK, MessageBoxIcon.Information);
     }// end:Run()
-
 
     //<SnippetXpsCreateAddPkgContent>
     // ------------------------- AddPackageContent ----------------------------
@@ -143,7 +141,6 @@ public class XpsCreate
     }// end:AddPackageContent()
     //</SnippetXpsCreateAddPkgContent>
 
-
     //<SnippetXpsCreateAddDocContent>
     // ------------------------- AddDocumentContent ---------------------------
     /// <summary>
@@ -192,7 +189,6 @@ public class XpsCreate
         }
     }// end:AddDocumentContent()
     //</SnippetXpsCreateAddDocContent>
-
 
     //<SnippetXpsCreateAddPageResources>
     // -------------------------- AddPageResources ----------------------------
@@ -251,7 +247,6 @@ public class XpsCreate
     }// end:AddPageResources()
     //</SnippetXpsCreateAddPageResources>
 
-
     //<SnippetPrinterCapabilities>
     // ---------------------- GetPrintTicketFromPrinter -----------------------
     /// <summary>
@@ -307,7 +302,6 @@ public class XpsCreate
         return printTicket;
     }// end:GetPrintTicketFromPrinter()
     //</SnippetPrinterCapabilities>
-
 
     //<SnippetXpsCreateWritePageContent>
     // --------------------------- WritePageContent ---------------------------
@@ -390,7 +384,6 @@ public class XpsCreate
     }// end:WritePageContent()
     //</SnippetXpsCreateWritePageContent>
 
-
     // ----------------------------- WriteToStream ----------------------------
     private void WriteToStream(Stream stream, string resource)
     {
@@ -407,7 +400,6 @@ public class XpsCreate
             }
         }
     }// end:WriteToStream()
-
 
     // ------------------------- WriteObfuscatedStream ------------------------
     private void WriteObfuscatedStream(

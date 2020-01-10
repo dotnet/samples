@@ -20,4 +20,3 @@ namespace System.Runtime.InteropServices
    }
 }
 // </Snippet1>
-

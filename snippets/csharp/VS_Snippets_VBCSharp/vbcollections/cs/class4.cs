@@ -13,8 +13,6 @@ public class Class4
         Console.WriteLine();
     }
 
-
-
     //<Snippet41>
     private static void ShowLINQ()
     {
@@ -55,6 +53,5 @@ public class Class4
         public int AtomicNumber { get; set; }
     }
     //</Snippet41>
-
 
 }

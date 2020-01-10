@@ -52,7 +52,6 @@ namespace NameSpace3
 //    You are in NameSpace2.MyClass.
 //</snippet9>
 
-
 //<snippet8>
 namespace PC
 {
@@ -75,4 +74,3 @@ namespace PC
     }
 }
 //</snippet8>
-

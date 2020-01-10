@@ -57,5 +57,4 @@ namespace Samples
     }
     //</snippet0>
 
-
 }

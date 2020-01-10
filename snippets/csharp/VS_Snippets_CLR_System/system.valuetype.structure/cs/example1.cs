@@ -2,7 +2,6 @@
 using System;
 using System.Numerics;
 
-
 public class Utility
 {
    public enum NumericRelationship {

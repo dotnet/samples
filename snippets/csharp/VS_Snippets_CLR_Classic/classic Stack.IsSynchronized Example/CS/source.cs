@@ -29,4 +29,3 @@ using System;
  mySyncdStack is synchronized.
  */ 
 // </Snippet1>
-

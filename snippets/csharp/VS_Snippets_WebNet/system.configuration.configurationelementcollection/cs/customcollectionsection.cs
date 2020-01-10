@@ -48,8 +48,7 @@ public class UrlsSection : ConfigurationSection
 // This class shows how to use the ConfigurationElementCollection.
 public class UrlsCollection : ConfigurationElementCollection
 {
-    
-    
+
     public UrlsCollection()
     {
        
@@ -106,8 +105,7 @@ public class UrlsCollection : ConfigurationElementCollection
         }
     }
     //</Snippet9>
-    
-    
+
     public int IndexOf(UrlConfigElement url)
     {
         return BaseIndexOf(url);

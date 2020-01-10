@@ -7,7 +7,6 @@
    address is displayed. The resultant document is written back.
 */
 
-
 // <Snippet1>
 using System;
 using System.Net;

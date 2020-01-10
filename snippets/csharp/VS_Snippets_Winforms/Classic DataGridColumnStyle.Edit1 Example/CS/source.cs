@@ -42,4 +42,3 @@ public class MyColumnStyle:DataGridTextBoxColumn{
 }
 }
 // </Snippet1>
-

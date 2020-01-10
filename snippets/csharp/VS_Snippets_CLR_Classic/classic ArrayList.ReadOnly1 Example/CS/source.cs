@@ -88,4 +88,3 @@ The read-only ArrayList myReadOnlyAL contains:
 */
 
 // </Snippet1>
-

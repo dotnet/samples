@@ -97,4 +97,3 @@ class XMLSchemaExamples
     }
 }
 // </Snippet1>
-

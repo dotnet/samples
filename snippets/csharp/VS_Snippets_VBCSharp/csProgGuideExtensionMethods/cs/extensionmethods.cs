@@ -117,8 +117,7 @@ namespace ExtensionMethods
     }   
 }
 //</snippet4>
-    
-    
+
 //<snippet5>       
 // Define an interface named IMyInterface.
 namespace DefineIMyInterface
@@ -132,7 +131,6 @@ namespace DefineIMyInterface
         void MethodB();
     }
 }
-
 
 // Define extension methods for IMyInterface.
 namespace Extensions
@@ -166,7 +164,6 @@ namespace Extensions
         }
     }
 }
-
 
 // Define three classes that implement IMyInterface, and then use them to test
 // the extension methods.
@@ -248,5 +245,3 @@ namespace ExtensionMethodsDemo1
     C.MethodB()
  */
 //</snippet5>
-    
-

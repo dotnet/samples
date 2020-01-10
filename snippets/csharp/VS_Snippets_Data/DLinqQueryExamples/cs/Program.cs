@@ -5,7 +5,6 @@ using System.Text;
 using System.Data.Linq;
 using System.Data.Linq.Mapping;
 
-
 namespace cs_DLinqQueryExamples
 {
     // LINQ to SQL Query Example Snippets
@@ -458,7 +457,6 @@ namespace cs_DLinqQueryExamples
             }
             // </Snippet38>
 
-
             ////////////////////// C O N C A T E N A T E /////////////////
 
             // S39 lives in separate method.
@@ -551,11 +549,9 @@ namespace cs_DLinqQueryExamples
 
             // S64, S65 live in a separate methods.
 
-
             /////////////////// E N D   O F   Q U E R I E S ////////
 
         } //end of Main
-
 
         //////////////////////// OUT OF SCOPE METHODS ////////////////
         // Separated to prevent repeating local variables.
@@ -614,8 +610,6 @@ namespace cs_DLinqQueryExamples
 
             // </Snippet24>
         }
-
-
 
         void method30()
         {
@@ -905,7 +899,6 @@ namespace cs_DLinqQueryExamples
             // </Snippet55>
         }
 
-
         void method56()
         {
             Northwnd db = new Northwnd(@"c:\northwnd.mdf");
@@ -945,8 +938,6 @@ namespace cs_DLinqQueryExamples
             // </Snippet61>
         }
 
-
-
         void method64()
         {
             Northwnd db = new Northwnd(@"c:\northwnd.mdf");
@@ -979,11 +970,7 @@ namespace cs_DLinqQueryExamples
                 };
         // </Snippet65>
 
-            
-    
-
   } //end of class Program
-
 
         // <Snippet46>
         private bool isValidProduct(Product prod)
@@ -1001,7 +988,6 @@ namespace cs_DLinqQueryExamples
                 select prod;
         }
         // </Snippet46>
-
 
         // <Snippet62>
         public class Name
@@ -1024,8 +1010,4 @@ namespace cs_DLinqQueryExamples
         // </Snippet62>
         }
 
-    
     }
-
-    
-

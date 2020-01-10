@@ -53,8 +53,6 @@ protected override IntPtr HookProc(IntPtr hWnd, int msg, IntPtr wParam, IntPtr l
 }
 //</snippet1>
 
-		
-
 		public FontDialogOverride()
 		{
 			//

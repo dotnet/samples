@@ -79,4 +79,3 @@ namespace copy
         // </Snippet3>
     }
 }
-

@@ -320,7 +320,6 @@ namespace StylusSamples
         private void Button1Click(object sender, RoutedEventArgs e)
         {
             this.textbox1.Text = "";
-            
 
             //Stylus.Capture(textbox1);
         }

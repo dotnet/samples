@@ -45,7 +45,6 @@ namespace MyProject
 			return;
 		}
 
-
 		//**************************************************
 		// Posts a notification when a message arrives in 
 		// the queue "monitoredQueue". Does not retrieve any 
@@ -72,7 +71,6 @@ namespace MyProject
 
 		}
 
-
 		//**************************************************
 		// Sends an Order to a queue.
 		//**************************************************
@@ -93,7 +91,6 @@ namespace MyProject
 
 			return;
 		}
-
 
 		//**************************************************
 		// Peeks a message containing an Order.

@@ -142,7 +142,6 @@ namespace ObjectServicesConceptsCS
             //</snippetCallCustomMethod>
         }
 
-
         #region MrefMethods
         static public void ObjectStateChanges()
         {
@@ -166,7 +165,6 @@ namespace ObjectServicesConceptsCS
                     , e.Element));
                 };
 
-
                 // When an entity is queried for we get an added event.
                 var product =
                         (from p in context.Products
@@ -188,7 +186,6 @@ namespace ObjectServicesConceptsCS
             }
             //</snippetObjectStateChanges>
         }
-
 
         static public void ContextClass()
         {
@@ -926,7 +923,6 @@ namespace ObjectServicesConceptsCS
                 string FirstName = "Frances";
                 string LastName = "Adams";
 
-
                 var contactQuery = from contact in context.Contacts
                                    where contact.LastName == LastName && contact.FirstName == FirstName
                                    select contact;
@@ -1557,7 +1553,6 @@ namespace ObjectServicesConceptsCS
         }
         #endregion
 
-
         #region ConceptualMethods
 
         public static void CallEnlistTransaction()
@@ -2098,7 +2093,6 @@ namespace ObjectServicesConceptsCS
                     "it.SalesOrderID = @orderId", new ObjectParameter("orderId", orderId))
                     .Execute(MergeOption.AppendOnly).First();
 
-
                 // Change the status of the order.
                 order.Status = 1;
 
@@ -2175,7 +2169,6 @@ namespace ObjectServicesConceptsCS
                 };
 
                 order.SalesOrderDetails.Add(detail);
-
 
                 // Save changes again.
                 if (0 < context.SaveChanges())
@@ -3365,7 +3358,6 @@ namespace ObjectServicesConceptsCS
             //</snippetExecuteStoreQueryWithParamReturnString>
         }
 
-
         public static void TranslateReader()
         {
             //<snippetTranslate>
@@ -3458,7 +3450,6 @@ namespace ObjectServicesConceptsCS
         {
             Console.WriteLine("Starting method 'ObjectQueryWithComplexType'");
             //<snippetObjectQueryWithComplexType>
-
 
             using (AdventureWorksEntities context =
                 new AdventureWorksEntities())
@@ -4170,5 +4161,3 @@ namespace ObjectServicesConceptsCS
     }
     //</snippetEnableLazyLoad>
 }
-
-

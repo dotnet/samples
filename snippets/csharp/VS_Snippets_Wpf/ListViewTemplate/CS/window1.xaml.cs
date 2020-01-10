@@ -8,7 +8,6 @@ using System.Windows.Shapes;
 using System.Windows.Controls.Primitives;
 using System.Collections.ObjectModel;
 
-
 namespace SDKSample
 {
     /// <summary>

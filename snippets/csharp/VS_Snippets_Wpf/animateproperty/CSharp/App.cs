@@ -1,6 +1,4 @@
-﻿
-
-using System;
+﻿using System;
 using System.Windows;
 using System.Windows.Navigation;
 using System.Windows.Media;
@@ -10,8 +8,7 @@ using System.Windows.Controls;
 
 namespace Microsoft.Samples.Animation.LocalAnimations
 {
-  
-    
+
     // Displays the sample.
     public class app : Application
     {

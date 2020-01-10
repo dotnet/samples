@@ -118,7 +118,6 @@ namespace cs_submittingchanges
         }
        // </Snippet6>
 
-
         // <Snippet7>
         public void CreateDatabase2()
         {
@@ -131,8 +130,6 @@ namespace cs_submittingchanges
             db.CreateDatabase();
         }
         // </Snippet7>
-
-
 
     }
 
@@ -172,11 +169,5 @@ namespace cs_submittingchanges
         public string Rating;
     }
 // </Snippet5>
-
-
-    
-
-
-
 
 }

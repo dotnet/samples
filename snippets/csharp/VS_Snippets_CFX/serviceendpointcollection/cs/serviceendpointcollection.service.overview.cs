@@ -95,7 +95,6 @@ namespace Microsoft.ServiceModel.Samples
 
              // Open the ServiceHostBase to create listeners and start listening for messages.
                 serviceHost.Open();
-                
 
              // The service can now be accessed.
                 Console.WriteLine("The service is ready.");

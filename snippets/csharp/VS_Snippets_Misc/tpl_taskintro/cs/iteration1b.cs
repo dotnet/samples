@@ -41,4 +41,3 @@ public class Example
 //       Task #10 created at 635116418427747843 on thread #3.
 //       Task #10 created at 635116418427737842 on thread #4.
 // </Snippet22>
-

@@ -58,7 +58,6 @@ namespace System.Drawing.ClassicRegionExamplesCS
 		}
 		#endregion
 
-
         // Snippet for: M:System.Drawing.Region.Complement(System.Drawing.Drawing2D.GraphicsPath)
         // <snippet1>
         public void Complement_Path_Example(PaintEventArgs e)
@@ -90,7 +89,6 @@ namespace System.Drawing.ClassicRegionExamplesCS
         }
         // </snippet1>
 
-
         // Snippet for: M:System.Drawing.Region.Complement(System.Drawing.RectangleF)
         // <snippet2>
         public void Complement_RectF_Example(PaintEventArgs e)
@@ -118,7 +116,6 @@ namespace System.Drawing.ClassicRegionExamplesCS
             e.Graphics.FillRegion(myBrush, myRegion);
         }
         // </snippet2>
-
 
         // Snippet for: M:System.Drawing.Region.Complement(System.Drawing.Region)
         // <snippet3>
@@ -150,7 +147,6 @@ namespace System.Drawing.ClassicRegionExamplesCS
         }
         // </snippet3>
 
-
         // Snippet for: M:System.Drawing.Region.Exclude(System.Drawing.RectangleF)
         // <snippet4>
         public void Exclude_RectF_Example(PaintEventArgs e)
@@ -179,7 +175,6 @@ namespace System.Drawing.ClassicRegionExamplesCS
         }
         // </snippet4>
 
-
         // Snippet for: M:System.Drawing.Region.GetBounds(System.Drawing.Graphics)
         // <snippet5>
         public void GetBoundsExample(PaintEventArgs e)
@@ -204,7 +199,6 @@ namespace System.Drawing.ClassicRegionExamplesCS
             e.Graphics.DrawRectangle(Pens.Red, Rectangle.Round(boundsRect));
         }
         // </snippet5>
-
 
         // Snippet for: M:System.Drawing.Region.GetRegionData
         // <snippet6>
@@ -256,7 +250,6 @@ namespace System.Drawing.ClassicRegionExamplesCS
         }
         // </snippet6>
 
-
         // Snippet for: M:System.Drawing.Region.Intersect(System.Drawing.RectangleF)
         // <snippet7>
         public void Intersect_RectF_Example(PaintEventArgs e)
@@ -284,7 +277,6 @@ namespace System.Drawing.ClassicRegionExamplesCS
             e.Graphics.FillRegion(myBrush, myRegion);
         }
         // </snippet7>
-
 
         // Snippet for: M:System.Drawing.Region.IsVisible(System.Drawing.RectangleF)
         // <snippet8>
@@ -315,7 +307,6 @@ namespace System.Drawing.ClassicRegionExamplesCS
         }
         // </snippet8>
 
-
         // Snippet for: M:System.Drawing.Region.Transform(System.Drawing.Drawing2D.Matrix)
         // <snippet9>
         public void TransformExample(PaintEventArgs e)
@@ -345,7 +336,6 @@ namespace System.Drawing.ClassicRegionExamplesCS
         }
         // </snippet9>
 
-
         // Snippet for: M:System.Drawing.Region.Translate(System.Int32,System.Int32)
         // <snippet10>
         public void TranslateExample(PaintEventArgs e)
@@ -366,7 +356,6 @@ namespace System.Drawing.ClassicRegionExamplesCS
             e.Graphics.FillRegion(myBrush, myRegion);
         }
         // </snippet10>
-
 
         // Snippet for: M:System.Drawing.Region.Union(System.Drawing.RectangleF)
         // <snippet11>
@@ -395,7 +384,6 @@ namespace System.Drawing.ClassicRegionExamplesCS
             e.Graphics.FillRegion(myBrush, myRegion);
         }
         // </snippet11>
-
 
         // Snippet for: M:System.Drawing.Region.Xor(System.Drawing.RectangleF)
         // <snippet12>

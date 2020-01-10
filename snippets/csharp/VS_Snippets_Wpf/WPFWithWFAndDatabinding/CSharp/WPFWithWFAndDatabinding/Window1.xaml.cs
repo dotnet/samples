@@ -7,7 +7,6 @@ using System.Windows.Documents;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
-
 namespace WPFWithWFAndDatabinding
 {
     public partial class MainWindow : Window
@@ -36,7 +35,6 @@ namespace WPFWithWFAndDatabinding
             this.nwBindingSource.DataSource = this.nwDataSet;
         }
         //</snippet12>
-        
 
         //<snippet13>
         private void Window_Loaded(object sender, RoutedEventArgs e)

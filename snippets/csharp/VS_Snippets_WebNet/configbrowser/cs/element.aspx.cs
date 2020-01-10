@@ -15,7 +15,6 @@ public partial class Element : System.Web.UI.Page
     {
     }
 
-
     // <Snippet92>
     protected void ListView1_ItemDataBound(
         object sender, ListViewItemEventArgs e)

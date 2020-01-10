@@ -15,8 +15,7 @@ public class NetworkStream_ASync_Send_Receive{
 public static ManualResetEvent allDone = new ManualResetEvent(false);
 
 public static void MySample(bool networkStreamOwnsSocket){
-	
-	
+
        // Create a socket and connect with a remote host.
 	IPHostEntry myIpHostEntry = Dns.GetHostEntry("www.contoso.com");
 	IPEndPoint myIpEndPoint = new IPEndPoint(myIpHostEntry.AddressList[0], 1001);
@@ -142,6 +141,4 @@ public static void Main(String[] args){
 
 }
 
-
 }
-

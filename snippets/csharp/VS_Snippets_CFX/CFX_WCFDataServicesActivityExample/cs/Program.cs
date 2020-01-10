@@ -276,9 +276,6 @@ namespace WCFDataServicesActivityExample
     }
     //</snippet200>
 
-
-
-    
 }
     // Northwind Entitities from Add Service Reference
 
@@ -6346,4 +6343,3 @@ namespace WCFDataServicesActivityExample.Northwind
         }
     }
 }
-

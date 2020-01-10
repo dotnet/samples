@@ -6,7 +6,6 @@
 // the user to select the TextFormatFlag to apply to the text.
 // For simplicity, this sample does not handle run-time switching of visual styles.
 
-
 //<Snippet0>
 using System;
 using System.Text;

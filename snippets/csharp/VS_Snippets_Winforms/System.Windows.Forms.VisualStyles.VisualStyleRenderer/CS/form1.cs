@@ -18,7 +18,6 @@
 //               visual matches the standard Windows version. Doing GetPartSize on this
 //               part only returns a height of 15, which is way to short; is this a bug?
 
-
 // <Snippet0>
 using System;
 using System.Text;

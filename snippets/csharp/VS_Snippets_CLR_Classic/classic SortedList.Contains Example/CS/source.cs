@@ -30,8 +30,7 @@
        myValue = "nine";
        Console.WriteLine( "The value \"{0}\" is {1}.", myValue, mySL.ContainsValue( myValue ) ? "in the SortedList" : "NOT in the SortedList" );
     }
- 
- 
+
     public static void PrintIndexAndKeysAndValues( SortedList myList )  {
        Console.WriteLine( "\t-INDEX-\t-KEY-\t-VALUE-" );
        for ( int i = 0; i < myList.Count; i++ )  {
@@ -57,4 +56,3 @@
  The value "nine" is NOT in the SortedList.
  */ 
  // </Snippet1>
-

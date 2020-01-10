@@ -32,7 +32,6 @@ namespace Samples.AspNet.CS
         protected override void Render(HtmlTextWriter writer)
         {
 
-
 // <snippet1>
             // Render a formatted string and the
             // text representation of a variable, int0,

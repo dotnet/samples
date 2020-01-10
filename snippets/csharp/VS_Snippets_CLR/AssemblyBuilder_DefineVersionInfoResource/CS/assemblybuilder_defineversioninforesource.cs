@@ -26,7 +26,6 @@ class Example
          AppDomain.CurrentDomain.DefineDynamicAssembly(assemName, 
             AssemblyBuilderAccess.Save);
 
-
       // To apply an attribute to a dynamic assembly, first get the 
       // attribute type. The AssemblyFileVersionAttribute sets the 
       // File Version field on the Version tab of the Windows file
@@ -55,12 +54,10 @@ class Example
       //
       myAssembly.SetCustomAttribute(attribute);
 
-
       // The pattern described above is used to create and apply
       // several more attributes. As it happens, all these attributes
       // have a constructor that takes a string, so the same ctorArgs
       // variable works for all of them.
-      
 
       // The AssemblyTitleAttribute sets the Description field on
       // the General tab and the Version tab of the Windows file 
@@ -105,7 +102,6 @@ class Example
          new object[] { "My Product Name" });
       myAssembly.SetCustomAttribute(attribute);
 
-
       // Define the assembly's only module. For a single-file assembly,
       // the module name is the assembly name.
       //
@@ -114,7 +110,6 @@ class Example
             assemName.Name + ".exe");
 
       // No types or methods are created for this example.
-
 
       // Define the unmanaged version information resource, which
       // contains the attribute informaion applied earlier, and save
@@ -127,5 +122,3 @@ class Example
    }
 }
 // </Snippet1>
-
-

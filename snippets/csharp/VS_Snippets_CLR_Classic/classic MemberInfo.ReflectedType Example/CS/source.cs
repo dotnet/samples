@@ -28,4 +28,3 @@ m2.DeclaringType: System.Object
 m2.ReflectedType: System.Reflection.MemberInfo
  */
 // </snippet1>
-

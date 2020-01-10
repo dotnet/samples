@@ -24,8 +24,7 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
 
     // Create the demonstration.
     public class ClockHandoffBehaviorExample : Page {
-        
-        
+
         private TranslateTransform interactiveTranslateTransform;   
         private Border containerBorder;
         private Ellipse interactiveEllipse;
@@ -65,7 +64,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             myPanel.Children.Add(containerBorder);
             this.Content = myPanel;
         }
-        
 
         // When the user left-clicks, use the 
         // SnapshotAndReplace HandoffBehavior when applying the animation.        
@@ -143,8 +141,7 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
                 
             // Change the color of the ellipse.
             interactiveEllipse.Fill = Brushes.Orange;
-            
-                    
+
         }
         
     }

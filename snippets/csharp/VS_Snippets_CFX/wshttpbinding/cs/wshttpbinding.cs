@@ -36,7 +36,6 @@ public sealed class CustomBindingCreator
         //</Snippet8>
     }
 
-
     public static void snippetCreateBindingElements()
     {
         //<Snippet9>
@@ -44,7 +43,6 @@ public sealed class CustomBindingCreator
         BindingElementCollection beCollection = wsHttpBinding.CreateBindingElements();
         //</Snippet9>
     }
-
 
     private void snippetCreateMessageSecurity()
     {
@@ -171,7 +169,6 @@ public class CalculatorService : ICalculator
     {
         double result = n1 / n2; return result;
     }
-
 
     // Host the service within this EXE console application. 
     public static void Main()

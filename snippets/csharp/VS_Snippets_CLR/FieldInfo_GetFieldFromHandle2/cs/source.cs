@@ -74,5 +74,3 @@ aring type 'Test`1[System.__Canon]' are incompatible. Get RuntimeFieldHandle and
  declaring RuntimeTypeHandle off the same FieldInfo.
  */
 //</Snippet1>
-
-

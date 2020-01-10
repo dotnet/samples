@@ -5,8 +5,6 @@ using System.Reflection;
 using System.Resources;
 using System.Windows.Forms;
 
-
-
 [assembly: NeutralResourcesLanguageAttribute("en-US")]
 namespace GlobalizationLibrary
 {

@@ -69,8 +69,6 @@ public class Extra
                  return 42;
              }, ct);
 
-
-
              Console.WriteLine("child.Result = {0}", child.Result);
              return child.Result;
 
@@ -100,7 +98,6 @@ public class Extra
          Parent has completed.
       */
      //</snippet5>
-
 
      static void ChildTaskException()
      {
@@ -180,4 +177,3 @@ public class Extra
          Console.WriteLine(parent.Result);
      }
  }
-

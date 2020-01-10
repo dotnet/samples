@@ -17,8 +17,6 @@ public class Group
    public DateTime Today;
 }
 
-
- 
 public class Run
 {
    public static void Main()
@@ -26,7 +24,6 @@ public class Run
       Run test = new Run();
       test.SerializeObject("Attributes.xml");
    }
-
 
    public void SerializeObject(string filename)
    {

@@ -122,7 +122,6 @@ class snippets
         WorkflowRuntime runtime2 = workflowInstance.WorkflowRuntime;
         //</snippet7>
 
-        
     }
 
     public void Container1()
@@ -1754,7 +1753,6 @@ class snippets
         }
     }
     // </snippet80>
-    
 
     #region dependent classes
     public class ParallelIfActivity : CompositeActivity, IActivityEventListener<ActivityExecutionStatusChangedEventArgs>
@@ -2047,6 +2045,4 @@ class snippets
 
     #endregion
 
-
 }
-

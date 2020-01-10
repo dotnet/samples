@@ -131,7 +131,6 @@ namespace System.CodeDom
             method1.Name = "Method1";
             method1.Attributes = (method1.Attributes & ~MemberAttributes.AccessMask) | MemberAttributes.Public;
 
-
             CodeMemberMethod method2 = new CodeMemberMethod();
             method2.Name = "Method2";
             method2.Attributes = (method2.Attributes & ~MemberAttributes.AccessMask) | MemberAttributes.Public;
@@ -213,4 +212,3 @@ namespace System.CodeDom
     }
 }
 //</Snippet1>
-

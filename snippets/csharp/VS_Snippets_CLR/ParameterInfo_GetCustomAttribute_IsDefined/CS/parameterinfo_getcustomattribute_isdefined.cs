@@ -83,4 +83,3 @@ Parameter 1, name = j, type = System.Int32
 The following parameters of Boolean Equals(System.Object) have MyAttribute or a derived type:
  */
 // </Snippet1>
-

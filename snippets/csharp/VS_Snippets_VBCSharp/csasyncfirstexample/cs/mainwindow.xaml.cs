@@ -1,5 +1,4 @@
-﻿
-//<snippet2>
+﻿//<snippet2>
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,7 +35,6 @@ namespace AsyncFirstExample
                 String.Format("\r\nLength of the downloaded string: {0}.\r\n", contentLength);
         }
 
-
         //<snippet1>
         // Three things to note in the signature:
         //  - The method has an async modifier. 
@@ -67,7 +65,6 @@ namespace AsyncFirstExample
             return urlContents.Length;
         }
         //</snippet1>
-
 
         void DoIndependentWork()
         {

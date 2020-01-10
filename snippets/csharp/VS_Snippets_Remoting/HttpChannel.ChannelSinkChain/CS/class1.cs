@@ -74,8 +74,7 @@ class CustomChannel : BaseChannelWithProperties, IChannelReceiverHook,
       IDictionary properties,
       IClientChannelSinkProvider clientSinkProvider,
       IServerChannelSinkProvider serverSinkProvider) {
-         
-   
+
    }
 
    public string ChannelName {
@@ -152,7 +151,6 @@ class CustomChannel : BaseChannelWithProperties, IChannelReceiverHook,
       return null;
    }
 
-   
    private class TransportSink: IServerChannelSink {
       private IServerChannelSink next;
 

@@ -32,4 +32,3 @@ public class Example
 //    936da01f-9abd-4d9d-80c7-02af85c822a8 and 01e75c83-c6f5-4192-b57e-7427cec5560d: 1
 //    936da01f-9abd-4d9d-80c7-02af85c822a8 and 936da01f-9abd-4d9d-80c7-02af85c822a8: 0
 // </Snippet2>
-

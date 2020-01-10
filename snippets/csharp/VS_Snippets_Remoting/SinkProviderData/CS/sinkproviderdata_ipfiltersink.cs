@@ -192,7 +192,6 @@ namespace IPFilter
             myBool_Accept = myAcceptMode;
         } // MyIPFilterChannelSink
 
-
         public void AddFilter(IPAddress mask, IPAddress ipAddress1)
         {
             MyFilter f = new MyFilter(mask, ipAddress1);
@@ -245,7 +244,6 @@ namespace IPFilter
         {
             return null;
         } // GetResponseStream
-
 
         public IServerChannelSink NextChannelSink
         {

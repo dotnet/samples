@@ -481,7 +481,6 @@ namespace SdkSample
                     }
                 }
 
-
                 if (!Char.IsWhiteSpace(this.NextCharacter))
                 {
                     break;

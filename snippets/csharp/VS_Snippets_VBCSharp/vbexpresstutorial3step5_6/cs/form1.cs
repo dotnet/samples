@@ -105,7 +105,6 @@ namespace Math_Quiz
         }
         // </snippet14>
 
-        
         public void Temp()
         {
             // <snippet21>

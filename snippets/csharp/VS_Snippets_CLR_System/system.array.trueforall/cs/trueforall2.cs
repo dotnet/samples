@@ -8,7 +8,6 @@ public class Example
       String[] values1 = { "Y2K", "A2000", "DC2A6", "MMXIV", "0C3" };
       String[] values2 = { "Y2", "A2000", "DC2A6", "MMXIV_0", "0C3" };
 
-
       if (Array.TrueForAll(values1, EndsWithANumber))
          Console.WriteLine("All elements end with an integer.");
       else

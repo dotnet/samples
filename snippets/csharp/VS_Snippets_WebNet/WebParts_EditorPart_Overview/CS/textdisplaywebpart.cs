@@ -163,7 +163,6 @@ namespace Samples.AspNet.CS.Controls
       }
       // </snippet6>
 
-
       protected override void CreateChildControls()
       {
         Controls.Clear();

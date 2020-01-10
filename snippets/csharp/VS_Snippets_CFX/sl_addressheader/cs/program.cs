@@ -2,7 +2,6 @@
 // Snippets  for Silverlight 2 RTM 
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.
 
-
 // NSs automatically added to a SL App
 using System;
 using System.Collections.Generic;
@@ -80,7 +79,6 @@ namespace SL_AddressHeader
             // </Snippet10>
 
             // </Snippet0>
-
 
         }
     }

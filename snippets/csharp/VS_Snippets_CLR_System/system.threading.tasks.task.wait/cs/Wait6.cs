@@ -30,5 +30,3 @@ public class Example
 // Or it displays the following output:
 //      The timeout interval elapsed.
 // </Snippet6>
-
-

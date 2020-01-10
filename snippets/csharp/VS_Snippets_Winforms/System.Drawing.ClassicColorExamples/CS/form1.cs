@@ -57,7 +57,6 @@ namespace System.Drawing.ClassicColorExamplesCS
 		}
 		#endregion
 
-
         // Snippet for: M:System.Drawing.Color.FromArgb(System.Int32)
         // <snippet1>
         public void FromArgb4(PaintEventArgs e)
@@ -86,7 +85,6 @@ namespace System.Drawing.ClassicColorExamplesCS
             g.FillEllipse(trnsBlueBrush, x1 + triBase, y1, 2*triHeight, 2*triHeight);
         }
         // </snippet1>
-
 
         // Snippet for: M:System.Drawing.Color.FromArgb(System.Int32,System.Drawing.Color)
         // <snippet2>
@@ -135,8 +133,7 @@ namespace System.Drawing.ClassicColorExamplesCS
             
              // y coordinate of first blue rectangle
             y += 100;           
-           
-                     
+
             // Fill rectangles with blue, varying the alpha value from 25 to 250.
             for (alpha = 25; alpha <= 250; alpha += 25)
             {
@@ -146,7 +143,6 @@ namespace System.Drawing.ClassicColorExamplesCS
             }
         }
         // </snippet2>
-
 
         // Snippet for: M:System.Drawing.Color.FromArgb(System.Int32,System.Int32,System.Int32)
         // <snippet3>
@@ -206,7 +202,6 @@ namespace System.Drawing.ClassicColorExamplesCS
         }
         // </snippet3>
 
-
         // Snippet for: M:System.Drawing.Color.FromArgb(System.Int32,System.Int32,System.Int32,System.Int32)
         // <snippet4>
         public void FromArgb1(PaintEventArgs e)
@@ -235,7 +230,6 @@ namespace System.Drawing.ClassicColorExamplesCS
             g.FillEllipse(trnsBlueBrush, x1 + triBase, y1, 2*triHeight, 2*triHeight);
         }
         // </snippet4>
-
 
         // Snippet for: M:System.Drawing.Color.FromKnownColor(System.Drawing.KnownColor)
         // <snippet5>
@@ -287,7 +281,6 @@ namespace System.Drawing.ClassicColorExamplesCS
         }
         // </snippet5>
 
-
         // Snippet for: M:System.Drawing.Color.GetBrightness
         // <snippet6>
         public void KnownColorBrightnessExample2(PaintEventArgs e)
@@ -337,7 +330,6 @@ namespace System.Drawing.ClassicColorExamplesCS
             }
         }
         // </snippet6>
-
 
         // Snippet for: M:System.Drawing.Color.GetHue
         // <snippet7>
@@ -389,7 +381,6 @@ namespace System.Drawing.ClassicColorExamplesCS
         }
         // </snippet7>
 
-
         // Snippet for: M:System.Drawing.Color.GetSaturation
         // <snippet8>
         public void GetSatExample(PaintEventArgs e)
@@ -439,7 +430,6 @@ namespace System.Drawing.ClassicColorExamplesCS
             }
         }
         // </snippet8>
-
 
         // Snippet for: M:System.Drawing.Color.ToArgb
         // <snippet9>
@@ -495,7 +485,6 @@ namespace System.Drawing.ClassicColorExamplesCS
             }
         }
         // </snippet9>
-
 
         // Snippet for: M:System.Drawing.Color.ToString
         // <snippet10>

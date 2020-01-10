@@ -28,4 +28,3 @@ public class Example
 // The example displays the following output:
 //       1    2    3    4    5    1    4    9    16    25
 // </Snippet3>
-

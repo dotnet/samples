@@ -106,7 +106,6 @@ namespace InkEraserDemo
         }
         //</Snippet10>
 
-        
         //<Snippet2>
         // When the stylus intersects a stroke, erase that part of
         // the stroke.  When the stylus dissects a stoke, the 
@@ -130,7 +129,6 @@ namespace InkEraserDemo
                 presenter.Strokes.Remove(strokesToReplace);
             }
 
-            
         }
         //</Snippet2>
 
@@ -222,4 +220,3 @@ namespace InkEraserDemo
         //{
         //    return presenter.Strokes.SaveBase64(PersistenceFormat.InkSerializedFormat, CompressionMode.Maximum);
         //}
-

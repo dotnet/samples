@@ -22,4 +22,3 @@ public class Utility
     }
 }
 //</Snippet4>
-

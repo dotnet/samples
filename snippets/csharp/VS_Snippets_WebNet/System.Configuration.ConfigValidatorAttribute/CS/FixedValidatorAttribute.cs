@@ -38,7 +38,6 @@ namespace Samples.AspNet
             
             Automobile car = (Automobile)value;
 
-
             try
             {
                 if (!make.Contains(car.Make))

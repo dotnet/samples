@@ -42,4 +42,3 @@ class Program
     }
 }
 // </Snippet1>
-

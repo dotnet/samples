@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Security;
 
-
 public class SecurityElementTest
 {
     private SecurityElement xmlRootElement;

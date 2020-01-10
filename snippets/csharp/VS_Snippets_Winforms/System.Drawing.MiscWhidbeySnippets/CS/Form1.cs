@@ -127,7 +127,6 @@ namespace DocRefreshSnippets
         }
         //</snippet7>
 
-
         //<snippet8>
         private void DrawImageUnscaled(PaintEventArgs e)
         {
@@ -428,6 +427,5 @@ namespace DocRefreshSnippets
         //</snippet45>
 
     }
-
 
 }

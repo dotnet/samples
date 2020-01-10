@@ -8,7 +8,6 @@
 using System;
 using System.Net;
 
-
 public class WebHeaderCollection_Set {
 
 	public static void Main() {

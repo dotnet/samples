@@ -188,8 +188,6 @@ namespace StylusSamples
             
         }
 
-        
-
         void inkCanvas1_StylusDown(object sender, StylusDownEventArgs e)
         {
             StylusPointCollection points = e.StylusDevice.GetStylusPoints(inkCanvas1);

@@ -9,9 +9,6 @@ using System.Diagnostics;
 using System.Web;
 using System.Globalization;
 
-
-
-
 namespace Samples.AspNet.Roles
 {
 
@@ -26,7 +23,6 @@ namespace Samples.AspNet.Roles
 
     private ConnectionStringSettings pConnectionStringSettings;
     private string connectionString;
-
 
     //
     // System.Configuration.Provider.ProviderBase.Initialize Method
@@ -54,7 +50,6 @@ namespace Samples.AspNet.Roles
       // Initialize the abstract base class.
       base.Initialize(name, config);
 
-
       if (config["applicationName"] == null || config["applicationName"].Trim() == "")
       {
         pApplicationName = System.Web.Hosting.HostingEnvironment.ApplicationVirtualPath;
@@ -63,7 +58,6 @@ namespace Samples.AspNet.Roles
       {
         pApplicationName = config["applicationName"];
       }
-
 
       //
       // Initialize OdbcConnection.
@@ -79,12 +73,9 @@ namespace Samples.AspNet.Roles
       connectionString = pConnectionStringSettings.ConnectionString;
     }
 
-
-
     //
     // System.Web.Security.RoleProvider properties.
     //
-    
 
 //<Snippet1>
 private string pApplicationName;
@@ -129,7 +120,6 @@ public override void AddUsersToRoles(string[]  usernames, string[] rolenames)
     }
   }
 
-
   OdbcConnection conn = new OdbcConnection(connectionString);
   OdbcCommand cmd = new OdbcCommand("INSERT INTO UsersInRoles "  +
                                     " (Username, Rolename, ApplicationName) " +
@@ -163,7 +153,6 @@ public override void AddUsersToRoles(string[]  usernames, string[] rolenames)
   }
 }
 //</Snippet2>
-
 
     //
     // RoleProvider.CreateRole
@@ -205,7 +194,6 @@ public override void CreateRole(string rolename)
   }
 }
 //</Snippet3>
-
 
     //
     // RoleProvider.DeleteRole
@@ -259,7 +247,6 @@ public override bool DeleteRole(string rolename, bool throwOnPopulatedRole)
 }
 //</Snippet4>
 
-
     //
     // RoleProvider.GetAllRoles
     //
@@ -308,7 +295,6 @@ public override string[] GetAllRoles()
   return new string[0];
 }
 //</Snippet5>
-
 
     //
     // RoleProvider.GetRolesForUser
@@ -362,7 +348,6 @@ public override string[] GetRolesForUser(string username)
   return new string[0];
 }
 //</Snippet6>
-
 
     //
     // RoleProvider.GetUsersInRole
@@ -419,11 +404,9 @@ public override string[] GetUsersInRole(string rolename)
 }
 //</Snippet7>
 
-
     //
     // RoleProvider.IsUserInRole
     //
-
 
 //<Snippet8>
 public override bool IsUserInRole(string username, string rolename)
@@ -467,7 +450,6 @@ public override bool IsUserInRole(string username, string rolename)
 }
 //</Snippet8>
 
-
     //
     // RoleProvider.RemoveUsersFromRoles
     //
@@ -494,7 +476,6 @@ public override void RemoveUsersFromRoles(string[] usernames, string[] rolenames
         throw new ProviderException("User is not in role.");
     }
   }
-
 
   OdbcConnection conn = new OdbcConnection(connectionString);
   OdbcCommand cmd = new OdbcCommand("DELETE FROM UsersInRoles "  +
@@ -528,7 +509,6 @@ public override void RemoveUsersFromRoles(string[] usernames, string[] rolenames
   }
 }
 //</Snippet9>
-
 
     //
     // RoleProvider.RoleExists
@@ -622,7 +602,6 @@ public override string[] FindUsersInRole(string rolename, string usernameToMatch
   return null;
 }
 //</Snippet11>
-
 
   }
 }

@@ -1,5 +1,4 @@
-﻿
-//<snippet1>
+﻿//<snippet1>
 using System;
 using System.CodeDom;
 using System.ComponentModel;

@@ -55,6 +55,3 @@ public class Example
        // </Snippet34>
    }
 }
-
-
-   

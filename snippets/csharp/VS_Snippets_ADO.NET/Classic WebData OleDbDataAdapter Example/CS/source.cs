@@ -50,5 +50,3 @@ class Class1
     }
     //</Snippet1>
 }
-
-

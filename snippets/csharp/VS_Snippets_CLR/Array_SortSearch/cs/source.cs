@@ -90,5 +90,3 @@ BinarySearch for 'Tyrannosaurus':
 Found at index 5.
  */
 // </Snippet1>
-
-

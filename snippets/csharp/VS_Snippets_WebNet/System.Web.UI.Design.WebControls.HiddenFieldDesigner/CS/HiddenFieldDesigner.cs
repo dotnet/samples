@@ -41,4 +41,3 @@ namespace Examples.CS.WebControls.Design
     } // MyHiddenFieldDesigner
 } // Examples.CS.WebControls.Design
 // </snippet1>
-

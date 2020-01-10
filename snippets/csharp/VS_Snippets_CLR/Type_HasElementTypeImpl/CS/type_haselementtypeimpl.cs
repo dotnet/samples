@@ -63,4 +63,3 @@ public class Type_HasElementTypeImpl
     }
 }
 // </Snippet1>
-

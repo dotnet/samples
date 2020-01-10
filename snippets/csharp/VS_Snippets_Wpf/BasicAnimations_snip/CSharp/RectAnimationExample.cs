@@ -66,4 +66,3 @@ namespace SDKSamples
     }
 }
 // </SnippetRectAnimationWholePage>
-

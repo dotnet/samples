@@ -1,5 +1,4 @@
-﻿
-    //<snippet07>
+﻿    //<snippet07>
     using System.Threading.Tasks;   
     class Test
     {
@@ -54,5 +53,3 @@
         }
         //</snippet08>
     }
-    
-

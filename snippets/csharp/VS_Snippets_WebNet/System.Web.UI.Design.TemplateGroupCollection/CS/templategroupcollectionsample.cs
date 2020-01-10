@@ -49,7 +49,6 @@ namespace Examples.AspNet
                     internalGroup.AddTemplateDefinition(templateDef2);
                 }
 
-
                 // Add the new template group to the collection.
                 groups.Add(internalGroup);
 

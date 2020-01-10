@@ -13,8 +13,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections.ObjectModel;
 
-
-
 namespace DataGrid_ColumnsManipulation
 {
     /// <summary>
@@ -133,6 +131,5 @@ namespace DataGrid_ColumnsManipulation
         }
         //</SnippetDelete2>
 
-        
     }
 }

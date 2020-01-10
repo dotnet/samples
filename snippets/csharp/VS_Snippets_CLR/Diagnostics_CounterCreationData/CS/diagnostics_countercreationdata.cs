@@ -53,7 +53,6 @@ namespace MyDiagnostics
                   PerformanceCounterCategory.Create("New Counter Category", "Category Help",
                 PerformanceCounterCategoryType.SingleInstance, myCol);
 
-
             Console.WriteLine("Counter Information:");
             Console.WriteLine("Category Name: " + myCategory.CategoryName);
             for (int i = 0; i < myCol.Count; i++)

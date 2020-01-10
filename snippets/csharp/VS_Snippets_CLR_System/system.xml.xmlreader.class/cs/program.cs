@@ -78,7 +78,6 @@ namespace XmlReaderExampleCS
         }
         // </Snippet3>
 
-
         // <Snippet4>
         public static async Task<bool> ReadToFollowingAsync(this XmlReader reader, string localName, string namespaceURI)
         {
@@ -106,7 +105,6 @@ namespace XmlReaderExampleCS
             return false;
         }
         // </Snippet4>
-
 
         // <Snippet5>
         public static async Task<bool> ReadToDescendantAsync(this XmlReader reader, string localName, string namespaceURI)
@@ -153,9 +151,6 @@ namespace XmlReaderExampleCS
             return false;
         }
         // </Snippet5>
-
-
-
 
     }
 

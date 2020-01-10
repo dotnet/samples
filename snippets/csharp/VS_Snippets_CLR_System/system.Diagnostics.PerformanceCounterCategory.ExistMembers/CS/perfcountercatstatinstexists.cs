@@ -64,8 +64,3 @@ class PerfCounterCatStatInstExistsMod
     //</Snippet10>
 }
 //</snippet9>
-
-
-
-
-

@@ -2,7 +2,6 @@
 using System;
 using System.Configuration;
 
-
 // Define a custom section.
 // This class shows how to use the ConfigurationPropertyAttribute.
 public class UrlsSection : ConfigurationSection

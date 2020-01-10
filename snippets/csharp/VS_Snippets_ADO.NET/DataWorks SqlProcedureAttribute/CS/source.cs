@@ -4,7 +4,6 @@ using System.Data.Sql;
 using System.Data.SqlTypes;
 using Microsoft.SqlServer.Server;
 
-
 public partial class StoredProcedures
 {
 	//<Snippet1>

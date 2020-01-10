@@ -712,7 +712,6 @@ namespace Examples.SmtpExamples.Sync
         }
         //</snippet20>
 
-
         //<snippet21>
         public static void DisplayStreamAttachment(Attachment a)
         {
@@ -994,7 +993,6 @@ namespace Examples.SmtpExamples.Sync
             return new SmtpException(message, innerException);
         }
         //</snippet32>
-
 
         public static void CreateSampleDispositions()
         {

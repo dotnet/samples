@@ -2,7 +2,6 @@
 // Snippet 0
 // Snippet 1 public class MyBindingElement : BindingElement, IPolicyExporter
 // 001 06-27-2006 a-arhu using System.ServiceModel.Channels
- 
 
 using System;
 using System.Collections.ObjectModel;
@@ -13,14 +12,12 @@ using System.IdentityModel;
 using System.Text;
 using System.ServiceModel.Channels;
 
-
 // MetadataImporter is abstract class
 // wsdlImporter is concrete class derived from MetadataImporter
 // 
 //
 namespace CS
 {
-
 
     class Program
     {
@@ -108,7 +105,6 @@ namespace CS2
 			context.GetBindingAssertions().Add(xmlElement);
 		}
 
-
 		// Note: All custom binding elements must return a deep clone 
 		// to enable the run time to support multiple bindings using the 
 		// same custom binding.
@@ -117,7 +113,6 @@ namespace CS2
 			// this is just a placeholder
 			return this;
 		}
-
 
 		// Call the inner property.
 		public override T GetProperty<T>(BindingContext context)
@@ -145,6 +140,5 @@ namespace CS2
 		}
 	}
 // </Snippet1>
-
 
 }

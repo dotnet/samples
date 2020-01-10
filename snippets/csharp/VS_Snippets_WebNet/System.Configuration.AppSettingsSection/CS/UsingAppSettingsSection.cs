@@ -128,7 +128,6 @@ class UsingAppSettingsSection
             // Get the auxiliary file name.
             Console.WriteLine("Auxiliary file: {0}", config.AppSettings.File);
 
-            
             // Get the settings collection (key/value pairs).
             if (appSettings.Settings.Count != 0)
             {
@@ -150,7 +149,6 @@ class UsingAppSettingsSection
     // </Snippet24>
 
     #endregion UsingAppSettingsSection
-
 
     #region ApplicationMain
 

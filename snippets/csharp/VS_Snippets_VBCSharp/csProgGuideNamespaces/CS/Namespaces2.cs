@@ -10,7 +10,6 @@ using Alias = System.Console;
 using global = System.Collections;   // Warning
 //</Snippet13>
 
-
 //-----------------------------------------------------------------------------
 public class Company
 {
@@ -21,7 +20,6 @@ public class Company
         }
     }
 }
-
 
 //-----------------------------------------------------------------------------
 class WrapTestClass

@@ -75,8 +75,6 @@ namespace CreateSts
         }
         //</snippet7>
 
-  
-
         private void CreateClaim()
         {
             //<snippet8>
@@ -172,7 +170,6 @@ namespace Client
         }
         //</snippet20>
 
-
         //<snippet21>
         public void snippet21(CalculatorClient cc)
         {
@@ -236,8 +233,6 @@ namespace Client
         //</snippet27>
 
     }
-
-
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute()]

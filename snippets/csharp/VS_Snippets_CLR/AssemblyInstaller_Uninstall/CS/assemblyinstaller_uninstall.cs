@@ -28,7 +28,6 @@ class MyInstallClass
          string[] myStringArray = new string[ 1 ];
          string myString;
 
-
          // Set the commandline argument array for 'logfile'.
          myStringArray[ 0 ] = "/logFile=example.log";
 

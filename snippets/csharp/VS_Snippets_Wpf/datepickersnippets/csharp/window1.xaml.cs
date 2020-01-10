@@ -110,6 +110,5 @@ namespace DatePickerSnippets
         }
         //</Snippet8>
 
-        
     }
 }

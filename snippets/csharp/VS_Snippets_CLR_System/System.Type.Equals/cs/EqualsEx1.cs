@@ -50,5 +50,3 @@ public class Example
 //       
 //       Cannot cast the argument to a type.
 // </Snippet1>
-
-

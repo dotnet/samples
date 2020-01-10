@@ -54,7 +54,6 @@ namespace TextPointer_Snippets
             tp.InsertTextInRun("Inserted text 1...");
             tp.InsertTextInRun("Inserted text 2...");
 
-
             tb.Text += GetXaml(fdsv.Document.Blocks.FirstBlock);
             tb.Text += GetXaml(fdsv.Document.Blocks.FirstBlock.NextBlock);
             

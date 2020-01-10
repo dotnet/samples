@@ -23,4 +23,3 @@ class Program
       p.Name = name;
    }
 }
-

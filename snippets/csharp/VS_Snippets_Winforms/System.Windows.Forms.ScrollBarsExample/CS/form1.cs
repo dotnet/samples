@@ -36,12 +36,9 @@ public class Form1:
 	//It can be modified using the Windows Form Designer.  
 	//Do not modify it using the code editor.
 
-
 	[System.Diagnostics.DebuggerStepThrough]
 	private void InitializeComponent()
 	{
-
-
 
 		this.SuspendLayout();
 		//
@@ -57,7 +54,6 @@ public class Form1:
 	}
 
 	#endregion
-	
 
 	public static void Main()
 	{
@@ -130,4 +126,3 @@ public class Form1:
 	}
 	//</snippet1>
 }
-

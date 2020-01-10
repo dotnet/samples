@@ -13,7 +13,6 @@
 
             }
 
-
             private void SampleColumnChangingEvent(object sender, System.Data.DataColumnChangeEventArgs e)
             {
                 if (e.Column.ColumnName == QuantityColumn.ColumnName)
@@ -31,9 +30,6 @@
 
  //</Snippet2>
 
-
-           
-            
             //<Snippet4>
 
             //public override void EndInit()
@@ -42,7 +38,6 @@
             //    Order_DetailsRowChanging += TestRowChangeEvent;
 
             //}
-
 
             //public void TestRowChangeEvent(object sender, Order_DetailsRowChangeEvent e)
             //{

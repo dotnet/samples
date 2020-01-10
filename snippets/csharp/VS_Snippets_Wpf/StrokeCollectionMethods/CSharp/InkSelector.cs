@@ -17,7 +17,6 @@ namespace StrokeCollectionEraseMethods
         Ink, Select
     }
 
-
     // This control allows the user to input and select ink.  When the
     // user selects ink, the lasso remains visible until they erase, or clip
     // the selected strokes, or clear the selection.  When the control is
@@ -68,7 +67,6 @@ namespace StrokeCollectionEraseMethods
 
             selectedStrokes = new StrokeCollection();
 
-
             inkDA.AttributeChanged += new PropertyDataChangedEventHandler(DrawingAttributesChanged);
             selectDA.AttributeChanged += new PropertyDataChangedEventHandler(DrawingAttributesChanged);
 
@@ -81,7 +79,6 @@ namespace StrokeCollectionEraseMethods
             ClipToBoundsProperty.OverrideMetadata(owner,
                 new FrameworkPropertyMetadata(true));
         }
-
 
         // Prepare to collect stylus packets. If Mode is set to Select,  
         // get the IncrementalHitTester from the InkPresenter'newStroke 
@@ -124,7 +121,6 @@ namespace StrokeCollectionEraseMethods
 
             InitializeHitTester(collectedPoints);
 
-
         }
 
         //<Snippet17>
@@ -136,7 +132,6 @@ namespace StrokeCollectionEraseMethods
                 selectedStroke.DrawingAttributes.Color = inkDA.Color;
             }
             selectedStrokes.Clear();
-
 
             if (mode == InkMode.Select)
             {
@@ -297,7 +292,6 @@ namespace StrokeCollectionEraseMethods
             }
         }
         //</Snippet18>
-
 
         //<Snippet19>
         // Remove all the strokes from the control.

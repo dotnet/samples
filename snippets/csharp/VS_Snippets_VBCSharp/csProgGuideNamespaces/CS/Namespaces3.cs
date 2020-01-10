@@ -36,7 +36,6 @@ class TestMyServices
 }
 //</Snippet19>
 
-
 //-----------------------------------------------------------------------------
 public class TestCopy{
 

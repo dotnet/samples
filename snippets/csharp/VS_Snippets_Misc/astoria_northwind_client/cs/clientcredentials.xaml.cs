@@ -62,7 +62,6 @@ namespace NorthwindClient
                 context.Credentials =
                     new NetworkCredential(userName, password, domain);
 
-
                 // Define an anonymous LINQ query that returns a collection of Customer types.
                 var query = from c in context.Customers
                             where c.Country == "Germany"

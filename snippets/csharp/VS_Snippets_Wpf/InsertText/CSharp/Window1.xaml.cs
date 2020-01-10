@@ -269,7 +269,6 @@ namespace InsertTextClient
                         + "is read-only.\n\n");
                 }
 
-
                 // Once you have an instance of an AutomationElement,  
                 // check if it supports the ValuePattern pattern.
                 object valuePattern = null;
@@ -333,7 +332,6 @@ namespace InsertTextClient
             }
         }
         //</SnippetInsertText>
-
 
         ///--------------------------------------------------------------------
         /// <summary>

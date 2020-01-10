@@ -13,8 +13,7 @@
        Console.WriteLine( "The one-dimensional Array contains the following values:" );
        PrintValues( my1DArray );
     }
- 
- 
+
     public static void PrintValues( Array myArr )  {
        System.Collections.IEnumerator myEnumerator = myArr.GetEnumerator();
        int i = 0;
@@ -38,4 +37,3 @@
      1    2    3    4    5
  */
 // </Snippet1>
-

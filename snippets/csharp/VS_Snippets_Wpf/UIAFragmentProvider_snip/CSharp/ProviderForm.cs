@@ -48,7 +48,6 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-
 namespace ElementProvider
 {
     public partial class UIAFragmentProviderForm : Form

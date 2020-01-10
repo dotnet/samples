@@ -15,7 +15,6 @@ using System.IO;
 using System.Text;
 using System.Collections;
 
-
 namespace Mssc.System.Net.Authentication
 {
   // The ClientAuthentication performs the following main tasks:

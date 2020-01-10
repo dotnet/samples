@@ -25,7 +25,6 @@ namespace DP_Custom_CopyToDataTable_Examples
             Console.WriteLine("Hit enter...");
             Console.Read();
 
-
         } // Main
 
         static void JoinQuery()
@@ -187,7 +186,6 @@ namespace DP_Custom_CopyToDataTable_Examples
                 // information to the configuration setting "AdventureWorks".
                 string connectionString = "Data Source=localhost;Initial Catalog=AdventureWorks;"
                     + "Integrated Security=true;";
-
 
                 SqlDataAdapter da = new SqlDataAdapter(
                     "SELECT SalesOrderID, ContactID, OrderDate, OnlineOrderFlag, " +

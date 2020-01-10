@@ -30,4 +30,3 @@ class MyClass
    }
 }
 // </Snippet1>
-

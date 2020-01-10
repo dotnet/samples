@@ -40,8 +40,6 @@ public class RemoteObject : MarshalByRefObject {
 }
 // </Snippet2>
 
-
-
 // <Snippet1>
 // a custom ObjRef class that outputs its status
 [PermissionSet(SecurityAction.Demand, Name="FullTrust")]
@@ -117,4 +115,3 @@ public class LocalObject : MarshalByRefObject  {
    }
 }
 // </Snippet1>
-

@@ -14,7 +14,6 @@ namespace MyNamespace
 }
 // </Snippet1>
 
-
 class StubClass
 {
     public static void Main() {}

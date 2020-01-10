@@ -60,7 +60,6 @@ public class Form1:
 	// Declare MenuItem2 as With-Events because it will be user drawn.
 	internal System.Windows.Forms.MenuItem MenuItem2;
 
-
 	private void InitializeMenu()
 	{
 
@@ -119,4 +118,3 @@ public class Form1:
 	}
 
 }
-

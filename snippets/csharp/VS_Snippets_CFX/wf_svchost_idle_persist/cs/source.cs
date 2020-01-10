@@ -39,7 +39,6 @@ namespace ConsoleX
         }
     }
 
-
     [ServiceContract] 
     interface ICalculator
     {

@@ -13,7 +13,6 @@ namespace ConsoleApplication1
     class myAttribute : Attribute
     {
 
-
     }
 
     //Reflection context with custom rules.
@@ -30,7 +29,6 @@ namespace ConsoleApplication1
                    foreach (var attr in declaredAttributes) yield return attr;
              }    
     }
-
 
     class Program
     {

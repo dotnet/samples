@@ -1,6 +1,5 @@
 ﻿using System;
 
-
 class someclass
 {
     //<Snippet1>
@@ -10,10 +9,7 @@ class someclass
     }
     //</Snippet1>
 
-
-
     //<Snippet2>
-
 
     void Method(bool condition)
     {

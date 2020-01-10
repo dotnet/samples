@@ -10,7 +10,6 @@ namespace ThreadLocalFor
  using System.Threading;
  using System.Threading.Tasks;
 
-
  class Test
  {
      static void Main()
@@ -80,4 +79,3 @@ namespace NotInUse
         }
     }
 }
-

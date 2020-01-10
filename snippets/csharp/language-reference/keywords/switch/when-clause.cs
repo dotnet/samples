@@ -123,4 +123,3 @@ public class Example
 //          Area: 64
 //       A Circle shape
 // </Snippet1>
-

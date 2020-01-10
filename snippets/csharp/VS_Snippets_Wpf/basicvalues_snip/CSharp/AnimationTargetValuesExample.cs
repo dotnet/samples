@@ -242,7 +242,6 @@ namespace Microsoft.Samples.Animation.AnimatePathShapeSample
 
         }
 
-
         public AnimationTargetValuesExample()
         {
             NameScope.SetNameScope(this, new NameScope());

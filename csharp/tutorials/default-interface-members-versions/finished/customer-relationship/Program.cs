@@ -17,7 +17,6 @@ namespace customer_relationship
                 }
             };
 
-
             SampleOrder o = new SampleOrder(new DateTime(2012, 6, 1), 5m);
             c.AddOrder(o);
 
@@ -40,8 +39,6 @@ namespace customer_relationship
 
                 recurring.AddMonths(2);
             }
-
-
 
             Console.WriteLine($"Data about {c.Name}");
             Console.WriteLine($"Joined on {c.DateJoined}. Made {c.PreviousOrders.Count()} orders, the last on {c.LastOrder}");

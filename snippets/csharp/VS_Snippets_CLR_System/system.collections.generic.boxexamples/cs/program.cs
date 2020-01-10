@@ -252,7 +252,6 @@ public class BoxEnumerator : IEnumerator<Box>
     private int curIndex;
     private Box curBox;
 
-
     public BoxEnumerator(BoxCollection collection)
     {
         _collection = collection;
@@ -285,7 +284,6 @@ public class BoxEnumerator : IEnumerator<Box>
         get { return curBox; }
     }
 
-
     object IEnumerator.Current
     {
         get { return Current; }
@@ -311,7 +309,6 @@ public class BoxSameDimensions : EqualityComparer<Box>
         }
     }
 
-
     public override int GetHashCode(Box bx)
     {
         int hCode = bx.Height ^ bx.Length ^ bx.Width;
@@ -336,7 +333,6 @@ public class BoxSameVol : EqualityComparer<Box>
             return false;
         }
     }
-
 
     public override int GetHashCode(Box bx)
     {
@@ -371,4 +367,3 @@ Contains 8x12x10 by volume: True
  */
 
 // </Snippet1>
-

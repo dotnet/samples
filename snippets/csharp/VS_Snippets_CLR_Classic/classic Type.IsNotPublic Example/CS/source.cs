@@ -29,4 +29,3 @@ public class A
     private class C { }
 }
 // </Snippet2>
-

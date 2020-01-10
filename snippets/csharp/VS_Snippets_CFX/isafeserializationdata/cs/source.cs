@@ -108,7 +108,6 @@ namespace ISafeSerializationDataExample
         // (with SerializationInfo and StreamingContext parameters), 
         // and no need to supply a GetObjectData implementation.
 
-
         // Data access is through the state object (m_State).
         public string StringData
         {

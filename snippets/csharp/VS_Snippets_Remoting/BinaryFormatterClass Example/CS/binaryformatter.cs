@@ -44,7 +44,6 @@ public class App
         }
     }
 
-   
     static void Deserialize() 
     {
         // Declare the hashtable reference.

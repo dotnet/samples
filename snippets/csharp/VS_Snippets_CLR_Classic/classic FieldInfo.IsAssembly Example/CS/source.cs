@@ -41,4 +41,3 @@ f_protected          False    False    True     False    False
 f_protected_public   False    False    False    True     False
  */
 // </Snippet1>
-

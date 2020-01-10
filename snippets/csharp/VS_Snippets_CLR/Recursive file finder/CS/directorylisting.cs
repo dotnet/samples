@@ -29,7 +29,6 @@ public class RecursiveFileProcessor
         }        
     }
 
-
     // Process all files in the directory passed in, recurse on any directories 
     // that are found, and process the files they contain.
     public static void ProcessDirectory(string targetDirectory) 

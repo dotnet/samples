@@ -138,4 +138,3 @@ namespace Examples.AdvancedProgramming.AsynchronousOperations
     }
 }
 // </Snippet6>
-

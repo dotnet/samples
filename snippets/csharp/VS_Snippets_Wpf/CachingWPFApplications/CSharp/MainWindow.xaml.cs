@@ -15,7 +15,6 @@ using System.Windows.Shapes;
 using System.Runtime.Caching;
 using System.IO;
 
-
 namespace WPFCaching
 {
     /// <summary>
@@ -53,7 +52,6 @@ namespace WPFCaching
 
             }
             MessageBox.Show(fileContents);
-
 
         }
     }

@@ -160,7 +160,6 @@ namespace ActivityExample
 
         }
 
-
     }
 
     //<snippet1>
@@ -287,7 +286,6 @@ namespace ActivityExample
         }
     }
     //</snippet8>
-    
 
     //<snippet9>
     public sealed class GenerateRandomMax : AsyncCodeActivity<int>

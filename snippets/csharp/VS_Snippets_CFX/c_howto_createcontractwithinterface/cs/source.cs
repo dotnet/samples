@@ -22,7 +22,6 @@ public interface ICalculator
 
 //</snippet1>
 
-
     public class Test
     {
         public static void Main()

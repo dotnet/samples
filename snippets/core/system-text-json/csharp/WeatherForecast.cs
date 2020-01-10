@@ -99,7 +99,6 @@ namespace SystemTextJsonSamples
     }
     // </SnippetWFWithIgnoreAttribute>
 
-
     // <SnippetWFDerived>
     public class WeatherForecastDerived : WeatherForecast
     {

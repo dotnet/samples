@@ -56,8 +56,7 @@ class propertyattributesenum
         Aproperty Mypropertya = new Aproperty();
         Bproperty Mypropertyb = new Bproperty();
         Cproperty Mypropertyc = new Cproperty();
-  
-      
+
         Console.Write("\n1. Mypropertya.Caption = " + Mypropertya.Caption );
       
         Console.Write("\n1. Mypropertyb.Caption = " + Mypropertyb.Caption );
@@ -116,4 +115,3 @@ class propertyattributesenum
 // b- None
 // c- None
 // </Snippet1>
-

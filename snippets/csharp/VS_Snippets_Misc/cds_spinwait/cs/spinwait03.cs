@@ -145,4 +145,3 @@ class Example
    }
 }
 // </Snippet03>
-

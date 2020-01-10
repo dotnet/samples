@@ -70,7 +70,6 @@ namespace WriteEventRelatedId
                 }
             }
 
-
             //</snippet2>
 
             //<snippet3>

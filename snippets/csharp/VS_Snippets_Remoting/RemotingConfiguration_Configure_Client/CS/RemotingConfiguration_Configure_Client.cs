@@ -17,5 +17,3 @@ using System.Security.Permissions;
       Console.WriteLine(myObject.MyMethod("ClientString"));
     } 
   }
-
-

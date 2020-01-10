@@ -13,7 +13,6 @@ using System.Security.Cryptography.X509Certificates;
 using System.ServiceModel;
 using System.ServiceModel.Security;
 
-
 // Multi-party chat application using Peer Channel (a multi-party channel).
 // If you are unfamiliar with new concepts used in this sample, refer to the WCF Basic\GettingStarted sample.
 

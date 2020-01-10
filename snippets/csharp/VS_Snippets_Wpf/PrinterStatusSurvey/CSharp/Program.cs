@@ -20,7 +20,6 @@ namespace PrinterStatusSurvey
             Console.Write("Enter \"y\" to check queues using their QueueStatus attributes.\nOtherwise, press Return and they will be checked using their specific properties: ");
             String useAttributesResponse = Console.ReadLine();
 
-            
             //<SnippetSurveyQueues>
             // Survey queue status for every queue on every print server
             String line;

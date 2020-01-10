@@ -9,7 +9,6 @@ using System.Windows.Shapes;
 namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
 {
 
- 
     public class MultipleNameScopesExample : Page
     {
         
@@ -19,8 +18,7 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
         
         public MultipleNameScopesExample()
         {
-            
-            
+
             this.Background = Brushes.White;
             mainPanel = new StackPanel();
             mainPanel.Background = Brushes.Gray;
@@ -59,8 +57,7 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
             startRectangle1AnimationButton.Click += 
                 new RoutedEventHandler(startRectangle1AnimationButton_clicked);
             mainPanel.Children.Add(startRectangle1AnimationButton);
-            
-            
+
             // Create a rectangle, add it to childPanel1,
             // but register its name with mainPanel.
             rectangle2 = new Rectangle();
@@ -84,15 +81,11 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
             startRectangle2AnimationButton.Click += 
                 new RoutedEventHandler(startRectangle2AnimationButton_clicked);
             mainPanel.Children.Add(startRectangle2AnimationButton);            
-            
-            
-            
 
             this.Content = mainPanel;
                            
         }  
-        
-        
+
         private void startRectangle1AnimationButton_clicked(object sender, RoutedEventArgs args)
         {
         
@@ -140,8 +133,7 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
             
             // This statement works as expected.
             storyboard2.Begin(mainPanel);
-            
-        
+
         }
         
     }    

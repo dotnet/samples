@@ -36,7 +36,6 @@ public class MyForm : Form
       myDataGrid = new DataGrid();
       removeStyle = new Button();
 
-
       // Set the myDataGrid properties.
       myDataGrid.Location = new  Point(24, 50);
       myDataGrid.Size = new Size(300, 200);
@@ -49,7 +48,6 @@ public class MyForm : Form
       removeStyle.Text = "Remove";
       removeStyle.Click +=
          new System.EventHandler(this.RemoveColumnStyle_Clicked);
-
 
       ClientSize = new Size(600, 500);
       Name = "GridColumnStylesCollection_RemoveAt";
@@ -141,7 +139,6 @@ public class MyForm : Form
       // Add column styles collection.
       AddCustomDataTableStyle();
    }
-
 
    private void AddCustomDataTableStyle()
    {

@@ -17,7 +17,6 @@ public class CallbackHandler : ICalculatorDuplexCallback
   }
 }
 
-
 public class Client
 {
   public static void Main()

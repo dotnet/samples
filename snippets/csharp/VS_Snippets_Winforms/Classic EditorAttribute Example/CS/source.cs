@@ -4,7 +4,6 @@ using System.Drawing.Design;
 using System.ComponentModel;
 using System.Windows.Forms;
 
-
 public class Class1{
     // <Snippet1>
    [Editor("System.Windows.Forms.ImageEditorIndex, System.Design", 

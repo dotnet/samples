@@ -17,11 +17,9 @@ namespace MessageQueryExamples
             // The XPathMessageQueryCollection inherits from MessageQueryCollection.
             XPathMessageQueryCollection queryCollection = MessageHelper.SetupQueryCollection();
 
-
             // Create a message and a copy of the message. You must create a buffered copy to access the message body.
             Message mess = MessageHelper.CreateMessage();
             MessageBuffer mb = mess.CreateBufferedCopy(int.MaxValue);
-
 
             // Evaluate every query in the collection. 
             foreach (XPathMessageQuery q in queryCollection)
@@ -107,13 +105,11 @@ namespace MessageQueryExamples
         public static string xpath7 = "//PurchaseOrder/@date";
         public static string xpath8 = "//SpecialOffer/ancestor::Item[@product = 'brad']";
 
-        // Invoke the correlation data function.
-
+        // Invoke the correlation data function.
         public static string xpath9 = "sm:correlation-data('CorrelationData1')";
         public static string xpath10 = "sm:correlation-data('CorrelationData2')";
 
         public static string xpath11 = "/s12:Envelope/s12:Body/PurchaseOrder/Items/Item[@quantity = 2]";
-
 
         public static Message CreateMessage()
         {
@@ -132,8 +128,6 @@ namespace MessageQueryExamples
 
             return message;
         }
-
-
 
         public static XPathMessageQueryCollection SetupQueryCollection()
         {
@@ -164,7 +158,6 @@ namespace MessageQueryExamples
             // Compare this to the MessageQueryCollection.
             MessageQueryTable<string> table = new MessageQueryTable<string>();
             XPathMessageContext context = new XPathMessageContext();
-
 
             // The code adds a KeyValuePair to the table. Each pair requires
             // a query used as the Key, and a value that is paired to the key.

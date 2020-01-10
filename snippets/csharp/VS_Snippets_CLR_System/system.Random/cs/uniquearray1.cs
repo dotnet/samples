@@ -76,7 +76,6 @@ public class Dealer
    }
 }
 
-
 public class Example
 {
    public static void Main()

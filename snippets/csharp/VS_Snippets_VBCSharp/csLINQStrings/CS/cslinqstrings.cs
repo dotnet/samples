@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -44,7 +43,6 @@ namespace LINQStrings
       ABCDE99F
     */
     //</snippet1>
-
 
     //<snippet2>
     class MergeStrings
@@ -182,7 +180,6 @@ namespace LINQStrings
 
             string[] names = System.IO.File.ReadAllLines(@"../../../names.csv");
             string[] scores = System.IO.File.ReadAllLines(@"../../../scores.csv");
-            
 
             // Name:    Last[0],       First[1],  ID[2]
             //          Omelchenko,    Svetlana,  11
@@ -273,7 +270,6 @@ namespace LINQStrings
         
     //</snippet3>
 
-
     //<snippet4>
     class CountWords
     {
@@ -313,8 +309,6 @@ namespace LINQStrings
        3 occurrences(s) of the search term "data" were found.
     */
     //</snippet4>
-
-
 
     class AlphabetizeLists
     {
@@ -358,7 +352,6 @@ namespace LINQStrings
             Console.WriteLine("Press any key");
             Console.ReadKey();
         }
-
 
     }
     //<snippet9>
@@ -923,14 +916,12 @@ namespace RegEx
             {
                 Console.WriteLine("Name and ID: {0}, Average Score: {1}", item.Name, item.TestScores.Average());
             }
-            
 
             //Keep console window open in debug mode
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
         }
     }
-    
 
 }
     // This doesn't seem to be used anywhere
@@ -957,7 +948,6 @@ namespace RegEx
             if (!System.IO.Directory.Exists(root))
                 throw new ArgumentException();
             dirs.Push(root);
-
 
             while (dirs.Count > 0)
             {
@@ -1049,8 +1039,6 @@ namespace RegEx
             double avg = s.ExamScores.Average();
             return avg > 0 ? (int)avg / 10 : 0;
         }
-
-        
 
         static void QueryHighScores(int exam, int score)
         {

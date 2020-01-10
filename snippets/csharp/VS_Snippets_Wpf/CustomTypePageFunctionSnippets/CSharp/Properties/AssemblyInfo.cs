@@ -31,7 +31,6 @@ using System.Runtime.InteropServices;
 
 //[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]
 
-
 // Specifies the location in which theme dictionaries are stored for types in an assembly.
 [assembly: ThemeInfo(
     // Specifies the location of system theme-specific resource dictionaries for this project.
@@ -48,7 +47,6 @@ using System.Runtime.InteropServices;
     // Specifies the location of the system non-theme specific resource dictionary:
     //     Themes\generic.xaml
     ResourceDictionaryLocation.SourceAssembly)]
-
 
 // Version information for an assembly consists of the following four values:
 //

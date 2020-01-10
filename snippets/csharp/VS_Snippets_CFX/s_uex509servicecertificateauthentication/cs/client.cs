@@ -15,7 +15,6 @@ using System.Security.Cryptography.X509Certificates;
 using System.ServiceModel.Security.Tokens;
 using System.IdentityModel.Selectors;
 
-
 namespace Microsoft.ServiceModel.Samples
 {
     //The service contract is defined in generatedProxy.cs, generated from the service by the svcutil tool.

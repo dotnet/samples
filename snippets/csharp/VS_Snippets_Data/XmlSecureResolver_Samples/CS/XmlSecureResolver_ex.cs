@@ -82,5 +82,4 @@ xslt.Load("http://serverName/data/xsl/sort.xsl", null, myResolver);
 //</snippet6>
 }
 
-
 }

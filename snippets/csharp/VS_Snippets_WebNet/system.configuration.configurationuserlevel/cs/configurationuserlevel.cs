@@ -10,7 +10,6 @@ using System.Collections.Specialized;
 using System.Diagnostics;
 using System.Text;
 
-
 public class UsingConsoleConfigElement
 {
 
@@ -33,14 +32,12 @@ public class UsingConsoleConfigElement
                 e.ToString());
         }
 
-
     }
 
     // Get the roaming configuration file associated 
     // with the current user.
     static void GetRoamingConfigurationFile()
     {
-
 
         try
         {
@@ -58,7 +55,6 @@ public class UsingConsoleConfigElement
             Console.WriteLine("[Exception error: {0}]",
                 e.ToString());
         }
-
 
     }
 

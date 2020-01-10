@@ -6,7 +6,6 @@ using System.Windows.Data;
 using System.Windows.Threading;
 using System.Threading;
 
-
 namespace SDKSamples
 {
     public partial class Window1 : Window

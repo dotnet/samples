@@ -32,4 +32,3 @@ class DataTableReaderPrintCol
 
     // </Snippet1>
 }
-

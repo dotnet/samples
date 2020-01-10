@@ -51,5 +51,3 @@ class Example
     }
 }
 // </snippet01>
-
-

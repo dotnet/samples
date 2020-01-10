@@ -18,7 +18,6 @@ public static int Main(string[] args) {
  
     // Write output to the file.
     Trace.Write("Test output ");
- 
 
     // Flush the output.
     Trace.Flush(); 

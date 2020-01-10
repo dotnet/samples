@@ -19,4 +19,3 @@ class Mypropertyinfo
     }
 }
 // </Snippet1>
-

@@ -14,8 +14,6 @@ public class Example
       
    }
 
-
-   
    // <Snippet3>
    decimal _money;   
    

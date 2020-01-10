@@ -57,6 +57,3 @@ class Example
 //       Initial value of instance property: 42
 //       New value of instance property: 37
 //</Snippet2>
-
-
-

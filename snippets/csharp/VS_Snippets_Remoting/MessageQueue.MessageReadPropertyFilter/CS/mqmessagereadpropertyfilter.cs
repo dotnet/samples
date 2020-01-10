@@ -30,7 +30,6 @@ namespace MyProject
 			return;
 		}
 
-
 		//**************************************************
 		// Retrieves the default properties for a Message.
 		//**************************************************
@@ -57,7 +56,6 @@ namespace MyProject
 	
 			return;
 		}
-
 
 		//**************************************************
 		// Retrieves all properties for a Message.
@@ -86,7 +84,6 @@ namespace MyProject
 	
 			return;
 		}
-			
 
 		//**************************************************
 		// Retrieves application-specific properties for a

@@ -39,7 +39,6 @@ namespace Microsoft.Samples.KeyFrameExamples
 
             myStackPanel.Children.Add(myButton);
 
-
             // Assign the Button a name so that
             // it can be targeted by a Storyboard.
             this.RegisterName(
@@ -50,7 +49,6 @@ namespace Microsoft.Samples.KeyFrameExamples
             BooleanAnimationUsingKeyFrames booleanAnimation
                 = new BooleanAnimationUsingKeyFrames();
             booleanAnimation.Duration = TimeSpan.FromSeconds(4);
-
 
             // All the key frames defined below are DiscreteBooleanKeyFrames. 
             // Discrete key frames create sudden "jumps" between values 
@@ -121,8 +119,3 @@ namespace Microsoft.Samples.KeyFrameExamples
     }
 }
 // </SnippetBooleanAnimationUsingKeyFramesWholePage>
-
-
-
-
-

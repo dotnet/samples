@@ -125,7 +125,6 @@ public class SignVerifyEnvelope
         // Append the element to the XML document.
         doc.DocumentElement.AppendChild(doc.ImportNode(xmlDigitalSignature, true));
 
-
         if (doc.FirstChild is XmlDeclaration)
         {
             doc.RemoveChild(doc.FirstChild);
@@ -177,13 +176,11 @@ public class SignVerifyEnvelope
 
     }
 
-
     public static X509Certificate2 GetCertificateBySubject(string CertificateSubject)
     {
         // Check the args.
         if (null == CertificateSubject)
             throw new ArgumentNullException("CertificateSubject");
-
 
         // Load the certificate from the certificate store.
         X509Certificate2 cert = null;

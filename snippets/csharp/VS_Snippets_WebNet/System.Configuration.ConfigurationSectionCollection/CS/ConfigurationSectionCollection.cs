@@ -6,7 +6,6 @@ using System.Collections;
 namespace Samples.AspNet.Configuration
 {
 
-
     // Define a custom section programmatically.
     public sealed class CustomSection :
         ConfigurationSection
@@ -14,7 +13,6 @@ namespace Samples.AspNet.Configuration
         // The collection (property bag) that contains 
         // the section properties.
         private static ConfigurationPropertyCollection _Properties;
-
 
         // The FileName property.
         private static readonly ConfigurationProperty _FileName =
@@ -46,7 +44,6 @@ namespace Samples.AspNet.Configuration
             _Properties.Add(_MaxIdleTime);
         }
 
-
         // This is a key customization. 
         // It returns the initialized property bag.
         protected override ConfigurationPropertyCollection Properties
@@ -56,8 +53,6 @@ namespace Samples.AspNet.Configuration
                 return _Properties;
             }
         }
-
-
 
         [StringValidator(InvalidCharacters = " ~!@#$%^&*()[]{}/;'\"|\\",
             MinLength = 1, MaxLength = 60)]
@@ -103,9 +98,7 @@ namespace Samples.AspNet.Configuration
             }
         }
 
-
     }
-
 
     class UsingCustomSectionCollection
     {
@@ -151,7 +144,6 @@ namespace Samples.AspNet.Configuration
                 ConfigurationManager.OpenExeConfiguration(
                 ConfigurationUserLevel.None);
 
-
                 ConfigurationSectionCollection sections =
                     config.Sections;
 
@@ -160,7 +152,6 @@ namespace Samples.AspNet.Configuration
                     Console.WriteLine(
                      "Key value: {0}", key);
                 }
-
 
             }
             catch (ConfigurationErrorsException err)
@@ -237,7 +228,6 @@ namespace Samples.AspNet.Configuration
                 ConfigurationManager.OpenExeConfiguration(
                 ConfigurationUserLevel.None);
 
-
                 ConfigurationSectionCollection sections =
                     config.Sections;
 
@@ -262,7 +252,6 @@ namespace Samples.AspNet.Configuration
         }
         //</Snippet5>
 
-
         //<Snippet7>
         static void GetKeys()
         {
@@ -276,15 +265,12 @@ namespace Samples.AspNet.Configuration
                 ConfigurationSectionCollection sections =
                     config.Sections;
 
-
                 foreach (string key in sections.Keys)
                 {
-
 
                     Console.WriteLine(
                      "Key value: {0}", key);
                 }
-
 
             }
             catch (ConfigurationErrorsException err)
@@ -307,7 +293,6 @@ namespace Samples.AspNet.Configuration
 
                 ConfigurationSectionCollection sections =
                     config.Sections;
-
 
                 ConfigurationSection section1 =
                     sections["runtime"];
@@ -344,7 +329,6 @@ namespace Samples.AspNet.Configuration
                     config.GetSection(
                     "CustomSection") as CustomSection;
 
-
                 if (customSection != null)
                 {
                     config.Sections.Remove("CustomSection");
@@ -363,7 +347,6 @@ namespace Samples.AspNet.Configuration
         }
         //</Snippet9>
 
-
         //<Snippet10>
         static void AddSection()
         {
@@ -376,7 +359,6 @@ namespace Samples.AspNet.Configuration
 
                 CustomSection customSection =
                     new CustomSection();
-
 
                 string index =
                     config.Sections.Count.ToString();
@@ -401,7 +383,6 @@ namespace Samples.AspNet.Configuration
         }
         //</Snippet10>
 
-
         // Exercise the collection.
         // Uncomment the function you want to exercise.
         // Start with CreateSection().
@@ -418,7 +399,6 @@ namespace Samples.AspNet.Configuration
             // Remove();
             // Clear();
         }
-
 
     }
 }

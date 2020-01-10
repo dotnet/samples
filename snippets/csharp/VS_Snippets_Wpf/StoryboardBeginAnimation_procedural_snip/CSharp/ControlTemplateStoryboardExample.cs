@@ -13,7 +13,6 @@ using System.Windows.Shapes;
 using System.Windows.Media.Animation;
 using System.Windows.Documents;
 
-
 namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
 {
     public class ControlTemplateStoryboardExample : Page
@@ -23,8 +22,7 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
         
         public ControlTemplateStoryboardExample()
         {
-        
-            
+
             ControlTemplate myControlTemplate = 
                 new ControlTemplate(typeof(Button));
             FrameworkElementFactory borderFactory = 
@@ -92,8 +90,6 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
         
             myStoryboard.Begin(this);                  
         }
-        
- 
 
     }
 }

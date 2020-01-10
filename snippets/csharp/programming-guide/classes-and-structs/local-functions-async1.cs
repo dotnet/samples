@@ -32,4 +32,3 @@ class Example
 //       at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
 //       at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
 //       at Example.Main() in C:\Users\ronpet\Documents\Visual Studio 2017\Projects\local-functions\async1\Program.cs:line 8
-

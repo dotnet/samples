@@ -57,7 +57,6 @@ namespace System.Drawing.ClassicRectangleFExamplesCS
 		}
 		#endregion
 
-
         // Snippet for: M:System.Drawing.RectangleF.Inflate(System.Drawing.SizeF)
         // <snippet1>
         public void RectangleFInflateExample(PaintEventArgs e)
@@ -81,7 +80,6 @@ namespace System.Drawing.ClassicRectangleFExamplesCS
             e.Graphics.DrawRectangle(Pens.Red, myRect);
         }
         // </snippet1>
-
 
         // Snippet for: M:System.Drawing.RectangleF.Intersect(System.Drawing.RectangleF,System.Drawing.RectangleF)
         // <snippet2>
@@ -111,7 +109,6 @@ namespace System.Drawing.ClassicRectangleFExamplesCS
             e.Graphics.DrawRectangle(Pens.Blue, intersectRect);
         }
         // </snippet2>
-
 
         // Snippet for: M:System.Drawing.RectangleF.Union(System.Drawing.RectangleF,System.Drawing.RectangleF)
         // <snippet3>

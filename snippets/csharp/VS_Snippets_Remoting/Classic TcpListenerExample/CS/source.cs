@@ -10,7 +10,6 @@
 * after translating it into uppercase. 
 * Refer to the related client in the TcpClient class. 
 */
-
 using System;
 using System.Text;
 using System.IO;
@@ -20,7 +19,6 @@ using System.Threading;
 
 public class TcpListenerSample
 {
-
 
     static void Main(string[] args)
     {
@@ -32,7 +30,6 @@ public class TcpListenerSample
 
             // Start listening for client requests
             server.Start();
-
 
             // Buffer for reading data
             byte[] bytes = new byte[1024];
@@ -83,7 +80,6 @@ public class TcpListenerSample
         {
             Console.WriteLine("SocketException: {0}", e);
         }
-
 
         Console.WriteLine("Hit enter to continue...");
         Console.Read();

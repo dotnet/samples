@@ -88,7 +88,6 @@ public class Test
 
     }
 
-
     private static void ControlThreadProc()
     {
         // Allow the timer to run for a period of time, and then 
@@ -132,7 +131,6 @@ public class Test
         // cause a problem when run concurrently with timer events,
         // then there is no need for the extra synchronization.
     }
-
 
     // Event-handling methods for the Elapsed events of the two
     // timers.
@@ -203,6 +201,3 @@ Test 100/100    100 test runs completed.
 Control thread waited 77 times for an event to complete.
  */
 //</Snippet1>
-
-
-

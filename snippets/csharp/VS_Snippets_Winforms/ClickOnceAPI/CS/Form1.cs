@@ -20,7 +20,6 @@ namespace ClickOnceAPI
 
         }
 
-
         private void UpdateAppButton_Click(object sender, EventArgs e)
         {
             UpdateApplication();

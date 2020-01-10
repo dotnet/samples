@@ -10,7 +10,6 @@ using System.Windows.Media;
 using System.Windows.Shapes;
 using System.Windows.Media.Animation;
 
-
 namespace Microsoft.Samples.Animation
 {
     public partial class AnimatingSizeExample : Page

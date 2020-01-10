@@ -186,5 +186,3 @@ internal class Example
     }
 }
 //</Snippet1>
-
-

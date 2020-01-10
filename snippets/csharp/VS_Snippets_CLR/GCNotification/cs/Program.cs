@@ -25,7 +25,6 @@ namespace GCNotify
         // simulate the server request workload.
         static List<byte[]> load = new List<byte[]>();
 
-
         public static void Main(string[] args)
         {
             try
@@ -48,8 +47,7 @@ namespace GCNotify
 
                     int lastCollCount = 0;
                     int newCollCount = 0;
-                    
-                    
+
                     while (true)
                     {
                         if (bAllocate)
@@ -78,7 +76,6 @@ namespace GCNotify
                 {
                     Console.WriteLine("Out of memory.");
                 }
-
 
                 // <Snippet7>
                 finalExit = true;
@@ -119,7 +116,6 @@ namespace GCNotify
 
         }
         // </Snippet5>
-
 
         // <Snippet6>
         public static void OnFullGCCompleteEndNotify()
@@ -184,7 +180,6 @@ namespace GCNotify
                     }
                     // </Snippet4>
                 }
-
 
                 Thread.Sleep(500);
                 // FinalExit is set to true right before  

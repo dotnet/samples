@@ -20,4 +20,3 @@ namespace Microsoft.WCF.Documentation
         }
       }
 }
-

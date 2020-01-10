@@ -11,7 +11,6 @@ namespace ConsoleApplication1
     class client
     {
 
-
         static void RunClient()
         {
             //Step1: create a binding with just HTTP

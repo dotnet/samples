@@ -27,4 +27,3 @@ public class Example
 //       Francine              80.0
 //       George                16.8
 // </Snippet8>
-

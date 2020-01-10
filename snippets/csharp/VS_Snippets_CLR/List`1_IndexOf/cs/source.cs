@@ -50,5 +50,3 @@ IndexOf("Tyrannosaurus", 3): 5
 IndexOf("Tyrannosaurus", 2, 2): -1
  */
 // </Snippet1>
-
-

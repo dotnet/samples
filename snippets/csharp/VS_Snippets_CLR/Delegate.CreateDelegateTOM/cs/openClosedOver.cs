@@ -49,7 +49,6 @@ public class Example
         D2 d2;
         D3 d3;
 
-
         Console.WriteLine("\nAn instance method closed over C.");
         // In this case, the delegate and the
         // method must have the same list of argument types; use
@@ -74,7 +73,6 @@ public class Example
             d2("Hi, Mom!");
         }
 
-
         Console.WriteLine("\nAn open instance method.");
         // In this case, the delegate has one more 
         // argument than the instance method; this argument comes
@@ -90,7 +88,6 @@ public class Example
         d1(c1, "Hello, World!");
         d1(new C(5280), "Hi, Mom!");
 
-
         Console.WriteLine("\nAn open static method.");
         // In this case, the delegate and the method must 
         // have the same list of argument types; use delegate type
@@ -103,7 +100,6 @@ public class Example
         //
         d2("Hello, World!");
         d2("Hi, Mom!");
-
 
         Console.WriteLine("\nA static method closed over the first argument (String).");
         // The delegate must omit the first argument of the method.

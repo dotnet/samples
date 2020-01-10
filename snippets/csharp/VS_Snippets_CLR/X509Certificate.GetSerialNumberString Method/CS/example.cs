@@ -3,7 +3,6 @@
 using System;
 using System.Security.Cryptography.X509Certificates;
 
-
 public class X509
 {
 
@@ -22,8 +21,6 @@ public class X509
         // Display the value to the console.
         Console.WriteLine(results);
 
-
-  
     }
 
 }

@@ -50,7 +50,6 @@ namespace QEbasics
         }
     }
 
-    
     class QueryExpressionBasics2
     {
         //<snippet49>
@@ -119,7 +118,6 @@ namespace QEbasics
             public int GradeLevel { get; set; }
         }
 
-        
             // Use a collection initializer to create the data source. Note that each element
             //  in the list contains an inner sequence of scores.
             static List<Student> students = new List<Student>
@@ -142,7 +140,6 @@ namespace QEbasics
                 where city.Population > 100000
                 select city;
 
-            
             // Method-based syntax
             IEnumerable<City> queryMajorCities2 = cities.Where(c => c.Population > 100000);
             //</snippet50>

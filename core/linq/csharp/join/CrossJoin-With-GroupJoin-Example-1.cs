@@ -67,7 +67,6 @@ namespace Join
 
             List<Product> products = Data.Products;
 
-
             var q =
                 from c in categories
                 join p in products on c equals p.Category into ps
@@ -140,7 +139,6 @@ namespace Join
             };
 
             List<Product> products = Data.Products;
-
 
             var q =
                 categories.GroupJoin(products, c => c, p => p.Category, (c, ps) => new {c, ps})

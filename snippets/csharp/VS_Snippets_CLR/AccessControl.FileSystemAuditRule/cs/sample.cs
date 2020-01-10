@@ -41,7 +41,6 @@ namespace FileSystemExample
         public static void AddFileAuditRule(string FileName, string Account, FileSystemRights Rights, AuditFlags AuditRule)
         {
 
-
             // Get a FileSecurity object that represents the 
             // current security settings.
             FileSecurity fSecurity = File.GetAccessControl(FileName);

@@ -108,7 +108,6 @@ public class Form1:
 			new System.IO.DirectoryInfo(
 			"C:\\Documents and Settings\\All Users" +
 			"\\Documents\\My Pictures\\Sample Pictures");
-		
 
 		// Get the .jpg files from the directory
 		System.IO.FileInfo[] files = dirInfo.GetFiles("*.jpg");
@@ -149,7 +148,6 @@ public class Form1:
 
 	}
 
-
 	private void ListView1_MouseDown(object sender, MouseEventArgs e)
 	{
 
@@ -165,4 +163,3 @@ public class Form1:
 	}
 	// </snippet2>
 }
-

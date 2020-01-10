@@ -55,7 +55,6 @@ public class Int16Collection : CollectionBase  {
 
 }
 
-
 public class SamplesCollectionBase  {
 
    public static void Main()  {
@@ -185,4 +184,3 @@ Contents of the collection after removing the element 2:
 */
 
 // </Snippet1>
-

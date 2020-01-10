@@ -11,7 +11,6 @@ using System.Xml;
 using System.Runtime.Serialization;
 using System.Collections;
 
-
 namespace Microsoft.Samples.Channels.ChunkingChannel
 {
     public class ChunkingMessage : Message

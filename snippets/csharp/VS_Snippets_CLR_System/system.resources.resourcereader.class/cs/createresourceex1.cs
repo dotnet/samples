@@ -7,7 +7,6 @@ using System.Resources;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 
-
 public class Example
 {
    public static void Main()
@@ -35,7 +34,6 @@ public class Example
    }
 }
 // </Snippet5>
-
 
 // This is included only to prevent a compilation error.
 [Serializable] public struct DateTimeTZI

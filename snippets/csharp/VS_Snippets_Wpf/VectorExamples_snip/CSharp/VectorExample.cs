@@ -1,6 +1,4 @@
-﻿
-
-using System;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
@@ -15,13 +13,11 @@ namespace Microsoft.Samples.VectorExamples
 
     public class VectorExample : Page
     {
-    
-        
+
         public VectorExample()
         {
             
             StackPanel mainPanel = new StackPanel();
-
 
             TextBlock addTwoVectorsExampleText = new TextBlock();
             addTwoVectorsExampleText.Text = "addTwoVectorsExample: " + addTwoVectorsExample().ToString();
@@ -720,8 +716,6 @@ namespace Microsoft.Samples.VectorExamples
 
         }
         // </SnippetVectorEqualityExample>
-        
-    
 
     }
 

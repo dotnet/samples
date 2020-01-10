@@ -16,7 +16,6 @@ namespace CS
             //</Snippet7>
         }
 
-
         //<Snippet2>
         private void customersDataGridView_DoubleClick(object sender, EventArgs e)
         {
@@ -32,12 +31,10 @@ namespace CS
         }
         //</Snippet2>
 
-
         public Form1()
         {
             InitializeComponent();
         }
-
 
         private void customersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -45,7 +42,6 @@ namespace CS
             this.customersBindingSource.EndEdit();
             this.customersTableAdapter.Update(this.northwindDataSet.Customers);
         }
-
 
         private void Form1_Load(object sender, EventArgs e)
         {

@@ -51,7 +51,6 @@ public class DataFormats_UnicodeText
 			Console.WriteLine(e.Message);
 		}
 
-      
 // </Snippet2>
 // </Snippet1>
    }    

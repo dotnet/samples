@@ -159,4 +159,3 @@ namespace BrushesIntroduction
     }
 }
 // </SnippetGraphicsMMDrawingBrushTileModeExample>
-

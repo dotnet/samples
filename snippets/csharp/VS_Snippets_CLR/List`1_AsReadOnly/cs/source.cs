@@ -67,5 +67,3 @@ Coelophysis
 Deinonychus
  */
 // </Snippet1>
-
-

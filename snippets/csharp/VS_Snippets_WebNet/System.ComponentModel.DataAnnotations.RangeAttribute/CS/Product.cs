@@ -10,7 +10,6 @@ public partial class Product
 
 }
 
-
 public class ProductMetaData
 {
     

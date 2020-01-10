@@ -53,7 +53,6 @@ namespace StopWatchSample
                                            "Operation: Int32.TryParse(\"0\")",
                                            "Operation: Int32.Parse(\"a\")",
                                            "Operation: Int32.TryParse(\"a\")"};
-         
 
             // Time four different implementations for parsing 
             // an integer from a string. 

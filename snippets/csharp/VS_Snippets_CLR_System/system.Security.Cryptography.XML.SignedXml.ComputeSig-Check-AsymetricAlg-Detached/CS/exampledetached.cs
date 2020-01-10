@@ -11,8 +11,6 @@ using System.Security.Cryptography.Xml;
 using System.Text;
 using System.Xml;
 
-
-
 class XMLDSIGDetached
 {
 	

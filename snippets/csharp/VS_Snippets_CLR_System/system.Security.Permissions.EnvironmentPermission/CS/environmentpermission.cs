@@ -194,7 +194,6 @@ public class EnvironmentPermissionDemo
         else Console.Out.WriteLine("Intersect demo failed.");
         ret = retTmp && ret;
 
-
         // Call Copy demo.
         if (retTmp = CopyDemo()) Console.Out.WriteLine("Copy demo completed successfully.");
         else Console.Out.WriteLine("Copy demo failed.");
@@ -249,4 +248,3 @@ public class EnvironmentPermissionDemo
 
 
 //</Snippet1>
-

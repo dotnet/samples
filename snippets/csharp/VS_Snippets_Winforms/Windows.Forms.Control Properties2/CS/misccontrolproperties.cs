@@ -86,7 +86,6 @@ namespace CursorSetStyle
 			Application.Run(new Form1());
 		}
 
-
 // <snippet1>
 private void Form1_Load(object sender, EventArgs e)
 {
@@ -120,7 +119,6 @@ protected override ImeMode DefaultImeMode
    }
 }
 // </snippet4>
-      
 
 // <snippet3>
 protected override Size DefaultSize

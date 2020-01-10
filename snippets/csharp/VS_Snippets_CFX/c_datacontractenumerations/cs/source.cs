@@ -32,7 +32,6 @@ namespace ServiceModel.Samples
     }
     //</snippet1>
 
-
     //<snippet2>
     [DataContract(Name = "CarCondition")]
     public enum CarConditionWithNumbers

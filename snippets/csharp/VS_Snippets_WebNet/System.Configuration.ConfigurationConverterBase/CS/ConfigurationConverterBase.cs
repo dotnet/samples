@@ -33,7 +33,6 @@ namespace Samples.AspNet
             }
         }
 
-
         [ConfigurationProperty("maxIdleTime")]
         [TypeConverter(typeof(TsMinutesConverter))]
         public TimeSpan MaxIdleTime
@@ -140,7 +139,6 @@ namespace Samples.AspNet
 
         }
 
-
         // Change custom section and write it to disk.
         static void SerializeCustomSection()
         {
@@ -191,7 +189,6 @@ namespace Samples.AspNet
                 TimeSpan maxIdleTime =
                     customSection.MaxIdleTime;
 
-
                 Console.WriteLine("Max idle time: {0}",
                     maxIdleTime.ToString());
             }
@@ -201,7 +198,6 @@ namespace Samples.AspNet
             }
 
         }
-
 
         static void Main(string[] args)
         {

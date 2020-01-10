@@ -18,8 +18,6 @@ public class Group
    }
 }
 
-
-
 public class Example
 {
    public static void Main()

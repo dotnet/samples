@@ -49,7 +49,6 @@ class Example
         }
     }
 
-
     static void Main()
     {
         string source = "Hello World!";

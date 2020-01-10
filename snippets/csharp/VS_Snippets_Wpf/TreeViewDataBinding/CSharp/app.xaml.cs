@@ -25,8 +25,6 @@ namespace TreeViewDataBinding
         {
             MessageBox.Show(e.Exception.Message);
         }
-        
-       
 
     }
 }

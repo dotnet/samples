@@ -20,7 +20,6 @@ namespace Microsoft.Samples.Graphics.UsingImageBrush
         public InteractiveExample()
         {
 
-            
         }
 
         private void InteractiveExampleLoaded(object sender, RoutedEventArgs args)
@@ -30,14 +29,12 @@ namespace Microsoft.Samples.Graphics.UsingImageBrush
           MyDefaultImageButton.IsChecked = true;
           
         }
-  
 
         // Initializes the image brush menu options.
         private void loadInteractiveMenus()
         {
             string[] values;
-            
-            
+
             values = Enum.GetNames(typeof(Stretch));
             foreach (string stretchMode in values)
                 stretchSelector.Items.Add(stretchMode);
@@ -111,8 +108,7 @@ namespace Microsoft.Samples.Graphics.UsingImageBrush
                     viewboxEntry.Text = "Empty";
                     myImageBrush.Viewbox = Rect.Empty;
                 }
-                
-                
+
             }
             catch (InvalidOperationException invalidOpEx)
             {

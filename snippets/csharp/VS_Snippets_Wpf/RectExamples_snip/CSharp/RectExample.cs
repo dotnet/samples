@@ -13,8 +13,7 @@ namespace Microsoft.Samples.RectExamples
 
     public class RectExample : Page
     {
-    
-        
+
         public RectExample()
         {
             
@@ -152,7 +151,6 @@ namespace Microsoft.Samples.RectExamples
             
             this.Content = mainPanel;
         }
-
 
         // <SnippetCreateRectExample1_csharp>
         // Create a rectangle and add it to the page. Also,
@@ -334,7 +332,6 @@ namespace Microsoft.Samples.RectExamples
         }
         // </SnippetCreateRectExample6_csharp>
 
-
         // <SnippetContainsExample1_csharp>
         private bool rectContainsExample1()
         {
@@ -411,7 +408,6 @@ namespace Microsoft.Samples.RectExamples
 
         }
         // </SnippetContainsExample3_csharp>
-
 
         // <SnippetEqualsExample1_csharp>
         private bool rectEqualsExample1()
@@ -1085,7 +1081,6 @@ namespace Microsoft.Samples.RectExamples
 
         }
         // </SnippetTransformExample2_csharp>
-    
 
     }
 

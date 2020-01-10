@@ -53,8 +53,4 @@ namespace Ribbon
         #endregion
     }
 
-   
 }
-
-
-

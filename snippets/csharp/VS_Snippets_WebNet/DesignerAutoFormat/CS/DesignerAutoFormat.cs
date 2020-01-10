@@ -38,7 +38,6 @@ namespace CustomControls.Design.CS
         }
     }
 
-
 	// A design-time ControlDesigner for the IndentLabel control
     [SupportsPreviewControl(true)]
     public class IndentLabelDesigner : LabelDesigner

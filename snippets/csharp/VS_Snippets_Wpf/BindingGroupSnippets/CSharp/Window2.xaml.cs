@@ -73,7 +73,6 @@ namespace BindingGroupSnippets
         //</SnippetUpdateSources>
     }
 
-
     public class Customers : ObservableCollection<Customer>
     {
         public Customers()

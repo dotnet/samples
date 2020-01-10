@@ -14,13 +14,11 @@ namespace CS
             this.customersTableAdapter.Fill(this.northwindDataSet.Customers);
             //</Snippet4>
 
-
             //<Snippet5>
             customersTableAdapter.FillByCity(northwindDataSet.Customers, "Seattle");
             customersTableAdapter.FillByCityAndState(northwindDataSet.Customers, "Seattle", "WA");
             //</Snippet5>
         }
-
 
         //---------------------------------------------------------------------
         private void TestUnTyped()
@@ -33,7 +31,6 @@ namespace CS
             sqlDataAdapter1.Fill(dataset1.Tables["Customers"]);
             //</Snippet6>
         }
-
 
         //-------------------------------------------------------------------------
         private void Parameters()
@@ -54,7 +51,6 @@ namespace CS
             oleDbConnection1.Close();
             //</Snippet16>
 
-
             //<Snippet17>
             int returnValue;
 
@@ -70,7 +66,6 @@ namespace CS
             //</Snippet17>
         }
 
-
         //---------------------------------------------------------------------
         private void TestTableAdapter1()
         {
@@ -80,7 +75,6 @@ namespace CS
 
             tableAdapter.FillByCity(northwindDataSet.Customers, "Seattle");
             //</Snippet7>
-
 
             //<Snippet8>
             SqlConnection sqlConnection1 = new SqlConnection("Your Connection String");
@@ -99,7 +93,6 @@ namespace CS
             sqlConnection1.Close();
             //</Snippet8>
         }
-
 
         //---------------------------------------------------------------------
         private void TestTableAdapter1C()
@@ -122,7 +115,6 @@ namespace CS
             //</Snippet13>
         }
 
-
         //---------------------------------------------------------------------
         private void TestTableAdapter2()
         {
@@ -133,7 +125,6 @@ namespace CS
             int returnValue = (int)tableAdapter.GetCustomerCount();
             //</Snippet9>
         }
-
 
         //---------------------------------------------------------------------
         private void TestTableAdapter2B()
@@ -155,7 +146,6 @@ namespace CS
             //</Snippet10>
         }
 
-
         //---------------------------------------------------------------------
         private void TestTableAdapter2C()
         {
@@ -176,7 +166,6 @@ namespace CS
             //</Snippet14>
         }
 
-
         //---------------------------------------------------------------------
         private void TestTableAdapter3()
         {
@@ -187,7 +176,6 @@ namespace CS
             int rowsAffected = tableAdapter.UpdateContactTitle("Sales Manager", "ALFKI");
             //</Snippet11>
         }
-
 
         //---------------------------------------------------------------------
         private void TestTableAdapter3B()
@@ -209,7 +197,6 @@ namespace CS
             //</Snippet12>
         }
 
-
         //---------------------------------------------------------------------
         private void TestTableAdapter3C()
         {
@@ -230,7 +217,6 @@ namespace CS
             //</Snippet15>
         }
 
-
         //---------------------------------------------------------------------
         private void customersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -238,7 +224,6 @@ namespace CS
             this.customersBindingSource.EndEdit();
             this.customersTableAdapter.Update(this.northwindDataSet.Customers);
         }
-
 
         //---------------------------------------------------------------------
         public Form2()

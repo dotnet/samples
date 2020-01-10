@@ -9,7 +9,6 @@ using System.Windows.Media.Media3D;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-
 namespace MatrixTransform3DView
 {
     /// <summary>
@@ -29,7 +28,6 @@ namespace MatrixTransform3DView
         QuaternionRotation3D myQuaternionRotation3D = new QuaternionRotation3D();
         TranslateTransform3D myTranslateTransform3D = new TranslateTransform3D();
         Transform3DGroup myprocTransformGroup = new Transform3DGroup();
-            
 
         public Window1()
         {
@@ -125,7 +123,6 @@ namespace MatrixTransform3DView
             myRotateTransform3D.Rotation = myAxisAngleRotation3D;
 
             //</SnippetMatrixTransform3DView3DN2>
-
 
             //update matrix display
             //<SnippetMatrixTransform3DView3DN13>

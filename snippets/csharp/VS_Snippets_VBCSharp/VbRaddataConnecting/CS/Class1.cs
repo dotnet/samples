@@ -27,7 +27,6 @@ namespace ObjectBindingWalkthrough
     }
 }
 
-
 namespace WrapOrders
 {
     public class Order{}

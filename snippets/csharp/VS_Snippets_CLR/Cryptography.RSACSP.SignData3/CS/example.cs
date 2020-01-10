@@ -38,7 +38,6 @@ class RSACSPSample
 
             // Hash and sign the data.
             byte[] signedData = HashAndSignBytes(mStream, Key);
-           
 
             // Verify the data and display the result to the 
             // console.

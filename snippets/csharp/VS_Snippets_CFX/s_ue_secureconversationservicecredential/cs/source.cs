@@ -104,7 +104,6 @@ namespace Example
             aesAlg = new RijndaelManaged();
         }
 
-
         protected override byte[] EncodeSecurityState(byte[] data)
         {
             // Create a new cookie container that will protect the WCF cookie.
@@ -119,7 +118,6 @@ namespace Example
             // Return the cookie container as a byte array.
             return serializer.Serialize(cookieContainer);
         }
-
 
         protected override byte[] DecodeSecurityState(byte[] data)
         {
@@ -329,6 +327,5 @@ namespace Example
             return intValue;
         }
     }
-
 
 }

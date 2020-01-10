@@ -1,11 +1,9 @@
-﻿
-//<Snippet18>
+﻿//<Snippet18>
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using Excel = Microsoft.Office.Interop.Excel;
 using Word = Microsoft.Office.Interop.Word;
-
 
 namespace OfficeProgramminWalkthruComplete
 {

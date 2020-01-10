@@ -1,6 +1,5 @@
 ﻿// <Snippet101>
 
-
 using System;
 
 public class Example
@@ -22,5 +21,3 @@ public class Example
 // The example displays the following output:
 //       4  8  12  16
 // </Snippet101>
-
-

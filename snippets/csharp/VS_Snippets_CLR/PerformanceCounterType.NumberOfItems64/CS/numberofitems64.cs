@@ -110,7 +110,6 @@ public class NumberOfItems64
 		}
 	}
 
-	
 	//++++++++//++++++++//++++++++//++++++++//++++++++//++++++++//++++++++//++++++++
 	//++++++++//++++++++//++++++++//++++++++//++++++++//++++++++//++++++++//++++++++
 	private static Single MyComputeCounterValue(CounterSample s0, CounterSample s1)

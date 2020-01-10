@@ -103,7 +103,6 @@ class FibonacciNumber : Form
 			last = current;
 		}
 
-
 		backgroundWorker.ReportProgress(100, "Complete!");
 	}
     // </snippet10>

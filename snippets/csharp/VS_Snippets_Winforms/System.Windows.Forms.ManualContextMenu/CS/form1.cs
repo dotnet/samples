@@ -72,7 +72,6 @@ public class Form1:
 		Application.Run(new Form1());
 	}
 
-
 	//<snippet1>
 	
 	// Displays the shortcut menu, offsetting its location 
@@ -90,4 +89,3 @@ public class Form1:
 	//</snippet1>
 
 }
-

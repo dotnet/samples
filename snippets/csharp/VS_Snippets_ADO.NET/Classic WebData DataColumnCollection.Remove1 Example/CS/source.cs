@@ -6,7 +6,6 @@ public class Form1: Form
 {
     protected DataSet ds;
 
-
     // <Snippet1>
     private void RemoveColumnByName(string columnName)
     {

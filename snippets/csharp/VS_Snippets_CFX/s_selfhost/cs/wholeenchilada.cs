@@ -9,7 +9,6 @@ using System.ServiceModel.Activation;
 using System.ServiceModel.Description;
 using System.Diagnostics;
 
-
 namespace Microsoft.ServiceModel.Samples
 {
 	public class MyServiceHost: ServiceHostBase
@@ -34,11 +33,9 @@ namespace Microsoft.ServiceModel.Samples
 			return new ServiceDescription();
 		}
 		// </Snippet41>
-		
 
 	}
 
-	
   // Define a service contract.
   [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]
   public interface ICalculator
@@ -89,8 +86,6 @@ namespace Microsoft.ServiceModel.Samples
     }
   }
 
-
-  
   public class Host
   {
 
@@ -147,7 +142,6 @@ namespace Microsoft.ServiceModel.Samples
         TimeSpan openTimeout = hostDefault.OpenTimeout;
         // </Snippet35>
 
-
         // <Snippet36>
         ServiceAuthorizationBehavior authorization =
             hostDefault.Authorization;
@@ -163,12 +157,10 @@ namespace Microsoft.ServiceModel.Samples
                 hostDefault.Description;
         // </Snippet38>
 
-
         // <Snippet39>
         int manualFlowControlLimit =
                 hostDefault.ManualFlowControlLimit;
         // </Snippet39>
-
 
         // <Snippet40>
         NetTcpBinding portsharingBinding = new NetTcpBinding();

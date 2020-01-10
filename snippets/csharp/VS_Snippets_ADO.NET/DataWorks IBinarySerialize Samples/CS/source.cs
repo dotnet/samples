@@ -35,8 +35,7 @@ static void Main(string [] args)
  
     r.Close();
     fs.Close();
-    
-    
+
 }
 
 public string StringValue;

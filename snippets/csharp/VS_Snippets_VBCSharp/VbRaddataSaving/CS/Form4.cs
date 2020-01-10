@@ -72,13 +72,11 @@ namespace CS
             //</Snippet10>
         }
 
-
         //---------------------------------------------------------------------
         public Form4()
         {
             InitializeComponent();
         }
-
 
         //---------------------------------------------------------------------
         private void Form4_Load(object sender, EventArgs e)

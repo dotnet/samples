@@ -16,7 +16,6 @@ using System.IO;
 using System.Xml;
 using System.Xml.Schema;
 
-
 class ServiceDescription_Types
 {
    public static void Main()

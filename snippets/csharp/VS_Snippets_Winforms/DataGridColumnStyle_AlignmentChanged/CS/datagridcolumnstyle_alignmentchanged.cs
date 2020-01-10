@@ -55,8 +55,6 @@ public class Form1 : Form
       }
     String myMessage = null;
 
-
-
       private void Button_Click(object sender, EventArgs e)
       {
          myDataGridColumnStyle.Alignment = HorizontalAlignment.Center;

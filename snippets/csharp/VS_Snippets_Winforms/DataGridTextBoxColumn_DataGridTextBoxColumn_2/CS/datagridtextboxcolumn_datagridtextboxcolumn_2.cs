@@ -8,7 +8,6 @@
    the format of the Date column in the grid is modified to a specific format.
 */
 
-
 using System;
 using System.ComponentModel;
 using System.Data;

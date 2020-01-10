@@ -86,8 +86,6 @@ namespace MyProject
 				// Connect to a queue on the local computer.
 				MessageQueue myQueue = new MessageQueue(".\\myQueue");
 
-
-				
 				// Create the new order.
 				Message myMessage = new Message(sentOrder);
 
@@ -102,7 +100,6 @@ namespace MyProject
 
 			return;
 		}
-
 
 		//**************************************************
 		// Receives a message containing an order.

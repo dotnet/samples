@@ -420,4 +420,3 @@ namespace MyLogging
    {
    }
 }
-

@@ -27,4 +27,3 @@ class Example
     }
 }
 //</snippet1>
-

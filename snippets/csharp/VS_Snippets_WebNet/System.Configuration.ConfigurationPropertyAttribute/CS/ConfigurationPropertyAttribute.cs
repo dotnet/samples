@@ -27,7 +27,6 @@ public class UsingConfigurationPropertyAttribute
                 config.Sections.Add("CustomSection", customSection);
             }
 
-           
             // Save the application configuration file.
             customSection.SectionInformation.ForceSave = true;
             config.Save(ConfigurationSaveMode.Modified);

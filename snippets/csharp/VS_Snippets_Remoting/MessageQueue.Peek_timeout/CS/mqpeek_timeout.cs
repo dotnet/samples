@@ -27,7 +27,6 @@ namespace MyProject
 			return;
 		}
 
-
 		//**************************************************
 		// Determines whether a queue is empty. The Peek()
 		// method throws an exception if there is no message

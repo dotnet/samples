@@ -194,5 +194,3 @@ public class StreamReaderEnumerator : IEnumerator<string>
 //       Found: 2
 //       Memory Used Without Iterator =  206kb
 //</snippet1>
-
-

@@ -75,7 +75,6 @@ namespace ClickOnceOnDemand
                 throw (new Exception("Cannot load assemblies dynamically - application is not deployed using ClickOnce."));
             }
 
-
             return (newAssembly);
         }
         //</SNIPPET2>

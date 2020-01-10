@@ -59,4 +59,3 @@ public class MainClass
 // Use as alternate src for testing:
 //      else
 //          writer.AddAttribute("src", "abbaDabbaDo" );
-

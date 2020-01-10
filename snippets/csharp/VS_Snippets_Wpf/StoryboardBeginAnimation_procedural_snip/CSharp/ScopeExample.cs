@@ -9,9 +9,6 @@ using System.Windows.Shapes;
 namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
 {
 
-
-  
-    
     public class ScopeExample : Page
     {
         
@@ -47,8 +44,7 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
             button2.Content = "Button 2";
             button2.Click += new RoutedEventHandler(button2Clicked);
             myMainPanel.Children.Add(button2);
-            
-            
+
             // Create some animations and a storyboard.
             DoubleAnimation button1WidthAnimation = 
                 new DoubleAnimation(300, 200, new Duration(TimeSpan.FromSeconds(5)));
@@ -72,8 +68,7 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
             this.Content = myMainPanel;
                            
         }  
-        
-        
+
         private void button1Clicked(object sender, RoutedEventArgs args)
         {
         
@@ -95,7 +90,6 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
         }        
         
     }
-    
-      
+
 }
 // </SnippetNameScopeExample>

@@ -1,11 +1,7 @@
-﻿
-// The following code example demonstrates using 
+﻿// The following code example demonstrates using 
 // the following members: LostFocus, OpenFileDialog.Multiselect, 
 // FileNames, Title, ErrorProvider.GetError, PictureBox.Image,
 // Application.DoEvents, and System.Drawing.Image.FromStream.
-
-
-
 
 using System.Windows.Forms;
 
@@ -68,7 +64,6 @@ public class Form1:
 			new System.ComponentModel.CancelEventHandler
 			(openFileDialog1_FileOk);
 	}
-	
 
 	internal System.Windows.Forms.OpenFileDialog openFileDialog1;
 	internal System.Windows.Forms.Button button1;
@@ -204,6 +199,3 @@ public class Form1:
 	//</snippet1>
 
 }
-
-
-

@@ -279,8 +279,6 @@ namespace ObjectServicesConceptsCS
                 //RULE: we should have done fixup by now...
                 //Debug.ReferenceEquals(order.Contact, food);
 
-
-
                 Contact misc = new Contact { FirstName = "Bob" };
                 order.ContactID = misc.ContactID;
 

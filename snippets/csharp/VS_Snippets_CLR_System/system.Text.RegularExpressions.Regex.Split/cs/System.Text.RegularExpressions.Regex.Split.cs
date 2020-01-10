@@ -18,8 +18,6 @@ public class RegexSplit
 //       rs.Split13();
    }
 
-
-
    private void Split14()
    {
       string input = "characters";

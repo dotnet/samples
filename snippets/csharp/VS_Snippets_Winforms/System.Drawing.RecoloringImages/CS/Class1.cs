@@ -5,7 +5,6 @@ using System.Collections;
 using System.Xml;
 using System.Drawing.Imaging;
 
-
 public class SystemDrawingRecoloringImages
 {
 
@@ -186,4 +185,3 @@ public class SystemDrawingRecoloringImages
         // </snippet42>
     }
 }
-

@@ -18,4 +18,3 @@ public class Example
 //        Standard name is: Pacific Standard Time.
 //        Daylight saving name is: Pacific Daylight Time.
 // </Snippet2>
-

@@ -25,8 +25,7 @@ public class Form1 : System.Windows.Forms.Form
         // This call is required for Windows Form Designer support.
         InitializeComponent();
     }
- 
- 
+
     // This method is required for Designer support.
     private void InitializeComponent()
     {

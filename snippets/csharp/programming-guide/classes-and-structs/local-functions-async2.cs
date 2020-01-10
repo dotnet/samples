@@ -30,5 +30,3 @@ class Example
 //    Parameter name: secondsDelay cannot exceed 5.
 //       at Example.GetMultiple(Int32 secondsDelay) in Program.cs:line 17
 //       at Example.Main() in Program.cs:line 8
-
-

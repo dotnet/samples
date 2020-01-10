@@ -13,7 +13,6 @@ namespace cs_testbed
         {
             //Northwnd db = new Northwnd(@"c:\northwnd.mdf");
 
-
         }
 
         // <Snippet1>

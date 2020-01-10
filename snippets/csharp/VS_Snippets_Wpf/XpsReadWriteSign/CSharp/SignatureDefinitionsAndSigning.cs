@@ -4,7 +4,6 @@ using System.Windows.Xps.Packaging;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 
-
 namespace SDKSample
 {
     /// <summary>
@@ -119,7 +118,6 @@ namespace SDKSample
             }// end:foreach (XpsDigitalSignature
 
         }// end:IterateSignatures()
-
 
         //<SnippetSignXpsDocument>
 

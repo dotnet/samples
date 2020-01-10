@@ -54,8 +54,6 @@ namespace CDS_Spinwait
             SpinWait spinner = new SpinWait();
             Stopwatch watch;
 
-
-
             while (m_state == 0)
             {
 
@@ -94,7 +92,6 @@ namespace CDS_Spinwait
 #if LOGGING
             spinCountLog[spinner.Count]++;
 #endif
-
 
             return true;
         }
@@ -168,7 +165,6 @@ namespace CDS_Spinwait
 namespace SpinWait2
 {
 
-
     //<snippet05>
     public class LockFreeStack<T>
     {
@@ -210,8 +206,6 @@ namespace SpinWait2
     }
     //</snippet05>
 
-
-
     //NOT SURE IF THE REST ARE USED. NOT FOUND IN FX_ADVANCE.HXS AND NO VB VERSIONS SEEM TO EXIST..11-21-09
     //<snippet6>
     class SpinwaitDemo2
@@ -248,7 +242,6 @@ namespace SpinWait2
                 }
             }
         }
-
 
         private static void SpinThenWait(int count)
         {
@@ -329,8 +322,6 @@ namespace SpinWait2
             Console.ReadKey();
         }
 
-
-
         private static void UseManualResetEvent()
         {
             // Use ManualResetEventSlim for better performance than ManualResetEvent.
@@ -363,7 +354,6 @@ namespace SpinWait2
             Console.WriteLine("Spinning on {0} complete. Elapsed ticks = {1}", loopCount, ticks);
         }
 
-
         static void GenerateDataForResetEvent(object state)
         {
             ManualResetEventSlim ev = (ManualResetEventSlim)state;
@@ -389,8 +379,6 @@ namespace SpinWait2
                 _signalled = true;
             }
         }
-
-
 
         #region Helper_Methods
         static double[,] InitializeMatrix(int rows, int cols)

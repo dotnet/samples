@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 
 namespace CsCsrefProgrammingReflection
 {
@@ -13,7 +12,6 @@ namespace CsCsrefProgrammingReflection
             System.Type type = i.GetType();
             System.Console.WriteLine(type);
             //</Snippet1>
-
 
             //<Snippet2>
             // Using Reflection to get information from an Assembly:

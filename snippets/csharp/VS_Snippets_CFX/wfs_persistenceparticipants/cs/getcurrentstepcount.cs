@@ -2,7 +2,6 @@
 // Copyright (c) Microsoft Corporation.  All rights reserved.
 //----------------------------------------------------------------
 
-
 using System.Activities;
 
 namespace Microsoft.Samples.PersistenceParticipants

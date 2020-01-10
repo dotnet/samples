@@ -19,7 +19,6 @@ using System.Net;
  
    // NOTE:  To test, replace www.contoso.com w/ the local string
 
-   
 //<snippet1>
 
    public static Object GetFile (String fileURL, XmlResolver resolver) {

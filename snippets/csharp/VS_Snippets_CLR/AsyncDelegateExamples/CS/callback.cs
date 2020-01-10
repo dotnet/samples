@@ -80,4 +80,3 @@ The call executed on thread 3, with return value "My call time was 3000.".
 The main thread ends.
  */
 //</Snippet5>
-

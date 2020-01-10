@@ -24,8 +24,7 @@ namespace SDKSample
             ellipses.Children.Add(
                 new EllipseGeometry(new Point(50, 50), 20, 45)
                 );
-                
-                
+
             //
             // Create a GeometryDrawing.
             //
@@ -78,6 +77,3 @@ namespace SDKSample
     }
 }
 // </SnippetGeometryDrawingExampleWholePage>
-
-
-

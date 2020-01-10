@@ -8,7 +8,6 @@ using System.Globalization;
 public partial class Customer
 {
 
-   
 }
 
 public class CustomerMetaData

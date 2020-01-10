@@ -64,7 +64,6 @@ namespace Microsoft.VsSDK.IntegrationTestLibrary
         [DllImport("user32")]
         internal static extern int GetWindowText(IntPtr hWnd, StringBuilder className, int stringLength);
 
-
         [DllImport("user32")]
         internal static extern bool EndDialog(IntPtr hDlg, int result);
 

@@ -60,8 +60,7 @@
       vreader.Close();
  
    } 
- 
- 
+
    private void ValidationCallBack (object sender, ValidationEventArgs args)
    {
       m_success = false;
@@ -71,4 +70,3 @@
    }  
  }
    // </Snippet1>
-

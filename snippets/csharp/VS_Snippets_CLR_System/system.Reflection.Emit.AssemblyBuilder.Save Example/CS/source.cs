@@ -296,7 +296,6 @@ class AssemblyBuilderDemo {
 			  ptInstance,
 			  new object[0]); 
 
-            
    }
 }
 

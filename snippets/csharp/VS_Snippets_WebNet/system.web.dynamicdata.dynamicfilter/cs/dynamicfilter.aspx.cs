@@ -13,7 +13,6 @@ using System.Web.UI.HtmlControls;
 using System.Xml.Linq;
 using System.Web.DynamicData;
 
-
     public partial class ForeignKeyFilter : System.Web.UI.Page {
         protected MetaTable table;
 
@@ -31,7 +30,6 @@ using System.Web.DynamicData;
                 GridView1.Columns[0].Visible = false;
             }
         }
-
 
 	// <Snippet3>     
         // Handle the filter change event.

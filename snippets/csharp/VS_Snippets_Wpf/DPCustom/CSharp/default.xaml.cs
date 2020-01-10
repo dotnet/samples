@@ -6,7 +6,6 @@ using System.Windows.Documents;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
-
 namespace SDKSample
 {
 	public partial class DPCustom
@@ -156,6 +155,5 @@ namespace SDKSample
 		}
 //</SnippetEventManagerClass>
 	}
-
 
 }

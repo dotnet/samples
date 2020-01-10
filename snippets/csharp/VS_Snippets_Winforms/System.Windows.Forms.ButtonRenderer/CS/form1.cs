@@ -14,7 +14,6 @@
 // of the custom control to something other than the parent form. There might be
 // a better way of demonstrating this that makes more sense from a usability standpoint...
 
-
 //<Snippet0>
 using System;
 using System.Drawing;

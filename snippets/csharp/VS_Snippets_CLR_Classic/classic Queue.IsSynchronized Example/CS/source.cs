@@ -27,4 +27,3 @@
  mySyncdQ is synchronized.
  */ 
 // </Snippet1>
-

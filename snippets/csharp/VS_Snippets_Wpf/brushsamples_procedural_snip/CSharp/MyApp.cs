@@ -17,14 +17,12 @@ namespace Microsoft.Samples.BrushExamples
         {
              AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(currentDomain_UnhandledException);
         }
-        
 
         protected override void OnStartup (StartupEventArgs e)
         {
             base.OnStartup(e);
             CreateAndShowMainWindow();
         }
-
 
         private void CreateAndShowMainWindow ()
         {

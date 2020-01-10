@@ -64,7 +64,6 @@ namespace Aes_Example
                 }
             }
 
-
             // Return the encrypted bytes from the memory stream.
             return encrypted;
 

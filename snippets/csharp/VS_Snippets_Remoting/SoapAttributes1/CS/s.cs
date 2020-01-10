@@ -19,7 +19,6 @@ public class Test {
    }
 }
 
-
 // A test object that needs to be serialized
 // <Snippet1>
 [Serializable()] 

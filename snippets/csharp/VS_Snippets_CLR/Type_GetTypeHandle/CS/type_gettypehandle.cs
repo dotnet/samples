@@ -54,4 +54,3 @@ Get the type back from the handle...
 Type.GetTypeFromHandle(myRTHFromType):  MyClass1
  */
 // </Snippet1>
-

@@ -54,7 +54,6 @@ class GenericMethodBuilder
         Console.WriteLine("The first element is: {0}", list1[0]);
         //</Snippet17>
 
-
         // Creating a dynamic assembly requires an AssemblyName
         // object, and the current application domain.
         //
@@ -280,7 +279,6 @@ class GenericMethodBuilder
         Console.WriteLine(bound);
         //</Snippet21>
 
-
         // Once the generic method is constructed, 
         // you can invoke it and pass in an array of objects 
         // representing the arguments. In this case, there is only
@@ -292,7 +290,6 @@ class GenericMethodBuilder
 
         Console.WriteLine("The first element is: {0}", list2[0]);
         //</Snippet22>
-
 
         // You can get better performance from multiple calls if
         // you bind the constructed method to a delegate. The 
@@ -319,6 +316,3 @@ The first element is: a
 The first element is: a
  */
 //</Snippet1>
-
-
-

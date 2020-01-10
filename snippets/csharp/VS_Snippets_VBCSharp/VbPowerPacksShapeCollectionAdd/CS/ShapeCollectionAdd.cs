@@ -8,7 +8,6 @@ using System.Text;
 using System.Windows.Forms;
 using Microsoft.VisualBasic.PowerPacks;
 
-
 namespace VbPowerPacksShapeCollectionAddCS
 {
     public partial class ShapeCollectionAdd : Form

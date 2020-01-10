@@ -15,7 +15,6 @@ namespace Example
             t.Snippet1();
             }
 
-
         private void Snippet1()
         {
             //<snippet1>

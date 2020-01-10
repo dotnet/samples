@@ -59,4 +59,3 @@ class PriorityTest
 //    ThreadThree with AboveNormal priority has a count =   778,099,094
 //    ThreadTwo   with BelowNormal priority has a count =     7,840,984
 // </Snippet1>
-

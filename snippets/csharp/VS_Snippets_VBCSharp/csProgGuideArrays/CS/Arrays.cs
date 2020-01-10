@@ -1,5 +1,4 @@
-﻿
-using System.Linq;
+﻿using System.Linq;
 
 //<Snippet38>
 class TestRef
@@ -38,7 +37,6 @@ class TestRef
         1111 2 3 4 5555
     */
 //</Snippet38>
-
 
 //<Snippet37>
 class TestOut
@@ -98,7 +96,6 @@ class TestPrintArray1D
     }
 }
 
-
 class TestPrintArray2D
 {
     int[,] theArray =  { { 1, 2 }, { 2, 3 }, { 3, 4 } };
@@ -118,7 +115,6 @@ class TestPrintArray2D
         //</Snippet41>
     }
 }
-
 
 //<Snippet31>
 class ArrayClass2D
@@ -157,7 +153,6 @@ class ArrayClass2D
         Element(3,1)=8
     */
 //</Snippet31>
-
 
 class Test3
 {
@@ -202,7 +197,6 @@ class Test3
     //</Snippet40>
 }
 
-
 class Test1
 {
     void test()
@@ -242,11 +236,9 @@ class Test1
     }
 }
 
-
 class SomeType
 {
 }
-
 
 class Test2
 {
@@ -331,7 +323,6 @@ class Test2
     }
 }
 
-
 //<Snippet1>
 class TestArraysClass
 {
@@ -361,7 +352,6 @@ class TestArraysClass
 }
 //</Snippet1>
 
-
 namespace WrapTestArraysClass
 {
     //<Snippet2>
@@ -377,7 +367,6 @@ namespace WrapTestArraysClass
     // Output: The array has 2 dimensions.
     //</Snippet2>
 }
-
 
 //<Snippet18>
 class ArrayTest
@@ -412,7 +401,6 @@ class ArrayTest
     Element(1): 2 4 6 8
 */
 //</Snippet18>
-
 
 class TestJagged
 {

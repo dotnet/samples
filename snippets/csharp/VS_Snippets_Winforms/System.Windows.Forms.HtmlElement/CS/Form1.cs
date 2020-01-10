@@ -356,8 +356,6 @@ namespace HtmlElementProjectCSharp
 			SubmitForm("form1");
 		}
 
-
-
 		//<SNIPPET11>
 		private void ShiftRows(String tableName)
 		{

@@ -75,14 +75,12 @@ namespace VSMCustomControl
             remove { RemoveHandler(ValueChangedEvent, value); }
         }
 
-
         protected virtual void OnValueChanged(ValueChangedEventArgs e)
         {
             // Raise the ValueChanged event so applications can be alerted
             // when Value changes.
             RaiseEvent(e);
         }
-
 
         //<SnippetUpdateStates>
         private void UpdateStates(bool useTransitions)
@@ -210,7 +208,6 @@ namespace VSMCustomControl
         //</SnippetFocusProperty>
     }
 
-
     public delegate void ValueChangedEventHandler(object sender, ValueChangedEventArgs e);
 
     public class ValueChangedEventArgs : RoutedEventArgs
@@ -230,7 +227,6 @@ namespace VSMCustomControl
     }
 }
 //</SnippetControlLogic>
-
 
 namespace ControlContract
 {

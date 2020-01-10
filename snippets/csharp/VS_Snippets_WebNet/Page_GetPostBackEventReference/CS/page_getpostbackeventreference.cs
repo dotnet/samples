@@ -40,7 +40,6 @@ namespace MyASPNETControls
         Number = Number - 1;
       }
 
-      
 [System.Security.Permissions.PermissionSet(System.Security.Permissions.SecurityAction.Demand, Name="FullTrust")]
       protected override void Render(HtmlTextWriter writer)
       {
@@ -92,7 +91,6 @@ namespace MyASPNETControls
         Number = Number + 1;
       }
 
-      
 [System.Security.Permissions.PermissionSet(System.Security.Permissions.SecurityAction.Demand, Name="FullTrust")]
       protected override void Render(HtmlTextWriter writer)
       {

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Specialized;
 
@@ -141,7 +141,6 @@ public class SimpleOD : IOrderedDictionary
             return ValueCollection;
         }
     }
-
 
     // ICollection Members
 

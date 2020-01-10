@@ -60,6 +60,3 @@ class PerfCounterCatGetCatMod
     //</snippet2>
 }
 //</snippet1>
-
-
-

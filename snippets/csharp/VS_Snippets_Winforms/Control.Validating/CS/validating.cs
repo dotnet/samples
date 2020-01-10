@@ -12,8 +12,6 @@ using System.Data;
                 private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.ErrorProvider errorProvider1;
 
-
-
 		private void InitializeComponent()
 		{
                         //Set up the controls on the form.
@@ -54,7 +52,6 @@ public Form1()
     //Set button2 to be non-validating.
     this.button2.CausesValidation = false;
 }
-
 
 //  <Snippet1>
 private void textBox1_Validating(object sender, 
@@ -103,4 +100,3 @@ public bool ValidEmailAddress(string emailAddress, out string errorMessage)
 // </Snippet1>
 // </Snippet2>
 }
-

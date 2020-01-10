@@ -18,8 +18,6 @@ using System.Windows.Automation;
 using System.Windows;
 using System.Diagnostics;
 
-
-
 namespace CustomElementClient
 {
     public partial class Form1 : Form
@@ -52,7 +50,6 @@ namespace CustomElementClient
         AutomationElement MainWindowElement = null;
         AutomationElement ListElement = null;
         AutomationEventHandler OnEvent = null;
-
 
         /// <summary>
         /// Constructor.
@@ -101,7 +98,6 @@ namespace CustomElementClient
         }
         // </Snippet171>
 
-
 // <Snippet174>
         /// <summary>
         /// Walks the UI Automation tree and adds the control type of each enabled control 
@@ -130,7 +126,6 @@ namespace CustomElementClient
             }
         }
 // </Snippet174>
-
 
         // <Snippet110>
         /// <summary>
@@ -202,7 +197,6 @@ namespace CustomElementClient
             return true;
         }
 
-
         // <Snippet106>
         /// <summary>
         /// Handles ElementSelected events by showing a message.
@@ -238,8 +232,6 @@ namespace CustomElementClient
         //    }
         //}
 
-
-
         /// <summary>
         /// Handles a button click by selecting an item in the list box.
         /// </summary>
@@ -264,8 +256,6 @@ namespace CustomElementClient
             else Console.WriteLine("no element there");
 
         }
-
-
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -350,7 +340,6 @@ namespace CustomElementClient
             ShutdownUIA();
         }
 
-
         // <Snippet102>
         AutomationFocusChangedEventHandler focusHandler = null;
 
@@ -387,7 +376,6 @@ namespace CustomElementClient
         // </Snippet102>
 
         #endregion Event handling
-
 
         #region Selection and SelectionItem pattern
 
@@ -465,8 +453,6 @@ namespace CustomElementClient
         // </Snippet105>
 
         #endregion Selection and SelectionItem pattern
-
-
 
         #region Property retrieval and caching
 
@@ -607,8 +593,6 @@ namespace CustomElementClient
 
         // *** Simple property retrieval ***
 
-
-
         void MiscPropertyCalls(AutomationElement elementList)
         {
             // <Snippet121> 
@@ -649,7 +633,6 @@ namespace CustomElementClient
             // </Snippet126>
         }
 
-
         // Following is similar to above, but without the redundant comments -- better for a how-to
         // <Snippet170> 
         void PropertyCallsExample(AutomationElement elementList)
@@ -670,7 +653,6 @@ namespace CustomElementClient
             string helpText = (string)help;
         }
         // </Snippet170>
-
 
         /*** *** Updating the cache *** ***/
 
@@ -736,7 +718,6 @@ namespace CustomElementClient
         }
         // </Snippet109>
 
-
         // <Snippet119>
         /// <summary>
         /// Gets a list box element and caches the Name property of its children (the list items).
@@ -779,7 +760,6 @@ namespace CustomElementClient
         // </Snippet119>
 
         #endregion Property retrieval and caching
-
 
         #region Miscellaneous calls
 
@@ -942,7 +922,6 @@ namespace CustomElementClient
 
         #endregion Miscellaneous calls
 
-
         // this should all be done on a non-UI thread
         private void btnMisc_Click(object sender, EventArgs e)
         {
@@ -952,7 +931,6 @@ namespace CustomElementClient
 
             ShowUsage();
            // VISTAONLY GetPhysicalCursorPos(ref pt);
-            
 
             /* Test for a WPF listbox in the window under the cursor.
             System.Windows.Point pt = new System.Windows.Point(Cursor.Position.X, Cursor.Position.Y);
@@ -972,8 +950,6 @@ namespace CustomElementClient
             Debug.WriteLine(watch.Elapsed.Ticks.ToString());
              */
 
-            
-            
             cond = new PropertyCondition(AutomationElement.AutomationIdProperty, "button1");
             AutomationElement elementButton = MainWindowElement.FindFirst(TreeScope.Subtree, cond);
             SubscribeToInvoke(elementButton);
@@ -1011,11 +987,8 @@ namespace CustomElementClient
 
            // ps.SubscribePropertyChange(elementButton);
 
-
         }
 
     }  // end class
-
-
 
 }  // end namespace

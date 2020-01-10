@@ -2,7 +2,6 @@
   *File name: WebRequestEvent.cs
   *Purpose: Implements a custom Web request event type.
   **/
-  
 // <Snippet1>
 
 using System;
@@ -37,7 +36,6 @@ namespace SamplesAspNet
               EventTime.ToString());
         }
         // </Snippet2>
-
 
         // <Snippet3>
         // Invoked in case of events identified 
@@ -74,7 +72,6 @@ namespace SamplesAspNet
         }
         // </Snippet4>
 
-
         // <Snippet6>
         //Formats Web request event information.
         public override void FormatCustomEventDetails(
@@ -102,4 +99,3 @@ namespace SamplesAspNet
     }
 }
 // </Snippet1>
-

@@ -3,7 +3,6 @@ using System;
 using System.Xml.Serialization;
 using System.IO;
 
-
 public class Group1{
    // The XmlTextAttribute with type set to string informs the 
    // XmlSerializer that strings should be serialized as XML text.
@@ -66,4 +65,3 @@ public class Test{
    }   
 }
 // </Snippet1>
-

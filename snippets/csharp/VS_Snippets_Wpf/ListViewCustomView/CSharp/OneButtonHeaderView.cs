@@ -11,7 +11,6 @@ using System.Xml;
 using System.Windows.Automation.Peers;
 using System.Collections.Generic;
 
-
 namespace SDKSample
 {
     //<SnippetIVAPCreate>

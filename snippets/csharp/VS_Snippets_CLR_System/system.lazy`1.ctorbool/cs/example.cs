@@ -18,7 +18,6 @@ class Program
         //lazyLargeObject = new Lazy<LargeObject>(LazyThreadSafetyMode.None);
         //</SnippetNewLazy>
 
-
         Console.WriteLine(
             "\r\nLargeObject is not created until you access the Value property of the lazy" +
             "\r\ninitializer. Press Enter to create LargeObject.");

@@ -94,7 +94,6 @@ namespace Samples.AspNet
         }
         //</Snippet33>
 
-
         // <Snippet34>
         protected override bool SerializeElement(
             System.Xml.XmlWriter writer, 
@@ -107,7 +106,6 @@ namespace Samples.AspNet
 
         }
         // </Snippet34>
-
 
         // <Snippet35>
         protected override bool IsModified()

@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
 using System.Runtime.ConstrainedExecution;
@@ -71,7 +70,6 @@ namespace SafeHandleExample
         public static extern MySafeHandle NativeAllocateHandle(ref MyStruct someState);
     }
 
-
     public class Example
     {
         static void Main()
@@ -79,6 +77,4 @@ namespace SafeHandleExample
         }
     }
 
-   
 }
-

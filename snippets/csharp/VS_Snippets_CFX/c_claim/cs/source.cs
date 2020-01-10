@@ -23,7 +23,6 @@ namespace Samples
         }
         //
 
-
         //
         // Only a client authenticated with a valid certificate that has the 
         // specified subject name and thumbprint can call this method.

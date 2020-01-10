@@ -42,7 +42,6 @@ class Program
     }
     // </Snippet1>
 
-
     static private string GetConnectionString()
     {
         // To avoid storing the connection string in your code, 

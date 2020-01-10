@@ -18,7 +18,6 @@ public partial class UserDefinedFunctions
 }
 //</Snippet4>
 
-
 //-----------------------------------------------------------------------------
 //<Snippet10>
 public partial class UserDefinedFunctions
@@ -31,7 +30,6 @@ public partial class UserDefinedFunctions
     }
 }
 //</Snippet10>
-
 
 //-----------------------------------------------------------------------------
 //<Snippet11>

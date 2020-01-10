@@ -5,7 +5,6 @@ using System.Threading;
 using System.Reflection;
 using System.Reflection.Emit;
 
-
 // We will apply this custom attribute to our dynamic type.
 public class ClassCreator: Attribute
 
@@ -140,8 +139,7 @@ class MethodBuilderCustomAttributesDemo
 	Console.WriteLine(myType.InvokeMember("HelloWorld",
 			  BindingFlags.InvokeMethod,
 			  null, myInstance, new object[] { }));
-						   
-	
+
    }
 
 }

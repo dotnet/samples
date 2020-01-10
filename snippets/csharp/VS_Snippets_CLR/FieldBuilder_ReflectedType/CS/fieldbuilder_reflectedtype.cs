@@ -20,7 +20,6 @@ public class FieldBuilder_Sample
    private static Type CreateType(AppDomain currentDomain)
    {
 
-
       // Create an assembly.
       AssemblyName myAssemblyName = new AssemblyName();
       myAssemblyName.Name = "DynamicAssembly";

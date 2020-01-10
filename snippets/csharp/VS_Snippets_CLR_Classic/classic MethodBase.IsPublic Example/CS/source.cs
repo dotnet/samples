@@ -38,4 +38,3 @@ using System.Windows.Forms;
  Mymethodbase is not a public method
  */
 // </Snippet1>
-

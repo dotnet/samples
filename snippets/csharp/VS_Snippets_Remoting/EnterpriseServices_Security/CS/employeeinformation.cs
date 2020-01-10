@@ -31,7 +31,6 @@ public class EmployeeInformation : ServicedComponent
     private string accountName;
     private double salary = 0;
 
-  
     // <snippet5>
     // Get the employee's name. All users can call this method.
     public string GetName ()
@@ -39,7 +38,6 @@ public class EmployeeInformation : ServicedComponent
       return(accountName);
     }
     // </snippet5>
-
 
     // <snippet6>
     // Set the employee's salary. Only managers can do this.
@@ -56,7 +54,6 @@ public class EmployeeInformation : ServicedComponent
     }
     // </snippet6>
 
-
     // <snippet7>
     // Get the employee's salary. Only the employee and managers can do this.
     public double GetSalary ()
@@ -72,7 +69,6 @@ public class EmployeeInformation : ServicedComponent
         }
     }
     // </snippet7>
-
 
     // <snippet8>
     // Use the constructor string.

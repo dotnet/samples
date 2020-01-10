@@ -95,5 +95,3 @@ public class Example
 //Use the registry editor to examine the key.
 //Press the Enter key to delete the key.
 //</Snippet1>
-
-

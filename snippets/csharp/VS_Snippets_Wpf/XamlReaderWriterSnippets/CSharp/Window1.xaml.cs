@@ -104,7 +104,6 @@ namespace XamlReaderWriterSnippets
 
             //Button deserializedButton = (Button)xReader.LoadAsync(xmlReasder);
 
-
             //this.Background = Brushes.AliceBlue;
             //StackArea.Children.Add(deserializedButton);
         }

@@ -2,7 +2,6 @@
   *File name: WebApplicationLifeTimeEvent.cs
   *Purpose: Implements a custom WebApplicationLifeTimeEvent type
   **/
-  
 // <Snippet1>
 
 using System;
@@ -31,7 +30,6 @@ namespace SamplesAspNet
             DateTime.Now.TimeOfDay.ToString());
         }
         // </Snippet2>
-
 
         // <Snippet3>
         // Invoked in case of events identified by their 
@@ -93,4 +91,3 @@ namespace SamplesAspNet
 
 }
 // </Snippet1>
-

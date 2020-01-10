@@ -4,8 +4,7 @@ using System;
 
 namespace AstoriaSnippetsVB
 {
-    
-    
+
     /// <summary>
     ///This is a test class for CustomerOrders2Test and is intended
     ///to contain all CustomerOrders2Test Unit Tests
@@ -13,7 +12,6 @@ namespace AstoriaSnippetsVB
     [TestClass()]
     public class CustomerOrders2Test
     {
-
 
         private TestContext testContextInstance;
 
@@ -62,7 +60,6 @@ namespace AstoriaSnippetsVB
         //}
         //
         #endregion
-
 
         /// <summary>
         ///A test for CustomerOrders2 Constructor

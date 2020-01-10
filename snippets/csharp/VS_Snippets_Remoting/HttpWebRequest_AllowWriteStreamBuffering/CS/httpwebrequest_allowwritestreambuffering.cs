@@ -20,7 +20,6 @@ using System.IO;
 using System.Net;
 using System.Text;
 
-
 class HttpWebRequest_AllowWriteStreamBuffering
 {
 	public static void Main()
@@ -85,4 +84,3 @@ class HttpWebRequest_AllowWriteStreamBuffering
 		}
 	}
 }
-	

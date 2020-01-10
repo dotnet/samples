@@ -1,10 +1,8 @@
 ﻿// The following code example uses a BitVector32 as a collection of sections.
 
-
 // <snippet1>
 using System;
 using System.Collections.Specialized;
-
 
 public class SamplesBitVector32  {
 

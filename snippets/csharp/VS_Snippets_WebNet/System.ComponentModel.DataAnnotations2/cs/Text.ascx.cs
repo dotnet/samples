@@ -35,7 +35,6 @@ public partial class TextField : System.Web.DynamicData.FieldTemplateUserControl
 
                 return "http://" + FieldValueString;
 
-
             case DataType.EmailAddress:
                 return "mailto:" + FieldValueString;
 

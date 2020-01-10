@@ -96,4 +96,3 @@ public class Example
 //         NotSupportedException: Specified method is not supported.
 //      Task #12: Canceled
 // </Snippet12>
-

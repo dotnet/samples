@@ -97,6 +97,5 @@ namespace FloaterFigureSnippets
             // </Snippet_FloaterProps>
         }
 
-        
     }
 }

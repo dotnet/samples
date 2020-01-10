@@ -10,7 +10,6 @@
 
 // For simplicity, this sample doesn't handle runtime switching of visual styles.
 
-
 //<Snippet0>
 using System;
 using System.Drawing;

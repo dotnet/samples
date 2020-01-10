@@ -1,5 +1,4 @@
-﻿
-//<snippet10>
+﻿//<snippet10>
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -17,7 +16,6 @@ using Windows.UI.Xaml.Navigation;
 // Add a using directive for SyndicationClient.
 using Windows.Web.Syndication;
 
-
 namespace SequentialBlogReader
 {
     public sealed partial class MainPage : Page
@@ -30,7 +28,6 @@ namespace SequentialBlogReader
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
         }
-
 
         private async void StartButton_Click(object sender, RoutedEventArgs e)
         {
@@ -93,7 +90,6 @@ namespace SequentialBlogReader
             };
             return uriList;
         }
-
 
         void DisplayResults(SyndicationFeed sf)
         {

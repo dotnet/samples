@@ -7,12 +7,10 @@ class Typed_Read_Methods {
 
    static void Main() {
 
-	
               ReadContentAsBoolean();
               ReadContentAs();                          
 
    }
-
 
 public static void ReadContentAsBoolean() {
 //<snippet1>	
@@ -28,7 +26,6 @@ public static void ReadContentAsBoolean() {
   }
 //</snippet1>
 }
-
 
  public static void ReadContentAs() {
 //<snippet2>	

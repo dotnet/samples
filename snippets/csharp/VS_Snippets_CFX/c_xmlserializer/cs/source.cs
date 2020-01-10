@@ -51,7 +51,6 @@ namespace UsingXml1
         public string AcctNumber;
     }
 
-
     //<snippet2>
     [DataContract]
     public class Customer

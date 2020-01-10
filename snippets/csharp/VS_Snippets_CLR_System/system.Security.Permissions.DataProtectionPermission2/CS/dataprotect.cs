@@ -205,7 +205,6 @@ public class DataProtect
         Console.WriteLine();
     }
 
-
 }
 
 //</Snippet1>

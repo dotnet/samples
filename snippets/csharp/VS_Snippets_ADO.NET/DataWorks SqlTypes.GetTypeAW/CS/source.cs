@@ -3,7 +3,6 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 
-
 class Program
 {
     static void Main()
@@ -85,4 +84,3 @@ class Program
             + "Integrated Security=SSPI;";
     }
 }
-

@@ -48,7 +48,6 @@ private void MyButtonAddAllClick(object sender, EventArgs e)
 // </Snippet1>
 // </Snippet2>
 
-
    private void MyButtonRemoveAllClick(object sender, EventArgs e)
    {
       // Get the 'myTreeNodeCollection' from the 'myTreeViewCustom' TreeView.

@@ -90,7 +90,6 @@ public class Form1:
 		
 	}
 
-
 	// Handle the DrawItem event for an owner-drawn ListBox.
 	private void ListBox1_DrawItem(object sender, DrawItemEventArgs e)
 	{
@@ -156,7 +155,4 @@ public class Form1:
 		Application.Run(new Form1());
 	}
 
-
-
 }
-

@@ -171,7 +171,6 @@ namespace UE.ServiceModel.Samples
             Console.WriteLine("Binding is using the {0} scheme", scheme);
             // </Snippet10>
 
-
             Uri baseAddress = new Uri("http://localhost:8000/servicemodelsamples/service");
             Uri address = new Uri("http://localhost:8000/servicemodelsamples/service/calc");
 

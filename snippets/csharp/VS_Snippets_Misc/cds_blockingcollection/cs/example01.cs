@@ -18,7 +18,6 @@ class Program
       // maximum capacity argument to see how it impacts behavior.
       BlockingCollection<int> numbers = new BlockingCollection<int>(50);
 
-
       // A simple blocking consumer with no cancellation.
       Task.Run(() =>
       {

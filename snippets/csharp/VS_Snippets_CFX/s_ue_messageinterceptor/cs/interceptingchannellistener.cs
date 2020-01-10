@@ -443,7 +443,6 @@ namespace Microsoft.ServiceModel.Samples
                 }
             }
 
-
             class InterceptingRequestContext : RequestContext
             {
                 InterceptingReplyChannel channel;

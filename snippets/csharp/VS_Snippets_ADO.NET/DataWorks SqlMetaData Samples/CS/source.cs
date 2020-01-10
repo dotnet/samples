@@ -4,8 +4,6 @@ using System.Data.Sql;
 using System.Data.SqlTypes;
 using Microsoft.SqlServer.Server;
 
-
-
 public sealed partial class SqlMetaDataTester
 {
    private SqlMetaDataTester()

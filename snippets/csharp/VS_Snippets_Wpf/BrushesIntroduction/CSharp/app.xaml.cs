@@ -29,6 +29,5 @@ namespace BrushesIntroduction
             myWindow.Show();
         }
 
-
     }
 }

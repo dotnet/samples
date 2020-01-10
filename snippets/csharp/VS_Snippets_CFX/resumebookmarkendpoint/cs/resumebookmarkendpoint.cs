@@ -39,7 +39,6 @@ namespace Microsoft.Samples.WF.ResumeBookmarkEndpoint
             }
         }
 
-
         protected override WorkflowCreationContext OnGetCreationContext(object[] inputs, OperationContext operationContext, Guid instanceId, WorkflowHostingResponseContext responseContext)
         {
             WorkflowCreationContext creationContext = new WorkflowCreationContext();
@@ -113,4 +112,3 @@ namespace Microsoft.Samples.WF.ResumeBookmarkEndpoint
     }
 
 }
-

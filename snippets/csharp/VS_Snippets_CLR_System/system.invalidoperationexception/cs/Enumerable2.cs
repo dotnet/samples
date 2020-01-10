@@ -20,4 +20,3 @@ public class Example
 // The example displays the following output:
 //       The dataset has no values greater than 4.
 // </Snippet7>
-

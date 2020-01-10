@@ -4,7 +4,6 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 
-
 namespace SDKSamples
 {
     /// <summary>
@@ -49,11 +48,6 @@ namespace SDKSamples
 
             this.InputBindings.Add(OpenCmdKeyBinding);
             //</SnippetCommandHandlerKeyBindingCodeBehind>
-
-
-
-
-
 
         }
 

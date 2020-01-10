@@ -13,7 +13,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections.ObjectModel;
 
-
 namespace DataGrid_CellStyle
 {
     /// <summary>
@@ -46,7 +45,6 @@ namespace DataGrid_CellStyle
             {
                 Name = name;
             }
-
 
             public string Name { get; set; }
 

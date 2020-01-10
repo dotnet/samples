@@ -34,4 +34,3 @@ public class Example
 // The example displays the following output:
 //      p1 = p2: True
 // </Snippet105>
-

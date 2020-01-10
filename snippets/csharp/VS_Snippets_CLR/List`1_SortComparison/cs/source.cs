@@ -104,5 +104,3 @@ Sort with generic Comparison<string> delegate:
 "Pachycephalosaurus"
  */
 // </Snippet1>
-
-

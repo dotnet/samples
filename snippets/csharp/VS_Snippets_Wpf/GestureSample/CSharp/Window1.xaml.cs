@@ -42,7 +42,6 @@ namespace GestureSample
 
             canvas1.StylusSystemGesture += new StylusSystemGestureEventHandler(canvas1_StylusSystemGesture);
 
-           
         }
 
         private void TouchFeedbackSnippets()
@@ -88,8 +87,6 @@ namespace GestureSample
 
         // Sample event handler:  
         private void button1_click(object sender, RoutedEventArgs e) {}
-
-
 
         //<Snippet1>
         void inkCanvas1_Gesture(object sender, InkCanvasGestureEventArgs e)

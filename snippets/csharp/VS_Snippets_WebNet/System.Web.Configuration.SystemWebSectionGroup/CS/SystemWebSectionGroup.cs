@@ -14,7 +14,6 @@ namespace Samples.AspNet
         private static string name, type, declared, msg;
         private static SectionInformation info;
 
-
         [STAThread]
         static void Main(string[] args)
         {
@@ -58,7 +57,6 @@ namespace Samples.AspNet
               (SystemWebSectionGroup)configuration.GetSectionGroup("system.web");
 
             // </Snippet1>
-
 
             try
             {
@@ -145,7 +143,6 @@ namespace Samples.AspNet
 
                         Console.Write(msg);
                         break;
-
 
                     case "/customerrors:":
 
@@ -536,7 +533,6 @@ namespace Samples.AspNet
                         Console.Write(msg);
                         break;
 
-
                     case "/deployment:":
                         // <Snippet26>
                         // Get the deployment section.
@@ -556,7 +552,6 @@ namespace Samples.AspNet
 
                         Console.Write(msg);
                         break;
-
 
                     case "/deviceFilters:":
                         // <Snippet27>
@@ -759,7 +754,6 @@ namespace Samples.AspNet
                         Console.Write(msg);
                         break;
 
-                        
                     case "/all:":
                         StringBuilder allSections = new StringBuilder();
                         ConfigurationSectionGroup systemWebGroup =

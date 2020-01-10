@@ -1,5 +1,4 @@
-﻿
-//<snippet1>
+﻿//<snippet1>
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -11,7 +10,6 @@ using Windows.UI.Xaml.Navigation;
 using System.Reflection;
 using System.Globalization;
 using System.Text;
-
 
 namespace Reflection
 {

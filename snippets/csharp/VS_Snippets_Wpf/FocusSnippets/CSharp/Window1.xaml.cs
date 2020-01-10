@@ -10,7 +10,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-
 namespace SDKSamples
 {
     /// <summary>
@@ -51,8 +50,6 @@ namespace SDKSamples
 
             MessageBox.Show(focusedElement.ToString());
         }
-
-
 
     }
 }

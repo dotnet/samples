@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data;
 
-
 class Program
 {
     static void Main()
@@ -25,7 +24,6 @@ class Program
 
         column = new DataColumn("QuantityInStock", typeof(System.Int32));
         table.Columns.Add(column);
-
 
         // Add some items.
         DataRow row = table.NewRow();
@@ -124,4 +122,3 @@ class Program
     }
     // </Snippet1>
 }
-

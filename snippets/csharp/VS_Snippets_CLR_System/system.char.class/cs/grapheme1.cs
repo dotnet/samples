@@ -16,4 +16,3 @@ public class Example
 // The example produces the following output:
 //       ä
 // </Snippet1>
-

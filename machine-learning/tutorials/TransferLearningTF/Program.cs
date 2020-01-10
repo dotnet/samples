@@ -38,7 +38,6 @@ namespace TransferLearningTF
             Console.ReadKey();
         }
 
-
         // Build and train model
         public static ITransformer GenerateModel(MLContext mlContext)
         {
@@ -64,7 +63,6 @@ namespace TransferLearningTF
                             .AppendCacheCheckpoint(mlContext);
             // </SnippetMapKeyToValue>
 
-            
             // <SnippetLoadData>
             IDataView trainingData = mlContext.Data.LoadFromTextFile<ImageData>(path:  _trainTagsTsv, hasHeader: false);
             // </SnippetLoadData>
@@ -163,7 +161,6 @@ namespace TransferLearningTF
             public const bool ChannelsLast = true;
         }
         // </SnippetInceptionSettings>
-
 
         // <SnippetDeclareImageData>
         public class ImageData

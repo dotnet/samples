@@ -10,7 +10,6 @@ public class Example
    public static void Main()
    {
 
-
    }
 
    // <Snippet1>
@@ -28,7 +27,6 @@ public class Example
    {
       return Task.Factory.StartNew( () => Thread.Sleep(100));
    }                      
-
 
    // <Snippet3>
    public Task<ReadOnlyCollection<FileInfo>> FindFilesAsync(
@@ -54,7 +52,6 @@ public class Example
 
 public class FindFilesProgressInfo
 {}
-
 
 public class Progress<T> : IProgress<T>
 {

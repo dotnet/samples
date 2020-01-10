@@ -5,10 +5,8 @@ using System.Reflection;
 // Set an assembly attribute.
 [assembly:AssemblyTitleAttribute("A title example")]
 
-
 // Note that the suffix "Attribute" can be omitted:
 // [assembly:AssemblyTitle("A title example")]
-
 
 public class Test {
 

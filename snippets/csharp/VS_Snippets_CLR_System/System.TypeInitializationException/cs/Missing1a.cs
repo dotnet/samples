@@ -22,4 +22,3 @@ public class InfoModule
    }
 }
 // </Snippet1>
-

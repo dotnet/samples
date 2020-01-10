@@ -10,7 +10,6 @@ class Program
         //string x = "DRIVER={SQL Server};SERVER=MyServer;Trusted_connection=yes;DATABASE=Northwind;"
     }
 
-
     //<Snippet1>
     public static OdbcDataAdapter CreateDataAdapter(
         OdbcConnection connection)

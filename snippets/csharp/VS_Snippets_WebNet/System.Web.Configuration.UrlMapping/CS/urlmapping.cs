@@ -13,7 +13,6 @@ namespace Samples.AspNet
     private static string shownUrl, mappedUrl, msg;
     private static UrlMapping urlMapping;
 
-
     static void Main(string[] args)
     {
       string inputStr = String.Empty;
@@ -39,7 +38,6 @@ namespace Samples.AspNet
       {
         // Get the user's options.
         inputStr = args[0].ToLower();
-
 
         if (args.Length == 3)
         {
@@ -118,7 +116,6 @@ namespace Samples.AspNet
             msg = String.Format(
             "Shown URL: {0}\nMapped URL:  {1}\n",
             shownUrl, mappedUrl);
-
 
             Console.Write(msg);
 
@@ -260,7 +257,6 @@ namespace Samples.AspNet
 
             Console.Write(allUrlMappings.ToString());
             break;
-
 
           default:
             // Option is not allowed..

@@ -34,8 +34,6 @@ class Example
             // Free the unmanaged memory.
             Marshal.FreeHGlobal(pnt);
         }
-        
-
 
     }
 

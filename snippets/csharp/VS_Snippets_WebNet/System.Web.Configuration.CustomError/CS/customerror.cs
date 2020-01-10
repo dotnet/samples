@@ -33,7 +33,6 @@ namespace Samples.Aspnet.SystemWebConfiguration
 
             // </Snippet1>
 
-
             // <Snippet2>
             // Create a new error object.
             // Does not exist anymore.
@@ -41,13 +40,11 @@ namespace Samples.Aspnet.SystemWebConfiguration
 
             // </Snippet2>
 
-
             // <Snippet3>
             // Create a new error object.
             CustomError newcustomError2 =
                 new CustomError(404, "customerror404.htm");
             // </Snippet3>
-
 
             // <Snippet4>
             // Get first errorr Redirect.
@@ -78,5 +75,4 @@ namespace Samples.Aspnet.SystemWebConfiguration
 
     }
 
-} 
-
+}

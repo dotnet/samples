@@ -31,8 +31,7 @@
        Console.WriteLine( "    at index {0} : {1}", myBA.Count - 2, myBA.Get( myBA.Count - 2 ) );
        Console.WriteLine( "    at index {0} : {1}", myBA.Count - 1, myBA.Get( myBA.Count - 1 ) );
     }
- 
- 
+
     public static void PrintIndexAndValues( IEnumerable myCol )  {
        int i = 0;
        foreach ( Object obj in myCol ) {
@@ -72,4 +71,3 @@
 
  */ 
 // </Snippet1>
-

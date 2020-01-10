@@ -68,7 +68,6 @@ namespace System.Drawing.Drawing2D.ClassicMiscCS
         }
         // </snippet1>
 
-
         // Snippet for: M:System.Drawing.Drawing2D.AdjustableArrowCap.#ctor(System.Single,System.Single,System.Boolean)
         // <snippet2>
         public void ConstructAdjArrowCap2(PaintEventArgs e)
@@ -80,7 +79,6 @@ namespace System.Drawing.Drawing2D.ClassicMiscCS
             e.Graphics.DrawLine(capPen, 50, 50, 200, 50);
         }
         // </snippet2>
-
 
         // Snippet for: M:System.Drawing.Drawing2D.Blend.#ctor
         // <snippet3>
@@ -107,7 +105,6 @@ namespace System.Drawing.Drawing2D.ClassicMiscCS
             // End example.
         }
         // </snippet3>
-
 
         // Snippet for: M:System.Drawing.Drawing2D.ColorBlend.#ctor
         // <snippet4>

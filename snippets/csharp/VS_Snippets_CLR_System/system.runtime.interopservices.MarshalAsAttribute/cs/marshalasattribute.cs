@@ -3,13 +3,11 @@ using System;
 using System.Text;
 using System.Runtime.InteropServices;
 
-
 class Program
 {
 
 //Applied to a parameter.
   public void M1([MarshalAs(UnmanagedType.LPWStr)]String msg) {}
-
 
 //Applied to a field within a class.
   class MsgText {
@@ -23,7 +21,6 @@ class Program
     {
         return "Hello World";
     }
-
 
 static void Main(string[] args)
     {  }

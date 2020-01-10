@@ -122,5 +122,3 @@ Cetiosaurus: up to 18 meters long.
 Caudipteryx: up to 1 meters long.
  */
 // </Snippet1>
-
-

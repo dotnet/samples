@@ -38,4 +38,3 @@ public class MyClass {
      }
     // </Snippet2>
 }
-

@@ -76,4 +76,3 @@ The first occurrence of "the" between index 6 and index 11 is at index 6.
 The first occurrence of "the" between index 11 and the end is at index -1.
 */
 // </Snippet1>
-

@@ -3,8 +3,6 @@ using System.ServiceModel;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 
-
-
 namespace Samples
 {
 
@@ -14,7 +12,6 @@ namespace Samples
 	[OperationContract]
 	int Add(int x, int y);
     }
-
 
     //<snippet1>
     [ServiceContract]
@@ -30,7 +27,6 @@ namespace Samples
 
     }
     //</snippet1>
-
 
     public class Test0
     {

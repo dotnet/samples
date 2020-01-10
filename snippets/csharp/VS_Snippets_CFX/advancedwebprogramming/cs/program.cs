@@ -74,10 +74,8 @@ namespace Microsoft.WebProgrammingModel.Samples
                         Console.WriteLine(c.ToString());
                     }
 
-
                     Console.WriteLine("");
                 }
-
 
                 Console.WriteLine("Press any key to terminate");
                 Console.ReadLine();

@@ -1,5 +1,4 @@
-﻿
-namespace IndexersSamples.SampleThree
+﻿namespace IndexersSamples.SampleThree
 {
     public class Mandelbrot
     {

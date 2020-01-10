@@ -75,4 +75,3 @@ public class Example
 //       North America: Area: 0, Population 0
 //       South America: Area: 0, Population 0
 // </Snippet12>
-

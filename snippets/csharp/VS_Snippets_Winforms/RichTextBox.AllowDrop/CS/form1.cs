@@ -19,8 +19,6 @@ namespace RichTextBoxAllowDropEx
 		/// </summary>
 		private System.ComponentModel.Container components = null;
 
-
-
    //
    // Required for Windows Form Designer supports
    //
@@ -62,8 +60,6 @@ namespace RichTextBoxAllowDropEx
    }
 
    //</Snippet1>
-
-
 
 	/// <summary>
 	/// Clean up any resources being used.
@@ -137,7 +133,6 @@ namespace RichTextBoxAllowDropEx
 	{
 		Application.Run(new Form1());
 	}
-
 
 }
 }

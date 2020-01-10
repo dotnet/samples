@@ -45,7 +45,6 @@
                         Console.WriteLine(s);
                     }
 
-
                     IEnumerable<string> myQuery2;
                     // QueryMethod2 returns a query as the value of its out parameter.
                     app.QueryMethod2(ref nums, out myQuery2);
@@ -56,7 +55,6 @@
                     {
                         Console.WriteLine(s);
                     }
-
 
                     // You can modify a query by using query composition. A saved query
                     // is nested inside a new query definition that revises the results

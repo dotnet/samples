@@ -108,4 +108,3 @@ namespace SymmetricAlgo
 //        Legal min block size = 64
 //        Legal max block size = 64
 //</Snippet1>
-

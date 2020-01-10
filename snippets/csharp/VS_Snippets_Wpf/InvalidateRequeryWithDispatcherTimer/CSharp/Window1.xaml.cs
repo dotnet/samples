@@ -7,7 +7,6 @@ using System.Windows.Input;
 using System.Windows.Threading;
 using System.Globalization;
 
-
 namespace SDKSamples
 {
     /// <summary>

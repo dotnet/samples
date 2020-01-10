@@ -25,16 +25,13 @@ public class HelloServer : MarshalByRefObject {
 // <Snippet3>    
     }
 
-
     public HelloServer() {
         Console.WriteLine("HelloServer activated");
     }
 
-
     ~HelloServer()  {
         Console.WriteLine("Object Destroyed");
     }
-
 
     public String HelloMethod(String name)  {
         // Reports that the method was called.

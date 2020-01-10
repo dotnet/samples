@@ -2,7 +2,6 @@
 using System;
 using System.Runtime.Remoting.MetadataServices;
 
-
 public class Test
 {
    public static void Main()

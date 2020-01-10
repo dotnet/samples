@@ -26,7 +26,6 @@ namespace HelloWorld
 This program displays the string "Hello World!" on the screen. */
 //</Snippet33>
 
-
 //-----------------------------------------------------------------------------
 class HelloAgain 
 {

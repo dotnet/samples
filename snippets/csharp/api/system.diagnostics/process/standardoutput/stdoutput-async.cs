@@ -31,4 +31,3 @@ public class Example
 //      '
 //
 //      Error stream: Successfully wrote 500 lines.
-

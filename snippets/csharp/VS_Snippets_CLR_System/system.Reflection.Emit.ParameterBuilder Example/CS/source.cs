@@ -41,7 +41,6 @@ class ParamBuilderDemo
 								     typeof(string),
 								     typeof(double) });
 
-
 	ILGenerator ctorIL = myCtorBuilder.GetILGenerator();
 
 	Type objType = Type.GetType("System.Object"); 
@@ -130,7 +129,6 @@ class ParamBuilderDemo
 					  	   initialBalance });
 
 	MemberInfo[] myMemberInfo = custType.GetMember("AddFundsFromPool");
-
 
 	double thePool = 1000.00;
 	Console.WriteLine("The pool is currently ${0}", thePool);

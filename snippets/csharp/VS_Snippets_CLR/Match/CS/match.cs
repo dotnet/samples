@@ -86,7 +86,6 @@ public class TestClass {
 	{}
 }
 
-
 class Example 
 {
 	static void Main() 
@@ -139,4 +138,3 @@ class Example
 //       TestClass.Method4 was authored by John Milton, Leo Tolstoy.
 //       TestClass.Method1 was also authored by the same team.
 //       Leo Tolstoy, John Milton <> John Milton, Leo Tolstoy
-

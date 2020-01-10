@@ -18,8 +18,7 @@ public class TextWriterTraceListenerSample
         // Add a TextWriterTraceListener for the file.
         myTextListener = new TextWriterTraceListener(myOutputWriter);
         Trace.Listeners.Add(myTextListener);
-      
- 
+
         // Write trace output to all trace listeners.
         Trace.WriteLine(DateTime.Now.ToString() + " - Trace output");
  

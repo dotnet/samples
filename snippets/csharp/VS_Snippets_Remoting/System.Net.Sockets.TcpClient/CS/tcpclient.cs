@@ -13,14 +13,12 @@
   * To avoid permission settings you can run this console application and the related 
   * TcpServer from your hard disk and not from a shared location on the network.
   **/
-
 using System;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Security.Permissions;
-
 
 class MyTcpClient
 {
@@ -50,7 +48,6 @@ class MyTcpClient
     // Connect to server
     Connect(server, message);
   }
-
 
   /**
    * The following function creates a TcpClient that connects to a 

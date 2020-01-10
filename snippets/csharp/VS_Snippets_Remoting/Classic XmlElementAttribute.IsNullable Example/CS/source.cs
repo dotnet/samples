@@ -11,4 +11,3 @@ public class MyClass
 }
 
 // </Snippet1>
-

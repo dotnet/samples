@@ -20,19 +20,14 @@ namespace Microsoft.Samples.Animation.LocalAnimations
     // Create the demonstration.
     public class LocalAnimationExample : Page 
     {
-        
-        
 
-        
         public LocalAnimationExample()
         {
-        
-            
+
             WindowTitle = "Local Animation Example";
             StackPanel myStackPanel = new StackPanel();
             myStackPanel.Margin = new Thickness(20);                     
-    
-    
+
             // Create and set the Button.
             Button aButton = new Button();
             aButton.Content = "A Button";

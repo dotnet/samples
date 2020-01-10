@@ -8,7 +8,6 @@ using System.ComponentModel.DataAnnotations;
 public partial class Customer
 {
 
-   
 }
 
 // </Snippet2>
@@ -21,7 +20,6 @@ public class CustomerMetaData
     public object Title;
     // </Snippet3>
 
-   
 }
 
 //</Snippet1>

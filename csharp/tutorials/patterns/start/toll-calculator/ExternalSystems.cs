@@ -27,4 +27,3 @@ namespace LiveryRegistration
         public int Riders { get; set; }
     }
 }
-

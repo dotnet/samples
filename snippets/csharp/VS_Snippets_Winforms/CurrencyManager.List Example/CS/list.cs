@@ -1,5 +1,4 @@
-﻿
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data;
 using System;
@@ -46,5 +45,3 @@ private void Grid_Navigate(object sender, NavigateEventArgs e){
 }
    //</Snippet1>
 }
-
-

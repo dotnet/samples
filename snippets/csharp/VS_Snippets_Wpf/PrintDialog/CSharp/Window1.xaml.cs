@@ -8,8 +8,6 @@ using System.Windows.Xps;
 using System.Windows.Xps.Packaging;
 using System.IO;
 
-
-
 namespace PrintDialog_Sample
 {
 	/// <summary>
@@ -54,5 +52,4 @@ namespace PrintDialog_Sample
         // </Snippet6>
     }
 
-   
 }

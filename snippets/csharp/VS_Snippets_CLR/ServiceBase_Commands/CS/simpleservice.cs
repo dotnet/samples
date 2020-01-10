@@ -91,7 +91,6 @@ namespace SimpleService
 
         }
 
-
         // <Snippet3>
         // Start the service.
         protected override void OnStart(string[] args)
@@ -419,4 +418,3 @@ namespace SimpleService
     }
 }
 //</Snippet1>
-

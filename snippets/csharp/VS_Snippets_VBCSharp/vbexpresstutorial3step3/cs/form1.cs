@@ -74,7 +74,6 @@ namespace Math_Quiz
             plusLeftLabel.Text = addend1.ToString();
             plusRightLabel.Text = addend2.ToString();
 
-
             // 'sum' is the name of the NumericUpDown control.
             // This step makes sure its value is zero before
             // adding any values to it.

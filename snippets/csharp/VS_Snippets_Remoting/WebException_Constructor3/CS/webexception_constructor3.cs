@@ -8,7 +8,6 @@ in the 'catch' block  a new 'WebException' object is created  and  thrown.That e
 in the calling method and the error message is displayed on the console.
 */
 
-
 using System;
 using System.Net;
 using System.Net.Sockets;
@@ -30,8 +29,6 @@ public class HttpConnect{
 		    Console.WriteLine("\nThe Status is :"+e.Status);
 		  }
 		}
-
-
 
     	public void ConnectHttpServer(String connectUri)
       {

@@ -127,7 +127,6 @@ namespace Microsoft.ServiceModel.Samples
         void SubmitPurchaseOrder(PurchaseOrder po);
     }
 
-
     // Service class that implements the service contract.
     // Added code to write output to the console window.
     public class OrderProcessorService : IOrderProcessor

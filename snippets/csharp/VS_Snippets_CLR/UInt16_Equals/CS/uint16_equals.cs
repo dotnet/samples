@@ -39,4 +39,3 @@ class MyUInt16_Equals
          }
      }
 }
-

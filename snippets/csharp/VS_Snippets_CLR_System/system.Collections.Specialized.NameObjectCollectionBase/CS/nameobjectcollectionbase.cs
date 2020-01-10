@@ -110,7 +110,6 @@ public class SamplesNameObjectCollectionBase  {
       Console.WriteLine( "Read-Only Collection:" );
       PrintKeysAndValues( myROCol );
 
-
       // Creates and initializes an empty MyCollection that is writable.
       MyCollection myRWCol = new MyCollection();
 

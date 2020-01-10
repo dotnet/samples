@@ -21,4 +21,3 @@ public class Example
 //       hello and welcome to this demo!
 //       and demo! hello this to welcome
 // </snippet1>
-  

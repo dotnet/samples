@@ -5,7 +5,6 @@ public class Example
    public static void Main()
    {
 
-
    }
 }
 
@@ -26,4 +25,3 @@ public class Disposable : IDisposable
    // </Snippet8>
    {}
 }
-

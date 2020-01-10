@@ -8,7 +8,6 @@ using System.Windows.Shapes;
 using System.Windows.Data;
 using System.Windows.Media;
 
-
 namespace VectorSample
 {
     /// <summary>
@@ -67,13 +66,10 @@ namespace VectorSample
                         Vector vector1 = new Vector(20, 30);
                         Vector vector2 = new Vector(45, 70);
                         Vector vectorResult = new Vector();
-                        
-                        
+
                         // vectorResult is equal to (65,100)
                         vectorResult = vector1 + vector2;
                         //</Snippet10> 
-
-                       
 
                         // Displaying Results
                         syntaxString = "vectorResult = vector1 + vector2;";
@@ -233,7 +229,6 @@ namespace VectorSample
 
                         // vector Result is equal to (2600,3100)
 
-
                         // Displaying Results
                         syntaxString = "vectorResult = vector1 * matrix1;";
                         resultType = "Vector";
@@ -314,7 +309,6 @@ namespace VectorSample
 
                         // vector Result is equal to (2600,3100)
 
-
                         // Displaying Results
                         syntaxString = "vectorResult = Vector.Multiply(vector1,matrix1);";
                         resultType = "Vector";
@@ -379,7 +373,6 @@ namespace VectorSample
                         break;
                     }
 
-
                 case "rb18":
                     {
                         // Gets the length of a Vector.  
@@ -390,7 +383,6 @@ namespace VectorSample
                         length = vector1.Length;
 
                         // length is approximately equal to 36.0555
-
 
                         // Displaying Results
                         syntaxString = "length = vector1.Length();";
@@ -475,8 +467,6 @@ namespace VectorSample
                         ShowResults(crossProduct.ToString(), syntaxString, resultType, operationString);
                         break;
                     }
-                    
-
 
                 case "rb23":
                     {
@@ -497,7 +487,6 @@ namespace VectorSample
                         ShowResults(determinant.ToString(), syntaxString, resultType, operationString);
                         break;
                     }
-                
 
                 case "rb24":
                     {
@@ -529,7 +518,6 @@ namespace VectorSample
                         break;
                     }
 
-
                 case "rb25":
                     {
                         // Checks if two Vectors are equal using the static Equals method.
@@ -560,7 +548,6 @@ namespace VectorSample
                         areEqual = vector1.Equals(vector2);
 
                         // areEqual is False    
-
 
                         // Displaying Results
                         syntaxString = "areEqual = vector1.Equals(vector2);";

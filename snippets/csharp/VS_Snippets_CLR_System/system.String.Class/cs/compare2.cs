@@ -60,4 +60,3 @@ internal class SCompare : IComparer<String>
 //             cœur   cooperative     cooperative  co­operative   cooperative
 //            coeur  co­operative    co­operative          cœur  co­operative
 // </Snippet12>     
-  

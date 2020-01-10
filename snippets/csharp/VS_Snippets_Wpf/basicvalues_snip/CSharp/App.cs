@@ -17,14 +17,12 @@ namespace Microsoft.Samples.Animation.AnimatePathShapeSample
         {
 
         }
-        
 
         protected override void OnStartup (StartupEventArgs e)
         {
             base.OnStartup(e);
             CreateAndShowMainWindow();
         }
-
 
         private void CreateAndShowMainWindow ()
         {

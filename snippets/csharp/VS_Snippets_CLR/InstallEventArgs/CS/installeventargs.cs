@@ -120,6 +120,3 @@ public class MyAssembly1
       Console.WriteLine("This assembly is just an example for the Installer\n");
    }
 }
-
-
-

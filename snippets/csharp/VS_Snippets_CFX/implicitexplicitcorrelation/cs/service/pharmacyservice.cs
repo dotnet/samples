@@ -60,7 +60,6 @@ namespace Microsoft.Samples.ImplicitExplicitCorrelation
                 }
             };
 
-
             // This will use implicit correlation within the workflow using the WorkflowServiceHost's default CorrelationHandle
             // <Snippet3>
             Receive prescriptionRequest = new Receive
@@ -94,7 +93,6 @@ namespace Microsoft.Samples.ImplicitExplicitCorrelation
                 Content = ReceiveContent.Create(new OutArgument<Guid>())
             };
 
-
             // This will explicitly correlate with the SendReply action after the prescriptionRequest using the OrderID (stored in the orderHandle)
             Receive GetAdjustedCostRequest = new Receive
             {
@@ -106,7 +104,6 @@ namespace Microsoft.Samples.ImplicitExplicitCorrelation
                 CorrelatesWith = orderHandle,
                 Content = ReceiveContent.Create(new OutArgument<Guid>())
             };
-
 
             Activity PrescriptonWorkflow = new Sequence()
             {

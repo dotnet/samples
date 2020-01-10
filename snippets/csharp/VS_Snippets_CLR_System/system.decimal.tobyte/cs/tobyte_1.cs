@@ -35,5 +35,3 @@ class Example
 //     OverflowException: -128.999
 //     OverflowException: -129
 // </Snippet1>
-
-

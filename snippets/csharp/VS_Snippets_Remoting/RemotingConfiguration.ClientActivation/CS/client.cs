@@ -17,7 +17,6 @@ public class ClientClass {
         {
             HelloServiceClass service = new HelloServiceClass();
 
-
            // Calls the remote method.
            Console.WriteLine();
            Console.WriteLine("Calling remote object");

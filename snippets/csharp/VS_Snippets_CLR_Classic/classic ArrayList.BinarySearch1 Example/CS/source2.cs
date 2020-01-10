@@ -59,4 +59,3 @@ public class MyArrayList : ArrayList
 // Binary search, item found at index:    5
 //
 //</Snippet2>
-

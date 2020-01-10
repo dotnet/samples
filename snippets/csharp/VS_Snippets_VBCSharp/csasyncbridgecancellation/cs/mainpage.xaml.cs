@@ -1,5 +1,4 @@
-﻿
-//<snippet1>
+﻿//<snippet1>
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -21,7 +20,6 @@ using System.Threading.Tasks;
 // Add a using directive for CancellationToken.
 using System.Threading;
 
-
 namespace BlogFeedWithCancellation
 {
     //<snippet3>
@@ -35,7 +33,6 @@ namespace BlogFeedWithCancellation
         {
             this.InitializeComponent();
         }
-
 
         private async void StartButton_Click(object sender, RoutedEventArgs e)
         {
@@ -76,7 +73,6 @@ namespace BlogFeedWithCancellation
             StartButton.IsEnabled = true;
         }
 
-
         // ***Provide a parameter for the CancellationToken.
         //<snippet2>
         async Task DownloadBlogsAsync(CancellationToken ct)
@@ -109,8 +105,6 @@ namespace BlogFeedWithCancellation
         }
         //</snippet2>
 
-
-        
         //<snippet4>
         // ***Add an event handler for the Cancel button.
         private void CancelButton_Click(object sender, RoutedEventArgs e)
@@ -122,7 +116,6 @@ namespace BlogFeedWithCancellation
             }
         }
         //</snippet4>
-
 
         List<Uri> CreateUriList()
         {
@@ -140,7 +133,6 @@ namespace BlogFeedWithCancellation
             };
             return uriList;
         }
-
 
         // You can pass the CancellationToken to this method if you think you might use a
         // cancellable API here in the future.

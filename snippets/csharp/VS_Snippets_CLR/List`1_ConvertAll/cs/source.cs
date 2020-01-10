@@ -46,5 +46,3 @@ public class Example
 {X=7,Y=1412}
  */
 // </Snippet1>
-
-

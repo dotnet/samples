@@ -3,14 +3,12 @@
   *Purpose: Implements a custom type to 
  * access the thread information. 
   **/
-
 // <Snippet1>
 
 using System;
 using System.Text;
 using System.Web;
 using System.Web.Management;
-
 
 namespace SamplesAspNet
 {
@@ -38,7 +36,6 @@ namespace SamplesAspNet
 
         }
         // </Snippet2>
-
 
         // <Snippet3>
         // Raises the event.
@@ -125,4 +122,3 @@ namespace SamplesAspNet
 }
 
 // </Snippet1>
-

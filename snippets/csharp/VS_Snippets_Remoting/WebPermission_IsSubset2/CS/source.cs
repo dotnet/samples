@@ -7,7 +7,6 @@
   * Then the IsSubsetOf method is called to verify that the second URI is indeed a subset
   * of the firts one. The result of the call to the IsSubsetOf is then displayed.
 */
-
 using System;
 using System.Net;
 using System.Security;

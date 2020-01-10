@@ -3,7 +3,6 @@ using System.Data;
 // <Snippet1>
 using System.Data.Odbc;
 
-
 class Program
 {
     static void Main()
@@ -26,4 +25,3 @@ class Program
     }
 }
 // </Snippet1>
-

@@ -3,7 +3,6 @@
   *Purpose: Implements a custom WebAuthenticationSuccessAuditEvent type
   *by inheriting from the System.Web.Management.WebAuthenticationSuccessAuditEvent class
   **/
-
 // <Snippet1>
 
 using System;
@@ -19,7 +18,6 @@ namespace SamplesAspNet
     {
         private string customCreatedMsg, customRaisedMsg;
 
-
         // <Snippet2>
         // Invoked in case of events identified only by their event code.
         public SampleWebAuthenticationSuccessAuditEvent(
@@ -33,7 +31,6 @@ namespace SamplesAspNet
                 DateTime.Now.TimeOfDay.ToString());
         }
         // </Snippet2>
-
 
         // <Snippet3>
         // Invoked in case of events identified by their event code.and 
@@ -51,7 +48,6 @@ namespace SamplesAspNet
 
         // </Snippet3>
 
-
         // <Snippet4>
         // Raises the SampleWebAuthenticationSuccessAuditEvent.
         public override void Raise()
@@ -66,7 +62,6 @@ namespace SamplesAspNet
         }
         // </Snippet4>
 
-
         // <Snippet5>
         // Obtains the current thread information.
         public WebRequestInformation GetRequestInformation()
@@ -75,7 +70,6 @@ namespace SamplesAspNet
             return RequestInformation;
         }
         // </Snippet5>
-
 
         // <Snippet6>
         //Formats Web request event information.
@@ -111,4 +105,3 @@ namespace SamplesAspNet
 
 }
 // </Snippet1>
-

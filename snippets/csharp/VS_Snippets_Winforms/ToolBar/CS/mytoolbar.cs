@@ -183,7 +183,6 @@ private string GetButtonList(ToolBar toolBar)
 }
 // </snippet3>
 
-
 //<snippet4>
 private void toolBar1_ButtonDropDown(object sender, System.Windows.Forms.ToolBarButtonClickEventArgs e)
 {
@@ -200,7 +199,6 @@ private void toolBar1_ButtonClicked(object sender, System.Windows.Forms.ToolBarB
    textBox1.Enabled = false;
 }
 // </snippet4>
-
 
 		private void button1_Click(object sender, System.EventArgs e)
 		{

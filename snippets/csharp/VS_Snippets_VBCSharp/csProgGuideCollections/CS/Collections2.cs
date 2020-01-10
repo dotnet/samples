@@ -21,7 +21,6 @@ public class Tokens : IEnumerable
         return new TokenEnumerator(this);
     }
 
-
     // Declare an inner class that implements the IEnumerator interface.
     private class TokenEnumerator : IEnumerator
     {
@@ -62,7 +61,6 @@ public class Tokens : IEnumerable
             }
         }
     }
-
 
     //<Snippet5>
     // Test the Tokens class.

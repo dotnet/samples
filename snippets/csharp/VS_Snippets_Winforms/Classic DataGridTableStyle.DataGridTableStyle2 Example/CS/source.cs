@@ -22,4 +22,3 @@ private void CreateDataGridGridTableStyle(){
  
 // </Snippet1>
 }
-

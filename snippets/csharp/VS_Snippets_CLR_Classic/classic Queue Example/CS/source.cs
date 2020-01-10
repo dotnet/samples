@@ -17,8 +17,7 @@
        Console.Write( "\tValues:" );
        PrintValues( myQ );
     }
- 
- 
+
     public static void PrintValues( IEnumerable myCollection )  {
        foreach ( Object obj in myCollection )
           Console.Write( "    {0}", obj );
@@ -33,4 +32,3 @@
      Values:    Hello    World    !
 */ 
 // </Snippet1>
-

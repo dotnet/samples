@@ -36,7 +36,6 @@ namespace MyProject
 			return;
 		}
 
-
 		//**************************************************
 		// Receives a message containing an Order.
 		//**************************************************

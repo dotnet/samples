@@ -7,7 +7,6 @@
 // System.Windows.Forms.TreeNode.TreeView
 // System.Windows.Forms.TreeNode.IsSelected
 
-
 /*
    The following program demonstrates the 'NodeFont', 'Parent', 'Text' and 'PrevVisibleNode'
    properties of the 'TreeNode' class. It creates a TreeView consisting of customer nodes
@@ -36,7 +35,6 @@ public class MyTreeNodeForm : System.Windows.Forms.Form
 		myButton.Click += new EventHandler(MyButtonClick);
 		FillMyTreeView();
 	}
-
 
 	private void MyButtonClick(object sender,EventArgs e)
 	{
@@ -96,7 +94,6 @@ public class MyTreeNodeForm : System.Windows.Forms.Form
 		node.TreeView.Focus();
 	}
 	// </Snippet1>
-   
 
 	private TreeNode GetSelectedNode(TreeNode treeNode)
 	{
@@ -111,8 +108,6 @@ public class MyTreeNodeForm : System.Windows.Forms.Form
 		}
 		return null;
 	}
-		
-	
 
 	// ArrayList object to hold the 'MyCustomerClass' objects.
 	private void FillMyTreeView()

@@ -102,7 +102,6 @@ public class ShortStringDictionary : DictionaryBase  {
 
 }
 
-
 public class SamplesDictionaryBase
 {
     public static void Main()
@@ -128,7 +127,3 @@ public class SamplesDictionaryBase
         // </Snippet3>
     }
 }
-
-
-
-

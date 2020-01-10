@@ -65,8 +65,6 @@ namespace WeakEvents
             }
         }
 
-
-
         /// <summary>
         /// Return a new list to hold listeners to the event.
         /// </summary>
@@ -74,7 +72,6 @@ namespace WeakEvents
         {
             return new ListenerList<SomeEventEventArgs>();
         }
-
 
         /// <summary>
         /// Listen to the given source for the event.

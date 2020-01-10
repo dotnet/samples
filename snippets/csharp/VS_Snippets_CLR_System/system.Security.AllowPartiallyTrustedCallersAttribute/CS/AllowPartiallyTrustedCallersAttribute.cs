@@ -23,7 +23,6 @@
 // it should be used with great caution.  Assert should always be followed with a RevertAssert 
 // command to restore the security settings.
 
-
 using System;
 using System.Collections;
 using System.ComponentModel;
@@ -154,7 +153,6 @@ namespace UserControl
 		{
 		
 		}
-
 
 	}
 }

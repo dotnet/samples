@@ -19,7 +19,6 @@ namespace ConceptualKnownTypeSamples
         static string SayHello()
         { return "Hello"; }
 
-
     }
     // <snippet1>
     [DataContract]
@@ -32,7 +31,6 @@ namespace ConceptualKnownTypeSamples
     public class TriangleType : Shape { }
     // </snippet1>
 
-
     // <snippet2>
     [DataContract]
     public class CompanyLogo
@@ -43,7 +41,6 @@ namespace ConceptualKnownTypeSamples
         private int ColorOfLogo;
     }
     // </snippet2>
-
 
     // <snippet3>
     [DataContract]
@@ -129,7 +126,6 @@ namespace ConceptualKnownTypeSamples
     }
     //</snippet6>
 
-    
     public sealed class MathService
     {
         private MathService() { }
@@ -191,7 +187,6 @@ namespace ConceptualKnownTypeSamples
     public abstract class GenericDrawing<T>
     {
     }
-    
 
     //<snippet9>
     [DataContract]

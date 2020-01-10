@@ -46,7 +46,6 @@ namespace Contoso
         // Override abstract methods from the HashAlgorithm class.
         public override void Initialize() {}
 
-
         //<Snippet22>
         public override byte[] Key
         {

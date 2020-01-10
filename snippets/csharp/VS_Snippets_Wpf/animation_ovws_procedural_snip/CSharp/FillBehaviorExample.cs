@@ -51,6 +51,5 @@ namespace SDKSample
             myStoryboard.Begin(this);
         }
 
-
     }
 }

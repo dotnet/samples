@@ -64,7 +64,6 @@ namespace Samples3
         [OperationContract(ProtectionLevel = ProtectionLevel.Sign)]
         double Add(double a, double b);
 
-
         [OperationContract()]
         [FaultContract(typeof(MathFault),
             ProtectionLevel = ProtectionLevel.EncryptAndSign)]
@@ -73,7 +72,6 @@ namespace Samples3
         [OperationContract(ProtectionLevel = ProtectionLevel.EncryptAndSign)]
         Company GetCompanyInfo();
     }
-
 
     [DataContract]
     public class MathFault
@@ -103,7 +101,6 @@ namespace Samples3
         {
             return a + b;
         }
-
 
         public double Subtract(double a, double b)
         {

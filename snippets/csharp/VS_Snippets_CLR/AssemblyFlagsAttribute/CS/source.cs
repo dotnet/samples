@@ -69,5 +69,3 @@ AssemblyNameFlags.Retargetable
 AssemblyNameFlags.EnableJITcompileOptimizer
 */
 //</Snippet1>
-
-

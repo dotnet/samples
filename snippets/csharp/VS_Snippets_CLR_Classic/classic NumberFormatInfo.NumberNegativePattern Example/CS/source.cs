@@ -34,4 +34,3 @@
 //       Pattern 3:           1,234.00-
 //       Pattern 4:           1,234.00 -
  // </Snippet1>
-

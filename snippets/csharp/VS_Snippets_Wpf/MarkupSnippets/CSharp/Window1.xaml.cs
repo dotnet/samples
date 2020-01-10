@@ -11,7 +11,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Markup;
 
-
 namespace SDKSamples
 {
     /// <summary>
@@ -37,12 +36,10 @@ namespace SDKSamples
             //ParserContext pContext = new ParserContext();
             //XamlTypeMapper xMapper = pContext.XamlTypeMapper;
 
-
             //NamespaceMapEntry mapEntry = new NamespaceMapEntry();
             //mapEntry.AssemblyName = "blah";
             //mapEntry.ClrNamespace = "blah";
             //mapEntry.XmlNamespace = "blah";
-
 
             //<SnippetMarkupKeyboardNavigationTabNavigationCODE>
             Menu navigationMenu = new Menu();

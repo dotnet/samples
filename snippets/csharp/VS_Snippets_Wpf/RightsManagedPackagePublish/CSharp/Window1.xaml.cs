@@ -16,7 +16,6 @@ using System.Windows.Xps.Packaging;
 using System.Xml;
 using WinForms = Microsoft.Win32;
 
-
 namespace SdkSample
 {
     // ========================= partial class Window1 ========================
@@ -32,7 +31,6 @@ namespace SdkSample
             WritePrompt(
                 "Click 'File | Open...' to select a file to open and view.");
         }
-
 
         #region File|Open...
         // ------------------------------ OnOpen ------------------------------
@@ -74,7 +72,6 @@ namespace SdkSample
                 OpenDocument(dialog.FileName);
 
         }// end:OnOpen()
-
 
         // --------------------------- OpenDocument ---------------------------
         /// <summary>
@@ -148,7 +145,6 @@ namespace SdkSample
             return true;
         }// end:OpenDocument()
 
-
         // ------------------- GetFixedDocumentSequenceUri --------------------
         /// <summary>
         ///   Returns the part URI of first FixedDocumentSequence
@@ -169,7 +165,6 @@ namespace SdkSample
             // Return null if a FixedDocumentSequence isn't found.
             return null;
         }// end:GetFixedDocumentSequenceUri()
-
 
         // --------------------------- GetPackage -----------------------------
         /// <summary>
@@ -200,7 +195,6 @@ namespace SdkSample
 
             return inputPackage;
         }// end:GetPackage()
-
 
         //<SnippetRmPkgPubGetFixDoc>
         // ------------------------ GetFixedDocument --------------------------
@@ -237,7 +231,6 @@ namespace SdkSample
         //</SnippetRmPkgPubGetFixDoc>
         #endregion File|Open...
 
-
         #region File|Close
         // ----------------------------- OnClosed -----------------------------
         /// <summary>
@@ -247,7 +240,6 @@ namespace SdkSample
             CloseDocument();
         }// end:OnClosed()
 
-
         // ----------------------------- OnClose ------------------------------
         /// <summary>
         ///   Handles the user "File | Close" menu operation
@@ -256,7 +248,6 @@ namespace SdkSample
         {
             CloseDocument();
         }// end:OnClose()
-
 
         // --------------------------- CloseDocument --------------------------
         /// <summary>
@@ -291,7 +282,6 @@ namespace SdkSample
 
         }// end:CloseDocument
         #endregion File|Close
-
 
         #region File|Rights...
         // ----------------------------- OnRights -----------------------------
@@ -335,7 +325,6 @@ namespace SdkSample
 
         }// end:OnRights()
 
-
         // ----------------------------- OpenXrML -----------------------------
         /// <summary>
         ///   Loads and displays a given XrML rights markup file.</summary>
@@ -369,7 +358,6 @@ namespace SdkSample
             return true;
         }// end:OpenXrML()
 
-
         // ----------------------------- CloseXrML ----------------------------
         /// <summary>
         ///   Closes the document currently displayed in
@@ -390,7 +378,6 @@ namespace SdkSample
             }
         }// end:CloseXrML
         #endregion File|Rights...
-
 
         #region File|Publish...
         // ---------------------------- OnPublish -----------------------------
@@ -423,7 +410,6 @@ namespace SdkSample
             PublishRMPackage(_xpsDocumentPath, _xrmlFilepath, dialog.FileName);
 
         }// end:OnPublish()
-
 
         // ------------------------ PublishRMPackage --------------------------
         /// <summary>
@@ -588,7 +574,6 @@ namespace SdkSample
             return true;
         }// end:PublishRMPackage()
 
-
         // ------------------ GetGetDefaultWindowsUserName() ------------------
         /// <summary>
         ///   Returns the email address of the current user.</summary>
@@ -621,7 +606,6 @@ namespace SdkSample
         }// end:GetDefaultWindowsUserName()
         #endregion File|Publish...
 
-
         #region File|Exit
         // ------------------------------ OnExit ------------------------------
         /// <summary>
@@ -632,7 +616,6 @@ namespace SdkSample
             Close();        // invokes OnClosed()
         }// end:OnExit()
         #endregion File|Exit
-
 
         #region Utilities
         // ------------------------- GetContentFolder -------------------------
@@ -664,7 +647,6 @@ namespace SdkSample
             return contentDir;
         }// end:GetContentFolder()
 
-
         // ------------------------- WriteStatus --------------------------
         /// <summary>
         ///   Adds a line of text to the statusBlock.</summary>
@@ -674,7 +656,6 @@ namespace SdkSample
         {
             statusBlock.Text += status + "\n";
         }
-
 
         // ---------------------------- WritePrompt ---------------------------
         /// <summary>
@@ -686,7 +667,6 @@ namespace SdkSample
             promptBlock.Text = prompt;
         }
 
-
         // ----------------------------- OnPrint ------------------------------
         /// <summary>
         ///   Handles the user "File | Print" menu operation.</summary>
@@ -694,7 +674,6 @@ namespace SdkSample
         {
             PrintDocument();
         }// end:OnClose()
-
 
         // -------------------------- PrintDocument ---------------------------
         /// <summary>
@@ -706,7 +685,6 @@ namespace SdkSample
 
         }// end:PrintDocument()
 
-
         // ----------------------- DocViewer attribute ------------------------
         /// <summary>
         ///   Gets the current DocumentViewer.</summary>
@@ -716,7 +694,6 @@ namespace SdkSample
                 { return docViewer; }  // "docViewer" declared in Window1.xaml
         }
         #endregion Utilities
-
 
         #region private fields
         private string _xrmlFilepath = null;    // xrml path and filename.
@@ -734,7 +711,6 @@ namespace SdkSample
         private readonly string _fixedDocumentSequenceContentType =
             "application/vnd.ms-package.xps-fixeddocumentsequence+xml";
         #endregion private fields
-
 
     }// end:partial class Window1
 

@@ -7,7 +7,6 @@ class Read_Typed_Element {
 
    static void Main() {
 
-	
               ReadElementContentAsString_1();
  	ReadElementContentAsString_2();
 	ReadElementContentAsLong_1();
@@ -16,9 +15,7 @@ class Read_Typed_Element {
 	ReadElementContentAsObject();
              ReadElementContentAsDouble_1();
 
-
    }
-
 
 public static void ReadElementContentAsString_1() {
 //<snippet1>	
@@ -28,7 +25,6 @@ public static void ReadElementContentAsString_1() {
   }
 //</snippet1>
 }
-
 
 public static void ReadElementContentAsString_2() {
 //<snippet2>

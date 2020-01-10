@@ -79,7 +79,6 @@ public static class MoreLINQExtensions
     //</Snippet9>
 }
 
-
 class App
 {
     static void Main()

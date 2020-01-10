@@ -22,7 +22,6 @@ namespace AdvancedInkInputSemples
         {
             InitializeComponent();
 
- 
             root.Children.Add(filteredIC);
 
             WindowState = WindowState.Maximized;

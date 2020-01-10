@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 
 class TestMotorcycle : Motorcycle
 {
@@ -26,8 +25,6 @@ class TestMotorcycle : Motorcycle
    }
 }
 
-
-
 abstract class Motorcycle
 {
    // Anyone can call this.
@@ -45,7 +42,3 @@ abstract class Motorcycle
    // Derived classes must implement this.
    public abstract double GetTopSpeed(); 
 }
-
-
-
-

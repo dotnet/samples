@@ -31,7 +31,6 @@ using System.Runtime.InteropServices;
 
 //[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]
 
-
 [assembly: ThemeInfo(
    ResourceDictionaryLocation.SourceAssembly, //where theme specific resource dictionaries are located
     //(used if a resource is not found in the page, 

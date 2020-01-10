@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Reflection;
 using System.Reflection.Emit;
 
@@ -32,8 +31,3 @@ class CompareGenericTypes
         }
     }
 }
-
-
-
-
-

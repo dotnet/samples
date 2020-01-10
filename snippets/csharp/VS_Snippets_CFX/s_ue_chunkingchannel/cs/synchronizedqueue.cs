@@ -63,7 +63,6 @@ namespace Microsoft.Samples.ChannelHelpers
             {
                 return false;
             }
-            
 
         }
         public virtual void Enqueue(TItem item)

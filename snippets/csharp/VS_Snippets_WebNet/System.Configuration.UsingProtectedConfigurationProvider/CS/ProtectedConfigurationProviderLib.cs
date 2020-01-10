@@ -30,13 +30,11 @@ namespace Samples.AspNet
             get { return pKeyFilePath; }
         }
 
-
         // Gets the provider name.
         public override string Name
         {
             get { return pName; }
         }
-
 
         // Performs provider initialization.
         public override void Initialize(string name,
@@ -46,7 +44,6 @@ namespace Samples.AspNet
             pKeyFilePath = config["keyContainerName"];
             ReadKey(KeyFilePath);
         }
-
 
         // <Snippet3>
         // Performs encryption.
@@ -98,7 +95,6 @@ namespace Samples.AspNet
             return Convert.ToBase64String(returnBytes);
         }
 
-
         // Decrypts an encrypted configuration section and 
         // returns the unencrypted XML as a string.
         private string DecryptString(string encryptedValue)
@@ -132,7 +128,6 @@ namespace Samples.AspNet
             sw.Close();
         }
 
-
         // Reads in the TripleDES key and vector from 
         // the supplied file path and sets the Key 
         // and IV properties of the 
@@ -145,7 +140,6 @@ namespace Samples.AspNet
             des.Key = HexToByte(keyValue);
             des.IV = HexToByte(ivValue);
         }
-
 
         // Converts a byte array to a hexadecimal string.
         private string ByteToHex(byte[] byteArray)
@@ -172,5 +166,3 @@ namespace Samples.AspNet
 
 }
 // </Snippet1>
-
-

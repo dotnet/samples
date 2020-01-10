@@ -19,7 +19,6 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-
 namespace ControlSample 
 {
 // <Snippet1>
@@ -64,4 +63,3 @@ namespace ControlSample
    }    
 // </Snippet1>
 }
-

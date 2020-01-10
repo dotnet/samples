@@ -61,7 +61,6 @@ namespace RGBFilter
         }
 		//</SnippetCreateUnmanagedEffect>
 
-
         #region Public Methods
 
         public RGBFilterBitmapEffect()
@@ -134,7 +133,6 @@ namespace RGBFilter
             typeof(double),
             typeof(RGBFilterBitmapEffect),
             new PropertyMetadata(defaultBlue, OnPropertyInvalidated));
-
 
         #endregion Public Properties
 

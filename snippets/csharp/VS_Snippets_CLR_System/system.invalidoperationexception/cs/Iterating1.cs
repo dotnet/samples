@@ -26,4 +26,3 @@ public class Example
 //       at System.Collections.Generic.List`1.Enumerator.MoveNextRare()
 //       at Example.Main()
 // </Snippet1>
-

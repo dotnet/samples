@@ -23,7 +23,6 @@ namespace CompositionSampleControls {
 
        // </snippet1>
 
-
        // <snippet2>
        // Override CreateChildControls to create the control tree.
         [System.Security.Permissions.PermissionSet(System.Security.Permissions.SecurityAction.Demand, Name="Execution")]
@@ -31,7 +30,6 @@ namespace CompositionSampleControls {
 
             // Add a LiteralControl to the current ControlCollection.
             this.Controls.Add(new LiteralControl("<h3>Value: "));
-
 
             // Create a text box control, set the default Text property, 
             // and add it to the ControlCollection.
@@ -45,5 +43,3 @@ namespace CompositionSampleControls {
        // </snippet2>
     }
 }
-
-  

@@ -13,7 +13,6 @@ using System.Windows.Shapes;
 using System.Windows.Media.Animation;
 using System.Windows.Documents;
 
-
 namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
 {
     public class FrameworkContentElementControlStoryboardExample : FlowDocument

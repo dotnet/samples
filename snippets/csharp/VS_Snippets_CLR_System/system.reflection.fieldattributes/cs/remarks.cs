@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Reflection;
 
 class FieldAttribTest
@@ -21,8 +20,3 @@ class FieldAttribTest
         // </snippet1>
     }
 }
-
-
-
-
-

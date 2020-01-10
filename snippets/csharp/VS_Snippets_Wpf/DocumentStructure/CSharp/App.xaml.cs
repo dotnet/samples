@@ -9,7 +9,6 @@ using System.Configuration;
 using System.Windows.Input;
 using System.Windows.Media;
 
-
 namespace SdkSample
 {
     /// <summary>

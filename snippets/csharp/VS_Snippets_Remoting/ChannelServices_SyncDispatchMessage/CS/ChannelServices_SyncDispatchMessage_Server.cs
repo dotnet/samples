@@ -1,5 +1,4 @@
-﻿
-/*
+﻿/*
    The example demonstrates the remoting version of a server. When a client
    calls the 'MyPrintMethod' on the 'PrintServer' class, the server object 
    prints the parameters passed from the client and returns the last 
@@ -22,4 +21,3 @@ public class Sample {
       Console.ReadLine();            
    }
 }
-

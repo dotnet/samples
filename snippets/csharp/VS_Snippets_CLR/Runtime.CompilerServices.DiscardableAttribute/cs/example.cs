@@ -2,7 +2,6 @@
 using System;
 using System.Runtime.CompilerServices;
 
-
 [DiscardableAttribute()]
 class Program
 {

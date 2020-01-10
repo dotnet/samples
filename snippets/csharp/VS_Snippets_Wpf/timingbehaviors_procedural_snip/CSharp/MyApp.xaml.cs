@@ -6,12 +6,10 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.IO;
 
-
 namespace Microsoft.Samples.Animation.TimingBehaviors
 {
     public partial class MyApp : Application
     {
-    
 
         public MyApp()
         {

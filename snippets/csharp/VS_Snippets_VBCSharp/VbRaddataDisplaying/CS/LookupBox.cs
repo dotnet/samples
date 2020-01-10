@@ -30,7 +30,6 @@ namespace CS
             set{ comboBox1.SelectedValue = value; }
         }
 
-
         public LookupBox()
         {
             InitializeComponent();

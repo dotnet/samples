@@ -49,7 +49,6 @@ namespace DataGrid_ColumnHeaderStyle
                 Extinct = extinct;
             }
 
-
             public string Name { get; set; }
             public string Classification { get; set; }
             public bool Extinct { get; set; }

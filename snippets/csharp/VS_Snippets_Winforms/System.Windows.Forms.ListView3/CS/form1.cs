@@ -1,11 +1,8 @@
-﻿
-
-// The following code example handles the ListView.BeforeLabelEdit event
+﻿// The following code example handles the ListView.BeforeLabelEdit event
 // and demonstrates the EditLabelEventArgs.Item and CancelEdit properties. 
 
 using System.Windows.Forms;
 using System.Drawing;
-
 
 public class Form1:
 	System.Windows.Forms.Form
@@ -82,4 +79,3 @@ public class Form1:
 	//</snippet1>
 
 }
-

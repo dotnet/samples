@@ -24,7 +24,6 @@ namespace DatePickerSnippets
             InitializeComponent();
         }
 
-
         //Snippet 3 in CS and VB.
 
         // If the text is a valid date, but a part of the 

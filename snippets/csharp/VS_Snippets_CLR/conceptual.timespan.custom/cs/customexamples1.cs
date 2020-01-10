@@ -282,4 +282,3 @@ public class Example
       // </Snippet19>
    }
 }
-

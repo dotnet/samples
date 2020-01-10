@@ -31,4 +31,3 @@ public class Example
 //       Good afternoon!
 //       And how are you this fine afternoon?
 // </Snippet7>
-

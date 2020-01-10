@@ -59,7 +59,6 @@ namespace WordSpell
 }
 //</Snippet6>
 
-
 //-----------------------------------------------------------------------------
 // Form1.Designer.cs
 //-----------------------------------------------------------------------------
@@ -89,7 +88,6 @@ namespace Microsoft.Office.Interop
         }
     }
 
-
     //-------------------------------------------------------------------------
     class Documents
     {
@@ -98,7 +96,6 @@ namespace Microsoft.Office.Interop
             return new Document();
         }
     }
-
 
     //-------------------------------------------------------------------------
     public interface _Document
@@ -109,7 +106,6 @@ namespace Microsoft.Office.Interop
         Characters Characters {get;}
         Range Range(ref object first, ref object last);
     }
-
 
     //-------------------------------------------------------------------------
     class Document : _Document
@@ -142,7 +138,6 @@ namespace Microsoft.Office.Interop
         }
     }
 
-
     //-------------------------------------------------------------------------
     public interface Range
     {
@@ -150,20 +145,17 @@ namespace Microsoft.Office.Interop
         string Text { set; get; }
     }
 
-
     //-------------------------------------------------------------------------
     public interface ProofreadingErrors
     {
         int Count { get; }
     }
 
-
     //-------------------------------------------------------------------------
     public interface Words
     {
         Range First {get;}
     }
-
 
     //-------------------------------------------------------------------------
     public interface Characters
@@ -172,7 +164,6 @@ namespace Microsoft.Office.Interop
     }
   }
 }
-
 
 //-----------------------------------------------------------------------------
 namespace WordSpell

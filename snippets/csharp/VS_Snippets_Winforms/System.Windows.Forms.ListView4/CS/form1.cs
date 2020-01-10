@@ -5,8 +5,6 @@
 // called ListView1, on a form, with the View property set to Details.  
 // The form also requires a button called button1.
 
- 
-
 using System.Windows.Forms;
 
 public class Form1:
@@ -91,7 +89,6 @@ public class Form1:
 	}
         //</snippet2>
 
-
 	private void Button1_Click(System.Object sender, System.EventArgs e)
 	{
 		// Create new values for the ListView, clear the list, 
@@ -115,5 +112,3 @@ public class Form1:
 		Application.Run(new Form1());
 	}
 }
- 
-

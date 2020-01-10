@@ -38,7 +38,6 @@ public class SamplesEncoding  {
 
    }
 
-
    public static void PrintCountsAndChars( byte[] bytes, int index, int count, Encoding enc )  {
 
       // Display the name of the encoding used.
@@ -75,4 +74,3 @@ LE array with LE encoding : System.Text.UTF32Encoding : 2   6   :za
 */
 
 // </Snippet1>
-

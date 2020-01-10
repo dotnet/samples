@@ -11,7 +11,6 @@ public void CreateMyRichTextBox()
     RichTextBox richTextBox1 = new RichTextBox();
     richTextBox1.Dock = DockStyle.Fill;
 
-
     richTextBox1.LoadFile("C:\\MyDocument.rtf");
     richTextBox1.Find("Text", RichTextBoxFinds.MatchCase);
 

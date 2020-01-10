@@ -13,13 +13,10 @@ namespace PointCollectionSample
     /// Interaction logic for Window1.xaml
     /// </summary>
 
-
     public partial class Window1 : Window
     {
         private long num = 3;
         private bool continueCalculating = false;
-
-
 
         public Window1()
         {
@@ -67,8 +64,6 @@ namespace PointCollectionSample
                         // pointCollection1 is equal to (10,10 20,20 30,30 40,40)
 
                         //</SnippetPointCollectionAdd>
-
-
 
                         break;
                     }
@@ -275,12 +270,10 @@ namespace PointCollectionSample
 
                         // Getting a string representation of the PointCollection
                         pcString = pointCollection1.ToString();
-                       
 
                         // pcString is equal to "10,10 20,20 30,30"
 
                         //</SnippetPointCollectionToString>
-                        
 
                         break;
                     }
@@ -307,13 +300,9 @@ namespace PointCollectionSample
             } //end switch
         }
 
-
-
-
         private void ShowResults(String resultValue, String syntax, String resultType, String opString)
         {
         }
-
 
     }
 }

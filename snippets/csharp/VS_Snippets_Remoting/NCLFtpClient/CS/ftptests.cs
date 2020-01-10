@@ -386,7 +386,6 @@ namespace Examples
         }
         //</snippet6>
 
-
         //<snippet7>
         public static bool RestartDownloadFromServer(string fileName, Uri serverUri, long offset)
         {
@@ -606,7 +605,6 @@ namespace Examples
                     response.Close();
                 }
             }
-           
 
                 //<snippet12>
             Console.WriteLine("Banner message: {0}", 
@@ -626,7 +624,6 @@ namespace Examples
         }
  
         // </snippet8>
-        
 
         internal static FtpStatusCode WaitForFinalStatus(FtpWebResponse response)
         {
@@ -787,8 +784,7 @@ public class ApplicationMain
             // IMPORTANT: Close the request stream before sending the request.
             requestStream.Close();
         }
-   
-    
+
         // The EndGetResponseCallback method  
         // completes a call to BeginGetResponse.
         private void EndGetResponseCallback(IAsyncResult ar)

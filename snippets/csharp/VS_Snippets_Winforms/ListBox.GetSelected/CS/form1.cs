@@ -26,7 +26,6 @@ namespace ListBoxGetSelectedEx
 			//
 			InitializeComponent();
 
-			
 		}
 
 		/// <summary>

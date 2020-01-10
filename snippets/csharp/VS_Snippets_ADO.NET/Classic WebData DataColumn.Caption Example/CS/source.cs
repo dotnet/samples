@@ -5,7 +5,6 @@ public class Sample
 {
   protected DataSet DataSet1;
 
-
 // <Snippet1>
 private void CreateDataTable()
 {

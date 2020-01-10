@@ -52,4 +52,3 @@ GetValue: This caption has been changed
 Press the Enter key to continue.
 */
 // </Snippet1>
-

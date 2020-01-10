@@ -24,4 +24,3 @@ class Example
       p.DisplayName();
    }
 }
-

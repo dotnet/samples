@@ -2,7 +2,6 @@
 using System.Data;
 using System.Data.Common;
 
-
 namespace ConBuilderAddCS
 {
     class Program

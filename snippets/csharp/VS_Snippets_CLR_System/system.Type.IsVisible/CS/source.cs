@@ -34,4 +34,3 @@ Is the InternalOnly+Nested class visible outside the assembly? False
 Is the Example+Nested class visible outside the assembly? True
  */
 //</Snippet1>
-

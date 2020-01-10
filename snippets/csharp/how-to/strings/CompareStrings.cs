@@ -314,6 +314,5 @@ namespace HowToStrings
             // </Snippet9>
         }
 
-
     }
 }

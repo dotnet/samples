@@ -1,5 +1,4 @@
-﻿
-//<snippet2>
+﻿//<snippet2>
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,7 +32,6 @@ namespace CancelAfterTime
             InitializeComponent();
         }
 
-
         //<snippet1>
         private async void startButton_Click(object sender, RoutedEventArgs e)
         {
@@ -64,7 +62,6 @@ namespace CancelAfterTime
         }
         //</snippet1>
 
-
         // You can still include a Cancel button if you want to.
         private void cancelButton_Click(object sender, RoutedEventArgs e)
         {
@@ -73,7 +70,6 @@ namespace CancelAfterTime
                 cts.Cancel();
             }
         }
-
 
         async Task AccessTheWebAsync(CancellationToken ct)
         {
@@ -98,7 +94,6 @@ namespace CancelAfterTime
             }
         }
 
-        
         private List<string> SetUpURLList()
         {
             List<string> urls = new List<string> 
@@ -125,5 +120,3 @@ namespace CancelAfterTime
     // Downloads canceled.
 }
 //</snippet2>
-
-

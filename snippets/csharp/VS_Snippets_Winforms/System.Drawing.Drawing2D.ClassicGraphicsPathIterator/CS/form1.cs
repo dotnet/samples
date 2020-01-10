@@ -61,7 +61,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathIteratorCS
 		/// The main entry point for the application.
 		/// </summary>
 		/// 
-        
 
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPathIterator.CopyData(System.Drawing.PointF[]@,System.Byte[]@,System.Int32,System.Int32)
         // <snippet1>
@@ -161,7 +160,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathIteratorCS
         }
         // </snippet1>
 
-
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPathIterator.Enumerate(System.Drawing.PointF[]@,System.Byte[]@)
         // <snippet2>
         public void EnumerateExample(PaintEventArgs e)
@@ -242,7 +240,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathIteratorCS
         }
         // </snippet2>
 
-
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPathIterator.HasCurve
         // <snippet3>
         private void HasCurveExample(PaintEventArgs e)
@@ -271,7 +268,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathIteratorCS
             MessageBox.Show(myHasCurve.ToString());
         }
         // </snippet3>
-
 
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPathIterator.NextMarker(System.Drawing.Drawing2D.GraphicsPath)
         // <snippet4>
@@ -340,7 +336,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathIteratorCS
                 
         }
         // </snippet4>
-
 
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPathIterator.NextMarker(System.Int32@,System.Int32@)
         // <snippet5>
@@ -426,7 +421,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathIteratorCS
                 j);
         }
         // </snippet5>
-
 
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPathIterator.NextPathType(System.Byte@,System.Int32@,System.Int32@)
         // <snippet6>
@@ -552,7 +546,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathIteratorCS
         }
             // </snippet6>
 
-
             // Snippet for: M:System.Drawing.Drawing2D.GraphicsPathIterator.NextSubpath(System.Drawing.Drawing2D.GraphicsPath,System.Boolean@)
             // <snippet7>
             public void NextSubpathExample2(PaintEventArgs e)
@@ -635,7 +628,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathIteratorCS
                     20);
             }
         // </snippet7>
-
 
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPathIterator.NextSubpath(System.Int32@,System.Int32@,System.Boolean@)
         // <snippet8>

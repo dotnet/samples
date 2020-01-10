@@ -14,7 +14,6 @@ using System.Drawing;
 using System.Windows.Ink;
 //</SnippetUsingWPF>
 
-
 namespace WinformStylusPointsTest_Console
 {
     class WinformInk
@@ -30,7 +29,6 @@ namespace WinformStylusPointsTest_Console
         {
             theInk = new Ink();
 
-            
         }
 
         private void CreateStrokes()

@@ -4,7 +4,6 @@ using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
 
-
 public class Group
 {
    // This attribute will be overridden.
@@ -43,7 +42,6 @@ public class Run
 
    }
 
-
    private XmlSerializer CreateOverrideSerializer(){
    	
       SoapAttributeOverrides mySoapAttributeOverrides = 
@@ -75,7 +73,3 @@ public class Run
 //xmlns:xsd="http://www.w3.org/2001/XMLSchema" n1:TeamName=".NET" 
 //xmlns:n1="http://www.cohowinery" /> 
 //</Snippet1>
-
-
-
-

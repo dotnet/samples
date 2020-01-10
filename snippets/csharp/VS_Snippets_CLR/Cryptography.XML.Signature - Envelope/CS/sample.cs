@@ -65,7 +65,6 @@ public class SignVerifyEnvelope
         if (Key == null)
             throw new ArgumentNullException("Key");
 
-
         // Create a new XML document.
         XmlDocument doc = new XmlDocument();
 
@@ -112,7 +111,6 @@ public class SignVerifyEnvelope
 
         // Append the element to the XML document.
         doc.DocumentElement.AppendChild(doc.ImportNode(xmlDigitalSignature, true));
-
 
         if (doc.FirstChild is XmlDeclaration)
         {

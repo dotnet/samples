@@ -7,7 +7,6 @@ using System.Windows.Documents;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
-
 namespace PopupSnips
 {
   /// <summary>
@@ -20,8 +19,6 @@ namespace PopupSnips
     {
       InitializeComponent();
     }
-
-
 
     private void PopupAdjust(object sender, EventArgs e)
     {
@@ -92,7 +89,6 @@ namespace PopupSnips
        //<SnippetAnimation>
        myTextBlockPopup.PopupAnimation = PopupAnimation.Fade;
        //</SnippetAnimation>
-  
 
        //<SnippetStaysOpen>
        myTextBlockPopup.StaysOpen = true;
@@ -101,7 +97,6 @@ namespace PopupSnips
 
      }
 
-      
       //<SnippetClosed>
       private void PopupClosing(object sender, EventArgs e)
       {

@@ -30,7 +30,6 @@ public class FolderBrowserDialogExampleForm : System.Windows.Forms.Form
         Application.Run(new FolderBrowserDialogExampleForm());
     }
 
-
     // Constructor.
     public FolderBrowserDialogExampleForm()
     {
@@ -131,7 +130,6 @@ public class FolderBrowserDialogExampleForm : System.Windows.Forms.Form
         }
     }
 
-
     // Close the current file.
     private void closeMenuItem_Click(object sender, System.EventArgs e)
     {
@@ -140,7 +138,6 @@ public class FolderBrowserDialogExampleForm : System.Windows.Forms.Form
 
         closeMenuItem.Enabled = false;
     }
-
 
     // Bring up a dialog to chose a folder path in which to open or save a file.
     private void folderMenuItem_Click(object sender, System.EventArgs e)

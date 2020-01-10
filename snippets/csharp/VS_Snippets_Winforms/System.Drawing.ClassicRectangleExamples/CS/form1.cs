@@ -57,7 +57,6 @@ namespace System.Drawing.ClassicRectangleExamplesCS
 		}
 		#endregion
 
-
         // Snippet for: M:System.Drawing.Rectangle.Inflate(System.Drawing.Rectangle,System.Int32,System.Int32)
         // <snippet1>
         public void RectangleInflateTest(PaintEventArgs e)
@@ -76,7 +75,6 @@ namespace System.Drawing.ClassicRectangleExamplesCS
             e.Graphics.DrawRectangle(Pens.Red, rect2);
         }
         // </snippet1>
-
 
         // Snippet for: M:System.Drawing.Rectangle.Inflate(System.Drawing.Size)
         // <snippet2>
@@ -99,7 +97,6 @@ namespace System.Drawing.ClassicRectangleExamplesCS
             e.Graphics.DrawRectangle(Pens.Red, rect);
         }
         // </snippet2>
-
 
         // Snippet for: M:System.Drawing.Rectangle.Inflate(System.Int32,System.Int32)
         // <snippet3>

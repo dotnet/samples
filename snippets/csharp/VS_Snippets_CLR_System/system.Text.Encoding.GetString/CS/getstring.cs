@@ -13,7 +13,6 @@ namespace ConsoleApplication1 {
       bf2.Load("a.dat");
       Console.WriteLine(bf2.Author);
 
-
       bf2.PrintEncodingInfo(System.Text.Encoding.Default);
     }
     public MyBinaryFile() {
@@ -87,4 +86,3 @@ BrowserSave:     True
     }
   }
 }
-

@@ -14,7 +14,6 @@ class UsingSqlCacheDependencySection
         // Get the Web application configuration.
         System.Configuration.Configuration webConfig = 
         WebConfigurationManager.OpenWebConfiguration("/aspnetTest");
-                        
 
         // Get the section.
         string configPath = "system.web/cache/sqlCacheDependency";
@@ -22,7 +21,6 @@ class UsingSqlCacheDependencySection
         (System.Web.Configuration.SqlCacheDependencySection)webConfig.GetSection(
         configPath);
 
-        
     // </Snippet1>
 
     // <Snippet2>
@@ -56,6 +54,4 @@ class UsingSqlCacheDependencySection
         }
 }
     
-} 
-
-
+}

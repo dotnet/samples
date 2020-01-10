@@ -13,7 +13,6 @@ using System.Windows.Media;
 using System.Windows.Shapes;
 using System.Windows.Media.Animation;
 
-
 namespace Microsoft.Samples.Animation.TimingBehaviors
 {
     public partial class OpacityAnimationExample : Page
@@ -67,8 +66,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
 
             myOpacityBeginStoryboard.Storyboard = myOpacityStoryboard;
             myOpacityEventTrigger.Actions.Add(myOpacityBeginStoryboard);
-
-
 
             //
             //  Clicking on this button animates the opacity of the brush used to paint the background.

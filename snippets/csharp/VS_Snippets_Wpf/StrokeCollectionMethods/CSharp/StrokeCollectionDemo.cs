@@ -28,7 +28,6 @@ namespace StrokeCollectionEraseMethods
             presenter = this.Presenter;
             this.presenter.Strokes.PropertyDataChanged += new PropertyDataChangedEventHandler(Strokes_PropertyDataChanged);
 
-            
         }
 
         //<Snippet29>
@@ -173,7 +172,6 @@ namespace StrokeCollectionEraseMethods
         }
         //</Snippet15>
 
- 
         public int Count
         {
             get

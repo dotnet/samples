@@ -78,5 +78,3 @@ Tarbosaurus
 Albertasaurus
  */
 // </Snippet1>
-
-

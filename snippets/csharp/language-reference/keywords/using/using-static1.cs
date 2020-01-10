@@ -27,7 +27,6 @@ public class Circle
 }
 // </Snippet1>
 
-
 class Program
 {
    static void Main()
@@ -35,4 +34,3 @@ class Program
       Console.WriteLine("Hello World!");
    }
 }
-

@@ -65,8 +65,6 @@ namespace StrokeSnippets_CS
             // See if the change was a new DrawingAttribute.Color property
             Type eT = e.NewValue.GetType();
 
-
-
             //if (eT == typeof(Color))
             //{
             //    Color c = (Color)e.NewValue;
@@ -78,8 +76,6 @@ namespace StrokeSnippets_CS
             //}
         }
         // </Snippet15>
-
-
 
         //<Snippet23>
         protected override void DrawCore(DrawingContext context, DrawingAttributes overrides)

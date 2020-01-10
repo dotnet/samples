@@ -84,8 +84,6 @@ namespace ControlMembers4
          Application.Run(new Form1());
       }
 
-
-
       private void button3_Click(object sender, System.EventArgs e)
       {
          this.SizeControls();
@@ -128,7 +126,6 @@ private void ResizeForm()
 }
 // </snippet2>
 
-      
       private void button2_Click(object sender, System.EventArgs e)
       {
          this.AutoSizeControl((Control)sender, 5);

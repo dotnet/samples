@@ -31,7 +31,6 @@ public class WebClient_OpenRead
 			StreamReader sr = new StreamReader(myStream);
 			Console.WriteLine(sr.ReadToEnd());
 
-
 			// Close the stream. 
 			myStream.Close();
 // </Snippet1>
@@ -48,4 +47,3 @@ public class WebClient_OpenRead
 		}
 	}
 }
-

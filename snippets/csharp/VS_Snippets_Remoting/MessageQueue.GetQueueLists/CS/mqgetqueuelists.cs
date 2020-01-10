@@ -33,7 +33,6 @@ namespace MyProject
 			return;
 		}
 
-
 		//**************************************************
 		// Gets a list of queues with a specified category.
 		// Sends a broadcast message to all queues in that
@@ -56,7 +55,6 @@ namespace MyProject
 			return;
 		}
 
-
 		//**************************************************
 		// Gets a list of queues with a specified label.
 		// Sends a broadcast message to all queues with that
@@ -78,7 +76,6 @@ namespace MyProject
 			return;
 		}
 
-
 		//**************************************************
 		// Gets a list of queues on a specified computer. 
 		// Displays the list on screen.
@@ -99,7 +96,6 @@ namespace MyProject
 			return;
 		}
 
-
 		//**************************************************
 		// Gets a list of all public queues.
 		//**************************************************
@@ -112,7 +108,6 @@ namespace MyProject
 	
 			return;
 		}
-
 
 		//**************************************************
 		// Gets a list of all public queues that match 
@@ -143,7 +138,6 @@ namespace MyProject
 
 			return;
 		}
-
 
 		//**************************************************
 		// Gets a list of private queues on the local 

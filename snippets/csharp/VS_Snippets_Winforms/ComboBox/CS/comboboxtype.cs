@@ -3,8 +3,7 @@ using System;
 using System.Windows.Forms;
 
 namespace Win32Form1Namespace {
-    
-    
+
     public class Win32Form1 : System.Windows.Forms.Form {
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.TextBox textBox2;

@@ -1,5 +1,4 @@
-﻿
-// <Snippet10>
+﻿// <Snippet10>
 using System;
 using System.Numerics;
 
@@ -51,4 +50,3 @@ public class Example
        Console.WriteLine();
    }
 }
-

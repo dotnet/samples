@@ -39,7 +39,6 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using System.Collections;
 
-
 namespace ElementProvider 
 {
     class ParentList : Control, IRawElementProviderFragmentRoot, IRawElementProviderAdviseEvents
@@ -93,8 +92,6 @@ namespace ElementProvider
             }
         }
 // </Snippet122>
-
-
 
 // <Snippet123>
         /// <summary>
@@ -378,7 +375,6 @@ namespace ElementProvider
 
         #endregion Properties
 
-
         #region IRawElementProviderSimple
 
         // <Snippet120>
@@ -595,7 +591,6 @@ namespace ElementProvider
 
         #endregion IRawElementProviderFragmentRoot
 
-
         #region IRawElementProviderAdviseEvents Members
 
         ArrayList subscribedProperties = new ArrayList();
@@ -614,8 +609,6 @@ namespace ElementProvider
             }
         }
 // </Snippet124>
-
-
 
 // <Snippet125>
         void IRawElementProviderAdviseEvents.AdviseEventRemoved(int eventId,

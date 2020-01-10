@@ -43,7 +43,6 @@ namespace UIARangeValuePattern_snip
             // </Snippet104Maximum>
         }
 
-
         ///--------------------------------------------------------------------
         /// <summary>
         /// Starts the target app containing controls of interest.
@@ -284,7 +283,6 @@ namespace UIARangeValuePattern_snip
             }
         }
         // </Snippet104>
-
 
         ///--------------------------------------------------------------------
         /// <summary>

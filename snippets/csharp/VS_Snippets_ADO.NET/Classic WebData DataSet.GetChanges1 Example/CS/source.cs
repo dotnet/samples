@@ -12,7 +12,6 @@ public class Form1: Form
 
     protected OleDbDataAdapter adapter;
 
-
     // <Snippet1>
     private void UpdateDataSet(DataSet dataSet)
     {

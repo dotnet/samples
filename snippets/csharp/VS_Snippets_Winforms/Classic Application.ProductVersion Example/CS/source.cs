@@ -12,4 +12,3 @@ private void PrintProductVersion() {
 
 // </Snippet1>
 }
-

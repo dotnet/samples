@@ -117,5 +117,4 @@ public struct Point : INullable
         return true;
     }
 
-    
 }

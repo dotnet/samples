@@ -64,4 +64,3 @@ class Mypropertyinfo
     Parameter: Index
  */
 // </Snippet1>
-

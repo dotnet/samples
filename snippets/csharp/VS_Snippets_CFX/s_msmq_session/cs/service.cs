@@ -111,7 +111,6 @@ namespace Microsoft.ServiceModel.Samples
         }
     }
 
-
     // Service class which implements the service contract.
     // Added code to write output to the console window
     [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]
@@ -141,7 +140,6 @@ namespace Microsoft.ServiceModel.Samples
             Console.WriteLine(po.ToString());
         }
 
-
         // Host the service within this EXE console application.
         public static void Main()
         {
@@ -151,7 +149,6 @@ namespace Microsoft.ServiceModel.Samples
             // Create the transacted MSMQ queue if necessary.
             if (!MessageQueue.Exists(queueName))
                 MessageQueue.Create(queueName, true);
-
 
             // Get the base address that is used to listen for WS-MetaDataExchange requests
             string baseAddress = ConfigurationManager.AppSettings["baseAddress"];

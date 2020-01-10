@@ -8,7 +8,6 @@
     using System.Web.UI;
     using System.Web.UI.WebControls;
 
-
     // The DropDownNavigationPath is a class that extends the SiteMapPath
     // control and renders a DropDownList after the CurrentNode. The
     // DropDownList displays a list of pages found further down the site map

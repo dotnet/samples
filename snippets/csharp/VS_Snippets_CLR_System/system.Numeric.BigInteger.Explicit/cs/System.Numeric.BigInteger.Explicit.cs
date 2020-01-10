@@ -1,5 +1,4 @@
-﻿
-// Illustrates explicit BigInteger conversions defined
+﻿// Illustrates explicit BigInteger conversions defined
 // using the op_Explicit method.
 
 using System;
@@ -59,7 +58,6 @@ public class ExplicitConversion
       }
       Console.WriteLine();
       // </Snippet2>
-
 
       // <Snippet3>
       // BigInteger to Double conversion.
@@ -127,7 +125,6 @@ public class ExplicitConversion
       }
       Console.WriteLine();
       // </Snippet5>
-
 
       // <Snippet6>
       // BigInteger to Int64 conversion.

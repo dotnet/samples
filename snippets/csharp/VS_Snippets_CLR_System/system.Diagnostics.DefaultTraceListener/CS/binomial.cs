@@ -133,6 +133,3 @@ class Binomial
 }
 // </Snippet11>
 // </Snippet1>
-
-
-

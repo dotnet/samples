@@ -24,8 +24,7 @@ namespace Microsoft.Samples.Animation.LocalAnimations
 
     // Create the demonstration.
     public class InteractiveAnimationExample : Page {
-        
-        
+
         private TranslateTransform interactiveTranslateTransform;   
         private Border containerBorder;
         private Ellipse interactiveEllipse;
@@ -65,7 +64,6 @@ namespace Microsoft.Samples.Animation.LocalAnimations
             myPanel.Children.Add(containerBorder);
             this.Content = myPanel;
         }
-        
 
         // When the user left-clicks, use the 
         // SnapshotAndReplace HandoffBehavior when applying the animation.        
@@ -111,9 +109,7 @@ namespace Microsoft.Samples.Animation.LocalAnimations
             System.Windows.Point targetPoint = new System.Windows.Point();
             targetPoint.X = clickPoint.X - interactiveEllipse.Width / 2;
             targetPoint.Y = clickPoint.Y - interactiveEllipse.Height / 2;
-            
-            
-            
+
             // Animate to the target point.
             DoubleAnimation xAnimation = 
                 new DoubleAnimation(targetPoint.X, 
@@ -129,8 +125,7 @@ namespace Microsoft.Samples.Animation.LocalAnimations
                 
             // Change the color of the ellipse.
             interactiveEllipse.Fill = System.Windows.Media.Brushes.Orange;
-            
-                    
+
         }
         
     }

@@ -79,6 +79,3 @@ class PerfCounterCatGetCountMod
     //</snippet4>
 }
 //</snippet3>
-
-
-

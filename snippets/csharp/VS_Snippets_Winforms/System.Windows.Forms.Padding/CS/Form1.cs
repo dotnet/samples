@@ -103,6 +103,5 @@ namespace MarginAndPadding
         }
     }
 
-
 }
 // </snippet1>

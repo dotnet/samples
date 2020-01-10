@@ -231,7 +231,6 @@ public class Demo
             SoapServices.XmlNsForClrTypeWithNsAndAssembly);
         //</snippet133>
 
-        
         //<snippet140>
         // Get the SOAP action for the method.
         System.Reflection.MethodBase getHelloMethodBase = 
@@ -321,7 +320,6 @@ public class Demo
             fieldName);
         //</snippet150>
 
-        
         //<snippet160>
         string interopTypeXmlElementName = 
             "ExampleClassElementName";

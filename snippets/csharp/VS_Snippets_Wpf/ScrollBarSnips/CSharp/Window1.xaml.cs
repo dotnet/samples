@@ -7,7 +7,6 @@ using System.Windows.Documents;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
-
 namespace ScrollBarSnips
 {
     /// <summary>
@@ -51,7 +50,6 @@ namespace ScrollBarSnips
 
         }
 
-        
         //<SnippetScrollHandler>
         private void OnScroll(object sender, RoutedEventArgs e)
         {

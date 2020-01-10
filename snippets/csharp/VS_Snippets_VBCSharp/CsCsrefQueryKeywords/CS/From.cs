@@ -6,8 +6,6 @@ using System.Xml.Linq;
 //using System.Data.Linq;
 using System.IO;
 
-
-    
 namespace FromClause
 {
     using CommonTypes;
@@ -117,7 +115,6 @@ namespace FromClause
                 where lower != 'x'
                 from upper in upperCase
                 select new { lower, upper };
-
 
             // Execute the queries.
             Console.WriteLine("Cross join:");

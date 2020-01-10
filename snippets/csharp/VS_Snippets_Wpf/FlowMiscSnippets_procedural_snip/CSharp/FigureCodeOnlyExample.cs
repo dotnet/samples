@@ -40,7 +40,6 @@ namespace SDKSample
             // Create a FlowDocument with the paragraph as its initial content.
             FlowDocument myFlowDocument = new FlowDocument(myContainerParagraph);
 
-
             this.Content = myFlowDocument;
             /*
              * 

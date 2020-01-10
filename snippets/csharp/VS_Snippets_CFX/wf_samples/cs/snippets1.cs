@@ -24,9 +24,6 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.ComponentModel;
 
-
-
-
 namespace WF_Snippets
 {
     //Snippets1.cs:  New home for snippets taken from Workflow Application Samples for Windows Workflow Foundation API pages
@@ -561,7 +558,6 @@ namespace WF_Snippets
         }
     }
 
-    
     class TerminationTrackingService : TrackingService 
     {
         private string source = "TerminationTrackingService";
@@ -661,7 +657,6 @@ namespace WF_Snippets
         }
         //</snippet116>
 
-
         protected override TrackingProfile GetProfile(Type workflowType, Version profileVersionId)
         {
             throw new Exception("The method or operation is not implemented.");
@@ -702,7 +697,6 @@ namespace WF_Snippets
             log.WriteEntry(message.ToString(), EventLogEntryType.Warning);
         }
         //</snippet117>
-
 
         protected override void InstanceCompletedOrTerminated()
         {
@@ -896,7 +890,6 @@ namespace WF_Snippets
             WorkflowTheme.CurrentTheme.AmbientTheme.ShowConfigErrors = false;
             WorkflowTheme.CurrentTheme.ReadOnly = true;            
         }
-
 
 		// </snippet125>
         //</snippet124>
@@ -1313,7 +1306,6 @@ namespace WF_Snippets
 
         }
 
-
     }
 
     public class Resources     //another hack- just a custom class to avoid solution properties
@@ -1324,9 +1316,5 @@ namespace WF_Snippets
         public static Bitmap Executing = new Bitmap(0, 0);
 
     }
-  
-
-
 
 }
-

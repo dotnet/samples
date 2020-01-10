@@ -5,7 +5,6 @@ using System.Xml;
 using System.Configuration;
 using System.Collections.ObjectModel;
 
-
 namespace SDKSample
 {
     /// <summary>
@@ -44,14 +43,12 @@ namespace SDKSample
           item.CurrentPrice = 100;
           this.AuctionItems.Add(item);
 
-
           item = new AuctionItem();
           item.Description = "bike";
           item.SpecialFeatures = SpecialFeatures.Color;
           item.CurrentPrice = 530;
    
           this.AuctionItems.Add(item);
-
 
           item = new AuctionItem();
           item.Description = "Laptop";
@@ -68,20 +65,17 @@ namespace SDKSample
 
           item = new AuctionItem();
 
-
           item = new AuctionItem();
           item.Description = "Digital camera";
           item.CurrentPrice = 680;
 
           this.AuctionItems.Add(item);
 
-
           item = new AuctionItem();
           item.Description = "Keyboard";
           item.CurrentPrice = 55;
 
           this.AuctionItems.Add(item);
-
 
         }
     }

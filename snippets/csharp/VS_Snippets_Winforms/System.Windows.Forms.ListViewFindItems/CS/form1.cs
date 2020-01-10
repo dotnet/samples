@@ -166,11 +166,6 @@ namespace ListViewFindItemWithTextHowTo
             Application.Run(new Form1());
         }
 
-
-
-
-
-
     }
 
 }

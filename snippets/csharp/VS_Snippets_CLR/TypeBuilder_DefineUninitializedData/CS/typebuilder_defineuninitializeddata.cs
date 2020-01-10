@@ -91,4 +91,3 @@ public sealed class Example
    private Example() {}
 }
 // </Snippet1>
-

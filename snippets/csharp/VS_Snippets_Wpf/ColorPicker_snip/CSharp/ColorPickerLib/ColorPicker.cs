@@ -157,8 +157,6 @@ namespace ColorPickerLib
         }
         //</SnippetOnColorInvalidated>
 
-
-
 //</Snippet11>
     }
 //<Snippet6>

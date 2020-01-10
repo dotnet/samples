@@ -43,7 +43,6 @@ namespace Samples
 
     //</snippet2>
 
-
     public class Test
     {
         public static void Main()

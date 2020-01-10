@@ -46,7 +46,6 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-
 namespace CustomControls
 {
     public partial class SampleApplicationForm : Form

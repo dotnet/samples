@@ -70,4 +70,3 @@ namespace Examples.CS.WebControls.Design
     } // SimpleCompareValidatorDesigner
 } // Examples.CS.WebControls.Design
 // </snippet1>
-

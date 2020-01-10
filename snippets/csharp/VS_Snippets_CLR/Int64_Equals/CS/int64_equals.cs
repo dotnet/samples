@@ -39,4 +39,3 @@ class MyInt64_Equals
          }
      }
 }
-

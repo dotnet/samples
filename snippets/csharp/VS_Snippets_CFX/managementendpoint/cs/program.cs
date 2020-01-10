@@ -28,7 +28,6 @@ namespace Microsoft.Samples.WF.ManagementEndpoint
                 new BasicHttpBinding(),
                 new EndpointAddress(new Uri("http://localhost/DataflowControl.xaml/Creation")));
 
-            
             host.AddServiceEndpoint(controlEndpoint);
             host.AddServiceEndpoint(creationEndpoint);
 

@@ -31,7 +31,6 @@ namespace Samples.AspNet
         }
         //</Snippet2>
 
-
         //<Snippet3>
         [ConfigurationProperty("alias", DefaultValue = "anotherName.txt",
             IsRequired = true, IsKey = false)]
@@ -156,7 +155,6 @@ namespace Samples.AspNet
             }
         }
         //</Snippet9>
-
 
         public static void DisplayTimeSpanAbsoluteRange()
         {
@@ -329,7 +327,6 @@ namespace Samples.AspNet
 
             }
         }
-
 
         static void ShowSectionInfo()
         {

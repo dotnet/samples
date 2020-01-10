@@ -15,8 +15,6 @@ namespace HeaderedContentControlSimple
     /// Interaction logic for Page1.xaml
     /// </summary>
 
-
-
     public partial class Page1 : Canvas
     {
 
@@ -33,4 +31,3 @@ namespace HeaderedContentControlSimple
 
     }
 }
-

@@ -81,7 +81,6 @@ public class Customer : System.Object
 
 } // End Customer class 
 
-
 // The basic customer Order class.
 public class Order : System.Object
 {
@@ -149,14 +148,11 @@ private void FillMyTreeView()
    treeView1.EndUpdate();
 }
 // </snippet1>
-      
-      
+
    private void button1_Click(object sender, System.EventArgs e)
    {
       this.FillMyTreeView();      
    }
 } // End TV1 Class
-
-
 
 } // End NameSpace

@@ -6,7 +6,6 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.IO;
 
-
 namespace Microsoft.Samples.Animation
 {
     public partial class MyApp : Application

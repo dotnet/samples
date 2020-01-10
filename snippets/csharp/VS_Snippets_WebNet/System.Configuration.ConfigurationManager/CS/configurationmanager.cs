@@ -642,7 +642,6 @@ using System.Diagnostics;
       string appName = 
         Environment.GetCommandLineArgs()[0];
 
-
       // Get user selection.
       while (true)
       {

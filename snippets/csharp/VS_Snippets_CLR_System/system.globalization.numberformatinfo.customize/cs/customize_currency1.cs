@@ -40,4 +40,3 @@ public class Example
 //       USD -0.03
 //       USD -175,902.32
 // </Snippet1>
-

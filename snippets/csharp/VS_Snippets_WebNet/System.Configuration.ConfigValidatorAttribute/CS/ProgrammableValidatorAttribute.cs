@@ -81,7 +81,6 @@ namespace Samples.AspNet
         }
     }
 
-
     public class ProgrammableValidatorAttribute : 
         ConfigurationValidatorAttribute
     {
@@ -89,7 +88,6 @@ namespace Samples.AspNet
         private string pcolor;
         private int pminYear;
         private long pmaxMiles;
-
 
         public string Make
         {
@@ -123,7 +121,6 @@ namespace Samples.AspNet
             pmaxMiles = miles;
             
         }
-        
 
         public override ConfigurationValidatorBase ValidatorInstance
         {

@@ -110,5 +110,3 @@ namespace Examples.System.Net.NetworkInformation.PingTest
     }
 }
 // </snippet1>
-
-

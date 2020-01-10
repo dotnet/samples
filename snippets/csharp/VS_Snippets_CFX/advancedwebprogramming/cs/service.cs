@@ -68,7 +68,6 @@ namespace Microsoft.WebProgrammingModel.Samples
             return c;
         }
 
-
         public List<Customer> GetCustomers()
         {
             List<Customer> list = new List<Customer>();

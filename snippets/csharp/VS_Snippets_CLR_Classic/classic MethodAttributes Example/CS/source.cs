@@ -29,8 +29,7 @@ class AttributesSample
         PrintAttributes(typeof(System.Reflection.MethodAttributes), (int) Myattributes);
         return 0;
     }
- 
- 
+
     public static void PrintAttributes(Type attribType, int iAttribValue)
     {
         if (!attribType.IsEnum) {Console.WriteLine("This type is not an enum."); return;}
@@ -47,4 +46,3 @@ class AttributesSample
     }
 }
 // </Snippet1>
-

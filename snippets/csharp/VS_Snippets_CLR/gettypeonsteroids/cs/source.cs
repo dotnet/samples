@@ -30,6 +30,3 @@ class Example
         Console.WriteLine(t2);
     }
 }
-
-
-

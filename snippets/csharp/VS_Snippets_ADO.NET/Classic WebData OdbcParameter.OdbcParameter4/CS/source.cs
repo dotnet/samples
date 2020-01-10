@@ -8,7 +8,6 @@ class Program
     {
     }
 
-
     // <Snippet1>
     public void CreateOdbcParameter()
     {

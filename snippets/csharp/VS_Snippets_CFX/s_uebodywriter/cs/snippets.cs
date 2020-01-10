@@ -4,7 +4,6 @@ using System.ServiceModel;
 using System.ServiceModel.Channels;
 using System.Xml;
 
-
 namespace UEBodyWriter
 {
     class Snippets

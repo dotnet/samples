@@ -65,5 +65,3 @@ public class Example
       words = phrase.Split(null as string[], StringSplitOptions.RemoveEmptyEntries);
       // </Snippet6>
    }}
-      
-      

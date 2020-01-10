@@ -120,6 +120,3 @@ class InstDataCopyToMod
     //</snippet3>
 }
 //</snippet1>
-
-
-

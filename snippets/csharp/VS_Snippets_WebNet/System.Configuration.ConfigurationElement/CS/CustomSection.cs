@@ -6,7 +6,6 @@ using System;
 using System.Configuration;
 using System.Collections;
 
-
 namespace Samples.AspNet
 {
     // Define a custom section containing an individual
@@ -67,7 +66,6 @@ namespace Samples.AspNet
                 return urlsCollection;
             }
         }
-
 
         //<Snippet73>
         protected override void DeserializeSection(

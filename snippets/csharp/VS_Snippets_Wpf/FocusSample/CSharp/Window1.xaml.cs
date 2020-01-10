@@ -8,7 +8,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Input;
 
-
 namespace FocusSample
 {
     /// <summary>
@@ -91,7 +90,6 @@ namespace FocusSample
             }
             //</SnippetFocusSampleMoveFocus>
         }
-
 
         // Sets the FocusNavigationDirection.
         private void OnFocusSelected(object sender, RoutedEventArgs e)

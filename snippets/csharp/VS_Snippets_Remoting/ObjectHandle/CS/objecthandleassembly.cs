@@ -2,7 +2,6 @@
 using System;
 using System.Runtime.Remoting;
 
-
 public class MyType : MarshalByRefObject {
 
    public MyType()  {
@@ -15,7 +14,6 @@ public class MyType : MarshalByRefObject {
       return AppDomain.CurrentDomain.GetHashCode();
    }
 }
-
 
 class Test {
 

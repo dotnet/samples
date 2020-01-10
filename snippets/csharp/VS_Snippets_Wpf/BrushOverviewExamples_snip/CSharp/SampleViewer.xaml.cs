@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
@@ -19,9 +18,7 @@ namespace Microsoft.Samples.BrushExamples
        public SampleViewer()
        {
             InitializeComponent();
-            
-      
-                 
+
        }
        
     }

@@ -27,7 +27,6 @@ namespace Microsoft.ServiceModel.Samples
     public interface ICalculatorChannel : Microsoft.ServiceModel.Samples.ICalculator, System.ServiceModel.IClientChannel
     {
     }
-    
 
     //<snippet2>
     [System.Diagnostics.DebuggerStepThroughAttribute()]

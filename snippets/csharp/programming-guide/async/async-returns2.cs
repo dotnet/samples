@@ -30,4 +30,3 @@ public class Example
 //       Today is Wednesday, May 24, 2017
 //       The current time is 15:25:16.2935649
 //       The current temperature is 76 degrees.
-

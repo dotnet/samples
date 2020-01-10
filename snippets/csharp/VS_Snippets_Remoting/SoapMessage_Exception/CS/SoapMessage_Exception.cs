@@ -1,5 +1,4 @@
-﻿
-/*
+﻿/*
    The program extends the 'SoapExtension' class to create a class 
    that is used to log the SOAP messages transferred for a web service 
    method invocation. Whenever this method is invoked on the client 
@@ -184,7 +183,6 @@ public class MySoapExtensionAttribute : SoapExtensionAttribute
 {
    private string myFilename;
    private int myPriority;
-
 
    // Set the name of the log file where SOAP messages will be stored.
    public MySoapExtensionAttribute() : base()

@@ -69,7 +69,6 @@ public class Form1 : System.Windows.Forms.Form
         // Controls placed on Panel1 support right-to-left fonts.
         splitContainer1.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 
-
         // Add a SplitContainer to the right panel.
         splitContainer1.Panel2.Controls.Add(splitContainer2);
         splitContainer1.Panel2.Name = "splitterPanel2";
@@ -132,7 +131,6 @@ public class Form1 : System.Windows.Forms.Form
         // Display grid lines.
         listView1.GridLines = true;
 
-
         // Create three items and three sets of subitems for each item.
         ListViewItem item1 = new ListViewItem("item1", 0);
         // Place a check mark next to the item.
@@ -173,7 +171,6 @@ public class Form1 : System.Windows.Forms.Form
 
         // Display grid lines.
         listView2.GridLines = true;
-
 
         // Create three items and three sets of subitems for each item.
         item1 = new ListViewItem("item1", 0);

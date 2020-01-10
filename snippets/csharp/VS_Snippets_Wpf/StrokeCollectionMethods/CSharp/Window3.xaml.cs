@@ -6,7 +6,6 @@ using System.Windows.Documents;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
-
 namespace StrokeCollectionEraseMethods
 {
     /// <summary>
@@ -66,7 +65,6 @@ namespace StrokeCollectionEraseMethods
 
                 sourceInkCanvas = value;
 
-
                 if (sourceInkCanvas != null)
                 {
                     // Attach the even handler to the InkCannvas
@@ -84,7 +82,6 @@ namespace StrokeCollectionEraseMethods
             this.InvalidateVisual();
         }
 
-
         protected override void OnRender(DrawingContext drawingContext)
         {
             
@@ -99,7 +96,6 @@ namespace StrokeCollectionEraseMethods
             }
         }
 
- 
     }
     //</Snippet33>
  

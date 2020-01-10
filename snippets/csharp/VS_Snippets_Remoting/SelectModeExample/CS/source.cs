@@ -16,13 +16,11 @@ public static void DoSocketGet(string server)
     Byte[] ByteGet = ASCII.GetBytes(Get);
     Byte[] RecvBytes = new Byte[256];
     String strRetPage = null;
- 
 
     // IPAddress and IPEndPoint represent the endpoint that will
     //   receive the request.
     // Get first IPAddress in list return by DNS.
-  
-  
+
     IPAddress hostadd = Dns.GetHostEntry(server).AddressList[0];
     IPEndPoint EPhost = new IPEndPoint(hostadd, 80);
     //<Snippet1>
@@ -69,6 +67,3 @@ public static void DoSocketGet(string server)
    }
 
 }
- 
-
-

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Threading.Tasks;
 using System.Windows;
 
@@ -22,7 +22,6 @@ namespace AsyncFirstExample
             resultsTextBox.Text +=
                 $"\r\nLength of the downloaded string: {contentLength}.\r\n";
         }
-
 
         // Three things to note in the signature:
         //  - The method has an async modifier. 

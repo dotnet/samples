@@ -65,7 +65,6 @@ namespace NorthwindClient
             DataServiceQuery<Customer> query =
                    (DataServiceQuery<Customer>)result.AsyncState;
 
-
             // Use the Dispatcher to ensure that the query returns in the UI thread.
             this.Dispatcher.BeginInvoke(new OperationResultCallback(delegate
             {

@@ -1,5 +1,4 @@
-﻿
-// <Snippet1>
+﻿// <Snippet1>
 using System;
 using System.Diagnostics.Tracing;
 
@@ -37,8 +36,6 @@ public sealed partial class MainPage : Page
 
     }
 }
-
-
 
 public class Page 
 {

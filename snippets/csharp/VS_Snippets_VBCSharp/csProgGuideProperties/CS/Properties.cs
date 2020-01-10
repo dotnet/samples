@@ -20,7 +20,6 @@
             }
         }
 
-        
         class Program
         {
             static void Main()
@@ -37,7 +36,6 @@
         // Output: Time in hours: 24
         //</Snippet1>
     }
-
 
     //---------------------------------------------------------------------------
     namespace WrapUsingExample1
@@ -81,7 +79,6 @@
         */
         //</Snippet2>
     }
-
 
     //---------------------------------------------------------------------------
     namespace WrapUsingExample2
@@ -135,7 +132,6 @@
         */
         //</Snippet3>
     }
-
 
     //---------------------------------------------------------------------------
     namespace WrapUsingExample3
@@ -220,7 +216,6 @@
         //</Snippet6>
     }
 
-
     //---------------------------------------------------------------------------
     class WrapUsing
     {
@@ -242,7 +237,6 @@
             }
         }
         //</Snippet7>
-
 
         //<Snippet8>
         class Person
@@ -270,7 +264,6 @@
         public int Number => _number++;	// Don't do this        
         //</Snippet10>
 
-
         //<Snippet11>
         class Employee
         {
@@ -279,7 +272,6 @@
         }
         //</Snippet11>
     }
-
 
     //---------------------------------------------------------------------------
     class WrapUsing2
@@ -296,7 +288,6 @@
         }
         //</Snippet12>
 
-
         class TestPerson
         {
             static void Main()
@@ -310,7 +301,6 @@
             }
         }
     }
-
 
     //---------------------------------------------------------------------------
     namespace WrapInterfaces
@@ -327,7 +317,6 @@
             }
         }
         //</Snippet14>
-
 
         //<Snippet15>
         interface IEmployee
@@ -383,7 +372,6 @@
         }
         //</Snippet15>
 
-
         interface ICitizen
         {
             string Name
@@ -417,7 +405,6 @@
             }
         }
 
-        
     }
     class ReadOnlyPropertyExamples
     {
@@ -500,7 +487,6 @@
 
             //ROC allows [] access
             Console.WriteLine("names_3[0] = {0}", ro.Names_3[0]);
-            
 
             //throws runtime exceptions on unimplemented interface methods
             IList<string> myList = (IList<string>)ro.Names_3;
@@ -513,7 +499,6 @@
                 Console.WriteLine("RemoveAt is not implemented in ReadOnlyCollection<T>");
             }
 
-
             //add name then interate private list
             List<string> badList = ro.BadProp;
             badList.Add("Ha ha");
@@ -524,8 +509,7 @@
             // Keep the console open in debug mode.
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();        
-        
-        
+
         }
     }
 }

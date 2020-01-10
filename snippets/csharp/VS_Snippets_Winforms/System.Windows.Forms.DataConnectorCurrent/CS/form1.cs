@@ -18,7 +18,6 @@ namespace Current
 
 		private Button button1;
 
-
 		public Form1()
 		{
 			this.Load += new EventHandler(Form1_Load);
@@ -52,7 +51,6 @@ namespace Current
 			BindingSource1.Add(new HatchBrush(HatchStyle.Cross, Color.Red));
 			BindingSource1.Add(new SolidBrush(Color.Blue));
 		}
-
 
 		private void button1_Click(object sender, EventArgs e)
 		{
@@ -100,8 +98,5 @@ namespace Current
 		}
 
 	}
-
-
-
 
 }

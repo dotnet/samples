@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-
 namespace LetClause
 {
     //<snippet28>
@@ -51,4 +50,3 @@ namespace LetClause
     */
     //</snippet28>
 }
-

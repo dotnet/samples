@@ -11,7 +11,6 @@ using System.Security.Permissions;
 using System.Reflection;
 using System.Globalization;
 
-
 class PolicyLevelSample
 {
 	
@@ -66,7 +65,6 @@ class PolicyLevelSample
                 );
             myCodeGroup.Name = "My CodeGroup";
 
-            			
             //<Snippet4>  
             // Add the code groups to the policy level.
             rootCodeGroup.AddChild(myCodeGroup);

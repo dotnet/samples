@@ -12,4 +12,3 @@ class Program
       // </Snippet1>
    }
 }
-

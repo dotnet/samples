@@ -3,7 +3,6 @@ using System.Windows.Forms;
 using System.Security.Policy;
 using System.Security.Cryptography;
 
-
 public class Form1: Form
 {
 // <Snippet1>

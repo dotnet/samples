@@ -10,7 +10,6 @@
 //
 //-----------------------------------------------------------------------------
 
-
 using System;
 using System.IdentityModel;
 using System.IdentityModel.Configuration;
@@ -40,7 +39,6 @@ namespace PassiveFlowSTS
         // Custom Claims that this IP STS is capable of issuing
         private const string IDENTITY_PROVIDER_CLAIM = "http://FederationForWebApps/IdentityProviders";
 
-
         public CustomSecurityTokenService(SecurityTokenServiceConfiguration configuration)
             : base(configuration)
         {
@@ -53,7 +51,6 @@ namespace PassiveFlowSTS
             // the RP that requests the token and then use that for _encryptingCreds
             _encryptingCreds = new X509EncryptingCredentials(CertificateUtil.GetCertificate(StoreName.My, StoreLocation.LocalMachine, ENCRYPTING_CERTIFICATE_NAME));
         }
-
 
         /// <summary>
         /// This method returns the configuration for the token issuance request. The configuration
@@ -92,7 +89,6 @@ namespace PassiveFlowSTS
             // If you have multiple RPs for the STS you would select the certificate that is specific to 
             // the RP that requests the token and then use that for _encryptingCreds
             scope.EncryptingCredentials = _encryptingCreds;
-
 
             return scope;
         }

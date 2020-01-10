@@ -95,7 +95,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
 
             this.Content = mainPanel;
         }
-        
 
         // Updates the clock's SpeedRatio.
         private void speedRatioButton_Clicked(object sender, RoutedEventArgs e)

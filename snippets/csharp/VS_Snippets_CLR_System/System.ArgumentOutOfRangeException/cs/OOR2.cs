@@ -39,4 +39,3 @@ public class Example2
       // </Snippet9> 
    }
 }
-

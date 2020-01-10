@@ -14,7 +14,6 @@ static void RunService()
 
     CustomBinding binding = new CustomBinding(bindingElements);
 
-
     //Step2: Use the binding to build the channel listener.         
     IChannelListener<IReplyChannel> listener =
           binding.BuildChannelListener<IReplyChannel>(

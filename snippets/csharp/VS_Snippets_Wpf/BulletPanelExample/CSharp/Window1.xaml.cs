@@ -8,7 +8,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Data;
 using System.Windows.Shapes;
 
-
 namespace SDKSample
 {
   /// <summary>

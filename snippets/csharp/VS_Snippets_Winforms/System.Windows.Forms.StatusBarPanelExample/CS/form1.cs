@@ -121,7 +121,6 @@ public class Form1:
 		// Add the StatusBar to the form.
 		this.Controls.Add(statusBar1);
 	}
-	
 
 	// If the user clicks the status bar, check the text of the 
 	// StatusBarPanel.  If the text equals a short time string,
@@ -144,4 +143,3 @@ public class Form1:
 		Application.Run(new Form1());
 	}
 }
-

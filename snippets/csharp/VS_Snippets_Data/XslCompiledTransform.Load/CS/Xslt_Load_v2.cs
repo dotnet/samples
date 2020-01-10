@@ -9,8 +9,6 @@ using System.Net;
 class XslCompiledTransformLoad {
 
   static void Main() {
-	
-
 
   }
 

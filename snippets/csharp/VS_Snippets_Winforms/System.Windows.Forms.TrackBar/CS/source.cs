@@ -50,7 +50,6 @@ public class Form1 : System.Windows.Forms.Form
         trackBar1.SmallChange = 2;
     }
 
-
     private void trackBar1_Scroll(object sender, System.EventArgs e)
     {
         // Display the trackbar value in the text box.
@@ -58,4 +57,3 @@ public class Form1 : System.Windows.Forms.Form
     }
 }
 //</Snippet1>
-

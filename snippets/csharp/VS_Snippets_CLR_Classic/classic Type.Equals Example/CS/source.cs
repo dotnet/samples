@@ -44,7 +44,3 @@ class Example
     typeof(Example).Equals(typeof(System.Type)): False
 */
 // </Snippet1>
-
-
-
-

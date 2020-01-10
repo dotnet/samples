@@ -8,7 +8,6 @@ namespace KeywordsUberProject
     class csrefKeywordsSelection
     {
 
-
         static void Main(string[] args)
         {
             //<snippet1>
@@ -53,11 +52,8 @@ namespace KeywordsUberProject
             }
             //</snippet3>
 
-
         }
     }
-
-
 
     class IfTest
     {
@@ -95,9 +91,7 @@ namespace KeywordsUberProject
             //</snippet4>
         }
 
-
     }
-
 
     class IfTest2
     {
@@ -144,7 +138,6 @@ namespace KeywordsUberProject
 
     }
 
-
     public class IfTest3
     {
         static void Main()
@@ -186,7 +179,6 @@ namespace KeywordsUberProject
         }
     }
 
-
     class SwitchTest1
     {
 
@@ -211,8 +203,6 @@ namespace KeywordsUberProject
             //</snippet7>
         }
     }
-
-
 
     //<snippet8>
     class SwitchTest
@@ -298,6 +288,5 @@ namespace KeywordsUberProject
         }
     }
     //</snippet9>
-
 
 }

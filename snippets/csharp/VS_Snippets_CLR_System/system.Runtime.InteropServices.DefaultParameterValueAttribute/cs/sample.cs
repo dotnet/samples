@@ -1,6 +1,5 @@
 ﻿using System;
 
-
 class Program
 {
 	static void Main(string[] args)
@@ -18,7 +17,6 @@ class Program
 		// DO NOT CONVERT THIS SAMPLE TO ANY OTHER LANGUAGE!!!!
 		// VB and C++ support default parameters.
 		// 
-
 
 	}
 	//<snippet1>

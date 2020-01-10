@@ -8,7 +8,6 @@ the 'catch' block  a new 'WebException' object is created  and  thrown to the ca
 is caught in the calling method and the error message is dispalyed to the console.
 */
 
-
 using System;
 using System.Net;
 using System.Net.Sockets;

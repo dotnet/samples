@@ -44,7 +44,6 @@ public class Form1: Form
       Application.Run(new Form1());
    }
 
-
    public Form1()
    {
       this.txtResult = new TextBox();
@@ -54,12 +53,9 @@ public class Form1: Form
       this.showButton.Text = "Show Dialog";
       this.showButton.Location = new Point(0, txtResult.Height + 10);
       this.showButton.Click += new EventHandler(this.showButton_Click);
-     
 
       this.Controls.AddRange(new Control[] {txtResult, showButton});
    }
-
-
 
    // <Snippet1>
    public void ShowMyDialogBox()
@@ -79,7 +75,6 @@ public class Form1: Form
       testDialog.Dispose();
    }
    // </Snippet1>
-
 
    private void showButton_Click(object sender, System.EventArgs e)
    {

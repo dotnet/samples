@@ -129,7 +129,6 @@ namespace Microsoft.Samples.BrushExamples
 
             // </SnippetTileBrushBottomRightAlignmentTiledInline>
 
-
             StackPanel mainPanel = new StackPanel();
             mainPanel.Children.Add(rectangle1);
             mainPanel.Children.Add(rectangle2);

@@ -4,7 +4,6 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 // </Snippet3>
 
-
 namespace serialization
 {
     class Program

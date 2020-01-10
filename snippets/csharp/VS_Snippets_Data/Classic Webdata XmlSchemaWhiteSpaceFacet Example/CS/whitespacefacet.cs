@@ -46,7 +46,6 @@ class XMLSchemaExamples
             compiledSchema = schema1;
         }
 
-
         XmlNamespaceManager nsmgr = new XmlNamespaceManager(new NameTable());
         nsmgr.AddNamespace("xs", "http://www.w3.org/2001/XMLSchema");
         compiledSchema.Write(Console.Out, nsmgr);

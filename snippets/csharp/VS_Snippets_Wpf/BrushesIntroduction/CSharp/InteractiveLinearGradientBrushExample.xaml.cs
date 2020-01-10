@@ -31,7 +31,6 @@ namespace BrushesIntroduction
             onEndPointTextBoxKeyUp(EndPointTextBox, null);
         }
 
-
         // Update the StartPoint and EndPoint markers when the gradient display
         // element's size changes.
         private void gradientDisplaySizeChanged(object sender, SizeChangedEventArgs e)
@@ -218,9 +217,6 @@ namespace BrushesIntroduction
             }
         }
 
-        
-         
-
         // Updates the StartPoint and EndPoint and their markers when
         // the user changes the brush's MappingMode.
         private void mappingModeChanged(object sender, SelectionChangedEventArgs e)
@@ -231,7 +227,6 @@ namespace BrushesIntroduction
             Point oldEndPoint = InteractiveLinearGradientBrush.EndPoint;
             Point newEndPoint = new Point();
 
-           
             if (InteractiveLinearGradientBrush.MappingMode == 
                     BrushMappingMode.RelativeToBoundingBox)
             {
@@ -314,13 +309,11 @@ namespace BrushesIntroduction
 
     }
 
-
     [ValueConversion(typeof(object), typeof(string[]))]
     public class EnumPossibleValuesToStringArrayConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-
 
             return new System.Collections.ArrayList(Enum.GetNames(value.GetType()));
 
@@ -379,6 +372,5 @@ namespace BrushesIntroduction
             }
         }
     }
-
 
 }

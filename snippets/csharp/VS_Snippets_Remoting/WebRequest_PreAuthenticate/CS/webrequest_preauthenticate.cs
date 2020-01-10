@@ -87,6 +87,3 @@ class WebRequest_Preauthenticate
 		}
 	}	
 }
-	
-
-

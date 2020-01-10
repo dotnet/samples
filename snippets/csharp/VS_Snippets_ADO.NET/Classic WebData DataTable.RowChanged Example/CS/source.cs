@@ -24,7 +24,6 @@ public class Sample
         // add a RowChanged event handler for the table.
         custTable.RowChanged += new DataRowChangeEventHandler(Row_Changed);
 
-
         // add ten rows
         for(int id=1; id<=10; id++)
         {

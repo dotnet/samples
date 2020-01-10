@@ -4,7 +4,6 @@ using System.Data;
 using System.Diagnostics;
 using System.Windows.Forms;
 
-
 public class Form1: Form {
 
  protected DataSet DS;

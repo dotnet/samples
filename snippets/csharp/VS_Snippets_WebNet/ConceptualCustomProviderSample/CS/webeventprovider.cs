@@ -2,7 +2,6 @@
   *File name: BufferedWebEventProvider.cs
   *Purpose: Shows how to build a buffered custom event provider. 
   **/
-
 // <Snippet1>
 
 using System;
@@ -12,7 +11,6 @@ using System.Web.Management;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Web;
-
 
 namespace Samples.AspNet.Management
 {
@@ -31,7 +29,6 @@ namespace Samples.AspNet.Management
 
         private string providerName, buffer, bufferMode;
 
-      
         // Initializes the provider.
         public override void Initialize(string name,
          NameValueCollection config)
@@ -46,7 +43,6 @@ namespace Samples.AspNet.Management
             buffer = config.Get("buffer");
             bufferMode = config.Get("bufferMode");
 
-
             customInfo.AppendLine(string.Format(
                 "Provider name: {0}", providerName));
             customInfo.AppendLine(string.Format(
@@ -56,7 +52,6 @@ namespace Samples.AspNet.Management
 
         }
 
-      
         // Processes the incoming events.
         // This method performs custom processing and, if
         // buffering is enabled, it calls the base.ProcessEvent
@@ -107,7 +102,6 @@ namespace Samples.AspNet.Management
                 string.Format("EventsDiscardedSinceLastNotification: {0}",
                 flushInfo.EventsDiscardedSinceLastNotification));
 
-           
             // Read each buffered event and send it to the
             // Log.
             foreach (WebBaseEvent eventRaised in flushInfo.Events)

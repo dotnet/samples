@@ -38,4 +38,3 @@ class MyUInt32_Equals
          }
      }
 }
-

@@ -12,4 +12,3 @@ private void PrintProductName() {
 
 // </Snippet1>
 }
-

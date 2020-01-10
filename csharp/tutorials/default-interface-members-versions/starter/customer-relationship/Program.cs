@@ -16,7 +16,6 @@ namespace customer_relationship
                 }
             };
 
-
             SampleOrder o = new SampleOrder(new DateTime(2012, 6, 1), 5m);
             c.AddOrder(o);
 

@@ -28,7 +28,6 @@
 
         IdentityVerifier identityVerifier = IdentityVerifier.CreateDefault();
 
-
        // <snippet1>
        static EndpointIdentity CreateIdentity()
         {
@@ -113,7 +112,6 @@
             return currentDomain;
         }
     }
-
 
     class SimpleAuthorizationPolicy : IAuthorizationPolicy
     {

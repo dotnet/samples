@@ -40,4 +40,3 @@ public class Example
 //       1 = 0.99999999999999989: False
 //       1 is approximately equal to 0.99999999999999989: True
 // </Snippet12>
-

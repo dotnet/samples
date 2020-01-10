@@ -87,4 +87,3 @@ class HttpWebRequest_IfModifiedSince
 		}
 	}	
 }
-

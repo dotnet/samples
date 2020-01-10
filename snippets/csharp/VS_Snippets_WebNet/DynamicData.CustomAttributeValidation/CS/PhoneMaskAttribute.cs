@@ -3,7 +3,6 @@ using System;
 using System.Globalization;
 using System.ComponentModel.DataAnnotations;
 
-
 [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = false)]
 sealed public class PhoneMaskAttribute : ValidationAttribute
 {
@@ -19,7 +18,6 @@ sealed public class PhoneMaskAttribute : ValidationAttribute
     {
         _mask = mask;
     }
-
 
     public override bool IsValid(object value)
     {

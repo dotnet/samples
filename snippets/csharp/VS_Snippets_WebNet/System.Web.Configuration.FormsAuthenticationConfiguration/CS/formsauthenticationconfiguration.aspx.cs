@@ -32,7 +32,6 @@ public partial class FormsAuthenticationConfiguration_Test : System.Web.UI.Page
             System.Configuration.Configuration configuration =
                 WebConfigurationManager.OpenWebConfiguration("/configTarget");
 
-
             // Get the external Authentication section.
             AuthenticationSection authenticationSection =
                 (AuthenticationSection)configuration.GetSection(
@@ -60,7 +59,6 @@ public partial class FormsAuthenticationConfiguration_Test : System.Web.UI.Page
 
     }
 
-  
     protected void Button1_Click(object sender, EventArgs e)
     {
         GetCookieName();

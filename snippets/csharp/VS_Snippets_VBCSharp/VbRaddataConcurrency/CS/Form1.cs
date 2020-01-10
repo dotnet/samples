@@ -24,7 +24,6 @@ namespace ConcurrencyWalkthroughCS
             }
             //</Snippet5>
         }
-        
 
         //---------------------------------------------------------------------
         //<Snippet2>
@@ -33,7 +32,6 @@ namespace ConcurrencyWalkthroughCS
             UpdateDatabase();
         }
         //</Snippet2>
-        
 
         //---------------------------------------------------------------------
         private void Form1_Load(object sender, EventArgs e)
@@ -42,7 +40,6 @@ namespace ConcurrencyWalkthroughCS
             this.customersTableAdapter.Fill(this.northwindDataSet.Customers);
 
         }
-
 
         //---------------------------------------------------------------------
         //<Snippet1>
@@ -67,7 +64,6 @@ namespace ConcurrencyWalkthroughCS
         }
         //</Snippet1>
 
-
         //---------------------------------------------------------------------
         //<Snippet4>
         private string CreateMessage(NorthwindDataSet.CustomersRow cr)
@@ -78,7 +74,6 @@ namespace ConcurrencyWalkthroughCS
                 "Proposed: " + GetRowData(cr, DataRowVersion.Current) + "\n" +
                 "Do you still want to update the database with the proposed value?";
         }
-
 
         //--------------------------------------------------------------------------
         // This method loads a temporary table with current records from the database
@@ -97,7 +92,6 @@ namespace ConcurrencyWalkthroughCS
             return currentRowInDb;
         }
 
-
         //--------------------------------------------------------------------------
         // This method takes a CustomersRow and RowVersion 
         // and returns a string of column values to display to the user.
@@ -113,7 +107,6 @@ namespace ConcurrencyWalkthroughCS
             return rowData;
         }
         //</Snippet4>
-                
 
         //---------------------------------------------------------------------
         //<Snippet3>
@@ -137,7 +130,6 @@ namespace ConcurrencyWalkthroughCS
             }
         }
         //</Snippet3>
-
 
         //---------------------------------------------------------------------
         public Form1()

@@ -113,7 +113,6 @@ namespace MethodsOnObjectContext
     }
     //</snippet5>
 
-
     //<snippet8>
     public partial class AdventureWorksEntities : ObjectContext
     {

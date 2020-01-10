@@ -9,7 +9,6 @@ using System.ComponentModel.DataAnnotations;
 [MetadataType(typeof(CustomerMetadata))]
 public partial class Customer
 {
-   
 
     partial void OnValidate(System.Data.Linq.ChangeAction action)
     {
@@ -19,7 +18,6 @@ public partial class Customer
             throw new ValidationException(
                "Data value must start with an uppercase letter.");
     }
-
 
 }
 

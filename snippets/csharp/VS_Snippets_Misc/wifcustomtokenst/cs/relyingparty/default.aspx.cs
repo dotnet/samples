@@ -32,7 +32,6 @@ namespace RelyingParty
                 this.ClaimsGridView.DataSource = claimsPrincipal.Claims;
                 this.ClaimsGridView.DataBind();
 
-        
                 if (claimsPrincipal != null)
                 {
                     DisplayReceivedToken(claimsPrincipal);

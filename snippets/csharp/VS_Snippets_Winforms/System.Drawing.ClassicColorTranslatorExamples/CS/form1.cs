@@ -57,7 +57,6 @@ namespace System.Drawing.ClassicColorTranslatorCS
 		}
 		#endregion
 
-
         // Snippet for: M:System.Drawing.ColorTranslator.FromHtml(System.String)
         // <snippet1>
         public void FromHtml_Example(PaintEventArgs e)
@@ -73,7 +72,6 @@ namespace System.Drawing.ClassicColorTranslatorCS
                 100, 100);
         }
         // </snippet1>
-
 
         // Snippet for: M:System.Drawing.ColorTranslator.FromOle(System.Int32)
         // <snippet2>
@@ -91,7 +89,6 @@ namespace System.Drawing.ClassicColorTranslatorCS
         }
         // </snippet2>
 
-
         // Snippet for: M:System.Drawing.ColorTranslator.FromWin32(System.Int32)
         // <snippet3>
         public void FromWin32_Example(PaintEventArgs e)
@@ -105,13 +102,9 @@ namespace System.Drawing.ClassicColorTranslatorCS
             // Fill a rectangle with myColor.
             e.Graphics.FillRectangle( new SolidBrush(myColor), 0, 0, 
                 100, 100);
-                
-                
-                
-                
+
         }
         // </snippet3>
-
 
         // Snippet for: M:System.Drawing.ColorTranslator.ToHtml(System.Drawing.Color)
         // <snippet4>
@@ -128,7 +121,6 @@ namespace System.Drawing.ClassicColorTranslatorCS
         }
         // </snippet4>
 
-
         // Snippet for: M:System.Drawing.ColorTranslator.ToOle(System.Drawing.Color)
         // <snippet5>
         public void ToOle_Example(PaintEventArgs e)
@@ -143,7 +135,6 @@ namespace System.Drawing.ClassicColorTranslatorCS
             MessageBox.Show(oleColor.ToString());
         }
         // </snippet5>
-
 
         // Snippet for: M:System.Drawing.ColorTranslator.ToWin32(System.Drawing.Color)
         // <snippet6>

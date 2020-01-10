@@ -86,4 +86,3 @@ namespace UE.ServiceModel.Samples
     }
     // </Snippet1>
 }
-

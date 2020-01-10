@@ -45,7 +45,6 @@ namespace Samples.AspNet
             }
         }
 
-      
         private static void GetCars()
         {
 
@@ -74,7 +73,6 @@ namespace Samples.AspNet
                 Console.WriteLine(err.ToString());
             }
         }
-
 
         private static void NotAllowedCars()
         {

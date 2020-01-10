@@ -101,7 +101,6 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
             }
         }
 
-
         #endregion
 
         #region Implementation stuff
@@ -269,7 +268,6 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
         {
             get { return innerReader.Prefix; }
         }
-
 
         public override void ReadStartElement(string localname, string ns) { innerReader.ReadStartElement(localname, ns); }
 

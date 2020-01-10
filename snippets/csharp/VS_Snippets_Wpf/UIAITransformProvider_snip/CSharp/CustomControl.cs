@@ -9,7 +9,6 @@ using System.Windows.Automation.Provider;
 using System.Windows.Automation;
 using System.Security.Permissions;
 
-
 namespace UIAITransformProvider_snip
 {
     public class CustomControl : Control
@@ -48,7 +47,6 @@ namespace UIAITransformProvider_snip
             }
 
             e.Graphics.FillRectangle(backgroundBrush, DisplayRectangle);
-
 
             // Calling the base class OnPaint
             base.OnPaint(e);

@@ -20,7 +20,6 @@ public class Manager:Employee
    public int Level;
 }
 
-
 public class Run
 {
    public static void Main()
@@ -29,7 +28,6 @@ public class Run
       test.SerializeObject("IncludeExample.xml");
       test.DeserializeObject("IncludeExample.xml");
    }
-
 
    public void SerializeObject(string filename)
    {

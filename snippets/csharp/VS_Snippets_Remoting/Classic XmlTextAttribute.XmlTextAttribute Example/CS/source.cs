@@ -5,7 +5,6 @@ using System.Xml.Serialization;
 using System.Xml.Schema;
 using System.Xml;
 
-
 public class Group {
     public string GroupName;
     public string Comment;

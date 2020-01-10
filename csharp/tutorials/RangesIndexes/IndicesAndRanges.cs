@@ -120,7 +120,6 @@ namespace RangesIndexes
             // <SnippetIndicesAndRanges_MovingAverage>
             int[] sequence = Sequence(1000);
 
-
             for(int start = 0; start < sequence.Length; start += 100)
             {
                 Range r = start..(start+10);

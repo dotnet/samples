@@ -25,8 +25,7 @@
        Console.WriteLine( "After replacing the value at index 3 and index 4," );
        PrintIndexAndKeysAndValues( mySL );
     }
- 
- 
+
     public static void PrintIndexAndKeysAndValues( SortedList myList )  {
        Console.WriteLine( "\t-INDEX-\t-KEY-\t-VALUE-" );
        for ( int i = 0; i < myList.Count; i++ )  {
@@ -55,4 +54,3 @@
      [4]:    4    IV
  */ 
  // </Snippet1>
-

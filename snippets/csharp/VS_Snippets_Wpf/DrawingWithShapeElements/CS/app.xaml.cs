@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Windows;
 using System.Data;
 using System.Xml;
@@ -16,10 +15,8 @@ namespace Microsoft.Samples.Graphics
         {
             Window mySampleWindow = new SampleViewer();
             mySampleWindow.Show();
-        
-        
-        }
 
+        }
 
     }
 }

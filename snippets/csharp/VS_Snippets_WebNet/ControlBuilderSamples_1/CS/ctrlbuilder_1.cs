@@ -80,8 +80,6 @@ namespace CustomControlBuilders
   {}
   // </snippet5>   
 
-  
-
   // <Snippet6>
   // Create a control that is modified by the MyItemControlBuilder
   // class. 

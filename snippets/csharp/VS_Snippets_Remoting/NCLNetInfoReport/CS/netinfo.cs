@@ -137,7 +137,6 @@ namespace Examples
         }
           //</Snippet2>
 
-        
         //<Snippet3>
         public static void ShowUdpStatistics(NetworkInterfaceComponent version)
         {
@@ -312,8 +311,7 @@ namespace Examples
             Console.WriteLine("");
         }
          //</Snippet7>
-         
-        
+
          //<Snippet14>
         private static void ShowIPAddresses(string label, IPAddressCollection addresses)
         {

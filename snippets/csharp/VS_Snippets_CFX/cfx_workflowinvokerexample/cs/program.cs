@@ -12,7 +12,6 @@ WorkflowInvokerExample.exe: Program.cs
  csc /t:exe Program.cs /r:System.dll /r:System.Activities.dll /r:System.Xaml.dll /r:System.Xml.dll
 */
 
-
 // Taken
 // Snippet 1,2, 3
 // Snippet 10/110
@@ -46,9 +45,6 @@ namespace WorkflowInvokerExample
             BeginInvokeExample();
             //snippet33();
             //snippet34();
-
-            
-            
 
         }
 
@@ -92,7 +88,6 @@ namespace WorkflowInvokerExample
             WorkflowInvoker.Invoke(wf, inputs);
             //</snippet3>
         }
-
 
         static void snippet10()
         {

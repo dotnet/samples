@@ -45,7 +45,6 @@ namespace Examples
             }
         }
 
-        
         static void Run()
         {
             // Create an instance of a Book class 

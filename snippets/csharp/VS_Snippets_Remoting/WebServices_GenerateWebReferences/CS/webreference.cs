@@ -54,7 +54,6 @@ class Test
         Console.WriteLine("Warning: " + warning); 
     }
 
-
         string url = "AddNumbers.wsdl";
 
 // <snippet1>
@@ -116,7 +115,6 @@ class Test
     {
 
         Test.Run();
- 
 
     }
 }

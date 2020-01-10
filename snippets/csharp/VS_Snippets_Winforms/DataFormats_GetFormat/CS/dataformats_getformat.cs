@@ -21,8 +21,6 @@ using System.Windows.Forms;
          Console.WriteLine("The Format Name corresponding to the ID "+myFormat.Id+" is :");
          Console.WriteLine(myFormat.Name);
 
-         
-
       }
    }
 // </Snippet1>

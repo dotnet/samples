@@ -13,7 +13,6 @@ using System.IO.Packaging;
 using System.Collections.Generic;
 using WinForms = Microsoft.Win32;
 
-
 namespace SdkSample
 {
     /// <summary>
@@ -31,7 +30,6 @@ namespace SdkSample
             ShowDescription(_descriptionString[0]);
         }
         #endregion constructor
-
 
         #region File|Open...
         // ------------------------------ OnOpen ------------------------------
@@ -68,7 +66,6 @@ namespace SdkSample
                 ShowPrompt("");
             }
         }// end:OnOpen()
-
 
         // --------------------------- OpenDocument ---------------------------
         /// <summary>
@@ -124,7 +121,6 @@ namespace SdkSample
         }// OpenDocument()
         #endregion File|Open...
 
-
         #region File|Close
         // ----------------------------- OnClosed -----------------------------
         /// <summary>
@@ -134,7 +130,6 @@ namespace SdkSample
             CloseDocument();
         }// end:OnClosed()
 
-
         // ----------------------------- OnClose ------------------------------
         /// <summary>
         ///   Handles the user "File | Close" menu operation
@@ -143,7 +138,6 @@ namespace SdkSample
         {
             CloseDocument();
         }// end:OnClose()
-
 
         // -------------------------- CloseDocument ---------------------------
         /// <summary>
@@ -167,7 +161,6 @@ namespace SdkSample
             this.Title = "DocumentStructure Sample";
         }// end:CloseDocument
         #endregion File|Close
-
 
         #region File|Add Structure...
         // -------------------------- OnAddStructure --------------------------
@@ -218,7 +211,6 @@ namespace SdkSample
                                  _fixedPageStructures, // structure definitions
                                  xpsTargetFile);       // target structured doc
         }// end:OnAddStructure()
-
 
         // ----------------------- AddDocumentStructure -----------------------
         /// <summary>
@@ -299,7 +291,6 @@ namespace SdkSample
             ICollection<IXpsFixedPageReader> fixedPages =
                 enumerator.Current.FixedPages;
 
-
             // Add a document structure to each fixed page.
             int i = 0;
             foreach (IXpsFixedPageReader fixedPageReader in fixedPages)
@@ -339,7 +330,6 @@ namespace SdkSample
         }// end:AddDocumentStructure
         #endregion File|Add Structure...
 
-
         #region File|Print
         // ----------------------------- OnPrint ------------------------------
         /// <summary>
@@ -348,7 +338,6 @@ namespace SdkSample
         {
             PrintDocument();
         }// end:OnClose()
-
 
         // -------------------------- PrintDocument ---------------------------
         /// <summary>
@@ -361,7 +350,6 @@ namespace SdkSample
         }// end:PrintDocument()
         #endregion File|Print
 
-
         #region File|Exit
         // ------------------------------ OnExit ------------------------------
         /// <summary>
@@ -372,7 +360,6 @@ namespace SdkSample
             Close();        // invokes OnClosed()
         }// end:OnExit()
         #endregion File|Exit
-
 
         #region Utilities
         // ------------------------- GetContentFolder -------------------------
@@ -404,13 +391,11 @@ namespace SdkSample
             return contentDir;
         }// end:GetContentFolder()
 
-
         // -------------------------- WriteResource ---------------------------
         void WriteResource(XpsResource resource, string filename)
         {
             WriteStream(resource.GetStream(), filename);
         }
-
 
         // --------------------------- WriteStream ----------------------------
         private void WriteStream(Stream stream, string filename)
@@ -431,7 +416,6 @@ namespace SdkSample
             srcStream.Close();
         }// end:WriteStream()
 
-
         // ------------------------- ShowPrompt(string) -----------------------
         /// <summary>
         ///   Writes a line of text to the prompt bar.</summary>
@@ -441,7 +425,6 @@ namespace SdkSample
         {
             promptBlock.Text = prompt;
         }
-
 
         // ---------------------------- ShowStatus ----------------------------
         /// <summary>
@@ -453,7 +436,6 @@ namespace SdkSample
             statusBlock.Text += status + "\n";
         }
 
-
         // ------------------------- ShowDescription -------------------------
         /// <summary>
         ///   Displays a string of text to the description block.</summary>
@@ -462,7 +444,6 @@ namespace SdkSample
             descriptionBlock.Text = description;
             descriptionBlock.TextWrapping = TextWrapping.Wrap;
         }
-
 
         // ------------------------- ShowDescription -------------------------
         /// <summary>
@@ -473,7 +454,6 @@ namespace SdkSample
             descriptionBlock.TextWrapping = wrapStyle;
         }
 
-
         // ----------------------- ShowDescriptionTitle -----------------------
         /// <summary>
         ///   Displays a string of text in the description title block.</summary>
@@ -481,7 +461,6 @@ namespace SdkSample
         {
             descriptionBlockTitle.Text = title;
         }
-
 
         // ------------------------------ Filename ----------------------------
         /// <summary>
@@ -503,7 +482,6 @@ namespace SdkSample
             return filepath.Remove(0, slashIndex + 1);
         }
 
-
         // ----------------------- DocViewer attribute ------------------------
         /// <summary>
         ///   Gets the current DocumentViewer.</summary>
@@ -513,7 +491,6 @@ namespace SdkSample
                 { return docViewer; }  // "docViewer" declared in Window1.xaml
         }
         #endregion Utilities
-
 
         #region Private Fields
         private string    _openedXpsFile = null; // XPS document path & filename.

@@ -31,4 +31,3 @@ class Program
     }
     // </Snippet1>
 }
-

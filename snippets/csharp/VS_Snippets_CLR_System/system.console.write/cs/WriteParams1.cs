@@ -37,4 +37,3 @@ public class Example
 // The example displays the following output:
 //    John: M, born 5/10/1992  Height 73.5 inches, Weight 207 lbs  Remarks: Client since 1/3/2012
 // </Snippet1>
-

@@ -72,4 +72,3 @@
          myMethodInfo.Invoke(null, null);
       }
    }
-

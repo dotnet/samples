@@ -154,8 +154,7 @@ namespace UIAExpandCollapsePattern_snip
         {
 
         }
-      
-        
+
         ///--------------------------------------------------------------------
         /// <summary>
         /// The main entry point for the application.

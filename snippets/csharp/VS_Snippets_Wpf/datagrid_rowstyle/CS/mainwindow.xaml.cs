@@ -49,7 +49,6 @@ namespace DataGrid_RowStyle
                 Extinct = extinct;
             }
 
-
             public string Name { get; set; }
             public string Classification { get; set; }
             public bool Extinct { get; set; }

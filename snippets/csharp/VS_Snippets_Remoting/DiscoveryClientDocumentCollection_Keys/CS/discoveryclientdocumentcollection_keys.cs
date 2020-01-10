@@ -73,6 +73,4 @@ class DiscoveryClientDocumentCollectionSample_Keys
                            + " Collection",myStringUrl);
 // </Snippet3>
    }
-} 
-
-
+}

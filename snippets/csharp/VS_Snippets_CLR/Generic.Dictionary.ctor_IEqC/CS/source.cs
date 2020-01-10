@@ -50,6 +50,3 @@ Key = DIB, Value = paint.exe
 Key = rtf, Value = wordpad.exe
  */
 //</Snippet1>
-
-
-

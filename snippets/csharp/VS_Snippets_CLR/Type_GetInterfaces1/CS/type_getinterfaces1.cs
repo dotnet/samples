@@ -31,5 +31,3 @@ System.Runtime.Serialization.ISerializable
 System.Runtime.Serialization.IDeserializationCallback
  */
 // </Snippet1>
-
-       

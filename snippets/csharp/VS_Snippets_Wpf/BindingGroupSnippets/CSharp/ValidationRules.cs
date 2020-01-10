@@ -6,5 +6,4 @@ using System.Globalization;
 namespace BindingGroupSnippets
 {
 
-
 }

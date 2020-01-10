@@ -9,7 +9,6 @@
    columns.
 */
 
-
 using System;
 using System.ComponentModel;
 using System.Data;
@@ -76,7 +75,6 @@ public class MyForm : Form
       myColumns.ResetPropertyDescriptors();
    }
 // </Snippet1>
-
 
    private void AddCustomDataTableStyle()
    {

@@ -7,7 +7,6 @@ using LibraryContractsHAV;
 using System.AddIn.Hosting;
 using System.Xml;
 
-
 namespace ListAdaptersHost
 {
 class Program
@@ -81,8 +80,6 @@ static void Main(string[] args)
     Console.ReadLine();
 }
 
-
-
 private static AddInToken ChooseAddIn(Collection<AddInToken> tokens)
 {
     if (tokens.Count == 0)
@@ -113,7 +110,6 @@ private static AddInToken ChooseAddIn(Collection<AddInToken> tokens)
     Console.WriteLine("Invalid selection: {0}. Please choose again.", line);
     return ChooseAddIn(tokens);
 }
-
 
 internal static IList<BookInfo> CreateBooks()
 {
@@ -173,7 +169,6 @@ internal static IList<BookInfo> CreateBooks()
     }
     return books;
 }
-
 
 }
 

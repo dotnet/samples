@@ -63,7 +63,6 @@ namespace System.Drawing.ClassicPensExampleCS
         }
 		#endregion
 
-
         // Snippet for: M:System.Drawing.Pen.Clone
         // <snippet1>
         public void Clone_Example(PaintEventArgs e)
@@ -79,7 +78,6 @@ namespace System.Drawing.ClassicPensExampleCS
             e.Graphics.DrawLine(clonePen, 0, 0, 100, 100);
         }
         // </snippet1>
-
 
         // Snippet for: M:System.Drawing.Pen.MultiplyTransform(System.Drawing.Drawing2D.Matrix)
         // <snippet2>
@@ -101,7 +99,6 @@ namespace System.Drawing.ClassicPensExampleCS
         }
         // </snippet2>
 
-
         // Snippet for: M:System.Drawing.Pen.MultiplyTransform(System.Drawing.Drawing2D.Matrix,System.Drawing.Drawing2D.MatrixOrder)
         // <snippet3>
         public void MultiplyTransform_Example2(PaintEventArgs e)
@@ -121,7 +118,6 @@ namespace System.Drawing.ClassicPensExampleCS
             e.Graphics.DrawLine(myPen, 0, 0, 100, 100);
         }
         // </snippet3>
-
 
         // Snippet for: M:System.Drawing.Pen.ResetTransform
         // <snippet4>
@@ -145,7 +141,6 @@ namespace System.Drawing.ClassicPensExampleCS
         }
         // </snippet4>
 
-
         // Snippet for: M:System.Drawing.Pen.RotateTransform(System.Single)
         // <snippet5>
         public void RotateTransform_Example1(PaintEventArgs e)
@@ -167,7 +162,6 @@ namespace System.Drawing.ClassicPensExampleCS
             e.Graphics.DrawRectangle(rotatePen, 140, 10, 100, 100);
         }
         // </snippet5>
-
 
         // Snippet for: M:System.Drawing.Pen.RotateTransform(System.Single,System.Drawing.Drawing2D.MatrixOrder)
         // <snippet6>
@@ -191,7 +185,6 @@ namespace System.Drawing.ClassicPensExampleCS
         }
         // </snippet6>
 
-
         // Snippet for: M:System.Drawing.Pen.ScaleTransform(System.Single,System.Single)
         // <snippet7>
         public void ScaleTransform_Example1(PaintEventArgs e)
@@ -211,7 +204,6 @@ namespace System.Drawing.ClassicPensExampleCS
         }
         // </snippet7>
 
-
         // Snippet for: M:System.Drawing.Pen.ScaleTransform(System.Single,System.Single,System.Drawing.Drawing2D.MatrixOrder)
         // <snippet8>
         public void ScaleTransform_Example2(PaintEventArgs e)
@@ -230,7 +222,6 @@ namespace System.Drawing.ClassicPensExampleCS
             e.Graphics.DrawRectangle(scalePen, 120, 10, 100, 100);
         }
         // </snippet8>
-
 
         // Snippet for: M:System.Drawing.Pen.SetLineCap(System.Drawing.Drawing2D.LineCap,System.Drawing.Drawing2D.LineCap,System.Drawing.Drawing2D.DashCap)
         // <snippet9>

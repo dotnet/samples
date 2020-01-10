@@ -44,7 +44,6 @@ namespace System.Drawing.Imaging.ClassicImageAttributesCS
 			base.Dispose( disposing );
 		}
 
-
         // Snippet for: M:System.Drawing.Imaging.ImageAttributes.SetBrushRemapTable(System.Drawing.Imaging.ColorMap[])
         // <snippet1>
         public void SetBrushRemapTableExample(PaintEventArgs e)
@@ -63,7 +62,6 @@ namespace System.Drawing.Imaging.ClassicImageAttributesCS
             imageAttr.SetBrushRemapTable(myColorMap);
         }
         // </snippet1>
-
 
         // Snippet for: M:System.Drawing.Imaging.ImageAttributes.SetColorKey(System.Drawing.Color,System.Drawing.Color,System.Drawing.Imaging.ColorAdjustType)
         // <snippet2>
@@ -89,7 +87,6 @@ namespace System.Drawing.Imaging.ClassicImageAttributesCS
             
         }
         // </snippet2>
-
 
         // Snippet for: M:System.Drawing.Imaging.ImageAttributes.SetColorMatrix(System.Drawing.Imaging.ColorMatrix)
         // <snippet3>
@@ -126,8 +123,7 @@ namespace System.Drawing.Imaging.ClassicImageAttributesCS
            
             // w
             myColorMatrix.Matrix44 = 1.00f; 
-            
-                     
+
             // Create an ImageAttributes object and set the color matrix.
             ImageAttributes imageAttr = new ImageAttributes();
             imageAttr.SetColorMatrix(myColorMatrix);
@@ -139,7 +135,6 @@ namespace System.Drawing.Imaging.ClassicImageAttributesCS
             
         }
         // </snippet3>
-
 
         // Snippet for: M:System.Drawing.Imaging.ImageAttributes.SetGamma(System.Single)
         // <snippet4>
@@ -162,7 +157,6 @@ namespace System.Drawing.Imaging.ClassicImageAttributesCS
                 GraphicsUnit.Pixel, imageAttr);    
         }
         // </snippet4>
-
 
         // Snippet for: M:System.Drawing.Imaging.ImageAttributes.SetNoOp
         // <snippet5>
@@ -191,7 +185,6 @@ namespace System.Drawing.Imaging.ClassicImageAttributesCS
                 GraphicsUnit.Pixel, imageAttr);    
         }
         // </snippet5>
-
 
         // Snippet for: M:System.Drawing.Imaging.ImageAttributes.SetRemapTable(System.Drawing.Imaging.ColorMap[])
         // <snippet6>
@@ -231,7 +224,6 @@ namespace System.Drawing.Imaging.ClassicImageAttributesCS
         }
         // </snippet6>
 
-
         // Snippet for: M:System.Drawing.Imaging.ImageAttributes.SetThreshold(System.Single)
         // <snippet7>
         private void SetThresholdExample(PaintEventArgs e)
@@ -251,7 +243,6 @@ namespace System.Drawing.Imaging.ClassicImageAttributesCS
                 GraphicsUnit.Pixel, imageAttr);    
         }
         // </snippet7>
-
 
         // Snippet for: M:System.Drawing.Imaging.ImageAttributes.SetWrapMode(System.Drawing.Drawing2D.WrapMode)
         // <snippet8>

@@ -49,7 +49,6 @@ class UsingConfigurationCollectionElement
                     config.Save(ConfigurationSaveMode.Modified);
                 }
 
-       
             Console.WriteLine("Created custom section in the application configuration file: {0}",
                 config.FilePath);
             Console.WriteLine();
@@ -109,10 +108,8 @@ class UsingConfigurationCollectionElement
                     ConfigurationManager.OpenExeConfiguration(
                     ConfigurationUserLevel.None);
 
-
             // Get the custom configuration section.
             UrlsSection myUrlsSection = config.GetSection("MyUrls") as UrlsSection;
-
 
             // Add the element to the collection in the custom section.
             if (config.Sections["MyUrls"] != null)
@@ -125,12 +122,10 @@ class UsingConfigurationCollectionElement
                 // Use the ConfigurationCollectionElement Add method
                 // to add the new element to the collection.
                 myUrlsSection.Urls.Add(urlElement);
-                
-                
+
                 // Save the application configuration file.
                 myUrlsSection.SectionInformation.ForceSave = true;
                 config.Save(ConfigurationSaveMode.Modified);
-                
 
                 Console.WriteLine("Added collection element to the custom section in the configuration file: {0}",
                     config.FilePath);
@@ -160,10 +155,8 @@ class UsingConfigurationCollectionElement
                     ConfigurationManager.OpenExeConfiguration(
                     ConfigurationUserLevel.None);
 
-
             // Get the custom configuration section.
             UrlsSection myUrlsSection = config.GetSection("MyUrls") as UrlsSection;
-
 
             // Remove the element from the custom section.
             if (config.Sections["MyUrls"] != null)
@@ -177,11 +170,9 @@ class UsingConfigurationCollectionElement
                 // overloaded methods to remove the element from the collection.
                 myUrlsSection.Urls.Remove(urlElement);
 
-
                 // Save the application configuration file.
                 myUrlsSection.SectionInformation.ForceSave = true;
                 config.Save(ConfigurationSaveMode.Full);
-
 
                 Console.WriteLine("Removed collection element from he custom section in the configuration file: {0}",
                     config.FilePath);
@@ -210,21 +201,17 @@ class UsingConfigurationCollectionElement
                     ConfigurationManager.OpenExeConfiguration(
                     ConfigurationUserLevel.None);
 
-
             // Get the custom configuration section.
             UrlsSection myUrlsSection = config.GetSection("MyUrls") as UrlsSection;
-
 
             // Remove the collection of elements from the section.
             if (config.Sections["MyUrls"] != null)
             {
                 myUrlsSection.Urls.Clear();
 
-
                 // Save the application configuration file.
                 myUrlsSection.SectionInformation.ForceSave = true;
                 config.Save(ConfigurationSaveMode.Full);
-
 
                 Console.WriteLine("Removed collection of elements from he custom section in the configuration file: {0}",
                     config.FilePath);

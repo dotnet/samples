@@ -7,7 +7,6 @@ public class Sample {
 
   public static void Main() {
 
-
 //<snippet1> 
 XmlWriterSettings settings = new XmlWriterSettings();
 settings.OmitXmlDeclaration = true;

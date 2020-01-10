@@ -1,5 +1,4 @@
-﻿
-//<Snippet101>
+﻿//<Snippet101>
 // EllipseGeometryExample.cs
 //
 // This sample demonstrates how to animate the center 

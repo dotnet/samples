@@ -25,7 +25,6 @@ namespace CS
             }
             //</Snippet26>
 
-
             //---------------------------------------------
             NorthwindDataSet northwindDataSet = new NorthwindDataSet();
         
@@ -38,7 +37,6 @@ namespace CS
             northwindDataSet.WriteXml(filePath);
             //</Snippet13>
 
-
             //---------------------------------------------
             //<Snippet15>
             NorthwindDataSetTableAdapters.RegionTableAdapter regionTableAdapter = 
@@ -46,7 +44,6 @@ namespace CS
 
             regionTableAdapter.Insert(5, "NorthWestern");
             //</Snippet15>
-
 
             //---------------------------------------------
             //<Snippet16>
@@ -64,7 +61,6 @@ namespace CS
             //</Snippet16>
         }
 
-
         //---------------------------------------------------------------------
         void OtherSnips2()
         {
@@ -75,7 +71,6 @@ namespace CS
 
             regionTableAdapter.Update(1, "East", 1, "Eastern");
             //</Snippet18>
-
 
             //---------------------------------------------
             //<Snippet19>
@@ -95,7 +90,6 @@ namespace CS
             //</Snippet19>
         }
 
-
         //---------------------------------------------------------------------
         void OtherSnips3()
         {
@@ -106,7 +100,6 @@ namespace CS
 
             regionTableAdapter.Delete(5, "NorthWestern");
             //</Snippet21>
-
 
             //---------------------------------------------
             //<Snippet22>
@@ -123,7 +116,6 @@ namespace CS
             sqlConnection1.Close();
             //</Snippet22>
         }
-
 
         //---------------------------------------------------------------------
         NorthwindDataSet dsNorthwind1 = new NorthwindDataSet();
@@ -182,7 +174,6 @@ namespace CS
             }
         }
         //</Snippet28>
-
 
     }
 }

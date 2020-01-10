@@ -14,7 +14,6 @@
 
 // For simplicity, this sampel does not handle run-time switching of visual styles.
 
-
 //<Snippet0>
 using System;
 using System.Drawing;

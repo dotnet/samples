@@ -40,5 +40,3 @@ public class Example
 //        fieldA:      'A public field'
 //        fieldB:      'Another public field'
 // </Snippet1>
-
-

@@ -43,7 +43,6 @@ public class RemoteObject : MarshalByRefObject {
 }
 // </Snippet2>
 
-
 // <Snippet1>
 // a custom ObjRef class that outputs its status
 [PermissionSet(SecurityAction.Demand, Name="FullTrust")]
@@ -104,7 +103,6 @@ public class MyObjRef : ObjRef {
       Console.WriteLine(" ----------------------------- ");
    }
 }
-
 
 // a class that uses MyObjRef
 [PermissionSet(SecurityAction.Demand, Name="FullTrust")]

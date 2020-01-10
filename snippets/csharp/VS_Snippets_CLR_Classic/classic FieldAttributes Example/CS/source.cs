@@ -58,4 +58,3 @@ Field = "String B"; attributes: Public
 FieldC = "String C"; attributes: Public, Static, Literal, HasDefault
  */
 // </Snippet1>
-

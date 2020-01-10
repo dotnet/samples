@@ -2,7 +2,6 @@
 using System.Windows.Forms;
 using System.Drawing;
 
-
 public class Form1:
     System.Windows.Forms.Form
 
@@ -148,6 +147,3 @@ public class Form1:
         Application.Run(new Form1());
     }
 }
-
-
-

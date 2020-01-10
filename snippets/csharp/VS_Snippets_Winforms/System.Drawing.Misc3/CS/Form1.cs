@@ -20,11 +20,6 @@ public class Form1 :
 
     }
 
-
-
-
-
-
     //NOTE: The following procedure is required by the Windows Form Designer
     //It can be modified using the Windows Form Designer.  
     //Do not modify it using the code editor.
@@ -46,13 +41,11 @@ public class Form1 :
 
     #endregion
 
-
     [System.STAThread]
     public static void Main()
     {
         Application.Run(new Form1());
     }
-
 
     //<snippet1>    
 
@@ -215,7 +208,6 @@ public class Form1 :
     }
     //</snippet8>
 
-
     private void ShearColors(PaintEventArgs e)
     {
         //<snippet9>
@@ -321,7 +313,4 @@ public class Form1 :
         ShowOutputChannels(e);
     }
 
-
-
 }
-

@@ -18,4 +18,3 @@ private void PrintIndexItem() {
 
 // </Snippet1>
 }
-

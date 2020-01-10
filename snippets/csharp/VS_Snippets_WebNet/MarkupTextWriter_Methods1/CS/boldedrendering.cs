@@ -74,7 +74,6 @@ namespace Samples.AspNet.CS
              writer.RenderEndTag();
 // </snippet9>
 
-
              writer.RenderEndTag();
              writer.WriteLine();        
         }

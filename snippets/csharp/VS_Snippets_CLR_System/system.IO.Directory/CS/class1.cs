@@ -23,7 +23,6 @@ namespace GetFileSystemEntries
             snippets.Move("C:\\proof", "C:\\Temp");
         }
 
-		
         void PrintFileSystemEntries(string path) 
         {
 			

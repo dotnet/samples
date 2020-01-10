@@ -17,7 +17,6 @@ namespace tuples
     }
     #endregion
 
-
     public class ProjectionSample
     {
         private List<ToDoItem> AllItems = new List<ToDoItem>

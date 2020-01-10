@@ -55,4 +55,3 @@ public class Example
 //          .ctor: No attributes
 //          total: ThreadStatic
 // </Snippet1>
-

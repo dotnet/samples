@@ -54,7 +54,6 @@ public class Box
     }
 }
 
-
 class BoxEqualityComparer : IEqualityComparer<Box>
 {
     public bool Equals(Box b1, Box b2)
@@ -81,7 +80,3 @@ class BoxEqualityComparer : IEqualityComparer<Box>
 //
 //    The dictionary contains 2 Box objects.
 // </Snippet1>
-
-
-
-

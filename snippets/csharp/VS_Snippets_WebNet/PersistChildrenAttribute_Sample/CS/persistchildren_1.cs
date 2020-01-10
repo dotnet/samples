@@ -90,8 +90,6 @@ namespace PersistChildrenSamples
          }
       }
 
-
-      
       public ArrayList Employees
       {
          get 

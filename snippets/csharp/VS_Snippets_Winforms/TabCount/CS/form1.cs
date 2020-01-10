@@ -14,7 +14,6 @@ public class Form1 : Form
         TabPage tabPage5 = new TabPage();
         Label label1= new Label();
 
-
         tabControl1.Multiline = true;
         tabControl1.SizeMode = TabSizeMode.FillToRight;
         tabControl1.Padding = new Point(15, 5);

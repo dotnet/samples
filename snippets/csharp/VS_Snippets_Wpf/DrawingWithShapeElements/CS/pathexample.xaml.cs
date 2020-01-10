@@ -18,7 +18,5 @@ namespace Microsoft.Samples.Graphics
         
         }
 
-
-
     }
 }

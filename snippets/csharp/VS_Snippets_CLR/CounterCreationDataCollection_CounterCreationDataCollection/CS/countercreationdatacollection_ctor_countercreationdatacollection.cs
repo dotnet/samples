@@ -41,7 +41,6 @@ public class CounterCreationExample
                 PerformanceCounterCategory.Create(myCategoryName, "Sample Category",
                 PerformanceCounterCategoryType.SingleInstance, myNewCounterCollection);
 
-
                 Console.WriteLine("The list of counters in 'CounterCollection' are : ");
                 for (int i = 0; i < myNewCounterCollection.Count; i++)
                     Console.WriteLine("Counter {0} is '{1}'", i, myNewCounterCollection[i].CounterName);

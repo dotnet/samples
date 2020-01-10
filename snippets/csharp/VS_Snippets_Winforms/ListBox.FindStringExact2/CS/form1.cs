@@ -160,4 +160,3 @@ namespace ListBoxFindStringExactEx2
       //</Snippet1>
    }
 }
-

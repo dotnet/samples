@@ -54,7 +54,6 @@ namespace XsdContractImporterExample
             iOptions.GenerateInternal = true;
             imp.Options = iOptions;
 
-
             if (imp.CanImport(schemas))
             {
                 imp.Import(schemas);

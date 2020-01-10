@@ -19,7 +19,6 @@ namespace SnippetsPart1
         static void Main() { }
     }
 
-
     //<snippet1>
     [ServiceContract]
     public interface IHelloContract

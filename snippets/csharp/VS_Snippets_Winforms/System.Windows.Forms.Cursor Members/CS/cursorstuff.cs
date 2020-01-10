@@ -75,7 +75,6 @@ namespace CursorStuff
 			Application.Run(new Form1());
 		}
 
-
 		private void button1_Click(object sender, System.EventArgs e)
 		{
 			this.MoveCursor();
@@ -126,7 +125,6 @@ private void DrawCursorsOnForm(Cursor cursor)
 		{
 			this.DrawCursorsOnForm(new Cursor("c:\\MyCursor.cur"));
 		}
-
 
 	}
 }

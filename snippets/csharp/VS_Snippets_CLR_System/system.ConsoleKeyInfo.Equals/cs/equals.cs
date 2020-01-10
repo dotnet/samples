@@ -19,7 +19,6 @@ class Sample
     ConsoleKeyInfo cki1;
     ConsoleKeyInfo cki2;
 
-
 //
 // The Console.TreatControlCAsInput property prevents this example from
 // ending if you press CTL+C, however all other operating system keys and 

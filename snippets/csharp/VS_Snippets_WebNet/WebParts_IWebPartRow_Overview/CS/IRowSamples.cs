@@ -69,7 +69,6 @@ namespace Samples.AspNet.CS.Controls
 
   } // RowProviderWebPart
 
-
   // This sample code creates a Web Parts control that acts as a consumer 
   // of row data.
   [AspNetHostingPermission(SecurityAction.Demand,
@@ -93,7 +92,6 @@ namespace Samples.AspNet.CS.Controls
 				_provider.GetRowData(new RowCallback(GetRowData));
 			}
 		}
-
 
     protected override void RenderContents(HtmlTextWriter writer) 
     {
@@ -136,4 +134,3 @@ namespace Samples.AspNet.CS.Controls
 } // Samples.AspNet.CS.Controls 
 
 //</SNIPPET2>
-

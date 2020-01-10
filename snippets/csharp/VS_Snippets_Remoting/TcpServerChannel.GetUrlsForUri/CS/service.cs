@@ -10,12 +10,10 @@ public class HelloService : MarshalByRefObject {
         Console.WriteLine("HelloService activated - instance # {0}.", n_instances);
     }
 
-
     ~HelloService()  {
         Console.WriteLine("HelloService instance {0} destroyed.", n_instances);
         n_instances--;
     }
-
 
     public String HelloMethod(String name)  {
 

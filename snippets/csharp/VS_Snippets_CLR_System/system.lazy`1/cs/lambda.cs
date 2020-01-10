@@ -5,7 +5,6 @@ class Program
 {
     static Lazy<LargeObject> lazyLargeObject = null;
 
-
     static void Main()
     {
         //<SnippetInitWithLambda>
@@ -16,7 +15,6 @@ class Program
             return large;
         });
         //</SnippetInitWithLambda>
-
 
         Console.WriteLine(
             "\r\nLargeObject is not created until you access the Value property of the lazy" +
@@ -40,7 +38,6 @@ class Program
         Console.WriteLine("\r\nPress Enter to end the program");
         Console.ReadLine();
     }
-
 
     static void ThreadProc(object state)
     {
@@ -71,4 +68,3 @@ class LargeObject
 
     public long[] Data = new long[100000000];
 }
-

@@ -3,7 +3,6 @@
   *Purpose: Implements a custom WebRequestErrorEvent type
   *by inheriting from the System.Web.Management.WebRequestErrorEvent.
   **/
-  
 // <Snippet1>
 
 using System;
@@ -33,7 +32,6 @@ namespace Samples.AspNet.Management
                 "Event created at: ", EventTime.ToString()));
         }
         // </Snippet2>
-
 
         // <Snippet3>
         // Invoked in case of events identified 
@@ -75,7 +73,6 @@ namespace Samples.AspNet.Management
         }
         // </Snippet5>
 
-
         // <Snippet6>
         // Obtains the current thread information.
         public string GetThreadInfo()
@@ -85,7 +82,6 @@ namespace Samples.AspNet.Management
         }
         // </Snippet6>
 
-
         // <Snippet7>
         // Obtains the current process information.
         public string GetProcessInfo()
@@ -94,7 +90,6 @@ namespace Samples.AspNet.Management
             return procInfo;
         }
         // </Snippet7>
-
 
         // <Snippet8>
         //Formats Web request event information.
@@ -122,4 +117,3 @@ namespace Samples.AspNet.Management
 
 }
 // </Snippet1>
-

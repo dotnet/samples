@@ -66,7 +66,6 @@ public static void MySocketPermission(){
           Console.WriteLine("This should not print");
      }
 
-
 //</Snippet3>
 
 //<Snippet4>
@@ -82,7 +81,6 @@ public static void MySocketPermission(){
 
      // Converts a SocketPermission to XML format and then immediately converts it back to a SocketPermission.
      mySocketPermission1.FromXml(mySocketPermission1.ToXml());
-     
 
      // Checks to see if permission for this socket resource is unrestricted.  If it is, then there is no need to
      // demand that permissions be enforced.
@@ -120,6 +118,4 @@ MySocketPermissionExample.MySocketPermission();
 
 }
 
-
 }
-

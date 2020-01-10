@@ -3,7 +3,6 @@
   *Purpose: Implements a custom WebBaseEvent type 
   *to use the System.Web.Management helper classes.
   **/
-
 // <Snippet1>
 
 using System;
@@ -43,9 +42,7 @@ namespace SamplesAspNet
         }
         // </Snippet2>
 
-
         // <Snippet3>
-
 
         // </Snippet3>
 
@@ -117,7 +114,6 @@ namespace SamplesAspNet
 
         // </Snippet9>
 
-
         // <Snippet10>
         public string GetRequestsQueued()
         {
@@ -162,7 +158,6 @@ namespace SamplesAspNet
 
         // </Snippet13>
 
-
         // <Snippet14>
         //Formats Web request event information.
         public override void FormatCustomEventDetails(
@@ -196,9 +191,7 @@ namespace SamplesAspNet
         }
         // </Snippet14>
 
-
     }
 
 }
 // </Snippet1>
-

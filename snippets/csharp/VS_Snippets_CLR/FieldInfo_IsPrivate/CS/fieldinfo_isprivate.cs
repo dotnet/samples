@@ -50,4 +50,3 @@ class FieldInfo_IsPrivate
     }
 }
 // </Snippet1>
-

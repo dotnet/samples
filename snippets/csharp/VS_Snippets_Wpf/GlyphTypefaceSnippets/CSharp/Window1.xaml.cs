@@ -28,7 +28,6 @@ namespace WindowsApplication1
             // </SnippetGlyphTypefaceSnippet1>
         }
 
-
         public void Stub02()
         {
             // <SnippetGlyphTypefaceSnippet2>

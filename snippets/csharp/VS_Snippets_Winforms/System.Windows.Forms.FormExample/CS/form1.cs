@@ -21,7 +21,6 @@ public class Form1:
 		//will not cover entire desktop.  
 		this.MaximumSize = new System.Drawing.Size(500, 500);
 
-
 	}
 	//</snippet3>
 
@@ -130,4 +129,3 @@ public class Form1:
 	//</snippet2>
 
 }
-

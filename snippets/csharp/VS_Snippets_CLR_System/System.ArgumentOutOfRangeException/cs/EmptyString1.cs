@@ -43,4 +43,3 @@ public static class StringLib
       return GetFirstCharacter(s);
    }
 }
-

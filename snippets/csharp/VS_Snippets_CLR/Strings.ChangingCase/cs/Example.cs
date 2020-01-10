@@ -30,6 +30,3 @@ public class Example
       // </Snippet2>
    }
 }
-
-
-

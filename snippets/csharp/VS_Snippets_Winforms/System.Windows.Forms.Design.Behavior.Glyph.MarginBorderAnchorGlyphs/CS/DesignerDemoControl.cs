@@ -369,7 +369,6 @@ public class DemoControlDesigner : ControlDesigner
             return items;
         }
     }
- 
 
     #region Glyph Implementations
 
@@ -735,8 +734,6 @@ public class DemoControlDesigner : ControlDesigner
         #endregion 
 
         // </snippet5>
-
-
 
         #region Behavior Implementation
 

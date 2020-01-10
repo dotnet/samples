@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 //</Snippet1>
 
-
 class Class1
 {
     //<Snippet2>
@@ -34,7 +33,6 @@ class Class1
     }
     //</Snippet2>
 
-
     private async Task WriteTextAsync2(string filePath, string text)
     {
         byte[] encodedText = Encoding.Unicode.GetBytes(text);
@@ -49,7 +47,6 @@ class Class1
             //</Snippet3>
         };
     }
-
 
     //<Snippet4>
     public async void ProcessRead()
@@ -94,7 +91,6 @@ class Class1
         }
     }
     //</Snippet4>
-
 
     //<Snippet5>
     public async void ProcessWriteMult()

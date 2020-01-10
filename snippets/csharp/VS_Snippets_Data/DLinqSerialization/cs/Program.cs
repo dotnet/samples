@@ -7,9 +7,6 @@ using System.Data.Linq.Mapping;
 using System.Runtime.Serialization;
 using System.Xml;
 
-
-
-
 namespace cs_serialize
 {
     class Program
@@ -31,11 +28,7 @@ writer.Close();
 string xml = sb.ToString();
 // </Snippet6>
 
-
-
-
         }
-
 
     }
 }

@@ -2,7 +2,6 @@
 using System;
 using System.IO;
 
-
 namespace ConsoleApplication2
 {
     class Program

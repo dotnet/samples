@@ -1,5 +1,4 @@
-﻿
-// <SnippetGraphicsMMFrameworkElementStoryboardHandoffBehaviorExample>
+﻿// <SnippetGraphicsMMFrameworkElementStoryboardHandoffBehaviorExample>
 /*
 
    This sample animates the position of an ellipse when 
@@ -25,8 +24,7 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
 
     // Create the demonstration.
     public class FrameworkElementStoryboardHandoffBehaviorExample : Page {
-        
-        
+
         private Border containerBorder;
         private Ellipse interactiveEllipse;
         private Storyboard theStoryboard;
@@ -58,7 +56,6 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
             interactiveEllipse.Height = 25;
             interactiveEllipse.HorizontalAlignment = HorizontalAlignment.Left;
             interactiveEllipse.VerticalAlignment = VerticalAlignment.Top;
-            
 
             TranslateTransform interactiveTranslateTransform = new TranslateTransform();       
             this.RegisterName("InteractiveTranslateTransform", interactiveTranslateTransform);
@@ -77,8 +74,7 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
             theStoryboard = new Storyboard();
             theStoryboard.Children.Add(xAnimation);
             theStoryboard.Children.Add(yAnimation);
-                
-                
+
             containerBorder.MouseLeftButtonDown += 
                 new MouseButtonEventHandler(border_mouseLeftButtonDown);
             containerBorder.MouseRightButtonDown += 
@@ -88,7 +84,6 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
             myPanel.Children.Add(containerBorder);
             this.Content = myPanel;
         }
-        
 
         // When the user left-clicks, use the 
         // SnapshotAndReplace HandoffBehavior when applying the animation.        
@@ -107,7 +102,6 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
             xAnimation.To = targetPoint.X;
             yAnimation.To = targetPoint.Y;
             theStoryboard.Begin(this, HandoffBehavior.SnapshotAndReplace);
-            
 
             // Change the color of the ellipse.
             interactiveEllipse.Fill = Brushes.Lime;
@@ -135,8 +129,7 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
                 
             // Change the color of the ellipse.
             interactiveEllipse.Fill = Brushes.Orange;
-            
-                    
+
         }
         
     }

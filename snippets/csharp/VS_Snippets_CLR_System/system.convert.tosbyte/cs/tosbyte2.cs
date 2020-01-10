@@ -213,8 +213,7 @@ public class Class1
    {
       sbyte positiveByte = 120;
       sbyte negativeByte = -101;
-      
-      
+
       ByteString positiveString = new ByteString();
       positiveString.Sign = (SignBit) Math.Sign(positiveByte);
       positiveString.Value = positiveByte.ToString("X2");

@@ -65,14 +65,12 @@ namespace ThreadingWalkthroughCS
         }
         // </snippet6>
 
-
         // <snippet8>
         private void Start_Click(object sender, EventArgs e)
         {
             StartThread();
         }
         // </snippet8>
-
 
         // <snippet10>
         private void Cancel_Click(object sender, EventArgs e)

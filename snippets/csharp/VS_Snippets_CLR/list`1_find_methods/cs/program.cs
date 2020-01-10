@@ -31,7 +31,6 @@ namespace Find
                 Console.WriteLine("\nNot found: {0}", IDtoFind);
             }
 
-
             // Find last book in collection published before 2001.
             result = Books.FindLast(
             delegate(Book bk)
@@ -47,7 +46,6 @@ namespace Find
             {
                 Console.WriteLine("\nNot found: {0}", IDtoFind);
             }
-
 
             // Find all computer books.
             List<Book> results = Books.FindAll(FindComputer);
@@ -75,7 +73,6 @@ namespace Find
             {
                 Console.WriteLine("\nNo books found.");
             }
-            
 
             // Find index values.
             Console.WriteLine();
@@ -92,10 +89,6 @@ namespace Find
             Console.WriteLine("Index of last computer book in the second half of the collection: {0}", ndx);
 
         }
-
-
-
-
 
         // Populates the list with sample data.
         private static void FillList()
@@ -115,7 +108,6 @@ namespace Find
                 IEnumerable<XElement> props = el.Elements();
                 foreach (XElement p in props)
                 {
-
 
                     if (p.Name.ToString().ToLower() == "author")
                     {
@@ -174,7 +166,6 @@ namespace Find
                 result.Author, result.Title, result.Genre, result.Price,
                 result.Publish_date.ToShortDateString());
             Console.WriteLine();
-
 
         }
 

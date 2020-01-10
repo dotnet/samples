@@ -6,14 +6,12 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Web.DynamicData;
 
-
 [MetadataType(typeof(ProductModelProductDescriptionMetaData))]
 //[TableName(""Prod Model Desc")]
 [DisplayName("Prod Model Desc")]
 public partial class ProductModelProductDescription {
 
 }
-
 
 public class ProductModelProductDescriptionMetaData {
 

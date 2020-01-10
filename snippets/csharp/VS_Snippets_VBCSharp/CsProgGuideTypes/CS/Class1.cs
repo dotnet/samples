@@ -20,7 +20,6 @@ namespace CsProgGuideTypes
         }
         //</Snippet1>
 
-
         //<Snippet2>
         class Test
         {
@@ -36,7 +35,6 @@ namespace CsProgGuideTypes
         // Output: 1234
         //</Snippet2>
     }
-
 
     //-------------------------------------------------------------------------
     //<Snippet3>
@@ -72,7 +70,6 @@ namespace CsProgGuideTypes
     }
     //</Snippet3>
 
-
     //-------------------------------------------------------------------------
     class UsingNullable
     {
@@ -104,7 +101,6 @@ namespace CsProgGuideTypes
             }
             //</Snippet5>
 
-
             //<Snippet6>
             int? y = 10;
             if (y != null)
@@ -117,7 +113,6 @@ namespace CsProgGuideTypes
             }
             //</Snippet6>
 
-
             //<Snippet7>
             int? n = null;
 
@@ -126,19 +121,16 @@ namespace CsProgGuideTypes
             int m3 = n.Value;  // Compiles, but will create an exception if n is null.
             //</Snippet7>
 
-
             //<Snippet8>
             int? n1 = null;
             //</Snippet8>
             System.Console.WriteLine(n1);
-
 
             //<Snippet9>
             int? n2;
             n2 = 10;  // Implicit conversion.
             //</Snippet9>
             System.Console.WriteLine(n2);
-
 
             //<Snippet10>
             int? a = 10;
@@ -148,7 +140,6 @@ namespace CsProgGuideTypes
             a = a * 10;  // Multiply by 10, now a is 110.
             a = a + b;   // Add b, now a is null.
             //</Snippet10>
-
 
             //<Snippet11>
             int? num1 = 10;
@@ -196,14 +187,12 @@ namespace CsProgGuideTypes
              */
             //</Snippet11>
 
-
             //<Snippet12>
             int? c = null;
 
             // d = c, unless c is null, in which case d = -1.
             int d = c ?? -1;
             //</Snippet12>
-
 
             //<Snippet13>
             int? e = null;
@@ -214,7 +203,6 @@ namespace CsProgGuideTypes
             //</Snippet13>
         }
     }
-
 
     //-------------------------------------------------------------------------
     class BoxingAndUnboxing
@@ -239,7 +227,6 @@ namespace CsProgGuideTypes
             // that is used here takes three object arguments. Both 42 and
             // true must be boxed.
             Console.WriteLine(String.Concat("Answer", 42, true));
-
 
             // List example.
             // Create a list of objects to hold a heterogeneous collection 
@@ -321,7 +308,6 @@ namespace CsProgGuideTypes
         }
     }
 
-
     //-------------------------------------------------------------------------
     //<Snippet16>
     class TestBoxing
@@ -351,7 +337,6 @@ namespace CsProgGuideTypes
     */
     //</Snippet16>
 
-
     //-------------------------------------------------------------------------
     class WrapExplicitBoxing
     {
@@ -363,7 +348,6 @@ namespace CsProgGuideTypes
             //</Snippet19>
         }
     }
-
 
     //-------------------------------------------------------------------------
     //<Snippet20>
@@ -387,7 +371,6 @@ namespace CsProgGuideTypes
         }
     }
     //</Snippet20>
-
 
     //-------------------------------------------------------------------------
     public class ConvertByteArrayExample
@@ -504,10 +487,8 @@ namespace CsProgGuideTypes
             //Output: 2274
             //</Snippet32>
 
-
             //see also snippet38 below
         }
-
 
     }
 
@@ -532,15 +513,12 @@ namespace CsProgGuideTypes
     }
     //</snippet33>
 
-
-
     class ValueTypeConversion
     {
         class MyClass
         {
             byte numA = 0xA;
 
-            
             //<snippet35>             
             public string GetName(int ID)
             {
@@ -560,8 +538,6 @@ namespace CsProgGuideTypes
             int num = 2147483647;
             long bigNum = num;
             //</snippet34>
-
-
 
             //<snippet36>
             // Declaration only:
@@ -665,7 +641,6 @@ namespace CsProgGuideTypes
             // the method body.
             int i = 5;
             app.UseAsWithNullable(i);
-
 
             double d = 9.78654;
             app.UseAsWithNullable(d);
@@ -837,11 +812,9 @@ namespace CsProgGuideTypes
         }
     }
 
-
     //<Snippet46>     
     class Base { }
     class Derived : Base { }
-
 
     class GetTypeInfo
     {

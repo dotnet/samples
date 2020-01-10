@@ -22,7 +22,6 @@ public class Person
     }
 }
 
-
 public class Example
 {
     public static void Main()

@@ -10,8 +10,6 @@ using System.IdentityModel.Configuration;
 using System.Security.Claims;
 using System.Web;
 
-
-
 namespace MyClaimsAuthorizationManager
 {
     class ZipClaimsAuthorizationManager : ClaimsAuthorizationManager
@@ -20,7 +18,6 @@ namespace MyClaimsAuthorizationManager
 
         //public ZipClaimsAuthorizationManager()
         //{ }
-
 
         public override void LoadCustomConfiguration(XmlNodeList config)
         {

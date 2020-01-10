@@ -11,7 +11,6 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 
-
 /// <summary>
 /// A custom SecurityTokenServiceConfiguration implementation.
 /// </summary>

@@ -109,7 +109,6 @@ namespace Samples.AspNet.Configuration
 
         }
 
-
         public static void Main(string[] args)
         {
 
@@ -162,7 +161,6 @@ namespace Samples.AspNet.Configuration
             Console.Read();
 
         }
-
 
     }
 

@@ -71,7 +71,6 @@ class WebRequest_BeginGetRequeststream
             // Close the Stream Object.
             streamResponse.Close();
             streamRead.Close();
- 
 
             // Release the HttpWebResponse Resource.
             myWebResponse.Close();            

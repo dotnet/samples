@@ -43,7 +43,6 @@ public class SamplesArray
         }
     }
 
- 
     public static void PrintValues(Array myArr)
     {
         int i = 0;
@@ -72,4 +71,3 @@ public class SamplesArray
 //
 //The object to search for (6) is at index 2.
 // </Snippet1>
-

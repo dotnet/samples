@@ -20,4 +20,3 @@ public class Vehicle {
 public class Car : Vehicle {
     // Class added so sample will compile
 }
-

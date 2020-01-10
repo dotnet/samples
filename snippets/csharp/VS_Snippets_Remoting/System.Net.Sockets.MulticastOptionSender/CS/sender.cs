@@ -81,8 +81,7 @@ namespace Mssc.TransportProtocols.Utilities
 
       mcastSocket.Close();
     }
-   
-    
+
     static void Main(string[] args)
     {
       // Initialize the multicast address group and multicast port.

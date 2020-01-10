@@ -38,7 +38,6 @@
  * 
  *************************************************************************************************/
 
-
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -197,7 +196,6 @@ namespace FocusTracker
 // </Snippet103>
 
 // </Snippet101>        
-
 
         /// <summary>
         /// Gets the caption of a window.

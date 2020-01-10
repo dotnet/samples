@@ -7,7 +7,6 @@ using System.Windows.Media;
 using System.Windows.Shapes;
 using System.Diagnostics;
 
-
 namespace ColorPickerApp
 {
     /// <summary>

@@ -3,7 +3,6 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
 
-
 namespace CSharp
 {
     public partial class MainWindow : Window

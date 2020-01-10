@@ -14,8 +14,6 @@ namespace FourDPointSample
 	/// <summary>
 	/// Interaction logic for Window1.xaml
 	/// </summary>
-   
-
 
 	public partial class Window1 : Window
 	{
@@ -42,7 +40,6 @@ namespace FourDPointSample
             //</SnippetMil4DPoints3DN1>
 			switch (li.Name)
 			{   //begin switch
-
 
                 case "rb1":
                     {
@@ -132,7 +129,6 @@ namespace FourDPointSample
 						break;
 					}
 
-
 				case "rb5":
 					{
                         //<SnippetMil4DPoints3DN7>
@@ -216,7 +212,6 @@ namespace FourDPointSample
                         //</SnippetMil4DPoints3DN10>
                         break;
                     }
-    
 
                 case "rb9":
                     {
@@ -258,7 +253,6 @@ namespace FourDPointSample
                         areEqual = point1.Equals(point2);
                         // areEqual is False.  point2 is a Point4D structure, but it is not equal to point1.	
 
-
                         // Displaying Results
                         syntaxString = "areEqual = point1.Equals(point2);";
                         resultType = "Boolean";
@@ -267,7 +261,6 @@ namespace FourDPointSample
                         //</SnippetMil4DPoints3DN12>
                         break;
                     }
-                
 
                 case "rb11":
                     {
@@ -375,7 +368,6 @@ namespace FourDPointSample
                         areNotEqual = point4D1 != point4D2;
                         // areNotEqual is True
 
-                       
                         if(Point4D.Equals(point4D1, point3D1))
                         {
                             // the if condition is not true, so this block will not execute

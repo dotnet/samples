@@ -30,7 +30,6 @@ namespace SentimentAnalysis
             TrainTestData splitDataView = LoadData(mlContext);
             // </SnippetCallLoadData>
 
-
             // <SnippetCallBuildAndTrainModel>
             ITransformer model = BuildAndTrainModel(mlContext, splitDataView.TrainSet);
             // </SnippetCallBuildAndTrainModel>

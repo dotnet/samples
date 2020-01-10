@@ -5,7 +5,6 @@ using System.Windows.Controls.Primitives;
 using System.Windows.Media;
 using System.Windows.Media.TextFormatting;
 
-
 namespace SDKSamples
 {
    public partial class Window1 : Window

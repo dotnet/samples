@@ -41,4 +41,3 @@ public class Example
 //    Short Time Pattern     h:mm tt              10:28 AM
 //    Year/Month Pattern     MMMM yyyy            May 2016
 // </Snippet1>
-

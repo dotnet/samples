@@ -55,7 +55,6 @@ public class InkEraser : Label
 
     }
 
-
     protected override void OnStylusDown(StylusDownEventArgs e)
     {
         base.OnStylusDown(e);
@@ -162,7 +161,6 @@ public class InkEraser : Label
             StrokeHitEventHandler(eraseTester_StrokeHit);
         eraseTester.EndHitTesting();
     }
-
 
     // When the stylus intersects a stroke, erase that part of
     // the stroke.  When the stylus dissects a stoke, the 

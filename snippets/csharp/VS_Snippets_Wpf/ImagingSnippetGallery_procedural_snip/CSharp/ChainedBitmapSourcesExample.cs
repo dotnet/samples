@@ -6,7 +6,6 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
-
 namespace SDKSample
 {
     public partial class ChainedBitmapSourcesExample : Page
@@ -77,7 +76,6 @@ namespace SDKSample
 
         public void PageLoaded(object sender, RoutedEventArgs args)
         {
-
 
         }
 

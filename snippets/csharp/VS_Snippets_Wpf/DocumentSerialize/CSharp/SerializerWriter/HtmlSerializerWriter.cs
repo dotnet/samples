@@ -50,7 +50,6 @@ namespace SdkSample
             throw new NotSupportedException();
         }
 
-
         /// <summary>
         /// Asynchronous Write a single Visual and close package
         /// </summary>
@@ -58,7 +57,6 @@ namespace SdkSample
         {
             throw new NotSupportedException();
         }
-
 
         /// <summary>
         /// Asynchronous Write a single Visual and close package
@@ -163,7 +161,6 @@ namespace SdkSample
         {
             throw new NotSupportedException();
         }
-
 
         /// <summary>
         /// Write a single FixedDocument and close package

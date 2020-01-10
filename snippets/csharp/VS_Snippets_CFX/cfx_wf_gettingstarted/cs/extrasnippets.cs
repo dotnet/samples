@@ -51,7 +51,6 @@ namespace WorkflowConsoleApplication1
             //</snippet10>
             //</snippet4>
 
-
         }
 
         void Step4Snippets()

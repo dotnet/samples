@@ -30,4 +30,3 @@ public class Example
 //     The restored byte array:
 //        02-04-06-08-0A-0C-0E-10-12-14
 // </Snippet1>
-

@@ -82,8 +82,6 @@ namespace Vector3DSample
 						break;
 					}
 
-
-
                 case "rb3":
                     {
                         //<SnippetMil3dVectorSample3DN4>
@@ -127,8 +125,6 @@ namespace Vector3DSample
                         ShowResults(vectorResult.ToString(), syntaxString, resultType, operationString);
                         break;
                     }
-
-
 
                 case "rb5":
 					{
@@ -261,7 +257,6 @@ namespace Vector3DSample
                         break;
                     }
 
-
                 case "rb11":
                     {
                         //<SnippetMil3dVectorSample3DN12>
@@ -327,7 +322,6 @@ namespace Vector3DSample
                         ShowResults(vectorResult.ToString(), syntaxString, resultType, operationString);
                         break;
                     }
-
 
                 case "rb14":
                     {
@@ -414,7 +408,6 @@ namespace Vector3DSample
 						ShowResults(vectorResult.ToString(), syntaxString, resultType, operationString);
 						break;
 					}
-
 
 				case "rb18":
 					{
@@ -522,7 +515,6 @@ namespace Vector3DSample
 						break;
 					}
 
-
                 case "rb23":
                     {
                         //<SnippetMil3dVectorSample3DN24>
@@ -576,7 +568,6 @@ namespace Vector3DSample
                         ShowResults(areEqual.ToString(), syntaxString, resultType, operationString);
                         break;
                     }
-
 
                 case "rb25":
                     {
@@ -736,7 +727,6 @@ namespace Vector3DSample
                         break;
                     }
 
-
                 case "rb50":
                     {
                         //<SnippetMil3dVectorSample3DN34>
@@ -757,7 +747,6 @@ namespace Vector3DSample
                         vector1 = vector1 - vector2;
 
                         // vector1 is now equal to (-25, -40, -40)
-
 
                         // Subtracting vectors using static Subtract method
                         vector1 = Vector3D.Subtract(vector1, vector2);

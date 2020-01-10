@@ -5,7 +5,6 @@ using System.Windows.Forms;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 
-
 [assembly: AssemblyCompany("Microsoft")]
 [assembly: AssemblyProduct("Test")]
 [assembly: AssemblyVersion("1.0.*")]
@@ -70,7 +69,6 @@ namespace CodeExamples
       }
 		#endregion
 
-
       [STAThread]
       static void Main() 
       {
@@ -87,9 +85,6 @@ private void AboutDialog_Load(object sender, EventArgs e)
       this.ProductVersion;  
 }
 // </snippet1>
-
-
-
 
 	}
 }

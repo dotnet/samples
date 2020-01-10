@@ -21,7 +21,6 @@ namespace SDKSample
         private const string ResourceRelationshipType =
             @"http://schemas.microsoft.com/opc/2006/sample/required-resource";
 
-
         //  ------------------------------ Main -------------------------------
         public static void Main()
         {
@@ -40,7 +39,6 @@ namespace SDKSample
                 targetDirectory + "' folder.", "End of Program",
                 MessageBoxButton.OK, MessageBoxImage.Information);
         }// end:main()
-
 
         //  ----------------------- ExtractPackageParts -----------------------
         /// <summary>
@@ -109,7 +107,6 @@ namespace SDKSample
 
         }// end:ExtractPackageParts()
 
-
         //<SnippetPackageReadExtract>
         //  --------------------------- ExtractPart ---------------------------
         /// <summary>
@@ -146,7 +143,6 @@ namespace SDKSample
                 CopyStream(packagePart.GetStream(), fileStream);
             }// end:using(FileStream fileStream) - Close & dispose fileStream.
         }// end:ExtractPart()
-
 
         //  --------------------------- CopyStream ---------------------------
         /// <summary>

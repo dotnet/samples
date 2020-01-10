@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Transactions;
 
-
 namespace cs_adonet
 {
     class Program
@@ -32,8 +31,6 @@ namespace cs_adonet
         where c1.custid = c2.custid"
 );
             // </Snippet3>
-
-
 
         }
 

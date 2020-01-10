@@ -146,7 +146,6 @@ namespace Samples.AspNet
 		          // Not in use anymore.
                         // StringBuilder allSections = new StringBuilder();
 
-                        
                         // Get the section collection.
                         //  ConfigurationSectionCollection sections=
                         //    cachingSectionGroup.Sections;
@@ -172,7 +171,6 @@ namespace Samples.AspNet
 
                         // Console.Write(allSections.ToString());
                     //     break;
-
 
                     default:
                         // Option is not allowed..

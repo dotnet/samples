@@ -25,7 +25,6 @@ public class MyIconButton : Button
         // Assign the icon to the private field.   
         this.icon = ButtonIcon;
 
-
         // Size the button to 4 pixels larger than the icon.
         this.Height = icon.Height + 4;
         this.Width = icon.Width + 4;
@@ -91,14 +90,12 @@ public class MyIconButton : Button
         SendMessage(Handle, 0x00F7 /*BM_SETIMAGE value*/, 1 /*IMAGE_ICON value*/, (int)iconHandle);
     }
 
-
     // Import the SendMessage method of the User32 DLL.   
     [DllImport("user32.dll", CharSet = CharSet.Auto)]
     public static extern IntPtr SendMessage(IntPtr hWnd, int msg, int wParam, int lParam);
 
 }
 // </snippet1>
-
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

@@ -1,5 +1,4 @@
-﻿
-//<snippet3>
+﻿//<snippet3>
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -18,7 +17,6 @@ using Windows.UI.Xaml.Navigation;
 using System.Threading.Tasks;
 using System.Threading;
 using System.Net.Http;
-
 
 namespace WebsiteDownloadWin
 {
@@ -43,7 +41,6 @@ namespace WebsiteDownloadWin
                 ResultsTextBox.Text += "\r\nDownloads failed.";
             }
         }
-
 
         private async Task AccessTheWebAsync()
         {
@@ -73,7 +70,6 @@ namespace WebsiteDownloadWin
                 string.Format("\r\n\r\nTOTAL bytes returned:  {0}\r\n", total);
         }
 
-
         private List<string> SetUpURLList()
         {
             List<string> urls = new List<string> 
@@ -89,7 +85,6 @@ namespace WebsiteDownloadWin
             };
             return urls;
         }
-
 
         private void DisplayResults(string url, byte[] content, int pos)
         {

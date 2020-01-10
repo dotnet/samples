@@ -6,7 +6,6 @@ public class Form1: Form
 {
     protected DataSet DataSet1;
 
-
     // <Snippet1>
     private void GetIndex(DataTable table)
     {

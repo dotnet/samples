@@ -35,4 +35,3 @@ public class Example
 //   Non-UTC string that conforms to ISO 8601:            '2018-08-18T07:22:16.0000000-07:00' --> 8/18/2018 7:22:16 AM
 //   String that conforms to RFC 1123:                    'Sat, 18 Aug 2018 07:22:16 GMT' --> 8/18/2018 12:22:16 AM
 //   String with date, time, and time zone information:   '08/18/2018 07:22:16 -5:00' --> 8/18/2018 5:22:16 AM
-

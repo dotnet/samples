@@ -30,15 +30,10 @@ namespace Examples.SmtpExamples.Sync
 		}
 		// </snippet1>
 
-
-
 		public static void Main(string[] args)
 		{
 		    CreateTestMessage(args[0]);
 		}
 	}
 
-
-
 }
-

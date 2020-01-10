@@ -9,7 +9,6 @@ using System.Windows.Media.Media3D;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-
 namespace QuaternionView
 {
     /// <summary>

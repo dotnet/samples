@@ -26,7 +26,6 @@ namespace WpfApplication1
             InitializeComponent();
         }
 
-
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             AdventureWorksLT2008Entities advenWorksEntities = new AdventureWorksLT2008Entities();

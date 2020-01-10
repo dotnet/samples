@@ -131,4 +131,3 @@ namespace FormMDIChildrenEx
       //</Snippet1>
    }
 }
-

@@ -121,7 +121,6 @@ namespace Samples.AspNet.CS.Controls
       set { _userIsCurrent = value; }
     }
 
-
     protected override void CreateChildControls()
     {
       Controls.Clear();

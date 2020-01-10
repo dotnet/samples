@@ -30,12 +30,10 @@ public class DiscoveryDocument_Example
          // Read the given XmlTextReader.
          myDiscoveryDocument = DiscoveryDocument.Read( myXmlTextReader );
 
-
          // Write the DiscoveryDocument into the stream.
          FileStream myFileStream = new
             FileStream( "log.txt", FileMode.OpenOrCreate, FileAccess.Write );
          myDiscoveryDocument.Write( myFileStream );
-
 
          myFileStream.Flush();
          myFileStream.Close();

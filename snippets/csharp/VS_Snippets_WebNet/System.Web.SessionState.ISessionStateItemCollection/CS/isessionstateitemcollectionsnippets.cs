@@ -5,7 +5,6 @@ using System.Web.SessionState;
 using System.Collections;
 using System.Collections.Specialized;
 
-
 namespace Samples.AspNet.Session
 {
 
@@ -109,5 +108,3 @@ namespace Samples.AspNet.Session
 
 }
 //</Snippet1>
-
-

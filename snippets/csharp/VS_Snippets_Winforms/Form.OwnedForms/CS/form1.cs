@@ -128,6 +128,5 @@ namespace FormOwnedFormsEx
          ChangeOwnedFormText();
       }
 
-
 	}
 }

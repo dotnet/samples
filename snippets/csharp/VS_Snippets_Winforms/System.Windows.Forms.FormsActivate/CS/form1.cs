@@ -119,8 +119,6 @@ public class Form1:
 		this.Activate();
 		this.Button1.Enabled = false;
 	}
-	
-
 
 	// Updates the label text to reflect the current values of x 
 	// and y, which was were incremented in the Button1 control's 
@@ -145,4 +143,3 @@ public class Form1:
 	//</snippet1>
 
 }
-

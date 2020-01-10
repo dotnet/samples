@@ -43,8 +43,6 @@ namespace SetBoundsCore
       }
 		#endregion
 
-
-
 // <snippet1>
 protected override void SetBoundsCore(int x, int y, 
    int width, int height, BoundsSpecified specified)
@@ -53,7 +51,6 @@ protected override void SetBoundsCore(int x, int y,
    base.SetBoundsCore(x, y, 150, 75, specified);
 }
 // </snippet1>
-
 
 // <snippet2>
 protected override void SetClientSizeCore(int x, int y)
@@ -69,7 +66,6 @@ protected override void SetClientSizeCore(int x, int y)
    }
 }
 // </snippet2>
-
 
 // <snippet3>
 protected override void ScaleCore(float dx, float dy)
@@ -92,8 +88,6 @@ protected override void ScaleCore(float dx, float dy)
    this.ClientSize = myClientSize;
 }
 // </snippet3>
-
-
 
 	}
 }

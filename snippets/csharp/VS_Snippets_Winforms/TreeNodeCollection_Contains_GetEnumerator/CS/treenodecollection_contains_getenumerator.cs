@@ -14,7 +14,6 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using System.Data;
 
-
 public class MyForm : Form
 {
    private TreeView myTreeView;
@@ -108,6 +107,5 @@ private void EnumerateTreeNodes()
 }
 // </snippet1>
 // </snippet2>
-
 
 }

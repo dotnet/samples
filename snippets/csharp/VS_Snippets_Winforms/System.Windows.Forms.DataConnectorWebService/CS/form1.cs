@@ -1,6 +1,4 @@
-﻿
-
-//<snippet1>
+﻿//<snippet1>
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -70,7 +68,6 @@ namespace BindToWebService {
 				"http://webservices.eraserver.net/zipcoderesolver/zipcoderesolver.asmx";
 		}
 
-	
 		//''<remarks/>
 		[System.Web.Services.Protocols.SoapDocumentMethodAttribute
 			("http://webservices.eraserver.net/CorrectedAddressXml", 
@@ -96,7 +93,6 @@ namespace BindToWebService {
 				new object[]{accessCode, address, city, state}, callback, asyncState);
 		}
 
-
 		public USPSAddress EndCorrectedAddressXml(System.IAsyncResult asyncResult)
 		{
 			object[] results = this.EndInvoke(asyncResult);
@@ -104,7 +100,6 @@ namespace BindToWebService {
 		}
 
 	}
-
 
 //<snippet4>
 	[System.SerializableAttribute, System.Xml.Serialization.XmlTypeAttribute(
@@ -122,7 +117,6 @@ namespace BindToWebService {
 
 		private string fullZIPField;
 
-
 		public string Street    
 		{
 			get
@@ -134,7 +128,6 @@ namespace BindToWebService {
 				this.streetField = value;
 			}
 		}
-
 
 		public string City    
 		{
@@ -160,7 +153,6 @@ namespace BindToWebService {
 			}
 		}
 
-
 		public string ShortZIP    
 		{
 			get
@@ -172,7 +164,6 @@ namespace BindToWebService {
 				this.shortZIPField = value;
 			}
 		}
-
 
 		public string FullZIP    
 		{
@@ -191,7 +182,6 @@ namespace BindToWebService {
 	public delegate void CorrectedAddressXmlCompletedEventHandler(object sender,
 		CorrectedAddressXmlCompletedEventArgs args);
 
-
 	public class CorrectedAddressXmlCompletedEventArgs:
     System.ComponentModel.AsyncCompletedEventArgs
 
@@ -205,7 +195,6 @@ namespace BindToWebService {
 			this.results = results;
 		}
 
-
 		public USPSAddress Result    
 		{
 			get
@@ -217,10 +206,3 @@ namespace BindToWebService {
 	}
  }
 //</snippet1>
-
-
-
-
-
-
-

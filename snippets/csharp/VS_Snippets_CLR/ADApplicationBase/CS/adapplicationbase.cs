@@ -30,4 +30,3 @@ Application base of MyDomain:
         C:\Program Files\MyApp\MyAppSubfolder\
  */
 //</Snippet1>
-

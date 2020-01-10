@@ -78,8 +78,7 @@ class DemoMethodBuilder
 
         Type[] myMthdParams = new Type[inputNumsList.Length];
         object[] inputValsList = new object[inputNumsList.Length];
-           
-       
+
         foreach (string inputNum in inputNumsList) 
         {
             inputValsList[index] = (object)Convert.ToInt32(inputNum);

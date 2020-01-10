@@ -75,4 +75,3 @@ namespace Examples.CS.WebControls.Design
     } // MyLoginStatusDesigner
 } // Examples.CS.WebControls.Design
 // </snippet1>
-

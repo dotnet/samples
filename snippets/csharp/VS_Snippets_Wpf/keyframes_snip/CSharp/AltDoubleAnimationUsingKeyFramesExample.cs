@@ -115,4 +115,3 @@ namespace Microsoft.Samples.KeyFrameExamples
     }
 }
 // </SnippetAltDoubleAnimationUsingKeyFramesWholePage>
-

@@ -60,16 +60,12 @@
 
         public double Update()
         {
-        
-            
+
             DateTime currentTime = DateTime.Now;
 
-                
             //get the difference in time
             TimeSpan diffTime = currentTime - _lastTime;
             _deltaTime = diffTime.TotalSeconds;
-            
-
 
                 //does the user want a callback on regular intervals?
                 if (_timerInterval > 0.0)
@@ -95,7 +91,6 @@
                     }
                    
                 }
-                
 
             //cycle old time
             _lastTime = currentTime;

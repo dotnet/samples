@@ -1,5 +1,4 @@
-﻿
-// This sample compiles a set of miscellaneous code snippets that demonstrate
+﻿// This sample compiles a set of miscellaneous code snippets that demonstrate
 // different levels of user input control.
 
 // <Snippet0>

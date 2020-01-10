@@ -42,7 +42,6 @@ namespace UIAIRangeValueProvider_snip
             base.OnPaint(e);
         }
 
-
         #region UI Automation related methods
         
         /// <summary>

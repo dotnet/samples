@@ -13,7 +13,6 @@ class Whidbey_Write_Methods
 
     }
 
-
     public static void WriteDateTime()
     {
         //<snippet1>	

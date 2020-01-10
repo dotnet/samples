@@ -10,7 +10,6 @@ using System.Windows.Media.Animation;
 namespace Microsoft.Samples.Graphics
 {
 
-
     public partial class PolylineExample : Page
     {
         public PolylineExample()

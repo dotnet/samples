@@ -57,7 +57,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathExamplesCS
 		}
 		#endregion
 
-
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPath.AddArc(System.Drawing.Rectangle,System.Single,System.Single)
         // <snippet1>
         private void AddArcExample(PaintEventArgs e)
@@ -76,7 +75,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathExamplesCS
             e.Graphics.DrawPath(new Pen(Color.Red, 3), myPath);
         }
         // </snippet1>
-
 
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPath.AddBezier(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
         // <snippet2>
@@ -97,7 +95,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathExamplesCS
             e.Graphics.DrawPath(new Pen(Color.Red, 2), myPath);
         }
         // </snippet2>
-
 
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPath.AddBeziers(System.Drawing.Point[])
         // <snippet3>
@@ -126,7 +123,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathExamplesCS
         }
         // </snippet3>
 
-
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPath.AddClosedCurve(System.Drawing.Point[],System.Single)
         // <snippet4>
         private void AddClosedCurveExample(PaintEventArgs e)
@@ -153,7 +149,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathExamplesCS
         }
         // </snippet4>
 
-
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPath.AddCurve(System.Drawing.Point[],System.Int32,System.Int32,System.Single)
         // <snippet5>
         private void AddCurveExample(PaintEventArgs e)
@@ -178,7 +173,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathExamplesCS
         }
         // </snippet5>
 
-
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPath.AddEllipse(System.Drawing.Rectangle)
         // <snippet6>
         private void AddEllipseExample(PaintEventArgs e)
@@ -194,7 +188,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathExamplesCS
             e.Graphics.DrawPath(myPen, myPath);
         }
         // </snippet6>
-
 
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPath.AddLine(System.Int32,System.Int32,System.Int32,System.Int32)
         // <snippet7>
@@ -212,7 +205,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathExamplesCS
             e.Graphics.DrawPath(myPen, myPath);
         }
         // </snippet7>
-
 
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPath.AddLines(System.Drawing.Point[])
         // <snippet8>
@@ -237,7 +229,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathExamplesCS
             e.Graphics.DrawPath(myPen, myPath);
         }
         // </snippet8>
-
 
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPath.AddPath(System.Drawing.Drawing2D.GraphicsPath,System.Boolean)
         // <snippet9>
@@ -275,7 +266,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathExamplesCS
         }
         // </snippet9>
 
-
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPath.AddPie(System.Int32,System.Int32,System.Int32,System.Int32,System.Single,System.Single)
         // <snippet10>
         private void AddPieExample(PaintEventArgs e)
@@ -290,7 +280,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathExamplesCS
             e.Graphics.DrawPath(myPen, myPath);
         }
         // </snippet10>
-
 
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPath.AddPolygon(System.Drawing.Point[])
         // <snippet11>
@@ -317,7 +306,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathExamplesCS
         }
         // </snippet11>
 
-
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPath.AddRectangle(System.Drawing.Rectangle)
         // <snippet12>
         private void AddRectangleExample(PaintEventArgs e)
@@ -333,7 +321,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathExamplesCS
             e.Graphics.DrawPath(myPen, myPath);
         }
         // </snippet12>
-
 
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPath.AddRectangles(System.Drawing.Rectangle[])
         // <snippet13>
@@ -355,7 +342,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathExamplesCS
             e.Graphics.DrawPath(myPen, myPath);
         }
         // </snippet13>
-
 
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPath.AddString(System.String,System.Drawing.FontFamily,System.Int32,System.Single,System.Drawing.Point,System.Drawing.StringFormat)
         // <snippet14>
@@ -386,7 +372,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathExamplesCS
         }
         // </snippet14>
 
-
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPath.ClearMarkers
         // <snippet15>
         private void ClearMarkersExample(PaintEventArgs e)
@@ -411,7 +396,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathExamplesCS
             e.Graphics.DrawPath(myPen, myPath);
         }
         // </snippet15>
-
 
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPath.Clone
         // <snippet16>
@@ -438,7 +422,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathExamplesCS
             e.Graphics.DrawPath(myPen2, myPath2);
         }
         // </snippet16>
-
 
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPath.CloseAllFigures
         // <snippet17>
@@ -468,7 +451,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathExamplesCS
         }
         // </snippet17>
 
-
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPath.CloseFigure
         // <snippet18>
         private void CloseFigureExample(PaintEventArgs e)
@@ -488,7 +470,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathExamplesCS
         }
         // </snippet18>
 
-
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPath.Flatten(System.Drawing.Drawing2D.Matrix,System.Single)
         // <snippet19>
         private void FlattenExample(PaintEventArgs e)
@@ -507,7 +488,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathExamplesCS
             e.Graphics.DrawPath(new Pen(Color.Red, 1), myPath);
         }
         // </snippet19>
-
 
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPath.GetBounds
         // <snippet20>
@@ -556,7 +536,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathExamplesCS
         }
         // </snippet20>
 
-
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPath.GetLastPoint
         // <snippet21>
         private void GetLastPointExample(PaintEventArgs e)
@@ -575,7 +554,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathExamplesCS
         }
         // </snippet21>
 
-
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPath.IsOutlineVisible(System.Int32,System.Int32,System.Drawing.Pen,System.Drawing.Graphics)
         // <snippet22>
         public void IsOutlineVisibleExample(PaintEventArgs e)
@@ -591,7 +569,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathExamplesCS
             MessageBox.Show("visible = " + visible.ToString());
         }
         // </snippet22>
-
 
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPath.IsVisible(System.Int32,System.Int32,System.Drawing.Graphics)
         // <snippet23>
@@ -609,7 +586,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathExamplesCS
             MessageBox.Show(visible.ToString());
         }
         // </snippet23>
-
 
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPath.Reset
         // <snippet24>
@@ -668,7 +644,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathExamplesCS
         // End DrawPoints
         // </snippet24>
 
-
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPath.Reverse
         // <snippet25>
         public void GraphicsPathReverseExample(PaintEventArgs e)
@@ -712,7 +687,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathExamplesCS
         // End DrawPoints
         // </snippet25>
 
-
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPath.SetMarkers
         // <snippet26>
         private void SetMarkersExample(PaintEventArgs e)
@@ -731,7 +705,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathExamplesCS
             e.Graphics.DrawPath(new Pen(Color.Black, 2), myPath);
         }
         // </snippet26>
-
 
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPath.StartFigure
         // <snippet27>
@@ -767,7 +740,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathExamplesCS
         // End StartFigureExample
         // </snippet27>
 
-
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPath.Transform(System.Drawing.Drawing2D.Matrix)
         // <snippet28>
         private void TransformExample(PaintEventArgs e)
@@ -789,7 +761,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathExamplesCS
             e.Graphics.DrawPath(new Pen(Color.Red, 2), myPath);
         }
         // </snippet28>
-
 
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPath.Warp(System.Drawing.PointF[],System.Drawing.RectangleF,System.Drawing.Drawing2D.Matrix,System.Drawing.Drawing2D.WarpMode,System.Single)
         // <snippet29>
@@ -822,7 +793,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathExamplesCS
             e.Graphics.DrawPath(new Pen(Color.Red), myPath);
         }
         // </snippet29>
-
 
         // Snippet for: M:System.Drawing.Drawing2D.GraphicsPath.Widen(System.Drawing.Pen,System.Drawing.Drawing2D.Matrix,System.Single)
         // <snippet30>

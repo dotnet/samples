@@ -15,4 +15,3 @@ public class Vehicle
 }
 
 // </Snippet1>
-

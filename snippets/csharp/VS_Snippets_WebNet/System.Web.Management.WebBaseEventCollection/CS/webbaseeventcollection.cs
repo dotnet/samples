@@ -3,7 +3,6 @@
   *Purpose:   This little contrived example shows how to use the 
   *           WebBaseEventCollection. 
   **/
-  
 // <Snippet1>
 
 using System;
@@ -107,4 +106,3 @@ namespace SamplesAspNet
     }
 }
 // </Snippet1>
-

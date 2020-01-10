@@ -91,4 +91,3 @@ class XmlSchemaInferenceExamples
         //</snippet4>
     }
 }
-

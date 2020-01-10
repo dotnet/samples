@@ -23,13 +23,11 @@ namespace CS
             RefreshDataset();
         }
 
-
         private void RefreshDataset()
         {
             this.regionTableAdapter1.Fill(this.northwindDataSet1.Region);
         }
         //</Snippet1>
-
 
         //<Snippet2>
         private void UpdateButton_Click(object sender, EventArgs e)
@@ -48,7 +46,6 @@ namespace CS
         }
         //</Snippet2>
 
-
         //<Snippet3>
         private void DeleteButton_Click(object sender, EventArgs e)
         {
@@ -64,12 +61,10 @@ namespace CS
         }
         //</Snippet3>
 
-
         public Form1()
         {
             InitializeComponent();
         }
-
 
         private void regionBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -77,7 +72,6 @@ namespace CS
             this.regionBindingSource.EndEdit();
             this.regionTableAdapter1.Update(this.northwindDataSet1.Region);
         }
-
 
         private void Form1_Load(object sender, EventArgs e)
         {

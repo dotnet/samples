@@ -72,7 +72,6 @@ namespace SDKSample
                 new EllipseGeometry(new Point(25,50), 25, 50);
             aDrawingGroup.ClipGeometry = clipGeometry;
 
-
             // Use an Image control and a DrawingImage to
             // display the drawing.
             DrawingImage aDrawingImage = new DrawingImage(aDrawingGroup);

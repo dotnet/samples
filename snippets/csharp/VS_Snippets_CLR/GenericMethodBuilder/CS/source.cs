@@ -116,6 +116,3 @@ Is DemoMethod a generic method definition? True
 DemoMethodBuilder DemoMethod[String,DemoMethodBuilder](System.String)
 */
 //</Snippet1>
-
-
-

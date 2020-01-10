@@ -27,7 +27,6 @@ namespace SDKSample
         {
         }
 
-
         // --------- AnnotationsHelperXps DocumentViewer constructor ----------
         /// <summary>
         ///   Initializes a new instance of the AnnotationsHelperXps
@@ -36,7 +35,6 @@ namespace SDKSample
         {
             _docViewer = dv;
         }
-
 
         // --------------------- DocViewer Getter/Setter ----------------------
         /// <summary>
@@ -49,7 +47,6 @@ namespace SDKSample
             get
                 { return _docViewer; }
         }
-
 
         // ---------------------------- SetSource -----------------------------
         /// <summary>
@@ -67,7 +64,6 @@ namespace SDKSample
             _packageUri = packageUri;
             _rootUri = rootUri;
         }
-
 
         //<SnippetStartStopAnnotations>
         //<SnippetStartAnnotations>
@@ -108,7 +104,6 @@ namespace SDKSample
         }// end:StartAnnotations()
         //</SnippetStartAnnotations>
 
-
         //<SnippetStopAnnotations>
         // -------------------------- StopAnnotations -------------------------
         /// <summary>
@@ -134,7 +129,6 @@ namespace SDKSample
         //</SnippetStopAnnotations>
         //</SnippetStartStopAnnotations>
 
-
         //<SnippetDocViewAnnXpsDocPaginator>
         // ------------------ GetAnnotationDocumentPaginator ------------------
         /// <summary>
@@ -151,7 +145,6 @@ namespace SDKSample
                            fds.DocumentPaginator, _annotService.Store);
         }
         //</SnippetDocViewAnnXpsDocPaginator>
-
 
         // ------------------------ GetAnnotationsPart ------------------------
         /// <summary>
@@ -217,7 +210,6 @@ namespace SDKSample
 
             return annotPart;
         }// end:GetAnnotationPart()
-
 
         #region private variables
 

@@ -26,7 +26,6 @@ namespace ConfigurationSamples
             // </Snippet2>
         }
 
-
         static void Main(string[] args)
         {
            
@@ -61,11 +60,9 @@ namespace ConfigurationSamples
             ConfigurationManager.RefreshSection("appSettings");
             // </Snippet13>
 
-
             Console.WriteLine("Using ConfigurationManager AppSettings:");
             UsingConfigurationManager_AppSettings();
 
-           
             // <Snippet15>
             // Show the value of a named Application Setting.
             Console.WriteLine(
@@ -73,7 +70,6 @@ namespace ConfigurationSamples
               asName, ConfigurationManager.AppSettings[asName]);
             // </Snippet15>
 
-            
         }
     }
 }

@@ -72,4 +72,3 @@ public class MyAssembly
       Console.WriteLine("Use installutil.exe to run the assembly Installer_Committed.exe");
    }
 }
-

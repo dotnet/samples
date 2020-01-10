@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -185,6 +184,3 @@ this.Controls.Add(this.Button2);
     }
 
 }
-
-
-

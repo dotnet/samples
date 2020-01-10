@@ -11,7 +11,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.ComponentModel;
 
-
 namespace ListBoxSort_snip
 {
     /// <summary>

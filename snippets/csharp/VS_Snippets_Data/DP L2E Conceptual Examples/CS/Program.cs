@@ -29,7 +29,6 @@ namespace L2E_ConceptualExamplesCS
             //QueryReturnsPrimitiveValue();
             //DistinctHowTo();
             //CSWalkthrough();
-            
 
             //*** Expression examples. ***//
             // ConstantExpression();
@@ -91,8 +90,6 @@ namespace L2E_ConceptualExamplesCS
             Console.WriteLine("Hit enter...");
             Console.Read();
         }
-
-        
 
         # region Expression Examples
         static void ConstantExpression()
@@ -243,7 +240,6 @@ namespace L2E_ConceptualExamplesCS
             using (AdventureWorksEntities context = new AdventureWorksEntities())
             {
                 MyClass2 myClass = new MyClass2();
-
 
                 //Throws a NotSupportedException
                 IQueryable<SalesOrderHeader> salesInfo =
@@ -657,10 +653,6 @@ namespace L2E_ConceptualExamplesCS
             // </SnippetConvertExpression>
         }
 
-        
-       
-
-
         # endregion
         # region Query Examples
         static void Query1()
@@ -705,7 +697,6 @@ namespace L2E_ConceptualExamplesCS
             }
             //</SnippetQueryExpression>
 
-
         }
         static void MethodQuery()
         {
@@ -714,7 +705,6 @@ namespace L2E_ConceptualExamplesCS
             {
                 IQueryable<string> productNames = context.Products.Select(p => p.Name);
 
-
                 Console.WriteLine("Product Names:");
                 foreach (var productName in productNames)
                 {
@@ -722,7 +712,6 @@ namespace L2E_ConceptualExamplesCS
                 }
             }
             //</SnippetMethodQuery>
-
 
         }
         static void composing1()
@@ -855,7 +844,6 @@ namespace L2E_ConceptualExamplesCS
                 IQueryable<int> scalarQuery = new ObjectQuery<int>("100", context);
                 bool hasResults = scalarQuery.Any();
                 Console.Write(hasResults);
-
 
             }
         }
@@ -1153,7 +1141,6 @@ namespace L2E_ConceptualExamplesCS
             //</SnippetCSWalkthrough>
         }
 
-        
         # endregion
 
         # region Function Mapping
@@ -1386,8 +1373,6 @@ namespace L2E_ConceptualExamplesCS
                 myParams.endDate = new DateTime(2003, 3, 8);
                 myParams.totalDue = 700.00M;
 
-                
-
                 IQueryable<SalesOrderHeader> sales = s_compiledQuery.Invoke(context, myParams);
 
                 foreach (SalesOrderHeader sale in sales)
@@ -1429,4 +1414,3 @@ namespace L2E_ConceptualExamplesCS
         }
     }
 }
-

@@ -36,7 +36,6 @@ namespace TempConvertServer {
       // The rest of CustomChannel's implementation.
       //</Snippet1>
 
-
       // TransportSink is a private class defined within CustomChannel.
       TransportSink transportSink;
 
@@ -45,8 +44,6 @@ namespace TempConvertServer {
             return transportSink.NextChannelSink;
          }
       }
-
-		
 
       public static void Main(string[] args) {
          CustomChannel channel = new CustomChannel(8085);
@@ -96,8 +93,7 @@ namespace TempConvertServer {
          IDictionary properties,
          IClientChannelSinkProvider clientSinkProvider,
          IServerChannelSinkProvider serverSinkProvider) {
-            
-      
+
       }
 
       public string ChannelName {

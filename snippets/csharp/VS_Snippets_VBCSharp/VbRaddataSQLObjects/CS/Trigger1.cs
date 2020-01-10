@@ -35,14 +35,12 @@ public partial class Triggers
         }
     }
 
-
     public static bool IsEMailAddress(string s)
     {
         return Regex.IsMatch(s, "^([\\w-]+\\.)*?[\\w-]+@[\\w-]+\\.([\\w-]+\\.)*?[\\w]+$");
     }
 }
 //</Snippet3>
-
 
 //-----------------------------------------------------------------------------
 //<Snippet8>
@@ -55,7 +53,6 @@ public partial class Triggers
     }
 }
 //</Snippet8>
-
 
 //-----------------------------------------------------------------------------
 //<Snippet9>

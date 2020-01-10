@@ -7,7 +7,6 @@ using System.Windows.Media;
 using System.Windows.Shapes;
 using System.Windows.Input;
 
-
 namespace WCSamples
 {
     /// <summary>
@@ -31,7 +30,6 @@ namespace WCSamples
             this.LostMouseCapture += new MouseEventHandler(MyLostMouseCapture);
 
             CaptureMouseCommand = new RoutedCommand();
-            
 
             MouseGesture CaptureMouseGesture = new MouseGesture(MouseAction.WheelClick, ModifierKeys.Control);
             KeyGesture CaptureMouseCommandKeyGesture = new KeyGesture(Key.A, ModifierKeys.Alt);
@@ -72,7 +70,6 @@ namespace WCSamples
         {
             e.CanExecute = true;
         }
-
 
         //<SnippetMouseEventArgsPosition>
         private void GetMousePosition(object sender, MouseEventArgs e)
@@ -132,7 +129,6 @@ namespace WCSamples
             //</SnippetMouseEventArgsXButton2ButtonDown>
         }
         //</SnippetMouseEventArgsMouseButton>
-
 
         private void GetDevices(object sender, MouseEventArgs e)
         {
@@ -220,7 +216,6 @@ namespace WCSamples
         }
         //</SnippetMouseEventArgsButtonStateReleased>
 
-
         //<SnippetMouseWheelDelta>
         // Moves the TextBox named box when the mouse wheel is rotated.
         // The TextBox is on a Canvas named MainCanvas.
@@ -247,7 +242,6 @@ namespace WCSamples
         }
         //</SnippetMouseWheelDelta>
 
-
         //<SnippetMouseClickCountDoubleClick>
         private void OnMouseDownClickCount(object sender, MouseButtonEventArgs e)
         {
@@ -269,8 +263,6 @@ namespace WCSamples
             }
         }
         //</SnippetMouseClickCountDoubleClick>
-
-
 
         private void CaptureMouseOnMouseEnter(object sender, MouseEventArgs e)
         {
@@ -343,6 +335,5 @@ namespace WCSamples
         }
         //</SnippetMouseSnippetsGotLostMouseCapture>
     }
-
 
 }

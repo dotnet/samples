@@ -126,7 +126,6 @@ namespace Samples.AspNet.CS.Controls
       }
     }
 
-
     protected override void RenderContents(HtmlTextWriter writer)
     {
       if (_provider != null)

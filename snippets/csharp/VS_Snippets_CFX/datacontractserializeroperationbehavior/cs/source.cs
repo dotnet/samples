@@ -144,7 +144,6 @@ namespace Example
             return a + b;
         }
 
-        
         public string GetInfo(string request)
         {
             if (request == "Version")

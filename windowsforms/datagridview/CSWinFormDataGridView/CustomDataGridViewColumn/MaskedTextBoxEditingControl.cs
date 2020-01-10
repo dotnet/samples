@@ -14,7 +14,6 @@ using System.Text;
 using System.Windows.Forms;
 #endregion
 
-
 namespace CSWinFormDataGridView.CustomDataGridViewColumn
 {
     public class MaskedTextBoxEditingControl : MaskedTextBox, IDataGridViewEditingControl
@@ -48,7 +47,6 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
             }
         }
 
-
         #region IDataGridViewEditingControl Members
 
         //  Indicates the cursor that should be shown when the user hovers their
@@ -60,7 +58,6 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
                 return Cursors.IBeam;
             }
         }
-
 
         //  Returns or sets the parent DataGridView.
         public DataGridView EditingControlDataGridView
@@ -75,7 +72,6 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
                 this.dataGridView = value;
             }
         }
-
 
         //  Sets/Gets the formatted value contents of this cell.
         public object EditingControlFormattedValue
@@ -160,7 +156,6 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
             return !dataGridViewWantsInputKey;
         }
 
-
         //  Prepare the editing control for edit.
         public void PrepareEditingControlForEdit(bool selectAll)
         {
@@ -189,7 +184,6 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
             }
         }
 
-
         //  Indicates the row index of this cell.  This is often -1 for the
         //  template cell, but for other cells, might actually have a value
         //  greater than or equal to zero.
@@ -206,8 +200,6 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
             }
         }
 
-
-
         //  Make the MaskedTextBox control match the style and colors of
         //  the host DataGridView control and other editing controls 
         //  before showing the editing control.
@@ -218,7 +210,6 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
             this.BackColor = dataGridViewCellStyle.BackColor;
             this.TextAlign = translateAlignment(dataGridViewCellStyle.Alignment);
         }
-
 
         //  Gets or sets our flag indicating whether the value has changed.
         public bool EditingControlValueChanged
@@ -235,7 +226,6 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
         }
 
         #endregion // IDataGridViewEditingControl.
-
 
         /// <summary>
         /// Routine to translate between DataGridView content alignments and text 
@@ -265,7 +255,6 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
 
             throw new ArgumentException("Error: Invalid Content Alignment!");
         }
-
 
     }
 }

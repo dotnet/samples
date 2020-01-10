@@ -31,7 +31,3 @@ public static void Main(){
 MySerializeIPEndPointClassMethod();
 }
  } //end class
-
-
-
-

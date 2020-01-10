@@ -28,8 +28,7 @@ namespace College
        // Add a new field named University.
        public string University;
     }
- 
-    
+
    public class Run
    {
       public static void Main()

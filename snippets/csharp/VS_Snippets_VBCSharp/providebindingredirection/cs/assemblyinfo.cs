@@ -46,5 +46,3 @@ using Microsoft.VisualStudio.Shell;
 [assembly: ProvideCodeBase(AssemblyName = "ClassLibrary1",
 Version = "1.0.0.0", CodeBase = "$PackageFolder$\\ClassLibrary1.dll")]
 //</snippet2>
-
-

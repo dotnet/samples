@@ -22,7 +22,6 @@ namespace Samples.Aspnet.SystemWebConfiguration
       System.Configuration.Configuration webConfig =
       WebConfigurationManager.OpenWebConfiguration("/aspnetTest");
 
-
       // Get the section.
       string configPath = "system.web/httpCookies";
       System.Web.Configuration.HttpCookiesSection httpCookiesSection =
@@ -36,7 +35,6 @@ namespace Samples.Aspnet.SystemWebConfiguration
         new System.Web.Configuration.HttpCookiesSection();
 // </Snippet5>
 
-
 // <Snippet2>
 
       // Get the current Domain.
@@ -49,7 +47,6 @@ namespace Samples.Aspnet.SystemWebConfiguration
 
 // </Snippet2>
 
- 
 // <Snippet3>
 
       // Get the current RequireSSL.
@@ -61,8 +58,7 @@ namespace Samples.Aspnet.SystemWebConfiguration
           false;
 
 // </Snippet3>
- 
-               
+
 // <Snippet4>
 
       // Get the current HttpOnlyCookies.

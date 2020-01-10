@@ -28,7 +28,6 @@ namespace Samples.Aspnet.SystemWebConfiguration
 
             // </Snippet1>
 
-
             // <Snippet2>
             // Create a new section object.
             HttpModuleAction newModuleAction =
@@ -36,7 +35,6 @@ namespace Samples.Aspnet.SystemWebConfiguration
                 "MyModuleType");
 
             // </Snippet2>
-
 
             // <Snippet3>
 
@@ -62,8 +60,6 @@ namespace Samples.Aspnet.SystemWebConfiguration
             }
             // </Snippet4>
 
-
-
             // <Snippet5>
 
             // Get the modules collection.
@@ -83,6 +79,5 @@ namespace Samples.Aspnet.SystemWebConfiguration
         }
 
     }
-
 
 } 

@@ -12,7 +12,6 @@ using System.ComponentModel;
 using System.Web;
 using System.Net;
 
-
 class MyServiceTst {
 
     string _Host { get; set; }
@@ -49,7 +48,6 @@ class MyServiceTst {
         httpRequestProperty.Headers.Add(HttpRequestHeader.Cookie,
             cookieContainer.GetCookieHeader(new Uri(@"http://someuri.tld")));
     }
-
 
     void GetUserRoles(CookieContainer cookieContainer) {
 

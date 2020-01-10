@@ -18,10 +18,8 @@ namespace Samples
 
     //Implement the IMyService operations.
 
-
     }
     //</snippet1>
-
 
     public class Test
     {
@@ -46,7 +44,6 @@ namespace Samples
         {
             
         }
-
 
     }
 }

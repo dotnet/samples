@@ -1,5 +1,4 @@
-﻿
-// <Snippet1>
+﻿// <Snippet1>
 using System;
 using System.Collections.Generic;
 
@@ -60,4 +59,3 @@ public class Example
 //       'J' starts at index 3
 //       'Ju' starts at index 5
 // </Snippet1>
-

@@ -27,4 +27,3 @@ public class Example
 //       at Example.GetSecondWord(String s)
 //       at Example.Main()
 // </Snippet17>
-

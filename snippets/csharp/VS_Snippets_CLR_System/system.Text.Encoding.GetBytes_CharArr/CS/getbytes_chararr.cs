@@ -35,7 +35,6 @@ public class SamplesEncoding  {
 
    }
 
-
    public static void PrintCountsAndBytes( char[] chars, Encoding enc )  {
 
       // Display the name of the encoding used.
@@ -56,7 +55,6 @@ public class SamplesEncoding  {
       PrintHexBytes( bytes );
 
    }
-
 
    public static void PrintHexBytes( byte[] bytes )  {
 
@@ -85,4 +83,3 @@ System.Text.UTF32Encoding      : 24  32  :7A 00 00 00 61 00 00 00 06 03 00 00 FD
 */
 
 // </Snippet1>
-

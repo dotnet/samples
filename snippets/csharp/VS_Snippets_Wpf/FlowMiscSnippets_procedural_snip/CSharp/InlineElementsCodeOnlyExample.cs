@@ -11,7 +11,6 @@ namespace SDKSample
     {
         public InlineElementsCodeOnlyExample()
         {
- 
 
             // Create paragraph that will go into the Figure and populate with text.
             Paragraph myParagraph1 = new Paragraph(new Run("Neptune has 72 times Earth's volume..."));
@@ -23,7 +22,6 @@ namespace SDKSample
             // Create a Figure with a paragraph in it. This Figure will go into another paragraph
             // below.
             Figure myFigure = new Figure(myParagraph1);
-
 
             myFigure.Width = new FigureLength(300, FigureUnitType.Pixel);
             myFigure.Height = new FigureLength(50, FigureUnitType.Pixel); ;

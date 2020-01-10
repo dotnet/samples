@@ -35,7 +35,6 @@ public class Test
       t.GetMap("MyMap.xml");
    }
 
-
    public void GetMap(string filename){
       // Create an XmlSerializer instance.
       XmlTypeMapping map = new SoapReflectionImporter().ImportTypeMapping(typeof(Group));

@@ -82,7 +82,6 @@ public class Form1 : Form
       }
 // </Snippet1>
 
-
       private void AddCustomDataTableStyle()
       {
          // Create a 'DataGridTableStyle'.

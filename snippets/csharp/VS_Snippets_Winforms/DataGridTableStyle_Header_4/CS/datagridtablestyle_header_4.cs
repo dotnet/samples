@@ -26,7 +26,6 @@ namespace Datagrid
       private System.Windows.Forms.ComboBox comboBox2;
       private System.Windows.Forms.Button button2;
 
-
       private System.ComponentModel.Container components = null;
 
       public Form1()

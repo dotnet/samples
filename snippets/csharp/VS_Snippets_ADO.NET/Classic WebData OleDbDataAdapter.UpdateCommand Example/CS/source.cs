@@ -16,7 +16,6 @@
             Console.ReadLine();
         }
 
-
         //<Snippet1>
         private static OleDbDataAdapter CreateCustomerAdapter(
             OleDbConnection connection)
@@ -56,7 +55,3 @@
 
     }
 }
-
-
-
-

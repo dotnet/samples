@@ -1,20 +1,16 @@
-﻿
-
-using System;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Shapes;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
-
 namespace Microsoft.Samples.BrushExamples
 {
 
     public class AlignmentExample : Page
     {
-    
-        
+
         public AlignmentExample()
         {
 
@@ -23,11 +19,9 @@ namespace Microsoft.Samples.BrushExamples
             mainPanel.Orientation = Orientation.Horizontal;
             createTopLeftAlignmentExample(mainPanel);
             this.Content = mainPanel;
-        
 
         }
-        
-        
+
         private void createTopLeftAlignmentExample(Panel mainPanel)
         {
 
@@ -56,7 +50,6 @@ namespace Microsoft.Samples.BrushExamples
             myImageBrush.AlignmentX = AlignmentX.Left;
             myImageBrush.AlignmentY = AlignmentY.Top;
 
-            
             // Use the ImageBrush to paint the rectangle's background.
             myRectangle.Fill = myImageBrush;
             // </SnippetGraphicsMMTopLeftAlignmentExample>
@@ -64,8 +57,7 @@ namespace Microsoft.Samples.BrushExamples
             mainPanel.Children.Add(myRectangle);            
         
         }
-        
-  
+
     }
 
 }

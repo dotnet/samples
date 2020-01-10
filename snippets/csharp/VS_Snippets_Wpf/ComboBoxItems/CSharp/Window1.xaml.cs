@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
@@ -17,7 +16,6 @@ namespace ComboBox_Index
         {
             InitializeComponent();
         }
-
 
         private void GetThirdCity_Click(object sender, RoutedEventArgs e)
         {
@@ -61,8 +59,6 @@ namespace ComboBox_Index
                  (cbi.Content.ToString()) + ".";
         }
         //</Snippet2>           
-
- 
 
     }
 

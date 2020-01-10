@@ -117,7 +117,6 @@ public class MySoapExtensionAttribute : SoapExtensionAttribute
    private string myFilename;
    private int myPriority;
 
-
    // Set the name of the log file were SOAP messages will be stored.
    public MySoapExtensionAttribute() : base()
    {
@@ -163,7 +162,6 @@ public class MySoapHeader : SoapHeader
 {
    public string Text;
 }
-
 
 [System.Web.Services.WebServiceBindingAttribute(Name="MathSvcSoap", Namespace="http://tempuri.org/")]
 public class MathService : System.Web.Services.Protocols.SoapHttpClientProtocol 
@@ -238,4 +236,3 @@ public class MathService : System.Web.Services.Protocols.SoapHttpClientProtocol
       return ((System.Single)(results[0]));
    }
 }
-

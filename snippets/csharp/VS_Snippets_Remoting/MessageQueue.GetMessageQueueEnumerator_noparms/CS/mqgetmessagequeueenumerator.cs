@@ -29,7 +29,6 @@ namespace MyProject
 			return;
 		}
 
-
 		//**************************************************
 		// Iterates through message queues and examines the
 		// path for each queue. Also displays the number of

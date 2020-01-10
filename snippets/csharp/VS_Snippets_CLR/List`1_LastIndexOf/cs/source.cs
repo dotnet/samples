@@ -50,5 +50,3 @@ LastIndexOf("Tyrannosaurus", 3): 0
 LastIndexOf("Tyrannosaurus", 4, 4): -1
  */
 // </Snippet1>
-
-

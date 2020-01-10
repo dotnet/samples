@@ -17,8 +17,7 @@ namespace TabControlEx
         	
         public partial class Pane1 : StackPanel
 	{
-        
-        
+
         void MyMenuHandler2(object sender, RoutedEventArgs e)
         {
         //<SnippetFromItemContainer>
@@ -48,7 +47,6 @@ namespace TabControlEx
           }
           
          }
-         
 
          void MyMenuHandler3(object sender, RoutedEventArgs e)
          {

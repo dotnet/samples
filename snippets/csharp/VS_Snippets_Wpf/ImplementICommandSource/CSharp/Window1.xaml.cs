@@ -118,7 +118,6 @@ namespace SDKSamples
         }
     }
 
-
     // Converter to convert the Slider value property to an int.
     [ValueConversion(typeof(double), typeof(int))]
     public class FontStringValueConverter : IValueConverter

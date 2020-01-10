@@ -3,7 +3,6 @@
 using System;
 using System.Security.Cryptography.X509Certificates;
 
-
 public class X509
 {
 
@@ -25,8 +24,6 @@ public class X509
             Console.Write(b);
         }
 
-
-  
     }
 
 }

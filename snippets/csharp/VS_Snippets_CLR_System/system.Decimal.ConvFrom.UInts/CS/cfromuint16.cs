@@ -24,4 +24,3 @@ class Example
 //       12345 (UInt16) --> 12345 (Decimal)
 //       40000 (UInt16) --> 40000 (Decimal)
 // </Snippet3>
-

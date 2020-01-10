@@ -28,7 +28,6 @@ namespace WindowsApplication1
             // </SnippetRenderOptionsSnippet1>
         }
 
-
         public void Stub02()
         {
             BitmapScalingMode bitmapScalingMode = RenderOptions.GetBitmapScalingMode(MyImage);

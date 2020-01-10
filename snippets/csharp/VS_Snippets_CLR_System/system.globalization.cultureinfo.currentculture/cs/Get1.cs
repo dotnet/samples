@@ -14,4 +14,3 @@ public class Example
 // The example displays output like the following:
 //       The current culture is English (United States) [en-US]
 // </Snippet5>
-

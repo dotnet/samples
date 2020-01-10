@@ -33,7 +33,6 @@ namespace SystemTextJsonSamples
             // </SnippetSerializeObject>
             Console.WriteLine($"JSON output:\n{jsonString}\n");
 
-
             Console.WriteLine("GetType() type parameter - derived class properties included");
             // <SnippetSerializeGetType>
             options = new JsonSerializerOptions
