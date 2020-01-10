@@ -50,18 +50,14 @@ namespace ExtensionsSample
                 sharedLibraryExtension = ".dll";
                 pathVariableName = "PATH";
             }
-            else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
-            {
-                sharedLibraryExtension = ".dylib";
-                pathVariableName = "DYLD_LIBRARY_PATH";
-            }
             else
             {
-                sharedLibraryExtension = ".so";
-                pathVariableName = "LD_LIBRARY_PATH";
+                // NB: Modifying the path at runtime only works on Windows. On Linux and Mac, set LD_LIBRARY_PATH or
+                //     DYLD_LIBRARY_PATH before running the app
+                return;
             }
 
-            var candidateAssets = new Dictionary<string, int>();
+            var candidateAssets = new Dictionary<(string Package, string Asset), int>();
             var rid = RuntimeEnvironment.GetRuntimeIdentifier();
             var rids = DependencyContext.Default.RuntimeGraph.First(g => g.Runtime == rid).Fallbacks.ToList();
             rids.Insert(0, rid);
@@ -78,7 +74,7 @@ namespace ExtensionsSample
                         var fallbacks = rids.IndexOf(group.Runtime);
                         if (fallbacks != -1)
                         {
-                            candidateAssets.Add(runtimeLibrary.Path + "/" + file.Path, fallbacks);
+                            candidateAssets.Add((runtimeLibrary.Path, file.Path), fallbacks);
                         }
                     }
                 }
@@ -86,25 +82,40 @@ namespace ExtensionsSample
 
             var assetPath = candidateAssets
                 .OrderBy(p => p.Value)
-                .Select(p => p.Key.Replace('/', Path.DirectorySeparatorChar))
+                .Select(p => p.Key)
                 .FirstOrDefault();
-            if (assetPath != null)
+            if (assetPath != default)
             {
-                string assetFullPath = null;
-                var probingDirectories = ((string)AppDomain.CurrentDomain.GetData("PROBING_DIRECTORIES"))
-                    .Split(Path.PathSeparator);
-                foreach (var directory in probingDirectories)
+                string assetDirectory = null;
+                if (File.Exists(Path.Combine(AppContext.BaseDirectory, assetPath.Asset)))
                 {
-                    var candidateFullPath = Path.Combine(directory, assetPath);
-                    if (File.Exists(candidateFullPath))
+                    // NB: Framework-dependent deployments copy assets to the application base directory
+                    assetDirectory = Path.Combine(
+                        AppContext.BaseDirectory,
+                        Path.GetDirectoryName(assetPath.Asset.Replace('/', Path.DirectorySeparatorChar)));
+                }
+                else
+                {
+                    string assetFullPath = null;
+                    var probingDirectories = ((string)AppDomain.CurrentDomain.GetData("PROBING_DIRECTORIES"))
+                        .Split(Path.PathSeparator);
+                    foreach (var directory in probingDirectories)
                     {
-                        assetFullPath = candidateFullPath;
+                        var candidateFullPath = Path.Combine(
+                            directory,
+                            (assetPath.Package + "/" + assetPath.Asset).Replace('/', Path.DirectorySeparatorChar));
+                        if (File.Exists(candidateFullPath))
+                        {
+                            assetFullPath = candidateFullPath;
+                        }
                     }
+
+                    Debug.Assert(assetFullPath != null);
+
+                    assetDirectory = Path.GetDirectoryName(assetFullPath);
                 }
 
-                Debug.Assert(assetFullPath != null);
-
-                var assetDirectory = Path.GetDirectoryName(assetFullPath);
+                Debug.Assert(assetDirectory != null);
 
                 var path = new HashSet<string>(Environment.GetEnvironmentVariable(pathVariableName).Split(Path.PathSeparator));
 
