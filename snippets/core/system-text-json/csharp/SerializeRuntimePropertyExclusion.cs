@@ -33,5 +33,4 @@ namespace SystemTextJsonSamples
             wf.DisplayPropertyValues();
         }
     }
-   
 }

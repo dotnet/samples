@@ -5,7 +5,7 @@ using System.Text.Json;
 
 namespace SystemTextJsonSamples
 {
-    class Utf8WriterToStream
+    public class Utf8WriterToStream
     {
         public static void Run()
         {

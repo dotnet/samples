@@ -9,7 +9,7 @@
        // Creates and initializes a new Hashtable.
        var myHT = new Hashtable();
        myHT.Add(0, "zero");
-       myHT.Add(1, "one" ;
+       myHT.Add(1, "one");
        myHT.Add(2, "two");
        myHT.Add(3, "three");
        myHT.Add(4, "four");

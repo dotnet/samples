@@ -1,5 +1,4 @@
-﻿' REDMOND\glennha
-'<Snippet1>
+﻿'<Snippet1>
 Imports System.Reflection
 Imports System.Reflection.Emit
 Imports System.Runtime.InteropServices

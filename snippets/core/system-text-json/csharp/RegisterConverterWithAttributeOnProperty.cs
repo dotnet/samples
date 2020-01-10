@@ -11,7 +11,7 @@ namespace SystemTextJsonSamples
         public static void Run()
         {
             string jsonString;
-            var weatherForecast = WeatherForecastFactories.CreateWeatherForecastWithConverterAttribute();
+            WeatherForecastWithConverterAttribute weatherForecast = WeatherForecastFactories.CreateWeatherForecastWithConverterAttribute();
             weatherForecast.DisplayPropertyValues();
 
             // <SnippetSerialize>

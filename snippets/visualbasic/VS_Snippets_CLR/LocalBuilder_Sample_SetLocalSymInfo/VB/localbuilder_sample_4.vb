@@ -10,7 +10,6 @@
 ' AssemblyBuilder, ModuleBuilder, FieldBuilder, TypeBuilder, ConstructorBuilder classes.
 ' Localbuilder class is used to create local variables of the specified type.
 
-' Revised 3/16/06 by REDMOND\GlennHa, for vswhidbey 191996.
 ' <Snippet1>
 Imports System.Reflection
 Imports System.Reflection.Emit

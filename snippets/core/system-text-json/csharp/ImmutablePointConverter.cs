@@ -1,14 +1,28 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
 namespace SystemTextJsonSamples
 {
     public class ImmutablePointConverter : JsonConverter<ImmutablePoint>
-
     {
-        private const string XName = "X";
-        private const string YName = "Y";
+        private readonly JsonEncodedText XName = JsonEncodedText.Encode("X");
+        private readonly JsonEncodedText YName = JsonEncodedText.Encode("Y");
+
+        private readonly JsonConverter<int> _intConverter;
+
+        public ImmutablePointConverter(JsonSerializerOptions options)
+        {
+            if (options?.GetConverter(typeof(int)) is JsonConverter<int> intConverter)
+            {
+                _intConverter = intConverter;
+            }
+            else
+            {
+                throw new InvalidOperationException();
+            }
+        }
 
         public override ImmutablePoint Read(
             ref Utf8JsonReader reader,
@@ -33,13 +47,12 @@ namespace SystemTextJsonSamples
                 throw new JsonException();
             }
 
-            string propertyName = reader.GetString();
-            if (propertyName == XName)
+            if (reader.ValueTextEquals(XName.EncodedUtf8Bytes))
             {
                 x = ReadProperty(ref reader, options);
                 xSet = true;
             }
-            else if (propertyName == YName)
+            else if (reader.ValueTextEquals(YName.EncodedUtf8Bytes))
             {
                 y = ReadProperty(ref reader, options);
                 ySet = true;
@@ -56,23 +69,15 @@ namespace SystemTextJsonSamples
                 throw new JsonException();
             }
 
-            propertyName = reader.GetString();
-            if (propertyName == XName)
-            {
-                x = ReadProperty(ref reader, options);
-                xSet = true;
-            }
-            else if (propertyName == YName)
+            if (xSet && reader.ValueTextEquals(YName.EncodedUtf8Bytes))
             {
                 y = ReadProperty(ref reader, options);
-                ySet = true;
+            }
+            else if (ySet && reader.ValueTextEquals(XName.EncodedUtf8Bytes))
+            {
+                x = ReadProperty(ref reader, options);
             }
             else
-            {
-                throw new JsonException();
-            }
-
-            if (!xSet || !ySet)
             {
                 throw new JsonException();
             }
@@ -87,26 +92,29 @@ namespace SystemTextJsonSamples
             return new ImmutablePoint(x, y);
         }
 
-        public int ReadProperty(ref Utf8JsonReader reader, JsonSerializerOptions options)
+        private int ReadProperty(ref Utf8JsonReader reader, JsonSerializerOptions options)
         {
-            if (options?.GetConverter(typeof(int)) is JsonConverter<int> intConverter)
-            {
-                reader.Read();
-                return intConverter.Read(ref reader, typeof(int), options);
-            }
-            else
-            {
-                throw new JsonException();
-            }
+            Debug.Assert(reader.TokenType == JsonTokenType.PropertyName);
+
+            reader.Read();
+            return _intConverter.Read(ref reader, typeof(int), options);
+        }
+
+        private void WriteProperty(Utf8JsonWriter writer, JsonEncodedText name, int intValue, JsonSerializerOptions options)
+        {
+            writer.WritePropertyName(name);
+            _intConverter.Write(writer, intValue, options);
         }
 
         public override void Write(
             Utf8JsonWriter writer,
-            ImmutablePoint value,
+            ImmutablePoint point,
             JsonSerializerOptions options)
         {
-            // Don't pass in options when recursively calling Serialize.
-            JsonSerializer.Serialize(writer, value);
+            writer.WriteStartObject();
+            WriteProperty(writer, XName, point.X, options);
+            WriteProperty(writer, YName, point.Y, options);
+            writer.WriteEndObject();
         }
     }
 }

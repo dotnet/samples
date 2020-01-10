@@ -9,7 +9,7 @@ namespace SystemTextJsonSamples
         {
             string jsonString;
 
-            var weatherForecast = WeatherForecastFactories.CreateWeatherForecastWithEnumDictionary();
+            WeatherForecastWithEnumDictionary weatherForecast = WeatherForecastFactories.CreateWeatherForecastWithEnumDictionary();
 
             // <SnippetRegister>
             var serializeOptions = new JsonSerializerOptions();

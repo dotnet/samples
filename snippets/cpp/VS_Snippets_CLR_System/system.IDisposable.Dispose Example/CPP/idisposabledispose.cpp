@@ -1,4 +1,3 @@
-// REDMOND\glennha - Revised for v2.0 syntax.
 //<snippet1>
 #using <System.dll>
 #using <System.Windows.Forms.dll>

@@ -3,11 +3,11 @@ using System.Text.Json;
 
 namespace SystemTextJsonSamples
 {
-    class Utf8ReaderFromBytes
+    public class Utf8ReaderFromBytes
     {
         public static void Run()
         {
-            var weatherForecast = WeatherForecastFactories.CreateWeatherForecast();
+            WeatherForecast weatherForecast = WeatherForecastFactories.CreateWeatherForecast();
             byte[] jsonUtf8Bytes = JsonSerializer.SerializeToUtf8Bytes(
                 weatherForecast,
                 new JsonSerializerOptions { WriteIndented = true });
@@ -37,9 +37,9 @@ namespace SystemTextJsonSamples
 
                     case JsonTokenType.Number:
                         {
-                            int value = reader.GetInt32();
+                            int intValue = reader.GetInt32();
                             Console.Write(" ");
-                            Console.Write(value);
+                            Console.Write(intValue);
                             break;
                         }
 

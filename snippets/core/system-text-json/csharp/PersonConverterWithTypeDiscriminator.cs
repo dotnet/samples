@@ -40,27 +40,19 @@ namespace SystemTextJsonSamples
                 throw new JsonException();
             }
 
-            Person value;
             TypeDiscriminator typeDiscriminator = (TypeDiscriminator)reader.GetInt32();
-            switch (typeDiscriminator)
+            Person person = typeDiscriminator switch
             {
-                case TypeDiscriminator.Customer:
-                    value = new Customer();
-                    break;
-
-                case TypeDiscriminator.Employee:
-                    value = new Employee();
-                    break;
-
-                default:
-                    throw new JsonException();
-            }
+                TypeDiscriminator.Customer => new Customer(),
+                TypeDiscriminator.Employee => new Employee(),
+                _ => throw new JsonException()
+            };
 
             while (reader.Read())
             {
                 if (reader.TokenType == JsonTokenType.EndObject)
                 {
-                    return value;
+                    return person;
                 }
 
                 if (reader.TokenType == JsonTokenType.PropertyName)
@@ -71,15 +63,15 @@ namespace SystemTextJsonSamples
                     {
                         case "CreditLimit":
                             decimal creditLimit = reader.GetDecimal();
-                            ((Customer)value).CreditLimit = creditLimit;
+                            ((Customer)person).CreditLimit = creditLimit;
                             break;
                         case "OfficeNumber":
                             string officeNumber = reader.GetString();
-                            ((Employee)value).OfficeNumber = officeNumber;
+                            ((Employee)person).OfficeNumber = officeNumber;
                             break;
                         case "Name":
                             string name = reader.GetString();
-                            value.Name = name;
+                            person.Name = name;
                             break;
                     }
                 }
@@ -88,22 +80,22 @@ namespace SystemTextJsonSamples
             throw new JsonException();
         }
 
-        public override void Write(Utf8JsonWriter writer, Person value, JsonSerializerOptions options)
+        public override void Write(Utf8JsonWriter writer, Person person, JsonSerializerOptions options)
         {
             writer.WriteStartObject();
 
-            if (value is Customer customer)
+            if (person is Customer customer)
             {
                 writer.WriteNumber("TypeDiscriminator", (int)TypeDiscriminator.Customer);
                 writer.WriteNumber("CreditLimit", customer.CreditLimit);
             }
-            else if (value is Employee employee)
+            else if (person is Employee employee)
             {
                 writer.WriteNumber("TypeDiscriminator", (int)TypeDiscriminator.Employee);
                 writer.WriteString("OfficeNumber", employee.OfficeNumber);
             }
 
-            writer.WriteString("Name", value.Name);
+            writer.WriteString("Name", person.Name);
 
             writer.WriteEndObject();
         }

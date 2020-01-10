@@ -29,5 +29,4 @@ namespace SystemTextJsonSamples
             people.ForEach(p => p.DisplayPropertyValues());
         }
     }
-   
 }

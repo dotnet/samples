@@ -25,7 +25,6 @@ interface i
     };
     // DeclaringType for MyVar is A.
 
-}
 
 namespace MyNamespace2 
 {

@@ -1,5 +1,4 @@
-﻿' Created by REDMOND\glennha for Whidbey.
-'<Snippet1>
+﻿'<Snippet1>
 Imports System.Reflection
 Imports System.Reflection.Emit
 Imports System.IO

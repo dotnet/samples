@@ -59,8 +59,7 @@
             foreach (var obj in query)
             {
                 Console.WriteLine( 
-                    $"The cat \"{obj.CatName}\" shares a house, and the first letter of their name,
-                    with \"{obj.DogName}\".");  
+                    $"The cat \"{obj.CatName}\" shares a house, and the first letter of their name, with \"{obj.DogName}\".");  
             }
         }
 

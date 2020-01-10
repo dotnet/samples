@@ -7,7 +7,7 @@ to the organization of the docs for .NET. Some of the articles will have more th
 
 The content team tracks issues for .NET documentation in the [dotnet/docs](https://github.com/dotnet/docs) and [dotnet/dotnet-api-docs](https://github.com/dotnet/dotnet-api-docs) repositories. Issues are turned off on this repository. File issues against existing samples and suggestions for new samples in those repositories. If you're not sure where, choose [dotnet/docs](https://github.com/dotnet/docs/issues). This process keeps the issues associated with the articles that explain the concepts for each sample. The best process is to file an issue from the feedback control at the bottom of each docs page:
 
-- For existing samples, file the issue on the page with the sample. 
+- For existing samples, file the issue on the page with the sample.
 - To suggest new samples, file the issue on the index page where you want to see the new sample.
 
 There are two classes of code in this repository:
@@ -26,7 +26,7 @@ project. Ideally, add tests for correctness on samples as well.
 
 Snippets are extracted from small programs that include the snippet. Snippets are all located in the top level **/snippets** folder. While snippets are small blocks of code, we want to move toward snippets that are part of buildable sample projects.
 
-## Building a snippet or sample 
+## Building a snippet or sample
 
 You build any .NET Core snippet or sample using the .NET Core CLI, which can be installed with [the .NET Core SDK](https://www.microsoft.com/net/download). Then, execute
 these commands from the CLI in the directory of any sample:
@@ -43,9 +43,9 @@ Multi-project samples have instructions in their root directory in
 a `README.md` file.  
 
 Except where noted, all samples build from the command line on
-any platform supported by .NET Core. There are a few samples that are 
-specific to Visual Studio and require Visual Studio 2017 or later. In 
-addition, some samples show platform-specific features and will require 
+any platform supported by .NET Core. There are a few samples that are
+specific to Visual Studio and require Visual Studio 2017 or later. In
+addition, some samples show platform-specific features and will require
 a specific platform. Other samples and snippets require the .NET Framework
 and will run on Windows platforms, and will need the Developer Pack for
 the target Framework version.
@@ -90,7 +90,7 @@ To create a sample:
         }
     }
     ```
-    
+
 5. Don't check in the solution file if it contains only one project.
 
 To build and run your sample:
@@ -100,12 +100,13 @@ To build and run your sample:
     ```console
     dotnet build
     ```
+
 2. Run your sample:
 
     ```console
     dotnet run
     ```
 
-3. Add a *README.md* to the root directory of your sample. 
+3. Add a *README.md* to the root directory of your sample.
 
    This should include a brief description of the code, and refer people to the article that references the sample.

@@ -26,7 +26,7 @@ namespace NullableIntroduction
                     for (int i = 0; i < surveyRun.Questions.Count; i++)
                     {
                         var answer = participant.Answer(i);
-                        Console.WriteLine($"\t{surveyRun.GetQuestion(i)} : {answer}");
+                        Console.WriteLine($"\t{surveyRun.GetQuestion(i).QuestionText} : {answer}");
                     }
                 }
                 else

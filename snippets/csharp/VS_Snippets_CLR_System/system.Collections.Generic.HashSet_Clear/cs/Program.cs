@@ -1,11 +1,11 @@
-﻿//<snippet01>
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 class Program
 {
     static void Main()
     {
+        //<snippet01>
         //<snippet02>
         HashSet<int> Numbers = new HashSet<int>();
 
@@ -22,6 +22,7 @@ class Program
 
         Console.Write("Numbers contains {0} elements: ", Numbers.Count);
         DisplaySet(Numbers);
+        //</snippet02>
 
         void DisplaySet(HashSet<int> set)
         {
@@ -37,7 +38,6 @@ class Program
         * Numbers contains 10 elements: { 0 1 2 3 4 5 6 7 8 9 }
         * Numbers contains 0 elements: { }
         */
-        //</snippet02>
+        //</snippet01>
     }
 }
-//</snippet01>

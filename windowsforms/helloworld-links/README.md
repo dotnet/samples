@@ -6,7 +6,6 @@ To link files between two projects, this sample uses the the `Link` attribute.
 
 ```xml
 <ItemGroup>
-    <Compile Include="..\FullFxApp\*.cs" />
-  </ItemGroup>
+  <Compile Include="..\FullFxApp\*.cs" />
+</ItemGroup>
 ```
-

@@ -5,12 +5,12 @@ using System.Text.Unicode;
 
 namespace SystemTextJsonSamples
 {
-    class SerializeExcludeNullValueProperties
+    public class SerializeExcludeNullValueProperties
     {
         public static void Run()
         {
             string jsonString;
-            var weatherForecast = WeatherForecastFactories.CreateWeatherForecast();
+            WeatherForecast weatherForecast = WeatherForecastFactories.CreateWeatherForecast();
             weatherForecast.Summary = null;
             weatherForecast.DisplayPropertyValues();
 

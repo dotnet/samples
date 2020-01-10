@@ -50,7 +50,7 @@ namespace SystemTextJsonSamples
 
         public override void Write(
             Utf8JsonWriter writer,
-            object value,
+            object objectToWrite,
             JsonSerializerOptions options) =>
                 throw new InvalidOperationException("Should not get here.");
     }

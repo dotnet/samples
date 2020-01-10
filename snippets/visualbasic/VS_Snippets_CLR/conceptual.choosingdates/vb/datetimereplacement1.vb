@@ -6,37 +6,37 @@ Option Strict On
 
 ' <Snippet1>
 Public Structure StoreInfo
-   Dim store As String
-   Dim tz As TimeZoneInfo
-   Dim open As TimeSpan
-   Dim close As TimeSpan
+    Dim store As String
+    Dim tz As TimeZoneInfo
+    Dim open As TimeSpan
+    Dim close As TimeSpan
 
-   Public Function IsOpenNow() As Boolean
-      Return IsOpenAt(Date.Now.TimeOfDay)
-   End Function
+    Public Function IsOpenNow() As Boolean
+        Return IsOpenAt(Date.Now.TimeOfDay)
+    End Function
    
-   Public Function IsOpenAt(time As TimeSpan) As Boolean
-      Dim local As TimeZoneInfo = TimeZoneInfo.Local
-      Dim offset As TimeSpan = TimeZoneInfo.Local.BaseUtcOffset
+    Public Function IsOpenAt(time As TimeSpan) As Boolean
+        Dim local As TimeZoneInfo = TimeZoneInfo.Local
+        Dim offset As TimeSpan = TimeZoneInfo.Local.BaseUtcOffset
 
-      ' Is the store in the same time zone?
-      If tz.Equals(local) Then
-         Return time >= open And time <= close
-      Else
-         Dim delta As TimeSpan = TimeSpan.Zero
-         Dim storeDelta As TimeSpan = TimeSpan.Zero
-         
-         ' Is it daylight saving time in either time zone?
-         If local.IsDaylightSavingTime(Date.Now.Date + time) Then
-            delta = local.GetAdjustmentRules(local.GetAdjustmentRules().Length - 1).DaylightDelta
-         End If
-         If tz.IsDaylightSavingTime(TimeZoneInfo.ConvertTime(Date.Now.Date + time, local, tz))
-            storeDelta = tz.GetAdjustmentRules(local.GetAdjustmentRules().Length - 1).DaylightDelta
-         End If
-         Dim comparisonTime As TimeSpan = time + (offset - tz.BaseUtcOffset).Negate() + (delta - storeDelta).Negate
-         Return (comparisonTime >= open And comparisonTime <= close)
-      End If
-   End Function
+        ' Is the store in the same time zone?
+        If tz.Equals(local) Then
+            Return time >= open AndAlso time <= close
+        Else
+            Dim delta As TimeSpan = TimeSpan.Zero
+            Dim storeDelta As TimeSpan = TimeSpan.Zero
+
+            ' Is it daylight saving time in either time zone?
+            If local.IsDaylightSavingTime(Date.Now.Date + time) Then
+                delta = local.GetAdjustmentRules(local.GetAdjustmentRules().Length - 1).DaylightDelta
+            End If
+            If tz.IsDaylightSavingTime(TimeZoneInfo.ConvertTime(Date.Now.Date + time, local, tz))
+                storeDelta = tz.GetAdjustmentRules(tz.GetAdjustmentRules().Length - 1).DaylightDelta
+            End If
+            Dim comparisonTime As TimeSpan = time + (offset - tz.BaseUtcOffset).Negate() + (delta - storeDelta).Negate
+            Return (comparisonTime >= open AndAlso comparisonTime <= close)
+        End If
+    End Function
 End Structure
 ' </Snippet1>
 

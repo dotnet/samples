@@ -1,0 +1,20 @@
+{
+    "default": true,
+    "MD013": false,
+    "MD025": {
+        "front_matter_title": ""
+    },
+    "MD033": {
+        "allowed_elements": [
+            "a",
+            "kbd",
+            "sup"
+        ]
+    },
+    "MD036": false,
+    "MD040": false,
+    "MD041": false,
+    "MD046": {
+        "style": "fenced"
+    }
+}

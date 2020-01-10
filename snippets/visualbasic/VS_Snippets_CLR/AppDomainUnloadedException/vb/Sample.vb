@@ -1,5 +1,4 @@
-﻿' C# and VB versions originally written by REDMOND\glennha
-'<Snippet1>
+﻿'<Snippet1>
 Imports System.Threading
 Imports System.Runtime.InteropServices
 

@@ -45,4 +45,4 @@ To download and run the sample, follow these steps:
 
 ## More information
 
-- https://docs.microsoft.com/en-us/dotnet/visual-basic/programming-guide/concepts/async/index
+- <https://docs.microsoft.com/en-us/dotnet/visual-basic/programming-guide/concepts/async/index>

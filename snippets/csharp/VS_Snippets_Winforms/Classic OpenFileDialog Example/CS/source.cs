@@ -10,6 +10,8 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        public void Open()
+        {
         //<Snippet1>
         var fileContent = string.Empty;
         var filePath = string.Empty;
@@ -38,5 +40,6 @@ namespace WindowsFormsApp1
 
         MessageBox.Show(fileContent, "File Content at path: " + filePath, MessageBoxButtons.OK);
         //</Snippet1>
+        }
     }
 }
