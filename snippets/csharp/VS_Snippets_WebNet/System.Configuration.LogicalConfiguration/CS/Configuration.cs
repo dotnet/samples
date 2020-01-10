@@ -133,7 +133,9 @@ namespace Samples.AspNet
                 
             }
             else
+            {
                 currentSection = "CustomSection does not exist";
+            }
 
             return currentSection;
         }

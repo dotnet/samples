@@ -234,7 +234,9 @@ public class MouseSizing : Form
     {
         Toggle(ref boringRecipe);
         if (boringRecipe)
+        {
             SetMeatloaf(boringMeatloaf, boringMeatloafRanking);
+        }
         else
         {
             string greatMeatloafRecipe =

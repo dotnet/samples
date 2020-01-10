@@ -27,7 +27,9 @@ namespace ASPNet.Design.Samples_CS
         {
             // This data source only allows one view
             if (viewName != _defaultViewName)
+            {
                 return null;
+            }
             else if (_view == null)
             {
                 _view = new CustomDataSourceView(this, 

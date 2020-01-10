@@ -67,7 +67,9 @@ namespace BindingSourceExamples
         private void button1_Click(object sender, EventArgs e)
         {
             if (binding1.SupportsSearching != true)
+            {
                 MessageBox.Show("Cannot search the list.");
+            }
             else
             {
                 int foundIndex = binding1.Find("Name", textBox1.Text);

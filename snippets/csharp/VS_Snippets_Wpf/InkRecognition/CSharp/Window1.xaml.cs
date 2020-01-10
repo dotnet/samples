@@ -43,7 +43,9 @@ namespace InkRecognition
 
                     }
                     else
+                    {
                         MessageBox.Show("No stroke detected");
+                    }
                 }
             }
         }

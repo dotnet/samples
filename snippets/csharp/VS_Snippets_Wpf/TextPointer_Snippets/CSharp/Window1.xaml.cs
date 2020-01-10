@@ -319,8 +319,10 @@ namespace TextPointer_Snippets
                      }
                  }
                  else
+                {
                     position = position.GetNextContextPosition(LogicalDirection.Forward);
-             }
+                }
+            }
 
              // position will be null if "word" is not found.
              return position; 
@@ -360,7 +362,10 @@ namespace TextPointer_Snippets
             }
             // If neither selection contains the begging or end of the other selection, 
             //the selections do not overlap.
-            else return false;    
+            else
+            {
+                return false;
+            }
         }
         // </Snippet_TextRange_StartEnd>
 

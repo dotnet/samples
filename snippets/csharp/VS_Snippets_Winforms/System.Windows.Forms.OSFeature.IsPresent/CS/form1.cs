@@ -88,11 +88,13 @@ namespace csOSFeature.IsPresent.Snippet
 
                 return SystemInformation.CaretWidth;
             } else
+            {
 
                 // If the operating system does not support this metric,
                 // return a custom default value for the caret width.
 
                 return 1;
+            }
         }
 //</Snippet2>
     }

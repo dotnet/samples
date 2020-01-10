@@ -233,7 +233,9 @@ namespace SpinWait2
                 Console.WriteLine("Press 'q' to quit or else enter a spin count.");
                 string s = Console.ReadLine();
                 if (s == "q" || s == "Q")
+                {
                     return;
+                }
                 else
                 {
                     try

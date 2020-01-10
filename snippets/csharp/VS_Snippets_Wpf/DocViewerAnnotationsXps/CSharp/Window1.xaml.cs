@@ -341,7 +341,9 @@ namespace SDKSample
 
             // If Annotations are disabled, use normal DocuementViewer.Print()
             if ((menuViewAnnotations.IsChecked==false) || (_annotHelper == null))
+            {
                 docViewer.Print();
+            }
 
             // If Annotations are enabled, print showing the annotations.
             else // if (menuViewAnnotations.IsChecked && (_annotHelper != null))

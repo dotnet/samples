@@ -85,8 +85,10 @@ namespace ListBoxOwnerDrawSnippet
 
          // Create the brush using the ForeColor specified by the DrawItemEventArgs
          if ( foreColorBrush == null )
-            foreColorBrush = new SolidBrush(e.ForeColor);
-         else if ( foreColorBrush.Color != e.ForeColor )
+            {
+                foreColorBrush = new SolidBrush(e.ForeColor);
+            }
+            else if ( foreColorBrush.Color != e.ForeColor )
          {
             // The control's ForeColor has changed, so dispose of the cached brush and
             // create a new one.

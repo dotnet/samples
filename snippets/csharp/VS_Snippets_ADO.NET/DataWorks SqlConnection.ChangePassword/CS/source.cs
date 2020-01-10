@@ -55,9 +55,11 @@ class Program
 
                     }
                     else
+                    {
                         // Bubble all other SqlException occurrences
                         // back up to the caller.
                         throw;
+                    }
                 }
             }
             SqlCommand cmd = new SqlCommand(

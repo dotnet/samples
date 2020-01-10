@@ -184,7 +184,9 @@ public class DataSet : IConvertible
     {
         // ToBoolean is false if the dataset is empty.
         if( data.Count <= 0 )
+        {
             return false;
+        }
 
         // For median averaging, ToBoolean is true if any 
         // non-discarded elements are nonzero.

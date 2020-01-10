@@ -191,7 +191,9 @@ namespace P2PContacts
         private static void DisplayEndpoints(PeerEndPointCollection endpointCollection)
         {
             if (endpointCollection == null ||  endpointCollection.Count == 0)
+            {
                 Console.WriteLine("No peer endpoints in the collection to display.");
+            }
             else
             {
                 foreach (PeerEndPoint pep in endpointCollection)

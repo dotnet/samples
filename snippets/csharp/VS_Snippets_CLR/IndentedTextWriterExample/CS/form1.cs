@@ -55,10 +55,12 @@ namespace IndentedTextWriterExample
                 indentWriter.Indent--;
             }
             else
+            {
                 //<Snippet6>
                 // Outputs a string using the WriteLineNoTabs method.
                 indentWriter.WriteLineNoTabs("This is a test phrase written with the IndentTextWriter.WriteLineNoTabs method.");
-                //</Snippet6>
+            }
+            //</Snippet6>
 
             // Outputs a test string with a new-line character at the end.
             indentWriter.WriteLine("This is a test phrase. Current indentation level: "+level.ToString());           

@@ -32,7 +32,9 @@ public class WebHeaderCollection_GetValues_1 {
                         Console.WriteLine("\t{0}", values[j]);
                 }
                 else
+                {
                     Console.WriteLine("There is no value associated with the header");
+                }
             }
             myHttpWebResponse.Close();
 // </Snippet1>

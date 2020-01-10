@@ -67,7 +67,9 @@ namespace Samples.AspNet
 
             }
             else
+            {
                 data = "Invalid type";
+            }
 
             return data;
         }

@@ -217,7 +217,9 @@ namespace Samples.AspNet
                     ConfigurationManager.RefreshSection("CustomSection");
                 }
                 else
+                {
                     Console.WriteLine("Section was locked, could not update.");
+                }
             }
             catch (ConfigurationErrorsException err)
             {
@@ -240,7 +242,9 @@ namespace Samples.AspNet
                     ConfigurationManager.GetSection("CustomSection") as CustomSection;
 
                 if (customSection == null)
+                {
                     Console.WriteLine("Failed to load " + "CustomSection" + ".");
+                }
                 else
                 {
                     // Display specific information

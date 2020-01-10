@@ -100,7 +100,9 @@ public class App
                 samplesList.Add(perfCounter.NextSample());
             }
             else
+            {
                 Console.WriteLine();
+            }
 
             System.Threading.Thread.Sleep(50);
         }

@@ -593,7 +593,9 @@ namespace CsCsrefProgrammingStatements
                     return true;
                 }
                 else
+                {
                     return false;
+                }
             }
             bool done = false;
             //<Snippet25>

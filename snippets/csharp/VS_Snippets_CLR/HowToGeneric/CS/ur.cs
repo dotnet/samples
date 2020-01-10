@@ -89,7 +89,9 @@ public class Example
                 tp.BaseType);
         }
         else
-            Console.WriteLine("         Base type constraint: None"); 
+        {
+            Console.WriteLine("         Base type constraint: None");
+        }
         //</Snippet7>
 
         //<Snippet8>

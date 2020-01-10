@@ -259,8 +259,10 @@ namespace Samples.AspNet.Session
           throw new ProviderException(exceptionMessage);
         }
         else
-          throw e;
-      }
+                {
+                    throw e;
+                }
+            }
       finally
       {
         conn.Close();
@@ -395,9 +397,11 @@ namespace Samples.AspNet.Session
             deleteData = true;
             }
           else
-            foundRecord = true;
+                    {
+                        foundRecord = true;
+                    }
 
-          serializedItems = reader.GetString(1);
+                    serializedItems = reader.GetString(1);
           lockId = reader.GetInt32(2);
           lockAge = DateTime.Now.Subtract(reader.GetDateTime(3));
           actionFlags = (SessionStateActions)reader.GetInt32(4);
@@ -455,8 +459,10 @@ namespace Samples.AspNet.Session
           throw new ProviderException(exceptionMessage);
         }
         else
-          throw e;
-      }
+                {
+                    throw e;
+                }
+            }
       finally
       {
         if (reader != null) { reader.Close(); }
@@ -547,8 +553,10 @@ namespace Samples.AspNet.Session
           throw new ProviderException(exceptionMessage);
         }
         else
-          throw e;
-      }
+                {
+                    throw e;
+                }
+            }
       finally
       {
         conn.Close();
@@ -587,8 +595,10 @@ namespace Samples.AspNet.Session
           throw new ProviderException(exceptionMessage);
         }
         else
-          throw e;
-      }
+                {
+                    throw e;
+                }
+            }
       finally
       {
         conn.Close();
@@ -639,8 +649,10 @@ namespace Samples.AspNet.Session
           throw new ProviderException(exceptionMessage);
         }
         else
-          throw e;
-      }
+                {
+                    throw e;
+                }
+            }
       finally
       {
         conn.Close();
@@ -694,8 +706,10 @@ namespace Samples.AspNet.Session
           throw new ProviderException(exceptionMessage);
         }
         else
-          throw e;
-      }
+                {
+                    throw e;
+                }
+            }
       finally
       {
         conn.Close();

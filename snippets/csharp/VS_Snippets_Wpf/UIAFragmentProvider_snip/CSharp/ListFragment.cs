@@ -357,7 +357,10 @@ namespace ElementProvider
                 }
                 return true;
             }
-            else return base.ProcessCmdKey(ref msg, keyData);
+            else
+            {
+                return base.ProcessCmdKey(ref msg, keyData);
+            }
         }
 
         #endregion Control method overrides
@@ -569,9 +572,15 @@ namespace ElementProvider
                 {
                     return (IRawElementProviderFragment)myItems[index];
                 }
-                else return (IRawElementProviderFragment)this;
+                else
+                {
+                    return (IRawElementProviderFragment)this;
+                }
             }
-            else return null;
+            else
+            {
+                return null;
+            }
         }
         // </Snippet106>
 
@@ -589,7 +598,10 @@ namespace ElementProvider
             {
                 return (IRawElementProviderFragment)myItems[SelectedIndex];
             }
-            else return null;
+            else
+            {
+                return null;
+            }
         }
         // </Snippet107>
 

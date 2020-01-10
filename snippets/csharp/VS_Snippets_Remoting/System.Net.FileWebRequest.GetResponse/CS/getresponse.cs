@@ -105,8 +105,10 @@ namespace Mssc.PluggableProtocols.File
     {
 
       if (args.Length < 1)
-        showUsage();
-      else
+            {
+                showUsage();
+            }
+            else
       {
         if (makeFileRequest(args[0])== true)
           readFile();

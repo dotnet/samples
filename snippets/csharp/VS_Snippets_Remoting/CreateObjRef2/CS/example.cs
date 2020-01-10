@@ -96,9 +96,11 @@ public class MyObjRef : ObjRef {
          }
       }
       else
-         Console.WriteLine("\t {no sinks}");
+        {
+            Console.WriteLine("\t {no sinks}");
+        }
 
-      Console.WriteLine("\nWriting ChannelInfo: ");
+        Console.WriteLine("\nWriting ChannelInfo: ");
       for (int i = 0; i < ChannelInfo.ChannelData.Length; i++)
          Console.WriteLine ("\tChannel: {0}", ChannelInfo.ChannelData[i]);
       Console.WriteLine(" ----------------------------- ");

@@ -95,7 +95,9 @@ namespace Microsoft.Samples.Graphics.UsingImageBrush
                 parseString = viewportEntry.Text;
                
                 if (!string.IsNullOrEmpty(parseString))
+                {
                     myImageBrush.Viewport = (Rect)myRectConverter.ConvertFromString(parseString);
+                }
                 else
                 {
                     myImageBrush.Viewport = Rect.Empty;
@@ -105,7 +107,9 @@ namespace Microsoft.Samples.Graphics.UsingImageBrush
                 parseString = viewboxEntry.Text;
                 
                 if (!string.IsNullOrEmpty(parseString) && parseString.ToLower() != "(auto)")
+                {
                     myImageBrush.Viewbox = (Rect)myRectConverter.ConvertFromString(parseString);
+                }
                 else
                 {
                     viewboxEntry.Text = "Empty";

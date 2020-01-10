@@ -571,7 +571,9 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathExamplesCS
                 MessageBox.Show(lastPointXString + ", " + lastPointYString);
             }
             else
+            {
                 MessageBox.Show("lastPoint is empty");
+            }
         }
         // </snippet21>
 

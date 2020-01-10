@@ -480,7 +480,9 @@ public class ListenerBasic
                 }
             }
             else
+            {
                 Console.WriteLine("There is no value associated with the header.");
+            }
         }
     }
     // </snippet21>
@@ -511,7 +513,9 @@ public class ListenerBasic
                 }
             }
             else
+            {
                 Console.WriteLine("There is no value associated with the header.");
+            }
         }
     }
     // </snippet23>

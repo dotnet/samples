@@ -35,7 +35,9 @@ namespace Microsoft.ServiceModel.Samples
                 binding.MessageProtectionOrder = MessageProtectionOrder.SignBeforeEncrypt;
             }
             else
+            {
                 binding.LoadPolicy("..\\wse3policyCache.config", "ServerPolicy");
+            }
 
             WSSecurityAnonymousServiceSoapClient client = new WSSecurityAnonymousServiceSoapClient(binding, address);
             // </snippet4>

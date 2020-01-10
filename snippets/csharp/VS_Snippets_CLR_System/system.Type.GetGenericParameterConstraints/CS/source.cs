@@ -67,7 +67,9 @@ public class Example
 
         // Select the variance flags.
         if (variance == GenericParameterAttributes.None)
+        {
             retval = "No variance flag;";
+        }
         else
         {
             if ((variance & GenericParameterAttributes.Covariant) != 0)
@@ -81,7 +83,9 @@ public class Example
             GenericParameterAttributes.SpecialConstraintMask;
 
         if (constraints == GenericParameterAttributes.None)
+        {
             retval += " No special constraints";
+        }
         else
         {
             if ((constraints & GenericParameterAttributes.ReferenceTypeConstraint) != 0)

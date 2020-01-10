@@ -290,8 +290,10 @@ namespace ITypeDescriptorFilterSample
                 timer1.Stop();
             }
             else
+            {
                 continue_ = false;
-            
+            }
+
             this.Control.BackColor = initial_bcolor;
             this.Control.ForeColor = initial_fcolor;			
         }

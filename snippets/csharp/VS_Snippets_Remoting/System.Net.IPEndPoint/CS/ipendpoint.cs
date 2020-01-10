@@ -174,8 +174,10 @@ namespace Mssc.Services.ConnectionManagement
             break;
           }
           else
-            continue;
-        }
+                    {
+                        continue;
+                    }
+                }
 // </Snippet2>
 
         // Close the temporary socket.
@@ -235,8 +237,10 @@ namespace Mssc.Services.ConnectionManagement
       Regex rex = new Regex(@"^[a-zA-Z]\w{1,39}$");
 
       if (args.Length < 1)
-        showUsage();
-      else
+            {
+                showUsage();
+            }
+            else
       {
         string message = args[0];
         if ((rex.Match(message)).Success)
@@ -247,8 +251,10 @@ namespace Mssc.Services.ConnectionManagement
           Console.WriteLine(result);
         }
         else
-          Console.WriteLine("Input string format not allowed.");
-      }
+                {
+                    Console.WriteLine("Input string format not allowed.");
+                }
+            }
 
     }
   

@@ -214,7 +214,10 @@ namespace FocusTracker
             {
                 return elementTitle.Current.Name;
             }
-            else return null;
+            else
+            {
+                return null;
+            }
         }
 
         /// <summary>

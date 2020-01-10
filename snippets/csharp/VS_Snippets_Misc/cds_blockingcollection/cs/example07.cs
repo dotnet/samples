@@ -148,8 +148,10 @@ class PipeLineDemo
                   }
               }
               else
-                  Console.WriteLine("Unable to retrieve data from previous filter");
-          }
+                {
+                    Console.WriteLine("Unable to retrieve data from previous filter");
+                }
+            }
           if (m_output != null)
           {
               foreach (var bc in m_output) bc.CompleteAdding();

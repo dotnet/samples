@@ -189,7 +189,9 @@ public class AutoSizing : System.Windows.Forms.Form
     {
         Toggle(ref boringRecipe);
         if (boringRecipe)
+        {
             SetMeatloaf(boringMeatloaf, boringMeatloafRanking);
+        }
         else
         {
             string greatMeatloafRecipe = "1 lb. lean ground beef, "

@@ -139,7 +139,9 @@ class UsingAppSettingsSection
                 }
             }
             else
+            {
                 Console.WriteLine("The appSettings section is empty. Write first.");
+            }
         }
         catch (Exception e)
         {

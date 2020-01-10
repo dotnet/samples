@@ -30,7 +30,9 @@ namespace NullableIntroduction
                     }
                 }
                 else
+                {
                     Console.WriteLine("\tNo responses");
+                }
             }
             // </SnippetWriteAnswers>
         }

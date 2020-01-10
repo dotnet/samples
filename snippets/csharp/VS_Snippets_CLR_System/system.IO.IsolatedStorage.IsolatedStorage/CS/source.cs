@@ -323,7 +323,9 @@ public class LoginPrefs
             if (!this.myNewPrefs)
             {
                 if (isoFile.GetDirectoryNames("Archive").Length == 0)
+                {
                     isoFile.CreateDirectory("Archive");
+                }
                 else
                 {
                     //<Snippet11>

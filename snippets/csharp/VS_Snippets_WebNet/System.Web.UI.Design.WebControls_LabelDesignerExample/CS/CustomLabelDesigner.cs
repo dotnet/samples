@@ -59,8 +59,10 @@ namespace Examples.CS.WebControls.Design
                 }
             }
             else
+            {
                 // Call the base method to generate the markup.
                 designTimeMarkup = base.GetDesignTimeHtml();
+            }
 
             return designTimeMarkup;
         } // GetDesignTimeHtml

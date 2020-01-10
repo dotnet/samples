@@ -38,8 +38,10 @@ public class MyHttpClientChannel
          MyHelloServer myHelloServer1 = (MyHelloServer)Activator.GetObject(
          typeof(MyHelloServer), "http://localhost:8085/SayHello");
          if (myHelloServer1 == null)
-            System.Console.WriteLine("Could not locate server");
-         else
+            {
+                System.Console.WriteLine("Could not locate server");
+            }
+            else
          {
             Console.WriteLine(myHelloServer1.myHelloMethod("Client"));
             // Get the name of the channel.

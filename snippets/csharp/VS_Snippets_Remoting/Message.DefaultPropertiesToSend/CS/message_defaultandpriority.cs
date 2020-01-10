@@ -52,10 +52,13 @@ namespace MyProject
 			{
 				myMessage.Body = "High Priority: " + messageBody;
 			}
-			else myMessage.Body = messageBody;
+			else
+            {
+                myMessage.Body = messageBody;
+            }
 
-			// Set the priority of the message.
-			myMessage.Priority = priority;
+            // Set the priority of the message.
+            myMessage.Priority = priority;
 
 
 			// Send the Order to the queue.

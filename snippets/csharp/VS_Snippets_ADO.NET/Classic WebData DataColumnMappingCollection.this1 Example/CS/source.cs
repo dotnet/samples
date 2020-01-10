@@ -15,7 +15,9 @@ public class Form1: Form
         // create columnMappings
         // ...
         if (!columnMappings.Contains("Description"))
+        {
             Console.WriteLine("Error: no such table in collection.");
+        }
         else
         {
             Console.WriteLine("Name {0}", 

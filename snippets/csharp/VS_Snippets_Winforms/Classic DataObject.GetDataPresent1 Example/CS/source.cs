@@ -16,10 +16,12 @@ private void GetIfPresent3() {
        // Prints the string in a text box.
        textBox1.Text = myDataObject.GetData("System.String", false).ToString() + '\n';
     } else
-       textBox1.Text = "Could not convert data to specified format" + '\n';
- 
-    // Prints the string in a text box with autoconvert = true.
-    textBox1.Text += "With autoconvert = true, you can convert text to string format. " +
+        {
+            textBox1.Text = "Could not convert data to specified format" + '\n';
+        }
+
+        // Prints the string in a text box with autoconvert = true.
+        textBox1.Text += "With autoconvert = true, you can convert text to string format. " +
        "String is: " + myDataObject.GetData("System.String", true).ToString();
  }
  

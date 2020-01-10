@@ -29,7 +29,9 @@ public class StringConversion
             {
                 numericString = String.Concat(numericString, c);
             } else
+            {
                 break;
+            }
         }
         if (int.TryParse(numericString, out int j))
             Console.WriteLine($"'{str}' --> '{numericString}' --> {j}");

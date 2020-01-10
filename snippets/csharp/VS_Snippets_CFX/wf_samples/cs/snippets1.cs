@@ -1293,7 +1293,9 @@ namespace WF_Snippets
                 }
             }
             else
+            {
                 this.workflowViewHost.WorkflowView.Zoom = 100;
+            }
         }
         // </snippet138>
         ToolStripTextBox toolStripTextBoxArtifactQualifiedId = new ToolStripTextBox();

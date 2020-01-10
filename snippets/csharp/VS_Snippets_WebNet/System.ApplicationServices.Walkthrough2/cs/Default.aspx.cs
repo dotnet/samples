@@ -9,8 +9,9 @@ public partial class _Default : System.Web.UI.Page {
             LoggedId.Text = HttpContext.Current.User.Identity.Name +
                 " you are logged in.";
         } else
+        {
             LoggedId.Text = "You are not logged in.";
-
+        }
     }
 }
 // </Snippet3>

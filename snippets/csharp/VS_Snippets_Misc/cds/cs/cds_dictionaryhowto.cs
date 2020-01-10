@@ -222,7 +222,9 @@ namespace DictionaryHowTo
                     foreach (var temp in temps) Console.Write($"{temp}, ");
                 }
                 else
+                {
                     Console.WriteLine($"Unable to add data for {searchKey}");
+                }
             }
         }
 

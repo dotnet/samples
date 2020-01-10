@@ -26,7 +26,9 @@ namespace Samples.AspNet
                 config.GetSection("MyUrls") as UrlsSection;
 
             if (myUrlsSection == null)
+            {
                 Console.WriteLine("Failed to load UrlsSection.");
+            }
             else
             {
                 Console.WriteLine("The 'simple' element of app.config:");
@@ -282,7 +284,9 @@ namespace Samples.AspNet
                     config.GetSection("MyUrls") as UrlsSection;
 
                 if (myUrlsSection == null)
+                {
                     Console.WriteLine("Failed to load UrlsSection.");
+                }
                 else
                 {
                     // Get MyUrls section LockElements collection.
@@ -338,7 +342,9 @@ namespace Samples.AspNet
                     config.GetSection("MyUrls") as UrlsSection;
 
                 if (myUrlsSection == null)
+                {
                     Console.WriteLine("Failed to load UrlsSection.");
+                }
                 else
                 {
 
@@ -533,7 +539,9 @@ namespace Samples.AspNet
                     config.GetSection("MyUrls") as UrlsSection;
 
                 if (myUrlsSection == null)
+                {
                     Console.WriteLine("Failed to load UrlsSection.");
+                }
                 else
                 {
 

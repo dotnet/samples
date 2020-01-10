@@ -76,7 +76,9 @@ class UsingConfigurationCollectionElement
                config.GetSection("MyUrls") as UrlsSection;
 
             if (myUrlsSection == null)
+            {
                 Console.WriteLine("Failed to load UrlsSection.");
+            }
             else
             {
                 Console.WriteLine("Collection elements contained in the custom section collection:");
@@ -137,8 +139,9 @@ class UsingConfigurationCollectionElement
                 Console.WriteLine();
             }
             else
+            {
                 Console.WriteLine("You must create the custom section first.");
-
+            }
         }
         catch (ConfigurationErrorsException err)
         {
@@ -188,8 +191,9 @@ class UsingConfigurationCollectionElement
                 Console.WriteLine();
             }
             else
+            {
                 Console.WriteLine("You must create the custom section first.");
-
+            }
         }
         catch (ConfigurationErrorsException err)
         {
@@ -231,8 +235,9 @@ class UsingConfigurationCollectionElement
                 Console.WriteLine();
             }
             else
+            {
                 Console.WriteLine("You must create the custom section first.");
-
+            }
         }
         catch (ConfigurationErrorsException err)
         {

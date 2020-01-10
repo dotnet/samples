@@ -86,8 +86,10 @@ public class App
                 samplesList.Add( PC.NextSample() );
             }
             else
+            {
                 Console.WriteLine();
-	        
+            }
+
             System.Threading.Thread.Sleep(50);
         }
     }

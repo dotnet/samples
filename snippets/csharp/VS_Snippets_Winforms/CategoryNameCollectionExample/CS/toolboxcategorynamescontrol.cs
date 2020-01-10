@@ -44,7 +44,9 @@ namespace ToolboxCategoryNamesControl
                         categoryNames = toolboxService.CategoryNames;                   
                 }
                 else
+                {
                     toolboxService = null;
+                }
             }
         }
 

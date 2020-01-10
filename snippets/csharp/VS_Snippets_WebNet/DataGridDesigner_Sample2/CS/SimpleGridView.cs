@@ -73,7 +73,9 @@ namespace ASPNET.Examples.CS
                 }
             }
             else
+            {
                 designTimeHtml = base.GetDesignTimeHtml();
+            }
 
             return designTimeHtml;
         }

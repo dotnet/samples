@@ -69,7 +69,9 @@ namespace FindGeneratedItems
             {
                 DependencyObject child = VisualTreeHelper.GetChild(obj, i);
                 if (child != null && child is childItem)
+                {
                     return (childItem)child;
+                }
                 else
                 {
                     childItem childOfChild = FindVisualChild<childItem>(child);

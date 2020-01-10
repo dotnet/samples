@@ -120,7 +120,9 @@ namespace BrushesIntroduction
                 SetValue(SelectedMarkerProperty, (Shape)e.OriginalSource);
             }
             else
+            {
                 SetValue(SelectedMarkerProperty, null);
+            }
         }
 
         // Determines whether the user just finished dragging a marker. If so,

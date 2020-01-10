@@ -54,7 +54,9 @@ namespace IToolboxServiceExample
                         UpdateLists();                    
                 }
                 else
+                {
                     toolboxService = null;
+                }
             }
         }
 

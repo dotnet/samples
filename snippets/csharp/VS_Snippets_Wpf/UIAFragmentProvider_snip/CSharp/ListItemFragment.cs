@@ -274,9 +274,15 @@ namespace ElementProvider
                 {
                     return (IRawElementProviderFragment)parentItems[myIndex - 1];
                 }
-                else return null;
+                else
+                {
+                    return null;
+                }
             }
-            else return null;
+            else
+            {
+                return null;
+            }
         }
         // </Snippet103>
 

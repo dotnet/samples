@@ -319,8 +319,10 @@ namespace Samples.Aspnet.SystemWebConfiguration
           Console.WriteLine("** Configuration updated.");
         }
         else
-          Console.WriteLine("** Could not update, section is locked.");
-      }
+                {
+                    Console.WriteLine("** Could not update, section is locked.");
+                }
+            }
       catch (System.Exception e)
       {
         // Unknown error.

@@ -35,7 +35,9 @@ public static class VersionTest
                     // Get the installation flag, or an empty string if there is none.
                     var install = versionKey.GetValue("Install", "").ToString();
                     if (string.IsNullOrEmpty(install)) // No install info; it must be in a child subkey.
+                    {
                         Console.WriteLine($"{versionKeyName}  {name}");
+                    }
                     else
                     {
                         if (!(string.IsNullOrEmpty(sp)) && install == "1")
@@ -56,7 +58,9 @@ public static class VersionTest
                         
                         install = subKey.GetValue("Install", "").ToString();
                         if (string.IsNullOrEmpty(install)) //No install info; it must be later.
+                        {
                             Console.WriteLine($"{versionKeyName}  {name}");
+                        }
                         else
                         {
                             if (!(string.IsNullOrEmpty(sp )) && install == "1")

@@ -208,7 +208,9 @@ public class PerfCounter1
                         "Custom Counter Inventory, Trucks, United States: {0}", value4.ToString());
 
                     if (this.finalCount < 5)
+                    {
                         ++this.finalCount;
+                    }
                     else
                     {
                         ++this.finalCount;

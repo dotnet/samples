@@ -134,16 +134,22 @@ namespace AngleEditor
                 e.Graphics.FillRectangle(new SolidBrush(Color.Gray), 2, this.Height-13, 110, 12);    
                 e.Graphics.DrawString("Rotate 90 degrees left", new Font("Arial", 8), new SolidBrush(Color.White), 2, this.Height-14);
             }
-            else            
+            else
+            {
                 e.Graphics.FillRectangle(new SolidBrush(Color.DarkGreen), this.Width-28, this.Height-14, 12, 12);
-            if( overButton == 2 )
+            }
+
+            if ( overButton == 2 )
             {
                 e.Graphics.FillRectangle(new SolidBrush(Color.Green), this.Width-14, this.Height-14, 12, 12);
                 e.Graphics.FillRectangle(new SolidBrush(Color.Gray), 2, this.Height-13, 116, 12);    
                 e.Graphics.DrawString("Rotate 90 degrees right", new Font("Arial", 8), new SolidBrush(Color.White), 2, this.Height-14);
             }
             else
+            {
                 e.Graphics.FillRectangle(new SolidBrush(Color.DarkGreen), this.Width-14, this.Height-14, 12, 12);
+            }
+
             e.Graphics.DrawEllipse(new Pen(new SolidBrush(Color.White), 1), this.Width-11, this.Height-11, 6, 6);
             e.Graphics.DrawEllipse(new Pen(new SolidBrush(Color.White), 1), this.Width-25, this.Height-11, 6, 6);
             if( overButton == 1 )
@@ -174,7 +180,10 @@ namespace AngleEditor
                 dby=-10;
             }
             else
-                UpdateAngle(e.X, e.Y);                
+            {
+                UpdateAngle(e.X, e.Y);
+            }
+
             this.Refresh();        
         }
 
@@ -186,11 +195,18 @@ namespace AngleEditor
                 overButton = -1;                
             }
             else if( e.X >= this.Width-28 && e.X <= this.Width-16 && e.Y >= this.Height-14 && e.Y <= this.Height-2 )
+            {
                 overButton = 1;
+            }
             else if( e.X >= this.Width-14 && e.X <= this.Width-2 && e.Y >= this.Height-14 && e.Y <= this.Height-2 )
+            {
                 overButton = 2;
+            }
             else
+            {
                 overButton = -1;
+            }
+
             this.Refresh();
         }
 
@@ -275,7 +291,9 @@ namespace AngleEditor
                 e.Graphics.DrawString("configuring the \"Angle\" property.", new Font("Arial", 8), new SolidBrush(Color.Black), 3,26);
             }
             else
+            {
                 e.Graphics.DrawString("This example requires design mode.", new Font("Arial", 8), new SolidBrush(Color.Black), 3,2);
+            }
         }
     }
 }

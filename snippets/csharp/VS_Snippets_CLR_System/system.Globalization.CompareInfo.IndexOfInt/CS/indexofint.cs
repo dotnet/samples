@@ -130,9 +130,10 @@ public class SamplesCompareInfo  {
 
       }
       else
-         Console.WriteLine( Prefix );
-
-   }
+        {
+            Console.WriteLine( Prefix );
+        }
+    }
 
 }
 

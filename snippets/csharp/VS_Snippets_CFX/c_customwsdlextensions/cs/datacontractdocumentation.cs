@@ -38,8 +38,10 @@ namespace Microsoft.WCF.Documentation
           + "</summary>";
       }
       else
-        return null;
-    }
+            {
+                return null;
+            }
+        }
 
     public object GetCustomDataToExport(System.Reflection.MemberInfo memberInfo, Type dataContractType)
     {
@@ -53,8 +55,10 @@ namespace Microsoft.WCF.Documentation
           + "</summary>";
       }
       else
-        return null;
-    }
+            {
+                return null;
+            }
+        }
 
     public Type GetDataContractType(Type type)
     {

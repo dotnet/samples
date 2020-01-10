@@ -35,8 +35,10 @@ namespace CompilerResults
                     Console.WriteLine( "Path to assembly: " + cr.PathToAssembly );
                 
                 // Display temporary files information.
-                if( !cr.TempFiles.KeepFiles )                
+                if( !cr.TempFiles.KeepFiles )
+                {
                     Console.WriteLine( "Temporary build files were deleted." );
+                }
                 else
                 {
                     Console.WriteLine( "Temporary build files were not deleted." );

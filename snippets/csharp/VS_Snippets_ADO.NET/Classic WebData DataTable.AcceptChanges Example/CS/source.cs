@@ -28,8 +28,10 @@ public class Form1: Form
             }
         }
         else
+        {
             // If no errors, AcceptChanges.
             table.AcceptChanges();
+        }
     }
  
     private bool Reconcile(DataTable thisTable)

@@ -261,8 +261,10 @@ namespace CustomElementClient
             {
                 Console.WriteLine(ae.Current.Name);
             }
-            else Console.WriteLine("no element there");
-
+            else
+            {
+                Console.WriteLine("no element there");
+            }
         }
 
 

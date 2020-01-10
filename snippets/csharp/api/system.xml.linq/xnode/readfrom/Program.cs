@@ -22,7 +22,9 @@ class Program
                         yield return el;
                 }
                 else
+                {
                     reader.Read();
+                }
             }
         }
     }
