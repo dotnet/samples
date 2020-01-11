@@ -208,7 +208,6 @@ namespace Testing
 
                 System.Threading.Thread.Sleep(1000);
 
-
                 // Examine the contents of the log file.
                 Console.WriteLine("\n\n\n");
                 // Use try/catch in case the file hasn't been defined.
@@ -343,4 +342,3 @@ namespace Testing
     //</Snippet35>
 }
 //</Snippet1>
-

@@ -15,4 +15,3 @@ public class Example
 // The example displays the following output:
 //        0.33333333333333331 = 0.3333333432674408: False
 // </Snippet5>
-

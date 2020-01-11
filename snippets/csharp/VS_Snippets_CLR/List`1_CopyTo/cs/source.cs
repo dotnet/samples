@@ -61,5 +61,3 @@ Brachiosaurus
 Compsognathus
  */
 // </Snippet1>
-
-

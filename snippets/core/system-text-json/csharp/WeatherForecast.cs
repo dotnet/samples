@@ -13,6 +13,26 @@ namespace SystemTextJsonSamples
     }
     // </SnippetWF>
 
+    // <SnippetWFWithPrevious>
+    public class WeatherForecastWithPrevious
+    {
+        public DateTimeOffset Date { get; set; }
+        public int TemperatureCelsius { get; set; }
+        public string Summary { get; set; }
+        public WeatherForecast PreviousForecast { get; set; }
+    }
+    // </SnippetWFWithPrevious>
+
+    // <SnippetWFWithPreviousAsObject>
+    public class WeatherForecastWithPreviousAsObject
+    {
+        public DateTimeOffset Date { get; set; }
+        public int TemperatureCelsius { get; set; }
+        public string Summary { get; set; }
+        public object PreviousForecast { get; set; }
+    }
+    // </SnippetWFWithPreviousAsObject>
+
     // <SnippetWFWithLong>
     public class WeatherForecastWithLong
     {
@@ -78,7 +98,6 @@ namespace SystemTextJsonSamples
         public string Summary { get; set; }
     }
     // </SnippetWFWithIgnoreAttribute>
-
 
     // <SnippetWFDerived>
     public class WeatherForecastDerived : WeatherForecast
@@ -302,6 +321,30 @@ namespace SystemTextJsonSamples
                 Date = DateTime.Parse("2019-08-01"),
                 TemperatureCelsius = 25,
                 Summary = "Hot"
+            };
+            return weatherForecast;
+        }
+
+        public static WeatherForecastWithPrevious CreateWeatherForecastWithPrevious()
+        {
+            var weatherForecast = new WeatherForecastWithPrevious
+            {
+                Date = DateTime.Parse("2019-08-01"),
+                TemperatureCelsius = 25,
+                Summary = "Hot",
+                PreviousForecast = CreateWeatherForecastDerived()
+            };
+            return weatherForecast;
+        }
+
+        public static WeatherForecastWithPreviousAsObject CreateWeatherForecastWithPreviousAsObject()
+        {
+            var weatherForecast = new WeatherForecastWithPreviousAsObject
+            {
+                Date = DateTime.Parse("2019-08-01"),
+                TemperatureCelsius = 25,
+                Summary = "Hot",
+                PreviousForecast = CreateWeatherForecastDerived()
             };
             return weatherForecast;
         }

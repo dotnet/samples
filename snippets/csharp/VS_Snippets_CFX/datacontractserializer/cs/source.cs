@@ -164,7 +164,6 @@ namespace DataContractSerializerExample
     }
     //</snippet3>
 
-
     //<snippet4>
     [DataContract(Name = "PurchaseOrder", Namespace = "urn:www.Microsoft.com")]
     public class PurchaseOrder : IExtensibleDataObject
@@ -292,7 +291,6 @@ namespace DataContractSerializerExample
         }
     }
     //</snippet4>
-
 
     //<snippet5>
     public sealed class ShowWriteStartObject
@@ -590,7 +588,6 @@ namespace DataContractSerializerExample
             List<Type> knownTypeList = new List<Type>();
             knownTypeList.Add(typeof(PurchaseOrder));
             knownTypeList.Add(typeof(PurchaseOrderV3));
-
 
             // Create an XmlDictionary and add values to it.
             XmlDictionary d = new XmlDictionary();

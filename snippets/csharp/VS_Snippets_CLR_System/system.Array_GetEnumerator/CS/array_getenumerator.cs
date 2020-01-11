@@ -48,4 +48,3 @@ The Array contains the following values:
 */
 
 // </Snippet1>
-

@@ -159,9 +159,5 @@ namespace TextRendering
             MeasureText2(e);
         }
 
-             
-        
-       
-        
     }
 }

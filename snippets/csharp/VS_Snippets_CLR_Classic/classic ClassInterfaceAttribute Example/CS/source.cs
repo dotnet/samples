@@ -7,4 +7,3 @@ public class MyClass
    public MyClass() {}
 }
 // </Snippet1>
-

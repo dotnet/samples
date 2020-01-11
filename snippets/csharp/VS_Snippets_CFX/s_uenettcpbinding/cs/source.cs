@@ -166,8 +166,6 @@ namespace TcpService
 	    TransferMode transferMode = binding.TransferMode;
 	    // </Snippet22>
 
-
-
             // You must create an array of URI objects to have a base address.
             Uri a = new Uri(addressTCP);
             Uri[] baseAddresses = new Uri[] { a };
@@ -269,7 +267,6 @@ namespace TcpService
         }
     }
 
-
     [ServiceContract]
     interface ICalculator
     {
@@ -284,12 +281,10 @@ namespace TcpService
     public class Calculator : ICalculator
     {
 
-
         public double Divide(double a, double b)
         {
             return a / b;
         }
-
 
         public double CalculateTax(double a)
         {

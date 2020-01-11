@@ -5,7 +5,6 @@ using System;
 using System.Security.Permissions;
 using System.Security;
 
-
 class MyClass
 {
     public static void PermissionDemo()
@@ -20,8 +19,6 @@ class MyClass
         {
             Console.WriteLine(e.Message.ToString());
         }
-
-
 
     }
 

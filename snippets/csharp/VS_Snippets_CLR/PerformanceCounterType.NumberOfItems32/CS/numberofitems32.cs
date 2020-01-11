@@ -65,9 +65,7 @@ public class NumberOfItems64
 
 	private static void CollectSamples(ArrayList samplesList)
 	{
-	
-		
-		
+
 		Random r = new Random( DateTime.Now.Millisecond );
 
 		// Loop for the samples.
@@ -90,9 +88,7 @@ public class NumberOfItems64
 			System.Threading.Thread.Sleep(50);
 		}
 
-		
 	}
-
 
     private static void CalculateResults(ArrayList samplesList)
     {
@@ -114,7 +110,6 @@ public class NumberOfItems64
 
         }
     }
-	
 
 	//++++++++//++++++++//++++++++//++++++++//++++++++//++++++++//++++++++//++++++++
 	//++++++++//++++++++//++++++++//++++++++//++++++++//++++++++//++++++++//++++++++
@@ -140,7 +135,5 @@ public class NumberOfItems64
 		Console.WriteLine("++++++++++++++++++++++");
 	}
 
-
-	
 }
 //</snippet1>

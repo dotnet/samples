@@ -444,7 +444,6 @@ using System.Net.Sockets;
         }
         //</Snippet29>  
 
-       
         //<Snippet30>
         public static void ShowIcmpV6EchoData ()
         {
@@ -488,7 +487,6 @@ using System.Net.Sockets;
         }
 
         //</Snippet33>
-        
 
         //<Snippet34>
         public static void ShowIcmpV6MembershipData ()
@@ -504,7 +502,6 @@ using System.Net.Sockets;
         }
 
         //</Snippet34>  
-
 
         //<Snippet35>
         public static void ShowIcmpV6NeighborData ()
@@ -528,7 +525,6 @@ using System.Net.Sockets;
         }
 
         //</Snippet36>     
-
 
         //<Snippet37>
         public static void ShowIcmpV6RedirectsData ()
@@ -735,7 +731,6 @@ using System.Net.Sockets;
         }
  //</Snippet45> 
 
-
 //<Snippet46>
         public static void DisplayDhcpServerAddresses()
         {
@@ -782,7 +777,6 @@ using System.Net.Sockets;
             }
         }
  //</Snippet47> 
-
 
          //<Snippet48>
         public static void DisplayIPv4NetworkInterfaces()
@@ -858,7 +852,6 @@ using System.Net.Sockets;
                 // Try to get the IPv6 interface properties.
                 IPv6InterfaceProperties p = adapterProperties.GetIPv6Properties();
 
-           
                 if (p == null)
                 {
                     Console.WriteLine("No IPv6 information is available for this interface.");
@@ -878,7 +871,6 @@ using System.Net.Sockets;
             
         }
         //</Snippet49>
-
 
   //<Snippet50>
         public static void DisplayWinsServerAddresses()
@@ -926,7 +918,6 @@ using System.Net.Sockets;
            }
 //</Snippet51> 
 
-            
         public static void Main()
         {
 

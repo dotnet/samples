@@ -47,4 +47,3 @@ public class Example
 // The example displays the following output:
 //        Instantiated a Person object whose value is 'John'
 // </Snippet1>
-

@@ -9,7 +9,6 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-
 // <snippet1>
 // Create a code-behind user control that is cached
 // for 20 seconds and uses the VaryByParams property
@@ -41,4 +40,3 @@ public partial class ctlSelect : UserControl
     }
 }
 // </snippet1>
-

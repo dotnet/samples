@@ -29,7 +29,6 @@ namespace MyProject
 			return;
 		}
 
-
 		//**************************************************
 		// Iterates through message queues and displays the
 		// path of each queue that was created in the last
@@ -46,7 +45,6 @@ namespace MyProject
 			myCriteria.MachineName = "MyComputer";
 			myCriteria.CreatedAfter = DateTime.Now.Subtract(new 
 				TimeSpan(1,0,0,0));
-	
 
 			// Get a cursor into the queues on the network.
 			MessageQueueEnumerator myQueueEnumerator = 

@@ -4,7 +4,6 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Security.Permissions;
 
-
 namespace Samples.AspNet.CS 
 {
     [AspNetHostingPermission(SecurityAction.Demand,
@@ -73,7 +72,5 @@ namespace Samples.AspNet.CS
         }
 // </snippet1>
     }
-	 
 
 }
-

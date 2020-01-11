@@ -10,7 +10,6 @@ class EnumerateResources
         // Create a ResourceSet for the file items.resources.
         ResourceSet rs = new ResourceSet("items.resources"); 
 
-        
         // Create an IDictionaryEnumerator to read the data in the ResourceSet.
         IDictionaryEnumerator id = rs.GetEnumerator(); 
 

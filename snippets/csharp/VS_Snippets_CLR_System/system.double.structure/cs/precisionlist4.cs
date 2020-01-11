@@ -22,7 +22,6 @@ public class Example
       for (int ctr = 0; ctr < tempStrings.Length; ctr++)
          restoredValues[ctr] = Double.Parse(tempStrings[ctr]);   
 
-
       for (int ctr = 0; ctr < values.Length; ctr++)
          Console.WriteLine("{0} {2} {1}", values[ctr], 
                            restoredValues[ctr],
@@ -34,4 +33,3 @@ public class Example
 //       0.333333333333333 <> 0.333333333333333
 //       3.14159265358979 <> 3.14159265358979
 // </Snippet7>
-

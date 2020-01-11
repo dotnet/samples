@@ -4,7 +4,6 @@ using System.Xml;
 using System.Security.Cryptography;
 using System.Security.Cryptography.Xml;
 
-
 namespace CSCrypto
 {
 	class Program
@@ -39,7 +38,6 @@ namespace CSCrypto
 
 				Console.WriteLine(xmlDoc.InnerXml);
 
-				
 			}
 			catch (Exception e)
 			{
@@ -175,7 +173,6 @@ namespace CSCrypto
 				throw new XmlException("The EncryptedData element was not found.");
 			}
 
-			
 			// Create an EncryptedData object and populate it.
 			// <snippet11>
 			EncryptedData edElement = new EncryptedData();
@@ -185,7 +182,6 @@ namespace CSCrypto
 			// Create a new EncryptedXml object.
 			// <snippet12>
 			EncryptedXml exml = new EncryptedXml();
-			
 
 			// Decrypt the element using the symmetric key.
 			byte[] rgbOutput = exml.DecryptData(edElement, Alg);
@@ -199,7 +195,6 @@ namespace CSCrypto
 		}
 
 	}
-
 
 }
 //</snippet1>

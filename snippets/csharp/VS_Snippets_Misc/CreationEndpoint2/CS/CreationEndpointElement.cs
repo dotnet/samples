@@ -54,4 +54,3 @@ namespace Microsoft.Samples.WF.CreationEndpoint
     }
 
 }
-

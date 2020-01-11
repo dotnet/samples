@@ -26,7 +26,6 @@ class Program
         // Create a new TripleDES key. 
         TripleDESCryptoServiceProvider tDESkey = new TripleDESCryptoServiceProvider();
 
-
         try
         {
             // Encrypt the "creditcard" element.
@@ -96,7 +95,6 @@ class Program
         // Encrypt the element.
         EncryptedData edElement = eXml.Encrypt(elementToEncrypt, KeyName);
 
-
         ////////////////////////////////////////////////////
         // Replace the element from the original XmlDocument
         // object with the EncryptedData element.
@@ -126,7 +124,6 @@ class Program
         exml.DecryptDocument();
 
     }
-
 
 }
 //</SNIPPET1>

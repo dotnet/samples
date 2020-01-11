@@ -61,8 +61,6 @@
 		}
       // </Snippet1>
 
-
-
 		/// <summary>
 		///		Clean up any resources being used.
 		/// </summary>
@@ -77,7 +75,6 @@
 			}
 			base.Dispose( disposing );
 		}
-
 
 		#region Windows Form Designer generated code
 		/// <summary>

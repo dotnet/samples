@@ -3,7 +3,6 @@
 // - Snippet4 can go in IsSupported, DrawHorizontalTrack, and DrawTopPointingThumb
 // - Snippet6 can go in DrawVerticalTick; see below about bug in the meantime, though
 
-
 //<Snippet0>
 using System;
 using System.Drawing;

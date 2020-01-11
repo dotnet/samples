@@ -95,10 +95,7 @@ namespace Blank3DSample
             //add the Viewport3D to the window
             mainWindow.Content = myViewport;
 
-
-
         }
-
 
     }
 }

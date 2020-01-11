@@ -65,7 +65,6 @@ namespace ServiceModel.Sample
             ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress);
             // </Snippet1>
 
-
             // Open the ServiceHostBase to create listeners and start listening for messages.
             serviceHost.Open();
 
@@ -101,7 +100,6 @@ namespace ServiceModel.Sample
             serviceHost.AddServiceEndpoint(typeof(ICalculator), binding, "http://localhost:8000/servicemodelsamples/service/basic");
             // </Snippet3>
         }
-
 
         public static void Snippet4()
         {

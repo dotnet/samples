@@ -11,7 +11,6 @@ public class SamplesUTF7Encoding  {
       // Create an instance of UTF7Encoding.
       UTF7Encoding u7 = new UTF7Encoding( true );
 
-
       // Create byte arrays from the same string containing the following characters:
       //    Latin Small Letter Z (U+007A)
       //    Latin Small Letter A (U+0061)

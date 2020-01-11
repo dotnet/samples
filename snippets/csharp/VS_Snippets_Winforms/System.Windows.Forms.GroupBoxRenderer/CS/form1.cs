@@ -6,7 +6,6 @@
 
 // TODO: see if you can work DrawParentBackground into here somehow.
 
-
 //<Snippet0>
 using System;
 using System.Drawing;
@@ -70,7 +69,6 @@ namespace GroupBoxRendererSample
                 Application.VisualStyleState ^ 
                 VisualStyleState.ClientAndNonClientAreasEnabled;
 
-          
             if (Application.RenderWithVisualStyles)
                 this.Text = "Visual Styles Enabled";
             else

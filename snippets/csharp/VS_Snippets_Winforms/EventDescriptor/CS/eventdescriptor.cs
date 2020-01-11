@@ -107,7 +107,6 @@ foreach (System.ComponentModel.EventDescriptor myEvent in events) {
 }
 //</snippet1>
 
-
 		}
 	}
 }

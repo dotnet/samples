@@ -18,4 +18,3 @@ public  class DerivedDataSet:System.Data.DataSet
     }
 }
 // </Snippet1>
-

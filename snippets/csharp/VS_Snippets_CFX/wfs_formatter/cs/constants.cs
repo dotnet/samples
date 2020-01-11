@@ -2,8 +2,6 @@
 // Copyright (c) Microsoft Corporation.  All rights reserved.
 //----------------------------------------------------------------
 
-
-
 namespace Microsoft.Samples.WorkflowServicesSamples.EchoWorkflowClient
 {
     public static class Constants

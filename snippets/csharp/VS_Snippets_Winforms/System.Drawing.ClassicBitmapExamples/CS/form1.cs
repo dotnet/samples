@@ -123,7 +123,6 @@ namespace System.Drawing.ClassicBitmapExamplesCS
         public static extern bool DeleteObject(IntPtr hObject);
         //</snippet11>
 
-
         private void DemonstrateGetHbitmap()
         {
             Bitmap bm = new Bitmap("Picture.jpg");
@@ -134,7 +133,6 @@ namespace System.Drawing.ClassicBitmapExamplesCS
         }
         // </snippet4>
         // <snippet5>
-
 
         private void DemonstrateGetHbitmapWithColor()
         {

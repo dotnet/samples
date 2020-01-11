@@ -117,7 +117,6 @@ public class Class1
         //</Snippet15>
     }
 
-
     //<Snippet16>
     private static void IterateThroughList()
     {

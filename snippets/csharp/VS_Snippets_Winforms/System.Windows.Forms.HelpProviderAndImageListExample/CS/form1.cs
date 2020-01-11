@@ -47,7 +47,6 @@ public class Form1:
 		this.components = new System.ComponentModel.Container();
 		this.TextBox1 = new System.Windows.Forms.TextBox();
 
-
 		this.Button1 = new System.Windows.Forms.Button();
 		this.SuspendLayout();
 		//
@@ -84,7 +83,6 @@ public class Form1:
 
 	//Declare the HelpProvider.
 	internal System.Windows.Forms.HelpProvider HelpProvider1;
-
 
 	private void InitializeHelpProvider()
 	{
@@ -148,4 +146,3 @@ public class Form1:
 		Application.Run(new Form1());
 	}
 }
-

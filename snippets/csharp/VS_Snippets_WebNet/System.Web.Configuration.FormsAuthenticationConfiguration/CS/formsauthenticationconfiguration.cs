@@ -4,7 +4,6 @@ using System.Configuration;
 using System.Web.Configuration;
 using System.Web;
 
-
 namespace Samples.Aspnet.Configuration
 {
 
@@ -30,15 +29,12 @@ namespace Samples.Aspnet.Configuration
 
             //</Snippet1>
 
-
             // <Snippet2>
             // Create a new FormsAuthentication object.
             FormsAuthenticationConfiguration newformsAuthentication =
             new FormsAuthenticationConfiguration();
 
             // </Snippet2>
-
-
 
             // <Snippet3>
             // Get the current LoginUrl.
@@ -49,7 +45,6 @@ namespace Samples.Aspnet.Configuration
 
             // </Snippet3>
 
-
             // <Snippet4>
             // Get current DefaultUrl.
             string currentDefaultUrl = 
@@ -59,7 +54,6 @@ namespace Samples.Aspnet.Configuration
             formsAuthentication.DefaultUrl = "newDefaultUrl";
 
             // </Snippet4>
-
 
             // <Snippet5>
             // Get current Cookieless.
@@ -72,7 +66,6 @@ namespace Samples.Aspnet.Configuration
 
             // </Snippet5>
 
-
             // <Snippet6>
             // Get the current Domain.
             string currentDomain = 
@@ -81,9 +74,7 @@ namespace Samples.Aspnet.Configuration
             // Set the current Domain
             formsAuthentication.Domain = "newDomain";
 
-
             // </Snippet6>
-
 
             // <Snippet7>
             // Get the current SlidingExpiration.
@@ -93,9 +84,7 @@ namespace Samples.Aspnet.Configuration
             // Set the SlidingExpiration.
             formsAuthentication.SlidingExpiration = false;
 
-
             // </Snippet7>
-
 
             // <Snippet8>
             // Get the current EnableCrossAppRedirects.
@@ -105,9 +94,7 @@ namespace Samples.Aspnet.Configuration
             // Set the EnableCrossAppRedirects.
             formsAuthentication.EnableCrossAppRedirects = false;
 
-
             // </Snippet8>
-
 
             // <Snippet9>
             // Get the current Path.
@@ -128,7 +115,6 @@ namespace Samples.Aspnet.Configuration
 
             // </Snippet10>
 
-
             // <Snippet11>
             // Get the current Protection.
             FormsProtectionEnum currentProtection = 
@@ -140,7 +126,6 @@ namespace Samples.Aspnet.Configuration
 
             // </Snippet11>
 
-
             // <Snippet12>
             // Get the current RequireSSL.
             bool currentRequireSSL = 
@@ -151,16 +136,13 @@ namespace Samples.Aspnet.Configuration
 
             // </Snippet12>
 
-
             // <Snippet13>
             // Get the current Name property value.
             string currentName = formsAuthentication.Name;
             // Set the Name property value.
             formsAuthentication.Name = "newName";
 
-
             // </Snippet13>
-
 
             // <Snippet14>
             // Get the current Credentials.
@@ -182,5 +164,4 @@ namespace Samples.Aspnet.Configuration
         }
     }
 
-} 
-
+}

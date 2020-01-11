@@ -13,14 +13,10 @@ namespace Microsoft.ServiceModel.Samples
     class Client
     {
 
-
-
         static void Main()
         {
             // Create a client
             CalculatorClient client = new CalculatorClient();
-
-
 
             // Call the Add service operation.
             double value1 = 100.00D;

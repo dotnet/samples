@@ -1,5 +1,4 @@
-﻿
-// <Snippet1>
+﻿// <Snippet1>
 using System;
 using System.Text;
 
@@ -78,8 +77,3 @@ public class Example
 //   LE array with BE encoding:
 //   System.Text.UTF32Encoding: Unable to translate bytes [7A][00][00][00] at index 0 from specified code page to Unicode.
 // </Snippet1>
-
-
-
-
-

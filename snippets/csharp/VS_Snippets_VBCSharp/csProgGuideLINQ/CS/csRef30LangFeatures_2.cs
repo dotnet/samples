@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -180,7 +179,6 @@ namespace csrefLINQExamples
                 //</snippet31>
             }
 
-
             // How to use implicitly typed locals
             class ImplicitTyping : StudentClass
             {
@@ -208,7 +206,6 @@ namespace csrefLINQExamples
                 }
                 //</snippet32>
 
-
                 static void QueryMethod(List<Student> students)
                 {
                     //how to use implicitly typed locals #2
@@ -230,7 +227,6 @@ namespace csrefLINQExamples
                 }
             }
 
-
             //how to init a dictionary with coll initializer
             //<snippet34>
             class StudentName
@@ -250,7 +246,6 @@ namespace csrefLINQExamples
                 };
             }
             //</snippet34>
-
 
             class ObjInit
             {
@@ -457,7 +452,6 @@ namespace csrefLINQExamples
             }
             //</snippet46>
 
-
             class ObjCollInitializers
             {
                 class Product
@@ -487,8 +481,6 @@ namespace csrefLINQExamples
                     public string City { get; set; }
                 }
                 static List<Customer> customers = new List<Customer>();
-
-
 
                 static void Main()
                 {
@@ -547,7 +539,6 @@ namespace csrefLINQExamples
                 Uppercase: CHERRY, Lowercase: cherry        
              */
             //</snippet44>
-
 
             // no snippets from this class yet.
 
@@ -793,7 +784,6 @@ namespace csrefLINQExamples
                         Console.WriteLine(s);
                     }
 
-
                     IEnumerable<string> myQuery2;
                     // QueryMethod2 returns a query as the value of its out parameter.
                     app.QueryMethod2(ref nums, out myQuery2);
@@ -804,7 +794,6 @@ namespace csrefLINQExamples
                     {
                         Console.WriteLine(s);
                     }
-
 
                     // You can modify a query by using query composition. A saved query
                     // is nested inside a new query definition that revises the results
@@ -918,7 +907,6 @@ namespace csrefLINQExamples
             }
             //</snippet81>
 
-
             class NullValuesInQueries
             {
                 #region Data
@@ -957,8 +945,6 @@ namespace csrefLINQExamples
           new Product{Name="Melons", CategoryID=005},
         };
                 #endregion
-
-
 
                 static void Main()
                 {
@@ -1080,4 +1066,3 @@ namespace csrefLINQExamples
             //</s n i p p e t 84>
 
 }
-

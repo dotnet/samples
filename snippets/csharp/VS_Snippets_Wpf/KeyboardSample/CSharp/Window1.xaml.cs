@@ -9,8 +9,6 @@ using System.Windows.Shapes;
 using System.Windows.Annotations;
 using System.Windows.Input;
 
-
-
 namespace SDKSamples
 {
     /// <summary>

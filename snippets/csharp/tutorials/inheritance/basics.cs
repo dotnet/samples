@@ -12,7 +12,6 @@ public class A
 public class B : A
 { }
 
-
 public class Example
 {
     public static void Main()
@@ -22,4 +21,3 @@ public class Example
     }
 }
 // </Snippet1>
-

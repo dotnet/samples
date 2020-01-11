@@ -10,7 +10,6 @@ public interface INew
 }
 // </Snippet1>
 
-
 // <Snippet2>
 public interface ICustomMarshaler
 {

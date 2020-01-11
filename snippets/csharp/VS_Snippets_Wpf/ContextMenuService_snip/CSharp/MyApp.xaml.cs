@@ -5,7 +5,6 @@ using System.Data;
 using System.Xml;
 using System.Configuration;
 
-
 namespace ContextMenus
 {
 	/// <summary>

@@ -49,7 +49,6 @@ class someClass
     }
     //</Snippet2>
 
-
     //<Snippet3>
     public string Method(string value1, string value2)
     {

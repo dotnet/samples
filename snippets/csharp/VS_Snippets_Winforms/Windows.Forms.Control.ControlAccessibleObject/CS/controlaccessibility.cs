@@ -84,8 +84,6 @@ namespace MyCustomControls
 }
 // </snippet1>
 
-
-
 namespace ControlAccessibility
 {
    public class MyForm : System.Windows.Forms.Form

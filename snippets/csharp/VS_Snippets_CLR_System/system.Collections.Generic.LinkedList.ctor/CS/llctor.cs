@@ -1,6 +1,5 @@
 ﻿// The following code example creates and initializes a LinkedList of type String and then displays its contents.
 
-
 // <snippet1>
 using System;
 using System.Collections;

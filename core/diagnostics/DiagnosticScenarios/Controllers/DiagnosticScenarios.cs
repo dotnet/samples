@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Collections.Generic;
 using System.Linq;
@@ -111,7 +111,6 @@ namespace testwebapi.Controllers
         {
             throw new Exception("bad, bad code");
         }
-
 
         [HttpGet]
         [Route("highcpu/{milliseconds}")]

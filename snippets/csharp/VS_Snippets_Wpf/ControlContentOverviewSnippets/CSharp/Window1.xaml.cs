@@ -24,7 +24,6 @@ namespace ControlContentOverviewSnippets
         {
             InitializeComponent();
 
-
             CreateButtons();
             AddFirstListBox();
             AddThirdListBox();
@@ -175,7 +174,6 @@ namespace ControlContentOverviewSnippets
             //</Snippet4>
 
             root.Children.Add(listBox1);
-
 
         }
 

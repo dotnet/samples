@@ -27,13 +27,11 @@ namespace BrushesIntroduction
         {
             AnimationClock transitionAnimationClock = (AnimationClock)sender;
 
-
             if (transitionAnimationClock.CurrentState == ClockState.Filling)
             {
                 fadeEnded();
             }
         }
-
 
         // <SnippetBeginAnimationHandoff>  
         private void myFrameNavigated(object sender, NavigationEventArgs args)
@@ -66,14 +64,5 @@ namespace BrushesIntroduction
             Application.Current.Shutdown();
         }
     }
-
-
-
-
-
-
-
-
-
 
 }

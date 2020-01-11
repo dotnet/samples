@@ -8,7 +8,6 @@ using EnvDTE;
 using System.IO;
 using Microsoft.VsSDK.IntegrationTestLibrary;
 
-
 namespace TestToolWindowSearch_IntegrationTests.IntegrationTests
 {
     [TestClass]
@@ -30,7 +29,6 @@ namespace TestToolWindowSearch_IntegrationTests.IntegrationTests
             set { _testContext = value; }
         }
         #endregion
-
 
         #region ctors
         public SolutionTests()

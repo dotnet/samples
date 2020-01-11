@@ -19,7 +19,6 @@ namespace Microsoft.ServiceModel.Samples
            // This is empty, just to get it into the build.
         }
     }
-            
 
     //<snippet1>
     // Define a service contract and apply the ServiceKnownTypeAttribute

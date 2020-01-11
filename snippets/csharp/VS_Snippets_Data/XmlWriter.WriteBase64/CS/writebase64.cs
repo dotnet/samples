@@ -121,13 +121,11 @@ public static class TestBase64
         var bufferOld = new byte[bufferSize];
         var bufferNew = new byte[bufferSize];
 
-
         var binaryReaderOld = new BinaryReader(fileOld);
         var binaryReaderNew = new BinaryReader(fileNew);
 
         binaryReaderOld.BaseStream.Seek(0, SeekOrigin.Begin);
         binaryReaderNew.BaseStream.Seek(0, SeekOrigin.Begin);
-
 
         do
         {

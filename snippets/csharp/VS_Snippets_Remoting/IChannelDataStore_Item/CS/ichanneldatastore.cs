@@ -10,7 +10,6 @@
    'IChannelInfo' is collected and displayed.
 */
 
-
 // <Snippet1>
 using System;
 using System.Runtime.Remoting;

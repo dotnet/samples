@@ -30,7 +30,6 @@ public class Run
       test.SerializeOrder("TypeEx.xml");
    }
 
-
    public void SerializeOrder(string filename)
    {
       // Creates an XmlSerializer.

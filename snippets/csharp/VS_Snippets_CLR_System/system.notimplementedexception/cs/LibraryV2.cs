@@ -12,4 +12,3 @@ namespace Utilities
    }
 }
 // </Snippet3>
-

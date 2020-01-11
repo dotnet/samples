@@ -22,7 +22,6 @@ namespace Microsoft.ServiceModel.Samples
     }
     //</snippet10>
 
-
     public class Test
     {
 
@@ -63,7 +62,6 @@ namespace Microsoft.ServiceModel.Samples
 
             //</snippet3>
         }
-
 
     }
 }

@@ -12,12 +12,10 @@ namespace CS
             //</Snippet8>
         }
 
-
         public Form2()
         {
             InitializeComponent();
         }
-
 
         private void ordersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {

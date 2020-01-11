@@ -94,7 +94,6 @@ static class VarianceWorkaround
         return new CollectionWrapper<S, D>(source);
     }
 
-
     private class CollectionWrapper<S, D> 
         : EnumerableWrapper<S, D>, ICollection<D>
         where S : D

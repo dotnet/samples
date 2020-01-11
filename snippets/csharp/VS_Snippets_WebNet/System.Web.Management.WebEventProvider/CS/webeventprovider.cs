@@ -1,8 +1,7 @@
 ﻿/**
   *File name: WebEventProvider.cs
   *Purpose: Shows how to build a custom event provider. 
-  **/  
-
+  **/
 // <Snippet1>
 
 using System;
@@ -12,7 +11,6 @@ using System.Web.Management;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Web;
-
 
 namespace SamplesAspNet
 {
@@ -56,7 +54,6 @@ namespace SamplesAspNet
 
         }
         // </Snippet2>
-
 
         // <Snippet3>
         // Flush the input buffer if required.

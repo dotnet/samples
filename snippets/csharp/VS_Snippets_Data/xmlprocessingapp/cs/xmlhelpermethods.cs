@@ -69,7 +69,6 @@ namespace XMLProcessingApp
             return xml;
         }
 
-
         //************************************************************************************
         //
         //  Loads XML from a file. If the file is not found, load XML from a string.
@@ -82,7 +81,6 @@ namespace XMLProcessingApp
         #endregion
 
         #region Validate XML against a Schema
-
 
         //<Snippet2>
 
@@ -572,7 +570,6 @@ namespace XMLProcessingApp
             
             book.OwnerDocument.DocumentElement.RemoveChild(book);
 
-
             if (prevNode.NodeType == XmlNodeType.Whitespace || 
                 prevNode.NodeType == XmlNodeType.SignificantWhitespace)
             {
@@ -611,7 +608,6 @@ namespace XMLProcessingApp
                     previousNode, false, false);
             }
         }
-        
 
         //************************************************************************************
         //
@@ -644,7 +640,6 @@ namespace XMLProcessingApp
         }
 //</Snippet8>
         #endregion
-
 
     }
 }

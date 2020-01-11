@@ -32,5 +32,3 @@ namespace DataBindingLab
     }
     //</Snippet2>
 }
-
-

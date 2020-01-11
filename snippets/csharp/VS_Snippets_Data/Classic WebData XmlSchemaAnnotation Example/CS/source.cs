@@ -102,4 +102,3 @@ class XMLSchemaExamples
 
 }
 // </Snippet1>
-

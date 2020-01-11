@@ -163,7 +163,6 @@ namespace Samples.AspNet.CS.Controls
     }
     #endregion
 
-
    public class VacationHomeDesigner : ControlDesigner
    {
 

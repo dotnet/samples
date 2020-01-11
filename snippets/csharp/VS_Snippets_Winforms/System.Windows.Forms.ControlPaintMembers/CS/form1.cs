@@ -37,7 +37,6 @@ public class Form1:
 	//Do not modify it using the code editor.
 	internal System.Windows.Forms.Button Button1;
 
-
 	[System.Diagnostics.DebuggerStepThrough]
 	private void InitializeComponent()
 	{
@@ -62,7 +61,6 @@ public class Form1:
 		this.ResumeLayout(false);
 
 	}
-
 
 	#endregion
 	//<snippet1>
@@ -97,8 +95,3 @@ public class Form1:
 	}
 
 }
-
-
-
-
-

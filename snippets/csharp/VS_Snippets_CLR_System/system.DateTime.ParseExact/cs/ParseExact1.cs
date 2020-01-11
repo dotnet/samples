@@ -88,4 +88,3 @@ public class Example
 //       15/06/2008 08:30 converts to 6/15/2008 8:30:00 AM.
 //       18/08/2015 06:30:15.006542 converts to 8/18/2015 6:30:15 AM.
 // </Snippet1>
-

@@ -24,7 +24,6 @@ namespace CS
             this.regionTableAdapter.Update(this.northwindDataSet.Region);
             //</Snippet14>
 
-
             //---------------------------------------------
             //<Snippet17>
             // Locate the row you want to update.
@@ -52,13 +51,11 @@ namespace CS
             //</Snippet20>
         }
 
-
         //---------------------------------------------------------------------
         public Form5()
         {
             InitializeComponent();
         }
-
 
         //---------------------------------------------------------------------
         private void regionBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -68,7 +65,6 @@ namespace CS
             this.regionTableAdapter.Update(this.northwindDataSet.Region);
         }
 
- 
         //---------------------------------------------------------------------
         private void Form5_Load(object sender, EventArgs e)
         {

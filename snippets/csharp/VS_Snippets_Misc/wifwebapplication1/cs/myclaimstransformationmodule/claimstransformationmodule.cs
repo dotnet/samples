@@ -7,8 +7,6 @@ using System.Threading.Tasks;
 using System.Security.Claims;
 using System.Security.Principal;
 
-
-
 namespace MyClaimsTransformationModule
 {
     class ClaimsTransformationModule : ClaimsAuthenticationManager
@@ -26,7 +24,6 @@ namespace MyClaimsTransformationModule
                 }
             }
             return incomingPrincipal;
-
 
         }
     }

@@ -200,7 +200,6 @@ namespace N2
             Console.WriteLine(
                 secondNumber.Textual + " " + secondNumber.Numeric);
 
-
             dynamic resultNumber = new DynamicNumber();
 
             // Adding two numbers. The TryBinaryOperation is called.
@@ -710,6 +709,3 @@ namespace n7
     //</Snippet7>
 
 }
-
-
-

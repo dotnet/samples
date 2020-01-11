@@ -6,7 +6,6 @@ using System.Net;
 using System.Text;
 using System.IO;
 
-
     public class Test
     {
         // Specify the URL to receive the request.

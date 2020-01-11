@@ -18,7 +18,6 @@ using System.Text;
 using System.Windows.Forms;
 #endregion
 
-
 namespace CSWinFormDataGridView.EditingControlHosting
 {
     public partial class MainForm : Form

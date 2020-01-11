@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -93,8 +92,6 @@ namespace csrefLINQExamples
         }
         //</snippet50>
 
-        
-
         public void QueryHighScores(int exam, int score)
         {
             var highScores = from student in students
@@ -122,9 +119,6 @@ namespace csrefLINQExamples
     }
     //</snippet15>
 
-   
-
-    
     class SumWithLambdas : StudentClass
     {
         static void Main()
@@ -162,9 +156,7 @@ namespace csrefLINQExamples
         */
         //</snippet2>
     }
-    
 
-   
     class ReusableQueryDemo : StudentClass
     {
         static void Main()
@@ -438,7 +430,6 @@ namespace csrefLINQExamples
     //       //    where file.Substring(file.Length - 3) == ".txt"
     //       //    select file;
 
-
     //       // DO THIS. Create data source outside of query
     //       // and handle exceptions or other error conditions there.
     //       // Change root to "C:\" as an experiment.
@@ -503,7 +494,6 @@ namespace csrefLINQExamples
     // Output: 97 92 81
     //</snippet11>
 
-
     //How To: Handle Exceptions in Query Expressions 4ce6c081-7731-4b8f-b4fa-d947f165a18a
     //this snippet is out of order. ok.
 
@@ -513,7 +503,6 @@ namespace csrefLINQExamples
     //{
     //    static void Main()
     //    {
-            
 
     //        foreach (var file in queryLargeFiles)
     //        {
@@ -525,8 +514,6 @@ namespace csrefLINQExamples
     //        Console.ReadKey();
     //    }
 
-
-        
     //}
     //< / s n i p p e t 2 2 >
 
@@ -713,7 +700,6 @@ namespace csrefLINQExamples
         }
     }
 
-
     // How To: Group Results in Various Ways (LINQ) ee981053-3392-4245-a8c2-b3730211da0d
     
     class GroupExamples : StudentClass
@@ -765,8 +751,6 @@ namespace csrefLINQExamples
                     Zabokritski, Eugene
         */
         //</snippet17>
-
-    
 
         //<snippet21>
         public void GroupByCompositeKey()
@@ -940,13 +924,9 @@ namespace csrefLINQExamples
         */
         //</snippet18>
 
-        
     } // end class GroupExamples
 
-
     //Snippet22 is used up above out of sequence
-
-
 
     class HowToSubqueryAGroup : StudentClass
     {
@@ -983,7 +963,6 @@ namespace csrefLINQExamples
         }
         //</snippet23>
 
-        
     }
 
     //How to: Group a Group
@@ -1089,7 +1068,6 @@ namespace csrefLINQExamples
     }
     //</snippet25>
 
-
     //<snippet26>
     class DynamicPredicates : StudentClass
     {
@@ -1116,9 +1094,7 @@ namespace csrefLINQExamples
         }
     }
     //</snippet26>
-    
 
-   
     class DynamicPredicates2 : StudentClass
     {
         static void Main(string[] args)

@@ -16,10 +16,8 @@ namespace VbPowerPacksDataRepeaterVirtualModeCS
             InitializeComponent();
         }
 
-        
         private void VbPowerPacksDataRepeaterVirtualMode_Load(object sender, EventArgs e)
         {
-            
 
         }
         //<Snippet1>

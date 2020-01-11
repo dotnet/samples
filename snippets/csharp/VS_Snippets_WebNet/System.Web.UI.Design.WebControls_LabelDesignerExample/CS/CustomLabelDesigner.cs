@@ -68,4 +68,3 @@ namespace Examples.CS.WebControls.Design
     } // SampleLabelDesigner
 } // Examples.CS.WebControls.Design
 // </snippet1>
-

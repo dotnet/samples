@@ -8,7 +8,6 @@ using System.Drawing;
 using System.Configuration;
 using System.Windows.Forms;
 
-
 namespace AppSettingsSample
 {
 	static class Program
@@ -24,7 +23,6 @@ namespace AppSettingsSample
 			Application.Run(new Form1());
 		}
 	}
-
 
 	partial class Form1
 	{
@@ -122,7 +120,6 @@ namespace AppSettingsSample
         //</SNIPPET20>
 
 	}
-
 
     //<SNIPPET1>
     partial class Form1 : Form
@@ -255,7 +252,6 @@ namespace AppSettingsSample
             get { return (Size)this["FormSize"]; }
             set { this["FormSize"] = value; }
         }
-
 
         [UserScopedSettingAttribute()]
         [DefaultSettingValueAttribute("LightGray")]

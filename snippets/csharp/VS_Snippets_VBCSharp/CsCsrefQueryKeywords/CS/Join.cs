@@ -47,7 +47,6 @@ namespace Joins
         };
         #endregion
 
-
         static void Main(string[] args)
         {
             JoinDemonstration app = new JoinDemonstration();

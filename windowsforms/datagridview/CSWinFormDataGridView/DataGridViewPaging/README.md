@@ -1,5 +1,5 @@
 ## DataGridViewPaging Sample
-                        
+
 This sample demonstrates how to page data in the  DataGridView control;
 
 ## Code Logic

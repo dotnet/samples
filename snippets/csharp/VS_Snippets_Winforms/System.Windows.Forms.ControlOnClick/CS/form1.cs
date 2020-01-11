@@ -65,8 +65,5 @@ public class SingleClickTextBox: TextBox
 		base.OnClick(e);
 	}
 
-
 }
 //</snippet1>
-
-

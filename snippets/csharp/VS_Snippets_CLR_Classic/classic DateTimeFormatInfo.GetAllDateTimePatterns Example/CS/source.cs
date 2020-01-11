@@ -102,4 +102,3 @@ The patterns for 'R':
 */
 
 // </Snippet1>
-

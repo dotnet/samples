@@ -30,15 +30,12 @@ HttpModulesSection httpModulesSection = (HttpModulesSection) configuration.GetSe
 
 // </Snippet1>
 
- 
-
 // <Snippet2>
 
 // Create a new HttpModulesSection object.
 HttpModulesSection newHttpModulesSection = new HttpModulesSection();
 
 // </Snippet2>
-
 
 // <Snippet3>
 
@@ -60,4 +57,3 @@ for (int i = 0; i < httpModules.Count; i++)
 } // UsingHttpModulesSection class end.
 
 } // Samples.Aspnet.SystemWebManagement namespace end.
-

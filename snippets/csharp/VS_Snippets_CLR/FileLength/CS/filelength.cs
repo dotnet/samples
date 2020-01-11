@@ -39,4 +39,3 @@ public class FileLength
 //The size of UpdatePatch.txt is 30 bytes.
 //The size of wt3d.ini is 234 bytes.
 // </Snippet1>
-

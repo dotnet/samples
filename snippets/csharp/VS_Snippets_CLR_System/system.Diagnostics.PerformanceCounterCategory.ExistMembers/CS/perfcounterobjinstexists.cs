@@ -67,9 +67,3 @@ class PerfCounterCatObjInstExistsMod
     //</snippet2>
 }
 //</snippet1>
-
-
-
-
-
-

@@ -37,7 +37,6 @@ public partial class Insert : System.Web.UI.Page {
         if (mTbl != null)
             LblMetaTbl.Text = "Column count = " + mTbl.Columns.Count.ToString();
 
-
         var fldTmpUsrCtl = DetailsView1.FindFieldTemplate("Description") as FieldTemplateUserControl;
         if (fldTmpUsrCtl != null) {
             var entryFldDescript = fldTmpUsrCtl.DataControl as TextBox;

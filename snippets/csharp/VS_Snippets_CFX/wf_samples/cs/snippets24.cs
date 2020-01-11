@@ -45,7 +45,6 @@ namespace WF_Snippets
         public string Filter;
 
         public static DependencyProperty FileWatcherEventHandlerEvent = DependencyProperty.Register("FileWatcherEventHandler", typeof(EventHandler<FileWatcherEventArgs>), typeof(FileSystemEvent));
-        
 
         // <snippet221>
         void IEventActivity.Subscribe(ActivityExecutionContext parentContext, IActivityEventListener<QueueEventArgs> parentEventHandler)
@@ -218,7 +217,6 @@ namespace WF_Snippets
             InitializeComponent();
         }
 
-
         #region Email Message Properties
 
         [DesignerSerializationVisibilityAttribute(DesignerSerializationVisibility.Visible)]
@@ -238,7 +236,6 @@ namespace WF_Snippets
             }
         }
 
-
         [DesignerSerializationVisibilityAttribute(DesignerSerializationVisibility.Visible)]
         [BrowsableAttribute(true)]
         [DescriptionAttribute("The Subject property is used to specify the subject of the Email message.")]
@@ -255,7 +252,6 @@ namespace WF_Snippets
             }
         }
 
-
         [DesignerSerializationVisibilityAttribute(DesignerSerializationVisibility.Visible)]
         [BrowsableAttribute(true)]
         [DescriptionAttribute("The From property is used to specify the From (Sender's) address for the email mesage.")]
@@ -271,7 +267,6 @@ namespace WF_Snippets
                 base.SetValue(SendEmailActivity.FromProperty, value);
             }
         }
-
 
         // </snippet231>
         [DesignerSerializationVisibilityAttribute(DesignerSerializationVisibility.Visible)]
@@ -341,7 +336,6 @@ namespace WF_Snippets
                 base.SetValue(SendEmailActivity.BccProperty, value);
             }
         }
-
 
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         [Description("The email address that should be used for reply messages.")]
@@ -436,7 +430,6 @@ namespace WF_Snippets
 
         #region Activity Execution Logic
 
-
         ///    During execution the SendEmail activity should create and send the email using SMTP.  
 
         // <snippet233>
@@ -447,10 +440,8 @@ namespace WF_Snippets
                 // Raise the SendingEmail event to the parent workflow or activity
                 base.RaiseEvent(SendEmailActivity.SendingEmailEvent, this, EventArgs.Empty);
 
-
                 // Send the email now
                 this.SendEmailUsingSmtp();
-
 
                 // Raise the SentEmail event to the parent workflow or activity
                 base.RaiseEvent(SendEmailActivity.SentEmailEvent, this, EventArgs.Empty);
@@ -477,7 +468,6 @@ namespace WF_Snippets
             MailMessage message = new MailMessage();
             message.From = new MailAddress(this.From);
             message.To.Add(this.To);
-
 
             // Assign the message values if they are valid.
             if (!String.IsNullOrEmpty(this.CC))
@@ -507,14 +497,12 @@ namespace WF_Snippets
 
             message.IsBodyHtml = this.HtmlBody;
 
-
             // Set the SMTP host and send the mail
             client.Host = this.SmtpHost;
             client.Port = this.Port;
             client.Send(message);
         }
 
-        
         #endregion
 
     }
@@ -533,7 +521,6 @@ namespace WF_Snippets
 
             // Create a new collection for storing the validation errors
             ValidationErrorCollection validationErrors = base.ValidateProperties(manager, obj);
-
 
             SendEmailActivity activity = obj as SendEmailActivity;
             if (activity != null)
@@ -573,7 +560,6 @@ namespace WF_Snippets
             }
         }
         // </snippet235>
-
 
         private void ValidateSMTPProperties(ValidationErrorCollection validationErrors, SendEmailActivity activity)
         {
@@ -616,11 +602,7 @@ namespace WF_Snippets
 
         #region IServiceProvider Members
 
-        
-
         #endregion
-
-
 
         #region IServiceProvider Members
 
@@ -1146,7 +1128,6 @@ namespace WF_Snippets
             return unloadOnIdle;
         }
         // </snippet270>
-        
 
         // Serialize the activity instance state to file
         private void SerializeToFile(byte[] workflowBytes, Guid id)
@@ -1687,10 +1668,5 @@ namespace WF_Snippets
         }
         // </snippet296>
     }
-
-
-
-
-
 
 }

@@ -14,7 +14,6 @@ namespace CDSCountdownEvent
         public Data() { }
     }
 
-
     class Program
     {
         static void Main(string[] args)
@@ -31,7 +30,6 @@ namespace CDSCountdownEvent
             Thread.SpinWait(50000000);
             Console.WriteLine("Processed {0}", d.Num);
         }
-         
 
         static IEnumerable<Data> GetData()
         {
@@ -145,7 +143,6 @@ namespace CDSCountdownEvent
             // Event must have a count of at least 1
             CountdownEvent e = new CountdownEvent(1);
 
-
             // fork work:
             foreach (Data element in source)
             {
@@ -199,8 +196,6 @@ namespace CDSCountdownEvent
         static void SemaphoreWithCancel()
         {
 
-
-
             //<snippet03>
             IEnumerable<Data> source = GetData();
             CancellationTokenSource cts = new CancellationTokenSource();
@@ -211,7 +206,6 @@ namespace CDSCountdownEvent
                      if (Console.ReadKey().KeyChar == 'c')
                          cts.Cancel();
                  });
-
 
             // CountdownEvent e = new CountdownEvent(1);
             SemaphoreSlim ss = new SemaphoreSlim(2);
@@ -248,10 +242,7 @@ namespace CDSCountdownEvent
             //... 
             //</snippet03>
 
-
-
         } //end method
-
 
     } //end class
 } //end namespace

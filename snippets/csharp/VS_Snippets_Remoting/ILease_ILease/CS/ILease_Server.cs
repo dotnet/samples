@@ -5,7 +5,6 @@ using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting.Channels.Tcp;
 using System.Runtime.Remoting.Lifetime;
 
-
 namespace RemotingSamples
 {
    class HelloServer

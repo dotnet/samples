@@ -34,5 +34,3 @@ class Example
 //      at System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
 //      at System.Threading.ThreadPoolWorkQueue.Dispatch()
 // </Snippet3>
-
-

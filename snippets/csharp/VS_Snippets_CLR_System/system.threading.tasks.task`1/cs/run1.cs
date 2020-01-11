@@ -24,4 +24,3 @@ public class Example
 // The example displays output like the following:
 //        Finished 1,000,001 loop iterations.
 // </Snippet6>
-

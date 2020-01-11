@@ -57,7 +57,6 @@ namespace System.Drawing.ClassicFontExamplesCS
 		}
 		#endregion
 
-
         // Snippet for: M:System.Drawing.Font.Clone
         // <snippet1>
         public void Clone_Example(PaintEventArgs e)
@@ -73,7 +72,6 @@ namespace System.Drawing.ClassicFontExamplesCS
                 Brushes.Black, 0, 0);
         }
         // </snippet1>
-
 
         // Snippet for: M:System.Drawing.Font.Equals(System.Object)
         // <snippet2>
@@ -93,7 +91,6 @@ namespace System.Drawing.ClassicFontExamplesCS
         }
         // </snippet2>
 
-
         // Snippet for: M:System.Drawing.Font.FromHfont(System.IntPtr)
         // <snippet3>
         [System.Runtime.InteropServices.DllImportAttribute("gdi32.dll")]
@@ -111,13 +108,9 @@ namespace System.Drawing.ClassicFontExamplesCS
             e.Graphics.DrawString(
                 "This font is from a GDI HFONT", hfontFont,Brushes.Black, 
                 0, 0);
-               
-                
-                
-                
+
         }
         // </snippet3>
-
 
         // Snippet for: M:System.Drawing.Font.GetHashCode
         // <snippet4>
@@ -134,7 +127,6 @@ namespace System.Drawing.ClassicFontExamplesCS
             MessageBox.Show(hashCode.ToString());
         }
         // </snippet4>
-
 
         // Snippet for: M:System.Drawing.Font.GetHeight(System.Drawing.Graphics)
         // <snippet5>
@@ -160,7 +152,6 @@ namespace System.Drawing.ClassicFontExamplesCS
         }
         // </snippet5>
 
-
         // Snippet for: M:System.Drawing.Font.ToHfont
         // <snippet6>
 
@@ -183,7 +174,6 @@ namespace System.Drawing.ClassicFontExamplesCS
             DeleteObject(hFont);
         }
         // </snippet6>
-
 
         // Snippet for: M:System.Drawing.Font.ToString
         // <snippet7>

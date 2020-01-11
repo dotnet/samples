@@ -175,8 +175,6 @@ public class Evidence_Example
         return array;
     }
 
-
-
     // Main method.
     public static void Main()
     {

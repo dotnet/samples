@@ -6,7 +6,6 @@ using System.Windows.Forms;
 public class Form1:
 	System.Windows.Forms.Form
 
-
 {
 	#region " Windows Form Designer generated code "
 
@@ -83,4 +82,3 @@ public class Form1:
 	}
 	//</snippet1>
 }
-

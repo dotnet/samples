@@ -21,7 +21,6 @@ class Form1 : Form
         //InitializeLineTreeView();
     }
 
-    
     // <snippet1>
     // Declare the TreeView.
     private TreeView treeView1;
@@ -142,8 +141,6 @@ class Form1 : Form
 
     }
 
-   
-
     // The following example code demonstrates how to use the TreeNode.Level, 
     // TreeViewHitTestInfo.Node and TreeView.HitTest members.
     // To run this example create a Windows Form that contains a TreeView 
@@ -161,9 +158,6 @@ class Form1 : Form
         }
     }
 //</snippet3>
-
-
-
 
 // The following example demonstrates how to handle the NodeMouseClick event.
 

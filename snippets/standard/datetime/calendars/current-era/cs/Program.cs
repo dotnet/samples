@@ -13,6 +13,5 @@ public class Example
         Console.WriteLine($"Gregorian calendar date: {date:d}");
         Console.WriteLine($"Japanese calendar date: {date.ToString("d", jaJp)}");
 
-        
     }
 }

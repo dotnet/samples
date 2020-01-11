@@ -14,7 +14,6 @@
             taskA.Wait();
             Console.WriteLine("taskA has completed.");
 
-
             // Wait on a single task with a timeout specified.
             Task taskB = Task.Factory.StartNew(() => DoSomeWork(10000000));
             taskB.Wait(100); //Wait for 100 ms.
@@ -40,14 +39,12 @@
             tasks2[1] = Task<double>.Factory.StartNew(() => TrySolution2());
             tasks2[2] = Task<double>.Factory.StartNew(() => TrySolution3());
 
-
             int index = Task.WaitAny(tasks2);
             double d = tasks2[index].Result;
             Console.WriteLine("task[{0}] completed first with result of {1}.", index, d);
 
             Console.ReadKey();
         }
-
 
         static void DoSomeWork(int val)
         {
@@ -78,9 +75,6 @@
             return DateTime.Now.Millisecond;
         }
 
-        
     }
 
     //</snippet11>
-
-

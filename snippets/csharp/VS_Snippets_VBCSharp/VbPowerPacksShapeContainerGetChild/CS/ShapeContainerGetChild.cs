@@ -8,7 +8,6 @@ using System.Text;
 using System.Windows.Forms;
 using Microsoft.VisualBasic.PowerPacks;
 
-
 namespace VbPowerPacksShapeContainerGetChildCS
 {
     public partial class ShapeContainerGetChild : Form
@@ -28,6 +27,5 @@ namespace VbPowerPacksShapeContainerGetChildCS
         }
         // </Snippet1>
     }
-
 
 }

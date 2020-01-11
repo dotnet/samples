@@ -4,8 +4,7 @@ using CalcHVAs;
 using CalculatorContracts;
 
 namespace CalcHostSideAdapters {
-    
-    
+
 [HostAdapter]
 public class CalculatorContractToViewHostAdapter : Calculator {
 
@@ -19,7 +18,6 @@ public class CalculatorContractToViewHostAdapter : Calculator {
         _handle = new System.AddIn.Pipeline.ContractHandle(contract);
     }
 // </Snippet2>
-
 
     public override string Operations
     {

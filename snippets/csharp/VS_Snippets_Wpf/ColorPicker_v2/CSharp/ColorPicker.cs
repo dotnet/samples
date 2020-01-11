@@ -21,12 +21,10 @@ using System.Text;
 namespace Microsoft.Samples.CustomControls
 {
 
-
     #region ColorPicker
 
     public class ColorPicker : Control
     {
-
 
         static ColorPicker()
         {
@@ -43,7 +41,6 @@ namespace Microsoft.Samples.CustomControls
             SetValue(BProperty, m_color.B);
             SetValue(SelectedColorProperty, m_color);
         }
-
 
         #region Public Methods
 
@@ -67,10 +64,7 @@ namespace Microsoft.Samples.CustomControls
             setColor(SelectedColor);
         }
 
-
-
         #endregion
-
 
         #region Public Properties
 
@@ -87,7 +81,6 @@ namespace Microsoft.Samples.CustomControls
                 setColor((Color)value);
             }
         }
-
 
         #region RGB Properties
         // Gets or sets the ARGB alpha value of the selected color.
@@ -213,7 +206,6 @@ namespace Microsoft.Samples.CustomControls
 
         #endregion
 
-
         #region Public Events
 
         public event RoutedPropertyChangedEventHandler<Color> SelectedColorChanged
@@ -230,7 +222,6 @@ namespace Microsoft.Samples.CustomControls
         }
 
         #endregion
-
 
         #region Dependency Property Fields
         public static readonly DependencyProperty SelectedColorProperty =
@@ -307,7 +298,6 @@ namespace Microsoft.Samples.CustomControls
 
         #endregion
 
-
         #region RoutedEvent Fields
 
         public static readonly RoutedEvent SelectedColorChangedEvent = EventManager.RegisterRoutedEvent(
@@ -317,7 +307,6 @@ namespace Microsoft.Samples.CustomControls
             typeof(ColorPicker)
         );
         #endregion
-
 
         #region Property Changed Callbacks
 
@@ -351,7 +340,6 @@ namespace Microsoft.Samples.CustomControls
             SetValue(SelectedColorProperty, m_color);
         }
 
-
         private static void GChanged(DependencyObject d,
         DependencyPropertyChangedEventArgs e)
         {
@@ -367,7 +355,6 @@ namespace Microsoft.Samples.CustomControls
             SetValue(SelectedColorProperty, m_color);
         }
 
-
         private static void BChanged(DependencyObject d,
         DependencyPropertyChangedEventArgs e)
         {
@@ -381,7 +368,6 @@ namespace Microsoft.Samples.CustomControls
             SetValue(ScBProperty, m_color.ScB);
             SetValue(SelectedColorProperty, m_color);
         }
-
 
         private static void ScAChanged(DependencyObject d,
         DependencyPropertyChangedEventArgs e)
@@ -403,7 +389,6 @@ namespace Microsoft.Samples.CustomControls
             isAlphaChange = false;
         }
 
-
         private static void ScRChanged(DependencyObject d,
         DependencyPropertyChangedEventArgs e)
         {
@@ -423,7 +408,6 @@ namespace Microsoft.Samples.CustomControls
             }
         }
 
-
         private static void ScGChanged(DependencyObject d,
         DependencyPropertyChangedEventArgs e)
         {
@@ -442,7 +426,6 @@ namespace Microsoft.Samples.CustomControls
                 SetValue(HexadecimalStringProperty, m_color.ToString());
             }
         }
-
 
         private static void ScBChanged(DependencyObject d,
         DependencyPropertyChangedEventArgs e)
@@ -482,7 +465,6 @@ namespace Microsoft.Samples.CustomControls
             SetValue(GProperty, m_color.G);
             SetValue(BProperty, m_color.B);
 
-
             if (shouldFindPoint && !isAlphaChange)
             {
                 updateMarkerPosition(m_color);
@@ -508,9 +490,7 @@ namespace Microsoft.Samples.CustomControls
 //</SnippetRoutedEventArgsRoutedEvent>
         #endregion
 
-
         #region Template Part Event Handlers
-
 
         protected override void OnTemplateChanged(ControlTemplate oldTemplate, ControlTemplate newTemplate)
         {
@@ -527,7 +507,6 @@ namespace Microsoft.Samples.CustomControls
             }
             base.OnTemplateChanged(oldTemplate, newTemplate);
         }
-
 
         private void BaseColorChanged(
             object sender,
@@ -551,7 +530,6 @@ namespace Microsoft.Samples.CustomControls
 
         private void OnMouseMove(object sender, MouseEventArgs e)
         {
-
 
             if (e.LeftButton == MouseButtonState.Pressed)
             {
@@ -577,7 +555,6 @@ namespace Microsoft.Samples.CustomControls
         }
 
         #endregion
-
 
         #region Color Resolution Helpers
 
@@ -628,7 +605,6 @@ namespace Microsoft.Samples.CustomControls
 
         #endregion
 
-
         #region Private Fields
         private SpectrumSlider m_ColorSlider;
         private static readonly string ColorSliderName = "PART_ColorSlider";
@@ -646,6 +622,5 @@ namespace Microsoft.Samples.CustomControls
     }
 
     #endregion ColorPicker
-
 
 }

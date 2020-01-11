@@ -37,7 +37,6 @@ public class EnvironmentSample {
 		Console.WriteLine("StackTrace after calling Main()->OuterMethod()->InnerMethod():" + Environment.StackTrace);		
 	}
 	//</Snippet3>		
-	
-	
+
 }
 //</Snippet1>

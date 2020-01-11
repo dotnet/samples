@@ -86,6 +86,3 @@ public class CaptureForm:
 	//</snippet1>
 
 }
-
-
-

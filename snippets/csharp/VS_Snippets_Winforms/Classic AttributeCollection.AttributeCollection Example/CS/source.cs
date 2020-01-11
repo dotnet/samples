@@ -15,4 +15,3 @@ collection1 = TypeDescriptor.GetAttributes(button1);
 }
 // </Snippet1>
 }
-

@@ -4,7 +4,6 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
-
 class Alice
 {
     public static void Main(string[] args)
@@ -22,7 +21,6 @@ class Alice
              bob.Receive(data, signature);
             }
     }
-
 
 }
 public class Bob 

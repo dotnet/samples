@@ -30,7 +30,6 @@ public class Example
    }
 }
 
-
 public class T
 {}
 
@@ -48,4 +47,3 @@ public class Course
 
 public class Location
 {}
-

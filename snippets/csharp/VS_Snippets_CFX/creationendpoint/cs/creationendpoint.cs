@@ -106,7 +106,6 @@ namespace Microsoft.Samples.WF.CreationEndpoint
 // </Snippet1>
     }
 
-
     //service contract exposed from the endpoint
     [ServiceContract(Name = "IWorkflowCreation")]
     public interface IWorkflowCreation
@@ -119,4 +118,3 @@ namespace Microsoft.Samples.WF.CreationEndpoint
     }
 
 }
-

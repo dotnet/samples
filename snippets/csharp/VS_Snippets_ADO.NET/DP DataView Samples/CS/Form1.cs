@@ -39,7 +39,6 @@ namespace DataViewSamples
             string connectionString = "Data Source=localhost;Initial Catalog=AdventureWorks;"
                 + "Integrated Security=true;";
 
-
             SqlDataAdapter da = new SqlDataAdapter(
                 "SELECT SalesOrderID, ContactID, OrderDate, OnlineOrderFlag, " +
                 "TotalDue, SalesOrderNumber, Status, ShipToAddressID, BillToAddressID " +
@@ -319,8 +318,6 @@ namespace DataViewSamples
             // </SnippetCreateLDVFromQueryStringSort>
         }
 
-        
-
         private void button8_Click(object sender, EventArgs e)
         {
             // <SnippetCreateLDVFromQueryOrderByThenBy>
@@ -410,7 +407,6 @@ namespace DataViewSamples
             DataView view = contacts.AsDataView();
 
             view.RowFilter = "LastName='Zhu'";
-
 
             bindingSource1.DataSource = view;
             dataGridView1.AutoResizeColumns();
@@ -610,8 +606,6 @@ namespace DataViewSamples
             // </SnippetLDVClearRowFilter2>
         }
 
-        
-
         private void button26_Click(object sender, EventArgs e)
         {
             // <SnippetLDVClearSort2>
@@ -715,11 +709,5 @@ namespace DataViewSamples
             // </SnippetQueryDataView2>
         }
 
-        
-
-        
     }
 }
-
-
-

@@ -6,7 +6,6 @@ using System.Windows.Documents;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
-
 namespace TreeViewSnips
 {
     /// <summary>
@@ -70,7 +69,6 @@ namespace TreeViewSnips
             //control becomes unselected
         }
         //</SnippetChangeWineChoice>
-
 
         //<SnippetOnCollapsed>
         private void OnCollapsed(object sender, RoutedEventArgs e)

@@ -6,7 +6,6 @@ using System.Configuration;
 using System.Web.Configuration;
 using System.Web.UI;
 
-
 namespace Samples.Aspnet.SystemWebConfiguration
 {
   class UsingPagesSection

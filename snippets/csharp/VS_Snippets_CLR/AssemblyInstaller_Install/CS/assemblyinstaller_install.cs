@@ -52,7 +52,6 @@ class MyInstallClass
       {
       }
 
-
    }
 }
 // </Snippet2>

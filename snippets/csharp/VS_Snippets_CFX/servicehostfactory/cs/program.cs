@@ -13,8 +13,6 @@ namespace CS
 		string Hello(string message);
 	}
 
-
-
 	[ServiceContract]
 	public interface IHelloContract
 	{
@@ -36,7 +34,6 @@ namespace CS
 
 		public DerivedHost( Type t, params Uri[] baseAddresses ) : 
 						base( t, baseAddresses ) {} 
-
 
 		protected override void OnOpening() 
 		{ 
@@ -80,7 +77,6 @@ namespace CS
 	}
 	// </Snippet0>
 
-	
 	//To use this factory instead of the default factory,
 	//provide the type name in the @ServiceHost directive as follows:
 

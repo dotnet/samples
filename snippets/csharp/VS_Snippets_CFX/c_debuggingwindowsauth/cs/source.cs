@@ -117,7 +117,6 @@ namespace Samples
             return a * b;
         }
     }
-   
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
     public interface ICalculatorChannel : ICalculator, System.ServiceModel.IClientChannel

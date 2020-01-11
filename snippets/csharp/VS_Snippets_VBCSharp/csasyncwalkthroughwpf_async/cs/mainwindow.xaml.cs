@@ -58,7 +58,6 @@ namespace AsyncExampleWPF
             //</snippet26>
         }
 
-
         //<snippet22>
         private async Task SumPageSizesAsync()
         //</snippet22>
@@ -93,7 +92,6 @@ namespace AsyncExampleWPF
                 string.Format("\r\n\r\nTotal bytes returned:  {0}\r\n", total);
         }
 
-
         private List<string> SetUpURLList()
         {
             List<string> urls = new List<string> 
@@ -111,7 +109,6 @@ namespace AsyncExampleWPF
             };
             return urls;
         }
-
 
         //<snippet18>
         private async Task<byte[]> GetURLContentsAsync(string url)
@@ -159,7 +156,6 @@ namespace AsyncExampleWPF
             // Return the result as a byte array.
             return content.ToArray();
         }
-
 
         private void DisplayResults(string url, byte[] content)
         {

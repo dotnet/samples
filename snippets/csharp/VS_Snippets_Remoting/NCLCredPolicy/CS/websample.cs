@@ -114,7 +114,6 @@ using Microsoft.Win32;
         }
         // </snippet1>
 
-        
         private static string GetUserName()
         {
             return @"sharriso1\Jane";
@@ -227,4 +226,3 @@ Key: http://server1.someDomain.contoso.com  - HTTP/server1.someDomain.contoso.co
 
         }
     }
-

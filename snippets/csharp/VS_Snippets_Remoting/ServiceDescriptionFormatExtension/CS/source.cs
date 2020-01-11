@@ -9,7 +9,6 @@ using System.Web.Services.Description;
 using System.Web.Services.Protocols;
 using System.Xml.Serialization;
 
-
 // The YMLAttribute allows a developer to specify that the YML SOAP
 // extension run on a per-method basis.  The Disabled property
 // turns reversing the XML on and off. 
@@ -146,8 +145,6 @@ public class YMLReflector : SoapExtensionReflector
         }
     }
 }
-
-
 
 // The YMLImporter class is part of the YML SDFE, as it is called when a
 // proxy class is generated for each XML Web service method the proxy class

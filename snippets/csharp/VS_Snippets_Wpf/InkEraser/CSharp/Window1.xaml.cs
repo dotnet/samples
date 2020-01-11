@@ -6,7 +6,6 @@ using System.Windows.Documents;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
-
 namespace InkEraserDemo
 {
     /// <summary>
@@ -21,7 +20,6 @@ namespace InkEraserDemo
             InitializeComponent();
             
         }
-
 
         // To use Loaded event put Loaded="WindowLoaded" attribute in root element of .xaml file.
         // private void WindowLoaded(object sender, EventArgs e) {}

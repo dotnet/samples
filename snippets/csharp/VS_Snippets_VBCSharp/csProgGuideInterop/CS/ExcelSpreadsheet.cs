@@ -43,8 +43,6 @@ public class CreateExcelWorksheet
 }
 //</Snippet2>
 
-
-
 //-----------------------------------------------------------------------------
 namespace Microsoft.Office.Interop
 {
@@ -57,8 +55,7 @@ namespace Microsoft.Office.Interop
         xlWBATExcel4MacroSheet,
         xlWBATWorksheet
     }
- 
- 
+
     //-------------------------------------------------------------------------
     class Application
     {
@@ -76,7 +73,6 @@ namespace Microsoft.Office.Interop
         }
     }
 
-
     //-------------------------------------------------------------------------
     class Range
     {
@@ -87,7 +83,6 @@ namespace Microsoft.Office.Interop
             set{_Value2 = value;}
         }
     }
-
 
     //-------------------------------------------------------------------------
     class Worksheet
@@ -113,7 +108,6 @@ namespace Microsoft.Office.Interop
         }
     }
 
-
     //-------------------------------------------------------------------------
     class Worksheets
     {
@@ -131,7 +125,6 @@ namespace Microsoft.Office.Interop
         }
     }
 
-
     //-------------------------------------------------------------------------
     class Workbook
     {
@@ -141,7 +134,6 @@ namespace Microsoft.Office.Interop
             get{return _Worksheets;}
         }
     }
-
 
     //-------------------------------------------------------------------------
     class Workbooks

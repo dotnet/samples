@@ -17,7 +17,6 @@ public class Example
          Console.WriteLine("{0}: {1}, {2}", ctr, arr[ctr, 0], arr[ctr, 1]);
       Console.WriteLine();
 
-
       // Make a 2-D array smaller in the first dimension.
       arr = (int[,]) ResizeArray(arr, new int[] { 2, 2} );
       for (int ctr = 0; ctr <= arr.GetUpperBound(0); ctr++) 

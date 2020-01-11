@@ -6,7 +6,6 @@ using System.Data.SqlClient;
 using System;
 using System.Data.SqlClient;
 
-
 class Program
 {
     static void Main()
@@ -62,4 +61,3 @@ class Program
     }
 }
 // </Snippet1>
-

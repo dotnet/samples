@@ -20,7 +20,6 @@ public class SimpleDictionary : IDictionary
         items = new DictionaryEntry[numItems];
     }
 
-
     #region IDictionary Members
     //<snippet4>
     public bool IsReadOnly { get { return false; } }

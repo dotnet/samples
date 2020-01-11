@@ -6,10 +6,8 @@ using System.Windows.Media.Animation;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-
 namespace Microsoft.Samples.Animation.TimingBehaviors
 {
-
 
     public class EventExample : Page
     {
@@ -34,7 +32,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             StackPanel panel = new StackPanel();
             panel.Children.Add(myRectangle);
 
-
             Button badExampleButton = new Button();
             badExampleButton.Content = "Bad Example";
             badExampleButton.Click += delegate(object sender, RoutedEventArgs e)
@@ -51,15 +48,12 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             };
             panel.Children.Add(goodExampleButton);
 
-
-
             this.Content = panel;
         }
         
         private void initialExample()
         {
-            
-            
+
             Storyboard myStoryboard = new Storyboard();
             myStoryboard.Begin(myRectangle, true);
          
@@ -70,9 +64,7 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             // before the storyboard has stopped.
             myRectangle.Fill = Brushes.Blue;
             // </SnippetNeedForEventsFragment>
-            
-        
-        
+
         }
         
         private void betterExample()
@@ -98,8 +90,7 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             }
         }
         // </SnippetStoryboardCurrentStateInvalidatedEvent2>
-    
-    
+
     }
 
 }

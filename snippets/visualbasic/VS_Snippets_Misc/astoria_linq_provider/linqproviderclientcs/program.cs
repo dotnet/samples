@@ -19,7 +19,6 @@ namespace NorthwindClient
 
             var item = order.Order_Details.FirstOrDefault();
 
-
             item.Quantity += 1;
             context.UpdateObject(item);
             context.SaveChanges();

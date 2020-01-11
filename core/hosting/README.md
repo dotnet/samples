@@ -1,5 +1,4 @@
-Sample .NET Core Hosts
-======================
+# Sample .NET Core Hosts
 
 This folder contains sample code demonstrating how to host managed .NET Core code in a native process. These hosts bypass the usual `dotnet` host and launch managed code directly.
 
@@ -11,4 +10,4 @@ There are three samples demonstrating three different hosting interfaces for .NE
 
 These hosts are small and bypass a lot of complexity (probing for assemblies in multiple locations, thorough error checking, etc.) that a real host would have. Hopefully by remaining simple, though, they will be useful for demonstrating the core concepts of hosting managed .NET Core code in a native process. Other (more real-world) hosts which may be useful as a guide can be found in .NET Core product source in the [dotnet/coreclr](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts) repository.
 
-These samples are part of the [.NET Core hosting tutorial](https://docs.microsoft.com/dotnet/core/tutorials/netcore-hosting). Please see that topic for a more detailed explanation of the samples and the steps necessary to host .NET Core. 
+These samples are part of the [.NET Core hosting tutorial](https://docs.microsoft.com/dotnet/core/tutorials/netcore-hosting). Please see that topic for a more detailed explanation of the samples and the steps necessary to host .NET Core.

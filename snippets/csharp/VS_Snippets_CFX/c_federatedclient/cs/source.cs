@@ -48,5 +48,3 @@ namespace Samples
     }
 }
   //</snippet0>
-
-

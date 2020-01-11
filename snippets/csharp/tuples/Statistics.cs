@@ -126,7 +126,6 @@ namespace tuples
         #endregion
     }
 
-
     public static class StatisticsVersionSix
     {
         #region 10_Deconstruct

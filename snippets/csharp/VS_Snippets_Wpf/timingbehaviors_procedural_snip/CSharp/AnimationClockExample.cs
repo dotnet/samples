@@ -11,7 +11,6 @@ using System.Windows.Media;
 using System.Windows.Shapes;
 using System.Windows.Media.Animation;
 
-
 namespace Microsoft.Samples.Animation.TimingBehaviors
 {
     public class AnimationClockExample : Page
@@ -36,8 +35,7 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             myButton.Content = "Click Me";           
             myScaleTransform = new ScaleTransform(1,1);
             myButton.RenderTransform = myScaleTransform;
-            
-            
+
             // Associate an event handler with the
             // button's Click event.
             myButton.Click += new RoutedEventHandler(myButton_Clicked);

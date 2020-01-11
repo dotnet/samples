@@ -37,15 +37,12 @@ namespace MyUserControl
             }
         }
 
-
         private decimal _value = MinValue;
-
 
         /// <summary>
         /// Occurs when the Value property changes.
         /// </summary>
         public event EventHandler<EventArgs> ValueChanged;
-
 
         /// <summary>
         /// Raises the ValueChanged event.

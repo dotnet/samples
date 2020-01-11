@@ -7,7 +7,6 @@
 //  - Snippet20 can go in DataGridViewCell.AdjustCellBorderStyle()
 //  - Snippet30 can go in DataGridViewRow.AdjustRowHeaderBorderStyle()
 
-
 // <Snippet0>
 using System;
 using System.Drawing;

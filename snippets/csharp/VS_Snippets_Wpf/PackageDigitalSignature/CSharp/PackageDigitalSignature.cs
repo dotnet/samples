@@ -24,7 +24,6 @@ namespace SDKSample
         private static string _digitalSignatureUri =
             "/package/services/digital-signature/_rels/origin.psdsor.rels";
 
-
         //  ------------------------------ Main -------------------------------
         public static void Main()
         {
@@ -50,7 +49,6 @@ namespace SDKSample
                   _targetDirectory + "' folder.\n\nEnd of Program.";
             MessageBox.Show(msg, "End of Program", MessageBoxButton.OK);
         }
-
 
         //  -------------------------- CreatePackage --------------------------
         /// <summary>
@@ -120,7 +118,6 @@ namespace SDKSample
             }// end:using (package) - Close and dispose 'package'
 
         }// end:CreatePackage()
-
 
         //  ----------------------- ExtractPackageParts -----------------------
         /// <summary>
@@ -201,7 +198,6 @@ namespace SDKSample
 
         }// end:ExtractPackageParts()
 
-
         //  --------------------------- ExtractPart ---------------------------
         /// <summary>
         ///   Extracts a specified part from a given package.</summary>
@@ -233,7 +229,6 @@ namespace SDKSample
             }
         }// end:ExtractPart()
 
-
         //  --------------------------- CopyStream ---------------------------
         /// <summary>
         ///   Copies data from a source stream to a target stream.</summary>
@@ -249,7 +244,6 @@ namespace SDKSample
             while ((bytesRead = source.Read(buf, 0, bufSize)) > 0)
                 target.Write(buf, 0, bytesRead);
         }
-
 
         //<SnippetPackageDigSigValidate>
         // ------------------------ ValidateSignatures ------------------------
@@ -283,7 +277,6 @@ namespace SDKSample
 
         }// end:ValidateSignatures()
         //</SnippetPackageDigSigValidate>
-
 
         //<SnippetPackageDigSigSign>
         private static void SignAllParts(Package package)

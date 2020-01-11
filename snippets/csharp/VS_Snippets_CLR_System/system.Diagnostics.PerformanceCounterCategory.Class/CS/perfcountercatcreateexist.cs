@@ -207,7 +207,3 @@ class PerfCounterCatCreateExistMod
     //</Snippet25>
 }
 //</snippet27>
-
-
-
-

@@ -53,7 +53,6 @@
      }
      #endregion
 
-
      #region Main
      static void Main(string[] args)
      {
@@ -138,5 +137,3 @@
      #endregion
  }
 // </snippet01>
-
-

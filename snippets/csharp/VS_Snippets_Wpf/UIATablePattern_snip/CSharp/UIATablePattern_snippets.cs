@@ -101,8 +101,6 @@ namespace UIATablePattern_snip
         }
         // </SnippetGetTableElement>
 
-
-
         // <Snippet100>
         ///--------------------------------------------------------------------
         /// <summary>

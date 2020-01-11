@@ -38,4 +38,3 @@ public class Example
 //       Cancellation requested in Task 1.
 //       OperationCanceledException in Task 2: The operation was cancelled.
 // </Snippet2>
-

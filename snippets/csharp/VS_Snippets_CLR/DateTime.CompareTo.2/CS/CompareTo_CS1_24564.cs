@@ -14,7 +14,6 @@ public class DateTimeComparison
    {
       DateTime thisDate = DateTime.Today;
 
-
       // Define two DateTime objects for today's date 
       // next year and last year		
       DateTime thisDateNextYear, thisDateLastYear;

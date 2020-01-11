@@ -1,5 +1,4 @@
-﻿
-// <SnippetImageBrushExampleWholePage>
+﻿// <SnippetImageBrushExampleWholePage>
 
 using System;
 using System.Windows;

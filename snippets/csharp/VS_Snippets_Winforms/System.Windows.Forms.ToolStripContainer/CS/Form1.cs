@@ -7,7 +7,6 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-
 public class Form1 : Form
 {
     private ToolStripContainer tsc;

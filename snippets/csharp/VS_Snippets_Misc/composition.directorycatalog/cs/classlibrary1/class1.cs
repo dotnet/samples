@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.ComponentModel.Composition;
 
-
 namespace ClassLibrary1
 {
     //<snippet2>

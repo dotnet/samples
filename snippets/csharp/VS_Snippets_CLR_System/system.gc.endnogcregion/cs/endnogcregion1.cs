@@ -25,4 +25,3 @@ public class GC
    SustainedLowLatency = 3,
    NoGCRegion = 4
 }
-

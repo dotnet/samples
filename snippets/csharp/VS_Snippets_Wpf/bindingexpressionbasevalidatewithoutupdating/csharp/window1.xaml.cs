@@ -31,7 +31,6 @@ namespace BindingExpressionBaseValidateWithoutUpdating
         }
         //</SnippetValidateWithoutUpdate>
 
-
         // Show the validation error when one occurs.
         private void CallNum_Error(object sender, ValidationErrorEventArgs e)
         {

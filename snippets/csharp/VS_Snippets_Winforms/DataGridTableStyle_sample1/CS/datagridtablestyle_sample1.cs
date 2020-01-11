@@ -169,7 +169,6 @@ namespace SampleDataGridTableStyle
 // </Snippet2>
 // </Snippet1>
 
-      
       // Create a DataSet with two tables and populate it.
       private void MakeDataSet()
       {

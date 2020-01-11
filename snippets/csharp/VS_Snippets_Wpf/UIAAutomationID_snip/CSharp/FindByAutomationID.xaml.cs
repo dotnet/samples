@@ -56,7 +56,6 @@ namespace UIAAutomationID_snip
 
         public delegate void focusHandlerDelegate();
 
-
         ///--------------------------------------------------------------------
         /// <summary>
         /// Initialize the record and playback sample.
@@ -306,7 +305,6 @@ namespace UIAAutomationID_snip
         //        System.Windows.Threading.DispatcherPriority.Background,
         //        new focusHandlerDelegate(InitializeFocusTracker));
 
-            
             //AutomationFocusChangedEventHandler focusChangeListener = new AutomationFocusChangedEventHandler(OnFocusChange);
             //Automation.AddAutomationFocusChangedEventHandler(focusChangeListener);
         //}
@@ -367,7 +365,6 @@ namespace UIAAutomationID_snip
         private FindByAutomationID uiautoWorker;
 
         // </SnippetUIAWorkerThread>
-
 
         // <SnippetPlayback>
         ///--------------------------------------------------------------------
@@ -440,9 +437,6 @@ namespace UIAAutomationID_snip
             Console.WriteLine(automationID + " - " + eventID);
         }
         // </SnippetPlayback>
-
-
-
 
        //private void OnFocusChange(object src, PropertyChangedEventArgs e)
         //{

@@ -5,7 +5,6 @@ using System.Text;
 using System.Data.Linq;
 using System.Data.Linq.Mapping;
 
-
 namespace cs_conflictmodeenum
 {
     class Program

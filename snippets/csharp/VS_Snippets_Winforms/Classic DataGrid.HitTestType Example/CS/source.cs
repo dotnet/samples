@@ -28,8 +28,7 @@ private void dataGrid1_MouseDown
     switch(hit) {
     case(System.Windows.Forms.DataGrid.HitTestType.Cell):
        return "Cell";
-       
-       
+
     case(System.Windows.Forms.DataGrid.HitTestType.Caption):
        return "Caption";
        

@@ -1,6 +1,5 @@
 ﻿// System.Net.WebPermissionAttribute.Connect;System.Net.WebPermissionAttribute.Accept;
 
-
 using System;
 using System.Net;
 using System.Security;
@@ -28,8 +27,6 @@ public class WebPermissionAttribute_AcceptConnect
 // </Snippet1>
            
  }
-
-
 
  static void Main()
  {

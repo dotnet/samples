@@ -1,5 +1,4 @@
-﻿
-//<snippet1>
+﻿//<snippet1>
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -53,7 +52,6 @@ namespace AsyncTracer
             resultsTextBox.Text +=
                 String.Format("\r\nLength of the downloaded string: {0}.\r\n", contentLength);
         }
-
 
         async Task<int> AccessTheWebAsync()
         {
@@ -121,7 +119,6 @@ namespace AsyncTracer
 
 // Length of the downloaded string: 33946.
 
-
 namespace Outline
 {
     public partial class MainWindow : Window
@@ -139,7 +136,6 @@ namespace Outline
             //resultsTextBox.Text +=
                 String.Format("\r\nLength of the downloaded string: {0}.\r\n", contentLength);
         }
-
 
         async Task<int> AccessTheWebAsync()
         {

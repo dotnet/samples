@@ -69,7 +69,6 @@ namespace ControlProperties
       }
 #endregion
 
-
 //<snippet3>
 // Add a button to a form and set some of its common properties.
 private void AddMyButton()
@@ -123,7 +122,6 @@ private void AddMyGroupBox()
 }
 // </snippet2>
 
-
 // <snippet1>
 // Reset all the controls to the user's default Control color. 
 private void ResetAllControlsBackColor(Control control)
@@ -140,8 +138,6 @@ private void ResetAllControlsBackColor(Control control)
    }
 }
 // </snippet1>
-
-
 
      [STAThread]
       static void Main() 

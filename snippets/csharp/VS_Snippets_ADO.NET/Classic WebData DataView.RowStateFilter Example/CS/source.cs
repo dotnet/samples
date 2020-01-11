@@ -79,7 +79,6 @@ namespace DataViewRowStateFilterCS
             PrintView(dataView, "OriginalRows");
         }
 
-
         static private void PrintView(DataView dataView, string label)
         {
             Console.WriteLine("\n" + label);
@@ -89,7 +88,6 @@ namespace DataViewRowStateFilterCS
             }
         }
         // </Snippet1>
-
 
     }
 }

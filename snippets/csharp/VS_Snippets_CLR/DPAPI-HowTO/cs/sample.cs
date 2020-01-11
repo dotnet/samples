@@ -39,7 +39,6 @@ public class MemoryProtectionSample
 
             Console.WriteLine("Decrypted data: " + UnicodeEncoding.ASCII.GetString(toEncrypt));
 
-
             ///////////////////////////////
             //
             // Data Encryption - ProtectedData
@@ -76,7 +75,6 @@ public class MemoryProtectionSample
 
             Console.WriteLine("Decrypted data: " + UnicodeEncoding.ASCII.GetString(decryptData));
 
-
         }
         catch (Exception e)
         {
@@ -85,14 +83,12 @@ public class MemoryProtectionSample
 
     }
 
-
     public static void EncryptInMemoryData(byte[] Buffer, MemoryProtectionScope Scope )
     {
         if (Buffer == null)
             throw new ArgumentNullException("Buffer");
         if (Buffer.Length <= 0)
             throw new ArgumentException("Buffer");
-        
 
         // Encrypt the data in memory. The result is stored in the same array as the original data.
         ProtectedMemory.Protect(Buffer, Scope);
@@ -105,7 +101,6 @@ public class MemoryProtectionSample
             throw new ArgumentNullException("Buffer");
         if (Buffer.Length <= 0)
             throw new ArgumentException("Buffer");
-        
 
         // Decrypt the data in memory. The result is stored in the same array as the original data.
         ProtectedMemory.Unprotect(Buffer, Scope);
@@ -123,7 +118,6 @@ public class MemoryProtectionSample
 
         // Return the array.
         return entropy;
-
 
     }
 
@@ -168,9 +162,7 @@ public class MemoryProtectionSample
             throw new ArgumentNullException("Entropy");
         if (Entropy.Length <= 0)
             throw new ArgumentException("Entropy");
-        
 
-        
         byte[] inBuffer = new byte[Length];
         byte[] outBuffer;
 
@@ -190,7 +182,6 @@ public class MemoryProtectionSample
         return outBuffer;
 
     }
-
 
 }
 // </snippet1>

@@ -136,8 +136,7 @@ namespace Controls
 		{
 			Application.Run(new Form1());
 		}
-	
-	
+
 //<snippet3>		
 // Create two RadioButtons to add to the Panel.
 private RadioButton radioAddButton = new RadioButton();

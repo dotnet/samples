@@ -10,7 +10,6 @@ class EnumerateResources
         // Create a ResourceReader for the file items.resources.
         ResourceReader rr = new ResourceReader("items.resources"); 
 
-        
         // Create an IDictionaryEnumerator to iterate through the resources.
         IDictionaryEnumerator id = rr.GetEnumerator(); 
 

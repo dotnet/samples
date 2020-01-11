@@ -54,7 +54,3 @@ public class TimeArithmetic
    }
 }
 // </Snippet8>
-
-
-
-

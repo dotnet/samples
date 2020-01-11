@@ -26,4 +26,3 @@ private void MyEnumerator() {
 
 // </Snippet1>
 }
-

@@ -26,8 +26,6 @@ namespace DataGrid_FrozenColumns
         
         public static RoutedUICommand FreezeColumnCommand = new RoutedUICommand();
 
-        
-
         public Window1()
         {
             InitializeComponent();
@@ -61,7 +59,6 @@ namespace DataGrid_FrozenColumns
                header.Column.DisplayIndex = DG1.FrozenColumnCount;
                DG1.FrozenColumnCount++;
            }
-
 
         }
      

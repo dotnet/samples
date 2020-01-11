@@ -68,7 +68,6 @@ namespace RC2CryptoServiceProvider_Examples
                 }
 
             } while (b != -1);
- 
 
             // Display the original data and the decrypted data.
             Console.WriteLine("Original:   {0}", original);

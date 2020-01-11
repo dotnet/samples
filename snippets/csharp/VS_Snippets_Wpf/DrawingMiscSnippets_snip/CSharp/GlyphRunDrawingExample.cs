@@ -36,7 +36,6 @@ namespace SDKSample
                 null,
                 null
 
-
                 );
 
             GlyphRunDrawing gDrawing = new GlyphRunDrawing(Brushes.Black, theGlyphRun);
@@ -72,7 +71,6 @@ namespace SDKSample
             this.Background = Brushes.White;
             this.Content = exampleBorder;
         }
-
 
     }
 }

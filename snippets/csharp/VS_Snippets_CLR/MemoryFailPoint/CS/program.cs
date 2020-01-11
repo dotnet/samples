@@ -152,5 +152,3 @@ class MemoryFailPointExample
     }
 }
 //</Snippet1>
-
-

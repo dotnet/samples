@@ -52,7 +52,6 @@ namespace Microsoft.ServiceModel.Samples
             EndpointAddress ea = new
                 EndpointAddress("http://www.cohowinery.com:8000/FacadeService");
 
-
             CalculatorClient client = new CalculatorClient(subsystemBinding, ea);
 
             // Configure client with valid machine or domain account (username,password)

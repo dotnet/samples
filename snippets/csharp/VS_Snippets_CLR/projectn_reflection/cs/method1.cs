@@ -148,6 +148,5 @@ internal class TextBlock
       set { s = value; }
    }
 }
-   
 
 }

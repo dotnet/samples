@@ -65,7 +65,6 @@ namespace ManipulationAPI
 
             manipulationProcessor.Started += OnManipulationStarted2;
 
-
             manipulationProcessor.Delta += OnManipulationDelta;
             manipulationProcessor.Completed += OnManipulationCompleted;
 
@@ -207,7 +206,6 @@ namespace ManipulationAPI
             ProcessMouse(e.MouseDevice);
         }
 
-
         /// <summary>
         /// Here when the mouse moves.
         /// </summary>
@@ -270,7 +268,6 @@ namespace ManipulationAPI
             }
         }
 
-
         /// <summary>
         /// Here when the state of a checkbox changes.
         /// </summary>
@@ -294,7 +291,6 @@ namespace ManipulationAPI
         {
             IsPivotActive = !IsPivotActive;
         }
-
 
         /// <summary>
         /// Here when manipulation gives a delta.

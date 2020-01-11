@@ -44,7 +44,6 @@ namespace TextSyndicationContentSnippets
             // </Snippet4>
         }
 
-
         static void Main(string[] args)
         {
         }

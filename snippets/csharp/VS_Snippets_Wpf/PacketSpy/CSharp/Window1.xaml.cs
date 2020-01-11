@@ -23,7 +23,6 @@ namespace PacketSpy
     public partial class Window1 : Window
     {
         Rect constrainingRect;
-        
 
         public Window1()
         {
@@ -36,7 +35,6 @@ namespace PacketSpy
             inkCanvas1.StylusDown += new StylusDownEventHandler(inkCanvas1_StylusDown);
             inkCanvas1.StylusMove += new StylusEventHandler(inkCanvas1_StylusMove);
             inkCanvas1.PreviewMouseLeftButtonDown += new MouseButtonEventHandler(inkCanvas1_MouseLeftButtonDown);
-            
 
             inkCanvas1.DefaultStylusPointDescription = new StylusPointDescription(
                 new StylusPointPropertyInfo[] {
@@ -139,7 +137,6 @@ namespace PacketSpy
             point.X = x;
             //</Snippet14>
         }
-
 
         // **save this snippet!!!**
         //<Snippet15>
@@ -344,7 +341,6 @@ namespace PacketSpy
                                     new StylusPointPropertyInfo(StylusPointProperties.BarrelButton)
                                 });
 
-
             int[] propertyValues = { 1800, 1000, 1 };
 
             StylusPoint newStylusPoint = new StylusPoint(100, 100, .5f, newDescription, propertyValues);
@@ -432,7 +428,6 @@ namespace PacketSpy
             }
             //</Snippet10>
 
-
         }
 
         //public void AddStroke(System.Windows.Ink.Stroke stroke)
@@ -463,7 +458,6 @@ namespace PacketSpy
             //points.Insert(3, point);
 
             //points.Insert(2, point);
-
 
         }
 
@@ -556,7 +550,6 @@ namespace PacketSpy
             inkCanvas1.Strokes.Add(stroke2);
             //</Snippet18>
 
-            
         }
 
         void CompareDescriptions()

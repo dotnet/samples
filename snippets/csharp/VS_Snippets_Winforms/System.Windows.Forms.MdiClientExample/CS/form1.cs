@@ -50,11 +50,8 @@ public class Form1:
 
 	#endregion
 
-
-
 	// The following code example demonstrates using the IsMdiContainer
 	// property and changing the BackColor property of an MDI Form.
-
 
 	//<snippet1>
 
@@ -97,4 +94,3 @@ public class Form1:
 	}
 
 }
-

@@ -7,7 +7,6 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-
 // Sample implementation of IProducerConsumerCollection(T) 
 // -- in this case, a thread-safe stack.
 public class SafeStack<T> : IProducerConsumerCollection<T>
@@ -76,8 +75,6 @@ public class SafeStack<T> : IProducerConsumerCollection<T>
         lock (m_lockObject) m_sequentialStack.CopyTo(array, index);
     }
 
-
-
     //
     // Support for IEnumerable(T)
     //
@@ -89,7 +86,6 @@ public class SafeStack<T> : IProducerConsumerCollection<T>
         lock (m_lockObject) stackCopy = new Stack<T>(m_sequentialStack);
         return stackCopy.GetEnumerator();
     }
-
 
     //
     // Support for IEnumerable

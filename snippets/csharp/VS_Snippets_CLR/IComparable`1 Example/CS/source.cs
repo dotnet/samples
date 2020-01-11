@@ -107,6 +107,3 @@ public class Example
       Boiling point of Carbon is 4827 degrees Celsius.
 */
 //</snippet1>
-
-
-

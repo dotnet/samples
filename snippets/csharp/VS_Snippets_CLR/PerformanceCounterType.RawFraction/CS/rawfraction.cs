@@ -4,7 +4,6 @@ using System.Collections;
 using System.Collections.Specialized;
 using System.Diagnostics;
 
-
 public class App
 {
     private static PerformanceCounter PC;
@@ -29,10 +28,8 @@ public class App
     private static bool SetupCategory()
     {
 
-
         if (!PerformanceCounterCategory.Exists("RawFractionSampleCategory"))
         {
-
 
             CounterCreationDataCollection CCDC = new CounterCreationDataCollection();
 
@@ -114,7 +111,6 @@ public class App
 
     }
 
-
     private static void CalculateResults(ArrayList samplesList)
     {
         for (int i = 0; i < samplesList.Count; i++)
@@ -170,8 +166,6 @@ public class App
         Console.WriteLine("   TimeStamp100nSec = " + s.TimeStamp100nSec);
         Console.WriteLine("++++++++++++++++++++++");
     }
-
-
 
 }
 

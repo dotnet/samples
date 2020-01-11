@@ -9,7 +9,6 @@ using System.Windows.Controls.Primitives;
 using System.Collections.ObjectModel;
 using System.Xml;
 
-
 namespace SDKSample
 {
     /// <summary>

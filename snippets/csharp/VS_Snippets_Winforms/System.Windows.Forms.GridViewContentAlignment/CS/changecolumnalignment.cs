@@ -4,7 +4,6 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 
-
 public class Form1 : System.Windows.Forms.Form
 {
     /// <summary>

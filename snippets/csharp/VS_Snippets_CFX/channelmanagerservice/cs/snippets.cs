@@ -90,7 +90,6 @@ namespace ChannelManagerServiceSnippets
             }
         }
 
-
         protected override ServiceDescription CreateDescription(out IDictionary<string, ContractDescription> implementedContracts)
         {
             throw new NotImplementedException();

@@ -56,5 +56,4 @@ namespace Examples.NetworkInformation.Permissions
         }
     }
 
-
 }

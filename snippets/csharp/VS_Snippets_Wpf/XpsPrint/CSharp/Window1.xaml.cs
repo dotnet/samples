@@ -12,7 +12,6 @@ using System.Printing;
 using Microsoft.Win32;
 using SDKSampleHelper;
 
-
 namespace SDKSample
 {
     // ------------------------- partial class Window1 ------------------------
@@ -28,7 +27,6 @@ namespace SDKSample
             _contentDir = GetContentFolder();
             InitializeComponent();
         }
-
 
         // ------------------------- GetContentFolder -------------------------
         /// <summary>
@@ -59,7 +57,6 @@ namespace SDKSample
             return contentDir;
         }// end:GetContentFolder()
 
-
         // --------------------------- WindowLoaded ---------------------------
         /// <summary>
         ///   Called when the windows is initially loaded to display.</summary>
@@ -68,7 +65,6 @@ namespace SDKSample
             currentMode = eGuiMode.SingleVisual;
             cbMode.SelectedIndex = (int)currentMode;
         }
-
 
         // ----------------------- ContentDir getter --------------------------
         /// <summary>
@@ -79,7 +75,6 @@ namespace SDKSample
                 { return _contentDir; }
         }
 
-
         #region Button Event Handlers
         // -------------------------- OnBtnSaveClick --------------------------
         /// <summary>
@@ -89,7 +84,6 @@ namespace SDKSample
             ButtonHelperPrint(false);
         }
 
-
         // ----------------------- OnBtnSaveAsyncClick ------------------------
         /// <summary>
         ///   Called when the "Save (asynchronous)" button is clicked.</summary>
@@ -97,7 +91,6 @@ namespace SDKSample
         {
             ButtonHelperPrint(true);
         }
-
 
         // ------------------------ ButtonHelperPrint -------------------------
         /// <summary>
@@ -170,7 +163,6 @@ namespace SDKSample
             }// end:switch (currentMode)
         }// end:ButtonHelperSave()
 
-
         // ------------------------- OnBtnCancelClick -------------------------
         /// <summary>
         ///   Called when the asynchronous save
@@ -181,7 +173,6 @@ namespace SDKSample
         }
 
         #endregion // Button Event Handlers
-
 
         // -------------------------- AsyncPrintEvent -------------------------
         /// <summary>
@@ -214,7 +205,6 @@ namespace SDKSample
             }
         }// end:AsyncPrintEvent()
 
-
         // -------------------- GetContainerPathFromDialog --------------------
         /// <summary>
         ///   Dislays a Save As... dialog for the user to choose the path and
@@ -237,7 +227,6 @@ namespace SDKSample
             }
         }// end:GetContainerPathFromDialog()
 
-
         // ---------------------------- UIEnabled -----------------------------
         /// <summary>
         ///   Enables or disables the "Save synchronous", "Save
@@ -258,7 +247,6 @@ namespace SDKSample
             this.ApplyTemplate();
         }
 
-
         // -------------------------- OnCbModeChange --------------------------
         /// <summary>
         ///   Handles user changes to the combobox selection.</summary>
@@ -271,7 +259,6 @@ namespace SDKSample
             // Update window mode based on user selection
             UpdateUI((eGuiMode)cbMode.SelectedIndex);
         }
-
 
         // ------------------------------ UpdateUI ----------------------------
         /// <summary>
@@ -311,7 +298,6 @@ namespace SDKSample
             }
         }// end:UpdateUI()
 
-
         // ------------------------- LoadDocumentViewer -----------------------
         /// <summary>
         ///   Loads content from a file to a DocumentViewer control.</summary>
@@ -350,7 +336,6 @@ namespace SDKSample
 
         }// end:LoadDocumentViewer()
 
-
         #region Private Members
 
         // Helper class to support cancelling async print.
@@ -372,7 +357,6 @@ namespace SDKSample
         };
 
         #endregion //Private Members
-
 
     }// end:partial class Window1
 

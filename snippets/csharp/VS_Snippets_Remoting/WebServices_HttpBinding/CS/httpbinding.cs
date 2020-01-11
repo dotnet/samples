@@ -43,7 +43,6 @@ class MyClass
 // </Snippet2>
 // </Snippet1>
 
-
                // Create the 'OperationBinding' object.
                OperationBinding myOperationBinding = new OperationBinding();
                myOperationBinding.Name = "AddNumbers";
@@ -92,7 +91,6 @@ class MyClass
                postPort.Extensions.Add(postAddressBinding);
 // </Snippet4>
 // </Snippet3>
-
 
                // Add the 'Port' to 'PortCollection' of 'ServiceDescription'.
                myDescription.Services[0].Ports.Add(postPort);

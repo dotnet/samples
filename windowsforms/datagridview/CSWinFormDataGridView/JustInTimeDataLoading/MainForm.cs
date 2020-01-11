@@ -20,7 +20,6 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 #endregion
 
-
 namespace CSWinFormDataGridView.JustInTimeDataLoading
 {
     public partial class MainForm : Form

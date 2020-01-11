@@ -22,7 +22,6 @@ namespace Samples.Aspnet.SystemWebConfiguration
           (System.Web.Configuration.OutputCacheSettingsSection)webConfig.GetSection(
           configPath);
 
-         
 // </Snippet1>
 
 // <Snippet2>
@@ -43,4 +42,3 @@ namespace Samples.Aspnet.SystemWebConfiguration
   } // UsingOutputCacheSettingsSection class end.
   
 } // Samples.Aspnet.SystemWebConfiguration namespace end.
-

@@ -116,7 +116,6 @@ namespace Microsoft.ServiceModel.Samples
             // Add the transport
             bec.Add(transport);
 
-
             // return the binding elements
             return bec;
         }
@@ -212,7 +211,6 @@ namespace Microsoft.ServiceModel.Samples
             }
         }
 
- 
         public override string Scheme
         {
             get { return "http"; }

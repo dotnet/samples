@@ -20,4 +20,3 @@ using System.Security.Permissions;
    }
  }
 // </Snippet1>
-

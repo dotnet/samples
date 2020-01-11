@@ -11,8 +11,6 @@ namespace Microsoft.Samples.Graphics.Transforms
     public partial class app : Application
     {
 
-
-
 		void AppStartingUp(object sender, StartupEventArgs e)
 		{
 			AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);

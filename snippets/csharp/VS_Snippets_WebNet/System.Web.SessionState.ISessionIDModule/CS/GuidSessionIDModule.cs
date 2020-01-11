@@ -5,7 +5,6 @@ using System.Web.Configuration;
 using System.Web;
 using System.Web.SessionState;
 
-
 namespace Samples.AspNet.Session
 {
 
@@ -16,7 +15,6 @@ namespace Samples.AspNet.Session
     {
       return Guid.NewGuid().ToString();
     }
-
 
     public override bool Validate(string id)
     {
@@ -36,4 +34,3 @@ namespace Samples.AspNet.Session
   }
 }
 //</Snippet7>
-

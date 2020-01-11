@@ -13,7 +13,6 @@
    This example also shows how to create a custom proxy.
 */
 
-
 // <Snippet1>
 using System;
 using System.Collections;
@@ -80,10 +79,8 @@ namespace IMethodCallMessageNS
          return myReturnMessage;
       }
 
-
    }
-  
-   
+
    // The class used to obtain Metadata.
    [PermissionSet(SecurityAction.Demand, Name="FullTrust")]
    public class MyMarshalByRefClass : MarshalByRefObject

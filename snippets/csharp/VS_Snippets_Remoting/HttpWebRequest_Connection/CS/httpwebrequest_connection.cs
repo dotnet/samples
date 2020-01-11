@@ -11,7 +11,6 @@
   * Headers are displayed to the console.
   * The contents of the HTML page of the requested URI are displayed. 
   **/
-
 using System;
 using System.IO;
 using System.Net;

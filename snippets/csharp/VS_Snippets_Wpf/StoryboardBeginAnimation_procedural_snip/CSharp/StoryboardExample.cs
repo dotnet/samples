@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -7,7 +6,6 @@ using System.Windows.Media.Animation;
 
 namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
 {
-
 
     // Uses a storyboard to animate the properties
     // of two buttons.

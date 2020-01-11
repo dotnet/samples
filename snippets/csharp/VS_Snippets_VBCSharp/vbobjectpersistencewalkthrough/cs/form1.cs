@@ -78,7 +78,6 @@ namespace VbObjectPersistenceWalkthroughCS
         private TextBox textBox3 = new TextBox();
         private TextBox textBox4 = new TextBox();
 
-
         //<Snippet2>
         private LoanClass.Loan TestLoan = new LoanClass.Loan(10000.0, 0.075, 36, "Neil Black");
 
@@ -99,7 +98,6 @@ namespace VbObjectPersistenceWalkthroughCS
         }
         //</Snippet3>
     }
-
 
     public class Form3 : Form
     {

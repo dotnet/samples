@@ -32,7 +32,6 @@ public class Sync_Send_Receive
         return 0;
     }
     //</Snippet1>
- 
 
     // Displays receiving from a connected tcp socket
     // using the overload that takes a buffer.
@@ -63,8 +62,7 @@ public class Sync_Send_Receive
         }
         return 0;
     }
-   
-    
+
     //<Snippet2>
     // Displays sending with a connected socket
     // using the overload that takes a buffer and socket flags.
@@ -320,7 +318,6 @@ public class Sync_Send_Receive
     }
     //</Snippet12>
 
-
     public static void RunUdpTests()
     {
         // Test the upd versions.
@@ -433,11 +430,9 @@ public class Sync_Send_Receive
                 s.Close();
             }
         }
- 
-       
+
         return 0;
         
     }
  
 }
-

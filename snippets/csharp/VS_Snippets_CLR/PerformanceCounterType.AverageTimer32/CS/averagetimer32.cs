@@ -1,5 +1,4 @@
-﻿
-// Notice that the sample is conditionally compiled for Everett vs.
+﻿// Notice that the sample is conditionally compiled for Everett vs.
 // Whidbey builds.  Whidbey introduced new APIs that are not available
 // in Everett.  Snippet IDs do not overlap between Whidbey and Everett;
 // Snippet #1 is Everett, Snippet #2 and #3 are Whidbey.
@@ -190,7 +189,6 @@ public class App
 #else
 // Build sample for Whidbey or higher.
 
-
 //<snippet2>
 
 using System;
@@ -224,9 +222,6 @@ public class App
         CollectSamples(samplesList);
         CalculateResults(samplesList);
     }
-
-
-
 
     private static bool SetupCategory()
     {
@@ -279,7 +274,6 @@ public class App
         BPC.RawValue = 0;
     }
 
-
     private static void CollectSamples(ArrayList samplesList)
     {
 
@@ -322,8 +316,6 @@ public class App
 
         }
     }
-
-
 
     //++++++++//++++++++//++++++++//++++++++//++++++++//++++++++//+++++++
     // PERF_AVERAGE_TIMER

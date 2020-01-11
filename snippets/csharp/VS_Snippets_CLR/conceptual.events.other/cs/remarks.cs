@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 
 // Code section for remarks
 namespace EventRemarks

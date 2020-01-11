@@ -1,5 +1,4 @@
-﻿
-// <Snippet15>
+﻿// <Snippet15>
 using System;
 
 public struct UDouble

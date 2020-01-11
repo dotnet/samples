@@ -14,7 +14,6 @@ using System.Security.Permissions;
 using System.ServiceModel;
 using System.ServiceModel.Description;
 
-
 namespace DCSurrogateSample
 {
     static class Program
@@ -269,7 +268,6 @@ namespace DCSurrogateSample
                 }
             //</snippet8>
         }
-                
 
         private void WSDLImport(string metadataAddress )
         {
@@ -311,15 +309,12 @@ namespace DCSurrogateSample
                 xsdInventoryExporter = (XsdDataContractExporter)dataContractExporter;
             exporter.State.Add(typeof(XsdDataContractExporter), xsdInventoryExporter);
 
-            
-
             if (xsdInventoryExporter.Options == null)
                 xsdInventoryExporter.Options = new ExportOptions();
             xsdInventoryExporter.Options.DataContractSurrogate = new InventorySurrogated();
             //</snippet10>
         }
     }
-
 
     public class InventoryCheck
     {
@@ -373,5 +368,3 @@ namespace DCSurrogateSample
         #endregion
     }
 }
-
-

@@ -30,7 +30,6 @@ class MainFunction
            { Write2Console("\n   Success: obj = " + obj.ToString(), 1 ); }
 	}
 
-         
     static void Write2Console(String s, int color)
         {
         Console.ForegroundColor = color == 1? ConsoleColor.Green : ConsoleColor.Red;

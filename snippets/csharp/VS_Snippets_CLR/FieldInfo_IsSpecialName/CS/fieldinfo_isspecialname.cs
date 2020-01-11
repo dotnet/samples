@@ -3,7 +3,6 @@ using System;
 using System.Reflection;
 using System.ComponentModel.Design;
 
-
 class FieldInfo_IsSpecialName
 {
     public static void Main()

@@ -69,7 +69,6 @@ var panelElement = document.getElementById('{0}');
                    updatePanel.ClientID,
                    ColorTranslator.ToHtml(BorderColor));
 
-
                 ScriptManager.RegisterStartupScript(
                     this,
                     typeof(UpdatePanelAnimationWithClientResource),

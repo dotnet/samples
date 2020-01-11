@@ -8,7 +8,6 @@ class DirectoryFileCount
     static long files = 0;
     static long directories = 0;
 
-
     static void Main()
     {
         try

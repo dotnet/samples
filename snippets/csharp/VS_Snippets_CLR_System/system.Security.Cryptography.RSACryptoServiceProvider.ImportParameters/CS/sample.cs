@@ -26,7 +26,6 @@ class RSACSPSample
                 }
             }
 
-
         }
         catch (CryptographicException e)
         {
@@ -38,5 +37,3 @@ class RSACSPSample
         // </Snippet1>
     }
 }
-
-

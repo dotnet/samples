@@ -1,5 +1,4 @@
-﻿
-using System.Drawing;
+﻿using System.Drawing;
 using System;
 using System.Windows.Forms;
 
@@ -137,6 +136,3 @@ public class Form1:
     }
 
 }
-
-
-

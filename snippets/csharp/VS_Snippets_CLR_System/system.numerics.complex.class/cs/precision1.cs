@@ -34,4 +34,3 @@ public class Example
 
 // Complex minusOne = new Complex(-1,0);
 // Complex.Sqrt(minusOne) returns Complex(6.12303176911189E-17, 1) where as it returns Complex on IA64.
-

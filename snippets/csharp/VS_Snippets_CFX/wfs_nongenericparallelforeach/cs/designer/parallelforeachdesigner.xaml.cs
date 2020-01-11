@@ -17,4 +17,3 @@ namespace Microsoft.Samples.Activities.Statements.Presentation
         }       
     }
 }
-

@@ -38,7 +38,6 @@ namespace AsyncExampleWPF
             //</snippet2>
         }
 
-
         //<snippet3>
         private void SumPageSizes()
         {
@@ -62,7 +61,6 @@ namespace AsyncExampleWPF
                 string.Format("\r\n\r\nTotal bytes returned:  {0}\r\n", total);
         }
 
-
         private List<string> SetUpURLList()
         {
             var urls = new List<string> 
@@ -80,7 +78,6 @@ namespace AsyncExampleWPF
             };
             return urls;
         }
-
 
         private byte[] GetURLContents(string url)
         {
@@ -106,7 +103,6 @@ namespace AsyncExampleWPF
             // Return the result as a byte array.
             return content.ToArray();
         }
-
 
         private void DisplayResults(string url, byte[] content)
         {

@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using Microsoft.Office.Interop.Excel;
 
-
 public class Program
 {
     static void Main(string[] args)
@@ -35,4 +34,3 @@ public class Client
     }
 }
 //</Snippet5>
-

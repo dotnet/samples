@@ -20,7 +20,6 @@ namespace Samples.AspNet.CS
     private ArrayList siteMapNodes = null;
     private ArrayList childParentRelationship = null;
 
-
     // A default constructor. The Name property is initialized in the
     // Initialize method.
     public SimpleTextSiteMapProvider()

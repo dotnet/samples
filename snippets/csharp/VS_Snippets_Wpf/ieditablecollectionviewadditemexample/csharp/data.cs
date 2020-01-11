@@ -109,7 +109,6 @@ namespace IEditableCollectionViewAddItemExample
 
     }
 
-
     public class MusicCD : LibraryItem
     {
         private struct MusicData
@@ -262,7 +261,6 @@ namespace IEditableCollectionViewAddItemExample
 
         private MovieData currentData;
         private MovieData copyData;
-
 
         public MovieDVD(string title, string director, string genre, TimeSpan length, string callnum, DateTime dueDate)
             : base(title, callnum, dueDate)

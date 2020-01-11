@@ -23,4 +23,3 @@ public class Example
 //       at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
 //       at Example.Main()
 // </Snippet4>
-

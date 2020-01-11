@@ -7,7 +7,6 @@ using System.ServiceModel.Description;
 using System.Xml;
 using System.Runtime.Serialization;
 
-
 namespace Microsoft.ServiceModel.Samples
 {
     //The service contract is defined in generatedClient.cs, generated from the service by the svcutil tool.
@@ -18,7 +17,6 @@ namespace Microsoft.ServiceModel.Samples
         static void Main()
         {
             string outputFile = "c:\\temp\\test";
-            
 
             //<Snippet0>
             EndpointAddress mexAddress = new EndpointAddress("http://localhost:8000/ServiceModelSamples/service/mex");
@@ -46,7 +44,6 @@ namespace Microsoft.ServiceModel.Samples
                 throw new Exception("There were errors during code compilation.");
             //</Snippet3>
 
-
             // Write the code dom
             //<Snippet4>
             System.CodeDom.Compiler.CodeGeneratorOptions options = new System.CodeDom.Compiler.CodeGeneratorOptions();
@@ -56,7 +53,6 @@ namespace Microsoft.ServiceModel.Samples
 			codeDomProvider.GenerateCodeFromCompileUnit(generator.TargetCompileUnit, textWriter, options);
 			textWriter.Close();
             //</Snippet4>
-
 
             Console.WriteLine();
             Console.WriteLine("Press <ENTER> to terminate client.");

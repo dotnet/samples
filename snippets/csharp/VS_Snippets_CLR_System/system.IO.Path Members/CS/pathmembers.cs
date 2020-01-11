@@ -33,7 +33,6 @@ public class PathSnippets
         Console.WriteLine();
     }
 
-
     public void Combine()
     {
         // <Snippet2>
@@ -224,7 +223,6 @@ public class PathSnippets
         Console.WriteLine();
     }
 
-
     public void GetTempFileName()
     {
         // <Snippet9>
@@ -254,7 +252,6 @@ public class PathSnippets
         Console.WriteLine();
     }
 
-    
     public void GetTempPath()
     {
         // <Snippet10>
@@ -273,7 +270,6 @@ public class PathSnippets
                     
         Console.WriteLine();
     }
-
 
     public void HasExtension()
     {

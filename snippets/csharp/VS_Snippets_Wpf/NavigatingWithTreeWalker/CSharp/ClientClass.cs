@@ -80,7 +80,6 @@ namespace NavigateWithTreeWalker
             mainForm.tbStructure.Text = structureStr;
         }
 
-
         /// <summary>
         /// Retrieves a list of all the patterns supported by the control.
         /// </summary>
@@ -175,7 +174,6 @@ namespace NavigateWithTreeWalker
             }
             treeDepth--;
         }
-
 
         /// <summary>
         /// Initiates the building of the string that describes the automation structure
@@ -286,7 +284,6 @@ namespace NavigateWithTreeWalker
             }
         }
 
-
         /// <summary>
         /// Removes the event handlers.
         /// </summary>
@@ -304,7 +301,6 @@ namespace NavigateWithTreeWalker
                 return;
             }
         }
-
 
         /// <summary>
         /// Initializes UI automation by finding the target form, adding event handlers,

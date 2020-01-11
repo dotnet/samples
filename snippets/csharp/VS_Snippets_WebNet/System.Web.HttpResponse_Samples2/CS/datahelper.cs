@@ -22,7 +22,6 @@ namespace Samples.AspNet.CS
             DataView Source =
               (DataView)ctxtCurrent.Cache["bookData"];
 
-
             // If not in the cache, create the DataView
             // from the source XML file.            
             if (Source == null)
@@ -68,7 +67,6 @@ namespace Samples.AspNet.CS
             DataView Source =
               (DataView)ctxtCurrent.Cache["authorData"];
 
-
             // If not in the cache, create the DataView
             // from the source XML file.            
             if (Source == null)
@@ -103,10 +101,8 @@ namespace Samples.AspNet.CS
             return Source;
           
         }
-        
 
     }
-    
-    
+
 }
 // </snippet1>

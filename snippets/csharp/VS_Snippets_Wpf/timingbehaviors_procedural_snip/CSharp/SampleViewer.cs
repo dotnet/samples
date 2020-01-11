@@ -1,5 +1,4 @@
-﻿
-// <Snippet101>
+﻿// <Snippet101>
 // EllipseGeometryExample.cs
 //
 // This sample demonstrates how to animate the center
@@ -13,7 +12,6 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using System.Windows.Controls;
 using HexConverter;
-
 
 namespace Microsoft.Samples.Animation.TimingBehavior
 {
@@ -38,7 +36,6 @@ namespace Microsoft.Samples.Animation.TimingBehavior
             myFrame.Background = Brushes.White;
             myTabControl.Items.Add(myTabItem);
 
-
             myTabItem = new TabItem();
             myTabItem.Header = "AutoReverse Example";
             myFrame = new Frame();
@@ -53,7 +50,6 @@ namespace Microsoft.Samples.Animation.TimingBehavior
             //myFrame.Content = new BeginTimeExample();
             myFrame.Background = Brushes.White;
             myTabControl.Items.Add(myTabItem);
-
 
             myTabItem = new TabItem();
             myTabItem.Header = "FillBehavior Example";

@@ -259,4 +259,3 @@ class DataGridViewRowPainting : Form
     //</Snippet40>
 }
 //</Snippet00>
-

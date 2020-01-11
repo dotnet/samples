@@ -21,4 +21,3 @@ public class Example
 //       'Yes.' ends in a period: True
 //       'randomize' ends in a period: False
 // </Snippet1>
-

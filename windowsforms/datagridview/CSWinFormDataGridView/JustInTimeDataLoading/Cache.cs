@@ -195,7 +195,6 @@ namespace CSWinFormDataGridView.JustInTimeDataLoading
 
     #endregion 
 
-
     #region IDataPageRetriever Interface
 
     public interface IDataPageRetriever
@@ -204,7 +203,6 @@ namespace CSWinFormDataGridView.JustInTimeDataLoading
     }
 
     #endregion
-
 
     #region DataRetriever Class
 

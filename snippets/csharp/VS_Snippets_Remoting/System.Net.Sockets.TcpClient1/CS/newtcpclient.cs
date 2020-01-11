@@ -126,7 +126,6 @@ namespace newTcpClient
         }
         // </Snippet6>
 
-
         [STAThread]
         static void Main(string[] args)
         {
@@ -141,7 +140,6 @@ namespace newTcpClient
             DoBeginConnect1("127.0.0.1", 80);
             DoBeginConnect2("127.0.0.1", 80);
             DoBeginConnect3("127.0.0.1", 80);
-
 
             Console.WriteLine("Press ENTER to exit");
             Console.Read();

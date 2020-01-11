@@ -69,7 +69,6 @@ public class Example
       return true;
    }
 
-
 }
 
 // <Snippet2>

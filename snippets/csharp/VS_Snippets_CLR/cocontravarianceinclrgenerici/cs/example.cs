@@ -24,6 +24,3 @@ class Derived : Base
     }
 }
 //</Snippet1>
-
-
-

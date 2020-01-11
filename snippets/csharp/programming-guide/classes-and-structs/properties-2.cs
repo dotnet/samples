@@ -24,4 +24,3 @@ public class Example
 }
 // The example displays the following output:
 //      Magnus Hedlund
-

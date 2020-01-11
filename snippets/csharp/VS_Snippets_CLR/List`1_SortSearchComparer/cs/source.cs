@@ -162,5 +162,3 @@ Mamenchisaurus
 Pachycephalosaurus
  */
 // </Snippet1>
-
-

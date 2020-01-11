@@ -112,8 +112,3 @@ namespace Microsoft.Samples.KeyFrameExamples
     }
 }
 // </SnippetColorAnimationUsingKeyFramesWholePage>
-
-
-
-
-

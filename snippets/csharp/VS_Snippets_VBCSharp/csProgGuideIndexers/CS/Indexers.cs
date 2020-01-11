@@ -1,6 +1,4 @@
-﻿
-//using System;  prefer to fully qualified all but the most extremely long references
-
+﻿//using System;  prefer to fully qualified all but the most extremely long references
 
 //<Snippet1>
 class TempRecord
@@ -66,7 +64,6 @@ class MainClass
     */
 //</Snippet1>
 
-
 //<Snippet2>
 // Using a string as an indexer value
 class DayCollection
@@ -116,7 +113,6 @@ class Program
 // Output: 5
 //</Snippet2>
 
-
 //<Snippet3>
 public interface ISomeInterface
 {
@@ -130,7 +126,6 @@ public interface ISomeInterface
     }
 }
 //</Snippet3>
-
 
 namespace Wrap
 {
@@ -200,8 +195,6 @@ namespace Wrap
 
     //</Snippet4>
 }
-
-
 
 namespace Wrap2
 {
@@ -286,7 +279,6 @@ namespace Wrap2
     //</Snippet5>
 }
 
-
 class Test
 {
 
@@ -306,7 +298,6 @@ class Test
     }
     //</Snippet6>
 }
-
 
 //<Snippet7>
 public class Parent
@@ -332,7 +323,6 @@ public class Kid : Parent
     }
 }
 //</Snippet7>
-
 
 namespace WrapISomeInterface
 {
@@ -362,7 +352,6 @@ namespace WrapISomeInterface
     }
     //</Snippet8>
 }
-
 
 namespace WrapProgram
 {

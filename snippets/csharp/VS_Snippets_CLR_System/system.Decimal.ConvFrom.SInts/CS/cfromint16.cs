@@ -24,4 +24,3 @@ class Example
 //       12345 (Int16) --> 12345 (Decimal)
 //       -10000 (Int16) --> -10000 (Decimal)
 //</Snippet3>
-

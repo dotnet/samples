@@ -29,12 +29,7 @@ class ADAppendPrivatePath
 		//Display the new relative search path.
 		Console.WriteLine("Relative search path is now: " + domain.RelativeSearchPath);
 
- 
 		AppDomain.Unload(domain);	
 	}
 }
 //  </SNIPPET1>
-
-
-
-

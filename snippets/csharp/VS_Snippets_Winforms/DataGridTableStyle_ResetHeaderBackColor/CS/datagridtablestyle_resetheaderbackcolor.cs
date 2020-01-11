@@ -100,7 +100,6 @@ public class Form1 : Form
          myDataGrid.TableStyles.Add(myDataTableStyle);
       }
 
-
    private void MakeDataSet()
    {
       myDataSet = new DataSet("myDataSet");

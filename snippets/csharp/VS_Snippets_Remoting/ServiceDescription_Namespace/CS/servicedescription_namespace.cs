@@ -7,7 +7,6 @@ using System;
 using System.Web.Services;
 using System.Web.Services.Description;
 
-
 namespace ServiceDescription1
 {
    class MyService

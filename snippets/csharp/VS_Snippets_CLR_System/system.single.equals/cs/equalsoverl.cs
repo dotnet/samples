@@ -87,4 +87,3 @@ public class Example
 //       value = dbl1:                False
 //       112 (Single) = 112 (Double): False
 // </Snippet2>
-

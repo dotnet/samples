@@ -5,7 +5,6 @@ using System.Printing;
 using System.IO;
 using System.Threading;
 
-
 namespace BatchPrintXPSFiles
 {
     //<SnippetBatchPrintXPSFiles>

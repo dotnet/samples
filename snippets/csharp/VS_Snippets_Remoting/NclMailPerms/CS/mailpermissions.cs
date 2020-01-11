@@ -1,11 +1,9 @@
-﻿
-// NCLMailPerms
+﻿// NCLMailPerms
 
 using System;
 using System.Net;
 using System.Net.Mail;
 using System.Net.Mime;
-
 
 namespace Examples.SmtpExamples.Permissions
 {
@@ -85,7 +83,6 @@ namespace Examples.SmtpExamples.Permissions
 // </snippet8>
     public static void Main()
     {
-
 
     }
     }

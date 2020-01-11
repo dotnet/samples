@@ -14,5 +14,3 @@ class C
         //</Snippet1>
     }
 }
-
-

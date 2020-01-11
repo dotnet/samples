@@ -43,4 +43,3 @@ class TestMotorcycle : Motorcycle
 }
 //</Snippet41>
 }
-

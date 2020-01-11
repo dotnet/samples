@@ -7,8 +7,6 @@ using System.Xml.Xsl;
 using System.Xml.Schema;
 
 public class XmlSchemaObjectGenerator {
-  
-  
 
     private static void ValidationCallback(object sender, ValidationEventArgs args ){
   
@@ -19,11 +17,9 @@ public class XmlSchemaObjectGenerator {
   
 	Console.WriteLine(args.Message);
     }
-	                  
-            
+
     public static void Main() {
-               
-		 
+
 	  XmlTextReader tr = new XmlTextReader("empty.xsd");
         XmlSchema schema = XmlSchema.Read(tr, new ValidationEventHandler(ValidationCallback));
         
@@ -101,8 +97,6 @@ public class XmlSchemaObjectGenerator {
             }
         
 	    schema.Write(Console.Out);
-
-         
 
     }/* Main() */ 
 

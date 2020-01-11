@@ -107,7 +107,6 @@ namespace Samples.AspNet
                     "/", "Default Web Site", null, 
                     machineName, userName, password);
 
-
                 // Add a new key/value pair to appSettings
                 string count =
                     config.AppSettings.Settings.Count.ToString();

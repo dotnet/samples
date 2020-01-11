@@ -1,5 +1,4 @@
-﻿
-//<snippet9>
+﻿//<snippet9>
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -104,7 +103,6 @@ namespace AsyncReturnTypes
         }
         //</snippet1>
 
-
         //<snippet5>
         // TASK EXAMPLE
         async Task Task_MethodAsync()
@@ -140,4 +138,3 @@ namespace AsyncReturnTypes
 
 // All done, exiting button-click event handler.
 //</snippet10>
-

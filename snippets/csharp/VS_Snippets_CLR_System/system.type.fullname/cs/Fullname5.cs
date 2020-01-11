@@ -35,7 +35,6 @@ public class Example
       Console.WriteLine("   Generic Type Definition: {0}\n",
                         t.IsGenericTypeDefinition);                 
 
-
    }
 }
 // The example displays the following output:
@@ -52,4 +51,3 @@ public class Example
 //          Contains Generic Paramters: True
 //          Generic Type Definition: True
 // </Snippet5>
-

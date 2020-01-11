@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Shapes;
 using System.Windows.Media.Animation;
 
-
 namespace Microsoft.Samples.Animation.TimingBehaviors
 {
     public partial class ControlStoryboardExample : Page
@@ -136,9 +135,7 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
              myStoryboard.Stop(this);          
         
         }         
-        
-        
-        
+
     }
 }
 // </SnippetControlStoryboardExampleUsingWholePage>

@@ -2,7 +2,6 @@
 using System;
 using System.Security.Permissions;
 
-
 namespace TransparencyWarningsDemo
 {
 
@@ -10,7 +9,6 @@ namespace TransparencyWarningsDemo
     {
         [SecurityPermission(SecurityAction.LinkDemand, UnmanagedCode = true)]
         public void LinkDemandMethod() { }
-
 
         public void TransparentMethod()
         {

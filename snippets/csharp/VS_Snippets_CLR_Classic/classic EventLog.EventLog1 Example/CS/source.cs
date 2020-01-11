@@ -6,7 +6,6 @@ using System.Threading;
 class MySample
 {
 
-
     public static void Main()
     {
         // Create the source, if it does not already exist.

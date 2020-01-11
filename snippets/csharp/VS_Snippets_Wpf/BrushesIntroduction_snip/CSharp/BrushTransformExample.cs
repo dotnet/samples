@@ -80,7 +80,6 @@ namespace BrushesIntroduction
 
             // </SnippetImageBrushTransformExample>
 
-
             StackPanel mainPanel = new StackPanel();
             mainPanel.Children.Add(noTransformImageBrushRectangle);
             mainPanel.Children.Add(relativeTransformImageBrushRectangle);
@@ -89,13 +88,9 @@ namespace BrushesIntroduction
             Content = mainPanel;
             Title = "Transforming Brushes";
             Background = Brushes.White;
-            
 
         }
-
 
     }
 }
 // </SnippetBrushTransformExampleWholePage> 
-
-

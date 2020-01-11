@@ -41,5 +41,3 @@ class Example
 //         Please enter your selection: 2
 //         Please insert 50 cents.
 //         Thank you for your business.
-
-

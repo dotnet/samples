@@ -29,12 +29,10 @@ System.Configuration.Configuration configuration = System.Web.Configuration.WebC
 System.Web.Configuration.IdentitySection identitySection = (System.Web.Configuration.IdentitySection)configuration.GetSection("system.web/identity");
 // </Snippet1>
 
-
 // <Snippet2>
 // Create a new IdentitySection object.
 System.Web.Configuration.IdentitySection newidentitySection = new System.Web.Configuration.IdentitySection();
 // </Snippet2>
-
 
 // <Snippet3>
 // Get the Password property value.
@@ -44,7 +42,6 @@ string currentPassword = identitySection.Password;
 identitySection.Password = "userPassword";
 // </Snippet3>
 
-
 // <Snippet4>
 // Get the UserName property value.
 string currentUserName = identitySection.UserName;
@@ -52,7 +49,6 @@ string currentUserName = identitySection.UserName;
 // Set the UserName property value.
 identitySection.UserName = "userName";
 // </Snippet4>
-
 
 // <Snippet5>
 // Get the Impersonate property value.
@@ -72,4 +68,3 @@ Console.WriteLine("Error" + e.ToString());
 } // UsingIdentitySection class end.
 
 } // Samples.Aspnet.SystemWebConfiguration namespace end.
-

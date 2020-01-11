@@ -97,7 +97,6 @@ public class Test
         }
     }
 
-
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
     public class CalculatorClient : System.ServiceModel.ClientBase<ICalculator>, ICalculator

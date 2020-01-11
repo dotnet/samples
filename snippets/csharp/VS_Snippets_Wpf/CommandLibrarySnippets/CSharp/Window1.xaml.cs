@@ -6,7 +6,6 @@ using System.Windows.Documents;
 using System.Windows.Media;
 using System.Windows.Input;
 
-
 namespace SDKSamples
 {
     /// <summary>
@@ -20,10 +19,7 @@ namespace SDKSamples
         {
             InitializeComponent();
 
-           
-
         }
-
 
         // <SnippetKeyGestureGetProperties>
         private void CmdExecutedHandler(object sender, ExecutedRoutedEventArgs e)
@@ -52,7 +48,6 @@ namespace SDKSamples
 
         private void OnLoaded(object sender, RoutedEventArgs e)
         {
-
 
             // <SnippetKeyBindingKeyGestureSetProperties>
             // Defining the KeyGesture.
@@ -161,7 +156,6 @@ namespace SDKSamples
             RootWindow.InputBindings.Add(NewMouseBinding);
             // </SnippetMouseBindingGesture>
         }
-
 
         private void MyCommandExecute(object sender, ExecutedRoutedEventArgs e)
         {

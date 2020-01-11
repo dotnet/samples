@@ -26,12 +26,10 @@ namespace Microsoft.ServiceModel.Samples
             if (!System.Messaging.MessageQueue.Exists(deadLetterQueueName))
                 System.Messaging.MessageQueue.Create(deadLetterQueueName, true);
 
-     
             OrderProcessorClient client = new OrderProcessorClient("OrderProcessorEndpoint");
 	    try
             {	
 
-            
                 // Create the purchase order.
                 PurchaseOrder po = new PurchaseOrder();
                 po.CustomerId = "somecustomer.com";
@@ -59,7 +57,6 @@ namespace Microsoft.ServiceModel.Samples
                     // Complete the transaction.
                     scope.Complete();
                 }
-
 
                 client.Close();
             }

@@ -6,7 +6,6 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Reflection;
 using System.Security.Permissions;
 
-
 class App 
 {
     [STAThread]
@@ -44,7 +43,6 @@ class App
         }
     }
 
-   
     static void Deserialize() 
     {
         // Declare the Version2Type reference.
@@ -83,13 +81,11 @@ class App
     }
 }
 
-
 [Serializable]
 class Version1Type 
 {
     public Int32 x;
 }
-
 
 [Serializable]
 class Version2Type : ISerializable 
@@ -125,7 +121,6 @@ class Version2Type : ISerializable
         }
     }
 }
-
 
 sealed class Version1ToVersion2DeserializationBinder : SerializationBinder 
 {

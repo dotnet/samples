@@ -27,8 +27,6 @@ public abstract class MyFakeAbstract
         }
 }
 
-
-
 public class MyExtension: MyFakeAbstract
 {
 //<snippet1>

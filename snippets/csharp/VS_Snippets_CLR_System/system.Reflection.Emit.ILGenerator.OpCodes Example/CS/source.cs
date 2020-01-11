@@ -30,7 +30,6 @@ class EmitWriteLineDemo {
        FieldBuilder yField = pointTypeBld.DefineField("y", typeof(int), 
                                                       FieldAttributes.Public);
 
-
        Type objType = Type.GetType("System.Object"); 
        ConstructorInfo objCtor = objType.GetConstructor(new Type[0]);
 
@@ -39,7 +38,6 @@ class EmitWriteLineDemo {
 				                   CallingConventions.Standard,
 				                   ctorParams);
        ILGenerator ctorIL = pointCtor.GetILGenerator();
-
 
        // First, you build the constructor.
        ctorIL.Emit(OpCodes.Ldarg_0);
@@ -63,7 +61,6 @@ class EmitWriteLineDemo {
                                              typeof(void), 
                                              null);
 
-       
        ILGenerator writeStrIL = writeStrMthd.GetILGenerator();
       
        // The below ILGenerator created demonstrates a few ways to create

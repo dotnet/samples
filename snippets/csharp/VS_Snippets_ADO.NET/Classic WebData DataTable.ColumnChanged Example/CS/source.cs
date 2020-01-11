@@ -25,7 +25,6 @@ public class Sample
         custTable.ColumnChanged += new 
             DataColumnChangeEventHandler(Column_Changed );
 
-
         // add ten rows
         for(int id=1; id<=10; id++)
         {

@@ -165,8 +165,7 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
         // Seeks the clock.
         private void seekButton_Clicked(object sender, RoutedEventArgs e)
         {
-            
-           
+
             try {
                 
                 // Obtain the seek amount from the seekAmountTextBox TextBox.
@@ -200,8 +199,7 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
                 seekButton.IsEnabled = false;
             else 
                 seekButton.IsEnabled = true;
-            
-        
+
         }
  
     }

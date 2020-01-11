@@ -1,5 +1,4 @@
-﻿
-//<snippet7>
+﻿//<snippet7>
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,7 +32,6 @@ namespace CancelAfterOneTask
             InitializeComponent();
         }
 
-
         private async void startButton_Click(object sender, RoutedEventArgs e)
         {
             // Instantiate the CancellationTokenSource.
@@ -59,7 +57,6 @@ namespace CancelAfterOneTask
             cts = null;
         }
 
-
         // You can still include a Cancel button if you want to.
         private void cancelButton_Click(object sender, RoutedEventArgs e)
         {
@@ -68,7 +65,6 @@ namespace CancelAfterOneTask
                 cts.Cancel();
             }
         }
-
 
         // Provide a parameter for the CancellationToken.
         async Task AccessTheWebAsync(CancellationToken ct)
@@ -124,7 +120,6 @@ namespace CancelAfterOneTask
             //</snippet6>
         }
 
-
         //<snippet1>
         // ***Bundle the processing steps for a website into one async method.
         async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken ct)
@@ -138,7 +133,6 @@ namespace CancelAfterOneTask
             return urlContents.Length;
         }
         //</snippet1>
-
 
         // Add a method that creates a list of web addresses.
         private List<string> SetUpURLList()

@@ -9,7 +9,6 @@ using System.ServiceModel;
 using System.ServiceModel.Activities;
 using System.Xml.Linq;
 
-
 namespace Microsoft.Samples.WorkflowServicesSamples.EchoWorkflowClient
 {
 

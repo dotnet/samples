@@ -75,7 +75,6 @@ namespace AdvancedInkInputSemples
 
             //DrawRect(cdr.Rect);
 
-
         }
 
         public void ChangeDAOnCustomDR()
@@ -191,7 +190,6 @@ namespace AdvancedInkInputSemples
 
         }
 
-
         public bool AddRemoveDynamicRenderer()
         {
             bool containsPlugin = this.StylusPlugIns.Contains(dynamicRenderer1);
@@ -290,7 +288,6 @@ namespace AdvancedInkInputSemples
         }
         //</Snippet4>
 
-
         //public override bool EnsureVisuals()
         //{
         //    bool baseReturn = base.EnsureVisuals();
@@ -340,7 +337,6 @@ namespace AdvancedInkInputSemples
             StylusPointCollection eventPoints = e.GetStylusPoints(this, stylusPoints.Description);
 
             stylusPoints.Add(eventPoints);
-
 
         }
 
@@ -410,7 +406,6 @@ namespace AdvancedInkInputSemples
         //        return;
         //    }
 
- 
         //    Stroke stroke = new Stroke(stylusPoints, currentAttributes.Clone());
 
         //    // Add the new stroke to the Strokes collection of the InkPresenter

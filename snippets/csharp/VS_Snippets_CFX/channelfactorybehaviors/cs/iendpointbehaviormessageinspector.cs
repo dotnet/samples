@@ -63,7 +63,6 @@ namespace Microsoft.WCF.Documentation
     }
     //</snippet2>
 
-
     #region IClientMessageInspector Members
 
     public void AfterReceiveReply(ref System.ServiceModel.Channels.Message reply, object correlationState)

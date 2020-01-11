@@ -128,4 +128,3 @@ namespace Microsoft.Samples.ChannelCache.EchoWorkflowService
         }
     }
 }
-

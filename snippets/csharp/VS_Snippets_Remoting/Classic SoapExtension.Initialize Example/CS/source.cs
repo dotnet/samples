@@ -3,7 +3,6 @@
   using System.Web.Services.Protocols;
   using System.IO;
 
-
   // Define a SOAP Extension that traces the SOAP request and SOAP response
   // for the XML Web service method, the SOAP extension is applied to.
 
@@ -22,7 +21,6 @@
     public override object GetInitializer(Type filename) {
         return (Type) filename;
     }
-
 
 // <Snippet1>
     // Receive the file name stored by GetInitializer and store it in
@@ -55,7 +53,6 @@
             throw new Exception("invalid stage");
         }
     }
-
 
     // Save the Stream representing the SOAP request or SOAP response into a local memory buffer
     public override Stream ChainStream( Stream stream ){
@@ -123,7 +120,6 @@
         }
     }
   }
-
 
 public class myentrypoint {
 

@@ -18,7 +18,6 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 //</SnippetUsing>
 
-
 namespace DataGrid_CustomColumns
 {
     /// <summary>
@@ -63,12 +62,10 @@ namespace DataGrid_CustomColumns
             AdventureWorksLT2008DataSetTableAdapters.CustomerTableAdapter ctadapter = new DataGrid_CustomColumns.AdventureWorksLT2008DataSetTableAdapters.CustomerTableAdapter();
             AdventureWorksLT2008DataSet.CustomerDataTable dt = new AdventureWorksLT2008DataSet.CustomerDataTable();
             ctadapter.Fill(dt);
-            
-            
+
             OrderStatus[] custstatus= {OrderStatus.New, OrderStatus.Received, OrderStatus.None, OrderStatus.Shipped, OrderStatus.New, OrderStatus.Processing,
                                       OrderStatus.Received, OrderStatus.None, OrderStatus.Shipped, OrderStatus.New};
             bool[] IsMember = { true, true, false, true, false, true, true, false, true, false };
-
 
             ObservableCollection<Customer> customers = new ObservableCollection<Customer>();
 
@@ -85,14 +82,11 @@ namespace DataGrid_CustomColumns
                 customers.Add(c);
             }
 
-
             return customers;
         //<SnippetGetDataEnd>
         }
         //</SnippetGetDataEnd>
 
-    
-       
     //<SnippetAllEnd>   
     }
     //</SnippetAllEnd> 
@@ -128,6 +122,5 @@ namespace DataGrid_CustomColumns
         }
     }
     //</SnippetHyperlink3>
-
 
 }

@@ -38,7 +38,6 @@ class Program
             Console.WriteLine($"\tCount after: {mediaFiles1.Count}");
             // </Snippet4>
 
-
             Console.WriteLine();
 
             // <Snippet5>
@@ -119,7 +118,6 @@ class Program
     }
     // </Snippet8>
 
-
 }
 
 // <Snippet9>
@@ -153,5 +151,3 @@ public class ByFileExtension : IComparer<string>
 }
 // </Snippet9>
 // </Snippet1>
-
-

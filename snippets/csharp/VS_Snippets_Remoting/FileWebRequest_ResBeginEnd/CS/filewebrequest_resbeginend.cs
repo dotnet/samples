@@ -7,7 +7,6 @@
   class a 'FileWebResponse' object is obtained which is used to print the content on the file.
 */
 
-
 using System;
 using System.Net;
 using System.IO;
@@ -25,8 +24,7 @@ using System.Threading;
 			myFileWebRequest = null;
 		}
 	}
-	
-	
+
 	class FileWebRequest_resbeginend
 	{
 
@@ -45,19 +43,16 @@ using System.Threading;
 		      try
             {
 
-
 			      // Place a 'Webrequest'.
 			      WebRequest myWebRequest= WebRequest.Create("file://"+args[0]);
 			      // Create an instance of the 'RequestDeclare' and associating the 'myWebRequest' to it.		
 			      RequestDeclare myRequestDeclare = new RequestDeclare();
 			      myRequestDeclare.myFileWebRequest = (FileWebRequest)myWebRequest;
-			  
 
 			      // Begin the Asynchronous request for getting file content using 'BeginGetResponse()' method.	
 			      IAsyncResult asyncResult =(IAsyncResult) myRequestDeclare.myFileWebRequest.BeginGetResponse(new AsyncCallback(RespCallback),myRequestDeclare);			
 			      allDone.WaitOne();
 
-	        
 			   }
             catch(ArgumentNullException e)
 			   {
@@ -73,7 +68,6 @@ using System.Threading;
 	  private static void RespCallback(IAsyncResult ar)
 	  {	
 
-
 			   // State of request is asynchronous.
 				RequestDeclare requestDeclare=(RequestDeclare) ar.AsyncState;
 					
@@ -83,10 +77,8 @@ using System.Threading;
 				
 				FileWebResponse myFileWebResponse = (FileWebResponse) myFileWebRequest.EndGetResponse(ar);
 
-
 			    // Reade the response into Stream.
 				StreamReader streamReader= new StreamReader(myFileWebResponse.GetResponseStream());
-
 
 				Char[] readBuffer = new Char[256];
 					

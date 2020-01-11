@@ -10,12 +10,10 @@ public class HelloServiceClass : MarshalByRefObject {
         Console.WriteLine(this.GetType().Name + " has been created.  Instance # = {0}", n_instance);
     }
 
-
     ~HelloServiceClass() {
         Console.WriteLine("Destroyed instance {0} of HelloServiceClass.", n_instance);
         n_instance --;
     }
-
 
     public String HelloMethod(String name) {
 

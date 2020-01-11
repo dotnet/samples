@@ -87,7 +87,6 @@ namespace DlgOpenFileReadOnly_CS
         OpenFileDialog dlgOpenFile = new OpenFileDialog();
         dlgOpenFile.ShowReadOnly = true;
 
-
         if(dlgOpenFile.ShowDialog() == DialogResult.OK)
         {
 

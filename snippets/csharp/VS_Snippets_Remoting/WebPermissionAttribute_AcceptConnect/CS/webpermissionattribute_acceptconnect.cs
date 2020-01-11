@@ -2,7 +2,6 @@
 
 // Demonstrate how to use the WebPermissionAttribute to specify an allowable ConnectPattern.
 
-
 using System;
 using System.Net;
 using System.Security;

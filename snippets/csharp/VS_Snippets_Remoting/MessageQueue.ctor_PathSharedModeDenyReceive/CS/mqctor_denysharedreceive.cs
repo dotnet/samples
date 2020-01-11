@@ -28,7 +28,6 @@ namespace MyProject
 			return;
 		}
 
-
 		//**************************************************
 		// Requests exlusive read access to the queue. If
 		// access is granted, receives a message from the 

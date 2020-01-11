@@ -50,4 +50,3 @@ public class Example
 //    Date formatted for the fr-FR culture: mardi 15 mai 2012 16:34
 //    Date formatted for de-DE culture: Dienstag, 15. Mai 2012 16:34
 // </Snippet1>   
-   

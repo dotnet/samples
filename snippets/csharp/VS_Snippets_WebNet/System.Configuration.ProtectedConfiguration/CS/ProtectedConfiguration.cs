@@ -10,8 +10,6 @@ namespace Samples.AspNet
     // Show how to use the ProtectedConfiguration.
     public sealed class UsingProtectedConfiguration
     {
-        
-       
 
         // <Snippet3>
         [PermissionSet(SecurityAction.Demand, Name="FullTrust")]    
@@ -69,20 +67,16 @@ namespace Samples.AspNet
                  protectedSectionName);
             // </Snippet6>
 
-
         }
-
 
         static void Main(string[] args)
         {
 
-           
             // Get current and Rsa provider names.
             GetProviderName();
 
             // Get the providers' collection.
             GetProviders();
-    
 
         }
     }    

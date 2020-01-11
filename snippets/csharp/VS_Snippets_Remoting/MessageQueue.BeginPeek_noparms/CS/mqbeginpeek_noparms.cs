@@ -36,7 +36,6 @@ namespace MyProject
 			return;
 		}
 
-
 		//**************************************************
 		// Provides an event handler for the PeekCompleted
 		// event.

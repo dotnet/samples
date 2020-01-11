@@ -5,7 +5,6 @@ using System.Xml.XPath;
 using System.Xml.Xsl;
 using System.IO;
 
-
 namespace XPathExtensionFunctions
 {
     class Program

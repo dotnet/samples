@@ -18,5 +18,3 @@ namespace RemotingSamples
       }
    }
 }
-
-  

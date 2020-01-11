@@ -164,7 +164,6 @@ namespace SDKSample
             }
         }
 
-
         // Create a DrawingVisual that contains an ellipse.
         private DrawingVisual CreateDrawingVisualEllipses()
         {

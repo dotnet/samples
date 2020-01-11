@@ -6,14 +6,12 @@ By using the 'Accept' and 'Connect' properties of 'WebPermissionAttribute' accep
 has been given to the uri www.contoso.com.
 */
 
-
 using System;
 using System.Net;
 using System.Security;
 using System.Security.Permissions;
 using System.IO;
 using System.Text.RegularExpressions;
-
 
 public class WebPermissionAttribute_AcceptConnect{
 //<Snippet1>    

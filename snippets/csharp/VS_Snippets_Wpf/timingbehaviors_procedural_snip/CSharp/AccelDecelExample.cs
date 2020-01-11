@@ -72,7 +72,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             acceleratedAndDeceleratedRectangle.HorizontalAlignment = HorizontalAlignment.Left;
             myStackPanel.Children.Add(acceleratedAndDeceleratedRectangle);
 
-
             //
             // Creates an animation without acceleration or deceleration for comparison
             //
@@ -82,7 +81,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             myDoubleAnimation.From = 20;
             myDoubleAnimation.To = 400;
             myDoubleAnimation.Duration = new Duration( TimeSpan.FromMilliseconds(10000));
-
 
             //
             // Creates an animation that accelerates through 40% of its duration.
@@ -95,8 +93,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             myAcceleratedAnimation.Duration = new Duration( TimeSpan.FromMilliseconds(10000));
             myAcceleratedAnimation.AccelerationRatio = 0.4;
 
-
-
             //
             // Creates an animation that decelerates through 60% of its duration.
             //
@@ -107,7 +103,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             myDeceleratedAnimation.To = 400;
             myDeceleratedAnimation.Duration = new Duration( TimeSpan.FromMilliseconds(10000));
             myDeceleratedAnimation.DecelerationRatio = 0.6;
-
 
             //
             // Creates an animation that accelerates through 40% of its duration and
@@ -122,7 +117,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             myAcceleratedAndDeceleratedAnimation.Duration = new Duration( TimeSpan.FromMilliseconds(10000));
             myAcceleratedAndDeceleratedAnimation.AccelerationRatio = 0.4;
             myAcceleratedAndDeceleratedAnimation.DecelerationRatio = 0.6;
-
 
             // Create a Storyboard to contain the animations and
             // add the animations to the Storyboard.

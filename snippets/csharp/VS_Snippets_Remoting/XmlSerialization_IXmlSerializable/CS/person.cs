@@ -4,14 +4,12 @@ using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
 
-
 public class Person : IXmlSerializable
 {
 
     // Private state
 
     private string personName;
-       
 
     // Constructors
 
@@ -24,7 +22,6 @@ public class Person : IXmlSerializable
     {
         personName = null;
     }
-
 
     // Xml Serialization Infrastructure
 
@@ -49,7 +46,6 @@ public class Person : IXmlSerializable
     }
 // </snippet3>
 
-  
     // Print
 
     public override string ToString()

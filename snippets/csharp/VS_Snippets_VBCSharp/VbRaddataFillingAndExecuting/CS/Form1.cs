@@ -20,7 +20,6 @@ namespace CS
         }
         //</Snippet1>
 
-
         //<Snippet2>
         private void ReadXmlButton_Click(object sender, EventArgs e)
         {
@@ -33,7 +32,6 @@ namespace CS
         }
         //</Snippet2>
 
-
         //<Snippet3>
         private void ShowSchemaButton_Click(object sender, EventArgs e)
         {
@@ -43,12 +41,10 @@ namespace CS
         }
         //</Snippet3>
 
-
         public Form1()
         {
             InitializeComponent();
         }
-
 
         private void customersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {

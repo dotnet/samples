@@ -1,5 +1,4 @@
-﻿
-//<Snippet25>
+﻿//<Snippet25>
 using System;
 
 namespace DynamicExamples

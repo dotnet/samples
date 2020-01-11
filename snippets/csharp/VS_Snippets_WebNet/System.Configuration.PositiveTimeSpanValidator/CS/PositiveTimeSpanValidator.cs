@@ -27,7 +27,6 @@ namespace Samples.AspNet
             { return GetType(); }
         }
 
-
         public override ConfigurationValidatorBase ValidatorInstance
         {
             get

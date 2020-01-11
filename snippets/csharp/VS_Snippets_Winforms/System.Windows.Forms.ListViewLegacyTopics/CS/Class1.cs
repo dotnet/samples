@@ -4,7 +4,6 @@ using System.Drawing;
 using System.Collections;
 using System.Xml;
 
-
 public class Form1 : Form
 {
     [STAThread]
@@ -117,4 +116,3 @@ public class Form1 : Form
         // </snippet61>
     }
 }
-

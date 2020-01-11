@@ -41,5 +41,3 @@ public class Example
 //        IndexOutOfRangeException: 10 is outside the bounds of the array
 // </Snippet2>
 }
-
-

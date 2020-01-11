@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Media;
 using System.Windows.Forms;
 
-
 namespace WindowsApplication42
 {
 	/// <summary>
@@ -66,8 +65,7 @@ namespace WindowsApplication42
 		/// <summary>
 		/// The main entry point for the application.
 		/// </summary>
-		
-		
+
 		//<Snippet1>
 		private SoundPlayer Player = new SoundPlayer();
 		private void loadSoundAsync()

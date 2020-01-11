@@ -53,12 +53,12 @@ Note that the standard numeric format strings do not include precision specifier
 
 For information on formatting in .NET, see:
 
-- [Formatting types in .NET](https://docs.microsoft.com/dotnet/standard/base-types/formatting-types). 
+- [Formatting types in .NET](https://docs.microsoft.com/dotnet/standard/base-types/formatting-types).
 
-- [Standard numeric format strings](https://docs.microsoft.com/dotnet/standard/base-types/standard-numeric-format-strings)
+- [Standard numeric format strings](https://docs.microsoft.com/dotnet/standard/base-types/standard-numeric-format-strings).
 
-- [Custom numeric format strings](https://docs.microsoft.com/dotnet/standard/base-types/custom-numeric-format-strings)
+- [Custom numeric format strings](https://docs.microsoft.com/dotnet/standard/base-types/custom-numeric-format-strings).
 
-- [Standard date and time format strings](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings)
+- [Standard date and time format strings](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings).
 
-- [Custom date and time format strings](https://docs.microsoft.com/dotnet/standard/base-types/custom-date-and-time-format-strings)
+- [Custom date and time format strings](https://docs.microsoft.com/dotnet/standard/base-types/custom-date-and-time-format-strings).

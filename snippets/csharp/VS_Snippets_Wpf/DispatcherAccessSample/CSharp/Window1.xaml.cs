@@ -8,8 +8,6 @@ using System.Windows.Media;
 using System.Threading;
 using System.Windows.Threading;
 
-
-
 namespace SDKSamples
 {
     public partial class Window1 : Window
@@ -87,7 +85,6 @@ namespace SDKSamples
         }
         //</SnippetDispatcherAccessVerifyAccess>
 
-
         private void threadStartingCheckAccess()
         {
             // Try to update a Button created on the UI thread.
@@ -123,7 +120,6 @@ namespace SDKSamples
             _backgroundThreadID = backgroundThread.ManagedThreadId;
             lblBackgroundThreadID.Content = _backgroundThreadID.ToString();
         }
-
 
         private void UpdateButtonUI(Button theButton)
         {

@@ -55,7 +55,6 @@ namespace MyApplication
 
 //////////////////////////////////////////////////////////////////////////////////////
 
-
 namespace UserControls 
 {
    public class MyCustomerInfoUserControl : System.Windows.Forms.UserControl 
@@ -169,7 +168,6 @@ namespace UserControls
          Size = new System.Drawing.Size(375, 150);
       }   
 
-
       private void MyValidatingCode()
       {
          // Confirm there is text in the control.
@@ -184,7 +182,6 @@ namespace UserControls
              "\nFor example: 'someone@example.com'");
          }
       }
-
 
       // Validate the data input by the user into textEmail.
       private void textEmail_Validating(object sender, System.ComponentModel.CancelEventArgs e)
@@ -204,7 +201,6 @@ namespace UserControls
             this.errorProvider1.SetError(textEmail,ex.Message);
           }
       }   
-
 
       private void textEmail_Validated(Object sender, System.EventArgs e)
       {

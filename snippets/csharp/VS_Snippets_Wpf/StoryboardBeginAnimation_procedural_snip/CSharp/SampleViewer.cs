@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -7,7 +6,6 @@ using System.Windows.Media.Animation;
 
 namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
 {
-
 
     public class SampleViewer : Page
     {
@@ -20,8 +18,7 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
             mainPanel.Background = Brushes.White;
             
             TabControl sampleDisplayControl = new TabControl();
-            
-            
+
             TabItem basicExampleItem = new TabItem();
             Frame myContainerFrame = new Frame();
             myContainerFrame.Content = new StoryboardExample();
@@ -91,17 +88,13 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
             myContainerFrame.Content = new FrameworkContentElementSeekExample();
             myTabItem.Content = myContainerFrame;            
             sampleDisplayControl.Items.Add(myTabItem);   
-            
-            
+
             mainPanel.Children.Add(sampleDisplayControl);
             
             this.Content = mainPanel;
-            
-        
+
         }
-        
-  
+
     }
 
-    
 }

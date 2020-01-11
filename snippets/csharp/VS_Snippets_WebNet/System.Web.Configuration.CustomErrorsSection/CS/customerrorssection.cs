@@ -9,7 +9,6 @@ namespace Samples.AspNet.Configuration
     class UsingCustomErrorsSection
     {
 
-
         public static void Main()
         {
 
@@ -31,14 +30,12 @@ namespace Samples.AspNet.Configuration
 
             // </Snippet1>
 
-
             // <Snippet2>
             // Create a new CustomErrorCollection object.
             CustomErrorCollection newcustomErrorCollection = 
                 new System.Web.Configuration.CustomErrorCollection();
 
             // </Snippet2>
-
 
             // <Snippet3>
             // Get the currentDefaultRedirect
@@ -77,7 +74,6 @@ namespace Samples.AspNet.Configuration
 
             // </Snippet5>
 
-
             // <Snippet6>
             // Using the Clear method.
             if (!customErrorsSection.SectionInformation.IsLocked)
@@ -100,7 +96,6 @@ namespace Samples.AspNet.Configuration
 
             // </Snippet7>
 
-
             // <Snippet8>
             // Using method RemoveAt.
             if (!customErrorsSection.SectionInformation.IsLocked)
@@ -111,7 +106,6 @@ namespace Samples.AspNet.Configuration
             }
 
             // </Snippet8>
-
 
             // <Snippet9>
             // Get the current Mode.
@@ -145,9 +139,7 @@ namespace Samples.AspNet.Configuration
 
             // </Snippet12>
 
-
         }
     }
 
-} 
-
+}

@@ -13,7 +13,6 @@ namespace TreeViewExpand
             InitializeComponent();
         }
 
-   
         //<Snippet2>
         private void expandSelected_Click(object sender, RoutedEventArgs e)
         {

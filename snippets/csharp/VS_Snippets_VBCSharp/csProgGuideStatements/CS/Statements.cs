@@ -1,5 +1,4 @@
-﻿
-namespace CsCsrefProgrammingStatements
+﻿namespace CsCsrefProgrammingStatements
 {
     //---------------------------------------------------------------------------
     public class SimpleStatements
@@ -299,8 +298,6 @@ namespace CsCsrefProgrammingStatements
                 TwoDPoint pointD = null;
                 TwoDPoint pointE = null;
 
-
-
                 Console.WriteLine("Two null TwoDPoints are equal: {0}", pointD == pointE);
 
                 pointE = new TwoDPoint(3, 4);
@@ -378,16 +375,12 @@ namespace CsCsrefProgrammingStatements
                 Console.ReadKey();
             }
 
-
             static int GetRange(int hash, int granularity)
             {
                 if (hash <= 0)
                     throw new System.ArgumentException();
                 return hash / (System.Int32.MaxValue / granularity);
             }
-
-
-
 
             private static void GroupByRange(IEnumerable<int> list)
             {
@@ -405,8 +398,6 @@ namespace CsCsrefProgrammingStatements
                     Console.WriteLine("Key: {0} Count: {1}", (hashGroup.Key), hashGroup.Count());
                 }
             }
-
-
 
         }
     }
@@ -458,7 +449,6 @@ namespace CsCsrefProgrammingStatements
             }
         }
 
-
         class Program
         {
             static void Main(string[] args)
@@ -490,7 +480,6 @@ namespace CsCsrefProgrammingStatements
                 list.Add(new TwoDPoint(3, 4));
                 // True:
                 Console.WriteLine("pointE.Equals(list[0]): {0}", pointA.Equals(list[0]));
-
 
                 // Compare nullable to nullable and to non-nullable.
                 TwoDPoint? pointC = null;
@@ -532,8 +521,6 @@ namespace CsCsrefProgrammingStatements
     }
     //</Snippet20>
 
-
-
     namespace WrapGuidelines2
     {
         class Program
@@ -552,7 +539,6 @@ namespace CsCsrefProgrammingStatements
                 */
             }
 
-
             void TestMethod(string s)
             {
                 //<Snippet23>
@@ -563,7 +549,6 @@ namespace CsCsrefProgrammingStatements
                 // Constant declaration statement.
                 const double pi = 3.14159;
                 //</Snippet23> 
-
 
                 //<Snippet24>    
                 // Expression statement (assignment).
@@ -716,9 +701,7 @@ namespace CsCsrefProgrammingStatements
         */
         //</Snippet30> 
 
-
     }
-
 
     // Separate namespace to have  struct and class by same name in code examples
     // for comparison in Objects (C# PRogramming Guide)

@@ -3,7 +3,6 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Collections;
 
-
 namespace SDKSample
 {
     //<SnippetSingletonPanel>
@@ -78,4 +77,3 @@ namespace SDKSample
     }
     //</SnippetSingletonPanel>
 }
-

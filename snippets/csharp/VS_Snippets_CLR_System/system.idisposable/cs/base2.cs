@@ -35,4 +35,3 @@ class BaseClass : IDisposable
    }
 }
 // </Snippet5>
-

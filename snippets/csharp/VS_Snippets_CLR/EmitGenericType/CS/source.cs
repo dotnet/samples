@@ -18,7 +18,6 @@ public interface IExampleB {}
 //
 public class ExampleDerived : ExampleBase, IExampleA, IExampleB {}
 
-
 public class Example
 {
     public static void Main()
@@ -313,5 +312,3 @@ Type parameter TSecond:
     Base type constraint: ExampleBase
  */
 //</Snippet1>
-
-

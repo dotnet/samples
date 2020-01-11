@@ -19,7 +19,6 @@ namespace WPFCrossThreadCS
             InitializeComponent();
         }
 
-
         private async void threadExampleBtn_Click(object sender, RoutedEventArgs e)
         {
             textBox1.Text = String.Empty;

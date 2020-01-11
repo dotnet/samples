@@ -44,4 +44,3 @@ class Reg {
     }
 }
 // </Snippet1>
-

@@ -17,4 +17,3 @@ public class Example
 //          The long and winding road...
 //       is found at position 3
 // </Snippet1>
-

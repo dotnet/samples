@@ -33,7 +33,6 @@ private void AddCustomDataTableStyle()
       TextCol.Width = 250;
       ts1.GridColumnStyles.Add(TextCol);
 
-
       // Create the second table style with columns.
       DataGridTableStyle ts2 = new DataGridTableStyle();
       ts2.MappingName = "Orders";

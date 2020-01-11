@@ -12,7 +12,6 @@ using System.ServiceModel.Channels;
             MessageVersion msgVersion = MessageVersion.Default;
             // </Snippet0>
 
-
             // <Snippet1>
             AddressingVersion addrVersion = msgVersion.Addressing;
             // </Snippet1>
@@ -68,9 +67,6 @@ using System.ServiceModel.Channels;
             // <Snippet14>
             msgVersion.GetHashCode();
             // </Snippet14>
-
-
-
 
         }
     }

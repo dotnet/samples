@@ -19,7 +19,6 @@ namespace MiscCodeExamples
         }
     }
 
-
     //<snippet1>
     [DataContract]
     class Person
@@ -71,7 +70,6 @@ namespace MiscCodeExamples
         }
     }
     //</snippet2>
-
 
     //<snippet3>
     [DataContract]
@@ -245,5 +243,3 @@ namespace MiscCodeExamples
     //</snippet8>      
 
 }
-
-

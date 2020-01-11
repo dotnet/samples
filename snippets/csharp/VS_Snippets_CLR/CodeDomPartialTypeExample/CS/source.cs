@@ -117,7 +117,6 @@ CodeMethodInvokeExpression(
             // Add the WriteLine call to the statement collection.
             mainMethod.Statements.Add(consoleWriteLine1);
 
-
             // Add a statement to display the myDoc instance properties.
             CodeMethodInvokeExpression myDocToString = new 
 CodeMethodInvokeExpression(myDocInstance, "ToString");
@@ -156,7 +155,6 @@ CodeMethodInvokeExpression(
 
             // Add the WriteLine call to the statement collection.
             mainMethod.Statements.Add(consoleWriteLine5);
-
 
             // Add a statement to display the myNewDoc instance properties.
             CodeMethodInvokeExpression myNewDocToString = new 
@@ -204,7 +202,6 @@ myDocEquals, equalStatements, notEqualStatements);
             mainMethod.Statements.Add(docCompare);
             // </Snippet5>
 
-
             // <Snippet6>
             // Add a statement to change the myDoc.Author property:
             mainMethod.Statements.Add(new CodeCommentStatement(
@@ -250,7 +247,6 @@ CodeMethodInvokeExpression(
                 csSystemConsoleType, "ReadLine");
             mainMethod.Statements.Add(consoleReadLine);
 
-
             // Define a few common expressions for the class methods.
             CodePropertyReferenceExpression thisTitle = new 
 CodePropertyReferenceExpression(new CodeThisReferenceExpression(), "docTitle");
@@ -265,7 +261,6 @@ CodeTypeReferenceExpression(typeof(String));
 true);
             CodePrimitiveExpression falseConst = new CodePrimitiveExpression(
 false);
-
 
             // ------Build the DocumentProperty.Equals method------
 
@@ -315,7 +310,6 @@ andEquals2, returnTrueStatements, returnFalseStatements);
             baseEquals.Statements.Add(objEquals);
             baseClass.Members.Add(baseEquals);
 
-
             // ------Build the DocumentProperty.GetHashCode method------
 
             CodeMemberMethod baseHash = new CodeMemberMethod();
@@ -341,7 +335,6 @@ CodeBinaryOperatorExpression(orHash1, CodeBinaryOperatorType.BitwiseAnd,
 hashDate);
             baseHash.Statements.Add(new CodeMethodReturnStatement(andHash));
             baseClass.Members.Add(baseHash);
-
 
             // ------Build the DocumentProperty.ToString method------
 
@@ -627,4 +620,3 @@ sourceFile);
         }
     }
 }
-

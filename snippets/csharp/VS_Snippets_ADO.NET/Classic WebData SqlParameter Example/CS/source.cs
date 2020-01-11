@@ -10,7 +10,6 @@ public class Form1: Form
   protected DataSet categoriesDataSet;
   protected DataGrid dataGrid1;
   protected SqlDataAdapter categoriesAdapter;
-  
 
 // <Snippet1>
 public void AddSqlParameters() 

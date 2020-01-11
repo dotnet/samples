@@ -53,7 +53,6 @@ namespace RecycleItemContainerShippets
             }
         }
     }
-    
 
     public class ItemsForTreeView
     {

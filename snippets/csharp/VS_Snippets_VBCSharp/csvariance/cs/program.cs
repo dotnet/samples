@@ -27,12 +27,10 @@ namespace WindowsFormsApplication1
             // actStr += actObj;
             // Delegate.Combine(actStr, actObj);
             //</Snippet204>
-        
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-
 
         }
 
@@ -434,8 +432,6 @@ namespace n104
             // because the generic type T is not marked as covariant.
             // SampleGenericDelegate <Object> dObject = dString;
 
-            
-
         }
         //</Snippet104>
     }
@@ -490,7 +486,6 @@ namespace n106
     }
 }
 
-
 namespace n12
 {
     //<Snippet20>
@@ -541,9 +536,6 @@ namespace n12
 
     }
 }
-
-
-
 
 namespace n13
 {

@@ -18,6 +18,3 @@ public class SamplesLocker
         // </Snippet2>
     }
 }
-
-
-

@@ -25,7 +25,6 @@ public class MyPriceClass
    public decimal Price;
 }
 
-
 public class MyMainClass
 {
    public static void Main()

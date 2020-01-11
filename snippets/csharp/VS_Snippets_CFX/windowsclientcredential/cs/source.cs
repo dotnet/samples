@@ -17,7 +17,6 @@ namespace Example
             
         }
 
-
         private void Snippet1()
         {
             //<snippet1>
@@ -77,7 +76,6 @@ namespace Example
         //</snippet3>
     }
 }
-
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
 [System.ServiceModel.ServiceContractAttribute(ConfigurationName = "ICalculator")]

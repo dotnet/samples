@@ -29,7 +29,6 @@ class Classa06a1a56dd1644e8bc012c2255511bc6
 
 }
 
-
 class Class989134663d744f48a2c0f2a2c31a3049
 {
     // Parameters and Return Values for Multithreaded Procedures
@@ -67,7 +66,6 @@ class Class989134663d744f48a2c0f2a2c31a3049
         Thread.Start();
     }
     // </snippet12>
-
 
     // <snippet14>
     class AreaClass2
@@ -124,7 +122,6 @@ class Class989134663d744f48a2c0f2a2c31a3049
     }
     // </snippet14>
 
-
     public void RunExamples()
     {
         MessageBox.Show(CalcArea(5, 6).ToString());
@@ -133,7 +130,6 @@ class Class989134663d744f48a2c0f2a2c31a3049
     }
 
 }
-
 
 class Class9b72d48b4a6343bbaa60786cc9425182
 {
@@ -192,7 +188,6 @@ class Class9b72d48b4a6343bbaa60786cc9425182
     // </snippet16>
 }
 
-
 class Class4b8bb2c88ca4457c9afdd11bc9a05701
 {
     // Thread Pooling
@@ -219,6 +214,3 @@ class Class4b8bb2c88ca4457c9afdd11bc9a05701
     }
     // </Snippet18>
 }
-
-
-

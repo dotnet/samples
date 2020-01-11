@@ -39,4 +39,3 @@ class MyInt16_Equals
          }
      }
 }
-

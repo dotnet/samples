@@ -37,4 +37,3 @@ namespace Examples.CS.WebControls.Design
     } // SimpleRadioButtonListDataBindingHandler
 } // Examples.CS.WebControls.Design
 // </snippet6>
-

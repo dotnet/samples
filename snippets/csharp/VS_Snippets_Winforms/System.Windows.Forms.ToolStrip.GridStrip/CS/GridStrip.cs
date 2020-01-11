@@ -553,7 +553,6 @@ namespace GridStripLib
 
         #endregion
 
-
     }
 }
 // </snippet1>

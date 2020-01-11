@@ -1,5 +1,4 @@
-﻿
-// System.Diagnostics
+﻿// System.Diagnostics
 //
 // Requires .NET Framework version 1.2 or higher.
 
@@ -17,7 +16,6 @@ using System.IO;
 using System.Diagnostics;
 using System.Threading;
 using System.ComponentModel;
-
 
 namespace ProcessAsyncStreamSamples
 {
@@ -211,7 +209,6 @@ namespace ProcessAsyncStreamSamples
     }
 } 
 // </Snippet2>
-
 
 namespace ProcessAsyncStreamSamples
 {

@@ -7,7 +7,6 @@
 using System;
 using System.Management;
 
-
 namespace SamplesAspNet
 {
     // Capture WMI events associated with 
@@ -123,7 +122,6 @@ namespace SamplesAspNet
             Console.WriteLine(
                 "Listener started. Enter CntlC to terminate");
 
-
             while (true)
             {
                 try
@@ -145,7 +143,6 @@ namespace SamplesAspNet
                     break;
                 }
             }
-
 
         }
 

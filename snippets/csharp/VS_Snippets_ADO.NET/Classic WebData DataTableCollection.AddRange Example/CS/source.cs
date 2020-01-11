@@ -45,6 +45,3 @@ class Program
     }
     // </Snippet1>
 }
-
-
-

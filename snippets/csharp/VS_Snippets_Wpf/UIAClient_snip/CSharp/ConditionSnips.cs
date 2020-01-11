@@ -187,7 +187,6 @@ namespace CustomElementClient
         }
         // </Snippet175>
 
-
         // <Snippet177> 
         /// <summary>
         /// Uses NotCondition to retrieve elements that do not match specified conditions.
@@ -220,10 +219,7 @@ namespace CustomElementClient
         public void GetTreeWalkerCondition()
         {
             NotCondition cond1 = (NotCondition)TreeWalker.ContentViewWalker.Condition;
-            
-            
 
-        
         }
 
         #endregion Conditions

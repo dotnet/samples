@@ -6,8 +6,7 @@ using System.Threading;
 class MySample{
 
     public static void Main(){
-    
-                
+
         // Create an EventLog instance and assign its source.
         EventLog myLog = new EventLog("MyNewLog");
         myLog.Source = "MyNewLogSource";

@@ -5,7 +5,6 @@
    parameters of the method called 'MyMethod' of class 'ParameterInfo_Example'.
  */
 
-
 // <Snippet1>
 using System;
 using System.Reflection;

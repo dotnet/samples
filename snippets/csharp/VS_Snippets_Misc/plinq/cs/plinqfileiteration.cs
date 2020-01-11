@@ -14,7 +14,6 @@ class PLINQ_Files
         // Supply a tree for which you have at least read permissions.
         string path = @"c:\Program Files";
 
-        
         FileIteration_1(path);
         FileIteration_2(path);
 
@@ -116,7 +115,6 @@ class PLINQ_Files
         var sw = Stopwatch.StartNew();
         var fileNames = from dir in Directory.EnumerateFiles(path, "*.*", SearchOption.AllDirectories)
                         select dir;
-      
 
         var fileContents = from file in fileNames.AsParallel() // Use AsOrdered to preserve source ordering
                            let extension = Path.GetExtension(file)

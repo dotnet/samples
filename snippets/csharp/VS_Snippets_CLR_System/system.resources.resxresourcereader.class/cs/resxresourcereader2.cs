@@ -56,4 +56,3 @@ public class Example
 //    Capital:             Capital
 //    LCity:               Largest City         // The largest city based on 2010 data
 // </Snippet2>
-

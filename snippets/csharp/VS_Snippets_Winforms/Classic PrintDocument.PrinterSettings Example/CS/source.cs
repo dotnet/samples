@@ -4,7 +4,6 @@ using System.Drawing;
 using System.Drawing.Printing;
 using System.Windows.Forms;
 
-
 public class Form1: Form
 {
  protected string printer;

@@ -64,7 +64,6 @@ namespace ProcessSample
                 }
                 while (!myProcess.WaitForExit(1000));
 
-
                 Console.WriteLine();
                 Console.WriteLine($"  Process exit code          : {myProcess.ExitCode}");
 

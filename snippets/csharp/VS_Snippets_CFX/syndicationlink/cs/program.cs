@@ -63,9 +63,6 @@ namespace SyndicationLinkSnippets
             // </Snippet8>
         }
 
-
-
-
         static void Main(string[] args)
         {
         }

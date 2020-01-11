@@ -87,7 +87,6 @@ namespace Highlighter
 
         #endregion
 
-
         #region Public Properties
 
         /// <summary>
@@ -135,7 +134,6 @@ namespace Highlighter
         }
 
         #endregion
-
 
         #region Private Methods
 
@@ -215,7 +213,6 @@ namespace Highlighter
                         highlightLineWidth, 
                         NativeMethods.SWP_NOACTIVATE);
         }
-
 
         #endregion
 

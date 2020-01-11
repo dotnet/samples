@@ -1,5 +1,4 @@
-﻿
-// <Snippet1>
+﻿// <Snippet1>
 using System;
 using System.Collections.ObjectModel;
 using System.Globalization;
@@ -110,4 +109,3 @@ public class Example
 //             Supports DST: False
 //             No adjustment rules defined.
 // </Snippet1>
-

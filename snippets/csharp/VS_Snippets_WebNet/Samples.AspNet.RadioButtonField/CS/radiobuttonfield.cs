@@ -50,7 +50,6 @@ namespace Samples.AspNet.CS {
             checkedValue = radio.Checked;
         }
 
-
         // Add the value of the Checked attribute of the
         // RadioButton to the dictionary.
         if (dictionary.Contains(DataField))

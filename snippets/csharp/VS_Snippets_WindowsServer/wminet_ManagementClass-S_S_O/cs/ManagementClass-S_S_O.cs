@@ -16,7 +16,6 @@ public class Sample
             new ObjectGetOptions(
             null, System.TimeSpan.MaxValue, true));
 
-
         // Get the methods in the class
         MethodDataCollection methods =
             c.Methods;

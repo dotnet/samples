@@ -27,7 +27,6 @@ class ProcessInformation
             int i = 0;
             var startInfo = new ProcessStartInfo(fileName);
 
-
             // Display the possible verbs.
             foreach (var verb in startInfo.Verbs)
             {

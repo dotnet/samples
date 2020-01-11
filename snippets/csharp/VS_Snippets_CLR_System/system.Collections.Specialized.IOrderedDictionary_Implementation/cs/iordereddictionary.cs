@@ -144,7 +144,6 @@ public class People : IOrderedDictionary
         }
     }
 
-
     // ICollection Members
 
     public void CopyTo(Array array, int index)

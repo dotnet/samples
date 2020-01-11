@@ -51,4 +51,3 @@ public class Train {
 public class Transportation {
     // Class added so sample will compile
 }
-

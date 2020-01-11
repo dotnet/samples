@@ -363,5 +363,4 @@ namespace Samples.AspNet.Configuration
         }
     } 
     
-} 
-
+}

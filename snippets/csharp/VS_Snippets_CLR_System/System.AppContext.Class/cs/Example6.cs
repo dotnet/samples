@@ -36,5 +36,3 @@ namespace App
    //       'archæ' found in 'The archaeologist' starting at position 4   
    // </Snippet7>
 }
-
-

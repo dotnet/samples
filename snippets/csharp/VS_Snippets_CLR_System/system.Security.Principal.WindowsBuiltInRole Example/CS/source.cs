@@ -57,5 +57,3 @@ class SecurityPrincipalDemo
     }
 }
 // </Snippet1>
-
-

@@ -20,7 +20,6 @@ namespace TreeViewFindTVI
             data.PopulateItems(2, 5);
             tv1.ItemsSource = data.Items;
 
-
         }
 
         //<Snippet1>
@@ -78,7 +77,6 @@ namespace TreeViewFindTVI
                 }
 
                 Panel itemsHostPanel = (Panel)VisualTreeHelper.GetChild(itemsPresenter, 0);
-
 
                 // Ensure that the generator for this panel has been created.
                 UIElementCollection children = itemsHostPanel.Children; 
@@ -162,7 +160,6 @@ namespace TreeViewFindTVI
         }
         //</Snippet1>
 
-
         /// <summary>
         /// Find the object that corresponds to the specified key.
         /// </summary>
@@ -215,7 +212,6 @@ namespace TreeViewFindTVI
                 // Get the original currentList[i].Items (before i changed).
                 currentList = currentList[currentIndex].Items;
             }
-
 
             return currentList[i];
         }

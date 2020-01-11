@@ -43,7 +43,3 @@ public class Example
 //       Converted 4039543321 to F0C68A19 and back to 4039543321.
 //       Converted -255423975 to f0c68a19 and back to -255423975.
 // </Snippet6>
-
-
-   
-

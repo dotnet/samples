@@ -24,7 +24,6 @@ namespace Table_Demo
         {
             // Create the application's main window
             mainWindow = new System.Windows.Window();
-            
 
             // <Snippet_TableCreate>
             // Create the parent FlowDocument...
@@ -34,7 +33,6 @@ namespace Table_Demo
             table1 = new Table();
             // ...and add it to the FlowDocument Blocks collection.
             flowDoc.Blocks.Add(table1);
-
 
             // Set some global formatting properties for the table.
             table1.CellSpacing = 10;
@@ -116,8 +114,6 @@ namespace Table_Demo
             // Bold the first cell.
             currentRow.Cells[0].FontWeight = FontWeights.Bold;
             // </Snippet_TableAddDataRow>
-
-           
 
             // <Snippet_TableAddFooterRow>
             table1.RowGroups[0].Rows.Add(new TableRow());

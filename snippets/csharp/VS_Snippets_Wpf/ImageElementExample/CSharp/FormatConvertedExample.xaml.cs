@@ -8,7 +8,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
-
 namespace ImageElementExample
 {
    public partial class FormatConvertedExample : Page
@@ -37,7 +36,6 @@ namespace ImageElementExample
          Grid.SetRow(grayImage, 1);
          convertedGrid.Children.Add(grayImage);
       }
-
 
    }
 }

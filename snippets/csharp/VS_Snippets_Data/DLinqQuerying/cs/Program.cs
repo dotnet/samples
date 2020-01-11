@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Data.Linq;
 
-
 namespace cs_querying
 {
     class Program
@@ -114,8 +113,6 @@ namespace cs_querying
         }
         // </Snippet7>
 
-
-
     }
 
     static class Queries
@@ -131,8 +128,6 @@ namespace cs_querying
             string id) => db.Customers.Where(c => c.CustomerID == id));
         // </Snippet6>
 
-
-        
     }
 
     // <Snippet8>
@@ -152,9 +147,4 @@ namespace cs_querying
     }
     // </Snippet8>
 
-
-
-
 }
-
-

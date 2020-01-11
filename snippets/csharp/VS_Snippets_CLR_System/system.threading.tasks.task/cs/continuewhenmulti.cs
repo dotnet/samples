@@ -52,7 +52,6 @@ class ContinueWhenMultiDemo
             Console.WriteLine("Task={0}, Thread={1} (ContinueWhenAny): Winning result = {2}", Task.CurrentId, Thread.CurrentThread.ManagedThreadId, winner.Result);
         });
 
-
         // Schedule a continuation that sums up the results of all tasks, then wait on it.
         // The list of antecendent tasks is passed as an argument by the runtime.
         Task.Factory.ContinueWhenAll(tasks,
@@ -70,4 +69,3 @@ class ContinueWhenMultiDemo
     }
 }
 //</snippet05>
-

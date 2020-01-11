@@ -6,7 +6,6 @@ using System.Collections;
 namespace Samples.Config
 {
 
-
     // Define a custom section.
     public sealed class CustomSection :
         ConfigurationSection
@@ -88,7 +87,6 @@ namespace Samples.Config
     class UsingCustomSectionGroupCollection
     {
 
-      
         // Create a custom section group.
         static void CreateSectionGroup()
         {
@@ -143,7 +141,6 @@ namespace Samples.Config
         //             "Key value: {0}", name);
         //        }
 
-
         //    }
         //    catch (ConfigurationErrorsException err)
         //    {
@@ -185,7 +182,6 @@ namespace Samples.Config
 
                 ConfigurationSectionGroup customGroup =
                     config.SectionGroups.Get("CustomGroup");
-
 
                 if (customGroup == null)
                     Console.WriteLine(
@@ -244,7 +240,6 @@ namespace Samples.Config
         }
         //</Snippet5>
 
-
         //<Snippet7>
         // Get the collection keys i.e., the
         // group names.
@@ -266,7 +261,6 @@ namespace Samples.Config
                     Console.WriteLine(
                      "Key value: {0}", key);
                 }
-
 
             }
             catch (ConfigurationErrorsException err)
@@ -295,7 +289,6 @@ namespace Samples.Config
 
                 ConfigurationSectionGroup group2 =
                 groups.Get("system.web");
-
 
                 Console.WriteLine(
                      "Group1: {0}", group1.Name);
@@ -342,8 +335,6 @@ namespace Samples.Config
             }
         }
         //</Snippet9>
-
-
 
         // Add custom section to the group.
         static void AddSection()
@@ -399,7 +390,6 @@ namespace Samples.Config
             // Remove();
             // Clear();
         }
-
 
     }
 }

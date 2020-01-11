@@ -8,7 +8,6 @@ using System.Configuration.Provider;
 using System.Collections.Specialized;
 using System.Configuration;
 
-
 namespace Samples.AspNet.ProtectedConfiguration
 {
 
@@ -25,7 +24,6 @@ namespace Samples.AspNet.ProtectedConfiguration
       get { return pKeyFilePath; }
     }
 
-
     //
     // ProviderBase.Name
     //
@@ -34,7 +32,6 @@ namespace Samples.AspNet.ProtectedConfiguration
     {
       get { return pName; }
     }
-
 
     //
     // ProviderBase.Initialize
@@ -46,7 +43,6 @@ namespace Samples.AspNet.ProtectedConfiguration
       pKeyFilePath = config["keyFilePath"];
       ReadKey(KeyFilePath);
     }
-
 
     //
     // ProtectedConfigurationProvider.Encrypt
@@ -63,7 +59,6 @@ namespace Samples.AspNet.ProtectedConfiguration
       return xmlDoc.DocumentElement;
     }
 
-
     //
     // ProtectedConfigurationProvider.Decrypt
     //
@@ -78,7 +73,6 @@ namespace Samples.AspNet.ProtectedConfiguration
 
       return xmlDoc.DocumentElement;
     }
-
 
     //
     // EncryptString
@@ -101,7 +95,6 @@ namespace Samples.AspNet.ProtectedConfiguration
 
       return Convert.ToBase64String(returnBytes);
     }
-
 
     //
     // DecryptString
@@ -142,7 +135,6 @@ namespace Samples.AspNet.ProtectedConfiguration
       sw.Close();
     }
 
-
     //
     // ReadKey
     //    Reads in the TripleDES key and vector from the supplied
@@ -158,7 +150,6 @@ namespace Samples.AspNet.ProtectedConfiguration
       des.Key = HexToByte(keyValue);
       des.IV = HexToByte(ivValue);
     }
-
 
     //
     // ByteToHex

@@ -70,7 +70,6 @@ class Class1
         table.Clear();
     }
 
-
     private static void Row_Changed(object sender, DataRowChangeEventArgs e)
     {
         Console.WriteLine("Row_Changed Event: name={0}; action={1}",

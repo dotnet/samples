@@ -7,7 +7,6 @@ using System.Windows.Media;
 using System.Windows.Shapes;
 using System.Windows.Input;
 
-
 namespace WCSamples
 {
 
@@ -73,7 +72,6 @@ namespace WCSamples
         {
             return true;
         }
-       
 
     }
 }

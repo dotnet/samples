@@ -19,4 +19,3 @@ public class Example
 // The example displays the following output:
 //        Finished 1000001 loop iterations
 // </Snippet6>
-

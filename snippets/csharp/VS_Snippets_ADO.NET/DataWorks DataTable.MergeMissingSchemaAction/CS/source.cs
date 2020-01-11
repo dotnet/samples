@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data;
 
-
 class Program
 {
     static void Main()
@@ -97,4 +96,3 @@ class Program
     }
     // </Snippet1>
 }
-

@@ -22,8 +22,6 @@ class XMLSchemaExamples
             compiledSchema = schema1;
         }
 
-
-
         foreach (XmlSchemaObject schemaObject in compiledSchema.Items)
         {
             if (schemaObject.GetType() == typeof(XmlSchemaSimpleType))
@@ -46,4 +44,3 @@ class XMLSchemaExamples
     }
 }
 // </Snippet1>
-

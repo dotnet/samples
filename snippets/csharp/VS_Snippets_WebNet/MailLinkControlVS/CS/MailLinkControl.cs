@@ -11,8 +11,7 @@ using System.Web.UI.WebControls;
 [assembly:TagPrefix("Samples.AspNet", "Sample")]
 namespace Samples.AspNet
 {
-    
-   
+
     [
         AspNetHostingPermission(SecurityAction.Demand,
         Level = AspNetHostingPermissionLevel.Minimal),

@@ -70,7 +70,6 @@ namespace SDKSample
 
             aDrawingGroup.OpacityMask = opacityMask;
 
-
             // Use an Image control and a DrawingImage to
             // display the drawing.
             DrawingImage aDrawingImage = new DrawingImage(aDrawingGroup);
@@ -101,6 +100,3 @@ namespace SDKSample
     }
 }
 // </SnippetDrawingGroupOpacityMaskExampleWholePage>
-
-
-

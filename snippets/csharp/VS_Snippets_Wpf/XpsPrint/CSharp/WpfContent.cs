@@ -19,7 +19,6 @@ using System.Windows.Markup;
 using System.Printing;
 using SDKSample;
 
-
 namespace SDKSampleHelper
 {
     // -------------------------- class WPFContent ----------------------------
@@ -40,7 +39,6 @@ namespace SDKSampleHelper
         {
             _contentDir = contentPath;
         }
-
 
         #region Create Visuals Methods
 
@@ -158,7 +156,6 @@ namespace SDKSampleHelper
             return canvas1;
         }// end:CreateFirstVisual()
 
-
         // ------------------------- CreateSecondVisual -----------------------
         /// <summary>
         ///   Creates content for the second visual sample.</summary>
@@ -257,7 +254,6 @@ namespace SDKSampleHelper
             return canvas;
         }// end:CreateSecondVisual()
 
-
         // ------------------------- CreateThirdVisual ------------------------
         /// <summary>
         ///   Creates content for the third visual sample.</summary>
@@ -329,7 +325,6 @@ namespace SDKSampleHelper
 
         #endregion // Create Visuals Methods
 
-
         // ------------------- CreateFixedDocumentWithPages -------------------
         /// <summary>
         ///   Creates a FixedDocument with fixed pages.</summary>
@@ -363,7 +358,6 @@ namespace SDKSampleHelper
             return fixedDocument;
         }// end:CreateFixedDocumentWithPages()
 
-
         // --------------- CreatePopulatedFixedDocumentSequence ---------------
         /// <summary>
         ///   Creates a FixedDocumentSequence with content.</summary>
@@ -386,7 +380,6 @@ namespace SDKSampleHelper
             return fixedDocumentSequence;
         }// end:CreatePopulatedFixedDocumentSequence()
 
-
         // ------------------------ CreateFlowDocument ------------------------
         /// <summary>
         ///   Creates a FlowDocument with content.</summary>
@@ -404,7 +397,6 @@ namespace SDKSampleHelper
 
             return doc;
         }// end:CreateFlowDocument()
-
 
         //--------------- LoadFixedDocumentSequenceFromDocument ---------------
         /// <summary>
@@ -456,7 +448,6 @@ namespace SDKSampleHelper
             return pageContent;
         }
 
-
         // ----------------------- CreateFirstFixedPage -----------------------
         /// <summary>
         ///   Creates the FixedPage for the first page.</summary>
@@ -480,7 +471,6 @@ namespace SDKSampleHelper
 
             return fixedPage;
         }// end:CreateFirstFixedPage()
-
 
         // --------------------- CreateSecondPageContent ----------------------
         /// <summary>
@@ -511,7 +501,6 @@ namespace SDKSampleHelper
             ((IAddChild)pageContent).AddChild(fixedPage);
             return pageContent;
         }// end:CreateSecondPageContent()
-
 
         // --------------------- CreateThirdPageContent -----------------------
         /// <summary>
@@ -588,7 +577,6 @@ namespace SDKSampleHelper
             return pageContent;
         }// end:CreateThirdPageContent()
 
-
         // --------------------- CreateFourthPageContent ----------------------
         /// <summary>
         ///   Creates the content for the fourth fixed page.</summary>
@@ -632,7 +620,6 @@ namespace SDKSampleHelper
             return pageContent;
         }// end:CreateFourthPageContent()
 
-
         // --------------------- CreateFifthPageContent -----------------------
         /// <summary>
         ///   Creates the content for the fifth fixed page.</summary>
@@ -662,7 +649,6 @@ namespace SDKSampleHelper
             ((IAddChild)pageContent).AddChild(fixedPage);
             return pageContent;
         }// end:CreateFifthPageContent()
-
 
         // ------------------------- PerformTransform -------------------------
         /// <summary>
@@ -739,7 +725,6 @@ namespace SDKSampleHelper
             shape.Height = ry * 2;
         }// end:SetEllipse()
 
-
         // --------------------- AdjustFlowDocumentToPage ---------------------
         /// <summary>
         ///   Fits a given flow document to a specified media size.</summary>
@@ -795,7 +780,6 @@ namespace SDKSampleHelper
 
             return page;
         }// end:AdjustFlowDocumentToPage()
-
 
         #region private members
 

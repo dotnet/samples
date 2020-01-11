@@ -53,7 +53,6 @@ namespace Examples.DesignGuidelines.Exceptions
     }
 //</Snippet2>
 
-
 public class ThrowExample1
 {
     //<Snippet3>
@@ -103,11 +102,9 @@ public class ThrowExample1
         //</Snippet5>
 }
 
-
 public class Wrapper
 {
     public void EstablishConnection(){}
-
 
     //<Snippet6>
     public void SendMessages()

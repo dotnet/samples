@@ -66,7 +66,6 @@
          AddCustomDataTableStyle();
       }
 
-
 // <Snippet1>
 
       private void AddCustomDataTableStyle()
@@ -94,7 +93,6 @@
          myLabel.Text="Header Descriptor Property of DataGridColumnStyle has changed";
       }
 // </Snippet1>
-
 
       private void MakeDataSet()
       {

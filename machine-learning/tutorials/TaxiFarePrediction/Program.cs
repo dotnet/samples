@@ -56,7 +56,6 @@ namespace TaxiFarePrediction
                     .Append(mlContext.Regression.Trainers.FastTree());
                     // </Snippet10>
 
-
             Console.WriteLine("=============== Create and Train the Model ===============");
             
             // <Snippet11>

@@ -46,7 +46,6 @@ class Program
 
         store.Close();
 
-
         try
         {
             // Encrypt the "creditcard" element.
@@ -108,7 +107,6 @@ class Program
         // Encrypt the element.
         EncryptedData edElement = eXml.Encrypt(elementToEncrypt, Cert);
 
-
         ////////////////////////////////////////////////////
         // Replace the element from the original XmlDocument
         // object with the EncryptedData element.
@@ -131,7 +129,6 @@ class Program
         exml.DecryptDocument();
 
     }
-
 
 }
 //</SNIPPET1>

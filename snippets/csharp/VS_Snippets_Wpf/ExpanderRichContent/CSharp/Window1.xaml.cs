@@ -8,7 +8,6 @@ using System.Windows.Shapes;
 using System.Windows.Controls.Primitives;
 using System.Windows.Media.Imaging;
 
-
 namespace WindowsApplication1
 {
     /// <summary>

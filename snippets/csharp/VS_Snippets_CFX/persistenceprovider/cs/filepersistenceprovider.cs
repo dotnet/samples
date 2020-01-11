@@ -111,7 +111,6 @@ namespace PersistenceProviderSample
             return result;
         }
 
-        
         void Delete(Guid identifier, TimeSpan timeout)
         {
             string fName = GetFileName(identifier);
@@ -219,7 +218,6 @@ namespace PersistenceProviderSample
             }
         }
 
-
         public void Container0()    //Container method for Id snippet
         {
             //<snippet10>
@@ -273,8 +271,6 @@ namespace PersistenceProviderSample
             }
             //</snippet11>
 
-            
-
             //<snippet9>
             public override void Delete(object instance, TimeSpan timeout)
             {
@@ -307,7 +303,6 @@ namespace PersistenceProviderSample
             }
             //</snippet12>
 
-            
             //<snippet3>
             public override object Load(TimeSpan timeout)
             {
@@ -372,8 +367,6 @@ namespace PersistenceProviderSample
                 return null;
             }
             //</snippet19>
-
-            
 
             protected override void OnAbort()
             {

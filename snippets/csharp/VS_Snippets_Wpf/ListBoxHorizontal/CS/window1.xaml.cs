@@ -16,7 +16,6 @@ namespace ListBox_Index
 	  InitializeComponent();
 	}
 
-		
          private void PrintText(object sender, SelectionChangedEventArgs args)
 
          {
@@ -26,7 +25,5 @@ namespace ListBox_Index
            
          } 
        }
-     
-    
-    
+
 }

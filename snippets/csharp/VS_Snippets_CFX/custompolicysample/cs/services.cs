@@ -15,7 +15,6 @@ namespace Microsoft.WCF.Documentation
     string GetSessionID(); 
   }
 
-
   [ServiceBehavior(
     InstanceContextMode = InstanceContextMode.PerSession
   )]

@@ -6,7 +6,6 @@ class LogBackup
 {
     static void ArchiveToXML(LogStore logStore, string fileName)
     {
-        
 
         LogArchiveSnapshot snapshot = logStore.CreateLogArchiveSnapshot();
         {

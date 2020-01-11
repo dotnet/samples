@@ -24,13 +24,11 @@ namespace Samples.AspNet.Configuration
 
             // </Snippet1>
 
-
             // <Snippet2>
             AuthenticationSection newauthenticationSection = 
                 new AuthenticationSection();
 
             // </Snippet2>
-
 
             // <Snippet3>
             // Get the current Passport property.
@@ -43,7 +41,6 @@ namespace Samples.AspNet.Configuration
 
             // </Snippet3>
 
-
             // <Snippet4>
             // Get the current Mode property.
             AuthenticationMode currentMode = 
@@ -54,7 +51,6 @@ namespace Samples.AspNet.Configuration
                 AuthenticationMode.Windows;
 
             // </Snippet4>
-
 
             // <Snippet5>
             // Get the current Forms property.
@@ -82,5 +78,4 @@ namespace Samples.AspNet.Configuration
    
     } 
 
-} 
-
+}

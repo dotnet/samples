@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.ServiceModel;
 using System.ServiceModel.Description;
 
-
 namespace Microsoft.WCF.Documentation
 {
   class HostApplication

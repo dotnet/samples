@@ -34,8 +34,6 @@ namespace tpl_schedulers
     }
 }
 
-
-   
     namespace System.Threading.Tasks.Schedulers
     {
 
@@ -193,5 +191,3 @@ namespace tpl_schedulers
             }
         }
     }
-
-

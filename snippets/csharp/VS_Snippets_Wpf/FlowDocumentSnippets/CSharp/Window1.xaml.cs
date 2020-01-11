@@ -520,7 +520,6 @@ namespace FlowDocumentSnippets
         }
         // </Snippet_FlowDocScrollViewer_Save>
 
-
         void TextBlockProps()
         {
             // <Snippet_TextBlockProps>

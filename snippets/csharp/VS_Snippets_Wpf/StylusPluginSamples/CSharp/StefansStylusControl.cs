@@ -177,7 +177,6 @@ namespace AdvancedInkInputSemples
         Guid guidUsingStandardRenderer = new Guid("772c1f44-34db-45a3-97db-5325d5e53a52");
         Guid guidUsingCustomRenderer = new Guid("44df9701-c3f8-48fd-86cc-e8c9c5341826");
 
-
         static StefansStylusControl()
         {
             Type ownerType = typeof(StefansStylusControl);

@@ -12,20 +12,17 @@ namespace CS
         }
         //</Snippet1>
 
-
         private void Form2_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'northwindDataSet.Orders' table. You can move, or remove it, as needed.
             //this.ordersTableAdapter.Fill(this.northwindDataSet.Orders);
         }
 
-
         public Form2()
         {
             InitializeComponent();
         }
 
- 
         private void ordersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();

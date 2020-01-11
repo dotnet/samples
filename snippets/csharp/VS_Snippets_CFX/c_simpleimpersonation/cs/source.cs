@@ -30,7 +30,6 @@ namespace ProxySample
 
         }
 
-
         public interface ICalculator
         {
 
@@ -94,7 +93,6 @@ namespace ClientSample
         [OperationContract]
         double Add(double a, double b);
     }
-
 
     public class Calculator : ICalculator
     {

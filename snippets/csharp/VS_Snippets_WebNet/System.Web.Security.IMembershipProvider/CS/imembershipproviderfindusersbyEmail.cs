@@ -42,7 +42,6 @@ CREATE TABLE Users
 
 */
 
-
 namespace Samples.AspNet.Membership
 {
 
@@ -61,9 +60,6 @@ private int newPasswordLength = 8;
 
 private MachineKeySection machineKey;
 
-
-
-
 //
 // Database connection string.
 //
@@ -74,7 +70,6 @@ public string ConnectionString
 {
   get { return pConnectionStringSettings.ConnectionString; }
 }
-
 
 //
 // System.Configuration.Provider.ProviderBase.Initialize Method
@@ -143,13 +138,11 @@ public override void Initialize(string name, NameValueCollection config)
     throw new ProviderException("Connection string cannot be blank.");
   }
 
-
   // Get encryption and decryption key information from the configuration.
   Configuration cfg =
     WebConfigurationManager.OpenWebConfiguration(System.Web.Hosting.HostingEnvironment.ApplicationVirtualPath);
   machineKey = (MachineKeySection)cfg.GetSection("system.web/machineKey");
 }
-
 
     //
     // A helper function to retrieve config values from the configuration file.
@@ -162,7 +155,6 @@ public override void Initialize(string name, NameValueCollection config)
 
       return configValue;
     }
-
 
 //
 // System.Web.Security.MembershipProvider properties.
@@ -217,7 +209,6 @@ public override void Initialize(string name, NameValueCollection config)
       get { return pPasswordStrengthRegularExpression; }
     }
 
-
 // - 17>
 private string pApplicationName;
 
@@ -246,7 +237,6 @@ public override bool EnablePasswordRetrieval
 }
 // - /2>
 
-
 // - 3>
 private bool pRequiresQuestionAndAnswer;
 
@@ -255,7 +245,6 @@ public override bool RequiresQuestionAndAnswer
   get { return pRequiresQuestionAndAnswer; }
 }
 // - /3>
-
 
 //
 // System.Web.Security.MembershipProvider methods.
@@ -284,7 +273,6 @@ public override bool ChangePassword(string username, string oldPwd, string newPw
     else
       throw new Exception("Change password canceled due to new password validation failure.");
 
-
   OdbcConnection conn = new OdbcConnection(ConnectionString);
   OdbcCommand cmd = new OdbcCommand("UPDATE Users "+
             " SET Password = ?, LastPasswordChangedDate = ? " +
@@ -295,7 +283,6 @@ public override bool ChangePassword(string username, string oldPwd, string newPw
   cmd.Parameters.Add("@Username", OdbcType.VarChar, 255).Value = username;
   cmd.Parameters.Add("@OldPassword", OdbcType.VarChar, 128).Value = oldPwd;
   cmd.Parameters.Add("@ApplicationName", OdbcType.VarChar, 255).Value = ApplicationName;
-
 
   int rowsAffected = 0;
 
@@ -323,8 +310,6 @@ public override bool ChangePassword(string username, string oldPwd, string newPw
 }
 // - /4>
 
-
-
 //
 // MembershipProvider.ChangePasswordQuestionAndAnswer
 //
@@ -350,7 +335,6 @@ public override bool ChangePasswordQuestionAndAnswer(string username,
   cmd.Parameters.Add("@Username", OdbcType.VarChar, 255).Value = username;
   cmd.Parameters.Add("@Password", OdbcType.VarChar, 128).Value = password;
   cmd.Parameters.Add("@ApplicationName", OdbcType.VarChar, 255).Value = ApplicationName;
-
 
   int rowsAffected = 0;
 
@@ -378,9 +362,6 @@ public override bool ChangePasswordQuestionAndAnswer(string username,
 }
 // - /5>
 
-
-
-
 //
 // MembershipProvider.CreateUser
 //
@@ -405,7 +386,6 @@ public override MembershipUser CreateUser(string username,
       throw args.FailureInformation;
     else
       throw new Exception("Create user canceled due to password validation failure.");
-
 
   if (RequiresUniqueEmail && GetUserNameByEmail(email) != "")
   {
@@ -487,20 +467,16 @@ public override MembershipUser CreateUser(string username,
       conn.Close();
     }
 
-
     return GetUser(username, false);      
   }        
   else
   {
     status = MembershipCreateStatus.DuplicateUserName;
   }
-      
 
   return null;
 }
 // - /6>
-
-
 
 //
 // MembershipProvider.DeleteUser
@@ -548,13 +524,9 @@ public override bool DeleteUser(string username, bool deleteAllRelatedData)
 }
 // - /7>
 
-
-
-
 //
 // MembershipProvider.GetAllUsers
 //
-
 
 public override MembershipUserCollection GetAllUsers(int pageIndex, int pageSize, out int totalRecords)
 {
@@ -614,11 +586,6 @@ public override MembershipUserCollection GetAllUsers(int pageIndex, int pageSize
   return users;
 }
 
-
-
-
-
-
 //
 // MembershipProvider.GetNumberOfUsersOnline
 //
@@ -659,9 +626,6 @@ public override int GetNumberOfUsersOnline()
 }
 // - /8>
 
-
-
-
 //
 // MembershipProvider.GetPassword
 //
@@ -680,7 +644,6 @@ public override string GetPassword(string username, string answer)
 
   cmd.Parameters.Add("@Username", OdbcType.VarChar, 255).Value = username;
   cmd.Parameters.Add("@ApplicationName", OdbcType.VarChar, 255).Value = ApplicationName;
-
 
   string password = "";
   string passwordAnswer = "";
@@ -718,8 +681,6 @@ public override string GetPassword(string username, string answer)
   return password;
 }
 // - /9>
-
-
 
 //
 // MembershipProvider.GetUser
@@ -781,8 +742,6 @@ public override MembershipUser GetUser(string username, bool userIsOnline)
 
 // - /10>
 
-
-
 //
 // MembershipProvider.GetUserNameByEmail
 //
@@ -818,14 +777,9 @@ public override string GetUserNameByEmail(string email)
 }
 // - /11>
 
-
-
-
-
 //
 // MembershipProvider.ResetPassword
 //
-
 
 // - 12>
 public override string ResetPassword(string username, string answer)
@@ -843,7 +797,6 @@ public override string ResetPassword(string username, string answer)
   string newPassword = 
 	System.Web.Security.Membership.GeneratePassword(newPasswordLength, MinRequiredNonAlphanumericCharacters);
 
-
   ValidatePasswordEventArgs args = 
     new ValidatePasswordEventArgs(username, newPassword, true);
 
@@ -854,7 +807,6 @@ public override string ResetPassword(string username, string answer)
       throw args.FailureInformation;
     else
       throw new Exception("Reset password canceled due to password validation failure.");
-
 
   OdbcConnection conn = new OdbcConnection(ConnectionString);
   OdbcCommand cmd = new OdbcCommand("UPDATE Users " +
@@ -900,8 +852,6 @@ public override string ResetPassword(string username, string answer)
 }
 // - /12>
 
-
-
 //
 // MembershipProvider.UpdateUser
 //
@@ -921,7 +871,6 @@ public override void UpdateUser(MembershipUser user)
   cmd.Parameters.Add("@Username", OdbcType.VarChar, 255).Value = user.UserName;
   cmd.Parameters.Add("@ApplicationName", OdbcType.VarChar, 255).Value = ApplicationName;
 
-
   try
   {
     conn.Open();
@@ -938,8 +887,6 @@ public override void UpdateUser(MembershipUser user)
   }
 }
 // - /13>
-
-
 
 //
 // MembershipProvider.ValidateUser
@@ -1001,7 +948,6 @@ public override bool ValidateUser(string username, string password)
   return isValid;
 }
 // - /14>
-
 
 public override MembershipUserCollection FindUsersByName(string usernameToMatch, int pageIndex, int pageSize, out int totalRecords)
 {
@@ -1178,8 +1124,6 @@ public MembershipUser GetUserFromReader(OdbcDataReader reader)
 }
 //</Snippet18>
 
-
-
 //
 // MembershipProvider.UnlockUser
 //
@@ -1217,7 +1161,6 @@ public override bool UnlockUser(string username)
 
   return false;      
 }
-
 
 //
 // MembershipProvider.GetUser(object, bool)
@@ -1274,9 +1217,6 @@ public override MembershipUser GetUser(object providerUserKey, bool userIsOnline
 
   return u;      
 }
-
-
-
 
     //
     // UpdateFailureCount
@@ -1413,7 +1353,6 @@ public override MembershipUser GetUser(object providerUserKey, bool userIsOnline
       }       
     }
 
-
     //
     // CheckPassword
     //   Compares password values based on the MembershipPasswordFormat.
@@ -1444,7 +1383,6 @@ public override MembershipUser GetUser(object providerUserKey, bool userIsOnline
       return false;
     }
 
-
     //
     // EncodePassword
     //   Encrypts, Hashes, or leaves the password clear based on the PasswordFormat.
@@ -1474,7 +1412,6 @@ public override MembershipUser GetUser(object providerUserKey, bool userIsOnline
 
       return encodedPassword;
     }
-
 
     //
     // UnEncodePassword
@@ -1515,8 +1452,6 @@ public override MembershipUser GetUser(object providerUserKey, bool userIsOnline
         returnBytes[i] = Convert.ToByte(hexString.Substring(i*2, 2), 16);
       return returnBytes;
     }
-
-
 
 }
 }

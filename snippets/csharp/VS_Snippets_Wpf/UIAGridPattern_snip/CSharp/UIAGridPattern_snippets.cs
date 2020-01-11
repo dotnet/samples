@@ -188,7 +188,6 @@ namespace UIAGridPattern_snip
                 UIAGridPattern_snippets app = new UIAGridPattern_snippets();
             }
 
-            
         }
     }
 }

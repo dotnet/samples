@@ -22,7 +22,6 @@
 /// incorrectly states that "08:00" is a valid time zone (this should
 /// be "+08:00").
 
-
 //<snippet10>
 using System;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;

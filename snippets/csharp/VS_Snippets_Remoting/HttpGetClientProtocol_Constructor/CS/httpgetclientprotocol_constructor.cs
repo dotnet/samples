@@ -59,7 +59,6 @@ public class Math : HttpGetClientProtocol
 
 }
 
-
 public class HttpGetClientProtocolClass
 {
     public static void Main()

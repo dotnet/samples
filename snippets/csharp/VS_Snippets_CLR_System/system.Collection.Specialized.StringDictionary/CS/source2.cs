@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Specialized;
 
@@ -19,4 +18,3 @@ public class SamplesStringDictionary
         // </Snippet2>
     }
 }
-

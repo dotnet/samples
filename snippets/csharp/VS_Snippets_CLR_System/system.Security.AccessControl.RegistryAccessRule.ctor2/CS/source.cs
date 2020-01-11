@@ -165,6 +165,3 @@ Current access rules:
    Inherited? True
  */
 //</Snippet1>
-
-
-

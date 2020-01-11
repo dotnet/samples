@@ -50,4 +50,3 @@ class Example
 //     12/20/2015 6:42:00
 //     12/20/2015 6:42:00 AM universal time is 12/19/2015 10:42:00 PM local time.
 // </Snippet1>
-

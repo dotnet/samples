@@ -21,5 +21,3 @@ public class Example
 // If run under Windows 10, the example displays output like the following:
 //      Number of Specific Custom Cultures: 279
 // </Snippet2>
-
-

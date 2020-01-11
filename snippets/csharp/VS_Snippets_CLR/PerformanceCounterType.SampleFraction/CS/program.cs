@@ -31,7 +31,6 @@ public class App
 
     }
 
-
     private static bool SetupCategory()
     {
         if (!PerformanceCounterCategory.Exists("SampleFractionCategory"))
@@ -73,18 +72,15 @@ public class App
             "SampleFractionSample",
             false);
 
-
         basePerfCounter = new PerformanceCounter("SampleFractionCategory",
             "SampleFractionSampleBase",
             false);
-
 
         perfCounter.RawValue = thisProcess.UserProcessorTime.Ticks;
         basePerfCounter.RawValue = thisProcess.TotalProcessorTime.Ticks;
     }
     private static void CollectSamples(ArrayList samplesList)
     {
-
 
         // Loop for the samples.
         for (int j = 0; j < 100; j++)
@@ -127,7 +123,6 @@ public class App
 
         }
     }
-
 
     //++++++++//++++++++//++++++++//++++++++//++++++++//++++++++//++++++++//++++++++
     // Description - This counter type provides A percentage counter that shows the 

@@ -32,8 +32,7 @@
        Console.WriteLine( "Object array - First element should now be the same as Int32 array:" );
        PrintValues( myObjArray );
     }
- 
- 
+
     public static void PrintValues( Array myArr )  {
        System.Collections.IEnumerator myEnumerator = myArr.GetEnumerator();
        int i = 0;
@@ -63,4 +62,3 @@
      1    27    28    29    30
  */
 // </Snippet1>
-

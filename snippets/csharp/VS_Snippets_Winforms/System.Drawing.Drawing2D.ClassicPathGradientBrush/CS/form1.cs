@@ -57,7 +57,6 @@ namespace System.Drawing.Drawing2D.ClassicPathGradientBrushCS
 		}
 		#endregion
 
-
         // Snippet for: M:System.Drawing.Drawing2D.PathGradientBrush.MultiplyTransform(System.Drawing.Drawing2D.Matrix,System.Drawing.Drawing2D.MatrixOrder)
         // <snippet1>
         public void MultiplyTransformExample(PaintEventArgs e)
@@ -96,8 +95,6 @@ namespace System.Drawing.Drawing2D.ClassicPathGradientBrushCS
         }
         // </snippet1>
 
-
-       
         // Snippet for: M:System.Drawing.Drawing2D.PathGradientBrush.RotateTransform(System.Single,System.Drawing.Drawing2D.MatrixOrder)
         // <snippet2>
         public void RotateTransformExample(PaintEventArgs e)
@@ -131,7 +128,6 @@ namespace System.Drawing.Drawing2D.ClassicPathGradientBrushCS
             e.Graphics.FillRectangle(myPGBrush, 10, 10, 200, 300);
         }
         // </snippet2>
-
 
         // Snippet for: M:System.Drawing.Drawing2D.PathGradientBrush.ScaleTransform(System.Single,System.Single,System.Drawing.Drawing2D.MatrixOrder)
         // <snippet3>
@@ -172,7 +168,6 @@ namespace System.Drawing.Drawing2D.ClassicPathGradientBrushCS
         }
         // </snippet3>
 
-
         // Snippet for: M:System.Drawing.Drawing2D.PathGradientBrush.SetBlendTriangularShape(System.Single,System.Single)
         // <snippet4>
         public void SetBlendTriangularShapeExample(PaintEventArgs e)
@@ -211,7 +206,6 @@ namespace System.Drawing.Drawing2D.ClassicPathGradientBrushCS
         }
         // </snippet4>
 
-
         // Snippet for: M:System.Drawing.Drawing2D.PathGradientBrush.SetSigmaBellShape(System.Single,System.Single)
         // <snippet5>
         public void SetSigmaBellShapeExample(PaintEventArgs e)
@@ -249,7 +243,6 @@ namespace System.Drawing.Drawing2D.ClassicPathGradientBrushCS
             e.Graphics.FillRectangle(myPGBrush, 10, 10, 300, 300);
         }
         // </snippet5>
-
 
 		/// <summary>
 		/// The main entry point for the application.

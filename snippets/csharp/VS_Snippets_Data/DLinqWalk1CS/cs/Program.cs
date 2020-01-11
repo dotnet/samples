@@ -22,9 +22,6 @@ namespace cs_walkthru1
             Table<Customer> Customers = db.GetTable<Customer>();
             // </Snippet4>
 
-
-            
-
         }
     }
     // <Snippet2>
@@ -70,4 +67,3 @@ public string City
     }
 
 }
-

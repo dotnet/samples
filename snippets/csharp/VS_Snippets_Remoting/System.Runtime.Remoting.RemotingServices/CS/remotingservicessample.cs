@@ -125,7 +125,6 @@ public class TcpClientApp {
       );
 //</snippet11>
 
-
       //<snippet18> 
       // GetRealProxy, GetObjectUri, GetEnvoyChainForProxy
       RealProxy proxy = RemotingServices.GetRealProxy(obj);
@@ -135,8 +134,6 @@ public class TcpClientApp {
 
       IMessageSink  msgSink = RemotingServices.GetEnvoyChainForProxy(obj).NextSink;
       //</snippet18>
-
-
 
       //<snippet12> 
       //IsTransparentProxy, IsObjectOutOfAppDomain, IsObjectOutOfContext

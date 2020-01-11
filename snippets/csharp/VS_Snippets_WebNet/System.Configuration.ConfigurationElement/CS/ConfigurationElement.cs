@@ -112,10 +112,8 @@ namespace Samples.AspNet
                     e.ToString());
             }
 
-
         }
         // </Snippet1>
-
 
         static void AddClearRemoveElementName()
         {
@@ -149,7 +147,6 @@ namespace Samples.AspNet
                 Console.WriteLine("[AddElementName: {0}]",
                     e.ToString());
             }
-
 
         }
 
@@ -227,7 +224,6 @@ namespace Samples.AspNet
                 UrlsSection myUrls =
                    config.Sections["MyUrls"] as UrlsSection;
 
-
                 // Create the new  element.
                 UrlConfigElement newElement =
                     new UrlConfigElement(name, url, port);
@@ -262,7 +258,6 @@ namespace Samples.AspNet
 
         }
         // </Snippet3> 
-
 
         // <Snippet4> 
         // Show how to use LockElements
@@ -362,7 +357,6 @@ namespace Samples.AspNet
                         // but urls element.
                         lockElementsExcept.Add("urls");
 
-
                     config.Save(ConfigurationSaveMode.Full);
                 }
             }
@@ -373,7 +367,6 @@ namespace Samples.AspNet
             }
         }
         // </Snippet5> 
-
 
         // <Snippet6>
         // Show how to use IsModified.
@@ -395,9 +388,7 @@ namespace Samples.AspNet
                 UrlsSection myUrlsSection =
                     config.GetSection("MyUrls") as UrlsSection;
 
-
                 UrlsCollection elements = myUrlsSection.Urls;
-
 
                 IEnumerator elemEnum =
                     elements.GetEnumerator();
@@ -455,9 +446,7 @@ namespace Samples.AspNet
                 UrlsSection myUrlsSection =
                     config.GetSection("MyUrls") as UrlsSection;
 
-
                 UrlsCollection elements = myUrlsSection.Urls;
-
 
                 IEnumerator elemEnum =
                     elements.GetEnumerator();
@@ -569,7 +558,6 @@ namespace Samples.AspNet
                         else
                             lockAttributes.Add("port");
 
-
                         // Get the locket attributes.
                         string lockedAttributes =
                             lockAttributes.AttributeList;
@@ -594,7 +582,6 @@ namespace Samples.AspNet
 
         }
         // </Snippet8> 
-
 
         // <Snippet9> 
         // Show how to use LockAllAttributesExcept.
@@ -642,7 +629,6 @@ namespace Samples.AspNet
                         else
                             lockAllAttributesExcept.Add("port");
 
-
                         string lockedAttributes =
                             lockAllAttributesExcept.AttributeList;
 
@@ -650,13 +636,11 @@ namespace Samples.AspNet
                             "Element {0} Locked attributes list: {1}",
                             i.ToString(), lockedAttributes);
 
-
                         i += 1;
 
                         config.Save(ConfigurationSaveMode.Full);
 
                     }
-
 
                 }
             }

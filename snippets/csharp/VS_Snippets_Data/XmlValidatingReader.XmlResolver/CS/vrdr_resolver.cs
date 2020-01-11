@@ -48,5 +48,3 @@ public class Sample {
     reader.Close();       
   }
 } // End class
-
-

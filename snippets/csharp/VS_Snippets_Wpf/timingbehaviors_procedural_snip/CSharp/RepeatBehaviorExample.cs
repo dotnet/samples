@@ -11,7 +11,6 @@ using System.Windows.Media;
 using System.Windows.Shapes;
 using System.Windows.Media.Animation;
 
-
 namespace Microsoft.Samples.Animation.TimingBehaviors
 {
     public partial class RepeatBehaviorExample : Page
@@ -59,11 +58,9 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             foreverRepeatingRectangle.HorizontalAlignment = HorizontalAlignment.Left;
             myStackPanel.Children.Add(foreverRepeatingRectangle);
 
-
             myTextBlock = new TextBlock();
             myTextBlock.Text = "\nRepeatBehavior=\"0:0:4\" ";
             myStackPanel.Children.Add(myTextBlock);
-
 
             Rectangle fourSecondsRepeatingRectangle = new Rectangle();
             fourSecondsRepeatingRectangle.Name = "fourSecondsRepeatingRectangle";
@@ -131,7 +128,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             myForeverRepeatingDoubleAnimation.Duration = new Duration(TimeSpan.FromMilliseconds(2000));
             myForeverRepeatingDoubleAnimation.RepeatBehavior = RepeatBehavior.Forever;
 
-
             //
             //  Create an animation that repeats for four seconds.
             //      As a result,the animation repeats twice.
@@ -158,7 +154,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             myTwiceRepeatingDoubleAnimation.To = 300;
             myTwiceRepeatingDoubleAnimation.Duration = new Duration( TimeSpan.FromMilliseconds(2000));
             myTwiceRepeatingDoubleAnimation.RepeatBehavior = new RepeatBehavior(2);
-
 
             //
             // Create an animation that repeats 0.5 times. The resulting animation plays for one second,
@@ -234,7 +229,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             myStopStoryboard.BeginStoryboardName = myBeginStoryboard.Name;
             myEventTrigger1.Actions.Add(myStopStoryboard);
             myStackPanel.Triggers.Add(myEventTrigger1);
-
 
         }
     }

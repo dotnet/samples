@@ -3,7 +3,6 @@ using System;
 using System.Web;
 using System.Web.Util;
 
-
 public class CustomRequestValidation : RequestValidator
 {
     public CustomRequestValidation() { }

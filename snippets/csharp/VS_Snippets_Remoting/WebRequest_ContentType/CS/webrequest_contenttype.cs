@@ -11,8 +11,6 @@
   Note: This program POSTs data to the Uri: http://www20.Brinkster.com/codesnippets/next.asp 
  */
 
-
- 
 using System;
 using System.IO;
 using System.Net;
@@ -101,4 +99,3 @@ class WebRequest_ContentLength
 	}
 		
 }
-

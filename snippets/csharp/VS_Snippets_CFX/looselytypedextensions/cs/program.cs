@@ -28,7 +28,6 @@ namespace Microsoft.Syndication.Samples
             feed.ElementExtensions.Add("simpleString", "", "hello, world!");
             feed.ElementExtensions.Add("simpleString", "", "another simple string");
 
-
             feed.ElementExtensions.Add( new DataContractExtension() { Key = "X", Value = 4 } );
             feed.ElementExtensions.Add( new XmlSerializerExtension { Key = "Y", Value = 8 }, new XmlSerializer( typeof( XmlSerializerExtension ) ) );
 
@@ -46,13 +45,11 @@ namespace Microsoft.Syndication.Samples
             Stream inputStream = WriteToMemoryStream(feed.GetAtom10Formatter());
             SyndicationFeed feed2 = SyndicationFeed.Load(new XmlTextReader(inputStream));
 
-
             Console.WriteLine("Attribute Extensions");
             Console.WriteLine("--------------------");
 
             Console.WriteLine( feed.AttributeExtensions[ new XmlQualifiedName( "myAttribute", "" )]);
             Console.WriteLine("");
-
 
             Console.WriteLine("Primitive Extensions");
             Console.WriteLine("--------------------");

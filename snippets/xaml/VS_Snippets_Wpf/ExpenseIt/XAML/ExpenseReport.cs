@@ -121,7 +121,6 @@ namespace ExpenseIt
             }
         }
 
-
         private void OnPropertyChanged(string propName)
         {
             if (PropertyChanged != null)
@@ -165,6 +164,3 @@ namespace ExpenseIt
         }
     }
 }
-
-
-

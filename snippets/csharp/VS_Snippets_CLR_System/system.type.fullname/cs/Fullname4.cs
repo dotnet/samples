@@ -47,4 +47,3 @@ public class Example
 //          Method: ChangeValue
 //             Parameter: T& (unassigned)
 // </Snippet4>
-         

@@ -13,7 +13,6 @@ namespace ListBoxOwnerDrawSnippet
       private System.Windows.Forms.ListBox listBox1;
       private System.ComponentModel.Container components = null;
 
-
       protected override void Dispose(bool disposing)
       {
          if( disposing )

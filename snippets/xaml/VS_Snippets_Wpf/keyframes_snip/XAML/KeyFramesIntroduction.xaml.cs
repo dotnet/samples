@@ -9,7 +9,6 @@ using System.Windows.Shapes;
 namespace Microsoft.Samples.KeyFrameExamples
 {
 
-
     public partial class KeyFramesIntroduction : Page
     {
     
@@ -17,12 +16,10 @@ namespace Microsoft.Samples.KeyFrameExamples
         {
             InitializeComponent();
         }
-        
-        
+
         private void exampleCanvasLayoutUpdated(object sender, EventArgs args)
         {
-        
-            
+
             myVisualBrush.Viewbox = 
                             new Rect(
                                 Canvas.GetLeft(myRectangle),
@@ -30,12 +27,8 @@ namespace Microsoft.Samples.KeyFrameExamples
                                 myRectangle.ActualWidth,
                                 myRectangle.ActualHeight        
                             );
-            
-        
-            
-        
+
         }
-        
 
     }
 }

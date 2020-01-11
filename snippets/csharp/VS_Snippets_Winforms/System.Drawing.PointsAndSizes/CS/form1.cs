@@ -25,7 +25,6 @@ public class myForm:
 
 //</snippet6>
 
-
 public class Form1: myForm
 
 {
@@ -40,7 +39,6 @@ public class Form1: myForm
         addButton.Click += new EventHandler(addButton_Click);
         subtractButton.Click += new EventHandler(subtractButton_Click);
         TruncateAndRoundSizes();
-        
 
         //Add any initialization after the InitializeComponent() call
 
@@ -262,7 +260,6 @@ public class Form1: myForm
     }
     //</snippet7>
 
-
     private void Form1_Load(object sender, EventArgs e)
     {
         TruncateAndRoundSizes();
@@ -274,10 +271,3 @@ public class Form1: myForm
         Application.Run(new Form1());
     }
 }
-
-
-
-
-
-
-

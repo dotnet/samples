@@ -1,10 +1,8 @@
 ﻿// The following code example shows the results of SortKey.Equals when compared with different SortKey objects.
 
-
 // <snippet1>
 using System;
 using System.Globalization;
-
 
 public class SamplesSortKey  {
 

@@ -1,11 +1,9 @@
 ﻿// The following code example shows how the result of GetWeekOfYear varies depending on the FirstDayOfWeek and the CalendarWeekRule used.
 // If the specified date is the last day of the year, GetWeekOfYear returns the total number of weeks in that year.
 
-
 // <snippet1>
 using System;
 using System.Globalization;
-
 
 public class SamplesCalendar  {
 

@@ -77,7 +77,6 @@ namespace SDKSample
             // </SnippetTextDecorationSnippets5a>
         }
 
-        
         // <SnippetTextDecorationSnippets6>
         // Use a Maroon pen for the baseline text decoration.
         private void SetMaroonBaseline()

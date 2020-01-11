@@ -164,5 +164,3 @@ namespace Testing
     }
 }
 //</Snippet1>
-
-

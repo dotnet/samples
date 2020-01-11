@@ -23,4 +23,3 @@ public class Example
 //       Before modifying DateSeparator property: 18/08/2013 00:00
 //       After modifying the DateSeparator property: 18-08-2013 00:00
 // </Snippet12>
-

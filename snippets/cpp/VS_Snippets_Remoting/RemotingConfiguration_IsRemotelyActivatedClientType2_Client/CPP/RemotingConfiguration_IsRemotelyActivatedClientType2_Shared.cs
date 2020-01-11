@@ -15,5 +15,3 @@
             return "The client requests to "+name +i+" time";
         }
     }
-
-

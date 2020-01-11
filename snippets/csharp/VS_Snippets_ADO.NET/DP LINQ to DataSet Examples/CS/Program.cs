@@ -136,9 +136,6 @@ namespace LINQtoDataSetSamples
             //Sum();
             //GroupBy();   
 
-
-
-
             Console.WriteLine("Hit Enter...");
             Console.Read();
 
@@ -305,7 +302,6 @@ namespace LINQtoDataSetSamples
             // </SnippetSelectManyCompoundFrom_MQ>
 
         }
-
 
         /*[Category("Projection Operators")]
         [Title("SelectMany - Compound From 2")]
@@ -576,7 +572,6 @@ namespace LINQtoDataSetSamples
                 where order.Field<DateTime>("OrderDate") >= new DateTime(2002, 12, 1)
                 select order;
 
-
             Console.WriteLine("Orders that were made after 12/1/2002:");
             foreach (DataRow order in query)
             {
@@ -703,7 +698,6 @@ namespace LINQtoDataSetSamples
             ds.Locale = CultureInfo.InvariantCulture;
             FillDataSet(ds);
 
-
             DataTable contacts = ds.Tables["Contact"];
 
             IEnumerable<DataRow> allButFirst5Contacts = contacts.AsEnumerable().Skip(5);
@@ -728,7 +722,6 @@ namespace LINQtoDataSetSamples
             DataSet ds = new DataSet();
             ds.Locale = CultureInfo.InvariantCulture;
             FillDataSet(ds);
-
 
             DataTable products = ds.Tables["Product"];
 
@@ -774,7 +767,6 @@ namespace LINQtoDataSetSamples
         #endregion
 
         #region "Ordering Operators"
-
 
         /*[Category("Ordering Operators")]
         [Title("OrderBy - Simple 1")]
@@ -827,8 +819,6 @@ namespace LINQtoDataSetSamples
             }
             //</SnippetOrderBySimple2>
         }
-
-
 
         /*[Category("Ordering Operators")]
         [Title("OrderBy - Comparer")]
@@ -1200,7 +1190,6 @@ namespace LINQtoDataSetSamples
                                           where contact.Field<string>("FirstName") == "Sandra"
                                           select contact;
 
-
             DataTable contacts1 = query1.CopyToDataTable();
             DataTable contacts2 = query2.CopyToDataTable();
 
@@ -1239,7 +1228,6 @@ namespace LINQtoDataSetSamples
                                           where contact.Field<string>("FirstName") == "Sandra"
                                           select contact;
 
-
             DataTable contacts1 = query1.CopyToDataTable();
             DataTable contacts2 = query2.CopyToDataTable();
 
@@ -1277,7 +1265,6 @@ namespace LINQtoDataSetSamples
             IEnumerable<DataRow> query2 = from contact in contactTable.AsEnumerable()
                                           where contact.Field<string>("FirstName") == "Sandra"
                                           select contact;
-
 
             DataTable contacts1 = query1.CopyToDataTable();
             DataTable contacts2 = query2.CopyToDataTable();
@@ -1398,7 +1385,6 @@ namespace LINQtoDataSetSamples
 
             DataTable products = ds.Tables["Product"];
 
-
             var scoreRecordsDict = products.AsEnumerable().
                 ToDictionary(record => record.Field<string>("Name"));
             Console.WriteLine("Top Tube's ProductID: {0}",
@@ -1479,9 +1465,7 @@ namespace LINQtoDataSetSamples
             //</SnippetElementAt>
         }
 
-
         #endregion
-
 
         #region "Quantifiers"
         /*[Category("Quantifiers")]
@@ -1713,7 +1697,6 @@ namespace LINQtoDataSetSamples
             ds.Locale = CultureInfo.InvariantCulture;
             FillDataSet(ds);
 
-
             DataTable contacts = ds.Tables["Contact"];
 
             long numberOfContacts = contacts.AsEnumerable().LongCount();
@@ -1731,7 +1714,6 @@ namespace LINQtoDataSetSamples
             DataSet ds = new DataSet();
             ds.Locale = CultureInfo.InvariantCulture;
             FillDataSet(ds);
-
 
             DataTable orders = ds.Tables["SalesOrderDetail"];
 
@@ -1847,7 +1829,6 @@ namespace LINQtoDataSetSamples
                                     minTotalDue)
                 };
 
-
             foreach (var orderGroup in query)
             {
                 Console.WriteLine("ContactID: {0}", orderGroup.Category);
@@ -1861,7 +1842,6 @@ namespace LINQtoDataSetSamples
             }
             //</SnippetMinElements_MQ>
         }
-
 
         /*[Category("Aggregate Operators")]
         [Title("Average - Projection")]
@@ -1939,7 +1919,6 @@ namespace LINQtoDataSetSamples
                         g.Where(order => order.Field<decimal>("TotalDue") ==
                                     averageTotalDue)
                 };
-
 
             foreach (var orderGroup in query)
             {
@@ -2031,7 +2010,6 @@ namespace LINQtoDataSetSamples
                                     maxTotalDue)
                 };
 
-
             foreach (var orderGroup in query)
             {
                 Console.WriteLine("ContactID: {0}", orderGroup.Category);
@@ -2081,7 +2059,6 @@ namespace LINQtoDataSetSamples
                         detail.Field<int>("ProductID")
                 };
 
-
             foreach (var order in query)
             {
                 Console.WriteLine("{0}\t{1}\t{2:d}\t{3}",
@@ -2120,7 +2097,6 @@ namespace LINQtoDataSetSamples
                     Lastname = contact.Field<string>("Lastname"),
                     TotalDue = order.Field<decimal>("TotalDue")
                 });
-
 
             foreach (var contact_order in query)
             {
@@ -2251,7 +2227,6 @@ namespace LINQtoDataSetSamples
                     TotalDue = order.Field<decimal>("TotalDue")
                 };
 
-
             foreach (var contact_order in query)
             {
                 Console.WriteLine("ContactID: {0} "
@@ -2315,8 +2290,6 @@ namespace LINQtoDataSetSamples
                                       result.TotalDue });
             }
 
-
-
             foreach (DataRow row in OnlineOrders.Rows)
             {
                 Console.WriteLine("First Name: {0}", row["FirstName"]);
@@ -2365,7 +2338,6 @@ namespace LINQtoDataSetSamples
         {
             DataGridView dataGridView = new DataGridView();
             BindingSource bindingSource = new BindingSource();
-
 
             //<SnippetCopyToDataTable1>
             // Bind the System.Windows.Forms.DataGridView object
@@ -2517,7 +2489,6 @@ namespace LINQtoDataSetSamples
                 Console.WriteLine(product.Field<string>("Name"));
             }
 
-
             //</SnippetComposing>
         }
 
@@ -2581,7 +2552,6 @@ namespace LINQtoDataSetSamples
         {
             DataTable products = ds.Tables["Product"];
 
-
             // Group by size.
             var query =
                 from product in products.AsEnumerable()
@@ -2617,7 +2587,6 @@ namespace LINQtoDataSetSamples
 
         }
 
-
         static void Sum2(DataSet ds)
         {
             var employees = ds.Tables["Employee"].AsEnumerable();
@@ -2640,9 +2609,6 @@ namespace LINQtoDataSetSamples
 
         }
 
-
-
-
         // Display DataSet info. This will not be used in the docs.
         static void DSInfo(DataSet ds)
         {
@@ -2661,7 +2627,6 @@ namespace LINQtoDataSetSamples
                 Console.WriteLine("");
             }
 
-
         }
 
         static void FillDataSet(DataSet ds)
@@ -2674,7 +2639,6 @@ namespace LINQtoDataSetSamples
                 // information to the configuration setting "AdventureWorks".
                 string connectionString = "Data Source=localhost;Initial Catalog=AdventureWorks;"
                     + "Integrated Security=true;";
-
 
                 SqlDataAdapter da = new SqlDataAdapter(
                     "SELECT SalesOrderID, ContactID, OrderDate, OnlineOrderFlag, " +
@@ -2752,6 +2716,3 @@ namespace LINQtoDataSetSamples
 
     }
 }
-
-
-

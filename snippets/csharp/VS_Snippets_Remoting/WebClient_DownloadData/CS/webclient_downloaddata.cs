@@ -47,4 +47,3 @@ public class WebClient_DownloadData
         }
     }
 }
-

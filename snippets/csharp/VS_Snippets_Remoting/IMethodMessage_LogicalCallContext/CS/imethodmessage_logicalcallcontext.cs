@@ -65,7 +65,6 @@ public MyProxy(Type type) : base(type)
       this.targetObject = targetObject;
    }
 
-
 // <Snippet2>
 [SecurityPermissionAttribute(SecurityAction.LinkDemand, Flags=SecurityPermissionFlag.Infrastructure)]
    public override IMessage Invoke(IMessage message)

@@ -131,7 +131,6 @@ namespace GitHubActivityReport
         }
         // </SnippetRunPagedQuery>
 
-
         private static string GetEnvVariable(string item, string error, string defaultValue)
         {
             var value = Environment.GetEnvironmentVariable(item);

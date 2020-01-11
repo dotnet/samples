@@ -144,8 +144,6 @@ namespace KeywordsMethodParams
 
     //</snippet6>
 
-
-
     //<snippet7>
     class RefOverloadExample
     {

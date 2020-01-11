@@ -18,12 +18,10 @@ namespace Samples.AspNet.ObjectDataSource
 
     private string _connectionString;
 
-
     public NorthwindData()
     {
       Initialize();
     }
-
 
     public void Initialize()
     {
@@ -39,7 +37,6 @@ namespace Samples.AspNet.ObjectDataSource
       _connectionString = 
         ConfigurationManager.ConnectionStrings["Northwind"].ConnectionString;
     }
-
 
     // Select all employees.
 
@@ -77,7 +74,6 @@ namespace Samples.AspNet.ObjectDataSource
       return ds.Tables["Employees"];
     }
 
-
     public int SelectCount()
     {
       SqlConnection conn = new SqlConnection(_connectionString);
@@ -102,7 +98,6 @@ namespace Samples.AspNet.ObjectDataSource
 
       return result;
     }
-
 
     //////////
     // Verify that only valid columns are specified in the sort expression to avoid a SQL Injection attack.
@@ -133,8 +128,6 @@ namespace Samples.AspNet.ObjectDataSource
       }
     }
 
-
-
     // Select an employee.
 
     public DataTable GetEmployee(int EmployeeID)
@@ -164,8 +157,6 @@ namespace Samples.AspNet.ObjectDataSource
 
       return ds.Tables["Employees"];
     }
-  
-
 
     // Delete the Employee by ID.
 
@@ -194,7 +185,6 @@ namespace Samples.AspNet.ObjectDataSource
 
       return result;
     }
-
 
     // Update the Employee by original ID.
 
@@ -245,7 +235,6 @@ namespace Samples.AspNet.ObjectDataSource
 
       return result;
     }
-
 
     // Insert an Employee.
 
@@ -298,8 +287,6 @@ namespace Samples.AspNet.ObjectDataSource
 
       return newEmployeeID;
     }
-
-
 
     //
     // Methods that support Optimistic Concurrency checks.
@@ -357,7 +344,6 @@ namespace Samples.AspNet.ObjectDataSource
 
       return result;
     }
-
 
     // Update the Employee by original ID.
 

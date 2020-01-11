@@ -144,7 +144,6 @@ namespace Samples
         }
     }
 
-
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute()]
     public interface ICalculator

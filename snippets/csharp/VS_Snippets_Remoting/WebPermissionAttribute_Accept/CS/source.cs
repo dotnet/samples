@@ -4,7 +4,6 @@
  * Demonstrate how to use the WebPermissionAttribute to specify the Accept property.
 */
 
-
 using System;
 using System.Net;
 using System.Security;
@@ -14,8 +13,6 @@ using System.IO;
 public class WebPermissionAttribute_AcceptConnect{
 //<Snippet1>	
 
-
-  
 // Deny access to a specific resource by setting the Accept property.
 [WebPermission(SecurityAction.Deny, Accept=@"http://www.contoso.com/Private.htm")]
 

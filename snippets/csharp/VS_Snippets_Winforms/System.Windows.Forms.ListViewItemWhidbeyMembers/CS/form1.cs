@@ -13,8 +13,7 @@ namespace ListViewItemMembers
 {
     public class Form1 : Form
     {
-        
-         
+
         public Form1()
         {
             InitializeComponent();
@@ -23,7 +22,6 @@ namespace ListViewItemMembers
             //InitializeIndentedListViewItems();
              InitializeListView1();
             this.Load += new EventHandler(Form1_Load);
-
 
         }
        
@@ -43,8 +41,6 @@ namespace ListViewItemMembers
             Application.EnableVisualStyles();
             Application.Run(new Form1());
         }
-
-      
 
         // The following example demonstrates how to use the ShowItemToolTip and ToolTipText 
         // properties. To run this example, paste the code into a Windows Form and call
@@ -210,7 +206,6 @@ namespace ListViewItemMembers
             moveItem.Position = new Point(30, 30);
         }
         //</snippet3>
-        
 
         // The following code example demonstrates how to use the GetSubItemAt
         // method.  To run this code, paste it into a Windows Form and call 
@@ -270,11 +265,5 @@ namespace ListViewItemMembers
             //InitializePositionedListViewItems();
         }
 
-
-
-
-
-
-       
     }
 }

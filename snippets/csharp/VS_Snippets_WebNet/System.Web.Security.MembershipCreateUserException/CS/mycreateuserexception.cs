@@ -9,5 +9,3 @@ public sealed class MyCreateUserException : MembershipCreateUserException
   }
 }
 //</Snippet5>
-
-

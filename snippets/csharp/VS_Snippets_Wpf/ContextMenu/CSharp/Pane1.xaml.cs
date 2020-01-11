@@ -67,7 +67,6 @@ namespace ContextMenus
             //</Snippet2>
         }
 
-
         //Not snippeting these event handlers because they're identical to
         //MenuItemCommandAndEvents#2.  Use that snippet as the companion to 
         //ContextMenu#Events (in pane1.xaml of this project).

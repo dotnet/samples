@@ -6,7 +6,6 @@
     using System.Drawing;
     using System.ComponentModel;
 
-
     public class MyDataGridForm : Form 
     {
         private DataTable dataTable;

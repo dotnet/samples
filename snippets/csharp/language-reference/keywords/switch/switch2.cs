@@ -26,4 +26,3 @@ public class Example
 // The example displays output like the following:
 //       Case 1
 // </Snippet1>
-

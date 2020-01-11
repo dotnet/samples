@@ -18,7 +18,6 @@ public class EventSample
             props, 
             "NumberOfEvents >15");
 
-
         Console.WriteLine(q.QueryString);
         return;
     }

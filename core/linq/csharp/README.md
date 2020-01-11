@@ -40,7 +40,6 @@ Group items into sub-sequences.
 Combine multiple sequences into a single sequence
 by matching values on properties.
 
-
 ## ordering
 
 Sort sequences.
@@ -69,9 +68,9 @@ Filter sequences using `Where`.
 ## setoperators
 
 Learn about set operations such as `Distinct`, `Except`, `Intersect`,
-and `Union`. 
+and `Union`.
 
-# Build and Run
+## Build and Run
 
 To build and run the sample, type the following two commands in any of the subdirectories:
 

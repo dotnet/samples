@@ -16,7 +16,6 @@ public class Sample
         newInstance["UserName"] = "<SYSTEM>";
         newInstance.Put(); //to commit the new instance.
 
-
     }
 }
 //</Snippet1>

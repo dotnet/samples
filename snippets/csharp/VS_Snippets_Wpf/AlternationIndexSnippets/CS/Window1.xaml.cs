@@ -91,7 +91,6 @@ namespace AltnerationIndexSnippets
             _divisions = new List<Division>();
         }
 
-
         string _name;
 
         public string Name { get { return _name; } }

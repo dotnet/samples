@@ -6,7 +6,6 @@ using System;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
 
-
 namespace UE.ServiceModel.Samples
 {
 // Define a service contract.
@@ -23,7 +22,6 @@ namespace UE.ServiceModel.Samples
 				double Divide(double n1, double n2);
 	}
 
-	
     class Client
     {
         static void Main()

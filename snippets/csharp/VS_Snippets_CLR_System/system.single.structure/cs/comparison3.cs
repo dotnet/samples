@@ -16,5 +16,3 @@ public class Example
 // The example displays the following output:
 //        0.3333333 = 0.3333333: True
 // </Snippet11>
-
-

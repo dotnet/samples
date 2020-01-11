@@ -28,8 +28,6 @@ namespace MD5Sample
                 }
             }
 
-
-
         }
         static string GetMd5Hash(MD5 md5Hash, string input)
         {

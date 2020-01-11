@@ -18,15 +18,12 @@ public class Sample
     Byte[] RecvBytes = new Byte[256];
     String strRetPage = null;
 
-
     // IPAddress and IPEndPoint represent the endpoint that will
     //   receive the request.
     // Get first IPAddress in list return by DNS.
 
-
     try
     {
-
 
       // Define those variables to be evaluated in the next for loop and 
       // then used to connect to the server. These variables are defined
@@ -54,7 +51,6 @@ public class Sample
 
  //<Snippet2>
 
- 
         // Connect to the host using its IPEndPoint.
         s.Connect(hostEndPoint);
 
@@ -73,7 +69,6 @@ public class Sample
 //</Snippet3>
 
       } // End of the for loop.      
-
 
 //<Snippet4>
  
@@ -126,6 +121,3 @@ public class Sample
    }
  }
 //</Snippet1>
- 
-
-

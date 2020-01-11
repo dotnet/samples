@@ -39,7 +39,6 @@ public partial class FilterUserControl : System.Web.DynamicData.FilterUserContro
 
           //  DropDownList1.Width = ddlTmp.Width;
 
-
             for (int i = 0; i < DropDownList1.Items.Count; i++) {
                 string s = DropDownList1.Items[i].Text;
 

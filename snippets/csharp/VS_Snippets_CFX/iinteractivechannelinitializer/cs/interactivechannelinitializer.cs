@@ -42,7 +42,6 @@ namespace Microsoft.WCF.Documentation
   }
   // </snippet8>
 
-
   class DisplayCompletedAsyncResult<T> : IAsyncResult
   {
     T data;

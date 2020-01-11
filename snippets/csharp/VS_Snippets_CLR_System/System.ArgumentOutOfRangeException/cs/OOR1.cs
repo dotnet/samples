@@ -52,4 +52,3 @@ public class Example2
       // </Snippet3>
    }
 }
-

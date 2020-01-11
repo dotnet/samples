@@ -22,7 +22,6 @@ namespace Samples.AspNet.SessionState
         private ISessionIDManager pSessionIDManager;
         private SessionStateSection pConfig;
 
-
         // The SessionItem class is used to store data for a particular session along with
         // an expiration date and time. SessionItem objects are added to the local Hashtable
         // in the OnReleaseRequestState event handler and retrieved from the local Hashtable
@@ -36,7 +35,6 @@ namespace Samples.AspNet.SessionState
             internal HttpStaticObjectsCollection StaticObjects;
             internal DateTime Expires;
         }
-
 
         //
         // IHttpModule.Init
@@ -83,8 +81,6 @@ namespace Samples.AspNet.SessionState
         }
     	//</Snippet2>
 
-
-
         //
         // IHttpModule.Dispose
         //
@@ -97,7 +93,6 @@ namespace Samples.AspNet.SessionState
                ((IDisposable)pTimer).Dispose();
             }
         }
-
 
     	//<Snippet3>
         //
@@ -119,7 +114,6 @@ namespace Samples.AspNet.SessionState
                 pHashtableLock.ReleaseWriterLock();
             }
         }
-
 
         //
         // Recursivly remove expired session data from session collection.
@@ -156,7 +150,6 @@ namespace Samples.AspNet.SessionState
         }
     	//</Snippet3>
 
-
    	//<Snippet4>
         //
         // Event handler for HttpApplication.AcquireRequestState
@@ -173,7 +166,6 @@ namespace Samples.AspNet.SessionState
 
             pSessionIDManager.InitializeRequest(context, false, out supportSessionIDReissue);
             sessionID = pSessionIDManager.GetSessionID(context);
-
 
             if (sessionID != null)
             {
@@ -250,7 +242,6 @@ namespace Samples.AspNet.SessionState
         public event EventHandler Start;
     	//</Snippet4>
 
-
 	//<Snippet5>
         //
         // Event handler for HttpApplication.ReleaseRequestState
@@ -288,7 +279,6 @@ namespace Samples.AspNet.SessionState
             SessionStateUtility.RemoveHttpSessionStateFromContext(context);
         }
 	//</Snippet5>
-
 
     }
 }

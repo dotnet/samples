@@ -140,7 +140,6 @@ public sealed class Book : Publication
 
    // A three-digit ISO currency symbol.
    public string Currency { get; private set; }
-   
 
    // Returns the old price, and sets a new price.
    public Decimal SetPrice(Decimal price, string currency)

@@ -20,13 +20,11 @@ namespace Microsoft.Samples.GradientBrushExamples
             myMainPanel = new StackPanel();
             
             createRadialGradientBrushExample();
-  
- 
+
             this.Content = myMainPanel;
             
         }
-        
-        
+
         private void createRadialGradientBrushExample()
         {
             // <SnippetRadialGradient1CSharp>

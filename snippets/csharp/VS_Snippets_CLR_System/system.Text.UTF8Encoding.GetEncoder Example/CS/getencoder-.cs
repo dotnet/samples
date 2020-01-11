@@ -25,4 +25,3 @@ class UTF8EncodingExample {
     }
 }
 // </Snippet1>
-

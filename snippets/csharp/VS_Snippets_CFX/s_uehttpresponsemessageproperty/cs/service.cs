@@ -55,7 +55,6 @@ namespace Microsoft.ServiceModel.Samples
 	    responseProperty.SuppressEntityBody =  true;
 	    // </Snippet5>
 
-
         }
     }
 }

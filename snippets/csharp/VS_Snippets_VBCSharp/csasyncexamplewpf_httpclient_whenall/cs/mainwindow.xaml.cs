@@ -41,12 +41,10 @@ namespace AsyncExampleWPF_HttpClient_WhenAll
             resultsTextBox.Text += "\r\nControl returned to startButton_Click.\r\n";
         }
 
-
         private async Task SumPageSizesAsync()
         {
             // Make a list of web addresses.
             List<string> urlList = SetUpURLList();
-
 
             // Declare an HttpClient object and increase the buffer size. The
             // default buffer size is 65,536.
@@ -101,7 +99,6 @@ namespace AsyncExampleWPF_HttpClient_WhenAll
                 string.Format("\r\n\r\nTotal bytes returned:  {0}\r\n", total);
         }
 
-
         private List<string> SetUpURLList()
         {
             List<string> urls = new List<string> 
@@ -119,7 +116,6 @@ namespace AsyncExampleWPF_HttpClient_WhenAll
             return urls;
         }
 
-
         // The actions from the foreach loop are moved to this async method.
         //<snippet6>
         async Task<int> ProcessURL(string url, HttpClient client)
@@ -129,7 +125,6 @@ namespace AsyncExampleWPF_HttpClient_WhenAll
             return byteArray.Length;
         }
         //</snippet6>
-
 
         private void DisplayResults(string url, byte[] content)
         {

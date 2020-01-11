@@ -134,7 +134,6 @@ namespace L2E_ExamplesCS
             //GetOrderInfoThruRelationships();
             //GetOrderInfoThruRelationships_MQ();
 
-
             //Hit enter...
             Console.WriteLine("hit enter...");
             Console.Read();
@@ -237,7 +236,6 @@ namespace L2E_ExamplesCS
             }
             // </SnippetSelectAnonymousTypes_MQ>
         }
-
 
         static void SelectManyCompoundFrom()
         {
@@ -578,8 +576,6 @@ namespace L2E_ExamplesCS
             //</SnippetWhere3_MQ>
         }
 
-
-
         static void WhereDrilldown()
         {
             // <SnippetWhereDrilldown>
@@ -614,7 +610,6 @@ namespace L2E_ExamplesCS
                     from order in context.SalesOrderHeaders
                     where order.OrderDate >= new DateTime(2003, 12, 1)
                     select order;
-
 
                 Console.WriteLine("Orders that were made after December 1, 2003:");
                 foreach (SalesOrderHeader order in query)
@@ -905,8 +900,6 @@ namespace L2E_ExamplesCS
             }
         }
         //</SnippetCustomComparer>
-
-
 
         static void OrderByDescendingSimple1()
         {
@@ -1267,7 +1260,6 @@ namespace L2E_ExamplesCS
             // </SnippetExcept1_MQ>
         }
 
-
         static void Union1()
         {
             // <SnippetUnion1>
@@ -1321,7 +1313,6 @@ namespace L2E_ExamplesCS
             }
             // </SnippetUnion1_MQ>
         }
-
 
         static void Intersect1()
         {
@@ -1658,7 +1649,6 @@ namespace L2E_ExamplesCS
             }
             //</SnippetCount>
 
-            
         }
 
         static void CountNested()
@@ -1774,7 +1764,6 @@ namespace L2E_ExamplesCS
             }
             //</SnippetMinProjection_MQ>
 
-            
         }
 
         static void MinGrouped_MQ()
@@ -1820,7 +1809,6 @@ namespace L2E_ExamplesCS
                         smallestTotalDue =
                             g.Where(order => order.TotalDue == minTotalDue)
                     };
-
 
                 foreach (var orderGroup in query)
                 {
@@ -2225,7 +2213,6 @@ namespace L2E_ExamplesCS
 
         #region "Relationship Navigation"
 
-
         static void SelectEachContactsOrders_MQ()
         {
             //<SnippetSelectEachContactsOrders_MQ>
@@ -2408,9 +2395,6 @@ namespace L2E_ExamplesCS
 
         }
         #endregion
-
-
-
 
     }
 }

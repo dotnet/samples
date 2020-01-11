@@ -31,7 +31,6 @@ CREATE TABLE UsersInRoles
 
 */
 
-
 namespace Samples.AspNet.Roles
 {
 
@@ -49,7 +48,6 @@ namespace Samples.AspNet.Roles
     private ConnectionStringSettings pConnectionStringSettings;
     private string connectionString;
 
-
     //
     // If false, exceptions are thrown to the caller. If true,
     // exceptions are written to the event log.
@@ -62,8 +60,6 @@ namespace Samples.AspNet.Roles
       get { return pWriteExceptionsToEventLog; }
       set { pWriteExceptionsToEventLog = value; }
     }
-
-
 
     //
     // System.Configuration.Provider.ProviderBase.Initialize Method
@@ -91,7 +87,6 @@ namespace Samples.AspNet.Roles
       // Initialize the abstract base class.
       base.Initialize(name, config);
 
-
       if (config["applicationName"] == null || config["applicationName"].Trim() == "")
       {
         pApplicationName = System.Web.Hosting.HostingEnvironment.ApplicationVirtualPath;
@@ -101,7 +96,6 @@ namespace Samples.AspNet.Roles
         pApplicationName = config["applicationName"];
       }
 
-
       if (config["writeExceptionsToEventLog"] != null)
       {
         if (config["writeExceptionsToEventLog"].ToUpper() == "TRUE")
@@ -109,7 +103,6 @@ namespace Samples.AspNet.Roles
           pWriteExceptionsToEventLog = true;
         }
       }
-
 
       //
       // Initialize OdbcConnection.
@@ -126,15 +119,11 @@ namespace Samples.AspNet.Roles
       connectionString = pConnectionStringSettings.ConnectionString;
     }
 
-
-
     //
     // System.Web.Security.RoleProvider properties.
     //
-    
 
     private string pApplicationName;
-
 
     public override string ApplicationName
     {
@@ -176,7 +165,6 @@ namespace Samples.AspNet.Roles
         }
       }
 
-
       OdbcConnection conn = new OdbcConnection(connectionString);
       OdbcCommand cmd = new OdbcCommand("INSERT INTO UsersInRoles "  +
               " (Username, Rolename, ApplicationName) " +
@@ -214,7 +202,6 @@ namespace Samples.AspNet.Roles
         }
         catch { }
 
-
         if (WriteExceptionsToEventLog)
         {
           WriteToEventLog(e, "AddUsersToRoles");
@@ -229,7 +216,6 @@ namespace Samples.AspNet.Roles
         conn.Close();      
       }
     }
-
 
     //
     // RoleProvider.CreateRole
@@ -278,7 +264,6 @@ namespace Samples.AspNet.Roles
       }
     }
 
-
     //
     // RoleProvider.DeleteRole
     //
@@ -301,7 +286,6 @@ namespace Samples.AspNet.Roles
 
       cmd.Parameters.Add("@Rolename", OdbcType.VarChar, 255).Value = rolename;
       cmd.Parameters.Add("@ApplicationName", OdbcType.VarChar, 255).Value = ApplicationName;
-
 
       OdbcCommand cmd2 = new OdbcCommand("DELETE FROM UsersInRoles "  +
               " WHERE Rolename = ? AND ApplicationName = ?", conn);
@@ -331,7 +315,6 @@ namespace Samples.AspNet.Roles
         }
         catch { }
 
-
         if (WriteExceptionsToEventLog)
         {
           WriteToEventLog(e, "DeleteRole");
@@ -350,7 +333,6 @@ namespace Samples.AspNet.Roles
 
       return true;
     }
-
 
     //
     // RoleProvider.GetAllRoles
@@ -405,7 +387,6 @@ namespace Samples.AspNet.Roles
 
       return new string[0];
     }
-
 
     //
     // RoleProvider.GetRolesForUser
@@ -462,7 +443,6 @@ namespace Samples.AspNet.Roles
       return new string[0];
     }
 
-
     //
     // RoleProvider.GetUsersInRole
     //
@@ -518,7 +498,6 @@ namespace Samples.AspNet.Roles
       return new string[0];
     }
 
-
     //
     // RoleProvider.IsUserInRole
     //
@@ -565,7 +544,6 @@ namespace Samples.AspNet.Roles
       return userIsInRole;
     }
 
-
     //
     // RoleProvider.RemoveUsersFromRoles
     //
@@ -590,7 +568,6 @@ namespace Samples.AspNet.Roles
           }
         }
       }
-
 
       OdbcConnection conn = new OdbcConnection(connectionString);
       OdbcCommand cmd = new OdbcCommand("DELETE FROM UsersInRoles "  +
@@ -628,7 +605,6 @@ namespace Samples.AspNet.Roles
         }
         catch { }
 
-
         if (WriteExceptionsToEventLog)
         {
           WriteToEventLog(e, "RemoveUsersFromRoles");
@@ -643,7 +619,6 @@ namespace Samples.AspNet.Roles
         conn.Close();      
       }
     }
-
 
     //
     // RoleProvider.RoleExists

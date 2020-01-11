@@ -183,10 +183,6 @@ namespace SDKSample
 
         }
 
-
-
-
     }
 }
 // </SnippetDrawingGroupExampleWholePage>
-

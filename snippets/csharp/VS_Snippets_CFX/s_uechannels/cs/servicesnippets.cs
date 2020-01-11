@@ -38,7 +38,6 @@ namespace UE.Samples.Channel
             // </Snippet1>
         }
 
-
         public static void Snippet5()
         {
             // <Snippet5>
@@ -68,7 +67,6 @@ namespace UE.Samples.Channel
             listener.Close();
             // </Snippet5>
         }
-
 
         public static void Snippet6()
         {

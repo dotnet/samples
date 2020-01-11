@@ -29,7 +29,6 @@ namespace Samples
     }
     //</snippet1>
 
-
     //<snippet2>
     public class MyService1 : IMyService
     {
@@ -390,6 +389,5 @@ namespace Samples2
             get { throw new Exception("The method or operation is not implemented."); }
         }
     }
-
 
 }

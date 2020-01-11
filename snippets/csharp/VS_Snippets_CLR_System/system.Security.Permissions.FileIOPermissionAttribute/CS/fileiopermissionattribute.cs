@@ -79,7 +79,6 @@ class MyClass
         }
     }
 
-
     public static void TestFailed()
     {
         Console.WriteLine("Executing TestFailed.");

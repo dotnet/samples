@@ -111,4 +111,3 @@ namespace Examples.CS.WebControls.Design
     } // MyLoginViewDesigner
 } // Examples.CS.WebControls.Design
 // </snippet1>
-

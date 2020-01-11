@@ -6,7 +6,6 @@ using System.Windows.Documents;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
-
 namespace StrokeCollectionEraseMethods
 {
     /// <summary>
@@ -117,12 +116,10 @@ namespace StrokeCollectionEraseMethods
             myInkSelector.LoadStrokes();
         }
 
-
         private void GetIds_Click(object sender, RoutedEventArgs e)
         {
             myInkSelector.GetPropertyIds();
         }
 
-         
     }
 }

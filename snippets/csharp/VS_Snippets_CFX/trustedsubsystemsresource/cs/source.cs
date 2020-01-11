@@ -29,7 +29,6 @@ namespace Microsoft.ServiceModel.Samples
             return n1 * n2;
         }
 
- 
         static void Main()
         {
             // <snippet1>

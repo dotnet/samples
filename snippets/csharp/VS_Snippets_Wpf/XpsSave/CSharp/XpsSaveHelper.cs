@@ -14,7 +14,6 @@ using System.Windows.Xps;
 using System.Windows.Xps.Packaging;
 using SDKSample;
 
-
 namespace SDKSampleHelper
 {
     // ------------------------- AsyncSaveEventArgs ------------------------
@@ -42,8 +41,6 @@ namespace SDKSampleHelper
         }
     }// end:class AsyncSaveEventArgs
 
-
-
     public class SaveHelper
     {
         internal delegate void AsyncSaveChangeHandler(
@@ -51,14 +48,12 @@ namespace SDKSampleHelper
 
         internal event AsyncSaveChangeHandler OnAsyncSaveChange;
 
-
         #region Constructors
         public SaveHelper(String contentPath)
         {
             _xpfContent = new XPFContent(contentPath);
         }
         #endregion Constructors
-
 
         #region Save Interface
         public void SaveSingleVisual(String containerName, bool async)
@@ -81,7 +76,6 @@ namespace SDKSampleHelper
                 _xpsDocument.Close();
             }
         }
-
 
         public void SaveMultipleVisuals(string containerName, bool async)
         {
@@ -108,7 +102,6 @@ namespace SDKSampleHelper
             }
         }
 
-
         public void SaveSingleFlowContentDocument(
                     string containerName, bool async)
         {
@@ -132,7 +125,6 @@ namespace SDKSampleHelper
             }
         }
 
-
         public void SaveSingleFixedContentDocument(
                     string containerName, bool async)
         {
@@ -154,7 +146,6 @@ namespace SDKSampleHelper
                 _xpsDocument.Close();  // Close the package
             }
         }
-
 
         public void SaveMultipleFixedContentDocuments(
                     string containerName, bool async)
@@ -216,7 +207,6 @@ namespace SDKSampleHelper
         }
         //</SnippetWriteToXpsWithVisual>
 
-
         //<SnippetCreateAndWriteToVisualsCollator>
         private void SaveVisuals(XpsDocumentWriter xpsdw, List<Visual> vc)
         {
@@ -234,7 +224,6 @@ namespace SDKSampleHelper
         }
         //</SnippetCreateAndWriteToVisualsCollator>
 
-
         //<SnippetWriteToXpsWithDocumentPaginator>
         private void SaveSingleFlowContentDocument(
                      XpsDocumentWriter xpsdw, DocumentPaginator docPaginator)
@@ -243,7 +232,6 @@ namespace SDKSampleHelper
         }
         //</SnippetWriteToXpsWithDocumentPaginator>
 
-
         //<SnippetWriteToXpsWithFixedDocument>
         private void SaveSingleFixedContentDocument(
                      XpsDocumentWriter xpsdw, FixedDocument fd)
@@ -251,7 +239,6 @@ namespace SDKSampleHelper
             xpsdw.Write(fd);        // Write the FixedDocument as a document.
         }
         //</SnippetWriteToXpsWithFixedDocument>
-
 
         //<SnippetWriteToXpsWithFixedDocumentSequence>
         private void SaveMultipleFixedContentDocuments(
@@ -262,7 +249,6 @@ namespace SDKSampleHelper
         }
         //</SnippetWriteToXpsWithFixedDocumentSequence>
         #endregion // Synchronous Save Methods
-
 
         #region Asynchronous Save Methods
         //<SnippetWriteAsyncToXpsWithVisual>
@@ -276,7 +262,6 @@ namespace SDKSampleHelper
             xpsdw.WriteAsync(v);    // Write visual to single page.
         }
         //</SnippetWriteAsyncToXpsWithVisual>
-
 
         private void SaveVisualsAsync(XpsDocumentWriter xpsdw, List<Visual> vc)
         {
@@ -301,7 +286,6 @@ namespace SDKSampleHelper
             }
         }// end:SaveVisualsAsync()
 
-
         //<SnippetWriteAsyncToXpsWithDocumentPaginator>
         private void SaveSingleFlowContentDocumentAsync(
                      XpsDocumentWriter xpsdw, DocumentPaginator idp)
@@ -316,7 +300,6 @@ namespace SDKSampleHelper
         }
         //</SnippetWriteAsyncToXpsWithDocumentPaginator>
 
-
         //<SnippetWriteAsyncToXpsWithFixedDocument>
         private void SaveSingleFixedContentDocumentAsync(
                      XpsDocumentWriter xpsdw, FixedDocument fd)
@@ -330,7 +313,6 @@ namespace SDKSampleHelper
             xpsdw.WriteAsync(fd);
         }
         //</SnippetWriteAsyncToXpsWithFixedDocument>
-
 
         //<SnippetWritingEvents>
         //<SnippetWriteAsyncToXpsWithFixedDocumentSequence>
@@ -351,14 +333,12 @@ namespace SDKSampleHelper
         }
         //</SnippetWriteAsyncToXpsWithFixedDocumentSequence>
 
-
         // Cancel an async operation
         public void CancelAsync()
         {
             _xpsdwActive.CancelAsync();
         }
         #endregion // Asynchronous Save Methods
-
 
         #region Async Event Handlers
         //
@@ -410,7 +390,6 @@ namespace SDKSampleHelper
         //</SnippetWritingEvents>
         #endregion // Async Event Handlers
 
-
         private XpsDocumentWriter GetSaveXpsDocumentWriter(string containerName)
         {
             // Delete the file if it already exists
@@ -440,4 +419,3 @@ namespace SDKSampleHelper
     }// end:class SaveHelper
 
 }// end:namespace SDKSampleHelper
-

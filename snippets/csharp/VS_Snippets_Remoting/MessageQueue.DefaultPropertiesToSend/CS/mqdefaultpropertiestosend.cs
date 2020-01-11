@@ -29,7 +29,6 @@ namespace MyProject
 			return;
 		}
 
-
 		//**************************************************
 		// Associates selected message property values
 		// with high priority messages.
@@ -59,7 +58,6 @@ namespace MyProject
 			
 			return;
 		}
-
 
 		//**************************************************
 		// Associates selected message property values

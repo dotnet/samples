@@ -1,8 +1,7 @@
 ﻿using System;
 
 namespace Win32Form1Namespace {
-    
-    
+
     public class Win32Form1 : System.Windows.Forms.Form {
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;

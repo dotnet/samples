@@ -1,20 +1,16 @@
-﻿
-
-using System;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Shapes;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
-
 namespace Microsoft.Samples.BrushExamples
 {
 
     public class TileSizeExample : Page
     {
-    
-        
+
         public TileSizeExample()
         {
 
@@ -24,14 +20,11 @@ namespace Microsoft.Samples.BrushExamples
             createRelativeTileSizeExample(mainPanel);
             createAbsoluteTileSizeExample(mainPanel);
             this.Content = mainPanel;
-        
 
         }
-        
-        
+
         private void createRelativeTileSizeExample(Panel mainPanel)
         {
-
 
             Border rectangleBorder = new Border();
             rectangleBorder.BorderBrush = Brushes.Black;
@@ -70,7 +63,6 @@ namespace Microsoft.Samples.BrushExamples
 
         private void createAbsoluteTileSizeExample(Panel mainPanel)
         {
-
 
             Border rectangleBorder = new Border();
             rectangleBorder.BorderBrush = Brushes.Black;

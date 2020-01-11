@@ -29,7 +29,6 @@ class BarrierDemo
         // Nope -- let's settle on four participants.
         barrier.RemoveParticipant();
 
-
         // This is the logic run by all participants
         Action action = () =>
         {

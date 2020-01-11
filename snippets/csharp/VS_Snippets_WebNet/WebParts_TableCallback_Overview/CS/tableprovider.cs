@@ -52,7 +52,6 @@ namespace Samples.AspNet.CS.Controls
         {
             callback(_table.Rows);
         }
-        
 
         public bool ConnectionPointEnabled
         {
@@ -73,7 +72,6 @@ namespace Samples.AspNet.CS.Controls
             return new TableProviderWebPart();
         }
 
-        
         public class TableProviderConnectionPoint : ProviderConnectionPoint
         {
             public TableProviderConnectionPoint(MethodInfo callbackMethod, 
@@ -83,8 +81,7 @@ namespace Samples.AspNet.CS.Controls
                     name, id, allowsMultipleConnections)
             {
             }
-            
-            
+
             public override bool GetEnabled(Control control)
             {
                 return ((TableProviderWebPart)control).ConnectionPointEnabled;

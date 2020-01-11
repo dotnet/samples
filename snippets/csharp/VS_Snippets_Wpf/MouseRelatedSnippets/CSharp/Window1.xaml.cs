@@ -9,7 +9,6 @@ using System.Windows.Shapes;
 using System.Windows.Input;
 using System.Windows.Threading;
 
-
 namespace FocusSample
 {
     /// <summary>
@@ -78,7 +77,6 @@ namespace FocusSample
             // Gets the mouse device associated with the current thread.
             MouseDevice currentMouseDevice = Mouse.PrimaryDevice;
             //</SnippetMouseRelatedSnippetsGetMouseDevice>
-
 
             if (currentMouseDevice.RightButton == MouseButtonState.Pressed &&
                 currentMouseDevice.LeftButton == MouseButtonState.Pressed &&
@@ -164,7 +162,6 @@ namespace FocusSample
             txtBoxResults.Text += output + "\n";
             
         }
-
 
     }
 }

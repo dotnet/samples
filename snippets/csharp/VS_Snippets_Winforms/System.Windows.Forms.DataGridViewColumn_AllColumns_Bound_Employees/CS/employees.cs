@@ -1,7 +1,6 @@
 ﻿//Databinding between checkbox state to some table, implement updating.
 // Lots of validation work could happen for adding a new row scenario: validate employee id, boss Id.
 
-
 //<snippet0>
 using System;
 using System.Data;

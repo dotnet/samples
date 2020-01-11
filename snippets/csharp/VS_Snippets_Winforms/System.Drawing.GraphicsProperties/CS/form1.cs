@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
@@ -138,7 +137,6 @@ public class Form1:
     }
     //</snippet2>
 
-    
     // The following code example demonstrates the effect of changing
     // the PageUnit property.
 
@@ -257,7 +255,3 @@ public class Form1:
         //ChangePageUnit(e);
     }
 }
-
-
-
-

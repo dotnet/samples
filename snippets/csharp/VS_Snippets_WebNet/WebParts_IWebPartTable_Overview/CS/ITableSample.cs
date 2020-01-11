@@ -100,7 +100,6 @@ namespace Samples.AspNet.CS.Controls
 
 	}
 
-
   // This code sample creates a Web Parts control that acts as a consumer 
   // of information provided by the TableProvider.ascx control.
   [AspNetHostingPermission(SecurityAction.Demand,

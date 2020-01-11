@@ -38,7 +38,6 @@ class TimeSpanAddSubOpsDemo
             "TimeSpan objects and calculating and \ndisplaying " +
             "the sum and difference of each." );
 
-
         // Create pairs of TimeSpan objects.
         ShowTimeSpanSumDiff( 
             new TimeSpan( 1, 20, 0 ), 

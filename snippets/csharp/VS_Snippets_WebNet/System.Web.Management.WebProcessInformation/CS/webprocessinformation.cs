@@ -3,7 +3,6 @@
   *Purpose: Implements a custom type to acess 
   *the process information.: 
   **/
-  
 // <Snippet1>
 
 using System;
@@ -100,4 +99,3 @@ namespace SamplesAspNet
 
 }
 // </Snippet1>
-

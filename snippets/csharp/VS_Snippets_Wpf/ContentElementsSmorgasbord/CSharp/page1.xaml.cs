@@ -194,11 +194,3 @@ namespace Foo {
   }
   //</SnippetDefaultStyleKeyClass>
 }
-
-
-
-
-
-
-
-

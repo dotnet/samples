@@ -21,7 +21,6 @@ using System.Text;
 using System.Windows.Forms;
 #endregion
 
-
 namespace CSWinFormDataGridView.CustomDataGridViewColumn
 {
     public partial class MainForm : Form
@@ -101,7 +100,6 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
             mtbColumn.ValidatingType = typeof(ZipCode);
             this.employeesDataGridView.Columns.Add(mtbColumn);
 
-
             //
             // Department Code
             //
@@ -139,7 +137,6 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
             this.plusFour = 0;
         }
 
-
         public static implicit operator ZipCode(string s)
         {
             return new ZipCode(s);
@@ -149,7 +146,6 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
         {
             return new ZipCode(i);
         }
-
 
         protected static void parseFromString
         (
@@ -200,7 +196,6 @@ namespace CSWinFormDataGridView.CustomDataGridViewColumn
             out_zipCode = zc;
             out_plusFour = pf;
         }
-
 
         private static int numfromchar(char c)
         {

@@ -54,4 +54,3 @@ public class WebClient_OpenWrite2
 		}
 	}
 }
-

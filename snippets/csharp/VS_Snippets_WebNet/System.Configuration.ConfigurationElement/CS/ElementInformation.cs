@@ -113,7 +113,6 @@ namespace Samples.AspNet
             Console.WriteLine("Url element is present? {0}",
                 isPresent.ToString());
 
-
         }
         // </Snippet83>
 

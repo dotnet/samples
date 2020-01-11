@@ -7,7 +7,6 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization.Formatters.Soap ;
 using System.Runtime.Serialization;
 
-
 [Serializable]
 public class MyItemType : ISerializable
 {
@@ -71,7 +70,6 @@ public static class Test
         s.Close();
     }
 
-
     public static void DeserializeItem(string fileName, IFormatter formatter)
     {
         FileStream s = new FileStream(fileName, FileMode.Open);
@@ -80,5 +78,3 @@ public static class Test
     }       
 }
 //</snippet1>
-
-

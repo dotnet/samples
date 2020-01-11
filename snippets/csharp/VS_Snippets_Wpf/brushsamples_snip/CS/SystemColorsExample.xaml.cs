@@ -5,15 +5,12 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Data;
 
-
 namespace Microsoft.Samples.Brushes
 {
 
-
     public partial class SystemColorsExample : Page
     {
-    
-        
+
         public SystemColorsExample()
         {
 
@@ -29,6 +26,5 @@ namespace Microsoft.Samples.Brushes
             mainPanel.Height = 800;        
         }
     }
-
 
 }

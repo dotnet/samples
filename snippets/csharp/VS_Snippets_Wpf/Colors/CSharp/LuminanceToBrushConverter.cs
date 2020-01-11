@@ -8,7 +8,6 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Media;
 
-
 namespace SDKSample
 {
     // One-way conversion between Luminance and Brush - used to draw text in

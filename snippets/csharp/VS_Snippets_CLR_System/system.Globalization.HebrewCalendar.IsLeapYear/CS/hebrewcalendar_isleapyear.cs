@@ -4,7 +4,6 @@
 using System;
 using System.Globalization;
 
-
 public class SamplesHebrewCalendar  {
 
    public static void Main()  {

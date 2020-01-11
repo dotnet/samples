@@ -6,7 +6,6 @@ using System;
 [CLSCompliant(false)] public class BaseClass
 {}
 
-
 public class BaseCollection<T> where T : BaseClass
 {}
 // Attempting to compile the example displays the following output:
@@ -17,7 +16,6 @@ public class Example
 {
    public static void Main()
    {
-
 
    }
 }

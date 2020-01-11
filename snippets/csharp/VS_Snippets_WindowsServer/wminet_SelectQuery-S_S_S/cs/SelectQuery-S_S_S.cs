@@ -13,7 +13,6 @@ public class Sample
             "Name = 'notepad.exe'", 
             properties);
 
-        
         ManagementObjectSearcher searcher = 
             new ManagementObjectSearcher(
             s);

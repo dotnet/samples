@@ -26,7 +26,6 @@ public class Example
             myType.DefineMethod("Test", MethodAttributes.Public,
                 null, new Type[] { typeof(string) });
 
-
         // Get a parameter builder for the parameter that needs the 
         // attribute, using the HasFieldMarshal attribute. In this
         // example, the parameter is at position 0 and has the name
@@ -53,7 +52,6 @@ public class Example
         // Apply the attribute to the parameter.
         //
         pb.SetCustomAttribute(cabuilder);
-
 
         // Emit a dummy method body.
         ILGenerator il = myMethod.GetILGenerator();

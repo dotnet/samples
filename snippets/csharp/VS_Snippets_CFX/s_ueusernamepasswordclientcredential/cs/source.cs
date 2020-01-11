@@ -65,7 +65,6 @@ namespace Samples
                 MessageCredentialType.UserName;
             //</snippet7>
 
-
             //<snippet2>
             CalculatorClient client = new CalculatorClient("default");
             //</snippet2>
@@ -86,8 +85,6 @@ namespace Samples
             client.Close();
             //</snippet6>
 
-
-
         }
 
         private string ReturnUsername()
@@ -100,7 +97,6 @@ namespace Samples
             return "hah";
         }
     }
-
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute()]

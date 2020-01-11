@@ -20,7 +20,5 @@ namespace GeoOvwSample
             InitializeComponent();
         }
 
-  
-
      }
 }

@@ -217,7 +217,3 @@ public class MyTcpClientExample
 // </Snippet1>
     }
 } //end class
-
-
-
-

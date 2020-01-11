@@ -23,7 +23,6 @@ using System.Runtime.CompilerServices;
 //Update the "en-US" in the line below to match the UICulture setting in the project file.
 //[assembly: NeutralResourcesLanguage("en-US", UltimateFallbackResourceLocation.Satellite)]
 
-
 // Version information for an assembly consists of the following four values:
 //
 //      Major Version

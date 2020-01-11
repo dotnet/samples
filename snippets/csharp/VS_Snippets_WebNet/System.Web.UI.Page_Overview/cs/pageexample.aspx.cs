@@ -8,7 +8,6 @@ public partial class MyCodeBehindCS : System.Web.UI.Page
 
         // Place page-specific code here.
 
-
     }
 
     // Define a handler for the button click.

@@ -61,4 +61,3 @@ class Mypropertyinfo
     }
 }
 // </Snippet1>
-

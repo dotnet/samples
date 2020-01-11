@@ -56,7 +56,6 @@ public class Example : MarshalByRefObject
          Type.DefaultBinder, null, null);
    }
 
-
    private static void GenerateDynamicAssembly(string location)
    {
       // Define the dynamic assembly and the module. There is only one

@@ -13,8 +13,7 @@ namespace Microsoft.Samples.PointExamples
 
     public class PointExample : Page
     {
-    
-        
+
         public PointExample()
         {
             
@@ -210,7 +209,6 @@ namespace Microsoft.Samples.PointExamples
         }
         // </SnippetOffsetExample_csharp>
 
-
         // <SnippetOverloadedAdditionOperatorExample>
         private Point overloadedAdditionOperatorExample()
         {
@@ -226,8 +224,6 @@ namespace Microsoft.Samples.PointExamples
 
         }
         // </SnippetOverloadedAdditionOperatorExample>
-
-
 
         // <SnippetOverloadedEqualityOperatorExample>
         private Boolean overloadedEqualityOperatorExample()
@@ -307,8 +303,6 @@ namespace Microsoft.Samples.PointExamples
         }
         // </SnippetOverloadedMultiplyPointByMatrixOperatorExample>
 
-
-
         // <SnippetOverloadedSubtractionOperatorExample1>
         private Point overloadedSubtractionOperatorExample1()
         {
@@ -341,7 +335,6 @@ namespace Microsoft.Samples.PointExamples
 
         }
         // </SnippetOverloadedSubtractionOperatorExample2>
-
 
         // <SnippetParseExample>
         private Point parseExample()
@@ -406,7 +399,6 @@ namespace Microsoft.Samples.PointExamples
         }
         // </SnippetToStringExample>
 
-
         // <SnippetPointInequalityExample>
         // Checks if two Points are equal using the overloaded inequality operator.
         private Boolean pointInequalityExample()
@@ -434,8 +426,6 @@ namespace Microsoft.Samples.PointExamples
 
         }
         // </SnippetPointInequalityExample>
-        
-    
 
     }
 

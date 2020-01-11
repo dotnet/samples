@@ -43,8 +43,7 @@
           Console.WriteLine("Exception: " + myException.ToString());
        }
     }
- 
- 
+
     public static void PrintValues( IEnumerable myList, int myWidth )  {
        int i = myWidth;
        foreach ( Object obj in myList ) {
@@ -81,4 +80,3 @@
  */ 
 
 // </Snippet1>
-

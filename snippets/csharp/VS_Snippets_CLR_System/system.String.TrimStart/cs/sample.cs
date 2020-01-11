@@ -102,4 +102,3 @@ public class TrimExample
         // </Snippet1>
     }
 }
-

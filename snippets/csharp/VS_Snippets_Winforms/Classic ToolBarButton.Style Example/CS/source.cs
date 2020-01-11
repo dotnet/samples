@@ -20,7 +20,6 @@ public void InitializeMyToolBar()
     MenuItem menuItem1 = new MenuItem("Print");
     ContextMenu contextMenu1 = new ContextMenu(new MenuItem[]{menuItem1});
 
-     
     // Add the ToolBarButton controls to the ToolBar.
     toolBar1.Buttons.Add(toolBarButton1);
     toolBar1.Buttons.Add(toolBarButton2);

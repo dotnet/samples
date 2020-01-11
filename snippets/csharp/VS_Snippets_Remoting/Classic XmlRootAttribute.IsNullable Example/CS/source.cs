@@ -11,7 +11,6 @@ public class Group
    public string Name;
 }   
 
-
 public class Run
 {
    public static void Main()

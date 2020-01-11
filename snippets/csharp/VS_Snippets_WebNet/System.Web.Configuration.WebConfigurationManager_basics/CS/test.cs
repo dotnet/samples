@@ -17,14 +17,12 @@ namespace ConfigPlay
 			machineConfig.SaveAs("c:\\machineConfig.xml");
 			//</snippet1>
 
-
 			//<snippet2>
 			// Obtains the configuration settings for a Web application.
 			System.Configuration.Configuration webConfig =
 				System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration("/Temp");
 			webConfig.SaveAs("c:\\webConfig.xml");
 			//</snippet2>
-
 
 			//<snippet3>
 			// Obtains the configuration settings for the <anonymousIdentification> section.
@@ -49,7 +47,6 @@ namespace ConfigPlay
 			}
 			//</snippet3>
 
-
 			//<snippet4>
 			IntPtr userToken = System.Security.Principal.WindowsIdentity.GetCurrent().Token;
 
@@ -73,7 +70,6 @@ namespace ConfigPlay
 			remoteWebConfig.SaveAs("c:\\remoteWebConfig.xml");
 			//</snippet4>
 
-
 			//<snippet5>
 			// Updates the configuration settings for a Web application.
 			System.Configuration.Configuration updateWebConfig =
@@ -94,7 +90,6 @@ namespace ConfigPlay
 			}
 			//</snippet5>
 
-
 			//<snippet6>
 			System.Configuration.Configuration rootWebConfig =
 				System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration("/MyWebSiteRoot");
@@ -110,7 +105,6 @@ namespace ConfigPlay
 					Console.WriteLine("No Northwind connection string");
 			}
 			//</snippet6>
-
 
 			//<snippet7>
 			System.Configuration.Configuration rootWebConfig1 =

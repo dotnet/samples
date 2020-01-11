@@ -1,5 +1,4 @@
-﻿
-// <SnippetGraphicsMMImageBrushAsCanvasBackgroundExampleWholePage>
+﻿// <SnippetGraphicsMMImageBrushAsCanvasBackgroundExampleWholePage>
 using System;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,7 +19,6 @@ namespace Microsoft.Samples.BrushExamples
             this.Content = mainPanel;
         
         }
-                 
 
         // <SnippetGraphicsMMImageBrushAsCanvasBackgroundExample>
         private void canvasBackgroundExample(Panel mainPanel)
@@ -43,8 +41,7 @@ namespace Microsoft.Samples.BrushExamples
             // </SnippetGraphicsMMImageBrushAsCanvasBackgroundExample3>
             
             mainPanel.Children.Add(myCanvas);
-    
-    
+
         }
         // </SnippetGraphicsMMImageBrushAsCanvasBackgroundExample>
     

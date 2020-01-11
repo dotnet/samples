@@ -33,6 +33,5 @@ namespace SDKSample
         }
     }
 
-
 }
 //</SnippetDataTemplateSelector>

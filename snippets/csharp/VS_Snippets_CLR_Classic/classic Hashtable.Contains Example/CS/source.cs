@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
  using System;
  using System.Collections;
  public class SamplesHashtable
@@ -30,8 +30,7 @@
        myValue = "nine";
        Console.WriteLine("The value \"{0}\" is {1}.", myValue, myHT.ContainsValue( myValue ) ? "in the Hashtable" : "NOT in the Hashtable");
     }
- 
- 
+
     public static void PrintIndexAndKeysAndValues(Hashtable myHT)
     {
        int i = 0;
@@ -62,4 +61,3 @@
 
  */ 
 // </Snippet1>
-

@@ -50,7 +50,6 @@ namespace CustomWinControls
             }
         }
         // </snippet6>
-        
 
         // <snippet4>
         protected override void OnPaint(PaintEventArgs e) 

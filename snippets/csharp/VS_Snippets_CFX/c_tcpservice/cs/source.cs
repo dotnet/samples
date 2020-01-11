@@ -239,16 +239,13 @@ namespace TcpService
 
     }
 
-
     public class Calculator : ICalculator
     {
-
 
         public double Divide(double a, double b)
         {
             return a / b;
         }
-
 
         public double CalculateTax(double a)
         {

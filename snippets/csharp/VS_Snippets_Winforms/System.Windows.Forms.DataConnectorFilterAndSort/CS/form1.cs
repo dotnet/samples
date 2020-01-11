@@ -15,14 +15,11 @@ namespace FilterAndSort
     class Form1 : Form
     {
 
-
-
         private BindingSource BindingSource1;
         private DataGridView dataGridView1;
         private Button button1;
         private Label label1;
         private Label label2;
-
 
         private IContainer components;
 
@@ -99,7 +96,6 @@ namespace FilterAndSort
             this.PerformLayout();
 
         }
-
 
         void Form1_Load(object sender, EventArgs e)
         {
@@ -187,7 +183,6 @@ namespace FilterAndSort
             label2.Text = "Count after removal: " + BindingSource1.Count.ToString();
         }
         //</snippet2>
-
 
     }
 

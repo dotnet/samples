@@ -203,7 +203,6 @@ namespace MarqueeControlLibrary
         }
 		#endregion
 
-		
 	}
     // </snippet311>
 }

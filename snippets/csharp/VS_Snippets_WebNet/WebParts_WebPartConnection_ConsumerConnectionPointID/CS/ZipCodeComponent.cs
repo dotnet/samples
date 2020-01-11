@@ -21,7 +21,6 @@ namespace Samples.AspNet.CS.Controls
   }
   // </snippet3>
 
-
   // <snippet4>
   [AspNetHostingPermission(SecurityAction.Demand,
     Level = AspNetHostingPermissionLevel.Minimal)]
@@ -97,7 +96,6 @@ namespace Samples.AspNet.CS.Controls
       _provider = Provider;
     }
 
-    
     protected override void OnPreRender(EventArgs e)
     {
       EnsureChildControls();

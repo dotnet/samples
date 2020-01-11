@@ -79,8 +79,6 @@ namespace OfficeWalkthroughCS
         }
         //</snippet4>
 
-
-
         void Pieces(IEnumerable<Account> accounts,
                    Action<Account, Excel.Range> DisplayFunc)
         {
@@ -185,4 +183,3 @@ namespace OfficeWalkthroughCS
         #endregion
     }
 }
-

@@ -29,4 +29,3 @@ public class AssemblyName_GetAssemblyName
 }
 // </Snippet2>
 // </Snippet1>
-

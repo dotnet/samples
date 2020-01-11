@@ -105,5 +105,3 @@ class Example
 Hello world 2006
  */
 //</Snippet1>
-
-

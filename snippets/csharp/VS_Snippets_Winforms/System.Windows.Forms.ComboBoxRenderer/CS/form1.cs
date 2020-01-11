@@ -6,7 +6,6 @@
 // that visual styles are enabled in the Display Panel. 
 // For simplicity, this sample does not handle run-time visual style switching.
 
-
 //<Snippet0>
 using System;
 using System.Drawing;

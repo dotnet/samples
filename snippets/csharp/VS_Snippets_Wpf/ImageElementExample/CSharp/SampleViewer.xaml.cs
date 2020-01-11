@@ -7,7 +7,6 @@ using System.Windows.Navigation;
 using System.Windows.Input;
 using System.Windows.Media;
 
-
 namespace ImageElementExample
 {
    public partial class SampleViewer : Window

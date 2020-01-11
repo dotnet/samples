@@ -22,8 +22,6 @@ namespace AdavancedInkTopicsSamples
         TextBox textbox1;
         InkControl control;
 
-
-
         public Window1()
         {
             InitializeComponent();
@@ -145,4 +143,3 @@ namespace AdavancedInkTopicsSamples
     }
     //</Snippet9>
 }
-

@@ -82,7 +82,6 @@ public class InkSelector : Label
             new FrameworkPropertyMetadata(true));
     }
 
-
     // Prepare to collect stylus packets. If Mode is set to Select,  
     // get the IncrementalHitTester from the InkPresenter'newStroke 
     // StrokeCollection and subscribe to its StrokeHitChanged event.
@@ -123,7 +122,6 @@ public class InkSelector : Label
         stylusPoints.Add(collectedPoints);
 
         InitializeHitTester(collectedPoints);
-
 
     }
     //<Snippet9>

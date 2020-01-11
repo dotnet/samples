@@ -45,5 +45,3 @@ Elevation.Low = 0
 Elevation.High = 1 
  */
 // </Snippet1>
-
-

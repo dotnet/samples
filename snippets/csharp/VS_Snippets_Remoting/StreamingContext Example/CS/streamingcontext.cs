@@ -50,7 +50,6 @@ internal class Win32
     public static extern IntPtr GetCurrentProcess();
 }
 
-
 // This class wraps memory that can be simultaneously 
 // shared by multiple AppDomains and Processes.
 [Serializable]
@@ -115,7 +114,6 @@ public sealed class SharedMemory : ISerializable, IDisposable
         return (flags & flagsToTest) != 0;
     }
 
-
     // The security attribute demands that code that calls  
     // this method have permission to perform serialization.
     [SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter = true)]
@@ -156,7 +154,6 @@ public sealed class SharedMemory : ISerializable, IDisposable
             info.AddValue("name", m_name);
         }
     }
-
 
     // The security attribute demands that code that calls  
     // this method have permission to perform serialization.
@@ -228,7 +225,6 @@ public sealed class SharedMemory : ISerializable, IDisposable
     }
 }
 
-
 class App
 {
     [STAThread]
@@ -273,7 +269,6 @@ class App
             fs.Close();
         }
     }
-
 
     unsafe static void Deserialize()
     {

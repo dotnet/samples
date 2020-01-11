@@ -19,7 +19,6 @@ public class Test {
          Console.WriteLine("The double is equal to {0}.", dFloatingPoint);
       }
    }
-   
 
    public static void Main() {
 

@@ -42,4 +42,3 @@ namespace ApplicationSettingsArchitectureCS
         //</SNIPPET2>
     }
 }
-

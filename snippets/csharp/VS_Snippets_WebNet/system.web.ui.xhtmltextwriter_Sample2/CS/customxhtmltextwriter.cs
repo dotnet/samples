@@ -25,13 +25,11 @@ namespace Samples.AspNet.CS
         {
         }
 
-
         public CustomXhtmlTextWriter(TextWriter writer, string tabString) : 
             base(writer, tabString)
         {
         }
 // </snippet5>
-
 
 // <snippet2>        
         // Override the OnAttributeRender method to 

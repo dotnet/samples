@@ -32,7 +32,6 @@ public class Example
                                     //close lambda expression and method invocation
                                 });
 
-
         // Keep the console window open in debug mode.
         Console.WriteLine("Processing complete. Press any key to exit.");
         Console.ReadKey();

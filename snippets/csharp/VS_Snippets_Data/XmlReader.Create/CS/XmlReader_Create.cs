@@ -82,7 +82,6 @@ while (reader.Read()) {}
   }
         //</snippet4>
 
-
     // Wrapped Reader
     static void WrappedReader_Settings()
     {

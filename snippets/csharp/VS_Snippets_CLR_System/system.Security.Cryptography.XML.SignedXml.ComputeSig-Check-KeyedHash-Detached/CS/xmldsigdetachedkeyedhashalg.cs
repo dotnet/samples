@@ -11,8 +11,6 @@ using System.Security.Cryptography.Xml;
 using System.Text;
 using System.Xml;
 
-
-
 class XMLDSIGDetached
 {
 	
@@ -58,8 +56,7 @@ class XMLDSIGDetached
         {
             Console.WriteLine(e.Message);
         }
-		
-			
+
     }
 
     // Sign an XML file and save the signature in a new file.

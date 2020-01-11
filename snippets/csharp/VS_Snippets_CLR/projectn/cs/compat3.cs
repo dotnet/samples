@@ -10,4 +10,3 @@ public class X
 
 public class Y : X {} 
 // </Snippet10>
-

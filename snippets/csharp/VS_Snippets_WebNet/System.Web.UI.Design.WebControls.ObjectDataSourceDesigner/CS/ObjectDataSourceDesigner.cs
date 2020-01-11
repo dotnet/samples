@@ -63,4 +63,3 @@ namespace Examples.CS.WebControls.Design
     } // MyObjectDataSourceDesigner
 } // Examples.CS.WebControls.Design
 // </snippet1>
-

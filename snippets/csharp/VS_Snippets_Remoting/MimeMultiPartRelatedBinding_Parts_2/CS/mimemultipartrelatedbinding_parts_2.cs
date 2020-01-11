@@ -58,5 +58,3 @@ namespace MimeContentBinding_work
    }
 }
 // </Snippet1>
-
-

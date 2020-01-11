@@ -7,7 +7,6 @@
 * This sample demonstrates how to display multiple layer column headers on the DataGridView.
 \******************************************************************************************/
 
-
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

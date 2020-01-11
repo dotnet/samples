@@ -25,7 +25,6 @@ namespace cs_localmethodcall
             }
             // </Snippet1>
 
-            
         }
     }
 }

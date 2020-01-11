@@ -9,13 +9,11 @@
   * After a HttpWebRequest object is created, its BeginGetResponse method is used to start 
   * the asynchronous response phase.
   * Finally, the EndGetResponse method is used to end the asynchronous response phase .*/
-
 using System;
 using System.Net;
 using System.IO;
 using System.Text;
 using System.Threading;
-
 
 public class RequestState
 {
@@ -40,8 +38,6 @@ class HttpWebRequest_BeginGetResponse
   public static ManualResetEvent allDone= new ManualResetEvent(false);
   const int BUFFER_SIZE = 1024;
 
- 
-
   static void Main()
   {  
 // <Snippet1>
@@ -49,7 +45,6 @@ class HttpWebRequest_BeginGetResponse
     try
     {      
 
-      
       // Create a HttpWebrequest object to the desired URL.
       HttpWebRequest myHttpWebRequest1= (HttpWebRequest)WebRequest.Create("http://www.contoso.com");
       
@@ -57,7 +52,6 @@ class HttpWebRequest_BeginGetResponse
       // object to it's request field.  
       RequestState myRequestState = new RequestState();  
       myRequestState.request = myHttpWebRequest1;
-
 
       // Start the asynchronous request.
       IAsyncResult result=
@@ -153,8 +147,3 @@ class HttpWebRequest_BeginGetResponse
 // </Snippet1>
 
 }
-
-
-
-
-

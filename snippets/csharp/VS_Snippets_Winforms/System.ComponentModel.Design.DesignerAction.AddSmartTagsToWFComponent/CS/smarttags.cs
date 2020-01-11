@@ -14,7 +14,6 @@ using System.Windows.Forms;
 using System.Text;
 using System.Reflection;
 
-
 namespace SmartTags
 {
 
@@ -59,7 +58,6 @@ public class Form1 : System.Windows.Forms.Form
         Form1 f1 = new Form1();
         f1.ShowDialog();
     }
-
 
 }
 
@@ -219,7 +217,6 @@ public class ColorLabelActionList :
     }
 //</snippet5>
 
-
     //<snippet11>
     // Boolean properties are automatically displayed with binary 
     // UI (such as a checkbox).
@@ -319,7 +316,6 @@ public class ColorLabelActionList :
     }
     //</snippet7>
 }
-
 
 }
 //</snippet1>

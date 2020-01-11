@@ -63,7 +63,6 @@ namespace CompensationExample
             };
             //</snippet4>
 
-
             /*
             wf.Invoke();
             /*/
@@ -118,7 +117,6 @@ namespace CompensationExample
                 }
             };
             //</snippet3>
-
 
             /*
             wf.Invoke();
@@ -210,7 +208,6 @@ namespace CompensationExample
             };
             //</snippet1>
 
-
             /*
             wf.Invoke();
             /*/
@@ -291,11 +288,7 @@ namespace CompensationExample
             //</snippet100>
         }
 
-
-        
     } // End class program
-
-
 
     // Flight Activities
     public sealed class ReserveFlight : CodeActivity

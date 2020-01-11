@@ -16,4 +16,3 @@ public class Example
 // The example displays output like the following output:
 //       Today is Monday.
 // </Snippet1>
-

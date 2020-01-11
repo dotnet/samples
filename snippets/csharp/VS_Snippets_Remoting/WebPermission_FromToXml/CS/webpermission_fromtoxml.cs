@@ -8,8 +8,6 @@
   * Finally, using the FromXml method the WebPermission instance is reconstructed from 
   * the above SecurityElement instance and the attributes are displayed.
 */
-
-
 using System;
 using System.Net;
 using System.Security;

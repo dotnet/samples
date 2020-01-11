@@ -1,8 +1,5 @@
-﻿
-
-// This example demonstrates using the Control.Region property by 
+﻿// This example demonstrates using the Control.Region property by 
 // creating a round button.  
-
 
 using System;
 using System.Windows.Forms;
@@ -77,5 +74,3 @@ public class Form1:
 	}
 	//</snippet1>
 }
-
-

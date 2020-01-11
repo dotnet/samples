@@ -62,4 +62,3 @@ public class Page
    public Uri URL;
    public String Title;
 }
-

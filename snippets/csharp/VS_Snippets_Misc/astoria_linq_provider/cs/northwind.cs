@@ -52,7 +52,6 @@ namespace NorthwindService
             return resource;
         }
 
-
         // Resets the value of the object to its default value.
         object IUpdatable.ResetResource(object resource)
         {

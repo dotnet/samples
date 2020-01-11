@@ -140,5 +140,3 @@ public class SynchronizedCache
     }
 }
 //</Snippet1>
-
-

@@ -63,5 +63,3 @@ Coelophysis
 Pachycephalosaurus
  */
 // </Snippet1>
-
-

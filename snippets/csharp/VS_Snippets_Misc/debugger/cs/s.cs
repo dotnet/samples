@@ -114,7 +114,6 @@ class S
     }
     Monitor.Exit(mylock);
 
-
     //after
     L(o);
   }
@@ -149,7 +148,6 @@ class S
       ;
     }
     Monitor.Exit(mylock);
-
 
     //after
     L(o);
@@ -227,7 +225,6 @@ class S
     {
       //wait for task5 to die
       while (waitFor5) { ;}
-
 
       int i;
       //spin up all procs

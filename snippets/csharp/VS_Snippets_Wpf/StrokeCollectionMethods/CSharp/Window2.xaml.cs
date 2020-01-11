@@ -325,16 +325,5 @@ namespace StrokeCollectionEraseMethods
         }
         //</Snippet30>
 
-
     }
 }
-
-
-
-
-
-
-
-
-
-

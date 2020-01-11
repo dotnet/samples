@@ -6,14 +6,12 @@
     using System.Windows.Shapes;
     using System.Windows.Media;
 
- 
     public partial class FollowMouseCanvas : Canvas
     {
         private Vector _velocity = new Vector(0, 0);
         private Point _parentLastMousePosition = new Point(0, 0);
         private Canvas _parentCanvas = null;
         private TimeSpan _lastRender;
-       
 
         public FollowMouseCanvas()
             : base()
@@ -45,7 +43,6 @@
                     
                 }
             }
-
 
             //get location
             Point location = new Point(Canvas.GetLeft(this), Canvas.GetTop(this));

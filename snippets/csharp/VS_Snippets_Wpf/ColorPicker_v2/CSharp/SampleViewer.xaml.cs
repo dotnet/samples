@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
@@ -37,9 +36,7 @@ namespace Microsoft.Samples.CustomControls
             w.StartingColor = Colors.Blue;
             MessageBox.Show(w.ShowDialog().ToString());
 
-
         }
-
 
     }
 }

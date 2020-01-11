@@ -106,7 +106,6 @@ namespace NorthwindDataService
             config.SetEntitySetPageSize("Customers", 10);
             config.SetEntitySetPageSize("Orders", 10);
 
-            
         }
         //<snippetServiceOperation>
         //<snippetServiceOperationDef>
@@ -242,7 +241,6 @@ namespace NorthwindDataService
         }
 
         //</snippetChangeInterceptor>
-
 
         //<snippetHandleExceptions>
         // Override to manage returned exceptions.
@@ -386,5 +384,3 @@ public Customer CloneCustomer(string serializedCustomer)
         }
     }
 }
-
-

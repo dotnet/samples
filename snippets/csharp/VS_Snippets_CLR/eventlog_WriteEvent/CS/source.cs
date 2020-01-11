@@ -1,5 +1,4 @@
-﻿
-//<Snippet1>
+﻿//<Snippet1>
 using System;
 using System.Diagnostics;
 
@@ -147,7 +146,6 @@ namespace EventLogSamples
             }
         }
         //</Snippet6>
-
 
         static void WriteEventSample1()
         {

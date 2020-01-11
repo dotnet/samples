@@ -24,9 +24,6 @@ namespace Samples.Aspnet.SystemWebConfiguration
 
 // </Snippet1>
 
-
-                
-
 // <Snippet3>
 
     // Get the current EnabledOutputCache.
@@ -60,7 +57,6 @@ namespace Samples.Aspnet.SystemWebConfiguration
 
     // </Snippet5>
 
-
     // <Snippet6>
 
     // Get the current SendCacheControlHeader.
@@ -83,4 +79,3 @@ namespace Samples.Aspnet.SystemWebConfiguration
     } // UsingOutputCacheSection class end.
 
 } // Samples.Aspnet.SystemWebConfiguration namespace end.
-

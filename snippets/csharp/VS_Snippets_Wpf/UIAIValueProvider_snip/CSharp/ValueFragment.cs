@@ -150,8 +150,6 @@ namespace UIAIValueProvider_snip
         }
         // </SnippetSetValue>
 
-
-
         #endregion IValueProvider members
         
         #region IRawElementProviderFragment Members

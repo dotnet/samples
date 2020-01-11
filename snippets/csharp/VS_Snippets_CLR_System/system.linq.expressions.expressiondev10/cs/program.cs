@@ -437,7 +437,6 @@ namespace ExpressionTreesCSharp
             // Add the following directive to your file:
             // using System.Linq.Expressions;  
 
-
             // This block has a parameter expression
             // that represents a variable within the block scope.
             // It assigns a value to the variable,
@@ -730,7 +729,6 @@ namespace ExpressionTreesCSharp
             // The list of indexes.
             List<Expression> indexes = new List<Expression> { firstIndexExpr, secondIndexExpr };
 
-
             // This parameter represents the value that will be added to a corresponding array element.
             ParameterExpression valueExpr = Expression.Parameter(typeof(int), "Value");
 
@@ -850,7 +848,6 @@ namespace ExpressionTreesCSharp
             Expression incrementExpr = Expression.Increment(
                                         Expression.Constant(num)
                                     );
-
 
             // Print out the expression.
             Console.WriteLine(incrementExpr.ToString());
@@ -1276,7 +1273,6 @@ namespace ExpressionTreesCSharp
         // 40
         //</Snippet37>
 
-
         //Expression.Property
         //<Snippet38>
         // Add the following directive to your file:
@@ -1375,7 +1371,6 @@ namespace ExpressionTreesCSharp
          //
          // 10
         //</Snippet40>
-
 
         //Expression.MemberBind
         //<Snippet41>

@@ -24,7 +24,6 @@ public class RetiredMember:NewMember
 {
     public DateTime RetireDate;
 }
-    
 
 public class Run
 {
@@ -60,8 +59,7 @@ public class Run
       // Create the XmlSerializer and return it.
       return new XmlSerializer(typeof(Group), xOver);
    }
-   
- 
+
    public void SerializeObject(string filename)
    {
       // Create an instance of the XmlSerializer class.

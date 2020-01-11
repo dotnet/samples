@@ -8,6 +8,5 @@ namespace Contoso.VSSkinHost
     {
         public const uint cmdidSetSkin =        0x100;
 
-
     };
 }

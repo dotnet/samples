@@ -12,7 +12,6 @@ using System.Windows.Shapes;
 using System.Windows.Media.Animation;
 using System.Diagnostics;
 
-
 namespace Microsoft.Samples.FreezableExamples
 {
     /// <summary>

@@ -163,7 +163,6 @@ class CustomBinder : Binder
     }
 }
 
-
 //<snippet2>
 public class CustomBinderDriver
 {

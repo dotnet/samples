@@ -56,7 +56,6 @@ namespace SDKSample
             exampleRectangle.Height = 175;
             exampleRectangle.Fill = dBrush;
 
-
             // Create a border to contain the rectangle.
             Border exampleBorder = new Border();
             exampleBorder.BorderBrush = Brushes.Gray;
@@ -74,5 +73,3 @@ namespace SDKSample
     }
 }
 // </SnippetImageDrawingWithDrawingBrushExample>
-
-

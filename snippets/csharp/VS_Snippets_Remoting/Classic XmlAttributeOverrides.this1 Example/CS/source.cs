@@ -33,7 +33,6 @@ public XmlSerializer CreateOverrider()
    name of the overridden attribute must be specified. */
    xOver.Add(typeof(Group), "GroupCode", attrs);
 
-
    // Get the XmlAttributes object for the type and member.
    XmlAttributes tempAttrs;
    tempAttrs = xOver[typeof(Group), "GroupCode"];
@@ -45,4 +44,3 @@ public XmlSerializer CreateOverrider()
 }
 }
 // </Snippet1>
-

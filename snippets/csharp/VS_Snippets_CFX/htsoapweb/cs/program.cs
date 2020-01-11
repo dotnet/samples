@@ -105,7 +105,6 @@ namespace Microsoft.ServiceModel.Samples.BasicWebProgramming
                     Console.WriteLine("");
                 }
 
-
                 Console.WriteLine("Press [Enter] to terminate");
                 Console.ReadLine();
                 // <Snippet9>
@@ -121,4 +120,3 @@ namespace Microsoft.ServiceModel.Samples.BasicWebProgramming
     }
 }
 // </Snippet13>
-

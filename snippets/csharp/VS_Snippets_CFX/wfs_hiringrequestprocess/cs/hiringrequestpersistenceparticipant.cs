@@ -7,7 +7,6 @@ using System.Activities.Persistence;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace Microsoft.Samples.HiringService
 {
 //<Snippet1>

@@ -128,8 +128,6 @@ namespace ImageListCollectionEx
         }
         //</snippet3>
 
-      
-
         //Per VSWhidbey 370432 Demonstrates the ImageListCollection.AddStrip method.
 //<snippet1>
         public void AddStripToCollection()
@@ -146,7 +144,6 @@ namespace ImageListCollectionEx
                 System.Threading.Thread.Sleep(1000);
                 
             }
-            
 
         }
 //</snippet1>
@@ -171,11 +168,9 @@ namespace ImageListCollectionEx
             this.Controls.Add(this.button1);
             this.Name = "Form1";
 
-         
             this.ResumeLayout(false);
             
         }
 
-        
     }
 }

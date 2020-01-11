@@ -37,6 +37,5 @@ namespace MappingTypeCS
             return dt;
         }
 
-
     }
 }

@@ -1,10 +1,8 @@
 ﻿// The following code example uses a BitVector32 as a collection of bit flags.
 
-
 // <snippet1>
 using System;
 using System.Collections.Specialized;
-
 
 public class SamplesBitVector32  {
 

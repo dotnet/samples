@@ -66,6 +66,3 @@ Thread B exits successfully.
 Thread A: Adding the given count to the semaphore would cause it to exceed its maximum count.
  */
 //</Snippet1>
-
-
-

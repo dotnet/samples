@@ -39,9 +39,6 @@ namespace DataGrid_RowHeader
             return custdata;
         }
 
-       
-
-        
     }
 
     //<Snippet2>
@@ -75,8 +72,5 @@ namespace DataGrid_RowHeader
         #endregion
     }
     //</Snippet2>
-
-
-    
 
 }

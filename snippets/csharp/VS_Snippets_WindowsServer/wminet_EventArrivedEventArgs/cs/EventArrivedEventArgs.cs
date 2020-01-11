@@ -46,7 +46,6 @@ public class EventWatcherAsync
         
     }
 
-
     private void HandleEvent(object sender,
         EventArrivedEventArgs e)   
     {

@@ -84,7 +84,6 @@ public class SignVerifyEnvelope
         // Add the reference to the SignedXml object.
         signedXml.AddReference(reference);
 
-		
         // Add a DSAKeyValue to the KeyInfo (optional; helps recipient find key to validate).
         KeyInfo keyInfo = new KeyInfo();
         keyInfo.AddClause(new DSAKeyValue((DSA)DSAKey));
@@ -99,8 +98,7 @@ public class SignVerifyEnvelope
 
         // Append the element to the XML document.
         doc.DocumentElement.AppendChild(doc.ImportNode(xmlDigitalSignature, true));
-		
-		
+
         if (doc.FirstChild is XmlDeclaration)  
         {
             doc.RemoveChild(doc.FirstChild);

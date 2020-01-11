@@ -6,10 +6,8 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.IO;
 
-
 namespace Microsoft.Samples.Animation.TimingBehaviors
 {
-
 
     public partial class MyApp : Application
     {
@@ -19,15 +17,13 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
         
         }
-    
-    
+
         void myAppStartup(object sender, StartupEventArgs e)
         {
             Window myWindow = new Window();
             myWindow.Content = new SampleViewer();
             myWindow.Show();
         }
-        
 
         private void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs args)
         {
@@ -41,12 +37,10 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             {
             
             }
-            
-            
+
             MessageBox.Show("Unhandled exception: " + args.ExceptionObject.ToString());
         }     
     
     }
-
 
 }

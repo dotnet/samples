@@ -26,4 +26,3 @@ public class Example
 //     Task A completed: False, Status: Running
 //     Timed out before task A completed.
 // </Snippet9>
-

@@ -1,5 +1,4 @@
-﻿
-// <SnippetKeyTimesExampleUsingWholePage>
+﻿// <SnippetKeyTimesExampleUsingWholePage>
 using System;
 using System.Windows;
 using System.Windows.Controls;
@@ -30,7 +29,6 @@ namespace Microsoft.Samples.KeyFrameExamples
             createKeyTimePacedExample();
 
             this.Content = mainPanel;
-
 
         }
 
@@ -260,9 +258,6 @@ namespace Microsoft.Samples.KeyFrameExamples
 
         }
 
-
     }
 }
 // </SnippetKeyTimesExampleUsingWholePage>
-
-

@@ -10,8 +10,6 @@ namespace DragDrop
 	{
 		private System.ComponentModel.Container components = null;
 
-
-
       [STAThread]
       static void Main() 
       {
@@ -29,7 +27,6 @@ namespace DragDrop
 			}
 			base.Dispose( disposing );
 		}
-
 
 		#region Windows Form Designer generated code
 		/// <summary>
@@ -132,7 +129,6 @@ private void Form1_DragEnter(object sender, DragEventArgs e)
    }
 }
 //</snippet1>
-
 
    }
 }

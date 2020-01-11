@@ -40,7 +40,6 @@ namespace Samples
             b.Security.Transport.ClientCredentialType = HttpClientCredentialType.Windows;
             //</snippet5>
 
-
         }
         private void MakeMessgeBinding()
         {
@@ -119,7 +118,6 @@ namespace Samples
             Console.ReadLine();
             //</snippet9>
         }
-
 
     }
 

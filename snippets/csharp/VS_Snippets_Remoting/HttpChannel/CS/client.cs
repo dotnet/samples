@@ -43,4 +43,3 @@ public class SampleClient : MarshalByRefObject {
     
 }
 // </Snippet2>
-

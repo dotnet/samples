@@ -30,4 +30,3 @@ static void Main()
 	Application.Run(new Form1());
 }
 }
-

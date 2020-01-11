@@ -44,4 +44,3 @@ public class Example
 //          Actual:             52
 //          Actual with BOM:    54
 // </Snippet2>
-

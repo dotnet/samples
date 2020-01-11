@@ -23,4 +23,3 @@ public class Example
 //       System.Nullable`1
 //          Generic Type Parameters: (unassigned) T
 // </Snippet3>
-

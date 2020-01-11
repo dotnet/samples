@@ -6,7 +6,6 @@ public class Form1: Form
  protected TreeView treeView1;
  protected TreeNode mySelectedNode;
 
-
 // <Snippet1>
 /* Get the tree node under the mouse pointer and 
    save it in the mySelectedNode variable. */
@@ -69,6 +68,5 @@ private void treeView1_AfterLabelEdit(object sender,
    }
 }
 // </Snippet1>
-
 
 }

@@ -64,6 +64,4 @@ public class DiscoveryClientDocumentCollection_Add
       for (int iIndex=0; iIndex < myObjectCollection1.Length; iIndex++)
          Console.WriteLine(myObjectCollection1[iIndex]);
    }
-} 
-
-
+}

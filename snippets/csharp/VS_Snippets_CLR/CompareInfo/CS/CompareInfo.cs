@@ -44,4 +44,3 @@ public sealed class App
 // The LCID for ja-JP is 1041.
 // ja-JP Compare: coté < côte
 //</snippet1>
-

@@ -28,4 +28,3 @@ public class SampleClient : MarshalByRefObject {
     }
 }
 // </Snippet3>
-

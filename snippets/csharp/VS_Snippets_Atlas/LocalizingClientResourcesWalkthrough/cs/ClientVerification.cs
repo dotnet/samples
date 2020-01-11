@@ -7,7 +7,6 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Resources;
 
-
 namespace LocalizingScriptResources
 {
     public class ClientVerification : Control

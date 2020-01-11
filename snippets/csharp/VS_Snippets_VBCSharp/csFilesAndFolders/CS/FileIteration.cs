@@ -5,7 +5,6 @@ using System.Linq;
 //using System.IO;
 using System.Diagnostics;
 
-
 namespace FileIteration
 {
     //How to: Iterate Through Folders  Recursively (C# Programming Guide)
@@ -207,7 +206,6 @@ class WriteTextFile
 
         // These examples assume a "C:\Users\Public\TestFolder" folder on your machine.
         // You can modify the path if necessary.
-        
 
         // Example #1: Write an array of strings to a file.
         // Create a string array that consists of three lines.
@@ -215,7 +213,6 @@ class WriteTextFile
         // WriteAllLines creates a file, writes a collection of strings to the file,
         // and then closes the file.  You do NOT need to call Flush() or Close().
         System.IO.File.WriteAllLines(@"C:\Users\Public\TestFolder\WriteLines.txt", lines);
-
 
         // Example #2: Write one string to a text file.
         string text = "A class is the most powerful data type in C#. Like a structure, " +
@@ -269,7 +266,6 @@ class WriteTextFile
  //   Third line
  //   Fourth line
     //</snippet3>
-
 
     // How to: Read From a Text File
     //<snippet4>
@@ -351,7 +347,6 @@ class WriteTextFile
 
             // Get the files in the directory and print out some information about them.
             System.IO.FileInfo[] fileNames = dirInfo.GetFiles("*.*");
-
 
             foreach (System.IO.FileInfo fi in fileNames)
             {

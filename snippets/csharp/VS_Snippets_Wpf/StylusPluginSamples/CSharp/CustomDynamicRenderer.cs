@@ -52,7 +52,6 @@ namespace AdvancedInkInputSemples
         {
         }
 
-     
         //<Snippet18>
         protected override void OnIsActiveForInputChanged()
         {

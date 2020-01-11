@@ -10,7 +10,6 @@
 //
 //-----------------------------------------------------------------------------
 
-
 using System;
 using System.IdentityModel;
 using System.IdentityModel.Configuration;
@@ -83,7 +82,6 @@ namespace PassiveFlowSTS
                                                                                                                                   false);
                 signInRequest.Realm = "htp://MyApp.com";
                 signInRequest.HomeRealm = identityProviderUri;
-
 
                 Response.Redirect(signInRequest.RequestUrl);
                 // </Snippet2>

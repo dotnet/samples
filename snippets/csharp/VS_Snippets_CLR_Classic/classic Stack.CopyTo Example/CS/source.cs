@@ -44,8 +44,7 @@
        PrintValues( myStandardArray, ' ' );
  
     }
- 
- 
+
     public static void PrintValues( Array myArr, char mySeparator )  {
        foreach ( Object myObj in myArr )  {
           Console.Write( "{0}{1}", mySeparator, myObj );
@@ -67,4 +66,3 @@
  */
 
  // </Snippet1>
-

@@ -13,7 +13,6 @@ namespace SmartCardSign
             // The available Smart Card CryptoGraphic Providers are listed
             // in HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Defaults\Provider.
 
-
             // Create a new CspParameters object that identifies a 
             // Smart Card CryptoGraphic Provider.
             // The 1st parameter comes from HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Defaults\Provider Types.
@@ -44,4 +43,3 @@ namespace SmartCardSign
     }
 }
 //</SNIPPET1> 
-

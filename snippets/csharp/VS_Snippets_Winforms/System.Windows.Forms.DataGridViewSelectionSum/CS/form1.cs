@@ -107,7 +107,6 @@ public class Form1 : Form
         DataGridView1.Rows.Add(new string[] { "Groceries", "-25", "", "" });
         DataGridView1.Rows.Add(new string[] { "Tax Return", "", "300", "" });
 
-
         // Allow the user to edit the starting balance cell
         DataGridView1.Rows[0].ReadOnly = true;
         DataGridView1.Rows[0].Cells["Balance"].ReadOnly = false;

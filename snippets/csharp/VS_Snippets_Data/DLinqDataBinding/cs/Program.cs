@@ -4,10 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-
-
-
-
 namespace cs_DataBinding
 {
     class Program
@@ -33,8 +29,6 @@ namespace cs_DataBinding
             dataGrid3.DataSource = bs;
             // </Snippet1>
 
-            
-            
         }
 
         void method2()

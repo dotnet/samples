@@ -32,7 +32,6 @@ namespace ListBox_Index
         }
         //</SnippetListBoxSelectAll>
 
-
         //<SnippetListBoxUnselectAll>
         private void UnselectAll(object sender, RoutedEventArgs e)
         {

@@ -132,7 +132,6 @@ public void ControlSetFocus(Control control)
 }
 //</snippet1>
 
-
 //<snippet2>
 public void ControlSelect(Control control)
 {
@@ -143,11 +142,6 @@ public void ControlSelect(Control control)
    }
 }
 //</snippet2>
-
-
-      
-
-
 
       private void checkBox1_CheckedChanged(object sender, System.EventArgs e)
       {
@@ -181,8 +175,6 @@ public bool DoubleBufferingEnabled()
 }
 // </snippet4>
 
-
-
       private void button4_Click(object sender, System.EventArgs e)
       {
          this.EnableDoubleBuffering();
@@ -193,7 +185,6 @@ public bool DoubleBufferingEnabled()
          MessageBox.Show(this.DoubleBufferingEnabled().ToString() );
          this.ScaleChildControls();
       }
-
 
 // <snippet5>
 public void ScaleChildControlsEqually()
@@ -207,7 +198,6 @@ public void ScaleChildControlsEqually()
 }
 // </snippet5>
 
-
 // <snippet6>
 public void ScaleChildControls()
 {
@@ -219,7 +209,6 @@ public void ScaleChildControls()
    }
 }
 // </snippet6>
-
 
    }
 }

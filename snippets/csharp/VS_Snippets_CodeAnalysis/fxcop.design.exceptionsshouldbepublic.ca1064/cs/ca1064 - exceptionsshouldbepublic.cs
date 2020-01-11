@@ -74,7 +74,6 @@ namespace Samples
         {
         }
 
-
         protected ThirdCustomException(SerializationInfo info, StreamingContext context)
             : base(info, context)
         {

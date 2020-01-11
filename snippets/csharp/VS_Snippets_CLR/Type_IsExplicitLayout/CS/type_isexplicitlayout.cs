@@ -4,7 +4,6 @@ using System.Reflection;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
 
-
 // Class to test for the ExplicitLayout property.
 [StructLayout(LayoutKind.Explicit, Size=16, CharSet=CharSet.Ansi)]
 public class MySystemTime

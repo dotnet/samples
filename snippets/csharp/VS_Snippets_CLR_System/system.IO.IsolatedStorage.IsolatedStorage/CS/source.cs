@@ -288,7 +288,6 @@ public class LoginPrefs
                 fileNames = isoFile.GetFileNames("Archive\\*");
             }
 
-
             if (dirNames.Length > 0)
             {
                 for (int i = 0; i < dirNames.Length; ++i)

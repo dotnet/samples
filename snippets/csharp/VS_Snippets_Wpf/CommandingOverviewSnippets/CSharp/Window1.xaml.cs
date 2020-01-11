@@ -10,8 +10,6 @@ using System.ComponentModel;
 using System.Threading;
 using System.Windows.Threading;
 
-
-
 namespace SDKSamples
 {
     public partial class Window1 : Window
@@ -19,7 +17,6 @@ namespace SDKSamples
         //<SnippetCommandingOverviewCommandDefinition>
         public static RoutedCommand CustomRoutedCommand = new RoutedCommand();
         //</SnippetCommandingOverviewCommandDefinition>
-
 
         public Window1()
         {
@@ -106,8 +103,6 @@ namespace SDKSamples
 
         }
 
-
-
         private void AddCommand(object sender, RoutedEventArgs e)
         {
             // <SnippetCommandingOverviewCmdManagerAddHandlers>
@@ -188,7 +183,6 @@ namespace SDKSamples
         }
         //</SnippetCommandingOverviewCanExecute> 
 
-
         //<SnippetCommandingOverviewMultipleCmdHandler>
         private void ExecutedDisplayCommand(object sender,
             ExecutedRoutedEventArgs e)
@@ -248,7 +242,6 @@ namespace SDKSamples
         }
         //</SnippetCommandingOverviewMultipleCanExecute>
 
-
         public void MyPlayMethod()
         {
             MessageBox.Show("Play");
@@ -285,7 +278,6 @@ namespace SDKSamples
     //** After Beta2 I'll create a new sniphost sample for them.
     //**
     //***********************************************************************
-
 
     //<SnippetThreadingArticleWeatherComponent1>
     public class WeatherComponent : Component

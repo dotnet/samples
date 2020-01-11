@@ -35,7 +35,6 @@ namespace TreeViewHitTest
         }
  //</snippet1>
 
-
         [STAThread]
         static void Main()
         {

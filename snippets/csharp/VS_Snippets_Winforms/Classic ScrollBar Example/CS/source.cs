@@ -168,7 +168,6 @@ namespace Scrollbar
             //Step 2: Add the size of visible scrollbars if necessary.
             //Step 3: Add an adjustment factor of ScrollBar.LargeChange.
 
-
             //Configure the horizontal scrollbar
             //---------------------------------------------
             if (this.hScrollBar1.Visible)

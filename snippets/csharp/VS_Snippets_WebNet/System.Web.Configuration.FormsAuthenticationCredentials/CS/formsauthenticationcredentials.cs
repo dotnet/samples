@@ -40,13 +40,10 @@ namespace Samples.AspNet
 
             // </Snippet2>
 
-
-
             // <Snippet3>
             // Get the current PasswordFormat property value.
             FormsAuthPasswordFormat currentPasswordFormat =
             formsAuthenticationCredentials.PasswordFormat;
-
 
             // Set the PasswordFormat property value.
             formsAuthenticationCredentials.PasswordFormat = 
@@ -77,7 +74,6 @@ namespace Samples.AspNet
             }
             // </Snippet5>
 
-
             // <Snippet6>
             // Using method Add.
 
@@ -102,7 +98,6 @@ namespace Samples.AspNet
 
             // </Snippet6>
 
-
             // <Snippet7>
             // Using method Clear.
             formsAuthenticationCredentials.Users.Clear();
@@ -112,7 +107,6 @@ namespace Samples.AspNet
                 configuration.Save();
             }
             // </Snippet7>
-
 
             // <Snippet9>
             // Using method Remove.
@@ -135,7 +129,6 @@ namespace Samples.AspNet
                 configuration.Save();
             }
             // </Snippet10>
-
 
             // <Snippet11>
             // Using method Set.
@@ -202,7 +195,4 @@ namespace Samples.AspNet
 
     }
 
-} 
-
-
-
+}

@@ -2,7 +2,6 @@
 using System;
 using System.Security;
 
-
 namespace TransparencyWarningsDemo
 {
 

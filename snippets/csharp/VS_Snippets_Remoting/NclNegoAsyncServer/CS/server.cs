@@ -189,4 +189,3 @@ namespace Examples.NegotiateStreamExample
     }
 }
 //</snippet0>
-

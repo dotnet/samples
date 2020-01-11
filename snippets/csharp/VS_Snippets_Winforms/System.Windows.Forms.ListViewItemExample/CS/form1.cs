@@ -64,7 +64,6 @@ public class Form1:
 	private void InitializeListViewItems()
 	{
 		ListView1.View = View.List;
-		
 
 		Cursor[] favoriteCursors = new Cursor[]{Cursors.Help, 
 			Cursors.Hand, Cursors.No, Cursors.Cross};
@@ -94,4 +93,3 @@ public class Form1:
 	}
 
 }
-

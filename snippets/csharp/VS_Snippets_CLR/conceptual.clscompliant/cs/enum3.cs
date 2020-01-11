@@ -21,4 +21,3 @@ public class Clothing
 // The attempt to compile the example displays a compiler warning like the following:
 //    Enum3.cs(6,13): warning CS3009: 'Size': base type 'uint' is not CLS-compliant
 // </Snippet7>
- 

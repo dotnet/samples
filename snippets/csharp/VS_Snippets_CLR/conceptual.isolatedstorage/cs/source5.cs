@@ -3,7 +3,6 @@ using System;
 using System.IO;
 using System.IO.IsolatedStorage;
 
-
 namespace ConsoleApplication1
 {
     class Program

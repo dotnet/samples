@@ -46,7 +46,6 @@ class Form1 : Form
         this.dataGridView1.CellFormatting += new DataGridViewCellFormattingEventHandler(dataGridView1_CellFormatting);
     }
 
-
     //<Snippet1>
     // Sets the ToolTip text for cells in the Rating column.
     void dataGridView1_CellFormatting(object sender, 

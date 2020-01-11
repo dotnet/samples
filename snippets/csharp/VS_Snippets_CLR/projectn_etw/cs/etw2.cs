@@ -24,7 +24,6 @@ public sealed partial class MainPage : Page
 }
 // </Snippet2>
 
-
 public class Page 
 {
    public void InitializeComponent() {}       
@@ -53,6 +52,3 @@ public sealed class AppEventSource : EventSource
   [Event(2)]
   public void MainPageInitialized() { WriteEvent(2); }
 }
-
-
-

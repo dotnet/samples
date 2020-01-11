@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -46,8 +45,6 @@ namespace SDKSample
             myGeometryGroup.Children.Add(myEllipseGeometry);
             myGeometryGroup.Children.Add(myRectangleGeometry);
 
-
-
             Path myPath = new Path();
             myPath.Stroke = Brushes.Black;
             myPath.StrokeThickness = 1;
@@ -74,7 +71,6 @@ namespace SDKSample
             myEllipseGeometry2.Center = new Point(125, 75);
             myEllipseGeometry2.RadiusX = 50;
             myEllipseGeometry2.RadiusY = 50;
-
 
             GeometryGroup myGeometryGroup = new GeometryGroup();
             myGeometryGroup.FillRule = FillRule.Nonzero;

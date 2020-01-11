@@ -76,7 +76,6 @@ class PropertyBuilderDemo
         custNamePropBldr.SetGetMethod(custNameGetPropMthdBldr);
         custNamePropBldr.SetSetMethod(custNameSetPropMthdBldr);
 
-
         Type retval = myTypeBuilder.CreateType();
 
         // Save the assembly so it can be examined with Ildasm.exe,
@@ -121,6 +120,3 @@ class PropertyBuilderDemo
 // -------------------
 
 // </Snippet1>
-
-
-

@@ -95,7 +95,6 @@ namespace Control.DoubleClick
             Application.Run(new Form1());
         }
 
-
         //<Snippet1>
         // This example uses the DoubleClick event of a ListBox to load text files
         // listed in the ListBox into a TextBox control. This example

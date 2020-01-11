@@ -107,6 +107,3 @@ Nested type in Derived<V>
                IsGenericParameter: False
  */
 //</Snippet1>
-
-
-

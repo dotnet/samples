@@ -17,7 +17,6 @@ using System.Windows.Shapes;
 // Add the following using directive, and add a reference for System.Net.Http.
 using System.Net.Http;
 
-
 namespace AsyncExample_MultipleTasks
 {
     public partial class MainWindow : Window
@@ -35,7 +34,6 @@ namespace AsyncExample_MultipleTasks
             resultsTextBox.Text += "\r\n\r\nControl returned to startButton_Click.\r\n";
             //</snippet1>
         }
-
 
         //<snippet3>
         private async Task CreateMultipleTasksAsync()
@@ -67,7 +65,6 @@ namespace AsyncExample_MultipleTasks
         }
         //</snippet3>
 
-
         //<snippet2>
         async Task<int> ProcessURLAsync(string url, HttpClient client)
         {
@@ -75,7 +72,6 @@ namespace AsyncExample_MultipleTasks
             DisplayResults(url, byteArray);
             return byteArray.Length;
         }
-        
 
         private void DisplayResults(string url, byte[] content)
         {

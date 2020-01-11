@@ -20,7 +20,6 @@ namespace CompositionContainerExample
         public MyAddin myAddin { get; set; }
     }
 
-
     class Program
     {
         static void Main(string[] args)

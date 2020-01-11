@@ -92,7 +92,6 @@
                 Point truePosition = GetTruePosition(child);
                 Rect childRect = new Rect(truePosition, child.RenderSize);
 
-
                 //accumulate forces
                 Vector forces = new Vector(0, 0);
 

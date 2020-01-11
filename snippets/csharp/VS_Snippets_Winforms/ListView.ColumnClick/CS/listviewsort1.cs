@@ -6,8 +6,7 @@ using System.Collections;
 
 namespace ListViewSortFormNamespace
 {
-    
-   
+
     public class ListViewSortForm : Form
     {
         private ListView listView1;
@@ -62,8 +61,7 @@ namespace ListViewSortFormNamespace
             // Resume layout of the form.
             this.ResumeLayout(false);
         }
-        
-	
+
         // ColumnClick event handler.
         private void ColumnClick(object o, ColumnClickEventArgs e)
         {

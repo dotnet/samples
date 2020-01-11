@@ -21,7 +21,6 @@ namespace new_in_7
                     yield return c;
             }
 
-
             try
             {
                 var resultSet1 = AlphabetSubset('d', 'r');

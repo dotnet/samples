@@ -19,7 +19,6 @@ namespace AdvancedInkInputSemples
         public StylusControl inkSurface;
         DispatcherTimer timer;
 
-
         public Window1()
         {
             InitializeComponent();
@@ -76,7 +75,6 @@ namespace AdvancedInkInputSemples
             }
         }
 
-
         void clearInk_Click(object sender, RoutedEventArgs e)
         {
             inkSurface.ClearInk();
@@ -107,7 +105,6 @@ namespace AdvancedInkInputSemples
             {
                 toggleFilter.Content = "filter is off";
             }
-            
 
         }
 

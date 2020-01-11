@@ -4,7 +4,6 @@ using System.Data;
 using System.Data.Common;
 using System.Windows.Forms;
 
-
 public class Form1: Form
 {
     protected TextBox Text1;

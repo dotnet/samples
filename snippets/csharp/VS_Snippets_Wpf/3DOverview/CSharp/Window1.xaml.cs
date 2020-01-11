@@ -8,7 +8,6 @@ using System.Windows.Media.Media3D;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 
-
 namespace create_cube
 {
     /// <summary>
@@ -57,7 +56,6 @@ namespace create_cube
         DiffuseMaterial side4Material = new DiffuseMaterial();
         DiffuseMaterial side5Material = new DiffuseMaterial();
         DiffuseMaterial side6Material = new DiffuseMaterial();
-
 
         private void WindowLoaded(object sender, EventArgs e)
         {
@@ -115,7 +113,6 @@ namespace create_cube
             myVectorAnimation.RepeatBehavior = RepeatBehavior.Forever;
             //</Snippet3DOverview3DN3>
 
-            
             myRotateTransform.Rotation.BeginAnimation(AxisAngleRotation3D.AngleProperty, myAnimation);
             //<Snippet3DOverview3DN4>
             myRotateTransform.Rotation.BeginAnimation(AxisAngleRotation3D.AxisProperty, myVectorAnimation);
@@ -349,7 +346,6 @@ namespace create_cube
             side6Plane.TextureCoordinates.Add(new Point(1, 1));
             side6Plane.TextureCoordinates.Add(new Point(0, 1));
 
-
             //Set Brush property for the Material applied to each face
             DiffuseMaterial side2Material = new DiffuseMaterial((Brush)Application.Current.Resources["yellowBrush"]);
             DiffuseMaterial side6Material = new DiffuseMaterial((Brush)Application.Current.Resources["orangeBrush"]);
@@ -366,14 +362,12 @@ namespace create_cube
             DiffuseMaterial side5Material = new DiffuseMaterial((Brush)Application.Current.Resources["patternBrush"]);
             //</Snippet3DOverview3DN8>
 
-
             side2.Material = side2Material;
             side6.Material = side6Material;
             side1.Material = side1Material;
             side3.Material = side3Material;
             side4.Material = side4Material;
             side5.Material = side5Material;
-
 
         }
 

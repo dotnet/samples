@@ -24,7 +24,6 @@ private static void DataTableRowChanging()
 	// add a RowChanging event handler for the table.
 	custTable.RowChanging += new DataRowChangeEventHandler(Row_Changing);
 
-
 	// add ten rows
 	for(int id=1; id<=10; id++)
 	{

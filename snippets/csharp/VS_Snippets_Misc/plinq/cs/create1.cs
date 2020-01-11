@@ -36,4 +36,3 @@ public class Example
    static void DoSomething(int i) { }
 }
 // </Snippet11>            
-

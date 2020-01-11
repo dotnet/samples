@@ -96,7 +96,6 @@ namespace Snippets
             int maxPendingSessions = settings.MaxPendingSessions;
             // </Snippet7>
 
-
             // <Snippet8>
             int maxStatefulNegotiationsNegotiations =
                 settings.MaxStatefulNegotiations;
@@ -144,7 +143,6 @@ namespace Snippets
 
 }
 
-
 [ServiceContract]
 interface ICalculator
 {
@@ -159,4 +157,3 @@ public class Calculator : ICalculator
         return a + b;
     }
 }
-

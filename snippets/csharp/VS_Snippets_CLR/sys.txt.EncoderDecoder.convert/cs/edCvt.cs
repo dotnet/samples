@@ -16,7 +16,6 @@
 
             CreateTestFile("Example.txt");
 
- 
 // Using an input file of UTF-16 encoded characters named Example.txt, create an output file 
 // of UTF-8 encoded bytes named UTF8.txt.
 

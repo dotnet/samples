@@ -7,4 +7,3 @@ public class Baz
    //Insert code here.
 }
 // </Snippet1>
-

@@ -79,6 +79,3 @@ namespace LoanClass
         }
     }
 }
-
-
-

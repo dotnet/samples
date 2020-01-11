@@ -1,5 +1,4 @@
-﻿
-// <Snippet45>
+﻿// <Snippet45>
 using System;
 
 class TestMotorcycle : Motorcycle
@@ -28,8 +27,6 @@ class TestMotorcycle : Motorcycle
 //      Travel time: approx. 3 hours
 // </Snippet45>
 
-
-
 abstract class Motorcycle
 {
    // Anyone can call this.
@@ -47,7 +44,3 @@ abstract class Motorcycle
    // Derived classes must implement this.
    public abstract double GetTopSpeed(); 
 }
-
-
-
-

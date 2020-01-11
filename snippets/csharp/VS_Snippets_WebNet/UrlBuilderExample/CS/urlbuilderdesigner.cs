@@ -34,8 +34,7 @@ namespace CDWebControl
                 return dvc;
             }
         }
-                
-        
+
         //<Snippet1>
         // This method handles the "Launch Url Builder UI" menu command.
         // Invokes the BuildUrl method of the System.Web.UI.Design.UrlBuilder.

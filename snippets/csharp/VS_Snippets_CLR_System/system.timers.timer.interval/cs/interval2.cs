@@ -27,7 +27,6 @@ public class Example
                      aTimer.Interval);
         aTimer.Enabled = true;
 
-        
         Console.WriteLine("Press the Enter key to exit the program... ");
         Console.ReadLine();
         foreach (var item in eventlog)
@@ -72,4 +71,3 @@ public class Example
 //       Elapsed event at 08:42:49.650372 (15.0015)
 //       Elapsed event at 08:42:49.665373 (15.0015)
 // </Snippet1>
-

@@ -15,7 +15,6 @@ namespace HeaderedItemsControlSimple
     /// Interaction logic for Page1.xaml
     /// </summary>
 
-
     public class myColors : ObservableCollection<string>
     {
         public myColors()
@@ -26,7 +25,6 @@ namespace HeaderedItemsControlSimple
             Add("Green");
         }
     }
-
 
     public class MyNumbers : ObservableCollection<string>
     {
@@ -55,4 +53,3 @@ namespace HeaderedItemsControlSimple
         }
     }
 }
-

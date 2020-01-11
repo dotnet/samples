@@ -28,7 +28,6 @@ namespace FileSystemExample
             // Display that the file is read-only.
             Console.WriteLine("The file read-only value for " + FileName + " is: " + isReadOnly);
 
-
         }
 
         // Sets the read-only value of a file.

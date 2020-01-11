@@ -15,5 +15,3 @@ public class Example
 //     The original string: 'aaabbb'
 //     The modified string: 'aaa bbb'
 // </Snippet1>
-
-

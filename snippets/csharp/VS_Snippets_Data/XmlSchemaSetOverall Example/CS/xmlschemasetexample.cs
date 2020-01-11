@@ -32,4 +32,3 @@ class XmlSchemaSetExample
     }
 }
 //</snippet1>
-

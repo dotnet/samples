@@ -44,4 +44,3 @@ public class BooleanGenerator
 //       Number of true values:  500,004 (50.000 %)
 //       Number of false values: 499,996 (50.000 %)
 // </Snippet8>
-

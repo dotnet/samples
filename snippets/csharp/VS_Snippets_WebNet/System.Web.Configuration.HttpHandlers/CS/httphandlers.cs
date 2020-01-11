@@ -27,7 +27,6 @@ namespace Samples.Aspnet.SystemWebConfiguration
      // Get the section.
      System.Web.Configuration.HttpHandlersSection httpHandlersSection = (System.Web.Configuration.HttpHandlersSection) configuration.GetSection("system.web/httphandlers");
 
-
 // </Snippet1>
 
 // <Snippet2>
@@ -36,7 +35,6 @@ namespace Samples.Aspnet.SystemWebConfiguration
      System.Web.Configuration.HttpHandlerActionCollection httpHandlers = httpHandlersSection.Handlers;
 
 // </Snippet2>
-
 
 // <Snippet3>
 // Add a new HttpHandlerAction to the Handlers property HttpHandlerAction collection.
@@ -84,7 +82,6 @@ httpHandler.Validate = false;
     int handlerIndex = httpHandlers.IndexOf(httpHandler2);
 
 // </Snippet9>
-
 
 // <Snippet10>
 
@@ -152,4 +149,3 @@ foreach (HttpHandlerAction handlerAction in httpHandlersSection.Handlers)
     } // UsingHttpHandlersSection class end.
     
 } // Samples.Aspnet.SystemWebConfiguration namespace end.
-

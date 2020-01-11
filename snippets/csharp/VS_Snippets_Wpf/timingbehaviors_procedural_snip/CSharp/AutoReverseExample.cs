@@ -81,7 +81,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             autoReverseRectangleWithRepeats.HorizontalAlignment = HorizontalAlignment.Left;
             myStackPanel.Children.Add(autoReverseRectangleWithRepeats);
 
-
             myTextBlock = new TextBlock();
             myTextBlock.Margin = new Thickness( 0,20,0,0 );
             myTextBlock.Text = "In this example, AutoReverse=\"True\" and RepeatBehavior=\"2x\" ";
@@ -118,7 +117,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             myAutomaticallyReversedDoubleAnimation.To = 400;
             myAutomaticallyReversedDoubleAnimation.Duration = new Duration( TimeSpan.FromMilliseconds(2000));
             myAutomaticallyReversedDoubleAnimation.AutoReverse = true;
-
 
             //
             // Create an animation that automatically reverses at the end of each iteration.

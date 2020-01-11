@@ -59,4 +59,3 @@ Using the decoder       : za??ß
 */
 
 // </Snippet1>
-

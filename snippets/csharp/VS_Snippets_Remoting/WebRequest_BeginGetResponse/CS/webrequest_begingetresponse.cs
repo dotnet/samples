@@ -16,8 +16,6 @@ using System.IO;
 using System.Text;
 using System.Threading;
 
-
-
 public class RequestState
 {
   // This class stores the state of the request.

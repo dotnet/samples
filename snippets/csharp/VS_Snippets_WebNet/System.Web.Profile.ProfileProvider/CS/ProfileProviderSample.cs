@@ -43,7 +43,6 @@ CREATE TABLE ProfileData
 
 */
 
-
 namespace Samples.AspNet.Profile
 {
 
@@ -58,7 +57,6 @@ namespace Samples.AspNet.Profile
   private string exceptionMessage = "An exception occurred. Please check the event log.";
   private string connectionString;
 
-
   //
   // If false, exceptions are thrown to the caller. If true,
   // exceptions are written to the event log.
@@ -71,8 +69,6 @@ namespace Samples.AspNet.Profile
     get { return pWriteExceptionsToEventLog; }
     set { pWriteExceptionsToEventLog = value; }
   }
-
-
 
   //
   // System.Configuration.Provider.ProviderBase.Initialize Method
@@ -100,7 +96,6 @@ namespace Samples.AspNet.Profile
     // Initialize the abstract base class.
     base.Initialize(name, config);
 
-
     if (config["applicationName"] == null || config["applicationName"].Trim() == "")
     {
       pApplicationName = System.Web.Hosting.HostingEnvironment.ApplicationVirtualPath;
@@ -109,7 +104,6 @@ namespace Samples.AspNet.Profile
     {
       pApplicationName = config["applicationName"];
     }
-
 
     //
     // Initialize connection string.
@@ -127,7 +121,6 @@ namespace Samples.AspNet.Profile
     connectionString = pConnectionStringSettings.ConnectionString;
   }
 
-
   //
   // System.Configuration.SettingsProvider.ApplicationName
   //
@@ -139,8 +132,6 @@ namespace Samples.AspNet.Profile
     get { return pApplicationName; }
     set { pApplicationName = value; }
   } 
-
-
 
   //
   // System.Configuration.SettingsProvider methods.
@@ -186,8 +177,6 @@ namespace Samples.AspNet.Profile
     return svc;
   }
 
-
-
   //
   // SettingsProvider.SetPropertyValues
   //
@@ -220,7 +209,6 @@ namespace Samples.AspNet.Profile
 
     UpdateActivityDates(username, isAuthenticated, false);
   }
-
 
   //
   // UpdateActivityDates
@@ -284,7 +272,6 @@ namespace Samples.AspNet.Profile
     }
   }
 
-
   //
   // GetStockSymbols
   //   Retrieves stock symbols from the database during the call to GetPropertyValues.
@@ -337,8 +324,6 @@ namespace Samples.AspNet.Profile
 
     return outList;
   }
-
-
 
   //
   // SetStockSymbols
@@ -506,7 +491,6 @@ namespace Samples.AspNet.Profile
     }
   }
 
-
   //
   // GetUniqueID
   //   Retrieves the uniqueID from the database for the current user and application.
@@ -558,7 +542,6 @@ namespace Samples.AspNet.Profile
     return uniqueID;
   }
 
-
   //
   // CreateProfileForUser
   // If no user currently exists in the database, 
@@ -576,7 +559,6 @@ namespace Samples.AspNet.Profile
       throw new ArgumentException("User name exceeds 255 characters.");
     if (username.Contains(","))
       throw new ArgumentException("User name cannot contain a comma (,).");
-
 
     OdbcConnection conn = new OdbcConnection(connectionString);
     OdbcCommand cmd = new OdbcCommand("INSERT INTO Profiles (Username, " +
@@ -619,7 +601,6 @@ namespace Samples.AspNet.Profile
 
     return uniqueID;
   }
-
 
   //
   // ProfileProvider.DeleteProfiles(ProfileInfoCollection)
@@ -673,7 +654,6 @@ namespace Samples.AspNet.Profile
     return deleteCount;
   }
 
-
   //
   // ProfileProvider.DeleteProfiles(string[])
   //
@@ -725,8 +705,6 @@ namespace Samples.AspNet.Profile
 
     return deleteCount;
   }
-
-
 
   //
   // ProfileProvider.DeleteInactiveProfiles
@@ -796,12 +774,10 @@ namespace Samples.AspNet.Profile
       usernames = usernames.Substring(0, usernames.Length - 1);
     }
 
-
     // Delete profiles.
 
     return DeleteProfiles(usernames.Split(','));
   }
-
 
   //
   // DeleteProfile
@@ -818,7 +794,6 @@ namespace Samples.AspNet.Profile
       throw new ArgumentException("User name exceeds 255 characters.");
     if (username.Contains(","))
       throw new ArgumentException("User name cannot contain a comma (,).");
-
 
     int uniqueID = GetUniqueID(username, false, true);
 
@@ -846,7 +821,6 @@ namespace Samples.AspNet.Profile
       return true;
   }
 
-
   //
   // ProfileProvider.FindProfilesByUserName
   //
@@ -863,7 +837,6 @@ namespace Samples.AspNet.Profile
     return GetProfileInfo(authenticationOption, usernameToMatch, 
         null, pageIndex, pageSize, out totalRecords);
   }
-
 
   //
   // ProfileProvider.FindInactiveProfilesByUserName
@@ -883,7 +856,6 @@ namespace Samples.AspNet.Profile
           pageIndex, pageSize, out totalRecords);
   }
 
-
   //
   // ProfileProvider.GetAllProfiles
   //
@@ -899,7 +871,6 @@ namespace Samples.AspNet.Profile
     return GetProfileInfo(authenticationOption, null, null, 
           pageIndex, pageSize, out totalRecords);
   }
-
 
   //
   // ProfileProvider.GetAllInactiveProfiles
@@ -918,8 +889,6 @@ namespace Samples.AspNet.Profile
           pageIndex, pageSize, out totalRecords);
   }
 
-
-
   //
   // ProfileProvider.GetNumberOfInactiveProfiles
   //
@@ -937,8 +906,6 @@ namespace Samples.AspNet.Profile
     return inactiveProfiles;
   }
 
-
-
   //
   // CheckParameters
   // Verifies input parameters for page size and page index. 
@@ -953,7 +920,6 @@ namespace Samples.AspNet.Profile
     if (pageSize < 1)
       throw new ArgumentException("Page size must be greater than 0.");
   }
-
 
   //
   // GetProfileInfo
@@ -975,19 +941,16 @@ namespace Samples.AspNet.Profile
   {
     OdbcConnection conn = new OdbcConnection(connectionString);
 
-
     // Command to retrieve the total count.
 
     OdbcCommand cmd = new OdbcCommand("SELECT COUNT(*) FROM Profiles WHERE ApplicationName = ? ", conn);
     cmd.Parameters.Add("@ApplicationName", OdbcType.VarChar, 255).Value = ApplicationName;
-
 
     // Command to retrieve the profile data.
 
     OdbcCommand cmd2 = new OdbcCommand("SELECT Username, LastActivityDate, LastUpdatedDate, " +
             "IsAnonymous FROM Profiles WHERE ApplicationName = ? ", conn);
     cmd2.Parameters.Add("@ApplicationName", OdbcType.VarChar, 255).Value = ApplicationName;
-
 
     // If searching for a user name to match, add the command text and parameters.
 
@@ -1000,7 +963,6 @@ namespace Samples.AspNet.Profile
       cmd2.Parameters.Add("@Username", OdbcType.VarChar, 255).Value = usernameToMatch;
     }
 
-
     // If searching for inactive profiles, 
     // add the command text and parameters.
 
@@ -1012,7 +974,6 @@ namespace Samples.AspNet.Profile
       cmd2.CommandText += " AND LastActivityDate <= ? ";
       cmd2.Parameters.Add("@LastActivityDate", OdbcType.DateTime).Value = (DateTime)userInactiveSinceDate;
     }
-
 
     // If searching for a anonymous or authenticated profiles,    
     // add the command text and parameters.
@@ -1034,7 +995,6 @@ namespace Samples.AspNet.Profile
       default:
         break;
     }
-
 
     // Get the data.
 
@@ -1123,7 +1083,6 @@ namespace Samples.AspNet.Profile
 
     return p;
   }
-
 
   //
   // WriteToEventLog

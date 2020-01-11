@@ -15,7 +15,6 @@ using System.Windows.Xps;
 using System.Windows.Xps.Packaging;
 using WinForms = System.Windows.Forms;
 
-
 namespace SDKSample
 {
     // ========================= partial class Window1 ========================
@@ -31,7 +30,6 @@ namespace SDKSample
             // Initialize an AnnotationsHelper with the app DocumentViewer.
             _annotHelper = new AnnotationsHelperXps(DocViewer);
         }
-
 
         // ------------------------------ OnOpen ------------------------------
         /// <summary>
@@ -72,7 +70,6 @@ namespace SDKSample
 
         }// end:OnOpen()
 
-
         // ------------------------- GetContentFolder -------------------------
         /// <summary>
         ///   Locates and returns the path to the "Content\" folder
@@ -101,7 +98,6 @@ namespace SDKSample
             // directory if we're executing somewhere else).
             return contentDir;
         }// end:GetContentFolder()
-
 
         // --------------------------- OpenDocument ---------------------------
         /// <summary>
@@ -175,7 +171,6 @@ namespace SDKSample
             return true;
         }// end:OpenDocument()
 
-
         // ------------------- GetFixedDocumentSequenceUri --------------------
         /// <summary>
         ///   Returns the part URI of first FixedDocumentSequence
@@ -196,7 +191,6 @@ namespace SDKSample
             // Return null if a FixedDocumentSequence isn't found.
             return null;
         }// end:GetFixedDocumentSequenceUri()
-
 
         // --------------------------- GetPackage -----------------------------
         /// <summary>
@@ -227,7 +221,6 @@ namespace SDKSample
 
             return inputPackage;
         }// end:GetPackage()
-
 
         // ------------------------ GetFixedDocument --------------------------
         /// <summary>
@@ -261,7 +254,6 @@ namespace SDKSample
             return fixedDocument;
         }// end:GetFixedDocument()
 
-
         // ------------------------------ OnExit ------------------------------
         /// <summary>
         ///   Handles the user File|Exit menu selection to
@@ -271,7 +263,6 @@ namespace SDKSample
             Close();        // invokes OnClosed()
         }// end:OnExit()
 
-
         // ----------------------------- OnClosed -----------------------------
         /// <summary>
         ///   Performs clean up when the application is closed.</summary>
@@ -279,7 +270,6 @@ namespace SDKSample
         {
             CloseDocument();
         }// end:OnClosed()
-
 
         // ----------------------------- OnClose ------------------------------
         /// <summary>
@@ -289,7 +279,6 @@ namespace SDKSample
         {
             CloseDocument();
         }// end:OnClose()
-
 
         // --------------------------- CloseDocument --------------------------
         /// <summary>
@@ -321,7 +310,6 @@ namespace SDKSample
             menuViewDecreaseZoom.IsEnabled = false;
         }// end:CloseDocument
 
-
         // ----------------------------- OnPrint ------------------------------
         /// <summary>
         ///   Handles the user "File | Print" menu operation.</summary>
@@ -329,7 +317,6 @@ namespace SDKSample
         {
             PrintDocument();
         }// end:OnClose()
-
 
         // -------------------------- PrintDocument ---------------------------
         /// <summary>
@@ -385,7 +372,6 @@ namespace SDKSample
             }
         }// end:PrintDocument()
 
-
         // -------------------------- ShowAnnotations -------------------------
         /// <summary>
         ///   Enables and displays user annotations.</summary>
@@ -394,7 +380,6 @@ namespace SDKSample
             if (_annotHelper != null)
                 _annotHelper.StartAnnotations();
         }// end:ShowAnnotations()
-
 
         // ------------------------- HideAnnotations --------------------------
         /// <summary>
@@ -405,7 +390,6 @@ namespace SDKSample
                 _annotHelper.StopAnnotations();
         }// end:HideAnnotations()
 
-
         // ----------------------- DocViewer attribute ------------------------
         /// <summary>
         ///   Gets the current DocumentViewer.</summary>
@@ -414,7 +398,6 @@ namespace SDKSample
             get
                 { return docViewer; }
         }
-
 
         #region private fields
 

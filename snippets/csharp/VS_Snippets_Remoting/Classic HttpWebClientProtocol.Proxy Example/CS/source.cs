@@ -26,8 +26,6 @@ namespace MyMath {
     using System;
     using System.Web.Services.Protocols;
     using System.Web.Services;
-    
-    
 
     public class Math : SoapHttpClientProtocol {
 

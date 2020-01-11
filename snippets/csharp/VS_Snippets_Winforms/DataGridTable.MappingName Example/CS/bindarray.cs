@@ -228,6 +228,3 @@ namespace BindToArrayGrid
     }
 
 }
-
-
-

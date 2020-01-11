@@ -17,7 +17,6 @@ namespace Microsoft.Samples.BuiltInConfiguration
         const string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=InstanceStore;Integrated Security=True;Asynchronous Processing=True";
         const string hostBaseAddress = "http://localhost:8080/CountingService";
 
-
         [ServiceContract]
         public interface ICountingWorkflow
         {
@@ -63,4 +62,3 @@ namespace Microsoft.Samples.BuiltInConfiguration
         
     }
 }
-

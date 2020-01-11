@@ -147,4 +147,3 @@ public class MyMimePartCollection
       Console.WriteLine("MimePartCollection_8_output.wsdl has been generated successfully.");
    }
 }
-

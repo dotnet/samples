@@ -110,7 +110,6 @@ namespace GitHubActivityReport
         }
         // </SnippetGenerateAsyncStream>
 
-
         private static string GetEnvVariable(string item, string error, string defaultValue)
         {
             var value = Environment.GetEnvironmentVariable(item);

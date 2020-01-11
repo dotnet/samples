@@ -70,4 +70,3 @@ class Example
 //      'd': LowercaseLetter
 //      '.': OtherPunctuation
 //</Snippet6>
-

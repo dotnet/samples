@@ -4,7 +4,6 @@ using System.Runtime.Remoting;
 using System.Runtime.Remoting.Channels.Tcp;
 using System.Runtime.Remoting.Channels;
 
-
 public class ClientClass {
 
     public static void Main() { 
@@ -26,7 +25,6 @@ public class ClientClass {
             Console.WriteLine("Could not locate server.");
             return;
         }
-
 
         // Calls the remote method.
         Console.WriteLine();

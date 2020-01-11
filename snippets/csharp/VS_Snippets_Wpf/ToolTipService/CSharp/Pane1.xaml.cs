@@ -6,7 +6,6 @@ using System.Windows.Controls.Primitives;
 using System.Windows.Shapes;
 using System.Windows.Media;
 
-
 namespace SDKSample
 {
     /// <summary>
@@ -74,8 +73,7 @@ namespace SDKSample
             //set tooltip on ellipse
             ellipse1.ToolTip = tooltip;
             //</SnippetToolTipCode>            
-            
-            
+
             stackPanel_1_1.Children.Add(ellipse1);
    
             //set event handlers for the Opened and Closed events
@@ -90,7 +88,6 @@ namespace SDKSample
             //<SnippetToolTipHasDropShadow>
             tooltip.HasDropShadow = false;
             //</SnippetToolTipHasDropShadow>
-
 
             ///////////////////////////////////////////////////////////////////////
             //<SnippetNoToolTipCode>            

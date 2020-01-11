@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Windows;
 using System.Data;
 using System.Xml;
@@ -8,7 +7,6 @@ using System.Windows.Navigation;
 
 namespace Microsoft.Samples.Graphics.Geometries
 {
-
 
     public partial class app : Application
     {
@@ -27,7 +25,6 @@ namespace Microsoft.Samples.Graphics.Geometries
             this.MainWindow = myWindow;
             base.OnStartup(e);       
         }
-       
-        
+
     }
 }

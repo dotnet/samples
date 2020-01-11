@@ -18,7 +18,6 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 #endregion
 
-
 namespace CSWinFormDataGridView.DataGridViewPaging
 {
     public partial class MainForm : Form

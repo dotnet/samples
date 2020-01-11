@@ -10,7 +10,6 @@ public class Form1: Form
     protected DataSet dataSet;
     protected OleDbDataAdapter adapter;
 
-
     // <Snippet1>
     public void GetRecords() 
     {

@@ -23,7 +23,6 @@ namespace Samples.AspNet.Controls
       Initialize();
     }
 
-
 //<Snippet5>
     public static void Initialize()
     {
@@ -41,7 +40,6 @@ namespace Samples.AspNet.Controls
 
       _initialized = true;
     }
-
 
     // Select all employees.
 
@@ -84,7 +82,6 @@ namespace Samples.AspNet.Controls
       return null;
     }
 
-
     //////////
     // Verify that only valid columns are specified in the sort expression to avoid a SQL Injection attack.
 
@@ -114,7 +111,6 @@ namespace Samples.AspNet.Controls
       }
     }
 //</Snippet5>
-
 
     // Select an employee.
 //<Snippet6>
@@ -151,7 +147,6 @@ namespace Samples.AspNet.Controls
     }
 //</Snippet6>    
 
-
     // Delete the Employee by ID.
 //<Snippet7>
     [DataObjectMethod(DataObjectMethodType.Delete)]
@@ -182,7 +177,6 @@ namespace Samples.AspNet.Controls
       return true;
     }
 //</Snippet7>
-
 
     // Update the Employee by original ID.
 //<Snippet8>
@@ -236,7 +230,6 @@ namespace Samples.AspNet.Controls
       return true;
     }
 //</Snippet8>
-
 
     // Insert an Employee.
 //<Snippet9>

@@ -23,7 +23,6 @@ class Program {
         column = new DataColumn("QuantityInStock", typeof(System.Int32));
         table.Columns.Add(column);
 
-
         // Add some items.
         DataRow row = table.NewRow();
         row.ItemArray = new object[] { 1, "Fruit", "Apple", 14 };

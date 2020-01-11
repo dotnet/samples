@@ -6,15 +6,12 @@ using System.Windows.Media.Animation;
 using System.Windows.Data;
 using System.Windows.Shapes;
 
-
 namespace Microsoft.Samples.Animation
 {
 
-
     public partial class IndirectTargetingExample : Page
     {
-    
-        
+
         public IndirectTargetingExample()
         {
             InitializeComponent();
@@ -119,9 +116,7 @@ namespace Microsoft.Samples.Animation
             myStackPanel.Children.Add(rectangle02);        
         
         }        
-        
-        
-    }
 
+    }
 
 }

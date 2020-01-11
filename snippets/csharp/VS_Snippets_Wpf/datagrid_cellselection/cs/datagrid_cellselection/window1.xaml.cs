@@ -40,8 +40,6 @@ namespace DataGrid_CellSelection
             return custdata;
         }
 
-
-
         //<Snippet2>
         private void DG1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

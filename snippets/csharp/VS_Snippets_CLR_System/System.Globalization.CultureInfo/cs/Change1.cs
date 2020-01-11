@@ -23,4 +23,3 @@ public class Example
 //     The current culture is en-US
 //     The current culture is now fr-FR
 // </Snippet3>
-

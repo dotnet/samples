@@ -73,7 +73,6 @@ namespace toll_calculator
             };
         // </SnippetTuplePatternOne>
 
-
         // <SnippetIsWeekDay>
         private static bool IsWeekDay(DateTime timeOfToll) =>
             timeOfToll.DayOfWeek switch

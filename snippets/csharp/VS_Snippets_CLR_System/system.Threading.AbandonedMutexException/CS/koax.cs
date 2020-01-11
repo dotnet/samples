@@ -137,6 +137,3 @@ Exception on return from WaitAll. MutexIndex = -1.
         Message: The wait completed due to an abandoned mutex.
  */
 //</Snippet1>
-
-
-

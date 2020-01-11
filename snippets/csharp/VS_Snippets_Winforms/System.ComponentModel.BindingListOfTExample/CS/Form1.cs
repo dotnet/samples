@@ -57,8 +57,6 @@ namespace BindingListOfTExamples
             
         }
 
-       
-
         //<snippet2>
         // Declare a new BindingListOfT with the Part business object.
         BindingList<Part> listOfParts; 
@@ -83,7 +81,6 @@ namespace BindingListOfTExamples
         }
         //</snippet2>
 
-        
         //<snippet3>
         // Create a new part from the text in the two text boxes.
         void listOfParts_AddingNew(object sender, AddingNewEventArgs e)
@@ -93,7 +90,6 @@ namespace BindingListOfTExamples
         }
         //</snippet3>
 
-        
         //<snippet4>
         // Add the new part unless the part number contains
         // spaces. In that case cancel the add.

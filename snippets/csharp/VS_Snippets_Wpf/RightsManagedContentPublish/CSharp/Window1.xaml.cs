@@ -17,7 +17,6 @@ using System.Windows.Xps.Packaging;
 using System.Xml;
 using WinForms = Microsoft.Win32;
 
-
 namespace SdkSample
 {
     // ========================= partial class Window1 ========================
@@ -33,7 +32,6 @@ namespace SdkSample
             WritePrompt(
                 "Click 'File | Open...' to select a file to open and view.");
         }
-
 
         #region File|Open...
         // ------------------------------ OnOpen ------------------------------
@@ -76,7 +74,6 @@ namespace SdkSample
                 OpenContent(dialog.FileName);
 
         }// end:OnOpen()
-
 
         // --------------------------- OpenContent ---------------------------
         /// <summary>
@@ -137,7 +134,6 @@ namespace SdkSample
         }// end:OpenContent()
         #endregion File|Open...
 
-
         #region File|Close
         // ----------------------------- OnClosed -----------------------------
         /// <summary>
@@ -147,7 +143,6 @@ namespace SdkSample
             CloseContent();
         }// end:OnClosed()
 
-
         // ----------------------------- OnClose ------------------------------
         /// <summary>
         ///   Handles the user "File | Close" menu operation
@@ -156,7 +151,6 @@ namespace SdkSample
         {
             CloseContent();
         }// end:OnClose()
-
 
         // --------------------------- CloseContent --------------------------
         /// <summary>
@@ -180,7 +174,6 @@ namespace SdkSample
 
         }// end:CloseContent
         #endregion File|Close
-
 
         #region File|Rights...
         // ----------------------------- OnRights -----------------------------
@@ -224,7 +217,6 @@ namespace SdkSample
 
         }// end:OnRights()
 
-
         // ----------------------------- OpenXrML -----------------------------
         /// <summary>
         ///   Loads and displays a given XrML rights markup file.</summary>
@@ -256,7 +248,6 @@ namespace SdkSample
             return true;
         }// end:OpenXrML()
 
-
         // ----------------------------- CloseXrML ----------------------------
         /// <summary>
         ///   Closes the document currently displayed in
@@ -277,7 +268,6 @@ namespace SdkSample
             }
         }// end:CloseXrML
         #endregion File|Rights...
-
 
         #region File|Publish...
         // ---------------------------- OnPublish -----------------------------
@@ -308,7 +298,6 @@ namespace SdkSample
             PublishRMContent(_contentFilepath, _xrmlFilepath, dialog.FileName);
 
         }// end:OnPublish()
-
 
         // ------------------------ PublishRMContent --------------------------
         /// <summary>
@@ -504,7 +493,6 @@ namespace SdkSample
             return true;
         }// end:PublishRMContent()
 
-
         // ------------------ GetGetDefaultWindowsUserName() ------------------
         /// <summary>
         ///   Returns the email address of the current user.</summary>
@@ -537,7 +525,6 @@ namespace SdkSample
         }// end:GetDefaultWindowsUserName()
         #endregion File|Publish...
 
-
         #region File|Exit
         // ------------------------------ OnExit ------------------------------
         /// <summary>
@@ -548,7 +535,6 @@ namespace SdkSample
             Close();        // invokes OnClosed()
         }// end:OnExit()
         #endregion File|Exit
-
 
         #region Utilities
         // ------------------------- GetContentFolder -------------------------
@@ -580,7 +566,6 @@ namespace SdkSample
             return contentDir;
         }// end:GetContentFolder()
 
-
         // ---------------------------- WriteStatus ---------------------------
         /// <summary>
         ///   Adds a line of text to the statusBlock.</summary>
@@ -591,7 +576,6 @@ namespace SdkSample
             statusBlock.Text += status + "\n";
         }
 
-
         // ---------------------------- WritePrompt ---------------------------
         /// <summary>
         ///   Writes a line of text to the prompt bar.</summary>
@@ -601,7 +585,6 @@ namespace SdkSample
         {
             promptBlock.Text = prompt;
         }
-
 
         // ---------------------------- FilenameOnly --------------------------
         /// <summary>
@@ -622,7 +605,6 @@ namespace SdkSample
             // Remove all the characters through the last backslash.
             return filepath.Remove(0, slashIndex + 1);
         }
-
 
         // ---------------------------- ReliableRead --------------------------
         /// <summary>
@@ -661,7 +643,6 @@ namespace SdkSample
             return totalBytesRead;
         }// end:ReliableRead()
 
-
         // ----------------------- ImageViewer attribute ------------------------
         /// <summary>
         ///   Gets the Image viewer control.</summary>
@@ -671,7 +652,6 @@ namespace SdkSample
                 { return imageViewer; }  // "imageViewer" declared in Window1.xaml
         }
         #endregion Utilities
-
 
         #region private fields
         private string _xrmlFilepath = null;    // xrml path and filename.
@@ -684,7 +664,6 @@ namespace SdkSample
         private static SecureEnvironment _secureEnv = null;
         private static String _currentUserId = GetDefaultWindowsUserName();
         #endregion private fields
-
 
     }// end:partial class Window1
 

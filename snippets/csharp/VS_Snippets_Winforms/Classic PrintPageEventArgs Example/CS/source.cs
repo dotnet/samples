@@ -39,7 +39,6 @@ PrintDocument pd = new PrintDocument();
    ev.HasMorePages = false;
  }
 
-    
 // </Snippet1>
 
     [STAThread]

@@ -1,10 +1,8 @@
 ﻿// The following code example changes the casing of a string.
 
-
 // <snippet1>
 using System;
 using System.Globalization;
-
 
 public class SamplesTextInfo  {
 

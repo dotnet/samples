@@ -9,7 +9,6 @@ using System.Windows.Media.Animation;
 
 namespace Microsoft.Samples.Graphics
 {
- 
 
     public partial class LineCapsAndJoinsExample : Page
     {
@@ -18,8 +17,6 @@ namespace Microsoft.Samples.Graphics
             InitializeComponent();
         
         }
-
-
 
     }
 }

@@ -9,7 +9,6 @@ using System.Windows.Navigation;
 namespace SDKSample
 {
 
-
     public class PopExample : Page
     {
 
@@ -67,12 +66,8 @@ namespace SDKSample
             this.Content = theImage;
 
         }
-        
-        
-    
-    
+
     }
 
 }
 // </SnippetPopExampleWholePage> 
-

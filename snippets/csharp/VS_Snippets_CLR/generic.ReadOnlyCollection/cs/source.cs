@@ -90,5 +90,3 @@ Copied array has 7 elements:
 ""
  */
 // </Snippet1>
-
-

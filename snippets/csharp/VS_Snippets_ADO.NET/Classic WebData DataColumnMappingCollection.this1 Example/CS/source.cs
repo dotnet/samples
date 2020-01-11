@@ -7,7 +7,6 @@ public class Form1: Form
 {
     protected DataColumnMappingCollection columnMappings;
 
-
     // <Snippet1>
     public void FindDataColumnMapping() 
     {

@@ -1,5 +1,4 @@
-﻿
-/*
+﻿/*
    The class 'PrintServer' is derived from 'MarshalByRefObject' to 
    make it remotable.  
 */
@@ -14,4 +13,3 @@ public class PrintServer : MarshalByRefObject
       return iValue;
    }
 }
-

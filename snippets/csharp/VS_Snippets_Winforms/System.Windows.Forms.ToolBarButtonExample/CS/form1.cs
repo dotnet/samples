@@ -118,7 +118,6 @@ public class Form1:
 			new ToolBarButtonClickEventHandler(ToolBar1_ButtonClick);
 		this.Controls.Add(this.ToolBar1);
 	}
-	
 
 	// Declare FontStyle object, which defaults to the Regular
 	// FontStyle.
@@ -154,4 +153,3 @@ public class Form1:
 	}
 	//</snippet1>
 }
-

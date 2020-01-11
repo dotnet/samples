@@ -26,7 +26,6 @@ class Program
         // Create a new TripleDES key. 
         TripleDESCryptoServiceProvider tDESkey = new TripleDESCryptoServiceProvider();
 
-
         try
         {
             // Encrypt the "creditcard" element.
@@ -90,12 +89,10 @@ class Program
         // it with the desired encryption information.
         ////////////////////////////////////////////////
 
-
         EncryptedData edElement = new EncryptedData();
         
         edElement.Type = EncryptedXml.XmlEncElementUrl;
 
-  
         // Create an EncryptionMethod element so that the 
         // receiver knows which algorithm to use for decryption.
         // Determine what kind of algorithm is being used and
@@ -142,7 +139,6 @@ class Program
         exml.ReplaceData(encryptedElement, rgbOutput);
 
     }
-
 
 }
 //</snippet1>

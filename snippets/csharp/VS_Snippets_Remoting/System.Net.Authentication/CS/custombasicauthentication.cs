@@ -30,13 +30,11 @@
 // If you must use Basic authentication you are strongly advised to use strong 
 // security mechanisms, such as SSL, when transferring sensitive information.
 
-
 using System;
 using System.Net;
 using System.IO;
 using System.Text;
 using System.Collections;
-
 
 namespace Mssc.Services.Authentication
 {
@@ -173,7 +171,6 @@ namespace Mssc.Services.Authentication
           // resource.
           domain = args[3];
 
-      
         // Instantiate the custom Basic authentication module.
         CustomBasic customBasicModule = new CustomBasic();
            
@@ -328,7 +325,6 @@ namespace Mssc.Services.Authentication
 // </Snippet5>
 
       Console.WriteLine("\n Authorization ConnectionGroupId:{0}",resourceAuthorization.ConnectionGroupId);
-
 
       return resourceAuthorization;
     }

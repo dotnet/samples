@@ -250,7 +250,6 @@ namespace HtmlDocumentProjectCSharp
         }
         //</SNIPPET12>
 
-
         //<SNIPPET13>
         private void AppendText(String text)
         {

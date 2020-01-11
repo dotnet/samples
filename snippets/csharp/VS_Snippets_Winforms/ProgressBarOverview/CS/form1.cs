@@ -29,8 +29,6 @@ namespace ProgressBarEx
 			pBar1.Bounds = new Rectangle(10,50,200,20);
 			this.Controls.Add(pBar1);
 
-			
-
 			//
 			// TODO: Add any constructor code after InitializeComponent call
 			//

@@ -8,12 +8,10 @@ situatuation) and  thrown to the caller.That exception is caught in the calling 
 error message is dispalyed on the console.
 */
 
-
 using System;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
-
 
 public class HttpConnect{
 

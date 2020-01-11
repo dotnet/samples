@@ -18,7 +18,6 @@ using System.Windows.Shapes;
 using System.Windows.Markup;
 using SDKSample;
 
-
 namespace SDKSampleHelper
 {
     // -------------------------- class XPFContent ----------------------------
@@ -39,7 +38,6 @@ namespace SDKSampleHelper
         {
             _contentDir = contentPath;
         }
-
 
         #region Create Visuals Methods
 
@@ -158,7 +156,6 @@ namespace SDKSampleHelper
             return canvas1;
         }// end:CreateFirstVisual()
 
-
         // ------------------------- CreateSecondVisual -----------------------
         /// <summary>
         ///   Creates content for the second visual sample.</summary>
@@ -257,7 +254,6 @@ namespace SDKSampleHelper
             return canvas;
         }// end:CreateSecondVisual()
 
-
         // ------------------------- CreateThirdVisual ------------------------
         /// <summary>
         ///   Creates content for the third visual sample.</summary>
@@ -329,7 +325,6 @@ namespace SDKSampleHelper
 
         #endregion // Create Visuals Methods
 
-
         //<SnippetXpsSaveCreateFixedDocPages>
         // ------------------- CreateFixedDocumentWithPages -------------------
         /// <summary>
@@ -365,7 +360,6 @@ namespace SDKSampleHelper
         }// end:CreateFixedDocumentWithPages()
         //</SnippetXpsSaveCreateFixedDocPages>
 
-
         // ------------------------ CreateFlowDocument ------------------------
         /// <summary>
         ///   Creates a FlowDocument with content.</summary>
@@ -383,7 +377,6 @@ namespace SDKSampleHelper
 
             return doc;
         }// end:CreateFlowDocument()
-
 
         //<SnippetXpsSaveLoadFixedDocSeq>
         //--------------- LoadFixedDocumentSequenceFromDocument ---------------
@@ -406,7 +399,6 @@ namespace SDKSampleHelper
         }
         //</SnippetXpsSaveLoadFixedDocSeq>
 
-
         //<SnippetCreateFixedDocument>
         // ------------------------ CreateFixedDocument -----------------------
         /// <summary>
@@ -421,7 +413,6 @@ namespace SDKSampleHelper
         }
         //</SnippetCreateFixedDocument>
 
-
         #region Create FixedPage methods
         // ---------------------- CreateFirstPageContent ----------------------
         /// <summary>
@@ -435,7 +426,6 @@ namespace SDKSampleHelper
             ((IAddChild)pageContent).AddChild(fixedPage);
             return pageContent;
         }
-
 
         //<SnippetXpsSaveCreateFixedPage1>
         // ----------------------- CreateFirstFixedPage -----------------------
@@ -469,7 +459,6 @@ namespace SDKSampleHelper
         }// end:CreateFirstFixedPage()
         //</SnippetXpsSaveCreateFixedPage1>
 
-
         // --------------------- CreateSecondPageContent ----------------------
         /// <summary>
         ///   Creates the content for the second fixed page.</summary>
@@ -501,7 +490,6 @@ namespace SDKSampleHelper
             ((IAddChild)pageContent).AddChild(fixedPage);
             return pageContent;
         }// end:CreateSecondPageContent()
-
 
         // --------------------- CreateThirdPageContent -----------------------
         /// <summary>
@@ -580,7 +568,6 @@ namespace SDKSampleHelper
             return pageContent;
         }// end:CreateThirdPageContent()
 
-
         // --------------------- CreateFourthPageContent ----------------------
         /// <summary>
         ///   Creates the content for the fourth fixed page.</summary>
@@ -626,7 +613,6 @@ namespace SDKSampleHelper
             return pageContent;
         }// end:CreateFourthPageContent()
 
-
         //<SnippetXpsSaveCreateFixedPage5>
         // --------------------- CreateFifthPageContent -----------------------
         /// <summary>
@@ -661,7 +647,6 @@ namespace SDKSampleHelper
         //</SnippetXpsSaveCreateFixedPage5>
         #endregion // Create FixedPage methods
 
-
         // ---------------------------- SetEllipse ----------------------------
         //
         // Set Ellipse dimensions.
@@ -684,7 +669,6 @@ namespace SDKSampleHelper
             shape.Width  = rx * 2;
             shape.Height = ry * 2;
         }// end:SetEllipse()
-
 
         #region private members
 

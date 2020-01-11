@@ -8,7 +8,6 @@ using System.Text;
 using System.Windows.Forms;
 using Microsoft.VisualBasic.PowerPacks;
 
-
 namespace VbPowerPacksSimpleShapeBackColorCS
 {
     public partial class SimpleShapeBackColor : Form

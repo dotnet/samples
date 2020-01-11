@@ -65,7 +65,6 @@ namespace BasicManipulation
                 e.Complete();
             }
 
-            
             e.Handled = true;
         }
         //</SnippetManipulationDelta>        

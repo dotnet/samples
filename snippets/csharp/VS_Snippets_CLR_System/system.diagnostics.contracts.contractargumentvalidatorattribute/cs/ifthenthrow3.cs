@@ -38,7 +38,6 @@ public class Example
 }
 // </Snippet3>
 
-
 public class Test
 {
    public static void Main()

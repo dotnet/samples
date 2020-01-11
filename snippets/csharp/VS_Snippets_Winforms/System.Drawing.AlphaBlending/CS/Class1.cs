@@ -162,4 +162,3 @@ public class SystemDrawingAlphaBlending
         // </snippet43>
     }
 }
-

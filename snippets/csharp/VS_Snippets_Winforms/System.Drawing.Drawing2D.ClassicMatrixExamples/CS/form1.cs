@@ -57,7 +57,6 @@ namespace System.Drawing.Drawing2D.ClassicMatrixExamplesCS
 		}
 		#endregion
 
-
         // Snippet for: M:System.Drawing.Drawing2D.Matrix.Multiply(System.Drawing.Drawing2D.Matrix,System.Drawing.Drawing2D.MatrixOrder)
         // <snippet1>
         public void MultiplyExample(PaintEventArgs e)
@@ -74,8 +73,7 @@ namespace System.Drawing.Drawing2D.ClassicMatrixExamplesCS
           
             Matrix myMatrix3 = new Matrix(
                 1.0f, 0.0f, 0.0f, 1.0f, 250.0f, 50.0f);  
-         
-                     
+
             // Display the elements of the starting matrix.
             ListMatrixElements(e, myMatrix1, "Beginning Matrix", 6, 40);
                      
@@ -153,7 +151,6 @@ namespace System.Drawing.Drawing2D.ClassicMatrixExamplesCS
             }
         }
         // </snippet1>
-
 
         // Snippet for: M:System.Drawing.Drawing2D.Matrix.Reset
         // <snippet2>
@@ -235,7 +232,6 @@ namespace System.Drawing.Drawing2D.ClassicMatrixExamplesCS
         }
         // </snippet2>
 
-
         // Snippet for: M:System.Drawing.Drawing2D.Matrix.Rotate(System.Single,System.Drawing.Drawing2D.MatrixOrder)
         // <snippet3>
         public void RotateExample(PaintEventArgs e)
@@ -257,7 +253,6 @@ namespace System.Drawing.Drawing2D.ClassicMatrixExamplesCS
             e.Graphics.DrawRectangle(myPen2, 150, 50, 200, 100);
         }
         // </snippet3>
-
 
         // Snippet for: M:System.Drawing.Drawing2D.Matrix.RotateAt(System.Single,System.Drawing.PointF,System.Drawing.Drawing2D.MatrixOrder)
         // <snippet4>
@@ -282,7 +277,6 @@ namespace System.Drawing.Drawing2D.ClassicMatrixExamplesCS
         }
         // </snippet4>
 
-
         // Snippet for: M:System.Drawing.Drawing2D.Matrix.Scale(System.Single,System.Single,System.Drawing.Drawing2D.MatrixOrder)
         // <snippet5>
         public void ScaleExample(PaintEventArgs e)
@@ -305,7 +299,6 @@ namespace System.Drawing.Drawing2D.ClassicMatrixExamplesCS
         }
         // </snippet5>
 
-
         // Snippet for: M:System.Drawing.Drawing2D.Matrix.Shear(System.Single,System.Single)
         // <snippet6>
         public void MatrixShearExample(PaintEventArgs e)
@@ -318,7 +311,6 @@ namespace System.Drawing.Drawing2D.ClassicMatrixExamplesCS
             e.Graphics.DrawEllipse(new Pen(Color.Blue), 0, 0, 100, 50);
         }
         // </snippet6>
-
 
         // Snippet for: M:System.Drawing.Drawing2D.Matrix.TransformPoints(System.Drawing.Point[])
         // <snippet7>
@@ -351,7 +343,6 @@ namespace System.Drawing.Drawing2D.ClassicMatrixExamplesCS
             e.Graphics.DrawLines(myPen2, myArray);
         }
         // </snippet7>
-
 
         // Snippet for: M:System.Drawing.Drawing2D.Matrix.TransformVectors(System.Drawing.Point[])
         // <snippet8>
@@ -434,7 +425,6 @@ namespace System.Drawing.Drawing2D.ClassicMatrixExamplesCS
             }
         }
         // </snippet8>
-
 
         // Snippet for: M:System.Drawing.Drawing2D.Matrix.Translate(System.Single,System.Single,System.Drawing.Drawing2D.MatrixOrder)
         // <snippet9>

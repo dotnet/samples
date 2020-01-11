@@ -4,7 +4,6 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
-
 class Alice
 {
     public static byte[] alicePublicKey;

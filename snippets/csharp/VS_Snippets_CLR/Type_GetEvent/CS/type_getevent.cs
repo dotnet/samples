@@ -37,4 +37,3 @@ class MyEventExample
     }
 }
 // </Snippet1>
-       

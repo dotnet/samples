@@ -82,6 +82,5 @@ namespace ControlMoveEx
         }
         //</Snippet1>
 
-
     }
 }

@@ -47,8 +47,7 @@ public class Test
 
       XmlAttributeOverrides xOver = 
       new XmlAttributeOverrides();
-      
-      
+
       /* Create an XmlElementAttribute to override 
       the Vehicles property. */
       XmlElementAttribute xElement1 = 

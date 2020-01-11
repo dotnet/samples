@@ -107,4 +107,3 @@ class WebRequest_Proxy
 		}
 	}
 }
-

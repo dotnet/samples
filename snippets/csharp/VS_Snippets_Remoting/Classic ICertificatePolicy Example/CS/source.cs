@@ -2,7 +2,6 @@
 using System.Net;
 using System.Security.Cryptography.X509Certificates;
 
-
 // <Snippet1>
  public  enum    CertificateProblem  : long
  {

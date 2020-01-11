@@ -67,7 +67,6 @@ public class Run
 
    }
 
-
    public void DeserializeOriginal(string filename)
    {
       // Create an instance of the XmlSerializer class.
@@ -123,5 +122,3 @@ public class Run
 
 }
 //</Snippet1>
-
- 

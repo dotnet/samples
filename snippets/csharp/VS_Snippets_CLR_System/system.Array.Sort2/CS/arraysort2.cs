@@ -110,4 +110,3 @@ After sorting the entire Array using the reverse case-insensitive comparer:
 */
 
 // </Snippet1>
-

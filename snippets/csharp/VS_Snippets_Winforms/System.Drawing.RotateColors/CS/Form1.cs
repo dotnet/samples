@@ -19,7 +19,6 @@ namespace RotateColors
             this.Paint +=new PaintEventHandler(Form1_Paint);
         }
 
-
         [STAThread]
         static void Main()
         {
@@ -69,6 +68,5 @@ namespace RotateColors
         }
 //</snippet1>
 
-      
     }
 }

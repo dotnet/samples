@@ -25,7 +25,6 @@ namespace Samples.AspNet
             UrlsSection section =
                 (UrlsSection)config.GetSection("MyUrls");
 
-            
             SectionInformation sInfo = 
                 section.SectionInformation;
 
@@ -73,11 +72,9 @@ namespace Samples.AspNet
                     ConfigurationManager.OpenExeConfiguration(
                     ConfigurationUserLevel.None);
 
-
             // Get the section.
             UrlsSection section =
                 (UrlsSection)config.GetSection("MyUrls");
-
 
             // Protect (encrypt)the section.
             section.SectionInformation.ProtectSection(
@@ -113,7 +110,6 @@ namespace Samples.AspNet
             // Get the section.
             UrlsSection section =
                 (UrlsSection)config.GetSection("MyUrls");
-
 
             SectionInformation sInfo =
                 section.SectionInformation;
@@ -175,7 +171,6 @@ namespace Samples.AspNet
             UrlsSection section =
                 (UrlsSection)config.GetSection("MyUrls");
 
-
             SectionInformation sInfo =
                 section.SectionInformation;
             // </Snippet102>
@@ -223,7 +218,6 @@ namespace Samples.AspNet
         }
         // </Snippet107>
 
-
         // <Snippet108>
         static public void GetProtectionProvider()
         {
@@ -240,7 +234,6 @@ namespace Samples.AspNet
 
         }
         // </Snippet108>
-
 
         // <Snippet109>
         static public void RestartOnExternalChanges()
@@ -268,7 +261,6 @@ namespace Samples.AspNet
         }
         // </Snippet110>
 
-
         // <Snippet111>
         static public void GetSectionType()
         {
@@ -281,7 +273,6 @@ namespace Samples.AspNet
         }
         // </Snippet111>
 
-
         // <Snippet112>
         static public void UnProtectSection()
         {
@@ -291,11 +282,9 @@ namespace Samples.AspNet
                     ConfigurationManager.OpenExeConfiguration(
                     ConfigurationUserLevel.None);
 
-
             // Get the section.
             UrlsSection section =
                 (UrlsSection)config.GetSection("MyUrls");
-
 
             // Unprotect (decrypt)the section.
             section.SectionInformation.UnprotectSection();

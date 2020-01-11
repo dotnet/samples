@@ -79,4 +79,3 @@ namespace object_collection_initializers
     }
     // </SnippetHowToObjectInitializers>
 }
-

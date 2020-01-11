@@ -13,8 +13,6 @@ using System.Net;
 using System.Text;
 using System.Xml;
 
-
-
 class XMLDSIGDetached
 {
 

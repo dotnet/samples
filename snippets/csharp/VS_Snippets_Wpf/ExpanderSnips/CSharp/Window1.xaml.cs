@@ -6,7 +6,6 @@ using System.Windows.Documents;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
-
 namespace ExpanderSnips
 {
     /// <summary>
@@ -34,7 +33,6 @@ namespace ExpanderSnips
          //<SnippetExpandDirection>
          myExpanderOpensUp.ExpandDirection = ExpandDirection.Up;
          //</SnippetExpandDirection>
-
 
          //<SnippetIsExpanded>
          myExpanderIsExpanded.IsExpanded = true;

@@ -6,7 +6,6 @@ using System.Web.Configuration;
 using System.Collections;
 using System.Text;
 
-
 namespace ConfigurationStringSettings
 {
 
@@ -24,7 +23,6 @@ namespace ConfigurationStringSettings
             Configuration config =
               WebConfigurationManager.OpenWebConfiguration(configPath);
 
-           
             // Get the conectionStrings section.
             ConnectionStringsSection csSection =
                 config.ConnectionStrings;
@@ -43,15 +41,13 @@ namespace ConfigurationStringSettings
                 Console.WriteLine("#{0}", i);
                 Console.WriteLine("  Name: {0}", cs.Name);
 
-
                 Console.WriteLine("  Provider Name: {0}",
                     cs.ProviderName);
 
             }
 
         }
-        
-        
+
         static void Main(string[] args)
         {
             try

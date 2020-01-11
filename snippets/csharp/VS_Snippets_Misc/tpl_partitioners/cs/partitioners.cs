@@ -31,7 +31,6 @@ namespace PartitionerTests
             Console.ReadKey();
         }
 
-
         static void TestDefaultRangePartitioner()
         {
            
@@ -75,10 +74,7 @@ namespace PartitionerTests
              );
             Console.WriteLine("elapsed for Parallel.For: {0}", sw.ElapsedMilliseconds);
 
-
-
             sw = Stopwatch.StartNew();
-
 
             customPartitioner = Partitioner.Create(nums, true);
             var q7 = from x in customPartitioner.AsParallel()
@@ -104,7 +100,6 @@ namespace PartitionerTests
             {
                 double d = (double)x * Math.PI;
             });
-
 
             Console.WriteLine("elapsed for PLINQ without load-balancing: {0}", sw.ElapsedMilliseconds);
         }
@@ -146,7 +141,6 @@ namespace PartitionerTests
 
             MyPartitioner mp = new MyPartitioner(sourceArray, .50);
 
-
             PartTest2 p = new PartTest2();
             var q = from item in mp.AsParallel()
                     let result = p.FakeFibonacci(item)
@@ -154,7 +148,6 @@ namespace PartitionerTests
                     select new { Num = item, Result = result, MyThread = Thread.CurrentThread.ManagedThreadId };
 
             Console.WriteLine("Beginning custom partitioning");
-
 
             foreach (var v in q)
             {
@@ -185,7 +178,6 @@ namespace PartitionerTests
             //   Console.ReadKey();
            cts.Dispose();
         }
-
 
         BigInteger FakeFibonacci(int i)
         {
@@ -309,7 +301,6 @@ namespace PartitionerTests
             return partitionLimits;
         }
 
-        
         IEnumerator<int> GetItemsForPartition(int start, int end)
         {
             // For demonstration purpsoes. Each thread receives its own enumerator.
@@ -337,7 +328,6 @@ namespace PartitionerTests
             var source2 = Enumerable.Range(0, 10000).ToArray();
 
             sw = Stopwatch.StartNew();
-            
 
             var query2 = from n in source2.AsParallel()
                         select ProcessData(n);
@@ -353,7 +343,6 @@ namespace PartitionerTests
             return i;
         }
 
-        
     }
     //</snippet05>
 
@@ -415,10 +404,8 @@ namespace PartitionerTests
 
             //  Console.WriteLine("len={0} height={1} area={2} hyp={3:###.##}", height, len, height * len, Math.Sqrt(height * height + len * len));
 
-
             return boundaries;
         }
-
 
         public static int[] CalculatePartitions(double height, double len, int partitions, int sourceLength)
         {
@@ -440,7 +427,6 @@ namespace PartitionerTests
             return boundaries;
         }
     }
-
 
     namespace myPrivateNamespace
     {

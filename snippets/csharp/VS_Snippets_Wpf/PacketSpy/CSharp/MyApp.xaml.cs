@@ -20,7 +20,6 @@ namespace PacketSpy
             //Window2 secondWin = new Window2();
             //secondWin.Show();
 
-            
         }
 
     }

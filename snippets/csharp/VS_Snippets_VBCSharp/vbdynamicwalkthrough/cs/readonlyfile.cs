@@ -73,7 +73,6 @@ namespace DynamicWalkthrough
         }
         //</Snippet7>
 
-        
         //<Snippet6>
         // Implement the TryGetMember method of the DynamicObject class for dynamic member calls.
         public override bool TryGetMember(GetMemberBinder binder,
@@ -135,5 +134,3 @@ namespace DynamicWalkthrough
         //</Snippet5>
     }
 }
-
-

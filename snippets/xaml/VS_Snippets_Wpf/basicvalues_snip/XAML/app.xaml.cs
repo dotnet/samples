@@ -7,7 +7,6 @@ using System.IO;
 namespace basicvalues_markup
 {
 
-
     public partial class app : Application
     {
 
@@ -15,7 +14,6 @@ namespace basicvalues_markup
         {
             AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
         }
-        
 
         private void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs args)
         {
@@ -29,8 +27,7 @@ namespace basicvalues_markup
             {
                 MessageBox.Show("Unable to write error file:" + ex.ToString());
             }
-            
-            
+
             MessageBox.Show("Unhandled exception: " + args.ExceptionObject.ToString());
         }   
 

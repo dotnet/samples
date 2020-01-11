@@ -41,7 +41,6 @@ public class Test {
    }
 }
 
-
 // A test object that needs to be serialized.
 [Serializable()]
 public class TestSimpleObject  {
@@ -62,7 +61,6 @@ public class TestSimpleObject  {
         member4 = 3.14159265;
         member5 = "hello world!";
     }
-
 
     public void Print() {
 

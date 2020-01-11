@@ -1,10 +1,7 @@
-﻿
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
-
-
 
 public class Form1:
     System.Windows.Forms.Form
@@ -366,13 +363,9 @@ public class Form1:
     }
     //</snippet7>
 
-
     [STAThread]
     public static void Main()
     {
         Application.Run(new Form1());
     }
 }
-
-
-

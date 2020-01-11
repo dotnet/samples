@@ -104,4 +104,3 @@ class HttpWebRequest_ContentLength
         }
     }
 }
-

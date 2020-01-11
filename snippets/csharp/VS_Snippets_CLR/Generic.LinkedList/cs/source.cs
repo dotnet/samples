@@ -42,7 +42,6 @@ public class Example
         // </Snippet4>
         Display(sentence, "Test 4: Move last node to be first node:");
 
-
         // <Snippet12>
         // Indicate the last occurence of 'the'.
         sentence.RemoveFirst();

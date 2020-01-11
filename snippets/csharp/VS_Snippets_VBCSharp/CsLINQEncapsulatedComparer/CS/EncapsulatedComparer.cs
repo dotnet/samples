@@ -54,7 +54,6 @@ class Program
                                new ProductA { Name = "lemon", Code = 12 } };
         //</Snippet10>
 
-
         //<Snippet2>
         Product[] store1 = { new Product { Name = "apple", Code = 9 }, 
                                new Product { Name = "orange", Code = 4 } };
@@ -62,7 +61,6 @@ class Program
         Product[] store2 = { new Product { Name = "apple", Code = 9 }, 
                                new Product { Name = "lemon", Code = 12 } };
         //</Snippet2>
-
 
         //INTERSECT
 

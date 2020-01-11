@@ -2,7 +2,6 @@
 using System.Xml.Serialization;
 using System.Web.Services.Protocols;
 
-
 namespace MyMath {
     [XmlRootAttribute("int", Namespace="http://MyMath/", IsNullable=false)]
     public class Math : HttpGetClientProtocol {
@@ -36,4 +35,3 @@ namespace MyMath {
          
      }
  }
-

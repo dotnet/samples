@@ -12,7 +12,6 @@ public class SamplesUTF32Encoding  {
       UTF32Encoding u32LE = new UTF32Encoding( false, true, true );
       UTF32Encoding u32BE = new UTF32Encoding( true, true, true );
 
-
       // Create byte arrays from the same string containing the following characters:
       //    Latin Small Letter Z (U+007A)
       //    Latin Small Letter A (U+0061)
@@ -31,13 +30,11 @@ public class SamplesUTF32Encoding  {
       byte[] barrLE = new byte[u32LE.GetByteCount( myStr )];
       u32LE.GetBytes( myStr, 0, myStr.Length, barrLE, 0 );
 
-
       // Get the char counts and decode the byte arrays.
       Console.Write( "BE array with BE encoding : " );
       PrintCountsAndChars( barrBE, u32BE );
       Console.Write( "LE array with LE encoding : " );
       PrintCountsAndChars( barrLE, u32LE );
-
 
       // Decode the byte arrays using an encoding with a different byte order.
       Console.Write( "BE array with LE encoding : " );
@@ -57,7 +54,6 @@ public class SamplesUTF32Encoding  {
       }
 
    }
-
 
    public static void PrintCountsAndChars( byte[] bytes, Encoding enc )  {
 
@@ -94,5 +90,3 @@ BE array with LE encoding : System.Text.UTF32Encoding :Invalid byte was found at
 LE array with BE encoding : System.Text.UTF32Encoding :Invalid byte was found at byte index 3.
 
 */
-
-

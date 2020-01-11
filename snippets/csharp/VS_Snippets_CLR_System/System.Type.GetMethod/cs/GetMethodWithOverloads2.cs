@@ -44,4 +44,3 @@ public class Example
 //       Person.ToString: Instance method
 //       Int32.ToString has multiple public overloads.
 // </Snippet3>
-              

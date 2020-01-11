@@ -16,7 +16,6 @@ namespace Example
             Console.ReadLine();
         }
 
-
         private void Snippet1()
         {
             //<snippet1>
@@ -76,7 +75,6 @@ namespace Example
             WSHttpBinding b = new WSHttpBinding(SecurityMode.Message);
             b.Security.Message.ClientCredentialType = 
                 MessageCredentialType.Certificate; 
-
 
             // Get a reference to the authentication object.
             X509ClientCertificateAuthentication myAuthProperties =
@@ -190,7 +188,6 @@ namespace Example
             }
             //</snippet7>
         }
-
 
     }
 

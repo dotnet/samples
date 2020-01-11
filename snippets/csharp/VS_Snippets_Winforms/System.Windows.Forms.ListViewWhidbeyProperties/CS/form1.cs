@@ -128,7 +128,6 @@ namespace ListViewProperties
 		//        Console.WriteLine(item4.ToString());
 		//    else Console.WriteLine("null");
 		//}
- 
 
         // The following code example demonstrates a ListView with hot tracking enabled.
         // To run this example paste the following code into a Windows Form and call
@@ -200,7 +199,6 @@ namespace ListViewProperties
 
         //</snippet1>
 
-    
         // The following code example demonstrates the use of the BackGroundImageLayout
         // To run this example, paste the following
         // code into a Windows Form and call the InitializeListViewWithBackgroundImage method
@@ -294,8 +292,6 @@ namespace ListViewProperties
         }
         //</snippet8>
 
-
-        
         // The following example demonstrates using the HitTest method to determine
         // the location of a MouseDown in a ListView. To run this code paste it into
         // a Windows Form that contains a ListView named listView1 that is populated with
@@ -348,6 +344,5 @@ namespace ListViewProperties
         }
 //</snippet9>
 
-       
     }
 }

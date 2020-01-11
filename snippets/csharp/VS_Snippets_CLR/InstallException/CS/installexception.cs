@@ -31,7 +31,6 @@ using System.Collections;
 using System.Configuration.Install;
 using System.IO;
 
-
 [RunInstaller(true)]
 public class MyInstaller : Installer
 {
@@ -92,7 +91,6 @@ public class MyInstaller : Installer
    }
 // </Snippet4>
 }
-
 
 // An Assembly that has its own installer.
 public class MyAssembly1

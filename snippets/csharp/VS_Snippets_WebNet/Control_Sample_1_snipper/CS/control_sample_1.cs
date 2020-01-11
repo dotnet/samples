@@ -40,7 +40,6 @@ namespace RenderChildrenSample
             PreRender += new System.EventHandler(PreRender_Handler);
         }
 
-
         protected override void CreateChildControls()
         {
             // Creates a new ControlCollection. 

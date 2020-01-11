@@ -10,8 +10,7 @@ using System.Web.UI.WebControls;
   // the operations you can perform on a NorthwindEmployee object.
   //
   public class EmployeeLogic {
-  
-    
+
     // Returns a collection of NorthwindEmployee objects.
     public static ICollection GetAllEmployees () {
       ArrayList data = new ArrayList();

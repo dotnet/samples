@@ -1,4 +1,4 @@
-// <Snippet1>
+﻿// <Snippet1>
  using System;
  using System.Collections;
  public class SamplesHashtable
@@ -29,8 +29,7 @@
        Console.WriteLine("   Values:" );
        PrintKeysAndValues(myHT);
     }
- 
- 
+
     public static void PrintKeysAndValues( Hashtable myHT )
     {
        Console.WriteLine("\t-KEY-\t-VALUE-");
@@ -63,4 +62,3 @@
  */ 
 
 // </Snippet1>
-

@@ -1,5 +1,4 @@
-﻿
-// <Snippet10>
+﻿// <Snippet10>
 public class Example
 {
    public static void Main()

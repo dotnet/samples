@@ -15,8 +15,6 @@ namespace ContentControlSimple
     /// Interaction logic for Page1.xaml
     /// </summary>
 
-
-
     public partial class Page1 : Canvas
     {
         //<Snippet4>
@@ -30,4 +28,3 @@ namespace ContentControlSimple
         //</Snippet4>
     }
 }
-

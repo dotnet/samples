@@ -44,4 +44,3 @@ namespace ExampleApplication
     }
 }
 // </snippet2> 
-  

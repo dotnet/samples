@@ -59,7 +59,6 @@ namespace Samples.AspNet
     
     }
 
-    
     // Define a custom section.
     public sealed class CustomSection :
         ConfigurationSection
@@ -70,7 +69,6 @@ namespace Samples.AspNet
            
         }
 
-      
         [ConfigurationProperty("fileName", DefaultValue="   default.txt  ")]
         [TypeConverter(typeof(WhiteSpaceTrimStringConverter))]
         public String FileName
@@ -133,7 +131,6 @@ namespace Samples.AspNet
             }
    
         }
-      
 
         public enum Permissions
         {

@@ -8,7 +8,6 @@ public class Form1 : Form
     private Button _button1 = new Button();
     private Button _button2 = new Button();
 
-
     [STAThread]
     static void Main()
     {

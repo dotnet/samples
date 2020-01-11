@@ -122,4 +122,3 @@ namespace Examples.CS.WebControls.Design
     } // MyDetailsViewDesigner
 } // Examples.CS.WebControls.Design
 // </snippet1>
-

@@ -268,8 +268,7 @@ public class Example
    {
       ulong positiveValue = UInt64.MaxValue - 100000;
       long negativeValue = -1;
-      
-      
+
       HexString positiveString = new HexString();
       positiveString.Sign = (SignBit) Math.Sign((decimal)positiveValue);
       positiveString.Value = positiveValue.ToString("X");

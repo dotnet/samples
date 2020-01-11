@@ -49,4 +49,3 @@ public class Example
 //
 //       The call counter: 0
 // </Snippet1>
-

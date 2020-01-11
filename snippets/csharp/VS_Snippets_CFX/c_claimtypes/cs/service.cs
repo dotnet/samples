@@ -34,7 +34,6 @@ namespace Microsoft.ServiceModel.Samples.SupportingTokens
         {
         }
 
-
         bool TryGetClaimValue<TClaimResource>(ClaimSet claimSet, string claimType, out TClaimResource resourceValue)
             where TClaimResource : class
         {

@@ -91,7 +91,6 @@ public class ZoneIdentityPermissionDemo
                 " and \n\t" + zoneIdPerm2.SecurityZone.ToString() + " is null.\n");
         }
 
-
     }
     //</Snippet4>
     //<Snippet5>
@@ -116,7 +115,6 @@ public class ZoneIdentityPermissionDemo
     // permission with the specified state from the XML encoding.
     private static void ToFromXmlDemo()
     {
-
 
         ZoneIdentityPermission zoneIdPerm1 = new ZoneIdentityPermission(SecurityZone.Intranet);
         ZoneIdentityPermission zoneIdPerm2 = new ZoneIdentityPermission(PermissionState.None);

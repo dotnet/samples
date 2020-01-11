@@ -8,7 +8,6 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 
-
 namespace SampleApp
 {
     /// <summary>
@@ -17,7 +16,6 @@ namespace SampleApp
 
     public partial class Window1 : Window
     {
-
 
         public Window1()
         {
@@ -33,7 +31,6 @@ namespace SampleApp
         }
 //</SnippetFEParentProperty>
 
-
         void Window1_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             XAMLPane.BeginAnimation(Canvas.TopProperty, null);
@@ -47,7 +44,6 @@ namespace SampleApp
             }
             XAMLPane.Width = e.NewSize.Width - 205;
         }
-
 
         void OnShowHideXAML(object sender, RoutedEventArgs e)
         {
@@ -155,7 +151,6 @@ namespace SampleApp
             }
         }
 
-
         //If mouse leaves the DesignerPane, hide all of the control points
         void DesignerPane_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
         {
@@ -167,7 +162,6 @@ namespace SampleApp
                 }
             }
         }
-
 
         void path_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
         {
@@ -200,7 +194,6 @@ namespace SampleApp
             }
         }
 
-
         private void OnInsertGeometry(object sender, RoutedEventArgs e)
         {
 
@@ -213,7 +206,6 @@ namespace SampleApp
                     path.StrokeThickness = 2;
 
                     GeometryBase gb = GeometryFactory((FrameworkElement)((Button)sender).Parent);
-
 
                     switch (gb.geometryType)
                     {
@@ -274,8 +266,6 @@ namespace SampleApp
         private bool IsMoving = false;
         private Point movingPreviousLocation;
 
-
-
         void Ellipse_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             Ellipse el = (Ellipse)sender;
@@ -291,7 +281,6 @@ namespace SampleApp
             IsMoving = false;
         }
 
-
         void Ellipse_MouseMove(object sender, System.Windows.Input.MouseEventArgs e)
         {
             Ellipse el = (Ellipse)sender;
@@ -299,8 +288,7 @@ namespace SampleApp
             if (IsMoving)
             {
                 movingEndLocation = e.GetPosition(DrawingPane);
-                
-                
+
                 Canvas.SetLeft(el, movingEndLocation.X - el.Width / 2);
                 Canvas.SetTop(el, movingEndLocation.Y - el.Height / 2);
                 
@@ -336,7 +324,6 @@ namespace SampleApp
                     throw new System.ApplicationException("Error: incorrect Element name");
             }
         }
-
 
         private void UpdateLineGeometryControlPoints(ArrayList controlPoints)
         {
@@ -614,8 +601,7 @@ namespace SampleApp
 
         private void UpdateEllipseGeometry(Point movingEndLocation, string ID)
         {
-        
-            
+
             string[] s = ID.Split('_');
             string controlPointType = GetContronPointTypeInID(ID);
             Path p = SearchUpdatedElement(s[0]) as Path;
@@ -771,7 +757,6 @@ namespace SampleApp
             Ellipse r_BottomLeft = (Ellipse)LogicalTreeHelper.FindLogicalNode(DesignerPane, s[0] + "_BottomLeft");
             Ellipse r_BottomRight = (Ellipse)LogicalTreeHelper.FindLogicalNode(DesignerPane, s[0] + "_BottomRight");
             Ellipse r_Corner = (Ellipse)LogicalTreeHelper.FindLogicalNode(DesignerPane, s[0] + "_Corner");
-
 
             switch (controlPointType)
             {
@@ -996,7 +981,6 @@ namespace SampleApp
             }
         }
 
-
         private static double ControlPointMarkerWidth = 20;
         private static double ControlPointMarkerHeight = 20;
         
@@ -1029,8 +1013,7 @@ namespace SampleApp
                 e.Height =  ControlPointMarkerHeight; 
                 Canvas.SetLeft(e, ((Point)controlPoints[i]).X - e.Width / 2 ); 
                 Canvas.SetTop(e, ((Point)controlPoints[i]).Y - e.Height / 2 );
-                
-                
+
                 e.MouseLeftButtonDown += new System.Windows.Input.MouseButtonEventHandler(Ellipse_MouseLeftButtonDown);
                 e.MouseLeftButtonUp += new System.Windows.Input.MouseButtonEventHandler(Ellipse_MouseLeftButtonUp);
                 e.MouseMove += new System.Windows.Input.MouseEventHandler(Ellipse_MouseMove);
@@ -1132,7 +1115,6 @@ namespace SampleApp
                     default:
                         throw new System.ApplicationException("Error: Incorrect control point ");
                 }
-
 
                 e.Width = ControlPointMarkerWidth;
                 e.Height = ControlPointMarkerHeight;
@@ -1307,7 +1289,6 @@ namespace SampleApp
                     
                     return Point.Parse(o);
 
-                    
                 }
                 catch (Exception ex)
                 {
@@ -1530,7 +1511,6 @@ namespace SampleApp
             Point startpoint, p1, p2, p3;
             #endregion
 
-
         }
 
         public class ArcG : GeometryBase
@@ -1590,11 +1570,8 @@ namespace SampleApp
             double xrotation;
             #endregion
 
-
         }
 
-
     }
-
 
 }

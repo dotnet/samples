@@ -6,7 +6,6 @@ using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Data;
 
-
 namespace SDKSample
 {
     //<SnippetDataObject>

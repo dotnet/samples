@@ -71,6 +71,3 @@ public class Example
 //       Task 5 releases the semaphore; previous count: 2.
 //       Main thread exits.
 // </Snippet1>
-
-
-

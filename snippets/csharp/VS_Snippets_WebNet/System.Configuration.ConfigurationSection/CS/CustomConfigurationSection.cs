@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Configuration;
 using System.Collections;
 using System.Reflection;
@@ -9,7 +8,6 @@ using System.Reflection;
 
 namespace Samples.AspNet
 {
-
 
     //<Snippet1>
     // Define a custom section.
@@ -56,7 +54,6 @@ namespace Samples.AspNet
             _Properties.Add(_MaxIdleTime);
        }
 
-      
         // This is a key customization. 
         // It returns the initialized property bag.
         protected override ConfigurationPropertyCollection Properties
@@ -66,7 +63,6 @@ namespace Samples.AspNet
                 return _Properties;
             }
         }
-
 
         private new bool IsReadOnly
         {
@@ -83,7 +79,6 @@ namespace Samples.AspNet
                 throw new ConfigurationErrorsException(
                     "The property " + propertyName + " is read only.");
         }
-
 
         //<Snippet4>
         // Customizes the use of CustomSection
@@ -145,14 +140,12 @@ namespace Samples.AspNet
                 this["maxIdleTime"] = value;
             }
         }
-       
-        
+
     }
     //</Snippet1>
     
     class TestingCustomSection
     {
-
 
         //<Snippet2>
 
@@ -279,6 +272,5 @@ namespace Samples.AspNet
             DisplayCustomSectionInformation();
         }
 
-            
     }
 }

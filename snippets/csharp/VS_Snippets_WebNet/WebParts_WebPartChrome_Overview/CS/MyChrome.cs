@@ -37,7 +37,6 @@ namespace Samples.AspNet.CS.Controls
     }
   }
 
-  
   [AspNetHostingPermission(SecurityAction.Demand,
     Level = AspNetHostingPermissionLevel.Minimal)]
   [AspNetHostingPermission(SecurityAction.InheritanceDemand,

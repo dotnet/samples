@@ -202,7 +202,6 @@ public class Form1:
     }
     //</snippet4>
 
-
     // The following code example demonstrates how to use the Round
     // and Truncate methods.
     // This example is designed for use with a Windows Form.  Paste this code 
@@ -278,8 +277,3 @@ public class Form1:
         Application.Run(new Form1());
     }
 }
-
-
-
-
-

@@ -19,4 +19,3 @@ public partial class SalesOrderDetail
 }
 
 // </Snippet2>
-

@@ -60,6 +60,3 @@ class HttpWebRequest_Timeout
 		}
 	}
 }
-	
-	
-

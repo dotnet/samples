@@ -1,5 +1,4 @@
-﻿
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 using System.Drawing;
 using System;
 
@@ -58,7 +57,6 @@ public class Form1:
         //
         this.ClientSize = new System.Drawing.Size(292, 266);
 
-
         this.Name = "Form1";
         this.Text = "Form1";
         this.ResumeLayout(false);
@@ -68,7 +66,6 @@ public class Form1:
     #endregion
     internal System.Windows.Forms.ComboBox comboBox1;
     internal System.Windows.Forms.TextBox textbox1;
-
 
     private void InitalizeComboBoxAndTextBoxes()
     {
@@ -131,6 +128,3 @@ public class Form1:
         Application.Run(new Form1());
     }
 }
-
-
-

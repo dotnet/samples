@@ -158,4 +158,3 @@ namespace Examples.AdvancedProgramming.AsynchronousOperations
     }
 }
 // </Snippet5>
-

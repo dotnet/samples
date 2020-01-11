@@ -35,7 +35,6 @@ namespace Microsoft.Samples.BrushExamples
             
             myStackPanel.Children.Add(myTwentyFivePercentOpaqueButton);
 
-
             // <Snippet3>
             //
             // The image contained within this button has an 
@@ -47,7 +46,6 @@ namespace Microsoft.Samples.BrushExamples
 
             StackPanel myImageStackPanel = new StackPanel();
             myImageStackPanel.Orientation = Orientation.Horizontal;
-            
 
             TextBlock myTextBlock = new TextBlock();
             myTextBlock.VerticalAlignment = VerticalAlignment.Center;
@@ -70,7 +68,6 @@ namespace Microsoft.Samples.BrushExamples
             // </Snippet3>
 
             myStackPanel.Children.Add(myImageButton);
-
 
             // <Snippet4>
             //

@@ -28,4 +28,3 @@ namespace Samples
     }
 }
 //</Snippet1>
-

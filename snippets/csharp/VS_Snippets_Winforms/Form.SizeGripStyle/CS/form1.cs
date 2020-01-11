@@ -106,7 +106,5 @@ namespace FormSizeGripStyleEx
 		}
 		//</Snippet1>
 
-
-
 	}
 }

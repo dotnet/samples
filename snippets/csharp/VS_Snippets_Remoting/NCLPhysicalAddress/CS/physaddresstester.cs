@@ -122,5 +122,3 @@ namespace Examples.System.Net.Networking
         }
     }
 }
-
-

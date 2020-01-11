@@ -1,6 +1,5 @@
 ﻿// The following code example shows how to create a CultureInfo for "Spanish - Spain" with the international sort and another with the traditional sort.
 
-
 // <snippet1>
 using System;
 using System.Collections;

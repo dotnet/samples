@@ -17,7 +17,6 @@ namespace SendMail
          Console.WriteLine("SendMail.exe SomeOne@Contoso.com;SomeOther@Contoso.com Me@contoso.com Hi hello");
       }
    }
- 
 
    class Start
    {

@@ -27,7 +27,6 @@ namespace Samples.AspNet.CS.Controls
     }
   }
 
-
   // Create a custom WebPart control to add to a WebPartZone.
   [AspNetHostingPermission(SecurityAction.Demand,
     Level = AspNetHostingPermissionLevel.Minimal)]

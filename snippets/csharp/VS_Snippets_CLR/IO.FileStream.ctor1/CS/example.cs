@@ -29,7 +29,6 @@ namespace FileSystemExample
                 // Close the stream.
                 fWrite.Close();
 
-                
                 // Open a file and read the number of bytes.
 
                 FileStream fRead = new FileStream("test.txt", FileMode.Open);

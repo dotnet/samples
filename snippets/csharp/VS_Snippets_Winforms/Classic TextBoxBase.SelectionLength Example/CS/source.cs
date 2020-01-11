@@ -40,8 +40,7 @@ private void Menu_Copy(System.Object sender, System.EventArgs e)
         textBox1.Paste();
     }
  }
- 
- 
+
  private void Menu_Undo(System.Object sender, System.EventArgs e)
  {
     // Determine if last operation can be undone in text box.   

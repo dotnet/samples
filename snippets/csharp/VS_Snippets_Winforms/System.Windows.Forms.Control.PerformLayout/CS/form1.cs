@@ -10,8 +10,6 @@
 using System.Windows.Forms;
 using System.Drawing;
 
-
-
 public class LayoutForm:
 	System.Windows.Forms.Form
 
@@ -72,7 +70,6 @@ public class LayoutForm:
 		Application.Run(new LayoutForm());
 	}
 
-
 	// This method explicitly calls raises the layout event on 
 	// LayoutControl1, changing the Bounds property.
 	private void Button1_Click(System.Object sender, System.EventArgs e)
@@ -96,7 +93,6 @@ public class LayoutForm:
 	}
 
 }
-
 
 // This custom control has the Layout event implented so that when 
 // PerformLayout(AffectedControl, AffectedProperty) is called 
@@ -155,8 +151,3 @@ public class LayoutControl:
 }
 
 	//</snippet1>
-
-
-
-
-

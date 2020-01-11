@@ -57,7 +57,6 @@ namespace System.Drawing.Imaging.ClassicImageCodecInfoCS
 		}
 		#endregion
 
-
         // Snippet for: M:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders
         // <snippet1>
         private void GetImageEncodersExample(PaintEventArgs e)

@@ -39,7 +39,6 @@ class MyEventLog
                              EventLogEntryType.Error, myEventID, myCategory, myByte);
         // </Snippet2>
 
-
         // <Snippet3>
         // Create an EventLog instance and assign its source.
         EventLog myLog = new EventLog();

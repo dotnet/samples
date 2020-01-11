@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
@@ -36,8 +35,7 @@ namespace Microsoft.Samples.Graphics.Geometries
    
             Example1RadioButton.IsChecked = true;
        }
-       
-       
+
        private void zoomOutStoryboardCompleted(object sender, EventArgs args)
        {
            
@@ -57,12 +55,10 @@ namespace Microsoft.Samples.Graphics.Geometries
             scrollViewerBorder.Visibility = Visibility.Visible;
        
        }
-       
-       
+
        private void sampleSelected(object sender, RoutedEventArgs args)
        {
 
-         
          Point3DCollection points = new Point3DCollection();
          
          double ratio = myScrollViewer.ActualWidth / myScrollViewer.ActualHeight;

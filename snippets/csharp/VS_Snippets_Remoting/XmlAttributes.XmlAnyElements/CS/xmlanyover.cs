@@ -33,7 +33,6 @@ public class Test{
       writer.Close();
    }
 
-   
    private void DeserializeObject(string filename){
 
       XmlSerializer ser = CreateOverrideSerializer();

@@ -85,6 +85,3 @@ bmp, paint.exe
 rtf, wordpad.exe
  */
 //</Snippet1>
-
-
-

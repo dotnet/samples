@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 namespace OrderablePartitionerDemo
 {
 
-
     // Simple partitioner that will extract one (index,item) pair at a time, 
     // in a thread-safe fashion, from the underlying collection.
     class SingleElementOrderablePartitioner<T> : OrderablePartitioner<T>
@@ -105,7 +104,6 @@ namespace OrderablePartitionerDemo
             InternalEnumerable m_controllingEnumerable;
             Shared<long> m_index = null;
             bool m_disposed = false;
-
 
             public InternalEnumerator(IEnumerator<T> source, InternalEnumerable controllingEnumerable, Shared<long> index)
             {
@@ -264,10 +262,8 @@ namespace OrderablePartitionerDemo
 
             Console.WriteLine("OrderablePartitioner test: counter = {0}, should be 100000", counter);
 
-
         }
     }
-
 
 }
 //</snippet1>

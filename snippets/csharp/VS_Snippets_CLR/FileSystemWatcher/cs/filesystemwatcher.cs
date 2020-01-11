@@ -44,7 +44,6 @@ class Program
         Console.WriteLine("Press \'Enter\' to quit the sample.");
         Console.ReadLine();
 
-
     }
     // </snippet6> 
 

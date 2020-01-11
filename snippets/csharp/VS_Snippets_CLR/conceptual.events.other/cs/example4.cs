@@ -58,7 +58,6 @@ public class SnippetForm : Form
     }
     //</snippet42>
 
-
     public SnippetForm() : base()
     {
         button = new Button();

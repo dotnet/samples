@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Security;
 using System.Security.Permissions;
 using System.Reflection;
@@ -19,7 +18,6 @@ class MyMethodBuilderDemo {
 	TypeBuilder myTypeBuilder = myModBuilder.DefineType("MyType",
 				    	TypeAttributes.Public);
 
-						
 	MethodBuilder myMethod1 = myTypeBuilder.DefineMethod("MyMethod",
 						MethodAttributes.Public, 
 						typeof(int),
@@ -34,8 +32,6 @@ class MyMethodBuilderDemo {
 	
 	//</Snippet1>
 
-
- 	
    }
 
 }

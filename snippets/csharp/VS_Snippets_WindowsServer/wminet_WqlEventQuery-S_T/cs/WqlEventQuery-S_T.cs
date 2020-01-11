@@ -13,7 +13,6 @@ public class EventSample
         WqlEventQuery q = new WqlEventQuery("__InstanceCreationEvent",
             new TimeSpan(0,0,10));
 
-
         Console.WriteLine(q.QueryString);
         return;
     }

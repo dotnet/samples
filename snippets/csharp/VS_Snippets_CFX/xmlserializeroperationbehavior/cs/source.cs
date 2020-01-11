@@ -51,7 +51,6 @@ namespace Example
         }
         //</snippet1>
 
-
         static void Main()
         {
             try
@@ -85,7 +84,6 @@ namespace Example
         {
             return a + b;
         }
-
 
         public object GetInfo(string request)
         {

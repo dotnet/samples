@@ -106,8 +106,6 @@ namespace UE.Samples
 			binding.TransferMode;
 		//</Snippet18>
 
-
-				
                 serviceHost.Open();
         
                 Console.WriteLine("The service is ready.");

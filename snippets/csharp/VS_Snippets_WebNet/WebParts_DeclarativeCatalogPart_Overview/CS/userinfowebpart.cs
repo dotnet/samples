@@ -118,7 +118,6 @@ namespace Samples.AspNet.CS.Controls
       set { _userIsCurrent = value; }
     }
 
-
     protected override void CreateChildControls()
     {
       Controls.Clear();
@@ -178,7 +177,6 @@ namespace Samples.AspNet.CS.Controls
       IsCurrentCheckBox.RenderControl(writer);
     }
   }
-
 
   [AspNetHostingPermission(SecurityAction.Demand,
     Level = AspNetHostingPermissionLevel.Minimal)]

@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -69,7 +68,6 @@ namespace csrefKeywordsChecked
     }
     //</snippet1>
 
-
     // <Snippet2>
     class UncheckedDemo
     {
@@ -99,7 +97,6 @@ namespace csrefKeywordsChecked
 
             // The sum of 2,147,483,647 and 10 is displayed as -2,147,483,639.
             Console.WriteLine(int1);
-
 
             // The following statement is unchecked by default at compile time and run 
             // time because the expression contains the variable variableMax. It causes  
@@ -137,7 +134,6 @@ namespace csrefKeywordsChecked
     }
     // </Snippet2>
 
-
     class CheckedAndUnchecked
     {
         static void Main()
@@ -163,7 +159,6 @@ namespace csrefKeywordsChecked
             Console.WriteLine(i2);
             //</snippet3>
 
-
             //<Snippet4>
             // If the previous sum is attempted in a checked environment, an 
             // OverflowException error is raised.
@@ -183,4 +178,3 @@ namespace csrefKeywordsChecked
     }
 
 }
-

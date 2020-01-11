@@ -23,4 +23,3 @@ public class AnotherClassUsableViaCOM : IComparable
     Int32 IComparable.CompareTo(Object o) { return 0; }
 }
 //</snippet1>
-

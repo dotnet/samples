@@ -25,13 +25,4 @@ namespace BrushesIntroduction
   
     }
 
-
-
-
-
-
-
-
-
-
 }

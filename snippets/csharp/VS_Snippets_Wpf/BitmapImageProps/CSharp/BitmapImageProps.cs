@@ -90,7 +90,6 @@ namespace SDKSample
             myColorConvertedBitmap.EndInit();
             //</Snippet3>
 
-            
             //Define a StackPanel
             StackPanel myStackPanel = new StackPanel();
 

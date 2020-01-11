@@ -129,7 +129,6 @@ public class Form1:
     }
     //</snippet1>
 
-
     // The following example shows how to set the Trimming property
     // and how to use the StringTrimming enumeration. This example
     // is designed to be used with a Windows Form. Paste this code
@@ -197,7 +196,6 @@ public class Form1:
             MessageBox.Show("There was an error." +
                 "Make sure the image file path is valid.");
         }
-
 
     }
     //</snippet2>
@@ -291,17 +289,9 @@ public class Form1:
     }
     //</snippet5>
 
-
-
     [STAThread]
     public static void Main()
     {
         Application.Run(new Form1());
     }
 }
-
-
-
-
-
-

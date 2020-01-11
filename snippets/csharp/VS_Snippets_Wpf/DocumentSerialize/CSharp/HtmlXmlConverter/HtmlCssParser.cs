@@ -793,7 +793,6 @@ namespace SdkSample
             return ParseWordEnumeration(_borderStyles, styleValue, ref nextIndex);
         }
 
-
         // .................................................................
         //
         // TODO: What are these definitions doing here:
@@ -813,7 +812,6 @@ namespace SdkSample
             // TODO: Implement parsing background attribute
         }
     }
-
 
     internal class CssStylesheet
     {
@@ -932,7 +930,6 @@ namespace SdkSample
 
             return text.Substring(0, commentStart) + " " + RemoveComments(text.Substring(commentEnd + 2));
         }
-
 
         public void AddStyleDefinition(string selector, string definition)
         {

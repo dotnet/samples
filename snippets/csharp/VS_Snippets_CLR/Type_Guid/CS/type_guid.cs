@@ -20,4 +20,3 @@ class MyGetTypeFromCLSID
     }
 }
 // </Snippet1>
-

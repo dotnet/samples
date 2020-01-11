@@ -19,7 +19,6 @@ using System.Collections;
 using System.Configuration.Install;
 using System.IO;
 
-
 public class InstallerCollection_Insert
 {
    public static void Main()

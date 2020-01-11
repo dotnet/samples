@@ -82,6 +82,3 @@ Current access rules:
       Rights: SetValue, CreateSubKey, ReadKey
  */
 //</Snippet1>
-
-
-

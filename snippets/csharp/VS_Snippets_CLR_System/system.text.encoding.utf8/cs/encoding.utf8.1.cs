@@ -33,4 +33,3 @@ public class Example
 // The example displays the following output:
 //        Unable to encode U+D802 at index 2
 // </Snippet1>
-

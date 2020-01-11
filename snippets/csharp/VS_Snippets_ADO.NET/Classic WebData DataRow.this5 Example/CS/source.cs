@@ -8,7 +8,6 @@ public class Form1: Form
     protected DataSet DataSet1;
     protected DataGrid DataGrid1;
 
-
     // <Snippet1>
     private void DataGrid1_Click(object sender, 
         System.EventArgs e) 

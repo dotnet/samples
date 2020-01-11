@@ -28,5 +28,3 @@ public class Example
 // The example displays the following output:
 //       Found: X = 275, Y = 395
 // </Snippet1>
-
-

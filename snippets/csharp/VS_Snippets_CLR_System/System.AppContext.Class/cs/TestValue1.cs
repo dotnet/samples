@@ -10,7 +10,6 @@ public class Example
    }
 }
 
-
 // <Snippet2>
 public class AmazingLib
 {

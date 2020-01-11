@@ -13,7 +13,6 @@
 //
 //    Example: RegisterPeerName.exe MyComputer Secured 8000 MyComment Available
 
-
 using System;
 using System.Collections.Generic;
 using System.Text;

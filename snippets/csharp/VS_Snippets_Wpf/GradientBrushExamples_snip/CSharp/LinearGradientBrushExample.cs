@@ -63,7 +63,6 @@ namespace Microsoft.Samples.GradientBrushExamples
             horizontalFillRectangle.Fill = myHorizontalGradient; 
 
             // </SnippetHorizontalGradient1CSharp>
- 
 
             // <SnippetVerticalGradient1CSharp>
             Rectangle verticalFillRectangle = new Rectangle();

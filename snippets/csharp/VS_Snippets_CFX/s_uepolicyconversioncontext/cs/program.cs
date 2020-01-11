@@ -105,7 +105,6 @@ namespace CS2
 			context.GetBindingAssertions().Add(xmlElement);
 		}
 
-
 		// Note: All custom binding elements must return a deep clone 
 		// to enable the run time to support multiple bindings using the 
 		// same custom binding.
@@ -114,7 +113,6 @@ namespace CS2
 			// this is just a placeholder
 			return null;
 		}
-
 
 		// Call the inner property.
 		public override T GetProperty<T>(BindingContext context)

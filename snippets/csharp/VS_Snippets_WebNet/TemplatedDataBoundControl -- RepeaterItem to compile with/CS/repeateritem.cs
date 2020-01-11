@@ -30,4 +30,3 @@ namespace TemplateControlSamples {
     }
 }
 //</snippet1>
-  

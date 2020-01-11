@@ -5,7 +5,6 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
-
 namespace csrefKeywordsContextual
 {
     //<snippet1>
@@ -17,7 +16,6 @@ namespace csrefKeywordsContextual
             get { return _seconds; }
             set { _seconds = value; }
         }
-
 
     }
     //</snippet1>
@@ -90,8 +88,6 @@ namespace csrefKeywordsContextual
     }
     //</snippet5>
 
-
-
     //<snippet6>
     class MyClass<T, U>
         where T : class
@@ -145,8 +141,6 @@ namespace csrefKeywordsContextual
     }
     //</snippet9>
 
-
-
     class Test
     {
         class Student
@@ -192,14 +186,12 @@ namespace csrefKeywordsContextual
                         group student by student.LastName[0];
             //</Snippet10>
 
-
             //<Snippet11>    
             IEnumerable<string> sortDescendingQuery =
                 from vegetable in vegetables
                 orderby vegetable descending
                 select vegetable;
             //</Snippet11>
-
 
             //<Snippet14>           
             IEnumerable<string> sortAscendingQuery =
@@ -224,7 +216,6 @@ namespace csrefKeywordsContextual
         //</Snippet13>  
     }
 
-
     //<Snippet15>
     class Events : IDrawingObject
     {
@@ -244,9 +235,7 @@ namespace csrefKeywordsContextual
 
 }
 
-
 class TestApp { } // for snippet13
-
 
 // yield (C# Reference)
 // 1089194f-9e53-46a2-8642-53ccbe9d414d

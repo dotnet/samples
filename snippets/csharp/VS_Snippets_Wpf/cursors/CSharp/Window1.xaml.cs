@@ -6,7 +6,6 @@ using System.Windows.Input;
 using System.IO;
 using System.Collections;
 
-
 namespace SDKSamples
 {
     /// <summary>
@@ -158,7 +157,6 @@ namespace SDKSamples
             }
         }
         //</SnippetCursorsSampleOverrideCursor>
-
 
         private void OnLoaded(object sender, RoutedEventArgs e)
         {

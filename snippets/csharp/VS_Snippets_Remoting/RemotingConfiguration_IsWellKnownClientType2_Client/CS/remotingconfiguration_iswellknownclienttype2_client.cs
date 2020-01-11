@@ -38,5 +38,3 @@ using System.Runtime.Remoting.Channels.Tcp;
         Console.WriteLine(myObject.MyMethod("Remote method is called."));
       }
    }
-
-

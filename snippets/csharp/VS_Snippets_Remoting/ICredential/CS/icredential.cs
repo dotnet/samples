@@ -7,7 +7,6 @@
    'GetCredential' method of 'CredentialList' class. Then it sends the request and obtains a response.
 */
 
-
 namespace CrendentialSample
 {
 	using System;

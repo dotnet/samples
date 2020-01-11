@@ -13,7 +13,6 @@ public class Example
       Dictionary<DateTime, Double> temperatureInfo = new Dictionary<DateTime, Double>(); 
       temperatureInfo.Add(new DateTime(2010, 6, 1, 14, 0, 0), 87.46);
       temperatureInfo.Add(new DateTime(2010, 12, 1, 10, 0, 0), 36.81);
-      
 
       sb.AppendLine("Temperature Information:\n");
       foreach (var item in temperatureInfo)

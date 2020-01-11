@@ -1,5 +1,4 @@
-﻿
-//<Snippet1>
+﻿//<Snippet1>
 using System;
 using System.Globalization;
 using System.Diagnostics;
@@ -123,7 +122,6 @@ namespace EventLogSamples
                         mySourceData.Source, sourceLog);
                 }
             }
-        
 
             if (registerSource)
             {

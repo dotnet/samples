@@ -63,4 +63,3 @@ namespace WpfApplication1
     }
 }
 //</SnippetRectangleOpacityFadeExampleCode>
-

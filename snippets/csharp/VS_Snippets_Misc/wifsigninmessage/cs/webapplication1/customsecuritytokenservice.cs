@@ -10,7 +10,6 @@
 //
 //-----------------------------------------------------------------------------
 
-
 using System;
 using System.IdentityModel;
 using System.IdentityModel.Configuration;
@@ -72,7 +71,6 @@ namespace PassiveFlowSTS
             _encryptingCreds = new X509EncryptingCredentials(CertificateUtil.GetCertificate(StoreName.My, StoreLocation.LocalMachine, ENCRYPTING_CERTIFICATE_NAME));
         }
 
-
         /// <summary>
         /// This method returns the configuration for the token issuance request. The configuration
         /// is represented by the Scope class. In our case, we are only capable of issuing a token to a
@@ -110,7 +108,6 @@ namespace PassiveFlowSTS
             // If you have multiple RPs for the STS you would select the certificate that is specific to 
             // the RP that requests the token and then use that for _encryptingCreds
             scope.EncryptingCredentials = _encryptingCreds;
-
 
             return scope;
         }

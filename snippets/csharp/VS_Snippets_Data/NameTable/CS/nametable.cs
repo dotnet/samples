@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Xml;
 
-
 public class Sample 
 {
   public static void Main(){
@@ -29,5 +28,3 @@ public class Sample
   
   }
 } // End class
-
-

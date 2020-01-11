@@ -9,7 +9,6 @@
 // Snippet20 will go in DataGridViewButtonCell.Paint() (and/or DataGridViewCell.Paint?)
 // Snippet20 will also go in DataGridViewCell.BorderWidths()
 
-
 // <Snippet0>
 using System;
 using System.Drawing;

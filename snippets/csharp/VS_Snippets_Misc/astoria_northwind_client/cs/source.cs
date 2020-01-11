@@ -1846,7 +1846,6 @@ namespace NorthwindClient
 
         public static EventHandler<SendingRequestEventArgs> context_SendingRequest { get; set; }
 
-
         public static void CallServiceOperationIQueryable()
         {
             //<snippetCallServiceOperationIQueryable>
@@ -2017,7 +2016,6 @@ namespace NorthwindClient
             }
             //</snippetCallServiceOperationSingleInt>
         }
-
 
         public static void CallServiceOperationVoid()
         {

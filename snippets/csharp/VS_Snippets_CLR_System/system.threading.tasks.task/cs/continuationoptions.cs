@@ -58,7 +58,6 @@ class ContinuationOptionsDemo
 
         // -----------------------------------------------------------------------------------
 
-
         // Failed transaction - Begin + exception + Rollback
         Console.WriteLine("\nDemonstrating a failed transaction");
 
@@ -78,4 +77,3 @@ class ContinuationOptionsDemo
 
 }
 //</snippet04>
-

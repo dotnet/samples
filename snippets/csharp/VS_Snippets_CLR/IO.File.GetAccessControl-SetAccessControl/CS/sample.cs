@@ -40,7 +40,6 @@ namespace FileSystemExample
             FileSystemRights rights, AccessControlType controlType)
         {
 
-
             // Get a FileSecurity object that represents the
             // current security settings.
             FileSecurity fSecurity = File.GetAccessControl(fileName);

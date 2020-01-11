@@ -8,7 +8,6 @@ using System.Web.Configuration;
 namespace Samples.AspNet
 {
 
-   
     public class ExternalConfiguration
     {
        
@@ -27,7 +26,6 @@ namespace Samples.AspNet
             // Perform the first update.
             UpdateAppSettings();
         }
-
 
         // Update the custom MyAppSettings section.
         // Note , if the section restartOnExternalChanges attribute 

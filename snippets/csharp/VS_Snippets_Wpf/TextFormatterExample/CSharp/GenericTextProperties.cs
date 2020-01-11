@@ -135,7 +135,6 @@ namespace SDKSamples
 
          ValidateCulture(culture);
 
-
          _typeface = typeface;
          _emSize = size;
          _emHintingSize = hintingSize;

@@ -4,7 +4,6 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Input;
 
-
 namespace SDKSample
 {
     /// <summary>
@@ -18,7 +17,6 @@ namespace SDKSample
         //<SnippetCustom_RoutedCommandDefinition>
         public static RoutedCommand ColorCmd = new RoutedCommand();
         //</SnippetCustom_RoutedCommandDefinition>
-
 
         public Window1()
         {
@@ -57,8 +55,6 @@ namespace SDKSample
             }
         }
         //</SnippetCustom_RoutedCommandHandlers>
-
-
 
     }
 }

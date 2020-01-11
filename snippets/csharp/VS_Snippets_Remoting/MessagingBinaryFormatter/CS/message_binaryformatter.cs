@@ -6,7 +6,6 @@ using System.IO;
 
 namespace MyProject
 {
-	
 
 	/// <summary>
 	/// Provides a container class for the example.
@@ -92,7 +91,6 @@ namespace MyProject
 			return;
 		}
 
-
 		//**************************************************
 		// Receives a message containing an image.
 		//**************************************************
@@ -115,8 +113,7 @@ namespace MyProject
 				
 				// This will be saved in the \bin\debug or \bin\retail folder.
 				myImage.Save("ReceivedImage.bmp",System.Drawing.Imaging.ImageFormat.Bmp);
-				
-				
+
 			}
 			
 			catch (MessageQueueException)

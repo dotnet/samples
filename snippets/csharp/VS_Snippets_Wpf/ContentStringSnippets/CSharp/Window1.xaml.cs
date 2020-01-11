@@ -60,8 +60,6 @@ namespace ContentStringSnippets
 
             return 1000;
 
-
-
         }
 
         public object ConvertBack(object value,
@@ -210,13 +208,11 @@ namespace ContentStringSnippets
             s2.AddCourse("History 230", 38, "European History 1000-1500");
             this.Add(s2);
 
-
             Student s3 = new Student("Jeff Price");
             s3.AddCourse("History 230", 38, "European History 1000-1500");
             s3.AddCourse("History 110", 35, "Introduction to World History");
             s3.AddCourse("Physical Education 204", 80, "Racquetball");
             this.Add(s3);
-
 
         }
     }

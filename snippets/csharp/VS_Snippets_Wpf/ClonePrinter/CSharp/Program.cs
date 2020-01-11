@@ -32,7 +32,6 @@ namespace ClonePrinter
                 // Specify the port for the new printer
                 String[] port = new String[] { "COM1:" };
 
-                
                 // Install the new printer on the local print server
                 PrintQueue clonedPrinter = myLocalPrintServer.InstallPrintQueue("My clone of " + sourcePrintQueue.Name, "Xerox WCP 35 PS", port, "WinPrint", myPrintProperties);
                 myLocalPrintServer.Commit();

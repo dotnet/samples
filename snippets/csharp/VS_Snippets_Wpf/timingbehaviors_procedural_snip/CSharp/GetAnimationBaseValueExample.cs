@@ -21,10 +21,8 @@ using System.Windows.Input;
 namespace Microsoft.Samples.Animation.TimingBehaviors
 {
 
-    
     public class GetAnimationBaseValueExample : Page {
-        
-   
+
         private RotateTransform animatedRotateTransform;
         public GetAnimationBaseValueExample()
         {
@@ -85,4 +83,3 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
  
 }
 //</SnippetGetAnimationBaseValueExampleWholePage>
-

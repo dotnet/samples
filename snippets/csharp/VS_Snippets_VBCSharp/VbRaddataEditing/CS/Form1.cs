@@ -18,7 +18,6 @@ namespace CS
 
             northwindDataSet1.Customers.Rows.Add(newCustomersRow);
             //</Snippet1>
-        
 
             //<Snippet3>
             //<Snippet18>
@@ -30,22 +29,18 @@ namespace CS
             customersRow.City = "Seattle";;
             //</Snippet3>
 
-
             //<Snippet5>
             northwindDataSet1.Customers[4].CompanyName = "Updated Company Name";
             northwindDataSet1.Customers[4].City = "Seattle";
             //</Snippet5>
 
-
             //<Snippet8>
             northwindDataSet1.Customers.Rows[0].Delete();
             //</Snippet8>
 
-
             //<Snippet11>
             northwindDataSet1.Customers.AcceptChanges();
             //</Snippet11>
-
 
             //<Snippet12>
             if (northwindDataSet1.HasChanges()) 
@@ -58,7 +53,6 @@ namespace CS
             }
             //</Snippet12>
 
-
             //<Snippet13>
             if (northwindDataSet1.HasChanges(DataRowState.Added)) 
             {
@@ -70,13 +64,11 @@ namespace CS
             }
             //</Snippet13>
 
-
             //<Snippet21>
             string originalCompanyName;
             originalCompanyName = northwindDataSet1.Customers[0]
                 ["CompanyName", DataRowVersion.Original].ToString();
             //</Snippet21>
-
 
             //<Snippet22>
             string currentCompanyName;
@@ -84,7 +76,6 @@ namespace CS
                 ["CompanyName", DataRowVersion.Current].ToString();
             //</Snippet22>
         }
-
 
         //---------------------------------------------------------------------
         void Test2Untyped()
@@ -97,7 +88,6 @@ namespace CS
 
             dataSet1.Tables["Customers"].Rows.Add(newCustomersRow);
             //</Snippet2>
-        
 
             //<Snippet4>
             DataRow[] customerRow = 
@@ -107,30 +97,25 @@ namespace CS
             customerRow[0]["City"] = "Seattle";
             //</Snippet4>
 
-
             //<Snippet6>
             dataSet1.Tables[0].Rows[4][0] = "Updated Company Name";
             dataSet1.Tables[0].Rows[4][1] = "Seattle";
             //</Snippet6>
-
 
             //<Snippet7>
             dataSet1.Tables["Customers"].Rows[4]["CompanyName"] = "Updated Company Name";
             dataSet1.Tables["Customers"].Rows[4]["City"] = "Seattle";
             //</Snippet7>
 
-
             //<Snippet9>
             dataSet1.Tables["Customers"].Rows[0].Delete();
             //</Snippet9>
-
 
             //<Snippet10>
             dataSet1.EnforceConstraints = false;
             // Perform some operations on the dataset
             dataSet1.EnforceConstraints = true;
             //</Snippet10>
-
 
             //<Snippet19>
             string s = "primaryKeyValue";
@@ -146,36 +131,30 @@ namespace CS
             }
             //</Snippet19>
 
-
             //<Snippet20>
             DataRow[] foundRows;
             foundRows = dataSet1.Tables["Customers"].Select("CompanyName Like 'A%'");
             //</Snippet20>
         }
 
-
         //---------------------------------------------------------------------
         void Test3Changed()
         {
             DataTable dataTable1 = dataSet1.Tables[0];
 
-
             //<Snippet14>
             DataSet changedRecords = dataSet1.GetChanges();
             //</Snippet14>
- 
 
             //<Snippet15>
             DataTable changedRecordsTable = dataTable1.GetChanges();
             //</Snippet15>
-
 
             //<Snippet16>
             DataSet addedRecords = dataSet1.GetChanges(DataRowState.Added);
             //</Snippet16>
 
         }
-
 
         //---------------------------------------------------------------------
         //<Snippet17>
@@ -185,7 +164,6 @@ namespace CS
                 northwindDataSet1.Customers.GetChanges(DataRowState.Added);
         }
         //</Snippet17>
-
 
         //---------------------------------------------------------------------
         //<Snippet23>
@@ -209,7 +187,6 @@ namespace CS
             }
         }
         //</Snippet23>
-
 
         //---------------------------------------------------------------------
         public Form1()

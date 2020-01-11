@@ -3,7 +3,6 @@ using System.Xml;
 using System.IO;
 using System.Xml.Serialization;
 
-
 public class dummyclass
 {
 	static void Main(){}

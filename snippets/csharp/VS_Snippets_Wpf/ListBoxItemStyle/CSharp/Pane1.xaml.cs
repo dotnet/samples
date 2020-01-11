@@ -15,8 +15,7 @@ namespace ListBoxItemStyle
 	/// <summary>
 	/// Interaction logic for Pane1.xaml
 	/// </summary>
-        
-        
+
 	public partial class Pane1 : Grid
 	{
         private void OnClick(object sender, RoutedEventArgs e) 

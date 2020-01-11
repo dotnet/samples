@@ -83,7 +83,6 @@ class Example
         Console.WriteLine("Final value of class-level property: {0}", 
             Example.StaticProperty);
 
-
         Example exam = new Example();
 
         Console.WriteLine("\nInitial value of instance property: {0}", 
@@ -95,7 +94,6 @@ class Example
                  
         Console.WriteLine("Final value of instance property: {0}", 
             exam.InstanceProperty);
-
 
         exam[17] = "String number 17";
         exam[46] = "String number 46";
@@ -133,6 +131,3 @@ Initial value of indexed instance property(17): 'String number 17'
 Final value of indexed instance property(17): 'New value for string number 17'
  */
 //</Snippet1>
-
-
-

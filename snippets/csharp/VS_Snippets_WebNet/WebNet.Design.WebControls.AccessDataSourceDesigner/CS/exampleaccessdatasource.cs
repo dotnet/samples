@@ -73,4 +73,3 @@ namespace CustomControls.Design
     }
     // </Snippet3>
 }
-

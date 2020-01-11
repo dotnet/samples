@@ -60,7 +60,6 @@ public class Example
         //Console.ReadLine();
     }
 
-
     private static void ThreadProc()
     {
         string name = Thread.CurrentThread.Name;

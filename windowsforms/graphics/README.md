@@ -7,10 +7,10 @@ This sample demonstrates the fundamentals of GDI+ programming with Windows Forms
 In this sample, there are 5 examples:
 
 1. **Draw a Line** Demonstrates how to draw a solid/dash/dot line.
-2. **Draw a Curve** Demonstrates how to draw a curve, and the difference between antialiasing rendering mode and no antialiasing rendering mode.
-3. **Draw an Arrow** Demonstrates how to draw an arrow.
-4. **Draw a Vertical String** Demonstrates how to draw a vertical string.
-5. **Draw a Ellipse With Gradient Brush** Demonstrates how to draw a shape with gradient effect.
+1. **Draw a Curve** Demonstrates how to draw a curve, and the difference between antialiasing rendering mode and no antialiasing rendering mode.
+1. **Draw an Arrow** Demonstrates how to draw an arrow.
+1. **Draw a Vertical String** Demonstrates how to draw a vertical string.
+1. **Draw a Ellipse With Gradient Brush** Demonstrates how to draw a shape with gradient effect.
 
 ![Screenshot](images/screenshot.png)
 
@@ -21,24 +21,24 @@ In this sample, there are 5 examples:
 Use Graphics.DrawLine method with a normal pen to draw a normal line
 
 ```CSharp
-// Draw a solid line starts at point(40,90) and ends at point(240,90). 
-e.Graphics.DrawLine(p, 40, 90, 240, 90); 
+// Draw a solid line starts at point(40,90) and ends at point(240,90).
+e.Graphics.DrawLine(p, 40, 90, 240, 90);
 ```
 
 Use Graphics.DrawLine method with a dash pen to draw a dashed line
 
 ```CSharp
-// Draw a dash line starts at point(40,110) and ends at point(240,110). 
-p.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash; 
-e.Graphics.DrawLine(p, 40, 110, 240, 110); 
+// Draw a dash line starts at point(40,110) and ends at point(240,110).
+p.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+e.Graphics.DrawLine(p, 40, 110, 240, 110);
 ```
 
 Use Graphics.DrawLine method with a dot pen to draw a dotted line
 
 ```CSharp
-// Draw a dot line starts at point(40,130) and ends at point(240,130). 
-p.DashStyle = System.Drawing.Drawing2D.DashStyle.Dot; 
-e.Graphics.DrawLine(p, 40, 130, 240, 130); 
+// Draw a dot line starts at point(40,130) and ends at point(240,130).
+p.DashStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+e.Graphics.DrawLine(p, 40, 130, 240, 130);
 ```
 
 ### Example 2: Draw a Curve
@@ -46,34 +46,33 @@ e.Graphics.DrawLine(p, 40, 130, 240, 130);
 Create a collection of points for the curve;
 
 ```CSharp
-// Specify a collection of points for the curve. 
-Point[] ps = new Point[]{ 
-   new Point(40,250), 
-   new Point(80,300), 
-   new Point(120,200)}; 
-              
-// Specify a collection of points for the curve. 
-Point[] ps2 = new Point[]{ 
-   new Point(150,250), 
-   new Point(190,300), 
-   new Point(230,200)}; 
- ```
- 
+// Specify a collection of points for the curve.
+Point[] ps = new Point[]{
+   new Point(40,250),
+   new Point(80,300),
+   new Point(120,200)};
+
+// Specify a collection of points for the curve.
+Point[] ps2 = new Point[]{
+   new Point(150,250),
+   new Point(190,300),
+   new Point(230,200)};
+```
+
 Draw a curve without antialiasing rendering mode.
 
 ```CSharp
-e.Graphics.DrawCurve(p, ps); 
+e.Graphics.DrawCurve(p, ps);
 ```
 
 Draw a curve with antialiasing rendering mode.
 
 ```CSharp
-// Draw a curve with antialiasing rendering mode. 
-e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias; 
-e.Graphics.DrawCurve(p, ps2); 
+// Draw a curve with antialiasing rendering mode.
+e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+e.Graphics.DrawCurve(p, ps2);
 ```
- 
- 
+
 ### Example 3: Draw an Arrow
 
 Create a pen with EndCap property set to ArrowAnchor;
@@ -81,12 +80,12 @@ Create a pen with EndCap property set to ArrowAnchor;
 Use the pen created at step #1 to draw the line;
 
 ```CSharp
-// To draw an arrow, set the EndCap property to LineCap.ArrowAnchor for the pen. 
-p.EndCap = System.Drawing.Drawing2D.LineCap.ArrowAnchor; 
-p.Width = 5; 
-e.Graphics.DrawLine(p, 40, 400, 240, 400); 
+// To draw an arrow, set the EndCap property to LineCap.ArrowAnchor for the pen.
+p.EndCap = System.Drawing.Drawing2D.LineCap.ArrowAnchor;
+p.Width = 5;
+e.Graphics.DrawLine(p, 40, 400, 240, 400);
 ```
- 
+
 ### Example 4: Draw a Vertical String
 
 Create a StringFormat object with FormatFlags property set to StringFormatFlags.DirectionVertical;
@@ -94,18 +93,18 @@ Create a StringFormat object with FormatFlags property set to StringFormatFlags.
 Pass the StringFormat object create at step #1 to the Graphics.DrawString method to draw vertical string.
 
 ```CSharp
-using (SolidBrush br = new SolidBrush(Color.Red)) 
-{ 
-    StringFormat sf = new StringFormat(); 
-    sf.FormatFlags = StringFormatFlags.DirectionVertical; 
+using (SolidBrush br = new SolidBrush(Color.Red))
+{
+    StringFormat sf = new StringFormat();
+    sf.FormatFlags = StringFormatFlags.DirectionVertical;
 
 
-    e.Graphics.DrawString( 
-        "This is a vertical text.", 
-        this.Font, br, 450, 90, sf); 
-} 
- ```
- 
+    e.Graphics.DrawString(
+        "This is a vertical text.",
+        this.Font, br, 450, 90, sf);
+}
+```
+
 ### Example 5: Draw a Ellipse With Gradient Brush
 
 Create a LinearGradientBrush object;
@@ -113,20 +112,21 @@ Create a LinearGradientBrush object;
 Pass the LinearGradientBrush object create at step #1 to the  Graphics.FillEllipse method to draw a ellipse with gradient color effect.
 
 ```CSharp
-// Specify a bound for the ellipse. 
-Rectangle r = new Rectangle(350, 280,280,150); 
+// Specify a bound for the ellipse.
+Rectangle r = new Rectangle(350, 280,280,150);
 
 
-// Use a LinearGradientBrush to draw the ellipse. 
-using (LinearGradientBrush br = 
-    new LinearGradientBrush( 
-        r, Color.Silver,  
-        Color.Black,  
-        LinearGradientMode.Vertical)) 
-{ 
-    e.Graphics.FillEllipse(br, r); 
-} 
+// Use a LinearGradientBrush to draw the ellipse.
+using (LinearGradientBrush br =
+    new LinearGradientBrush(
+        r, Color.Silver,
+        Color.Black,
+        LinearGradientMode.Vertical))
+{
+    e.Graphics.FillEllipse(br, r);
+}
 ```
- 
+
 ## More Information
+
 [GDI+ Graphics](https://docs.microsoft.com/windows/desktop/gdiplus/-gdiplus-about-gdi--about)

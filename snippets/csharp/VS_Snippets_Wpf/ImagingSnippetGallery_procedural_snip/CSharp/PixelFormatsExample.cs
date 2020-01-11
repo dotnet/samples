@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -48,7 +47,6 @@ namespace SDKSample
             // Use the BitmapSource object defined above as the source for this new 
             // BitmapSource (chain the BitmapSource objects together).
             newFormatedBitmapSource.Source = myBitmapImage;
-
 
             // Set the new format to Gray32Float (grayscale).
             newFormatedBitmapSource.DestinationFormat = createPixelFormat();

@@ -48,8 +48,6 @@ namespace Contoso.VSSkinHost
             Trace.WriteLine(string.Format(CultureInfo.CurrentCulture, "Entering constructor for: {0}", this.ToString()));
         }
 
-
-
         /////////////////////////////////////////////////////////////////////////////
         // Overriden Package Implementation
         #region Package Members
@@ -190,9 +188,6 @@ namespace Contoso.VSSkinHost
                        0,        // false
                        out result));
         }
-
-
-        
 
     }
 }

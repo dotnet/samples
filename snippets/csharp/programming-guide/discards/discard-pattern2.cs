@@ -36,4 +36,3 @@ public class Example
 //    System.Globalization.NumberFormatInfo object
 //    Some object type without format information
 //    A null object reference: Its use could result in a NullReferenceException
-

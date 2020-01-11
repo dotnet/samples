@@ -10,7 +10,6 @@ using System.Windows.Media.Effects;
 namespace SDKSample
 {
 
-
     public class PushEffectExample : Page
     {
 
@@ -61,9 +60,6 @@ namespace SDKSample
             this.Content = theImage;
 
         }
-
-
-
 
     }
 

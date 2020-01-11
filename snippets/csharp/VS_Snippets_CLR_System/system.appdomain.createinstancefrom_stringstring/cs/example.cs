@@ -21,7 +21,6 @@ public class MarshalableExample : MarshalByRefObject, ITest
 
         object obj = oh.Unwrap();
 
-
         // Three ways to use the newly created object, depending on how
         // much is known about the type: Late bound, early bound through 
         // a mutually known interface, or early binding of a known type.

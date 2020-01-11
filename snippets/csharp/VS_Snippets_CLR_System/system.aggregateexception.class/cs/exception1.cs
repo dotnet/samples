@@ -63,8 +63,3 @@ class Example
 //          at System.AggregateException.Handle(Func`2 predicate)
 //          at Example.Main(String[] args)
 // </Snippet1>
-
-
-
-
-

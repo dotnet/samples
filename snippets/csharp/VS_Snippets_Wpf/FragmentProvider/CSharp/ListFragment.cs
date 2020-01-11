@@ -32,7 +32,6 @@ using System.Windows.Automation;
 using System.Collections;
 using System.Threading;
 
-
 namespace CustomControls 
 {
     public class ListProvider : IRawElementProviderFragmentRoot, ISelectionProvider
@@ -71,7 +70,6 @@ namespace CustomControls
             }
             return null;
         }
-
 
         /// <summary>
         /// Gets provider property values.
@@ -125,8 +123,7 @@ namespace CustomControls
         }
 
         #endregion IRawElementProviderSimple Members
-        
-        
+
         #region IRawElementProviderFragment Members
 
         /// <summary>
@@ -204,8 +201,7 @@ namespace CustomControls
         }
 
         #endregion IRawElementProviderFragment Members
-        
-        
+
         #region IRawElementProviderFragmentRoot Members
 
         /// <summary>
@@ -236,7 +232,6 @@ namespace CustomControls
             return GetProviderForIndex(index);
         }
 
-
         /// <summary>
         /// Returns the child element that is selected when the list gets focus.
         /// </summary>
@@ -248,7 +243,6 @@ namespace CustomControls
         }
 
         #endregion IRawElementProviderFragmentRoot
-        
 
         #region ISelectionProvider Members
 
@@ -305,7 +299,6 @@ namespace CustomControls
             return (IRawElementProviderFragment)this.OwnerListControl.GetItem(index).Provider;
         }
 
-
         /// <summary>
         /// Responds to a focus change by raising an event.
         /// </summary>
@@ -321,7 +314,6 @@ namespace CustomControls
                     listItem.Provider, args);
             }
         }
-
 
         /// <summary>
         /// Responds to a selection change by raising an event.

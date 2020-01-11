@@ -6,7 +6,6 @@ using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using Microsoft.SqlServer.Server;
 
-
 public partial class StoredProcedures
 {
     [SqlProcedure()]
@@ -38,7 +37,6 @@ public partial class StoredProcedures
     }
 }
 //</Snippet1>
-
 
 //-----------------------------------------------------------------------------
 //<Snippet7>

@@ -7,7 +7,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-
 namespace SpanSnippets
 {
     /// <summary>
@@ -165,7 +164,6 @@ namespace SpanSnippets
             textBlock.Text = "The text contents of this TextBlock.";
             // </Snippet_TextBlock_Text>
         }
-
 
         void BoldConstructors()
         {

@@ -10,13 +10,10 @@
 using System;
 using System.Configuration.Install;
 
-
-
 class MyCheckIfInstallableClass:Installer
 {
    static void Main()
    {
-
 
       try
       {
@@ -31,7 +28,6 @@ class MyCheckIfInstallableClass:Installer
       catch( Exception )
       {
       }
-
 
    }
 }

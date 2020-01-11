@@ -9,7 +9,6 @@ public struct Point
     public Int32 x, y;
 }
 
-
 public sealed class App
 {
     static void Main()

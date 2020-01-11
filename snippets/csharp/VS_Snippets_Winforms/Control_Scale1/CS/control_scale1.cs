@@ -105,7 +105,6 @@ public class MyForm : Form
       Application.Run(new MyForm());
    }
 
-
 // <Snippet2>
    private void RegisterEventHandler()
    {

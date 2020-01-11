@@ -4,7 +4,6 @@ using System.Runtime.Remoting;
 using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting.Channels.Ipc;
 
-
 public class Client
 {
     public static void Main ()

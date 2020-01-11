@@ -14,6 +14,5 @@ namespace Microsoft.Samples.Graphics.UsingImageBrush
         {
         }
 
-
     }
 }

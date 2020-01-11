@@ -60,4 +60,3 @@ public class Page
 //       System.NullReferenceException: Object reference not set to an instance of an object.
 //       at Example.Main()
 // </Snippet6>
-

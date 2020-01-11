@@ -86,7 +86,6 @@ namespace CustomElementClient
             }
             // </Snippet125>
 
-
             // *** AccessKeyProperty
             // <Snippet127>
             string accessKey =
@@ -213,7 +212,6 @@ namespace CustomElementClient
              }
              // </Snippet137>
 
-
              // *** CultureInfoProperty
              // <Snippet138>
              System.Globalization.CultureInfo culture =
@@ -228,13 +226,11 @@ namespace CustomElementClient
                 as string;
              // </Snippet139>
 
-
              // *** HasKeyboardFocusProperty
              // <Snippet140>
              bool hasFocus = (bool)
                 autoElement.GetCurrentPropertyValue(AutomationElement.HasKeyboardFocusProperty);
              // </Snippet140>
-
 
              // *** IsContentElementProperty
              // <Snippet141>
@@ -276,7 +272,6 @@ namespace CustomElementClient
              }
              // </Snippet144>
 
- 
             // *** IsXXXPatternAvailableProperty
              // <Snippet145>
              // TODO  Substitute the appropriate field for IsDockPatternAvailableProperty.
@@ -284,13 +279,11 @@ namespace CustomElementClient
                 autoElement.GetCurrentPropertyValue(AutomationElement.IsDockPatternAvailableProperty);
              // </Snippet145>
 
-  
             // *** IsEnabledProperty
              // <Snippet146>
              bool isControlEnabled = (bool)
                 autoElement.GetCurrentPropertyValue(AutomationElement.IsEnabledProperty);
              // </Snippet146>
-
 
              // *** IsKeyboardFocusableProperty
              // <Snippet147>
@@ -303,7 +296,6 @@ namespace CustomElementClient
              bool isControlOffscreen = (bool)
                 autoElement.GetCurrentPropertyValue(AutomationElement.IsOffscreenProperty);
              // </Snippet148>
-
 
              // <Snippet149>
              bool isControlOffscreen1;
@@ -319,21 +311,17 @@ namespace CustomElementClient
              }
              // </Snippet149>
 
-
              // *** IsPasswordProperty
              // <Snippet150>
              bool isTextPassword = (bool)
                 autoElement.GetCurrentPropertyValue(AutomationElement.IsPasswordProperty);
              // </Snippet150>
 
-
              // *** IsRequiredForFormProperty
             // <Snippet151> 
              bool isRequired = (bool)
                 autoElement.GetCurrentPropertyValue(AutomationElement.IsRequiredForFormProperty);
             // </Snippet151>
-
-
 
              // *** ItemStatusProperty
              // <Snippet152>
@@ -355,7 +343,6 @@ namespace CustomElementClient
              }
              // </Snippet153>
 
-
              // *** ItemTypeProperty
              // <Snippet154>
              string itemType =
@@ -376,7 +363,6 @@ namespace CustomElementClient
              }
              // </Snippet155>
 
-
              // *** LabeledByProperty
              // <Snippet156>
              AutomationElement labeler =
@@ -396,7 +382,6 @@ namespace CustomElementClient
                  labeler1 = labelerNoDefault as AutomationElement;
              }
              // </Snippet157>
-
 
              // *** LocalizedControlTypeProperty
              // <Snippet158>
@@ -438,7 +423,6 @@ namespace CustomElementClient
              }
              // </Snippet161>
 
-
              // *** NativeWindowHandleProperty
              // <Snippet162>
              int nativeHandle = (int)
@@ -458,8 +442,6 @@ namespace CustomElementClient
                  nativeHandle1 = (int)nativeHandleNoDefault;
              }
              // </Snippet163>
-
-
 
              // *** OrientationProperty
              // <Snippet164>
@@ -481,7 +463,6 @@ namespace CustomElementClient
              }
              // </Snippet165>
 
-
              // *** ProcessIdProperty
              // <Snippet167>
              int processIdentifier = (int)
@@ -502,13 +483,11 @@ namespace CustomElementClient
              }
              // </Snippet168>
 
-
              // *** RuntimeIdProperty
              // <Snippet169>
              int[] runtimeIdentifier = (int[])
                  autoElement.GetCurrentPropertyValue(AutomationElement.RuntimeIdProperty);
              // </Snippet169>
-
 
              // <Snippet999>
              //  To be written.

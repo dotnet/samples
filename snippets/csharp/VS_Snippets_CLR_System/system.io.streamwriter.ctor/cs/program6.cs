@@ -12,7 +12,6 @@ namespace ConsoleApplication
             string fileName = "test.txt";
             string textToAdd = "Example text in file";
 
-            
             using (StreamWriter writer = new StreamWriter(fileName, true))
             {
                 writer.Write(textToAdd);

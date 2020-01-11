@@ -1,5 +1,4 @@
-﻿
-//<snippet4>
+﻿//<snippet4>
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -20,7 +19,6 @@ using Windows.Web.Syndication;
 // Add a using directive for the Tasks.
 using System.Threading.Tasks;
 
-
 namespace WhenAnyBlogReader
 {
     public sealed partial class MainPage : Page
@@ -33,7 +31,6 @@ namespace WhenAnyBlogReader
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
         }
-
 
         private async void StartButton_Click(object sender, RoutedEventArgs e)
         {
@@ -98,7 +95,6 @@ namespace WhenAnyBlogReader
             StartButton.IsEnabled = true;
         }
 
-
         List<Uri> CreateUriList()
         {
             // Create a list of URIs.
@@ -111,7 +107,6 @@ namespace WhenAnyBlogReader
             };
             return uriList;
         }
-
 
         void DisplayResults(SyndicationFeed sf)
         {

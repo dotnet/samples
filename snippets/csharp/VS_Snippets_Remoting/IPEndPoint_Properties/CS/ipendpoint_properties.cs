@@ -24,7 +24,6 @@ class IPEndPointSnippet
 	public static void Main() 
 	{
 
-		
 		try
 		{
 			Console.Write("\nPlease enter an INTRANET Url as shown: [e.g. www.microsoft.com]:");
@@ -33,8 +32,6 @@ class IPEndPointSnippet
 // <Snippet2>
 // <Snippet3>
 // <Snippet4>
-
-		
 
 			IPAddress hostIPAddress1 = (Dns.Resolve(hostString1)).AddressList[0];
 			Console.WriteLine(hostIPAddress1.ToString());

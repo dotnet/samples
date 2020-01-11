@@ -20,4 +20,3 @@ public class Example
 //       0
 //       0
 // </Snippet3>
-

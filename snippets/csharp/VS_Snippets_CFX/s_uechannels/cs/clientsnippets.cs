@@ -137,7 +137,6 @@ namespace client
        }	   
        // </Snippet21>
 
-
        public static void Snippet23()
        {
 	   // <Snippet23>
@@ -204,7 +203,6 @@ namespace client
            // </Snippet28>
        }
 
-
        public static void Snippet29()
        {
 	   // <Snippet29>
@@ -226,7 +224,6 @@ namespace client
 	   // </Snippet29>
        }
 
-
        public static void Snippet31()
        {
 
@@ -247,8 +244,6 @@ namespace client
 	       reply.Close();
 	       channel.Close();
        }
-
- 
 
        public static void Snippet33()
        {

@@ -167,12 +167,4 @@ namespace GetSupportedPatterns
 
     }
 
-
-
-
-
-
-
-
-
 }

@@ -86,7 +86,6 @@ Console.WriteLine("Add-ins in same application domain: {0}", aiController.AppDom
 Console.WriteLine("Add-ins in same process: {0}", aiEnvironment.Process.Equals(aiController2.AddInEnvironment.Process));
 // </Snippet8>
 
-
 // <Snippet9>
 // Get the application domain
 // of an existing add-in (CalcAddIn).
@@ -235,7 +234,6 @@ private static AddInToken ChooseAddIn(Collection<AddInToken> tokens)
             }
         }
     }
-
 
     internal class Parser
     {

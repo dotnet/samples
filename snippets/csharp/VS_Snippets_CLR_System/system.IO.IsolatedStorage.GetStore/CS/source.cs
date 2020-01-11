@@ -7,7 +7,6 @@ using System.Security.Policy;
 using System.Security.Permissions;
 using System.Security.Cryptography.X509Certificates;
 
-
 class Program
 {
     static void Main(string[] args)
@@ -35,7 +34,6 @@ class Program
         return;
     }
 
-
     public static Boolean Test()
     {
         Boolean bRes = true;
@@ -58,7 +56,6 @@ class Program
         return bRes;
 
     }
-
 
     public static Evidence GetTestEvidence()
     {

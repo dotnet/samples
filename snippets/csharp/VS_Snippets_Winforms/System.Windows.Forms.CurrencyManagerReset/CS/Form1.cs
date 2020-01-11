@@ -97,7 +97,6 @@ namespace BT2
             cacheChildPosition = true;
         }
 
-      
         // Establish the data set with two tables and a relationship
         // between them.
         private DataSet InitializeDataSet()
@@ -207,6 +206,5 @@ namespace BT2
         }
     }
 
-    
 }
 //</snippet1>

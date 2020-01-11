@@ -10,7 +10,6 @@
 //
 //-----------------------------------------------------------------------------
 
-
 using System;
 using System.Collections.Generic;
 using System.IdentityModel;
@@ -22,7 +21,6 @@ using System.Security.Cryptography.X509Certificates;
 using System.Security.Principal;
 using System.ServiceModel;
 using System.Linq;
-
 
 /// <summary>
 /// A custom SecurityTokenService implementation.
@@ -154,4 +152,3 @@ public class MySecurityTokenService : SecurityTokenService
         return outputIdentity;
     }
 }
-

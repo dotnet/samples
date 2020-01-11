@@ -188,7 +188,6 @@ namespace csrefKeywordsJump
         Finish:
             Console.WriteLine("End of search.");
 
-
             // Keep the console open in debug mode.
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();

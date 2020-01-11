@@ -18,8 +18,7 @@ public class ToString
       // Initialize a time span to 1:02:03.
       span = new TimeSpan(1, 2, 3);
       Console.WriteLine(FormatTimeSpan(span, false));
-      
-      
+
       // Initialize a time span to 250 milliseconds.
       span = new TimeSpan(0, 0, 0, 0, 250);
       Console.WriteLine(FormatTimeSpan(span, true));

@@ -76,5 +76,3 @@ public class HttpPostClientProtocolClass
         // </Snippet1>
     }
 }
-
-

@@ -51,7 +51,6 @@ public class SignVerifyEnvelope
         }
     }
 
-
     // Sign an XML file and save the signature in a new file. This method does not  
     // save the public key within the XML file.  This file cannot be verified unless  
     // the verifying code has the key with which it was signed.
@@ -126,7 +125,6 @@ public class SignVerifyEnvelope
         // Check the signature and return the result.
         return signedXml.CheckSignature(Key);
     }
-
 
     // Create example data to sign.
     public static void CreateSomeXml(string FileName)

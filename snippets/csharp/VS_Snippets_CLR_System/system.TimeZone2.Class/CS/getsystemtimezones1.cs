@@ -68,4 +68,3 @@ public class Example
    }
 }
 // </Snippet6>
-      

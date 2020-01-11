@@ -130,4 +130,3 @@ public class Example
       Console.WriteLine(returnTime.Kind == time.Kind);
    }
 }
-
