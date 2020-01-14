@@ -26,10 +26,12 @@ class ParseAddress
       return;
     }
     else
-      IPaddress = args[0];
+        {
+            IPaddress = args[0];
+        }
 
-    // Get the list of the IPv6 addresses associated with the requested host.
-    Parse(IPaddress);
+        // Get the list of the IPv6 addresses associated with the requested host.
+        Parse(IPaddress);
    
   }
 

@@ -136,13 +136,15 @@ if (selectedToken.QualificationData[AddInSegmentType.AddIn]["Isolation"].Equals(
 	Console.WriteLine("Add-in activated per qualification data.");
 }
 else
-	Console.WriteLine("This add-in is not designated to be activated in a new process.");
-// </Snippet11>
+            {
+                Console.WriteLine("This add-in is not designated to be activated in a new process.");
+            }
+            // </Snippet11>
 
-// <Snippet12>
-// Show the qualification data for each
-// token in an AddInToken collection.
-foreach (AddInToken token in tokens)
+            // <Snippet12>
+            // Show the qualification data for each
+            // token in an AddInToken collection.
+            foreach (AddInToken token in tokens)
 {
     foreach (QualificationDataItem qdi in token)
     {

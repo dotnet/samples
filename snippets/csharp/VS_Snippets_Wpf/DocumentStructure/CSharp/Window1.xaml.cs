@@ -51,7 +51,9 @@ namespace SdkSample
             
             // If the file is an XPS document, open it in the DocumentViewer.
             if (dialog.FileName.EndsWith(".xps"))
+            {
                 OpenDocument(dialog.FileName);
+            }
 
             // If the file is a text document, show it in the desciption block.
             else if (   dialog.FileName.EndsWith(".xaml")

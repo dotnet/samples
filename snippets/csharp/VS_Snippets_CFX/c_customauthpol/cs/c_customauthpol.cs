@@ -66,10 +66,12 @@ namespace Samples
 		state = customstate;
 	  }
 	  else
-		customstate = (CustomAuthState)state;
+            {
+                customstate = (CustomAuthState)state;
+            }
 
-	  // If claims have not been added yet...
-	  if (!customstate.ClaimsAdded)
+            // If claims have not been added yet...
+            if (!customstate.ClaimsAdded)
 	  {
 		// Create an empty list of claims.
 		IList<Claim> claims = new List<Claim>();

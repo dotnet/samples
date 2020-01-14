@@ -154,7 +154,9 @@ namespace APM_Task
                         }
                     }
                     else
+                    {
                         Console.WriteLine(ex.Message);
+                    }
                 }
             }
             finally
@@ -633,8 +635,10 @@ class FileStreamDemo
             byte[] data = null;
 
             if (fi.Length < MAX_FILE_SIZE && fi.Length > 0)
-                data = new byte[fi.Length];
-            else
+        {
+            data = new byte[fi.Length];
+        }
+        else
             {
                 throw new ArgumentException(String.Format("{0} is too big to load!", path));
             }

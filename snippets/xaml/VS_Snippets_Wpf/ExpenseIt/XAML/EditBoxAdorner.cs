@@ -71,7 +71,9 @@ namespace Editing
                                 _textBox.DesiredSize.Height);
             }
             else  //if it is not in editable mode, no need to show anything.
+            {
                 return new Size(0, 0);
+            }
         }
 
         /// <summary>

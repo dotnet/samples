@@ -13,7 +13,9 @@ public partial class CreateUser : System.Web.UI.Page {
             HttpContext.Current.Response.Write(userName);
             Roles.AddUserToRole(userName, "Managers");
         } else
+        {
             Roles.AddUserToRole(userName, "Friends");
+        }
 
         HttpContext.Current.Response.Redirect("~/default.aspx");
     }

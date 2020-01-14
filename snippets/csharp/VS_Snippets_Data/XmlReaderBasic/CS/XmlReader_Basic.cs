@@ -160,8 +160,10 @@ XmlReader reader = XmlReader.Create("book2.xml");
 while (reader.Read()) {
   if (reader.IsStartElement()) {
     if (reader.Prefix==String.Empty)
-      Console.WriteLine("<{0}>", reader.LocalName);
-    else {
+                {
+                    Console.WriteLine("<{0}>", reader.LocalName);
+                }
+                else {
       Console.Write("<{0}:{1}>", reader.Prefix, reader.LocalName);
       Console.WriteLine(" The namespace URI is " + reader.NamespaceURI);
     }
@@ -179,8 +181,10 @@ XmlReader reader = XmlReader.Create("elems.xml");
 while (reader.Read()) {
   if (reader.IsStartElement()) {
     if (reader.IsEmptyElement)
-      Console.WriteLine("<{0}/>", reader.Name);
-    else {
+                {
+                    Console.WriteLine("<{0}/>", reader.Name);
+                }
+                else {
       Console.Write("<{0}> ", reader.Name);
       reader.Read(); // Read the start tag.
       if (reader.IsStartElement())  // Handle nested elements.

@@ -41,7 +41,9 @@ public struct Point : INullable
         // this test is unneccesary if Point is only being called
         // from SQL.
         if (this.IsNull)
+        {
             return "NULL";
+        }
         else
         {
             StringBuilder builder = new StringBuilder();

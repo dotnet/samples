@@ -273,7 +273,10 @@ public class TicTacToe : System.Windows.Forms.Form
             (DataGridViewImageColumn)
             dataGridView1.Columns[cell.ColumnIndex];
 
-        if (showTip) cell.ToolTipText = imageColumn.Description;
+        if (showTip)
+        {
+            cell.ToolTipText = imageColumn.Description;
+        }
         else { cell.ToolTipText = String.Empty; }
     }
 

@@ -35,8 +35,10 @@ class EventLogEntryCollection_Item
                 return;
             }
             else
+            {
                 // Get the EventLog associated if the source exists.
                 myLogName = EventLog.LogNameFromSourceName("MySource", ".");
+            }
 
             // Create an EventLog instance and assign its source.
             EventLog myEventLog2 = new EventLog();

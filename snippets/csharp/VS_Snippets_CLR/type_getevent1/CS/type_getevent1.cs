@@ -20,7 +20,9 @@ class MyEventExample
                 Console.WriteLine(myEventBindingFlags.ToString());
             }
             else
+            {
                 Console.WriteLine("The Click event is not available with the Button class.");
+            }
         }
         catch(SecurityException e)
         {

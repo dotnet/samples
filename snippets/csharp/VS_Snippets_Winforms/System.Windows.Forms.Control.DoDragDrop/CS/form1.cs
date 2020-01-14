@@ -95,9 +95,10 @@ namespace Snip_DragNDrop
                 dragBoxFromMouseDown = new Rectangle(new Point(e.X - (dragSize.Width /2),
                                                                e.Y - (dragSize.Height /2)), dragSize);
             } else
+            {
                 // Reset the rectangle if the mouse is not over an item in the ListBox.
                 dragBoxFromMouseDown = Rectangle.Empty;
-
+            }
         }
 
         private void ListDragSource_MouseUp(object sender, System.Windows.Forms.MouseEventArgs e) {
@@ -220,8 +221,10 @@ namespace Snip_DragNDrop
                 e.Effect = DragDropEffects.Move;
 
             } else
+            {
                 e.Effect = DragDropEffects.None;
-                
+            }
+
             // Get the index of the item the mouse is below. 
 
             // The mouse locations are relative to the screen, so they must be 
@@ -235,8 +238,9 @@ namespace Snip_DragNDrop
 
                 DropLocationLabel.Text = "Drops before item #" + (indexOfItemUnderMouseToDrop + 1);
             } else
+            {
                 DropLocationLabel.Text = "Drops at the end.";
-
+            }
         }
         //</Snippet4>
         //<Snippet5>        

@@ -19,7 +19,9 @@ class Sample
             }
         }
     else
-        Console.WriteLine("Usage: Enter the number of times (between 1 and 9) to beep.");
+        {
+            Console.WriteLine("Usage: Enter the number of times (between 1 and 9) to beep.");
+        }
     }
 }
 /*

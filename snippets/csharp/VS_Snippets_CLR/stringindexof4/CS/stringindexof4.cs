@@ -28,11 +28,15 @@ public class IndexOfTest {
                         i = found;
                     }
                     else
+                    {
                         break;
+                    }
                 }
             }
             else
+            {
                 return;
+            }
 
             Console.WriteLine("{0}The search parameter '{1}' was found {2} times.{0}",
                     Environment.NewLine, strTarget, totFinds);

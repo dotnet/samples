@@ -52,7 +52,9 @@ class ProgramWithCancellation
                     Console.WriteLine(" Take Blocked");
                 }
                 else
+                {
                     Console.WriteLine(" Take:{0}", nextItem);
+                }
             }
 
             catch (OperationCanceledException)

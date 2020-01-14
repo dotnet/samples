@@ -176,7 +176,9 @@ namespace DemoDev
             // Stuff the current initial + delta into initial so when we next move we
             // start at the right place.
             if (_rotating == true)
+            {
                 _rotation = _rotationDelta * _rotation;
+            }
             else
             {
                 _translate += _translateDelta;

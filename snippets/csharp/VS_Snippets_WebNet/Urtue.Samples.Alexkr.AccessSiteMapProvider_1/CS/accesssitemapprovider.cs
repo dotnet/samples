@@ -124,7 +124,10 @@ namespace Samples.AspNet.CS.Controls {
                                                      rootNodeReader.GetString(2));
 
                     }
-                    else return null;
+                    else
+                    {
+                        return null;
+                    }
 
                     rootNodeReader.Close();
 // </Snippet6>

@@ -47,7 +47,10 @@ namespace FederationSample
                 if (resource != "true") return false;
                 return true;
             }
-            else return false;
+            else
+            {
+                return false;
+            }
         }
 
         // This helper method checks whether SAML Token was issued by STS-B.     
@@ -143,7 +146,10 @@ public class STS_B_AuthorizationManager : ServiceAuthorizationManager
             if (resource != "true") return false;
             return true;
         }
-        else return false;
+        else
+        {
+            return false;
+        }
     }
 
     // This helper method checks whether SAML Token was issued by STS-A. 
@@ -239,7 +245,10 @@ public class STS_B_AuthorizationManager : ServiceAuthorizationManager
                 if (!IsValidEmailAddress(emailAddress)) return false;
                 return true;
             }
-            else return false;
+            else
+            {
+                return false;
+            }
         }
 
         // This helper method performs a rudimentary check for whether 

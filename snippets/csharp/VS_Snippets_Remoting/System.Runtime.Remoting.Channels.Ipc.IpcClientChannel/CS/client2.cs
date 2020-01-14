@@ -45,9 +45,18 @@ public class Client
         // Create the client channel.
         IpcClientChannel clientChannel = null;
         if (false) { }
-        else if (args[0] == "1") clientChannel = Ctor1();
-        else if (args[0] == "2") clientChannel = Ctor2();
-        else throw new ApplicationException("Invalid argument.");
+        else if (args[0] == "1")
+        {
+            clientChannel = Ctor1();
+        }
+        else if (args[0] == "2")
+        {
+            clientChannel = Ctor2();
+        }
+        else
+        {
+            throw new ApplicationException("Invalid argument.");
+        }
 
         // Register the channel.
         System.Runtime.Remoting.Channels.ChannelServices.

@@ -15,7 +15,9 @@ namespace ExpressionVisitor
         {
             Console.WriteLine($"{prefix}This expression is a {NodeType} expression");
             if (node.Object == null)
+            {
                 Console.WriteLine($"{prefix}This is a static method call");
+            }
             else
             {
                 Console.WriteLine($"{prefix}The receiver (this) is:");

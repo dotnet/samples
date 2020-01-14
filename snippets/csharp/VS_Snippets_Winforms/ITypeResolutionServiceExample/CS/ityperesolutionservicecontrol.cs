@@ -92,7 +92,9 @@ namespace ITypeResolutionServiceExample
                         // located in the GAC or local project references, 
                         // display a message.
                         if( a == null )
+                        {
                             this.infoBox.Text = "The "+this.entryBox.Text+" assembly could not be located.";
+                        }
                         else
                         {
                             // An assembly matching the specified name was located.
@@ -166,7 +168,9 @@ namespace ITypeResolutionServiceExample
                         this.infoBox.Text = "Type: "+type.FullName+" located.\r\n  Namespace: "+type.Namespace+"\r\n"+type.AssemblyQualifiedName;
                     }
                     else
+                    {
                         this.infoBox.Text = "Type not located.";
+                    }
                 }                
             }
         }

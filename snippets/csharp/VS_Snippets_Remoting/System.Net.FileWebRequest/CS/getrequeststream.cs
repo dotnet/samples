@@ -109,7 +109,9 @@ namespace Mssc.PluggableProtocols.File
         public static void Main (String[] args)
         {
             if (args.Length < 2)
+            {
                 showUsage ();
+            }
             else
             {
                 makeFileRequest (args[0], int.Parse (args[1]));

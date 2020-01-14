@@ -52,7 +52,10 @@ namespace ExpressionTreeSamples
                 return sum;
 
             }
-            else throw new NotSupportedException("Haven't written this yet");
+            else
+            {
+                throw new NotSupportedException("Haven't written this yet");
+            }
         }
     }
 }

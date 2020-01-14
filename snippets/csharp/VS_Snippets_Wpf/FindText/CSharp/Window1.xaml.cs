@@ -59,7 +59,10 @@ namespace SDKSample
             if (openFile.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 FileStream xamlFile = openFile.OpenFile() as FileStream;
-                if (xamlFile == null) return;
+                if (xamlFile == null)
+                {
+                    return;
+                }
                 else
                 {
                     try
@@ -113,7 +116,10 @@ namespace SDKSample
                     System.Windows.MessageBox.Show(error);
                     return;
                 }
-                if (xamlFile == null) return;
+                if (xamlFile == null)
+                {
+                    return;
+                }
                 else
                 {
                     XamlWriter.Save(FlowDocRdr.Document, xamlFile);

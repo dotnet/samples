@@ -49,7 +49,9 @@ namespace Microsoft.Samples.Xml
                 Console.WriteLine(" with value  {0}", args.Node.Value);
             }
             else
+            {
                 Console.WriteLine("");
+            }
         }
 
         // Handle the NodeInserted event.
@@ -61,7 +63,9 @@ namespace Microsoft.Samples.Xml
                 Console.WriteLine(" with value {0}", args.Node.Value);
             }
             else
+            {
                 Console.WriteLine("");
+            }
         }
 
     } // End class 

@@ -55,7 +55,9 @@ public class MyMemberSample
                 Console.WriteLine("Member {0}: {1}", index + 1, myMembers[index].ToString());
         }
         else
-            Console.WriteLine("No members match the search criteria.");    
+        {
+            Console.WriteLine("No members match the search criteria.");
+        }
     }
     // </Snippet1>
 
@@ -74,7 +76,9 @@ public class MyMemberSample
                 Console.WriteLine("Member {0}: {1}", index + 1, myMembers[index].ToString());
         }
         else
-            Console.WriteLine("No members match the search criteria.");    
+        {
+            Console.WriteLine("No members match the search criteria.");
+        }
     }
     // </Snippet2>
 
@@ -93,7 +97,9 @@ public class MyMemberSample
                 Console.WriteLine("Member {0}: {1}", index + 1, myMembers[index].ToString());
         }
         else
-            Console.WriteLine("No members match the search criteria.");    
+        {
+            Console.WriteLine("No members match the search criteria.");
+        }
     }
 }
 // </Snippet3>

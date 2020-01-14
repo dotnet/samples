@@ -69,8 +69,10 @@ class HttpWebRequest_IfModifiedSince
           Console.WriteLine("\nUnexpected status code = " + ((HttpWebResponse)e.Response).StatusCode);  
       }
       else
-        Console.WriteLine("\nUnexpected Web Exception " + e.Message); 
-    }
+                {
+                    Console.WriteLine("\nUnexpected Web Exception " + e.Message);
+                }
+            }
 // </Snippet1>
 		}
 		catch(WebException e)

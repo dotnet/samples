@@ -110,11 +110,15 @@ namespace Samples.AspNet.CS
                     }
                 }
                 else
+                {
                     writer.Write("<TD>" + Data.ToString() + "</TD>");
+                }
             }
 
             else
+            {
                 writer.Write("<TD>This is a test</TD>");
+            }
         }
     }
 }

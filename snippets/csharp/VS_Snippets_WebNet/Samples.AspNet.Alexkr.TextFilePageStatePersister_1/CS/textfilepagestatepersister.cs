@@ -73,7 +73,9 @@ namespace Samples.AspNet.CS
                     stateStream.Close();
                 }
                 else
+                {
                     throw new InvalidOperationException("Session needed for StreamPageStatePersister.");
+                }
             }
         }
         // </snippet3>

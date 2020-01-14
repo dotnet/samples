@@ -39,8 +39,11 @@ public class Sample
 
         //If the reader is set to validate, set the event handler.
         if (vt==ValidationType.None)
-           Console.WriteLine("\nParsing XML file " + filename.ToString());
-        else{
+            {
+                Console.WriteLine("\nParsing XML file " + filename.ToString());
+            }
+            else
+            {
            Console.WriteLine("\nValidating XML file " + filename.ToString());
            m_success = true;
            //Set the validation event handler.

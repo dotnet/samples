@@ -139,7 +139,9 @@ namespace ServiceArchitectureExample
 
             object serviceInstance = localServices[serviceType.FullName];
             if( serviceInstance == null )
+            {
                 return null;
+            }
             else if( serviceInstance.GetType() == typeof(ServiceCreatorCallback) )
             {
                 // If service instance is a ServiceCreatorCallback, invoke 
@@ -154,8 +156,10 @@ namespace ServiceArchitectureExample
         public void AddService(System.Type serviceType, 
             System.ComponentModel.Design.ServiceCreatorCallback callback, bool promote)
         {
-            if( promote && parentServiceContainer != null )            
-                parentServiceContainer.AddService(serviceType, callback, true);            
+            if( promote && parentServiceContainer != null )
+            {
+                parentServiceContainer.AddService(serviceType, callback, true);
+            }
             else
             {
                 localServiceTypes[serviceType.FullName] = serviceType;
@@ -176,8 +180,10 @@ namespace ServiceArchitectureExample
         public void AddService(System.Type serviceType, 
             object serviceInstance, bool promote)
         {
-            if( promote && parentServiceContainer != null )            
-                parentServiceContainer.AddService(serviceType, serviceInstance, true);            
+            if( promote && parentServiceContainer != null )
+            {
+                parentServiceContainer.AddService(serviceType, serviceInstance, true);
+            }
             else
             {
                 localServiceTypes[serviceType.FullName] = serviceType;

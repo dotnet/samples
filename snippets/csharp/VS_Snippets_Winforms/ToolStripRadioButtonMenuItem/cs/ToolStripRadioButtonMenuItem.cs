@@ -223,7 +223,10 @@ public class ToolStripRadioButtonMenuItem : ToolStripMenuItem
             {
                 return base.Enabled && ownerMenuItem.Checked;
             }
-            else return base.Enabled;
+            else
+            {
+                return base.Enabled;
+            }
         }
         set
         {

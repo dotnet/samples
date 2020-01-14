@@ -1336,7 +1336,9 @@ class TestPerson
                     date = value;
                 }
                 else
+                {
                     throw new ArgumentOutOfRangeException();
+                }
             }
 
         }
@@ -1353,7 +1355,9 @@ class TestPerson
                 date = dt;
             }
             else
+            {
                 throw new ArgumentOutOfRangeException();
+            }
         }
 
         public TimeSpan GetTimeSpan(string dateString)
@@ -1365,8 +1369,9 @@ class TestPerson
                 return date - dt;
             }
             else
-                throw new ArgumentOutOfRangeException();  
- 
+            {
+                throw new ArgumentOutOfRangeException();
+            }
         }
     }
     //</Snippet61>

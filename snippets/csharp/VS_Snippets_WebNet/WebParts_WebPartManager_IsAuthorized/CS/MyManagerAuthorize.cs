@@ -21,9 +21,10 @@ namespace Samples.AspNet.CS.Controls
           return false;
       }
       else
-        return true;
-
-    }
+            {
+                return true;
+            }
+        }
   }
 }
 // </snippet2>

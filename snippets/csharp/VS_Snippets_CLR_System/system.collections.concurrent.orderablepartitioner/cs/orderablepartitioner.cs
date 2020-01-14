@@ -142,7 +142,10 @@ namespace OrderablePartitionerDemo
                         m_current = new KeyValuePair<long, T>(m_index.Value, m_source.Current);
                         m_index.Value = m_index.Value + 1;
                     }
-                    else m_current = default(KeyValuePair<long, T>);
+                    else
+                    {
+                        m_current = default(KeyValuePair<long, T>);
+                    }
                 }
                 return rval;
             }

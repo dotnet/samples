@@ -60,7 +60,9 @@ namespace XsdContractImporterExample
                 return imp.CodeCompileUnit;
             }
             else
+            {
                 return null;
+            }
         }
         //</snippet2>
         //</snippet3>

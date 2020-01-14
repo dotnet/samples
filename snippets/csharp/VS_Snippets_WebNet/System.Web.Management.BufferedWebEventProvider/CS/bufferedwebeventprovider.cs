@@ -106,9 +106,11 @@ using System.Web;
         {
 
             if (UseBuffering)
+            {
                 // Buffering enabled, call the 
                 // base event to buffer event information.
                 base.ProcessEvent(eventRaised);
+            }
             else
             {
                 // Buffering disabled, store the 

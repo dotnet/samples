@@ -174,7 +174,10 @@ namespace CDSCountdownEvent
                 {
                     Console.WriteLine("User canceled.");
                 }
-                else throw; //We don't know who canceled us!
+                else
+                {
+                    throw; //We don't know who canceled us!
+                }
             }
             finally {
                 e.Dispose();
@@ -232,7 +235,10 @@ namespace CDSCountdownEvent
                 {
                     Console.WriteLine("User canceled.");
                 }
-                else throw; //We don't know who canceled us!
+                else
+                {
+                    throw; //We don't know who canceled us!
+                }
             }
             finally
             {

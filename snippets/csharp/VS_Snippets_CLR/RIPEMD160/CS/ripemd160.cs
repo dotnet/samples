@@ -16,7 +16,9 @@ public class HashDirectory
             FolderBrowserDialog fbd = new FolderBrowserDialog();
             DialogResult dr = fbd.ShowDialog();
             if (dr == DialogResult.OK)
+            {
                 directory = fbd.SelectedPath;
+            }
             else
             {
                 Console.WriteLine("No directory selected.");
@@ -24,7 +26,10 @@ public class HashDirectory
             }
         }
         else
+        {
             directory = args[0];
+        }
+
         try
         {
             // Create a DirectoryInfo object representing the specified directory.

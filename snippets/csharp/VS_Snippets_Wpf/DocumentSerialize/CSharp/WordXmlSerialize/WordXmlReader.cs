@@ -547,7 +547,9 @@ namespace SdkSample
                     return Value;
                 }
                 else
+                {
                     return null;
+                }
             }
 
             #endregion Internal Methods.

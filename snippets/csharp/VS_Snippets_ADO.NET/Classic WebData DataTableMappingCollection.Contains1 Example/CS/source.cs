@@ -19,7 +19,9 @@ public class Form1: Form
         // create mappings and mapping
         // ...
         if (mappings.Contains((Object) mapping))
+        {
             mappings.Remove((Object) mapping);
+        }
         else 
         {
             mappings.Add((Object) mapping);

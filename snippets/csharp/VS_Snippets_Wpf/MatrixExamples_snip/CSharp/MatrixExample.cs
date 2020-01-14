@@ -130,8 +130,9 @@ namespace Microsoft.Samples.MatrixExamples
                 return myMatrix;
             }
             else
+            {
                 throw new InvalidOperationException("The matrix is not invertible.");
-
+            }
         }
         // </SnippetMatrixInverseExample_csharp>
 

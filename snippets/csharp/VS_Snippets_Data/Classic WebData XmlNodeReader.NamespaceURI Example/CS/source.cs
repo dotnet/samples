@@ -26,8 +26,11 @@ public class Sample
        while (reader.Read()){
          if (reader.IsStartElement()){
            if (reader.Prefix==String.Empty)
-              Console.WriteLine("<{0}>", reader.LocalName);
-           else{
+                    {
+                        Console.WriteLine("<{0}>", reader.LocalName);
+                    }
+                    else
+                    {
                Console.Write("<{0}:{1}>", reader.Prefix, reader.LocalName);
                Console.WriteLine(" The namespace URI is " + reader.NamespaceURI);
            }

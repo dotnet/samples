@@ -213,7 +213,9 @@ namespace ProdConsumerCS
                             Console.WriteLine("removed Pri = {0} data = {1} collCount= {2}", item.Key, item.Value, bc.Count);
                         }
                         else
+                        {
                             Console.WriteLine("No items to retrieve. count = {0}", bc.Count);
+                        }
                     }
                     Console.WriteLine("Exited consumer loop");
                 },

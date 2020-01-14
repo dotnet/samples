@@ -88,7 +88,9 @@ namespace Example
         public object GetInfo(string request)
         {
             if (request == "Version")
+            {
                 return "1.0";
+            }
             else
             {
                 ComplexNumber x = new ComplexNumber();

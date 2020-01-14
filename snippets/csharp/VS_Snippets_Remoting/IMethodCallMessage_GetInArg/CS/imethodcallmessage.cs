@@ -69,10 +69,12 @@ namespace IMethodCallMessageNS
             Console.WriteLine("");
          }
          else if (myIMessage is IMethodReturnMessage)
-            Console.WriteLine("Message is of type 'IMethodReturnMessage'.");
-                  
-         // Build Return Message
-         myReturnMessage = new ReturnMessage(5,null,0,null,
+            {
+                Console.WriteLine("Message is of type 'IMethodReturnMessage'.");
+            }
+
+            // Build Return Message
+            myReturnMessage = new ReturnMessage(5,null,0,null,
                                        (IMethodCallMessage)myIMessage);
       
          Console.WriteLine("MyProxy.Invoke - Finish");

@@ -386,7 +386,10 @@ namespace SDKSample
                     // Return the AutomationElement that represents the target main window.
                     return (AutomationElement.FromHandle(p.MainWindowHandle));
                 }
-                else throw new FileNotFoundException(args + " not found.");
+                else
+                {
+                    throw new FileNotFoundException(args + " not found.");
+                }
             }
             catch (Exception e)
             {

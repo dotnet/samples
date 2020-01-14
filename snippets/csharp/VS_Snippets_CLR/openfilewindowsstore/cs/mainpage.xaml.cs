@@ -50,7 +50,9 @@ namespace OpenFileWindowsStore
                 }
             }
             else
+            {
                 StatusTextBox.Text = "Status: User cancelled save operation";
+            }
         }
     }
 }

@@ -99,8 +99,10 @@ namespace XMLProcessingApp
                 }
 
             }
-            else 
+            else
+            {
                 treeNode.Text = xmlNode.OuterXml.Trim();
+            }
         }
 
         private void addTreeNodes(XmlNodeList books, TreeView treeView)

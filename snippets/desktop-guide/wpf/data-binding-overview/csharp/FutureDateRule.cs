@@ -19,8 +19,10 @@ namespace bindings
                     return new ValidationResult(false, "Please enter a date in the future.");
             }
             else
+            {
                 // Date is not a valid date, fail
                 return new ValidationResult(false, "Value is not a valid date.");
+            }
 
             // Date is valid and in the future, pass
             return ValidationResult.ValidResult;

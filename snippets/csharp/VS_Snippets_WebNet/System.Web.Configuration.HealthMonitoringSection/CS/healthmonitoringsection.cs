@@ -522,7 +522,9 @@ healthMonitoringSection.Rules.Clear();
                     Console.WriteLine("** Configuration updated.");
                 }
                 else
+                {
                     Console.WriteLine("** Could not update, section is locked.");
+                }
             }
             catch (System.ArgumentException e)
             {

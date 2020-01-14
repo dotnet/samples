@@ -236,7 +236,9 @@ public class FileIOPermissionDemo
 
                     }
                     else
+                    {
                         Console.WriteLine(e);
+                    }
                 }
                 continue;
             }

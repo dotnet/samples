@@ -306,7 +306,10 @@ namespace DCSurrogateSample
                 xsdInventoryExporter = new XsdDataContractExporter(exporter.GeneratedXmlSchemas);
             }
             else
+            {
                 xsdInventoryExporter = (XsdDataContractExporter)dataContractExporter;
+            }
+
             exporter.State.Add(typeof(XsdDataContractExporter), xsdInventoryExporter);
 
             if (xsdInventoryExporter.Options == null)

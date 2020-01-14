@@ -42,9 +42,11 @@ public class Client
               Console.ResetColor();
             }
             else
-              Console.WriteLine("Any extra data: {0}.", replyPerson.additionalData.ToString());
+                {
+                    Console.WriteLine("Any extra data: {0}.", replyPerson.additionalData.ToString());
+                }
 
-            if (replyPerson.Blob != null)
+                if (replyPerson.Blob != null)
               Console.WriteLine("And the added object is: " + replyPerson.Blob.ToString());
             else
               Console.WriteLine("There is no added data in the extra object property.");

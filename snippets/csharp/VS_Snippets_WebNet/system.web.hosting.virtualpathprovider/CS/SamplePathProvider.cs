@@ -95,8 +95,10 @@ namespace Samples.AspNet.CS
         return file.Exists;
       }
       else
-        return Previous.FileExists(virtualPath);
-    }
+            {
+                return Previous.FileExists(virtualPath);
+            }
+        }
     // </Snippet21>
 
     // <Snippet22>
@@ -108,8 +110,10 @@ namespace Samples.AspNet.CS
         return dir.Exists;
       }
       else
-        return Previous.DirectoryExists(virtualDir);
-    }
+            {
+                return Previous.DirectoryExists(virtualDir);
+            }
+        }
     // </Snippet22>
 
     // <Snippet23>
@@ -163,8 +167,10 @@ namespace Samples.AspNet.CS
         return new CacheDependency(virtualPathArray, fullPathDependenciesArray, utcStart);
       }
       else
-        return Previous.GetCacheDependency(virtualPath, virtualPathDependencies, utcStart);
-    }
+            {
+                return Previous.GetCacheDependency(virtualPath, virtualPathDependencies, utcStart);
+            }
+        }
     // </Snippet28>
   }
   

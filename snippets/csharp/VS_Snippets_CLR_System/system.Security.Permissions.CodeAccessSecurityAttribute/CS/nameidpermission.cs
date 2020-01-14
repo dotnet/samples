@@ -37,7 +37,10 @@ namespace MyPermission
             {
                 throw new ArgumentException("Unrestricted state is not allowed for identity permissions.");
             }
-            else throw new ArgumentException("Invalid permission state.");
+            else
+            {
+                throw new ArgumentException("Invalid permission state.");
+            }
         }
 
         public String Name
@@ -99,7 +102,10 @@ namespace MyPermission
                     if (this.m_Name == "") return true;
                 }
 
-                if (this.m_Name.Equals (operand.m_Name)) return true;
+                if (this.m_Name.Equals (operand.m_Name))
+                {
+                    return true;
+                }
                 else
                 {
                     // Check for wild card character '*'.

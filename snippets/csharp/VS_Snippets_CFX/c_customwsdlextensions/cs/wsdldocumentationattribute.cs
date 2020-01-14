@@ -69,8 +69,11 @@ namespace Microsoft.WCF.Documentation
         exporter.State.Add(typeof(XsdDataContractExporter), xsdDCExporter);
       }
       else
-        xsdDCExporter = (XsdDataContractExporter)dataContractExporter;
-      if (xsdDCExporter.Options == null)
+            {
+                xsdDCExporter = (XsdDataContractExporter)dataContractExporter;
+            }
+
+            if (xsdDCExporter.Options == null)
         xsdDCExporter.Options = new ExportOptions();
       xsdDCExporter.Options.DataContractSurrogate = new DCAnnotationSurrogate();
       // </snippet5>

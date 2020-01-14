@@ -194,7 +194,9 @@ public class ProgrammaticSizing : System.Windows.Forms.Form
         Toggle(ref boringRecipe);
 
         if (boringRecipe)
+        {
             SetMeatloaf(boringMeatloaf, boringMeatloafRanking);
+        }
         else
         {
             string greatMeatloafRecipe =

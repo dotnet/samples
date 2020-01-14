@@ -102,7 +102,9 @@ public class App {
                 samplesList.Add( avgCounter64Sample.NextSample() );
             }
             else
+            {
                 Console.WriteLine();
+            }
 
             System.Threading.Thread.Sleep(50);
         }

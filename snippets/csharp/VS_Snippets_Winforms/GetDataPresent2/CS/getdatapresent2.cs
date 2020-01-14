@@ -100,7 +100,9 @@ namespace GetDataPresent2
                 textBox1.Text = "The data type is " + myDataObject.GetData(myType).GetType().Name + ".";
             }
             else
+            {
                 MessageBox.Show("The specified data is not stored in the data object.");
+            }
         }
         // </snippet1>
         static void Main() 
