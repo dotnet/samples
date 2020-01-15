@@ -71,7 +71,10 @@ namespace SDKSample
             {
                 return(fe.ActualWidth * fe.ActualHeight);
             }
-            else return null;
+            else
+            {
+                return null;
+            }
         }
 
         public static readonly DependencyProperty AreaProperty = AreaPropertyKey.DependencyProperty;

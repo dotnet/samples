@@ -26,9 +26,11 @@ namespace RemotingSamples {
             ChannelServices.RegisterChannel(myTcpChannel);
             HelloServer myHelloServer = (HelloServer)Activator.GetObject(typeof
                (RemotingSamples.HelloServer), "tcp://localhost:8080/SayHello");
-            if (myHelloServer == null) 
-               System.Console.WriteLine("Could not locate server");
-            else
+            if (myHelloServer == null)
+                {
+                    System.Console.WriteLine("Could not locate server");
+                }
+                else
             {
 // <Snippet4>
                string[] myURLArray = ChannelServices.GetUrlsForObject(myHelloServer);

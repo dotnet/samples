@@ -34,9 +34,11 @@ class EventLog_WriteEntry_5
             return;
          }
          else
-            myLogName = EventLog.LogNameFromSourceName("MySource",".");
-         // Create an EventLog and assign source.
-         EventLog myEventLog = new EventLog();
+            {
+                myLogName = EventLog.LogNameFromSourceName("MySource",".");
+            }
+            // Create an EventLog and assign source.
+            EventLog myEventLog = new EventLog();
          myEventLog.Source = "MySource";
          myEventLog.Log = myLogName;
 

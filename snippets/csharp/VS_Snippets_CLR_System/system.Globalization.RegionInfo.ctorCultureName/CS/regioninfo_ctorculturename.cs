@@ -35,8 +35,10 @@ public class SamplesRegionInfo  {
          else  {
             CultureInfo myCI = new CultureInfo( culture, false );
             if ( myCI.IsNeutralCulture )
-               Console.WriteLine( "The culture {0} is a neutral culture.", culture );
-            else   {
+                {
+                    Console.WriteLine( "The culture {0} is a neutral culture.", culture );
+                }
+                else   {
                Console.WriteLine( "The culture {0} is a specific culture.", culture );
                try  {
                   RegionInfo myRI = new RegionInfo( culture );

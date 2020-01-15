@@ -99,8 +99,9 @@ namespace SDKSample
 
             // Else if the annotationService exists but is not enabled, enable it.
             else if (!_annotService.IsEnabled)
+            {
                 _annotService.Enable(_annotService.Store);
-
+            }
         }// end:StartAnnotations()
         //</SnippetStartAnnotations>
 

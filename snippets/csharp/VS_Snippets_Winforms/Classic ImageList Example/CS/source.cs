@@ -158,8 +158,10 @@ namespace myImageRotator
 					}
 				}
 				else
-					addImage(openFileDialog1.FileName);
-			}
+                {
+                    addImage(openFileDialog1.FileName);
+                }
+            }
             
 		}
  

@@ -52,12 +52,15 @@ class HttpWebResponseSnippet
 							Console.WriteLine("\nThe following challenge was raised by the server:{0}",challenge);
 					}
 					else
-						Console.WriteLine("\nThe following WebException was raised : {0}",e.Message);
-				}
+                {
+                    Console.WriteLine("\nThe following WebException was raised : {0}",e.Message);
+                }
+            }
 				else
-					Console.WriteLine("\nResponse Received from server was null");
-
-			}
+            {
+                Console.WriteLine("\nResponse Received from server was null");
+            }
+        }
 		catch(Exception e)
 		{
 			Console.WriteLine("\nThe following Exception was raised : {0}",e.Message);

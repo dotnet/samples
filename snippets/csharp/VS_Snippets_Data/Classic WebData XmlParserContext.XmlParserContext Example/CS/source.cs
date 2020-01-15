@@ -36,7 +36,9 @@ public class Sample
                 if (reader.IsStartElement())
                 {
                     if (string.IsNullOrEmpty(reader.Prefix))
+                    {
                         Console.WriteLine("<{0}>", reader.LocalName);
+                    }
                     else
                     {
                         Console.Write("<{0}:{1}>", reader.Prefix, reader.LocalName);

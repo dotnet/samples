@@ -154,8 +154,10 @@ namespace Mssc.Services.Authentication
     {
     
       if (args.Length < 3)
-        showusage();
-      else 
+            {
+                showusage();
+            }
+            else 
       {    
          
         // Read the user's credentials.

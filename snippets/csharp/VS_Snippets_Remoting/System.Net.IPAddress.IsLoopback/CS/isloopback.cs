@@ -28,10 +28,11 @@ class IsLoopbackTest
       return;
     }
     else
-      // Parse the address string entered by the user.
-      parse(args[0]);
-   
-  }
+        {
+            // Parse the address string entered by the user.
+            parse(args[0]);
+        }
+    }
 
   // This method calls the IPAddress.Parse method to check if the 
   // passed ipAddress parameter is in the correct format.

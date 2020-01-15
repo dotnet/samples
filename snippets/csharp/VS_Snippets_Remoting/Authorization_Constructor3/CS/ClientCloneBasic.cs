@@ -39,8 +39,10 @@ namespace CloneBasicAuthenticationClient
 						domain = "gopik";
 					}
 					else
-						return;
-				} 
+                    {
+                        return;
+                    }
+                } 
 				else
 				{	
 					url = args[0];

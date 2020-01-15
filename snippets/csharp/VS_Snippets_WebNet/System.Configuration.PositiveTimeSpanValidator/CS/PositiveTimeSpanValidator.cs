@@ -164,7 +164,9 @@ namespace Samples.AspNet
                ConfigurationManager.GetSection("MyDailyProcess") as SampleSection;
 
             if (sampleSection == null)
+            {
                 Console.WriteLine("Failed to load section.");
+            }
             else
             {
                 Console.WriteLine("Defaults:");

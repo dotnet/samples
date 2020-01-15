@@ -42,7 +42,9 @@ class CancelWithCallback
               Console.WriteLine(e.Result + "\r\nPress any key.");
           }
           else
+          {
               Console.WriteLine("Download was canceled.");
+          }
       };
 
       // Do not initiate download if the external token

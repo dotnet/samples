@@ -253,8 +253,10 @@ namespace CustomElementClient
             {
                 Console.WriteLine(ae.Current.Name);
             }
-            else Console.WriteLine("no element there");
-
+            else
+            {
+                Console.WriteLine("no element there");
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)

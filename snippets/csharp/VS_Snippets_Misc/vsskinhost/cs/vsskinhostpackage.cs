@@ -158,7 +158,10 @@ namespace Contoso.VSSkinHost
                         MessageBox.Show("Skin " + skinName + " found:\r\n" 
                             + skinPath + ". \r\n\r\nApplying skin...");
                     }
-                   else MessageBox.Show("Could not find skin " + skinName);
+                   else
+                    {
+                        MessageBox.Show("Could not find skin " + skinName);
+                    }
                 }
             }
         }

@@ -81,8 +81,10 @@ namespace Examples.CS.WebControls.Design
                 }
             }
             else
+            {
                 // Call the base method to generate the markup.
                 markup = base.GetDesignTimeHtml();
+            }
 
             // Look for a <caption> tag.
             if ((charX = markup.IndexOf(capTag)) > 0)

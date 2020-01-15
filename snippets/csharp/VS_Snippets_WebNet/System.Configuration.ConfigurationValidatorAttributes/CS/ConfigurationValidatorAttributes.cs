@@ -308,7 +308,9 @@ namespace Samples.AspNet
                ConfigurationManager.GetSection("custom") as SampleSection;
 
             if (customSection == null)
+            {
                 Console.WriteLine("Failed to load SsmpleSection.");
+            }
             else
             {
                 Console.WriteLine("Defaults:");
@@ -334,7 +336,9 @@ namespace Samples.AspNet
               ConfigurationManager.GetSection("custom") as SampleSection;
 
             if (customSection == null)
+            {
                 Console.WriteLine("Failed to load SampleSection.");
+            }
             else
             {
                 Console.WriteLine("Section Information:");

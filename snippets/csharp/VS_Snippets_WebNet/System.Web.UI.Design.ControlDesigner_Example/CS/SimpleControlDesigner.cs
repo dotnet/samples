@@ -80,7 +80,9 @@ namespace AspNet.Samples
                 return String.Format(spec, simpleControl.Text);
             }
             else
+            {
                 return GetEmptyDesignTimeHtml();
+            }
         }
         //</Snippet5>
     }

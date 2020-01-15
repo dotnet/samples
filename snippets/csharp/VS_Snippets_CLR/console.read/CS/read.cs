@@ -27,7 +27,9 @@ class Sample
                    Console.WriteLine(m1);
                }
             else
-               Console.WriteLine(m2, ch, x);
+                {
+                    Console.WriteLine(m2, ch, x);
+                }
             }
         catch (OverflowException e) 
             {

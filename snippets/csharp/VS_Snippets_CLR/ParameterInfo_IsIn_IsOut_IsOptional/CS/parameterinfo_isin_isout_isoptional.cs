@@ -90,8 +90,10 @@ public class ParameterInfo_IsIn_IsOut_IsOptional
          }
       }
       else
-         Console.WriteLine("Could not find a assembly named 'MyAssembly' for the current application domain");
-   }
+        {
+            Console.WriteLine("Could not find a assembly named 'MyAssembly' for the current application domain");
+        }
+    }
 }
 // </Snippet3>
 // </Snippet2>

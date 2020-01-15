@@ -18,7 +18,9 @@ class MyEventExample
                 Console.WriteLine(myEvent.ToString());
             }
             else
+            {
                 Console.WriteLine("The Click event is not available in the Button class.");
+            }
         }
         catch(SecurityException e)
         {

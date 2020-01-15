@@ -25,8 +25,10 @@ public class SamplesUTF32Encoding
    {
 
       if (( bytes == null ) || ( bytes.Length == 0 ))
-         Console.WriteLine( "<none>" );
-      else  {
+        {
+            Console.WriteLine( "<none>" );
+        }
+        else  {
          for ( int i = 0; i < bytes.Length; i++ )
             Console.Write( "{0:X2} ", bytes[i] );
          Console.WriteLine();

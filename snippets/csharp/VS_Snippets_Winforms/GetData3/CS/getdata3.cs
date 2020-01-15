@@ -81,9 +81,11 @@ namespace GetData3
                 MessageBox.Show(myDataObject.GetData("System.String", false).ToString() + ".", "Message #1");
             } 
             else
+            {
                 // Displays a not found message in a message box.
                 MessageBox.Show("Could not find data of the specified format.", "Message #1");
- 
+            }
+
             // Displays the string in a text box with autoConvert equal to true.
             string myData = "The data is " + myDataObject.GetData("System.String", true).ToString() +".";
             MessageBox.Show(myData,"Message #2");

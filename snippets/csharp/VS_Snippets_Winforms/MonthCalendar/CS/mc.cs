@@ -377,7 +377,9 @@ namespace MonthCalender
                 button1.Enabled = false ;
             }
             else
+            {
                 button1.Enabled = true ;
+            }
         }
         private void this_Closing (object Sender, CancelEventArgs c)
         {

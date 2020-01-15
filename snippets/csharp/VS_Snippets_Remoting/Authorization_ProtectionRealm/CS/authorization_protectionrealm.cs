@@ -52,13 +52,15 @@ namespace CloneBasicAuthentication
                     if (myCredentials == null)
                         return null;
                 }
-                else    
-                    myCredentials = (NetworkCredential)credentials;  
+                else
+                {
+                    myCredentials = (NetworkCredential)credentials;
+                }
                 // Message encryption scheme : 
                 //   a)Concatenate username and password seperated by space;
                 //   b)Apply ASCII encoding to obtain a stream of bytes;
                 //   c)Apply Base64 Encoding to this array of bytes to obtain our encoded authorization message.
-                 
+
                 message = myCredentials.UserName + " " + myCredentials.Password;
                 // Apply AsciiEncoding to 'message' string to obtain it as an array of bytes.
                 Encoding ascii = Encoding.ASCII;
@@ -159,8 +161,10 @@ namespace CloneBasicAuthentication
                     }
                 }
                 else
-                    Console.WriteLine("\nAuthorization object was returned as null. Please check if site accepts 'CloneBasic' authentication");
-            }
+                    {
+                        Console.WriteLine("\nAuthorization object was returned as null. Please check if site accepts 'CloneBasic' authentication");
+                    }
+                }
         }
         catch(Exception e)
         {

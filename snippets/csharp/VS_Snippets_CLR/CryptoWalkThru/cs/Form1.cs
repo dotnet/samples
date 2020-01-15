@@ -76,8 +76,10 @@ private void buttonCreateAsmKeys_Click(object sender, System.EventArgs e)
 private void buttonEncryptFile_Click(object sender, System.EventArgs e)
 {
     if (rsa == null)
-        MessageBox.Show("Key not set.");
-    else
+            {
+                MessageBox.Show("Key not set.");
+            }
+            else
     {
 
         // Display a dialog box to select a file to encrypt.
@@ -103,8 +105,10 @@ private void buttonEncryptFile_Click(object sender, System.EventArgs e)
 private void buttonDecryptFile_Click(object sender, EventArgs e)
 {
     if (rsa == null)
-        MessageBox.Show("Key not set.");
-    else
+            {
+                MessageBox.Show("Key not set.");
+            }
+            else
     {
         // Display a dialog box to select the encrypted file.
         openFileDialog2.InitialDirectory = EncrFolder;

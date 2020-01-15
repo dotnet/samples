@@ -466,7 +466,9 @@ namespace SystemDateTimeReference
             const string filename = @".\Schedule.bin";
             FileStream fs;
             if (File.Exists(filename))
+            {
                 fs = new FileStream(filename, FileMode.Open);
+            }
             else
             {
                 Console.WriteLine("Unable to find file to deserialize.");

@@ -57,7 +57,9 @@ class UsingConfigurationCollectionAttribute
                ConfigurationManager.GetSection("MyUrls") as UrlsSection;
 
             if (myUrlsSection == null)
+            {
                 Console.WriteLine("Failed to load UrlsSection.");
+            }
             else
             {
                 Console.WriteLine("URLs defined in the configuration file:");

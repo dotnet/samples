@@ -92,7 +92,10 @@ namespace ElementProvider
                 IRawElementProviderSimple[] providers =  { itemProvider };
                 return providers;
             }
-            else return null;
+            else
+            {
+                return null;
+            }
         }
         // </Snippet110>
         #endregion ISelectionProvider Members

@@ -109,8 +109,10 @@ public void HighlightCheckedNodes()
          countIndex++;
       }
       else
-         myNode.BackColor = Color.White;
-   }
+            {
+                myNode.BackColor = Color.White;
+            }
+        }
 
    if(countIndex > 0)
       MessageBox.Show(selectedNode);

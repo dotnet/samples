@@ -83,9 +83,11 @@ public class NumberOfItems64
 				samplesList.Add( PC.NextSample() );
 			}
 			else
-				Console.WriteLine();
-	        
-			System.Threading.Thread.Sleep(50);
+            {
+                Console.WriteLine();
+            }
+
+            System.Threading.Thread.Sleep(50);
 		}
 
 	}

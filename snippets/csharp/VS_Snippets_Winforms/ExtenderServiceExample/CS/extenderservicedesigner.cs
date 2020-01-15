@@ -37,7 +37,9 @@ namespace ExtenderServiceExample
                 localExtenderServiceReference = extenderService;
             }
             else
+            {
                 MessageBox.Show("Could not obtain an IExtenderProviderService.");
+            }
         }
 
         protected override void Dispose(bool disposing)

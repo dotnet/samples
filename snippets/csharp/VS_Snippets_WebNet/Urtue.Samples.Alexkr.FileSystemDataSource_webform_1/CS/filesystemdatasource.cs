@@ -133,7 +133,10 @@
                     DirectoryInfo temp = (DirectoryInfo)fileSystemObject;
                     return (temp.GetFileSystemInfos().Length > 0);
                 }
-                else return false;
+                else
+                {
+                    return false;
+                }
             }
         }
         // </Snippet6>

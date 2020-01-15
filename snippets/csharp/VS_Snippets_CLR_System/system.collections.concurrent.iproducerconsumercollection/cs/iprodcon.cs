@@ -44,7 +44,10 @@ public class SafeStack<T> : IProducerConsumerCollection<T>
         lock (m_lockObject)
         {
             if (m_sequentialStack.Count == 0) { item = default(T); rval = false; }
-            else item = m_sequentialStack.Pop();
+            else
+            {
+                item = m_sequentialStack.Pop();
+            }
         }
         return rval;
     }
@@ -180,7 +183,10 @@ public class Program
         {
             Console.WriteLine("Successfully popped {0}", popped);
         }
-        else Console.WriteLine("FAILED to pop!!");
+        else
+        {
+            Console.WriteLine("FAILED to pop!!");
+        }
 
         // Test Count
         Console.WriteLine("stack count is {0}, should be 2", stack.Count);
@@ -190,7 +196,10 @@ public class Program
         {
             Console.WriteLine("Successfully IPCC-TryTaked {0}", popped);
         }
-        else Console.WriteLine("FAILED to IPCC.TryTake!!");
+        else
+        {
+            Console.WriteLine("FAILED to IPCC.TryTake!!");
+        }
     }
 }
 // </snippet1>

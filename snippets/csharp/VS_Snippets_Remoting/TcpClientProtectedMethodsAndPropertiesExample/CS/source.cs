@@ -20,7 +20,9 @@ public class Example
                 "client is not connected, ReceiveBuffer set\n");
         }
         else
-           Console.WriteLine("client is connected");
-//</Snippet1>
+        {
+            Console.WriteLine("client is connected");
+        }
+        //</Snippet1>
     }
 }

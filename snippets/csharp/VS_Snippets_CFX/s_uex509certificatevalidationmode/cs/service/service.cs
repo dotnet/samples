@@ -130,7 +130,9 @@ namespace Microsoft.ServiceModel.Samples
                     state = customstate;
                 }
                 else
+                {
                     customstate = (CustomAuthState)state;
+                }
 
                 Console.WriteLine("Inside MyAuthorizationPolicy::Evaluate");
 

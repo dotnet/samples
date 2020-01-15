@@ -60,10 +60,22 @@ public class Server
         // Create the server channel.
         IpcServerChannel serverChannel = null;
         if (false) { }
-        else if (args[0] == "1") serverChannel = Ctor1();
-        else if (args[0] == "2") serverChannel = Ctor2();
-        else if (args[0] == "3") serverChannel = Ctor3();
-        else throw new ApplicationException("Invalid argument.");
+        else if (args[0] == "1")
+        {
+            serverChannel = Ctor1();
+        }
+        else if (args[0] == "2")
+        {
+            serverChannel = Ctor2();
+        }
+        else if (args[0] == "3")
+        {
+            serverChannel = Ctor3();
+        }
+        else
+        {
+            throw new ApplicationException("Invalid argument.");
+        }
 
         // Register the server channel.
         ChannelServices.RegisterChannel(serverChannel);

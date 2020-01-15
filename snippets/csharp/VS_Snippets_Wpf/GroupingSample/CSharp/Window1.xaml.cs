@@ -28,7 +28,9 @@ namespace GroupingSample
                 myView.GroupDescriptions.Add(groupDescription);
             }
             else
+            {
                 return;
+            }
         }
 
         private void RemoveGrouping(object sender, RoutedEventArgs e)
