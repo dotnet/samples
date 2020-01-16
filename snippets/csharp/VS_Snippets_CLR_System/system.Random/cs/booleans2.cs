@@ -2,7 +2,6 @@
 
 public class Example
 {
-   
    public static void Main()
    {
       // <Snippet20>
@@ -35,5 +34,4 @@ public class Example
       //       Number of false values: 500,223 (50.022 %)
       // </Snippet20>
    }
-
 }
