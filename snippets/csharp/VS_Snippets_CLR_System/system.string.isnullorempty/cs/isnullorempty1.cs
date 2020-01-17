@@ -16,6 +16,10 @@ public class Example
         string s2 = "";
         Console.WriteLine(TestForNullOrEmpty(s1));
         Console.WriteLine(TestForNullOrEmpty(s2));
+
+        // The example displays the following output:
+        //    True
+        //    True
         // </Snippet1>
     }
 }
