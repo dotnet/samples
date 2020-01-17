@@ -11,8 +11,8 @@ class Sample
         String str;
         int result;
 
-        Console.WriteLine("str1 = '{0}', str2 = '{1}'", str1, str2);
         Console.WriteLine();
+        Console.WriteLine("str1 = '{0}', str2 = '{1}'", str1, str2);
 
         Console.WriteLine("Ignore case:");
         result = String.Compare(str1, 2, str2, 2, 2, true);
