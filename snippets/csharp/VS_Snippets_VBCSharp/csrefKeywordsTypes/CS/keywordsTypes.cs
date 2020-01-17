@@ -98,46 +98,39 @@ namespace csrefKeywordsMethodParams
           get;
           set;
        }
+
+       public double Distance 
+       {
+           get;
+       }
     }
 
     class Point : IPoint
     {
-       // Fields:
-       private int _x;
-       private int _y;
-
        // Constructor:
        public Point(int x, int y)
        {
-          _x = x;
-          _y = y;
+          X = x;
+          Y = y;
        }
 
        // Property implementation:
        public int x
        {
-          get
-          {
-             return _x;
-          }
-
-          set
-          {
-             _x = value;
-          }
+          get; // Use auto-implemented properties
+          set;
        }
 
        public int y
        {
-          get
-          {
-             return _y;
-          }
-          set
-          {
-             _y = value;
-          }
+          get;
+          set;
        }
+
+       // Property implementation
+       public double Distance => 
+          Math.Sqrt(X * X + Y * Y);
+       
     }
 
     class MainClass
