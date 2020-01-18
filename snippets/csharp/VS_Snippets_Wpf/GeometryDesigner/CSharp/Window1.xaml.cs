@@ -67,7 +67,6 @@ namespace SampleApp
                 db.To = yLocation - 50;
 
                 XAMLPane.BeginAnimation(Canvas.TopProperty, db);
-                
             }
             else
             {
@@ -81,9 +80,7 @@ namespace SampleApp
                 dbShrink.From = DesignerPane.ActualHeight - 50;
 
                 XAMLPane.BeginAnimation(Canvas.TopProperty, dbShrink);
-
             }
-
         }
 
         void OnGeometrySelectionChange(object sender, SelectionChangedEventArgs e)
@@ -101,7 +98,6 @@ namespace SampleApp
           {
             GeometryPaneChange(((ComboBoxItem)box.SelectedItem).Content, true);
           }
-    
         }
 
         // ---------------------------------------------------------------------------------
@@ -181,7 +177,6 @@ namespace SampleApp
                         ) {
                         //show that control point
                         ((Ellipse)o).Visibility = Visibility.Visible;
-                    
                     }
                     else 
                     {
@@ -189,7 +184,6 @@ namespace SampleApp
                         //hide all other control points
                         ((Ellipse)o).Visibility = Visibility.Hidden;
                     }
-
                 }
             }
         }
@@ -256,7 +250,6 @@ namespace SampleApp
             {
                 MessageBox.Show(argExcept.Message);
             }
-
         }
         #endregion
 
@@ -388,7 +381,6 @@ namespace SampleApp
                     default:
                         throw new System.ApplicationException("Error: incorrect # of control points in EllipseG");
                 }
-
             }
         }
 
@@ -1022,7 +1014,6 @@ namespace SampleApp
                 //DesignerPane.Children.Add(e);
                 DesignerPane.Children.Insert(DesignerPane.Children.Count - 1, e);
             }
-            
         }
 
         private void AddEllipseGeometryControlPoints(ArrayList controlPoints)
@@ -1126,7 +1117,6 @@ namespace SampleApp
 
                 //Add the control point to the Designer Pane
                 DesignerPane.Children.Insert(DesignerPane.Children.Count - 1, e);
-
             }
         }
 
@@ -1171,7 +1161,6 @@ namespace SampleApp
                 //Add the control point to the Designer Pane
                 //DesignerPane.Children.Insert(DesignerPane.Children.Count - 2, e);
                 DesignerPane.Children.Insert(DesignerPane.Children.Count - 1, e);
-
             }
         }
 
@@ -1221,7 +1210,6 @@ namespace SampleApp
                 //Add the control point to the Designer Pane
                 DesignerPane.Children.Insert(DesignerPane.Children.Count - 1, e);
             }
-
         }
 
         /// <summary>
@@ -1249,7 +1237,6 @@ namespace SampleApp
                 default:
                     throw new System.ApplicationException("Error:  Unknow Geometry name?");
             }
-
         }
         #endregion
 
@@ -1288,14 +1275,12 @@ namespace SampleApp
                 {
                     
                     return Point.Parse(o);
-
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.ToString());
                     throw new System.ApplicationException("Error: please enter two numeric values separated  by a comma or a space; for example, 10,30.");
                 }
-
             }
             protected Size sizeParser(string o)
             {
@@ -1394,7 +1379,6 @@ namespace SampleApp
 
                 //BottomMiddle
                 controlPoints.Add(new Point(center.X , center.Y + radiusy));
-
             }
 
             public override Geometry CreateGeometry()
@@ -1457,7 +1441,6 @@ namespace SampleApp
                 {
                     controlPoints.Add(new Point(topleft.X + radiusx, topleft.Y + radiusy));
                 }
-
             }
 
             #region Data Members
@@ -1571,7 +1554,5 @@ namespace SampleApp
             #endregion
 
         }
-
     }
-
 }

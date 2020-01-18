@@ -14,7 +14,6 @@ public class Sample{
      writer.WriteStartElement("root");
 
      writer.WriteStartElement(XmlConvert.VerifyName(tag));
-             
      }
      catch (XmlException e){
         Console.WriteLine(e.Message);
@@ -29,8 +28,6 @@ public class Sample{
      writer.WriteEndElement();
  
      writer.Close();
- 
   }
-
 }
 //</snippet1>

@@ -21,7 +21,6 @@ namespace PhotoStore
 
         private string _source;
         public string Source { get { return _source; } }
-
     }
 
     public class PhotoList : ObservableCollection<Photo>
@@ -142,5 +141,4 @@ namespace PhotoStore
     }
 
     public class PrintList : ObservableCollection<Print> { }
-
 }

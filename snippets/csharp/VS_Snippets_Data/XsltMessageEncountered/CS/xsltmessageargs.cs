@@ -21,12 +21,10 @@ public class Sample {
 
     // Transform the file.
     xslt.Transform(doc, argList, XmlWriter.Create("output.xml"));
-
   }
 
   private static void MessageCallBack(object sender, XsltMessageEncounteredEventArgs e) {
     Console.WriteLine("Message received: {0}", e.Message);
   }
-
 }
 //</snippet1>

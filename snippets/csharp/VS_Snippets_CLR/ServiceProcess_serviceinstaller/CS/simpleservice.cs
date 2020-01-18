@@ -100,7 +100,6 @@ namespace SimpleServiceSample
                     workerThread.ThreadState.ToString(),
                     "OnStart");
             }
-
         }
  
         // <Snippet4>
@@ -269,7 +268,6 @@ namespace SimpleServiceSample
             Trace.WriteLine(DateTime.Now.ToLongTimeString() + 
                 " - Exiting service worker thread.",
                 "Worker");
-
         }
 	}
 }

@@ -75,5 +75,4 @@ namespace MyClaimsAuthorizationManager
             return true;
         }
     } 
-
 }

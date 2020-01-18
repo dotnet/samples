@@ -17,7 +17,6 @@ public class Form1:
 		//This call is required by the Windows Form Designer.
 		InitializeComponent();
 		//Add any initialization after the InitializeComponent() call
-
 	}
 
 	//Form overrides dispose to clean up the component list.
@@ -87,7 +86,6 @@ public class Form1:
 		this.Load += new System.EventHandler(Form1_Load);
 		this.Closed += new System.EventHandler(Form1_Closed);
 		this.ResumeLayout(false);
-
 	}
 
 	#endregion
@@ -141,5 +139,4 @@ public class Form1:
 		count += 1;
 	}
 	//</snippet1>
-
 }

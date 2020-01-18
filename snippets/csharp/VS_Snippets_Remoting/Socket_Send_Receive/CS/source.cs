@@ -67,7 +67,6 @@ public class Sample
         s.Send(ByteGet, ByteGet.Length, 0);
 
 //</Snippet3>
-
       } // End of the for loop.      
 
 //<Snippet4>
@@ -84,7 +83,6 @@ public class Sample
       }
 
 //</Snippet4>
-    
     } // End of the try block.
     
     catch(SocketException e) 
@@ -113,7 +111,6 @@ public class Sample
     }
     
     return strRetPage;
-
 }
    public static void Main()
    {

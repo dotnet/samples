@@ -81,7 +81,6 @@ namespace ComboBoxSimple
             cv2.Children.Add(cbox);
             //</Snippet2>
             //</SnippetOnClick>
-
         }
     }
 }

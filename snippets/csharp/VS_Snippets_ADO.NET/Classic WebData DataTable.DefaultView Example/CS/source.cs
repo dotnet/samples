@@ -29,5 +29,4 @@ public class Form1: Form
         gridTable.DefaultView.RowFilter = "CompanyName < 'I'";
     }
     // </Snippet1>
-
 }

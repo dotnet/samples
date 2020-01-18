@@ -180,7 +180,6 @@ namespace WorkflowApplicationExample
             // Wait for Completed to arrive and signal that
             // the workflow is complete so the host can resume.
             syncEvent.WaitOne();
-
         }
 
         // WorkflowApplicationUnhandledExceptionEventArgs
@@ -397,7 +396,6 @@ namespace WorkflowApplicationExample
             //</snippet5>
 
             wfApp.Run();
-
         }
 
         static void snippet6()
@@ -1110,7 +1108,6 @@ namespace WorkflowApplicationExample
                         {
                              Exception = new InArgument<Exception>((env) => 
                                  new ApplicationException("An ApplicationException was thrown."))
-                
                         },
                         new WriteLine
                         {
@@ -1255,7 +1252,6 @@ namespace WorkflowApplicationExample
                                     {
                                          Exception = new InArgument<Exception>((env) => 
                                              new ApplicationException("An ApplicationException was thrown."))
-                            
                                     },
                                     new WriteLine
                                     {
@@ -1287,7 +1283,6 @@ namespace WorkflowApplicationExample
                         }
                     }
                 }
-
             };
 
             // Create a WorkflowApplication instance.
@@ -1337,7 +1332,6 @@ namespace WorkflowApplicationExample
                             {
                                  Exception = new InArgument<Exception>((env) => 
                                      new ApplicationException("An ApplicationException was thrown."))
-                    
                             },
                             new WriteLine
                             {
@@ -1363,7 +1357,6 @@ namespace WorkflowApplicationExample
                         }
                     }
                 }
-
             };
 
             // Create a WorkflowApplication instance.
@@ -1411,7 +1404,6 @@ namespace WorkflowApplicationExample
                         {
                              Exception = new InArgument<Exception>((env) => 
                                  new ApplicationException("An ApplicationException was thrown."))
-                
                         },
                         new WriteLine
                         {
@@ -1423,7 +1415,6 @@ namespace WorkflowApplicationExample
                 {
                     Exception = new InArgument<Exception>((env) =>
                         new ApplicationException("An ApplicationException was thrown."))
-
                 }
             };
 
@@ -1555,7 +1546,6 @@ namespace WorkflowApplicationExample
                 }
             }
             //</snippet56>
-
         }
 
         private static Activity ActivityTreeInspection()
@@ -1797,7 +1787,6 @@ namespace WorkflowApplicationExample
 
             WorkflowInvoker.Invoke(wf);
             //</snippet47>
-
         }
 
         static void snippet48()
@@ -1929,7 +1918,6 @@ namespace WorkflowApplicationExample
                         Text = new VisualBasicValue<string>("\"The number is \" + n.ToString()")
                     }
                     //</snippet54>
-
                 }
             };
 
@@ -2007,7 +1995,6 @@ namespace WorkflowApplicationExample
                      {
                          BookmarkName = "UserName",
                          Result = new OutArgument<string>(name)
-
                      },
                      new WriteLine
                      {
@@ -2403,7 +2390,6 @@ namespace WorkflowApplicationExample
                      {
                          BookmarkName = "UserName",
                          Result = new OutArgument<string>(name)
-
                      },
                      new WriteLine
                      {
@@ -2464,7 +2450,6 @@ namespace WorkflowApplicationExample
                      {
                          BookmarkName = "UserName",
                          Result = new OutArgument<string>(name)
-
                      },
                      new WriteLine
                      {
@@ -2520,7 +2505,6 @@ namespace WorkflowApplicationExample
                      {
                          BookmarkName = "UserName",
                          Result = new OutArgument<string>(name)
-
                      },
                      new WriteLine
                      {
@@ -2577,7 +2561,6 @@ namespace WorkflowApplicationExample
                      {
                          BookmarkName = "UserName",
                          Result = new OutArgument<string>(name)
-
                      },
                      new WriteLine
                      {
@@ -2921,15 +2904,12 @@ namespace WorkflowApplicationExample
             WorkflowApplication wfApp = new WorkflowApplication(wf);
 
             wfApp.Run();
-
         }
-
     }
 
     // Support for snippets that use Workflow1
     class Workflow1 : Activity
     {
-
     }
 
     //<snippet62>
@@ -3236,5 +3216,4 @@ namespace WorkflowApplicationExample
             throw new NotImplementedException();
         }
     }
-
 }

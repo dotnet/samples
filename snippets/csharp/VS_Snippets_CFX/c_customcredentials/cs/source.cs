@@ -332,6 +332,5 @@ namespace Microsoft.ServiceModel.Samples
         [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/ICalculator/Add", ReplyAction = "http://tempuri.org/ICalculator/AddResponse")]
         double Add(double a, double b);
     }
-
 }
 //</snippet0>

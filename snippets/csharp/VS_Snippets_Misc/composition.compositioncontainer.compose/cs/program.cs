@@ -20,7 +20,6 @@ namespace ConsoleApplication5
     {
         [Import]
         public Part1 data { get; set; }
-
     }
 
     [Export]

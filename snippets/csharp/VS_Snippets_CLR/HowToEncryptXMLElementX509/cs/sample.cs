@@ -71,13 +71,11 @@ class Program
             Console.WriteLine("Encrypted XML:");
             Console.WriteLine();
             Console.WriteLine(xmlDoc.OuterXml);
-
         }
         catch (Exception e)
         {
             Console.WriteLine(e.Message);
         }
-
     }
 
     public static void Encrypt(XmlDocument Doc, string ElementToEncrypt, X509Certificate2 Cert)
@@ -102,7 +100,6 @@ class Program
         if (elementToEncrypt == null)
         {
             throw new XmlException("The specified element was not found");
-
         }
 
         //////////////////////////////////////////////////

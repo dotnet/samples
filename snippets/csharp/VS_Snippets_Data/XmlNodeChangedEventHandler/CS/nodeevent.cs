@@ -37,7 +37,6 @@ namespace Microsoft.Samples.Xml
 
             Console.WriteLine("\r\nDisplay the modified XML...");
             Console.WriteLine(doc.OuterXml);
-
         }
 
         // Handle the NodeChanged event.
@@ -67,7 +66,6 @@ namespace Microsoft.Samples.Xml
                 Console.WriteLine("");
             }
         }
-
     } // End class 
     //</snippet1>
 }

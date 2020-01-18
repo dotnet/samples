@@ -56,9 +56,7 @@ class XMLDSIGDetached
         catch(CryptographicException e)
         {
             Console.WriteLine(e.Message);
-
         }
-		
     }
 
 // <Snippet2>

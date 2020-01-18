@@ -14,5 +14,4 @@ public class Sample
         view.AllowDelete = true;
     }
     // </Snippet1>
-
 }

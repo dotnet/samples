@@ -132,7 +132,6 @@ namespace ChartControl
             Point pt = this.PointToClient(Control.MousePosition);
             if (legend1.Bounds.Contains(pt)) {
                 legend1.Selected = !legend1.Selected;
-
             } else if (legend2.Bounds.Contains(pt)) {
                 legend2.Selected = !legend2.Selected;
             }

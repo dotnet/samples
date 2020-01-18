@@ -115,7 +115,6 @@ namespace Samples.AspNet.CS.Controls
             ChildControlsCreated = true;
             base.DataBind();
         }
-
     }
 
     [
@@ -142,7 +141,6 @@ namespace Samples.AspNet.CS.Controls
             owner.Controls.Add(title);
             owner.Controls.Add(linebreak);
             owner.Controls.Add(caption);
-
         }
 
         void caption_DataBinding(object sender, EventArgs e)
@@ -194,6 +192,5 @@ namespace Samples.AspNet.CS.Controls
             }
         }
 	}
-
 }
 // </Snippet1>

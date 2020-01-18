@@ -28,7 +28,6 @@ namespace Custom_Feed_Client
             {
                 Console.WriteLine(ex.ToString());
             }
-
         }
     }
 }

@@ -59,6 +59,5 @@ namespace HOWTOWindowManagementSnippets
             this.SizeToContent = SizeToContent.WidthAndHeight;
             //</SnippetSetWindowSizeToContentPropertyCODE>
         }
-
     }
 }

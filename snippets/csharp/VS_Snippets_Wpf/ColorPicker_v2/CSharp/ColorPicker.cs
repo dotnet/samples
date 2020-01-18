@@ -323,7 +323,6 @@ namespace Microsoft.Samples.CustomControls
             m_color.A = newValue;
             SetValue(ScAProperty, m_color.ScA);
             SetValue(SelectedColorProperty, m_color);
-
         }
 
         private static void RChanged(DependencyObject d,
@@ -394,7 +393,6 @@ namespace Microsoft.Samples.CustomControls
         {
             ColorPicker c = (ColorPicker)d;
             c.OnScRChanged((float)e.NewValue);
-
         }
 
         protected virtual void OnScRChanged(float newValue)
@@ -469,7 +467,6 @@ namespace Microsoft.Samples.CustomControls
             {
                 updateMarkerPosition(m_color);
             }
-
         }
 
         private static void selectedColor_changed(DependencyObject d,
@@ -518,7 +515,6 @@ namespace Microsoft.Samples.CustomControls
 
                 determineColor((Point)m_ColorPosition);
             }
-
         }
 
         private void OnMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -537,7 +533,6 @@ namespace Microsoft.Samples.CustomControls
                 Point p = e.GetPosition(m_ColorDetail);
                 updateMarkerPosition(p);
                 Mouse.Synchronize();
-
             }
         }
 
@@ -586,7 +581,6 @@ namespace Microsoft.Samples.CustomControls
             p.Y = p.Y * m_ColorDetail.ActualHeight;
             markerTransform.X = p.X;
             markerTransform.Y = p.Y;
-
         }
 
         private void determineColor(Point p)
@@ -600,7 +594,6 @@ namespace Microsoft.Samples.CustomControls
             m_color.ScA = (float)GetValue(ScAProperty);
             SetValue(HexadecimalStringProperty, m_color.ToString());
             shouldFindPoint = true;
-
         }
 
         #endregion

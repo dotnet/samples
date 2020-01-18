@@ -19,7 +19,6 @@ namespace Microsoft.Samples.ContentBasedCorrelation.Client
             WorkflowInvoker.Invoke(GetClientWorkflow());
             Console.WriteLine("Press [ENTER] to exit");
             Console.ReadLine();
-
         }
 
         static Activity GetClientWorkflow()

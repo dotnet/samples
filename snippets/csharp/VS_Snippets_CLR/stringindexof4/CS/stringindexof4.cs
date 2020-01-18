@@ -42,7 +42,6 @@ public class IndexOfTest {
                     Environment.NewLine, strTarget, totFinds);
 
             totFinds = 0;
-
         } while ( true );
     }
 }

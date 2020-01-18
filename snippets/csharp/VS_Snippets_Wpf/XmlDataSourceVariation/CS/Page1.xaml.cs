@@ -28,6 +28,5 @@ namespace SDKSample
             if ((sender as ListBox).SelectedItem != null)
                 tb1.Text = ((sender as ListBox).SelectedItem as XmlNode).InnerText;
         }
-
     }
 }

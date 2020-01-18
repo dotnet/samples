@@ -17,5 +17,4 @@ public void CreateOleDbParameter()
     parameter.Direction = ParameterDirection.Output;
  }
 // </Snippet1>
-
 }

@@ -43,7 +43,6 @@ public class EventWatcherAsync
       
         // Stop listening
         watcher.Stop();
-        
     }
 
     private void HandleEvent(object sender,

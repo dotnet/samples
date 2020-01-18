@@ -16,5 +16,4 @@ private void BindingContext_Changed(object sender, EventArgs e)
    Console.WriteLine("BindingContext changed");
 }
 // </Snippet1>
-
 }

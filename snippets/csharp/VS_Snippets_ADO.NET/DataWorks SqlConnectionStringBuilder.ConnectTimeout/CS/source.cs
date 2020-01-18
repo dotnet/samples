@@ -22,7 +22,6 @@ class Program
 
             Console.WriteLine("Press any key to finish.");
             Console.ReadLine();
-
         }
         catch (Exception ex)
         {

@@ -32,7 +32,6 @@ public class Sample
     XmlEntityReference entityref2 = doc.CreateEntityReference("p");
     doc.DocumentElement.LastChild.AppendChild(entityref2);
     Console.WriteLine(entityref2.FirstChild.InnerText);
-    
   }
 }
    // </Snippet1>

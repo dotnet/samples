@@ -66,6 +66,5 @@ namespace SnippetsPart1
             sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAccount = true;
             //</snippet2>
         }
-
     }
 }

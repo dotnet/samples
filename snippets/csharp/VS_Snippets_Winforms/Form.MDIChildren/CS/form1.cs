@@ -85,7 +85,6 @@ namespace FormMDIChildrenEx
          this.Name = "Form1";
          this.Text = "Form1";
          this.ResumeLayout(false);
-
       }
 		#endregion
 
@@ -104,7 +103,6 @@ namespace FormMDIChildrenEx
 		   Form frm2 = new Form(); 
          frm2.MdiParent = this;
          frm2.Show();
-			
       }
       private void button2_Click(object sender, System.EventArgs e)
       {

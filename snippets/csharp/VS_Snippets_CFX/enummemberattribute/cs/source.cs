@@ -80,9 +80,7 @@ namespace Windows.Communication.Foundation.Samples
             {
                 Console.WriteLine(exc.Message);
                 Console.ReadLine();
-
             }
-
         }
 
         private void Serialize(string path)

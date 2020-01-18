@@ -72,7 +72,6 @@ namespace Microsoft.Samples.Animation.AnimatePathShapeSample
             myPath.Loaded +=  delegate(object sender, RoutedEventArgs args)
                 {
                     myStoryboard.Begin(myPath);
-                
                 };
         }
     }

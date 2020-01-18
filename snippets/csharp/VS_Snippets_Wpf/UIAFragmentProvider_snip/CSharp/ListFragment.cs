@@ -343,7 +343,6 @@ namespace ElementProvider
                     Refresh();
                 }
                 return true;
-
             }
             else if (keyData == Keys.Up)
             {

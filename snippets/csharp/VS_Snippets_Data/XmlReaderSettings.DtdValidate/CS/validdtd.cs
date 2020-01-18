@@ -19,7 +19,6 @@ public class Sample {
 
     // Parse the file. 
     while (reader.Read());
-    
   }
 
   // Display any validation errors.

@@ -54,7 +54,6 @@ namespace SDKSample
 
             // Set the window title to the loaded file.
             this.Title = "File Loaded: " + fileName;
-
         }
 
         // If the data object in args is a single file, this method will return the filename.

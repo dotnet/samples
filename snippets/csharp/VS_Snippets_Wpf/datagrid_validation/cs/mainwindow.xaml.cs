@@ -185,6 +185,5 @@ namespace DataGridValidation
         }
     }
     //</snippetCourseValidationRule>
-
 }
 //</snippetFullCode>

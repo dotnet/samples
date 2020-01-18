@@ -28,7 +28,6 @@ namespace UIAMultipleViewPattern_snip
                 GetMultipleViewPattern(targetControl[0]);
 
             int i = GetCurrentViewProperty(targetControl[0]);
-
         }
 
         // <Snippet100>

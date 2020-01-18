@@ -80,6 +80,5 @@ namespace SDKSample
             addThumbnailButton.IsEnabled = false;
        }
         private XpsDocument _xpsDocument;
-
     }
 }

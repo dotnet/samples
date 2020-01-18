@@ -41,7 +41,6 @@ public class UIPermissionDemo
         {
             Console.WriteLine(uiPerm1.Window.ToString() + " is not a subset of " +
                 uiPerm2.Window.ToString());
-
         }
         if (uiPerm2.IsSubsetOf(uiPerm1))
         {
@@ -52,7 +51,6 @@ public class UIPermissionDemo
         {
             Console.WriteLine(uiPerm2.Window.ToString() + " is not a subset of " +
                 uiPerm1.Window.ToString());
-
         }
     }
     private static void CheckIsSubsetOfClipBoard(UIPermission uiPerm1, UIPermission uiPerm2)
@@ -66,7 +64,6 @@ public class UIPermissionDemo
         {
             Console.WriteLine(uiPerm1.Clipboard.ToString() + " is not a subset of " +
                 uiPerm2.Clipboard.ToString());
-
         }
         if (uiPerm2.IsSubsetOf(uiPerm1))
         {
@@ -77,7 +74,6 @@ public class UIPermissionDemo
         {
             Console.WriteLine(uiPerm2.Clipboard.ToString() + " is not a subset of " +
                 uiPerm1.Clipboard.ToString());
-
         }
     }
     // </Snippet2>
@@ -94,7 +90,6 @@ public class UIPermissionDemo
             Console.WriteLine("The union of " + uiPerm1.Window.ToString() +
                 " and \n\t" + uiPerm2.Window.ToString() + " is \n\t"
                 + p3.Window.ToString() + "\n");
-
         }
         else
         {
@@ -118,7 +113,6 @@ public class UIPermissionDemo
             uiPerm2.Window.ToString() + " is " + p3.Window.ToString() + "\n");
         Console.WriteLine("The intersection of " + uiPerm1.Clipboard.ToString() + " and \n\t" +
                 uiPerm2.Clipboard.ToString() + " is " + p3.Clipboard.ToString() + "\n");
-
     }
     //</Snippet4>
     //<Snippet5>
@@ -135,7 +129,6 @@ public class UIPermissionDemo
         {
             Console.WriteLine("The copy succeeded:  " + uiPerm2.ToString() + " \n");
         }
-
     }
     //</Snippet5>
     //<Snippet6>
@@ -157,10 +150,8 @@ public class UIPermissionDemo
             Console.WriteLine(uiPerm2.ToString());
             Console.WriteLine(uiPerm1.ToString());
         }
-
     }
     //</Snippet6>
-
 }
 
 // </Snippet1>

@@ -20,7 +20,6 @@ public class Form1:
 		//Set the maximum size, so if user maximizes form, it 
 		//will not cover entire desktop.  
 		this.MaximumSize = new System.Drawing.Size(500, 500);
-
 	}
 	//</snippet3>
 
@@ -78,7 +77,6 @@ public class Form1:
 		this.Name = "Form1";
 		this.Text = "Form1";
 		this.ResumeLayout(false);
-
 	}
 
 	#endregion
@@ -127,5 +125,4 @@ public class Form1:
 		}
 	}
 	//</snippet2>
-
 }

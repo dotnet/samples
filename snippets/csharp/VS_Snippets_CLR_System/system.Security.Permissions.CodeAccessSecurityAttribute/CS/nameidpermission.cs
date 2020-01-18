@@ -212,6 +212,5 @@ namespace MyPermission
             if (m_Name != null) esd.AddAttribute( "Name", m_Name );
             return esd;
         }
-
      }
 }

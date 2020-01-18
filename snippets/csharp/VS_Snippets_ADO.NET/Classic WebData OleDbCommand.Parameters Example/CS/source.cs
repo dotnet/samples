@@ -32,5 +32,4 @@ public class Form1: Form
         Console.WriteLine(message);
     }
     // </Snippet1>
-
 }

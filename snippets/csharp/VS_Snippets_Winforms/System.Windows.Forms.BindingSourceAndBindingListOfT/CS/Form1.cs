@@ -59,7 +59,6 @@ namespace BindingSourceExamples
             binding1.DataSource = fonts;
             listBox1.DataSource = binding1;
             listBox1.DisplayMember = "Name";
-
         }
 
         //<snippet4>
@@ -97,13 +96,10 @@ namespace BindingSourceExamples
             {
                 if (Items[i].FontFamily.Name.ToLower() == ((string)key).ToLower())
                     return i;
-
             }
             return -1;
         }
-
     }
-  
 }
 //</snippet3>
 //</snippet0>

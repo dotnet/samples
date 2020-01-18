@@ -31,7 +31,6 @@ namespace CS
             creds.IssuedTokenAuthentication.SamlSerializer = new
                 MySamSerializer();
 // </Snippet1>
-
         }
 
         static void Main2()
@@ -43,7 +42,6 @@ namespace CS
 //            creds.IssuedTokenAuthentication.TrustedStoreLocation =
 //                (StoreLocation) new X509Certificate2("mycert.cer");
 // </Snippet2>   
-
         }
     }
 }

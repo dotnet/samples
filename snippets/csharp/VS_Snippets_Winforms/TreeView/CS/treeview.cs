@@ -52,7 +52,6 @@ namespace CustomerCodeExamples
          this.Name = "TV1";
          this.Text = "TV1";
          this.ResumeLayout(false);
-
       }
 
 // <snippet1>
@@ -78,7 +77,6 @@ public class Customer : System.Object
    {
       get{return this.custOrders;}
    }
-
 } // End Customer class 
 
 // The basic customer Order class.
@@ -96,7 +94,6 @@ public class Order : System.Object
       get{return this.ordID;}
       set{this.ordID = value;}
    }
-
 } // End Order class
 
 // Create a new ArrayList to hold the Customer objects.
@@ -154,5 +151,4 @@ private void FillMyTreeView()
       this.FillMyTreeView();      
    }
 } // End TV1 Class
-
 } // End NameSpace

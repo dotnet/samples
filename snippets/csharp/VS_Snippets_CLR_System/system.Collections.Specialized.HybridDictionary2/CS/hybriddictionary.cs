@@ -69,7 +69,6 @@ public class SamplesHybridDictionary  {
       myCol.Clear();
       Console.WriteLine( "The collection contains the following elements after it is cleared:" );
       PrintKeysAndValues1( myCol );
-
    }
 
    // Uses the foreach statement which hides the complexity of the enumerator.
@@ -101,7 +100,6 @@ public class SamplesHybridDictionary  {
          Console.WriteLine( "   {0,-5} {1,-25} {2}", i, myKeys[i], myCol[myKeys[i]] );
       Console.WriteLine();
    }
-
 }
 
 /*

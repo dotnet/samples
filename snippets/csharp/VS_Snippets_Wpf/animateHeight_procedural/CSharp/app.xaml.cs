@@ -29,5 +29,4 @@ namespace Microsoft.Samples.Animation.AnimatedTransformations
             MessageBox.Show("Unhandled exception: " + args.ExceptionObject.ToString());
         }
     }
-
 }

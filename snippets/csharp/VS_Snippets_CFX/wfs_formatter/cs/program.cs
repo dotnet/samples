@@ -88,7 +88,6 @@ namespace Microsoft.Samples.WorkflowServicesSamples.EchoWorkflowClient
                                     Text = new InArgument<string>("Expense Cannot be Approved")
                                 },
                         },
-
                     }
             };
 //</Snippet1>
@@ -149,7 +148,6 @@ namespace Microsoft.Samples.WorkflowServicesSamples.EchoWorkflowClient
                                     Text = new InArgument<string>("Purchase order Cannot be Approved")
                                 },
                         },
-
                     }
             };
             return workflow;
@@ -208,7 +206,6 @@ namespace Microsoft.Samples.WorkflowServicesSamples.EchoWorkflowClient
                                     Text = new InArgument<string>("Vendor is not Approved")
                                 },
                         },
-
                     }
             };
             return workflow;

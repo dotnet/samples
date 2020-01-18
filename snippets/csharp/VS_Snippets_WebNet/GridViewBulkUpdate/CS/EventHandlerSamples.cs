@@ -13,13 +13,11 @@ public partial class _Default : System.Web.UI.Page
     //<Snippet3>
     protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
     {
-
     }
     //</Snippet3>
     //<Snippet4>
     protected void UpdateButton_Click(object sender, EventArgs e)
     {
-
     }
     //</Snippet4>
 }

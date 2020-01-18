@@ -97,7 +97,6 @@ public class Example
         Console.WriteLine("Press ENTER to release the waiting threads.");
         Console.ReadLine();
         ewh.Set();
-        
     }
 
     public static void ThreadProc(object data)

@@ -20,5 +20,4 @@ public class Form1: Form
         Combo1.DisplayMember = "Suppliers.CompanyName";
     }
     // </Snippet1>
-
 }

@@ -45,6 +45,5 @@ namespace SomeNamespace
 			}
 		}
 		// </Snippet1>
-
 	}
 }

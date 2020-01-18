@@ -66,7 +66,6 @@ namespace Microsoft.Samples.Graphics.UsingImageBrush
             Background = Brushes.White;
             Margin = new Thickness(20);
             Title = "ImageBrush Stretch Modes";
-
         }
     }
 }

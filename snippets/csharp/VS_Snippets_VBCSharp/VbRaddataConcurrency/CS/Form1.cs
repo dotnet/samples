@@ -38,7 +38,6 @@ namespace ConcurrencyWalkthroughCS
         {
             // TODO: This line of code loads data into the 'northwindDataSet.Customers' table. You can move, or remove it, as needed.
             this.customersTableAdapter.Fill(this.northwindDataSet.Customers);
-
         }
 
         //---------------------------------------------------------------------

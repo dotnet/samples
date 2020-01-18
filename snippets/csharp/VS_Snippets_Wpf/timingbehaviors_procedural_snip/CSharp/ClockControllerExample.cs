@@ -179,7 +179,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             
                 // Seek to the specified location.
                 myControllableClock.Controller.Seek(seekAmount, selectedOrigin); 
-                
             }catch(FormatException formatEx)
             {
                 MessageBox.Show(seekAmountTextBox.Text 
@@ -199,9 +198,7 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
                 seekButton.IsEnabled = false;
             else 
                 seekButton.IsEnabled = true;
-
         }
- 
     }
 }
 // </SnippetGraphicsMMClockControllerExample>

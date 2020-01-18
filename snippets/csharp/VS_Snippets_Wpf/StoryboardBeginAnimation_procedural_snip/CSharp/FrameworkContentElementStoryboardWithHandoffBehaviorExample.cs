@@ -85,7 +85,6 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
                 new MouseButtonEventHandler(document_mouseLeftButtonDown);
             this.MouseRightButtonDown += 
                 new MouseButtonEventHandler(document_mouseRightButtonDown);
-            
         }
 
         // When the user left-clicks, use the 
@@ -102,7 +101,6 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
             try
             {
                 myStoryboard.Begin(this, HandoffBehavior.SnapshotAndReplace);  
-            
             }catch(Exception ex)
             {
                 MessageBox.Show(ex.ToString());
@@ -120,9 +118,7 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
             xAnimation.To = clickPoint.X;
             yAnimation.To = clickPoint.Y;
             myStoryboard.Begin(this, HandoffBehavior.Compose);  
-
         }        
-
     }
 }
 // </SnippetFrameworkContentElementStoryboardWithHandoffBehaviorExampleWholePage>

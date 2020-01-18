@@ -31,7 +31,6 @@ public class Form1:
 		this.Text = "Form1";
 		this.ResumeLayout(false);
 		this.roundButton.Paint += new PaintEventHandler(roundButton_Paint);
-
 	}
 
 	[System.STAThreadAttribute]
@@ -70,7 +69,6 @@ public class Form1:
 		// Set the button's Region property to the newly created 
 		// circle region.
 		roundButton.Region = new System.Drawing.Region(buttonPath);
-
 	}
 	//</snippet1>
 }

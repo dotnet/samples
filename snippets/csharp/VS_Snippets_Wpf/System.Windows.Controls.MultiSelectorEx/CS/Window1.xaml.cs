@@ -23,8 +23,6 @@ namespace MultiSelectorEx
         public Window1()
         {
             InitializeComponent();
-
         }
-
     }
 }

@@ -62,7 +62,6 @@ namespace MyProject
 		
 				// Process the message here.
 				Console.WriteLine("Message received.");
-
 			}
 			catch(MessageQueueException)
 			{

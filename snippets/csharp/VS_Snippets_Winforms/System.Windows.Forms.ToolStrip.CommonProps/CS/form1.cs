@@ -75,7 +75,6 @@ namespace WindowsApplication12
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
             ResumeLayout(false);
-
         }
     }
 }

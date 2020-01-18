@@ -139,7 +139,6 @@ class myCollectionSample
          myCollection.Insert(0,myFormatExtensionObject);
          Console.WriteLine("'myFormatExtensionObject' is inserted to collection.");
 // </Snippet13>
-
       }
       catch(Exception e)
       {

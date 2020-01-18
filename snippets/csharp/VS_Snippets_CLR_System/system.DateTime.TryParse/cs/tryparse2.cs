@@ -59,7 +59,6 @@ public class Example
                            dateString, dateResult, dateResult.Kind);
       else
          Console.WriteLine("Unable to convert {0} to a date and time.", dateString);
-
    }
 }
 // The example displays the following output to the console:

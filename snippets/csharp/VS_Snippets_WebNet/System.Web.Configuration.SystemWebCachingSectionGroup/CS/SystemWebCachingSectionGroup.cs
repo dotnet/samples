@@ -37,7 +37,6 @@ namespace Samples.AspNet
                     Console.Write("Input format not allowed.");
                     return;
                 }
-
             }
 
             // <Snippet1>

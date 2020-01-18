@@ -18,6 +18,5 @@ namespace FlowDirection_layout
 			mainWindow.InitializeComponent();
 			mainWindow.Show();
         }
-
 	}
 }

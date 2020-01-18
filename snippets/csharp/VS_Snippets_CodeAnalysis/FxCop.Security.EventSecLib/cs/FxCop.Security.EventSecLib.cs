@@ -20,7 +20,6 @@ namespace EventSecLibrary
       {
          Console.WriteLine ("Do something dangerous from unmanaged code.");
       }
-
    }
 }
 //</Snippet1>

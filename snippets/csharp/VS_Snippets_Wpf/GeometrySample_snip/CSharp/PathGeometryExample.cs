@@ -19,7 +19,6 @@ namespace SDKSample
             mainPanel.Children.Add(TwoLineSegments());
             mainPanel.Children.Add(TwoPathFigures());
             this.Content = mainPanel;
-
         }
 
         private Path SimpleLine()
@@ -48,7 +47,6 @@ namespace SDKSample
             myPath.Data = myPathGeometry;
             // </SnippetPathGeometryLineSegmentInline>
             return myPath;
-
         }
 
         private Path SimpleBezierLine()
@@ -79,7 +77,6 @@ namespace SDKSample
             myPath.Data = myPathGeometry;
             // </Snippet33>
             return myPath;
-
         }
 
         private Path SimpleQuadraticBezierLine()
@@ -109,7 +106,6 @@ namespace SDKSample
             myPath.Data = myPathGeometry;
             // </Snippet34>
             return myPath;
-
         }
 
         private Path ArcSegmentLine()
@@ -142,7 +138,6 @@ namespace SDKSample
             myPath.Data = myPathGeometry;
             // </Snippet36>
             return myPath;
-
         }
 
         private Path TwoLineSegments()
@@ -174,7 +169,6 @@ namespace SDKSample
             myPath.Data = myPathGeometry;
             // </Snippet49>
             return myPath;
-
         }
 
         private Path TwoPathFigures()
@@ -221,7 +215,6 @@ namespace SDKSample
             myPath.Data = myPathGeometry;
             // </Snippet38>
             return myPath;
-
         }
     }
 }

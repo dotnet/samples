@@ -22,7 +22,6 @@ class Example
             Monitor.Enter(lockObject, ref acquiredLock);
 
             // Code that accesses resources that are protected by the lock.
-
         }
         finally
         {
@@ -32,7 +31,6 @@ class Example
             }
         }
         //</Snippet2>
-
     }
 
     public static void T2()
@@ -47,13 +45,11 @@ class Example
             {
 
                 // Code that accesses resources that are protected by the lock.
-
             }
             else
             {
             
                 // Code to deal with the fact that the lock was not acquired.
-
             }
         }
         finally
@@ -64,7 +60,6 @@ class Example
             }
         }
         //</Snippet3>
-
     }
 
     public static void T3()
@@ -80,13 +75,11 @@ class Example
             {
 
                 // Code that accesses resources that are protected by the lock.
-
             }
             else
             {
             
                 // Code to deal with the fact that the lock was not acquired.
-
             }
         }
         finally
@@ -97,6 +90,5 @@ class Example
             }
         }
         //</Snippet4>
-
     }
 }

@@ -23,7 +23,6 @@ namespace TreeViewHitTest
             cancelButton.Click += new EventHandler(startButton_Click);
             treeView1.MouseDown += new MouseEventHandler(HandleMouseDown);
             pictureBox1.LoadProgressChanged += new ProgressChangedEventHandler(pictureBox1_LoadProgressChanged);
-
         }
  //Demonstrates the TreeViewHitTest method, TreeViewHitTestInfo and TreeViewHitTestLocations    
 //<snippet1>
@@ -119,7 +118,6 @@ namespace TreeViewHitTest
             this.Name = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-
         }
         //<snippet4>
         private void cancelButton_Click(object sender, EventArgs e)
@@ -145,6 +143,5 @@ namespace TreeViewHitTest
             progressBar1.Value = e.ProgressPercentage;
         }
         //</snippet5>
-
     }
 }

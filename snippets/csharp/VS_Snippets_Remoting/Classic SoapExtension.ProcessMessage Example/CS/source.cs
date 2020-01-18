@@ -22,7 +22,6 @@ public override void ProcessMessage(SoapMessage message) {
 
         case SoapMessageStage.AfterDeserialize:
             break;
-
         }
 }
 
@@ -49,7 +48,6 @@ public void WriteInput(SoapMessage message) {
     public override object GetInitializer(Type filename) {
         return (Type) filename;
     }
-
 }
 
 public class myentrypoint {

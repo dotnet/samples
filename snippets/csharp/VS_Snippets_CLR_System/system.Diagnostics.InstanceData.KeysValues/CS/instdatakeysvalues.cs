@@ -39,7 +39,6 @@ class InstDataKeysValuesMod
                     "range 1..{0}.", categories.Length));
             }
             categoryName = categories[(categoryNum - 1)].CategoryName;
-
         }
         catch(Exception ex)
         {

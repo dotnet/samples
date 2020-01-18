@@ -38,9 +38,7 @@ public class SamplesCultureInfo
       Console.WriteLine("Comparing \"llegar\" and \"lugar\"");
       Console.WriteLine("   With myCIintl.CompareInfo.Compare: {0}", myCIintl.CompareInfo.Compare("llegar", "lugar"));
       Console.WriteLine("   With myCItrad.CompareInfo.Compare: {0}", myCItrad.CompareInfo.Compare("llegar", "lugar"));
-
    }
-
 }
 
 /*

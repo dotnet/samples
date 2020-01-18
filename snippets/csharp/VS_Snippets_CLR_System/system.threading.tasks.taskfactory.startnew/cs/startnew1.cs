@@ -34,7 +34,6 @@ public class Example
       if (! Char.IsControl(value, 0)) {
          foreach (var ch in value)
             hexString += String.Format("0x{0} ", Convert.ToUInt16(ch));
-
       }   
       return hexString.Trim();
    }

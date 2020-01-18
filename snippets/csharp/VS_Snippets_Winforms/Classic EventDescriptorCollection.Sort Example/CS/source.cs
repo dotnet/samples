@@ -8,7 +8,6 @@ public abstract class Coll1: EventDescriptorCollection
     protected Object myNewColl;
 
     public Coll1() : base(null) {
-
     }
     protected void Method() {
         // <Snippet1>

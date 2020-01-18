@@ -81,7 +81,6 @@ namespace Joins
             }
             Console.WriteLine("InnerJoin: {0} items in 1 group.", innerJoinQuery.Count());
             Console.WriteLine(System.Environment.NewLine);
-
         }
 
         void GroupJoin()

@@ -100,7 +100,6 @@ namespace PacketSpy
             InkCanvas.SetTop(circle, firstPoint.Y - 5);
             InkCanvas.SetLeft(circle, firstPoint.X - 5);
             inkCanvas1.Children.Add(circle);
-
         }
 
         //<Snippet13>
@@ -116,7 +115,6 @@ namespace PacketSpy
             InkCanvas.SetTop(circle, firstPoint.Y);
             InkCanvas.SetLeft(circle, firstPoint.X);
             inkCanvas1.Children.Add(circle);
-
         }
         //</Snippet13>
 
@@ -200,7 +198,6 @@ namespace PacketSpy
             //VisualCollection collection = VisualOperations.GetChildren(inkCanvas1);
 
             //collection.Add(myRectVisual);
-
         }
 
         private void StylusMoveEventHandler(object sender, StylusEventArgs e)
@@ -213,7 +210,6 @@ namespace PacketSpy
 
         private void StylusEventHandler(object sender, StylusEventArgs e)
         {
-
         }
 
         void GetDescriptionFromStylusDevice()
@@ -299,7 +295,6 @@ namespace PacketSpy
                     packetWriter.WriteLine(stylusPoint.GetPropertyValue(currentProperty).ToString());
                 }
                 packetWriter.WriteLine();
-
             }
 
             packetOutput.Text = packetWriter.ToString();
@@ -427,7 +422,6 @@ namespace PacketSpy
                 MessageBox.Show("The two StylusPoint objects are equal.");
             }
             //</Snippet10>
-
         }
 
         //public void AddStroke(System.Windows.Ink.Stroke stroke)
@@ -458,7 +452,6 @@ namespace PacketSpy
             //points.Insert(3, point);
 
             //points.Insert(2, point);
-
         }
 
         void StylusPointCollectionConstructor()
@@ -549,7 +542,6 @@ namespace PacketSpy
             stroke2.DrawingAttributes.Color = Colors.Red;
             inkCanvas1.Strokes.Add(stroke2);
             //</Snippet18>
-
         }
 
         void CompareDescriptions()
@@ -597,7 +589,6 @@ namespace PacketSpy
                 MessageBox.Show("description2 is not a subset of description1.");
             }
             //</Snippet24>
-
         }
 
         void points_Changed(object sender, EventArgs e)
@@ -621,7 +612,6 @@ namespace PacketSpy
             // from the stylus points in the StylusDownEventArgs.
             stylusPoints = new StylusPointCollection(eventPoints.Description, eventPoints.Count);
             stylusPoints.Add(eventPoints);
-
         }
         //</Snippet19>
 

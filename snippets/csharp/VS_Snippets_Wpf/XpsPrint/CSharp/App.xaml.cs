@@ -14,7 +14,5 @@ namespace SDKSample
             Window1 mainWindow = new Window1();
             mainWindow.Show();
         }
-
     }// end:partial class App
-
 }// end:namespace SDKSample

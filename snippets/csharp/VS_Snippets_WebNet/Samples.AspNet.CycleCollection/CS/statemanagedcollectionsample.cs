@@ -41,7 +41,6 @@ namespace Samples.AspNet.CS.Controls {
         protected override void SetDirtyObject(object o) {
             ((Cycle)o).SetDirty();
         }
-
     }
 // </snippet2>    
     //////////////////////////////////////////////////////////////
@@ -147,6 +146,5 @@ namespace Samples.AspNet.CS.Controls {
         // Create a red Cycle with three wheels.
         public Tricycle() : base(3) {}
     }
-
 }
 // </snippet1>

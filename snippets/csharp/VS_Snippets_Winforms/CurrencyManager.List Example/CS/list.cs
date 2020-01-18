@@ -8,7 +8,6 @@ public class MyGridForm:Form{
 
 static void Main(){
     Application.Run(new MyGridForm());
-
 }
 
 public MyGridForm(){

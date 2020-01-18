@@ -196,6 +196,5 @@ namespace SendActivitySnippets
             RequestQuoteFromShipper3 = new System.Workflow.Activities.SendActivity("RequestQuoteFromShipper3");
             //</snippet17>
         }
-    
     }
 }

@@ -52,13 +52,11 @@ class UsingConfigurationCollectionElement
             Console.WriteLine("Created custom section in the application configuration file: {0}",
                 config.FilePath);
             Console.WriteLine();
-
         }
         catch (ConfigurationErrorsException err)
         {
             Console.WriteLine("CreateCustomSection: {0}", err.ToString());
         }
-
     }
 
     static void ReadCustomSection()
@@ -89,13 +87,11 @@ class UsingConfigurationCollectionElement
                         myUrlsSection.Urls[i].Port);
                 }
             }
-
         }
         catch (ConfigurationErrorsException err)
         {
             Console.WriteLine("ReadCustomSection(string): {0}", err.ToString());
         }
-
     }
 
     // Add an element to the custom section collection.
@@ -142,7 +138,6 @@ class UsingConfigurationCollectionElement
         {
             Console.WriteLine("AddCollectionElement: {0}", err.ToString());
         }
-
     }
 
     // Remove element from the custom section collection.
@@ -190,7 +185,6 @@ class UsingConfigurationCollectionElement
         {
             Console.WriteLine("RemoveCollectionElement: {0}", err.ToString());
         }
-
     }
 
     // Remove the collection of elements from the custom section.
@@ -230,7 +224,6 @@ class UsingConfigurationCollectionElement
         {
             Console.WriteLine("ClearCollectionElements: {0}", err.ToString());
         }
-
     }
 
     public static void UserMenu()

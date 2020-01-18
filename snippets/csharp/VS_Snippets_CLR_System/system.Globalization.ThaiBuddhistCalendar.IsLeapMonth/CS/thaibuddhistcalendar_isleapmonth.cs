@@ -20,9 +20,7 @@ public class SamplesThaiBuddhistCalendar  {
             Console.Write( "\t{0}", myCal.IsLeapMonth( y, m, ThaiBuddhistCalendar.CurrentEra ) );
          Console.WriteLine();
       }
-
    }
-
 }
 
 /*

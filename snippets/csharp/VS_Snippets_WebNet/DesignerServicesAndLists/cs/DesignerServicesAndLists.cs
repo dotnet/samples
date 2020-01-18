@@ -250,7 +250,6 @@ namespace Samples.AspNet.CS.Controls
                 }
             }
         }
-
     }
 
     // This control designer is used to obtain the 

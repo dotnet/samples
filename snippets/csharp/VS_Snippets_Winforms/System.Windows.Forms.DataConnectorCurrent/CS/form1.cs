@@ -30,7 +30,6 @@ namespace Current
 
 			this.ClientSize = new System.Drawing.Size(292, 266);
 			this.Controls.Add(this.button1);
-
 		}
 		// The following snippet demonstrates the BindingSource.MoveNext, BindingSource.Current,
 		// BindingSource.CurrentItem, BindingSource.Position and the BindingSourceItem.Value members.
@@ -96,7 +95,5 @@ namespace Current
 			Application.EnableVisualStyles();
 			Application.Run(new Form1());
 		}
-
 	}
-
 }

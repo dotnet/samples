@@ -21,7 +21,6 @@ namespace WebClientProtocol_Constructor {
         // </Snippet1>
         public static void Main() 
         {
-
         }
     }
 }

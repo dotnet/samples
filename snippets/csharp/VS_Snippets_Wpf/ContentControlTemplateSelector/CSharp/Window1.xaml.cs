@@ -22,9 +22,7 @@ namespace ContentControlNew
         public Window1()
         {
             InitializeComponent();
-
         }
-
     }
 
     //<Snippet2>

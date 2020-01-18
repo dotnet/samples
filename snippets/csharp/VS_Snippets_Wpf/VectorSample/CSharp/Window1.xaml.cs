@@ -715,7 +715,6 @@ namespace VectorSample
 
                 default:
                     break;
-
             }   // end switch
         }
 
@@ -750,6 +749,5 @@ namespace VectorSample
             txtMatrix1.Text = m1.ToString();
             txtScalar1.Text = s1.ToString();
         }
-
     }
 }

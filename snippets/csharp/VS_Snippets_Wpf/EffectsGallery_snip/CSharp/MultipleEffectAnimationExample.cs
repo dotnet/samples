@@ -134,7 +134,6 @@ namespace SDKSample
             StackPanel myStackPanel = new StackPanel();
             myStackPanel.Children.Add(myButton);
             this.Content = myStackPanel;
-
         }      
     }
 }

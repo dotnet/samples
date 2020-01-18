@@ -19,5 +19,4 @@ public class Form1: Form
         adapter.Fill(dataSet, "Categories");
     }
     // </Snippet1>
-
 }

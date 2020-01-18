@@ -57,6 +57,5 @@ namespace RemoteClient
 namespace TempConverter{
 
 public class Converter : MarshalByRefObject{
-
 	}
 }

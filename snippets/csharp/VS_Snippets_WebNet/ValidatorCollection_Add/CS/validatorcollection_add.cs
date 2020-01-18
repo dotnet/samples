@@ -61,7 +61,6 @@ public class MyPage : Page
       myButton.Text = "Submit";
       myRequiredFieldValidator.ControlToValidate = "Number";
       myRequiredFieldValidator.ErrorMessage = "Data entry is Mandatory.";
-
    }
 
    // Add all the controls to the form.
@@ -77,5 +76,4 @@ public class MyPage : Page
       myForm.Controls.Add(myRequiredFieldValidator);
 // </Snippet1>
    }
-
 }

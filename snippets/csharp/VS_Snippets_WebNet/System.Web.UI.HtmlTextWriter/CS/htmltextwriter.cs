@@ -58,8 +58,6 @@ namespace Samples.AspNet.CS
 
             writer.Indent--;
             writer.RenderEndTag();
-
         }
     }
-
 }

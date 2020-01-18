@@ -25,7 +25,6 @@ class Program
                     // Clean up here, then...
                     ct.ThrowIfCancellationRequested();
                 }
-
             }
         }, tokenSource2.Token); // Pass same token to Task.Run.
 

@@ -13,8 +13,6 @@ public class SimpleControl:UserControl
   public void myButton_Click(object sender, EventArgs e)
   { 
     output.Text = "Hello, " + name.Text + ".";
-
   }
- 
 }
 // </snippet2>

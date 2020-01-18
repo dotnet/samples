@@ -12,5 +12,4 @@ private void ClearAllBindings()
    c.DataBindings.Clear();
 }
 // </Snippet1>
-
 }

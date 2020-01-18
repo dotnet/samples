@@ -53,9 +53,7 @@ namespace BrushesIntroduction
             StackPanel mainPanel = new StackPanel();
             mainPanel.Children.Add(aRectangle);
             Content = mainPanel;
-
         }
-
     }
 }
 

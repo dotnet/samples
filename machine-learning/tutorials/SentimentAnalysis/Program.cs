@@ -134,7 +134,6 @@ namespace SentimentAnalysis
             Console.WriteLine($"F1Score: {metrics.F1Score:P2}");
             Console.WriteLine("=============== End of model evaluation ===============");
             //</SnippetDisplayMetrics>
-
         }
 
         private static void UseModelWithSingleItem(MLContext mlContext, ITransformer model)
@@ -204,11 +203,9 @@ namespace SentimentAnalysis
             foreach (SentimentPrediction prediction  in predictedResults)
             {
                 Console.WriteLine($"Sentiment: {prediction.SentimentText} | Prediction: {(Convert.ToBoolean(prediction.Prediction) ? "Positive" : "Negative")} | Probability: {prediction.Probability} ");
-
             }
             Console.WriteLine("=============== End of predictions ===============");
             // </SnippetDisplayResults>       
         }
-
     }
 }

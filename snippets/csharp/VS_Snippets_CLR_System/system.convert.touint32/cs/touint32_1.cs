@@ -271,7 +271,6 @@ public class Example
          catch (InvalidCastException) {
             Console.WriteLine("No conversion to a UInt32 exists for the {0} value '{1}'.",
                               value.GetType().Name, value);
-                              
          }
       }                           
       // The example displays the following output:

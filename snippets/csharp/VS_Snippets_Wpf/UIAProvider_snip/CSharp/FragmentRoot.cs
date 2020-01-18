@@ -67,7 +67,6 @@ namespace ElementProvider
 
             // Add MouseDown event handler.
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RootButtonControl_MouseDown);
-
         }
 
         /// <summary>

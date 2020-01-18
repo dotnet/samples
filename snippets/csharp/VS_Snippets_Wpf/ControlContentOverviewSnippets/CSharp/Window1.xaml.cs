@@ -29,7 +29,6 @@ namespace ControlContentOverviewSnippets
             AddThirdListBox();
             AddSecondListBox();
             ReportLBIs();
-
         }
 
         void ReportLBIs()
@@ -103,7 +102,6 @@ namespace ControlContentOverviewSnippets
             if (lbi == null)
             {
                 MessageBox.Show("lbi is null");
-
             }
             else
             {
@@ -174,7 +172,6 @@ namespace ControlContentOverviewSnippets
             //</Snippet4>
 
             root.Children.Add(listBox1);
-
         }
 
         private void CreateButtons()
@@ -240,7 +237,6 @@ namespace ControlContentOverviewSnippets
             }
             //</Snippet15>
         }
-
     }
 
     //<Snippet8>

@@ -16,6 +16,5 @@ public class Example
       // The example displays the following output:
       //       $1,632.54
       // </Snippet10>
-
    }
 }

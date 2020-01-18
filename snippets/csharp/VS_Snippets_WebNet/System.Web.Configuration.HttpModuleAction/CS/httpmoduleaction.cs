@@ -56,7 +56,6 @@ namespace Samples.Aspnet.SystemWebConfiguration
             {
                 if (currentModule.Name == "moduleName")
                     moduleFound = "moduleName found.";
-
             }
             // </Snippet4>
 
@@ -75,9 +74,6 @@ namespace Samples.Aspnet.SystemWebConfiguration
             }
 
             // </Snippet5>
-
         }
-
     }
-
 } 

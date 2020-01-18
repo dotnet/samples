@@ -124,7 +124,6 @@ public class Form1:
 			e.CancelEdit = true;
 			MessageBox.Show("You are not allowed to edit the top node");
 		}
-		
 	}
 	//</snippet1>
 
@@ -239,7 +238,6 @@ public class Form1:
 
 		e.Graphics.DrawString(text, printFont, 
 			System.Drawing.Brushes.Black, 0, 0);
-
 	}
 	//</snippet3>
 

@@ -166,5 +166,4 @@ namespace Samples
             return base.Channel.Multiply(a, b);
         }
     }
-
 }

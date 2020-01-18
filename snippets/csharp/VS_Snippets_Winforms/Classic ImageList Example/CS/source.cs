@@ -162,7 +162,6 @@ namespace myImageRotator
                     addImage(openFileDialog1.FileName);
                 }
             }
-            
 		}
  
 		private void addImage(string imageToLoad)

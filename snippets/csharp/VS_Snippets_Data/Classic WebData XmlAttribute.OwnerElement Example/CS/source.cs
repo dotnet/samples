@@ -29,7 +29,6 @@ public class Sample
     //Display the attribute's owner element.
     Console.WriteLine("Display the owner element...");
     Console.WriteLine(attr.OwnerElement.OuterXml);
-
    }
 }
    // </Snippet1>

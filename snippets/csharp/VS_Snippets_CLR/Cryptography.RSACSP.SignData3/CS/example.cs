@@ -52,12 +52,10 @@ class RSACSPSample
             
             // Close the MemoryStream.
             mStream.Close();
-
         }
         catch(ArgumentNullException)
         {
             Console.WriteLine("The data was not signed or verified");
-
         }
     }
     public static byte[] HashAndSignBytes(Stream DataStream, RSAParameters Key)
@@ -101,7 +99,6 @@ class RSACSPSample
             // Verify the data using the signature.  Pass a new instance of SHA1CryptoServiceProvider
             // to specify the use of SHA1 for hashing.
             return RSAalg.VerifyData(DataToVerify, new SHA1CryptoServiceProvider(), SignedData); 
-
         }
         catch(CryptographicException e)
         {

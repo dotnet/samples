@@ -20,6 +20,5 @@ namespace HOWTOWindowManagementSnippets
         {
             InitializeComponent();
         }
-
     }
 }

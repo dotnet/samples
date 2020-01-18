@@ -71,7 +71,6 @@ namespace WindowsApplication11
 			this.toolStrip1.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
-
 		}
 
 		private void toolStripButton1_Click(object sender, EventArgs e)

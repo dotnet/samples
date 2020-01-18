@@ -50,7 +50,6 @@ namespace FileSystemExample
 
             // Set the new access settings.
             dInfo.SetAccessControl(dSecurity);
-
         }
 
         // Removes an ACL entry on the specified directory for the specified account.
@@ -70,7 +69,6 @@ namespace FileSystemExample
 
             // Set the new access settings.
             dInfo.SetAccessControl(dSecurity);
-
         }
     }
 }

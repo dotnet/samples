@@ -14,8 +14,6 @@ namespace Microsoft.Samples.Graphics.UsingImageBrush
 
         public PaintingWithImages()
         {
-
         }
-
     }
 }

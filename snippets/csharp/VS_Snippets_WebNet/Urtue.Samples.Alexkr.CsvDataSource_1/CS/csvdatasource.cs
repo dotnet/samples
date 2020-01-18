@@ -75,7 +75,6 @@
     {
 
         public CsvDataSourceView(IDataSource owner, string name) :base(owner, DefaultViewName) {
-
         }
 
         // The data source view is named. However, the CsvDataSource

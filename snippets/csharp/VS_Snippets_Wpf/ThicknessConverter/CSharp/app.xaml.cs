@@ -18,6 +18,5 @@ namespace ThicknessConverter_Csharp
 			mainWindow.InitializeComponent();
 			mainWindow.Show();
         }
-
 	}
 }

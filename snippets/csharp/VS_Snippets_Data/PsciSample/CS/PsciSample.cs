@@ -36,13 +36,11 @@ public class PsciSample
         // SchemaTypeName refered to a valid type.
         Console.WriteLine("After compilation the ElementSchemaType of Price is "
            + priceElem.ElementSchemaType);
-
     }
 
     private static void ValidationCallbackOne(object sender, ValidationEventArgs args)
     {
         Console.WriteLine(args.Message);
     }
-
 }
 //</snippet1>

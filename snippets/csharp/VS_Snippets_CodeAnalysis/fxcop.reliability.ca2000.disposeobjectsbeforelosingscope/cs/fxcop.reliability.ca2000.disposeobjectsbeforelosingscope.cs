@@ -33,7 +33,6 @@ public SerialPort OpenPort2(string portName)
       //Add any other methods above this line
       port = tempPort;
       tempPort = null;
-      
    }
    finally
    {
@@ -46,7 +45,5 @@ public SerialPort OpenPort2(string portName)
 }
 
 //</Snippet1>
-
 }// OpenPortExamples
-
 } // CA2000

@@ -86,7 +86,6 @@ namespace Samples.AspNet
             {
                 this["BuildEndTime"] = value.ToString();
             }
-
         }
     }
 

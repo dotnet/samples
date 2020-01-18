@@ -175,7 +175,6 @@ public class Example
          {
             Console.WriteLine("No conversion to a Byte exists for the {0} value {1}.", 
                               value.GetType().Name, value);
-                              
          }
       }                           
       // The example displays the following output:

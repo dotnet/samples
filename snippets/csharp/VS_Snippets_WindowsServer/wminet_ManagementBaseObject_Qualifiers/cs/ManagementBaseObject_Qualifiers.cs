@@ -30,10 +30,8 @@ public class Sample
                         processClass.GetPropertyQualifierValue(
                         property.Name, q.Name));
                 }
-
             }
             Console.WriteLine();
-
         }
     }
 }

@@ -39,12 +39,10 @@ namespace MyProject
 
 					// Handle other sources of MessageQueueException.
 				}
-
 			}
 		
 			return;
 		}
-
 	}
 }
 // </Snippet1>

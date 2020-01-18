@@ -16,7 +16,6 @@ class Program
         MethodInfo mInfo = typeof(Program).GetMethod("MethodA",
             BindingFlags.Public | BindingFlags.Instance);
         Console.WriteLine("Found method: {0}", mInfo);
-
     }
 }
 // </Snippet1>

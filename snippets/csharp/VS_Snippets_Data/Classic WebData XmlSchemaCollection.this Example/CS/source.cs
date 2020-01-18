@@ -21,6 +21,5 @@ if (xsc.Contains("urn:bookstore-schema"))
   Console.WriteLine(sw.ToString());
 }
    // </Snippet1>
-
  }
 }

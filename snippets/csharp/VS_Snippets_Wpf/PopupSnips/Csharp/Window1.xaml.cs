@@ -94,7 +94,6 @@ namespace PopupSnips
        myTextBlockPopup.StaysOpen = true;
        //</SnippetStaysOpen>
         myStackPanel.Children.Add(myTextBlock);
-
      }
 
       //<SnippetClosed>

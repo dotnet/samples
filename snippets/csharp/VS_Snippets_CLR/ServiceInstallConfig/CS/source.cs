@@ -108,7 +108,6 @@ namespace ServiceChangeSample
                     scInfo += Environment.NewLine;
                     scInfo += String.Format("Description:\t{0}", wmiService["Description"]);
                     scInfo += Environment.NewLine;
-
                 }
             }
             catch (InvalidOperationException)

@@ -36,7 +36,6 @@ using System.Net.Sockets;
                 }
                 Console.Write("Local endpoint: {0} ",t.LocalEndPoint.Address);
                 Console.WriteLine("Remote endpoint: {0} ",t.RemoteEndPoint.Address);
-               
             }
              Console.WriteLine("There are {0} established TCP connections.",
                 establishedConnections);
@@ -414,7 +413,6 @@ using System.Net.Sockets;
             IcmpV4Statistics statistics = properties.GetIcmpV4Statistics();
             Console.WriteLine("  Parameter Problems .................. Sent: {0,-10}   Received: {1,-10}",
                 statistics.ParameterProblemsSent, statistics.ParameterProblemsReceived);        
-                 
         }
         //</Snippet27>
         
@@ -427,7 +425,6 @@ using System.Net.Sockets;
                 statistics.TimestampRequestsSent, statistics.TimestampRequestsReceived);    
             Console.WriteLine("  Timestamp Replies ................... Sent: {0,-10}   Received: {1,-10}",
                 statistics.TimestampRepliesSent, statistics.TimestampRepliesReceived);    
-                 
         }
         //</Snippet28>  
         
@@ -440,7 +437,6 @@ using System.Net.Sockets;
                 statistics.AddressMaskRequestsSent, statistics.AddressMaskRequestsReceived);    
             Console.WriteLine("  Address Mask Replies ................ Sent: {0,-10}   Received: {1,-10}",
                 statistics.AddressMaskRepliesSent, statistics.AddressMaskRepliesReceived);     
-                 
         }
         //</Snippet29>  
 
@@ -868,7 +864,6 @@ using System.Net.Sockets;
                 Console.WriteLine("  No IPv6 interfaces were found.");
                 Console.WriteLine();
             }
-            
         }
         //</Snippet49>
 

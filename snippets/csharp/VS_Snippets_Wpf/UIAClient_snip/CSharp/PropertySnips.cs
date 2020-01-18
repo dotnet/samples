@@ -31,7 +31,6 @@ namespace CustomElementClient
                 TreeScope.Element, 
                 propChangeHandler = new AutomationPropertyChangedEventHandler(OnPropertyChange),
                 AutomationElement.IsEnabledProperty);
-        
         }
 
         /// <summary>
@@ -492,7 +491,6 @@ namespace CustomElementClient
              // <Snippet999>
              //  To be written.
              // </Snippet999>
-        
         }
 }
 }

@@ -73,7 +73,6 @@ class FibonacciNumber : Form
 		backgroundWorker.DoWork += new DoWorkEventHandler(backgroundWorker1_DoWork);
 		backgroundWorker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(backgroundWorker1_RunWorkerCompleted);
 		backgroundWorker.ProgressChanged += new ProgressChangedEventHandler(backgroundWorker1_ProgressChanged);
-		
 	}
 
     // <snippet10>
@@ -130,7 +129,6 @@ class FibonacciNumber : Form
 		toolStripProgressBar.Enabled = false;
 		requestedCountControl.Enabled = true;
 		goButton.Enabled = true;
-
 	}
 
 	private void button1_Click(object sender, EventArgs e)

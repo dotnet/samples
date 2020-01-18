@@ -31,7 +31,6 @@ namespace WindowsFormsApplication1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-
         }
 
         static void Test()
@@ -51,7 +50,6 @@ namespace WindowsFormsApplication1
             // You can use the interface object instead.
             IEnumerable<Object> listObjects = new List<String>();
             //</Snippet103>
-
         }
 
         static void SetObject(object o) { } 
@@ -87,7 +85,6 @@ namespace WindowsFormsApplication1
             // array[0] = 10;
             //</Snippet202>
         }
-
     }
 }
 
@@ -122,7 +119,6 @@ namespace n101
         }
     }
     //</Snippet101>
- 
 }
 namespace n1
 {
@@ -132,7 +128,6 @@ namespace n1
         R GetSomething();
         // The following statement generates a compiler error.
         // void SetSometing(R sampleArg);
-
     }
     //</Snippet3>
 }
@@ -318,7 +313,6 @@ namespace n9
             // although the method expects IEnumerable<Person>.
 
             PrintFullName(employees);
-
         }
     }
     //</Snippet14>
@@ -406,9 +400,7 @@ namespace n11
             dvariant("test");
             //</Snippet19>
         }
-
     }
-
 }
 
 namespace n104
@@ -431,7 +423,6 @@ namespace n104
             // The following statement generates a compiler error
             // because the generic type T is not marked as covariant.
             // SampleGenericDelegate <Object> dObject = dString;
-
         }
         //</Snippet104>
     }
@@ -533,7 +524,6 @@ namespace n12
         // The implicit conversion is used.
         SampleGenericDelegate<Second, First> dGenericConversion = AFirstRSecond;
         //</Snippet22>
-
     }
 }
 
@@ -565,7 +555,6 @@ namespace n13
             // that returns a more derived type 
             // to a delegate that returns a less derived type.
             findPerson = findEmployee;
-
         }
     }
     //</Snippet23>

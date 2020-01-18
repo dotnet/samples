@@ -272,13 +272,11 @@ namespace WindowsApplication1
                                                "mspaint.chm", 
                                                "mspaint.chm::/paint_brush.htm");
             //</Snippet10>
-
         }
 
 //        private void button1_HelpRequested (System.Object sender, System.Windows.Forms.HelpEventArgs hlpevent)
 //        {
 //            MessageBox.Show ("Help requested from button");
 //        }
-
     }
 }

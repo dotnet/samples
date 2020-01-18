@@ -102,7 +102,6 @@ namespace ISafeSerializationDataExample
             // method create a new instance of an ISafeSerializationData
             // object and populate it with the local state here before 
             // passing it through to AddSerializedState.        
-
         }
         // There is no need to supply a deserialization constructor 
         // (with SerializationInfo and StreamingContext parameters), 

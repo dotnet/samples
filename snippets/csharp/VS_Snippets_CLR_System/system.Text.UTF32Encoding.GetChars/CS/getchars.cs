@@ -52,7 +52,6 @@ public class SamplesUTF32Encoding  {
       catch ( System.ArgumentException e )  {
          Console.WriteLine( e.Message );
       }
-
    }
 
    public static void PrintCountsAndChars( byte[] bytes, Encoding enc )  {
@@ -72,9 +71,7 @@ public class SamplesUTF32Encoding  {
       char[] chars = new char[iCC];
       enc.GetChars( bytes, 0, bytes.Length, chars, 0 );
       Console.WriteLine( chars );
-
    }
-
 }
 
 // </Snippet1>

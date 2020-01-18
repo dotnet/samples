@@ -13,7 +13,6 @@ namespace test_exec_cmnd
             myService.ExecuteCommand((int)SimpleServiceCustomCommands.StopWorker);
             myService.ExecuteCommand((int)SimpleServiceCustomCommands.RestartWorker);
             myService.ExecuteCommand((int)SimpleServiceCustomCommands.CheckWorker);
-
         }
     }
 }

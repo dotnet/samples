@@ -54,7 +54,6 @@ class DemoClass {
                         "Method {0} has a pet {1} attribute.",
                         mInfo.Name, ((AnimalTypeAttribute)attr).Pet);
             }
-
         }
     }
 }

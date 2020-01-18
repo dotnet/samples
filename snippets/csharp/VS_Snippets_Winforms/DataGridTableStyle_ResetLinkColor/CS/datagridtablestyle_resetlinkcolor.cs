@@ -124,7 +124,6 @@ namespace DataGridSample
          ((System.ComponentModel.ISupportInitialize)(this.myDataGrid)).EndInit();
          this.groupBox3.ResumeLayout(false);
          this.ResumeLayout(false);
-
       }
       #endregion
       DataGridTableStyle myDataGridTableStyle = new DataGridTableStyle();

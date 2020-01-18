@@ -20,8 +20,6 @@ namespace Microsoft.Samples.PointExamples
             InitializeComponent();
             
             PointExampleFrame.Content = new PointExample();
-                 
        }
-       
     }
 }

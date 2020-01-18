@@ -32,7 +32,6 @@ namespace TestUri
             this.InitializeComponent();
             this.Suspending += OnSuspending;
             Uri uri = new Uri("/Images/myImage.jpg", UriKind.Relative);
-
         }
 
         /// <summary>

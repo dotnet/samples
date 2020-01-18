@@ -15,7 +15,5 @@ namespace SDKSample
             MyRichTextBoxExampleFrame.Content = new RichTextBoxExample();  
             MyBasicRichTextBoxWithContentExampleFrame.Content = new BasicRichTextBoxWithContentExample();         
         }
-        
     }
-
 }

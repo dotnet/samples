@@ -48,6 +48,5 @@ namespace TestToolWindowSearch_IntegrationTests.IntegrationTests
                 testUtils.CreateEmptySolution(TestContext.TestDir, "EmptySolution");
             });
         }
-
     }
 }

@@ -135,7 +135,6 @@ namespace Microsoft.Samples.ImplicitExplicitCorrelation
                                         Request = GetInsurancePaymentPercentageRequest,
                                         Content = SendContent.Create(new InArgument<int>((e) => percentagePaidByInsurance.Get(e)))
                                     }
-
                                 }
                             },
 
@@ -213,7 +212,6 @@ namespace Microsoft.Samples.ImplicitExplicitCorrelation
                     {
                         Text = "Workflow Completed"
                     }
-
                 }
             };
 
@@ -225,7 +223,6 @@ namespace Microsoft.Samples.ImplicitExplicitCorrelation
             };
 
             return service;
-
         }
 
         static void Main(string[] args)

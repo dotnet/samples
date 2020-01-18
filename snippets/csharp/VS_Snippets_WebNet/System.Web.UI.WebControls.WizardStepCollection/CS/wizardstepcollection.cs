@@ -30,6 +30,5 @@ public partial class WizardStepCollectioncs_aspx : System.Web.UI.Page
         // Display the wizard control on the Web page.
         PlaceHolder1.Controls.Add(Wizard1);
     }
-    
 }
 // </snippet2>

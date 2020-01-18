@@ -67,7 +67,6 @@ public class CspKeyContainerInfoExample
             Console.WriteLine("Removable property: " + keyInfo.Removable);
 
             Console.WriteLine("UniqueKeyContainerName property: " + keyInfo.UniqueKeyContainerName);
-
         }
         catch (Exception e)
         {

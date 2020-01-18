@@ -30,9 +30,7 @@ public class SamplesKoreanCalendar  {
             Console.Write( "\t{0}", myCal.GetMonthsInYear( y, myCal.Eras[i] ) );
          Console.WriteLine();
       }
-
    }
-
 }
 
 /*

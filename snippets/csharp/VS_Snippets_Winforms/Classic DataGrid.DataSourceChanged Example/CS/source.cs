@@ -13,7 +13,6 @@ private System.Windows.Forms.DataGrid dataGrid1;
     dataGrid1 = new DataGrid();
     // Add the handler for the DataSourceChanged event.
     dataGrid1.DataSourceChanged += new EventHandler(DataGrid1_DataSourceChanged);
- 
  }
  
  private void DataGrid1_DataSourceChanged(object sender, EventArgs e)

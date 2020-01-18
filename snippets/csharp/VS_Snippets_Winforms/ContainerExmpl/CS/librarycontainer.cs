@@ -79,7 +79,6 @@ namespace InterfaceSample
 			//This example does not use any service object.
 			return null;
 		}
-
 	}
 
 	// The BookComponent class represents the book component of the library container.

@@ -52,6 +52,5 @@ public class Person : IXmlSerializable
     {
         return(personName);
     }
-
 }
 // </snippet0>

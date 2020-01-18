@@ -20,7 +20,6 @@ namespace SDKSample
 
             Slider columnCountSlider = (Slider)LogicalTreeHelper.FindLogicalNode(myWindow, "ColumnCountSlider");
             columnCountSlider.ValueChanged += new RoutedPropertyChangedEventHandler<double>(OncolumnCountChanged);
-
         }
 
         /////////////////// Event Handlers
@@ -71,7 +70,6 @@ namespace SDKSample
             TextBlock t = (TextBlock)LogicalTreeHelper.FindLogicalNode(myWindow, "ColumnCountDisplay");
             t.Text = columnCount.ToString();
         }
-
     }
 
      /// <summary>

@@ -60,7 +60,6 @@ namespace PerfCounter
 			this.Name = "Form1";
 			this.Text = "Form1";
 			this.Load += new System.EventHandler(this.Form1_Load);
-
 		}
 		#endregion
 
@@ -88,7 +87,6 @@ namespace PerfCounter
 		        Array PerfCat = PerformanceCounterCategory.GetCategories();
                         MessageBox.Show(String.Concat("The number of performance counter categories in the local machine is ",PerfCat.Length.ToString()));
 			// </snippet2>
-
 		}
 	}
 }

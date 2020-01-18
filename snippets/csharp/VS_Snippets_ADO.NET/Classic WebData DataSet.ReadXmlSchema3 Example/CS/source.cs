@@ -21,5 +21,4 @@ public class Form1: Form
     thisDataSet.ReadXmlSchema(filename);
  }
 // </Snippet1>
-
 }

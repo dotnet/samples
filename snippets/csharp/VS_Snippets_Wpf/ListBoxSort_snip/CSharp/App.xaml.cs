@@ -12,6 +12,5 @@ namespace ListBoxSort_snip
 
     public partial class App : System.Windows.Application
     {
-
     }
 }

@@ -27,7 +27,6 @@ namespace SDKSample
             FlowDocument myFlowDocument = new FlowDocument(myParagraph);
 
             this.Content = myFlowDocument;
-
         }
     }
 }

@@ -291,9 +291,7 @@ public class App
 
             Console.WriteLine("Next value = " + PC.NextValue().ToString());
             samplesList.Add(PC.NextSample());
-
         }
-
     }
 
     private static void CalculateResults(ArrayList samplesList)
@@ -313,7 +311,6 @@ public class App
             Console.WriteLine("My computed counter value = " +
                 MyComputeCounterValue((CounterSample)samplesList[i],
                 (CounterSample)samplesList[i + 1]));
-
         }
     }
 

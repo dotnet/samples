@@ -18,7 +18,6 @@ class NumberFormatInfoSample {
       // Displays the same value with four decimal digits.
       nfi.CurrencyDecimalDigits = 4;
       Console.WriteLine( myInt.ToString( "C", nfi ) );
-
    }
 }
 

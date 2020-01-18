@@ -44,7 +44,6 @@ namespace GestureControl
             StylusPointCollection eventPoints = e.GetStylusPoints(this);
             stylusPoints = new StylusPointCollection(eventPoints.Description);
             stylusPoints.Add(eventPoints);
-
         }
 
         // Collect the stylus packets as the stylus moves.

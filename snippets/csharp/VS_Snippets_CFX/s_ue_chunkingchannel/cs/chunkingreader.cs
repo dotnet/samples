@@ -65,7 +65,6 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
                 {
                     return 0;
                 }
-
             }
             else
             {
@@ -86,7 +85,6 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
                 {
                     return innerReader.NodeType;
                 }
-
             }
         }
         public override bool Read()
@@ -150,13 +148,11 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
                 {
                     nextChunkNum++;
                 }
-
             }
             else
             {
                 throw new TimeoutException(String.Format("ChunkingReader timed out while waiting for chunk message number {0}", nextChunkNum));
             }
-
         }
         #endregion
 

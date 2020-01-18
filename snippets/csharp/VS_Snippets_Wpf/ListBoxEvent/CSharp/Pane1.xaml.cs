@@ -60,7 +60,6 @@ namespace ListBoxEvent
                     aRect.Tag = color;
                     rectanglesPanel.Children.Add(aRect);
                 }
-
             }
 
             // Remove the Rectangles that are the unselected colors.
@@ -96,5 +95,4 @@ namespace ListBoxEvent
             myListBox.UnselectAll();
         }
     }
-
 }

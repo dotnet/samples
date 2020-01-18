@@ -36,7 +36,6 @@ namespace Samples.AspNet.CS.Controls
 
         // Define rest of custom control implementation.
         // ...
-
 	}
     //</Snippet1>
 }

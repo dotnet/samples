@@ -30,5 +30,4 @@ namespace new_in_7
         }
         #endregion
     }
-
 }

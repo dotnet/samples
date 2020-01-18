@@ -37,7 +37,5 @@ namespace SDKSample
             // Tell the NumberList to set itself to even values.
             nl.SetEven();
         }
-
     }
-
 }

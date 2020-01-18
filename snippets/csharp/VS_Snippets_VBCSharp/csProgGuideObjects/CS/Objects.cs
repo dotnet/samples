@@ -574,7 +574,6 @@ class TestPerson
             {
                 Console.WriteLine("Coords: {0},{1}", x, y);
             }
-
         }
 
         class TestCoords
@@ -1278,7 +1277,6 @@ class TestPerson
                 {
                 }
                 //</Snippet59>
-
             }
 
             public class Manager : Employee
@@ -1340,7 +1338,6 @@ class TestPerson
                     throw new ArgumentOutOfRangeException();
                 }
             }
-
         }
 
         // Public method also exposes date field safely.
@@ -1551,7 +1548,6 @@ class TestPerson
         {
             Third t = new Third();
         }
-
     }
     /* Output (to VS Output Window):
         Third's destructor is called.
@@ -1772,7 +1768,6 @@ namespace RainyDay
             //<Snippet98>
             Console.WriteLine("Saving for a rainy day");
             //</Snippet98>  
-        
         }
     }
 }

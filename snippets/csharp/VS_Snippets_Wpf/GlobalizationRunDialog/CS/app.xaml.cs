@@ -12,6 +12,5 @@ namespace RunDialog
 
     public partial class app : Application
     {
-
     }
 }

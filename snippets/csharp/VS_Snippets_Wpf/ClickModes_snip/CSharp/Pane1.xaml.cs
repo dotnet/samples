@@ -37,6 +37,5 @@ namespace ButtonAlign
 			btn2.Background = Brushes.LightBlue;
 		}
         //</Snippet2>        
-
    }
 }

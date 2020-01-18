@@ -70,7 +70,6 @@ namespace ScrollableControl
          this.Text = "Form1";
          this.panel1.ResumeLayout(false);
          this.ResumeLayout(false);
-
       }
 		#endregion
 
@@ -93,6 +92,5 @@ private void button1_Click(object sender, EventArgs e)
    panel1.Controls.Add(myButton);
 }
 // </snippet1>
-
    }
 }

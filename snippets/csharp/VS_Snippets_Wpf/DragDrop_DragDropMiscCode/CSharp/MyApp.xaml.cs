@@ -18,6 +18,5 @@ namespace DragDropMiscCode
             Window1 mainWindow = new Window1();
             mainWindow.Show();
         }
-
     }
 }

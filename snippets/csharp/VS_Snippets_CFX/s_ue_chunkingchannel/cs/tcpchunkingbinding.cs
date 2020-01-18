@@ -17,7 +17,6 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
             : base()
         {
             Initialize();
-
         }
         public TcpChunkingBinding(string name, string ns)
             : base(name, ns)
@@ -50,7 +49,6 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
             tcpbe.MaxReceivedMessageSize = ChunkingUtils.ChunkSize + 100 * 1024; //add 100KB for headers
              this.SendTimeout = new TimeSpan(0, 5, 0);
              this.ReceiveTimeout = this.SendTimeout;
-
         }
 
         #region IBindingRuntimePreferences Members

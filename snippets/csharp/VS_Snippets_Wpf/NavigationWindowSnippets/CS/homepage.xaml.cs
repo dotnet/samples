@@ -18,5 +18,4 @@ using System.Windows.Shapes;
         {
             InitializeComponent();
         }
-
     }

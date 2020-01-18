@@ -24,5 +24,4 @@ public class Form1: Form
         paramCollection.Clear();
     }
     // </Snippet1>
-
 }

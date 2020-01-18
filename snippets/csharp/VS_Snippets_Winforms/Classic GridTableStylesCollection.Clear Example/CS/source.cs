@@ -14,5 +14,4 @@ private void ClearAndAdd()
    gts.Clear();
 }
 // </Snippet1>
-
 }

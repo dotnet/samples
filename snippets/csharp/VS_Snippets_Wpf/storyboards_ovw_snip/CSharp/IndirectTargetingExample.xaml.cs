@@ -17,7 +17,6 @@ namespace Microsoft.Samples.Animation
             InitializeComponent();
             BrushTargetingExample();
             CollectionTargetingExample();
-                  
         }
         
         private void BrushTargetingExample()
@@ -66,7 +65,6 @@ namespace Microsoft.Samples.Animation
             rectangle01.Triggers.Add(myMouseEnterTrigger);
             // </Snippet137>
             myStackPanel.Children.Add(rectangle01);        
-        
         }
         
         private void CollectionTargetingExample()
@@ -114,9 +112,6 @@ namespace Microsoft.Samples.Animation
             rectangle02.Triggers.Add(myMouseEnterTrigger);
             // </Snippet138>
             myStackPanel.Children.Add(rectangle02);        
-        
         }        
-
     }
-
 }

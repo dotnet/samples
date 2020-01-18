@@ -39,7 +39,6 @@ namespace SetBoundsCore
          this.BackColor = System.Drawing.SystemColors.Desktop;
          this.Name = "MyUserControl";
          this.Size = new System.Drawing.Size(224, 88);
-
       }
 		#endregion
 
@@ -88,6 +87,5 @@ protected override void ScaleCore(float dx, float dy)
    this.ClientSize = myClientSize;
 }
 // </snippet3>
-
 	}
 }

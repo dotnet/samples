@@ -134,6 +134,5 @@ namespace PassiveSTS
                 throw new InvalidRequestException(String.Format("The relying party address is not valid. Expected value is {0}, the actual value is {1}.", _addressExpected, appliesTo.Uri.AbsoluteUri));
             }
         }
-       
     }
 }

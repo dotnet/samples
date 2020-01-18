@@ -86,7 +86,6 @@ namespace SampleInternal
          {
             ClassLevel3 nestedClass = new ClassLevel3();
             nestedClass.Level3Method();
-
          }
          catch (Exception e) 
          {
@@ -251,7 +250,6 @@ namespace SampleInternal
          }        
       }
 //</snippet8>
-
    }
 
    public class ClassLevel6
@@ -260,7 +258,6 @@ namespace SampleInternal
       {
          throw new Exception("An error occurred in the lowest internal class method.");
       }
-
    }
 }
 //</snippet1>

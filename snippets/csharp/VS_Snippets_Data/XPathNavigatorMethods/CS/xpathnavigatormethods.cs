@@ -11,7 +11,6 @@ class XPathNavigatorMethods
 
     static void Main()
     {
-        
     }
 
     #region AppendChild/Element

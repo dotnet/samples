@@ -92,6 +92,5 @@ namespace Microsoft.Samples.WF.PurchaseProcess
 
             return ret;
         }
-        
     }
 }

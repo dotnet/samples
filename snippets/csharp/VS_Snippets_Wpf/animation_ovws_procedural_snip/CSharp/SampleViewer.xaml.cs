@@ -15,7 +15,5 @@ namespace SDKSample
             MyRectangleOpacityFadeExampleFrame.Content = new RectangleOpacityFadeExample();
             MyControllableStoryboardExampleFrame.Content = new ControllableStoryboardExample();
         }
-        
     }
-
 }

@@ -81,7 +81,6 @@ public static void MySample(bool networkStreamOwnsSocket){
 
             // Close the NetworkStream
             myNetworkStream.Close();
-
        }
        catch (Exception exception){
             Console.WriteLine("Exception Thrown: " + exception.ToString());
@@ -118,7 +117,6 @@ public static void myReadCallBack(IAsyncResult ar ){
         myNetworkStream.BeginRead(myReadBuffer, 0, myReadBuffer.Length, 
         	                                       new AsyncCallback(NetworkStream_ASync_Send_Receive.myReadCallBack), 
         	                                       myNetworkStream);  
-
     }
 
     // Print out the received message to the console.
@@ -138,7 +136,5 @@ public static void Main(String[] args){
     	 Console.WriteLine("Must use 'yes' to allow the NetworkStream to own the Socket or " +
     	                            "\n 'no' to prohibit NetworkStream from owning the Socket. ");
     }
-
 }
-
 }

@@ -35,7 +35,6 @@ namespace Examples.CS.WebControls.Design
             set { selectParams = value; }
         } // SelectParameters
         // </snippet2>
-
     } // MyDataSourceControl
 } // Examples.CS.WebControls.Design
 // </snippet1>

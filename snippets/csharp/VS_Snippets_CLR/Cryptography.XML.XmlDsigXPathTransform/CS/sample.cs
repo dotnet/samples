@@ -135,7 +135,6 @@ public class SignVerifyEnvelope
 
         // Check the signature and return the result.
         return signedXml.CheckSignature();
-
     }
 
     // Create the XML that represents the transform.

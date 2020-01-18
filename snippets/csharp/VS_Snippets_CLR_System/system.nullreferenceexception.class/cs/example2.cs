@@ -21,7 +21,6 @@ public class Example
    private static List<String> GetData() 
    {
       return null;   
-   
    }
 }
 // The example displays output like the following:

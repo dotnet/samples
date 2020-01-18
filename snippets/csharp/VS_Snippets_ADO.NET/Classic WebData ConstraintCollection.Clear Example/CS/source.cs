@@ -12,5 +12,4 @@ public class Sample
       table.Constraints.Clear();
  }
 // </Snippet1>
-
 }

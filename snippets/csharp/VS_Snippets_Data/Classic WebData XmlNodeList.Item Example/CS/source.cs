@@ -17,7 +17,6 @@ public class Sample {
      XmlElement root = doc.DocumentElement;
      XmlNodeList nodeList = root.GetElementsByTagName("item");
      Console.WriteLine(nodeList.Item(1).InnerXml);     
-    
   }
 }
  // </Snippet1>

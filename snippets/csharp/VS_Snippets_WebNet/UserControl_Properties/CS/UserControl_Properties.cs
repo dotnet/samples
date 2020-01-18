@@ -11,6 +11,5 @@ public class MyControl:UserControl
       {
          return _message;
       }
-
    }
 }

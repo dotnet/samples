@@ -396,6 +396,5 @@ namespace Microsoft.VsSDK.IntegrationTestLibrary
             DTE dte = VsIdeTestHostContext.Dte;
             dte.Commands.Raise(guidString, cmdId, ref Customin, ref Customout);
         }
-
     }
 }

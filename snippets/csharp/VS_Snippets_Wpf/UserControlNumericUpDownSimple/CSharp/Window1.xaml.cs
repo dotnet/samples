@@ -25,6 +25,5 @@ namespace MyUserControl
         {
             Title = numupdown.Value.ToString();
         }
-
     }
 }

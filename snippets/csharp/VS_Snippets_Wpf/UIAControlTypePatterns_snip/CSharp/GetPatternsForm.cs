@@ -164,7 +164,5 @@ namespace GetSupportedPatterns
             }
 // </Snippet102>
         }
-
     }
-
 }

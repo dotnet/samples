@@ -19,7 +19,6 @@ public partial class Default2 : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         Response.Write("Hello world");
-
     }
     // This method will be automatically bound to the Load event 
     // when AutoEventWireup is true only if no overload having 

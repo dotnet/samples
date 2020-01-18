@@ -29,8 +29,6 @@ namespace ExpenseIt
             // View Expense Report
             ExpenseReportPage expenseReportPage = new ExpenseReportPage();
             this.NavigationService.Navigate(expenseReportPage);
-
         }
-      
     }
 }

@@ -12,6 +12,5 @@ public class Example
         var date = new DateTime(2, 1, 1, japaneseCal);
         Console.WriteLine($"Gregorian calendar date: {date:d}");
         Console.WriteLine($"Japanese calendar date: {date.ToString("d", jaJp)}");
-
     }
 }

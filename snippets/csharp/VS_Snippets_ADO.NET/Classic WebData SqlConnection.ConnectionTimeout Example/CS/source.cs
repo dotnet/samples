@@ -32,5 +32,4 @@ class Program
             + "Integrated Security=SSPI;Connection Timeout=30";
     }
     // </Snippet1>
-
 }

@@ -53,8 +53,6 @@ namespace Samples
         { 
             // Code not shown.
         }
-
     }
     //</snippet0>
-
 }

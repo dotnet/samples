@@ -50,7 +50,6 @@ namespace Samples.AspNet
 
             config.Save();
         }
-
     }
 }
 //</Snippet1>

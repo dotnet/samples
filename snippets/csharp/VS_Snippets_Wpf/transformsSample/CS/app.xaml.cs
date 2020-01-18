@@ -17,13 +17,11 @@ namespace Microsoft.Samples.Graphics.Transforms
 
 			Window mainWindow = new SampleViewer();
 			mainWindow.Show();
-
 		}
 
 		private void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs args)
 		{
 			MessageBox.Show("Unhandled exception: " + args.ExceptionObject.ToString());
 		}
-
     }
 }

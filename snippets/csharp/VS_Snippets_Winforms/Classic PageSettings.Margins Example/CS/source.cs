@@ -39,6 +39,5 @@ public void Printing(){
  // Method added so sample will compile
  private void pd_PrintPage(object sender,
    PrintPageEventArgs e) {
-
  }
 }

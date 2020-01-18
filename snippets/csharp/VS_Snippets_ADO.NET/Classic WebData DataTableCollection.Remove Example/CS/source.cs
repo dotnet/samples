@@ -68,6 +68,5 @@ namespace WebData_Examples
                 dataSet.Tables.Count);
         }
         // </Snippet1>
-
     }
 }

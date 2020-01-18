@@ -40,7 +40,6 @@ public class Sample
         {
             row["name"] = string.Format("vip{0}", row["id"]);
         }
-
     }
 
     private static void Column_Changing(object sender, 

@@ -12,7 +12,6 @@ public class Example
          Console.WriteLine("A duplicate '{0}' at position {1} is followed by '{2}'.", 
                            match.Groups["duplicateWord"].Value, match.Groups["duplicateWord"].Index, 
                            match.Groups["nextWord"].Value);
-
    }
 }
 // The example displays the following output:

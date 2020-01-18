@@ -31,7 +31,6 @@ namespace Samples.AspNet
             {
                 this["name"] = value;
             }
-
         }
         // </Snippet72>
 
@@ -88,7 +87,6 @@ namespace Samples.AspNet
             return s;
         }
         //</Snippet74>
-
     }
 }
 //</Snippet71>

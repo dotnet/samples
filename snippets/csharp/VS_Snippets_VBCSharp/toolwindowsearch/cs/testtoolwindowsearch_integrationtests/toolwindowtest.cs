@@ -48,9 +48,7 @@ namespace TestToolWindowSearch_IntegrationTests
                 testUtils.ExecuteCommand(toolWindowCmd);
 
                 Assert.IsTrue(testUtils.CanFindToolwindow(new Guid(Microsoft.TestToolWindowSearch.GuidList.guidToolWindowPersistanceString)));
-
             });
         }
-
     }
 }

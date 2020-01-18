@@ -15,6 +15,5 @@ namespace SyndicationItemSnippets
 
     public class MyExtension
     {
-
     }
 }

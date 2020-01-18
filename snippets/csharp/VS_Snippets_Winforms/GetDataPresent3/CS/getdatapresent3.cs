@@ -59,7 +59,6 @@ namespace GetDataPresent3
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-
         }
         #endregion
 
@@ -93,12 +92,10 @@ namespace GetDataPresent3
 
         private void Form1_Load(object sender, System.EventArgs e)
         {
-        
         }
 
         private void label1_Click(object sender, System.EventArgs e)
         {
-        
         }
     }
 }

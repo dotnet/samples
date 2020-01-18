@@ -208,7 +208,6 @@ namespace MyDataGridClass
          this.Text = "Grid Control";
          ((ISupportInitialize)(this.myDataGrid)).EndInit();
          this.ResumeLayout(false);
-
       }
       #endregion
 
@@ -267,7 +266,6 @@ namespace MyDataGridClass
          myColorDialog.ShowDialog();
          // Set the header background color.   
          myDataGrid.HeaderBackColor  = myColorDialog.Color;
-         
       }
       // Reset the header background color.
       private void button2_Click(object sender, EventArgs e)

@@ -16,7 +16,6 @@ namespace PropChanged
       public Form1()
       {
          InitializeComponent();
-
       }
 
       protected override void Dispose( bool disposing )
@@ -63,7 +62,6 @@ namespace PropChanged
          this.Name = "Form1";
          this.Text = "Form1";
          this.ResumeLayout(false);
-
       }
 		#endregion
 
@@ -105,7 +103,5 @@ protected override void OnTextChanged(System.EventArgs e)
    base.OnTextChanged(e);
 }
 // </snippet1>
-
    }
-
 }

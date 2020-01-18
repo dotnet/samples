@@ -31,7 +31,6 @@ class Program
             builder.IntegratedSecurity = true;
 
             Console.WriteLine("Modified: " + builder.ConnectionString);
-
         }
         catch (Exception ex)
         {

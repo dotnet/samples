@@ -22,7 +22,6 @@ namespace WPFClock
         {
 			InitializeComponent();
             this.Loaded += new RoutedEventHandler(Clock_Loaded);
-
         }
 
         void Clock_Loaded(object sender, RoutedEventArgs e) {

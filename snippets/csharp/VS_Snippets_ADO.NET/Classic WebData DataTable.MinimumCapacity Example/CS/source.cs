@@ -16,5 +16,4 @@ public class Form1: Form
         table.MinimumCapacity = 100;
     }
     // </Snippet1>
-
 }

@@ -58,7 +58,6 @@ namespace MyProject
 			{
 				Console.WriteLine(e.Message);
 			}
-			
 		}
 
 		//**************************************************
@@ -85,7 +84,6 @@ namespace MyProject
 			catch(ArgumentException e)
 			{
 				Console.WriteLine(e.Message);
-			
 			}
 
 			return;
@@ -113,7 +111,6 @@ namespace MyProject
 				
 				// This will be saved in the \bin\debug or \bin\retail folder.
 				myImage.Save("ReceivedImage.bmp",System.Drawing.Imaging.ImageFormat.Bmp);
-
 			}
 			
 			catch (MessageQueueException)

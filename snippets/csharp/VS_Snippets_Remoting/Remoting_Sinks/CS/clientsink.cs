@@ -88,7 +88,6 @@ public class ClientSink : BaseChannelSinkWithProperties, IClientChannelSink
       if (sink == null) throw new ArgumentNullException("sink");
       nextSink = sink;
     }
-
 }
 // </snippet20>
 
@@ -135,6 +134,5 @@ public class ClientSinkProvider : IClientChannelSinkProvider
     // This constructor is required in order to use the provider in file-based configuration.
     // It need not do anything unless you want to use the information in the parameters.
     public ClientSinkProvider (IDictionary properties, ICollection providerData) {}
-    
 }
 // </snippet30>

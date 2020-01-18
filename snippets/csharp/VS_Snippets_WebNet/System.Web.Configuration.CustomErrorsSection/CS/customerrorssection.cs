@@ -138,8 +138,6 @@ namespace Samples.AspNet.Configuration
                 new CustomErrorsSection();
 
             // </Snippet12>
-
         }
     }
-
 }

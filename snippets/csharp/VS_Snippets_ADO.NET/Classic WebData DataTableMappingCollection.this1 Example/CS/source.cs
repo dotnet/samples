@@ -25,5 +25,4 @@ public class Form1: Form
                 + "Index: " + mappings.IndexOf("Categories").ToString());
     }
     // </Snippet1>
-
 }

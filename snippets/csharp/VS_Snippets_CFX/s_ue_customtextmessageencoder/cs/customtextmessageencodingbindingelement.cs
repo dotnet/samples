@@ -52,7 +52,6 @@ namespace Microsoft.ServiceModel.Samples
         public CustomTextMessageBindingElement(string encoding)
             : this(encoding, "text/xml")
         {
-
         }
 
         public CustomTextMessageBindingElement()

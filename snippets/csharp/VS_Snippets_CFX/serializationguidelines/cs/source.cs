@@ -58,7 +58,6 @@ namespace MiscCodeExamples
             // Implement get and set.
             get { return lastName; }
             private set { lastName = value; }
-
         }
 
         [DataMember]
@@ -241,5 +240,4 @@ namespace MiscCodeExamples
         }
     }
     //</snippet8>      
-
 }

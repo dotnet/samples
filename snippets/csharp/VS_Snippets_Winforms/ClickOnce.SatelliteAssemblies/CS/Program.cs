@@ -46,7 +46,6 @@ namespace ClickOnce.SatelliteAssemblies
                 }
             }
         }
-
     }
 }
 //</SNIPPET1>

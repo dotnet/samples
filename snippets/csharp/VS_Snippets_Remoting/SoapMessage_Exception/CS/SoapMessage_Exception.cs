@@ -252,7 +252,6 @@ public class MathSvc : System.Web.Services.Protocols.SoapHttpClientProtocol
                                                             yValue});
       returnValue = (System.Single)results[1];
       return ((System.Single)(results[0]));
-     
    }
 
    [System.Diagnostics.DebuggerStepThroughAttribute()]

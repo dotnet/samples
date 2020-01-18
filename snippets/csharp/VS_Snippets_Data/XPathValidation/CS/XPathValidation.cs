@@ -51,7 +51,6 @@ class XPathValidation
                 Console.WriteLine("Warning {0}", e.Message);
                 break;
         }
-
     }
 }
 //</snippet1>

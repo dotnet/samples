@@ -146,8 +146,6 @@ public class SignVerifyEnvelope
         XmlTextWriter xmltw = new XmlTextWriter(FileName, new UTF8Encoding(false));
         document.WriteTo(xmltw);
         xmltw.Close();
-		
     }
-
 }
 // </Snippet1>

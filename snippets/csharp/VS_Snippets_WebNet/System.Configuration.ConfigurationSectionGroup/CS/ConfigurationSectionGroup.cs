@@ -101,7 +101,6 @@ namespace Samples.AspNet
             Console.WriteLine(text.Substring(0, Math.Min(79 - indentLevel * 2, text.Length)));
         }
     }
-
 }
 //</Snippet1>
 
@@ -141,6 +140,5 @@ namespace Samples.AspNet
                 sectionGroup.Name, force.ToString());
         }
         //</Snippet13>
-
     }
 }

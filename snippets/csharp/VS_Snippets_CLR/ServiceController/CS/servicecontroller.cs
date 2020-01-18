@@ -63,7 +63,6 @@ namespace ServiceControllerSample
                   // Quit if input was any other key.
                   break;
             }
-
          }
          catch (Exception e)
          {
@@ -263,7 +262,6 @@ namespace ServiceControllerSample
             {
                numRecognizer++;
             }
-
          }
 
          Console.WriteLine();
@@ -312,6 +310,5 @@ namespace ServiceControllerSample
          }
          // </snippet6>
       }
-
    }
 }

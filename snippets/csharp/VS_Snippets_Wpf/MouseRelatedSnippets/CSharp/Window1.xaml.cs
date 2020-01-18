@@ -68,7 +68,6 @@ namespace FocusSample
                 UpdateSampleResults("Second Extended Button Pressed");
             }
             //</SnippetMouseRelatedSnippetsGetX2ButtonMouse>
-
         }
 
         private void TextBoxMouseDeviceDownHandler(object sender, MouseEventArgs e)
@@ -115,7 +114,6 @@ namespace FocusSample
                 UpdateSampleResults("Second Extended Button Pressed");
             }
             //</SnippetMouseRelatedSnippetsGetX2ButtonMouseDevice>
-
         }
 
         private void MouseMoveMouseHandler(object sender, RoutedEventArgs e)
@@ -153,15 +151,12 @@ namespace FocusSample
                     "\n" +
                     "Y: " + position.Y; 
             }
-            
         }
         //</SnippetMouseRelatedSnippetsPositionMouseDevice>
 
         public void UpdateSampleResults(string output)
         {
             txtBoxResults.Text += output + "\n";
-            
         }
-
     }
 }

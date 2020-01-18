@@ -144,7 +144,6 @@ namespace Examples.System.Net
                 state.OperationComplete.Set();
                 return;
             }
-           
         }
         //</snippet5> 
         

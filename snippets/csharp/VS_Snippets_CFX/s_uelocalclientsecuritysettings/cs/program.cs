@@ -122,8 +122,6 @@ namespace Snippets
             LocalClientSecuritySettings clone =
                 settings.Clone();
             // </Snippet14>
-
         }
     }
-
 }

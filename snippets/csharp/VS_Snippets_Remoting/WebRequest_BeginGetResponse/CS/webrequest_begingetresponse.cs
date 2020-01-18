@@ -87,7 +87,6 @@ class WebRequest_BeginGetResponse
       myRequestState.responseStream=responseStream;
       // Begin the reading of the contents of the HTML page and print it to the console.
       IAsyncResult asynchronousResultRead = responseStream.BeginRead(myRequestState.bufferRead, 0, BUFFER_SIZE, new AsyncCallback(ReadCallBack), myRequestState);
-    
     }
     catch(WebException e)
     {
@@ -142,9 +141,7 @@ class WebRequest_BeginGetResponse
       Console.WriteLine("Source : {0}" , e.Source);
       Console.WriteLine("Message : {0}" , e.Message);
     }
-
   }
-
 }
 // </Snippet2>
 // </Snippet1>

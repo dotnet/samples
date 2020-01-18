@@ -82,7 +82,6 @@ namespace RichTextBoxSelectionLengthEx
          this.Name = "Form1";
          this.Text = "C#";
          this.ResumeLayout(false);
-
       }
 		#endregion
 

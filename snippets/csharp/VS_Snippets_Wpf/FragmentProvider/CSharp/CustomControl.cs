@@ -372,7 +372,6 @@ namespace CustomControls
                     InternalSelect(currentSelection + 1);
                 }
                 return true;
-
             }
             else if (keyData == Keys.Up)
             {
@@ -639,6 +638,5 @@ namespace CustomControls
                 ItemProvider = value;
             }
         }
-
     }
 }

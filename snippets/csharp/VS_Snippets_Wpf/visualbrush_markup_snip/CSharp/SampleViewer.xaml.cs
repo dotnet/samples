@@ -16,7 +16,5 @@ namespace SDKSample
             MyReflectionExampleFrame.Content = new ReflectionExample();
             MyAutoLayoutContentExampleFrame.Content = new AutoLayoutContentExample();
         }
-        
     }
-
 }

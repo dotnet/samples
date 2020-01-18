@@ -18,6 +18,5 @@ namespace StackPanel_layout
 			mainWindow.InitializeComponent();
 			mainWindow.Show();
         }
-
 	}
 }

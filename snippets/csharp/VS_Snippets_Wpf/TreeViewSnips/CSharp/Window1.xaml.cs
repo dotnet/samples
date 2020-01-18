@@ -34,7 +34,6 @@ namespace TreeViewSnips
                 //<SnippetSelectedValuePath>
                 string selectedTVValuePath = myTreeView.SelectedValuePath;
                 //</SnippetSelectedValuePath>
-
             }
             //<SnippetIsExpanded>
             Employee1Data.IsExpanded = true;
@@ -83,6 +82,5 @@ namespace TreeViewSnips
             //Perform actions when the TreeViewItem is expanded
         }
         //</SnippetOnExpanded>
-
     }
 }

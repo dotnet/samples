@@ -52,6 +52,5 @@ namespace PopupPositionSnippets
             Canvas.SetTop(popupEllipse, circleTop);
             Canvas.SetRight(popupEllipse, circleLeft);
         }
-
     }
 }

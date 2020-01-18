@@ -76,7 +76,6 @@ namespace Microsoft.ServiceModel.Samples
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://Microsoft.ServiceModel.Samples/ICalculator/Multiply", ReplyAction = "http://Microsoft.ServiceModel.Samples/ICalculator/MultiplyResponse")]
         double Multiply(double n1, double n2);
-
    }
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
@@ -121,6 +120,5 @@ namespace Microsoft.ServiceModel.Samples
         {
             return base.Channel.Multiply(n1, n2);
         }
-
      }
 }

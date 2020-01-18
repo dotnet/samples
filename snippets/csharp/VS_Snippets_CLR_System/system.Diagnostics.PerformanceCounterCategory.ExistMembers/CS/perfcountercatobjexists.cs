@@ -41,7 +41,6 @@ class PerfCounterCatObjCountExistsMod
             // Check whether the specified counter exists.
             // Use the per-instance overload of CounterExists.
             objectExists = pcc.CounterExists(counterName);
-
         }
         catch(Exception ex)
         {

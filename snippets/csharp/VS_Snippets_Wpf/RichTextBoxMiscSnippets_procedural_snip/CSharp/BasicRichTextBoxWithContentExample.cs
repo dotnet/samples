@@ -34,7 +34,6 @@ namespace SDKSample
             
             myStackPanel.Children.Add(myRichTextBox);
             this.Content = myStackPanel;
-            
         }
     }
 }

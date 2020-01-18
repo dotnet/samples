@@ -14,5 +14,4 @@ public class Form1: Form
         Console.WriteLine(relation.ToString());
     }
     // </Snippet1>
-
 }

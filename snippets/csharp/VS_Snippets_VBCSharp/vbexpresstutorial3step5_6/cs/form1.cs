@@ -135,7 +135,5 @@ namespace Math_Quiz
             }
             // </snippet22>
         }
-
     }
-
 }

@@ -21,7 +21,6 @@ namespace Samples.AspNet.CS.Controls
         public MyCatalogPartChrome(CatalogZoneBase zone)
             : base(zone)
         {
-
         }
 
         // <Snippet3>

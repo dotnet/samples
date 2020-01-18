@@ -37,9 +37,7 @@ public class SamplesHijriCalendar  {
          }
          Console.WriteLine();
       }
-
    }
-
 }
 
 /*

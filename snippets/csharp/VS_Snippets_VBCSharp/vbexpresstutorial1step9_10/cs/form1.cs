@@ -64,7 +64,5 @@ namespace PictureViewer
             pictureBox1.SizeMode = PictureBoxSizeMode.Normal;
     }
     // </snippet2>
-
     }
-
 }

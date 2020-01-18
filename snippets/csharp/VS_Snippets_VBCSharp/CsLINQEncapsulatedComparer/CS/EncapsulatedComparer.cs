@@ -172,7 +172,6 @@ class Program
         */
         //</Snippet8>
         Console.ReadLine();
-
     }
 
 //<Snippet9>
@@ -193,5 +192,4 @@ public class ProductA: IEquatable<ProductA>
     public override int GetHashCode() => (Name, Code).GetHashCode();
 }
 //</Snippet9>
-
 }

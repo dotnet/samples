@@ -32,7 +32,6 @@ class ParseAddress
 
         // Get the list of the IPv6 addresses associated with the requested host.
         Parse(IPaddress);
-   
   }
 
   // This method calls the IPAddress.Parse method to check the ipAddress 
@@ -72,7 +71,6 @@ class ParseAddress
       Console.WriteLine("Source : " + e.Source);
       Console.WriteLine("Message : " + e.Message);
     }
-
    }
 }
 // </Snippet1>

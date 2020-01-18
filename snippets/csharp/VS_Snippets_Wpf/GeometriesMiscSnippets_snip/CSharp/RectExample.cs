@@ -64,6 +64,5 @@ namespace SDKSample
             this.Content = myCanvas;       
         }
     }
-
 }
 // </SnippetRectExampleWholePage>

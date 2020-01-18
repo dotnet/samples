@@ -65,7 +65,6 @@ namespace CursorStuff
 			this.Name = "Form1";
 			this.Text = "Form1";
 			this.ResumeLayout(false);
-
 		}
 		#endregion
 
@@ -125,6 +124,5 @@ private void DrawCursorsOnForm(Cursor cursor)
 		{
 			this.DrawCursorsOnForm(new Cursor("c:\\MyCursor.cur"));
 		}
-
 	}
 }

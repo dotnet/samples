@@ -51,7 +51,6 @@ namespace WebApplication
                 this.ClaimsGridView.DataSource = claimsPrincipal.Claims;
                 this.ClaimsGridView.DataBind();
             }
-
         }
     }
 }

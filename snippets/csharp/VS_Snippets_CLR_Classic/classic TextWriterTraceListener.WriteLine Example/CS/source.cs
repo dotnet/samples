@@ -20,6 +20,5 @@ public static void Main(string[] args) {
     myWriter.Flush();
     myWriter.Close();
  }
-
 }
 // </Snippet1>

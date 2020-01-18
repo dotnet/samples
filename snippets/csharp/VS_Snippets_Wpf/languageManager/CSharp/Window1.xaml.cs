@@ -43,6 +43,5 @@ namespace languageManagerSample
                 tb1.Text = "Current Input Language is " + InputLanguageManager.Current.CurrentInputLanguage.ToString();
                 // </Snippet3>
             }
-
 	}
 }

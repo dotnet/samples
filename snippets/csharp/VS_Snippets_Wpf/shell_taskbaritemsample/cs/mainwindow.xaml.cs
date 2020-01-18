@@ -118,7 +118,6 @@ namespace Shell_TaskbarItemSample
                 }
             }
         }
-    
     }   
 }
 // </snippet100>

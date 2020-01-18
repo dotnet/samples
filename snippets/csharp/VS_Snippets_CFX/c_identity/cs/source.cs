@@ -82,5 +82,4 @@ namespace IdentityExample
             return a + b;
         }
     }
-
 }

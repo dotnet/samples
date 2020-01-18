@@ -27,7 +27,6 @@ public class UrlsSection : ConfigurationSection
         {
             UrlsCollection urlsCollection = value;
         }
-    
     }
 
     // Create a new instance of the UrlsSection.
@@ -38,9 +37,7 @@ public class UrlsSection : ConfigurationSection
     {
         UrlConfigElement url = new UrlConfigElement();
         Urls.Add(url);
-
     }
-
 }
 
 // Define the UrlsCollection that contains the 
@@ -51,7 +48,6 @@ public class UrlsCollection : ConfigurationElementCollection
 
     public UrlsCollection()
     {
-       
     }
 
     //<Snippet5>
@@ -117,7 +113,6 @@ public class UrlsCollection : ConfigurationElementCollection
         BaseAdd(url);
 
         // Your custom code goes here.
-       
     }
     // </Snippet2>
 
@@ -126,7 +121,6 @@ public class UrlsCollection : ConfigurationElementCollection
         BaseAdd(element, false);
 
         // Your custom code goes here.
-      
     }
     
     //<Snippet3>
@@ -146,7 +140,6 @@ public class UrlsCollection : ConfigurationElementCollection
         BaseRemoveAt(index);
 
         // Your custom code goes here.
-      
     }
     
     public void Remove(string name)
@@ -154,7 +147,6 @@ public class UrlsCollection : ConfigurationElementCollection
         BaseRemove(name);
 
         // Your custom code goes here.
-      
     }
     
     // <Snippet4>
@@ -166,7 +158,6 @@ public class UrlsCollection : ConfigurationElementCollection
         Console.WriteLine("UrlsCollection: {0}", "Removed entire collection!");
     }
     // </Snippet4>
-
 }
 
 // Define the UrlsConfigElement elements that are contained 
@@ -182,7 +173,6 @@ public class UrlConfigElement : ConfigurationElement
 
     public UrlConfigElement()
     {
-
     }
 
     [ConfigurationProperty("name", DefaultValue = "Contoso",
@@ -227,6 +217,5 @@ public class UrlConfigElement : ConfigurationElement
             this["port"] = value;
         }
     }
-    
 }
 //</Snippet1>

@@ -10,7 +10,6 @@ namespace Samples.AspNet
     {
         public SampleSection()
         {
-
         }
 
         //<Snippet2>
@@ -198,7 +197,6 @@ namespace Samples.AspNet
 #endif
             }
             //</Snippet12>
-
         }
 
         public static void IntegerValidatorInstance()
@@ -227,7 +225,6 @@ namespace Samples.AspNet
 #endif
             }
             //</Snippet13>
-
         }
 
         public static void StringValidatorInstance()
@@ -256,7 +253,6 @@ namespace Samples.AspNet
 #endif
             }
             //</Snippet14>
-
         }
 
         public static void RegexStringValidatorInstance()
@@ -294,7 +290,6 @@ namespace Samples.AspNet
 #endif
             }
             //</Snippet15>
-
         }
     }
     //</Snippet1>
@@ -326,7 +321,6 @@ namespace Samples.AspNet
                     customSection.Alias);
                 Console.WriteLine("  Alias 2: {0}",
                     customSection.Alias2);
-
             }
         }
 
@@ -357,7 +351,6 @@ namespace Samples.AspNet
 
                 Console.WriteLine("  AllowExeDefinition: {0}",
                     customSection.SectionInformation.AllowExeDefinition);
-
             }
         }
 

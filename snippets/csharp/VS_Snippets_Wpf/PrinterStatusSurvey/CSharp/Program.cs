@@ -42,9 +42,7 @@ namespace PrinterStatusSurvey
                      {
                          TroubleSpotter.SpotTroubleUsingProperties(ref statusReport, pq);
                      }                 
-
                  }// end for each print queue
-
              }// end while list of print servers is not yet exhausted
 
             fileOfPrintServers.Close();
@@ -53,9 +51,7 @@ namespace PrinterStatusSurvey
             Console.ReadLine();
             
             //</SnippetSurveyQueues>
-
         }//end Main
-
     }//end Program class
 
     class TroubleSpotter
@@ -120,7 +116,6 @@ namespace PrinterStatusSurvey
             // Check if queue is even available at this time of day
             // The following method is defined in the complete example.
             ReportAvailabilityAtThisTime(ref statusReport, pq);
-
         }//end SpotTroubleUsingProperties
         // </SnippetSpotTroubleUsingQueueProperties>
 
@@ -205,7 +200,5 @@ namespace PrinterStatusSurvey
             }
         }
         // </SnippetUsingStartAndUntilTimes>
-
     }// end TroubleSpotter class
-
 }//end namespace

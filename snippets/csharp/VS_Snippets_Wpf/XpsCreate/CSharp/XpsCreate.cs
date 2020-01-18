@@ -450,5 +450,4 @@ public class XpsCreate
             }
         }
     }// end:WriteObfuscatedStream()
-
 }// end:class XpsCreate

@@ -489,7 +489,6 @@ namespace CsProgGuideTypes
 
             //see also snippet38 below
         }
-
     }
 
     //Types and Type Conversions f782d7cc-035e-4500-b1b1-36a9881130ad
@@ -719,7 +718,6 @@ namespace CsProgGuideTypes
             // because Mammal is not convertible to Reptile.
             Reptile r = (Reptile)a;
         }
-
     }
     //</snippet41>
 
@@ -832,7 +830,6 @@ namespace CsProgGuideTypes
             // GetType returns the exact run-time type.            
             object o = derived;
             Console.WriteLine("The run-time type of o is {0}", o.GetType().Name);
-
         }
     }
     /* Output:

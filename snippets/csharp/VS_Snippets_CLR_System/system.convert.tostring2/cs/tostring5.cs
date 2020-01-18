@@ -29,7 +29,6 @@ public class Temperature
    {
       return m_Temp.ToString("N2") + " °C";
    }
-
 }
 
 public class Example

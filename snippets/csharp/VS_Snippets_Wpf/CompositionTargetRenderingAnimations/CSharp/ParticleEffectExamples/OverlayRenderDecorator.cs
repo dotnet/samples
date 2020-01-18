@@ -244,7 +244,6 @@
         /// <param name="dc"></param>
         protected virtual void OnOverlayRender(DrawingContext dc)
         {
-
         }
 
         /// <summary>
@@ -253,7 +252,6 @@
         /// <param name="child"></param>
         protected virtual void OnAttachChild(UIElement child)
         {
-
         }
 
         /// <summary>
@@ -262,7 +260,6 @@
         /// <param name="child"></param>
         protected virtual void OnDetachChild(UIElement child)
         {
-
         }
 
         protected override int VisualChildrenCount
@@ -278,5 +275,4 @@
         #endregion
 
     }
-
 }

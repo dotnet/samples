@@ -11,7 +11,6 @@ class MySample{
         EventLog.WriteEntry("MySource", 
 			"Writing warning to event log.", 
 			EventLogEntryType.Warning);
-        
     }
 }
       

@@ -28,7 +28,6 @@ namespace ToolTipExample
          //
          // TODO: Add any constructor code after InitializeComponent call
          //
-        
       }
 
       /// <summary>
@@ -71,7 +70,6 @@ namespace ToolTipExample
          this.Text = "Form1";
          this.Load += new System.EventHandler(this.Form1_Load);
          this.ResumeLayout(false);
-
       }
 		#endregion
 

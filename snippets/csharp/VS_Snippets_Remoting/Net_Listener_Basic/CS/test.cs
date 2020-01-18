@@ -186,7 +186,6 @@ public class ListenerBasic
             listener.Abort ();
             return;
         }
-
     }
     // </snippet11>
     // <snippet12>
@@ -342,7 +341,6 @@ public class ListenerBasic
             Console.WriteLine("Protocol version: {0}", request.ProtocolVersion);
             Console.WriteLine("Is authenticated: {0}", request.IsAuthenticated);
             Console.WriteLine("Is secure: {0}", request.IsSecureConnection);
-
         }
         // </snippet17>
         // <snippet18>
@@ -488,7 +486,6 @@ public class ListenerBasic
     // <snippet22>
     public static void ShowSendFormat (HttpListenerResponse response)
     {
-
     }
     // </snippet22>
 
@@ -692,6 +689,5 @@ public class ListenerBasic
                     context.Close();
                     listener.Stop();
 */
-       
     }
 }

@@ -43,6 +43,5 @@ namespace PassiveFlowSTS
 
             return base.IsValidRequestString(context, value, requestValidationSource, collectionKey, out validationFailureIndex);
         }
-
     }
 }

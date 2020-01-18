@@ -45,7 +45,6 @@ public class RSAKeyStoreSample
         {
             Console.WriteLine("Exception: {0}", e.GetType().FullName);
             Console.WriteLine(e.Message);
-
         }
     }
 

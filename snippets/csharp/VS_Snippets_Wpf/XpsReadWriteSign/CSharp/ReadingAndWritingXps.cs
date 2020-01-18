@@ -338,5 +338,4 @@ namespace SDKSample
         #endregion Private Members
 
     }// end:class XpsReadWriteUtility
-
 }// end:namespace SDKSample

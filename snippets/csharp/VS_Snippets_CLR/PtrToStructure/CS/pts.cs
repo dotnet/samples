@@ -17,8 +17,7 @@ namespace Testing
 			[MarshalAs(UnmanagedType.ByValTStr, SizeConst =  10)]
 			public string field1;
 			[MarshalAs(UnmanagedType.ByValArray, SizeConst =  100)]
-			public byte[] inner;
-		}
+			public byte[] inner;		}
 		[DllImport(@"SomeTestDLL.dll")]
 		public static extern void CallTest( ref OUTER po);
 		static void Main(string[] args)
@@ -31,12 +30,10 @@ namespace Testing
 			ed.inner = new byte[sz];
 			try
 			{
-				CallTest( ref ed);
-			}
+				CallTest( ref ed);			}
 			catch(Exception e)
 			{
-				Console.WriteLine(e.Message);
-			}
+				Console.WriteLine(e.Message);			}
 			IntPtr buffer = Marshal.AllocCoTaskMem(iStructSize*10);
 			Marshal.Copy(ed.inner,0,buffer,iStructSize*10);
 			int iCurOffset = 0;
@@ -44,11 +41,7 @@ namespace Testing
 			{
 				inn[i] = (INNER)Marshal.PtrToStructure(new
 IntPtr(buffer.ToInt32()+iCurOffset),typeof(INNER) );
-				iCurOffset += iStructSize;
-			}
+				iCurOffset += iStructSize;			}
 			Console.WriteLine(ed.field1);
-			Marshal.FreeCoTaskMem(buffer);
-		}
-		// </snippet1>
-	}
-}
+			Marshal.FreeCoTaskMem(buffer);		}
+		// </snippet1>	}}

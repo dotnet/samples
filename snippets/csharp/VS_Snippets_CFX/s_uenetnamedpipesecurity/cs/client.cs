@@ -40,7 +40,6 @@ namespace Microsoft.ServiceModel.Samples
               value2 = 7.00D;
               result = wcfClient.Divide(value1, value2);
               Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result);
-
            }
            catch (TimeoutException timeProblem)
            {

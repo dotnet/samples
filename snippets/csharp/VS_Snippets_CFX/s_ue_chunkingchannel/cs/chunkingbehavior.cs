@@ -65,7 +65,6 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
                 //add output message's action to ChunkingBindingParameter
                 param.AddAction(description.Messages[1].Action);
             }
-     
         }
 
         public void ApplyClientBehavior(OperationDescription description, System.ServiceModel.Dispatcher.ClientOperation proxy)

@@ -24,7 +24,6 @@ public class ObjectInspector : ServicedComponent
         
         // Return its name.
         return(objType.FullName);
-
     }
     // </snippet2>
 
@@ -51,7 +50,6 @@ public class ObjectInspector : ServicedComponent
         return(true);
     }
     // </snippet5>
-
 }
 // </snippet1>
 // </snippet0>

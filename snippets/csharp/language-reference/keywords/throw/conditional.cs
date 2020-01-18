@@ -21,7 +21,6 @@ class Program
          Console.WriteLine($"You entered {number:F0}");
       else
          Console.WriteLine($"{arg} is not a number.");                            
-     
    }
 // </Snippet1> 
 }

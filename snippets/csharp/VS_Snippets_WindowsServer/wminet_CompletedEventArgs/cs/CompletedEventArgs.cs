@@ -32,7 +32,6 @@ public class InvokeMethodAsync
         {
             System.Threading.Thread.Sleep(1000);
         }
-
     }
 
     // Property allows accessing the result
@@ -76,7 +75,6 @@ public class InvokeMethodAsync
         InvokeMethodAsync invokeMethod = new InvokeMethodAsync();
 
         return;
-
     }
 }
 //</Snippet1>

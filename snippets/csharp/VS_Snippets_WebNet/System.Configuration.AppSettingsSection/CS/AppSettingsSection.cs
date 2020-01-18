@@ -69,7 +69,6 @@ namespace ConfigurationSamples
               "The value of application setting {0} is '{1}'.",
               asName, ConfigurationManager.AppSettings[asName]);
             // </Snippet15>
-
         }
     }
 }

@@ -24,7 +24,5 @@ class VariousMethodBuilderSnippets {
 	myMethod.SetSymCustomAttribute("SymFullName", symFullName);
 
 	// </Snippet1>
-
    }
-
 }

@@ -42,7 +42,6 @@
        // Displays the values of the new standard array.
        Console.WriteLine( "The new standard array contains the following:" );
        PrintValues( myStandardArray, ' ' );
- 
     }
 
     public static void PrintValues( Array myArr, char mySeparator )  {
@@ -51,7 +50,6 @@
        }
        Console.WriteLine();
     }
-
  }
 
 

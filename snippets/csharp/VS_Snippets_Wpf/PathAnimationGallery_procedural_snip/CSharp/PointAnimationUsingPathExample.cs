@@ -87,8 +87,6 @@ namespace SDKSample
                 pathAnimationStoryboard.Begin(this);
             };
         }
-    
     }
-
 }
 // </SnippetPointAnimationUsingPathWholePage>

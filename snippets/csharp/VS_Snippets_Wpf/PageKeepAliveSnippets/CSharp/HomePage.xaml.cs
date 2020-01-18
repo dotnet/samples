@@ -14,7 +14,6 @@ namespace CSharp
             // Keep this page in navigation history
             this.KeepAlive = true;
         }
-
     }
 }
 //</SnippetSetPageKeepAliveCODEBEHIND>

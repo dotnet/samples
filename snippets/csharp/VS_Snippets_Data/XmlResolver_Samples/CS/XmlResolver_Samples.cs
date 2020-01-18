@@ -8,7 +8,6 @@ class Sample
 {
 	static void Main()
 	{
-
     }
 
     // Default credentials
@@ -47,5 +46,4 @@ class Sample
 
         //</snippet2>
     }
-
 }

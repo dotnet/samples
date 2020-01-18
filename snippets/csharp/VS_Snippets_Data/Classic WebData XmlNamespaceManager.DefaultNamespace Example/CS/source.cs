@@ -15,6 +15,5 @@ public class Form1: Form
 if (nsmgr.HasNamespace(String.Empty))
   Console.WriteLine(nsmgr.DefaultNamespace);
    // </Snippet1>
-
  }
 }

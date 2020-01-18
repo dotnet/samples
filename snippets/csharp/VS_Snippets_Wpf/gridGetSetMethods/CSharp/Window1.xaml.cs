@@ -15,7 +15,6 @@ namespace grid_getset_methods
 		{
             Grid.SetColumn(rect1, 0);
             txt1.Text = "Rectangle is in Column " + Grid.GetColumn(rect1).ToString();
-
 		}
         private void setCol1(object sender, RoutedEventArgs e)
         {
@@ -64,6 +63,5 @@ namespace grid_getset_methods
             txt3.Text = "ColumnSpan is set to 1 (default)";
             txt4.Text = "RowSpan is set to 1 (default)";
         }
-
 	}
 }

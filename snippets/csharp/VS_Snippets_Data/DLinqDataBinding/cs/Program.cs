@@ -28,7 +28,6 @@ namespace cs_DataBinding
             bs.DataSource = custQuery;
             dataGrid3.DataSource = bs;
             // </Snippet1>
-
         }
 
         void method2()
@@ -43,7 +42,6 @@ namespace cs_DataBinding
             ListViewItem ItemsSource = new ListViewItem();
             ItemsSource = (ListViewItem)custQuery2;
             // </Snippet2>
-
         }
     }
 }

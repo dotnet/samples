@@ -52,7 +52,6 @@ class Program
                         connectionString =
                             ModifyConnectionString(connectionString, 
                             GetNewPassword());
-
                     }
                     else
                     {

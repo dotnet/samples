@@ -19,7 +19,5 @@ namespace SDKSample
             MyEmissiveMaterialExampleFrame.Content = new EmissiveMaterialExample();
             MyMultipleTransformationsExampleFrame.Content = new MultipleTransformationsExample();
         }
-        
     }
-
 }

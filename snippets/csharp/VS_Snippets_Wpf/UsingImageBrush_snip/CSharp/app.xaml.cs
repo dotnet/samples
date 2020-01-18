@@ -24,13 +24,11 @@ namespace Microsoft.Samples.Graphics.UsingImageBrush
             mainWindow.Show();
             mainWindow.Height = 600;
             MainWindow.Width = 800;
-
         }
 
         private void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs args)
         {
             MessageBox.Show("Unhandled exception: " + args.ExceptionObject.ToString());
         }
-
     }
 }

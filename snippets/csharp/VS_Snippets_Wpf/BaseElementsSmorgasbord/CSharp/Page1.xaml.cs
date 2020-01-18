@@ -38,7 +38,6 @@ namespace Foo
             b.Background = (Brush)b.TryFindResource("customBrush");
         }    
         //</SnippetFETryFindResource>
-        
      }
 
      public class MyData: INotifyPropertyChanged

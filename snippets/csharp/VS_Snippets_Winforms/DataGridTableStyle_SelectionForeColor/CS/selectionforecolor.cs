@@ -106,7 +106,6 @@ namespace MyDataGridNamespace
          ((System.ComponentModel.ISupportInitialize)(this.myDataGrid)).EndInit();
          this.groupBox1.ResumeLayout(false);
          this.ResumeLayout(false);
-
       }
       #endregion
       DataGridTableStyle customersStyle = new DataGridTableStyle ();

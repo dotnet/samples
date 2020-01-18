@@ -36,7 +36,6 @@ public partial class _Default : System.Web.UI.Page
                 + DateTime.Now.ToString();
 
             cache.Set("filecontents", fileContents, policy);
-
         }
 
         Label1.Text = fileContents;

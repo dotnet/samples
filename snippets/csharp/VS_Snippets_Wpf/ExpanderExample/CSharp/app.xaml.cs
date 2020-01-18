@@ -13,6 +13,5 @@ namespace ExpanderDirectionExample
 
   public partial class app : Application
   {
-
   }
 }

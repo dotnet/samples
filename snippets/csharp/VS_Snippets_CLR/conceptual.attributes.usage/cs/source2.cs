@@ -98,7 +98,6 @@ namespace CustomCodeAttributes_Examples1
         {
             //...
         }
-
     }
     //</snippet10>
 }

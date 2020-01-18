@@ -509,7 +509,6 @@ namespace SequenceExamples
                 Console.WriteLine(
                     "There are {0} fruits in the collection.",
                     numberOfFruits);
-
             }
             catch (OverflowException)
             {
@@ -987,7 +986,6 @@ namespace SequenceExamples
                         Console.WriteLine("  {0}", name);
                 }
             }
-
         }
 
         static class GroupBy3

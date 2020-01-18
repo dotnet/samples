@@ -23,7 +23,6 @@ public class Client {
        Console.WriteLine(obj.HelloMethod("Client Man"));
        Console.WriteLine("After Call");
        Console.WriteLine();
-
    }
 }
 // </Snippet5>

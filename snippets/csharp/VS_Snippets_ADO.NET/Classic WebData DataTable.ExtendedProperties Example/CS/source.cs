@@ -17,5 +17,4 @@ public class Form1: Form
     Console.WriteLine(myTable.ExtendedProperties["TimeStamp"]);
  }
 // </Snippet1>
-
 }

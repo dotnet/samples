@@ -42,7 +42,5 @@ namespace ListBoxItemStyle
                    
         sp2.Children.Add(lb);
         }
-         	
         }
-        
  }

@@ -13,6 +13,5 @@ namespace AccessTextSimple
 
 	public partial class MyApp : Application
 	{
-
 	}
 }

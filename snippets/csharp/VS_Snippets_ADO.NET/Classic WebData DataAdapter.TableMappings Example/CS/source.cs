@@ -23,5 +23,4 @@ public class Form1: Form
     MessageBox.Show(myMessage);
  }
 // </Snippet1>
-
 }

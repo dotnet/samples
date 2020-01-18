@@ -34,7 +34,6 @@ class TestClass
         catch(ArgumentNullException e)
         {
             Console.WriteLine("ArgumentNullException :"+e.Message);
-
         }
         catch(AmbiguousMatchException e)
         {

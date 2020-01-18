@@ -51,7 +51,6 @@ namespace KeywordsUberProject
                 Console.WriteLine("Result2");
             }
             //</snippet3>
-
         }
     }
 
@@ -90,7 +89,6 @@ namespace KeywordsUberProject
             //The character is lowercase.
             //</snippet4>
         }
-
     }
 
     class IfTest2
@@ -135,7 +133,6 @@ namespace KeywordsUberProject
             }
             //</snippet5>
         }
-
     }
 
     public class IfTest3
@@ -288,5 +285,4 @@ namespace KeywordsUberProject
         }
     }
     //</snippet9>
-
 }

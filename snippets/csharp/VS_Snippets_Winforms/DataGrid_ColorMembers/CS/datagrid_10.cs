@@ -319,7 +319,6 @@ namespace DataGridSample
          this.groupBox4.ResumeLayout(false);
          ((System.ComponentModel.ISupportInitialize)(this.myDataGrid)).EndInit();
          this.ResumeLayout(false);
-
       }
 		#endregion
 

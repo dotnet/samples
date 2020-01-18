@@ -41,7 +41,6 @@ namespace GestureSample
             //</Snippet6>
 
             canvas1.StylusSystemGesture += new StylusSystemGestureEventHandler(canvas1_StylusSystemGesture);
-
         }
 
         private void TouchFeedbackSnippets()
@@ -110,7 +109,6 @@ namespace GestureSample
                         // Do something.
                         break;
                 }
-
             }
         }
         //</Snippet1>

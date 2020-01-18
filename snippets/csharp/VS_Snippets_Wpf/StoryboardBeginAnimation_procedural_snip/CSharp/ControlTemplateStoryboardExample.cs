@@ -81,7 +81,6 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
             
             myStackPanel.Children.Add(beginButton);           
             this.Content = myStackPanel;
-            
         }
         
         // Begins the storyboard.
@@ -90,7 +89,6 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
         
             myStoryboard.Begin(this);                  
         }
-
     }
 }
 // </SnippetControlTemplateStoryboardExampleWholePage>

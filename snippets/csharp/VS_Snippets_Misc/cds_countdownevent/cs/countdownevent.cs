@@ -69,7 +69,6 @@ namespace CDSCountdownEvent
             }
             // .,.
             //</snippet01>
-
         } //end method
     }
 
@@ -216,7 +215,6 @@ namespace CDSCountdownEvent
                 {
                     ss.Release();
                     Thread.SpinWait(5000000);
-
                 });
 
             try
@@ -247,8 +245,6 @@ namespace CDSCountdownEvent
             }
             //... 
             //</snippet03>
-
         } //end method
-
     } //end class
 } //end namespace

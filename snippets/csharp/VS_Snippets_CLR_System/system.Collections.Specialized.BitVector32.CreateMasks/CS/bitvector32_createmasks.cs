@@ -28,9 +28,7 @@ public class SamplesBitVector32  {
       Console.WriteLine( "myBit4 + myBit5 = TRUE \t{0}", myBV.ToString() );
       myBV[myBit1 | myBit2] = true;
       Console.WriteLine( "myBit1 | myBit2 = TRUE \t{0}", myBV.ToString() );
-
    }
-
 }
 
 /*

@@ -41,6 +41,5 @@ class Program
     {
         Console.WriteLine(String.Format("{0}, {1}", record[0], record[1]));
     }
-
 }
 // </Snippet1>

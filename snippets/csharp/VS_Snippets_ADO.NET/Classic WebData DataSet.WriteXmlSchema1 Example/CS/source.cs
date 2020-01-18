@@ -25,5 +25,4 @@ public class Form1: Form
         Console.WriteLine(writer.ToString());
     }
     // </Snippet1>
-
 }

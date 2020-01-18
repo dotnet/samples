@@ -46,6 +46,5 @@ internal class MyConnectionSupport : IVsDataConnectionSupport
 
     // Inherited from System.IDisposable
     public void Dispose() {}
-
 }
 // </Snippet1>

@@ -30,7 +30,6 @@ public class Form1: Form
     dataSet.EnforceConstraints = true;
  }
 // </Snippet1>
-
 }
 
 public class SuppliersProducts : DataSet { }

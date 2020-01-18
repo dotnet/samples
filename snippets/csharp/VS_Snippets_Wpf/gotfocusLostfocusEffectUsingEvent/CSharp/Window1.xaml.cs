@@ -35,5 +35,4 @@ namespace SDKSamples
         }
     }
     //</SnippetGotLostFocusSampleEventHandlers>
-
 }

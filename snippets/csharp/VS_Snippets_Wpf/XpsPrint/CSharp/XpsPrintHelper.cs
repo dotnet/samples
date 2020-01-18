@@ -576,7 +576,6 @@ namespace SDKSampleHelper
             // Even though we don't show code for specifying PrintTicket for
             // the FixedPage level, the same inheritance-override logic applies
             // to FixedPage as well.
-
         }// end:MultipleFixedContentDocuments_WritingPrintTicketRequired()
 
 		//</SnippetMultipleFixedContentDocuments_WritingPrintTicketRequired>
@@ -713,5 +712,4 @@ namespace SDKSampleHelper
         #endregion // Private Data
 
     }// end:class XpsPrintHelper
-
 }// end:namespace SDKSampleHelper

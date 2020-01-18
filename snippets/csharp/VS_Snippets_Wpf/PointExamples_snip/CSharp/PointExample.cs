@@ -113,7 +113,6 @@ namespace Microsoft.Samples.PointExamples
             pointResult = (Point)pConverter.ConvertFromString(string1);
 
             return pointResult;
-
         }
         // </SnippetPointConverterExample_csharp>
 
@@ -128,7 +127,6 @@ namespace Microsoft.Samples.PointExamples
             Point pointResult = Point.Add(point1, vector1);
 
             return pointResult;
-
         }
         // </SnippetAddPointAndVectorExample_csharp>
 
@@ -144,7 +142,6 @@ namespace Microsoft.Samples.PointExamples
             Boolean areEqual = Point.Equals(point1, point2);
 
             return areEqual;
-
         }
         // </SnippetStaticEqualsExample_csharp>
 
@@ -160,7 +157,6 @@ namespace Microsoft.Samples.PointExamples
             Boolean areEqual = point1.Equals(point2);	
 
             return areEqual;
-
         }
         // </SnippetNonStaticEqualsExample_csharp>
 
@@ -174,7 +170,6 @@ namespace Microsoft.Samples.PointExamples
             int returnHashCode = point1.GetHashCode();
 
             return returnHashCode;
-
         }
         // </SnippetGetHashCodeExample_csharp>
 
@@ -190,7 +185,6 @@ namespace Microsoft.Samples.PointExamples
             Point pointResult = Point.Multiply(point1, matrix1);
 
             return pointResult;
-
         }
         // </SnippetMultiplyPointByMatrixExample_csharp>
 
@@ -205,7 +199,6 @@ namespace Microsoft.Samples.PointExamples
             pointResult.Offset(20, 30);
 
             return pointResult;
-
         }
         // </SnippetOffsetExample_csharp>
 
@@ -221,7 +214,6 @@ namespace Microsoft.Samples.PointExamples
             Point pointResult = point1 + vector1;
 
             return pointResult;
-
         }
         // </SnippetOverloadedAdditionOperatorExample>
 
@@ -236,7 +228,6 @@ namespace Microsoft.Samples.PointExamples
             Boolean areEqual = (point1 == point2);
 
             return areEqual;
-
         }
         // </SnippetOverloadedEqualityOperatorExample>
 
@@ -251,7 +242,6 @@ namespace Microsoft.Samples.PointExamples
             Size returnSize = (Size)point1;
 
             return returnSize;
-            
         }
         // </SnippetOverloadedExplicitOperatorSizeExample>
 
@@ -266,7 +256,6 @@ namespace Microsoft.Samples.PointExamples
             Vector returnVector = (Vector)point1;
 
             return returnVector;
-
         }
         // </SnippetOverloadedExplicitOperatorVectorExample>
 
@@ -282,7 +271,6 @@ namespace Microsoft.Samples.PointExamples
             Boolean areNotEqual = (point1 != point2);
 
             return areNotEqual;
-
         }
         // </SnippetOverloadedInequalityOperatorExample>
 
@@ -299,7 +287,6 @@ namespace Microsoft.Samples.PointExamples
             Point pointResult = point1 * matrix1;
 
             return pointResult;
-
         }
         // </SnippetOverloadedMultiplyPointByMatrixOperatorExample>
 
@@ -315,7 +302,6 @@ namespace Microsoft.Samples.PointExamples
             Point pointResult = point1 - vector1;
             
             return pointResult;
-
         }
         // </SnippetOverloadedSubtractionOperatorExample1>
 
@@ -332,7 +318,6 @@ namespace Microsoft.Samples.PointExamples
             Vector vectorResult = point1 - point2;
 
             return vectorResult;
-
         }
         // </SnippetOverloadedSubtractionOperatorExample2>
 
@@ -346,7 +331,6 @@ namespace Microsoft.Samples.PointExamples
             Point pointResult = Point.Parse("1,3");
 
             return pointResult;
-
         }
         // </SnippetParseExample>
 
@@ -363,7 +347,6 @@ namespace Microsoft.Samples.PointExamples
             Point pointResult = Point.Subtract(point1, vector1);
 
             return pointResult;
-
         }
         // </SnippetSubtractExample1>
 
@@ -380,7 +363,6 @@ namespace Microsoft.Samples.PointExamples
             Vector vectorResult = Point.Subtract(point1, point2);
 
             return vectorResult;
-
         }
         // </SnippetSubtractExample2>
 
@@ -395,7 +377,6 @@ namespace Microsoft.Samples.PointExamples
             String stringResult = point1.ToString();
 
             return stringResult;
-
         }
         // </SnippetToStringExample>
 
@@ -423,10 +404,7 @@ namespace Microsoft.Samples.PointExamples
             areNotEqual = (point1 != point2);
 
             return areNotEqual;
-
         }
         // </SnippetPointInequalityExample>
-
     }
-
 }

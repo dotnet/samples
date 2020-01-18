@@ -74,7 +74,6 @@ namespace AdvancedInkInputSemples
             //this.StylusPlugIns.Add(recoPlugin);
 
             //DrawRect(cdr.Rect);
-
         }
 
         public void ChangeDAOnCustomDR()
@@ -89,7 +88,6 @@ namespace AdvancedInkInputSemples
             //da.Color = Colors.Red;
 
             //cdr.DrawingAttributes = da;
-
         }
 
         void filterPlugin1_StrokeRendered(object sender, StrokeRenderedEventArgs e)
@@ -187,7 +185,6 @@ namespace AdvancedInkInputSemples
             {
                 filterPlugin1.Enabled = value;
             }
-
         }
 
         public bool AddRemoveDynamicRenderer()
@@ -204,7 +201,6 @@ namespace AdvancedInkInputSemples
             //MessageBox.Show(filterPlugin1.IsActiveForInput.ToString());
 
             return !containsPlugin;
-
         }
 
         public bool IsDynamicRendererActive
@@ -229,7 +225,6 @@ namespace AdvancedInkInputSemples
             }
 
             return !containsPlugin;
-
         }
 
         public bool IsFilterPluginActive
@@ -250,7 +245,6 @@ namespace AdvancedInkInputSemples
             //</Snippet2>
 
             return this.StylusPlugIns.Contains(filterPlugin1);
-
         }
 
         void PluginCollectionSnippets()
@@ -270,7 +264,6 @@ namespace AdvancedInkInputSemples
                 StylusPlugIn firstPlugin = this.StylusPlugIns[0];
             }
             //</Snippet7>
-
         }
 
         //<Snippet4>
@@ -337,7 +330,6 @@ namespace AdvancedInkInputSemples
             StylusPointCollection eventPoints = e.GetStylusPoints(this, stylusPoints.Description);
 
             stylusPoints.Add(eventPoints);
-
         }
 
         protected override void OnStylusMove(StylusEventArgs e)
@@ -436,12 +428,10 @@ namespace AdvancedInkInputSemples
             if (selectionMode)
             {
                 dynamicRenderer1.DrawingAttributes.Color = Colors.DarkGray;
-               
             }
             else
             {
                 dynamicRenderer1.DrawingAttributes.Color = Colors.Purple;
-                
             }
 
             dynamicRenderer1.Reset(currentStylus, stylusPoints);

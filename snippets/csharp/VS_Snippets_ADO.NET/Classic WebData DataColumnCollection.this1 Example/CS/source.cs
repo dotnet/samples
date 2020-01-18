@@ -16,5 +16,4 @@ public class Form1: Form
         Console.WriteLine(columns["id"].DataType);
     }
     // </Snippet1>
-
 }

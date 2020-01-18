@@ -74,6 +74,5 @@ class ContinuationOptionsDemo
         // For demo purposes, wait for the sample to complete
         rollbackTran2.Wait();
     }
-
 }
 //</snippet04>

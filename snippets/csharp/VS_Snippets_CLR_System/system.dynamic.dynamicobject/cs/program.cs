@@ -92,7 +92,6 @@ namespace Test1
     // Ellen Adams
     // Number of dynamic properties: 2
     //</Snippet1>
-
 }
 
 // TryBinaryOperation
@@ -707,5 +706,4 @@ namespace n7
     // One 1
     // Negate One -1
     //</Snippet7>
-
 }

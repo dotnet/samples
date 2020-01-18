@@ -65,5 +65,4 @@ public class DateTimeOffset2
             long seconds = dto.UtcDateTime.Ticks / TimeSpan.TicksPerSecond;
             return seconds - UnixEpochSeconds;
         }
-
 }

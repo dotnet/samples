@@ -13,7 +13,6 @@ namespace Microsoft.Samples.Brushes
 
         public SystemColorsExample()
         {
-
         }
         
         private void temp(object Sender, RoutedEventArgs e)
@@ -26,5 +25,4 @@ namespace Microsoft.Samples.Brushes
             mainPanel.Height = 800;        
         }
     }
-
 }

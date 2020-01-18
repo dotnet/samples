@@ -510,7 +510,6 @@ namespace ToolStripDropDownCS
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

@@ -27,5 +27,4 @@ public class Form1: Form
         mapping.ColumnMappings.CopyTo(columns2, 0);
     }
     // </Snippet1>
-
 }

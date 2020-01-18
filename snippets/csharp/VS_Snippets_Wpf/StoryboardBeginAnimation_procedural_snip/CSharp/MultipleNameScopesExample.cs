@@ -83,7 +83,6 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
             mainPanel.Children.Add(startRectangle2AnimationButton);            
 
             this.Content = mainPanel;
-                           
         }  
 
         private void startRectangle1AnimationButton_clicked(object sender, RoutedEventArgs args)
@@ -91,7 +90,6 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
         
             // Starts the animation.
             storyboard1.Begin(childPanel1);
-        
         }
         
         private void startRectangle2AnimationButton_clicked(object sender, RoutedEventArgs args)
@@ -108,10 +106,8 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
                 // however, because we gave childPanel1 its own
                 // name scope, it no longer shares mainPanel's name scope.
                 storyboard2.Begin(childPanel1);
-            
             }catch(System.InvalidOperationException ex)
             {
-                
             }
             
             try {
@@ -125,18 +121,13 @@ namespace Microsoft.Samples.Animation.AnimatingWithStoryboards
                 // however, because we gave childPanel1 its own
                 // name scope, it no longer shares mainPanel's name scope.
                 storyboard2.Begin(rectangle2);
-            
             }catch(System.InvalidOperationException ex)
             {
-                
             }            
             
             // This statement works as expected.
             storyboard2.Begin(mainPanel);
-
         }
-        
     }    
-  
 }
 // </SnippetMultipleNameScopesExample>

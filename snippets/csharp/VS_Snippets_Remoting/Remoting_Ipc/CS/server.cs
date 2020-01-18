@@ -24,6 +24,5 @@ public class IpcServer
 // </snippet12>
         Console.ReadLine();
     }
-
 }
 // </snippet10>

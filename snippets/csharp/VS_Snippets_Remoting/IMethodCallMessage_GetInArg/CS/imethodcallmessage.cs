@@ -80,7 +80,6 @@ namespace IMethodCallMessageNS
          Console.WriteLine("MyProxy.Invoke - Finish");
          return myReturnMessage;
       }
-
    }
 
    // The class used to obtain Metadata.

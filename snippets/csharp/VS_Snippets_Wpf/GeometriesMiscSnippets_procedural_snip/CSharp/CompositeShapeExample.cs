@@ -48,9 +48,7 @@ namespace SDKSample
             mainPanel.Children.Add(myPath);
             this.Content = mainPanel;
             // </SnippetCompositeShapeCodeExampleInline1>
-            
         }
     }
-
 }
 // </SnippetCompositeShapeCodeExampleWholePage>

@@ -15,7 +15,5 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
         {
             InitializeComponent();
         }
-
     }
-
 }

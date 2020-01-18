@@ -41,7 +41,6 @@ namespace UsingItemTemplates
             Literal l = (Literal) sender;
             DataGridItem container = (DataGridItem) l.NamingContainer;
             l.Text = ((DataRowView) container.DataItem)[column].ToString();
-    
         }
         // </snippet2>
     }

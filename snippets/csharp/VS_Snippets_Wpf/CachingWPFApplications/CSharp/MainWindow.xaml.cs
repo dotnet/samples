@@ -49,10 +49,8 @@ namespace WPFCaching
                 fileContents = File.ReadAllText("c:\\cache\\cacheText.txt") + "\n" + DateTime.Now.ToString();
 
                 cache.Set("filecontents", fileContents, policy);
-
             }
             MessageBox.Show(fileContents);
-
         }
     }
 }

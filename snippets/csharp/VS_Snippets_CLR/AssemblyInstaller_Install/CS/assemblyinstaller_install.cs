@@ -51,7 +51,6 @@ class MyInstallClass
       catch( Exception )
       {
       }
-
    }
 }
 // </Snippet2>

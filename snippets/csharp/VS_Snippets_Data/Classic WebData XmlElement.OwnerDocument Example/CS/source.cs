@@ -29,7 +29,6 @@ public class Sample
 
     Console.WriteLine("Display the modified XML...");
     Console.WriteLine(doc.InnerXml);
-
   }
 }
    // </Snippet1>

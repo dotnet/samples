@@ -50,7 +50,6 @@ public Form1()
         Text = "Form1";
         splitContainer1.ResumeLayout(false);
         ResumeLayout(false);
-
     }
 	[STAThread]
 	static void Main() 

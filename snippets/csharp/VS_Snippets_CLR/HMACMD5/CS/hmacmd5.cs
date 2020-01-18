@@ -24,7 +24,6 @@ public class HMACMD5example
                     sw.WriteLine("Here is a message to sign");
                 }
             }
-
         }
         else
         {
@@ -53,7 +52,6 @@ public class HMACMD5example
         {
             Console.WriteLine("Error: File not found", e);
         }
-
     }  //end main
     // Computes a keyed hash for a source file and creates a target file with the keyed hash
     // prepended to the contents of the source file. 
@@ -128,8 +126,6 @@ public class HMACMD5example
             Console.WriteLine("Hash values agree -- no tampering occurred.");
             return true;
         }
-
     } //end VerifyFile
-
 } //end class
 //</SNIPPET1>

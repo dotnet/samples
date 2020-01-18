@@ -55,5 +55,4 @@ public static void CreateSqlMetaData2()
    columnInfo = new SqlMetaData("Column2", SqlDbType.Int);
 }
 //</Snippet3>
-
 }

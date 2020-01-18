@@ -37,7 +37,6 @@ class Sample
     Console.CursorVisible = saveCursorVisibile;
     Console.CursorSize    = saveCursorSize;
     }
-
 }
 /*
 This example produces the following results. Note that these results

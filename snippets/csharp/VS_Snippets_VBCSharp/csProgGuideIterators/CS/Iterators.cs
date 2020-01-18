@@ -183,7 +183,6 @@ namespace UsingIterators
             }
             // Output: With an iterator, more than one value can be returned.
             System.Console.WriteLine();
-
         }
     }
 

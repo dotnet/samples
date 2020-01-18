@@ -34,7 +34,6 @@ namespace WindowRestoreBoundsSnippets {
         // * This is first application session
         // * The file has been deleted
       }
-      
     }
 
     void MainWindow_Closing(object sender, CancelEventArgs e) {

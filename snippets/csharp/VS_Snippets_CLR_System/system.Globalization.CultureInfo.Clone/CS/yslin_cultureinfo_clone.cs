@@ -24,9 +24,7 @@ public class SamplesCultureInfo  {
       Console.WriteLine( "DTFI.DateSeparator\t{0}\t\t{1}", myCI.DateTimeFormat.DateSeparator, myCIclone.DateTimeFormat.DateSeparator );
       Console.WriteLine( "NFI.CurrencySymbol\t{0}\t\t{1}", myCI.NumberFormat.CurrencySymbol, myCIclone.NumberFormat.CurrencySymbol );
       Console.WriteLine( "NFI.NumberDecimalDigits\t{0}\t\t{1}", myCI.NumberFormat.NumberDecimalDigits, myCIclone.NumberFormat.NumberDecimalDigits );
-      
    }
-
 }
 
 /*

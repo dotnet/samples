@@ -88,7 +88,6 @@ public class ServerSink : BaseChannelSinkWithProperties, IServerChannelSink
       if (sink == null) throw new ArgumentNullException("sink");
       nextSink = sink;
     }
-
 }
 // </snippet60>
 
@@ -140,6 +139,5 @@ public class ServerSinkProvider : IServerChannelSinkProvider
     // This constructor is required in order to use the provider in file-based configuration.
     // It need not do anything unless you want to use the information in the parameters.
     public ServerSinkProvider (IDictionary properties, ICollection providerData) {}
-    
 }
 // </snippet70>

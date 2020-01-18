@@ -53,7 +53,6 @@ namespace XamlReaderWriterSnippets
             //</SnippetXamlReaderLoadXmlReader>
 
             StackArea.Children.Add(readerLoadButton);
-
         }
 
         public void ButtonRoundTripSyncStream()
@@ -113,7 +112,6 @@ namespace XamlReaderWriterSnippets
             if (e.Cancelled != true)
             {
                 // Load new button
-
             }
         }
         private void OnSerializeChecked(object sender, RoutedEventArgs e)
@@ -137,7 +135,6 @@ namespace XamlReaderWriterSnippets
                         break;
                     default:
                         break;
-
                 }
             }
         }

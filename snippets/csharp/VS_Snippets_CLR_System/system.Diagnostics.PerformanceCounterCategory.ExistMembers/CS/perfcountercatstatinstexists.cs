@@ -45,7 +45,6 @@ class PerfCounterCatStatInstExistsMod
             {
                 objectExists = PerformanceCounterCategory.InstanceExists(instanceName, categoryName, machineName);
             }
-
         }
         catch(Exception ex)
         {

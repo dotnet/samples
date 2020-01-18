@@ -193,6 +193,5 @@ namespace BrushesIntroduction
 
             examplePanel.Children.Add(exampleRectangle);
         }
-
     }
 }

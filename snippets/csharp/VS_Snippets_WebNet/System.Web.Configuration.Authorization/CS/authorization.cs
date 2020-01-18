@@ -134,9 +134,6 @@ namespace Samples.Aspnet.SystemWebConfiguration
             AuthorizationRule authRule = 
                 authorizationRuleCollection.Get(0);
             // </Snippet13>
-
         }
-
     }
-
 }

@@ -24,5 +24,4 @@ using System.Windows.Shapes;
 
             this.WindowState = WindowState.Maximized;
         }
-
     }

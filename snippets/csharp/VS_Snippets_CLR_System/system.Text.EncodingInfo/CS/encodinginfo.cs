@@ -39,9 +39,7 @@ public class SamplesEncoding  {
 
          Console.WriteLine();
       }
-
    }
-
 }
 /* 
 The example produces the following output when run on .NET Core:

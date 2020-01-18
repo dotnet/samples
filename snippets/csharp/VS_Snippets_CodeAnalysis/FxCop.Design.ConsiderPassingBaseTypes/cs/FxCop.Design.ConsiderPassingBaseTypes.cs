@@ -61,5 +61,4 @@ public virtual void ManipulateFileStream(FileStream stream)
 }
 //</Snippet2>
     }
-
 }

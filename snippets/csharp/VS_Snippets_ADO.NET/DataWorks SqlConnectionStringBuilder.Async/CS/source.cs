@@ -64,7 +64,6 @@ class Program
                 }
                 Console.WriteLine("Command complete. Affected {0} rows.",
                     command.EndExecuteNonQuery(result));
-
             }
             catch (SqlException ex)
             {

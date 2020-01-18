@@ -59,9 +59,7 @@ using System.Security.Cryptography.Xml;
 				// Clear the TripleDES key.
 				xmlTDES.Clear();
 			}
-
 		}
-
 	}
 
 class TrippleDESDocumentEncryption
@@ -167,8 +165,6 @@ class TrippleDESDocumentEncryption
 
 		// Replace the encryptedData element with the plaintext XML elemnt.
 		exml.ReplaceData(encryptedElement, rgbOutput);
-
 	}
-
 }
 //</SNIPPET1>

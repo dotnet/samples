@@ -76,7 +76,6 @@ namespace NorthwindClient
             catch (DataServiceRequestException ex)
             {
                 MessageBox.Show(ex.ToString());
-
             }
         }
         private void buttonClose_Click(object sender, RoutedEventArgs e)

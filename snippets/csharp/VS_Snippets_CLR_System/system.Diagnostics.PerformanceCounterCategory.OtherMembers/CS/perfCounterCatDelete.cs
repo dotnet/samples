@@ -33,7 +33,6 @@ class PerfCounterCatDeleteMod
             {
                 Console.WriteLine("Category name not found");
             }
-
         }
         catch (Exception ex)
         {

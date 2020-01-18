@@ -41,7 +41,6 @@ class ParallelSchedulerDemo2
                             Console.WriteLine("i={0}, Task={1}, Thread={2}", i, Task.CurrentId, Thread.CurrentThread.ManagedThreadId);
                         }
                     );
-
             }
             // No exception is expected in this example, but if one is still thrown from a task,
             // it will be wrapped in AggregateException and propagated to the main thread.
@@ -125,7 +124,6 @@ class ParallelSchedulerDemo2
                     _tasks = null;
                 }
             }
-
     }
 }
 //</snippet06>

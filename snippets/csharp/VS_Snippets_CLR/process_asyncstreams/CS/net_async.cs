@@ -149,7 +149,6 @@ namespace ProcessAsyncStreamSamples
             }
 
             netProcess.Close();
-
         }
 
         private static void NetOutputDataHandler(object sendingProcess, 

@@ -11,7 +11,5 @@ public class Form1: Form
 UniqueConstraint uniqueConstraint = new UniqueConstraint(
     DataSet1.Tables["Table1"].Columns["Column1"]);
 // </Snippet1>
-
     }
-
 }

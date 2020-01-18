@@ -14,5 +14,4 @@ public class Form1: Form
         return rowView.DataView;
     }
     // </Snippet1>
-
 }

@@ -23,7 +23,6 @@ namespace TransparencyWarningsDemo
             catch (AccessViolationException) { }
         }
     }
-
 }
 
 //</Snippet1>

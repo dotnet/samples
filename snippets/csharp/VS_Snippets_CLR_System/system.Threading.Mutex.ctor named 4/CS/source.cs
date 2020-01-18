@@ -94,7 +94,6 @@ internal class Example
                 return;
             }
             //</Snippet4>
-
         }
         else if (unauthorized)
         {
@@ -142,7 +141,6 @@ internal class Example
                 //
                 m = Mutex.OpenExisting(mutexName);
                 //</Snippet3>
-
             }
             catch(UnauthorizedAccessException ex)
             {
@@ -150,7 +148,6 @@ internal class Example
                     ex.Message);
                 return;
             }
-
         }
 
         // If this program created the mutex, it already owns

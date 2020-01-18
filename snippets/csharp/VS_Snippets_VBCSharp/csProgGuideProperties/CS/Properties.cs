@@ -404,7 +404,6 @@
                 get { return 0; }
             }
         }
-
     }
     class ReadOnlyPropertyExamples
     {
@@ -442,7 +441,6 @@
         {
             get { return names; }
         }
-
     }
 
     class Program
@@ -509,7 +507,6 @@
             // Keep the console open in debug mode.
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();        
-
         }
     }
 }

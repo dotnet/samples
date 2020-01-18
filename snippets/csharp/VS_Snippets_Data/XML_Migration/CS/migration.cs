@@ -10,7 +10,6 @@ using System.Net;
 class XML_Migration_Samples {
 
   static void Main() {
-	
   }
 
 public void XmlReader_Creation_Old() {
@@ -309,5 +308,4 @@ XmlDocument doc = new XmlDocument();
 doc.Load("output.xml");
 //</snippet20>
 }
-
 }

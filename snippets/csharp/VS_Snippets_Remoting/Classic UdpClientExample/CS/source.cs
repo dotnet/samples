@@ -39,12 +39,10 @@ UdpClient udpClient = new UdpClient(11000);
 
           udpClient.Close();
           udpClientB.Close();
-          
           }  
        catch (Exception e ) {
                   Console.WriteLine(e.ToString());
         }
 //</Snippet1>
    }
-
  }

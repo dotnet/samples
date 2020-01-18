@@ -14,7 +14,6 @@ namespace GDIPlusPort
     {
         public Form1()
         {
-            
         }
 
         [STAThread]
@@ -168,7 +167,6 @@ namespace GDIPlusPort
                 paramInfo.Append("Param " + i + " holds " + encParams[i].NumberOfValues +
                     " items of type " +
                     encParams[i].ValueType + "\r\n" + "Guid category: " + encParams[i].Encoder.Guid + "\r\n");
-
             }
             e.Graphics.DrawString(paramInfo.ToString(), this.Font, Brushes.Red, 10.0F, 10.0F);
         }
@@ -229,7 +227,6 @@ namespace GDIPlusPort
             myEncoderParameter = new EncoderParameter(myEncoder, 0L);
             myEncoderParameters.Param[0] = myEncoderParameter;
             bmp1.Save(@"c:\TestPhotoQualityZero.jpg", jpgEncoder, myEncoderParameters);
-
         }
         //</snippet8>
        
@@ -245,6 +242,5 @@ namespace GDIPlusPort
             VaryQualityLevel();
            // GetImageDecodersExample(e);
         }
-
     }
 }

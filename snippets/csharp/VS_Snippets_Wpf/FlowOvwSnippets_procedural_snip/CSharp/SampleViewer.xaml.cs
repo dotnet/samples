@@ -19,7 +19,5 @@ namespace SDKSample
             MyInlineUIContainerExampleFrame.Content = new InlineUIContainerExample();
             MyFigureExampleFrame.Content = new FigureExample();
         }
-        
     }
-
 }

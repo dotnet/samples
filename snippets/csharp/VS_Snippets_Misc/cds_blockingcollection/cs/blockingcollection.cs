@@ -87,7 +87,6 @@ namespace OverviewSnippets
                 //...
             } while (moreItems == true);
             //</snippet05>
-            
         }
         static void Process(Data n) { }
         static Data GetData() { return new Data(); }

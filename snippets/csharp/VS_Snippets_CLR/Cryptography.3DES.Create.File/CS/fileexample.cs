@@ -33,7 +33,6 @@ class TripleDESSample
         {
             Console.WriteLine(e.Message);
         }
-
     }
 
     public static void EncryptTextToFile(String Data, String FileName, byte[] Key, byte[] IV)
@@ -66,7 +65,6 @@ class TripleDESSample
                     }
                 }
             }
-
         }
         catch (CryptographicException e)
         {
@@ -76,7 +74,6 @@ class TripleDESSample
         {
             Console.WriteLine("A file access error occurred: {0}", e.Message);
         }
-
     }
 
     public static string DecryptTextFromFile(String FileName, byte[] Key, byte[] IV)
@@ -109,7 +106,6 @@ class TripleDESSample
                         }
                     }
                 }
-
             }
             // Return the string. 
             return retVal;

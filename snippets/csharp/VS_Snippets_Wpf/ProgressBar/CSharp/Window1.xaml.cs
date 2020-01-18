@@ -98,7 +98,6 @@ namespace ProgBar
            doubleanimation.RepeatBehavior = RepeatBehavior.Forever;
            progbar.BeginAnimation(ProgressBar.ValueProperty, doubleanimation);
            sbar.Items.Add(progbar);
-          
          }
 
          private void MakeIndeterminate(object sender, RoutedEventArgs e)
@@ -118,6 +117,5 @@ namespace ProgBar
              //</Snippet3>
              sbar.Items.Add(progbar);
          }
-
      }
 }

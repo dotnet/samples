@@ -18,7 +18,6 @@ class NumberFormatInfoSample {
       // Displays the same value with a blank as the separator.
       nfi.CurrencyDecimalSeparator = " ";
       Console.WriteLine( myInt.ToString( "C", nfi ) );
-
    }
 }
 

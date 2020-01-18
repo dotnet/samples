@@ -72,7 +72,6 @@ namespace CsCsrefProgrammingAttributes
             anonymousAuthorObject.version = 1.1;
             //</Snippet10>
         }
-
     }
 
     //---------------------------------------------------------------------------
@@ -462,7 +461,6 @@ namespace CsCsrefProgrammingAttributes
         }
         //</Snippet25>    
     }
-
 }
 namespace WrapObsolete
 {
@@ -496,5 +494,4 @@ namespace WrapObsolete
             //</Snippet35>
         }
     }
-
 }

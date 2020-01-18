@@ -237,9 +237,7 @@ namespace ProdConsumerCS
             }
 
             Console.ReadKey(true);
-
         }
     }
-
 }
 //</snippet06>

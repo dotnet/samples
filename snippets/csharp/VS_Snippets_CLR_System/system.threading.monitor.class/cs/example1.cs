@@ -37,7 +37,6 @@ public class Example
          Task.WaitAll(tasks.ToArray());
          Console.WriteLine("\nMean for all tasks: {0:N2} (N={1:N0})",
                            (total * 1.0)/n, n);
-
       }
       catch (AggregateException e) {
          foreach (var ie in e.InnerExceptions)

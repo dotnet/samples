@@ -59,7 +59,6 @@ namespace EventLogSamples
                 messageFile =  String.Format("{0}\\{1}", 
                         System.Environment.CurrentDirectory, 
                         "EventLogMsgs.dll");
-
             }
 
             CleanUp();
@@ -70,7 +69,6 @@ namespace EventLogSamples
             WriteEventSample2();
 
             EventInstanceSamples();
-                
         }
 
         static void CleanUp()

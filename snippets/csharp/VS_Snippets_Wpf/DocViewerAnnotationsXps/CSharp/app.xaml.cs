@@ -25,7 +25,5 @@ namespace SDKSample
         }// end:AppStartup()
 
         private Window1 _window1 = null;            // application main window
-
     }// end:partial class app
-
 }// end:namespace SDKSample

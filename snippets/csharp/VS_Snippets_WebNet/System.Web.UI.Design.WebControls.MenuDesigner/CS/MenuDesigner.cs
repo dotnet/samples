@@ -91,7 +91,6 @@ namespace Examples.CS.WebControls.Design
             }
 
             return markup;
-
         } // GetDesignTimeHtml
         // </snippet4>
 
@@ -104,7 +103,6 @@ namespace Examples.CS.WebControls.Design
                     "The component is not a MyMenu control.");
             
             base.Initialize(component);
-
         } // Initialize
         // </snippet6>
     } // MyMenuDesigner

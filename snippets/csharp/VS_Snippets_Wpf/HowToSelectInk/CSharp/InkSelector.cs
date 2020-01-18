@@ -99,7 +99,6 @@ public class InkSelector : Label
         stylusPoints.Add(eventPoints);
 
         InitializeHitTester(eventPoints);
-
     }
 
     protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
@@ -122,7 +121,6 @@ public class InkSelector : Label
         stylusPoints.Add(collectedPoints);
 
         InitializeHitTester(collectedPoints);
-
     }
     //<Snippet9>
     private void InitializeHitTester(StylusPointCollection collectedPoints)
@@ -163,7 +161,6 @@ public class InkSelector : Label
         StylusPointCollection collectedPoints = e.GetStylusPoints(this, stylusPoints.Description);
         stylusPoints.Add(collectedPoints);
         AddPointsToHitTester(collectedPoints);
-
     }
 
     protected override void OnMouseMove(MouseEventArgs e)
@@ -190,7 +187,6 @@ public class InkSelector : Label
         stylusPoints.Add(collectedPoints);
 
         AddPointsToHitTester(collectedPoints);
-
     }
 
     //<Snippet10>
@@ -204,7 +200,6 @@ public class InkSelector : Label
             // When the control is selecting strokes, add the
             // stylus packetList to selectionTester.
             selectionTester.AddPoints(collectedPoints);
-
         }
     }
     //</Snippet10>
@@ -247,7 +242,6 @@ public class InkSelector : Label
         stylusPoints = null;
 
         Mouse.Capture(null);
-
     }
 
     private void AddStrokeToPresenter()
@@ -285,7 +279,6 @@ public class InkSelector : Label
         {
             selectedStroke.DrawingAttributes.Color = Colors.Red;
             selectedStrokes.Add(selectedStroke);
-
         }
 
         // Change the color of all unselected strokes to 
@@ -335,7 +328,6 @@ public class InkSelector : Label
         // whenever the DrawingAttributes change.
         presenter.DetachVisuals(renderer.RootVisual);
         presenter.AttachVisuals(renderer.RootVisual, renderer.DrawingAttributes);
-
     }
     //</Snippet7>
 
@@ -358,6 +350,5 @@ public class InkSelector : Label
         }
     }
     //</Snippet6>
-
 }
 //</Snippet1>

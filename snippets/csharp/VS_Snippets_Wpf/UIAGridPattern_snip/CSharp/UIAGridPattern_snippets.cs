@@ -187,7 +187,6 @@ namespace UIAGridPattern_snip
                 // and call its Run() method to start it.
                 UIAGridPattern_snippets app = new UIAGridPattern_snippets();
             }
-
         }
     }
 }

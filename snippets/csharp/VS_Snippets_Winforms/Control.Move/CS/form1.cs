@@ -55,7 +55,6 @@ namespace ControlMoveEx
             this.Text = "Form1";
             this.Resize += new System.EventHandler(this.Form1_Resize);
             this.Move += new System.EventHandler(this.Form1_Move);
-
         }
 #endregion
 
@@ -70,7 +69,6 @@ namespace ControlMoveEx
 
         private void Form1_Resize(object sender, System.EventArgs e)
         {
-
         }
 
         //<Snippet1>
@@ -81,6 +79,5 @@ namespace ControlMoveEx
             this.Text = "Form screen position = " + this.Location.ToString();
         }
         //</Snippet1>
-
     }
 }

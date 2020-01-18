@@ -13,7 +13,6 @@ public class Sample
         // The query is parsed so that the className property
         // is Win32_LogicalDisk and the condition property
         // is FreeSpace < 4000000
-
     }
 }
 //</Snippet1>

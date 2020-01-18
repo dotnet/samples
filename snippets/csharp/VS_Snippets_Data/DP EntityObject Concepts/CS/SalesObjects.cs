@@ -105,7 +105,6 @@ namespace Microsoft.Samples.Edm
                 ReportPropertyChanging("ShipDate");
                 _shipDate = value;
                 ReportPropertyChanged("ShipDate");
-
             }
         }
         //<snippetEntityObjectStatusProperty>
@@ -221,7 +220,6 @@ namespace Microsoft.Samples.Edm
                     CalculateOrderTotal();
                 }
             }
-
         }
         public decimal TotalDue
         {
@@ -372,7 +370,6 @@ namespace Microsoft.Samples.Edm
         // Default constructor.
         public LineItem()
         {
-
         }   
 
         // Defines a navigation property to the Order class.

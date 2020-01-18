@@ -46,7 +46,6 @@ public class Part : IEquatable<Part> , IComparable<Part>
         return (this.PartId.Equals(other.PartId));
     }
     // Should also override == and != operators.
-
 }
 public class Example
 {
@@ -127,7 +126,6 @@ public class Example
 		ID: 1634   Name: shift lever
 
          */
-
     }
 }
 //</snippet1>

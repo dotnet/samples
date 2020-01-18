@@ -12,7 +12,6 @@ public class Example
             derived = derived.BaseType;
             if (derived != null) 
                Console.WriteLine("   {0}", derived.FullName);
-
          } while (derived != null);
          Console.WriteLine(); 
       } 

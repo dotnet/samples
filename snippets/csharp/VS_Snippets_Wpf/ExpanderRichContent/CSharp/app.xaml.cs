@@ -12,6 +12,5 @@ namespace ExpanderRichContent
 
   public partial class app : Application
   {
-
   }
 }

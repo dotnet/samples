@@ -133,6 +133,5 @@ public class Form1 : Form
         // the second node.
         return ContainsNode(node1, node2.Parent);
     }
-
 }
 //</Snippet1>

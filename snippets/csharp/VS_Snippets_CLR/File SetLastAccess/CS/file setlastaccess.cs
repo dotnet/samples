@@ -25,7 +25,6 @@ class Test
             File.SetLastAccessTime(path, DateTime.Now);
             dt = File.GetLastAccessTime(path);
             Console.WriteLine("The last access time for this file was {0}.", dt);
-
         } 
         catch (Exception e) 
         {

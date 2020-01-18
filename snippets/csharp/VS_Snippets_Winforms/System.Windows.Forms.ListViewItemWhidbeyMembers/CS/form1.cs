@@ -22,7 +22,6 @@ namespace ListViewItemMembers
             //InitializeIndentedListViewItems();
              InitializeListView1();
             this.Load += new EventHandler(Form1_Load);
-
         }
        
         private void InitializeComponent()
@@ -33,7 +32,6 @@ namespace ListViewItemMembers
            
             this.Name = "Form1";
             this.ResumeLayout(false);
-
         }
         [STAThread]
         public static void Main()
@@ -110,7 +108,6 @@ namespace ListViewItemMembers
 
             // Add the controls to the form.
             this.Controls.Add(indentedListView);
-
         }
         //</snippet2>
 
@@ -264,6 +261,5 @@ namespace ListViewItemMembers
         {
             //InitializePositionedListViewItems();
         }
-
     }
 }

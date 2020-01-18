@@ -28,6 +28,5 @@ namespace StrokeCollectionShadow
         {
             myInkSelector.Shadowed = !myInkSelector.Shadowed;
         }
-
     }
 }

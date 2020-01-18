@@ -29,7 +29,6 @@ public class UrlIdentityPermissionDemo
         else
         {
             Console.WriteLine(permIdPerm1.Url + " is not a subset of " + permIdPerm2.Url);
-
         }
         if (permIdPerm2.IsSubsetOf(permIdPerm1))
         {
@@ -38,7 +37,6 @@ public class UrlIdentityPermissionDemo
         else
         {
             Console.WriteLine(permIdPerm2.Url + " is not a subset of " + permIdPerm1.Url);
-
         }
     }
     // </Snippet3>
@@ -56,14 +54,12 @@ public class UrlIdentityPermissionDemo
         {
             Console.WriteLine("The intersection of " + permIdPerm1.Url + " and \n\t" +
                 permIdPerm2.Url + " is " + p3.Url + "\n");
-
         }
         else
         {
             Console.WriteLine("The intersection of " + permIdPerm1.Url +
                 " and \n\t" + permIdPerm2.Url + " is null.\n");
         }
-
     }
     //</Snippet4>
     //<Snippet5>
@@ -80,7 +76,6 @@ public class UrlIdentityPermissionDemo
         {
             Console.WriteLine("The copy succeeded:  " + permIdPerm2.ToString() + " \n");
         }
-
     }
     //</Snippet5>
     //<Snippet6>
@@ -102,10 +97,8 @@ public class UrlIdentityPermissionDemo
             Console.WriteLine(permIdPerm2.ToString());
             Console.WriteLine(permIdPerm1.ToString());
         }
-
     }
     //</Snippet6>
-
 }
 
 // </Snippet1>

@@ -33,7 +33,6 @@ namespace ManipulationAPI
 
             CheckScale.Checked += ManipulationChanged;
             CheckScale.Unchecked += ManipulationChanged;
-
         }
 
         protected override void OnInitialized(EventArgs e)
@@ -43,7 +42,6 @@ namespace ManipulationAPI
             manipulationItem.SupportedManipulations = GetSupportedManipulations();
             manipulationItem.Container = MainCanvas;
             MainCanvas.Children.Add(manipulationItem);
-
         }
 
         private void ManipulationChanged(object sender, RoutedEventArgs e)

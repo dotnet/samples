@@ -34,7 +34,6 @@ namespace Example
         static void Main()
         { }
     }
-
 }
 
 //<snippet2>
@@ -76,7 +75,6 @@ namespace GenericTypes
         T theData;
     }
     //</snippet4>
-
 }
 
 namespace Intro
@@ -132,7 +130,6 @@ namespace Intro2
         private string CountryName;
     }
     //</snippet6>
-
 }
 
 namespace ForwardCompatible1

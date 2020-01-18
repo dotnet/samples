@@ -21,7 +21,6 @@ namespace Microsoft.ServiceModel.Samples
 					    "Service virtual path is : " + extension.VirtualPath,
 					    EventLogEntryType.Information);
 			base.InitializeRuntime();
-
 		}
 		
 		// <Snippet41>
@@ -33,7 +32,6 @@ namespace Microsoft.ServiceModel.Samples
 			return new ServiceDescription();
 		}
 		// </Snippet41>
-
 	}
 
   // Define a service contract.
@@ -207,7 +205,6 @@ namespace Microsoft.ServiceModel.Samples
         //</snippet22>
         // </Snippet4>
     }
-
   }
 }
 //</snippet14>

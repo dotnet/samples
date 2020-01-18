@@ -70,9 +70,6 @@ namespace Samples.Aspnet.SystemWebConfiguration
           false;
 
 // </Snippet4>
-
       }
- 
     } // UsingHttpCookiesSection class end.
-    
 } // Samples.Aspnet.SystemWebConfiguration namespace end.

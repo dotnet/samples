@@ -54,7 +54,6 @@ namespace SDKSample
             return new ComponentResourceKey(GetType(), "myPlainViewDSK"); 
           }
       }
-
     }
 //</SnippetPlainView> 
     }

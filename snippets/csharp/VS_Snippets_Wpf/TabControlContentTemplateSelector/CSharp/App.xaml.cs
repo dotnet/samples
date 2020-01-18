@@ -12,6 +12,5 @@ namespace TabControlContentTemplateSelector
 
     public partial class App : System.Windows.Application
     {
-
     }
 }

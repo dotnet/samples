@@ -38,7 +38,6 @@ namespace cs_insertonsubmit
                 db.SubmitChanges();
             }
             // </Snippet1>
-
         }
 
         void methodUpdate()
@@ -72,7 +71,6 @@ namespace cs_insertonsubmit
                 // Provide for exceptions.
             }
             // </Snippet2>
-
         }
 
         void methodDelete()

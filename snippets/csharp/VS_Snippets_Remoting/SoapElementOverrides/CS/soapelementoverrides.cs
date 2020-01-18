@@ -16,7 +16,6 @@ public class Transportation
    public DateTime CreationDate;
    [SoapElement(IsNullable = true)]
    public Thing thing;
-   
 }
 
 public class Thing{ 

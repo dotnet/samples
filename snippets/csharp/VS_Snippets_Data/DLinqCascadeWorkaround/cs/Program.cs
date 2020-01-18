@@ -78,7 +78,6 @@ namespace cs_cascadeworkaround
             Console.WriteLine("Submit finished.");
             Console.ReadLine();
             // </Snippet1>
-
         }
     }
 }

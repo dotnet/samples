@@ -21,5 +21,4 @@ public class Form1: Form
             new OleDbParameter("CustomerID", OleDbType.VarChar));
     }
     // </Snippet1>
-
 }

@@ -12,8 +12,6 @@ namespace Microsoft.Samples.Graphics.UsingImageBrush
     {
         public StretchModes()
         {
-
         }
-
     }
 }

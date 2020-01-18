@@ -84,7 +84,6 @@ namespace OrderbyClause
             };
 
             return students;
-
         }
         static void Main(string[] args)
         {
@@ -147,5 +146,4 @@ namespace OrderbyClause
        Omelchenko, Svetlana
     */
     //</snippet22>
-
 }

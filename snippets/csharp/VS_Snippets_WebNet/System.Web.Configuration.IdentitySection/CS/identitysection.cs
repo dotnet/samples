@@ -57,7 +57,6 @@ bool currentImpersonate = identitySection.Impersonate;
 // Set the Impersonate property to true.
 identitySection.Impersonate = true;
 // </Snippet5> 
-
 }
 catch (Exception e)
 {
@@ -66,5 +65,4 @@ Console.WriteLine("Error" + e.ToString());
 }
 }
 } // UsingIdentitySection class end.
-
 } // Samples.Aspnet.SystemWebConfiguration namespace end.

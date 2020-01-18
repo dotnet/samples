@@ -637,8 +637,6 @@ namespace Examples
             
             ShowNetworkInterfaces();
             ShowInterfaceSummary();
-           
         }
-       
     }
 }

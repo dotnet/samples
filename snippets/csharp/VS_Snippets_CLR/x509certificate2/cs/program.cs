@@ -75,7 +75,6 @@ namespace X509CertEncrypt
             {
                 store.Close();
             }
-
         }
         //</Snippet2>
 
@@ -270,13 +269,10 @@ namespace X509CertEncrypt
                         }
                         inFs.Close();
                     }
-
                 }
-
             }
             // </Snippet4>
         }
-
     }
 }
 //</Snippet1>

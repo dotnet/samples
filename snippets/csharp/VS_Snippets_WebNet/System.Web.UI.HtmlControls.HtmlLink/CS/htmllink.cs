@@ -21,7 +21,6 @@ public partial class HtmlLinkcs_aspx
 
         // Add the instance of HtmlLink to the <HEAD> section of the page.
         head1.Controls.Add(myHtmlLink);
-        
     }
 }
 // </snippet2>

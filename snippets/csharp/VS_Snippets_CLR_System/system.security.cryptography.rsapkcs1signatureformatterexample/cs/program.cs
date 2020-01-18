@@ -30,13 +30,11 @@ class RSASample
                 //Create a signature for HashValue and return it.
                 byte[] SignedHash = RSAFormatter.CreateSignature(hash);
             }
-
         }
         catch (CryptographicException e)
         {
             Console.WriteLine(e.Message);
         }
     }
-
 }
 // </Snippet1>

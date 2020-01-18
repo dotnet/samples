@@ -102,7 +102,6 @@ using System.Data;
 			this.Name = "MyToolBar";
 			this.Text = "Form1";
 			this.ResumeLayout(false);
-
 		}
 		#endregion
 

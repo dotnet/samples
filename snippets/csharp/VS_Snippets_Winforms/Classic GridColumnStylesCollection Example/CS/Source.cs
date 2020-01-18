@@ -35,5 +35,4 @@ private void PrintColumnInformation(DataGrid grid){
    }
 }
 // </Snippet1>
-
 }

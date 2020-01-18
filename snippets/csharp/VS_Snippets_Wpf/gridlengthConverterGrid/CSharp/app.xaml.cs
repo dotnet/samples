@@ -18,6 +18,5 @@ namespace GridLengthConverter_grid
 			mainWindow.InitializeComponent();
 			mainWindow.Show();
         }
-
 	}
 }

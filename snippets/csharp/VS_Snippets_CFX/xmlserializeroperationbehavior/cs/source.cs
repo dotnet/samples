@@ -73,7 +73,6 @@ namespace Example
 
         [OperationContract]
         object GetInfo(string request);
-
     }
 
     [MessageContract(ProtectionLevel = System.Net.Security.ProtectionLevel.Sign)]

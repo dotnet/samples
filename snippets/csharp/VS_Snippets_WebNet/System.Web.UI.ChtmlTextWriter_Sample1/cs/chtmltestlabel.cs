@@ -23,7 +23,6 @@ namespace AspNet.Samples
 				_textValue = value;
 			}
 		}
-
 	}
 	// <Snippet2>
 	// Create a custom CHTML Adapter for a 

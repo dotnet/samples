@@ -15,7 +15,6 @@ namespace PropChanged
 		public Form1()
 		{
 			InitializeComponent();
-
 		}
 
 		protected override void Dispose( bool disposing )
@@ -54,7 +53,6 @@ namespace PropChanged
          this.Name = "Form1";
          this.Text = "Form1";
          this.ResumeLayout(false);
-
       }
 		#endregion
 
@@ -88,6 +86,5 @@ private void currencyTextBox_TextChanged(object sender, EventArgs e)
    }
 }
 // </snippet1>
-
 	}
 }

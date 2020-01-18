@@ -24,7 +24,6 @@ class Program
                 Console.WriteLine("FAILED.");
                 Environment.ExitCode = 101;
             }
-
         }
         catch (Exception e)
         {
@@ -54,7 +53,6 @@ class Program
         isfs.Close();
 
         return bRes;
-
     }
 
     public static Evidence GetTestEvidence()
@@ -64,7 +62,6 @@ class Program
         Object[] arrObj = new Object[1];
         arrObj[0] = (Object)pub;
         return new Evidence(arrObj, arrObj);
-
     }
 }
 //</Snippet1>

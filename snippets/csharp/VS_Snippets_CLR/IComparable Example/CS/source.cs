@@ -63,7 +63,6 @@ public class CompareTemperatures
       
       foreach (Temperature temp in temperatures)
          Console.WriteLine(temp.Fahrenheit);
-            
    }
 }
 // The example displays the following output to the console (individual

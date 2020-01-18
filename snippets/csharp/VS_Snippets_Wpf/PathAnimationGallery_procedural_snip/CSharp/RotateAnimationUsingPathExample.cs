@@ -141,10 +141,7 @@ namespace SDKSample
                 // Start the storyboard.
                 pathAnimationStoryboard.Begin(this);
             };
-
         }
-    
     }
-
 }
 // </SnippetRotateAnimationUsingPathWholePage>

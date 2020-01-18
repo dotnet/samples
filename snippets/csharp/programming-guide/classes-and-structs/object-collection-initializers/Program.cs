@@ -11,6 +11,5 @@ namespace object_collection_initializers
             HowToIndexInitializer.Main();
             HowToDictionaryInitializer.Main();
         }
-
     }
 }

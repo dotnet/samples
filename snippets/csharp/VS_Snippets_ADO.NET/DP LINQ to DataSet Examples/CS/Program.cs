@@ -138,7 +138,6 @@ namespace LINQtoDataSetSamples
 
             Console.WriteLine("Hit Enter...");
             Console.Read();
-
         }
 
         #region "Select Operators"
@@ -300,7 +299,6 @@ namespace LINQtoDataSetSamples
                     smallOrder.OrderID, smallOrder.Total);
             }
             // </SnippetSelectManyCompoundFrom_MQ>
-
         }
 
         /*[Category("Projection Operators")]
@@ -377,7 +375,6 @@ namespace LINQtoDataSetSamples
                     order.OrderID, order.OrderDate);
             }
             // </SnippetSelectManyCompoundFrom2_MQ>
-
         }
 
         /*[Category("Projection Operators")]
@@ -1553,7 +1550,6 @@ namespace LINQtoDataSetSamples
 
             Console.WriteLine(nameList);
             //</SnippetAggregate_MQ>
-
         }
 
         /*[Category("Aggregate Operators")]
@@ -1605,7 +1601,6 @@ namespace LINQtoDataSetSamples
                     product.Style, product.AverageListPrice);
             }
             //</SnippetAverage2_MQ>
-
         }
 
         /*[Category("Aggregate Operators")]
@@ -2068,7 +2063,6 @@ namespace LINQtoDataSetSamples
                     order.ProductID);
             }
             //</SnippetJoin>
-
         }
 
         /*[Category("Join Operators")]
@@ -2195,7 +2189,6 @@ namespace LINQtoDataSetSamples
                     order.ords);
             }
             //</SnippetGroupJoin2>
-
         }
         /*[Category("Join Operators")]
         [Title("GroupJoin")]
@@ -2241,7 +2234,6 @@ namespace LINQtoDataSetSamples
                     contact_order.TotalDue);
             }
             //</SnippetGroupJoin>
-
         }
         #endregion
 
@@ -2297,10 +2289,8 @@ namespace LINQtoDataSetSamples
                 Console.WriteLine("Order Date: {0}", row["OrderDate"]);
                 Console.WriteLine("Total Due:  ${0}", row["TotalDue"]);
                 Console.WriteLine("");
-
             }
             //</SnippetLoadingQueryResultsIntoDataTable>
-
         }
 
         /*[Category("DataSet Loading examples")]
@@ -2584,7 +2574,6 @@ namespace LINQtoDataSetSamples
             Decimal totalDue = orders.Sum(o => o.Field<Decimal>("TotalDue"));
 
             Console.WriteLine("Sum of order amounts: ${0}", totalDue);
-
         }
 
         static void Sum2(DataSet ds)
@@ -2606,7 +2595,6 @@ namespace LINQtoDataSetSamples
                 Console.WriteLine("Category: {0} Units sold: {1}",
                     emp.Category, emp.TotalSickLeaveHours);
             }
-
         }
 
         // Display DataSet info. This will not be used in the docs.
@@ -2626,7 +2614,6 @@ namespace LINQtoDataSetSamples
 
                 Console.WriteLine("");
             }
-
         }
 
         static void FillDataSet(DataSet ds)
@@ -2711,8 +2698,6 @@ namespace LINQtoDataSetSamples
             ds.WriteXmlSchema(writer);
             writer.Close();
             Console.WriteLine("Schema written.");
-
         }
-
     }
 }

@@ -38,13 +38,11 @@ public static void demoDenySite() {
 	{
 		Console.WriteLine("Expected exception" + e.Message);
 	}
-
  }
 
 //</Snippet1>
 		static void Main()
 		{
              demoDenySite();
-			
 		}
 	}

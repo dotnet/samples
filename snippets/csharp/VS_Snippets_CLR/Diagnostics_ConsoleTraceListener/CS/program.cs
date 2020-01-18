@@ -40,7 +40,6 @@ public class ConsoleTraceSample
         Trace.Unindent();
         Trace.WriteLine(DateTime.Now.ToString() + " - End of " + methodName);
         Trace.Unindent();
-
     }
 
     // Define the main entry point of this class.
@@ -103,8 +102,6 @@ public class ConsoleTraceSample
 
         // Close all other configured trace listeners.
         Trace.Close();
-
     }
-
 }
 // </Snippet1>

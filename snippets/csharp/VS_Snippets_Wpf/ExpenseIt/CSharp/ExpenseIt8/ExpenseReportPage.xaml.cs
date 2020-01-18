@@ -32,7 +32,6 @@ namespace ExpenseIt
             // Bind to expense report data.
             this.DataContext = data;
         }
-
     }
     //</Snippet26>
 }

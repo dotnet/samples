@@ -153,7 +153,6 @@ namespace CS
             //<Snippet16>
             DataSet addedRecords = dataSet1.GetChanges(DataRowState.Added);
             //</Snippet16>
-
         }
 
         //---------------------------------------------------------------------

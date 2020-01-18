@@ -13,7 +13,6 @@ namespace SDKSample
 
         public SingletonPanel()
         {
-
         }
 
         public FrameworkElement SingleChild

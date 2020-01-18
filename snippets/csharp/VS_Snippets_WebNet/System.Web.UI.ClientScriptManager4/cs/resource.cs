@@ -11,8 +11,6 @@ namespace Samples.AspNet.CS.Controls
 	public class ClientScriptResourceLabel
 	{
 		// Class code goes here.
-
 	}
-	 
 }
 // </Snippet2>

@@ -69,7 +69,6 @@ public class DisposeExample
 
                 // Note disposing has been done.
                 disposed = true;
-
             }
         }
 

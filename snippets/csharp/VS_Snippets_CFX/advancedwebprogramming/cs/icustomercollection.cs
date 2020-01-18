@@ -29,5 +29,4 @@ namespace Microsoft.WebProgrammingModel.Samples
         [WebInvoke(Method = "PUT", UriTemplate = "{id}")]
         Customer UpdateCustomer(string id, Customer newCustomer);
     }
-
 }

@@ -41,7 +41,5 @@ if (!authenticationSection.SectionInformation.IsLocked)
   configuration.Save();
 
 // </Snippet3>
-
 }
-
 }

@@ -9,7 +9,6 @@ class XmlReaderSettings_Examples
 {
 	static void Main()
 	{
-
     }
 
     // 
@@ -209,5 +208,4 @@ XmlReader reader = XmlReader.Create(txtReader, settings);
 
         //</snippet13>
     }
-
 }

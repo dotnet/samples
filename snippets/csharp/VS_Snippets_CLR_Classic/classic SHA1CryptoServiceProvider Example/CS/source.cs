@@ -19,6 +19,5 @@ SHA1 sha = new SHA1CryptoServiceProvider();
 
 result = sha.ComputeHash(data);
 // </Snippet1>
-
  }
 }

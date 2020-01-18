@@ -32,8 +32,6 @@ namespace UsageLibrary
             PointWithoutHash p = (PointWithoutHash)obj;   
             return ((this.x == p.x) && (this.y == p.y));
         }
-        
     }
-
 }
 //</Snippet1>

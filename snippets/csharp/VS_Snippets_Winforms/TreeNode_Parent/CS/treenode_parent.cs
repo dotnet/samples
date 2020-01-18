@@ -237,7 +237,6 @@ public class MyTreeNodeForm : System.Windows.Forms.Form
 		this.Name = "MyTreeNodeForm";
 		this.Text = "TreeNode class sample";
 		this.ResumeLayout(false);
-
 	}
 
 	static void Main()

@@ -8,7 +8,6 @@ public class Group{
    public string GroupName;
    [XmlAnyElement]
    public object[]Things;
-
 }
 
 public class Test{

@@ -34,7 +34,6 @@ namespace ComboBoxColumnSample2
             DG1.DataContext = dt;
             cbc1.ItemsSource = dt;
             CB.DataContext = dt;
-
         }
 
         public class Customer
@@ -55,7 +54,6 @@ namespace ComboBoxColumnSample2
             //    get { return bi; }
                 
             //    }
-
         }
 
         public ObservableCollection<Customer> GetData()
@@ -81,9 +79,7 @@ namespace ComboBoxColumnSample2
             }
 
             return customers;
-
         }
-
     }
     public enum OrderStatus { None, New, Processing, Shipped, Received };
 }

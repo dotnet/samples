@@ -98,7 +98,6 @@ internal class Example
                 return;
             }
             //</Snippet4>
-
         }
         else if (unauthorized)
         {
@@ -149,7 +148,6 @@ internal class Example
                 //
                 sem = Semaphore.OpenExisting(semaphoreName);
                 //</Snippet3>
-
             }
             catch(UnauthorizedAccessException ex)
             {

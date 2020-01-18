@@ -18,14 +18,12 @@ class RSACSPSample
                 //true to export public and private key information.
                 RSAParameters RSAParams = RSA.ExportParameters(false);
             }
-
         }
         catch (CryptographicException e)
         {
             //Catch this exception in case the encryption did
             //not succeed.
             Console.WriteLine(e.Message);
-
         }
         // </Snippet1>
     }

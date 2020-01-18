@@ -34,9 +34,7 @@ namespace Samples.AspNet.CS.Controls
 			a.InnerText = "help link";
 			this.Controls.Add(new LiteralControl("<br />"));
 			this.Controls.Add(a);
-
 		}
 	}
-
 }
 // </Snippet2>

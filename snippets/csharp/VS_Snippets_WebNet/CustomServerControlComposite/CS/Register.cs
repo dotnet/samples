@@ -177,7 +177,6 @@ namespace Samples.AspNet.CS.Controls
             {
                 EnsureChildControls();
                 emailLabel.Text = value;
-
             }
         }
 

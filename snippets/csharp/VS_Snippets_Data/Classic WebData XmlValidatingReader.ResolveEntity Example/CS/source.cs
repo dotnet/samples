@@ -43,7 +43,6 @@ public class Sample
        Console.WriteLine("An EndEntity node closes the entity reference scope.");
        reader.Read();
        Console.WriteLine("NodeType: {0} Name: {1}", reader.NodeType,reader.Name);
-     
     }
     finally
     {

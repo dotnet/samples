@@ -26,7 +26,6 @@ namespace cs_gettingstarted
                 Console.WriteLine(customer);
             }
             // </Snippet1>
-
         }
 
         void method2()
@@ -86,7 +85,6 @@ namespace cs_gettingstarted
                 nw.SubmitChanges();
             }
             // </Snippet4>
-
         }
     }
 }

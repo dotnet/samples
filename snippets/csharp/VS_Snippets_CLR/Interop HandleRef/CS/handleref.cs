@@ -100,7 +100,6 @@ public class App
         Console.WriteLine("Read with struct parameter: {0}", buffer);
         NativeMethods.ReadFile2(hr, buffer, 5, out read, null);
         Console.WriteLine("Read with class parameter: {0}", buffer);
-
     }
 }
 // </Snippet1> 

@@ -37,9 +37,7 @@ public class SamplesThaiBuddhistCalendar  {
          }
          Console.WriteLine();
       }
-
    }
-
 }
 
 /*

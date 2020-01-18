@@ -17,7 +17,6 @@ public class Numbers
          // element.
          else
             numbersOut[ctr] = Byte.MaxValue;
-
       }
       return numbersOut;
    }

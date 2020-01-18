@@ -51,7 +51,6 @@ public class LogOnControl:UserControl
 			   PasswordText = (string)totalState[2];
 		   }
 	   }
-
    }
 
    [System.Security.Permissions.PermissionSet(System.Security.Permissions.SecurityAction.Demand, Name="FullTrust")] 

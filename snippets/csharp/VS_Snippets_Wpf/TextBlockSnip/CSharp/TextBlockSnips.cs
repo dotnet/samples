@@ -43,7 +43,6 @@ namespace SDKSample
             // Add the StackPanel as the Content of the Parent Window Object
             mainWindow.Content = myStackPanel;
             mainWindow.Show ();
-
         }
     }
 

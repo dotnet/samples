@@ -12,7 +12,6 @@ class Read_Write_BinaryMethods {
 
               Base64EncodeImageFile();
               Base64DecodeImageFile();
-
    }
 //<snippet1>
 
@@ -38,7 +37,6 @@ public static void BinHexEncodeImageFile() {
 
     writer.WriteEndElement();// </image>
     writer.WriteEndDocument();
-		
   }
 }
 //</snippet1>
@@ -62,7 +60,6 @@ public static void BinHexDecodeImageFile() {
             bw.Write(buffer, 0, readBytes);
         }
         outputFile.Close();
-		
   }
 }
 //</snippet2>
@@ -92,7 +89,6 @@ public static void Base64EncodeImageFile() {
 		
     writer.WriteEndElement();// </image>
     writer.WriteEndDocument();
-		
   }
 }
 //</snippet3>
@@ -120,5 +116,4 @@ public static void Base64DecodeImageFile() {
   }
 }
 //</snippet4>
-
 } // end class.

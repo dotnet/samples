@@ -923,7 +923,6 @@ namespace csrefLINQExamples
                     Zabokritski, Eugene
         */
         //</snippet18>
-
     } // end class GroupExamples
 
     //Snippet22 is used up above out of sequence
@@ -962,7 +961,6 @@ namespace csrefLINQExamples
             }
         }
         //</snippet23>
-
     }
 
     //How to: Group a Group

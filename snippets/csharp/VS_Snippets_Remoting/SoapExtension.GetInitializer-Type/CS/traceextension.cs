@@ -95,7 +95,6 @@
         writer.WriteLine(reader.ReadToEnd());
         writer.Flush();
     }
-
 }
 
    // Create a SoapExtensionAttribute for our SOAP Extension that can be

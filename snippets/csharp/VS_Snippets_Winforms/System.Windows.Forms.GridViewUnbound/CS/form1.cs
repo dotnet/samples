@@ -54,7 +54,6 @@ public class Form1 : Form
                 {
                     e.CellStyle.BackColor = Color.Pink;
                 }
-
             }
         }
         else if (this.dataGridView1.Columns[e.ColumnIndex].Name == "Release Date")
@@ -110,7 +109,6 @@ public class Form1 : Form
                         // Set the ParsingApplied property to 
                         // Show the event is handled.
                         e.ParsingApplied = true;
-
                     }
                     catch (FormatException)
                     {
@@ -208,7 +206,6 @@ public class Form1 : Form
         deleteRowButton.Click += new EventHandler(deleteRowButton_Click);
         ledgerStyleButton.Click += new EventHandler(ledgerStyleButton_Click);
         dataGridView1.CellValidating += new DataGridViewCellValidatingEventHandler(dataGridView1_CellValidating);
-
     }
     //</snippet5>
 

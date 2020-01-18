@@ -29,7 +29,6 @@ public class Form1:
 		this.Name = "Form1";
 		this.Text = "Form1";
 		this.ResumeLayout(false);
-
 	}
 
 	//<snippet1>
@@ -84,7 +83,6 @@ public class Form1:
 				break;
 		}
 		e.ItemWidth = 260;
-
 	}
 
 	// You must handle the DrawItem event for owner-drawn combo boxes.  

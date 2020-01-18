@@ -84,7 +84,6 @@ namespace EnumExtension
     Second is not a passing grade.
  */
     //</snippet2>
-
 } //namespace Extension2
 
     //<snippet3>

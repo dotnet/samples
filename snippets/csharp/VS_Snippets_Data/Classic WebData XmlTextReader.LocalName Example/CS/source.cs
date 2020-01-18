@@ -28,7 +28,6 @@ public class Sample {
            }
          }
        }       
-
      } 
      finally {
         if (reader != null)

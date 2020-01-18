@@ -79,7 +79,6 @@ public sealed class CustomBindingCreator
 
         WSHttpSecurity security = binding.Security;
         return binding;
-
     }
 
     public static Binding GetBinding2()
@@ -91,7 +90,6 @@ public sealed class CustomBindingCreator
         binding.Security.Message.ClientCredentialType = MessageCredentialType.Windows;
         return binding;
         // </Snippet7>
-
     }
 
     //<snippet4>
@@ -146,7 +144,6 @@ public sealed class CustomBindingCreator
         return b;
     }
     //</snippet4>
-
 }
 //</snippet3>
 

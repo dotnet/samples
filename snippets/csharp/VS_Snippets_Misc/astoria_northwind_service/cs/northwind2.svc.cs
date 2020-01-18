@@ -76,7 +76,6 @@ namespace NorthwindDataService
             //    this.CurrentDataSource.SaveChanges();
 
             //}
-            
         }
 
         // This method is called only once to initialize service-wide policies.
@@ -105,7 +104,6 @@ namespace NorthwindDataService
             config.SetServiceOperationAccessRule("GetOrdersByState", ServiceOperationRights.AllRead);
             config.SetEntitySetPageSize("Customers", 10);
             config.SetEntitySetPageSize("Orders", 10);
-
         }
         //<snippetServiceOperation>
         //<snippetServiceOperationDef>
@@ -185,7 +183,6 @@ namespace NorthwindDataService
         public void ReturnsNoData()
         {
             // This method returns no data (it also doesn't do anything).
-
         }
 
         //<snippetQueryInterceptor>
@@ -257,7 +254,6 @@ namespace NorthwindDataService
 
                     // Unpack the DataServiceException.
                     args.Exception = args.Exception.InnerException as DataServiceException;
-
                 }
                 else
                 {

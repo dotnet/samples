@@ -13,7 +13,6 @@ namespace WeakEvents
         {
             TimeStamp = DateTime.Now.ToLongTimeString();
         }
-
     }
 
     public class EventSource

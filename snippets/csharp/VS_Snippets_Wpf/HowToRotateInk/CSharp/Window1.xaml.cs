@@ -33,7 +33,6 @@ public partial class Window1 : Window
         rotatingMatrix.RotateAt(90, rotatePoint.X, rotatePoint.Y);
         copiedStrokes.Transform(rotatingMatrix, false);
         inkPresenter1.Strokes = copiedStrokes;
-
     }
     //</Snippet2>
 }

@@ -67,7 +67,6 @@ namespace BasicSnippetC {
 		public void ConvertBytes(byte byteVal) {
 			ConvertByteDecimal(byteVal);
 			ConvertByteSingle(byteVal);
-
 		}
 	
 		//<Snippet1>
@@ -150,7 +149,6 @@ namespace BasicSnippetC {
 				System.Console.WriteLine(
 					"Overflow in double-to-double conversion.");
 			}
-
 		}
 		//</Snippet5>
 

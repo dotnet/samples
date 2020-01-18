@@ -25,7 +25,6 @@ namespace SyndicationLinkSnippets
             SyndicationLink link = new SyndicationLink(new Uri("http://server/link"));
             feed.Links.Add(link);
             // </Snippet1>
-
         }
 
         public static void Snippet4()

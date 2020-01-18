@@ -18,13 +18,11 @@ public partial class Customer
             throw new ValidationException(
                "Data value must start with an uppercase letter.");
     }
-
 }
 
 public class CustomerMetadata
 {
     [Required()]
     public object Title;
-
 }
 // </Snippet1>

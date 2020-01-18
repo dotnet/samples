@@ -191,6 +191,5 @@ namespace Contoso.VSSkinHost
                        0,        // false
                        out result));
         }
-
     }
 }

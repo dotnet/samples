@@ -15,6 +15,5 @@ namespace Microsoft.Samples.Brushes
         {
             InitializeComponent();
         }
-
     }
 }

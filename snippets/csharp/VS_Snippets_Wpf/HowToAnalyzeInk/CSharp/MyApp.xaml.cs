@@ -12,6 +12,5 @@ namespace IADemo
 
     public partial class MyApp : Application
     {
-
     }
 }

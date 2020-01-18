@@ -53,7 +53,6 @@ namespace Microsoft.Samples.Animation.LocalAnimations
             CloneExample();
             exceptionExample();
             this.Content = myMainPanel;
-            
         }
         
         private void UnFrozenExample()
@@ -120,7 +119,6 @@ namespace Microsoft.Samples.Animation.LocalAnimations
             // </SnippetExceptionExample>
 
             myMainPanel.Children.Add(myButton);        
-
         }
 
         private void checkIsFrozenExample()
@@ -157,7 +155,6 @@ namespace Microsoft.Samples.Animation.LocalAnimations
             // </SnippetCheckIsFrozenExample>
 
             myMainPanel.Children.Add(myButton);
-
         }    
 
         private void CloneExample()
@@ -195,7 +192,6 @@ namespace Microsoft.Samples.Animation.LocalAnimations
 
             myMainPanel.Children.Add(myButton);
         }
-
     }
     
     // <SnippetCreateInstanceCoreExample>
@@ -211,7 +207,6 @@ namespace Microsoft.Samples.Animation.LocalAnimations
         // ...
         // Other code for the MyFreezableClass.
         // ...
-
     }
     
     // </SnippetCreateInstanceCoreExample>    

@@ -27,5 +27,4 @@ class Program
         Console.ReadLine();
     }
     // </Snippet1>
-
 }

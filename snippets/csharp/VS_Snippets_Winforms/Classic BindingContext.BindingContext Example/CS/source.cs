@@ -34,5 +34,4 @@ private void Button2_Click(object sender, EventArgs e)
    groupBox2.BindingContext[ds, "Customers"].Position += 1;
 }
 // </Snippet1>
-
 }

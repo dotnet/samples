@@ -32,7 +32,6 @@ public class SamplesUTF32Encoding  {
       PrintCountsAndBytes( myStr, u8Bom );
       PrintCountsAndBytes( myStr, u32Nobom );
       PrintCountsAndBytes( myStr, u32Bom );
-
    }
 
    public static void PrintCountsAndBytes( String s, Encoding enc )  {
@@ -58,7 +57,6 @@ public class SamplesUTF32Encoding  {
 
       // Display all the encoded bytes.
       PrintHexBytes( bytes );
-
    }
 
    public static void PrintHexBytes( byte[] bytes )  {
@@ -72,9 +70,7 @@ public class SamplesUTF32Encoding  {
             Console.Write( "{0:X2} ", bytes[i] );
          Console.WriteLine();
       }
-
    }
-
 }
 
 

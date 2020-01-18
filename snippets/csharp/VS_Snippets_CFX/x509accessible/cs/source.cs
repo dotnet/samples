@@ -50,7 +50,6 @@ namespace BasicAuthentication
             
             // Close the service. 
             myServiceHost.Close();
-
         }
 
         public static void ClientRun()
@@ -89,7 +88,6 @@ namespace BasicAuthentication
 
             // Close the client.
             cc.Close();
-
         }
 
         private static string ReturnUsername()
@@ -131,7 +129,6 @@ namespace SecuredUsingWindows
 
             // Close the service.
             myServiceHost.Close();
-
         }
 
         public static void RunClient()
@@ -160,7 +157,6 @@ namespace SecuredUsingWindows
 
             // Close the client.
             cc.Close();
-
         }
         private static string ReturnUsername()
         {
@@ -171,7 +167,6 @@ namespace SecuredUsingWindows
         {
             return "not";
         }
-
     }
 }
 namespace SecuredByTransportWithAnonymousClient
@@ -203,7 +198,6 @@ namespace SecuredByTransportWithAnonymousClient
 
             // Close the service.
             myServiceHost.Close();
-
         }
     
         public static void RunClient()
@@ -233,7 +227,6 @@ namespace SecuredByTransportWithAnonymousClient
 
             // Close the client.
             cc.Close();
-
         }
     }
 }
@@ -268,7 +261,6 @@ namespace SecuredTranserUsingCertificates
             
             // Close the service.
             myServiceHost.Close();
-
         }
 
         private void ClientRun()
@@ -306,7 +298,6 @@ namespace SecuredTranserUsingCertificates
 
             // Close the client.
             cc.Close();
-
         }
     }
 }
@@ -346,7 +337,6 @@ namespace SecuredUsingMessageSecurityWithAnonClient
             
             // Close the service.
             myServiceHost.Close();
-
         }
 
         private void ClientRun()
@@ -373,7 +363,6 @@ namespace SecuredUsingMessageSecurityWithAnonClient
 
             // Close the client.
             cc.Close();
-
         }
     }
 }
@@ -413,7 +402,6 @@ namespace SecuredUsingMessageSecurityWithUsername
 
             // Close the service. 
             myServiceHost.Close();
-
         }
 
         private void ClientRun()
@@ -446,7 +434,6 @@ namespace SecuredUsingMessageSecurityWithUsername
 
             // Close the client.
             cc.Close();
-
         }
 
         private string ReturnUsername()
@@ -496,7 +483,6 @@ namespace SecuredUsingMessageWithCertClient
             
             // Close the service.
             myServiceHost.Close();
-
         }
         private void ClientRun()
         {
@@ -529,9 +515,7 @@ namespace SecuredUsingMessageWithCertClient
 
             // Close the client.
             cc.Close();
-
         }
-
     }
 }
 
@@ -565,7 +549,6 @@ namespace SecuredUsingMessageWithWindowsClient
 
             // Close the service.
             myServiceHost.Close();
-
         }
 
         private void ClientRun()
@@ -592,7 +575,6 @@ namespace SecuredUsingMessageWithWindowsClient
 
             // Close the client.
             cc.Close();
-
         }
     }
 }
@@ -644,7 +626,6 @@ namespace MessageSecuritWithKerberosAuth
 
             // Close the service. 
             myServiceHost.Close();
-
         }
         private void ClientRun()
         {
@@ -680,7 +661,6 @@ namespace MessageSecuritWithKerberosAuth
 
             // Close the client.
             cc.Close();
-
         }
     }
 }
@@ -725,7 +705,6 @@ namespace SecuredUsingMessageSecurityWithInteroperableCertClient
 
             // Close the service.
             myServiceHost.Close();
-
         }
         private void ClientRun()
         {
@@ -770,9 +749,7 @@ namespace SecuredUsingMessageSecurityWithInteroperableCertClient
 
             // Close the client.
             cc.Close();
-
         }
-
     }
 }
 namespace ServiceModel
@@ -782,7 +759,6 @@ namespace ServiceModel
     {
         [OperationContract]
         double Add(double a, double b);
-
     }
 
     public class Calculator : ICalculator
@@ -802,9 +778,7 @@ namespace ServiceModel
             sb.HttpGetUrl = new Uri("http://localhost:8008/metadata");
             sh.Description.Behaviors.Add(sb);
         }
-
     }
-
 }
 namespace ClientCalculator
 {

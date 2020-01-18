@@ -20,7 +20,6 @@ public class Sample
       Validate(doc1, ValidationType.XDR);  //Validation should fail.
       Validate(doc2, ValidationType.DTD);  //Validation should fail.
       Validate(doc3, ValidationType.None); //No validation performed.
-
   }    
 
   public static void Main ()
@@ -65,7 +64,6 @@ public class Sample
         if (reader != null)
           reader.Close();
      } 
-
   }
   
   //Display the validation errors.
@@ -74,7 +72,6 @@ public class Sample
      m_success = false;
 
      Console.Write("\r\n\tValidation error: " + args.Message);
-
   }
 }
    // </Snippet1>

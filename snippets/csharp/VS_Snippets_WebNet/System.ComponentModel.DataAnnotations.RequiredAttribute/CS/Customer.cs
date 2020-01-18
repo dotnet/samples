@@ -7,7 +7,6 @@ using System.Globalization;
 [MetadataType(typeof(CustomerMetaData))]
 public partial class Customer
 {
-
 }
 
 public class CustomerMetaData
@@ -25,7 +24,6 @@ public class CustomerMetaData
     [Required()]
     public object MiddleName;
     // </Snippet3>
-
 }
 
 //</Snippet1>

@@ -138,8 +138,6 @@ namespace Microsoft.Samples.BrushExamples
             Background = Brushes.White;
             Margin = new Thickness(20);
             Title = "Alignment Example";
-
         }
-
     }
 }

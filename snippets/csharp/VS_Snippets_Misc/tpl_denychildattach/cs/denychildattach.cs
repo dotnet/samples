@@ -19,7 +19,6 @@ namespace Contoso
          {
             // Simulate a lengthy operation.
             Thread.Sleep(5000);
-
          }, TaskCreationOptions.AttachedToParent);
       }
    }

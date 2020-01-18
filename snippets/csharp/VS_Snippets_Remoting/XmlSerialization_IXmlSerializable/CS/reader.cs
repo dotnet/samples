@@ -11,6 +11,5 @@ public class Reader {
     Person aPerson = (Person) serializer.Deserialize(file);
     Console.WriteLine(aPerson);
   }
-
 }
 // </snippet20>

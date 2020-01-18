@@ -31,7 +31,6 @@ namespace SL_AddressHeader
 
         private void Application_Exit(object sender, EventArgs e)
         {
-
         }
         private void Application_UnhandledException(object sender, ApplicationUnhandledExceptionEventArgs e)
         {

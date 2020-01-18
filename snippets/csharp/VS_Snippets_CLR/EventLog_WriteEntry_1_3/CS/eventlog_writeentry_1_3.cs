@@ -49,6 +49,5 @@ class MyEventLog
         myLog.WriteEntry("Writing warning to event log.",
                           EventLogEntryType.Warning, myEventID, myCategory);
         // </Snippet3>   
-
     }
 }

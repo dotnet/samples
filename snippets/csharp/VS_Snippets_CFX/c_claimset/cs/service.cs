@@ -107,7 +107,6 @@ namespace Microsoft.ServiceModel.Samples
                 // If this point is reached, return false to deny access.
                 return false;                 
             }
-
         }
         // </snippet1>
         public class MyAuthorizationPolicy : IAuthorizationPolicy
@@ -239,7 +238,6 @@ namespace Microsoft.ServiceModel.Samples
                     throw new SecurityTokenException("Unknown Username or Password");
                 }
             }
-            
         }
         
         // Host the service within this EXE console application.

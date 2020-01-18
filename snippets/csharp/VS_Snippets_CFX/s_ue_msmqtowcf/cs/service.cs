@@ -75,7 +75,6 @@ namespace Microsoft.ServiceModel.Samples
                 Console.ReadLine();
             }
             // </Snippet0>
-           
         }  
     }
 }

@@ -235,6 +235,5 @@ namespace ReceiveActivitySnippets
             [DataMember]
             public DateTime EstimatedShippingDate;
         }
-
     }
 }

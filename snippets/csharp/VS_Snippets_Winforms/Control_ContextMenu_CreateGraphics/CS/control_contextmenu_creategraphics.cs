@@ -90,7 +90,6 @@ namespace MyApplication
          this.Name = "MyForm";
          this.Text = "ContextMenu Example";
          this.ResumeLayout(false);
-
       }
       #endregion
 

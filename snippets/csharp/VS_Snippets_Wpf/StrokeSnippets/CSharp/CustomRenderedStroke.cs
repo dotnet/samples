@@ -21,13 +21,11 @@ namespace StrokeSnippets_CS
     {
         public CustomRenderedStroke(StylusPointCollection points) : base(points)
         {
-         
         }
 
         public CustomRenderedStroke(StylusPointCollection stylusPoints, DrawingAttributes drawingAttributes)
             : base(stylusPoints, drawingAttributes)
         {
-         
         }
 
         //<Snippet25>

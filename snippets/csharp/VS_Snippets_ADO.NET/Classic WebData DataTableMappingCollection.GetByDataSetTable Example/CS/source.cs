@@ -22,5 +22,4 @@ public class Form1: Form
             mapping = mappings.GetByDataSetTable("datacategories");
     }
     // </Snippet1>
-
 }

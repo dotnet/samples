@@ -145,7 +145,6 @@ namespace WindowsApplication10
             this.ResumeLayout(false);
             this.PerformLayout();
             // </Snippet3>
-
         }
     }
 }

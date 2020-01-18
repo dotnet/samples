@@ -38,7 +38,6 @@ namespace SDKSample
 
                 // Create a triangle using the collection of Point Structures.
                 ctx.PolyLineTo(pointList, true /* is stroked */, false /* is smooth join */);
-
             }
 
             // Freeze the geometry (make it unmodifiable)

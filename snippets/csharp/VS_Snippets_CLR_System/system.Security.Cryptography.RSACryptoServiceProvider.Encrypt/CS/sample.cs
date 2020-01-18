@@ -45,7 +45,6 @@ class RSACSPSample
 			EncryptedSymmetricIV = RSA.Encrypt(RM.IV, false);
 
 			Console.WriteLine("RijndaelManaged Key and IV have been encrypted with RSACryptoServiceProvider."); 
-		
 		}
 		//Catch and display a CryptographicException  
 		//to the console.

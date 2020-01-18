@@ -28,5 +28,4 @@ namespace Microsoft.Samples.Channels.ChunkingChannel
         private object state;
         internal delegate void WriteBody(XmlDictionaryWriter writer, object state);
     }
- 
 }

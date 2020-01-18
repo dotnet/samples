@@ -117,7 +117,6 @@ public class Test{
       if(myChoices.ChoiceArray[i] == MoreChoices.Temp)
       	Console.WriteLine("Temp: " + (string) myChoices.ManyChoices[i].ToString());
       	}
-      
    }
 }
 //</Snippet1>   	

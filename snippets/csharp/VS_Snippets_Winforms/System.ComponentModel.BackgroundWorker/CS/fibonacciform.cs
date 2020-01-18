@@ -305,7 +305,6 @@ namespace BackgroundWorkerExample
             this.Text = "Fibonacci Calculator";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
-
         }
 		#endregion
 

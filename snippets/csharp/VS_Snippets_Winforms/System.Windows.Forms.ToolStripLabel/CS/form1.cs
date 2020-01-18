@@ -60,7 +60,6 @@ public class Form1 : Form
         this.toolStrip1.PerformLayout();
         this.ResumeLayout(false);
         this.PerformLayout();
-
     }
 
     private void toolStripLabel1_Click(object sender, EventArgs e)

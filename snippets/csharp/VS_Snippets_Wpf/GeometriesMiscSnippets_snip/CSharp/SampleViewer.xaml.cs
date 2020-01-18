@@ -14,7 +14,5 @@ namespace SDKSample
             InitializeComponent();
             MyRectExampleFrame.Content = new RectExample();
         }
-        
     }
-
 }

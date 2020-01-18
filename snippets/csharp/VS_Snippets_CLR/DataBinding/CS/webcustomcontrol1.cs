@@ -282,7 +282,6 @@ DataBindingHandlerAttribute(typeof(System.Web.UI.Design.TextDataBindingHandler))
                DataBindingHandlerAttribute myDataBindingHandlerAttribute= (DataBindingHandlerAttribute)attribute;
                output.Write("<br><br><br>The IsDefaultAttribute of DataBindingHandlerAttribute is :" + myDataBindingHandlerAttribute.IsDefaultAttribute());
                output.Write("<br><br><br>DataBinding HandlerTypeName:" + myDataBindingHandlerAttribute.HandlerTypeName);
-
             }
          }
       }

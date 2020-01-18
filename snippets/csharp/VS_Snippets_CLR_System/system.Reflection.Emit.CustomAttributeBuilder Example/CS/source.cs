@@ -22,7 +22,6 @@ public class ClassCreator: Attribute
    {
       this.creator = name;
    }
-
 }
 
 // We will apply this dynamic attribute to our dynamic method.
@@ -42,7 +41,6 @@ public class DateLastUpdated: Attribute
    {
 	this.dateUpdated = theDate;
    } 
-
 }
 
 class MethodBuilderCustomAttributesDemo
@@ -98,7 +96,6 @@ class MethodBuilderCustomAttributesDemo
 	myIL.Emit(OpCodes.Ret);
 
 	return myTypeBuilder.CreateType();
-	
    }
 
    public static void Main() 
@@ -139,9 +136,7 @@ class MethodBuilderCustomAttributesDemo
 	Console.WriteLine(myType.InvokeMember("HelloWorld",
 			  BindingFlags.InvokeMethod,
 			  null, myInstance, new object[] { }));
-
    }
-
 }
 
 // </Snippet1>

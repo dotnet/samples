@@ -18,7 +18,6 @@ public class Form1:
 		this.RadioButton3.CheckedChanged += new 			EventHandler(RadioButton_CheckedChanged);
 
 		//Add any initialization after the InitializeComponent() call
-
 	}
 
 	//Form overrides dispose to clean up the component list.
@@ -52,7 +51,6 @@ public class Form1:
 		this.Name = "Form1";
 		this.Text = "Form1";
 		this.ResumeLayout(false);
-
 	}
 
 	#endregion
@@ -115,7 +113,6 @@ public class Form1:
 		// Add the GroupBox to the form.
 		this.Controls.Add(this.GroupBox1);
 		//
-
 	}
 	// </snippet1>
 

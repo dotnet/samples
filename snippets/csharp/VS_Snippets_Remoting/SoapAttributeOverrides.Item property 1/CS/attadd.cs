@@ -17,7 +17,6 @@ public class Run
       Run test = new Run();
 
       test.SerializeOverride("GetSoapAttributes.xml");
-      
    }
    public void SerializeOverride(string filename)
    {
@@ -66,6 +65,5 @@ public class Run
       XmlSerializer ser = new XmlSerializer(myMapping);
       return ser;
    }
-
 }
 //</Snippet1>

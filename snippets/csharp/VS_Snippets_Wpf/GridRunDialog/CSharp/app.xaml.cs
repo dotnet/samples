@@ -16,6 +16,5 @@ namespace Grid_Run_Dialog
 			mainWindow.InitializeComponent();
 			mainWindow.Show();
         }
-
 	}
 }

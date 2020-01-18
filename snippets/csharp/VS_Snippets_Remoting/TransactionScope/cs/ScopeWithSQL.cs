@@ -77,9 +77,7 @@ class Program
                 // The Complete method commits the transaction. If an exception has been thrown,
                 // Complete is not  called and the transaction is rolled back.
                 scope.Complete();
-
             }
-           
         }
         catch (TransactionAbortedException ex)
         {

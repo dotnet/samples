@@ -194,7 +194,6 @@ namespace BT2
             // parent table.
             DataRow row1 = set1.Tables[0].Rows[0];
             row1[1] = DBNull.Value;
-
         }
         
         [STAThread]
@@ -205,6 +204,5 @@ namespace BT2
             Application.Run(new Form1());
         }
     }
-
 }
 //</snippet1>

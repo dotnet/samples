@@ -18,7 +18,6 @@ namespace LocConsumerCS
         public BlankPage()
         {
             this.InitializeComponent();
-
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)

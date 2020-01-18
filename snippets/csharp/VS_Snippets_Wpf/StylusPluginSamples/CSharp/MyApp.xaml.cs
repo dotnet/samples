@@ -21,6 +21,5 @@ namespace AdvancedInkInputSemples
             //Window2 win = new Window2();
             //win.Show();
         }
-
     }
 }

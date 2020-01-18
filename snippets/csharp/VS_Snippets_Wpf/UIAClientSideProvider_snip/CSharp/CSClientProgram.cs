@@ -24,7 +24,6 @@ namespace CSClient
             catch (FileNotFoundException e1)
             {
                 Console.WriteLine(e1.Message);
-
             }
             if (a != null)
             {

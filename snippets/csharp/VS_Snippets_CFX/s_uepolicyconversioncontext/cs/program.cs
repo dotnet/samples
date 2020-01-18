@@ -86,7 +86,6 @@ using System.ServiceModel.Channels;
           ImportPolicy(importer, myPolicyConversionContext);
 */	  
       }  
-
   }
 
 namespace CS2
@@ -119,7 +118,6 @@ namespace CS2
 		{
 			return context.GetInnerProperty<T>();
 		}
-
 	}
 
 	public class Program {

@@ -66,7 +66,6 @@ namespace Examples.CS.WebControls.Design
             }
 
             return markup;
-
         } // GetDesignTimeHtml
         // </snippet3>
     } // SimpleCompareValidatorDesigner

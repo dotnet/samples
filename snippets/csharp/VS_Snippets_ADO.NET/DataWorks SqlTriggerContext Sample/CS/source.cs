@@ -50,7 +50,6 @@ public static void UsersAudit()
          command.Parameters.Add(new SqlParameter("@realName", realName));
                
          command.ExecuteNonQuery();               
-            
       }
          
       break;
@@ -110,7 +109,6 @@ public static void TableAudit()
                     }
 
                     reader.Close();
-
                 }
                 else
                 {

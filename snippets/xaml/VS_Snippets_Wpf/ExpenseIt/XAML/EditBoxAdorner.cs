@@ -162,5 +162,4 @@ namespace Editing
         private const double _extraWidth = 15; 
         #endregion
     }
-
 }

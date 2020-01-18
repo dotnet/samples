@@ -75,5 +75,4 @@ namespace VSMButtonTemplate
         public VerticalAlignment VerticalContentAlignment { get; set; }
     }
     //</SnippetButtonContract>
-
 }

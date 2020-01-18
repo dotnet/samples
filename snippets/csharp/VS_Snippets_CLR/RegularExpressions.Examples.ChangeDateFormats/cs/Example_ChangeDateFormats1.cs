@@ -27,7 +27,6 @@ public class Class1
       }
    }
    // </Snippet1>
-
 }
 // The example displays the following output to the console if run on 8/21/2007:
 //      Converted 08/21/2007 to 21-08-2007.

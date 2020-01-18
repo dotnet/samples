@@ -26,7 +26,6 @@ namespace TPL
         {
             public string Name { get; set; }
             public double Number { get; set; }
-
         }
 
         static void DoSomeWork(int val)
@@ -186,7 +185,6 @@ namespace TPL
                 () => action(tree.Data)
             );
         }
-
     }
 
     //</snippet16>
@@ -195,7 +193,6 @@ namespace TPL
     //<snippet17> 
     public class OrderPreservation
     {
-
     }
 
     //</snippet17>
@@ -243,10 +240,8 @@ namespace TPL
             //<snippet21>
             Parallel.Invoke(() => DoSomeWork(), () => DoSomeOtherWork());
             //</snippet21>
-
         }
     }
 
     //}
-
 }

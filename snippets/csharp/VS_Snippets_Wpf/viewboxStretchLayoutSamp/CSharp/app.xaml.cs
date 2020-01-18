@@ -18,6 +18,5 @@ namespace Viewbox_Stretch_Layout_Samp
 			mainWindow.InitializeComponent();
 			mainWindow.Show();
         }
-
 	}
 }

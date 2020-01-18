@@ -17,8 +17,6 @@ public class X509
 
         // Get the value.
         byte[] results = cert.GetCertHash();
-      
     }
-
 }
 // </Snippet1>

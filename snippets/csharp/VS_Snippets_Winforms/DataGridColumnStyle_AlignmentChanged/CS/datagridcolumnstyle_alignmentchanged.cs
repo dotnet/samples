@@ -106,6 +106,5 @@ public class Form1 : Form
            myTable.Rows[2]["CustName"] ="David";
            myTable.Rows[3]["CustName"] ="Robert";
            myTable.Rows[4]["CustName"] ="John";
-         
     }
    }

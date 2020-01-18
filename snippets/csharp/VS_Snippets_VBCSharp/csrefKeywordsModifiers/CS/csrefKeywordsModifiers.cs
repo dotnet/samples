@@ -246,7 +246,6 @@ namespace csrefKeywordsModifiers
             myString = Console.ReadLine();
             return MessageBox((IntPtr)0, myString, "My Message Box", 0);
         }
-
     }
     //</snippet8>
 

@@ -40,7 +40,6 @@ namespace Samples
                 }
             }
             //</snippet3>
-
         }
     }
 }

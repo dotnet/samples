@@ -40,6 +40,5 @@ namespace CustomControls
         Controls.Add(text);
       }
    }
-
 }
 // </snippet1>

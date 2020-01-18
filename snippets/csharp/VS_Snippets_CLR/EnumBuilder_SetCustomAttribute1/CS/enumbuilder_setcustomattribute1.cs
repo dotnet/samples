@@ -67,7 +67,6 @@ class MyApplication
       {
          Console.WriteLine("The following exception is raised:" +e.Message);
       }
-
   }
 
    private static void CreateCallee(AppDomain domain)

@@ -116,7 +116,6 @@ namespace Microsoft.AdoDotNet.CodeSamples
                     // to call EndExecuteXmlReader in the callback procedure.
                     AsyncCallback callback = new AsyncCallback(HandleCallback);
                     command.BeginExecuteXmlReader(callback, command);
-
                 }
                 catch (Exception ex)
                 {
@@ -151,7 +150,6 @@ namespace Microsoft.AdoDotNet.CodeSamples
                 // from the form's thread. 
                 DisplayReaderDelegate del = new DisplayReaderDelegate(DisplayProductInfo);
                 this.Invoke(del, reader);
-
             }
             catch (Exception ex)
             {

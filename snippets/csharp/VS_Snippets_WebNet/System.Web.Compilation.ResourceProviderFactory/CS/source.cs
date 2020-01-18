@@ -192,5 +192,4 @@ namespace CustomResourceProviders
             }
         }
     }
-
 }

@@ -28,7 +28,6 @@ public class SamplesCompareOptions  {
          if (sa != null && sb != null)
             return myComp.Compare(sa, sb, myOptions);
          throw new ArgumentException("a and b should be strings.");
-
       }
    }
    
@@ -56,9 +55,7 @@ public class SamplesCompareOptions  {
       Console.WriteLine( "\nAfter sorting with CompareOptions.StringSort:" );
       foreach ( String myStr in myArr )
          Console.WriteLine( myStr );
-
    }
-
 }
 
 /*

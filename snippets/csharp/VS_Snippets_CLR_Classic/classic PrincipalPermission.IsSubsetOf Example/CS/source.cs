@@ -20,6 +20,5 @@ PrincipalPermission ppGreg = new PrincipalPermission("Greg", "Employee");
 PrincipalPermission pp1 = (PrincipalPermission)ppBob.Union(ppLouise);
 PrincipalPermission pp2 = (PrincipalPermission)ppGreg.Union(pp1);
 // </Snippet1>
-
  }
 }

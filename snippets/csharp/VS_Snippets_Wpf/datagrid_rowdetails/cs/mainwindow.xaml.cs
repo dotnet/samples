@@ -38,6 +38,5 @@ namespace WpfApplication1
             dataGrid1.ItemsSource = query.ToList();
         }
         // </Snippet2>
-
     }
 }

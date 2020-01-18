@@ -116,7 +116,6 @@ public class ShortStringDictionary : DictionaryBase  {
             throw new ArgumentException( "value must be no more than 5 characters in length.", "value" );
       }
    }
-
 }
 
 public class SamplesDictionaryBase  {
@@ -174,7 +173,6 @@ public class SamplesDictionaryBase  {
       // Displays the contents of the collection.
       Console.WriteLine( "After removing \"Two\":" );
       PrintKeysAndValues1( mySSC );
-
    }
 
    // Uses the foreach statement which hides the complexity of the enumerator.
@@ -205,7 +203,6 @@ public class SamplesDictionaryBase  {
          Console.WriteLine( "   {0,-5} : {1}", k, myCol[k] );
       Console.WriteLine();
    }
-
 }
 
 

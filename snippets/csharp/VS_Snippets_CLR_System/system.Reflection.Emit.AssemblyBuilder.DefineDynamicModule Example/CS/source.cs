@@ -69,5 +69,4 @@ class TypeBuilderMemberDemo
 									     true);
 	   // </Snippet4>
 	}
-
 }

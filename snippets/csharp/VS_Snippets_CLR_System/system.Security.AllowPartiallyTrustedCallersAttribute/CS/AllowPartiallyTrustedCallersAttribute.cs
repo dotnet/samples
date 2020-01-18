@@ -91,7 +91,6 @@ namespace UserControl
 				// file operations.
 				FileIOPermission.RevertAssert();
 			}
-
 		}
 
 		// Clean up any resources being used.
@@ -140,20 +139,16 @@ namespace UserControl
 			this.Size = new System.Drawing.Size(592, 400);
 			this.Load += new System.EventHandler(this.UserControl1_Load);
 			this.ResumeLayout(false);
-
 		}
 		#endregion
 
 		private void UserControl1_Load(object sender, System.EventArgs e)
 		{
-		
 		}
 
 		private void textBox1_TextChanged(object sender, System.EventArgs e)
 		{
-		
 		}
-
 	}
 }
 //</Snippet1>

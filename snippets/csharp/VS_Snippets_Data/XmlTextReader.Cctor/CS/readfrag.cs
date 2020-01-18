@@ -43,7 +43,6 @@ public class Sample
   
     //Close the reader.
     reader.Close();     
-  
   }
 } // End class
 //</snippet1>

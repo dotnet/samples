@@ -28,7 +28,6 @@ namespace SDKSample
 
             // Apply the effect to the TextBlock
             EnableTextEffects(tb1, myEffect);
-
          }
 
          // Event handler for transforming the size of the text element.

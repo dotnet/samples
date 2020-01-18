@@ -19,8 +19,6 @@ namespace Vector3DSample
 
             ///Displays the values of the variables that will be used
             mainWindow.ShowVars();
-
         }
-
     }
 }

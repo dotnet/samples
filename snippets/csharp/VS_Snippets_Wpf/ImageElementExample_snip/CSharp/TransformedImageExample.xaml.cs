@@ -39,8 +39,6 @@ namespace ImageElementExample
          Grid.SetColumn(rotated270, 1);
          Grid.SetRow(rotated270, 1);
          transformedGrid.Children.Add(rotated270);
-
       }
-
    }
 }

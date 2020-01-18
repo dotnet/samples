@@ -88,7 +88,6 @@
             myColumnStyle.NullTextChanged += new EventHandler(columnStyle_NullTextChanged);
             myTableStyle.GridColumnStyles.Add(myColumnStyle);
             myDataGrid.TableStyles.Add(myTableStyle);
- 
          }
          // NullTextChanged event handler of DataGridColumnStyle.
          private void columnStyle_NullTextChanged(object sender, EventArgs e)
@@ -112,5 +111,4 @@
             }
             myColumnStyle.NullText = null;
          }
-
 }

@@ -137,10 +137,8 @@ namespace Snippets
                 localServiceSecuritySettings =
             settings.Clone();
             // </Snippet16>
-
         }
     }
-
 }
 
 [ServiceContract]

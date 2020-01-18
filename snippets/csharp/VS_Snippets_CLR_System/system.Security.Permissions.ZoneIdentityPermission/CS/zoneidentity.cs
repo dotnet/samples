@@ -32,7 +32,6 @@ public class ZoneIdentityPermissionDemo
         {
             Console.WriteLine(zoneIdPerm1.SecurityZone.ToString() + " is not a subset of " +
                 zoneIdPerm2.SecurityZone.ToString());
-
         }
         if (zoneIdPerm2.IsSubsetOf(zoneIdPerm1))
         {
@@ -43,7 +42,6 @@ public class ZoneIdentityPermissionDemo
         {
             Console.WriteLine(zoneIdPerm2.SecurityZone.ToString() + " is not a subset of " +
                 zoneIdPerm1.SecurityZone.ToString());
-
         }
     }
     // </Snippet2>
@@ -60,7 +58,6 @@ public class ZoneIdentityPermissionDemo
             Console.WriteLine("The union of " + zoneIdPerm1.SecurityZone.ToString() +
                 " and \n\t" + zoneIdPerm2.SecurityZone.ToString() + " is \n\t"
                 + p3.SecurityZone.ToString() + "\n");
-
         }
         else
         {
@@ -83,14 +80,12 @@ public class ZoneIdentityPermissionDemo
         {
             Console.WriteLine("The intersection of " + zoneIdPerm1.SecurityZone.ToString() + " and \n\t" +
                 zoneIdPerm2.SecurityZone.ToString() + " is " + p3.SecurityZone.ToString() + "\n");
-
         }
         else
         {
             Console.WriteLine("The intersection of " + zoneIdPerm1.SecurityZone.ToString() +
                 " and \n\t" + zoneIdPerm2.SecurityZone.ToString() + " is null.\n");
         }
-
     }
     //</Snippet4>
     //<Snippet5>
@@ -107,7 +102,6 @@ public class ZoneIdentityPermissionDemo
         {
             Console.WriteLine("The copy succeeded:  " + zoneIdPerm2.ToString() + " \n");
         }
-
     }
     //</Snippet5>
     //<Snippet6>
@@ -129,7 +123,6 @@ public class ZoneIdentityPermissionDemo
             Console.WriteLine(zoneIdPerm2.ToString());
             Console.WriteLine(zoneIdPerm1.ToString());
         }
-
     }
     //</Snippet6>
 }

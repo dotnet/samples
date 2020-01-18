@@ -59,7 +59,6 @@ namespace WindowsApplication2
 			this.Text = "Form1";
 			this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
 			this.Load += new System.EventHandler(this.Form1_Load);
-
 		}
 		#endregion
 
@@ -74,7 +73,6 @@ namespace WindowsApplication2
 
 		private void Form1_Load(object sender, System.EventArgs e)
 		{
-			
 		}
 	
 	//<snippet1>

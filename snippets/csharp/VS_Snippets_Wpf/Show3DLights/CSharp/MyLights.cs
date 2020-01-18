@@ -156,8 +156,6 @@ namespace SDKSample
             pointLightTransform.OffsetY = pointLightVector.Y;
             pointLightTransform.OffsetZ = pointLightVector.Z;
             _ptLight.Position = pointLightTransform.Transform(_ptLight.Position);
-
         }
-
     }
 }

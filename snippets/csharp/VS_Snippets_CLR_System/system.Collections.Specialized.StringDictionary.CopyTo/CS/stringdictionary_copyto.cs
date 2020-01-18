@@ -32,9 +32,7 @@ public class SamplesStringDictionary  {
       for ( int i = 0; i < myArr.Length; i++ )
          Console.WriteLine( "{0}\t{1}", myArr[i].Key, myArr[i].Value );
       Console.WriteLine();
-
    }
-
 }
 
 /*

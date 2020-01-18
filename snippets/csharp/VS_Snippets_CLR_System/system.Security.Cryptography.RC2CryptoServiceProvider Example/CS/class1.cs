@@ -66,7 +66,6 @@ namespace RC2CryptoServiceProvider_Examples
                 {
                     roundtrip.Append((char)b);
                 }
-
             } while (b != -1);
 
             // Display the original data and the decrypted data.

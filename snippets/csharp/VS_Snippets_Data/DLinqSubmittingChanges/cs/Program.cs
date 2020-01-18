@@ -29,7 +29,6 @@ namespace cs_submittingchanges
                 db.SubmitChanges();
             }
             // </Snippet1>
-
         }
 
         void method2()
@@ -83,7 +82,6 @@ namespace cs_submittingchanges
                 Console.WriteLine("TryCatch block has finished.");
             }
             // </Snippet2>
-
         }
 
         void method3()
@@ -107,7 +105,6 @@ namespace cs_submittingchanges
                 }
             }
             // </Snippet3>
-
         }
 
         // <Snippet6>
@@ -130,7 +127,6 @@ namespace cs_submittingchanges
             db.CreateDatabase();
         }
         // </Snippet7>
-
     }
 
     // <Snippet4>
@@ -169,5 +165,4 @@ namespace cs_submittingchanges
         public string Rating;
     }
 // </Snippet5>
-
 }

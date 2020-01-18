@@ -25,7 +25,6 @@ namespace Microsoft.AdoDotNet.CodeSamples
             this.button1.Click += new System.EventHandler(this.button1_Click);
             this.FormClosing += new System.Windows.Forms.
                 FormClosingEventHandler(this.Form1_FormClosing);
-
         }
 
         // You need this delegate in order to display text from a thread
@@ -116,7 +115,6 @@ namespace Microsoft.AdoDotNet.CodeSamples
                     // to call EndExecuteNonQuery in the callback procedure.
                     AsyncCallback callback = new AsyncCallback(HandleCallback);
                     command.BeginExecuteNonQuery(callback, command);
-
                 }
                 catch (Exception ex)
                 {
@@ -159,7 +157,6 @@ namespace Microsoft.AdoDotNet.CodeSamples
                 // from the form's thread. 
                 DisplayInfoDelegate del = new DisplayInfoDelegate(DisplayResults);
                 this.Invoke(del, rowText);
-
             }
             catch (Exception ex)
             {

@@ -12,6 +12,5 @@ namespace SDKSample.NumericUpDown
 
     public partial class MyApp : Application
     {
-
     }
 }

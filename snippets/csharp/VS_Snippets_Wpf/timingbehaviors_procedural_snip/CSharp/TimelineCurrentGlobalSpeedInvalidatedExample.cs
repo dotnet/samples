@@ -73,7 +73,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             
             // Start the storyboard.
             theStoryboard.Begin(animatedRectangle, true);
-                   
         }
         
         private void angleAnimation_CurrentGlobalSpeedInvalidated(object sender, EventArgs e)
@@ -85,8 +84,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             // Update the TextBlock with the time of its parent.
             currentTimeTextBlock.Text = doubleAnimationClock.Parent.CurrentTime.ToString();       
         }
-
     }
- 
 }
 //</SnippetTimelineCurrentGlobalSpeedInvalidatedExampleWholePage>

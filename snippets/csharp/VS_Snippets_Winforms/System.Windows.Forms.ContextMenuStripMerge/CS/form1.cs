@@ -53,7 +53,6 @@ public class Form1 : Form
         this.ContextMenuStrip = cmsBase;
 
         CreateCombo();
-
     }
 
     #region ComboBox switching code.
@@ -170,7 +169,6 @@ public class Form1 : Form
                         ScenarioText = "This sample adds only the subitems from the child to the target ContextMenuStrip.";
                         ShowMatchOnlySample();
                         break;
-
                 }
                 // Reapply with the new settings.
                 ToolStripManager.Merge(cmsItemsToMerge, cmsBase);
@@ -275,7 +273,6 @@ public class Form1 : Form
         {
             item.MergeAction = MergeAction.Replace;
         }
-
     }
     #endregion
 
@@ -295,7 +292,6 @@ public class Form1 : Form
             item.MergeAction = MergeAction.MatchOnly;
             item.DropDownItems.Add("subitem from \"" + item.Text + " " + item.ShortcutKeyDisplayString + "\"");
         }
-
     }
     #endregion
 

@@ -46,9 +46,7 @@ namespace SDKSample
 
             // Apply the bitmap effect to the Button.
             myButton.BitmapEffect = myDropShadowEffect;
-
         }
-
     }
 }
 // </SnippetCodeBehindDropShadowCodeBehindExampleWholePage>

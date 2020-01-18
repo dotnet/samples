@@ -40,7 +40,6 @@ namespace SDKSample
                 default:
                     break;
             }
-
         }
 
         void ClickPaste(Object sender, RoutedEventArgs args)     { cxmTextBox.Paste(); }
@@ -74,6 +73,5 @@ namespace SDKSample
                 cxmItemPaste.IsEnabled = false;
         }
         // </Snippet_TextBox_ContextMenu>
-
     }
 }

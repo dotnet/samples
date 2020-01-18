@@ -111,7 +111,6 @@ namespace UE.ServiceModel.Samples
 		          (new BindingParameterCollection());
 		    ProtectionLevel p = s.SupportedResponseProtectionLevel;
           	    // </Snippet30>
-
 	    }
 
 	    static void SnippetReceiveSynchronously ()
@@ -124,7 +123,6 @@ namespace UE.ServiceModel.Samples
 		    bool receiveSynchronously = s.ReceiveSynchronously;
 		    
 		    // </Snippet29>
-						
 	    }
 	    
 	    static void SnippetAssuresOrderedDelivery ()
@@ -238,7 +236,6 @@ namespace UE.ServiceModel.Samples
 		    binding.MaxReceivedMessageSize = 65536 * 2;
 
 	    // </Snippet18>
-
 	    }
 
 	    static void SnippetMaxBufferSize ()
@@ -260,7 +257,6 @@ namespace UE.ServiceModel.Samples
 		    binding.MaxBufferPoolSize = 0x80000 * 2;
 
 	    // </Snippet16>
-
 	    }
 	    
 	static void SnippetHostNameComparisonMode ()
@@ -278,7 +274,6 @@ namespace UE.ServiceModel.Samples
 		BasicHttpBinding binding = new BasicHttpBinding();
 		binding.AllowCookies = true;
 	    // </Snippet40>
-		
 	}
 
         static void Main()
@@ -334,7 +329,6 @@ namespace UE.ServiceModel.Samples
             Console.WriteLine("Press <ENTER> to terminate client.");
             ((IChannel)channel).Close();
             Console.ReadLine();
-
         }
     }
 }

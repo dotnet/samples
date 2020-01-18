@@ -44,7 +44,6 @@ public class Example
          else
             Console.WriteLine("   {0} ({1}): <Indexed>", prop.Name,
                               prop.PropertyType.Name);
-                                        
    }
 }
 // The example displays the following output:

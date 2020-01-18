@@ -1049,7 +1049,6 @@ namespace Examples.SmtpExamples.Sync
             MailAddress a7 = new MailAddress("tom@contoso.com", "      Tom Smith          ");
             Console.WriteLine(a7.ToString());
             DumpMailAddress(a7);
-
         }
 
         public static void DisplayContentType(ContentType c)
@@ -1076,7 +1075,6 @@ namespace Examples.SmtpExamples.Sync
             ContentType c3 = new ContentType("application/x-myPrivateSubtype; name=data.xyz; charset=us-ascii");
             Console.WriteLine("---c3 {0}", c3.ToString());
             DisplayContentType(c3);
-
         }
 
         // The first argument is the mail server

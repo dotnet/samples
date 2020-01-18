@@ -15,7 +15,5 @@ namespace SDKSample
 
             MyMultipleTransformsExampleFrame.Content = new MultipleTransformsExample();
         }
-        
     }
-
 }

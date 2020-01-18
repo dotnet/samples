@@ -44,7 +44,6 @@ namespace BindingGroupSnippets
             }
 
             return ValidationResult.ValidResult;
-
         }
     }
     //</SnippetValidateObject>
@@ -72,7 +71,6 @@ namespace BindingGroupSnippets
                 // Exception thrown by Conversion - value is not a number.
                 return new ValidationResult(false, "Price must be a number.");
             }
-
         }
     }
 
@@ -127,7 +125,6 @@ namespace BindingGroupSnippets
 
         public PurchaseItem()
         {
-
         }
 
         public PurchaseItem(string desc, double price, DateTime endDate)
@@ -206,18 +203,15 @@ namespace BindingGroupSnippets
         {
             currentData = copyData;
             NotifyPropertyChanged("");
-
         }
 
         public void EndEdit()
         {
             copyData = ItemData.NewItem();
-
         }
 
         #endregion
 
     }
     //</SnippetData>
-
 }

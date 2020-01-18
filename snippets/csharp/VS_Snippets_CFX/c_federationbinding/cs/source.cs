@@ -85,7 +85,6 @@ namespace Samples
 	// It is a good practice to create a private constructor for a class that only 
 	// defines static methods.
 	private CustomBindingCreator() { }
-	
   }
   //</snippet0>
 }

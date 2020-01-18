@@ -18,7 +18,6 @@ namespace BrushesIntroduction
 
         public app()
         {
-
         }
 
         protected override void OnStartup(StartupEventArgs e)
@@ -28,6 +27,5 @@ namespace BrushesIntroduction
             myWindow.Content = new SampleViewer();
             myWindow.Show();
         }
-
     }
 }

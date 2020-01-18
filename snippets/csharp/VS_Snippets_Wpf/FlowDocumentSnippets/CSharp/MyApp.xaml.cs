@@ -12,6 +12,5 @@ namespace FlowDocumentSnippets
 
     public partial class MyApp : Application
     {
-
     }
 }

@@ -115,7 +115,6 @@ namespace CloneBasicAuthenticationClient
 				readStream.Close();
 				// Release the resources of response object.
 				myHttpWebResponse.Close(); 
-			
 			} 
 			catch(WebException e) 
 			{
@@ -129,6 +128,5 @@ namespace CloneBasicAuthenticationClient
 				Console.WriteLine("\n The following exception was raised : {0}",e.Message);
 			}
 		}
-
 	} 	
 }

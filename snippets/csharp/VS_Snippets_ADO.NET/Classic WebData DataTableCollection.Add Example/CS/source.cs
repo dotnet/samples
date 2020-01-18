@@ -26,5 +26,4 @@ public class Form1: Form
         tables.Add(table);
     }
     // </Snippet1>
-
 }

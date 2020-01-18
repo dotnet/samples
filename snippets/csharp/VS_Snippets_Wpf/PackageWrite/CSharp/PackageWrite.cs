@@ -112,10 +112,8 @@ namespace SDKSample
                                         TargetMode.Internal,
                                         ResourceRelationshipType);
                 //</SnippetPackageWriteCreateRelationship>
-
             }// end:using (Package package) - Close and dispose package.
             //</SnippetPackageWriteUsingPackage>
-
         }// end:CreatePackage()
 
         //  --------------------------- CopyStream ---------------------------
@@ -134,7 +132,5 @@ namespace SDKSample
                 target.Write(buf, 0, bytesRead);
         }// end:CopyStream()
         //</SnippetPackageWriteCreatePackage>
-
     }// end:class PackageWrite
-
 }// end:namespace SDKSample

@@ -43,7 +43,6 @@ namespace Microsoft.Samples.WF.ResumeBookmarkEndpoint
                     host.Close();
                 }
             }
-
         }
 
         static Sequence CreateWorkflow()
@@ -86,5 +85,4 @@ namespace Microsoft.Samples.WF.ResumeBookmarkEndpoint
             Console.WriteLine(message);
         }        
     }
-
 }

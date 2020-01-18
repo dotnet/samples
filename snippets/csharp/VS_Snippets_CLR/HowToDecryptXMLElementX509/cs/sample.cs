@@ -32,13 +32,11 @@ class Program
             Console.WriteLine("Decrypted XML:");
             Console.WriteLine();
             Console.WriteLine(xmlDoc.OuterXml);
-
         }
         catch (Exception e)
         {
             Console.WriteLine(e.Message);
         }
-
     }
 
     public static void Decrypt(XmlDocument Doc)
@@ -56,7 +54,6 @@ class Program
         // <snippet4>
         exml.DecryptDocument();
         // </snippet4>
-
     }
 }
 // </snippet1>

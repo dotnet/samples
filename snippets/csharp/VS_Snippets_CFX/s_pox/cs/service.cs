@@ -125,7 +125,6 @@ namespace CustomHttpHeaderSample
             {
                 Console.WriteLine("received an exception for the typed message scenario: " + e.ToString());
             }
-
         }
         // <snippet0>
         public void ProcessMessage(Message input)

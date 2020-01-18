@@ -24,6 +24,5 @@ public class BooleanMembers {
         // The example displays the following output:
         //       'True' parsed as True        
         // </Snippet2>
-
     }
 }

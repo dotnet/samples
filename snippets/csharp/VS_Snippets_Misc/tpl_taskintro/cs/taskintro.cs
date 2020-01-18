@@ -162,7 +162,6 @@ namespace TPL_Intro
 
             // Continue on this thread...
             //</snippet06>
-
         }
 
         static void ChildTaskSnippets()
@@ -177,7 +176,6 @@ namespace TPL_Intro
                     Thread.SpinWait(5000000);
                     Console.WriteLine("Detached task completed.");
                 });
-
             });
 
             outer.Wait();
@@ -198,7 +196,6 @@ namespace TPL_Intro
                     Thread.SpinWait(5000000);
                     Console.WriteLine("Attached task completed.");
                 }, TaskCreationOptions.AttachedToParent);
-
             });
 
             parent.Wait();
@@ -212,8 +209,6 @@ namespace TPL_Intro
             //</snippet08>
 
             var t = Task<int>.Factory.StartNew(() => 1);
-
         }
-
     }
 }

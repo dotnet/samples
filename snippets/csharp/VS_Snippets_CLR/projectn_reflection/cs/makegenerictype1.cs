@@ -76,7 +76,6 @@ class Example
          foreach (Type tParam in typeParameters)
             b.Text += String.Format("      Type parameter: {0} position {1}\n",
                      tParam.Name, tParam.GenericParameterPosition);
-
       }
       else
       {
@@ -89,7 +88,6 @@ class Example
       }
       b.Text += "\n-------------------------------\n";
    }
-
 }
 
 public interface ITestInterface { }

@@ -109,7 +109,6 @@ namespace SDKSample
         myBinding.Source = myDataObject;
         BindingOperations.SetBinding(myText, TextBlock.TextProperty, myBinding);
         //</SnippetBOSetBinding>
-
     }
   }
 

@@ -132,5 +132,4 @@ public class CookieCollection_Item_2 {
 		Console.WriteLine("<urlname> is the name of the CookiesServer.aspx site installed locally");
 		Console.WriteLine("\nExample : CookieCollection_Item_2 http://www.MyServer.com/CookiesServer.aspx");
 	}
-
 };

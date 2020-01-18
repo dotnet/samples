@@ -39,7 +39,6 @@ using System.Resources;
          myResourceWriter.AddResource("String 2", "Second String");
          myResourceWriter.AddResource("String 3", "Third String");
          myAssemblyBuilder.Save("MyAssembly.dll");
-
       }
    }
 

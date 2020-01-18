@@ -27,9 +27,7 @@ public class SamplesBitVector32  {
       Console.WriteLine( "   myBit3 = TRUE:   {0}", myBV.ToString() );
       myBV[myBit5] = true;
       Console.WriteLine( "   myBit5 = TRUE:   {0}", myBV.ToString() );
-
    }
-
 }
 
 /*

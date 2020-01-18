@@ -9,7 +9,6 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("The CompilationRelaxationsAttribute attribute was applied.");
-
     }
 }
 //</snippet1>

@@ -23,7 +23,6 @@ namespace SDKSample
             {
                 tbCounterText.Text = uiChanges.ToString();
             }
-
         }
     }
 }

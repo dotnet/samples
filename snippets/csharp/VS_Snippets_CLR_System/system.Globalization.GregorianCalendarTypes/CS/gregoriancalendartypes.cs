@@ -23,9 +23,7 @@ public class SamplesCultureInfo  {
             Console.WriteLine( "   {0}", cal );
          }
       }
-
    }
-
 }
 
 /*

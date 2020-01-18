@@ -6,7 +6,6 @@ using System.ComponentModel.DataAnnotations;
 [MetadataType(typeof(CustomerMetaData))]
 public partial class Customer
 {
-
 }
 
 public class CustomerMetaData
@@ -17,7 +16,6 @@ public class CustomerMetaData
     [DataType(DataType.EmailAddress)]
     public object EmailAddress;
     // </Snippet11>
-
 }
 
 //</Snippet1>

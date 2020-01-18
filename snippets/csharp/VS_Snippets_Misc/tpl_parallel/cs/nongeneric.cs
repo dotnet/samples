@@ -19,7 +19,6 @@ namespace ConsoleApplication1
                 {
                 });
             //</snippet07>
-
         }
     }
 }

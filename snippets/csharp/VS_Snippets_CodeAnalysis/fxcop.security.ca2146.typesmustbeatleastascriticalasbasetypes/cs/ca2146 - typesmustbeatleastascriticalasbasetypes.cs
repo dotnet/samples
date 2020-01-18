@@ -38,7 +38,6 @@ namespace TransparencyWarningsDemo
     public class SafeCriticalFromCritical : CriticalBase
     {
     }
-
 }
 
 //</Snippet1>

@@ -18,7 +18,6 @@ public class Sample
 
     // Display the document fragment.
     Console.WriteLine(docFrag.InnerXml);
-  
   }
 }
    // </Snippet1>

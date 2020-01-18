@@ -346,7 +346,6 @@ namespace DragDropMiscCode
                 {
 
                     htmlData = Clipboard.GetText(TextDataFormat.Html);
-
                 }
 
                 // </Snippet_ContainsDataGetData>
@@ -396,8 +395,6 @@ namespace DragDropMiscCode
                 bool isOriginalDataObject = Clipboard.IsCurrent(data);
                 // </Snippet_SetDataObjectIsCurrent>
             }
-
         }
-
     }
 }

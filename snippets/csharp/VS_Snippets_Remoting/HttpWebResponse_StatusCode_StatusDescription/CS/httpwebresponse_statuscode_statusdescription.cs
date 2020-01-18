@@ -39,7 +39,6 @@ class HttpWebResponseSnippet
 										myHttpWebResponse.StatusDescription);
 				// Releases the resources of the response.
 				myHttpWebResponse.Close(); 
-			
         	} 
 		catch(WebException e) 
 		   {

@@ -64,10 +64,7 @@ namespace SDKSample
             theImage.Source = dImageSource;
 
             this.Content = theImage;
-
         }
-
     }
-
 }
 // </SnippetPopExampleWholePage> 

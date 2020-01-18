@@ -46,7 +46,6 @@ namespace SDKSample
 
             xpsDocument.CoreDocumentProperties.Category =
                 propertiesDialog.Category.Text;
-
         }// end:WriteProperties()
 
         // -------------------------- ReadProperties --------------------------
@@ -87,7 +86,5 @@ namespace SDKSample
             propertiesDialog.Category.Text =
                 xpsDocument.CoreDocumentProperties.Category;
         }// end:ReadProperties()
-
     }// end:class PropertiesUtility
-
 }// end:namespace

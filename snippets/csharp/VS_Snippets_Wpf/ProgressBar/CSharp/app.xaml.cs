@@ -19,8 +19,6 @@ namespace ProgBar
             Window1 mainWindow = new Window1();
             mainWindow.InitializeComponent();
             mainWindow.Show();
-            
         }
-
     }
 }

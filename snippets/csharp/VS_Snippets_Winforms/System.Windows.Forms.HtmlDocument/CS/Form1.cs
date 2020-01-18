@@ -306,12 +306,10 @@ namespace HtmlDocumentProjectCSharp
 
         void doc_MouseUp(object sender, HtmlElementEventArgs e)
         {
-            
         }
 
         void doc_MouseMove(object sender, HtmlElementEventArgs e)
         {
-            
         }
 
         //<SNIPPET15>

@@ -42,11 +42,8 @@ public class SamplesCalendar  {
          Console.WriteLine( "   IsLeapDay:   {0}", myCals[i].IsLeapDay( iYear, iMonth, iDay ) );
          Console.WriteLine( "   IsLeapMonth: {0}", myCals[i].IsLeapMonth( iYear, iMonth ) );
          Console.WriteLine( "   IsLeapYear:  {0}", myCals[i].IsLeapYear( iYear ) );
-
       }
-
    }
-
 }
 
 

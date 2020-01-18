@@ -54,7 +54,6 @@ namespace Examples.NegotiateStreamExample
          // Close the client connection.
             authStream.Close();
             Console.WriteLine("Client closed.");
-            
     }
     //</snippet4>
     //<snippet2>

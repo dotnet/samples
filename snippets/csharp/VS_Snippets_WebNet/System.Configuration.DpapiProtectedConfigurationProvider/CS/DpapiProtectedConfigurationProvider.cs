@@ -38,7 +38,6 @@ public class UsingDpapiProtectedConfigurationProvider
             Console.WriteLine("Section {0} is now protected by {1}",
                 connStrings.SectionInformation.Name,
                 connStrings.SectionInformation.ProtectionProvider.Name);
-
           }
           else
             Console.WriteLine(
@@ -50,7 +49,6 @@ public class UsingDpapiProtectedConfigurationProvider
               "Section {0} is already protected by {1}",
               connStrings.SectionInformation.Name,
               connStrings.SectionInformation.ProtectionProvider.Name);
-
       }
     }
     catch (Exception e)
@@ -58,7 +56,6 @@ public class UsingDpapiProtectedConfigurationProvider
       Console.WriteLine("Exception raised: {0}",
         e.Message);
     }
-
   }
 
   // Unprotect the connectionStrings section.
@@ -90,7 +87,6 @@ public class UsingDpapiProtectedConfigurationProvider
 
             Console.WriteLine("Section {0} is now unprotected.",
                 connStrings.SectionInformation.Name);
-
           }
           else
             Console.WriteLine(
@@ -142,7 +138,5 @@ public class UsingDpapiProtectedConfigurationProvider
     }
 
     Console.Read();
-
   }
-
 }

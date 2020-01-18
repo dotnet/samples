@@ -90,7 +90,6 @@ namespace SampleDataGridTableStyle
          this.Load += new System.EventHandler(this.DataGridTableStyle_Sample_Load);
          ((System.ComponentModel.ISupportInitialize)(this.myDataGrid)).EndInit();
          this.ResumeLayout(false);
-
       }
       #endregion
 
@@ -102,7 +101,6 @@ namespace SampleDataGridTableStyle
       private void DataGridTableStyle_Sample_Load(object sender,
                                                    EventArgs e)
       {
-         
       } 
       private void SetUp()
       {
@@ -173,7 +171,6 @@ namespace SampleDataGridTableStyle
               
          // Add the DataGridTableStyle instances to GridTableStylesCollection.
          myDataGrid.TableStyles.Add(myDataGridTableStyle1);
-      
       }
       private void LinkColorChanged_Handler(object sender,EventArgs e)
       {         
@@ -267,7 +264,5 @@ namespace SampleDataGridTableStyle
          AddCustomDataTableStyle();   
          btnApplyStyles.Enabled = false;
       }
-     
    }
-
 }

@@ -19,7 +19,6 @@ namespace Microsoft.Samples.BrushExamples
             mainPanel.Orientation = Orientation.Horizontal;
             createTilingExample(mainPanel);
             this.Content = mainPanel;
-
         }
 
         private void createTilingExample(Panel mainPanel)
@@ -56,9 +55,6 @@ namespace Microsoft.Samples.BrushExamples
             
             rectangleBorder.Child = myRectangle;
             mainPanel.Children.Add(rectangleBorder);            
-        
         }
-
     }
-
 }

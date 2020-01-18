@@ -72,7 +72,6 @@ namespace GeoOvwSample
             
             scroller.Content = mainPanel;
             this.Content = scroller;
-
         }
 
         public FrameworkElement CreateLineGeometryExample()
@@ -277,6 +276,5 @@ namespace GeoOvwSample
             
             return myPath;          
         } 
-
      }
 }

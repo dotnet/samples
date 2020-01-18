@@ -151,7 +151,6 @@ namespace Logging
             Console.WriteLine( CommonTransportKeys.RequestUri + ":" +
                requestHeaders[CommonTransportKeys.RequestUri]);
 // </Snippet4>
-
          }
          sinkStack.Push(this, null);
          ServerProcessing processing =

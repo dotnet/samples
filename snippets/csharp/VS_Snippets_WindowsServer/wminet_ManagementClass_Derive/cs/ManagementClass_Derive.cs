@@ -10,7 +10,6 @@ public class Sample
             new ManagementClass("CIM_Service");
         ManagementClass newClass = existingClass.Derive("My_Service");
         newClass.Put(); //to commit the new class to the WMI repository.
-
     }
 }
 //</Snippet1>

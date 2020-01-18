@@ -216,7 +216,6 @@ namespace samples2
 
         static void Main()
         {
-
         }
 
         public static Binding CreateCustomBinding()

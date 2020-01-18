@@ -30,7 +30,6 @@ public class MyCollection : NameObjectCollectionBase  {
    public void Clear()  {
       this.BaseClear();
    }
-
 }
 
 public class SamplesNameObjectCollectionBase  {
@@ -50,7 +49,6 @@ public class SamplesNameObjectCollectionBase  {
       myCol.Clear();
       Console.WriteLine( "After clearing the collection (Count = {0}):", myCol.Count );
       PrintKeysAndValues( myCol );
-
    }
 
    public static void PrintKeysAndValues( MyCollection myCol )  {
@@ -58,7 +56,6 @@ public class SamplesNameObjectCollectionBase  {
          Console.WriteLine( "[{0}] : {1}, {2}", i, myCol[i].Key, myCol[i].Value );
       }
    }
-
 }
 
 

@@ -12,7 +12,6 @@ class Program
     {
 
         Console.WriteLine("The DependencyAttribute attribute was applied.");
-
     }
 }
 //</snippet1>

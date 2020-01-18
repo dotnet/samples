@@ -88,8 +88,6 @@ namespace Samples
             //<snippet7>
             ServiceHost host = new ServiceHost(typeof(CalculatorService), new Uri(baseAddress));
             //</snippet7>
-
         }
-
     }
 }

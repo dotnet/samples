@@ -244,6 +244,5 @@ namespace SDKSample
 			TranslateTransform3D pan = new TranslateTransform3D(new Vector3D(0, 0, 0));
 			modelGroup.Transform = pan;
         }
-
     }
 }

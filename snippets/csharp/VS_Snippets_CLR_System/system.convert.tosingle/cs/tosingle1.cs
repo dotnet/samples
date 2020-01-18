@@ -134,7 +134,6 @@ public class Example
          Console.WriteLine("Converted the {0} value '{1}' to the {2} value {3}.", 
                            number.GetType().Name, number, 
                            result.GetType().Name, result);
-
       }                     
       // The example displays the following output:
       //    Converted the Int16 value '-32768' to the Single value -32768.
@@ -157,7 +156,6 @@ public class Example
          Console.WriteLine("Converted the {0} value '{1}' to the {2} value {3}.", 
                            number.GetType().Name, number, 
                            result.GetType().Name, result);
-
       }
       // The example displays the following output:
       //    Converted the Int32 value '-2147483648' to the Single value -2.147484E+09.
@@ -180,7 +178,6 @@ public class Example
          Console.WriteLine("Converted the {0} value '{1}' to the {2} value {3}.", 
                            number.GetType().Name, number, 
                            result.GetType().Name, result);
-
       }
       // The example displays the following output:
       //    Converted the Int64 value '-9223372036854775808' to the Single value -9.223372E+18.
@@ -247,7 +244,6 @@ public class Example
          Console.WriteLine("Converted the {0} value '{1}' to the {2} value {3}.", 
                            number.GetType().Name, number, 
                            result.GetType().Name, result);
-
       }
       // The example displays the following output:
       //    Converted the SByte value '-128' to the Single value -128.

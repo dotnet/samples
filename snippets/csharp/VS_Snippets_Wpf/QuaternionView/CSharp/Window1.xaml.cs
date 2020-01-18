@@ -150,8 +150,6 @@ namespace QuaternionView
 
             AxisAngleString.Text = endQuaternion.ToString();
             //resulting string is (x,y,z,w)
-
         }
-
     }
 }

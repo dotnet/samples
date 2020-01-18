@@ -160,7 +160,6 @@ namespace WSHttpBindingSample
             Console.WriteLine();
             Console.WriteLine("Press <ENTER> to terminate.");
             Console.ReadLine();
-
         }
 
 	// <Snippet19>
@@ -171,10 +170,8 @@ namespace WSHttpBindingSample
 					       binding.GetProperty<IBindingRuntimePreferences>
 					       (new BindingParameterCollection());
 		bool receiveSynchronously = s.ReceiveSynchronously;
-
 	}
        // </Snippet19>
-
     }
     //</snippet0>
 }

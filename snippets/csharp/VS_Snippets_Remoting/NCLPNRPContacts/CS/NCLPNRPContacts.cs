@@ -157,7 +157,6 @@ namespace P2PContacts
             }
 
             return peers;
-
         }
         // </Snippet2>
         //------------------------------------------------------------------------------------------------------
@@ -273,7 +272,6 @@ namespace P2PContacts
                                     }
                                 }
                             }
-
                         }
                     }
                 }
@@ -288,7 +286,6 @@ namespace P2PContacts
 
                 Console.WriteLine("Listing the contacts again...");
                 DisplayContacts(peerContacts);
-
             }
             catch (Exception ex)
             {
@@ -566,7 +563,6 @@ namespace P2PContacts
                         Console.WriteLine("Error enumerating the contacts: {0}", ex);
                     }
                 }
-                      
             }
 
             return;
@@ -581,6 +577,5 @@ namespace P2PContacts
             return;
         }
         //------------------------------------------------------------------------------------------------------
-
     } //end class 
 } //end namespace

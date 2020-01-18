@@ -178,7 +178,6 @@ namespace Samples.AspNet.ProtectedConfiguration
         returnBytes[i] = Convert.ToByte(hexString.Substring(i*2, 2), 16);
       return returnBytes;
     }
-
   }
 }
 //</Snippet1>

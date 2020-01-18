@@ -66,7 +66,6 @@ namespace DynamicSnippets
             DateTime dt = DateTime.Today;
             d = (dynamic)dt;
             Console.WriteLine(d);
-
         }
         // Results:
         // 20

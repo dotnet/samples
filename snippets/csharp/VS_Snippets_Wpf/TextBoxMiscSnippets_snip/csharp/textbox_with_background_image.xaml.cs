@@ -26,17 +26,13 @@ namespace SDKSample
                 textImageBrush.Stretch = Stretch.None;
                 // Use the brush to paint the button's background.
                 myTextBox.Background = textImageBrush;
-
             }
             else
             {
 
                 myTextBox.Background = null;
             }
-
         }
-
     }
- 
 }
 // </SnippetTextBoxBackgroundCodeExampleWholePage>

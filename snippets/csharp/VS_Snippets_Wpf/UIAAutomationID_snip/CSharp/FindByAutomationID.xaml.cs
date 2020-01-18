@@ -122,7 +122,6 @@ namespace UIAAutomationID_snip
 
         internal void StopFocusTracking()
         {
-
         }
 
         private void StopRecording(object src, RoutedEventArgs e)

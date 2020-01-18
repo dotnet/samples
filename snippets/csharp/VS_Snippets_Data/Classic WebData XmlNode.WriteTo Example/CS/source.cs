@@ -18,7 +18,6 @@ public class Sample {
     XmlTextWriter writer = new XmlTextWriter(Console.Out);
     writer.Formatting = Formatting.Indented;
     root.WriteTo(writer);
-
   }
 }
    // </Snippet1>

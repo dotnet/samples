@@ -75,7 +75,6 @@ namespace Microsoft.Samples.Animation
                 SetValue(CurrentTimeAsStringProperty, theClock.CurrentTime.ToString());
                 previousTime = (TimeSpan)theClock.CurrentTime;
             }
-
         }
 
         public static readonly DependencyProperty CurrentTimeAsStringProperty =

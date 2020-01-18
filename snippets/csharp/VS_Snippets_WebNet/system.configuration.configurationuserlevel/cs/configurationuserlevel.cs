@@ -24,14 +24,12 @@ public class UsingConsoleConfigElement
                ConfigurationUserLevel.None);
 
             Console.WriteLine(config.FilePath);
-
         }
         catch (ConfigurationErrorsException e)
         {
             Console.WriteLine("[Exception error: {0}]",
                 e.ToString());
         }
-
     }
 
     // Get the roaming configuration file associated 
@@ -48,14 +46,12 @@ public class UsingConsoleConfigElement
                ConfigurationUserLevel.PerUserRoaming);
 
             Console.WriteLine(roamingConfig.FilePath);
-
         }
         catch (ConfigurationErrorsException e)
         {
             Console.WriteLine("[Exception error: {0}]",
                 e.ToString());
         }
-
     }
 
     static void Main(string[] args)

@@ -15,7 +15,6 @@ namespace ExpressionEditorSamples.CS
     {
         // Use the built-in AppSettingsExpressionBuilder class,
         // but associate it with a custom expression editor class.
-
     }
 
     public class CustomAppSettingsEditor : System.Web.UI.Design.ExpressionEditor
@@ -37,7 +36,6 @@ namespace ExpressionEditorSamples.CS
                         {
                             customSettings = settingsSection.Settings;
                         }
-
                     }
                 }
             }
@@ -48,7 +46,6 @@ namespace ExpressionEditorSamples.CS
             }
 
             return expression;
-
         }
     }
 }

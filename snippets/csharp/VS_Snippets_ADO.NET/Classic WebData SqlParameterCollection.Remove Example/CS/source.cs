@@ -22,5 +22,4 @@ public class Form1: Form
             command.Parameters.Remove(param);
     }
     // </Snippet1>
-
 }

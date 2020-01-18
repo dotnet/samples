@@ -131,7 +131,6 @@ namespace SystemTextJsonSamples
         public DateTimeOffset Date { get; set; }
         public Temperature TemperatureCelsius { get; set; }
         public string Summary { get; set; }
-
     }
     // </SnippetWFWithTemperatureStruct>
 
@@ -458,7 +457,6 @@ namespace SystemTextJsonSamples
                 Summary = "Hot"
             };
             return weatherForecast;
-
         }
         public static WeatherForecastWithTemperatureStruct CreateWeatherForecastWithTemperatureStruct()
         {
@@ -469,7 +467,6 @@ namespace SystemTextJsonSamples
                 Summary = "Hot"
             };
             return weatherForecast;
-
         }
         public static WeatherForecastWithEnumDictionary CreateWeatherForecastWithEnumDictionary()
         {

@@ -20,7 +20,6 @@ namespace ContainerProject
 		public Form2()
 		{
 			InitializeComponent();
-
 		}
 
 		/// <summary>
@@ -66,7 +65,6 @@ namespace ContainerProject
 			this.Text = "Form2";
 			this.Load += new System.EventHandler(this.Form2_Load);
 			this.ResumeLayout(false);
-
 		}
 		#endregion
 		// <snippet2>
@@ -81,7 +79,6 @@ namespace ContainerProject
 		// </snippet2>
 		private void Form2_Load(object sender, System.EventArgs e)
 		{
-		
 		}
 	}
 }

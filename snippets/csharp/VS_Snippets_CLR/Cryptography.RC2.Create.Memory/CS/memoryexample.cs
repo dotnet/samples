@@ -30,7 +30,6 @@ class RC2Sample
         {
             Console.WriteLine(e.Message);
         }
-       
     }
 
     public static byte[] EncryptTextToMemory(string Data,  byte[] Key, byte[] IV)
@@ -73,7 +72,6 @@ class RC2Sample
             Console.WriteLine("A Cryptographic error occurred: {0}", e.Message);
             return null;
         }
-
     }
 
     public static string DecryptTextFromMemory(byte[] Data,  byte[] Key, byte[] IV)

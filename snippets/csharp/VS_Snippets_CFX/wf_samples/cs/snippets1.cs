@@ -163,7 +163,6 @@ namespace WF_Snippets
             workflowparameterbinding1.SetBinding(System.Workflow.ComponentModel.WorkflowParameterBinding.ValueProperty, ((System.Workflow.ComponentModel.ActivityBind)(activitybind1)));
             this.handleExternalEventActivity1.ParameterBindings.Add(workflowparameterbinding1);
             //</snippet94>
-
         }
     }
     public sealed class SampleWorkflow : StateMachineWorkflowActivity
@@ -758,7 +757,6 @@ namespace WF_Snippets
             {
                 imageBounds.Size = image.Size;
                 imageBounds.Location = new Point(designer.Bounds.Right - imageBounds.Size.Width / 4, designer.Bounds.Top - imageBounds.Size.Height / 2);
-
             }
             return imageBounds;
         }
@@ -1002,10 +1000,8 @@ namespace WF_Snippets
 
                     sqlTrackingQueryOptions.WorkflowStatus = WorkflowStatus.Terminated;
                     queriedWorkflows.AddRange(sqlTrackingQuery.GetWorkflows(sqlTrackingQueryOptions));
-
                 }
                 return queriedWorkflows;
-
             }
             catch (Exception exception)
             {
@@ -1145,7 +1141,6 @@ namespace WF_Snippets
 
         void workflowViewValue_ZoomChanged(object sender, EventArgs e)
         {
-         
         }
 
         void container1()
@@ -1305,9 +1300,7 @@ namespace WF_Snippets
             trackingDataItemValue.FieldName = this.toolStripTextBoxArtifactKeyName.Text.ToString();
             trackingDataItemValue.DataValue = this.toolStripTextBoxArtifactKeyValue.Text.ToString();
             //</snippet139>
-
         }
-
     }
 
     public class Resources     //another hack- just a custom class to avoid solution properties
@@ -1316,7 +1309,5 @@ namespace WF_Snippets
         public static Bitmap ToolboxImage = new Bitmap(0, 0);
         public static Bitmap error = new Bitmap(0, 0);
         public static Bitmap Executing = new Bitmap(0, 0);
-
     }
-
 }

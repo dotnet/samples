@@ -38,7 +38,6 @@ namespace CustomDataServiceClient
             selectedOrder = GetOrderWithItems(context);
 
             PrintItems(selectedOrder);
-
         }
         static Order GetOrderWithItems(OrderItemData context)
         {  

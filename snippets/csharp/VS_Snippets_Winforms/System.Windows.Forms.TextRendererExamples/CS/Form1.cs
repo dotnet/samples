@@ -49,7 +49,6 @@ namespace TextRendering
         {
             TextRenderer.DrawText(e.Graphics, "Regular Text", this.Font, 
                 new Point(10, 10), SystemColors.ControlText);
-
         }
         //</snippet2>
         //<snippet3>
@@ -57,7 +56,6 @@ namespace TextRendering
         {
             TextRenderer.DrawText(e.Graphics, "Regular Text", this.Font,
                 new Rectangle(10, 10, 100, 100), SystemColors.ControlText);
-
         }
         //</snippet3>
         //<snippet4>
@@ -137,7 +135,6 @@ namespace TextRendering
                     startPoint, Color.Black, flags);
                 startPoint.X += size.Width;
             }
-            
         }
 	//</snippet11>
         
@@ -151,13 +148,11 @@ namespace TextRendering
             this.Name = "Form1";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.ResumeLayout(false);
-
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             MeasureText2(e);
         }
-
     }
 }

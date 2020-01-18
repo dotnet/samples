@@ -37,9 +37,7 @@ namespace ASP.NET.Samples.CS
             {
                 _alternateConnectionString = value;
             }
-
         }
-        
     }
     // </Snippet2>
 }

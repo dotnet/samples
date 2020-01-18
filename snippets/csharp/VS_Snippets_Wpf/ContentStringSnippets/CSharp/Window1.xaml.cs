@@ -59,7 +59,6 @@ namespace ContentStringSnippets
             }
 
             return 1000;
-
         }
 
         public object ConvertBack(object value,
@@ -108,9 +107,7 @@ namespace ContentStringSnippets
             Add((new PurchaseItem("My DVD Collection", 15, new DateTime(2009, 1, 1))));
             Add((new PurchaseItem("TV Drama Series", 39.985, new DateTime(2009, 1, 1))));
             Add((new PurchaseItem("Squash racket", 60, new DateTime(2009, 2, 28))));
-
         }
-
     }
     //</SnippetGroupStyleData>
 
@@ -125,7 +122,6 @@ namespace ContentStringSnippets
         public Student()
             : this("")
         {
-
         }
 
         public Student(string name)
@@ -213,7 +209,6 @@ namespace ContentStringSnippets
             s3.AddCourse("History 110", 35, "Introduction to World History");
             s3.AddCourse("Physical Education 204", 80, "Racquetball");
             this.Add(s3);
-
         }
     }
 

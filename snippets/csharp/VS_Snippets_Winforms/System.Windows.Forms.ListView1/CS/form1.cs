@@ -47,7 +47,6 @@ public class Form1:
 		this.Name = "Form1";
 		this.Text = "Breakfast Menu";
 		this.ResumeLayout(false);
-
 	}
 
 	[System.STAThreadAttribute]
@@ -160,5 +159,4 @@ public class Form1:
 		TextBox1.Text =  price.ToString();
 	}
 	//</snippet3>
-
 }

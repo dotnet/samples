@@ -74,7 +74,6 @@ public class MyForm : Form
       this.Text = "MyForm";
       this.Load += new EventHandler(this.MyForm_Load);
       this.ResumeLayout(false);
-
    }
 
    [STAThread]

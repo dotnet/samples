@@ -67,7 +67,6 @@ namespace Microsoft.Samples.DrawingBrushExamples
             mainPanel.Children.Add(aRectangle);
 
             this.Content = mainPanel;
-
         }
     }
 }

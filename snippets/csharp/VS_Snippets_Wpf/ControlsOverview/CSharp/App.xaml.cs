@@ -21,8 +21,6 @@ namespace ControlsOverview
 
             //Window2 win3 = new Window2();
             //win3.Show();
-         
         }
-
     }
 }

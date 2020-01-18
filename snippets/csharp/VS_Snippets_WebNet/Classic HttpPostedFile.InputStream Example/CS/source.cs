@@ -28,7 +28,6 @@ public class Page1: Page
    // Copy the byte array into a string.
    for (int Loop1 = 0; Loop1 < FileLen; Loop1++)
      MyString = MyString + input[Loop1].ToString();
-    
  }
 }
 // </Snippet1>

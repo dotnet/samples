@@ -77,7 +77,6 @@ public class MyNewService: System.ServiceProcess.ServiceBase
 		eventLog1.WriteEntry("In OnContinue.");
 	}  
 	//</Snippet5>
-
 }
 
 //*******************************************************************

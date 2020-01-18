@@ -18,7 +18,6 @@ namespace Microsoft.ServiceModel.Samples
     {
         [OperationContract]
         double Add(double n1, double n2);
-
     }
 
     // Implement the add service contract.

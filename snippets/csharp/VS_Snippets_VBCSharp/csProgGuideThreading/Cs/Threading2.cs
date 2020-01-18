@@ -41,7 +41,6 @@ namespace WrapSynchronization
                 // Access thread-sensitive resources.
             }
         }
-        
     }
     //</Snippet13>
     public class TestThreading2
@@ -75,7 +74,6 @@ namespace WrapSynchronization
             }
             //</Snippet15>
         }
-
     }
 }
 

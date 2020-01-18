@@ -48,7 +48,6 @@ class PerfCounterCatGetCountMod
             {
                 counters = pcc.GetCounters();
             }
-
         }
         catch(Exception ex)
         {

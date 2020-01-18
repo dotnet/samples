@@ -22,14 +22,12 @@ namespace VbPowerPacksDataRepeaterLayoutCS
             this.Validate();
             this.employeesBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.northwindDataSet);
-
         }
 
         private void VbPowerPacksDataRepeaterLayout_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'northwindDataSet.Employees' table. You can move, or remove it, as needed.
             this.employeesTableAdapter.Fill(this.northwindDataSet.Employees);
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -45,7 +43,6 @@ namespace VbPowerPacksDataRepeaterLayoutCS
                 dataRepeater1.LayoutStyle = DataRepeaterLayoutStyles.Vertical;
             }            
             // </Snippet1>
-             
         }
         // <Snippet2>
         private void dataRepeater1_LayoutStyleChanged_1(object sender, EventArgs e)

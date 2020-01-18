@@ -27,7 +27,6 @@ namespace SDKSample
                 // are control points and the last point is the destination point for the curve.
                 ctx.BezierTo(new Point(100, 0), new Point(200,200), new Point(300,100), 
                              true /* is stroked */, false /* is smooth join */);
-
             }
 
             // Create a path to draw a geometry with.

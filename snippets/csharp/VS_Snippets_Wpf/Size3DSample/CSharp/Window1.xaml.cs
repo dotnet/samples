@@ -293,9 +293,7 @@ namespace ThreeDSizeSample
                     }
                 default:
                     break;
-
             } //end switch
-	
         }
 
         // Displays the results of the operation

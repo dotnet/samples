@@ -16,5 +16,4 @@ public class Sample
         connection.Close();
     }
     // </Snippet1>
-
 }

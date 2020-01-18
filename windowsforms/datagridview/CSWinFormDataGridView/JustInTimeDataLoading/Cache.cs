@@ -176,7 +176,6 @@ namespace CSWinFormDataGridView.JustInTimeDataLoading
                 }
                 return 0;
             }
-
         }
 
         /// <summary>
@@ -326,7 +325,6 @@ namespace CSWinFormDataGridView.JustInTimeDataLoading
             adapter.Fill(table);
             return table;
         }
-
     }
 
     #endregion 

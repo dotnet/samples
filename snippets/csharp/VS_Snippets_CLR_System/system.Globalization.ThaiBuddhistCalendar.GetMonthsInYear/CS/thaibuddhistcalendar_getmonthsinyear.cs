@@ -30,9 +30,7 @@ public class SamplesThaiBuddhistCalendar  {
             Console.Write( "\t{0}", myCal.GetMonthsInYear( y, myCal.Eras[i] ) );
          Console.WriteLine();
       }
-
    }
-
 }
 
 /*

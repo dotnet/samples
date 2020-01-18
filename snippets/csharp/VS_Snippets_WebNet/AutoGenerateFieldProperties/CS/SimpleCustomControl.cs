@@ -34,7 +34,6 @@ namespace Samples.AspNet.CS.Controls
 
             return field;
         }
-        
     }
 }
 

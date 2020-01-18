@@ -13,7 +13,6 @@ class Program
         bool ret = RuntimeHelpers.Equals(x, y);
 
         Console.WriteLine("The return value of RuntimeHelpers.Equals is: " + ret);
-
     }
 }
 //</snippet1>

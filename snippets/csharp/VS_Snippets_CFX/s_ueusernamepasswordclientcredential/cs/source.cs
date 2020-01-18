@@ -84,7 +84,6 @@ namespace Samples
             //<snippet6>
             client.Close();
             //</snippet6>
-
         }
 
         private string ReturnUsername()

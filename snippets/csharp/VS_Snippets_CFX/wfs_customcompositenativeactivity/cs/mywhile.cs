@@ -63,7 +63,6 @@ namespace Microsoft.Samples.Scenarios.Common.Activities
                     context.ScheduleActivity(this.Body, InternalExecute);
                 }
             }
-
         }
     }
 }

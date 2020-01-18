@@ -12,6 +12,5 @@ namespace MatrixTransform3DView
 
     public partial class MyApp : Application
     {
-
     }
 }

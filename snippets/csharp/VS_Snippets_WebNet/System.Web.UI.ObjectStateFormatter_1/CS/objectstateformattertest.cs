@@ -42,5 +42,4 @@ public class ObjectStateFormatterTest {
         return controlProperties;
     }
 // </snippet2>
-
 }

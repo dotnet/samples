@@ -20,7 +20,6 @@ public class Sample
             Console.WriteLine(
                 classObject.GetPropertyValue(
                 "Name"));
-         
         }
     }
 }

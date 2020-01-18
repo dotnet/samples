@@ -107,7 +107,6 @@ namespace SDKSample
 		{
 			ShirtTypes sh = (ShirtTypes) value;
 			return (sh==ShirtTypes.None || sh == ShirtTypes.Bowling || sh == ShirtTypes.Dress || sh == ShirtTypes.Rugby || sh == ShirtTypes.Tee);
-
 		}
 //</SnippetValidateValueCallback>
 		private static void OnShirtTypeChangedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
@@ -155,5 +154,4 @@ namespace SDKSample
 		}
 //</SnippetEventManagerClass>
 	}
-
 }

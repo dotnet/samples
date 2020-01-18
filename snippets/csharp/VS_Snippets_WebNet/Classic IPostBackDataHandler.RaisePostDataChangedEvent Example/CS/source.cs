@@ -10,6 +10,5 @@ public class Sample {
 // </Snippet1>
 
     public void OnTextChanged(EventArgs e) {
-
     }
 }

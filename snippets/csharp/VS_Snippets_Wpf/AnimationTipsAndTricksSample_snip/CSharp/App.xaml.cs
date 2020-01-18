@@ -12,6 +12,5 @@ namespace Microsoft.Samples.Animation
 
     public partial class App : System.Windows.Application
     {
-
     }
 }

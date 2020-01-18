@@ -18,6 +18,5 @@ namespace TextTrimming_layout
 			mainWindow.InitializeComponent();
 			mainWindow.Show();
         }
-
 	}
 }

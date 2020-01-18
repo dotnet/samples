@@ -71,7 +71,6 @@ namespace SDKSample
             myImage.Source = myDrawingImage;
 
             this.Content = myImage;
-
         }      
     }
 }

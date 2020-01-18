@@ -107,8 +107,6 @@ namespace Samples.AspNet
                 this["foreground"] = value;
             }
         }
-
     }
-
 }
 //</snippet1>

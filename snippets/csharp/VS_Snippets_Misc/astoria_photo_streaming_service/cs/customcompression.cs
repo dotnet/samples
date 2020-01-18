@@ -100,7 +100,6 @@ namespace PhotoService
         //        writer.WriteEndElement();
         //    }
         //}
-
     }
 
     // Simply apply this attribute to a DataService-derived class to get
@@ -133,5 +132,4 @@ namespace PhotoService
 
         #endregion
     }
-
 }

@@ -117,7 +117,6 @@ class ADDyno
 	Console.WriteLine("-- Method generated, type completed, and assembly saved to disk."); 
 
 	return myType;
-
    }
 
    public static void Main() 
@@ -170,9 +169,7 @@ class ADDyno
 
 	myFCType.InvokeMember("CountLocalFiles", BindingFlags.InvokeMethod, null,
 				myObjInstance, new object[] { });
-
    }
-
 }
 
 // </Snippet1>

@@ -357,7 +357,6 @@ namespace ClientAppServicesDemo
             System.Web.Security.Membership.ValidateUser(
                 String.Empty, String.Empty);
             //</snippet319>
-
         }
 
         private CheckBox checkBox1 = new CheckBox();
@@ -447,6 +446,5 @@ namespace ClientAppServicesDemo
             Properties.Settings.Default.Save();
             //</snippet324>
         }
-
     }
 }

@@ -90,7 +90,6 @@ namespace socketoption_examples
 
             ConfigureTcpSocket(t);
             ConfigureUdpSocket(u);
-
         }
     }
 }

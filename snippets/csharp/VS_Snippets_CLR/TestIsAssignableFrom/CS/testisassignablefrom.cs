@@ -59,7 +59,6 @@ class Program
             Console.WriteLine("List<Type> assignable from List<int>: {0}", genTListType.IsAssignableFrom(genIntListType));
 
             Console.ReadLine();
-
     }
 }
 class Room

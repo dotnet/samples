@@ -390,7 +390,6 @@ namespace FourDPointSample
 
                 default:
                     break;
-
             } //end switch
             //<SnippetMil4DPoints3DN2>
         }

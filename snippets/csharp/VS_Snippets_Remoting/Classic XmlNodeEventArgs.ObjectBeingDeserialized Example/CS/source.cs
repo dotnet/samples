@@ -12,7 +12,6 @@ private void serializer_UnknownNode
    object o = e.ObjectBeingDeserialized;
    Console.WriteLine("Object being deserialized: " 
    + o.ToString());
-       
 }
    
 // </Snippet1>

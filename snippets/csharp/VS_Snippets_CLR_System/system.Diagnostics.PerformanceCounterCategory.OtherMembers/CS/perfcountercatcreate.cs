@@ -38,7 +38,6 @@ class PerfCounterCatCreateMod
         {
             pcc = PerformanceCounterCategory.Create(categoryName, categoryHelp, counterName, counterHelp);
             Console.WriteLine("Category \"{0}\" created.", pcc.CategoryName);
-
         }
         catch(Exception ex)
         {

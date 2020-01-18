@@ -41,7 +41,6 @@ namespace BlockSnippets
             ThicknessConverter tc = new ThicknessConverter();
             par.BorderThickness = (Thickness)tc.ConvertFromString("0.25in");
             // </Snippet_Block_Borders>
-
         }
 
         void MarginPadding()

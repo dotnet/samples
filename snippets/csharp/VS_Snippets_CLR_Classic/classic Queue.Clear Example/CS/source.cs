@@ -27,7 +27,6 @@
        Console.WriteLine( "   Count    : {0}", myQ.Count );
        Console.Write( "   Values:" );
        PrintValues( myQ );
-
     }
 
     public static void PrintValues( Queue myQ )  {
@@ -36,7 +35,6 @@
        }
        Console.WriteLine();
     }
-
  }
  /* 
  This code produces the following output.

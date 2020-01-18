@@ -24,6 +24,5 @@ namespace HostingWpfUserControlInWf
         // private void UserControlLoaded(object sender, RoutedEventArgs e) {}
         // Sample event handler:  
         // private void ButtonClick(object sender, RoutedEventArgs e) {}
-
     }
 }

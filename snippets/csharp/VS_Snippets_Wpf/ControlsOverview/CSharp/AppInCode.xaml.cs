@@ -96,7 +96,6 @@ namespace ControlsOverview
             Grid.SetRow(clear, 2);
             Grid.SetColumn(clear, 1);
             grid1.Children.Add(clear);
-
         }
         //</Snippet2>
     }

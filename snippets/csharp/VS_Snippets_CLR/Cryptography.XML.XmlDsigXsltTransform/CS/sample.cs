@@ -63,7 +63,6 @@ public class SignVerifyEnvelope
         {
             Key.Clear();
         }
-
     }
 
     // Sign an XML file and save the signature in a new file.
@@ -150,7 +149,6 @@ public class SignVerifyEnvelope
 
         // Check the signature and return the result.
         return signedXml.CheckSignature();
-
     }
 
     // Create the XML that represents the transform.

@@ -169,7 +169,6 @@ namespace ServiceModel.Samples
                     }
                 }
                 //</snippet12>
-
             }
         }
 

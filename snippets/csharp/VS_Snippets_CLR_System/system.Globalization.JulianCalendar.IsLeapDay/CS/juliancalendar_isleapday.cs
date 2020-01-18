@@ -37,9 +37,7 @@ public class SamplesJulianCalendar  {
          }
          Console.WriteLine();
       }
-
    }
-
 }
 
 /*

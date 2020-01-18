@@ -78,7 +78,6 @@ namespace Microsoft.Samples.Animation.AnimatedTransformations
              DockPanel mainPanel = new DockPanel();
              mainPanel.Children.Add( myRectangle );
              this.Content = mainPanel;
-                           
         } 
         
         private void rectangleLoaded(object sender, RoutedEventArgs args)

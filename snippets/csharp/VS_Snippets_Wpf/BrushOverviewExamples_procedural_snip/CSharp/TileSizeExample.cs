@@ -20,7 +20,6 @@ namespace Microsoft.Samples.BrushExamples
             createRelativeTileSizeExample(mainPanel);
             createAbsoluteTileSizeExample(mainPanel);
             this.Content = mainPanel;
-
         }
 
         private void createRelativeTileSizeExample(Panel mainPanel)
@@ -58,7 +57,6 @@ namespace Microsoft.Samples.BrushExamples
             
             rectangleBorder.Child = myRectangle;
             mainPanel.Children.Add(rectangleBorder);            
-        
         }
 
         private void createAbsoluteTileSizeExample(Panel mainPanel)
@@ -96,9 +94,6 @@ namespace Microsoft.Samples.BrushExamples
 
             rectangleBorder.Child = myRectangle;
             mainPanel.Children.Add(rectangleBorder);
-
         }
-  
     }
-
 }

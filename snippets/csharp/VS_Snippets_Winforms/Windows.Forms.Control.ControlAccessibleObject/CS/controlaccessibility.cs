@@ -31,7 +31,6 @@ namespace MyCustomControls
    {
       public MyCheckBoxAccessibleObject(MyCheckBox owner) : base(owner) 
       {
-        
       }
                
       public override string DefaultAction 
@@ -110,7 +109,6 @@ namespace ControlAccessibility
          this.ClientSize = new System.Drawing.Size(292, 273);
          this.Name = "Form1";
          this.Text = "Form1";
-
       }
 
       [STAThread]
@@ -139,5 +137,4 @@ public MyForm()
 }
 // </snippet2>
    }
-
 }

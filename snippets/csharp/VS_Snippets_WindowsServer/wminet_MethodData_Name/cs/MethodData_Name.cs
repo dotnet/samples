@@ -50,7 +50,6 @@ public class Sample
                     Console.WriteLine(q.Name);
                 }
                 Console.WriteLine();
-  
             }
         } 
     }

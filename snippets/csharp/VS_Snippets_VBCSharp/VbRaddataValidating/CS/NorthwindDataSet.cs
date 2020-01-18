@@ -10,7 +10,6 @@
             {
                 base.EndInit();
                 ColumnChanging += SampleColumnChangingEvent;
-
             }
 
             private void SampleColumnChangingEvent(object sender, System.Data.DataColumnChangeEventArgs e)

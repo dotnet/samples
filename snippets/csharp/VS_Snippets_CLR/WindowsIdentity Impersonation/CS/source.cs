@@ -88,7 +88,6 @@ public class ImpersonationDemo
         {
             Console.WriteLine("Exception occurred. " + ex.Message);
         }
-
     }
 }
 public sealed class SafeTokenHandle : SafeHandleZeroOrMinusOneIsInvalid

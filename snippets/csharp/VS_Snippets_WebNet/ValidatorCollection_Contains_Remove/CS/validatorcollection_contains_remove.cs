@@ -85,6 +85,5 @@ public class MyPage : Page
          Response.Write("ValidatorCollection does not contain RequiredFieldValidator");
       }
 // </Snippet1>
-
    }
 }

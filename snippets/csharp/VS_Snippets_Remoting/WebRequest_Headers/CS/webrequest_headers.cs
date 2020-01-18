@@ -29,7 +29,6 @@ class WebRequest_Headers
 // </Snippet1>
 			Console.WriteLine("\nPress Enter Key to Continue.........");
 			Console.Read();
-			
 		}
 		catch(WebException e)
 		{

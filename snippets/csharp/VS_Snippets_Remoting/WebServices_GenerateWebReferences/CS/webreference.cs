@@ -108,14 +108,12 @@ class Test
         );
         provider.GenerateCodeFromCompileUnit(unit, Console.Out, new CodeGeneratorOptions() );          
 // </snippet7>
-    
     }
 
     static void Main ()
     {
 
         Test.Run();
-
     }
 }
 // </snippet0>

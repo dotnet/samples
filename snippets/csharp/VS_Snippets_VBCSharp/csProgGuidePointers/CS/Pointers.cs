@@ -295,7 +295,6 @@ namespace N
         /// <param name="x">Describe parameter.</param>
         /// <returns>Describe return value.</returns>
         public static explicit operator int(X x) { return 1; }
-
     }
 }
 //</Snippet21>

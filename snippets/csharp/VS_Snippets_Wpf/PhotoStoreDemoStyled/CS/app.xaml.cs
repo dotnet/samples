@@ -18,6 +18,5 @@ namespace PhotoStore
             Window1 mainWindow = new Window1();
             mainWindow.Show();
         }
-
     }
 }

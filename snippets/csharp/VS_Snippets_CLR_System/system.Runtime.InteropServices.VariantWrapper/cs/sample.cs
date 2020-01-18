@@ -18,9 +18,7 @@ class Program
         // Pass the wrapped object.
         UnmanagedComClassInstance.MethodWithStringRefParam(ref var);
         // </snippet1>
-
     }
-
 }
 
 class UnmanagedComClass

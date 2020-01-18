@@ -285,7 +285,6 @@ namespace WF_Snippets
 
                 base.SetValue(SendEmailActivity.BodyProperty, value);
             }
-
         }
 
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
@@ -540,12 +539,10 @@ namespace WF_Snippets
             if (String.IsNullOrEmpty(activity.To))
             {
                 validationErrors.Add(ValidationError.GetNotSetValidationError(SendEmailActivity.ToProperty.Name));
-
             }
             else if (!activity.To.Contains("@"))
             {
                 validationErrors.Add(new ValidationError("Invalid To email address", InvalidToAddress, false, SendEmailActivity.ToProperty.Name));
-
             }
 
             // Validate the From property
@@ -556,7 +553,6 @@ namespace WF_Snippets
             else if (!activity.From.Contains("@"))
             {
                 validationErrors.Add(new ValidationError("Invalid From email address", InvalidFromAddress, false, SendEmailActivity.FromProperty.Name));
-
             }
         }
         // </snippet235>
@@ -580,7 +576,6 @@ namespace WF_Snippets
                     InvalidSMTPPort, false, SendEmailActivity.PortProperty.Name));
             }
         }
-
     }
 
     /**************************
@@ -795,7 +790,6 @@ namespace WF_Snippets
                         this.ParentView.Update();
                     }
                     loader.RemoveActivityFromDesigner(codeActivityComponent);
-
                 }
             }
             return true;
@@ -1118,7 +1112,6 @@ namespace WF_Snippets
             byte[] workflowBytes = DeserializeFromFile(activityId);
             Activity deserializedActivities = WorkflowPersistenceService.RestoreFromDefaultSerializedForm(workflowBytes, outerActivity);
             return deserializedActivities;
-
         }
         // </snippet269>
 
@@ -1249,7 +1242,6 @@ namespace WF_Snippets
 
         static void OnWorkflowTerminated(object sender, WorkflowTerminatedEventArgs e)
         { }
-
     }
     //</snippet263>
     public partial class PersistenceServiceWorkflow : SequentialWorkflowActivity
@@ -1668,5 +1660,4 @@ namespace WF_Snippets
         }
         // </snippet296>
     }
-
 }

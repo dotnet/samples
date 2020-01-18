@@ -27,7 +27,6 @@ namespace StrokeCollectionEraseMethods
         {
             presenter = this.Presenter;
             this.presenter.Strokes.PropertyDataChanged += new PropertyDataChangedEventHandler(Strokes_PropertyDataChanged);
-
         }
 
         //<Snippet29>
@@ -37,7 +36,6 @@ namespace StrokeCollectionEraseMethods
             {
                 MessageBox.Show("The timestamp for the strokes is " +
                     ((DateTime)e.NewValue).ToString());
-
             }
         }
         //</Snippet29>
@@ -95,7 +93,6 @@ namespace StrokeCollectionEraseMethods
                         "The property data is not a DateTime object.");
                 }
             }
-
         }
         
         // This snippet illustrates the Clip and Erase methods.
@@ -144,7 +141,6 @@ namespace StrokeCollectionEraseMethods
                 strokesInMemory);
 
             Clipboard.SetDataObject(dataobj, true);
-
         }
         //</Snippet5>
 
@@ -168,7 +164,6 @@ namespace StrokeCollectionEraseMethods
             {
                 s.DrawingAttributes.Color = Colors.Purple;
             }
-
         }
         //</Snippet15>
 
@@ -190,7 +185,6 @@ namespace StrokeCollectionEraseMethods
             }
 
             return (Point[])strokePoints.ToArray(typeof(Point));
-            
         }
 
         public void EraseStrokes()
@@ -260,7 +254,6 @@ namespace StrokeCollectionEraseMethods
             StrokeCollection strokes = presenter.Strokes.HitTest(lasso, 80);
 
             presenter.Strokes.Remove(strokes);
-            
         }
         //</Snippet16>
 

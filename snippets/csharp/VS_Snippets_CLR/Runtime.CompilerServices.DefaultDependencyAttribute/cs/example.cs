@@ -10,7 +10,6 @@ class Program
     {
 
         Console.WriteLine("The DefaultDependencyAttribute attribute was applied.");
-
     }
 }
 //</snippet1>

@@ -196,7 +196,6 @@ namespace System.CodeDom
             //</Snippet15>
             method2.Statements.Add(codeAssignStatement1);
             method2.Statements.Add(snippet1);
-
         }
 
         static void OutputResults(CompilerResults results)
@@ -208,7 +207,6 @@ namespace System.CodeDom
                 Console.WriteLine(s);
             }
         }
-
     }
 }
 //</Snippet1>

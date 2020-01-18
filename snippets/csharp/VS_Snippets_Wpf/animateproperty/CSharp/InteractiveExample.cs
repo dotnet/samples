@@ -93,7 +93,6 @@ namespace Microsoft.Samples.Animation.LocalAnimations
 
             // Change the color of the ellipse.
             interactiveEllipse.Fill = System.Windows.Media.Brushes.Lime;
-                    
         }
         
         // When the user right-clicks, use the 
@@ -125,10 +124,7 @@ namespace Microsoft.Samples.Animation.LocalAnimations
                 
             // Change the color of the ellipse.
             interactiveEllipse.Fill = System.Windows.Media.Brushes.Orange;
-
         }
-        
     }
- 
 }
 //</SnippetInteractiveAnimationExampleWholePage>

@@ -25,7 +25,6 @@ public class SamplesHijriCalendar  {
       // Displays the values of the DateTime.
       Console.WriteLine( "After adding two years and ten months:" );
       DisplayValues( myCal, myDT );
-
    }
 
    public static void DisplayValues( Calendar myCal, DateTime myDT )  {
@@ -37,7 +36,6 @@ public class SamplesHijriCalendar  {
       Console.WriteLine( "   DayOfWeek:  {0}", myCal.GetDayOfWeek( myDT ) );
       Console.WriteLine();
    }
-
 }
 
 /*

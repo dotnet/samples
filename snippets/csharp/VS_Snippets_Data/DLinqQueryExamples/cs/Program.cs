@@ -550,7 +550,6 @@ namespace cs_DLinqQueryExamples
             // S64, S65 live in a separate methods.
 
             /////////////////// E N D   O F   Q U E R I E S ////////
-
         } //end of Main
 
         //////////////////////// OUT OF SCOPE METHODS ////////////////
@@ -571,7 +570,6 @@ namespace cs_DLinqQueryExamples
                     prodObj.ProductID, prodObj.UnitPrice);
             }
             // </Snippet22>
-
         }
 
         //    // this was a dup of 22
@@ -969,7 +967,6 @@ namespace cs_DLinqQueryExamples
                     FreeShippingDiscount = ord.Freight
                 };
         // </Snippet65>
-
   } //end of class Program
 
         // <Snippet46>
@@ -1009,5 +1006,4 @@ namespace cs_DLinqQueryExamples
         }
         // </Snippet62>
         }
-
     }

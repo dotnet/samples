@@ -47,8 +47,6 @@ namespace ImageElementExample
          Grid.SetColumn(rotated90, 1);
          Grid.SetRow(rotated90, 1);
          transformedGrid.Children.Add(rotated90);
-
       }
-
    }
 }

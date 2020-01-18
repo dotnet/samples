@@ -30,7 +30,6 @@ public class Example
       dtfi.LongDatePattern = originalLongDatePattern + @" 'C.E.'";
       foreach (var fmt in formats)
          Console.WriteLine(dateValue.ToString(fmt, dtfi));
-
    }
 }
 // The example displays the following output:

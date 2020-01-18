@@ -70,7 +70,6 @@ class HttpWebRequest_Pipelined
 			Console.WriteLine("\nPress 'Enter' Key to Continue......");
 			Console.Read();	
 // </Snippet1>
-	
 		}
 		catch(WebException e)
 		{

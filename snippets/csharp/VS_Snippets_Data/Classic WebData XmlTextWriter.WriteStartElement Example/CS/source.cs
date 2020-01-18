@@ -62,8 +62,6 @@ public class Sample
     
      //Write the XML content to the console.
      Console.Write(doc.InnerXml);  
-
   }
-
 }
    // </Snippet1>

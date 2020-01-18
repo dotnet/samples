@@ -99,7 +99,6 @@ class HttpWebRequest_BeginGetResponse
       Console.WriteLine("\nException raised!");
       Console.WriteLine("\nMessage:{0}",e.Message);
       Console.WriteLine("\nStatus:{0}",e.Status);
-      
     }
   }
   private static  void ReadCallBack(IAsyncResult asyncResult)
@@ -130,20 +129,15 @@ class HttpWebRequest_BeginGetResponse
       
       responseStream.Close();
       allDone.Set();
-     
     }
-
     }
     catch(WebException e)
     {
       Console.WriteLine("\nException raised!");
       Console.WriteLine("\nMessage:{0}",e.Message);
       Console.WriteLine("\nStatus:{0}",e.Status);
-      
     }
-
   }
 // </Snippet2>
 // </Snippet1>
-
 }

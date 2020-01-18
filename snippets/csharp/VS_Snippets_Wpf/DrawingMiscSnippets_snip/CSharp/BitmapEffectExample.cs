@@ -145,9 +145,7 @@ namespace SDKSample
 
             this.Background = checkerBrush;
             this.Content = mainPanel;
-
         }
-
 	}
 }
 // </SnippetDrawingGroupBitmapEffectExampleWholePage>

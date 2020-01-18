@@ -20,7 +20,6 @@ public class Form1:
         this.Button1.Click += new EventHandler(Button1_Click);
         
         //Add any initialization after the InitializeComponent() call
-
     }
 
     //Form overrides dispose to clean up the component list.
@@ -73,7 +72,6 @@ public class Form1:
         this.Name = "Form1";
         this.Text = "Form1";
         this.ResumeLayout(false);
-
     }
 
     #endregion
@@ -228,7 +226,6 @@ public class Form1:
 
         // Dispose of the path.
         path.Dispose();
-
     }
     //</snippet5>
 
@@ -278,7 +275,6 @@ public class Form1:
             // Dispose of the custom brush.
             aBrush.Dispose();
         }
-
     }
     //</snippet6>
 
@@ -302,7 +298,6 @@ public class Form1:
         // in black. Note there is nothing filled in.
         e.Graphics.FillRegion(Brushes.Red, smallRegion);
         e.Graphics.DrawRectangle(Pens.Black, originalRectangle);
-
     }
     //</snippet7>
 
@@ -325,7 +320,6 @@ public class Form1:
         // in black. Note that the entire form is filled in.
         e.Graphics.FillRegion(Brushes.Red, smallRegion);
         e.Graphics.DrawRectangle(Pens.Black, originalRectangle);
-
     }
     //</snippet8>
 
@@ -378,7 +372,6 @@ public class Form1:
         // Call TranslateTransform and draw the path again.
         e.Graphics.TranslateTransform(10.0F, 10.0F);
         e.Graphics.DrawPath(Pens.Red, myPath);
-
     }
     //</snippet10>
 
@@ -399,7 +392,6 @@ public class Form1:
         //DisplayKnownColors(e)
         //DrawVerticalStringFromBottomUp(e)
         TranslateAndTransform(e);
-       
     }
 
     // The following code example demonstrates how to set the Font property of 
@@ -444,7 +436,6 @@ public class Form1:
         e.Graphics.FillRectangle(Brushes.Red, this.ClientRectangle);
 
         region2.Dispose();
-
     }
     // </snippet12>
 
@@ -488,7 +479,6 @@ public class Form1:
         e.Graphics.FillRectangle(Brushes.Red, this.ClientRectangle);
 
         region3.Dispose();
-
     }
     // </snippet13>
 
@@ -510,7 +500,6 @@ public class Form1:
 
             // Draw the new bitmap.
             e.Graphics.DrawImage(newBitmap, 10, 10);
-
         }
         //</snippetConstructor>
 }

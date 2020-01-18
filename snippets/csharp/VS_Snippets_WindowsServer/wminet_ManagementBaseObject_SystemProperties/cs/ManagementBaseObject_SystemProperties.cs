@@ -21,7 +21,6 @@ public class Sample
             Console.WriteLine(p.Name);
             Console.WriteLine(p.Value);
             Console.WriteLine();
-
         }
     }
 }

@@ -103,7 +103,6 @@ namespace RecycleItemContainerShippets
             {
                 return sp.FindResource("TreeViewItemStyle2") as Style;
             }
-
         }
     }
     //</SnippetTreeViewItemStyleSelector>

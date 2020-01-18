@@ -15,7 +15,5 @@ namespace SDKSample
             MyMultipleEffectExampleFrame.Content = new MultipleEffectExample();
             MyMultipleEffectAnimationExampleFrame.Content = new MultipleEffectAnimationExample();
         }
-        
     }
-
 }

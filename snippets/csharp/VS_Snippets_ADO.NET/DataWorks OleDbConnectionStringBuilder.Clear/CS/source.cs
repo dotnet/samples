@@ -36,7 +36,6 @@ class Program
 
         Console.WriteLine("Press Enter to continue.");
         Console.ReadLine();
-
     }
 
     private static void DumpBuilderContents(OleDbConnectionStringBuilder builder)

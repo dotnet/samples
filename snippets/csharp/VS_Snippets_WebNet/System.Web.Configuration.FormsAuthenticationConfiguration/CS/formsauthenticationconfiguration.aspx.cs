@@ -13,7 +13,6 @@ public partial class FormsAuthenticationConfiguration_Test : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-       
     }
 
     // Access the AuthenticationSection section to get 
@@ -56,7 +55,6 @@ public partial class FormsAuthenticationConfiguration_Test : System.Web.UI.Page
             // Display error.
             // Label1.Text = buffer.ToString();
         }
-
     }
 
     protected void Button1_Click(object sender, EventArgs e)

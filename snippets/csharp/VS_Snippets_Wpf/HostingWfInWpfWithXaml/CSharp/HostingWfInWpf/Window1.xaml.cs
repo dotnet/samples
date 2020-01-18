@@ -24,6 +24,5 @@ namespace HostingWfInWpf
 
         // Sample event handler:  
         // private void ButtonClick(object sender, RoutedEventArgs e) {}
-
     }
 }

@@ -92,7 +92,6 @@ class DynamicJumpTableDemo
 	myIL.Emit(OpCodes.Ret);
 	
 	return myTypeBuilder.CreateType();
-
    }
 
    public static void Main()
@@ -109,9 +108,7 @@ class DynamicJumpTableDemo
 			  		           null,
 			  		           myInstance,
 			  		           new object[] {theValue}));  
-			  
    }
-
 }
 
 // </Snippet1>

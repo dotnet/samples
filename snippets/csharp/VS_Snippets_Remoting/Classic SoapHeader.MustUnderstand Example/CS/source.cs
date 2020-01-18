@@ -34,5 +34,4 @@ public class MyWebService {
 	public MyHeader myHeader;
 
 	public int MyWebMethod(int num1, int num2) {return num1 + num2;}
-
 }

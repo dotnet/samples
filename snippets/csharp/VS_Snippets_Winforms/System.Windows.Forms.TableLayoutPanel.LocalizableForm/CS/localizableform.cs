@@ -247,7 +247,6 @@ namespace TableLayoutPanelSample
 			this.tableLayoutPanel2.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
-
 		}
 
 		[STAThread]

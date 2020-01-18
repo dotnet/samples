@@ -122,7 +122,6 @@ namespace Samples.AspNet.CS.Controls {
                                                      rootNodeId.ToString(),
                                                      rootNodeReader.GetString(1),
                                                      rootNodeReader.GetString(2));
-
                     }
                     else
                     {

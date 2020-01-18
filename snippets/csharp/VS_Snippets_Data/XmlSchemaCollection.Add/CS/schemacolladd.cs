@@ -32,7 +32,6 @@ namespace Microsoft.Samples.Xml.Schema
                 rdr.ValidationEventHandler += new ValidationEventHandler(ValidationCallBack);
                 while (rdr.Read()) ;
             }
-
         }
 
         // Display any errors.

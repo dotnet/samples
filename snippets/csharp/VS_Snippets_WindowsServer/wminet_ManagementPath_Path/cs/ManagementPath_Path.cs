@@ -41,7 +41,6 @@ public class Sample
         Console.WriteLine("RelativePath: " +
             p.RelativePath);
         // Should be "Win32_LogicalDisk.DeviceID="C:""
-
     }
 }
 //</Snippet1>

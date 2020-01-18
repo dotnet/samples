@@ -31,7 +31,6 @@ namespace StylusControlSnippets
             dr = new DynamicRenderer();
             ip.AttachVisuals(dr.RootVisual, dr.DrawingAttributes);
             this.StylusPlugIns.Add(dr);
-
         }
         //</Snippet18>
     //<Snippet15>
@@ -54,5 +53,4 @@ namespace snippets2
         }
         //</Snippet16>
     }
- 
 }

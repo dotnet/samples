@@ -143,7 +143,6 @@ namespace AsyncExampleWPF_WhenAll
 
             // Return the result as a byte array.
             return content.ToArray();
-
         }
 
         private void DisplayResults(string url, byte[] content)
@@ -155,7 +154,6 @@ namespace AsyncExampleWPF_WhenAll
             // Strip off the "http://".
             var displayURL = url.Replace("http://", "");
             resultsTextBox.Text += string.Format("\n{0,-58} {1,8}", displayURL, bytes);
-
         }
     }
 }

@@ -34,7 +34,6 @@ public class Sample
        //Read the title and price elements.
        Console.WriteLine(reader.ReadElementString());
        Console.WriteLine(reader.ReadElementString());
-
      } 
 
      finally 

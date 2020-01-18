@@ -62,6 +62,5 @@ namespace Microsoft.Samples.ContentBasedCorrelation.SharedTypes
             get { return name; }
             set { name = value; }
         }
-
     }
 }

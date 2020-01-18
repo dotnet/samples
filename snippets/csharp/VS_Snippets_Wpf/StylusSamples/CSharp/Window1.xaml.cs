@@ -83,7 +83,6 @@ namespace StylusSamples
             }
         
             textbox1.AppendText("\r\n");
- 
         }
         //</Snippet23>
 

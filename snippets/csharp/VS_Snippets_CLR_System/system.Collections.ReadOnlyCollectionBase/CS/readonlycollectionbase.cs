@@ -23,7 +23,6 @@ public class ROCollection : ReadOnlyCollectionBase  {
    public bool Contains( Object value )  {
       return( InnerList.Contains( value ) );
    }
-
 }
 
 public class SamplesCollectionBase  {
@@ -58,7 +57,6 @@ public class SamplesCollectionBase  {
       Console.WriteLine( "Contains yellow: {0}", myCol.Contains( "yellow" ) );
       Console.WriteLine( "orange is at index {0}.", myCol.IndexOf( "orange" ) );
       Console.WriteLine();
-
    }
  
    // Uses the Count property and the Item property.
@@ -84,7 +82,6 @@ public class SamplesCollectionBase  {
          Console.WriteLine( "   {0}", myEnumerator.Current );
       Console.WriteLine();
    }
-
 }
 
 

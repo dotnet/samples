@@ -69,7 +69,6 @@ namespace Samples.AspNet
                         // Add a NameValueConfigurationElement
                         // to the collection.
                         myNameValConfigCollection.Add(nameValConfigElement);
-                       
                     }
                 }
                 // </Snippet3>

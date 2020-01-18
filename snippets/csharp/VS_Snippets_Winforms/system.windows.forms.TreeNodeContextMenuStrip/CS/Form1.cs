@@ -10,7 +10,6 @@ class myForm : Form
     {
         InitializeComponent();
         InitializeMenuTreeView();
-        
     }
 
     // <snippet1>
@@ -75,7 +74,5 @@ class myForm : Form
         this.ClientSize = new System.Drawing.Size(292, 266);
         this.Name = "myForm";
         this.ResumeLayout(false);
-
     }
-
 }     

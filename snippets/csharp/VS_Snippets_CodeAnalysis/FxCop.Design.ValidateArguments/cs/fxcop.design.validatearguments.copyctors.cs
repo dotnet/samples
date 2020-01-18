@@ -24,7 +24,6 @@ public class Person
 }
 
 //</Snippet1>
-
 } // Namespace1
 
 namespace Namespace2
@@ -58,5 +57,4 @@ public class Person
     }
 }
 //</Snippet2>
-
 } //Namespace2

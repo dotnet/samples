@@ -15,7 +15,6 @@ namespace Microsoft.Samples.Animation.AnimatePathShapeSample
     
         public app()
         {
-
         }
 
         protected override void OnStartup (StartupEventArgs e)

@@ -33,6 +33,5 @@ namespace WCSamples
             ellipse.Height = pY;
         }
         //</SnippetMouseMovePointerGetPosition>
-
     }
 }

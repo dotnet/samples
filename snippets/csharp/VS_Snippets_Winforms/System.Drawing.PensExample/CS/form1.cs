@@ -16,7 +16,6 @@ public class Form1:
         this.Paint += new PaintEventHandler(Form1_Paint);
 
         //Add any initialization after the InitializeComponent() call
-
     }
 
     //Form overrides dispose to clean up the component list.
@@ -72,7 +71,6 @@ public class Form1:
 
         //Dispose of the pen.
         skyBluePen.Dispose();
-
     }
     //</snippet1>
 
@@ -101,7 +99,6 @@ public class Form1:
 
         // Dispose of the custom pen.
         redPen.Dispose();
-
     }
     //</snippet2>
 

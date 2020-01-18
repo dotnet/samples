@@ -20,8 +20,6 @@ namespace Microsoft.Samples.MatrixExamples
             InitializeComponent();
             
             MatrixExampleFrame.Content = new MatrixExample();
-                 
        }
-       
     }
 }

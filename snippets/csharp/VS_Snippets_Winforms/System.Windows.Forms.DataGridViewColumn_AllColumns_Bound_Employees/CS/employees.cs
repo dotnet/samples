@@ -249,7 +249,6 @@ public class Employees : Form
         }
 
         DataGridView1.Columns.Add(buttons);
-
     }
     //</snippet10>
 

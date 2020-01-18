@@ -19,5 +19,4 @@ public class Form1: Form
         parameter.Size = 11;
     }
     // </Snippet1>
-
 }

@@ -21,8 +21,6 @@ namespace SDKSamples
         public SampleViewer()
         {
             InitializeComponent();
-
         }
-
     }
 }

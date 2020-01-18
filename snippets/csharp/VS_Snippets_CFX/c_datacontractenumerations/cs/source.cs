@@ -114,5 +114,4 @@ namespace ServiceModel.Samples
         Lost
     }
     //</snippet6>
-
 }

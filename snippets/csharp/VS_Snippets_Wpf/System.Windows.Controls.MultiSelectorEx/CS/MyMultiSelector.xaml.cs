@@ -43,5 +43,4 @@ namespace MultiSelectorEx
             //</snippet2>
         }
     }
-    
 }

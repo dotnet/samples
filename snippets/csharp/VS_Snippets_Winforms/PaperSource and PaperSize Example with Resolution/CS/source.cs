@@ -116,7 +116,6 @@ namespace WindowsApplication3
                 // The combo box's Text property returns the selected item's text, which is the printer name.
                 printDoc.PrinterSettings.PrinterName= comboInstalledPrinters.Text;
             }
-
         }
         // </Snippet5>
 
@@ -242,7 +241,6 @@ namespace WindowsApplication3
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
-
         }
         #endregion
 
@@ -320,7 +318,6 @@ namespace WindowsApplication3
 
                 e.PageSettings.Color = true;
             }
-
         }    
     }
     //</Snippet6>
@@ -328,6 +325,5 @@ namespace WindowsApplication3
     private void MyPrintPageEvent(object sender, PrintPageEventArgs e)
     {
     }
-
     }
 }

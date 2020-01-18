@@ -317,10 +317,8 @@ namespace SdkSample
                 if (writer != null)
                     writer.Close();
             }
-
         }
 
         private Stream _stream;
-
     }
 }

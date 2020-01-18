@@ -137,7 +137,6 @@ public class SignVerifyEnvelope
             doc.WriteTo(xmltw);
             xmltw.Close();
         }
-
     }
     // </Snippet2>
 
@@ -173,7 +172,6 @@ public class SignVerifyEnvelope
 
         // Check the signature and return the result.
         return signedXml.CheckSignature(cert, true);
-
     }
 
     public static X509Certificate2 GetCertificateBySubject(string CertificateSubject)

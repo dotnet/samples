@@ -12,6 +12,5 @@ namespace Microsoft.Samples.FreezableExamples
 
     public partial class App : System.Windows.Application
     {
-
     }
 }

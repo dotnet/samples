@@ -37,7 +37,6 @@ namespace ColumnsArtSample
             orderadapter.Fill(ordertable);
 
             DG1.DataContext = ordertable;
-
         }
     }
 }

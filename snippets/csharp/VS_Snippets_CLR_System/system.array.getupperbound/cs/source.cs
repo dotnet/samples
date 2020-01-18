@@ -36,7 +36,6 @@ public class Example
              inner++)
            Console.WriteLine($"      {'\u007b'}{outer}, {inner}{'\u007d'} = " +
                              $"{integers2d.GetValue(outer, inner)}");
-
    }
 }
 // The example displays the following output:

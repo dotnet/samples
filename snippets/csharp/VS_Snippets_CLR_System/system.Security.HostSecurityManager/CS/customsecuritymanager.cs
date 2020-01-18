@@ -100,7 +100,6 @@ namespace MyNamespace
             return trust;
         }
         //</Snippet3>
-
     }
     [Serializable()]
     public class CustomEvidenceType : EvidenceBase

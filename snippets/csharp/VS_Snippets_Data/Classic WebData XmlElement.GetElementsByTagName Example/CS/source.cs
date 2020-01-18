@@ -17,7 +17,6 @@ public class Sample
      {   
         Console.WriteLine(elemList[i].InnerXml);
      } 
-    
   }
 }
    // </Snippet1>

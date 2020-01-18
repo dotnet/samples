@@ -17,7 +17,6 @@ public class Form1 :
         //This call is required by the Windows Form Designer.
         InitializeComponent();
         ExtractAssociatedIconEx();
-
     }
 
     //NOTE: The following procedure is required by the Windows Form Designer
@@ -36,7 +35,6 @@ public class Form1 :
         this.Text = "Form1";
         this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
         this.ResumeLayout(false);
-
     }
 
     #endregion
@@ -86,7 +84,6 @@ public class Form1 :
         // Draw the lines.
         e.Graphics.DrawLines(capPen, points);
         e.Graphics.DrawLines(customCapPen, points);
-
     }
     //</snippet1>  
 
@@ -96,7 +93,6 @@ public class Form1 :
         Icon ico =
             Icon.ExtractAssociatedIcon(@"C:\WINDOWS\system32\notepad.exe");
         this.Icon = ico;
-
     }
     //</snippet2> 
 
@@ -106,7 +102,6 @@ public class Form1 :
 
         Icon icon1 = new Icon(typeof(Control), "Error.ico");
         e.Graphics.DrawIcon(icon1, new Rectangle(10, 10, 50, 50));
-
     }
     //</snippet3>
     // <snippet4>
@@ -156,7 +151,6 @@ public class Form1 :
 
         //Dispose of the bitmap.
         bmp2.Dispose();
-
     }
     // </snippet4>
 //<snippet5>
@@ -169,7 +163,6 @@ public class Form1 :
             e.Graphics.DrawString("They are equal", this.Font, Brushes.Black, rect1);
         else
             e.Graphics.DrawString("They are not equal", this.Font, Brushes.Red, rect1);
-
     }
     //</snippet5>
 
@@ -184,7 +177,6 @@ public class Form1 :
             e.Graphics.DrawString("They are not equal", this.Font, Brushes.Red, rect1);
         else
             e.Graphics.DrawString("They are equal", this.Font, Brushes.Black, rect1);
-
     }
     //</snippet6>
 
@@ -241,7 +233,6 @@ public class Form1 :
             GraphicsUnit.Pixel,
            imageAttributes);
         //</snippet9>
-
     }
         //<snippetInstalledFonts>
         InstalledFontCollection ifc = new InstalledFontCollection();
@@ -312,5 +303,4 @@ public class Form1 :
         //ConstructAnIconFromAType(e);
         ShowOutputChannels(e);
     }
-
 }

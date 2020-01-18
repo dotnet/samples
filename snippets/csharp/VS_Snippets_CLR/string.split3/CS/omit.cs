@@ -145,5 +145,4 @@ class Sample
     */
     //</snippet1>
     }
-
 }

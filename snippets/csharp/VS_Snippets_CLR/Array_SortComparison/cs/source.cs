@@ -69,7 +69,6 @@ public class Example
         Console.WriteLine("\nSort with generic Comparison<string> delegate:");
         Array.Sort(dinosaurs, CompareDinosByLength);
         Display(dinosaurs);
-
     }
 
     private static void Display(string[] arr)

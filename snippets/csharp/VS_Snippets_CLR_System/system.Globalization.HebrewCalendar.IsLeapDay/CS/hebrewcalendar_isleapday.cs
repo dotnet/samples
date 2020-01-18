@@ -37,9 +37,7 @@ public class SamplesHebrewCalendar  {
          }
          Console.WriteLine();
       }
-
    }
-
 }
 
 /*

@@ -6,7 +6,6 @@ using System.ComponentModel.DataAnnotations;
 [MetadataType(typeof(ProductMetadata))]
 public partial class Product 
 {
-
 }
 
 public partial class ProductMetadata
@@ -15,6 +14,5 @@ public partial class ProductMetadata
     [Range(100, 10000, 
     ErrorMessage = "Units in stock should be between {1} and {2}.")]
     public object UnitsInStock;
-
 }
 // </Snippet5>

@@ -25,7 +25,6 @@ public class WebPermissionAttribute_AcceptConnect
       Console.WriteLine("Exception : " + e.ToString());
     }
 // </Snippet1>
-           
  }
 
  static void Main()

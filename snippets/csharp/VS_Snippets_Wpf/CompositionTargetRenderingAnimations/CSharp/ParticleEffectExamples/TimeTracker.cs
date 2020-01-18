@@ -89,7 +89,6 @@
                     {
                         TimerFired(this, null);
                     }
-                   
                 }
 
             //cycle old time
@@ -98,5 +97,4 @@
             return _deltaTime;
         }
     }
-
 }

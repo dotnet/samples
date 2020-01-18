@@ -62,15 +62,12 @@ namespace StrokeSnippets_CS
             get
             {
                 return fitToCurve;
-
             }
 
             set
             {
                 fitToCurve = value;
-                
             }
-
         }
 
         bool gotFirstStroke;
@@ -135,7 +132,6 @@ namespace StrokeSnippets_CS
             myInkPresenter.AttachVisuals(renderer.RootVisual, renderer.DrawingAttributes);
 
             StrokeConstructorSample();
-
         }
 
         static MyBorder()
@@ -144,7 +140,6 @@ namespace StrokeSnippets_CS
             Type owner = typeof(MyBorder);
             ClipToBoundsProperty.OverrideMetadata(owner,
                 new FrameworkPropertyMetadata(true));
-
         }
 
         // Prepare to collect stylus packets. Get the 
@@ -310,7 +305,6 @@ namespace StrokeSnippets_CS
 
         void CompareStrokePoints(Stroke aStroke)
         {
-
         }
 
         void myNewStroke_PropertyDataChanged(object sender, PropertyDataChangedEventArgs e)
@@ -554,7 +548,6 @@ namespace StrokeSnippets_CS
 
             myInkPresenter.Strokes.Add(newStroke);
             // </Snippet2>
-
         }
 
         // <Snippet5>

@@ -43,7 +43,6 @@ public class SamplesHybridDictionary  {
       myCol.Clear();
       Console.WriteLine( "The collection contains the following elements after it is cleared:" );
       PrintKeysAndValues( myCol );
-
    }
 
    public static void PrintKeysAndValues( IDictionary myCol )  {
@@ -52,7 +51,6 @@ public class SamplesHybridDictionary  {
          Console.WriteLine( "   {0,-25} {1}", de.Key, de.Value );
       Console.WriteLine();
    }
-
 }
 
 /*

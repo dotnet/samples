@@ -45,7 +45,6 @@ namespace ESDeployment
                 RegistrationHelper helperFromConfig = new RegistrationHelper();
                 helperFromConfig.InstallAssemblyFromConfig(ref registrationConfiguration); 
                 //</snippet2>
-                            
             }
             // <snippet3>  
             
@@ -75,7 +74,6 @@ namespace ESDeployment
                 Console.Read();
             }
             //</snippet0>
-
 		}
 	}
 }

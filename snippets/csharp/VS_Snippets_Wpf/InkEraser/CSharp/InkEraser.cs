@@ -59,7 +59,6 @@ namespace InkEraserDemo
                 presenter.Strokes.Clear();
                 presenter.Strokes.Add(newStrokes);
             }
-
         }
         //</Snippet5>
 
@@ -78,7 +77,6 @@ namespace InkEraserDemo
                 presenter.Strokes.GetIncrementalStrokeHitTester(eraserTip);
             eraseTester.StrokeHit += new StrokeHitEventHandler(eraseTester_StrokeHit);
             eraseTester.AddPoints(e.GetStylusPoints(this));
-
         }
         //</Snippet4>
 
@@ -128,7 +126,6 @@ namespace InkEraserDemo
             {
                 presenter.Strokes.Remove(strokesToReplace);
             }
-
         }
         //</Snippet2>
 
@@ -151,7 +148,6 @@ namespace InkEraserDemo
                 presenter.Strokes.GetIncrementalStrokeHitTester(eraserTip);
             eraseTester.StrokeHit += new StrokeHitEventHandler(eraseTester_StrokeHit);
             eraseTester.AddPoint(e.GetPosition(this));
-
         }
 
         protected override void OnMouseMove(MouseEventArgs e)
@@ -188,7 +184,6 @@ namespace InkEraserDemo
         public void ResetInk()
         {
             LoadStrokes();
-
         }
 
         //<Snippet3>

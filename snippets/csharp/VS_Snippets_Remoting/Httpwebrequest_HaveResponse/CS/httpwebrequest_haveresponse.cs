@@ -58,7 +58,6 @@ class HttpWebRequest_HaveResponse
 				Console.WriteLine("\nThe response is not received ");
 			}
 // </Snippet1>
-			
 		}
 		catch(WebException e)
 		{

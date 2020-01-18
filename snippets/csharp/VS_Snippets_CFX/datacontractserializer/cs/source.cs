@@ -63,7 +63,6 @@ namespace DataContractSerializerExample
             {
                 WriteObject("DataContractSerializerExample.xml");
                 ReadObject("DataContractSerializerExample.xml");
-
             }
 
             catch (SerializationException serExc)
@@ -613,7 +612,6 @@ namespace DataContractSerializerExample
             // Other code not shown.
         }
         //</snippet16>
-
     }
 
     [DataContract]

@@ -16,7 +16,6 @@ namespace Client
             Test t = new Test();
             t.UnsecuredHttp();
             //t.UnsecuredTcp();
-
         }
 
         private void UnsecuredHttp()
@@ -165,5 +164,4 @@ namespace Client
             return base.Channel.CalculateTax(a);
         }
     }
-
 }

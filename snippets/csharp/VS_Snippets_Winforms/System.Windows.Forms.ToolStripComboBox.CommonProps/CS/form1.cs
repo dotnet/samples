@@ -71,7 +71,6 @@ namespace WindowsApplication1
             toolStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
-
         }
     }
 }

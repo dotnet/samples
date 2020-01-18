@@ -32,6 +32,5 @@ public class Client
         Remotable remoteObject = new Remotable();
         Console.WriteLine( remoteObject.GetCount() );
     }
-
 }
 // </snippet20>

@@ -224,7 +224,6 @@ namespace Microsoft.VsSDK.IntegrationTestLibrary
 
                         // We protect the shell too from reentrency.
                         this.uiShell.GetDialogOwnerHwnd(out hwnds[hwndIndex]);
-
                     }
 
                     if (hwnds[hwndIndex] != IntPtr.Zero)

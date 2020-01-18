@@ -41,7 +41,6 @@ public class MyCollection : NameObjectCollectionBase  {
          this.BaseAdd( (String) de.Key, de.Value );
       }
    }
-
 }
 
 public class SamplesNameObjectCollectionBase  {
@@ -68,7 +67,6 @@ public class SamplesNameObjectCollectionBase  {
       myCol["red"] = "tulip";
       Console.WriteLine( "After setting the value associated with the key \"red\":" );
       PrintKeysAndValues2( myCol );
-
    }
 
    public static void PrintKeysAndValues2( MyCollection myCol )  {
@@ -76,7 +74,6 @@ public class SamplesNameObjectCollectionBase  {
          Console.WriteLine( "{0}, {1}", s, myCol[s] );
       }
    }
-
 }
 
 

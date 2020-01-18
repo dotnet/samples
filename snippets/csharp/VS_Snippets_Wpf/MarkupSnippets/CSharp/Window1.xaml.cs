@@ -68,7 +68,6 @@ namespace SDKSamples
 
             Keyboard.Focus(item1);
         }
-
     }
 
     //<SnippetMarkupRuntimeNamePropertyAttribute>
@@ -122,7 +121,6 @@ namespace SDKSamples
         }
 
         private string _language;
-
     }
     //</SnippetMarkupXmlLanguageProperty>
 }

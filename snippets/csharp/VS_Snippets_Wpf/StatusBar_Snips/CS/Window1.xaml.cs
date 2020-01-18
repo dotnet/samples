@@ -23,6 +23,5 @@ namespace StatuxBar_Snips
         {
             InitializeComponent();
         }
-
     }
 }

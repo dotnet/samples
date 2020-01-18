@@ -155,5 +155,4 @@ namespace Microsoft.Samples.DCR
 
         public string AssemblyName { get; set; }
     }
-
 }

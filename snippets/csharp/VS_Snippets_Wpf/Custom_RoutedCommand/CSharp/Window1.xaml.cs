@@ -38,7 +38,6 @@ namespace SDKSample
                 {
                     target.Background = Brushes.AliceBlue;
                 }
-
             }
         }
 
@@ -55,6 +54,5 @@ namespace SDKSample
             }
         }
         //</SnippetCustom_RoutedCommandHandlers>
-
     }
 }

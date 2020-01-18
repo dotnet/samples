@@ -18,7 +18,6 @@ namespace TabControl
         {
             InitializeComponent(); 
         }
-
     }
 
     public class DateTimeDataTemplateSelector : DataTemplateSelector
@@ -39,13 +38,10 @@ namespace TabControl
                 else
                 {
                     return win.FindResource("earlyDate") as DataTemplate;
-
                 }
             }
 
             return null;
         }
-
     }
-
 }

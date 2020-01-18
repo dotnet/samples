@@ -99,6 +99,5 @@ namespace ClientAppServicesDemo
             }
         }
         //</snippet602>
-    
     }
 }

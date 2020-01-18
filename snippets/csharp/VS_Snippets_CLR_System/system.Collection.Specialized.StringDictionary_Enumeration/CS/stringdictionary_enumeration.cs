@@ -26,7 +26,6 @@ public class SamplesStringDictionary  {
       // Display the contents of the collection using the Keys, Values, Count, and Item properties.
       Console.WriteLine( "Displays the elements using the Keys, Values, Count, and Item properties:" );
       PrintKeysAndValues3( myCol );
-
    }
 
    // Uses the foreach statement which hides the complexity of the enumerator.
@@ -61,7 +60,6 @@ public class SamplesStringDictionary  {
          Console.WriteLine( "   {0,-5} {1,-25} {2}", i, myKeys[i], myCol[myKeys[i]] );
       Console.WriteLine();
    }
-
 }
 
 /*

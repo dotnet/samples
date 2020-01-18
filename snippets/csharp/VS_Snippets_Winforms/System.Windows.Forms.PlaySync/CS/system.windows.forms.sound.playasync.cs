@@ -58,7 +58,6 @@ namespace WindowsApplication42
 			
 			// sound1
 			this.Player.LoadCompleted += new System.ComponentModel.AsyncCompletedEventHandler(this.Player_LoadCompleted);
-			
 		}
 		#endregion
 

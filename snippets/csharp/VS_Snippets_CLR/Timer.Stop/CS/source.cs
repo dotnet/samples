@@ -85,7 +85,6 @@ public class Test
         // Wait until the control thread is done before proceeding.
         // This keeps the test runs from overlapping.
         t.Join();
-
     }
 
     private static void ControlThreadProc()

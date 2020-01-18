@@ -38,7 +38,6 @@ namespace SmartCardSign
             bool verified = rsa.VerifyData(data, "SHA1", sig);
 
             Console.WriteLine("Verified		: " + verified);
-
         }
     }
 }

@@ -60,7 +60,6 @@ namespace LINQGettingStarted_1
             //    where cust.City == "London"
             //    select cust;
             //// </snippet37>
-
         }
         //The Three Parts of a LINQ Query 
         static void DeferredExecution()

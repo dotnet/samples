@@ -148,6 +148,5 @@ namespace Microsoft.VsSDK.IntegrationTestLibrary
 
             return false;
         }
-
     }
 }

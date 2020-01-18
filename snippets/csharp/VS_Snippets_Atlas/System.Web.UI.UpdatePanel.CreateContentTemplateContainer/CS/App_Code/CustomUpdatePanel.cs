@@ -42,7 +42,6 @@ namespace SamplesCS
                 writer.RenderEndTag();
             }
         }
-
     }
 }
 // </Snippet2>

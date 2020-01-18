@@ -18,6 +18,5 @@ namespace Width_MinWidth_MaxWidth
 			mainWindow.InitializeComponent();
 			mainWindow.Show();
         }
-
 	}
 }

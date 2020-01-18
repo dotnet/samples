@@ -147,7 +147,5 @@ namespace MovieRecommendation
             mlContext.Model.Save(model, trainingDataViewSchema, modelPath);
             // </SnippetSaveModel>
         }
-
     }
-
 }

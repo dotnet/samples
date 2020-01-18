@@ -34,7 +34,6 @@ public void Connect()
 
 				 WebPermissionAttribute_AcceptConnect myWebAttrib = new WebPermissionAttribute_AcceptConnect();
 				 myWebAttrib.Connect();
-
 			}
 			catch(SecurityException e)
 			{

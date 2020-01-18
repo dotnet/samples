@@ -24,5 +24,4 @@ public class Form1: Form
             new DataTableMapping("Categories", "DataCategories", columns);    
     }
     // </Snippet1>
-
 }

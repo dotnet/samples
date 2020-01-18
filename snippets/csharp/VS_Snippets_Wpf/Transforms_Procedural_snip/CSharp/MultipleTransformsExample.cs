@@ -43,7 +43,6 @@ namespace SDKSample
             myStackPanel.Margin = new Thickness(50);
             myStackPanel.Children.Add(myButton);
             this.Content = myStackPanel;
-
         }
     }
 }

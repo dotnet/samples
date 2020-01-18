@@ -40,7 +40,6 @@ namespace InkRecognition
                             textBox1.Text = result.TopString;
                         else
                             MessageBox.Show("Recognition failed");
-
                     }
                     else
                     {

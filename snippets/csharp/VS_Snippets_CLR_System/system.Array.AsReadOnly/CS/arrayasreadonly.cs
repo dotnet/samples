@@ -41,7 +41,6 @@ public class SamplesArray  {
       // Display the values of the read-only IList.
       Console.WriteLine( "After changing the third element, the read-only IList contains the following values:" );
       PrintIndexAndValues( myList );
-
    }
  
    public static void PrintIndexAndValues( String[] myArr )  {
@@ -57,7 +56,6 @@ public class SamplesArray  {
       }
       Console.WriteLine();
    }
-
 }
 
 

@@ -31,6 +31,5 @@ namespace ControlTemplateExamples
         {
             new TestNavigationWindow().Visibility = Visibility.Visible;
         }
-
     }
 }

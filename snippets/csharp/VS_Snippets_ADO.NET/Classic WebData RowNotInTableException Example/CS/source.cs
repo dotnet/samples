@@ -31,7 +31,6 @@ public class Form1: Form
             DataRow removedRow = table.Rows[9];
             removedRow.Delete();
             removedRow.AcceptChanges();
- 
         }
         catch(System.Data.RowNotInTableException rowException)
         {
@@ -39,5 +38,4 @@ public class Form1: Form
         }
     }
     // </Snippet1>
-
 }

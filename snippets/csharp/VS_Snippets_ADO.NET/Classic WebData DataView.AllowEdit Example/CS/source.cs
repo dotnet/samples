@@ -19,5 +19,4 @@ public class Form1: Form
         view[0].EndEdit();
     }
     // </Snippet1>
-
 }

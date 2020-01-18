@@ -145,7 +145,6 @@ namespace AdvancedInkInputSemples
                 StrokeRenderedEventArgs e = new StrokeRenderedEventArgs(strokePoints);
                 OnStrokeRendered(e);
             }
-
         }
 
         protected virtual void OnStrokeRendered(StrokeRenderedEventArgs e)
@@ -201,7 +200,6 @@ namespace AdvancedInkInputSemples
             }
             return "Not found";
         }
-
     }
 
     class CustomPluginSamples : StylusPlugIn
@@ -283,6 +281,5 @@ namespace AdvancedInkInputSemples
             rawStylusInput.SetStylusPoints(stylusPoints);
         }
         //</Snippet10>
-
     }
 }

@@ -37,7 +37,6 @@ public class UsingRsaProtectedConfigurationProvider
                     Console.WriteLine("Section {0} is now protected by {1}",
                         connStrings.SectionInformation.Name,
                         connStrings.SectionInformation.ProtectionProvider.Name);
-
                 }
                 else
                     Console.WriteLine(
@@ -49,12 +48,10 @@ public class UsingRsaProtectedConfigurationProvider
                     "Section {0} is already protected by {1}",
                     connStrings.SectionInformation.Name,
                     connStrings.SectionInformation.ProtectionProvider.Name);
-
         }
         else
             Console.WriteLine("Can't get the section {0}",
                 connStrings.SectionInformation.Name);
-              
     }
 
     // Unprotect the connectionStrings section.
@@ -84,7 +81,6 @@ public class UsingRsaProtectedConfigurationProvider
 
                     Console.WriteLine("Section {0} is now unprotected.",
                         connStrings.SectionInformation.Name);
-
                 }
                 else
                     Console.WriteLine(
@@ -95,12 +91,10 @@ public class UsingRsaProtectedConfigurationProvider
                 Console.WriteLine(
                     "Section {0} is already unprotected.",
                     connStrings.SectionInformation.Name);
-                
         }
         else
             Console.WriteLine("Can't get the section {0}",
                 connStrings.SectionInformation.Name);
-
     }
 
     public static void Main(string[] args)
@@ -133,8 +127,6 @@ public class UsingRsaProtectedConfigurationProvider
         }
 
         Console.Read();
-            
     }
-
 }
 // </Snippet1>

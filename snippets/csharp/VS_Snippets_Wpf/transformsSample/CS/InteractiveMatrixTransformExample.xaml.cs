@@ -15,13 +15,11 @@ namespace Microsoft.Samples.Graphics.Transforms
     
     	public InteractiveMatrixTransformExample()
     	{
-    		
     	}
 
 		private void applyButtonClicked(object sender, EventArgs args)
 		{
 			updateMatrixTransform();
-
 		}
 
 		private void updateMatrixTransform()
@@ -37,8 +35,6 @@ namespace Microsoft.Samples.Graphics.Transforms
 			myMatrix.OffsetY = Double.Parse(OffsetYTextBox.Text);
 
 			myMatrixTransform.Matrix = myMatrix;
-
 		}
-
     }
 }

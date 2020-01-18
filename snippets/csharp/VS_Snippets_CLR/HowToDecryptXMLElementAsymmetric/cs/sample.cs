@@ -64,7 +64,6 @@ class Program
 		}
 
 		Console.ReadLine();
-
 	}
 
 	public static void Decrypt(XmlDocument Doc, RSA Alg, string KeyName)
@@ -92,8 +91,6 @@ class Program
 		// <snippet7>
 		exml.DecryptDocument();
 		// </snippet7>
-
 	}
-
 }
 // </snippet1>

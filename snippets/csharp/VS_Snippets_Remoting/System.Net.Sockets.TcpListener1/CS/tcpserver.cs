@@ -111,7 +111,6 @@ namespace newTcpListener
 
             // Signal the calling thread to continue.
             tcpClientConnected.Set();
-
         }
         // </Snippet5>
 

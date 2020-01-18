@@ -17,7 +17,6 @@ public class Form1:
 		InitializeLabel();
 
 		//Add any initialization after the InitializeComponent() call
-
 	}
 
 	//Form overrides dispose to clean up the component list.
@@ -48,7 +47,6 @@ public class Form1:
 		this.Name = "Form1";
 		this.Text = "Form1";
 		this.ResumeLayout(false);
-
 	}
 
 	#endregion
@@ -78,7 +76,6 @@ public class Form1:
 		this.Label1.AutoSize = true;
 		this.Label1.Text = "The text in this label is longer" +  
 			" than the set size.";
-
 	}
 	//</snippet1>
 }

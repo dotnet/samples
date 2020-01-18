@@ -16,7 +16,6 @@
        XmlNode nextNode = currNode.NextSibling;
        Console.WriteLine("\r\nSecond book...");
        Console.WriteLine(nextNode.OuterXml); 
- 
    }
  }
     // </Snippet1>

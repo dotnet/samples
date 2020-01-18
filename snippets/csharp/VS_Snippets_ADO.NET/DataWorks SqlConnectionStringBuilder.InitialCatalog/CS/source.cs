@@ -34,7 +34,6 @@ class Program
                 // Now use the open connection.
                 Console.WriteLine("Database = " + connection.Database);
             }
-
         }
         catch (Exception ex)
         {

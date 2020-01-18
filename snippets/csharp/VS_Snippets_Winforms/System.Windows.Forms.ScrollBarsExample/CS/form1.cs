@@ -50,7 +50,6 @@ public class Form1:
 		this.Name = "Form1";
 		this.Text = "Form1";
 		this.ResumeLayout(false);
-
 	}
 
 	#endregion
@@ -122,7 +121,6 @@ public class Form1:
 		this.Controls.Add(this.horizontal);
 		this.Controls.Add(this.both);
 		this.Controls.Add(this.none);
-
 	}
 	//</snippet1>
 }

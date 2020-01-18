@@ -154,21 +154,18 @@ namespace SDKSample
         private void pauseButton_Clicked(object sender, RoutedEventArgs args)
         {
             myClock.Controller.Pause();         
-        
         }
 
         // Resumes the clock.
         private void resumeButton_Clicked(object sender, RoutedEventArgs args)
         {
             myClock.Controller.Resume();        
-        
         }
 
         // Advances the clock to its fill period.
         private void skipToFillButton_Clicked(object sender, RoutedEventArgs args)
         {
             myClock.Controller.SkipToFill();          
-        
         }
 
         // Updates the clock's speed.
@@ -176,21 +173,18 @@ namespace SDKSample
         {
             // Makes the clock progress three times as fast as normal.
             myClock.Controller.SpeedRatio = 3;        
-        
         }
 
         // Stops the clock.
         private void stopButton_Clicked(object sender, RoutedEventArgs args)
         {
             myClock.Controller.Stop();        
-        
         }
 
         // Removes the clock.
         private void removeButton_Clicked(object sender, RoutedEventArgs args)
         {
             myClock.Controller.Remove();        
-        
         }        
         
         private void seekButton_Clicked(object sender, RoutedEventArgs args)
@@ -203,7 +197,6 @@ namespace SDKSample
                 TimeSpan seekTime = TimeSpan.Parse(seekDestination.Text);
                 myClock.Controller.Seek(seekTime, TimeSeekOrigin.BeginTime);
                 rectangleWidthIndicator.Text = myRectangle.Width.ToString();
-            
             }catch(FormatException ex)
             {
                 MessageBox.Show("Invalid TimeSpan value.");
@@ -223,7 +216,6 @@ namespace SDKSample
                 TimeSpan seekTime = TimeSpan.Parse(seekDestination.Text);
                 myClock.Controller.SeekAlignedToLastTick(seekTime, TimeSeekOrigin.BeginTime);
                 rectangleWidthIndicator.Text = myRectangle.Width.ToString();
-            
             }catch(FormatException ex)
             {
                 MessageBox.Show("Invalid TimeSpan value.");
@@ -235,9 +227,7 @@ namespace SDKSample
         {
         
             currentTimeIndicator.Text = myClock.CurrentTime.ToString();
-            
         }
-
     }
 }
 // </SnippetClockControllerSeekExample>

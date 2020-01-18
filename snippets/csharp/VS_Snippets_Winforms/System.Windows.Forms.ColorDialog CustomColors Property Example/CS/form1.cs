@@ -72,7 +72,6 @@ namespace WindowsApplication1
          this.Name = "Form1";
          this.Text = "Form1";
          this.ResumeLayout(false);
-
       }
 		#endregion
 
@@ -133,6 +132,5 @@ namespace WindowsApplication1
 		{
 			Application.Run(new Form1());
 		}
-
 	}
 }

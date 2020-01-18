@@ -18,6 +18,5 @@ namespace Canvas_Positioning_Properties
 			mainWindow.InitializeComponent();
 			mainWindow.Show();
         }
-
 	}
 }

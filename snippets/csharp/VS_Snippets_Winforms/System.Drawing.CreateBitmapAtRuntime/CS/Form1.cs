@@ -46,7 +46,6 @@ namespace BitmapAtRuntime
                 white += 20;
             }
             pictureBox1.Image = flag;
-         
         }
    //</snippet1>
     }

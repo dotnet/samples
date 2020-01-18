@@ -56,7 +56,6 @@ using System.Web.UI.WebControls;
     }
 
     public static void DeleteEmployee(NorthwindEmployee ne) { }
-
   }
 
   public class NorthwindEmployee {

@@ -62,7 +62,6 @@ class UsingAppSettingsSection
         // Force a reload in memory of the 
         // changed section.
         ConfigurationManager.RefreshSection("appSettings");
-
     }
     // </Snippet22>
 

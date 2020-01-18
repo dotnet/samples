@@ -27,5 +27,4 @@ public class Form1: Form
         return isValid;
     }
     // </Snippet1>
-
 }

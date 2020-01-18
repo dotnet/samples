@@ -55,6 +55,5 @@ public class Sample {
      writer.Flush();
      writer.Close();  
   }
-
 }
 //</snippet1>

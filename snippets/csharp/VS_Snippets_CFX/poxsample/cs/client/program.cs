@@ -142,7 +142,6 @@ namespace Microsoft.ServiceModel.Samples
             Console.WriteLine();
             Console.WriteLine( "Press any key to exit" );
 			Console.ReadLine();
-            
 		}
 	}
 }

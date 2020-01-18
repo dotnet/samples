@@ -170,7 +170,6 @@ namespace Microsoft.Office.Interop
         }
 
         //public  Property Parent() Object
-
     }
   }
 }

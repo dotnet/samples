@@ -42,5 +42,4 @@ namespace VbPowerPacksShapeHideCS
         }
         // </Snippet1>
     }
-
 }

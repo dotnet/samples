@@ -14,7 +14,6 @@ namespace Example
         {
             Test t = new Test();
             t.Snippet1();
-            
         }
 
         private void Snippet1()
@@ -50,7 +49,6 @@ namespace Example
             //// Close the client.
             //cc.Close();
             //</snippet1>
-
         }
 
         //<snippet2>

@@ -90,7 +90,6 @@ namespace IResourceServiceExample
                 rtc.resource_strings = new string[] {s1, s2, s3};
                 this.Control.Refresh();
             }
-            
         }
 
         // Creates a default resource file for the current 

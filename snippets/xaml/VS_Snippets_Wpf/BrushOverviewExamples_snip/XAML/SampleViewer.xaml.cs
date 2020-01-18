@@ -18,8 +18,6 @@ namespace Microsoft.Samples.BrushExamples
        public SampleViewer()
        {
             InitializeComponent();
-                 
        }
-       
     }
 }

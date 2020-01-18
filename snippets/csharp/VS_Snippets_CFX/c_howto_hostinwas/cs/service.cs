@@ -52,7 +52,6 @@ namespace Samples
         {
 		CalculatorService cservice = new CalculatorService();
         }
-
     }
 }
 

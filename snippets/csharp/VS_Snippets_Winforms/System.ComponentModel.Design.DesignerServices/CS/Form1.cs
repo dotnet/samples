@@ -68,7 +68,6 @@ public class Form1 : Form
 		this.Text = "r";
 		this.ResumeLayout(false);
 		this.PerformLayout();
-
 	}
 
     #endregion
@@ -236,7 +235,6 @@ public class DemoControlDesigner : ControlDesigner
                     new EventHandler(
                     selectionService_SelectionChanged);
             }
-
         }
 
         base.Dispose(disposing);
@@ -258,7 +256,6 @@ public class DemoControlDesigner : ControlDesigner
 
         // Set up the BackColor value that will be displayed.
         this.Control.BackColor = Color.AliceBlue;
-
     }
     // </snippet5>
 
@@ -849,7 +846,6 @@ public class DemoControlDesigner : ControlDesigner
                         {
                             sb.Append(e.Current.ToString());
                             sb.Append("\r\n");
-
                         }
 
                         MessageBox.Show(

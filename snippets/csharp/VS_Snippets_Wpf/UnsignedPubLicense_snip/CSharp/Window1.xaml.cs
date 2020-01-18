@@ -71,7 +71,6 @@ namespace SdkSample
             // clicks "OK", load and display the specified XPS document.
             if (dialog.ShowDialog() == true)
                 OpenDocument(dialog.FileName);
-
         }// end:OnOpen()
 
         // --------------------------- OpenDocument ---------------------------
@@ -278,7 +277,6 @@ namespace SdkSample
 
             // Close the XrML file.
             CloseXrML();
-
         }// end:CloseDocument
         #endregion File|Close
 
@@ -321,7 +319,6 @@ namespace SdkSample
             // clicks "OK", load and display the specified XPS document.
             if (dialog.ShowDialog() == true)
                 OpenXrML(dialog.FileName);
-
         }// end:OnRights()
 
         // ----------------------------- OpenXrML -----------------------------
@@ -407,7 +404,6 @@ namespace SdkSample
 
             WriteStatus("Publishing '" + _rmxpsPackageName + "'.");
             PublishRMPackage(_xpsDocumentPath, _xrmlFilepath, dialog.FileName);
-
         }// end:OnPublish()
 
         // ------------------------ PublishRMPackage --------------------------
@@ -701,7 +697,6 @@ namespace SdkSample
         {
             if (docViewer == null)  return;
             docViewer.Print();
-
         }// end:PrintDocument()
 
         // ----------------------- DocViewer attribute ------------------------
@@ -732,5 +727,4 @@ namespace SdkSample
         #endregion private fields
 
     }// end:partial class Window1
-
 }// end:namespace SdkSample

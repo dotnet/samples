@@ -26,7 +26,6 @@ namespace Samples.AspNet.CS
             {
                 fileValue = value;
             }
-
         }
 
 // <snippet8>

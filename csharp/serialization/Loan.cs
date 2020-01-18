@@ -48,7 +48,6 @@ namespace serialization
             this.Term = term;
             this.customer = customer;
         }
-
     }
     // </Snippet1>
 }

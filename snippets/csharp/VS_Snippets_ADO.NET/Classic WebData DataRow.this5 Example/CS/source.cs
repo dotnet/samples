@@ -24,5 +24,4 @@ public class Form1: Form
         Console.WriteLine(currentRow[column, DataRowVersion.Current]);
     }
     // </Snippet1>
-
 }

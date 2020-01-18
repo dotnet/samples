@@ -27,7 +27,6 @@ class Test
             for (int i=1;i < 120;i++)
             {
                 AddText(fs, Convert.ToChar(i).ToString());
-
             }
         }
 

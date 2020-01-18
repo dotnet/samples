@@ -14,7 +14,6 @@ class Members
         // Insert your file names into this method call.
         EncodeFromFile(appPath + "program.cs", appPath + "code.enc");
         DecodeFromFile(appPath + "code.enc", appPath + "roundtrip.txt");
-
     }
 
     // Read in the specified source file and write out an encoded target file.
@@ -91,7 +90,6 @@ class Members
                 }
             }
         }
-
     }
 
         public static void DecodeFromFile(string inFileName, string outFileName)
@@ -129,7 +127,6 @@ class Members
                     }
                 }
             }
-
         }
 }
 

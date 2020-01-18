@@ -25,7 +25,6 @@ namespace SdkSample
             catch (ArgumentException)
             {
             }
-
         }
 
         protected override void OnExit(ExitEventArgs e)

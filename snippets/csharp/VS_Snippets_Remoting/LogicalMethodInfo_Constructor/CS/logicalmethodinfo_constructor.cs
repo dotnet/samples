@@ -73,7 +73,6 @@ class LogicalMethodInfo_Constructor
       Console.WriteLine("\tThe sum of 10 and 10 is : {0}",
                               myLogicalMethodInfo.Invoke(service, 
                                                    new object[] {10, 10}));
-
    }
    
    static void Main()

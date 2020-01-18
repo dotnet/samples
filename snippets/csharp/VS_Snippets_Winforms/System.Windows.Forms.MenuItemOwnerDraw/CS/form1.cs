@@ -15,7 +15,6 @@ public class Form1:
 		InitializeMenu();
 
 		//Add any initialization after the InitializeComponent() call
-
 	}
 
 	//Form overrides dispose to clean up the component list.
@@ -49,7 +48,6 @@ public class Form1:
 
 		this.Name = "Form1";
 		this.Text = "Form1";
-
 	}
 
 	#endregion
@@ -116,5 +114,4 @@ public class Form1:
 	{
 		Application.Run(new Form1());
 	}
-
 }

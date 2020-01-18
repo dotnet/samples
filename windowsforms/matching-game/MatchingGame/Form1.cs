@@ -171,6 +171,5 @@ namespace MatchingGame
             MessageBox.Show("You matched all the icons!", "Congratulations!");
             Close();
         }
-
     }
 }

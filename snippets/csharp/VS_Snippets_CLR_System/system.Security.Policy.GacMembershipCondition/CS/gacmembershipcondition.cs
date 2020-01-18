@@ -32,7 +32,6 @@ public class GacMembershipConditionDemo
 
         //</Snippet2>
         return true;
-
     }
     // Demonstrate the Check method, which determines whether the specified 
     // evidence satisfies the membership condition.
@@ -144,7 +143,6 @@ public class GacMembershipConditionDemo
         }
 
         return true;
-
     }
 
     // Invoke all demos.

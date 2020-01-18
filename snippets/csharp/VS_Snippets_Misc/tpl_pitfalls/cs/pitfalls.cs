@@ -36,7 +36,6 @@ namespace pitfalls_cs
                         }
                     }); //deadlocks
             //</snippet01>
-
         }
 
         //<snippet02>
@@ -74,6 +73,5 @@ namespace pitfalls_cs
         Parallel.For(0, bytes.Length, (i) => fs.WriteByte(bytes[i]));
         //</snippet04>
         }
-
     }
 }

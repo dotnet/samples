@@ -12,7 +12,6 @@ namespace cs_conflictmodeenum
     {
         static void Main(string[] args)
         {
-            
         }
     }
 }

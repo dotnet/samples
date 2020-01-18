@@ -12,5 +12,4 @@ private void RemoveThirdBinding()
    textBox1.DataBindings.RemoveAt(2);
 }
 // </Snippet1>
-
 }

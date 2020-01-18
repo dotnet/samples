@@ -73,7 +73,6 @@ namespace HtmlElementEventArgsProject
                     elem.Style = "color:red;";
                 }
             }
-
         }
 
         private void button1_Click(object sender, EventArgs e)

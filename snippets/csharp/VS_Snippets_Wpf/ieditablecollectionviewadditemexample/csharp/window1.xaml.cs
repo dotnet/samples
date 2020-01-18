@@ -71,7 +71,6 @@ namespace IEditableCollectionViewAddItemExample
             {
                 viewToAddDisparateItems.CancelNew();
             }
-
         }
     }
 }

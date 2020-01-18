@@ -52,7 +52,6 @@ namespace SamplesAspNet
               string.Format(
               "Event created at: {0}", 
               EventTime.ToString());
-
         }
 
         // </Snippet3>
@@ -92,7 +91,6 @@ namespace SamplesAspNet
                 "* Custom Request Information End *");
 
             formatter.IndentationLevel -= 1;
-
         }
 
         // </Snippet6>

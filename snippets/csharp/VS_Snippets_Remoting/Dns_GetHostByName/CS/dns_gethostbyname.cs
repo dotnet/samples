@@ -68,6 +68,5 @@ class DnsHostByName
 		  Console.WriteLine("Message : " + e.Message);
 	  }
 // </Snippet1>   
-
    }
 }

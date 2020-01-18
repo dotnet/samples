@@ -30,7 +30,6 @@ namespace Samples.AspNet.CS
             set
             { _value = value; }
         }
-
     }
 
     // Define a custom HtmlSelectBuilder.
@@ -51,7 +50,6 @@ namespace Samples.AspNet.CS
                 // </Snippet3>
             }
         }
-
     }
 
     [ControlBuilderAttribute(typeof(MyHtmlSelectBuilderWithparseException))]
@@ -70,6 +68,5 @@ namespace Samples.AspNet.CS
             }
         }      
     }
-
 }
 // </Snippet2> 

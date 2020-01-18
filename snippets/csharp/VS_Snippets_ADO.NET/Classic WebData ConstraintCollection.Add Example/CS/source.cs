@@ -17,5 +17,4 @@ public class Form1: Form
         table.Constraints.Add(uniqueConstraint);
     }
     // </Snippet1>
-
 }

@@ -93,7 +93,6 @@ namespace Samples.AspNet.CS.Controls
             part.RenderControl(writer);
     }
     // </snippet6>
-
   }
 }
 // </snippet2>

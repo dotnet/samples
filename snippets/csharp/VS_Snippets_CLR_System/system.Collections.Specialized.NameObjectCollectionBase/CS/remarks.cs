@@ -81,7 +81,6 @@ public class DerivedCollection : NameObjectCollectionBase
    public void Clear()  {
       this.BaseClear();
    }
-
 }
 
 public class SamplesNameObjectCollectionBase

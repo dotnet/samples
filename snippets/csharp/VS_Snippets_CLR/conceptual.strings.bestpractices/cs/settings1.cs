@@ -4,7 +4,6 @@ public class Class1
 {
    public static void Main()
    {
-
    }
 
    private static void SetRegistryKey()
@@ -31,5 +30,4 @@ public class Class1
       return (bool) nf.GetValue("String_LegacyCompareMode", 0);
    }
    // </Snippet17>
-
 }

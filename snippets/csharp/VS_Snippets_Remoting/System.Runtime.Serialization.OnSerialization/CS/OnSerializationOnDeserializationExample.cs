@@ -59,7 +59,6 @@
                 obj = null;
                 formatter = null;
             }
-
         }
     }
 

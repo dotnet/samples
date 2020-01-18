@@ -45,7 +45,6 @@ namespace Microsoft.ServiceModel.Samples
                 orderQueue.Send(msg, MessageQueueTransactionType.Automatic);
                 // Complete the transaction.
                 scope.Complete();
-               
             }
             Console.WriteLine("Placed the order:{0}", po);
             Console.WriteLine("Press <ENTER> to terminate client.");

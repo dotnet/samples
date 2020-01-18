@@ -47,7 +47,6 @@ class Alice
         }
     }
     //</Snippet2>
-
 }
 public class Bob : IDisposable
 {

@@ -47,7 +47,6 @@ class Type_GetMembers_BindingFlags
             // Display name and type of the member of 'MyClass'.
             Console.WriteLine( "'{0}' is a {1}", myMemberInfo[i].Name, myMemberInfo[i].MemberType);
          }
-
       }
       catch (SecurityException e)
       {
@@ -65,7 +64,6 @@ class Type_GetMembers_BindingFlags
       //'.ctor' is a Constructor
       //'myInt' is a Field
       //'myString' is a Field
-
    }
 }
 

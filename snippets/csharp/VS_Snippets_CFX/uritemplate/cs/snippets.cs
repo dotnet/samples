@@ -50,7 +50,6 @@ namespace UriTemplateSnippets
                 }
             }
             // </Snippet0>
-
         }
 
         public static void Snippet2()

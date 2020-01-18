@@ -42,14 +42,12 @@ public class Form1:
 		this.Name = "Form1";
 		this.Text = "Form1";
 		this.ResumeLayout(false);
-
 	}
 
 	public static void Main()
 	{
 		Application.Run(new Form1());
 	}
-
 }
 
 //<snippet1>
@@ -64,6 +62,5 @@ public class SingleClickTextBox: TextBox
 		this.SelectAll();
 		base.OnClick(e);
 	}
-
 }
 //</snippet1>

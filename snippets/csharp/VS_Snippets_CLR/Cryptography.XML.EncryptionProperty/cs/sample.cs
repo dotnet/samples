@@ -37,7 +37,6 @@ class Program
 
             // Decrypt the "creditcard" element.
             Decrypt(xmlDoc, rsaKey, "rsaKey");
-
         }
         catch (Exception e)
         {
@@ -48,7 +47,6 @@ class Program
             // Clear the RSA key.
             rsaKey.Clear();
         }
-
     }
 
     public static void Encrypt(XmlDocument Doc, string ElementToEncrypt, RSA Alg, string KeyName)
@@ -72,7 +70,6 @@ class Program
         if (elementToEncrypt == null)
         {
             throw new XmlException("The specified element was not found");
-
         }
 
         //////////////////////////////////////////////////
@@ -159,7 +156,6 @@ class Program
         ////////////////////////////////////////////////////
 
         EncryptedXml.ReplaceElement(elementToEncrypt, edElement, false);
-
     }
 
     public static void Decrypt(XmlDocument Doc, RSA Alg, string KeyName)
@@ -182,7 +178,6 @@ class Program
 
         // Decrypt the element.
         exml.DecryptDocument();
-
     }
 
     static void InspectElement(XmlDocument Doc)
@@ -214,13 +209,11 @@ class Program
                 Console.WriteLine("EncryptionProperty.ID: " + encProp.Id);
                 Console.WriteLine("EncryptionProperty.PropertyElement: " + encProp.PropertyElement.InnerXml);
                 Console.WriteLine("EncryptionProperty.Target: " + encProp.Target);
-                 
         }
 
         Console.WriteLine("EncryptedData.Id: " + encData.Id);
         Console.WriteLine("EncryptedData.KeyInfo: " + encData.KeyInfo.GetXml().InnerXml);
         Console.WriteLine("EncryptedData.MimeType: " + encData.MimeType);
     }
-
 }
 //</snippet1>

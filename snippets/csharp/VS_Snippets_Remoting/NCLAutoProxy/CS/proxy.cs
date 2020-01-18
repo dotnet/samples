@@ -192,7 +192,6 @@ using System.Net;
             // See what proxy is used for resource.
             Uri resourceProxy = proxy.GetProxy(resource);
             Console.WriteLine("GetProxy  returned for {0} is {1}.", resource, resourceProxy);
-        
         }
 
         public static void Underline()
@@ -229,6 +228,5 @@ using System.Net;
 
             // check snippet 6
            CheckAutoProxyForRequest( resource);
- 
         }
     }

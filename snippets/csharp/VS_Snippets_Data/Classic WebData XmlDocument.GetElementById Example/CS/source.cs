@@ -19,7 +19,6 @@ public class Sample
     //This displays the node <Person SSN="A222" Name="Tom"/>.
     elem = doc.GetElementById("A222");
     Console.WriteLine( elem.OuterXml ); 
-
   }
 }
    // </Snippet1>

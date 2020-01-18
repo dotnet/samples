@@ -13,7 +13,6 @@ public static class StringLibrary
          return fullString.IndexOf(substr, StringComparison.Ordinal);
       else
          return fullString.IndexOf(substr, StringComparison.CurrentCulture);
-         
    }
 }
 // </Snippet8>

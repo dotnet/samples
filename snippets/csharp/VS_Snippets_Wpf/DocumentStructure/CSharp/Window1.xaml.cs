@@ -348,7 +348,6 @@ namespace SdkSample
         {
             if (DocViewer == null) return;
             DocViewer.Print();
-
         }// end:PrintDocument()
         #endregion File|Print
 
@@ -549,5 +548,4 @@ namespace SdkSample
         #endregion Private Fields
 
     }// end:partial class Window1
-
 }// end:namespace SdkSample

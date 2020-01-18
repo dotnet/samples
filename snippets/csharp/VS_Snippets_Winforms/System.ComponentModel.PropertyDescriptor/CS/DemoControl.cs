@@ -13,7 +13,6 @@ namespace ReadOnlyPropertyDescriptorTest
     {
         public DemoControl()
         {
-           
         }
     }
 }

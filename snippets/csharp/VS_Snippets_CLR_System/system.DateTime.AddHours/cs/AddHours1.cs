@@ -12,7 +12,6 @@ public class Example
       foreach (double hour in hours)
          Console.WriteLine("{0} + {1} hour(s) = {2}", dateValue, hour, 
                            dateValue.AddHours(hour));
-
    }
 }
 // The example displays the following output on a system whose current

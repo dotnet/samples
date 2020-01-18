@@ -58,13 +58,11 @@ namespace ObjectPoolExample
                     pool.PutObject(mc);
                     if (cts.Token.IsCancellationRequested)
                         loopState.Stop();                 
- 
                 });
             Console.WriteLine("Press the Enter key to exit.");
             Console.ReadLine();
             cts.Dispose();
         }
-
     }
 
     // A toy class that requires some resources to create.

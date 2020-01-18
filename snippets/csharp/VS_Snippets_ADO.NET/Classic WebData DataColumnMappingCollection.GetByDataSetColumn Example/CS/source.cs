@@ -18,5 +18,4 @@ public class Form1: Form
             mapping = mappings.GetByDataSetColumn("datadescription");
     }
     // </Snippet1>
-
 }

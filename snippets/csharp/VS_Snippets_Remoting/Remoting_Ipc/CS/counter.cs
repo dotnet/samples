@@ -9,6 +9,5 @@ public class Counter : MarshalByRefObject {
   public int Count { get {
     return(count++);
   } }
-
 }
 // </snippet0>

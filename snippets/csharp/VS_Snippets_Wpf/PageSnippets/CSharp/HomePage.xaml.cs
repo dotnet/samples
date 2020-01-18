@@ -15,7 +15,6 @@ namespace CSharp
             this.WindowWidth = 500;
             this.WindowHeight = 300;
         }
-
     }
 }
 //</SnippetSetPageWindowXxxCODEBEHIND>

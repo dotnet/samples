@@ -70,7 +70,6 @@ namespace ServiceEndpointSnippets
 
             serviceHost.Open();
 	    // </Snippet0>
-
         }
     }
 }

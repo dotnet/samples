@@ -11,7 +11,6 @@ public class Student
 
     [XmlNamespaceDeclarationsAttribute]
     public XmlSerializerNamespaces myNamespaces;
-
 }
     
 public class Run
@@ -49,7 +48,6 @@ public class Run
 
         xser.Serialize(fs,myStudent);
         fs.Close();
-
     }
 
     private void DeserializeStudent(string filename)

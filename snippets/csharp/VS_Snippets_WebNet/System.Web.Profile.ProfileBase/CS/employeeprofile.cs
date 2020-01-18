@@ -21,7 +21,6 @@ namespace Samples.AspNet.Profile
       get { return (EmployeeInfo)base["EmployeeInfo"]; }
       set { base["EmployeeInfo"] = value; }
     }
-
   }
 
   public class EmployeeInfo

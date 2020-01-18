@@ -32,7 +32,6 @@ class PolicyLevelSample
         ListMachinePermissionSets();
         Console.Out.WriteLine("Press the Enter key to exit.");
         string consoleInput = Console.ReadLine();
-
     }
 		
     public static void CreateAPolicyLevel()
@@ -223,7 +222,6 @@ class PolicyLevelSample
                 Console.WriteLine("\t\t\tGroup = " + ((CodeGroup)cgE1.Current).Name);
             }
             Console.WriteLine("\tStoreLocation = " + currentLevel.StoreLocation);
-
         }
 
         return;
@@ -248,12 +246,9 @@ class PolicyLevelSample
                 {
                     Console.WriteLine("\t" + ((NamedPermissionSet)namedPermission.Current).Name);
                 }
-
             }
         }
-
     }
     //</Snippet16>
-	
 }
 //</Snippet1>

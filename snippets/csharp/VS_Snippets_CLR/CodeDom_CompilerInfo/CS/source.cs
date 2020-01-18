@@ -88,7 +88,6 @@ namespace CodeDomCompilerInfoSample
                     DisplayJScriptCompilerInfo();
                     break;
             }
-
         }
       
         static void DisplayCSharpCompilerInfo()

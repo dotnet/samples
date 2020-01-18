@@ -69,7 +69,6 @@ namespace StrokeCollectionEraseMethods
 
             inkDA.AttributeChanged += new PropertyDataChangedEventHandler(DrawingAttributesChanged);
             selectDA.AttributeChanged += new PropertyDataChangedEventHandler(DrawingAttributesChanged);
-
         }
 
         static InkSelector()
@@ -97,7 +96,6 @@ namespace StrokeCollectionEraseMethods
             stylusPoints.Add(eventPoints);
 
             InitializeHitTester(eventPoints);
-
         }
 
         protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
@@ -120,7 +118,6 @@ namespace StrokeCollectionEraseMethods
             stylusPoints.Add(collectedPoints);
 
             InitializeHitTester(collectedPoints);
-
         }
 
         //<Snippet17>
@@ -162,7 +159,6 @@ namespace StrokeCollectionEraseMethods
             StylusPointCollection collectedPoints = e.GetStylusPoints(this, stylusPoints.Description);
             stylusPoints.Add(collectedPoints);
             AddPointsToHitTester(collectedPoints);
-
         }
 
         protected override void OnMouseMove(MouseEventArgs e)
@@ -189,7 +185,6 @@ namespace StrokeCollectionEraseMethods
             stylusPoints.Add(collectedPoints);
 
             AddPointsToHitTester(collectedPoints);
-
         }
 
         private void AddPointsToHitTester(StylusPointCollection collectedPoints)
@@ -200,7 +195,6 @@ namespace StrokeCollectionEraseMethods
                 // When the control is selecting strokes, add the
                 // stylus packetList to selectionTester.
                 selectionTester.AddPoints(collectedPoints);
-
             }
         }
 
@@ -242,7 +236,6 @@ namespace StrokeCollectionEraseMethods
             stylusPoints = null;
 
             Mouse.Capture(null);
-
         }
 
         //<Snippet38>
@@ -280,7 +273,6 @@ namespace StrokeCollectionEraseMethods
             {
                 selectedStroke.DrawingAttributes.Color = Colors.Red;
                 selectedStrokes.Add(selectedStroke);
-
             }
 
             // Change the color of all unselected strokes to 
@@ -338,7 +330,6 @@ namespace StrokeCollectionEraseMethods
             // whenever the DrawingAttributes change.
             presenter.DetachVisuals(renderer.RootVisual);
             presenter.AttachVisuals(renderer.RootVisual, renderer.DrawingAttributes);
-
         }
         //</Snippet39>
 
@@ -384,7 +375,6 @@ namespace StrokeCollectionEraseMethods
         }
 
         //<Snippet4>
-
     }
 }
 //</Snippet4>

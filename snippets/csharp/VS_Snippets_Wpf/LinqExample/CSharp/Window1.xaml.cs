@@ -25,7 +25,6 @@ namespace LinqExample
         public Window1()
         {
             InitializeComponent();
-
         }
 
         //<SnippetHandler>
@@ -41,5 +40,4 @@ namespace LinqExample
         }
         //</SnippetHandler>
     }
-
 }

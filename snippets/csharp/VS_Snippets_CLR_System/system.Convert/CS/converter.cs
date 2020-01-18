@@ -58,7 +58,6 @@ namespace ConvertSnippet
 			System.Console.WriteLine("Your integer as a double is {0}",
 									 System.Convert.ToDouble(newInteger));
 			//</Snippet1>
-            			
 		}
 	}
 }

@@ -50,7 +50,6 @@ namespace WorkflowConsoleApplication1
             syncEvent.WaitOne();
             //</snippet10>
             //</snippet4>
-
         }
 
         void Step4Snippets()

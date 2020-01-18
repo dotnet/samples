@@ -79,7 +79,6 @@ public class Form1 : Form
         this.Padding = new System.Windows.Forms.Padding(20);
         this.Text = "a";
         this.ResumeLayout(false);
-
     } 
 }
 
@@ -109,7 +108,6 @@ public class DemoControl : UserControl
         // DemoControl
         // 
         this.Name = "DemoControl";
-
     }
 }
 
@@ -188,7 +186,6 @@ public class DemoControlDesigner : ControlDesigner
         // Initialize adorners.
         this.InitializeMarginAndPaddingAdorner();
         this.InitializeAnchorAdorner();
-
     }
     // </snippet7>
 
@@ -489,7 +486,6 @@ public class DemoControlDesigner : ControlDesigner
         // this glyph, but you could add them to this class.
         internal class MarginAndPaddingBehavior : Behavior
         {
-
         }
     }
     // </snippet14>
@@ -793,7 +789,6 @@ public class DemoControlDesigner : ControlDesigner
                             ag.relatedControl,
                             ag.relatedControl.Anchor | ag.anchorStyle);
                     }
-
                 }
 
                 return true;

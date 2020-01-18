@@ -122,9 +122,6 @@ namespace Samples.Aspnet.SystemWebConfiguration
       System.Web.Configuration.OutputCacheProfile outputCacheProfile5 =
         outputCacheProfiles.Get(0);
       // </Snippet12>
-
       }
-
   } // UsingOutputCacheSettingsSection class end.
-    
 } // Samples.Aspnet.SystemWebConfiguration namespace end.

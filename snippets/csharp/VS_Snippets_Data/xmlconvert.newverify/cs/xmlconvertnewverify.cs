@@ -29,7 +29,6 @@ namespace VerifyNames
                 // Write the end tag for the root element.
                 writer5.WriteEndElement();
                 writer5.Close();
-
             }
             catch (Exception e)
             {
@@ -91,7 +90,6 @@ namespace VerifyNames
                 writer3.WriteEndElement();
 
                 writer3.Close();
-
             }
             catch (XmlException e)
             {
@@ -120,7 +118,6 @@ namespace VerifyNames
                 writer2.WriteEndElement();
 
                 writer2.Close();
-
             }
             catch (XmlException e)
             {
@@ -148,7 +145,6 @@ namespace VerifyNames
                 writer.WriteEndElement();
 
                 writer.Close();
-
             }
             catch (XmlException e)
             {
@@ -157,7 +153,6 @@ namespace VerifyNames
             }
 
             //</snippet1>
-
         }
     }
 }

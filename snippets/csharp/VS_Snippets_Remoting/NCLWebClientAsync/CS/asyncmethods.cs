@@ -773,7 +773,6 @@ public class Test
 
       //  UploadFileInBackground3 ("http://sharriso1/test/fileUploadercs.aspx", "onesandtwos.txt");
          System.Threading.Thread.Sleep (1000);
-
     }
 }
     }

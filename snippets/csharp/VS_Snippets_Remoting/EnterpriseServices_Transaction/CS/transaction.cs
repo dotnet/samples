@@ -16,8 +16,6 @@ public class TransactionalComponent : ServicedComponent
 
       // Vote to commit. If any errors occur, this code will not execute.
       ContextUtil.MyTransactionVote = TransactionVote.Commit;
-
     }
-
 }
 // </snippet1>

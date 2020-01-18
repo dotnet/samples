@@ -53,7 +53,6 @@ namespace Samples.AspNet.Membership.CS
             this.IsSubscriber = isSubscriber;
             this.CustomerID = customerID;
         }
-
     }
 }
 //</Snippet1>

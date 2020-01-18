@@ -22,7 +22,6 @@ namespace SDKSample
             timelineSlider.Value = myMediaElement.Position.TotalMilliseconds;
         }
         // </SnippetCodeBehindMediaTimelineExampleInline1>
-
     }
 }
 // </SnippetCodeBehindMediaTimelineExampleWholePage>

@@ -15,8 +15,6 @@ namespace Microsoft.Samples.Graphics
         {
             Window mySampleWindow = new SampleViewer();
             mySampleWindow.Show();
-
         }
-
     }
 }

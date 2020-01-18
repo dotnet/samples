@@ -61,7 +61,6 @@ namespace WindowsApplication4
             statusStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
-
         }
     }
 }

@@ -46,7 +46,6 @@ class InstDataCopyToMod
                     "range 1..{0}.", categories.Length));
             }
             categoryName = categoryNames[(categoryNum-1)];
-
         }
         catch(Exception ex)
         {

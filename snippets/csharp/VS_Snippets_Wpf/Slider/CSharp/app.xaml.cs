@@ -13,6 +13,5 @@ namespace SliderExample
 
 	public partial class app : Application
 	{
-
 	}
 }

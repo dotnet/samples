@@ -48,6 +48,5 @@ namespace Samples
         public static void Main()
         {
         }
-
     }
 }

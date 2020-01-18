@@ -5,7 +5,6 @@ public class Example
    public static void Main()
    {
       CompareSimple();
-
    }
 
    private static void CompareSimple()

@@ -29,7 +29,6 @@ namespace Microsoft.Samples.PerFrameAnimations
             _lastRender = TimeSpan.FromTicks(DateTime.Now.Ticks);
             CompositionTarget.Rendering += UpdateRectangle;
             this.PreviewMouseMove += UpdateLastMousePosition;
-            
         }
 
         private void UpdateRectangle(object sender, EventArgs e)
@@ -64,6 +63,5 @@ namespace Microsoft.Samples.PerFrameAnimations
         {
             _lastMousePosition = e.GetPosition(containerCanvas);
         }
-
     }
 }

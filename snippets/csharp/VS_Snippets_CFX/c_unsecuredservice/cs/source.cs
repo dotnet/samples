@@ -17,7 +17,6 @@ namespace Unsecured
             Service s = new Service();
             //s.UnsecuredHttp();
             s.UnsecuredTcp();
-
         }
 
         private void UnsecuredHttp()

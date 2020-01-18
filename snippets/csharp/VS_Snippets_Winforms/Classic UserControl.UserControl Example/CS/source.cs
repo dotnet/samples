@@ -207,6 +207,5 @@ namespace UserControls
          //If all conditions have been met, clear the error provider of errors.
          errorProvider1.SetError(textEmail, "");
       }
-
    } // End Class   
 } // End Namespace

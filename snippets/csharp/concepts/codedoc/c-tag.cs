@@ -8,5 +8,4 @@
 /// </summary>
 public class Math
 {
-
 }

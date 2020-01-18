@@ -15,7 +15,6 @@ namespace SDKSamples
 
         public app()
         {
-            
         }
     }
 }

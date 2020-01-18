@@ -210,7 +210,6 @@ namespace OfficeProgrammingWalkthrough
             //dynamic val = Type.Missing;
             //ExcelApp.get_Range("A5:C6").PasteSpecial(val, val, val, Transpose: true);
             //ExcelApp.get_Range("A5:C6").Copy();
-
         }
  
         // These examples are in Named and Optional, main topic. Can be deleted here.
@@ -241,5 +240,4 @@ namespace OfficeProgrammingWalkthrough
         public double Balance { get; set; }
     }
     //</Snippet2>
-
 }

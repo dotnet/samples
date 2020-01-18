@@ -39,7 +39,6 @@ namespace ContextMenus
                 cmButton.Content = "The ContextMenu opened and the IsOpen property is true.";
             }
             //</SnippetContextMenuIsOpen>
-
         }
         void OnClick(object sender, RoutedEventArgs e)
         {

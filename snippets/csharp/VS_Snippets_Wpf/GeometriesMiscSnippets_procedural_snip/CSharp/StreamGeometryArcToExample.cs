@@ -29,7 +29,6 @@ namespace SDKSample
                 // Create an arc. Draw the arc from the begin point to 200,100 with the specified parameters.
                 ctx.ArcTo(new Point(200, 100), new Size(100, 50), 45 /* rotation angle */, true /* is large arc */, 
                           SweepDirection.Counterclockwise, true /* is stroked */, false /* is smooth join */);
-
             }
 
             // Freeze the geometry (make it unmodifiable)

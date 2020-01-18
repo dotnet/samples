@@ -55,6 +55,5 @@ namespace ScrollViewer_Methods
         {
             sv1.PageLeft();
         }
-
     }
 }

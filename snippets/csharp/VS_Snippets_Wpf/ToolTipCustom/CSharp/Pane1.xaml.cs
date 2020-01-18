@@ -43,7 +43,6 @@ namespace SDKSample
             myPolygon.ToolTip = aToolTip;
             //Add myPolygon to row of other shapes
             myStackPanel.Children.Add(myPolygon);
-
         }
 
         //<SnippetDelegateInstance>

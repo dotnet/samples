@@ -12,6 +12,5 @@ namespace KeyArgsSnippetSample
 
     public partial class MyApp : Application
     {
-
     }
 }

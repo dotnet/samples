@@ -181,7 +181,6 @@ class CryptographicExceptionMembers
                 baseExceptionMessage);
             Console.WriteLine("Inner exception message: " + 
                 innerExceptionMessage);
-
         }
     }
 

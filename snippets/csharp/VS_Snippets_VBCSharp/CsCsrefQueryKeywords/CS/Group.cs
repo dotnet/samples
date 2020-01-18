@@ -90,7 +90,6 @@ namespace Group
             };
 
             return students;
-
         }
 
         static void Main()
@@ -156,7 +155,6 @@ namespace Group
             };
 
             return students;
-
         }
 
         // This method groups students into percentile ranges based on their

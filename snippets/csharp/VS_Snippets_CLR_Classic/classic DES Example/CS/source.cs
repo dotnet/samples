@@ -38,5 +38,4 @@ private static void EncryptData(String inName, String outName, byte[] desKey, by
      fin.Close();                   
  }
 // </Snippet1>
-
 }

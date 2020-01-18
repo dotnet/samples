@@ -48,6 +48,5 @@ namespace DataGrid_TemplateColumn
         }
 
         public DateTime PublishDate { get; set; }
-
     }
 }

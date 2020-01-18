@@ -20,11 +20,9 @@ public class Concatenate : Microsoft.SqlServer.Server.IBinarySerialize
 
    public void Read(BinaryReader r)
    {
-            
    }
 
    public void Write(BinaryWriter w)
    {
-            
    }
 }

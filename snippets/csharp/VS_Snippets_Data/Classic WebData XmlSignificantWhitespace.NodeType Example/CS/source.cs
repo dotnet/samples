@@ -39,7 +39,6 @@
        Console.WriteLine();
        Console.WriteLine("Reading file...");
        ReadFile(filename);
- 
    }
  
    // Parse the file and print out each node.

@@ -28,7 +28,6 @@ namespace CS
             this.Validate();
             this.ordersBindingSource.EndEdit();
             this.ordersTableAdapter.Update(this.northwindDataSet.Orders);
-
         }
     }
 }

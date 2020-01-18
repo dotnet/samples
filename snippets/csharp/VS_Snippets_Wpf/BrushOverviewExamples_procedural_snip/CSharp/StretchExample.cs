@@ -19,7 +19,6 @@ namespace Microsoft.Samples.BrushExamples
             mainPanel.Orientation = Orientation.Horizontal;
             createNoStretchExample(mainPanel);
             this.Content = mainPanel;
-
         }
 
         private void createNoStretchExample(Panel mainPanel)
@@ -50,9 +49,6 @@ namespace Microsoft.Samples.BrushExamples
             // </SnippetGraphicsMMNoStretchExample>
             
             mainPanel.Children.Add(myRectangle);            
-        
         }
-
     }
-
 }

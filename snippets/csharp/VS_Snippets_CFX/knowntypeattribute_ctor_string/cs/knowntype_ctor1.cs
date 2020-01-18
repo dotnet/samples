@@ -49,7 +49,6 @@ namespace KnownTypeAttributeExample
         
         [DataMember]
         internal Employee[] Reports;
-        
     }
 
     class Program

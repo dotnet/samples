@@ -24,10 +24,8 @@ namespace HeaderedContentControlSimple
             if (hcontCtrl.HasHeader)
             {
                 MessageBox.Show(hcontCtrl.Header.ToString());
-
             }
             //</SnippetHasHeader>
         }
-
     }
 }

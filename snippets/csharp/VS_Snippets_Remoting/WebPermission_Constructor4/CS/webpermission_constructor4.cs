@@ -54,7 +54,6 @@ class WebPermission_regexConstructor {
      Console.WriteLine("Attribute and Values of WebPermission are : \n");
      // Display the Attributes,Values and Children of the XML encoded copied instance.
      PrintKeysAndValues(myWebPermission.ToXml().Attributes,myWebPermission.ToXml().Children);
-
    }
 
     private void PrintKeysAndValues(Hashtable myHashtable,IEnumerable myList) 

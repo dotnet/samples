@@ -120,7 +120,6 @@ namespace MyProject
 				// Process the transactional dead-letter message.
 			}
 		}
-
 	}
 }
 // </Snippet1>

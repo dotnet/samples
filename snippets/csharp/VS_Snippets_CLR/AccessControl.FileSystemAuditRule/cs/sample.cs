@@ -52,7 +52,6 @@ namespace FileSystemExample
 
             // Set the new access settings.
             File.SetAccessControl(FileName, fSecurity);
-
         }
 
         // Removes an ACL entry on the specified file for the specified account.
@@ -70,7 +69,6 @@ namespace FileSystemExample
 
             // Set the new access settings.
             File.SetAccessControl(FileName, fSecurity);
-
         }
     }
 }

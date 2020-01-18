@@ -12,6 +12,5 @@ namespace StylusXAML
 
     public partial class MyApp : Application
     {
-
     }
 }

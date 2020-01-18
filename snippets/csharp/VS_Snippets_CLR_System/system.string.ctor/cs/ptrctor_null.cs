@@ -24,7 +24,6 @@ public class Example
       foreach (var ch in s)
          Console.Write("{0:X4} ", Convert.ToUInt16(ch));
       Console.WriteLine();    
-
    }
 }
 // The example displays the following output:

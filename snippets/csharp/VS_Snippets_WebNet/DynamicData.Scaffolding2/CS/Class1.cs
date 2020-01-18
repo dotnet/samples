@@ -57,10 +57,8 @@ public class Registration {
             Model = model
         });
         // </Snippet4>
-
     }
 }
 
 class AdventureWorksLTDataContext {
-
 }

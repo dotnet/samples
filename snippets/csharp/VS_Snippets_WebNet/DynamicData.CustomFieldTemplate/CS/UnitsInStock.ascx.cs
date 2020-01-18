@@ -6,7 +6,6 @@ public partial class DynamicData_FieldTemplates_UnitsInStock :  FieldTemplateUse
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
     }
 
     // DataBinding event handler.
@@ -26,6 +25,5 @@ public partial class DynamicData_FieldTemplates_UnitsInStock :  FieldTemplateUse
             TextLabel1.ForeColor = System.Drawing.Color.Red;
         }
     }
-
 }
 // </Snippet2>

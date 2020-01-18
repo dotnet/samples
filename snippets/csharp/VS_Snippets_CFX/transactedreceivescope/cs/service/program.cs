@@ -27,7 +27,6 @@ namespace Microsoft.Samples.TransactedReceiveScope
 
                 //Shutdown
                 host.Close();
-
             };
 
             Console.WriteLine();

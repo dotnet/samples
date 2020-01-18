@@ -36,7 +36,6 @@ class Program
             BoxCheck.Height.ToString(), BoxCheck.Length.ToString(), 
             BoxCheck.Width.ToString(), bxList.Contains(BoxCheck, 
             new BoxSameVol()).ToString());
-
     }
     // <Snippet2>
     public static void Display(BoxCollection bxList)
@@ -257,7 +256,6 @@ public class BoxEnumerator : IEnumerator<Box>
         _collection = collection;
         curIndex = -1;
         curBox = default(Box);
-
     }
 
     public bool MoveNext()
@@ -288,7 +286,6 @@ public class BoxEnumerator : IEnumerator<Box>
     {
         get { return Current; }
     }
-
 }
 // </Snippet3>
 
@@ -314,7 +311,6 @@ public class BoxSameDimensions : EqualityComparer<Box>
         int hCode = bx.Height ^ bx.Length ^ bx.Width;
         return hCode.GetHashCode();
     }
-
 }
 
 // Defines two boxes as equal if they have the same volume.

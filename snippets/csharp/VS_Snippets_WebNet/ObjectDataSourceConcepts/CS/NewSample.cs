@@ -414,7 +414,6 @@ namespace Samples.AspNet.ObjectDataSource
 
       return result;
     }
-
   }
 }
 //</Snippet1>

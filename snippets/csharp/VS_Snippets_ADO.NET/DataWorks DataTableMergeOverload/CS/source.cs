@@ -72,7 +72,6 @@ class Program
         Console.WriteLine("Merging");
         table1.Merge(table2, false, MissingSchemaAction.Add);
         PrintValues(table1, "Merged With table1, schema added");
-
     }
 
     private static void Row_Changed(object sender, 

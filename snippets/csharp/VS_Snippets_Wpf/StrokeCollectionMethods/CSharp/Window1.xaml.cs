@@ -24,7 +24,6 @@ namespace StrokeCollectionEraseMethods
             myInkSelector.Background = Brushes.Green;
             this.root.Children.Add(myInkSelector);
             this.KeyDown += new System.Windows.Input.KeyEventHandler(Window1_KeyDown);
-            
         }
 
         void Window1_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
@@ -33,7 +32,6 @@ namespace StrokeCollectionEraseMethods
             {
                 myInkSelector.InkDrawingAttributes.IsHighlighter = !myInkSelector.InkDrawingAttributes.IsHighlighter;
             }
-
         }
 
         // To use Loaded event put Loaded="OnLoad" attribute in root element of .xaml file.
@@ -92,7 +90,6 @@ namespace StrokeCollectionEraseMethods
             {
                 myInkSelector.Mode = InkMode.Select;
                 btnToggleMode.Content = "Ink Mode";
-
             }
             else
             {
@@ -120,6 +117,5 @@ namespace StrokeCollectionEraseMethods
         {
             myInkSelector.GetPropertyIds();
         }
-
     }
 }

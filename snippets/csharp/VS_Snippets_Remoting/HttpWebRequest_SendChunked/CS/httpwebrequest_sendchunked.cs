@@ -33,7 +33,6 @@ class HttpWebRequest_SendChunked
          {
             GetPage(args[0]); 
          }
-
       }
       catch (WebException e)
       {
@@ -47,7 +46,6 @@ class HttpWebRequest_SendChunked
          Console.WriteLine("Source  :{0}", e.Source);
          Console.WriteLine("Message :{0}", e.Message); 
       }        
-
    }
    public static void GetPage(String myUri)
    {

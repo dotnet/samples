@@ -57,7 +57,6 @@ namespace TestNotifyPropertyChangedCS
             // Attach the BindingSource to the DataGridView.
             this.customersDataGridView.DataSource =
                 this.customersBindingSource;
-
         }
 
         // Change the value of the CompanyName property for the first 
@@ -73,7 +72,6 @@ namespace TestNotifyPropertyChangedCS
             customerList[0].CustomerName = "Tailspin Toys";
             customerList[0].PhoneNumber = "(708)555-0150";
         }
-
     }
 
     // <snippet9>

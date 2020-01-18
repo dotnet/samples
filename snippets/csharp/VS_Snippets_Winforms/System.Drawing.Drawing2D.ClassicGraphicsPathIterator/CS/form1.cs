@@ -313,7 +313,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathIteratorCS
                     20, j);
                     
                 j+=20; 
-               
             }
                      
             // Create a GraphicsPathIterator.
@@ -333,7 +332,6 @@ namespace System.Drawing.Drawing2D.ClassicGraphicsPathIteratorCS
             markerPoints = myPathIterator.NextMarker(myPathSection);
             e.Graphics.DrawString("Marker: 1" + "  Num Points: " +
                 markerPoints.ToString(),  myFont, myBrush, 200, 20);
-                
         }
         // </snippet4>
 

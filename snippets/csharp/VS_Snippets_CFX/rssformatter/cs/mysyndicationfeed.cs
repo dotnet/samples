@@ -19,6 +19,5 @@ namespace RssFormatterSnippets
         public MySyndicationItem(string title, string description, Uri feedAltLink, string id, DateTime lastUpdateTime )
             : base (title, description,feedAltLink, id, lastUpdateTime)
         {}
-
     }
 }

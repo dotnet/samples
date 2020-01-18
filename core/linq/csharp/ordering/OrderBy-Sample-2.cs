@@ -44,7 +44,6 @@ namespace Ordering
             { 
                 Console.WriteLine(w); 
             } 
-
         }
     }
 }

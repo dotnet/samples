@@ -64,6 +64,5 @@ namespace Microsoft.Samples.Activities.Statements
             }
             return number;
         }
-        
     } 
 }

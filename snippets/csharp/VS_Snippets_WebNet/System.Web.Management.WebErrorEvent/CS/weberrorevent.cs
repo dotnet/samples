@@ -112,10 +112,8 @@ namespace Samples.AspNet.Management
                 "** SampleWebBaseErrorEvent End **");
 
             formatter.IndentationLevel -= 1;
-
         }
         // </Snippet8>
     }
-
 }
 // </Snippet1>

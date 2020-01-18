@@ -19,7 +19,6 @@ public class Sample {
 
     // Display the entity replacement text which is pulled from the DTD file.
     Console.WriteLine(doc.DocumentElement.LastChild.InnerText);
-  
   }
 } // End class
 // </snippet1>

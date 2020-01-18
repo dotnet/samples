@@ -67,7 +67,6 @@ namespace MyProject
 
 			// Return true if there are no messages in the queue.
 			return isQueueEmpty;
-
 		}
 	}
 }

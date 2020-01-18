@@ -138,11 +138,9 @@ namespace SamplesAspNet
             formatter.IndentationLevel -= 1;
 
             formatter.AppendLine(eventInfo.ToString());
-
         }
 
         // </Snippet9>
-
     }
 }
 // </Snippet1>

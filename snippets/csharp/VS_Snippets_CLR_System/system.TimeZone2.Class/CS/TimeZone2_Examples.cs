@@ -142,7 +142,6 @@ namespace TimeZoneExamples
             Console.WriteLine("{0} is invalid: {1}", newTime, pstZone.IsInvalidTime(newTime));
          }
          // </Snippet9>
-
       }
    }
 }

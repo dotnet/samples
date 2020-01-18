@@ -988,9 +988,6 @@ namespace CustomElementClient
             //elementButton = MainWindowElement.FindFirst(TreeScope.Subtree, cond);
 
            // ps.SubscribePropertyChange(elementButton);
-
         }
-
     }  // end class
-
 }  // end namespace

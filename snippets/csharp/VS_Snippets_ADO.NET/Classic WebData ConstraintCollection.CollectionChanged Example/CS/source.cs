@@ -62,5 +62,4 @@ public class Sample
             ex.Action, ex.Element);
     }
     // </Snippet1>
-
 }

@@ -69,7 +69,6 @@ public class TcpListenerSample
                     Console.WriteLine(String.Format("Sent: {0}", data));
 
                     i = stream.Read(bytes, 0, bytes.Length);
-
                 }
 
                 // Shutdown and end connection
@@ -84,6 +83,5 @@ public class TcpListenerSample
         Console.WriteLine("Hit enter to continue...");
         Console.Read();
     }
-
 }
 //</Snippet1>

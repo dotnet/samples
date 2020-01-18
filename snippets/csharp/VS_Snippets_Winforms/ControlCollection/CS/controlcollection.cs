@@ -125,7 +125,6 @@ namespace Controls
 			this.Name = "Form1";
 			this.Text = "Form1";
 			this.ResumeLayout(false);
-
 		}
 
 		/// <summary>
@@ -199,6 +198,5 @@ private void removeButton_Click(object sender, System.EventArgs e)
    }
 }
 //</snippet4>
-
 	}
 }

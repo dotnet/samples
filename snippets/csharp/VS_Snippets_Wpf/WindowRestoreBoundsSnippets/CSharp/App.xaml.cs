@@ -14,6 +14,5 @@ namespace WindowRestoreBoundsSnippets {
     public App() {
       InitializeComponent();
     }
-
   }
 }

@@ -43,9 +43,7 @@ public class SamplesBitVector32  {
       Console.WriteLine( "\tmySect2: {0}", myBV[mySect2] );
       Console.WriteLine( "\tmySect3: {0}", myBV[mySect3] );
       Console.WriteLine( "\tmySect4: {0}", myBV[mySect4] );
-
    }
-
 }
 
 /*

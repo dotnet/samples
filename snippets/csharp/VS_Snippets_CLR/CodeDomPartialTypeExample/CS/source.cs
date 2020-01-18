@@ -465,7 +465,6 @@ CodeFieldReferenceExpression(new CodeThisReferenceExpression(), "docDate"),
 new CodePropertySetValueReferenceExpression()));
 
             baseClass.Members.Add(docDateProp);
-
         }
 
         public static String GenerateCode(CodeDomProvider provider,

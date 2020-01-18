@@ -215,7 +215,6 @@ namespace System.CodeDom
 
             class2.Members.Add(methodMain);
             ns.Types.Add(class2);
-
         }
 
         static CodeStatement ConsoleWriteLineStatement(CodeExpression exp)
@@ -248,7 +247,6 @@ namespace System.CodeDom
                 LogMessage(s);
             }
         }
-
     }
 }
 // This example generates the following code:

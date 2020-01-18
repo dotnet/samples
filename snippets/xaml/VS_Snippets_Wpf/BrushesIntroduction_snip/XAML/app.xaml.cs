@@ -14,7 +14,6 @@ namespace BrushesIntroduction
 
         public app()
         {
-
         }
 
         protected override void OnStartup(StartupEventArgs e)

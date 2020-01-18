@@ -63,7 +63,6 @@ namespace Owner_Draw_CS2
 			this.ClientSize = new System.Drawing.Size(292, 273);
 			this.Name = "Form1";
 			this.Text = "Form1";
-
 		}
 		#endregion
 
@@ -116,7 +115,6 @@ namespace Owner_Draw_CS2
 			this.menuItem3.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.menuItem3_DrawItem);
 
 			this.Menu = this.mainMenu1;
-
 		}
 
 //<snippet1>
@@ -135,7 +133,6 @@ private void menuItem1_DrawItem(object sender, System.Windows.Forms.DrawItemEven
 	// Draw the item, and then draw a Rectangle around it.
 	e.Graphics.DrawString(myCaption, myFont, myBrush, e.Bounds.X, e.Bounds.Y);
 	e.Graphics.DrawRectangle(Pens.Black, new Rectangle(e.Bounds.X, e.Bounds.Y, Convert.ToInt32(mySizeF.Width), Convert.ToInt32(mySizeF.Height)));
-
 }
 //</snippet1>
 
@@ -148,7 +145,6 @@ private void menuItem1_DrawItem(object sender, System.Windows.Forms.DrawItemEven
 
 			e.Graphics.DrawString(myCaption, myFont, myBrush, e.Bounds.X, e.Bounds.Y+20);
 			e.Graphics.DrawRectangle(Pens.Black, new Rectangle(e.Bounds.X, e.Bounds.Y+20, Convert.ToInt32(mySizeF.Width), Convert.ToInt32(mySizeF.Height)));
-
 		}
 
 		private void menuItem3_DrawItem(object sender, System.Windows.Forms.DrawItemEventArgs e)
@@ -160,7 +156,6 @@ private void menuItem1_DrawItem(object sender, System.Windows.Forms.DrawItemEven
 
 			e.Graphics.DrawString(myCaption, myFont, myBrush, e.Bounds.X, e.Bounds.Y+40);
 			e.Graphics.DrawRectangle(Pens.Black, new Rectangle(e.Bounds.X, e.Bounds.Y+40,  Convert.ToInt32(mySizeF.Width), Convert.ToInt32(mySizeF.Height)));
-
 		}
 	}
 }

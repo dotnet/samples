@@ -71,7 +71,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
             // Specifying "true" as the second Begin parameter
             // makes this storyboard controllable.
             myStoryboard.Begin(this, true);          
-        
         }
 
         // Seek (skip to) one second into the Storboard's active period (Duration). 
@@ -82,7 +81,6 @@ namespace Microsoft.Samples.Animation.TimingBehaviors
 
             // Seek (skip to) to one second from the begin time of the Storyboard.
             myStoryboard.Seek(this, myTimeSpan, TimeSeekOrigin.BeginTime);
-
         }   
     }
 }

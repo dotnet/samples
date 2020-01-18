@@ -144,7 +144,6 @@ public class Form1 : Form
                 "Task {0} is unassigned.", taskID), "Status Request");
         }
     }
-
 }
 //</snippet100>
 

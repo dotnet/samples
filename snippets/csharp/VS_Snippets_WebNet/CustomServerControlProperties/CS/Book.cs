@@ -38,7 +38,6 @@ namespace Samples.AspNet.CS.Controls
                 authorValue ??= new Author();
                 return authorValue;
             }
-
         }
 
         [
@@ -186,7 +185,6 @@ namespace Samples.AspNet.CS.Controls
             }
             base.TrackViewState();
         }
-
     }
 }
 // </Snippet1>

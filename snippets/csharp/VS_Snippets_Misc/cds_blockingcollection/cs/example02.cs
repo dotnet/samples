@@ -106,7 +106,6 @@ class ProgramWithCancellation
                 //Do something else useful instead.
                 UpdateProgress(itemToAdd);
             }
-
         } while (itemToAdd < inputs);
 
         // No lock required here because only one producer.

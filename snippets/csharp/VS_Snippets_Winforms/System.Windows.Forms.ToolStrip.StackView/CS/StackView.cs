@@ -528,7 +528,6 @@ namespace StackViewCS
             this.stackStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

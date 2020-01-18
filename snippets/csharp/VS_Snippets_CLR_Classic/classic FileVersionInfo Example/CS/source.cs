@@ -17,6 +17,5 @@ class Class1
         Console.WriteLine("File: " + myFileVersionInfo.FileDescription + '\n' +
            "Version number: " + myFileVersionInfo.FileVersion);
     }
-
 }
 // </Snippet1>

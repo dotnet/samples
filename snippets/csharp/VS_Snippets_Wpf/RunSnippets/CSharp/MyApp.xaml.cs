@@ -12,6 +12,5 @@ namespace RunSnippets
 
     public partial class MyApp : Application
     {
-
     }
 }

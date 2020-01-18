@@ -23,7 +23,6 @@ public class Sample
     XmlDocument shallow = (XmlDocument) doc.CloneNode(false);
     Console.WriteLine(shallow.Name + shallow.OuterXml);
     Console.WriteLine(shallow.ChildNodes.Count);
-    
   }
 }
    // </Snippet1>

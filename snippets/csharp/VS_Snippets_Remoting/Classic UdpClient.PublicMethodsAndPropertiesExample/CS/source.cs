@@ -19,7 +19,6 @@ public class MyUdpClientExample{
                      Console.WriteLine(e.ToString());
              }
            // </Snippet1> 
-          
         }
     else if (myConstructorType == "LocalEndPointExample"){
            // <Snippet2>
@@ -183,7 +182,6 @@ public class MyUdpClientExample{
    }
    
    //</Snippet11>
-
   }
 
   // This example class demonstrates methods used to join and drop multicast groups.
@@ -243,7 +241,5 @@ public class MyUdpClientExample{
   MyUdpClientConnection("HostNameAndPortNumExample");
   MyUdpClientCommunicator("EndPointExample");
   MyUdpClientMulticastConfiguration("JoinMultiCastExample");
-  
      } 
-  
  } //end class

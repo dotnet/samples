@@ -43,7 +43,6 @@ namespace EncryptedDataSample
 			string path = @"c:\test\MyTest.xml";
 			File.WriteAllText(path,ed.GetXml().OuterXml);
 			//Console.WriteLine(ed.GetXml().OuterXml);
-
 		}
 	}
 }

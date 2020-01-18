@@ -15,7 +15,5 @@ namespace SDKSample
 
             MyStackpanelExampleFrame.Content = new StackpanelExample();
         }
-        
     }
-
 }

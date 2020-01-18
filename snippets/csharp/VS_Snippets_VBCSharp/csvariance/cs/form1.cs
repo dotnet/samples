@@ -32,11 +32,9 @@ namespace WindowsFormsApplication1
             // You can use the same method 
             // for an event that expects the MouseEventArgs parameter.
             this.button1.MouseClick += this.MultiHandler;
-
         }
         //</Snippet200>
     }
-
 }
 namespace w1
 {
@@ -68,5 +66,4 @@ namespace w1
         }
     }
     //</Snippet201>
-
 }

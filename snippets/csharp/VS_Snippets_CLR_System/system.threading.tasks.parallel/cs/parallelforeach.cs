@@ -48,6 +48,5 @@ class ForEachWithThreadLocal
             Console.WriteLine("Parallel.ForEach has thrown an exception. THIS WAS NOT EXPECTED.\n{0}", e);
         }
     }
-
 }
 //</snippet02>

@@ -12,6 +12,5 @@ namespace MicrosoftSaudiArabiaHomepage
 
     public partial class app : Application
     {
-
     }
 }

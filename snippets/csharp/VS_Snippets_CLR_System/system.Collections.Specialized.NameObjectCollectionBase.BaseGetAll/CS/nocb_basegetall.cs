@@ -46,7 +46,6 @@ public class MyCollection : NameObjectCollectionBase  {
          return( (String[]) this.BaseGetAllValues( typeof(System.String) ) );
       }
    }
-
 }
 
 public class SamplesNameObjectCollectionBase  {
@@ -79,7 +78,6 @@ public class SamplesNameObjectCollectionBase  {
       foreach ( String s in myCol.AllValues )  {
          Console.WriteLine( "   {0}", s );
       }
-
    }
 
    public static void PrintKeysAndValues( MyCollection myCol )  {
@@ -87,7 +85,6 @@ public class SamplesNameObjectCollectionBase  {
          Console.WriteLine( "[{0}] : {1}, {2}", i, myCol[i].Key, myCol[i].Value );
       }
    }
-
 }
 
 

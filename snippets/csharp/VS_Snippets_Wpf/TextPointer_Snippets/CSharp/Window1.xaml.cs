@@ -41,7 +41,6 @@ namespace TextPointer_Snippets
              
             // The element has no printable content if its first and last insertion positions are equal.
             return start.CompareTo(end) == 0;
-        
         } // End IsEmptyElement method.
         // </Snippet_TextPointer_GetInsertionPosition>
 
@@ -109,11 +108,9 @@ namespace TextPointer_Snippets
          
                 // Advance the naviagtor to the next context position.
                 navigator = navigator.GetNextContextPosition(LogicalDirection.Forward);
-            
             } // End while.
 
             return buffer.ToString();
-
         } // End GetXaml method.
         // </Snippet_TextPointer_GetNextContextPosition>
 
@@ -139,11 +136,9 @@ namespace TextPointer_Snippets
                  // Use the GetNextInsertionPosition method to skip over any interceding
                  // content element tags.
                  start = start.GetNextInsertionPosition(LogicalDirection.Forward);
-
              } // End while.
          
                  return paragraphCount;
-         
         }  // End GetParagraphCount.
         // </Snippet_TextPointer_GetNextInsertionPosition>
 
@@ -191,11 +186,9 @@ namespace TextPointer_Snippets
                 else if (forwardContext == TextPointerContext.ElementEnd)  balance--;
                      
                 start = start.GetNextContextPosition(LogicalDirection.Forward);
-            
             } // End while.
          
             return balance;
-
         } // End GetElementTagBalance
         // </Snippet_TextPointer_GetOffsetToPosition2>
 
@@ -239,7 +232,6 @@ namespace TextPointer_Snippets
                 start = start.GetNextContextPosition(LogicalDirection.Forward);
             }
             return buffer.ToString();
-
         } // End GetTextBetweenPointers.
         // </Snippet_TextPointer_GetTextInRun>
 
@@ -404,7 +396,5 @@ namespace TextPointer_Snippets
             return outputStream;
         }
         // </Snippet_TextRange_LoadSave>
-
     }  // End class Window1
-
 }  // End namespace TextPointer_Snippets

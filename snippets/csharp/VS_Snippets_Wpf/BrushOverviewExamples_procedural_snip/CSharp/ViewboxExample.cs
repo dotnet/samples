@@ -57,9 +57,6 @@ namespace Microsoft.Samples.BrushExamples
             
             rectangleBorder.Child = myRectangle;
             mainPanel.Children.Add(rectangleBorder);            
-        
         }
-
     }
-
 }

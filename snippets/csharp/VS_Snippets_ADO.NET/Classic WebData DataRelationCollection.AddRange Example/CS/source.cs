@@ -64,5 +64,4 @@ public class Sample
             Console.WriteLine(relation.RelationName.ToString());
     }
     // </Snippet1>
-
 }

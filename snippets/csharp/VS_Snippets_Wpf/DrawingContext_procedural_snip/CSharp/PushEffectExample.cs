@@ -58,10 +58,7 @@ namespace SDKSample
             theImage.Source = dImageSource;
 
             this.Content = theImage;
-
         }
-
     }
-
 }
 // </SnippetPushEffectExampleWholePage> 

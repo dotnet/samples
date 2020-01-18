@@ -44,7 +44,6 @@ namespace TPL_Exceptions
                     }
                 }
                 //</snippet5>
-
             }
         }
 
@@ -71,7 +70,6 @@ namespace TPL_Exceptions
             tokenSource.Dispose();
             //</snippet4>
         }
-
     }
 
     //<snippet08>

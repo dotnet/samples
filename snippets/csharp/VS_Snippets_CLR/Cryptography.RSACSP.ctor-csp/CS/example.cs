@@ -42,7 +42,6 @@ class RSACSPSample
             //Catch this exception in case the encryption did
             //not succeed.
             Console.WriteLine("Encryption failed.");
-
         }
     }
 
@@ -69,7 +68,6 @@ class RSACSPSample
         catch(CryptographicException e)
         {
             Console.WriteLine(e.Message);
-
         }
     }
 
@@ -102,7 +100,6 @@ class RSACSPSample
         catch(CryptographicException e)
         {
             Console.WriteLine(e.Message);
-
         }
     }
 
@@ -136,7 +133,6 @@ class RSACSPSample
 
             return null;
         }
-
     }
 
     static public byte[] RSADecrypt(byte[] DataToDecrypt, string ContainerName, bool DoOAEPPadding)
@@ -169,7 +165,6 @@ class RSACSPSample
 
             return null;
         }
-
     }
 }
 //</SNIPPET1>

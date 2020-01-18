@@ -34,7 +34,6 @@ public Form1()
    this.Load += new System.EventHandler(this.Form1_Load);
 
    // Add code here to populate the ListBox1 with paths to text files.
-
 }
 
 //<snippet1>
@@ -44,7 +43,6 @@ private void Form1_Load(object sender, EventArgs e)
    richTextBox1.AllowDrop = true;
 
    // Add code here to populate the ListBox1 with paths to text files.
-
 }
 
 private void listBox1_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
@@ -127,7 +125,6 @@ private void richTextBox1_DragDrop(object sender, DragEventArgs e)
 			this.Name = "Form1";
 			this.Text = "Form1";
 			this.ResumeLayout(false);
-
 		}
 		#endregion
 
@@ -139,6 +136,5 @@ private void richTextBox1_DragDrop(object sender, DragEventArgs e)
 		{
 			Application.Run(new Form1());
 		}
-
 	}
 }

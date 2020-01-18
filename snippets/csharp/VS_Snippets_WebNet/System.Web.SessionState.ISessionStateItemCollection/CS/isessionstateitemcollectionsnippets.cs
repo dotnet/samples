@@ -103,8 +103,6 @@ namespace Samples.AspNet.Session
     {
       pItems.CopyTo(array, index);
     }
-
   }
-
 }
 //</Snippet1>

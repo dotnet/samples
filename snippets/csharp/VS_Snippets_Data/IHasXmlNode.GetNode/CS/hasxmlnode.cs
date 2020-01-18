@@ -20,7 +20,6 @@ public class Sample
      XmlNode book = ((IHasXmlNode)ni.Current).GetNode();
      book.LastChild.InnerText = "12.95";
      Console.WriteLine(book.OuterXml);
-    
   }
 }
 //</snippet1>

@@ -28,5 +28,4 @@ public class Form1: Form
         stream.Close();
     }
     // </Snippet1>
-
 }

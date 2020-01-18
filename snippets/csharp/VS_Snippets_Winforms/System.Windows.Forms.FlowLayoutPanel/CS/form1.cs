@@ -56,7 +56,6 @@ public class Form1 : System.Windows.Forms.Form
         InitializeComponent();
 
         //Add any initialization after the InitializeComponent() call
-
     }
 
     //Form overrides dispose to clean up the component list.

@@ -55,5 +55,4 @@ namespace Examples.NetworkInformation.Permissions
             CreatePermission();
         }
     }
-
 }

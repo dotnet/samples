@@ -24,7 +24,6 @@ namespace MyNameSpace {
         // </Snippet1>
 
         protected override void Edit(System.Windows.Forms.CurrencyManager source, int rowNum, System.Drawing.Rectangle bounds, bool readOnly1, string displayText, bool cellIsVisiblen) {
-
         }
 
         protected override bool Commit(System.Windows.Forms.CurrencyManager dataSource, int rowNum) {
@@ -44,14 +43,12 @@ namespace MyNameSpace {
         }
 
         protected override void Abort(int rowNum) {
-        
         }
 
         protected override void Paint(System.Drawing.Graphics g, System.Drawing.Rectangle bounds, System.Windows.Forms.CurrencyManager source, int rowNum, bool b) {
         }
         
         protected override void Paint(System.Drawing.Graphics g, System.Drawing.Rectangle bounds, System.Windows.Forms.CurrencyManager source, int rowNum) {
-
         }
     }
 }

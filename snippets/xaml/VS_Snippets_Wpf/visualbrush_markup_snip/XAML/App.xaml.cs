@@ -12,6 +12,5 @@ namespace Microsoft.Samples.VisualBrushExamples
 
     public partial class App : Application
     {
-
     }
 }

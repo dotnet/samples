@@ -13,6 +13,5 @@ namespace ListBoxItemStyle
 
 	public partial class app : Application
 	{
-
 	}
 }

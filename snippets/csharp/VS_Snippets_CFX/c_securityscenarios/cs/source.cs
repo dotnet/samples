@@ -22,7 +22,6 @@ namespace BasicAuthentication
                 //Console.WriteLine(ex.InnerException.Message);
                 Console.ReadLine();
             }
-
         }
 
         private void ClientConstructor()
@@ -155,7 +154,6 @@ namespace SecuredUsingWindows
             // Close the service.
             myServiceHost.Close();
             //</snippet3>
-
         }
 
         public static void RunClient()
@@ -203,7 +201,6 @@ namespace SecuredUsingWindows
                 Console.WriteLine("Closed the client");
                 Console.ReadLine();
             }
-
         }
         private static string ReturnUsername()
         {
@@ -214,7 +211,6 @@ namespace SecuredUsingWindows
         {
             return "not";
         }
-
     }
 }
 namespace SecuredByTransportWithAnonymousClient
@@ -296,7 +292,6 @@ namespace SecuredByTransportWithAnonymousClient
                 Console.WriteLine("Closed the client");
                 Console.ReadLine();
             }
-
         }
     }
 }
@@ -386,7 +381,6 @@ namespace SecuredTranserUsingCertificates
                 Console.WriteLine("Closed the client");
                 Console.ReadLine();
             }
-
         }
     }
 }
@@ -513,7 +507,6 @@ namespace SecuredUsingMessageSecurityWithUsername
             // Close the service. 
             myServiceHost.Close();
             //</snippet9>
-
         }
 
         private void ClientRun()
@@ -565,7 +558,6 @@ namespace SecuredUsingMessageSecurityWithUsername
                 Console.WriteLine("Closed the client");
                 Console.ReadLine();
             }
-
         }
 
         private string ReturnUsername()
@@ -616,7 +608,6 @@ namespace SecuredUsingMessageWithCertClient
             // Close the service.
             myServiceHost.Close();
             //</snippet10>
-
         }
         private void ClientRun()
         {
@@ -669,7 +660,6 @@ namespace SecuredUsingMessageWithCertClient
                 Console.ReadLine();
             }
         }
-
     }
 }
 
@@ -704,7 +694,6 @@ namespace SecuredUsingMessageWithWindowsClient
             // Close the service.
             myServiceHost.Close();
             //</snippet11>
-
         }
 
         private void ClientRun()
@@ -750,7 +739,6 @@ namespace SecuredUsingMessageWithWindowsClient
                 Console.WriteLine("Closed the client");
                 Console.ReadLine();
             }
-
         }
     }
 }
@@ -859,7 +847,6 @@ namespace MessageSecuritWithKerberosAuth
                 Console.WriteLine("Closed the client");
                 Console.ReadLine();
             }
-
         }
     }
 }
@@ -968,7 +955,6 @@ namespace SecuredUsingMessageSecurityWithInteroperableCertClient
                 Console.WriteLine("Closed the client");
                 Console.ReadLine();
             }
-
         }
     }
 }
@@ -979,7 +965,6 @@ namespace ServiceModel
     {
         [OperationContract]
         double Add(double a, double b);
-
     }
 
     public class Calculator : ICalculator
@@ -999,9 +984,7 @@ namespace ServiceModel
             sb.HttpGetUrl = new Uri("http://localhost:8008/metadata");
             sh.Description.Behaviors.Add(sb);
         }
-
     }
-
 }
 namespace ClientCalculator
 {

@@ -108,7 +108,6 @@ namespace Microsoft.Samples.KeyFrameExamples
 
             Content = myStackPanel;
         }
-
     }
 }
 // </SnippetColorAnimationUsingKeyFramesWholePage>

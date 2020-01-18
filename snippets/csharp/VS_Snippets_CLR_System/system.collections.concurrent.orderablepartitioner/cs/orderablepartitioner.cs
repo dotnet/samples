@@ -159,7 +159,6 @@ namespace OrderablePartitionerDemo
                     m_disposed = true;
                 }
             }
-
         }
 
         // Constructor just grabs the collection to wrap
@@ -264,9 +263,7 @@ namespace OrderablePartitionerDemo
             if (mismatch) Console.WriteLine("OrderablePartitioner Test: index mismatch detected");
 
             Console.WriteLine("OrderablePartitioner test: counter = {0}, should be 100000", counter);
-
         }
     }
-
 }
 //</snippet1>

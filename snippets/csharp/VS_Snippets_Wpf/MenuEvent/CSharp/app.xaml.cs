@@ -13,6 +13,5 @@ namespace Menus
 
 	public partial class app : Application
 	{
-
 	}
 }

@@ -123,7 +123,6 @@ namespace HtmlWindowProjectCSharp
 
 		private void resetFramesButton_Click(object sender, EventArgs e)
 		{
-
 		}
 
 		// <SNIPPET8>
@@ -225,7 +224,6 @@ namespace HtmlWindowProjectCSharp
 
 		private void OpenThreeWindowsButton_Click(object sender, EventArgs e)
 		{
-
 		}
 
 	    //<SNIPPET13>

@@ -12,7 +12,6 @@ namespace CheckBox_Snippets
             : base()
         {
             InitializeComponent();
-
         }
 
         //<Snippet3>

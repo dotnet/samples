@@ -15,7 +15,6 @@ namespace DataViewRowStateFilterCS
         {
             DemonstrateRowState();
             Console.ReadLine();
-
         }
         // <Snippet1>
         static private void DemonstrateRowState()
@@ -88,6 +87,5 @@ namespace DataViewRowStateFilterCS
             }
         }
         // </Snippet1>
-
     }
 }

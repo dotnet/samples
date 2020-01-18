@@ -85,7 +85,6 @@ namespace PrintPreviewApp
             printPreviewDialog1.Document = printDocument1;
             //</snippet5>
 	    printPreviewDialog1.ShowDialog();
-            
         }
         //</snippet4>
 

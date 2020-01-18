@@ -12,6 +12,5 @@ namespace InkCanvasBinding
 
     public partial class MyApp : Application
     {
-
     }
 }

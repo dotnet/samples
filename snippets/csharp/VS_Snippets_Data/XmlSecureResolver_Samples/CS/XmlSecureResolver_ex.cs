@@ -11,7 +11,6 @@ using System.Reflection;
 class XmlSecureResolver_Samples {
 
   static void Main() {
-	
   }
 
 public void Assembly_Evidence() {
@@ -81,5 +80,4 @@ XslCompiledTransform xslt = new XslCompiledTransform();
 xslt.Load("http://serverName/data/xsl/sort.xsl", null, myResolver);
 //</snippet6>
 }
-
 }

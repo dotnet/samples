@@ -54,6 +54,5 @@ namespace Highlighter
         // SetWindowPos constants (used by highlight rect)
         internal const int SWP_NOACTIVATE = 0x0010;
         internal static readonly IntPtr HWND_TOPMOST = new IntPtr(-1);
-
     }
 }

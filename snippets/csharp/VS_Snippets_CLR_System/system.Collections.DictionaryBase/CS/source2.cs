@@ -113,7 +113,6 @@ public class ShortStringDictionary : DictionaryBase  {
             throw new ArgumentException( "value must be no more than 5 characters in length.", "value" );
       }
    }
-
 }
 
 public class SamplesDictionaryBase

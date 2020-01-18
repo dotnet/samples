@@ -134,7 +134,6 @@ namespace Contoso
                     // targetBytes array.
                     finalBytes.CopyTo(targetBytes,currentPosition);
                 }
-
             }
             catch(Exception ex)
             {

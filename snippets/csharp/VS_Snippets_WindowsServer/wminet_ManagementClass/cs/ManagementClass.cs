@@ -47,7 +47,6 @@ public class Sample
         {
             Console.WriteLine(qualifier.Name);
         }
-
     }
 }
 //</Snippet1>

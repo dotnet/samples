@@ -104,7 +104,6 @@ namespace CSClientProviderImplementation
             {
                 return null;
             }
-
         }
 
         object IRawElementProviderSimple.GetPatternProvider(int iid)

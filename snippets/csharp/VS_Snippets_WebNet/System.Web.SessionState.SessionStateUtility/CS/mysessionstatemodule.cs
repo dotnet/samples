@@ -107,7 +107,6 @@ namespace Samples.AspNet.SessionState
                 pHashtableLock.AcquireWriterLock(Int32.MaxValue);
 
                 this.RemoveExpiredSessionData();
-
             }
             finally
             {
@@ -146,7 +145,6 @@ namespace Samples.AspNet.SessionState
                     break;
                 }
             }
-
         }
     	//</Snippet3>
 
@@ -279,7 +277,6 @@ namespace Samples.AspNet.SessionState
             SessionStateUtility.RemoveHttpSessionStateFromContext(context);
         }
 	//</Snippet5>
-
     }
 }
 //</Snippet1>

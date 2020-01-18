@@ -31,7 +31,6 @@ public class Sample
           reader.ResetState();
        }
     } 
-
   }
 }
 //</snippet1>

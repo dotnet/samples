@@ -268,7 +268,6 @@ namespace APM_Task
             return tcs.Task;
         }
         //</snippet08>    
-
     }
 
     #region snippet09
@@ -424,7 +423,6 @@ class FileStreamDemo
             // Pass FileStream in AsyncState parameter in order to close it from the call site.
             return Task<int>.Factory.FromAsync(
                     fs.BeginRead, fs.EndRead, data, 0, data.Length, fs);
-
         }
         //</snippet12>
 
@@ -512,7 +510,6 @@ class FileStreamDemo
                     return new UTF8Encoding().GetString(data);
                 }
             });
-            
         }
         //</snippet05>
 
@@ -565,7 +562,6 @@ class FileStreamDemo
                 // Final result to be returned eventually on the calling thread.
                 return sb.ToString();
             });
-
         }
         //</snippet06>
         public string ProcessData(Task[] arr)
@@ -595,7 +591,6 @@ class FileStreamDemo
                 }
                 t.ContinueWith((antecedent) => ProcessFileData(antecedent.Result));
                 tasks.Add(t);
-
             }
             Console.WriteLine("All tasks have been added.");
             // Do some work here.
@@ -663,7 +658,6 @@ class FileStreamDemo
                 // at some future point after the asynchronous file I/O operation completes.
                 return new UTF8Encoding().GetString(data);
             });
-           
         }
 
         string ProcessFileData(string data)

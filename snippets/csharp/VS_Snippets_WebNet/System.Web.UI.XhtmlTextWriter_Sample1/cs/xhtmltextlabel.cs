@@ -77,9 +77,7 @@ namespace AspNet.Samples
                 w.ExitStyle(Control.ControlStyle);
 		}
 		// </snippet3>
-
 	}
 	//</snippet2>
-
 }
 // </snippet1>

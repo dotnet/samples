@@ -46,7 +46,6 @@ class Program
     mInfo = typeof(Program).GetMethod("MethodA",
         new Type[] { typeof(int), typeof(int).MakeByRefType() });
     Console.WriteLine("Found method: {0}", mInfo);
-
   }
 }
 // </Snippet1>

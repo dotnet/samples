@@ -15,7 +15,5 @@ namespace SDKSample
             MyFigureCodeOnlyExampleFrame.Content = new FigureCodeOnlyExample();
             MyInsertInlineIntoTextExampleFrame.Content = new InsertInlineIntoTextExample();
         }
-        
     }
-
 }

@@ -35,7 +35,6 @@ public class Example
                                        }
                                        return values;
                                     }, token));   
-         
       }
       try {
          Task<double> fTask = factory.ContinueWhenAll(tasks.ToArray(), 

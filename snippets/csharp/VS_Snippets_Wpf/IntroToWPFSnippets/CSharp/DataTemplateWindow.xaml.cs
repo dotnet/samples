@@ -18,5 +18,4 @@ namespace SDKSample
             this.DataContext = new Tasks();
         }
     }
-
 }

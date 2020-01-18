@@ -17,7 +17,6 @@ public class Example
                            baseValue, baseType,
                            value, value.GetType().Name,
                            baseValue.Equals(value));
-
    }
 }
 // The example displays the following output:

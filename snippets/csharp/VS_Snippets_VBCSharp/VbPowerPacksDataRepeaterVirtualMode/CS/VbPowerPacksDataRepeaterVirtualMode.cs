@@ -18,7 +18,6 @@ namespace VbPowerPacksDataRepeaterVirtualModeCS
 
         private void VbPowerPacksDataRepeaterVirtualMode_Load(object sender, EventArgs e)
         {
-
         }
         //<Snippet1>
         private void dataRepeater1_ItemValueNeeded(object sender, Microsoft.VisualBasic.PowerPacks.DataRepeaterItemValueEventArgs e)
@@ -68,7 +67,6 @@ namespace VbPowerPacksDataRepeaterVirtualModeCS
         {
             public string firstName;
             public string lastName;
-
         }
         List<Employee> Employees;
         bool blnNewItemNeedEventFired = false;

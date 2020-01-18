@@ -20,7 +20,6 @@ namespace ControlTest
          writer.AddAttribute(HtmlTextWriterAttribute.Onclick, "alert('Hello');");
          writer.AddStyleAttribute(HtmlTextWriterStyle.Color, "Red");
          base.AddAttributesToRender(writer);
-
       }
 
       [System.Security.Permissions.PermissionSet(System.Security.Permissions.SecurityAction.Demand, Name="FullTrust")] 

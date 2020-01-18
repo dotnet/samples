@@ -38,9 +38,7 @@ namespace MyUserControl
          protected override void Render(HtmlTextWriter output) 
          {
            output.Write("Testing the ConstructorNeedsTagAttribute class.");
-
         }
    }     
 // </Snippet1>    
-
 }

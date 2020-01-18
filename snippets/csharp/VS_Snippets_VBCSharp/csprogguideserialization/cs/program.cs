@@ -77,8 +77,6 @@ public class XMLWrite
             file.Close();
 
             Console.WriteLine(overview.title);
-
         }
         // </snippet2>
-
 }

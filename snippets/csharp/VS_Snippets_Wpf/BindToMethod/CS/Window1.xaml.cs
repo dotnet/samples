@@ -47,7 +47,6 @@ namespace ObjectDataProviderSample
                 type = value;
                 OnPropertyChanged("Type");
             }
-
 		}
 
         public string ConvertTemp(double degree, TempType temptype)

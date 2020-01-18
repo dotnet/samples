@@ -28,7 +28,6 @@ public class Sample {
      // Write the XML to file and close the writer.
      writer.Flush();
      writer.Close();  
-
   }
 }
 //</snippet1>

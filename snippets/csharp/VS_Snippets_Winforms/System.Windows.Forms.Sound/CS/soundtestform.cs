@@ -370,7 +370,6 @@ namespace SoundApiExample
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "Sound API Test Form";
             this.ResumeLayout(false);
-
         }
         #endregion
         

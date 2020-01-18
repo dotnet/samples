@@ -29,7 +29,6 @@ namespace CustomControls
       ((Label)control).Text = "Added by data binding handler.";
     }
   }
-
 }
 
 // </snippet1>

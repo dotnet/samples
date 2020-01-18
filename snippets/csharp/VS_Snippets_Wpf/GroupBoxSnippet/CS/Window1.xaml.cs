@@ -26,6 +26,5 @@ namespace GroupBoxSnippet
      private void SubmitCode(object sender, RoutedEventArgs e) {
      //dummy handler since this is just snippet code
      }
-
   }
 }

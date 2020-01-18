@@ -91,6 +91,5 @@ namespace BasicManipulation
             e.Handled = true;
         }
         //</SnippetManipulationInertiaStarting>
-
     }
 }

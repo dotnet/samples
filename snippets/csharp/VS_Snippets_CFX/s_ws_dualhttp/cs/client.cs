@@ -20,7 +20,6 @@ namespace Microsoft.ServiceModel.Samples
 		{
             Console.WriteLine("Equation({0})", eqn);
 		}
-
     }
 
     class Client
@@ -75,6 +74,5 @@ namespace Microsoft.ServiceModel.Samples
             Console.WriteLine("Press <ENTER> to terminate client.");
             Console.ReadLine();
         }
-
     }
 }

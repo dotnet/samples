@@ -32,13 +32,11 @@ public class Program
                            CompressionMode.Compress))
                         {
                             originalFileStream.CopyTo(compressionStream);
-
                         }
                     }
                     FileInfo info = new FileInfo(directoryPath + Path.DirectorySeparatorChar + fileToCompress.Name + ".gz");
                     Console.WriteLine($"Compressed {fileToCompress.Name} from {fileToCompress.Length.ToString()} to {info.Length.ToString()} bytes.");
                 }
-
             }
         }
     }

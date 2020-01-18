@@ -21,7 +21,6 @@ namespace PerformanceLibrary
                Control aControl = obj as Control;
                // Use aControl.
             }
-
          }
       }
 

@@ -71,7 +71,6 @@ namespace ControlProps
             {
                 btn2.FontFamily = new FontFamily("Arial Black");
                 btn2.Content = "Control font family changes from Arial to Arial Black.";
-
             }
         }
         //</Snippet3>
@@ -132,7 +131,6 @@ namespace ControlProps
             {
                 btn6.BorderBrush = Brushes.Black;
                 btn6.Content = "Control border brush changes from red to black.";
-
             }
             else
             {
@@ -149,7 +147,6 @@ namespace ControlProps
             {
                 btn7.HorizontalContentAlignment = HorizontalAlignment.Right;
                 btn7.Content = "Control horizontal alignment changes from left to right.";
-
             }
             else
             {
@@ -166,7 +163,6 @@ namespace ControlProps
             {
                 btn8.VerticalContentAlignment = VerticalAlignment.Bottom;
                 btn8.Content = "Control vertical alignment changes from top to bottom.";
-
             }
             else
             {
@@ -175,6 +171,5 @@ namespace ControlProps
             }
         }
         //</Snippet9>
-        
     }
 }   

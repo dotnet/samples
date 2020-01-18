@@ -12,6 +12,5 @@ namespace MyCustomControl
 
     public partial class app : Application
     {
-
     }
 }

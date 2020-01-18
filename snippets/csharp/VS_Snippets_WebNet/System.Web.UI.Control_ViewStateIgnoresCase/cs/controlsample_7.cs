@@ -96,6 +96,5 @@ namespace ASPNET.Sample
                         writer.Write("TextInViewState = ");
                         writer.Write(TextInViewState);
                 }
-
         }
 }

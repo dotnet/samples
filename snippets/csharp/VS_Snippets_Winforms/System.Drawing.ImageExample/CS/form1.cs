@@ -21,7 +21,6 @@ public class Form1:
         this.Button5.Click += new EventHandler(Button5_Click);
   
         //Add any initialization after the InitializeComponent() call
-
     }
 
     //Form overrides dispose to clean up the component list.
@@ -126,7 +125,6 @@ public class Form1:
         this.Name = "Form1";
         this.Text = "Form1";
         this.ResumeLayout(false);
-
     }
 
     #endregion
@@ -169,7 +167,6 @@ public class Form1:
 
             // Display the pixel format in Label1.
             Label1.Text = "Pixel format: "+image1.PixelFormat.ToString();
-
         }
         catch(ArgumentException)
         {
@@ -199,14 +196,12 @@ public class Form1:
             formGraphics.FillEllipse(texture, 
                 new RectangleF(90.0F, 110.0F, 100, 100));
             formGraphics.Dispose();
-
         }
         catch(System.IO.FileNotFoundException)
         {
             MessageBox.Show("There was an error opening the bitmap." +
                 "Please check the path.");
         }
-
     }
     //</snippet2>
 
@@ -271,7 +266,6 @@ public class Form1:
             MessageBox.Show("There was a problem saving the file." +
                 "Check the file permissions.");
         }
-
     }
     //</snippet5>
 
@@ -333,7 +327,6 @@ public class Form1:
             MessageBox.Show("There was an error." + 
                 "Make sure the path to the image file is valid.");
         }
-
     }
     //</snippet6>
 // <Note to Cheryl--Put this one ImageExamples>

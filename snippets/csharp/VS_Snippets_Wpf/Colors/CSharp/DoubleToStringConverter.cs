@@ -24,5 +24,4 @@ namespace SDKSample
             return null;
         }
     }
-
 }

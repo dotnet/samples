@@ -135,7 +135,6 @@ namespace HitTest3D
                     hitgeo.Material = (MaterialGroup)Application.Current.Resources["HitMaterial"];
                 }
             }
-
         }
 
         //<SnippetHitTest3D3DN7>
@@ -195,6 +194,5 @@ namespace HitTest3D
             }
         }
         //</SnippetHitTest3D3DN13>
-
     }
 }

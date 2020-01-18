@@ -191,7 +191,6 @@ namespace Samples.AspNet.CS.Controls
             {
                 return baseState;
             }
-
         }
 
         protected override void TrackViewState()

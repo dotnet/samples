@@ -64,5 +64,4 @@ namespace BrushesIntroduction
             Application.Current.Shutdown();
         }
     }
-
 }

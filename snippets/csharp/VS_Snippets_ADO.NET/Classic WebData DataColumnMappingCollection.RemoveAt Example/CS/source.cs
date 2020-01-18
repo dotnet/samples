@@ -18,5 +18,4 @@ public class Form1: Form
             mappings.RemoveAt(7);
     }
     // </Snippet1>
-
 }

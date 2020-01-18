@@ -61,9 +61,7 @@ namespace DataGrid_AutoGenColumns
             else if (headername == "EmailAddress")
             {
                 e.Column.Header = "Email";
-               
             }
-
         }
         //</Snippet2>
     }
